@@ -109,6 +109,7 @@ Thank you!`,
 };
 
 async function pushCampaign() {
+  // eslint-disable-next-line no-console
   console.log('📣 Pushing Every Canadian Counts campaign to Firebase...\n');
   
   try {
@@ -116,19 +117,30 @@ async function pushCampaign() {
     const campaignRef = doc(db, 'campaigns', everyCanadiaCounts.id);
     await setDoc(campaignRef, everyCanadiaCounts);
     
+    // eslint-disable-next-line no-console
     console.log('✅ Campaign added to Firestore!');
+    // eslint-disable-next-line no-console
     console.log(`   ID: ${everyCanadiaCounts.id}`);
+    // eslint-disable-next-line no-console
     console.log(`   Title: ${everyCanadiaCounts.title}`);
+    // eslint-disable-next-line no-console
     console.log(`   Goal: ${everyCanadiaCounts.goalCount.toLocaleString()} signatures`);
+    // eslint-disable-next-line no-console
     console.log(`   Current: ${everyCanadiaCounts.membersCount} signatures\n`);
     
+    // eslint-disable-next-line no-console
     console.log('🌐 Campaign will auto-sync to Cloudflare Worker website:');
+    // eslint-disable-next-line no-console
     console.log('   https://3mpwrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns');
+    // eslint-disable-next-line no-console
     console.log('   https://3mpwrapp.pages.dev/campaigns/\n');
     
+    // eslint-disable-next-line no-console
     console.log('🔗 Petition URL:');
+    // eslint-disable-next-line no-console
     console.log(`   ${everyCanadiaCounts.petitionUrl}\n`);
     
+    // eslint-disable-next-line no-console
     console.log('✨ Done! Users can now see and join this campaign in the app.');
     
     process.exit(0);

@@ -36,6 +36,8 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
         run: npm ci --no-audit --fund=false
@@ -43,8 +45,8 @@ jobs:
       - name: Check bundle budget
         id: budget
         run: |
-          npm run perf:budget
-          echo "budget_passed=$?" >> $GITHUB_OUTPUT
+          npm run perf:budget && echo "budget_passed=0" >> $GITHUB_OUTPUT || echo "budget_passed=1" >> $GITHUB_OUTPUT
+        continue-on-error: true
 
       - name: Generate bundle breakdown
         run: npm run perf:breakdown > bundle-breakdown.txt
@@ -74,7 +76,7 @@ jobs:
             ${breakdown}
             \`\`\`
             
-            ${context.payload.pull_request.head.sha}
+            **Status:** ${context.payload.pull_request.head.sha}
             `;
             
             github.rest.issues.createComment({
@@ -85,7 +87,7 @@ jobs:
             });
 
       - name: Fail if budget exceeded
-        if: steps.budget.outputs.budget_passed != '0'
+        if: steps.budget.outputs.budget_passed == '1'
         run: |
           echo "::error::Bundle size budget exceeded!"
           exit 1

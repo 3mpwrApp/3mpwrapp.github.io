@@ -139,37 +139,53 @@ https://thunderbayinjuredworkers.com/tuesday-events/
 ];
 
 async function pushEvents() {
+  // eslint-disable-next-line no-console
   console.log('📅 Pushing TBDIWSG events to Firebase...\n');
   
   try {
     for (const event of tbdiwsgEvents) {
+      // eslint-disable-next-line no-console
       console.log(`   → ${event.title}`);
+      // eslint-disable-next-line no-console
       console.log(`     Date: ${event.date.toLocaleDateString()}`);
+      // eslint-disable-next-line no-console
       console.log(`     Location: ${event.location}`);
       
       // Add to events_production collection
       const prodRef = doc(db, 'events_production', event.id);
       await setDoc(prodRef, event);
+      // eslint-disable-next-line no-console
       console.log(`     ✓ Added to events_production`);
       
       // Add to events_preview collection
       const previewRef = doc(db, 'events_preview', event.id);
       await setDoc(previewRef, event);
+      // eslint-disable-next-line no-console
       console.log(`     ✓ Added to events_preview\n`);
     }
     
+    // eslint-disable-next-line no-console
     console.log(`✅ Successfully pushed ${tbdiwsgEvents.length} TBDIWSG events to Firestore!\n`);
     
+    // eslint-disable-next-line no-console
     console.log('🌐 Events will auto-sync to:');
+    // eslint-disable-next-line no-console
     console.log('   • Cloudflare Worker API: https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events');
+    // eslint-disable-next-line no-console
     console.log('   • ICS Calendar Feed: https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics');
+    // eslint-disable-next-line no-console
     console.log('   • Static Website: https://3mpwrapp.pages.dev/events/\n');
     
+    // eslint-disable-next-line no-console
     console.log('📱 Users will see these events in:');
+    // eslint-disable-next-line no-console
     console.log('   • Events tab calendar');
+    // eslint-disable-next-line no-console
     console.log('   • Calendar subscriptions');
+    // eslint-disable-next-line no-console
     console.log('   • External calendar apps (Google Calendar, Apple Calendar, etc.)\n');
     
+    // eslint-disable-next-line no-console
     console.log('✨ Done! TBDIWSG events are now live and syncing automatically.');
     
     process.exit(0);

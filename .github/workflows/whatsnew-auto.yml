@@ -49,7 +49,19 @@ jobs:
       - name: Generate What's New module
         run: npm run whatsnew:gen
 
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet data/whatsnew.auto.ts; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in whatsnew.auto.ts"
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in whatsnew.auto.ts"
+          fi
+
       - name: Create Pull Request if changes detected
+        if: steps.check_changes.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

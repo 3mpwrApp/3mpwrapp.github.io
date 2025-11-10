@@ -2,6 +2,8 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { useAppPalette } from '../../theme/usePalette';
+
 // Import with try-catch protection
 let CampaignsScreenComponent: React.ComponentType<any>;
 try {
@@ -21,10 +23,10 @@ try {
 }
 
 class CampaignsTabErrorBoundary extends React.Component<
-  { children: React.ReactNode },
+  { children: React.ReactNode; palette: ReturnType<typeof useAppPalette> },
   { hasError: boolean; error: Error | null }
 > {
-  constructor(props: { children: React.ReactNode }) {
+  constructor(props: { children: React.ReactNode; palette: ReturnType<typeof useAppPalette> }) {
     super(props);
     this.state = { hasError: false, error: null };
   }
@@ -38,6 +40,9 @@ class CampaignsTabErrorBoundary extends React.Component<
   }
 
   render() {
+    const { palette } = this.props;
+    const styles = createStyles(palette);
+
     if (this.state.hasError) {
       return (
         <View style={styles.errorContainer}>
@@ -64,20 +69,22 @@ class CampaignsTabErrorBoundary extends React.Component<
 }
 
 export default function CampaignsTab() {
+  const palette = useAppPalette();
+  
   return (
-    <CampaignsTabErrorBoundary>
+    <CampaignsTabErrorBoundary palette={palette}>
       <CampaignsScreenComponent />
     </CampaignsTabErrorBoundary>
   );
 }
 
-const styles = StyleSheet.create({
+const createStyles = (palette: ReturnType<typeof useAppPalette>) => StyleSheet.create({
   errorContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: palette.background,
   },
   errorIcon: {
     fontSize: 48,
@@ -87,31 +94,31 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '700',
     marginBottom: 12,
-    color: '#000',
+    color: palette.text,
   },
   errorMessage: {
     fontSize: 16,
     textAlign: 'center',
     marginBottom: 12,
-    color: '#555',
+    color: palette.textSecondary,
   },
   errorDetail: {
     fontSize: 12,
     fontFamily: 'monospace',
-    color: '#8B0000',
+    color: palette.error,
     marginBottom: 20,
     padding: 12,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: palette.card,
     borderRadius: 8,
   },
   errorButton: {
-    backgroundColor: '#003D34',
+    backgroundColor: palette.primary,
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 8,
   },
   errorButtonText: {
-    color: '#fff',
+    color: palette.onPrimary,
     fontSize: 16,
     fontWeight: '600',
   },
@@ -119,7 +126,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: palette.background,
   },
 });
+
 
