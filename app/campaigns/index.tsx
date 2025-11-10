@@ -147,9 +147,16 @@ function ScreenInner() {
 
   const { setCount } = useCounts();
   const { setOffline } = useNetwork();
-  const { state: local, createCampaign, join, leave, isJoined } = useCampaignsLocal();
+  const campaignsContext = useCampaignsLocal();
+  const { state: local, createCampaign, join, leave, isJoined } = campaignsContext || {
+    state: { myCampaigns: [], joined: {} },
+    createCampaign: () => ({ id: 'error', title: '', summary: '' }),
+    join: () => {},
+    leave: () => {},
+    isJoined: () => false,
+  };
   const { user } = useAuth();
-  const { t } = useTranslation();
+  const { t } = useTranslation() || { t: (key: string, fallback?: string) => fallback || key };
   const inFlightRef = React.useRef<Record<string, number>>({});
 
   const reload = React.useCallback(async () => {
@@ -244,6 +251,17 @@ function ScreenInner() {
   // One-time polite announcement of loaded count
   usePostLoadAnnounce({ loading, count: items.length, ns: 'campaigns' });
 
+  // Safe wrapper for isJoined to prevent crashes
+  const safeIsJoined = React.useCallback((id: any) => {
+    try {
+      if (!id || typeof isJoined !== 'function') return false;
+      return isJoined(id);
+    } catch (err) {
+      logger.error('[Campaigns] Error checking isJoined:', err);
+      return false;
+    }
+  }, [isJoined]);
+
   type Mixed = (typeof local.myCampaigns[number] & { kind?: 'campaign' });
   const allItems = React.useMemo<Mixed[]>(
     () => {
@@ -272,7 +290,7 @@ function ScreenInner() {
     const safeMyCampaigns = Array.isArray(local?.myCampaigns) ? local.myCampaigns : [];
     const your = campaigns.filter(i => {
       try {
-        return isJoined(i?.id) || safeMyCampaigns.some(m => m?.id === i?.id);
+        return safeIsJoined(i?.id) || safeMyCampaigns.some(m => m?.id === i?.id);
       } catch {
         return false;
       }
@@ -301,7 +319,7 @@ function ScreenInner() {
       { title: 'All Campaigns', data: others.filter(match) },
     ].filter(s => Array.isArray(s.data) && s.data.length > 0);
     return sec as { title: string; data: Mixed[] }[];
-  }, [query, allItems, local?.myCampaigns, isJoined]);
+  }, [query, allItems, local?.myCampaigns, safeIsJoined]);
 
   return (
     <ResponsiveScreenWrapper>
@@ -499,7 +517,7 @@ function ScreenInner() {
                         </Text>
                       )}
                     </View>
-                    {isJoined(item.id) && (
+                    {safeIsJoined(item.id) && (
                       <View style={styles.joinedBadge}>
                         <Text style={styles.joinedBadgeText}>✓ Joined</Text>
                       </View>
@@ -590,7 +608,7 @@ function ScreenInner() {
                       const now = Date.now();
                       if (inFlightRef.current[item.id] && now - inFlightRef.current[item.id] < 1200) return;
                       inFlightRef.current[item.id] = now;
-                      const joined = isJoined(item.id);
+                      const joined = safeIsJoined(item.id);
                       if (joined) {
                         leave(item.id);
                         const uid = user?.uid || 'anonymous';
@@ -621,18 +639,18 @@ function ScreenInner() {
                   }}
                   accessibilityRole="button"
                   accessibilityLabel={
-                    isJoined(item.id) 
+                    safeIsJoined(item.id) 
                       ? (t('a11y.leaveCampaign') || 'Leave campaign {{title}}').replace('{{title}}', item.title)
                       : (t('a11y.joinCampaign') || 'Join campaign {{title}}').replace('{{title}}', item.title)
                   }
                   style={[
                     styles.actionButton,
-                    isJoined(item.id) ? styles.joinedButton : styles.joinButton,
+                    safeIsJoined(item.id) ? styles.joinedButton : styles.joinButton,
                     ((inFlightRef.current[item.id] && Date.now() - inFlightRef.current[item.id] < 400) ? { opacity: 0.6 } : null)
                   ]}
                 >
-                  <Text style={[styles.actionButtonText, isJoined(item.id) && styles.joinedButtonText]}>
-                    {isJoined(item.id) ? '✓ Joined' : '➕ Join'}
+                  <Text style={[styles.actionButtonText, safeIsJoined(item.id) && styles.joinedButtonText]}>
+                    {safeIsJoined(item.id) ? '✓ Joined' : '➕ Join'}
                   </Text>
                 </Pressable>
                 <Pressable
