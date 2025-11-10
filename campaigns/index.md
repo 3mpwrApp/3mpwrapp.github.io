@@ -97,20 +97,18 @@ permalink: /campaigns/
    * CAMPAIGNS REAL-TIME AUTO-SYNC
    * ========================================
    * 
-   * Fetches campaigns directly from Firestore REST API:
-   * https://firestore.googleapis.com/v1/projects/empowrapp/databases/(default)/documents/campaigns_production
+   * Fetches campaigns from Cloudflare Worker API:
+   * https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns
    * 
    * Data Flow:
    * 1. User creates campaign in 3mpwrApp (React Native)
    * 2. Campaign saved to Firestore (campaigns_production collection)
-   * 3. Website fetches directly from Firestore REST API every 30 seconds
-   * 4. Campaigns display automatically below
-   * 
-   * Requirements:
-   * - Firestore security rules must allow public read access to campaigns_production
-   * - Deploy rules: firebase deploy --only firestore:rules
+   * 3. Cloudflare Worker proxies Firestore with proper authentication
+   * 4. Website fetches from Worker API every 30 seconds
+   * 5. Campaigns display automatically below
    * 
    * Related:
+   * - Campaigns API: https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns
    * - Events API: https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events
    * - Events Page: https://3mpwrapp.pages.dev/events/
    * ========================================
@@ -251,20 +249,20 @@ permalink: /campaigns/
   }
 
   /**
-   * Fetch and display campaigns from Firestore REST API
+   * Fetch and display campaigns from Cloudflare Worker API
    * Updates automatically every 30 seconds
    */
   async function loadCampaigns() {
     try {
-      console.log('🔄 Fetching campaigns from Firestore...');
+      console.log('🔄 Fetching campaigns from Cloudflare Worker...');
       
       // Update sync status
       const syncStatus = document.getElementById('sync-status');
       if (syncStatus) syncStatus.textContent = '🔄 Syncing...';
       
-      // Fetch from Firestore REST API
-      const firestoreUrl = 'https://firestore.googleapis.com/v1/projects/empowrapp/databases/(default)/documents/campaigns_production';
-      const response = await fetch(firestoreUrl);
+      // Fetch from Cloudflare Worker API (proxies Firestore with proper auth)
+      const workerUrl = 'https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns';
+      const response = await fetch(workerUrl);
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -272,15 +270,13 @@ permalink: /campaigns/
       
       const data = await response.json();
       
-      // Parse Firestore documents
+      // Worker returns campaigns in simplified format
       let campaigns = [];
-      if (data.documents && Array.isArray(data.documents)) {
-        campaigns = data.documents
-          .map(doc => parseCampaignDocument(doc))
-          .filter(campaign => campaign && campaign.id); // Filter out invalid documents
+      if (data.success && data.campaigns && Array.isArray(data.campaigns)) {
+        campaigns = data.campaigns;
       }
       
-      console.log(`✅ Loaded ${campaigns.length} campaigns from Firestore`);
+      console.log(`✅ Loaded ${campaigns.length} campaigns from Worker API`);
       
       displayCampaigns(campaigns);
       
@@ -311,15 +307,13 @@ permalink: /campaigns/
       document.getElementById('campaigns-list').innerHTML = `
         <div class="warning-box">
           <h3 style="margin-top: 0;">⚠️ Connection Issue</h3>
-          <p>Unable to load campaigns from Firestore right now. This could mean:</p>
+          <p>Unable to load campaigns right now. This could mean:</p>
           <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
             <li>No campaigns have been created yet</li>
-            <li>Firestore security rules need to be deployed (see setup instructions)</li>
             <li>Temporary network issue</li>
             <li>Please refresh the page</li>
           </ul>
           <p style="margin-top: 1rem;">Please check back later or <a href="/contact/">contact us</a> if the problem persists.</p>
-          <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;"><strong>Setup Required:</strong> Ensure Firestore rules allow public read access to campaigns_production collection and run: <code>firebase deploy --only firestore:rules</code></p>
         </div>
       `;
     }

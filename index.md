@@ -369,6 +369,152 @@ if (document.readyState === 'loading') {
 
 ---
 
+<!-- Featured Campaign Banner -->
+<div class="gradient-banner" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <h2 style="margin: 0 0 1rem; color: white; font-size: 1.8rem;">
+    <span aria-hidden="true">📣</span> Featured Campaign
+    <span class="badge badge--new" style="background: rgba(255,255,255,0.3); color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Active now">Active</span>
+  </h2>
+  
+  <div style="background: rgba(255,255,255,0.2); padding: 2rem; border-radius: 8px; margin: 1rem 0; backdrop-filter: blur(10px); text-align: left;">
+    <h3 style="margin: 0 0 1rem; color: white; font-size: 1.6rem;">
+      🇨🇦 Every Canadian Counts
+    </h3>
+    
+    <p style="margin: 0 0 1rem; font-size: 1.1rem; opacity: 0.95; line-height: 1.6;">
+      Support a publicly funded national disability insurance plan for Canadians with long-term or chronic disabilities. 
+      <strong>Sign and share petition e-6746 to Parliament of Canada.</strong>
+    </p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 8px;">
+      <div>
+        <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Current Signatures</p>
+        <p style="margin: 0.25rem 0 0; font-size: 1.8rem; font-weight: bold;">460+</p>
+      </div>
+      <div>
+        <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Goal</p>
+        <p style="margin: 0.25rem 0 0; font-size: 1.8rem; font-weight: bold;">100,000</p>
+      </div>
+      <div>
+        <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Target</p>
+        <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: bold;">Parliament 🇨🇦</p>
+      </div>
+    </div>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+      <a href="https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="display: inline-block; background: white; color: #10b981; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: transform 0.2s;" 
+         onmouseover="this.style.transform='translateY(-2px)'" 
+         onmouseout="this.style.transform='translateY(0)'">
+        ✍️ Sign Petition e-6746
+      </a>
+      
+      <a href="/campaigns/" 
+         style="display: inline-block; background: rgba(255,255,255,0.3); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s;" 
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(255,255,255,0.4)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.3)'">
+        📣 View All Campaigns
+      </a>
+      
+      <a href="https://everycanadiancounts.com" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="display: inline-block; background: rgba(255,255,255,0.3); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s;" 
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(255,255,255,0.4)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.3)'">
+        🌐 Learn More
+      </a>
+    </div>
+    
+    <!-- Social Share Integration -->
+    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.3);">
+      <p style="margin: 0 0 0.75rem; font-size: 0.95rem; opacity: 0.9;">Share this campaign:</p>
+      <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+        <button onclick="shareCampaignHome('twitter')" style="padding: 10px 16px; background: #1DA1F2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600;" title="Share on X/Twitter">𝕏 Share</button>
+        <button onclick="shareCampaignHome('facebook')" style="padding: 10px 16px; background: #4267B2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600;" title="Share on Facebook">📘 Share</button>
+        <button onclick="shareCampaignHome('linkedin')" style="padding: 10px 16px; background: #0077B5; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600;" title="Share on LinkedIn">💼 Share</button>
+        <button onclick="copyCampaignHome()" style="padding: 10px 16px; background: rgba(255,255,255,0.3); color: white; border: 2px solid white; border-radius: 6px; cursor: pointer; font-size: 0.95rem; font-weight: 600;" title="Copy details">📋 Copy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/**
+ * Share Every Canadian Counts campaign from homepage
+ */
+function shareCampaignHome(platform) {
+  const title = 'Every Canadian Counts - Support National Disability Insurance';
+  const description = 'Support a publicly funded national disability insurance plan for Canadians with long-term or chronic disabilities. Sign petition e-6746.';
+  const campaignUrl = 'https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746';
+  const siteUrl = 'https://3mpwrapp.pages.dev/campaigns/';
+  const hashtag = '3mpwrApp';
+  
+  const shareText = `${title}\n\n${description}\n\nSign the petition: ${campaignUrl}\n\nMore campaigns at 3mpwr App! #${hashtag}`;
+  const encodedText = encodeURIComponent(shareText);
+  const encodedUrl = encodeURIComponent(campaignUrl);
+  const encodedSiteUrl = encodeURIComponent(siteUrl);
+  
+  let shareUrl;
+  switch (platform) {
+    case 'twitter':
+      shareUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
+      break;
+    case 'facebook':
+      shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}&hashtag=%23${hashtag}`;
+      break;
+    case 'linkedin':
+      shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+      break;
+    default:
+      return;
+  }
+  
+  window.open(shareUrl, '_blank', 'width=600,height=400');
+  
+  // Track share if analytics available
+  if (window.gtag) {
+    gtag('event', 'share', {
+      method: platform,
+      content_type: 'campaign',
+      item_id: 'every-canadian-counts'
+    });
+  }
+}
+
+function copyCampaignHome() {
+  const title = 'Every Canadian Counts - Support National Disability Insurance';
+  const description = 'Support a publicly funded national disability insurance plan for Canadians with long-term or chronic disabilities. Sign petition e-6746.';
+  const campaignUrl = 'https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746';
+  const siteUrl = 'https://3mpwrapp.pages.dev/campaigns/';
+  
+  const copyText = `${title}\n\n${description}\n\nSign the petition: ${campaignUrl}\n\nDiscover more campaigns: ${siteUrl}\n\n#3mpwrApp\n\nPowered by 3mpwr App | https://3mpwrapp.pages.dev`;
+  
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(copyText).then(() => {
+      alert('✅ Campaign details copied with #3mpwrApp! Share it with your network.');
+    }).catch(err => {
+      console.error('Copy failed:', err);
+      prompt('Copy this text to share:', copyText);
+    });
+  } else {
+    prompt('Copy this text to share:', copyText);
+  }
+  
+  // Track copy if analytics available
+  if (window.gtag) {
+    gtag('event', 'copy', {
+      content_type: 'campaign',
+      item_id: 'every-canadian-counts'
+    });
+  }
+}
+</script>
+
+---
+
 <!-- Community Spotlight Banner -->
 <div class="highlight-banner" style="background: #f8f9fa !important; border: 2px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; color: #1f2937 !important;">
   <h2 style="margin: 0 0 0.5rem; color: #1e40af !important; font-size: 1.6rem;">
