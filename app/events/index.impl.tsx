@@ -209,6 +209,15 @@ export default function EventsScreen() {
         ? items.filter((e) => toDayKey(e.date) === selectedDay)
         : items;
       
+      // Filter out past events - only show present and future events
+      const now = new Date();
+      now.setHours(0, 0, 0, 0); // Start of today
+      base = base.filter((e: any) => {
+        const eventDate = new Date(e.date);
+        eventDate.setHours(0, 0, 0, 0); // Start of event day
+        return eventDate >= now; // Keep events today or in the future
+      });
+      
       // Apply text search
       const q = query.trim().toLowerCase();
       if (q) {

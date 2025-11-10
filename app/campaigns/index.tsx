@@ -2,17 +2,17 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-  Alert,
-  Linking,
-  Pressable,
-  RefreshControl,
-  SectionList,
-  Share,
-  StyleSheet,
-  Text,
-  TextInput,
-  useColorScheme,
-  View,
+    Alert,
+    Linking,
+    Pressable,
+    RefreshControl,
+    SectionList,
+    Share,
+    StyleSheet,
+    Text,
+    TextInput,
+    useColorScheme,
+    View,
 } from "react-native";
 
 import RepTracker from "../../components/RepTracker";
@@ -22,33 +22,31 @@ import SkeletonRow from "../../components/SkeletonRow";
 import { useAuth } from "../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../data/campaigns";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../i18n";
 import { logActivity } from "../../services/activity";
+import { trackEvent } from "../../services/analyticsClient";
 import { fetchCampaigns } from "../../services/campaigns";
 import { syncCampaignToWebsite } from "../../services/campaignSync";
 import {
-  fsAddCampaign,
-  fsIncrementCampaignMembers,
-  fsJoinCampaign,
-  fsLeaveCampaign,
+    fsAddCampaign,
+    fsIncrementCampaignMembers,
+    fsJoinCampaign,
+    fsLeaveCampaign,
 } from "../../services/firestore";
 import {
-  CampaignsLocalProvider,
-  useCampaignsLocal,
+    CampaignsLocalProvider,
+    useCampaignsLocal,
 } from "../../store/campaignsLocal";
 import { useCounts } from "../../store/counts";
 import { useNetwork } from "../../store/network";
 import { useRefresh } from "../../store/refresh";
 import { colors, type Palette } from "../../theme/colors";
 import { logger } from "../../utils/logger";
-
- 
-const { trackEvent } = require("../../services/analyticsClient");
 
 /**
  * Format sync time as relative time (e.g., "2 minutes ago")
