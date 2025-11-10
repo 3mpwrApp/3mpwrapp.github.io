@@ -33,6 +33,18 @@ export function CountsProvider({ children }: { children: React.ReactNode }) {
 
 export function useCounts() {
   const ctx = React.useContext(CountsContext);
-  if (!ctx) throw new Error("useCounts must be used within CountsProvider");
+  if (!ctx) {
+    console.warn('[useCounts] Used outside provider - returning safe defaults');
+    return {
+      counts: {
+        campaigns: 0,
+        resources: 0,
+        advocates: 0,
+        podcasts: 0,
+        events: 0,
+      },
+      setCount: () => {},
+    };
+  }
   return ctx;
 }

@@ -23,6 +23,14 @@ export function NetworkProvider({ children }: { children: React.ReactNode }) {
 
 export function useNetwork() {
   const ctx = React.useContext(NetworkContext);
-  if (!ctx) throw new Error("useNetwork must be used within NetworkProvider");
+  if (!ctx) {
+    console.warn('[useNetwork] Used outside provider - returning safe defaults');
+    return {
+      offline: false,
+      setOffline: () => {},
+      syncing: false,
+      setSyncing: () => {},
+    };
+  }
   return ctx;
 }

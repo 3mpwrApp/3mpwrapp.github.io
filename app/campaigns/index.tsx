@@ -155,27 +155,10 @@ function ScreenInner() {
   const [showRepTracker, setShowRepTracker] = React.useState(false);
   const [lastSyncTime, setLastSyncTime] = React.useState<Date | null>(null);
 
-  // Safe hooks with fallbacks - wrap in try-catch to handle missing providers
-  let setCount = (_key: any, _value: number) => {};
-  let setOffline = (_value: boolean) => {};
-  
-  try {
-    const counts = useCounts();
-    if (counts && typeof counts.setCount === 'function') {
-      setCount = counts.setCount;
-    }
-  } catch (err) {
-    console.error('[Campaigns] useCounts not available:', err);
-  }
-  
-  try {
-    const network = useNetwork();
-    if (network && typeof network.setOffline === 'function') {
-      setOffline = network.setOffline;
-    }
-  } catch (err) {
-    console.error('[Campaigns] useNetwork not available:', err);
-  }
+  // Context hooks - now safe with default fallbacks
+  const { setCount } = useCounts();
+  const { setOffline } = useNetwork();
+  const { tick } = useRefresh();
   
   const campaignsContext = useCampaignsLocal();
   const { state: local, createCampaign, join, leave, isJoined } = campaignsContext || {
@@ -211,9 +194,7 @@ function ScreenInner() {
       // Critical: Ensure data is always an array
       const validData = Array.isArray(data) ? data : [];
       setItems(validData);
-      if (typeof setOffline === 'function') {
-        setOffline(false);
-      }
+      setOffline(false);
       setLastSyncTime(new Date());
       
       isInitializedRef.current = true;
@@ -222,9 +203,7 @@ function ScreenInner() {
       
       logger.error('[Campaigns] Failed to reload campaigns:', err);
       setError("Failed to load campaigns");
-      if (typeof setOffline === 'function') {
-        setOffline(true);
-      }
+      setOffline(true);
       // Don't crash - use existing items or fallback to local campaigns
       if (!items || !Array.isArray(items) || items.length === 0) {
         setItems(safeLocalCampaigns);
@@ -233,15 +212,6 @@ function ScreenInner() {
       if (isMountedRef.current) setLoading(false);
     }
   }, [setOffline, items, safeLocalCampaigns]);
-
-  // Safe useRefresh with fallback
-  let tick = 0;
-  try {
-    const refresh = useRefresh();
-    tick = refresh.tick;
-  } catch (err) {
-    console.warn('[Campaigns] useRefresh not available:', err);
-  }
   
   React.useEffect(() => {
     // Don't reload if already initialized and this is just a tab switch
@@ -287,13 +257,7 @@ function ScreenInner() {
   }, [reload]);
 
   React.useEffect(() => {
-    try {
-      if (typeof setCount === 'function') {
-        setCount("campaigns", items.length);
-      }
-    } catch (err) {
-      console.error('[Campaigns] setCount failed:', err);
-    }
+    setCount("campaigns", items.length);
   }, [items, setCount]);
 
   // One-time polite announcement of loaded count

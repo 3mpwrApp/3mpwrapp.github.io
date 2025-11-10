@@ -22,6 +22,12 @@ export function RefreshProvider({ children }: { children: React.ReactNode }) {
 
 export function useRefresh() {
   const ctx = React.useContext(RefreshContext);
-  if (!ctx) throw new Error("useRefresh must be used within RefreshProvider");
+  if (!ctx) {
+    console.warn('[useRefresh] Used outside provider - returning safe defaults');
+    return {
+      tick: 0,
+      refreshAll: () => {},
+    };
+  }
   return ctx;
 }
