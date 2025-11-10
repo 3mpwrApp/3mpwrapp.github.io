@@ -216,7 +216,29 @@ permalink: /campaigns/
             </div>
           ` : ''}
           
-          ${campaign.organizer ? `<p style="color: #000000 !important; font-size: 0.95rem; margin: 0.5rem 0; font-weight: 600;">👤 <strong style="color: #000000 !important;">Organized by:</strong> ${campaign.organizer}</p>` : ''}
+          ${campaign.organizer ? `
+            <p style="color: #000000 !important; font-size: 0.95rem; margin: 0.5rem 0; font-weight: 600;">
+              👤 <strong style="color: #000000 !important;">Organized by:</strong> 
+              <span style="color: #000000 !important;">${campaign.organizer}</span>
+              ${campaign.organizerWebsite ? `
+                <a href="${campaign.organizerWebsite.startsWith('http') ? campaign.organizerWebsite : 'https://' + campaign.organizerWebsite}" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   style="color: #0052a3 !important; text-decoration: underline; font-weight: 600; margin-left: 0.5rem;"
+                   title="Visit ${campaign.organizer} website">
+                  🔗 ${campaign.organizerWebsite.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                </a>
+              ` : campaign.organizer === 'Every Canadian Counts' ? `
+                <a href="https://everycanadiancounts.com" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   style="color: #0052a3 !important; text-decoration: underline; font-weight: 600; margin-left: 0.5rem;"
+                   title="Visit Every Canadian Counts website">
+                  🔗 everycanadiancounts.com
+                </a>
+              ` : ''}
+            </p>
+          ` : ''}
           
           ${campaign.tags && campaign.tags.length > 0 ? `
             <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
