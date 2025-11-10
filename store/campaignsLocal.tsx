@@ -40,8 +40,22 @@ export function CampaignsLocalProvider({
   React.useEffect(() => {
     (async () => {
       if (!AsyncStorage) return;
-      const raw = await AsyncStorage.getItem(KEY);
-      if (raw) setState(JSON.parse(raw));
+      try {
+        const raw = await AsyncStorage.getItem(KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          // Validate parsed data
+          if (parsed && typeof parsed === 'object') {
+            setState({
+              myCampaigns: Array.isArray(parsed.myCampaigns) ? parsed.myCampaigns : [],
+              joined: parsed.joined && typeof parsed.joined === 'object' ? parsed.joined : {},
+            });
+          }
+        }
+      } catch (err) {
+        console.error('[CampaignsLocalProvider] Failed to load from storage:', err);
+        setState(DEFAULT);
+      }
     })();
   }, []);
 
@@ -51,10 +65,17 @@ export function CampaignsLocalProvider({
     syncingRef.current = true;
     try {
       const remote = await fsFetchJoinedCampaigns(user.uid);
-      if (remote.length) {
-        setState(s => ({ ...s, joined: { ...s.joined, ...Object.fromEntries(remote.map(r => [r, true])) } }));
+      if (Array.isArray(remote) && remote.length) {
+        setState(s => ({ 
+          ...s, 
+          joined: { ...s.joined, ...Object.fromEntries(remote.map(r => [r, true])) } 
+        }));
       }
-    } catch {} finally { syncingRef.current = false; }
+    } catch (err) {
+      console.error('[CampaignsLocalProvider] Failed to sync remote:', err);
+    } finally { 
+      syncingRef.current = false; 
+    }
   }, [user?.uid]);
 
   React.useEffect(() => { syncRemote(); }, [syncRemote]);
@@ -62,7 +83,11 @@ export function CampaignsLocalProvider({
   React.useEffect(() => {
     (async () => {
       if (!AsyncStorage) return;
-      await AsyncStorage.setItem(KEY, JSON.stringify(state));
+      try {
+        await AsyncStorage.setItem(KEY, JSON.stringify(state));
+      } catch (err) {
+        console.error('[CampaignsLocalProvider] Failed to save to storage:', err);
+      }
     })();
   }, [state]);
 
@@ -92,9 +117,17 @@ export function CampaignsLocalProvider({
 
 export function useCampaignsLocal() {
   const ctx = React.useContext(Ctx);
-  if (!ctx)
-    {throw new Error(
-      "useCampaignsLocal must be used within CampaignsLocalProvider",
-    );}
+  if (!ctx) {
+    // Instead of throwing, return a safe default implementation
+    console.warn('[useCampaignsLocal] Called outside of provider - returning defaults');
+    return {
+      state: { myCampaigns: [], joined: {} },
+      createCampaign: () => ({ id: 'error', title: '', summary: '' }),
+      join: () => {},
+      leave: () => {},
+      isJoined: () => false,
+      syncRemote: async () => {},
+    };
+  }
   return ctx;
 }

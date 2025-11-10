@@ -4,22 +4,21 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { useAppPalette } from '../../theme/usePalette';
 
-// Import with try-catch protection
-let CampaignsScreenComponent: React.ComponentType<any>;
+// Import with try-catch protection and lazy loading
+let CampaignsScreenComponent: React.ComponentType<any> | null = null;
+let importError: Error | null = null;
+
+// Attempt dynamic import
 try {
-  CampaignsScreenComponent = require('../campaigns/index').default;
+  const imported = require('../campaigns/index');
+  if (imported && imported.default) {
+    CampaignsScreenComponent = imported.default;
+  } else {
+    throw new Error('Invalid module export - default export not found');
+  }
 } catch (error) {
   console.error('[CampaignsTab] Failed to import campaigns screen:', error);
-  // Fallback component
-  CampaignsScreenComponent = () => (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 }}>
-      <Text style={{ fontSize: 48, marginBottom: 16 }}>⚠️</Text>
-      <Text style={{ fontSize: 24, fontWeight: '700', marginBottom: 12 }}>Import Error</Text>
-      <Text style={{ fontSize: 14, textAlign: 'center' }}>
-        Failed to load campaigns module. Please restart the app.
-      </Text>
-    </View>
-  );
+  importError = error as Error;
 }
 
 class CampaignsTabErrorBoundary extends React.Component<
@@ -70,6 +69,53 @@ class CampaignsTabErrorBoundary extends React.Component<
 
 export default function CampaignsTab() {
   const palette = useAppPalette();
+  
+  // If import failed, show error immediately
+  if (!CampaignsScreenComponent) {
+    return (
+      <View style={[createStyles(palette).errorContainer, { padding: 20 }]}>
+        <Text style={{ fontSize: 48, marginBottom: 16 }}>⚠️</Text>
+        <Text style={{ fontSize: 24, fontWeight: '700', marginBottom: 12, color: palette.text }}>
+          Import Error
+        </Text>
+        <Text style={{ fontSize: 14, textAlign: 'center', marginBottom: 16, color: palette.textSecondary }}>
+          Failed to load campaigns module. Please restart the app.
+        </Text>
+        {importError && (
+          <Text style={{ fontSize: 12, color: palette.error, fontFamily: 'monospace', marginBottom: 16 }}>
+            {importError.message}
+          </Text>
+        )}
+        <Pressable
+          style={{
+            backgroundColor: palette.primary,
+            paddingVertical: 12,
+            paddingHorizontal: 24,
+            borderRadius: 8,
+          }}
+          onPress={() => {
+            // Try to reload the module
+            try {
+              const imported = require('../campaigns/index');
+              if (imported && imported.default) {
+                CampaignsScreenComponent = imported.default;
+                importError = null;
+                // Force re-render
+                // @ts-ignore
+                window.location?.reload?.();
+              }
+            } catch (err) {
+              console.error('[CampaignsTab] Retry failed:', err);
+            }
+          }}
+        >
+          <Text style={{ color: palette.onPrimary, fontSize: 16, fontWeight: '600' }}>
+            Try Again
+          </Text>
+        </Pressable>
+      </View>
+    );
+  }
   
   return (
     <CampaignsTabErrorBoundary palette={palette}>

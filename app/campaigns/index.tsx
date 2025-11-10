@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import { Link } from "expo-router";
 import React from "react";
 import {
@@ -50,6 +49,48 @@ import { colors, type Palette } from "../../theme/colors";
 import { logger } from "../../utils/logger";
 
 /**
+ * Safe wrapper for RepTracker - catches errors and shows fallback
+ */
+function RepTrackerSafe() {
+  const [hasError, setHasError] = React.useState(false);
+  
+  if (hasError) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 }}>
+        <Text style={{ fontSize: 48, marginBottom: 16 }}>⚠️</Text>
+        <Text style={{ fontSize: 18, fontWeight: '700', marginBottom: 12 }}>
+          Rep Tracker Unavailable
+        </Text>
+        <Text style={{ fontSize: 14, textAlign: 'center', marginBottom: 16 }}>
+          The Rep Tracker feature is temporarily unavailable. This may be due to location permissions or a temporary issue.
+        </Text>
+        <Pressable
+          onPress={() => setHasError(false)}
+          style={{
+            backgroundColor: '#007AFF',
+            paddingVertical: 12,
+            paddingHorizontal: 24,
+            borderRadius: 8,
+          }}
+        >
+          <Text style={{ color: '#fff', fontSize: 16, fontWeight: '600' }}>
+            Try Again
+          </Text>
+        </Pressable>
+      </View>
+    );
+  }
+  
+  try {
+    return <RepTracker />;
+  } catch (error) {
+    console.error('[RepTrackerSafe] Render error:', error);
+    setHasError(true);
+    return null;
+  }
+}
+
+/**
  * Format sync time as relative time (e.g., "2 minutes ago")
  */
 function formatSyncTime(date: Date): string {
@@ -71,8 +112,13 @@ function ScreenInner() {
   useAnnounceOnMount("Campaigns");
   useFocusOnRefOnMount(titleRef);
 
+  // Ensure initial state is always a valid array
+  const safeLocalCampaigns = React.useMemo(() => {
+    return Array.isArray(localCampaigns) ? localCampaigns : [];
+  }, []);
+
   const [query, setQuery] = React.useState("");
-  const [items, setItems] = React.useState(localCampaigns || []);
+  const [items, setItems] = React.useState(safeLocalCampaigns);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [showRepTracker, setShowRepTracker] = React.useState(false);
@@ -90,16 +136,18 @@ function ScreenInner() {
       setError(null);
       setLoading(true);
       const data = await fetchCampaigns();
-      setItems(data || []); // Ensure data is always an array
+      // Critical: Ensure data is always an array
+      const validData = Array.isArray(data) ? data : [];
+      setItems(validData);
       setOffline(false);
       setLastSyncTime(new Date());
     } catch (err) {
       logger.error('[Campaigns] Failed to reload campaigns:', err);
       setError("Failed to load campaigns");
       setOffline(true);
-      // Don't crash - use existing items or empty array
-      if (!items || items.length === 0) {
-        setItems(localCampaigns);
+      // Don't crash - use existing items or fallback to local campaigns
+      if (!items || !Array.isArray(items) || items.length === 0) {
+        setItems(safeLocalCampaigns);
       }
     } finally {
       setLoading(false);
@@ -108,13 +156,28 @@ function ScreenInner() {
 
   const { tick } = useRefresh();
   React.useEffect(() => {
-    reload().catch((err) => {
-      logger.error('[Campaigns] Error in initial load:', err);
-      // Fallback to local campaigns
-      setItems(localCampaigns);
-      setLoading(false);
-    });
-  }, [reload, tick]);
+    // Protect against multiple simultaneous loads
+    let cancelled = false;
+    
+    const doLoad = async () => {
+      try {
+        await reload();
+      } catch (err) {
+        if (!cancelled) {
+          logger.error('[Campaigns] Error in initial load:', err);
+          // Fallback to local campaigns with safety check
+          setItems(safeLocalCampaigns);
+          setLoading(false);
+        }
+      }
+    };
+    
+    doLoad();
+    
+    return () => {
+      cancelled = true;
+    };
+  }, [tick]); // Removed reload from deps to prevent infinite loop
 
   // Real-time sync: Poll API every 5 minutes
   React.useEffect(() => {
@@ -136,38 +199,62 @@ function ScreenInner() {
 
   type Mixed = (typeof local.myCampaigns[number] & { kind?: 'campaign' });
   const allItems = React.useMemo<Mixed[]>(
-    () => [
-      ...local.myCampaigns.map(c => ({ ...c, kind: 'campaign' as const })),
-      ...items.map(c => ({ ...c, kind: 'campaign' as const })),
-    ],
-    [local.myCampaigns, items],
+    () => {
+      // Safety checks - ensure all inputs are arrays
+      const safeMyCampaigns = Array.isArray(local?.myCampaigns) ? local.myCampaigns : [];
+      const safeItems = Array.isArray(items) ? items : [];
+      
+      return [
+        ...safeMyCampaigns.map(c => ({ ...c, kind: 'campaign' as const })),
+        ...safeItems.map(c => ({ ...c, kind: 'campaign' as const })),
+      ];
+    },
+    [local?.myCampaigns, items],
   );
 
-  const joinedCount = React.useMemo(() => Object.keys(local.joined).length, [local.joined]);
+  const joinedCount = React.useMemo(() => {
+    if (!local?.joined || typeof local.joined !== 'object') return 0;
+    return Object.keys(local.joined).length;
+  }, [local?.joined]);
 
   const sections = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    const campaigns = allItems;
+    const campaigns = Array.isArray(allItems) ? allItems : [];
+    
     // Your campaigns: joined or created locally
-    const your = campaigns.filter(i => isJoined(i.id) || local.myCampaigns.some(m => m.id === i.id));
-    const yourIds = new Set(your.map(i => i.id));
+    const safeMyCampaigns = Array.isArray(local?.myCampaigns) ? local.myCampaigns : [];
+    const your = campaigns.filter(i => {
+      try {
+        return isJoined(i?.id) || safeMyCampaigns.some(m => m?.id === i?.id);
+      } catch {
+        return false;
+      }
+    });
+    const yourIds = new Set(your.map(i => i?.id).filter(Boolean));
+    
     // Other campaigns (dedup your)
-    const others = campaigns.filter(i => !yourIds.has(i.id));
+    const others = campaigns.filter(i => !yourIds.has(i?.id));
 
     const match = (c: any) => {
-      if (!q) return true;
-      return (
-        c.title.toLowerCase().includes(q) ||
-        (c.summary || '').toLowerCase().includes(q)
-      );
+      if (!q || !c) return !q;
+      try {
+        const title = c.title || '';
+        const summary = c.summary || '';
+        return (
+          title.toLowerCase().includes(q) ||
+          summary.toLowerCase().includes(q)
+        );
+      } catch {
+        return false;
+      }
     };
 
     const sec = [
       { title: 'Your Campaigns', data: your.filter(match) },
       { title: 'All Campaigns', data: others.filter(match) },
-    ].filter(s => s.data.length > 0);
+    ].filter(s => Array.isArray(s.data) && s.data.length > 0);
     return sec as { title: string; data: Mixed[] }[];
-  }, [query, allItems, local.myCampaigns, isJoined]);
+  }, [query, allItems, local?.myCampaigns, isJoined]);
 
   return (
     <ResponsiveScreenWrapper>
@@ -188,7 +275,7 @@ function ScreenInner() {
                 ← Back to Campaigns
               </Text>
             </Pressable>
-            <RepTracker />
+            <RepTrackerSafe />
           </View>
         ) : (
           <>
@@ -223,15 +310,15 @@ function ScreenInner() {
 
           <View style={styles.statsRow}>
             <View style={styles.statBox}>
-              <Text style={styles.statNumber}>{joinedCount}</Text>
+              <Text style={styles.statNumber}>{joinedCount || 0}</Text>
               <Text style={styles.statLabel}>Joined</Text>
             </View>
             <View style={styles.statBox}>
-              <Text style={styles.statNumber}>{allItems.length}</Text>
+              <Text style={styles.statNumber}>{Array.isArray(allItems) ? allItems.length : 0}</Text>
               <Text style={styles.statLabel}>Total</Text>
             </View>
             <View style={styles.statBox}>
-              <Text style={styles.statNumber}>{local.myCampaigns.length}</Text>
+              <Text style={styles.statNumber}>{Array.isArray(local?.myCampaigns) ? local.myCampaigns.length : 0}</Text>
               <Text style={styles.statLabel}>Created</Text>
             </View>
           </View>
@@ -323,12 +410,18 @@ function ScreenInner() {
         )}
 
         <SectionList
-          sections={sections}
-          keyExtractor={(item) => `thread-${item.id}`}
+          sections={Array.isArray(sections) ? sections : []}
+          keyExtractor={(item) => `thread-${item?.id || Math.random()}`}
           renderSectionHeader={({ section }) => (
-            <Text style={[styles.subtitle, { marginTop: 8, fontWeight:'700' }]}>{section.title}</Text>
+            <Text style={[styles.subtitle, { marginTop: 8, fontWeight:'700' }]}>
+              {section?.title || 'Campaigns'}
+            </Text>
           )}
-          renderItem={({ item }) => (
+          renderItem={({ item }) => {
+            // Safety check - skip invalid items
+            if (!item || !item.id) return null;
+            
+            return (
             <View style={styles.campaignCard}>
               <Link
                 href={{ pathname: "/campaigns/[id]", params: { id: item.id } } as any}
@@ -497,7 +590,8 @@ function ScreenInner() {
                 </Pressable>
               </View>
             </View>
-          )}
+            );
+          }}
           ListEmptyComponent={!loading && !error ? (
             <View style={{ paddingVertical: 12 }}>
               <Text style={{ color: palette.text, opacity: 0.8, marginBottom: 6 }}>{t('campaigns.empty','No campaigns match your filters')}</Text>
