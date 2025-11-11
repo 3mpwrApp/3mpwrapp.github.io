@@ -1,6 +1,16 @@
-import * as Haptics from 'expo-haptics';
 import { useEffect, useRef, useState } from 'react';
 import type { GestureResponderEvent } from 'react-native';
+import { Platform } from 'react-native';
+
+// Lazy load Haptics only on native platforms
+let Haptics: any = null;
+if (Platform.OS !== 'web') {
+  try {
+    Haptics = require('expo-haptics');
+  } catch {
+    // Haptics not available
+  }
+}
 
 interface UseDwellClickOptions {
   onDwell: () => void;
@@ -94,8 +104,8 @@ export function useDwellClick(options: UseDwellClickOptions): UseDwellClickRetur
       if (!activatedRef.current) {
         activatedRef.current = true;
         
-        // Haptic feedback
-        if (haptics) {
+        // Haptic feedback (native only)
+        if (haptics && Haptics && Platform.OS !== 'web') {
           try {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
           } catch {

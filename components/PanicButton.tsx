@@ -1,10 +1,19 @@
 import { Ionicons } from '@expo/vector-icons';
-import * as Haptics from 'expo-haptics';
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { AccessibilityInfo, Pressable, StyleSheet, View } from 'react-native';
+import { AccessibilityInfo, Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
+
+// Lazy load Haptics only on native platforms
+let Haptics: any = null;
+if (Platform.OS !== 'web') {
+  try {
+    Haptics = require('expo-haptics');
+  } catch {
+    // Haptics not available
+  }
+}
 
 /**
  * PanicButton - Trauma-informed emergency exit
@@ -24,11 +33,13 @@ export function PanicButton() {
   const handlePress = async () => {
     setPressed(true);
     
-    // Haptic feedback (vibration) for confirmation
-    try {
-      await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
-    } catch {
-      // Haptics not available on all devices
+    // Haptic feedback (vibration) for confirmation - native only
+    if (Haptics && Platform.OS !== 'web') {
+      try {
+        await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+      } catch {
+        // Haptics not available on all devices
+      }
     }
 
     // Screen reader announcement

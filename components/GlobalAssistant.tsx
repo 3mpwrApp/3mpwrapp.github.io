@@ -1,6 +1,6 @@
 import { usePathname, useRouter } from 'expo-router';
 import React from 'react';
-import { Animated, Easing, StyleSheet, Text, View } from 'react-native';
+import { Animated, Easing, Platform, StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { useTranslation } from '../i18n';
@@ -63,8 +63,11 @@ export default function GlobalAssistant() {
     })();
   }, [pathname]);
   
-  // Haptics optional
-  let Haptics: any; try { Haptics = require('expo-haptics'); } catch {}
+  // Haptics optional (native only, not available on web)
+  let Haptics: any = null;
+  if (Platform.OS !== 'web') {
+    try { Haptics = require('expo-haptics'); } catch {}
+  }
   const scale = React.useRef(new Animated.Value(1)).current as any;
   const animateTo = (v: number) => {
     Animated.timing(scale, { toValue: v, duration: 90, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();

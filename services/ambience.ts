@@ -1,7 +1,17 @@
-import * as Haptics from 'expo-haptics';
 import { useEffect } from 'react';
+import { Platform } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
+
+// Lazy load Haptics only on native platforms
+let Haptics: any = null;
+if (Platform.OS !== 'web') {
+  try {
+    Haptics = require('expo-haptics');
+  } catch {
+    // Haptics not available
+  }
+}
 
 export type AmbienceSuggestion = {
   palette: 'calm' | 'focus' | 'uplift' | 'lowStim';
@@ -23,8 +33,10 @@ export function useApplyAmbience(moodScore: number | null, trend: 'improving'|'d
   useEffect(() => {
     computeAmbience(moodScore, trend);
     // We cannot set OS wallpaper from Expo reliably; adjust in-app accents only
-    // Trigger a light haptic as subtle feedback
-    try { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); } catch {}
+    // Trigger a light haptic as subtle feedback (native only)
+    if (Haptics && Platform.OS !== 'web') {
+      try { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light); } catch {}
+    }
     // The app palette can be extended to react to this suggestion; currently returned to callers
   }, [moodScore, trend, palette]);
 }
