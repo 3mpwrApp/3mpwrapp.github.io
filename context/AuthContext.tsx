@@ -41,17 +41,23 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       auth,
       async (firebaseUser) => {
         try {
+          logger.log('[AuthContext] ===== AUTH STATE CHANGED =====');
           logger.log('[AuthContext] Auth state changed', { 
             hasUser: !!firebaseUser, 
             isAnonymous: firebaseUser?.isAnonymous,
             uid: firebaseUser?.uid,
             email: firebaseUser?.email,
-            provider: firebaseUser?.providerData?.[0]?.providerId
+            provider: firebaseUser?.providerData?.[0]?.providerId,
+            timestamp: new Date().toISOString(),
           });
           
           setUser(firebaseUser);
           setIsGuest(!!firebaseUser?.isAnonymous);
           setLoading(false);
+
+          logger.log('[AuthContext] User state updated, loading set to false');
+          logger.log('[AuthContext] This should trigger navigation in app/index.tsx');
+          logger.log('[AuthContext] ===================================');
 
           // Clear session expired flag when user is authenticated
           if (firebaseUser) {

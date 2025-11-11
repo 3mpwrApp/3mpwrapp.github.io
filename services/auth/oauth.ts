@@ -103,8 +103,13 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
     
     const { GoogleAuthProvider, signInWithCredential } = await import('firebase/auth');
     const credential: AuthCredential = GoogleAuthProvider.credential(result.params.id_token);
+    logger.log('[OAuth] ===== SIGNING IN WITH GOOGLE =====');
     await signInWithCredential(auth, credential);
-    logger.log('[OAuth] Google Sign-In successful!');
+    logger.log('[OAuth] ===== GOOGLE SIGN-IN SUCCESSFUL =====');
+    logger.log('[OAuth] Firebase auth state updated');
+    logger.log('[OAuth] AuthContext will detect this change');
+    logger.log('[OAuth] app/index.tsx will handle navigation to /(tabs)');
+    logger.log('[OAuth] =============================================');
     return true;
   } catch (e: any) {
     logger.error('[OAuth] Google Sign-In exception:', e);
@@ -153,7 +158,13 @@ export async function signInWithAppleAsync(): Promise<boolean> {
     const { OAuthProvider, signInWithCredential } = await import('firebase/auth');
     const provider = new OAuthProvider('apple.com');
     const credential = provider.credential({ idToken: res.identityToken });
+    logger.log('[OAuth] ===== SIGNING IN WITH APPLE =====');
     await signInWithCredential(auth, credential);
+    logger.log('[OAuth] ===== APPLE SIGN-IN SUCCESSFUL =====');
+    logger.log('[OAuth] Firebase auth state updated');
+    logger.log('[OAuth] AuthContext will detect this change');
+    logger.log('[OAuth] app/index.tsx will handle navigation to /(tabs)');
+    logger.log('[OAuth] ============================================');
     return true;
   } catch (e: any) {
     Alert.alert('Apple Sign-In failed', e?.message || 'Could not sign in with Apple');

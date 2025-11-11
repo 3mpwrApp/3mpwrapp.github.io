@@ -75,14 +75,17 @@ export default function Index() {
     }
     
     // Auth is done loading - check where we are
-    const inAuthFlow = (segments as string[]).includes('auth');
-    const inTabsFlow = (segments as string[]).includes('tabs');
+    const segmentArray = segments as string[];
+    const inAuthFlow = segmentArray.includes('auth') || segmentArray.includes('(auth)');
+    const inTabsFlow = segmentArray.includes('tabs') || segmentArray.includes('(tabs)');
+    const currentPath = segmentArray.join('/');
     
     logger.log('[Index] Navigation check', { 
       hasUser: !!user, 
       inAuthFlow, 
       inTabsFlow,
-      segments: segments.join('/'),
+      segments: currentPath,
+      segmentArray,
     });
     
     // Determine where user should be based on auth state
@@ -92,7 +95,10 @@ export default function Index() {
     // If user is authenticated but in auth flow, navigate to tabs (HOME)
     if (shouldBeInTabs && inAuthFlow) {
       logger.log('[Index] ✅ User logged in - navigating to home/(tabs)');
-      router.replace('/(tabs)');
+      // Use a small delay to ensure Firebase auth state is fully settled
+      setTimeout(() => {
+        router.replace('/(tabs)');
+      }, 100);
       return;
     }
     
@@ -103,14 +109,16 @@ export default function Index() {
       return;
     }
     
-    // Initial navigation when not in any flow yet
+    // Initial navigation when not in any flow yet (index route)
     if (!inAuthFlow && !inTabsFlow) {
       if (!user) {
         logger.log('[Index] 🔄 Initial - no user, navigating to login');
         router.replace('/(auth)/signin' as any);
       } else {
         logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
-        router.replace('/(tabs)');
+        setTimeout(() => {
+          router.replace('/(tabs)');
+        }, 100);
       }
     }
   }, [loading, user, segments, router]); // React to loading, user, segments, and router changes

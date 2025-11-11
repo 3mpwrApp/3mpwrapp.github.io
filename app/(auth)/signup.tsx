@@ -9,6 +9,7 @@ import { auth, db } from '../../firebase/config';
 import { MAX_FONT_SCALE } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
 import { useAppPalette } from '../../theme/usePalette';
+import { logger } from '../../utils/logger';
 
 export default function RegisterScreen() {
   const router = useRouter();
@@ -37,16 +38,25 @@ export default function RegisterScreen() {
     
     try {
       setWorking(true);
+      logger.log('[Signup] ===== STARTING REGISTRATION PROCESS =====');
+      logger.log('[Signup] Email:', email.trim());
+      logger.log('[Signup] Display Name:', displayName.trim());
       const userCredential = await createUserWithEmailAndPassword(auth, email.trim(), password);
       const user = userCredential.user;
+      logger.log('[Signup] User created in Firebase Auth:', user.uid);
       await setDoc(doc(db, 'users', user.uid), {
         uid: user.uid,
         email: user.email,
         displayName: displayName.trim(),
         createdAt: serverTimestamp(),
       });
-      // Route to personalized onboarding wizard
-      router.replace('/onboarding');
+      logger.log('[Signup] User profile created in Firestore');
+      logger.log('[Signup] ===== REGISTRATION SUCCESSFUL =====');
+      logger.log('[Signup] Firebase auth state updated');
+      logger.log('[Signup] AuthContext will detect this change');
+      logger.log('[Signup] app/index.tsx will handle navigation to /(tabs)');
+      logger.log('[Signup] ================================================');
+      // Don't manually navigate - let AuthContext handle it via app/index.tsx
     } catch (err: any) {
       setError(err?.message || 'Registration failed');
       Alert.alert(t('common.errorTitle', 'Error'), err?.message || 'Registration failed');

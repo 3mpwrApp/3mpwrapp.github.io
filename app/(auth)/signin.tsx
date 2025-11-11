@@ -39,9 +39,14 @@ export default function LoginScreen() {
     try {
       setWorking(true);
       setError("");
-      logger.log('[Login] Starting login process...');
+      logger.log('[Login] ===== STARTING LOGIN PROCESS =====');
+      logger.log('[Login] Email:', email.trim());
       await signInWithEmailAndPassword(auth, email.trim(), password);
-      logger.log('[Login] Login successful! Auth state will trigger navigation.');
+      logger.log('[Login] ===== LOGIN SUCCESSFUL =====');
+      logger.log('[Login] Firebase auth state updated');
+      logger.log('[Login] AuthContext will detect this change');
+      logger.log('[Login] app/index.tsx will handle navigation to /(tabs)');
+      logger.log('[Login] =====================================');
       // Don't manually navigate - let AuthContext handle it via app/index.tsx
     } catch (err: any) {
       logger.error('[Login] Login failed:', err);
@@ -68,9 +73,13 @@ export default function LoginScreen() {
   const handleGuestMode = async () => {
     try {
       setWorking(true);
-      logger.log('[Login] Starting guest mode...');
+      logger.log('[Login] ===== STARTING GUEST MODE =====');
       await signInGuest();
-      logger.log('[Login] Guest mode successful! Auth state will trigger navigation.');
+      logger.log('[Login] ===== GUEST MODE SUCCESSFUL =====');
+      logger.log('[Login] Firebase auth state updated (anonymous user)');
+      logger.log('[Login] AuthContext will detect this change');
+      logger.log('[Login] app/index.tsx will handle navigation to /(tabs)');
+      logger.log('[Login] ========================================');
       // Don't manually navigate - let AuthContext handle it via app/index.tsx
     } catch (err) {
       logger.error('[Login] Guest mode failed:', err);
