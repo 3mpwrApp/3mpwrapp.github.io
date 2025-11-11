@@ -65,6 +65,15 @@ class Logger {
   }
 
   /**
+   * Log informational messages (alias for log, development only)
+   */
+  info(...args: any[]): void {
+    if (this.isDevelopment) {
+      console.log(...args);
+    }
+  }
+
+  /**
    * Log warnings (development only)
    */
   warn(...args: any[]): void {

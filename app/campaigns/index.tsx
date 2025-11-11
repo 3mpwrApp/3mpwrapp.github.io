@@ -216,7 +216,7 @@ function ScreenInner() {
   React.useEffect(() => {
     // Don't reload if already initialized and this is just a tab switch
     if (isInitializedRef.current) {
-      logger.info('[Campaigns] Skipping reload - already initialized');
+      logger.log('[Campaigns] Skipping reload - already initialized');
       return;
     }
 
