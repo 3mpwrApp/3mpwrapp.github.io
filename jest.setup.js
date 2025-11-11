@@ -204,7 +204,18 @@ const NOISY_WARN_PATTERNS = [
   // Test-only analytics noise
   /analytics event \(noop native\)/i,
   /\[analytics\] Unused registry events/i,
-  /screen_view \{/i
+  /screen_view \{/i,
+  // React Native DOM prop warnings (test environment only - not production issues)
+  /Unknown event handler property `onPressIn`/i,
+  /React does not recognize the `keyboardType` prop/i,
+  /React does not recognize the `showsHorizontalScrollIndicator` prop/i,
+  /React does not recognize the `scrollEnabled` prop/i,
+  /React does not recognize the `nestedScrollEnabled` prop/i,
+  /Received `true` for a non-boolean attribute `horizontal`/i,
+  // Expo modules test environment warnings (not production issues)
+  /An error occurred while requiring the 'ExpoModulesCoreJSLogger'/i,
+  /The global process\.env\.EXPO_OS is not defined/i,
+  /Clipboard not available/i
 ];
 function shouldFilter(message, args){
   if (typeof message === 'string') {

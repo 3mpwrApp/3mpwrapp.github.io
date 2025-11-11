@@ -1,6 +1,13 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import EventsScreen from '../app/events';
+
+// Mock expo HMR client to prevent WebSocket errors in tests
+jest.mock('expo/src/async-require/hmr', () => ({
+  showLoading: jest.fn(),
+  hideLoading: jest.fn(),
+}));
+
 // Mock expo-router Link to avoid bringing in native stack/assets
 jest.mock('expo-router', () => ({ 
   Link: ({ children }: any) => children, 
