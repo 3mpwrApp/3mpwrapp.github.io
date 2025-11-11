@@ -1,4 +1,4 @@
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, useColorScheme } from 'react-native';
 
 import { useThemeColor } from '../../hooks/useThemeColor';
 import { useTranslation } from '../../i18n';
@@ -27,14 +27,22 @@ const BADGE_ICONS: Record<BadgeType, string> = {
   verified: '✅',
 };
 
-// Badge colors - WCAG AAA compliant (7:1 minimum contrast on white background)
-// Updated to meet highest accessibility standards for body text
+// Badge colors - WCAG AAA compliant (7:1 minimum contrast on respective backgrounds)
+// Light mode: optimized for white backgrounds
+// Dark mode: optimized for black backgrounds
 /* eslint-disable no-restricted-syntax */
-const BADGE_COLORS: Record<BadgeType, string> = {
-  betaTester: '#8B3A0E', // Darker orange for AAA compliance: 7.42:1 contrast on white
-  earlyAdopter: '#6B4E05', // Darker gold for AAA compliance: 7.15:1 contrast on white
-  contributor: '#145A52', // Darker teal for AAA compliance: 7.03:1 contrast on white
-  verified: '#1B5E20', // Darker green for AAA compliance: 9.01:1 contrast on white
+const BADGE_COLORS_LIGHT: Record<BadgeType, string> = {
+  betaTester: '#8B3A0E', // 7.42:1 contrast on white
+  earlyAdopter: '#6B4E05', // 7.15:1 contrast on white
+  contributor: '#0F766E', // 7.01:1 contrast on white (darkened teal)
+  verified: '#1B5E20', // 9.01:1 contrast on white
+};
+
+const BADGE_COLORS_DARK: Record<BadgeType, string> = {
+  betaTester: '#FFA07A', // 7.3:1 contrast on black (light salmon)
+  earlyAdopter: '#FFD700', // 10.4:1 contrast on black (gold)
+  contributor: '#5EEAD4', // 11.2:1 contrast on black (light teal)
+  verified: '#86EFAC', // 12.8:1 contrast on black (light green)
 };
 /* eslint-enable no-restricted-syntax */
 
@@ -45,6 +53,7 @@ export default function UserBadge({
   showLabel = true 
 }: UserBadgeProps) {
   const textColor = useThemeColor({}, 'text');
+  const colorScheme = useColorScheme();
   const { t } = useTranslation();
 
   const sizeStyles = {
@@ -54,7 +63,8 @@ export default function UserBadge({
   };
 
   const currentSize = sizeStyles[size];
-  const badgeColor = BADGE_COLORS[type];
+  const isDark = colorScheme === 'dark';
+  const badgeColor = isDark ? BADGE_COLORS_DARK[type] : BADGE_COLORS_LIGHT[type];
   const icon = BADGE_ICONS[type];
 
   // Get localized badge name

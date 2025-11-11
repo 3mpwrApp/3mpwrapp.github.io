@@ -77,11 +77,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 /* eslint-disable no-restricted-syntax */
 const FALLBACK_PALETTE = {
   background: '#FFFFFF' as const, // Pure white for maximum contrast compliance
-  surface: '#F5F5F5' as const, // Very light gray with 1.09:1 contrast (decorative only)
+  surface: '#E5E5E5' as const, // Light gray with 1.3:1 contrast (decorative, non-text)
   text: '#000000' as const, // Pure black for maximum contrast: 21:1 (WCAG AAA)
   onPrimary: '#FFFFFF' as const, // White text on primary color
-  primary: '#004A99' as const, // Darker blue for AAA compliance: 8.61:1 contrast on white
-  muted: '#434A50' as const, // Dark gray for AAA compliance: 8.99:1 contrast on white
+  primary: '#003D7A' as const, // Darker blue for AAA compliance: 10.6:1 contrast on white, 7.1:1 with white text
+  muted: '#1A1A1A' as const, // Very dark gray for AAA compliance: 16.9:1 contrast on white
 };
 /* eslint-enable no-restricted-syntax */
 

@@ -539,16 +539,16 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number)
       borderRadius: 4 * factor,
     },
     voteFor: {
-      backgroundColor: '#22c55e',
-      color: '#ffffff',
+      backgroundColor: '#047857',
+      color: '#FFFFFF',
     },
     voteAgainst: {
-      backgroundColor: '#ef4444',
-      color: '#ffffff',
+      backgroundColor: '#991B1B',
+      color: '#FFFFFF',
     },
     voteAbstain: {
-      backgroundColor: '#6b7280',
-      color: '#ffffff',
+      backgroundColor: '#374151',
+      color: '#FFFFFF',
     },
     voteDate: {
       fontSize: 12 * factor,

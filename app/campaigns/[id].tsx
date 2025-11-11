@@ -314,7 +314,7 @@ function CampaignDetailInner() {
                           )}`;
                           Linking.openURL(url);
                         }}
-                        style={[styles.shareButton, { backgroundColor: '#1DA1F2' }]}
+                        style={[styles.shareButton, { backgroundColor: '#0C7ABF' }]}
                         hitSlop={HIT_SLOP_8}
                       >
                         <Text style={styles.shareButtonText}>𝕏</Text>
@@ -331,7 +331,7 @@ function CampaignDetailInner() {
                             Alert.alert('Error', 'Could not share');
                           }
                         }}
-                        style={[styles.shareButton, { backgroundColor: '#4267B2' }]}
+                        style={[styles.shareButton, { backgroundColor: '#1E3A5F' }]}
                         hitSlop={HIT_SLOP_8}
                       >
                         <Text style={styles.shareButtonText}>f</Text>
@@ -690,13 +690,13 @@ function createStyles(palette: Palette, factor: number) {
       marginLeft: 8,
     },
     statusActive: {
-      backgroundColor: palette.success || '#22c55e',
+      backgroundColor: palette.success || '#047857',
     },
     statusPending: {
-      backgroundColor: palette.warning || '#f59e0b',
+      backgroundColor: palette.warning || '#B45309',
     },
     statusText: {
-      color: '#fff',
+      color: '#FFFFFF',
       fontSize: Math.round(11 * factor),
       fontWeight: '700',
       textTransform: 'uppercase',

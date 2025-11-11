@@ -21,35 +21,23 @@ The app uses **hybrid_byoc** mode:
 1. Login to [Firebase Console](https://console.firebase.google.com) with `empowrapp08162025@gmail.com`
 2. Select project: **empowrapp**
 3. Navigate to **Authentication** → **Settings** → **Authorized domains**
-4. Add these domains:
+4. Click **"Add domain"** for EACH of these:
 
+#### ✅ Add These Domains (Firebase Accepts These):
 ```
 localhost
-127.0.0.1
 empowrapp.firebaseapp.com
 auth.expo.io
-*.expo.dev
 ```
 
-**For Expo Go Development**:
+#### ❌ Don't Add These (Firebase Rejects Wildcards & Custom Schemes):
 ```
-https://auth.expo.io/@3mpwrapp/empowrapp
-exp://localhost:8081
-exp://192.168.1.*:8081
-```
-
-**For Standalone Builds**:
-```
-empowrapp://
-com.3mpwrapp.empowrapp://
+*.expo.dev          → No wildcards allowed
+empowrapp://        → Custom URL schemes not supported
+exp://localhost:8081 → exp:// protocol not supported
 ```
 
-**For Web Deployment**:
-```
-https://empowrapp.com
-https://www.empowrapp.com
-https://*.empowrapp.com
-```
+**Note**: Expo automatically handles custom URL schemes like `empowrapp://` and `exp://` - you don't need to add them to Firebase Console.
 
 ### Step 2: Enable Sign-In Methods
 
@@ -63,25 +51,31 @@ In Firebase Console → **Authentication** → **Sign-in method**:
 
 ### Step 3: Configure Google OAuth
 
+**⚠️ IMPORTANT: This is done in Google Cloud Console, NOT Firebase Console**
+
 1. Go to [Google Cloud Console](https://console.cloud.google.com)
 2. Login with `empowrapp08162025@gmail.com`
 3. Select project: **empowrapp**
 4. Navigate to **APIs & Services** → **Credentials**
-5. Edit OAuth 2.0 Client ID
-6. Add **Authorized redirect URIs**:
+5. Find and click on your OAuth 2.0 Client ID (Web client)
+6. Add **Authorized redirect URIs** (scroll down, click "+ ADD URI"):
 
 ```
 https://empowrapp.firebaseapp.com/__/auth/handler
 https://auth.expo.io/@3mpwrapp/empowrapp
 ```
 
-7. Add **Authorized JavaScript origins**:
+7. Add **Authorized JavaScript origins** (scroll up, click "+ ADD URI"):
 ```
 http://localhost
 http://localhost:8081
 https://empowrapp.firebaseapp.com
 https://auth.expo.io
 ```
+
+8. Click **"SAVE"** at the bottom
+
+**Why this matters**: Without these redirect URIs, Google OAuth will fail with "redirect_uri_mismatch" error.
 
 ### Step 4: Super Admin Privileges
 

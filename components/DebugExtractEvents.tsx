@@ -66,7 +66,7 @@ export function DebugExtractEvents() {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    backgroundColor: '#ff6b6b',
+    backgroundColor: '#C1121F',
     borderRadius: 8,
     marginBottom: 10,
   },
@@ -79,6 +79,6 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#ff6b6b',
+    color: '#C1121F',
   },
 });

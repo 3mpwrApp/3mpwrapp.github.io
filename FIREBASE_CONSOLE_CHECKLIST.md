@@ -22,23 +22,22 @@ Navigate to: **Authentication** → **Settings** → **Authorized domains**
 
 Click **"Add domain"** for EACH of these:
 
-#### Development Domains:
+#### ✅ Domains to Add (Firebase Console Accepts These):
 ```
 localhost
-127.0.0.1
-exp://localhost:8081
-https://auth.expo.io/@3mpwrapp/empowrapp
-```
-
-#### Production Domains:
-```
 empowrapp.firebaseapp.com
 auth.expo.io
-expo.dev
-*.expo.dev
-empowrapp://
-com.3mpwrapp.empowrapp://
 ```
+
+#### ❌ Domains Firebase Console Rejects (Don't Add These):
+```
+*.expo.dev          → Firebase doesn't support wildcards
+empowrapp://        → Firebase doesn't support custom URL schemes  
+exp://localhost:8081 → Firebase doesn't support exp:// protocol
+127.0.0.1           → Optional, localhost covers this
+```
+
+**Note**: Firebase Console only accepts standard web domains (HTTP/HTTPS). Custom URL schemes like `empowrapp://` and `exp://` are handled automatically by Expo and don't need to be added to Firebase.
 
 #### Optional (if you deploy web):
 ```
@@ -78,25 +77,48 @@ Enable these providers:
 
 ### Step 4: Configure Google OAuth (CRITICAL)
 
+**⚠️ IMPORTANT: This is done in Google Cloud Console, NOT Firebase Console**
+
 1. Go to https://console.cloud.google.com
 2. Login with **empowrapp08162025@gmail.com**
-3. Select project: **empowrapp**
-4. Navigate to: **APIs & Services** → **Credentials**
-5. Click on OAuth 2.0 Client ID: `733708119893-so14q85mmnrtt5ulnan3qjs2o7ll73vs.apps.googleusercontent.com`
+3. Select project: **empowrapp** (top left dropdown)
+4. Navigate to: **APIs & Services** → **Credentials** (left sidebar)
+5. Look for **"OAuth 2.0 Client IDs"** section
+6. Find the Web client with ID starting with `733708119893-so14q85mmnrtt5ulnan3qjs2o7ll73vs`
+7. Click the **pencil/edit icon** (✏️) on the right side
 
-#### Add Authorized Redirect URIs:
+**You'll see a configuration page with TWO sections:**
+
+#### Section 1: Authorized JavaScript origins (at the top)
+- Look for heading: **"Authorized JavaScript origins"**
+- If you DON'T see this section, your client type might be wrong
+- Click **"+ ADD URI"** button and add these one by one:
+
+```
+https://empowrapp.firebaseapp.com
+https://auth.expo.io
+```
+
+**Note**: Only add HTTPS origins. Don't add `http://localhost` here - it's not needed for mobile OAuth.
+
+#### Section 2: Authorized redirect URIs (below JavaScript origins)
+- Look for heading: **"Authorized redirect URIs"**
+- Click **"+ ADD URI"** button and add these one by one:
+
 ```
 https://empowrapp.firebaseapp.com/__/auth/handler
 https://auth.expo.io/@3mpwrapp/empowrapp
 ```
 
-#### Add Authorized JavaScript Origins:
-```
-http://localhost
-http://localhost:8081
-https://empowrapp.firebaseapp.com
-https://auth.expo.io
-```
+8. Scroll to bottom and click **"SAVE"** button
+9. Wait for confirmation message: "Client ID updated"
+
+**Why this matters**: Without these URIs, Google OAuth sign-in will fail with "redirect_uri_mismatch" error.
+
+**Can't find "Authorized JavaScript origins"?**
+- This section only appears for **Web application** type OAuth clients
+- If you only see "Authorized redirect URIs", your client is correct - just add the redirect URIs above
+- For mobile apps using Expo, the redirect URIs are the most important part
 
 ---
 

@@ -523,14 +523,14 @@ export default function EventsScreen() {
         {syncStatus !== 'idle' && (
           <View style={{ 
             padding: 10, 
-            backgroundColor: syncStatus === 'syncing' ? palette.surface : syncStatus === 'success' ? '#10b981' : '#ef4444', 
+            backgroundColor: syncStatus === 'syncing' ? palette.surface : syncStatus === 'success' ? '#047857' : '#991B1B', 
             borderRadius: 8, 
             marginBottom: 8,
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-            <Text style={{ color: syncStatus === 'syncing' ? palette.text : '#ffffff', fontWeight: '600', fontSize: 14 }}>
+            <Text style={{ color: syncStatus === 'syncing' ? palette.text : '#FFFFFF', fontWeight: '600', fontSize: 14 }}>
               {syncStatus === 'syncing' && '🔄 Syncing to website...'}
               {syncStatus === 'success' && '✅ Synced! Live on 3mpwr website'}
               {syncStatus === 'error' && '⚠️ Sync pending (will retry)'}

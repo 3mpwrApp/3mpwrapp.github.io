@@ -380,7 +380,7 @@ export default function AdminPanel() {
                 <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSelectedFlags(Object.fromEntries(flags.map((f: any) => [f.id, true])))} style={s.secondaryButton}><Text style={s.secondaryButtonText}>Select All</Text></A11yPressable>
                 <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSelectedFlags({})} style={s.secondaryButton}><Text style={s.secondaryButtonText}>Clear Selection</Text></A11yPressable>
                 <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(Object.keys(selectedFlags).filter(id=>selectedFlags[id]).map(id=> resolveFlag(id))); setSelectedFlags({}); loadFlags(); Alert.alert('✅ Success','Selected flags resolved'); } catch {} }} style={s.primaryButton}><Text style={s.primaryButtonText}>Resolve Selected</Text></A11yPressable>
-                <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const sel = flags.filter((f: any)=> selectedFlags[f.id]); for (const f of sel) { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } } const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map((f: any)=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags(); Alert.alert('✅ Success','Items deleted'); } catch {} }} style={[s.primaryButton, { backgroundColor: palette.error || '#dc2626' }]}><Text style={s.primaryButtonText}>Delete Items</Text></A11yPressable>
+                <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ try { const sel = flags.filter((f: any)=> selectedFlags[f.id]); for (const f of sel) { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } } const { resolveFlag } = await import('../../../services/moderation'); await Promise.all(sel.map((f: any)=> resolveFlag(f.id))); setSelectedFlags({}); loadFlags(); Alert.alert('✅ Success','Items deleted'); } catch {} }} style={[s.primaryButton, { backgroundColor: palette.error || '#B91C1C' }]}><Text style={s.primaryButtonText}>Delete Items</Text></A11yPressable>
               </GapView>
               {flags.map((f: any) => (
                 <View key={f.id} style={s.flagCard}>
@@ -412,8 +412,8 @@ export default function AdminPanel() {
                       accessibilityLabel="Delete flagged item"
                       hitSlop={HIT_SLOP_8}
                       onPress={async()=>{ try { if (f.type === 'mutual') { const { softDeletePost } = await import('../../../services/mutual'); await softDeletePost(f.targetId); } if (f.type === 'rating') { await updateDoc(doc(db,'ratings', f.targetId), { deleted: true }); } const { resolveFlag } = await import('../../../services/moderation'); await resolveFlag(f.id); Alert.alert('✅ Done','Item deleted'); loadFlags(); } catch {} }}
-                      style={[s.secondaryButton, { borderColor: palette.error || '#dc2626' }]}>
-                      <Text style={[s.secondaryButtonText, { color: palette.error || '#dc2626' }]}>Delete Item</Text>
+                      style={[s.secondaryButton, { borderColor: palette.error || '#B91C1C' }]}>
+                      <Text style={[s.secondaryButtonText, { color: palette.error || '#B91C1C' }]}>Delete Item</Text>
                     </A11yPressable>
                   </GapView>
                 </View>
@@ -573,19 +573,19 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       opacity: 0.95,
     },
     successCard: {
-      backgroundColor: '#10b981',
+      backgroundColor: '#047857',
       borderRadius: 12,
       padding: 16,
       marginBottom: 16,
     },
     successTitle: {
-      color: '#ffffff',
+      color: '#FFFFFF',
       fontWeight: '700',
       fontSize: 16,
       marginBottom: 6,
     },
     successText: {
-      color: '#ffffff',
+      color: '#FFFFFF',
       fontSize: 14,
       opacity: 0.95,
     },
