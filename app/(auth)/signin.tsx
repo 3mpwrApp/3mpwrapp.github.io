@@ -50,9 +50,11 @@ export default function LoginScreen() {
       // Don't manually navigate - let AuthContext handle it via app/index.tsx
     } catch (err: any) {
       logger.error('[Login] Login failed:', err);
+      logger.error('[Login] Error code:', err?.code);
+      logger.error('[Login] Error message:', err?.message);
       let msg = err?.message || "Login failed";
       
-      // Handle specific Firebase errors
+      // Handle specific Firebase errors with detailed explanations
       if (err?.code === 'auth/network-request-failed') {
         msg = t("auth.networkError", "Network error. Check your connection or try guest mode.");
       } else if (err?.code === 'auth/invalid-credential' || err?.code === 'auth/wrong-password') {
@@ -61,6 +63,19 @@ export default function LoginScreen() {
         msg = t("auth.userNotFound", "No account found with this email");
       } else if (err?.code === 'auth/too-many-requests') {
         msg = t("auth.tooManyAttempts", "Too many failed attempts. Try again later.");
+      } else if (err?.code === 'auth/unauthorized-domain' || err?.code === 'auth/operation-not-allowed' || msg.includes('unauthorized-domain')) {
+        msg = "Authorization Error: This domain is not authorized for Firebase Authentication.\n\n" +
+              "SOLUTION:\n" +
+              "1. Go to Firebase Console → Authentication → Settings → Authorized domains\n" +
+              "2. Add your current domain/scheme\n" +
+              "3. For development: Try Guest Mode instead\n\n" +
+              "See FIREBASE_AUTH_BLOCKED_FIX.md for details.";
+      } else if (err?.code === 'auth/invalid-api-key') {
+        msg = "Invalid API Key: Firebase configuration may be incorrect.\n\n" +
+              "Check firebase/config.ts and verify your Firebase project credentials.";
+      } else if (msg.includes('Access to this account has been temporarily disabled')) {
+        msg = "Account temporarily disabled due to suspicious activity.\n\n" +
+              "Try again later or reset your password.";
       }
       
       setError(msg);

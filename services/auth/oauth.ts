@@ -113,6 +113,8 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
     return true;
   } catch (e: any) {
     logger.error('[OAuth] Google Sign-In exception:', e);
+    logger.error('[OAuth] Error code:', e?.code);
+    logger.error('[OAuth] Error message:', e?.message);
     const errorMessage = e?.message || 'Could not sign in with Google';
     
     // Provide more helpful error messages
@@ -125,6 +127,21 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
       Alert.alert(
         'Configuration Error',
         'The Google Sign-In client ID is invalid. Make sure you are using the Web Client ID from Firebase Console in your .env file.'
+      );
+    } else if (e?.code === 'auth/unauthorized-domain' || e?.code === 'auth/operation-not-allowed' || errorMessage.includes('unauthorized-domain')) {
+      Alert.alert(
+        'Authorization Error',
+        'This domain is not authorized for Firebase Authentication.\n\n' +
+        'SOLUTION:\n' +
+        '1. Firebase Console → Authentication → Settings → Authorized domains\n' +
+        '2. Add: auth.expo.io and your app domain\n' +
+        '3. Google Cloud Console → Add redirect URI: https://auth.expo.io/@3mpwrapp/empowrapp\n\n' +
+        'See FIREBASE_AUTH_BLOCKED_FIX.md for full instructions.'
+      );
+    } else if (e?.code === 'auth/popup-blocked') {
+      Alert.alert(
+        'Pop-up Blocked',
+        'The authentication popup was blocked. Please allow popups for this site and try again.'
       );
     } else {
       Alert.alert('Google Sign-In failed', errorMessage);
@@ -167,7 +184,30 @@ export async function signInWithAppleAsync(): Promise<boolean> {
     logger.log('[OAuth] ============================================');
     return true;
   } catch (e: any) {
-    Alert.alert('Apple Sign-In failed', e?.message || 'Could not sign in with Apple');
+    logger.error('[OAuth] Apple Sign-In exception:', e);
+    logger.error('[OAuth] Error code:', e?.code);
+    logger.error('[OAuth] Error message:', e?.message);
+    const errorMessage = e?.message || 'Could not sign in with Apple';
+    
+    // Handle specific Apple Sign-In errors
+    if (e?.code === 'auth/unauthorized-domain' || e?.code === 'auth/operation-not-allowed' || errorMessage.includes('unauthorized-domain')) {
+      Alert.alert(
+        'Authorization Error',
+        'This domain is not authorized for Firebase Authentication.\n\n' +
+        'SOLUTION:\n' +
+        '1. Firebase Console → Authentication → Settings → Authorized domains\n' +
+        '2. Enable Apple Sign-In in Authentication → Sign-in method\n' +
+        '3. Configure Apple Developer Console with Service ID\n\n' +
+        'See FIREBASE_AUTH_BLOCKED_FIX.md for full instructions.'
+      );
+    } else if (errorMessage.includes('not enabled') || errorMessage.includes('prohibited')) {
+      Alert.alert(
+        'Apple Sign-In Not Enabled',
+        'Apple Sign-In is not enabled in Firebase Console. Please enable it in Authentication → Sign-in method → Apple.'
+      );
+    } else {
+      Alert.alert('Apple Sign-In failed', errorMessage);
+    }
     return false;
   }
 }

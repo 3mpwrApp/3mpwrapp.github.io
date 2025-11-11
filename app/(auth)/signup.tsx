@@ -58,8 +58,34 @@ export default function RegisterScreen() {
       logger.log('[Signup] ================================================');
       // Don't manually navigate - let AuthContext handle it via app/index.tsx
     } catch (err: any) {
-      setError(err?.message || 'Registration failed');
-      Alert.alert(t('common.errorTitle', 'Error'), err?.message || 'Registration failed');
+      logger.error('[Signup] Registration failed:', err);
+      logger.error('[Signup] Error code:', err?.code);
+      logger.error('[Signup] Error message:', err?.message);
+      let msg = err?.message || 'Registration failed';
+      
+      // Handle specific Firebase errors with detailed explanations
+      if (err?.code === 'auth/email-already-in-use') {
+        msg = "This email is already registered. Try signing in instead.";
+      } else if (err?.code === 'auth/invalid-email') {
+        msg = "Invalid email address format.";
+      } else if (err?.code === 'auth/weak-password') {
+        msg = "Password is too weak. Use at least 6 characters.";
+      } else if (err?.code === 'auth/network-request-failed') {
+        msg = "Network error. Check your connection.";
+      } else if (err?.code === 'auth/unauthorized-domain' || err?.code === 'auth/operation-not-allowed' || msg.includes('unauthorized-domain')) {
+        msg = "Authorization Error: This domain is not authorized for Firebase Authentication.\n\n" +
+              "SOLUTION:\n" +
+              "1. Go to Firebase Console → Authentication → Settings → Authorized domains\n" +
+              "2. Add your current domain/scheme\n" +
+              "3. Ensure Email/Password sign-in method is enabled\n\n" +
+              "See FIREBASE_AUTH_BLOCKED_FIX.md for details.";
+      } else if (err?.code === 'auth/invalid-api-key') {
+        msg = "Invalid API Key: Firebase configuration may be incorrect.\n\n" +
+              "Check firebase/config.ts and verify your Firebase project credentials.";
+      }
+      
+      setError(msg);
+      Alert.alert(t('common.errorTitle', 'Error'), msg);
     } finally {
       setWorking(false);
     }
