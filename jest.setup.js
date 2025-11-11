@@ -206,7 +206,7 @@ const NOISY_WARN_PATTERNS = [
   /\[analytics\] Unused registry events/i,
   /screen_view \{/i,
   // React Native DOM prop warnings (test environment only - not production issues)
-  /Unknown event handler property `onPressIn`/i,
+  /Unknown event handler property.*onPressIn/i,
   /React does not recognize the `keyboardType` prop/i,
   /React does not recognize the `showsHorizontalScrollIndicator` prop/i,
   /React does not recognize the `scrollEnabled` prop/i,
