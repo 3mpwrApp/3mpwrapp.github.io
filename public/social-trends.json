@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-11T00:53:35.288Z",
+  "lastUpdated": "2025-11-11T06:18:01.964Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 1985,
+      "totalPosts": 2010,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-11T00:53:26.042Z"
+      "lastSeen": "2025-11-11T06:17:52.363Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2000,
+      "totalPosts": 2025,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-11T00:53:28.038Z"
+      "lastSeen": "2025-11-11T06:17:54.313Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 1988,
+      "totalPosts": 2013,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-11T00:53:30.260Z"
+      "lastSeen": "2025-11-11T06:17:56.540Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 1996,
+      "totalPosts": 2021,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-11T00:53:32.254Z"
+      "lastSeen": "2025-11-11T06:17:58.800Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2000,
+      "totalPosts": 2025,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-11T00:53:34.284Z"
+      "lastSeen": "2025-11-11T06:18:00.960Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "The police killing of Sonya Massey shows how disability, race, and gender converge in deadly encounters—and why we must reimagine crisis response around care, not control.\nRead our new blog: “When a Call for Help Becomes Lethal” at nlawcrdj.medium.com/when-a-call-...\n\n#DisabilityJustice #SonyaMassey",
-      "author": "crdjustice.bsky.social",
-      "engagement": 16,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Still fighting to stay afloat. Rent short $80 for Oct + $600 for Nov.\nODSP doesn’t cover the basics — poverty by design.\nIf you can help:\n📧e-transfer: manderson4@gmail.com\n\n☕ ko-fi.com/sharpieguy/g...\n\n#ODSPPoverty #DisabilityJustice #MutualAid #MutualAidRequest #MutualAidBoost",
-      "author": "cycletherapyham.bsky.social",
-      "engagement": 23,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "To mark World Ventil8 Day, we’re working with organisations from around the world to shine a light on the air we share indoors.\n\n#MTIV25 #MTIV #Accessibility #IndoorAirQuality #IAQ #SaferAirProject #WorldVentil8Day",
-      "author": "saferairproject.bsky.social",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Hi #Gamedev and #accessibility friends! Just promoting for my all time favorite #GameJam all about accessibility! It's our 5th edition and I hope you'll consider joining or sharing to help make it our most successful yet!",
-      "author": "ericbomb.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "PSA: I'm colorblind and I can understand most traffic lights just fine but please PLEASE do not arrange them in more than three rows. thanks <3\n\n#accessibility #a11y #colorblind #engineering",
-      "author": "nycki.bark.lgbt.ap.brid.gy",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "On ODSP ($1,368/mo — about 60% below the poverty line).\nThis month I need $600 to cover rent and arrears are cleared clear.\n\n💸 e-transfer: manderson4@gmail.com\n\n🤝 ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #DisabilityJustice #MutualAid #MutualAidRequest #MutualAidBoost",
       "author": "cycletherapyham.bsky.social",
@@ -338,23 +290,71 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Just #DanielleSmith doing more ghoulish #UCP things. If a “decision” hasn’t been made by Feb 28, 2026, they’ll cut $200/month from disabled Albertans already struggling to survive.\nMeanwhile, the CRA’s CDB backlog is 5–6 months.\n#ableg #abpoli #cdnpoli #DisabilityRights #AISH #yyc #yeg",
+      "author": "sillyrabbitfafo.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Mainstream disability rights groups are awfully quiet in this moment. #disabilityrights #abolishice",
+      "author": "thepowerlesspod.com",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "On ODSP ($1,368/mo — about 60% below the poverty line).\nThis month I need $600 to cover rent and arrears are cleared clear.\n\n💸 e-transfer: manderson4@gmail.com\n\n🤝 ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #DisabilityJustice #MutualAid #MutualAidRequest #MutualAidBoost",
+      "author": "cycletherapyham.bsky.social",
+      "engagement": 21,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "A federal judge is directing the #WhiteHouse to reinstate sign language interpreters at many press briefings months after they were abruptly removed. #disabilities #accessibility",
+      "author": "disabilityscoop.bsky.social",
+      "engagement": 40,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "#a11y alt text:",
+      "author": "joquarky.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 46
+      "count": 47
     },
     {
       "keyword": "accessibility",
-      "count": 34
-    },
-    {
-      "keyword": "a11y",
-      "count": 30
+      "count": 35
     },
     {
       "keyword": "disabilityjustice",
+      "count": 28
+    },
+    {
+      "keyword": "a11y",
       "count": 28
     },
     {
@@ -414,12 +414,12 @@
       "count": 7
     },
     {
-      "keyword": "ableism",
+      "keyword": "inclusion",
       "count": 6
     },
     {
-      "keyword": "inclusion",
-      "count": 5
+      "keyword": "ableism",
+      "count": 6
     }
   ]
 }
