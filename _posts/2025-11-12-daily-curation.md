@@ -9,100 +9,56 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-11-12
 
-Curated 20 items from disability, accessibility, and social policy sources.
+Curated 11 items from disability, accessibility, and social policy sources.
 
-## 1. Renowned exoplanet researcher Sara Seager is bringing her quest to find another Earth back home to Canada
-<img src='https://i.cbc.ca/ais/5624cf0f-7329-4c96-926b-4072a3e718ac,1762544797508/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C911%2C3024%2C1701%29%3BResize%3D%28620%29' alt='A woman with brown shoulder-length hair and a maroon jacket hold a golden object.' width='620' height='349' title='Renowned exoplanet researcher Sara Seager stands holding one of the probes proposed for a mission to Venus. After 20 years at MIT, she is returning to Canada where she'll be a professor at the University of Toronto.'/><p>Canadian astronomical research is getting a big boost with the return of Sara Seager to Canada after around 20 years at MIT. Her research includes looking for life in the clouds of Venus and searching for Earth 2.0.</p>
-📍 [Source](https://www.cbc.ca/news/science/sara-seager-uoft-exoplanet-research-9.6971176?cmp=rss)
-**Score:** 15.20
+## 1. Governments Of Canada and Manitoba Strengthening Justice for Canada's First Responders
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71298)
+**Score:** 17.00
 
-## 2. Severe solar storm could trigger auroras across Canada and northern U.S. states
-<img src='https://i.cbc.ca/ais/1.5067931,1678748137000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C5760%2C3240%29%3BResize%3D%28620%29' alt='The northern lights seen through a canopy of trees.' width='620' height='349' title='The northern lights over Wood Buffalo National Park, Alberta.'/><p>Skygazers are spotting the lights deeper into Canada, the U.S. and Europe because the sun is going through a major facelift. Every 11 years, its poles swap places, causing magnetic twists and tangles along the way.</p>
-📍 [Source](https://www.cbc.ca/news/science/aurora-in-canada-9.6975207?cmp=rss)
-**Score:** 14.00
+## 2. Former Para skier Marcoux named honorary captain of Canada’s Paralympic team for Milan-Cortina Games
+<img src='https://i.cbc.ca/ais/3ea11cc8-1b44-471e-ac97-73a2d31baaf8,1762906613052/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C267%2C6336%2C3564%29%3BResize%3D%28620%29' alt='Two smiling male skiers representing Canada stand on a podium with silver medals around their necks.' width='620' height='349' title='Canada's Mac Marcoux, right, stands on the podium with guide Tristan Rodgers after earning silver in the visually impaired downhill event at the Beijing Paralympics on March 5, 2022.'/><p>Former Para alpine skier Mac Marcoux has been named the honorary captain of Canada’s Paralympic team for the Milan-Cortina Games, the Canadian Paralympic Committee announced Wednesday.</p>
+📍 [Source](https://www.cbc.ca/sports/paralympics/mac-marcoux-named-honorary-captain-canada-paralympic-leadership-team-9.6975413?cmp=rss)
+**Score:** 15.00
 
-## 3. These WW I amputees hiked from Alberta to Ontario on crutches a century ago
-<img src='https://i.cbc.ca/ais/71746453-b7cb-4ad0-9dba-2663f1de06f5,1762901207966/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1128%2C634%29%3BResize%3D%28620%29' alt='Black and white grainy phot of two men, each missing a leg and wearing military uniforms, stand side-by-side on crutches with their arms around each other's shoulders.' width='620' height='349' title='George Hincks and Marshall McDougall appeared in the Winnipeg Evening Tribune as they hiked from Calgary to Ottawa in 1923.'/><p></p>
-📍 [Source](https://www.cbc.ca/radio/asithappens/wwi-amputee-veterans-hike-9.6975252?cmp=rss)
+## 3. Federal investigation probes grocery store competition in Halifax
+<img src='https://i.cbc.ca/ais/c73127e6-6c85-43d4-a77e-5426422b198e,1762543808243/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Shoppers fill carts with meat specials at an independent grocery store in Dartmouth, Nova Scotia. ' width='620' height='349' title='Shoppers fill carts with meat specials at an independent grocery store in Dartmouth, Nova Scotia. '/><p>Since last year, an investigation into the ability of new grocers to set up in the Halifax Regional Municipality has been quietly ticking along under Competition Bureau Canada. </p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/federal-investigation-probes-grocery-store-competition-in-halifax-9.6971278?cmp=rss)
+**Score:** 13.80
+
+## 4. Manitoba Government Expands Care for Dialysis Patients and Mothers in Norway House Cree Nation
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71297)
+**Score:** 13.30
+
+## 5. Resolutions on coal, flags and more up for debate at Alberta UCP annual meeting
+The pitches, another being to make temporary residents pay for health care, were released recently by the party.
+📍 [Source](https://globalnews.ca/news/11522379/alberta-ucp-annual-meeting-2025/)
 **Score:** 13.50
 
-## 4. Lethbridge gathers to remember Canada's fallen soldiers
-Two well-attended Remembrance Day ceremonies in Lethbridge, Alta., drew hundreds of residents to honour Canada's fallen soldiers.
-📍 [Source](https://globalnews.ca/news/11521753/lethbridge-remembrance-day-canada-fallen-soldiers/)
-**Score:** 9.50
-
-## 5. Durham regional police's 'poisoned' workplace highlighted in Ontario Civilian Police Commission report
-<img src='https://i.cbc.ca/ais/1.6990816,1759775611000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C744%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Police cruiser parked in front of Pickering Casino.' width='620' height='349' title='Durham Regional Police say a portion of a Pickering, Ont., casino remains closed Monday morning after a fatal shooting that left one person dead.'/><p></p>
-📍 [Source](https://www.cbc.ca/news/canada/toronto/poisoned-workplace-in-durham-police-9.6975262?cmp=rss)
-**Score:** 11.00
-
-## 6. Veterans thrilled with Remembrance Day turnout in Calgary: ‘It wasn't for nothing'
-'Today is my most important day of the year. It's honouring those who have gone before us and those who are following,' said Iraq and Afghanistan veteran Rick Ostashower.
-📍 [Source](https://globalnews.ca/news/11521602/calgary-remembrance-day-2025/)
-**Score:** 7.50
-
-## 7. Manitoba Government Introduces Legislation to Provide Tax Relief to Manufacturers
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71358)
-**Score:** 10.10
-
-## 8. Manitoba Government Strengthens Early Reading Screening and Supports for Young Students
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71357)
+## 6. Manitoba Government Invests More Than $1.3 Million for Community Revitalization Projects in Westman
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71377)
 **Score:** 10.50
 
-## 9. Manitoba Government's Mineral Development Fund Supports Future Mining Opportunities
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71318)
-**Score:** 10.50
-
-## 10. Alberta animal rescues forced to freeze intakes: ‘Like giving a death sentence'
-For animals rescues across Alberta, with winter fast approaching, the situation is dire. Demand is through the roof, donations are low and volunteers are scarce.
-📍 [Source](https://globalnews.ca/news/11522023/alberta-animal-rescues-freeze-intakes/)
-**Score:** 9.00
-
-## 11. Saskatoon gathers for city's 94th anniversary of Remembrance Day services
-2025's Remembrance Day ceremony at the SaskTel Centre drew in quite a large crowd. With thousands in attendance, people came to show appreciation to veterans and fallen soldiers.
-📍 [Source](https://globalnews.ca/news/11521939/saskatoon-gathers-for-citys-94th-remembrance-day-service/)
-**Score:** 9.00
-
-## 12. Letter written days before end of WWII sheds light on Canadian soldier in Germany
-The letter, written by Tom a few days before the end of the war, says, 'This morning's edition of the news says Hitler is dead and that his successor will fight until the last.'
-📍 [Source](https://globalnews.ca/news/11521776/letter-written-end-wwii-canadian-soldier-germany/)
-**Score:** 9.00
-
-## 13. Manitoba Government Completed 23 Summer Infrastructure Projects
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71359)
+## 7. Manitoba Government to Help Students Learn About Climate Change and Climate Action in Schools
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71397)
 **Score:** 7.50
 
-## 14. ‘It's about all of us': Armed Forces, veterans gather for Remembrance Day in Montreal
-Under heavy snowfall, dignitaries including mayor-elect Soraya Martinez Ferrada and member of Parliament Marc Miller, who is a former infantry commander.
-📍 [Source](https://globalnews.ca/news/11522109/remembrance-day-ceremony-montreal/)
-**Score:** 5.00
-
-## 15. ‘Everybody's gone': Canadians mark Remembrance Day as number of veterans dwindle
-'Events of the Second World War are very rapidly moving from the realm of lived history of people you can talk to … into history where you can't talk to the people who remember.'
-📍 [Source](https://globalnews.ca/news/11521780/remembrance-day-2025-veterans/)
+## 8. Montreal transit strike: Service to ‘resume gradually' as job action ends
+A strike by the Montreal transit agency’s 2,400 maintenance workers, which limited bus and subway service to peak hours and late evenings, was scheduled to last until Nov. 28.
+📍 [Source](https://globalnews.ca/news/11522458/montreal-transit-strike-service-to-resume-gradually-as-job-action-ends/)
 **Score:** 4.50
 
-## 16. Water From Your Eyes bring chaotic brilliance to the Biltmore Cabaret
-<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>.</h3><p></p>
-📍 [Source](https://www.straight.com/music/water-from-your-eyes-bring-chaotic-brilliance-to-biltmore-cabaret)
+## 9. Ukraine’s foreign minister to meet top diplomats at G7 meeting in Niagara
+The Russian attacks have brought rolling blackouts to Ukraine as winter approaches and U.S.-led diplomatic efforts remain at a standstill.
+📍 [Source](https://globalnews.ca/news/11522471/ukraine-foreign-minister-g7-meeting-niagara/)
 **Score:** 4.50
 
-## 17. Cariboo residents rally for missing mother of 3, Jennifer Provencal
-Jennifer Provencal, a mother of three sons, has lived in the small unincorporated community of Forest Grove, just off Highway 97 near 100 Mile House, for almost two decades.
-📍 [Source](https://globalnews.ca/news/11522095/cariboo-residents-rally-missing-mother-jennifer-provencal/)
-**Score:** 3.00
+## 10. Photos: Atlanta rapper JID makes the most of a Monday night PNE Forum crowd
+The artist brought the crowd to its feet.
+📍 [Source](https://www.straight.com/music/photos-atlanta-rapper-jid-makes-most-of-a-monday-night-pne-forum-crowd)
+**Score:** 4.50
 
-## 18. Measles Update #43
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71337)
-**Score:** 1.30
-
-## 19. Roughrider, Alouette superfans prep for Grey Cup
-Lance Hackewich loves his Saskatchewan Roughriders -- and he's got a 75-year-old desiccated, positively inedible piece of history to prove it.
-📍 [Source](https://globalnews.ca/news/11522325/roughrider-alouette-superfans-prep-for-grey-cup/)
-**Score:** 1.30
-
-## 20. Shaping Saskatchewan: Ernie Walker
-Wanuskewin Heritage Park is working towards a UNESCO World Heritage designation. Ernie Walker, the chief archaeologist and co-founder of the park, is leading the push.
-📍 [Source](https://globalnews.ca/news/11521583/shaping-saskatchewan-ernie-walker-2025/)
-**Score:** 1.30
+## 11. The Beaches make a play for Canadian rock royalty at Doug Mitchell
+The Beaches are making more than just waves.
+📍 [Source](https://www.straight.com/the-beaches-review-vancouver-2025)
+**Score:** 4.50
 

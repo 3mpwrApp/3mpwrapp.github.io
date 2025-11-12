@@ -1,148 +1,85 @@
 {
   "date": "2025-11-12",
-  "timestamp": "2025-11-12T09:24:18.256Z",
-  "count": 20,
+  "timestamp": "2025-11-12T15:30:04.966Z",
+  "count": 11,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Renowned exoplanet researcher Sara Seager is bringing her quest to find another Earth back home to Canada",
-      "link": "https://www.cbc.ca/news/science/sara-seager-uoft-exoplanet-research-9.6971176?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/5624cf0f-7329-4c96-926b-4072a3e718ac,1762544797508/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C911%2C3024%2C1701%29%3BResize%3D%28620%29' alt='A woman with brown shoulder-length hair and a maroon jacket hold a golden object.' width='620' height='349' title='Renowned exoplanet researcher Sara Seager stands holding one of the probes proposed for a mission to Venus. After 20 years at MIT, she is returning to Canada where she'll be a professor at the University of Toronto.'/><p>Canadian astronomical research is getting a big boost with the return of Sara Seager to Canada after around 20 years at MIT. Her research includes looking for life in the clouds of Venus and searching for Earth 2.0.</p>",
-      "score": 15.2,
-      "pubDate": "Wed, 12 Nov 2025 04:00:00 EST"
+      "title": "Governments Of Canada and Manitoba Strengthening Justice for Canada's First Responders",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71298",
+      "description": "",
+      "score": 17,
+      "pubDate": "Tue, 28 Oct 2025 13:44:00 CDT"
     },
     {
-      "title": "Severe solar storm could trigger auroras across Canada and northern U.S. states",
-      "link": "https://www.cbc.ca/news/science/aurora-in-canada-9.6975207?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/1.5067931,1678748137000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C5760%2C3240%29%3BResize%3D%28620%29' alt='The northern lights seen through a canopy of trees.' width='620' height='349' title='The northern lights over Wood Buffalo National Park, Alberta.'/><p>Skygazers are spotting the lights deeper into Canada, the U.S. and Europe because the sun is going through a major facelift. Every 11 years, its poles swap places, causing magnetic twists and tangles along the way.</p>",
-      "score": 14,
-      "pubDate": "Tue, 11 Nov 2025 16:52:31 EST"
+      "title": "Former Para skier Marcoux named honorary captain of Canada’s Paralympic team for Milan-Cortina Games",
+      "link": "https://www.cbc.ca/sports/paralympics/mac-marcoux-named-honorary-captain-canada-paralympic-leadership-team-9.6975413?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/3ea11cc8-1b44-471e-ac97-73a2d31baaf8,1762906613052/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C267%2C6336%2C3564%29%3BResize%3D%28620%29' alt='Two smiling male skiers representing Canada stand on a podium with silver medals around their necks.' width='620' height='349' title='Canada's Mac Marcoux, right, stands on the podium with guide Tristan Rodgers after earning silver in the visually impaired downhill event at the Beijing Paralympics on March 5, 2022.'/><p>Former Para alpine skier Mac Marcoux has been named the honorary captain of Canada’s Paralympic team for the Milan-Cortina Games, the Canadian Paralympic Committee announced Wednesday.</p>",
+      "score": 15,
+      "pubDate": "Tue, 11 Nov 2025 18:59:50 EST"
     },
     {
-      "title": "These WW I amputees hiked from Alberta to Ontario on crutches a century ago",
-      "link": "https://www.cbc.ca/radio/asithappens/wwi-amputee-veterans-hike-9.6975252?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/71746453-b7cb-4ad0-9dba-2663f1de06f5,1762901207966/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1128%2C634%29%3BResize%3D%28620%29' alt='Black and white grainy phot of two men, each missing a leg and wearing military uniforms, stand side-by-side on crutches with their arms around each other's shoulders.' width='620' height='349' title='George Hincks and Marshall McDougall appeared in the Winnipeg Evening Tribune as they hiked from Calgary to Ottawa in 1923.'/><p></p>",
+      "title": "Federal investigation probes grocery store competition in Halifax",
+      "link": "https://www.cbc.ca/news/canada/nova-scotia/federal-investigation-probes-grocery-store-competition-in-halifax-9.6971278?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/c73127e6-6c85-43d4-a77e-5426422b198e,1762543808243/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Shoppers fill carts with meat specials at an independent grocery store in Dartmouth, Nova Scotia. ' width='620' height='349' title='Shoppers fill carts with meat specials at an independent grocery store in Dartmouth, Nova Scotia. '/><p>Since last year, an investigation into the ability of new grocers to set up in the Halifax Regional Municipality has been quietly ticking along under Competition Bureau Canada. </p>",
+      "score": 13.8,
+      "pubDate": "Wed, 12 Nov 2025 05:00:00 EST"
+    },
+    {
+      "title": "Manitoba Government Expands Care for Dialysis Patients and Mothers in Norway House Cree Nation",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71297",
+      "description": "",
+      "score": 13.3,
+      "pubDate": "Tue, 28 Oct 2025 12:34:00 CDT"
+    },
+    {
+      "title": "Resolutions on coal, flags and more up for debate at Alberta UCP annual meeting",
+      "link": "https://globalnews.ca/news/11522379/alberta-ucp-annual-meeting-2025/",
+      "description": "The pitches, another being to make temporary residents pay for health care, were released recently by the party.",
       "score": 13.5,
-      "pubDate": "Mon, 10 Nov 2025 07:06:58 EST"
+      "pubDate": "Wed, 12 Nov 2025 12:26:51 +0000"
     },
     {
-      "title": "Lethbridge gathers to remember Canada's fallen soldiers",
-      "link": "https://globalnews.ca/news/11521753/lethbridge-remembrance-day-canada-fallen-soldiers/",
-      "description": "Two well-attended Remembrance Day ceremonies in Lethbridge, Alta., drew hundreds of residents to honour Canada's fallen soldiers.",
-      "score": 9.5,
-      "pubDate": "Tue, 11 Nov 2025 23:08:19 +0000"
-    },
-    {
-      "title": "Durham regional police's 'poisoned' workplace highlighted in Ontario Civilian Police Commission report",
-      "link": "https://www.cbc.ca/news/canada/toronto/poisoned-workplace-in-durham-police-9.6975262?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/1.6990816,1759775611000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C744%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Police cruiser parked in front of Pickering Casino.' width='620' height='349' title='Durham Regional Police say a portion of a Pickering, Ont., casino remains closed Monday morning after a fatal shooting that left one person dead.'/><p></p>",
-      "score": 11,
-      "pubDate": "Tue, 11 Nov 2025 19:05:59 EST"
-    },
-    {
-      "title": "Veterans thrilled with Remembrance Day turnout in Calgary: ‘It wasn't for nothing'",
-      "link": "https://globalnews.ca/news/11521602/calgary-remembrance-day-2025/",
-      "description": "'Today is my most important day of the year. It's honouring those who have gone before us and those who are following,' said Iraq and Afghanistan veteran Rick Ostashower.",
-      "score": 7.5,
-      "pubDate": "Tue, 11 Nov 2025 21:32:02 +0000"
-    },
-    {
-      "title": "Manitoba Government Introduces Legislation to Provide Tax Relief to Manufacturers",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71358",
-      "description": "",
-      "score": 10.1,
-      "pubDate": "Tue, 04 Nov 2025 14:25:00 CST"
-    },
-    {
-      "title": "Manitoba Government Strengthens Early Reading Screening and Supports for Young Students",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71357",
+      "title": "Manitoba Government Invests More Than $1.3 Million for Community Revitalization Projects in Westman",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71377",
       "description": "",
       "score": 10.5,
-      "pubDate": "Tue, 04 Nov 2025 14:19:00 CST"
+      "pubDate": "Wed, 05 Nov 2025 13:44:00 CST"
     },
     {
-      "title": "Manitoba Government's Mineral Development Fund Supports Future Mining Opportunities",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71318",
-      "description": "",
-      "score": 10.5,
-      "pubDate": "Mon, 03 Nov 2025 16:17:00 CST"
-    },
-    {
-      "title": "Alberta animal rescues forced to freeze intakes: ‘Like giving a death sentence'",
-      "link": "https://globalnews.ca/news/11522023/alberta-animal-rescues-freeze-intakes/",
-      "description": "For animals rescues across Alberta, with winter fast approaching, the situation is dire. Demand is through the roof, donations are low and volunteers are scarce.",
-      "score": 9,
-      "pubDate": "Wed, 12 Nov 2025 01:28:24 +0000"
-    },
-    {
-      "title": "Saskatoon gathers for city's 94th anniversary of Remembrance Day services",
-      "link": "https://globalnews.ca/news/11521939/saskatoon-gathers-for-citys-94th-remembrance-day-service/",
-      "description": "2025's Remembrance Day ceremony at the SaskTel Centre drew in quite a large crowd. With thousands in attendance, people came to show appreciation to veterans and fallen soldiers.",
-      "score": 9,
-      "pubDate": "Wed, 12 Nov 2025 00:22:41 +0000"
-    },
-    {
-      "title": "Letter written days before end of WWII sheds light on Canadian soldier in Germany",
-      "link": "https://globalnews.ca/news/11521776/letter-written-end-wwii-canadian-soldier-germany/",
-      "description": "The letter, written by Tom a few days before the end of the war, says, 'This morning's edition of the news says Hitler is dead and that his successor will fight until the last.'",
-      "score": 9,
-      "pubDate": "Tue, 11 Nov 2025 22:49:55 +0000"
-    },
-    {
-      "title": "Manitoba Government Completed 23 Summer Infrastructure Projects",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71359",
+      "title": "Manitoba Government to Help Students Learn About Climate Change and Climate Action in Schools",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71397",
       "description": "",
       "score": 7.5,
-      "pubDate": "Tue, 04 Nov 2025 15:06:00 CST"
+      "pubDate": "Wed, 05 Nov 2025 14:44:00 CST"
     },
     {
-      "title": "‘It's about all of us': Armed Forces, veterans gather for Remembrance Day in Montreal",
-      "link": "https://globalnews.ca/news/11522109/remembrance-day-ceremony-montreal/",
-      "description": "Under heavy snowfall, dignitaries including mayor-elect Soraya Martinez Ferrada and member of Parliament Marc Miller, who is a former infantry commander.",
-      "score": 5,
-      "pubDate": "Wed, 12 Nov 2025 02:05:49 +0000"
-    },
-    {
-      "title": "‘Everybody's gone': Canadians mark Remembrance Day as number of veterans dwindle",
-      "link": "https://globalnews.ca/news/11521780/remembrance-day-2025-veterans/",
-      "description": "'Events of the Second World War are very rapidly moving from the realm of lived history of people you can talk to … into history where you can't talk to the people who remember.'",
+      "title": "Montreal transit strike: Service to ‘resume gradually' as job action ends",
+      "link": "https://globalnews.ca/news/11522458/montreal-transit-strike-service-to-resume-gradually-as-job-action-ends/",
+      "description": "A strike by the Montreal transit agency’s 2,400 maintenance workers, which limited bus and subway service to peak hours and late evenings, was scheduled to last until Nov. 28.",
       "score": 4.5,
-      "pubDate": "Tue, 11 Nov 2025 22:23:19 +0000"
+      "pubDate": "Wed, 12 Nov 2025 14:55:12 +0000"
     },
     {
-      "title": "Water From Your Eyes bring chaotic brilliance to the Biltmore Cabaret",
-      "link": "https://www.straight.com/music/water-from-your-eyes-bring-chaotic-brilliance-to-biltmore-cabaret",
-      "description": "<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href=\"http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up for our free newsletter</a>.</h3><p></p>",
+      "title": "Ukraine’s foreign minister to meet top diplomats at G7 meeting in Niagara",
+      "link": "https://globalnews.ca/news/11522471/ukraine-foreign-minister-g7-meeting-niagara/",
+      "description": "The Russian attacks have brought rolling blackouts to Ukraine as winter approaches and U.S.-led diplomatic efforts remain at a standstill.",
       "score": 4.5,
-      "pubDate": "2025-11-03T15:54:37-08:00"
+      "pubDate": "Wed, 12 Nov 2025 14:30:38 +0000"
     },
     {
-      "title": "Cariboo residents rally for missing mother of 3, Jennifer Provencal",
-      "link": "https://globalnews.ca/news/11522095/cariboo-residents-rally-missing-mother-jennifer-provencal/",
-      "description": "Jennifer Provencal, a mother of three sons, has lived in the small unincorporated community of Forest Grove, just off Highway 97 near 100 Mile House, for almost two decades.",
-      "score": 3,
-      "pubDate": "Wed, 12 Nov 2025 01:46:42 +0000"
+      "title": "Photos: Atlanta rapper JID makes the most of a Monday night PNE Forum crowd",
+      "link": "https://www.straight.com/music/photos-atlanta-rapper-jid-makes-most-of-a-monday-night-pne-forum-crowd",
+      "description": "The artist brought the crowd to its feet.",
+      "score": 4.5,
+      "pubDate": "2025-11-11T21:33:52-08:00"
     },
     {
-      "title": "Measles Update #43",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71337",
-      "description": "",
-      "score": 1.3,
-      "pubDate": "Tue, 04 Nov 2025 09:44:00 CST"
-    },
-    {
-      "title": "Roughrider, Alouette superfans prep for Grey Cup",
-      "link": "https://globalnews.ca/news/11522325/roughrider-alouette-superfans-prep-for-grey-cup/",
-      "description": "Lance Hackewich loves his Saskatchewan Roughriders -- and he's got a 75-year-old desiccated, positively inedible piece of history to prove it.",
-      "score": 1.3,
-      "pubDate": "Wed, 12 Nov 2025 09:02:43 +0000"
-    },
-    {
-      "title": "Shaping Saskatchewan: Ernie Walker",
-      "link": "https://globalnews.ca/news/11521583/shaping-saskatchewan-ernie-walker-2025/",
-      "description": "Wanuskewin Heritage Park is working towards a UNESCO World Heritage designation. Ernie Walker, the chief archaeologist and co-founder of the park, is leading the push.",
-      "score": 1.3,
-      "pubDate": "Wed, 12 Nov 2025 01:21:48 +0000"
+      "title": "The Beaches make a play for Canadian rock royalty at Doug Mitchell",
+      "link": "https://www.straight.com/the-beaches-review-vancouver-2025",
+      "description": "The Beaches are making more than just waves.",
+      "score": 4.5,
+      "pubDate": "2025-10-27T15:56:50-07:00"
     }
   ]
 }
