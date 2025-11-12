@@ -170,8 +170,20 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 
 <section id="upcoming-events">
   <div id="upcoming-events-list" style="margin: 2rem 0;">
-    <div style="text-align: center; padding: 2rem;">
-      <p style="font-size: 1.2rem;">⏳ Loading events...</p>
+    <div id="events-skeleton" aria-hidden="true" style="display: grid; gap: 1rem;">
+      <div style="border-radius: 16px; padding: 2rem; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 3px solid #0ea5e9; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div style="width: 60%; height: 24px; background: rgba(0,0,0,0.08); border-radius: 6px;"></div>
+        <div style="margin-top: 12px; width: 40%; height: 18px; background: rgba(0,0,0,0.06); border-radius: 6px;"></div>
+        <div style="margin-top: 16px; width: 100%; height: 14px; background: rgba(0,0,0,0.05); border-radius: 6px;"></div>
+        <div style="margin-top: 8px; width: 90%; height: 14px; background: rgba(0,0,0,0.05); border-radius: 6px;"></div>
+      </div>
+      <div style="border-radius: 16px; padding: 2rem; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 3px solid #0ea5e9; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div style="width: 50%; height: 24px; background: rgba(0,0,0,0.08); border-radius: 6px;"></div>
+        <div style="margin-top: 12px; width: 35%; height: 18px; background: rgba(0,0,0,0.06); border-radius: 6px;"></div>
+        <div style="margin-top: 16px; width: 100%; height: 14px; background: rgba(0,0,0,0.05); border-radius: 6px;"></div>
+        <div style="margin-top: 8px; width: 85%; height: 14px; background: rgba(0,0,0,0.05); border-radius: 6px;"></div>
+      </div>
+      <p class="sr-only">Loading events…</p>
     </div>
   </div>
 </section>
@@ -294,6 +306,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   async function loadEvents() {
     try {
       console.log('🔄 Fetching events from Cloudflare Worker API...');
+      const t0 = (window.performance && performance.now) ? performance.now() : Date.now();
       
       // Update sync status
       const syncStatus = document.getElementById('events-sync-status');
@@ -308,6 +321,9 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       }
       
       const data = await response.json();
+      const t1 = (window.performance && performance.now) ? performance.now() : Date.now();
+      const durationMs = Math.round(t1 - t0);
+      console.log(`⏱️ Events fetch completed in ${durationMs} ms`);
       let events = data.events || [];
       
       console.log(`✅ Loaded ${events.length} total events from API`);
@@ -346,15 +362,20 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       const upcomingContainer = document.getElementById('upcoming-events-list');
       const pastContainer = document.getElementById('past-events-list');
       const pastSection = document.getElementById('past-events');
+      // Remove skeleton if present
+      const skel = document.getElementById('events-skeleton');
+      if (skel) skel.remove();
       
       // Update last update time
       const lastUpdate = document.getElementById('events-last-update');
       if (lastUpdate) {
-        lastUpdate.textContent = new Date().toLocaleTimeString('en-US', {
+        const updatedAt = new Date();
+        lastUpdate.textContent = updatedAt.toLocaleTimeString('en-US', {
           hour: 'numeric',
           minute: '2-digit',
           hour12: true
         });
+        startLastUpdateTicker(updatedAt);
       }
       
       if (events.length === 0) {
@@ -379,7 +400,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
             <p style="margin-top: 1rem;"><em>This page auto-refreshes every 5 minutes to show new events.</em></p>
           </div>
         `;
-        if (syncStatus) syncStatus.textContent = '📭 No events available';
+        if (syncStatus) syncStatus.textContent = `📭 No events available (checked in ${durationMs} ms)`;
         pastSection.style.display = 'none';
         return;
       }
@@ -396,7 +417,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       
       // Update sync status
       if (syncStatus) {
-        syncStatus.textContent = `✅ ${upcomingEvents.length} upcoming event${upcomingEvents.length !== 1 ? 's' : ''}${pastEvents.length > 0 ? `, ${pastEvents.length} archived` : ''}`;
+        syncStatus.textContent = `✅ ${upcomingEvents.length} upcoming event${upcomingEvents.length !== 1 ? 's' : ''}${pastEvents.length > 0 ? `, ${pastEvents.length} archived` : ''} • ⏱️ ${durationMs} ms`;
       }
       
       // Display upcoming events
@@ -425,7 +446,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       
       // Update sync status - error
       const syncStatus = document.getElementById('events-sync-status');
-      if (syncStatus) syncStatus.textContent = '⚠️ Connection issue';
+      if (syncStatus) syncStatus.textContent = navigator.onLine ? '⚠️ Connection issue' : '⚠️ Offline - no internet';
       
       document.getElementById('upcoming-events-list').innerHTML = `
         <div class="warning-box">
@@ -438,6 +459,16 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
             <li>Temporary network issue</li>
             <li>CORS or API configuration issue</li>
           </ul>
+          <div style="margin: 1rem 0; padding: 0.75rem; background: #f0f9ff; border-left: 4px solid #0ea5e9; border-radius: 6px;">
+            <p style="margin: 0 0 0.5rem;"><strong>Try these options:</strong></p>
+            <ul style="margin: 0; text-align: left;">
+              <li>🔁 <button onclick="loadEvents()" style="padding: 6px 12px; border-radius: 6px; border: 1px solid #93c5fd; background: white; cursor: pointer;">Retry now</button></li>
+              <li>📅 View the <a href="/events/">full events page</a> again in a moment</li>
+              <li>📥 Subscribe to the ICS feed (works offline in calendar apps):<br>
+                <code style="background: #e0f2fe; padding: 2px 6px; border-radius: 4px; font-size: 0.9em;">https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics?env=production</code>
+              </li>
+            </ul>
+          </div>
           <p style="margin-top: 1rem;">
             <strong>🔍 Debug Info:</strong><br>
             API Endpoint: <code style="background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 0.9em;">https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production</code><br>
@@ -450,6 +481,34 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       // Hide archive section on error
       document.getElementById('past-events').style.display = 'none';
     }
+  }
+  
+  // Update the "Last updated: ..." line to show a relative time (e.g., Just now, 1m ago)
+  function startLastUpdateTicker(updatedAt) {
+    const el = document.getElementById('events-last-update');
+    if (!el) return;
+    function updateAgo() {
+      const now = new Date();
+      const diff = Math.max(0, Math.floor((now - updatedAt) / 1000));
+      let label;
+      if (diff < 5) label = 'Just now';
+      else if (diff < 60) label = `${diff}s ago`;
+      else {
+        const m = Math.floor(diff / 60);
+        label = `${m}m ago`;
+      }
+      el.setAttribute('title', updatedAt.toLocaleString());
+      const timeText = updatedAt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+      el.textContent = `${timeText} (${label})`;
+    }
+    updateAgo();
+    // Update for first few minutes frequently
+    let ticks = 0;
+    const interval = setInterval(() => {
+      ticks++;
+      updateAgo();
+      if (ticks > 60) clearInterval(interval); // stop after ~60 ticks (~60s if 1s interval)
+    }, 1000);
   }
   
   // Format date nicely
