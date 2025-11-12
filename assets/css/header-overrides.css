@@ -82,6 +82,15 @@ header .site-brand span {
   color: #ffffff !important;
 }
 
+/* Hide duplicate status banner logo when immediately following header (adjacent logos) */
+header + .status-banner .status-logo { display: none !important; }
+/* But if status banner is not directly under header (e.g., inserted deeper in content), show it */
+main .status-banner .status-logo { display: inline-block !important; }
+
+/* High contrast / dark mode resilience */
+[data-contrast="high"] header + .status-banner .status-logo,
+[data-theme="dark"] header + .status-banner .status-logo { display: none !important; }
+
 /* Accessibility toolbar toggle label on dark backgrounds */
 .toggle-text,
 .toolbar-label {

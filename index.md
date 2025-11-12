@@ -715,7 +715,7 @@ Ready to join the movement? Here's how you can get started:
 
 ## Curated Daily Highlights
 
-<section class="highlight-banner" role="region" aria-labelledby="latest-curated">
+<section class="highlight-banner daily-curation-highlights" role="region" aria-labelledby="latest-curated">
   {% comment %}Filter posts to show only TODAY's content{% endcomment %}
   {% assign today = 'now' | date: '%Y-%m-%d' %}
   {% assign all_daily = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
@@ -727,15 +727,15 @@ Ready to join the movement? Here's how you can get started:
     {% endif %}
   {% endfor %}
   {% assign latest_curated = daily_today | first %}
-  <h3 id="latest-curated" style="color: #1f2937 !important;">
+  <h3 id="latest-curated">
     <span aria-hidden="true">🎯</span> Daily highlights from across Canada
     {% if latest_curated %}
       <span class="badge badge--new" aria-label="Updated today">✅ {{ today | date: "%B %-d, %Y" }}</span>
     {% endif %}
   </h3>
-  <p class="highlight-banner__desc" style="color: #1f2937 !important;">A quick, accessible round-up of community stories, resources, and calls-to-action <strong style="color: #1f2937 !important;">updated automatically every day</strong>.</p>
+  <p class="highlight-banner__desc">A quick, accessible round-up of community stories, resources, and calls-to-action <strong>updated automatically every day</strong>.</p>
   <div class="highlight-banner__actions">
-    <a class="highlight-banner__button" href="{{ '/blog/#curated-daily' | relative_url }}" aria-describedby="curated-daily-desc" style="color: #1f2937 !important;">
+  <a class="highlight-banner__button" href="{{ '/blog/#curated-daily' | relative_url }}" aria-describedby="curated-daily-desc">
       Check out today's curated feed →
     </a>
     <span id="curated-daily-desc" class="sr-only">This link takes you to the curated daily feed section on our blog.</span>
