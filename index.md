@@ -163,7 +163,17 @@ We're building a safe space to connect, share experiences, and advocate for real
   </h2>
   <p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Events in the next 7 days – automatically synced from 3mpwr App</p>
   <div id="events-banner-content" style="min-height: 100px;">
-    <p style="margin: 0; font-size: 1.2rem; opacity: 0.9;">⏳ Loading upcoming events...</p>
+    <div id="home-events-skeleton" aria-hidden="true" style="display: grid; gap: 0.75rem;">
+      <div style="background: rgba(255,255,255,0.25); border-radius: 8px; padding: 1rem;">
+        <div style="width: 45%; height: 18px; background: rgba(255,255,255,0.5); border-radius: 6px;"></div>
+        <div style="margin-top: 8px; width: 80%; height: 12px; background: rgba(255,255,255,0.35); border-radius: 6px;"></div>
+      </div>
+      <div style="background: rgba(255,255,255,0.25); border-radius: 8px; padding: 1rem;">
+        <div style="width: 55%; height: 18px; background: rgba(255,255,255,0.5); border-radius: 6px;"></div>
+        <div style="margin-top: 8px; width: 70%; height: 12px; background: rgba(255,255,255,0.35); border-radius: 6px;"></div>
+      </div>
+      <p class="sr-only">Loading events…</p>
+    </div>
   </div>
 </div>
 
@@ -180,6 +190,7 @@ We're building a safe space to connect, share experiences, and advocate for real
 
 async function loadDailyEvents() {
   try {
+    const t0 = (window.performance && performance.now) ? performance.now() : Date.now();
     const ts = Date.now();
     const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production&ts=' + ts, { cache: 'no-store' });
     
@@ -188,6 +199,9 @@ async function loadDailyEvents() {
     }
     
     const data = await response.json();
+    const t1 = (window.performance && performance.now) ? performance.now() : Date.now();
+    const durationMs = Math.round(t1 - t0);
+    console.log(`⏱️ Daily events fetch completed in ${durationMs} ms`);
     let events = data.events || [];
     
     // Filter out test events
@@ -209,16 +223,17 @@ async function loadDailyEvents() {
       return eventDate >= todayStart && eventDate <= sevenDaysFromNow;
     });
     
+    const updatedAt = new Date();
     // If no events in next 7 days, show "no events"
     if (upcomingEvents.length === 0) {
-      displayNoEvents();
+      displayNoEvents({ updatedAt, durationMs });
       return;
     }
     
     // Sort by date (earliest first)
     upcomingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
     
-    displayEvents(upcomingEvents);
+    displayEvents(upcomingEvents, { updatedAt, durationMs });
     
   } catch (error) {
     console.error('❌ Failed to load daily events:', error);
@@ -226,7 +241,7 @@ async function loadDailyEvents() {
   }
 }
 
-function displayEvents(events) {
+function displayEvents(events, meta) {
   const container = document.getElementById('events-banner-content');
   
   const eventCount = events.length;
@@ -332,13 +347,17 @@ function displayEvents(events) {
       <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
         📅 View Full Calendar
       </a>
+      <p style="margin: 0.75rem 0 0; font-size: 0.85rem; opacity: 0.85;">
+        Last updated: <span id="home-events-last-update">Just now</span> • ⏱️ ${meta?.durationMs ?? '-'} ms
+      </p>
     </div>
   `;
   
   container.innerHTML = html;
+  if (meta && meta.updatedAt) startHomeLastUpdateTicker(meta.updatedAt);
 }
 
-function displayNoEvents() {
+function displayNoEvents(meta) {
   const container = document.getElementById('events-banner-content');
   container.innerHTML = `
     <h2 style="margin: 0 0 1rem; font-size: 2rem; color: white;">
@@ -350,7 +369,11 @@ function displayNoEvents() {
     <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
       📅 Go to Events Calendar
     </a>
+    <p style="margin: 0.75rem 0 0; font-size: 0.85rem; opacity: 0.85;">
+      Last checked: <span id="home-events-last-update">Just now</span>${meta && typeof meta.durationMs === 'number' ? ` • ⏱️ ${meta.durationMs} ms` : ''}
+    </p>
   `;
+  if (meta && meta.updatedAt) startHomeLastUpdateTicker(meta.updatedAt);
 }
 
 function displayError() {
@@ -365,6 +388,9 @@ function displayError() {
     <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
       📅 View Events Calendar
     </a>
+    <p style="margin: 0.75rem 0 0; font-size: 0.85rem; opacity: 0.85;">
+      Status: ${navigator.onLine ? 'Connection issue' : 'Offline'}
+    </p>
   `;
 }
 
@@ -373,6 +399,33 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadDailyEvents);
 } else {
   loadDailyEvents();
+}
+
+// Ticker to show relative "last updated" time on homepage banner
+function startHomeLastUpdateTicker(updatedAt) {
+  const el = document.getElementById('home-events-last-update');
+  if (!el) return;
+  function updateAgo() {
+    const now = new Date();
+    const diff = Math.max(0, Math.floor((now - updatedAt) / 1000));
+    let label;
+    if (diff < 5) label = 'Just now';
+    else if (diff < 60) label = `${diff}s ago`;
+    else {
+      const m = Math.floor(diff / 60);
+      label = `${m}m ago`;
+    }
+    el.setAttribute('title', updatedAt.toLocaleString());
+    const timeText = updatedAt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+    el.textContent = `${timeText} (${label})`;
+  }
+  updateAgo();
+  let ticks = 0;
+  const interval = setInterval(() => {
+    ticks++;
+    updateAgo();
+    if (ticks > 60) clearInterval(interval);
+  }, 1000);
 }
 </script>
 
