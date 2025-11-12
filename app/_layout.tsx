@@ -9,13 +9,20 @@ import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "r
 if (__DEV__) {
   const originalWarn = console.warn;
   const originalError = console.error;
+  const originalLog = console.log;
   
   const suppressedPatterns = [
     /expo-notifications.*not fully supported in Expo Go/i,
+    /expo-notifications.*not yet fully supported on web/i,
     /Push notifications.*removed from Expo Go/i,
     /Push tokens not available in Expo Go/i,
     /Use a development build/i,
     /We recommend you instead use a development build/i,
+    /shadow.*style props are deprecated.*Use.*boxShadow/i,
+    /Listening to push token changes is not yet fully supported on web/i,
+    /VirtualizedLists should never be nested/i,
+    /componentWillReceiveProps has been renamed/i,
+    /componentWillMount has been renamed/i,
   ];
   
   const shouldSuppress = (message: string) => {
@@ -41,14 +48,22 @@ if (__DEV__) {
     }
   };
   
-  // Restore original console functions after app loads (5 seconds)
+  console.log = (...args: any[]) => {
+    const message = args.join(' ');
+    if (!shouldSuppress(message)) {
+      originalLog.apply(console, args);
+    }
+  };
+  
+  // Restore original console functions after app loads (10 seconds for web)
   // This ensures real errors during development are still visible
   setTimeout(() => {
     if (__DEV__) {
       console.warn = originalWarn;
       console.error = originalError;
+      console.log = originalLog;
     }
-  }, 5000);
+  }, 10000);
 }
 
 // Type for React Native event subscriptions (compatible with multiple RN versions)

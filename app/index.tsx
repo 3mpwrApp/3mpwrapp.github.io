@@ -1,7 +1,7 @@
 import * as Linking from 'expo-linking';
 import { useRouter, useSegments } from 'expo-router';
 import { useEffect } from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator, Platform, Text, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
 import { logger } from '../utils/logger';
@@ -13,6 +13,19 @@ export default function Index() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const segments = useSegments();
+
+  // Web-specific: Add console logging for debugging
+  useEffect(() => {
+    if (Platform.OS === 'web') {
+      console.log('[Index WEB] Component mounted', { loading, hasUser: !!user });
+    }
+  }, []);
+  
+  useEffect(() => {
+    if (Platform.OS === 'web') {
+      console.log('[Index WEB] Auth state changed', { loading, hasUser: !!user, segments });
+    }
+  }, [loading, user, segments]);
 
   // Store the deep link path for resuming after login
   useEffect(() => {
@@ -71,6 +84,9 @@ export default function Index() {
   useEffect(() => {
     if (loading) {
       logger.log('[Index] Still loading auth state...');
+      if (Platform.OS === 'web') {
+        console.log('[Index WEB] Waiting for auth to load...');
+      }
       return; // Still loading, wait
     }
     
@@ -88,6 +104,15 @@ export default function Index() {
       segmentArray,
     });
     
+    if (Platform.OS === 'web') {
+      console.log('[Index WEB] Navigation decision', { 
+        hasUser: !!user, 
+        inAuthFlow, 
+        inTabsFlow,
+        currentPath
+      });
+    }
+    
     // Determine where user should be based on auth state
     const shouldBeInAuth = !user;
     const shouldBeInTabs = !!user;
@@ -95,9 +120,16 @@ export default function Index() {
     // If user is authenticated but in auth flow, navigate to tabs (HOME)
     if (shouldBeInTabs && inAuthFlow) {
       logger.log('[Index] ✅ User logged in - navigating to home/(tabs)');
+      if (Platform.OS === 'web') {
+        console.log('[Index WEB] Redirecting to /(tabs)');
+      }
       // Use a small delay to ensure Firebase auth state is fully settled
       setTimeout(() => {
-        router.replace('/(tabs)');
+        try {
+          router.replace('/(tabs)');
+        } catch (error) {
+          console.error('[Index WEB] Failed to navigate to tabs:', error);
+        }
       }, 100);
       return;
     }
@@ -105,7 +137,14 @@ export default function Index() {
     // If user is not authenticated but in tabs flow, navigate to login
     if (shouldBeInAuth && inTabsFlow) {
       logger.log('[Index] ❌ No user in tabs - navigating to login');
-      router.replace('/(auth)/signin' as any);
+      if (Platform.OS === 'web') {
+        console.log('[Index WEB] Redirecting to /(auth)/signin');
+      }
+      try {
+        router.replace('/(auth)/signin' as any);
+      } catch (error) {
+        console.error('[Index WEB] Failed to navigate to signin:', error);
+      }
       return;
     }
     
@@ -113,11 +152,25 @@ export default function Index() {
     if (!inAuthFlow && !inTabsFlow) {
       if (!user) {
         logger.log('[Index] 🔄 Initial - no user, navigating to login');
-        router.replace('/(auth)/signin' as any);
+        if (Platform.OS === 'web') {
+          console.log('[Index WEB] Initial redirect to /(auth)/signin');
+        }
+        try {
+          router.replace('/(auth)/signin' as any);
+        } catch (error) {
+          console.error('[Index WEB] Failed initial navigate to signin:', error);
+        }
       } else {
         logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
+        if (Platform.OS === 'web') {
+          console.log('[Index WEB] Initial redirect to /(tabs)');
+        }
         setTimeout(() => {
-          router.replace('/(tabs)');
+          try {
+            router.replace('/(tabs)');
+          } catch (error) {
+            console.error('[Index WEB] Failed initial navigate to tabs:', error);
+          }
         }, 100);
       }
     }
@@ -125,8 +178,13 @@ export default function Index() {
 
   // Show loading state while auth initializes or during redirect
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
       <ActivityIndicator size="large" />
+      {Platform.OS === 'web' && (
+        <Text style={{ marginTop: 20, color: '#666' }}>
+          Loading 3mpwr App... {loading ? '(Initializing auth)' : '(Redirecting)'}
+        </Text>
+      )}
     </View>
   );
 }

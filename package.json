@@ -4,9 +4,9 @@
   "main": "expo-router/entry",
   "version": "1.0.0-rc.1",
   "scripts": {
-    "start": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
+    "start": "expo start",
+    "start:tunnel": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
     "start:firebase": "set EXPO_PUBLIC_DATA_POLICY=hybrid_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
-    "prestart": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js",
     "start:devclient": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& node ./scripts/validate-configs.js && expo start --dev-client -c",
     "start:lan": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --lan -c",
     "start:localhost": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --localhost -c",
@@ -103,7 +103,7 @@
     "@vitalets/google-translate-api": "^9.2.1",
     "cheerio": "^1.1.2",
     "crypto-js": "^4.2.0",
-    "expo": "54.0.22",
+    "expo": "54.0.23",
     "expo-apple-authentication": "~8.0.7",
     "expo-application": "~7.0.7",
     "expo-asset": "~12.0.9",
@@ -114,7 +114,7 @@
     "expo-calendar": "~15.0.7",
     "expo-clipboard": "~8.0.7",
     "expo-constants": "~18.0.9",
-    "expo-dev-client": "~6.0.16",
+    "expo-dev-client": "~6.0.17",
     "expo-device": "~8.0.9",
     "expo-document-picker": "~14.0.7",
     "expo-file-system": "~19.0.17",
@@ -138,9 +138,9 @@
     "expo-web-browser": "~15.0.9",
     "firebase": "^12.4.0",
     "pdf-parse": "^1.1.2",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-native": "0.81.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.79.5",
     "react-native-gesture-handler": "~2.28.0",
     "react-native-map-clustering": "^3.4.2",
     "react-native-maps": "1.20.1",
@@ -148,6 +148,7 @@
     "react-native-safe-area-context": "~5.6.0",
     "react-native-screens": "~4.16.0",
     "react-native-svg": "15.12.1",
+    "react-native-view-shot": "4.0.3",
     "react-native-web": "^0.21.2",
     "react-native-webview": "13.15.0",
     "react-native-worklets": "0.5.1",
@@ -160,7 +161,7 @@
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^24.9.1",
-    "@types/react": "~19.1.0",
+    "@types/react": "~18.2.79",
     "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.13.0",
@@ -201,7 +202,7 @@
   "overrides": {
     "@sentry/browser": "^7.119.1",
     "@sentry/react": "^7.119.1",
-    "react": "19.1.0"
+    "react": "18.2.0"
   },
   "engines": {
     "node": ">=20.19.4"
