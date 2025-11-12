@@ -300,7 +300,8 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       if (syncStatus) syncStatus.textContent = '🔄 Syncing...';
       
       // Fetch from Cloudflare Worker API endpoint (production environment)
-      const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production');
+  const ts = Date.now();
+  const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production&ts=' + ts, { cache: 'no-store' });
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);

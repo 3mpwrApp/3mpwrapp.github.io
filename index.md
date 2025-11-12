@@ -180,7 +180,8 @@ We're building a safe space to connect, share experiences, and advocate for real
 
 async function loadDailyEvents() {
   try {
-    const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production');
+    const ts = Date.now();
+    const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production&ts=' + ts, { cache: 'no-store' });
     
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
