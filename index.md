@@ -854,11 +854,13 @@ We're committed to transparency and protecting your rights:
 ## <span aria-hidden="true">📅</span> Weekly updates <span class="badge badge--new" aria-label="Automatically updated">Auto-updated</span>
 
 {% assign weeklies = site.posts | where_exp: 'p', "p.tags contains 'weekly'" %}
-{% assign today = 'now' | date: '%s' | plus: 0 %}
-{% assign one_week_ago = today | minus: 604800 %}
+{% assign today = 'now' | date: '%s' %}
+{% assign today_num = today | plus: 0 %}
+{% assign one_week_ago = today_num | minus: 604800 %}
 {% assign this_week_posts = '' | split: '' %}
 {% for p in weeklies %}
-  {% assign post_date = p.date | date: '%s' | plus: 0 %}
+  {% assign post_date_str = p.date | date: '%s' %}
+  {% assign post_date = post_date_str | plus: 0 %}
   {% if post_date >= one_week_ago %}
     {% assign this_week_posts = this_week_posts | push: p %}
   {% endif %}
