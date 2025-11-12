@@ -85,3 +85,7 @@ export const ANNOUNCEMENT_PRIORITY = {
   low: "polite" as const,
   high: "assertive" as const,
 } as const;
+
+// Maximum font scale multiplier for accessibility
+export const MAX_FONT_SCALE = 1.4;
+export const MAX_FONT_SIZE_MULTIPLIER = 1.4;

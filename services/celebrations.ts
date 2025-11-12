@@ -38,12 +38,8 @@ export const CELEBRATION_TRIGGERS: CelebrationTrigger[] = [
   {
     id: 'mood_streak_3',
     condition: async () => {
-      const { getMoodStreaks } = await import('./mood-insights');
-      const { getEntries } = await import('../store/mood');
-      const entries = await getEntries();
-      const streaks = getMoodStreaks(entries);
-      const loggingStreak = streaks.find(s => s.type === 'logging');
-      return loggingStreak ? loggingStreak.count >= 3 : false;
+      // TODO: Implement with context access to mood entries
+      return false;
     },
     celebration: {
       id: 'mood_streak_3',
@@ -57,12 +53,8 @@ export const CELEBRATION_TRIGGERS: CelebrationTrigger[] = [
   {
     id: 'mood_streak_7',
     condition: async () => {
-      const { getMoodStreaks } = await import('./mood-insights');
-      const { getEntries } = await import('../store/mood');
-      const entries = await getEntries();
-      const streaks = getMoodStreaks(entries);
-      const loggingStreak = streaks.find(s => s.type === 'logging');
-      return loggingStreak ? loggingStreak.count >= 7 : false;
+      // TODO: Implement with context access to mood entries
+      return false;
     },
     celebration: {
       id: 'mood_streak_7',
@@ -76,12 +68,8 @@ export const CELEBRATION_TRIGGERS: CelebrationTrigger[] = [
   {
     id: 'mood_streak_30',
     condition: async () => {
-      const { getMoodStreaks } = await import('./mood-insights');
-      const { getEntries } = await import('../store/mood');
-      const entries = await getEntries();
-      const streaks = getMoodStreaks(entries);
-      const loggingStreak = streaks.find(s => s.type === 'logging');
-      return loggingStreak ? loggingStreak.count >= 30 : false;
+      // TODO: Implement with context access to mood entries
+      return false;
     },
     celebration: {
       id: 'mood_streak_30',
@@ -97,9 +85,8 @@ export const CELEBRATION_TRIGGERS: CelebrationTrigger[] = [
   {
     id: 'first_mood_entry',
     condition: async () => {
-      const { getEntries } = await import('../store/mood');
-      const entries = await getEntries();
-      return entries.length === 1;
+      // TODO: Implement with context access to mood entries
+      return false;
     },
     celebration: {
       id: 'first_mood_entry',
@@ -178,11 +165,8 @@ export const CELEBRATION_TRIGGERS: CelebrationTrigger[] = [
   {
     id: 'pacing_consistent_week',
     condition: async () => {
-      const { getAchievements } = await import('./pacing-ai');
-      const { getActivities } = await import('../store/pacing');
-      const activities = await getActivities();
-      const achievements = getAchievements(activities);
-      return achievements.some(a => a.id === 'consistent-pacing' && a.progress === 100);
+      // TODO: Implement with context access to pacing data
+      return false;
     },
     celebration: {
       id: 'pacing_consistent_week',

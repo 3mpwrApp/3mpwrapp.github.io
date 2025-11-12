@@ -8,25 +8,27 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import {
-    ActivityIndicator,
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  ActivityIndicator,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from 'react-native';
 
-import { HIT_SLOP_8, MAX_FONT_SCALE } from '../../../constants/A11Y';
+import { HIT_SLOP_8, MAX_FONT_SIZE_MULTIPLIER } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import {
-    getNetworkStats,
-    searchEntity,
-    type EntitySummary,
-    type EntityType,
-    type NetworkStats,
+  getNetworkStats,
+  searchEntity,
+  type EntitySummary,
+  type EntityType,
+  type NetworkStats,
 } from '../../../services/accountabilityNetwork';
 import { useAppPalette } from '../../../theme/usePalette';
+
+const MAX_FONT_SCALE = MAX_FONT_SIZE_MULTIPLIER;
 
 export default function AccountabilityNetworkScreen() {
   const palette = useAppPalette();
@@ -87,26 +89,26 @@ export default function AccountabilityNetworkScreen() {
       contentContainerStyle={styles.content}
     >
       {/* Header */}
-      <Text style={[styles.title, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+      <Text style={[styles.title, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
         Accountability Network
       </Text>
       
-      <Text style={[styles.subtitle, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+      <Text style={[styles.subtitle, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
         Search and rate employers, insurers, and service providers based on disability advocacy experiences
       </Text>
       
       {/* Network Stats */}
       {stats && (
         <View style={[styles.statsCard, { backgroundColor: palette.surface }]}>
-          <Text style={[styles.statsTitle, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[styles.statsTitle, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             Community Impact
           </Text>
           <View style={styles.statsGrid}>
             <View style={styles.statItem}>
-              <Text style={[styles.statValue, { color: palette.primary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              <Text style={[styles.statValue, { color: palette.primary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
                 {stats.totalReviews}
               </Text>
-              <Text style={[styles.statLabel, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              <Text style={[styles.statLabel, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
                 Reviews
               </Text>
             </View>
@@ -146,7 +148,7 @@ export default function AccountabilityNetworkScreen() {
         accessibilityLabel="Add a review"
       >
         <Ionicons name="add-circle" size={24} color="#FFFFFF" />
-        <Text style={styles.addButtonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        <Text style={styles.addButtonText} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
           Share Your Experience
         </Text>
       </Pressable>
@@ -178,7 +180,7 @@ export default function AccountabilityNetworkScreen() {
                 styles.filterChipText,
                 { color: selectedType === type.value ? '#FFFFFF' : palette.text }
               ]}
-              maxFontSizeMultiplier={MAX_FONT_SCALE}
+              maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}
             >
               {type.label}
             </Text>
@@ -214,7 +216,7 @@ export default function AccountabilityNetworkScreen() {
       {/* Results */}
       {!loading && results.length > 0 && (
         <View style={styles.resultsContainer}>
-          <Text style={[styles.resultsCount, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[styles.resultsCount, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             {results.length} result{results.length !== 1 ? 's' : ''}
           </Text>
           {results.map(entity => (
@@ -227,10 +229,10 @@ export default function AccountabilityNetworkScreen() {
       {!loading && query.length >= 2 && results.length === 0 && (
         <View style={styles.emptyState}>
           <Ionicons name="search-outline" size={64} color={palette.textSecondary} />
-          <Text style={[styles.emptyText, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[styles.emptyText, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             No results found for "{query}"
           </Text>
-          <Text style={[styles.emptySubtext, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[styles.emptySubtext, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             Be the first to review this entity
           </Text>
         </View>
@@ -240,10 +242,10 @@ export default function AccountabilityNetworkScreen() {
       {!loading && query.length < 2 && (
         <View style={styles.emptyState}>
           <Ionicons name="people-outline" size={64} color={palette.textSecondary} />
-          <Text style={[styles.emptyText, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[styles.emptyText, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             Search for an employer, insurer, or service provider
           </Text>
-          <Text style={[styles.emptySubtext, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[styles.emptySubtext, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             Share your experience to help the community
           </Text>
         </View>
@@ -272,9 +274,9 @@ function EntityCard({ entity, palette }: { entity: EntitySummary; palette: any }
     <Pressable
       style={[styles.entityCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}
       onPress={() => {
-        // Navigate to entity details
+        // Navigate to entity details (route to be created)
         router.push({
-          pathname: '/advocacy/accountability-network/entity-details',
+          pathname: '/advocacy/accountability-network/entity-details' as any,
           params: { name: entity.entityName, type: entity.entityType },
         });
       }}
@@ -284,40 +286,40 @@ function EntityCard({ entity, palette }: { entity: EntitySummary; palette: any }
       <View style={styles.cardHeader}>
         <View style={styles.cardTitleRow}>
           <Ionicons name={getTypeIcon(entity.entityType) as any} size={24} color={palette.primary} />
-          <Text style={[styles.entityName, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[styles.entityName, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             {entity.entityName}
           </Text>
         </View>
-        <Text style={[styles.entityType, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        <Text style={[styles.entityType, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
           {getTypeLabel(entity.entityType)}
         </Text>
       </View>
       
       <View style={styles.cardStats}>
         <View style={styles.statRow}>
-          <Text style={[styles.rating, { color: '#FFB900' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[styles.rating, { color: '#FFB900' }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             {'★'.repeat(Math.round(entity.averageRating))}
             {'☆'.repeat(5 - Math.round(entity.averageRating))}
           </Text>
-          <Text style={[styles.ratingText, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[styles.ratingText, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             {entity.averageRating.toFixed(1)} ({entity.totalReviews} reviews)
           </Text>
         </View>
         
         <View style={styles.metricRow}>
           <View style={styles.metric}>
-            <Text style={[styles.metricValue, { color: palette.primary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Text style={[styles.metricValue, { color: palette.primary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
               {Math.round(entity.successRate)}%
             </Text>
-            <Text style={[styles.metricLabel, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Text style={[styles.metricLabel, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
               Success Rate
             </Text>
           </View>
           <View style={styles.metric}>
-            <Text style={[styles.metricValue, { color: palette.primary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Text style={[styles.metricValue, { color: palette.primary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
               {Math.round(entity.recommendationRate)}%
             </Text>
-            <Text style={[styles.metricLabel, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Text style={[styles.metricLabel, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
               Would Recommend
             </Text>
           </View>

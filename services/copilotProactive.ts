@@ -169,7 +169,7 @@ async function checkAndGenerateSuggestions(
     suggestions.push({
       id: `suggest_community_${Date.now()}`,
       type: 'community-checkin',
-      title: 'You're not alone',
+      title: 'You\'re not alone',
       message: 'It sounds like today has been tough. The community is here if you want to connect.',
       action: {
         type: 'navigate',

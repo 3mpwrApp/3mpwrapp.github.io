@@ -19,32 +19,32 @@ export interface VoiceCommand {
 export const VOICE_COMMANDS: VoiceCommand[] = [
   {
     phrases: ['open mood tracker', 'mood tracker', 'track mood'],
-    action: () => router.push('/(tabs)/wellness/mood-tracker'),
+    action: () => router.push('/wellness/mood-tracker' as any),
     description: 'Open mood tracking',
   },
   {
     phrases: ['open pacing partner', 'pacing partner', 'track energy'],
-    action: () => router.push('/(tabs)/wellness/pacing-partner'),
+    action: () => router.push('/wellness/pacing-partner' as any),
     description: 'Open pacing partner',
   },
   {
     phrases: ['open evidence locker', 'evidence locker', 'my documents'],
-    action: () => router.push('/(tabs)/resources/evidence-locker'),
+    action: () => router.push('/resources/evidence-locker' as any),
     description: 'Open evidence locker',
   },
   {
     phrases: ['open letter wizard', 'letter wizard', 'write letter'],
-    action: () => router.push('/(tabs)/resources/letter-wizard'),
+    action: () => router.push('/resources/letter-wizard' as any),
     description: 'Open letter generator',
   },
   {
     phrases: ['go home', 'home screen', 'main screen'],
-    action: () => router.push('/(tabs)/'),
+    action: () => router.push('/' as any),
     description: 'Navigate to home',
   },
   {
     phrases: ['open settings', 'settings', 'preferences'],
-    action: () => router.push('/(tabs)/settings'),
+    action: () => router.push('/settings' as any),
     description: 'Open settings',
   },
   {

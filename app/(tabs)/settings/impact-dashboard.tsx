@@ -18,8 +18,7 @@ import {
 } from 'react-native';
 import { captureRef } from 'react-native-view-shot';
 
-import { MAX_FONT_SCALE } from '../../constants/A11Y';
-import { useTranslation } from '../../i18n';
+import { useTranslation } from '../../../i18n';
 import {
     calculateImpactPoints,
     getAdvocacyLevel,
@@ -27,8 +26,10 @@ import {
     getNextLevel,
     syncImpactMetrics,
     type ImpactMetrics
-} from '../../services/impactScore';
-import { useAppPalette } from '../../theme/usePalette';
+} from '../../../services/impactScore';
+import { useAppPalette } from '../../../theme/usePalette';
+
+const MAX_FONT_SCALE = 1.4;
 
 export default function ImpactDashboard() {
   const palette = useAppPalette();
@@ -101,7 +102,7 @@ export default function ImpactDashboard() {
       <View 
         ref={cardRef} 
         style={[styles.card, { backgroundColor: palette.surface }]}
-        collapsible={false}
+        collapsable={false}
       >
         <View style={styles.levelBadge}>
           <Text style={styles.levelIcon} maxFontSizeMultiplier={MAX_FONT_SCALE}>

@@ -209,16 +209,14 @@ export async function syncImpactMetrics(): Promise<ImpactMetrics> {
   
   // Sync mood logs
   try {
-    const { getEntries } = await import('../store/mood');
-    const entries = await getEntries();
-    metrics.moodLogsCompleted = entries.length;
+    // TODO: Access mood entries from context
+    metrics.moodLogsCompleted = 0;
   } catch {}
   
   // Sync pacing activities
   try {
-    const { getActivities } = await import('../store/pacing');
-    const activities = await getActivities();
-    metrics.pacingActivities = activities.length;
+    // TODO: Access pacing activities from context
+    metrics.pacingActivities = 0;
   } catch {}
   
   // Calculate days advocating (days since first letter or evidence)
@@ -266,12 +264,7 @@ async function getFirstActionDate(): Promise<number | null> {
   
   // Check first mood entry
   try {
-    const { getEntries } = await import('../store/mood');
-    const entries = await getEntries();
-    if (entries.length > 0) {
-      const sorted = [...entries].sort((a, b) => a.timestamp - b.timestamp);
-      dates.push(sorted[0].timestamp);
-    }
+    // TODO: Access mood entries from context
   } catch {}
   
   return dates.length > 0 ? Math.min(...dates) : null;

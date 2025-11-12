@@ -331,7 +331,7 @@ export async function filterReviews(filters: {
   }
   
   if (filters.minRating !== undefined) {
-    reviews = reviews.filter(r => r.rating >= filters.minRating);
+    reviews = reviews.filter(r => r.rating >= (filters.minRating || 0));
   }
   
   return reviews.sort((a, b) => b.reportedAt - a.reportedAt);
