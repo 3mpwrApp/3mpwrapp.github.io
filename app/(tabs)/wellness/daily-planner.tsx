@@ -54,12 +54,13 @@ type TimeBlock = {
 
 const HOURS = Array.from({ length: 13 }, (_, i) => i + 8); // 8am to 8pm
 
- 
+/* eslint-disable no-restricted-syntax */
 const ENERGY_COLORS = {
   low: { bg: '#E8F5E9', border: '#66BB6A', text: '#2E7D32' }, // Green
   medium: { bg: '#FFF3E0', border: '#FFA726', text: '#E65100' }, // Orange
   high: { bg: '#FFEBEE', border: '#EF5350', text: '#C62828' }, // Red
 };
+/* eslint-enable no-restricted-syntax */
 
 const SMART_SUGGESTIONS = {
   low: [

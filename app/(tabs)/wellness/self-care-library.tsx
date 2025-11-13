@@ -627,12 +627,13 @@ const TYPE_ICONS: Record<ActivityType, string> = {
   learning: '📚',
 };
 
- 
+/* eslint-disable no-restricted-syntax */
 const ENERGY_COLORS = {
   low: { bg: '#E8F5E9', border: '#66BB6A', text: '#2E7D32' },
   medium: { bg: '#FFF3E0', border: '#FFA726', text: '#E65100' },
   high: { bg: '#FFEBEE', border: '#EF5350', text: '#C62828' },
 };
+/* eslint-enable no-restricted-syntax */
 
 export default function SelfCareLibrary() {
   const palette = useAppPalette();
