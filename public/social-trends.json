@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-13T12:22:30.012Z",
+  "lastUpdated": "2025-11-13T18:16:23.454Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2235,
+      "totalPosts": 2260,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T12:22:19.465Z"
+      "lastSeen": "2025-11-13T18:16:13.900Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2250,
+      "totalPosts": 2275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T12:22:21.877Z"
+      "lastSeen": "2025-11-13T18:16:16.144Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2238,
+      "totalPosts": 2263,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T12:22:24.212Z"
+      "lastSeen": "2025-11-13T18:16:18.222Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2246,
+      "totalPosts": 2271,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T12:22:26.612Z"
+      "lastSeen": "2025-11-13T18:16:20.492Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2250,
+      "totalPosts": 2275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T12:22:29.008Z"
+      "lastSeen": "2025-11-13T18:16:22.450Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "This Thursday November 13th, I will be joining the OZeWAI (an Australian Web Accessibility initiative) on their Ask The Professionals Webinar to talk all about #ARIA, along with Rafal Charlampowicz and Andrew Downie. The session will be moderated by Russ Weakley.\n\n#a11y",
-      "author": "sarasoueidan.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Just #DanielleSmith doing more ghoulish #UCP things. If a “decision” hasn’t been made by Feb 28, 2026, they’ll cut $200/month from disabled Albertans already struggling to survive.\nMeanwhile, the CRA’s CDB backlog is 5–6 months.\n#ableg #abpoli #cdnpoli #DisabilityRights #AISH #yyc #yeg",
-      "author": "sillyrabbitfafo.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Mainstream disability rights groups are awfully quiet in this moment. #disabilityrights #abolishice",
       "author": "thepowerlesspod.com",
@@ -338,6 +308,36 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
+      "author": "longcovidjustice.org",
+      "engagement": 40,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "This article on designing services to be digital by default focuses rightly on older people, but it has implications for us all www.thejournal.ie/readme/opini... #accessibility",
+      "author": "stancarey.bsky.social",
+      "engagement": 13,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,14 +347,14 @@
     },
     {
       "keyword": "accessibility",
+      "count": 39
+    },
+    {
+      "keyword": "a11y",
       "count": 33
     },
     {
       "keyword": "cripthevote",
-      "count": 28
-    },
-    {
-      "keyword": "a11y",
       "count": 28
     },
     {
@@ -382,8 +382,8 @@
       "count": 12
     },
     {
-      "keyword": "disability",
-      "count": 11
+      "keyword": "accessibility a11y",
+      "count": 12
     },
     {
       "keyword": "foxtakedown",
@@ -398,8 +398,8 @@
       "count": 9
     },
     {
-      "keyword": "disabled people",
-      "count": 8
+      "keyword": "worldusabilityday",
+      "count": 9
     },
     {
       "keyword": "stoptheliesfox",
@@ -418,8 +418,8 @@
       "count": 8
     },
     {
-      "keyword": "avelo",
-      "count": 6
+      "keyword": "disability",
+      "count": 7
     }
   ]
 }
