@@ -59,11 +59,9 @@ export default function RelatedFeatures({
         {itemsToShow.map((feature) => {
           const isSmart = smartSuggestion?.id === feature.id;
           return (
-            <Link 
-              key={feature.id} 
-              href={feature.route} 
-              asChild={true}
-              accessibilityRole="link"
+            <Link asChild
+              key={feature.id}
+              href={feature.route}
               onPress={() => trackNavigation(currentFeature, feature.id, feature.reason)}
             >
               <Pressable
