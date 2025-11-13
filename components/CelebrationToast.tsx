@@ -5,6 +5,8 @@
  * with confetti effect and haptic feedback
  */
 
+/* eslint-disable no-restricted-syntax */
+
 import { useEffect, useRef } from 'react';
 import { Animated, Dimensions, Modal, StyleSheet, Text, View } from 'react-native';
 
@@ -85,19 +87,19 @@ export default function CelebrationToast({
   
   if (!celebration) return null;
   
-  // Determine background color based on type
+  // Determine background color based on type - using palette tokens
   const getBgColor = () => {
     switch (celebration.type) {
       case 'streak':
-        return '#FF6B35'; // Orange
+        return palette.warning || palette.primary; // Orange/warning theme
       case 'first-time':
-        return '#4ECDC4'; // Teal
+        return palette.info || palette.primary; // Teal/info theme
       case 'milestone':
-        return '#FFD23F'; // Gold
+        return palette.success || palette.primary; // Gold/success theme
       case 'level-up':
-        return '#9B59B6'; // Purple
+        return palette.secondary || palette.primary; // Purple/secondary theme
       case 'community':
-        return '#3498DB'; // Blue
+        return palette.primary; // Blue/primary theme
       default:
         return palette.primary;
     }
@@ -156,10 +158,20 @@ export default function CelebrationToast({
  * Confetti effect component
  */
 function ConfettiEffect({ show }: { show: boolean }) {
+  const palette = useAppPalette();
+  // Use palette colors for confetti
+  const colors = [
+    palette.warning || palette.primary,
+    palette.info || palette.primary,
+    palette.success || palette.primary,
+    palette.secondary || palette.primary,
+    palette.primary
+  ];
+  
   const confetti = Array.from({ length: 20 }, (_, i) => ({
     id: i,
     x: Math.random() * width,
-    color: ['#FF6B35', '#4ECDC4', '#FFD23F', '#9B59B6', '#3498DB'][Math.floor(Math.random() * 5)],
+    color: colors[Math.floor(Math.random() * colors.length)],
     delay: Math.random() * 500,
   }));
   

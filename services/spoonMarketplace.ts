@@ -277,7 +277,7 @@ export function matchOffersAndRequests(
 /**
  * Get top helpers (leaderboard)
  */
-export async function getTopHelpers(limit: number = 10): Promise<Array<{ userId: string; userName: string; balance: SpoonBalance }>> {
+export async function getTopHelpers(_limit: number = 10): Promise<Array<{ userId: string; userName: string; balance: SpoonBalance }>> {
   // In production, this would query Firestore for all users' balances
   // For now, return empty array
   return [];

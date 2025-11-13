@@ -264,7 +264,83 @@ export default function EnhancedPrivacySection() {
         value={state.errorReportingEnabled ?? false} 
         onValueChange={async (v) => {
           try {
-            await setErrorReportingEnabled(v);
+            // If disabling, just save the setting
+            if (!v) {
+              await setErrorReportingEnabled(false);
+              return;
+            }
+
+            // If enabling, validate environment and try a safe init first
+            // 1) Check feature flag and DSN
+            try {
+              const featureMod = await import('../../services/featureFlags');
+              if (!featureMod.FLAGS.sentry) {
+                Alert.alert(
+                  'Error Reporting Unavailable',
+                  'Sentry is disabled (Free Mode) or no DSN is configured. Add EXPO_PUBLIC_SENTRY_DSN to your .env and restart.',
+                  [{ text: 'OK' }]
+                );
+                return; // do not enable
+              }
+            } catch (flagError) {
+              // If feature flags fail to load, do not enable
+              console.warn('Feature flags failed to load:', flagError);
+              Alert.alert(
+                'Error', 
+                'Unable to verify error reporting availability.',
+                [{ text: 'OK' }]
+              );
+              return;
+            }
+
+            // 2) Expo Go guard — Sentry not supported in Expo Go clients
+            try {
+              const Constants = (await import('expo-constants')).default as any;
+              if (Constants?.appOwnership === 'expo') {
+                Alert.alert(
+                  'Not supported in Expo Go',
+                  'Enable error reporting in a development or production build.',
+                  [{ text: 'OK' }]
+                );
+                return; // do not enable in Expo Go
+              }
+            } catch (constantsError) {
+              console.warn('Constants check failed:', constantsError);
+            }
+
+            // 3) Attempt a safe initialization now so failures surface immediately
+            try {
+              const { initSentry } = await import('../../services/telemetry');
+              const dsn = process.env.EXPO_PUBLIC_SENTRY_DSN as string | undefined;
+              
+              if (!dsn) {
+                Alert.alert(
+                  'Configuration Missing',
+                  'EXPO_PUBLIC_SENTRY_DSN is not configured. Error reporting cannot be enabled.',
+                  [{ text: 'OK' }]
+                );
+                return;
+              }
+              
+              await initSentry(dsn);
+              
+              // Only persist if initialization succeeded
+              await setErrorReportingEnabled(true);
+              
+              Alert.alert(
+                'Error Reporting Enabled',
+                'Crash reports will now be sent to help improve the app.',
+                [{ text: 'OK' }]
+              );
+            } catch (sentryError) {
+              console.error('Sentry init error during toggle:', sentryError);
+              Alert.alert(
+                'Initialization Failed',
+                'Could not initialize error reporting. The setting remains off. This is normal if you are in development mode or Expo Go.',
+                [{ text: 'OK' }]
+              );
+              return; // do not enable
+            }
           } catch (error) {
             console.error('Error toggling crash reporting:', error);
             Alert.alert(
@@ -272,6 +348,7 @@ export default function EnhancedPrivacySection() {
               'Could not change error reporting setting. The app will continue to work normally.',
               [{ text: 'OK' }]
             );
+            // Don't persist any state change if there was an error
           }
         }} 
         icon='bug' 

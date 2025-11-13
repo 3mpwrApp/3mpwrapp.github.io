@@ -84,8 +84,8 @@ export async function startSession(
  * Generate pre-meeting prep suggestions
  */
 function generatePrepSuggestions(
-  type: NegotiationSession['type'],
-  accommodations: string[]
+  _type: NegotiationSession['type'],
+  _accommodations: string[]
 ): CoachSuggestion[] {
   const suggestions: CoachSuggestion[] = [];
   
@@ -221,7 +221,7 @@ export async function addLiveNote(
 export async function startRecording(sessionId: string): Promise<void> {
   try {
     await Audio.requestPermissionsAsync();
-    const { recording } = await Audio.Recording.createAsync(
+    const { recording: _recording } = await Audio.Recording.createAsync(
       Audio.RecordingOptionsPresets.HIGH_QUALITY
     );
     

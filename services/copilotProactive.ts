@@ -91,7 +91,7 @@ async function getBehaviorLog(): Promise<Array<{ event: string; metadata?: Recor
  */
 async function checkAndGenerateSuggestions(
   event: string,
-  metadata?: Record<string, any>
+  _metadata?: Record<string, any>
 ): Promise<void> {
   const suggestions: ProactiveSuggestion[] = [];
   const log = await getBehaviorLog();

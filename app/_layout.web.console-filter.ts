@@ -1,5 +1,6 @@
 // Web-specific console filtering to reduce React Native Web noise
 // This runs before any React components mount
+/* eslint-disable no-console */
 
 if (typeof window !== 'undefined' && __DEV__) {
   const originalWarn = console.warn;

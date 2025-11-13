@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { ActivityIndicator, Platform, Text, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
+import { useAppPalette } from '../theme/usePalette';
 import { logger } from '../utils/logger';
 
 // Deep link URL scheme
@@ -11,18 +12,21 @@ const scheme = 'empowrapp://';
 
 export default function Index() {
   const { user, loading } = useAuth();
+  const palette = useAppPalette();
   const router = useRouter();
   const segments = useSegments();
 
   // Web-specific: Add console logging for debugging
   useEffect(() => {
     if (Platform.OS === 'web') {
+      // eslint-disable-next-line no-console
       console.log('[Index WEB] Component mounted', { loading, hasUser: !!user });
     }
   }, []);
   
   useEffect(() => {
     if (Platform.OS === 'web') {
+      // eslint-disable-next-line no-console
       console.log('[Index WEB] Auth state changed', { loading, hasUser: !!user, segments });
     }
   }, [loading, user, segments]);
@@ -85,6 +89,7 @@ export default function Index() {
     if (loading) {
       logger.log('[Index] Still loading auth state...');
       if (Platform.OS === 'web') {
+        // eslint-disable-next-line no-console
         console.log('[Index WEB] Waiting for auth to load...');
       }
       return; // Still loading, wait
@@ -105,6 +110,7 @@ export default function Index() {
     });
     
     if (Platform.OS === 'web') {
+      // eslint-disable-next-line no-console
       console.log('[Index WEB] Navigation decision', { 
         hasUser: !!user, 
         inAuthFlow, 
@@ -121,6 +127,7 @@ export default function Index() {
     if (shouldBeInTabs && inAuthFlow) {
       logger.log('[Index] ✅ User logged in - navigating to home/(tabs)');
       if (Platform.OS === 'web') {
+        // eslint-disable-next-line no-console
         console.log('[Index WEB] Redirecting to /(tabs)');
       }
       // Use a small delay to ensure Firebase auth state is fully settled
@@ -138,6 +145,7 @@ export default function Index() {
     if (shouldBeInAuth && inTabsFlow) {
       logger.log('[Index] ❌ No user in tabs - navigating to login');
       if (Platform.OS === 'web') {
+        // eslint-disable-next-line no-console
         console.log('[Index WEB] Redirecting to /(auth)/signin');
       }
       try {
@@ -153,6 +161,7 @@ export default function Index() {
       if (!user) {
         logger.log('[Index] 🔄 Initial - no user, navigating to login');
         if (Platform.OS === 'web') {
+          // eslint-disable-next-line no-console
           console.log('[Index WEB] Initial redirect to /(auth)/signin');
         }
         try {
@@ -163,6 +172,7 @@ export default function Index() {
       } else {
         logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
         if (Platform.OS === 'web') {
+          // eslint-disable-next-line no-console
           console.log('[Index WEB] Initial redirect to /(tabs)');
         }
         setTimeout(() => {
@@ -178,10 +188,10 @@ export default function Index() {
 
   // Show loading state while auth initializes or during redirect
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: palette.background }}>
       <ActivityIndicator size="large" />
       {Platform.OS === 'web' && (
-        <Text style={{ marginTop: 20, color: '#666' }}>
+        <Text style={{ marginTop: 20, color: palette.textSecondary }}>
           Loading 3mpwr App... {loading ? '(Initializing auth)' : '(Redirecting)'}
         </Text>
       )}

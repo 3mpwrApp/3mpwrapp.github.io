@@ -32,7 +32,7 @@ const MAX_FONT_SCALE = MAX_FONT_SIZE_MULTIPLIER;
 
 export default function AccountabilityNetworkScreen() {
   const palette = useAppPalette();
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<EntitySummary[]>([]);
   const [loading, setLoading] = useState(false);
@@ -147,7 +147,7 @@ export default function AccountabilityNetworkScreen() {
         accessibilityRole="button"
         accessibilityLabel="Add a review"
       >
-        <Ionicons name="add-circle" size={24} color="#FFFFFF" />
+        <Ionicons name="add-circle" size={24} color={palette.onPrimary} />
         <Text style={styles.addButtonText} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
           Share Your Experience
         </Text>
@@ -178,7 +178,7 @@ export default function AccountabilityNetworkScreen() {
             <Text
               style={[
                 styles.filterChipText,
-                { color: selectedType === type.value ? '#FFFFFF' : palette.text }
+                { color: selectedType === type.value ? palette.onPrimary : palette.text }
               ]}
               maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}
             >
@@ -297,7 +297,7 @@ function EntityCard({ entity, palette }: { entity: EntitySummary; palette: any }
       
       <View style={styles.cardStats}>
         <View style={styles.statRow}>
-          <Text style={[styles.rating, { color: '#FFB900' }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
+          <Text style={[styles.rating, { color: palette.warning || palette.primary }]} maxFontSizeMultiplier={MAX_FONT_SIZE_MULTIPLIER}>
             {'★'.repeat(Math.round(entity.averageRating))}
             {'☆'.repeat(5 - Math.round(entity.averageRating))}
           </Text>
@@ -384,7 +384,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   addButtonText: {
-    color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '600',
     marginLeft: 8,

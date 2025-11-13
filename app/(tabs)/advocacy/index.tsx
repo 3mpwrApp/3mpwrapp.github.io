@@ -26,6 +26,7 @@ const featureKeyMap = {
   self_coach: 'advocacy.tools.self_coach',
   accountability: 'advocacy.tools.accountability',
   accountability_cases: 'advocacy.tools.accountability_cases',
+  negotiation_coach: 'advocacy.tools.negotiation_coach',
 } as const;
 
 const FEATURES: Feature[] = [
@@ -40,6 +41,7 @@ const FEATURES: Feature[] = [
   { route: '/(tabs)/advocacy/collective-legal', key: 'collective' },
   { route: '/(tabs)/advocacy/accountability-coach', key: 'accountability' },
   { route: '/(tabs)/advocacy/accountability-cases', key: 'accountability_cases' },
+  { route: '/advocacy/negotiation-coach', key: 'negotiation_coach' },
 ];
 
 export default function AdvocacyHub() {
@@ -105,7 +107,7 @@ export default function AdvocacyHub() {
       })}
 
       <Text style={s.sectionHeader}>{t('advocacy.sections.coaching','Coaching')}</Text>
-      {FEATURES.filter(f => ['self_coach'].includes(f.key)).map(f => {
+      {FEATURES.filter(f => ['self_coach', 'negotiation_coach'].includes(f.key)).map(f => {
         const base = t(featureKeyMap[f.key]);
         const titleText = BETA.includes(f.key)
           ? `${base} (Beta)`

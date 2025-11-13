@@ -27,6 +27,7 @@ import { HIT_SLOP_8 } from "../constants/A11Y";
 import { type TaskComplexity } from "../constants/Cognitive";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../hooks/useA11y";
 import { useTranslation } from "../i18n";
+import { checkCelebrations } from "../services/celebrations";
 import { buildCombinedEvidenceSummary, buildSymptomSummary } from "../services/insights";
 import { useProfileLocal } from "../store/profileLocal";
 import { useAppPalette } from "../theme/usePalette";
@@ -80,6 +81,26 @@ export async function saveLetter(letter: Omit<SavedLetter, 'id' | 'savedAt'>): P
     existing.push(savedLetter);
 
     await AsyncStorage?.setItem?.(SAVED_LETTERS_KEY, JSON.stringify(existing));
+    
+    // Also save to letter history for celebrations and impact score
+    try {
+      const historyRaw = await AsyncStorage?.getItem?.('letter:history:v1');
+      const history = historyRaw ? JSON.parse(historyRaw) : [];
+      history.push({
+        id,
+        type: letter.letterType,
+        createdAt: savedLetter.savedAt,
+        title: letter.title,
+      });
+      await AsyncStorage?.setItem?.('letter:history:v1', JSON.stringify(history));
+      
+      // Check for celebrations
+      await checkCelebrations().catch(() => {});
+    } catch (err) {
+      // Don't fail the save if celebration check fails
+      console.warn('Failed to update letter history or check celebrations:', err);
+    }
+    
     return savedLetter;
   } catch (error) {
     logError('LetterWizard', 'Failed to save letter', error);

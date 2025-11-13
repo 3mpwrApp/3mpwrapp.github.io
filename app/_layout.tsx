@@ -9,6 +9,7 @@ import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "r
 if (__DEV__) {
   const originalWarn = console.warn;
   const originalError = console.error;
+  // eslint-disable-next-line no-console
   const originalLog = console.log;
   
   const suppressedPatterns = [
@@ -48,6 +49,7 @@ if (__DEV__) {
     }
   };
   
+  // eslint-disable-next-line no-console
   console.log = (...args: any[]) => {
     const message = args.join(' ');
     if (!shouldSuppress(message)) {
@@ -61,6 +63,7 @@ if (__DEV__) {
     if (__DEV__) {
       console.warn = originalWarn;
       console.error = originalError;
+      // eslint-disable-next-line no-console
       console.log = originalLog;
     }
   }, 10000);

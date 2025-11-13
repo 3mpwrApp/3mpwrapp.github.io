@@ -3,6 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
+import CelebrationToast from '../../components/CelebrationToast';
+import { CopilotSuggestionBanner } from '../../components/CopilotSuggestionBanner';
 import DisabilityWizard from '../../components/DisabilityWizard';
 import DisclaimerBanner from '../../components/DisclaimerBanner';
 import GapView from '../../components/GapView';
@@ -11,6 +13,9 @@ import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
+import type { Celebration } from '../../services/celebrations';
+import { checkCelebrations, markCelebrationSeen } from '../../services/celebrations';
+import { getActiveSuggestions, type ProactiveSuggestion } from '../../services/copilotProactive';
 import { useTextScale } from '../../theme/typography';
 import { createTextStyles } from '../../theme/typography.enhanced';
 import { useAppPalette } from '../../theme/usePalette';
@@ -138,6 +143,36 @@ const RecentPrompts = React.memo(() => {
 });
 RecentPrompts.displayName = 'RecentPrompts';
 
+const CopilotSuggestions = React.memo(() => {
+  const [suggestions, setSuggestions] = React.useState<ProactiveSuggestion[]>([]);
+  
+  React.useEffect(() => {
+    getActiveSuggestions().then(setSuggestions).catch(() => {});
+  }, []);
+  
+  if (!suggestions.length) return null;
+  
+  return (
+    <>
+      {suggestions.map(suggestion => (
+        <CopilotSuggestionBanner
+          key={suggestion.id}
+          suggestion={suggestion}
+          onDismiss={() => {
+            setSuggestions(prev => prev.filter(s => s.id !== suggestion.id));
+          }}
+          onAction={() => {
+            // Navigate based on suggestion type
+            // TODO: Implement navigation with router.push()
+            logger.log('[CopilotSuggestions] Navigate to:', suggestion.type);
+          }}
+        />
+      ))}
+    </>
+  );
+});
+CopilotSuggestions.displayName = 'CopilotSuggestions';
+
 const BetaTestersQuickLink = React.memo(() => {
   const palette = useAppPalette();
   const { factor } = useTextScale();
@@ -199,6 +234,35 @@ const HomeScreen = React.memo(() => {
   const { factor } = useTextScale();
   const titleRef = React.useRef<Text>(null);
   
+  // Celebration state
+  const [celebration, setCelebration] = React.useState<Celebration | null>(null);
+  
+  // Check for celebrations on mount and periodically
+  React.useEffect(() => {
+    const checkForCelebrations = async () => {
+      try {
+        const newCelebrations = await checkCelebrations();
+        if (newCelebrations.length > 0) {
+          setCelebration(newCelebrations[0]);
+        }
+      } catch (error) {
+        logError('HomeScreen', 'Check celebrations', error as Error);
+      }
+    };
+    
+    checkForCelebrations();
+    const interval = setInterval(checkForCelebrations, 30000); // Check every 30s
+    
+    return () => clearInterval(interval);
+  }, []);
+  
+  const handleCelebrationDismiss = async () => {
+    if (celebration) {
+      await markCelebrationSeen(celebration.id);
+      setCelebration(null);
+    }
+  };
+  
   // Debug logging to track mount and re-renders (only on mount and unmount)
   React.useEffect(() => {
     logger.log('[HomeScreen] Mounted successfully');
@@ -224,6 +288,12 @@ const HomeScreen = React.memo(() => {
     <ResponsiveScreenWrapper 
       testID="home-screen"
     >
+      {/* Celebration Toast */}
+      <CelebrationToast 
+        celebration={celebration}
+        onDismiss={handleCelebrationDismiss}
+      />
+      
       <Text 
         ref={titleRef}
         accessibilityRole="header" 
@@ -234,6 +304,11 @@ const HomeScreen = React.memo(() => {
       </Text>
       
       <DisclaimerBanner type="general" compact={true} />
+      
+      {/* AI Co-Pilot Proactive Suggestions */}
+      <SafeOptionalComponent>
+        <CopilotSuggestions />
+      </SafeOptionalComponent>
       
       {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
       <Link href={'/(tabs)/advocacy/ask' as any} asChild={true}>

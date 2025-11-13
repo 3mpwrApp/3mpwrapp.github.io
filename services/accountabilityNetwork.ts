@@ -122,7 +122,7 @@ export async function searchEntity(query: string): Promise<EntitySummary[]> {
   // Generate summaries
   const summaries: EntitySummary[] = [];
   
-  entityMap.forEach((entityReviews, key) => {
+  entityMap.forEach((entityReviews) => {
     const summary = generateEntitySummary(entityReviews);
     summaries.push(summary);
   });
@@ -272,7 +272,8 @@ export async function flagReview(reviewId: string, reason: string): Promise<void
   await saveReviews(updated);
   
   // In production, send to Firestore moderation queue
-  console.log(`Review ${reviewId} flagged: ${reason}`);
+   
+  console.warn(`Review ${reviewId} flagged: ${reason}`);
 }
 
 /**
