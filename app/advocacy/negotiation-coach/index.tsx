@@ -209,13 +209,13 @@ export default function NegotiationCoach() {
       <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
         <View style={styles.content}>
           <View style={styles.coachHeader}>
-            <Pressable onPress={() => setStep('setup')} accessibilityRole="button" accessibilityLabel="Back">
+            <Pressable onPress={() => setStep('setup')} accessibilityRole="button" accessibilityLabel="Back" hitSlop={8}>
               <Ionicons name="arrow-back" size={24} color={palette.text} />
             </Pressable>
             <Text style={[styles.coachTitle, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
               Live Coaching
             </Text>
-            <Pressable onPress={() => setStep('debrief')} accessibilityRole="button" accessibilityLabel="End session">
+            <Pressable onPress={() => setStep('debrief')} accessibilityRole="button" accessibilityLabel="End session" hitSlop={8}>
               <Text style={[styles.doneText, { color: palette.primary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                 Done
               </Text>

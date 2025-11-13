@@ -113,7 +113,7 @@ export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFir
               <Text style={[styles.suggestionsTitle, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                 Voice Commands
               </Text>
-              <Pressable onPress={handleToggleSuggestions} accessibilityRole="button" accessibilityLabel="Close suggestions">
+              <Pressable onPress={handleToggleSuggestions} accessibilityRole="button" accessibilityLabel="Close suggestions" hitSlop={8}>
                 <Ionicons name="close" size={20} color={palette.textSecondary} />
               </Pressable>
             </View>

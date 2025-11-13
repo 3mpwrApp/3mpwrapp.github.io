@@ -8,23 +8,23 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import {
-  ActivityIndicator,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    ActivityIndicator,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from 'react-native';
 
 import { HIT_SLOP_8, MAX_FONT_SIZE_MULTIPLIER } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import {
-  getNetworkStats,
-  searchEntity,
-  type EntitySummary,
-  type EntityType,
-  type NetworkStats,
+    getNetworkStats,
+    searchEntity,
+    type EntitySummary,
+    type EntityType,
+    type NetworkStats,
 } from '../../../services/accountabilityNetwork';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -282,6 +282,7 @@ function EntityCard({ entity, palette }: { entity: EntitySummary; palette: any }
       }}
       accessibilityRole="button"
       accessibilityLabel={`View ${entity.entityName} reviews`}
+      hitSlop={8}
     >
       <View style={styles.cardHeader}>
         <View style={styles.cardTitleRow}>

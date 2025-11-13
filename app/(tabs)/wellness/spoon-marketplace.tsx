@@ -379,7 +379,7 @@ export default function SpoonMarketplace() {
               <Text style={[styles.modalTitle, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                 Create {activeTab === 'offers' ? 'Offer' : 'Request'}
               </Text>
-              <Pressable onPress={() => setShowCreateModal(false)} accessibilityRole="button" accessibilityLabel="Close modal">
+              <Pressable onPress={() => setShowCreateModal(false)} accessibilityRole="button" accessibilityLabel="Close modal" hitSlop={8}>
                 <Ionicons name="close" size={24} color={palette.textSecondary} />
               </Pressable>
             </View>
