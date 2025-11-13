@@ -63,6 +63,7 @@ export default function RelatedFeatures({
               key={feature.id} 
               href={feature.route} 
               asChild={true}
+              accessibilityRole="link"
               onPress={() => trackNavigation(currentFeature, feature.id, feature.reason)}
             >
               <Pressable
