@@ -30,7 +30,6 @@ import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
-import { useTranslation } from '../../../i18n';
 import { getCachedJSON, setCachedJSON } from '../../../services/cache';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -636,7 +635,6 @@ const ENERGY_COLORS = {
 };
 
 export default function SelfCareLibrary() {
-  const { t } = useTranslation();
   const palette = useAppPalette();
   
   const [searchQuery, setSearchQuery] = useState('');
@@ -948,7 +946,7 @@ const ActivityCard: React.FC<{
   onToggleCompleted: (id: string) => void;
   onToggleExpanded: () => void;
   palette: any;
-}> = ({ activity, isFavorite, isCompleted, isExpanded, onToggleFavorite, onToggleCompleted, onToggleExpanded, palette }) => {
+}> = ({ activity, isFavorite, isCompleted, isExpanded, onToggleFavorite, onToggleCompleted, onToggleExpanded, palette: _palette }) => {
   const energyStyle = ENERGY_COLORS[activity.energyLevel];
   
   return (
