@@ -1,0 +1,150 @@
+---
+layout: post
+title: "Daily News Curation - 2025-11-13"
+date: 2025-11-13
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-11-13
+
+Curated 29 items from disability, accessibility, and social policy sources.
+
+## 1. Governments Of Canada and Manitoba Strengthening Justice for Canada's First Responders
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71298)
+**Score:** 17.00
+
+## 2. Kelowna's unemployment rate jumps again, worse than height of COVID-19 pandemic
+According to Statistics Canada, the jobless rate in the Kelowna area rose to 9.3 per cent in October, an increase of 2.2 per cent in just one month – the 2nd highest in B.C.
+📍 [Source](https://globalnews.ca/news/11523685/kelowna-unemployment-rate-worse-covid-19-pandemic/)
+**Score:** 12.50
+
+## 3. 60 years later, Nevada homicide victim identified as missing Calgary woman
+<img src='https://i.cbc.ca/ais/65583450-ddbc-4ce6-8074-df40acb2eac5,1762991806934/full/max/0/default.jpg?im=Crop%2Crect%3D%2810%2C12%2C1882%2C1058%29%3BResize%3D%28620%29' alt='Black and white headshot of Anna Just.' width='620' height='349' title='The Calgary Police Service used DNA technology to identify the remains from a Nevada murder victim as Anna Sylvia Just, who was first reported missing by her sister in August 1966.'/><p>Anna Sylvia Just was initially reported missing by her sister after she was last seen boarding a bus in Calgary in 1966. Decades later, her remains have been identified in Nevada.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/calgary-murder-victim-identified-50-years-later-9.6976853?cmp=rss)
+**Score:** 14.00
+
+## 4. B.C. limits when employers can request sick notes
+<img src='https://i.cbc.ca/ais/c845346c-76ed-4ebc-8a81-c4e7fb04e8fc,1741906618205/full/max/0/default.jpg?im=Crop%2Crect%3D%28184%2C40%2C1735%2C975%29%3BResize%3D%28620%29' alt='A man in a white coat points to paperwork while sitting next to a woman' width='620' height='349' title='In Manitoba, hundreds of thousands of sick notes are written by doctors every single year. It's something physicians say its wasting valuable ti'/><p>A government statement says that under new employment standards regulations, an employer can't ask for a note for the first two health-related absences of up to five consecutive days in the same year.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/bc-sick-notes-9.6976583?cmp=rss)
+**Score:** 14.00
+
+## 5. Manitoba Government Expands Care for Dialysis Patients and Mothers in Norway House Cree Nation
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71297)
+**Score:** 13.30
+
+## 6. Quebec doctors consider moving to Ontario due to introduction of Bill 2
+Since Quebec passed its new pay reform bill just over two weeks ago, 285 doctors have applied for a licence to gain the ability to work in Ontario.
+📍 [Source](https://globalnews.ca/news/11523400/quebec-doctors-consider-ontario-bill-2/)
+**Score:** 13.50
+
+## 7. Canada must not back down on industrial carbon price
+📍 [Source](https://rabble.ca/environment/canada-must-not-back-down-on-industrial-carbon-price/)
+**Score:** 9.50
+
+## 8. Why Is It So Hard to Fix a Wheelchair in BC?
+Disabled people say companies are struggling to service their equipment, which can trap them in bed or at home.
+📍 [Source](https://thetyee.ca/News/2025/11/13/Why-So-Hard-Fix-Wheelchair-BC/)
+**Score:** 11.40
+
+## 9. Why The Tragically Hip are lending their songs to Boi-1da ahead of World Cup | Hanomansing Tonight
+<img src='https://i.cbc.ca/ais/600ea910-fe70-40d1-beaf-b25e02cd0cdb,1762996735102/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C50%2C5367%2C3018%29%3BResize%3D%28620%29' alt='The Tragically Hip band members, from left, Paul Langlois, Rob Baker, Gord Sinclair and Johnny Fay.' width='620' height='349' title='The Tragically Hip band members, from left, Paul Langlois, Rob Baker, Gord Sinclair and Johnny Fay.'/><p>The Tragically Hip have given award-winning producer Boi-1da access to the band's entire catalogue for a special project to raise funds for the Canada Soccer Foundation. Rob Baker, guitarist for the Tragically Hip, discusses more about the project. </p>
+📍 [Source](https://www.cbc.ca/player/play/9.6977003?cmp=rss)
+**Score:** 9.50
+
+## 10. IN PHOTOS | Solar storms bring dazzling display of northern lights
+<img src='https://i.cbc.ca/ais/67d4d999-2b19-4f2a-9bf3-10449217f733,1762955473263/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C538%2C5538%2C3115%29%3BResize%3D%28620%29' alt='A church steeple on a hilltop, with northern lights dancing in the sky at night.' width='620' height='349' title='The northern lights fill the sky behind the Saint Joseph the Woodworker Shrine Tuesday, Nov. 11, 2025, near Valley Falls, Kan. (AP Photo/Charlie Riedel)'/><p>Solar storms brought colourful auroras to unexpected southern places in Canada and the United States on Tuesday night — and there could be more to come. </p>
+📍 [Source](https://www.cbc.ca/news/canada/in-photos-solar-storms-bring-dazzling-display-of-northern-lights-9.6975686?cmp=rss)
+**Score:** 9.50
+
+## 11. Manitoba Government Invests More Than $1.3 Million for Community Revitalization Projects in Westman
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71377)
+**Score:** 10.50
+
+## 12. Workers ‘needed more' from Budget 2025 amidst trade crisis, Labour Congress says
+📍 [Source](https://rabble.ca/labour/workers-needed-more-from-budget-2025-amidst-trade-crisis-labour-congress-says/)
+**Score:** 7.20
+
+## 13. Party Discipline Is Undermining Canadian Democracy
+Alberta’s bill ordering teachers back to work is a prime example, say authors of a new book.
+📍 [Source](https://thetyee.ca/Analysis/2025/11/13/Party-Discipline-Undermining-Canadian-Democracy/)
+**Score:** 9.00
+
+## 14. Manitoba Government to Help Students Learn About Climate Change and Climate Action in Schools
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71397)
+**Score:** 7.50
+
+## 15. Alberta municipalities gather in Calgary, debate call for province to collect own property tax
+At the 2025 Alberta Municipalities Convention, a featured resolution calls on the province to collect its own education property tax, currently included on municipal tax bills.
+📍 [Source](https://globalnews.ca/news/11523069/alberta-municipalities-convention-calgary-province-property-tax-debate/)
+**Score:** 7.10
+
+## 16. How BC Killed the ‘Last Hope’ for the Deaf Community
+A Tyee Q&A with Deaf advocate Sarah-Anne Hrycenko after an NDP retreat on a plan for change.
+📍 [Source](https://thetyee.ca/News/2025/11/13/BC-Killed-Last-Hope-Deaf-Community/)
+**Score:** 5.00
+
+## 17. B.C. hotel rates a ‘critical challenge’ ahead of FIFA event
+New data from CoStar shows that hotel room prices in Vancouver reached record highs this past summer, with the city's average daily rate climbing to nearly $330 in July.
+📍 [Source](https://globalnews.ca/news/11523722/bc-hotel-rates-price-hike-airbnb-fifa/)
+**Score:** 3.00
+
+## 18. Slew of recall campaigns in Alberta target UCP politicians
+📍 [Source](https://rabble.ca/politics/canadian-politics/slew-of-recall-campaigns-in-alberta-target-ucp-politicians/)
+**Score:** 4.50
+
+## 19. You Nearly Missed: Vancouver roots royalty joins Chest Fever at the Rickshaw for a tribute to the Band's Last Waltz
+Robbie Robertson would definitely approve.
+📍 [Source](https://www.straight.com/music/you-nearly-missed-vancouver-roots-royalty-joins-chest-fever-at-rickshaw-for-a-tribute-to-bands)
+**Score:** 4.50
+
+## 20. Photos: Atlanta rapper JID makes the most of a Monday night PNE Forum crowd
+The artist brought the crowd to its feet.
+📍 [Source](https://www.straight.com/music/photos-atlanta-rapper-jid-makes-most-of-a-monday-night-pne-forum-crowd)
+**Score:** 4.50
+
+## 21. The Beaches make a play for Canadian rock royalty at Doug Mitchell
+The Beaches are making more than just waves.
+📍 [Source](https://www.straight.com/the-beaches-review-vancouver-2025)
+**Score:** 4.50
+
+## 22. Historic Stampede Ranch once owned by outdoor show's founder facing receivership application hearing
+📍 [Source](https://www.cbc.ca/news/canada/calgary/stampede-ranch-guy-weadick-receivership-application-hearing-9.6976710?cmp=rss)
+**Score:** 4.50
+
+## 23. Ottawa seeking a permanent parliamentary budget officer with 'tact and discretion'
+<img src='https://i.cbc.ca/ais/f868a1c7-2995-462f-bc01-6c4f6941c60e,1762984967980/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C292%2C5616%2C3159%29%3BResize%3D%28620%29' alt='A man in a suit stands and speaks.' width='620' height='349' title='Interim Parliamentary Budget Officer Jason Jacques speaks with a senator as he waits to appear before the Senate Banking, Commerce and the Economy committee in Ottawa, Thursday, Oct. 2, 2025.'/><p>Ottawa says it's looking to hire a permanent parliamentary budget officer — someone with "tact and discretion" — just a few months after appointing a critical fiscal watchdog on an interim basis.</p>
+📍 [Source](https://www.cbc.ca/news/politics/parliamentary-budget-officer-job-posting-9.6976713?cmp=rss)
+**Score:** 4.50
+
+## 24. 87-year-old USask student graduates, seeks to keep Cree language alive
+Louise Fraser made history Wednesday as one of the oldest graduates from the University of Saskatchewan and she hopes to use her knowledge to keep the Cree language alive.
+📍 [Source](https://globalnews.ca/news/11523621/87-year-old-usask-graduate-cree-language-teacher/)
+**Score:** 1.30
+
+## 25. A.J. Ouellette ready to rumble for Roughriders
+Saskatchewan Roughriders running back A.J. Ouellette is nicknamed 'Thor' in part because he wields a hammer associated with Norse god of thunder.
+📍 [Source](https://globalnews.ca/news/11523805/a-j-ouellette-ready-to-rumble-for-roughriders/)
+**Score:** 1.30
+
+## 26. Grey Cup festivities have begun at Regina retirement home
+Since the Saskatchewan Roughriders made it to the Grey Cup game, it only makes sense to throw a party. That's exactly residents of Venvi Renaissance retirement home in Regina did.
+📍 [Source](https://globalnews.ca/news/11523625/grey-cup-festivities-regina-retirement-home/)
+**Score:** 1.30
+
+## 27. Majority of bettors had Riders reaching Grey Cup
+The majority of Proline bettors aren't surprised to see the Saskatchewan Roughriders in the Grey Cup.
+📍 [Source](https://globalnews.ca/news/11523657/majority-of-bettors-had-riders-reaching-grey-cup/)
+**Score:** 1.30
+
+## 28. The Alluring Mysteries of BC’s Humpback Whales
+As their numbers grow, so do deadly human encounters. Researchers are fascinated by their songs, sexuality and collective creativity.
+📍 [Source](https://thetyee.ca/News/2025/11/13/Alluring-Mysteries-BC-Humpback-Whales/)
+**Score:** 1.30
+
+## 29. Is there any point in getting a flu shot that's mismatched to the virus? Here’s what the science says
+<img src='https://i.cbc.ca/ais/1.6601203,1670029193000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C708%2C5315%2C2989%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Supplied shots of people getting flu shots in Calgary during the COVID-19 pandemic. '/><p>Some scientists say this year's flu shot isn't well matched to a key strain that could spread widely in the months ahead. So, is there still a point in getting it? Medical experts say: absolutely. Here’s why.</p>
+📍 [Source](https://www.cbc.ca/news/health/cbc-explains-flu-shots-influenza-vaccine-2025-9.6976530?cmp=rss)
+**Score:** 1.30
+
