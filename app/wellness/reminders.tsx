@@ -70,7 +70,7 @@ export default function WellnessRemindersScreen() {
   const handleToggle = async (id: string, currentValue: boolean) => {
     try {
       await toggleReminder(id, !currentValue);
-    } catch (error) {
+    } catch {
       Alert.alert(
         t('wellnessReminders.error.title', 'Error'),
         t('wellnessReminders.error.toggle', 'Could not update reminder')
@@ -102,7 +102,7 @@ export default function WellnessRemindersScreen() {
         t('wellnessReminders.test.title', 'Test Sent'),
         t('wellnessReminders.test.message', 'Notification will appear in 2 seconds')
       );
-    } catch (error) {
+    } catch {
       Alert.alert(
         t('wellnessReminders.error.title', 'Error'),
         t('wellnessReminders.error.test', 'Could not send test notification')
@@ -120,7 +120,7 @@ export default function WellnessRemindersScreen() {
         t('wellnessReminders.reschedule.success', 'Success'),
         t('wellnessReminders.reschedule.message', 'All reminders have been rescheduled')
       );
-    } catch (error) {
+    } catch {
       Alert.alert(
         t('wellnessReminders.error.title', 'Error'),
         t('wellnessReminders.error.reschedule', 'Could not reschedule reminders')

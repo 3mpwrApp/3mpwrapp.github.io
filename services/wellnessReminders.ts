@@ -6,8 +6,8 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Platform } from 'react-native';
 import { useEffect, useState } from 'react';
+import { Platform } from 'react-native';
 
 import { logger } from '../utils/logger';
 
@@ -248,7 +248,7 @@ export async function updateReminder(
 /**
  * Check if current time is within quiet hours
  */
-function isQuietHours(quietHours: { start: string; end: string }): boolean {
+function _isQuietHours(quietHours: { start: string; end: string }): boolean {
   const now = new Date();
   const currentTime = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
   

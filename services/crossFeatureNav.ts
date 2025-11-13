@@ -6,6 +6,7 @@
  */
 
 import type { Href } from 'expo-router';
+import { useMemo } from 'react';
 
 export interface RelatedFeature {
   id: string;
@@ -128,16 +129,14 @@ export function getSmartSuggestion(context: FeatureContext): RelatedFeature | nu
 /**
  * Track navigation flow for analytics (optional)
  */
-export function trackNavigation(from: string, to: string, reason: string) {
+export function trackNavigation(_from: string, _to: string, _reason: string) {
   // Could integrate with analytics service
-  console.log('[CrossFeatureNav]', { from, to, reason });
+  // console.log('[CrossFeatureNav]', { from, to, reason });\n}
 }
 
 /**
  * React hook for related features
  */
-import { useMemo } from 'react';
-
 export function useRelatedFeatures(featureId: string, action?: string) {
   return useMemo(() => {
     const context: FeatureContext = {
