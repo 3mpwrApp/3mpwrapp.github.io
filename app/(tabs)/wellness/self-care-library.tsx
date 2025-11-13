@@ -961,13 +961,7 @@ const ActivityCard: React.FC<{
         }
       ]}
     >
-      <Pressable 
-        onPress={onToggleExpanded} 
-        style={styles.activityHeader}
-        accessibilityRole="button"
-        accessibilityLabel="Expand or collapse activity details"
-        hitSlop={HIT_SLOP_8}
-      >
+      <Pressable onPress={onToggleExpanded} style={styles.activityHeader} accessibilityRole="button" accessibilityLabel="Expand or collapse activity details" hitSlop={HIT_SLOP_8}>
         <View style={styles.activityIcon}>
           <Text style={styles.activityIconText}>{TYPE_ICONS[activity.type]}</Text>
         </View>

@@ -651,13 +651,7 @@ const AppointmentCard: React.FC<{
         }
       ]}
     >
-      <Pressable 
-        onPress={onToggleExpand} 
-        style={styles.apptHeader}
-        accessibilityRole="button"
-        accessibilityLabel="Expand or collapse appointment details"
-        hitSlop={HIT_SLOP_8}
-      >
+      <Pressable onPress={onToggleExpand} style={styles.apptHeader} accessibilityRole="button" accessibilityLabel="Expand or collapse appointment details" hitSlop={HIT_SLOP_8}>
         <A11yPressable
           onPress={() => onToggleComplete(appt.id)}
           style={styles.checkbox}
