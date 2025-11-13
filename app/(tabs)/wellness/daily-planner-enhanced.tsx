@@ -20,7 +20,7 @@ import {
     StyleSheet,
     Text,
     TextInput,
-    View,
+    View
 } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
