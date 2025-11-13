@@ -349,6 +349,13 @@ export default function WellnessHub() {
             desc={t('wellness.dailyPlanner.desc', 'Plan tasks with your energy in mind.')}
           />
         )}
+        {matches('/wellness/reminders') && (
+          <Card
+            href="/wellness/reminders"
+            title={t('wellness.reminders.title', 'Wellness Reminders')}
+            desc={t('wellness.reminders.desc', 'Customize notifications for your wellness routine.')}
+          />
+        )}
         {matches('/wellness/reflections-calendar') && (
           <Card
             href="/wellness/reflections-calendar"

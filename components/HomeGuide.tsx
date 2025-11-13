@@ -57,9 +57,44 @@ export function HomeGuide() {
     })();
   }, [moodNudgesEnabled, mood?.count, mood?.insights?.lastEntryAgeHours]);
   const showNudge = nudgeEligible;
+  
+  // Daily Feature Highlights - rotate through different features
+  const dailyFeatures = React.useMemo(() => {
+    const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
+    const features = [
+      { id: 'campaigns', title: t('home.guide.feature.campaigns', 'Join a Campaign'), route: '/(tabs)/campaigns' as Href, icon: '📢', desc: t('home.guide.feature.campaignsDesc', 'Make your voice heard') },
+      { id: 'events', title: t('home.guide.feature.events', 'Upcoming Events'), route: '/(tabs)/events' as Href, icon: '📅', desc: t('home.guide.feature.eventsDesc', 'Connect with community') },
+      { id: 'research', title: t('home.guide.feature.research', 'Research Hub'), route: '/(tabs)/research' as Href, icon: '🔬', desc: t('home.guide.feature.researchDesc', 'Evidence-based insights') },
+      { id: 'resources', title: t('home.guide.feature.resources', 'Resources'), route: '/(tabs)/resources' as Href, icon: '💼', desc: t('home.guide.feature.resourcesDesc', 'Tools and support') },
+      { id: 'community', title: t('home.guide.feature.community', 'Community'), route: '/(tabs)/community' as Href, icon: '👥', desc: t('home.guide.feature.communityDesc', 'Peer support network') },
+    ];
+    // Rotate based on day
+    return features.slice(dayOfYear % features.length, (dayOfYear % features.length) + 2);
+  }, [t]);
+  
   return (
     <View style={[styles.container,{ backgroundColor: palette.surface, borderColor: palette.muted }]}>      
       <Text style={[styles.header,{ color: palette.primary }]}>{t('home.guide.header','Today\'s Guide')}</Text>
+      
+      {/* Daily Feature Highlights */}
+      <View style={{ marginBottom: 12 }}>
+        <Text style={[styles.snapshotLabel,{ color: palette.text }]}>{t('home.guide.dailyFeatures','Today\'s Features')}</Text>
+        <GapView gap={8}>
+          {dailyFeatures.map(feature => (
+            <Link key={feature.id} href={feature.route} asChild={true} onPress={() => usage.view('home_guide_daily_feature', '/', { feature: feature.id })}>
+              <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ flexDirection: 'row', alignItems: 'center', padding: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, backgroundColor: palette.background, gap: 10 }}>
+                <Text style={{ fontSize: 20 }}>{feature.icon}</Text>
+                <View style={{ flex: 1 }}>
+                  <Text style={{ color: palette.text, fontWeight: '600', fontSize: 14 }}>{feature.title}</Text>
+                  <Text style={{ color: palette.text, fontSize: 12, opacity: 0.7 }}>{feature.desc}</Text>
+                </View>
+                <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
+              </Pressable>
+            </Link>
+          ))}
+        </GapView>
+      </View>
+      
       <View style={{ marginBottom:8 }}>
         <Text style={[styles.snapshotLabel,{ color: palette.text }]}>{t('home.guide.snapshot','Snapshot')}</Text>
         {mood ? (

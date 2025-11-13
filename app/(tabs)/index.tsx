@@ -305,6 +305,31 @@ const HomeScreen = React.memo(() => {
       
       <DisclaimerBanner type="general" compact={true} />
       
+      {/* Global Search Quick Access */}
+      <Link href={'/search' as any} asChild={true}>
+        <A11yPressable
+          style={[
+            styles.searchButton,
+            { backgroundColor: palette.surface, borderColor: palette.muted }
+          ]}
+          accessibilityLabel={t('home.search.label', 'Search the app')}
+          accessibilityHint={t('home.search.hint', 'Opens global search for all features')}
+          hitSlop={HIT_SLOP_8}
+        >
+          <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={10}>
+            <Text style={{ fontSize: 20 }}>🔍</Text>
+            <Text
+              style={[
+                { fontSize: Math.round(15 * factor), color: palette.muted, flex: 1 }
+              ]}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              {t('home.search.placeholder', 'Search for tools, help, resources...')}
+            </Text>
+          </GapView>
+        </A11yPressable>
+      </Link>
+      
       {/* AI Co-Pilot Proactive Suggestions */}
       <SafeOptionalComponent>
         <CopilotSuggestions />
@@ -401,6 +426,15 @@ HomeScreen.displayName = 'HomeScreen';
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  searchButton: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 8,
+    marginBottom: 16,
+    borderWidth: 1.5,
+    minHeight: 50,
+    justifyContent: 'center',
+  },
   askButton: {
     paddingHorizontal: 16,
     paddingVertical: 14,
