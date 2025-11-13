@@ -200,7 +200,7 @@ export default function AccountabilityNetworkScreen() {
           accessibilityLabel="Search accountability network"
         />
         {query.length > 0 && (
-          <Pressable onPress={() => setQuery('')} hitSlop={HIT_SLOP_8}>
+          <Pressable onPress={() => setQuery('')} accessibilityRole="button" accessibilityLabel="Clear search" hitSlop={HIT_SLOP_8}>
             <Ionicons name="close-circle" size={20} color={palette.textSecondary} />
           </Pressable>
         )}
