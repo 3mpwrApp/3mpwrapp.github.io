@@ -66,6 +66,7 @@ export default function CelebrationToast({
       
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [celebration]);
   
   const dismissAnimation = () => {
