@@ -246,24 +246,6 @@ export async function updateReminder(
 }
 
 /**
- * Check if current time is within quiet hours
- */
-function _isQuietHours(quietHours: { start: string; end: string }): boolean {
-  const now = new Date();
-  const currentTime = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
-  
-  const { start, end } = quietHours;
-  
-  // Handle overnight quiet hours (e.g., 22:00 to 08:00)
-  if (start > end) {
-    return currentTime >= start || currentTime < end;
-  }
-  
-  // Handle same-day quiet hours (e.g., 12:00 to 14:00)
-  return currentTime >= start && currentTime < end;
-}
-
-/**
  * Schedule notifications for a reminder
  * Platform-specific implementation
  */
