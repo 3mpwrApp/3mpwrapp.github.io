@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-13T18:16:23.454Z",
+  "lastUpdated": "2025-11-14T00:53:22.780Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2260,
+      "totalPosts": 2285,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T18:16:13.900Z"
+      "lastSeen": "2025-11-14T00:53:14.104Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2275,
+      "totalPosts": 2300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T18:16:16.144Z"
+      "lastSeen": "2025-11-14T00:53:16.149Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2263,
+      "totalPosts": 2288,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T18:16:18.222Z"
+      "lastSeen": "2025-11-14T00:53:17.944Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2271,
+      "totalPosts": 2296,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T18:16:20.492Z"
+      "lastSeen": "2025-11-14T00:53:19.836Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2275,
+      "totalPosts": 2300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-13T18:16:22.450Z"
+      "lastSeen": "2025-11-14T00:53:21.777Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Mainstream disability rights groups are awfully quiet in this moment. #disabilityrights #abolishice",
-      "author": "thepowerlesspod.com",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
-      "author": "longcovidjustice.org",
-      "engagement": 26,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "On ODSP ($1,368/mo — about 60% below the poverty line).\nThis month I need $600 to cover rent and arrears are cleared clear.\n\n💸 e-transfer: manderson4@gmail.com\n\n🤝 ko-fi.com/sharpieguy/g...\n\n#ODSPoverty #DisabilityJustice #MutualAid #MutualAidRequest #MutualAidBoost",
-      "author": "cycletherapyham.bsky.social",
-      "engagement": 21,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "go.bsky.app/RRDgj6j\n\nI made a starter pack for #VTubers who consistently use good Alt Text when they post images! It's very small right now, so please lmk (either by replying to this post or dropping me a message) if you or someone you know should be added ❤️\n\n#alttext #accessibility #screenreader",
-      "author": "krakenviara.bsky.social",
-      "engagement": 20,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "\"It’s a vicious cycle; people attend unsafe #events. They become #disabled with #LongCOVID. They’re too sick to attend events. They’re too sick to demand safety and #accessibility.\": buff.ly/7hZp4Un\n\nby @juliadoubleday.bsky.social #ChronicIllness",
-      "author": "achronicvoice.com",
-      "engagement": 16,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
       "author": "brassclothes.bsky.social",
@@ -338,6 +302,42 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
+      "author": "longcovidjustice.org",
+      "engagement": 40,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I am happy to announce this book that i wrote a chapter in. My chapter looks at the ethics of #accessibility #sustainability and #OpenSource so touches on many threads. It is amazing to have contributed a small part of this first work of accessibility ethics. www.routledge.com/Digital-Acce...",
+      "author": "ox.ca",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Folks will not provide ALT TEXT for images, yet, will write very detailed and descriptive prompts to get the right image for Gen #AI. Make it make sense. There's a talk and presentation tucked away in there. #a11y",
+      "author": "henrihelvetica.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,14 +347,14 @@
     },
     {
       "keyword": "accessibility",
-      "count": 39
-    },
-    {
-      "keyword": "a11y",
-      "count": 33
+      "count": 37
     },
     {
       "keyword": "cripthevote",
+      "count": 28
+    },
+    {
+      "keyword": "a11y",
       "count": 28
     },
     {
@@ -383,7 +383,11 @@
     },
     {
       "keyword": "accessibility a11y",
-      "count": 12
+      "count": 11
+    },
+    {
+      "keyword": "disability",
+      "count": 10
     },
     {
       "keyword": "foxtakedown",
@@ -395,10 +399,6 @@
     },
     {
       "keyword": "stoptrump",
-      "count": 9
-    },
-    {
-      "keyword": "worldusabilityday",
       "count": 9
     },
     {
@@ -418,7 +418,7 @@
       "count": 8
     },
     {
-      "keyword": "disability",
+      "keyword": "disabled people",
       "count": 7
     }
   ]
