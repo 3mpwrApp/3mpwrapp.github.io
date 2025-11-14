@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-14T06:17:52.273Z",
+  "lastUpdated": "2025-11-14T12:22:18.380Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2310,
+      "totalPosts": 2335,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T06:17:44.532Z"
+      "lastSeen": "2025-11-14T12:22:08.633Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2325,
+      "totalPosts": 2350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T06:17:46.172Z"
+      "lastSeen": "2025-11-14T12:22:10.819Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2313,
+      "totalPosts": 2338,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T06:17:48.159Z"
+      "lastSeen": "2025-11-14T12:22:12.961Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2321,
+      "totalPosts": 2346,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T06:17:49.771Z"
+      "lastSeen": "2025-11-14T12:22:15.255Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2325,
+      "totalPosts": 2350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T06:17:51.270Z"
+      "lastSeen": "2025-11-14T12:22:17.376Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "go.bsky.app/RRDgj6j\n\nI made a starter pack for #VTubers who consistently use good Alt Text when they post images! It's very small right now, so please lmk (either by replying to this post or dropping me a message) if you or someone you know should be added ❤️\n\n#alttext #accessibility #screenreader",
-      "author": "krakenviara.bsky.social",
-      "engagement": 23,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Just #DanielleSmith doing more ghoulish #UCP things. If a “decision” hasn’t been made by Feb 28, 2026, they’ll cut $200/month from disabled Albertans already struggling to survive.\nMeanwhile, the CRA’s CDB backlog is 5–6 months.\n#ableg #abpoli #cdnpoli #DisabilityRights #AISH #yyc #yeg",
-      "author": "sillyrabbitfafo.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
-      "author": "longcovidjustice.org",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "I finally get to announce that I wrote a chapter for the upcoming book titled “Digital Accessibility Ethics: Disability Inclusion in All Things Tech.\" The book will be published on March 26, 2026, and is available for pre-order \n\n#DigitalAccessibilityEthics #Ethics #accessibility #Disabilit",
       "author": "scopicengineer.com",
@@ -338,6 +302,42 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
+      "author": "longcovidjustice.org",
+      "engagement": 40,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I am happy to announce this book that i wrote a chapter in. My chapter looks at the ethics of #accessibility #sustainability and #OpenSource so touches on many threads. It is amazing to have contributed a small part of this first work of accessibility ethics. www.routledge.com/Digital-Acce...",
+      "author": "ox.ca",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Folks will not provide ALT TEXT for images, yet, will write very detailed and descriptive prompts to get the right image for Gen #AI. Make it make sense. There's a talk and presentation tucked away in there. #a11y",
+      "author": "henrihelvetica.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 36
+      "count": 37
     },
     {
       "keyword": "a11y",
@@ -382,15 +382,15 @@
       "count": 12
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 11
-    },
-    {
       "keyword": "disability",
       "count": 10
     },
     {
       "keyword": "foxtakedown",
+      "count": 10
+    },
+    {
+      "keyword": "accessibility a11y",
       "count": 10
     },
     {
