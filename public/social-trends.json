@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-14T12:22:18.380Z",
+  "lastUpdated": "2025-11-14T18:16:02.696Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2335,
+      "totalPosts": 2360,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T12:22:08.633Z"
+      "lastSeen": "2025-11-14T18:15:51.302Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2350,
+      "totalPosts": 2375,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T12:22:10.819Z"
+      "lastSeen": "2025-11-14T18:15:54.415Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2338,
+      "totalPosts": 2363,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T12:22:12.961Z"
+      "lastSeen": "2025-11-14T18:15:56.894Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2346,
+      "totalPosts": 2371,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T12:22:15.255Z"
+      "lastSeen": "2025-11-14T18:15:59.353Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2350,
+      "totalPosts": 2375,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-14T12:22:17.376Z"
+      "lastSeen": "2025-11-14T18:16:01.693Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I finally get to announce that I wrote a chapter for the upcoming book titled “Digital Accessibility Ethics: Disability Inclusion in All Things Tech.\" The book will be published on March 26, 2026, and is available for pre-order \n\n#DigitalAccessibilityEthics #Ethics #accessibility #Disabilit",
-      "author": "scopicengineer.com",
-      "engagement": 17,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Hey! @lflegal.bsky.social, @rejinae.bsky.social, and @chanceyfleet.bsky.social gathered 36 authors to write about ethics in digital accessibility.\n\nChapters, authors (I’m one of them), pre-order:\nwww.routledge.com/Digital-Acce...\n\nOut 26 March 2026.\n\n#DigitalAccessibilityEthics #accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 21,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Hey! @lflegal.bsky.social, @rejinae.bsky.social, and @chanceyfleet.bsky.social gathered 36 authors to write about ethics in digital accessibility.\n\nChapters, authors (I’m one of them), pre-order:\nwww.routledge.com/Digital-Acce...\n\nOut 26 March 2026.\n\n#DigitalAccessibilityEthics #accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 21,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
       "author": "brassclothes.bsky.social",
@@ -338,6 +314,30 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
+      "author": "longcovidjustice.org",
+      "engagement": 42,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 37
+      "count": 32
     },
     {
       "keyword": "a11y",
@@ -355,7 +355,7 @@
     },
     {
       "keyword": "cripthevote",
-      "count": 28
+      "count": 27
     },
     {
       "keyword": "disabilityjustice",
@@ -363,19 +363,19 @@
     },
     {
       "keyword": "altcitizen",
-      "count": 21
+      "count": 19
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 21
+      "count": 19
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 21
+      "count": 19
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 21
+      "count": 19
     },
     {
       "keyword": "virtual",
@@ -383,18 +383,14 @@
     },
     {
       "keyword": "disability",
-      "count": 10
-    },
-    {
-      "keyword": "foxtakedown",
-      "count": 10
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 10
+      "count": 9
     },
     {
       "keyword": "wearetheflood",
+      "count": 9
+    },
+    {
+      "keyword": "foxtakedown",
       "count": 9
     },
     {
@@ -420,6 +416,10 @@
     {
       "keyword": "disabled people",
       "count": 7
+    },
+    {
+      "keyword": "inclusion",
+      "count": 6
     }
   ]
 }
