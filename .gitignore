@@ -50,3 +50,22 @@ structure-report.json
 
 app-example
 firebase/serviceAccount.json
+
+# Sync scripts (WIP/testing)
+scripts/sync-events-admin.js
+scripts/sync-events-direct.js
+scripts/sync-events-to-firestore.mjs
+scripts/sync-firestore.ps1
+scripts/sync-to-firestore-clean.ps1
+scripts/sync-to-firestore.ps1
+scripts/sync-new-tbdiwsg-events.ps1
+
+# Service account key
+serviceAccountKey.json
+
+# Temporary JSON files
+new-tbdiwsg-events-fixed.json
+firestore-restore.json
+
+# Urgent docs
+FIRESTORE_RESTORE_URGENT.md
