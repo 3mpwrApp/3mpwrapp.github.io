@@ -1,134 +1,57 @@
 {
   "date": "2025-11-15",
-  "timestamp": "2025-11-15T09:19:53.801Z",
-  "count": 18,
+  "timestamp": "2025-11-15T15:23:49.077Z",
+  "count": 7,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Alberta premier says loss of measles elimination status concerning, urges vigilance",
-      "link": "https://www.cbc.ca/news/canada/calgary/alberta-premier-danielle-smith-measles-sarah-hoffman-9.6980006?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/999326ea-8234-402c-8d85-b0c5afe01486,1763161712289/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C144%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A woman speaks into a microphone.' width='620' height='349' title='Alberta Premier Danielle Smith speaks at the Alberta Municipalities Convention in Calgary on Nov. 13.'/><p>Alberta Premier Danielle Smith says Canada recently losing its measles elimination status is concerning, but her government might not have many other options on the table to help get it back.</p>",
-      "score": 17,
-      "pubDate": "Fri, 14 Nov 2025 18:54:59 EST"
+      "title": "A sacred pipe returns to Whitecap Dakota First Nation after 135 years",
+      "link": "https://www.cbc.ca/news/canada/saskatchewan/whitecap-dakota-first-nation-sacred-ceremonial-pipe-repatriated-9.6977799?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/6b008ed2-8dce-4164-8808-79810e8bac17,1763063201570/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C3999%2C2249%29%3BResize%3D%28620%29' alt='A man handles a delicate wooden pipe with beading work' width='620' height='349' title='Whitecap Dakota First Nation Coun. Frank Royal displays a ceremonial pipe Chief Whitecap gave to a Saskatoon doctor in 1889. The First Nation recently repatriated the pipe. '/><p>More Indigenous communities across Canada are reuniting with items that were taken or given away generations ago. The Vatican and the Canadian Catholic Church are reportedly working on an agreement to return about 100,000 Indigenous items Catholic missions sent to Rome in the 1920s.</p>",
+      "score": 18.5,
+      "pubDate": "Sat, 15 Nov 2025 07:00:00 EST"
     },
     {
-      "title": "‘We’ve moved to Canada and are proud of it': Sour Puss liquor production moves from Minnesota to Quebec",
-      "link": "https://globalnews.ca/news/11527531/sour-puss-production-canada/",
-      "description": "The company has signed a deal to produce the liquor in Quebec after several provinces stopped stocking certain American-made alcohol products in response to U.S. trade actions.",
-      "score": 14,
-      "pubDate": "Sat, 15 Nov 2025 00:17:18 +0000"
-    },
-    {
-      "title": "Manitoba Government Adds $1 Million to Accelerate Construction of Park Community Centre and Child-Care Facility in Brandon",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71458",
+      "title": "Manitoba Government Receives Report on Future of Technology, Innovation and Productivity",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71303",
       "description": "",
-      "score": 15,
-      "pubDate": "Fri, 07 Nov 2025 13:15:00 CST"
+      "score": 12,
+      "pubDate": "Fri, 31 Oct 2025 12:01:00 CDT"
     },
     {
-      "title": "Latest case of animal abandonment in North Okanagan has advocates issuing a plea",
-      "link": "https://globalnews.ca/news/11527210/latest-case-animal-abandonment-north-okanagan-advocates/",
-      "description": "While it's not known why exactly the chickens would be abandoned there, Runnalls said there are always other options to consider.",
-      "score": 7.5,
-      "pubDate": "Sat, 15 Nov 2025 00:11:53 +0000"
-    },
-    {
-      "title": "Manitoba Government Provides $750,000 to Support Victims of Crime",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71577",
+      "title": "Police Presence at Health Sciences Centre 24-7 to Protect Health-Care Workers and Patients",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71304",
       "description": "",
-      "score": 10.5,
-      "pubDate": "Fri, 14 Nov 2025 16:12:00 CST"
+      "score": 10.3,
+      "pubDate": "Fri, 31 Oct 2025 15:18:00 CDT"
     },
     {
-      "title": "Calgary mayor proposes ban on raising other nations' flags at city hall",
-      "link": "https://globalnews.ca/news/11527351/calgary-mayor-proposes-ban-other-nations-flags-city-hall/",
-      "description": "Farkas' urgent motion comes after a request to raise the State of Palestine’s flag outside Calgary city hall was approved back in September.",
-      "score": 8.5,
-      "pubDate": "Sat, 15 Nov 2025 02:57:34 +0000"
+      "title": "Weekend transit shutdown cancelled in Montreal as union, STM reach tentative deal",
+      "link": "https://www.cbc.ca/news/canada/montreal/public-transit-strike-cancelled-montreal-9.6980126?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.7556868,1749558049000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C4995%2C2809%29%3BResize%3D%28620%29' alt='Bus driver wearing orange shirt. ' width='620' height='349' title='In a show of solidarity with colleagues working in the Montreal public transit maintenance sector, a bus driver is seen wearing an orange shirt indicating that negotiations are underway. '/><p>The public transit strike which would have shut down bus and Metro service in Montreal for the weekend has been cancelled after a last-minute tentative deal was reached Friday night. </p>",
+      "score": 9,
+      "pubDate": "Fri, 14 Nov 2025 19:44:57 EST"
     },
     {
-      "title": "Manitoba Government Invests $100,000 to Replace Brandon University Observatory Dome",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71459",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 07 Nov 2025 15:00:00 CST"
-    },
-    {
-      "title": "Manitoba Government Delivers on Promises to Make Communities Safer",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71457",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 07 Nov 2025 12:26:00 CST"
-    },
-    {
-      "title": "On Our Radar: Buddie turns its completely understandable stress into something beautiful",
-      "link": "https://www.straight.com/music/on-our-radar-buddie-turns-its-completely-understandable-stress-into-something-beautiful",
-      "description": "Guitar bands are back in Vancouver, and it’s beautiful.",
+      "title": "Photos: Electronic powerhouses Kaytranada and Justice co-headline Rogers Arena",
+      "link": "https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena",
+      "description": "The DJ and the French duo combined for a memorable show.",
       "score": 5,
-      "pubDate": "2025-11-06T20:19:28-08:00"
+      "pubDate": "2025-10-21T11:48:57-07:00"
     },
     {
-      "title": "B.C. Attorney General 'deeply disturbed' by social media giant X's intimate image case",
-      "link": "https://www.cbc.ca/news/canada/british-columbia/niki-sharma-x-intimate-images-9.6978650?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/78959361-0a9b-4467-b613-c09595b226e9,1763092614060/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C395%2C6500%2C3656%29%3BResize%3D%28620%29' alt='A woman wearing a brown coat with long dark hair speaks into a pair of microphones' width='620' height='349' title='B.C. Attorney General Niki Sharma responds to questions outside B.C. Supreme Court in Vancouver, on Monday, Nov. 27, 2023. THE CANADIAN PRESS/Darryl Dyck'/><p>British Columbia's Attorney General says she's \"deeply disturbed\" that the social media company X has filed a legal challenge against an order to remove a non-consensual intimate image from the internet. </p>",
-      "score": 6.5,
-      "pubDate": "Fri, 14 Nov 2025 00:59:15 EST"
-    },
-    {
-      "title": "WATCH: Global Okanagan News at 5:30 p.m. – Nov. 14",
-      "link": "https://globalnews.ca/news/9913127/watch-global-okanagan-news-at-530/",
-      "description": "Watch the online news edition of Global Okanagan at 5:30 p.m.",
-      "score": 5.5,
-      "pubDate": "Sat, 15 Nov 2025 01:00:38 +0000"
-    },
-    {
-      "title": "Fall drought could spell water troubles for central Alberta regions, expert says",
-      "link": "https://www.cbc.ca/news/canada/edmonton/fall-drought-alberta-9.6978647?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/1.7318428,1763094303558/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C60%2C1701%2C956%29%3BResize%3D%28620%29' alt='A combine moves along a yellow field. ' width='620' height='349' title='One farmer hopes some late-season rain could help his late-seeded crops finish strong.'/><p>Large swaths of Alberta are experiencing extreme drought conditions. Some farmers are thinking twice about the amount of water they use heading into the winter months.</p>",
-      "score": 5.5,
-      "pubDate": "Fri, 14 Nov 2025 09:00:00 EST"
-    },
-    {
-      "title": "How Ontario school boards decide when to cancel school buses",
-      "link": "https://globalnews.ca/news/11524330/school-bus-cancellations-ontario/",
-      "description": "Many Ontario families will wake up this winter wondering if school busses are cancelled. But the decision to cancel them isn't as simple as you think.",
+      "title": "Montreal bus and metro strike averted after last-minute tentative deal",
+      "link": "https://globalnews.ca/news/11527728/montreal-strike-deal/",
+      "description": "A last-minute tentative deal between the STM and its drivers’ union has averted a planned weekend strike, meaning regular bus and metro service will continue.",
       "score": 4.5,
-      "pubDate": "Sat, 15 Nov 2025 09:00:50 +0000"
+      "pubDate": "Sat, 15 Nov 2025 15:15:33 +0000"
     },
     {
-      "title": "‘The Librarians’ Traces the Battle of a Lifetime",
-      "link": "https://thetyee.ca/Culture/2025/11/14/Librarians-Traces-Battle-of-Lifetime/",
-      "description": "As rightward forces campaign to pull books from library shelves, a gripping new documentary exposes what’s at stake.",
-      "score": 3,
-      "pubDate": "Sat, 15 Nov 2025 01:10:00 +0000"
-    },
-    {
-      "title": "B.C. Lions quarterback Nathan Rourke named CFL's outstanding player, top Canadian",
-      "link": "https://www.cbc.ca/sports/football/cfl/cfl-player-awards-nathan-rourke-9.6978640?cmp=rss",
+      "title": "Measles Update #42",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71302",
       "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 13 Nov 2025 22:34:47 EST"
-    },
-    {
-      "title": "Paulatuk, N.W.T., wants to fix drafty homes as part of its net-zero goal",
-      "link": "https://www.cbc.ca/news/canada/north/paulatuk-renewable-energy-9.6978974?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/86e1db0f-d0cd-49e9-a945-3738aa9c795f,1763148735045/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C270%2C5184%2C2916%29%3BResize%3D%28620%29' alt='A head shot of a woman with brown hair.' width='620' height='349' title='Grace Nakimayak, the clean energy co-ordinator for the Paulatuk Energy Working Group, on Oct. 28, 2025. The group set a goal for the community of becoming net-zero a little more than a year ago.'/><p>The Paulatuk Energy Working Group has a goal of becoming carbon neutral. But everyone – from residents to those leading the project – agree making sure homes don’t waste that energy is a critical part of the target.</p>",
-      "score": 3,
-      "pubDate": "Fri, 14 Nov 2025 14:54:58 EST"
-    },
-    {
-      "title": "New Brunswick mine added to major projects but opponents say it'll do more harm than good",
-      "link": "https://globalnews.ca/news/11527004/sisson-mine-major-projects-concerns/",
-      "description": "In New Brunswick, opponents of a mining project that made Prime Minister Mark Carney's nation-building projects say the proposal could do more harm than good,",
-      "score": 1,
-      "pubDate": "Fri, 14 Nov 2025 22:49:19 +0000"
-    },
-    {
-      "title": "Between Breaths dives into the life of a Newfoundland conservationist who loved people as much as whales",
-      "link": "https://www.straight.com/arts/between-breaths-dives-into-life-of-a-conservationist-who-loved-people-as-much-as-whales",
-      "description": "\"What is your life, and what is your life to you in its final moments?\"",
-      "score": 1,
-      "pubDate": "2025-11-14T11:50:11-08:00"
+      "score": 1.3,
+      "pubDate": "Fri, 31 Oct 2025 10:40:00 CDT"
     }
   ]
 }

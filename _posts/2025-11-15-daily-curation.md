@@ -9,90 +9,37 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-11-15
 
-Curated 18 items from disability, accessibility, and social policy sources.
+Curated 7 items from disability, accessibility, and social policy sources.
 
-## 1. Alberta premier says loss of measles elimination status concerning, urges vigilance
-<img src='https://i.cbc.ca/ais/999326ea-8234-402c-8d85-b0c5afe01486,1763161712289/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C144%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A woman speaks into a microphone.' width='620' height='349' title='Alberta Premier Danielle Smith speaks at the Alberta Municipalities Convention in Calgary on Nov. 13.'/><p>Alberta Premier Danielle Smith says Canada recently losing its measles elimination status is concerning, but her government might not have many other options on the table to help get it back.</p>
-📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-premier-danielle-smith-measles-sarah-hoffman-9.6980006?cmp=rss)
-**Score:** 17.00
+## 1. A sacred pipe returns to Whitecap Dakota First Nation after 135 years
+<img src='https://i.cbc.ca/ais/6b008ed2-8dce-4164-8808-79810e8bac17,1763063201570/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C3999%2C2249%29%3BResize%3D%28620%29' alt='A man handles a delicate wooden pipe with beading work' width='620' height='349' title='Whitecap Dakota First Nation Coun. Frank Royal displays a ceremonial pipe Chief Whitecap gave to a Saskatoon doctor in 1889. The First Nation recently repatriated the pipe. '/><p>More Indigenous communities across Canada are reuniting with items that were taken or given away generations ago. The Vatican and the Canadian Catholic Church are reportedly working on an agreement to return about 100,000 Indigenous items Catholic missions sent to Rome in the 1920s.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/whitecap-dakota-first-nation-sacred-ceremonial-pipe-repatriated-9.6977799?cmp=rss)
+**Score:** 18.50
 
-## 2. ‘We’ve moved to Canada and are proud of it': Sour Puss liquor production moves from Minnesota to Quebec
-The company has signed a deal to produce the liquor in Quebec after several provinces stopped stocking certain American-made alcohol products in response to U.S. trade actions.
-📍 [Source](https://globalnews.ca/news/11527531/sour-puss-production-canada/)
-**Score:** 14.00
+## 2. Manitoba Government Receives Report on Future of Technology, Innovation and Productivity
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71303)
+**Score:** 12.00
 
-## 3. Manitoba Government Adds $1 Million to Accelerate Construction of Park Community Centre and Child-Care Facility in Brandon
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71458)
-**Score:** 15.00
+## 3. Police Presence at Health Sciences Centre 24-7 to Protect Health-Care Workers and Patients
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71304)
+**Score:** 10.30
 
-## 4. Latest case of animal abandonment in North Okanagan has advocates issuing a plea
-While it's not known why exactly the chickens would be abandoned there, Runnalls said there are always other options to consider.
-📍 [Source](https://globalnews.ca/news/11527210/latest-case-animal-abandonment-north-okanagan-advocates/)
-**Score:** 7.50
+## 4. Weekend transit shutdown cancelled in Montreal as union, STM reach tentative deal
+<img src='https://i.cbc.ca/ais/1.7556868,1749558049000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C4995%2C2809%29%3BResize%3D%28620%29' alt='Bus driver wearing orange shirt. ' width='620' height='349' title='In a show of solidarity with colleagues working in the Montreal public transit maintenance sector, a bus driver is seen wearing an orange shirt indicating that negotiations are underway. '/><p>The public transit strike which would have shut down bus and Metro service in Montreal for the weekend has been cancelled after a last-minute tentative deal was reached Friday night. </p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/public-transit-strike-cancelled-montreal-9.6980126?cmp=rss)
+**Score:** 9.00
 
-## 5. Manitoba Government Provides $750,000 to Support Victims of Crime
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71577)
-**Score:** 10.50
-
-## 6. Calgary mayor proposes ban on raising other nations' flags at city hall
-Farkas' urgent motion comes after a request to raise the State of Palestine’s flag outside Calgary city hall was approved back in September.
-📍 [Source](https://globalnews.ca/news/11527351/calgary-mayor-proposes-ban-other-nations-flags-city-hall/)
-**Score:** 8.50
-
-## 7. Manitoba Government Invests $100,000 to Replace Brandon University Observatory Dome
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71459)
-**Score:** 7.50
-
-## 8. Manitoba Government Delivers on Promises to Make Communities Safer
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71457)
-**Score:** 7.50
-
-## 9. On Our Radar: Buddie turns its completely understandable stress into something beautiful
-Guitar bands are back in Vancouver, and it’s beautiful.
-📍 [Source](https://www.straight.com/music/on-our-radar-buddie-turns-its-completely-understandable-stress-into-something-beautiful)
+## 5. Photos: Electronic powerhouses Kaytranada and Justice co-headline Rogers Arena
+The DJ and the French duo combined for a memorable show.
+📍 [Source](https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena)
 **Score:** 5.00
 
-## 10. B.C. Attorney General 'deeply disturbed' by social media giant X's intimate image case
-<img src='https://i.cbc.ca/ais/78959361-0a9b-4467-b613-c09595b226e9,1763092614060/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C395%2C6500%2C3656%29%3BResize%3D%28620%29' alt='A woman wearing a brown coat with long dark hair speaks into a pair of microphones' width='620' height='349' title='B.C. Attorney General Niki Sharma responds to questions outside B.C. Supreme Court in Vancouver, on Monday, Nov. 27, 2023. THE CANADIAN PRESS/Darryl Dyck'/><p>British Columbia's Attorney General says she's "deeply disturbed" that the social media company X has filed a legal challenge against an order to remove a non-consensual intimate image from the internet. </p>
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/niki-sharma-x-intimate-images-9.6978650?cmp=rss)
-**Score:** 6.50
-
-## 11. WATCH: Global Okanagan News at 5:30 p.m. – Nov. 14
-Watch the online news edition of Global Okanagan at 5:30 p.m.
-📍 [Source](https://globalnews.ca/news/9913127/watch-global-okanagan-news-at-530/)
-**Score:** 5.50
-
-## 12. Fall drought could spell water troubles for central Alberta regions, expert says
-<img src='https://i.cbc.ca/ais/1.7318428,1763094303558/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C60%2C1701%2C956%29%3BResize%3D%28620%29' alt='A combine moves along a yellow field. ' width='620' height='349' title='One farmer hopes some late-season rain could help his late-seeded crops finish strong.'/><p>Large swaths of Alberta are experiencing extreme drought conditions. Some farmers are thinking twice about the amount of water they use heading into the winter months.</p>
-📍 [Source](https://www.cbc.ca/news/canada/edmonton/fall-drought-alberta-9.6978647?cmp=rss)
-**Score:** 5.50
-
-## 13. How Ontario school boards decide when to cancel school buses
-Many Ontario families will wake up this winter wondering if school busses are cancelled. But the decision to cancel them isn't as simple as you think.
-📍 [Source](https://globalnews.ca/news/11524330/school-bus-cancellations-ontario/)
+## 6. Montreal bus and metro strike averted after last-minute tentative deal
+A last-minute tentative deal between the STM and its drivers’ union has averted a planned weekend strike, meaning regular bus and metro service will continue.
+📍 [Source](https://globalnews.ca/news/11527728/montreal-strike-deal/)
 **Score:** 4.50
 
-## 14. ‘The Librarians’ Traces the Battle of a Lifetime
-As rightward forces campaign to pull books from library shelves, a gripping new documentary exposes what’s at stake.
-📍 [Source](https://thetyee.ca/Culture/2025/11/14/Librarians-Traces-Battle-of-Lifetime/)
-**Score:** 3.00
-
-## 15. B.C. Lions quarterback Nathan Rourke named CFL's outstanding player, top Canadian
-📍 [Source](https://www.cbc.ca/sports/football/cfl/cfl-player-awards-nathan-rourke-9.6978640?cmp=rss)
-**Score:** 4.50
-
-## 16. Paulatuk, N.W.T., wants to fix drafty homes as part of its net-zero goal
-<img src='https://i.cbc.ca/ais/86e1db0f-d0cd-49e9-a945-3738aa9c795f,1763148735045/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C270%2C5184%2C2916%29%3BResize%3D%28620%29' alt='A head shot of a woman with brown hair.' width='620' height='349' title='Grace Nakimayak, the clean energy co-ordinator for the Paulatuk Energy Working Group, on Oct. 28, 2025. The group set a goal for the community of becoming net-zero a little more than a year ago.'/><p>The Paulatuk Energy Working Group has a goal of becoming carbon neutral. But everyone – from residents to those leading the project – agree making sure homes don’t waste that energy is a critical part of the target.</p>
-📍 [Source](https://www.cbc.ca/news/canada/north/paulatuk-renewable-energy-9.6978974?cmp=rss)
-**Score:** 3.00
-
-## 17. New Brunswick mine added to major projects but opponents say it'll do more harm than good
-In New Brunswick, opponents of a mining project that made Prime Minister Mark Carney's nation-building projects say the proposal could do more harm than good,
-📍 [Source](https://globalnews.ca/news/11527004/sisson-mine-major-projects-concerns/)
-**Score:** 1.00
-
-## 18. Between Breaths dives into the life of a Newfoundland conservationist who loved people as much as whales
-"What is your life, and what is your life to you in its final moments?"
-📍 [Source](https://www.straight.com/arts/between-breaths-dives-into-life-of-a-conservationist-who-loved-people-as-much-as-whales)
-**Score:** 1.00
+## 7. Measles Update #42
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71302)
+**Score:** 1.30
 
