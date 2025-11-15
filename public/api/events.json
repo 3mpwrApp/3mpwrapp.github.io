@@ -57,21 +57,22 @@
         "status":  "published"
     },
     {
-        "id":  "Ef6uxs3BTHDrFxnSeGMt",
-        "title":  "International Wheelchair Day",
-        "description":  "Celebration of wheelchair users and support",
+        "id":  "vY4YG09MxKEhl32TQdBl",
+        "title":  "Multiple Sclerosis Awareness Month",
+        "description":  "MS awareness, support, and treatment information",
         "date":  "2025-03-01T00:00:00.000Z",
-        "endDate":  "2025-03-01T00:00:00.000Z",
+        "endDate":  "2025-03-31T00:00:00.000Z",
         "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  false,
+        "category":  "health",
+        "isVirtual":  true,
         "url":  "",
         "organizer":  "3mpwrApp",
         "imageUrl":  "",
         "attendeeCount":  0,
         "tags":  [
-                     "disability",
-                     "mobility"
+                     "MS",
+                     "neurological",
+                     "chronic illness"
                  ],
         "status":  "published"
     },
@@ -97,22 +98,21 @@
         "status":  "published"
     },
     {
-        "id":  "vY4YG09MxKEhl32TQdBl",
-        "title":  "Multiple Sclerosis Awareness Month",
-        "description":  "MS awareness, support, and treatment information",
+        "id":  "Ef6uxs3BTHDrFxnSeGMt",
+        "title":  "International Wheelchair Day",
+        "description":  "Celebration of wheelchair users and support",
         "date":  "2025-03-01T00:00:00.000Z",
-        "endDate":  "2025-03-31T00:00:00.000Z",
+        "endDate":  "2025-03-01T00:00:00.000Z",
         "location":  "Canada",
-        "category":  "health",
-        "isVirtual":  true,
+        "category":  "awareness",
+        "isVirtual":  false,
         "url":  "",
         "organizer":  "3mpwrApp",
         "imageUrl":  "",
         "attendeeCount":  0,
         "tags":  [
-                     "MS",
-                     "neurological",
-                     "chronic illness"
+                     "disability",
+                     "mobility"
                  ],
         "status":  "published"
     },
@@ -137,26 +137,6 @@
         "status":  "published"
     },
     {
-        "id":  "FOFgH8gIkrcgoX6RP33P",
-        "title":  "Parkinson\u0027s Awareness Month",
-        "description":  "Parkinson\u0027s disease awareness, research, and support",
-        "date":  "2025-04-01T00:00:00.000Z",
-        "endDate":  "2025-04-30T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "health",
-        "isVirtual":  true,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "Parkinson\u0027s",
-                     "neurological",
-                     "movement"
-                 ],
-        "status":  "published"
-    },
-    {
         "id":  "RPx6DlhMFsem8N6Dqfde",
         "title":  "Autism Acceptance Month",
         "description":  "April 2025: Month-long autism acceptance awareness",
@@ -173,6 +153,26 @@
                      "autism",
                      "neurodiversity",
                      "acceptance"
+                 ],
+        "status":  "published"
+    },
+    {
+        "id":  "FOFgH8gIkrcgoX6RP33P",
+        "title":  "Parkinson\u0027s Awareness Month",
+        "description":  "Parkinson\u0027s disease awareness, research, and support",
+        "date":  "2025-04-01T00:00:00.000Z",
+        "endDate":  "2025-04-30T00:00:00.000Z",
+        "location":  "Canada",
+        "category":  "health",
+        "isVirtual":  true,
+        "url":  "",
+        "organizer":  "3mpwrApp",
+        "imageUrl":  "",
+        "attendeeCount":  0,
+        "tags":  [
+                     "Parkinson\u0027s",
+                     "neurological",
+                     "movement"
                  ],
         "status":  "published"
     },
@@ -235,6 +235,66 @@
         "status":  "published"
     },
     {
+        "id":  "dUndXTQoXEZqOM1UHBPR",
+        "title":  "Ehlers-Danlos Syndrome Awareness",
+        "description":  "EDS and hypermobility disorders awareness and support",
+        "date":  "2025-05-01T00:00:00.000Z",
+        "endDate":  "2025-05-31T00:00:00.000Z",
+        "location":  "Canada",
+        "category":  "health",
+        "isVirtual":  true,
+        "url":  "",
+        "organizer":  "3mpwrApp",
+        "imageUrl":  "",
+        "attendeeCount":  0,
+        "tags":  [
+                     "EDS",
+                     "connective tissue",
+                     "rare disease"
+                 ],
+        "status":  "published"
+    },
+    {
+        "id":  "vV1gntUdz5o1oSc9eai2",
+        "title":  "Lupus Awareness Month",
+        "description":  "Systemic lupus awareness and autoimmune disease support",
+        "date":  "2025-05-01T00:00:00.000Z",
+        "endDate":  "2025-05-31T00:00:00.000Z",
+        "location":  "Canada",
+        "category":  "health",
+        "isVirtual":  true,
+        "url":  "",
+        "organizer":  "3mpwrApp",
+        "imageUrl":  "",
+        "attendeeCount":  0,
+        "tags":  [
+                     "lupus",
+                     "autoimmune",
+                     "chronic illness"
+                 ],
+        "status":  "published"
+    },
+    {
+        "id":  "UwliscB7WM3gyg0uxvK3",
+        "title":  "Arthritis Awareness Month",
+        "description":  "Arthritis awareness, chronic pain support, and joint health",
+        "date":  "2025-05-01T00:00:00.000Z",
+        "endDate":  "2025-05-31T00:00:00.000Z",
+        "location":  "Canada",
+        "category":  "health",
+        "isVirtual":  true,
+        "url":  "",
+        "organizer":  "3mpwrApp",
+        "imageUrl":  "",
+        "attendeeCount":  0,
+        "tags":  [
+                     "arthritis",
+                     "chronic pain",
+                     "joint health"
+                 ],
+        "status":  "published"
+    },
+    {
         "id":  "2CDu055sjmdczWMZPS5f",
         "title":  "Celiac Disease Awareness Month",
         "description":  "Celiac disease, gluten sensitivity, and digestive health",
@@ -272,66 +332,6 @@
                      "wellness",
                      "depression",
                      "anxiety"
-                 ],
-        "status":  "published"
-    },
-    {
-        "id":  "UwliscB7WM3gyg0uxvK3",
-        "title":  "Arthritis Awareness Month",
-        "description":  "Arthritis awareness, chronic pain support, and joint health",
-        "date":  "2025-05-01T00:00:00.000Z",
-        "endDate":  "2025-05-31T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "health",
-        "isVirtual":  true,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "arthritis",
-                     "chronic pain",
-                     "joint health"
-                 ],
-        "status":  "published"
-    },
-    {
-        "id":  "dUndXTQoXEZqOM1UHBPR",
-        "title":  "Ehlers-Danlos Syndrome Awareness",
-        "description":  "EDS and hypermobility disorders awareness and support",
-        "date":  "2025-05-01T00:00:00.000Z",
-        "endDate":  "2025-05-31T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "health",
-        "isVirtual":  true,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "EDS",
-                     "connective tissue",
-                     "rare disease"
-                 ],
-        "status":  "published"
-    },
-    {
-        "id":  "vV1gntUdz5o1oSc9eai2",
-        "title":  "Lupus Awareness Month",
-        "description":  "Systemic lupus awareness and autoimmune disease support",
-        "date":  "2025-05-01T00:00:00.000Z",
-        "endDate":  "2025-05-31T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "health",
-        "isVirtual":  true,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "lupus",
-                     "autoimmune",
-                     "chronic illness"
                  ],
         "status":  "published"
     },
@@ -375,26 +375,6 @@
         "status":  "published"
     },
     {
-        "id":  "3GGLYnGQMqhVXql2YaOe",
-        "title":  "Injured Workers Day",
-        "description":  "Solidarity with injured and ill workers - June 1",
-        "date":  "2025-06-01T00:00:00.000Z",
-        "endDate":  "2025-06-01T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "awareness",
-        "isVirtual":  false,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "workers",
-                     "workplace safety",
-                     "solidarity"
-                 ],
-        "status":  "published"
-    },
-    {
         "id":  "F08t2Xqoee3WYRklES27",
         "title":  "Deafblind Awareness Month",
         "description":  "June: Deafblind awareness and support in Canada",
@@ -411,6 +391,26 @@
                      "deafblind",
                      "deaf",
                      "accessibility"
+                 ],
+        "status":  "published"
+    },
+    {
+        "id":  "3GGLYnGQMqhVXql2YaOe",
+        "title":  "Injured Workers Day",
+        "description":  "Solidarity with injured and ill workers - June 1",
+        "date":  "2025-06-01T00:00:00.000Z",
+        "endDate":  "2025-06-01T00:00:00.000Z",
+        "location":  "Canada",
+        "category":  "awareness",
+        "isVirtual":  false,
+        "url":  "",
+        "organizer":  "3mpwrApp",
+        "imageUrl":  "",
+        "attendeeCount":  0,
+        "tags":  [
+                     "workers",
+                     "workplace safety",
+                     "solidarity"
                  ],
         "status":  "published"
     },
@@ -434,26 +434,6 @@
         "status":  "published"
     },
     {
-        "id":  "O1YUl2zIMVn45UN5SxZx",
-        "title":  "Labour Day",
-        "description":  "Federal holiday - First Monday in September",
-        "date":  "2025-09-01T00:00:00.000Z",
-        "endDate":  "2025-09-01T00:00:00.000Z",
-        "location":  "Canada",
-        "category":  "holiday",
-        "isVirtual":  false,
-        "url":  "",
-        "organizer":  "3mpwrApp",
-        "imageUrl":  "",
-        "attendeeCount":  0,
-        "tags":  [
-                     "holiday",
-                     "labour",
-                     "workers"
-                 ],
-        "status":  "published"
-    },
-    {
         "id":  "u0xp1XHkOdjbNMXDGzSr",
         "title":  "Spinal Cord Injury Awareness Month",
         "description":  "September: Spinal cord injury prevention, research, and support",
@@ -470,6 +450,26 @@
                      "spinal cord injury",
                      "mobility",
                      "disability"
+                 ],
+        "status":  "published"
+    },
+    {
+        "id":  "O1YUl2zIMVn45UN5SxZx",
+        "title":  "Labour Day",
+        "description":  "Federal holiday - First Monday in September",
+        "date":  "2025-09-01T00:00:00.000Z",
+        "endDate":  "2025-09-01T00:00:00.000Z",
+        "location":  "Canada",
+        "category":  "holiday",
+        "isVirtual":  false,
+        "url":  "",
+        "organizer":  "3mpwrApp",
+        "imageUrl":  "",
+        "attendeeCount":  0,
+        "tags":  [
+                     "holiday",
+                     "labour",
+                     "workers"
                  ],
         "status":  "published"
     },
@@ -573,6 +573,29 @@
         "status":  "published"
     },
     {
+        "attendeeCount":  0,
+        "id":  "evt-tbdiwsg-nov18-2025",
+        "category":  "community",
+        "title":  "Tuesday Information Sessions ZOOM - Open Discussion",
+        "endDate":  "2025-11-18T17:00:00.000Z",
+        "location":  "Virtual",
+        "description":  "It seems our message is falling on deft ears. Share your thoughts and experiences on how to talk to friends and neighbours about the failures of the system.\n\nTuesday Information Sessions with The Thunder Bay \u0026 District Injured Workers Support Group\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+        "status":  "published",
+        "url":  "https://thunderbayinjuredworkers.com/tuesday-events/",
+        "isVirtual":  true,
+        "tags":  [
+                     "injured-workers",
+                     "information-session",
+                     "discussion",
+                     "workers-rights",
+                     "advocacy",
+                     "zoom"
+                 ],
+        "date":  "2025-11-18T15:00:00.000Z",
+        "imageUrl":  "",
+        "organizer":  "Thunder Bay \u0026 District Injured Workers Support Group"
+    },
+    {
         "id":  "tbdiwsg-nov20-2025",
         "title":  "TBDIWSG Community Meeting In Person \u0026 ZOOM",
         "description":  "Join the Thunder Bay \u0026 District Injured Workers Support Group for a community meeting at 7:00 PM (doors open at 6:30) on Thursday November 20th at the OPSEU Office at 326 Memorial Ave. (beside the Merla Mae) Thunder Bay ON\n\nâ¢ Share your experiences with WSIB\nâ¢ Get updates on local actions including the Dryden RB4 exposures and the annual December Rally\n\nEveryone Welcome\nthunderbayinjuredworkers.com/\n\nð Powered by 3mpwr App\nð https://3mpwrapp.pages.dev/events/",
@@ -594,6 +617,54 @@
         "status":  "published"
     },
     {
+        "attendeeCount":  0,
+        "id":  "evt-tbdiwsg-nov25-2025",
+        "category":  "community",
+        "title":  "Tuesday Information Sessions ZOOM - Duty to Accommodate",
+        "endDate":  "2025-11-25T17:00:00.000Z",
+        "location":  "Virtual",
+        "description":  "Duty to Accommodate - Sandra Goodicks, PSAC OH\u0026S Staff representative\n\nTuesday Information Sessions with The Thunder Bay \u0026 District Injured Workers Support Group\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+        "status":  "published",
+        "url":  "https://thunderbayinjuredworkers.com/tuesday-events/",
+        "isVirtual":  true,
+        "tags":  [
+                     "injured-workers",
+                     "duty-to-accommodate",
+                     "PSAC",
+                     "workplace-rights",
+                     "occupational-health",
+                     "information-session",
+                     "zoom"
+                 ],
+        "date":  "2025-11-25T15:00:00.000Z",
+        "imageUrl":  "",
+        "organizer":  "Thunder Bay \u0026 District Injured Workers Support Group"
+    },
+    {
+        "attendeeCount":  0,
+        "id":  "evt-tbdiwsg-dec2-2025",
+        "category":  "community",
+        "title":  "Tuesday Information Session ZOOM - Guest Speaker IWC",
+        "endDate":  "2025-12-02T17:00:00.000Z",
+        "location":  "Virtual",
+        "description":  "We will share the experience of the November 25th MPP lobby to repeal the discrimination against injured workers over age 65, including videos of workers\u0027 testimonies. In addition there will be a report on the December 8 day of action, aka the Christmas demonstration\n\nTuesday Information Sessions with The Thunder Bay \u0026 District Injured Workers Support Group\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+        "status":  "published",
+        "url":  "https://thunderbayinjuredworkers.com/tuesday-events/",
+        "isVirtual":  true,
+        "tags":  [
+                     "injured-workers",
+                     "IWC",
+                     "advocacy",
+                     "workers-rights",
+                     "age-discrimination",
+                     "information-session",
+                     "zoom"
+                 ],
+        "date":  "2025-12-02T15:00:00.000Z",
+        "imageUrl":  "",
+        "organizer":  "Thunder Bay \u0026 District Injured Workers Support Group \u0026 IWC"
+    },
+    {
         "id":  "cG1MyVCIZbZfMBxZE8rv",
         "title":  "International Day of Persons with Disabilities",
         "description":  "December 3: Promoting rights and well-being of persons with disabilities",
@@ -612,6 +683,30 @@
                      "inclusion"
                  ],
         "status":  "published"
+    },
+    {
+        "attendeeCount":  0,
+        "id":  "evt-3mpwr-intro-dec9-2025-updated",
+        "category":  "community",
+        "title":  "Introduction to 3mpwr App - Website \u0026 App Demo",
+        "endDate":  "2025-12-09T17:00:00.000Z",
+        "location":  "Virtual",
+        "description":  "Empowering Canadians Through Inclusive Technology!\n\nJoin us for an engaging introduction to the 3mpwr App - a new accessibility-driven platform created for Injured Workers, Persons with Disabilities, and their Allies across Canada.\n\nBuilt with accessibility, inclusion, and connection at its core, 3mpwr helps users navigate supports and services at both provincial and federal levels.\n\nPresented by Lissa Beaulieu (Creator), this session will feature a walkthrough of the 3mpwr App website and a live demo of the app currently in closed beta testing.\n\nDiscover how 3mpwr is empowering communities through technology that makes connection, coordination, and accessibility easier for everyone.\n\nTuesday Information Session with The Thunder Bay \u0026 District Injured Workers Support Group and 3mpwr App! Injured Workers Unite\n\nLearn more: 3mpwrapp.pages.dev\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+        "status":  "published",
+        "url":  "https://thunderbayinjuredworkers.com/tuesday-events/",
+        "isVirtual":  true,
+        "tags":  [
+                     "accessibility",
+                     "injured-workers",
+                     "app-demo",
+                     "information-session",
+                     "technology",
+                     "inclusion",
+                     "zoom"
+                 ],
+        "date":  "2025-12-09T15:00:00.000Z",
+        "imageUrl":  "",
+        "organizer":  "Thunder Bay \u0026 District Injured Workers Support Group \u0026 3mpwr App"
     },
     {
         "id":  "tbdiwsg-dec16-2025",

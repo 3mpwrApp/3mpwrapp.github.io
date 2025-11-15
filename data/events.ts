@@ -44,9 +44,78 @@ export type Event = {
 
 export const events: Event[] = [
   {
+    id: "evt-tbdiwsg-nov18-2025",
+    title: "Tuesday Information Sessions ZOOM - Open Discussion",
+    description: "It seems our message is falling on deft ears. Share your thoughts and experiences on how to talk to friends and neighbours about the failures of the system.\n\nTuesday Information Sessions with The Thunder Bay & District Injured Workers Support Group\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    date: "2025-11-18T15:00:00.000Z", // 10am EST (UTC-5) = 15:00 UTC
+    endDate: "2025-11-18T17:00:00.000Z", // 12pm EST = 17:00 UTC
+    location: "Thunder Bay & District Injured Workers Support Group",
+    isVirtual: true,
+    virtualLink: "https://thunderbayinjuredworkers.com/tuesday-events/",
+    organizer: "Thunder Bay & District Injured Workers Support Group",
+    organizerContact: "tbiwsg@gmail.com",
+    category: "community",
+    tags: ["injured workers", "information session", "discussion", "workers rights", "advocacy"],
+    asl: false,
+    captions: false,
+    stepFree: true, // Virtual event
+    wheelchairAccessible: true, // Virtual event
+    serviceAnimalsWelcome: true, // Virtual event
+    energyCost: "low", // Virtual event, low energy requirement
+    registrationRequired: false,
+    status: "published",
+    accessibilityNotes: "Virtual event accessible from any device with internet connection. Contact organizers for accessibility accommodations.",
+  },
+  {
+    id: "evt-tbdiwsg-nov25-2025",
+    title: "Tuesday Information Sessions ZOOM - Duty to Accommodate",
+    description: "Duty to Accommodate – Sandra Goodicks, PSAC OH&S Staff representative\n\nTuesday Information Sessions with The Thunder Bay & District Injured Workers Support Group\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    date: "2025-11-25T15:00:00.000Z", // 10am EST (UTC-5) = 15:00 UTC
+    endDate: "2025-11-25T17:00:00.000Z", // 12pm EST = 17:00 UTC
+    location: "Thunder Bay & District Injured Workers Support Group",
+    isVirtual: true,
+    virtualLink: "https://thunderbayinjuredworkers.com/tuesday-events/",
+    organizer: "Thunder Bay & District Injured Workers Support Group",
+    organizerContact: "tbiwsg@gmail.com",
+    category: "community",
+    tags: ["injured workers", "duty to accommodate", "PSAC", "workplace rights", "occupational health", "information session"],
+    asl: false,
+    captions: false,
+    stepFree: true, // Virtual event
+    wheelchairAccessible: true, // Virtual event
+    serviceAnimalsWelcome: true, // Virtual event
+    energyCost: "low", // Virtual event, low energy requirement
+    registrationRequired: false,
+    status: "published",
+    accessibilityNotes: "Virtual event accessible from any device with internet connection. Contact organizers for accessibility accommodations.",
+  },
+  {
+    id: "evt-tbdiwsg-dec2-2025",
+    title: "Tuesday Information Session ZOOM - Guest Speaker IWC",
+    description: "We will share the experience of the November 25th MPP lobby to repeal the discrimination against injured workers over age 65, including videos of workers' testimonies. In addition there will be a report on the December 8 day of action, aka the \"Christmas demonstration\"\n\nTuesday Information Sessions with The Thunder Bay & District Injured Workers Support Group\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    date: "2025-12-02T15:00:00.000Z", // 10am EST (UTC-5) = 15:00 UTC
+    endDate: "2025-12-02T17:00:00.000Z", // 12pm EST = 17:00 UTC
+    location: "Thunder Bay & District Injured Workers Support Group",
+    isVirtual: true,
+    virtualLink: "https://thunderbayinjuredworkers.com/tuesday-events/",
+    organizer: "Thunder Bay & District Injured Workers Support Group & IWC",
+    organizerContact: "tbiwsg@gmail.com",
+    category: "community",
+    tags: ["injured workers", "IWC", "advocacy", "workers rights", "age discrimination", "information session"],
+    asl: false,
+    captions: false,
+    stepFree: true, // Virtual event
+    wheelchairAccessible: true, // Virtual event
+    serviceAnimalsWelcome: true, // Virtual event
+    energyCost: "low", // Virtual event, low energy requirement
+    registrationRequired: false,
+    status: "published",
+    accessibilityNotes: "Virtual event accessible from any device with internet connection. Contact organizers for accessibility accommodations.",
+  },
+  {
     id: "evt-3mpwr-intro-dec9-2025",
     title: "Introduction to 3mpwr App - Website & App Demo",
-    description: "Join us for an engaging introduction to the 3mpwr App - a new accessibility-driven platform created by and for Injured Workers, Persons with Disabilities, and their Allies across Canada. Built with Accessibility, Inclusion, and Connection at its core, 3mpwr App will feature a walkthrough of the 3mpwr App Website and a Live Demo of the app currently in Closed Beta Testing.\n\nDiscover how 3mpwr App will empower communities through technology that makes connection, coordination, accessibility easier for everyone.\n\nTuesday Information Session with The Thunder Bay & District Injured Workers Support Group and 3mpwr App\n\nLearn more: https://3mpwrapp.pages.dev\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions",
+    description: "Empowering Canadians Through Inclusive Technology!\n\nJoin us for an engaging introduction to the 3mpwr App — a new accessibility-driven platform created for Injured Workers, Persons with Disabilities, and their Allies across Canada.\n\nBuilt with accessibility, inclusion, and connection at its core, 3mpwr helps users navigate supports and services at both provincial and federal levels.\n\nPresented by Lissa Beaulieu (Creator), this session will feature a walkthrough of the 3mpwr App website and a live demo of the app currently in closed beta testing.\n\nDiscover how 3mpwr is empowering communities through technology that makes connection, coordination, and accessibility easier for everyone.\n\nTuesday Information Session with The Thunder Bay & District Injured Workers Support Group and 3mpwr App™️! Injured Workers' Unite\n\n🌐 Learn more: 3mpwrapp.pages.dev\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
     date: "2025-12-09T15:00:00.000Z", // 10am EST (UTC-5) = 15:00 UTC
     endDate: "2025-12-09T17:00:00.000Z", // 12pm EST = 17:00 UTC
     location: "Thunder Bay & District Injured Workers Support Group",
