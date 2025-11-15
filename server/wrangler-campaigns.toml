@@ -1,0 +1,28 @@
+name = "empowrapp-campaigns"
+main = "campaigns-worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Workers configuration
+workers_dev = true
+
+# Environment variables (set via wrangler secret put or dashboard)
+[vars]
+# Firebase credentials - set via: wrangler secret put FIREBASE_SERVICE_ACCOUNT
+# Firebase database URL
+# FIREBASE_DATABASE_URL = "https://your-project.firebaseio.com"
+
+# KV namespaces for caching Firestore results
+[[kv_namespaces]]
+binding = "CAMPAIGNS_CACHE"
+id = "f4026c4d54c1498eac1b920c9ef1bb3e"
+preview_id = "e7fd90cff077437c95d540966607eca2"
+
+# For production deployment, set your custom domain:
+# routes = [
+#   { pattern = "campaigns.3mpwrapp.com/*", zone_name = "3mpwrapp.com" }
+# ]
+
+# Cron triggers for cache warming (optional)
+# [triggers]
+# crons = ["0 */6 * * *"]  # Every 6 hours UTC

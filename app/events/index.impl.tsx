@@ -109,7 +109,7 @@ export default function EventsScreen() {
   }, [systemItems, month]);
 
   const items = React.useMemo(() => {
-    if (mode === "community") return baseItems;
+    if (mode === "community") return baseItems.filter(e => e.category === "community");
     if (mode === "observances") return systemForMonth;
     return [...baseItems, ...systemForMonth];
   }, [baseItems, systemForMonth, mode]);
