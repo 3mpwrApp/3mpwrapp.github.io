@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-15T00:52:06.797Z",
+  "lastUpdated": "2025-11-15T06:16:02.944Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2385,
+      "totalPosts": 2410,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T00:51:57.863Z"
+      "lastSeen": "2025-11-15T06:15:54.560Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2400,
+      "totalPosts": 2425,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T00:51:59.816Z"
+      "lastSeen": "2025-11-15T06:15:56.513Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2388,
+      "totalPosts": 2413,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T00:52:01.863Z"
+      "lastSeen": "2025-11-15T06:15:58.478Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2396,
+      "totalPosts": 2421,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T00:52:03.724Z"
+      "lastSeen": "2025-11-15T06:16:00.198Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2400,
+      "totalPosts": 2425,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T00:52:05.793Z"
+      "lastSeen": "2025-11-15T06:16:01.941Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I finally get to announce that I wrote a chapter for the upcoming book titled “Digital Accessibility Ethics: Disability Inclusion in All Things Tech.\" The book will be published on March 26, 2026, and is available for pre-order \n\n#DigitalAccessibilityEthics #Ethics #accessibility #Disabilit",
-      "author": "scopicengineer.com",
-      "engagement": 22,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "#a11y",
-      "author": "spavel.bsky.social",
-      "engagement": 150,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Hey! @lflegal.bsky.social, @rejinae.bsky.social, and @chanceyfleet.bsky.social gathered 36 authors to write about ethics in digital accessibility.\n\nChapters, authors (I’m one of them), pre-order:\nwww.routledge.com/Digital-Acce...\n\nOut 26 March 2026.\n\n#DigitalAccessibilityEthics #accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 30,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
       "author": "brassclothes.bsky.social",
@@ -338,6 +314,30 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
+      "author": "longcovidjustice.org",
+      "engagement": 42,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 32
     },
     {
       "keyword": "a11y",
@@ -398,10 +398,6 @@
       "count": 8
     },
     {
-      "keyword": "disabled people",
-      "count": 7
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 7
     },
@@ -416,6 +412,10 @@
     {
       "keyword": "disabilityrebellion stoptrump",
       "count": 7
+    },
+    {
+      "keyword": "disabled people",
+      "count": 6
     },
     {
       "keyword": "a11y accessibility",
