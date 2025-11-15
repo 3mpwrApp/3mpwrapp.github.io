@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-15T12:18:50.382Z",
+  "lastUpdated": "2025-11-15T18:14:07.588Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2435,
+      "totalPosts": 2460,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T12:18:41.685Z"
+      "lastSeen": "2025-11-15T18:13:56.907Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2450,
+      "totalPosts": 2475,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T12:18:43.837Z"
+      "lastSeen": "2025-11-15T18:13:59.640Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2438,
+      "totalPosts": 2463,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T12:18:45.637Z"
+      "lastSeen": "2025-11-15T18:14:01.867Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2446,
+      "totalPosts": 2471,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T12:18:47.592Z"
+      "lastSeen": "2025-11-15T18:14:04.297Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2450,
+      "totalPosts": 2475,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T12:18:49.379Z"
+      "lastSeen": "2025-11-15T18:14:06.584Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I finally get to announce that I wrote a chapter for the upcoming book titled “Digital Accessibility Ethics: Disability Inclusion in All Things Tech.\" The book will be published on March 26, 2026, and is available for pre-order \n\n#DigitalAccessibilityEthics #Ethics #accessibility #Disabilit",
-      "author": "scopicengineer.com",
-      "engagement": 28,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "#a11y",
-      "author": "spavel.bsky.social",
-      "engagement": 172,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
       "author": "embeessem.bsky.social",
@@ -338,23 +314,47 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
+      "author": "longcovidjustice.org",
+      "engagement": 42,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
+      "author": "embeessem.bsky.social",
+      "engagement": 16,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 44
+      "count": 41
     },
     {
       "keyword": "accessibility",
-      "count": 33
-    },
-    {
-      "keyword": "a11y",
-      "count": 29
+      "count": 34
     },
     {
       "keyword": "cripthevote",
+      "count": 26
+    },
+    {
+      "keyword": "a11y",
       "count": 26
     },
     {
@@ -363,62 +363,62 @@
     },
     {
       "keyword": "altcitizen",
-      "count": 17
+      "count": 15
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 17
+      "count": 15
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 17
+      "count": 15
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 17
+      "count": 15
     },
     {
       "keyword": "virtual",
-      "count": 10
-    },
-    {
-      "keyword": "disability",
       "count": 9
     },
     {
-      "keyword": "foxtakedown",
+      "keyword": "disability",
       "count": 8
     },
     {
       "keyword": "stoptrump",
-      "count": 8
-    },
-    {
-      "keyword": "stoptheliesfox",
       "count": 7
     },
     {
-      "keyword": "foxlies",
-      "count": 7
-    },
-    {
-      "keyword": "wearetheflood",
-      "count": 7
-    },
-    {
-      "keyword": "50501movement",
-      "count": 7
-    },
-    {
-      "keyword": "disabilityrebellion stoptrump",
-      "count": 7
+      "keyword": "avelo",
+      "count": 6
     },
     {
       "keyword": "disabled people",
       "count": 6
     },
     {
-      "keyword": "a11y accessibility",
+      "keyword": "disabilityjustice nico",
+      "count": 6
+    },
+    {
+      "keyword": "foxtakedown",
+      "count": 6
+    },
+    {
+      "keyword": "stoptheliesfox",
+      "count": 6
+    },
+    {
+      "keyword": "foxlies",
+      "count": 6
+    },
+    {
+      "keyword": "wearetheflood",
+      "count": 6
+    },
+    {
+      "keyword": "50501movement",
       "count": 6
     }
   ]
