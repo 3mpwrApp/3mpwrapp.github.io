@@ -405,19 +405,49 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
         return;
       }
       
+      // Filter out ONLY holiday/health awareness events with incorrect dates
+      // Keep ALL community events regardless of timestamp
+      const now = new Date();
+      
+      const communityEvents = events.filter(event => {
+        // ALWAYS keep community events (these are user-created events)
+        if (event.category === 'community') {
+          return true;
+        }
+        
+        // For holidays and health awareness months, filter out ones with bad timestamps
+        // (They often have dates set to current time instead of actual dates)
+        if (event.category === 'holiday' || event.category === 'health') {
+          const eventDate = new Date(event.date);
+          const eventTime = eventDate.getTime();
+          const currentTime = now.getTime();
+          const oneHourAgo = currentTime - (60 * 60 * 1000);
+          
+          // If the event was timestamped within the last hour, it's likely bad data
+          const isRecentlyTimestamped = eventTime > oneHourAgo && eventTime <= currentTime;
+          
+          // Exclude recently timestamped holiday/health events
+          return !isRecentlyTimestamped;
+        }
+        
+        // Keep all other events
+        return true;
+      });
+      
+      console.log(`🎯 Filtered to ${communityEvents.length} community/properly-dated events (${events.filter(e => e.category === 'community').length} community events included)`);
+      
       // Sort events by date
-      events.sort((a, b) => new Date(a.date) - new Date(b.date));
+      communityEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
       
       // Separate upcoming/current and past events
-      const now = new Date();
-      const upcomingEvents = events.filter(event => new Date(event.date) >= now);
-      const pastEvents = events.filter(event => new Date(event.date) < now);
+      const upcomingEvents = communityEvents.filter(event => new Date(event.date) >= now);
+      const pastEvents = communityEvents.filter(event => new Date(event.date) < now);
       
-      console.log(`📅 ${upcomingEvents.length} upcoming/current, ${pastEvents.length} past events`);
+      console.log(`📅 ${upcomingEvents.length} upcoming/current, ${pastEvents.length} past events (holidays/awareness days filtered out)`);
       
       // Update sync status
       if (syncStatus) {
-        syncStatus.textContent = `✅ ${upcomingEvents.length} upcoming event${upcomingEvents.length !== 1 ? 's' : ''}${pastEvents.length > 0 ? `, ${pastEvents.length} archived` : ''} • ⏱️ ${durationMs} ms`;
+        syncStatus.textContent = `✅ ${communityEvents.length} total event${communityEvents.length !== 1 ? 's' : ''} (${upcomingEvents.length} upcoming${pastEvents.length > 0 ? `, ${pastEvents.length} past` : ''}) • ⏱️ ${durationMs} ms`;
       }
       
       // Display upcoming events
@@ -427,7 +457,14 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
         upcomingContainer.innerHTML = `
           <div class="info-box" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-left: 4px solid #0ea5e9;">
             <h3 style="margin-top: 0;">📅 No Upcoming Events</h3>
-            <p>All current events are in the past. Check the archive below or create a new event in the 3mpwrApp!</p>
+            <p><strong>All ${communityEvents.length > 0 ? 'current' : ''} community events have passed.</strong></p>
+            <p>Here's what you can do:</p>
+            <ul style="text-align: left; max-width: 700px; margin: 1rem auto;">
+              <li>📲 <strong>Create a new event</strong> in the 3mpwrApp - it will appear here within 5 minutes</li>
+              <li>📅 <strong>Subscribe to the calendar feed</strong> below to get notified when new events are added</li>
+              <li>📜 <strong>Check past events</strong> in the archive section below</li>
+            </ul>
+            <p style="margin-top: 1rem;"><em>This page auto-refreshes every 5 minutes.</em></p>
           </div>
         `;
       }
