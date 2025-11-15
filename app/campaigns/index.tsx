@@ -1,16 +1,16 @@
 import { Link } from "expo-router";
 import React from "react";
 import {
-  Alert,
-  Linking,
-  Pressable,
-  RefreshControl,
-  SectionList,
-  Share,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View
+    Alert,
+    Linking,
+    Pressable,
+    RefreshControl,
+    SectionList,
+    Share,
+    StyleSheet,
+    Text,
+    useColorScheme,
+    View
 } from "react-native";
 
 import { CampaignsErrorBoundary } from "../../components/CampaignsErrorBoundary";
@@ -21,25 +21,28 @@ import SkeletonRow from "../../components/SkeletonRow";
 import { useAuth } from "../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../data/campaigns";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../hooks/useA11y";
 import { usePostLoadAnnounce } from "../../hooks/usePostLoadAnnounce";
 import { useTranslationSafe } from "../../i18n";
 import { logActivity } from "../../services/activity";
 import { trackEvent } from "../../services/analyticsClient";
 import { fetchCampaigns } from "../../services/campaigns";
-import { syncCampaignToWebsite } from "../../services/campaignSync";
 import {
-  fsAddCampaign,
-  fsIncrementCampaignMembers,
-  fsJoinCampaign,
-  fsLeaveCampaign,
+    fsAddCampaign,
+    fsIncrementCampaignMembers,
+    fsJoinCampaign,
+    fsLeaveCampaign,
 } from "../../services/firestore";
 import {
-  CampaignsLocalProvider,
-  useCampaignsLocal,
+    isFirestoreSyncAvailable,
+    syncCampaignToProduction,
+} from "../../services/firestoreCampaignSync";
+import {
+    CampaignsLocalProvider,
+    useCampaignsLocal,
 } from "../../store/campaignsLocal";
 import { useCounts } from "../../store/counts";
 import { useNetwork } from "../../store/network";
@@ -425,6 +428,7 @@ function ScreenInner() {
             try {
               const c = createCampaign(data.title, data.summary);
               try { trackEvent("campaign_create", { id: c.id }); } catch {}
+              
               const campaignData = {
                 id: c.id,
                 title: data.title,
@@ -434,24 +438,62 @@ function ScreenInner() {
                 contactEmail: data.contactEmail || undefined,
                 createdBy: user?.uid || 'anonymous',
                 createdAt: Date.now(),
-              };
-              // Add to Firestore
-              await fsAddCampaign(campaignData);
-              // Sync to website (fire and forget, don't block UI)
-              syncCampaignToWebsite({
-                ...campaignData,
                 membersCount: 0,
-              }).catch((error) => {
-                logger.error('[Campaigns] Failed to sync to website:', error);
-              });
-              // Send push notification to all users about new campaign
-              try {
-                const { sendCampaignNotification } = await import('../../services/notifications');
-                await sendCampaignNotification(campaignData);
-              } catch (notifErr) {
-                console.warn('[Campaigns] Failed to send push notification:', notifErr);
+                status: 'published' as const,
+              };
+              
+              // Check if Firestore sync is available
+              const isSyncAvailable = await isFirestoreSyncAvailable();
+              
+              if (isSyncAvailable && user?.uid) {
+                // Auto-sync to Firestore production & preview collections
+                const productionSuccess = await syncCampaignToProduction(
+                  campaignData,
+                  user.uid,
+                  'campaigns_production'
+                );
+                const previewSuccess = await syncCampaignToProduction(
+                  campaignData,
+                  user.uid,
+                  'campaigns_preview'
+                );
+                
+                const syncSuccess = productionSuccess && previewSuccess;
+                
+                if (syncSuccess) {
+                  // Send push notification to all users about new campaign
+                  try {
+                    const { sendCampaignNotification } = await import('../../services/notifications');
+                    await sendCampaignNotification(campaignData);
+                  } catch (notifErr) {
+                    console.warn('[Campaigns] Failed to send push notification:', notifErr);
+                  }
+                  
+                  Alert.alert(
+                    '✅ Campaign Published!',
+                    `"${campaignData.title}" is now live on the 3mpwr website and will appear within minutes.`,
+                    [{ text: 'Great!' }]
+                  );
+                } else {
+                  // Fallback: Add to local Firestore (old behavior)
+                  await fsAddCampaign(campaignData);
+                  Alert.alert(
+                    'Campaign Created',
+                    'Campaign saved locally. Cloud sync will retry automatically.',
+                    [{ text: 'OK' }]
+                  );
+                }
+              } else {
+                // Offline or not signed in - save locally only
+                await fsAddCampaign(campaignData);
+                Alert.alert(
+                  '📱 Campaign Saved Locally',
+                  user?.uid
+                    ? 'Campaign created. Cloud sync will retry when connection is available.'
+                    : 'Campaign saved locally. Sign in to publish to the 3mpwr website.',
+                  [{ text: 'OK' }]
+                );
               }
-              Alert.alert('Campaign Created!', 'Your campaign has been created and will be synced to the website shortly.');
             } catch (createErr) {
               logger.error('[Campaigns] Failed to create campaign:', createErr);
               Alert.alert('Creation Failed', 'Could not create campaign. Please try again later.');
