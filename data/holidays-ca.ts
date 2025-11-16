@@ -5,8 +5,9 @@ import type { Event } from "./events";
 function pad2(n: number) {
   return String(n).padStart(2, "0");
 }
+// Return date string at noon local time to prevent timezone shifting
 function ymd(year: number, monthIndex: number, day: number) {
-  return `${year}-${pad2(monthIndex + 1)}-${pad2(day)}`;
+  return `${year}-${pad2(monthIndex + 1)}-${pad2(day)}T12:00:00`;
 }
 function nthWeekdayOfMonth(
   year: number,

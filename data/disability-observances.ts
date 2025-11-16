@@ -6,28 +6,28 @@ export const disabilityObservances2025: Event[] = [
     id: "obs-2025-01-04-braille",
     title: "World Braille Day",
     description: "Awareness of Braille and accessibility",
-    date: "2025-01-04",
+    date: "2025-01-04T12:00:00",
     location: "Canada",
   },
   {
     id: "obs-2025-03-01-wheelchair",
     title: "International Wheelchair Day",
     description: "Celebration of wheelchair users and support",
-    date: "2025-03-01",
+    date: "2025-03-01T12:00:00",
     location: "Canada",
   },
   {
     id: "obs-2025-04-02-autism",
     title: "World Autism Awareness Day",
     description: "Awareness and acceptance of autism",
-    date: "2025-04-02",
+    date: "2025-04-02T12:00:00",
     location: "Canada",
   },
   {
     id: "obs-2025-04-28-mourning",
     title: "National Day of Mourning",
     description: "Remembering workers killed, injured or made ill at work",
-    date: "2025-04-28",
+    date: "2025-04-28T12:00:00",
     location: "Canada",
   },
   // GAAD: Third Thursday in May 2025 is May 15
@@ -35,42 +35,42 @@ export const disabilityObservances2025: Event[] = [
     id: "obs-2025-05-15-gaad",
     title: "Global Accessibility Awareness Day",
     description: "Digital accessibility and inclusion awareness",
-    date: "2025-05-15",
+    date: "2025-05-15T12:00:00",
     location: "Canada",
   },
   {
     id: "obs-2025-06-01-injured-workers",
     title: "Injured Workers Day",
     description: "Solidarity with injured and ill workers",
-    date: "2025-06-01",
+    date: "2025-06-01T12:00:00",
     location: "Canada",
   },
   {
     id: "obs-2025-06-01-deafblind-month",
     title: "Deafblind Awareness Month begins",
     description: "Month-long observance in Canada",
-    date: "2025-06-01",
+    date: "2025-06-01T12:00:00",
     location: "Canada",
   },
   {
     id: "obs-2025-10-01-ndeam",
     title: "Disability Employment Awareness Month begins",
     description: "NDEAM in Canada (October)",
-    date: "2025-10-01",
+    date: "2025-10-01T12:00:00",
     location: "Canada",
   },
   {
     id: "obs-2025-09-23-sign-lang",
     title: "International Day of Sign Languages",
     description: "Linguistic identity of deaf people",
-    date: "2025-09-23",
+    date: "2025-09-23T12:00:00",
     location: "Canada",
   },
   {
     id: "obs-2025-12-03-idpd",
     title: "International Day of Persons with Disabilities",
     description: "Promoting rights and well-being",
-    date: "2025-12-03",
+    date: "2025-12-03T12:00:00",
     location: "Canada",
   },
 ];
@@ -80,8 +80,8 @@ function pad2(n: number) {
   return String(n).padStart(2, "0");
 }
 function ymd(year: number, monthIndex: number, day: number) {
-  // monthIndex is 0-based; output local date string
-  return `${year}-${pad2(monthIndex + 1)}-${pad2(day)}`;
+  // monthIndex is 0-based; output local date string with noon time
+  return `${year}-${pad2(monthIndex + 1)}-${pad2(day)}T12:00:00`;
 }
 function nthWeekdayOfMonth(
   year: number,

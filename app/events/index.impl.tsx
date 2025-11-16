@@ -127,6 +127,17 @@ export default function EventsScreen() {
       setLoading(true);
       const data = await fetchEvents();
       
+      // Fetch community events from Firestore (events_preview for EAS Preview, events_production for production)
+      let firestoreEvents: any[] = [];
+      try {
+        const { fetchEventUpdates } = await import('../../services/firestoreEventSync');
+        // Use preview collection for development/testing
+        const collection = process.env.NODE_ENV === 'production' ? 'events_production' : 'events_preview';
+        firestoreEvents = await fetchEventUpdates(collection);
+      } catch (err) {
+        console.warn('[Events] Failed to fetch from Firestore:', err);
+      }
+      
       // Merge with locally created events (those with evt- prefix)
       let mergedData = [...data];
       try {
@@ -141,6 +152,11 @@ export default function EventsScreen() {
       } catch (err) {
         console.warn('[Events] Failed to merge cached events:', err);
       }
+      
+      // Merge Firestore events
+      const existingIds = new Set(mergedData.map(e => e.id));
+      const newFirestoreEvents = firestoreEvents.filter((e: any) => !existingIds.has(e.id));
+      mergedData = [...newFirestoreEvents, ...mergedData];
       
       setBaseItems(mergedData);
       setOffline(false);
@@ -353,13 +369,29 @@ export default function EventsScreen() {
       const productionSuccess = await syncEventToProduction(eventPayload, user.uid, 'events_production');
       const previewSuccess = await syncEventToProduction(eventPayload, user.uid, 'events_preview');
       
-      const syncSuccess = productionSuccess && previewSuccess;
+      const firestoreSuccess = productionSuccess && previewSuccess;
+
+      // Also sync to Cloudflare Worker (website)
+      let workerSuccess = false;
+      if (firestoreSuccess) {
+        try {
+          const { syncEventToWebsite } = await import('../../services/eventSyncToWorker');
+          workerSuccess = await syncEventToWebsite({
+            ...eventPayload,
+            date: eventPayload.date.toISOString(),
+          });
+        } catch (err) {
+          console.warn('[AutoSync] Failed to sync to Cloudflare Worker:', err);
+        }
+      }
+
+      const syncSuccess = firestoreSuccess && workerSuccess;
 
       if (syncSuccess) {
         setSyncStatus('success');
         setLastSyncTime(Date.now());
         // eslint-disable-next-line no-console
-        console.log(`[AutoSync] ✓ Event ${event.id} synced to both collections`);
+        console.log(`[AutoSync] ✓ Event ${event.id} synced to Firestore and Cloudflare Worker`);
         return true;
       } else if (productionSuccess || previewSuccess) {
         // Partial success - add to queue for retry
@@ -396,11 +428,16 @@ export default function EventsScreen() {
   }) => {
     const id = `evt-${Date.now()}`;
     
-    // Combine date and time if time is provided
+    // Combine date and time if time is provided, convert to EST
     let fullDate = data.date;
     if (data.time) {
-      fullDate = `${data.date}T${data.time}:00.000Z`;
+      fullDate = `${data.date}T${data.time}:00.000`;
     }
+    
+    // Convert to EST (America/New_York) - subtract 5 hours from UTC
+    const eventDate = new Date(fullDate);
+    const estDate = new Date(eventDate.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+    fullDate = estDate.toISOString();
     
     const newEvt = { 
       id, 

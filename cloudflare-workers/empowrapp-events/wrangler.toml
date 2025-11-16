@@ -1,0 +1,13 @@
+name = "3mpwrapp-calendar"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+workers_dev = true
+
+# KV Namespace for storing events (using existing calendar_cache_prod)
+[[kv_namespaces]]
+binding = "EVENTS_KV"
+id = "f4026c4d54c1498eac1b920c9ef1bb3e"
+
+# Environment variables (optional)
+[vars]
+ENVIRONMENT = "production"

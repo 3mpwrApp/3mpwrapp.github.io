@@ -188,6 +188,17 @@ function ScreenInner() {
       
       const data = await fetchCampaigns();
       
+      // Fetch campaigns from Firestore (campaigns_preview for EAS Preview, campaigns_production for production)
+      let firestoreCampaigns: any[] = [];
+      try {
+        const { fetchCampaignUpdates } = await import('../../services/firestoreCampaignSync');
+        // Use preview collection for development/testing
+        const collection = process.env.NODE_ENV === 'production' ? 'campaigns_production' : 'campaigns_preview';
+        firestoreCampaigns = await fetchCampaignUpdates(collection);
+      } catch (err) {
+        console.warn('[Campaigns] Failed to fetch from Firestore:', err);
+      }
+      
       // Only update state if still mounted
       if (!isMountedRef.current) {
         logger.warn('[Campaigns] Skipping state update - component unmounted during fetch');
@@ -196,7 +207,13 @@ function ScreenInner() {
       
       // Critical: Ensure data is always an array
       const validData = Array.isArray(data) ? data : [];
-      setItems(validData);
+      
+      // Merge Firestore campaigns with fetched data
+      const existingIds = new Set(validData.map((c: any) => c.id));
+      const newFirestoreCampaigns = firestoreCampaigns.filter((c: any) => !existingIds.has(c.id));
+      const mergedData = [...newFirestoreCampaigns, ...validData];
+      
+      setItems(mergedData);
       setOffline(false);
       setLastSyncTime(new Date());
       
@@ -458,7 +475,20 @@ function ScreenInner() {
                   'campaigns_preview'
                 );
                 
-                const syncSuccess = productionSuccess && previewSuccess;
+                const firestoreSuccess = productionSuccess && previewSuccess;
+                
+                // Also sync to Cloudflare Worker (website)
+                let workerSuccess = false;
+                if (firestoreSuccess) {
+                  try {
+                    const { syncCampaignToWebsite } = await import('../../services/campaignSync');
+                    workerSuccess = await syncCampaignToWebsite(campaignData);
+                  } catch (err) {
+                    console.warn('[Campaigns] Failed to sync to Cloudflare Worker:', err);
+                  }
+                }
+                
+                const syncSuccess = firestoreSuccess && workerSuccess;
                 
                 if (syncSuccess) {
                   // Send push notification to all users about new campaign
@@ -471,7 +501,7 @@ function ScreenInner() {
                   
                   Alert.alert(
                     '✅ Campaign Published!',
-                    `"${campaignData.title}" is now live on the 3mpwr website and will appear within minutes.`,
+                    `"${campaignData.title}" is now live on the 3mpwr website and Cloudflare Workers.`,
                     [{ text: 'Great!' }]
                   );
                 } else {

@@ -1,0 +1,23 @@
+{
+  "name": "3mpwrapp-calendar-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for 3mpwr App Events Calendar Sync",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "calendar",
+    "events",
+    "3mpwr"
+  ],
+  "author": "3mpwr App",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

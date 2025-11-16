@@ -24,13 +24,13 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
       
       // Detect if this is an all-day event (holidays, observances, health awareness)
       // These have IDs starting with holiday-, obs-, health-, or prov-
-      // Or date strings ending with " 00:00" pattern
+      // Or date strings with T12:00:00 (our marker for all-day events)
       const isAllDayEvent = 
         event.id.startsWith('holiday-') || 
         event.id.startsWith('obs-') || 
         event.id.startsWith('health-') ||
         event.id.startsWith('prov-') ||
-        dateStr.includes(' 00:00');
+        dateStr.includes('T12:00:00');
       
       // For all-day events, only show date without time
       if (isAllDayEvent) {
