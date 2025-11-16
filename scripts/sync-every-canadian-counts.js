@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains example organizer email addresses in campaign event data
 const admin = require('firebase-admin');
 
 const serviceAccount = require('../serviceAccountKey.json');

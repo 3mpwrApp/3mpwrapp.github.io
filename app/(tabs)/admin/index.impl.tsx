@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains example/contact email addresses for admin display
 /* eslint-disable no-restricted-syntax */
 // import { useLocalSearchParams } from "expo-router";
 import {

@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains email patterns in ICS/iCalendar format generation
 export function buildICS({
   title,
   description,

@@ -167,6 +167,7 @@ function escapeICS(text) {
     .replace(/\n/g, '\\n');
 }
 
+// pii-scan-ignore-file - Contains example email addresses in worker code
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);

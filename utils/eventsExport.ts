@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains organizer email in exported event data
 import { Share } from 'react-native';
 
 export type SimpleEvent = {

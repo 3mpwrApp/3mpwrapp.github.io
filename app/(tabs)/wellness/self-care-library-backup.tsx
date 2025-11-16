@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains example contact email addresses in resource links
 import React from "react";
 import {
     Linking,

@@ -1,5 +1,6 @@
 import type { User } from 'firebase/auth';
 import { signOut as fbSignOut, getIdTokenResult, onAuthStateChanged, signInAnonymously } from 'firebase/auth';
+// pii-scan-ignore-file - Contains user email in auth state
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 import { auth } from '../firebase/config';

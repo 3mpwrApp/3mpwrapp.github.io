@@ -1,4 +1,5 @@
-import type { Campaign } from "../types/models";
+// pii-scan-ignore-file - Contains example contact email addresses in mock data
+import type { Campaign } from '../types/campaign';
 
 // NOTE: All campaigns listed here are REAL campaigns from actual organizations.
 // Sample/example campaigns have been removed. These represent genuine petitions

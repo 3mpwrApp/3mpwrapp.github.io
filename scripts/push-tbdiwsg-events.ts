@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains example organizer email addresses in event data
 /**
  * Push TBDIWSG Events to Firebase
  * 

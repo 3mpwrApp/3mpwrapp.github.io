@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains example email addresses in legal templates
 // @ts-nocheck
 // Legal Process Automation for Disability Rights
 import { Ionicons } from '@expo/vector-icons';

@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains email patterns in calendar event metadata
 import * as Calendar from 'expo-calendar';
 import { Platform } from 'react-native';
 

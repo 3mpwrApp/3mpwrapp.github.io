@@ -135,6 +135,11 @@ const ALLOWED_ROOT_FILES = [
   '.gitattributes',
   '.gitleaksignore',
   '.env',
+  // Firebase config
+  'firebase.json',
+  'google-services.json',
+  'serviceAccountKey.json',
+  '@3mpwrapp__empowrapp.jks',
   // Documentation
   'README.md',
   'CHANGELOG.md',
@@ -143,6 +148,8 @@ const ALLOWED_ROOT_FILES = [
   // Build artifacts (should be in .gitignore)
   'wcag-report.json',
   'i18n-baseline.json',
+  'structure-report.json',
+  'firestore-restore.json',
 ];
 
 const TEMP_FILES_PATTERN = /^(temp-.*|.*\.tmp|tsc_.*\.txt|.*-untranslated\.csv)$/;

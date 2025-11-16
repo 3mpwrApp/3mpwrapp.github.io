@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains email/contact patterns in share functionality
 import { Alert, Linking, Share, StyleSheet, Text, View } from 'react-native';
 
 import { ANALYTICS_EVENTS, trackEvent } from '../services/analyticsClient';

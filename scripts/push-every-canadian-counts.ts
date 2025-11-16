@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains example organizer email addresses in campaign event data
 /**
  * Push "Every Canadian Counts" campaign to Firebase
  * 

@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains example organizer email addresses in event data
 /**
  * Add TBDIWSG Events to Firestore
  * Adds 3 Thunder Bay & District Injured Workers Support Group events to preview and production

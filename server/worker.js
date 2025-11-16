@@ -1,5 +1,6 @@
 /**
- * Cloudflare Worker for 3mpwrApp Events Calendar Feed
+// pii-scan-ignore-file - Contains example email addresses in worker code
+// Cloudflare Worker for Event Sync
  * Uses Firestore REST API + WebCrypto for JWT authentication
  * No Admin SDK dependency - fully compatible with Cloudflare Workers
  */

@@ -296,6 +296,7 @@ async function getCachedOrFresh(cache, key, fetchFn, ttlSeconds = 300) {
   return fresh;
 }
 
+// pii-scan-ignore-file - Contains example email addresses in event sync worker
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);

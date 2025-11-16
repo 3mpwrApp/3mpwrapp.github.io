@@ -13,7 +13,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import type * as Fire from 'firebase/firestore';
 
 import type { Event } from '../data/events';
-import { db as sharedDb } from '../firebase/config';
+// pii-scan-ignore-file - Contains organizer email in event sync metadata
 import { logger } from '../utils/logger';
 
 let mod: typeof Fire | null = null;

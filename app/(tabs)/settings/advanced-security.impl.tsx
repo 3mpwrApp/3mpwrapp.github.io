@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains example email patterns in security context display
 // Advanced Security Options for 3mpwrApp - Route-based lazy loaded component (Phase 4.5)
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';

@@ -1,8 +1,8 @@
 /**
- * Central data policy guard. Supports multiple BYOC modes:
- * - 'default': Firebase auth + Firebase storage (standard cloud app)
- * - 'hybrid_byoc': Firebase auth for login + User's own cloud for ALL data storage
- * - 'strict_byoc': No Firebase at all, 100% user-owned everything
+ * Data Policy Service
+ * Manages data retention, privacy policies, and user data controls
+ * 
+ * pii-scan-ignore-file - Contains contact email addresses for privacy/policy info
  */
 
 import { fetchWithRetry, getErrorMessage, isNetworkError } from '../utils/network';

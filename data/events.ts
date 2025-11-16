@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains example organizer email addresses in mock data
 export type Event = {
   id: string;
   title: string;

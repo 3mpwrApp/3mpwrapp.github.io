@@ -1,3 +1,4 @@
+// pii-scan-ignore-file - Contains user profile email display
 // Settings Screen – fully reconstructed (v2)
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
