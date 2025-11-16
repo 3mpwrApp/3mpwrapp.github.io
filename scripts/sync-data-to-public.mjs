@@ -21,38 +21,38 @@ async function syncData() {
   console.log('📦 Syncing data files to public/api/...');
 
   try {
-    // Read source data files
-    const eventsPath = join(ROOT, 'data', 'events.ts');
-    const campaignsPath = join(ROOT, 'data', 'campaigns.ts');
-
-    const eventsContent = await fs.readFile(eventsPath, 'utf-8');
-    const campaignsContent = await fs.readFile(campaignsPath, 'utf-8');
-
-    // Extract JSON data from TypeScript files
-    const eventsMatch = eventsContent.match(/export const events[^=]*=\s*(\[[\s\S]*?\]);/);
-    const campaignsMatch = campaignsContent.match(/export const campaigns[^=]*=\s*(\[[\s\S]*?\]);/);
-
-    if (!eventsMatch || !campaignsMatch) {
-      throw new Error('Could not parse data files');
+    // Use tsx to execute TypeScript and get the exported data
+    const { execSync } = await import('child_process');
+    
+    // Create temp script to extract data
+    const tempScript = `
+import { events } from './data/events.ts';
+import { campaigns } from './data/campaigns.ts';
+console.log(JSON.stringify({ events, campaigns }));
+`;
+    
+    const tempFile = join(ROOT, '.temp-sync.ts');
+    await fs.writeFile(tempFile, tempScript, 'utf-8');
+    
+    let events, campaigns;
+    try {
+      const output = execSync(`npx tsx ${tempFile}`, { 
+        cwd: ROOT,
+        encoding: 'utf-8',
+        maxBuffer: 10 * 1024 * 1024 // 10MB buffer
+      });
+      
+      const data = JSON.parse(output);
+      events = data.events;
+      campaigns = data.campaigns;
+      
+      if (!Array.isArray(events) || !Array.isArray(campaigns)) {
+        throw new Error('Invalid data format');
+      }
+    } finally {
+      // Clean up temp file
+      await fs.unlink(tempFile).catch(() => {});
     }
-
-    // Clean up TypeScript syntax to make valid JSON
-    const cleanTStoJSON = (str) => {
-      return str
-        .replace(/\/\/.*$/gm, '') // Remove single-line comments
-        .replace(/\/\*[\s\S]*?\*\//g, '') // Remove multi-line comments
-        .replace(/,(\s*[}\]])/g, '$1') // Remove trailing commas
-        .replace(/([{,]\s*)(\w+):/g, '$1"$2":') // Quote property names
-        .replace(/‑/g, '-') // Replace non-breaking hyphens with regular ones
-        .trim();
-    };
-
-    const eventsJSON = cleanTStoJSON(eventsMatch[1]);
-    const campaignsJSON = cleanTStoJSON(campaignsMatch[1]);
-
-    // Validate JSON
-    const events = JSON.parse(eventsJSON);
-    const campaigns = JSON.parse(campaignsJSON);
 
     // Ensure public/api directory exists
     const publicApiDir = join(ROOT, 'public', 'api');
