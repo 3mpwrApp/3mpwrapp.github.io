@@ -21,13 +21,39 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
   const formatDate = (dateStr: string) => {
     try {
       const date = new Date(dateStr);
+      
+      // Detect if this is an all-day event (holidays, observances, health awareness)
+      // These have IDs starting with holiday-, obs-, health-, or prov-
+      // Or date strings ending with " 00:00" pattern
+      const isAllDayEvent = 
+        event.id.startsWith('holiday-') || 
+        event.id.startsWith('obs-') || 
+        event.id.startsWith('health-') ||
+        event.id.startsWith('prov-') ||
+        dateStr.includes(' 00:00');
+      
+      // For all-day events, only show date without time
+      if (isAllDayEvent) {
+        return date.toLocaleDateString(undefined, {
+          weekday: 'short',
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        });
+      }
+      
+      // For timed events, show time if endDate exists or if time is not midnight
+      const hours = date.getHours();
+      const minutes = date.getMinutes();
+      const hasSpecificTime = event.endDate || hours !== 0 || minutes !== 0;
+      
       return date.toLocaleDateString(undefined, {
         weekday: 'short',
         month: 'short',
         day: 'numeric',
         year: 'numeric',
-        hour: event.endDate ? 'numeric' : undefined,
-        minute: event.endDate ? '2-digit' : undefined,
+        hour: hasSpecificTime ? 'numeric' : undefined,
+        minute: hasSpecificTime ? '2-digit' : undefined,
       });
     } catch {
       return dateStr;

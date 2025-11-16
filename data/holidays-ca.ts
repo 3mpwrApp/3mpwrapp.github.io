@@ -6,7 +6,7 @@ function pad2(n: number) {
   return String(n).padStart(2, "0");
 }
 function ymd(year: number, monthIndex: number, day: number) {
-  return `${year}-${pad2(monthIndex + 1)}-${pad2(day)} 00:00`;
+  return `${year}-${pad2(monthIndex + 1)}-${pad2(day)}`;
 }
 function nthWeekdayOfMonth(
   year: number,
