@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-15T18:14:07.588Z",
+  "lastUpdated": "2025-11-16T00:57:17.465Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2460,
+      "totalPosts": 2485,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T18:13:56.907Z"
+      "lastSeen": "2025-11-16T00:57:08.883Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2475,
+      "totalPosts": 2500,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T18:13:59.640Z"
+      "lastSeen": "2025-11-16T00:57:10.563Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2463,
+      "totalPosts": 2488,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T18:14:01.867Z"
+      "lastSeen": "2025-11-16T00:57:12.547Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2471,
+      "totalPosts": 2496,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T18:14:04.297Z"
+      "lastSeen": "2025-11-16T00:57:14.558Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2475,
+      "totalPosts": 2500,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-15T18:14:06.584Z"
+      "lastSeen": "2025-11-16T00:57:16.462Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Just #DanielleSmith doing more ghoulish #UCP things. If a “decision” hasn’t been made by Feb 28, 2026, they’ll cut $200/month from disabled Albertans already struggling to survive.\nMeanwhile, the CRA’s CDB backlog is 5–6 months.\n#ableg #abpoli #cdnpoli #DisabilityRights #AISH #yyc #yeg",
-      "author": "sillyrabbitfafo.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
-      "author": "longcovidjustice.org",
-      "engagement": 40,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "#a11y",
-      "author": "spavel.bsky.social",
-      "engagement": 180,
-      "hashtag": "A11y"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,28 +314,52 @@
       "author": "embeessem.bsky.social",
       "engagement": 16,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
+      "author": "longcovidjustice.org",
+      "engagement": 43,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 12,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
+      "author": "brassclothes.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 41
+      "count": 43
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 36
     },
     {
       "keyword": "cripthevote",
       "count": 26
     },
     {
-      "keyword": "a11y",
+      "keyword": "disabilityjustice",
       "count": 26
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 25
+      "keyword": "a11y",
+      "count": 26
     },
     {
       "keyword": "altcitizen",
@@ -378,23 +378,23 @@
       "count": 15
     },
     {
-      "keyword": "virtual",
-      "count": 9
+      "keyword": "disability",
+      "count": 11
     },
     {
-      "keyword": "disability",
-      "count": 8
+      "keyword": "virtual",
+      "count": 9
     },
     {
       "keyword": "stoptrump",
       "count": 7
     },
     {
-      "keyword": "avelo",
+      "keyword": "accessibility disability",
       "count": 6
     },
     {
-      "keyword": "disabled people",
+      "keyword": "avelo",
       "count": 6
     },
     {
