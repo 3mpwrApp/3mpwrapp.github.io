@@ -1,0 +1,53 @@
+# Gitleaks configuration file
+# Excludes non-sensitive files from secret scanning
+
+title = "3mpwr App Gitleaks Config"
+
+[[rules]]
+id = "generic-api-key"
+description = "Detected a Generic API Key"
+regex = '''(?i)(?:key|api[^Version]|token|secret|password|auth|credential)[^a-zA-Z0-9]?(?:=|:=|:)(?:\s|=)*['\"]?([0-9a-zA-Z\-._~:/?#[\]@!$&'()*+,;=%]{20,})['\"]?'''
+
+[[rules.allowlist]]
+paths = [
+  '''docs/.*\.md$''',
+  '''server/\.dev\.vars$''',
+  '''server/\.firebase-key\.json$''',
+  '''scripts/.*\.(mjs|ts|js|ps1)$''',
+  '''google-services\.json$''',
+  '''CHANGELOG\.md$''',
+  '''.github/workflows/.*\.yml$'''
+]
+
+[[rules]]
+id = "gcp-api-key"
+description = "Detected a GCP API key"
+regex = '''(?i)(AIza[0-9A-Za-z\\-_]{35})'''
+
+[[rules.allowlist]]
+paths = [
+  '''firebase/config\.ts$''',
+  '''google-services\.json$''',
+  '''scripts/.*\.(mjs|ts|js)$''',
+  '''server/.*\.(js|json|vars)$'''
+]
+
+[[rules]]
+id = "private-key"
+description = "Detected a Private Key"
+regex = '''(?i)-----BEGIN[ A-Z]*PRIVATE KEY-----'''
+
+[[rules.allowlist]]
+paths = [
+  '''scripts/.*\.(ps1|mjs|ts|js)$''',
+  '''server/.*\.(js|json|vars)$'''
+]
+
+[allowlist]
+paths = [
+  '''node_modules/''',
+  '''.expo/''',
+  '''dist/''',
+  '''build/''',
+  '''.git/'''
+]
