@@ -212,13 +212,37 @@ async function loadDailyEvents() {
       return true;
     });
     
-    // Get today's date and next 7 days
+    // Filter to show ONLY community events (same logic as events page)
+    // This excludes holiday/awareness events with incorrect timestamps
     const now = new Date();
+    const communityEvents = events.filter(event => {
+      // ALWAYS keep community events (user-created events)
+      if (event.category === 'community') {
+        return true;
+      }
+      
+      // For holidays and health awareness, filter out ones with bad timestamps
+      if (event.category === 'holiday' || event.category === 'health') {
+        const eventDate = new Date(event.date);
+        const eventTime = eventDate.getTime();
+        const currentTime = now.getTime();
+        const oneHourAgo = currentTime - (60 * 60 * 1000);
+        
+        const isRecentlyTimestamped = eventTime > oneHourAgo && eventTime <= currentTime;
+        return !isRecentlyTimestamped;
+      }
+      
+      return true;
+    });
+    
+    console.log(`🏠 Homepage: Filtered to ${communityEvents.length} community/properly-dated events`);
+    
+    // Get today's date and next 7 days
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
     const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
     
     // Filter events for the next 7 days (including today)
-    let upcomingEvents = events.filter(event => {
+    let upcomingEvents = communityEvents.filter(event => {
       const eventDate = new Date(event.date);
       return eventDate >= todayStart && eventDate <= sevenDaysFromNow;
     });
