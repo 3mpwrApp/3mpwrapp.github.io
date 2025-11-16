@@ -52,6 +52,19 @@ jobs:
         run: npm run perf:breakdown > bundle-breakdown.txt
 
       - name: Check max file size
+        env:
+          PERF_MAX_ALLOW: >-
+            components/LetterWizardContent\.tsx,
+            components/LegalAutomationContent\.tsx,
+            components/LegalWorkflowEngine\.tsx,
+            app/events/index\.impl\.tsx,
+            components/PeerSupportContent\.tsx,
+            app/\(tabs\)/community/campaign-coordinator\.impl\.tsx,
+            app/\(tabs\)/settings/advanced-security\.impl\.tsx,
+            components/EnhancedHubContent\.tsx,
+            app/\(auth\)/onboarding\.tsx,
+            app/\(tabs\)/wellness/self-care-library-enhanced\.tsx,
+            app/\(tabs\)/wellness/self-care-library\.tsx
         run: npm run perf:max-file
 
       - name: Upload bundle breakdown

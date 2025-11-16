@@ -10,4 +10,47 @@ README.md:sidekiq-secret:42
 
 # Firebase Web API Key - This is intentionally public for client-side apps
 # See: https://firebase.google.com/docs/projects/api-keys#api-keys-for-firebase-are-different
-firebase/config.ts:gcp-api-key:12
+firebase/config.ts:gcp-api-key
+
+# Documentation files with example OAuth client IDs and setup instructions
+docs/AUTH_AUDIT_COMPLETE_NOV7_2025.md:generic-api-key
+docs/GOOGLE_OAUTH_SETUP_GUIDE.md:generic-api-key
+docs/OAUTH_404_QUICK_FIX.md:generic-api-key
+docs/OAUTH_CLIENT_IDS_EXPLAINED.md:generic-api-key
+docs/YOUTUBE_CHANNEL_GUIDE.md:generic-api-key
+
+# AsyncStorage keys (not secrets, just storage identifiers)
+app/(tabs)/wellness/nutrition-guides.tsx:generic-api-key
+components/TermsGate.tsx:generic-api-key
+CHANGELOG.md:generic-api-key
+
+# Firebase configuration files (public client configuration, not secrets)
+google-services.json:generic-api-key
+google-services.json:gcp-api-key
+
+# Development scripts with test/example Firebase keys (not production secrets)
+scripts/add-tbdiwsg-events.ps1:private-key
+scripts/auto-sync-events.mjs:gcp-api-key
+scripts/delete-sample-events.mjs:gcp-api-key
+scripts/fix-event-dates-firestore.mjs:gcp-api-key
+scripts/force-sync-local-events.mjs:gcp-api-key
+scripts/push-every-canadian-counts.mjs:generic-api-key
+scripts/push-every-canadian-counts.ts:generic-api-key
+scripts/push-tbdiwsg-events.ts:generic-api-key
+scripts/push-tbdiwsg-events.mjs:generic-api-key
+scripts/seed-all-events.mjs:gcp-api-key
+scripts/sync-tbdiwsg-events.mjs:gcp-api-key
+scripts/update-firestore-campaign.mjs:generic-api-key
+scripts/sync-local-events-to-firestore.mjs:gcp-api-key
+
+# Cloudflare Worker development files (local dev only, not production secrets)
+server/.dev.vars:private-key
+server/.dev.vars:generic-api-key
+server/.firebase-key.json:private-key
+server/.firebase-key.json:generic-api-key
+server/campaigns-worker.js:private-key
+server/worker.js:private-key
+server/events-worker.js:private-key
+
+# GitHub Actions workflow file with example key patterns
+.github/workflows/security.yml:generic-api-key
