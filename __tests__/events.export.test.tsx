@@ -82,8 +82,8 @@ describe('Events export actions', () => {
   it('creates an event and verifies action buttons exist', async () => {
     render(<EventsScreen />);
     
-    // Wait for initial render and close any open panels
-    await screen.findByText(/Events/i);
+    // Wait for initial render - use a more specific text
+    await screen.findByText(/Community events, workshops/i);
     
     // Check if filter panel is open and close it
     try {
