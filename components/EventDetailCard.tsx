@@ -42,18 +42,28 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
         });
       }
       
-      // For timed events, show time if endDate exists or if time is not midnight
-      const hours = date.getHours();
-      const minutes = date.getMinutes();
-      const hasSpecificTime = event.endDate || hours !== 0 || minutes !== 0;
+      // For timed events (community events with specific times)
+      // Display in America/Toronto timezone (EST/EDT) since events are Canadian
+      const hasSpecificTime = event.endDate || dateStr.includes('T');
+      
+      if (hasSpecificTime) {
+        return date.toLocaleString('en-US', {
+          weekday: 'short',
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit',
+          timeZone: 'America/Toronto',
+          timeZoneName: 'short',
+        });
+      }
       
       return date.toLocaleDateString(undefined, {
         weekday: 'short',
         month: 'short',
         day: 'numeric',
         year: 'numeric',
-        hour: hasSpecificTime ? 'numeric' : undefined,
-        minute: hasSpecificTime ? '2-digit' : undefined,
       });
     } catch {
       return dateStr;
