@@ -449,6 +449,14 @@ function validateStructure(options = {}) {
   console.log('   4. Clean up temporary files\n');
   console.log('   Run with --report to generate JSON report\n');
   
+  // Check baseline threshold
+  const baseline = parseInt(process.env.STRUCTURE_VALIDATION_BASELINE || '0', 10);
+  if (baseline > 0 && totalIssues <= baseline) {
+    console.log(colors.yellow + `ℹ️  Total issues (${totalIssues}) within baseline threshold (${baseline})` + colors.reset);
+    console.log(colors.yellow + '   Not failing due to STRUCTURE_VALIDATION_BASELINE' + colors.reset + '\n');
+    return { success: true, issues, totalIssues, baseline };
+  }
+  
   return { success: false, issues, totalIssues };
 }
 
