@@ -9,7 +9,7 @@ import MoodInsights from '../../components/MoodInsights';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
-import { getMoodBasedRecommendations } from '../../services/feature-integration';
+import { getMoodBasedRecommendations } from '../../services/featureIntegration';
 import { MoodProvider, useMood } from '../../store/mood';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';

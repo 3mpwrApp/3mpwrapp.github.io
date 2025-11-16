@@ -17,7 +17,7 @@ import {
     type MoodAchievement,
     type MoodPattern,
     type MoodStreak,
-} from '../services/mood-insights';
+} from '../services/moodInsights';
 import type { MoodEntry } from '../store/mood';
 import { useAppPalette } from '../theme/usePalette';
 

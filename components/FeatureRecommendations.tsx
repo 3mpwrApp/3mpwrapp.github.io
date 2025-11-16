@@ -11,8 +11,8 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
-import type { FeatureRecommendation } from '../services/feature-integration';
-import { navigateToRecommendation } from '../services/feature-integration';
+import type { FeatureRecommendation } from '../services/featureIntegration';
+import { navigateToRecommendation } from '../services/featureIntegration';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
 

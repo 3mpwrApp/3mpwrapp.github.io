@@ -10,16 +10,16 @@ import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import * as Notifier from '../../../services/notifications';
 import {
-  calculateActivityStreaks,
-  checkBodyMindSync,
-  checkPacingAlerts,
-  forecastEnergyLevels,
-  generateAdaptiveSuggestions,
-  type ActivityLog,
-  type AdaptiveSuggestion,
-  type EnergyForecast,
-  type PacingAlert,
-} from '../../../services/pacing-ai';
+    calculateActivityStreaks,
+    checkBodyMindSync,
+    checkPacingAlerts,
+    forecastEnergyLevels,
+    generateAdaptiveSuggestions,
+    type ActivityLog,
+    type AdaptiveSuggestion,
+    type EnergyForecast,
+    type PacingAlert,
+} from '../../../services/pacingAi';
 import { useMood } from '../../../store/mood';
 import { useAppPalette } from '../../../theme/usePalette';
 
