@@ -9,19 +9,129 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-11-16
 
-Curated 3 items from disability, accessibility, and social policy sources.
+Curated 26 items from disability, accessibility, and social policy sources.
 
-## 1. Manitoba Government Honours Indigenous Veterans and Supports First-Annual Powwow
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71460)
-**Score:** 10.50
+## 1. A sacred pipe returns to Whitecap Dakota First Nation after 135 years
+<img src='https://i.cbc.ca/ais/6b008ed2-8dce-4164-8808-79810e8bac17,1763063201570/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C3999%2C2249%29%3BResize%3D%28620%29' alt='A man handles a delicate wooden pipe with beading work' width='620' height='349' title='Whitecap Dakota First Nation Coun. Frank Royal displays a ceremonial pipe Chief Whitecap gave to a Saskatoon doctor in 1889. The First Nation recently repatriated the pipe. '/><p>More Indigenous communities across Canada are reuniting with items that were taken or given away generations ago. The Vatican and the Canadian Catholic Church are reportedly working on an agreement to return about 100,000 Indigenous items Catholic missions sent to Rome in the 1920s.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/whitecap-dakota-first-nation-sacred-ceremonial-pipe-repatriated-9.6977799?cmp=rss)
+**Score:** 18.50
 
-## 2. B.C. Premier David Eby survives leadership review as NDP delegates signal support
-B.C. Premier David Eby faced NDP delegates during their convention and received enough support to avoid facing a leadership review.
-📍 [Source](https://globalnews.ca/news/11528362/bc-ndp-david-eby-leadership/)
+## 2. Pilot killed in Ontario mid-air collision was taking part in training flight: TSB
+The Transportation Safety Board of Canada says the pilot killed in a mid-air collision on Saturday was taking part in a training exercise.
+📍 [Source](https://globalnews.ca/news/11528475/ontario-mid-air-collision-death-pilot-training-flight-tsb/)
+**Score:** 16.00
+
+## 3. Federal government plans to invest up to $5.45M to help grow women's soccer in Canada
+📍 [Source](https://www.cbc.ca/sports/soccer/northern-super-league-federal-support-canada-soccer-9.6980464?cmp=rss)
+**Score:** 15.50
+
+## 4. If cloned meat enters the food supply, will Canadians know?
+Meat from the offspring of cloned animals is entering Canada's food supply without safety reviews or mandatory labelling.
+📍 [Source](https://globalnews.ca/news/11527780/cloned-meat-food-supply-canada/)
+**Score:** 14.00
+
+## 5. Domestic abusers are weaponizing B.C.'s housing crisis, report reveals
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/report-domestic-intimate-partner-violence-bc-housing-crisis-9.6980216?cmp=rss)
+**Score:** 14.30
+
+## 6. Is Quebec serious about climate change? New government bill raises questions
+<img src='https://i.cbc.ca/ais/9206d76d-7980-4d51-ac8d-47c81b082bec,1763140685526/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1%2C3000%2C1687%29%3BResize%3D%28620%29' alt='Bumper to bumper traffic is seen on a bridge.' width='620' height='349' title='Traffic on the Jacques Cartier Bridge is pictured. '/><p>A new government bill aimed at reducing bureaucracy and increasing state efficiency could take a bite out of Quebec's ability to fight climate change. Under the proposed legislation, the finance minister will be allowed to divert surpluses from the province's Green Fund to other unrelated government programs.</p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/quebec-green-fund-surplus-9.6976654?cmp=rss)
+**Score:** 14.60
+
+## 7. Edmonton doctor says inner-city TB outbreak low risk to general public
+<img src='https://i.cbc.ca/ais/1.5098391,1763076776082/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C213%2C4202%2C2363%29%3BResize%3D%28620%29' alt='A x-ray shows tuberculosis in the lungs' width='620' height='349' title='A case of tuberculosis has been confirmed in one patient connected to a school in Antigonish, N.S., but public health officials say the threat to the general public is low.'/><p>The head of Alberta's tuberculosis clinic says an outbreak in Edmonton's inner-city is is of little risk to Edmontonians at large.</p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/edmonton-tb-alberta-outbreak-9.6980065?cmp=rss)
+**Score:** 14.80
+
+## 8. Manitoba Government Receives Report on Future of Technology, Innovation and Productivity
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71303)
+**Score:** 12.00
+
+## 9. Police seek suspects of Upper Canada Mall jewelry store robbery
+Two security guards and an unknown number of police officers were pepper sprayed Saturday afternoon as they pursued suspects in a jewelry store robbery at a mall in Newmarket, Ont.
+📍 [Source](https://globalnews.ca/news/11528414/jewelry-store-robery-york-region-police-officers-pepper-sprayed/)
+**Score:** 9.50
+
+## 10. Carney says Louis Riel's legacy 'helps to unite' Canada at event marking Métis leader's execution
+<img src='https://i.cbc.ca/ais/164734e5-84e0-415d-a4f4-cef460e6f2fc,1763318698075/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1%2C5472%2C3078%29%3BResize%3D%28620%29' alt='Man in a suit stands at a podium with colourful floral wreaths and a gravestone with an image of a man and the name "Louis Riel."' width='620' height='349' title='Prime Minister Mark Carney speaks during a ceremony honouring the 140th anniversary of Louis Riel's execution in Winnipeg on Sunday, Nov. 16, 2025.'/><p>Prime Minister Mark Carney laid a wreath at the grave of Louis Riel to mark the 140th anniversary of the Red River Métis leader's execution at a ceremony in Winnipeg on Sunday morning. </p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/winnipeg-louis-riel-mark-carney-9.6980906?cmp=rss)
+**Score:** 9.50
+
+## 11. U.S.-based liqueur brand Sour Puss moves some production to Canada amid ongoing trade war
+<img src='https://i.cbc.ca/ais/483327a0-f7ec-4891-81c7-a2c59f71d3fc,1763320505275/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C56%2C1080%2C607%29%3BResize%3D%28620%29' alt='Split screen with shelves in a liquor store on the left and green glass bottles that read 'Sour Puss' on the right' width='620' height='349' title=''/><p>Chief political correspondent Rosemary Barton speaks with Andy England, CEO of Phillips Distilling Company, about his company's decision to move production of Sour Puss liqueur to Montreal after being taken off the shelf over the trade war.</p>
+📍 [Source](https://www.cbc.ca/player/play/9.6980905?cmp=rss)
+**Score:** 9.50
+
+## 12. Banff’s infamous grizzly ‘The Boss’ continues to dominate Bow Valley — but he’s got competition
+<img src='https://i.cbc.ca/ais/40ee1bd7-189c-42c2-ac25-882dc0714dc8,1763151133605/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A composite of two grizzly bears.' width='620' height='349' title='Bears No. 122 and 136, known as The Boss and Split Lip respectively, are arguably the most famous grizzlies in Canada. The Boss, left, is currently considered Banff National Park's dominant grizzly bear, while the younger Split Lip has been challenging him for the top spot.'/><p>Bears No. 122 and 136, known as The Boss and Split Lip respectively, are arguably two of the most famous grizzlies in Canada. The Boss is currently considered Banff National Park's dominant grizzly bear, while the younger Split Lip has been challenging him for the top spot.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/the-boss-bow-valley-grizzly-bear-split-lip-9.6979193?cmp=rss)
+**Score:** 9.50
+
+## 13. Police Presence at Health Sciences Centre 24-7 to Protect Health-Care Workers and Patients
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71304)
+**Score:** 10.30
+
+## 14. Weekend transit shutdown cancelled in Montreal as union, STM reach tentative deal
+<img src='https://i.cbc.ca/ais/1.7556868,1749558049000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C4995%2C2809%29%3BResize%3D%28620%29' alt='Bus driver wearing orange shirt. ' width='620' height='349' title='In a show of solidarity with colleagues working in the Montreal public transit maintenance sector, a bus driver is seen wearing an orange shirt indicating that negotiations are underway. '/><p>The public transit strike which would have shut down bus and Metro service in Montreal for the weekend has been cancelled after a last-minute tentative deal was reached Friday night. </p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/public-transit-strike-cancelled-montreal-9.6980126?cmp=rss)
+**Score:** 9.00
+
+## 15. Photos: Electronic powerhouses Kaytranada and Justice co-headline Rogers Arena
+The DJ and the French duo combined for a memorable show.
+📍 [Source](https://www.straight.com/music/photos-electronic-powerhouses-kaytranada-and-justice-co-headline-rogers-arena)
+**Score:** 5.00
+
+## 16. Liberals 'ready for an election' if budget vote fails, says government whip
+<img src='https://i.cbc.ca/ais/f8454d17-9f7b-4a9e-88f7-20bf3874fb05,1763309697817/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C260%2C5000%2C2812%29%3BResize%3D%28620%29' alt='shot of man with brown hair from the shoulders up, in the Parliament buildings' width='620' height='349' title='Liberal MP Mark Gerretsen makes his way to a Liberal Party caucus meeting in West Block on Parliament Hill, in Ottawa, Wednesday, Jan. 8, 2025. THE CANADIAN PRESS/Justin Tang'/><p></p>
+📍 [Source](https://www.cbc.ca/news/politics/liberals-election-budget-vote-9.6980877?cmp=rss)
+**Score:** 7.50
+
+## 17. First Nation in northern Alberta sheltered in place overnight as RCMP searched for 3 robbery suspects
+<img src='https://i.cbc.ca/ais/1.2101588,1406327355000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1180%2C663%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Cranbrook RCMP say an 86-year-old man wound up playing bumper cars after confusing the gas and the brake.'/><p>A First Nation in northern Alberta had to shelter in place overnight, after RCMP spotted three people near the community Saturday evening who were believed to be armed, having allegedly robbed several guns and shot at someone earlier that day.</p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/rcmp-peerless-trout-first-nation-armed-robbery-shelter-in-place-9.6980862?cmp=rss)
+**Score:** 7.50
+
+## 18. Joint Statement By Prime Minister Mark Carney And Premier Wab Kinew On Federal-Provincial Collaboration Regarding Port Of Churchill Plus
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71597)
+**Score:** 5.00
+
+## 19. Saskatchewan Roughriders, Montreal Alouettes' fans ready for Grey Cup face-off
+The Saskatchewan Roughriders are hoping to get their fifth title in franchise history, while the Montreal Alouettes are wanting their second Grey Cup championship in three years.
+📍 [Source](https://globalnews.ca/news/11528492/grey-cup-championship-saskatchewan-roughriders-montreal-alouettes/)
+**Score:** 4.50
+
+## 20. N.B. faces snowfall warnings as N.S., N.L. brace for high winds
+Snowfall warnings are in place for New Brunswick, with wind warnings in place for parts of Nova Scotia and Newfoundland and Labrador.
+📍 [Source](https://globalnews.ca/news/11528415/new-brunswick-snowfall-nova-scotia-newfoundland-wind-warnings/)
+**Score:** 3.20
+
+## 21. Alouettes hoping Bomber fans ‘adopt’ them Sunday
+Alexandre Gagne figures his Montreal Alouettes might gain new fans in Sunday's Grey Cup against the Saskatchewan Roughriders.
+📍 [Source](https://globalnews.ca/news/11528090/alouettes-hoping-bomber-fans-adopt-them-sunday/)
+**Score:** 4.50
+
+## 22. Burnaby apologizes for decades of discrimination against people of Chinese descent
+Burnaby has formally apologized for decades of discrimination against people of Chinese descent, pledging long-term action to address historic harm.
+📍 [Source](https://globalnews.ca/news/11528001/burnaby-apology-discrimination-against-chinese-community/)
 **Score:** 3.00
 
-## 3. How one North Vancouver school is redefining education for neurodiverse learners in B.C.
-“Our students learn through doing.”
-📍 [Source](https://www.straight.com/education/how-one-north-vancouver-school-is-redefining-education-for-neurodiverse-learners-in-bc)
-**Score:** 2.00
+## 23. Divers seeking lost shipwreck near Toronto find an even older mystery
+<img src='https://i.cbc.ca/ais/9b6d2f2c-be5d-4f12-a843-b9a40eefe6d4,1763138813046/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C290%2C6048%2C3402%29%3BResize%3D%28620%29' alt='Two men in scuba gear sit in the back of a boat as they pull on gloves and check respirators on the sparkling blue waters of Lake Ontario. ' width='620' height='349' title='Heison Chak and Greg Hilliard, left to right, prepare to dive 100 metres below the surface of Lake Ontario to visit a shipwreck that turned out to be far older than expected. James Conolly can be seen in the right foreground.'/><p>An exploration dive team seeking the century-old wreck of the Rapid City has instead found a much rarer prize: a virtually undisturbed vessel, potentially dating back to the first half of the 19th century.</p>
+📍 [Source](https://www.cbc.ca/news/canada/lake-ontario-great-lakes-toronto-shipwreck-9.6978162?cmp=rss)
+**Score:** 5.40
+
+## 24. B.C. NDP backs Premier David Eby's leadership at convention with 82 per cent support
+<img src='https://i.cbc.ca/ais/f45191f0-a008-4ffa-afaf-041b3b521553,1763256294636/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Two men pose for a photo in a crowded room. ' width='620' height='349' title=''/><p>Premier David Eby has faced criticism within his party for his promise to fast-track resource projects and for the eight-week strike by the B.C. General Employees Union. Despite that, New Democrats backed his leadership with 82 per cent support at this weekend's NDP leadership convention. </p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/david-eby-endorsed-ndp-convention-9.6980643?cmp=rss)
+**Score:** 4.00
+
+## 25. Montreal Carabins thump Saint Mary's Huskies to advance to Vanier Cup game
+<img src='https://i.cbc.ca/ais/00303fc2-ce99-471a-9600-9b495e809b01,1763248319773/full/max/0/default.jpg?im=Crop%2Crect%3D%2848%2C130%2C2390%2C1344%29%3BResize%3D%28620%29' alt='Football players celebrate with a team photo after a win.' width='620' height='349' title='The Montréal Carabins celebrate after winning the Uteck Bowl in Halifax on Saturday November 15, 2025. THE CANADIAN PRESS/Ron Ward'/><p>Mathieu Barsalou ran in four touchdowns as the Montreal Carabins defeated the Saint Mary's Huskies 49-19 on Saturday in the Uteck Bowl.</p>
+📍 [Source](https://www.cbc.ca/sports/football/montreal-carabins-thump-saint-mary-s-huskies-to-advance-to-vanier-cup-game-9.6980577?cmp=rss)
+**Score:** 4.50
+
+## 26. Measles Update #42
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71302)
+**Score:** 1.30
 
