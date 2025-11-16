@@ -82,29 +82,52 @@ describe('Events export actions', () => {
   it('creates an event and verifies action buttons exist', async () => {
     render(<EventsScreen />);
     
+    // Wait for initial render and close any open panels
+    await screen.findByText(/Events/i);
+    
+    // Check if filter panel is open and close it
+    try {
+      const filterText = screen.queryByText(/Filter Events/i);
+      if (filterText) {
+        const filterButton = screen.getByLabelText(/Open event filters|Close filters/i);
+        // @ts-ignore
+        fireEvent.press(filterButton);
+        // Wait for panel to close
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+    } catch {
+      // Filter panel not open, continue
+    }
+    
     // Open create event form
-    const toggle = await screen.findByText(/Create Event|Close Form/i);
+    const toggle = await screen.findByText(/Create Event/i);
     // @ts-ignore react-native testing library press alias
     fireEvent.press(toggle);
+    
+    // Wait for form to open
+    await screen.findByPlaceholderText(/Event Name/i);
     
     // Fill out the form
     const title = screen.getByPlaceholderText(/Event Name/i);
     const desc = screen.getByPlaceholderText(/Description/i);
     const date = screen.getByPlaceholderText(/Date.*YYYY-MM-DD/i);
-    const add = screen.getByText(/Add Event/i);
     fireEvent.change(title as any, { target: { value: 'Test Event' } });
     fireEvent.change(desc as any, { target: { value: 'Test Description' } });
     fireEvent.change(date as any, { target: { value: '2025-10-01' } });
     
+    const add = screen.getByText(/Add Event/i);
     // @ts-ignore
     fireEvent.press(add);
 
-    // Verify event was created - look for action buttons from EventActionsBar
-    // The new UI uses EventActionsBar with share, social, and calendar buttons on each event
+    // Wait for event to be created and form to close automatically
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // Now verify the event appears in the list with action buttons
+    // The EventActionsBar should be visible with share, social, and calendar buttons
     const shareButtons = await screen.findAllByText(/📤 Share/);
     expect(shareButtons.length).toBeGreaterThan(0);
     
-    // We should also have social and calendar buttons (findAllBy since multiple events)
+    // We should also have social and calendar buttons
     const socialsButtons = await screen.findAllByText(/🌐 Socials/);
     const calendarButtons = await screen.findAllByText(/📅 Add to Calendar/);
     expect(socialsButtons.length).toBeGreaterThan(0);

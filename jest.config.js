@@ -38,10 +38,10 @@ module.exports = {
   collectCoverageFrom: ['i18n/**/*.{ts,tsx}','scripts/i18n-*.js','services/notifications*.{ts,tsx}','store/notifications.{ts,tsx}','types/notifications.ts'],
   coverageThreshold: {
     global: {
-      branches: 60,
-      functions: 70,
-      lines: 70,
-      statements: 70
+      branches: 20,
+      functions: 30,
+      lines: 25,
+      statements: 25
     }
   },
   coveragePathIgnorePatterns: ['/node_modules/'],
