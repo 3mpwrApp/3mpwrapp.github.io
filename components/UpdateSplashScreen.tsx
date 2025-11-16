@@ -5,7 +5,7 @@
  * Displays progress bar and prevents interaction until update is ready.
  */
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Modal, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../i18n';
@@ -35,6 +35,9 @@ export default function UpdateSplashScreen() {
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [showSplash, setShowSplash] = useState(false);
+  
+  // Prevent multiple simultaneous update checks
+  const checkingRef = React.useRef(false);
 
   useEffect(() => {
     // Skip if in Expo Go or updates not available
@@ -47,8 +50,49 @@ export default function UpdateSplashScreen() {
     checkAndDownloadUpdate();
   }, []);
 
+  // Re-check for updates when app comes to foreground
+  useEffect(() => {
+    if (isExpoGo || !Updates || Updates?.isEnabled === false) {
+      return;
+    }
+
+    // Use AppState directly (no need to import since it's used by parent)
+    const { AppState } = require('react-native');
+    
+    const subscription = AppState.addEventListener('change', (nextAppState: string) => {
+      if (nextAppState === 'active') {
+        logger.log('[UpdateSplashScreen] App became active, checking for updates...');
+        checkAndDownloadUpdate();
+      }
+    });
+
+    return () => {
+      if (subscription?.remove) {
+        subscription.remove();
+      }
+    };
+  }, []);
+
   const checkAndDownloadUpdate = async () => {
+    // Prevent multiple simultaneous checks
+    if (checkingRef.current) {
+      logger.log('[UpdateSplashScreen] Update check already in progress, skipping...');
+      return;
+    }
+
+    // Add timeout to prevent hanging indefinitely
+    const timeoutId = setTimeout(() => {
+      if (checkingRef.current) {
+        logger.warn('[UpdateSplashScreen] Update check timed out after 60s, continuing with current version');
+        setShowSplash(false);
+        setIsChecking(false);
+        setIsDownloading(false);
+        checkingRef.current = false;
+      }
+    }, 60000); // 60 second timeout
+
     try {
+      checkingRef.current = true;
       setIsChecking(true);
 
       // Check for available update
@@ -70,24 +114,45 @@ export default function UpdateSplashScreen() {
           },
         });
 
-        logger.log('[UpdateSplashScreen] Download complete, reloading app...');
+        logger.log('[UpdateSplashScreen] Download complete, preparing to apply update...');
         
-        // Small delay to show 100% progress
-        await new Promise(resolve => setTimeout(resolve, 500));
+        // Show 100% progress
+        setDownloadProgress(100);
+        
+        // Longer delay to ensure update is fully written and ready
+        await new Promise(resolve => setTimeout(resolve, 1500));
 
-        // Reload the app to apply update
-        await Updates.reloadAsync();
+        logger.log('[UpdateSplashScreen] Applying update and reloading app...');
+        
+        // Clear timeout before reload
+        clearTimeout(timeoutId);
+        
+        // Reload the app to apply update with error handling
+        try {
+          await Updates.reloadAsync();
+        } catch (reloadError) {
+          logger.error('[UpdateSplashScreen] Failed to reload after update:', reloadError);
+          // If reload fails, hide splash and continue with current version
+          setShowSplash(false);
+          setIsChecking(false);
+          setIsDownloading(false);
+          checkingRef.current = false;
+        }
       } else {
         logger.log('[UpdateSplashScreen] No update available');
+        clearTimeout(timeoutId);
         setShowSplash(false);
         setIsChecking(false);
+        checkingRef.current = false;
       }
     } catch (error) {
-      logger.error('[UpdateSplashScreen] Update check failed:', error);
+      logger.error('[UpdateSplashScreen] Update check/download failed:', error);
+      clearTimeout(timeoutId);
       // Hide splash and continue with current version
       setShowSplash(false);
       setIsChecking(false);
       setIsDownloading(false);
+      checkingRef.current = false;
     }
   };
 

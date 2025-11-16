@@ -93,6 +93,10 @@ export default function UpdateChecker() {
               text: t('updates.restartNow', 'Restart Now'),
               onPress: async () => {
                 try {
+                  // Give user feedback before reload
+                  logger.log('[UpdateChecker] User requested restart to apply update');
+                  // Small delay to ensure alert is dismissed
+                  await new Promise(resolve => setTimeout(resolve, 300));
                   await Updates.reloadAsync();
                 } catch (e) {
                   logger.error('[UpdateChecker] Failed to reload:', e);
