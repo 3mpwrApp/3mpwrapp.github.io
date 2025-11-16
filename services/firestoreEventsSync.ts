@@ -45,15 +45,17 @@ export function subscribeToFirestoreEvents(
   (async () => {
     try {
       const m = await ensure();
-      if (!m || !sharedDb) {
+      if (!m) {
         logger.warn('[FirestoreEventsSync] Firestore not available');
         onError?.(new Error('Firestore not available'));
         return;
       }
 
+      const db = m.getFirestore();
+
       // Subscribe to events collection
       unsubscribe = m.onSnapshot(
-        m.collection(sharedDb, 'events'),
+        m.collection(db, 'events'),
         (snapshot) => {
           const events: Event[] = [];
           snapshot.forEach((doc) => {
@@ -270,11 +272,12 @@ function escapeICS(text: string): string {
 export async function syncEventsNow(): Promise<Event[]> {
   try {
     const m = await ensure();
-    if (!m || !sharedDb) {
+    if (!m) {
       throw new Error('Firestore not available');
     }
 
-    const snapshot = await m.getDocs(m.collection(sharedDb, 'events'));
+    const db = m.getFirestore();
+    const snapshot = await m.getDocs(m.collection(db, 'events'));
     const events: Event[] = [];
 
     snapshot.forEach((doc) => {
