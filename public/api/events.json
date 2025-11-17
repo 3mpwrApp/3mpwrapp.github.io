@@ -153,280 +153,280 @@
     "id": "holiday-2025-01-01",
     "title": "New Year's Day",
     "description": "Federal holiday",
-    "date": "2025-01-01T12:00:00",
+    "date": "2025-01-01",
     "location": "Canada"
   },
   {
     "id": "holiday-2025-02-17-family",
     "title": "Family Day (Most Provinces)",
     "description": "Observed in many provinces",
-    "date": "2025-02-17T12:00:00",
+    "date": "2025-02-17",
     "location": "Canada"
   },
   {
     "id": "holiday-2025-04-18-goodfriday",
     "title": "Good Friday",
     "description": "Federal holiday",
-    "date": "2025-04-18T12:00:00",
+    "date": "2025-04-18",
     "location": "Canada"
   },
   {
     "id": "holiday-2025-05-19-victoria",
     "title": "Victoria Day",
     "description": "Federal holiday",
-    "date": "2025-05-19T12:00:00",
+    "date": "2025-05-19",
     "location": "Canada"
   },
   {
     "id": "holiday-2025-07-01",
     "title": "Canada Day",
     "description": "Federal holiday",
-    "date": "2025-07-01T12:00:00",
+    "date": "2025-07-01",
     "location": "Canada"
   },
   {
     "id": "holiday-2025-09-01-labour",
     "title": "Labour Day",
     "description": "Federal holiday",
-    "date": "2025-09-01T12:00:00",
+    "date": "2025-09-01",
     "location": "Canada"
   },
   {
     "id": "holiday-2025-10-13-thanks",
     "title": "Thanksgiving",
     "description": "Federal holiday",
-    "date": "2025-10-13T12:00:00",
+    "date": "2025-10-13",
     "location": "Canada"
   },
   {
     "id": "holiday-2025-11-11",
     "title": "Remembrance Day",
     "description": "Federal holiday",
-    "date": "2025-11-11T12:00:00",
+    "date": "2025-11-11",
     "location": "Canada"
   },
   {
     "id": "holiday-2025-12-25",
     "title": "Christmas Day",
     "description": "Federal holiday",
-    "date": "2025-12-25T12:00:00",
+    "date": "2025-12-25",
     "location": "Canada"
   },
   {
     "id": "holiday-2025-12-26",
     "title": "Boxing Day",
     "description": "Federal holiday",
-    "date": "2025-12-26T12:00:00",
+    "date": "2025-12-26",
     "location": "Canada"
   },
   {
     "id": "obs-2025-01-04-braille",
     "title": "World Braille Day",
     "description": "Awareness of Braille and accessibility",
-    "date": "2025-01-04T12:00:00",
+    "date": "2025-01-04",
     "location": "Canada"
   },
   {
     "id": "obs-2025-03-01-wheelchair",
     "title": "International Wheelchair Day",
     "description": "Celebration of wheelchair users and support",
-    "date": "2025-03-01T12:00:00",
+    "date": "2025-03-01",
     "location": "Canada"
   },
   {
     "id": "obs-2025-04-02-autism",
     "title": "World Autism Awareness Day",
     "description": "Awareness and acceptance of autism",
-    "date": "2025-04-02T12:00:00",
+    "date": "2025-04-02",
     "location": "Canada"
   },
   {
     "id": "obs-2025-04-28-mourning",
     "title": "National Day of Mourning",
     "description": "Remembering workers killed, injured or made ill at work",
-    "date": "2025-04-28T12:00:00",
+    "date": "2025-04-28",
     "location": "Canada"
   },
   {
     "id": "obs-2025-06-01-injured-workers",
     "title": "Injured Workers Day",
     "description": "Solidarity with injured and ill workers",
-    "date": "2025-06-01T12:00:00",
+    "date": "2025-06-01",
     "location": "Canada"
   },
   {
     "id": "obs-2025-06-01-deafblind-month",
     "title": "Deafblind Awareness Month begins",
     "description": "Month-long observance in Canada",
-    "date": "2025-06-01T12:00:00",
+    "date": "2025-06-01",
     "location": "Canada"
   },
   {
     "id": "obs-2025-09-23-sign-lang",
     "title": "International Day of Sign Languages",
     "description": "Linguistic identity of deaf people",
-    "date": "2025-09-23T12:00:00",
+    "date": "2025-09-23",
     "location": "Canada"
   },
   {
     "id": "obs-2025-10-01-ndeam",
     "title": "Disability Employment Awareness Month begins",
     "description": "NDEAM in Canada (October)",
-    "date": "2025-10-01T12:00:00",
+    "date": "2025-10-01",
     "location": "Canada"
   },
   {
     "id": "obs-2025-12-03-idpd",
     "title": "International Day of Persons with Disabilities",
     "description": "Promoting rights and well-being",
-    "date": "2025-12-03T12:00:00",
+    "date": "2025-12-03",
     "location": "Canada"
   },
   {
     "id": "obs-2025-05-05-mmiwg",
     "title": "National Day of Awareness for Missing and Murdered Indigenous Women and Girls",
     "description": "Honoring and remembering MMIWG and 2SLGBTQQIA+ people",
-    "date": "2025-05-05T12:00:00",
+    "date": "2025-05-05",
     "location": "Canada"
   },
   {
     "id": "obs-2025-06-21-indigenous-peoples",
     "title": "National Indigenous Peoples Day",
     "description": "Celebrating Indigenous cultures and contributions",
-    "date": "2025-06-21T12:00:00",
+    "date": "2025-06-21",
     "location": "Canada"
   },
   {
     "id": "obs-2025-09-30-orange-shirt",
     "title": "Orange Shirt Day (National Day for Truth and Reconciliation)",
     "description": "Honoring residential school survivors and remembering children who never returned home",
-    "date": "2025-09-30T12:00:00",
+    "date": "2025-09-30",
     "location": "Canada"
   },
   {
     "id": "obs-2025-11-01-indigenous-disability",
     "title": "Indigenous Disability Awareness Month begins",
     "description": "Month-long observance recognizing Indigenous peoples with disabilities",
-    "date": "2025-11-01T12:00:00",
+    "date": "2025-11-01",
     "location": "Canada"
   },
   {
     "id": "obs-2025-02-04-world-cancer",
     "title": "World Cancer Day",
     "description": "Raising awareness about cancer and its prevention",
-    "date": "2025-02-04T12:00:00",
+    "date": "2025-02-04",
     "location": "Global"
   },
   {
     "id": "obs-2025-02-28-rare-disease",
     "title": "Rare Disease Day",
     "description": "Raising awareness for rare diseases (last day of February)",
-    "date": "2025-02-28T12:00:00",
+    "date": "2025-02-28",
     "location": "Global"
   },
   {
     "id": "obs-2025-03-21-down-syndrome",
     "title": "World Down Syndrome Day",
     "description": "Advocating for rights and inclusion of people with Down syndrome",
-    "date": "2025-03-21T12:00:00",
+    "date": "2025-03-21",
     "location": "Global"
   },
   {
     "id": "obs-2025-04-07-world-health",
     "title": "World Health Day",
     "description": "Global health awareness",
-    "date": "2025-04-07T12:00:00",
+    "date": "2025-04-07",
     "location": "Global"
   },
   {
     "id": "obs-2025-05-12-fibromyalgia",
     "title": "Fibromyalgia Awareness Day",
     "description": "Raising awareness about fibromyalgia",
-    "date": "2025-05-12T12:00:00",
+    "date": "2025-05-12",
     "location": "Global"
   },
   {
     "id": "obs-2025-06-27-ptsd",
     "title": "PTSD Awareness Day",
     "description": "Raising awareness about post-traumatic stress disorder",
-    "date": "2025-06-27T12:00:00",
+    "date": "2025-06-27",
     "location": "Global"
   },
   {
     "id": "obs-2025-07-11-world-population",
     "title": "World Population Day",
     "description": "Focus on population issues including health and rights",
-    "date": "2025-07-11T12:00:00",
+    "date": "2025-07-11",
     "location": "Global"
   },
   {
     "id": "obs-2025-08-19-humanitarian",
     "title": "World Humanitarian Day",
     "description": "Honoring humanitarian workers and those they help",
-    "date": "2025-08-19T12:00:00",
+    "date": "2025-08-19",
     "location": "Global"
   },
   {
     "id": "obs-2025-09-10-suicide-prevention",
     "title": "World Suicide Prevention Day",
     "description": "Raising awareness and prevention of suicide",
-    "date": "2025-09-10T12:00:00",
+    "date": "2025-09-10",
     "location": "Global"
   },
   {
     "id": "obs-2025-10-10-mental-health",
     "title": "World Mental Health Day",
     "description": "Promoting mental health awareness and support",
-    "date": "2025-10-10T12:00:00",
+    "date": "2025-10-10",
     "location": "Global"
   },
   {
     "id": "obs-2025-10-15-white-cane",
     "title": "White Cane Safety Day",
     "description": "Celebrating achievements of people who are blind or visually impaired",
-    "date": "2025-10-15T12:00:00",
+    "date": "2025-10-15",
     "location": "Global"
   },
   {
     "id": "obs-2025-11-14-diabetes",
     "title": "World Diabetes Day",
     "description": "Raising awareness about diabetes",
-    "date": "2025-11-14T12:00:00",
+    "date": "2025-11-14",
     "location": "Global"
   },
   {
     "id": "obs-2025-12-01-world-aids",
     "title": "World AIDS Day",
     "description": "Raising awareness about HIV/AIDS",
-    "date": "2025-12-01T12:00:00",
+    "date": "2025-12-01",
     "location": "Global"
   },
   {
     "id": "obs-2025-05-15-gaad",
     "title": "Global Accessibility Awareness Day",
     "description": "Digital accessibility and inclusion awareness",
-    "date": "2025-05-15T12:00:00",
+    "date": "2025-05-15",
     "location": "Canada"
   },
   {
     "id": "obs-2025-05-25-naaw",
     "title": "National AccessAbility Week (begins)",
     "description": "Week-long observance in Canada",
-    "date": "2025-05-25T12:00:00",
+    "date": "2025-05-25",
     "location": "Canada"
   },
   {
     "id": "obs-2025-05-28-redshirt",
     "title": "Red Shirt Day",
     "description": "Show support for persons with disabilities",
-    "date": "2025-05-28T12:00:00",
+    "date": "2025-05-28",
     "location": "Canada"
   },
   {
     "id": "health-2025-01-national-birth-defects-prevention-month",
     "title": "National Birth Defects Prevention Month",
     "description": "Awareness of birth defects prevention and healthy pregnancy",
-    "date": "2025-01-01T12:00:00",
+    "date": "2025-01-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -439,7 +439,7 @@
     "id": "health-2025-01-national-glaucoma-awareness-month",
     "title": "National Glaucoma Awareness Month",
     "description": "Early detection and treatment of glaucoma",
-    "date": "2025-01-01T12:00:00",
+    "date": "2025-01-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -452,7 +452,7 @@
     "id": "health-2025-01-thyroid-awareness-month",
     "title": "Thyroid Awareness Month",
     "description": "Thyroid disease awareness and screening",
-    "date": "2025-01-01T12:00:00",
+    "date": "2025-01-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -465,7 +465,7 @@
     "id": "health-2025-01-cervical-cancer-awareness-month",
     "title": "Cervical Cancer Awareness Month",
     "description": "Prevention and early detection of cervical cancer",
-    "date": "2025-01-01T12:00:00",
+    "date": "2025-01-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -478,7 +478,7 @@
     "id": "health-2025-02-american-heart-month",
     "title": "American Heart Month",
     "description": "Heart disease awareness and cardiovascular health",
-    "date": "2025-02-01T12:00:00",
+    "date": "2025-02-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -491,7 +491,7 @@
     "id": "health-2025-02-national-cancer-prevention-month",
     "title": "National Cancer Prevention Month",
     "description": "Cancer prevention strategies and healthy living",
-    "date": "2025-02-01T12:00:00",
+    "date": "2025-02-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -504,7 +504,7 @@
     "id": "health-2025-02-eating-disorders-awareness-month",
     "title": "Eating Disorders Awareness Month",
     "description": "Awareness of eating disorders and treatment",
-    "date": "2025-02-01T12:00:00",
+    "date": "2025-02-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -518,7 +518,7 @@
     "id": "health-2025-02-low-vision-awareness-month",
     "title": "Low Vision Awareness Month",
     "description": "Support for people with low vision",
-    "date": "2025-02-01T12:00:00",
+    "date": "2025-02-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -531,7 +531,7 @@
     "id": "health-2025-03-national-kidney-month",
     "title": "National Kidney Month",
     "description": "Kidney disease awareness and prevention",
-    "date": "2025-03-01T12:00:00",
+    "date": "2025-03-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -544,7 +544,7 @@
     "id": "health-2025-03-colorectal-cancer-awareness-month",
     "title": "Colorectal Cancer Awareness Month",
     "description": "Colon and rectal cancer screening and prevention",
-    "date": "2025-03-01T12:00:00",
+    "date": "2025-03-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -557,7 +557,7 @@
     "id": "health-2025-03-endometriosis-awareness-month",
     "title": "Endometriosis Awareness Month",
     "description": "Awareness of endometriosis and women's health",
-    "date": "2025-03-01T12:00:00",
+    "date": "2025-03-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -570,7 +570,7 @@
     "id": "health-2025-03-brain-injury-awareness-month",
     "title": "Brain Injury Awareness Month",
     "description": "Traumatic brain injury awareness and prevention",
-    "date": "2025-03-01T12:00:00",
+    "date": "2025-03-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -583,7 +583,7 @@
     "id": "health-2025-03-multiple-sclerosis-awareness-month",
     "title": "Multiple Sclerosis Awareness Month",
     "description": "MS awareness and support",
-    "date": "2025-03-01T12:00:00",
+    "date": "2025-03-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -596,7 +596,7 @@
     "id": "health-2025-04-autism-acceptance-month",
     "title": "Autism Acceptance Month",
     "description": "Autism awareness and acceptance",
-    "date": "2025-04-01T12:00:00",
+    "date": "2025-04-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -609,7 +609,7 @@
     "id": "health-2025-04-parkinson-s-awareness-month",
     "title": "Parkinson's Awareness Month",
     "description": "Parkinson's disease awareness",
-    "date": "2025-04-01T12:00:00",
+    "date": "2025-04-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -622,7 +622,7 @@
     "id": "health-2025-04-national-donate-life-month",
     "title": "National Donate Life Month",
     "description": "Organ and tissue donation awareness",
-    "date": "2025-04-01T12:00:00",
+    "date": "2025-04-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -635,7 +635,7 @@
     "id": "health-2025-04-testicular-cancer-awareness-month",
     "title": "Testicular Cancer Awareness Month",
     "description": "Early detection of testicular cancer",
-    "date": "2025-04-01T12:00:00",
+    "date": "2025-04-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -648,7 +648,7 @@
     "id": "health-2025-04-ibs-awareness-month",
     "title": "IBS Awareness Month",
     "description": "Irritable bowel syndrome awareness",
-    "date": "2025-04-01T12:00:00",
+    "date": "2025-04-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -661,7 +661,7 @@
     "id": "health-2025-05-mental-health-awareness-month",
     "title": "Mental Health Awareness Month",
     "description": "Mental health awareness and stigma reduction",
-    "date": "2025-05-01T12:00:00",
+    "date": "2025-05-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -675,7 +675,7 @@
     "id": "health-2025-05-arthritis-awareness-month",
     "title": "Arthritis Awareness Month",
     "description": "Arthritis awareness and treatment",
-    "date": "2025-05-01T12:00:00",
+    "date": "2025-05-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -688,7 +688,7 @@
     "id": "health-2025-05-lupus-awareness-month",
     "title": "Lupus Awareness Month",
     "description": "Systemic lupus awareness",
-    "date": "2025-05-01T12:00:00",
+    "date": "2025-05-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -701,7 +701,7 @@
     "id": "health-2025-05-skin-cancer-awareness-month",
     "title": "Skin Cancer Awareness Month",
     "description": "Skin cancer prevention and detection",
-    "date": "2025-05-01T12:00:00",
+    "date": "2025-05-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -714,7 +714,7 @@
     "id": "health-2025-05-ehlers-danlos-syndrome-awareness-month",
     "title": "Ehlers-Danlos Syndrome Awareness Month",
     "description": "EDS and hypermobility disorders awareness",
-    "date": "2025-05-01T12:00:00",
+    "date": "2025-05-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -727,7 +727,7 @@
     "id": "health-2025-05-celiac-disease-awareness-month",
     "title": "Celiac Disease Awareness Month",
     "description": "Celiac disease and gluten sensitivity",
-    "date": "2025-05-01T12:00:00",
+    "date": "2025-05-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -740,7 +740,7 @@
     "id": "health-2025-06-ptsd-awareness-month",
     "title": "PTSD Awareness Month",
     "description": "Post-traumatic stress disorder awareness",
-    "date": "2025-06-01T12:00:00",
+    "date": "2025-06-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -753,7 +753,7 @@
     "id": "health-2025-06-alzheimer-s-brain-awareness-month",
     "title": "Alzheimer's & Brain Awareness Month",
     "description": "Alzheimer's disease and dementia awareness",
-    "date": "2025-06-01T12:00:00",
+    "date": "2025-06-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -766,7 +766,7 @@
     "id": "health-2025-06-scleroderma-awareness-month",
     "title": "Scleroderma Awareness Month",
     "description": "Scleroderma and autoimmune disease awareness",
-    "date": "2025-06-01T12:00:00",
+    "date": "2025-06-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -779,7 +779,7 @@
     "id": "health-2025-06-myasthenia-gravis-awareness-month",
     "title": "Myasthenia Gravis Awareness Month",
     "description": "MG awareness and support",
-    "date": "2025-06-01T12:00:00",
+    "date": "2025-06-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -792,7 +792,7 @@
     "id": "health-2025-07-disability-pride-month",
     "title": "Disability Pride Month",
     "description": "Celebrating disability identity and rights",
-    "date": "2025-07-01T12:00:00",
+    "date": "2025-07-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -806,7 +806,7 @@
     "id": "health-2025-07-juvenile-arthritis-awareness-month",
     "title": "Juvenile Arthritis Awareness Month",
     "description": "Arthritis in children and youth",
-    "date": "2025-07-01T12:00:00",
+    "date": "2025-07-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -819,7 +819,7 @@
     "id": "health-2025-08-national-immunization-awareness-month",
     "title": "National Immunization Awareness Month",
     "description": "Vaccination and disease prevention",
-    "date": "2025-08-01T12:00:00",
+    "date": "2025-08-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -832,7 +832,7 @@
     "id": "health-2025-08-psoriasis-awareness-month",
     "title": "Psoriasis Awareness Month",
     "description": "Psoriasis and psoriatic arthritis awareness",
-    "date": "2025-08-01T12:00:00",
+    "date": "2025-08-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -845,7 +845,7 @@
     "id": "health-2025-09-pain-awareness-month",
     "title": "Pain Awareness Month",
     "description": "Chronic pain awareness and management",
-    "date": "2025-09-01T12:00:00",
+    "date": "2025-09-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -858,7 +858,7 @@
     "id": "health-2025-09-blood-cancer-awareness-month",
     "title": "Blood Cancer Awareness Month",
     "description": "Leukemia, lymphoma, and myeloma awareness",
-    "date": "2025-09-01T12:00:00",
+    "date": "2025-09-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -871,7 +871,7 @@
     "id": "health-2025-09-childhood-cancer-awareness-month",
     "title": "Childhood Cancer Awareness Month",
     "description": "Pediatric cancer awareness and research",
-    "date": "2025-09-01T12:00:00",
+    "date": "2025-09-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -884,7 +884,7 @@
     "id": "health-2025-09-ovarian-cancer-awareness-month",
     "title": "Ovarian Cancer Awareness Month",
     "description": "Ovarian cancer detection and treatment",
-    "date": "2025-09-01T12:00:00",
+    "date": "2025-09-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -897,7 +897,7 @@
     "id": "health-2025-09-polycystic-ovary-syndrome-awareness-month",
     "title": "Polycystic Ovary Syndrome Awareness Month",
     "description": "PCOS awareness and women's health",
-    "date": "2025-09-01T12:00:00",
+    "date": "2025-09-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -910,7 +910,7 @@
     "id": "health-2025-09-suicide-prevention-month",
     "title": "Suicide Prevention Month",
     "description": "Suicide prevention and mental health support",
-    "date": "2025-09-01T12:00:00",
+    "date": "2025-09-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -923,7 +923,7 @@
     "id": "health-2025-10-breast-cancer-awareness-month",
     "title": "Breast Cancer Awareness Month",
     "description": "Breast cancer awareness and early detection",
-    "date": "2025-10-01T12:00:00",
+    "date": "2025-10-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -936,7 +936,7 @@
     "id": "health-2025-10-national-depression-screening-month",
     "title": "National Depression Screening Month",
     "description": "Depression awareness and screening",
-    "date": "2025-10-01T12:00:00",
+    "date": "2025-10-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -949,7 +949,7 @@
     "id": "health-2025-10-down-syndrome-awareness-month",
     "title": "Down Syndrome Awareness Month",
     "description": "Down syndrome awareness and inclusion",
-    "date": "2025-10-01T12:00:00",
+    "date": "2025-10-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -962,7 +962,7 @@
     "id": "health-2025-10-adhd-awareness-month",
     "title": "ADHD Awareness Month",
     "description": "Attention deficit hyperactivity disorder awareness",
-    "date": "2025-10-01T12:00:00",
+    "date": "2025-10-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -975,7 +975,7 @@
     "id": "health-2025-10-domestic-violence-awareness-month",
     "title": "Domestic Violence Awareness Month",
     "description": "Domestic violence awareness and prevention",
-    "date": "2025-10-01T12:00:00",
+    "date": "2025-10-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -988,7 +988,7 @@
     "id": "health-2025-10-sudden-infant-death-syndrome-awareness-month",
     "title": "Sudden Infant Death Syndrome Awareness Month",
     "description": "SIDS prevention and safe sleep",
-    "date": "2025-10-01T12:00:00",
+    "date": "2025-10-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -1001,7 +1001,7 @@
     "id": "health-2025-11-american-diabetes-month",
     "title": "American Diabetes Month",
     "description": "Diabetes awareness and prevention",
-    "date": "2025-11-01T12:00:00",
+    "date": "2025-11-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -1015,7 +1015,7 @@
     "id": "health-2025-11-lung-cancer-awareness-month",
     "title": "Lung Cancer Awareness Month",
     "description": "Lung cancer awareness and screening",
-    "date": "2025-11-01T12:00:00",
+    "date": "2025-11-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -1028,7 +1028,7 @@
     "id": "health-2025-11-national-pancreatic-cancer-awareness-month",
     "title": "National Pancreatic Cancer Awareness Month",
     "description": "Pancreatic cancer awareness and research",
-    "date": "2025-11-01T12:00:00",
+    "date": "2025-11-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -1041,7 +1041,7 @@
     "id": "health-2025-11-chronic-obstructive-pulmonary-disease-month",
     "title": "Chronic Obstructive Pulmonary Disease Month",
     "description": "COPD awareness and lung health",
-    "date": "2025-11-01T12:00:00",
+    "date": "2025-11-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -1054,7 +1054,7 @@
     "id": "health-2025-11-epilepsy-awareness-month",
     "title": "Epilepsy Awareness Month",
     "description": "Epilepsy awareness and seizure disorders",
-    "date": "2025-11-01T12:00:00",
+    "date": "2025-11-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -1067,7 +1067,7 @@
     "id": "health-2025-12-world-aids-day-december-1-",
     "title": "World AIDS Day (December 1)",
     "description": "HIV/AIDS awareness and prevention",
-    "date": "2025-12-01T12:00:00",
+    "date": "2025-12-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -1081,7 +1081,7 @@
     "id": "health-2025-12-safe-toys-and-gifts-month",
     "title": "Safe Toys and Gifts Month",
     "description": "Child safety and injury prevention",
-    "date": "2025-12-01T12:00:00",
+    "date": "2025-12-01",
     "location": "North America",
     "category": "health-awareness",
     "tags": [
@@ -1094,7 +1094,7 @@
     "id": "health-2025-12-01-world-aids-day",
     "title": "World AIDS Day",
     "description": "HIV/AIDS awareness, prevention, and support",
-    "date": "2025-12-01T12:00:00",
+    "date": "2025-12-01",
     "location": "Global",
     "category": "health-awareness",
     "tags": [
