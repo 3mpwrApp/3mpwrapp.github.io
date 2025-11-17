@@ -6,7 +6,8 @@
  * via the Workers API endpoints.
  * 
  * Usage:
- *   node scripts/sync-to-cloudflare.mjs
+ *   node scripts/sync-to-cloudflare.mjs [--full]
+ *   --full: Use full campaign data instead of compressed version
  * 
  * Environment:
  *   CLOUDFLARE_EVENTS_WORKER_URL - URL of events worker (default: https://3mpwrapp-calendar.empowrapp08162025.workers.dev)
@@ -25,6 +26,48 @@ const EVENTS_WORKER_URL = process.env.CLOUDFLARE_EVENTS_WORKER_URL ||
   'https://3mpwrapp-calendar.empowrapp08162025.workers.dev';
 const CAMPAIGNS_WORKER_URL = process.env.CLOUDFLARE_CAMPAIGNS_WORKER_URL || 
   'https://empowrapp-campaigns.empowrapp08162025.workers.dev';
+
+// Check for --full flag
+const useFullData = process.argv.includes('--full');
+
+/**
+ * Compress campaign data by removing verbose fields not needed for app display
+ */
+function compressCampaign(campaign) {
+  const compressed = { ...campaign };
+
+  // Keep essential fields for app display
+  const essentialFields = [
+    'id', 'title', 'summary', 'target', 'goalCount', 'membersCount',
+    'contactEmail', 'createdAt', 'petitionId', 'petitionUrl', 'websiteUrl',
+    'actionItems', 'legislation'
+  ];
+
+  // Remove verbose fields that can be fetched on-demand
+  delete compressed.description; // Remove long descriptions
+  delete compressed.shareTemplates; // Remove share templates (can be generated)
+  delete compressed.internationalModel; // Remove detailed model info
+
+  // Compress legislation to just essential info
+  if (compressed.legislation) {
+    compressed.legislation = compressed.legislation.map(leg => ({
+      name: leg.name,
+      status: leg.status,
+      url: leg.url || null // Keep only essential fields
+    }));
+  }
+
+  // Compress action items to minimal format
+  if (compressed.actionItems) {
+    compressed.actionItems = compressed.actionItems.map(item => ({
+      id: item.id,
+      text: item.text,
+      completed: item.completed || false
+    }));
+  }
+
+  return compressed;
+}
 
 async function syncEvents() {
   console.log('📅 Syncing events to Cloudflare Worker...');
@@ -66,9 +109,20 @@ async function syncCampaigns() {
   
   try {
     // Read campaigns from public API
-    const campaignsPath = join(ROOT, 'public', 'api', 'campaigns.json');
+    const campaignsPath = useFullData 
+      ? join(ROOT, 'public', 'api', 'campaigns-full.json')
+      : join(ROOT, 'public', 'api', 'campaigns.json');
+    
     const campaignsData = await fs.readFile(campaignsPath, 'utf-8');
-    const campaigns = JSON.parse(campaignsData);
+    let campaigns = JSON.parse(campaignsData);
+    
+    // Compress campaigns unless --full flag is used
+    if (!useFullData) {
+      campaigns = campaigns.map(compressCampaign);
+      console.log(`   Using compressed data (${campaigns.length} campaigns)`);
+    } else {
+      console.log(`   Using full data (${campaigns.length} campaigns)`);
+    }
     
     console.log(`   Found ${campaigns.length} campaigns to sync`);
     
@@ -130,6 +184,7 @@ async function main() {
   console.log('📍 Target workers:');
   console.log(`   Events: ${EVENTS_WORKER_URL}`);
   console.log(`   Campaigns: ${CAMPAIGNS_WORKER_URL}`);
+  console.log(`   Mode: ${useFullData ? 'FULL DATA' : 'COMPRESSED DATA (recommended)'}`);
   console.log('');
   
   try {
