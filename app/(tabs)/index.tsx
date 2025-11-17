@@ -11,6 +11,7 @@ import GapView from '../../components/GapView';
 import { HomeGuide } from '../../components/HomeGuide';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { useAuth } from '../../context/AuthContext';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
 import type { Celebration } from '../../services/celebrations';
@@ -21,6 +22,202 @@ import { createTextStyles } from '../../theme/typography.enhanced';
 import { useAppPalette } from '../../theme/usePalette';
 import { logError } from '../../utils/errorLogger';
 import { logger } from '../../utils/logger';
+
+// Welcome Modal Component
+const WelcomeModal = React.memo(({ visible, onDismiss }: { visible: boolean; onDismiss: () => void }) => {
+  const { t } = useTranslation();
+  const palette = useAppPalette();
+  const { factor } = useTextScale();
+  
+  if (!visible) return null;
+  
+  return (
+    <View style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(0,0,0,0.8)',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1000,
+      padding: 20,
+    }}>
+      <View style={{
+        backgroundColor: palette.card,
+        borderRadius: 16,
+        padding: 24,
+        maxWidth: 400,
+        width: '100%',
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
+        elevation: 8,
+      }}>
+        <Text style={{
+          fontSize: Math.round(24 * factor),
+          fontWeight: '700',
+          color: palette.text,
+          textAlign: 'center',
+          marginBottom: 16,
+        }}>
+          🎉 {t('welcome.title', 'Welcome to 3mpwr!')}
+        </Text>
+        
+        <Text style={{
+          fontSize: Math.round(16 * factor),
+          color: palette.text,
+          textAlign: 'center',
+          marginBottom: 24,
+          lineHeight: Math.round(24 * factor),
+        }}>
+          {t('welcome.message', 'Let\'s get you set up with personalized tools and resources for your disability advocacy journey.')}
+        </Text>
+        
+        <View style={{ gap: 12 }}>
+          <Link href={'/onboarding/first7' as any} asChild={true}>
+            <A11yPressable
+              style={{
+                backgroundColor: palette.primary,
+                paddingVertical: 14,
+                borderRadius: 8,
+                alignItems: 'center',
+              }}
+              onPress={onDismiss}
+              accessibilityRole="button"
+              accessibilityLabel={t('welcome.startOnboarding', 'Start onboarding')}
+            >
+              <Text style={{
+                color: palette.onPrimary,
+                fontSize: Math.round(16 * factor),
+                fontWeight: '600',
+              }}>
+                🚀 {t('welcome.startOnboarding', 'Get Started')}
+              </Text>
+            </A11yPressable>
+          </Link>
+          
+          <A11yPressable
+            style={{
+              backgroundColor: palette.surface,
+              borderWidth: 1,
+              borderColor: palette.muted,
+              paddingVertical: 14,
+              borderRadius: 8,
+              alignItems: 'center',
+            }}
+            onPress={onDismiss}
+            accessibilityRole="button"
+            accessibilityLabel={t('welcome.exploreLater', 'Explore the app first')}
+          >
+            <Text style={{
+              color: palette.text,
+              fontSize: Math.round(16 * factor),
+              fontWeight: '600',
+            }}>
+              {t('welcome.exploreLater', 'Explore First')}
+            </Text>
+          </A11yPressable>
+        </View>
+      </View>
+    </View>
+  );
+});
+WelcomeModal.displayName = 'WelcomeModal';
+
+// Guest Mode Banner Component
+const GuestModeBanner = React.memo(() => {
+  const { isGuest } = useAuth();
+  const { t } = useTranslation();
+  const palette = useAppPalette();
+  const { factor } = useTextScale();
+  
+  if (!isGuest) return null;
+  
+  return (
+    <View style={{
+      backgroundColor: palette.surface,
+      borderLeftWidth: 4,
+      borderLeftColor: palette.warning,
+      borderRadius: 8,
+      padding: 12,
+      marginVertical: 8,
+      shadowColor: palette.text,
+      shadowOffset: { width: 0, height: 1 },
+      shadowOpacity: 0.1,
+      shadowRadius: 2,
+      elevation: 2,
+    }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
+        <Text style={{ fontSize: 16, marginRight: 8 }}>👤</Text>
+        <Text style={{
+          fontSize: Math.round(14 * factor),
+          fontWeight: '700',
+          color: palette.warning,
+        }}>
+          {t('guest.banner.title', 'Guest Mode')}
+        </Text>
+      </View>
+      <Text style={{
+        fontSize: Math.round(12 * factor),
+        lineHeight: Math.round(18 * factor),
+        color: palette.text,
+        opacity: 0.85,
+      }}>
+        {t('guest.banner.message', 'You\'re using guest mode. Your data isn\'t saved and some features are limited. Create an account to save your progress and access all features.')}
+      </Text>
+      <View style={{ flexDirection: 'row', marginTop: 8, gap: 8 }}>
+        <Link href={'/(auth)/signup' as any} asChild={true} style={{ flex: 1 }}>
+          <A11yPressable
+            style={{
+              backgroundColor: palette.primary,
+              paddingVertical: 8,
+              paddingHorizontal: 12,
+              borderRadius: 6,
+              alignItems: 'center',
+            }}
+            accessibilityRole="button"
+            accessibilityLabel={t('guest.banner.createAccount', 'Create account')}
+          >
+            <Text style={{
+              color: palette.onPrimary,
+              fontSize: Math.round(12 * factor),
+              fontWeight: '600',
+            }}>
+              {t('guest.banner.createAccount', 'Create Account')}
+            </Text>
+          </A11yPressable>
+        </Link>
+        <Link href={'/(auth)/signin' as any} asChild={true} style={{ flex: 1 }}>
+          <A11yPressable
+            style={{
+              backgroundColor: palette.surface,
+              borderWidth: 1,
+              borderColor: palette.muted,
+              paddingVertical: 8,
+              paddingHorizontal: 12,
+              borderRadius: 6,
+              alignItems: 'center',
+            }}
+            accessibilityRole="button"
+            accessibilityLabel={t('guest.banner.signIn', 'Sign in')}
+          >
+            <Text style={{
+              color: palette.text,
+              fontSize: Math.round(12 * factor),
+              fontWeight: '600',
+            }}>
+              {t('guest.banner.signIn', 'Sign In')}
+            </Text>
+          </A11yPressable>
+        </Link>
+      </View>
+    </View>
+  );
+});
+GuestModeBanner.displayName = 'GuestModeBanner';
 
 // Safe wrapper for optional components - prevents crashes from non-critical features
 const SafeOptionalComponent = ({ children, fallback = null }: { children: React.ReactNode; fallback?: React.ReactNode }) => {
@@ -237,6 +434,9 @@ const HomeScreen = React.memo(() => {
   // Celebration state
   const [celebration, setCelebration] = React.useState<Celebration | null>(null);
   
+  // Welcome modal for new users
+  const [showWelcome, setShowWelcome] = React.useState(false);
+  
   // Check for celebrations on mount and periodically
   React.useEffect(() => {
     const checkForCelebrations = async () => {
@@ -256,11 +456,38 @@ const HomeScreen = React.memo(() => {
     return () => clearInterval(interval);
   }, []);
   
+  // Check if user is new (no onboarding started)
+  React.useEffect(() => {
+    const checkNewUser = async () => {
+      try {
+        const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
+        const onboardingData = await AsyncStorage.getItem('onboarding:first7:v1');
+        const disabilityProfile = await AsyncStorage.getItem('disabilityWizard:profile:v1');
+        
+        // Show welcome if no onboarding data exists
+        if (!onboardingData && !disabilityProfile) {
+          setShowWelcome(true);
+        }
+      } catch (error) {
+        // If we can't check, assume they're not new
+        logError('HomeScreen', 'Check new user', error as Error);
+      }
+    };
+    
+    // Delay check to avoid interfering with initial load
+    const timer = setTimeout(checkNewUser, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+  
   const handleCelebrationDismiss = async () => {
     if (celebration) {
       await markCelebrationSeen(celebration.id);
       setCelebration(null);
     }
+  };
+  
+  const handleWelcomeDismiss = () => {
+    setShowWelcome(false);
   };
   
   // Debug logging to track mount and re-renders (only on mount and unmount)
@@ -288,6 +515,9 @@ const HomeScreen = React.memo(() => {
     <ResponsiveScreenWrapper 
       testID="home-screen"
     >
+      {/* Welcome Modal for New Users */}
+      <WelcomeModal visible={showWelcome} onDismiss={handleWelcomeDismiss} />
+      
       {/* Celebration Toast */}
       <CelebrationToast 
         celebration={celebration}
@@ -304,6 +534,9 @@ const HomeScreen = React.memo(() => {
       </Text>
       
       <DisclaimerBanner type="general" compact={true} />
+      
+      {/* Guest Mode Warning */}
+      <GuestModeBanner />
       
       {/* Main Action Buttons - Organized in a row */}
       <GapView style={{ flexDirection: 'row', marginBottom: 16 }} gap={12}>

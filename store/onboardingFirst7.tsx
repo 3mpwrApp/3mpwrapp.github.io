@@ -13,6 +13,7 @@ try {
 export type First7StepId =
   | 'capture_basics'
   | 'choose_role'
+  | 'explore_unified_tools'
   | 'first_evidence_note'
   | 'tag_key_contacts'
   | 'bookmark_resources'
@@ -35,6 +36,7 @@ const defaultState: First7State = {
   completed: {
     capture_basics: false,
     choose_role: false,
+    explore_unified_tools: false,
     first_evidence_note: false,
     tag_key_contacts: false,
     bookmark_resources: false,

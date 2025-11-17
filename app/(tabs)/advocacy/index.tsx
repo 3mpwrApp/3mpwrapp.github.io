@@ -10,11 +10,15 @@ import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper
 import SearchBar from '../../../components/SearchBar';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
+import { CONSOLIDATION_FLAGS, isConsolidationFeatureEnabled } from '../../../services/consolidationFlags';
 import { useAppPalette } from '../../../theme/usePalette';
 
 type Feature = { route: string; key: keyof typeof featureKeyMap; };
 // Map feature keys to translation keys under advocacy.tools.*
 const featureKeyMap = {
+  ai_assistant: 'advocacy.tools.ai_assistant',
+  accountability_hub: 'advocacy.tools.accountability_hub',
+  evidence_manager: 'advocacy.tools.evidence_manager',
   ai_translator: 'advocacy.tools.ai_translator',
   ai_case: 'advocacy.tools.ai_case',
   ai_gov: 'advocacy.tools.ai_gov',
@@ -30,6 +34,9 @@ const featureKeyMap = {
 } as const;
 
 const FEATURES: Feature[] = [
+  { route: '/(tabs)/advocacy/ai-assistant', key: 'ai_assistant' },
+  { route: '/(tabs)/advocacy/accountability-hub', key: 'accountability_hub' },
+  { route: '/(tabs)/advocacy/evidence-manager', key: 'evidence_manager' },
   { route: '/(tabs)/advocacy/ai-advocate-translator', key: 'ai_translator' },
   { route: '/(tabs)/advocacy/ai-case-interpreter', key: 'ai_case' },
   { route: '/(tabs)/advocacy/ai-gov-navigator', key: 'ai_gov' },
@@ -59,9 +66,33 @@ export default function AdvocacyHub() {
     const h = norm(href);
     return h.includes(q);
   };
+
+  const [unifiedAIEnabled, setUnifiedAIEnabled] = React.useState(false);
+  const [accountabilityHubEnabled, setAccountabilityHubEnabled] = React.useState(false);
+  const [evidenceManagerEnabled, setEvidenceManagerEnabled] = React.useState(false);
+
+  // Check feature flags on mount
+  React.useEffect(() => {
+    Promise.all([
+      isConsolidationFeatureEnabled(CONSOLIDATION_FLAGS.UNIFIED_AI_ASSISTANT),
+      isConsolidationFeatureEnabled(CONSOLIDATION_FLAGS.ACCOUNTABILITY_HUB),
+      isConsolidationFeatureEnabled(CONSOLIDATION_FLAGS.EVIDENCE_MANAGER),
+    ]).then(([aiEnabled, accountabilityEnabled, evidenceEnabled]) => {
+      setUnifiedAIEnabled(aiEnabled);
+      setAccountabilityHubEnabled(accountabilityEnabled);
+      setEvidenceManagerEnabled(evidenceEnabled);
+    }).catch(() => {
+      setUnifiedAIEnabled(false);
+      setAccountabilityHubEnabled(false);
+      setEvidenceManagerEnabled(false);
+    });
+  }, []);
   // Features flagged as placeholders/incomplete today
   const BETA: Array<Feature['key']> = [
     // High-priority items now available for early testing
+    'ai_assistant',
+    'accountability_hub',
+    'evidence_manager',
     'ai_translator',
     'ai_case',
     'ai_gov',
@@ -89,8 +120,12 @@ export default function AdvocacyHub() {
 
       <SearchBar value={query} onChangeText={setQuery} placeholder={t('advocacy.search','Search advocacy tools...')} />
 
-      <Text style={s.sectionHeader}>{t('advocacy.sections.ai','AI Tools')}</Text>
-      {FEATURES.filter(f => ['ai_translator','ai_case','ai_gov','policy_simple'].includes(f.key)).map(f => {
+            <Text style={s.sectionHeader}>{t('advocacy.sections.ai','AI Tools')}</Text>
+      {FEATURES.filter(f => {
+        if (f.key === 'ai_assistant') return unifiedAIEnabled;
+        if (f.key === 'evidence_manager') return evidenceManagerEnabled;
+        return ['ai_translator','ai_case','ai_gov','policy_simple'].includes(f.key);
+      }).map(f => {
         const base = t(featureKeyMap[f.key]);
         const titleText = BETA.includes(f.key)
           ? `${base} (Beta)`
@@ -141,7 +176,10 @@ export default function AdvocacyHub() {
       })}
 
       <Text style={s.sectionHeader}>{t('advocacy.sections.collective','Collective & Accountability')}</Text>
-      {FEATURES.filter(f => ['collective','accountability','accountability_cases'].includes(f.key)).map(f => {
+      {FEATURES.filter(f => {
+        if (f.key === 'accountability_hub') return accountabilityHubEnabled;
+        return ['collective','accountability','accountability_cases'].includes(f.key);
+      }).map(f => {
         const base = t(featureKeyMap[f.key]);
         const titleText = BETA.includes(f.key)
           ? `${base} (Beta)`

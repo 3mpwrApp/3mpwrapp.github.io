@@ -15,6 +15,7 @@ import { useAppPalette } from '../../theme/usePalette';
 const steps = [
   { id: 'capture_basics', label: 'Capture your basics', hint: 'Profile and personal details', required: true },
   { id: 'choose_role', label: 'Choose your role', hint: 'Self-advocate, supporter, or ally', required: true },
+  { id: 'explore_unified_tools', label: 'Explore unified tools', hint: 'Health Tracker, AI Assistant, Accountability Hub' },
   { id: 'first_evidence_note', label: 'Add your first Evidence Locker note', hint: 'Secure, encrypted' },
   { id: 'tag_key_contacts', label: 'Tag key contacts', hint: 'Doctors, advocates' },
   { id: 'bookmark_resources', label: 'Bookmark top resources', hint: 'Save for quick access' },
@@ -150,6 +151,21 @@ export default function First7Screen(){
         <View style={{ height: 1, backgroundColor: palette.muted, marginVertical: 8 }} />
         <Text style={{ fontWeight: '600', color: palette.text }}>Quick links</Text>
         <GapView gap={8} style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+          <Link href="/(tabs)/wellness" asChild={true}>
+            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+              <Text style={{ color: palette.text }}>Health Tracker</Text>
+            </Pressable>
+          </Link>
+          <Link href="/(tabs)/advocacy/ai-assistant" asChild={true}>
+            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+              <Text style={{ color: palette.text }}>AI Assistant</Text>
+            </Pressable>
+          </Link>
+          <Link href="/(tabs)/advocacy/accountability-hub" asChild={true}>
+            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+              <Text style={{ color: palette.text }}>Accountability Hub</Text>
+            </Pressable>
+          </Link>
           <Link href="/(tabs)/resources/evidence-locker" asChild={true}>
             <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
               <Text style={{ color: palette.text }}>Evidence Locker</Text>

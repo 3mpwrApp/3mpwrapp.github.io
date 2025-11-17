@@ -100,6 +100,7 @@
     "@react-native-async-storage/async-storage": "2.2.0",
     "@react-native-community/netinfo": "^11.4.1",
     "@react-native-picker/picker": "2.11.1",
+    "@react-navigation/material-top-tabs": "^7.4.3",
     "@vitalets/google-translate-api": "^9.2.1",
     "cheerio": "^1.1.2",
     "crypto-js": "^4.2.0",

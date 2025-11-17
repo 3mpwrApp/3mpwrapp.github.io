@@ -9,6 +9,7 @@ import SearchBar from '../../../components/SearchBar';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
+import { CONSOLIDATION_FLAGS, isConsolidationFeatureEnabled } from '../../../services/consolidationFlags';
 import { createTextStyles } from '../../../theme/typography.enhanced';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -58,6 +59,14 @@ export default function WellnessHub() {
   const textStyles = React.useMemo(() => createTextStyles(palette), [palette]);
   
   const [query, setQuery] = React.useState('');
+  const [unifiedHealthTrackerEnabled, setUnifiedHealthTrackerEnabled] = React.useState(false);
+
+  // Check feature flag on mount
+  React.useEffect(() => {
+    isConsolidationFeatureEnabled(CONSOLIDATION_FLAGS.UNIFIED_HEALTH_TRACKER)
+      .then(setUnifiedHealthTrackerEnabled)
+      .catch(() => setUnifiedHealthTrackerEnabled(false));
+  }, []);
   
   // Memoize helper functions
   const norm = React.useCallback((v: string) => v.toLowerCase().replace(/\s+/g, '-'), []);
@@ -84,6 +93,7 @@ export default function WellnessHub() {
   const BETA = React.useMemo(
     () =>
       new Set<string>([
+        '/wellness/health-tracker',
         '/wellness/ai-companion',
         '/wellness/micro-movement',
         '/wellness/pacing-partner',
@@ -321,6 +331,13 @@ export default function WellnessHub() {
         {t('wellness.sections.tracking', 'Tracking')}
       </Text>
       <GapView gap={12}>
+        {unifiedHealthTrackerEnabled && matches('/wellness/health-tracker') && (
+          <Card
+            href="/wellness/health-tracker"
+            title={label('/wellness/health-tracker', t('wellness.healthTracker.title', 'Unified Health Tracker'))}
+            desc={t('wellness.healthTracker.desc', 'Track symptoms, pain, chronic conditions, rehab, and pacing in one place.')}
+          />
+        )}
         {matches('/wellness/symptom-tracker') && (
           <Card
             href="/wellness/symptom-tracker"
