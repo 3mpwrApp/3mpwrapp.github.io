@@ -24,11 +24,24 @@ async function syncData() {
     // Use tsx to execute TypeScript and get the exported data
     const { execSync } = await import('child_process');
     
-    // Create temp script to extract data
+    // Create temp script to extract data - include ALL event types
+    const currentYear = new Date().getFullYear();
     const tempScript = `
 import { events } from './data/events.ts';
 import { campaigns } from './data/campaigns.ts';
-console.log(JSON.stringify({ events, campaigns }));
+import { generateCanadianHolidays } from './data/holidays-ca.ts';
+import { generateDisabilityObservances } from './data/disability-observances.ts';
+import { generateHealthAwarenessEvents } from './data/health-awareness-months.ts';
+
+const year = ${currentYear};
+const holidays = generateCanadianHolidays(year);
+const observances = generateDisabilityObservances(year);
+const healthAwareness = generateHealthAwarenessEvents(year);
+
+// Combine all events: community events + system-generated events
+const allEvents = [...events, ...holidays, ...observances, ...healthAwareness];
+
+console.log(JSON.stringify({ events: allEvents, campaigns }));
 `;
     
     const tempFile = join(ROOT, '.temp-sync.ts');
