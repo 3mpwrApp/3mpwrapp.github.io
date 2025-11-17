@@ -233,15 +233,133 @@ export function useFocusRestore(shouldRestore: boolean = true) {
 export function useLiveRegion(content: string, politeness: "polite" | "assertive" = "polite") {
   React.useEffect(() => {
     if (!content) return;
-    
+
     const delay = politeness === "assertive" ? 100 : 300;
     const id = setTimeout(() => {
       if (typeof AccessibilityInfo?.announceForAccessibility === "function") {
         AccessibilityInfo.announceForAccessibility(content);
       }
     }, delay);
-    
+
     return () => clearTimeout(id);
   }, [content, politeness]);
+}
+
+// Enhanced hook for managing complex form interactions with screen reader feedback
+export function useAccessibleFormInteraction(
+  fieldName: string,
+  validationMessage?: string,
+  successMessage?: string
+) {
+  const [hasError, setHasError] = React.useState(false);
+  const [hasSuccess, setHasSuccess] = React.useState(false);
+
+  const announceError = React.useCallback(() => {
+    if (validationMessage) {
+      setHasError(true);
+      AccessibilityInfo?.announceForAccessibility?.(
+        `${fieldName}: ${validationMessage}`
+      );
+      // Reset error state after announcement
+      setTimeout(() => setHasError(false), 1000);
+    }
+  }, [fieldName, validationMessage]);
+
+  const announceSuccess = React.useCallback(() => {
+    if (successMessage) {
+      setHasSuccess(true);
+      AccessibilityInfo?.announceForAccessibility?.(
+        `${fieldName}: ${successMessage}`
+      );
+      // Reset success state after announcement
+      setTimeout(() => setHasSuccess(false), 1000);
+    }
+  }, [fieldName, successMessage]);
+
+  return {
+    hasError,
+    hasSuccess,
+    announceError,
+    announceSuccess,
+  };
+}
+
+// Hook for managing loading states with accessibility announcements
+export function useAccessibleLoading(
+  isLoading: boolean,
+  loadingMessage: string = "Loading...",
+  completionMessage?: string
+) {
+  const prevLoadingRef = React.useRef(isLoading);
+
+  React.useEffect(() => {
+    if (isLoading && !prevLoadingRef.current) {
+      // Started loading
+      AccessibilityInfo?.announceForAccessibility?.(loadingMessage);
+    } else if (!isLoading && prevLoadingRef.current && completionMessage) {
+      // Finished loading
+      AccessibilityInfo?.announceForAccessibility?.(completionMessage);
+    }
+
+    prevLoadingRef.current = isLoading;
+  }, [isLoading, loadingMessage, completionMessage]);
+
+  return {
+    accessibilityLabel: isLoading ? loadingMessage : undefined,
+    accessibilityState: { busy: isLoading },
+  };
+}
+
+// Hook for managing tab navigation with screen reader feedback
+export function useAccessibleTabs(
+  tabs: string[],
+  activeTabIndex: number,
+  onTabChange: (index: number) => void
+) {
+  const announceTabChange = React.useCallback((index: number) => {
+    const tabName = tabs[index];
+    AccessibilityInfo?.announceForAccessibility?.(
+      `Switched to ${tabName} tab, ${index + 1} of ${tabs.length}`
+    );
+    onTabChange(index);
+  }, [tabs, onTabChange]);
+
+  const getTabAccessibilityProps = React.useCallback((index: number) => ({
+    accessibilityRole: "tab" as const,
+    accessibilityState: {
+      selected: index === activeTabIndex,
+    },
+    accessibilityLabel: `${tabs[index]}, tab ${index + 1} of ${tabs.length}`,
+  }), [tabs, activeTabIndex]);
+
+  return {
+    announceTabChange,
+    getTabAccessibilityProps,
+    activeTabName: tabs[activeTabIndex],
+  };
+}
+
+// Hook for managing expandable content with screen reader feedback
+export function useAccessibleExpandable(
+  isExpanded: boolean,
+  label: string,
+  onToggle: () => void
+) {
+  const announceToggle = React.useCallback(() => {
+    const state = isExpanded ? "collapsed" : "expanded";
+    AccessibilityInfo?.announceForAccessibility?.(
+      `${label} ${state}`
+    );
+    onToggle();
+  }, [isExpanded, label, onToggle]);
+
+  return {
+    accessibilityProps: {
+      accessibilityRole: "button" as const,
+      accessibilityState: { expanded: isExpanded },
+      accessibilityLabel: `${label}, ${isExpanded ? "expanded" : "collapsed"}`,
+    },
+    announceToggle,
+  };
 }
 

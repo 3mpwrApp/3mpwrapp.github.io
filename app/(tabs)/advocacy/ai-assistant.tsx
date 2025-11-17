@@ -4,11 +4,14 @@ import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-nati
 import A11yPressable from '../../../components/A11yPressable';
 import AIDisclaimer from '../../../components/AIDisclaimer';
 import GapView from '../../../components/GapView';
+import { LoadingWrapper } from '../../../components/LoadingWrapper';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAccessibleLoading,
+    useAccessibleTabs,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { aiCoachPrompt } from '../../../services/aiAdvocacy';
@@ -42,12 +45,26 @@ export default function UnifiedAIAssistant() {
   const [mode, setMode] = React.useState<AIMode>('coach');
   const [loading, setLoading] = React.useState(false);
 
+  // Enhanced accessibility for loading states
+  const loadingAccessibility = useAccessibleLoading(
+    loading,
+    t('advocacy.aiAssistant.thinking', 'AI is thinking...'),
+    t('advocacy.aiAssistant.ready', 'AI response ready')
+  );
+
+  // Enhanced accessibility for tab navigation
   const modes = [
     { key: 'coach' as AIMode, label: t('advocacy.aiAssistant.modes.coach', 'Self-Advocacy Coach'), desc: t('advocacy.aiAssistant.modes.coachDesc', 'Get guidance on advocacy steps') },
     { key: 'interpreter' as AIMode, label: t('advocacy.aiAssistant.modes.interpreter', 'Case Interpreter'), desc: t('advocacy.aiAssistant.modes.interpreterDesc', 'Clarify forms and decisions') },
     { key: 'translator' as AIMode, label: t('advocacy.aiAssistant.modes.translator', 'Advocate Translator'), desc: t('advocacy.aiAssistant.modes.translatorDesc', 'Turn words into strong advocacy language') },
     { key: 'navigator' as AIMode, label: t('advocacy.aiAssistant.modes.navigator', 'Government Navigator'), desc: t('advocacy.aiAssistant.modes.navigatorDesc', 'Find who to contact and what to say') },
   ];
+
+  const { announceTabChange, getTabAccessibilityProps } = useAccessibleTabs(
+    modes.map(m => m.label),
+    modes.findIndex(m => m.key === mode),
+    (index) => setMode(modes[index].key)
+  );
 
   const sendMessage = async () => {
     if (!input.trim() || loading) return;
@@ -129,17 +146,15 @@ export default function UnifiedAIAssistant() {
       {/* Mode Selection */}
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.modeSelector}>
         <GapView style={{ paddingHorizontal: s('sm') }} gap={s('sm')}>
-          {modes.map(m => (
+          {modes.map((m, index) => (
             <A11yPressable
               key={m.key}
-              onPress={() => setMode(m.key)}
+              onPress={() => announceTabChange(index)}
               style={[
                 styles.modeButton,
                 mode === m.key && { backgroundColor: palette.primary, borderColor: palette.primary }
               ]}
-              accessibilityRole="button"
-              accessibilityState={{ selected: mode === m.key }}
-              accessibilityLabel={`${m.label}. ${m.desc}`}
+              {...getTabAccessibilityProps(index)}
             >
               <Text style={[
                 styles.modeButtonText,
@@ -158,41 +173,46 @@ export default function UnifiedAIAssistant() {
         contentContainerStyle={{ padding: s('md') }}
         ref={scrollRef => scrollRef?.scrollToEnd()}
       >
-        {messages.length === 0 && (
-          <View style={styles.emptyState}>
-            <Text style={styles.emptyText}>
-              {t('advocacy.aiAssistant.welcome', 'Select a mode above and ask me anything about advocacy, accessibility, or disability rights.')}
-            </Text>
-          </View>
-        )}
+        <LoadingWrapper
+          isLoading={messages.length === 0 && !loading}
+          skeletonType="text"
+          skeletonCount={4}
+          fallback={
+            <View style={styles.emptyState}>
+              <Text style={styles.emptyText}>
+                {t('advocacy.aiAssistant.welcome', 'Select a mode above and ask me anything about advocacy, accessibility, or disability rights.')}
+              </Text>
+            </View>
+          }
+        >
+          {messages.map(message => (
+            <View
+              key={message.id}
+              style={[
+                styles.message,
+                message.role === 'user' ? styles.userMessage : styles.assistantMessage
+              ]}
+            >
+              <Text style={[
+                styles.messageText,
+                message.role === 'user' ? { color: palette.onPrimary } : { color: palette.text }
+              ]}>
+                {message.content}
+              </Text>
+              <Text style={styles.messageTime}>
+                {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+              </Text>
+            </View>
+          ))}
 
-        {messages.map(message => (
-          <View
-            key={message.id}
-            style={[
-              styles.message,
-              message.role === 'user' ? styles.userMessage : styles.assistantMessage
-            ]}
-          >
-            <Text style={[
-              styles.messageText,
-              message.role === 'user' ? { color: palette.onPrimary } : { color: palette.text }
-            ]}>
-              {message.content}
-            </Text>
-            <Text style={styles.messageTime}>
-              {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-            </Text>
-          </View>
-        ))}
-
-        {loading && (
-          <View style={[styles.message, styles.assistantMessage]}>
-            <Text style={styles.loadingText}>
-              {t('advocacy.aiAssistant.thinking', 'Thinking...')}
-            </Text>
-          </View>
-        )}
+          {loading && (
+            <View style={[styles.message, styles.assistantMessage]}>
+              <Text style={styles.loadingText}>
+                {t('advocacy.aiAssistant.thinking', 'Thinking...')}
+              </Text>
+            </View>
+          )}
+        </LoadingWrapper>
       </ScrollView>
 
       {/* Input Area */}
@@ -214,7 +234,8 @@ export default function UnifiedAIAssistant() {
             (!input.trim() || loading) && { opacity: 0.5 }
           ]}
           accessibilityRole="button"
-          accessibilityLabel={t('common.send', 'Send')}
+          accessibilityLabel={loading ? loadingAccessibility.accessibilityLabel : t('common.send', 'Send')}
+          {...loadingAccessibility.accessibilityState}
         >
           <Text style={styles.sendButtonText}>
             {t('common.send', 'Send')}
