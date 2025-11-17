@@ -1,8 +1,26 @@
 {
   "version": "1.0.0",
   "generated": "2025-11-17",
-  "totalDocuments": 132,
+  "totalDocuments": 133,
   "documents": [
+    {
+      "id": "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "source": "blog",
+      "title": "Feature Spotlight: Spoon Theory & Energy Management",
+      "excerpt": "Feature Spotlight: Spoon Theory & Energy Management Category: Wellness Tools Track your daily \"spoons\" (energy units) and plan activities around available capacity --- What Is Spoon Theory & Energy Ma",
+      "content": "Feature Spotlight: Spoon Theory & Energy Management Category: Wellness Tools Track your daily \"spoons\" (energy units) and plan activities around available capacity --- What Is Spoon Theory & Energy Management? Spoon Theory & Energy Management is designed to track your daily \"spoons\" (energy units) and plan activities around available capacity. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- Key Highlights - Visual spoon tracker with customizable daily capacity - Activity cost estimates help plan your day - Energy history shows patterns over time - Smart suggestions for low-energy days - Integration with Wellness Hub tracking - Explain spoon theory to others with shareable graphics --- How It Works Here are real examples of how you can use Spoon Theory & Energy Management: 1. Start day with 12 spoons, track as activities consume them 2. See that grocery shopping costs 3 spoons 3. Plan medical appointment on high-energy day 4. Discover which activities drain you most 5. Share your spoon count with support people --- Why Spoon Theory & Energy Management Matters - Better understand and communicate your energy limits - Avoid overcommitting and burnout - Plan important tasks for when you have capacity - Help others understand your experience --- Getting Started Ready to try Spoon Theory & Energy Management? Here's how to get started: 1. Download the app - Available on iOS and Android (coming soon) 2. Complete setup - Takes just 5 minutes 3. Find the feature - Look for \"Spoon Theory & Energy Management\" in your app 4. Follow the guide - In-app tutorials walk you through each step --- Learn More For complete information about Spoon Theory & Energy Management and all other features: - 📖 Read the Complete User Guide - ✨ Explore All Features - 🧪 Join Beta Testing - 📬 Subscribe to Updates --- About 3mpwrApp 3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core. All features are: - ✅ Fully accessible (WCAG 2.2 AA+) - 🔒 Privacy-first (local-first architecture) - 🇨🇦 Canadian-focused (all provinces/territories) - 🌍 Culturally inclusive (Indigenous languages supported)",
+      "date": "2025-11-17 09:00:00 +0000",
+      "tags": [
+        "features",
+        "spotlight",
+        "wellness-tools"
+      ],
+      "categories": [
+        "features"
+      ],
+      "url": "/2025-11-17-feature-spotlight-spoon-theory-energy-management",
+      "filesize": 2415
+    },
     {
       "id": "blog/2025-11-17-weekly-update-week-47.md",
       "source": "blog",
@@ -24,8 +42,8 @@
       "id": "blog/2025-11-17-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2025-11-17",
-      "excerpt": "Daily News Curation - 2025-11-17 Curated 14 items from disability, accessibility, and social policy sources. 1. Federal refugee employment program faces 'extremely long, ballooning wait times' Instead",
-      "content": "Daily News Curation - 2025-11-17 Curated 14 items from disability, accessibility, and social policy sources. 1. Federal refugee employment program faces 'extremely long, ballooning wait times' Instead of months, a federal program is now taking years to process the applications of skilled refugees living overseas and have a job waiting for them in Canada. 📍 Source Score: 28.50 2. Quebec’s video game industry says it’s thriving — but government cuts could stall success While the province is seen internationally as a significant video game development player — and Canada’s $5-billion industry overall is benefiting from global political trends — industry leaders in Quebec say there are still sources of uncertainty affecting business and talent. 📍 Source Score: 17.00 3. Port of Churchill, Hudson Bay Railway get $51M in provincial money toward improvements Manitoba is putting up $51 million in new funding to help upgrade the Hudson Bay Railway line as federal and provincial government officials were in Winnipeg Sunday to work toward the possibility of expanding the Port of Churchill. 📍 Source Score: 13.50 4. Carney faces crucial confidence vote as MPs set to vote on budget Prime Minister Mark Carney faces a crucial confidence vote on his budget on Monday, but it's not known yet if Canada will be heading to another election or not. 📍 Source Score: 9.50 5. Illicit crypto-to-cash deals are unlocking new ways to launder money in Canada 📍 Source Score: 9.50 6. Manitoba Government Honours Indigenous Veterans and Supports First-Annual Powwow 📍 Source Score: 10.50 7. Saskatchewan Roughriders beat Montreal Alouettes for fifth Grey Cup The Roughriders won their fifth Grey Cup title with a clutch late defensive stand to defeat the Alouettes 25-17 in Winnipeg. 📍 Source Score: 4.50 8. Insiders Detail Ways Alberta’s For-Profit Surgery Push Is Failing The shift strong-arms doctors but hasn’t saved money or shortened waits for critical operations, sources say. A Tyee investigation. 📍 Source Score: 4.50 9. Rogers clients complain of customer service nightmare, spending hours on hold to resolve simple issues Rogers customers say they’re furious about what they say is a lack of customer service — spending hours and hours trying to cancel services or fix bills — as workers who handled Rogers customer service calls get laid off. Experts point to a lack of competition in the industry and few regulatory protections as the culprit. 📍 Source Score: 4.50 10. B.C. Premier David Eby survives leadership review as NDP delegates signal support B.C. Premier David Eby faced NDP delegates during their convention and received enough support to avoid facing a leadership review. 📍 Source Score: 3.00 11. How one North Vancouver school is redefining education for neurodiverse learners in B.C. “Our students learn through doing.” 📍 Source Score: 2.00 12. BC’s Flood Prevention Promises Remain Unfulfilled After the 2021 atmospheric river, governments preached averting over recovery. Locals remember. Do politicians? 📍 Source Score: 3.00 13. Budget, government’s fate up in the air as MPs prepare for crucial vote 📍 Source Score: 3.00 14. Vancouver Police Finally Reveal Names of School Liaison Officers After telling The Tyee publishing this information would harm police, names and school assignments are out. 📍 Source Score: 1.00",
+      "excerpt": "Daily News Curation - 2025-11-17 Curated 10 items from disability, accessibility, and social policy sources. 1. Inflation in Canada cools slightly to 2.2% in October, StatCan says Year-over-year infla",
+      "content": "Daily News Curation - 2025-11-17 Curated 10 items from disability, accessibility, and social policy sources. 1. Inflation in Canada cools slightly to 2.2% in October, StatCan says Year-over-year inflation for consumer goods rose by 2.2 per cent in October, a slight dip compared with the growth seen last month, according to Statistics Canada. 📍 Source Score: 10.50 2. Toronto City Hall to raise Palestinian flag, joins other cities across Canada The City of Toronto is expected to join several other cities across Canada in raising the Palestinian flag this morning at city hall. 📍 Source Score: 9.50 3. World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year The Richmond restaurant took home the honours once again. 📍 Source Score: 9.50 4. Budget 2025 slashes Canada Student Grants, experts warn Some experts are concerned that post-secondary students will have access to less money through the Canada Student Grant (CSG), based on a line item buried in Budget 2025. 📍 Source Score: 9.50 5. TD Bank settles human rights complaint by B.C. Muslim-Indigenous man A human rights complaint has been settled between TD Bank and a Muslim-Indigenous man who claimed he was racially profiled while trying to open a bank account. 📍 Source Score: 7.00 6. How former Vancouver Canadians performed for the Blue Jays in the World Series Toronto lost in heartbreaking fashion on Saturday night. 📍 Source Score: 8.50 7. Photos: Matt Maltese caresses the keys at the Vogue Theatre A multi-hyphenate British-Canadian singer-songwriter. 📍 Source Score: 9.00 8. You Nearly Missed: Ada Lea promises to inspire at LanaLou's in Vancouver \"Because anyone can, you can also do it.\" 📍 Source Score: 5.00 9. ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December! \"We're there to bring joy, connect people, and engage with our audience.\" 📍 Source Score: 5.00 10. Measles Update #44 📍 Source Score: 1.30",
       "date": "2025-11-17",
       "tags": [
         "highlights"
@@ -35,7 +53,7 @@
         "news"
       ],
       "url": "/2025-11-17-daily-curation",
-      "filesize": 3351
+      "filesize": 1963
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -521,13 +539,13 @@
       "id": "curation/2025-11-17-curated.md",
       "source": "curation",
       "title": "2025-11-17-curated.md",
-      "excerpt": "Daily News Curation - 2025-11-17 Curated 14 items from disability, accessibility, and social policy sources. 1. Federal refugee employment program faces 'extremely long, ballooning wait times' Instead",
-      "content": "Daily News Curation - 2025-11-17 Curated 14 items from disability, accessibility, and social policy sources. 1. Federal refugee employment program faces 'extremely long, ballooning wait times' Instead of months, a federal program is now taking years to process the applications of skilled refugees living overseas and have a job waiting for them in Canada. 📍 Source Score: 28.50 2. Quebec’s video game industry says it’s thriving — but government cuts could stall success While the province is seen internationally as a significant video game development player — and Canada’s $5-billion industry overall is benefiting from global political trends — industry leaders in Quebec say there are still sources of uncertainty affecting business and talent. 📍 Source Score: 17.00 3. Port of Churchill, Hudson Bay Railway get $51M in provincial money toward improvements Manitoba is putting up $51 million in new funding to help upgrade the Hudson Bay Railway line as federal and provincial government officials were in Winnipeg Sunday to work toward the possibility of expanding the Port of Churchill. 📍 Source Score: 13.50 4. Carney faces crucial confidence vote as MPs set to vote on budget Prime Minister Mark Carney faces a crucial confidence vote on his budget on Monday, but it's not known yet if Canada will be heading to another election or not. 📍 Source Score: 9.50 5. Illicit crypto-to-cash deals are unlocking new ways to launder money in Canada 📍 Source Score: 9.50 6. Manitoba Government Honours Indigenous Veterans and Supports First-Annual Powwow 📍 Source Score: 10.50 7. Saskatchewan Roughriders beat Montreal Alouettes for fifth Grey Cup The Roughriders won their fifth Grey Cup title with a clutch late defensive stand to defeat the Alouettes 25-17 in Winnipeg. 📍 Source Score: 4.50 8. Insiders Detail Ways Alberta’s For-Profit Surgery Push Is Failing The shift strong-arms doctors but hasn’t saved money or shortened waits for critical operations, sources say. A Tyee investigation. 📍 Source Score: 4.50 9. Rogers clients complain of customer service nightmare, spending hours on hold to resolve simple issues Rogers customers say they’re furious about what they say is a lack of customer service — spending hours and hours trying to cancel services or fix bills — as workers who handled Rogers customer service calls get laid off. Experts point to a lack of competition in the industry and few regulatory protections as the culprit. 📍 Source Score: 4.50 10. B.C. Premier David Eby survives leadership review as NDP delegates signal support B.C. Premier David Eby faced NDP delegates during their convention and received enough support to avoid facing a leadership review. 📍 Source Score: 3.00 11. How one North Vancouver school is redefining education for neurodiverse learners in B.C. “Our students learn through doing.” 📍 Source Score: 2.00 12. BC’s Flood Prevention Promises Remain Unfulfilled After the 2021 atmospheric river, governments preached averting over recovery. Locals remember. Do politicians? 📍 Source Score: 3.00 13. Budget, government’s fate up in the air as MPs prepare for crucial vote 📍 Source Score: 3.00 14. Vancouver Police Finally Reveal Names of School Liaison Officers After telling The Tyee publishing this information would harm police, names and school assignments are out. 📍 Source Score: 1.00",
+      "excerpt": "Daily News Curation - 2025-11-17 Curated 10 items from disability, accessibility, and social policy sources. 1. Inflation in Canada cools slightly to 2.2% in October, StatCan says Year-over-year infla",
+      "content": "Daily News Curation - 2025-11-17 Curated 10 items from disability, accessibility, and social policy sources. 1. Inflation in Canada cools slightly to 2.2% in October, StatCan says Year-over-year inflation for consumer goods rose by 2.2 per cent in October, a slight dip compared with the growth seen last month, according to Statistics Canada. 📍 Source Score: 10.50 2. Toronto City Hall to raise Palestinian flag, joins other cities across Canada The City of Toronto is expected to join several other cities across Canada in raising the Palestinian flag this morning at city hall. 📍 Source Score: 9.50 3. World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year The Richmond restaurant took home the honours once again. 📍 Source Score: 9.50 4. Budget 2025 slashes Canada Student Grants, experts warn Some experts are concerned that post-secondary students will have access to less money through the Canada Student Grant (CSG), based on a line item buried in Budget 2025. 📍 Source Score: 9.50 5. TD Bank settles human rights complaint by B.C. Muslim-Indigenous man A human rights complaint has been settled between TD Bank and a Muslim-Indigenous man who claimed he was racially profiled while trying to open a bank account. 📍 Source Score: 7.00 6. How former Vancouver Canadians performed for the Blue Jays in the World Series Toronto lost in heartbreaking fashion on Saturday night. 📍 Source Score: 8.50 7. Photos: Matt Maltese caresses the keys at the Vogue Theatre A multi-hyphenate British-Canadian singer-songwriter. 📍 Source Score: 9.00 8. You Nearly Missed: Ada Lea promises to inspire at LanaLou's in Vancouver \"Because anyone can, you can also do it.\" 📍 Source Score: 5.00 9. ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December! \"We're there to bring joy, connect people, and engage with our audience.\" 📍 Source Score: 5.00 10. Measles Update #44 📍 Source Score: 1.30",
       "date": "2025-11-17",
       "tags": [],
       "categories": [],
       "url": "/2025-11-17-curated",
-      "filesize": 3351
+      "filesize": 1963
     },
     {
       "id": "curation/README.md",
@@ -2026,6 +2044,97 @@
       "blog/2025-10-18-daily-curation.md",
       "blog/2025-10-17-comprehensive-daily-digest.md"
     ],
+    "feature": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-11-12-feature-spotlight-resource-directory.md",
+      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "spotlight:": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-11-12-feature-spotlight-resource-directory.md",
+      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
+    ],
+    "spoon": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-10-26-spoon-theory-meets-web-design.md"
+    ],
+    "theory": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-10-26-spoon-theory-meets-web-design.md"
+    ],
+    "&": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
+      "whatsnew/2025-10-27-major-performance-accessibility-upgrade.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md",
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "energy": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-26-spoon-theory-meets-web-design.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "management": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md"
+    ],
     "weekly": [
       "blog/2025-11-17-weekly-update-week-47.md",
       "blog/2025-11-10-weekly-update-week-46.md",
@@ -2344,81 +2453,11 @@
       "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
       "whatsnew/2025-10-04-automation-gitlog.md"
     ],
-    "feature": [
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-11-12-feature-spotlight-resource-directory.md",
-      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "spotlight:": [
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-11-12-feature-spotlight-resource-directory.md",
-      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
-    ],
     "crisis": [
       "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md"
     ],
     "resources": [
       "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md"
-    ],
-    "&": [
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
-      "whatsnew/2025-10-27-major-performance-accessibility-upgrade.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-17-weekly-recap.md"
     ],
     "immediate": [
       "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md"
@@ -2652,12 +2691,6 @@
     "2025-11-01": [
       "blog/2025-11-01-daily-curation.md"
     ],
-    "energy": [
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-26-spoon-theory-meets-web-design.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
     "forecast": [
       "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
@@ -2800,12 +2833,6 @@
       "blog/2025-10-26-daily-curation.md"
     ],
     "🥄": [
-      "blog/2025-10-26-spoon-theory-meets-web-design.md"
-    ],
-    "spoon": [
-      "blog/2025-10-26-spoon-theory-meets-web-design.md"
-    ],
-    "theory": [
       "blog/2025-10-26-spoon-theory-meets-web-design.md"
     ],
     "meets": [
@@ -3110,6 +3137,59 @@
     ]
   },
   "tagIndex": {
+    "features": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-11-12-feature-spotlight-resource-directory.md",
+      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
+    ],
+    "spotlight": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-11-12-feature-spotlight-resource-directory.md",
+      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
+    ],
+    "wellness-tools": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md"
+    ],
     "weekly": [
       "blog/2025-11-17-weekly-update-week-47.md",
       "blog/2025-11-10-weekly-update-week-46.md",
@@ -3158,54 +3238,6 @@
       "blog/2025-10-17-comprehensive-daily-digest.md",
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
-    ],
-    "features": [
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-11-12-feature-spotlight-resource-directory.md",
-      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
-    ],
-    "spotlight": [
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-11-12-feature-spotlight-resource-directory.md",
-      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
     ],
     "wellness-&-safety": [
       "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md"
@@ -3354,6 +3386,38 @@
     ]
   },
   "categoryIndex": {
+    "features": [
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-11-12-feature-spotlight-resource-directory.md",
+      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-27-app-vs-website-comparison.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
     "updates": [
       "blog/2025-11-17-weekly-update-week-47.md",
       "blog/2025-11-10-weekly-update-week-46.md",
@@ -3429,37 +3493,6 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
-    ],
-    "features": [
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-11-12-feature-spotlight-resource-directory.md",
-      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-27-app-vs-website-comparison.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
     "feature-deep-dive": [
       "blog/2025-10-28-pain-flare-mode-deep-dive.md"
