@@ -13,15 +13,15 @@ export const fetchCampaigns = withFallback<Campaign[]>(
   async () => {
     if (!BASE) throw new Error("No API base");
     const response = await retry(async () => {
-      const res = await fetch(`${BASE}/campaigns`);
+      const res = await fetch(`${BASE}/campaigns.json`);
       if (!res.ok) {
         throw new Error(`API returned ${res.status}`);
       }
       return res.json();
     });
     
-    // API returns { campaigns: [...], pagination: {...}, metadata: {...} }
-    return response.campaigns || [];
+    // Public JSON returns array directly, Cloudflare Worker returns { campaigns: [...] }
+    return Array.isArray(response) ? response : (response.campaigns || []);
   },
   () => local,
 );

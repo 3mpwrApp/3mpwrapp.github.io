@@ -15,9 +15,9 @@ export const fetchEvents = withFallback<Event[]>(
       console.log('[Events] No API base configured, using fallback');
       throw new Error("No API base");
     }
-    console.log('[Events] Fetching from:', `${BASE}/events`);
+    console.log('[Events] Fetching from:', `${BASE}/events.json`);
     const response = await retry(async () =>
-      (await fetch(`${BASE}/events`)).json(),
+      (await fetch(`${BASE}/events.json`)).json(),
     );
     console.log('[Events] Response type:', Array.isArray(response) ? 'array' : 'object');
     // Handle both array format (old API) and object format (Cloudflare Worker)
