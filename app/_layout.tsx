@@ -81,7 +81,7 @@ import GlobalAssistant from "../components/GlobalAssistant";
 import { SafeProviderWrapper } from "../components/SafeProviderWrapper";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
-import Header from "../components/ThemedHeader";
+import ThemedHeader from "../components/ThemedHeader";
 import UpdateSplashScreen from "../components/UpdateSplashScreen";
 import { channels } from "../data/community";
 import { setSessionSeed } from "../services/session";
@@ -239,7 +239,7 @@ export default function RootLayout() {
                           <View style={{ flex: 1 }}>
                             <View>
                               <OfflineBanner />
-                              <Header />
+                              <ThemedHeader />
                             </View>
                             <TermsGate>
                               <ChangelogGate>

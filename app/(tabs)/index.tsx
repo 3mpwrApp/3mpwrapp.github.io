@@ -305,60 +305,58 @@ const HomeScreen = React.memo(() => {
       
       <DisclaimerBanner type="general" compact={true} />
       
-      {/* Global Search Quick Access */}
-      <Link href={'/search' as any} asChild={true}>
-        <A11yPressable
-          style={[
-            styles.searchButton,
-            { backgroundColor: palette.surface, borderColor: palette.muted }
-          ]}
-          accessibilityLabel={t('home.search.label', 'Search the app')}
-          accessibilityHint={t('home.search.hint', 'Opens global search for all features')}
-          hitSlop={HIT_SLOP_8}
-        >
-          <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={10}>
-            <Text style={{ fontSize: 20 }}>🔍</Text>
+      {/* Main Action Buttons - Organized in a row */}
+      <GapView style={{ flexDirection: 'row', marginBottom: 16 }} gap={12}>
+        {/* Global Search Quick Access */}
+        <Link href={'/search' as any} asChild={true} style={{ flex: 1 }}>
+          <A11yPressable
+            style={[
+              styles.searchButton,
+              { backgroundColor: palette.surface, borderColor: palette.muted }
+            ]}
+            accessibilityLabel={t('home.search.label', 'Search the app')}
+            accessibilityHint={t('home.search.hint', 'Opens global search for all features')}
+            hitSlop={HIT_SLOP_8}
+          >
+            <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={10}>
+              <Text style={{ fontSize: 20 }}>🔍</Text>
+              <Text
+                style={[
+                  { fontSize: Math.round(15 * factor), color: palette.muted, flex: 1 }
+                ]}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                {t('home.search.placeholder', 'Search for tools, help, resources...')}
+              </Text>
+            </GapView>
+          </A11yPressable>
+        </Link>
+        
+        {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
+        <Link href={'/(tabs)/advocacy/ask' as any} asChild={true} style={{ flex: 1 }}>
+          <A11yPressable
+            style={[
+              styles.askButton,
+              { backgroundColor: palette.primary }
+            ]}
+            accessibilityLabel={t('home.ask.label', 'Ask 3mpwr - Get help from advocates')}
+            accessibilityHint={t('home.ask.hint', 'Opens the Ask an Advocate form')}
+            hitSlop={HIT_SLOP_8}
+          >
             <Text
               style={[
-                { fontSize: Math.round(15 * factor), color: palette.muted, flex: 1 }
+                textStyles.button,
+                { fontSize: Math.round(16 * factor) }
               ]}
               maxFontSizeMultiplier={MAX_FONT_SCALE}
             >
-              {t('home.search.placeholder', 'Search for tools, help, resources...')}
+              💬 {t('home.ask.button', 'Ask 3mpwr')}
             </Text>
-          </GapView>
-        </A11yPressable>
-      </Link>
+          </A11yPressable>
+        </Link>
+      </GapView>
       
-      {/* AI Co-Pilot Proactive Suggestions */}
-      <SafeOptionalComponent>
-        <CopilotSuggestions />
-      </SafeOptionalComponent>
-      
-      {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
-      <Link href={'/(tabs)/advocacy/ask' as any} asChild={true}>
-        <A11yPressable
-          style={[
-            styles.askButton,
-            { backgroundColor: palette.primary }
-          ]}
-          accessibilityLabel={t('home.ask.label', 'Ask 3mpwr - Get help from advocates')}
-          accessibilityHint={t('home.ask.hint', 'Opens the Ask an Advocate form')}
-          hitSlop={HIT_SLOP_8}
-        >
-          <Text
-            style={[
-              textStyles.button,
-              { fontSize: Math.round(16 * factor) }
-            ]}
-            maxFontSizeMultiplier={MAX_FONT_SCALE}
-          >
-            💬 {t('home.ask.button', 'Ask 3mpwr')}
-          </Text>
-        </A11yPressable>
-      </Link>
-      
-      {/* 7-Day Onboarding Wizard - Quick Access */}
+      {/* 7-Day Onboarding Wizard - Full width */}
       <Link href={'/onboarding/first7' as any} asChild={true}>
         <A11yPressable
           style={[
@@ -427,22 +425,22 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   searchButton: {
-    paddingHorizontal: 16,
+    paddingHorizontal: 12,
     paddingVertical: 12,
     borderRadius: 8,
-    marginBottom: 16,
     borderWidth: 1.5,
     minHeight: 50,
     justifyContent: 'center',
+    flex: 1,
   },
   askButton: {
-    paddingHorizontal: 16,
+    paddingHorizontal: 12,
     paddingVertical: 14,
     borderRadius: 8,
-    marginBottom: 20,
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 48, // Accessibility tap target
+    flex: 1,
   },
   wizardButton: {
     paddingHorizontal: 16,
