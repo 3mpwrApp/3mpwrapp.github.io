@@ -275,6 +275,14 @@ export default function ProfileEditorScreen() {
     setError(null);
   };
 
+  const handleRoleChange = (role: UserRole) => {
+    setProfile(prev => ({
+      ...prev,
+      role,
+    }));
+    setError(null);
+  };
+
   const handleDisabilityToggle = (disability: string) => {
     setProfile(prev => ({
       ...prev,
