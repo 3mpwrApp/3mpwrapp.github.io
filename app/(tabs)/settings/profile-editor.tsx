@@ -45,6 +45,9 @@ type UserRole = 'pwd' | 'supporter' | 'ally';
 interface ProfileState {
   role?: UserRole;
   disabilityCategories: string[];
+  symptomsToTrack: string[];
+  wellnessToolsPreferences: string[];
+  advocacyNeeds: string[];
   accommodations: string[];
   energyPatterns: {
     morning: 'low' | 'medium' | 'high' | null;
@@ -56,13 +59,57 @@ interface ProfileState {
 }
 
 const DISABILITY_OPTIONS = [
-  'Physical Disability',
-  'Sensory Disability',
-  'Cognitive Disability',
-  'Mental Health Condition',
-  'Chronic Illness',
-  'Neurodivergence',
+  'Chronic Pain',
+  'Fatigue Conditions (ME/CFS, fibromyalgia)',
+  'Mobility Impairments',
+  'Cognitive Disabilities (brain fog, ADHD, autism)',
+  'Mental Health (depression, anxiety, PTSD)',
   'Multiple Disabilities',
+  'Neurodivergence',
+  'Sensory Disabilities',
+  'Physical Disabilities',
+];
+
+const SYMPTOMS_OPTIONS = [
+  'Pain',
+  'Fatigue',
+  'Mobility issues',
+  'Cognitive fog',
+  'Anxiety',
+  'Depression',
+  'Nausea',
+  'Dizziness',
+  'Sensory sensitivity',
+  'Sleep disturbances',
+  'Flare-ups',
+  'Medication side effects',
+  'Emotional dysregulation',
+  'Muscle weakness',
+  'Joint stiffness',
+];
+
+const WELLNESS_TOOLS_OPTIONS = [
+  'Mood Tracker 2.0',
+  'Pacing Partner',
+  'DBT Skills',
+  'Meditation Library',
+  'Exercise Videos',
+  'Sleep Tracker',
+  'Pain Log',
+  'Energy Tracker',
+  'Symptom Tracker',
+  'Distress Tolerance',
+  'Grounding Techniques',
+  'Crisis Resources',
+];
+
+const ADVOCACY_NEEDS_OPTIONS = [
+  'Legal help (workplace, appeals, benefits)',
+  'Benefits navigation (CPP-D, EI, provincial programs)',
+  'Housing accessibility',
+  'Healthcare access',
+  'Transportation',
+  'Employment support',
 ];
 
 const ACCOMMODATION_OPTIONS = [
@@ -92,6 +139,9 @@ export default function ProfileEditorScreen() {
   const [profile, setProfile] = useState<ProfileState>({
     role: undefined,
     disabilityCategories: [],
+    symptomsToTrack: [],
+    wellnessToolsPreferences: [],
+    advocacyNeeds: [],
     accommodations: [],
     energyPatterns: {
       morning: null,
@@ -139,6 +189,9 @@ export default function ProfileEditorScreen() {
             const loadedProfile: ProfileState = {
               role: data.role || undefined,
               disabilityCategories: data.disabilityCategories || [],
+              symptomsToTrack: data.symptomsToTrack || [],
+              wellnessToolsPreferences: data.wellnessToolsPreferences || [],
+              advocacyNeeds: data.advocacyNeeds || [],
               accommodations: data.accommodations || [],
               energyPatterns: data.energyPatterns || {
                 morning: null,
@@ -195,6 +248,36 @@ export default function ProfileEditorScreen() {
       disabilityCategories: prev.disabilityCategories.includes(disability)
         ? prev.disabilityCategories.filter(d => d !== disability)
         : [...prev.disabilityCategories, disability],
+    }));
+    setError(null);
+  };
+
+  const handleSymptomToggle = (symptom: string) => {
+    setProfile(prev => ({
+      ...prev,
+      symptomsToTrack: prev.symptomsToTrack.includes(symptom)
+        ? prev.symptomsToTrack.filter(s => s !== symptom)
+        : [...prev.symptomsToTrack, symptom],
+    }));
+    setError(null);
+  };
+
+  const handleWellnessToolToggle = (tool: string) => {
+    setProfile(prev => ({
+      ...prev,
+      wellnessToolsPreferences: prev.wellnessToolsPreferences.includes(tool)
+        ? prev.wellnessToolsPreferences.filter(t => t !== tool)
+        : [...prev.wellnessToolsPreferences, tool],
+    }));
+    setError(null);
+  };
+
+  const handleAdvocacyNeedToggle = (need: string) => {
+    setProfile(prev => ({
+      ...prev,
+      advocacyNeeds: prev.advocacyNeeds.includes(need)
+        ? prev.advocacyNeeds.filter(n => n !== need)
+        : [...prev.advocacyNeeds, need],
     }));
     setError(null);
   };
@@ -269,6 +352,9 @@ export default function ProfileEditorScreen() {
       const updateData = {
         role: profile.role,
         disabilityCategories: profile.disabilityCategories,
+        symptomsToTrack: profile.symptomsToTrack,
+        wellnessToolsPreferences: profile.wellnessToolsPreferences,
+        advocacyNeeds: profile.advocacyNeeds,
         accommodations: profile.accommodations,
         energyPatterns: profile.energyPatterns,
         preferredLanguage: profile.preferredLanguage,
@@ -397,10 +483,10 @@ export default function ProfileEditorScreen() {
       {/* Disability Categories */}
       <View style={styles.section}>
         <A11yTitle level={2} style={styles.sectionTitle}>
-          {t('profile.editor.disability.title', 'Disability Categories')}
+          {t('profile.editor.disability.title', 'Disability Types')}
         </A11yTitle>
         <Text style={styles.sectionDescription}>
-          {t('profile.editor.disability.description', 'Select all that apply')}
+          {t('profile.editor.disability.description', 'Select ALL that apply (can choose multiple)')}
         </Text>
 
         {DISABILITY_OPTIONS.map(disability => (
@@ -426,10 +512,106 @@ export default function ProfileEditorScreen() {
         ))}
       </View>
 
+      {/* Symptoms to Track */}
+      <View style={styles.section}>
+        <A11yTitle level={2} style={styles.sectionTitle}>
+          {t('profile.editor.symptoms.title', 'Symptoms to Track')}
+        </A11yTitle>
+        <Text style={styles.sectionDescription}>
+          {t('profile.editor.symptoms.description', 'Select your most common symptoms (up to 15)')}
+        </Text>
+
+        {SYMPTOMS_OPTIONS.map(symptom => (
+          <A11yPressable
+            key={symptom}
+            onPress={() => handleSymptomToggle(symptom)}
+            style={[
+              styles.checkboxRow,
+              profile.symptomsToTrack.includes(symptom) && styles.checkboxRowSelected,
+            ]}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: profile.symptomsToTrack.includes(symptom) }}
+            accessibilityLabel={symptom}
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons
+              name={profile.symptomsToTrack.includes(symptom) ? 'checkbox' : 'checkbox-outline'}
+              size={24}
+              color={profile.symptomsToTrack.includes(symptom) ? palette.primary : palette.muted}
+            />
+            <Text style={styles.checkboxLabel}>{symptom}</Text>
+          </A11yPressable>
+        ))}
+      </View>
+
+      {/* Wellness Tools Preferences */}
+      <View style={styles.section}>
+        <A11yTitle level={2} style={styles.sectionTitle}>
+          {t('profile.editor.wellness.title', 'Wellness Tools Preferences')}
+        </A11yTitle>
+        <Text style={styles.sectionDescription}>
+          {t('profile.editor.wellness.description', 'Select your favorite tools (or ones you want to try)')}
+        </Text>
+
+        {WELLNESS_TOOLS_OPTIONS.map(tool => (
+          <A11yPressable
+            key={tool}
+            onPress={() => handleWellnessToolToggle(tool)}
+            style={[
+              styles.checkboxRow,
+              profile.wellnessToolsPreferences.includes(tool) && styles.checkboxRowSelected,
+            ]}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: profile.wellnessToolsPreferences.includes(tool) }}
+            accessibilityLabel={tool}
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons
+              name={profile.wellnessToolsPreferences.includes(tool) ? 'checkbox' : 'checkbox-outline'}
+              size={24}
+              color={profile.wellnessToolsPreferences.includes(tool) ? palette.primary : palette.muted}
+            />
+            <Text style={styles.checkboxLabel}>{tool}</Text>
+          </A11yPressable>
+        ))}
+      </View>
+
+      {/* Advocacy Needs */}
+      <View style={styles.section}>
+        <A11yTitle level={2} style={styles.sectionTitle}>
+          {t('profile.editor.advocacy.title', 'Advocacy Needs')}
+        </A11yTitle>
+        <Text style={styles.sectionDescription}>
+          {t('profile.editor.advocacy.description', 'Select what you need help with')}
+        </Text>
+
+        {ADVOCACY_NEEDS_OPTIONS.map(need => (
+          <A11yPressable
+            key={need}
+            onPress={() => handleAdvocacyNeedToggle(need)}
+            style={[
+              styles.checkboxRow,
+              profile.advocacyNeeds.includes(need) && styles.checkboxRowSelected,
+            ]}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: profile.advocacyNeeds.includes(need) }}
+            accessibilityLabel={need}
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons
+              name={profile.advocacyNeeds.includes(need) ? 'checkbox' : 'checkbox-outline'}
+              size={24}
+              color={profile.advocacyNeeds.includes(need) ? palette.primary : palette.muted}
+            />
+            <Text style={styles.checkboxLabel}>{need}</Text>
+          </A11yPressable>
+        ))}
+      </View>
+
       {/* Accommodations */}
       <View style={styles.section}>
         <A11yTitle level={2} style={styles.sectionTitle}>
-          {t('profile.editor.accommodations.title', 'Accommodations')}
+          {t('profile.editor.accommodations.title', 'Accessibility Accommodations')}
         </A11yTitle>
         <Text style={styles.sectionDescription}>
           {t('profile.editor.accommodations.description', 'Select accommodations you need')}

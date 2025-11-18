@@ -7,11 +7,11 @@ import GapView from '../../../components/GapView';
 import { LoadingWrapper } from '../../../components/LoadingWrapper';
 import OnlineStatusBadge from '../../../components/OnlineStatusBadge';
 import {
-    MAX_FONT_SCALE,
-    useAccessibleLoading,
-    useAccessibleTabs,
-    useAnnounceOnMount,
-    useFocusOnRefOnMount,
+  MAX_FONT_SCALE,
+  useAccessibleLoading,
+  useAccessibleTabs,
+  useAnnounceOnMount,
+  useFocusOnRefOnMount,
 } from "../../../hooks/useA11y";
 import { useTranslation } from '../../../i18n';
 import { aiCoachPrompt } from '../../../services/aiAdvocacy';
