@@ -1,12 +1,5 @@
 import { useEffect, useRef } from 'react';
 
-interface PerformanceMetrics {
-  componentName: string;
-  mountTime: number;
-  renderTime?: number;
-  interactionTime?: number;
-}
-
 export const usePerformanceMonitor = (componentName: string) => {
   const mountTimeRef = useRef<number | undefined>(undefined);
   const renderStartRef = useRef<number | undefined>(undefined);
@@ -16,13 +9,13 @@ export const usePerformanceMonitor = (componentName: string) => {
 
     // Log mount performance
     const mountDuration = mountTimeRef.current;
-    console.log(`[Performance] ${componentName} mounted in ${mountDuration.toFixed(2)}ms`);
+    console.warn(`[Performance] ${componentName} mounted in ${mountDuration.toFixed(2)}ms`);
 
     return () => {
       if (mountTimeRef.current) {
         const unmountTime = performance.now();
         const totalTime = unmountTime - mountTimeRef.current;
-        console.log(`[Performance] ${componentName} unmounted after ${totalTime.toFixed(2)}ms`);
+        console.warn(`[Performance] ${componentName} unmounted after ${totalTime.toFixed(2)}ms`);
       }
     };
   }, [componentName]);
@@ -34,7 +27,7 @@ export const usePerformanceMonitor = (componentName: string) => {
   const endRender = () => {
     if (renderStartRef.current) {
       const renderTime = performance.now() - renderStartRef.current;
-      console.log(`[Performance] ${componentName} render took ${renderTime.toFixed(2)}ms`);
+      console.warn(`[Performance] ${componentName} render took ${renderTime.toFixed(2)}ms`);
       renderStartRef.current = undefined;
     }
   };
@@ -42,7 +35,7 @@ export const usePerformanceMonitor = (componentName: string) => {
   const logInteraction = (interactionName: string, startTime?: number) => {
     const endTime = performance.now();
     const duration = startTime ? endTime - startTime : 0;
-    console.log(`[Performance] ${componentName} - ${interactionName}: ${duration.toFixed(2)}ms`);
+    console.warn(`[Performance] ${componentName} - ${interactionName}: ${duration.toFixed(2)}ms`);
   };
 
   return {
@@ -81,7 +74,7 @@ export const useMemoryMonitor = (componentName: string) => {
     const logMemoryUsage = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        console.log(`[Memory] ${componentName}:`, {
+        console.warn(`[Memory] ${componentName}:`, {
           used: `${(memory.usedJSHeapSize / 1024 / 1024).toFixed(2)} MB`,
           total: `${(memory.totalJSHeapSize / 1024 / 1024).toFixed(2)} MB`,
           limit: `${(memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)} MB`,

@@ -1,6 +1,5 @@
 import React from 'react';
-import type { ViewStyle } from 'react-native';
-import { Animated, StyleSheet, View } from 'react-native';
+import { Animated, StyleSheet, View, type ViewStyle } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
 

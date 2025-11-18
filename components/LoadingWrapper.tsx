@@ -1,6 +1,5 @@
 import React from 'react';
-import type { ViewStyle } from 'react-native';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, type ViewStyle } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
 
@@ -23,7 +22,6 @@ export const LoadingWrapper: React.FC<LoadingWrapperProps> = ({
   style,
   fallback,
 }) => {
-  const palette = useAppPalette();
 
   if (!isLoading) {
     return <>{children}</>;
