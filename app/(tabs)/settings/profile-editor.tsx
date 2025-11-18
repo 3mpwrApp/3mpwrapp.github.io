@@ -40,10 +40,11 @@ import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
 import { logger } from '../../../utils/logger';
 
-type UserRole = 'pwd' | 'supporter' | 'ally';
+type UserRole = 'pwd' | 'supporter' | 'ally' | 'family';
 
 interface ProfileState {
   role?: UserRole;
+  relationshipContext?: string[];
   disabilityCategories: string[];
   symptomsToTrack: string[];
   wellnessToolsPreferences: string[];
@@ -101,6 +102,10 @@ const WELLNESS_TOOLS_OPTIONS = [
   'Distress Tolerance',
   'Grounding Techniques',
   'Crisis Resources',
+  'Caregiver Support Tools',
+  'Family Communication',
+  'Advocacy Resources',
+  'Community Connections',
 ];
 
 const ADVOCACY_NEEDS_OPTIONS = [
@@ -110,6 +115,27 @@ const ADVOCACY_NEEDS_OPTIONS = [
   'Healthcare access',
   'Transportation',
   'Employment support',
+  'Education advocacy',
+  'Family support services',
+  'Community resources',
+  'Policy advocacy',
+  'Rights education',
+  'Support group connections',
+];
+
+const RELATIONSHIP_CONTEXT_OPTIONS = [
+  'Parent/Guardian',
+  'Spouse/Partner',
+  'Sibling',
+  'Child',
+  'Extended Family',
+  'Friend',
+  'Caregiver',
+  'Professional Supporter',
+  'Community Ally',
+  'Advocate',
+  'Healthcare Provider',
+  'Educator',
 ];
 
 const ACCOMMODATION_OPTIONS = [
@@ -138,6 +164,7 @@ export default function ProfileEditorScreen() {
   // Current profile state (from Firestore)
   const [profile, setProfile] = useState<ProfileState>({
     role: undefined,
+    relationshipContext: [],
     disabilityCategories: [],
     symptomsToTrack: [],
     wellnessToolsPreferences: [],
@@ -188,6 +215,7 @@ export default function ProfileEditorScreen() {
             const data = userDoc.data();
             const loadedProfile: ProfileState = {
               role: data.role || undefined,
+              relationshipContext: data.relationshipContext || [],
               disabilityCategories: data.disabilityCategories || [],
               symptomsToTrack: data.symptomsToTrack || [],
               wellnessToolsPreferences: data.wellnessToolsPreferences || [],
@@ -237,8 +265,13 @@ export default function ProfileEditorScreen() {
     setHasChanges(changed);
   }, [profile, originalProfile]);
 
-  const handleRoleChange = (role: UserRole) => {
-    setProfile(prev => ({ ...prev, role }));
+  const handleRelationshipToggle = (relationship: string) => {
+    setProfile(prev => ({
+      ...prev,
+      relationshipContext: prev.relationshipContext?.includes(relationship)
+        ? prev.relationshipContext?.filter(r => r !== relationship)
+        : [...(prev.relationshipContext || []), relationship],
+    }));
     setError(null);
   };
 
@@ -340,7 +373,8 @@ export default function ProfileEditorScreen() {
       return;
     }
 
-    if (profile.disabilityCategories.length === 0) {
+    // Only require disability categories for PWD role
+    if (profile.role === 'pwd' && profile.disabilityCategories.length === 0) {
       setError(t('profile.editor.error.disabilityRequired', 'Please select at least one disability category'));
       return;
     }
@@ -351,6 +385,7 @@ export default function ProfileEditorScreen() {
     try {
       const updateData = {
         role: profile.role,
+        relationshipContext: profile.relationshipContext,
         disabilityCategories: profile.disabilityCategories,
         symptomsToTrack: profile.symptomsToTrack,
         wellnessToolsPreferences: profile.wellnessToolsPreferences,
@@ -448,7 +483,7 @@ export default function ProfileEditorScreen() {
           {t('profile.editor.role.description', 'How do you use 3mpwr App?')}
         </Text>
 
-        {(['pwd', 'supporter', 'ally'] as const).map(role => (
+        {(['pwd', 'supporter', 'ally', 'family'] as const).map(role => (
           <A11yPressable
             key={role}
             onPress={() => handleRoleChange(role)}
@@ -480,69 +515,107 @@ export default function ProfileEditorScreen() {
         ))}
       </View>
 
-      {/* Disability Categories */}
-      <View style={styles.section}>
-        <A11yTitle level={2} style={styles.sectionTitle}>
-          {t('profile.editor.disability.title', 'Disability Types')}
-        </A11yTitle>
-        <Text style={styles.sectionDescription}>
-          {t('profile.editor.disability.description', 'Select ALL that apply (can choose multiple)')}
-        </Text>
+      {/* Relationship Context - For non-PWD roles */}
+      {profile.role && profile.role !== 'pwd' && (
+        <View style={styles.section}>
+          <A11yTitle level={2} style={styles.sectionTitle}>
+            {t('profile.editor.relationship.title', 'Your Relationship to Disability')}
+          </A11yTitle>
+          <Text style={styles.sectionDescription}>
+            {t('profile.editor.relationship.description', 'How are you connected to the disability community?')}
+          </Text>
 
-        {DISABILITY_OPTIONS.map(disability => (
-          <A11yPressable
-            key={disability}
-            onPress={() => handleDisabilityToggle(disability)}
-            style={[
-              styles.checkboxRow,
-              profile.disabilityCategories.includes(disability) && styles.checkboxRowSelected,
-            ]}
-            accessibilityRole="checkbox"
-            accessibilityState={{ checked: profile.disabilityCategories.includes(disability) }}
-            accessibilityLabel={disability}
-            hitSlop={HIT_SLOP_8}
-          >
-            <Ionicons
-              name={profile.disabilityCategories.includes(disability) ? 'checkbox' : 'checkbox-outline'}
-              size={24}
-              color={profile.disabilityCategories.includes(disability) ? palette.primary : palette.muted}
-            />
-            <Text style={styles.checkboxLabel}>{disability}</Text>
-          </A11yPressable>
-        ))}
-      </View>
+          {RELATIONSHIP_CONTEXT_OPTIONS.map(relationship => (
+            <A11yPressable
+              key={relationship}
+              onPress={() => handleRelationshipToggle(relationship)}
+              style={[
+                styles.checkboxRow,
+                profile.relationshipContext?.includes(relationship) && styles.checkboxRowSelected,
+              ]}
+              accessibilityRole="checkbox"
+              accessibilityState={{ checked: profile.relationshipContext?.includes(relationship) }}
+              accessibilityLabel={relationship}
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons
+                name={profile.relationshipContext?.includes(relationship) ? 'checkbox' : 'checkbox-outline'}
+                size={24}
+                color={profile.relationshipContext?.includes(relationship) ? palette.primary : palette.muted}
+              />
+              <Text style={styles.checkboxLabel}>{relationship}</Text>
+            </A11yPressable>
+          ))}
+        </View>
+      )}
 
-      {/* Symptoms to Track */}
-      <View style={styles.section}>
-        <A11yTitle level={2} style={styles.sectionTitle}>
-          {t('profile.editor.symptoms.title', 'Symptoms to Track')}
-        </A11yTitle>
-        <Text style={styles.sectionDescription}>
-          {t('profile.editor.symptoms.description', 'Select your most common symptoms (up to 15)')}
-        </Text>
+      {/* Disability Categories - Only for PWD */}
+      {profile.role === 'pwd' && (
+        <View style={styles.section}>
+          <A11yTitle level={2} style={styles.sectionTitle}>
+            {t('profile.editor.disability.title', 'Disability Types')}
+          </A11yTitle>
+          <Text style={styles.sectionDescription}>
+            {t('profile.editor.disability.description', 'Select ALL that apply (can choose multiple)')}
+          </Text>
 
-        {SYMPTOMS_OPTIONS.map(symptom => (
-          <A11yPressable
-            key={symptom}
-            onPress={() => handleSymptomToggle(symptom)}
-            style={[
-              styles.checkboxRow,
-              profile.symptomsToTrack.includes(symptom) && styles.checkboxRowSelected,
-            ]}
-            accessibilityRole="checkbox"
-            accessibilityState={{ checked: profile.symptomsToTrack.includes(symptom) }}
-            accessibilityLabel={symptom}
-            hitSlop={HIT_SLOP_8}
-          >
-            <Ionicons
-              name={profile.symptomsToTrack.includes(symptom) ? 'checkbox' : 'checkbox-outline'}
-              size={24}
-              color={profile.symptomsToTrack.includes(symptom) ? palette.primary : palette.muted}
-            />
-            <Text style={styles.checkboxLabel}>{symptom}</Text>
-          </A11yPressable>
-        ))}
-      </View>
+          {DISABILITY_OPTIONS.map(disability => (
+            <A11yPressable
+              key={disability}
+              onPress={() => handleDisabilityToggle(disability)}
+              style={[
+                styles.checkboxRow,
+                profile.disabilityCategories.includes(disability) && styles.checkboxRowSelected,
+              ]}
+              accessibilityRole="checkbox"
+              accessibilityState={{ checked: profile.disabilityCategories.includes(disability) }}
+              accessibilityLabel={disability}
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons
+                name={profile.disabilityCategories.includes(disability) ? 'checkbox' : 'checkbox-outline'}
+                size={24}
+                color={profile.disabilityCategories.includes(disability) ? palette.primary : palette.muted}
+              />
+              <Text style={styles.checkboxLabel}>{disability}</Text>
+            </A11yPressable>
+          ))}
+        </View>
+      )}
+
+      {/* Symptoms to Track - Only for PWD */}
+      {profile.role === 'pwd' && (
+        <View style={styles.section}>
+          <A11yTitle level={2} style={styles.sectionTitle}>
+            {t('profile.editor.symptoms.title', 'Symptoms to Track')}
+          </A11yTitle>
+          <Text style={styles.sectionDescription}>
+            {t('profile.editor.symptoms.description', 'Select your most common symptoms (up to 15)')}
+          </Text>
+
+          {SYMPTOMS_OPTIONS.map(symptom => (
+            <A11yPressable
+              key={symptom}
+              onPress={() => handleSymptomToggle(symptom)}
+              style={[
+                styles.checkboxRow,
+                profile.symptomsToTrack.includes(symptom) && styles.checkboxRowSelected,
+              ]}
+              accessibilityRole="checkbox"
+              accessibilityState={{ checked: profile.symptomsToTrack.includes(symptom) }}
+              accessibilityLabel={symptom}
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons
+                name={profile.symptomsToTrack.includes(symptom) ? 'checkbox' : 'checkbox-outline'}
+                size={24}
+                color={profile.symptomsToTrack.includes(symptom) ? palette.primary : palette.muted}
+              />
+              <Text style={styles.checkboxLabel}>{symptom}</Text>
+            </A11yPressable>
+          ))}
+        </View>
+      )}
 
       {/* Wellness Tools Preferences */}
       <View style={styles.section}>
