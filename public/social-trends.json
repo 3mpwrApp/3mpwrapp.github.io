@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-18T06:17:33.468Z",
+  "lastUpdated": "2025-11-18T12:22:33.292Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2710,
+      "totalPosts": 2735,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T06:17:24.537Z"
+      "lastSeen": "2025-11-18T12:22:24.139Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2725,
+      "totalPosts": 2750,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T06:17:26.690Z"
+      "lastSeen": "2025-11-18T12:22:26.267Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2713,
+      "totalPosts": 2738,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T06:17:28.684Z"
+      "lastSeen": "2025-11-18T12:22:28.340Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2721,
+      "totalPosts": 2746,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T06:17:30.667Z"
+      "lastSeen": "2025-11-18T12:22:30.352Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2725,
+      "totalPosts": 2750,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T06:17:32.465Z"
+      "lastSeen": "2025-11-18T12:22:32.287Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
-      "author": "longcovidjustice.org",
-      "engagement": 43,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "For #screenshotsaturday, initial work on adding screen reader support to Torment Hexus! I want the game to be playable for unsighted people. There's a long way to go yet, but the path is clear! #a11y #inclusivegaming",
-      "author": "byobattleship.bsky.social",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 12,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
-      "author": "longcovidjustice.org",
-      "engagement": 43,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "For #screenshotsaturday, initial work on adding screen reader support to Torment Hexus! I want the game to be playable for unsighted people. There's a long way to go yet, but the path is clear! #a11y #inclusivegaming",
-      "author": "byobattleship.bsky.social",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -338,6 +290,54 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 77,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
+      "author": "blindnewworld.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
+      "author": "kennef.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "*slaps the roof of my skyline*\n\nthis baby could fit so many #jayvik #art reskeets—SFW and NSFW—if they had alt text…\n\npretty please? 🥺🙏🏻 #accessibility",
+      "author": "m00psy.bsky.social",
+      "engagement": 13,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Congratulations to everyone nominated!!\n\nAnd selfishly very happy to see one of our games being nominated alongside titles who've done amazing work in the #accessibility field this year. \n\nKnowing that lots of those games had friends working on them, it feels like a big family picture <3",
+      "author": "tisseranddavid.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "#PixelPalooza is coming up this Thursday!\n\nThis awesome FREE online event covers how to make sure all those helpful images and videos on your site don't hurt #webperf and #a11y.\n\nI'm joining @seancdavis.com to talk about the hidden cost of media on the web.\n\nGet your ticket 👉 cfe.dev/events/pixel...",
+      "author": "tammyeverts.com",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 13,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 33
+      "count": 34
     },
     {
       "keyword": "a11y",
@@ -360,10 +360,6 @@
     {
       "keyword": "disabilityjustice",
       "count": 23
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 11
     },
     {
       "keyword": "altcitizen",
@@ -382,8 +378,12 @@
       "count": 10
     },
     {
-      "keyword": "alicewong",
+      "keyword": "accessibility a11y",
       "count": 9
+    },
+    {
+      "keyword": "alicewong",
+      "count": 8
     },
     {
       "keyword": "disability",
@@ -391,10 +391,6 @@
     },
     {
       "keyword": "abolishice",
-      "count": 5
-    },
-    {
-      "keyword": "disabilityjustice nico",
       "count": 5
     },
     {
@@ -410,16 +406,20 @@
       "count": 4
     },
     {
-      "keyword": "assistivetechnology",
+      "keyword": "disabilityjustice nico",
       "count": 4
     },
     {
-      "keyword": "assistivetech",
+      "keyword": "avelo",
       "count": 4
     },
     {
-      "keyword": "csun assistivetechnology",
+      "keyword": "stoptrump",
       "count": 4
+    },
+    {
+      "keyword": "rip",
+      "count": 3
     }
   ]
 }
