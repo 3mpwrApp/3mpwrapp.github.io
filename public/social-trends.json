@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-18T00:52:42.713Z",
+  "lastUpdated": "2025-11-18T06:17:33.468Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2685,
+      "totalPosts": 2710,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T00:52:33.850Z"
+      "lastSeen": "2025-11-18T06:17:24.537Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2700,
+      "totalPosts": 2725,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T00:52:35.912Z"
+      "lastSeen": "2025-11-18T06:17:26.690Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2688,
+      "totalPosts": 2713,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T00:52:37.874Z"
+      "lastSeen": "2025-11-18T06:17:28.684Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2696,
+      "totalPosts": 2721,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T00:52:39.777Z"
+      "lastSeen": "2025-11-18T06:17:30.667Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2700,
+      "totalPosts": 2725,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-18T00:52:41.711Z"
+      "lastSeen": "2025-11-18T06:17:32.465Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 12,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
       "author": "longcovidjustice.org",
@@ -338,6 +314,30 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 77,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
+      "author": "kennef.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 13,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 33
     },
     {
       "keyword": "a11y",
@@ -355,46 +355,46 @@
     },
     {
       "keyword": "cripthevote",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "disabilityjustice",
       "count": 23
     },
     {
-      "keyword": "altcitizen",
-      "count": 11
-    },
-    {
-      "keyword": "disabilityrebellion",
-      "count": 11
-    },
-    {
-      "keyword": "cripthevote disabilityrights",
-      "count": 11
-    },
-    {
-      "keyword": "disabilityrights disabilityrebellion",
-      "count": 11
-    },
-    {
       "keyword": "accessibility a11y",
+      "count": 11
+    },
+    {
+      "keyword": "altcitizen",
       "count": 10
     },
     {
-      "keyword": "disability",
-      "count": 9
+      "keyword": "disabilityrebellion",
+      "count": 10
+    },
+    {
+      "keyword": "cripthevote disabilityrights",
+      "count": 10
+    },
+    {
+      "keyword": "disabilityrights disabilityrebellion",
+      "count": 10
     },
     {
       "keyword": "alicewong",
       "count": 9
     },
     {
+      "keyword": "disability",
+      "count": 7
+    },
+    {
       "keyword": "abolishice",
       "count": 5
     },
     {
-      "keyword": "avelo",
+      "keyword": "disabilityjustice nico",
       "count": 5
     },
     {
@@ -406,19 +406,19 @@
       "count": 4
     },
     {
-      "keyword": "inclusion",
-      "count": 4
-    },
-    {
       "keyword": "disability visibility",
       "count": 4
     },
     {
-      "keyword": "stopavelo",
+      "keyword": "assistivetechnology",
       "count": 4
     },
     {
-      "keyword": "boycottavelo",
+      "keyword": "assistivetech",
+      "count": 4
+    },
+    {
+      "keyword": "csun assistivetechnology",
       "count": 4
     }
   ]
