@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-17T18:15:40.518Z",
+  "lastUpdated": "2025-11-18T00:52:42.713Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2660,
+      "totalPosts": 2685,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-17T18:15:29.829Z"
+      "lastSeen": "2025-11-18T00:52:33.850Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2675,
+      "totalPosts": 2700,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-17T18:15:32.062Z"
+      "lastSeen": "2025-11-18T00:52:35.912Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2663,
+      "totalPosts": 2688,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-17T18:15:34.306Z"
+      "lastSeen": "2025-11-18T00:52:37.874Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2671,
+      "totalPosts": 2696,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-17T18:15:37.159Z"
+      "lastSeen": "2025-11-18T00:52:39.777Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2675,
+      "totalPosts": 2700,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-17T18:15:39.515Z"
+      "lastSeen": "2025-11-18T00:52:41.711Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Electronic machines that *also* produce a paper ballot are good, but using paper ballots only would make voting inaccessible to people who are blind/low vision. #CripTheVote",
-      "author": "brassclothes.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Keep being loud, it works!!! \n#Disabilitysky #CripTheVote \n\nwww.masslive.com/news/2025/09...",
-      "author": "embeessem.bsky.social",
-      "engagement": 16,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
-      "author": "longcovidjustice.org",
-      "engagement": 43,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -338,20 +314,44 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 77,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
+      "author": "kennef.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 13,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 35
+      "count": 34
     },
     {
       "keyword": "accessibility",
-      "count": 35
+      "count": 34
     },
     {
       "keyword": "a11y",
-      "count": 28
+      "count": 29
     },
     {
       "keyword": "cripthevote",
@@ -359,7 +359,7 @@
     },
     {
       "keyword": "disabilityjustice",
-      "count": 24
+      "count": 23
     },
     {
       "keyword": "altcitizen",
@@ -378,15 +378,15 @@
       "count": 11
     },
     {
-      "keyword": "alicewong",
-      "count": 9
+      "keyword": "accessibility a11y",
+      "count": 10
     },
     {
       "keyword": "disability",
       "count": 9
     },
     {
-      "keyword": "accessibility a11y",
+      "keyword": "alicewong",
       "count": 9
     },
     {
@@ -398,12 +398,20 @@
       "count": 5
     },
     {
-      "keyword": "disabilityjustice nico",
+      "keyword": "virtual",
       "count": 5
     },
     {
-      "keyword": "virtual",
-      "count": 5
+      "keyword": "disability rights",
+      "count": 4
+    },
+    {
+      "keyword": "inclusion",
+      "count": 4
+    },
+    {
+      "keyword": "disability visibility",
+      "count": 4
     },
     {
       "keyword": "stopavelo",
@@ -411,14 +419,6 @@
     },
     {
       "keyword": "boycottavelo",
-      "count": 4
-    },
-    {
-      "keyword": "slaveships",
-      "count": 4
-    },
-    {
-      "keyword": "disabilityrebellion boycottavelo",
       "count": 4
     }
   ]
