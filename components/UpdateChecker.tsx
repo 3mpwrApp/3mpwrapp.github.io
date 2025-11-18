@@ -38,16 +38,32 @@ export default function UpdateChecker() {
 
   const [checking, setChecking] = React.useState(false);
   const [downloading, setDownloading] = React.useState(false);
-  const [downloadProgress, setDownloadProgress] = React.useState(0);
   const [updateAvailable, setUpdateAvailable] = React.useState(false);
   const [lastChecked, setLastChecked] = React.useState<string | null>(null);
   const [error, setError] = React.useState<string | null>(null);
 
   // Check if updates are available (not in Expo Go and updates module loaded)
-  const isUpdateAvailable = !isExpoGo && Updates?.isEnabled !== false;
+  const isUpdateAvailable = !isExpoGo && Updates !== null;
+
+  React.useEffect(() => {
+    logger.log('[UpdateChecker] Component mounted', {
+      isExpoGo,
+      Updates: !!Updates,
+      isUpdateAvailable,
+      appOwnership: Constants?.default?.appOwnership || Constants?.appOwnership,
+      updateUrl: Constants?.default?.updateUrl || Constants?.updateUrl,
+    });
+  }, []);
 
   const checkForUpdates = async () => {
+    logger.log('[UpdateChecker] checkForUpdates called', {
+      Updates: !!Updates,
+      isUpdateAvailable,
+      isExpoGo,
+    });
+
     if (!Updates || !isUpdateAvailable) {
+      logger.log('[UpdateChecker] Updates not available, showing alert');
       Alert.alert(
         t('updates.notAvailable', 'Updates Not Available'),
         t('updates.notAvailableDesc', 'OTA updates are not available in this build. Use a development build or production APK for update support.')
@@ -58,29 +74,23 @@ export default function UpdateChecker() {
     try {
       setChecking(true);
       setError(null);
+      logger.log('[UpdateChecker] Starting update check...');
 
       // Check for available update
       const update = await Updates.checkForUpdateAsync();
+      logger.log('[UpdateChecker] Update check result:', update);
 
       if (update.isAvailable) {
+        logger.log('[UpdateChecker] Update available, starting download...');
         setUpdateAvailable(true);
         setDownloading(true);
-        setDownloadProgress(0);
 
-        // Download the update with progress tracking
-        const downloadResumable = Updates.fetchUpdateAsync({
-          // @ts-ignore - progress callback exists but not in types
-          progressCallback: (progress: { receivedBytes: number; totalBytes: number }) => {
-            const percentage = (progress.receivedBytes / progress.totalBytes) * 100;
-            setDownloadProgress(Math.round(percentage));
-            logger.log(`[UpdateChecker] Download progress: ${percentage.toFixed(1)}%`);
-          },
-        });
-
-        await downloadResumable;
+        // For EAS updates, fetchUpdateAsync doesn't support progress callback
+        // Just show downloading state
+        await Updates.fetchUpdateAsync();
+        logger.log('[UpdateChecker] Update downloaded successfully');
 
         setDownloading(false);
-        setDownloadProgress(100);
         setLastChecked(new Date().toISOString());
 
         // Prompt to restart
@@ -110,6 +120,7 @@ export default function UpdateChecker() {
           ]
         );
       } else {
+        logger.log('[UpdateChecker] No update available');
         setLastChecked(new Date().toISOString());
         Alert.alert(
           t('updates.upToDate', 'Up to Date'),
@@ -126,7 +137,6 @@ export default function UpdateChecker() {
     } finally {
       setChecking(false);
       setDownloading(false);
-      setDownloadProgress(0);
     }
   };
 
@@ -171,7 +181,7 @@ export default function UpdateChecker() {
           checking
             ? t('updates.checking', 'Checking for updates...')
             : downloading
-            ? t('updates.downloading', 'Downloading update... {{progress}}%', { progress: downloadProgress })
+            ? t('updates.downloading', 'Downloading update...')
             : t('updates.checkButton', 'Check for Updates')
         }
         accessibilityHint={t('updates.checkHint', 'Checks if a new version is available and downloads it')}
@@ -184,22 +194,11 @@ export default function UpdateChecker() {
             {checking
               ? t('updates.checking', 'Checking for updates...')
               : downloading
-              ? t('updates.downloading', 'Downloading update... {{progress}}%', { progress: downloadProgress })
+              ? t('updates.downloading', 'Downloading update...')
               : t('updates.checkButton', 'Check for Updates')}
           </DyslexiaText>
         </View>
       </A11yPressable>
-
-      {downloading && downloadProgress > 0 && (
-        <View style={s.progressContainer}>
-          <View style={s.progressBarBackground}>
-            <View style={[s.progressBarFill, { width: `${downloadProgress}%` }]} />
-          </View>
-          <DyslexiaText style={s.progressText}>
-            {t('updates.downloadProgress', '{{progress}}% complete', { progress: downloadProgress })}
-          </DyslexiaText>
-        </View>
-      )}
 
       {error && (
         <View style={s.errorContainer}>
@@ -264,27 +263,6 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>) =>
     },
     spinner: {
       marginRight: 8,
-    },
-    progressContainer: {
-      marginTop: 12,
-      gap: 4,
-    },
-    progressBarBackground: {
-      width: '100%',
-      height: 8,
-      backgroundColor: palette.muted,
-      borderRadius: 4,
-      overflow: 'hidden',
-    },
-    progressBarFill: {
-      height: '100%',
-      backgroundColor: palette.primary,
-      borderRadius: 4,
-    },
-    progressText: {
-      fontSize: 12,
-      color: palette.text,
-      textAlign: 'center',
     },
     errorContainer: {
       marginTop: 8,
