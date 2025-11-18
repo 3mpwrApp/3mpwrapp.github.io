@@ -52,7 +52,15 @@ export default function UpdateChecker() {
       isUpdateAvailable,
       appOwnership: Constants?.default?.appOwnership || Constants?.appOwnership,
       updateUrl: Constants?.default?.updateUrl || Constants?.updateUrl,
+      runtimeVersion: Constants?.default?.expoRuntimeVersion || Constants?.expoRuntimeVersion,
+      checkAutomatically: Constants?.default?.checkAutomatically || Constants?.checkAutomatically,
     });
+
+    // Auto-check for updates on mount if supported
+    if (isUpdateAvailable && Updates) {
+      logger.log('[UpdateChecker] Auto-checking for updates on mount...');
+      checkForUpdates();
+    }
   }, []);
 
   const checkForUpdates = async () => {
@@ -156,7 +164,26 @@ export default function UpdateChecker() {
 
   // Don't render if updates not supported
   if (!Updates || !isUpdateAvailable) {
-    return null;
+    return (
+      <View style={s.container}>
+        <View style={s.header}>
+          <DyslexiaText style={s.title}>
+            {t('updates.title', 'App Updates')}
+          </DyslexiaText>
+          <DyslexiaText style={s.lastChecked}>
+            {t('updates.notSupported', 'Updates not supported in this build')}
+          </DyslexiaText>
+        </View>
+        <View style={s.infoContainer}>
+          <DyslexiaText style={s.infoText}>
+            {isExpoGo 
+              ? 'Running in Expo Go - use a development build for OTA updates'
+              : 'OTA updates require a development or production build'
+            }
+          </DyslexiaText>
+        </View>
+      </View>
+    );
   }
 
   return (
@@ -168,6 +195,11 @@ export default function UpdateChecker() {
         {lastChecked && (
           <DyslexiaText style={s.lastChecked}>
             {t('updates.lastChecked', 'Last checked: {{time}}', { time: formatLastChecked(lastChecked) || '' })}
+          </DyslexiaText>
+        )}
+        {!lastChecked && !checking && (
+          <DyslexiaText style={s.lastChecked}>
+            {t('updates.notCheckedYet', 'Not checked yet - will auto-check on mount')}
           </DyslexiaText>
         )}
       </View>
