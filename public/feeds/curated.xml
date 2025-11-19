@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 18 Nov 2025 15:29:56 GMT</lastBuildDate>
-    <pubDate>Tue, 18 Nov 2025 15:29:56 GMT</pubDate>
+    <lastBuildDate>Wed, 19 Nov 2025 09:25:33 GMT</lastBuildDate>
+    <pubDate>Wed, 19 Nov 2025 09:25:33 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -20,130 +20,317 @@
     <category>Benefits</category>
 
     <item>
-      <title>Supreme Court of Canada judges visit Thunder Bay, Ont., to cap off 150th-anniversary tour</title>
-      <link>https://www.cbc.ca/news/canada/thunder-bay/supreme-court-canada-judges-visit-thunder-bay-9.6981947?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/thunder-bay/supreme-court-canada-judges-visit-thunder-bay-9.6981947?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/bf45013f-2e40-4595-b718-a1578af634d0,1763414078046/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C3000%2C1687%29%3BResize%3D%28620%29' alt='Four people are seen sitting at a table at the front of a room.' width='620' height='349' title='Supreme Court justices — Malcolm Rowe, Chief Justice Richard Wagner, Michelle O'Bonsawin and Ontario Chief Justice Michael Tulloch, left to right — stopped in Thunder Bay, Ont., on Monday as part of a 150th-anniversary tour in parts of Canada.'/><p>Supreme Court judges have been on a cross-Canada tour listening to community concerns to mark the top court's 150th anniversary. Here's what the justices have heard so far, including on their fifth and final stop in Thunder Bay, Ont., and why they're feeling hopeful.</p>]]></description>
+      <title>Looming military radar project creates deep anxiety for rural Ontario community</title>
+      <link>https://www.cbc.ca/news/canada/radar-canadian-military-ontario-clearview-township-9.6983636?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/radar-canadian-military-ontario-clearview-township-9.6983636?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1d5e1c08-e759-4533-99c6-78cb88165171,1763500291867/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C357%2C552%2C310%29%3BResize%3D%28620%29' alt='rows of radar equipment ' width='620' height='349' title='Canada will be acquiring Australia’s Jindalee Operational Radar Network (JORN) for its Over the Horizon Radar program.'/><p>Family farms in Clearview Township, Ont., face uncertainty after the Department of National Defence proposed a $38-billion NORAD radar project. Generations of farmers fear losing land to the military, raising tension between national security plans and rural heritage.</p>]]></description>
+      <pubDate>Wed, 19 Nov 2025 09:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>20 people stuck in elevator at the deepest light-rail station in Canada — on 1st day of service</title>
+      <link>https://www.cbc.ca/player/play/9.6983743?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/player/play/9.6983743?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/66a99317-6111-4ef9-afc8-be19b21639ab,1763504397811/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='A graphic representing the layout of a subterranean REM and Metro station with the text REM elevator breakdown' width='620' height='349' title=''/><p>On the first day the new Deux-Montagnes line of Montreal’s light-rail network was officially in full operation, an elevator carrying commuters at Édouard-Montpetit station broke down for an hour.</p>]]></description>
+      <pubDate>Tue, 18 Nov 2025 22:05:12 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba throne speech promises 1st supervised consumption site, overpass at site of deadly Carberry bus crash</title>
+      <link>https://www.cbc.ca/news/canada/manitoba/throne-speech-2025-9.6983138?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/manitoba/throne-speech-2025-9.6983138?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/859f66ad-cf0c-4290-bbd4-ccc1a4e41c0c,1763508645945/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A man in a grey suit with a black coloured tie.' width='620' height='349' title='Manitoba Premier Wab Kinew revealed his government's third throne speech on Tuesday, which includes commitments to build a new intersection hospital and new emergency departments.'/><p>Manitoba’s NDP government is promising to build, saying in its third throne speech that it will construct an overpass at the location of a bus crash that killed 17 seniors, set up the province’s first supervised consumption site and build a new fuel-burning generation station to stave off a forecast power shortage.</p>]]></description>
+      <pubDate>Tue, 18 Nov 2025 19:37:20 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>WestJet weight cap on power wheelchairs leaves some Canadians grounded, advocates say</title>
+      <link>https://www.cbc.ca/news/canada/calgary/westjet-power-wheelchair-weight-limit-9.6982990?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/calgary/westjet-power-wheelchair-weight-limit-9.6982990?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/00bfa423-6ac9-49cc-bf32-fd97cf987e0d,1763480745053/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C488%2C6000%2C3375%29%3BResize%3D%28620%29' alt='WestJet passengers deplane on the tarmac.' width='620' height='349' title='WestJet passengers deplane on the tarmac at Yellowknife Airport on July 22, 2025. Travellers and advocates say a limit on the weight of mobility aids aboard most WestJet flights discriminates against power wheelchair users.'/><p>Travellers and advocates say a rule of the Calgary-based airline that bars mobility aids of more than 136 kilograms from most of its planes discriminates against people living with a disability.</p>]]></description>
+      <pubDate>Tue, 18 Nov 2025 18:24:35 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>CRTC updates definition of Canadian content, putting limits on AI use</title>
+      <link>https://www.cbc.ca/news/politics/crtc-canadian-content-9.6983364?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/politics/crtc-canadian-content-9.6983364?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/71e91664-eb53-431d-a5e5-6913b67b1d3d,1763491361440/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C328%2C8235%2C4632%29%3BResize%3D%28620%29' alt='A woman sits on a stage in front of a microphone.' width='620' height='349' title='Nathalie Theberge, CRTC Vice-Chairperson of Broadcasting, chairs a public hearing of the Canadian Radio-television and Telecommunications Commission, in Gatineau, Que., on Thursday, Sept. 18, 2025.'/><p>The federal broadcast regulator has released a new definition of Canadian content — and humans, not AI, must maintain creative control in order to qualify.</p>]]></description>
+      <pubDate>Tue, 18 Nov 2025 23:50:40 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Proposal to ban raising of national flags at Calgary city hall delayed</title>
+      <link>https://www.cbc.ca/news/canada/calgary/calgary-city-council-flags-motion-9.6983177?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/calgary/calgary-city-council-flags-motion-9.6983177?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.7390332,1732240789000/full/max/0/default.jpg?im=Crop%2Crect%3D%28365%2C106%2C5107%2C2872%29%3BResize%3D%28620%29' alt='a historic building. two people stand in front looking up at it. there are colourful flowers planted around it ' width='620' height='349' title='Historic Calgary City Hall. The circa 1910 building underwent a four year restoration project starting in in 2016.'/><p>The proposal, brought forward by Ward 13 Coun. Dan McLean, called for council to discuss amendments to Calgary's flag policy during its scheduled public hearing meeting as an "urgent business" matter.</p>]]></description>
+      <pubDate>Tue, 18 Nov 2025 20:08:13 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Canada Post says it&apos;s lost over $1B so far this year amid strike action</title>
+      <link>https://globalnews.ca/news/11531519/canada-post-financial-losses-2025/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11531519/canada-post-financial-losses-2025/</guid>
+      <description><![CDATA[Canada Post says it lost over $1 billion by the end of September amid the ongoing labour disruptions and negotiations with the CUPW, according to the company.]]></description>
+      <pubDate>Tue, 18 Nov 2025 21:06:33 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year</title>
+      <link>https://www.straight.com/food/world-culinary-awards-names-baan-lao-best-restaurant-in-canada-for-second-straight-year</link>
+      <guid isPermaLink="true">https://www.straight.com/food/world-culinary-awards-names-baan-lao-best-restaurant-in-canada-for-second-straight-year</guid>
+      <description><![CDATA[The Richmond restaurant took home the honours once again.]]></description>
+      <pubDate>Thu, 23 Oct 2025 22:47:58 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Alberta to invoke notwithstanding clause to shield 3 transgender bills from court challenges</title>
+      <link>https://www.cbc.ca/news/canada/edmonton/alberta-government-notwithstanding-clause-bills-9.6983786?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/edmonton/alberta-government-notwithstanding-clause-bills-9.6983786?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/3d75d557-0942-430b-94d5-fb47fc6bada8,1763515991030/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A woman at a podium. ' width='620' height='349' title='Alberta Premier Danielle Smith. '/><p></p>]]></description>
+      <pubDate>Wed, 19 Nov 2025 00:53:43 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Team Canada unveils athlete outfits for Milan-Cortina Olympics, Paralympics</title>
+      <link>https://www.cbc.ca/sports/olympics/team-canada-olympics-paralympics-athlete-kits-milan-cortina-9.6983028?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/sports/olympics/team-canada-olympics-paralympics-athlete-kits-milan-cortina-9.6983028?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/56fac9bd-5773-4e7b-8bd7-cce0e599df9a,1763493340640/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C437%2C7717%2C4340%29%3BResize%3D%28620%29' alt='Eight athletes on stage modelling new Team Canada outfits, with a small audience in the foreground.' width='620' height='349' title='Winter Olympians model the official Team Canada x lululemon Milano Cortina 2026 Athlete Kit at an event in Toronto on Nov. 18, 2025.'/><p></p>]]></description>
+      <pubDate>Tue, 18 Nov 2025 21:20:31 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>House gifted to Autism Okanagan to meet growing needs</title>
+      <link>https://globalnews.ca/news/11532019/house-gifted-to-autism-okanagan/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11532019/house-gifted-to-autism-okanagan/</guid>
+      <description><![CDATA[The home will allow the organization to expand existing services and add new ones to help support some 300 families every year amid the growing need.]]></description>
+      <pubDate>Wed, 19 Nov 2025 01:40:26 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>How former Vancouver Canadians performed for the Blue Jays in the World Series</title>
+      <link>https://www.straight.com/city-culture/how-former-vancouver-canadians-performed-for-blue-jays-in-world-series</link>
+      <guid isPermaLink="true">https://www.straight.com/city-culture/how-former-vancouver-canadians-performed-for-blue-jays-in-world-series</guid>
+      <description><![CDATA[Toronto lost in heartbreaking fashion on Saturday night.]]></description>
+      <pubDate>Sun, 02 Nov 2025 07:19:45 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>B.C. redrawing EV sales mandate, scraps goal of 100% by 2035, leaves rebates to feds</title>
+      <link>https://www.cbc.ca/news/canada/british-columbia/bc-electric-vehicle-rebates-sales-mandates-9.6984032?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/british-columbia/bc-electric-vehicle-rebates-sales-mandates-9.6984032?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.5977890,1742964448000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C328%2C6362%2C3578%29%3BResize%3D%28620%29' alt='An electric charger plugged into the front of a black car.' width='620' height='349' title='Electric vehicle chargers are pictured at a parking lot in Surrey, B.C., on Sept. 25, 2019. '/><p>British Columbia has abandoned a rebate program for electric vehicles that it paused six months ago and is scrapping a mandate that every new vehicle sold in the province must be zero-emission by 2035.</p>]]></description>
+      <pubDate>Wed, 19 Nov 2025 00:17:51 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Bo Bichette declines qualifying offer from Toronto Blue Jays</title>
+      <link>https://www.cbc.ca/news/canada/bichette-declines-qualifying-offer-blue-jays-9.6983816?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/bichette-declines-qualifying-offer-blue-jays-9.6983816?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/52065272-9f0a-4ab4-a37b-fc14322c1e5a,1763506157396/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C128%2C3072%2C1728%29%3BResize%3D%28620%29' alt='A baseball player holding a bat with one hand, looking out to the field immediately after hitting a home run' width='620' height='349' title='Nov 1, 2025; Toronto, Ontario, CAN; Toronto Blue Jays designated hitter Bo Bichette (11) hits a three run home run against the Los Angeles Dodgers in the third inning during game seven of the 2025 MLB World Series at Rogers Centre. Mandatory Credit: John E. Sokolowski-Imagn Images'/><p>Bo Bichette has declined a qualifying offer from the Toronto Blue Jays, meaning the major-league veteran of seven seasons will opt to choose his next deal from what he is offered on the open market.</p>]]></description>
+      <pubDate>Wed, 19 Nov 2025 00:14:22 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>B.C. health-care workers reach tentative deal with employers</title>
+      <link>https://globalnews.ca/news/11532053/bc-health-care-workers-tentative-deal/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11532053/bc-health-care-workers-tentative-deal/</guid>
+      <description><![CDATA[B.C. health-care workers in the province's hospitals and long-term care facilities will vote on a tentative deal reached with employers in mid-December.]]></description>
+      <pubDate>Tue, 18 Nov 2025 23:56:52 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Photos: Matt Maltese caresses the keys at the Vogue Theatre</title>
+      <link>https://www.straight.com/music/photos-matt-maltese-caresses-keys-at-vogue-theatre</link>
+      <guid isPermaLink="true">https://www.straight.com/music/photos-matt-maltese-caresses-keys-at-vogue-theatre</guid>
+      <description><![CDATA[A multi-hyphenate British-Canadian singer-songwriter.]]></description>
+      <pubDate>Mon, 20 Oct 2025 23:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>OneBC Leader’s Comments Drive Indigenous Delegation from Legislature</title>
+      <link>https://thetyee.ca/News/2025/11/18/OneBC-Leader-Comments-Drive-Indigenous-Delegation-Legislature/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2025/11/18/OneBC-Leader-Comments-Drive-Indigenous-Delegation-Legislature/</guid>
+      <description><![CDATA[Dallas Brodie called reports of residential school graves the ‘worst lie in Canadian history.’]]></description>
+      <pubDate>Tue, 18 Nov 2025 08:10:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>How Rider Nation celebrated the Saskatchewan Roughriders’ CFL win</title>
+      <link>https://www.cbc.ca/news/canada/saskatchewan/livestory/grey-cup-parade-2025-9.6983423?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/saskatchewan/livestory/grey-cup-parade-2025-9.6983423?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/86017311-d03c-45a0-83bb-00cffa49fd78,1763494817002/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C134%2C5769%2C3245%29%3BResize%3D%28620%29' alt='A shirtless man hoists a trophy above his head in a line of men' width='620' height='349' title='Saskatchewan Roughriders quarterback Trevor Harris (fourth from the right) speaks to spectators at Mosaic Stadium in Regina, Monday, Nov. 17, 2025. The Saskatchewan Roughriders defeated Montreal Alouettes on Sunday to become the 112th Grey Cup champions. THE CANADIAN PRESS/Heywood Yu'/><p></p>]]></description>
+      <pubDate>Fri, 14 Nov 2025 12:07:47 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>From Promise to Progress: Manitoba Government Presents Throne Speech</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71637</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71637</guid>
+      <pubDate>Tue, 18 Nov 2025 19:29:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>You Nearly Missed: Ada Lea promises to inspire at LanaLou&apos;s in Vancouver</title>
+      <link>https://www.straight.com/music/you-nearly-missed-ada-lea-promises-to-inspire-at-lanalous-in-vancouver</link>
+      <guid isPermaLink="true">https://www.straight.com/music/you-nearly-missed-ada-lea-promises-to-inspire-at-lanalous-in-vancouver</guid>
+      <description><![CDATA["Because anyone can, you can also do it."]]></description>
+      <pubDate>Thu, 23 Oct 2025 21:25:06 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December!</title>
+      <link>https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december</link>
+      <guid isPermaLink="true">https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december</guid>
+      <description><![CDATA["We're there to bring joy, connect people, and engage with our audience."]]></description>
+      <pubDate>Wed, 22 Oct 2025 17:25:20 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Council quashes debate on banning national flag-raising ceremonies at Calgary city hall</title>
+      <link>https://globalnews.ca/news/11531128/council-quashes-debate-national-flag-raising-ceremonies-city-hall/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11531128/council-quashes-debate-national-flag-raising-ceremonies-city-hall/</guid>
+      <description><![CDATA[Calgary city council rejected an attempt to add an urgent motion on banning national flag raising ceremonies at city hall to Tuesday's meeting agenda while questioning its urgency.]]></description>
+      <pubDate>Wed, 19 Nov 2025 00:49:55 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>AI can&apos;t be used to qualify content as Canadian, CRTC says in updated rule</title>
+      <link>https://globalnews.ca/news/11531866/crtc-canadian-content-definition-ai/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11531866/crtc-canadian-content-definition-ai/</guid>
+      <description><![CDATA[The new definition maintains that Cancon is based on the number of Canadians occupying key creative positions in a production, which can't be replaced with artificial intelligence.]]></description>
+      <pubDate>Tue, 18 Nov 2025 22:44:29 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Richmond Christmas Fund marks another year of local support</title>
+      <link>https://www.straight.com/living/richmond-christmas-fund-marks-another-year-of-local-support</link>
+      <guid isPermaLink="true">https://www.straight.com/living/richmond-christmas-fund-marks-another-year-of-local-support</guid>
+      <description><![CDATA[The long-running initiative invites the community to donate new toys and enjoy family-friendly activities.]]></description>
+      <pubDate>Mon, 17 Nov 2025 22:50:26 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>John Main is Nunavut’s next premier</title>
+      <link>https://www.cbc.ca/news/canada/north/nunavut-leadership-forum-2025-9.6981851?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/north/nunavut-leadership-forum-2025-9.6981851?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.6256387,1649276973000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C81%2C1180%2C663%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='John Main is the new minister of health and minister responsible for suicide prevention in Nunavut.'/><p>Members voted for John Main as premier Nunavut's 7th Assembly. They also voted for David Joanasie as Speaker.</p>]]></description>
       <pubDate>Tue, 18 Nov 2025 09:00:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Auto theft costs Canadians $1B. Here are the top vehicles sought by thieves</title>
-      <link>https://globalnews.ca/news/11529614/auto-theft-claims-2025-canada-top-models/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11529614/auto-theft-claims-2025-canada-top-models/</guid>
-      <description><![CDATA[Newer model, higher-priced SUVs and pickup trucks remain top targets, a new report says, with criminals adapting amid efforts to crack down on their operations.]]></description>
-      <pubDate>Tue, 18 Nov 2025 13:00:32 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Pilot killed in Ontario mid-air collision was from Quebec, police say</title>
-      <link>https://globalnews.ca/news/11530885/lile-bizard-quebec-ontario-plane-crash/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11530885/lile-bizard-quebec-ontario-plane-crash/</guid>
-      <description><![CDATA[A pilot who died during a mid-air collision in eastern Ontario over the weekend was a Quebec resident, Ontario Provincial Police say.]]></description>
-      <pubDate>Tue, 18 Nov 2025 14:24:11 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Swedish royal family set to arrive in Ottawa for 3-day Canada visit</title>
-      <link>https://globalnews.ca/news/11530824/swedish-royal-family-canada-visit/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11530824/swedish-royal-family-canada-visit/</guid>
-      <description><![CDATA[King Carl XVI Gustaf, Sweden's longest reigning monarch, and Queen Silvia are visiting Ottawa and Montreal for their first trip to Canada since 2006.]]></description>
-      <pubDate>Tue, 18 Nov 2025 13:26:28 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>New trial ordered for Alberta man convicted of 1st-degree murder in 2020 shooting</title>
-      <link>https://www.cbc.ca/news/canada/edmonton/alberta-court-of-appeal-first-degree-murder-new-trial-demetroff-9.6982516?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/edmonton/alberta-court-of-appeal-first-degree-murder-new-trial-demetroff-9.6982516?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/590d5192-8031-4f47-82e5-c8424814cec2,1763432245095/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C337%2C5712%2C3213%29%3BResize%3D%28620%29' alt='An exterior view of a brick building with the words "courthouse" on top, with a green lawn and trees in front.' width='620' height='349' title='A view of the Wetaskiwin courthouse on Sept. 5, 2024.'/><p>Kardon Demetroff's conviction in the killing of 74-year-old Larry Parker, a Wetaskiwin, Alta., landlord found dead in 2020, has been overturned in a decision from the Court of Appeal of Alberta.</p>]]></description>
-      <pubDate>Tue, 18 Nov 2025 13:00:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Adds 323 Beds to Reduce Wait Times</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=71317</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71317</guid>
-      <pubDate>Mon, 03 Nov 2025 18:02:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Photos: Belfast electronic duo Chalk light up the Fox Cabaret</title>
-      <link>https://www.straight.com/music/photos-belfast-electronic-duo-chalk-lights-up-fox-cabaret</link>
-      <guid isPermaLink="true">https://www.straight.com/music/photos-belfast-electronic-duo-chalk-lights-up-fox-cabaret</guid>
-      <description><![CDATA[The Irish duo made the most of their only Canadian tour stop.]]></description>
-      <pubDate>Tue, 11 Nov 2025 06:57:06 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Five underrated Halloween horror films for the spooky season&apos;s final stretch</title>
-      <link>https://www.straight.com/movies/five-underrated-halloween-horror-films-for-spooky-seasons-final-stretch-0</link>
-      <guid isPermaLink="true">https://www.straight.com/movies/five-underrated-halloween-horror-films-for-spooky-seasons-final-stretch-0</guid>
-      <description><![CDATA[From toy rabbits to punk-club green rooms, prepare to be scared.]]></description>
-      <pubDate>Sat, 25 Oct 2025 21:39:28 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Zappa Nite at the Rickshaw: Halloween comes early this Friday</title>
-      <link>https://www.straight.com/music/zappa-nite-at-rickshaw-halloween-comes-early-this-friday</link>
-      <guid isPermaLink="true">https://www.straight.com/music/zappa-nite-at-rickshaw-halloween-comes-early-this-friday</guid>
-      <description><![CDATA[“We do work hard to play his music well."]]></description>
-      <pubDate>Fri, 24 Oct 2025 00:57:08 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>You Nearly Missed: Our top picks from the 2025 Chilliwack Independent Film Festival</title>
-      <link>https://www.straight.com/movies/you-nearly-missed-our-top-picks-from-2025-chilliwack-independent-film-festival</link>
-      <guid isPermaLink="true">https://www.straight.com/movies/you-nearly-missed-our-top-picks-from-2025-chilliwack-independent-film-festival</guid>
-      <description><![CDATA[From cult cinema to queer storytelling, five standout picks from this year’s program.]]></description>
-      <pubDate>Mon, 20 Oct 2025 21:09:56 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Ontario’s most stolen vehicles of 2024 revealed</title>
-      <link>https://www.cbc.ca/news/canada/toronto/top-10-stolen-vehicles-2024-9.6982137?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/toronto/top-10-stolen-vehicles-2024-9.6982137?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.7439268,1737642647000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C225%2C2420%2C1361%29%3BResize%3D%28620%29' alt='A white Honda CR-V SUV with a broken window parked in a lot. The broken window is covered over with plastic.' width='620' height='349' title='Hamilton police say the theft of a Honda CR-V resulted in a resident missing the birth of their child.'/><p>Équité Association reveals the most commonly and most frequently stolen cars in Ontario last year. </p>]]></description>
-      <pubDate>Tue, 18 Nov 2025 13:00:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>A farmer, her flock, and the North they sustain</title>
-      <link>https://www.straight.com/young-farmers/a-farmer-her-flock-and-north-they-sustain</link>
-      <guid isPermaLink="true">https://www.straight.com/young-farmers/a-farmer-her-flock-and-north-they-sustain</guid>
-      <description><![CDATA[In B.C’s North Coast, Kieran McKeown, a third-generation farmer, blends innovation, integrity, and community spirit to feed a region and keep her family’s legacy alive.]]></description>
-      <pubDate>Tue, 28 Oct 2025 09:44:11 GMT</pubDate>
+      <title>School boards must make privacy changes after PowerSchool breach: watchdogs</title>
+      <link>https://globalnews.ca/news/11531404/powerschool-data-breach-provincial-investigations/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11531404/powerschool-data-breach-provincial-investigations/</guid>
+      <description><![CDATA[Privacy commissioners say school boards weren't prepared for the scale of the PowerSchool data breach and are urging changes to their agreements with the technology company.]]></description>
+      <pubDate>Tue, 18 Nov 2025 21:34:02 GMT</pubDate>
       <category>High Priority</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Glitch Theatre debuts with neurodivergent-led premiere</title>
-      <link>https://www.straight.com/arts/glitch-theatre-debuts-with-neurodivergent-led-premiere</link>
-      <guid isPermaLink="true">https://www.straight.com/arts/glitch-theatre-debuts-with-neurodivergent-led-premiere</guid>
-      <description><![CDATA[New name, new mandate, and a neurodivergent-led creative team define the company’s 2025 launch.]]></description>
-      <pubDate>Wed, 22 Oct 2025 20:28:22 GMT</pubDate>
+      <title>Not ‘a ton of optimism&apos; Putin wants Ukraine peace, Canadian official says</title>
+      <link>https://globalnews.ca/news/11531102/ukraine-russia-putin-canada-committee-ambassador/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11531102/ukraine-russia-putin-canada-committee-ambassador/</guid>
+      <description><![CDATA[International efforts to bring a negotiated end to the war have crumbled, with Putin showing no willingness to order a ceasefire or enter peace talks.]]></description>
+      <pubDate>Tue, 18 Nov 2025 21:03:40 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>They Want to Be Progressive Conservatives. No Way, Says Danielle Smith</title>
+      <link>https://thetyee.ca/Opinion/2025/11/18/They-Want-Be-Progressive-Conservatives/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2025/11/18/They-Want-Be-Progressive-Conservatives/</guid>
+      <description><![CDATA[The UCP is in court trying to stop two Alberta MLAs from using the former party’s name.]]></description>
+      <pubDate>Tue, 18 Nov 2025 08:20:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Is the U.S. starving for Canadian travellers? | About That</title>
+      <link>https://www.cbc.ca/player/play/9.6983875?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/player/play/9.6983875?cmp=rss</guid>
+      <pubDate>Tue, 18 Nov 2025 22:52:38 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>A Sprawling BC Community Is Set to Lose Millions Owed by Oil Firm</title>
+      <link>https://thetyee.ca/News/2025/11/18/BC-Community-Set-Lose-Millions-Owed-Oil-Firm/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2025/11/18/BC-Community-Set-Lose-Millions-Owed-Oil-Firm/</guid>
+      <description><![CDATA[Bankrupt Erikson National Energy leaves Northern Rockies Regional Municipality deep in the hole for tax revenues.]]></description>
+      <pubDate>Tue, 18 Nov 2025 08:40:00 GMT</pubDate>
+      <category>High Priority</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Measles Update  #44</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71477</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71477</guid>
+      <pubDate>Mon, 10 Nov 2025 16:44:00 GMT</pubDate>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Halifax-area mother and son honoured for heroism after vicious dog attack</title>
+      <link>https://globalnews.ca/news/11531168/halifax-hero-award-dog-attack/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11531168/halifax-hero-award-dog-attack/</guid>
+      <description><![CDATA[A Nova Scotia mother who saved her child from a dog attack and was honoured for her bravery is calling for changes to laws concerning dangerous dogs.]]></description>
+      <pubDate>Tue, 18 Nov 2025 22:28:56 GMT</pubDate>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 

@@ -1,0 +1,170 @@
+---
+layout: post
+title: "Daily News Curation - 2025-11-19"
+date: 2025-11-19
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-11-19
+
+Curated 32 items from disability, accessibility, and social policy sources.
+
+## 1. Looming military radar project creates deep anxiety for rural Ontario community
+<img src='https://i.cbc.ca/ais/1d5e1c08-e759-4533-99c6-78cb88165171,1763500291867/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C357%2C552%2C310%29%3BResize%3D%28620%29' alt='rows of radar equipment ' width='620' height='349' title='Canada will be acquiring Australia’s Jindalee Operational Radar Network (JORN) for its Over the Horizon Radar program.'/><p>Family farms in Clearview Township, Ont., face uncertainty after the Department of National Defence proposed a $38-billion NORAD radar project. Generations of farmers fear losing land to the military, raising tension between national security plans and rural heritage.</p>
+📍 [Source](https://www.cbc.ca/news/canada/radar-canadian-military-ontario-clearview-township-9.6983636?cmp=rss)
+**Score:** 21.50
+
+## 2. 20 people stuck in elevator at the deepest light-rail station in Canada — on 1st day of service
+<img src='https://i.cbc.ca/ais/66a99317-6111-4ef9-afc8-be19b21639ab,1763504397811/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='A graphic representing the layout of a subterranean REM and Metro station with the text REM elevator breakdown' width='620' height='349' title=''/><p>On the first day the new Deux-Montagnes line of Montreal’s light-rail network was officially in full operation, an elevator carrying commuters at Édouard-Montpetit station broke down for an hour.</p>
+📍 [Source](https://www.cbc.ca/player/play/9.6983743?cmp=rss)
+**Score:** 14.00
+
+## 3. Manitoba throne speech promises 1st supervised consumption site, overpass at site of deadly Carberry bus crash
+<img src='https://i.cbc.ca/ais/859f66ad-cf0c-4290-bbd4-ccc1a4e41c0c,1763508645945/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A man in a grey suit with a black coloured tie.' width='620' height='349' title='Manitoba Premier Wab Kinew revealed his government's third throne speech on Tuesday, which includes commitments to build a new intersection hospital and new emergency departments.'/><p>Manitoba’s NDP government is promising to build, saying in its third throne speech that it will construct an overpass at the location of a bus crash that killed 17 seniors, set up the province’s first supervised consumption site and build a new fuel-burning generation station to stave off a forecast power shortage.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/throne-speech-2025-9.6983138?cmp=rss)
+**Score:** 13.50
+
+## 4. WestJet weight cap on power wheelchairs leaves some Canadians grounded, advocates say
+<img src='https://i.cbc.ca/ais/00bfa423-6ac9-49cc-bf32-fd97cf987e0d,1763480745053/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C488%2C6000%2C3375%29%3BResize%3D%28620%29' alt='WestJet passengers deplane on the tarmac.' width='620' height='349' title='WestJet passengers deplane on the tarmac at Yellowknife Airport on July 22, 2025. Travellers and advocates say a limit on the weight of mobility aids aboard most WestJet flights discriminates against power wheelchair users.'/><p>Travellers and advocates say a rule of the Calgary-based airline that bars mobility aids of more than 136 kilograms from most of its planes discriminates against people living with a disability.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/westjet-power-wheelchair-weight-limit-9.6982990?cmp=rss)
+**Score:** 14.95
+
+## 5. CRTC updates definition of Canadian content, putting limits on AI use
+<img src='https://i.cbc.ca/ais/71e91664-eb53-431d-a5e5-6913b67b1d3d,1763491361440/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C328%2C8235%2C4632%29%3BResize%3D%28620%29' alt='A woman sits on a stage in front of a microphone.' width='620' height='349' title='Nathalie Theberge, CRTC Vice-Chairperson of Broadcasting, chairs a public hearing of the Canadian Radio-television and Telecommunications Commission, in Gatineau, Que., on Thursday, Sept. 18, 2025.'/><p>The federal broadcast regulator has released a new definition of Canadian content — and humans, not AI, must maintain creative control in order to qualify.</p>
+📍 [Source](https://www.cbc.ca/news/politics/crtc-canadian-content-9.6983364?cmp=rss)
+**Score:** 13.30
+
+## 6. Proposal to ban raising of national flags at Calgary city hall delayed
+<img src='https://i.cbc.ca/ais/1.7390332,1732240789000/full/max/0/default.jpg?im=Crop%2Crect%3D%28365%2C106%2C5107%2C2872%29%3BResize%3D%28620%29' alt='a historic building. two people stand in front looking up at it. there are colourful flowers planted around it ' width='620' height='349' title='Historic Calgary City Hall. The circa 1910 building underwent a four year restoration project starting in in 2016.'/><p>The proposal, brought forward by Ward 13 Coun. Dan McLean, called for council to discuss amendments to Calgary's flag policy during its scheduled public hearing meeting as an "urgent business" matter.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/calgary-city-council-flags-motion-9.6983177?cmp=rss)
+**Score:** 10.50
+
+## 7. Canada Post says it's lost over $1B so far this year amid strike action
+Canada Post says it lost over $1 billion by the end of September amid the ongoing labour disruptions and negotiations with the CUPW, according to the company.
+📍 [Source](https://globalnews.ca/news/11531519/canada-post-financial-losses-2025/)
+**Score:** 9.50
+
+## 8. World Culinary Awards names Baan Lao best restaurant in Canada for the second straight year
+The Richmond restaurant took home the honours once again.
+📍 [Source](https://www.straight.com/food/world-culinary-awards-names-baan-lao-best-restaurant-in-canada-for-second-straight-year)
+**Score:** 9.50
+
+## 9. Alberta to invoke notwithstanding clause to shield 3 transgender bills from court challenges
+<img src='https://i.cbc.ca/ais/3d75d557-0942-430b-94d5-fb47fc6bada8,1763515991030/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A woman at a podium. ' width='620' height='349' title='Alberta Premier Danielle Smith. '/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-government-notwithstanding-clause-bills-9.6983786?cmp=rss)
+**Score:** 9.50
+
+## 10. Team Canada unveils athlete outfits for Milan-Cortina Olympics, Paralympics
+<img src='https://i.cbc.ca/ais/56fac9bd-5773-4e7b-8bd7-cce0e599df9a,1763493340640/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C437%2C7717%2C4340%29%3BResize%3D%28620%29' alt='Eight athletes on stage modelling new Team Canada outfits, with a small audience in the foreground.' width='620' height='349' title='Winter Olympians model the official Team Canada x lululemon Milano Cortina 2026 Athlete Kit at an event in Toronto on Nov. 18, 2025.'/><p></p>
+📍 [Source](https://www.cbc.ca/sports/olympics/team-canada-olympics-paralympics-athlete-kits-milan-cortina-9.6983028?cmp=rss)
+**Score:** 9.50
+
+## 11. House gifted to Autism Okanagan to meet growing needs
+The home will allow the organization to expand existing services and add new ones to help support some 300 families every year amid the growing need.
+📍 [Source](https://globalnews.ca/news/11532019/house-gifted-to-autism-okanagan/)
+**Score:** 9.50
+
+## 12. How former Vancouver Canadians performed for the Blue Jays in the World Series
+Toronto lost in heartbreaking fashion on Saturday night.
+📍 [Source](https://www.straight.com/city-culture/how-former-vancouver-canadians-performed-for-blue-jays-in-world-series)
+**Score:** 8.50
+
+## 13. B.C. redrawing EV sales mandate, scraps goal of 100% by 2035, leaves rebates to feds
+<img src='https://i.cbc.ca/ais/1.5977890,1742964448000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C328%2C6362%2C3578%29%3BResize%3D%28620%29' alt='An electric charger plugged into the front of a black car.' width='620' height='349' title='Electric vehicle chargers are pictured at a parking lot in Surrey, B.C., on Sept. 25, 2019. '/><p>British Columbia has abandoned a rebate program for electric vehicles that it paused six months ago and is scrapping a mandate that every new vehicle sold in the province must be zero-emission by 2035.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/bc-electric-vehicle-rebates-sales-mandates-9.6984032?cmp=rss)
+**Score:** 10.00
+
+## 14. Bo Bichette declines qualifying offer from Toronto Blue Jays
+<img src='https://i.cbc.ca/ais/52065272-9f0a-4ab4-a37b-fc14322c1e5a,1763506157396/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C128%2C3072%2C1728%29%3BResize%3D%28620%29' alt='A baseball player holding a bat with one hand, looking out to the field immediately after hitting a home run' width='620' height='349' title='Nov 1, 2025; Toronto, Ontario, CAN; Toronto Blue Jays designated hitter Bo Bichette (11) hits a three run home run against the Los Angeles Dodgers in the third inning during game seven of the 2025 MLB World Series at Rogers Centre. Mandatory Credit: John E. Sokolowski-Imagn Images'/><p>Bo Bichette has declined a qualifying offer from the Toronto Blue Jays, meaning the major-league veteran of seven seasons will opt to choose his next deal from what he is offered on the open market.</p>
+📍 [Source](https://www.cbc.ca/news/canada/bichette-declines-qualifying-offer-blue-jays-9.6983816?cmp=rss)
+**Score:** 8.50
+
+## 15. B.C. health-care workers reach tentative deal with employers
+B.C. health-care workers in the province's hospitals and long-term care facilities will vote on a tentative deal reached with employers in mid-December.
+📍 [Source](https://globalnews.ca/news/11532053/bc-health-care-workers-tentative-deal/)
+**Score:** 9.00
+
+## 16. Photos: Matt Maltese caresses the keys at the Vogue Theatre
+A multi-hyphenate British-Canadian singer-songwriter.
+📍 [Source](https://www.straight.com/music/photos-matt-maltese-caresses-keys-at-vogue-theatre)
+**Score:** 9.00
+
+## 17. OneBC Leader’s Comments Drive Indigenous Delegation from Legislature
+Dallas Brodie called reports of residential school graves the ‘worst lie in Canadian history.’
+📍 [Source](https://thetyee.ca/News/2025/11/18/OneBC-Leader-Comments-Drive-Indigenous-Delegation-Legislature/)
+**Score:** 9.00
+
+## 18. How Rider Nation celebrated the Saskatchewan Roughriders’ CFL win
+<img src='https://i.cbc.ca/ais/86017311-d03c-45a0-83bb-00cffa49fd78,1763494817002/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C134%2C5769%2C3245%29%3BResize%3D%28620%29' alt='A shirtless man hoists a trophy above his head in a line of men' width='620' height='349' title='Saskatchewan Roughriders quarterback Trevor Harris (fourth from the right) speaks to spectators at Mosaic Stadium in Regina, Monday, Nov. 17, 2025. The Saskatchewan Roughriders defeated Montreal Alouettes on Sunday to become the 112th Grey Cup champions. THE CANADIAN PRESS/Heywood Yu'/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/livestory/grey-cup-parade-2025-9.6983423?cmp=rss)
+**Score:** 9.00
+
+## 19. From Promise to Progress: Manitoba Government Presents Throne Speech
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71637)
+**Score:** 7.50
+
+## 20. You Nearly Missed: Ada Lea promises to inspire at LanaLou's in Vancouver
+"Because anyone can, you can also do it."
+📍 [Source](https://www.straight.com/music/you-nearly-missed-ada-lea-promises-to-inspire-at-lanalous-in-vancouver)
+**Score:** 5.00
+
+## 21. ABBA tribute ABRA Cadabra brings high-energy holiday love to the Lower Mainland this December!
+"We're there to bring joy, connect people, and engage with our audience."
+📍 [Source](https://www.straight.com/music/abba-tribute-abra-cadabra-brings-high-energy-holiday-love-to-lower-mainland-this-december)
+**Score:** 5.00
+
+## 22. Council quashes debate on banning national flag-raising ceremonies at Calgary city hall
+Calgary city council rejected an attempt to add an urgent motion on banning national flag raising ceremonies at city hall to Tuesday's meeting agenda while questioning its urgency.
+📍 [Source](https://globalnews.ca/news/11531128/council-quashes-debate-national-flag-raising-ceremonies-city-hall/)
+**Score:** 4.00
+
+## 23. AI can't be used to qualify content as Canadian, CRTC says in updated rule
+The new definition maintains that Cancon is based on the number of Canadians occupying key creative positions in a production, which can't be replaced with artificial intelligence.
+📍 [Source](https://globalnews.ca/news/11531866/crtc-canadian-content-definition-ai/)
+**Score:** 5.80
+
+## 24. Richmond Christmas Fund marks another year of local support
+The long-running initiative invites the community to donate new toys and enjoy family-friendly activities.
+📍 [Source](https://www.straight.com/living/richmond-christmas-fund-marks-another-year-of-local-support)
+**Score:** 6.00
+
+## 25. John Main is Nunavut’s next premier
+<img src='https://i.cbc.ca/ais/1.6256387,1649276973000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C81%2C1180%2C663%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='John Main is the new minister of health and minister responsible for suicide prevention in Nunavut.'/><p>Members voted for John Main as premier Nunavut's 7th Assembly. They also voted for David Joanasie as Speaker.</p>
+📍 [Source](https://www.cbc.ca/news/canada/north/nunavut-leadership-forum-2025-9.6981851?cmp=rss)
+**Score:** 5.50
+
+## 26. School boards must make privacy changes after PowerSchool breach: watchdogs
+Privacy commissioners say school boards weren't prepared for the scale of the PowerSchool data breach and are urging changes to their agreements with the technology company.
+📍 [Source](https://globalnews.ca/news/11531404/powerschool-data-breach-provincial-investigations/)
+**Score:** 3.00
+
+## 27. Not ‘a ton of optimism' Putin wants Ukraine peace, Canadian official says
+International efforts to bring a negotiated end to the war have crumbled, with Putin showing no willingness to order a ceasefire or enter peace talks.
+📍 [Source](https://globalnews.ca/news/11531102/ukraine-russia-putin-canada-committee-ambassador/)
+**Score:** 4.50
+
+## 28. They Want to Be Progressive Conservatives. No Way, Says Danielle Smith
+The UCP is in court trying to stop two Alberta MLAs from using the former party’s name.
+📍 [Source](https://thetyee.ca/Opinion/2025/11/18/They-Want-Be-Progressive-Conservatives/)
+**Score:** 4.50
+
+## 29. Is the U.S. starving for Canadian travellers? | About That
+📍 [Source](https://www.cbc.ca/player/play/9.6983875?cmp=rss)
+**Score:** 4.50
+
+## 30. A Sprawling BC Community Is Set to Lose Millions Owed by Oil Firm
+Bankrupt Erikson National Energy leaves Northern Rockies Regional Municipality deep in the hole for tax revenues.
+📍 [Source](https://thetyee.ca/News/2025/11/18/BC-Community-Set-Lose-Millions-Owed-Oil-Firm/)
+**Score:** 3.00
+
+## 31. Measles Update  #44
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71477)
+**Score:** 1.30
+
+## 32. Halifax-area mother and son honoured for heroism after vicious dog attack
+A Nova Scotia mother who saved her child from a dog attack and was honoured for her bravery is calling for changes to laws concerning dangerous dogs.
+📍 [Source](https://globalnews.ca/news/11531168/halifax-hero-award-dog-attack/)
+**Score:** 1.20
+
