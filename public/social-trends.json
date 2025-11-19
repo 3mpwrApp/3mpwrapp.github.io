@@ -1,104 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-19T06:17:15.131Z",
+  "lastUpdated": "2025-11-19T12:21:56.108Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2810,
+      "totalPosts": 2835,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T06:17:06.360Z"
+      "lastSeen": "2025-11-19T12:21:49.504Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2825,
+      "totalPosts": 2850,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T06:17:08.373Z"
+      "lastSeen": "2025-11-19T12:21:50.867Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2812,
+      "totalPosts": 2837,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T06:17:10.261Z"
+      "lastSeen": "2025-11-19T12:21:52.276Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2818,
-      "recentPosts": 24,
+      "totalPosts": 2843,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T06:17:12.284Z"
+      "lastSeen": "2025-11-19T12:21:53.800Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2825,
+      "totalPosts": 2850,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T06:17:14.128Z"
+      "lastSeen": "2025-11-19T12:21:55.104Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "For #screenshotsaturday, initial work on adding screen reader support to Torment Hexus! I want the game to be playable for unsighted people. There's a long way to go yet, but the path is clear! #a11y #inclusivegaming",
-      "author": "byobattleship.bsky.social",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 13,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "We're thinking about these powerful words from disability justice activist @miamingus.bsky.social, and reflecting on all the work we must do to keep fighting for Long COVID justice and #disabilityjustice!",
-      "author": "longcovidjustice.org",
-      "engagement": 43,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "If you ever wanted to get the Proteus Controller, but didn't want a whole 30+ piece of kit, the Aurora Series is perfect for you.\n\nAnd it's from an Irish company too!\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 16,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "So I brought this up on other socials but this is extremely disgusting. \nCompletely unrelated did you know that it's $40 to rent a wheelchair and $110 to rent an ECV at SeaWorld? Who knew! \n#SoMuchLessToSea #Accessibility",
-      "author": "spectromattix.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "If you ever wanted to get the Proteus Controller, but didn't want a whole 30+ piece of kit, the Aurora Series is perfect for you.\n\nAnd it's from an Irish company too!\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 16,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 13,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
       "author": "ellatholmes.bsky.social",
@@ -338,6 +278,66 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 77,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Alice Wong, the disability justice advocate and author, died at the weekend at age 51. She was best known for founding the Disability Visibility Project. She also wrote multiple books and a column for Teen Vogue, and her final project was Crips for eSims for Gaza, which raised over $3 million to […]",
+      "author": "culturedesk.flipboard.social.ap.brid.gy",
+      "engagement": 11,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
+      "author": "blindnewworld.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
+      "author": "kennef.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "The new and improved Proteus Kit works better than ever on PC, Xbox, and #SteamDeck!\n\nAnd did I mention it's designed by an Irish team? 🇮🇪\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
+      "author": "craigbreathnach.bsky.social",
+      "engagement": 15,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "So this is the first glance of Art of Flora! 🌱\n\nNot revolutionary, but built with the same love and care as Art of Fauna! ♥️ Please spread the word!\n\n7/7\n\n#indiedev #gamedev #a11y #OnTheAppStore",
+      "author": "strasser.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "The new and improved Proteus Kit works better than ever on PC, Xbox, and #SteamDeck!\n\nAnd did I mention it's designed by an Irish team? 🇮🇪\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
+      "author": "craigbreathnach.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "#a11y alt text:",
+      "author": "joquarky.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 13,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 30
+      "count": 29
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 28
     },
     {
       "keyword": "cripthevote",
@@ -398,10 +398,6 @@
       "count": 6
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 6
-    },
-    {
       "keyword": "abolishice",
       "count": 5
     },
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "wearetheflood",
+      "count": 5
+    },
+    {
+      "keyword": "50501movement",
       "count": 5
     }
   ]
