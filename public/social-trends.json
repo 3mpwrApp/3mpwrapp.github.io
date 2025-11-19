@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-19T12:21:56.108Z",
+  "lastUpdated": "2025-11-19T18:16:53.701Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2835,
+      "totalPosts": 2860,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T12:21:49.504Z"
+      "lastSeen": "2025-11-19T18:16:43.479Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2850,
+      "totalPosts": 2875,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T12:21:50.867Z"
+      "lastSeen": "2025-11-19T18:16:45.846Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2837,
+      "totalPosts": 2862,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T12:21:52.276Z"
+      "lastSeen": "2025-11-19T18:16:48.102Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2843,
+      "totalPosts": 2868,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T12:21:53.800Z"
+      "lastSeen": "2025-11-19T18:16:50.372Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2850,
+      "totalPosts": 2875,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T12:21:55.104Z"
+      "lastSeen": "2025-11-19T18:16:52.697Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "If you ever wanted to get the Proteus Controller, but didn't want a whole 30+ piece of kit, the Aurora Series is perfect for you.\n\nAnd it's from an Irish company too!\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 20,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "If you ever wanted to get the Proteus Controller, but didn't want a whole 30+ piece of kit, the Aurora Series is perfect for you.\n\nAnd it's from an Irish company too!\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 20,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 13,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
-      "author": "kennef.bsky.social",
-      "engagement": 14,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 13,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,6 +290,54 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 77,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Alice Wong, the disability justice advocate and author, died at the weekend at age 51. She was best known for founding the Disability Visibility Project. She also wrote multiple books and a column for Teen Vogue, and her final project was Crips for eSims for Gaza, which raised over $3 million to […]",
+      "author": "culturedesk.flipboard.social.ap.brid.gy",
+      "engagement": 11,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
+      "author": "blindnewworld.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
+      "author": "kennef.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Look at these cool, customizable controllers that let you put any button anywhere! Great for players who find regular controllers uncomfortable or impossible to use. \n#gamedev #gaming #accessibility #ux",
+      "author": "steinmakesgames.bsky.social",
+      "engagement": 21,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "So this is the first glance of Art of Flora! 🌱\n\nNot revolutionary, but built with the same love and care as Art of Fauna! ♥️ Please spread the word!\n\n7/7\n\n#indiedev #gamedev #a11y #OnTheAppStore",
+      "author": "strasser.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "The new and improved Proteus Kit works better than ever on PC, Xbox, and #SteamDeck!\n\nAnd did I mention it's designed by an Irish team? 🇮🇪\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
+      "author": "craigbreathnach.bsky.social",
+      "engagement": 16,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 13,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 77,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,19 +347,19 @@
     },
     {
       "keyword": "accessibility",
-      "count": 29
-    },
-    {
-      "keyword": "a11y",
-      "count": 28
+      "count": 30
     },
     {
       "keyword": "cripthevote",
       "count": 26
     },
     {
+      "keyword": "a11y",
+      "count": 26
+    },
+    {
       "keyword": "disabilityjustice",
-      "count": 23
+      "count": 24
     },
     {
       "keyword": "altcitizen",
@@ -379,7 +379,7 @@
     },
     {
       "keyword": "disability",
-      "count": 11
+      "count": 9
     },
     {
       "keyword": "alicewong",
@@ -390,12 +390,16 @@
       "count": 7
     },
     {
-      "keyword": "disability rights",
+      "keyword": "stoptrump",
       "count": 6
     },
     {
-      "keyword": "stoptrump",
+      "keyword": "vue",
       "count": 6
+    },
+    {
+      "keyword": "inclusion",
+      "count": 5
     },
     {
       "keyword": "abolishice",
@@ -415,10 +419,6 @@
     },
     {
       "keyword": "wearetheflood",
-      "count": 5
-    },
-    {
-      "keyword": "50501movement",
       "count": 5
     }
   ]
