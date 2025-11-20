@@ -334,10 +334,21 @@ permalink: /campaigns/
       // Worker returns campaigns in simplified format
       let campaigns = [];
       if (data.success && data.campaigns && Array.isArray(data.campaigns)) {
-        campaigns = data.campaigns;
+        // Filter out test campaigns (keep only real campaigns)
+        campaigns = data.campaigns.filter(campaign => {
+          const id = campaign.id || '';
+          const title = campaign.title || '';
+          
+          // Exclude test campaigns by ID pattern or title
+          if (id.startsWith('test-') || id.includes('verify')) return false;
+          if (title.toLowerCase().includes('test') && title.toLowerCase().includes('sync')) return false;
+          if (title.toLowerCase().includes('verification test')) return false;
+          
+          return true;
+        });
       }
       
-      console.log(`✅ Loaded ${campaigns.length} campaigns from Worker API`);
+      console.log(`✅ Loaded ${campaigns.length} real campaigns (test campaigns filtered out)`);
       
       displayCampaigns(campaigns);
       
