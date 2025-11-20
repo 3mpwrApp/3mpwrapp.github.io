@@ -1,0 +1,23 @@
+# Logs and build artifacts
+*.log
+.wrangler/
+dist/
+node_modules/
+
+# Environment variables
+.dev.vars
+.env
+.env.local
+.env.production
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Test files
+*.test.ts
+__tests__/
