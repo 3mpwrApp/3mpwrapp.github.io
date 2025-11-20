@@ -186,8 +186,19 @@ function CampaignDetailInner() {
           <ScrollView>
             <Text style={styles.title}>{campaign.title}</Text>
             <Text style={styles.text}>{campaign.summary ?? "Details unavailable."}</Text>
+            
+            {/* Campaign Info */}
+            <View style={{ marginTop: 12, marginBottom: 8 }}>
+              {campaign.target && (
+                <Text style={[styles.text, { fontWeight: '600', marginBottom: 4 }]}>🎯 Target: {campaign.target}</Text>
+              )}
+              {campaign.contactEmail && (
+                <Text style={[styles.text, { fontSize: 14 * factor, opacity: 0.8 }]}>📧 Contact: {campaign.contactEmail}</Text>
+              )}
+            </View>
+            
             {campaign.description && (
-              <Text style={[styles.text, { marginTop: 12 }]}>{campaign.description}</Text>
+              <Text style={[styles.text, { marginTop: 8 }]}>{campaign.description}</Text>
             )}
             {campaign.goal && (
               <Text style={[styles.text, { marginTop: 8, fontWeight: '600' }]}>🎯 Goal: {campaign.goal}</Text>

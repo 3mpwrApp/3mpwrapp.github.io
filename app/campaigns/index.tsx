@@ -704,6 +704,19 @@ function ScreenInner() {
                     <Text style={styles.actionButtonText}>📝 Sign Now</Text>
                   </Pressable>
                 )}
+                {/* Quick action for creator page - Visit Creator */}
+                {(item as any).websiteUrl && (
+                  <Pressable
+                    onPress={() => {
+                      Linking.openURL((item as any).websiteUrl);
+                    }}
+                    accessibilityRole="button"
+                    accessibilityLabel={`Visit creator page for ${item.title}`}
+                    style={[styles.actionButton, styles.websiteButton]}
+                  >
+                    <Text style={styles.actionButtonText}>🌐 Visit Creator</Text>
+                  </Pressable>
+                )}
                 <Pressable
                   onPress={async () => {
                     try {
@@ -1021,6 +1034,10 @@ function createStyles(palette: Palette) {
     signPetitionButton: {
       backgroundColor: palette.primary,
       flex: 2,
+    },
+    websiteButton: {
+      backgroundColor: palette.accent || palette.primary,
+      flex: 1.5,
     },
     submitTo3mpwrButton: {
       backgroundColor: '#10b981',
