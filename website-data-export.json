@@ -1,0 +1,289 @@
+{
+  "campaigns": [
+    {
+      "id": "every-canadian-counts",
+      "title": "Every Canadian Counts",
+      "status": "published",
+      "type": "petition",
+      "target": "Parliament of Canada",
+      "websiteUrl": "https://everycanadiancounts.com",
+      "petitionUrl": "https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746",
+      "description": "A petition to ensure every Canadian is counted and represented in government policy and services."
+    },
+    {
+      "id": "no-more-poverty-pwd",
+      "title": "No More Poverty for Persons with Disabilities",
+      "status": "active",
+      "type": "petition",
+      "target": "Federal and Provincial Governments",
+      "description": "Campaign to end poverty among persons with disabilities in Canada through policy reform and increased support."
+    },
+    {
+      "id": "stop-cpp-disability-privatization",
+      "title": "Stop CPP Disability Privatization",
+      "status": "active",
+      "type": "petition",
+      "target": "Parliament of Canada",
+      "description": "Petition to prevent the privatization of Canada Pension Plan Disability benefits."
+    }
+  ],
+  "upcomingEvents": [
+    {
+      "id": "tbdiwsg-nov20-2025",
+      "title": "TBDIWSG Community Meeting In Person & ZOOM",
+      "date": "2025-11-20T18:30:00Z",
+      "dateDisplay": "Thursday, November 20, 2025 at 1:30 PM EST",
+      "location": "Hybrid - In Person & ZOOM",
+      "isVirtual": false,
+      "type": "community-meeting",
+      "description": "Toronto-based Disabled Injured Workers Support Group monthly community meeting. Hybrid format with in-person and ZOOM attendance options."
+    },
+    {
+      "id": "evt-tbdiwsg-nov25-2025",
+      "title": "Tuesday Information Sessions ZOOM - Duty to Accommodate",
+      "date": "2025-11-25T15:00:00Z",
+      "dateDisplay": "Tuesday, November 25, 2025 at 10:00 AM EST",
+      "location": "Virtual",
+      "isVirtual": true,
+      "type": "information-session",
+      "description": "Weekly Tuesday information session focusing on duty to accommodate in the workplace for persons with disabilities."
+    },
+    {
+      "id": "evt-tbdiwsg-dec2-2025",
+      "title": "Tuesday Information Session ZOOM - Guest Speaker IWC",
+      "date": "2025-12-02T15:00:00Z",
+      "dateDisplay": "Tuesday, December 2, 2025 at 10:00 AM EST",
+      "location": "Virtual",
+      "isVirtual": true,
+      "type": "information-session",
+      "description": "Tuesday information session featuring a guest speaker from the Injured Workers Consultants."
+    },
+    {
+      "id": "evt-3mpwr-intro-dec9-2025-updated",
+      "title": "Introduction to 3mpwr App - Website & App Demo",
+      "date": "2025-12-09T15:00:00Z",
+      "dateDisplay": "Tuesday, December 9, 2025 at 10:00 AM EST",
+      "location": "Virtual",
+      "isVirtual": true,
+      "type": "demo",
+      "description": "Live demonstration of the 3mpwr App platform, including website and mobile app features. Learn how to use the community tools, events calendar, and advocacy resources."
+    },
+    {
+      "id": "tbdiwsg-dec16-2025",
+      "title": "TBDIWSG Tuesday Information Session ZOOM",
+      "date": "2025-12-16T15:00:00Z",
+      "dateDisplay": "Tuesday, December 16, 2025 at 10:00 AM EST",
+      "location": "Virtual",
+      "isVirtual": true,
+      "type": "information-session",
+      "description": "Weekly Tuesday information session covering disability rights, workplace accommodations, and community support."
+    }
+  ],
+  "awarenessObservances2025": [
+    {
+      "id": "cG1MyVCIZbZfMBxZE8rv",
+      "title": "International Day of Persons with Disabilities",
+      "date": "2025-12-03",
+      "dateDisplay": "Tuesday, December 2, 2025",
+      "type": "awareness-day"
+    },
+    {
+      "id": "pvOuoDWXwMuQMAfuHxDy",
+      "title": "Remembrance Day",
+      "date": "2025-11-11",
+      "dateDisplay": "Monday, November 10, 2025",
+      "type": "holiday"
+    },
+    {
+      "id": "C6pf6823eHWc8zCrgpCS",
+      "title": "World Braille Day",
+      "date": "2025-01-04",
+      "dateDisplay": "Friday, January 3, 2025",
+      "type": "awareness-day"
+    },
+    {
+      "id": "cciqcfgrhbP3vq6nOQMt",
+      "title": "Brain Injury Awareness Month",
+      "date": "2025-03-01",
+      "dateDisplay": "February 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "Ef6uxs3BTHDrFxnSeGMt",
+      "title": "International Wheelchair Day",
+      "date": "2025-03-01",
+      "dateDisplay": "Friday, February 28, 2025",
+      "type": "awareness-day"
+    },
+    {
+      "id": "vY4YG09MxKEhl32TQdBl",
+      "title": "Multiple Sclerosis Awareness Month",
+      "date": "2025-03-01",
+      "dateDisplay": "February 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "pdsESR3nELIuD6hiU9Ul",
+      "title": "International Wheelchair Day",
+      "date": "2025-03-03",
+      "dateDisplay": "Monday, March 3, 2025",
+      "type": "awareness-day"
+    },
+    {
+      "id": "RPx6DlhMFsem8N6Dqfde",
+      "title": "Autism Acceptance Month",
+      "date": "2025-04-01",
+      "dateDisplay": "March 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "FOFgH8gIkrcgoX6RP33P",
+      "title": "Parkinson's Awareness Month",
+      "date": "2025-04-01",
+      "dateDisplay": "March 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "COlxz0K5iJVX0C3u6zcC",
+      "title": "World Autism Awareness Day",
+      "date": "2025-04-01",
+      "dateDisplay": "Tuesday, April 1, 2025",
+      "type": "awareness-day"
+    },
+    {
+      "id": "2CDu055sjmdczWMZPS5f",
+      "title": "Celiac Disease Awareness Month",
+      "date": "2025-05-01",
+      "dateDisplay": "April 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "PiuxdlrLhyP1sVr4jbhE",
+      "title": "Mental Health Awareness Month",
+      "date": "2025-05-01",
+      "dateDisplay": "April 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "UwliscB7WM3gyg0uxvK3",
+      "title": "Arthritis Awareness Month",
+      "date": "2025-05-01",
+      "dateDisplay": "April 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "dUndXTQoXEZqOM1UHBPR",
+      "title": "Ehlers-Danlos Syndrome Awareness",
+      "date": "2025-05-01",
+      "dateDisplay": "April 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "vV1gntUdz5o1oSc9eai2",
+      "title": "Lupus Awareness Month",
+      "date": "2025-05-01",
+      "dateDisplay": "April 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "KeZv4vuIZ2cRgh38QjIo",
+      "title": "Global Accessibility Awareness Day",
+      "date": "2025-05-14",
+      "dateDisplay": "Wednesday, May 14, 2025",
+      "type": "awareness-day"
+    },
+    {
+      "id": "F08t2Xqoee3WYRklES27",
+      "title": "Deafblind Awareness Month",
+      "date": "2025-06-01",
+      "dateDisplay": "May 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "3GGLYnGQMqhVXql2YaOe",
+      "title": "Injured Workers Day",
+      "date": "2025-06-01",
+      "dateDisplay": "Saturday, May 31, 2025",
+      "type": "awareness-day"
+    },
+    {
+      "id": "u0xp1XHkOdjbNMXDGzSr",
+      "title": "Spinal Cord Injury Awareness Month",
+      "date": "2025-09-01",
+      "dateDisplay": "August 2025",
+      "type": "awareness-month"
+    },
+    {
+      "id": "B5KEah3frZ5frvnkcWdU",
+      "title": "International Day of Sign Languages",
+      "date": "2025-09-22",
+      "dateDisplay": "Monday, September 22, 2025",
+      "type": "awareness-day"
+    },
+    {
+      "id": "AlsQT4eBNTpi1VB3GAdw",
+      "title": "Disability Employment Awareness Month",
+      "date": "2025-10-01",
+      "dateDisplay": "September 2025",
+      "type": "awareness-month"
+    }
+  ],
+  "canadianHolidays2025": [
+    {
+      "title": "New Year's Day",
+      "date": "2025-01-01"
+    },
+    {
+      "title": "Family Day",
+      "date": "2025-02-17"
+    },
+    {
+      "title": "Good Friday",
+      "date": "2025-04-18"
+    },
+    {
+      "title": "National Day of Mourning",
+      "date": "2025-04-28"
+    },
+    {
+      "title": "Victoria Day",
+      "date": "2025-05-19"
+    },
+    {
+      "title": "Canada Day",
+      "date": "2025-07-01"
+    },
+    {
+      "title": "Labour Day",
+      "date": "2025-09-01"
+    },
+    {
+      "title": "Thanksgiving",
+      "date": "2025-10-13"
+    },
+    {
+      "title": "Remembrance Day",
+      "date": "2025-11-11"
+    },
+    {
+      "title": "Christmas Day",
+      "date": "2025-12-25"
+    },
+    {
+      "title": "Boxing Day",
+      "date": "2025-12-26"
+    }
+  ],
+  "exportInfo": {
+    "exportDate": "2025-11-20",
+    "source": "3mpwr App Firestore Database",
+    "collections": [
+      "campaigns_production",
+      "events_production"
+    ],
+    "totalCampaigns": 3,
+    "totalUpcomingEvents": 5,
+    "totalAwarenessObservances": 21,
+    "totalHolidays": 11
+  }
+}
