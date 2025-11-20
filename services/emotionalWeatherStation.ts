@@ -194,7 +194,7 @@ class EmotionalWeatherStationManager {
       // Update archaeology
       await this.updateArchaeology();
     } catch (err) {
-      logError('Failed to load emotional weather data', err);
+      logError('emotionalWeatherStation', 'Failed to load emotional weather data', err);
     }
   }
 
@@ -207,7 +207,7 @@ class EmotionalWeatherStationManager {
         AsyncStorage.setItem(STORAGE_KEYS.COLLECTIVE, JSON.stringify(this.collectiveData.slice(-100))),
       ]);
     } catch (err) {
-      logError('Failed to save emotional weather data', err);
+      logError('emotionalWeatherStation', 'Failed to save emotional weather data', err);
     }
   }
 

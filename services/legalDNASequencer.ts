@@ -275,7 +275,7 @@ class LegalDNASequencerManager {
         this.precedentLibrary = JSON.parse(precedentsStr);
       }
     } catch (err) {
-      logError('Failed to load legal DNA data', err);
+      logError('legalDNASequencer', 'Failed to load legal DNA data', err);
     }
   }
 
@@ -287,7 +287,7 @@ class LegalDNASequencerManager {
         AsyncStorage.setItem(STORAGE_KEYS.PRECEDENTS, JSON.stringify(this.precedentLibrary)),
       ]);
     } catch (err) {
-      logError('Failed to save legal DNA data', err);
+      logError('legalDNASequencer', 'Failed to save legal DNA data', err);
     }
   }
 

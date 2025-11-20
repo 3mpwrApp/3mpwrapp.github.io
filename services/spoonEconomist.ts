@@ -177,7 +177,7 @@ class SpoonEconomistManager {
         await this.checkDailyReset();
       }
     } catch (err) {
-      logError('Failed to load spoon economist data', err);
+      logError('spoonEconomist', 'Failed to load spoon economist data', err);
     }
   }
 
@@ -191,7 +191,7 @@ class SpoonEconomistManager {
         AsyncStorage.setItem(STORAGE_KEYS.TASKS, JSON.stringify(this.customTasks)),
       ]);
     } catch (err) {
-      logError('Failed to save spoon economist data', err);
+      logError('spoonEconomist', 'Failed to save spoon economist data', err);
     }
   }
 

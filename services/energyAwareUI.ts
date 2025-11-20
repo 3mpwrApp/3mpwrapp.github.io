@@ -134,7 +134,7 @@ class EnergyAwareUIManager {
         this.taskStates = new Map(Object.entries(tasksObj));
       }
     } catch (err) {
-      logError('Failed to load energy-aware state', err);
+      logError('energyAwareUI', 'Failed to load energy-aware state', err);
     }
   }
 
@@ -147,7 +147,7 @@ class EnergyAwareUIManager {
         AsyncStorage.setItem(STORAGE_KEYS.TASK_STATES, JSON.stringify(tasksObj)),
       ]);
     } catch (err) {
-      logError('Failed to persist energy-aware state', err);
+      logError('energyAwareUI', 'Failed to persist energy-aware state', err);
     }
   }
 
@@ -192,7 +192,7 @@ class EnergyAwareUIManager {
       
       if (stateScore > score) {
         score = stateScore;
-        _matchCount = 1;
+        __matchCount = 1;
         this.updateEnergyState(state as EnergyState);
       }
     }
@@ -213,7 +213,7 @@ class EnergyAwareUIManager {
         this.updateUIComplexity('simplified');
       }
     } catch (err) {
-      logError('Failed to check learned low-energy times', err);
+      logError('energyAwareUI', 'Failed to check learned low-energy times', err);
     }
   }
 
@@ -400,7 +400,7 @@ class EnergyAwareUIManager {
 
       await AsyncStorage.setItem(STORAGE_KEYS.LOW_ENERGY_TIMES, JSON.stringify(hourlyLowEnergyCount));
     } catch (err) {
-      logError('Failed to learn low-energy patterns', err);
+      logError('energyAwareUI', 'Failed to learn low-energy patterns', err);
     }
   }
 

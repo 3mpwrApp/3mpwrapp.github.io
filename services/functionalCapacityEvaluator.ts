@@ -464,7 +464,7 @@ class FunctionalCapacityEvaluator {
         this.assessments = JSON.parse(data);
       }
     } catch (err) {
-      logError('Failed to load functional capacity data', err);
+      logError('functionalCapacityEvaluator', 'Failed to load functional capacity data', err);
     }
   }
 
@@ -472,7 +472,7 @@ class FunctionalCapacityEvaluator {
     try {
       await AsyncStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.assessments));
     } catch (err) {
-      logError('Failed to save functional capacity data', err);
+      logError('functionalCapacityEvaluator', 'Failed to save functional capacity data', err);
     }
   }
 
@@ -482,7 +482,7 @@ class FunctionalCapacityEvaluator {
 
   async submitAssessment(assessments: Record<string, ICFQualifier>, notes?: string): Promise<FunctionalAssessment> {
     const totalDomains = Object.keys(assessments).length;
-    const totalScore = Object.values(assessments).reduce((sum, qualifier) => sum + (4 - qualifier), 0);
+    const totalScore = Object.values(assessments).reduce<number>((sum, qualifier) => sum + (4 - (qualifier as number)), 0);
     const maxScore = totalDomains * 4;
     const overallScore = Math.round((totalScore / maxScore) * 100);
 

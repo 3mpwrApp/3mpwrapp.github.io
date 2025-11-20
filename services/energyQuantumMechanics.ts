@@ -192,7 +192,7 @@ class EnergyQuantumMechanicsManager {
       // Calculate current debt balance
       this.updateDebtBalance();
     } catch (err) {
-      logError('Failed to load energy quantum data', err);
+      logError('energyQuantumMechanics', 'Failed to load energy quantum data', err);
     }
   }
 
@@ -207,7 +207,7 @@ class EnergyQuantumMechanicsManager {
         AsyncStorage.setItem(STORAGE_KEYS.CURRENT_STATE, JSON.stringify(this.currentState)),
       ]);
     } catch (err) {
-      logError('Failed to save energy quantum data', err);
+      logError('energyQuantumMechanics', 'Failed to save energy quantum data', err);
     }
   }
 

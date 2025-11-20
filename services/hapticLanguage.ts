@@ -52,7 +52,7 @@ export interface HapticPattern {
 
 export interface HapticStep {
   type: 'impact' | 'notification' | 'selection' | 'pause';
-  style?: Haptics.ImpactFeedbackStyle | Haptics.NotificationFeedbackStyle;
+  style?: Haptics.ImpactFeedbackStyle | Haptics.NotificationFeedbackType;
   duration?: number; // milliseconds
 }
 
@@ -93,7 +93,7 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Appointment Soon',
     description: 'Long buzz - You have an appointment in 1 hour',
     pattern: [
-      { type: 'notification', style: Haptics.NotificationFeedbackStyle.Warning },
+      { type: 'notification', style: Haptics.NotificationFeedbackType.Warning },
       { type: 'pause', duration: 100 },
       { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
     ],
@@ -179,7 +179,7 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
       { type: 'pause', duration: 100 },
       { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
       { type: 'pause', duration: 100 },
-      { type: 'notification', style: Haptics.NotificationFeedbackStyle.Success },
+      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
     ],
     priority: 'low',
     canCustomize: true,
@@ -196,7 +196,7 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
       { type: 'pause', duration: 100 },
       { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
       { type: 'pause', duration: 100 },
-      { type: 'notification', style: Haptics.NotificationFeedbackStyle.Warning },
+      { type: 'notification', style: Haptics.NotificationFeedbackType.Warning },
     ],
     priority: 'medium',
     canCustomize: true,
@@ -222,9 +222,9 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Task Complete',
     description: 'Double tap - Task finished successfully',
     pattern: [
-      { type: 'notification', style: Haptics.NotificationFeedbackStyle.Success },
+      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
       { type: 'pause', duration: 150 },
-      { type: 'notification', style: Haptics.NotificationFeedbackStyle.Success },
+      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
     ],
     priority: 'low',
     canCustomize: true,
@@ -263,11 +263,11 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Crisis Contact Ready',
     description: 'Ready pattern - Crisis contact has been notified',
     pattern: [
-      { type: 'notification', style: Haptics.NotificationFeedbackStyle.Success },
+      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
       { type: 'pause', duration: 100 },
       { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
       { type: 'pause', duration: 100 },
-      { type: 'notification', style: Haptics.NotificationFeedbackStyle.Success },
+      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
     ],
     priority: 'critical',
     canCustomize: false,
@@ -352,7 +352,7 @@ class HapticLanguageManager {
         this.preferences = { ...this.preferences, ...JSON.parse(prefsStr) };
       }
     } catch (err) {
-      logError('Failed to load haptic preferences', err);
+      logError('hapticLanguage', 'Failed to load haptic preferences', err);
     }
   }
 
@@ -360,7 +360,7 @@ class HapticLanguageManager {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(this.preferences));
     } catch (err) {
-      logError('Failed to save haptic preferences', err);
+      logError('hapticLanguage', 'Failed to save haptic preferences', err);
     }
   }
 
@@ -396,7 +396,7 @@ class HapticLanguageManager {
         }
       }
     } catch (err) {
-      logError(`Failed to play haptic pattern: ${type}`, err);
+      logError('hapticLanguage', `Failed to play haptic pattern: ${type}`, err);
     } finally {
       this.isPlaying = false;
     }
@@ -406,10 +406,18 @@ class HapticLanguageManager {
     for (const step of steps) {
       switch (step.type) {
         case 'impact':
-          await Haptics.impactAsync(step.style || Haptics.ImpactFeedbackStyle.Medium);
+          if (step.style && typeof step.style === 'number' && step.style <= 2) {
+            await Haptics.impactAsync(step.style as Haptics.ImpactFeedbackStyle);
+          } else {
+            await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+          }
           break;
         case 'notification':
-          await Haptics.notificationAsync(step.style || Haptics.NotificationFeedbackStyle.Success);
+          if (step.style && typeof step.style === 'number' && step.style <= 2) {
+            await Haptics.notificationAsync(step.style as Haptics.NotificationFeedbackType);
+          } else {
+            await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+          }
           break;
         case 'selection':
           await Haptics.selectionAsync();
@@ -512,3 +520,4 @@ export function useHapticLanguage() {
     getUsageStats: () => hapticLanguage.getUsageStats(),
   };
 }
+

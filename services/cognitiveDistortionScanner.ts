@@ -320,7 +320,7 @@ class CognitiveDistortionScannerManager {
       // Update patterns on load
       await this.updatePatterns();
     } catch (err) {
-      logError('Failed to load cognitive scanner data', err);
+      logError('cognitiveDistortionScanner', 'Failed to load cognitive scanner data', err);
     }
   }
 
@@ -332,7 +332,7 @@ class CognitiveDistortionScannerManager {
         AsyncStorage.setItem(STORAGE_KEYS.DIALOGUES, JSON.stringify(Array.from(this.dialogues.values()))),
       ]);
     } catch (err) {
-      logError('Failed to save cognitive scanner data', err);
+      logError('cognitiveDistortionScanner', 'Failed to save cognitive scanner data', err);
     }
   }
 

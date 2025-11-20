@@ -297,7 +297,7 @@ class EmotionalFirstAidManager {
       if (sessionsStr) this.sessions = JSON.parse(sessionsStr);
       if (logsStr) this.crisisLogs = JSON.parse(logsStr);
     } catch (err) {
-      logError('Failed to load emotional first aid data', err);
+      logError('emotionalFirstAid', 'Failed to load emotional first aid data', err);
     }
   }
 
@@ -309,7 +309,7 @@ class EmotionalFirstAidManager {
         AsyncStorage.setItem(STORAGE_KEYS.CRISIS_LOGS, JSON.stringify(this.crisisLogs.slice(-50))),
       ]);
     } catch (err) {
-      logError('Failed to save emotional first aid data', err);
+      logError('emotionalFirstAid', 'Failed to save emotional first aid data', err);
     }
   }
 
@@ -376,7 +376,7 @@ class EmotionalFirstAidManager {
 
     // If step has duration, wait
     if (step.duration) {
-      await new Promise(resolve => setTimeout(resolve, step.duration * 1000));
+      await new Promise(resolve => setTimeout(resolve, (step.duration || 30) * 1000));
     }
   }
 
@@ -401,7 +401,7 @@ class EmotionalFirstAidManager {
     await this.saveData();
 
     // Haptic feedback for starting exercise
-    await Haptics.notificationAsync(Haptics.NotificationFeedbackStyle.Success);
+    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
 
     return session;
   }
@@ -471,7 +471,7 @@ class EmotionalFirstAidManager {
         locationText = `Lat: ${location.coords.latitude.toFixed(6)}, Lon: ${location.coords.longitude.toFixed(6)}`;
       }
     } catch (err) {
-      logError('Failed to get location for crisis', err);
+      logError('emotionalFirstAid', 'Failed to get location for crisis', err);
     }
 
     // Notify all triple-tap contacts
@@ -490,7 +490,7 @@ class EmotionalFirstAidManager {
         }
         // Note: Actual phone calls would require additional permissions
       } catch (err) {
-        logError(`Failed to notify crisis contact: ${contact.name}`, err);
+        logError('emotionalFirstAid', `Failed to notify crisis contact: ${contact.name}`, err);
       }
     }
 
@@ -533,7 +533,7 @@ class EmotionalFirstAidManager {
     this.sessions.push(session);
     await this.saveData();
 
-    await Haptics.notificationAsync(Haptics.NotificationFeedbackStyle.Success);
+    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
 
     return session;
   }

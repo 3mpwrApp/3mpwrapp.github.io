@@ -255,7 +255,7 @@ class CircadianRhythmDJManager {
         };
       }
     } catch (err) {
-      logError('Failed to load circadian rhythm data', err);
+      logError('circadianRhythmDJ', 'Failed to load circadian rhythm data', err);
     }
   }
 
@@ -269,7 +269,7 @@ class CircadianRhythmDJManager {
         AsyncStorage.setItem(STORAGE_KEYS.DREAM_PATTERNS, JSON.stringify(this.dreamPatterns.slice(-100))),
       ]);
     } catch (err) {
-      logError('Failed to save circadian rhythm data', err);
+      logError('circadianRhythmDJ', 'Failed to save circadian rhythm data', err);
     }
   }
 
@@ -294,7 +294,7 @@ class CircadianRhythmDJManager {
       const question = CHRONOTYPE_QUIZ_QUESTIONS.find(q => q.id === parseInt(questionId));
       if (question && question.answers[answerIndex]) {
         const answer = question.answers[answerIndex];
-        scores[answer.type] += answer.weight;
+        scores[answer.type as Chronotype] += answer.weight;
       }
     });
 
