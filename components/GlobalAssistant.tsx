@@ -1,13 +1,11 @@
 import { usePathname, useRouter } from 'expo-router';
 import React from 'react';
-import { Animated, Easing, Platform, StyleSheet, Text, View } from 'react-native';
+import { Animated, Easing, Platform, StyleSheet } from 'react-native';
 
-import { HIT_SLOP_8 } from '../constants/A11Y';
 import { useTranslation } from '../i18n';
 import { useSettings } from '../store/settings';
 import { useAppPalette } from '../theme/usePalette';
 
-import A11yPressable from './A11yPressable';
 
 /**
  * Floating global AI assistant entry point.
@@ -77,30 +75,8 @@ export default function GlobalAssistant() {
   if (pathname?.startsWith('/(auth)')) return null;
   if (!showAssistantPill) return null;
   
-  const label = smartRoute === '/(tabs)/index' 
-    ? t('assistant.pill.suggestions', 'View suggestions')
-    : t('assistant.pill.open','Open assistant');
-  
-  return (
-    <View style={[s.wrap, assistantPillPosition === 'right' ? s.right : s.left, { pointerEvents: 'box-none' as any }]}>
-      <A11yPressable
-        role="button"
-        hitSlop={HIT_SLOP_8}
-        accessibilityLabel={label}
-        style={s.btn}
-        onPressIn={() => { try { Haptics?.impactAsync?.(Haptics?.ImpactFeedbackStyle?.Light || 0); } catch {}; animateTo(0.96); }}
-        onPressOut={() => animateTo(1)}
-        onPress={() => {
-          try { Haptics?.impactAsync?.(Haptics?.ImpactFeedbackStyle?.Light || 0); } catch {};
-          router.push(smartRoute as any);
-        }}
-      >
-        <Animated.View style={{ transform: [{ scale }] }}>
-          <Text style={s.text}>{t('assistant.pill.cta','🤖 Ask')}</Text>
-        </Animated.View>
-      </A11yPressable>
-    </View>
-  );
+  // Hide global assistant pill since Ask button is now in header
+  return null;
 }
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
@@ -113,11 +89,15 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 22, 
       paddingHorizontal: 14, 
       paddingVertical: 10, 
-      shadowColor: palette.text, 
-      shadowOffset: { width: 0, height: 2 }, 
-      shadowOpacity: 0.25, 
-      shadowRadius: 3.84, 
-      elevation: 5 
+      ...(Platform.OS === 'web'
+        ? { boxShadow: '0 2px 3.84px rgba(0,0,0,0.25)' as any }
+        : {
+            shadowColor: palette.text, 
+            shadowOffset: { width: 0, height: 2 }, 
+            shadowOpacity: 0.25, 
+            shadowRadius: 3.84, 
+            elevation: 5 
+          }),
     },
     text: { color: palette.onPrimary, fontWeight: '700' },
   });

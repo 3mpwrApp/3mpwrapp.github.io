@@ -142,7 +142,7 @@ export async function submitEventTo3mpwr(
         success: false,
         message: `📱 Event saved locally for review.\n\n"${event.title}" will be submitted to 3mpwr App when connection is restored.\n\nYou can continue using the app - we'll handle the submission in the background.`,
       };
-    } catch (storageErr) {
+    } catch {
       return {
         success: false,
         message: `❌ Submission failed: ${error instanceof Error ? error.message : 'Unknown error'}\n\nPlease try again or contact support.`,
@@ -225,7 +225,7 @@ export async function submitCampaignTo3mpwr(
         success: false,
         message: `📱 Campaign saved locally for review.\n\n"${campaign.title}" will be submitted to 3mpwr App when connection is restored.\n\nYou can continue using the app - we'll handle the submission in the background.`,
       };
-    } catch (storageErr) {
+    } catch {
       return {
         success: false,
         message: `❌ Submission failed: ${error instanceof Error ? error.message : 'Unknown error'}\n\nPlease try again or contact support.`,

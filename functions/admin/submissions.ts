@@ -316,7 +316,7 @@ function requireAuth(request: Request, env: Env): Response | null {
   }
 
   const credentials = atob(authHeader.substring(6));
-  const [username, password] = credentials.split(':');
+  const [, password] = credentials.split(':');
 
   if (password !== env.ADMIN_PASSWORD) {
     return new Response('Unauthorized', {
