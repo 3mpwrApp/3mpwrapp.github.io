@@ -1,7 +1,9 @@
 // pii-scan-ignore-file - Contains email/contact patterns in share functionality
 import { Alert, Linking, Share, StyleSheet, Text, View } from 'react-native';
 
+import { useAuth } from '../context/AuthContext';
 import { ANALYTICS_EVENTS, trackEvent } from '../services/analyticsClient';
+import { submitEventTo3mpwr } from '../services/submitTo3mpwr';
 import type { Palette } from '../theme/colors';
 
 import A11yPressable from './A11yPressable';
@@ -23,11 +25,32 @@ interface EventActionsBarProps {
     description?: string;
     location?: string;
     isVirtual?: boolean;
+    time?: string;
+    duration?: number;
+    virtualLink?: string;
+    asl?: boolean;
+    captions?: boolean;
+    stepFree?: boolean;
+    sensorySpace?: boolean;
+    wheelchairAccessible?: boolean;
+    quietRoom?: boolean;
+    parkingAccessible?: boolean;
+    assistiveListening?: boolean;
+    braille?: boolean;
+    serviceAnimalsWelcome?: boolean;
+    energyCost?: 'low' | 'medium' | 'high';
+    requiresRSVP?: boolean;
+    rsvpDetails?: string;
+    organizer?: string;
+    organizerContact?: string;
+    category?: string;
+    tags?: string[];
   };
   palette: Palette;
   onEdit?: () => void;
   onDelete?: () => void;
   showEditDelete?: boolean;
+  showSubmitTo3mpwr?: boolean;
 }
 
 /**
@@ -38,8 +61,10 @@ export default function EventActionsBar({
   palette, 
   onEdit, 
   onDelete,
-  showEditDelete = false 
+  showEditDelete = false,
+  showSubmitTo3mpwr = false,
 }: EventActionsBarProps) {
+  const { user } = useAuth();
   
   const handleShare = async () => {
     try {
@@ -177,6 +202,46 @@ export default function EventActionsBar({
     );
   };
 
+  const handleSubmitTo3mpwr = async () => {
+    if (!user) {
+      Alert.alert(
+        '🔐 Sign In Required',
+        'Please sign in to submit events to 3mpwr App for review and publication.',
+        [{ text: 'OK' }]
+      );
+      return;
+    }
+
+    Alert.alert(
+      '📤 Submit to 3mpwr App',
+      `Submit "${event.title}" to 3mpwr App for review?\n\nIf approved, this event will be published to the main calendar and shared with the community.`,
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Submit',
+          onPress: async () => {
+            const result = await submitEventTo3mpwr(event, {
+              uid: user.uid,
+              email: user.email || undefined,
+              displayName: user.displayName || undefined,
+            });
+            
+            Alert.alert(
+              result.success ? '✅ Submitted!' : '📱 Saved',
+              result.message,
+              [{ text: 'OK' }]
+            );
+            
+            trackEvent(ANALYTICS_EVENTS.EVENTS_SUBMIT_TO_3MPWR, { 
+              id: event.id, 
+              success: result.success 
+            });
+          }
+        }
+      ]
+    );
+  };
+
   return (
     <View style={styles.container}>
       <GapView gap={6} style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
@@ -255,6 +320,23 @@ export default function EventActionsBar({
           >
             <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
               🗑️ Delete
+            </Text>
+          </A11yPressable>
+        )}
+
+        {/* Submit to 3mpwr App button */}
+        {showSubmitTo3mpwr && (
+          <A11yPressable
+            onPress={handleSubmitTo3mpwr}
+            accessibilityRole="button"
+            accessibilityLabel={`Submit ${event.title} to 3mpwr App`}
+            style={[styles.button, { 
+              backgroundColor: '#10B981', 
+              borderColor: '#10B981'
+            }]}
+          >
+            <Text style={[styles.buttonText, { color: '#FFFFFF' }]}>
+              🚀 Submit to 3mpwr App
             </Text>
           </A11yPressable>
         )}

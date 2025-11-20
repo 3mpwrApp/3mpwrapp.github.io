@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3mpwr App Diagnostic</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .status { padding: 15px; margin: 10px 0; border-radius: 8px; }
+    .ok { background: #d4edda; color: #155724; }
+    .error { background: #f8d7da; color: #721c24; }
+    .warning { background: #fff3cd; color: #856404; }
+    h1 { color: #333; }
+    pre { background: #fff; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    button { 
+      padding: 10px 20px; 
+      margin: 5px; 
+      border: none; 
+      border-radius: 4px; 
+      background: #007bff; 
+      color: white; 
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <h1>🔍 3mpwr App Diagnostic Page</h1>
+  <p>This page tests your environment before loading the main app.</p>
+  
+  <div id="results"></div>
+  
+  <h2>Quick Actions</h2>
+  <button onclick="location.href='/'">← Back to Main App</button>
+  <button onclick="runTests()">🔄 Re-run Tests</button>
+  <button onclick="clearCache()">🧹 Clear Cache & Reload</button>
+  
+  <script>
+    const results = document.getElementById('results');
+    
+    function addStatus(title, message, type = 'ok') {
+      const div = document.createElement('div');
+      div.className = `status ${type}`;
+      div.innerHTML = `<strong>${title}:</strong> ${message}`;
+      results.appendChild(div);
+    }
+    
+    function clearCache() {
+      if (confirm('This will clear the cache and reload. Continue?')) {
+        localStorage.clear();
+        sessionStorage.clear();
+        if ('caches' in window) {
+          caches.keys().then(names => {
+            names.forEach(name => caches.delete(name));
+          }).finally(() => {
+            location.reload(true);
+          });
+        } else {
+          location.reload(true);
+        }
+      }
+    }
+    
+    async function runTests() {
+      results.innerHTML = '<h2>Running diagnostics...</h2>';
+      
+      // 1. Browser info
+      addStatus('Browser', navigator.userAgent);
+      
+      // 2. JavaScript
+      try {
+        eval('const x = 1;');
+        addStatus('JavaScript ES6', 'Supported ✓', 'ok');
+      } catch (e) {
+        addStatus('JavaScript ES6', 'NOT supported - upgrade your browser', 'error');
+      }
+      
+      // 3. Local Storage
+      try {
+        localStorage.setItem('test', '1');
+        localStorage.removeItem('test');
+        addStatus('LocalStorage', 'Working ✓', 'ok');
+      } catch (e) {
+        addStatus('LocalStorage', 'Blocked or unavailable (needed for offline mode)', 'warning');
+      }
+      
+      // 4. Fetch API
+      try {
+        await fetch('https://www.google.com/favicon.ico', { mode: 'no-cors' });
+        addStatus('Network (Fetch API)', 'Working ✓', 'ok');
+      } catch (e) {
+        addStatus('Network', 'Network blocked or unavailable', 'error');
+      }
+      
+      // 5. Firebase reachability
+      try {
+        const resp = await fetch('https://empowrapp.firebaseapp.com/__/auth/handler', { mode: 'no-cors' });
+        addStatus('Firebase Auth Domain', 'Reachable ✓', 'ok');
+      } catch (e) {
+        addStatus('Firebase', 'Cannot reach Firebase - check firewall/proxy', 'error');
+      }
+      
+      // 6. React/ReactDOM
+      const reactScript = document.createElement('script');
+      reactScript.src = 'https://unpkg.com/react@19/umd/react.development.js';
+      reactScript.onload = () => {
+        if (window.React) {
+          addStatus('React 19', 'Loaded successfully ✓', 'ok');
+        }
+      };
+      reactScript.onerror = () => {
+        addStatus('React CDN', 'Cannot load React from CDN', 'error');
+      };
+      document.head.appendChild(reactScript);
+      
+      // 7. Console check
+      addStatus('Console', 'Open browser console (F12) to see detailed logs', 'warning');
+      
+      // 8. WebSocket (needed for Metro bundler)
+      try {
+        const ws = new WebSocket('ws://localhost:8081/');
+        ws.onopen = () => {
+          addStatus('Metro Dev Server (ws://localhost:8081)', 'Connected ✓', 'ok');
+          ws.close();
+        };
+        ws.onerror = () => {
+          addStatus('Metro Dev Server', 'Not running or blocked', 'warning');
+        };
+      } catch (e) {
+        addStatus('WebSocket', 'Error: ' + e.message, 'error');
+      }
+      
+      // 9. Main app URL
+      addStatus('Main App URL', '<a href="http://localhost:19006">http://localhost:19006</a> (click to test)', 'ok');
+      
+      console.log('[Diagnostic] Tests complete. Check results above.');
+    }
+    
+    // Auto-run on load
+    runTests();
+  </script>
+</body>
+</html>

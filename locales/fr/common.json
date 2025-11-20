@@ -1467,7 +1467,8 @@
       "finder": "Lawyer & Advocate Finder",
       "ratings": "Disability Justice Ratings",
       "accountability": "Coach de Redevabilité",
-      "accountability_cases": "Dossiers de redevabilité"
+      "accountability_cases": "Dossiers de redevabilité",
+      "negotiation_coach": "Negotiation Coach"
     },
     "hub": {
       "title": "Hub Défense",
@@ -2354,7 +2355,22 @@
       "policy_simplifier": "Policy Simplifier",
       "wellness_mood": "Mood Tracker",
       "resources_search": "Resources Hub",
-      "default": "Tool"
+      "default": "Tool",
+      "ask_advocate": "Ask an Advocate",
+      "case_interpreter": "Case Interpreter",
+      "gov_navigator": "Government Navigator",
+      "lawyer_finder": "Lawyer Finder",
+      "ally_hub": "Ally Hub",
+      "wellness_exercise": "Exercise Videos",
+      "wellness_selfcare": "Self-Care Guide",
+      "wellness_energy": "Energy Tracking",
+      "resources_articles": "Articles & Guides",
+      "resources_faq": "FAQs",
+      "research_trials": "Clinical Trials",
+      "research_hub": "Research Hub",
+      "community_testers": "Beta Testers Chat",
+      "community_threads": "Community Threads",
+      "community_chat": "Community Chat"
     }
   },
   "profile": {
@@ -2366,6 +2382,19 @@
       "rightsExplainer": "Guide des droits",
       "translator": "Traducteur de plaidoyer",
       "settings": "Paramètres"
+    },
+    "badges": {
+      "title": "Badges",
+      "description": "Recognition for your participation and contributions",
+      "scrollLabel": "Scroll through your badges",
+      "betaTester": "Beta Tester",
+      "betaTesterDesc": "Participated in beta testing",
+      "earlyAdopter": "Early Adopter",
+      "earlyAdopterDesc": "Joined during early access",
+      "contributor": "Contributor",
+      "contributorDesc": "Contributed to the app",
+      "verified": "Verified",
+      "verifiedDesc": "Verified user"
     }
   },
   "translator": {
@@ -2932,6 +2961,10 @@
       "humanRights": {
         "title": "Action juridique requise",
         "desc": "Déposez une plainte pour droits de la personne ou envoyez une mise en demeure"
+      },
+      "qualityOfLife": {
+        "title": "Quality of Life at Work",
+        "desc": "Request workplace accommodations for better work-life balance and daily comfort"
       }
     },
     "types": {
@@ -3018,6 +3051,26 @@
       "demandLetter": {
         "title": "Lettre de mise en demeure formelle",
         "desc": "Exigez une action ou une indemnisation pour des torts"
+      },
+      "flexibleSchedule": {
+        "title": "Flexible Schedule Request",
+        "desc": "Request modified work hours for medical needs"
+      },
+      "remoteWork": {
+        "title": "Remote Work Request",
+        "desc": "Request work-from-home accommodation"
+      },
+      "equipmentRequest": {
+        "title": "Equipment Request",
+        "desc": "Request adaptive workplace equipment"
+      },
+      "breakAccommodation": {
+        "title": "Break Accommodation",
+        "desc": "Request additional rest breaks for medical needs"
+      },
+      "sensoryAccommodation": {
+        "title": "Sensory Accommodation Request",
+        "desc": "Request accommodations for sensory sensitivities (lighting, noise, scents)"
       }
     },
     "fields": {
@@ -3160,7 +3213,27 @@
       "demandedAction": "Action exigée",
       "demandedActionPlaceholder": "Actions spécifiques que vous exigez",
       "compensationRequested": "Indemnisation demandée",
-      "compensationRequestedPlaceholder": "Montant d'argent demandé"
+      "compensationRequestedPlaceholder": "Montant d'argent demandé",
+      "currentSchedule": "Current Schedule",
+      "currentSchedulePlaceholder": "Your current work schedule (e.g., Monday-Friday 9am-5pm)",
+      "proposedSchedule": "Proposed Schedule",
+      "proposedSchedulePlaceholder": "Your requested schedule (e.g., 10am-6pm, compressed work week)",
+      "remoteArrangement": "Remote Arrangement",
+      "remoteArrangementPlaceholder": "Specify arrangement (full-time remote, hybrid, temporary)",
+      "medicalNeed": "Medical Need",
+      "medicalNeedPlaceholder": "Explain how disability affects commuting/office attendance",
+      "homeSetup": "Home Office Setup",
+      "homeSetupPlaceholder": "Describe your home workspace capabilities",
+      "equipment": "Equipment Needed",
+      "equipmentPlaceholder": "List specific equipment (ergonomic chair, software, monitors, etc.)",
+      "functionalNeed": "Functional Need",
+      "functionalNeedPlaceholder": "Explain how equipment addresses your limitations",
+      "breakRequest": "Break Schedule Request",
+      "breakRequestPlaceholder": "Specify breaks needed (e.g., 10-min every 2 hours)",
+      "sensoryNeeds": "Sensory Sensitivities",
+      "sensoryNeedsPlaceholder": "Describe sensory sensitivities (lighting, noise, scents, temperature)",
+      "requestedAccommodations": "Requested Accommodations",
+      "requestedAccommodationsPlaceholder": "List specific accommodations (e.g., noise-canceling headphones, quiet workspace)"
     }
   },
   "cultural": {
@@ -3646,5 +3719,181 @@
       "production": "En production",
       "testing": "Essais"
     }
+  },
+  "disclaimer": {
+    "title": "Important Disclaimer",
+    "general": "⚠️ DISCLAIMER: This app provides general information and support tools. It does not replace professional advice (medical, legal, financial, or otherwise). Users are solely responsible for their decisions and actions. The app developer assumes no liability for outcomes resulting from app use. See Terms of Service for complete legal protections.",
+    "medical": "⚕️ NOT MEDICAL ADVICE: This app provides information only. It does not replace professional medical advice, diagnosis, or treatment. Always consult qualified healthcare providers for medical decisions. In emergencies, call 911 or your local emergency services.",
+    "legal": "⚖️ NOT LEGAL ADVICE: This app provides general legal information only. It does not constitute legal advice or create an attorney-client relationship. Laws vary by jurisdiction. Consult a licensed attorney for legal advice specific to your situation.",
+    "crisis": "🆘 EMERGENCY NOTICE: This app is not a substitute for emergency services. If you or someone else is in immediate danger, call 911, go to the nearest emergency room, or contact a crisis hotline (988 Suicide & Crisis Lifeline in US/Canada).",
+    "ai": "🤖 AI-GENERATED CONTENT: This content is generated by artificial intelligence and may contain errors, inaccuracies, or outdated information. Always verify important information with qualified professionals. AI should not replace professional judgment.",
+    "financial": "💰 NOT FINANCIAL ADVICE: This app provides general information about benefits and financial assistance. It does not constitute financial, tax, or investment advice. Consult qualified financial advisors or benefits specialists for guidance specific to your situation."
+  },
+  "termsGate": {
+    "welcome": {
+      "title": "⚠️ Welcome to 3mpwrApp",
+      "subtitle": "Before you begin, you must review and accept our legal terms and disclaimers.",
+      "description": "This app provides information and tools for people with disabilities, but it is NOT a substitute for professional services.",
+      "reviewList": "📋 You will be asked to review:",
+      "items": {
+        "terms": "Terms of Service (v{{version}})",
+        "privacy": "Privacy Policy (v{{version}})",
+        "medical": "Medical Disclaimer",
+        "legal": "Legal Disclaimer",
+        "financial": "Financial Disclaimer",
+        "ai": "AI Content Disclaimer",
+        "crisis": "Crisis & Emergency Services Disclaimer",
+        "responsibility": "User Responsibility Agreement"
+      },
+      "warning": "⚠️ You must accept ALL terms to use this app.",
+      "continue": "Continue"
+    },
+    "terms": {
+      "title": "Terms of Service v{{version}}",
+      "header": "BY USING THIS APP, YOU AGREE TO THESE TERMS AND ALL DISCLAIMERS.",
+      "doesNotProvide": "This app provides general information and tools only. It does NOT provide:",
+      "noMedical": "Medical advice, diagnosis, or treatment",
+      "noLegal": "Legal advice or attorney-client relationship",
+      "noFinancial": "Financial, investment, or tax advice",
+      "noEmergency": "Emergency or crisis intervention services",
+      "noCounseling": "Professional counseling or therapy",
+      "liability": "LIMITATION OF LIABILITY:",
+      "liabilityText": "We are not liable for any damages resulting from your use of this app. Maximum liability: $100 USD or $0 for free users.",
+      "warranty": "NO WARRANTY:",
+      "warrantyText": "This app is provided \"AS IS\" without any warranty. We do not guarantee accuracy, completeness, or fitness for any purpose.",
+      "responsibility": "USER RESPONSIBILITY:",
+      "responsibilityText": "You are solely responsible for your decisions and actions. Always consult qualified professionals.",
+      "scrollPrompt": "Please scroll to the bottom to continue.",
+      "readFull": "📄 Read Full Terms of Service",
+      "scrollToBottom": "Scroll to Bottom",
+      "next": "Next",
+      "back": "Back"
+    },
+    "privacy": {
+      "title": "Privacy Policy v{{version}}",
+      "ownership": "🔐 100% USER DATA OWNERSHIP GUARANTEE",
+      "ownershipText": "Your data belongs entirely to you. 3mpwrApp is built on complete user data sovereignty:",
+      "userOwnership": "🏠 100% User Ownership: All data belongs to you",
+      "localFirst": "🔒 Local-First & Air-Gapped: Processing on your device",
+      "yourCloud": "☁️ Your Cloud, Your Control: Optional sync to YOUR services",
+      "zeroTracking": "🚫 Zero Tracking: No analytics without consent",
+      "encryption": "🛡️ AES-256 Encryption: Military-grade security",
+      "aiLocal": "🤖 Local AI Processing: No external AI model access",
+      "collectHeader": "WHAT WE COLLECT:",
+      "collectAccount": "Account info (if you create one): name, email",
+      "collectPrefs": "Preferences: accessibility, language, settings",
+      "collectCommunity": "Community posts (if enabled): messages, media",
+      "collectAnalytics": "Optional analytics: pseudonymous identifiers",
+      "doNotHeader": "WE DO NOT:",
+      "noSell": "Sell your personal data",
+      "noShare": "Share data with third parties without consent",
+      "noTrack": "Track you across other apps or websites",
+      "noStore": "Store sensitive data on our servers",
+      "scrollPrompt": "Please scroll to the bottom to continue.",
+      "readFull": "📄 Read Full Privacy Policy"
+    },
+    "medical": {
+      "title": "🏥 Medical Disclaimer",
+      "warning": "⚠️ THIS APP DOES NOT PROVIDE MEDICAL ADVICE",
+      "description": "3mpwrApp is NOT a medical device and does NOT provide medical advice, diagnosis, or treatment.",
+      "informational": "All wellness features are informational tools only",
+      "noDiagnosis": "Symptom trackers, mood logs, and pain forecasts cannot diagnose conditions",
+      "generalGuidance": "Exercise guides and nutrition information are general guidance only",
+      "noReliance": "DO NOT rely on this app for medical decisions",
+      "consultPros": "Always consult qualified healthcare providers",
+      "emergency": "IN EMERGENCIES, CALL 911 IMMEDIATELY",
+      "noResponsibility": "We are not licensed medical professionals and assume NO responsibility for health outcomes.",
+      "checkbox": "I understand this app does not provide medical advice and I will consult healthcare professionals for medical decisions."
+    },
+    "legal": {
+      "title": "⚖️ Legal Disclaimer",
+      "warning": "⚠️ THIS APP DOES NOT PROVIDE LEGAL ADVICE",
+      "description": "3mpwrApp does NOT provide legal advice and does NOT create an attorney-client relationship.",
+      "informational": "All legal resources are general information only",
+      "templates": "Form generators and templates may not fit your situation",
+      "jurisdiction": "Laws and procedures vary by jurisdiction",
+      "outdated": "Legal information may be incomplete or outdated",
+      "noReliance": "DO NOT rely on this app for legal decisions",
+      "consultAttorney": "Always consult a licensed attorney in your jurisdiction",
+      "consequences": "Filing errors can have serious legal consequences",
+      "noResponsibility": "We are not licensed attorneys and assume NO responsibility for legal outcomes.",
+      "checkbox": "I understand this app does not provide legal advice and I will consult licensed attorneys for legal matters."
+    },
+    "financial": {
+      "title": "💰 Financial Disclaimer",
+      "warning": "⚠️ THIS APP DOES NOT PROVIDE FINANCIAL ADVICE",
+      "description": "3mpwrApp does NOT provide financial, investment, or tax advice.",
+      "general": "Benefits information is general guidance only",
+      "unique": "Financial situations are unique to each person",
+      "vary": "Tax laws and benefit regulations vary and change frequently",
+      "noReliance": "DO NOT rely on this app for financial decisions",
+      "consultPros": "Always consult qualified financial advisors and tax professionals",
+      "noResponsibility": "We are not licensed financial professionals and assume NO responsibility for financial outcomes.",
+      "checkbox": "I understand this app does not provide financial advice and I will consult financial professionals for financial decisions."
+    },
+    "ai": {
+      "title": "🤖 AI Content Disclaimer",
+      "warning": "⚠️ AI-GENERATED CONTENT MAY CONTAIN ERRORS",
+      "description": "This app uses artificial intelligence for document generation, case interpretation, translation, and other features.",
+      "errors": "AI models can produce incorrect or incomplete content",
+      "biases": "AI may have biases or cultural insensitivities",
+      "noContext": "AI does not understand context like human professionals",
+      "cutoffs": "AI has knowledge cutoffs and may not reflect current laws",
+      "translations": "AI translations may not capture legal terminology accurately",
+      "verify": "ALWAYS verify AI-generated content with professionals",
+      "toolOnly": "AI is a tool only—final responsibility rests with YOU.",
+      "checkbox": "I understand AI-generated content may contain errors and I will verify all AI output with qualified professionals."
+    },
+    "crisis": {
+      "title": "🚨 Crisis & Emergency Disclaimer",
+      "warning": "⚠️ THIS APP IS NOT A SUBSTITUTE FOR EMERGENCY SERVICES",
+      "danger": "IF YOU OR SOMEONE ELSE IS IN IMMEDIATE DANGER:",
+      "call911": "CALL 911 IMMEDIATELY",
+      "noDetect": "This app CANNOT detect, prevent, or respond to emergencies",
+      "infoOnly": "Crisis resource listings are informational only",
+      "panicButton": "The panic button and safe landing page are support tools—they do NOT alert emergency services",
+      "noResponsibility": "We are not responsible for delays or consequences in emergencies",
+      "resources": "Crisis Resources:",
+      "resource988": "988 Suicide & Crisis Lifeline: Call/text 988",
+      "resourceText": "Crisis Text Line: Text HOME to 741741",
+      "resource911": "Emergency: 911 (US/Canada)",
+      "resourceDV": "Domestic Violence: 1-800-799-7233",
+      "checkbox": "I understand this app is not a substitute for emergency services and I will call 911 in emergencies.",
+      "checkboxEmergency": "I confirm I know how to access emergency services in my location (911 or equivalent)."
+    },
+    "final": {
+      "title": "✅ Final Agreement",
+      "confirm": "Please confirm you understand and accept:",
+      "responsibilityCheckbox": "I am solely responsible for my decisions and actions. I will not rely on this app as a substitute for professional services.",
+      "dataOwnershipCheckbox": "I understand my data is 100% owned by me and stored locally on my device unless I choose to sync.",
+      "acceptance": "By clicking \"I Accept All Terms\", you agree to our Terms of Service (v{{termsVersion}}), Privacy Policy (v{{privacyVersion}}), and all disclaimers above.",
+      "acceptAll": "I Accept All Terms"
+    }
+  },
+  "updates": {
+    "title": "App Updates",
+    "subtitle": "Check for and install the latest features",
+    "notAvailable": "Updates Not Available",
+    "notAvailableDesc": "OTA updates are not available in this build. Use a development build or production APK for update support.",
+    "available": "Update Available",
+    "availableDesc": "A new version is ready. Restart the app to apply updates.",
+    "upToDate": "Up to Date",
+    "upToDateDesc": "You're running the latest version!",
+    "checkFailed": "Update Check Failed",
+    "checkFailedDesc": "Could not check for updates. Please try again later.",
+    "checking": "Checking for updates...",
+    "downloading": "Downloading update... {{progress}}%",
+    "downloadProgress": "{{progress}}% complete",
+    "checkButton": "Check for Updates",
+    "checkHint": "Checks if a new version is available and downloads it",
+    "restartNow": "Restart Now",
+    "restartFailed": "Restart Failed",
+    "restartFailedDesc": "Please close and reopen the app manually.",
+    "lastChecked": "Last checked: {{time}}",
+    "justNow": "Just now",
+    "minsAgo": "{{count}} mins ago",
+    "hoursAgo": "{{count}} hours ago",
+    "readyToRestart": "Update ready! Restart to apply.",
+    "error": "Error: {{message}}"
   }
 }

@@ -11,6 +11,9 @@ import { logger } from '../utils/logger';
 const scheme = 'empowrapp://';
 
 export default function Index() {
+  // EMERGENCY DEBUG
+  console.log('🚨 [Index] Component mounted');
+  
   const { user, loading } = useAuth();
   const palette = useAppPalette();
   const router = useRouter();
@@ -18,6 +21,7 @@ export default function Index() {
 
   // Web-specific: Add console logging for debugging
   useEffect(() => {
+    console.log('[Index WEB] Component mounted', { loading, hasUser: !!user });
     if (Platform.OS === 'web') {
       // eslint-disable-next-line no-console
       console.log('[Index WEB] Component mounted', { loading, hasUser: !!user });
@@ -89,110 +93,47 @@ export default function Index() {
     if (loading) {
       logger.log('[Index] Still loading auth state...');
       if (Platform.OS === 'web') {
-        // eslint-disable-next-line no-console
         console.log('[Index WEB] Waiting for auth to load...');
       }
       return; // Still loading, wait
     }
     
-    // Auth is done loading - check where we are
-    const segmentArray = segments as string[];
-    const inAuthFlow = segmentArray.includes('auth') || segmentArray.includes('(auth)');
-    const inTabsFlow = segmentArray.includes('tabs') || segmentArray.includes('(tabs)');
-    const currentPath = segmentArray.join('/');
+    // Auth is done loading - immediately redirect based on user state
+    console.log('[Index WEB] Auth loaded, user:', !!user);
     
-    logger.log('[Index] Navigation check', { 
-      hasUser: !!user, 
-      inAuthFlow, 
-      inTabsFlow,
-      segments: currentPath,
-      segmentArray,
-    });
-    
-    if (Platform.OS === 'web') {
-      // eslint-disable-next-line no-console
-      console.log('[Index WEB] Navigation decision', { 
-        hasUser: !!user, 
-        inAuthFlow, 
-        inTabsFlow,
-        currentPath
-      });
+    // Simple redirect: if no user, go to signin; if user, go to tabs
+    if (!user) {
+      logger.log('[Index] No user - navigating to signin');
+      console.log('[Index WEB] Redirecting to /(auth)/signin');
+      router.replace('/(auth)/signin' as any);
+    } else {
+      logger.log('[Index] User authenticated - navigating to tabs');
+      console.log('[Index WEB] Redirecting to /(tabs)');
+      router.replace('/(tabs)');
     }
-    
-    // Determine where user should be based on auth state
-    const shouldBeInAuth = !user;
-    const shouldBeInTabs = !!user;
-    
-    // If user is authenticated but in auth flow, navigate to tabs (HOME)
-    if (shouldBeInTabs && inAuthFlow) {
-      logger.log('[Index] ✅ User logged in - navigating to home/(tabs)');
-      if (Platform.OS === 'web') {
-        // eslint-disable-next-line no-console
-        console.log('[Index WEB] Redirecting to /(tabs)');
-      }
-      // Use a small delay to ensure Firebase auth state is fully settled
-      setTimeout(() => {
-        try {
-          router.replace('/(tabs)');
-        } catch (error) {
-          console.error('[Index WEB] Failed to navigate to tabs:', error);
-        }
-      }, 100);
-      return;
-    }
-    
-    // If user is not authenticated but in tabs flow, navigate to login
-    if (shouldBeInAuth && inTabsFlow) {
-      logger.log('[Index] ❌ No user in tabs - navigating to login');
-      if (Platform.OS === 'web') {
-        // eslint-disable-next-line no-console
-        console.log('[Index WEB] Redirecting to /(auth)/signin');
-      }
-      try {
-        router.replace('/(auth)/signin' as any);
-      } catch (error) {
-        console.error('[Index WEB] Failed to navigate to signin:', error);
-      }
-      return;
-    }
-    
-    // Initial navigation when not in any flow yet (index route)
-    if (!inAuthFlow && !inTabsFlow) {
-      if (!user) {
-        logger.log('[Index] 🔄 Initial - no user, navigating to login');
-        if (Platform.OS === 'web') {
-          // eslint-disable-next-line no-console
-          console.log('[Index WEB] Initial redirect to /(auth)/signin');
-        }
-        try {
-          router.replace('/(auth)/signin' as any);
-        } catch (error) {
-          console.error('[Index WEB] Failed initial navigate to signin:', error);
-        }
-      } else {
-        logger.log('[Index] 🔄 Initial - user exists, navigating to home/(tabs)');
-        if (Platform.OS === 'web') {
-          // eslint-disable-next-line no-console
-          console.log('[Index WEB] Initial redirect to /(tabs)');
-        }
-        setTimeout(() => {
-          try {
-            router.replace('/(tabs)');
-          } catch (error) {
-            console.error('[Index WEB] Failed initial navigate to tabs:', error);
-          }
-        }, 100);
-      }
-    }
-  }, [loading, user, segments, router]); // React to loading, user, segments, and router changes
+  }, [loading, user, router]); // React to loading, user, and router changes only
 
   // Show loading state while auth initializes or during redirect
+  // Add timeout to detect stuck loading state
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (loading && Platform.OS === 'web') {
+         
+        console.error('[Index] Auth stuck loading for 10+ seconds. Check Firebase config and network.');
+      }
+    }, 10000);
+    return () => clearTimeout(timeout);
+  }, [loading]);
+
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: palette.background }}>
-      <ActivityIndicator size="large" />
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: palette.background || '#fff' }}>
+      <ActivityIndicator size="large" color={palette.primary || '#007AFF'} />
+      <Text style={{ marginTop: 20, color: palette.text || '#000', fontSize: 16 }}>
+        Loading 3mpwr App... {loading ? '(Initializing auth)' : '(Redirecting)'}
+      </Text>
       {Platform.OS === 'web' && (
-        <Text style={{ marginTop: 20, color: palette.textSecondary }}>
-          Loading 3mpwr App... {loading ? '(Initializing auth)' : '(Redirecting)'}
+        <Text style={{ marginTop: 10, color: palette.textSecondary || '#666', fontSize: 12 }}>
+          If this takes more than a few seconds, check the browser console (F12)
         </Text>
       )}
     </View>

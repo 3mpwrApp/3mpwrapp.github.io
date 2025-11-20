@@ -27,11 +27,10 @@ function walk(dir, out=[]) {
 }
 
 // Load registry
-const registryPath = path.join(ROOT,'services','analyticsEvents.ts');
+const registryPath = path.join(ROOT,'data','analytics-events.json');
 const registrySrc = fs.readFileSync(registryPath,'utf8');
-const regMatches = [...registrySrc.matchAll(/"([a-zA-Z0-9_.:-]+)"/g)].map(m=>m[1]);
-// crude filter to only those with at least one underscore or dot consistent with event naming
-const registry = regMatches.filter(e=>/[_\.]/.test(e));
+const registryData = JSON.parse(registrySrc);
+const registry = Object.values(registryData);
 
 const eventCounts = new Map();
 for (const file of walk(ROOT)) {

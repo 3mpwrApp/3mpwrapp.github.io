@@ -36,6 +36,8 @@
   "EVENTS_DELETE": "events.delete",
   "EVENTS_SHARE": "events.share",
   "EVENTS_ADD_TO_CALENDAR": "events.add_to_calendar",
+  "EVENTS_SUBMIT_TO_3MPWR": "events.submit_to_3mpwr",
+  "CAMPAIGN_SUBMIT_TO_3MPWR": "campaign.submit_to_3mpwr",
   "EVIDENCE_EXPORT_ENCRYPTED": "evidence.export.encrypted",
   "EVIDENCE_IMPORT_ENCRYPTED": "evidence.import.encrypted",
   "EVIDENCE_SAVE_SINGLE": "evidence.save.single",

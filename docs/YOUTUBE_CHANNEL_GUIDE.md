@@ -1001,7 +1001,1270 @@ Vote now!"
 
 ---
 
-**Document Version**: 1.0  
-**Last Updated**: November 12, 2025  
+## 📹 Video Scripts - Series 8: "Tab Deep Dives"
+
+This series provides comprehensive walkthroughs of each bottom navigation tab, including all sub-menus, features, and navigation options. Each video focuses on one tab to give viewers deep understanding of the app's capabilities.
+
+---
+
+### Video 8.1: "Home Tab - Your AI-Powered Dashboard & Daily Overview"
+**Length**: 8 minutes  
+**Keywords**: dashboard, AI insights, daily overview, personalized recommendations
+
+**Script**:
+
+**[0:00-0:30] Hook**
+"Welcome to your command center - the Home tab in 3mpwr App. This isn't just a static dashboard; it's an AI-powered overview that learns your patterns and surfaces exactly what you need, when you need it. Let me show you how it transforms your daily advocacy routine."
+
+**[0:30-1:30] Home Tab Layout**
+"[Screen recording - pan across Home tab]
+
+The Home tab is divided into 4 main sections:
+
+**1. Welcome Header**
+- Personalized greeting: 'Good morning, [Name]'
+- Current date and weather (if location enabled)
+- Quick access to emergency resources (988 button)
+
+**2. AI Insights Panel**
+- Today's energy forecast (from Pacing Partner)
+- Mood trend (from Mood Tracker 2.0)
+- Upcoming deadlines (from Advocacy tools)
+- Peer support recommendations
+
+**3. Quick Actions Grid**
+- 8 shortcut buttons to main features
+- Customizable based on your usage patterns
+
+**4. Recent Activity Feed**
+- Latest mood entries, pacing logs, evidence uploads
+- Community posts from people you follow
+- What's New announcements"
+
+**[1:30-3:00] AI Insights Panel Deep Dive**
+"[Screen recording - tap through each insight]
+
+**Energy Forecast Card:**
+- 'Energy Level: 75% - Good for moderate activities'
+- Tap for hourly breakdown (links to Pacing Partner)
+- 'Peak window: 10am-2pm today'
+
+**Mood Trend Card:**
+- 'Mood improving: +0.8 over 3 days' (green upward arrow)
+- Tap for detailed analysis (links to Mood Tracker)
+- 'Trigger identified: Exercise correlates with +1.2 mood boost'
+
+**Deadline Alert Card:**
+- 'CPP-D Appeal due in 7 days' (orange warning)
+- Tap for deadline details (links to Advocacy tab)
+- 'Next steps: Gather medical evidence'
+
+**Peer Support Card:**
+- '3 people with similar conditions active today'
+- Tap to view recommendations (links to Community tab)
+- 'Sarah (fibromyalgia) posted about pacing strategies'"
+
+**[3:00-4:30] Quick Actions Grid Customization**
+"[Screen recording - long press to customize]
+
+Default shortcuts:
+1. Log Mood (Mood Tracker)
+2. Log Activity (Pacing Partner)
+3. Upload Evidence (Resources tab)
+4. Write Letter (Advocacy tab)
+5. Find Support (Community tab)
+6. View Wellness (Wellness tab)
+7. Check Deadlines (Advocacy tab)
+8. Emergency Resources (always visible)
+
+**How to Customize:**
+- Long press any shortcut → 'Edit Shortcuts'
+- Drag to reorder
+- Replace with less-used features
+- Add custom shortcuts to specific tools
+
+**AI Personalization:**
+- App learns your most-used features
+- Automatically promotes frequently accessed tools
+- Suggests new tools based on your profile (e.g., if you have chronic pain, surfaces Pain Log)"
+
+**[4:30-6:00] Recent Activity Feed**
+"[Screen recording - scroll through feed]
+
+**Types of Activities Shown:**
+- Your mood entries: 'Logged mood: Good (+1) - Feeling hopeful today'
+- Pacing logs: 'Completed 30-min walk - Energy: 8/10 → 6/10'
+- Evidence uploads: 'Uploaded MRI report to Evidence Locker'
+- Community interactions: 'Replied to thread: "Managing flare-ups"'
+- Advocacy progress: 'Generated workplace accommodation letter'
+- Wellness achievements: '7-day meditation streak!'
+
+**Feed Controls:**
+- Filter by type (All, Wellness, Advocacy, Community)
+- Mark as read/unread
+- Hide specific activities
+- Export activity summary (CSV for doctors)
+
+**Privacy Note:** All activity stays on your device unless you enable sync."
+
+**[6:00-7:00] Emergency Resources Integration**
+"Built-in crisis support:
+- 988 Suicide & Crisis Lifeline (US/Canada)
+- Crisis Text Line (text HOME to 741741)
+- Emergency contacts (from your phone)
+- Quick access to grounding techniques
+- Local mental health resources (location-based)
+
+Always visible in top-right corner of Home tab."
+
+**[7:00-8:00] Call to Action**
+"Your Home tab evolves with you. Start using the AI insights today - they'll save you hours of manual tracking. In the next video, we'll dive into the Campaigns tab for coordinated advocacy.
+
+Like and subscribe for daily dashboard tips!"
+
+**Video Description**:
+```
+Master your 3mpwr App Home tab - the AI-powered dashboard that learns your patterns and surfaces what matters most. Complete walkthrough of insights, shortcuts, and activity feed.
+
+🏠 FEATURES COVERED:
+✅ AI Energy & Mood Forecasts
+✅ Deadline Alerts & Reminders
+✅ Peer Support Recommendations
+✅ Customizable Quick Actions Grid
+✅ Recent Activity Feed
+✅ Emergency Resources Integration
+✅ Privacy-Preserving Design
+
+⏰ Timestamps:
+0:00 AI-Powered Dashboard Introduction
+0:30 Home Tab Layout Overview
+1:30 AI Insights Panel Deep Dive
+3:00 Quick Actions Grid Customization
+4:30 Recent Activity Feed
+6:00 Emergency Resources
+7:00 Start Using AI Insights
+
+🏷️ Tags: #Dashboard #AIDashboard #PersonalizedApp #DisabilityApp #ChronicIllness #AdvocacyTools #MentalHealth #EnergyManagement
+
+📧 Contact: empowrapp08162025@gmail.com
+```
+
+---
+
+### Video 8.2: "Campaigns Tab - Coordinate Advocacy Efforts & Join Movements"
+**Length**: 10 minutes  
+**Keywords**: advocacy campaigns, collective action, disability rights, coordinated efforts
+
+**Script**:
+
+**[0:00-0:30] Hook**
+"Alone we can do so little; together we can do so much. The Campaigns tab in 3mpwr App transforms individual advocacy into collective action. Whether you're fighting for better accessibility, fair benefits, or systemic change - this is where the movement happens."
+
+**[0:30-1:30] Campaigns Tab Overview**
+"[Screen recording - Campaigns tab layout]
+
+Three main sections:
+
+**1. Active Campaigns Feed**
+- Campaigns you're participating in
+- New campaigns in your area/interests
+- Campaign progress updates
+
+**2. Campaign Categories**
+- Healthcare Access
+- Workplace Rights
+- Benefits & Income Support
+- Housing & Accessibility
+- Education & Training
+- Transportation
+- Legal Rights
+- Indigenous Rights
+
+**3. Your Campaign Dashboard**
+- Campaigns you've joined
+- Your contribution history
+- Impact metrics"
+
+**[1:30-3:30] Joining a Campaign**
+"[Screen recording - browse and join campaign]
+
+**Browse Campaigns:**
+- Filter by category, location, urgency
+- Search by keyword (e.g., 'CPP disability', 'workplace accommodation')
+- Sort by: Newest, Most Participants, Ending Soon
+
+**Campaign Details Page:**
+- Problem statement and goals
+- Required actions (sign petition, share story, contact representative)
+- Timeline and milestones
+- Organizer information
+- Participant count and success stories
+
+**Joining Process:**
+1. Tap 'Join Campaign'
+2. Select participation level (Light, Moderate, Heavy)
+3. Choose actions you're comfortable with
+4. Set reminders for deadlines
+5. 'Joined! Welcome to the movement'"
+
+**[3:30-5:00] Campaign Actions & Tools**
+"[Screen recording - different action types]
+
+**Action Types:**
+- **Petition Signing:** Digital signature collection
+- **Story Sharing:** Share your experience (optional anonymity)
+- **Representative Contact:** Pre-written emails/letters
+- **Social Media Sharing:** Campaign hashtags and graphics
+- **Evidence Collection:** Contribute documents to campaign database
+- **Event Attendance:** Virtual or in-person rallies
+- **Fundraising:** Donate or fundraise for legal support
+
+**Built-in Tools:**
+- Letter Wizard integration (generate personalized letters)
+- Evidence Locker (upload supporting documents)
+- Contact database (find local representatives)
+- Progress tracking (your contributions logged)"
+
+**[5:00-6:30] Creating Your Own Campaign**
+"[Screen recording - campaign creation flow]
+
+**Who Can Create Campaigns:**
+- Verified users (complete profile + terms acceptance)
+- Advocates with demonstrated engagement
+- Organizations and support groups
+
+**Creation Process:**
+1. Tap '+' button → 'Create Campaign'
+2. Choose category and scope (local, provincial, national)
+3. Define problem and goals
+4. Set timeline and milestones
+5. Add required actions
+6. Upload supporting materials
+7. Submit for review (24-48 hour approval)
+
+**Campaign Management:**
+- Edit campaign details
+- Moderate participant contributions
+- Send updates to participants
+- Track progress and celebrate wins"
+
+**[6:30-7:30] Privacy & Safety in Campaigns**
+"Advocacy can be risky - we've built safety first:
+
+- **Anonymity Options:** Participate without revealing identity
+- **Content Moderation:** Harassment and hate speech removed
+- **Safe Sharing:** Stories can be anonymous or attributed
+- **Exit Anytime:** Leave campaigns without explanation
+- **Data Control:** Your participation data stays private
+- **Emergency Support:** Crisis resources always available"
+
+**[7:30-8:30] Impact Tracking**
+"See the difference you're making:
+
+- 'Your petition signature helped reach 1,000 signatures!'
+- 'Campaign successful: New accessibility law passed'
+- 'Your story helped 5 people take action'
+- Personal impact dashboard: Actions taken, people reached, wins achieved"
+
+**[8:30-10:00] Call to Action**
+"Advocacy is most powerful when we're united. Join a campaign today - your voice matters. In the next video, we'll explore the Community tab for peer support and connection.
+
+What's your biggest advocacy goal? Comment below!"
+
+**Video Description**:
+```
+Transform individual advocacy into collective action with 3mpwr App's Campaigns tab. Join movements, create campaigns, and coordinate change for disability rights and accessibility.
+
+📢 FEATURES COVERED:
+✅ Browse & Join Campaigns by Category
+✅ Multiple Action Types (Petitions, Stories, Contact Reps)
+✅ Campaign Creation Tools
+✅ Built-in Letter Wizard Integration
+✅ Privacy & Safety Controls
+✅ Impact Tracking & Success Metrics
+✅ Anonymous Participation Options
+
+⏰ Timestamps:
+0:00 Collective Advocacy Power
+0:30 Campaigns Tab Overview
+1:30 Joining a Campaign (Step-by-Step)
+3:30 Campaign Actions & Tools
+5:00 Creating Your Own Campaign
+6:30 Privacy & Safety Features
+7:30 Impact Tracking
+8:30 Join the Movement Today
+
+🏷️ Tags: #DisabilityRights #Advocacy #CollectiveAction #Campaigns #Accessibility #DisabilityJustice #LegalRights #CommunityOrganizing
+
+📧 Contact: empowrapp08162025@gmail.com
+```
+
+---
+
+### Video 8.3: "Community Tab - Peer Support, Forums & Safe Connections"
+**Length**: 12 minutes  
+**Keywords**: peer support, disability community, forums, mental health support
+
+**Script**:
+
+**[0:00-0:30] Hook**
+"You are not alone. The Community tab in 3mpwr App connects you with people who truly understand - peers with similar conditions, shared experiences, and mutual support. This isn't social media; it's a safe space designed for disability community building."
+
+**[0:30-1:30] Community Tab Structure**
+"[Screen recording - Community tab sections]
+
+**Four Main Areas:**
+1. **Peer Matching Feed** - AI-matched support connections
+2. **Discussion Forums** - Topic-based conversations
+3. **Direct Messaging** - Private conversations
+4. **Safety Center** - Moderation and reporting tools
+
+**Navigation:**
+- Top tabs: Feed, Forums, Messages, Safety
+- Bottom: Quick access to compose new post/message"
+
+**[1:30-3:30] AI Peer Matching**
+"[Screen recording - Peer Matching section]
+
+**How Matching Works:**
+- Analyzes your profile (conditions, symptoms, location, interests)
+- Matches with 94% accuracy based on compatibility
+- Considers safety preferences (age, gender, location radius)
+
+**Matching Criteria:**
+- Similar disability types (94% weight)
+- Shared symptoms and challenges (85% weight)
+- Geographic proximity (70% weight)
+- Common interests/goals (60% weight)
+- Language preferences (100% weight for Indigenous languages)
+
+**Peer Cards:**
+- Profile photo (optional)
+- Name/handle
+- Shared conditions
+- 'Compatibility: 87%'
+- Quick actions: Connect, View Profile, Send Message"
+
+**[3:30-5:00] Discussion Forums**
+"[Screen recording - Forums section]
+
+**Forum Categories:**
+- **Condition-Specific:** ME/CFS, Fibromyalgia, Chronic Pain, Mental Health
+- **Advocacy Topics:** Benefits, Workplace Rights, Healthcare Access
+- **Wellness:** Coping Strategies, Pacing Tips, Self-Care
+- **Regional:** Province-specific discussions
+- **Indigenous:** Cultural-specific support
+- **Caregivers:** Support for family members
+
+**Forum Features:**
+- Threaded conversations
+- Upvote helpful posts
+- Follow threads for updates
+- Search by keyword
+- Filter by date/activity
+- Anonymous posting option"
+
+**[5:00-7:00] Direct Messaging & Safety**
+"[Screen recording - Messages section]
+
+**Messaging Features:**
+- End-to-end encrypted conversations
+- Photo/video sharing (optional)
+- Voice messages for accessibility
+- Translation support (6 Indigenous languages)
+- Emergency contact integration
+
+**Safety Features:**
+- Block/unblock users
+- Report inappropriate content
+- Moderation team review (24/7)
+- Self-destructing messages (optional)
+- Location sharing controls
+- Screenshot detection alerts
+
+**Conversation Starters:**
+- AI-suggested icebreakers based on profiles
+- Shared interest prompts
+- Support request templates"
+
+**[7:00-8:30] Community Guidelines & Moderation**
+"[Screen recording - Safety Center]
+
+**Core Guidelines:**
+- Respect privacy and boundaries
+- No medical advice (peer support only)
+- Inclusive language required
+- No hate speech or discrimination
+- Crisis support available
+
+**Moderation Tools:**
+- Report button on every post/message
+- Community voting on content
+- AI content filtering
+- Human moderator review
+- Appeal process for warnings
+
+**Your Safety Dashboard:**
+- Blocked users list
+- Content you've reported
+- Privacy settings summary
+- Emergency contacts"
+
+**[8:30-9:30] Success Stories & Impact**
+"Real connections, real support:
+- 'Found my pacing accountability partner'
+- 'Got local resource recommendations'
+- 'Processed trauma with understanding peers'
+- 'Advocacy wins celebrated together'
+- 'Cultural connections in Indigenous languages'"
+
+**[9:30-10:30] Getting Started**
+"**First Steps:**
+1. Complete your profile (increases matching accuracy)
+2. Set safety preferences
+3. Browse forums anonymously
+4. Connect with 2-3 peers to start
+5. Use 'I'm new here' badge for welcoming
+
+**Pro Tips:**
+- Be specific about what support you need
+- Celebrate small wins together
+- Use forums for general questions
+- Direct messages for personal conversations"
+
+**[10:30-12:00] Call to Action**
+"Community is the heart of empowerment. Find your people today. In the next video, we'll explore the Resources tab - your evidence locker and tool library.
+
+Who's in your disability support network? Share below!"
+
+**Video Description**:
+```
+Build meaningful connections in 3mpwr App's Community tab. AI-powered peer matching, safe forums, encrypted messaging, and comprehensive safety features for disability community support.
+
+👥 FEATURES COVERED:
+✅ AI Peer Matching (94% accuracy)
+✅ Discussion Forums by Category
+✅ End-to-End Encrypted Messaging
+✅ Comprehensive Safety & Moderation
+✅ Indigenous Language Support
+✅ Anonymous Participation
+✅ Crisis Support Integration
+
+⏰ Timestamps:
+0:00 You Are Not Alone
+0:30 Community Tab Structure
+1:30 AI Peer Matching Explained
+3:30 Discussion Forums
+5:00 Direct Messaging & Safety
+7:00 Community Guidelines
+8:30 Success Stories
+9:30 Getting Started Tips
+10:30 Find Your Community
+
+🏷️ Tags: #PeerSupport #DisabilityCommunity #MentalHealth #ChronicIllness #SupportGroups #Accessibility #IndigenousLanguages #SafeSpaces
+
+📧 Contact: empowrapp08162025@gmail.com
+```
+
+---
+
+### Video 8.4: "Resources Tab - Evidence Locker, Legal Guides & Tool Library"
+**Length**: 10 minutes  
+**Keywords**: evidence locker, legal resources, disability tools, document management
+
+**Script**:
+
+**[0:00-0:30] Hook**
+"Knowledge is power, but organization is empowerment. The Resources tab in 3mpwr App is your digital command center for evidence, legal guides, and advocacy tools. Everything you need to build your case, one organized folder at a time."
+
+**[0:30-1:30] Resources Tab Overview**
+"[Screen recording - Resources tab layout]
+
+**Three Main Sections:**
+1. **Evidence Locker** - Secure document storage
+2. **Legal Resources** - Guides, templates, jurisdiction info
+3. **Tool Library** - Calculators, trackers, utilities
+
+**Quick Access Bar:**
+- Search all resources
+- Upload new evidence
+- Recent documents
+- Favorites"
+
+**[1:30-4:00] Evidence Locker Deep Dive**
+"[Screen recording - Evidence Locker features]
+
+**Organization System:**
+- **Folders by Category:**
+  - Medical Records
+  - Legal Documents
+  - Financial Records
+  - Correspondence
+  - Evidence Photos/Videos
+  - Appeal Materials
+
+- **Auto-Categorization:** AI suggests folders based on document type
+- **Tagging System:** Add custom tags (e.g., 'CPP Appeal 2024', 'Workplace Accommodation')
+
+**Upload & Security:**
+- AES-256 encryption on device
+- Optional cloud sync (BYOC mode)
+- Batch upload from camera/gallery
+- OCR text recognition for searchability
+- Automatic backup scheduling
+
+**Document Management:**
+- Preview all file types
+- Edit metadata (dates, descriptions)
+- Share with advocates (encrypted links)
+- Export for legal submissions
+- Version control for document updates"
+
+**[4:00-5:30] Legal Resources Library**
+"[Screen recording - Legal Resources section]
+
+**Resource Types:**
+- **Jurisdiction Guides:** All 14 Canadian jurisdictions covered
+- **Legal Rights Summaries:** Disability-specific laws and entitlements
+- **Appeal Process Guides:** Step-by-step instructions
+- **Accommodation Templates:** Workplace, education, housing
+- **Glossary:** Legal terms explained in plain language
+- **Case Law Database:** Relevant court decisions
+
+**Interactive Features:**
+- Search by topic or jurisdiction
+- Bookmark important sections
+- Download offline access
+- Update notifications for law changes
+- Plain language summaries"
+
+**[5:30-7:00] Tool Library**
+"[Screen recording - Tool Library section]
+
+**Calculator Tools:**
+- **Deadline Calculator:** Never miss appeal dates
+- **Benefits Calculator:** Estimate entitlement amounts
+- **Tax Impact Calculator:** Disability tax credit calculations
+- **Cost of Living Adjuster:** Inflation adjustments
+
+**Tracking Tools:**
+- **Appeal Tracker:** Multi-jurisdiction deadline management
+- **Document Request Tracker:** Follow up on medical records
+- **Communication Log:** Track all advocacy interactions
+
+**Utility Tools:**
+- **PDF Merger/Splitter:** Organize evidence packages
+- **Image Compressor:** Reduce file sizes for submissions
+- **Text Extractor:** Pull text from images/documents
+- **Signature Tool:** Add digital signatures"
+
+**[7:00-8:00] Search & Organization**
+"**Advanced Search:**
+- Full-text search across all documents
+- Filter by date, type, jurisdiction
+- Saved search queries
+- Recent searches history
+
+**Organization Tips:**
+- Use consistent naming conventions
+- Tag documents liberally
+- Create subfolders for complex cases
+- Regular cleanup (archive old materials)"
+
+**[8:00-9:00] Integration with Other Tabs**
+"**Seamless Workflow:**
+- Evidence from Locker → Letter Wizard
+- Deadlines from Calculator → Advocacy reminders
+- Legal guides → Campaign research
+- Tools → Wellness tracking
+
+**Export Capabilities:**
+- Generate evidence packages for lawyers
+- Create appeal bundles
+- Share resource collections
+- Backup entire library"
+
+**[9:00-10:00] Call to Action**
+"Get organized, get empowered. Start building your evidence locker today. In the next video, we'll dive deep into the Wellness tab - your complete self-care toolkit.
+
+What's your most important advocacy document? Comment below!"
+
+**Video Description**:
+```
+Master document management and legal resources with 3mpwr App's Resources tab. Secure evidence locker, jurisdiction guides, calculators, and advocacy tools for comprehensive disability support.
+
+📁 FEATURES COVERED:
+✅ Evidence Locker with AES-256 Encryption
+✅ Auto-Categorization & Tagging
+✅ Legal Resources for 14 Jurisdictions
+✅ Calculator Tools (Deadlines, Benefits, Tax)
+✅ Tracking Tools (Appeals, Communications)
+✅ Advanced Search & Organization
+✅ Export for Legal Submissions
+
+⏰ Timestamps:
+0:00 Knowledge Organization Power
+0:30 Resources Tab Overview
+1:30 Evidence Locker Deep Dive
+4:00 Legal Resources Library
+5:30 Tool Library
+7:00 Search & Organization
+8:00 Integration with Other Tabs
+9:00 Start Organizing Today
+
+🏷️ Tags: #EvidenceLocker #LegalResources #DisabilityAdvocacy #DocumentManagement #CanadianLaw #AppealProcess #AccessibilityTools
+
+📧 Contact: empowrapp08162025@gmail.com
+```
+
+---
+
+### Video 8.5: "Wellness Tab - Complete Self-Care Toolkit (41 Tools Overview)"
+**Length**: 15 minutes  
+**Keywords**: wellness tools, self-care, chronic illness management, mental health
+
+**Script**:
+
+**[0:00-0:30] Hook**
+"Self-care isn't selfish - it's essential survival for chronic illness. The Wellness tab in 3mpwr App offers 41 specialized tools designed by people with disabilities, for people with disabilities. From AI mood tracking to adaptive exercise - your complete wellness toolkit."
+
+**[0:30-1:30] Wellness Tab Structure**
+"[Screen recording - Wellness tab categories]
+
+**Six Main Categories:**
+1. **Mental Health** (12 tools) - Mood, anxiety, trauma
+2. **Physical Wellness** (8 tools) - Pain, fatigue, mobility
+3. **Daily Living** (7 tools) - Routines, sleep, nutrition
+4. **Exercise & Movement** (6 tools) - Adaptive, seated, restorative
+5. **Creative Expression** (4 tools) - Art, music, writing
+6. **Crisis & Support** (4 tools) - Emergency resources, peer support
+
+**Navigation:**
+- Grid view of all tools
+- Category filters
+- Search by name or symptom
+- Favorites and recent tools"
+
+**[1:30-4:00] Mental Health Tools**
+"[Screen recording - Mental Health category]
+
+**Core Tools:**
+- **AI Mood Tracker 2.0** - Pattern detection, trigger identification
+- **Anxiety Tracker** - Real-time anxiety logging with coping suggestions
+- **DBT Skills Toolbox** - Dialectical Behavior Therapy techniques
+- **Grounding Techniques** - 5-4-3-2-1 sensory exercises
+- **Distress Tolerance** - Crisis survival skills
+- **Mindfulness Timer** - Guided and unguided sessions
+- **Gratitude Journal** - Daily positive reflection
+- **Trauma Recovery** - Safe processing tools
+
+**AI Integration:** Tools learn your patterns and suggest personalized coping strategies."
+
+**[4:00-6:00] Physical Wellness Tools**
+"[Screen recording - Physical Wellness category]
+
+**Pain & Fatigue Management:**
+- **Pain Log** - Multi-point pain tracking with patterns
+- **Pacing Partner** - AI energy forecasting
+- **Fatigue Tracker** - Crash prediction and prevention
+- **Symptom Tracker** - Comprehensive symptom logging
+- **Mobility Journal** - Movement limitations and adaptations
+- **Rest Timer** - Enforced rest breaks
+- **Body Scan** - Progressive muscle relaxation
+- **Heat/Cold Therapy Guide** - Treatment protocols
+
+**Smart Features:** Correlates symptoms with activities, weather, and other factors."
+
+**[6:00-8:00] Daily Living & Exercise**
+"[Screen recording - Daily Living and Exercise categories]
+
+**Daily Living (7 tools):**
+- **Routine Builder** - Custom daily schedules with energy budgeting
+- **Sleep Tracker** - Sleep quality analysis and improvement tips
+- **Medication Logger** - Timing, side effects, refill reminders
+- **Nutrition Tracker** - Food-mood correlations
+- **Hydration Reminder** - Customizable water intake goals
+- **Environmental Tracker** - Lighting, noise, temperature effects
+- **Goal Setting** - SMART goals with progress tracking
+
+**Exercise & Movement (6 tools):**
+- **Adaptive Exercise Library** - Wheelchair, seated, bed-bound options
+- **Gentle Movement Videos** - 5-15 minute sessions
+- **Breathing Exercises** - Various techniques for different conditions
+- **Stretching Routines** - Pain-safe flexibility work
+- **Balance Training** - Fall prevention exercises
+- **Chair Yoga** - Accessible yoga modifications"
+
+**[8:00-10:00] Creative & Crisis Tools**
+"[Screen recording - Creative Expression and Crisis categories]
+
+**Creative Expression (4 tools):**
+- **Art Therapy Prompts** - Guided creative exercises
+- **Music Therapy** - Curated playlists and creation tools
+- **Writing Therapy** - Journal prompts and story sharing
+- **Mandala Coloring** - Digital coloring for stress relief
+
+**Crisis & Support (4 tools):**
+- **Crisis Plan Builder** - Personalized emergency plans
+- **Support Network** - Emergency contact management
+- **988 Integration** - Direct access to crisis lifeline
+- **Peer Support Finder** - Connect with similar experiences
+
+**Safety Features:** All tools include crisis detection and automatic resource suggestions."
+
+**[10:00-12:00] Tool Customization & AI**
+"**Personalization:**
+- Tools adapt based on your profile (disabilities, symptoms)
+- AI suggests relevant tools for current mood/energy
+- Custom reminders and notifications
+- Progress tracking across all tools
+
+**Integration:**
+- Mood data feeds into physical tools
+- Pacing data affects exercise recommendations
+- Symptom patterns inform daily living adjustments
+- All data stays private and on-device"
+
+**[12:00-13:00] Getting Started with Wellness**
+"**Onboarding Process:**
+1. Complete wellness profile (symptoms, preferences, goals)
+2. AI recommends starting tools
+3. Set up daily reminders
+4. Track progress weekly
+5. Adjust based on what works
+
+**Pro Tips:**
+- Start with 2-3 tools maximum
+- Use AI insights to guide choices
+- Combine tools for comprehensive care
+- Celebrate consistency, not perfection"
+
+**[13:00-15:00] Call to Action**
+"Your wellness journey starts here. Explore the 41 tools designed for real disability experiences. In the next video, we'll cover the Advocacy tab - your legal empowerment toolkit.
+
+Which wellness area needs your attention most? Comment below!"
+
+**Video Description**:
+```
+Complete overview of 41 wellness tools in 3mpwr App's Wellness tab. Mental health, physical wellness, daily living, exercise, creative expression, and crisis support - all designed for disability and chronic illness.
+
+🧘 FEATURES COVERED:
+✅ 41 Specialized Wellness Tools
+✅ 6 Categories: Mental Health, Physical, Daily Living, Exercise, Creative, Crisis
+✅ AI Personalization & Pattern Detection
+✅ Crisis Detection & Support Integration
+✅ On-Device Privacy
+✅ Progress Tracking & Reminders
+✅ Adaptive & Accessible Design
+
+⏰ Timestamps:
+0:00 Self-Care Essential for Survival
+0:30 Wellness Tab Structure
+1:30 Mental Health Tools (12)
+4:00 Physical Wellness Tools (8)
+6:00 Daily Living & Exercise (13)
+8:00 Creative & Crisis Tools (8)
+10:00 Tool Customization & AI
+12:00 Getting Started Guide
+13:00 Start Your Wellness Journey
+
+🏷️ Tags: #WellnessTools #ChronicIllness #MentalHealth #SelfCare #DisabilitySupport #AdaptiveExercise #PainManagement #CrisisSupport
+
+📧 Contact: empowrapp08162025@gmail.com
+```
+
+---
+
+### Video 8.6: "Advocacy Tab - Legal Tools, Letter Wizard & Jurisdiction Support"
+**Length**: 12 minutes  
+**Keywords**: legal advocacy, letter generator, disability rights, appeal process
+
+**Script**:
+
+**[0:00-0:30] Hook**
+"Knowledge is power, but action is change. The Advocacy tab in 3mpwr App transforms legal knowledge into concrete action. From letter generation to deadline tracking - everything you need to advocate effectively for your rights."
+
+**[0:30-1:30] Advocacy Tab Overview**
+"[Screen recording - Advocacy tab sections]
+
+**Four Main Sections:**
+1. **Letter Wizard** - Generate professional legal letters
+2. **Jurisdiction Navigator** - All 14 Canadian jurisdictions
+3. **Deadline Tracker** - Never miss important dates
+4. **Legal Resources** - Guides and templates
+
+**Quick Actions:**
+- New Letter, Check Deadlines, Find Resources
+- Recent letters and upcoming deadlines"
+
+**[1:30-4:00] Letter Wizard Deep Dive**
+"[Screen recording - Letter Wizard flow]
+
+**22 Letter Templates:**
+- **Workplace:** Accommodation requests, return-to-work plans
+- **Benefits:** CPP-D appeals, EI extensions, provincial programs
+- **Healthcare:** Medical accommodation, treatment denials
+- **Education:** Accessibility accommodations, course modifications
+- **Housing:** Reasonable accommodation requests
+- **Legal:** Appeal letters, formal complaints
+
+**Wizard Process:**
+1. **Select Situation:** Choose template category
+2. **Input Details:** Personal information, dates, specifics
+3. **AI Enhancement:** Suggests relevant legal arguments
+4. **Customize Content:** Edit language, add details
+5. **Generate PDF:** Professional formatting
+6. **Save to Evidence Locker:** Automatic storage
+
+**AI Features:**
+- Jurisdiction-specific legal language
+- Personalization based on your profile
+- Evidence integration from Resources tab"
+
+**[4:00-6:00] Jurisdiction Navigator**
+"[Screen recording - Jurisdiction section]
+
+**14 Canadian Jurisdictions Covered:**
+- Federal (CPP-D, EI, Canada Pension Plan)
+- All 10 Provinces + 3 Territories
+- Specialized tribunals and appeal processes
+
+**For Each Jurisdiction:**
+- **Contact Information:** Addresses, phone numbers, websites
+- **Appeal Processes:** Step-by-step guides
+- **Common Issues:** Jurisdiction-specific challenges
+- **Success Rates:** Historical approval statistics
+- **Local Advocates:** Directory of support organizations
+- **Forms Library:** Downloadable application forms
+
+**Smart Features:**
+- Location-based suggestions
+- Deadline calculations
+- Integration with Letter Wizard"
+
+**[6:00-8:00] Deadline Tracker**
+"[Screen recording - Deadline Tracker features]
+
+**Multi-Jurisdiction Tracking:**
+- Appeal deadlines (typically 30-90 days)
+- Reconsideration periods
+- Tribunal hearing dates
+- Document submission deadlines
+- Follow-up requirements
+
+**Smart Alerts:**
+- 30-day advance warnings
+- 7-day urgent notifications
+- Custom reminder schedules
+- Calendar integration
+- Push notifications
+
+**Progress Tracking:**
+- Application status updates
+- Required documents checklist
+- Next steps guidance
+- Outcome recording"
+
+**[8:00-9:30] Legal Resources Hub**
+"[Screen recording - Resources section]
+
+**Comprehensive Library:**
+- **Rights Guides:** Disability rights by category
+- **Process Manuals:** Detailed appeal instructions
+- **Case Studies:** Successful advocacy examples
+- **Legal Updates:** Recent law changes
+- **FAQ Database:** Common questions answered
+- **Video Tutorials:** Process walkthroughs
+
+**Accessibility Features:**
+- Plain language options
+- Audio descriptions
+- Large print formatting
+- Screen reader compatible"
+
+**[9:30-10:30] Integration & Workflow**
+"**Seamless Advocacy Workflow:**
+- Research in Resources → Generate letter in Wizard
+- Set deadlines in Tracker → Get reminders
+- Upload evidence from Locker → Attach to letters
+- Track progress → Celebrate wins
+
+**Export & Sharing:**
+- PDF generation for all documents
+- Encrypted sharing with advocates
+- Backup to BYOC cloud
+- Integration with email/print"
+
+**[10:30-12:00] Call to Action**
+"Take control of your legal advocacy. Start with the Letter Wizard today. In the next video, we'll explore the Settings tab - customize your privacy and accessibility.
+
+What's your biggest legal advocacy challenge? Comment below!"
+
+**Video Description**:
+```
+Master legal advocacy with 3mpwr App's Advocacy tab. Letter Wizard, jurisdiction navigator, deadline tracker, and comprehensive legal resources for disability rights in Canada.
+
+⚖️ FEATURES COVERED:
+✅ Letter Wizard (22 Templates)
+✅ 14 Jurisdiction Coverage
+✅ AI-Enhanced Legal Letters
+✅ Deadline Tracker with Smart Alerts
+✅ Legal Resources Library
+✅ Integration with Evidence Locker
+✅ Export & Sharing Tools
+
+⏰ Timestamps:
+0:00 Legal Knowledge to Action
+0:30 Advocacy Tab Overview
+1:30 Letter Wizard Deep Dive
+4:00 Jurisdiction Navigator
+6:00 Deadline Tracker
+8:00 Legal Resources Hub
+9:30 Integration & Workflow
+10:30 Start Advocating Today
+
+🏷️ Tags: #LegalAdvocacy #DisabilityRights #LetterGenerator #CanadianLaw #AppealProcess #WorkersCompensation #CPPDisability
+
+📧 Contact: empowrapp08162025@gmail.com
+```
+
+---
+
+### Video 8.7: "Settings Tab - Privacy Controls, Accessibility & Customization"
+**Length**: 14 minutes  
+**Keywords**: app settings, privacy controls, accessibility options, customization
+
+**Script**:
+
+**[0:00-0:30] Hook**
+"Your app, your rules. The Settings tab in 3mpwr App gives you complete control over privacy, accessibility, and personalization. From encryption settings to Indigenous language preferences - customize every aspect of your experience."
+
+**[0:30-1:30] Settings Tab Structure**
+"[Screen recording - Settings categories]
+
+**Eight Main Categories:**
+1. **Profile & Account** - Personal information, login options
+2. **Privacy & Security** - Encryption, data management, BYOC
+3. **Accessibility** - WCAG compliance, assistive tech integration
+4. **Notifications** - Push notifications, reminders, alerts
+5. **Appearance** - Theme, language, display options
+6. **Wellness Preferences** - Tool customization, AI settings
+7. **Advocacy Settings** - Legal preferences, jurisdiction defaults
+8. **About & Support** - App info, help, contact
+
+**Quick Access:** Search settings, recent changes, reset options"
+
+**[1:30-4:00] Privacy & Security Settings**
+"[Screen recording - Privacy & Security section]
+
+**Data Management:**
+- **Storage Mode:** Device-only, BYOC, or hybrid
+- **Encryption Level:** AES-256 always enabled
+- **Auto-Backup:** Frequency and destination settings
+- **Data Export:** CSV/PDF export options
+- **Account Deletion:** Complete data removal
+
+**BYOC Configuration:**
+- WebDAV setup for self-hosted
+- Google Drive, Dropbox, OneDrive integration
+- AWS S3 for advanced users
+- Connection testing and troubleshooting
+
+**Security Features:**
+- Biometric authentication
+- Auto-lock timing
+- Remote wipe capability
+- Audit logging
+- Two-factor authentication (future)"
+
+**[4:00-6:00] Accessibility Settings**
+"[Screen recording - Accessibility section]
+
+**WCAG AAA Compliance Options:**
+- **Screen Reader:** TalkBack, VoiceOver, NVDA support
+- **Font & Display:** Large text, high contrast, dyslexia fonts
+- **Color Options:** Custom color schemes, colorblind modes
+- **Motion:** Reduce animations, motion warnings
+- **Audio:** Sound cues, haptic feedback
+
+**Assistive Technology Integration:**
+- **Switch Control:** External device support
+- **Braille Display:** Screen reader compatibility
+- **Voice Control:** Siri, Google Assistant integration
+- **Eye Tracking:** Future compatibility
+
+**Cognitive Accessibility:**
+- **Simplified Interface:** Reduce cognitive load
+- **Step-by-Step Guidance:** Tutorial mode
+- **Reminder Customization:** Gentle vs urgent notifications
+- **Break Reminders:** Prevent fatigue"
+
+**[6:00-8:00] Appearance & Language**
+"[Screen recording - Appearance section]
+
+**Language Support:**
+- **6 Indigenous Languages:** Full app translation
+- English, French (Canadian variants)
+- Right-to-left language support
+- Voice synthesis in selected languages
+
+**Theme Customization:**
+- **Color Schemes:** Light, dark, high contrast, custom
+- **App Icon:** Multiple icon options
+- **Widget Styling:** Home screen customization
+- **Font Choices:** Accessibility-focused typography
+
+**Display Options:**
+- **List vs Grid:** Content layout preferences
+- **Compact Mode:** Reduce visual clutter
+- **Tab Bar Position:** Bottom or top navigation"
+
+**[8:00-9:30] Notifications & Wellness Preferences**
+"[Screen recording - Notifications and Wellness sections]
+
+**Notification Controls:**
+- **Categories:** Wellness, Advocacy, Community, System
+- **Frequency:** Immediate, daily digest, weekly summary
+- **Quiet Hours:** Customizable do-not-disturb
+- **Emergency Override:** Crisis alerts always come through
+
+**Wellness AI Settings:**
+- **Learning Preferences:** How aggressively AI learns patterns
+- **Suggestion Frequency:** How often to suggest tools
+- **Data Retention:** How long to keep wellness data
+- **Export Options:** Regular data summaries"
+
+**[9:30-11:00] Advocacy & Account Settings**
+"[Screen recording - Advocacy and Account sections]
+
+**Advocacy Preferences:**
+- **Default Jurisdiction:** Primary province/territory
+- **Letter Templates:** Favorite templates, custom defaults
+- **Advocate Directory:** Privacy settings for visibility
+- **Campaign Notifications:** Interest-based alerts
+
+**Account Management:**
+- **Profile Editing:** Update personal information
+- **Login Options:** Biometric, PIN, password
+- **Backup & Restore:** Cross-device synchronization
+- **Account Recovery:** Secure recovery options"
+
+**[11:00-12:30] About & Support**
+"[Screen recording - About section]
+
+**App Information:**
+- **Version History:** Changelog access
+- **Terms & Privacy:** Current policy links
+- **Open Source:** Attribution and licenses
+- **Credits:** Development team and contributors
+
+**Support Options:**
+- **Help Center:** Searchable FAQ and guides
+- **Contact Support:** Secure messaging
+- **Bug Reports:** Anonymous issue reporting
+- **Feature Requests:** Community voting system
+
+**System Information:**
+- **Diagnostics:** Performance and compatibility info
+- **Storage Usage:** Data usage breakdown
+- **Permissions:** App permission status"
+
+**[12:30-14:00] Call to Action**
+"Make the app truly yours. Explore Settings and customize your experience. In the final video, we'll cover the What's New tab - stay updated with app developments.
+
+What's your most important Settings customization? Comment below!"
+
+**Video Description**:
+```
+Complete control over 3mpwr App with the Settings tab. Privacy controls, accessibility options, language preferences, and comprehensive customization for your unique needs.
+
+⚙️ FEATURES COVERED:
+✅ Privacy & Security (BYOC, Encryption, Data Management)
+✅ WCAG AAA Accessibility Options
+✅ 6 Indigenous Languages + Appearance Customization
+✅ Notification Controls & Wellness AI Settings
+✅ Advocacy Preferences & Account Management
+✅ Help Center & Support Options
+✅ Comprehensive Customization
+
+⏰ Timestamps:
+0:00 Your App, Your Rules
+0:30 Settings Tab Structure
+1:30 Privacy & Security Settings
+4:00 Accessibility Settings
+6:00 Appearance & Language
+8:00 Notifications & Wellness
+9:30 Advocacy & Account
+11:00 About & Support
+12:30 Customize Your Experience
+
+🏷️ Tags: #AppSettings #PrivacyControls #Accessibility #WCAG #IndigenousLanguages #Customization #DataPrivacy #AssistiveTech
+
+📧 Contact: empowrapp08162025@gmail.com
+```
+
+---
+
+### Video 8.8: "What's New Tab - App Updates, Changelog & Feature Announcements"
+**Length**: 8 minutes  
+**Keywords**: app updates, changelog, new features, version history
+
+**Script**:
+
+**[0:00-0:30] Hook**
+"Stay ahead of the curve. The What's New tab in 3mpwr App keeps you informed about updates, new features, and improvements. From bug fixes to major releases - never miss what's changing in your advocacy toolkit."
+
+**[0:30-1:30] What's New Tab Overview**
+"[Screen recording - What's New sections]
+
+**Three Main Areas:**
+1. **Latest Updates** - Current version changes and fixes
+2. **Feature Announcements** - New tools and capabilities
+3. **Roadmap Preview** - Upcoming features and timelines
+
+**Navigation:**
+- Version history browser
+- Category filters (Wellness, Advocacy, Privacy, etc.)
+- Search updates by keyword
+- Bookmark important changes"
+
+**[1:30-3:30] Latest Updates Section**
+"[Screen recording - Updates feed]
+
+**Update Types:**
+- **Security Updates:** Encryption improvements, vulnerability fixes
+- **Feature Additions:** New tools, expanded jurisdictions
+- **Bug Fixes:** Resolved issues and improvements
+- **Performance:** Speed and reliability enhancements
+- **Accessibility:** WCAG compliance updates
+- **Legal Updates:** New laws, changed processes
+
+**Update Format:**
+- **Version Number:** v1.0.0-rc.2
+- **Release Date:** November 18, 2025
+- **Impact Level:** Critical, Major, Minor, Patch
+- **User Action Required:** None, Update Required, Settings Change
+
+**Interactive Features:**
+- **Before/After Screenshots:** Visual change demonstrations
+- **Video Tutorials:** New feature walkthroughs
+- **Migration Guides:** How to adapt to changes"
+
+**[3:30-5:00] Feature Announcements**
+"[Screen recording - Feature announcements]
+
+**Announcement Categories:**
+- **Wellness Tools:** New AI features, expanded libraries
+- **Legal Resources:** New jurisdictions, updated templates
+- **Community Features:** Enhanced safety, new matching algorithms
+- **Privacy Tools:** BYOC expansions, security improvements
+- **Accessibility:** New assistive features, language additions
+
+**Announcement Structure:**
+- **Problem Solved:** What user need this addresses
+- **Solution Overview:** How the feature works
+- **Key Benefits:** Why it matters for advocacy
+- **Getting Started:** How to use the new feature
+- **User Feedback:** How to share thoughts
+
+**Beta Features:**
+- **Early Access:** Opt-in for testing new features
+- **Feedback Collection:** Surveys and bug reports
+- **Rollback Options:** Return to previous versions if needed"
+
+**[5:00-6:30] Roadmap & Future Planning**
+"[Screen recording - Roadmap section]
+
+**Development Transparency:**
+- **Quarterly Roadmaps:** 3-month development plans
+- **User Voting:** Community feature requests
+- **Beta Testing:** Public beta programs
+- **Partnerships:** Collaborations with disability organizations
+
+**Timeline Views:**
+- **Short Term:** Next 1-3 months
+- **Medium Term:** 3-6 months out
+- **Long Term:** 6-12 months vision
+- **Research Phase:** Early concept exploration
+
+**Community Input:**
+- **Feature Requests:** Submit and vote on ideas
+- **User Surveys:** Regular feedback collection
+- **Advisory Board:** Disability community consultation"
+
+**[6:30-7:30] Staying Updated**
+"**Notification Preferences:**
+- **Update Alerts:** Major releases, security updates
+- **Feature Previews:** Early access to new tools
+- **Community News:** Advocacy wins, policy changes
+- **Maintenance Notices:** Scheduled downtime
+
+**Offline Access:**
+- **Downloaded Updates:** Read offline
+- **Search History:** Find past announcements
+- **Bookmark System:** Save important updates"
+
+**[7:30-8:00] Call to Action**
+"Stay informed, stay empowered. Check What's New regularly to maximize your app experience. This concludes our comprehensive tab walkthrough series!
+
+Which new feature are you most excited about? Let us know!"
+
+**Video Description**:
+```
+Stay current with 3mpwr App developments in the What's New tab. Version updates, feature announcements, roadmap previews, and community-driven development transparency.
+
+🆕 FEATURES COVERED:
+✅ Version Update Details & Impact Levels
+✅ Feature Announcements with Tutorials
+✅ Development Roadmap & Timelines
+✅ Beta Testing & Early Access
+✅ Community Feature Voting
+✅ Notification Preferences
+✅ Offline Update Access
+
+⏰ Timestamps:
+0:00 Stay Ahead of the Curve
+0:30 What's New Tab Overview
+1:30 Latest Updates Section
+3:30 Feature Announcements
+5:00 Roadmap & Future Planning
+6:30 Staying Updated
+7:30 Check What's New Today
+
+🏷️ Tags: #AppUpdates #Changelog #NewFeatures #BetaTesting #Roadmap #UserFeedback #DisabilityTech #AccessibilityUpdates
+
+📧 Contact: empowrapp08162025@gmail.com
+```
+
+---
+
+## 📊 Updated Channel Optimization
+
+### Playlists Update
+7. **Tab Deep Dives** (Series 8 - 8 videos)
+
+### SEO Strategy Update
+**Additional Target Keywords:**
+- home dashboard app
+- advocacy campaigns app
+- peer support app
+- evidence locker app
+- wellness tools app
+- legal letter generator
+- app settings guide
+- app updates changelog
+
+### Content Strategy Update
+**Series 8 Goals:**
+- 8 comprehensive tab walkthroughs
+- Deep dive into every menu and submenu
+- Practical tutorials for each feature
+- Accessibility and privacy emphasis
+- Real user scenarios and examples
+
+---
+
+**Document Version**: 1.1  
+**Last Updated**: November 18, 2025  
 **Maintained By**: 3mpwr App Team  
 **Contact**: empowrapp08162025@gmail.com

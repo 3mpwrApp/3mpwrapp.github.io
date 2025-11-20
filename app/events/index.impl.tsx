@@ -27,7 +27,6 @@ import SkeletonRow from "../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
 import { useAuth } from "../../context/AuthContext";
 import { generateDisabilityObservances } from "../../data/disability-observances";
-import { events as localEvents } from "../../data/events";
 import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
 import {
     generateCanadianHolidays,
@@ -62,7 +61,7 @@ export default function EventsScreen() {
   useAnnounceOnMount(t('nav.events','Events'));
   useFocusOnRefOnMount(titleRef);
 
-  const [baseItems, setBaseItems] = React.useState(localEvents);
+  const [baseItems, setBaseItems] = React.useState<any[]>([]);
   const [month, setMonth] = React.useState(() => {
     const d = new Date();
     return new Date(d.getFullYear(), d.getMonth(), 1);
@@ -138,7 +137,7 @@ export default function EventsScreen() {
         console.warn('[Events] Failed to fetch from Firestore:', err);
       }
       
-      // Merge with locally created events (those with evt- prefix)
+      // Merge live events from Firestore and user-created events from AsyncStorage
       let mergedData = [...data];
       try {
         const cached = await AsyncStorage.getItem('events:local:v1');
@@ -153,7 +152,7 @@ export default function EventsScreen() {
         console.warn('[Events] Failed to merge cached events:', err);
       }
       
-      // Merge Firestore events
+      // Merge Firestore events (live community events)
       const existingIds = new Set(mergedData.map(e => e.id));
       const newFirestoreEvents = firestoreEvents.filter((e: any) => !existingIds.has(e.id));
       mergedData = [...newFirestoreEvents, ...mergedData];
@@ -845,6 +844,7 @@ export default function EventsScreen() {
               event={item} 
               palette={palette}
               showEditDelete={item.id.startsWith('evt-')}
+              showSubmitTo3mpwr={item.id.startsWith('evt-')}
               onEdit={() => {
                 // Navigate to event detail page for editing
                 if (router) {
@@ -985,26 +985,26 @@ function createStyles(
       marginBottom: 2,
     },
     calendarContainer: {
-      maxHeight: 220, // Increased to accommodate 6-week months (32px * 6 + margins)
-      marginBottom: 20, // Increased spacing before subscription card
+      maxHeight: 180, // Reduced for smaller calendar
+      marginBottom: 20,
     },
     weekHdr: {
-      width: 32,
+      width: 28,
       textAlign: "center",
       color: palette.text,
       opacity: 0.7,
-      fontSize: 12,
+      fontSize: 11,
     },
     dayCell: {
-      width: 32,
-      height: 32,
-      borderRadius: 6,
+      width: 28,
+      height: 28,
+      borderRadius: 5,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
       alignItems: "center",
       justifyContent: "center",
     },
-    dayText: { color: palette.text, fontSize: 13 },
+    dayText: { color: palette.text, fontSize: 12 },
   });
 }
 

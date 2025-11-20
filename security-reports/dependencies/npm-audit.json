@@ -1,34 +1,474 @@
 {
   "auditReportVersion": 2,
   "vulnerabilities": {
-    "tar": {
-      "name": "tar",
+    "@expo/cli": {
+      "name": "@expo/cli",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@expo/config",
+        "@expo/config-plugins",
+        "@expo/metro-config",
+        "@expo/prebuild-config",
+        "glob"
+      ],
+      "effects": [],
+      "range": ">=0.19.0-canary-20240625-2333e70",
+      "nodes": [
+        "node_modules/@expo/cli"
+      ],
+      "fixAvailable": true
+    },
+    "@expo/config": {
+      "name": "@expo/config",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@expo/config-plugins",
+        "glob",
+        "sucrase"
+      ],
+      "effects": [
+        "@expo/prebuild-config",
+        "expo",
+        "expo-constants",
+        "expo-manifests"
+      ],
+      "range": ">=9.1.0-canary-20240628-1ba8152",
+      "nodes": [
+        "node_modules/@expo/config"
+      ],
+      "fixAvailable": {
+        "name": "expo-constants",
+        "version": "16.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@expo/config-plugins": {
+      "name": "@expo/config-plugins",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "glob"
+      ],
+      "effects": [],
+      "range": "8.0.9-canary-20240719-83ee47b - 8.0.9-canary-20240814-ce0f7d5 || >=8.1.0-canary-20240904-69100c1",
+      "nodes": [
+        "node_modules/@expo/config-plugins"
+      ],
+      "fixAvailable": true
+    },
+    "@expo/devcert": {
+      "name": "@expo/devcert",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "glob"
+      ],
+      "effects": [],
+      "range": ">=1.1.4",
+      "nodes": [
+        "node_modules/@expo/devcert"
+      ],
+      "fixAvailable": true
+    },
+    "@expo/fingerprint": {
+      "name": "@expo/fingerprint",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "glob"
+      ],
+      "effects": [
+        "expo"
+      ],
+      "range": "0.13.1-canary-20250611-f0afe80 - 0.15.3",
+      "nodes": [
+        "node_modules/@expo/fingerprint"
+      ],
+      "fixAvailable": {
+        "name": "expo",
+        "version": "51.0.39",
+        "isSemVerMajor": true
+      }
+    },
+    "@expo/metro-config": {
+      "name": "@expo/metro-config",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@expo/config",
+        "glob"
+      ],
+      "effects": [],
+      "range": ">=0.19.0-canary-20240625-2333e70",
+      "nodes": [
+        "node_modules/@expo/metro-config"
+      ],
+      "fixAvailable": true
+    },
+    "@expo/prebuild-config": {
+      "name": "@expo/prebuild-config",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@expo/config",
+        "@expo/config-plugins"
+      ],
+      "effects": [
+        "expo-splash-screen"
+      ],
+      "range": "7.0.9-canary-20240719-83ee47b - 7.0.9-canary-20240814-ce0f7d5 || >=7.1.0-canary-20240904-69100c1",
+      "nodes": [
+        "node_modules/@expo/prebuild-config"
+      ],
+      "fixAvailable": {
+        "name": "expo-splash-screen",
+        "version": "0.27.7",
+        "isSemVerMajor": true
+      }
+    },
+    "expo": {
+      "name": "expo",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@expo/cli",
+        "@expo/config",
+        "@expo/config-plugins",
+        "@expo/fingerprint",
+        "@expo/metro-config",
+        "expo-asset",
+        "expo-constants"
+      ],
+      "effects": [],
+      "range": ">=52.0.0-canary-20240625-2333e70",
+      "nodes": [
+        "node_modules/expo"
+      ],
+      "fixAvailable": {
+        "name": "expo",
+        "version": "51.0.39",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-asset": {
+      "name": "expo-asset",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "expo-constants"
+      ],
+      "effects": [],
+      "range": ">=10.0.11-canary-20240625-2333e70",
+      "nodes": [
+        "node_modules/expo-asset"
+      ],
+      "fixAvailable": {
+        "name": "expo-asset",
+        "version": "10.0.10",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-auth-session": {
+      "name": "expo-auth-session",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "expo-constants",
+        "expo-linking"
+      ],
+      "effects": [],
+      "range": ">=5.5.3-canary-20240625-2333e70",
+      "nodes": [
+        "node_modules/expo-auth-session"
+      ],
+      "fixAvailable": {
+        "name": "expo-auth-session",
+        "version": "5.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-constants": {
+      "name": "expo-constants",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@expo/config"
+      ],
+      "effects": [
+        "expo-asset",
+        "expo-auth-session",
+        "expo-linking",
+        "expo-notifications",
+        "expo-router"
+      ],
+      "range": ">=16.0.3-canary-20240625-2333e70",
+      "nodes": [
+        "node_modules/expo-constants"
+      ],
+      "fixAvailable": {
+        "name": "expo-constants",
+        "version": "16.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-dev-client": {
+      "name": "expo-dev-client",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "expo-dev-launcher",
+        "expo-manifests"
+      ],
+      "effects": [],
+      "range": "4.0.19-canary-20240625-2333e70 - 4.0.19-canary-20240627-1402f4b || 4.0.20-canary-20240628-1ba8152 || 4.0.21-canary-20240719-83ee47b || >=5.0.0-canary-20240814-ce0f7d5",
+      "nodes": [
+        "node_modules/expo-dev-client"
+      ],
+      "fixAvailable": {
+        "name": "expo-dev-client",
+        "version": "4.0.29",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-dev-launcher": {
+      "name": "expo-dev-launcher",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "expo-manifests"
+      ],
+      "effects": [],
+      "range": "4.0.21-canary-20240625-2333e70 - 4.0.21-canary-20240627-1402f4b || 4.0.22-canary-20240628-1ba8152 || 4.0.23-canary-20240719-83ee47b || >=5.0.0-canary-20240814-ce0f7d5",
+      "nodes": [
+        "node_modules/expo-dev-launcher"
+      ],
+      "fixAvailable": true
+    },
+    "expo-linking": {
+      "name": "expo-linking",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "expo-constants"
+      ],
+      "effects": [],
+      "range": ">=6.3.2-canary-20240625-2333e70",
+      "nodes": [
+        "node_modules/expo-linking"
+      ],
+      "fixAvailable": {
+        "name": "expo-linking",
+        "version": "6.3.1",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-manifests": {
+      "name": "expo-manifests",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@expo/config"
+      ],
+      "effects": [
+        "expo-dev-client",
+        "expo-dev-launcher",
+        "expo-updates"
+      ],
+      "range": ">=0.14.4-canary-20240625-2333e70",
+      "nodes": [
+        "node_modules/expo-manifests"
+      ],
+      "fixAvailable": {
+        "name": "expo-updates",
+        "version": "0.27.4",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-notifications": {
+      "name": "expo-notifications",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "expo-constants"
+      ],
+      "effects": [],
+      "range": "0.28.10-canary-20240625-2333e70 - 0.28.10-canary-20240628-1ba8152 || 0.28.11-canary-20240719-83ee47b || >=0.29.0",
+      "nodes": [
+        "node_modules/expo-notifications"
+      ],
+      "fixAvailable": {
+        "name": "expo-notifications",
+        "version": "0.28.19",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-router": {
+      "name": "expo-router",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "expo-constants",
+        "expo-linking"
+      ],
+      "effects": [],
+      "range": "4.0.13-canary-20241211-61c49bd || 4.0.18-canary-20250124-42fe332 - 4.0.18-canary-20250306-d9d3e02 || 4.0.20-canary-20250320-7a205d3 || 4.0.21 - 5.0.2-preview.6 || >=5.2.0-canary-20250611-f0afe80",
+      "nodes": [
+        "node_modules/expo-router"
+      ],
+      "fixAvailable": {
+        "name": "expo-router",
+        "version": "5.1.7",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-splash-screen": {
+      "name": "expo-splash-screen",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@expo/prebuild-config"
+      ],
+      "effects": [],
+      "range": ">=0.28.0",
+      "nodes": [
+        "node_modules/expo-splash-screen"
+      ],
+      "fixAvailable": {
+        "name": "expo-splash-screen",
+        "version": "0.27.7",
+        "isSemVerMajor": true
+      }
+    },
+    "expo-updates": {
+      "name": "expo-updates",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "expo-manifests",
+        "glob"
+      ],
+      "effects": [],
+      "range": "0.25.18-canary-20240625-2333e70 - 0.25.18-canary-20240627-1402f4b || >=0.26.0-canary-20240628-1ba8152",
+      "nodes": [
+        "node_modules/expo-updates"
+      ],
+      "fixAvailable": {
+        "name": "expo-updates",
+        "version": "0.27.4",
+        "isSemVerMajor": true
+      }
+    },
+    "glob": {
+      "name": "glob",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1109809,
+          "name": "glob",
+          "dependency": "glob",
+          "title": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
+          "url": "https://github.com/advisories/GHSA-5j98-mcp5-4vw2",
+          "severity": "high",
+          "cwe": [
+            "CWE-78"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": ">=10.3.7 <=11.0.3"
+        }
+      ],
+      "effects": [
+        "@expo/cli",
+        "@expo/config",
+        "@expo/config-plugins",
+        "@expo/devcert",
+        "@expo/fingerprint",
+        "@expo/metro-config",
+        "expo-updates",
+        "sucrase"
+      ],
+      "range": "10.3.7 - 11.0.3",
+      "nodes": [
+        "node_modules/glob"
+      ],
+      "fixAvailable": {
+        "name": "expo-updates",
+        "version": "0.27.4",
+        "isSemVerMajor": true
+      }
+    },
+    "js-yaml": {
+      "name": "js-yaml",
       "severity": "moderate",
       "isDirect": false,
       "via": [
         {
-          "source": 1109463,
-          "name": "tar",
-          "dependency": "tar",
-          "title": "node-tar has a race condition leading to uninitialized memory exposure",
-          "url": "https://github.com/advisories/GHSA-29xp-372q-xqph",
+          "source": 1109801,
+          "name": "js-yaml",
+          "dependency": "js-yaml",
+          "title": "js-yaml has prototype pollution in merge (<<)",
+          "url": "https://github.com/advisories/GHSA-mh29-5h37-fv8m",
           "severity": "moderate",
           "cwe": [
-            "CWE-362"
+            "CWE-1321"
           ],
           "cvss": {
-            "score": 0,
-            "vectorString": null
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
           },
-          "range": "=7.5.1"
+          "range": "<3.14.2"
+        },
+        {
+          "source": 1109802,
+          "name": "js-yaml",
+          "dependency": "js-yaml",
+          "title": "js-yaml has prototype pollution in merge (<<)",
+          "url": "https://github.com/advisories/GHSA-mh29-5h37-fv8m",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": ">=4.0.0 <4.1.1"
         }
       ],
       "effects": [],
-      "range": "7.5.1",
+      "range": "<3.14.2 || >=4.0.0 <4.1.1",
       "nodes": [
-        "node_modules/tar"
+        "node_modules/@istanbuljs/load-nyc-config/node_modules/js-yaml",
+        "node_modules/cosmiconfig/node_modules/js-yaml",
+        "node_modules/gray-matter/node_modules/js-yaml",
+        "node_modules/js-yaml"
       ],
       "fixAvailable": true
+    },
+    "sucrase": {
+      "name": "sucrase",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "glob"
+      ],
+      "effects": [
+        "@expo/config"
+      ],
+      "range": ">=3.35.0",
+      "nodes": [
+        "node_modules/sucrase"
+      ],
+      "fixAvailable": {
+        "name": "expo-constants",
+        "version": "16.0.2",
+        "isSemVerMajor": true
+      }
     }
   },
   "metadata": {
@@ -36,17 +476,17 @@
       "info": 0,
       "low": 0,
       "moderate": 1,
-      "high": 0,
+      "high": 21,
       "critical": 0,
-      "total": 1
+      "total": 22
     },
     "dependencies": {
-      "prod": 989,
-      "dev": 734,
+      "prod": 1023,
+      "dev": 732,
       "optional": 66,
-      "peer": 11,
+      "peer": 2,
       "peerOptional": 0,
-      "total": 1737
+      "total": 1769
     }
   }
 }

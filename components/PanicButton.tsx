@@ -93,11 +93,15 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 32,
       justifyContent: 'center',
       alignItems: 'center',
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.3,
-      shadowRadius: 8,
-      elevation: 8, // Android shadow
+      ...(Platform.OS === 'web'
+        ? { boxShadow: '0 4px 8px rgba(0,0,0,0.3)' as any }
+        : {
+            shadowColor: palette.text,
+            shadowOffset: { width: 0, height: 4 },
+            shadowOpacity: 0.3,
+            shadowRadius: 8,
+            elevation: 8,
+          }),
     },
   });
 }

@@ -7,15 +7,25 @@
 /* eslint-disable no-restricted-syntax */
 
 import { Ionicons } from '@expo/vector-icons';
-import * as Haptics from 'expo-haptics';
 import { useEffect, useState } from 'react';
 import {
     Animated,
+    Platform,
     Pressable,
     StyleSheet,
     Text,
     View
 } from 'react-native';
+
+// Lazy-load Haptics only on native platforms
+let Haptics: any = null;
+if (Platform.OS !== 'web') {
+  try {
+    Haptics = require('expo-haptics');
+  } catch {
+    // Haptics not available
+  }
+}
 
 import { MAX_FONT_SCALE } from '../constants/A11Y';
 import { useTranslation } from '../i18n';
@@ -60,7 +70,9 @@ export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFir
   }, [isListening, pulseAnim]);
 
   const handlePress = async () => {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    if (Haptics && Platform.OS !== 'web') {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    }
     
     if (isListening) {
       // Stop listening
@@ -85,7 +97,9 @@ export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFir
   };
 
   const handleSuggestionPress = async (phrase: string) => {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    if (Haptics && Platform.OS !== 'web') {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
     processVoiceCommand(phrase);
     setShowSuggestions(false);
   };

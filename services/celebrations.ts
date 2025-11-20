@@ -6,8 +6,17 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as Haptics from 'expo-haptics';
 import { Platform } from 'react-native';
+
+// Lazy-load Haptics only on native platforms
+let Haptics: any = null;
+if (Platform.OS !== 'web') {
+  try {
+    Haptics = require('expo-haptics');
+  } catch {
+    // Haptics not available
+  }
+}
 
 export interface Celebration {
   id: string;
@@ -286,10 +295,12 @@ export async function checkCelebrations(): Promise<Celebration[]> {
  * Trigger haptic feedback for celebration
  */
 export async function celebrateWithHaptics() {
-  if (Platform.OS === 'ios') {
-    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-  } else if (Platform.OS === 'android') {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+  if (Haptics && Platform.OS !== 'web') {
+    if (Platform.OS === 'ios') {
+      await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    } else if (Platform.OS === 'android') {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    }
   }
 }
 

@@ -389,7 +389,7 @@ async function handleICSFeed(env) {
         ics += `LOCATION:${event.location.replace(/\n/g, '\\n')}\r\n`;
       }
       
-      ics += 'ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com\r\n';
+      ics += 'ORGANIZER;CN=3mpwr App:mailto:info@3mpwrapp.com\r\n';
       ics += 'STATUS:CONFIRMED\r\n';
       ics += 'SEQUENCE:0\r\n';
       ics += 'END:VEVENT\r\n';

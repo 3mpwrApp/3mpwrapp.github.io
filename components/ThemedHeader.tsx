@@ -138,9 +138,9 @@ const ThemedHeader = React.memo(() => {
       {/* Brand */}
       <Pressable
         style={styles.brand}
-        onPress={() => router.replace("/")}
+        onPress={() => router.push("/(tabs)" as Href)}
         accessibilityRole="link"
-  accessibilityLabel="Go to Home"
+        accessibilityLabel="Go to Home"
         hitSlop={HIT_SLOP_8}
       >
         <Image
@@ -152,6 +152,31 @@ const ThemedHeader = React.memo(() => {
         <Text style={styles.title} accessibilityLabel="3mpwr App header">
           3mpwr App
         </Text>
+      </Pressable>
+
+      {/* Ask 3mpwr - Quick access to advocacy help - PROMINENT PLACEMENT */}
+      <Pressable
+        onPress={() => router.push('/(tabs)/advocacy/ask' as Href)}
+        accessibilityRole="button"
+        accessibilityLabel="Ask an Advocate - Get help with your case"
+        hitSlop={HIT_SLOP_8}
+        focusable={true}
+        style={({ pressed }) => [
+          {
+            backgroundColor: palette.primary,
+            paddingHorizontal: 12,
+            paddingVertical: 6,
+            borderRadius: 20,
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: 6,
+            marginLeft: 'auto',
+          },
+          pressed && { opacity: 0.8 },
+        ]}
+      >
+        <Ionicons name="chatbubble-ellipses" size={16} color={palette.onPrimary} />
+        <Text style={{ color: palette.onPrimary, fontWeight: '700', fontSize: 14 }}>Ask</Text>
       </Pressable>
 
       {/* Right side controls */}
@@ -258,21 +283,6 @@ const ThemedHeader = React.memo(() => {
           ]}
         >
           <Ionicons name="refresh" size={18} color={palette.text} />
-        </Pressable>
-
-        {/* Ask 3mpwr - Quick access to advocacy help */}
-        <Pressable
-          onPress={() => router.push('/(tabs)/advocacy/ask' as Href)}
-          accessibilityRole="button"
-          accessibilityLabel="Ask an Advocate - Get help with your case"
-          hitSlop={HIT_SLOP_8}
-          focusable={true}
-          style={({ pressed }) => [
-            touchTarget.min,
-            { opacity: pressed ? 0.7 : 1 },
-          ]}
-        >
-          <Ionicons name="help-circle-outline" size={20} color={palette.primary} />
         </Pressable>
 
         {/* A11y quick settings */}
@@ -474,7 +484,8 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
     right: {
       flexDirection: "row",
       alignItems: "center",
-      flexShrink: 0,
+      flexWrap: "wrap",
+      gap: 4,
     },
     menuWrap: {
       position: "absolute",

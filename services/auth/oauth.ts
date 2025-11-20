@@ -66,6 +66,7 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
       responseType: AuthSession.ResponseType.IdToken,
       scopes: ['openid', 'profile', 'email'],
       redirectUri,
+      usePKCE: false, // Disable PKCE for OAuth 2.0 Implicit Flow (id_token)
     });
     
     const result = await request.promptAsync(discovery as any);

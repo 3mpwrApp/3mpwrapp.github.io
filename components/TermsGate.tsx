@@ -1,12 +1,12 @@
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import {
-  Linking,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
+    Linking,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View
 } from "react-native";
 
 import { useAppPalette } from "../theme/usePalette";
@@ -566,6 +566,16 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         );
 
       case "final":
+        const uncheckedItems = [];
+        if (!medicalChecked) uncheckedItems.push("Medical disclaimer");
+        if (!legalChecked) uncheckedItems.push("Legal disclaimer");
+        if (!financialChecked) uncheckedItems.push("Financial disclaimer");
+        if (!aiChecked) uncheckedItems.push("AI disclaimer");
+        if (!crisisChecked) uncheckedItems.push("Crisis disclaimer");
+        if (!emergencyChecked) uncheckedItems.push("Emergency services");
+        if (!responsibilityChecked) uncheckedItems.push("Personal responsibility");
+        if (!dataOwnershipChecked) uncheckedItems.push("Data ownership");
+
         return (
           <View style={styles.card}>
             <Text style={styles.title}>✅ Final Agreement</Text>
@@ -573,6 +583,13 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               <Text style={[styles.text, { fontWeight: "600", marginBottom: 8 }]}>
                 Please confirm you understand and accept:
               </Text>
+              {uncheckedItems.length > 0 && (
+                <Text style={[styles.text, { color: palette.warning, marginBottom: 12, fontWeight: "600" }]}>
+                  ⚠️ You must complete all checkboxes from previous steps. Missing:{'\n'}
+                  {uncheckedItems.map((item, i) => `  ${i + 1}. ${item}`).join('\n')}
+                  {'\n\n'}Use the "Back" button to review previous steps.
+                </Text>
+              )}
             </ScrollView>
             {renderCheckbox(
               responsibilityChecked,
@@ -723,6 +740,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     buttonTextEnabled: {
       fontSize: 17,
       fontWeight: '800',
+      color: '#FFFFFF', // White text on green background for contrast
     },
     buttonRow: {
       flexDirection: "row",

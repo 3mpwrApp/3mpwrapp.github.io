@@ -56,41 +56,62 @@ const HYBRID = isHybridBYOC();
 
 // Ensure only one app is initialized (when not strict)
 export function getFirebaseApp(): FirebaseApp {
-  return getApps().length ? getApp() : initializeApp(firebaseConfig);
+  try {
+    return getApps().length ? getApp() : initializeApp(firebaseConfig);
+  } catch (error) {
+    console.error('[Firebase] Failed to initialize app:', error);
+    throw error;
+  }
 }
 
 let app: FirebaseApp | null = null;
-if (!STRICT) {
-  app = getFirebaseApp();
-  if (!IS_TEST && platformOS !== "web") {
-    try {
-      // Dynamically import RN-only APIs to avoid type mismatch on web
-      const { initializeAuth, getReactNativePersistence } = require("firebase/auth");
-      initializeAuth(app, { persistence: getReactNativePersistence(ReactNativeAsyncStorage) });
-    } catch {
-      // ignore if already initialized or not available
+try {
+  if (!STRICT) {
+    app = getFirebaseApp();
+    console.log('[Firebase] App initialized successfully', { mode: STRICT ? 'strict' : HYBRID ? 'hybrid' : 'default', platform: platformOS });
+    
+    if (!IS_TEST && platformOS !== "web") {
+      try {
+        // Dynamically import RN-only APIs to avoid type mismatch on web
+        const { initializeAuth, getReactNativePersistence } = require("firebase/auth");
+        initializeAuth(app, { persistence: getReactNativePersistence(ReactNativeAsyncStorage) });
+        console.log('[Firebase] Auth persistence initialized for native');
+      } catch (authError) {
+        // ignore if already initialized or not available
+        console.warn('[Firebase] Auth persistence setup failed (may already be initialized):', authError);
+      }
     }
   }
+} catch (error) {
+  console.error('[Firebase] Critical initialization error:', error);
+  // Re-throw in non-production to surface the issue
+  if (!__DEV__) throw error;
 }
 
 // Export configured instances or nulls in strict mode
 // In hybrid mode: auth is enabled, but db/storage are null (user's cloud only)
-export const auth = STRICT ? (null as any) : getAuth(app!);
+export const auth = STRICT ? (null as any) : app ? getAuth(app) : null;
 export const db = STRICT || HYBRID
   ? (null as any)
-  : platformOS === "web"
-    ? getFirestore(app!)
-    : initializeFirestore(app!, { experimentalForceLongPolling: true });
+  : app && platformOS === "web"
+    ? getFirestore(app)
+    : app 
+      ? initializeFirestore(app, { experimentalForceLongPolling: true })
+      : null;
 
 // Web-only: enable IndexedDB persistence for offline reads/write queue (non-strict, non-hybrid only)
 try {
   const IS_TEST_ENV = typeof process !== 'undefined' && !!(process as any).env?.JEST_WORKER_ID;
-  if (!STRICT && !HYBRID && platformOS === 'web' && !IS_TEST_ENV) {
-    enableIndexedDbPersistence(db as any).catch(() => {});
+  if (!STRICT && !HYBRID && platformOS === 'web' && !IS_TEST_ENV && db) {
+    enableIndexedDbPersistence(db as any).catch((err) => {
+      console.warn('[Firebase] IndexedDB persistence not enabled:', err);
+    });
   }
-} catch {}
+} catch (err) {
+  console.warn('[Firebase] Persistence setup error:', err);
+}
 
-export const storage = STRICT || HYBRID ? (null as any) : getStorage(app!);
+export const storage = STRICT || HYBRID ? (null as any) : app ? getStorage(app) : null;
 
 // Lazy load Analytics only on web (disabled in strict/hybrid)
 export async function getFirebaseAnalytics(): Promise<any | null> {

@@ -4,6 +4,42 @@ import { Stack, usePathname } from "expo-router";
 import React from "react";
 import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "react-native";
 
+// Global error handler for Web to catch white-screen crashes
+if (Platform.OS === 'web' && typeof window !== 'undefined') {
+  window.addEventListener('error', (event) => {
+    console.error('Global Error caught:', event.error);
+    const div = document.createElement('div');
+    div.style.position = 'fixed';
+    div.style.top = '0';
+    div.style.left = '0';
+    div.style.width = '100%';
+    div.style.backgroundColor = '#D32F2F';
+    div.style.color = 'white';
+    div.style.padding = '20px';
+    div.style.zIndex = '99999';
+    div.style.fontFamily = 'monospace';
+    div.style.whiteSpace = 'pre-wrap';
+    div.textContent = 'CRITICAL ERROR:\n' + (event.message || 'Unknown error') + '\n\n' + (event.error?.stack || '');
+    document.body.appendChild(div);
+  });
+  
+  window.addEventListener('unhandledrejection', (event) => {
+    console.error('Unhandled Rejection:', event.reason);
+    const div = document.createElement('div');
+    div.style.position = 'fixed';
+    div.style.bottom = '0';
+    div.style.left = '0';
+    div.style.width = '100%';
+    div.style.backgroundColor = '#FFA000';
+    div.style.color = 'black';
+    div.style.padding = '10px';
+    div.style.zIndex = '99999';
+    div.style.fontFamily = 'monospace';
+    div.textContent = 'Promise Rejection: ' + (event.reason?.message || event.reason);
+    document.body.appendChild(div);
+  });
+}
+
 // Filter console warnings in development during initial load only
 // Suppresses known non-critical Expo Go warnings that can't be avoided
 if (__DEV__) {
@@ -125,11 +161,22 @@ import { ToastViewport } from "../utils/toast";
 // removed getFirebaseAnalytics direct import (handled via telemetry module)
 
 export default function RootLayout() {
+  // EMERGENCY DEBUG
+  React.useEffect(() => {
+    console.log('🚨 [RootLayout] Component mounted');
+  }, []);
+
+  const [renderError, setRenderError] = React.useState<Error | null>(null);
+  
   // Ensure vector icon fonts are loaded before rendering UI
   const [fontsLoaded, fontsError] = useFonts({
     ...Ionicons.font,
     ...MaterialCommunityIcons.font,
   });
+  
+  React.useEffect(() => {
+    console.log('🚨 [RootLayout] Fonts loaded:', fontsLoaded, 'Error:', fontsError);
+  }, [fontsLoaded, fontsError]);
 
   const [reduceMotion, setReduceMotion] = React.useState(false);
 
@@ -208,10 +255,26 @@ export default function RootLayout() {
     logError('RootLayout', 'Font loading failed', fontsError);
   }
 
+  if (!shouldRender) {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
+        <Text style={{ fontSize: 18, color: '#000' }}>Loading fonts...</Text>
+      </View>
+    );
+  }
+
+  if (renderError) {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: 20 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#d32f2f', marginBottom: 10 }}>App Error</Text>
+        <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>{renderError.message}</Text>
+        <Text style={{ fontSize: 12, color: '#666', marginTop: 20, textAlign: 'center' }}>Check browser console (F12) for details</Text>
+      </View>
+    );
+  }
+
   try {
     return (
-      // Render even if fonts fail to load - prevent white screen
-      shouldRender ? (
       <ErrorBoundary>
       <SafeProviderWrapper providerName="RootProviderTree">
       <I18nProvider>
@@ -305,14 +368,22 @@ export default function RootLayout() {
       </I18nProvider>
       </SafeProviderWrapper>
       </ErrorBoundary>
-    ) : null
     );
   } catch (error) {
     logError('RootLayout', 'Render error', error);
-    // Emergency fallback - render a basic loading screen
+    // Log to browser console on web
+    if (Platform.OS === 'web' && error instanceof Error) {
+       
+      console.error('[RootLayout] Critical render error:', error.message, error.stack);
+    }
+    // Emergency fallback - render a visible error screen
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Loading...</Text>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: 20 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#d32f2f', marginBottom: 10 }}>App Failed to Load</Text>
+        <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>
+          {error instanceof Error ? error.message : 'Unknown error'}
+        </Text>
+        <Text style={{ fontSize: 12, color: '#666', marginTop: 20, textAlign: 'center' }}>Open browser console (F12) for details</Text>
       </View>
     );
   }

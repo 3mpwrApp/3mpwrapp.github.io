@@ -15,7 +15,7 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
@@ -142,11 +142,15 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 8,
       padding: 12,
       marginVertical: 12,
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 1 },
-      shadowOpacity: 0.1,
-      shadowRadius: 2,
-      elevation: 2,
+      ...(Platform.OS === 'web'
+        ? { boxShadow: '0 1px 2px rgba(0,0,0,0.1)' as any }
+        : {
+            shadowColor: palette.text,
+            shadowOffset: { width: 0, height: 1 },
+            shadowOpacity: 0.1,
+            shadowRadius: 2,
+            elevation: 2,
+          }),
     },
     header: {
       flexDirection: 'row',

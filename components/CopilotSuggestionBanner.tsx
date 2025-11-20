@@ -7,15 +7,25 @@
 /* eslint-disable no-restricted-syntax */
 
 import { Ionicons } from '@expo/vector-icons';
-import * as Haptics from 'expo-haptics';
 import { useState } from 'react';
 import {
     Modal,
+    Platform,
     Pressable,
     StyleSheet,
     Text,
     View
 } from 'react-native';
+
+// Lazy-load Haptics only on native platforms
+let Haptics: any = null;
+if (Platform.OS !== 'web') {
+  try {
+    Haptics = require('expo-haptics');
+  } catch {
+    // Haptics not available
+  }
+}
 
 import { MAX_FONT_SCALE } from '../constants/A11Y';
 import { useTranslation } from '../i18n';
@@ -42,21 +52,27 @@ export function CopilotSuggestionBanner({
   const [visible, setVisible] = useState(true);
 
   const handleDismiss = async () => {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    if (Haptics && Platform.OS !== 'web') {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
     await dismissSuggestion(suggestion.id);
     setVisible(false);
     onDismiss?.();
   };
 
   const handleSnooze = async () => {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    if (Haptics && Platform.OS !== 'web') {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
     // Simple snooze: just hide for now; a full implementation could clone with delayed expiresAt
     setVisible(false);
     onDismiss?.();
   };
 
   const handleAction = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    if (Haptics && Platform.OS !== 'web') {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    }
     onAction?.();
   };
 
