@@ -1,0 +1,399 @@
+import { Ionicons } from '@expo/vector-icons';
+import { Stack } from 'expo-router';
+import { useEffect, useState } from 'react';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+
+import { useTheme } from '../../../context/ThemeContext';
+import { useTranslation } from '../../../i18n';
+import { useEmotionalFirstAid } from '../../../services/emotionalFirstAid';
+
+export default function EmotionalFirstAidScreen() {
+  const { t } = useTranslation();
+  const { colors } = useTheme();
+  const firstAid = useEmotionalFirstAid();
+
+  const [activeSession, setActiveSession] = useState<any>(null);
+  const [contacts, setContacts] = useState(firstAid.getContacts());
+  const [sessionHistory, setSessionHistory] = useState<any[]>([]);
+
+  useEffect(() => {
+    setSessionHistory(firstAid.getSessionHistory());
+  }, []);
+
+  const startBreathing = async () => {
+    const session = await firstAid.startBreathingGuide();
+    setActiveSession(session);
+  };
+
+  const startTemperatureShock = async () => {
+    const session = await firstAid.startTemperatureShock();
+    setActiveSession(session);
+  };
+
+  const spinGroundingWheel = async () => {
+    const task = await firstAid.spinGroundingWheel();
+    alert(`Grounding Task: ${task.description}`);
+  };
+
+  const triggerCrisis = async () => {
+    await firstAid.triggerCrisisProtocol();
+    alert('Crisis SMS sent to emergency contacts!');
+  };
+
+  return (
+    <>
+      <Stack.Screen
+        options={{
+          title: t('Emotional First Aid'),
+          headerStyle: { backgroundColor: colors.surface },
+          headerTintColor: colors.text,
+        }}
+      />
+      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
+        {/* Emergency Actions */}
+        <View style={[styles.emergencyCard, { backgroundColor: '#DC143C' }]}>
+          <View style={styles.emergencyHeader}>
+            <Ionicons name="medical" size={32} color="#FFF" />
+            <Text style={styles.emergencyTitle}>Crisis Intervention</Text>
+          </View>
+          <Text style={styles.emergencySubtitle}>
+            Immediate tools for panic attacks & emotional crisis
+          </Text>
+
+          <Pressable
+            style={[styles.emergencyButton, { backgroundColor: '#FFF' }]}
+            onPress={startBreathing}
+          >
+            <Ionicons name="fitness" size={24} color="#DC143C" />
+            <Text style={[styles.emergencyButtonText, { color: '#DC143C' }]}>
+              4-7-8 Breathing Guide
+            </Text>
+          </Pressable>
+
+          <Pressable
+            style={[styles.emergencyButton, { backgroundColor: '#FFF' }]}
+            onPress={startTemperatureShock}
+          >
+            <Ionicons name="snow" size={24} color="#DC143C" />
+            <Text style={[styles.emergencyButtonText, { color: '#DC143C' }]}>
+              Temperature Shock Protocol
+            </Text>
+          </Pressable>
+
+          <Pressable
+            style={[styles.emergencyButton, { backgroundColor: '#FFF' }]}
+            onPress={spinGroundingWheel}
+          >
+            <Ionicons name="disc" size={24} color="#DC143C" />
+            <Text style={[styles.emergencyButtonText, { color: '#DC143C' }]}>
+              5-4-3-2-1 Grounding Wheel
+            </Text>
+          </Pressable>
+        </View>
+
+        {/* Triple-Tap Crisis Contact */}
+        <View style={[styles.card, { backgroundColor: '#8B0000' }]}>
+          <View style={styles.crisisHeader}>
+            <Ionicons name="call" size={24} color="#FFF" />
+            <Text style={styles.crisisTitle}>Triple-Tap Emergency</Text>
+          </View>
+          <Text style={styles.crisisDescription}>
+            Tap this button 3 times within 2 seconds to auto-send crisis SMS with your location to
+            emergency contacts
+          </Text>
+
+          <Pressable
+            style={[styles.crisisButton, { backgroundColor: '#FFF' }]}
+            onPress={() => firstAid.registerTap()}
+          >
+            <Ionicons name="warning" size={32} color="#8B0000" />
+            <Text style={[styles.crisisButtonText, { color: '#8B0000' }]}>
+              CRISIS CONTACT
+            </Text>
+          </Pressable>
+
+          <Text style={styles.crisisNote}>
+            Set up emergency contacts in Settings first
+          </Text>
+        </View>
+
+        {/* Distraction Games */}
+        <View style={[styles.card, { backgroundColor: colors.surface }]}>
+          <Text style={[styles.sectionTitle, { color: colors.text }]}>
+            DBT Distraction Games
+          </Text>
+          <Text style={[styles.sectionDescription, { color: colors.textSecondary }]}>
+            8 evidence-based games to interrupt crisis state
+          </Text>
+
+          {firstAid.getAllGames().map(game => (
+            <Pressable
+              key={game.id}
+              style={[styles.gameCard, { borderColor: colors.border }]}
+              onPress={() => alert(`Starting ${game.name}...\n\n${game.instructions}`)}
+            >
+              <View style={styles.gameHeader}>
+                <Text style={[styles.gameName, { color: colors.text }]}>{game.name}</Text>
+                <Text style={[styles.gameDuration, { color: colors.textSecondary }]}>
+                  {game.duration}min
+                </Text>
+              </View>
+              <Text style={[styles.gameDescription, { color: colors.textSecondary }]}>
+                {game.instructions}
+              </Text>
+              <View style={styles.gameTags}>
+                <View style={[styles.tag, { backgroundColor: colors.primary + '20' }]}>
+                  <Text style={[styles.tagText, { color: colors.primary }]}>
+                    {game.dbtPrinciple}
+                  </Text>
+                </View>
+                <View style={[styles.tag, { backgroundColor: colors.border }]}>
+                  <Text style={[styles.tagText, { color: colors.textSecondary }]}>
+                    {game.difficulty}
+                  </Text>
+                </View>
+              </View>
+            </Pressable>
+          ))}
+        </View>
+
+        {/* Session History */}
+        {sessionHistory.length > 0 && (
+          <View style={[styles.card, { backgroundColor: colors.surface }]}>
+            <Text style={[styles.sectionTitle, { color: colors.text }]}>Recent Sessions</Text>
+
+            {sessionHistory.slice(0, 5).map((session, index) => (
+              <View key={index} style={[styles.sessionCard, { borderColor: colors.border }]}>
+                <View style={styles.sessionHeader}>
+                  <Text style={[styles.sessionType, { color: colors.text }]}>
+                    {session.type}
+                  </Text>
+                  <Text style={[styles.sessionDate, { color: colors.textSecondary }]}>
+                    {new Date(session.startTime).toLocaleString()}
+                  </Text>
+                </View>
+                {session.effectiveness && (
+                  <Text style={[styles.sessionEffectiveness, { color: colors.textSecondary }]}>
+                    Effectiveness: {session.effectiveness}/5 ⭐
+                  </Text>
+                )}
+              </View>
+            ))}
+          </View>
+        )}
+
+        {/* Emergency Contacts */}
+        <View style={[styles.card, { backgroundColor: colors.surface }]}>
+          <Text style={[styles.sectionTitle, { color: colors.text }]}>Emergency Contacts</Text>
+
+          {contacts.length === 0 ? (
+            <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
+              No emergency contacts set. Add contacts in Settings.
+            </Text>
+          ) : (
+            contacts.map((contact, index) => (
+              <View key={index} style={[styles.contactCard, { borderColor: colors.border }]}>
+                <Ionicons name="person-circle" size={32} color={colors.primary} />
+                <View style={styles.contactInfo}>
+                  <Text style={[styles.contactName, { color: colors.text }]}>
+                    {contact.name}
+                  </Text>
+                  <Text style={[styles.contactPhone, { color: colors.textSecondary }]}>
+                    {contact.phone}
+                  </Text>
+                </View>
+              </View>
+            ))
+          )}
+        </View>
+
+        <View style={styles.bottomSpacer} />
+      </ScrollView>
+    </>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  emergencyCard: {
+    margin: 16,
+    padding: 20,
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+  emergencyHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  emergencyTitle: {
+    color: '#FFF',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginLeft: 12,
+  },
+  emergencySubtitle: {
+    color: '#FFF',
+    fontSize: 14,
+    marginBottom: 20,
+    opacity: 0.9,
+  },
+  emergencyButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+    borderRadius: 8,
+    marginBottom: 12,
+  },
+  emergencyButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginLeft: 12,
+  },
+  card: {
+    margin: 16,
+    padding: 16,
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  crisisHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  crisisTitle: {
+    color: '#FFF',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: 12,
+  },
+  crisisDescription: {
+    color: '#FFF',
+    fontSize: 14,
+    marginBottom: 20,
+    opacity: 0.9,
+    lineHeight: 20,
+  },
+  crisisButton: {
+    padding: 24,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  crisisButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 8,
+  },
+  crisisNote: {
+    color: '#FFF',
+    fontSize: 12,
+    textAlign: 'center',
+    opacity: 0.8,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    marginBottom: 8,
+  },
+  sectionDescription: {
+    fontSize: 14,
+    marginBottom: 16,
+  },
+  gameCard: {
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 12,
+    marginBottom: 12,
+  },
+  gameHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  gameName: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  gameDuration: {
+    fontSize: 14,
+  },
+  gameDescription: {
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 8,
+  },
+  gameTags: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  tag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 4,
+  },
+  tagText: {
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  sessionCard: {
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 12,
+    marginBottom: 8,
+  },
+  sessionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 4,
+  },
+  sessionType: {
+    fontSize: 14,
+    fontWeight: '600',
+    textTransform: 'capitalize',
+  },
+  sessionDate: {
+    fontSize: 12,
+  },
+  sessionEffectiveness: {
+    fontSize: 13,
+  },
+  emptyText: {
+    fontSize: 14,
+    textAlign: 'center',
+    paddingVertical: 16,
+  },
+  contactCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 12,
+    marginBottom: 8,
+  },
+  contactInfo: {
+    marginLeft: 12,
+  },
+  contactName: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  contactPhone: {
+    fontSize: 14,
+  },
+  bottomSpacer: {
+    height: 32,
+  },
+});
