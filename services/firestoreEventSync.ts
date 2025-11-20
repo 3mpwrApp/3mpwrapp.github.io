@@ -277,10 +277,29 @@ export async function fetchEventUpdates(collection: 'events_production' | 'event
     const snapshot = await m.getDocs(q);
     const events = snapshot.docs.map((doc) => {
       const data = doc.data();
+      
+      // Convert Firestore Timestamp to Date object
+      // Firestore stores dates in UTC, so we need to ensure they're properly converted
+      let date = data.date;
+      let endDate = data.endDate;
+      
+      if (data.date?.toDate) {
+        date = data.date.toDate();
+      } else if (typeof data.date === 'string') {
+        date = new Date(data.date);
+      }
+      
+      if (data.endDate?.toDate) {
+        endDate = data.endDate.toDate();
+      } else if (typeof data.endDate === 'string') {
+        endDate = new Date(data.endDate);
+      }
+      
       return {
         id: doc.id,
         ...data,
-        date: data.date?.toDate?.() || data.date,
+        date,
+        endDate,
       };
     });
 

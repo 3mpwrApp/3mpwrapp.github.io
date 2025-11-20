@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
 import type { Event } from '../data/events';
 import { useTextScale } from '../theme/typography';
@@ -18,9 +18,11 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
 
-  const formatDate = (dateStr: string) => {
+  const formatDate = (dateStr: string | Date) => {
     try {
-      const date = new Date(dateStr);
+      // Convert to Date object if it's a string
+      const date = dateStr instanceof Date ? dateStr : new Date(dateStr);
+      const dateStrForChecks = typeof dateStr === 'string' ? dateStr : '';
       
       // Detect if this is an all-day event (holidays, observances, health awareness)
       // These have IDs starting with holiday-, obs-, health-, or prov-
@@ -30,7 +32,7 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
         event.id.startsWith('obs-') || 
         event.id.startsWith('health-') ||
         event.id.startsWith('prov-') ||
-        dateStr.includes('T12:00:00');
+        dateStrForChecks.includes('T12:00:00');
       
       // For all-day events, only show date without time
       if (isAllDayEvent) {
@@ -44,7 +46,7 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
       
       // For timed events (community events with specific times)
       // Display in America/Toronto timezone (EST/EDT) since events are Canadian
-      const hasSpecificTime = event.endDate || dateStr.includes('T');
+      const hasSpecificTime = event.endDate || dateStrForChecks.includes('T');
       
       if (hasSpecificTime) {
         return date.toLocaleString('en-US', {
@@ -66,7 +68,7 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
         year: 'numeric',
       });
     } catch {
-      return dateStr;
+      return typeof dateStr === 'string' ? dateStr : dateStr?.toString?.() || 'Invalid date';
     }
   };
 
@@ -94,7 +96,7 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
   );
 
   const content = (
-    <View style={[styles.card, { backgroundColor: palette.card, borderRadius: 12 * factor, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 4, elevation: 3 }]}>
+    <View style={[styles.card, { backgroundColor: palette.card, borderRadius: 12 * factor }, Platform.OS === 'web' ? { boxShadow: '0 2px 4px rgba(0,0,0,0.1)' } : { shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 4, elevation: 3 }]}>
       {/* Header */}
       <View style={styles.header}>
         <Text style={styles.title} numberOfLines={showFullDetails ? undefined : 2}>
