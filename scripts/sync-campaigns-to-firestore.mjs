@@ -59,6 +59,16 @@ const campaigns = [
     contactEmail: 'karen@thetiderises.ca',
     createdAt: Date.now(), // November 15, 2025
   },
+  {
+    id: 'rights-dont-retire',
+    title: 'Rights Don\'t Retire - Queens Park Rally',
+    summary: 'Injured Workers are coming to Queens Park Toronto to demand removal of the age 65 cut-off for Older Injured Workers from the Workplace Safety and Insurance Act (WSIA). Email your MPP now.',
+    target: 'Ontario Provincial Government & MPPs',
+    goalCount: 10000,
+    membersCount: 0,
+    contactEmail: 'info@injuredworkerscommunitylegalclinic.ca',
+    createdAt: Date.now(), // November 20, 2025
+  },
 ];
 
 console.log('╔══════════════════════════════════════════════════════════════╗');

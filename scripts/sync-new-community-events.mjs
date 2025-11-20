@@ -1,0 +1,219 @@
+#!/usr/bin/env node
+/**
+ * SYNC NEW COMMUNITY EVENTS TO FIRESTORE
+ * 
+ * Syncs 3 new community events (Nov/Dec 2025) to Firestore production and preview
+ */
+
+import admin from 'firebase-admin';
+import { readFileSync } from 'fs';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load service account
+const serviceAccount = JSON.parse(
+  readFileSync(join(__dirname, '..', 'serviceAccountKey.json'), 'utf8')
+);
+
+// Initialize Firebase Admin
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://empowrapp-default-rtdb.firebaseio.com'
+});
+
+const db = admin.firestore();
+
+const events = [
+  {
+    id: 'evt-queens-park-rally-nov25-2025',
+    title: 'Rights Don\'t Retire - Queens Park Rally',
+    description: 'Injured Workers are coming to Queens Park Toronto to demand removal of the age 65 cut-off for Older Injured Workers from the Workplace Safety and Insurance Act (WSIA).\n\nThis rally is organized to stand with Older Injured Workers and demand:\n• Removal of the age 65 cut-off from the WSIA\n• Continued benefits based on medical need, not arbitrary age limits\n• Equal treatment under the law for all injured workers\n• Recognition that workplace injuries don\'t stop mattering at 65\n\nEmail your MPP now via: https://win.newmode.net/injuredworkerscommunitylegalclinic/rightsdontretire-1',
+    date: '2025-11-25T14:00:00.000Z',
+    time: '14:00',
+    duration: 180,
+    location: 'Queens Park, Toronto, Ontario',
+    isVirtual: false,
+    category: 'advocacy',
+    tags: [
+      'injured-workers',
+      'rally',
+      'advocacy',
+      'age-discrimination',
+      'WSIA',
+      'workers-rights',
+      'policy',
+      'ontario'
+    ],
+    url: 'https://win.newmode.net/injuredworkerscommunitylegalclinic/rightsdontretire-1',
+    organizer: 'Injured Workers Community Legal Clinic',
+    organizerContact: 'info@injuredworkerscommunitylegalclinic.ca',
+    attendeeCount: 0,
+    energyCost: 'medium',
+    imageUrl: '',
+    endDate: '2025-11-25T17:00:00.000Z',
+    accessibilityNotes: 'Outdoor rally at Queens Park. Accessible public space with step-free access to main gathering area. ASL interpretation available upon request. Contact organizers for accessibility accommodations.',
+    asl: true,
+    captions: false,
+    stepFree: true,
+    wheelchairAccessible: true,
+    serviceAnimalsWelcome: true,
+    sensorySpace: false,
+    registrationRequired: false,
+    status: 'published',
+    createdAt: Date.now(),
+    linkedCampaignId: 'rights-dont-retire',
+  },
+  {
+    id: 'evt-hamilton-holiday-social-dec6-2025',
+    title: 'Hamilton & District Injured Workers Group Holiday Social and Potluck',
+    description: 'Join the Hamilton & District Injured Workers Group for a festive Holiday Social and Potluck!\n\nDate: Saturday, December 6th, 2025\nTime: 4pm - 7pm\nLocation: 51 Adair Ave, South\n\nCome together with fellow injured workers and allies for food, fellowship, and celebration. Bring a dish to share if you\'re able, but all are welcome regardless.\n\nThis is a wonderful opportunity to:\n• Connect with your community\n• Share holiday cheer\n• Build solidarity and support networks\n• Celebrate resilience and advocacy\n\nRegistration appreciated but not required: https://hdiwg.net/holidaysocial',
+    date: '2025-12-06T21:00:00.000Z',
+    time: '16:00',
+    duration: 180,
+    location: '51 Adair Ave, South, Hamilton, Ontario',
+    isVirtual: false,
+    category: 'social',
+    tags: [
+      'injured-workers',
+      'social-event',
+      'holiday',
+      'potluck',
+      'community',
+      'support-group',
+      'hamilton'
+    ],
+    url: 'https://hdiwg.net/holidaysocial',
+    virtualLink: '',
+    organizer: 'Hamilton & District Injured Workers Group',
+    organizerContact: 'hdiwg@hdiwg.net',
+    attendeeCount: 0,
+    energyCost: 'low',
+    imageUrl: '',
+    endDate: '2025-12-07T00:00:00.000Z',
+    accessibilityNotes: 'Indoor venue at 51 Adair Ave, South. Contact organizers in advance for specific accessibility needs, step-free access details, and parking information.',
+    asl: false,
+    captions: false,
+    stepFree: true,
+    wheelchairAccessible: true,
+    serviceAnimalsWelcome: true,
+    sensorySpace: false,
+    registrationRequired: true,
+    rsvpDetails: 'Register at https://hdiwg.net/holidaysocial or contact hdiwg@hdiwg.net',
+    status: 'published',
+    createdAt: Date.now(),
+  },
+  {
+    id: 'evt-thunder-bay-rally-dec9-2025',
+    title: 'TBDIWSG December 9th Rally in Thunder Bay',
+    description: 'The Thunder Bay & District Injured Workers Support Group is organizing a rally on December 9th, 2025.\n\nMore details to come soon!\n\nStay tuned for:\n• Rally location and time\n• Action items and advocacy goals\n• How to get involved\n\nFor updates and more information, visit: https://thunderbayinjuredworkers.com/\n\nContact: tbiwsg@gmail.com',
+    date: '2025-12-09T15:00:00.000Z',
+    time: 'TBA',
+    duration: 120,
+    location: 'Thunder Bay, Ontario (Details TBA)',
+    isVirtual: false,
+    category: 'advocacy',
+    tags: [
+      'injured-workers',
+      'rally',
+      'advocacy',
+      'workers-rights',
+      'thunder-bay',
+      'TBDIWSG'
+    ],
+    url: 'https://thunderbayinjuredworkers.com/',
+    virtualLink: '',
+    organizer: 'Thunder Bay & District Injured Workers Support Group',
+    organizerContact: 'tbiwsg@gmail.com',
+    attendeeCount: 0,
+    energyCost: 'medium',
+    imageUrl: '',
+    endDate: '2025-12-09T17:00:00.000Z',
+    accessibilityNotes: 'More details to come soon. Contact organizers at tbiwsg@gmail.com for accessibility accommodations and specific venue information.',
+    asl: false,
+    captions: false,
+    stepFree: true,
+    wheelchairAccessible: true,
+    serviceAnimalsWelcome: true,
+    sensorySpace: false,
+    registrationRequired: false,
+    status: 'published',
+    createdAt: Date.now(),
+  }
+];
+
+console.log('╔══════════════════════════════════════════════════════════════╗');
+console.log('║   🚀 SYNCING NEW COMMUNITY EVENTS TO FIRESTORE              ║');
+console.log('╚══════════════════════════════════════════════════════════════╝\n');
+
+async function syncEvents() {
+  // Sync to both production and preview collections
+  for (const collectionName of ['events_production', 'events_preview']) {
+    console.log(`\n📦 Processing collection: ${collectionName}`);
+    console.log('─'.repeat(64));
+    
+    for (const event of events) {
+      try {
+        console.log(`\n📅 Syncing: ${event.title}`);
+        console.log(`   ID: ${event.id}`);
+        console.log(`   Date: ${new Date(event.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`);
+        console.log(`   Location: ${event.location}`);
+        console.log(`   Category: ${event.category}`);
+        
+        // Event data for Firestore
+        const eventData = {
+          ...event,
+          updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+          syncedBy: 'system-admin',
+        };
+        
+        await db.collection(collectionName).doc(event.id).set(eventData, { merge: true });
+        
+        console.log(`   ✅ Synced to ${collectionName}`);
+      } catch (error) {
+        console.error(`   ❌ Failed to sync ${event.id}:`, error.message);
+      }
+    }
+  }
+  
+  console.log('\n═══════════════════════════════════════════════════════════════');
+  console.log('✅ ALL EVENTS SYNCED TO FIRESTORE!');
+  console.log('═══════════════════════════════════════════════════════════════\n');
+  
+  console.log('📊 Summary:');
+  console.log(`   • Total Events: ${events.length}`);
+  console.log(`   • Collections Updated: events_production, events_preview`);
+  console.log('   • Events:');
+  console.log('     1. Rights Don\'t Retire Rally (Nov 25) - Queens Park, Toronto');
+  console.log('     2. Hamilton Holiday Social (Dec 6) - 51 Adair Ave');
+  console.log('     3. Thunder Bay Rally (Dec 9) - Details TBA');
+  console.log('');
+  
+  console.log('🔄 Cloudflare Worker Cache:');
+  console.log('   Cache will refresh automatically in 5 minutes (TTL: 300s)');
+  console.log('   Or redeploy worker to clear cache immediately\n');
+  
+  console.log('📱 Test in App:');
+  console.log('   Pull to refresh on Events calendar');
+  console.log('   Filter by advocacy/social categories\n');
+  
+  console.log('🌐 Test on Website:');
+  console.log('   https://3mpwrapp.pages.dev/events/');
+  console.log('   Wait 5 minutes for cache to clear\n');
+  
+  console.log('🧪 Test Events Worker:');
+  console.log('   https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?category=advocacy');
+  console.log('   https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?category=social\n');
+}
+
+syncEvents()
+  .then(() => {
+    console.log('✅ Done!');
+    process.exit(0);
+  })
+  .catch((err) => {
+    console.error('❌ Failed to sync events:', err);
+    process.exit(1);
+  });

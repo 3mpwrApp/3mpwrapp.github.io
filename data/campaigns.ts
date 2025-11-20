@@ -343,5 +343,117 @@ Thank you,`,
       };
     };
   },
+  {
+    id: 'rights-dont-retire',
+    title: 'Rights Don\'t Retire - Queens Park Rally',
+    summary: 'Injured Workers are coming to Queens Park Toronto to demand removal of the age 65 cut-off for Older Injured Workers from the Workplace Safety and Insurance Act (WSIA). Email your MPP now.',
+    target: 'Ontario Provincial Government & MPPs',
+    goalCount: 10000,
+    membersCount: 0, // New campaign as of November 20, 2025
+    contactEmail: 'info@injuredworkerscommunitylegalclinic.ca',
+    createdAt: Date.now(), // November 20, 2025
+    // Extended fields for this specific campaign
+    websiteUrl: 'https://win.newmode.net/injuredworkerscommunitylegalclinic/rightsdontretire-1',
+    eventDate: 1732492800000, // November 25, 2025
+    description: `Rights Don't Retire is a movement to end age discrimination against Older Injured Workers in Ontario.
+
+**The Issue:**
+
+Currently, the Workplace Safety and Insurance Act (WSIA) contains an arbitrary age 65 cut-off that strips injured workers of their rights and benefits simply because they turn 65 - regardless of their ongoing medical needs, disability, or work history.
+
+This discriminatory policy:
+
+• Forces injured workers into poverty at age 65
+• Denies ongoing medical care and rehabilitation
+• Violates the Ontario Human Rights Code
+• Treats older workers as less deserving of support
+• Ignores the reality that many Canadians work past 65 by choice or necessity
+
+**Join us at Queens Park on November 25th, 2025** to stand with Older Injured Workers and demand:
+
+• Removal of the age 65 cut-off from the WSIA
+• Continued benefits based on medical need, not arbitrary age limits
+• Equal treatment under the law for all injured workers
+• Recognition that workplace injuries don't stop mattering at 65
+
+**Take Action Now:**
+Email your MPP through the NewMode platform and demand they support removing this discriminatory provision.`,
+    legislation: [
+      {
+        name: 'Workplace Safety and Insurance Act (WSIA)',
+        fullName: 'Workplace Safety and Insurance Act, 1997',
+        status: 'In Force - Needs Amendment',
+        description: 'Contains discriminatory age 65 cut-off that denies benefits to Older Injured Workers.',
+      },
+      {
+        name: 'Ontario Human Rights Code',
+        fullName: 'Ontario Human Rights Code',
+        status: 'In Force',
+        description: 'Prohibits age discrimination - conflicts with WSIA age 65 cut-off.',
+      },
+    ],
+    actionItems: [
+      { id: 1, text: 'Email your MPP via NewMode platform', completed: false },
+      { id: 2, text: 'Attend Queens Park rally on November 25th', completed: false },
+      { id: 3, text: 'Share #RightsDontRetire on social media', completed: false },
+      { id: 4, text: 'Contact Injured Workers Community Legal Clinic', completed: false },
+      { id: 5, text: 'Join the injured workers advocacy network', completed: false },
+    ],
+    shareTemplates: {
+      twitter: 'Injured workers\' rights DON\'T END at age 65! Join us at Queens Park on Nov 25th to demand removal of the discriminatory age cut-off in Ontario\'s WSIA. #RightsDontRetire #InjuredWorkersUnite 🇨🇦\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/',
+      facebook: 'RALLY AT QUEENS PARK - NOVEMBER 25, 2025\n\nInjured Workers are coming to Queens Park Toronto to demand removal of the age 65 cut-off for Older Injured Workers from the Workplace Safety and Insurance Act (WSIA).\n\nThis discriminatory policy forces injured workers into poverty at 65, denies ongoing medical care, and violates the Ontario Human Rights Code.\n\nWorkplace injuries don\'t stop mattering at age 65. Rights Don\'t Retire!\n\nTake action:\n✓ Email your MPP now\n✓ Join us at Queens Park on November 25th\n✓ Share this message\n\n#RightsDontRetire #InjuredWorkersUnite\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/',
+      email: {
+        subject: 'Support Older Injured Workers - Remove Age 65 Cut-off from WSIA',
+        body: `Hi,
+
+I'm writing to ask for your support in ending age discrimination against Older Injured Workers in Ontario.
+
+The Workplace Safety and Insurance Act (WSIA) currently contains an arbitrary age 65 cut-off that strips injured workers of their rights and benefits simply because they turn 65 - regardless of their ongoing medical needs or disability.
+
+This discriminatory policy:
+• Forces injured workers into poverty at age 65
+• Denies ongoing medical care and rehabilitation
+• Violates the Ontario Human Rights Code
+• Treats older workers as less deserving of support
+
+Injured Workers are rallying at Queens Park on November 25, 2025 to demand change.
+
+Please take 2 minutes to email your MPP and ask them to support removing the age 65 cut-off from the WSIA:
+
+https://win.newmode.net/injuredworkerscommunitylegalclinic/rightsdontretire-1
+
+Workplace injuries don't stop mattering at age 65. Rights Don't Retire!
+
+🔗 Powered by 3mpwr App
+🌐 https://3mpwrapp.pages.dev/campaigns/
+
+Thank you for supporting injured workers' rights.`,
+      },
+    },
+  } as Campaign & {
+    websiteUrl?: string;
+    eventDate?: number;
+    description?: string;
+    legislation?: Array<{
+      name: string;
+      fullName: string;
+      status: string;
+      description: string;
+    }>;
+    actionItems?: Array<{
+      id: number;
+      text: string;
+      completed: boolean;
+    }>;
+    shareTemplates?: {
+      twitter: string;
+      facebook: string;
+      email: {
+        subject: string;
+        body: string;
+      };
+    };
+  },
 ];
+
 
