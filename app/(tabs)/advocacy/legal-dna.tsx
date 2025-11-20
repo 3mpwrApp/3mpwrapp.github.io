@@ -3,18 +3,18 @@ import { Stack } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { useTheme } from '../../../context/ThemeContext';
+import { useAppPalette } from '../../../theme/usePalette';
 import { useTranslation } from '../../../i18n';
 import { useLegalDNASequencer } from '../../../services/legalDNASequencer';
 
 export default function LegalDNAScreen() {
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const palette = useAppPalette();
   const legalDNA = useLegalDNASequencer();
 
   const [cases, setCases] = useState(legalDNA.getAllCases());
   const [selectedCase, setSelectedCase] = useState<any>(null);
-  const [showAddModal, setShowAddModal] = useState(false);
+  const [_showAddModal, _setShowAddModal] = useState(false);
 
   const analyzeCase = (caseId: string) => {
     const caseData = cases.find(c => c.id === caseId);
@@ -35,18 +35,18 @@ export default function LegalDNAScreen() {
       <Stack.Screen
         options={{
           title: t('Legal DNA Sequencer'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
         }}
       />
-      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
+      <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
         {/* Header */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
           <View style={styles.header}>
-            <Ionicons name="analytics" size={32} color={colors.primary} />
+            <Ionicons name="analytics" size={32} color={palette.primary} />
             <View style={styles.headerText}>
-              <Text style={[styles.title, { color: colors.text }]}>Case DNA Analysis</Text>
-              <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
+              <Text style={[styles.title, { color: palette.text }]}>Case DNA Analysis</Text>
+              <Text style={[styles.subtitle, { color: palette.textSecondary }]}>
                 Map your case genome, find weak points, match precedents
               </Text>
             </View>
@@ -54,11 +54,11 @@ export default function LegalDNAScreen() {
         </View>
 
         {/* Cases List */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
           <View style={styles.sectionHeader}>
-            <Text style={[styles.sectionTitle, { color: colors.text }]}>Your Cases</Text>
+            <Text style={[styles.sectionTitle, { color: palette.text }]}>Your Cases</Text>
             <Pressable
-              style={[styles.addButton, { backgroundColor: colors.primary }]}
+              style={[styles.addButton, { backgroundColor: palette.primary }]}
               onPress={() => setShowAddModal(true)}
             >
               <Ionicons name="add" size={20} color="#FFF" />
@@ -67,18 +67,18 @@ export default function LegalDNAScreen() {
           </View>
 
           {cases.length === 0 ? (
-            <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
+            <Text style={[styles.emptyText, { color: palette.textSecondary }]}>
               No cases yet. Add your first case to start analysis.
             </Text>
           ) : (
             cases.map(caseItem => (
               <Pressable
                 key={caseItem.id}
-                style={[styles.caseCard, { borderColor: colors.border }]}
+                style={[styles.caseCard, { borderColor: palette.border }]}
                 onPress={() => analyzeCase(caseItem.id)}
               >
                 <View style={styles.caseHeader}>
-                  <Text style={[styles.caseName, { color: colors.text }]}>
+                  <Text style={[styles.caseName, { color: palette.text }]}>
                     {caseItem.title}
                   </Text>
                   <View
@@ -98,16 +98,16 @@ export default function LegalDNAScreen() {
                   </View>
                 </View>
 
-                <Text style={[styles.caseDate, { color: colors.textSecondary }]}>
+                <Text style={[styles.caseDate, { color: palette.textSecondary }]}>
                   Filed: {new Date(caseItem.filingDate).toLocaleDateString()}
                 </Text>
 
                 {caseItem.genome && (
                   <View style={styles.genomePreview}>
-                    <Text style={[styles.genomeLabel, { color: colors.textSecondary }]}>
+                    <Text style={[styles.genomeLabel, { color: palette.textSecondary }]}>
                       DNA Nodes: {caseItem.genome.nodes.length}
                     </Text>
-                    <Text style={[styles.genomeLabel, { color: colors.textSecondary }]}>
+                    <Text style={[styles.genomeLabel, { color: palette.textSecondary }]}>
                       Connections: {caseItem.genome.edges.length}
                     </Text>
                   </View>
@@ -122,42 +122,42 @@ export default function LegalDNAScreen() {
           <>
             {/* Case Genome */}
             {selectedCase.genome && (
-              <View style={[styles.card, { backgroundColor: colors.surface }]}>
-                <Text style={[styles.sectionTitle, { color: colors.text }]}>Case Genome Map</Text>
+              <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                <Text style={[styles.sectionTitle, { color: palette.text }]}>Case Genome Map</Text>
 
                 <View style={styles.genomeStats}>
                   <View style={styles.stat}>
-                    <Text style={[styles.statValue, { color: colors.primary }]}>
+                    <Text style={[styles.statValue, { color: palette.primary }]}>
                       {selectedCase.genome.nodes.length}
                     </Text>
-                    <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Nodes</Text>
+                    <Text style={[styles.statLabel, { color: palette.textSecondary }]}>Nodes</Text>
                   </View>
                   <View style={styles.stat}>
-                    <Text style={[styles.statValue, { color: colors.primary }]}>
+                    <Text style={[styles.statValue, { color: palette.primary }]}>
                       {selectedCase.genome.edges.length}
                     </Text>
-                    <Text style={[styles.statLabel, { color: colors.textSecondary }]}>
+                    <Text style={[styles.statLabel, { color: palette.textSecondary }]}>
                       Connections
                     </Text>
                   </View>
                   <View style={styles.stat}>
-                    <Text style={[styles.statValue, { color: colors.primary }]}>
+                    <Text style={[styles.statValue, { color: palette.primary }]}>
                       {
                         selectedCase.genome.nodes.filter((n: any) => n.type === 'evidence')
                           .length
                       }
                     </Text>
-                    <Text style={[styles.statLabel, { color: colors.textSecondary }]}>
+                    <Text style={[styles.statLabel, { color: palette.textSecondary }]}>
                       Evidence
                     </Text>
                   </View>
                 </View>
 
-                <Text style={[styles.nodeTitle, { color: colors.text }]}>Key Nodes:</Text>
+                <Text style={[styles.nodeTitle, { color: palette.text }]}>Key Nodes:</Text>
                 {selectedCase.genome.nodes.slice(0, 5).map((node: any, index: number) => (
                   <View
                     key={index}
-                    style={[styles.nodeCard, { borderColor: colors.border }]}
+                    style={[styles.nodeCard, { borderColor: palette.border }]}
                   >
                     <View
                       style={[
@@ -176,8 +176,8 @@ export default function LegalDNAScreen() {
                     >
                       <Text style={styles.nodeTypeText}>{node.type.toUpperCase()}</Text>
                     </View>
-                    <Text style={[styles.nodeLabel, { color: colors.text }]}>{node.label}</Text>
-                    <Text style={[styles.nodeWeight, { color: colors.textSecondary }]}>
+                    <Text style={[styles.nodeLabel, { color: palette.text }]}>{node.label}</Text>
+                    <Text style={[styles.nodeWeight, { color: palette.textSecondary }]}>
                       Weight: {node.weight.toFixed(2)}
                     </Text>
                   </View>
@@ -216,32 +216,32 @@ export default function LegalDNAScreen() {
 
             {/* Precedents */}
             {selectedCase.precedents && selectedCase.precedents.length > 0 && (
-              <View style={[styles.card, { backgroundColor: colors.surface }]}>
-                <Text style={[styles.sectionTitle, { color: colors.text }]}>
+              <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                <Text style={[styles.sectionTitle, { color: palette.text }]}>
                   Matching Precedents
                 </Text>
 
                 {selectedCase.precedents.slice(0, 3).map((precedent: any, index: number) => (
                   <View
                     key={index}
-                    style={[styles.precedentCard, { borderColor: colors.border }]}
+                    style={[styles.precedentCard, { borderColor: palette.border }]}
                   >
-                    <Text style={[styles.precedentCitation, { color: colors.text }]}>
+                    <Text style={[styles.precedentCitation, { color: palette.text }]}>
                       {precedent.citation}
                     </Text>
-                    <Text style={[styles.precedentSimilarity, { color: colors.textSecondary }]}>
+                    <Text style={[styles.precedentSimilarity, { color: palette.textSecondary }]}>
                       Similarity: {(precedent.similarity * 100).toFixed(0)}%
                     </Text>
-                    <Text style={[styles.precedentOutcome, { color: colors.textSecondary }]}>
+                    <Text style={[styles.precedentOutcome, { color: palette.textSecondary }]}>
                       Outcome: {precedent.outcome}
                     </Text>
                     {precedent.keyFactors && precedent.keyFactors.length > 0 && (
                       <View style={styles.factorsSection}>
-                        <Text style={[styles.factorsLabel, { color: colors.textSecondary }]}>
+                        <Text style={[styles.factorsLabel, { color: palette.textSecondary }]}>
                           Key Factors:
                         </Text>
                         {precedent.keyFactors.map((factor: string, i: number) => (
-                          <Text key={i} style={[styles.factorText, { color: colors.text }]}>
+                          <Text key={i} style={[styles.factorText, { color: palette.text }]}>
                             • {factor}
                           </Text>
                         ))}
@@ -255,21 +255,21 @@ export default function LegalDNAScreen() {
         )}
 
         {/* Tools */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Analysis Tools</Text>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Analysis Tools</Text>
 
           <Pressable
-            style={[styles.toolButton, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}
+            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={getClaimTemplates}
           >
-            <Ionicons name="document-text" size={24} color={colors.primary} />
+            <Ionicons name="document-text" size={24} color={palette.primary} />
             <View style={styles.toolInfo}>
-              <Text style={[styles.toolTitle, { color: colors.text }]}>Claim Templates</Text>
-              <Text style={[styles.toolDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.toolTitle, { color: palette.text }]}>Claim Templates</Text>
+              <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
                 Pre-built templates for common disability claims
               </Text>
             </View>
-            <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
           </Pressable>
         </View>
 
@@ -510,3 +510,5 @@ const styles = StyleSheet.create({
     height: 32,
   },
 });
+
+

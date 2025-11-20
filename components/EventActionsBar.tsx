@@ -331,11 +331,11 @@ export default function EventActionsBar({
             accessibilityRole="button"
             accessibilityLabel={`Submit ${event.title} to 3mpwr App`}
             style={[styles.button, { 
-              backgroundColor: '#10B981', 
-              borderColor: '#10B981'
+              backgroundColor: palette.primary, 
+              borderColor: palette.primary
             }]}
           >
-            <Text style={[styles.buttonText, { color: '#FFFFFF' }]}>
+            <Text style={[styles.buttonText, { color: palette.primary }]}>
               🚀 Submit to 3mpwr App
             </Text>
           </A11yPressable>
@@ -365,3 +365,4 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
   },
 });
+

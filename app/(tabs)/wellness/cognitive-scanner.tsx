@@ -3,13 +3,13 @@ import { Stack } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { useTheme } from '../../../context/ThemeContext';
+import { useAppPalette } from '../../../theme/usePalette';
 import { useTranslation } from '../../../i18n';
 import { useCognitiveDistortionScanner } from '../../../services/cognitiveDistortionScanner';
 
 export default function CognitiveScannerScreen() {
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const palette = useAppPalette();
   const scanner = useCognitiveDistortionScanner();
 
   const [thought, setThought] = useState('');
@@ -54,15 +54,15 @@ export default function CognitiveScannerScreen() {
       <Stack.Screen
         options={{
           title: t('Cognitive Distortion Scanner'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
         }}
       />
-      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
+      <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
         {/* Input */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.title, { color: colors.text }]}>Scan Your Thoughts</Text>
-          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.title, { color: palette.text }]}>Scan Your Thoughts</Text>
+          <Text style={[styles.subtitle, { color: palette.textSecondary }]}>
             Enter a thought pattern you'd like to examine for cognitive distortions
           </Text>
 
@@ -70,13 +70,13 @@ export default function CognitiveScannerScreen() {
             style={[
               styles.input,
               {
-                backgroundColor: colors.background,
-                color: colors.text,
-                borderColor: colors.border,
+                backgroundColor: palette.background,
+                color: palette.text,
+                borderColor: palette.border,
               },
             ]}
             placeholder="e.g., 'I always mess everything up' or 'Nobody likes me'"
-            placeholderTextColor={colors.textSecondary}
+            placeholderTextColor={palette.textSecondary}
             multiline
             numberOfLines={4}
             value={thought}
@@ -84,7 +84,7 @@ export default function CognitiveScannerScreen() {
           />
 
           <Pressable
-            style={[styles.scanButton, { backgroundColor: colors.primary }]}
+            style={[styles.scanButton, { backgroundColor: palette.primary }]}
             onPress={scanThought}
           >
             <Ionicons name="scan" size={20} color="#FFF" />
@@ -95,13 +95,13 @@ export default function CognitiveScannerScreen() {
         {/* Scan Results */}
         {scanResult && (
           <>
-            <View style={[styles.card, { backgroundColor: colors.surface }]}>
-              <Text style={[styles.sectionTitle, { color: colors.text }]}>
+            <View style={[styles.card, { backgroundColor: palette.surface }]}>
+              <Text style={[styles.sectionTitle, { color: palette.text }]}>
                 Detected Distortions
               </Text>
 
               {scanResult.distortions.length === 0 ? (
-                <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
+                <Text style={[styles.emptyText, { color: palette.textSecondary }]}>
                   No cognitive distortions detected. This thought seems balanced!
                 </Text>
               ) : (
@@ -110,7 +110,7 @@ export default function CognitiveScannerScreen() {
                     key={index}
                     style={[
                       styles.distortionCard,
-                      { borderColor: distortionColors[distortion.type] || colors.border },
+                      { borderColor: distortionColors[distortion.type] || palette.border },
                     ]}
                   >
                     <View style={styles.distortionHeader}>
@@ -118,7 +118,7 @@ export default function CognitiveScannerScreen() {
                         style={[
                           styles.typeBadge,
                           {
-                            backgroundColor: distortionColors[distortion.type] || colors.border,
+                            backgroundColor: distortionColors[distortion.type] || palette.border,
                           },
                         ]}
                       >
@@ -126,21 +126,21 @@ export default function CognitiveScannerScreen() {
                           {distortion.type.replace(/_/g, ' ').toUpperCase()}
                         </Text>
                       </View>
-                      <Text style={[styles.confidence, { color: colors.textSecondary }]}>
+                      <Text style={[styles.confidence, { color: palette.textSecondary }]}>
                         {(distortion.confidence * 100).toFixed(0)}% confident
                       </Text>
                     </View>
 
-                    <Text style={[styles.explanation, { color: colors.text }]}>
+                    <Text style={[styles.explanation, { color: palette.text }]}>
                       {distortion.explanation}
                     </Text>
 
                     <Pressable
-                      style={[styles.dialogueButton, { backgroundColor: colors.primary + '20' }]}
+                      style={[styles.dialogueButton, { backgroundColor: palette.primary + '20' }]}
                       onPress={() => startDialogue(distortion.type)}
                     >
-                      <Ionicons name="chatbubbles" size={16} color={colors.primary} />
-                      <Text style={[styles.dialogueButtonText, { color: colors.primary }]}>
+                      <Ionicons name="chatbubbles" size={16} color={palette.primary} />
+                      <Text style={[styles.dialogueButtonText, { color: palette.primary }]}>
                         Start Socratic Dialogue
                       </Text>
                     </Pressable>
@@ -171,34 +171,34 @@ export default function CognitiveScannerScreen() {
 
         {/* Top Distortions */}
         {topDistortions.length > 0 && (
-          <View style={[styles.card, { backgroundColor: colors.surface }]}>
-            <Text style={[styles.sectionTitle, { color: colors.text }]}>
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <Text style={[styles.sectionTitle, { color: palette.text }]}>
               Your Pattern Analysis
             </Text>
-            <Text style={[styles.sectionDescription, { color: colors.textSecondary }]}>
+            <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
               Most common distortion types you experience
             </Text>
 
             {topDistortions.map((pattern, index) => (
-              <View key={index} style={[styles.patternCard, { borderColor: colors.border }]}>
+              <View key={index} style={[styles.patternCard, { borderColor: palette.border }]}>
                 <View style={styles.patternHeader}>
                   <View
                     style={[
                       styles.patternBadge,
-                      { backgroundColor: distortionColors[pattern.type] || colors.border },
+                      { backgroundColor: distortionColors[pattern.type] || palette.border },
                     ]}
                   >
                     <Text style={styles.patternBadgeText}>
                       {pattern.type.replace(/_/g, ' ').toUpperCase()}
                     </Text>
                   </View>
-                  <Text style={[styles.patternCount, { color: colors.textSecondary }]}>
+                  <Text style={[styles.patternCount, { color: palette.textSecondary }]}>
                     {pattern.count} times
                   </Text>
                 </View>
 
                 <View style={styles.decaySection}>
-                  <Text style={[styles.decayLabel, { color: colors.textSecondary }]}>
+                  <Text style={[styles.decayLabel, { color: palette.textSecondary }]}>
                     Belief strength decay:
                   </Text>
                   <View style={styles.decayBar}>
@@ -207,12 +207,12 @@ export default function CognitiveScannerScreen() {
                         styles.decayFill,
                         {
                           width: `${pattern.averageDecay}%`,
-                          backgroundColor: colors.primary,
+                          backgroundColor: palette.primary,
                         },
                       ]}
                     />
                   </View>
-                  <Text style={[styles.decayText, { color: colors.textSecondary }]}>
+                  <Text style={[styles.decayText, { color: palette.textSecondary }]}>
                     {pattern.averageDecay.toFixed(0)}% reduction
                   </Text>
                 </View>
@@ -222,8 +222,8 @@ export default function CognitiveScannerScreen() {
         )}
 
         {/* Distortion Library */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>
             Distortion Types Reference
           </Text>
 
@@ -239,7 +239,7 @@ export default function CognitiveScannerScreen() {
                 <Text
                   style={[
                     styles.libraryType,
-                    { color: distortionColors[type] || colors.text },
+                    { color: distortionColors[type] || palette.text },
                   ]}
                 >
                   {type.replace(/_/g, ' ').toUpperCase()}
@@ -434,3 +434,4 @@ const styles = StyleSheet.create({
     height: 32,
   },
 });
+

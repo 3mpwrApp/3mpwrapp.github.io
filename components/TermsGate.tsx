@@ -740,7 +740,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     buttonTextEnabled: {
       fontSize: 17,
       fontWeight: '800',
-      color: '#FFFFFF', // White text on green background for contrast
+      color: palette.primary, // White text on green background for contrast
     },
     buttonRow: {
       flexDirection: "row",
@@ -774,3 +774,4 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
   });
 }
+

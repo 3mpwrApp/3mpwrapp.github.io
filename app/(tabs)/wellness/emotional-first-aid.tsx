@@ -3,17 +3,17 @@ import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { useTheme } from '../../../context/ThemeContext';
+import { useAppPalette } from '../../../theme/usePalette';
 import { useTranslation } from '../../../i18n';
 import { useEmotionalFirstAid } from '../../../services/emotionalFirstAid';
 
 export default function EmotionalFirstAidScreen() {
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const palette = useAppPalette();
   const firstAid = useEmotionalFirstAid();
 
-  const [activeSession, setActiveSession] = useState<any>(null);
-  const [contacts, setContacts] = useState(firstAid.getContacts());
+  const [_activeSession, _setActiveSession] = useState<any>(null);
+  const [contacts, _setContacts] = useState(firstAid.getContacts());
   const [sessionHistory, setSessionHistory] = useState<any[]>([]);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function EmotionalFirstAidScreen() {
     alert(`Grounding Task: ${task.description}`);
   };
 
-  const triggerCrisis = async () => {
+  const _triggerCrisis = async () => {
     await firstAid.triggerCrisisProtocol();
     alert('Crisis SMS sent to emergency contacts!');
   };
@@ -45,11 +45,11 @@ export default function EmotionalFirstAidScreen() {
       <Stack.Screen
         options={{
           title: t('Emotional First Aid'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
         }}
       />
-      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
+      <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
         {/* Emergency Actions */}
         <View style={[styles.emergencyCard, { backgroundColor: '#DC143C' }]}>
           <View style={styles.emergencyHeader}>
@@ -118,37 +118,37 @@ export default function EmotionalFirstAidScreen() {
         </View>
 
         {/* Distraction Games */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>
             DBT Distraction Games
           </Text>
-          <Text style={[styles.sectionDescription, { color: colors.textSecondary }]}>
+          <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
             8 evidence-based games to interrupt crisis state
           </Text>
 
           {firstAid.getAllGames().map(game => (
             <Pressable
               key={game.id}
-              style={[styles.gameCard, { borderColor: colors.border }]}
+              style={[styles.gameCard, { borderColor: palette.border }]}
               onPress={() => alert(`Starting ${game.name}...\n\n${game.instructions}`)}
             >
               <View style={styles.gameHeader}>
-                <Text style={[styles.gameName, { color: colors.text }]}>{game.name}</Text>
-                <Text style={[styles.gameDuration, { color: colors.textSecondary }]}>
+                <Text style={[styles.gameName, { color: palette.text }]}>{game.name}</Text>
+                <Text style={[styles.gameDuration, { color: palette.textSecondary }]}>
                   {game.duration}min
                 </Text>
               </View>
-              <Text style={[styles.gameDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.gameDescription, { color: palette.textSecondary }]}>
                 {game.instructions}
               </Text>
               <View style={styles.gameTags}>
-                <View style={[styles.tag, { backgroundColor: colors.primary + '20' }]}>
-                  <Text style={[styles.tagText, { color: colors.primary }]}>
+                <View style={[styles.tag, { backgroundColor: palette.primary + '20' }]}>
+                  <Text style={[styles.tagText, { color: palette.primary }]}>
                     {game.dbtPrinciple}
                   </Text>
                 </View>
-                <View style={[styles.tag, { backgroundColor: colors.border }]}>
-                  <Text style={[styles.tagText, { color: colors.textSecondary }]}>
+                <View style={[styles.tag, { backgroundColor: palette.border }]}>
+                  <Text style={[styles.tagText, { color: palette.textSecondary }]}>
                     {game.difficulty}
                   </Text>
                 </View>
@@ -159,21 +159,21 @@ export default function EmotionalFirstAidScreen() {
 
         {/* Session History */}
         {sessionHistory.length > 0 && (
-          <View style={[styles.card, { backgroundColor: colors.surface }]}>
-            <Text style={[styles.sectionTitle, { color: colors.text }]}>Recent Sessions</Text>
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <Text style={[styles.sectionTitle, { color: palette.text }]}>Recent Sessions</Text>
 
             {sessionHistory.slice(0, 5).map((session, index) => (
-              <View key={index} style={[styles.sessionCard, { borderColor: colors.border }]}>
+              <View key={index} style={[styles.sessionCard, { borderColor: palette.border }]}>
                 <View style={styles.sessionHeader}>
-                  <Text style={[styles.sessionType, { color: colors.text }]}>
+                  <Text style={[styles.sessionType, { color: palette.text }]}>
                     {session.type}
                   </Text>
-                  <Text style={[styles.sessionDate, { color: colors.textSecondary }]}>
+                  <Text style={[styles.sessionDate, { color: palette.textSecondary }]}>
                     {new Date(session.startTime).toLocaleString()}
                   </Text>
                 </View>
                 {session.effectiveness && (
-                  <Text style={[styles.sessionEffectiveness, { color: colors.textSecondary }]}>
+                  <Text style={[styles.sessionEffectiveness, { color: palette.textSecondary }]}>
                     Effectiveness: {session.effectiveness}/5 ⭐
                   </Text>
                 )}
@@ -183,22 +183,22 @@ export default function EmotionalFirstAidScreen() {
         )}
 
         {/* Emergency Contacts */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Emergency Contacts</Text>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Emergency Contacts</Text>
 
           {contacts.length === 0 ? (
-            <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
+            <Text style={[styles.emptyText, { color: palette.textSecondary }]}>
               No emergency contacts set. Add contacts in Settings.
             </Text>
           ) : (
             contacts.map((contact, index) => (
-              <View key={index} style={[styles.contactCard, { borderColor: colors.border }]}>
-                <Ionicons name="person-circle" size={32} color={colors.primary} />
+              <View key={index} style={[styles.contactCard, { borderColor: palette.border }]}>
+                <Ionicons name="person-circle" size={32} color={palette.primary} />
                 <View style={styles.contactInfo}>
-                  <Text style={[styles.contactName, { color: colors.text }]}>
+                  <Text style={[styles.contactName, { color: palette.text }]}>
                     {contact.name}
                   </Text>
-                  <Text style={[styles.contactPhone, { color: colors.textSecondary }]}>
+                  <Text style={[styles.contactPhone, { color: palette.textSecondary }]}>
                     {contact.phone}
                   </Text>
                 </View>
@@ -397,3 +397,5 @@ const styles = StyleSheet.create({
     height: 32,
   },
 });
+
+

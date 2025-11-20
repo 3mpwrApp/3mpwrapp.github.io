@@ -864,3 +864,4 @@ export function useLegalDNASequencer() {
       legalDNASequencer.createClaimFromTemplate(caseId, claimType),
   };
 }
+

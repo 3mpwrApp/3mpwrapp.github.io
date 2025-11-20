@@ -272,7 +272,7 @@ export default function ProfileCard() {
       {/* Sign Out / Sign In */}
       {user ? (
         <Pressable
-          style={[styles.button, { backgroundColor: palette.error || '#d32f2f' }]}
+          style={[styles.button, { backgroundColor: palette.error || palette.primary }]}
           onPress={signOut}
           accessibilityRole="button"
           accessibilityLabel={t("header.signOut", "Sign Out")}
@@ -543,3 +543,4 @@ function createStyles(palette: Palette) {
     },
   });
 }
+

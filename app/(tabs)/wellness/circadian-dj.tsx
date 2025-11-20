@@ -3,18 +3,18 @@ import { Stack } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { useTheme } from '../../../context/ThemeContext';
+import { useAppPalette } from '../../../theme/usePalette';
 import { useTranslation } from '../../../i18n';
 import { useCircadianRhythmDJ } from '../../../services/circadianRhythmDJ';
 
 export default function CircadianDJScreen() {
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const palette = useAppPalette();
   const circadian = useCircadianRhythmDJ();
 
-  const [chronotype, setChronotype] = useState(circadian.chronotype);
-  const [sleepDebt, setSleepDebt] = useState(circadian.getSleepDebt());
-  const [dreamPatterns, setDreamPatterns] = useState(circadian.getDreamPatterns());
+  const [chronotype, _setChronotype] = useState(circadian.chronotype);
+  const [sleepDebt, _setSleepDebt] = useState(circadian.getSleepDebt());
+  const [dreamPatterns, _setDreamPatterns] = useState(circadian.getDreamPatterns());
 
   const chronotypeInfo: Record<
     string,
@@ -74,23 +74,23 @@ export default function CircadianDJScreen() {
       <Stack.Screen
         options={{
           title: t('Circadian Rhythm DJ'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
         }}
       />
-      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
+      <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
         {/* Chronotype */}
         {chronotype ? (
-          <View style={[styles.card, { backgroundColor: colors.surface }]}>
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
             <View style={styles.chronotypeHeader}>
               <Text style={styles.chronotypeIcon}>
                 {chronotypeInfo[chronotype.type].icon}
               </Text>
               <View style={styles.chronotypeInfo}>
-                <Text style={[styles.chronotypeTitle, { color: colors.text }]}>
+                <Text style={[styles.chronotypeTitle, { color: palette.text }]}>
                   {chronotype.type.toUpperCase()}
                 </Text>
-                <Text style={[styles.chronotypeConfidence, { color: colors.textSecondary }]}>
+                <Text style={[styles.chronotypeConfidence, { color: palette.textSecondary }]}>
                   {chronotype.confidence}% confidence
                 </Text>
               </View>
@@ -98,26 +98,26 @@ export default function CircadianDJScreen() {
 
             <View style={styles.chronotypeDetails}>
               <View style={styles.detailRow}>
-                <Ionicons name="sunny" size={20} color={colors.textSecondary} />
-                <Text style={[styles.detailText, { color: colors.text }]}>
+                <Ionicons name="sunny" size={20} color={palette.textSecondary} />
+                <Text style={[styles.detailText, { color: palette.text }]}>
                   Peak Energy: {chronotypeInfo[chronotype.type].peakTimes}
                 </Text>
               </View>
               <View style={styles.detailRow}>
-                <Ionicons name="moon" size={20} color={colors.textSecondary} />
-                <Text style={[styles.detailText, { color: colors.text }]}>
+                <Ionicons name="moon" size={20} color={palette.textSecondary} />
+                <Text style={[styles.detailText, { color: palette.text }]}>
                   Ideal Sleep: {chronotypeInfo[chronotype.type].bedtime}
                 </Text>
               </View>
             </View>
           </View>
         ) : (
-          <View style={[styles.card, { backgroundColor: colors.surface }]}>
-            <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <Text style={[styles.emptyText, { color: palette.textSecondary }]}>
               Take the chronotype quiz to discover your sleep-wake pattern
             </Text>
             <Pressable
-              style={[styles.quizButton, { backgroundColor: colors.primary }]}
+              style={[styles.quizButton, { backgroundColor: palette.primary }]}
               onPress={takeChronotypeQuiz}
             >
               <Ionicons name="help-circle" size={20} color="#FFF" />
@@ -152,13 +152,13 @@ export default function CircadianDJScreen() {
 
         {/* Dream Interference */}
         {dreamPatterns && dreamPatterns.length > 0 && (
-          <View style={[styles.card, { backgroundColor: colors.surface }]}>
-            <Text style={[styles.sectionTitle, { color: colors.text }]}>
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <Text style={[styles.sectionTitle, { color: palette.text }]}>
               Dream Interference Patterns
             </Text>
 
             {dreamPatterns.slice(0, 3).map((pattern, index) => (
-              <View key={index} style={[styles.dreamCard, { borderColor: colors.border }]}>
+              <View key={index} style={[styles.dreamCard, { borderColor: palette.border }]}>
                 <View style={styles.dreamHeader}>
                   <Ionicons
                     name={pattern.pattern === 'recurring' ? 'repeat' : 'alert-circle'}
@@ -168,24 +168,24 @@ export default function CircadianDJScreen() {
                         ? '#DC143C'
                         : pattern.pattern === 'clustered'
                         ? '#FFA500'
-                        : colors.textSecondary
+                        : palette.textSecondary
                     }
                   />
-                  <Text style={[styles.dreamPattern, { color: colors.text }]}>
+                  <Text style={[styles.dreamPattern, { color: palette.text }]}>
                     {pattern.pattern.toUpperCase()}
                   </Text>
-                  <Text style={[styles.dreamDate, { color: colors.textSecondary }]}>
+                  <Text style={[styles.dreamDate, { color: palette.textSecondary }]}>
                     {new Date(pattern.date).toLocaleDateString()}
                   </Text>
                 </View>
 
                 {pattern.possibleTriggers.length > 0 && (
                   <View style={styles.triggerSection}>
-                    <Text style={[styles.triggerLabel, { color: colors.textSecondary }]}>
+                    <Text style={[styles.triggerLabel, { color: palette.textSecondary }]}>
                       Possible triggers:
                     </Text>
                     {pattern.possibleTriggers.map((trigger, i) => (
-                      <Text key={i} style={[styles.triggerText, { color: colors.text }]}>
+                      <Text key={i} style={[styles.triggerText, { color: palette.text }]}>
                         • {trigger}
                       </Text>
                     ))}
@@ -197,49 +197,49 @@ export default function CircadianDJScreen() {
         )}
 
         {/* Tools */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Sleep Optimization Tools</Text>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Sleep Optimization Tools</Text>
 
           <Pressable
-            style={[styles.toolButton, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}
+            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={logSleep}
           >
-            <Ionicons name="moon" size={24} color={colors.primary} />
+            <Ionicons name="moon" size={24} color={palette.primary} />
             <View style={styles.toolInfo}>
-              <Text style={[styles.toolTitle, { color: colors.text }]}>Log Sleep</Text>
-              <Text style={[styles.toolDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.toolTitle, { color: palette.text }]}>Log Sleep</Text>
+              <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
                 Record bedtime, wake time, and quality
               </Text>
             </View>
-            <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
           </Pressable>
 
           <Pressable
-            style={[styles.toolButton, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}
+            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={calculateOptimalBedtime}
           >
-            <Ionicons name="time" size={24} color={colors.primary} />
+            <Ionicons name="time" size={24} color={palette.primary} />
             <View style={styles.toolInfo}>
-              <Text style={[styles.toolTitle, { color: colors.text }]}>Wake-Up Optimizer</Text>
-              <Text style={[styles.toolDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.toolTitle, { color: palette.text }]}>Wake-Up Optimizer</Text>
+              <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
                 Calculate ideal bedtime for complete sleep cycles
               </Text>
             </View>
-            <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
           </Pressable>
 
           <Pressable
-            style={[styles.toolButton, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}
+            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={getNapPrescription}
           >
-            <Ionicons name="cafe" size={24} color={colors.primary} />
+            <Ionicons name="cafe" size={24} color={palette.primary} />
             <View style={styles.toolInfo}>
-              <Text style={[styles.toolTitle, { color: colors.text }]}>Nap Prescription</Text>
-              <Text style={[styles.toolDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.toolTitle, { color: palette.text }]}>Nap Prescription</Text>
+              <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
                 Get personalized nap recommendations
               </Text>
             </View>
-            <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
           </Pressable>
         </View>
 
@@ -392,3 +392,5 @@ const styles = StyleSheet.create({
     height: 32,
   },
 });
+
+

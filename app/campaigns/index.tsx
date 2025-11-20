@@ -1040,7 +1040,7 @@ function createStyles(palette: Palette) {
       flex: 1.5,
     },
     submitTo3mpwrButton: {
-      backgroundColor: '#10b981',
+      backgroundColor: palette.primary,
       flex: 2,
     },
     shareButton: {
@@ -1072,6 +1072,7 @@ function createStyles(palette: Palette) {
     },
   });
 }
+
 
 
 

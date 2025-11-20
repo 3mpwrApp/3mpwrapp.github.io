@@ -3,13 +3,13 @@ import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 
-import { useTheme } from '../../../context/ThemeContext';
 import { useTranslation } from '../../../i18n';
 import { useEnergyAwareUI } from '../../../services/energyAwareUI';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export default function EnergyAwareUIScreen() {
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const palette = useAppPalette();
   const energyUI = useEnergyAwareUI();
   const { config } = energyUI;
 
@@ -37,17 +37,13 @@ export default function EnergyAwareUIScreen() {
   };
 
   const energyStateColors: Record<string, string> = {
-    crashed: '#DC143C',
-    depleted: '#FF4500',
-    conserving: '#FFA500',
-    baseline: '#FFD700',
-    energized: '#32CD32',
-    hyperfocus: '#1E90FF',
-    manic_warning: '#9370DB',
-  };
-
-  const simulateActivity = () => {
-    energyUI.trackUsage({ tapsPerMinute: 30, scrollSpeed: 50 });
+    crashed: palette.error,
+    depleted: palette.warning,
+    conserving: palette.warning,
+    baseline: palette.success,
+    energized: palette.success,
+    hyperfocus: palette.primary,
+    manic_warning: palette.error,
   };
 
   return (
@@ -55,12 +51,12 @@ export default function EnergyAwareUIScreen() {
       <Stack.Screen
         options={{
           title: t('Energy-Aware UI'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
         }}
       />
-      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}> 
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
+      <ScrollView style={[styles.container, { backgroundColor: palette.background }]}> 
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
           <View style={styles.stateHeader}>
             <Ionicons
               name={energyStateIcons[config.currentEnergyState] as any}
@@ -68,16 +64,16 @@ export default function EnergyAwareUIScreen() {
               color={energyStateColors[config.currentEnergyState]}
             />
             <View style={styles.stateInfo}>
-              <Text style={[styles.stateName, { color: colors.text }]}>
+              <Text style={[styles.stateName, { color: palette.text }]}>
                 {config.currentEnergyState.toUpperCase()}
               </Text>
-              <Text style={[styles.stateDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.stateDescription, { color: palette.textSecondary }]}>
                 Current energy level
               </Text>
             </View>
           </View>
 
-          <View style={styles.progressBar}>
+          <View style={[styles.progressBar, { backgroundColor: palette.muted }]}>
             <View
               style={[
                 styles.progressFill,
@@ -88,88 +84,88 @@ export default function EnergyAwareUIScreen() {
               ]}
             />
           </View>
-          <Text style={[styles.progressText, { color: colors.textSecondary }]}>
+          <Text style={[styles.progressText, { color: palette.textSecondary }]}>
             75/100
           </Text>
         </View>
 
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Active Adjustments</Text>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Active Adjustments</Text>
 
           <View style={styles.adjustmentRow}>
-            <Text style={[styles.adjustmentLabel, { color: colors.textSecondary }]}>
+            <Text style={[styles.adjustmentLabel, { color: palette.textSecondary }]}>
               Button Size
             </Text>
-            <Text style={[styles.adjustmentValue, { color: colors.text }]}>
+            <Text style={[styles.adjustmentValue, { color: palette.text }]}>
               {config.buttonSize}
             </Text>
           </View>
 
           <View style={styles.adjustmentRow}>
-            <Text style={[styles.adjustmentLabel, { color: colors.textSecondary }]}>Font Size</Text>
-            <Text style={[styles.adjustmentValue, { color: colors.text }]}>
+            <Text style={[styles.adjustmentLabel, { color: palette.textSecondary }]}>Font Size</Text>
+            <Text style={[styles.adjustmentValue, { color: palette.text }]}>
               {config.fontSize}
             </Text>
           </View>
 
           <View style={styles.adjustmentRow}>
-            <Text style={[styles.adjustmentLabel, { color: colors.textSecondary }]}>
+            <Text style={[styles.adjustmentLabel, { color: palette.textSecondary }]}>
               Color Scheme
             </Text>
-            <Text style={[styles.adjustmentValue, { color: colors.text }]}>
+            <Text style={[styles.adjustmentValue, { color: palette.text }]}>
               {config.colorScheme}
             </Text>
           </View>
 
           <View style={styles.adjustmentRow}>
-            <Text style={[styles.adjustmentLabel, { color: colors.textSecondary }]}>
+            <Text style={[styles.adjustmentLabel, { color: palette.textSecondary }]}>
               UI Complexity
             </Text>
-            <Text style={[styles.adjustmentValue, { color: colors.text }]}>
+            <Text style={[styles.adjustmentValue, { color: palette.text }]}>
               {config.uiComplexity}
             </Text>
           </View>
         </View>
 
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Usage Patterns</Text>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Usage Patterns</Text>
 
           <View style={styles.patternRow}>
-            <Ionicons name="finger-print" size={20} color={colors.textSecondary} />
-            <Text style={[styles.patternLabel, { color: colors.textSecondary }]}>
+            <Ionicons name="finger-print" size={20} color={palette.textSecondary} />
+            <Text style={[styles.patternLabel, { color: palette.textSecondary }]}>
               Taps per minute
             </Text>
-            <Text style={[styles.patternValue, { color: colors.text }]}>24</Text>
+            <Text style={[styles.patternValue, { color: palette.text }]}>24</Text>
           </View>
 
           <View style={styles.patternRow}>
-            <Ionicons name="swap-vertical" size={20} color={colors.textSecondary} />
-            <Text style={[styles.patternLabel, { color: colors.textSecondary }]}>Scroll Speed</Text>
-            <Text style={[styles.patternValue, { color: colors.text }]}>180 px/s</Text>
+            <Ionicons name="swap-vertical" size={20} color={palette.textSecondary} />
+            <Text style={[styles.patternLabel, { color: palette.textSecondary }]}>Scroll Speed</Text>
+            <Text style={[styles.patternValue, { color: palette.text }]}>180 px/s</Text>
           </View>
 
           <View style={styles.patternRow}>
-            <Ionicons name="alert-circle" size={20} color={colors.textSecondary} />
-            <Text style={[styles.patternLabel, { color: colors.textSecondary }]}>Error Rate</Text>
-            <Text style={[styles.patternValue, { color: colors.text }]}>1.2 /min</Text>
+            <Ionicons name="alert-circle" size={20} color={palette.textSecondary} />
+            <Text style={[styles.patternLabel, { color: palette.textSecondary }]}>Error Rate</Text>
+            <Text style={[styles.patternValue, { color: palette.text }]}>1.2 /min</Text>
           </View>
         </View>
 
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Resume-Later Tasks</Text>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Resume-Later Tasks</Text>
 
           {resumableTasks.length === 0 ? (
-            <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
+            <Text style={[styles.emptyText, { color: palette.textSecondary }]}>
               No saved tasks. Start a multi-step task to see it here.
             </Text>
           ) : (
             resumableTasks.map((task, index) => (
-              <View key={index} style={[styles.taskCard, { borderColor: colors.border }]}>
-                <Text style={[styles.taskTitle, { color: colors.text }]}>{task.taskType}</Text>
-                <Text style={[styles.taskProgress, { color: colors.textSecondary }]}>
+              <View key={index} style={[styles.taskCard, { borderColor: palette.border }]}>
+                <Text style={[styles.taskTitle, { color: palette.text }]}>{task.taskType}</Text>
+                <Text style={[styles.taskProgress, { color: palette.textSecondary }]}>
                   Progress: {(task.progress * 100).toFixed(0)}%
                 </Text>
-                <Text style={[styles.taskTime, { color: colors.textSecondary }]}>
+                <Text style={[styles.taskTime, { color: palette.textSecondary }]}>
                   Last active: {new Date(task.lastActiveAt).toLocaleString()}
                 </Text>
               </View>
@@ -177,13 +173,13 @@ export default function EnergyAwareUIScreen() {
           )}
         </View>
 
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Settings</Text>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Settings</Text>
 
           <View style={styles.settingRow}>
             <View style={styles.settingInfo}>
-              <Text style={[styles.settingLabel, { color: colors.text }]}>Auto-Adjust UI</Text>
-              <Text style={[styles.settingDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.settingLabel, { color: palette.text }]}>Auto-Adjust UI</Text>
+              <Text style={[styles.settingDescription, { color: palette.textSecondary }]}>
                 Automatically adapt interface based on energy
               </Text>
             </View>
@@ -192,8 +188,8 @@ export default function EnergyAwareUIScreen() {
 
           <View style={styles.settingRow}>
             <View style={styles.settingInfo}>
-              <Text style={[styles.settingLabel, { color: colors.text }]}>Learn Patterns</Text>
-              <Text style={[styles.settingDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.settingLabel, { color: palette.text }]}>Learn Patterns</Text>
+              <Text style={[styles.settingDescription, { color: palette.textSecondary }]}>
                 Identify your low-energy times automatically
               </Text>
             </View>
@@ -214,7 +210,7 @@ const styles = StyleSheet.create({
   stateInfo: { marginLeft: 16 },
   stateName: { fontSize: 24, fontWeight: 'bold' },
   stateDescription: { fontSize: 14, marginTop: 4 },
-  progressBar: { height: 12, backgroundColor: '#E0E0E0', borderRadius: 6, overflow: 'hidden', marginBottom: 8 },
+  progressBar: { height: 12, borderRadius: 6, overflow: 'hidden', marginBottom: 8 },
   progressFill: { height: '100%' },
   progressText: { fontSize: 12 },
   sectionTitle: { fontSize: 18, fontWeight: '600', marginBottom: 12 },
@@ -235,3 +231,4 @@ const styles = StyleSheet.create({
   settingDescription: { fontSize: 13 },
   bottomSpacer: { height: 32 },
 });
+

@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     // Handle strict BYOC mode where auth is null
     if (!auth) {
       logger.log('[AuthContext] Strict BYOC mode - auth is null, user will be treated as guest');
-      console.log('[AuthContext] No Firebase auth available (strict BYOC mode)');
+      console.warn('[AuthContext] No Firebase auth available (strict BYOC mode)');
       setLoading(false);
       setUser(null);
       setIsGuest(true);
@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
 
     logger.log('[AuthContext] Setting up auth state listener');
-    console.log('[AuthContext] Firebase auth initialized, setting up listener');
+    console.warn('[AuthContext] Firebase auth initialized, setting up listener');
 
     const unsubscribe = onAuthStateChanged(
       auth,
@@ -198,3 +198,4 @@ export const useAuth = () => {
   if (!ctx) throw new Error('useAuth must be used within AuthProvider');
   return ctx;
 };
+

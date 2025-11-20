@@ -181,7 +181,7 @@ class EnergyAwareUIManager {
   private detectEnergyState(pattern: UsagePattern): void {
     // Multi-factor energy state detection
     let score = 0;
-    let matchCount = 0;
+    let __matchCount = 0;
 
     for (const [state, thresholds] of Object.entries(ENERGY_THRESHOLDS)) {
       let stateScore = 0;
@@ -192,7 +192,7 @@ class EnergyAwareUIManager {
       
       if (stateScore > score) {
         score = stateScore;
-        matchCount = 1;
+        _matchCount = 1;
         this.updateEnergyState(state as EnergyState);
       }
     }
@@ -506,3 +506,4 @@ export function useEnergyAwareUI(): {
 
 // Also export for non-React usage
 export { EnergyAwareUIManager };
+

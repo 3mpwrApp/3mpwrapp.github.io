@@ -13,7 +13,7 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     div.style.top = '0';
     div.style.left = '0';
     div.style.width = '100%';
-    div.style.backgroundColor = '#D32F2F';
+    div.style.backgroundColor = palette.primary;
     div.style.color = 'white';
     div.style.padding = '20px';
     div.style.zIndex = '99999';
@@ -30,7 +30,7 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     div.style.bottom = '0';
     div.style.left = '0';
     div.style.width = '100%';
-    div.style.backgroundColor = '#FFA000';
+    div.style.backgroundColor = palette.primary;
     div.style.color = 'black';
     div.style.padding = '10px';
     div.style.zIndex = '99999';
@@ -163,10 +163,10 @@ import { ToastViewport } from "../utils/toast";
 export default function RootLayout() {
   // EMERGENCY DEBUG
   React.useEffect(() => {
-    console.log('🚨 [RootLayout] Component mounted');
+    console.warn('🚨 [RootLayout] Component mounted');
   }, []);
 
-  const [renderError, setRenderError] = React.useState<Error | null>(null);
+  const [_renderError, _setRenderError] = React.useState<Error | null>(null);
   
   // Ensure vector icon fonts are loaded before rendering UI
   const [fontsLoaded, fontsError] = useFonts({
@@ -175,7 +175,7 @@ export default function RootLayout() {
   });
   
   React.useEffect(() => {
-    console.log('🚨 [RootLayout] Fonts loaded:', fontsLoaded, 'Error:', fontsError);
+    console.warn('🚨 [RootLayout] Fonts loaded:', fontsLoaded, 'Error:', fontsError);
   }, [fontsLoaded, fontsError]);
 
   const [reduceMotion, setReduceMotion] = React.useState(false);
@@ -266,7 +266,7 @@ export default function RootLayout() {
   if (renderError) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: 20 }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#d32f2f', marginBottom: 10 }}>App Error</Text>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: palette.primary, marginBottom: 10 }}>App Error</Text>
         <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>{renderError.message}</Text>
         <Text style={{ fontSize: 12, color: '#666', marginTop: 20, textAlign: 'center' }}>Check browser console (F12) for details</Text>
       </View>
@@ -379,7 +379,7 @@ export default function RootLayout() {
     // Emergency fallback - render a visible error screen
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: 20 }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#d32f2f', marginBottom: 10 }}>App Failed to Load</Text>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: palette.primary, marginBottom: 10 }}>App Failed to Load</Text>
         <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>
           {error instanceof Error ? error.message : 'Unknown error'}
         </Text>
@@ -495,6 +495,9 @@ const bannerStyles = StyleSheet.create({
   },
   text: { textAlign: "center", fontWeight: "700" },
 });
+
+
+
 
 
 

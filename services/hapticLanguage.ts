@@ -368,7 +368,7 @@ class HapticLanguageManager {
   // Pattern Playback
   // ============================================================================
 
-  async play(type: HapticMessageType, message?: string): Promise<void> {
+  async play(type: HapticMessageType, _message?: string): Promise<void> {
     if (!this.preferences.enabled) return;
     if (!this.preferences.enabledTypes[type]) return;
     if (this.isInQuietHours()) return;

@@ -9,10 +9,10 @@ export default function EmergencyDiagnostic() {
       flex: 1, 
       alignItems: 'center', 
       justifyContent: 'center', 
-      backgroundColor: '#f5f5f5',
+      backgroundColor: palette.primary,
       padding: 20 
     }}>
-      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#d32f2f', marginBottom: 20 }}>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: palette.primary, marginBottom: 20 }}>
         🚨 Emergency Diagnostic
       </Text>
       <Text style={{ fontSize: 16, color: '#000', marginBottom: 10 }}>
@@ -30,3 +30,4 @@ export default function EmergencyDiagnostic() {
     </View>
   );
 }
+

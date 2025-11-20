@@ -3,13 +3,13 @@ import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { useTheme } from '../../../context/ThemeContext';
+import { useAppPalette } from '../../../theme/usePalette';
 import { useTranslation } from '../../../i18n';
 import { useSpoonEconomist } from '../../../services/spoonEconomist';
 
 export default function SpoonEconomistScreen() {
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const palette = useAppPalette();
   const spoons = useSpoonEconomist();
   const { account } = spoons;
 
@@ -57,38 +57,38 @@ export default function SpoonEconomistScreen() {
       <Stack.Screen
         options={{
           title: t('Spoon Economist'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
         }}
       />
-      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
+      <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
           <View style={styles.budgetHeader}>
-            <Text style={[styles.budgetTitle, { color: colors.text }]}>Today's Spoon Budget</Text>
-            <Text style={[styles.budgetAmount, { color: colors.primary }]}>
-              {account?.spoonsAvailable || 0}/{account?.dailyAllocation || 12} 🥄
+            <Text style={[styles.budgetTitle, { color: palette.text }]}>Today's Spoon Budget</Text>
+            <Text style={[styles.budgetAmount, { color: palette.primary }]}>
+              {account?.currentSpoons || 0}/{account?.todayAllocated || 12} 🥄
             </Text>
           </View>
 
           <View style={styles.spoonVisual}>
-            {Array.from({ length: account?.dailyAllocation || 12 }).map((_, index) => (
-              <Text key={index} style={[styles.spoonIcon, { opacity: index < (account?.spoonsAvailable || 0) ? 1 : 0.3 }]}>
+            {Array.from({ length: account?.todayAllocated || 12 }).map((_, index) => (
+              <Text key={index} style={[styles.spoonIcon, { opacity: index < (account?.currentSpoons || 0) ? 1 : 0.3 }]}>
                 🥄
               </Text>
             ))}
           </View>
         </View>
 
-        {account && account.spoonsAvailable < 3 && account.spoonsAvailable > 0 && (
+        {account && account.currentSpoons < 3 && account.currentSpoons > 0 && (
           <View style={[styles.warningCard, { backgroundColor: '#FFF3CD' }]}>
             <Ionicons name="warning" size={24} color="#856404" />
             <Text style={[styles.warningText, { color: '#856404' }]}>
-              Low energy! Only {account.spoonsAvailable} spoons left today.
+              Low energy! Only {account.currentSpoons} spoons left today.
             </Text>
           </View>
         )}
 
-        {account && account.spoonsAvailable === 0 && (
+        {account && account.currentSpoons === 0 && (
           <View style={[styles.warningCard, { backgroundColor: '#F8D7DA' }]}>
             <Ionicons name="alert-circle" size={24} color="#721C24" />
             <Text style={[styles.warningText, { color: '#721C24' }]}>
@@ -97,7 +97,7 @@ export default function SpoonEconomistScreen() {
           </View>
         )}
 
-        {account && account.debt > 0 && (
+        {account && account.debtSpoons > 0 && (
           <View style={[styles.card, { backgroundColor: '#F8D7DA' }]}>
             <View style={styles.debtHeader}>
               <Ionicons name="warning" size={24} color="#721C24" />
@@ -105,7 +105,7 @@ export default function SpoonEconomistScreen() {
             </View>
 
             <Text style={[styles.debtAmount, { color: '#721C24' }]}>
-              {account.debt.toFixed(1)} spoons owed
+              {account.debtSpoons.toFixed(1)} spoons owed
             </Text>
             <Text style={[styles.debtDescription, { color: '#856404' }]}>
               Compound interest: 50% per day
@@ -116,34 +116,34 @@ export default function SpoonEconomistScreen() {
           </View>
         )}
 
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Quick Tasks</Text>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Quick Tasks</Text>
 
           <View style={styles.taskGrid}>
             {QUICK_TASKS.map((task) => (
               <Pressable
                 key={task.name}
-                style={[styles.taskButton, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}
+                style={[styles.taskButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
                 onPress={() => spendTask(task.name, task.cost)}
               >
-                <Text style={[styles.taskName, { color: colors.text }]}>{task.name}</Text>
-                <Text style={[styles.taskCost, { color: colors.primary }]}>{task.cost} 🥄</Text>
+                <Text style={[styles.taskName, { color: palette.text }]}>{task.name}</Text>
+                <Text style={[styles.taskCost, { color: palette.primary }]}>{task.cost} 🥄</Text>
               </Pressable>
             ))}
           </View>
 
           <Pressable
-            style={[styles.customButton, { backgroundColor: colors.surface, borderColor: colors.border }]}
+            style={[styles.customButton, { backgroundColor: palette.surface, borderColor: palette.border }]}
             onPress={() => setShowCustomTaskModal(true)}
           >
-            <Ionicons name="add-circle" size={20} color={colors.primary} />
-            <Text style={[styles.customButtonText, { color: colors.primary }]}>Custom Task</Text>
+            <Ionicons name="add-circle" size={20} color={palette.primary} />
+            <Text style={[styles.customButtonText, { color: palette.primary }]}>Custom Task</Text>
           </Pressable>
         </View>
 
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Borrow Spoons</Text>
-          <Text style={[styles.sectionDescription, { color: colors.textSecondary }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Borrow Spoons</Text>
+          <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
             Borrow from tomorrow at 50% interest (compounds daily)
           </Text>
 
@@ -170,26 +170,26 @@ export default function SpoonEconomistScreen() {
         </View>
 
         {monthlyReport && monthlyReport.topTasks.length > 0 && (
-          <View style={[styles.card, { backgroundColor: colors.surface }]}>
-            <Text style={[styles.sectionTitle, { color: colors.text }]}>Monthly Report</Text>
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <Text style={[styles.sectionTitle, { color: palette.text }]}>Monthly Report</Text>
 
             <View style={styles.reportRow}>
-              <Text style={[styles.reportLabel, { color: colors.textSecondary }]}>Top Task</Text>
-              <Text style={[styles.reportValue, { color: colors.text }]}>
+              <Text style={[styles.reportLabel, { color: palette.textSecondary }]}>Top Task</Text>
+              <Text style={[styles.reportValue, { color: palette.text }]}>
                 {monthlyReport.topTasks[0]?.taskId || 'N/A'}
               </Text>
             </View>
 
             <View style={styles.reportRow}>
-              <Text style={[styles.reportLabel, { color: colors.textSecondary }]}>Rest Days</Text>
-              <Text style={[styles.reportValue, { color: colors.text }]}>
+              <Text style={[styles.reportLabel, { color: palette.textSecondary }]}>Rest Days</Text>
+              <Text style={[styles.reportValue, { color: palette.text }]}>
                 {monthlyReport.restDays || 0}
               </Text>
             </View>
 
             <View style={styles.reportRow}>
-              <Text style={[styles.reportLabel, { color: colors.textSecondary }]}>Debt Days</Text>
-              <Text style={[styles.reportValue, { color: colors.text }]}>
+              <Text style={[styles.reportLabel, { color: palette.textSecondary }]}>Debt Days</Text>
+              <Text style={[styles.reportValue, { color: palette.text }]}>
                 {monthlyReport.debtDays || 0}
               </Text>
             </View>
@@ -198,21 +198,21 @@ export default function SpoonEconomistScreen() {
 
         <Modal visible={showCustomTaskModal} transparent animationType="slide">
           <View style={styles.modalOverlay}>
-            <View style={[styles.modalContent, { backgroundColor: colors.surface }]}>
-              <Text style={[styles.modalTitle, { color: colors.text }]}>Custom Task</Text>
+            <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>Custom Task</Text>
 
               <TextInput
-                style={[styles.input, { backgroundColor: colors.background, color: colors.text, borderColor: colors.border }]}
+                style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
                 placeholder="Task name"
-                placeholderTextColor={colors.textSecondary}
+                placeholderTextColor={palette.textSecondary}
                 value={customTaskName}
                 onChangeText={setCustomTaskName}
               />
 
               <TextInput
-                style={[styles.input, { backgroundColor: colors.background, color: colors.text, borderColor: colors.border }]}
+                style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
                 placeholder="Spoon cost (1-12)"
-                placeholderTextColor={colors.textSecondary}
+                placeholderTextColor={palette.textSecondary}
                 keyboardType="numeric"
                 value={customTaskCost}
                 onChangeText={setCustomTaskCost}
@@ -220,13 +220,13 @@ export default function SpoonEconomistScreen() {
 
               <View style={styles.modalButtons}>
                 <Pressable
-                  style={[styles.modalButton, { backgroundColor: colors.border }]}
+                  style={[styles.modalButton, { backgroundColor: palette.border }]}
                   onPress={() => setShowCustomTaskModal(false)}
                 >
                   <Text style={styles.modalButtonText}>Cancel</Text>
                 </Pressable>
                 <Pressable
-                  style={[styles.modalButton, { backgroundColor: colors.primary }]}
+                  style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={addCustomTask}
                 >
                   <Text style={styles.modalButtonText}>Add</Text>
@@ -279,3 +279,5 @@ const styles = StyleSheet.create({
   modalButtonText: { color: '#FFF', fontSize: 14, fontWeight: '600' },
   bottomSpacer: { height: 32 },
 });
+
+

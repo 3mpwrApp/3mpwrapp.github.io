@@ -12,7 +12,7 @@ const scheme = 'empowrapp://';
 
 export default function Index() {
   // EMERGENCY DEBUG
-  console.log('🚨 [Index] Component mounted');
+  console.warn('🚨 [Index] Component mounted');
   
   const { user, loading } = useAuth();
   const palette = useAppPalette();
@@ -21,17 +21,17 @@ export default function Index() {
 
   // Web-specific: Add console logging for debugging
   useEffect(() => {
-    console.log('[Index WEB] Component mounted', { loading, hasUser: !!user });
+    console.warn('[Index WEB] Component mounted', { loading, hasUser: !!user });
     if (Platform.OS === 'web') {
-      // eslint-disable-next-line no-console
-      console.log('[Index WEB] Component mounted', { loading, hasUser: !!user });
+       
+      console.warn('[Index WEB] Component mounted', { loading, hasUser: !!user });
     }
   }, []);
   
   useEffect(() => {
     if (Platform.OS === 'web') {
-      // eslint-disable-next-line no-console
-      console.log('[Index WEB] Auth state changed', { loading, hasUser: !!user, segments });
+       
+      console.warn('[Index WEB] Auth state changed', { loading, hasUser: !!user, segments });
     }
   }, [loading, user, segments]);
 
@@ -93,22 +93,22 @@ export default function Index() {
     if (loading) {
       logger.log('[Index] Still loading auth state...');
       if (Platform.OS === 'web') {
-        console.log('[Index WEB] Waiting for auth to load...');
+        console.warn('[Index WEB] Waiting for auth to load...');
       }
       return; // Still loading, wait
     }
     
     // Auth is done loading - immediately redirect based on user state
-    console.log('[Index WEB] Auth loaded, user:', !!user);
+    console.warn('[Index WEB] Auth loaded, user:', !!user);
     
     // Simple redirect: if no user, go to signin; if user, go to tabs
     if (!user) {
       logger.log('[Index] No user - navigating to signin');
-      console.log('[Index WEB] Redirecting to /(auth)/signin');
+      console.warn('[Index WEB] Redirecting to /(auth)/signin');
       router.replace('/(auth)/signin' as any);
     } else {
       logger.log('[Index] User authenticated - navigating to tabs');
-      console.log('[Index WEB] Redirecting to /(tabs)');
+      console.warn('[Index WEB] Redirecting to /(tabs)');
       router.replace('/(tabs)');
     }
   }, [loading, user, router]); // React to loading, user, and router changes only
@@ -127,7 +127,7 @@ export default function Index() {
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: palette.background || '#fff' }}>
-      <ActivityIndicator size="large" color={palette.primary || '#007AFF'} />
+      <ActivityIndicator size="large" color={palette.primary || palette.primary} />
       <Text style={{ marginTop: 20, color: palette.text || '#000', fontSize: 16 }}>
         Loading 3mpwr App... {loading ? '(Initializing auth)' : '(Redirecting)'}
       </Text>
@@ -139,3 +139,5 @@ export default function Index() {
     </View>
   );
 }
+
+

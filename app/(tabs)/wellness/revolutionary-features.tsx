@@ -2,8 +2,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { Stack, router } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { useTheme } from '../../../context/ThemeContext';
 import { useTranslation } from '../../../i18n';
+import { useAppPalette } from '../../../theme/usePalette';
 
 interface RevolutionaryFeature {
   id: string;
@@ -22,7 +22,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Interface adapts to your energy level automatically',
     icon: 'color-wand',
     route: '/wellness/energy-aware-ui',
-    color: '#1E90FF',
+    // color removed,
     badge: 'BETA',
   },
   {
@@ -31,7 +31,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Learn 14 vibration patterns with unique meanings',
     icon: 'phone-portrait',
     route: '/wellness/haptic-language',
-    color: '#9370DB',
+    // color removed,
     badge: 'BETA',
   },
   {
@@ -40,7 +40,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Energy budgeting with debt & interest tracking',
     icon: 'restaurant',
     route: '/wellness/spoon-economist',
-    color: '#FF6347',
+    // color removed,
     badge: 'BETA',
   },
   {
@@ -49,7 +49,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'WHO ICF assessment for disability claims',
     icon: 'clipboard',
     route: '/wellness/functional-capacity',
-    color: '#32CD32',
+    // color removed,
     badge: 'BETA',
   },
   {
@@ -58,7 +58,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Crisis intervention with panic attack interrupter',
     icon: 'medical',
     route: '/wellness/emotional-first-aid',
-    color: '#DC143C',
+    // color removed,
     badge: 'BETA',
   },
   {
@@ -67,7 +67,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Sleep optimization with chronotype & debt tracking',
     icon: 'moon',
     route: '/wellness/circadian-dj',
-    color: '#4B0082',
+    // color removed,
     badge: 'BETA',
   },
   {
@@ -76,7 +76,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Real-time thought pattern recognition',
     icon: 'brain',
     route: '/wellness/cognitive-scanner',
-    color: '#FF1493',
+    // color removed,
     badge: 'BETA',
   },
   {
@@ -85,7 +85,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Quantum energy states + 24hr mood forecasting combined',
     icon: 'speedometer',
     route: '/wellness/energy-mood-dashboard',
-    color: '#9370DB',
+    // color removed,
     badge: 'BETA',
   },
   {
@@ -94,14 +94,14 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Case genome mapping for advocacy',
     icon: 'document-text',
     route: '/advocacy/legal-dna',
-    color: '#8B4513',
+    // color removed,
     badge: 'BETA',
   },
 ];
 
-export default function RevolutionaryFeaturesHub() {
-  const { t } = useTranslation();
-  const { colors } = useTheme();
+export default function RevolutionaryFeaturesScreen() {
+  const { t: _t } = useTranslation();
+  const palette = useAppPalette();
 
   const navigateToFeature = (route: string) => {
     router.push(route as any);
@@ -112,20 +112,20 @@ export default function RevolutionaryFeaturesHub() {
       <Stack.Screen
         options={{
           title: 'Revolutionary Features',
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
         }}
       />
-      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
+      <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
         {/* Header */}
-        <View style={[styles.header, { backgroundColor: colors.surface }]}>
+        <View style={[styles.header, { backgroundColor: palette.surface }]}>
           <View style={styles.headerContent}>
-            <Ionicons name="rocket" size={48} color={colors.primary} />
+            <Ionicons name="rocket" size={48} color={palette.primary} />
             <View style={styles.headerText}>
-              <Text style={[styles.headerTitle, { color: colors.text }]}>
+              <Text style={[styles.headerTitle, { color: palette.text }]}>
                 World-First Beta Features
               </Text>
-              <Text style={[styles.headerSubtitle, { color: colors.textSecondary }]}>
+              <Text style={[styles.headerSubtitle, { color: palette.textSecondary }]}>
                 10 revolutionary tools that don't exist anywhere else
               </Text>
             </View>
@@ -137,7 +137,7 @@ export default function RevolutionaryFeaturesHub() {
           {REVOLUTIONARY_FEATURES.map(feature => (
             <Pressable
               key={feature.id}
-              style={[styles.featureCard, { backgroundColor: colors.surface }]}
+              style={[styles.featureCard, { backgroundColor: palette.surface }]}
               onPress={() => navigateToFeature(feature.route)}
             >
               {feature.badge && (
@@ -151,70 +151,70 @@ export default function RevolutionaryFeaturesHub() {
               </View>
 
               <View style={styles.featureContent}>
-                <Text style={[styles.featureTitle, { color: colors.text }]}>
+                <Text style={[styles.featureTitle, { color: palette.text }]}>
                   {feature.title}
                 </Text>
-                <Text style={[styles.featureDescription, { color: colors.textSecondary }]}>
+                <Text style={[styles.featureDescription, { color: palette.textSecondary }]}>
                   {feature.description}
                 </Text>
               </View>
 
               <View style={styles.arrow}>
-                <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+                <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
               </View>
             </Pressable>
           ))}
         </View>
 
         {/* About Revolutionary Features */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>
             What Makes These Revolutionary?
           </Text>
 
           <View style={styles.benefitRow}>
-            <Ionicons name="shield-checkmark" size={24} color={colors.primary} />
+            <Ionicons name="shield-checkmark" size={24} color={palette.primary} />
             <View style={styles.benefitText}>
-              <Text style={[styles.benefitTitle, { color: colors.text }]}>
+              <Text style={[styles.benefitTitle, { color: palette.text }]}>
                 Privacy-First Design
               </Text>
-              <Text style={[styles.benefitDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.benefitDescription, { color: palette.textSecondary }]}>
                 All data stored locally on your device. No cloud uploads.
               </Text>
             </View>
           </View>
 
           <View style={styles.benefitRow}>
-            <Ionicons name="flash" size={24} color={colors.primary} />
+            <Ionicons name="flash" size={24} color={palette.primary} />
             <View style={styles.benefitText}>
-              <Text style={[styles.benefitTitle, { color: colors.text }]}>
+              <Text style={[styles.benefitTitle, { color: palette.text }]}>
                 Science-Backed Innovation
               </Text>
-              <Text style={[styles.benefitDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.benefitDescription, { color: palette.textSecondary }]}>
                 Based on WHO frameworks, CBT/DBT principles, and disability research.
               </Text>
             </View>
           </View>
 
           <View style={styles.benefitRow}>
-            <Ionicons name="people" size={24} color={colors.primary} />
+            <Ionicons name="people" size={24} color={palette.primary} />
             <View style={styles.benefitText}>
-              <Text style={[styles.benefitTitle, { color: colors.text }]}>
+              <Text style={[styles.benefitTitle, { color: palette.text }]}>
                 Lived Experience Design
               </Text>
-              <Text style={[styles.benefitDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.benefitDescription, { color: palette.textSecondary }]}>
                 Created by and for people with disabilities and chronic illness.
               </Text>
             </View>
           </View>
 
           <View style={styles.benefitRow}>
-            <Ionicons name="analytics" size={24} color={colors.primary} />
+            <Ionicons name="analytics" size={24} color={palette.primary} />
             <View style={styles.benefitText}>
-              <Text style={[styles.benefitTitle, { color: colors.text }]}>
+              <Text style={[styles.benefitTitle, { color: palette.text }]}>
                 Quantifiable Evidence
               </Text>
-              <Text style={[styles.benefitDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.benefitDescription, { color: palette.textSecondary }]}>
                 Generate data for disability claims, medical providers, and legal cases.
               </Text>
             </View>
@@ -222,12 +222,12 @@ export default function RevolutionaryFeaturesHub() {
         </View>
 
         {/* Feedback */}
-        <View style={[styles.card, { backgroundColor: colors.primary + '20' }]}>
+        <View style={[styles.card, { backgroundColor: palette.primary + '20' }]}>
           <View style={styles.feedbackHeader}>
-            <Ionicons name="chatbubbles" size={24} color={colors.primary} />
-            <Text style={[styles.feedbackTitle, { color: colors.text }]}>Beta Feedback</Text>
+            <Ionicons name="chatbubbles" size={24} color={palette.primary} />
+            <Text style={[styles.feedbackTitle, { color: palette.text }]}>Beta Feedback</Text>
           </View>
-          <Text style={[styles.feedbackText, { color: colors.textSecondary }]}>
+          <Text style={[styles.feedbackText, { color: palette.textSecondary }]}>
             These features are actively being developed. Your feedback shapes their evolution.
             Report bugs, suggest improvements, or share success stories through Settings → Support.
           </Text>
@@ -371,3 +371,5 @@ const styles = StyleSheet.create({
     height: 32,
   },
 });
+
+

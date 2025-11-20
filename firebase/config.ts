@@ -68,14 +68,14 @@ let app: FirebaseApp | null = null;
 try {
   if (!STRICT) {
     app = getFirebaseApp();
-    console.log('[Firebase] App initialized successfully', { mode: STRICT ? 'strict' : HYBRID ? 'hybrid' : 'default', platform: platformOS });
+    console.warn('[Firebase] App initialized successfully', { mode: STRICT ? 'strict' : HYBRID ? 'hybrid' : 'default', platform: platformOS });
     
     if (!IS_TEST && platformOS !== "web") {
       try {
         // Dynamically import RN-only APIs to avoid type mismatch on web
         const { initializeAuth, getReactNativePersistence } = require("firebase/auth");
         initializeAuth(app, { persistence: getReactNativePersistence(ReactNativeAsyncStorage) });
-        console.log('[Firebase] Auth persistence initialized for native');
+        console.warn('[Firebase] Auth persistence initialized for native');
       } catch (authError) {
         // ignore if already initialized or not available
         console.warn('[Firebase] Auth persistence setup failed (may already be initialized):', authError);
@@ -132,3 +132,4 @@ export async function getFirebaseAnalytics(): Promise<any | null> {
 try {
   if (!STRICT && !HYBRID) setLogLevel("error");
 } catch {}
+

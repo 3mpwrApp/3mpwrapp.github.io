@@ -844,3 +844,4 @@ export function useCognitiveDistortionScanner() {
       cognitiveDistortionScanner.markHelpful(thoughtId, helpful),
   };
 }
+

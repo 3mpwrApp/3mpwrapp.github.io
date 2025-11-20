@@ -3,14 +3,14 @@ import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { useTheme } from '../../../context/ThemeContext';
+import { useAppPalette } from '../../../theme/usePalette';
 import { useTranslation } from '../../../i18n';
 import { useEmotionalWeatherStation } from '../../../services/emotionalWeatherStation';
 import { useEnergyQuantumMechanics } from '../../../services/energyQuantumMechanics';
 
 export default function EnergyMoodDashboard() {
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const palette = useAppPalette();
   const quantum = useEnergyQuantumMechanics();
   const weather = useEmotionalWeatherStation();
 
@@ -68,11 +68,11 @@ export default function EnergyMoodDashboard() {
       <Stack.Screen
         options={{
           title: t('Energy & Mood Dashboard'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
         }}
       />
-      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
+      <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
         {/* Quantum Energy State */}
         <View
           style={[
@@ -90,10 +90,10 @@ export default function EnergyMoodDashboard() {
               <Ionicons name="flash" size={32} color="#FFF" />
             </View>
             <View style={styles.stateInfo}>
-              <Text style={[styles.stateTitle, { color: colors.text }]}>
+              <Text style={[styles.stateTitle, { color: palette.text }]}>
                 {quantumState.state.replace(/_/g, ' ').toUpperCase()}
               </Text>
-              <Text style={[styles.stateDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.stateDescription, { color: palette.textSecondary }]}>
                 Energy Level: {quantumState.energyLevel}/{quantumState.maxEnergy}
               </Text>
             </View>
@@ -112,7 +112,7 @@ export default function EnergyMoodDashboard() {
           </View>
 
           {quantumState.halfLife && (
-            <Text style={[styles.halfLifeText, { color: colors.textSecondary }]}>
+            <Text style={[styles.halfLifeText, { color: palette.textSecondary }]}>
               State decay half-life: {quantumState.halfLife} minutes
             </Text>
           )}
@@ -191,26 +191,26 @@ export default function EnergyMoodDashboard() {
                 />
               </View>
               <View style={styles.weatherInfo}>
-                <Text style={[styles.weatherTitle, { color: colors.text }]}>
+                <Text style={[styles.weatherTitle, { color: palette.text }]}>
                   {currentWeather.weatherType.replace(/_/g, ' ').toUpperCase()}
                 </Text>
-                <Text style={[styles.weatherIntensity, { color: colors.textSecondary }]}>
+                <Text style={[styles.weatherIntensity, { color: palette.textSecondary }]}>
                   Intensity: {currentWeather.intensity}/5
                 </Text>
               </View>
             </View>
 
-            <Text style={[styles.weatherDescription, { color: colors.text }]}>
+            <Text style={[styles.weatherDescription, { color: palette.text }]}>
               {currentWeather.description}
             </Text>
 
             {currentWeather.triggers.length > 0 && (
               <View style={styles.triggersSection}>
-                <Text style={[styles.triggersLabel, { color: colors.textSecondary }]}>
+                <Text style={[styles.triggersLabel, { color: palette.textSecondary }]}>
                   Possible triggers:
                 </Text>
                 {currentWeather.triggers.map((trigger, index) => (
-                  <Text key={index} style={[styles.triggerText, { color: colors.text }]}>
+                  <Text key={index} style={[styles.triggerText, { color: palette.text }]}>
                     • {trigger}
                   </Text>
                 ))}
@@ -221,15 +221,15 @@ export default function EnergyMoodDashboard() {
 
         {/* Mood Forecast */}
         {moodForecast && moodForecast.length > 0 && (
-          <View style={[styles.card, { backgroundColor: colors.surface }]}>
-            <Text style={[styles.sectionTitle, { color: colors.text }]}>
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <Text style={[styles.sectionTitle, { color: palette.text }]}>
               24-Hour Mood Forecast
             </Text>
 
             {moodForecast.slice(0, 6).map((forecast, index) => (
-              <View key={index} style={[styles.forecastCard, { borderColor: colors.border }]}>
+              <View key={index} style={[styles.forecastCard, { borderColor: palette.border }]}>
                 <View style={styles.forecastHeader}>
-                  <Text style={[styles.forecastTime, { color: colors.text }]}>
+                  <Text style={[styles.forecastTime, { color: palette.text }]}>
                     {new Date(forecast.timestamp).toLocaleTimeString([], {
                       hour: '2-digit',
                       minute: '2-digit',
@@ -253,12 +253,12 @@ export default function EnergyMoodDashboard() {
                       styles.confidenceFill,
                       {
                         width: `${forecast.confidence * 100}%`,
-                        backgroundColor: colors.primary,
+                        backgroundColor: palette.primary,
                       },
                     ]}
                   />
                 </View>
-                <Text style={[styles.confidenceText, { color: colors.textSecondary }]}>
+                <Text style={[styles.confidenceText, { color: palette.textSecondary }]}>
                   {(forecast.confidence * 100).toFixed(0)}% confidence
                 </Text>
               </View>
@@ -267,51 +267,51 @@ export default function EnergyMoodDashboard() {
         )}
 
         {/* Social Energy Economics */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>
             Social Energy Economics
           </Text>
-          <Text style={[styles.sectionDescription, { color: colors.textSecondary }]}>
+          <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
             Track which social interactions drain or restore your energy
           </Text>
 
           <Pressable
-            style={[styles.toolButton, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}
+            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={() => alert('Social energy tracking coming soon!')}
           >
-            <Ionicons name="people" size={24} color={colors.primary} />
+            <Ionicons name="people" size={24} color={palette.primary} />
             <View style={styles.toolInfo}>
-              <Text style={[styles.toolTitle, { color: colors.text }]}>
+              <Text style={[styles.toolTitle, { color: palette.text }]}>
                 Log Social Interaction
               </Text>
-              <Text style={[styles.toolDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
                 Record energy cost/gain from social events
               </Text>
             </View>
-            <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
           </Pressable>
         </View>
 
         {/* Temporal Energy Shifting */}
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>
             Temporal Energy Tools
           </Text>
 
           <Pressable
-            style={[styles.toolButton, { backgroundColor: colors.primary + '20', borderColor: colors.primary }]}
+            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={shiftEnergy}
           >
-            <Ionicons name="time" size={24} color={colors.primary} />
+            <Ionicons name="time" size={24} color={palette.primary} />
             <View style={styles.toolInfo}>
-              <Text style={[styles.toolTitle, { color: colors.text }]}>
+              <Text style={[styles.toolTitle, { color: palette.text }]}>
                 Shift Energy Timeline
               </Text>
-              <Text style={[styles.toolDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
                 Borrow energy from future days (with interest)
               </Text>
             </View>
-            <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
           </Pressable>
         </View>
 
@@ -525,3 +525,4 @@ const styles = StyleSheet.create({
     height: 32,
   },
 });
+

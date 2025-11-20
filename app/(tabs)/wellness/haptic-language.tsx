@@ -3,35 +3,35 @@ import { Stack } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 
-import { useTheme } from '../../../context/ThemeContext';
 import { useTranslation } from '../../../i18n';
-import type { HapticMessageType} from '../../../services/hapticLanguage';
+import type { HapticMessageType } from '../../../services/hapticLanguage';
 import { useHapticLanguage } from '../../../services/hapticLanguage';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export default function HapticLanguageScreen() {
   const { t } = useTranslation();
-  const { colors } = useTheme();
+  const palette = useAppPalette();
   const haptic = useHapticLanguage();
 
   const [lastPlayed, setLastPlayed] = useState<string | null>(null);
   const [stats, setStats] = useState(haptic.getUsageStats());
-  const [isTraining, setIsTraining] = useState(false);
+  const [_isTraining, _setIsTraining] = useState(false);
   const [quietHours, setQuietHours] = useState(false);
 
   const PATTERN_INFO: Record<string, { icon: string; description: string; example: string; color: string }> = {
-    urgent_deadline: { icon: 'alarm', description: 'Short urgent pulses', example: 'Task due in 1 hour', color: '#DC143C' },
-    appointment_soon: { icon: 'calendar', description: 'Gentle reminder rhythm', example: 'Appointment in 30 min', color: '#FF8C00' },
-    medication_reminder: { icon: 'medical', description: 'Double-tap pattern', example: 'Time for medication', color: '#1E90FF' },
-    new_message: { icon: 'chatbubble', description: 'Single soft pulse', example: 'New chat message', color: '#32CD32' },
-    emergency_alert: { icon: 'warning', description: 'SOS morse code', example: 'Emergency situation', color: '#8B0000' },
-    achievement: { icon: 'trophy', description: 'Ascending celebration', example: 'Goal completed!', color: '#FFD700' },
-    warning: { icon: 'alert', description: 'Triple-pulse warning', example: 'Low battery', color: '#FFA500' },
-    energy_low: { icon: 'battery-charging', description: 'Fading pattern', example: 'Spoons depleting', color: '#FF4500' },
-    task_complete: { icon: 'checkmark-circle', description: 'Success rhythm', example: 'Task finished', color: '#28A745' },
-    spoon_depleted: { icon: 'restaurant', description: 'Empty pattern', example: 'No spoons left', color: '#DC143C' },
-    mood_check: { icon: 'happy', description: 'Friendly reminder', example: 'How are you feeling?', color: '#9370DB' },
-    crisis_contact: { icon: 'call', description: 'Urgent SOS', example: 'Emergency contact activated', color: '#B22222' },
-    breathing_guide: { icon: 'fitness', description: '4-7-8 rhythm', example: 'Guided breathing', color: '#20B2AA' },
+    urgent_deadline: { icon: 'alarm', description: 'Short urgent pulses', example: 'Task due in 1 hour', color: palette.error },
+    appointment_soon: { icon: 'calendar', description: 'Gentle reminder rhythm', example: 'Appointment in 30 min', color: palette.warning },
+    medication_reminder: { icon: 'medical', description: 'Double-tap pattern', example: 'Time for medication', color: palette.info },
+    new_message: { icon: 'chatbubble', description: 'Single soft pulse', example: 'New chat message', color: palette.success },
+    emergency_alert: { icon: 'warning', description: 'SOS morse code', example: 'Emergency situation', color: palette.error },
+    achievement: { icon: 'trophy', description: 'Ascending celebration', example: 'Goal completed!', color: palette.success },
+    warning: { icon: 'alert', description: 'Triple-pulse warning', example: 'Low battery', color: palette.warning },
+    energy_low: { icon: 'battery-charging', description: 'Fading pattern', example: 'Spoons depleting', color: palette.error },
+    task_complete: { icon: 'checkmark-circle', description: 'Success rhythm', example: 'Task finished', color: palette.success },
+    spoon_depleted: { icon: 'restaurant', description: 'Empty pattern', example: 'No spoons left', color: palette.error },
+    mood_check: { icon: 'happy', description: 'Friendly reminder', example: 'How are you feeling?', color: palette.primary },
+    crisis_contact: { icon: 'call', description: 'Urgent SOS', example: 'Emergency contact activated', color: palette.error },
+    breathing_guide: { icon: 'fitness', description: '4-7-8 rhythm', example: 'Guided breathing', color: palette.success },
   };
 
   const playPattern = async (pattern: string) => {
@@ -43,7 +43,7 @@ export default function HapticLanguageScreen() {
   const patterns = Object.keys(PATTERN_INFO);
 
   const startTraining = () => {
-    setIsTraining(true);
+    _setIsTraining(true);
     const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
     playPattern(randomPattern);
   };
@@ -53,14 +53,14 @@ export default function HapticLanguageScreen() {
       <Stack.Screen
         options={{
           title: t('Haptic Language'),
-          headerStyle: { backgroundColor: colors.surface },
-          headerTintColor: colors.text,
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
         }}
       />
-      <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Pattern Library</Text>
-          <Text style={[styles.sectionDescription, { color: colors.textSecondary }]}>
+      <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Pattern Library</Text>
+          <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
             Tap any pattern to feel it
           </Text>
 
@@ -72,7 +72,7 @@ export default function HapticLanguageScreen() {
             return (
               <Pressable
                 key={pattern}
-                style={[styles.patternCard, { borderColor: isLast ? colors.primary : colors.border }]}
+                style={[styles.patternCard, { borderColor: isLast ? palette.primary : palette.border }]}
                 onPress={() => playPattern(pattern)}
               >
                 <View style={[styles.iconContainer, { backgroundColor: info.color + '20' }]}>
@@ -80,25 +80,25 @@ export default function HapticLanguageScreen() {
                 </View>
 
                 <View style={styles.patternInfo}>
-                  <Text style={[styles.patternName, { color: colors.text }]}>
+                  <Text style={[styles.patternName, { color: palette.text }]}>
                     {pattern.replace(/_/g, ' ').toUpperCase()}
                   </Text>
-                  <Text style={[styles.patternDescription, { color: colors.textSecondary }]}>
+                  <Text style={[styles.patternDescription, { color: palette.textSecondary }]}>
                     {info.description}
                   </Text>
-                  <Text style={[styles.patternExample, { color: colors.textSecondary }]}>
+                  <Text style={[styles.patternExample, { color: palette.textSecondary }]}>
                     💡 {info.example}
                   </Text>
                   {usageCount > 0 && (
-                    <Text style={[styles.usageCount, { color: colors.textSecondary }]}>
+                    <Text style={[styles.usageCount, { color: palette.textSecondary }]}>
                       Used {usageCount} times
                     </Text>
                   )}
                 </View>
 
                 {isLast && (
-                  <View style={[styles.playingBadge, { backgroundColor: colors.primary }]}>
-                    <Text style={styles.playingText}>PLAYING</Text>
+                  <View style={[styles.playingBadge, { backgroundColor: palette.primary }]}>
+                    <Text style={[styles.playingText, { color: palette.onPrimary }]}>PLAYING</Text>
                   </View>
                 )}
               </Pressable>
@@ -106,29 +106,29 @@ export default function HapticLanguageScreen() {
           })}
         </View>
 
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Training Mode</Text>
-          <Text style={[styles.sectionDescription, { color: colors.textSecondary }]}>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Training Mode</Text>
+          <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
             Practice identifying patterns by feel
           </Text>
 
           <Pressable
-            style={[styles.trainingButton, { backgroundColor: colors.primary }]}
+            style={[styles.trainingButton, { backgroundColor: palette.primary }]}
             onPress={startTraining}
           >
-            <Ionicons name="school" size={20} color="#FFF" />
-            <Text style={styles.trainingButtonText}>Play Random Pattern</Text>
+            <Ionicons name="school" size={20} color={palette.onPrimary} />
+            <Text style={[styles.trainingButtonText, { color: palette.onPrimary }]}>Play Random Pattern</Text>
           </Pressable>
         </View>
 
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Settings</Text>
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Settings</Text>
 
           <View style={styles.settingRow}>
-            <Ionicons name={quietHours ? 'moon' : 'moon-outline'} size={24} color={colors.textSecondary} />
+            <Ionicons name={quietHours ? 'moon' : 'moon-outline'} size={24} color={palette.textSecondary} />
             <View style={styles.settingInfo}>
-              <Text style={[styles.settingLabel, { color: colors.text }]}>Quiet Hours</Text>
-              <Text style={[styles.settingDescription, { color: colors.textSecondary }]}>
+              <Text style={[styles.settingLabel, { color: palette.text }]}>Quiet Hours</Text>
+              <Text style={[styles.settingDescription, { color: palette.textSecondary }]}>
                 Disable vibrations during sleep (10pm-7am)
               </Text>
             </View>
@@ -155,12 +155,13 @@ const styles = StyleSheet.create({
   patternExample: { fontSize: 12, fontStyle: 'italic' },
   usageCount: { fontSize: 11, marginTop: 4 },
   playingBadge: { paddingHorizontal: 8, paddingVertical: 4, borderRadius: 4 },
-  playingText: { color: '#FFF', fontSize: 10, fontWeight: 'bold' },
+  playingText: { fontSize: 10, fontWeight: 'bold' },
   trainingButton: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: 12, borderRadius: 8 },
-  trainingButtonText: { color: '#FFF', fontSize: 16, fontWeight: '600', marginLeft: 8 },
+  trainingButtonText: { fontSize: 16, fontWeight: '600', marginLeft: 8 },
   settingRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 12 },
   settingInfo: { marginLeft: 12, flex: 1 },
   settingLabel: { fontSize: 16, fontWeight: '600', marginBottom: 2 },
   settingDescription: { fontSize: 13 },
   bottomSpacer: { height: 32 },
 });
+
