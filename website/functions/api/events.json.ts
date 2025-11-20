@@ -1,14 +1,13 @@
 /**
  * Cloudflare Pages Function - GET /api/events.json
- * Returns events data from local file
+ * Returns events data
+ * Note: Events are managed via Firestore, so this returns empty array
+ * Live events are synced from app to Firestore collections
  */
 
-// Import events data - Cloudflare Pages Functions support TypeScript
-import eventsData from '../../../data/events';
+const events = [];
 
-export async function onRequest(context: any) {
-  const { events } = eventsData;
-  
+export async function onRequest(context) {
   return new Response(
     JSON.stringify({
       events,
