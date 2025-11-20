@@ -1,104 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-19T18:16:53.701Z",
+  "lastUpdated": "2025-11-20T00:52:01.999Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2860,
+      "totalPosts": 2885,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T18:16:43.479Z"
+      "lastSeen": "2025-11-20T00:51:53.226Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 2875,
+      "totalPosts": 2900,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T18:16:45.846Z"
+      "lastSeen": "2025-11-20T00:51:55.277Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2862,
+      "totalPosts": 2887,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T18:16:48.102Z"
+      "lastSeen": "2025-11-20T00:51:57.265Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2868,
+      "totalPosts": 2893,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T18:16:50.372Z"
+      "lastSeen": "2025-11-20T00:51:59.231Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 2875,
+      "totalPosts": 2900,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-19T18:16:52.697Z"
+      "lastSeen": "2025-11-20T00:52:00.995Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
-      "author": "kennef.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 13,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
-      "author": "blindnewworld.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
-      "author": "kennef.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "RIP Alice Wong 💖 \n\nAlice has been and will always be a guiding star to me. She was such a brilliant advocate, writer, editor, and lovely person. \n\nI hope more people continue to practice and fight for #DisabilityJustice in her name 💖",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "*slaps the roof of my skyline*\n\nthis baby could fit so many #jayvik #art reskeets—SFW and NSFW—if they had alt text…\n\npretty please? 🥺🙏🏻 #accessibility",
-      "author": "m00psy.bsky.social",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Congratulations to everyone nominated!!\n\nAnd selfishly very happy to see one of our games being nominated alongside titles who've done amazing work in the #accessibility field this year. \n\nKnowing that lots of those games had friends working on them, it feels like a big family picture <3",
-      "author": "tisseranddavid.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "#PixelPalooza is coming up this Thursday!\n\nThis awesome FREE online event covers how to make sure all those helpful images and videos on your site don't hurt #webperf and #a11y.\n\nI'm joining @seancdavis.com to talk about the hidden cost of media on the web.\n\nGet your ticket 👉 cfe.dev/events/pixel...",
       "author": "tammyeverts.com",
@@ -338,16 +278,76 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 77,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Alice Wong, the disability justice advocate and author, died at the weekend at age 51. She was best known for founding the Disability Visibility Project. She also wrote multiple books and a column for Teen Vogue, and her final project was Crips for eSims for Gaza, which raised over $3 million to […]",
+      "author": "culturedesk.flipboard.social.ap.brid.gy",
+      "engagement": 11,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
+      "author": "blindnewworld.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
+      "author": "kennef.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "please use #AltText for #accessibility!",
+      "author": "m00psy.bsky.social",
+      "engagement": 25,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "You probably don’t need `aria-label` for that thing.\n\nIt doesn’t auto-translate:\nadrianroselli.com/2019/11/aria...\n\nIt’s code smell:\nericwbailey.website/published/ar...\n\nYou can probably use better methods:\nadrianroselli.com/2020/01/my-p...\n\n#accessibility #a11y #ARIA",
+      "author": "aardrian.bsky.social",
+      "engagement": 32,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "You probably don’t need `aria-label` for that thing.\n\nIt doesn’t auto-translate:\nadrianroselli.com/2019/11/aria...\n\nIt’s code smell:\nericwbailey.website/published/ar...\n\nYou can probably use better methods:\nadrianroselli.com/2020/01/my-p...\n\n#accessibility #a11y #ARIA",
+      "author": "aardrian.bsky.social",
+      "engagement": 32,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "So this is the first glance of Art of Flora! 🌱\n\nNot revolutionary, but built with the same love and care as Art of Fauna! ♥️ Please spread the word!\n\n7/7\n\n#indiedev #gamedev #a11y #OnTheAppStore",
+      "author": "strasser.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "The new and improved Proteus Kit works better than ever on PC, Xbox, and #SteamDeck!\n\nAnd did I mention it's designed by an Irish team? 🇮🇪\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
+      "author": "craigbreathnach.bsky.social",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 35
+      "count": 36
     },
     {
       "keyword": "accessibility",
-      "count": 30
+      "count": 27
     },
     {
       "keyword": "cripthevote",
@@ -359,7 +359,7 @@
     },
     {
       "keyword": "disabilityjustice",
-      "count": 24
+      "count": 25
     },
     {
       "keyword": "altcitizen",
@@ -379,27 +379,19 @@
     },
     {
       "keyword": "disability",
-      "count": 9
-    },
-    {
-      "keyword": "alicewong",
-      "count": 8
+      "count": 10
     },
     {
       "keyword": "virtual",
       "count": 7
     },
     {
+      "keyword": "alicewong",
+      "count": 6
+    },
+    {
       "keyword": "stoptrump",
       "count": 6
-    },
-    {
-      "keyword": "vue",
-      "count": 6
-    },
-    {
-      "keyword": "inclusion",
-      "count": 5
     },
     {
       "keyword": "abolishice",
@@ -419,6 +411,14 @@
     },
     {
       "keyword": "wearetheflood",
+      "count": 5
+    },
+    {
+      "keyword": "50501movement",
+      "count": 5
+    },
+    {
+      "keyword": "disabilityrebellion stoptrump",
       "count": 5
     }
   ]
