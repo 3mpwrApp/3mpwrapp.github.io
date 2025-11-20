@@ -320,9 +320,16 @@ const ThemedHeader = React.memo(() => {
 
         {/* Profile */}
         <Pressable
-          onPress={() => router.push("/profile" as Href)}
+          onPress={() => {
+            try {
+              router.push("/profile" as Href);
+            } catch (_error) {
+              // Fallback: navigate to settings if profile route fails
+              router.push("/(tabs)/settings" as Href);
+            }
+          }}
           accessibilityRole="button"
-          accessibilityLabel={t("header.openProfile")}
+          accessibilityLabel={t("header.openProfile", "View profile")}
           hitSlop={HIT_SLOP_8}
           focusable={true}
           style={({ pressed }) => [

@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import type { Href } from "expo-router";
 import { router } from "expo-router";
 import React from "react";
-import { Alert, Image, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, Image, Pressable, RefreshControl, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import { HIT_SLOP_8 } from "../constants/A11Y";
 import { useAuth } from "../context/AuthContext";
@@ -29,10 +29,22 @@ export default function ProfileCard() {
   
   const [displayName, setDisplayName] = React.useState(user?.displayName ?? "");
   const [editing, setEditing] = React.useState(false);
+  const [refreshing, setRefreshing] = React.useState(false);
 
   // Calculate stats
   const favTotal = favorites?.campaign.size + favorites?.resource.size + favorites?.advocate.size + favorites?.podcast.size || 0;
   const bookmarkTotal = bookmarks?.bookmarks.length || 0;
+
+  // Refresh handler
+  const handleRefresh = React.useCallback(async () => {
+    setRefreshing(true);
+    try {
+      // Force re-render to update stats from stores
+      await new Promise(resolve => setTimeout(resolve, 500));
+    } finally {
+      setRefreshing(false);
+    }
+  }, []);
 
   const handleSaveName = async () => {
     try {
@@ -49,7 +61,18 @@ export default function ProfileCard() {
   };
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 40 }}>
+    <ScrollView 
+      style={styles.container} 
+      contentContainerStyle={{ paddingBottom: 40 }}
+      refreshControl={
+        <RefreshControl 
+          refreshing={refreshing} 
+          onRefresh={handleRefresh}
+          tintColor={palette.primary}
+          colors={[palette.primary]}
+        />
+      }
+    >
       {/* Header with avatar */}
       <View style={styles.header}>
         <View style={styles.avatarContainer}>
@@ -218,16 +241,9 @@ export default function ProfileCard() {
             palette={palette}
           />
           <SettingRow
-            icon="text"
-            label={t("settings.accessibility.largeText", "Large Text")}
-            value={a11y.largeText ? t("common.on", "On") : t("common.off", "Off")}
-            onPress={() => router.push("/(tabs)/settings" as Href)}
-            palette={palette}
-          />
-          <SettingRow
             icon="eye"
-            label={t("settings.accessibility.dyslexiaFont", "Dyslexia Font")}
-            value={a11y.dyslexiaFont ? t("common.on", "On") : t("common.off", "Off")}
+            label={t("settings.accessibility.highContrast", "High Contrast")}
+            value={a11y.highContrast ? t("common.on", "On") : t("common.off", "Off")}
             onPress={() => router.push("/(tabs)/settings" as Href)}
             palette={palette}
           />
