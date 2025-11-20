@@ -346,6 +346,7 @@ export async function onRequestPost(context: {
     }
 
     // Log submission (for debugging)
+    // eslint-disable-next-line no-console
     console.log(`Received ${submission.type} submission:`, submission.data.id, 'from', submission.submittedBy.uid);
 
     // Store submission (run in parallel, don't wait)
