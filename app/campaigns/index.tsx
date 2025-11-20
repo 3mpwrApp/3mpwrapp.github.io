@@ -41,6 +41,7 @@ import {
     isFirestoreSyncAvailable,
     syncCampaignToProduction,
 } from "../../services/firestoreCampaignSync";
+import { submitCampaignTo3mpwr } from "../../services/submitTo3mpwr";
 import {
     CampaignsLocalProvider,
     useCampaignsLocal,
@@ -253,10 +254,24 @@ function ScreenInner() {
       const safeMyCampaigns = Array.isArray(local?.myCampaigns) ? local.myCampaigns : [];
       const safeItems = Array.isArray(items) ? items : [];
       
-      return [
-        ...safeMyCampaigns.map(c => ({ ...c, kind: 'campaign' as const })),
-        ...safeItems.map(c => ({ ...c, kind: 'campaign' as const })),
-      ];
+      // Deduplicate: combine campaigns by ID to avoid showing duplicates
+      const campaignMap = new Map<string, Mixed>();
+      
+      // Add all campaigns from items first (these are from Firestore/API)
+      for (const c of safeItems) {
+        if (c?.id) {
+          campaignMap.set(c.id, { ...c, kind: 'campaign' as const });
+        }
+      }
+      
+      // Add/override with myCampaigns (user-created campaigns take precedence)
+      for (const c of safeMyCampaigns) {
+        if (c?.id) {
+          campaignMap.set(c.id, { ...c, kind: 'campaign' as const });
+        }
+      }
+      
+      return Array.from(campaignMap.values());
     },
     [local?.myCampaigns, items],
   );
@@ -304,6 +319,63 @@ function ScreenInner() {
     ].filter(s => Array.isArray(s.data) && s.data.length > 0);
     return sec as { title: string; data: Mixed[] }[];
   }, [query, allItems, local?.myCampaigns, safeIsJoined]);
+
+  // Handle campaign submission to 3mpwr App
+  const handleSubmitTo3mpwr = React.useCallback(async (campaign: any) => {
+    if (!user) {
+      Alert.alert(
+        'Sign In Required',
+        'Please sign in to submit campaigns to the 3mpwr App.',
+        [{ text: 'OK' }]
+      );
+      return;
+    }
+
+    Alert.alert(
+      'Submit Campaign to 3mpwr App',
+      `Submit "${campaign.title}" for review by the 3mpwr team?`,
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Submit',
+          onPress: async () => {
+            try {
+              const result = await submitCampaignTo3mpwr(campaign, user);
+              
+              if (result.success) {
+                Alert.alert(
+                  '✅ Campaign Submitted',
+                  result.message || 'Your campaign has been submitted for review.',
+                  [{ text: 'Great!' }]
+                );
+                
+                // Track analytics
+                try {
+                  trackEvent('campaign.submit_to_3mpwr', {
+                    campaignId: campaign.id,
+                    title: campaign.title,
+                  });
+                } catch {}
+              } else {
+                Alert.alert(
+                  '⏳ Submission Queued',
+                  result.message || 'Your submission will retry automatically when online.',
+                  [{ text: 'OK' }]
+                );
+              }
+            } catch (err) {
+              logger.error('[Campaigns] Submit error:', err);
+              Alert.alert(
+                'Submission Failed',
+                'Unable to submit campaign. Please try again later.',
+                [{ text: 'OK' }]
+              );
+            }
+          },
+        },
+      ]
+    );
+  }, [user]);
 
   return (
     <ResponsiveScreenWrapper>
@@ -608,6 +680,17 @@ function ScreenInner() {
                 </Pressable>
               </Link>
               <View style={styles.actionRow}>
+                {/* Submit to 3mpwr App button for user-created campaigns */}
+                {item.id.startsWith('cmp-') && (
+                  <Pressable
+                    onPress={() => handleSubmitTo3mpwr(item)}
+                    accessibilityRole="button"
+                    accessibilityLabel={`Submit campaign ${item.title} to 3mpwr App`}
+                    style={[styles.actionButton, styles.submitTo3mpwrButton]}
+                  >
+                    <Text style={styles.actionButtonText}>🚀 Submit to 3mpwr App</Text>
+                  </Pressable>
+                )}
                 {/* Quick action for petitions - Sign Now */}
                 {(item as any).petitionUrl && (
                   <Pressable
@@ -937,6 +1020,10 @@ function createStyles(palette: Palette) {
     },
     signPetitionButton: {
       backgroundColor: palette.primary,
+      flex: 2,
+    },
+    submitTo3mpwrButton: {
+      backgroundColor: '#10b981',
       flex: 2,
     },
     shareButton: {
