@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-21T12:21:03.065Z",
+  "lastUpdated": "2025-11-21T18:16:47.225Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3035,
+      "totalPosts": 3060,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T12:20:54.001Z"
+      "lastSeen": "2025-11-21T18:16:36.745Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3050,
+      "totalPosts": 3075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T12:20:56.108Z"
+      "lastSeen": "2025-11-21T18:16:39.098Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3037,
+      "totalPosts": 3062,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T12:20:58.054Z"
+      "lastSeen": "2025-11-21T18:16:41.460Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3043,
+      "totalPosts": 3068,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T12:21:00.042Z"
+      "lastSeen": "2025-11-21T18:16:43.865Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3050,
+      "totalPosts": 3075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T12:21:02.061Z"
+      "lastSeen": "2025-11-21T18:16:46.221Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "The new and improved Proteus Kit works better than ever on PC, Xbox, and #SteamDeck!\n\nAnd did I mention it's designed by an Irish team? 🇮🇪\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 16,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 13,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Alice Wong, the disability justice advocate and author, died at the weekend at age 51. She was best known for founding the Disability Visibility Project. She also wrote multiple books and a column for Teen Vogue, and her final project was Crips for eSims for Gaza, which raised over $3 million to […]",
-      "author": "culturedesk.flipboard.social.ap.brid.gy",
-      "engagement": 11,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
       "author": "blindnewworld.bsky.social",
@@ -338,6 +314,30 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "www.northwichguardian.co.uk/news/2563810... #accessibility",
+      "author": "suewilkesauthor.bsky.social",
+      "engagement": 13,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
+      "author": "zeldman.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,10 +347,6 @@
     },
     {
       "keyword": "accessibility",
-      "count": 33
-    },
-    {
-      "keyword": "a11y",
       "count": 29
     },
     {
@@ -359,6 +355,10 @@
     },
     {
       "keyword": "disabilityjustice",
+      "count": 26
+    },
+    {
+      "keyword": "a11y",
       "count": 26
     },
     {
@@ -378,12 +378,12 @@
       "count": 13
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 10
-    },
-    {
       "keyword": "disability",
       "count": 8
+    },
+    {
+      "keyword": "accessibility a11y",
+      "count": 7
     },
     {
       "keyword": "virtual",
