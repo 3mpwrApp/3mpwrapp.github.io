@@ -22,7 +22,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Interface adapts to your energy level automatically',
     icon: 'color-wand',
     route: '/wellness/energy-aware-ui',
-    // color removed,
+    color: '#8B5CF6',
     badge: 'BETA',
   },
   {
@@ -31,7 +31,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Learn 14 vibration patterns with unique meanings',
     icon: 'phone-portrait',
     route: '/wellness/haptic-language',
-    // color removed,
+    color: '#EC4899',
     badge: 'BETA',
   },
   {
@@ -40,7 +40,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Energy budgeting with debt & interest tracking',
     icon: 'restaurant',
     route: '/wellness/spoon-economist',
-    // color removed,
+    color: '#F59E0B',
     badge: 'BETA',
   },
   {
@@ -49,7 +49,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'WHO ICF assessment for disability claims',
     icon: 'clipboard',
     route: '/wellness/functional-capacity',
-    // color removed,
+    color: '#3B82F6',
     badge: 'BETA',
   },
   {
@@ -58,7 +58,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Crisis intervention with panic attack interrupter',
     icon: 'medical',
     route: '/wellness/emotional-first-aid',
-    // color removed,
+    color: '#EF4444',
     badge: 'BETA',
   },
   {
@@ -67,7 +67,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Sleep optimization with chronotype & debt tracking',
     icon: 'moon',
     route: '/wellness/circadian-dj',
-    // color removed,
+    color: '#6366F1',
     badge: 'BETA',
   },
   {
@@ -76,7 +76,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Real-time thought pattern recognition',
     icon: 'brain',
     route: '/wellness/cognitive-scanner',
-    // color removed,
+    color: '#10B981',
     badge: 'BETA',
   },
   {
@@ -85,7 +85,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Quantum energy states + 24hr mood forecasting combined',
     icon: 'speedometer',
     route: '/wellness/energy-mood-dashboard',
-    // color removed,
+    color: '#14B8A6',
     badge: 'BETA',
   },
   {
@@ -94,7 +94,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Case genome mapping for advocacy',
     icon: 'document-text',
     route: '/advocacy/legal-dna',
-    // color removed,
+    color: '#8B5CF6',
     badge: 'BETA',
   },
 ];

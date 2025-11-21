@@ -10,6 +10,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Haptics from 'expo-haptics';
 import * as Location from 'expo-location';
 import * as SMS from 'expo-sms';
+import React from 'react';
 
 import { logError } from '../utils/errorLogger';
 
