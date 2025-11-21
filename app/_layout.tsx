@@ -263,11 +263,11 @@ export default function RootLayout() {
     );
   }
 
-  if (renderError) {
+  if (_renderError) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: 20 }}>
         <Text style={{ fontSize: 20, fontWeight: 'bold', color: palette.primary, marginBottom: 10 }}>App Error</Text>
-        <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>{renderError.message}</Text>
+        <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>{_renderError.message}</Text>
         <Text style={{ fontSize: 12, color: '#666', marginTop: 20, textAlign: 'center' }}>Check browser console (F12) for details</Text>
       </View>
     );
