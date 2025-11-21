@@ -31,6 +31,23 @@ export async function getDB() {
 }
 
 /**
+ * Convert UTC Date to EST timezone string
+ * Firestore stores dates in UTC, we need to convert to EST for display
+ */
+function convertUTCtoEST(date: Date): string {
+  // Convert to EST (America/New_York)
+  return date.toLocaleString('en-US', { 
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  });
+}
+
+/**
  * Event data interface for Firestore sync operations
  */
 export interface FirestoreSyncEvent {
@@ -279,20 +296,23 @@ export async function fetchEventUpdates(collection: 'events_production' | 'event
       const data = doc.data();
       
       // Convert Firestore Timestamp to Date object
-      // Firestore stores dates in UTC, so we need to ensure they're properly converted
+      // Firestore stores dates in UTC, convert to EST for proper display
       let date = data.date;
       let endDate = data.endDate;
       
       if (data.date?.toDate) {
-        date = data.date.toDate();
+        const utcDate = data.date.toDate();
+        // Store as ISO string in EST timezone
+        date = convertUTCtoEST(utcDate);
       } else if (typeof data.date === 'string') {
-        date = new Date(data.date);
+        date = data.date; // Already a string, keep as is
       }
       
       if (data.endDate?.toDate) {
-        endDate = data.endDate.toDate();
+        const utcEndDate = data.endDate.toDate();
+        endDate = convertUTCtoEST(utcEndDate);
       } else if (typeof data.endDate === 'string') {
-        endDate = new Date(data.endDate);
+        endDate = data.endDate;
       }
       
       return {

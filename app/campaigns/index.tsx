@@ -137,12 +137,13 @@ function ScreenInner() {
       
       const data = await fetchCampaigns();
       
-      // Fetch campaigns from Firestore (campaigns_preview for EAS Preview, campaigns_production for production)
+      // Fetch campaigns from Firestore (campaigns_preview for dev/preview, campaigns_production for production)
       let firestoreCampaigns: any[] = [];
       try {
         const { fetchCampaignUpdates } = await import('../../services/firestoreCampaignSync');
-        // Use preview collection for development/testing
-        const collection = process.env.NODE_ENV === 'production' ? 'campaigns_production' : 'campaigns_preview';
+        // Use preview collection for development, production collection for release builds
+        // __DEV__ is true in development and EAS preview builds
+        const collection = __DEV__ ? 'campaigns_preview' : 'campaigns_production';
         firestoreCampaigns = await fetchCampaignUpdates(collection);
       } catch (err) {
         console.warn('[Campaigns] Failed to fetch from Firestore:', err);

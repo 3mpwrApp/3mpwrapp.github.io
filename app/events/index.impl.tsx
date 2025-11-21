@@ -126,12 +126,13 @@ export default function EventsScreen() {
       setLoading(true);
       const data = await fetchEvents();
       
-      // Fetch community events from Firestore (events_preview for EAS Preview, events_production for production)
+      // Fetch community events from Firestore (events_preview for dev/preview, events_production for production)
       let firestoreEvents: any[] = [];
       try {
         const { fetchEventUpdates } = await import('../../services/firestoreEventSync');
-        // Use preview collection for development/testing
-        const collection = process.env.NODE_ENV === 'production' ? 'events_production' : 'events_preview';
+        // Use preview collection for development, production collection for release builds
+        // __DEV__ is true in development and EAS preview builds
+        const collection = __DEV__ ? 'events_preview' : 'events_production';
         firestoreEvents = await fetchEventUpdates(collection);
       } catch (err) {
         console.warn('[Events] Failed to fetch from Firestore:', err);

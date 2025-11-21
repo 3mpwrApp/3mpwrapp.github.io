@@ -96,17 +96,6 @@ export default {
 };
 
 /**
- * Convert date to EST timezone
- */
-function toEST(date) {
-  const estDate = new Date(date);
-  // EST is UTC-5
-  const offset = estDate.getTimezoneOffset() / 60;
-  estDate.setHours(estDate.getHours() - (5 + offset));
-  return estDate;
-}
-
-/**
  * Format date for ICS (YYYYMMDDTHHMMSSZ)
  */
 function formatICSDate(date) {
@@ -179,16 +168,26 @@ async function handleCreateEvent(request, env, corsHeaders) {
       });
     }
 
-    // Normalize date to EST
-    const estDate = toEST(new Date(event.date));
+    // Normalize date to EST/EDT (America/New_York timezone)
+    const inputDate = new Date(event.date);
+    const estDateString = inputDate.toLocaleString('en-US', { 
+      timeZone: 'America/New_York',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    });
     
     // Ensure event has required metadata
     const eventData = {
       ...event,
-      date: estDate.toISOString(),
+      date: estDateString, // Store in EST format: MM/DD/YYYY, HH:mm
+      dateISO: inputDate.toISOString(), // Keep original ISO for sorting/comparison
       updatedAt: Date.now(),
       syncedAt: Date.now(),
-      timezone: 'America/New_York' // EST
+      timezone: 'America/New_York' // EST/EDT
     };
 
     // Store in both production and preview KV (30-day expiration for events)
@@ -210,8 +209,9 @@ async function handleCreateEvent(request, env, corsHeaders) {
       success: true,
       id: event.id,
       message: 'Event synced successfully to production and preview',
-      date: estDate.toISOString(),
-      timezone: 'EST',
+      date: estDateString,
+      dateISO: inputDate.toISOString(),
+      timezone: 'America/New_York (EST/EDT)',
       timestamp: new Date().toISOString()
     }), {
       status: 200,
@@ -260,10 +260,20 @@ async function handleBulkSync(request, env, corsHeaders) {
           return Promise.reject(new Error(`Invalid event: missing id, title, or date`));
         }
         
-        const estDate = toEST(new Date(event.date));
+        const inputDate = new Date(event.date);
+        const estDateString = inputDate.toLocaleString('en-US', { 
+          timeZone: 'America/New_York',
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false
+        });
         const eventData = {
           ...event,
-          date: estDate.toISOString(),
+          date: estDateString,
+          dateISO: inputDate.toISOString(),
           updatedAt: Date.now(),
           syncedAt: Date.now(),
           timezone: 'America/New_York'
