@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-21T00:52:36.562Z",
+  "lastUpdated": "2025-11-21T06:17:49.112Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 2985,
+      "totalPosts": 3010,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T00:52:25.835Z"
+      "lastSeen": "2025-11-21T06:17:39.202Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3000,
+      "totalPosts": 3025,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T00:52:28.382Z"
+      "lastSeen": "2025-11-21T06:17:41.538Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 2987,
+      "totalPosts": 3012,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T00:52:30.724Z"
+      "lastSeen": "2025-11-21T06:17:43.853Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 2993,
+      "totalPosts": 3018,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T00:52:33.206Z"
+      "lastSeen": "2025-11-21T06:17:45.966Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3000,
+      "totalPosts": 3025,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T00:52:35.558Z"
+      "lastSeen": "2025-11-21T06:17:48.109Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 13,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 77,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Alice Wong, the disability justice advocate and author, died at the weekend at age 51. She was best known for founding the Disability Visibility Project. She also wrote multiple books and a column for Teen Vogue, and her final project was Crips for eSims for Gaza, which raised over $3 million to […]",
-      "author": "culturedesk.flipboard.social.ap.brid.gy",
-      "engagement": 11,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
-      "author": "blindnewworld.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
       "author": "kennef.bsky.social",
@@ -338,6 +314,30 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Alice Wong, the disability justice advocate and author, died at the weekend at age 51. She was best known for founding the Disability Visibility Project. She also wrote multiple books and a column for Teen Vogue, and her final project was Crips for eSims for Gaza, which raised over $3 million to […]",
+      "author": "culturedesk.flipboard.social.ap.brid.gy",
+      "engagement": 11,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
+      "author": "zeldman.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 33
+      "count": 32
     },
     {
       "keyword": "a11y",
-      "count": 32
+      "count": 30
     },
     {
       "keyword": "cripthevote",
@@ -378,20 +378,16 @@
       "count": 13
     },
     {
-      "keyword": "disability",
-      "count": 9
-    },
-    {
       "keyword": "accessibility a11y",
       "count": 9
     },
     {
-      "keyword": "virtual",
-      "count": 6
+      "keyword": "disability",
+      "count": 8
     },
     {
-      "keyword": "disabled people",
-      "count": 5
+      "keyword": "virtual",
+      "count": 6
     },
     {
       "keyword": "stopavelo",
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "stoptrump",
+      "count": 5
+    },
+    {
+      "keyword": "wearetheflood",
       "count": 5
     }
   ]
