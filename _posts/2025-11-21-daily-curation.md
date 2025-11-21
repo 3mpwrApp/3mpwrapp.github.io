@@ -9,67 +9,150 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-11-21
 
-Curated 13 items from disability, accessibility, and social policy sources.
+Curated 31 items from disability, accessibility, and social policy sources.
 
-## 1. Donation of Second World War grenade prompts Ontario thrift store evacuation
-<img src='https://i.cbc.ca/ais/b8128ef2-ac06-4877-b300-ee8cee471866,1760358431066/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A brick building that says "Chatham-Kent Police Service Headquarters" on it.' width='620' height='349' title='Chatham-Kent police headquarters is shown in a file photo. '/><p> A Second World War grenade prompted the closure of a Chatham-Kent thrift store Thursday afternoon, police said. </p>
-📍 [Source](https://www.cbc.ca/news/canada/windsor/chatham-kent-thrift-store-grenade-donation-9.6987202?cmp=rss)
-**Score:** 19.80
+## 1. Roughly 500,000 Canadians left ERs before seeing a doctor last year, data shows
+<img src='https://i.cbc.ca/ais/f776083f-980c-494a-9b35-d2e1c3e16148,1763673386385/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='The outside of an emergency department' width='620' height='349' title='As emergency department wait times climb, so do the number of people leaving without seeing a doctor, according to a data analysis by CBC’s Marketplace.'/><p>About half a million people left emergency departments across Canada before being seen by a doctor last year, according to data analysis by CBC’s Marketplace.</p>
+📍 [Source](https://www.cbc.ca/news/marketplace/hospital-wait-times-9.6983849?cmp=rss)
+**Score:** 26.90
 
-## 2. Manitoba Government Passes Legislation to Respond to Meth Crisis
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71417)
-**Score:** 17.90
+## 2. 2 in critical condition after grizzly bear attack involving children in Bella Coola: officials
+<img src='https://i.cbc.ca/ais/1.4132188,1743627274000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C45%2C1200%2C675%29%3BResize%3D%28620%29' alt='A grizzly bear.' width='620' height='349' title='A grizzly bear in Yukon. The Yukon government has banned roadside hunting of the bears near Klukshu Village.'/><p>Two people are in critical condition and two others are seriously injured after a reported grizzly bear attack in Bella Coola on British Columbia’s Central Coast, according to emergency officials. </p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/several-people-injured-grizzly-attack-bella-coola-9.6987235?cmp=rss)
+**Score:** 19.70
 
-## 3. Carney wraps up UAE visit with $70B investment pledge into Canada
-The announcements come as Carney concluded a visit to Abu Dhabi, which focused heavily on trade amid concerns about the war in Sudan.
-📍 [Source](https://globalnews.ca/news/11536783/carney-uae-visit-70b-investment-pledge-canada/)
+## 3. Governments of Canada and Manitoba Launch Pilot to Reward Sustainable Farming
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71558)
+**Score:** 17.00
+
+## 4. Ottawa to put $29 million toward developing a defence lab in Dartmouth, N.S.
+Canada's Defence Minister David McGuinty says Ottawa will spend more than $29 million on a new space across the harbour from downtown Halifax for classified research projects.
+📍 [Source](https://globalnews.ca/news/11537588/halifax-defence-lab-classified-research/)
 **Score:** 10.50
 
-## 4. Manitoba Government Creates Rental Construction Incentive Program
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71437)
-**Score:** 12.00
+## 5. Man found dead at coal mine in Sparwood, B.C.
+<img src='https://i.cbc.ca/ais/035cfbf2-0dc2-4170-917a-4da887916262,1763749185875/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1580%2C888%29%3BResize%3D%28620%29' alt='Mining truck travels on dirt road near green hill' width='620' height='349' title='A photo posted on Glencore Canada's website shows part of the Elkview Operations in Sparwood, B.C.'/><p>A 39-year-old man has died in a Sparwood, B.C., mine following an incident that the company says occurred during maintenance work.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/mine-death-contractor-sparwood-9.6987987?cmp=rss)
+**Score:** 10.50
 
-## 5. ‘Lost Canadians’ legislation is now law, aims to fix citizenship rule
-The term "Lost Canadians" refers to people who were born outside of the country to Canadian parents who were also born in another country.
-📍 [Source](https://globalnews.ca/news/11536947/lost-canadians-law/)
-**Score:** 7.10
+## 6. Family law in Canada: What it gets right and where it fails
+📍 [Source](https://rabble.ca/podcast/family-law-in-canada-what-it-gets-right-and-where-it-fails/)
+**Score:** 9.50
 
-## 6. On Our Radar: Blue Jay Valley shows why East Van rules in video for &quot;Living In the City&quot;
-The kids are more than alright.
-📍 [Source](https://www.straight.com/music/on-our-radar-blue-jay-valley-shows-why-east-van-rules-in-video-for-living-in-city)
-**Score:** 5.00
+## 7. Former Regina officer pleads guilty to using police databases to pursue women
+<img src='https://i.cbc.ca/ais/e7a6e52f-7683-4f97-8238-07a2a23e7880,1763750252453/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C215%2C3792%2C2133%29%3BResize%3D%28620%29' alt='A man wearing a red polo shirt and a blue and grey jacket walks down a street' width='620' height='349' title='Robert Eric Semenchuck, a former officer with the Regina Police Service, leaves Regina Provincial Court in Regina, Sask., on Nov. 21, 2025.   Semenchuck remained silent after pleading guilty to beach of trust and unauthorized use of a computer.'/><p>On Friday, Robert Eric Semenchuck pleaded guilty to breach of trust and unauthorized use of a computer.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/robert-semenchuck-pleads-guilty-9.6986314?cmp=rss)
+**Score:** 13.20
 
-## 7. On Our Radar: Scarlet Fever’s debut LP, Girl with Shank, cuts deep
-The four-piece Vancouver band has been a regular at shows around town lately.
-📍 [Source](https://www.straight.com/music/on-our-radar-scarlet-fevers-debut-lp-girl-with-shank-cuts-deep)
-**Score:** 5.00
+## 8. Motel residents in Vernon, B.C. handed eviction notice with 1-week deadline
+'It was just hell,' said former tenant Jacqueline MacFarlane, describing the moment she learned she had less than a week to move out.
+📍 [Source](https://globalnews.ca/news/11536229/motel-residents-vernon-bc-eviction-notice-one-week/)
+**Score:** 9.00
 
-## 8. There's still time to win a Canadian getaway—and support B.C.’s hospitality workers
-Two days left to support BC hospitality workers.
-📍 [Source](https://www.straight.com/news/theres-still-time-to-win-a-canadian-getaway-and-support-bcs-hospitality-workers)
+## 9. Manitoba Government Invests More Than $1.3 Million for Community Revitalization Projects in Westman
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71377)
+**Score:** 10.50
+
+## 10. MLAs debate whether NB Power should be able to cut service during winter weather
+With rising utility costs, many New Brunswickers have to make a careful decision about heating their homes and often wonder how much they can afford.
+📍 [Source](https://globalnews.ca/news/11537685/nb-power-cut-electricity-winter-months/)
+**Score:** 12.24
+
+## 11. Video showing mishandling of a dead body in Quebec City prompts coroner's investigation
+<img src='https://i.cbc.ca/ais/cfee4d4f-2d3b-4f50-821a-35ad666b9ce9,1763673825809/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C283%2C5440%2C3060%29%3BResize%3D%28620%29' alt='A sign for the Quebec Coroner with a depiction of Quebec's blue and white flag is pictured.' width='620' height='349' title='A sign for the Quebec Coroner is pictured in Montreal on Thursday, May 15, 2025. '/><p>The Quebec coroner's office has launched an internal investigation after a video circulated online showing a funeral transporter inappropriately moving a body. </p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/coroner-private-contractor-body-transportation-video-9.6986342?cmp=rss)
+**Score:** 12.36
+
+## 12. Manitoba Government Recognizes Inaugural Circle of Honour Recipients
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71537)
 **Score:** 7.50
 
-## 9. Global BC Presents: Chinatown Stories
-Through all of its struggles, the building blocks of Chinatown's community have remained. It's a place of refuge where those who weren’t accepted elsewhere could find support.
-📍 [Source](https://globalnews.ca/news/11535995/global-bc-presents-chinatown-stories/)
-**Score:** 6.00
+## 13. Manitoba Government to Help Students Learn About Climate Change and Climate Action in Schools
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71397)
+**Score:** 7.50
 
-## 10. Measles Update #45
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71559)
+## 14. The Oil Tanker Ban That Dims Alberta’s Pipeline Hopes
+The law is six years old. But federal promises to protect BC’s north coast from spills date back decades.
+📍 [Source](https://thetyee.ca/News/2025/11/21/Oil-Tanker-Ban-Dims-Alberta-Pipeline-Hopes/)
+**Score:** 7.50
+
+## 15. Vancouver’s Last Sex Worker Drop-In Centre May Shutter in Spring
+The city is changing how it funds Kingsway Community Station. That’s ‘dangerous,’ its program director says.
+📍 [Source](https://thetyee.ca/News/2025/11/21/Vancouver-Last-Sex-Worker-Drop-In-Centre/)
+**Score:** 7.50
+
+## 16. Calgary converting 9 more vacant office buildings into housing
+<img src='https://i.cbc.ca/ais/01392ff9-1697-4718-a7a5-ea13d54b30bd,1763675598811/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Former TransAlta headquarters in Calgary.' width='620' height='349' title='The former TransAlta headquarters, on 110 12 Ave. S.W., will soon house 153 residential units. It's one of nine downtown office conversions the City of Calgary announced Thursday. '/><p>The City of Calgary has released the details of nine new projects through its downtown office conversion program, creating close to 1,000 homes.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/more-calgary-downtown-office-conversion-projects-9.6986824?cmp=rss)
+**Score:** 8.28
+
+## 17. Cowichan Decision and Beyond: Letting Go of Zero-Sum Thinking
+Responses to the court ruling have stoked fear about private property. There’s a more just and hopeful way forward.
+📍 [Source](https://thetyee.ca/Opinion/2025/11/21/Indigenous-Relations-Letting-Go-Zero-Sum-Thinking/)
+**Score:** 4.00
+
+## 18. Measles Update #48
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71698)
 **Score:** 4.50
 
-## 11. Freeland to move to U.K. for CEO job at Rhodes Trust
-The charity announced Wednesday evening that Chrystia Freeland has been appointed CEO of the Rhodes Trust and Warden of Rhodes House.
-📍 [Source](https://globalnews.ca/news/11536801/freeland-uk-ceo-rhodes-trust/)
+## 19. Third Session of the 43rd Manitoba Legislature to Open Tuesday, Nov. 18 with Speech from the Throne
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71557)
 **Score:** 4.50
 
-## 12. 30 can't-miss Vancouver concerts for November 2025
-<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>.<br /></h3>
-📍 [Source](https://www.straight.com/music/30-cant-miss-vancouver-concerts-for-november-2025)
+## 20. Why postal workers are calling for a public bank
+📍 [Source](https://rabble.ca/podcast/why-postal-workers-are-calling-for-a-public-bank/)
 **Score:** 4.50
 
-## 13. Heart of the City Festival showcases the Downtown Eastside's commitment to building community
-"These are real people, with real feelings.”
-📍 [Source](https://www.straight.com/arts/heart-of-city-festival-showcases-downtown-eastsides-commitment-to-building-community)
-**Score:** 3.00
+## 21. Toronto rockers PUP have that dog in them
+<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>.</h3><p class="p1"></p>
+📍 [Source](https://www.straight.com/music/toronto-rockers-pup-have-that-dog-in-them)
+**Score:** 4.50
+
+## 22. You Nearly Missed: Vancouver roots royalty joins Chest Fever at the Rickshaw for a tribute to the Band's Last Waltz
+Robbie Robertson would definitely approve.
+📍 [Source](https://www.straight.com/music/you-nearly-missed-vancouver-roots-royalty-joins-chest-fever-at-rickshaw-for-a-tribute-to-bands)
+**Score:** 4.50
+
+## 23. Photos: Atlanta rapper JID makes the most of a Monday night PNE Forum crowd
+The artist brought the crowd to its feet.
+📍 [Source](https://www.straight.com/music/photos-atlanta-rapper-jid-makes-most-of-a-monday-night-pne-forum-crowd)
+**Score:** 4.50
+
+## 24. The Beaches make a play for Canadian rock royalty at Doug Mitchell
+The Beaches are making more than just waves.
+📍 [Source](https://www.straight.com/the-beaches-review-vancouver-2025)
+**Score:** 4.50
+
+## 25. What's behind the spike in jewelry store smash-and-grabs in Ontario
+<img src='https://i.cbc.ca/ais/d7018f20-fd2d-49db-bd39-825bd6ccb1b9,1763658633470/full/max/0/default.jpg?im=Crop%2Crect%3D%286%2C0%2C1883%2C1059%29%3BResize%3D%28620%29' alt='A number of masked, hooded men smash glass display cases and fill bags with jewelry' width='620' height='349' title='Smash-and-grab robberies are spiking in Ontario and police say many of the suspects are minors. '/><p>A growing number of minors are being recruited by adults to carry out smash-and-grab jewelry store robberies in Ontario and are told that if they are caught, as youths, they would face little or no time in custody, an investigation by CBC's the fifth estate has found.</p>
+📍 [Source](https://www.cbc.ca/news/canada/smash-and-grab-9.6985023?cmp=rss)
+**Score:** 5.40
+
+## 26. Children's shoes lit by candles at Manitoba Legislature honour youngest victims of Russia's war in Ukraine
+<img src='https://i.cbc.ca/ais/753e5a0b-9c3e-46eb-ab3d-32088580b917,1763736831974/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C75%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A pair of black shoes with is behind an artificial candle.' width='620' height='349' title='A memorial with 750 pairs of shoes lit up with artificial candles was displayed at the Manitoba Legislature building in Winnipeg on Thursday.'/><p>Hundreds of children's shoes lined the steps of the Manitoba Legislature on Thursday during a sombre ceremony where families gathered to honour the lives of children who have died in Ukraine since the Russian invasion. </p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/ukraine-war-children-deaths-memorial-ceremony-9.6987572?cmp=rss)
+**Score:** 4.50
+
+## 27. Alberta aims to curtail regulatory bodies from sanctioning workers for after-hours activities
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-bill-regulated-professions-9.6986842?cmp=rss)
+**Score:** 4.50
+
+## 28. Will RESP gifts make a ‘Blue Christmas' — or help the kids in your life?
+An RESP is essentially a savings and investment account, much like an RRSP or TFSA, but focused on saving for a child’s education.
+📍 [Source](https://globalnews.ca/news/11537441/resp-contribution-gift-how-to-help/)
+**Score:** 2.00
+
+## 29. BC Cities Declared Housing Is a Human Right. Now What?
+Some municipalities are still voting against policies that could help end homelessness. Here’s a better way forward.
+📍 [Source](https://thetyee.ca/Opinion/2025/11/21/BC-Cities-Declared-Housing-Human-Right/)
+**Score:** 2.40
+
+## 30. RCMP's actions didn't cause death of man who jumped into N.B. river: police watchdog
+New Brunswick's police watchdog says RCMP officers' actions did not result in the death of a man who jumped into the St. Croix River last week.
+📍 [Source](https://globalnews.ca/news/11536981/sirt-st-stephen-nb-man-river/)
+**Score:** 1.44
+
+## 31. Dispute between Unifor workers and Titan Tool & Die surpasses historic 100-day milestone
+📍 [Source](https://rabble.ca/labour/dispute-between-unifor-workers-and-titan-tool-die-surpasses-historic-100-day-milestone/)
+**Score:** 1.00
 

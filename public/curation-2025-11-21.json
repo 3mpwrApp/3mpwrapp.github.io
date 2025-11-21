@@ -1,99 +1,225 @@
 {
   "date": "2025-11-21",
-  "timestamp": "2025-11-21T15:23:45.620Z",
-  "count": 13,
+  "timestamp": "2025-11-21T21:23:02.903Z",
+  "count": 31,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Donation of Second World War grenade prompts Ontario thrift store evacuation",
-      "link": "https://www.cbc.ca/news/canada/windsor/chatham-kent-thrift-store-grenade-donation-9.6987202?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/b8128ef2-ac06-4877-b300-ee8cee471866,1760358431066/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A brick building that says \"Chatham-Kent Police Service Headquarters\" on it.' width='620' height='349' title='Chatham-Kent police headquarters is shown in a file photo. '/><p> A Second World War grenade prompted the closure of a Chatham-Kent thrift store Thursday afternoon, police said. </p>",
-      "score": 19.8,
-      "pubDate": "Fri, 21 Nov 2025 06:35:12 EST"
+      "title": "Roughly 500,000 Canadians left ERs before seeing a doctor last year, data shows",
+      "link": "https://www.cbc.ca/news/marketplace/hospital-wait-times-9.6983849?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/f776083f-980c-494a-9b35-d2e1c3e16148,1763673386385/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='The outside of an emergency department' width='620' height='349' title='As emergency department wait times climb, so do the number of people leaving without seeing a doctor, according to a data analysis by CBC’s Marketplace.'/><p>About half a million people left emergency departments across Canada before being seen by a doctor last year, according to data analysis by CBC’s Marketplace.</p>",
+      "score": 26.9,
+      "pubDate": "Fri, 21 Nov 2025 04:00:00 EST"
     },
     {
-      "title": "Manitoba Government Passes Legislation to Respond to Meth Crisis",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71417",
+      "title": "2 in critical condition after grizzly bear attack involving children in Bella Coola: officials",
+      "link": "https://www.cbc.ca/news/canada/british-columbia/several-people-injured-grizzly-attack-bella-coola-9.6987235?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.4132188,1743627274000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C45%2C1200%2C675%29%3BResize%3D%28620%29' alt='A grizzly bear.' width='620' height='349' title='A grizzly bear in Yukon. The Yukon government has banned roadside hunting of the bears near Klukshu Village.'/><p>Two people are in critical condition and two others are seriously injured after a reported grizzly bear attack in Bella Coola on British Columbia’s Central Coast, according to emergency officials. </p>",
+      "score": 19.7,
+      "pubDate": "Thu, 20 Nov 2025 21:16:48 EST"
+    },
+    {
+      "title": "Governments of Canada and Manitoba Launch Pilot to Reward Sustainable Farming",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71558",
       "description": "",
-      "score": 17.9,
-      "pubDate": "Wed, 05 Nov 2025 17:58:00 CST"
+      "score": 17,
+      "pubDate": "Thu, 13 Nov 2025 14:48:00 CST"
     },
     {
-      "title": "Carney wraps up UAE visit with $70B investment pledge into Canada",
-      "link": "https://globalnews.ca/news/11536783/carney-uae-visit-70b-investment-pledge-canada/",
-      "description": "The announcements come as Carney concluded a visit to Abu Dhabi, which focused heavily on trade amid concerns about the war in Sudan.",
+      "title": "Ottawa to put $29 million toward developing a defence lab in Dartmouth, N.S.",
+      "link": "https://globalnews.ca/news/11537588/halifax-defence-lab-classified-research/",
+      "description": "Canada's Defence Minister David McGuinty says Ottawa will spend more than $29 million on a new space across the harbour from downtown Halifax for classified research projects.",
       "score": 10.5,
-      "pubDate": "Fri, 21 Nov 2025 13:22:12 +0000"
+      "pubDate": "Fri, 21 Nov 2025 20:03:14 +0000"
     },
     {
-      "title": "Manitoba Government Creates Rental Construction Incentive Program",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71437",
+      "title": "Man found dead at coal mine in Sparwood, B.C.",
+      "link": "https://www.cbc.ca/news/canada/british-columbia/mine-death-contractor-sparwood-9.6987987?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/035cfbf2-0dc2-4170-917a-4da887916262,1763749185875/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1580%2C888%29%3BResize%3D%28620%29' alt='Mining truck travels on dirt road near green hill' width='620' height='349' title='A photo posted on Glencore Canada's website shows part of the Elkview Operations in Sparwood, B.C.'/><p>A 39-year-old man has died in a Sparwood, B.C., mine following an incident that the company says occurred during maintenance work.</p>",
+      "score": 10.5,
+      "pubDate": "Fri, 21 Nov 2025 13:40:22 EST"
+    },
+    {
+      "title": "Family law in Canada: What it gets right and where it fails",
+      "link": "https://rabble.ca/podcast/family-law-in-canada-what-it-gets-right-and-where-it-fails/",
       "description": "",
-      "score": 12,
-      "pubDate": "Thu, 06 Nov 2025 12:03:00 CST"
+      "score": 9.5,
+      "pubDate": "Fri, 21 Nov 2025 17:52:31 +0000"
     },
     {
-      "title": "‘Lost Canadians’ legislation is now law, aims to fix citizenship rule",
-      "link": "https://globalnews.ca/news/11536947/lost-canadians-law/",
-      "description": "The term \"Lost Canadians\" refers to people who were born outside of the country to Canadian parents who were also born in another country.",
-      "score": 7.1,
-      "pubDate": "Fri, 21 Nov 2025 14:36:17 +0000"
+      "title": "Former Regina officer pleads guilty to using police databases to pursue women",
+      "link": "https://www.cbc.ca/news/canada/saskatchewan/robert-semenchuck-pleads-guilty-9.6986314?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/e7a6e52f-7683-4f97-8238-07a2a23e7880,1763750252453/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C215%2C3792%2C2133%29%3BResize%3D%28620%29' alt='A man wearing a red polo shirt and a blue and grey jacket walks down a street' width='620' height='349' title='Robert Eric Semenchuck, a former officer with the Regina Police Service, leaves Regina Provincial Court in Regina, Sask., on Nov. 21, 2025.   Semenchuck remained silent after pleading guilty to beach of trust and unauthorized use of a computer.'/><p>On Friday, Robert Eric Semenchuck pleaded guilty to breach of trust and unauthorized use of a computer.</p>",
+      "score": 13.2,
+      "pubDate": "Fri, 21 Nov 2025 12:04:49 EST"
     },
     {
-      "title": "On Our Radar: Blue Jay Valley shows why East Van rules in video for &quot;Living In the City&quot;",
-      "link": "https://www.straight.com/music/on-our-radar-blue-jay-valley-shows-why-east-van-rules-in-video-for-living-in-city",
-      "description": "The kids are more than alright.",
-      "score": 5,
-      "pubDate": "2025-11-13T14:29:58-08:00"
+      "title": "Motel residents in Vernon, B.C. handed eviction notice with 1-week deadline",
+      "link": "https://globalnews.ca/news/11536229/motel-residents-vernon-bc-eviction-notice-one-week/",
+      "description": "'It was just hell,' said former tenant Jacqueline MacFarlane, describing the moment she learned she had less than a week to move out.",
+      "score": 9,
+      "pubDate": "Fri, 21 Nov 2025 17:46:43 +0000"
     },
     {
-      "title": "On Our Radar: Scarlet Fever’s debut LP, Girl with Shank, cuts deep",
-      "link": "https://www.straight.com/music/on-our-radar-scarlet-fevers-debut-lp-girl-with-shank-cuts-deep",
-      "description": "The four-piece Vancouver band has been a regular at shows around town lately.",
-      "score": 5,
-      "pubDate": "2025-11-06T00:32:32-08:00"
+      "title": "Manitoba Government Invests More Than $1.3 Million for Community Revitalization Projects in Westman",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71377",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Wed, 05 Nov 2025 13:44:00 CST"
     },
     {
-      "title": "There's still time to win a Canadian getaway—and support B.C.’s hospitality workers",
-      "link": "https://www.straight.com/news/theres-still-time-to-win-a-canadian-getaway-and-support-bcs-hospitality-workers",
-      "description": "Two days left to support BC hospitality workers.",
+      "title": "MLAs debate whether NB Power should be able to cut service during winter weather",
+      "link": "https://globalnews.ca/news/11537685/nb-power-cut-electricity-winter-months/",
+      "description": "With rising utility costs, many New Brunswickers have to make a careful decision about heating their homes and often wonder how much they can afford.",
+      "score": 12.239999999999998,
+      "pubDate": "Fri, 21 Nov 2025 21:15:52 +0000"
+    },
+    {
+      "title": "Video showing mishandling of a dead body in Quebec City prompts coroner's investigation",
+      "link": "https://www.cbc.ca/news/canada/montreal/coroner-private-contractor-body-transportation-video-9.6986342?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/cfee4d4f-2d3b-4f50-821a-35ad666b9ce9,1763673825809/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C283%2C5440%2C3060%29%3BResize%3D%28620%29' alt='A sign for the Quebec Coroner with a depiction of Quebec's blue and white flag is pictured.' width='620' height='349' title='A sign for the Quebec Coroner is pictured in Montreal on Thursday, May 15, 2025. '/><p>The Quebec coroner's office has launched an internal investigation after a video circulated online showing a funeral transporter inappropriately moving a body. </p>",
+      "score": 12.360000000000001,
+      "pubDate": "Thu, 20 Nov 2025 17:16:59 EST"
+    },
+    {
+      "title": "Manitoba Government Recognizes Inaugural Circle of Honour Recipients",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71537",
+      "description": "",
       "score": 7.5,
-      "pubDate": "2025-10-28T20:13:14-07:00"
+      "pubDate": "Thu, 13 Nov 2025 11:33:00 CST"
     },
     {
-      "title": "Global BC Presents: Chinatown Stories",
-      "link": "https://globalnews.ca/news/11535995/global-bc-presents-chinatown-stories/",
-      "description": "Through all of its struggles, the building blocks of Chinatown's community have remained. It's a place of refuge where those who weren’t accepted elsewhere could find support.",
-      "score": 6,
-      "pubDate": "Fri, 21 Nov 2025 15:00:22 +0000"
+      "title": "Manitoba Government to Help Students Learn About Climate Change and Climate Action in Schools",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71397",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 05 Nov 2025 14:44:00 CST"
     },
     {
-      "title": "Measles Update #45",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71559",
+      "title": "The Oil Tanker Ban That Dims Alberta’s Pipeline Hopes",
+      "link": "https://thetyee.ca/News/2025/11/21/Oil-Tanker-Ban-Dims-Alberta-Pipeline-Hopes/",
+      "description": "The law is six years old. But federal promises to protect BC’s north coast from spills date back decades.",
+      "score": 7.5,
+      "pubDate": "Fri, 21 Nov 2025 08:40:00 +0000"
+    },
+    {
+      "title": "Vancouver’s Last Sex Worker Drop-In Centre May Shutter in Spring",
+      "link": "https://thetyee.ca/News/2025/11/21/Vancouver-Last-Sex-Worker-Drop-In-Centre/",
+      "description": "The city is changing how it funds Kingsway Community Station. That’s ‘dangerous,’ its program director says.",
+      "score": 7.5,
+      "pubDate": "Fri, 21 Nov 2025 08:20:00 +0000"
+    },
+    {
+      "title": "Calgary converting 9 more vacant office buildings into housing",
+      "link": "https://www.cbc.ca/news/canada/calgary/more-calgary-downtown-office-conversion-projects-9.6986824?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/01392ff9-1697-4718-a7a5-ea13d54b30bd,1763675598811/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Former TransAlta headquarters in Calgary.' width='620' height='349' title='The former TransAlta headquarters, on 110 12 Ave. S.W., will soon house 153 residential units. It's one of nine downtown office conversions the City of Calgary announced Thursday. '/><p>The City of Calgary has released the details of nine new projects through its downtown office conversion program, creating close to 1,000 homes.</p>",
+      "score": 8.28,
+      "pubDate": "Fri, 21 Nov 2025 07:00:00 EST"
+    },
+    {
+      "title": "Cowichan Decision and Beyond: Letting Go of Zero-Sum Thinking",
+      "link": "https://thetyee.ca/Opinion/2025/11/21/Indigenous-Relations-Letting-Go-Zero-Sum-Thinking/",
+      "description": "Responses to the court ruling have stoked fear about private property. There’s a more just and hopeful way forward.",
+      "score": 4,
+      "pubDate": "Fri, 21 Nov 2025 08:10:00 +0000"
+    },
+    {
+      "title": "Measles Update #48",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71698",
       "description": "",
       "score": 4.5,
-      "pubDate": "Thu, 13 Nov 2025 16:01:00 CST"
+      "pubDate": "Fri, 21 Nov 2025 13:18:00 CST"
     },
     {
-      "title": "Freeland to move to U.K. for CEO job at Rhodes Trust",
-      "link": "https://globalnews.ca/news/11536801/freeland-uk-ceo-rhodes-trust/",
-      "description": "The charity announced Wednesday evening that Chrystia Freeland has been appointed CEO of the Rhodes Trust and Warden of Rhodes House.",
+      "title": "Third Session of the 43rd Manitoba Legislature to Open Tuesday, Nov. 18 with Speech from the Throne",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71557",
+      "description": "",
       "score": 4.5,
-      "pubDate": "Fri, 21 Nov 2025 13:41:12 +0000"
+      "pubDate": "Thu, 13 Nov 2025 14:30:00 CST"
     },
     {
-      "title": "30 can't-miss Vancouver concerts for November 2025",
-      "link": "https://www.straight.com/music/30-cant-miss-vancouver-concerts-for-november-2025",
-      "description": "<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href=\"http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up for our free newsletter</a>.<br /></h3>",
+      "title": "Why postal workers are calling for a public bank",
+      "link": "https://rabble.ca/podcast/why-postal-workers-are-calling-for-a-public-bank/",
+      "description": "",
       "score": 4.5,
-      "pubDate": "2025-11-06T08:30:00-08:00"
+      "pubDate": "Fri, 21 Nov 2025 17:57:43 +0000"
     },
     {
-      "title": "Heart of the City Festival showcases the Downtown Eastside's commitment to building community",
-      "link": "https://www.straight.com/arts/heart-of-city-festival-showcases-downtown-eastsides-commitment-to-building-community",
-      "description": "\"These are real people, with real feelings.”",
-      "score": 3,
-      "pubDate": "2025-10-28T14:31:59-07:00"
+      "title": "Toronto rockers PUP have that dog in them",
+      "link": "https://www.straight.com/music/toronto-rockers-pup-have-that-dog-in-them",
+      "description": "<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href=\"http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up for our free newsletter</a>.</h3><p class=\"p1\"></p>",
+      "score": 4.5,
+      "pubDate": "2025-11-20T13:50:01-08:00"
+    },
+    {
+      "title": "You Nearly Missed: Vancouver roots royalty joins Chest Fever at the Rickshaw for a tribute to the Band's Last Waltz",
+      "link": "https://www.straight.com/music/you-nearly-missed-vancouver-roots-royalty-joins-chest-fever-at-rickshaw-for-a-tribute-to-bands",
+      "description": "Robbie Robertson would definitely approve.",
+      "score": 4.5,
+      "pubDate": "2025-11-12T16:16:44-08:00"
+    },
+    {
+      "title": "Photos: Atlanta rapper JID makes the most of a Monday night PNE Forum crowd",
+      "link": "https://www.straight.com/music/photos-atlanta-rapper-jid-makes-most-of-a-monday-night-pne-forum-crowd",
+      "description": "The artist brought the crowd to its feet.",
+      "score": 4.5,
+      "pubDate": "2025-11-11T21:33:52-08:00"
+    },
+    {
+      "title": "The Beaches make a play for Canadian rock royalty at Doug Mitchell",
+      "link": "https://www.straight.com/the-beaches-review-vancouver-2025",
+      "description": "The Beaches are making more than just waves.",
+      "score": 4.5,
+      "pubDate": "2025-10-27T15:56:50-07:00"
+    },
+    {
+      "title": "What's behind the spike in jewelry store smash-and-grabs in Ontario",
+      "link": "https://www.cbc.ca/news/canada/smash-and-grab-9.6985023?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/d7018f20-fd2d-49db-bd39-825bd6ccb1b9,1763658633470/full/max/0/default.jpg?im=Crop%2Crect%3D%286%2C0%2C1883%2C1059%29%3BResize%3D%28620%29' alt='A number of masked, hooded men smash glass display cases and fill bags with jewelry' width='620' height='349' title='Smash-and-grab robberies are spiking in Ontario and police say many of the suspects are minors. '/><p>A growing number of minors are being recruited by adults to carry out smash-and-grab jewelry store robberies in Ontario and are told that if they are caught, as youths, they would face little or no time in custody, an investigation by CBC's the fifth estate has found.</p>",
+      "score": 5.3999999999999995,
+      "pubDate": "Fri, 21 Nov 2025 04:00:00 EST"
+    },
+    {
+      "title": "Children's shoes lit by candles at Manitoba Legislature honour youngest victims of Russia's war in Ukraine",
+      "link": "https://www.cbc.ca/news/canada/manitoba/ukraine-war-children-deaths-memorial-ceremony-9.6987572?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/753e5a0b-9c3e-46eb-ab3d-32088580b917,1763736831974/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C75%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A pair of black shoes with is behind an artificial candle.' width='620' height='349' title='A memorial with 750 pairs of shoes lit up with artificial candles was displayed at the Manitoba Legislature building in Winnipeg on Thursday.'/><p>Hundreds of children's shoes lined the steps of the Manitoba Legislature on Thursday during a sombre ceremony where families gathered to honour the lives of children who have died in Ukraine since the Russian invasion. </p>",
+      "score": 4.5,
+      "pubDate": "Fri, 21 Nov 2025 10:51:19 EST"
+    },
+    {
+      "title": "Alberta aims to curtail regulatory bodies from sanctioning workers for after-hours activities",
+      "link": "https://www.cbc.ca/news/canada/edmonton/alberta-bill-regulated-professions-9.6986842?cmp=rss",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Thu, 20 Nov 2025 17:10:54 EST"
+    },
+    {
+      "title": "Will RESP gifts make a ‘Blue Christmas' — or help the kids in your life?",
+      "link": "https://globalnews.ca/news/11537441/resp-contribution-gift-how-to-help/",
+      "description": "An RESP is essentially a savings and investment account, much like an RRSP or TFSA, but focused on saving for a child’s education.",
+      "score": 2,
+      "pubDate": "Fri, 21 Nov 2025 20:14:14 +0000"
+    },
+    {
+      "title": "BC Cities Declared Housing Is a Human Right. Now What?",
+      "link": "https://thetyee.ca/Opinion/2025/11/21/BC-Cities-Declared-Housing-Human-Right/",
+      "description": "Some municipalities are still voting against policies that could help end homelessness. Here’s a better way forward.",
+      "score": 2.4,
+      "pubDate": "Fri, 21 Nov 2025 08:30:00 +0000"
+    },
+    {
+      "title": "RCMP's actions didn't cause death of man who jumped into N.B. river: police watchdog",
+      "link": "https://globalnews.ca/news/11536981/sirt-st-stephen-nb-man-river/",
+      "description": "New Brunswick's police watchdog says RCMP officers' actions did not result in the death of a man who jumped into the St. Croix River last week.",
+      "score": 1.44,
+      "pubDate": "Fri, 21 Nov 2025 16:29:55 +0000"
+    },
+    {
+      "title": "Dispute between Unifor workers and Titan Tool & Die surpasses historic 100-day milestone",
+      "link": "https://rabble.ca/labour/dispute-between-unifor-workers-and-titan-tool-die-surpasses-historic-100-day-milestone/",
+      "description": "",
+      "score": 1,
+      "pubDate": "Fri, 21 Nov 2025 21:14:21 +0000"
     }
   ]
 }
