@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-21T18:16:47.225Z",
+  "lastUpdated": "2025-11-22T00:50:33.617Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3060,
+      "totalPosts": 3085,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T18:16:36.745Z"
+      "lastSeen": "2025-11-22T00:50:23.720Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3075,
+      "totalPosts": 3100,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T18:16:39.098Z"
+      "lastSeen": "2025-11-22T00:50:25.751Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3062,
+      "totalPosts": 3087,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T18:16:41.460Z"
+      "lastSeen": "2025-11-22T00:50:28.257Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3068,
+      "totalPosts": 3093,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T18:16:43.865Z"
+      "lastSeen": "2025-11-22T00:50:30.429Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3075,
+      "totalPosts": 3100,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-21T18:16:46.221Z"
+      "lastSeen": "2025-11-22T00:50:32.613Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
-      "author": "blindnewworld.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
-      "author": "kennef.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "please use #AltText for #accessibility!",
-      "author": "m00psy.bsky.social",
-      "engagement": 25,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "You probably don’t need `aria-label` for that thing.\n\nIt doesn’t auto-translate:\nadrianroselli.com/2019/11/aria...\n\nIt’s code smell:\nericwbailey.website/published/ar...\n\nYou can probably use better methods:\nadrianroselli.com/2020/01/my-p...\n\n#accessibility #a11y #ARIA",
-      "author": "aardrian.bsky.social",
-      "engagement": 32,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "You probably don’t need `aria-label` for that thing.\n\nIt doesn’t auto-translate:\nadrianroselli.com/2019/11/aria...\n\nIt’s code smell:\nericwbailey.website/published/ar...\n\nYou can probably use better methods:\nadrianroselli.com/2020/01/my-p...\n\n#accessibility #a11y #ARIA",
       "author": "aardrian.bsky.social",
@@ -338,6 +314,30 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "www.northwichguardian.co.uk/news/2563810... #accessibility",
+      "author": "suewilkesauthor.bsky.social",
+      "engagement": 19,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
+      "author": "zeldman.bsky.social",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -382,11 +382,11 @@
       "count": 8
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 7
+      "keyword": "virtual",
+      "count": 6
     },
     {
-      "keyword": "virtual",
+      "keyword": "accessibility a11y",
       "count": 6
     },
     {
