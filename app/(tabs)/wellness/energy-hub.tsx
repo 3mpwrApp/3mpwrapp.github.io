@@ -14,14 +14,17 @@ import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { addDoc, collection, getDocs, orderBy, query, Timestamp } from 'firebase/firestore';
 
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8, MAX_FONT_SCALE } from '../../../constants/A11Y';
+import { auth, db } from '../../../firebase/config';
 import { useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useCircadianRhythmDJ } from '../../../services/circadianRhythmDJ';
 import { addMood, listMoods } from '../../../services/companion';
 import { useEnergyQuantumMechanics, type QuantumEnergyState } from '../../../services/energyQuantumMechanics';
 import { computeMoodInsights } from '../../../services/moodInsights';
+import { forecastEnergyLevels, generateAdaptiveSuggestions, type ActivityLog, type AdaptiveSuggestion, type EnergyForecast } from '../../../services/pacingAi';
 import { useSpoonEconomist } from '../../../services/spoonEconomist';
 import { useAppPalette } from '../../../theme/usePalette';
 import { showContextualError } from '../../../utils/userFriendlyErrors';
@@ -58,6 +61,16 @@ export default function EnergyMoodHub() {
   const [sleepQuality, setSleepQuality] = useState('');
   const [isSavingSleep, setIsSavingSleep] = useState(false);
 
+  // Pacing Partner state
+  const [activities, setActivities] = useState<ActivityLog[]>([]);
+  const [activityMinutes, setActivityMinutes] = useState('');
+  const [activityType, setActivityType] = useState('moderate');
+  const [painLevel, setPainLevel] = useState('');
+  const [fatigueLevel, setFatigueLevel] = useState('');
+  const [isSavingActivity, setIsSavingActivity] = useState(false);
+  const [energyForecasts, setEnergyForecasts] = useState<EnergyForecast[]>([]);
+  const [pacingSuggestions, setPacingSuggestions] = useState<AdaptiveSuggestion[]>([]);
+
   // Mood Tracker state
   const [moods, setMoods] = useState<any[]>([]);
   const [moodNotes, setMoodNotes] = useState('');
@@ -70,7 +83,30 @@ export default function EnergyMoodHub() {
     spoons.getMonthlyReport(now.getFullYear(), now.getMonth() + 1).then(setMonthlyReport);
     
     loadMoods();
+    loadActivities();
   }, []);
+
+  const loadActivities = async () => {
+    try {
+      const uid = auth.currentUser?.uid || 'anon';
+      const snap = await getDocs(
+        query(collection(db, 'users', uid, 'activity_logs'), orderBy('createdAt', 'desc'))
+      );
+      const activityData = snap.docs.map(d => ({ id: d.id, ...(d.data() as any) })) as ActivityLog[];
+      setActivities(activityData);
+      
+      // Calculate forecasts and suggestions
+      const forecasts = forecastEnergyLevels(activityData);
+      setEnergyForecasts(forecasts);
+      
+      const pain = painLevel ? parseFloat(painLevel) : undefined;
+      const fatigue = fatigueLevel ? parseFloat(fatigueLevel) : undefined;
+      const suggestions = generateAdaptiveSuggestions(activityData.slice(0, 10), pain, fatigue);
+      setPacingSuggestions(suggestions);
+    } catch (err) {
+      console.error('Error loading activities:', err);
+    }
+  };
 
   const loadMoods = async () => {
     try {
@@ -187,6 +223,52 @@ export default function EnergyMoodHub() {
       console.error('Error saving sleep:', err);
       showContextualError({ context: 'storage', error: err instanceof Error ? err : new Error('Failed to save sleep') });
       setIsSavingSleep(false);
+    }
+  };
+
+  const handleActivityLog = async () => {
+    try {
+      const minutes = parseFloat(activityMinutes);
+      const pain = painLevel ? parseFloat(painLevel) : undefined;
+      const fatigue = fatigueLevel ? parseFloat(fatigueLevel) : undefined;
+      
+      if (isNaN(minutes) || minutes <= 0 || minutes > 480) {
+        alert('Please enter valid minutes (0-480)');
+        return;
+      }
+      
+      if (pain !== undefined && (isNaN(pain) || pain < 0 || pain > 10)) {
+        alert('Pain level must be between 0 and 10');
+        return;
+      }
+      
+      if (fatigue !== undefined && (isNaN(fatigue) || fatigue < 0 || fatigue > 10)) {
+        alert('Fatigue level must be between 0 and 10');
+        return;
+      }
+
+      setIsSavingActivity(true);
+      
+      // Save activity to Firestore
+      const uid = auth.currentUser?.uid || 'anon';
+      await addDoc(collection(db, 'users', uid, 'activity_logs'), {
+        minutes,
+        type: activityType,
+        intensity: activityType as 'low' | 'moderate' | 'high',
+        painLevel: pain,
+        fatigueLevel: fatigue,
+        createdAt: Timestamp.now(),
+      });
+      
+      setActivityMinutes('');
+      setPainLevel('');
+      setFatigueLevel('');
+      await loadActivities(); // Reload to update forecasts
+      setTimeout(() => setIsSavingActivity(false), 300);
+    } catch (err) {
+      console.error('Error saving activity:', err);
+      showContextualError({ context: 'storage', error: err instanceof Error ? err : new Error('Failed to save activity') });
+      setIsSavingActivity(false);
     }
   };
 
@@ -609,6 +691,97 @@ export default function EnergyMoodHub() {
         )}
       </View>
 
+      {/* Activity Pacing */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <Text style={[styles.sectionTitle, { color: palette.text }]}>Log Activity</Text>
+        <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
+          Track activities to optimize pacing and energy
+        </Text>
+
+        <View style={styles.activityTypeRow}>
+          {['low', 'moderate', 'high'].map((type) => (
+            <Pressable
+              key={type}
+              style={[
+                styles.activityTypeButton,
+                { borderColor: palette.border },
+                activityType === type && { backgroundColor: palette.primary + '20', borderColor: palette.primary }
+              ]}
+              onPress={() => setActivityType(type)}
+            >
+              <Text style={[styles.activityTypeText, { color: activityType === type ? palette.primary : palette.text }]}>
+                {type === 'low' ? '🌱 Light' : type === 'moderate' ? '⚡ Moderate' : '🔥 Heavy'}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+
+        <View style={styles.sleepInputRow}>
+          <View style={styles.sleepInputGroup}>
+            <Text style={[styles.inputLabel, { color: palette.text }]}>Minutes</Text>
+            <TextInput
+              style={[styles.sleepInput, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+              placeholder="30"
+              placeholderTextColor={palette.textSecondary}
+              keyboardType="number-pad"
+              value={activityMinutes}
+              onChangeText={setActivityMinutes}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            />
+          </View>
+          
+          <View style={styles.sleepInputGroup}>
+            <Text style={[styles.inputLabel, { color: palette.text }]}>Pain (0-10)</Text>
+            <TextInput
+              style={[styles.sleepInput, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+              placeholder="0"
+              placeholderTextColor={palette.textSecondary}
+              keyboardType="number-pad"
+              value={painLevel}
+              onChangeText={setPainLevel}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            />
+          </View>
+
+          <View style={styles.sleepInputGroup}>
+            <Text style={[styles.inputLabel, { color: palette.text }]}>Fatigue (0-10)</Text>
+            <TextInput
+              style={[styles.sleepInput, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+              placeholder="0"
+              placeholderTextColor={palette.textSecondary}
+              keyboardType="number-pad"
+              value={fatigueLevel}
+              onChangeText={setFatigueLevel}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            />
+          </View>
+
+          <Pressable
+            style={[styles.sleepLogButton, { backgroundColor: palette.primary }]}
+            onPress={handleActivityLog}
+            disabled={isSavingActivity}
+          >
+            {isSavingActivity ? (
+              <ActivityIndicator size="small" color="#FFF" />
+            ) : (
+              <Ionicons name="fitness" size={24} color="#FFF" />
+            )}
+          </Pressable>
+        </View>
+
+        {activities.length > 0 && (
+          <View style={styles.recentSleepContainer}>
+            <Text style={[styles.recentSleepTitle, { color: palette.textSecondary }]}>Recent activities:</Text>
+            {activities.slice(0, 3).map((activity: ActivityLog) => (
+              <Text key={activity.id} style={[styles.recentSleepText, { color: palette.text }]}>
+                {activity.type}: {activity.minutes}min
+                {activity.fatigueLevel ? ` (fatigue: ${activity.fatigueLevel}/10)` : ''}
+              </Text>
+            ))}
+          </View>
+        )}
+      </View>
+
       {/* Borrow Energy (Emergency) */}
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.sectionTitle, { color: palette.text }]}>Borrow Energy</Text>
@@ -784,6 +957,57 @@ export default function EnergyMoodHub() {
               </Text>
             </View>
           )}
+        </View>
+      )}
+
+      {/* Energy Forecast from Activity Pacing */}
+      {energyForecasts.length > 0 && (
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Energy Forecast</Text>
+          <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
+            Based on your activity patterns
+          </Text>
+          
+          {energyForecasts.map((forecast, index) => (
+            <View key={index} style={styles.insightCard}>
+              <Text style={[styles.insightCardTitle, { color: palette.text }]}>
+                {forecast.hour}:00 - {getEnergyLevelEmoji(forecast.energyLevel)} {capitalize(forecast.energyLevel)}
+              </Text>
+              <Text style={[styles.insightCardSubtext, { color: palette.textSecondary }]}>
+                {forecast.suggestion}
+              </Text>
+              <Text style={[styles.insightCardSubtext, { color: palette.textSecondary }]}>
+                Confidence: {(forecast.confidence * 100).toFixed(0)}%
+              </Text>
+            </View>
+          ))}
+        </View>
+      )}
+
+      {/* Adaptive Pacing Suggestions */}
+      {pacingSuggestions.length > 0 && (
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Pacing Recommendations</Text>
+          <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
+            Personalized based on your current state
+          </Text>
+          
+          {pacingSuggestions.map((suggestion) => (
+            <View key={suggestion.id} style={[styles.insightHighlight, { backgroundColor: palette.primary + '10', borderColor: palette.primary, borderWidth: 1 }]}>
+              <Ionicons name={getPacingIcon(suggestion.category)} size={20} color={palette.primary} />
+              <View style={{ flex: 1, marginLeft: 8 }}>
+                <Text style={[styles.insightCardTitle, { color: palette.text, marginBottom: 4 }]}>
+                  {suggestion.title}
+                </Text>
+                <Text style={[styles.insightHighlightText, { color: palette.textSecondary }]}>
+                  {suggestion.description}
+                </Text>
+                <Text style={[styles.insightCardSubtext, { color: palette.textSecondary, marginTop: 4 }]}>
+                  ⏱ {suggestion.estimatedMinutes} min • {suggestion.energyCost} energy
+                </Text>
+              </View>
+            </View>
+          ))}
         </View>
       )}
 
@@ -1069,6 +1293,22 @@ function getCorrelationLabel(r: number): string {
   return 'Weak';
 }
 
+function getEnergyLevelEmoji(level: 'low' | 'moderate' | 'high'): string {
+  if (level === 'high') return '⚡';
+  if (level === 'moderate') return '🌟';
+  return '🌙';
+}
+
+function getPacingIcon(category: string): any {
+  const icons: Record<string, any> = {
+    'rest': 'bed-outline',
+    'gentle-movement': 'walk-outline',
+    'breathing': 'leaf-outline',
+    'adjustment': 'settings-outline',
+  };
+  return icons[category] || 'bulb-outline';
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -1351,6 +1591,22 @@ const styles = StyleSheet.create({
   recentSleepText: {
     fontSize: 13,
     marginBottom: 4,
+  },
+  activityTypeRow: {
+    flexDirection: 'row',
+    gap: 8,
+    marginBottom: 12,
+  },
+  activityTypeButton: {
+    flex: 1,
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 2,
+    alignItems: 'center',
+  },
+  activityTypeText: {
+    fontSize: 13,
+    fontWeight: '600',
   },
   moodHistoryItem: {
     flexDirection: 'row',
