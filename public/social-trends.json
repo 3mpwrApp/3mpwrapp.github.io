@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-22T00:50:33.617Z",
+  "lastUpdated": "2025-11-22T06:15:19.808Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3085,
+      "totalPosts": 3110,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T00:50:23.720Z"
+      "lastSeen": "2025-11-22T06:15:10.923Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3100,
+      "totalPosts": 3125,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T00:50:25.751Z"
+      "lastSeen": "2025-11-22T06:15:12.939Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3087,
+      "totalPosts": 3112,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T00:50:28.257Z"
+      "lastSeen": "2025-11-22T06:15:14.881Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3093,
+      "totalPosts": 3118,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T00:50:30.429Z"
+      "lastSeen": "2025-11-22T06:15:16.751Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3100,
+      "totalPosts": 3125,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T00:50:32.613Z"
+      "lastSeen": "2025-11-22T06:15:18.805Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "You probably don’t need `aria-label` for that thing.\n\nIt doesn’t auto-translate:\nadrianroselli.com/2019/11/aria...\n\nIt’s code smell:\nericwbailey.website/published/ar...\n\nYou can probably use better methods:\nadrianroselli.com/2020/01/my-p...\n\n#accessibility #a11y #ARIA",
-      "author": "aardrian.bsky.social",
-      "engagement": 32,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "So this is the first glance of Art of Flora! 🌱\n\nNot revolutionary, but built with the same love and care as Art of Fauna! ♥️ Please spread the word!\n\n7/7\n\n#indiedev #gamedev #a11y #OnTheAppStore",
-      "author": "strasser.bsky.social",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "The new and improved Proteus Kit works better than ever on PC, Xbox, and #SteamDeck!\n\nAnd did I mention it's designed by an Irish team? 🇮🇪\n\n#GamesAccessibility #Accessibility #A11y #IrishGameDev #IndieDev #GameDev #IrishCreatives #SpeirGhorm #IrishGameDomination",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,6 +314,30 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "No wonder Minister Collins has moved to Repeal the Plain Language Act, and NZ Government is sidelining its #Accessibility Charter. NZ Govt wants to Hide Information!\n\nI can't read a QR code. 20% of NZers are digitally excluded and with the telcos dropping 3G network phones that %ge may grow.\n#NZpol",
+      "author": "jennykaynz.bsky.social",
+      "engagement": 25,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
+      "author": "zeldman.bsky.social",
+      "engagement": 18,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -359,7 +359,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "altcitizen",
@@ -383,10 +383,6 @@
     },
     {
       "keyword": "virtual",
-      "count": 6
-    },
-    {
-      "keyword": "accessibility a11y",
       "count": 6
     },
     {
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "wearetheflood",
+      "count": 5
+    },
+    {
+      "keyword": "50501movement",
       "count": 5
     }
   ]
