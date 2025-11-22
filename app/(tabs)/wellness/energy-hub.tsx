@@ -12,10 +12,11 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
-import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { addDoc, collection, getDocs, orderBy, query, Timestamp } from 'firebase/firestore';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { getCachedJSON, setCachedJSON } from '../../../services/cache';
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8, MAX_FONT_SCALE } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
@@ -30,6 +31,15 @@ import { useAppPalette } from '../../../theme/usePalette';
 import { showContextualError } from '../../../utils/userFriendlyErrors';
 
 type TabView = 'dashboard' | 'track' | 'analyze' | 'community';
+
+// Cache keys for performance optimization
+const CACHE_KEYS = {
+  MOODS: 'energy-hub:moods:v1',
+  ACTIVITIES: 'energy-hub:activities:v1',
+  FORECASTS: 'energy-hub:forecasts:v1',
+  SUGGESTIONS: 'energy-hub:suggestions:v1',
+  MONTHLY_REPORT: 'energy-hub:monthly-report:v1',
+} as const;
 
 export default function EnergyMoodHub() {
   const palette = useAppPalette();
@@ -77,16 +87,39 @@ export default function EnergyMoodHub() {
   const [isSavingMood, setIsSavingMood] = useState(false);
   const [moodInsights, setMoodInsights] = useState<any>(null);
 
-  // Load data
+  // Load data with caching
   useEffect(() => {
     const now = new Date();
-    spoons.getMonthlyReport(now.getFullYear(), now.getMonth() + 1).then(setMonthlyReport);
+    
+    // Load from cache first for instant display
+    (async () => {
+      const cachedMoods = await getCachedJSON<any[]>(CACHE_KEYS.MOODS);
+      if (cachedMoods) setMoods(cachedMoods);
+      
+      const cachedActivities = await getCachedJSON<ActivityLog[]>(CACHE_KEYS.ACTIVITIES);
+      if (cachedActivities) setActivities(cachedActivities);
+      
+      const cachedForecasts = await getCachedJSON<EnergyForecast[]>(CACHE_KEYS.FORECASTS);
+      if (cachedForecasts) setEnergyForecasts(cachedForecasts);
+      
+      const cachedSuggestions = await getCachedJSON<AdaptiveSuggestion[]>(CACHE_KEYS.SUGGESTIONS);
+      if (cachedSuggestions) setPacingSuggestions(cachedSuggestions);
+      
+      const cachedReport = await getCachedJSON<any>(CACHE_KEYS.MONTHLY_REPORT);
+      if (cachedReport) setMonthlyReport(cachedReport);
+    })();
+    
+    // Then fetch fresh data in background
+    spoons.getMonthlyReport(now.getFullYear(), now.getMonth() + 1).then((report) => {
+      setMonthlyReport(report);
+      setCachedJSON(CACHE_KEYS.MONTHLY_REPORT, report);
+    });
     
     loadMoods();
     loadActivities();
   }, []);
 
-  const loadActivities = async () => {
+  const loadActivities = useCallback(async () => {
     try {
       const uid = auth.currentUser?.uid || 'anon';
       const snap = await getDocs(
@@ -103,12 +136,17 @@ export default function EnergyMoodHub() {
       const fatigue = fatigueLevel ? parseFloat(fatigueLevel) : undefined;
       const suggestions = generateAdaptiveSuggestions(activityData.slice(0, 10), pain, fatigue);
       setPacingSuggestions(suggestions);
+      
+      // Cache for instant loading next time
+      setCachedJSON(CACHE_KEYS.ACTIVITIES, activityData);
+      setCachedJSON(CACHE_KEYS.FORECASTS, forecasts);
+      setCachedJSON(CACHE_KEYS.SUGGESTIONS, suggestions);
     } catch (err) {
       console.error('Error loading activities:', err);
     }
-  };
+  }, [painLevel, fatigueLevel]);
 
-  const loadMoods = async () => {
+  const loadMoods = useCallback(async () => {
     try {
       const moodData = await listMoods();
       setMoods(moodData);
@@ -121,10 +159,13 @@ export default function EnergyMoodHub() {
       }));
       const insights = computeMoodInsights(entries as any);
       setMoodInsights(insights);
+      
+      // Cache for instant loading
+      setCachedJSON(CACHE_KEYS.MOODS, moodData);
     } catch (err) {
       console.error('Error loading moods:', err);
     }
-  };
+  }, []);
 
   const moodToScore = (mood: string): number => {
     const moodMap: Record<string, number> = {
@@ -156,15 +197,15 @@ export default function EnergyMoodHub() {
     { emoji: '😢', label: 'Terrible', value: 'terrible', color: '#EF4444' },
   ];
 
-  const spendTask = async (taskName: string, cost: number) => {
+  const spendTask = useCallback(async (taskName: string, cost: number) => {
     await spoons.spendSpoons(taskName, cost);
-  };
+  }, [spoons]);
 
-  const borrowSpoons = async (amount: number) => {
+  const borrowSpoons = useCallback(async (amount: number) => {
     await spoons.borrowSpoons(amount);
-  };
+  }, [spoons]);
 
-  const addCustomTask = async () => {
+  const addCustomTask = useCallback(async () => {
     const cost = parseInt(customTaskCost);
     if (customTaskName && !isNaN(cost)) {
       await spendTask(customTaskName, cost);
@@ -172,9 +213,9 @@ export default function EnergyMoodHub() {
       setCustomTaskName('');
       setCustomTaskCost('');
     }
-  };
+  }, [customTaskCost, customTaskName, spendTask]);
 
-  const handleMoodLog = async (mood: string) => {
+  const handleMoodLog = useCallback(async (mood: string) => {
     try {
       setIsSavingMood(true);
       await addMood(mood as any, moodNotes);
@@ -186,9 +227,9 @@ export default function EnergyMoodHub() {
       showContextualError({ context: 'storage', error: err instanceof Error ? err : new Error('Failed to save mood') });
       setIsSavingMood(false);
     }
-  };
+  }, [loadMoods, moodNotes]);
 
-  const handleSleepLog = async () => {
+  const handleSleepLog = useCallback(async () => {
     try {
       const hours = parseFloat(sleepHours);
       const quality = parseInt(sleepQuality);
@@ -224,9 +265,9 @@ export default function EnergyMoodHub() {
       showContextualError({ context: 'storage', error: err instanceof Error ? err : new Error('Failed to save sleep') });
       setIsSavingSleep(false);
     }
-  };
+  }, [circadian, sleepHours, sleepQuality]);
 
-  const handleActivityLog = async () => {
+  const handleActivityLog = useCallback(async () => {
     try {
       const minutes = parseFloat(activityMinutes);
       const pain = painLevel ? parseFloat(painLevel) : undefined;
@@ -270,10 +311,10 @@ export default function EnergyMoodHub() {
       showContextualError({ context: 'storage', error: err instanceof Error ? err : new Error('Failed to save activity') });
       setIsSavingActivity(false);
     }
-  };
+  }, [activityMinutes, activityType, painLevel, fatigueLevel, loadActivities]);
 
   // Calculate sleep-energy correlation
-  const getSleepEnergyCorrelation = async () => {
+  const getSleepEnergyCorrelation = useCallback(async () => {
     const sleepData = circadian.getSleepHistory(14); // Last 14 days
     const moodData = await listMoods();
 
@@ -335,7 +376,7 @@ export default function EnergyMoodHub() {
       avgQuality,
       dataPoints: matchedData.length,
     };
-  };
+  }, [circadian, moods]);
 
   const [sleepEnergyStats, setSleepEnergyStats] = useState<{
     correlation: number;
@@ -347,7 +388,12 @@ export default function EnergyMoodHub() {
   // Load sleep-energy correlation on mount
   useEffect(() => {
     getSleepEnergyCorrelation().then(setSleepEnergyStats);
-  }, []);
+  }, [getSleepEnergyCorrelation]);
+
+  // Memoize expensive calculations
+  const sleepHistory = useMemo(() => circadian.getSleepHistory(3), [circadian]);
+  const recentMoods = useMemo(() => moods.slice(0, 3), [moods]);
+  const recentActivities = useMemo(() => activities.slice(0, 3), [activities]);
 
 
   const renderDashboard = () => (
@@ -534,10 +580,10 @@ export default function EnergyMoodHub() {
       </View>
 
       {/* Recent Activity */}
-      {moods.length > 0 && (
+      {recentMoods.length > 0 && (
         <View style={[styles.card, { backgroundColor: palette.surface }]}>
           <Text style={[styles.sectionTitle, { color: palette.text }]}>Recent Mood Entries</Text>
-          {moods.slice(0, 3).map((mood, index) => (
+          {recentMoods.map((mood, index) => (
             <View key={index} style={[styles.moodHistoryItem, { borderBottomColor: palette.border }]}>
               <Text style={[styles.moodHistoryEmoji]}>
                 {MOOD_OPTIONS.find(m => m.value === mood.mood)?.emoji || '😐'}
@@ -679,10 +725,10 @@ export default function EnergyMoodHub() {
           </Pressable>
         </View>
 
-        {circadian.getSleepHistory(7).length > 0 && (
+        {sleepHistory.length > 0 && (
           <View style={styles.recentSleepContainer}>
-            <Text style={[styles.recentSleepTitle, { color: palette.textSecondary }]}>Last 7 nights:</Text>
-            {circadian.getSleepHistory(7).slice(0, 3).map((log: any) => (
+            <Text style={[styles.recentSleepTitle, { color: palette.textSecondary }]}>Recent sleep:</Text>
+            {sleepHistory.map((log: any) => (
               <Text key={log.id} style={[styles.recentSleepText, { color: palette.text }]}>
                 {log.date}: {log.totalSleep.toFixed(1)}h (quality: {log.sleepQuality}/5)
               </Text>
@@ -769,10 +815,10 @@ export default function EnergyMoodHub() {
           </Pressable>
         </View>
 
-        {activities.length > 0 && (
+        {recentActivities.length > 0 && (
           <View style={styles.recentSleepContainer}>
             <Text style={[styles.recentSleepTitle, { color: palette.textSecondary }]}>Recent activities:</Text>
-            {activities.slice(0, 3).map((activity: ActivityLog) => (
+            {recentActivities.map((activity: ActivityLog) => (
               <Text key={activity.id} style={[styles.recentSleepText, { color: palette.text }]}>
                 {activity.type}: {activity.minutes}min
                 {activity.fatigueLevel ? ` (fatigue: ${activity.fatigueLevel}/10)` : ''}
