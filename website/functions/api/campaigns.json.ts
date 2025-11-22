@@ -49,7 +49,7 @@ const campaigns = [
   },
 ];
 
-export async function onRequest(context) {
+export async function onRequest(_context) {
   return new Response(
     JSON.stringify({
       campaigns,

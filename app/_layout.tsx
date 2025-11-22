@@ -13,7 +13,7 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     div.style.top = '0';
     div.style.left = '0';
     div.style.width = '100%';
-    div.style.backgroundColor = palette.primary;
+    div.style.backgroundColor = '#d32f2f';
     div.style.color = 'white';
     div.style.padding = '20px';
     div.style.zIndex = '99999';
@@ -30,7 +30,7 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     div.style.bottom = '0';
     div.style.left = '0';
     div.style.width = '100%';
-    div.style.backgroundColor = palette.primary;
+    div.style.backgroundColor = '#ff9800';
     div.style.color = 'black';
     div.style.padding = '10px';
     div.style.zIndex = '99999';
@@ -266,7 +266,7 @@ export default function RootLayout() {
   if (_renderError) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: 20 }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: palette.primary, marginBottom: 10 }}>App Error</Text>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#d32f2f', marginBottom: 10 }}>App Error</Text>
         <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>{_renderError.message}</Text>
         <Text style={{ fontSize: 12, color: '#666', marginTop: 20, textAlign: 'center' }}>Check browser console (F12) for details</Text>
       </View>
@@ -379,7 +379,7 @@ export default function RootLayout() {
     // Emergency fallback - render a visible error screen
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: 20 }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: palette.primary, marginBottom: 10 }}>App Failed to Load</Text>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#d32f2f', marginBottom: 10 }}>App Failed to Load</Text>
         <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>
           {error instanceof Error ? error.message : 'Unknown error'}
         </Text>

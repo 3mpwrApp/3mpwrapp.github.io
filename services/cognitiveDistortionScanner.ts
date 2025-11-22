@@ -644,7 +644,7 @@ class CognitiveDistortionScannerManager {
 
   private generateNextSocraticQuestion(
     type: SocraticRound['questionType'],
-    previousResponse: string
+    _previousResponse: string
   ): string | null {
     const questions: Record<SocraticRound['questionType'], string[]> = {
       evidence: ['What evidence supports this thought?'],

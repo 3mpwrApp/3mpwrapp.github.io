@@ -323,7 +323,7 @@ const ThemedHeader = React.memo(() => {
           onPress={() => {
             try {
               router.push("/profile" as Href);
-            } catch (_error) {
+            } catch {
               // Fallback: navigate to settings if profile route fails
               router.push("/(tabs)/settings" as Href);
             }

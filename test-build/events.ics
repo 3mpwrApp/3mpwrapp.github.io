@@ -1,0 +1,1714 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3mpwr App//Events Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:3mpwr App Events
+X-WR-CALDESC:Community events, user-created events, disability awareness days, and health observances
+X-WR-TIMEZONE:America/Toronto
+REFRESH-INTERVAL;VALUE=DURATION:PT24H
+X-PUBLISHED-TTL:PT24H
+BEGIN:VEVENT
+UID:evt-sample-1@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251115T230000Z
+DTEND:20251115T230000Z
+SUMMARY:3mpwr Community Meetup
+DESCRIPTION:Monthly community gathering for peer support and networking
+LOCATION:Virtual Event
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-01-04-braille@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250104T000000Z
+DTEND:20250104T000000Z
+SUMMARY:World Braille Day
+DESCRIPTION:Celebrating the birth of Louis Braille and raising awareness about the importance of Braille literacy
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-02-04-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250204T000000Z
+DTEND:20250204T000000Z
+SUMMARY:World Cancer Day
+DESCRIPTION:Raising awareness about cancer and encouraging prevention\, detection\, and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-03-21-down@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250321T000000Z
+DTEND:20250321T000000Z
+SUMMARY:World Down Syndrome Day
+DESCRIPTION:Raising awareness and creating a single global voice for advocating for the rights of people with Down syndrome
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-04-02-autism@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250402T000000Z
+DTEND:20250402T000000Z
+SUMMARY:World Autism Awareness Day
+DESCRIPTION:Promoting acceptance and inclusion of people with autism spectrum disorder
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-05-05-celiac@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250505T000000Z
+DTEND:20250505T000000Z
+SUMMARY:World Celiac Disease Day
+DESCRIPTION:Raising awareness about celiac disease and gluten sensitivity
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-06-27-hiv@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250627T000000Z
+DTEND:20250627T000000Z
+SUMMARY:National HIV Testing Day
+DESCRIPTION:Encouraging people to get tested for HIV and know their status
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-10-10-mental-health@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251010T000000Z
+DTEND:20251010T000000Z
+SUMMARY:World Mental Health Day
+DESCRIPTION:Raising awareness about mental health issues and mobilizing efforts in support of mental health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2025-12-03-disability@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251203T000000Z
+DTEND:20251203T000000Z
+SUMMARY:International Day of Persons with Disabilities
+DESCRIPTION:Promoting the rights and well-being of persons with disabilities
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-01-04-braille@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260104T000000Z
+DTEND:20260104T000000Z
+SUMMARY:World Braille Day
+DESCRIPTION:Celebrating the birth of Louis Braille and raising awareness about the importance of Braille literacy
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-02-04-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260204T000000Z
+DTEND:20260204T000000Z
+SUMMARY:World Cancer Day
+DESCRIPTION:Raising awareness about cancer and encouraging prevention\, detection\, and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-03-21-down@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260321T000000Z
+DTEND:20260321T000000Z
+SUMMARY:World Down Syndrome Day
+DESCRIPTION:Raising awareness and creating a single global voice for advocating for the rights of people with Down syndrome
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-04-02-autism@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260402T000000Z
+DTEND:20260402T000000Z
+SUMMARY:World Autism Awareness Day
+DESCRIPTION:Promoting acceptance and inclusion of people with autism spectrum disorder
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-05-05-celiac@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260505T000000Z
+DTEND:20260505T000000Z
+SUMMARY:World Celiac Disease Day
+DESCRIPTION:Raising awareness about celiac disease and gluten sensitivity
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-06-27-hiv@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260627T000000Z
+DTEND:20260627T000000Z
+SUMMARY:National HIV Testing Day
+DESCRIPTION:Encouraging people to get tested for HIV and know their status
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-10-10-mental-health@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261010T000000Z
+DTEND:20261010T000000Z
+SUMMARY:World Mental Health Day
+DESCRIPTION:Raising awareness about mental health issues and mobilizing efforts in support of mental health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:obs-2026-12-03-disability@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261203T000000Z
+DTEND:20261203T000000Z
+SUMMARY:International Day of Persons with Disabilities
+DESCRIPTION:Promoting the rights and well-being of persons with disabilities
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-01-01@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250101T000000Z
+DTEND:20250101T000000Z
+SUMMARY:New Year's Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-07-01@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250701T000000Z
+DTEND:20250701T000000Z
+SUMMARY:Canada Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-09-02@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250902T000000Z
+DTEND:20250902T000000Z
+SUMMARY:Labour Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-10-14@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251014T000000Z
+DTEND:20251014T000000Z
+SUMMARY:Thanksgiving
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-12-25@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251225T000000Z
+DTEND:20251225T000000Z
+SUMMARY:Christmas Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2025-12-26@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251226T000000Z
+DTEND:20251226T000000Z
+SUMMARY:Boxing Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-01-01@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260101T000000Z
+DTEND:20260101T000000Z
+SUMMARY:New Year's Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-07-01@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260701T000000Z
+DTEND:20260701T000000Z
+SUMMARY:Canada Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-09-02@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260902T000000Z
+DTEND:20260902T000000Z
+SUMMARY:Labour Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-10-14@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261014T000000Z
+DTEND:20261014T000000Z
+SUMMARY:Thanksgiving
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-12-25@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261225T000000Z
+DTEND:20261225T000000Z
+SUMMARY:Christmas Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:hol-2026-12-26@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261226T000000Z
+DTEND:20261226T000000Z
+SUMMARY:Boxing Day
+DESCRIPTION:National statutory holiday
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-01-birth-defects@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250101T000000Z
+DTEND:20250101T000000Z
+SUMMARY:National Birth Defects Prevention Month
+DESCRIPTION:Awareness of birth defects prevention and healthy pregnancy
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-01-glaucoma@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250101T000000Z
+DTEND:20250101T000000Z
+SUMMARY:National Glaucoma Awareness Month
+DESCRIPTION:Early detection and treatment of glaucoma
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-01-thyroid@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250101T000000Z
+DTEND:20250101T000000Z
+SUMMARY:Thyroid Awareness Month
+DESCRIPTION:Thyroid disease awareness and screening
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-01-cervical@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250101T000000Z
+DTEND:20250101T000000Z
+SUMMARY:Cervical Cancer Awareness Month
+DESCRIPTION:Prevention and early detection of cervical cancer
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-02-heart@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250201T000000Z
+DTEND:20250201T000000Z
+SUMMARY:American Heart Month
+DESCRIPTION:Heart disease awareness and cardiovascular health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-02-cancer-prev@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250201T000000Z
+DTEND:20250201T000000Z
+SUMMARY:National Cancer Prevention Month
+DESCRIPTION:Cancer prevention strategies and healthy living
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-02-eating-disorders@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250201T000000Z
+DTEND:20250201T000000Z
+SUMMARY:Eating Disorders Awareness Month
+DESCRIPTION:Awareness of eating disorders and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-02-low-vision@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250201T000000Z
+DTEND:20250201T000000Z
+SUMMARY:Low Vision Awareness Month
+DESCRIPTION:Support for people with low vision
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-03-kidney@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250301T000000Z
+DTEND:20250301T000000Z
+SUMMARY:National Kidney Month
+DESCRIPTION:Kidney disease awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-03-colorectal@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250301T000000Z
+DTEND:20250301T000000Z
+SUMMARY:Colorectal Cancer Awareness Month
+DESCRIPTION:Colon and rectal cancer screening and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-03-endometriosis@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250301T000000Z
+DTEND:20250301T000000Z
+SUMMARY:Endometriosis Awareness Month
+DESCRIPTION:Awareness of endometriosis and women's health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-03-brain-injury@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250301T000000Z
+DTEND:20250301T000000Z
+SUMMARY:Brain Injury Awareness Month
+DESCRIPTION:Traumatic brain injury awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-03-ms@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250301T000000Z
+DTEND:20250301T000000Z
+SUMMARY:Multiple Sclerosis Awareness Month
+DESCRIPTION:MS awareness and support
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-04-autism@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250401T000000Z
+DTEND:20250401T000000Z
+SUMMARY:Autism Acceptance Month
+DESCRIPTION:Autism awareness and acceptance
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-04-parkinsons@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250401T000000Z
+DTEND:20250401T000000Z
+SUMMARY:Parkinson's Awareness Month
+DESCRIPTION:Parkinson's disease awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-04-donate-life@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250401T000000Z
+DTEND:20250401T000000Z
+SUMMARY:National Donate Life Month
+DESCRIPTION:Organ and tissue donation awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-04-testicular@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250401T000000Z
+DTEND:20250401T000000Z
+SUMMARY:Testicular Cancer Awareness Month
+DESCRIPTION:Early detection of testicular cancer
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-04-ibs@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250401T000000Z
+DTEND:20250401T000000Z
+SUMMARY:IBS Awareness Month
+DESCRIPTION:Irritable bowel syndrome awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-05-mental-health@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250501T000000Z
+DTEND:20250501T000000Z
+SUMMARY:Mental Health Awareness Month
+DESCRIPTION:Mental health awareness and stigma reduction
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-05-arthritis@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250501T000000Z
+DTEND:20250501T000000Z
+SUMMARY:Arthritis Awareness Month
+DESCRIPTION:Arthritis awareness and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-05-lupus@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250501T000000Z
+DTEND:20250501T000000Z
+SUMMARY:Lupus Awareness Month
+DESCRIPTION:Systemic lupus awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-05-skin-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250501T000000Z
+DTEND:20250501T000000Z
+SUMMARY:Skin Cancer Awareness Month
+DESCRIPTION:Skin cancer prevention and detection
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-05-eds@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250501T000000Z
+DTEND:20250501T000000Z
+SUMMARY:Ehlers-Danlos Syndrome Awareness Month
+DESCRIPTION:EDS and hypermobility disorders awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-05-celiac@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250501T000000Z
+DTEND:20250501T000000Z
+SUMMARY:Celiac Disease Awareness Month
+DESCRIPTION:Celiac disease and gluten sensitivity
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-06-ptsd@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250601T000000Z
+DTEND:20250601T000000Z
+SUMMARY:PTSD Awareness Month
+DESCRIPTION:Post-traumatic stress disorder awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-06-alzheimers@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250601T000000Z
+DTEND:20250601T000000Z
+SUMMARY:Alzheimer's & Brain Awareness Month
+DESCRIPTION:Alzheimer's disease and dementia awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-06-scleroderma@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250601T000000Z
+DTEND:20250601T000000Z
+SUMMARY:Scleroderma Awareness Month
+DESCRIPTION:Scleroderma and autoimmune disease awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-06-mg@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250601T000000Z
+DTEND:20250601T000000Z
+SUMMARY:Myasthenia Gravis Awareness Month
+DESCRIPTION:MG awareness and support
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-07-disability-pride@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250701T000000Z
+DTEND:20250701T000000Z
+SUMMARY:Disability Pride Month
+DESCRIPTION:Celebrating disability identity and rights
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-07-juvenile-arthritis@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250701T000000Z
+DTEND:20250701T000000Z
+SUMMARY:Juvenile Arthritis Awareness Month
+DESCRIPTION:Arthritis in children and youth
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-08-immunization@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250801T000000Z
+DTEND:20250801T000000Z
+SUMMARY:National Immunization Awareness Month
+DESCRIPTION:Vaccination and disease prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-08-psoriasis@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250801T000000Z
+DTEND:20250801T000000Z
+SUMMARY:Psoriasis Awareness Month
+DESCRIPTION:Psoriasis and psoriatic arthritis awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-09-pain@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250901T000000Z
+DTEND:20250901T000000Z
+SUMMARY:Pain Awareness Month
+DESCRIPTION:Chronic pain awareness and management
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-09-blood-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250901T000000Z
+DTEND:20250901T000000Z
+SUMMARY:Blood Cancer Awareness Month
+DESCRIPTION:Leukemia\, lymphoma\, and myeloma awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-09-childhood-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250901T000000Z
+DTEND:20250901T000000Z
+SUMMARY:Childhood Cancer Awareness Month
+DESCRIPTION:Pediatric cancer awareness and research
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-09-ovarian@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250901T000000Z
+DTEND:20250901T000000Z
+SUMMARY:Ovarian Cancer Awareness Month
+DESCRIPTION:Ovarian cancer detection and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-09-pcos@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250901T000000Z
+DTEND:20250901T000000Z
+SUMMARY:Polycystic Ovary Syndrome Awareness Month
+DESCRIPTION:PCOS awareness and women's health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-09-suicide-prev@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20250901T000000Z
+DTEND:20250901T000000Z
+SUMMARY:Suicide Prevention Month
+DESCRIPTION:Suicide prevention and mental health support
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-10-breast-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251001T000000Z
+DTEND:20251001T000000Z
+SUMMARY:Breast Cancer Awareness Month
+DESCRIPTION:Breast cancer awareness and early detection
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-10-depression@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251001T000000Z
+DTEND:20251001T000000Z
+SUMMARY:National Depression Screening Month
+DESCRIPTION:Depression awareness and screening
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-10-down-syndrome@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251001T000000Z
+DTEND:20251001T000000Z
+SUMMARY:Down Syndrome Awareness Month
+DESCRIPTION:Down syndrome awareness and inclusion
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-10-adhd@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251001T000000Z
+DTEND:20251001T000000Z
+SUMMARY:ADHD Awareness Month
+DESCRIPTION:Attention deficit hyperactivity disorder awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-10-domestic-violence@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251001T000000Z
+DTEND:20251001T000000Z
+SUMMARY:Domestic Violence Awareness Month
+DESCRIPTION:Domestic violence awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-10-sids@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251001T000000Z
+DTEND:20251001T000000Z
+SUMMARY:Sudden Infant Death Syndrome Awareness Month
+DESCRIPTION:SIDS prevention and safe sleep
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-11-diabetes@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251101T000000Z
+DTEND:20251101T000000Z
+SUMMARY:American Diabetes Month
+DESCRIPTION:Diabetes awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-11-lung-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251101T000000Z
+DTEND:20251101T000000Z
+SUMMARY:Lung Cancer Awareness Month
+DESCRIPTION:Lung cancer awareness and screening
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-11-pancreatic@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251101T000000Z
+DTEND:20251101T000000Z
+SUMMARY:National Pancreatic Cancer Awareness Month
+DESCRIPTION:Pancreatic cancer awareness and research
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-11-copd@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251101T000000Z
+DTEND:20251101T000000Z
+SUMMARY:Chronic Obstructive Pulmonary Disease Month
+DESCRIPTION:COPD awareness and lung health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-11-epilepsy@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251101T000000Z
+DTEND:20251101T000000Z
+SUMMARY:Epilepsy Awareness Month
+DESCRIPTION:Epilepsy awareness and seizure disorders
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-12-01-aids@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251201T000000Z
+DTEND:20251201T000000Z
+SUMMARY:World AIDS Day
+DESCRIPTION:HIV/AIDS awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2025-12-safe-toys@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20251201T000000Z
+DTEND:20251201T000000Z
+SUMMARY:Safe Toys and Gifts Month
+DESCRIPTION:Child safety and injury prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-01-birth-defects@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260101T000000Z
+DTEND:20260101T000000Z
+SUMMARY:National Birth Defects Prevention Month
+DESCRIPTION:Awareness of birth defects prevention and healthy pregnancy
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-01-glaucoma@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260101T000000Z
+DTEND:20260101T000000Z
+SUMMARY:National Glaucoma Awareness Month
+DESCRIPTION:Early detection and treatment of glaucoma
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-01-thyroid@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260101T000000Z
+DTEND:20260101T000000Z
+SUMMARY:Thyroid Awareness Month
+DESCRIPTION:Thyroid disease awareness and screening
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-01-cervical@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260101T000000Z
+DTEND:20260101T000000Z
+SUMMARY:Cervical Cancer Awareness Month
+DESCRIPTION:Prevention and early detection of cervical cancer
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-02-heart@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260201T000000Z
+DTEND:20260201T000000Z
+SUMMARY:American Heart Month
+DESCRIPTION:Heart disease awareness and cardiovascular health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-02-cancer-prev@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260201T000000Z
+DTEND:20260201T000000Z
+SUMMARY:National Cancer Prevention Month
+DESCRIPTION:Cancer prevention strategies and healthy living
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-02-eating-disorders@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260201T000000Z
+DTEND:20260201T000000Z
+SUMMARY:Eating Disorders Awareness Month
+DESCRIPTION:Awareness of eating disorders and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-02-low-vision@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260201T000000Z
+DTEND:20260201T000000Z
+SUMMARY:Low Vision Awareness Month
+DESCRIPTION:Support for people with low vision
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-03-kidney@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260301T000000Z
+DTEND:20260301T000000Z
+SUMMARY:National Kidney Month
+DESCRIPTION:Kidney disease awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-03-colorectal@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260301T000000Z
+DTEND:20260301T000000Z
+SUMMARY:Colorectal Cancer Awareness Month
+DESCRIPTION:Colon and rectal cancer screening and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-03-endometriosis@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260301T000000Z
+DTEND:20260301T000000Z
+SUMMARY:Endometriosis Awareness Month
+DESCRIPTION:Awareness of endometriosis and women's health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-03-brain-injury@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260301T000000Z
+DTEND:20260301T000000Z
+SUMMARY:Brain Injury Awareness Month
+DESCRIPTION:Traumatic brain injury awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-03-ms@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260301T000000Z
+DTEND:20260301T000000Z
+SUMMARY:Multiple Sclerosis Awareness Month
+DESCRIPTION:MS awareness and support
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-04-autism@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260401T000000Z
+DTEND:20260401T000000Z
+SUMMARY:Autism Acceptance Month
+DESCRIPTION:Autism awareness and acceptance
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-04-parkinsons@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260401T000000Z
+DTEND:20260401T000000Z
+SUMMARY:Parkinson's Awareness Month
+DESCRIPTION:Parkinson's disease awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-04-donate-life@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260401T000000Z
+DTEND:20260401T000000Z
+SUMMARY:National Donate Life Month
+DESCRIPTION:Organ and tissue donation awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-04-testicular@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260401T000000Z
+DTEND:20260401T000000Z
+SUMMARY:Testicular Cancer Awareness Month
+DESCRIPTION:Early detection of testicular cancer
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-04-ibs@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260401T000000Z
+DTEND:20260401T000000Z
+SUMMARY:IBS Awareness Month
+DESCRIPTION:Irritable bowel syndrome awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-05-mental-health@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260501T000000Z
+DTEND:20260501T000000Z
+SUMMARY:Mental Health Awareness Month
+DESCRIPTION:Mental health awareness and stigma reduction
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-05-arthritis@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260501T000000Z
+DTEND:20260501T000000Z
+SUMMARY:Arthritis Awareness Month
+DESCRIPTION:Arthritis awareness and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-05-lupus@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260501T000000Z
+DTEND:20260501T000000Z
+SUMMARY:Lupus Awareness Month
+DESCRIPTION:Systemic lupus awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-05-skin-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260501T000000Z
+DTEND:20260501T000000Z
+SUMMARY:Skin Cancer Awareness Month
+DESCRIPTION:Skin cancer prevention and detection
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-05-eds@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260501T000000Z
+DTEND:20260501T000000Z
+SUMMARY:Ehlers-Danlos Syndrome Awareness Month
+DESCRIPTION:EDS and hypermobility disorders awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-05-celiac@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260501T000000Z
+DTEND:20260501T000000Z
+SUMMARY:Celiac Disease Awareness Month
+DESCRIPTION:Celiac disease and gluten sensitivity
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-06-ptsd@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260601T000000Z
+DTEND:20260601T000000Z
+SUMMARY:PTSD Awareness Month
+DESCRIPTION:Post-traumatic stress disorder awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-06-alzheimers@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260601T000000Z
+DTEND:20260601T000000Z
+SUMMARY:Alzheimer's & Brain Awareness Month
+DESCRIPTION:Alzheimer's disease and dementia awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-06-scleroderma@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260601T000000Z
+DTEND:20260601T000000Z
+SUMMARY:Scleroderma Awareness Month
+DESCRIPTION:Scleroderma and autoimmune disease awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-06-mg@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260601T000000Z
+DTEND:20260601T000000Z
+SUMMARY:Myasthenia Gravis Awareness Month
+DESCRIPTION:MG awareness and support
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-07-disability-pride@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260701T000000Z
+DTEND:20260701T000000Z
+SUMMARY:Disability Pride Month
+DESCRIPTION:Celebrating disability identity and rights
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-07-juvenile-arthritis@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260701T000000Z
+DTEND:20260701T000000Z
+SUMMARY:Juvenile Arthritis Awareness Month
+DESCRIPTION:Arthritis in children and youth
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-08-immunization@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260801T000000Z
+DTEND:20260801T000000Z
+SUMMARY:National Immunization Awareness Month
+DESCRIPTION:Vaccination and disease prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-08-psoriasis@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260801T000000Z
+DTEND:20260801T000000Z
+SUMMARY:Psoriasis Awareness Month
+DESCRIPTION:Psoriasis and psoriatic arthritis awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-09-pain@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260901T000000Z
+DTEND:20260901T000000Z
+SUMMARY:Pain Awareness Month
+DESCRIPTION:Chronic pain awareness and management
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-09-blood-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260901T000000Z
+DTEND:20260901T000000Z
+SUMMARY:Blood Cancer Awareness Month
+DESCRIPTION:Leukemia\, lymphoma\, and myeloma awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-09-childhood-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260901T000000Z
+DTEND:20260901T000000Z
+SUMMARY:Childhood Cancer Awareness Month
+DESCRIPTION:Pediatric cancer awareness and research
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-09-ovarian@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260901T000000Z
+DTEND:20260901T000000Z
+SUMMARY:Ovarian Cancer Awareness Month
+DESCRIPTION:Ovarian cancer detection and treatment
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-09-pcos@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260901T000000Z
+DTEND:20260901T000000Z
+SUMMARY:Polycystic Ovary Syndrome Awareness Month
+DESCRIPTION:PCOS awareness and women's health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-09-suicide-prev@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20260901T000000Z
+DTEND:20260901T000000Z
+SUMMARY:Suicide Prevention Month
+DESCRIPTION:Suicide prevention and mental health support
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-10-breast-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261001T000000Z
+DTEND:20261001T000000Z
+SUMMARY:Breast Cancer Awareness Month
+DESCRIPTION:Breast cancer awareness and early detection
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-10-depression@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261001T000000Z
+DTEND:20261001T000000Z
+SUMMARY:National Depression Screening Month
+DESCRIPTION:Depression awareness and screening
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-10-down-syndrome@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261001T000000Z
+DTEND:20261001T000000Z
+SUMMARY:Down Syndrome Awareness Month
+DESCRIPTION:Down syndrome awareness and inclusion
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-10-adhd@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261001T000000Z
+DTEND:20261001T000000Z
+SUMMARY:ADHD Awareness Month
+DESCRIPTION:Attention deficit hyperactivity disorder awareness
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-10-domestic-violence@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261001T000000Z
+DTEND:20261001T000000Z
+SUMMARY:Domestic Violence Awareness Month
+DESCRIPTION:Domestic violence awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-10-sids@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261001T000000Z
+DTEND:20261001T000000Z
+SUMMARY:Sudden Infant Death Syndrome Awareness Month
+DESCRIPTION:SIDS prevention and safe sleep
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-11-diabetes@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261101T000000Z
+DTEND:20261101T000000Z
+SUMMARY:American Diabetes Month
+DESCRIPTION:Diabetes awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-11-lung-cancer@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261101T000000Z
+DTEND:20261101T000000Z
+SUMMARY:Lung Cancer Awareness Month
+DESCRIPTION:Lung cancer awareness and screening
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-11-pancreatic@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261101T000000Z
+DTEND:20261101T000000Z
+SUMMARY:National Pancreatic Cancer Awareness Month
+DESCRIPTION:Pancreatic cancer awareness and research
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-11-copd@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261101T000000Z
+DTEND:20261101T000000Z
+SUMMARY:Chronic Obstructive Pulmonary Disease Month
+DESCRIPTION:COPD awareness and lung health
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-11-epilepsy@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261101T000000Z
+DTEND:20261101T000000Z
+SUMMARY:Epilepsy Awareness Month
+DESCRIPTION:Epilepsy awareness and seizure disorders
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-12-01-aids@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261201T000000Z
+DTEND:20261201T000000Z
+SUMMARY:World AIDS Day
+DESCRIPTION:HIV/AIDS awareness and prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:health-2026-12-safe-toys@3mpwrapp.pages.dev
+DTSTAMP:20251106T024656Z
+DTSTART:20261201T000000Z
+DTEND:20261201T000000Z
+SUMMARY:Safe Toys and Gifts Month
+DESCRIPTION:Child safety and injury prevention
+LOCATION:
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://3mpwrapp.pages.dev/events/
+ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com
+END:VEVENT
+END:VCALENDAR

@@ -473,7 +473,7 @@ class LegalDNASequencerManager {
     return genome;
   }
 
-  private identifyClusters(nodes: GenomeNode[], edges: GenomeEdge[]): GenomeCluster[] {
+  private identifyClusters(nodes: GenomeNode[], _edges: GenomeEdge[]): GenomeCluster[] {
     // Simple clustering: group by event date proximity
     const clusters: GenomeCluster[] = [];
     
@@ -504,7 +504,7 @@ class LegalDNASequencerManager {
     return clusters;
   }
 
-  private detectWeakPoints(legalCase: LegalCase, nodes: GenomeNode[], edges: GenomeEdge[]): WeakPoint[] {
+  private detectWeakPoints(legalCase: LegalCase, _nodes: GenomeNode[], _edges: GenomeEdge[]): WeakPoint[] {
     const weakPoints: WeakPoint[] = [];
 
     // Check for unmet legal elements

@@ -3,16 +3,16 @@ import { Stack } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { useAppPalette } from '../../../theme/usePalette';
 import { useTranslation } from '../../../i18n';
 import { useLegalDNASequencer } from '../../../services/legalDNASequencer';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export default function LegalDNAScreen() {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const legalDNA = useLegalDNASequencer();
 
-  const [cases, setCases] = useState(legalDNA.getAllCases());
+  const [cases, _setCases] = useState(legalDNA.getAllCases());
   const [selectedCase, setSelectedCase] = useState<any>(null);
   const [_showAddModal, _setShowAddModal] = useState(false);
 
