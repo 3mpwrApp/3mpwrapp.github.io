@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-22T12:18:34.892Z",
+  "lastUpdated": "2025-11-22T18:14:37.026Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3135,
+      "totalPosts": 3160,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T12:18:26.251Z"
+      "lastSeen": "2025-11-22T18:14:27.542Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3150,
+      "totalPosts": 3175,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T12:18:28.340Z"
+      "lastSeen": "2025-11-22T18:14:29.497Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3137,
+      "totalPosts": 3162,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T12:18:30.213Z"
+      "lastSeen": "2025-11-22T18:14:31.937Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3143,
+      "totalPosts": 3168,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T12:18:32.038Z"
+      "lastSeen": "2025-11-22T18:14:34.058Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3150,
+      "totalPosts": 3175,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-22T12:18:33.889Z"
+      "lastSeen": "2025-11-22T18:14:36.022Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "please use #AltText for #accessibility!",
-      "author": "m00psy.bsky.social",
-      "engagement": 25,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "You probably don’t need `aria-label` for that thing.\n\nIt doesn’t auto-translate:\nadrianroselli.com/2019/11/aria...\n\nIt’s code smell:\nericwbailey.website/published/ar...\n\nYou can probably use better methods:\nadrianroselli.com/2020/01/my-p...\n\n#accessibility #a11y #ARIA",
-      "author": "aardrian.bsky.social",
-      "engagement": 34,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "You probably don’t need `aria-label` for that thing.\n\nIt doesn’t auto-translate:\nadrianroselli.com/2019/11/aria...\n\nIt’s code smell:\nericwbailey.website/published/ar...\n\nYou can probably use better methods:\nadrianroselli.com/2020/01/my-p...\n\n#accessibility #a11y #ARIA",
-      "author": "aardrian.bsky.social",
-      "engagement": 34,
-      "hashtag": "A11y"
-    },
     {
       "text": "So this is the first glance of Art of Flora! 🌱\n\nNot revolutionary, but built with the same love and care as Art of Fauna! ♥️ Please spread the word!\n\n7/7\n\n#indiedev #gamedev #a11y #OnTheAppStore",
       "author": "strasser.bsky.social",
@@ -326,6 +308,24 @@
       "author": "zeldman.bsky.social",
       "engagement": 22,
       "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "No wonder Minister Collins has moved to Repeal the Plain Language Act, and NZ Government is sidelining its #Accessibility Charter. NZ Govt wants to Hide Information!\n\nI can't read a QR code. 20% of NZers are digitally excluded and with the telcos dropping 3G network phones that %ge may grow.\n#NZpol",
+      "author": "jennykaynz.bsky.social",
+      "engagement": 35,
+      "hashtag": "Accessibility"
     },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
