@@ -19,6 +19,7 @@ import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8, MAX_FONT_SCALE } from '../../../constants/A11Y';
 import { useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { addMood, listMoods } from '../../../services/companion';
+import { useEnergyQuantumMechanics, type QuantumEnergyState } from '../../../services/energyQuantumMechanics';
 import { computeMoodInsights } from '../../../services/moodInsights';
 import { useSpoonEconomist } from '../../../services/spoonEconomist';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -42,6 +43,9 @@ export default function EnergyMoodHub() {
   // Tab state
   const [activeTab, setActiveTab] = useState<TabView>('dashboard');
 
+  // Advanced mode toggle
+  const [advancedMode, setAdvancedMode] = useState(false);
+
   // Spoon Economist state
   const spoons = useSpoonEconomist();
   const { account } = spoons;
@@ -49,6 +53,9 @@ export default function EnergyMoodHub() {
   const [customTaskName, setCustomTaskName] = useState('');
   const [customTaskCost, setCustomTaskCost] = useState('');
   const [monthlyReport, setMonthlyReport] = useState<any>(null);
+
+  // Energy Quantum Mechanics state (advanced mode)
+  const quantum = useEnergyQuantumMechanics();
 
   // Mood Tracker state
   const [moods, setMoods] = useState<MoodEntry[]>([]);
@@ -145,6 +152,93 @@ export default function EnergyMoodHub() {
 
   const renderDashboard = () => (
     <ScrollView>
+      {/* Advanced Mode Toggle */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <Pressable
+          style={styles.advancedToggle}
+          onPress={() => setAdvancedMode(!advancedMode)}
+        >
+          <View style={styles.toggleLeft}>
+            <Ionicons 
+              name={advancedMode ? "flash" : "flash-outline"} 
+              size={24} 
+              color={palette.primary} 
+            />
+            <View style={styles.toggleText}>
+              <Text style={[styles.toggleTitle, { color: palette.text }]}>
+                Advanced Energy Mode
+              </Text>
+              <Text style={[styles.toggleDescription, { color: palette.textSecondary }]}>
+                Quantum states, energy debt, forecasting
+              </Text>
+            </View>
+          </View>
+          <View style={[
+            styles.toggleSwitch,
+            { backgroundColor: advancedMode ? palette.primary : palette.border }
+          ]}>
+            <View style={[
+              styles.toggleKnob,
+              { transform: [{ translateX: advancedMode ? 20 : 2 }] }
+            ]} />
+          </View>
+        </Pressable>
+      </View>
+
+      {/* Quantum Energy State (Advanced Mode Only) */}
+      {advancedMode && (
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <View style={styles.cardHeader}>
+            <View>
+              <Text style={[styles.cardTitle, { color: palette.text }]}>Quantum Energy State</Text>
+              <Text style={[styles.cardSubtitle, { color: palette.textSecondary }]}>
+                {quantum.metrics.quantumState.replace(/_/g, ' ')}
+              </Text>
+            </View>
+            <View style={[styles.quantumBadge, { backgroundColor: getQuantumColor(quantum.metrics.quantumState) }]}>
+              <Ionicons name="flash" size={20} color="#FFF" />
+            </View>
+          </View>
+
+          <View style={styles.quantumMetrics}>
+            <View style={styles.quantumMetricItem}>
+              <Text style={[styles.quantumMetricLabel, { color: palette.textSecondary }]}>
+                Energy Level
+              </Text>
+              <Text style={[styles.quantumMetricValue, { color: palette.text }]}>
+                {quantum.metrics.currentEnergy}/100
+              </Text>
+            </View>
+            <View style={styles.quantumMetricItem}>
+              <Text style={[styles.quantumMetricLabel, { color: palette.textSecondary }]}>
+                Volatility
+              </Text>
+              <Text style={[styles.quantumMetricValue, { color: palette.text }]}>
+                {quantum.metrics.volatility}%
+              </Text>
+            </View>
+            <View style={styles.quantumMetricItem}>
+              <Text style={[styles.quantumMetricLabel, { color: palette.textSecondary }]}>
+                Sustainability
+              </Text>
+              <Text style={[styles.quantumMetricValue, { color: getSustainabilityColor(quantum.metrics.sustainabilityScore) }]}>
+                {quantum.metrics.sustainabilityScore}/100
+              </Text>
+            </View>
+          </View>
+
+          {quantum.metrics.debt.currentBalance > 0 && (
+            <View style={[styles.alertBanner, { backgroundColor: '#F8D7DA', marginTop: 12 }]}>
+              <Ionicons name="warning" size={20} color="#721C24" />
+              <Text style={[styles.alertText, { color: '#721C24' }]}>
+                Energy debt: {quantum.metrics.debt.currentBalance.toFixed(1)} units
+                {' '}({(quantum.metrics.debt.interestRate * 100).toFixed(1)}% compound interest)
+              </Text>
+            </View>
+          )}
+        </View>
+      )}
+
       {/* Energy Overview Card */}
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <View style={styles.cardHeader}>
@@ -460,6 +554,54 @@ export default function EnergyMoodHub() {
         </Text>
       </View>
 
+      {/* Quantum Energy Forecast (Advanced Mode) */}
+      {advancedMode && (
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>7-Day Energy Forecast</Text>
+          <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
+            Quantum mechanics-based prediction
+          </Text>
+          
+          {quantum.forecastEnergy(7).map((forecast, index) => (
+            <View key={index} style={[styles.forecastItem, { borderBottomColor: palette.border }]}>
+              <View style={styles.forecastHeader}>
+                <Text style={[styles.forecastDate, { color: palette.text }]}>
+                  {new Date(forecast.date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
+                </Text>
+                <Text style={[styles.forecastLevel, { color: getForecastColor(forecast.predictedLevel) }]}>
+                  {forecast.predictedLevel}%
+                </Text>
+              </View>
+              
+              <View style={styles.confidenceBar}>
+                <View 
+                  style={[
+                    styles.confidenceFill, 
+                    { 
+                      width: `${forecast.confidence}%`,
+                      backgroundColor: palette.primary 
+                    }
+                  ]} 
+                />
+              </View>
+              <Text style={[styles.confidenceText, { color: palette.textSecondary }]}>
+                {forecast.confidence}% confidence
+              </Text>
+              
+              {forecast.recommendations.length > 0 && (
+                <View style={styles.recommendationsBox}>
+                  {forecast.recommendations.map((rec, recIndex) => (
+                    <Text key={recIndex} style={[styles.recommendationText, { color: palette.text }]}>
+                      • {rec}
+                    </Text>
+                  ))}
+                </View>
+              )}
+            </View>
+          ))}
+        </View>
+      )}
+
       <View style={styles.bottomSpacer} />
     </ScrollView>
   );
@@ -631,6 +773,31 @@ function getTrendIcon(trend: string): string {
 
 function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function getQuantumColor(state: QuantumEnergyState): string {
+  const colors: Record<QuantumEnergyState, string> = {
+    quantum_superposition: '#9370DB',
+    energy_entanglement: '#20B2AA',
+    wave_collapse: '#DC143C',
+    tunneling: '#FF8C00',
+    zero_point: '#4169E1',
+    excited_state: '#FFD700',
+    ground_state: '#28A745',
+  };
+  return colors[state] || '#6B7280';
+}
+
+function getSustainabilityColor(score: number): string {
+  if (score >= 70) return '#10B981';
+  if (score >= 40) return '#F59E0B';
+  return '#EF4444';
+}
+
+function getForecastColor(level: number): string {
+  if (level >= 70) return '#10B981';
+  if (level >= 40) return '#F59E0B';
+  return '#EF4444';
 }
 
 function formatTimeAgo(date: Date): string {
@@ -902,6 +1069,103 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     textAlign: 'center',
     padding: 20,
+  },
+  advancedToggle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  toggleLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  toggleText: {
+    marginLeft: 12,
+    flex: 1,
+  },
+  toggleTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  toggleDescription: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  toggleSwitch: {
+    width: 48,
+    height: 28,
+    borderRadius: 14,
+    padding: 2,
+  },
+  toggleKnob: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    backgroundColor: '#FFF',
+  },
+  quantumBadge: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  quantumMetrics: {
+    flexDirection: 'row',
+    marginTop: 12,
+  },
+  quantumMetricItem: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  quantumMetricLabel: {
+    fontSize: 11,
+    marginBottom: 4,
+  },
+  quantumMetricValue: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  forecastItem: {
+    paddingVertical: 16,
+    borderBottomWidth: 1,
+  },
+  forecastHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  forecastDate: {
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  forecastLevel: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  confidenceBar: {
+    height: 6,
+    backgroundColor: '#E5E7EB',
+    borderRadius: 3,
+    overflow: 'hidden',
+    marginBottom: 4,
+  },
+  confidenceFill: {
+    height: '100%',
+  },
+  confidenceText: {
+    fontSize: 11,
+    marginBottom: 8,
+  },
+  recommendationsBox: {
+    marginTop: 4,
+    paddingLeft: 8,
+  },
+  recommendationText: {
+    fontSize: 12,
+    marginBottom: 2,
   },
   modalOverlay: {
     flex: 1,
