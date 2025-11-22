@@ -1,7 +1,7 @@
 import { Link } from 'expo-router';
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import React from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
@@ -96,7 +96,7 @@ export default function PacingPartner() {
       load();
       checkOverexertion();
     } catch {
-      Alert.alert('Failed','Could not save');
+      showContextualError(err instanceof Error ? err : new Error('Could not save'), 'storage');
     }
   };
 

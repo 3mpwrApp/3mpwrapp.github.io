@@ -50,7 +50,7 @@ export default function AICompanion() {
       setTimeout(() => setIsSaving(false), 300);
     } catch (err) {
       console.error('Error saving mood:', err);
-      Alert.alert('Error', 'Failed to save mood. Please try again.');
+      showContextualError(err instanceof Error ? err : new Error('Failed to save mood'), 'storage');
       setIsSaving(false);
       setSelectedMood(null);
     }
@@ -71,7 +71,7 @@ export default function AICompanion() {
       Alert.alert('Success', `Scheduled ${scheduled} daily check-ins at 9am, 12pm, 3pm, and 6pm.`);
     } catch (err) { 
       console.error('Error scheduling notifications:', err);
-      Alert.alert('Failed','Unable to schedule notifications. Please check app permissions.'); 
+      showContextualError(new Error('Unable to schedule notifications'), 'permission'); 
     }
   };
 

@@ -4,6 +4,8 @@ import { Modal, StyleSheet, Text, TextInput, View } from 'react-native';
 import A11yPressable from '../../../../components/A11yPressable';
 import DisclaimerBanner from '../../../../components/DisclaimerBanner';
 import { GapView } from '../../../../components/GapView';
+import SearchBar from '../../../../components/SearchBar';
+import { SkeletonList } from '../../../../components/SkeletonLoader';
 import { usePostLoadAnnounce } from '../../../../hooks/usePostLoadAnnounce';
 import { useTranslation } from '../../../../i18n';
 import { s } from '../../../../theme/spacing';
@@ -18,14 +20,41 @@ export default function EvidenceLockerImpl() {
   const [passValue, setPassValue] = React.useState('');
   const [notes, setNotes] = React.useState<string[]>([]);
   const [lastAdded, setLastAdded] = React.useState<string | null>(null);
+  const [loading, setLoading] = React.useState(true);
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  const filteredNotes = React.useMemo(() => {
+    if (!searchQuery.trim()) return notes;
+    const q = searchQuery.toLowerCase();
+    return notes.filter(note => note.toLowerCase().includes(q));
+  }, [notes, searchQuery]);
+
+  React.useEffect(() => {
+    // Simulate loading encrypted notes
+    const timer = setTimeout(() => setLoading(false), 400);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Announce count on first load using shared hook
-  usePostLoadAnnounce({ loading: false, count: notes.length, ns: 'templates.evidenceLocker', emptyKey: 'templates.evidenceLocker.empty' });
+  usePostLoadAnnounce({ loading, count: notes.length, ns: 'templates.evidenceLocker', emptyKey: 'templates.evidenceLocker.empty' });
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{t('templates.evidenceLocker.title', 'Evidence Locker')}</Text>
       <DisclaimerBanner type="legal" compact={true} />
-      <GapView style={styles.row} gap={s('sm')}>
+      
+      {loading ? (
+        <SkeletonList count={4} />
+      ) : (
+        <>
+          {notes.length > 0 && (
+            <SearchBar
+              value={searchQuery}
+              onChangeText={setSearchQuery}
+              placeholder={t('templates.evidenceLocker.searchPlaceholder', 'Search notes...')}
+            />
+          )}
+          <GapView style={styles.row} gap={s('sm')}>
         <A11yPressable style={styles.button} onPress={() => setPassModal({ mode: 'export' })}>
           <Text style={styles.buttonText}>{t('common.export', 'Export')}</Text>
         </A11yPressable>
@@ -41,10 +70,20 @@ export default function EvidenceLockerImpl() {
           <Text style={{ color: palette.text }}>{t('templates.evidenceLocker.noteSaved','Note saved to your cloud locker.')}</Text>
         </View>
       )}
-      {notes.length>0 && (
+      {filteredNotes.length > 0 && (
         <View style={{ marginTop: s('md') }}>
-          {notes.map((n,i)=>(<Text key={i} style={{ color: palette.text, marginTop:4 }}>• {n}</Text>))}
+          {searchQuery && (
+            <Text style={{ color: palette.text, marginBottom: 8, opacity: 0.7 }}>
+              {t('templates.evidenceLocker.searchResults', '{{count}} result(s)', { count: filteredNotes.length })}
+            </Text>
+          )}
+          {filteredNotes.map((n,i)=>(<Text key={i} style={{ color: palette.text, marginTop:4 }}>• {n}</Text>))}
         </View>
+      )}
+      {searchQuery && filteredNotes.length === 0 && (
+        <Text style={{ color: palette.text, marginTop: s('md'), opacity: 0.7 }}>
+          {t('templates.evidenceLocker.noResults', 'No notes match your search')}
+        </Text>
       )}
 
       {passModal && (
@@ -81,6 +120,8 @@ export default function EvidenceLockerImpl() {
           </View>
         </Modal>
       )}
+          </>
+        )}
     </View>
   );
 }

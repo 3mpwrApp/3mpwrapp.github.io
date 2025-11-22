@@ -7,6 +7,7 @@ import A11yPressable from '../../../components/A11yPressable';
 import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../../components/SearchBar';
+import { SkeletonList } from '../../../components/SkeletonLoader';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/A11Y";
 import { channels, seedComments, seedThreads } from "../../../data/community";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
@@ -15,6 +16,26 @@ import { useTranslation } from "../../../i18n";
 import { getChannelUnread, setChannelLastRead } from "../../../services/community";
 import { CommunityProvider, useCommunity } from "../../../store/community";
 import { colors, type Palette } from "../../../theme/colors";
+
+const ChannelListItem = React.memo<{ item: any; unread: Record<string, number>; palette: Palette; onPress: (slug: string) => Promise<void> }>(({ item, unread, palette, onPress }) => {
+  const styles = React.useMemo(() => ({
+    row: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
+    rowText: { color: palette.text, fontSize: 16 },
+  }), [palette]);
+
+  return (
+    <A11yPressable
+      onPress={() => onPress(item.slug)}
+      accessibilityRole="button"
+      accessibilityLabel={`Open channel ${item.title}`}
+      hitSlop={HIT_SLOP_8}
+      style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+    >
+      <Text style={styles.rowText}>{item.title}{unread[item.slug] ? ` (${unread[item.slug]})` : ''}</Text>
+    </A11yPressable>
+  );
+});
+ChannelListItem.displayName = 'ChannelListItem';
 
 function ScreenInner() {
   const scheme = useColorScheme();
@@ -28,11 +49,15 @@ function ScreenInner() {
   const [unread, setUnread] = React.useState<Record<string, number>>({});
   const [query, setQuery] = React.useState("");
   const [mode, setMode] = React.useState<'all'|'provinces'|'topics'>('all');
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     if (state.channels.length === 0) {
       seed({ channels, threads: seedThreads, comments: seedComments });
     }
+    // Simulate initial data load
+    const timer = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(timer);
   }, [state.channels.length, seed]);
 
   const prov = state.channels.filter((c) => c.type === "province");
@@ -59,7 +84,6 @@ function ScreenInner() {
     })();
   }, [prov.length, topics.length]);
 
-  const loading = false; // channels are local-sourced/seeded on first mount
   const totalChannels = prov.length + topics.length;
   usePostLoadAnnounce({ loading, count: totalChannels, ns: 'community', emptyKey: 'community.empty' });
 
@@ -71,17 +95,21 @@ function ScreenInner() {
         </Text>
         <Text style={styles.subtitle}>Connect, share, and support each other through various community features.</Text>
 
-        <GapView style={{ flexDirection:'row', marginBottom:8 }} gap={8}>
-          <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
-          <FilterChip label="Provinces" active={mode==='provinces'} onPress={() => setMode('provinces')} palette={palette} />
-          <FilterChip label="Topics" active={mode==='topics'} onPress={() => setMode('topics')} palette={palette} />
-        </GapView>
+        {loading ? (
+          <SkeletonList count={8} />
+        ) : (
+          <>
+            <GapView style={{ flexDirection:'row', marginBottom:8 }} gap={8}>
+              <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
+              <FilterChip label="Provinces" active={mode==='provinces'} onPress={() => setMode('provinces')} palette={palette} />
+              <FilterChip label="Topics" active={mode==='topics'} onPress={() => setMode('topics')} palette={palette} />
+            </GapView>
 
-        <SearchBar
-          value={query}
-          onChangeText={setQuery}
-          placeholder="Search channels & tools"
-        />
+            <SearchBar
+              value={query}
+              onChangeText={setQuery}
+              placeholder="Search channels & tools"
+            />
 
         {/* Community Features Navigation */}
         <View style={styles.featuresContainer}>
@@ -142,15 +170,12 @@ function ScreenInner() {
           keyExtractor={(item) => `channel-${item.id}`}
           renderSectionHeader={({ section }) => <Text style={styles.section}>{section.title}</Text>}
           renderItem={({ item }) => (
-            <A11yPressable
-              onPress={async () => { await setChannelLastRead(item.slug); router.push(`/(tabs)/community/${item.slug}` as Href); }}
-              accessibilityRole="button"
-              accessibilityLabel={`Open channel ${item.title}`}
-              hitSlop={HIT_SLOP_8}
-              style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
-            >
-              <Text style={styles.rowText}>{item.title}{unread[item.slug] ? ` (${unread[item.slug]})` : ''}</Text>
-            </A11yPressable>
+            <ChannelListItem
+              item={item}
+              unread={unread}
+              palette={palette}
+              onPress={async (slug) => { await setChannelLastRead(slug); router.push(`/(tabs)/community/${slug}` as Href); }}
+            />
           )}
           ListEmptyComponent={(
             <View style={{ paddingVertical: 12 }}>
@@ -200,6 +225,8 @@ function ScreenInner() {
             <Text style={styles.rowText}>Safety & Blocking</Text>
           </A11yPressable>
         </View>
+          </>
+        )}
       </View>
     </ResponsiveScreenWrapper>
   );

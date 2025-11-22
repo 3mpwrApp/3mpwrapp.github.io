@@ -521,7 +521,7 @@ export default function AdvancedSecurityOptions() {
 
     } catch (error) {
       logError('AdvancedSecurity', 'Error updating security setting', error);
-      Alert.alert('Error', 'Failed to update security setting.');
+      showContextualError(err instanceof Error ? err : new Error('Failed to update security setting'), 'storage');
     }
   };
 
@@ -546,7 +546,7 @@ export default function AdvancedSecurityOptions() {
       }
     } catch (error) {
       logError('AdvancedSecurity', 'Error enabling biometric auth', error);
-      Alert.alert('Error', 'Failed to enable biometric authentication.');
+      showContextualError(err instanceof Error ? err : new Error('Failed to enable biometric authentication'), 'permission');
     }
   };
 

@@ -1,11 +1,13 @@
-import { StyleSheet, View } from 'react-native';
+import { useEffect, useRef } from 'react';
+import type { ViewStyle } from 'react-native';
+import { Animated, StyleSheet, View } from 'react-native';
 
-import { useThemeColor } from '../hooks/useThemeColor';
+import { useAppPalette } from '../theme/usePalette';
 
 interface SkeletonLoaderProps {
   lines?: number;
   lineHeight?: number;
-  style?: any;
+  style?: ViewStyle;
 }
 
 export default function SkeletonLoader({
@@ -13,24 +15,49 @@ export default function SkeletonLoader({
   lineHeight = 16,
   style,
 }: SkeletonLoaderProps) {
-  const textColor = useThemeColor({}, 'text');
-  const skeletonColor = `${textColor}15`; // 15% opacity
+  const palette = useAppPalette();
+  const shimmerAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    const shimmer = Animated.loop(
+      Animated.sequence([
+        Animated.timing(shimmerAnim, {
+          toValue: 1,
+          duration: 1000,
+          useNativeDriver: true,
+        }),
+        Animated.timing(shimmerAnim, {
+          toValue: 0,
+          duration: 1000,
+          useNativeDriver: true,
+        }),
+      ])
+    );
+    shimmer.start();
+    return () => shimmer.stop();
+  }, [shimmerAnim]);
+
+  const opacity = shimmerAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.3, 0.7],
+  });
 
   return (
     <View
       style={[styles.container, style]}
       accessible={true}
       accessibilityRole="progressbar"
-      accessibilityLabel="Loading content skeleton"
+      accessibilityLabel="Loading content"
       accessibilityLiveRegion="polite"
     >
       {Array.from({ length: lines }).map((_, index) => (
-        <View
+        <Animated.View
           key={index}
           style={[
             styles.skeletonLine,
             {
-              backgroundColor: skeletonColor,
+              backgroundColor: palette.surfaceVariant || palette.surface,
+              opacity,
               height: lineHeight,
               width: index === lines - 1 ? '70%' : '100%',
               marginBottom: index < lines - 1 ? 8 : 0,
@@ -42,60 +69,148 @@ export default function SkeletonLoader({
   );
 }
 
-export function CardSkeletonLoader({
-  style,
-}: {
-  style?: any;
-}) {
-  const textColor = useThemeColor({}, 'text');
-  const skeletonColor = `${textColor}15`;
-  const borderColor = `${textColor}10`;
+export function CardSkeletonLoader({ style }: { style?: ViewStyle }) {
+  const palette = useAppPalette();
+  const shimmerAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    const shimmer = Animated.loop(
+      Animated.sequence([
+        Animated.timing(shimmerAnim, {
+          toValue: 1,
+          duration: 1000,
+          useNativeDriver: true,
+        }),
+        Animated.timing(shimmerAnim, {
+          toValue: 0,
+          duration: 1000,
+          useNativeDriver: true,
+        }),
+      ])
+    );
+    shimmer.start();
+    return () => shimmer.stop();
+  }, [shimmerAnim]);
+
+  const opacity = shimmerAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.3, 0.7],
+  });
 
   return (
     <View
       style={[
         styles.card,
-        {
-          borderColor,
-          backgroundColor: skeletonColor,
-        },
+        { backgroundColor: palette.surface },
         style,
       ]}
       accessible={true}
       accessibilityRole="progressbar"
-      accessibilityLabel="Loading card skeleton"
+      accessibilityLabel="Loading card"
     >
-      <View
+      <Animated.View
         style={[
           styles.skeletonLine,
           {
-            backgroundColor: skeletonColor,
+            backgroundColor: palette.surfaceVariant || palette.surface,
+            opacity,
             height: 20,
             width: '60%',
             marginBottom: 8,
           },
         ]}
       />
-      <View
+      <Animated.View
         style={[
           styles.skeletonLine,
           {
-            backgroundColor: skeletonColor,
+            backgroundColor: palette.surfaceVariant || palette.surface,
+            opacity,
             height: 16,
             marginBottom: 8,
           },
         ]}
       />
-      <View
+      <Animated.View
         style={[
           styles.skeletonLine,
           {
-            backgroundColor: skeletonColor,
+            backgroundColor: palette.surfaceVariant || palette.surface,
+            opacity,
             height: 16,
             width: '80%',
           },
         ]}
       />
+    </View>
+  );
+}
+
+export function SkeletonList({ count = 5 }: { count?: number }) {
+  return (
+    <>
+      {Array.from({ length: count }).map((_, index) => (
+        <CardSkeletonLoader key={index} />
+      ))}
+    </>
+  );
+}
+
+export function SkeletonGrid({ columns = 2, count = 6 }: { columns?: number; count?: number }) {
+  const palette = useAppPalette();
+  const shimmerAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    const shimmer = Animated.loop(
+      Animated.sequence([
+        Animated.timing(shimmerAnim, {
+          toValue: 1,
+          duration: 1000,
+          useNativeDriver: true,
+        }),
+        Animated.timing(shimmerAnim, {
+          toValue: 0,
+          duration: 1000,
+          useNativeDriver: true,
+        }),
+      ])
+    );
+    shimmer.start();
+    return () => shimmer.stop();
+  }, [shimmerAnim]);
+
+  const opacity = shimmerAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.3, 0.7],
+  });
+
+  return (
+    <View style={styles.grid}>
+      {Array.from({ length: count }).map((_, index) => (
+        <View key={index} style={[styles.gridItem, { width: `${100 / columns - 2}%` }]}>
+          <Animated.View
+            style={[
+              styles.gridImage,
+              {
+                backgroundColor: palette.surfaceVariant || palette.surface,
+                opacity,
+              },
+            ]}
+          />
+          <Animated.View
+            style={[
+              styles.skeletonLine,
+              {
+                backgroundColor: palette.surfaceVariant || palette.surface,
+                opacity,
+                height: 12,
+                width: '80%',
+                marginTop: 8,
+              },
+            ]}
+          />
+        </View>
+      ))}
     </View>
   );
 }
@@ -108,9 +223,22 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   card: {
-    borderWidth: 1,
     borderRadius: 12,
     padding: 16,
     marginBottom: 12,
+  },
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+    padding: 12,
+  },
+  gridItem: {
+    marginBottom: 12,
+  },
+  gridImage: {
+    width: '100%',
+    height: 120,
+    borderRadius: 8,
   },
 });

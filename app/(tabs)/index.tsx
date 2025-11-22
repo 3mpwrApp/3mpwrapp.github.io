@@ -10,6 +10,7 @@ import DisclaimerBanner from '../../components/DisclaimerBanner';
 import GapView from '../../components/GapView';
 import { HomeGuide } from '../../components/HomeGuide';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
+import { RevolutionaryFeaturesSpotlight } from '../../components/RevolutionaryFeaturesSpotlight';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { useAuth } from '../../context/AuthContext';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
@@ -537,6 +538,9 @@ const HomeScreen = React.memo(() => {
       
       {/* Guest Mode Warning */}
       <GuestModeBanner />
+      
+      {/* Revolutionary Features Spotlight */}
+      <RevolutionaryFeaturesSpotlight />
       
       {/* Main Action Buttons - Organized in a row */}
       <GapView style={{ flexDirection: 'row', marginBottom: 16 }} gap={12}>

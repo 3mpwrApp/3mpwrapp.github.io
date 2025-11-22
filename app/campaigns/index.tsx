@@ -18,6 +18,7 @@ import CreateCampaignBox from "../../components/CreateCampaignBox";
 import { RepTrackerSafe } from "../../components/RepTrackerSafe";
 import ResponsiveScreenWrapper from "../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../components/SearchBar";
+import { SkeletonList } from '../../components/SkeletonLoader';
 import SkeletonRow from "../../components/SkeletonRow";
 import { useAuth } from "../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../data/campaigns";
@@ -398,6 +399,20 @@ function ScreenInner() {
               </Text>
             </Pressable>
             <RepTrackerSafe />
+          </View>
+        ) : loading ? (
+          <View style={{ padding: 20 }}>
+            <Text
+              ref={titleRef}
+              nativeID="campaigns-title"
+              accessibilityRole="header"
+              style={styles.title}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              📣 Campaigns
+            </Text>
+            <Text style={styles.subtitle}>Browse, create, and join campaigns for disability justice and workers' rights.</Text>
+            <SkeletonList count={8} />
           </View>
         ) : (
           <>

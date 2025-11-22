@@ -23,6 +23,7 @@ import EventFilters, { type EventFilterOptions } from '../../components/EventFil
 import { GapView } from "../../components/GapView";
 import SearchBar from "../../components/SearchBar";
 import SettingsLink from "../../components/SettingsLink";
+import { SkeletonList } from '../../components/SkeletonLoader';
 import SkeletonRow from "../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
 import { useAuth } from "../../context/AuthContext";
@@ -520,41 +521,47 @@ export default function EventsScreen() {
           {t('eventsFeature.subtitle','Community events, workshops, and meetups.')}
         </Text>
 
-        <SearchBar
-          value={query}
-          onChangeText={setQuery}
-          placeholder={t('eventsFeature.search.placeholder','Search events, tags, places')}
-        />
+        {loading ? (
+          <SkeletonList count={6} />
+        ) : (
+          <>
+            <SearchBar
+              value={query}
+              onChangeText={setQuery}
+              placeholder={t('eventsFeature.search.placeholder','Search events, tags, places')}
+            />
 
-        {/* Filter Button */}
-        <A11yPressable
-          onPress={() => setShowFilters(true)}
-          style={styles.filterButton}
-          hitSlop={HIT_SLOP_8}
-          accessibilityRole="button"
-          accessibilityLabel="Open event filters"
-        >
-          <Text style={styles.filterButtonText}>
-            🔍 Filters
-            {Object.keys(activeFilters).filter(k => 
-              k !== 'searchQuery' && activeFilters[k as keyof EventFilterOptions]
-            ).length > 0 && (
-              <Text style={styles.filterBadge}>
-                {' '}• {Object.keys(activeFilters).filter(k => 
+            {/* Filter Button */}
+            <A11yPressable
+              onPress={() => setShowFilters(true)}
+              style={styles.filterButton}
+              hitSlop={HIT_SLOP_8}
+              accessibilityRole="button"
+              accessibilityLabel="Open event filters"
+            >
+              <Text style={styles.filterButtonText}>
+                🔍 Filters
+                {Object.keys(activeFilters).filter(k => 
                   k !== 'searchQuery' && activeFilters[k as keyof EventFilterOptions]
-                ).length}
+                ).length > 0 && (
+                  <Text style={styles.filterBadge}>
+                    {' '}• {Object.keys(activeFilters).filter(k => 
+                      k !== 'searchQuery' && activeFilters[k as keyof EventFilterOptions]
+                    ).length}
+                  </Text>
+                )}
               </Text>
-            )}
-          </Text>
-        </A11yPressable>
+            </A11yPressable>
 
-        {/* Filter Modal */}
-        <EventFilters
-          visible={showFilters}
-          filters={activeFilters}
-          onApply={setActiveFilters}
-          onClose={() => setShowFilters(false)}
-        />
+            {/* Filter Modal */}
+            <EventFilters
+              visible={showFilters}
+              filters={activeFilters}
+              onApply={setActiveFilters}
+              onClose={() => setShowFilters(false)}
+            />
+          </>
+        )}
 
         {/* Auto-Sync Status Indicator */}
         {syncStatus !== 'idle' && (
