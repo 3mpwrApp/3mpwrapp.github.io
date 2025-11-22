@@ -11,6 +11,7 @@ import * as Haptics from 'expo-haptics';
 import * as Location from 'expo-location';
 import * as SMS from 'expo-sms';
 import React from 'react';
+import { Platform } from 'react-native';
 
 import { logError } from '../utils/errorLogger';
 
@@ -288,6 +289,9 @@ class EmotionalFirstAidManager {
 
   private async loadData(): Promise<void> {
     try {
+      // Skip on web during SSR
+      if (Platform.OS === 'web' && typeof window === 'undefined') return;
+      
       const [contactsStr, sessionsStr, logsStr] = await Promise.all([
         AsyncStorage.getItem(STORAGE_KEYS.CONTACTS),
         AsyncStorage.getItem(STORAGE_KEYS.SESSIONS),

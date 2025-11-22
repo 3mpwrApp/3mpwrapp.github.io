@@ -347,6 +347,9 @@ class HapticLanguageManager {
 
   private async loadPreferences(): Promise<void> {
     try {
+      // Skip on web during SSR
+      if (Platform.OS === 'web' && typeof window === 'undefined') return;
+      
       const prefsStr = await AsyncStorage.getItem(STORAGE_KEY);
       if (prefsStr) {
         this.preferences = { ...this.preferences, ...JSON.parse(prefsStr) };

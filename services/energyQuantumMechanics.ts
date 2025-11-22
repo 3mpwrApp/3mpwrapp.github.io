@@ -7,6 +7,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
+import { Platform } from 'react-native';
 
 import { logError } from '../utils/errorLogger';
 
@@ -169,6 +170,9 @@ class EnergyQuantumMechanicsManager {
 
   private async loadData(): Promise<void> {
     try {
+      // Skip on web during SSR
+      if (Platform.OS === 'web' && typeof window === 'undefined') return;
+      
       const [quantaStr, debtStr, shiftsStr, inheritStr, ledgersStr, stateStr] = await Promise.all([
         AsyncStorage.getItem(STORAGE_KEYS.QUANTA),
         AsyncStorage.getItem(STORAGE_KEYS.DEBT),

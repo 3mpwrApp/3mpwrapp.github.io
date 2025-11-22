@@ -7,6 +7,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
+import { Platform } from 'react-native';
 
 import { logError } from '../utils/errorLogger';
 
@@ -256,6 +257,9 @@ class LegalDNASequencerManager {
 
   private async loadData(): Promise<void> {
     try {
+      // Skip on web during SSR
+      if (Platform.OS === 'web' && typeof window === 'undefined') return;
+      
       const [casesStr, genomesStr, precedentsStr] = await Promise.all([
         AsyncStorage.getItem(STORAGE_KEYS.CASES),
         AsyncStorage.getItem(STORAGE_KEYS.GENOMES),

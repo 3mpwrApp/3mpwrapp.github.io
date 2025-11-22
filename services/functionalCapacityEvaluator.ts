@@ -15,6 +15,7 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 
 import { logError } from '../utils/errorLogger';
 
@@ -459,6 +460,9 @@ class FunctionalCapacityEvaluator {
 
   private async loadData(): Promise<void> {
     try {
+      // Skip on web during SSR
+      if (Platform.OS === 'web' && typeof window === 'undefined') return;
+      
       const data = await AsyncStorage.getItem(this.STORAGE_KEY);
       if (data) {
         this.assessments = JSON.parse(data);

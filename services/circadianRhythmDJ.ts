@@ -7,6 +7,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
+import { Platform } from 'react-native';
 
 import { logError } from '../utils/errorLogger';
 
@@ -227,6 +228,9 @@ class CircadianRhythmDJManager {
 
   private async loadData(): Promise<void> {
     try {
+      // Skip on web during SSR
+      if (Platform.OS === 'web' && typeof window === 'undefined') return;
+      
       const [logsStr, chronoStr, prefsStr, debtStr, dreamsStr] = await Promise.all([
         AsyncStorage.getItem(STORAGE_KEYS.SLEEP_LOGS),
         AsyncStorage.getItem(STORAGE_KEYS.CHRONOTYPE),

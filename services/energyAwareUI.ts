@@ -8,6 +8,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
+import { Platform } from 'react-native';
 
 import { logError } from '../utils/errorLogger';
 
@@ -118,6 +119,9 @@ class EnergyAwareUIManager {
 
   async loadPersistedState(): Promise<void> {
     try {
+      // Skip on web during SSR
+      if (Platform.OS === 'web' && typeof window === 'undefined') return;
+      
       const [configStr, patternsStr, tasksStr] = await Promise.all([
         AsyncStorage.getItem(STORAGE_KEYS.CONFIG),
         AsyncStorage.getItem(STORAGE_KEYS.USAGE_PATTERNS),
