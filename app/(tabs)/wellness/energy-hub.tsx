@@ -1,0 +1,946 @@
+/**
+ * Unified Energy & Mood Hub
+ * 
+ * Consolidates:
+ * - Spoon Economist (energy budgeting)
+ * - Energy Quantum Mechanics (energy states)
+ * - Mood Tracker (AI companion)
+ * - Sleep-Energy Tracker
+ * - Pacing Partner (activity pacing)
+ * - Spoon Marketplace (community energy trading)
+ */
+
+import { Ionicons } from '@expo/vector-icons';
+import { Stack } from 'expo-router';
+import React, { useEffect, useState } from 'react';
+import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_8, MAX_FONT_SCALE } from '../../../constants/A11Y';
+import { useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { addMood, listMoods } from '../../../services/companion';
+import { computeMoodInsights } from '../../../services/moodInsights';
+import { useSpoonEconomist } from '../../../services/spoonEconomist';
+import { useAppPalette } from '../../../theme/usePalette';
+import { showContextualError } from '../../../utils/userFriendlyErrors';
+
+type TabView = 'dashboard' | 'track' | 'analyze' | 'community';
+
+interface MoodEntry {
+  mood: string;
+  notes?: string;
+  createdAt: any;
+}
+
+export default function EnergyMoodHub() {
+  const palette = useAppPalette();
+  const titleRef = React.useRef<Text>(null);
+  
+  useAnnounceOnMount('Energy and Mood Hub');
+  useFocusOnRefOnMount(titleRef);
+
+  // Tab state
+  const [activeTab, setActiveTab] = useState<TabView>('dashboard');
+
+  // Spoon Economist state
+  const spoons = useSpoonEconomist();
+  const { account } = spoons;
+  const [showCustomTaskModal, setShowCustomTaskModal] = useState(false);
+  const [customTaskName, setCustomTaskName] = useState('');
+  const [customTaskCost, setCustomTaskCost] = useState('');
+  const [monthlyReport, setMonthlyReport] = useState<any>(null);
+
+  // Mood Tracker state
+  const [moods, setMoods] = useState<MoodEntry[]>([]);
+  const [moodNotes, setMoodNotes] = useState('');
+  const [isSavingMood, setIsSavingMood] = useState(false);
+  const [moodInsights, setMoodInsights] = useState<any>(null);
+
+  // Load data
+  useEffect(() => {
+    const now = new Date();
+    spoons.getMonthlyReport(now.getFullYear(), now.getMonth() + 1).then(setMonthlyReport);
+    
+    loadMoods();
+  }, []);
+
+  const loadMoods = async () => {
+    try {
+      const moodData = await listMoods();
+      setMoods(moodData);
+      
+      // Compute insights
+      const entries = moodData.map((m: MoodEntry) => ({
+        ts: m.createdAt?.toDate?.()?.getTime() || Date.now(),
+        score: moodToScore(m.mood),
+      }));
+      const insights = computeMoodInsights(entries);
+      setMoodInsights(insights);
+    } catch (err) {
+      console.error('Error loading moods:', err);
+    }
+  };
+
+  const moodToScore = (mood: string): number => {
+    const moodMap: Record<string, number> = {
+      'terrible': -2,
+      'bad': -1,
+      'okay': 0,
+      'good': 1,
+      'great': 2,
+    };
+    return moodMap[mood.toLowerCase()] || 0;
+  };
+
+  const QUICK_TASKS = [
+    { name: 'Shower', cost: 2 },
+    { name: 'Get Dressed', cost: 1 },
+    { name: 'Cook Meal', cost: 4 },
+    { name: 'Groceries', cost: 6 },
+    { name: 'Laundry', cost: 3 },
+    { name: 'Dishes', cost: 2 },
+    { name: 'Doctor Appointment', cost: 8 },
+    { name: 'Social Event', cost: 7 },
+  ];
+
+  const MOOD_OPTIONS = [
+    { emoji: '😄', label: 'Great', value: 'great', color: '#10B981' },
+    { emoji: '🙂', label: 'Good', value: 'good', color: '#3B82F6' },
+    { emoji: '😐', label: 'Okay', value: 'okay', color: '#6B7280' },
+    { emoji: '😔', label: 'Bad', value: 'bad', color: '#F59E0B' },
+    { emoji: '😢', label: 'Terrible', value: 'terrible', color: '#EF4444' },
+  ];
+
+  const spendTask = async (taskName: string, cost: number) => {
+    await spoons.spendSpoons(taskName, cost);
+  };
+
+  const borrowSpoons = async (amount: number) => {
+    await spoons.borrowSpoons(amount);
+  };
+
+  const addCustomTask = async () => {
+    const cost = parseInt(customTaskCost);
+    if (customTaskName && !isNaN(cost)) {
+      await spendTask(customTaskName, cost);
+      setShowCustomTaskModal(false);
+      setCustomTaskName('');
+      setCustomTaskCost('');
+    }
+  };
+
+  const handleMoodLog = async (mood: string) => {
+    try {
+      setIsSavingMood(true);
+      await addMood(mood as any, moodNotes);
+      setMoodNotes('');
+      await loadMoods();
+      setTimeout(() => setIsSavingMood(false), 300);
+    } catch (err) {
+      console.error('Error saving mood:', err);
+      showContextualError(err instanceof Error ? err : new Error('Failed to save mood'), 'storage');
+      setIsSavingMood(false);
+    }
+  };
+
+  const renderDashboard = () => (
+    <ScrollView>
+      {/* Energy Overview Card */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <View style={styles.cardHeader}>
+          <View>
+            <Text style={[styles.cardTitle, { color: palette.text }]}>Energy Status</Text>
+            <Text style={[styles.cardSubtitle, { color: palette.textSecondary }]}>Today's Spoon Budget</Text>
+          </View>
+          <Text style={[styles.largeStat, { color: palette.primary }]}>
+            {account?.currentSpoons || 0}/{account?.todayAllocated || 12} 🥄
+          </Text>
+        </View>
+
+        <View style={styles.spoonVisual}>
+          {Array.from({ length: account?.todayAllocated || 12 }).map((_, index) => (
+            <Text key={index} style={[styles.spoonIcon, { opacity: index < (account?.currentSpoons || 0) ? 1 : 0.3 }]}>
+              🥄
+            </Text>
+          ))}
+        </View>
+
+        {account && account.currentSpoons < 3 && account.currentSpoons > 0 && (
+          <View style={[styles.alertBanner, { backgroundColor: '#FFF3CD' }]}>
+            <Ionicons name="warning" size={20} color="#856404" />
+            <Text style={[styles.alertText, { color: '#856404' }]}>
+              Low energy! Only {account.currentSpoons} spoons left today.
+            </Text>
+          </View>
+        )}
+
+        {account && account.debtSpoons > 0 && (
+          <View style={[styles.alertBanner, { backgroundColor: '#F8D7DA', marginTop: 8 }]}>
+            <Ionicons name="alert-circle" size={20} color="#721C24" />
+            <Text style={[styles.alertText, { color: '#721C24' }]}>
+              Energy debt: {account.debtSpoons.toFixed(1)} spoons owed
+            </Text>
+          </View>
+        )}
+      </View>
+
+      {/* Mood Overview Card */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <View style={styles.cardHeader}>
+          <View>
+            <Text style={[styles.cardTitle, { color: palette.text }]}>Mood Tracking</Text>
+            <Text style={[styles.cardSubtitle, { color: palette.textSecondary }]}>7-Day Average</Text>
+          </View>
+          {moodInsights && (
+            <Text style={[styles.largeStat, { color: getMoodColor(moodInsights.avg7d) }]}>
+              {moodInsights.avg7d !== null ? moodInsights.avg7d.toFixed(1) : '--'}
+            </Text>
+          )}
+        </View>
+
+        {moodInsights && (
+          <View style={styles.insightsRow}>
+            <View style={styles.insightItem}>
+              <Text style={[styles.insightLabel, { color: palette.textSecondary }]}>Trend</Text>
+              <Text style={[styles.insightValue, { color: getTrendColor(moodInsights.trend) }]}>
+                {getTrendIcon(moodInsights.trend)} {capitalize(moodInsights.trend)}
+              </Text>
+            </View>
+            <View style={styles.insightItem}>
+              <Text style={[styles.insightLabel, { color: palette.textSecondary }]}>Streak</Text>
+              <Text style={[styles.insightValue, { color: palette.text }]}>
+                {moodInsights.streakDays} days
+              </Text>
+            </View>
+          </View>
+        )}
+      </View>
+
+      {/* Quick Actions */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <Text style={[styles.sectionTitle, { color: palette.text }]}>Quick Actions</Text>
+        
+        <A11yPressable
+          onPress={() => setActiveTab('track')}
+          style={[styles.actionButton, { backgroundColor: palette.primary }]}
+          hitSlop={HIT_SLOP_8}
+        >
+          <Ionicons name="add-circle" size={24} color="#FFF" />
+          <Text style={styles.actionButtonText}>Log Energy & Mood</Text>
+        </A11yPressable>
+
+        <A11yPressable
+          onPress={() => setActiveTab('analyze')}
+          style={[styles.actionButton, { backgroundColor: palette.secondary, marginTop: 8 }]}
+          hitSlop={HIT_SLOP_8}
+        >
+          <Ionicons name="analytics" size={24} color="#FFF" />
+          <Text style={styles.actionButtonText}>View Insights</Text>
+        </A11yPressable>
+      </View>
+
+      {/* Recent Activity */}
+      {moods.length > 0 && (
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Recent Mood Entries</Text>
+          {moods.slice(0, 3).map((mood, index) => (
+            <View key={index} style={[styles.moodHistoryItem, { borderBottomColor: palette.border }]}>
+              <Text style={[styles.moodHistoryEmoji]}>
+                {MOOD_OPTIONS.find(m => m.value === mood.mood)?.emoji || '😐'}
+              </Text>
+              <View style={styles.moodHistoryContent}>
+                <Text style={[styles.moodHistoryLabel, { color: palette.text }]}>
+                  {capitalize(mood.mood)}
+                </Text>
+                {mood.notes && (
+                  <Text style={[styles.moodHistoryNotes, { color: palette.textSecondary }]} numberOfLines={1}>
+                    {mood.notes}
+                  </Text>
+                )}
+              </View>
+              <Text style={[styles.moodHistoryTime, { color: palette.textSecondary }]}>
+                {formatTimeAgo(mood.createdAt?.toDate?.() || new Date())}
+              </Text>
+            </View>
+          ))}
+        </View>
+      )}
+
+      <View style={styles.bottomSpacer} />
+    </ScrollView>
+  );
+
+  const renderTrack = () => (
+    <ScrollView>
+      {/* Energy Tracking */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <Text style={[styles.sectionTitle, { color: palette.text }]}>Log Energy Spent</Text>
+        <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
+          Current balance: {account?.currentSpoons || 0}/{account?.todayAllocated || 12} 🥄
+        </Text>
+
+        <View style={styles.taskGrid}>
+          {QUICK_TASKS.map((task) => (
+            <Pressable
+              key={task.name}
+              style={[styles.taskButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
+              onPress={() => spendTask(task.name, task.cost)}
+            >
+              <Text style={[styles.taskName, { color: palette.text }]}>{task.name}</Text>
+              <Text style={[styles.taskCost, { color: palette.primary }]}>{task.cost} 🥄</Text>
+            </Pressable>
+          ))}
+        </View>
+
+        <Pressable
+          style={[styles.customButton, { backgroundColor: palette.surface, borderColor: palette.border }]}
+          onPress={() => setShowCustomTaskModal(true)}
+        >
+          <Ionicons name="add-circle" size={20} color={palette.primary} />
+          <Text style={[styles.customButtonText, { color: palette.primary }]}>Custom Task</Text>
+        </Pressable>
+      </View>
+
+      {/* Mood Tracking */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <Text style={[styles.sectionTitle, { color: palette.text }]}>Log Your Mood</Text>
+        
+        <View style={styles.moodGrid}>
+          {MOOD_OPTIONS.map((mood) => (
+            <Pressable
+              key={mood.value}
+              style={[styles.moodButton, { backgroundColor: mood.color + '20', borderColor: mood.color }]}
+              onPress={() => handleMoodLog(mood.value)}
+              disabled={isSavingMood}
+            >
+              <Text style={styles.moodEmoji}>{mood.emoji}</Text>
+              <Text style={[styles.moodLabel, { color: mood.color }]}>{mood.label}</Text>
+            </Pressable>
+          ))}
+        </View>
+
+        <TextInput
+          style={[styles.notesInput, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+          placeholder="Optional notes about your mood..."
+          placeholderTextColor={palette.textSecondary}
+          multiline
+          numberOfLines={3}
+          value={moodNotes}
+          onChangeText={setMoodNotes}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        />
+
+        {isSavingMood && (
+          <View style={styles.savingIndicator}>
+            <ActivityIndicator size="small" color={palette.primary} />
+            <Text style={[styles.savingText, { color: palette.textSecondary }]}>Saving...</Text>
+          </View>
+        )}
+      </View>
+
+      {/* Borrow Energy (Emergency) */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <Text style={[styles.sectionTitle, { color: palette.text }]}>Borrow Energy</Text>
+        <Text style={[styles.warningDescription, { color: palette.textSecondary }]}>
+          ⚠️ Borrow from tomorrow at 50% interest (compounds daily)
+        </Text>
+
+        <View style={styles.borrowButtons}>
+          <Pressable
+            style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+            onPress={() => borrowSpoons(2)}
+          >
+            <Text style={styles.borrowButtonText}>+2 🥄</Text>
+          </Pressable>
+          <Pressable
+            style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+            onPress={() => borrowSpoons(5)}
+          >
+            <Text style={styles.borrowButtonText}>+5 🥄</Text>
+          </Pressable>
+          <Pressable
+            style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+            onPress={() => borrowSpoons(10)}
+          >
+            <Text style={styles.borrowButtonText}>+10 🥄</Text>
+          </Pressable>
+        </View>
+      </View>
+
+      <View style={styles.bottomSpacer} />
+    </ScrollView>
+  );
+
+  const renderAnalyze = () => (
+    <ScrollView>
+      {/* Monthly Energy Report */}
+      {monthlyReport && (
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Monthly Energy Report</Text>
+
+          <View style={styles.reportRow}>
+            <Text style={[styles.reportLabel, { color: palette.textSecondary }]}>Top Task</Text>
+            <Text style={[styles.reportValue, { color: palette.text }]}>
+              {monthlyReport.topTasks[0]?.name || 'N/A'}
+            </Text>
+          </View>
+
+          <View style={styles.reportRow}>
+            <Text style={[styles.reportLabel, { color: palette.textSecondary }]}>Total Spent</Text>
+            <Text style={[styles.reportValue, { color: palette.text }]}>
+              {monthlyReport.totalSpent || 0} spoons
+            </Text>
+          </View>
+
+          <View style={styles.reportRow}>
+            <Text style={[styles.reportLabel, { color: palette.textSecondary }]}>Rest Days</Text>
+            <Text style={[styles.reportValue, { color: palette.text }]}>
+              {monthlyReport.restDays || 0}
+            </Text>
+          </View>
+
+          <View style={styles.reportRow}>
+            <Text style={[styles.reportLabel, { color: palette.textSecondary }]}>Debt Days</Text>
+            <Text style={[styles.reportValue, { color: palette.text }]}>
+              {monthlyReport.debtDays || 0}
+            </Text>
+          </View>
+
+          <View style={styles.reportRow}>
+            <Text style={[styles.reportLabel, { color: palette.textSecondary }]}>Average Daily Spend</Text>
+            <Text style={[styles.reportValue, { color: palette.text }]}>
+              {monthlyReport.averageDailySpend?.toFixed(1) || 0} spoons
+            </Text>
+          </View>
+        </View>
+      )}
+
+      {/* Mood Insights */}
+      {moodInsights && moodInsights.avg7d !== null && (
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Mood Insights</Text>
+
+          <View style={styles.insightCard}>
+            <Text style={[styles.insightCardTitle, { color: palette.text }]}>7-Day Average</Text>
+            <Text style={[styles.insightCardValue, { color: getMoodColor(moodInsights.avg7d) }]}>
+              {moodInsights.avg7d.toFixed(1)}
+            </Text>
+          </View>
+
+          <View style={styles.insightCard}>
+            <Text style={[styles.insightCardTitle, { color: palette.text }]}>Current Trend</Text>
+            <Text style={[styles.insightCardValue, { color: getTrendColor(moodInsights.trend) }]}>
+              {getTrendIcon(moodInsights.trend)} {capitalize(moodInsights.trend)}
+            </Text>
+          </View>
+
+          <View style={styles.insightCard}>
+            <Text style={[styles.insightCardTitle, { color: palette.text }]}>Tracking Streak</Text>
+            <Text style={[styles.insightCardValue, { color: palette.primary }]}>
+              {moodInsights.streakDays} days
+            </Text>
+          </View>
+
+          {moodInsights.delta24h !== null && (
+            <View style={styles.insightCard}>
+              <Text style={[styles.insightCardTitle, { color: palette.text }]}>24h Change</Text>
+              <Text style={[styles.insightCardValue, { color: moodInsights.delta24h >= 0 ? '#10B981' : '#EF4444' }]}>
+                {moodInsights.delta24h >= 0 ? '+' : ''}{moodInsights.delta24h.toFixed(1)}
+              </Text>
+            </View>
+          )}
+        </View>
+      )}
+
+      {/* Correlation Insights (Future) */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <Text style={[styles.sectionTitle, { color: palette.text }]}>Pattern Detection</Text>
+        <Text style={[styles.placeholderText, { color: palette.textSecondary }]}>
+          🔮 Coming soon: AI-powered pattern detection to identify correlations between your energy levels and mood.
+        </Text>
+      </View>
+
+      <View style={styles.bottomSpacer} />
+    </ScrollView>
+  );
+
+  const renderCommunity = () => (
+    <ScrollView>
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <Text style={[styles.sectionTitle, { color: palette.text }]}>Spoon Marketplace</Text>
+        <Text style={[styles.placeholderText, { color: palette.textSecondary }]}>
+          🌐 Coming soon: Trade spoons with your community, offer help, and request support.
+        </Text>
+        
+        <A11yPressable
+          onPress={() => {/* Navigate to full marketplace */}}
+          style={[styles.actionButton, { backgroundColor: palette.primary, marginTop: 16 }]}
+          hitSlop={HIT_SLOP_8}
+        >
+          <Ionicons name="people" size={24} color="#FFF" />
+          <Text style={styles.actionButtonText}>Open Spoon Marketplace</Text>
+        </A11yPressable>
+      </View>
+
+      <View style={styles.bottomSpacer} />
+    </ScrollView>
+  );
+
+  return (
+    <>
+      <Stack.Screen
+        options={{
+          title: 'Energy & Mood Hub',
+          headerStyle: { backgroundColor: palette.surface },
+          headerTintColor: palette.text,
+        }}
+      />
+
+      <View style={[styles.container, { backgroundColor: palette.background }]}>
+        {/* Tab Navigation */}
+        <View style={[styles.tabBar, { backgroundColor: palette.surface, borderBottomColor: palette.border }]}>
+          <Pressable
+            style={[styles.tab, activeTab === 'dashboard' && styles.tabActive]}
+            onPress={() => setActiveTab('dashboard')}
+          >
+            <Ionicons
+              name="speedometer"
+              size={20}
+              color={activeTab === 'dashboard' ? palette.primary : palette.textSecondary}
+            />
+            <Text style={[styles.tabText, { color: activeTab === 'dashboard' ? palette.primary : palette.textSecondary }]}>
+              Dashboard
+            </Text>
+          </Pressable>
+
+          <Pressable
+            style={[styles.tab, activeTab === 'track' && styles.tabActive]}
+            onPress={() => setActiveTab('track')}
+          >
+            <Ionicons
+              name="add-circle"
+              size={20}
+              color={activeTab === 'track' ? palette.primary : palette.textSecondary}
+            />
+            <Text style={[styles.tabText, { color: activeTab === 'track' ? palette.primary : palette.textSecondary }]}>
+              Track
+            </Text>
+          </Pressable>
+
+          <Pressable
+            style={[styles.tab, activeTab === 'analyze' && styles.tabActive]}
+            onPress={() => setActiveTab('analyze')}
+          >
+            <Ionicons
+              name="analytics"
+              size={20}
+              color={activeTab === 'analyze' ? palette.primary : palette.textSecondary}
+            />
+            <Text style={[styles.tabText, { color: activeTab === 'analyze' ? palette.primary : palette.textSecondary }]}>
+              Analyze
+            </Text>
+          </Pressable>
+
+          <Pressable
+            style={[styles.tab, activeTab === 'community' && styles.tabActive]}
+            onPress={() => setActiveTab('community')}
+          >
+            <Ionicons
+              name="people"
+              size={20}
+              color={activeTab === 'community' ? palette.primary : palette.textSecondary}
+            />
+            <Text style={[styles.tabText, { color: activeTab === 'community' ? palette.primary : palette.textSecondary }]}>
+              Community
+            </Text>
+          </Pressable>
+        </View>
+
+        {/* Tab Content */}
+        {activeTab === 'dashboard' && renderDashboard()}
+        {activeTab === 'track' && renderTrack()}
+        {activeTab === 'analyze' && renderAnalyze()}
+        {activeTab === 'community' && renderCommunity()}
+
+        {/* Custom Task Modal */}
+        <Modal visible={showCustomTaskModal} transparent animationType="slide">
+          <View style={styles.modalOverlay}>
+            <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>Custom Task</Text>
+
+              <TextInput
+                style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+                placeholder="Task name"
+                placeholderTextColor={palette.textSecondary}
+                value={customTaskName}
+                onChangeText={setCustomTaskName}
+              />
+
+              <TextInput
+                style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+                placeholder="Spoon cost (1-12)"
+                placeholderTextColor={palette.textSecondary}
+                keyboardType="numeric"
+                value={customTaskCost}
+                onChangeText={setCustomTaskCost}
+              />
+
+              <View style={styles.modalButtons}>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.border }]}
+                  onPress={() => setShowCustomTaskModal(false)}
+                >
+                  <Text style={styles.modalButtonText}>Cancel</Text>
+                </Pressable>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.primary }]}
+                  onPress={addCustomTask}
+                >
+                  <Text style={styles.modalButtonText}>Add</Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        </Modal>
+      </View>
+    </>
+  );
+}
+
+// Helper functions
+function getMoodColor(score: number | null): string {
+  if (score === null) return '#6B7280';
+  if (score >= 1.5) return '#10B981';
+  if (score >= 0.5) return '#3B82F6';
+  if (score >= -0.5) return '#6B7280';
+  if (score >= -1.5) return '#F59E0B';
+  return '#EF4444';
+}
+
+function getTrendColor(trend: string): string {
+  if (trend === 'improving') return '#10B981';
+  if (trend === 'declining') return '#EF4444';
+  return '#6B7280';
+}
+
+function getTrendIcon(trend: string): string {
+  if (trend === 'improving') return '📈';
+  if (trend === 'declining') return '📉';
+  return '➡️';
+}
+
+function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function formatTimeAgo(date: Date): string {
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffMins = Math.floor(diffMs / 60000);
+  const diffHours = Math.floor(diffMs / 3600000);
+  const diffDays = Math.floor(diffMs / 86400000);
+
+  if (diffMins < 1) return 'Just now';
+  if (diffMins < 60) return `${diffMins}m ago`;
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays === 1) return 'Yesterday';
+  if (diffDays < 7) return `${diffDays}d ago`;
+  return date.toLocaleDateString();
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  tabBar: {
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    paddingTop: 8,
+  },
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: 12,
+  },
+  tabActive: {
+    borderBottomWidth: 2,
+    borderBottomColor: '#3B82F6',
+  },
+  tabText: {
+    fontSize: 12,
+    marginTop: 4,
+    fontWeight: '500',
+  },
+  card: {
+    margin: 16,
+    padding: 16,
+    borderRadius: 12,
+    elevation: 2,
+  },
+  cardHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    marginBottom: 16,
+  },
+  cardTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  cardSubtitle: {
+    fontSize: 14,
+    marginTop: 2,
+  },
+  largeStat: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  spoonVisual: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 8,
+  },
+  spoonIcon: {
+    fontSize: 24,
+    marginRight: 4,
+  },
+  alertBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 12,
+    borderRadius: 8,
+    marginTop: 8,
+  },
+  alertText: {
+    fontSize: 14,
+    marginLeft: 8,
+    flex: 1,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    marginBottom: 8,
+  },
+  sectionDescription: {
+    fontSize: 14,
+    marginBottom: 16,
+  },
+  warningDescription: {
+    fontSize: 14,
+    marginBottom: 16,
+    fontStyle: 'italic',
+  },
+  insightsRow: {
+    flexDirection: 'row',
+    gap: 16,
+  },
+  insightItem: {
+    flex: 1,
+  },
+  insightLabel: {
+    fontSize: 12,
+    marginBottom: 4,
+  },
+  insightValue: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  actionButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 14,
+    borderRadius: 8,
+    gap: 8,
+  },
+  actionButtonText: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  taskGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginBottom: 16,
+  },
+  taskButton: {
+    width: '48%',
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  taskName: {
+    fontSize: 14,
+    fontWeight: '600',
+    marginBottom: 4,
+  },
+  taskCost: {
+    fontSize: 13,
+  },
+  customButton: {
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  customButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+    marginLeft: 8,
+  },
+  moodGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginBottom: 16,
+  },
+  moodButton: {
+    width: '30%',
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 2,
+    alignItems: 'center',
+  },
+  moodEmoji: {
+    fontSize: 32,
+    marginBottom: 4,
+  },
+  moodLabel: {
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  notesInput: {
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 14,
+    textAlignVertical: 'top',
+  },
+  savingIndicator: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 12,
+    gap: 8,
+  },
+  savingText: {
+    fontSize: 14,
+  },
+  borrowButtons: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  borrowButton: {
+    flex: 1,
+    padding: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  borrowButtonText: {
+    color: '#FFF',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  reportRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+    paddingBottom: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E5E7EB',
+  },
+  reportLabel: {
+    fontSize: 14,
+  },
+  reportValue: {
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  insightCard: {
+    padding: 12,
+    borderRadius: 8,
+    backgroundColor: '#F3F4F6',
+    marginBottom: 12,
+  },
+  insightCardTitle: {
+    fontSize: 12,
+    marginBottom: 4,
+  },
+  insightCardValue: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  moodHistoryItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+  },
+  moodHistoryEmoji: {
+    fontSize: 28,
+    marginRight: 12,
+  },
+  moodHistoryContent: {
+    flex: 1,
+  },
+  moodHistoryLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  moodHistoryNotes: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  moodHistoryTime: {
+    fontSize: 12,
+  },
+  placeholderText: {
+    fontSize: 14,
+    fontStyle: 'italic',
+    textAlign: 'center',
+    padding: 20,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+    padding: 16,
+  },
+  modalContent: {
+    borderRadius: 12,
+    padding: 16,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 16,
+  },
+  input: {
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 14,
+    marginBottom: 12,
+  },
+  modalButtons: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  modalButton: {
+    flex: 1,
+    padding: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  modalButtonText: {
+    color: '#FFF',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  bottomSpacer: {
+    height: 32,
+  },
+});

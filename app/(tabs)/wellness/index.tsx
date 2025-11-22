@@ -151,6 +151,51 @@ export default function WellnessHub() {
         placeholder={t('wellness.search', 'Search wellness tools...')}
       />
 
+      {/* Featured: Energy & Mood Hub */}
+      <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
+        {t('wellness.sections.featured', '⭐ Featured')}
+      </Text>
+      <GapView gap={12}>
+        {matches('/wellness/energy-hub') && (
+          <Link href="/wellness/energy-hub" asChild={true}>
+            <Pressable
+              hitSlop={HIT_SLOP_8}
+              accessibilityRole="button"
+              accessibilityLabel="Energy and Mood Hub - Track energy, mood, and patterns in one place"
+              style={({ pressed }) => [
+                {
+                  borderWidth: 2,
+                  borderColor: palette.primary,
+                  borderRadius: 12,
+                  padding: 16,
+                  backgroundColor: palette.primary + '10',
+                },
+                pressed && { opacity: 0.7 },
+              ]}
+            >
+              <Text
+                style={{ color: palette.primary, fontWeight: 'bold', fontSize: 18, lineHeight: 24 }}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                ⚡ Energy & Mood Hub
+              </Text>
+              <Text
+                style={{ color: palette.text, marginTop: 6, fontSize: 15, lineHeight: 22 }}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                Unified dashboard for tracking energy (spoons), mood, and patterns. All your energy management tools in one place.
+              </Text>
+              <Text
+                style={{ color: palette.primary, marginTop: 8, fontSize: 13, fontWeight: '600' }}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                NEW: Combines Spoon Economist, Mood Tracker & More
+              </Text>
+            </Pressable>
+          </Link>
+        )}
+      </GapView>
+
       {/* Movement */}
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
         {t('wellness.sections.movement', 'Movement')}
