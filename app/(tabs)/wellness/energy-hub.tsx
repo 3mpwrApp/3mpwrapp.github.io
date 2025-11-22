@@ -18,6 +18,7 @@ import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, Text
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8, MAX_FONT_SCALE } from '../../../constants/A11Y';
 import { useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { useCircadianRhythmDJ } from '../../../services/circadianRhythmDJ';
 import { addMood, listMoods } from '../../../services/companion';
 import { useEnergyQuantumMechanics, type QuantumEnergyState } from '../../../services/energyQuantumMechanics';
 import { computeMoodInsights } from '../../../services/moodInsights';
@@ -26,12 +27,6 @@ import { useAppPalette } from '../../../theme/usePalette';
 import { showContextualError } from '../../../utils/userFriendlyErrors';
 
 type TabView = 'dashboard' | 'track' | 'analyze' | 'community';
-
-interface MoodEntry {
-  mood: string;
-  notes?: string;
-  createdAt: any;
-}
 
 export default function EnergyMoodHub() {
   const palette = useAppPalette();
@@ -57,8 +52,14 @@ export default function EnergyMoodHub() {
   // Energy Quantum Mechanics state (advanced mode)
   const quantum = useEnergyQuantumMechanics();
 
+  // Circadian Rhythm / Sleep Tracker state
+  const circadian = useCircadianRhythmDJ();
+  const [sleepHours, setSleepHours] = useState('');
+  const [sleepQuality, setSleepQuality] = useState('');
+  const [isSavingSleep, setIsSavingSleep] = useState(false);
+
   // Mood Tracker state
-  const [moods, setMoods] = useState<MoodEntry[]>([]);
+  const [moods, setMoods] = useState<any[]>([]);
   const [moodNotes, setMoodNotes] = useState('');
   const [isSavingMood, setIsSavingMood] = useState(false);
   const [moodInsights, setMoodInsights] = useState<any>(null);
@@ -77,11 +78,12 @@ export default function EnergyMoodHub() {
       setMoods(moodData);
       
       // Compute insights
-      const entries = moodData.map((m: MoodEntry) => ({
+      const entries = moodData.map((m: any, index: number) => ({
+        id: m.id || `mood-${index}`,
         ts: m.createdAt?.toDate?.()?.getTime() || Date.now(),
         score: moodToScore(m.mood),
       }));
-      const insights = computeMoodInsights(entries);
+      const insights = computeMoodInsights(entries as any);
       setMoodInsights(insights);
     } catch (err) {
       console.error('Error loading moods:', err);
@@ -145,10 +147,126 @@ export default function EnergyMoodHub() {
       setTimeout(() => setIsSavingMood(false), 300);
     } catch (err) {
       console.error('Error saving mood:', err);
-      showContextualError(err instanceof Error ? err : new Error('Failed to save mood'), 'storage');
+      showContextualError({ context: 'storage', error: err instanceof Error ? err : new Error('Failed to save mood') });
       setIsSavingMood(false);
     }
   };
+
+  const handleSleepLog = async () => {
+    try {
+      const hours = parseFloat(sleepHours);
+      const quality = parseInt(sleepQuality);
+      
+      if (isNaN(hours) || hours <= 0 || hours > 24) {
+        alert('Please enter valid sleep hours (0-24)');
+        return;
+      }
+      
+      if (isNaN(quality) || quality < 1 || quality > 5) {
+        alert('Please enter sleep quality (1-5)');
+        return;
+      }
+
+      setIsSavingSleep(true);
+      
+      // Log to Circadian Rhythm DJ
+      const today = new Date().toISOString().split('T')[0];
+      await circadian.logSleep({
+        date: today,
+        bedtime: -8, // Estimate 8 hours before wake
+        wakeTime: 0, // Midnight reference
+        totalSleep: hours,
+        sleepQuality: quality as 1 | 2 | 3 | 4 | 5,
+        nightmares: false,
+      });
+      
+      setSleepHours('');
+      setSleepQuality('');
+      setTimeout(() => setIsSavingSleep(false), 300);
+    } catch (err) {
+      console.error('Error saving sleep:', err);
+      showContextualError({ context: 'storage', error: err instanceof Error ? err : new Error('Failed to save sleep') });
+      setIsSavingSleep(false);
+    }
+  };
+
+  // Calculate sleep-energy correlation
+  const getSleepEnergyCorrelation = async () => {
+    const sleepData = circadian.getSleepHistory(14); // Last 14 days
+    const moodData = await listMoods();
+
+    // Filter to last 14 days
+    const now = Date.now();
+    const fourteenDaysAgo = now - 14 * 24 * 60 * 60 * 1000;
+    const recentMoods = moodData.filter((m: any) => {
+      const moodTime = m.createdAt?.toDate?.()?.getTime() || 0;
+      return moodTime >= fourteenDaysAgo;
+    });
+
+    if (sleepData.length < 3 || recentMoods.length < 3) {
+      return null; // Need at least 3 data points
+    }
+
+    // Match sleep and mood by date
+    const matchedData: Array<{ sleep: number; quality: number; mood: number }> = [];
+    sleepData.forEach((sleep: any) => {
+      const matchingMood = recentMoods.find((m: any) => {
+        const moodDate = new Date(m.createdAt?.toDate?.() || 0).toISOString().split('T')[0];
+        return moodDate === sleep.date;
+      });
+      if (matchingMood) {
+        matchedData.push({
+          sleep: sleep.totalSleep,
+          quality: sleep.sleepQuality,
+          mood: moodToScore(matchingMood.mood),
+        });
+      }
+    });
+
+    if (matchedData.length < 3) return null;
+
+    // Calculate correlation coefficient (Pearson's r)
+    const meanSleep = matchedData.reduce((sum, d) => sum + d.sleep, 0) / matchedData.length;
+    const meanMood = matchedData.reduce((sum, d) => sum + d.mood, 0) / matchedData.length;
+
+    let numerator = 0;
+    let denomSleep = 0;
+    let denomMood = 0;
+
+    matchedData.forEach((d) => {
+      const sleepDiff = d.sleep - meanSleep;
+      const moodDiff = d.mood - meanMood;
+      numerator += sleepDiff * moodDiff;
+      denomSleep += sleepDiff * sleepDiff;
+      denomMood += moodDiff * moodDiff;
+    });
+
+    const correlation = numerator / Math.sqrt(denomSleep * denomMood);
+
+    // Average sleep hours and quality
+    const avgSleep = meanSleep;
+    const avgQuality = matchedData.reduce((sum, d) => sum + d.quality, 0) / matchedData.length;
+
+    return {
+      correlation: isNaN(correlation) ? 0 : correlation,
+      avgSleep,
+      avgQuality,
+      dataPoints: matchedData.length,
+    };
+  };
+
+  const [sleepEnergyStats, setSleepEnergyStats] = useState<{
+    correlation: number;
+    avgSleep: number;
+    avgQuality: number;
+    dataPoints: number;
+  } | null>(null);
+
+  // Load sleep-energy correlation on mount
+  useEffect(() => {
+    getSleepEnergyCorrelation().then(setSleepEnergyStats);
+  }, []);
+
 
   const renderDashboard = () => (
     <ScrollView>
@@ -432,6 +550,65 @@ export default function EnergyMoodHub() {
         )}
       </View>
 
+      {/* Sleep Logging */}
+      <View style={[styles.card, { backgroundColor: palette.surface }]}>
+        <Text style={[styles.sectionTitle, { color: palette.text }]}>Log Sleep</Text>
+        <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
+          Track sleep to see energy correlations
+        </Text>
+
+        <View style={styles.sleepInputRow}>
+          <View style={styles.sleepInputGroup}>
+            <Text style={[styles.inputLabel, { color: palette.text }]}>Hours</Text>
+            <TextInput
+              style={[styles.sleepInput, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+              placeholder="7.5"
+              placeholderTextColor={palette.textSecondary}
+              keyboardType="decimal-pad"
+              value={sleepHours}
+              onChangeText={setSleepHours}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            />
+          </View>
+          
+          <View style={styles.sleepInputGroup}>
+            <Text style={[styles.inputLabel, { color: palette.text }]}>Quality (1-5)</Text>
+            <TextInput
+              style={[styles.sleepInput, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+              placeholder="4"
+              placeholderTextColor={palette.textSecondary}
+              keyboardType="number-pad"
+              value={sleepQuality}
+              onChangeText={setSleepQuality}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            />
+          </View>
+
+          <Pressable
+            style={[styles.sleepLogButton, { backgroundColor: palette.primary }]}
+            onPress={handleSleepLog}
+            disabled={isSavingSleep}
+          >
+            {isSavingSleep ? (
+              <ActivityIndicator size="small" color="#FFF" />
+            ) : (
+              <Ionicons name="moon" size={24} color="#FFF" />
+            )}
+          </Pressable>
+        </View>
+
+        {circadian.getSleepHistory(7).length > 0 && (
+          <View style={styles.recentSleepContainer}>
+            <Text style={[styles.recentSleepTitle, { color: palette.textSecondary }]}>Last 7 nights:</Text>
+            {circadian.getSleepHistory(7).slice(0, 3).map((log: any) => (
+              <Text key={log.id} style={[styles.recentSleepText, { color: palette.text }]}>
+                {log.date}: {log.totalSleep.toFixed(1)}h (quality: {log.sleepQuality}/5)
+              </Text>
+            ))}
+          </View>
+        )}
+      </View>
+
       {/* Borrow Energy (Emergency) */}
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.sectionTitle, { color: palette.text }]}>Borrow Energy</Text>
@@ -547,6 +724,69 @@ export default function EnergyMoodHub() {
       )}
 
       {/* Correlation Insights (Future) */}
+      {sleepEnergyStats && (
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Sleep-Energy Correlation</Text>
+          
+          <View style={styles.insightCard}>
+            <Text style={[styles.insightCardTitle, { color: palette.text }]}>Correlation Strength</Text>
+            <Text style={[styles.insightCardValue, { color: getCorrelationColor(sleepEnergyStats.correlation) }]}>
+              {getCorrelationLabel(sleepEnergyStats.correlation)}
+            </Text>
+            <Text style={[styles.insightCardSubtext, { color: palette.textSecondary }]}>
+              r = {sleepEnergyStats.correlation.toFixed(2)}
+            </Text>
+          </View>
+
+          <View style={styles.insightCard}>
+            <Text style={[styles.insightCardTitle, { color: palette.text }]}>Average Sleep</Text>
+            <Text style={[styles.insightCardValue, { color: palette.primary }]}>
+              {sleepEnergyStats.avgSleep.toFixed(1)}h
+            </Text>
+            <Text style={[styles.insightCardSubtext, { color: palette.textSecondary }]}>
+              Quality: {sleepEnergyStats.avgQuality.toFixed(1)}/5
+            </Text>
+          </View>
+
+          <View style={styles.insightCard}>
+            <Text style={[styles.insightCardTitle, { color: palette.text }]}>Data Points</Text>
+            <Text style={[styles.insightCardValue, { color: palette.text }]}>
+              {sleepEnergyStats.dataPoints}
+            </Text>
+            <Text style={[styles.insightCardSubtext, { color: palette.textSecondary }]}>
+              Last 14 days
+            </Text>
+          </View>
+
+          {sleepEnergyStats.correlation > 0.3 && (
+            <View style={[styles.insightHighlight, { backgroundColor: palette.primary + '20' }]}>
+              <Ionicons name="bulb" size={16} color={palette.primary} />
+              <Text style={[styles.insightHighlightText, { color: palette.primary }]}>
+                Your sleep quality shows a positive correlation with energy levels. Prioritizing rest may boost your energy!
+              </Text>
+            </View>
+          )}
+
+          {sleepEnergyStats.correlation < -0.3 && (
+            <View style={[styles.insightHighlight, { backgroundColor: '#EF4444' + '20' }]}>
+              <Ionicons name="warning" size={16} color="#EF4444" />
+              <Text style={[styles.insightHighlightText, { color: '#EF4444' }]}>
+                Negative correlation detected. Consider reviewing sleep patterns or other factors affecting energy.
+              </Text>
+            </View>
+          )}
+
+          {Math.abs(sleepEnergyStats.correlation) <= 0.3 && (
+            <View style={[styles.insightHighlight, { backgroundColor: palette.textSecondary + '20' }]}>
+              <Ionicons name="information-circle" size={16} color={palette.textSecondary} />
+              <Text style={[styles.insightHighlightText, { color: palette.textSecondary }]}>
+                Weak correlation. Other factors may be influencing your energy more than sleep duration.
+              </Text>
+            </View>
+          )}
+        </View>
+      )}
+
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.sectionTitle, { color: palette.text }]}>Pattern Detection</Text>
         <Text style={[styles.placeholderText, { color: palette.textSecondary }]}>
@@ -815,6 +1055,20 @@ function formatTimeAgo(date: Date): string {
   return date.toLocaleDateString();
 }
 
+function getCorrelationColor(r: number): string {
+  const absR = Math.abs(r);
+  if (absR >= 0.7) return r > 0 ? '#10B981' : '#EF4444';
+  if (absR >= 0.3) return r > 0 ? '#3B82F6' : '#F59E0B';
+  return '#6B7280';
+}
+
+function getCorrelationLabel(r: number): string {
+  const absR = Math.abs(r);
+  if (absR >= 0.7) return r > 0 ? 'Strong Positive' : 'Strong Negative';
+  if (absR >= 0.3) return r > 0 ? 'Moderate Positive' : 'Moderate Negative';
+  return 'Weak';
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -1039,6 +1293,64 @@ const styles = StyleSheet.create({
   insightCardValue: {
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  insightCardSubtext: {
+    fontSize: 11,
+    marginTop: 2,
+  },
+  insightHighlight: {
+    flexDirection: 'row',
+    padding: 12,
+    borderRadius: 8,
+    marginTop: 12,
+    alignItems: 'center',
+    gap: 8,
+  },
+  insightHighlightText: {
+    fontSize: 13,
+    flex: 1,
+  },
+  sleepInputRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    gap: 8,
+    marginBottom: 12,
+  },
+  sleepInputGroup: {
+    flex: 1,
+  },
+  inputLabel: {
+    fontSize: 12,
+    marginBottom: 4,
+    fontWeight: '600',
+  },
+  sleepInput: {
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 14,
+    height: 48,
+  },
+  sleepLogButton: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  recentSleepContainer: {
+    marginTop: 12,
+    padding: 12,
+    borderRadius: 8,
+  },
+  recentSleepTitle: {
+    fontSize: 12,
+    fontWeight: '600',
+    marginBottom: 8,
+  },
+  recentSleepText: {
+    fontSize: 13,
+    marginBottom: 4,
   },
   moodHistoryItem: {
     flexDirection: 'row',
