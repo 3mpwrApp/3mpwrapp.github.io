@@ -7,6 +7,7 @@ import A11yPressable from '../../../components/A11yPressable';
 import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../../components/SearchBar';
+import SimpleModeWelcome from '../../../components/SimpleModeWelcome';
 import { SkeletonList } from '../../../components/SkeletonLoader';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/A11Y";
 import { channels, seedComments, seedThreads } from "../../../data/community";
@@ -15,6 +16,7 @@ import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../../i18n";
 import { getChannelUnread, setChannelLastRead } from "../../../services/community";
 import { CommunityProvider, useCommunity } from "../../../store/community";
+import { useComplexityMode } from "../../../store/complexityMode";
 import { colors, type Palette } from "../../../theme/colors";
 
 const ChannelListItem = React.memo<{ item: any; unread: Record<string, number>; palette: Palette; onPress: (slug: string) => Promise<void> }>(({ item, unread, palette, onPress }) => {
@@ -46,6 +48,7 @@ function ScreenInner() {
   useFocusOnRefOnMount(titleRef);
   const { state, seed } = useCommunity();
   const { t } = useTranslation();
+  const { mode: complexityMode, isFeatureVisible } = useComplexityMode();
   const [unread, setUnread] = React.useState<Record<string, number>>({});
   const [query, setQuery] = React.useState("");
   const [mode, setMode] = React.useState<'all'|'provinces'|'topics'>('all');
@@ -95,6 +98,12 @@ function ScreenInner() {
         </Text>
         <Text style={styles.subtitle}>Connect, share, and support each other through various community features.</Text>
 
+        <SimpleModeWelcome 
+          tabName="Community"
+          availableFeatures={['Beta Testers Chat', 'Mutual Chat', 'Direct Messages']}
+          hiddenCount={complexityMode === 'simple' ? 3 : 0}
+        />
+
         {loading ? (
           <SkeletonList count={8} />
         ) : (
@@ -114,15 +123,21 @@ function ScreenInner() {
         {/* Community Features Navigation */}
         <View style={styles.featuresContainer}>
           {(() => {
-            type Feature = { key: string; title: string; desc: string; href: Href; compose?: boolean };
-            const features: Feature[] = [
-              { key: 'media', title: '🎨 Media Studio', desc: 'Create & share memes, posters, graphics (Beta)', href: '/(tabs)/community/media-studio' as Href },
-              { key: 'aid', title: '🤝 Mutual Aid', desc: 'Exchange support, resources, peer help (Beta)', href: '/(tabs)/community/mutual-aid' as Href },
-              { key: 'chat', title: '💬 Mutual Chat', desc: 'Real-time group & 1-1 conversations (Beta)', href: '/(tabs)/community/mutual-chat?id=general' as Href },
-              { key: 'testers', title: '🧪 Beta Testers Chat', desc: 'Live chat to collaborate & give feedback (Beta)', href: '/(tabs)/community/testers-chat' as Href },
-              { key: 'dm', title: '📥 Direct Messages', desc: 'Private 1‑1 conversations (beta)', href: '/(tabs)/community/dms' as Href },
-              { key: 'compose', title: '✏️ Compose Post', desc: 'Create a new forum post (Beta)', href: '/(tabs)/community/compose' as Href, compose: true },
+            type Feature = { key: string; title: string; desc: string; href: Href; compose?: boolean; tier?: 'simple' | 'standard' | 'power' };
+            const allFeatures: Feature[] = [
+              { key: 'chat', title: '💬 Mutual Chat', desc: 'Real-time group & 1-1 conversations (Beta)', href: '/(tabs)/community/mutual-chat?id=general' as Href, tier: 'simple' },
+              { key: 'testers', title: '🧪 Beta Testers Chat', desc: 'Live chat to collaborate & give feedback (Beta)', href: '/(tabs)/community/testers-chat' as Href, tier: 'simple' },
+              { key: 'dm', title: '📥 Direct Messages', desc: 'Private 1‑1 conversations (beta)', href: '/(tabs)/community/dms' as Href, tier: 'simple' },
+              { key: 'media', title: '🎨 Media Studio', desc: 'Create & share memes, posters, graphics (Beta)', href: '/(tabs)/community/media-studio' as Href, tier: 'standard' },
+              { key: 'aid', title: '🤝 Mutual Aid', desc: 'Exchange support, resources, peer help (Beta)', href: '/(tabs)/community/mutual-aid' as Href, tier: 'standard' },
+              { key: 'compose', title: '✏️ Compose Post', desc: 'Create a new forum post (Beta)', href: '/(tabs)/community/compose' as Href, compose: true, tier: 'standard' },
             ];
+            
+            // Filter by complexity mode
+            const features = complexityMode === 'simple' 
+              ? allFeatures.filter(f => f.tier === 'simple')
+              : allFeatures;
+            
             const fMatches: Feature[] = q
               ? features.filter(f =>
                   f.title.toLowerCase().includes(q) || f.desc.toLowerCase().includes(q)

@@ -18,6 +18,7 @@ import CreateCampaignBox from "../../components/CreateCampaignBox";
 import { RepTrackerSafe } from "../../components/RepTrackerSafe";
 import ResponsiveScreenWrapper from "../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../components/SearchBar";
+import SimpleModeWelcome from "../../components/SimpleModeWelcome";
 import { SkeletonList } from '../../components/SkeletonLoader';
 import SkeletonRow from "../../components/SkeletonRow";
 import { useAuth } from "../../context/AuthContext";
@@ -47,6 +48,7 @@ import {
     CampaignsLocalProvider,
     useCampaignsLocal,
 } from "../../store/campaignsLocal";
+import { useComplexityMode } from "../../store/complexityMode";
 import { useCounts } from "../../store/counts";
 import { useNetwork } from "../../store/network";
 import { useRefresh } from "../../store/refresh";
@@ -123,6 +125,7 @@ function ScreenInner() {
   };
   const { user } = useAuth();
   const { t } = useTranslationSafe();
+  const { mode, isFeatureVisible } = useComplexityMode();
   const inFlightRef = React.useRef<Record<string, number>>({});
 
   const reload = React.useCallback(async () => {
@@ -285,7 +288,14 @@ function ScreenInner() {
 
   const sections = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    const campaigns = Array.isArray(allItems) ? allItems : [];
+    let campaigns = Array.isArray(allItems) ? allItems : [];
+    
+    // In Simple Mode, show only featured/important campaigns (max 5)
+    if (mode === 'simple') {
+      campaigns = campaigns
+        .filter(c => c.petitionId || c.featured) // Show only petitions or featured campaigns
+        .slice(0, 5); // Limit to 5 campaigns
+    }
     
     // Your campaigns: joined or created locally
     const safeMyCampaigns = Array.isArray(local?.myCampaigns) ? local.myCampaigns : [];
@@ -316,11 +326,11 @@ function ScreenInner() {
     };
 
     const sec = [
-      { title: 'Your Campaigns', data: your.filter(match) },
-      { title: 'All Campaigns', data: others.filter(match) },
+      { title: mode === 'simple' ? 'Featured Campaigns' : 'Your Campaigns', data: your.filter(match) },
+      { title: mode === 'simple' ? 'Important Petitions' : 'All Campaigns', data: others.filter(match) },
     ].filter(s => Array.isArray(s.data) && s.data.length > 0);
     return sec as { title: string; data: Mixed[] }[];
-  }, [query, allItems, local?.myCampaigns, safeIsJoined]);
+  }, [query, allItems, local?.myCampaigns, safeIsJoined, mode]);
 
   // Handle campaign submission to 3mpwr App
   const handleSubmitTo3mpwr = React.useCallback(async (campaign: any) => {
@@ -428,6 +438,13 @@ function ScreenInner() {
           </Text>
           <Text style={styles.subtitle}>Browse, create, and join campaigns for disability justice and workers' rights.</Text>
           
+          {/* Simple Mode Welcome */}
+          <SimpleModeWelcome 
+            tabName="Campaigns"
+            availableFeatures={['Featured Campaigns', 'Top Petitions']}
+            hiddenCount={mode === 'simple' ? Math.max(0, (Array.isArray(allItems) ? allItems.length : 0) - 5) : 0}
+          />
+          
           {/* Real-time sync status */}
           <View style={styles.syncStatus}>
             <Text style={styles.syncText}>
@@ -476,8 +493,10 @@ function ScreenInner() {
           </Pressable>
         </View>
 
-        <CreateCampaignBox
-          onCreate={async (data) => {
+        {/* Hide Create Campaign in Simple Mode */}
+        {isFeatureVisible('standard') && (
+          <CreateCampaignBox
+            onCreate={async (data) => {
             try {
               const c = createCampaign(data.title, data.summary);
               try { trackEvent("campaign_create", { id: c.id }); } catch {}
@@ -567,6 +586,7 @@ function ScreenInner() {
           }}
           palette={palette}
         />
+        )}
 
         <SearchBar
           value={query}

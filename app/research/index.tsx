@@ -8,9 +8,11 @@ import ContrastToggle from '../../components/ContrastToggle';
 import { GapView } from '../../components/GapView';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import SettingsLink from '../../components/SettingsLink';
+import SimpleModeWelcome from '../../components/SimpleModeWelcome';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
+import { useComplexityMode } from '../../store/complexityMode';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 
@@ -20,6 +22,7 @@ export default function ResearchScreen() {
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
   const { t } = useTranslation();
+  const { mode, isFeatureVisible } = useComplexityMode();
   useAnnounceOnMount(t('research.landing.screenLabel','Research screen'));
   useFocusOnRefOnMount(titleRef);
 
@@ -40,6 +43,12 @@ export default function ResearchScreen() {
           {t('research.landing.subtitle','Access disability research, advocacy resources, and trusted data sources.')}
         </Text>
 
+        <SimpleModeWelcome 
+          tabName="Research"
+          availableFeatures={['Research Library', 'UN CRPD Guide']}
+          hiddenCount={mode === 'simple' ? 2 : 0}
+        />
+
         <GapView gap={16} style={styles.sectionGrid}>
           {/* Research Library - Primary Feature */}
           <Link href="/research/library" asChild={true}>
@@ -59,6 +68,7 @@ export default function ResearchScreen() {
           </Link>
 
           {/* Master Index */}
+          {isFeatureVisible('standard') && (
           <Link href="/research/master-index" asChild={true}>
             <A11yPressable
               style={styles.sectionCard}
@@ -71,6 +81,7 @@ export default function ResearchScreen() {
               <Text style={styles.sectionDescription}>{t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}</Text>
             </A11yPressable>
           </Link>
+          )}
 
           {/* UN CRPD Guide */}
           <Link href="/research/uncrpd-info" asChild={true}>
@@ -87,6 +98,7 @@ export default function ResearchScreen() {
           </Link>
 
           {/* History Timeline */}
+          {isFeatureVisible('standard') && (
           <Link href="/research/history-timeline" asChild={true}>
             <A11yPressable
               style={styles.sectionCard}
@@ -99,8 +111,10 @@ export default function ResearchScreen() {
               <Text style={styles.sectionDescription}>{t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}</Text>
             </A11yPressable>
           </Link>
+          )}
 
           {/* Wait Times */}
+          {isFeatureVisible('standard') && (
           <Link href="/research/wait-times" asChild={true}>
             <A11yPressable
               style={styles.sectionCard}
@@ -113,6 +127,7 @@ export default function ResearchScreen() {
               <Text style={styles.sectionDescription}>{t('research.landing.waitDesc','Estimate how long processes may take')}</Text>
             </A11yPressable>
           </Link>
+          )}
         </GapView>
       </View>
     </ResponsiveScreenWrapper>
