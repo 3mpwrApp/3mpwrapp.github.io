@@ -11,6 +11,7 @@ import { GapView } from "../../../components/GapView";
 import ResponsiveScreenWrapper from "../../../components/ResponsiveScreenWrapper";
 import SearchBar from "../../../components/SearchBar";
 import SettingsLink from "../../../components/SettingsLink";
+import SimpleModeWelcome from "../../../components/SimpleModeWelcome";
 import SkeletonRow from "../../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { resources as localResources } from "../../../data/resources";
@@ -200,6 +201,13 @@ export default function ResourcesScreen() {
         </Text>
         
         <DisclaimerBanner type="legal" compact={true} />
+        
+        {/* Simple Mode Welcome */}
+        <SimpleModeWelcome 
+          tabName="Resources"
+          availableFeatures={['Evidence Locker', 'Letter Wizard (top 3 templates)', 'Master Tracker Hub']}
+          hiddenCount={40}
+        />
         
         {/* Featured Consolidated Hubs */}
         <Text accessibilityRole="header" style={[textStyles.h2, { marginTop: 16 }]}>

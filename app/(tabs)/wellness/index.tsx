@@ -6,6 +6,7 @@ import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../../components/SearchBar';
+import SimpleModeWelcome from '../../../components/SimpleModeWelcome';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
@@ -146,6 +147,13 @@ export default function WellnessHub() {
       </Text>
       
       <DisclaimerBanner type="medical" compact={true} />
+      
+      {/* Simple Mode Welcome */}
+      <SimpleModeWelcome 
+        tabName="Wellness"
+        availableFeatures={['Mood Tracker', 'Energy & Mood Hub']}
+        hiddenCount={20}
+      />
       
       <SearchBar
         value={query}

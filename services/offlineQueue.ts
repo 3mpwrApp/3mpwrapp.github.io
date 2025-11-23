@@ -13,7 +13,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Network from 'expo-network';
 
-import { errorLogger } from '../utils/errorLogger';
+import { logError } from '../utils/errorLogger';
 
 const QUEUE_KEY = 'evidence:uploadQueue:v1';
 const MAX_RETRIES = 5;
@@ -42,7 +42,7 @@ export async function getQueue(): Promise<QueueItem[]> {
     if (!json) return [];
     return JSON.parse(json);
   } catch (err) {
-    errorLogger('getQueue', err);
+    logError('offlineQueue', 'getQueue', err);
     return [];
   }
 }
@@ -65,7 +65,7 @@ export async function enqueue(type: QueueItem['type'], payload: any): Promise<st
     await AsyncStorage.setItem(QUEUE_KEY, JSON.stringify(queue));
     return item.id;
   } catch (err) {
-    errorLogger('enqueue', err);
+    logError('offlineQueue', 'enqueue', err);
     throw new Error('Failed to add item to queue');
   }
 }
@@ -79,7 +79,7 @@ export async function dequeue(id: string): Promise<void> {
     const filtered = queue.filter(item => item.id !== id);
     await AsyncStorage.setItem(QUEUE_KEY, JSON.stringify(filtered));
   } catch (err) {
-    errorLogger('dequeue', err);
+    logError('offlineQueue', 'dequeue', err);
     throw new Error('Failed to remove item from queue');
   }
 }
@@ -99,7 +99,7 @@ export async function updateQueueItem(
     queue[index] = { ...queue[index], ...updates };
     await AsyncStorage.setItem(QUEUE_KEY, JSON.stringify(queue));
   } catch (err) {
-    errorLogger('updateQueueItem', err);
+    logError('offlineQueue', 'updateQueueItem', err);
   }
 }
 
@@ -166,7 +166,7 @@ async function processItem(item: QueueItem, uploadFn: (payload: any) => Promise<
       status: item.retries + 1 >= MAX_RETRIES ? 'failed' : 'pending',
       error: errorMsg 
     });
-    errorLogger('processItem', err);
+    logError('offlineQueue', 'processItem', err);
     return false;
   }
 }
@@ -228,7 +228,7 @@ export async function clearSucceeded(): Promise<void> {
     const filtered = queue.filter(item => item.status !== 'succeeded');
     await AsyncStorage.setItem(QUEUE_KEY, JSON.stringify(filtered));
   } catch (err) {
-    errorLogger('clearSucceeded', err);
+    logError('offlineQueue', 'clearSucceeded', err);
   }
 }
 
@@ -239,7 +239,7 @@ export async function clearAll(): Promise<void> {
   try {
     await AsyncStorage.removeItem(QUEUE_KEY);
   } catch (err) {
-    errorLogger('clearAll', err);
+    logError('offlineQueue', 'clearAll', err);
   }
 }
 

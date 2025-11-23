@@ -8,9 +8,11 @@ import JurisdictionFormHelper from '../../../components/JurisdictionFormHelper';
 import { JurisdictionPanel } from '../../../components/JurisdictionPanel';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../../components/SearchBar';
+import SimpleModeWelcome from '../../../components/SimpleModeWelcome';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { CONSOLIDATION_FLAGS, isConsolidationFeatureEnabled } from '../../../services/consolidationFlags';
+import { useComplexityMode } from '../../../store/complexityMode';
 import { useAppPalette } from '../../../theme/usePalette';
 
 type Feature = { route: string; key: keyof typeof featureKeyMap; };
@@ -56,6 +58,7 @@ export default function AdvocacyHub() {
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
   const { t } = useTranslation();
+  const { isFeatureVisible } = useComplexityMode();
   useAnnounceOnMount(t('advocacy.hub.title','Advocacy Hub'));
   useFocusOnRefOnMount(titleRef);
   const [query, setQuery] = React.useState('');
@@ -118,6 +121,13 @@ export default function AdvocacyHub() {
   <JurisdictionDeadlineCalculator />
   <JurisdictionFormHelper />
 
+      {/* Simple Mode Welcome */}
+      <SimpleModeWelcome 
+        tabName="Advocacy"
+        availableFeatures={['AI Advocate Translator', 'Lawyer Finder']}
+        hiddenCount={13}
+      />
+
       {/* Featured Consolidated Hubs */}
       <Text style={s.sectionHeader}>⭐ {t('advocacy.sections.featured','Featured Hubs')}</Text>
       
@@ -144,26 +154,43 @@ export default function AdvocacyHub() {
 
       <SearchBar value={query} onChangeText={setQuery} placeholder={t('advocacy.search','Search advocacy tools...')} />
 
-            <Text style={s.sectionHeader}>{t('advocacy.sections.ai','AI Tools')}</Text>
-      {FEATURES.filter(f => {
-        if (f.key === 'ai_assistant') return unifiedAIEnabled;
-        if (f.key === 'evidence_manager') return evidenceManagerEnabled;
-        return ['ai_translator','ai_case','ai_gov','policy_simple'].includes(f.key);
-      }).map(f => {
-        const base = t(featureKeyMap[f.key]);
-        const titleText = BETA.includes(f.key)
-          ? `${base} (Beta)`
-          : COMING_SOON.includes(f.key)
-          ? `${base} (Coming soon)`
-          : `${base}\u200B`;
-        return matches(f.route) ? (
-          <Link key={f.route} href={f.route as any} asChild={true}>
+      {/* AI Tools - Hide most in Simple mode */}
+      {isFeatureVisible('standard') && (
+        <>
+          <Text style={s.sectionHeader}>{t('advocacy.sections.ai','AI Tools')}</Text>
+          {FEATURES.filter(f => {
+            if (f.key === 'ai_assistant') return unifiedAIEnabled;
+            if (f.key === 'evidence_manager') return evidenceManagerEnabled;
+            return ['ai_translator','ai_case','ai_gov','policy_simple'].includes(f.key);
+          }).map(f => {
+            const base = t(featureKeyMap[f.key]);
+            const titleText = BETA.includes(f.key)
+              ? `${base} (Beta)`
+              : COMING_SOON.includes(f.key)
+              ? `${base} (Coming soon)`
+              : `${base}\u200B`;
+            return matches(f.route) ? (
+              <Link key={f.route} href={f.route as any} asChild={true}>
+                <View style={s.card} accessibilityRole="button">
+                  <Text style={s.cardTitle}>{titleText}</Text>
+                </View>
+              </Link>
+            ) : null;
+          })}
+        </>
+      )}
+
+      {/* Simple mode: Show only AI Translator */}
+      {isFeatureVisible('simple') && (
+        <>
+          <Text style={s.sectionHeader}>{t('advocacy.sections.ai','AI Tools')}</Text>
+          <Link href="/(tabs)/advocacy/ai-advocate-translator" asChild={true}>
             <View style={s.card} accessibilityRole="button">
-              <Text style={s.cardTitle}>{titleText}</Text>
+              <Text style={s.cardTitle}>{t('advocacy.tools.ai_translator')} (Beta)</Text>
             </View>
           </Link>
-        ) : null;
-      })}
+        </>
+      )}
 
       <Text style={s.sectionHeader}>{t('advocacy.sections.coaching','Coaching')}</Text>
       {FEATURES.filter(f => ['self_coach', 'negotiation_coach'].includes(f.key)).map(f => {
