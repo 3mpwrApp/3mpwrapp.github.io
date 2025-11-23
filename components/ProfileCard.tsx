@@ -31,9 +31,14 @@ export default function ProfileCard() {
   const [editing, setEditing] = React.useState(false);
   const [refreshing, setRefreshing] = React.useState(false);
 
-  // Calculate stats
-  const favTotal = favorites?.campaign.size + favorites?.resource.size + favorites?.advocate.size + favorites?.podcast.size || 0;
-  const bookmarkTotal = bookmarks.items?.length || 0;
+  // Calculate stats - safe access to prevent crashes
+  const favTotal = (
+    (favorites?.campaign?.size || 0) + 
+    (favorites?.resource?.size || 0) + 
+    (favorites?.advocate?.size || 0) + 
+    (favorites?.podcast?.size || 0)
+  );
+  const bookmarkTotal = bookmarks?.items?.length || 0;
 
   // Refresh handler
   const handleRefresh = React.useCallback(async () => {
@@ -236,14 +241,13 @@ export default function ProfileCard() {
           <SettingRow
             icon="contrast"
             label={t("settings.accessibility.highContrast", "High Contrast")}
-            value={a11y.highContrast ? t("common.on", "On") : t("common.off", "Off")}
+            value={a11y?.highContrast ? t("common.on", "On") : t("common.off", "Off")}
             onPress={() => router.push("/(tabs)/settings" as Href)}
             palette={palette}
           />
-          <SettingRow
-            icon="eye"
-            label={t("settings.accessibility.highContrast", "High Contrast")}
-            value={a11y.highContrast ? t("common.on", "On") : t("common.off", "Off")}
+          <ActionButton
+            icon="settings"
+            label={t("settings.accessibility.moreSettings", "More Accessibility Settings")}
             onPress={() => router.push("/(tabs)/settings" as Href)}
             palette={palette}
           />
