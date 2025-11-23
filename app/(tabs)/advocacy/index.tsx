@@ -67,7 +67,7 @@ export default function AdvocacyHub() {
     return h.includes(q);
   };
 
-  const [unifiedAIEnabled, setUnifiedAIEnabled] = React.useState(false);
+  const [unifiedAIEnabled, setUnifiedAIEnabled] = React.useState(true); // Enable AI Command Center
   const [accountabilityHubEnabled, setAccountabilityHubEnabled] = React.useState(false);
   const [evidenceManagerEnabled, setEvidenceManagerEnabled] = React.useState(false);
 
@@ -78,11 +78,11 @@ export default function AdvocacyHub() {
       isConsolidationFeatureEnabled(CONSOLIDATION_FLAGS.ACCOUNTABILITY_HUB),
       isConsolidationFeatureEnabled(CONSOLIDATION_FLAGS.EVIDENCE_MANAGER),
     ]).then(([aiEnabled, accountabilityEnabled, evidenceEnabled]) => {
-      setUnifiedAIEnabled(aiEnabled);
+      setUnifiedAIEnabled(aiEnabled !== undefined ? aiEnabled : true); // Default to true
       setAccountabilityHubEnabled(accountabilityEnabled);
       setEvidenceManagerEnabled(evidenceEnabled);
     }).catch(() => {
-      setUnifiedAIEnabled(false);
+      setUnifiedAIEnabled(true); // Default to true on error
       setAccountabilityHubEnabled(false);
       setEvidenceManagerEnabled(false);
     });
@@ -110,13 +110,37 @@ export default function AdvocacyHub() {
   return (
     <ResponsiveScreenWrapper testID="advocacy-screen">
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('advocacy.hub.title','Advocacy Hub')}</Text>
-      <Text style={s.subtitle}>{t('advocacy.hub.subtitle','Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below.')}</Text>
+      <Text style={s.subtitle}>{t('advocacy.hub.subtitle','Unified AI tools, lawyer directories, case tracking, and collective action - all in one place.')}</Text>
   
   <DisclaimerBanner type="legal" compact={true} />
   
   <JurisdictionPanel />
   <JurisdictionDeadlineCalculator />
   <JurisdictionFormHelper />
+
+      {/* Featured Consolidated Hubs */}
+      <Text style={s.sectionHeader}>⭐ {t('advocacy.sections.featured','Featured Hubs')}</Text>
+      
+      <Link href="/(tabs)/advocacy/ai-command-center" asChild={true}>
+        <View style={[s.card, s.featuredCard]} accessibilityRole="button">
+          <Text style={s.cardTitle}>🤖 {t('advocacy.aiCommand.title','AI Command Center')} (NEW)</Text>
+          <Text style={s.cardDesc}>{t('advocacy.aiCommand.hubDesc','All-in-one AI: translate legal docs, analyze strength, navigate government - 5 tools unified')}</Text>
+        </View>
+      </Link>
+
+      <Link href="/(tabs)/advocacy/accountability-network" asChild={true}>
+        <View style={[s.card, s.featuredCard]} accessibilityRole="button">
+          <Text style={s.cardTitle}>🔍 {t('advocacy.accountabilityNetwork.title','Accountability Network')} (Coming soon)</Text>
+          <Text style={s.cardDesc}>{t('advocacy.accountabilityNetwork.hubDesc','Rate lawyers, find advocates, track cases, build coalitions - never-been-done crowd-sourced accountability')}</Text>
+        </View>
+      </Link>
+
+      <Link href="/(tabs)/advocacy/evidence-vault" asChild={true}>
+        <View style={[s.card, s.featuredCard]} accessibilityRole="button">
+          <Text style={s.cardTitle}>🔒 {t('advocacy.evidenceVault.title','Evidence Vault')} (Coming soon)</Text>
+          <Text style={s.cardDesc}>{t('advocacy.evidenceVault.hubDesc','Secure storage, AI categorization, OCR, timeline builder - unified evidence management with chain of custody')}</Text>
+        </View>
+      </Link>
 
       <SearchBar value={query} onChangeText={setQuery} placeholder={t('advocacy.search','Search advocacy tools...')} />
 
@@ -202,11 +226,12 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     title: { fontSize:24, fontWeight:'700', color: palette.text, marginBottom: 8 },
     subtitle: { color: palette.text, opacity:0.9, marginBottom: 16 },
-    sectionHeader: { color: palette.text, opacity:0.9, marginTop: 16, marginBottom: 8, fontWeight: '700' },
+    sectionHeader: { color: palette.text, opacity:0.9, marginTop: 16, marginBottom: 8, fontWeight: '700', fontSize: 18 },
     card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 10, padding: 14, backgroundColor: palette.surface, marginBottom: 12 },
-    cardTitle: { color: palette.text, fontWeight:'700', marginBottom: 4 },
+    featuredCard: { borderWidth: 2, borderColor: palette.primary, backgroundColor: palette.primary + '08' },
+    cardTitle: { color: palette.text, fontWeight:'700', marginBottom: 4, fontSize: 16 },
     comingSoon: { color: palette.text, opacity: 0.7 },
     padZWS: { color: 'transparent' },
-    cardDesc: { color: palette.text, opacity:0.85, fontSize: 13 },
+    cardDesc: { color: palette.text, opacity:0.85, fontSize: 13, lineHeight: 20, marginTop: 4 },
   });
 }

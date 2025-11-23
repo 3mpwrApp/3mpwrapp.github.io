@@ -16,7 +16,7 @@ export default function SpoonEconomistRedirect() {
   useEffect(() => {
     // Redirect to Energy Hub with Track tab active
     const timer = setTimeout(() => {
-      router.replace('/wellness/energy-hub?tab=track');
+      router.replace('/wellness/energy-hub?tab=track' as any);
     }, 1500);
 
     return () => clearTimeout(timer);

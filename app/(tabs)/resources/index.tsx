@@ -199,6 +199,31 @@ export default function ResourcesScreen() {
         
         <DisclaimerBanner type="legal" compact={true} />
         
+        {/* Featured Consolidated Hubs */}
+        <Text accessibilityRole="header" style={[textStyles.h2, { marginTop: 16 }]}>
+          ⭐ Featured Hubs
+        </Text>
+        
+        <ResourceLink href="/(tabs)/resources/master-tracker-hub" title="📊 Master Tracker Hub (NEW)" badge="Unified Dashboard" />
+        <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
+          All-in-one health tracking: symptoms, meds, rehab, appointments - with AI insights & pattern detection
+        </Text>
+        
+        <ResourceLink href="/(tabs)/resources/appeal-command-center" title="⚖️ Appeal Command Center" badge="Coming soon" />
+        <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
+          Deadline warfare, denial decoder, evidence strength meter, precedent finder - never miss another appeal
+        </Text>
+        
+        <ResourceLink href="/(tabs)/resources/rights-benefits-calculator" title="💰 Rights & Benefits Calculator" badge="Coming soon" />
+        <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
+          Find ALL programs you qualify for, compare provinces, simulate income impacts, optimize your benefits
+        </Text>
+        
+        <ResourceLink href="/(tabs)/resources/letter-factory" title="✍️ Letter & Template Factory" badge="Coming soon" />
+        <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
+          22+ templates, AI co-writer, tone adjuster, multi-language - generate perfect letters in minutes
+        </Text>
+        
         {region === "all" && !province && (
           <Text style={[textStyles.bodySmall, { opacity: 0.75, marginBottom: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
             Tip: Set your province in Settings to filter resources.
