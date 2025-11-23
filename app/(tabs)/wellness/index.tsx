@@ -151,9 +151,9 @@ export default function WellnessHub() {
         placeholder={t('wellness.search', 'Search wellness tools...')}
       />
 
-      {/* Featured: Energy & Mood Hub */}
+      {/* Featured: Consolidated Hubs */}
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-        {t('wellness.sections.featured', '⭐ Featured')}
+        {t('wellness.sections.featured', '⭐ Featured Hubs')}
       </Text>
       <GapView gap={12}>
         {matches('/wellness/energy-hub') && (
@@ -161,7 +161,7 @@ export default function WellnessHub() {
             <Pressable
               hitSlop={HIT_SLOP_8}
               accessibilityRole="button"
-              accessibilityLabel="Energy and Mood Hub - Track energy, mood, and patterns in one place"
+              accessibilityLabel="Energy and Mood Hub - Track energy, mood, sleep, and pacing in one place"
               style={({ pressed }) => [
                 {
                   borderWidth: 2,
@@ -183,59 +183,45 @@ export default function WellnessHub() {
                 style={{ color: palette.text, marginTop: 6, fontSize: 15, lineHeight: 22 }}
                 maxFontSizeMultiplier={MAX_FONT_SCALE}
               >
-                Unified dashboard for tracking energy (spoons), mood, and patterns. All your energy management tools in one place.
+                Track energy (spoons), mood, sleep, and pacing. Includes forecasting and community features.
               </Text>
               <Text
                 style={{ color: palette.primary, marginTop: 8, fontSize: 13, fontWeight: '600' }}
                 maxFontSizeMultiplier={MAX_FONT_SCALE}
               >
-                NEW: Combines Spoon Economist, Mood Tracker & More
+                Consolidates 6 tools: Spoons, Mood, Sleep, Pacing & More
               </Text>
             </Pressable>
           </Link>
         )}
+        {unifiedHealthTrackerEnabled && matches('/wellness/health-tracker') && (
+          <Card
+            href="/wellness/health-tracker"
+            title="🏥 Unified Health Tracker"
+            desc="Track symptoms, pain, chronic conditions, rehab, and pacing in one place. Consolidates 5 tracking tools."
+          />
+        )}
+        {matches('/wellness/mental-wellness-toolkit') && (
+          <Card
+            href="/wellness/mental-wellness-toolkit"
+            title="🧠 Mental Wellness Toolkit"
+            desc="All CBT/DBT tools in one place: thought reframing, emotion skills, grounding, and crisis tools. Consolidates 8 cognitive tools."
+          />
+        )}
+        {matches('/wellness/movement-rehab-hub') && (
+          <Card
+            href="/wellness/movement-rehab-hub"
+            title="💪 Movement & Rehab Hub"
+            desc="Gentle exercises, micro-movements, rehab games, and nutrition guides. Consolidates 4 movement tools."
+          />
+        )}
       </GapView>
 
-      {/* Movement */}
+      {/* Additional Tools */}
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-        {t('wellness.sections.movement', 'Movement')}
+        {t('wellness.sections.additional', 'Additional Tools')}
       </Text>
       <GapView gap={12}>
-        {matches('/wellness/micro-movement') && (
-          <Card
-            href="/wellness/micro-movement"
-            title={t('wellness.micro.title', 'Micro-Movements Coach')}
-            desc={t('wellness.micro.desc', 'Gentle, chair-friendly movement ideas.')}
-          />
-        )}
-        {matches('/wellness/exercise-hub') && (
-          <Card
-            href="/wellness/exercise-hub"
-            title={label('/wellness/exercise-hub', t('wellness.exerciseHub.title', 'Exercise Hub'))}
-            desc={t('wellness.exerciseHub.desc', 'Discover gentle routines and videos.')}
-          />
-        )}
-        {matches('/wellness/rehab-games') && (
-          <Card
-            href="/wellness/rehab-games"
-            title={label('/wellness/rehab-games', t('wellness.rehabGames.title', 'Rehab Games'))}
-            desc={t('wellness.rehabGames.desc', 'Light, recovery-friendly activities.')}
-          />
-        )}
-        {matches('/wellness/pacing-partner') && (
-          <Card
-            href="/wellness/pacing-partner"
-            title={t('wellness.pacingPartner.title', 'Pacing Partner')}
-            desc={t('wellness.pacingPartner.desc', 'Right-size activities to avoid crashes.')}
-          />
-        )}
-        {matches('/wellness/nutrition-guides') && (
-          <Card
-            href="/wellness/nutrition-guides"
-            title={label('/wellness/nutrition-guides', t('wellness.nutrition.title', 'Diet & Nutrition Guides'))}
-            desc={t('wellness.nutrition.desc', 'Eating ideas tailored to symptoms.')}
-          />
-        )}
         {matches('/wellness/work-balance-ai') && (
           <Card
             href="/wellness/work-balance-ai"
@@ -243,90 +229,22 @@ export default function WellnessHub() {
             desc={t('wellness.workBalance.desc', 'Balance work demands with health.')}
           />
         )}
-      </GapView>
-
-      {/* Sleep */}
-      <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-        {t('wellness.sections.sleep', 'Sleep')}
-      </Text>
-      <GapView gap={12}>
-        {matches('/wellness/sleep-reframe') && (
+        {matches('/wellness/functional-capacity') && (
           <Card
-            href="/wellness/sleep-reframe"
-            title={label('/wellness/sleep-reframe', t('wellness.sleepReframe.title', 'Sleep Reframe'))}
-            desc={t('wellness.sleepReframe.desc', 'Kind reframes and routines for better sleep.')}
-          />
-        )}
-        {matches('/wellness/sleep-energy-tracker') && (
-          <Card
-            href="/wellness/sleep-energy-tracker"
-            title={t('wellness.sleepEnergy.title', 'Sleep & Energy Tracker')}
-            desc={t('wellness.sleepEnergy.desc', 'Track rest, energy, and patterns.')}
+            href="/wellness/functional-capacity"
+            title="Functional Capacity Assessment"
+            desc="WHO ICF-based disability documentation and tracking."
           />
         )}
       </GapView>
 
-      {/* Cognitive */}
+
+
+      {/* Miscellaneous */}
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-        {t('wellness.sections.cognitive', 'Cognitive')}
+        {t('wellness.sections.misc', 'Miscellaneous')}
       </Text>
       <GapView gap={12}>
-        {matches('/wellness/cbt-coach') && (
-          <Card
-            href="/wellness/cbt-coach"
-            title={label('/wellness/cbt-coach', t('wellness.cbt.title', 'CBT Virtual Coach'))}
-            desc={t('wellness.cbt.desc', 'Reframe thoughts with evidence.')}
-          />
-        )}
-        {matches('/wellness/cbt-mini-games') && (
-          <Card
-            href="/wellness/cbt-mini-games"
-            title={label('/wellness/cbt-mini-games', t('wellness.mini.title', 'CBT Mini-Games'))}
-            desc={t('wellness.mini.desc', 'Quick grounding games to calm.')}
-          />
-        )}
-        {matches('/wellness/dbt') && (
-          <Card
-            href="/wellness/dbt"
-            title={label('/wellness/dbt', t('wellness.dbt.title', 'DBT Skill Matcher'))}
-            desc={t('wellness.dbt.desc', 'Instant skill suggestions for current emotion.')}
-          />
-        )}
-        {matches('/wellness/opposite-action') && (
-          <Card
-            href="/wellness/opposite-action"
-            title={label('/wellness/opposite-action', t('wellness.opposite.title', 'Opposite Action Companion'))}
-            desc={t('wellness.opposite.desc', 'Try small, safe opposite actions.')}
-          />
-        )}
-        {matches('/wellness/radical-acceptance') && (
-          <Card
-            href="/wellness/radical-acceptance"
-            title={label('/wellness/radical-acceptance', t('wellness.acceptance.title', 'Radical Acceptance'))}
-            desc={t('wellness.acceptance.desc', 'Reduce suffering; take wise action.')}
-          />
-        )}
-        {matches('/wellness/acceptance-function') && (
-          <Card
-            href="/wellness/acceptance-function"
-            title={label('/wellness/acceptance-function', t('wellness.acceptFn.title', 'Acceptance & Function'))}
-            desc={t('wellness.acceptFn.desc', 'Track acceptance and function.')}
-          />
-        )}
-        {matches('/wellness/distress-tolerance') && (
-          <Card
-            href="/wellness/distress-tolerance"
-            title={label('/wellness/distress-tolerance', t('wellness.distress.title', 'Distress Tolerance'))}
-            desc={t('wellness.distress.desc', 'Brief skills to reduce crisis intensity.')}
-          />
-        )}
-        {matches('/wellness/belief-meter') && (
-          <Card
-            href="/wellness/belief-meter"
-            title={label('/wellness/belief-meter', t('wellness.belief.title', 'Belief Strength Meter'))}
-            desc={t('wellness.belief.desc', 'Rate belief strength and track change.')}
-          />
-        )}
         {matches('/wellness/adaptive-meditation') && (
           <Card
             href="/wellness/adaptive-meditation"
@@ -362,55 +280,6 @@ export default function WellnessHub() {
             desc={t('wellness.resilience.desc', 'Gamified micro-wins for therapy and life steps.')}
           />
         )}
-        {matches('/wellness/hub') && (
-          <Card
-            href="/wellness/hub"
-            title={t('wellness.classicHub.title', 'Classic Wellness Hub')}
-            desc={t('wellness.classicHub.desc', 'Alternate, compact entry point.')}
-          />
-        )}
-      </GapView>
-
-      {/* Tracking */}
-      <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-        {t('wellness.sections.tracking', 'Tracking')}
-      </Text>
-      <GapView gap={12}>
-        {unifiedHealthTrackerEnabled && matches('/wellness/health-tracker') && (
-          <Card
-            href="/wellness/health-tracker"
-            title={label('/wellness/health-tracker', t('wellness.healthTracker.title', 'Unified Health Tracker'))}
-            desc={t('wellness.healthTracker.desc', 'Track symptoms, pain, chronic conditions, rehab, and pacing in one place.')}
-          />
-        )}
-        {matches('/wellness/symptom-tracker') && (
-          <Card
-            href="/wellness/symptom-tracker"
-            title={label('/wellness/symptom-tracker', t('wellness.symptomTracker.title', 'Symptom & Pain Tracker'))}
-            desc={t('wellness.symptomTracker.desc', 'Log symptoms and pain trends.')}
-          />
-        )}
-        {matches('/wellness/pain-forecast') && (
-          <Card
-            href="/wellness/pain-forecast"
-            title={label('/wellness/pain-forecast', t('wellness.painForecast.title', 'Pain Forecast'))}
-            desc={t('wellness.painForecast.desc', 'Simple trend-based suggestions for pacing.')}
-          />
-        )}
-        {matches('/wellness/energy-coins') && (
-          <Card
-            href="/wellness/energy-coins"
-            title={label('/wellness/energy-coins', t('wellness.energy.title', 'Daily Energy Coins'))}
-            desc={t('wellness.energy.desc', 'Set a budget and spend coins on tasks.')}
-          />
-        )}
-        {matches('/wellness/daily-planner') && (
-          <Card
-            href="/wellness/daily-planner"
-            title={label('/wellness/daily-planner', t('wellness.dailyPlanner.title', 'Daily Planner'))}
-            desc={t('wellness.dailyPlanner.desc', 'Plan tasks with your energy in mind.')}
-          />
-        )}
         {matches('/wellness/reminders') && (
           <Card
             href="/wellness/reminders"
@@ -432,6 +301,13 @@ export default function WellnessHub() {
             desc={t('wellness.dreams.desc', 'Log dreams and get symbolic interpretations.')}
           />
         )}
+        {matches('/wellness/daily-planner') && (
+          <Card
+            href="/wellness/daily-planner"
+            title={label('/wellness/daily-planner', t('wellness.dailyPlanner.title', 'Daily Planner'))}
+            desc={t('wellness.dailyPlanner.desc', 'Plan tasks with your energy in mind.')}
+          />
+        )}
         {matches('/wellness/self-care-library') && (
           <Card
             href="/wellness/self-care-library"
@@ -439,7 +315,23 @@ export default function WellnessHub() {
             desc={t('wellness.selfCare.desc', 'Curated self-care practices.')}
           />
         )}
+        {matches('/wellness/trigger-detector') && (
+          <Card
+            href="/wellness/trigger-detector"
+            title={t('wellness.triggers.title', 'Trigger Detector')}
+            desc={t('wellness.triggers.desc', 'Suggest correlations from logs.')}
+          />
+        )}
+        {matches('/wellness/harm-reduction') && (
+          <Card
+            href="/wellness/harm-reduction"
+            title={t('wellness.harm.title', 'Harm Reduction Guide')}
+            desc={t('wellness.harm.desc', 'Practical steps to increase safety.')}
+          />
+        )}
       </GapView>
+
+
     </ResponsiveScreenWrapper>
   );
 }

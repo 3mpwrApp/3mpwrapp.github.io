@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../../../i18n';
@@ -9,13 +9,14 @@ import { useAppPalette } from '../../../theme/usePalette';
 export default function FunctionalCapacityScreen() {
   const { t } = useTranslation();
   const palette = useAppPalette();
+  const router = useRouter();
   const capacity = useFunctionalCapacity();
 
   const assessment = capacity.getLatestAssessment();
   const domains = capacity.getDomains();
 
   const startWeeklyAssessment = () => {
-    alert('Weekly assessment wizard coming soon!');
+      router.push('/wellness/functional-capacity-wizard' as any);
   };
 
   // Group domains by category

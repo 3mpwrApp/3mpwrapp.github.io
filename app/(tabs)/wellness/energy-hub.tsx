@@ -14,13 +14,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
 import { addDoc, collection, getDocs, orderBy, query, Timestamp } from 'firebase/firestore';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, Modal, Pressable, RefreshControl, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { getCachedJSON, setCachedJSON } from '../../../services/cache';
 import A11yPressable from '../../../components/A11yPressable';
 import { HIT_SLOP_8, MAX_FONT_SCALE } from '../../../constants/A11Y';
 import { auth, db } from '../../../firebase/config';
 import { useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { clearCache, getCachedJSON, setCachedJSON } from '../../../services/cache';
 import { useCircadianRhythmDJ } from '../../../services/circadianRhythmDJ';
 import { addMood, listMoods } from '../../../services/companion';
 import { useEnergyQuantumMechanics, type QuantumEnergyState } from '../../../services/energyQuantumMechanics';
@@ -53,6 +53,9 @@ export default function EnergyMoodHub() {
 
   // Advanced mode toggle
   const [advancedMode, setAdvancedMode] = useState(false);
+
+  // Pull-to-refresh state
+  const [refreshing, setRefreshing] = useState(false);
 
   // Spoon Economist state
   const spoons = useSpoonEconomist();
@@ -177,6 +180,29 @@ export default function EnergyMoodHub() {
     };
     return moodMap[mood.toLowerCase()] || 0;
   };
+
+  // Pull-to-refresh handler
+  const onRefresh = useCallback(async () => {
+    setRefreshing(true);
+    try {
+      // Clear energy hub cache
+      await clearCache('energy-hub:');
+      
+      // Reload all data
+      await loadMoods();
+      await loadActivities();
+      
+      const now = new Date();
+      const report = await spoons.getMonthlyReport(now.getFullYear(), now.getMonth() + 1);
+      setMonthlyReport(report);
+      await setCachedJSON(CACHE_KEYS.MONTHLY_REPORT, report);
+    } catch (err) {
+      console.error('Error refreshing data:', err);
+      showContextualError(err, 'refresh-data');
+    } finally {
+      setRefreshing(false);
+    }
+  }, [loadMoods, loadActivities, spoons]);
 
   const QUICK_TASKS = [
     { name: 'Shower', cost: 2 },
@@ -397,7 +423,11 @@ export default function EnergyMoodHub() {
 
 
   const renderDashboard = () => (
-    <ScrollView>
+    <ScrollView
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={palette.primary} />
+      }
+    >
       {/* Advanced Mode Toggle */}
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Pressable
@@ -611,7 +641,11 @@ export default function EnergyMoodHub() {
   );
 
   const renderTrack = () => (
-    <ScrollView>
+    <ScrollView
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={palette.primary} />
+      }
+    >
       {/* Energy Tracking */}
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.sectionTitle, { color: palette.text }]}>Log Energy Spent</Text>
@@ -862,7 +896,11 @@ export default function EnergyMoodHub() {
   );
 
   const renderAnalyze = () => (
-    <ScrollView>
+    <ScrollView
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={palette.primary} />
+      }
+    >
       {/* Monthly Energy Report */}
       {monthlyReport && (
         <View style={[styles.card, { backgroundColor: palette.surface }]}>
@@ -1117,7 +1155,11 @@ export default function EnergyMoodHub() {
   );
 
   const renderCommunity = () => (
-    <ScrollView>
+    <ScrollView
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={palette.primary} />
+      }
+    >
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Text style={[styles.sectionTitle, { color: palette.text }]}>Spoon Marketplace</Text>
         <Text style={[styles.placeholderText, { color: palette.textSecondary }]}>
