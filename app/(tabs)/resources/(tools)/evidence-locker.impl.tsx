@@ -368,6 +368,7 @@ export default function EvidenceLockerImpl() {
               </View>
             </Modal>
           )}
+        {passModal && (
         <Modal transparent={true} animationType="fade" onRequestClose={() => setPassModal(null)}>
           <View style={styles.modalBackdrop}>
             <View style={styles.modalCard}>
