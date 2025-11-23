@@ -1,5 +1,5 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Stack, useLocalSearchParams, useRouter } from "expo-router";
+import { Stack, useLocalSearchParams } from "expo-router";
 import React from "react";
 import {
     Linking,
@@ -23,19 +23,12 @@ export const options = { href: null };
 
 export default function ResourceDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const router = useRouter();
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
 
   const resource = resources.find((r) => r.id === id);
 
-  // Redirect legacy UTF‑8 route to the current Evidence Locker screen, no stub needed
-  React.useEffect(() => {
-    if (id === 'evidence-locker.utf8') {
-      router.replace('/(tabs)/resources/evidence-locker');
-    }
-  }, [id, router]);
   React.useEffect(() => {
     if (resource) {
       logActivity({ type: 'resource.view', payload: { resourceId: resource.id, category: resource.category } });

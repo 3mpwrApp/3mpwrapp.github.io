@@ -1,3 +1,24 @@
+/**
+ * DEPRECATED: Letter Factory has been merged into Letter Wizard.
+ * This file redirects to the unified letter tool.
+ * Use (tools)/letter-wizard.tsx for all letter generation.
+ */
+import { useRouter } from 'expo-router';
+import React from 'react';
+
+export const options = { href: null };
+
+export default function LetterFactoryRedirect() {
+  const router = useRouter();
+  
+  React.useEffect(() => {
+    router.replace('/(tabs)/resources/letter-wizard');
+  }, [router]);
+  
+  return null;
+}
+
+/* DEPRECATED CODE BELOW - NOW IN LETTER WIZARD
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
 import { Alert, Pressable, ScrollView, Share, StyleSheet, Text, TextInput, View } from 'react-native';
@@ -9,6 +30,7 @@ import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };
+*/
 
 type LetterTemplate = {
   id: string;

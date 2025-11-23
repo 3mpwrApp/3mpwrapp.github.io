@@ -205,97 +205,98 @@ export default function ResourcesScreen() {
         {/* Simple Mode Welcome */}
         <SimpleModeWelcome 
           tabName="Resources"
-          availableFeatures={['Evidence Locker', 'Letter Wizard (top 3 templates)', 'Master Tracker Hub']}
-          hiddenCount={40}
+          availableFeatures={['Master Tracker Hub', 'Letter Wizard', 'Appeal Command Center', 'Evidence Manager']}
+          hiddenCount={35}
         />
         
-        {/* Featured Consolidated Hubs */}
+        {/* Featured Tools - Working & Ready */}
         <Text accessibilityRole="header" style={[textStyles.h2, { marginTop: 16 }]}>
-          ⭐ Featured Hubs
+          ⭐ Featured Tools
         </Text>
         
-        <ResourceLink href="/(tabs)/resources/master-tracker-hub" title="📊 Master Tracker Hub (NEW)" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/master-tracker-hub" title="📊 Master Tracker Hub" badge="Beta" />
         <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
           All-in-one health tracking: symptoms, meds, rehab, appointments - with AI insights & pattern detection
         </Text>
         
+        <ResourceLink href="/(tabs)/resources/letter-wizard" title="✍️ Letter Wizard" badge="22+ Templates" />
+        <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
+          Generate professional letters: accommodation, appeal, complaint, union grievance - with tone adjustment
+        </Text>
+        
         <ResourceLink href="/(tabs)/resources/appeal-command-center" title="⚖️ Appeal Command Center" badge="Beta" />
         <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
-          Deadline warfare, denial decoder, evidence strength meter, precedent finder - never miss another appeal
+          Deadline tracking, denial decoder, evidence strength meter, precedent finder
         </Text>
         
-        <ResourceLink href="/(tabs)/resources/rights-benefits-calculator" title="💰 Rights & Benefits Calculator" badge="Coming soon" />
+        <ResourceLink href="/(tabs)/advocacy/evidence-manager" title="📁 Evidence Manager" badge="Beta" />
         <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
-          Find ALL programs you qualify for, compare provinces, simulate income impacts, optimize your benefits
-        </Text>
-        
-        <ResourceLink href="/(tabs)/resources/letter-factory" title="✍️ Letter & Template Factory" badge="Coming soon" />
-        <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
-          22+ templates, AI co-writer, tone adjuster, multi-language - generate perfect letters in minutes
+          Secure locker, upload queue, checklist - all your evidence tools in one place
         </Text>
         
         {region === "all" && !province && (
-          <Text style={[textStyles.bodySmall, { opacity: 0.75, marginBottom: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            Tip: Set your province in Settings to filter resources.
+          <Text style={[textStyles.bodySmall, { opacity: 0.75, marginBottom: 8, marginTop: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            💡 Tip: Set your province in Settings to filter resources.
           </Text>
         )}
 
-        {/* 1. AI Tools */}
+        {/* Appeals & Advocacy Tools */}
         {isFeatureVisible('standard') && (
           <>
-            <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 16 }]}>
-              🤖 AI Tools
+            <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
+              ⚖️ Appeals & Advocacy
             </Text>
-            <DisclaimerBanner type="ai" compact={true} />
-            <ResourceLink href="/(tabs)/resources/ai-decision-simplifier" title="AI Decision Simplifier" badge="Coming soon" />
-            <ResourceLink href="/(tabs)/resources/appeal-coach" title="Appeal Coach" badge="Beta" />
-            <ResourceLink href="/(tabs)/resources/body-mechanics-advisor" title="Body Mechanics Advisor" />
-            <ResourceLink href="/(tabs)/resources/justice-as-a-service" title="Justice as a Service" />
+            <ResourceLink href="/(tabs)/resources/case-timeline" title="Case Timeline Builder" />
+            <ResourceLink href="/(tabs)/resources/claims-navigator" title="Claims Navigator" badge="Beta" />
+            <ResourceLink href="/(tabs)/resources/denial-decoder" title="Denial Decoder" badge="Beta" />
+            <ResourceLink href="/(tabs)/resources/prepare-appeal" title="Prepare to Appeal Guide" badge="Beta" />
             <ResourceLink href="/(tabs)/resources/rights-checker" title="Rights Checker" />
-            <ResourceLink href="/(tabs)/resources/rights-explainer" title="Rights Explained" />
-            <ResourceLink href="/(tabs)/resources/voice-notes" title="Voice-to-Case Notes Tool" />
+            <ResourceLink href="/(tabs)/resources/rights-explainer" title="Rights Explained (Plain Language)" />
+            <ResourceLink href="/(tabs)/resources/policy-simulator" title="Interactive Policy Simulator" />
           </>
         )}
 
-        {/* 2. Templates & Documents */}
+        {/* Documents & Templates */}
         <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
-          📄 Templates & Documents
+          📄 Documents & Forms
         </Text>
-        <ResourceLink href="/(tabs)/resources/letter-wizard" title="Letter Wizard - Generate Any Letter" badge="All Templates" />
-        <ResourceLink href="/(tabs)/resources/accessibility-log" title="Accessibility Log" />
-        <ResourceLink href="/(tabs)/resources/templates-gallery" title="Template Gallery" />
         <ResourceLink href="/(tabs)/resources/accommodation-request" title="Accommodation Request Builder" />
-        <ResourceLink href="/(tabs)/resources/case-timeline" title="Case Timeline" />
-        <ResourceLink href="/(tabs)/resources/claims-navigator" title="Claims Navigator" badge="Beta" />
-        <ResourceLink href="/(tabs)/resources/evidence-checklist" title="Evidence Checklist" />
-        <ResourceLink href="/(tabs)/resources/evidence-locker" title="Evidence Locker" badge="Beta" />
+        <ResourceLink href="/(tabs)/resources/accessibility-log" title="Accessibility Log Template" />
+        <ResourceLink href="/(tabs)/resources/emergency-wallet-card" title="Emergency Wallet Card" />
 
-        {/* 3. Trackers & Planners */}
+        {/* Health & Work Planning */}
         <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
-          📊 Trackers & Planners
+          🏥 Health & Work Planning
         </Text>
-        <ResourceLink href="/(tabs)/resources/chronic-tracker" title="Chronic Tracker" badge="Beta" />
-        <ResourceLink href="/(tabs)/resources/deadlines" title="Deadline Calculator + Reminders" badge="Beta" />
-        <ResourceLink href="/(tabs)/resources/deadlines-list" title="Deadlines List" />
-        <ResourceLink href="/(tabs)/resources/denial-decoder" title="Denial Decoder" badge="Beta" />
-        <ResourceLink href="/(tabs)/resources/prepare-appeal" title="Prepare to Appeal" badge="Beta" />
-        <ResourceLink href="/(tabs)/resources/doctor-visit-prep" title="Doctor Visit Prep" badge="Beta" />
-        <ResourceLink href="/(tabs)/resources/financial-safety-net" title="Financial Safety Net" />
-        <ResourceLink href="/(tabs)/resources/impact-simulator" title="Impact Simulator" />
-        <ResourceLink href="/(tabs)/resources/meds-tracker" title="Meds Tracker" />
+        <ResourceLink href="/(tabs)/resources/doctor-visit-prep" title="Doctor Visit Prep Checklist" badge="Beta" />
         <ResourceLink href="/(tabs)/resources/rtw-planner" title="Return-to-Work Planner" badge="Beta" />
-        <ResourceLink href="/(tabs)/resources/rehab-tracker" title="Rehab Progress Tracker" badge="Beta" />
-        <ResourceLink href="/(tabs)/resources/policy-simulator" title="Interactive Policy Simulator" />
+        <ResourceLink href="/(tabs)/resources/financial-safety-net" title="Financial Safety Net Planner" />
+        <ResourceLink href="/(tabs)/resources/impact-simulator" title="Disability Impact Simulator" />
 
-        {/* 4. Support & Directories */}
+        {/* Support & Community Resources */}
         <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
-          🤝 Support & Directories
+          🤝 Support & Learning
         </Text>
-        <ResourceLink href="/(tabs)/resources/adaptive-tech-library" title="Adaptive Tech Library" />
-        <ResourceLink href="/(tabs)/resources/allyship-playbook" title="Allyship Playbook" />
-        <ResourceLink href="/(tabs)/resources/solidarity-toolkit" title="Solidarity Toolkit" />
         <ResourceLink href="/(tabs)/resources/support-directory" title="Support Directory" />
+        <ResourceLink href="/(tabs)/resources/adaptive-tech-library" title="Adaptive Tech Library" />
+        <ResourceLink href="/(tabs)/resources/allyship-playbook" title="Allyship Playbook for Allies" />
+        <ResourceLink href="/(tabs)/resources/solidarity-toolkit" title="Solidarity Toolkit" />
         <ResourceLink href="/(tabs)/resources/myth-busting-hub" title="Myth-Busting Knowledge Hub" />
+
+        {/* AI-Powered Tools (Beta) */}
+        {isFeatureVisible('standard') && (
+          <>
+            <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
+              🤖 AI-Powered Tools (Beta)
+            </Text>
+            <DisclaimerBanner type="ai" compact={true} />
+            <ResourceLink href="/(tabs)/resources/appeal-coach" title="AI Appeal Coach" badge="Beta" />
+            <ResourceLink href="/(tabs)/resources/body-mechanics-advisor" title="Body Mechanics Advisor" badge="Beta" />
+            <ResourceLink href="/(tabs)/resources/justice-as-a-service" title="Justice-as-a-Service" badge="Beta" />
+            <ResourceLink href="/(tabs)/resources/voice-notes" title="Voice-to-Case Notes" badge="Beta" />
+            <ResourceLink href="/(tabs)/resources/medical-gaslighting-detector" title="Medical Gaslighting Detector" badge="Beta" />
+          </>
+        )}
 
         <View
           style={styles.filters}

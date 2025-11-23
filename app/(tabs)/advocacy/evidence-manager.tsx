@@ -7,6 +7,7 @@ import { useTranslation } from '../../../i18n';
 import { s } from '../../../theme/spacing';
 import { useAppPalette } from '../../../theme/usePalette';
 import EvidenceLocker from '../resources/(tools)/evidence-locker';
+import EvidenceChecklist from '../resources/evidence-checklist';
 import EvidenceQueue from '../resources/evidence-queue';
 
 const Tab = createMaterialTopTabNavigator();
@@ -32,7 +33,7 @@ export default function EvidenceManager() {
         {t('evidence.manager.title', 'Evidence Manager')}
       </Text>
       <Text style={styles.subtitle}>
-        {t('evidence.manager.subtitle', 'Securely store evidence, manage uploads, and organize documentation for advocacy.')}
+        {t('evidence.manager.subtitle', 'Securely store evidence, manage uploads, track checklist, and organize documentation for advocacy.')}
       </Text>
 
       <Tab.Navigator
@@ -53,6 +54,11 @@ export default function EvidenceManager() {
           name="Queue"
           component={EvidenceQueue}
           options={{ title: t('evidence.manager.queue', 'Upload Queue') }}
+        />
+        <Tab.Screen
+          name="Checklist"
+          component={EvidenceChecklist}
+          options={{ title: t('evidence.manager.checklist', 'Checklist') }}
         />
       </Tab.Navigator>
     </View>

@@ -1,24 +1,30 @@
-// Clipboard is imported dynamically where used to avoid crashing dev clients without the native module.
+/**
+ * DEPRECATED: Template Gallery has been merged into Letter Wizard.
+ * This file redirects to the unified letter tool.
+ */
+import { useRouter } from 'expo-router';
 import React from "react";
-import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
-import A11yPressable from "../../../../components/A11yPressable";
-import DisclaimerBanner from "../../../../components/DisclaimerBanner";
-import { GapView } from "../../../../components/GapView";
-import { MAX_FONT_SCALE, useAnnounceOnMount } from "../../../../hooks/useA11y";
-import { useTranslation } from "../../../../i18n";
-import { useAppPalette } from "../../../../theme/usePalette";
-import { announce } from '../../../../utils/announce';
-let AsyncStorage: any; try { AsyncStorage = require("@react-native-async-storage/async-storage").default; } catch {}
+export const options = { href: null };
 
+export default function TemplatesGalleryRedirect() {
+  const router = useRouter();
+  
+  React.useEffect(() => {
+    router.replace('/(tabs)/resources/letter-wizard');
+  }, [router]);
+  
+  return null;
+}
+
+/* DEPRECATED CODE - NOW IN LETTER WIZARD
 const EXAMPLES = [
   { title: "Accommodation Request (Sample)", body: "Re: Workplace Accommodation Request\n\nDear Employer,\n\nI am requesting reasonable accommodations..." },
   { title: "Appeal Letter (Sample)", body: "Re: Appeal of Decision (Claim [number])\n\nDear Appeals Officer,\n\nI am appealing the decision dated [date]..." },
   { title: "Reconsideration Letter (Sample)", body: "Re: Request for Reconsideration (Claim [ID])\n\nDear Claims Officer,\n\nI am requesting reconsideration..." },
   { title: "Union Request (Sample)", body: "Re: Request for Union Support and Representation\n\nDear Union Representative/Steward,\n\nMy name is [Your Name], employed as..." },
 ];
-
-export const options = { href: null };
+*/
 
 export default function TemplatesGallery() {
   const { t } = useTranslation();

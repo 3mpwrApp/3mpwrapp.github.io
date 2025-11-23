@@ -6,14 +6,14 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
-import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import A11yPressable from './A11yPressable';
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useComplexityMode } from '../store/complexityMode';
 import { useAppPalette } from '../theme/usePalette';
+
+import A11yPressable from './A11yPressable';
 
 type SimpleModeWelcomeProps = {
   tabName: string;
@@ -110,7 +110,7 @@ export default function SimpleModeWelcome({ tabName, availableFeatures, hiddenCo
         </Text>
       )}
 
-      <Link href="/(tabs)/settings/complexity-mode" asChild>
+      <Link href="/(tabs)/settings" asChild>
         <A11yPressable 
           style={styles.link}
           hitSlop={HIT_SLOP_8}
