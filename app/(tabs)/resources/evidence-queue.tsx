@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -7,6 +8,7 @@ import GapView from '../../../components/GapView';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { clearQueue, getQueue, processQueue } from '../../../services/evidenceQueue';
+import { getQueue as getOfflineQueue, retry as retryOfflineItem } from '../../../services/offlineQueue';
 import { useAppPalette } from '../../../theme/usePalette';
 import { announce } from '../../../utils/announce';
 
@@ -20,20 +22,38 @@ export default function EvidenceQueueScreen() {
   useAnnounceOnMount(t('templates.evidenceLocker.queueTitle', 'Upload Queue'));
   useFocusOnRefOnMount(titleRef);
   const [items, setItems] = React.useState<any[]>([]);
+  const [offlineItems, setOfflineItems] = React.useState<any[]>([]);
   const [busy, setBusy] = React.useState<string | null>(null);
 
   const load = React.useCallback(async () => {
     setItems(await getQueue());
+    setOfflineItems(await getOfflineQueue());
   }, []);
 
-  React.useEffect(() => { load(); }, [load]);
+  React.useEffect(() => { 
+    load();
+    // Refresh every 5 seconds to show updated status
+    const interval = setInterval(load, 5000);
+    return () => clearInterval(interval);
+  }, [load]);
 
   const [showInfo, setShowInfo] = React.useState(false);
+  
+  const pendingCount = offlineItems.filter(i => i.status !== 'succeeded').length;
+  const failedCount = offlineItems.filter(i => i.status === 'failed').length;
+  
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }} accessibilityLabel={t('templates.evidenceLocker.queueScreenLabel', 'Evidence upload queue screen')}>
-      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        {t('templates.evidenceLocker.queueTitle', 'Upload Queue')}
-      </Text>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          {t('templates.evidenceLocker.queueTitle', 'Upload Queue')}
+        </Text>
+        {pendingCount > 0 && (
+          <View style={[s.badge, { backgroundColor: failedCount > 0 ? '#DC3545' : '#FFC107' }]}>
+            <Text style={s.badgeText}>{pendingCount}</Text>
+          </View>
+        )}
+      </View>
       <DisclaimerBanner type="legal" compact={true} />
       <GapView style={s.actionsRow} gap={8}>
         <A11yPressable
@@ -71,16 +91,77 @@ export default function EvidenceQueueScreen() {
       )}
       <Text style={s.sub}>{t('templates.evidenceLocker.queueSubtitle','Items waiting for cloud save.')}</Text>
 
-      {items.length === 0 ? (
-        <Text style={s.sub}>{t('templates.evidenceLocker.emptyQueue','Queue is empty.')}</Text>
-      ) : (
-        items.map((n, idx) => (
-          <View key={idx} style={s.card}>
-            <Text style={s.text}>{n.text || '(no text)'} {n.tags?.length ? `#${n.tags.join(',#')}` : ''}</Text>
-            <Text style={s.meta}>{(n.files?.length || 0)} attachment(s)</Text>
-          </View>
-        ))
+      {/* Offline Queue Status */}
+      {offlineItems.length > 0 && (
+        <>
+          <Text style={[s.title, { fontSize: 18, marginTop: 16 }]}>
+            🔄 Offline Queue {pendingCount > 0 && `(${pendingCount} pending)`}
+          </Text>
+          {offlineItems.map((item, idx) => {
+            const statusIcon = item.status === 'succeeded' ? '✅' : 
+                              item.status === 'failed' ? '❌' : 
+                              item.status === 'retrying' ? '🔄' : '⏳';
+            const statusColor = item.status === 'succeeded' ? '#28A745' : 
+                               item.status === 'failed' ? '#DC3545' : 
+                               item.status === 'retrying' ? '#FFC107' : '#6C757D';
+            
+            return (
+              <View key={item.id} style={[s.card, { borderLeftWidth: 4, borderLeftColor: statusColor }]}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={s.text}>
+                      {statusIcon} {item.type.toUpperCase()}
+                    </Text>
+                    <Text style={s.meta}>
+                      Status: {item.status} • Attempts: {item.retries}/{5}
+                    </Text>
+                    {item.error && (
+                      <Text style={[s.meta, { color: '#DC3545', marginTop: 4 }]}>
+                        ⚠️ {item.error}
+                      </Text>
+                    )}
+                    <Text style={[s.meta, { fontSize: 11 }]}>
+                      Created: {new Date(item.createdAt).toLocaleString()}
+                    </Text>
+                  </View>
+                  {item.status === 'failed' && (
+                    <A11yPressable
+                      onPress={async () => {
+                        try {
+                          await retryOfflineItem(item.id);
+                          announce('Retrying upload');
+                          await load();
+                        } catch (err) {
+                          Alert.alert('Retry failed', 'Could not retry upload');
+                        }
+                      }}
+                      style={[s.infoBtn, { backgroundColor: palette.primary }]}
+                      accessibilityLabel="Retry upload"
+                    >
+                      <Ionicons name="refresh" size={16} color={palette.onPrimary} />
+                    </A11yPressable>
+                  )}
+                </View>
+              </View>
+            );
+          })}
+        </>
       )}
+
+      {/* Regular Queue */}
+      {items.length === 0 && offlineItems.length === 0 ? (
+        <Text style={s.sub}>{t('templates.evidenceLocker.emptyQueue','Queue is empty.')}</Text>
+      ) : items.length > 0 ? (
+        <>
+          <Text style={[s.title, { fontSize: 18, marginTop: 16 }]}>📋 Regular Queue</Text>
+          {items.map((n, idx) => (
+            <View key={idx} style={s.card}>
+              <Text style={s.text}>{n.text || '(no text)'} {n.tags?.length ? `#${n.tags.join(',#')}` : ''}</Text>
+              <Text style={s.meta}>{(n.files?.length || 0)} attachment(s)</Text>
+            </View>
+          ))}
+        </>
+      ) : null}
     </ScrollView>
   );
 }
@@ -105,6 +186,19 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     infoCard: { backgroundColor: palette.card, borderRadius: 8, padding: 12, borderWidth: 1, borderColor: palette.muted, marginTop: 12 },
     infoTitle: { fontWeight: '700', color: palette.text, marginBottom: 4 },
     infoLine: { color: palette.text, opacity: 0.85, marginBottom: 2, fontSize: 13 },
+    badge: { 
+      minWidth: 24, 
+      height: 24, 
+      borderRadius: 12, 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      paddingHorizontal: 8 
+    },
+    badgeText: { 
+      color: '#FFF', 
+      fontWeight: '700', 
+      fontSize: 12 
+    },
   });
 }
 
