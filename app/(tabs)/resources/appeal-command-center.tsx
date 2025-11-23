@@ -11,18 +11,18 @@
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
-import React, { useState } from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
-import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { GapView } from '../../../components/GapView';
+import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
+import { useComplexityMode } from '../../../store/complexityMode';
 import { createTextStyles } from '../../../theme/typography.enhanced';
 import { useAppPalette } from '../../../theme/usePalette';
-import { useComplexityMode } from '../../../store/complexityMode';
 
 export const options = { href: null };
 
@@ -249,7 +249,7 @@ export default function AppealCommandCenter() {
 
 // Tool Card Component
 function ToolCard({ tool, palette }: { tool: AppealTool; palette: ReturnType<typeof useAppPalette> }) {
-  const isCom ingSoon = tool.badge === 'Coming soon';
+  const isComingSoon = tool.badge === 'Coming soon';
   
   const handlePress = () => {
     if (isComingSoon) {

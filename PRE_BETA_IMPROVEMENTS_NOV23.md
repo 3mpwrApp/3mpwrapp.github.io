@@ -36,7 +36,7 @@ Make the app genuinely helpful before beta testing by reducing feature overwhelm
 
 **Bad Day Mode**:
 - One-tap switch to Simple Mode
-- For flare-ups, brain fog, overwhelming days
+- For flare-ups, brain lets dofog, overwhelming days
 - Automatically simplifies interface
 - Accessible from Settings → Complexity Mode
 
