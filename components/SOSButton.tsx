@@ -117,18 +117,18 @@ export default function SOSButton({ position = 'bottom-right', compact = false }
       flexDirection: 'row',
       alignItems: 'center',
       gap: 8,
-      backgroundColor: '#DC143C',
+      backgroundColor: '#DC143C', // Crimson red for emergency visibility
       paddingVertical: compact ? 12 : 14,
       paddingHorizontal: compact ? 12 : 16,
       borderRadius: 50,
-      shadowColor: '#000',
+      shadowColor: palette.text,
       shadowOffset: { width: 0, height: 4 },
       shadowOpacity: 0.3,
       shadowRadius: 6,
       elevation: 8,
     },
     buttonText: {
-      color: '#FFF',
+      color: palette.onPrimary,
       fontSize: 14,
       fontWeight: '700',
     },
@@ -140,7 +140,7 @@ export default function SOSButton({ position = 'bottom-right', compact = false }
       paddingHorizontal: 12,
       paddingVertical: 6,
       borderRadius: 8,
-      shadowColor: '#000',
+      shadowColor: palette.text,
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.2,
       shadowRadius: 4,
@@ -163,7 +163,7 @@ export default function SOSButton({ position = 'bottom-right', compact = false }
         accessibilityLabel="SOS Crisis Support Button - Tap for crisis resources, triple-tap for emergency contact"
         accessibilityHint="Opens crisis support menu with hotlines and resources"
       >
-        <Ionicons name="warning" size={compact ? 20 : 24} color="#FFF" />
+        <Ionicons name="warning" size={compact ? 20 : 24} color={palette.onPrimary} />
         {!compact && <Text style={styles.buttonText}>SOS</Text>}
       </Pressable>
     </View>
