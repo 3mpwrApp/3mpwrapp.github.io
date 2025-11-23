@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-23T01:00:07.031Z",
+  "lastUpdated": "2025-11-23T06:15:51.467Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3185,
+      "totalPosts": 3210,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T00:59:58.286Z"
+      "lastSeen": "2025-11-23T06:15:43.162Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3200,
+      "totalPosts": 3225,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T01:00:00.229Z"
+      "lastSeen": "2025-11-23T06:15:44.966Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3187,
+      "totalPosts": 3212,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T01:00:02.118Z"
+      "lastSeen": "2025-11-23T06:15:46.946Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3193,
+      "totalPosts": 3218,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T01:00:04.126Z"
+      "lastSeen": "2025-11-23T06:15:48.570Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3200,
+      "totalPosts": 3225,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T01:00:06.027Z"
+      "lastSeen": "2025-11-23T06:15:50.464Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Alice Wong, the disability justice advocate and author, died at the weekend at age 51. She was best known for founding the Disability Visibility Project. She also wrote multiple books and a column for Teen Vogue, and her final project was Crips for eSims for Gaza, which raised over $3 million to […]",
-      "author": "culturedesk.flipboard.social.ap.brid.gy",
-      "engagement": 11,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
-      "author": "blindnewworld.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
-      "author": "kennef.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "please use #AltText for #accessibility!",
-      "author": "m00psy.bsky.social",
-      "engagement": 27,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "You probably don’t need `aria-label` for that thing.\n\nIt doesn’t auto-translate:\nadrianroselli.com/2019/11/aria...\n\nIt’s code smell:\nericwbailey.website/published/ar...\n\nYou can probably use better methods:\nadrianroselli.com/2020/01/my-p...\n\n#accessibility #a11y #ARIA",
-      "author": "aardrian.bsky.social",
-      "engagement": 36,
-      "hashtag": "A11y"
-    },
     {
       "text": "Great post from @gerireid.com about using AI for #a11y. Given that a11y is about accuracy, which is historically not an LLM's strong suit, plus the mountain of flawed training data... it's probably not the best tool for the job.\n\nAnyways, relatable post on many levels.\n\ngerireid.com/blog/can-ai-...",
       "author": "davatron5000.bsky.social",
@@ -338,6 +308,36 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "This is interesting and helpful information about using emojis...some things I hadn't thought about.\n\n#Emojis #Accessibility #EastCoastKin",
+      "author": "alinagrafik.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "No wonder Minister Collins has moved to Repeal the Plain Language Act, and NZ Government is sidelining its #Accessibility Charter. NZ Govt wants to Hide Information!\n\nI can't read a QR code. 20% of NZers are digitally excluded and with the telcos dropping 3G network phones that %ge may grow.\n#NZpol",
+      "author": "jennykaynz.bsky.social",
+      "engagement": 38,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "#a11y alt text:",
+      "author": "joquarky.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -350,11 +350,11 @@
       "count": 27
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 26
+      "keyword": "accessibility",
+      "count": 27
     },
     {
-      "keyword": "accessibility",
+      "keyword": "disabilityjustice",
       "count": 26
     },
     {
@@ -379,10 +379,14 @@
     },
     {
       "keyword": "disability",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "virtual",
+      "count": 6
+    },
+    {
+      "keyword": "accessibility a11y",
       "count": 6
     },
     {
@@ -415,10 +419,6 @@
     },
     {
       "keyword": "wearetheflood",
-      "count": 5
-    },
-    {
-      "keyword": "50501movement",
       "count": 5
     }
   ]
