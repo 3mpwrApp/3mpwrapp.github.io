@@ -9,7 +9,6 @@ export default function AppealCommandCenter() {
   return (
     <ComingSoon 
       title={t('resources.appealCommand.title', '⚖️ Appeal Command Center')}
-      subtitle={t('resources.appealCommand.comingSoonDesc', 'Military-grade deadline tracking, AI denial decoder, evidence strength meter, precedent finder, appeals tribunal prep, and success rate estimator. Never lose an appeal due to missed deadlines or weak evidence.')}
       onFeedback={() => sendFeedbackEmailInternal(t, { subject: 'Appeal Command Center feedback' })} 
     />
   );

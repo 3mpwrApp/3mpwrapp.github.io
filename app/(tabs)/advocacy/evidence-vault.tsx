@@ -9,7 +9,6 @@ export default function EvidenceVault() {
   return (
     <ComingSoon 
       title={t('advocacy.evidenceVault.title', '🔒 Evidence Vault')}
-      subtitle={t('advocacy.evidenceVault.comingSoonDesc', 'Secure document storage with AI categorization, OCR text extraction, timeline builder, redaction tools, and cryptographic chain of custody. Unified evidence management for your case.')}
       onFeedback={() => sendFeedbackEmailInternal(t, { subject: 'Evidence Vault feedback' })} 
     />
   );

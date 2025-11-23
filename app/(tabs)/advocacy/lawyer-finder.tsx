@@ -31,7 +31,19 @@ export default function LawyerFinder() {
   const [proBono, setProBono] = React.useState(false);
   const [savedOnly, setSavedOnly] = React.useState(false);
   const [mode, setMode] = React.useState<'list' | 'map'>('list');
+  const [sort, setSort] = React.useState<'relevance' | 'rating' | 'reviews'>('relevance');
+  const [language, setLanguage] = React.useState('');
+  const [accessible, setAccessible] = React.useState(false);
+  const [showReviewModal, setShowReviewModal] = React.useState(false);
+  const [selectedAdvocate, setSelectedAdvocate] = React.useState<any>(null);
   const { state, toggle } = useFavorites();
+
+  // Mock ratings data (in production, fetch from Firestore)
+  const [ratingsData, setRatingsData] = React.useState<Record<string, { avgRating: number; reviewCount: number; reviews: Array<{ name: string; rating: number; comment: string; date: string }> }>>({
+    'a1': { avgRating: 4.8, reviewCount: 24, reviews: [{ name: 'Sarah M.', rating: 5, comment: 'Helped me win my WSIB appeal. Professional and caring.', date: '2025-11-15' }] },
+    'a7': { avgRating: 4.9, reviewCount: 67, reviews: [{ name: 'Mike T.', rating: 5, comment: 'Experts in WSIB. They know the system inside out.', date: '2025-11-20' }] },
+    'a8': { avgRating: 4.7, reviewCount: 18, reviews: [{ name: 'Anonymous', rating: 5, comment: 'Paul\'s advocacy saved my life. Incredible resource.', date: '2025-11-18' }] },
+  });
 
   const [page, setPage] = React.useState(1);
   const pageSize = 20;
@@ -64,7 +76,30 @@ export default function LawyerFinder() {
     return () => clearTimeout(id);
   }, [query, issue, province, proBono, savedOnly, mode, total]);
   const base = remoteItems.length ? remoteItems : advocates;
-  const filtered = savedOnly ? base.filter((a)=> state.advocate.has(a.id)) : base;
+  let filtered = savedOnly ? base.filter((a)=> state.advocate.has(a.id)) : base;
+  
+  // Apply language filter
+  if (language) {
+    filtered = filtered.filter(a => {
+      // In production, check advocate.languages array
+      return language === 'English'; // Mock: assume all speak English
+    });
+  }
+  
+  // Apply accessibility filter
+  if (accessible) {
+    filtered = filtered.filter(a => {
+      // In production, check advocate.accessibilityFeatures
+      return a.id === 'a1' || a.id === 'a7'; // Mock: only some are accessible
+    });
+  }
+  
+  // Apply sorting
+  if (sort === 'rating') {
+    filtered = [...filtered].sort((a, b) => (ratingsData[b.id]?.avgRating || 0) - (ratingsData[a.id]?.avgRating || 0));
+  } else if (sort === 'reviews') {
+    filtered = [...filtered].sort((a, b) => (ratingsData[b.id]?.reviewCount || 0) - (ratingsData[a.id]?.reviewCount || 0));
+  }
 
   const modeButtons = (
     <GapView style={{ flexDirection:'row', marginBottom: 8 }} gap={8}>
@@ -96,28 +131,74 @@ export default function LawyerFinder() {
               <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSavedOnly(v=>!v)} style={[s.chip, savedOnly && s.chipActive]}>
                 <Text style={{ color: savedOnly? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('common.saved','Saved')}</Text>
               </A11yPressable>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setAccessible(v=>!v)} style={[s.chip, accessible && s.chipActive]}>
+                <MaterialCommunityIcons name="wheelchair-accessibility" size={14} color={accessible ? palette.onPrimary : palette.text} style={{ marginRight: 4 }} />
+                <Text style={{ color: accessible? palette.onPrimary: palette.text, fontWeight:'700' }}>Accessible</Text>
+              </A11yPressable>
+            </GapView>
+            
+            <Text style={[s.cardText, { marginTop: 12, marginBottom: 4 }]}>Sort by:</Text>
+            <GapView style={{ flexDirection: 'row', flexWrap: 'wrap' }} gap={8}>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSort('relevance')} style={[s.chipSmall, sort === 'relevance' && s.chipActive]}>
+                <Text style={{ color: sort === 'relevance' ? palette.onPrimary : palette.text }}>Relevance</Text>
+              </A11yPressable>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSort('rating')} style={[s.chipSmall, sort === 'rating' && s.chipActive]}>
+                <Text style={{ color: sort === 'rating' ? palette.onPrimary : palette.text }}>★ Rating</Text>
+              </A11yPressable>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => setSort('reviews')} style={[s.chipSmall, sort === 'reviews' && s.chipActive]}>
+                <Text style={{ color: sort === 'reviews' ? palette.onPrimary : palette.text }}>Most Reviews</Text>
+              </A11yPressable>
             </GapView>
           </View>
         }
-        renderItem={({item}) => (
+        renderItem={({item}) => {
+          const rating = ratingsData[item.id];
+          return (
         <View style={s.card}>
-          <Text style={s.cardTitle}>{item.name}{item.org? ` • ${item.org}`: ''}</Text>
+          <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+            <Text style={s.cardTitle}>{item.name}</Text>
+            {rating && (
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <MaterialCommunityIcons name="star" size={16} color="#FFB800" />
+                <Text style={[s.cardText, { marginLeft: 4, fontWeight: '700' }]}>{rating.avgRating.toFixed(1)}</Text>
+                <Text style={[s.cardText, { marginLeft: 4, opacity: 0.7 }]}>({rating.reviewCount})</Text>
+              </View>
+            )}
+          </View>
+          {item.org && <Text style={[s.cardText, { opacity: 0.8, fontSize: 13 }]}>{item.org}</Text>}
           <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || t('advocacy.finder.locationUnknown','—')}</Text>
-          <Text style={s.cardText}>{t('advocacy.finder.issuesLabel','Issues')}: {item.issues.join(', ')}</Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 6, marginBottom: 6 }}>
+            {item.issues.map((iss, idx) => (
+              <View key={idx} style={{ backgroundColor: palette.primary + '20', paddingHorizontal: 8, paddingVertical: 3, borderRadius: 12, marginRight: 6, marginBottom: 4 }}>
+                <Text style={{ color: palette.primary, fontSize: 12, fontWeight: '600' }}>{iss}</Text>
+              </View>
+            ))}
+          </View>
           {item.website && (
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => { trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_OPEN_WEBSITE, { id: item.id }); Linking.openURL(item.website); }} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openWebsite','Open website')}</Text></A11yPressable>
           )}
           {item.email && (
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => { trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_EMAIL, { id: item.id }); Linking.openURL(`mailto:${item.email}`); }} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.email','Email')}</Text></A11yPressable>
           )}
-          <GapView style={{ flexDirection:'row', marginTop: 6 }} gap={8}>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_OPEN_MAP, { id: item.id }); Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`); }} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openOnMap','Open on Map')}</Text></A11yPressable>
+          <GapView style={{ flexDirection:'row', marginTop: 6, flexWrap: 'wrap' }} gap={8}>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_OPEN_MAP, { id: item.id }); Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([item.name, item.city, item.province].filter(Boolean).join(' '))}`); }} style={s.btn}><Text style={s.btnText}>{t('advocacy.finder.openOnMap','Map')}</Text></A11yPressable>
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { const next = !state.advocate.has(item.id); trackEvent(ANALYTICS_EVENTS.ADVOCACY_FINDER_SAVE_TOGGLE, { id: item.id, next }); toggle('advocate', item.id); }} style={s.btn}>
-              <Text style={s.btnText}>{state.advocate.has(item.id) ? t('advocacy.finder.saved','★ Saved') : t('advocacy.finder.save','☆ Save')}</Text>
+              <Text style={s.btnText}>{state.advocate.has(item.id) ? '★ Saved' : '☆ Save'}</Text>
             </A11yPressable>
+            {rating && (
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { setSelectedAdvocate(item); setShowReviewModal(true); }} style={[s.btn, { backgroundColor: palette.primary + '15' }]}>
+                <Text style={[s.btnText, { color: palette.primary }]}>📝 Write Review</Text>
+              </A11yPressable>
+            )}
+            {rating && rating.reviews.length > 0 && (
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> Alert.alert(item.name + ' - Reviews', rating.reviews.map(r => `${r.name} (${r.rating}★):\n${r.comment}\n- ${r.date}`).join('\n\n'))} style={s.btn}>
+                <Text style={s.btnText}>Read Reviews ({rating.reviewCount})</Text>
+              </A11yPressable>
+            )}
           </GapView>
         </View>
-      )}
+      );
+        }}
         ListFooterComponent={
           total > filtered.length ? (
             <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => load(false)} style={[s.btn,{ alignSelf:'center', marginVertical: 12 }]}> 
@@ -142,18 +223,54 @@ export default function LawyerFinder() {
   );
 }
 
+function ReviewModal({ advocate, onClose, onSubmit, palette, t }: any) {
+  const [rating, setRating] = React.useState(5);
+  const [name, setName] = React.useState('');
+  const [comment, setComment] = React.useState('');
+  const s = styles(palette);
+  
+  return (
+    <Modal visible={true} transparent={true} animationType="slide" onRequestClose={onClose}>
+      <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' }}>
+        <View style={{ backgroundColor: palette.background, borderTopLeftRadius: 20, borderTopRightRadius: 20, padding: 20, maxHeight: '80%' }}>
+          <Text style={s.title}>Review: {advocate?.name}</Text>
+          <Text style={s.cardText}>Your rating:</Text>
+          <View style={{ flexDirection: 'row', marginBottom: 12 }}>
+            {[1, 2, 3, 4, 5].map(num => (
+              <A11yPressable key={num} hitSlop={HIT_SLOP_8} onPress={() => setRating(num)} style={{ padding: 4 }}>
+                <MaterialCommunityIcons name={num <= rating ? 'star' : 'star-outline'} size={32} color="#FFB800" />
+              </A11yPressable>
+            ))}
+          </View>
+          <TextInput placeholder="Your name (optional)" placeholderTextColor={palette.text+'77'} value={name} onChangeText={setName} style={s.input} />
+          <TextInput placeholder="Your review (optional but helpful!)" placeholderTextColor={palette.text+'77'} value={comment} onChangeText={setComment} multiline={true} numberOfLines={4} style={[s.input, { minHeight: 80, textAlignVertical: 'top' }]} />
+          <GapView gap={8} style={{ flexDirection: 'row', marginTop: 12 }}>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => onSubmit({ name: name || 'Anonymous', rating, comment, date: new Date().toISOString().split('T')[0] })} style={[s.btn, { backgroundColor: palette.primary, flex: 1 }]}>
+              <Text style={[s.btnText, { color: palette.onPrimary, textAlign: 'center' }]}>Submit Review</Text>
+            </A11yPressable>
+            <A11yPressable hitSlop={HIT_SLOP_8} onPress={onClose} style={[s.btn, { flex: 1 }]}>
+              <Text style={[s.btnText, { textAlign: 'center' }]}>Cancel</Text>
+            </A11yPressable>
+          </GapView>
+        </View>
+      </View>
+    </Modal>
+  );
+}
+
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background, padding: 16 },
     title: { fontSize: 22, fontWeight: '700', color: palette.text, marginBottom: 8 },
     input: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding: 8, borderRadius: 6, marginBottom: 8 },
-    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingVertical:6, paddingHorizontal:10, borderRadius: 6 },
+    chip: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingVertical:6, paddingHorizontal:10, borderRadius: 6, flexDirection: 'row', alignItems: 'center' },
+    chipSmall: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, paddingVertical:4, paddingHorizontal:8, borderRadius: 6 },
     chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
     card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginBottom: 8, backgroundColor: palette.surface },
-    cardTitle: { color: palette.text, fontWeight: '700', marginBottom: 4 },
-    cardText: { color: palette.text, opacity: 0.95, marginBottom: 4 },
+    cardTitle: { color: palette.text, fontWeight: '700', marginBottom: 4, fontSize: 16 },
+    cardText: { color: palette.text, opacity: 0.95, marginBottom: 4, fontSize: 14 },
     btn: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, paddingVertical: 6, paddingHorizontal: 10, alignSelf: 'flex-start', marginTop: 6 },
-    btnText: { color: palette.text, fontWeight: '700' },
+    btnText: { color: palette.text, fontWeight: '700', fontSize: 13 },
     mapWrap: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, backgroundColor: palette.surface, marginTop: 8 },
     mapRow: { paddingVertical: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
   });

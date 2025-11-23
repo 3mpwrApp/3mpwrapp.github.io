@@ -198,7 +198,7 @@ export default function EnergyMoodHub() {
       await setCachedJSON(CACHE_KEYS.MONTHLY_REPORT, report);
     } catch (err) {
       console.error('Error refreshing data:', err);
-      showContextualError(err, 'refresh-data');
+      showContextualError({ context: 'network', error: err instanceof Error ? err : new Error('Failed to refresh data') });
     } finally {
       setRefreshing(false);
     }
