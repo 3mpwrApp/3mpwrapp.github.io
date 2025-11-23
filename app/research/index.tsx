@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import React from 'react';
-import { Linking, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
 import ContrastToggle from '../../components/ContrastToggle';
@@ -9,7 +9,6 @@ import { GapView } from '../../components/GapView';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import SettingsLink from '../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
-import { researchHubs } from '../../data/research-hubs';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
 import { useTextScale } from '../../theme/typography';
@@ -115,50 +114,6 @@ export default function ResearchScreen() {
             </A11yPressable>
           </Link>
         </GapView>
-
-        {/* Research & Data Hubs */}
-        <GapView gap={16} style={styles.hubsContainer} accessibilityRole="summary">
-          <Text style={styles.hubsHeader} accessibilityRole="header">{t('research.landing.hubsHeader','Research & Data Hubs')}</Text>
-          <Text style={styles.hubsIntro}>{t('research.landing.hubsIntro','Trusted national and global sources for disability, return-to-work, accessibility, assistive tech, and social protection evidence.')}</Text>
-          {(['canada','world'] as const).map(region => {
-            const hubs = researchHubs.filter(h => h.region === region);
-            if (!hubs.length) return null;
-            return (
-              <GapView gap={12} key={region} style={styles.hubRegion} accessibilityRole="header" accessibilityLabel={region === 'canada' ? 'Canada hubs' : 'Worldwide hubs'}>
-                <Text style={styles.regionTitle}>{region === 'canada' ? t('research.landing.regionCanada','Canada') : t('research.landing.regionWorldwide','Worldwide')}</Text>
-                {hubs.map(h => (
-                  <GapView gap={8} key={h.id} style={styles.hubCard} accessibilityRole="summary">
-                    <Text style={styles.hubName}>{h.name}</Text>
-                    <Text style={styles.hubDescription}>{h.description}</Text>
-                    <GapView gap={12} style={styles.linksRow}>
-                      {h.links.map(l => (
-                        <A11yPressable
-                          key={l.url}
-                          accessibilityRole="link"
-                          accessibilityLabel={`Open ${l.label}`}
-                          style={styles.hubLinkPress}
-                          onPress={() => Linking.openURL(l.url).catch(() => {})}
-                          hitSlop={HIT_SLOP_8}
-                        >
-                          <Text style={styles.hubLinkText}>{l.label}</Text>
-                        </A11yPressable>
-                      ))}
-                    </GapView>
-                    {h.tags && (
-                      <GapView gap={6} style={styles.tagRow}>
-                        {h.tags.map(t => (
-                          <View key={t} style={styles.tagChip}>
-                            <Text style={styles.tagText}>{t}</Text>
-                          </View>
-                        ))}
-                      </GapView>
-                    )}
-                  </GapView>
-                ))}
-              </GapView>
-            );
-          })}
-        </GapView>
       </View>
     </ResponsiveScreenWrapper>
   );
@@ -176,20 +131,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     sectionDescription: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.8, textAlign: 'center' },
     newBadge: { position: 'absolute', top: 12, right: 12, backgroundColor: palette.primary, paddingHorizontal: 8, paddingVertical: 4, borderRadius: 12 },
     newBadgeText: { fontSize: 10, fontWeight: '700', color: palette.onPrimary, letterSpacing: 0.5 },
-    hubsContainer: { marginTop: 24, paddingTop: 8, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted, paddingBottom: 40 },
-    hubsHeader: { fontSize: Math.round(20 * factor), fontWeight: '700', color: palette.text },
-    hubsIntro: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.85 },
-    hubRegion: { },
-    regionTitle: { fontSize: Math.round(18 * factor), fontWeight: '600', color: palette.text, marginTop: 8 },
-    hubCard: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, padding: 16, borderRadius: 10 },
-    hubName: { fontSize: Math.round(15 * factor), fontWeight: '600', color: palette.text },
-    hubDescription: { fontSize: Math.round(13 * factor), color: palette.text, opacity: 0.85, lineHeight: 18 },
-    linksRow: { flexDirection: 'row', flexWrap: 'wrap' },
-    hubLinkPress: { paddingVertical: 4 },
-    hubLinkText: { fontSize: Math.round(13 * factor), color: palette.primary, textDecorationLine: 'underline' },
-    tagRow: { flexDirection: 'row', flexWrap: 'wrap' },
-    tagChip: { backgroundColor: palette.card, paddingHorizontal: 8, paddingVertical: 3, borderRadius: 12 },
-    tagText: { fontSize: 11, color: palette.text, opacity: 0.8 },
   });
 }
 
