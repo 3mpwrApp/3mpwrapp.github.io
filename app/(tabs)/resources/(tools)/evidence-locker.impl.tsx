@@ -7,9 +7,11 @@ import DisclaimerBanner from '../../../../components/DisclaimerBanner';
 import { GapView } from '../../../../components/GapView';
 import SearchBar from '../../../../components/SearchBar';
 import { SkeletonList } from '../../../../components/SkeletonLoader';
+import UploadQueueStatus from '../../../../components/UploadQueueStatus';
 import { HIT_SLOP_8 } from '../../../../constants/A11Y';
 import { usePostLoadAnnounce } from '../../../../hooks/usePostLoadAnnounce';
 import { useTranslation } from '../../../../i18n';
+import { enqueue, isOnline } from '../../../../services/offlineQueue';
 import { s } from '../../../../theme/spacing';
 import { useAppPalette } from '../../../../theme/usePalette';
 
@@ -127,19 +129,60 @@ export default function EvidenceLockerImpl() {
       const asset = result.assets?.[0];
       if (!asset) return;
       
-      // Simulate OCR/AI processing
-      Alert.alert(
-        'Document Uploaded',
-        `File: ${asset.name}\\n\\nAI is processing...\\n• Extracting text (OCR)\\n• Detecting document type\\n• Finding key dates\\n• Analyzing strength`,
-        [{ text: 'OK', onPress: () => {
-          setNewTitle(asset.name.replace(/\\.pdf$/i, ''));
-          setNewType('other');
-          setAddModal(true);
-        }}]
-      );
+      // Check if online
+      const online = await isOnline();
+      
+      if (!online) {
+        // Queue for later upload
+        await enqueue('upload', {
+          name: asset.name,
+          uri: asset.uri,
+          type: 'document',
+        });
+        Alert.alert(
+          'Queued for Upload',
+          `${asset.name} has been queued. It will upload automatically when you're back online.`,
+          [{ text: 'OK', onPress: () => {
+            setNewTitle(asset.name.replace(/\\.pdf$/i, ''));
+            setNewType('other');
+            setAddModal(true);
+          }}]
+        );
+      } else {
+        // Simulate OCR/AI processing (online)
+        Alert.alert(
+          'Document Uploaded',
+          `File: ${asset.name}\\n\\nAI is processing...\\n• Extracting text (OCR)\\n• Detecting document type\\n• Finding key dates\\n• Analyzing strength`,
+          [{ text: 'OK', onPress: () => {
+            setNewTitle(asset.name.replace(/\\.pdf$/i, ''));
+            setNewType('other');
+            setAddModal(true);
+          }}]
+        );
+      }
     } catch (err) {
       Alert.alert('Upload Failed', 'Could not upload document');
     }
+  };
+
+  // Simulated upload function for queue processing
+  const processUpload = async (payload: any): Promise<void> => {
+    // Simulate upload to cloud/server
+    // In production, this would call your actual upload API
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (Math.random() > 0.1) { // 90% success rate
+          resolve();
+        } else {
+          reject(new Error('Simulated upload failure'));
+        }
+      }, 1000);
+    });
+  };
+
+  const reloadDocuments = () => {
+    // Refresh document list after queue processing
+    // In production, this would fetch from your backend
   };
 
   return (
@@ -147,6 +190,9 @@ export default function EvidenceLockerImpl() {
       <Text style={styles.title}>{t('templates.evidenceLocker.title', 'Evidence Locker')} 🔒</Text>
       <Text style={styles.subtitle}>{documents.length} documents • AI-powered organization</Text>
       <DisclaimerBanner type="legal" compact={true} />
+      
+      {/* Upload Queue Status */}
+      <UploadQueueStatus uploadFn={processUpload} onRefresh={reloadDocuments} />
       
       {loading ? (
         <SkeletonList count={4} />

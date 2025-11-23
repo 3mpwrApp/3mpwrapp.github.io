@@ -10,6 +10,7 @@ import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { CONSOLIDATION_FLAGS, isConsolidationFeatureEnabled } from '../../../services/consolidationFlags';
+import { useComplexityMode } from '../../../store/complexityMode';
 import { createTextStyles } from '../../../theme/typography.enhanced';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -57,6 +58,7 @@ export default function WellnessHub() {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const textStyles = React.useMemo(() => createTextStyles(palette), [palette]);
+  const { isFeatureVisible } = useComplexityMode();
   
   const [query, setQuery] = React.useState('');
   const [unifiedHealthTrackerEnabled, setUnifiedHealthTrackerEnabled] = React.useState(false);

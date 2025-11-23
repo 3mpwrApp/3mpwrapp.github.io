@@ -18,6 +18,7 @@ import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../
 import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../../i18n";
 import { fetchResources } from "../../../services/resources";
+import { useComplexityMode } from "../../../store/complexityMode";
 import { useCounts } from "../../../store/counts";
 import { useJurisdiction } from "../../../store/jurisdiction";
 import { useNetwork } from "../../../store/network";
@@ -71,6 +72,7 @@ export default function ResourcesScreen() {
   const palette = useAppPalette();
   const textStyles = React.useMemo(() => createTextStyles(palette), [palette]);
   const { t } = useTranslation();
+  const { isFeatureVisible } = useComplexityMode();
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Resources");
   useFocusOnRefOnMount(titleRef);
@@ -231,17 +233,21 @@ export default function ResourcesScreen() {
         )}
 
         {/* 1. AI Tools */}
-        <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 16 }]}>
-          🤖 AI Tools
-        </Text>
-        <DisclaimerBanner type="ai" compact={true} />
-        <ResourceLink href="/(tabs)/resources/ai-decision-simplifier" title="AI Decision Simplifier" badge="Coming soon" />
-        <ResourceLink href="/(tabs)/resources/appeal-coach" title="Appeal Coach" badge="Beta" />
-        <ResourceLink href="/(tabs)/resources/body-mechanics-advisor" title="Body Mechanics Advisor" />
-        <ResourceLink href="/(tabs)/resources/justice-as-a-service" title="Justice as a Service" />
-        <ResourceLink href="/(tabs)/resources/rights-checker" title="Rights Checker" />
-        <ResourceLink href="/(tabs)/resources/rights-explainer" title="Rights Explained" />
-        <ResourceLink href="/(tabs)/resources/voice-notes" title="Voice-to-Case Notes Tool" />
+        {isFeatureVisible('standard') && (
+          <>
+            <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 16 }]}>
+              🤖 AI Tools
+            </Text>
+            <DisclaimerBanner type="ai" compact={true} />
+            <ResourceLink href="/(tabs)/resources/ai-decision-simplifier" title="AI Decision Simplifier" badge="Coming soon" />
+            <ResourceLink href="/(tabs)/resources/appeal-coach" title="Appeal Coach" badge="Beta" />
+            <ResourceLink href="/(tabs)/resources/body-mechanics-advisor" title="Body Mechanics Advisor" />
+            <ResourceLink href="/(tabs)/resources/justice-as-a-service" title="Justice as a Service" />
+            <ResourceLink href="/(tabs)/resources/rights-checker" title="Rights Checker" />
+            <ResourceLink href="/(tabs)/resources/rights-explainer" title="Rights Explained" />
+            <ResourceLink href="/(tabs)/resources/voice-notes" title="Voice-to-Case Notes Tool" />
+          </>
+        )}
 
         {/* 2. Templates & Documents */}
         <Text accessibilityRole="header" style={[textStyles.h3, { marginTop: 20 }]}>
