@@ -402,6 +402,8 @@ export default function EvidenceLockerImpl() {
           </View>
         </Modal>
         )}
+        </>
+      )}
     </View>
   );
 }
