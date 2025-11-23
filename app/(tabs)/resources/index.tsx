@@ -204,12 +204,12 @@ export default function ResourcesScreen() {
           ⭐ Featured Hubs
         </Text>
         
-        <ResourceLink href="/(tabs)/resources/master-tracker-hub" title="📊 Master Tracker Hub (NEW)" badge="Unified Dashboard" />
+        <ResourceLink href="/(tabs)/resources/master-tracker-hub" title="📊 Master Tracker Hub (NEW)" badge="Beta" />
         <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
           All-in-one health tracking: symptoms, meds, rehab, appointments - with AI insights & pattern detection
         </Text>
         
-        <ResourceLink href="/(tabs)/resources/appeal-command-center" title="⚖️ Appeal Command Center" badge="Coming soon" />
+        <ResourceLink href="/(tabs)/resources/appeal-command-center" title="⚖️ Appeal Command Center" badge="Beta" />
         <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
           Deadline warfare, denial decoder, evidence strength meter, precedent finder - never miss another appeal
         </Text>
