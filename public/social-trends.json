@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-23T12:18:18.340Z",
+  "lastUpdated": "2025-11-23T18:15:05.076Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3235,
+      "totalPosts": 3260,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T12:18:07.850Z"
+      "lastSeen": "2025-11-23T18:14:57.763Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3250,
+      "totalPosts": 3275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T12:18:10.190Z"
+      "lastSeen": "2025-11-23T18:14:59.264Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3237,
+      "totalPosts": 3262,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T12:18:12.775Z"
+      "lastSeen": "2025-11-23T18:15:00.892Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3243,
+      "totalPosts": 3268,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T12:18:15.020Z"
+      "lastSeen": "2025-11-23T18:15:02.535Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3250,
+      "totalPosts": 3275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-23T12:18:17.335Z"
+      "lastSeen": "2025-11-23T18:15:04.073Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today, we stand alongside so many in the #disability community who are mourning the loss of advocate, activist and storyteller #AliceWong. \n\nHer words will continue to inspire and motivate #DisabilityRights activists and allies for generations to come. #BlindNewWorld",
-      "author": "blindnewworld.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "just trying to get this out here and get some visibility in my community.  #ttrpg  #tabletop    #mutualaid",
-      "author": "kennef.bsky.social",
-      "engagement": 17,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "You probably don’t need `aria-label` for that thing.\n\nIt doesn’t auto-translate:\nadrianroselli.com/2019/11/aria...\n\nIt’s code smell:\nericwbailey.website/published/ar...\n\nYou can probably use better methods:\nadrianroselli.com/2020/01/my-p...\n\n#accessibility #a11y #ARIA",
-      "author": "aardrian.bsky.social",
-      "engagement": 37,
-      "hashtag": "A11y"
-    },
     {
       "text": "Great post from @gerireid.com about using AI for #a11y. Given that a11y is about accuracy, which is historically not an LLM's strong suit, plus the mountain of flawed training data... it's probably not the best tool for the job.\n\nAnyways, relatable post on many levels.\n\ngerireid.com/blog/can-ai-...",
       "author": "davatron5000.bsky.social",
@@ -338,28 +320,46 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "This is interesting and helpful information about using emojis...some things I hadn't thought about.\n\n#Emojis #Accessibility #EastCoastKin",
+      "author": "alinagrafik.bsky.social",
+      "engagement": 17,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 36
+      "count": 37
     },
     {
       "keyword": "accessibility",
-      "count": 28
+      "count": 29
     },
     {
       "keyword": "cripthevote",
       "count": 27
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 26
+      "keyword": "a11y",
+      "count": 27
     },
     {
-      "keyword": "a11y",
-      "count": 24
+      "keyword": "disabilityjustice",
+      "count": 26
     },
     {
       "keyword": "altcitizen",
@@ -379,15 +379,11 @@
     },
     {
       "keyword": "disability",
-      "count": 7
+      "count": 8
     },
     {
-      "keyword": "virtual",
-      "count": 6
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 6
+      "keyword": "digitalaccessibility",
+      "count": 8
     },
     {
       "keyword": "stopavelo",
@@ -402,24 +398,28 @@
       "count": 5
     },
     {
-      "keyword": "foxtakedown",
+      "keyword": "inclusivedesign",
       "count": 5
     },
     {
-      "keyword": "stoptheliesfox",
+      "keyword": "accessibility a11y",
       "count": 5
     },
     {
-      "keyword": "foxlies",
-      "count": 5
+      "keyword": "disabled",
+      "count": 4
     },
     {
-      "keyword": "stoptrump",
-      "count": 5
+      "keyword": "disabilityjustice nico",
+      "count": 4
     },
     {
-      "keyword": "wearetheflood",
-      "count": 5
+      "keyword": "digitalinclusion",
+      "count": 4
+    },
+    {
+      "keyword": "virtual",
+      "count": 4
     }
   ]
 }
