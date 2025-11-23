@@ -148,6 +148,7 @@ import { A11ySettingsProvider } from "../store/a11ySettings";
 import { BlocksProvider } from "../store/blocks";
 import { BookmarksProvider } from "../store/bookmarks";
 import { CoachProgressProvider } from "../store/coachProgress";
+import { ComplexityModeProvider } from "../store/complexityMode";
 import { JurisdictionProvider } from "../store/jurisdiction";
 import { NotificationsProvider } from "../store/notifications";
 import { First7Provider } from "../store/onboardingFirst7";
@@ -283,6 +284,7 @@ export default function RootLayout() {
       <A11ySettingsProvider>
         <NeurodivergentProvider>
           <SettingsProvider>
+            <ComplexityModeProvider>
             <CoachProgressProvider>
             <ResilienceProvider>
             <BookmarksProvider>
@@ -360,6 +362,7 @@ export default function RootLayout() {
             </BookmarksProvider>
             </ResilienceProvider>
             </CoachProgressProvider>
+            </ComplexityModeProvider>
           </SettingsProvider>
           </NeurodivergentProvider>
         </A11ySettingsProvider>

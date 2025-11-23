@@ -11,6 +11,7 @@ import GapView from '../../components/GapView';
 import { HomeGuide } from '../../components/HomeGuide';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import { RevolutionaryFeaturesSpotlight } from '../../components/RevolutionaryFeaturesSpotlight';
+import SOSButton from '../../components/SOSButton';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { useAuth } from '../../context/AuthContext';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
@@ -653,6 +654,9 @@ const HomeScreen = React.memo(() => {
       >
         {t('home.personalization.note','Suggestions powered by the Disability Wizard (beta).')}
       </Text>
+      
+      {/* Global SOS Button */}
+      <SOSButton position="bottom-right" compact={false} />
     </ResponsiveScreenWrapper>
   );
 });

@@ -115,6 +115,20 @@ export default function SettingsScreen() {
         <Section title={t('settings.accessibility.title','Accessibility')} subtitle={t('settings.accessibility.subtitle','Make the app work better for you')} styles={styles}>
           <EnhancedA11ySettingsSection />
           
+          {/* Complexity Mode Settings Link - NEW */}
+          <Link href={'/(tabs)/settings/complexity-mode' as any} asChild={true}>
+            <A11yPressable
+              style={[styles.linkButton, { justifyContent:'center', marginTop:12, backgroundColor: palette.primary, borderWidth: 2, borderColor: palette.primary }]}
+              accessibilityRole='button'
+              accessibilityLabel='Complexity Mode - Choose Simple, Standard, or Power User mode to control feature visibility'
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name='layers-outline' size={20} color={palette.onPrimary} />
+              <Text style={[styles.linkText, { color: palette.onPrimary, fontWeight: '700' }]}>🎯 Complexity Mode (Simple/Standard/Power)</Text>
+              <Ionicons name='chevron-forward' size={16} color={palette.onPrimary} style={{ marginLeft:'auto' }} />
+            </A11yPressable>
+          </Link>
+          
           {/* Cognitive Accessibility Settings Link */}
           <Link href={'/(tabs)/settings/cognitive-accessibility' as any} asChild={true}>
             <A11yPressable
