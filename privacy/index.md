@@ -15,8 +15,27 @@ description: Our commitment to your privacy and 100% user data ownership.
 
 📖 **10 minute read** | ⚡ **Quick summary below**
 
-**Last updated: October 25, 2025**  
-**Version: 3.0**
+**Last updated: November 24, 2025**  
+**Version: 3.0 (November 2025 Consolidation Update)**
+
+---
+
+## 🆕 **November 2025 Updates**
+
+We've completed comprehensive consolidation while maintaining our commitment to 100% user data ownership and 90% accessibility:
+
+- **🎯 Complexity Mode System:** Three experience levels (Simple/Standard/Power User) with Bad Day Mode - all preferences stored locally
+- **📚 Resources vs Research Split:** Clear separation of in-app tools from external links - no additional data collection
+- **🗂️ Master Tracker Hub:** Consolidated 6 tracking tools - all data stored locally on your device
+- **⚖️ Appeal Command Center:** Deadline management and legal tools - all processing local, no case data transmitted
+- **📦 Offline Queue System:** Enhanced offline support with auto-retry - queue stored locally, syncs when online
+- **💪 4 Wellness Hubs:** Consolidated wellness features - all tracking data local, optional cloud backup
+- **🆘 SOS/Crisis Button:** Quick access to external crisis services - no tracking of button usage
+- **👤 Profile & Personalization:** Enhanced recommendations - profile data local or your cloud only
+- **🚀 10 Revolutionary Features:** AI tools process locally - no external AI services receive your data
+- **🌐 Campaign Submissions:** Submit to 3mpwr feature - explicitly opt-in, control what's shared
+
+**Privacy-First Design Maintained:** All November 2025 features follow the same local-first, air-gapped architecture. No new data collection without your explicit consent.
 
 ---
 
@@ -281,13 +300,22 @@ This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and prote
 **Preferences and Settings**:
 - Accessibility options (high contrast, text size, screen reader)
 - Language preferences (including Indigenous languages)
+- **Complexity Mode** level (Simple/Standard/Power User)
+- **Bad Day Mode** trigger settings
 - Quiet hours and notification preferences
 - Cultural protocol preferences (territorial acknowledgments, ceremonial considerations)
+
+**Profile Data** (optional):
+- Bio, location, pronouns
+- Accessibility needs
+- Communication preferences, contact methods
+- All stored locally or in your cloud only
 
 **Community Contributions** (if enabled):
 - Messages, posts, uploaded media
 - Reactions, profile details
 - Campaign coordination activities
+- **Campaign Submissions** (explicitly opt-in)
 
 **Calendar Events** (if you use this feature):
 - Events you create in the app
@@ -307,8 +335,20 @@ This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and prote
 
 **Legal Workflow Data**:
 - Information you provide for automated legal processes
+- **Appeal Command Center** deadlines, case timelines, legal document drafts
 - All legal workflow processing happens locally on your device
 - No legal information transmitted to external servers without your explicit consent
+
+**Health & Wellness Data**:
+- Data you enter in **Master Tracker Hub** (Symptom Tracker, Mood Tracker 2.0, Medication Manager, Appointment Log, Activity Tracker, Energy Tracker)
+- **Wellness Hubs** (Energy & Mood Hub, Mental Wellness Toolkit, Physical Wellness Hub, Pacing Partner AI)
+- **Unified Health Tracker** data
+- All wellness tracking data stored locally on your device
+- Optional cloud backup only to your own authenticated cloud storage
+
+**Offline Queue Data**:
+- Queued actions (posts, uploads, evidence submissions) stored locally until network available
+- Then processed and cleared
 
 ### 2) Information Collected Automatically
 
@@ -318,14 +358,21 @@ This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and prote
 
 **Analytics Events**:
 - Pseudonymous identifiers to improve features (opt-out available)
+- **Complexity Mode interactions:** Anonymized usage patterns to improve experience level recommendations (no personal data)
+- **AI usage patterns:** Local analytics on AI tool usage (Gaslighting Detector, Negotiation Coach, AI Case Interpreter, AI Co-Pilot) - no conversation content stored externally
 - No personally identifiable information
 
 **Push Notification Token**:
 - Required only if you enable notifications
 
+**Network Status**:
+- For community features, offline indicators, and **Offline Queue** sync status
+
 **Security Monitoring**:
 - Device integrity checks, tamper detection events
 - Biometric authentication attempts (local only)
+- **Workflow analytics:** Aggregated, anonymized data about legal workflow completion rates (opt-in only)
+  - No personally identifiable information or case details collected
 
 ### 3) Website Analytics
 
@@ -347,13 +394,17 @@ This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and prote
 
 We use your information only to:
 
-- **Provide core functionality:** Navigation, saved items, localization, accessibility features
-- **Deliver optional features:** Voice navigation, quiet hours, wellness tracking, advocacy tools
-- **Process legal workflows:** Automated document generation, form validation, deadline tracking (all processed locally)
-- **Support cultural protocols:** Indigenous language features, territorial acknowledgments
-- **Enable AI assistance:** Local AI processing for legal document review, case interpretation
-- **Send chosen notifications:** Reminders, updates, deadlines (you control all notification settings)
-- **Maintain security:** App integrity, fraud prevention, security monitoring
+- **Provide core functionality:** Navigation, saved items, localization, accessibility features, **Complexity Mode** personalization
+- **Deliver optional features:** Voice navigation, quiet hours, wellness tracking, advocacy tools, legal workflow automation, **Master Tracker Hub**, **Appeal Command Center**, **Wellness Hubs**
+- **Process legal workflows:** Automated document generation, form validation, deadline tracking, appeal deadlines (all processed locally)
+- **Enable AI assistance:** Local AI processing for legal document review, case interpretation, translation assistance, gaslighting detection, negotiation coaching (no external AI services)
+- **Manage offline operations:** **Offline Queue** storage and sync, ensuring data integrity during network interruptions
+- **Support cultural protocols:** Indigenous language features, territorial acknowledgments, ceremonial considerations
+- **Personalize experience:** Profile-based recommendations, **Complexity Mode** level suggestions, provincial resource filtering
+- **Provide crisis support:** **SOS button** quick access to external crisis services (no usage tracking)
+- **Facilitate community participation:** Campaign coordination, **Submit to 3mpwr** feature (opt-in only)
+- **Send chosen notifications:** Reminders, updates, workflow deadlines, appeal deadlines, appointment reminders (you control all notification settings)
+- **Maintain security:** App integrity, fraud prevention, security monitoring, biometric authentication
 - **Improve services:** Aggregated analytics and diagnostics (with your consent)
 - **Comply with laws:** Legal obligations and terms enforcement
 
@@ -649,7 +700,7 @@ This policy reflects our actual technical implementation. You can verify our pri
 
 ---
 
-*Version 3.0 - Updated October 25, 2025*
+*Version 3.0 (November 2025 Consolidation Update) - Updated November 24, 2025*
 
 <script src="{{ '/assets/js/page-enhancements.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/privacy.js' | relative_url }}"></script>

@@ -11,7 +11,24 @@ description: Important disclaimers about medical, legal, financial advice, AI co
 # 3mpwrApp — All Disclaimers
 
 **For Website FAQ / Legal Section**  
-**Last Updated: October 25, 2025**
+**Last Updated: November 24, 2025**  
+**Version: 3.0 (November 2025 Consolidation Update)**
+
+---
+
+## 🆕 **November 2025 Updates**
+
+The following new features are covered by our existing disclaimers:
+
+- **✅ Complexity Mode System** - Simplification tools are informational; medical/cognitive support requires professional consultation
+- **✅ Master Tracker Hub** - Health tracking is informational only; not a substitute for medical advice
+- **✅ Appeal Command Center** - Deadline tracking and legal tools are educational; not legal advice
+- **✅ Offline Queue System** - Technical feature for data reliability; users responsible for backing up critical documents
+- **✅ 4 Wellness Hubs** - All wellness tools remain informational; not medical treatment
+- **✅ Resources vs Research Split** - Clearly distinguishes in-app tools from external government/legal resources
+- **✅ SOS/Crisis Button** - Connects to external crisis services; app cannot detect or prevent emergencies
+- **✅ Profile & Personalization** - Recommendations are suggestions only; not professional advice
+- **✅ 10 Revolutionary Features** - AI-powered tools may contain errors; verify all outputs
 
 ---
 
@@ -44,11 +61,16 @@ description: Important disclaimers about medical, legal, financial advice, AI co
 - **IN MEDICAL EMERGENCIES, CALL 911 OR YOUR LOCAL EMERGENCY SERVICES IMMEDIATELY**
 
 ### **Features Covered:**
-- Mood Tracker
-- Symptom & Pain Tracker
-- Sleep & Energy Tracker
+- Mood Tracker & Mood Tracker 2.0 with AI Pattern Detection
+- Symptom & Pain Tracker (including Master Tracker Hub)
+- Sleep & Energy Tracker (including Energy & Mood Hub)
 - Pain Forecast
-- Wellness exercises
+- Pacing Partner with AI Energy Forecasting
+- Wellness exercises (Movement & Rehab Hub)
+- Nutrition guides
+- Mental Wellness Toolkit (8 CBT/DBT tools)
+- Unified Health Tracker
+- All wellness hubs and consolidated features
 - Nutrition guides
 - All wellness tools
 

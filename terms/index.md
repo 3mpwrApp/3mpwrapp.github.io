@@ -10,8 +10,27 @@ description: The terms and conditions for using the 3mpwr website and app.
 
 # 3mpwrApp — Terms of Service
 
-**Last Updated: October 25, 2025**  
-**Version: 3.0**
+**Last Updated: November 24, 2025**  
+**Version: 4.0 (November 2025 Consolidation Update)**
+
+## 🆕 **NOVEMBER 2025 UPDATES (Version 4.0)**
+
+We've completed comprehensive consolidation to production-ready beta with 90% accessibility. Key features now included:
+
+- **🎯 Complexity Mode System:** Three experience levels (Simple/Standard/Power User) with Bad Day Mode
+- **📚 Resources vs Research Split:** Clear separation of in-app tools from external links
+- **🗂️ Master Tracker Hub:** Consolidated 6 tracking tools into unified experience
+- **⚖️ Appeal Command Center:** Advanced deadline management and legal case tools
+- **📦 Offline Queue System:** Enhanced offline support with automatic retry
+- **💪 4 Wellness Hubs:** Energy & Mood, Mental Wellness, Physical Wellness, Pacing Partner AI
+- **🆘 SOS/Crisis Button:** Quick access to external crisis services
+- **👤 Profile & Personalization:** Enhanced user profiles and recommendations
+- **🚀 10 Revolutionary Features:** AI tools including Gaslighting Detector, Negotiation Coach, AI Case Interpreter
+- **🌐 Campaign Submissions:** Submit to 3mpwr feature for community campaigns
+
+**All disclaimers below apply to these November 2025 features and all existing features.**
+
+---
 
 ## IMPORTANT LEGAL DISCLAIMERS
 
@@ -35,6 +54,9 @@ description: The terms and conditions for using the 3mpwr website and app.
 
 **Wellness Features Disclaimer:**
 - Symptom trackers, mood logs, pain forecasts, sleep tracking, and exercise guides are informational tools only
+- **Master Tracker Hub** (Symptom Tracker, Mood Tracker 2.0, Medication Manager, Appointment Log, Activity Tracker, Energy Tracker) provides data organization only, not medical analysis
+- **Wellness Hubs** (Energy & Mood Hub, Mental Wellness Toolkit, Physical Wellness Hub, Pacing Partner AI) offer guidance and tracking, not medical treatment
+- **Unified Health Tracker** consolidates your data but does not provide medical interpretation
 - No feature in this app can diagnose, treat, cure, or prevent any medical condition
 - Individual results vary; features may not be suitable for all users
 - Consult your doctor before starting any wellness, exercise, or nutrition program
@@ -55,6 +77,10 @@ description: The terms and conditions for using the 3mpwr website and app.
 
 **Legal Resources Disclaimer:**
 - Form generators, letter templates, rights checklists, and AI legal assistants are educational tools only
+- **Appeal Command Center** provides deadline tracking and case organization, not legal representation
+- **AI Case Interpreter**, **Negotiation Coach**, and **AI Co-Pilot** offer guidance, not legal advice
+- **22+ legal templates** in Resources tab require professional review before use
+- **Policy Made Simple** translations are educational summaries, not official legal interpretations
 - Templates may require customization for your specific situation
 - Deadlines, procedures, and requirements change frequently—verify with official sources
 - **Filing errors or missed deadlines can have serious legal consequences**

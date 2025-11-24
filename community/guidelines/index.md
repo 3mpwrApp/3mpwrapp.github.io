@@ -10,8 +10,21 @@ description: Our community standards for a safe, supportive space for people wit
 
 # 3mpwrApp — Community Guidelines
 
-**Last Updated: October 25, 2025**  
-**Version: 1.0**
+**Last Updated: November 24, 2025**  
+**Version: 2.0 (November 2025 Update)**
+
+## 🆕 **November 2025 Updates**
+
+New community features now covered by these guidelines:
+- **Campaign Submissions:** Submit to 3mpwr feature for sharing advocacy campaigns
+- **Profile & Personalization:** Enhanced user profiles with bio, location, accessibility needs
+- **Community Chat:** Real-time community conversations and support
+- **Evidence Locker Sharing:** Optional sharing of case documentation (privacy-protected)
+- **Master Tracker Hub Insights:** Optional sharing of health/wellness patterns for community support
+
+All existing community guidelines apply to these new features.
+
+---
 
 ## Our Community Values
 
@@ -33,8 +46,11 @@ description: Our community standards for a safe, supportive space for people wit
 - **Offering support** and encouragement to others
 - **Respectful disagreement** - diverse perspectives are welcome
 - **Constructive feedback** to improve the app and community
-- **Advocacy and activism** - organizing for change
+- **Advocacy and activism** - organizing for change, using Campaign Submissions feature
 - **Celebrating wins** - achievements, milestones, victories
+- **Profile personalization** - sharing accessibility needs, pronouns, communication preferences (all optional)
+- **Wellness insights** - optionally sharing tracking patterns from Master Tracker Hub or Wellness Hubs for mutual support
+- **Crisis support** - using SOS button and supporting others in crisis (while respecting professional boundaries)
 
 ---
 
