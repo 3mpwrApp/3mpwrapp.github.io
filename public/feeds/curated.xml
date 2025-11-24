@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Mon, 24 Nov 2025 09:27:14 GMT</lastBuildDate>
-    <pubDate>Mon, 24 Nov 2025 09:27:14 GMT</pubDate>
+    <lastBuildDate>Mon, 24 Nov 2025 15:30:43 GMT</lastBuildDate>
+    <pubDate>Mon, 24 Nov 2025 15:30:43 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -20,119 +20,126 @@
     <category>Benefits</category>
 
     <item>
-      <title>Younger-skewing co-op programs aim to spark teen interest in health care</title>
-      <link>https://www.cbc.ca/news/canada/high-school-pathways-co-ops-9.6985456?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/high-school-pathways-co-ops-9.6985456?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/c1aebd41-e866-4fd8-bcaa-167cea1343a6,1763593638344/full/max/0/default.jpg?im=Crop%2Crect%3D%28460%2C171%2C3571%2C2008%29%3BResize%3D%28620%29' alt='High school students gather around a large, conference table-sized computer tablet showing intricate 3D scans of a cadaver's muscular system' width='620' height='349' title='Gr. 11 and 12 students from the Peel District School Board explore scans of real cadavers via a virtual dissection table at Toronto Metropolitan University's School of Medicine in Brampton, Ont., on November 19, 2025.'/><p>Co-op programs in health-care spaces regularly enlist post-secondary students, but some are skewing younger to target high schoolers. The hope is to spark interest in a broader pool of teens, especially those from under-represented groups, and get more of them thinking about Canada's health-care system.</p>]]></description>
+      <title>U.S. senators say tariffs causing ‘cultural break’ in relations with Canada</title>
+      <link>https://globalnews.ca/news/11540382/us-senators-tariffs-cultural-break-relations-canada/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11540382/us-senators-tariffs-cultural-break-relations-canada/</guid>
+      <description><![CDATA[Maine Senator King said the lingering rift between Canadians and Americans is particularly troubling in a state that borders on New Brunswick and Quebec.]]></description>
+      <pubDate>Mon, 24 Nov 2025 13:25:17 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Expands Prenatal Care in Interlake-Eastern Health Region with Midwifery Services</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71618</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71618</guid>
+      <pubDate>Mon, 17 Nov 2025 19:58:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>How the provincial takeover of an Ontario school board 13 years ago played out</title>
+      <link>https://www.cbc.ca/news/canada/windsor/ontario-windsor-school-board-takeover-province-law-9.6987924?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/windsor/ontario-windsor-school-board-takeover-province-law-9.6987924?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.6762937,1715369822000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C304%2C5821%2C3274%29%3BResize%3D%28620%29' alt='The feet of students under a table in a classroom are shown.' width='620' height='349' title='Seven Oaks School Division said it's raising property taxes and increasing some class sizes because funding from the province won't allow it to keep up with growing enrolment. '/><p>Ontario’s new law meant to make it easier for the province to take control of school boards it deems “fall off the rails,” isn’t a new thing in the Windsor-area.</p>]]></description>
       <pubDate>Mon, 24 Nov 2025 09:00:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Canada, G7 security ministers pledge to fight organized crime together</title>
-      <link>https://globalnews.ca/news/11539847/g7-pledge-organized-crime-fight/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11539847/g7-pledge-organized-crime-fight/</guid>
-      <description><![CDATA[The ministers said transnational criminal organizations are "ruthless in their pursuit of profit, power and influence" through corruption, violence and other illicit means.]]></description>
-      <pubDate>Sun, 23 Nov 2025 22:12:31 GMT</pubDate>
+      <title>Pressure on renters higher in N.S. than any other province, analysis finds</title>
+      <link>https://www.cbc.ca/news/canada/nova-scotia/pressure-on-renters-is-higher-in-n-s-than-any-other-province-analysis-finds-9.6988188?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/nova-scotia/pressure-on-renters-is-higher-in-n-s-than-any-other-province-analysis-finds-9.6988188?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/6cfdaee6-7032-4a05-9052-628da442d497,1763754500177/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C62%2C1180%2C663%29%3BResize%3D%28620%29' alt='Pedestrians and vehicles stream in front of a high-rise apartment building.' width='620' height='349' title='Pedestrians and vehicles stream in front of a high-rise apartment building in Halifax in this file photo.'/><p>A new tool created by real estate firm Turner Drake & Partners blends multiple indicators of housing markets across Canada to assign scores to be used for comparison. It shows the financial burden on renters in Nova Scotia is greater than in any other province.</p>]]></description>
+      <pubDate>Mon, 24 Nov 2025 10:00:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Is Canada Adopting ICE Anti-Migrant Tactics?</title>
-      <link>https://thetyee.ca/News/2025/11/24/Is-Canada-Adopting-ICE-Anti-Migrant-Tactics/</link>
-      <guid isPermaLink="true">https://thetyee.ca/News/2025/11/24/Is-Canada-Adopting-ICE-Anti-Migrant-Tactics/</guid>
-      <description><![CDATA[A raid on a major Calgary construction site has raised serious questions about the government’s approach.]]></description>
-      <pubDate>Mon, 24 Nov 2025 08:30:00 GMT</pubDate>
+      <title>Minister says declaring Ontario intimate partner violence epidemic would be ‘disingenuous&apos;</title>
+      <link>https://globalnews.ca/news/11537915/ford-government-intimate-partner-violence-epidemic-declaration-disingenuous/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11537915/ford-government-intimate-partner-violence-epidemic-declaration-disingenuous/</guid>
+      <description><![CDATA[Survivors and experts have called on the Ford government to declare intimate partner violence an epidemic, arguing it would add urgency and emergency funding to the acute problem.]]></description>
+      <pubDate>Mon, 24 Nov 2025 11:00:58 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Search continues for 2 people missing in fatal Brampton fire, police say</title>
-      <link>https://globalnews.ca/news/11539823/brampton-house-fire-search-ongoing/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11539823/brampton-house-fire-search-ongoing/</guid>
-      <description><![CDATA[Peel Regional Police said the search continues for two people still missing from a Brampton house fire, with authorities saying they believe one still unaccounted for is a child.]]></description>
-      <pubDate>Sun, 23 Nov 2025 21:51:53 GMT</pubDate>
+      <title>Manitoba Government Honours Indigenous Veterans and Supports First-Annual Powwow</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71460</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71460</guid>
+      <pubDate>Sat, 08 Nov 2025 15:00:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>2-alarm fire displaces 10, sends 2 to hospital in Calgary&apos;s northeast</title>
-      <link>https://globalnews.ca/news/11539931/two-alarm-fire-calgary-northeast/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11539931/two-alarm-fire-calgary-northeast/</guid>
-      <description><![CDATA[A fire in the 100-block of Taradale Close NE on Saturday resulted in 10 people being displaced and two being sent to hospital in critical but non-life-threatening condition.]]></description>
-      <pubDate>Mon, 24 Nov 2025 03:08:21 GMT</pubDate>
+      <title>Manitoba Government Launches Tool to Combat Chronic Wasting Disease</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71619</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71619</guid>
+      <pubDate>Mon, 17 Nov 2025 21:05:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Bear encounters on the rise in B.C. community where grizzlies attacked school group, residents say</title>
-      <link>https://www.cbc.ca/news/canada/british-columbia/search-for-grizzly-bear-in-bella-coola-attack-continues-9.6989778?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/british-columbia/search-for-grizzly-bear-in-bella-coola-attack-continues-9.6989778?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.4132188,1743627274000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C45%2C1200%2C675%29%3BResize%3D%28620%29' alt='A grizzly bear.' width='620' height='349' title='A grizzly bear in Yukon. The Yukon government has banned roadside hunting of the bears near Klukshu Village.'/><p>As B.C. conservation officers continued to search for the three grizzlies involved in Thursday’s attack on an elementary school group in Bella Coola, residents say the incident reflects years of rising bear encounters in the remote Central Coast community.</p>]]></description>
-      <pubDate>Mon, 24 Nov 2025 05:15:34 GMT</pubDate>
+      <title>Family members worried as strike continues at GTA care home</title>
+      <link>https://globalnews.ca/news/11540357/family-members-worried-toronto-area-care-home-strike/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11540357/family-members-worried-toronto-area-care-home-strike/</guid>
+      <description><![CDATA[Family members of people living in a Toronto-area group home say they are worried for their loved ones' well-being as the home's management is providing limited information.]]></description>
+      <pubDate>Mon, 24 Nov 2025 11:31:18 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Vulnerable people could &apos;come out worse&apos; after stay in Manitoba detox facility, advocate says</title>
-      <link>https://www.cbc.ca/news/canada/manitoba/winnipeg-protest-72-hour-detox-centre-9.6989744?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/manitoba/winnipeg-protest-72-hour-detox-centre-9.6989744?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/3a4923f8-7663-498d-9174-376f97e39692,1763938182601/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C642%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Group of people stand in a circle, some holding flags and protest signs. ' width='620' height='349' title='A large crowd gathered outside the Manitoba Legislature building on Sunday, Nov. 23, 2025, to protest the province's plan to detain intoxicated people for up to 72 hours at a Winnipeg facility.'/><p>Advocates say the Manitoba government's plan to detain people intoxicated with long-lasting drugs like methamphetamine at a Winnipeg detox facility for up to 72 hours could put marginalized people at greater risk.</p>]]></description>
-      <pubDate>Mon, 24 Nov 2025 00:46:31 GMT</pubDate>
+      <title>Measles Update #46</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71617</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71617</guid>
+      <pubDate>Mon, 17 Nov 2025 17:01:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Joint Statement By Prime Minister Mark Carney And Premier Wab Kinew On Federal-Provincial Collaboration Regarding Port Of Churchill Plus</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=71597</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71597</guid>
-      <pubDate>Sun, 16 Nov 2025 20:00:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Carney, Modi agree to revive comprehensive trade deal talks</title>
-      <link>https://globalnews.ca/news/11539634/canada-india-trade-deal-revival-mark-carney-narendra-modi/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11539634/canada-india-trade-deal-revival-mark-carney-narendra-modi/</guid>
-      <description><![CDATA[Canadian and Indian prime ministers Mark Carney and Narendra Modi have agreed to work towards a new comprehensive economic partnership agreement.]]></description>
-      <pubDate>Sun, 23 Nov 2025 21:17:16 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Uh oh. The dreaded polar vortex may be making an appearance very soon</title>
-      <link>https://www.cbc.ca/news/science/polar-vortex-return-9.6988055?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/science/polar-vortex-return-9.6988055?cmp=rss</guid>
+      <title>‘It’s complicated’: What happens when the family cottage gets divided by 8?</title>
+      <link>https://www.cbc.ca/news/canada/ottawa/complicated-cottage-creator-network-ottawa-9.6931887?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/ottawa/complicated-cottage-creator-network-ottawa-9.6931887?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/eca7cacc-1c18-4fa6-b225-c805876d842f,1762986746810/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C210%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A group of people sit on a wall by a river in summer.' width='620' height='349' title='Jennifer Lester's family has owned a cottage on the Outlet River in Prince Edward County, Ont. for decades.'/><p>Over half a century of family memories and tradition are tied to a property in Prince Edward County for Jennifer Lester Mulridge's extended family. But family dynamics and ownership costs make inheritance challenging, as Lester Mulridge explains in this video made in collaboration with CBC Ottawa's Creator Network.</p>]]></description>
       <pubDate>Mon, 24 Nov 2025 09:00:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>&apos;Cultural break&apos;: U.S. senators say relations with Canadian neighbours are suffering</title>
-      <link>https://www.cbc.ca/news/canada/nova-scotia/cultural-break-u-s-senators-say-relations-with-canadian-neighbours-are-suffering-9.6989582?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/nova-scotia/cultural-break-u-s-senators-say-relations-with-canadian-neighbours-are-suffering-9.6989582?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/f688351c-fe60-4bc6-be9a-ee4b6ffd8557,1763940300755/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C188%2C3598%2C2023%29%3BResize%3D%28620%29' alt='Three men and a woman sit in chairs on a stage.' width='620' height='349' title='Senator Peter Welch, of Vermont, left to right, Senator Thom Tillis, of North Carolina, Senator Angus King, of Maine and moderator Congresswoman Jane Harman take part in the Halifax International Security Forum, Nov. 22, 2025.'/><p></p>]]></description>
-      <pubDate>Mon, 03 Nov 2025 20:54:42 GMT</pubDate>
-      <category>Critical</category>
+      <title>How one North Vancouver school is redefining education for neurodiverse learners in B.C.</title>
+      <link>https://www.straight.com/education/how-one-north-vancouver-school-is-redefining-education-for-neurodiverse-learners-in-bc</link>
+      <guid isPermaLink="true">https://www.straight.com/education/how-one-north-vancouver-school-is-redefining-education-for-neurodiverse-learners-in-bc</guid>
+      <description><![CDATA[“Our students learn through doing.”]]></description>
+      <pubDate>Fri, 31 Oct 2025 16:49:53 GMT</pubDate>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>The Pandemic Left Her Reeling. So She Turned to Growing Flowers</title>
-      <link>https://thetyee.ca/WhatWorks/2025/11/24/Bellingham-Flower-Farm/</link>
-      <guid isPermaLink="true">https://thetyee.ca/WhatWorks/2025/11/24/Bellingham-Flower-Farm/</guid>
-      <description><![CDATA[How a frontline medical worker found new life in farming and selling pesticide-free blossoms.]]></description>
-      <pubDate>Mon, 24 Nov 2025 08:40:00 GMT</pubDate>
+      <title>Demand soars at Halifax Diaper Bank 3 months after launch</title>
+      <link>https://www.cbc.ca/news/canada/nova-scotia/halifax-diaper-bank-swamped-with-demand-9.6987979?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/nova-scotia/halifax-diaper-bank-swamped-with-demand-9.6987979?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/ead1735a-004e-460b-8fe2-6720445ece7e,1763747421030/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C384%2C5712%2C3213%29%3BResize%3D%28620%29' alt='A woman stands in front of piles of diapers. ' width='620' height='349' title='Lydia O'Regan founded the Halifax Diaper Bank in September. She now supports an average of five families in Halifax every day. '/><p>A grassroots effort by a Halifax woman to donate diapers to families in need has helped hundreds of people in just the first three months in operation. </p>]]></description>
+      <pubDate>Mon, 24 Nov 2025 10:00:00 GMT</pubDate>
+      <category>High Priority</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>B.C. activists who tested and sold heroin and meth launch constitutional challenge</title>
+      <link>https://globalnews.ca/news/11540364/bc-activists-constitutional-challenge-meth-heroin/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11540364/bc-activists-constitutional-challenge-meth-heroin/</guid>
+      <description><![CDATA[A constitutional challenge by founders of a Vancouver "compassion club" who were found guilty of drug trafficking is expected to begin today at the British Columbia Supreme Court.]]></description>
+      <pubDate>Mon, 24 Nov 2025 11:58:17 GMT</pubDate>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
