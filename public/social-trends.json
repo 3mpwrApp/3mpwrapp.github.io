@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-24T06:18:36.414Z",
+  "lastUpdated": "2025-11-24T12:22:24.090Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3310,
+      "totalPosts": 3335,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T06:18:27.624Z"
+      "lastSeen": "2025-11-24T12:22:16.410Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3325,
+      "totalPosts": 3350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T06:18:29.672Z"
+      "lastSeen": "2025-11-24T12:22:17.933Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3312,
+      "totalPosts": 3337,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T06:18:31.521Z"
+      "lastSeen": "2025-11-24T12:22:19.623Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3318,
+      "totalPosts": 3343,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T06:18:33.338Z"
+      "lastSeen": "2025-11-24T12:22:21.154Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3325,
+      "totalPosts": 3350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T06:18:35.412Z"
+      "lastSeen": "2025-11-24T12:22:23.087Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
-      "author": "zeldman.bsky.social",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
-      "author": "zeldman.bsky.social",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "www.northwichguardian.co.uk/news/2563810... #accessibility",
       "author": "suewilkesauthor.bsky.social",
@@ -338,6 +302,42 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "You can include blind and low vision Australians by adding ALT text to images.\n\nA professional media team should know this. \n\nPerhaps you do know this, but you don’t care?\n\n#AusPol\n\n#accessibility",
+      "author": "kentparkskeet.bsky.social",
+      "engagement": 32,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Glad to see the Remove The Regime protest in DC making their event accessible for the Deaf community. \n\n#accessibility #Deaf\nyoutu.be/26IUDIER3BM?...",
+      "author": "mhairiforrest.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Commenting on a post that talks bout how Tailwind is problematic for Devs with dyslexia or ADHD with...\n\n\"Many applications I’ve worked in use tailwind effectively, and the code seems highly readable to me. I don’t see the issue here.\"\n\nis peak ableism.\n\n#Accessibility #FrontEnd #WebDev",
+      "author": "xirclebox.com",
+      "engagement": 15,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "There's a special place in hell reserved for web developers who break default browser functionality like pasting into input fields or ctrl+clicking on links to open in a new tab.\n\nAnd the special hell is reserved for those who implement navigation as anything but anchor tags.\n\n#rant #a11y",
+      "author": "mrdowden.com",
+      "engagement": 20,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -354,12 +354,16 @@
       "count": 27
     },
     {
+      "keyword": "a11y",
+      "count": 27
+    },
+    {
       "keyword": "disabilityjustice",
       "count": 26
     },
     {
-      "keyword": "a11y",
-      "count": 26
+      "keyword": "disability",
+      "count": 12
     },
     {
       "keyword": "altcitizen",
@@ -378,12 +382,8 @@
       "count": 12
     },
     {
-      "keyword": "disability",
-      "count": 10
-    },
-    {
       "keyword": "digitalaccessibility",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "stopavelo",
@@ -402,10 +402,6 @@
       "count": 5
     },
     {
-      "keyword": "inclusivedesign",
-      "count": 5
-    },
-    {
       "keyword": "disabled",
       "count": 4
     },
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "wpa11yday",
+      "count": 4
+    },
+    {
+      "keyword": "accessibility thanks",
       "count": 4
     }
   ]
