@@ -7,7 +7,7 @@ import React from "react";
 
 export const options = { href: null };
 
-export default function TemplatesGalleryRedirect() {
+export default function TemplatesGallery() {
   const router = useRouter();
   
   React.useEffect(() => {
@@ -16,17 +16,6 @@ export default function TemplatesGalleryRedirect() {
   
   return null;
 }
-
-/* DEPRECATED CODE - NOW IN LETTER WIZARD
-const EXAMPLES = [
-  { title: "Accommodation Request (Sample)", body: "Re: Workplace Accommodation Request\n\nDear Employer,\n\nI am requesting reasonable accommodations..." },
-  { title: "Appeal Letter (Sample)", body: "Re: Appeal of Decision (Claim [number])\n\nDear Appeals Officer,\n\nI am appealing the decision dated [date]..." },
-  { title: "Reconsideration Letter (Sample)", body: "Re: Request for Reconsideration (Claim [ID])\n\nDear Claims Officer,\n\nI am requesting reconsideration..." },
-  { title: "Union Request (Sample)", body: "Re: Request for Union Support and Representation\n\nDear Union Representative/Steward,\n\nMy name is [Your Name], employed as..." },
-];
-*/
-
-export default function TemplatesGallery() {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const s = styles(palette);

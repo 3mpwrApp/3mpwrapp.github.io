@@ -149,6 +149,7 @@ import { BlocksProvider } from "../store/blocks";
 import { BookmarksProvider } from "../store/bookmarks";
 import { CoachProgressProvider } from "../store/coachProgress";
 import { ComplexityModeProvider } from "../store/complexityMode";
+import { EnergyCoinsProvider } from "../store/energyCoins";
 import { JurisdictionProvider } from "../store/jurisdiction";
 import { NotificationsProvider } from "../store/notifications";
 import { First7Provider } from "../store/onboardingFirst7";
@@ -287,6 +288,7 @@ export default function RootLayout() {
             <ComplexityModeProvider>
             <CoachProgressProvider>
             <ResilienceProvider>
+            <EnergyCoinsProvider>
             <BookmarksProvider>
             <ProfileLocalProvider>
               <PrivacyProvider>
@@ -360,6 +362,7 @@ export default function RootLayout() {
               </PrivacyProvider>
             </ProfileLocalProvider>
             </BookmarksProvider>
+            </EnergyCoinsProvider>
             </ResilienceProvider>
             </CoachProgressProvider>
             </ComplexityModeProvider>

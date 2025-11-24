@@ -11,6 +11,7 @@ import { Platform } from 'react-native';
 
 import { logError } from '../utils/errorLogger';
 
+import { emotionalFirstAid } from './emotionalFirstAid';
 import { hapticLanguage } from './hapticLanguage';
 
 // ============================================================================
@@ -576,18 +577,71 @@ class EmotionalWeatherStationManager {
 
       const weatherTypes = [...new Set(occurrences.map(m => m.weather))];
 
+      // Get coping strategies that were used during this emotion
+      const copingStrategies = this.analyzeCopingStrategies(emotion, occurrences);
+
       const findings: MoodArchaeologyFindings = {
         emotion,
         firstAppearance: sorted[0].timestamp,
         lastAppearance: sorted[sorted.length - 1].timestamp,
         totalOccurrences: occurrences.length,
-        copingStrategiesThatWorked: [], // TODO: Integrate with coping strategy tracker
+        copingStrategiesThatWorked: copingStrategies,
         triggers,
         associatedWeather: weatherTypes,
       };
 
       this.archaeology.set(emotion, findings);
     });
+  }
+
+  private analyzeCopingStrategies(
+    emotion: string,
+    occurrences: MoodReading[]
+  ): Array<{ strategy: string; successRate: number }> {
+    try {
+      // Get emotional first aid sessions that overlap with mood readings
+      const sessions = emotionalFirstAid.getSessionHistory();
+      
+      const strategyStats = new Map<string, { used: number; successful: number }>();
+      
+      occurrences.forEach(mood => {
+        // Find sessions within 2 hours of this mood reading
+        const nearSessions = sessions.filter(s => {
+          const timeDiff = Math.abs(s.timestamp - mood.timestamp);
+          return timeDiff < 2 * 60 * 60 * 1000; // 2 hours
+        });
+        
+        nearSessions.forEach(session => {
+          if (session.completed && session.effectiveness) {
+            const strategyName = session.techniqueId || 'unknown';
+            
+            if (!strategyStats.has(strategyName)) {
+              strategyStats.set(strategyName, { used: 0, successful: 0 });
+            }
+            
+            const stats = strategyStats.get(strategyName)!;
+            stats.used++;
+            
+            // Consider effectiveness >= 3 as successful
+            if (session.effectiveness >= 3) {
+              stats.successful++;
+            }
+          }
+        });
+      });
+      
+      return Array.from(strategyStats.entries())
+        .map(([strategy, stats]) => ({
+          strategy,
+          successRate: Math.round((stats.successful / stats.used) * 100) / 100,
+        }))
+        .filter(s => s.successRate > 0)
+        .sort((a, b) => b.successRate - a.successRate)
+        .slice(0, 5);
+    } catch (err) {
+      logError('emotionalWeatherStation', 'Failed to analyze coping strategies', err);
+      return [];
+    }
   }
 
   excavateMoodHistory(emotion: string): MoodArchaeologyFindings | null {
@@ -719,8 +773,7 @@ class EmotionalWeatherStationManager {
       .sort((a, b) => b.intensity - a.intensity)
       .slice(0, 10);
 
-    const seasonalPatterns: string[] = [];
-    // TODO: Implement seasonal pattern detection
+    const seasonalPatterns = this.detectSeasonalPatterns(relevantMoods, period);
 
     return {
       period,
@@ -729,6 +782,138 @@ class EmotionalWeatherStationManager {
       extremeEvents,
       seasonalPatterns,
     };
+  }
+
+  private detectSeasonalPatterns(
+    moods: MoodReading[],
+    period: 'week' | 'month' | 'year'
+  ): string[] {
+    const patterns: string[] = [];
+    
+    if (moods.length < 10) {
+      return ['Insufficient data for seasonal analysis'];
+    }
+
+    // Time-of-day patterns
+    const morningMoods = moods.filter(m => {
+      const hour = new Date(m.timestamp).getHours();
+      return hour >= 6 && hour < 12;
+    });
+    const afternoonMoods = moods.filter(m => {
+      const hour = new Date(m.timestamp).getHours();
+      return hour >= 12 && hour < 18;
+    });
+    const eveningMoods = moods.filter(m => {
+      const hour = new Date(m.timestamp).getHours();
+      return hour >= 18 || hour < 6;
+    });
+
+    if (morningMoods.length >= 3 && eveningMoods.length >= 3) {
+      const morningAvg = morningMoods.reduce((sum, m) => sum + m.temperature, 0) / morningMoods.length;
+      const eveningAvg = eveningMoods.reduce((sum, m) => sum + m.temperature, 0) / eveningMoods.length;
+      
+      if (morningAvg > eveningAvg + 15) {
+        patterns.push('Mornings tend to be emotionally warmer (better mood)');
+      } else if (eveningAvg > morningAvg + 15) {
+        patterns.push('Evenings show improved emotional climate');
+      }
+    }
+
+    // Day-of-week patterns (for month/year periods)
+    if (period === 'month' || period === 'year') {
+      const weekdayMoods = moods.filter(m => {
+        const day = new Date(m.timestamp).getDay();
+        return day >= 1 && day <= 5;
+      });
+      const weekendMoods = moods.filter(m => {
+        const day = new Date(m.timestamp).getDay();
+        return day === 0 || day === 6;
+      });
+
+      if (weekdayMoods.length >= 5 && weekendMoods.length >= 2) {
+        const weekdayAvg = weekdayMoods.reduce((sum, m) => sum + m.temperature, 0) / weekdayMoods.length;
+        const weekendAvg = weekendMoods.reduce((sum, m) => sum + m.temperature, 0) / weekendMoods.length;
+        
+        if (weekendAvg > weekdayAvg + 15) {
+          patterns.push('Weekend emotional climate significantly warmer than weekdays');
+        } else if (weekdayAvg > weekendAvg + 15) {
+          patterns.push('Weekday structure appears to support better mood');
+        }
+      }
+    }
+
+    // Monthly patterns (for year period)
+    if (period === 'year' && moods.length >= 30) {
+      const monthlyAvgs = new Map<number, number[]>();
+      
+      moods.forEach(m => {
+        const month = new Date(m.timestamp).getMonth();
+        if (!monthlyAvgs.has(month)) {
+          monthlyAvgs.set(month, []);
+        }
+        monthlyAvgs.get(month)!.push(m.temperature);
+      });
+
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const avgsByMonth = Array.from(monthlyAvgs.entries())
+        .map(([month, temps]) => ({
+          month,
+          avg: temps.reduce((sum, t) => sum + t, 0) / temps.length,
+        }))
+        .sort((a, b) => b.avg - a.avg);
+
+      if (avgsByMonth.length >= 3) {
+        const best = avgsByMonth[0];
+        const worst = avgsByMonth[avgsByMonth.length - 1];
+        
+        if (best.avg - worst.avg > 20) {
+          patterns.push(`${monthNames[best.month]} shows strongest emotional climate`);
+          patterns.push(`${monthNames[worst.month]} tends to be more challenging`);
+        }
+      }
+
+      // Seasonal trends (winter, spring, summer, fall)
+      const winter = moods.filter(m => [11, 0, 1].includes(new Date(m.timestamp).getMonth()));
+      const spring = moods.filter(m => [2, 3, 4].includes(new Date(m.timestamp).getMonth()));
+      const summer = moods.filter(m => [5, 6, 7].includes(new Date(m.timestamp).getMonth()));
+      const fall = moods.filter(m => [8, 9, 10].includes(new Date(m.timestamp).getMonth()));
+
+      const seasons = [
+        { name: 'Winter', moods: winter },
+        { name: 'Spring', moods: spring },
+        { name: 'Summer', moods: summer },
+        { name: 'Fall', moods: fall },
+      ].filter(s => s.moods.length >= 5);
+
+      if (seasons.length >= 2) {
+        const seasonAvgs = seasons.map(s => ({
+          name: s.name,
+          avg: s.moods.reduce((sum, m) => sum + m.temperature, 0) / s.moods.length,
+        })).sort((a, b) => b.avg - a.avg);
+
+        if (seasonAvgs[0].avg - seasonAvgs[seasonAvgs.length - 1].avg > 15) {
+          patterns.push(`${seasonAvgs[0].name} brings the warmest emotional climate`);
+        }
+      }
+    }
+
+    // Intensity volatility patterns
+    const intensityChanges: number[] = [];
+    for (let i = 1; i < moods.length; i++) {
+      intensityChanges.push(Math.abs(moods[i].intensity - moods[i - 1].intensity));
+    }
+    
+    if (intensityChanges.length >= 5) {
+      const avgChange = intensityChanges.reduce((sum, c) => sum + c, 0) / intensityChanges.length;
+      
+      if (avgChange > 2) {
+        patterns.push('High emotional volatility - frequent intensity shifts');
+      } else if (avgChange < 0.5) {
+        patterns.push('Stable emotional patterns with consistent intensity');
+      }
+    }
+
+    return patterns.length > 0 ? patterns : ['No significant seasonal patterns detected'];
   }
 }
 

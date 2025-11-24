@@ -23,7 +23,7 @@ export default function ProfileCard() {
   const { user, signOut, isAdmin, isGuest } = useAuth();
   const { t } = useTranslation();
   const { state: favorites } = useFavorites();
-  const bookmarks = useBookmarks();
+  const bookmarksCtx = useBookmarks();
   const { coins } = useEnergyCoins();
   const { state: a11y } = useA11ySettings();
   
@@ -38,7 +38,7 @@ export default function ProfileCard() {
     (favorites?.advocate?.size || 0) + 
     (favorites?.podcast?.size || 0)
   );
-  const bookmarkTotal = bookmarks?.items?.length || 0;
+  const bookmarkTotal = bookmarksCtx?.items?.length || 0;
 
   // Refresh handler
   const handleRefresh = React.useCallback(async () => {

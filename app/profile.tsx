@@ -1,7 +1,14 @@
+import { View } from 'react-native';
 
-import ProfileCard from "../components/ProfileCard";
+import ProfileCard from '../components/ProfileCard';
+import ResponsiveScreenWrapper from '../components/ResponsiveScreenWrapper';
 
 export default function Profile() {
-  // Use the comprehensive ProfileCard component
-  return <ProfileCard />;
+  return (
+    <ResponsiveScreenWrapper scrollable={false}>
+      <View style={{ flex: 1 }}>
+        <ProfileCard />
+      </View>
+    </ResponsiveScreenWrapper>
+  );
 }
