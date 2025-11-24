@@ -602,6 +602,11 @@ class EmotionalWeatherStationManager {
       // Get emotional first aid sessions that overlap with mood readings
       const sessions = emotionalFirstAid.getSessionHistory();
       
+      // Check if sessions is an array
+      if (!Array.isArray(sessions)) {
+        return [];
+      }
+      
       const strategyStats = new Map<string, { used: number; successful: number }>();
       
       occurrences.forEach(mood => {
@@ -611,7 +616,7 @@ class EmotionalWeatherStationManager {
           return timeDiff < 2 * 60 * 60 * 1000; // 2 hours
         });
         
-        nearSessions.forEach(session => {
+        nearSessions.forEach((session: any) => {
           if (session.completed && session.effectiveness) {
             const strategyName = session.techniqueId || 'unknown';
             
