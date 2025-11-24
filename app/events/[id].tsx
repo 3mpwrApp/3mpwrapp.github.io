@@ -14,6 +14,7 @@ try {
 }
 
 import A11yPressable from '../../components/A11yPressable';
+import EventActionsBar from '../../components/EventActionsBar';
 import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from '../../constants/A11Y';
@@ -397,6 +398,16 @@ export default function EventDetail() {
               {event.stepFree && <Chip label={t('eventsFeature.chips.stepFree','Step-free')} />}
               {event.sensorySpace && <Chip label={t('eventsFeature.chips.sensory','Sensory')} />}
             </GapView>
+
+            {/* Event Actions Bar with Submit to 3mpwr */}
+            <EventActionsBar 
+              event={event}
+              palette={palette}
+              showEditDelete={canEdit && event.id.startsWith('evt-')}
+              showSubmitTo3mpwr={event.id.startsWith('evt-')}
+              onEdit={handleEdit}
+              onDelete={handleDelete}
+            />
 
             {/* Admin Actions */}
             {canEdit && (

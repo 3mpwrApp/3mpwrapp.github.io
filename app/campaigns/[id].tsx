@@ -23,6 +23,7 @@ import { useAuth } from "../../context/AuthContext";
 import { campaigns } from "../../data/campaigns";
 import { useTranslation } from "../../i18n";
 import { fsDeleteCampaign, fsGetCampaign, fsJoinCampaign, fsLeaveCampaign, fsUpdateCampaign } from "../../services/firestore";
+import { submitCampaignTo3mpwr } from '../../services/submitTo3mpwr';
 import {
     CampaignsLocalProvider,
     useCampaignsLocal,
@@ -394,6 +395,65 @@ function CampaignDetailInner() {
                   hitSlop={HIT_SLOP_8}
                 >
                   <Text style={styles.buttonText}>🗑️ {t('common.delete', 'Delete')}</Text>
+                </A11yPressable>
+              </GapView>
+            )}
+
+            {/* Submit to 3mpwr App button for user-created campaigns */}
+            {campaign.id.startsWith('cmp-') && (
+              <GapView gap={8} style={{ marginTop: 12, marginBottom: 12 }}>
+                <A11yPressable
+                  style={({ pressed }) => [
+                    styles.button,
+                    { backgroundColor: palette.primary },
+                    pressed && { opacity: 0.8 },
+                  ]}
+                  onPress={async () => {
+                    if (!user) {
+                      Alert.alert(
+                        '🔐 Sign In Required',
+                        'Please sign in to submit campaigns to 3mpwr App for review and publication.',
+                        [{ text: 'OK' }]
+                      );
+                      return;
+                    }
+
+                    Alert.alert(
+                      '📤 Submit to 3mpwr App',
+                      `Submit "${campaign.title}" to 3mpwr App for review?\n\nIf approved, this campaign will be published to the main campaigns list and shared with the community.`,
+                      [
+                        { text: 'Cancel', style: 'cancel' },
+                        {
+                          text: 'Submit',
+                          onPress: async () => {
+                            const result = await submitCampaignTo3mpwr(campaign, {
+                              uid: user.uid,
+                              email: user.email || undefined,
+                              displayName: user.displayName || undefined,
+                            });
+                            
+                            Alert.alert(
+                              result.success ? '✅ Submitted!' : '📱 Saved',
+                              result.message,
+                              [{ text: 'OK' }]
+                            );
+                            
+                            try {
+                              trackEvent('campaign.submit_to_3mpwr', { 
+                                id: campaign.id, 
+                                success: result.success 
+                              });
+                            } catch {}
+                          }
+                        }
+                      ]
+                    );
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Submit ${campaign.title} to 3mpwr App`}
+                  hitSlop={HIT_SLOP_8}
+                >
+                  <Text style={styles.buttonText}>🚀 Submit to 3mpwr App</Text>
                 </A11yPressable>
               </GapView>
             )}
