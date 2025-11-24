@@ -141,6 +141,33 @@ class SocialPoster {
   }
 
   /**
+   * Verify URL is accessible
+   */
+  async verifyUrl(url) {
+    return new Promise((resolve) => {
+      const urlObj = new URL(url);
+      const options = {
+        method: 'HEAD',
+        hostname: urlObj.hostname,
+        path: urlObj.pathname,
+        timeout: 10000
+      };
+
+      const req = https.request(options, (res) => {
+        resolve(res.statusCode === 200);
+      });
+
+      req.on('error', () => resolve(false));
+      req.on('timeout', () => {
+        req.destroy();
+        resolve(false);
+      });
+
+      req.end();
+    });
+  }
+
+  /**
    * Format content for Mastodon
    */
   formatMastodonPost(content) {
@@ -548,6 +575,28 @@ class SocialPoster {
 
       const content = this.getLatestContent();
       console.log(`📋 Found ${content.count} curated items\n`);
+
+      // Verify blog URL is accessible before posting
+      console.log(`🔍 Verifying blog URL: ${BLOG_URL}`);
+      const isAccessible = await this.verifyUrl(BLOG_URL);
+      
+      if (!isAccessible) {
+        console.error('\n❌ ERROR: Blog URL is not accessible!');
+        console.error(`Cannot post to social media with broken link: ${BLOG_URL}`);
+        console.error('This would result in 404 errors for users.\n');
+        
+        this.results.mastodon = { success: false, message: 'Blog URL not accessible (404)' };
+        this.results.bluesky = { success: false, message: 'Blog URL not accessible (404)' };
+        this.results.x = { success: false, message: 'Blog URL not accessible (404)' };
+        
+        // Save results
+        const resultsPath = path.join(process.cwd(), 'public', 'posting-results.json');
+        fs.writeFileSync(resultsPath, JSON.stringify(this.results, null, 2));
+        
+        throw new Error('Blog URL verification failed');
+      }
+      
+      console.log('✅ Blog URL verified accessible!\n');
 
       // Get time context and feature (for analytics)
       const timeCtx = this.getTimeContext();

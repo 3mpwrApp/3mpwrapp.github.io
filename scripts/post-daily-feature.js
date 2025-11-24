@@ -215,6 +215,33 @@ class FeaturePoster {
   }
 
   /**
+   * Verify URL is accessible before posting
+   */
+  async verifyUrl(url) {
+    return new Promise((resolve) => {
+      const urlObj = new URL(url);
+      const options = {
+        method: 'HEAD',
+        hostname: urlObj.hostname,
+        path: urlObj.pathname,
+        timeout: 10000
+      };
+
+      const req = https.request(options, (res) => {
+        resolve(res.statusCode === 200);
+      });
+
+      req.on('error', () => resolve(false));
+      req.on('timeout', () => {
+        req.destroy();
+        resolve(false);
+      });
+
+      req.end();
+    });
+  }
+
+  /**
    * Post to all platforms
    */
   async postAll() {
@@ -226,6 +253,24 @@ class FeaturePoster {
     console.log(`🌟 Feature: ${content.feature}`);
     console.log(`📅 Date: ${content.date}`);
     console.log(`🔗 URL: ${content.url}\n`);
+
+    // Verify URL is accessible before posting
+    console.log('🔍 Verifying article URL is accessible...');
+    const isAccessible = await this.verifyUrl(content.url);
+    
+    if (!isAccessible) {
+      console.error('\n❌ ERROR: Article URL is not accessible!');
+      console.error(`Cannot post to social media with broken link: ${content.url}`);
+      console.error('This would result in 404 errors for users.\n');
+      
+      this.results.mastodon = { success: false, message: 'Article URL not accessible (404)' };
+      this.results.bluesky = { success: false, message: 'Article URL not accessible (404)' };
+      
+      this.saveResults(content);
+      process.exit(1);
+    }
+    
+    console.log('✅ Article URL verified accessible!\n');
 
     // Post to Mastodon
     this.results.mastodon = await this.postToMastodon(content);
