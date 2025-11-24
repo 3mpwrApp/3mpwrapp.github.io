@@ -1,6 +1,22 @@
 # 3mpwr App — Data Ownership and Security Statement
 
-**Last updated:** October 11, 2025
+**Last updated:** November 23, 2025  
+**Version: 2.0 (November 2025 Consolidation Update)**
+
+## 🆕 **November 2025 Updates**
+
+Our commitment to 100% user data ownership extends to all new November 2025 features:
+- **Master Tracker Hub:** All 6 tracking tools (Symptom, Mood, Medication, Appointment, Activity, Energy) store data locally on your device
+- **Appeal Command Center:** All legal case data, deadlines, and timelines remain on your device - no external transmission
+- **4 Wellness Hubs:** Energy & Mood Hub, Mental Wellness Toolkit, Physical Wellness Hub, Pacing Partner AI - all data local-first
+- **Offline Queue:** Queued actions stored locally, processed only when you're online and ready
+- **Profile Data:** Bio, location, pronouns, accessibility needs - all optional and stored in your cloud or locally only
+- **Campaign Submissions:** You explicitly choose what to submit to 3mpwr - nothing shared without your consent
+- **Complexity Mode:** Your experience level and Bad Day Mode preferences stored locally only
+
+**Privacy-First Architecture Maintained:** All November 2025 features follow the same local-first, user-owned data model.
+
+---
 
 ## Our Commitment to 100% User Data Ownership
 
@@ -113,12 +129,15 @@
 ## Implementation in 3mpwr App
 
 ### Current Privacy Features:
-- **Local-First Storage:** All data stored on-device by default
+- **Local-First Storage:** All data stored on-device by default (Master Tracker Hub, Appeal Command Center, Wellness Hubs, Offline Queue)
 - **Guest Mode:** Full app functionality without any account creation
 - **BYOC Strict Mode:** 100% user-owned storage option
-- **Privacy Controls:** Granular opt-in for all network features
-- **Data Management:** Export, clear, and retention controls
+- **Privacy Controls:** Granular opt-in for all network features, Campaign Submissions explicitly opt-in
+- **Data Management:** Export, clear, and retention controls for all tracking data
 - **Encryption:** Device-level and Evidence Locker content encryption
+- **Offline-First:** Offline Queue ensures data integrity without forced cloud sync
+- **Profile Privacy:** All profile fields optional, shared only if you enable community features
+- **AI Processing:** Local AI tools (Gaslighting Detector, Negotiation Coach, AI Case Interpreter) process on-device only
 
 ### Privacy Settings Location:
 - Navigate to **Settings → Privacy & Security**
