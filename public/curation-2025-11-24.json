@@ -1,99 +1,190 @@
 {
   "date": "2025-11-24",
-  "timestamp": "2025-11-24T15:30:43.711Z",
-  "count": 13,
+  "timestamp": "2025-11-24T21:25:29.921Z",
+  "count": 26,
   "minScore": 0.5,
   "items": [
     {
-      "title": "U.S. senators say tariffs causing ‘cultural break’ in relations with Canada",
-      "link": "https://globalnews.ca/news/11540382/us-senators-tariffs-cultural-break-relations-canada/",
-      "description": "Maine Senator King said the lingering rift between Canadians and Americans is particularly troubling in a state that borders on New Brunswick and Quebec.",
-      "score": 27,
-      "pubDate": "Mon, 24 Nov 2025 13:25:17 +0000"
+      "title": "Why are ER wait times so long?",
+      "link": "https://www.cbc.ca/player/play/9.6990430?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/876a4bbf-19d0-4f08-8ee7-63fea42bcf36,1764010126467/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C516%2C7529%2C4235%29%3BResize%3D%28620%29' alt='A wheelchair with a striped canvas bag hanging on the back sits in the wide, brightly lit hallway of a hospital or medical clinic, with a person and a stroller visible in the background.' width='620' height='349' title='The emergency waiting room at The Montreal Children's Hospital on Thursday, Sept. 19, 2024 in Montreal. THE CANADIAN PRESS/Christinne Muschi'/><p>Lengthy wait times have become a reality for patients trying to get into emergency rooms across the country. Marketplace investigates why the system is in crisis and how it’s driving more Canadians to walk out of ERs without ever being seen.</p>",
+      "score": 24.1,
+      "pubDate": "Mon, 24 Nov 2025 13:49:20 EST"
     },
     {
-      "title": "Manitoba Government Expands Prenatal Care in Interlake-Eastern Health Region with Midwifery Services",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71618",
-      "description": "",
-      "score": 25.2,
-      "pubDate": "Mon, 17 Nov 2025 13:58:00 CST"
-    },
-    {
-      "title": "How the provincial takeover of an Ontario school board 13 years ago played out",
-      "link": "https://www.cbc.ca/news/canada/windsor/ontario-windsor-school-board-takeover-province-law-9.6987924?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/1.6762937,1715369822000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C304%2C5821%2C3274%29%3BResize%3D%28620%29' alt='The feet of students under a table in a classroom are shown.' width='620' height='349' title='Seven Oaks School Division said it's raising property taxes and increasing some class sizes because funding from the province won't allow it to keep up with growing enrolment. '/><p>Ontario’s new law meant to make it easier for the province to take control of school boards it deems “fall off the rails,” isn’t a new thing in the Windsor-area.</p>",
-      "score": 14.6,
+      "title": "Younger-skewing co-op programs aim to spark teen interest in health care",
+      "link": "https://www.cbc.ca/news/canada/high-school-pathways-co-ops-9.6985456?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/c1aebd41-e866-4fd8-bcaa-167cea1343a6,1763593638344/full/max/0/default.jpg?im=Crop%2Crect%3D%28460%2C171%2C3571%2C2008%29%3BResize%3D%28620%29' alt='High school students gather around a large, conference table-sized computer tablet showing intricate 3D scans of a cadaver's muscular system' width='620' height='349' title='Gr. 11 and 12 students from the Peel District School Board explore scans of real cadavers via a virtual dissection table at Toronto Metropolitan University's School of Medicine in Brampton, Ont., on November 19, 2025.'/><p>Co-op programs in health-care spaces regularly enlist post-secondary students, but some are skewing younger to target high schoolers. The hope is to spark interest in a broader pool of teens, especially those from under-represented groups, and get more of them thinking about Canada's health-care system.</p>",
+      "score": 23,
       "pubDate": "Mon, 24 Nov 2025 04:00:00 EST"
     },
     {
-      "title": "Pressure on renters higher in N.S. than any other province, analysis finds",
-      "link": "https://www.cbc.ca/news/canada/nova-scotia/pressure-on-renters-is-higher-in-n-s-than-any-other-province-analysis-finds-9.6988188?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/6cfdaee6-7032-4a05-9052-628da442d497,1763754500177/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C62%2C1180%2C663%29%3BResize%3D%28620%29' alt='Pedestrians and vehicles stream in front of a high-rise apartment building.' width='620' height='349' title='Pedestrians and vehicles stream in front of a high-rise apartment building in Halifax in this file photo.'/><p>A new tool created by real estate firm Turner Drake & Partners blends multiple indicators of housing markets across Canada to assign scores to be used for comparison. It shows the financial burden on renters in Nova Scotia is greater than in any other province.</p>",
-      "score": 13.5,
-      "pubDate": "Mon, 24 Nov 2025 05:00:00 EST"
+      "title": "Is Canada Adopting ICE Anti-Migrant Tactics?",
+      "link": "https://thetyee.ca/News/2025/11/24/Is-Canada-Adopting-ICE-Anti-Migrant-Tactics/",
+      "description": "A raid on a major Calgary construction site has raised serious questions about the government’s approach.",
+      "score": 20.4,
+      "pubDate": "Mon, 24 Nov 2025 08:30:00 +0000"
     },
     {
-      "title": "Minister says declaring Ontario intimate partner violence epidemic would be ‘disingenuous'",
-      "link": "https://globalnews.ca/news/11537915/ford-government-intimate-partner-violence-epidemic-declaration-disingenuous/",
-      "description": "Survivors and experts have called on the Ford government to declare intimate partner violence an epidemic, arguing it would add urgency and emergency funding to the acute problem.",
-      "score": 14.7,
-      "pubDate": "Mon, 24 Nov 2025 11:00:58 +0000"
+      "title": "Truck with travelling Ontario ballet’s entire Nutcracker set stolen in GTA",
+      "link": "https://www.cbc.ca/news/canada/toronto/nutcracker-vehicle-theft-9.6990586?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/83d14999-af9d-45d4-8731-6322995fb5b5,1764010325646/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C5867%2C3300%29%3BResize%3D%28620%29' alt='A ballet dancer leaps in front of a red and orange curtain that is part of the set of The Nutcracker. ' width='620' height='349' title='Ballet Jörgen said a moving fan carrying its set and backdrop for The Nutcracker, pictured in action here, was stolen in Toronto on Monday morning.'/><p>A ballet company on an Ontario-wide tour of The Nutcracker says someone stole the moving truck storing its “irreplaceable” sets and backdrops.</p>",
+      "score": 12,
+      "pubDate": "Mon, 24 Nov 2025 14:02:02 EST"
     },
     {
-      "title": "Manitoba Government Honours Indigenous Veterans and Supports First-Annual Powwow",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71460",
-      "description": "",
-      "score": 10.5,
-      "pubDate": "Sat, 08 Nov 2025 09:00:00 CST"
-    },
-    {
-      "title": "Manitoba Government Launches Tool to Combat Chronic Wasting Disease",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71619",
-      "description": "",
+      "title": "3 grizzly bears remain on the loose following attack in Bella Coola",
+      "link": "https://globalnews.ca/news/11541007/3-grizzly-bears-missing-attack-bella-coola/",
+      "description": "'We are bringing in more resources — those resources look like a wildlife vet that's coming down to assist and some biologists to assist as well,' Sgt. Jeff Tyre said.",
       "score": 8.5,
-      "pubDate": "Mon, 17 Nov 2025 15:05:00 CST"
+      "pubDate": "Mon, 24 Nov 2025 19:53:32 +0000"
     },
     {
-      "title": "Family members worried as strike continues at GTA care home",
-      "link": "https://globalnews.ca/news/11540357/family-members-worried-toronto-area-care-home-strike/",
-      "description": "Family members of people living in a Toronto-area group home say they are worried for their loved ones' well-being as the home's management is providing limited information.",
+      "title": "Polar vortex set to bring ‘harsh early start to winter’ across Canada",
+      "link": "https://globalnews.ca/news/11540944/polar-vortex-early-winter-canada/",
+      "description": "A polar vortex — a large area of low pressure — is heading south from the Arctic, bringing with it cold weather across many parts of Canada.",
+      "score": 9.5,
+      "pubDate": "Mon, 24 Nov 2025 20:30:29 +0000"
+    },
+    {
+      "title": "1 of 4 accused in alleged Quebec extremist plot appears in court, to return next year",
+      "link": "https://globalnews.ca/news/11541009/quebec-extremist-plot-update/",
+      "description": "One of four accused in an alleged anti-government plot to forcibly take control of land in the Quebec City area are in court today and will return before a judge in the new year.",
+      "score": 12,
+      "pubDate": "Mon, 24 Nov 2025 19:29:09 +0000"
+    },
+    {
+      "title": "Vancouver International Black Film Festival returns for its fifth edition",
+      "link": "https://www.straight.com/movies/vancouver-international-black-film-festival-returns-for-its-fifth-edition",
+      "description": "A hybrid lineup of films, panels, and workshops spotlights creators from Canada and around the world.",
+      "score": 9.5,
+      "pubDate": "2025-11-24T12:23:10-08:00"
+    },
+    {
+      "title": "N.L. asks Deloitte to carry out review after 'incorrect' citations found in provincial health plan",
+      "link": "https://www.cbc.ca/news/canada/newfoundland-labrador/nl-deloitte-citations-9.6990216?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.5100190,1717245040000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C4233%2C2381%29%3BResize%3D%28620%29' alt='A sign is pictured in front of a building with a deep blue sky.' width='620' height='349' title='Confederation  Building is the seat of Newfoundland and Labrador's government.'/><p></p>",
+      "score": 11.7,
+      "pubDate": "Mon, 24 Nov 2025 13:49:37 EST"
+    },
+    {
+      "title": "London, Ont. teen facing weapons charges after sushi restaurant mob attack",
+      "link": "https://www.cbc.ca/news/canada/london/london-ont-teen-facing-weapons-charges-after-sushi-restaurant-mob-attack-9.6990210?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/037f570b-921e-4c85-89f8-2a4a78acbda9,1763939410790/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C613%2C3024%2C1701%29%3BResize%3D%28620%29' alt='A group of teens with blurred faces in a parking lot.' width='620' height='349' title='The group of teenagers grew larger after staff turned them away from the restaurant, Minsoo Lee said.'/><p>A 16-year-old boy has been charged as the result of an investigation into an alleged teen mob attack of a Masonville area restaurant. </p>",
+      "score": 7.5,
+      "pubDate": "Mon, 24 Nov 2025 10:48:58 EST"
+    },
+    {
+      "title": "Multi-vehicle Ontario car crash sends 6 to hospital, closes highway for hours",
+      "link": "https://globalnews.ca/news/11540716/perth-ontario-car-crash/",
+      "description": "Ontario Provincial Police are investigating a five-vehicle collision that injured six people, including three who were sent to hospital with potentially life-threatening injuries.",
+      "score": 9,
+      "pubDate": "Mon, 24 Nov 2025 18:03:05 +0000"
+    },
+    {
+      "title": "Bear encounters on the rise in B.C. community where grizzlies attacked school group, residents say",
+      "link": "https://www.cbc.ca/news/canada/british-columbia/search-for-grizzly-bear-in-bella-coola-attack-continues-9.6989778?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.4132188,1743627274000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C45%2C1200%2C675%29%3BResize%3D%28620%29' alt='A grizzly bear.' width='620' height='349' title='A grizzly bear in Yukon. The Yukon government has banned roadside hunting of the bears near Klukshu Village.'/><p></p>",
+      "score": 7,
+      "pubDate": "Fri, 21 Nov 2025 16:31:26 EST"
+    },
+    {
+      "title": "Joint Statement By Prime Minister Mark Carney And Premier Wab Kinew On Federal-Provincial Collaboration Regarding Port Of Churchill Plus",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71597",
+      "description": "",
+      "score": 6,
+      "pubDate": "Sun, 16 Nov 2025 14:00:00 CST"
+    },
+    {
+      "title": "Lobster fishermen raise safety concerns before start of new season",
+      "link": "https://www.cbc.ca/player/play/9.6989179?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/7bded90a-d8e6-4e03-a641-eb1cf1dc0d44,1763914339007/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Drone shot of multiple boats in a harbour' width='620' height='349' title='Boats sit in the harbour in Southwest Nova Scotia in preparation for the launch of another fishing season. '/><p>With the most lucrative lobster fishery in the country set to open, some fishermen are looking for fresh approaches to make sure opening day gets off to a safer start. CBC’s Michael Gorman has the story.</p>",
       "score": 5.5,
-      "pubDate": "Mon, 24 Nov 2025 11:31:18 +0000"
+      "pubDate": "Mon, 24 Nov 2025 05:00:00 EST"
     },
     {
-      "title": "Measles Update #46",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71617",
+      "title": "Mounties issue thin ice warning after two separate drownings in northern Manitoba",
+      "link": "https://globalnews.ca/news/11541225/drowning-northern-manitoba-rcmp/",
+      "description": "RCMP are warning people to stay off the ice after two separate drownings in northern Manitoba.",
+      "score": 5.3999999999999995,
+      "pubDate": "Mon, 24 Nov 2025 20:43:00 +0000"
+    },
+    {
+      "title": "Halifax told to streamline evaluation of Dalhousie University's historic properties",
+      "link": "https://globalnews.ca/news/11541102/dalhousie-university-evaluation-historic-properties/",
+      "description": "A new report says Halifax regional council should streamline the heritage evaluation of 37 downtown properties owned by Dalhousie University.",
+      "score": 4.5,
+      "pubDate": "Mon, 24 Nov 2025 20:11:23 +0000"
+    },
+    {
+      "title": "Québec solidaire members stunned by Vincent Marissal's abrupt departure",
+      "link": "https://globalnews.ca/news/11540962/vincent-marissal-quebec-solidaire-departure/",
+      "description": "Legislature member Vincent Marissal leaves Québec solidaire during recent Montreal public transit strikes, shortly after the party voted to suspend hum from caucus.",
+      "score": 4.5,
+      "pubDate": "Mon, 24 Nov 2025 19:29:02 +0000"
+    },
+    {
+      "title": "Alberta Speaker, ministers among 6 more UCP MLAs facing recall petitions",
+      "link": "https://globalnews.ca/news/11540802/ucp-mlas-recall-petitions-ministers-speaker/",
+      "description": "Nine members of Premier Danielle Smith’s United Conservative Party caucus are facing recall petitions – enough to potentially tip the balance of power in the Alberta legislature.",
+      "score": 4.5,
+      "pubDate": "Mon, 24 Nov 2025 17:44:45 +0000"
+    },
+    {
+      "title": "Alberta's Bill 13 seeks to legitimize false narratives and open bigotry",
+      "link": "https://rabble.ca/politics/canadian-politics/albertas-bill-13-seeks-to-legitimize-false-narratives-and-open-bigotry/",
       "description": "",
       "score": 4.5,
-      "pubDate": "Mon, 17 Nov 2025 11:01:00 CST"
+      "pubDate": "Mon, 24 Nov 2025 20:35:54 +0000"
     },
     {
-      "title": "‘It’s complicated’: What happens when the family cottage gets divided by 8?",
-      "link": "https://www.cbc.ca/news/canada/ottawa/complicated-cottage-creator-network-ottawa-9.6931887?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/eca7cacc-1c18-4fa6-b225-c805876d842f,1762986746810/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C210%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A group of people sit on a wall by a river in summer.' width='620' height='349' title='Jennifer Lester's family has owned a cottage on the Outlet River in Prince Edward County, Ont. for decades.'/><p>Over half a century of family memories and tradition are tied to a property in Prince Edward County for Jennifer Lester Mulridge's extended family. But family dynamics and ownership costs make inheritance challenging, as Lester Mulridge explains in this video made in collaboration with CBC Ottawa's Creator Network.</p>",
+      "title": "Uh oh. The dreaded polar vortex may be making an appearance very soon",
+      "link": "https://www.cbc.ca/news/science/polar-vortex-return-9.6988055?cmp=rss",
+      "description": "",
       "score": 4.5,
       "pubDate": "Mon, 24 Nov 2025 04:00:00 EST"
     },
     {
-      "title": "How one North Vancouver school is redefining education for neurodiverse learners in B.C.",
-      "link": "https://www.straight.com/education/how-one-north-vancouver-school-is-redefining-education-for-neurodiverse-learners-in-bc",
-      "description": "“Our students learn through doing.”",
-      "score": 2,
-      "pubDate": "2025-10-31T09:49:53-07:00"
+      "title": "Most Canadians cherish holiday gatherings despite dinner table debates, poll finds",
+      "link": "https://www.cbc.ca/news/canada/edmonton/family-gatherings-poll-9.6990031?cmp=rss",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Mon, 24 Nov 2025 12:18:41 EST"
     },
     {
-      "title": "Demand soars at Halifax Diaper Bank 3 months after launch",
-      "link": "https://www.cbc.ca/news/canada/nova-scotia/halifax-diaper-bank-swamped-with-demand-9.6987979?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/ead1735a-004e-460b-8fe2-6720445ece7e,1763747421030/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C384%2C5712%2C3213%29%3BResize%3D%28620%29' alt='A woman stands in front of piles of diapers. ' width='620' height='349' title='Lydia O'Regan founded the Halifax Diaper Bank in September. She now supports an average of five families in Halifax every day. '/><p>A grassroots effort by a Halifax woman to donate diapers to families in need has helped hundreds of people in just the first three months in operation. </p>",
+      "title": "Ford government passes controversial omnibus rental bill amidst protests",
+      "link": "https://globalnews.ca/news/11540856/ontario-bill-60-passes/",
+      "description": "On Monday morning, Bill 60 passed its third reading at Queen's Park, the final stage before it receives royal assent and becomes law.",
       "score": 3,
-      "pubDate": "Mon, 24 Nov 2025 05:00:00 EST"
+      "pubDate": "Mon, 24 Nov 2025 18:49:22 +0000"
     },
     {
-      "title": "B.C. activists who tested and sold heroin and meth launch constitutional challenge",
-      "link": "https://globalnews.ca/news/11540364/bc-activists-constitutional-challenge-meth-heroin/",
-      "description": "A constitutional challenge by founders of a Vancouver \"compassion club\" who were found guilty of drug trafficking is expected to begin today at the British Columbia Supreme Court.",
+      "title": "The Culinary Commons helps Vancouver chefs gather",
+      "link": "https://www.straight.com/food/culinary-commons-helps-vancouver-chefs-gather",
+      "description": "1250 East Georgia Street is serving Vancouver's culinary community. ]",
+      "score": 3,
+      "pubDate": "2025-11-24T12:37:52-08:00"
+    },
+    {
+      "title": "One Indigenous Community's Mining Windfall Is Another’s Worry",
+      "link": "https://thetyee.ca/News/2025/11/24/Indigenous-Community-Mining-Windfall/",
+      "description": "As the Tahltan benefit from Red Chris and other critical metal plays, 14 Alaskan nations are pushing back.",
+      "score": 3,
+      "pubDate": "Mon, 24 Nov 2025 20:30:00 +0000"
+    },
+    {
+      "title": "#TheMoment grocery stores held dance parties in Winnipeg and Calgary",
+      "link": "https://www.cbc.ca/player/play/9.6989858?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/3db11f2d-024e-491c-a7d9-2a4cfddcdc28,1763937109933/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='People crowded on a dance floor.' width='620' height='349' title=''/><p>Joanne Roberts tells The National about the moment she attended a party in a grocery store that brought her closer to her community.</p>",
+      "score": 3,
+      "pubDate": "Sun, 23 Nov 2025 22:28:36 EST"
+    },
+    {
+      "title": "The Pandemic Left Her Reeling. So She Turned to Growing Flowers",
+      "link": "https://thetyee.ca/WhatWorks/2025/11/24/Bellingham-Flower-Farm/",
+      "description": "See how a frontline medical worker found new life in farming and selling pesticide-free blossoms.",
       "score": 1,
-      "pubDate": "Mon, 24 Nov 2025 11:58:17 +0000"
+      "pubDate": "Mon, 24 Nov 2025 08:40:00 +0000"
     }
   ]
 }
