@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-24T00:57:00.887Z",
+  "lastUpdated": "2025-11-24T06:18:36.414Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3285,
+      "totalPosts": 3310,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T00:56:53.619Z"
+      "lastSeen": "2025-11-24T06:18:27.624Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3300,
+      "totalPosts": 3325,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T00:56:55.089Z"
+      "lastSeen": "2025-11-24T06:18:29.672Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3287,
+      "totalPosts": 3312,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T00:56:56.661Z"
+      "lastSeen": "2025-11-24T06:18:31.521Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3293,
+      "totalPosts": 3318,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T00:56:58.248Z"
+      "lastSeen": "2025-11-24T06:18:33.338Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3300,
+      "totalPosts": 3325,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T00:56:59.885Z"
+      "lastSeen": "2025-11-24T06:18:35.412Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Alice Wong, the disability justice advocate and author, died at the weekend at age 51. She was best known for founding the Disability Visibility Project. She also wrote multiple books and a column for Teen Vogue, and her final project was Crips for eSims for Gaza, which raised over $3 million to […]",
-      "author": "culturedesk.flipboard.social.ap.brid.gy",
-      "engagement": 11,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
-      "author": "zeldman.bsky.social",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Alice Wong, the disability justice advocate and author, died at the weekend at age 51. She was best known for founding the Disability Visibility Project. She also wrote multiple books and a column for Teen Vogue, and her final project was Crips for eSims for Gaza, which raised over $3 million to […]",
-      "author": "culturedesk.flipboard.social.ap.brid.gy",
-      "engagement": 11,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
       "author": "zeldman.bsky.social",
@@ -338,6 +302,42 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "You can include blind and low vision Australians by adding ALT text to images.\n\nA professional media team should know this. \n\nPerhaps you do know this, but you don’t care?\n\n#AusPol\n\n#accessibility",
+      "author": "kentparkskeet.bsky.social",
+      "engagement": 27,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Glad to see the Remove The Regime protest in DC making their event accessible for the Deaf community. \n\n#accessibility #Deaf\nyoutu.be/26IUDIER3BM?...",
+      "author": "mhairiforrest.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Commenting on a post that talks bout how Tailwind is problematic for Devs with dyslexia or ADHD with...\n\n\"Many applications I’ve worked in use tailwind effectively, and the code seems highly readable to me. I don’t see the issue here.\"\n\nis peak ableism.\n\n#Accessibility #FrontEnd #WebDev",
+      "author": "xirclebox.com",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "There's a special place in hell reserved for web developers who break default browser functionality like pasting into input fields or ctrl+clicking on links to open in a new tab.\n\nAnd the special hell is reserved for those who implement navigation as anything but anchor tags.\n\n#rant #a11y",
+      "author": "mrdowden.com",
+      "engagement": 16,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -354,11 +354,11 @@
       "count": 27
     },
     {
-      "keyword": "a11y",
-      "count": 27
+      "keyword": "disabilityjustice",
+      "count": 26
     },
     {
-      "keyword": "disabilityjustice",
+      "keyword": "a11y",
       "count": 26
     },
     {
@@ -379,7 +379,7 @@
     },
     {
       "keyword": "disability",
-      "count": 8
+      "count": 10
     },
     {
       "keyword": "digitalaccessibility",
@@ -410,15 +410,15 @@
       "count": 4
     },
     {
+      "keyword": "covid",
+      "count": 4
+    },
+    {
       "keyword": "wpad2025",
       "count": 4
     },
     {
       "keyword": "wpa11yday",
-      "count": 4
-    },
-    {
-      "keyword": "accessibility thanks",
       "count": 4
     }
   ]
