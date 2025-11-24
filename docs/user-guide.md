@@ -169,7 +169,7 @@ allFeaturesLive: 60+ features, 90% accessibility target achieved, full offline s
 **NEW Features:**
 - **Submit to 3mpwr Button** - Share user-created campaigns and events with the community
 - **Every Canadian Counts Campaign** - Join the national census inclusion campaign (460+ signatures)
-- **TBDIWSG Information Sessions** - Toronto-Based Disabled & Injured Workers Support Group events
+- **TBDIWSG Information Sessions** - Thunder Bay -Based Disabled & Injured Workers Support Group events
 - **Calendar Auto-Updates** - Subscribe once, events update automatically
 - **Social Sharing** - Share campaigns with beautiful preview cards
 - **Website Integration** - Campaigns sync to 3mpwrApp website in real-time
@@ -409,7 +409,7 @@ Subscribe to disability awareness events in your phone's native calendar!
 **Real-Time Firestore Sync** - Campaigns and events now sync automatically:
 - **Events API** - Live calendar feed at 3mpwrApp website
 - **Campaigns Worker** - Real-time sync between app and website
-- **TBDIWSG Events** - Toronto-Based Disabled & Injured Workers Support Group information sessions added
+- **TBDIWSG Events** - Thunder Bay-Based Disabled & Injured Workers Support Group information sessions added
 - **Every Canadian Counts** - National census inclusion campaign (460+ signatures)
 - **Auto-Updates** - Changes in app appear on website instantly
 
@@ -3515,9 +3515,23 @@ Use Campaign Coordination for:
 ---
 
 <a id="common-questions"></a>
-## Common Questions
+## Common Questions / FAQs
 
 ### ❓ General Questions
+
+**Q: What is 3mpwr App?**
+A: 3mpwr App is a comprehensive hub for injured workers, the disability community, advocates, and allies. It brings together in-app interactive tools, external resources, community support, wellness tracking, campaigns, and advocacy tools. Now with 90% accessibility achieved and full offline support!
+
+**Q: How do I navigate the app?**
+A: Use the tabs at the bottom: Home, Campaigns, Community, Resources, Wellness, Advocacy, Research, Settings, and What's New. Set your Complexity Mode (Simple/Standard/Power User) in Settings to control how many features you see.
+
+**Q: What is Complexity Mode and how do I use it?**
+A: Complexity Mode lets you choose your experience level:
+- **Simple Mode** (5 core features) - For overwhelming days, flare-ups, or cognitive challenges
+- **Standard Mode** (20 common features) - Recommended for most users
+- **Power User Mode** (all 150+ features) - Everything unlocked
+
+Go to Settings → Complexity Mode to change. You can also use Bad Day Mode for emergency simplification during flare-ups.
 
 **Q: Is this app really free?**
 A: Yes, the app is completely free. There are no hidden costs or premium features.
@@ -3528,38 +3542,194 @@ A: You can use Guest mode to try the app, but creating an account lets you save 
 **Q: Can I use this if I'm not disabled?**
 A: Yes! The app is also for family members, caregivers, advocates, and anyone supporting people with disabilities.
 
+### 🏢 Resources vs Research
+
+**Q: What's the difference between Resources and Research tabs?**
+A: **Resources tab** contains IN-APP interactive tools like:
+- Master Tracker Hub (track symptoms, meds, appointments)
+- Letter Wizard (22+ professional letter templates)
+- Appeal Command Center (deadline tracking, denial decoder)
+- Evidence Manager (secure document storage)
+
+**Research tab** contains EXTERNAL LINKS to 96+ resources:
+- Government programs by province
+- Disability benefits (ODSP, PWD, AISH, etc.)
+- Workers' compensation boards
+- Human rights commissions
+
+Resources stay in-app, Research opens your browser.
+
+**Q: How do I find local resources for my province?**
+A: Go to Research tab → External Resources → Use the province filter to select your province (AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT). You'll see employment standards, human rights commissions, disability benefits, and workers' compensation boards specific to your region.
+
+### 🛠️ Key Features
+
+**Q: What is the Master Tracker Hub?**
+A: Master Tracker Hub (Resources → Master Tracker Hub) consolidates 6 tracking tools into one dashboard:
+- Symptoms tracker
+- Medications tracker
+- Rehab exercises
+- Doctor appointments
+- Case timeline
+- Accessibility needs
+
+Features AI pattern detection and exports to PDF/CSV/JSON for sharing with doctors or lawyers.
+
+**Q: What is the Appeal Command Center?**
+A: Appeal Command Center (Resources → Appeal Command Center) is your deadline warfare HQ:
+- Deadline tracking with urgency color-coding (red = 7 days, orange = 30 days)
+- Denial decoder - AI translates insurance/government jargon to plain English
+- Evidence strength meter - Rate how strong your case is
+- Appeal prep guide - Step-by-step walkthrough
+- Precedent finder (coming soon)
+
+Never miss a critical deadline again!
+
+**Q: What are the letter templates?**
+A: The Letter Wizard in Resources tab offers 22+ professional letter templates including:
+- Accommodation requests
+- Appeals and reconsideration
+- Medical leave requests
+- Harassment complaints
+- Wrongful termination
+- LTD appeals
+- Housing accommodation
+- And many more!
+
+Fill in fields, preview, and share or export as PDF.
+
+**Q: What are the 4 Wellness Hubs?**
+A: Wellness tab features 4 consolidated hubs:
+1. **Energy & Mood Hub** - Energy tracking, mood monitoring, sleep tracking, pacing partner
+2. **Unified Health Tracker** - Symptoms, pain, chronic conditions, rehab progress
+3. **Mental Wellness Toolkit** - 8 CBT/DBT tools (grounding, acceptance, crisis skills)
+4. **Movement & Rehab Hub** - Exercises, micro-movements, nutrition guides
+
+Everything organized in one place instead of 10+ separate screens!
+
+### 📶 Offline & Technical
+
+**Q: Does the app work offline?**
+A: Yes! The Evidence Locker has a full offline queue system:
+- Upload documents without internet
+- Automatically sync when you reconnect
+- Exponential backoff retry (1s to 60s)
+- Manual retry buttons
+- Pending count badge shows what's waiting
+- Your evidence is never lost!
+
+**Q: Can I use this on multiple devices?**
+A: Yes! If you use cloud backup (optional Firestore), your profile and preferences sync across devices. Otherwise, use backup/restore feature to manually transfer data.
+
+**Q: The app is running slowly. What can I do?**
+A: Close other apps, restart your device, or clear the app's cache in Settings → Privacy & Backups. First launch may take 1-2 minutes to cache assets (normal).
+
 ### 🔒 Privacy Questions
 
 **Q: Who can see my information?**
-A: Only you can see your private information. Community posts are visible to other users in that community.
+A: Only you can see your private information. Community posts are visible to other users in that community. Everything in Resources (Master Tracker, Evidence Locker, etc.) is private by default.
 
 **Q: Does the app track me?**
-A: No. The app doesn't track your location, behavior, or personal activities.
+A: No. The app doesn't track your location, behavior, or personal activities. Analytics are off by default - you can enable them in Settings → Privacy Controls if you want to help improve the app.
 
 **Q: What if I lose my phone?**
-A: If you've made backups, you can restore your information on a new device. Without backups, your local information would be lost.
-
-### 🛠️ Technical Questions
-
-**Q: Why isn't a feature working?**
-A: Try closing and reopening the app. Check if you have an internet connection. Make sure you have the latest version.
-
-**Q: Can I use this on multiple devices?**
-A: Yes, but you'll need to manually sync your information using the backup/restore feature or optional cloud sync.
-
-**Q: The app is running slowly. What can I do?**
-A: Close other apps, restart your device, or clear the app's cache in Settings → Privacy & Backups.
+A: If you've made backups (Settings → Privacy & Backups), you can restore your information on a new device. If using cloud backup, sign in with your account and everything syncs automatically.
 
 ### 💪 Using the App Effectively
 
 **Q: Where should I start?**
-A: Start with whatever you need most urgently. If you're not sure, try the Evidence Locker to save important documents.
+A: Choose your Complexity Mode first (Settings → Complexity Mode):
+- **Overwhelmed?** Start with Simple Mode (5 features)
+- **New user?** Try Standard Mode (20 features)
+- **Power user?** Unlock everything in Power User Mode
+
+Then explore based on your needs:
+- **Need legal help?** Resources → Letter Wizard or Appeal Command Center
+- **Health tracking?** Wellness → Energy & Mood Hub or Health Tracker
+- **Looking for benefits?** Research → External Resources → Filter by province
+- **Crisis support?** Tap the red SOS button (bottom-right on screens)
 
 **Q: How often should I use the wellness tools?**
-A: Use them as often as feels helpful. Even once a week can make a difference. Don't pressure yourself.
+A: Use them as often as feels helpful. Even once a week can make a difference. Don't pressure yourself. The app adapts to your energy level - use Bad Day Mode when needed!
 
 **Q: What if I make a mistake?**
-A: Most actions can be undone. Look for "Undo" options or edit your entries. You can always delete and start over.
+A: Most actions can be undone. Look for "Undo" options or edit your entries. You can always delete and start over. Auto-save protects your work.
+
+### 🆘 Crisis Support
+
+**Q: What is the SOS/Crisis button?**
+A: The red SOS button (bottom-right on main screens) provides instant crisis access:
+- **Single tap** - Opens crisis menu with:
+  - Call 988 (Suicide & Crisis Lifeline)
+  - Text Crisis Line (HOME to 741741)
+  - Safe Landing Page (breathing exercises)
+  - Emotional First Aid
+  - Quick Exit (escape to weather.com)
+- **Triple tap** - Sends emergency SMS to your crisis contacts with location
+- Always visible when you need help!
+
+**Q: How do I use Bad Day Mode?**
+A: Bad Day Mode is for flare-ups, brain fog, or overwhelming days:
+1. Go to Settings → Complexity Mode
+2. Tap "Bad Day Mode"
+3. This instantly switches you to Simple Mode (5 core features only)
+4. When feeling better, go back to Settings → Complexity Mode → choose your preferred mode
+
+### 🌐 Community & Campaigns
+
+**Q: Can I submit my own campaigns or events?**
+A: Yes! On campaign and event detail pages, look for the "Submit to 3mpwr" button (shows for user-created content). After review, your campaign/event will appear on the 3mpwrApp website and sync to all users. Privacy protected - you control what's shared.
+
+**Q: Where can I find government disability benefits information?**
+A: Research tab → External Resources → Filter by "Benefits" category and your province. You'll find links to:
+- ODSP (Ontario)
+- PWD (BC)
+- AISH (Alberta)
+- SAID (Manitoba)
+- Income Support (other provinces)
+- CPP Disability (federal)
+- And more!
+
+Each has descriptions and opens in your browser.
+
+### ♿ Accessibility
+
+**Q: What accessibility features does the app have?**
+A: Comprehensive accessibility includes:
+- **Visual:** Full screen reader support (VoiceOver/TalkBack), high contrast mode, text scaling up to 200%
+- **Dyslexia:** OpenDyslexic and Lexend fonts, colored overlays for visual stress, spacing presets
+- **Motor:** Dwell-click (hover to click), large touch targets (44×44dp minimum), tremor compensation
+- **Cognitive:** Three complexity modes (Simple/Standard/Power), Bad Day Mode, auto-save, breadcrumbs
+- **Trauma-Informed:** SOS button, Safe Landing Page, PanicButton for quick exit
+
+**Q: How do I customize my profile for better recommendations?**
+A: Go to Settings → Profile Editor. Fill out 5 sections:
+1. **Disability Types** - Chronic pain, fatigue, mobility, cognitive, mental health
+2. **Symptoms to Track** - Choose from 15+ symptom types
+3. **Wellness Tools Preferences** - Pick favorites from 26 tools
+4. **Advocacy Needs** - Legal help, benefits, housing, healthcare, employment
+5. **Family Role** - Supporter, caregiver, family member, or self-advocate
+
+The more you share, the better the app recommends relevant tools. All optional and syncs across devices if using cloud backup.
+
+### 📱 In-App Features
+
+**Q: Where can I find FAQs in the app?**
+A: Go to the FAQs tab (bottom navigation). You can search FAQs, view all questions/answers, and even add your own FAQs to help the community. The app also has contextual help throughout - look for (?) icons.
+
+**Q: How do I filter content?**
+A: Most tabs have filtering:
+- **Research:** Province filter (AB, BC, MB, etc.), Category filter (Employment, Benefits, Crisis)
+- **Resources:** Complexity Mode controls what you see, plus search functionality
+- **Wellness:** Hub organization groups related tools
+- **Campaigns:** Filter by active, joined, completed
+
+**Q: Can I export my data?**
+A: Yes! Many tools support export:
+- **Master Tracker Hub:** PDF, CSV, JSON
+- **Evidence Locker:** Download all files as ZIP
+- **Settings → Privacy:** Export all your data
+- **Wellness tools:** Export logs to CSV for doctors/therapists
 
 ---
 

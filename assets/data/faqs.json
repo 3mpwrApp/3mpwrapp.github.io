@@ -2,12 +2,22 @@
   {
     "id": "f1",
     "q": "What is 3mpwr App?",
-    "a": "3mpwr App is a hub for injured workers, the disability community, advocates, and allies. It brings together resources, podcasts, events, wellness tools, and simple letter templates in one app."
+    "a": "3mpwr App is a comprehensive hub for injured workers, the disability community, advocates, and allies. It brings together in-app interactive tools, external resources, community support, wellness tracking, campaigns, and advocacy tools. Now with 90% accessibility achieved and full offline support!"
   },
   {
     "id": "f2",
     "q": "How do I navigate the app?",
-    "a": "Use the tabs at the bottom: What's New, Resources, Podcasts, Events, Wellness, FAQs, About, Saved, and Settings. Tap a card to open details."
+    "a": "Use the tabs at the bottom: Home, Campaigns, Community, Resources, Wellness, Advocacy, Research, Settings, and What's New. Set your Complexity Mode (Simple/Standard/Power User) in Settings to control how many features you see."
+  },
+  {
+    "id": "f2a",
+    "q": "What is Complexity Mode and how do I use it?",
+    "a": "Complexity Mode lets you choose your experience level: Simple Mode (5 core features), Standard Mode (20 common features), or Power User Mode (all 150+ features). Go to Settings → Complexity Mode to change. You can also use Bad Day Mode for emergency simplification during flare-ups."
+  },
+  {
+    "id": "f2b",
+    "q": "What's the difference between Resources and Research tabs?",
+    "a": "Resources tab contains IN-APP interactive tools like Master Tracker Hub, Letter Wizard, and Appeal Command Center. Research tab contains EXTERNAL LINKS to 96 government programs, disability benefits, and advocacy resources. Resources stay in-app, Research opens your browser."
   },
   {
     "id": "f3",
@@ -37,7 +47,22 @@
   {
     "id": "f8",
     "q": "What are the letter templates?",
-    "a": "Under Resources, you can generate Accommodation and Appeal letters. Fill in fields, preview, and Share or Export as PDF (requires expo‑print in a dev build)."
+    "a": "The Letter Wizard in Resources tab offers 22+ professional letter templates including accommodation requests, appeals, reconsideration, medical leave, harassment complaints, and more. Fill in fields, preview, and share or export as PDF."
+  },
+  {
+    "id": "f8a",
+    "q": "What is the Master Tracker Hub?",
+    "a": "Master Tracker Hub (Resources → Master Tracker Hub) consolidates 6 tracking tools into one dashboard: symptoms, medications, rehab exercises, doctor appointments, case timeline, and accessibility needs. Features AI pattern detection and exports to PDF/CSV/JSON for sharing with doctors or lawyers."
+  },
+  {
+    "id": "f8b",
+    "q": "What is the Appeal Command Center?",
+    "a": "Appeal Command Center (Resources → Appeal Command Center) is your deadline warfare HQ. It includes deadline tracking with urgency color-coding, denial decoder (AI translates jargon to plain English), evidence strength meter, and appeal prep guide. Never miss a critical deadline again!"
+  },
+  {
+    "id": "f8c",
+    "q": "Does the app work offline?",
+    "a": "Yes! The Evidence Locker has a full offline queue system. Upload documents without internet and they'll automatically sync when you reconnect. Includes exponential backoff retry (1s to 60s), manual retry buttons, and pending count badge. Your evidence is never lost."
   },
   {
     "id": "f9",
@@ -58,5 +83,45 @@
     "id": "f12",
     "q": "Where is the Emergency Wallet Card?",
     "a": "It now lives under Settings → Emergency Wallet Card. You can also open it from Resources → Support & Directories → Emergency Info Wallet Card, which jumps to the Settings section."
+  },
+  {
+    "id": "f13",
+    "q": "How do I find local resources for my province?",
+    "a": "Go to Research tab → External Resources. Use the province filter to select your province (AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT). You'll see employment standards, human rights commissions, disability benefits (like ODSP, PWD, AISH), and workers' compensation boards specific to your region."
+  },
+  {
+    "id": "f14",
+    "q": "What is the SOS/Crisis button?",
+    "a": "The red SOS button (bottom-right on main screens) provides instant crisis access. Single tap opens crisis menu with options to call 988, text Crisis Line, access Safe Landing Page, or Quick Exit. Triple tap sends emergency SMS to your crisis contacts. It's always visible when you need help."
+  },
+  {
+    "id": "f15",
+    "q": "What are the 4 Wellness Hubs?",
+    "a": "Wellness tab features 4 consolidated hubs: Energy & Mood Hub (energy tracking, mood, sleep, pacing), Unified Health Tracker (symptoms, pain, chronic conditions, rehab), Mental Wellness Toolkit (8 CBT/DBT tools), and Movement & Rehab Hub (exercises, micro-movements, nutrition). Everything organized in one place!"
+  },
+  {
+    "id": "f16",
+    "q": "Can I submit my own campaigns or events?",
+    "a": "Yes! On campaign and event detail pages, look for the 'Submit to 3mpwr' button (shows for user-created content). After review, your campaign/event will appear on the 3mpwrApp website and sync to all users. Privacy protected - you control what's shared."
+  },
+  {
+    "id": "f17",
+    "q": "How do I customize my profile for better recommendations?",
+    "a": "Go to Settings → Profile Editor. Fill out 5 sections: Disability Types, Symptoms to Track, Wellness Tools Preferences, Advocacy Needs, and Family Role. The more you share, the better the app can recommend relevant tools. All optional and syncs across devices if using cloud backup."
+  },
+  {
+    "id": "f18",
+    "q": "What accessibility features does the app have?",
+    "a": "Full screen reader support (VoiceOver/TalkBack), high contrast mode, text scaling up to 200%, dyslexia-friendly fonts (OpenDyslexic, Lexend), colored overlays for visual stress, motor accessibility (dwell-click, large touch targets), cognitive modes (Simple/Standard/Power), and trauma-informed design with SOS button."
+  },
+  {
+    "id": "f19",
+    "q": "How do I use Bad Day Mode?",
+    "a": "Bad Day Mode is for flare-ups, brain fog, or overwhelming days. Go to Settings → Complexity Mode → tap 'Bad Day Mode'. This instantly switches you to Simple Mode (5 core features only). When you're feeling better, go back to Settings → Complexity Mode → choose your preferred mode."
+  },
+  {
+    "id": "f20",
+    "q": "Where can I find government disability benefits information?",
+    "a": "Research tab → External Resources → Filter by 'Benefits' category and your province. You'll find links to ODSP (Ontario), PWD (BC), AISH (Alberta), SAID (Manitoba), Income Support (other provinces), CPP Disability, and federal programs. Each has descriptions and opens in your browser."
   }
 ]

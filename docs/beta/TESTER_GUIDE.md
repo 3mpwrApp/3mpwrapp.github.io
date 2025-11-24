@@ -4,6 +4,8 @@ Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join 
 
 > 📱 **New to Beta Testing?** No worries! This guide is designed for testers of all experience levels. If you can use a smartphone, you can beta test!
 
+> 🎉 **November 2025 Update:** We've achieved 90% accessibility with complete feature consolidation, offline support, and revolutionary new features. This beta tests production-ready code!
+
 ---
 
 ## 📧 How to Join Beta Testing
@@ -52,13 +54,129 @@ Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join 
 
 ## 🧪 What to Test
 
-### Priority Features to Test
+### 🆕 **PRIORITY: November 2025 Features** (Test These First!)
+
+**⚙️ Complexity Mode System (10 minutes)**
+- Go to Settings → Complexity Mode
+- Try switching between Simple Mode (5 features), Standard Mode (20 features), and Power User Mode (150+ features)
+- Notice how tabs change based on your mode
+- Test "Bad Day Mode" button - should instantly switch to Simple Mode
+- Check if SimpleModeWelcome banners appear in tabs
+- Verify feature counts match mode selection
+
+**📚 Resources vs Research Split (10 minutes)**
+- **Resources Tab** - Should contain ONLY in-app tools:
+  - Master Tracker Hub (Beta)
+  - Letter Wizard
+  - Appeal Command Center (Beta)
+  - Evidence Manager
+  - NO external links here
+- **Research Tab** - Should contain external resources:
+  - External Resources card
+  - Click it → Should see 96 external links organized by category
+  - Test province filter (select your province)
+  - Test category filter (Employment, Benefits, Human Rights, etc.)
+  - Click a resource → Should open browser with "opens in browser" warning
+
+**🗂️ Master Tracker Hub (15 minutes)**
+- Resources → Master Tracker Hub
+- Check dashboard with quick stats
+- Try quick log buttons for symptoms, meds, appointments
+- Test each tab: Symptoms, Medications, Rehab, Appointments, Timeline, Accessibility
+- Log sample data in 2-3 trackers
+- Check if AI pattern detection works (requires 7+ days of data)
+- Test export to PDF/CSV/JSON
+- Verify all data saves and reloads correctly
+
+**⚖️ Appeal Command Center (15 minutes)**
+- Resources → Appeal Command Center
+- Check quick stats card (active appeals, deadlines, evidence count)
+- Test deadline warfare section - add a test deadline
+- Check color coding: Red (7 days), Orange (30 days), Blue (additional)
+- Try denial decoder - paste sample insurance jargon
+- Test evidence strength meter - rate your evidence
+- Browse appeal prep guide
+- Check if tips and privacy notice appear
+
+**📦 Offline Queue (10 minutes - CRITICAL)**
+- Evidence Locker → Upload a test file
+- Turn on airplane mode (or disable WiFi)
+- Try uploading another file
+- Should see "offline" status and queued message
+- Check pending count badge appears
+- Turn WiFi back on
+- Verify auto-sync works
+- Check if retry button appears for failed uploads
+- Test manual retry functionality
+
+**🆘 SOS/Crisis Button (5 minutes)**
+- Look for red SOS button (bottom-right on main screens)
+- Single tap → Should open crisis menu with:
+  - Call 988 option
+  - Text Crisis Line
+  - Safe Landing Page
+  - Emotional First Aid
+  - Quick Exit
+- Triple tap → Should trigger emergency contact dialog (don't actually send!)
+- Check if button is visible on: Home, Resources, Wellness, Advocacy, Community
+
+**💪 Wellness Hubs (20 minutes)**
+- **Energy & Mood Hub** (Wellness tab):
+  - Dashboard view with stats
+  - Track energy, mood, sleep
+  - Check if forecasting works (requires data)
+  - Test pacing partner integration
+  - Try quantum energy mechanics (Power User mode)
+  
+- **Unified Health Tracker**:
+  - Navigate between tabs (Symptoms, Pain, Chronic, Rehab, Pacing)
+  - Log sample data in 2+ tabs
+  - Check if data persists
+  - Test export functionality
+  
+- **Mental Wellness Toolkit**:
+  - Browse CBT Coach, DBT Skills, Grounding Games
+  - Try at least one exercise
+  - Check if progress saves
+  
+- **Movement & Rehab Hub**:
+  - Browse exercises, micro-movements
+  - Check video demonstrations (if available)
+  - Test nutrition guides
+
+**🌐 Campaigns & Events (10 minutes)**
+- Campaigns tab → Join "Every Canadian Counts" campaign
+- Check if signature count updates (460+)
+- Events tab → Browse upcoming events
+- Look for TBDIWSG information sessions
+- Test calendar subscription feature
+- Try creating a user campaign
+- Check if "Submit to 3mpwr" button appears
+- DON'T actually submit (or use test data only)
+
+**👤 Profile Editor (10 minutes)**
+- Settings → Profile Editor
+- Fill out 5 sections:
+  - Disability Types (select multiple)
+  - Symptoms to Track
+  - Wellness Tools Preferences
+  - Advocacy Needs
+  - Family Role
+- Save profile
+- Close app and reopen
+- Verify profile data persisted
+- Check if tool recommendations change based on profile
+
+---
+
+### Original Priority Features (Still Important!)
 
 **🏠 Core Navigation (5 minutes)**
-- Tap through all 8 tabs: Home, Campaigns, Community, Resources, Wellness, Advocacy, Settings, What's New
+- Tap through all tabs: Home, Campaigns, Community, Resources, Wellness, Advocacy, Research, Settings, What's New
 - Check if everything loads without errors
 - Test back button functionality
 - Try rotating your device (portrait ↔ landscape)
+- Notice how Complexity Mode affects visible features
 
 **✍️ Letter Wizard (10 minutes)**
 - Go to Resources → Letter Wizard
@@ -287,16 +405,27 @@ A: Yes. We use encryption and follow security best practices. However, always ba
 
 ## 🎯 Quick Testing Checklist
 
-Use this for a fast 15-minute test:
+Use this for a fast 20-minute test of November 2025 features:
 
+### Critical November Features (Priority)
+- [ ] Test Complexity Mode switching (Simple/Standard/Power)
+- [ ] Verify Resources vs Research split (in-app vs external)
+- [ ] Try Master Tracker Hub (log sample data)
+- [ ] Test Appeal Command Center (add test deadline)
+- [ ] Verify offline queue (airplane mode upload)
+- [ ] Find and test SOS button (single tap only!)
+- [ ] Browse at least 2 of 4 Wellness Hubs
+- [ ] Test province filter in Research → External Resources
+- [ ] Try Bad Day Mode emergency simplification
+- [ ] Check profile editor saves correctly
+
+### Original Features (Secondary)
 - [ ] Launch app successfully
-- [ ] Navigate to all 8 tabs
+- [ ] Navigate to all tabs
 - [ ] Create a test letter
-- [ ] Upload a test file
 - [ ] Log your mood
 - [ ] Join Beta Testers Chat
-- [ ] Test offline mode (airplane mode)
-- [ ] Enable dark mode / high contrast
+- [ ] Test dark mode / high contrast
 - [ ] Report at least 1 piece of feedback (bug or praise!)
 
 ---
@@ -304,6 +433,14 @@ Use this for a fast 15-minute test:
 ## 🙏 Thank You!
 
 Your participation helps us create an app that truly empowers Canadians living with disabilities. Every bug you find, every piece of feedback you share - it all matters!
+
+**Special Focus for November 2025 Beta:**
+- How well does Complexity Mode work? Does it reduce overwhelm?
+- Is the Resources vs Research split clear? Any confusion?
+- Does offline queue work reliably? Does auto-sync work?
+- Are the hubs (Master Tracker, Appeal Command Center, Wellness) organized intuitively?
+- Is the SOS button discoverable and helpful?
+- Does Bad Day Mode simplification help during tough moments?
 
 **Questions? Feedback? Found a bug?**
 - 📧 empowrapp08162025@gmail.com
@@ -316,6 +453,6 @@ Your participation helps us create an app that truly empowers Canadians living w
 
 ---
 
-*Last Updated: October 25, 2025*  
-*Guide Version: 2.0*  
+*Last Updated: **November 23, 2025***  
+*Guide Version: **3.0** (November 2025 Consolidation Update)*  
 *For questions about this guide: empowrapp08162025@gmail.com*
