@@ -1,254 +1,332 @@
 ---
 layout: default
-title: Beta Tester Guide
+title: 3mpwr App – Closed Beta Tester Guide
 permalink: /beta-guide/
-description: Comprehensive guide for 3mpwrApp beta testers - everything you need to know to help us build the best advocacy app.
+description: Comprehensive guide for 3mpwr App beta testers - November 2025 production-ready release with 90% accessibility, complete feature consolidation, and revolutionary new features.
+version: 3.0 (November 2025 Consolidation Update)
+lastUpdated: 2025-11-23
 ---
 
 
 {%- include status-banner.html -%}
 
-# 3mpwrApp Beta Tester Guide
+# 3mpwr App – Closed Beta Tester Guide
 
-**Welcome to the 3mpwrApp Beta Testing Program!**
+**Welcome to the 3mpwr App Beta Testing Program!** This guide shows you how to join the beta, test the app using Expo Go (free), and share your valuable feedback.
 
-Thank you for helping us build the best advocacy and wellness app for people living with disabilities. Your feedback is invaluable and will directly shape our launch.
+> 📱 **New to Beta Testing?** No worries! This guide is designed for testers of all experience levels. If you can use a smartphone, you can beta test!
 
-> 📱 **New to Beta Testing?** Don't worry! This guide explains everything step-by-step. Start with [Quick Start](#-quick-start-5-minute-test) below if you're short on time.
+> 🎉 **November 2025 Update:** We've achieved 90% accessibility with complete feature consolidation, offline support, and revolutionary new features. This beta tests production-ready code!
 
 ---
 
 ## 📋 Table of Contents
 
-1. [Quick Start (5-Minute Test)](#-quick-start-5-minute-test)
-2. [Getting Started](#-getting-started)
+1. [How to Join Beta Testing](#-how-to-join-beta-testing)
+2. [Known Limitations in Expo Go](#️-known-limitations-in-expo-go)
 3. [What to Test](#-what-to-test)
-4. [How to Give Feedback](#-how-to-give-feedback)
-5. [Bug Reporting Guide](#-bug-reporting-guide)
-6. [Testing Checklist](#-testing-checklist)
-7. [FAQ](#-frequently-asked-questions)
-8. [Support](#-need-help)
+4. [How to Report Feedback](#-how-to-report-feedback)
+5. [Privacy & Safety](#-privacy--safety)
+6. [FAQ](#-frequently-asked-questions)
+7. [Quick Testing Checklist](#-quick-testing-checklist)
+8. [Need Help?](#-need-help)
 
 ---
 
-## ⚡ Quick Start (5-Minute Test)
+## 📧 How to Join Beta Testing
 
-**Short on time? Complete this quick test to help us catch the most common issues.**
+### Phase 1: Closed Beta (Current)
 
-> 📧 **PHASE 1 BETA UNDERWAY**: If you've been selected as a Phase 1 beta tester, you'll receive installation instructions via email or message. Please wait for your personalized invitation with setup details.
+**Status:** Invitations being sent to selected testers
 
-### Step 1: Launch the App (1 minute)
+**To join:**
+1. **Wait for your invitation email** from empowrapp08162025@gmail.com
+2. Your email will include:
+   - Installation instructions specific to your device
+   - Beta access link or QR code
+   - Beta tester welcome information
 
-1. **Open the app** and wait ~1 minute for caches to load
-2. **Accept Terms & Conditions** when prompted
-
-### Step 2: Navigate & Explore (2 minutes)
-
-1. **Tap every tab** at the bottom:
-   - 🏠 Home → 📢 Campaigns → 👥 Community → 📚 Resources
-   - 💪 Wellness → ⚖️ Advocacy → ⚙️ Settings → 🎉 What's New
-
-2. **Look for problems**:
-   - ❌ Dead links or crashes
-   - ❌ Error messages that don't make sense
-   - ✅ Loading spinners appear when data loads
-   - ✅ Back button works correctly
-
-3. **Test offline mode**:
-   - Turn ON airplane mode
-   - Check if app shows "offline" banner
-   - Try browsing - cached content should still work
-
-### Step 3: Try One Feature (2 minutes)
-
-Pick ONE feature to test thoroughly:
-
-**Option A: Letter Wizard**
-- Go to Resources → Letter Wizard
-- Start creating a letter
-- Fill in a few fields and save
-
-**Option B: Evidence Locker**
-- Go to Advocacy → Evidence Locker
-- Upload a test file (screenshot or photo)
-- Check if it appears in your locker
-
-**Option C: Mood Tracker**
-- Go to Wellness → Mood Tracker
-- Log how you're feeling today
-- See if it saves correctly
-
-**Option D: Community**
-- Go to Community → Browse channels
-- Read a few posts
-- Check if everything loads
-
-### Step 4: Report What You Found
-
-**Found a problem?** Report it right away:
-- **In-App**: Settings → About & Feedback → "Send Feedback"
-- **Email**: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- **Subject**: "Beta: [what you were testing]"
-- **Include**: What you tapped, what happened, what you expected
-
-**Everything worked?** Great! Tell us what you liked:
-- Same methods as above
-- Let us know what felt easy or helpful
-
----
-
-## 📱 Getting Started
-
-> 📧 **PHASE 1 BETA UNDERWAY**: Selected Phase 1 testers will receive installation instructions via email or direct message. Check your inbox for your personalized invitation.
-
-**What you'll need when you receive your invitation:**
-- A compatible iOS (13.0+) or Android (6.0+) device
-- Your email address (for beta invitation)
-- At least 500 MB of free storage space
-
-**Your invitation will include:**
-- Installation link (TestFlight for iOS or Play Beta for Android)
-- Step-by-step setup instructions
-- Beta tester welcome message with support contacts
-
-**Haven't received your invitation yet?**
+**Not invited yet?**
 - Phase 1 is limited to 20-50 testers
-- Additional testers will be invited in Phase 2 (Open Beta)
-- Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) to express interest for future phases
+- **Sign up for Phase 2** (Open Beta): Email empowrapp08162025@gmail.com with subject "Phase 2 Beta Interest"
+- Phase 2 will begin approximately 2 weeks after Phase 1 starts
 
-<div class="gradient-banner" style="text-align: center;">
-  <h3 style="margin: 0 0 0.5rem;">📝 Sign Up for Beta Testing</h3>
-  <p style="margin: 0 0 1rem;">Interested in becoming a beta tester? Fill out our sign-up form and we'll contact you when spots become available!</p>
-  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: var(--card-bg, #ffffff); color: #5568d3; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Complete Beta Sign-Up Form →</a>
-</div>
+> 💡 **Installation instructions will be provided in your invitation email.** This guide focuses on what to test and how to provide feedback once you have the app installed.
+
+---
+
+## ⚠️ Known Limitations in Expo Go
+
+**Push Notifications:**
+- **Android**: Remote push notifications not available in Expo Go
+- **iOS**: Remote push requires special setup (not available in beta)
+- **Workaround**: We'll use in-app notices and local reminders during closed beta
+- Full push notifications will be available in production app
+
+**Native Features:**
+- Some advanced native modules require custom builds
+- We've designed the beta to work within Expo Go's supported APIs
+- All core features (Letter Wizard, Evidence Locker, Wellness tools) work perfectly!
+
+**Performance:**
+- Expo Go may be slightly slower than production app
+- First launch might take 1-2 minutes to cache assets
+- This is normal and won't affect production version
 
 ---
 
 ## 🧪 What to Test
 
-### Week 1: Basics & Core Features
+### 🆕 **PRIORITY: November 2025 Features** (Test These First!)
 
-#### Priority 1: Essential Functionality
+**⚙️ Complexity Mode System (10 minutes)**
+- Go to Settings → Complexity Mode
+- Try switching between Simple Mode (5 features), Standard Mode (20 features), and Power User Mode (150+ features)
+- Notice how tabs change based on your mode
+- Test "Bad Day Mode" button - should instantly switch to Simple Mode
+- Check if SimpleModeWelcome banners appear in tabs
+- Verify feature counts match mode selection
 
-- [ ] **Account Setup**: Create account OR use as guest, email verification, sign in/out
-- [ ] **Onboarding**: Complete 7-day journey or skip, progress saves
-- [ ] **Profile & Settings**: Set up disability profile, configure energy levels, change language
-- [ ] **Navigation**: Test all 8 main tabs, back button, check for dead links
+**📚 Resources vs Research Split (10 minutes)**
+- **Resources Tab** - Should contain ONLY in-app tools:
+  - Master Tracker Hub (Beta)
+  - Letter Wizard
+  - Appeal Command Center (Beta)
+  - Evidence Manager
+  - NO external links here
+- **Research Tab** - Should contain external resources:
+  - External Resources card
+  - Click it → Should see 96 external links organized by category
+  - Test province filter (select your province)
+  - Test category filter (Employment, Benefits, Human Rights, etc.)
+  - Click a resource → Should open browser with "opens in browser" warning
 
-### Week 2: Key Features
+**🗂️ Master Tracker Hub (15 minutes)**
+- Resources → Master Tracker Hub
+- Check dashboard with quick stats
+- Try quick log buttons for symptoms, meds, appointments
+- Test each tab: Symptoms, Medications, Rehab, Appointments, Timeline, Accessibility
+- Log sample data in 2-3 trackers
+- Check if AI pattern detection works (requires 7+ days of data)
+- Test export to PDF/CSV/JSON
+- Verify all data saves and reloads correctly
 
-- [ ] **Letter Wizard**: Choose template, fill info, save draft, export
-- [ ] **Evidence Locker**: Upload documents, view files, add notes, delete
-- [ ] **Wellness Tools**: Mood tracker, sleep tracker, energy coins
-- [ ] **Community**: Browse channels, read posts, join Beta Testers Chat
-- [ ] **Campaigns**: Browse, join, track progress, complete actions
-- [ ] **Resources**: Browse guides, search topics, bookmark items
-- [ ] **Deadlines**: Add deadline, set reminder, edit, mark complete
-- [ ] **Notifications**: Enable, test reminders, tap to open app
-- [ ] **Bookmarks**: Bookmark items, view all, remove, check persistence
+**⚖️ Appeal Command Center (15 minutes)**
+- Resources → Appeal Command Center
+- Check quick stats card (active appeals, deadlines, evidence count)
+- Test deadline warfare section - add a test deadline
+- Check color coding: Red (7 days), Orange (30 days), Blue (additional)
+- Try denial decoder - paste sample insurance jargon
+- Test evidence strength meter - rate your evidence
+- Browse appeal prep guide
+- Check if tips and privacy notice appear
 
-### Week 3: Accessibility Features
+**📦 Offline Queue (10 minutes - CRITICAL)**
+- Evidence Locker → Upload a test file
+- Turn on airplane mode (or disable WiFi)
+- Try uploading another file
+- Should see "offline" status and queued message
+- Check pending count badge appears
+- Turn WiFi back on
+- Verify auto-sync works
+- Check if retry button appears for failed uploads
+- Test manual retry functionality
 
-- [ ] **Screen Reader**: Test VoiceOver/TalkBack navigation
-- [ ] **Visual Accessibility**: High contrast, large text, color themes
-- [ ] **Cognitive Accessibility**: Step-by-step mode, breadcrumbs, navigation memory
-- [ ] **Dyslexia Support**: OpenDyslexic font, line spacing, reading ruler
-- [ ] **Motor Accessibility**: Larger touch targets, dwell click, tremor support
+**🆘 SOS/Crisis Button (5 minutes)**
+- Look for red SOS button (bottom-right on main screens)
+- Single tap → Should open crisis menu with:
+  - Call 988 option
+  - Text Crisis Line
+  - Safe Landing Page
+  - Emotional First Aid
+  - Quick Exit
+- Triple tap → Should trigger emergency contact dialog (don't actually send!)
+- Check if button is visible on: Home, Resources, Wellness, Advocacy, Community
 
-### Week 4: Edge Cases & Advanced Testing
+**💪 Wellness Hubs (20 minutes)**
+- **Energy & Mood Hub** (Wellness tab):
+  - Dashboard view with stats
+  - Track energy, mood, sleep
+  - Check if forecasting works (requires data)
+  - Test pacing partner integration
+  - Try quantum energy mechanics (Power User mode)
+  
+- **Unified Health Tracker**:
+  - Navigate between tabs (Symptoms, Pain, Chronic, Rehab, Pacing)
+  - Log sample data in 2+ tabs
+  - Check if data persists
+  - Test export functionality
+  
+- **Mental Wellness Toolkit**:
+  - Browse CBT Coach, DBT Skills, Grounding Games
+  - Try at least one exercise
+  - Check if progress saves
+  
+- **Movement & Rehab Hub**:
+  - Browse exercises, micro-movements
+  - Check video demonstrations (if available)
+  - Test nutrition guides
 
-- [ ] **Network Conditions**: Offline mode, slow network
-- [ ] **Device Conditions**: Low battery, low memory, storage full
-- [ ] **Device Rotation**: Portrait to landscape on all screens
-- [ ] **App Lifecycle**: Backgrounding, interruptions, multi-device testing
+**🌐 Campaigns & Events (10 minutes)**
+- Campaigns tab → Join "Every Canadian Counts" campaign
+- Check if signature count updates (460+)
+- Events tab → Browse upcoming events
+- Look for TBDIWSG information sessions
+- Test calendar subscription feature
+- Try creating a user campaign
+- Check if "Submit to 3mpwr" button appears
+- DON'T actually submit (or use test data only)
+
+**👤 Profile Editor (10 minutes)**
+- Settings → Profile Editor
+- Fill out 5 sections:
+  - Disability Types (select multiple)
+  - Symptoms to Track
+  - Wellness Tools Preferences
+  - Advocacy Needs
+  - Family Role
+- Save profile
+- Close app and reopen
+- Verify profile data persisted
+- Check if tool recommendations change based on profile
 
 ---
 
-## 💬 How to Give Feedback
+### Original Priority Features (Still Important!)
+
+**🏠 Core Navigation (5 minutes)**
+- Tap through all tabs: Home, Campaigns, Community, Resources, Wellness, Advocacy, Research, Settings, What's New
+- Check if everything loads without errors
+- Test back button functionality
+- Try rotating your device (portrait ↔ landscape)
+- Notice how Complexity Mode affects visible features
+
+**✍️ Letter Wizard (10 minutes)**
+- Go to Resources → Letter Wizard
+- Pick any template (e.g., "Accommodation Request")
+- Fill in your information
+- Save as draft
+- Edit the draft
+- Export or share the letter
+- Check formatting looks professional
+
+**📁 Evidence Locker (10 minutes)**
+- Go to Advocacy → Evidence Locker
+- Upload a test file (screenshot, photo, or PDF)
+- View the uploaded file
+- Add notes or tags
+- Try uploading multiple files
+- Delete a test file
+- Check storage indicator
+
+**💪 Wellness Tools (15 minutes)**
+- **Mood Tracker**: Log your current mood, add notes, view history
+- **Sleep Tracker**: Log last night's sleep, see patterns
+- **Energy Coins**: Track today's energy level, visualize data
+- **Reflections**: Complete a guided reflection
+- Check if all data saves when you close and reopen app
+
+**👥 Community (10 minutes)**
+- Browse available channels
+- Read posts and comments
+- Join "Beta Testers Chat"
+- Post a friendly test message
+- Check if posts load quickly
+- Try searching for a topic
+
+**📢 Campaigns (5 minutes)**
+- Browse active campaigns
+- Join one campaign
+- Complete a campaign action
+- Track your progress
+- Check if updates appear
+
+**⚙️ Settings & Accessibility (15 minutes)**
+- Change language (English, French, Spanish)
+- Enable dark mode / high contrast mode
+- Increase text size
+- Enable screen reader (VoiceOver/TalkBack)
+- Test if all buttons are announced correctly
+- Enable "Step-by-Step Mode" (cognitive accessibility)
+- Try dyslexia-friendly fonts
+
+**🌐 Offline Mode (5 minutes)**
+- Turn on airplane mode
+- Check if app shows "offline" banner
+- Try browsing previously loaded content
+- Turn WiFi back on
+- Check if app syncs data
+
+
+---
+
+## 💬 How to Report Feedback
 
 ### What We Want to Hear
 
-#### ✅ Positive Feedback
-- What do you love about the app?
+**✅ Positive Feedback:**
+- What do you love?
 - Which features are most helpful?
-- What makes you feel empowered?
 - Any "wow" moments?
 
-#### 🤔 Constructive Feedback
-- What's confusing or hard to understand?
-- What's frustrating or annoying?
-- What feels slow or clunky?
-- What would you change?
+**🤔 Constructive Feedback:**
+- What's confusing?
+- What's frustrating or slow?
+- What would you improve?
 
-#### 💡 Feature Requests
+**🐛 Bugs:**
+- What were you doing when it crashed?
+- What error messages appeared?
+- Can you reproduce the problem?
+
+**💡 Feature Requests:**
 - What's missing that you need?
-- What would save you time or energy?
+- What would save you time?
 - What would make the app more accessible?
-
-### Where to Send Feedback
-
-#### 1. In-App Feedback (Easiest)
-- Settings → About & Feedback → "Send Feedback"
-- App automatically includes device info and version
-
-#### 2. Beta Testers Chat (Quick Questions)
-- Community → Beta Testers Chat
-- Post messages, discuss with other testers
-
-#### 3. Email (Detailed Reports)
-- **Email**: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- **Subject**: "Beta Feedback: [topic]"
-- Include steps, screenshots, device info
-
-### Tips for Great Feedback
-
-- **Be Specific**: "Mood Tracker takes 10+ seconds to load" vs "app is slow"
-- **Include Steps**: List what you tapped to reproduce issue
-- **Add Screenshots**: Pictures help us understand
-- **Note Your Setup**: Mention accessibility settings enabled
-- **Be Honest**: We want to know what's not working!
-- **Be Kind**: Real people are reading your feedback 😊
 
 ---
 
-## 🐛 Bug Reporting Guide
+### Where to Send Feedback
 
-### Determine Severity
+**Method 1: In-App Feedback** (Easiest! ⭐)
+1. Open app
+2. Go to Settings → About & Feedback
+3. Tap "Send Feedback"
+4. Type your feedback
+5. App automatically includes device info and version
 
-**🔴 CRITICAL** (Report Immediately)
-- App crashes on launch every time
-- Cannot sign in or create account
-- Evidence or letters disappearing
-- Security or privacy issues
+**Method 2: Beta Testers Chat**
+- Community → Beta Testers Chat
+- Quick questions and discussions
+- Other testers can help too!
+- Team monitors regularly
 
-→ Email **empowrapp08162025@gmail.com** with subject "**URGENT:**"
+**Method 3: Email**
+- **To:** empowrapp08162025@gmail.com
+- **Subject:** "Beta Feedback: [topic]"
+- **Include:**
+  - What you were testing
+  - What happened
+  - Screenshots (if helpful)
+  - Device info: Settings → About
 
-**🟠 HIGH** (Report Within 24 Hours)
-- Feature completely doesn't work
-- Can't complete onboarding
-- Notifications not sending
-- App crashes frequently
+**Method 4: GitHub Issues** (If invited)
+- For technical users
+- Include steps to reproduce
+- Mention phone model and OS version
 
-**🟡 MEDIUM** (Report Within 3 Days)
-- Feature behaves oddly
-- UI elements misaligned
-- Translation errors
-- App sometimes slow
-
-**🟢 LOW** (Report Anytime)
-- Typos in text
-- Cosmetic/visual issues
-- Minor layout quirks
-- Feature suggestions
+---
 
 ### Bug Report Template
+
+Copy this template for detailed bug reports:
 
 ```
 🐛 BUG REPORT
 
-Device: [iPhone 14 Pro]
-OS: [iOS 17.5]
-App Version: [1.0.0-rc.1, found in Settings]
+Device: [e.g., iPhone 14 Pro, Samsung Galaxy S24]
+OS: [e.g., iOS 17.5, Android 14]
+App Version: [Settings → About → Version]
 
 What I was doing:
 1. Opened Evidence Locker
@@ -257,179 +335,150 @@ What I was doing:
 4. [etc.]
 
 What went wrong:
-[App froze after selecting photo]
+[e.g., App froze and crashed]
 
 What should have happened:
-[Photo should upload and appear in my locker]
+[e.g., Photo should upload to my locker]
 
-Frequency:
-[Happens every time / sometimes / just once]
+Happens: [Every time / Sometimes / Just once]
 
-Screenshot attached: [Yes/No]
+Screenshot: [Attached / No screenshot]
 ```
 
 ---
 
-## 📝 Testing Checklist
+## 🔐 Privacy & Safety
 
-### Week 1: Getting Started
-- [ ] Install app via TestFlight or Play Beta
-- [ ] Complete onboarding OR skip
-- [ ] Create account or use guest mode
-- [ ] Set up profile
-- [ ] Browse all 8 tabs
-- [ ] Enable notifications
-- [ ] Test language switching
-- [ ] Report at least 1 thing
+**Protect Your Personal Data:**
+- ❌ Don't share real personal documents in screenshots
+- ❌ Don't include confidential data in bug reports
+- ❌ Don't post sensitive information in Beta Chat
+- ✅ Use dummy/test data when testing upload features
+- ✅ Redact (black out) personal info before screenshotting
 
-### Week 2: Core Features
-- [ ] Create 1 letter
-- [ ] Upload 1 document
-- [ ] Try 3+ wellness tools
-- [ ] Join 1 campaign
-- [ ] Add 1 deadline
-- [ ] Bookmark 3+ items
-- [ ] Test Community
-- [ ] Test offline mode
-- [ ] Report bugs or feedback
+**AI & Legal Disclaimers:**
+- All AI outputs are educational only, not legal advice
+- App provides information, not professional legal counsel
+- Always consult with qualified professionals for legal matters
+- AI may make mistakes - verify important information
 
-### Week 3: Accessibility
-- [ ] Enable screen reader
-- [ ] Try high contrast mode
-- [ ] Increase text size
-- [ ] Enable cognitive features
-- [ ] Try dyslexia-friendly fonts
-- [ ] Test motor accessibility
-- [ ] Report accessibility issues
+**Your Data Control:**
+- Clear local data anytime: Settings → Privacy → Clear Data
+- Delete account: Settings → Account → Delete Account
+- Export your data: Settings → Privacy → Export Data
+- Manage permissions: Device Settings → 3mpwr App
 
-### Week 4: Advanced Testing
-- [ ] Test on slow/no network
-- [ ] Use with low battery
-- [ ] Rotate device
-- [ ] Background app and return
-- [ ] Test with low memory
-- [ ] Try all community features
-- [ ] Export or share something
-- [ ] Final bug sweep
+**Beta Testing Confidentiality:**
+- Don't share beta builds publicly or on social media
+- Don't post beta screenshots to public forums (Beta Chat is OK!)
+- Don't distribute your Expo Go link to non-testers
+- You can talk about the app, just don't share install links
 
 ---
 
-## 🏆 Beta Tester Benefits
-
-### What You Get
-- ✨ **Early Access**: First to try new features
-- 🏅 **Beta Tester Badge**: Special badge in your profile (coming soon!)
-- 💪 **Real Impact**: Your feedback shapes the app
-- 🎁 **Rewards Program**: Eligible for future perks (details TBA)
-- 📣 **Recognition**: Optionally featured in app credits
-- 🤝 **Community**: Connect with other passionate testers
-
-### What We Ask
-- 🧪 **Regular Testing**: Use the app 2-3 times per week
-- 🐛 **Prompt Bug Reports**: Report issues as you find them
-- 💬 **Honest Feedback**: Tell us what's good and what's not
-- 🤐 **Confidentiality**: Don't share beta builds publicly
-- 🙏 **Patience**: Beta builds may have bugs
-- 👥 **Respect**: Be kind to other testers and the team
-
----
-
-## ❓ Frequently Asked Questions
+## 🙋 Frequently Asked Questions
 
 **Q: How long will beta testing last?**
-A: Approximately 2-4 weeks, depending on how quickly we resolve issues.
+A: Approximately 2-4 weeks. We'll announce when moving to production.
 
 **Q: Will my data transfer to the production app?**
-A: Yes, if you sign in with an account. Guest data may not transfer.
+A: Yes, if you have an account. Guest mode data may not transfer.
 
-**Q: Can I use the beta app as my daily app?**
-A: Yes, but be aware that bugs may occur. Back up important documents externally.
+**Q: Can I use the beta as my daily app?**
+A: Yes, but back up important documents externally (beta may have bugs).
 
-**Q: How often will you release updates?**
-A: We aim for 1-2 updates per week during active beta.
+**Q: I'm not technical. Can I still help?**
+A: Absolutely! We need testers of all skill levels. Your perspective is valuable!
 
-**Q: I'm not very technical. Can I still be a beta tester?**
-A: Absolutely! We need testers of all skill levels.
+**Q: What if I find a security issue?**
+A: Email empowrapp08162025@gmail.com immediately with subject "SECURITY ISSUE". Don't post publicly.
 
-**Q: I found a security issue. Who do I tell?**
-A: Email **empowrapp08162025@gmail.com** immediately with subject "SECURITY ISSUE". Do NOT post publicly.
+**Q: Can I test on multiple devices?**
+A: Yes! Testing on phone + tablet is super helpful.
 
-**Q: Is my data safe during beta?**
-A: Yes. We use the same encryption and security as the production app.
+**Q: The app crashed. What do I do?**
+A: Restart the app and report the bug. Include what you were doing when it crashed.
 
-**Q: Can I opt out of analytics?**
-A: Yes! Go to Settings → Privacy and disable analytics.
+**Q: Is the app safe to use?**
+A: Yes. We use encryption and follow security best practices. However, always back up critical documents.
 
 ---
 
 ## 📞 Need Help?
 
-### Support Channels
-
-**In-App Support** (Fastest)
+**In-App Support:**
 - Settings → About & Feedback → "Help & Support"
+- Searchable FAQ built-in
 
-**Beta Testers Chat** (Community Support)
+**Beta Testers Chat:**
 - Community → Beta Testers Chat
+- Ask questions, share tips, help others
+- Team members monitor daily
 
-**Email Support**
-- [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
+**Email Support:**
+- empowrapp08162025@gmail.com
 - Include "BETA" in subject line
+- We respond within 24-48 hours
 
-### Expected Response Times
-- **🔴 Critical bugs**: Within 4 hours (business hours)
-- **🟠 High priority**: Within 24 hours
-- **🟡 Medium priority**: Within 3 days
-- **🟢 Low priority**: Within 1 week
+**Emergency Contact** (Critical bugs only):
+- empowrapp08162025@gmail.com
+- Subject: "**URGENT:**"
+- For crashes, data loss, security issues
+
+---
+
+## 🎯 Quick Testing Checklist
+
+Use this for a fast 20-minute test of November 2025 features:
+
+### Critical November Features (Priority)
+- [ ] Test Complexity Mode switching (Simple/Standard/Power)
+- [ ] Verify Resources vs Research split (in-app vs external)
+- [ ] Try Master Tracker Hub (log sample data)
+- [ ] Test Appeal Command Center (add test deadline)
+- [ ] Verify offline queue (airplane mode upload)
+- [ ] Find and test SOS button (single tap only!)
+- [ ] Browse at least 2 of 4 Wellness Hubs
+- [ ] Test province filter in Research → External Resources
+- [ ] Try Bad Day Mode emergency simplification
+- [ ] Check profile editor saves correctly
+
+### Original Features (Secondary)
+- [ ] Launch app successfully
+- [ ] Navigate to all tabs
+- [ ] Create a test letter
+- [ ] Log your mood
+- [ ] Join Beta Testers Chat
+- [ ] Test dark mode / high contrast
+- [ ] Report at least 1 piece of feedback (bug or praise!)
 
 ---
 
 ## 🙏 Thank You!
 
-Your participation means the world to us. Every bug you find, every piece of feedback you share, every suggestion you make - it all helps us create an app that truly empowers people living with disabilities.
+Your participation helps us create an app that truly empowers Canadians living with disabilities. Every bug you find, every piece of feedback you share - it all matters!
 
-You're not just testing an app. You're helping build a movement. 💪
+**Special Focus for November 2025 Beta:**
+- How well does Complexity Mode work? Does it reduce overwhelm?
+- Is the Resources vs Research split clear? Any confusion?
+- Does offline queue work reliably? Does auto-sync work?
+- Are the hubs (Master Tracker, Appeal Command Center, Wellness) organized intuitively?
+- Is the SOS button discoverable and helpful?
+- Does Bad Day Mode simplification help during tough moments?
 
-**Questions? Ideas? Issues?**
-- 📧 [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- 💬 Community → Beta Testers Chat
-- 🐦 X (Twitter): [@3mpowrApp0816](https://x.com/3mpowrApp0816)
+**Questions? Feedback? Found a bug?**
+- 📧 empowrapp08162025@gmail.com
+- 💬 Beta Testers Chat (in app)
+- 🌐 [Sign up for website beta](https://3mpwrapp.pages.dev/beta-guide)
 
-**Happy Testing!**  
-— The 3mpwrApp Team
+**Happy Testing! 🎉**
 
----
-
-## 📖 Quick Reference
-
-### Important Links
-- **Support Email**: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- **In-App Feedback**: Settings → About & Feedback
-- **Beta Chat**: Community → Beta Testers Chat
-- **Features List**: [View All Features](/features/)
-- **User Guide**: [Complete User Guide](/user-guide/)
-- **Roadmap**: [Development Roadmap](/roadmap/)
-
-### Legal & Privacy
-- **[Terms of Service](/terms/)** - Terms and comprehensive disclaimers
-- **[Privacy Policy](/privacy/)** - How we protect your data
-- **[Data Ownership](/data-ownership/)** - Your 100% data sovereignty
-- **[Privacy Controls](/privacy-controls/)** - Manage your privacy settings
-- **[Community Guidelines](/community/guidelines/)** - Community standards
-- **[Legal Disclaimers](/legal/disclaimers/)** - Medical, legal, financial disclaimers
-
-### Key Settings Locations
-- **Language**: Settings → Language
-- **Accessibility**: Settings → Accessibility
-- **Notifications**: Settings → Notifications
-- **Privacy**: Settings → Privacy
-- **About/Version**: Settings → About & Feedback
+— The 3mpwr Team
 
 ---
 
-*Last Updated: October 25, 2025*  
-*Guide Version: 2.1*  
-*App Version: 1.0.0-rc.1*  
-*Questions: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)*
+*Last Updated: **November 23, 2025***  
+*Guide Version: **3.0** (November 2025 Consolidation Update)*  
+*For questions about this guide: empowrapp08162025@gmail.com*
 
 {%- include page-feedback.html -%}

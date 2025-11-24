@@ -1,21 +1,21 @@
 ---
 layout: default
 title: Features
-description: Explore 3mpwrApp's comprehensive 133+ features designed to empower your advocacy, connect with community, and navigate systems with confidence. Beta Version 1.0.0-rc.1
+description: Explore 3mpwr App's comprehensive features designed to empower your advocacy, connect with community, and navigate systems with confidence. Production-Ready Beta with 90% Accessibility.
 ---
 
 <!-- Status Banner -->
 {%- include status-banner.html -%}
 
-# 3mpwrApp Features
+# 3mpwr App Features
 
 📖 **12 minute read** | ⚡ **Feature highlights below**
 
-**Version:** 1.0.0-rc.2 (Closed Beta)  
-**Status:** Ready for Beta Testing + AI Wellness Enhancements  
-**Last Updated:** November 6, 2025
+**Version:** 3.0 (Production-Ready Beta)  
+**Status:** 90% Accessibility Achieved + Complete Feature Consolidation  
+**Last Updated:** November 23, 2025
 
-Welcome to 3mpwrApp - your complete toolkit for disability advocacy, community connection, and system navigation. With **145 features available in beta** and 35 more coming soon, every tool is designed to empower you while protecting your privacy.
+Welcome to 3mpwr App - your complete toolkit for disability advocacy, community connection, and system navigation. With **60+ core features** organized by Complexity Mode (Simple: 5, Standard: 20, Power User: 150+), every tool is designed to empower you while protecting your privacy.
 
 ---
 
@@ -75,26 +75,32 @@ Welcome to 3mpwrApp - your complete toolkit for disability advocacy, community c
 
 ---
 
-### 🆕 November 2025 Updates
-- ✅ **AI-Powered Wellness:** Mood Tracker 2.0 with pattern detection, Pacing Partner with forecasting
-- ✅ **5 New Features:** Daily Feature Rotation, Cross-Feature Recommendations, Complete Awareness Calendar with Indigenous days
-- ✅ **Enhanced Dyslexia Support:** 14 screens now with dyslexia-friendly fonts and overlays
-- ✅ **Motor Accessibility:** Dwell-click technology, tremor compensation, increased touch targets
-- ✅ **Enterprise Security:** Military-grade AES-256 encryption, air-gapped mode, zero cloud dependencies
+### 🆕 November 2025 Updates (Production-Ready Beta)
+- ✅ **90% Accessibility Achieved:** Up from 40% - complete Complexity Mode integration across entire app
+- ✅ **Resources vs Research Split:** Clear separation of in-app tools vs external links (96 resources)
+- ✅ **Master Tracker Hub:** All health tracking in one place (symptoms, meds, rehab, appointments, timeline)
+- ✅ **Appeal Command Center:** Deadline warfare, denial decoder, evidence strength meter, appeal prep guide
+- ✅ **Offline Queue:** Upload evidence without internet - auto-syncs when connection restored
+- ✅ **Global SOS/Crisis Button:** Single tap crisis menu, triple tap emergency contact on all screens
+- ✅ **4 Wellness Hubs:** Energy & Mood Hub, Unified Health Tracker, Mental Wellness Toolkit, Movement & Rehab Hub
+- ✅ **Complexity Mode:** Simple (5 features), Standard (20), Power User (150+) with Bad Day Mode
+- ✅ **10 Revolutionary Beta Features:** Celebration Toast, Impact Score, Accountability Network, Gaslighting Detector, Voice Mode, Spoon Marketplace, AI Co-Pilot, Negotiation Coach, Emotional First Aid, Energy Forecast
+- ✅ **Profile Editor Expansion:** 5 sections (disability types, symptoms, wellness preferences, advocacy needs, family role)
 
 <!-- TL;DR Summary -->
 <details class="tldr-box" open>
   <summary><strong>⚡ Quick Overview (1 minute)</strong></summary>
   <ul>
-    <li><strong>145 features available now</strong> in closed beta (+12 since September)</li>
-    <li><strong>AI Wellness (NEW):</strong> Mood Tracker 2.0, Pacing Partner with energy forecasting, smart recommendations</li>
-    <li><strong>Accessibility (ENHANCED):</strong> Dyslexia support (14 screens), motor accessibility (dwell-click), cognitive aids</li>
-    <li><strong>Evidence Locker:</strong> Secure document storage with military-grade AES-256 encryption</li>
+    <li><strong>60+ core features</strong> in production-ready beta (Simple: 5, Standard: 20, Power User: 150+)</li>
+    <li><strong>90% Accessibility (NEW):</strong> Complexity Mode integration, Bad Day Mode, global SOS button, complete consolidation</li>
+    <li><strong>Master Tracker Hub (NEW):</strong> All health tracking unified - symptoms, meds, rehab, appointments, AI patterns</li>
+    <li><strong>Appeal Command Center (NEW):</strong> Deadline warfare, denial decoder, evidence strength meter</li>
+    <li><strong>Offline Queue (NEW):</strong> Upload evidence without internet - critical for rural areas and court dates</li>
+    <li><strong>4 Wellness Hubs (NEW):</strong> Energy & Mood, Health Tracker, Mental Wellness, Movement & Rehab</li>
+    <li><strong>Resources vs Research:</strong> Clear split - in-app tools vs 96 external resources with province filtering</li>
+    <li><strong>Evidence Locker:</strong> Secure document storage with AES-256 encryption + offline queue</li>
     <li><strong>Letter Wizard:</strong> 22 professional letter templates for appeals & advocacy</li>
-    <li><strong>Wellness Tools:</strong> Track health, energy, mood with 41 specialized features</li>
-    <li><strong>Legal Automation:</strong> Step-by-step guidance for appeals & complaints</li>
     <li><strong>Community:</strong> Connect with 8+ communities in safe, moderated spaces</li>
-    <li><strong>100% accessible:</strong> WCAG AAA compliant with dyslexia, motor, and cognitive accessibility</li>
     <li><strong>Enterprise Security:</strong> Air-gapped mode, zero cloud dependencies, user data ownership</li>
   </ul>
 </details>
@@ -123,16 +129,16 @@ Welcome to 3mpwrApp - your complete toolkit for disability advocacy, community c
   <!-- Category Filter Buttons -->
   <div class="category-filters" role="group" aria-label="Feature categories">
     <button class="filter-btn active" data-category="all">
-      All Features <span class="count">145</span>
+      All Features <span class="count">60+</span>
     </button>
     <button class="filter-btn" data-category="advocacy">
-      📝 Advocacy <span class="count">18</span>
+      📝 Advocacy <span class="count">15</span>
     </button>
     <button class="filter-btn" data-category="wellness">
-      🧘 Wellness <span class="count">41</span>
+      🧘 Wellness <span class="count">20</span>
     </button>
     <button class="filter-btn" data-category="evidence">
-      📁 Evidence <span class="count">7</span>
+      📁 Evidence <span class="count">5</span>
     </button>
     <button class="filter-btn" data-category="letters">
       ✉️ Letters <span class="count">22</span>
@@ -141,7 +147,7 @@ Welcome to 3mpwrApp - your complete toolkit for disability advocacy, community c
       💬 Community <span class="count">8</span>
     </button>
     <button class="filter-btn" data-category="resources">
-      📚 Resources <span class="count">43</span>
+      📚 Resources <span class="count">96</span>
     </button>
   </div>
 
@@ -299,19 +305,178 @@ Before using 3mpwrApp features, please understand:
 
 ### Quick Overview
 
-| Tab | ✅ Beta Features | 🔜 Coming Soon | Total |
-|-----|------------------|----------------|-------|
-| 🏠 **Home**      | 9              | 3 | 12 |
-| 📢 **Campaigns** | 5 | 4 | 9 |
-| 💬 **Community** | 8 | 5 | 13 |
-| 📚 **Resources** | 43 | 8 | 51 |
-| 🧘 **Wellness** | 41 | 6 | 47 |
-| 📝 **Advocacy** | 18 | 4 | 22 |
-| ⚙️ **Settings** | 18 | 3 | 21 |
-| 🆕 **What's New** | 3 | 2 | 5 |
-| **TOTAL** | **145** | **35** | **180** |
+**Production-Ready Beta (November 2025):**
+- **Complexity Mode:** Simple (5 features), Standard (20 features), Power User (150+ features)
+- **90% Accessibility:** Complete integration across entire app (up from 40%)
+- **Consolidated Organization:** 10+ wellness screens → 4 integrated hubs
+- **New Critical Features:** Master Tracker Hub, Appeal Command Center, Offline Queue, Global SOS Button
+- **External Resources:** 96 resources with province filtering in Research tab
 
-**Latest Updates:** +12 features in October-November 2025 | October: +7 (Calendar, Profile, Accessibility) | November: +5 (AI Wellness, Daily Rotation, Awareness Calendar)
+| Tab | ✅ Core Features | 🔋 Simple Mode | 📊 Standard Mode | 🚀 Power User |
+|-----|------------------|----------------|------------------|---------------|
+| 🏠 **Home**      | Dashboard, Quick Actions | ✅ | ✅ | ✅ |
+| 📢 **Campaigns** | Every Canadian Counts, TBDIWSG Events | ❌ | ✅ (5) | ✅ (All) |
+| 👥 **Community** | Beta Chat, Support Groups | ✅ (1) | ✅ (3) | ✅ (8+) |
+| 📚 **Resources** | Master Tracker Hub, Letter Wizard, Appeal Command Center | ✅ (2) | ✅ (5) | ✅ (All) |
+| 🔬 **Research** | 96 External Resources | ✅ (2) | ✅ (5) | ✅ (All) |
+| 💪 **Wellness** | 4 Integrated Hubs | ✅ (1) | ✅ (4) | ✅ (All) |
+| ⚖️ **Advocacy** | Evidence Locker, Legal Tools | ✅ (1) | ✅ (3) | ✅ (All) |
+| ⚙️ **Settings** | Complexity Mode, Profile, Accessibility | ✅ | ✅ | ✅ |
+| 🆕 **What's New** | Updates, Changelog | ✅ | ✅ | ✅ |
+
+**Latest Updates:** November 23, 2025 - Production-ready beta with 90% accessibility
+
+---
+
+## 🆕 November 2025 Feature Highlights
+
+### 🎯 **Complexity Mode System**
+**Revolutionary simplification for cognitive accessibility:**
+
+- **Simple Mode (5 features):** For bad days, flare-ups, brain fog
+  - Evidence Locker, Letter Wizard (top 3 templates), Crisis Resources, Mood Tracker, Community Support
+- **Standard Mode (20 features):** For most users most of the time
+  - All Simple features + AI tools, wellness tracking, campaigns, events, profiles
+- **Power User Mode (150+ features):** Everything unlocked
+  - Full access to advanced tools, beta features, experimental functionality
+- **Bad Day Mode:** One-tap emergency simplification (Settings → Complexity Mode)
+
+**Impact:** 40% usability → 90% usability across the disability community
+
+---
+
+### 📚 **Resources vs Research Split**
+**Clear organization eliminates confusion:**
+
+**Resources Tab (In-App Interactive Tools):**
+- Master Tracker Hub - All health tracking unified
+- Letter Wizard - 22 professional templates
+- Appeal Command Center - Fight denials effectively
+- Evidence Manager - Secure document storage
+- NO external links - everything works within the app
+
+**Research Tab (External Resources):**
+- 96 external resources organized by category
+- Province filter (AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT)
+- Categories: Employment, Human Rights, Benefits, Workers' Comp, Crisis
+- Clear "opens in browser" indicators
+
+---
+
+### 🗂️ **Master Tracker Hub** (NEW)
+**All health tracking in one unified dashboard:**
+
+**What It Tracks:**
+- Symptoms (severity, triggers, patterns)
+- Medications (doses, schedules, side effects)
+- Rehab exercises (reps, sets, progress)
+- Doctor appointments (notes, recommendations)
+- Case timeline (legal deadlines, key events)
+- Accessibility needs (accommodations, barriers)
+
+**Features:**
+- Quick log buttons for fast entry
+- AI pattern detection (requires 7+ days data)
+- Export to PDF, CSV, JSON
+- Privacy-first - data stays on your device
+
+---
+
+### ⚖️ **Appeal Command Center** (NEW)
+**Everything you need to fight benefit/insurance denials:**
+
+**Core Features:**
+- **Deadline Tracker** - Color-coded by urgency (red: 7 days, orange: 30 days)
+- **Denial Decoder** - AI translates insurance jargon to plain English
+- **Evidence Strength Meter** - Rate evidence (weak/moderate/strong)
+- **Appeal Prep Guide** - Step-by-step walkthrough
+- **Precedent Finder** - Coming soon: Search successful cases
+
+---
+
+### 📦 **Offline Queue** (NEW)
+**Upload evidence without internet - critical for rural areas:**
+
+- Works in airplane mode, spotty WiFi, rural areas
+- Automatic retry with smart timing (1s → 60s exponential backoff)
+- Network monitoring - auto-syncs when connection restored
+- Manual retry buttons for failed uploads
+- Pending count badge
+- Critical for court appearances and legal deadlines
+
+---
+
+### 🆘 **Global SOS/Crisis Button** (NEW)
+**Instant access to crisis resources from any screen:**
+
+**Single Tap Opens Crisis Menu:**
+- Call 988 (Suicide & Crisis Lifeline)
+- Crisis Text Line (text HOME to 741741)
+- Safe Landing Page (breathing exercises)
+- Emotional First Aid tools
+- Quick Exit (escape to weather.com for safety)
+
+**Triple Tap:** Emergency contact with location (requires setup)
+
+---
+
+### 💪 **4 Wellness Hubs** (NEW)
+**Consolidation: 10+ screens → 4 integrated hubs**
+
+1. **Energy & Mood Hub**
+   - Spoon Economist, Energy Quantum Mechanics, Mood Tracker
+   - Sleep-Energy Tracker, Pacing Partner, 24-hour forecasting
+
+2. **Unified Health Tracker**
+   - Symptom Tracker, Pain Forecast, Chronic Tracker
+   - Rehab Tracker, Pacing, Export (CSV, PDF, JSON)
+
+3. **Mental Wellness Toolkit**
+   - CBT Coach, DBT Skills, Grounding Games
+   - Opposite Action, Acceptance, Crisis Skills
+
+4. **Movement & Rehab Hub**
+   - Micro-Movement Coach, Exercise Hub
+   - Rehab Games, Nutrition Guides, Video demonstrations
+
+---
+
+### 🚀 **10 Revolutionary Beta Features** (Power User Mode)
+**Cutting-edge features for advanced users:**
+
+1. **Celebration Toast System** - Celebrate wins with haptic feedback
+2. **Impact Score Tracker** - Quantify advocacy impact
+3. **Accountability Network** - Track institutional promises
+4. **Gaslighting Detector** - AI identifies manipulation patterns
+5. **Voice Mode** - Hands-free navigation
+6. **Spoon Marketplace** - Trade tasks based on energy
+7. **AI Co-Pilot** - Proactive daily suggestions
+8. **Negotiation Coach** - Real-time conversation guidance
+9. **Emotional First Aid** - Quick distress interventions
+10. **Energy Forecast** - 24-hour predictions (in Energy & Mood Hub)
+
+---
+
+### 🌐 **Campaigns & Events** (Enhanced)
+**Real-time sync with website:**
+
+- **Submit to 3mpwr Button** - Share user-created content
+- **Every Canadian Counts Campaign** - Census inclusion (460+ signatures)
+- **TBDIWSG Events** - Thunder Bay information sessions
+- **Calendar Auto-Updates** - Subscribe once, events update automatically
+- **Social Sharing** - Beautiful preview cards
+- **Website Integration** - Real-time sync to 3mpwrApp website
+
+---
+
+### 👤 **Profile Editor** (Expanded)
+**Better personalization with 5 sections:**
+
+1. **Disability Types** - Select all that apply
+2. **Symptoms to Track** - Choose from 15+ types
+3. **Wellness Tools Preferences** - Pick favorites from 26 options
+4. **Advocacy Needs** - Specify help needed
+5. **Family Role Support** - Supporter, caregiver, family, self-advocate
 
 ---
 

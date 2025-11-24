@@ -1,19 +1,20 @@
 ---
 layout: default
 title: Frequently Asked Questions (FAQ)
-description: Common questions about 3mpwrApp - privacy, features, accessibility, beta testing, and more.
+description: Common questions about 3mpwr App - privacy, features, accessibility, beta testing, and more. Updated November 2025 with 90% accessibility and production-ready features.
 permalink: /faq/
+lastUpdated: 2025-11-23
 ---
 
 {%- include status-banner.html -%}
 
 # Frequently Asked Questions (FAQ)
 
-**Last Updated:** October 26, 2025
+**Last Updated:** November 23, 2025
 
 📖 **15 minute read** | ⚡ Use search or table of contents to jump to your question
 
-Quick answers to common questions about 3mpwrApp. Can't find what you're looking for? [Contact us](/contact).
+Quick answers to common questions about 3mpwr App. Can't find what you're looking for? [Contact us](/contact).
 
 <!-- FAQ Search -->
 <div class="faq-search-container">
@@ -61,6 +62,7 @@ Quick answers to common questions about 3mpwrApp. Can't find what you're looking
 
 ## 📑 Table of Contents
 
+- [What's New - November 2025](#whats-new---november-2025)
 - [Getting Started](#getting-started)
 - [Common Concerns & Trust Questions](#common-concerns--trust-questions)
 - [Privacy & Data](#privacy--data)
@@ -70,6 +72,49 @@ Quick answers to common questions about 3mpwrApp. Can't find what you're looking
 - [Beta Testing](#beta-testing)
 - [Troubleshooting](#troubleshooting)
 - [Legal & Disclaimers](#legal--disclaimers)
+
+---
+
+## What's New - November 2025
+
+### What's new in the November 2025 update?
+
+**We've achieved 90% accessibility (up from 40%)!** Major improvements include:
+
+**🎯 Complexity Mode System**
+- Simple Mode (5 features) - For overwhelming days and cognitive challenges
+- Standard Mode (20 features) - For most users most of the time
+- Power User Mode (150+ features) - Everything unlocked
+- Bad Day Mode - One-tap emergency simplification
+
+**📚 Resources vs Research Split**
+- Resources Tab = In-app interactive tools only (Master Tracker Hub, Letter Wizard, Appeal Command Center, Evidence Manager)
+- Research Tab = 96 external resources organized by category with province filtering
+- Clear separation eliminates confusion about what opens in-app vs browser
+
+**🗂️ Master Tracker Hub**
+- All health tracking in one place (symptoms, meds, rehab, appointments, timeline, accessibility)
+- Quick log buttons, AI pattern detection, export to PDF/CSV/JSON
+
+**⚖️ Appeal Command Center**
+- Deadline warfare with color-coded urgency (red: 7 days, orange: 30 days)
+- Denial decoder translates insurance jargon
+- Evidence strength meter, appeal prep guide
+
+**📦 Offline Queue**
+- Upload evidence without internet - auto-syncs when connection restored
+- Critical for rural areas, court appearances, spotty WiFi
+
+**🆘 Global SOS/Crisis Button**
+- Single tap: crisis menu (Call 988, Crisis Text Line, Safe Landing Page, Emotional First Aid, Quick Exit)
+- Triple tap: emergency contact with location
+- Visible on all major screens
+
+**💪 4 Wellness Hubs**
+- Energy & Mood Hub, Unified Health Tracker, Mental Wellness Toolkit, Movement & Rehab Hub
+- Consolidates 10+ separate screens into 4 integrated hubs
+
+[See full November 2025 updates in User Guide →](/user-guide#whats-new-november-2025)
 
 ---
 
@@ -458,21 +503,127 @@ You can switch modes anytime in Settings → Privacy & Security.
 
 ## Features & Functionality
 
-### How many features does 3mpwrApp have?
+### How many features does 3mpwr App have?
 
-**133 features available in beta**, with 35 more coming soon (168 total planned for Phase 1).
+**60+ core features available in production-ready beta** (November 2025).
 
-Features span 8 major areas:
-- 🏠 Home & Dashboard (9 features)
-- 📢 Campaigns (5 features)
-- 💬 Community (8 features)
-- 📚 Resources (42 features)
-- 🧘 Wellness (36 features)
-- 📝 Advocacy Tools (18 features)
-- ⚙️ Settings (12 features)
-- 🆕 What's New (3 features)
+The app adapts to your needs with **Complexity Mode**:
+- **Simple Mode:** 5 essential features for overwhelming days
+- **Standard Mode:** 20 commonly-used features for most users
+- **Power User Mode:** 150+ features including beta/experimental tools
+
+Features organized into:
+- 🏠 Home & Dashboard
+- 📢 Campaigns & Events
+- 👥 Community
+- 📚 Resources (in-app tools)
+- 🔬 Research (external resources)
+- 💪 Wellness (4 integrated hubs)
+- ⚖️ Advocacy & Legal
+- ⚙️ Settings & Accessibility
+- 🆕 What's New
 
 **[See all features →](/features)**
+
+### What's the Master Tracker Hub? (NEW November 2025)
+
+**All your health tracking in one unified dashboard:**
+
+**What It Tracks:**
+- Symptoms (severity, triggers, patterns)
+- Medications (doses, schedules, side effects)
+- Rehab exercises (reps, sets, progress)
+- Doctor appointments (notes, recommendations, follow-ups)
+- Case timeline (legal deadlines, key events)
+- Accessibility needs (accommodations, barriers)
+
+**Features:**
+- Quick log buttons for fast entry when low on energy
+- AI pattern detection (requires 7+ days of data)
+- Export to PDF, CSV, JSON for doctors/lawyers
+- Privacy-first - data stays on your device
+
+**Find It:** Resources → Master Tracker Hub (Beta)
+
+### What's the Appeal Command Center? (NEW November 2025)
+
+**Everything you need to fight benefit/insurance denials:**
+
+**Core Features:**
+- **Deadline Tracker** - Color-coded by urgency (red: 7 days, orange: 30 days, blue: additional)
+- **Denial Decoder** - AI translates insurance jargon to plain English
+- **Evidence Strength Meter** - Rate your evidence (weak/moderate/strong)
+- **Appeal Prep Guide** - Step-by-step walkthrough
+- **Precedent Finder** - Coming soon: Search successful cases like yours
+
+**Find It:** Resources → Appeal Command Center (Beta)
+
+### What's the Offline Queue? (NEW November 2025)
+
+**Upload evidence even without internet connection:**
+
+- Works in airplane mode, rural areas, spotty WiFi
+- Automatically retries with smart timing (1s → 60s exponential backoff)
+- Network monitoring - auto-syncs when connection restored
+- Manual retry buttons for failed uploads
+- Pending count badge shows what's waiting
+- Critical for court appearances and legal deadlines
+
+**Find It:** Evidence Locker → Upload files while offline
+
+### What's the Global SOS/Crisis Button? (NEW November 2025)
+
+**Instant access to crisis resources from any screen:**
+
+**Single Tap Opens:**
+- Call 988 (Suicide & Crisis Lifeline)
+- Crisis Text Line (text HOME to 741741)
+- Safe Landing Page (breathing exercises, grounding)
+- Emotional First Aid tools
+- Quick Exit (escape to weather.com for safety)
+
+**Triple Tap:**
+- Emergency contact with location (requires setup in Settings)
+
+**Why It Matters:** Disability crises are real. Instant help access can be life-saving.
+
+### What's Complexity Mode? (NEW November 2025)
+
+**Revolutionary simplification system for cognitive accessibility:**
+
+**Three Modes:**
+1. **Simple Mode (5 features)** - For bad days, flare-ups, brain fog
+   - Evidence Locker, Letter Wizard (top 3 templates), Crisis Resources, Mood Tracker, Community
+   - Reduces overwhelm by 97%
+
+2. **Standard Mode (20 features)** - For most users most of the time
+   - All Simple features + AI tools, wellness tracking, campaigns, events, profiles
+   - Balanced power and simplicity
+
+3. **Power User Mode (150+ features)** - Everything unlocked
+   - Full access to advanced tools, beta features, experimental functionality
+
+**Bad Day Mode:** One-tap emergency simplification (Settings → Complexity Mode)
+
+**Impact:** 40% usability → 90% usability across the disability community
+
+### What's the Resources vs Research split? (NEW November 2025)
+
+**Clear separation eliminates confusion:**
+
+**Resources Tab = In-App Interactive Tools**
+- Master Tracker Hub
+- Letter Wizard (22 templates)
+- Appeal Command Center
+- Evidence Manager
+- NO external links - everything works within the app
+
+**Research Tab = External Resources & Data**
+- 96 external resources organized by category
+- Province filter (AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT)
+- Search functionality
+- Clear "opens in browser" indicators
+- Categories: Employment, Human Rights, Benefits, Workers' Comp, Crisis
 
 ### What's the Evidence Locker?
 
@@ -484,6 +635,8 @@ Your secure, encrypted document vault for storing:
 - Legal evidence
 
 All files are encrypted with military-grade security (AES-256).
+
+**NEW November 2025:** Offline queue - upload without internet, auto-syncs later
 
 **[Learn how to use Evidence Locker →](/user-guide#evidence-locker)**
 
@@ -850,12 +1003,11 @@ Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
 </div>
 
 
-
 {%- include page-feedback.html -%}
 
-**3mpwrApp - Your voice, your power, your data.**
+**3mpwr App - Your voice, your power, your data.**
 
-*Last Updated: October 25, 2025*
+*Last Updated: November 23, 2025*
 
 <link rel="stylesheet" href="/assets/css/faq.css">
 

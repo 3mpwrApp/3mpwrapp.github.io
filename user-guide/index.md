@@ -1,11 +1,12 @@
 ---
 layout: default
 title: 3mpwrApp — Complete User Guide
-description: A comprehensive guide to using 3mpwrApp's 145+ tools and community features. Written by/for the disability community. Now with AI-powered wellness, energy forecasting, and enhanced accessibility.
-version: 3.2 (November 2025 - AI Wellness Revolution)
-lastUpdated: 2025-11-06
-accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility
-features: 145+ available | AI wellness | Enhanced accessibility | Enterprise security
+description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community. Now with 90% accessibility, complete feature consolidation, and production-ready beta.
+version: 3.2 (November 2025 - Consolidation & Beta Readiness)
+lastUpdated: 2025-11-23
+accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
+currentPhase: Production-Ready Beta Launch (90% Accessibility Achieved)
+allFeaturesLive: 60+ features, 90% accessibility target achieved, full offline support, complete consolidation
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
@@ -14,22 +15,22 @@ features: 145+ available | AI wellness | Enhanced accessibility | Enterprise sec
 
 # 3mpwrApp — Complete User Guide
 
-📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 3.2** — November 6, 2025 (AI Wellness Edition)
+📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 3.2** — November 23, 2025 (Production-Ready Beta)
 
-> **What's new?** November 2025 brings AI-powered wellness tracking, energy forecasting, dyslexia support, motor accessibility, and 145+ total features. [See what's new →](#whats-new-november-2025)
+> **What's new?** November 2025 brings 90% accessibility (up from 40%), complete feature consolidation, Resources vs Research split, offline queue, global SOS button, and revolutionary beta features. [See what's new →](#whats-new-november-2025)
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (90 seconds)</summary>
   <ul>
-    <li><strong>🆕 AI Wellness:</strong> Mood Tracker 2.0 with pattern detection, Pacing Partner with energy forecasting, smart recommendations</li>
-    <li><strong>📁 Evidence Locker:</strong> Secure digital vault for documents, photos, and medical records (AES-256 encrypted)</li>
-    <li><strong>✉️ Letter Wizard:</strong> AI generates 22 types of professional legal/medical letters in minutes</li>
-    <li><strong>⚡ Energy Tracking:</strong> Daily Energy Coins system (spoon theory digitized) + 24-hour forecasting</li>
-    <li><strong>🤝 Community:</strong> Connect with 8+ disability-specific communities, find local resources</li>
-    <li><strong>⚖️ Legal Tools:</strong> Appeals assistant, legal automation, deadline tracking, documentation</li>
-    <li><strong>🆕 Accessibility:</strong> Dyslexia support (5 fonts, 8 overlays), motor accessibility (dwell-click), cognitive aids</li>
-    <li><strong>100% Private:</strong> Your data stays on YOUR device - enterprise-grade AES-256 encryption</li>
-    <li><strong>145+ Features:</strong> All organized by need with AI recommendations for what to use when</li>
+    <li><strong>🎯 90% Accessibility:</strong> Complete Complexity Mode integration (Simple/Standard/Power User), Bad Day Mode, global SOS button</li>
+    <li><strong>📚 Resources vs Research Split:</strong> In-app tools (Resources) vs external links (Research) - clear separation with 96 external resources</li>
+    <li><strong>🗂️ Master Tracker Hub:</strong> All health tracking in one place (symptoms, meds, rehab, appointments, timeline, accessibility)</li>
+    <li><strong>⚖️ Appeal Command Center:</strong> Deadline warfare, denial decoder, evidence strength meter, appeal prep guide</li>
+    <li><strong>📦 Offline Queue:</strong> Upload evidence even without internet - auto-syncs when connection restored</li>
+    <li><strong>🆘 Global SOS Button:</strong> Crisis resources accessible from any screen (single tap: crisis menu, triple tap: emergency contact)</li>
+    <li><strong>💪 4 Wellness Hubs:</strong> Energy & Mood Hub, Unified Health Tracker, Mental Wellness Toolkit, Movement & Rehab Hub</li>
+    <li><strong>🔐 100% Private:</strong> Your data stays on YOUR device - enterprise-grade AES-256 encryption, optional cloud backup</li>
+    <li><strong>60+ Features:</strong> All organized by need with AI recommendations and complexity mode filtering</li>
   </ul>
 </details>
 
@@ -44,58 +45,228 @@ features: 145+ available | AI wellness | Enhanced accessibility | Enterprise sec
 
 <div class="button-group">
   <a href="#getting-started-in-5-minutes" class="btn btn-primary">Quick Start Guide</a>
-  <a href="/features" class="btn btn-secondary">Browse All 145+ Features</a>
+  <a href="/features" class="btn btn-secondary">Browse All Features</a>
   <a href="/beta" class="btn btn-secondary">Join Beta Testing</a>
   <a href="/accessibility" class="btn btn-secondary">Accessibility Guide</a>
 </div>
 
 ### 🔗 Quick Navigation
-- **[Features Overview](/features)** - Complete list of all 145+ features with details
+- **[Features Overview](/features)** - Complete list of all features with details
 - **[What's New Page](/whats-new)** - Latest updates and announcements
 - **[Accessibility Settings](/accessibility)** - Learn about dyslexia, motor, and cognitive accessibility
 - **[Privacy & Security](/privacy)** - How we protect your data
-- **[Beta Testing Guide](/beta)** - Join the closed beta program
+- **[Beta Testing Guide](/beta-guide)** - Comprehensive beta tester guide
 - **[Contact & Support](#contact--support)** - Get help when you need it
 
 ---
 
-## 🆕 What's New - November 2025 (AI Wellness Revolution!)
+## 🆕 What's New - November 2025 (Production-Ready Beta Launch!)
 
-### Major Updates This Month:
+### 🎊 November 23, 2025 - 90% Accessibility Target Achieved!
 
-**🧠 Mood Tracker 2.0 with AI Pattern Detection**
+**Complete Feature Consolidation & Critical Improvements:**
+
+#### 📚 **Resources vs Research Reorganization**
+**Problem Solved:** Users were confused when clicking "Resources" led to external websites.
+
+**NEW: Resources Tab = In-App Interactive Tools ONLY**
+- Master Tracker Hub - One dashboard for all health tracking
+- Letter Wizard - 22+ professional letter templates
+- Appeal Command Center - Deadline management, denial decoder, evidence strength meter
+- Evidence Manager - Secure document storage with offline queue
+- All tools work completely within the app - no external links
+
+**NEW: Research Tab = External Links & Data Sources**
+- 96 external resources organized by category (Employment, Human Rights, Benefits, Workers' Comp, Crisis)
+- Province filter - Find resources specific to your province (AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT)
+- Search functionality - Find exactly what you need quickly
+- Clear "opens in browser" indicators - You'll always know when leaving the app
+
+---
+
+#### 🎯 **Complexity Mode - Complete Integration Across Entire App**
+**Revolutionary simplification system now working in ALL tabs:**
+
+**Three Modes to Choose From:**
+- **Simple Mode** (5 core features) - For overwhelming days, flare-ups, or cognitive challenges
+  - Evidence Locker, Letter Wizard (top 3 templates), Crisis Resources, Mood Tracker, Community Support
+  - Reduces features by 97% across entire app
+  
+- **Standard Mode** (20 common features) - For most users most of the time
+  - All Simple features + AI tools, wellness tracking, campaigns, events, profiles
+  - Balanced power and simplicity
+  
+- **Power User Mode** (150+ features) - Everything unlocked
+  - Full access to all advanced features, beta tools, experimental functionality
+
+**Bad Day Mode** - One-tap emergency simplification:
+- Instantly switch to Simple Mode during flare-ups
+- Access from Settings → Complexity Mode
+- Returns to your previous mode when you're ready
+
+**Impact:** 40% usability → **90% usability** - Now accessible to cognitive disabilities, brain fog, low literacy, and overwhelming situations
+
+---
+
+#### 🛟 **Global SOS/Crisis Button - Always Available**
+**Critical safety feature now on all major screens:**
+
+**Single Tap Opens Crisis Menu:**
+- 📞 Call 988 (Suicide & Crisis Lifeline)
+- 💬 Crisis Text Line (text HOME to 741741)
+- 🧘 Safe Landing Page (breathing exercises)
+- 🛟 Emotional First Aid tools
+- ⚡ Quick Exit (escape to weather.com for safety)
+
+**Triple Tap Emergency Contact:**
+- Auto-sends SMS to your crisis contacts with location
+- Requires setup in Settings → Crisis Contacts
+
+**Why This Matters:** Disability crises are real. Having instant access to help can be life-saving.
+
+---
+
+#### 📦 **Offline Support - Full Implementation**
+**Critical for legal cases, rural areas, and spotty internet:**
+
+**Evidence Locker Offline Queue:**
+- ✅ Upload documents even without internet
+- ✅ Automatic retry with smart timing (1s → 60s exponential backoff)
+- ✅ Network monitoring - Auto-syncs when connection restored
+- ✅ Manual retry buttons - Take control of sync process
+- ✅ Pending count badge - See what's waiting to upload
+- ✅ Status tracking - Know exactly what's pending, retrying, or failed
+
+---
+
+#### 🌐 **Campaigns & Events - Real-Time Sync**
+**Community organizing now works seamlessly:**
+
+**NEW Features:**
+- **Submit to 3mpwr Button** - Share user-created campaigns and events with the community
+- **Every Canadian Counts Campaign** - Join the national census inclusion campaign (460+ signatures)
+- **TBDIWSG Information Sessions** - Thunder Bay-Based Disabled & Injured Workers Support Group events
+- **Calendar Auto-Updates** - Subscribe once, events update automatically
+- **Social Sharing** - Share campaigns with beautiful preview cards
+- **Website Integration** - Campaigns sync to 3mpwrApp website in real-time
+
+---
+
+#### 🎨 **Wellness Consolidation - 4 Unified Hubs**
+**No more scattered tools - everything organized:**
+
+**Energy & Mood Hub** (`wellness/energy-hub.tsx`)
+- Combines: Spoon Economist, Energy Quantum Mechanics, Mood Tracker, Sleep-Energy Tracker, Pacing Partner
+- Features: Dashboard, tracking, analysis, community features, AI insights, 24-hour forecasting
+
+**Unified Health Tracker** (`wellness/health-tracker.tsx`)
+- Consolidates: Symptom Tracker, Pain Forecast, Chronic Tracker, Rehab Tracker, Pacing Partner
+- Tabs: Symptoms, Pain, Chronic Conditions, Rehab, Pacing
+- Export: CSV, PDF, JSON formats
+
+**Mental Wellness Toolkit** (`wellness/mental-wellness-toolkit.tsx`)
+- All 8 CBT/DBT tools in one place
+- Tabs: CBT Coach, DBT Skills, Grounding Games, Opposite Action, Acceptance, Crisis Skills
+
+**Movement & Rehab Hub** (`wellness/movement-rehab-hub.tsx`)
+- Combines: Micro-Movement Coach, Exercise Hub, Rehab Games, Nutrition Guides
+- 4 specialized tabs with video demonstrations
+
+**Impact:** 10+ separate wellness screens → 4 integrated hubs. Faster navigation, better insights, reduced cognitive load.
+
+---
+
+#### 🚀 **10 Revolutionary Beta Features** (November 20, 2025)
+**Cutting-edge features for power users:**
+
+1. **Celebration Toast System** - Celebrate small wins with haptic feedback and animations
+2. **Impact Score Tracker** - Quantify your advocacy impact across campaigns
+3. **Accountability Network** - Track promises from employers, insurers, government
+4. **Gaslighting Detector** - AI identifies manipulation patterns in communications
+5. **Voice Mode** - Hands-free navigation with voice commands
+6. **Spoon Marketplace** - Trade tasks with community members based on energy levels
+7. **AI Co-Pilot** - Proactive suggestions throughout your day
+8. **Negotiation Coach** - Real-time guidance for difficult conversations
+9. **Emotional First Aid** - Quick interventions for distress moments
+10. **Energy Forecast** - 24-hour energy predictions (already in Energy & Mood Hub)
+
+**Access:** All available in Power User mode. Some available in Standard mode.
+
+---
+
+#### 📊 **Master Tracker Hub** - All Health Data in One Place
+**Consolidates 6 separate trackers:**
+
+**What It Tracks:**
+- Symptoms (severity, triggers, patterns)
+- Medications (doses, schedules, side effects)
+- Rehab exercises (reps, sets, progress)
+- Doctor appointments (notes, recommendations, follow-ups)
+- Case timeline (legal deadlines, key events)
+- Accessibility needs (accommodations, barriers)
+
+**Features:**
+- Dashboard with quick stats - See your health at a glance
+- Quick log buttons - Fast entry when you're low on energy
+- AI pattern detection - Identifies trends in your data
+- Export options - PDF, CSV, JSON for doctors/lawyers
+- Privacy-first - All data stays on your device (optional cloud backup)
+
+**Find It:** Resources tab → Master Tracker Hub (Beta)
+
+---
+
+#### ⚖️ **Appeal Command Center** - Deadline Warfare HQ
+**Everything you need to fight denials:**
+
+**Features:**
+- Deadline Tracker - Never miss an appeal deadline (color-coded by urgency)
+- Denial Decoder - AI translates insurance/government jargon to plain English
+- Evidence Strength Meter - Rate how strong your evidence is (weak/moderate/strong)
+- Appeal Prep Guide - Step-by-step walkthrough
+- Precedent Finder - Coming soon: Search successful cases like yours
+
+**Smart Organization:**
+- Critical tasks (red) - Deadlines within 7 days
+- High priority (orange) - Deadlines within 30 days  
+- Additional tools (blue) - Helpful but not urgent
+
+**Find It:** Resources tab → Appeal Command Center (Beta)
+
+---
+
+### Earlier November 2025 Updates (Enhanced by November 23)
+
+#### 🧠 **Mood Tracker 2.0 with AI** - Track mood + understand what affects it
 - AI detects if your mood is improving, declining, stable, or volatile
 - Track external factors: sleep, weather, exercise, social interactions
 - AI identifies triggers: "Low sleep linked to negative mood shifts"
-- Get 3-5 personalized coping strategies based on your current mood
-- [Learn more about Mood Tracker →](#mood-tracker-tracking-emotions)
+- Get 3-5 personalized coping strategies based on current mood
+- Streak tracking, volatility metrics, 24-hour mood delta
+- All AI analysis on your device (privacy-first)
 
-**⚡ Pacing Partner with Energy Forecasting**
-- Hourly energy predictions (8am, 12pm, 5pm, 8pm) based on your patterns
+#### ⚡ **Pacing Partner with AI Forecasting** - Predict energy + prevent crashes  
+- Hourly energy predictions (8am, 12pm, 5pm, 8pm) based on your history
 - Adaptive suggestions when you log high fatigue/pain
-- Body-mind sync analysis showing mood + activity correlation
+- Body-mind sync analysis (mood + activity correlation)
 - Compassion mode: "Your body is asking for rest - that's wisdom, not weakness"
-- [Learn more about Pacing Partner →](#pacing-partner-managing-energy)
+- Achievement tracking + CSV export
 
-**🔗 Cross-Feature Integration**
-- 5 smart recommendation engines adapt to YOUR needs
+#### 🔗 **Cross-Feature Integration** - Smooth flow between all features
+- 5 smart recommendation engines (mood, energy, wellness flow, advocacy, tool completion)
 - See 3-5 personalized suggestions after using any tool
-- Natural progressions between related features
-- Daily discovery of new tools perfectly timed for you
+- Tap to jump directly to recommended features
+- Natural progressions: DBT → Distress tolerance → Mood tracker
 
-**♿ Enhanced Accessibility**
-- **Dyslexia Support:** 5 fonts, 8 colored overlays, spacing controls (14 screens)
-- **Motor Accessibility:** Dwell-click (0.5-3s), touch targets (44×44dp), tremor compensation
-- **Cognitive Aids:** Simplified view, breadcrumbs, auto-save, step-by-step guidance
-- [See all accessibility features →](/accessibility)
+#### 🎡 **Daily Feature Rotation** - Discover all 26 beta tools
+- Featured tool changes daily (guaranteed discovery)
+- Your preferences still influence rankings
+- Proximity bonuses for related tools
 
-**🔐 Enterprise Security**
-- Military-grade AES-256 encryption for all data
-- Air-gapped mode (works completely offline)
-- Zero cloud dependencies - you own your data
-- Hardware-backed key storage
-
----
+#### 📅 **Complete Awareness Calendar** - 30+ observances
+- Indigenous: MMIWG Day, Indigenous Peoples Day, Orange Shirt Day, Indigenous Disability Awareness Month
+- Global health: World Cancer Day, Rare Disease Day, Down Syndrome Day, Mental Health Day, Diabetes Day, World AIDS Day
+- Add to your device calendar + share awareness
 
 ---
 
@@ -134,7 +305,7 @@ features: 145+ available | AI wellness | Enhanced accessibility | Enterprise sec
   </div>
   
   <div class="feature-box">
-    <h3>🎯 <a href="/features">145+ Features</a></h3>
+    <h3>🎯 <a href="/features">All Features</a></h3>
     <p>Complete list of all tools available in the app</p>
   </div>
   
