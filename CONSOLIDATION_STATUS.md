@@ -363,83 +363,75 @@ Last updated: November 23, 2025
 
 ---
 
-## ⚠️ POST-BETA PRIORITY: Resources vs Research Reorganization
+## ✅ COMPLETED: Resources vs Research Reorganization
 
-### Critical UX Issue Identified
-**Problem:** Resources tab contains mix of in-app tools AND external web links, causing "page not found" confusion when users expect in-app features.
+### UX Issue Resolution - COMPLETE ✅
+**Problem:** Resources tab contained mix of in-app tools AND external web links, causing "page not found" confusion when users expected in-app features.
 
-**Current State:**
-- **Resources tab** (`app/(tabs)/resources/index.tsx`):
-  - ✅ In-app tools: Master Tracker Hub, Letter Wizard, Appeal Command Center, Evidence Manager
-  - ❌ External links: Government websites, human rights commissions, provincial programs, employment standards
-  - **Issue:** Users click expecting in-app content, get browser redirects instead
+**Solution Implemented:**
+
+**Resources Tab = In-App Interactive Tools ONLY** ✅
+- `data/resources.json` now contains ONLY 6 in-app tool references:
+  - Mental Health Toolkit
+  - Community Support Map
+  - Advocacy Handbook
+  - Workplace Accommodation Request
+  - Appeal Letter Template
+  - Union Representation Letter
+- All external URLs removed from this file
+- Users now see only interactive, in-app tools in Resources tab
+
+**Research Tab = External Links & Data Sources** ✅
+- Created new screen: `app/research/external-resources.tsx`
+- Features:
+  - SectionList organized by category (Employment, Human Rights, Benefits, Workers' Comp, Crisis)
+  - Province filter (All, Canada, user's province, other provinces)
+  - Search functionality
+  - Clear "opens in browser" indicators
+  - Accessibility labels warning users about external links
+  - Info card explaining these are government/advocacy websites
   
-- **Research tab** (`app/research/index.tsx`):
-  - ✅ Research Library (100+ studies)
-  - ✅ Master Index (data sources map)
-  - ✅ UN CRPD Guide
-  - ⏳ History Timeline (coming soon)
-  - **Issue:** External resource links are scattered in Resources instead of here
+- Created new data file: `data/externalResources.json`
+  - 96 external resource URLs organized by category:
+    - Employment standards (federal + all provinces)
+    - Human rights commissions (federal + all provinces)
+    - Disability benefits programs (ODSP, PWD, AISH, SAID, etc.)
+    - Workers' compensation boards (all provinces/territories)
+    - Crisis resources
+    - Advocacy organizations
+  - Each entry includes: id, title, description, url, scope, province, category
 
-**Source of External Links:**
-- `data/resources.json` - 96 entries with external URLs to:
-  - canada.ca (federal programs)
-  - Provincial government sites (ON, BC, AB, SK, MB, QC, NB, etc.)
-  - Human rights commissions
-  - Disability benefit programs (ODSP, PWD, AISH, SAID, etc.)
-  - Employment standards agencies
-  - Advocacy organizations
+- Updated Research tab index (`app/research/index.tsx`):
+  - Added "External Resources" card linking to new screen
+  - Updated SimpleModeWelcome to show 3 available features
+  - Clear labeling: "Government programs, disability benefits, and human rights resources"
 
-**Proposed Solution:**
+**Implementation Details:**
+- ✅ Created `app/research/external-resources.tsx` (complete external resource browser)
+- ✅ Created `data/externalResources.json` (96 categorized external URLs)
+- ✅ Updated `data/resources.json` (reduced to 6 in-app tools)
+- ✅ Added External Resources link to Research tab index
+- ✅ Updated SimpleModeWelcome messaging
 
-**Resources Tab = In-App Interactive Tools**
-- Master Tracker Hub
-- Letter Wizard
-- Appeal Command Center
-- Evidence Manager
-- Doctor Visit Prep
-- Accommodation Request Builder
-- Case Timeline Builder
-- Financial Safety Net Planner
-- Impact Simulator
-- All other interactive, in-app tools
-
-**Research Tab = External Links & Data Sources**
-- Research Library (existing)
-- Master Index (existing)
-- Government Benefits & Programs (NEW - from resources.json)
-- Human Rights Resources (NEW - from resources.json)
-- Employment Standards (NEW - from resources.json)
-- Provincial Programs (NEW - from resources.json)
-- Advocacy Organizations (NEW - from resources.json)
-- Academic Research & Studies (existing)
-
-**Implementation Plan:**
-1. Create new sections in Research tab:
-   - "Government Programs & Benefits" (Federal + Provincial)
-   - "Human Rights & Advocacy"
-   - "Employment & Work Resources"
-   - "Provincial Resources" (filterable by province)
-
-2. Move external URL resources from `data/resources.json` to Research tab
-
-3. Update Resources tab to show only in-app tools (remove external links)
-
-4. Add clear labels:
-   - Resources: "Interactive tools built into this app"
-   - Research: "External links to government sites, research, and data sources"
-
-5. Update SimpleModeWelcome messaging in both tabs
+**Features of External Resources Screen:**
+- Province filtering (All, Canada, AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT)
+- Search by title, description, or category
+- Organized sections by category
+- Province tags on provincial resources
+- Open-in-browser icons on each item
+- Info card warning users about external links
+- Empty state with reset filters option
+- Full accessibility support
 
 **Impact:**
-- ✅ Clear separation: In-app tools vs External resources
-- ✅ Reduced confusion: No more "page not found" expectations
-- ✅ Better discoverability: External resources organized by category
-- ✅ Improved UX: Users know what to expect when clicking
+- ✅ Clear separation: In-app tools (Resources) vs External links (Research)
+- ✅ Eliminated confusion: No more "page not found" when expecting in-app content
+- ✅ Better discoverability: 96 external resources organized by category with filtering
+- ✅ Improved UX: Users know exactly what to expect when clicking
+- ✅ Enhanced navigation: Province filter helps users find relevant local resources
+- ✅ Better accessibility: Clear labels and warnings about external content
 
-**Priority:** HIGH - This is a significant UX issue affecting user trust and navigation
-
-**Timeline:** 1-2 days post-beta
+**Status:** COMPLETE - Resources/Research reorganization fully implemented and tested ✅
 
 ---
 

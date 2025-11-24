@@ -45,7 +45,7 @@ export default function ResearchScreen() {
 
         <SimpleModeWelcome 
           tabName="Research"
-          availableFeatures={['Research Library', 'UN CRPD Guide']}
+          availableFeatures={['Research Library', 'UN CRPD Guide', 'External Resources']}
           hiddenCount={mode === 'simple' ? 2 : 0}
         />
 
@@ -94,6 +94,20 @@ export default function ResearchScreen() {
               <Ionicons name="people-circle-outline" size={32} color={palette.primary} />
               <Text style={styles.sectionTitle}>{t('research.card.uncrpdGuideTitle')}</Text>
               <Text style={styles.sectionDescription}>{t('research.card.uncrpdGuideDesc')}</Text>
+            </A11yPressable>
+          </Link>
+
+          {/* External Resources - Government Programs */}
+          <Link href="/research/external-resources" asChild={true}>
+            <A11yPressable
+              style={styles.sectionCard}
+              accessibilityRole="button"
+              accessibilityLabel="External Resources - Government programs, disability benefits, and human rights resources"
+              hitSlop={HIT_SLOP_8}
+            >
+              <Ionicons name="globe-outline" size={32} color={palette.primary} />
+              <Text style={styles.sectionTitle}>External Resources</Text>
+              <Text style={styles.sectionDescription}>Government programs, disability benefits, and human rights resources</Text>
             </A11yPressable>
           </Link>
 
