@@ -1,7 +1,24 @@
 # 3mpwrApp — All Disclaimers Summary
 
 **For Website FAQ / Legal Section**  
-**Last Updated: October 24, 2025**
+**Last Updated: November 23, 2025**  
+**Version: 3.0 (November 2025 Consolidation Update)**
+
+---
+
+## 🆕 **November 2025 Updates**
+
+The following new features are covered by our existing disclaimers:
+
+- **✅ Complexity Mode System** - Simplification tools are informational; medical/cognitive support requires professional consultation
+- **✅ Master Tracker Hub** - Health tracking is informational only; not a substitute for medical advice
+- **✅ Appeal Command Center** - Deadline tracking and legal tools are educational; not legal advice
+- **✅ Offline Queue System** - Technical feature for data reliability; users responsible for backing up critical documents
+- **✅ 4 Wellness Hubs** - All wellness tools remain informational; not medical treatment
+- **✅ Resources vs Research Split** - Clearly distinguishes in-app tools from external government/legal resources
+- **✅ SOS/Crisis Button** - Connects to external crisis services; app cannot detect or prevent emergencies
+- **✅ Profile & Personalization** - Recommendations are suggestions only; not professional advice
+- **✅ 10 Revolutionary Features** - AI-powered tools may contain errors; verify all outputs
 
 ---
 
@@ -34,13 +51,16 @@
 - **IN MEDICAL EMERGENCIES, CALL 911 OR YOUR LOCAL EMERGENCY SERVICES IMMEDIATELY**
 
 ### **Features Covered:**
-- Mood Tracker
-- Symptom & Pain Tracker
-- Sleep & Energy Tracker
+- Mood Tracker & Mood Tracker 2.0 with AI Pattern Detection
+- Symptom & Pain Tracker (including Master Tracker Hub)
+- Sleep & Energy Tracker (including Energy & Mood Hub)
 - Pain Forecast
-- Wellness exercises
+- Pacing Partner with AI Energy Forecasting
+- Wellness exercises (Movement & Rehab Hub)
 - Nutrition guides
-- All wellness tools
+- Mental Wellness Toolkit (8 CBT/DBT tools)
+- Unified Health Tracker
+- All wellness hubs and consolidated features
 
 ---
 
@@ -64,13 +84,17 @@
 - Verify all deadlines and procedures with official sources
 
 ### **Features Covered:**
-- Letter Wizard (all 22 templates)
-- Legal Workflow Automation
+- Letter Wizard (all 22+ templates including new accommodation, appeal, medical leave, harassment, housing templates)
+- Master Tracker Hub (case timeline tracking)
+- Appeal Command Center (deadline tracking, denial decoder, evidence strength meter, appeal prep guide)
+- Legal Workflow Automation (all automated processes)
 - Lawyer Finder (we don't endorse or verify attorneys)
-- Jurisdiction Resources
+- Jurisdiction Resources (provincial/territorial legal information)
 - Rights Checklists
-- Policy Explainer
+- Policy Explainer & Policy Made Simple
 - Government Navigator
+- AI Case Interpreter
+- All legal and advocacy tools
 
 ---
 
@@ -92,10 +116,12 @@
 - Tax implications vary - consult a tax professional
 
 ### **Features Covered:**
-- Benefits Tracker
-- Financial information in Resources
+- Benefits Tracker (Master Tracker Hub integration)
+- Financial information in Resources & Research tabs
+- Provincial disability benefit information (ODSP, PWD, AISH, SAID, etc. - Research → External Resources)
 - Disability benefit application assistance
 - Budget planning tools
+- Financial impact information
 
 ---
 
