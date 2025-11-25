@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-25T00:52:13.730Z",
+  "lastUpdated": "2025-11-25T06:18:29.145Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3385,
+      "totalPosts": 3410,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T00:52:04.961Z"
+      "lastSeen": "2025-11-25T06:18:20.849Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3400,
+      "totalPosts": 3425,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T00:52:06.741Z"
+      "lastSeen": "2025-11-25T06:18:22.710Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3387,
+      "totalPosts": 3412,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T00:52:09.041Z"
+      "lastSeen": "2025-11-25T06:18:24.699Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3393,
+      "totalPosts": 3418,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T00:52:10.878Z"
+      "lastSeen": "2025-11-25T06:18:26.531Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3400,
+      "totalPosts": 3425,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T00:52:12.726Z"
+      "lastSeen": "2025-11-25T06:18:28.141Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "No wonder Minister Collins has moved to Repeal the Plain Language Act, and NZ Government is sidelining its #Accessibility Charter. NZ Govt wants to Hide Information!\n\nI can't read a QR code. 20% of NZers are digitally excluded and with the telcos dropping 3G network phones that %ge may grow.\n#NZpol",
-      "author": "jennykaynz.bsky.social",
-      "engagement": 25,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
-      "author": "zeldman.bsky.social",
-      "engagement": 18,
-      "hashtag": "A11y"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -338,6 +320,24 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Wow, I can't believe I am nominated along such amazing advocates I admire and respect so much. It is an honor! And 2nd time? 🥲\n\nI found my calling 7 years ago and I'll continue as long as I can. Our will for a more accessible gaming space is unbreakable.\n\nVote link in quoted post.\n\n#Accessibility",
+      "author": "black1976.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -390,10 +390,6 @@
       "count": 6
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 6
-    },
-    {
       "keyword": "inclusion",
       "count": 5
     },
@@ -411,6 +407,10 @@
     },
     {
       "keyword": "deportation",
+      "count": 5
+    },
+    {
+      "keyword": "disabilityjustice nico",
       "count": 5
     },
     {
