@@ -76,7 +76,8 @@ async function syncEvents() {
     // Read events from public API
     const eventsPath = join(ROOT, 'public', 'api', 'events.json');
     const eventsData = await fs.readFile(eventsPath, 'utf-8');
-    const events = JSON.parse(eventsData);
+    const eventsJson = JSON.parse(eventsData);
+    const events = eventsJson.events || eventsJson;
     
     console.log(`   Found ${events.length} events to sync`);
     
@@ -114,10 +115,11 @@ async function syncCampaigns() {
       : join(ROOT, 'public', 'api', 'campaigns.json');
     
     const campaignsData = await fs.readFile(campaignsPath, 'utf-8');
-    let campaigns = JSON.parse(campaignsData);
+    const campaignsJson = JSON.parse(campaignsData);
+    let campaigns = campaignsJson.campaigns || campaignsJson;
     
     // Compress campaigns unless --full flag is used
-    if (!useFullData) {
+    if (!useFullData && Array.isArray(campaigns)) {
       campaigns = campaigns.map(compressCampaign);
       console.log(`   Using compressed data (${campaigns.length} campaigns)`);
     } else {

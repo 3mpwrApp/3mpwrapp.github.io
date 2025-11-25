@@ -17,6 +17,7 @@ export default function TabsLayout() {
   return (
     <>
       <Tabs
+        initialRouteName="index"
         screenOptions={{
           headerShown: false,
           // Lazy render tab screens on first focus to reduce initial bundle work

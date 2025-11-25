@@ -5,6 +5,7 @@ import { Alert, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'rea
 import { useTranslation } from '../../../i18n';
 import { useFunctionalCapacity } from '../../../services/functionalCapacityEvaluator';
 import { useAppPalette } from '../../../theme/usePalette';
+import { createShadow } from '../../../utils/shadow';
 
 export default function FunctionalCapacityScreen() {
   const { t } = useTranslation();
@@ -389,11 +390,12 @@ const styles = StyleSheet.create({
     margin: 16,
     padding: 16,
     borderRadius: 12,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 4,
+      elevation: 3,
+    }),
   },
   headerRow: {
     flexDirection: 'row',

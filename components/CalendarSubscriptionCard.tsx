@@ -3,6 +3,7 @@ import { Alert, Platform, Share, StyleSheet, Text, View } from 'react-native';
 
 import { ANALYTICS_EVENTS, trackEvent } from '../services/analyticsClient';
 import { useAppPalette } from '../theme/usePalette';
+import { createShadow } from '../utils/shadow';
 
 import A11yPressable from './A11yPressable';
 
@@ -170,10 +171,12 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 12,
     borderWidth: 2,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 4,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.1,
+      shadowRadius: 8,
+      elevation: 4,
+    }),
   },
   header: {
     flexDirection: 'row',
@@ -225,10 +228,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 10,
     alignItems: 'center',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 3,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.2,
+      shadowRadius: 4,
+      elevation: 3,
+    }),
   },
   buttonText: {
     fontSize: 16,

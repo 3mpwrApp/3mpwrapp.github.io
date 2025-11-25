@@ -1,6 +1,6 @@
 # 3mpwrApp — Community Guidelines
 
-**Last Updated: November 23, 2025**  
+**Last Updated: November 24, 2025**  
 **Version: 2.0 (November 2025 Update)**
 
 ## 🆕 **November 2025 Updates**
@@ -234,7 +234,7 @@ We welcome your input on improving our community!
 - These guidelines may be updated as our community grows
 - We'll notify users of significant changes
 - Continued use of the app constitutes acceptance of updated guidelines
-- Last updated: October 24, 2025
+- Last updated: November 24, 2025
 
 ---
 

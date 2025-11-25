@@ -4,6 +4,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
 import { logError } from '../utils/errorLogger';
+import { createShadow } from '../utils/shadow';
 
 import GapView from './GapView';
 
@@ -301,11 +302,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       minHeight: 48,
     },
     primaryButton: {
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.1,
-      shadowRadius: 4,
-      elevation: 2,
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 2,
+      }),
     },
     secondaryButton: {
       backgroundColor: 'transparent',

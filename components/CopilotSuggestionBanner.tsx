@@ -17,6 +17,8 @@ import {
     View
 } from 'react-native';
 
+import { createShadow } from '../utils/shadow';
+
 // Lazy-load Haptics only on native platforms
 let Haptics: any = null;
 if (Platform.OS !== 'web') {
@@ -244,11 +246,12 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderLeftWidth: 4,
     padding: 16,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 4,
+      elevation: 3,
+    }),
   },
   header: {
     flexDirection: 'row',
@@ -349,11 +352,12 @@ const styles = StyleSheet.create({
     maxWidth: 400,
     borderRadius: 16,
     padding: 20,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 8,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 8,
+    }),
   },
   modalHeader: {
     flexDirection: 'row',

@@ -138,7 +138,10 @@ const ThemedHeader = React.memo(() => {
       {/* Brand */}
       <Pressable
         style={styles.brand}
-        onPress={() => router.push("/(tabs)" as Href)}
+        onPress={() => {
+          // Navigate to home - explicitly navigate to index route
+          router.replace("/(tabs)/index" as Href);
+        }}
         accessibilityRole="link"
         accessibilityLabel="Go to Home"
         hitSlop={HIT_SLOP_8}
@@ -384,13 +387,13 @@ const ThemedHeader = React.memo(() => {
             accessibilityRole="button"
             accessibilityLabel="Close menu"
             onPress={() => setMenuOpen(false)}
-            style={styles.menuBackdrop}
+            style={[styles.menuBackdrop, { pointerEvents: 'auto' }]}
           />
           <View
             accessibilityLabel="Main menu"
             accessible={true}
             accessibilityViewIsModal={true}
-            style={styles.menuWrap}
+            style={[styles.menuWrap, { pointerEvents: 'auto' }]}
           >
             <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>
               <MenuSection title="Tools & Resources" palette={palette} />

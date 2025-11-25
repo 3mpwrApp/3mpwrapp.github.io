@@ -11,6 +11,7 @@ import { ActivityIndicator, Modal, StyleSheet, Text, View } from 'react-native';
 import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 import { logger } from '../utils/logger';
+import { createShadow } from '../utils/shadow';
 
 // Lazy-load expo-updates
 let Updates: any = null;
@@ -77,6 +78,13 @@ export default function UpdateSplashScreen() {
     // Prevent multiple simultaneous checks
     if (checkingRef.current) {
       logger.log('[UpdateSplashScreen] Update check already in progress, skipping...');
+      return;
+    }
+
+    // Skip in development mode - updates only work in production builds
+    if (__DEV__) {
+      setShowSplash(false);
+      setIsChecking(false);
       return;
     }
 
@@ -239,10 +247,12 @@ const styles = StyleSheet.create({
     padding: 32,
     borderRadius: 16,
     alignItems: 'center',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    elevation: 8,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.2,
+      shadowRadius: 8,
+      elevation: 8,
+    }),
   },
   title: {
     fontSize: 28,

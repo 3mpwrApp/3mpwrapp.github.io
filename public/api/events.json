@@ -1,5 +1,27 @@
 {
-  "events": [],
-  "count": 0,
-  "lastUpdated": "2025-11-20T22:16:05.543Z"
+  "events": [
+    {
+      "id": "evt-oniwg-rally-dec8-2025",
+      "title": "ONIWG - Support Injured Workers Rally",
+      "description": "Join the Ontario Network of Injured Workers Groups (ONIWG) as we rally to support injured workers and demand justice for those who have been harmed on the job.\n\nStand with injured workers as we advocate for:\n• Fair treatment and adequate support for injured workers\n• Proper workplace safety enforcement\n• Access to necessary medical care and rehabilitation\n• Dignity and respect for all injured workers\n\nYour presence matters. Together we can make a difference for injured workers across Ontario.",
+      "date": "2025-12-08T11:00:00-05:00",
+      "location": "Ministry of Labour, 400 University Ave, Toronto, ON",
+      "isVirtual": false,
+      "category": "rally",
+      "tags": [
+        "injured-workers",
+        "ontario",
+        "advocacy",
+        "oniwg",
+        "workers-rights"
+      ],
+      "organizer": "Ontario Network of Injured Workers Groups (ONIWG)",
+      "status": "published",
+      "wheelchairAccessible": true,
+      "stepFree": true,
+      "energyCost": "medium"
+    }
+  ],
+  "count": 1,
+  "lastUpdated": "2025-11-25T03:22:59.422Z"
 }

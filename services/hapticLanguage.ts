@@ -15,10 +15,19 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as Haptics from 'expo-haptics';
 import { Platform } from 'react-native';
 
 import { logError } from '../utils/errorLogger';
+
+// Lazy load Haptics only on mobile platforms
+let Haptics: any = null;
+if (Platform.OS !== 'web') {
+  try {
+    Haptics = require('expo-haptics');
+  } catch (error) {
+    console.warn('[HapticLanguage] expo-haptics not available');
+  }
+}
 
 // ============================================================================
 // Types & Interfaces
@@ -52,7 +61,7 @@ export interface HapticPattern {
 
 export interface HapticStep {
   type: 'impact' | 'notification' | 'selection' | 'pause';
-  style?: Haptics.ImpactFeedbackStyle | Haptics.NotificationFeedbackType;
+  style?: any; // Haptics feedback style (0=Light, 1=Medium, 2=Heavy for impact; 0=Success, 1=Warning, 2=Error for notification)
   duration?: number; // milliseconds
 }
 
@@ -78,11 +87,11 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Urgent Deadline',
     description: '3 short pulses - Something needs immediate attention',
     pattern: [
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 }, // Heavy
       { type: 'pause', duration: 200 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 200 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
     ],
     priority: 'critical',
     canCustomize: false,
@@ -93,9 +102,9 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Appointment Soon',
     description: 'Long buzz - You have an appointment in 1 hour',
     pattern: [
-      { type: 'notification', style: Haptics.NotificationFeedbackType.Warning },
+      { type: 'notification', style: 1 }, // Warning
       { type: 'pause', duration: 100 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
+      { type: 'impact', style: 1 }, // Medium
     ],
     priority: 'high',
     canCustomize: true,
@@ -106,15 +115,15 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Medication Time',
     description: 'Wave pattern - Time to take your medication',
     pattern: [
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 }, // Light
       { type: 'pause', duration: 150 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
+      { type: 'impact', style: 1 }, // Medium
       { type: 'pause', duration: 150 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 }, // Heavy
       { type: 'pause', duration: 150 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
+      { type: 'impact', style: 1 },
       { type: 'pause', duration: 150 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
     ],
     priority: 'high',
     canCustomize: true,
@@ -125,13 +134,13 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'New Message',
     description: 'Heartbeat rhythm - Someone sent you a message',
     pattern: [
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
+      { type: 'impact', style: 1 },
       { type: 'pause', duration: 100 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
       { type: 'pause', duration: 600 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
+      { type: 'impact', style: 1 },
       { type: 'pause', duration: 100 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
     ],
     priority: 'medium',
     canCustomize: true,
@@ -143,25 +152,25 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     description: 'SOS pattern (· · · — — — · · ·) - Crisis or safety concern',
     pattern: [
       // S (· · ·)
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 150 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 150 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 300 },
       // O (— — —)
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 400 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 400 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 300 },
       // S (· · ·)
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 150 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 150 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
     ],
     repeats: 2,
     priority: 'critical',
@@ -173,13 +182,13 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Achievement',
     description: 'Ascending tones - You completed something!',
     pattern: [
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
       { type: 'pause', duration: 100 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
+      { type: 'impact', style: 1 },
       { type: 'pause', duration: 100 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 100 },
-      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
+      { type: 'notification', style: 0 },
     ],
     priority: 'low',
     canCustomize: true,
@@ -190,13 +199,13 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Warning',
     description: 'Descending tones - Something needs your attention',
     pattern: [
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 100 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
+      { type: 'impact', style: 1 },
       { type: 'pause', duration: 100 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
       { type: 'pause', duration: 100 },
-      { type: 'notification', style: Haptics.NotificationFeedbackType.Warning },
+      { type: 'notification', style: 1 },
     ],
     priority: 'medium',
     canCustomize: true,
@@ -207,11 +216,11 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Energy Low',
     description: 'Slow pulse - Your energy/spoons are running low',
     pattern: [
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
       { type: 'pause', duration: 500 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
       { type: 'pause', duration: 500 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
     ],
     priority: 'medium',
     canCustomize: true,
@@ -222,9 +231,9 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Task Complete',
     description: 'Double tap - Task finished successfully',
     pattern: [
-      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
+      { type: 'notification', style: 0 },
       { type: 'pause', duration: 150 },
-      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
+      { type: 'notification', style: 0 },
     ],
     priority: 'low',
     canCustomize: true,
@@ -235,11 +244,11 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Spoons Depleted',
     description: 'Fading pattern - You\'ve run out of spoons for today',
     pattern: [
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
+      { type: 'impact', style: 1 },
       { type: 'pause', duration: 200 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
       { type: 'pause', duration: 300 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
     ],
     priority: 'medium',
     canCustomize: true,
@@ -263,11 +272,11 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     name: 'Crisis Contact Ready',
     description: 'Ready pattern - Crisis contact has been notified',
     pattern: [
-      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
+      { type: 'notification', style: 0 },
       { type: 'pause', duration: 100 },
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Heavy },
+      { type: 'impact', style: 2 },
       { type: 'pause', duration: 100 },
-      { type: 'notification', style: Haptics.NotificationFeedbackType.Success },
+      { type: 'notification', style: 0 },
     ],
     priority: 'critical',
     canCustomize: false,
@@ -279,13 +288,13 @@ const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
     description: '4-7-8 breathing rhythm - Inhale, hold, exhale',
     pattern: [
       // Inhale (4 seconds)
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
       { type: 'pause', duration: 4000 },
       // Hold (7 seconds)
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Medium },
+      { type: 'impact', style: 1 },
       { type: 'pause', duration: 7000 },
       // Exhale (8 seconds)
-      { type: 'impact', style: Haptics.ImpactFeedbackStyle.Light },
+      { type: 'impact', style: 0 },
       { type: 'pause', duration: 8000 },
     ],
     repeats: 3,
@@ -406,20 +415,25 @@ class HapticLanguageManager {
   }
 
   private async playPattern(steps: HapticStep[]): Promise<void> {
+    // Skip haptics on web
+    if (!Haptics || Platform.OS === 'web') {
+      return;
+    }
+    
     for (const step of steps) {
       switch (step.type) {
         case 'impact':
           if (step.style && typeof step.style === 'number' && step.style <= 2) {
-            await Haptics.impactAsync(step.style as Haptics.ImpactFeedbackStyle);
+            await Haptics.impactAsync(step.style as any);
           } else {
-            await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+            await Haptics.impactAsync(1);
           }
           break;
         case 'notification':
           if (step.style && typeof step.style === 'number' && step.style <= 2) {
-            await Haptics.notificationAsync(step.style as Haptics.NotificationFeedbackType);
+            await Haptics.notificationAsync(step.style as any);
           } else {
-            await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+            await Haptics.notificationAsync(0);
           }
           break;
         case 'selection':
@@ -523,4 +537,5 @@ export function useHapticLanguage() {
     getUsageStats: () => hapticLanguage.getUsageStats(),
   };
 }
+
 

@@ -47,4 +47,20 @@ export type Event = {
 // Local sample events removed to show only real community events.
 // System holidays and disability observances are generated at runtime
 // by `data/holidays-ca.ts` and shown as system items in the Events screen.
-export const events: Event[] = [];
+export const events: Event[] = [
+  {
+    id: 'evt-oniwg-rally-dec8-2025',
+    title: 'ONIWG - Support Injured Workers Rally',
+    description: 'Join the Ontario Network of Injured Workers Groups (ONIWG) as we rally to support injured workers and demand justice for those who have been harmed on the job.\n\nStand with injured workers as we advocate for:\n• Fair treatment and adequate support for injured workers\n• Proper workplace safety enforcement\n• Access to necessary medical care and rehabilitation\n• Dignity and respect for all injured workers\n\nYour presence matters. Together we can make a difference for injured workers across Ontario.',
+    date: '2025-12-08T11:00:00-05:00', // December 8, 2025 at 11:00 AM EST
+    location: 'Ministry of Labour, 400 University Ave, Toronto, ON',
+    isVirtual: false,
+    category: 'rally',
+    tags: ['injured-workers', 'ontario', 'advocacy', 'oniwg', 'workers-rights'],
+    organizer: 'Ontario Network of Injured Workers Groups (ONIWG)',
+    status: 'published',
+    wheelchairAccessible: true,
+    stepFree: true,
+    energyCost: 'medium',
+  },
+];

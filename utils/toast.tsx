@@ -3,6 +3,8 @@ import { Platform, StyleSheet, Text, View } from "react-native";
 
 import { useAppPalette } from "../theme/usePalette";
 
+import { createShadow } from "./shadow";
+
 // Simple global toast event system (no external deps)
 type ToastOptions = { duration?: number; type?: "info" | "success" | "warn" | "error" };
 type Listener = (msg: string | null, opts?: ToastOptions) => void;
@@ -109,16 +111,13 @@ const s = StyleSheet.create({
     // center text/content
     alignItems: 'center',
     justifyContent: 'center',
-    // Shadows: use boxShadow on web, native shadow props elsewhere
-    ...(Platform.OS === 'web'
-      ? { boxShadow: '0 6px 12px rgba(0,0,0,0.15)' as any }
-      : {
-          shadowColor: '#000',
-          shadowOpacity: 0.15,
-          shadowRadius: 6,
-          shadowOffset: { width: 0, height: 2 },
-          elevation: 3,
-        }),
+    // Shadows
+    ...createShadow({
+      shadowOpacity: 0.15,
+      shadowRadius: 6,
+      shadowOffset: { width: 0, height: 2 },
+      elevation: 3,
+    }),
   },
   text: { fontWeight: "700" },
 });

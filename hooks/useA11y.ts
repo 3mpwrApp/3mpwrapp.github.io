@@ -28,6 +28,8 @@ export function useFocusOnRefOnMount(
   React.useEffect(() => {
     const id = setTimeout(() => {
       try {
+        // Skip on web - findNodeHandle is not supported
+        if (Platform.OS === 'web') return;
         // Guard: findNodeHandle isn't implemented in jsdom; skip if missing.
         if (typeof findNodeHandle !== "function") return;
         const current = (ref as any).current;

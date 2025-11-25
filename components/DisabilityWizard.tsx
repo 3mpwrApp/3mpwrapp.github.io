@@ -7,7 +7,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import { useState } from 'react';
-import { ActivityIndicator, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
@@ -16,6 +16,7 @@ import type { WizardSuggestion } from '../services/disabilityWizard';
 import { findNextSteps, useDisabilityWizard } from '../services/disabilityWizard';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
+import { createShadow } from '../utils/shadow';
 
 import A11yPressable from './A11yPressable';
 import { GapView } from './GapView';
@@ -330,16 +331,12 @@ function createStyles(palette: any, factor: number) {
       borderRadius: 16,
       padding: 16,
       marginVertical: 12,
-      ...Platform.select({
-        ios: {
-          shadowColor: palette.shadow || palette.text,
-          shadowOffset: { width: 0, height: 2 },
-          shadowOpacity: 0.1,
-          shadowRadius: 8,
-        },
-        android: {
-          elevation: 4,
-        },
+      ...createShadow({
+        shadowColor: palette.shadow || palette.text,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+        elevation: 4,
       }),
     },
     

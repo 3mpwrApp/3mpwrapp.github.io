@@ -990,29 +990,29 @@ function createStyles(
     weekRow: {
       flexDirection: "row",
       justifyContent: "space-between",
-      marginBottom: 2,
+      marginBottom: 1,
     },
     calendarContainer: {
-      maxHeight: 180, // Reduced for smaller calendar
-      marginBottom: 20,
+      maxHeight: 140, // Further reduced for web
+      marginBottom: 12,
     },
     weekHdr: {
-      width: 28,
+      width: 24,
       textAlign: "center",
       color: palette.text,
       opacity: 0.7,
-      fontSize: 11,
+      fontSize: 10,
     },
     dayCell: {
-      width: 28,
-      height: 28,
-      borderRadius: 5,
+      width: 24,
+      height: 24,
+      borderRadius: 4,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
       alignItems: "center",
       justifyContent: "center",
     },
-    dayText: { color: palette.text, fontSize: 12 },
+    dayText: { color: palette.text, fontSize: 10 },
   });
 }
 

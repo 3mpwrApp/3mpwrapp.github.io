@@ -1,10 +1,11 @@
 import { Link } from 'expo-router';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../i18n';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
+import { createShadow } from '../utils/shadow';
 
 import A11yPressable from './A11yPressable';
 
@@ -75,8 +76,18 @@ export const RevolutionaryFeaturesSpotlight = React.memo(() => {
   const styles = React.useMemo(() => createStyles(palette, factor), [palette, factor]);
 
   const [dismissed, setDismissed] = React.useState(false);
+  const [error, setError] = React.useState(false);
 
-  if (dismissed) return null;
+  // Catch any rendering errors
+  React.useEffect(() => {
+    const handleError = () => setError(true);
+    if (typeof window !== 'undefined' && Platform.OS === 'web') {
+      window.addEventListener('error', handleError);
+      return () => window.removeEventListener('error', handleError);
+    }
+  }, []);
+
+  if (dismissed || error) return null;
 
   return (
     <View style={styles.container}>
@@ -112,11 +123,11 @@ export const RevolutionaryFeaturesSpotlight = React.memo(() => {
               accessibilityLabel={`${feature.title}. ${feature.description}`}
             >
               <Text style={styles.featureIcon}>{feature.icon}</Text>
-              <View style={styles.featureContent}>
+              <View style={[styles.featureContent, { marginLeft: 12 }]}>
                 <View style={styles.featureTitleRow}>
                   <Text style={styles.featureTitle}>{feature.title}</Text>
                   {feature.beta && (
-                    <View style={styles.betaBadge}>
+                    <View style={[styles.betaBadge, { marginLeft: 6 }]}>
                       <Text style={styles.betaText}>BETA</Text>
                     </View>
                   )}
@@ -156,11 +167,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       marginVertical: 12,
       borderWidth: 1,
       borderColor: palette.primary + '33',
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.1,
-      shadowRadius: 4,
-      elevation: 3,
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 3,
+      }),
     },
     header: {
       flexDirection: 'row',
@@ -195,7 +208,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     scrollContent: {
       paddingRight: 16,
-      gap: 12,
     },
     featureCard: {
       width: 260,
@@ -205,7 +217,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
       flexDirection: 'row',
-      gap: 12,
+      marginRight: 12,
     },
     featureIcon: {
       fontSize: Math.round(32 * factor),
@@ -218,7 +230,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       flexDirection: 'row',
       alignItems: 'center',
       marginBottom: 4,
-      gap: 6,
     },
     featureTitle: {
       fontSize: Math.round(15 * factor),

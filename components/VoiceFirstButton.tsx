@@ -17,6 +17,8 @@ import {
     View
 } from 'react-native';
 
+import { createShadow } from '../utils/shadow';
+
 // Lazy-load Haptics only on native platforms
 let Haptics: any = null;
 if (Platform.OS !== 'web') {
@@ -214,11 +216,12 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 8,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 8,
+    }),
   },
   buttonPressed: {
     transform: [{ scale: 0.95 }],
@@ -263,11 +266,12 @@ const styles = StyleSheet.create({
   suggestionsContainer: {
     borderRadius: 12,
     borderWidth: 1,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    elevation: 4,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.2,
+      shadowRadius: 8,
+      elevation: 4,
+    }),
     marginBottom: 80,
   },
   suggestionsHeader: {

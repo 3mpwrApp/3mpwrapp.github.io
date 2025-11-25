@@ -30,6 +30,7 @@ import {
     type ImpactMetrics
 } from '../../../services/impactScore';
 import { useAppPalette } from '../../../theme/usePalette';
+import { createShadow } from '../../../utils/shadow';
 
 const MAX_FONT_SCALE = 1.4;
 
@@ -326,11 +327,12 @@ const styles = StyleSheet.create({
     padding: 24,
     borderRadius: 16,
     marginBottom: 16,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 4,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 8,
+      elevation: 4,
+    }),
   },
   levelBadge: {
     alignItems: 'center',

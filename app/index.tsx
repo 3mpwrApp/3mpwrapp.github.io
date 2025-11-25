@@ -1,6 +1,6 @@
 import * as Linking from 'expo-linking';
 import { useRouter, useSegments } from 'expo-router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, Platform, Text, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
@@ -10,69 +10,77 @@ import { logger } from '../utils/logger';
 // Deep link URL scheme
 const scheme = 'empowrapp://';
 
+// Global flag to prevent multiple simultaneous redirects (persists across component remounts)
+let isRedirecting = false;
+
 export default function Index() {
-  // EMERGENCY DEBUG
-  console.warn('🚨 [Index] Component mounted');
-  
   const { user, loading } = useAuth();
   const palette = useAppPalette();
   const router = useRouter();
   const segments = useSegments();
+  const [hasNavigated, setHasNavigated] = useState(false);
 
-  // Web-specific: Add console logging for debugging
+  // Debug: Log component lifecycle
   useEffect(() => {
-    console.warn('[Index WEB] Component mounted', { loading, hasUser: !!user });
-    if (Platform.OS === 'web') {
-       
-      console.warn('[Index WEB] Component mounted', { loading, hasUser: !!user });
-    }
+    logger.log('[Index] Component mounted', { loading, hasUser: !!user, segments });
+    return () => {
+      logger.log('[Index] Component unmounting');
+    };
   }, []);
-  
-  useEffect(() => {
-    if (Platform.OS === 'web') {
-       
-      console.warn('[Index WEB] Auth state changed', { loading, hasUser: !!user, segments });
-    }
-  }, [loading, user, segments]);
 
-  // Store the deep link path for resuming after login
+  // Handle deep links (only set up once on mount)
   useEffect(() => {
     const handleDeepLink = async (url: string) => {
+      if (isRedirecting || hasNavigated) {
+        logger.log('[Index] Skipping deep link - already redirecting');
+        return;
+      }
+      
       try {
         // Parse the deep link
         const path = url.replace(scheme, '');
-        logger.log('Deep link detected', { path, currentUser: !!user });
+        logger.log('[Index] Deep link detected', { path, currentUser: !!user });
 
         // If user is not authenticated, store the intended path and redirect to login
         if (!user && !loading) {
           // Save the deep link for later
           const encodedPath = encodeURIComponent(path);
+          isRedirecting = true;
+          setHasNavigated(true);
           router.replace(`/(auth)/signin?redirect=${encodedPath}` as any);
         } else if (user) {
           // User is authenticated, navigate to the deep linked path
           if (path && path !== '') {
+            isRedirecting = true;
+            setHasNavigated(true);
             router.push(path as any);
           } else {
+            isRedirecting = true;
+            setHasNavigated(true);
             router.replace('/(tabs)');
           }
         }
       } catch (error) {
-        logger.error('Deep link handling error', { error: error instanceof Error ? error.message : 'Unknown' });
+        logger.error('[Index] Deep link handling error', { error: error instanceof Error ? error.message : 'Unknown' });
         // Default fallback
-        if (user) {
-          router.replace('/(tabs)');
-        } else {
-          router.replace('/(auth)/signin' as any);
+        if (!hasNavigated) {
+          isRedirecting = true;
+          setHasNavigated(true);
+          if (user) {
+            router.replace('/(tabs)');
+          } else {
+            router.replace('/(auth)/signin' as any);
+          }
         }
       }
     };
 
-    // Listen for initial deep link when app is cold started
+    // Listen for deep links
     const subscription = Linking.addEventListener('url', ({ url }) => {
       handleDeepLink(url);
     });
 
-    // Check if app was opened from a deep link when it's mounted
+    // Check for initial deep link
     Linking.getInitialURL()
       .then(url => {
         if (url != null) {
@@ -80,56 +88,87 @@ export default function Index() {
         }
       })
       .catch(error => {
-        logger.error('Failed to get initial URL', { error: error instanceof Error ? error.message : 'Unknown' });
+        logger.error('[Index] Failed to get initial URL', { error: error instanceof Error ? error.message : 'Unknown' });
       });
 
     return () => {
       subscription.remove();
     };
-  }, [user, loading, router]);
+  }, []); // Only run once on mount
 
-  // Handle redirect using useEffect to avoid middleware issues
+  // Handle auth-based navigation (CRITICAL FIX: Prevent infinite loops)
   useEffect(() => {
+    // Skip if already navigated or currently redirecting
+    if (hasNavigated || isRedirecting) {
+      logger.log('[Index] Skipping redirect - already navigated or redirecting');
+      return;
+    }
+    
+    // Wait for auth to finish loading
     if (loading) {
-      logger.log('[Index] Still loading auth state...');
-      if (Platform.OS === 'web') {
-        console.warn('[Index WEB] Waiting for auth to load...');
-      }
-      return; // Still loading, wait
+      logger.log('[Index] Waiting for auth to load...');
+      return;
     }
     
-    // Auth is done loading - immediately redirect based on user state
-    console.warn('[Index WEB] Auth loaded, user:', !!user);
+    // CRITICAL: Check if we're already on a valid route to prevent loops
+    const currentPath = segments.join('/');
+    logger.log('[Index] Current path:', currentPath, 'User:', !!user);
     
-    // Simple redirect: if no user, go to signin; if user, go to tabs
-    if (!user) {
-      logger.log('[Index] No user - navigating to signin');
-      console.warn('[Index WEB] Redirecting to /(auth)/signin');
-      router.replace('/(auth)/signin' as any);
-    } else {
-      logger.log('[Index] User authenticated - navigating to tabs');
-      console.warn('[Index WEB] Redirecting to /(tabs)');
-      router.replace('/(tabs)');
+    // If we're on auth screens and have a user, redirect to tabs
+    if (user && (currentPath.includes('auth') || currentPath === '' || currentPath === 'index')) {
+      logger.log('[Index] User logged in, navigating to home');
+      isRedirecting = true;
+      setHasNavigated(true);
+      // Use setTimeout to avoid navigation during render
+      setTimeout(() => {
+        router.replace('/(tabs)');
+        setTimeout(() => { isRedirecting = false; }, 1000);
+      }, 100);
+      return;
     }
-  }, [loading, user, router]); // React to loading, user, and router changes only
+    
+    // If we're on tabs/protected routes without a user, redirect to signin
+    if (!user && (currentPath === '' || currentPath === 'index')) {
+      logger.log('[Index] No user, navigating to signin');
+      isRedirecting = true;
+      setHasNavigated(true);
+      // Use setTimeout to avoid navigation during render
+      setTimeout(() => {
+        router.replace('/(auth)/signin' as any);
+        setTimeout(() => { isRedirecting = false; }, 1000);
+      }, 100);
+      return;
+    }
+    
+    // If we're already on the right screen, mark as navigated to prevent future loops
+    if ((user && currentPath.includes('tabs')) || (!user && currentPath.includes('auth'))) {
+      logger.log('[Index] Already on correct screen, marking as navigated');
+      setHasNavigated(true);
+    }
+  }, [loading, user, segments, hasNavigated]);
 
-  // Show loading state while auth initializes or during redirect
-  // Add timeout to detect stuck loading state
+  // Timeout detection for stuck loading
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if (loading && Platform.OS === 'web') {
-         
-        console.error('[Index] Auth stuck loading for 10+ seconds. Check Firebase config and network.');
+      if (loading) {
+        logger.error('[Index] Auth stuck loading for 10+ seconds. Check Firebase config and network.');
+        console.error('[Index] Auth loading timeout - forcing navigation');
+        // Force navigation even if loading
+        if (!hasNavigated && !isRedirecting) {
+          isRedirecting = true;
+          setHasNavigated(true);
+          router.replace('/(auth)/signin' as any);
+        }
       }
     }, 10000);
     return () => clearTimeout(timeout);
-  }, [loading]);
+  }, [loading, hasNavigated]);
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: palette.background || '#fff' }}>
       <ActivityIndicator size="large" color={palette.primary || palette.primary} />
       <Text style={{ marginTop: 20, color: palette.text || '#000', fontSize: 16 }}>
-        Loading 3mpwr App... {loading ? '(Initializing auth)' : '(Redirecting)'}
+        {loading ? 'Initializing auth...' : hasNavigated ? 'Navigating...' : 'Loading 3mpwr App...'}
       </Text>
       {Platform.OS === 'web' && (
         <Text style={{ marginTop: 10, color: palette.textSecondary || '#666', fontSize: 12 }}>
@@ -139,5 +178,3 @@ export default function Index() {
     </View>
   );
 }
-
-

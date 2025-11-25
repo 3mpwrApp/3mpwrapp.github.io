@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { ANALYTICS_EVENTS, trackEvent } from '../services/analyticsClient';
 import { submitEventTo3mpwr } from '../services/submitTo3mpwr';
 import type { Palette } from '../theme/colors';
+import { createShadow } from '../utils/shadow';
 
 import A11yPressable from './A11yPressable';
 import { GapView } from './GapView';
@@ -354,10 +355,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     borderRadius: 8,
     borderWidth: StyleSheet.hairlineWidth,
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 1,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 1 },
+      shadowOpacity: 0.1,
+      shadowRadius: 2,
+      elevation: 1,
+    }),
   },
   buttonText: {
     fontSize: 13,

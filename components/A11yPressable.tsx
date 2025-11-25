@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import type { Insets, PressableProps, View, ViewStyle } from "react-native";
-import { Platform, Pressable } from "react-native";
+import { Platform, Pressable, StyleSheet } from "react-native";
 
 import { touchTarget } from "../constants/A11Y";
 import { FOCUS_INDICATOR } from "../constants/FocusManagement";
@@ -134,7 +134,9 @@ export default function A11yPressable({
           baseStyles.push(pressedStyle);
         }
         
-        return baseStyles;
+        // Flatten the array to a single style object for web compatibility
+        // When used with Link asChild, style arrays can cause CSS errors on web
+        return StyleSheet.flatten(baseStyles);
       }}
       // Enhanced accessibility state management
       accessibilityState={{

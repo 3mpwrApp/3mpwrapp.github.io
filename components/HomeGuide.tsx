@@ -83,14 +83,16 @@ export function HomeGuide() {
         <GapView gap={8}>
           {dailyFeatures.map(feature => (
             <Link key={feature.id} href={feature.route} asChild={true} onPress={() => usage.view('home_guide_daily_feature', '/', { feature: feature.id })}>
-              <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ flexDirection: 'row', alignItems: 'center', padding: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, backgroundColor: palette.background, gap: 10 }}>
-                <Text style={{ fontSize: 20 }}>{feature.icon}</Text>
-                <View style={{ flex: 1 }}>
-                  <Text style={{ color: palette.text, fontWeight: '600', fontSize: 14 }}>{feature.title}</Text>
-                  <Text style={{ color: palette.text, fontSize: 12, opacity: 0.7 }}>{feature.desc}</Text>
-                </View>
-                <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
-              </Pressable>
+              <GapView gap={10} style={{ flexDirection: 'row', alignItems: 'center', padding: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, backgroundColor: palette.background }}>
+                <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                  <Text style={{ fontSize: 20 }}>{feature.icon}</Text>
+                  <View style={{ flex: 1, marginLeft: 10 }}>
+                    <Text style={{ color: palette.text, fontWeight: '600', fontSize: 14 }}>{feature.title}</Text>
+                    <Text style={{ color: palette.text, fontSize: 12, opacity: 0.7 }}>{feature.desc}</Text>
+                  </View>
+                  <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
+                </Pressable>
+              </GapView>
             </Link>
           ))}
         </GapView>

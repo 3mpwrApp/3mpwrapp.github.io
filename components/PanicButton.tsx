@@ -4,6 +4,7 @@ import React from 'react';
 import { AccessibilityInfo, Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
+import { createShadow } from '../utils/shadow';
 
 // Lazy load Haptics only on native platforms
 let Haptics: any = null;
@@ -55,7 +56,7 @@ export function PanicButton() {
   return (
     <View 
       style={styles.container}
-      pointerEvents="box-none" // Allow touches to pass through container
+      style={{ pointerEvents: 'box-none' }} // Allow touches to pass through container
     >
       <Pressable
         onPress={handlePress}
@@ -93,15 +94,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 32,
       justifyContent: 'center',
       alignItems: 'center',
-      ...(Platform.OS === 'web'
-        ? { boxShadow: '0 4px 8px rgba(0,0,0,0.3)' as any }
-        : {
-            shadowColor: palette.text,
-            shadowOffset: { width: 0, height: 4 },
-            shadowOpacity: 0.3,
-            shadowRadius: 8,
-            elevation: 8,
-          }),
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
+        elevation: 8,
+      }),
     },
   });
 }

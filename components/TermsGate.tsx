@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 import { useAppPalette } from "../theme/usePalette";
+import { createShadow } from "../utils/shadow";
 
 import GapView from "./GapView";
 
@@ -671,11 +672,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       backgroundColor: palette.card,
       borderRadius: 12,
       padding: 20,
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.3,
-      shadowRadius: 8,
-      elevation: 8,
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
+        elevation: 8,
+      }),
     },
     scrollView: {
       flexGrow: 1,

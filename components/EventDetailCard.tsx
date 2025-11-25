@@ -1,9 +1,10 @@
-/* eslint-disable no-restricted-syntax */
-import { Platform, StyleSheet, Text, View } from 'react-native';
+ 
+import { StyleSheet, Text, View } from 'react-native';
 
 import type { Event } from '../data/events';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
+import { createShadow } from '../utils/shadow';
 
 import A11yPressable from './A11yPressable';
 
@@ -96,7 +97,7 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
   );
 
   const content = (
-    <View style={[styles.card, { backgroundColor: palette.card, borderRadius: 12 * factor }, Platform.OS === 'web' ? { boxShadow: '0 2px 4px rgba(0,0,0,0.1)' } : { shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 4, elevation: 3 }]}>
+    <View style={[styles.card, { backgroundColor: palette.card, borderRadius: 12 * factor }, createShadow({ shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 4, elevation: 3 })]}>
       {/* Header */}
       <View style={styles.header}>
         <Text style={styles.title} numberOfLines={showFullDetails ? undefined : 2}>

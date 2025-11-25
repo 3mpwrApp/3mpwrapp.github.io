@@ -1,9 +1,10 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Platform, Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
+import { createShadow } from "../utils/shadow";
 
 type AccessibilityToggleProps = {
   title: string;
@@ -123,15 +124,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       height: 20,
       borderRadius: 10,
       backgroundColor: "white",
-      ...(Platform.OS === 'web'
-        ? { boxShadow: '0 1px 2px rgba(0,0,0,0.3)' as any }
-        : {
-            shadowColor: palette.text,
-            shadowOffset: { width: 0, height: 1 },
-            shadowOpacity: 0.3,
-            shadowRadius: 2,
-            elevation: 2,
-          }),
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.3,
+        shadowRadius: 2,
+        elevation: 2,
+      }),
     },
     switchThumbActive: {
       alignSelf: "flex-end",

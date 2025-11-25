@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { Alert, Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
+import { createShadow } from '../utils/shadow';
 
 interface SOSButtonProps {
   position?: 'top-right' | 'bottom-right' | 'bottom-left';
@@ -121,11 +122,13 @@ export default function SOSButton({ position = 'bottom-right', compact = false }
       paddingVertical: compact ? 12 : 14,
       paddingHorizontal: compact ? 12 : 16,
       borderRadius: 50,
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.3,
-      shadowRadius: 6,
-      elevation: 8,
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 6,
+        elevation: 8,
+      }),
     },
     buttonText: {
       color: palette.onPrimary,
@@ -140,11 +143,13 @@ export default function SOSButton({ position = 'bottom-right', compact = false }
       paddingHorizontal: 12,
       paddingVertical: 6,
       borderRadius: 8,
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.2,
-      shadowRadius: 4,
-      elevation: 4,
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
+        elevation: 4,
+      }),
     },
     hintText: {
       color: palette.text,

@@ -33,6 +33,7 @@ import {
     type SpoonRequest
 } from '../../../services/spoonMarketplace';
 import { useAppPalette } from '../../../theme/usePalette';
+import { createShadow } from '../../../utils/shadow';
 
 export default function SpoonMarketplace() {
   const palette = useAppPalette();
@@ -652,11 +653,12 @@ const styles = StyleSheet.create({
     borderRadius: 28,
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 8,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 8,
+    }),
   },
   modalOverlay: {
     flex: 1,

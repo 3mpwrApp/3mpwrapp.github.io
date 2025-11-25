@@ -9,6 +9,8 @@
 
 import { StyleSheet } from 'react-native';
 
+import { createShadow } from '../utils/shadow';
+
 /**
  * WCAG 2.4.13 Focus Appearance Requirements
  * - Focus indicator must have minimum area of 2px
@@ -67,11 +69,13 @@ export const focusIndicatorStyles = StyleSheet.create({
     borderStyle: 'solid',
     borderColor: FOCUS_INDICATOR.colors.light.secondary,
     borderRadius: FOCUS_INDICATOR.borderRadius,
-    shadowColor: FOCUS_INDICATOR.colors.light.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 3,
+    ...createShadow({
+      shadowColor: FOCUS_INDICATOR.colors.light.primary,
+      shadowOffset: { width: 0, height: 0 },
+      shadowOpacity: 0.3,
+      shadowRadius: 4,
+      elevation: 3,
+    }),
   },
   
   // Inner focus ring for elements with existing borders
@@ -95,11 +99,13 @@ export const focusIndicatorStyles = StyleSheet.create({
     borderStyle: 'solid',
     borderColor: FOCUS_INDICATOR.colors.dark.secondary,
     borderRadius: FOCUS_INDICATOR.borderRadius,
-    shadowColor: FOCUS_INDICATOR.colors.dark.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.4,
-    shadowRadius: 4,
-    elevation: 3,
+    ...createShadow({
+      shadowColor: FOCUS_INDICATOR.colors.dark.primary,
+      shadowOffset: { width: 0, height: 0 },
+      shadowOpacity: 0.4,
+      shadowRadius: 4,
+      elevation: 3,
+    }),
   },
 });
 

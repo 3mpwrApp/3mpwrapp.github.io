@@ -24,6 +24,7 @@ import { createTextStyles } from '../../theme/typography.enhanced';
 import { useAppPalette } from '../../theme/usePalette';
 import { logError } from '../../utils/errorLogger';
 import { logger } from '../../utils/logger';
+import { createShadow } from '../../utils/shadow';
 
 // Welcome Modal Component
 const WelcomeModal = React.memo(({ visible, onDismiss }: { visible: boolean; onDismiss: () => void }) => {
@@ -52,11 +53,13 @@ const WelcomeModal = React.memo(({ visible, onDismiss }: { visible: boolean; onD
         padding: 24,
         maxWidth: 400,
         width: '100%',
-        shadowColor: palette.text,
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.3,
-        shadowRadius: 8,
-        elevation: 8,
+        ...createShadow({
+          shadowColor: palette.text,
+          shadowOffset: { width: 0, height: 4 },
+          shadowOpacity: 0.3,
+          shadowRadius: 8,
+          elevation: 8,
+        }),
       }}>
         <Text style={{
           fontSize: Math.round(24 * factor),
@@ -78,7 +81,7 @@ const WelcomeModal = React.memo(({ visible, onDismiss }: { visible: boolean; onD
           {t('welcome.message', 'Let\'s get you set up with personalized tools and resources for your disability advocacy journey.')}
         </Text>
         
-        <View style={{ gap: 12 }}>
+        <GapView style={{ flexDirection: 'column' }} gap={12}>
           <Link href={'/onboarding/first7' as any} asChild={true}>
             <A11yPressable
               style={{
@@ -122,7 +125,7 @@ const WelcomeModal = React.memo(({ visible, onDismiss }: { visible: boolean; onD
               {t('welcome.exploreLater', 'Explore First')}
             </Text>
           </A11yPressable>
-        </View>
+        </GapView>
       </View>
     </View>
   );
@@ -146,11 +149,13 @@ const GuestModeBanner = React.memo(() => {
       borderRadius: 8,
       padding: 12,
       marginVertical: 8,
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 1 },
-      shadowOpacity: 0.1,
-      shadowRadius: 2,
-      elevation: 2,
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.1,
+        shadowRadius: 2,
+        elevation: 2,
+      }),
     }}>
       <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
         <Text style={{ fontSize: 16, marginRight: 8 }}>👤</Text>
@@ -170,8 +175,8 @@ const GuestModeBanner = React.memo(() => {
       }}>
         {t('guest.banner.message', 'You\'re using guest mode. Your data isn\'t saved and some features are limited. Create an account to save your progress and access all features.')}
       </Text>
-      <View style={{ flexDirection: 'row', marginTop: 8, gap: 8 }}>
-        <Link href={'/(auth)/signup' as any} asChild={true} style={{ flex: 1 }}>
+      <GapView style={{ flexDirection: 'row', marginTop: 8 }} gap={8}>
+        <Link href={'/(auth)/signup' as any} asChild={true}>
           <A11yPressable
             style={{
               backgroundColor: palette.primary,
@@ -179,6 +184,7 @@ const GuestModeBanner = React.memo(() => {
               paddingHorizontal: 12,
               borderRadius: 6,
               alignItems: 'center',
+              flex: 1,
             }}
             accessibilityRole="button"
             accessibilityLabel={t('guest.banner.createAccount', 'Create account')}
@@ -192,7 +198,7 @@ const GuestModeBanner = React.memo(() => {
             </Text>
           </A11yPressable>
         </Link>
-        <Link href={'/(auth)/signin' as any} asChild={true} style={{ flex: 1 }}>
+        <Link href={'/(auth)/signin' as any} asChild={true}>
           <A11yPressable
             style={{
               backgroundColor: palette.surface,
@@ -202,6 +208,7 @@ const GuestModeBanner = React.memo(() => {
               paddingHorizontal: 12,
               borderRadius: 6,
               alignItems: 'center',
+              flex: 1,
             }}
             accessibilityRole="button"
             accessibilityLabel={t('guest.banner.signIn', 'Sign in')}
@@ -215,7 +222,7 @@ const GuestModeBanner = React.memo(() => {
             </Text>
           </A11yPressable>
         </Link>
-      </View>
+      </GapView>
     </View>
   );
 });
@@ -546,11 +553,11 @@ const HomeScreen = React.memo(() => {
       {/* Main Action Buttons - Organized in a row */}
       <GapView style={{ flexDirection: 'row', marginBottom: 16 }} gap={12}>
         {/* Global Search Quick Access */}
-        <Link href={'/search' as any} asChild={true} style={{ flex: 1 }}>
+        <Link href={'/search' as any} asChild={true}>
           <A11yPressable
             style={[
               styles.searchButton,
-              { backgroundColor: palette.surface, borderColor: palette.muted }
+              { backgroundColor: palette.surface, borderColor: palette.muted, flex: 1 }
             ]}
             accessibilityLabel={t('home.search.label', 'Search the app')}
             accessibilityHint={t('home.search.hint', 'Opens global search for all features')}
@@ -571,11 +578,11 @@ const HomeScreen = React.memo(() => {
         </Link>
         
         {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
-        <Link href={'/(tabs)/advocacy/ask' as any} asChild={true} style={{ flex: 1 }}>
+        <Link href={'/(tabs)/advocacy/ask' as any} asChild={true}>
           <A11yPressable
             style={[
               styles.askButton,
-              { backgroundColor: palette.primary }
+              { backgroundColor: palette.primary, flex: 1 }
             ]}
             accessibilityLabel={t('home.ask.label', 'Ask 3mpwr - Get help from advocates')}
             accessibilityHint={t('home.ask.hint', 'Opens the Ask an Advocate form')}
@@ -672,7 +679,6 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     minHeight: 50,
     justifyContent: 'center',
-    flex: 1,
   },
   askButton: {
     paddingHorizontal: 12,
@@ -681,7 +687,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 48, // Accessibility tap target
-    flex: 1,
   },
   wizardButton: {
     paddingHorizontal: 16,

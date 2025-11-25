@@ -6,19 +6,20 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useEffect, useRef } from 'react';
 import {
-  Animated,
-  Linking,
-  Platform,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
+    Animated,
+    Linking,
+    Platform,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
 } from 'react-native';
 
 import { GapView } from '../components/GapView';
 import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useAppPalette } from '../theme/usePalette';
+import { createShadow } from '../utils/shadow';
 
 export default function SafeLandingPage() {
   const router = useRouter();
@@ -307,11 +308,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 12,
       marginVertical: 8,
       minHeight: 64,
-      shadowColor: '#000',
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.1,
-      shadowRadius: 4,
-      elevation: 2,
+      ...createShadow({
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 2,
+      }),
     },
     resourceText: {
       marginLeft: 16,
