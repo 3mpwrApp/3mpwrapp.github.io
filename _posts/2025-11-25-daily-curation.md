@@ -1,0 +1,138 @@
+---
+layout: post
+title: "Daily News Curation - 2025-11-25"
+date: 2025-11-25
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-11-25
+
+Curated 26 items from disability, accessibility, and social policy sources.
+
+## 1. 6 more UCP legislature members facing recall petitions, including 5 from Calgary area
+<img src='https://i.cbc.ca/ais/1.4118475,1525357443000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C163%2C4032%2C2268%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Allen Benson said the commiteee's annual report was submitted to the Minister's office in July 2016.'/><p>While reasoning varies, many of the newly approved petitioners said they were upset the UCP government used the Charter's notwithstanding clause last month to end a provincewide teachers strike. Another common reason given among applicants was that the MLAs being targeted aren't responsive to community concerns or aren't engaging with their constituents.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/mla-elections-alberta-ucp-recall-petitions-9.6990490?cmp=rss)
+**Score:** 27.00
+
+## 2. Family distraught as Manitoba refuses to pay for treatment for 30-year-old with degenerative disease
+<img src='https://i.cbc.ca/ais/9e78d099-9e06-434e-84bc-247d7127400c,1764040448418/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A man in a black shirt, seated in a wheelchair with tears welling in his eyes, while his father's hand is placed on his shoulder.' width='620' height='349' title='An emotional Jeremy Bray expressed disappointment after learning Monday the health minister hadn't changed their mind and wouldn't fund a treatment for his degenerative disease.'/><p>Tears gathered in Jeremy Bray’s eyes as he absorbed the news that his pleas for Manitoba’s government to cover his life-sustaining treatment hadn’t changed the health minister’s mind.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/jeremy-bray-spinal-muscular-atrophy-meeting-health-minister-refuses-treatment-9.6991230?cmp=rss)
+**Score:** 24.30
+
+## 3. PMO and CBSA say they weren't part of Kneecap entry ban announcement
+The Prime Minister's Office and the Canada Border Services Agency say they weren't 'involved' or 'consulted' in an announcement of an apparent entry ban on the Irish group Kneecap.
+📍 [Source](https://globalnews.ca/news/11541275/kneecap-entry-ban-canada-pmo-cbsa-ircc-gasparro/)
+**Score:** 23.40
+
+## 4. Dual health care system with guardrails focus of new Alberta bill
+<img src='https://i.cbc.ca/ais/4a0cf9d5-eaba-4184-8cc9-3833c8c86b09,1764030277278/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A woman speaks at a podium. ' width='620' height='349' title='Primary and Preventative Health Services Minister Adriana LaGrange speaks about a bill that allows physicians to practice in the private and public health-care systems. '/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-private-public-doctors-9.6990851?cmp=rss)
+**Score:** 27.00
+
+## 5. Manitoba Government Expands Prenatal Care in Interlake-Eastern Health Region with Midwifery Services
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71618)
+**Score:** 25.20
+
+## 6. New Quebec secularism bill to ban prayer in schools, restrict offering of religion-based meals
+<img src='https://i.cbc.ca/ais/1.5909319,1612992085000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C27%2C1338%2C752%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Quebec Education Minister Jean-François Roberge says the report card situation isn't so bad. '/><p>The Quebec government plans to enact a series of measures expanding its secularism rules across public institutions, including a ban on prayer rooms in universities and CEGEPs and restricting the offering of religion-based meals.</p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/bill-21-expansion-quebec-9.6990951?cmp=rss)
+**Score:** 18.50
+
+## 7. Canadian potash company Nutrien to build terminal in U.S. and not B.C.
+B.C. Premier David Eby said on Monday that he questions this decision as it would put a Canadian product at the mercy of the U.S. administration.
+📍 [Source](https://globalnews.ca/news/11541746/canadian-potash-company-build-terminal-us-not-bc/)
+**Score:** 12.00
+
+## 8. Calgary genealogy society working to uncover secrets of thrift store mystery box
+<img src='https://i.cbc.ca/ais/3de983d1-4117-4fb6-bae1-00caedaae550,1764016776062/full/max/0/default.jpg?im=Crop%2Crect%3D%28252%2C112%2C1104%2C621%29%3BResize%3D%28620%29' alt='A photo depicting a boy.' width='620' height='349' title='A photo depicting a boy named Wilfred Prescott Nickerson was among the items found in the mystery box being studied by the Alberta Family Histories Society. The child's connection to the rest of the box remains a mystery.'/><p>A photograph from a telegraphers union meeting. An Italian restaurant menu from Toronto. A newspaper clipping covering a graduating class of Royal Canadian Air Force engineers. What do all those have in common? That’s what researchers with the Alberta Family Histories Society are looking to uncover after receiving a mysterious box from a thrift store.</p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/calgary-thrift-store-mystery-box-9.6990709?cmp=rss)
+**Score:** 14.80
+
+## 9. McGill’s decision to cut 25 sports teams called ‘unfortunate’ by U Sports CEO
+The school said that it "carried out an extensive review process that involved discussions with internal and external stakeholders" before coming to its conclusion last Thursday.
+📍 [Source](https://globalnews.ca/news/11541962/mcgills-decision-to-cut-25-sports-teams-called-unfortunate-by-u-sports-ceo/)
+**Score:** 7.50
+
+## 10. Manitoba Government Honours Indigenous Veterans and Supports First-Annual Powwow
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71460)
+**Score:** 10.50
+
+## 11. Saskatoon residents eager for Link bus developments, others express concern
+A month after public consultations, some Saskatoon residents are looking forward to proposed rapid bus transit services in the downtown. Others are skeptical of the plans.
+📍 [Source](https://globalnews.ca/news/11541689/saskatoon-residents-react-to-link-brt-plan/)
+**Score:** 12.00
+
+## 12. Second grizzly bear captured in Bella Coola after attack, B.C. conservation officers say
+<img src='https://i.cbc.ca/ais/29dda126-1183-498c-9202-ca50c10d8fc5,1764031253116/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C156%2C3000%2C1687%29%3BResize%3D%28620%29' alt='A grizzly bear roams an exhibit at the Woodland Park Zoo.' width='620' height='349' title='FILE - In this May 26, 2020, file photo, a grizzly bear roams an exhibit at the Woodland Park Zoo, closed for nearly three months because of the coronavirus outbreak in Seattle. Grizzly bears once roamed the rugged landscape of the North Cascades in Washington state but few have been sighted in recent decades. The federal government is scrapping plans to reintroduce grizzly bears to the North Cascades ecosystem. (AP Photo/Elaine Thompson, File)'/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/bccos-grizzly-bear-trapped-bella-coola-to-be-fitted-with-gps-collar-9.6990816?cmp=rss)
+**Score:** 12.60
+
+## 13. Brookfield executive questioned at ethics committee about Carney’s corporate connections
+<img src='https://i.cbc.ca/ais/6e0ef3a5-c6d0-4391-b5dc-5c12afbaa17e,1764021026163/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C105%2C5360%2C3015%29%3BResize%3D%28620%29' alt='A man in a suit is pictured.' width='620' height='349' title='Brookfield Corporation Chief Operating Officer Justin Beber appears before the Standing Committee on Access to Information, Privacy and Ethics on Parliament hill in Ottawa, Monday, Nov. 24, 2025. THE CANADIAN PRESS/'/><p></p>
+📍 [Source](https://www.cbc.ca/news/politics/brookfield-ethics-committee-9.6990751?cmp=rss)
+**Score:** 12.00
+
+## 14. Manitoba Government Launches Tool to Combat Chronic Wasting Disease
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71619)
+**Score:** 8.50
+
+## 15. Calgary's new city council kickstarts 2026 budget talks with public hearing
+Calgary city council is making adjustments to the final year of a four-year budget approved by the previous city council, which includes a 3.6 per cent overall property tax hike.
+📍 [Source](https://globalnews.ca/news/11540617/calgarys-city-council-2026-budget-public-hearing/)
+**Score:** 9.00
+
+## 16. ‘Very unique Nutcracker': Ontario ballet company asks for help finding stolen sets
+An Ontario ballet company is asking for the public's help in finding a white rental truck containing set pieces from their production of The Nutcracker that was stolen.
+📍 [Source](https://globalnews.ca/news/11541326/ontario-ballet-company-nutcracker-sets-stolen/)
+**Score:** 9.00
+
+## 17. Court orders feds to share financial documents with Frog Lake First Nation citizen
+Hans McCarthy of the Frog Lake First Nation in Alberta has won a court order requiring Ottawa to share documents related to a $90-million drop in a community trust fund.
+📍 [Source](https://globalnews.ca/news/11541602/court-orders-feds-to-share-financial-documents-with-frog-lake-first-nation-citizen/)
+**Score:** 7.50
+
+## 18. It's unacceptable B.C. has been cut out of pipeline talks, Premier Eby tells Mark Carney
+For a project he says 'doesn't actually exist,' there was a lot British Columbia Premier David Eby had to say about a potential pipeline from Alberta to B.C.'s northern coast.
+📍 [Source](https://globalnews.ca/news/11541948/albertas-bc-pipeline-talks-david-eby/)
+**Score:** 5.50
+
+## 19. Why experts say a white nationalist rally in London, Ont., this past weekend won't be the last
+<img src='https://i.cbc.ca/ais/5d31909e-9e6e-4359-a220-c138638f43c5,1764023337816/full/max/0/default.jpg?im=Crop%2Crect%3D%2828%2C0%2C958%2C538%29%3BResize%3D%28620%29' alt='A photo posted to social media by Second Sons of group members demonstrating on the Wortley Road overpass in London, Ont., on Nov. 23, 2025.' width='620' height='349' title='A photo posted to social media by Second Sons of group members demonstrating on the Wortley Road overpass in London, Ont., on Nov. 23, 2025.'/><p>An apparent white nationalist demonstration on a busy overpass near London, Ont.'s downtown on Sunday afternoon is concerning for witnesses and experts who track extremist behaviour. </p>
+📍 [Source](https://www.cbc.ca/news/canada/london/why-experts-say-a-white-nationalist-rally-in-london-ont-this-past-weekend-won-t-be-the-last-9.6990896?cmp=rss)
+**Score:** 5.50
+
+## 20. Measles Update #46
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71617)
+**Score:** 4.50
+
+## 21. Rodent issue on the rise: 2 Fredericton restaurants shut down after health inspections
+A popular downtown pub and a restaurant were ordered to temporarily close after health inspectors found rodent droppings on site. An expert says  the issue is widespread.
+📍 [Source](https://globalnews.ca/news/11541240/food-inspection-fredericton-lunar-rogue/)
+**Score:** 4.50
+
+## 22. How BC’s New Economic Plan Gets It All Wrong
+The government’s ‘Look West’ strategy doubles down on resource extraction at the expense of smarter spending.
+📍 [Source](https://thetyee.ca/Opinion/2025/11/25/BC-New-Economic-Plan-All-Wrong/)
+**Score:** 4.00
+
+## 23. Joni Mitchell and Nelly Furtado to receive special honours at the 2026 Juno Awards
+<img src='https://i.cbc.ca/ais/a5dcfaba-1178-4dc2-96ea-d9b599eec544,1763768671093/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C41%2C2320%2C1305%29%3BResize%3D%28620%29' alt='Two photos side by side, one of Joni Mitchell and one of Nelly Furtado. ' width='620' height='349' title='Joni Mitchell and Nelly Furtado will receive honours at the 2026 Juno Awards. '/><p>Joni Mitchell will receive the Lifetime Achievement Award at the 55th Juno Awards next year, while Nelly Furtado will be inducted into the Canadian Music Hall of Fame. The first round of performers for the March ceremony in Hamilton was also announced. </p>
+📍 [Source](https://www.cbc.ca/music/junos/joni-mitchell-nelly-furtado-2026-junos-honourees-9.6988689?cmp=rss)
+**Score:** 4.50
+
+## 24. Elementary school student dead, another injured after firearm shot in small Quebec town
+📍 [Source](https://www.cbc.ca/news/canada/montreal/minor-injured-firearm-quebec-9.6990546?cmp=rss)
+**Score:** 4.50
+
+## 25. Sign of the times: Facing an uncertain future, the Penthouse looks back
+As development pressures mount, Danny Filippone reflects on the club's legacy, its community roots, and the memories that continue to shape Vancouver culture.
+📍 [Source](https://www.straight.com/city-culture/sign-of-times-facing-an-uncertain-future-penthouse-looks-back)
+**Score:** 3.00
+
+## 26. How one North Vancouver school is redefining education for neurodiverse learners in B.C.
+“Our students learn through doing.”
+📍 [Source](https://www.straight.com/education/how-one-north-vancouver-school-is-redefining-education-for-neurodiverse-learners-in-bc)
+**Score:** 2.00
+
