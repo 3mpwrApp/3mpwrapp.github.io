@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-24T18:17:43.269Z",
+  "lastUpdated": "2025-11-25T00:52:13.730Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3360,
+      "totalPosts": 3385,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T18:17:33.645Z"
+      "lastSeen": "2025-11-25T00:52:04.961Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3375,
+      "totalPosts": 3400,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T18:17:35.940Z"
+      "lastSeen": "2025-11-25T00:52:06.741Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3362,
+      "totalPosts": 3387,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T18:17:38.178Z"
+      "lastSeen": "2025-11-25T00:52:09.041Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3368,
+      "totalPosts": 3393,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T18:17:40.306Z"
+      "lastSeen": "2025-11-25T00:52:10.878Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3375,
+      "totalPosts": 3400,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-24T18:17:42.265Z"
+      "lastSeen": "2025-11-25T00:52:12.726Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "www.northwichguardian.co.uk/news/2563810... #accessibility",
-      "author": "suewilkesauthor.bsky.social",
-      "engagement": 19,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
-      "author": "zeldman.bsky.social",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,20 +320,38 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Wow, I can't believe I am nominated along such amazing advocates I admire and respect so much. It is an honor! And 2nd time? 🥲\n\nI found my calling 7 years ago and I'll continue as long as I can. Our will for a more accessible gaming space is unbreakable.\n\nVote link in quoted post.\n\n#Accessibility",
+      "author": "black1976.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 38
+      "count": 37
     },
     {
       "keyword": "a11y",
-      "count": 32
+      "count": 34
     },
     {
       "keyword": "accessibility",
-      "count": 31
+      "count": 33
     },
     {
       "keyword": "cripthevote",
@@ -378,27 +378,27 @@
       "count": 12
     },
     {
-      "keyword": "disability",
+      "keyword": "accessibility a11y",
       "count": 10
     },
     {
-      "keyword": "inclusion",
-      "count": 7
+      "keyword": "disability",
+      "count": 8
     },
     {
       "keyword": "disabled",
-      "count": 7
-    },
-    {
-      "keyword": "a11y accessibility",
-      "count": 7
-    },
-    {
-      "keyword": "digitalaccessibility",
       "count": 6
     },
     {
-      "keyword": "business",
+      "keyword": "disabilityjustice nico",
+      "count": 6
+    },
+    {
+      "keyword": "inclusion",
+      "count": 5
+    },
+    {
+      "keyword": "a11y accessibility",
       "count": 5
     },
     {
@@ -414,11 +414,11 @@
       "count": 5
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 5
+      "keyword": "covid",
+      "count": 4
     },
     {
-      "keyword": "disabilities",
+      "keyword": "wpad2025",
       "count": 4
     }
   ]
