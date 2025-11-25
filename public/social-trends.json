@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-25T12:22:56.622Z",
+  "lastUpdated": "2025-11-25T18:17:46.369Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3435,
+      "totalPosts": 3460,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T12:22:46.282Z"
+      "lastSeen": "2025-11-25T18:17:36.648Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3450,
+      "totalPosts": 3475,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T12:22:48.501Z"
+      "lastSeen": "2025-11-25T18:17:38.642Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3437,
-      "recentPosts": 25,
+      "totalPosts": 3461,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T12:22:50.917Z"
+      "lastSeen": "2025-11-25T18:17:40.600Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3443,
+      "totalPosts": 3468,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T12:22:53.398Z"
+      "lastSeen": "2025-11-25T18:17:42.945Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3450,
+      "totalPosts": 3475,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T12:22:55.618Z"
+      "lastSeen": "2025-11-25T18:17:45.365Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "No wonder Minister Collins has moved to Repeal the Plain Language Act, and NZ Government is sidelining its #Accessibility Charter. NZ Govt wants to Hide Information!\n\nI can't read a QR code. 20% of NZers are digitally excluded and with the telcos dropping 3G network phones that %ge may grow.\n#NZpol",
-      "author": "jennykaynz.bsky.social",
-      "engagement": 35,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "“A rallying point for everyone who believes the internet should be accessible to all—no matter their abilities or circumstances.”\n\nThanks for supporting web standards and #a11y, Awareness Days! #BlueBeanieDay is November 30, 2025.\n\nwww.awarenessdays.com/awareness-da...",
-      "author": "zeldman.bsky.social",
-      "engagement": 22,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,20 +320,38 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "PSA: Today's Day 4️⃣ of the Black Friday sale.\n\nThis is the lowest you can get the course for and it's for a limited time—next year's sales won't be the same. \n\nPrice goes back up on December 4th. ⏳\n\n🔗 practical-accessibility.today \n\n#a11y",
+      "author": "sarasoueidan.com",
+      "engagement": 22,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
+      "keyword": "accessibility",
+      "count": 38
+    },
+    {
       "keyword": "disabilityrights",
-      "count": 37
+      "count": 36
     },
     {
       "keyword": "a11y",
-      "count": 35
-    },
-    {
-      "keyword": "accessibility",
-      "count": 34
+      "count": 31
     },
     {
       "keyword": "cripthevote",
@@ -360,6 +360,10 @@
     {
       "keyword": "disabilityjustice",
       "count": 25
+    },
+    {
+      "keyword": "accessibility a11y",
+      "count": 12
     },
     {
       "keyword": "altcitizen",
@@ -378,19 +382,11 @@
       "count": 11
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 11
-    },
-    {
       "keyword": "disability",
-      "count": 7
-    },
-    {
-      "keyword": "disabled",
       "count": 6
     },
     {
-      "keyword": "inclusion",
+      "keyword": "disabled",
       "count": 5
     },
     {
@@ -398,8 +394,8 @@
       "count": 5
     },
     {
-      "keyword": "html",
-      "count": 5
+      "keyword": "business",
+      "count": 4
     },
     {
       "keyword": "a11y accessibility",
@@ -410,15 +406,19 @@
       "count": 4
     },
     {
-      "keyword": "wpad2025",
+      "keyword": "ux",
       "count": 4
     },
     {
-      "keyword": "wpa11yday",
+      "keyword": "digital accessibility",
       "count": 4
     },
     {
-      "keyword": "accessibility thanks",
+      "keyword": "stopavelo",
+      "count": 4
+    },
+    {
+      "keyword": "ice",
       "count": 4
     }
   ]
