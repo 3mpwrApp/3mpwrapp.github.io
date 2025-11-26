@@ -110,7 +110,7 @@ export default function EvidenceLockerImpl() {
     Alert.alert('Document Added', 'AI has categorized and analyzed your document');
   };
 
-  const simulateAISummary = (type: Document['type'], title: string): string => {
+  const simulateAISummary = (type: Document['type'], _title: string): string => {
     const summaries: Record<Document['type'], string> = {
       medical: 'Medical evidence supports claim. Recommend attaching to appeal.',
       legal: 'Legal document detected. Check for deadlines and response requirements.',
@@ -160,13 +160,13 @@ export default function EvidenceLockerImpl() {
           }}]
         );
       }
-    } catch (err) {
+    } catch {
       Alert.alert('Upload Failed', 'Could not upload document');
     }
   };
 
   // Simulated upload function for queue processing
-  const processUpload = async (payload: any): Promise<void> => {
+  const processUpload = async (_payload: any): Promise<void> => {
     // Simulate upload to cloud/server
     // In production, this would call your actual upload API
     return new Promise((resolve, reject) => {
@@ -352,8 +352,8 @@ export default function EvidenceLockerImpl() {
                   <ScrollView>
                     <Text style={styles.title}>{selectedDoc.title}</Text>
                     <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 8 }}>
-                      <View style={[styles.typeBadge, { backgroundColor: getTypeColor(selectedDoc.type) }]}>
-                        <Text style={{ color: '#fff', fontSize: 11, fontWeight: '700' }}>{selectedDoc.type.toUpperCase()}</Text>
+                      <View style={[s.typeBadge, { backgroundColor: getTypeColor(selectedDoc.type, palette) }]}>
+                        <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: '700' }}>{selectedDoc.type.toUpperCase()}</Text>
                       </View>
                       <Text style={[styles.cardDate, { marginLeft: 8 }]}>{selectedDoc.date}</Text>
                     </View>
@@ -376,7 +376,7 @@ export default function EvidenceLockerImpl() {
                     )}
                     
                     {selectedDoc.extractedDate && (
-                      <View style={{ backgroundColor: '#FFA500' + '20', padding: 12, borderRadius: 8, marginVertical: 8 }}>
+                      <View style={{ backgroundColor: palette.warning + '20', padding: 12, borderRadius: 8, marginVertical: 8 }}>
                         <Text style={{ color: palette.text, fontWeight: '700' }}>⚠️ Deadline Detected: {selectedDoc.extractedDate}</Text>
                       </View>
                     )}
@@ -393,7 +393,7 @@ export default function EvidenceLockerImpl() {
                         <MaterialCommunityIcons name="file-pdf-box" size={14} color={palette.onPrimary} />
                         <Text style={styles.buttonText}> Export PDF</Text>
                       </A11yPressable>
-                      <A11yPressable style={[styles.secondary, { backgroundColor: '#ff4444' + '20' }]} onPress={() => {
+                      <A11yPressable style={[s.secondary, { backgroundColor: palette.error + '20' }]} onPress={() => {
                         Alert.alert('Delete Document', 'Are you sure?', [
                           { text: 'Cancel', style: 'cancel' },
                           { text: 'Delete', style: 'destructive', onPress: () => {
@@ -402,8 +402,8 @@ export default function EvidenceLockerImpl() {
                           }}
                         ]);
                       }}>
-                        <MaterialCommunityIcons name="delete" size={14} color="#ff4444" />
-                        <Text style={[styles.secondaryText, { color: '#ff4444' }]}> Delete</Text>
+                        <MaterialCommunityIcons name="delete" size={14} color={palette.error} />
+                        <Text style={[s.secondaryText, { color: palette.error }]}> Delete</Text>
                       </A11yPressable>
                     </GapView>
                   </ScrollView>
@@ -470,8 +470,8 @@ function DocumentCard({ doc, onPress, palette }: { doc: Document; onPress: () =>
         <View style={{ flex: 1 }}>
           <Text style={{ color: palette.text, fontWeight: '700', fontSize: 15, marginBottom: 4 }}>{doc.title}</Text>
           <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 6 }}>
-            <View style={{ backgroundColor: getTypeColor(doc.type), paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}>
-              <Text style={{ color: '#fff', fontSize: 10, fontWeight: '700' }}>{doc.type.toUpperCase()}</Text>
+            <View style={{ backgroundColor: getTypeColor(doc.type, palette), paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}>
+              <Text style={{ color: palette.onPrimary, fontSize: 10, fontWeight: '700' }}>{doc.type.toUpperCase()}</Text>
             </View>
             <Text style={{ color: palette.text, opacity: 0.7, fontSize: 12, marginLeft: 8 }}>{doc.date}</Text>
           </View>
@@ -496,13 +496,13 @@ function DocumentCard({ doc, onPress, palette }: { doc: Document; onPress: () =>
   );
 }
 
-function getTypeColor(type: Document['type']): string {
+function getTypeColor(type: Document['type'], palette: ReturnType<typeof useAppPalette>): string {
   const colors: Record<Document['type'], string> = {
-    medical: '#4CAF50',
-    legal: '#2196F3',
-    financial: '#FF9800',
-    correspondence: '#9C27B0',
-    other: '#607D8B'
+    medical: palette.success,
+    legal: palette.info,
+    financial: palette.warning,
+    correspondence: palette.primary,
+    other: palette.textSecondary
   };
   return colors[type];
 }

@@ -21,13 +21,13 @@ export const options = { href: null };
 
 type TrackerType = 'symptoms' | 'meds' | 'rehab' | 'appointments' | 'timeline' | 'accessibility';
 
-interface TrackerEntry {
-  id: string;
-  type: TrackerType;
-  timestamp: number;
-  data: any;
-  notes?: string;
-}
+// interface _TrackerEntry {
+//   id: string;
+//   type: TrackerType;
+//   timestamp: number;
+//   data: any;
+//   notes?: string;
+// }
 
 interface QuickLogItem {
   icon: keyof typeof Ionicons.glyphMap;
@@ -100,12 +100,12 @@ function DashboardTab() {
   const [showQuickLog, setShowQuickLog] = useState(false);
 
   const quickLogItems: QuickLogItem[] = [
-    { icon: 'medical', label: t('tracker.logSymptom', 'Log Symptom'), type: 'symptoms', color: '#FF6B6B' },
-    { icon: 'fitness', label: t('tracker.logRehab', 'Log Rehab'), type: 'rehab', color: '#4ECDC4' },
-    { icon: 'calendar', label: t('tracker.logAppointment', 'Log Appointment'), type: 'appointments', color: '#45B7D1' },
-    { icon: 'medkit', label: t('tracker.logMed', 'Log Medication'), type: 'meds', color: '#96CEB4' },
-    { icon: 'flag', label: t('tracker.logAccess', 'Log Accessibility Issue'), type: 'accessibility', color: '#FFEAA7' },
-    { icon: 'time', label: t('tracker.logEvent', 'Log Timeline Event'), type: 'timeline', color: '#DFE6E9' },
+    { icon: 'medical', label: t('tracker.logSymptom', 'Log Symptom'), type: 'symptoms', color: palette.error },
+    { icon: 'fitness', label: t('tracker.logRehab', 'Log Rehab'), type: 'rehab', color: palette.primary },
+    { icon: 'calendar', label: t('tracker.logAppointment', 'Log Appointment'), type: 'appointments', color: palette.primary },
+    { icon: 'medkit', label: t('tracker.logMed', 'Log Medication'), type: 'meds', color: palette.success },
+    { icon: 'flag', label: t('tracker.logAccess', 'Log Accessibility Issue'), type: 'accessibility', color: palette.warning },
+    { icon: 'time', label: t('tracker.logEvent', 'Log Timeline Event'), type: 'timeline', color: palette.muted },
   ];
 
   const stats = {
@@ -147,7 +147,7 @@ function DashboardTab() {
           },
         ]
       );
-    } catch (error) {
+    } catch {
       Alert.alert(t('tracker.exportError', 'Export failed'));
     }
   }, [t]);
@@ -182,25 +182,25 @@ function DashboardTab() {
 
         <View style={s.statsGrid}>
           <View style={s.statCard}>
-            <Ionicons name="medical" size={32} color="#FF6B6B" />
+            <Ionicons name="medical" size={32} color={palette.error} />
             <Text style={[s.statValue, { color: palette.text }]}>{stats.symptomsToday}</Text>
             <Text style={[s.statLabel, { color: palette.text }]}>{t('tracker.symptoms', 'Symptoms')}</Text>
           </View>
 
           <View style={s.statCard}>
-            <Ionicons name="medkit" size={32} color="#96CEB4" />
+            <Ionicons name="medkit" size={32} color={palette.success} />
             <Text style={[s.statValue, { color: palette.text }]}>{stats.medsToday}/{t('tracker.medsScheduled', '8')}</Text>
             <Text style={[s.statLabel, { color: palette.text }]}>{t('tracker.medications', 'Medications')}</Text>
           </View>
 
           <View style={s.statCard}>
-            <Ionicons name="fitness" size={32} color="#4ECDC4" />
+            <Ionicons name="fitness" size={32} color={palette.primary} />
             <Text style={[s.statValue, { color: palette.text }]}>{stats.rehabMinutes}{t('tracker.minutes', 'min')}</Text>
             <Text style={[s.statLabel, { color: palette.text }]}>{t('tracker.rehab', 'Rehab')}</Text>
           </View>
 
           <View style={s.statCard}>
-            <Ionicons name="calendar" size={32} color="#45B7D1" />
+            <Ionicons name="calendar" size={32} color={palette.primary} />
             <Text style={[s.statValue, { color: palette.text }]}>{stats.upcomingAppointments}</Text>
             <Text style={[s.statLabel, { color: palette.text }]}>{t('tracker.upcoming', 'Upcoming')}</Text>
           </View>
@@ -258,21 +258,21 @@ function DashboardTab() {
 
         <View style={s.insightsList}>
           <View style={s.insightItem}>
-            <Ionicons name="trending-up" size={20} color="#FF6B6B" />
+            <Ionicons name="trending-up" size={20} color={palette.error} />
             <Text style={[s.insightText, { color: palette.text }]}>
               {t('tracker.insight1', 'Pain levels spike on Mondays - possible work-related stress pattern')}
             </Text>
           </View>
 
           <View style={s.insightItem}>
-            <Ionicons name="water" size={20} color="#45B7D1" />
+            <Ionicons name="water" size={20} color={palette.primary} />
             <Text style={[s.insightText, { color: palette.text }]}>
               {t('tracker.insight2', 'Higher symptom severity on rainy days - consider weather tracking')}
             </Text>
           </View>
 
           <View style={s.insightItem}>
-            <Ionicons name="checkmark-circle" size={20} color="#4ECDC4" />
+            <Ionicons name="checkmark-circle" size={20} color={palette.success} />
             <Text style={[s.insightText, { color: palette.text }]}>
               {t('tracker.insight3', 'Rehab adherence excellent - keep it up!')}
             </Text>

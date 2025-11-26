@@ -3,9 +3,9 @@ import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { useAppPalette } from '../../../theme/usePalette';
 import { useTranslation } from '../../../i18n';
 import { useSpoonEconomist } from '../../../services/spoonEconomist';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export default function SpoonEconomistScreen() {
   const { t } = useTranslation();
@@ -80,37 +80,37 @@ export default function SpoonEconomistScreen() {
         </View>
 
         {account && account.currentSpoons < 3 && account.currentSpoons > 0 && (
-          <View style={[styles.warningCard, { backgroundColor: '#FFF3CD' }]}>
-            <Ionicons name="warning" size={24} color="#856404" />
-            <Text style={[styles.warningText, { color: '#856404' }]}>
+          <View style={[styles.warningCard, { backgroundColor: palette.warningBackground }]}>
+            <Ionicons name="warning" size={24} color={palette.warning} />
+            <Text style={[styles.warningText, { color: palette.warning }]}>
               Low energy! Only {account.currentSpoons} spoons left today.
             </Text>
           </View>
         )}
 
         {account && account.currentSpoons === 0 && (
-          <View style={[styles.warningCard, { backgroundColor: '#F8D7DA' }]}>
-            <Ionicons name="alert-circle" size={24} color="#721C24" />
-            <Text style={[styles.warningText, { color: '#721C24' }]}>
+          <View style={[styles.warningCard, { backgroundColor: palette.errorBackground }]}>
+            <Ionicons name="alert-circle" size={24} color={palette.error} />
+            <Text style={[styles.warningText, { color: palette.error }]}>
               Depleted! Consider resting or borrowing spoons.
             </Text>
           </View>
         )}
 
         {account && account.debtSpoons > 0 && (
-          <View style={[styles.card, { backgroundColor: '#F8D7DA' }]}>
+          <View style={[styles.card, { backgroundColor: palette.errorBackground }]}>
             <View style={styles.debtHeader}>
-              <Ionicons name="warning" size={24} color="#721C24" />
-              <Text style={[styles.debtTitle, { color: '#721C24' }]}>Energy Debt</Text>
+              <Ionicons name="warning" size={24} color={palette.error} />
+              <Text style={[styles.debtTitle, { color: palette.error }]}>Energy Debt</Text>
             </View>
 
-            <Text style={[styles.debtAmount, { color: '#721C24' }]}>
+            <Text style={[styles.debtAmount, { color: palette.error }]}>
               {account.debtSpoons.toFixed(1)} spoons owed
             </Text>
-            <Text style={[styles.debtDescription, { color: '#856404' }]}>
+            <Text style={[styles.debtDescription, { color: palette.warning }]}>
               Compound interest: 50% per day
             </Text>
-            <Text style={[styles.debtDescription, { color: '#856404' }]}>
+            <Text style={[styles.debtDescription, { color: palette.warning }]}>
               Auto-repaying at 30% of daily allocation
             </Text>
           </View>
@@ -149,22 +149,22 @@ export default function SpoonEconomistScreen() {
 
           <View style={styles.borrowButtons}>
             <Pressable
-              style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+              style={[styles.borrowButton, { backgroundColor: palette.error }]}
               onPress={() => borrowSpoons(2)}
             >
-              <Text style={styles.borrowButtonText}>+2 🥄</Text>
+              <Text style={[styles.borrowButtonText, { color: palette.onPrimary }]}>+2 🥄</Text>
             </Pressable>
             <Pressable
-              style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+              style={[styles.borrowButton, { backgroundColor: palette.error }]}
               onPress={() => borrowSpoons(5)}
             >
-              <Text style={styles.borrowButtonText}>+5 🥄</Text>
+              <Text style={[styles.borrowButtonText, { color: palette.onPrimary }]}>+5 🥄</Text>
             </Pressable>
             <Pressable
-              style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+              style={[styles.borrowButton, { backgroundColor: palette.error }]}
               onPress={() => borrowSpoons(10)}
             >
-              <Text style={styles.borrowButtonText}>+10 🥄</Text>
+              <Text style={[styles.borrowButtonText, { color: palette.onPrimary }]}>+10 🥄</Text>
             </Pressable>
           </View>
         </View>
@@ -223,13 +223,13 @@ export default function SpoonEconomistScreen() {
                   style={[styles.modalButton, { backgroundColor: palette.border }]}
                   onPress={() => setShowCustomTaskModal(false)}
                 >
-                  <Text style={styles.modalButtonText}>Cancel</Text>
+                  <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
                 </Pressable>
                 <Pressable
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={addCustomTask}
                 >
-                  <Text style={styles.modalButtonText}>Add</Text>
+                  <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Add</Text>
                 </Pressable>
               </View>
             </View>
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
   customButtonText: { fontSize: 14, fontWeight: '600', marginLeft: 8 },
   borrowButtons: { flexDirection: 'row', gap: 8 },
   borrowButton: { flex: 1, padding: 12, borderRadius: 8, alignItems: 'center' },
-  borrowButtonText: { color: '#FFF', fontSize: 14, fontWeight: '600' },
+  borrowButtonText: { fontSize: 14, fontWeight: '600' },
   reportRow: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8 },
   reportLabel: { fontSize: 14 },
   reportValue: { fontSize: 14, fontWeight: '600' },
@@ -276,7 +276,7 @@ const styles = StyleSheet.create({
   input: { borderWidth: 1, borderRadius: 8, padding: 12, fontSize: 14, marginBottom: 12 },
   modalButtons: { flexDirection: 'row', gap: 8 },
   modalButton: { flex: 1, padding: 12, borderRadius: 8, alignItems: 'center' },
-  modalButtonText: { color: '#FFF', fontSize: 14, fontWeight: '600' },
+  modalButtonText: { fontSize: 14, fontWeight: '600' },
   bottomSpacer: { height: 32 },
 });
 

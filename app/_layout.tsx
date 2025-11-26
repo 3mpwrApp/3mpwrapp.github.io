@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 import { Stack, usePathname } from "expo-router";
@@ -14,7 +15,7 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     div.style.left = '0';
     div.style.width = '100%';
     div.style.backgroundColor = '#d32f2f';
-    div.style.color = 'white';
+    div.style.color = '#ffffff';
     div.style.padding = '20px';
     div.style.zIndex = '99999';
     div.style.fontFamily = 'monospace';
@@ -31,7 +32,7 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     div.style.left = '0';
     div.style.width = '100%';
     div.style.backgroundColor = '#ff9800';
-    div.style.color = 'black';
+    div.style.color = '#000000';
     div.style.padding = '10px';
     div.style.zIndex = '99999';
     div.style.fontFamily = 'monospace';
@@ -258,19 +259,21 @@ export default function RootLayout() {
   }
 
   if (!shouldRender) {
+    const fallbackPalette = { background: '#ffffff', text: '#000000' };
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
-        <Text style={{ fontSize: 18, color: '#000' }}>Loading fonts...</Text>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: fallbackPalette.background }}>
+        <Text style={{ fontSize: 18, color: fallbackPalette.text }}>Loading fonts...</Text>
       </View>
     );
   }
 
   if (_renderError) {
+    const errorPalette = { background: '#ffffff', error: '#d32f2f', text: '#000000', textSecondary: '#666666' };
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: 20 }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#d32f2f', marginBottom: 10 }}>App Error</Text>
-        <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>{_renderError.message}</Text>
-        <Text style={{ fontSize: 12, color: '#666', marginTop: 20, textAlign: 'center' }}>Check browser console (F12) for details</Text>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: errorPalette.background, padding: 20 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: errorPalette.error, marginBottom: 10 }}>App Error</Text>
+        <Text style={{ fontSize: 14, color: errorPalette.text, textAlign: 'center' }}>{_renderError.message}</Text>
+        <Text style={{ fontSize: 12, color: errorPalette.textSecondary, marginTop: 20, textAlign: 'center' }}>Check browser console (F12) for details</Text>
       </View>
     );
   }
@@ -384,12 +387,12 @@ export default function RootLayout() {
     }
     // Emergency fallback - render a visible error screen
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff', padding: 20 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff', padding: 20 }}>
         <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#d32f2f', marginBottom: 10 }}>App Failed to Load</Text>
-        <Text style={{ fontSize: 14, color: '#000', textAlign: 'center' }}>
+        <Text style={{ fontSize: 14, color: '#000000', textAlign: 'center' }}>
           {error instanceof Error ? error.message : 'Unknown error'}
         </Text>
-        <Text style={{ fontSize: 12, color: '#666', marginTop: 20, textAlign: 'center' }}>Open browser console (F12) for details</Text>
+        <Text style={{ fontSize: 12, color: '#666666', marginTop: 20, textAlign: 'center' }}>Open browser console (F12) for details</Text>
       </View>
     );
   }

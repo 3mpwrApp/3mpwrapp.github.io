@@ -24,7 +24,7 @@ let Haptics: any = null;
 if (Platform.OS !== 'web') {
   try {
     Haptics = require('expo-haptics');
-  } catch (error) {
+  } catch {
     console.warn('[HapticLanguage] expo-haptics not available');
   }
 }
@@ -363,16 +363,16 @@ class HapticLanguageManager {
       if (prefsStr) {
         this.preferences = { ...this.preferences, ...JSON.parse(prefsStr) };
       }
-    } catch (err) {
-      logError('hapticLanguage', 'Failed to load haptic preferences', err);
+    } catch (_err) {
+      logError('hapticLanguage', 'Failed to load haptic preferences', _err);
     }
   }
 
   private async savePreferences(): Promise<void> {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(this.preferences));
-    } catch (err) {
-      logError('hapticLanguage', 'Failed to save haptic preferences', err);
+    } catch (_err) {
+      logError('hapticLanguage', 'Failed to save haptic preferences', _err);
     }
   }
 
@@ -407,8 +407,8 @@ class HapticLanguageManager {
           await this.wait(500); // Pause between repeats
         }
       }
-    } catch (err) {
-      logError('hapticLanguage', `Failed to play haptic pattern: ${type}`, err);
+    } catch (_err) {
+      logError('hapticLanguage', `Failed to play haptic pattern: ${type}`, _err);
     } finally {
       this.isPlaying = false;
     }

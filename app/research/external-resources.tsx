@@ -10,7 +10,6 @@ import SettingsLink from '../../components/SettingsLink';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import externalResources from '../../data/externalResources.json';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
-import { useTranslation } from '../../i18n';
 import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
@@ -55,7 +54,6 @@ export default function ExternalResourcesScreen() {
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
-  const { t } = useTranslation();
   const { province } = useSettings();
   const [query, setQuery] = React.useState('');
   const [provinceFilter, setProvinceFilter] = React.useState<string>('all');

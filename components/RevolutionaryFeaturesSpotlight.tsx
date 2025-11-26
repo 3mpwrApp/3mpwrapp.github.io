@@ -166,7 +166,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       padding: 16,
       marginVertical: 12,
       borderWidth: 1,
-      borderColor: palette.primary + '33',
+      borderColor: palette.primaryMuted || palette.muted,
       ...createShadow({
         shadowColor: palette.text,
         shadowOffset: { width: 0, height: 2 },
@@ -238,7 +238,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       flex: 1,
     },
     betaBadge: {
-      backgroundColor: palette.primary + '22',
+      backgroundColor: palette.primaryBackground || palette.surface,
       paddingHorizontal: 6,
       paddingVertical: 2,
       borderRadius: 4,
@@ -258,11 +258,11 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     viewAllButton: {
       marginTop: 12,
       paddingVertical: 10,
-      backgroundColor: palette.primary + '11',
+      backgroundColor: palette.primaryBackground || palette.surface,
       borderRadius: 8,
       alignItems: 'center',
       borderWidth: StyleSheet.hairlineWidth,
-      borderColor: palette.primary + '44',
+      borderColor: palette.primaryMuted || palette.muted,
     },
     viewAllText: {
       fontSize: Math.round(14 * factor),

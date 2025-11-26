@@ -2,6 +2,7 @@
 /**
  * Sync local campaigns and events data to public/api/*.json for website
  */
+/* eslint-disable no-console */
 import fs from 'fs';
 import path from 'path';
 

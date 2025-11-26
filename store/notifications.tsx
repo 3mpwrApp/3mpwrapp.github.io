@@ -1,4 +1,5 @@
 import React from "react";
+import { Platform } from "react-native";
 
 import type { DeliveredNotification, NotificationPreferences } from "../types/notifications";
 import { DEFAULT_NOTIFICATION_PREFERENCES } from "../types/notifications";
@@ -43,7 +44,14 @@ export function NotificationsProvider({ children }: { children: React.ReactNode 
   // Load persisted
   React.useEffect(() => {
     (async () => {
-      if (!AsyncStorage) return setLoaded(true);
+      if (!AsyncStorage) {
+        // On web or environments without AsyncStorage, mark as loaded immediately
+        setLoaded(true);
+        if (Platform.OS === 'web') {
+          // Silently skip on web - session-only notifications
+        }
+        return;
+      }
       try {
         const [rawPrefs, rawInbox, rawLast] = await Promise.all([
           AsyncStorage.getItem(PREFS_KEY),
@@ -122,19 +130,9 @@ export function NotificationsProvider({ children }: { children: React.ReactNode 
     setLastSent,
   };
 
-  // In test environment return immediately once initial effect tick requested.
-  if (!loaded) {
-    if (process.env.JEST_WORKER_ID) {
-      // Force-load fast in tests without waiting for AsyncStorage
-      return (
-        <NotificationsContext.Provider value={value}>
-          {children}
-        </NotificationsContext.Provider>
-      );
-    }
-    return null;
-  }
-
+  // Always render - never return null (causes SafeProviderWrapper errors)
+  // On web/environments without AsyncStorage, loaded is set to true immediately
+  // On native, there's a brief loading period but we still render to avoid provider errors
   return (
     <NotificationsContext.Provider value={value}>
       {children}

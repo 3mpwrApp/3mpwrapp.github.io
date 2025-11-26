@@ -18,20 +18,20 @@ export default function CognitiveScannerScreen() {
   const [topDistortions, setTopDistortions] = useState(scanner.getTopDistortions(5));
 
   const distortionColors: Record<string, string> = {
-    catastrophizing: '#DC143C',
-    black_white: '#000000',
-    overgeneralization: '#8B4513',
-    mind_reading: '#4B0082',
-    fortune_telling: '#191970',
-    emotional_reasoning: '#FF69B4',
-    should_statements: '#FF4500',
-    labeling: '#FFD700',
-    personalization: '#9370DB',
-    disqualifying_positive: '#696969',
-    mental_filter: '#2F4F4F',
-    jumping_conclusions: '#FF8C00',
-    magnification_minimization: '#8B008B',
-    blame: '#B22222',
+    catastrophizing: palette.error,
+    black_white: palette.text,
+    overgeneralization: palette.text,
+    mind_reading: palette.primary,
+    fortune_telling: palette.primary,
+    emotional_reasoning: palette.secondary,
+    should_statements: palette.error,
+    labeling: palette.warning,
+    personalization: palette.primary,
+    disqualifying_positive: palette.muted,
+    mental_filter: palette.muted,
+    jumping_conclusions: palette.warning,
+    magnification_minimization: palette.primary,
+    blame: palette.error,
   };
 
   const scanThought = () => {
@@ -88,7 +88,7 @@ export default function CognitiveScannerScreen() {
             style={[styles.scanButton, { backgroundColor: palette.primary }]}
             onPress={scanThought}
           >
-            <Ionicons name="scan" size={20} color="#FFF" />
+            <Ionicons name="scan" size={20} color={palette.onPrimary} />
             <Text style={styles.scanButtonText}>Scan for Distortions</Text>
           </Pressable>
         </View>
@@ -152,16 +152,16 @@ export default function CognitiveScannerScreen() {
 
             {/* Counter-Thoughts */}
             {scanResult.counterThoughts.length > 0 && (
-              <View style={[styles.card, { backgroundColor: '#D4EDDA' }]}>
+              <View style={[styles.card, { backgroundColor: palette.successBackground }]}>
                 <View style={styles.counterHeader}>
-                  <Ionicons name="bulb" size={24} color="#155724" />
-                  <Text style={[styles.counterTitle, { color: '#155724' }]}>
+                  <Ionicons name="bulb" size={24} color={palette.success} />
+                  <Text style={[styles.counterTitle, { color: palette.success }]}>
                     Alternative Perspectives
                   </Text>
                 </View>
 
                 {scanResult.counterThoughts.map((counter: string, index: number) => (
-                  <Text key={index} style={[styles.counterText, { color: '#155724' }]}>
+                  <Text key={index} style={[styles.counterText, { color: palette.success }]}>
                     • {counter}
                   </Text>
                 ))}
@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   scanButtonText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 16,
     fontWeight: '600',
     marginLeft: 8,
@@ -334,7 +334,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   typeBadgeText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 10,
     fontWeight: 'bold',
   },
@@ -391,7 +391,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   patternBadgeText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 10,
     fontWeight: 'bold',
   },
@@ -407,7 +407,7 @@ const styles = StyleSheet.create({
   },
   decayBar: {
     height: 8,
-    backgroundColor: '#E0E0E0',
+    backgroundColor: palette.border,
     borderRadius: 4,
     overflow: 'hidden',
     marginBottom: 4,

@@ -19,7 +19,6 @@ import { GapView } from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount } from '../../../hooks/useA11y';
-import { useTranslation } from '../../../i18n';
 import { useComplexityMode } from '../../../store/complexityMode';
 import { createTextStyles } from '../../../theme/typography.enhanced';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -46,7 +45,7 @@ const APPEAL_TOOLS: AppealTool[] = [
     description: 'Never miss an appeal deadline. Calculate deadlines, set reminders, track submissions.',
     route: '/(tabs)/resources/deadlines',
     badge: 'Beta',
-    color: '#DC2626',
+    color: 'error',
     featureLevel: 'simple',
     priority: 'critical',
   },
@@ -57,7 +56,7 @@ const APPEAL_TOOLS: AppealTool[] = [
     description: 'Upload denial letter, get AI analysis of patterns, appeal strength, and next steps.',
     route: '/(tabs)/resources/denial-decoder',
     badge: 'Beta',
-    color: '#7C3AED',
+    color: 'primary',
     featureLevel: 'standard',
     priority: 'critical',
   },
@@ -67,7 +66,7 @@ const APPEAL_TOOLS: AppealTool[] = [
     icon: 'shield-check-outline',
     description: 'Analyze your evidence quality, identify gaps, get recommendations for stronger case.',
     route: '/(tabs)/resources/evidence-checklist',
-    color: '#059669',
+    color: 'success',
     featureLevel: 'standard',
     priority: 'high',
   },
@@ -78,7 +77,7 @@ const APPEAL_TOOLS: AppealTool[] = [
     description: 'Step-by-step checklist to prepare appeal: evidence, arguments, forms, timelines.',
     route: '/(tabs)/resources/prepare-appeal',
     badge: 'Beta',
-    color: '#2563EB',
+    color: 'info',
     featureLevel: 'standard',
     priority: 'high',
   },
@@ -89,7 +88,7 @@ const APPEAL_TOOLS: AppealTool[] = [
     description: 'Find similar cases, winning arguments, and legal precedents for your situation.',
     route: '/(tabs)/resources/precedent-finder',
     badge: 'Coming soon',
-    color: '#EA580C',
+    color: 'warning',
     featureLevel: 'power_user',
     priority: 'medium',
   },
@@ -98,7 +97,6 @@ const APPEAL_TOOLS: AppealTool[] = [
 export default function AppealCommandCenter() {
   const palette = useAppPalette();
   const textStyles = React.useMemo(() => createTextStyles(palette), [palette]);
-  const { t } = useTranslation();
   const { mode, isFeatureVisible } = useComplexityMode();
   
   useAnnounceOnMount('Appeal Command Center');
@@ -251,6 +249,16 @@ export default function AppealCommandCenter() {
 function ToolCard({ tool, palette }: { tool: AppealTool; palette: ReturnType<typeof useAppPalette> }) {
   const isComingSoon = tool.badge === 'Coming soon';
   
+  // Map color strings to palette tokens
+  const colorMap: Record<string, string> = {
+    error: palette.error,
+    primary: palette.primary,
+    success: palette.success,
+    info: palette.info,
+    warning: palette.warning,
+  };
+  const toolColor = colorMap[tool.color] || tool.color;
+  
   const handlePress = () => {
     if (isComingSoon) {
       Alert.alert(
@@ -280,13 +288,13 @@ function ToolCard({ tool, palette }: { tool: AppealTool; palette: ReturnType<typ
             borderRadius: 28,
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: tool.color + '15',
+            backgroundColor: toolColor + '15',
           }}
         >
           <MaterialCommunityIcons
             name={tool.icon}
             size={28}
-            color={tool.color}
+            color={toolColor}
           />
         </View>
         <View style={{ flex: 1, marginLeft: 12 }}>

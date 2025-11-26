@@ -3,9 +3,10 @@
  * Sync REAL campaigns from data/campaigns.ts to Firestore
  * Syncs to both campaigns_production and campaigns_preview collections
  */
+/* eslint-disable no-console */
 
 import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import { doc, getFirestore, setDoc } from 'firebase/firestore';
 
 import { campaigns } from '../data/campaigns';
 

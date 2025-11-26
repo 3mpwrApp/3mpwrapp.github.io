@@ -32,26 +32,26 @@ export default function EnergyMoodDashboard() {
   }, []);
 
   const quantumColors: Record<string, string> = {
-    excited: '#FFD700',
-    ground: '#28A745',
-    low_energy: '#FFC107',
-    depleted: '#DC143C',
-    borrowed: '#FF4500',
-    recovering: '#87CEEB',
-    superposition: '#9370DB',
+    excited: palette.warning,
+    ground: palette.success,
+    low_energy: palette.warning,
+    depleted: palette.error,
+    borrowed: palette.error,
+    recovering: palette.info,
+    superposition: palette.primary,
   };
 
   const weatherColors: Record<string, string> = {
-    sunny: '#FFD700',
-    partly_cloudy: '#87CEEB',
-    overcast: '#696969',
-    rainy: '#4682B4',
-    stormy: '#2F4F4F',
-    foggy: '#A9A9A9',
-    thunderstorm: '#191970',
-    scattered_showers: '#5F9EA0',
-    high_pressure: '#FF6347',
-    arctic_blast: '#00CED1',
+    sunny: palette.warning,
+    partly_cloudy: palette.info,
+    overcast: palette.muted,
+    rainy: palette.info,
+    stormy: palette.muted,
+    foggy: palette.muted,
+    thunderstorm: palette.primary,
+    scattered_showers: palette.info,
+    high_pressure: palette.error,
+    arctic_blast: palette.info,
   };
 
   const borrowEnergy = (amount: number) => {
@@ -88,7 +88,7 @@ export default function EnergyMoodDashboard() {
                 { backgroundColor: quantumColors[quantumState.state] },
               ]}
             >
-              <Ionicons name="flash" size={32} color="#FFF" />
+              <Ionicons name="flash" size={32} color={palette.onPrimary} />
             </View>
             <View style={styles.stateInfo}>
               <Text style={[styles.stateTitle, { color: palette.text }]}>
@@ -121,38 +121,38 @@ export default function EnergyMoodDashboard() {
 
         {/* Energy Debt */}
         {energyDebt && energyDebt.totalOwed > 0 && (
-          <View style={[styles.card, { backgroundColor: '#F8D7DA' }]}>
+          <View style={[styles.card, { backgroundColor: palette.errorBackground }]}>
             <View style={styles.debtHeader}>
-              <Ionicons name="warning" size={24} color="#721C24" />
-              <Text style={[styles.debtTitle, { color: '#721C24' }]}>Energy Debt</Text>
+              <Ionicons name="warning" size={24} color={palette.error} />
+              <Text style={[styles.debtTitle, { color: palette.error }]}>Energy Debt</Text>
             </View>
 
-            <Text style={[styles.debtAmount, { color: '#721C24' }]}>
+            <Text style={[styles.debtAmount, { color: palette.error }]}>
               {energyDebt.totalOwed.toFixed(1)} units owed
             </Text>
-            <Text style={[styles.debtRate, { color: '#856404' }]}>
+            <Text style={[styles.debtRate, { color: palette.warning }]}>
               Compound interest: {(energyDebt.interestRate * 100).toFixed(0)}% per day
             </Text>
 
             <View style={styles.borrowSection}>
-              <Text style={[styles.borrowLabel, { color: '#721C24' }]}>
+              <Text style={[styles.borrowLabel, { color: palette.error }]}>
                 Borrow more energy (at {(energyDebt.interestRate * 100).toFixed(0)}% daily interest):
               </Text>
               <View style={styles.borrowButtons}>
                 <Pressable
-                  style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+                  style={[styles.borrowButton, { backgroundColor: palette.error }]}
                   onPress={() => borrowEnergy(5)}
                 >
                   <Text style={styles.borrowButtonText}>+5 units</Text>
                 </Pressable>
                 <Pressable
-                  style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+                  style={[styles.borrowButton, { backgroundColor: palette.error }]}
                   onPress={() => borrowEnergy(10)}
                 >
                   <Text style={styles.borrowButtonText}>+10 units</Text>
                 </Pressable>
                 <Pressable
-                  style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+                  style={[styles.borrowButton, { backgroundColor: palette.error }]}
                   onPress={() => borrowEnergy(20)}
                 >
                   <Text style={styles.borrowButtonText}>+20 units</Text>
@@ -188,7 +188,7 @@ export default function EnergyMoodDashboard() {
                       : 'cloud'
                   }
                   size={32}
-                  color="#FFF"
+                  color={palette.onPrimary}
                 />
               </View>
               <View style={styles.weatherInfo}>
@@ -363,7 +363,7 @@ const styles = StyleSheet.create({
   },
   energyBar: {
     height: 12,
-    backgroundColor: '#E0E0E0',
+    backgroundColor: palette.border,
     borderRadius: 6,
     overflow: 'hidden',
     marginBottom: 8,
@@ -411,7 +411,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   borrowButtonText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 14,
     fontWeight: '600',
   },
@@ -486,13 +486,13 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   forecastBadgeText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 10,
     fontWeight: 'bold',
   },
   confidenceBar: {
     height: 6,
-    backgroundColor: '#E0E0E0',
+    backgroundColor: palette.border,
     borderRadius: 3,
     overflow: 'hidden',
     marginBottom: 4,

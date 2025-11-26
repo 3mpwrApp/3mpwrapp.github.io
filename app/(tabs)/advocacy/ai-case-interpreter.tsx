@@ -148,9 +148,9 @@ export default function AiCaseInterpreter() {
   const [loading, setLoading] = React.useState(false);
   
   const getStrengthColor = (strength: number) => {
-    if (strength >= 70) return '#4CAF50';
-    if (strength >= 40) return '#FF9800';
-    return '#F44336';
+    if (strength >= 70) return palette.success;
+    if (strength >= 40) return palette.warning;
+    return palette.error;
   };
   
   const getStrengthLabel = (strength: number) => {
@@ -217,8 +217,8 @@ export default function AiCaseInterpreter() {
           {/* Document Type Badge */}
           {out.documentType && (
             <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 16 }}>
-              <View style={[s.badge, { backgroundColor: out.documentType === 'denial' ? '#F44336' : out.documentType === 'approval' ? '#4CAF50' : '#2196F3' }]}>
-                <Text style={{ color: '#fff', fontSize: 11, fontWeight: '700', textTransform: 'uppercase' }}>{out.documentType}</Text>
+              <View style={[s.badge, { backgroundColor: out.documentType === 'denial' ? palette.error : out.documentType === 'approval' ? palette.success : palette.primary }]}>
+                <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: '700', textTransform: 'uppercase' }}>{out.documentType}</Text>
               </View>
             </View>
           )}
@@ -239,11 +239,11 @@ export default function AiCaseInterpreter() {
 
           {/* Detected Deadlines */}
           {out.detectedDeadlines && out.detectedDeadlines.length > 0 && (
-            <View style={[s.card, { backgroundColor: '#FFA500' + '15', borderColor: '#FFA500' }]}>
+            <View style={[s.card, { backgroundColor: palette.warning + '15', borderColor: palette.warning }]}>
               <Text style={s.cardTitle}>⚠️ Deadlines Detected ({out.detectedDeadlines.length})</Text>
               {out.detectedDeadlines.map((dl, idx) => (
                 <View key={idx} style={{ flexDirection: 'row', alignItems: 'center', marginTop: 8, paddingVertical: 6, borderTopWidth: idx > 0 ? StyleSheet.hairlineWidth : 0, borderTopColor: palette.muted }}>
-                  <MaterialCommunityIcons name="calendar-alert" size={20} color="#FFA500" />
+                  <MaterialCommunityIcons name="calendar-alert" size={20} color={palette.warning} />
                   <View style={{ flex: 1, marginLeft: 8 }}>
                     <Text style={{ color: palette.text, fontWeight: '700' }}>{dl.date}</Text>
                     <Text style={{ color: palette.text, opacity: 0.8, fontSize: 12 }}>{dl.description}</Text>
@@ -258,20 +258,20 @@ export default function AiCaseInterpreter() {
 
           {/* Strengths */}
           {out.strengths && out.strengths.length > 0 && (
-            <View style={[s.card, { backgroundColor: '#4CAF50' + '10' }]}>
+            <View style={[s.card, { backgroundColor: palette.success + '10' }]}>
               <Text style={s.cardTitle}>💪 Case Strengths</Text>
               {out.strengths.map((str, idx) => (
-                <Text key={idx} style={[s.cardText, { color: '#2E7D32', marginTop: 4 }]}>{str}</Text>
+                <Text key={idx} style={[s.cardText, { color: palette.success, marginTop: 4 }]}>{str}</Text>
               ))}
             </View>
           )}
 
           {/* Weaknesses */}
           {out.weaknesses && out.weaknesses.length > 0 && (
-            <View style={[s.card, { backgroundColor: '#F44336' + '10' }]}>
+            <View style={[s.card, { backgroundColor: palette.error + '10' }]}>
               <Text style={s.cardTitle}>⚠️ Potential Weaknesses</Text>
               {out.weaknesses.map((weak, idx) => (
-                <Text key={idx} style={[s.cardText, { color: '#C62828', marginTop: 4 }]}>{weak}</Text>
+                <Text key={idx} style={[s.cardText, { color: palette.error, marginTop: 4 }]}>{weak}</Text>
               ))}
               <Text style={{ color: palette.text, opacity: 0.8, fontSize: 12, marginTop: 8, fontStyle: 'italic' }}>
                 Tip: Address these weaknesses by gathering additional evidence

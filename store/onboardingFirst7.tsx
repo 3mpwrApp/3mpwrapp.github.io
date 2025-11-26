@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 
 import { logError } from '../utils/errorLogger';
 
@@ -70,10 +71,19 @@ export function First7Provider({ children }: { children: React.ReactNode }) {
   const [error, setError] = React.useState<Error | null>(null);
   
   // Load persisted state on mount
+  // On web, AsyncStorage is null so this skips safely
   React.useEffect(() => { 
     (async()=>{ 
       try {
-        if (!AsyncStorage) return; 
+        if (!AsyncStorage) {
+          if (Platform.OS === 'web') {
+            // Silently skip on web - no AsyncStorage available
+            return;
+          }
+          // On other platforms without AsyncStorage, log warning
+          console.warn('[First7Provider] AsyncStorage not available');
+          return;
+        }
         const raw = await AsyncStorage.getItem(KEY); 
         if (raw) {
           const parsed = JSON.parse(raw);

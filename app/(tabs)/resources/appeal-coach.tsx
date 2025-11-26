@@ -225,7 +225,7 @@ Sincerely,
       <Text style={s.subtitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('appealCoach.instructions','Comprehensive appeal guidance with checklists, timelines, and templates.')}</Text>
 
       {/* Deadline Calculator */}
-      <View style={[s.card, { backgroundColor: '#2196F3' + '10', borderColor: '#2196F3' }]}>
+      <View style={[s.card, { backgroundColor: palette.primary + '10', borderColor: palette.primary }]}>
         <Text style={s.cardTitle}>⏰ Appeal Deadline Calculator</Text>
         <Text style={[s.cardText, { marginBottom: 8 }]}>Enter your denial letter date to calculate your appeal deadline:</Text>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
@@ -276,7 +276,7 @@ Sincerely,
       ))}
 
       {/* Appeal Templates */}
-      <Pressable onPress={() => setShowTemplates(!showTemplates)} style={[s.card, { borderColor: '#4CAF50' }]}>
+      <Pressable onPress={() => setShowTemplates(!showTemplates)} style={[s.card, { borderColor: palette.success }]}>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
           <Text style={s.cardTitle}>📝 Appeal Letter Templates</Text>
           <MaterialCommunityIcons name={showTemplates ? 'chevron-up' : 'chevron-down'} size={24} color={palette.text} />

@@ -23,25 +23,25 @@ export default function CircadianDJScreen() {
   > = {
     lion: {
       icon: '🦁',
-      color: '#FFD700',
+      color: palette.warning,
       peakTimes: '6am-12pm',
       bedtime: '9pm-5am',
     },
     bear: {
       icon: '🐻',
-      color: '#8B4513',
+      color: palette.text,
       peakTimes: '10am-4pm',
       bedtime: '11pm-7am',
     },
     wolf: {
       icon: '🐺',
-      color: '#4B0082',
+      color: palette.primary,
       peakTimes: '5pm-11pm',
       bedtime: '12am-8am',
     },
     dolphin: {
       icon: '🐬',
-      color: '#00CED1',
+      color: palette.info,
       peakTimes: '3pm-6pm',
       bedtime: '11:30pm-6:30am',
     },
@@ -121,7 +121,7 @@ export default function CircadianDJScreen() {
               style={[styles.quizButton, { backgroundColor: palette.primary }]}
               onPress={takeChronotypeQuiz}
             >
-              <Ionicons name="help-circle" size={20} color="#FFF" />
+              <Ionicons name="help-circle" size={20} color={palette.onPrimary} />
               <Text style={styles.quizButtonText}>Take Chronotype Quiz</Text>
             </Pressable>
           </View>
@@ -129,23 +129,23 @@ export default function CircadianDJScreen() {
 
         {/* Sleep Debt */}
         {sleepDebt && sleepDebt.totalHoursOwed > 0 && (
-          <View style={[styles.card, { backgroundColor: '#FFF3CD' }]}>
+          <View style={[styles.card, { backgroundColor: palette.warningBackground }]}>
             <View style={styles.debtHeader}>
-              <Ionicons name="warning" size={24} color="#856404" />
-              <Text style={[styles.debtTitle, { color: '#856404' }]}>Sleep Debt</Text>
+              <Ionicons name="warning" size={24} color={palette.warning} />
+              <Text style={[styles.debtTitle, { color: palette.warning }]}>Sleep Debt</Text>
             </View>
 
-            <Text style={[styles.debtAmount, { color: '#721C24' }]}>
+            <Text style={[styles.debtAmount, { color: palette.error }]}>
               {sleepDebt.totalHoursOwed.toFixed(1)} hours owed
             </Text>
 
-            <Text style={[styles.debtDescription, { color: '#856404' }]}>
+            <Text style={[styles.debtDescription, { color: palette.warning }]}>
               Repayment plan: +{sleepDebt.repaymentPlan.dailyExtraMinutes} minutes per night
             </Text>
-            <Text style={[styles.debtDescription, { color: '#856404' }]}>
+            <Text style={[styles.debtDescription, { color: palette.warning }]}>
               Target debt-free date: {sleepDebt.repaymentPlan.targetDate}
             </Text>
-            <Text style={[styles.debtDescription, { color: '#856404' }]}>
+            <Text style={[styles.debtDescription, { color: palette.warning }]}>
               This week's progress: {sleepDebt.repaymentPlan.weeklyProgress.toFixed(1)} hours repaid
             </Text>
           </View>
@@ -166,9 +166,9 @@ export default function CircadianDJScreen() {
                     size={20}
                     color={
                       pattern.pattern === 'recurring'
-                        ? '#DC143C'
+                        ? palette.error
                         : pattern.pattern === 'clustered'
-                        ? '#FFA500'
+                        ? palette.warning
                         : palette.textSecondary
                     }
                   />
@@ -310,7 +310,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   quizButtonText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 16,
     fontWeight: '600',
     marginLeft: 8,

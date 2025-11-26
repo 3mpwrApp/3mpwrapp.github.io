@@ -376,11 +376,11 @@ function ResearchCard({
   const getTypeColor = () => {
     switch (item.type) {
       case 'study':
-        return '#2563eb'; // blue
+        return palette.info; // blue
       case 'report':
-        return '#7c3aed'; // purple
+        return palette.secondary; // purple
       case 'article':
-        return '#059669'; // green
+        return palette.success; // green
       default:
         return palette.primary;
     }
@@ -391,8 +391,8 @@ function ResearchCard({
       {/* Type Badge */}
       <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10 }}>
         <View style={{ backgroundColor: getTypeColor(), paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12, flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-          <Ionicons name={getTypeIcon()} size={14} color="#fff" />
-          <Text style={{ fontSize: 11, color: '#fff', fontWeight: '700', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+          <Ionicons name={getTypeIcon()} size={14} color={palette.onPrimary} />
+          <Text style={{ fontSize: 11, color: palette.onPrimary, fontWeight: '700', textTransform: 'uppercase', letterSpacing: 0.5 }}>
             {item.type}
           </Text>
         </View>

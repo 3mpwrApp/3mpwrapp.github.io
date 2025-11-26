@@ -408,7 +408,7 @@ export default function RightsChecker() {
       {summary && (
         <>
           {/* Rights Summary */}
-          <View style={{ backgroundColor: '#4CAF50' + '15', borderWidth: 1, borderColor: '#4CAF50', borderRadius: 12, padding: 16, marginTop: 16 }}>
+          <View style={{ backgroundColor: palette.success + '15', borderWidth: 1, borderColor: palette.success, borderRadius: 12, padding: 16, marginTop: 16 }}>
             <Text style={{ fontSize: 18, fontWeight: '700', color: palette.text, marginBottom: 12 }}>
               ✅ Your Rights ({summary.rights.length})
             </Text>
@@ -419,7 +419,7 @@ export default function RightsChecker() {
 
           {/* Action Items */}
           {summary.actions.length > 0 && (
-            <View style={{ backgroundColor: '#2196F3' + '15', borderWidth: 1, borderColor: '#2196F3', borderRadius: 12, padding: 16, marginTop: 12 }}>
+            <View style={{ backgroundColor: palette.info + '15', borderWidth: 1, borderColor: palette.info, borderRadius: 12, padding: 16, marginTop: 12 }}>
               <Text style={{ fontSize: 18, fontWeight: '700', color: palette.text, marginBottom: 12 }}>
                 🎯 Recommended Actions ({summary.actions.length})
               </Text>

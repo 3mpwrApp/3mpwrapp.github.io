@@ -292,13 +292,13 @@ export default function ProfileCard() {
       {/* Sign Out / Sign In */}
       {user ? (
         <Pressable
-          style={[styles.button, { backgroundColor: palette.error || palette.primary }]}
+          style={[styles.button, { backgroundColor: palette.error }]}
           onPress={signOut}
           accessibilityRole="button"
           accessibilityLabel={t("header.signOut", "Sign Out")}
         >
-          <Ionicons name="log-out" size={20} color="#fff" />
-          <Text style={[styles.buttonText, { color: '#fff' }]}>{t("header.signOut", "Sign Out")}</Text>
+          <Ionicons name="log-out" size={20} color={palette.onPrimary} />
+          <Text style={[styles.buttonText, { color: palette.onPrimary }]}>{t("header.signOut", "Sign Out")}</Text>
         </Pressable>
       ) : (
         <Pressable

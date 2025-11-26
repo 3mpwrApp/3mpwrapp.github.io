@@ -8,6 +8,9 @@
  * - Sleep-Energy Tracker
  * - Pacing Partner (activity pacing)
  * - Spoon Marketplace (community energy trading)
+ * 
+ * NOTE: This file has 60+ inline colors. First pass completed (9 colors fixed).
+ * Second pass needed to fix remaining 50+ colors.
  */
 
 import { Ionicons } from '@expo/vector-icons';
@@ -43,6 +46,7 @@ const CACHE_KEYS = {
 
 export default function EnergyMoodHub() {
   const palette = useAppPalette();
+  const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
   
   useAnnounceOnMount('Energy and Mood Hub');
@@ -216,11 +220,11 @@ export default function EnergyMoodHub() {
   ];
 
   const MOOD_OPTIONS = [
-    { emoji: '😄', label: 'Great', value: 'great', color: '#10B981' },
-    { emoji: '🙂', label: 'Good', value: 'good', color: '#3B82F6' },
-    { emoji: '😐', label: 'Okay', value: 'okay', color: '#6B7280' },
-    { emoji: '😔', label: 'Bad', value: 'bad', color: '#F59E0B' },
-    { emoji: '😢', label: 'Terrible', value: 'terrible', color: '#EF4444' },
+    { emoji: '😄', label: 'Great', value: 'great', color: palette.success },
+    { emoji: '🙂', label: 'Good', value: 'good', color: palette.info },
+    { emoji: '😐', label: 'Okay', value: 'okay', color: palette.muted },
+    { emoji: '😔', label: 'Bad', value: 'bad', color: palette.warning },
+    { emoji: '😢', label: 'Terrible', value: 'terrible', color: palette.error },
   ];
 
   const spendTask = useCallback(async (taskName: string, cost: number) => {
@@ -471,8 +475,8 @@ export default function EnergyMoodHub() {
                 {quantum.metrics.quantumState.replace(/_/g, ' ')}
               </Text>
             </View>
-            <View style={[styles.quantumBadge, { backgroundColor: getQuantumColor(quantum.metrics.quantumState) }]}>
-              <Ionicons name="flash" size={20} color="#FFF" />
+            <View style={[styles.quantumBadge, { backgroundColor: getQuantumColor(quantum.metrics.quantumState, palette) }]}>
+              <Ionicons name="flash" size={20} color={palette.onPrimary} />
             </View>
           </View>
 
@@ -497,16 +501,16 @@ export default function EnergyMoodHub() {
               <Text style={[styles.quantumMetricLabel, { color: palette.textSecondary }]}>
                 Sustainability
               </Text>
-              <Text style={[styles.quantumMetricValue, { color: getSustainabilityColor(quantum.metrics.sustainabilityScore) }]}>
+              <Text style={[styles.quantumMetricValue, { color: getSustainabilityColor(quantum.metrics.sustainabilityScore, palette) }]}>
                 {quantum.metrics.sustainabilityScore}/100
               </Text>
             </View>
           </View>
 
           {quantum.metrics.debt.currentBalance > 0 && (
-            <View style={[styles.alertBanner, { backgroundColor: '#F8D7DA', marginTop: 12 }]}>
-              <Ionicons name="warning" size={20} color="#721C24" />
-              <Text style={[styles.alertText, { color: '#721C24' }]}>
+            <View style={[styles.alertBanner, { backgroundColor: palette.errorBackground, marginTop: 12 }]}>
+              <Ionicons name="warning" size={20} color={palette.error} />
+              <Text style={[styles.alertText, { color: palette.error }]}>
                 Energy debt: {quantum.metrics.debt.currentBalance.toFixed(1)} units
                 {' '}({(quantum.metrics.debt.interestRate * 100).toFixed(1)}% compound interest)
               </Text>
@@ -536,18 +540,18 @@ export default function EnergyMoodHub() {
         </View>
 
         {account && account.currentSpoons < 3 && account.currentSpoons > 0 && (
-          <View style={[styles.alertBanner, { backgroundColor: '#FFF3CD' }]}>
-            <Ionicons name="warning" size={20} color="#856404" />
-            <Text style={[styles.alertText, { color: '#856404' }]}>
+          <View style={[styles.alertBanner, { backgroundColor: palette.warningBackground }]}>
+            <Ionicons name="warning" size={20} color={palette.warning} />
+            <Text style={[styles.alertText, { color: palette.warning }]}>
               Low energy! Only {account.currentSpoons} spoons left today.
             </Text>
           </View>
         )}
 
         {account && account.debtSpoons > 0 && (
-          <View style={[styles.alertBanner, { backgroundColor: '#F8D7DA', marginTop: 8 }]}>
-            <Ionicons name="alert-circle" size={20} color="#721C24" />
-            <Text style={[styles.alertText, { color: '#721C24' }]}>
+          <View style={[styles.alertBanner, { backgroundColor: palette.errorBackground, marginTop: 8 }]}>
+            <Ionicons name="alert-circle" size={20} color={palette.error} />
+            <Text style={[styles.alertText, { color: palette.error }]}>
               Energy debt: {account.debtSpoons.toFixed(1)} spoons owed
             </Text>
           </View>
@@ -562,7 +566,7 @@ export default function EnergyMoodHub() {
             <Text style={[styles.cardSubtitle, { color: palette.textSecondary }]}>7-Day Average</Text>
           </View>
           {moodInsights && (
-            <Text style={[styles.largeStat, { color: getMoodColor(moodInsights.avg7d) }]}>
+            <Text style={[styles.largeStat, { color: getMoodColor(moodInsights.avg7d, palette) }]}>
               {moodInsights.avg7d !== null ? moodInsights.avg7d.toFixed(1) : '--'}
             </Text>
           )}
@@ -572,7 +576,7 @@ export default function EnergyMoodHub() {
           <View style={styles.insightsRow}>
             <View style={styles.insightItem}>
               <Text style={[styles.insightLabel, { color: palette.textSecondary }]}>Trend</Text>
-              <Text style={[styles.insightValue, { color: getTrendColor(moodInsights.trend) }]}>
+              <Text style={[styles.insightValue, { color: getTrendColor(moodInsights.trend, palette) }]}>
                 {getTrendIcon(moodInsights.trend)} {capitalize(moodInsights.trend)}
               </Text>
             </View>
@@ -595,7 +599,7 @@ export default function EnergyMoodHub() {
           style={[styles.actionButton, { backgroundColor: palette.primary }]}
           hitSlop={HIT_SLOP_8}
         >
-          <Ionicons name="add-circle" size={24} color="#FFF" />
+          <Ionicons name="add-circle" size={24} color={palette.onPrimary} />
           <Text style={styles.actionButtonText}>Log Energy & Mood</Text>
         </A11yPressable>
 
@@ -604,7 +608,7 @@ export default function EnergyMoodHub() {
           style={[styles.actionButton, { backgroundColor: palette.secondary, marginTop: 8 }]}
           hitSlop={HIT_SLOP_8}
         >
-          <Ionicons name="analytics" size={24} color="#FFF" />
+          <Ionicons name="analytics" size={24} color={palette.onPrimary} />
           <Text style={styles.actionButtonText}>View Insights</Text>
         </A11yPressable>
       </View>
@@ -752,9 +756,9 @@ export default function EnergyMoodHub() {
             disabled={isSavingSleep}
           >
             {isSavingSleep ? (
-              <ActivityIndicator size="small" color="#FFF" />
+              <ActivityIndicator size="small" color={palette.onPrimary} />
             ) : (
-              <Ionicons name="moon" size={24} color="#FFF" />
+              <Ionicons name="moon" size={24} color={palette.onPrimary} />
             )}
           </Pressable>
         </View>
@@ -842,9 +846,9 @@ export default function EnergyMoodHub() {
             disabled={isSavingActivity}
           >
             {isSavingActivity ? (
-              <ActivityIndicator size="small" color="#FFF" />
+              <ActivityIndicator size="small" color={palette.onPrimary} />
             ) : (
-              <Ionicons name="fitness" size={24} color="#FFF" />
+              <Ionicons name="fitness" size={24} color={palette.onPrimary} />
             )}
           </Pressable>
         </View>
@@ -871,19 +875,19 @@ export default function EnergyMoodHub() {
 
         <View style={styles.borrowButtons}>
           <Pressable
-            style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+            style={[styles.borrowButton, { backgroundColor: palette.error }]}
             onPress={() => borrowSpoons(2)}
           >
             <Text style={styles.borrowButtonText}>+2 🥄</Text>
           </Pressable>
           <Pressable
-            style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+            style={[styles.borrowButton, { backgroundColor: palette.error }]}
             onPress={() => borrowSpoons(5)}
           >
             <Text style={styles.borrowButtonText}>+5 🥄</Text>
           </Pressable>
           <Pressable
-            style={[styles.borrowButton, { backgroundColor: '#DC143C' }]}
+            style={[styles.borrowButton, { backgroundColor: palette.error }]}
             onPress={() => borrowSpoons(10)}
           >
             <Text style={styles.borrowButtonText}>+10 🥄</Text>
@@ -950,14 +954,14 @@ export default function EnergyMoodHub() {
 
           <View style={styles.insightCard}>
             <Text style={[styles.insightCardTitle, { color: palette.text }]}>7-Day Average</Text>
-            <Text style={[styles.insightCardValue, { color: getMoodColor(moodInsights.avg7d) }]}>
+            <Text style={[styles.insightCardValue, { color: getMoodColor(moodInsights.avg7d, palette) }]}>
               {moodInsights.avg7d.toFixed(1)}
             </Text>
           </View>
 
           <View style={styles.insightCard}>
             <Text style={[styles.insightCardTitle, { color: palette.text }]}>Current Trend</Text>
-            <Text style={[styles.insightCardValue, { color: getTrendColor(moodInsights.trend) }]}>
+            <Text style={[styles.insightCardValue, { color: getTrendColor(moodInsights.trend, palette) }]}>
               {getTrendIcon(moodInsights.trend)} {capitalize(moodInsights.trend)}
             </Text>
           </View>
@@ -972,7 +976,7 @@ export default function EnergyMoodHub() {
           {moodInsights.delta24h !== null && (
             <View style={styles.insightCard}>
               <Text style={[styles.insightCardTitle, { color: palette.text }]}>24h Change</Text>
-              <Text style={[styles.insightCardValue, { color: moodInsights.delta24h >= 0 ? '#10B981' : '#EF4444' }]}>
+              <Text style={[styles.insightCardValue, { color: moodInsights.delta24h >= 0 ? palette.success : palette.error }]}>
                 {moodInsights.delta24h >= 0 ? '+' : ''}{moodInsights.delta24h.toFixed(1)}
               </Text>
             </View>
@@ -987,7 +991,7 @@ export default function EnergyMoodHub() {
           
           <View style={styles.insightCard}>
             <Text style={[styles.insightCardTitle, { color: palette.text }]}>Correlation Strength</Text>
-            <Text style={[styles.insightCardValue, { color: getCorrelationColor(sleepEnergyStats.correlation) }]}>
+            <Text style={[styles.insightCardValue, { color: getCorrelationColor(sleepEnergyStats.correlation, palette) }]}>
               {getCorrelationLabel(sleepEnergyStats.correlation)}
             </Text>
             <Text style={[styles.insightCardSubtext, { color: palette.textSecondary }]}>
@@ -1025,9 +1029,9 @@ export default function EnergyMoodHub() {
           )}
 
           {sleepEnergyStats.correlation < -0.3 && (
-            <View style={[styles.insightHighlight, { backgroundColor: '#EF4444' + '20' }]}>
-              <Ionicons name="warning" size={16} color="#EF4444" />
-              <Text style={[styles.insightHighlightText, { color: '#EF4444' }]}>
+            <View style={[styles.insightHighlight, { backgroundColor: palette.errorBackground }]}>
+              <Ionicons name="warning" size={16} color={palette.error} />
+              <Text style={[styles.insightHighlightText, { color: palette.error }]}>
                 Negative correlation detected. Consider reviewing sleep patterns or other factors affecting energy.
               </Text>
             </View>
@@ -1116,7 +1120,7 @@ export default function EnergyMoodHub() {
                 <Text style={[styles.forecastDate, { color: palette.text }]}>
                   {new Date(forecast.date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
                 </Text>
-                <Text style={[styles.forecastLevel, { color: getForecastColor(forecast.predictedLevel) }]}>
+                <Text style={[styles.forecastLevel, { color: getForecastColor(forecast.predictedLevel, palette) }]}>
                   {forecast.predictedLevel}%
                 </Text>
               </View>
@@ -1171,7 +1175,7 @@ export default function EnergyMoodHub() {
           style={[styles.actionButton, { backgroundColor: palette.primary, marginTop: 16 }]}
           hitSlop={HIT_SLOP_8}
         >
-          <Ionicons name="people" size={24} color="#FFF" />
+          <Ionicons name="people" size={24} color={palette.onPrimary} />
           <Text style={styles.actionButtonText}>Open Spoon Marketplace</Text>
         </A11yPressable>
       </View>
@@ -1302,19 +1306,19 @@ export default function EnergyMoodHub() {
 }
 
 // Helper functions
-function getMoodColor(score: number | null): string {
-  if (score === null) return '#6B7280';
-  if (score >= 1.5) return '#10B981';
-  if (score >= 0.5) return '#3B82F6';
-  if (score >= -0.5) return '#6B7280';
-  if (score >= -1.5) return '#F59E0B';
-  return '#EF4444';
+function getMoodColor(score: number | null, palette: ReturnType<typeof useAppPalette>): string {
+  if (score === null) return palette.muted;
+  if (score >= 1.5) return palette.success;
+  if (score >= 0.5) return palette.info;
+  if (score >= -0.5) return palette.muted;
+  if (score >= -1.5) return palette.warning;
+  return palette.error;
 }
 
-function getTrendColor(trend: string): string {
-  if (trend === 'improving') return '#10B981';
-  if (trend === 'declining') return '#EF4444';
-  return '#6B7280';
+function getTrendColor(trend: string, palette: ReturnType<typeof useAppPalette>): string {
+  if (trend === 'improving') return palette.success;
+  if (trend === 'declining') return palette.error;
+  return palette.muted;
 }
 
 function getTrendIcon(trend: string): string {
@@ -1327,29 +1331,29 @@ function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-function getQuantumColor(state: QuantumEnergyState): string {
+function getQuantumColor(state: QuantumEnergyState, palette: ReturnType<typeof useAppPalette>): string {
   const colors: Record<QuantumEnergyState, string> = {
-    quantum_superposition: '#9370DB',
-    energy_entanglement: '#20B2AA',
-    wave_collapse: '#DC143C',
-    tunneling: '#FF8C00',
-    zero_point: '#4169E1',
-    excited_state: '#FFD700',
-    ground_state: '#28A745',
+    quantum_superposition: palette.secondary,
+    energy_entanglement: palette.info,
+    wave_collapse: palette.error,
+    tunneling: palette.warning,
+    zero_point: palette.primary,
+    excited_state: palette.warning,
+    ground_state: palette.success,
   };
-  return colors[state] || '#6B7280';
+  return colors[state] || palette.muted;
 }
 
-function getSustainabilityColor(score: number): string {
-  if (score >= 70) return '#10B981';
-  if (score >= 40) return '#F59E0B';
-  return '#EF4444';
+function getSustainabilityColor(score: number, palette: ReturnType<typeof useAppPalette>): string {
+  if (score >= 70) return palette.success;
+  if (score >= 40) return palette.warning;
+  return palette.error;
 }
 
-function getForecastColor(level: number): string {
-  if (level >= 70) return '#10B981';
-  if (level >= 40) return '#F59E0B';
-  return '#EF4444';
+function getForecastColor(level: number, palette: ReturnType<typeof useAppPalette>): string {
+  if (level >= 70) return palette.success;
+  if (level >= 40) return palette.warning;
+  return palette.error;
 }
 
 function formatTimeAgo(date: Date): string {
@@ -1367,11 +1371,11 @@ function formatTimeAgo(date: Date): string {
   return date.toLocaleDateString();
 }
 
-function getCorrelationColor(r: number): string {
+function getCorrelationColor(r: number, palette: ReturnType<typeof useAppPalette>): string {
   const absR = Math.abs(r);
-  if (absR >= 0.7) return r > 0 ? '#10B981' : '#EF4444';
-  if (absR >= 0.3) return r > 0 ? '#3B82F6' : '#F59E0B';
-  return '#6B7280';
+  if (absR >= 0.7) return r > 0 ? palette.success : palette.error;
+  if (absR >= 0.3) return r > 0 ? palette.info : palette.warning;
+  return palette.muted;
 }
 
 function getCorrelationLabel(r: number): string {
@@ -1397,24 +1401,25 @@ function getPacingIcon(category: string): any {
   return icons[category] || 'bulb-outline';
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  tabBar: {
-    flexDirection: 'row',
-    borderBottomWidth: 1,
-    paddingTop: 8,
-  },
-  tab: {
-    flex: 1,
-    alignItems: 'center',
-    paddingVertical: 12,
-  },
-  tabActive: {
-    borderBottomWidth: 2,
-    borderBottomColor: '#3B82F6',
-  },
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
+  return StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    tabBar: {
+      flexDirection: 'row',
+      borderBottomWidth: 1,
+      paddingTop: 8,
+    },
+    tab: {
+      flex: 1,
+      alignItems: 'center',
+      paddingVertical: 12,
+    },
+    tabActive: {
+      borderBottomWidth: 2,
+      borderBottomColor: palette.primary,
+    },
   tabText: {
     fontSize: 12,
     marginTop: 4,
@@ -1503,7 +1508,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   actionButtonText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 16,
     fontWeight: '600',
   },
@@ -1589,7 +1594,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   borrowButtonText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 14,
     fontWeight: '600',
   },
@@ -1599,7 +1604,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     paddingBottom: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: palette.border,
   },
   reportLabel: {
     fontSize: 14,
@@ -1611,7 +1616,7 @@ const styles = StyleSheet.create({
   insightCard: {
     padding: 12,
     borderRadius: 8,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: palette.card,
     marginBottom: 12,
   },
   insightCardTitle: {
@@ -1758,7 +1763,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: '#FFF',
+    backgroundColor: palette.onPrimary,
   },
   quantumBadge: {
     width: 48,
@@ -1803,7 +1808,7 @@ const styles = StyleSheet.create({
   },
   confidenceBar: {
     height: 6,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: palette.border,
     borderRadius: 3,
     overflow: 'hidden',
     marginBottom: 4,
@@ -1856,11 +1861,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalButtonText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 14,
     fontWeight: '600',
   },
-  bottomSpacer: {
-    height: 32,
-  },
-});
+    bottomSpacer: {
+      height: 32,
+    },
+  });
+}

@@ -1,19 +1,18 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Stack, useRouter } from 'expo-router';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8, MAX_FONT_SCALE } from '../../../constants/A11Y';
-import { useTranslation } from '../../../i18n';
 import { type ICFDomain, type ICFQualifier, useFunctionalCapacity } from '../../../services/functionalCapacityEvaluator';
 import { useAppPalette } from '../../../theme/usePalette';
 import { createShadow } from '../../../utils/shadow';
 
 export default function FunctionalCapacityWizard() {
-  const { t } = useTranslation();
   const palette = useAppPalette();
   const router = useRouter();
   const capacity = useFunctionalCapacity();
+  const styles = React.useMemo(() => createStyles(palette), [palette]);
 
   const domains = capacity.getDomains();
   const [currentDomainIndex, setCurrentDomainIndex] = useState(0);
@@ -24,11 +23,11 @@ export default function FunctionalCapacityWizard() {
   const progress = ((currentDomainIndex / domains.length) * 100).toFixed(0);
 
   const qualifierOptions: Array<{ value: ICFQualifier; label: string; description: string; color: string }> = [
-    { value: 0, label: 'No Problem', description: '0-4% impairment', color: '#10B981' },
-    { value: 1, label: 'Mild Problem', description: '5-24% impairment', color: '#3B82F6' },
-    { value: 2, label: 'Moderate Problem', description: '25-49% impairment', color: '#F59E0B' },
-    { value: 3, label: 'Severe Problem', description: '50-95% impairment', color: '#EF4444' },
-    { value: 4, label: 'Complete Problem', description: '96-100% impairment', color: '#7C2D12' },
+    { value: 0, label: 'No Problem', description: '0-4% impairment', color: palette.success },
+    { value: 1, label: 'Mild Problem', description: '5-24% impairment', color: palette.info },
+    { value: 2, label: 'Moderate Problem', description: '25-49% impairment', color: palette.warning },
+    { value: 3, label: 'Severe Problem', description: '50-95% impairment', color: palette.error },
+    { value: 4, label: 'Complete Problem', description: '96-100% impairment', color: palette.error },
   ];
 
   const handleSelectQualifier = (qualifier: ICFQualifier) => {
@@ -71,11 +70,11 @@ export default function FunctionalCapacityWizard() {
 
   const getCategoryColor = (category: ICFDomain['category']): string => {
     const colors: Record<ICFDomain['category'], string> = {
-      body_function: '#8B5CF6',
-      body_structure: '#EC4899',
-      activity: '#3B82F6',
-      participation: '#10B981',
-      environment: '#F59E0B',
+      body_function: palette.primary,
+      body_structure: palette.secondary,
+      activity: palette.info,
+      participation: palette.success,
+      environment: palette.warning,
     };
     return colors[category] || palette.primary;
   };
@@ -275,8 +274,8 @@ export default function FunctionalCapacityWizard() {
               style={[styles.navButton, { backgroundColor: palette.primary, borderColor: palette.primary }]}
               hitSlop={HIT_SLOP_8}
             >
-              <Text style={[styles.navButtonText, { color: '#FFF' }]}>Next</Text>
-              <Ionicons name="chevron-forward" size={20} color="#FFF" />
+              <Text style={[styles.navButtonText, { color: palette.onPrimary }]}>Next</Text>
+              <Ionicons name="chevron-forward" size={20} color={palette.onPrimary} />
             </Pressable>
           ) : (
             <Pressable
@@ -284,18 +283,18 @@ export default function FunctionalCapacityWizard() {
               disabled={!isComplete || isSaving}
               style={[
                 styles.finishButton,
-                { backgroundColor: isComplete ? '#10B981' : palette.border },
+                { backgroundColor: isComplete ? palette.success : palette.border },
               ]}
               hitSlop={HIT_SLOP_8}
             >
               {isSaving ? (
                 <>
-                  <ActivityIndicator size="small" color="#FFF" />
+                  <ActivityIndicator size="small" color={palette.onPrimary} />
                   <Text style={[styles.finishButtonText, { marginLeft: 8 }]}>Saving...</Text>
                 </>
               ) : (
                 <>
-                  <Ionicons name="checkmark-circle" size={24} color="#FFF" />
+                  <Ionicons name="checkmark-circle" size={24} color={palette.onPrimary} />
                   <Text style={styles.finishButtonText}>
                     {isComplete ? 'Complete Assessment' : `Answer ${domains.length - answeredCount} more`}
                   </Text>
@@ -309,15 +308,16 @@ export default function FunctionalCapacityWizard() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  progressCard: {
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
-  },
+function createStyles(palette: ReturnType<typeof useAppPalette>) {
+  return StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    progressCard: {
+      padding: 16,
+      borderBottomWidth: 1,
+      borderBottomColor: palette.border,
+    },
   progressHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -398,7 +398,7 @@ const styles = StyleSheet.create({
   },
   divider: {
     height: 1,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: palette.border,
     marginBottom: 16,
   },
   questionLabel: {
@@ -411,7 +411,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
     paddingTop: 12,
     borderTopWidth: 1,
-    borderTopColor: '#E5E7EB',
+    borderTopColor: palette.border,
   },
   examplesLabel: {
     fontSize: 13,
@@ -498,10 +498,11 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginLeft: 12,
   },
-  finishButtonText: {
-    color: '#FFF',
-    fontSize: 16,
-    fontWeight: '700',
-    marginLeft: 8,
-  },
-});
+    finishButtonText: {
+      color: palette.onPrimary,
+      fontSize: 16,
+      fontWeight: '700',
+      marginLeft: 8,
+    },
+  });
+}

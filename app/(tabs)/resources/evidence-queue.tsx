@@ -49,7 +49,7 @@ export default function EvidenceQueueScreen() {
           {t('templates.evidenceLocker.queueTitle', 'Upload Queue')}
         </Text>
         {pendingCount > 0 && (
-          <View style={[s.badge, { backgroundColor: failedCount > 0 ? '#DC3545' : '#FFC107' }]}>
+          <View style={[s.badge, { backgroundColor: failedCount > 0 ? palette.error : palette.warning }]}>
             <Text style={s.badgeText}>{pendingCount}</Text>
           </View>
         )}
@@ -97,13 +97,13 @@ export default function EvidenceQueueScreen() {
           <Text style={[s.title, { fontSize: 18, marginTop: 16 }]}>
             🔄 Offline Queue {pendingCount > 0 && `(${pendingCount} pending)`}
           </Text>
-          {offlineItems.map((item, idx) => {
+          {offlineItems.map((item, _idx) => {
             const statusIcon = item.status === 'succeeded' ? '✅' : 
                               item.status === 'failed' ? '❌' : 
                               item.status === 'retrying' ? '🔄' : '⏳';
-            const statusColor = item.status === 'succeeded' ? '#28A745' : 
-                               item.status === 'failed' ? '#DC3545' : 
-                               item.status === 'retrying' ? '#FFC107' : '#6C757D';
+            const statusColor = item.status === 'succeeded' ? palette.success : 
+                               item.status === 'failed' ? palette.error : 
+                               item.status === 'retrying' ? palette.warning : palette.textSecondary;
             
             return (
               <View key={item.id} style={[s.card, { borderLeftWidth: 4, borderLeftColor: statusColor }]}>
@@ -116,7 +116,7 @@ export default function EvidenceQueueScreen() {
                       Status: {item.status} • Attempts: {item.retries}/{5}
                     </Text>
                     {item.error && (
-                      <Text style={[s.meta, { color: '#DC3545', marginTop: 4 }]}>
+                      <Text style={[s.meta, { color: palette.error, marginTop: 4 }]}>
                         ⚠️ {item.error}
                       </Text>
                     )}
@@ -131,7 +131,7 @@ export default function EvidenceQueueScreen() {
                           await retryOfflineItem(item.id);
                           announce('Retrying upload');
                           await load();
-                        } catch (err) {
+                        } catch {
                           Alert.alert('Retry failed', 'Could not retry upload');
                         }
                       }}
@@ -149,13 +149,13 @@ export default function EvidenceQueueScreen() {
       )}
 
       {/* Regular Queue */}
-      {items.length === 0 && offlineItems.length === 0 ? (
+          {items.length === 0 && offlineItems.length === 0 ? (
         <Text style={s.sub}>{t('templates.evidenceLocker.emptyQueue','Queue is empty.')}</Text>
       ) : items.length > 0 ? (
         <>
           <Text style={[s.title, { fontSize: 18, marginTop: 16 }]}>📋 Regular Queue</Text>
-          {items.map((n, idx) => (
-            <View key={idx} style={s.card}>
+          {items.map((n, _idx) => (
+            <View key={_idx} style={s.card}>
               <Text style={s.text}>{n.text || '(no text)'} {n.tags?.length ? `#${n.tags.join(',#')}` : ''}</Text>
               <Text style={s.meta}>{(n.files?.length || 0)} attachment(s)</Text>
             </View>
@@ -195,7 +195,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       paddingHorizontal: 8 
     },
     badgeText: { 
-      color: '#FFF', 
+      color: palette.onPrimary, 
       fontWeight: '700', 
       fontSize: 12 
     },

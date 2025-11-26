@@ -13,7 +13,7 @@ import { announce } from '../../../utils/announce';
 import DeadlinesList from './deadlines-list';
 
 type Priority = 'critical' | 'high' | 'normal';
-type EnhancedDeadline = Deadline & { priority?: Priority; snoozedUntil?: string; remindersSent?: number };
+// type _EnhancedDeadline = Deadline & { priority?: Priority; snoozedUntil?: string; remindersSent?: number };
 
 export default function DeadlinesScreen() {
   const { t } = useTranslation();
@@ -63,7 +63,7 @@ export default function DeadlinesScreen() {
           <Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>{selectedForBulk.size} selected</Text>
           <GapView gap={8} style={{ flexDirection: 'row' }}>
             <A11yPressable onPress={() => Alert.alert('Mark Done', `Mark ${selectedForBulk.size} deadlines as completed?`, [{text: 'Cancel'}, {text: 'Done', onPress: () => { setSelectedForBulk(new Set()); Alert.alert('Success', 'Deadlines marked complete'); }}])} style={s.button}><Text style={s.buttonText}>✓ Mark Done</Text></A11yPressable>
-            <A11yPressable onPress={() => Alert.alert('Delete', `Delete ${selectedForBulk.size} deadlines?`, [{text: 'Cancel'}, {text: 'Delete', style: 'destructive', onPress: () => { setSelectedForBulk(new Set()); Alert.alert('Deleted', 'Deadlines removed'); }}])} style={[s.secondaryBtn, { backgroundColor: '#ff4444' + '20' }]}><Text style={[s.secondaryBtnText, { color: '#ff4444' }]}>🗑️ Delete</Text></A11yPressable>
+            <A11yPressable onPress={() => Alert.alert('Delete', `Delete ${selectedForBulk.size} deadlines?`, [{text: 'Cancel'}, {text: 'Delete', style: 'destructive', onPress: () => { setSelectedForBulk(new Set()); Alert.alert('Deleted', 'Deadlines removed'); }}])} style={[s.secondaryBtn, { backgroundColor: palette.error + '20' }]}><Text style={[s.secondaryBtnText, { color: palette.error }]}>🗑️ Delete</Text></A11yPressable>
           </GapView>
         </View>
       )}
@@ -288,7 +288,7 @@ function dotColor(dayKey: string, items: (Deadline & { priority?: Priority })[],
   const ts = d.getTime();
   const dayItems = items.filter(x => toDayKey(x.dueAt)===dayKey);
   const hasCritical = dayItems.some(x => x.priority === 'critical');
-  if (hasCritical) return '#FF0000'; // Red for critical
+  if (hasCritical) return palette.error; // Red for critical
   if (ts < dayStart && dayItems.length > 0) return palette.error; // Overdue
   if (ts - dayStart < 7*86400000) return palette.warning; // Within 7 days
   return palette.primary;

@@ -1,16 +1,22 @@
 # Analytics Event Report
 
-Generated: 2025-11-19T22:38:20.104Z
+Generated: 2025-11-26T00:10:09.660Z
 
 ## Summary
 
-- Registry events: 51
-- Unique events referenced in code: 29
-- Total literal emissions (static scan): 31
-- Missing (used not registered): 0
-- Unused (registered not used): 22
+- Registry events: 53
+- Unique events referenced in code: 33
+- Total literal emissions (static scan): 36
+- Missing (used not registered): 3
+- Unused (registered not used): 23
 - Sensitive field occurrences (schema): 2
 - Classification counts: secret=1, pii=1
+
+### Missing
+
+- ai_command_center_used
+- quick_log_used
+- error_displayed
 
 ### Unused
 
@@ -27,6 +33,7 @@ Generated: 2025-11-19T22:38:20.104Z
 - events.delete
 - events.share
 - events.add_to_calendar
+- events.submit_to_3mpwr
 - evidence.export.encrypted
 - evidence.import.encrypted
 - evidence.save.single
@@ -44,10 +51,12 @@ Generated: 2025-11-19T22:38:20.104Z
 | account_delete | 1 |
 | account_delete_failed | 1 |
 | advocacy | 8 |
+| ai_command_center_used | 1 |
 | assistant | 4 |
 | bookmark_add | 1 |
 | bookmark_clear_all | 1 |
 | bookmark_remove | 1 |
+| campaign | 1 |
 | campaign_create | 1 |
 | campaign_join | 1 |
 | campaign_leave | 1 |
@@ -55,7 +64,8 @@ Generated: 2025-11-19T22:38:20.104Z
 | energy_reset_day | 1 |
 | energy_set_daily | 1 |
 | energy_spend | 1 |
-| events | 7 |
+| error_displayed | 1 |
+| events | 8 |
 | evidence | 6 |
 | jurisdiction | 3 |
 | letter_insert_from_trackers | 1 |
@@ -65,6 +75,7 @@ Generated: 2025-11-19T22:38:20.104Z
 | letter_wizard_save | 1 |
 | notification | 2 |
 | podcast_share | 1 |
+| quick_log_used | 1 |
 | tracker_add_entry | 1 |
 | tracker_share | 1 |
 | wellness_opposite_next_step | 1 |
@@ -75,12 +86,15 @@ Generated: 2025-11-19T22:38:20.104Z
 |-------|------:|--------|
 | tracker_add_entry | 2 | OK |
 | tracker_share | 2 | OK |
+| campaign.submit_to_3mpwr | 2 | OK |
+| ai_command_center_used | 1 | MISSING |
 | advocacy.ask.submitted | 1 | OK |
 | assistant.search_open | 1 | OK |
 | assistant.disability_wizard_cta | 1 | OK |
 | assistant.quick_prompt | 1 | OK |
 | assistant.recents.clear | 1 | OK |
 | advocacy.world.view | 1 | OK |
+| quick_log_used | 1 | MISSING |
 | account_delete | 1 | OK |
 | account_delete_failed | 1 | OK |
 | energy_set_daily | 1 | OK |
@@ -102,3 +116,4 @@ Generated: 2025-11-19T22:38:20.104Z
 | bookmark_add | 1 | OK |
 | bookmark_remove | 1 | OK |
 | bookmark_clear_all | 1 | OK |
+| error_displayed | 1 | MISSING |

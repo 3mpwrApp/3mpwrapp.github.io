@@ -251,7 +251,8 @@ export default function DenialDecoder() {
             setAnalyzing(false);
             return;
           }
-        } catch (e) {
+        } catch {
+          // eslint-disable-next-line no-console
           console.log('LLM backend failed, using local analysis');
         }
       }
@@ -259,7 +260,7 @@ export default function DenialDecoder() {
       // Fallback: use filename as hint
       const sampleText = `This ${f.name} contains a denial decision. Common patterns detected based on typical denial language.`;
       setResult(analyzeText(sampleText));
-    } catch (err) {
+    } catch {
       Alert.alert('Failed','Could not analyze file');
     } finally {
       setAnalyzing(false);
@@ -279,15 +280,15 @@ export default function DenialDecoder() {
   };
   
   const getStrengthColor = (strength: number) => {
-    if (strength >= 70) return '#4CAF50'; // Green
-    if (strength >= 40) return '#FF9800'; // Orange
-    return '#F44336'; // Red
+    if (strength >= 70) return palette.success; // Green
+    if (strength >= 40) return palette.warning; // Orange
+    return palette.error; // Red
   };
   
   const getSeverityColor = (severity: 'high' | 'medium' | 'low') => {
-    if (severity === 'high') return '#F44336';
-    if (severity === 'medium') return '#FF9800';
-    return '#4CAF50';
+    if (severity === 'high') return palette.error;
+    if (severity === 'medium') return palette.warning;
+    return palette.success;
   };
   
   const shareAnalysis = async () => {
@@ -362,18 +363,18 @@ export default function DenialDecoder() {
       {result && (
         <>
           {/* Denial Type & Deadline Alert */}
-          <View style={[s.card, { backgroundColor: '#2196F3' + '15', borderColor: '#2196F3' }]}>
+          <View style={[s.card, { backgroundColor: palette.primary + '15', borderColor: palette.primary }]}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
               <View>
                 <Text style={s.cardTitle}>📋 Denial Type</Text>
                 <Text style={{ fontSize: 18, fontWeight: '700', color: palette.text }}>{result.denialType}</Text>
               </View>
               {result.appealDeadline && (
-                <View style={[s.deadlineBadge, result.appealDeadline.daysLeft < 30 && { backgroundColor: '#F44336' }]}>
-                  <Text style={{ color: '#fff', fontWeight: '700', fontSize: 12 }}>
+                <View style={[s.deadlineBadge, result.appealDeadline.daysLeft < 30 && { backgroundColor: palette.error }]}>
+                  <Text style={{ color: palette.onPrimary, fontWeight: '700', fontSize: 12 }}>
                     {result.appealDeadline.daysLeft < 0 ? 'OVERDUE' : `${result.appealDeadline.daysLeft} days left`}
                   </Text>
-                  <Text style={{ color: '#fff', fontSize: 10 }}>{result.appealDeadline.date}</Text>
+                  <Text style={{ color: palette.onPrimary, fontSize: 10 }}>{result.appealDeadline.date}</Text>
                 </View>
               )}
             </View>
@@ -402,7 +403,7 @@ export default function DenialDecoder() {
                   <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Text style={{ fontSize: 16, fontWeight: '700', color: palette.text, flex: 1 }}>{pattern.title}</Text>
                     <View style={[s.severityBadge, { backgroundColor: getSeverityColor(pattern.severity) }]}>
-                      <Text style={{ color: '#fff', fontSize: 11, fontWeight: '700' }}>{pattern.severity.toUpperCase()}</Text>
+                      <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: '700' }}>{pattern.severity.toUpperCase()}</Text>
                     </View>
                   </View>
                   <Text style={[s.text, { marginTop: 6 }]}>{pattern.description}</Text>
@@ -511,7 +512,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       lineHeight: 20,
     },
     deadlineBadge: {
-      backgroundColor: '#FF9800',
+      backgroundColor: palette.warning,
       paddingHorizontal: 12,
       paddingVertical: 8,
       borderRadius: 8,

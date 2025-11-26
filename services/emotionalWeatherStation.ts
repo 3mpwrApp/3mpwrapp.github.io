@@ -804,7 +804,7 @@ class EmotionalWeatherStationManager {
       const hour = new Date(m.timestamp).getHours();
       return hour >= 6 && hour < 12;
     });
-    const afternoonMoods = moods.filter(m => {
+    const _afternoonMoods = moods.filter(m => {
       const hour = new Date(m.timestamp).getHours();
       return hour >= 12 && hour < 18;
     });

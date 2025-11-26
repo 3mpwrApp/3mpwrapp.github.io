@@ -59,7 +59,7 @@ export default function WellnessHub() {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const textStyles = React.useMemo(() => createTextStyles(palette), [palette]);
-  const { isFeatureVisible } = useComplexityMode();
+  const { isFeatureVisible: _isFeatureVisible } = useComplexityMode();
   
   const [query, setQuery] = React.useState('');
   const [unifiedHealthTrackerEnabled, setUnifiedHealthTrackerEnabled] = React.useState(false);

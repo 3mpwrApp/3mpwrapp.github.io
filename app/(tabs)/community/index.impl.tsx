@@ -48,7 +48,7 @@ function ScreenInner() {
   useFocusOnRefOnMount(titleRef);
   const { state, seed } = useCommunity();
   const { t } = useTranslation();
-  const { mode: complexityMode, isFeatureVisible } = useComplexityMode();
+  const { mode: complexityMode, isFeatureVisible: _isFeatureVisible } = useComplexityMode();
   const [unread, setUnread] = React.useState<Record<string, number>>({});
   const [query, setQuery] = React.useState("");
   const [mode, setMode] = React.useState<'all'|'provinces'|'topics'>('all');

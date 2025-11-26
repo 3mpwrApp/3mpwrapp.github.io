@@ -32,14 +32,14 @@ export default function LawyerFinder() {
   const [savedOnly, setSavedOnly] = React.useState(false);
   const [mode, setMode] = React.useState<'list' | 'map'>('list');
   const [sort, setSort] = React.useState<'relevance' | 'rating' | 'reviews'>('relevance');
-  const [language, setLanguage] = React.useState('');
+  const [_language, _setLanguage] = React.useState('');
   const [accessible, setAccessible] = React.useState(false);
-  const [showReviewModal, setShowReviewModal] = React.useState(false);
-  const [selectedAdvocate, setSelectedAdvocate] = React.useState<any>(null);
+  const [_showReviewModal, _setShowReviewModal] = React.useState(false);
+  const [_selectedAdvocate, _setSelectedAdvocate] = React.useState<any>(null);
   const { state, toggle } = useFavorites();
 
   // Mock ratings data (in production, fetch from Firestore)
-  const [ratingsData, setRatingsData] = React.useState<Record<string, { avgRating: number; reviewCount: number; reviews: Array<{ name: string; rating: number; comment: string; date: string }> }>>({
+  const [ratingsData, _setRatingsData] = React.useState<Record<string, { avgRating: number; reviewCount: number; reviews: Array<{ name: string; rating: number; comment: string; date: string }> }>>({
     'a1': { avgRating: 4.8, reviewCount: 24, reviews: [{ name: 'Sarah M.', rating: 5, comment: 'Helped me win my WSIB appeal. Professional and caring.', date: '2025-11-15' }] },
     'a7': { avgRating: 4.9, reviewCount: 67, reviews: [{ name: 'Mike T.', rating: 5, comment: 'Experts in WSIB. They know the system inside out.', date: '2025-11-20' }] },
     'a8': { avgRating: 4.7, reviewCount: 18, reviews: [{ name: 'Anonymous', rating: 5, comment: 'Paul\'s advocacy saved my life. Incredible resource.', date: '2025-11-18' }] },
@@ -79,10 +79,10 @@ export default function LawyerFinder() {
   let filtered = savedOnly ? base.filter((a)=> state.advocate.has(a.id)) : base;
   
   // Apply language filter
-  if (language) {
-    filtered = filtered.filter(a => {
+  if (_language) {
+    filtered = filtered.filter(_a => {
       // In production, check advocate.languages array
-      return language === 'English'; // Mock: assume all speak English
+      return _language === 'English'; // Mock: assume all speak English
     });
   }
   
@@ -159,7 +159,7 @@ export default function LawyerFinder() {
             <Text style={s.cardTitle}>{item.name}</Text>
             {rating && (
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <MaterialCommunityIcons name="star" size={16} color="#FFB800" />
+                <MaterialCommunityIcons name="star" size={16} color={palette.warning} />
                 <Text style={[s.cardText, { marginLeft: 4, fontWeight: '700' }]}>{rating.avgRating.toFixed(1)}</Text>
                 <Text style={[s.cardText, { marginLeft: 4, opacity: 0.7 }]}>({rating.reviewCount})</Text>
               </View>
@@ -223,40 +223,8 @@ export default function LawyerFinder() {
   );
 }
 
-function ReviewModal({ advocate, onClose, onSubmit, palette, t }: any) {
-  const [rating, setRating] = React.useState(5);
-  const [name, setName] = React.useState('');
-  const [comment, setComment] = React.useState('');
-  const s = styles(palette);
-  
-  return (
-    <Modal visible={true} transparent={true} animationType="slide" onRequestClose={onClose}>
-      <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' }}>
-        <View style={{ backgroundColor: palette.background, borderTopLeftRadius: 20, borderTopRightRadius: 20, padding: 20, maxHeight: '80%' }}>
-          <Text style={s.title}>Review: {advocate?.name}</Text>
-          <Text style={s.cardText}>Your rating:</Text>
-          <View style={{ flexDirection: 'row', marginBottom: 12 }}>
-            {[1, 2, 3, 4, 5].map(num => (
-              <A11yPressable key={num} hitSlop={HIT_SLOP_8} onPress={() => setRating(num)} style={{ padding: 4 }}>
-                <MaterialCommunityIcons name={num <= rating ? 'star' : 'star-outline'} size={32} color="#FFB800" />
-              </A11yPressable>
-            ))}
-          </View>
-          <TextInput placeholder="Your name (optional)" placeholderTextColor={palette.text+'77'} value={name} onChangeText={setName} style={s.input} />
-          <TextInput placeholder="Your review (optional but helpful!)" placeholderTextColor={palette.text+'77'} value={comment} onChangeText={setComment} multiline={true} numberOfLines={4} style={[s.input, { minHeight: 80, textAlignVertical: 'top' }]} />
-          <GapView gap={8} style={{ flexDirection: 'row', marginTop: 12 }}>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={() => onSubmit({ name: name || 'Anonymous', rating, comment, date: new Date().toISOString().split('T')[0] })} style={[s.btn, { backgroundColor: palette.primary, flex: 1 }]}>
-              <Text style={[s.btnText, { color: palette.onPrimary, textAlign: 'center' }]}>Submit Review</Text>
-            </A11yPressable>
-            <A11yPressable hitSlop={HIT_SLOP_8} onPress={onClose} style={[s.btn, { flex: 1 }]}>
-              <Text style={[s.btnText, { textAlign: 'center' }]}>Cancel</Text>
-            </A11yPressable>
-          </GapView>
-        </View>
-      </View>
-    </Modal>
-  );
-}
+/* ReviewModal component removed - unused */
+// function _ReviewModal({ advocate, onClose, onSubmit, palette, t }: any) { ... }
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({

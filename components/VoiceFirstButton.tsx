@@ -5,7 +5,7 @@
  */
 
 /* eslint-disable no-restricted-syntax */
-
+/* eslint-disable import/order */
 import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
 import {

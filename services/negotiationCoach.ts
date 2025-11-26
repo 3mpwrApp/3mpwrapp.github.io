@@ -6,7 +6,7 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Audio } from 'expo-av';
+import { AudioModule, AudioRecorder } from 'expo-audio';
 
 export interface NegotiationSession {
   id: string;
@@ -220,10 +220,38 @@ export async function addLiveNote(
  */
 export async function startRecording(sessionId: string): Promise<void> {
   try {
-    await Audio.requestPermissionsAsync();
-    const { recording: _recording } = await Audio.Recording.createAsync(
-      Audio.RecordingOptionsPresets.HIGH_QUALITY
-    );
+    // Request permissions using expo-audio
+    const { granted } = await AudioModule.requestRecordingPermissionsAsync();
+    if (!granted) {
+      throw new Error('Recording permission not granted');
+    }
+    
+    // Create audio recorder with high quality preset
+    const _recorder = new AudioRecorder({
+      android: {
+        extension: '.m4a',
+        outputFormat: 2, // MPEG_4
+        audioEncoder: 3, // AAC
+        sampleRate: 44100,
+        numberOfChannels: 2,
+        bitRate: 128000,
+      },
+      ios: {
+        extension: '.m4a',
+        outputFormat: 'mpeg4AAC',
+        audioQuality: 'max',
+        sampleRate: 44100,
+        numberOfChannels: 2,
+        bitRate: 128000,
+        linearPCMBitDepth: 16,
+        linearPCMIsBigEndian: false,
+        linearPCMIsFloat: false,
+      },
+      web: {
+        mimeType: 'audio/webm',
+        bitsPerSecond: 128000,
+      },
+    });
     
     const session = await getSession(sessionId);
     if (!session) return;

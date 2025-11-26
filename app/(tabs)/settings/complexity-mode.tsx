@@ -126,7 +126,7 @@ export default function ComplexityModeSettings() {
       alignItems: 'center',
     },
     badDayButtonText: {
-      color: isBadDayMode ? '#FFF' : palette.text,
+      color: isBadDayMode ? palette.onPrimary : palette.text,
       fontSize: 16,
       fontWeight: '600',
     },
@@ -193,7 +193,7 @@ export default function ComplexityModeSettings() {
       fontWeight: '600',
     },
     selectButtonTextActive: {
-      color: '#FFF',
+      color: palette.onPrimary,
     },
     selectButtonTextInactive: {
       color: palette.text,

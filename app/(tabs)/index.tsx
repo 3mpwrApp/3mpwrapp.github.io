@@ -548,7 +548,9 @@ const HomeScreen = React.memo(() => {
       <GuestModeBanner />
       
       {/* Revolutionary Features Spotlight */}
-      <RevolutionaryFeaturesSpotlight />
+      <SafeOptionalComponent>
+        <RevolutionaryFeaturesSpotlight />
+      </SafeOptionalComponent>
       
       {/* Main Action Buttons - Organized in a row */}
       <GapView style={{ flexDirection: 'row', marginBottom: 16 }} gap={12}>

@@ -332,9 +332,9 @@ export default function FunctionalCapacityScreen() {
             {/* Download Report Button */}
             <Pressable 
               onPress={downloadReport} 
-              style={[styles.downloadButton, { backgroundColor: '#10B981', marginTop: 16 }]}
+              style={[styles.downloadButton, { backgroundColor: palette.success, marginTop: 16 }]}
             >
-              <Ionicons name="document-text" size={20} color="#FFF" />
+              <Ionicons name="document-text" size={20} color={palette.onPrimary} />
               <Text style={styles.downloadButtonText}>Download Medical Report (PDF)</Text>
             </Pressable>
             <Text style={[styles.reportHint, { color: palette.textSecondary }]}>
@@ -371,7 +371,7 @@ export default function FunctionalCapacityScreen() {
         {/* Start Assessment */}
         <View style={[styles.card, { backgroundColor: palette.primary }]}>
           <Pressable onPress={startWeeklyAssessment} style={styles.startButton}>
-            <Ionicons name="play-circle" size={32} color="#FFF" />
+            <Ionicons name="play-circle" size={32} color={palette.onPrimary} />
             <Text style={styles.startButtonText}>Start Assessment</Text>
           </Pressable>
         </View>
@@ -456,7 +456,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   startButtonText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 12,
@@ -470,7 +470,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   downloadButtonText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 16,
     fontWeight: '700',
   },

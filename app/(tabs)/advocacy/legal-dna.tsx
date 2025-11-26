@@ -62,8 +62,8 @@ export default function LegalDNAScreen() {
               style={[styles.addButton, { backgroundColor: palette.primary }]}
               onPress={() => setShowAddModal(true)}
             >
-              <Ionicons name="add" size={20} color="#FFF" />
-              <Text style={styles.addButtonText}>Add Case</Text>
+              <Ionicons name="add" size={20} color={palette.onPrimary} />
+              <Text style={[styles.addButtonText, { color: palette.onPrimary }]}>Add Case</Text>
             </Pressable>
           </View>
 
@@ -88,14 +88,14 @@ export default function LegalDNAScreen() {
                       {
                         backgroundColor:
                           caseItem.status === 'active'
-                            ? '#28A745'
+                            ? palette.success
                             : caseItem.status === 'pending'
-                            ? '#FFC107'
-                            : '#6C757D',
+                            ? palette.warning
+                            : palette.textSecondary,
                       },
                     ]}
                   >
-                    <Text style={styles.statusText}>{caseItem.status.toUpperCase()}</Text>
+                    <Text style={[styles.statusText, { color: palette.onPrimary }]}>{caseItem.status.toUpperCase()}</Text>
                   </View>
                 </View>
 
@@ -166,16 +166,16 @@ export default function LegalDNAScreen() {
                         {
                           backgroundColor:
                             node.type === 'claim'
-                              ? '#007BFF'
+                              ? palette.primary
                               : node.type === 'evidence'
-                              ? '#28A745'
+                              ? palette.success
                               : node.type === 'witness'
-                              ? '#FFC107'
-                              : '#6C757D',
+                              ? palette.warning
+                              : palette.textSecondary,
                         },
                       ]}
                     >
-                      <Text style={styles.nodeTypeText}>{node.type.toUpperCase()}</Text>
+                      <Text style={[styles.nodeTypeText, { color: palette.onPrimary }]}>{node.type.toUpperCase()}</Text>
                     </View>
                     <Text style={[styles.nodeLabel, { color: palette.text }]}>{node.label}</Text>
                     <Text style={[styles.nodeWeight, { color: palette.textSecondary }]}>
@@ -188,26 +188,26 @@ export default function LegalDNAScreen() {
 
             {/* Weak Points */}
             {selectedCase.weakPoints && selectedCase.weakPoints.length > 0 && (
-              <View style={[styles.card, { backgroundColor: '#FFF3CD' }]}>
+              <View style={[styles.card, { backgroundColor: palette.warningBackground || palette.surface }]}>
                 <View style={styles.weakHeader}>
-                  <Ionicons name="warning" size={24} color="#856404" />
-                  <Text style={[styles.weakTitle, { color: '#856404' }]}>
+                  <Ionicons name="warning" size={24} color={palette.warning} />
+                  <Text style={[styles.weakTitle, { color: palette.text }]}>
                     Vulnerability Assessment
                   </Text>
                 </View>
 
                 {selectedCase.weakPoints.map((weak: any, index: number) => (
-                  <View key={index} style={[styles.weakCard, { borderColor: '#FFC107' }]}>
-                    <Text style={[styles.weakNode, { color: '#721C24' }]}>
+                  <View key={index} style={[styles.weakCard, { borderColor: palette.warning }]}>
+                    <Text style={[styles.weakNode, { color: palette.error }]}>
                       {weak.nodeId}
                     </Text>
-                    <Text style={[styles.weakReason, { color: '#856404' }]}>
+                    <Text style={[styles.weakReason, { color: palette.text }]}>
                       {weak.reason}
                     </Text>
-                    <Text style={[styles.weakSeverity, { color: '#721C24' }]}>
+                    <Text style={[styles.weakSeverity, { color: palette.error }]}>
                       Severity: {weak.severity}/5
                     </Text>
-                    <Text style={[styles.weakSuggestion, { color: '#856404' }]}>
+                    <Text style={[styles.weakSuggestion, { color: palette.text }]}>
                       💡 {weak.suggestion}
                     </Text>
                   </View>
@@ -260,7 +260,7 @@ export default function LegalDNAScreen() {
           <Text style={[styles.sectionTitle, { color: palette.text }]}>Analysis Tools</Text>
 
           <Pressable
-            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
+            style={[styles.toolButton, { backgroundColor: palette.primaryBackground || palette.surface, borderColor: palette.primary }]}
             onPress={getClaimTemplates}
           >
             <Ionicons name="document-text" size={24} color={palette.primary} />
@@ -329,7 +329,6 @@ const styles = StyleSheet.create({
     borderRadius: 6,
   },
   addButtonText: {
-    color: '#FFF',
     fontSize: 14,
     fontWeight: '600',
     marginLeft: 4,
@@ -362,7 +361,6 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   statusText: {
-    color: '#FFF',
     fontSize: 10,
     fontWeight: 'bold',
   },
@@ -412,7 +410,6 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   nodeTypeText: {
-    color: '#FFF',
     fontSize: 10,
     fontWeight: 'bold',
   },

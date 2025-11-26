@@ -118,7 +118,7 @@ export default function SOSButton({ position = 'bottom-right', compact = false }
       flexDirection: 'row',
       alignItems: 'center',
       gap: 8,
-      backgroundColor: '#DC143C', // Crimson red for emergency visibility
+      backgroundColor: palette.error, // Crimson red for emergency visibility
       paddingVertical: compact ? 12 : 14,
       paddingHorizontal: compact ? 12 : 16,
       borderRadius: 50,

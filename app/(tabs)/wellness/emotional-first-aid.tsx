@@ -52,9 +52,9 @@ export default function EmotionalFirstAidScreen() {
       />
       <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
         {/* Emergency Actions */}
-        <View style={[styles.emergencyCard, { backgroundColor: '#DC143C' }]}>
+        <View style={[styles.emergencyCard, { backgroundColor: palette.error }]}>
           <View style={styles.emergencyHeader}>
-            <Ionicons name="medical" size={32} color="#FFF" />
+            <Ionicons name="medical" size={32} color={palette.onPrimary} />
             <Text style={styles.emergencyTitle}>Crisis Intervention</Text>
           </View>
           <Text style={styles.emergencySubtitle}>
@@ -62,40 +62,40 @@ export default function EmotionalFirstAidScreen() {
           </Text>
 
           <Pressable
-            style={[styles.emergencyButton, { backgroundColor: '#FFF' }]}
+            style={[styles.emergencyButton, { backgroundColor: palette.surface }]}
             onPress={startBreathing}
           >
-            <Ionicons name="fitness" size={24} color="#DC143C" />
-            <Text style={[styles.emergencyButtonText, { color: '#DC143C' }]}>
+            <Ionicons name="fitness" size={24} color={palette.error} />
+            <Text style={[styles.emergencyButtonText, { color: palette.error }]}>
               4-7-8 Breathing Guide
             </Text>
           </Pressable>
 
           <Pressable
-            style={[styles.emergencyButton, { backgroundColor: '#FFF' }]}
+            style={[styles.emergencyButton, { backgroundColor: palette.surface }]}
             onPress={startTemperatureShock}
           >
-            <Ionicons name="snow" size={24} color="#DC143C" />
-            <Text style={[styles.emergencyButtonText, { color: '#DC143C' }]}>
+            <Ionicons name="snow" size={24} color={palette.error} />
+            <Text style={[styles.emergencyButtonText, { color: palette.error }]}>
               Temperature Shock Protocol
             </Text>
           </Pressable>
 
           <Pressable
-            style={[styles.emergencyButton, { backgroundColor: '#FFF' }]}
+            style={[styles.emergencyButton, { backgroundColor: palette.surface }]}
             onPress={spinGroundingWheel}
           >
-            <Ionicons name="disc" size={24} color="#DC143C" />
-            <Text style={[styles.emergencyButtonText, { color: '#DC143C' }]}>
+            <Ionicons name="disc" size={24} color={palette.error} />
+            <Text style={[styles.emergencyButtonText, { color: palette.error }]}>
               5-4-3-2-1 Grounding Wheel
             </Text>
           </Pressable>
         </View>
 
         {/* Triple-Tap Crisis Contact */}
-        <View style={[styles.card, { backgroundColor: '#8B0000' }]}>
+        <View style={[styles.card, { backgroundColor: palette.error }]}>
           <View style={styles.crisisHeader}>
-            <Ionicons name="call" size={24} color="#FFF" />
+            <Ionicons name="call" size={24} color={palette.onPrimary} />
             <Text style={styles.crisisTitle}>Triple-Tap Emergency</Text>
           </View>
           <Text style={styles.crisisDescription}>
@@ -104,11 +104,11 @@ export default function EmotionalFirstAidScreen() {
           </Text>
 
           <Pressable
-            style={[styles.crisisButton, { backgroundColor: '#FFF' }]}
+            style={[styles.crisisButton, { backgroundColor: palette.surface }]}
             onPress={() => firstAid.registerTap()}
           >
-            <Ionicons name="warning" size={32} color="#8B0000" />
-            <Text style={[styles.crisisButtonText, { color: '#8B0000' }]}>
+            <Ionicons name="warning" size={32} color={palette.error} />
+            <Text style={[styles.crisisButtonText, { color: palette.error }]}>
               CRISIS CONTACT
             </Text>
           </Pressable>
@@ -235,13 +235,13 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   emergencyTitle: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 24,
     fontWeight: 'bold',
     marginLeft: 12,
   },
   emergencySubtitle: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 14,
     marginBottom: 20,
     opacity: 0.9,
@@ -276,13 +276,13 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   crisisTitle: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 20,
     fontWeight: 'bold',
     marginLeft: 12,
   },
   crisisDescription: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 14,
     marginBottom: 20,
     opacity: 0.9,
@@ -300,7 +300,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   crisisNote: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 12,
     textAlign: 'center',
     opacity: 0.8,

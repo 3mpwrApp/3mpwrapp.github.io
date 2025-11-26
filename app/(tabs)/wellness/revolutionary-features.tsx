@@ -23,7 +23,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Interface adapts to your energy level automatically',
     icon: 'color-wand',
     route: '/wellness/energy-aware-ui',
-    color: '#8B5CF6',
+    color: 'primary',
     badge: 'BETA',
   },
   {
@@ -32,7 +32,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Learn 14 vibration patterns with unique meanings',
     icon: 'phone-portrait',
     route: '/wellness/haptic-language',
-    color: '#EC4899',
+    color: 'secondary',
     badge: 'BETA',
   },
   {
@@ -41,7 +41,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Energy budgeting with debt & interest tracking',
     icon: 'restaurant',
     route: '/wellness/spoon-economist',
-    color: '#F59E0B',
+    color: 'warning',
     badge: 'BETA',
   },
   {
@@ -50,7 +50,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'WHO ICF assessment for disability claims',
     icon: 'clipboard',
     route: '/wellness/functional-capacity',
-    color: '#3B82F6',
+    color: 'info',
     badge: 'BETA',
   },
   {
@@ -59,7 +59,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Crisis intervention with panic attack interrupter',
     icon: 'medical',
     route: '/wellness/emotional-first-aid',
-    color: '#EF4444',
+    color: 'error',
     badge: 'BETA',
   },
   {
@@ -68,7 +68,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Sleep optimization with chronotype & debt tracking',
     icon: 'moon',
     route: '/wellness/circadian-dj',
-    color: '#6366F1',
+    color: 'info',
     badge: 'BETA',
   },
   {
@@ -77,7 +77,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Real-time thought pattern recognition',
     icon: 'brain',
     route: '/wellness/cognitive-scanner',
-    color: '#10B981',
+    color: 'success',
     badge: 'BETA',
   },
   {
@@ -86,7 +86,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Quantum energy states + 24hr mood forecasting combined',
     icon: 'speedometer',
     route: '/wellness/energy-mood-dashboard',
-    color: '#14B8A6',
+    color: 'info',
     badge: 'BETA',
   },
   {
@@ -95,7 +95,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     description: 'Case genome mapping for advocacy',
     icon: 'document-text',
     route: '/advocacy/legal-dna',
-    color: '#8B5CF6',
+    color: 'primary',
     badge: 'BETA',
   },
 ];
@@ -106,6 +106,18 @@ export default function RevolutionaryFeaturesScreen() {
 
   const navigateToFeature = (route: string) => {
     router.push(route as any);
+  };
+
+  const getFeatureColor = (colorKey: string): string => {
+    const colorMap: Record<string, string> = {
+      primary: palette.primary,
+      secondary: palette.secondary,
+      info: palette.info,
+      success: palette.success,
+      warning: palette.warning,
+      error: palette.error,
+    };
+    return colorMap[colorKey] || palette.primary;
   };
 
   return (
@@ -135,20 +147,22 @@ export default function RevolutionaryFeaturesScreen() {
 
         {/* Features Grid */}
         <View style={styles.featuresContainer}>
-          {REVOLUTIONARY_FEATURES.map(feature => (
+          {REVOLUTIONARY_FEATURES.map(feature => {
+            const featureColor = getFeatureColor(feature.color);
+            return (
             <Pressable
               key={feature.id}
               style={[styles.featureCard, { backgroundColor: palette.surface }]}
               onPress={() => navigateToFeature(feature.route)}
             >
               {feature.badge && (
-                <View style={[styles.badge, { backgroundColor: feature.color }]}>
+                <View style={[styles.badge, { backgroundColor: featureColor }]}>
                   <Text style={styles.badgeText}>{feature.badge}</Text>
                 </View>
               )}
 
-              <View style={[styles.iconContainer, { backgroundColor: feature.color + '20' }]}>
-                <Ionicons name={feature.icon as any} size={32} color={feature.color} />
+              <View style={[styles.iconContainer, { backgroundColor: featureColor + '20' }]}>
+                <Ionicons name={feature.icon as any} size={32} color={featureColor} />
               </View>
 
               <View style={styles.featureContent}>
@@ -164,7 +178,7 @@ export default function RevolutionaryFeaturesScreen() {
                 <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
               </View>
             </Pressable>
-          ))}
+          );})}
         </View>
 
         {/* About Revolutionary Features */}
@@ -296,7 +310,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   badgeText: {
-    color: '#FFF',
+    color: palette.onPrimary,
     fontSize: 10,
     fontWeight: 'bold',
   },

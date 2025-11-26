@@ -132,7 +132,7 @@ export default function AICommandCenter() {
       }
 
       setResult(response);
-    } catch (error) {
+    } catch {
       Alert.alert(
         t('advocacy.aiCommand.errorTitle', 'Processing Error'),
         t('advocacy.aiCommand.errorMessage', 'Unable to process your request. Please try again.')
@@ -523,7 +523,7 @@ function generateNavigationGuidance(query: string, jurisdiction: string): string
   return guidance;
 }
 
-function simplifyPolicy(text: string): string {
+function simplifyPolicy(_text: string): string {
   let simplified = '📖 Policy Breakdown (Plain Language):\n\n';
   
   simplified += 'KEY POINTS:\n';

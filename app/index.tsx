@@ -165,13 +165,13 @@ export default function Index() {
   }, [loading, hasNavigated]);
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: palette.background || '#fff' }}>
-      <ActivityIndicator size="large" color={palette.primary || palette.primary} />
-      <Text style={{ marginTop: 20, color: palette.text || '#000', fontSize: 16 }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: palette.background }}>
+      <ActivityIndicator size="large" color={palette.primary} />
+      <Text style={{ marginTop: 20, color: palette.text, fontSize: 16 }}>
         {loading ? 'Initializing auth...' : hasNavigated ? 'Navigating...' : 'Loading 3mpwr App...'}
       </Text>
       {Platform.OS === 'web' && (
-        <Text style={{ marginTop: 10, color: palette.textSecondary || '#666', fontSize: 12 }}>
+        <Text style={{ marginTop: 10, color: palette.textSecondary, fontSize: 12 }}>
           If this takes more than a few seconds, check the browser console (F12)
         </Text>
       )}
