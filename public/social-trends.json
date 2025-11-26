@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-25T18:17:46.369Z",
+  "lastUpdated": "2025-11-26T00:53:27.878Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3460,
+      "totalPosts": 3485,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T18:17:36.648Z"
+      "lastSeen": "2025-11-26T00:53:19.108Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3475,
+      "totalPosts": 3500,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T18:17:38.642Z"
+      "lastSeen": "2025-11-26T00:53:21.099Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3461,
+      "totalPosts": 3485,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T18:17:40.600Z"
+      "lastSeen": "2025-11-26T00:53:23.055Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3468,
+      "totalPosts": 3493,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T18:17:42.945Z"
+      "lastSeen": "2025-11-26T00:53:24.974Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3475,
+      "totalPosts": 3500,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-25T18:17:45.365Z"
+      "lastSeen": "2025-11-26T00:53:26.874Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "No wonder Minister Collins has moved to Repeal the Plain Language Act, and NZ Government is sidelining its #Accessibility Charter. NZ Govt wants to Hide Information!\n\nI can't read a QR code. 20% of NZers are digitally excluded and with the telcos dropping 3G network phones that %ge may grow.\n#NZpol",
-      "author": "jennykaynz.bsky.social",
-      "engagement": 35,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,6 +320,24 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
+      "author": "lsto4.bsky.social",
+      "engagement": 23,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,46 +347,50 @@
     },
     {
       "keyword": "disabilityrights",
-      "count": 36
+      "count": 37
     },
     {
       "keyword": "a11y",
-      "count": 31
+      "count": 29
     },
     {
       "keyword": "cripthevote",
-      "count": 26
+      "count": 27
     },
     {
       "keyword": "disabilityjustice",
       "count": 25
     },
     {
+      "keyword": "altcitizen",
+      "count": 12
+    },
+    {
+      "keyword": "disabilityrebellion",
+      "count": 12
+    },
+    {
+      "keyword": "cripthevote disabilityrights",
+      "count": 12
+    },
+    {
+      "keyword": "disabilityrights disabilityrebellion",
+      "count": 12
+    },
+    {
       "keyword": "accessibility a11y",
       "count": 12
     },
     {
-      "keyword": "altcitizen",
-      "count": 11
-    },
-    {
-      "keyword": "disabilityrebellion",
-      "count": 11
-    },
-    {
-      "keyword": "cripthevote disabilityrights",
-      "count": 11
-    },
-    {
-      "keyword": "disabilityrights disabilityrebellion",
-      "count": 11
+      "keyword": "disabled",
+      "count": 8
     },
     {
       "keyword": "disability",
       "count": 6
     },
     {
-      "keyword": "disabled",
+      "keyword": "virtual",
       "count": 5
     },
     {
@@ -394,31 +398,27 @@
       "count": 5
     },
     {
-      "keyword": "business",
+      "keyword": "disabled people",
       "count": 4
     },
     {
-      "keyword": "a11y accessibility",
+      "keyword": "foxtakedown",
       "count": 4
     },
     {
-      "keyword": "covid",
+      "keyword": "stoptheliesfox",
       "count": 4
     },
     {
-      "keyword": "ux",
+      "keyword": "foxlies",
       "count": 4
     },
     {
-      "keyword": "digital accessibility",
+      "keyword": "stoptrump",
       "count": 4
     },
     {
-      "keyword": "stopavelo",
-      "count": 4
-    },
-    {
-      "keyword": "ice",
+      "keyword": "wearetheflood",
       "count": 4
     }
   ]
