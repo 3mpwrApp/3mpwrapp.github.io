@@ -95,7 +95,7 @@ export default function PacingPartner() {
       setFatigueLevel('');
       load();
       checkOverexertion();
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Could not save');
     }
   };

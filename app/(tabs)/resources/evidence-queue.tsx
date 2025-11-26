@@ -40,8 +40,8 @@ export default function EvidenceQueueScreen() {
   const [showInfo, setShowInfo] = React.useState(false);
   
   const retryOfflineItem = async (id: string) => {
-    return retryItem(id, async (payload: any) => {
-      console.log('Retry:', payload);
+    return retryItem(id, async (_payload: any) => {
+      // Retry upload logic
     });
   };
   
