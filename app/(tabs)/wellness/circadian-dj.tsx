@@ -122,7 +122,7 @@ export default function CircadianDJScreen() {
               onPress={takeChronotypeQuiz}
             >
               <Ionicons name="help-circle" size={20} color={palette.onPrimary} />
-              <Text style={styles.quizButtonText}>Take Chronotype Quiz</Text>
+              <Text style={[styles.quizButtonText, { color: palette.onPrimary }]}>Take Chronotype Quiz</Text>
             </Pressable>
           </View>
         )}
@@ -310,7 +310,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   quizButtonText: {
-    color: palette.onPrimary,
     fontSize: 16,
     fontWeight: '600',
     marginLeft: 8,
