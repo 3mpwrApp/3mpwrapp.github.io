@@ -1,5 +1,6 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
-import { FlatList, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, FlatList, Linking, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
@@ -168,7 +169,7 @@ export default function LawyerFinder() {
           {item.org && <Text style={[s.cardText, { opacity: 0.8, fontSize: 13 }]}>{item.org}</Text>}
           <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || t('advocacy.finder.locationUnknown','—')}</Text>
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 6, marginBottom: 6 }}>
-            {item.issues.map((iss, idx) => (
+            {item.issues.map((iss: string, idx: number) => (
               <View key={idx} style={{ backgroundColor: palette.primary + '20', paddingHorizontal: 8, paddingVertical: 3, borderRadius: 12, marginRight: 6, marginBottom: 4 }}>
                 <Text style={{ color: palette.primary, fontSize: 12, fontWeight: '600' }}>{iss}</Text>
               </View>
@@ -186,7 +187,7 @@ export default function LawyerFinder() {
               <Text style={s.btnText}>{state.advocate.has(item.id) ? '★ Saved' : '☆ Save'}</Text>
             </A11yPressable>
             {rating && (
-              <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { setSelectedAdvocate(item); setShowReviewModal(true); }} style={[s.btn, { backgroundColor: palette.primary + '15' }]}>
+              <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> { _setSelectedAdvocate(item); _setShowReviewModal(true); }} style={[s.btn, { backgroundColor: palette.primary + '15' }]}>
                 <Text style={[s.btnText, { color: palette.primary }]}>📝 Write Review</Text>
               </A11yPressable>
             )}

@@ -456,7 +456,6 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   startButtonText: {
-    color: palette.onPrimary,
     fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 12,
@@ -470,7 +469,6 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   downloadButtonText: {
-    color: palette.onPrimary,
     fontSize: 16,
     fontWeight: '700',
   },

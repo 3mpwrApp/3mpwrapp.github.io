@@ -30,9 +30,9 @@ export function DwellProgressIndicator({ progress, size = 40 }: DwellProgressInd
           left: '50%',
           marginTop: -size / 2,
           marginLeft: -size / 2,
+          pointerEvents: 'none',
         }
       ]}
-      style={{ pointerEvents: 'none' }}
       accessibilityElementsHidden={true}
     >
       {/* Background circle */}

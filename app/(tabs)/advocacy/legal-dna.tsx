@@ -13,12 +13,12 @@ export default function LegalDNAScreen() {
   const palette = useAppPalette();
   const legalDNA = useLegalDNASequencer();
 
-  const [cases, _setCases] = useState(legalDNA.getAllCases());
+  const [cases, _setCases] = useState(legalDNA.cases);
   const [selectedCase, setSelectedCase] = useState<any>(null);
   const [_showAddModal, _setShowAddModal] = useState(false);
 
   const analyzeCase = (caseId: string) => {
-    const caseData = cases.find(c => c.id === caseId);
+    const caseData = cases.find((c: any) => c.id === caseId);
     if (!caseData) return;
 
     setSelectedCase(caseData);
@@ -26,9 +26,13 @@ export default function LegalDNAScreen() {
 
   const getClaimTemplates = () => {
     const templates = legalDNA.getClaimTemplates();
-    alert(
-      `Available Claim Templates:\n\n${templates.map(t => `• ${t.category}: ${t.title}`).join('\n')}`
-    );
+    if (Array.isArray(templates)) {
+      alert(
+        `Available Claim Templates:\n\n${templates.map((t: any) => `• ${t.category}: ${t.title}`).join('\n')}`
+      );
+    } else {
+      alert('Claim templates coming soon!');
+    }
   };
 
   return (
@@ -60,7 +64,7 @@ export default function LegalDNAScreen() {
             <Text style={[styles.sectionTitle, { color: palette.text }]}>Your Cases</Text>
             <Pressable
               style={[styles.addButton, { backgroundColor: palette.primary }]}
-              onPress={() => setShowAddModal(true)}
+              onPress={() => _setShowAddModal(true)}
             >
               <Ionicons name="add" size={20} color={palette.onPrimary} />
               <Text style={[styles.addButtonText, { color: palette.onPrimary }]}>Add Case</Text>
@@ -72,7 +76,7 @@ export default function LegalDNAScreen() {
               No cases yet. Add your first case to start analysis.
             </Text>
           ) : (
-            cases.map(caseItem => (
+            cases.map((caseItem: any) => (
               <Pressable
                 key={caseItem.id}
                 style={[styles.caseCard, { borderColor: palette.border }]}

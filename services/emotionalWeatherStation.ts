@@ -595,7 +595,7 @@ class EmotionalWeatherStationManager {
   }
 
   private analyzeCopingStrategies(
-    emotion: string,
+    _emotion: string,
     occurrences: MoodReading[]
   ): Array<{ strategy: string; successRate: number }> {
     try {
@@ -804,10 +804,11 @@ class EmotionalWeatherStationManager {
       const hour = new Date(m.timestamp).getHours();
       return hour >= 6 && hour < 12;
     });
-    const _afternoonMoods = moods.filter(m => {
-      const hour = new Date(m.timestamp).getHours();
-      return hour >= 12 && hour < 18;
-    });
+    // Afternoon moods filtered but not used currently
+    // const _afternoonMoods = moods.filter(m => {
+    //   const hour = new Date(m.timestamp).getHours();
+    //   return hour >= 12 && hour < 18;
+    // });
     const eveningMoods = moods.filter(m => {
       const hour = new Date(m.timestamp).getHours();
       return hour >= 18 || hour < 6;

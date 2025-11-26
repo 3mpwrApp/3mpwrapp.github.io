@@ -420,7 +420,7 @@ class CognitiveDistortionScannerManager {
     return explanations[type];
   }
 
-  private generateCounterThoughts(thought: string, distortions: DistortionMatch[]): string[] {
+  private generateCounterThoughts(_thought: string, distortions: DistortionMatch[]): string[] {
     if (distortions.length === 0) return [];
 
     const counters: string[] = [];

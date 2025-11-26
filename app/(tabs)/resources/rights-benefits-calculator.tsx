@@ -9,7 +9,6 @@ export default function RightsBenefitsCalculator() {
   return (
     <ComingSoon 
       title={t('resources.rightsBenefits.title', '💰 Rights & Benefits Calculator')}
-      subtitle={t('resources.rightsBenefits.comingSoonDesc', 'Eligibility scanner, provincial comparator, benefits optimizer, interactive policy explorer, impact simulator, and community intel. Find hidden programs and maximize your support.')}
       onFeedback={() => sendFeedbackEmailInternal(t, { subject: 'Rights & Benefits Calculator feedback' })} 
     />
   );

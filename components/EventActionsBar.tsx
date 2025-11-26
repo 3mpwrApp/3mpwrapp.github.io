@@ -221,7 +221,10 @@ export default function EventActionsBar({
         {
           text: 'Submit',
           onPress: async () => {
-            const result = await submitEventTo3mpwr(event, {
+            const result = await submitEventTo3mpwr({
+              ...event,
+              description: event.description || '',
+            }, {
               uid: user.uid,
               email: user.email || undefined,
               displayName: user.displayName || undefined,

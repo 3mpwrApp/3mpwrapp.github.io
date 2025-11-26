@@ -5,9 +5,9 @@
  * Live events are synced from app to Firestore collections
  */
 
-const events = [];
+const events: any[] = [];
 
-export async function onRequest(_context) {
+export async function onRequest(_context: any) {
   return new Response(
     JSON.stringify({
       events,

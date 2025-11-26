@@ -352,7 +352,7 @@ export default function EvidenceLockerImpl() {
                   <ScrollView>
                     <Text style={styles.title}>{selectedDoc.title}</Text>
                     <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 8 }}>
-                      <View style={[s.typeBadge, { backgroundColor: getTypeColor(selectedDoc.type, palette) }]}>
+                      <View style={[{ paddingHorizontal: 8, paddingVertical: 4, borderRadius: 12 }, { backgroundColor: getTypeColor(selectedDoc.type, palette) }]}>
                         <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: '700' }}>{selectedDoc.type.toUpperCase()}</Text>
                       </View>
                       <Text style={[styles.cardDate, { marginLeft: 8 }]}>{selectedDoc.date}</Text>
@@ -393,7 +393,7 @@ export default function EvidenceLockerImpl() {
                         <MaterialCommunityIcons name="file-pdf-box" size={14} color={palette.onPrimary} />
                         <Text style={styles.buttonText}> Export PDF</Text>
                       </A11yPressable>
-                      <A11yPressable style={[s.secondary, { backgroundColor: palette.error + '20' }]} onPress={() => {
+                      <A11yPressable style={[{ flex: 1, padding: 12, borderRadius: 8, alignItems: 'center', marginLeft: 8 }, { backgroundColor: palette.error + '20' }]} onPress={() => {
                         Alert.alert('Delete Document', 'Are you sure?', [
                           { text: 'Cancel', style: 'cancel' },
                           { text: 'Delete', style: 'destructive', onPress: () => {
@@ -403,7 +403,7 @@ export default function EvidenceLockerImpl() {
                         ]);
                       }}>
                         <MaterialCommunityIcons name="delete" size={14} color={palette.error} />
-                        <Text style={[s.secondaryText, { color: palette.error }]}> Delete</Text>
+                        <Text style={[{ fontSize: 14, fontWeight: '600' }, { color: palette.error }]}> Delete</Text>
                       </A11yPressable>
                     </GapView>
                   </ScrollView>

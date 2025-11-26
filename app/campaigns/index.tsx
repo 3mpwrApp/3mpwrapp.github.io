@@ -293,7 +293,7 @@ function ScreenInner() {
     // In Simple Mode, show only featured/important campaigns (max 5)
     if (mode === 'simple') {
       campaigns = campaigns
-        .filter(c => c.petitionId || c.featured) // Show only petitions or featured campaigns
+        .filter((c: any) => c.petitionId || c.featured) // Show only petitions or featured campaigns
         .slice(0, 5); // Limit to 5 campaigns
     }
     
@@ -352,7 +352,11 @@ function ScreenInner() {
           text: 'Submit',
           onPress: async () => {
             try {
-              const result = await submitCampaignTo3mpwr(campaign, user);
+              const result = await submitCampaignTo3mpwr(campaign, {
+                uid: user.uid,
+                email: user.email ?? undefined,
+                displayName: user.displayName ?? undefined,
+              });
               
               if (result.success) {
                 Alert.alert(

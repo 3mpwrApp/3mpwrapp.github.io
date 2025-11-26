@@ -310,7 +310,6 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   badgeText: {
-    color: palette.onPrimary,
     fontSize: 10,
     fontWeight: 'bold',
   },

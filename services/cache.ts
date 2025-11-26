@@ -50,7 +50,7 @@ export async function clearCache(keyPattern?: string): Promise<void> {
     if (keyPattern) {
       // Clear specific pattern
       const allKeys = await AsyncStorage.getAllKeys();
-      const keysToRemove = allKeys.filter(k => k.includes(keyPattern));
+      const keysToRemove = allKeys.filter((k: string) => k.includes(keyPattern));
       if (keysToRemove.length > 0) {
         await AsyncStorage.multiRemove(keysToRemove);
       }

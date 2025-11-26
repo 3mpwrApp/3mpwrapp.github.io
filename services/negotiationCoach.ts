@@ -6,7 +6,7 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { AudioModule, AudioRecorder } from 'expo-audio';
+import { AudioModule } from 'expo-audio';
 
 export interface NegotiationSession {
   id: string;
@@ -226,7 +226,8 @@ export async function startRecording(sessionId: string): Promise<void> {
       throw new Error('Recording permission not granted');
     }
     
-    // Create audio recorder with high quality preset
+    // Audio recording temporarily disabled - needs expo-audio type updates
+    /*
     const _recorder = new AudioRecorder({
       android: {
         extension: '.m4a',
@@ -252,6 +253,7 @@ export async function startRecording(sessionId: string): Promise<void> {
         bitsPerSecond: 128000,
       },
     });
+    */
     
     const session = await getSession(sessionId);
     if (!session) return;

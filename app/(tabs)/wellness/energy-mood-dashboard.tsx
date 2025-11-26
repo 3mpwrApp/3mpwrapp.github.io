@@ -5,7 +5,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../../../i18n';
 import { useEmotionalWeatherStation } from '../../../services/emotionalWeatherStation';
-import { useEnergyQuantumMechanics } from '../../../services/energyQuantumMechanics';
+import { useEnergyQuantumMechanics, type QuantumEnergyState } from '../../../services/energyQuantumMechanics';
 import { useAppPalette } from '../../../theme/usePalette';
 import { createShadow } from '../../../utils/shadow';
 
@@ -16,16 +16,16 @@ export default function EnergyMoodDashboard() {
   const weather = useEmotionalWeatherStation();
 
   const [quantumState, setQuantumState] = useState(quantum.getCurrentState());
-  const [energyDebt, setEnergyDebt] = useState(quantum.getEnergyDebt());
-  const [moodForecast, setMoodForecast] = useState(weather.getForecast(24));
-  const [currentWeather, setCurrentWeather] = useState(weather.getCurrentWeather());
+  const [energyDebt, setEnergyDebt] = useState(quantum.getDebt());
+  const [moodForecast, setMoodForecast] = useState(weather.forecastMood(24));
+  const [currentWeather, setCurrentWeather] = useState(weather.currentMood);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setQuantumState(quantum.getCurrentState());
-      setEnergyDebt(quantum.getEnergyDebt());
-      setMoodForecast(weather.getForecast(24));
-      setCurrentWeather(weather.getCurrentWeather());
+      setEnergyDebt(quantum.getDebt());
+      setMoodForecast(weather.forecastMood(24));
+      setCurrentWeather(weather.currentMood);
     }, 5000);
 
     return () => clearInterval(interval);
@@ -57,7 +57,7 @@ export default function EnergyMoodDashboard() {
   const borrowEnergy = (amount: number) => {
     quantum.borrowEnergy(amount);
     setQuantumState(quantum.getCurrentState());
-    setEnergyDebt(quantum.getEnergyDebt());
+    setEnergyDebt(quantum.getDebt());
   };
 
   const shiftEnergy = () => {
@@ -78,24 +78,24 @@ export default function EnergyMoodDashboard() {
         <View
           style={[
             styles.card,
-            { backgroundColor: quantumColors[quantumState.state] + '20' },
+            { backgroundColor: quantumColors[quantumState as QuantumEnergyState] + '20' },
           ]}
         >
           <View style={styles.quantumHeader}>
             <View
               style={[
                 styles.stateIndicator,
-                { backgroundColor: quantumColors[quantumState.state] },
+                { backgroundColor: quantumColors[quantumState as QuantumEnergyState] },
               ]}
             >
               <Ionicons name="flash" size={32} color={palette.onPrimary} />
             </View>
             <View style={styles.stateInfo}>
               <Text style={[styles.stateTitle, { color: palette.text }]}>
-                {quantumState.state.replace(/_/g, ' ').toUpperCase()}
+                {quantumState.replace(/_/g, ' ').toUpperCase()}
               </Text>
               <Text style={[styles.stateDescription, { color: palette.textSecondary }]}>
-                Energy Level: {quantumState.energyLevel}/{quantumState.maxEnergy}
+                Energy Level: {quantum.getCurrentEnergy()}/100
               </Text>
             </View>
           </View>
@@ -105,22 +105,17 @@ export default function EnergyMoodDashboard() {
               style={[
                 styles.energyFill,
                 {
-                  width: `${(quantumState.energyLevel / quantumState.maxEnergy) * 100}%`,
-                  backgroundColor: quantumColors[quantumState.state],
+                  width: `${quantum.getCurrentEnergy()}%`,
+                  backgroundColor: quantumColors[quantumState as QuantumEnergyState],
                 },
               ]}
             />
           </View>
 
-          {quantumState.halfLife && (
-            <Text style={[styles.halfLifeText, { color: palette.textSecondary }]}>
-              State decay half-life: {quantumState.halfLife} minutes
-            </Text>
-          )}
         </View>
 
         {/* Energy Debt */}
-        {energyDebt && energyDebt.totalOwed > 0 && (
+        {energyDebt && energyDebt.currentBalance > 0 && (
           <View style={[styles.card, { backgroundColor: palette.errorBackground }]}>
             <View style={styles.debtHeader}>
               <Ionicons name="warning" size={24} color={palette.error} />
@@ -128,7 +123,7 @@ export default function EnergyMoodDashboard() {
             </View>
 
             <Text style={[styles.debtAmount, { color: palette.error }]}>
-              {energyDebt.totalOwed.toFixed(1)} units owed
+              {energyDebt.currentBalance.toFixed(1)} units owed
             </Text>
             <Text style={[styles.debtRate, { color: palette.warning }]}>
               Compound interest: {(energyDebt.interestRate * 100).toFixed(0)}% per day
@@ -167,23 +162,23 @@ export default function EnergyMoodDashboard() {
           <View
             style={[
               styles.card,
-              { backgroundColor: weatherColors[currentWeather.weatherType] + '20' },
+              { backgroundColor: weatherColors[currentWeather.weather] + '20' },
             ]}
           >
             <View style={styles.weatherHeader}>
               <View
                 style={[
                   styles.weatherIcon,
-                  { backgroundColor: weatherColors[currentWeather.weatherType] },
+                  { backgroundColor: weatherColors[currentWeather.weather] },
                 ]}
               >
                 <Ionicons
                   name={
-                    currentWeather.weatherType === 'sunny'
+                    currentWeather.weather === 'clear_skies' || currentWeather.weather === 'partly_cloudy'
                       ? 'sunny'
-                      : currentWeather.weatherType === 'rainy'
+                      : currentWeather.weather === 'light_rain'
                       ? 'rainy'
-                      : currentWeather.weatherType === 'stormy'
+                      : currentWeather.weather === 'thunderstorm' || currentWeather.weather === 'hurricane'
                       ? 'thunderstorm'
                       : 'cloud'
                   }
@@ -193,7 +188,7 @@ export default function EnergyMoodDashboard() {
               </View>
               <View style={styles.weatherInfo}>
                 <Text style={[styles.weatherTitle, { color: palette.text }]}>
-                  {currentWeather.weatherType.replace(/_/g, ' ').toUpperCase()}
+                  {currentWeather.weather.replace(/_/g, ' ').toUpperCase()}
                 </Text>
                 <Text style={[styles.weatherIntensity, { color: palette.textSecondary }]}>
                   Intensity: {currentWeather.intensity}/5
@@ -202,10 +197,10 @@ export default function EnergyMoodDashboard() {
             </View>
 
             <Text style={[styles.weatherDescription, { color: palette.text }]}>
-              {currentWeather.description}
+              {currentWeather.primaryEmotion}
             </Text>
 
-            {currentWeather.triggers.length > 0 && (
+            {currentWeather.triggers && currentWeather.triggers.length > 0 && (
               <View style={styles.triggersSection}>
                 <Text style={[styles.triggersLabel, { color: palette.textSecondary }]}>
                   Possible triggers:
@@ -221,49 +216,44 @@ export default function EnergyMoodDashboard() {
         )}
 
         {/* Mood Forecast */}
-        {moodForecast && moodForecast.length > 0 && (
+        {moodForecast && (
           <View style={[styles.card, { backgroundColor: palette.surface }]}>
             <Text style={[styles.sectionTitle, { color: palette.text }]}>
               24-Hour Mood Forecast
             </Text>
 
-            {moodForecast.slice(0, 6).map((forecast, index) => (
-              <View key={index} style={[styles.forecastCard, { borderColor: palette.border }]}>
-                <View style={styles.forecastHeader}>
-                  <Text style={[styles.forecastTime, { color: palette.text }]}>
-                    {new Date(forecast.timestamp).toLocaleTimeString([], {
-                      hour: '2-digit',
-                      minute: '2-digit',
-                    })}
-                  </Text>
-                  <View
-                    style={[
-                      styles.forecastBadge,
-                      { backgroundColor: weatherColors[forecast.predictedWeather] },
-                    ]}
-                  >
-                    <Text style={styles.forecastBadgeText}>
-                      {forecast.predictedWeather.replace(/_/g, ' ').toUpperCase()}
-                    </Text>
-                  </View>
-                </View>
-
-                <View style={styles.confidenceBar}>
-                  <View
-                    style={[
-                      styles.confidenceFill,
-                      {
-                        width: `${forecast.confidence * 100}%`,
-                        backgroundColor: palette.primary,
-                      },
-                    ]}
-                  />
-                </View>
-                <Text style={[styles.confidenceText, { color: palette.textSecondary }]}>
-                  {(forecast.confidence * 100).toFixed(0)}% confidence
+            <View style={[styles.forecastCard, { borderColor: palette.border }]}>
+              <View style={styles.forecastHeader}>
+                <Text style={[styles.forecastTime, { color: palette.text }]}>
+                  {moodForecast.hoursAhead} hours ahead
                 </Text>
+                <View
+                  style={[
+                    styles.forecastBadge,
+                    { backgroundColor: weatherColors[moodForecast.predictedWeather] },
+                  ]}
+                >
+                  <Text style={styles.forecastBadgeText}>
+                    {moodForecast.predictedWeather.replace(/_/g, ' ').toUpperCase()}
+                  </Text>
+                </View>
               </View>
-            ))}
+
+              <View style={styles.confidenceBar}>
+                <View
+                  style={[
+                    styles.confidenceFill,
+                    {
+                      width: `${moodForecast.confidence}%`,
+                      backgroundColor: palette.primary,
+                    },
+                  ]}
+                />
+              </View>
+              <Text style={[styles.confidenceText, { color: palette.textSecondary }]}>
+                {moodForecast.confidence.toFixed(0)}% confidence
+              </Text>
+            </View>
           </View>
         )}
 
@@ -363,7 +353,6 @@ const styles = StyleSheet.create({
   },
   energyBar: {
     height: 12,
-    backgroundColor: palette.border,
     borderRadius: 6,
     overflow: 'hidden',
     marginBottom: 8,
@@ -411,7 +400,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   borrowButtonText: {
-    color: palette.onPrimary,
     fontSize: 14,
     fontWeight: '600',
   },
@@ -486,13 +474,11 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   forecastBadgeText: {
-    color: palette.onPrimary,
     fontSize: 10,
     fontWeight: 'bold',
   },
   confidenceBar: {
     height: 6,
-    backgroundColor: palette.border,
     borderRadius: 3,
     overflow: 'hidden',
     marginBottom: 4,

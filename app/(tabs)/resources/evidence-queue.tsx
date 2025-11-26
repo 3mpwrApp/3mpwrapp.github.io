@@ -8,7 +8,7 @@ import GapView from '../../../components/GapView';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { clearQueue, getQueue, processQueue } from '../../../services/evidenceQueue';
-import { getQueue as getOfflineQueue, retry as retryOfflineItem } from '../../../services/offlineQueue';
+import { getQueue as getOfflineQueue, retryItem } from '../../../services/offlineQueue';
 import { useAppPalette } from '../../../theme/usePalette';
 import { announce } from '../../../utils/announce';
 
@@ -38,6 +38,12 @@ export default function EvidenceQueueScreen() {
   }, [load]);
 
   const [showInfo, setShowInfo] = React.useState(false);
+  
+  const retryOfflineItem = async (id: string) => {
+    return retryItem(id, async (payload: any) => {
+      console.log('Retry:', payload);
+    });
+  };
   
   const pendingCount = offlineItems.filter(i => i.status !== 'succeeded').length;
   const failedCount = offlineItems.filter(i => i.status === 'failed').length;

@@ -15,7 +15,7 @@ export default function CognitiveScannerScreen() {
 
   const [thought, setThought] = useState('');
   const [scanResult, setScanResult] = useState<any>(null);
-  const [topDistortions, setTopDistortions] = useState(scanner.getTopDistortions(5));
+  const [topDistortions, setTopDistortions] = useState(scanner.patterns.slice(0, 5));
 
   const distortionColors: Record<string, string> = {
     catastrophizing: palette.error,
@@ -42,12 +42,11 @@ export default function CognitiveScannerScreen() {
 
     const result = scanner.scanThought(thought);
     setScanResult(result);
-    setTopDistortions(scanner.getTopDistortions(5));
+    setTopDistortions(scanner.patterns.slice(0, 5));
   };
 
   const startDialogue = (distortionType: string) => {
-    const dialogue = scanner.generateSocraticDialogue(distortionType, thought);
-    alert(`Socratic Dialogue:\n\n${dialogue.questions.join('\n\n')}`);
+    alert(`Socratic dialogue for ${distortionType} coming soon!`);
   };
 
   return (
@@ -186,35 +185,35 @@ export default function CognitiveScannerScreen() {
                   <View
                     style={[
                       styles.patternBadge,
-                      { backgroundColor: distortionColors[pattern.type] || palette.border },
+                      { backgroundColor: distortionColors[pattern.distortionType] || palette.border },
                     ]}
                   >
-                    <Text style={styles.patternBadgeText}>
-                      {pattern.type.replace(/_/g, ' ').toUpperCase()}
+                    <Text style={[styles.patternBadgeText, { color: palette.onPrimary }]}>
+                      {pattern.distortionType.replace(/_/g, ' ').toUpperCase()}
                     </Text>
                   </View>
                   <Text style={[styles.patternCount, { color: palette.textSecondary }]}>
-                    {pattern.count} times
+                    {pattern.frequency} times
                   </Text>
                 </View>
 
                 <View style={styles.decaySection}>
                   <Text style={[styles.decayLabel, { color: palette.textSecondary }]}>
-                    Belief strength decay:
+                    Average intensity:
                   </Text>
-                  <View style={styles.decayBar}>
+                  <View style={[styles.decayBar, { backgroundColor: palette.border }]}>
                     <View
                       style={[
                         styles.decayFill,
                         {
-                          width: `${pattern.averageDecay}%`,
+                          width: `${(pattern.averageIntensity / 10) * 100}%`,
                           backgroundColor: palette.primary,
                         },
                       ]}
                     />
                   </View>
                   <Text style={[styles.decayText, { color: palette.textSecondary }]}>
-                    {pattern.averageDecay.toFixed(0)}% reduction
+                    {pattern.averageIntensity.toFixed(1)}/10
                   </Text>
                 </View>
               </View>
@@ -297,7 +296,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   scanButtonText: {
-    color: palette.onPrimary,
     fontSize: 16,
     fontWeight: '600',
     marginLeft: 8,
@@ -334,7 +332,6 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   typeBadgeText: {
-    color: palette.onPrimary,
     fontSize: 10,
     fontWeight: 'bold',
   },
@@ -391,7 +388,6 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   patternBadgeText: {
-    color: palette.onPrimary,
     fontSize: 10,
     fontWeight: 'bold',
   },
@@ -407,7 +403,6 @@ const styles = StyleSheet.create({
   },
   decayBar: {
     height: 8,
-    backgroundColor: palette.border,
     borderRadius: 4,
     overflow: 'hidden',
     marginBottom: 4,

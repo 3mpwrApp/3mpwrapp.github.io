@@ -133,7 +133,7 @@ export default function WorkBalanceAI() {
       setPlan(parts.join("\n"));
     } catch (err) {
       console.error('Error generating plan:', err);
-      showContextualError(err instanceof Error ? err : new Error('Failed to generate plan'), 'network');
+      Alert.alert('Error', 'Failed to generate plan');
     } finally {
       setIsGenerating(false);
     }

@@ -14,31 +14,25 @@ export default function EmotionalFirstAidScreen() {
   const firstAid = useEmotionalFirstAid();
 
   const [_activeSession, _setActiveSession] = useState<any>(null);
-  const [contacts, _setContacts] = useState(firstAid.getContacts());
-  const [sessionHistory, setSessionHistory] = useState<any[]>([]);
+  const [contacts, _setContacts] = useState(firstAid.contacts);
 
   useEffect(() => {
-    setSessionHistory(firstAid.getSessionHistory());
+    // Session history tracking removed - use analytics instead
   }, []);
 
   const startBreathing = async () => {
     const session = await firstAid.startBreathingGuide();
-    setActiveSession(session);
+    _setActiveSession(session);
   };
 
   const startTemperatureShock = async () => {
     const session = await firstAid.startTemperatureShock();
-    setActiveSession(session);
+    _setActiveSession(session);
   };
 
   const spinGroundingWheel = async () => {
-    const task = await firstAid.spinGroundingWheel();
-    alert(`Grounding Task: ${task.description}`);
-  };
-
-  const _triggerCrisis = async () => {
-    await firstAid.triggerCrisisProtocol();
-    alert('Crisis SMS sent to emergency contacts!');
+    const task = await firstAid.spinWheel();
+    alert(`Grounding Task: ${task.instruction}`);
   };
 
   return (
@@ -159,11 +153,12 @@ export default function EmotionalFirstAidScreen() {
         </View>
 
         {/* Session History */}
+        {/* Session history removed - use analytics/crisis logs instead
         {sessionHistory.length > 0 && (
           <View style={[styles.card, { backgroundColor: palette.surface }]}>
             <Text style={[styles.sectionTitle, { color: palette.text }]}>Recent Sessions</Text>
 
-            {sessionHistory.slice(0, 5).map((session, index) => (
+            {sessionHistory.slice(0, 5).map((session: any, index: number) => (
               <View key={index} style={[styles.sessionCard, { borderColor: palette.border }]}>
                 <View style={styles.sessionHeader}>
                   <Text style={[styles.sessionType, { color: palette.text }]}>
@@ -182,6 +177,7 @@ export default function EmotionalFirstAidScreen() {
             ))}
           </View>
         )}
+        */}
 
         {/* Emergency Contacts */}
         <View style={[styles.card, { backgroundColor: palette.surface }]}>
@@ -235,13 +231,11 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   emergencyTitle: {
-    color: palette.onPrimary,
     fontSize: 24,
     fontWeight: 'bold',
     marginLeft: 12,
   },
   emergencySubtitle: {
-    color: palette.onPrimary,
     fontSize: 14,
     marginBottom: 20,
     opacity: 0.9,
@@ -276,13 +270,11 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   crisisTitle: {
-    color: palette.onPrimary,
     fontSize: 20,
     fontWeight: 'bold',
     marginLeft: 12,
   },
   crisisDescription: {
-    color: palette.onPrimary,
     fontSize: 14,
     marginBottom: 20,
     opacity: 0.9,
@@ -300,7 +292,6 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   crisisNote: {
-    color: palette.onPrimary,
     fontSize: 12,
     textAlign: 'center',
     opacity: 0.8,

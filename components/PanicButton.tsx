@@ -55,8 +55,7 @@ export function PanicButton() {
 
   return (
     <View 
-      style={styles.container}
-      style={{ pointerEvents: 'box-none' }} // Allow touches to pass through container
+      style={[styles.container, { pointerEvents: 'box-none' }]} // Allow touches to pass through container
     >
       <Pressable
         onPress={handlePress}
