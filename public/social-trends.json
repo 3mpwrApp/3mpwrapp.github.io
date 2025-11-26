@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-26T00:53:27.878Z",
+  "lastUpdated": "2025-11-26T06:17:52.343Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3485,
+      "totalPosts": 3510,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-26T00:53:19.108Z"
+      "lastSeen": "2025-11-26T06:17:42.640Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3500,
+      "totalPosts": 3525,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-26T00:53:21.099Z"
+      "lastSeen": "2025-11-26T06:17:44.799Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3485,
+      "totalPosts": 3509,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-11-26T00:53:23.055Z"
+      "lastSeen": "2025-11-26T06:17:46.922Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3493,
+      "totalPosts": 3518,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-26T00:53:24.974Z"
+      "lastSeen": "2025-11-26T06:17:49.057Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3500,
+      "totalPosts": 3525,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-26T00:53:26.874Z"
+      "lastSeen": "2025-11-26T06:17:51.340Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "No wonder Minister Collins has moved to Repeal the Plain Language Act, and NZ Government is sidelining its #Accessibility Charter. NZ Govt wants to Hide Information!\n\nI can't read a QR code. 20% of NZers are digitally excluded and with the telcos dropping 3G network phones that %ge may grow.\n#NZpol",
-      "author": "jennykaynz.bsky.social",
-      "engagement": 37,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "#a11y alt text:",
-      "author": "joquarky.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,16 +314,40 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
+      "author": "lsto4.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "#covid #DisabilityJustice #covid19 #MaskUp",
+      "author": "nihilamacabre.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "accessibility",
-      "count": 38
+      "count": 37
     },
     {
       "keyword": "disabilityrights",
-      "count": 37
+      "count": 36
     },
     {
       "keyword": "a11y",
@@ -379,7 +379,7 @@
     },
     {
       "keyword": "accessibility a11y",
-      "count": 12
+      "count": 11
     },
     {
       "keyword": "disabled",
@@ -387,14 +387,14 @@
     },
     {
       "keyword": "disability",
+      "count": 7
+    },
+    {
+      "keyword": "disabilityjustice nico",
       "count": 6
     },
     {
       "keyword": "virtual",
-      "count": 5
-    },
-    {
-      "keyword": "disabilityjustice nico",
       "count": 5
     },
     {
