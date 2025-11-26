@@ -1,85 +1,218 @@
 {
   "date": "2025-11-26",
-  "timestamp": "2025-11-26T15:27:03.947Z",
-  "count": 11,
+  "timestamp": "2025-11-26T21:23:09.418Z",
+  "count": 30,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Alberta minister reportedly putting together first AI-generated legislation in Canada",
-      "link": "https://globalnews.ca/news/11544154/ai-generated-legislation-canada-alberta-minister/",
-      "description": "The Alberta government is about to take the next logical step in artificial intelligence — using it to draft a proposed law.",
-      "score": 23.5,
-      "pubDate": "Wed, 26 Nov 2025 11:45:23 +0000"
+      "title": "Quebec’s language law causes confusion for English speakers, federal commissioner says",
+      "link": "https://www.cbc.ca/news/canada/montreal/quebec-language-english-9.6992435?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/a981e971-9634-48ec-9877-4493f9a45b41,1764113926872/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1200%2C675%29%3BResize%3D%28620%29' alt='man' width='620' height='349' title='Raymond Théberge, Canada’s commissioner of official languages, says official languages ​​should not bear the brunt of federal budget cuts.'/><p>Changes to Quebec’s French-language law are creating confusion for English-speaking residents trying to access services, according to a midterm report from Canada’s commissioner of official languages.</p>",
+      "score": 31.2,
+      "pubDate": "Tue, 25 Nov 2025 19:05:31 EST"
     },
     {
-      "title": "Church sues after City of Montreal issues $2,500 fine for hosting ‘MAGA superstar'",
-      "link": "https://globalnews.ca/news/11544148/church-sues-city-of-montreal-hosting-maga-superstar/",
-      "description": "The lawsuits in Montreal and Quebec City reflect the debate in Canada triggered by Sean Feucht's tour.",
-      "score": 18,
-      "pubDate": "Wed, 26 Nov 2025 11:37:37 +0000"
+      "title": "Transit violence rising across Canada — in some cities by nearly 300%",
+      "link": "https://www.cbc.ca/news/canada/transit-crimes-canada-9.6991533?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/fdb5eaa8-0da0-4011-bc29-7cee765dd395,1764088682377/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='A series of images of crimes on public transit.' width='620' height='349' title='An investigation by CBC News and the Investigative Journalism Foundation has found crime on public transit has risen dramatically in the last decade, and remains above pre-pandemic levels.'/><p>A joint investigation by CBC News and the Investigative Journalism Foundation has found that transit violence in some of Canada's biggest municipalities remains well above pre-pandemic levels, despite recent decreases. It has roughly doubled over the past decade in eight major Canadian cities.</p>",
+      "score": 27.599999999999998,
+      "pubDate": "Wed, 26 Nov 2025 04:00:00 EST"
     },
     {
-      "title": "How former Vancouver Canadians performed for the Blue Jays in the World Series",
-      "link": "https://www.straight.com/city-culture/how-former-vancouver-canadians-performed-for-blue-jays-in-world-series",
-      "description": "Toronto lost in heartbreaking fashion on Saturday night.",
-      "score": 8.5,
-      "pubDate": "2025-11-02T00:19:45-07:00"
+      "title": "Manitoba Government Helps Recruit Emergency Medical Responders in Rural Manitoba with Financial Aid, New Community Training",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71721",
+      "description": "",
+      "score": 22.439999999999998,
+      "pubDate": "Wed, 26 Nov 2025 12:43:00 CST"
     },
     {
-      "title": "Honda Celebration of Light cancelled indefinitely due to funding issues",
-      "link": "https://globalnews.ca/news/11543515/honda-celebration-of-light-cancelled-indefinitely-funding/",
-      "description": "The festival has faced challenges due to rising production costs, the elimination of federal funding, a reduction in provincial support and declining private sector investment.",
+      "title": "Manitoba foundation helps youth struggling with mental health, named after late teen",
+      "link": "https://globalnews.ca/news/11544502/manitoba-foundation-helps-youth-struggling-with-mental-health-named-after-late-teen/",
+      "description": "A Manitoba organization that focuses on helping children and youth in crisis was created in memory of a teen who died 10 years ago.",
+      "score": 18.2,
+      "pubDate": "Wed, 26 Nov 2025 18:41:28 +0000"
+    },
+    {
+      "title": "Millions in funding for First Nations and Inuit policing left unspent, says budget watchdog",
+      "link": "https://www.cbc.ca/news/indigenous/first-nations-inuit-policing-pbo-9.6991871?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/0e3f1f65-d797-4531-996e-5b2ce34d5b0a,1764109461426/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C214%2C5616%2C3159%29%3BResize%3D%28620%29' alt='Jacques is wearing a grey suit and is shown speaking in a committee room. ' width='620' height='349' title='Interim Parliamentary Budget Officer Jason Jacques speaks with a senator as he waits to appear before the Senate Banking, Commerce and the Economy committee in Ottawa, Thursday, Oct. 2, 2025. '/><p>A report from the federal spending watchdog shows that although funding has increased for First Nations and Inuit policing services, spending for the programs hasn't caught up, while Indigenous communities say their police services are going underfunded.</p>",
+      "score": 25.2,
+      "pubDate": "Wed, 26 Nov 2025 12:27:07 EST"
+    },
+    {
+      "title": "Manitoba Government Invites Applications for Two Community Development Grant Programs",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71723",
+      "description": "",
+      "score": 19.5,
+      "pubDate": "Wed, 26 Nov 2025 14:00:00 CST"
+    },
+    {
+      "title": "Governments of Canada and Manitoba Invest $12.5 Million to Address Gender-Based Violence",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71722",
+      "description": "",
+      "score": 17,
+      "pubDate": "Wed, 26 Nov 2025 13:24:00 CST"
+    },
+    {
+      "title": "Carney announces supports for Canada's lumber, steel sectors",
+      "link": "https://globalnews.ca/news/11544975/carney-announces-supports-for-canadas-lumber-steel-sectors/",
+      "description": "The moves come as the steel industry continues to be hammered after U.S. President Donald Trump levied 50 per cent tariffs on Canadian steel in June.",
+      "score": 17,
+      "pubDate": "Wed, 26 Nov 2025 20:31:13 +0000"
+    },
+    {
+      "title": "Critics worry about Liberal plan to fast-track high-speed rail",
+      "link": "https://www.cbc.ca/news/politics/high-speed-rail-property-expropriations-9.6993241?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.7370392,1730421222000/full/max/0/default.jpg?im=Crop%2Crect%3D%285%2C0%2C1247%2C701%29%3BResize%3D%28620%29' alt='A TGV high-speed train at the Saint-Charles train station in Marseille, southern France, on Monday, May 14, 2018.' width='620' height='349' title='A TGV high-speed train at the Saint-Charles train station in Marseille, southern France, on Monday, May 14, 2018.'/><p>In an effort to halve the approval time for Canada’s new high-speed rail network, the Liberal government is streamlining how it expropriates land in a way that some say could compromise property rights and lead to costly mistakes. </p>",
+      "score": 20.4,
+      "pubDate": "Wed, 26 Nov 2025 12:38:46 EST"
+    },
+    {
+      "title": "Year after quadriplegic Quebec man chose assisted dying, advocates prepare class action",
+      "link": "https://www.cbc.ca/news/canada/montreal/quadriplegic-quebec-man-assisted-dying-normand-meunier-9.6993149?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.7171216,1713087748000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C595%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A man gets his tears whiped ' width='620' height='349' title='Normand Meunier developed a painful bed sore after spending four days on an ER stretcher. '/><p>Advocates and the widow of a quadriplegic Quebec man are preparing to file a class-action lawsuit against the province after the 66-year-old requested medical assistance in dying following a hospital stay last year that left him with a severe bedsore. </p>",
+      "score": 16.2,
+      "pubDate": "Wed, 26 Nov 2025 14:17:00 EST"
+    },
+    {
+      "title": "F-35 beat Gripen fighter jet 'by a mile' in 2021 Defence Department competition",
+      "link": "https://www.cbc.ca/news/politics/f-35-gripen-dnd-competition-9.6992167?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/71e23ee7-2705-462f-904f-22f5a8b0c737,1764105311717/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C59%2C1600%2C900%29%3BResize%3D%28620%29' alt='A fighter jet flying in the sky.' width='620' height='349' title='An F-35 fighter jet from the American company Lockheed Martin.'/><p>The American-built F-35 fighter jet dominated its Swedish rival Gripen in terms of technical and military capabilities during a competition held by the Defence Department in 2021, according to data obtained by Radio-Canada.</p>",
+      "score": 16.08,
+      "pubDate": "Wed, 26 Nov 2025 04:00:00 EST"
+    },
+    {
+      "title": "Will the Canada-Alberta 'Grand Bargain' oil pipeline deal lead to more emissions?",
+      "link": "https://www.cbc.ca/news/science/alberta-carney-oil-pipeline-carbon-9.6992271?cmp=rss",
+      "description": "",
+      "score": 16.8,
+      "pubDate": "Wed, 26 Nov 2025 04:00:00 EST"
+    },
+    {
+      "title": "Oilpatch drilling slows as oil and natural gas prices sink",
+      "link": "https://www.cbc.ca/news/canada/calgary/wti-wcs-enserva-2026-forecast-9.6993382?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.5636973,1676588417000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C3320%2C1867%29%3BResize%3D%28620%29' alt='An oil rig.' width='620' height='349' title='The most recent oil well to be drilled on the Blood Tribe produces more than 350 barrels per day.'/><p>Low oil and natural gas prices are taking a toll on the industry as drilling activity is falling in Western Canada and job losses are mounting.</p>",
+      "score": 11.4,
+      "pubDate": "Wed, 26 Nov 2025 13:39:13 EST"
+    },
+    {
+      "title": "Canada’s weather warning system has changed. Here’s how",
+      "link": "https://www.cbc.ca/news/canada/nova-scotia/eccc-weather-warning-system-changes-9.6991783?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.4909198,1542393658000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1919%2C1079%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Cars were backed up along Highway 102 near Halifax Friday morning, with two lanes closed due to a collision. '/><p></p>",
+      "score": 11.4,
+      "pubDate": "Mon, 24 Nov 2025 12:38:10 EST"
+    },
+    {
+      "title": "Classes resume at B.C. school after grizzly attack, with safety measures in place",
+      "link": "https://www.cbc.ca/news/canada/british-columbia/bella-coola-grizzly-attack-school-resumes-9.6992509?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/f74f84fd-6630-469b-8e65-28705260e0a2,1764121844481/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='The wooden outdoor facade of Acwsalcta School in Bella Coola, B.C., with Coastal art of fish painted on the eaves' width='620' height='349' title='The Acwsalcta School in Bella Coola, B.C., said it was making efforts to ensure safety for all the students as it welcomes their return following a grizzly attack.'/><p></p>",
       "score": 9,
-      "pubDate": "Wed, 26 Nov 2025 15:00:44 +0000"
+      "pubDate": "Fri, 21 Nov 2025 16:31:26 EST"
     },
     {
-      "title": "Manitoba Government Expands Paramedic Training Seats",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71657",
+      "title": "Lower oil and gas industry spending in 2026 predicted by energy service group",
+      "link": "https://globalnews.ca/news/11545074/canada-energy-industry-spending-2026-prediction-enserva/",
+      "description": "In its annual State of the Industry report, Enserva says total oil and gas capital spending is expected to drop by 5.6 per cent this year and by a further 2.2 per cent in 2026.",
+      "score": 9,
+      "pubDate": "Wed, 26 Nov 2025 20:58:22 +0000"
+    },
+    {
+      "title": "Nova Scotia approves Halifax bylaw restricting Dartmouth Cove infilling",
+      "link": "https://globalnews.ca/news/11544687/nova-scotia-dartmouth-cove-infilling-approve-bylaw/",
+      "description": "The Nova Scotia government says it has approved changes submitted by Halifax to restrict infilling along a strip of shoreline in Dartmouth.",
+      "score": 8.5,
+      "pubDate": "Wed, 26 Nov 2025 18:16:50 +0000"
+    },
+    {
+      "title": "Canadian astronaut Jeremy Hansen answers your questions",
+      "link": "https://www.cbc.ca/player/play/9.6993420?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1e4af6d4-1be8-4cb9-a35e-47bc86d9e550,1764186387445/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1451%2C816%29%3BResize%3D%28620%29' alt='A man in an astronaut uniform sits in a TV studio.' width='620' height='349' title='Jeremy Hansen speaks to CBC News in studio'/><p>Astronaut Jeremy Hansen took questions from across the country before he blasts off to space for the Artemis II mission, where he’ll become the first Canadian to fly around the moon.</p>",
+      "score": 10.799999999999999,
+      "pubDate": "Wed, 26 Nov 2025 14:50:35 EST"
+    },
+    {
+      "title": "Ontario grocers could avoid taking beer and wine empties under new deal",
+      "link": "https://www.cbc.ca/news/canada/toronto/ontario-grocers-deal-avoid-collecting-beer-wine-empties-9.6993472?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/6da1ef66-d72e-4c04-9fdb-45d03a4372a6,1764184915442/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C281%2C3000%2C1687%29%3BResize%3D%28620%29' alt='Empty wine and beer bottles in boxes in a car. ' width='620' height='349' title=''/><p>Ontario grocers and the Beer Store have reached an agreement-in-principle on alcohol recycling that will allow the retailers to avoid collecting empties at their stores and gives a renewed role to the brewers, The Canadian Press has learned.</p>",
+      "score": 10.799999999999999,
+      "pubDate": "Wed, 26 Nov 2025 14:51:33 EST"
+    },
+    {
+      "title": "Rail advocate in Lac-Mégantic Que., says he was fined after raising safety concerns",
+      "link": "https://globalnews.ca/news/11544877/rail-advocate-fined-quebec/",
+      "description": "A rail safety advocate in Lac-Mégantic, Que., says he was fined nearly $700 after he reported a safety concern with the train tracks running through the community.",
+      "score": 9,
+      "pubDate": "Wed, 26 Nov 2025 20:38:04 +0000"
+    },
+    {
+      "title": "No criminal offence by police in failed search for B.C. woman found dead: watchdog",
+      "link": "https://globalnews.ca/news/11545029/vanderhoof-bc-rcmp/",
+      "description": "British Columbia's police watchdog agency says officers in an Interior community could have done more in the search for a missing Indigenous woman who was later found dead.",
+      "score": 4.8,
+      "pubDate": "Wed, 26 Nov 2025 20:43:27 +0000"
+    },
+    {
+      "title": "Ontario's repeal of emissions target looms over landmark climate case",
+      "link": "https://globalnews.ca/news/11544745/ontario-landmark-emissions-case/",
+      "description": "Young activists behind a landmark case allege \"Ontario's repeal of its own emissions targets is an 11th hour attempt to escape accountability on its toothless climate plan.\"",
+      "score": 4.5,
+      "pubDate": "Wed, 26 Nov 2025 19:33:06 +0000"
+    },
+    {
+      "title": "‘Nobody wins today': Ex-bouncer found guilty of manslaughter in Halifax Alehouse death",
+      "link": "https://globalnews.ca/news/11544473/ex-bouncer-guilty-manslaughter-halifax-alehouse-death/",
+      "description": "Alexander Pishori Levy, 40, was charged in the death of Ryan Sawyer, 31. Levy previously testified he applied a chokehold on Sawyer outside the bar during a scuffle.",
+      "score": 4.5,
+      "pubDate": "Wed, 26 Nov 2025 18:55:54 +0000"
+    },
+    {
+      "title": "Child struck after car failed to stop for school bus in Ottawa Valley",
+      "link": "https://globalnews.ca/news/11544422/child-struck-car-school-bus-ottawa/",
+      "description": "A 10-year-old child was struck in Ottawa Valley after an oncoming car failed to stop for their school bus. The Quebec driver was charged under the highway traffic act.",
+      "score": 5.3999999999999995,
+      "pubDate": "Wed, 26 Nov 2025 17:12:55 +0000"
+    },
+    {
+      "title": "Authoritarian Doug Ford is privatizing our water",
+      "link": "https://rabble.ca/environment/authoritarian-doug-ford-is-privatizing-our-water/",
       "description": "",
-      "score": 7.5,
-      "pubDate": "Wed, 19 Nov 2025 12:12:00 CST"
+      "score": 3,
+      "pubDate": "Wed, 26 Nov 2025 20:55:01 +0000"
     },
     {
-      "title": "From Promise to Progress: Manitoba Government Presents Throne Speech",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71637",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Tue, 18 Nov 2025 13:29:00 CST"
-    },
-    {
-      "title": "Richmond Christmas Fund marks another year of local support",
-      "link": "https://www.straight.com/living/richmond-christmas-fund-marks-another-year-of-local-support",
-      "description": "The long-running initiative invites the community to donate new toys and enjoy family-friendly activities.",
-      "score": 6,
-      "pubDate": "2025-11-17T14:50:26-08:00"
-    },
-    {
-      "title": "Measles Update  #44",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71477",
+      "title": "Nine Alberta MLAs facing recall petitions",
+      "link": "https://rabble.ca/politics/canadian-politics/nine-alberta-mlas-facing-recall-petitions/",
       "description": "",
       "score": 4.5,
-      "pubDate": "Mon, 10 Nov 2025 10:44:00 CST"
+      "pubDate": "Tue, 25 Nov 2025 21:55:43 +0000"
     },
     {
-      "title": "You Nearly Missed: Jane Siberry continuing to write her own rule book at the Rickshaw",
-      "link": "https://www.straight.com/music/you-nearly-missed-jane-siberry-continuing-to-write-her-own-rule-book-at-rickshaw",
-      "description": "Get ready for a true Canadian original.",
+      "title": "Photos: Belfast electronic duo Chalk light up the Fox Cabaret",
+      "link": "https://www.straight.com/music/photos-belfast-electronic-duo-chalk-lights-up-fox-cabaret",
+      "description": "The Irish duo made the most of their only Canadian tour stop.",
       "score": 4.5,
-      "pubDate": "2025-11-19T10:03:53-08:00"
+      "pubDate": "2025-11-10T22:57:06-08:00"
     },
     {
-      "title": "Can you see Newfoundland from Cape Breton? Online photo sparks debate",
-      "link": "https://www.cbc.ca/news/canada/nova-scotia/can-you-see-newfoundland-from-cape-breton-9.6991525?cmp=rss",
-      "description": "",
-      "score": 2.2,
-      "pubDate": "Wed, 26 Nov 2025 05:00:00 EST"
+      "title": "Burnaby Public Library Wrestles with the Costs of DEI",
+      "link": "https://thetyee.ca/News/2025/11/26/Burnaby-Public-Library-Wrestles-Costs-DEI/",
+      "description": "Inclusivity staff groups are being cancelled over budget concerns, but more action is promised.",
+      "score": 4.5,
+      "pubDate": "Wed, 26 Nov 2025 08:20:00 +0000"
     },
     {
-      "title": "N.L. sea urchin fishery in jeopardy, says owner of one of the province's only plants",
-      "link": "https://www.cbc.ca/news/canada/newfoundland-labrador/nl-sea-urchin-fishery-9.6992234?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/1e9e1fa4-bd92-49c2-abce-a9223524f90b,1764109193691/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C168%2C3194%2C1796%29%3BResize%3D%28620%29' alt='A hand with a blue glove holds a tool over a bunch of green, pointy sea urchins' width='620' height='349' title='Get cracking! Urchins are gathered on a table for the first stage of processing at Hodder's Shellfish in Stoneville.'/><p>Newfoundland and Labrador's sea urchin fishery is on the verge of collapse, as the fish harvesters and divers are confined to certain overfished areas, says Jerry and Alisha Hodder, owners of one of the province's last urchin plants. They say DFO could fix the problem with the stroke of a pen.</p>",
-      "score": 2.4,
-      "pubDate": "Wed, 26 Nov 2025 04:30:00 EST"
+      "title": "B.C. teacher disciplined after talking to student on Grindr, engaging in sexual contact: regulator",
+      "link": "https://www.cbc.ca/news/canada/british-columbia/bc-teacher-grindr-sexual-contact-9.6992405?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.4371565,1764129058914/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C311%2C1365%2C767%29%3BResize%3D%28620%29' alt='A phone app with a mask logo and the word 'Grindr'.' width='620' height='349' title='A B.C. teacher will not be allowed to be certified for at least eight years after communicating with a student via Grindr and engaging in 'sexualized physical contact' with them, according to the B.C. Commissioner for Teacher Regulation. (CBC)'/><p>A B.C. teacher will not be allowed to be certified for eight years after messaging a student on the Grindr dating app and engaging in sexual relations with them.</p>",
+      "score": 5.3999999999999995,
+      "pubDate": "Tue, 25 Nov 2025 22:36:17 EST"
+    },
+    {
+      "title": "A farmer, her flock, and the North they sustain",
+      "link": "https://www.straight.com/young-farmers/a-farmer-her-flock-and-north-they-sustain",
+      "description": "In B.C’s North Coast, Kieran McKeown, a third-generation farmer, blends innovation, integrity, and community spirit to feed a region and keep her family’s legacy alive.",
+      "score": 3.5999999999999996,
+      "pubDate": "2025-10-28T02:44:11-07:00"
     }
   ]
 }
