@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  Alert,
-  Pressable,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    Pressable,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from "react-native";
 
 import { useTranslation } from "../i18n";
@@ -42,6 +42,9 @@ export default function PrivacyGate({
           else Alert.alert(t('privacyGate.incorrectTitle','Incorrect'), t('privacyGate.incorrectBody','Wrong passcode.'));
         }}
         style={styles.button}
+        accessibilityRole="button"
+        accessibilityLabel={t('privacyGate.unlock','Unlock')}
+        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
       >
         <Text style={styles.buttonText}>{t('privacyGate.unlock','Unlock')}</Text>
       </Pressable>
@@ -59,7 +62,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       padding: 16,
     },
     title: { color: palette.text, fontWeight: "700", fontSize: 18 },
-    text: { color: palette.text, opacity: 0.9, marginTop: 6, marginBottom: 8 },
+    text: { color: palette.textSecondary, marginTop: 6, marginBottom: 8 },
     input: {
       borderWidth: 1,
       borderColor: palette.muted,

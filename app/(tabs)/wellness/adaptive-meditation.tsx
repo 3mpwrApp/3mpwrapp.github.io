@@ -334,8 +334,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     },
     meditationDuration: {
       fontSize: 13,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginTop: 2,
     },
     meditationDescription: {

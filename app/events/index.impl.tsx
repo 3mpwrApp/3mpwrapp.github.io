@@ -715,7 +715,7 @@ export default function EventsScreen() {
                 <Text style={styles.calNav}>{"<"}</Text>
               </A11yPressable>
               <Text style={styles.calTitle}>{monthLabel}</Text>
-              <Text style={[styles.calTitle, { opacity:0.7 }]} accessibilityLiveRegion="polite">
+              <Text style={[styles.calTitle, { color: palette.textSecondary }]} accessibilityLiveRegion="polite">
                 {t('eventsFeature.loadedCount','{{n}} events loaded',{ n: filtered.length })}
               </Text>
               <A11yPressable
@@ -787,7 +787,7 @@ export default function EventsScreen() {
         {/* One-time Export Options - Power User only */}
         {isFeatureVisible('power_user') && (
           <>
-            <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600' }}>
+            <Text style={{ fontSize: 12, color: palette.textSecondary, marginBottom: 6, fontWeight: '600' }}>
               One-time exports (no auto-updates):
             </Text>
             <GapView gap={8} style={{ flexDirection:'row', marginBottom: 24 }}>
@@ -1007,8 +1007,7 @@ function createStyles(
     weekHdr: {
       flex: 1,
       textAlign: "center",
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       fontSize: 11,
       paddingVertical: 4,
     },

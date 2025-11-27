@@ -661,8 +661,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     },
     comingSoon: {
       fontSize: 16,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginBottom: 16,
       fontStyle: 'italic',
     },

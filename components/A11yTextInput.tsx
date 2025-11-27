@@ -129,8 +129,7 @@ export default function A11yTextInput({
     },
     helperText: {
       fontSize: Math.round(14 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginTop: 4,
       lineHeight: Math.round(18 * factor),
     },

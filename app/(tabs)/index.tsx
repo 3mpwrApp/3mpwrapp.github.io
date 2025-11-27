@@ -630,7 +630,7 @@ const HomeScreen = React.memo(() => {
             <Text style={{ fontSize: Math.round(16 * factor), color: palette.text, fontWeight: '600' }}>
               {t('home.wizard.button', 'Your First 7 Days')}
             </Text>
-            <Text style={[textStyles.caption, { fontSize: Math.round(12 * factor), color: palette.text, opacity: 0.7 }]}>
+            <Text style={[textStyles.caption, { fontSize: Math.round(12 * factor), color: palette.textSecondary }]}>
               {t('home.wizard.subtitle', 'Quick wins to get started')}
             </Text>
           </View>
@@ -669,7 +669,7 @@ const HomeScreen = React.memo(() => {
         <SOSButton />
       </SafeOptionalComponent>
 
-      <Text style={[textStyles.caption, { opacity: 0.7, marginTop: 12 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+      <Text style={[textStyles.caption, { color: palette.textSecondary, marginTop: 12 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('home.personalization.note', 'Suggestions powered by the Disability Wizard (beta).')}
       </Text>
     </ResponsiveScreenWrapper>

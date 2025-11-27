@@ -154,7 +154,7 @@ export default function CampaignRoom() {
         >
           <Text style={s.taskText}>
             {t.done ? "✓ " : "• "}
-            {t.title} <Text style={{ opacity: 0.7 }}>({t.kind})</Text>
+            {t.title} <Text style={{ color: palette.textSecondary }}>({t.kind})</Text>
           </Text>
         </A11yPressable>
       ))}

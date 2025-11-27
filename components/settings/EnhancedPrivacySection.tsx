@@ -19,8 +19,8 @@ import GapView from '../GapView';
 
 function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number = 1) {
   return StyleSheet.create({
-    sectionSubtitle: { color:palette.text, fontSize:Math.round(14*factor), opacity:0.7, marginBottom:16, lineHeight:Math.round(20*factor) },
-    description: { color:palette.text, fontSize:Math.round(14*factor), opacity:0.8, marginBottom:12, lineHeight:Math.round(20*factor) },
+    sectionSubtitle: { color:palette.textSecondary, fontSize:Math.round(14*factor), marginBottom:16, lineHeight:Math.round(20*factor) },
+    description: { color:palette.textSecondary, fontSize:Math.round(14*factor), marginBottom:12, lineHeight:Math.round(20*factor) },
     buttonRow: { flexDirection:'row', flexWrap:'wrap' },
     button: { backgroundColor:palette.card, paddingHorizontal:16, paddingVertical:8, borderRadius:6, borderWidth:1, borderColor:palette.muted, minHeight:44, minWidth:60, alignItems:'center', justifyContent:'center' },
     buttonActive: { backgroundColor:palette.primary, borderColor:palette.primary },
@@ -161,7 +161,7 @@ export default function EnhancedPrivacySection() {
             >
               <Ionicons name='flame' size={18} color={cloudProvider === 'firebase' ? palette.onPrimary : palette.text} />
               <Text style={[s.buttonText, cloudProvider === 'firebase' && s.buttonTextActive, { marginTop: 4 }]}>Firebase</Text>
-              <Text style={[{ fontSize: 10, opacity: 0.7, textAlign: 'center', marginTop: 2 }, cloudProvider === 'firebase' && { color: palette.onPrimary }]}>YOUR Project</Text>
+              <Text style={[{ fontSize: 10, color: palette.textSecondary, textAlign: 'center', marginTop: 2 }, cloudProvider === 'firebase' && { color: palette.onPrimary }]}>YOUR Project</Text>
             </A11yPressable>
             
             <A11yPressable 
@@ -174,7 +174,7 @@ export default function EnhancedPrivacySection() {
             >
               <Ionicons name='cloud' size={18} color={cloudProvider === 'webdav' ? palette.onPrimary : palette.text} />
               <Text style={[s.buttonText, cloudProvider === 'webdav' && s.buttonTextActive, { marginTop: 4 }]}>WebDAV</Text>
-              <Text style={[{ fontSize: 10, opacity: 0.7, textAlign: 'center', marginTop: 2 }, cloudProvider === 'webdav' && { color: palette.onPrimary }]}>Your Server</Text>
+              <Text style={[{ fontSize: 10, color: palette.textSecondary, textAlign: 'center', marginTop: 2 }, cloudProvider === 'webdav' && { color: palette.onPrimary }]}>Your Server</Text>
             </A11yPressable>
             
             <A11yPressable 
@@ -187,7 +187,7 @@ export default function EnhancedPrivacySection() {
             >
               <Ionicons name='phone-portrait' size={18} color={cloudProvider === 'none' ? palette.onPrimary : palette.text} />
               <Text style={[s.buttonText, cloudProvider === 'none' && s.buttonTextActive, { marginTop: 4 }]}>Local Only</Text>
-              <Text style={[{ fontSize: 10, opacity: 0.7, textAlign: 'center', marginTop: 2 }, cloudProvider === 'none' && { color: palette.onPrimary }]}>No Cloud</Text>
+              <Text style={[{ fontSize: 10, color: palette.textSecondary, textAlign: 'center', marginTop: 2 }, cloudProvider === 'none' && { color: palette.onPrimary }]}>No Cloud</Text>
             </A11yPressable>
           </GapView>
           

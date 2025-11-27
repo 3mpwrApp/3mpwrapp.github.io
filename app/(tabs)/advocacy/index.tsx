@@ -311,8 +311,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       fontSize: 16 
     },
     cardDesc: { 
-      color: palette.text, 
-      opacity: 0.75, 
+      color: palette.textSecondary, 
       fontSize: 13, 
       lineHeight: 18,
       marginTop: 2,
@@ -327,8 +326,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       fontWeight: '700',
     },
     helpText: {
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       fontSize: 12,
       marginBottom: 12,
       fontStyle: 'italic',

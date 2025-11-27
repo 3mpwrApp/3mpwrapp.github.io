@@ -241,7 +241,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
   filterChipTextActive: { color: palette.onPrimary },
     searchLabel: { fontSize: Math.round(12 * factor), fontWeight: '600', color: palette.text, marginBottom: 6, textTransform: 'uppercase', letterSpacing: 0.5 },
   searchInput: { backgroundColor: palette.card, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, fontSize: Math.round(14 * factor), color: palette.text, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
-    resultsMeta: { marginTop: 8, fontSize: Math.round(12 * factor), color: palette.text, opacity: 0.75 },
+    resultsMeta: { marginTop: 8, fontSize: Math.round(12 * factor), color: palette.textSecondary },
     group: { marginBottom: 40 },
     groupTitle: { fontSize: Math.round(20 * factor), fontWeight: '700', color: palette.text, marginBottom: 12 },
     section: { marginBottom: 24, backgroundColor: palette.surface, padding: 16, borderRadius: 12, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
@@ -251,6 +251,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     subSectionTitle: { fontSize: Math.round(14 * factor), fontWeight: '600', color: palette.text, marginBottom: 4 },
     linkPress: { marginBottom: 8 },
     linkText: { fontSize: Math.round(13 * factor), color: palette.primary, textDecorationLine: 'underline' },
-    linkNote: { fontSize: Math.round(11 * factor), color: palette.text, opacity: 0.7 },
+    linkNote: { fontSize: Math.round(11 * factor), color: palette.textSecondary },
   });
 }

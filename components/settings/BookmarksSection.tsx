@@ -65,7 +65,7 @@ export default function BookmarksSection() {
             <View key={b.id} style={{ flexDirection:'row', alignItems:'center', justifyContent:'space-between', paddingVertical:8 }}>
               <View style={{ flex:1, paddingRight:8 }}>
                 <Text style={{ color:palette.text, fontWeight:'600' }}>{b.tKey ? t(b.tKey, b.label) : b.label}</Text>
-                <Text style={{ color:palette.text, opacity:0.6, fontSize:12 }}>{b.route}</Text>
+                <Text style={{ color:palette.textSecondary, fontSize:12 }}>{b.route}</Text>
               </View>
               <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=> removeBookmark(b.id)} accessibilityRole='button' accessibilityLabel={t('settings.bookmarks.remove','Remove bookmark')} style={{ padding:8, minHeight:44, justifyContent:'center' }}>
                 <Ionicons name='trash' size={18} color={palette.error} />

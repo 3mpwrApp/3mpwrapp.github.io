@@ -88,7 +88,7 @@ export function HomeGuide() {
                   <Text style={{ fontSize: 20 }}>{feature.icon}</Text>
                   <View style={{ flex: 1, marginLeft: 10 }}>
                     <Text style={{ color: palette.text, fontWeight: '600', fontSize: 14 }}>{feature.title}</Text>
-                    <Text style={{ color: palette.text, fontSize: 12, opacity: 0.7 }}>{feature.desc}</Text>
+                    <Text style={{ color: palette.textSecondary, fontSize: 12 }}>{feature.desc}</Text>
                   </View>
                   <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
                 </Pressable>

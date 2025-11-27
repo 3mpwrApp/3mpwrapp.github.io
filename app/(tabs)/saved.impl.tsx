@@ -412,7 +412,7 @@ function createStyles(palette: Palette, factor: number) {
     },
     searchIcon: {
       marginRight: 8,
-      opacity: 0.6,
+      color: palette.textSecondary,
     },
     searchInput: {
       flex: 1,
@@ -485,8 +485,7 @@ function createStyles(palette: Palette, factor: number) {
     },
     resultsCount: {
       fontSize: Math.round(14 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginBottom: 12,
       fontStyle: "italic",
     },
@@ -509,8 +508,7 @@ function createStyles(palette: Palette, factor: number) {
     },
     emptyDescription: {
       fontSize: Math.round(14 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       textAlign: "center",
       lineHeight: Math.round(20 * factor),
       maxWidth: 280,
@@ -532,8 +530,7 @@ function createStyles(palette: Palette, factor: number) {
     },
     sectionCount: {
       fontSize: Math.round(14 * factor),
-      color: palette.text,
-      opacity: 0.6,
+      color: palette.textSecondary,
     },
     gridRow: {
       justifyContent: "space-between",

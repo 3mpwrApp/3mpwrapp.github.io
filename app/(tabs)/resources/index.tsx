@@ -224,17 +224,17 @@ export default function ResourcesScreen() {
         </Text>
         
         <ResourceLink href="/(tabs)/resources/appeal-command-center" title="⚖️ Appeal Command Center" badge="Beta" />
-        <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
+        <Text style={[textStyles.bodySmall, { color: palette.textSecondary, marginBottom: 12, marginTop: -4 }]}>
           Deadline tracking, denial decoder, evidence strength meter, precedent finder
         </Text>
         
         <ResourceLink href="/(tabs)/advocacy/evidence-manager" title="📁 Evidence Manager" badge="Beta" />
-        <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
+        <Text style={[textStyles.bodySmall, { color: palette.textSecondary, marginBottom: 12, marginTop: -4 }]}>
           Secure locker, upload queue, checklist - all your evidence tools in one place
         </Text>
         
         {region === "all" && !province && (
-          <Text style={[textStyles.bodySmall, { opacity: 0.75, marginBottom: 8, marginTop: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          <Text style={[textStyles.bodySmall, { color: palette.textSecondary, marginBottom: 8, marginTop: 8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
             💡 Tip: Set your province in Settings to filter resources.
           </Text>
         )}
@@ -589,7 +589,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     chipText: { color: palette.text },
     chipTextActive: { color: palette.onPrimary },
     error: { color: "red", marginTop: 12 },
-    empty: { color: palette.text, opacity: 0.7, marginTop: 12 },
+    empty: { color: palette.textSecondary, marginTop: 12 },
   });
 }
 

@@ -74,8 +74,7 @@ const MenuSection = React.memo<{ title: string; palette: Palette }>(
   ({ title, palette }) => (
     <Text
       style={{
-        color: palette.text,
-        opacity: 0.7,
+        color: palette.textSecondary,
         paddingHorizontal: 14,
         paddingTop: 12,
         paddingBottom: 6,
@@ -530,8 +529,7 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
         : {}),
     },
     menuSection: {
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       paddingHorizontal: 14,
       paddingTop: 8,
       paddingBottom: 4,

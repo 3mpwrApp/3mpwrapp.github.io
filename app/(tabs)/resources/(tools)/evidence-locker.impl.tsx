@@ -473,7 +473,7 @@ function DocumentCard({ doc, onPress, palette }: { doc: Document; onPress: () =>
             <View style={{ backgroundColor: getTypeColor(doc.type, palette), paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}>
               <Text style={{ color: palette.onPrimary, fontSize: 10, fontWeight: '700' }}>{doc.type.toUpperCase()}</Text>
             </View>
-            <Text style={{ color: palette.text, opacity: 0.7, fontSize: 12, marginLeft: 8 }}>{doc.date}</Text>
+            <Text style={{ color: palette.textSecondary, fontSize: 12, marginLeft: 8 }}>{doc.date}</Text>
           </View>
           {doc.tags.length > 0 && (
             <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
@@ -485,12 +485,12 @@ function DocumentCard({ doc, onPress, palette }: { doc: Document; onPress: () =>
             </View>
           )}
           {doc.aiSummary && (
-            <Text style={{ color: palette.text, opacity: 0.8, fontSize: 13, marginTop: 4 }} numberOfLines={2}>
+            <Text style={{ color: palette.textSecondary, fontSize: 13, marginTop: 4 }} numberOfLines={2}>
               🤖 {doc.aiSummary}
             </Text>
           )}
         </View>
-        <MaterialCommunityIcons name="chevron-right" size={20} color={palette.text} style={{ opacity: 0.5 }} />
+        <MaterialCommunityIcons name="chevron-right" size={20} color={palette.textSecondary} />
       </View>
     </Pressable>
   );
@@ -511,7 +511,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background, padding: s('lg') },
     title: { color: palette.text, fontSize: 20, fontWeight: '700' },
-    subtitle: { color: palette.text, opacity: 0.7, fontSize: 14, marginBottom: 8 },
+    subtitle: { color: palette.textSecondary, fontSize: 14, marginBottom: 8 },
     label: { color: palette.text, fontSize: 13, fontWeight: '600', marginBottom: 6, opacity: 0.9 },
     row: { flexDirection: 'row', marginTop: s('md'), flexWrap: 'wrap' },
     rowRight: { flexDirection: 'row', marginTop: s('md'), justifyContent: 'flex-end' },
@@ -567,10 +567,10 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 6 
     },
     chipActive: { backgroundColor: palette.primary, borderColor: palette.primary },
-    empty: { color: palette.text, opacity: 0.6, textAlign: 'center', marginTop: 40 },
+    empty: { color: palette.textSecondary, textAlign: 'center', marginTop: 40 },
     cardTitle: { color: palette.text, fontWeight: '700', fontSize: 15 },
-    cardType: { color: palette.text, opacity: 0.7, fontSize: 12, textTransform: 'uppercase', marginTop: 2 },
-    cardDate: { color: palette.text, opacity: 0.7, fontSize: 13 },
+    cardType: { color: palette.textSecondary, fontSize: 12, textTransform: 'uppercase', marginTop: 2 },
+    cardDate: { color: palette.textSecondary, fontSize: 13 },
     timelineItem: { 
       flexDirection: 'row', 
       marginBottom: 16, 
@@ -586,8 +586,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     timelineContent: { flex: 1 },
     timelineDate: { 
-      color: palette.text, 
-      opacity: 0.7, 
+      color: palette.textSecondary, 
       fontSize: 12, 
       marginBottom: 4, 
       fontWeight: '600' 
@@ -603,8 +602,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       color: palette.text, 
       fontWeight: '700', 
       fontSize: 14, 
-      marginBottom: 8, 
-      opacity: 0.9 
+      marginBottom: 8,
     },
     categoryItem: { 
       paddingVertical: 8, 

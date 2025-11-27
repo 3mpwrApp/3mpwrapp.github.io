@@ -216,7 +216,7 @@ function createStyles(
     paragraph: { fontSize: Math.round(15 * factor), lineHeight: 22, color: palette.text, marginBottom: 10 },
     quoteBox: { borderLeftWidth: 4, borderLeftColor: palette.primary, paddingLeft: 12, marginVertical: 12 },
     quoteText: { fontStyle: 'italic', color: palette.text, marginBottom: 4 },
-    quoteAttribution: { fontSize: 12, color: palette.text, opacity: 0.7 },
+    quoteAttribution: { fontSize: 12, color: palette.textSecondary },
     list: { marginVertical: 8 },
     listItem: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 6 },
     bulletMarker: { width: 18, color: palette.text },

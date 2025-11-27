@@ -384,8 +384,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     subtitle: {
       fontSize: Math.round(14 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginBottom: 16,
       lineHeight: Math.round(20 * factor),
     },
@@ -416,8 +415,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     testDescription: {
       fontSize: Math.round(13 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginBottom: 12,
       lineHeight: Math.round(18 * factor),
     },
@@ -429,8 +427,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     noteText: {
       fontSize: Math.round(12 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       lineHeight: Math.round(16 * factor),
     },
     pushPrefsContainer: {

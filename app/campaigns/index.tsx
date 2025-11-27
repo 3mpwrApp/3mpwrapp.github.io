@@ -946,8 +946,7 @@ function createStyles(palette: Palette) {
     },
     statLabel: {
       fontSize: 12,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       textTransform: 'uppercase',
       fontWeight: '600',
     },
@@ -1046,8 +1045,7 @@ function createStyles(palette: Palette) {
     },
     supportersText: {
       fontSize: 13,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       fontWeight: '600',
     },
     actionRow: {

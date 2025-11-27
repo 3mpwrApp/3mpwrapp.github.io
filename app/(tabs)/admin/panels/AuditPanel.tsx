@@ -107,7 +107,7 @@ export default function AuditPanel() {
               {new Date(e.ts).toLocaleString()} — {e.action}
               {e.target ? ` · ${e.target}` : ''}
             </Text>
-            {e.actorUid ? <Text style={{ color: palette.text, opacity:0.7 }}>by {e.actorUid}</Text> : null}
+            {e.actorUid ? <Text style={{ color: palette.textSecondary }}>by {e.actorUid}</Text> : null}
           </View>
         ))
       )}

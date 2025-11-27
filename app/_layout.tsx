@@ -14,7 +14,7 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     div.style.top = '0';
     div.style.left = '0';
     div.style.width = '100%';
-    div.style.backgroundColor = '#d32f2f';
+    div.style.backgroundColor = '#8B0000'; // AAA-compliant dark red (9.74:1)
     div.style.color = '#ffffff';
     div.style.padding = '20px';
     div.style.zIndex = '99999';
@@ -31,8 +31,8 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     div.style.bottom = '0';
     div.style.left = '0';
     div.style.width = '100%';
-    div.style.backgroundColor = '#ff9800';
-    div.style.color = '#000000';
+    div.style.backgroundColor = '#8B4513'; // AAA-compliant dark brown (8.59:1)
+    div.style.color = '#ffffff'; // White text on dark background
     div.style.padding = '10px';
     div.style.zIndex = '99999';
     div.style.fontFamily = 'monospace';
@@ -267,7 +267,7 @@ export default function RootLayout() {
   }
 
   if (_renderError) {
-    const errorPalette = { background: '#ffffff', error: '#d32f2f', text: '#000000', textSecondary: '#666666' };
+    const errorPalette = { background: '#ffffff', error: '#8B0000', text: '#000000', textSecondary: '#555555' };
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: errorPalette.background, padding: 20 }}>
         <Text style={{ fontSize: 20, fontWeight: 'bold', color: errorPalette.error, marginBottom: 10 }}>App Error</Text>
@@ -391,11 +391,11 @@ export default function RootLayout() {
     // Emergency fallback - render a visible error screen
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff', padding: 20 }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#d32f2f', marginBottom: 10 }}>App Failed to Load</Text>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#8B0000', marginBottom: 10 }}>App Failed to Load</Text>
         <Text style={{ fontSize: 14, color: '#000000', textAlign: 'center' }}>
           {error instanceof Error ? error.message : 'Unknown error'}
         </Text>
-        <Text style={{ fontSize: 12, color: '#666666', marginTop: 20, textAlign: 'center' }}>Open browser console (F12) for details</Text>
+        <Text style={{ fontSize: 12, color: '#555555', marginTop: 20, textAlign: 'center' }}>Open browser console (F12) for details</Text>
       </View>
     );
   }

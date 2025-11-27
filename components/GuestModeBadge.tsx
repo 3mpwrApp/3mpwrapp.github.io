@@ -4,6 +4,7 @@ import { AccessibilityInfo, StyleSheet, Text, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
 import { useThemeColor } from '../hooks/useThemeColor';
+import { useAppPalette } from '../theme/usePalette';
 
 import A11yPressable from './A11yPressable';
 import { GapView } from './GapView';
@@ -18,11 +19,13 @@ import { GapView } from './GapView';
 export default function GuestModeBadge() {
   const { isGuest, user } = useAuth();
   const router = useRouter();
+  const palette = useAppPalette();
   const textColor = useThemeColor({}, 'text');
   const backgroundColor = useThemeColor({}, 'background');
 
   const colors = {
     text: textColor,
+    textSecondary: palette.textSecondary,
     background: backgroundColor,
     warning: textColor,
     border: `${textColor}20`,
@@ -65,7 +68,7 @@ export default function GuestModeBadge() {
             Guest Mode
           </Text>
           <Text
-            style={[styles.description, { color: colors.text }]}
+            style={[styles.description, { color: colors.textSecondary }]}
             accessibilityRole="text"
           >
             Your data will be kept private
@@ -122,7 +125,6 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 13,
-    opacity: 0.7,
   },
   actions: {
     flexDirection: 'row',

@@ -321,7 +321,7 @@ export default function SettingsScreen() {
                           <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
                         </A11yPressable>
                       </GapView>
-                      {!!providerList.length && <Text style={{ color:palette.text, opacity:0.6, marginTop:8, fontSize:12 }}>Providers: {providerList.join(', ')}</Text>}
+                      {!!providerList.length && <Text style={{ color:palette.textSecondary, marginTop:8, fontSize:12 }}>Providers: {providerList.join(', ')}</Text>}
                     </>
                   )}
                 </View>
@@ -472,7 +472,7 @@ function DeveloperSection({ styles }: { styles: ReturnType<typeof createStyles> 
             <Ionicons name='alert-circle' size={20} color={palette.primary} />
             <Text style={[styles.linkText, { marginLeft:8 }]}>Cost alerts</Text>
           </View>
-          <Text style={{ color: palette.text, opacity: 0.7 }}>{costAlertsEnabled ? 'On' : 'Off'}</Text>
+          <Text style={{ color: palette.textSecondary }}>{costAlertsEnabled ? 'On' : 'Off'}</Text>
         </A11yPressable>
         <Text style={[styles.description, { marginTop:8 }]}>
           When enabled, the app will warn before using features that could incur costs (e.g., external LLM, Sentry, Android Maps). Free Mode still blocks paid features.
@@ -499,7 +499,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number 
     title: { fontSize:Math.round(24*factor), fontWeight:'700', marginBottom:8, color:palette.text },
     section: { paddingVertical:12, borderTopWidth:StyleSheet.hairlineWidth, borderTopColor:palette.muted },
     sectionTitle: { color:palette.text, fontWeight:'700', fontSize:Math.round(18*factor), marginBottom:4 },
-    sectionSubtitle: { color:palette.text, fontSize:Math.round(14*factor), opacity:0.7, marginBottom:16, lineHeight:Math.round(20*factor) },
+    sectionSubtitle: { color:palette.textSecondary, fontSize:Math.round(14*factor), marginBottom:16, lineHeight:Math.round(20*factor) },
     description: { color:palette.text, fontSize:Math.round(14*factor), opacity:0.8, marginBottom:12, lineHeight:Math.round(20*factor) },
     rowLabel: { color:palette.text, opacity:0.9, marginTop:10, marginBottom:6, fontSize:Math.round(14*factor) },
     input: { borderWidth:1, borderColor:palette.muted, padding:12, borderRadius:8, marginBottom:10, color:palette.text, fontSize:Math.round(14*factor), minHeight:44 },

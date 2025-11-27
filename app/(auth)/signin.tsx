@@ -253,7 +253,7 @@ function OAuthButtons({ styles, tLabel }: { styles: any; tLabel: (k: string, d: 
   
   return (
     <View>
-      <Text style={{ color: palette.text, opacity: 0.7, fontSize: 12, textAlign: 'center', marginBottom: 8 }}>
+      <Text style={{ color: palette.textSecondary, fontSize: 12, textAlign: 'center', marginBottom: 8 }}>
         {tLabel('auth.orSignInWith', 'Or sign in with')}
       </Text>
       <A11yPressable

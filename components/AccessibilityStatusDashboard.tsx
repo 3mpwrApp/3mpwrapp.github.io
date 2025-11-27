@@ -304,8 +304,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     categoryCount: {
       fontSize: Math.round(14 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       fontWeight: "500",
     },
     featureCard: {

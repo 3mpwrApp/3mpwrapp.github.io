@@ -286,9 +286,8 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     stackText: {
       fontSize: 10,
-      color: palette.text,
+      color: palette.textSecondary,
       fontFamily: 'monospace',
-      opacity: 0.7,
     },
     buttonContainer: {
       width: '100%',
@@ -320,10 +319,9 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     supportText: {
       fontSize: 14,
-      color: palette.text,
+      color: palette.textSecondary,
       textAlign: 'center',
       marginTop: 24,
-      opacity: 0.6,
       lineHeight: 20,
     },
   });

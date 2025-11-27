@@ -177,10 +177,10 @@ function PracticeCoach() {
   };
   return (
     <View style={{ marginTop: 16 }}>
-      <Text style={{ fontWeight: '700', color: palette.text, opacity: 0.7, marginBottom: 4 }}>
+      <Text style={{ fontWeight: '700', color: palette.textSecondary, marginBottom: 4 }}>
         {t('advocacy.coach.practiceHeader')}
       </Text>
-      <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 6 }}>
+      <Text style={{ color: palette.textSecondary, marginBottom: 6 }}>
         {t('advocacy.coach.practiceHelp')}
       </Text>
       <TextInput

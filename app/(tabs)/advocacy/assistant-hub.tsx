@@ -284,13 +284,13 @@ function styles(palette: ReturnType<typeof useAppPalette>, factor = 1) {
   return StyleSheet.create({
     container: { flex: 1, backgroundColor: palette.background },
     title: { fontSize: Math.round(24 * factor), fontWeight: '700', color: palette.text, marginBottom: 4 },
-  subtitle: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.8, marginBottom: 12 },
+  subtitle: { fontSize: Math.round(14 * factor), color: palette.textSecondary, marginBottom: 12 },
   search: { borderWidth: 1, borderColor: palette.muted, backgroundColor: palette.surface, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 10, color: palette.text, marginBottom: 8 },
   suggestionsWrap: { borderWidth: 1, borderColor: palette.muted, backgroundColor: palette.card, borderRadius: 8, marginBottom: 12 },
   suggestionItem: { paddingHorizontal: 12, paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
   suggestionTitle: { color: palette.text, fontWeight: '700', fontSize: Math.round(14 * factor) },
-  suggestionDesc: { color: palette.text, opacity: 0.7, fontSize: Math.round(12 * factor) },
-  noResults: { color: palette.text, opacity: 0.7, marginBottom: 12, fontSize: Math.round(12 * factor) },
+  suggestionDesc: { color: palette.textSecondary, fontSize: Math.round(12 * factor) },
+  noResults: { color: palette.textSecondary, marginBottom: 12, fontSize: Math.round(12 * factor) },
   sectionHeader: { color: palette.text, fontWeight: '700', marginBottom: 6, marginTop: 8, fontSize: Math.round(14 * factor) },
   wizardButton: { flexDirection: 'row', alignItems: 'center', backgroundColor: palette.surface, borderWidth: 2, borderColor: palette.primary, borderRadius: 12, padding: 12, marginBottom: 12 },
   wizardIconWrap: { width: 44, height: 44, borderRadius: 22, backgroundColor: palette.surface, alignItems: 'center', justifyContent: 'center' },
@@ -305,6 +305,6 @@ function styles(palette: ReturnType<typeof useAppPalette>, factor = 1) {
     card: { backgroundColor: palette.card, borderRadius: 12, borderWidth: 1, borderColor: palette.muted, padding: 12, width: '48%' },
     iconWrap: { width: 36, height: 36, borderRadius: 18, backgroundColor: palette.surface, alignItems: 'center', justifyContent: 'center', marginBottom: 8 },
     cardTitle: { color: palette.text, fontWeight: '700', fontSize: Math.round(14 * factor), marginBottom: 4 },
-    cardDesc: { color: palette.text, opacity: 0.7, fontSize: Math.round(12 * factor), lineHeight: Math.round(16 * factor) },
+    cardDesc: { color: palette.textSecondary, fontSize: Math.round(12 * factor), lineHeight: Math.round(16 * factor) },
   });
 }

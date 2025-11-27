@@ -53,7 +53,6 @@ export default function UserBadge({
   showLabel = true 
 }: UserBadgeProps) {
   const textColor = useThemeColor({}, 'text');
-  const colorScheme = useColorScheme();
   const { t } = useTranslation();
 
   const sizeStyles = {
@@ -63,6 +62,7 @@ export default function UserBadge({
   };
 
   const currentSize = sizeStyles[size];
+  const colorScheme = useColorScheme();
   const isDark = colorScheme === 'dark';
   const badgeColor = isDark ? BADGE_COLORS_DARK[type] : BADGE_COLORS_LIGHT[type];
   const icon = BADGE_ICONS[type];
@@ -143,8 +143,7 @@ export default function UserBadge({
             styles.phase,
             {
               fontSize: currentSize.fontSize - 2,
-              color: textColor,
-              opacity: 0.7,
+              color: textSecondaryColor,
             },
           ]}
           numberOfLines={1}

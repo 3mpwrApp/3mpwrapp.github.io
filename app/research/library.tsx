@@ -397,7 +397,7 @@ function ResearchCard({
           </Text>
         </View>
         {item.readTime && (
-          <Text style={{ fontSize: 12, color: palette.text, opacity: 0.6, marginLeft: 8, fontStyle: 'italic' }}>
+          <Text style={{ fontSize: 12, color: palette.textSecondary, marginLeft: 8, fontStyle: 'italic' }}>
             {item.readTime}
           </Text>
         )}
@@ -410,13 +410,13 @@ function ResearchCard({
 
       {/* Meta */}
       {(item.source || item.year) && (
-        <Text style={{ fontSize: Math.round(13 * factor), color: palette.text, opacity: 0.7, fontWeight: '500', marginBottom: 10 }}>
+        <Text style={{ fontSize: Math.round(13 * factor), color: palette.textSecondary, fontWeight: '500', marginBottom: 10 }}>
           {[item.source, item.year].filter(Boolean).join(' • ')}
         </Text>
       )}
 
       {/* Description */}
-      <Text style={{ fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.85, lineHeight: 20, marginBottom: 12 }}>
+      <Text style={{ fontSize: Math.round(14 * factor), color: palette.textSecondary, lineHeight: 20, marginBottom: 12 }}>
         {item.description}
       </Text>
 
@@ -424,14 +424,14 @@ function ResearchCard({
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginBottom: 12 }}>
         {item.topics.slice(0, 3).map(topic => (
           <View key={topic} style={{ backgroundColor: palette.card, paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
-            <Text style={{ fontSize: 11, color: palette.text, opacity: 0.8, fontWeight: '600' }}>
+            <Text style={{ fontSize: 11, color: palette.textSecondary, fontWeight: '600' }}>
               {topic}
             </Text>
           </View>
         ))}
         {item.topics.length > 3 && (
           <View style={{ backgroundColor: palette.card, paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}>
-            <Text style={{ fontSize: 11, color: palette.text, opacity: 0.8, fontWeight: '600' }}>
+            <Text style={{ fontSize: 11, color: palette.textSecondary, fontWeight: '600' }}>
               +{item.topics.length - 3}
             </Text>
           </View>
@@ -441,7 +441,7 @@ function ResearchCard({
       {/* Regions */}
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 4, marginBottom: 12 }}>
         {item.regions.map(region => (
-          <Text key={region} style={{ fontSize: 11, color: palette.text, opacity: 0.6 }}>
+          <Text key={region} style={{ fontSize: 11, color: palette.textSecondary }}>
             📍 {region}
           </Text>
         ))}
@@ -481,24 +481,24 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     filterRow: { flexDirection: 'row' },
     clearButton: { marginTop: 12, paddingVertical: 8, paddingHorizontal: 12, backgroundColor: palette.card, borderRadius: 8, alignSelf: 'flex-start' },
     clearButtonText: { fontSize: Math.round(14 * factor), fontWeight: '600', color: palette.primary },
-    resultsCount: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.7, marginBottom: 12, fontWeight: '500' },
+    resultsCount: { fontSize: Math.round(14 * factor), color: palette.textSecondary, marginBottom: 12, fontWeight: '500' },
     scrollView: { flex: 1 },
     scrollContent: { paddingBottom: 40 },
     emptyState: { alignItems: 'center', justifyContent: 'center', paddingVertical: 60 },
-    emptyStateText: { fontSize: Math.round(16 * factor), color: palette.text, opacity: 0.6, marginTop: 16, textAlign: 'center' },
+    emptyStateText: { fontSize: Math.round(16 * factor), color: palette.textSecondary, marginTop: 16, textAlign: 'center' },
     hubsContainer: { marginTop: 32, paddingTop: 24, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: palette.muted },
     hubsHeader: { fontSize: Math.round(20 * factor), fontWeight: '700', color: palette.text },
-    hubsIntro: { fontSize: Math.round(14 * factor), color: palette.text, opacity: 0.85, lineHeight: 20 },
+    hubsIntro: { fontSize: Math.round(14 * factor), color: palette.textSecondary, lineHeight: 20 },
     hubRegion: {},
     regionTitle: { fontSize: Math.round(18 * factor), fontWeight: '600', color: palette.text, marginTop: 8 },
     hubCard: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, padding: 16, borderRadius: 10 },
     hubName: { fontSize: Math.round(15 * factor), fontWeight: '600', color: palette.text },
-    hubDescription: { fontSize: Math.round(13 * factor), color: palette.text, opacity: 0.85, lineHeight: 18 },
+    hubDescription: { fontSize: Math.round(13 * factor), color: palette.textSecondary, lineHeight: 18 },
     linksRow: { flexDirection: 'row', flexWrap: 'wrap' },
     hubLinkPress: { paddingVertical: 4 },
     hubLinkText: { fontSize: Math.round(13 * factor), color: palette.primary, textDecorationLine: 'underline' },
     tagRow: { flexDirection: 'row', flexWrap: 'wrap' },
     tagChip: { backgroundColor: palette.card, paddingHorizontal: 8, paddingVertical: 3, borderRadius: 12 },
-    tagText: { fontSize: 11, color: palette.text, opacity: 0.8 },
+    tagText: { fontSize: 11, color: palette.textSecondary },
   });
 }

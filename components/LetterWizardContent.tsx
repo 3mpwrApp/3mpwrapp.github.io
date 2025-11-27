@@ -1893,8 +1893,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     optionDesc: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.75,
+      color: palette.textSecondary,
     },
     fieldContainer: {
       marginBottom: 16,
@@ -1916,8 +1915,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     charCounter: {
       fontSize: 12,
-      color: palette.text,
-      opacity: 0.6,
+      color: palette.textSecondary,
     },
     input: {
       borderWidth: StyleSheet.hairlineWidth,
@@ -2039,8 +2037,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     emptyStateSubtext: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       textAlign: 'center',
     },
     savedLettersList: {
@@ -2073,14 +2070,12 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     savedLetterMeta: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.75,
+      color: palette.textSecondary,
       marginBottom: 4,
     },
     savedLetterDate: {
       fontSize: 12,
-      color: palette.text,
-      opacity: 0.6,
+      color: palette.textSecondary,
     },
     savedLetterActions: {
       flexDirection: 'row',

@@ -362,7 +362,7 @@ export default function AdminPanel() {
               {sortedUsers.map((u) => (
                 <View key={u.id} style={s.userRow}>
                   <Text style={s.text}>{u.email || u.id}</Text>
-                  <Text style={[s.text, { fontSize:12, opacity:0.7 }]}>{u.displayName || 'No name'}</Text>
+                  <Text style={[s.text, { fontSize:12, color: palette.textSecondary }]}>{u.displayName || 'No name'}</Text>
                 </View>
               ))}
             </View>
@@ -374,7 +374,7 @@ export default function AdminPanel() {
           <Text style={s.cardTitle}>🚩 Moderation Flags</Text>
           <Text style={[s.text, { marginBottom:12 }]}>Review user-reported content</Text>
           {flags.length === 0 ? (
-            <Text style={[s.text, { fontStyle:'italic', opacity:0.7 }]}>No active flags</Text>
+            <Text style={[s.text, { fontStyle:'italic', color: palette.textSecondary }]}>No active flags</Text>
           ) : (
             <>
               <GapView style={{ flexDirection: 'row', marginBottom: 12, flexWrap: 'wrap' }} gap={8}>
@@ -447,7 +447,7 @@ function FlagPreviewMutual({ targetId }: { targetId: string }) {
   }, [targetId]);
   if (!p) return null;
   return (
-    <Text style={{ color: palette.text, opacity: 0.7, fontSize:13 }}>
+    <Text style={{ color: palette.textSecondary, fontSize:13 }}>
       Post: {p.type} • {p.city || '-'} - {p.description}
     </Text>
   );
@@ -467,7 +467,7 @@ function FlagPreviewRating({ targetId }: { targetId: string }) {
   }, [targetId]);
   if (!r) return null;
   return (
-    <Text style={{ color: palette.text, opacity: 0.7, fontSize:13 }}>
+    <Text style={{ color: palette.textSecondary, fontSize:13 }}>
       Rating: {r.target} • {r.score}★ - {r.comment || '-'}
     </Text>
   );
@@ -486,7 +486,7 @@ function StatBox({ title, value, palette }: { title: string; value: number | str
       alignItems:'center'
     }}>
       <Text style={{ color: palette.text, fontSize:24, fontWeight:'700', marginBottom:4 }}>{value}</Text>
-      <Text style={{ color: palette.text, opacity:0.7, fontSize:12 }}>{title}</Text>
+      <Text style={{ color: palette.textSecondary, fontSize:12 }}>{title}</Text>
     </View>
   );
 }
@@ -503,7 +503,7 @@ function LoadingCard({ title }: { title: string }) {
       marginTop: 16 
     }}>
       <Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>{title}</Text>
-      <Text style={{ color: palette.text, opacity:0.7 }}>Loading…</Text>
+      <Text style={{ color: palette.textSecondary }}>Loading…</Text>
     </View>
   );
 }
@@ -531,8 +531,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     },
     subtitle: {
       fontSize: 15,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginBottom: 12,
     },
     adminBadge: {
@@ -614,13 +613,11 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     },
     text: {
       color: palette.text,
-      opacity: 0.9,
       fontSize: 14,
       lineHeight: 20,
     },
     statLabel: {
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       fontSize: 12,
       fontWeight: '600',
       textTransform: 'uppercase',

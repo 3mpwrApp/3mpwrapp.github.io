@@ -63,7 +63,7 @@ function ThreadInner() {
 
   return (
     <View style={styles.container}>
-      {othersTyping && <Text style={{ color: palette.text, opacity: 0.7, marginBottom: 4 }}>Someone is typing…</Text>}
+      {othersTyping && <Text style={{ color: palette.textSecondary, marginBottom: 4 }}>Someone is typing…</Text>}
       <FlatList
         data={items}
         keyExtractor={(item) => item.id}

@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
-import type { Lang} from "../i18n";
+import type { Lang } from "../i18n";
 import { useTranslation } from "../i18n";
 import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
@@ -102,8 +102,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     subtitle: {
       fontSize: Math.round(14 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginBottom: 16,
       lineHeight: Math.round(20 * factor),
     },
@@ -142,8 +141,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     englishName: {
       fontSize: Math.round(13 * factor),
-      color: palette.text,
-      opacity: 0.6,
+      color: palette.textSecondary,
     },
     activeText: {
       color: palette.primary,
@@ -161,8 +159,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     noteText: {
       fontSize: Math.round(12 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginLeft: 8,
       flex: 1,
       lineHeight: Math.round(16 * factor),

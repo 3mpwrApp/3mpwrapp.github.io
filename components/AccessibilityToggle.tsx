@@ -101,8 +101,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     description: {
       fontSize: Math.round(13 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       lineHeight: Math.round(18 * factor),
     },
     switchContainer: {

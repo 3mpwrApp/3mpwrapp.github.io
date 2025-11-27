@@ -179,7 +179,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     sub: { color: palette.text, opacity: 0.9, marginVertical: 8 },
     card: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, padding: 12, marginTop: 8 },
     text: { color: palette.text },
-    meta: { color: palette.text, opacity: 0.7 },
+    meta: { color: palette.textSecondary },
     button: { backgroundColor: palette.primary, paddingVertical: 10, borderRadius: 8, alignItems: 'center', marginTop: 8 },
     buttonText: { color: palette.onPrimary, fontWeight: '700' },
     actionsRow: { flexDirection: 'row', flexWrap: 'wrap', marginTop: 12 },

@@ -62,12 +62,12 @@ function styles(palette: ReturnType<typeof useAppPalette>, factor: number) {
   return StyleSheet.create({
     container: { flex:1, backgroundColor: palette.background, padding: 16 },
     title: { color: palette.text, fontSize: Math.round(22*factor), fontWeight:'700' },
-    subtitle: { color: palette.text, opacity:0.8 },
+    subtitle: { color: palette.textSecondary },
     markAll: { marginLeft: 'auto', paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 6 },
     markAllText: { color: palette.text, fontWeight:'700' },
     row: { paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted, flexDirection:'row', paddingRight: 8 },
     rowTitle: { color: palette.text, fontWeight:'700' },
-    rowBody: { color: palette.text, opacity:0.9 },
-    rowMeta: { color: palette.text, opacity:0.6, fontSize: 12 },
+    rowBody: { color: palette.text },
+    rowMeta: { color: palette.textSecondary, fontSize: 12 },
   });
 }

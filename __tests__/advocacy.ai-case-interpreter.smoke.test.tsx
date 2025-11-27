@@ -17,7 +17,7 @@ describe('AI Case Interpreter (smoke)', () => {
     await act(async () => {
       fireEvent.change(input as any, { target: { value: 'This letter includes a deadline and mentions reconsideration and medical records.' } });
     });
-  (fireEvent as any).press(getByText(/^Interpret$/));
+  (fireEvent as any).press(getByText(/Analyze Document/i));
     await waitFor(() => expect(queryByText(/Summary/)).toBeTruthy());
     const text = document.body.textContent || '';
     expect(/Next steps/i.test(text)).toBeTruthy();

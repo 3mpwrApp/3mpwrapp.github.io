@@ -339,8 +339,7 @@ function createStyles(
     itemTitle: { color: palette.text, fontWeight: "600" },
     itemText: { color: palette.text, opacity: 1 },
     itemDate: {
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       fontSize: Math.round(12 * factor),
     },
     input: {

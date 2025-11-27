@@ -95,7 +95,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     container: { flex:1, backgroundColor: palette.background, padding: 16 },
     title: { fontSize: 18, fontWeight:'700', color: palette.text },
     msg: { paddingVertical: 8, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
-    msgMeta: { color: palette.text, opacity: 0.7, marginBottom: 2 },
+    msgMeta: { color: palette.textSecondary, marginBottom: 2 },
     msgText: { color: palette.text },
     input: { borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, color: palette.text, padding: 8, borderRadius: 8 },
     button: { backgroundColor: palette.primary, borderRadius: 8, paddingHorizontal: 12, justifyContent:'center' },

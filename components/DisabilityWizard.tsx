@@ -224,7 +224,7 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette, rou
           {/* Metadata */}
           <GapView style={styles.cardMetadata} gap={12}>
             <GapView style={styles.metadataItem} gap={4}>
-              <Ionicons name="time-outline" size={14} color={palette.text} style={{ opacity: 0.7 }} />
+              <Ionicons name="time-outline" size={14} color={palette.textSecondary} />
               <Text style={styles.metadataText}>{suggestion.estimatedTime}min</Text>
             </GapView>
             <GapView style={styles.metadataItem} gap={4}>
@@ -232,7 +232,7 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette, rou
               <Text style={[styles.metadataText, { color: energy.color }]}>{energy.label}</Text>
             </GapView>
             <GapView style={styles.metadataItem} gap={4}>
-              <Ionicons name={cognitive.icon as any} size={14} color={palette.text} style={{ opacity: 0.7 }} />
+              <Ionicons name={cognitive.icon as any} size={14} color={palette.textSecondary} />
               <Text style={styles.metadataText}>{cognitive.label}</Text>
             </GapView>
           </GapView>
@@ -349,8 +349,7 @@ function createStyles(palette: any, factor: number) {
     },
     loadingText: {
       marginTop: 12,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       fontSize: Math.round(14 * factor),
     },
     
@@ -380,8 +379,7 @@ function createStyles(palette: any, factor: number) {
     },
     subtitle: {
       fontSize: Math.round(14 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
     },
     
     // Suggestions
@@ -451,8 +449,7 @@ function createStyles(palette: any, factor: number) {
     },
     metadataText: {
       fontSize: Math.round(12 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
     },
     reasonsContainer: {
       flexDirection: 'row',
@@ -516,8 +513,7 @@ function createStyles(palette: any, factor: number) {
     },
     nextStepReason: {
       fontSize: Math.round(11 * factor),
-      color: palette.text,
-      opacity: 0.6,
+      color: palette.textSecondary,
       textAlign: 'center',
     },
     

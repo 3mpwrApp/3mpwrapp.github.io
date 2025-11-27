@@ -169,7 +169,7 @@ export default function WellnessRemindersScreen() {
                 <Text style={[styles.statNumber, { color: palette.primary }]}>
                   {enabledCount}
                 </Text>
-                <Text style={[styles.statLabel, { color: palette.text }]}>
+                <Text style={[styles.statLabel, { color: palette.textSecondary }]}>
                   {t('wellnessReminders.active', 'Active')}
                 </Text>
               </View>
@@ -177,7 +177,7 @@ export default function WellnessRemindersScreen() {
                 <Text style={[styles.statNumber, { color: palette.muted }]}>
                   {reminders.length - enabledCount}
                 </Text>
-                <Text style={[styles.statLabel, { color: palette.text }]}>
+                <Text style={[styles.statLabel, { color: palette.textSecondary }]}>
                   {t('wellnessReminders.inactive', 'Inactive')}
                 </Text>
               </View>
@@ -315,7 +315,7 @@ const ReminderCard = React.memo<{
             {reminder.title}
           </Text>
           <Text
-            style={[styles.reminderSchedule, { color: palette.text }]}
+            style={[styles.reminderSchedule, { color: palette.textSecondary }]}
             maxFontSizeMultiplier={MAX_FONT_SCALE}
           >
             {scheduleText}
@@ -419,7 +419,6 @@ const styles = StyleSheet.create({
   statLabel: {
     fontSize: 12,
     marginTop: 4,
-    opacity: 0.7,
   },
   loadingContainer: {
     alignItems: 'center',
@@ -468,7 +467,6 @@ const styles = StyleSheet.create({
   },
   reminderSchedule: {
     fontSize: 13,
-    opacity: 0.7,
   },
   reminderDetails: {
     padding: 16,
@@ -478,7 +476,6 @@ const styles = StyleSheet.create({
   detailText: {
     fontSize: 14,
     lineHeight: 20,
-    opacity: 0.8,
   },
   detailRow: {
     flexDirection: 'row',
@@ -487,7 +484,6 @@ const styles = StyleSheet.create({
   },
   detailLabel: {
     fontSize: 13,
-    opacity: 0.7,
   },
   testButton: {
     flexDirection: 'row',

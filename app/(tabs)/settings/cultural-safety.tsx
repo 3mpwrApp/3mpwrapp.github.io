@@ -520,8 +520,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     subtitle: {
       fontSize: 16,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       lineHeight: 22,
     },
     sectionHeader: {
@@ -536,8 +535,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     sectionDescription: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       lineHeight: 20,
     },
     settingItem: {
@@ -564,8 +562,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     settingDescription: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       lineHeight: 18,
     },
     disabledText: {
@@ -596,8 +593,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     profileDescription: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       lineHeight: 18,
     },
   });

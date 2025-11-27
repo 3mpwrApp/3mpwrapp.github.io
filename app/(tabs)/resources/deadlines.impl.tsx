@@ -70,13 +70,13 @@ export default function DeadlinesScreen() {
       {showAISuggestions && (
         <View style={s.infoCard}>
           <Text style={s.infoTitle}>🤖 AI Deadline Suggestions</Text>
-          <Text style={{ color: palette.text, opacity: 0.8, fontSize: 13, marginBottom: 8 }}>Based on common appeal timelines</Text>
+          <Text style={{ color: palette.textSecondary, fontSize: 13, marginBottom: 8 }}>Based on common appeal timelines</Text>
           {aiSuggestions.map((sug, idx) => (
             <View key={idx} style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8, paddingBottom: 8, borderBottomWidth: idx < aiSuggestions.length - 1 ? StyleSheet.hairlineWidth : 0, borderBottomColor: palette.muted }}>
               <View style={{ flex: 1 }}>
                 <Text style={{ color: palette.text, fontWeight: '700', fontSize: 14 }}>{sug.title}</Text>
-                <Text style={{ color: palette.text, opacity: 0.7, fontSize: 12 }}>{sug.days} days • {sug.priority.toUpperCase()}</Text>
-                <Text style={{ color: palette.text, opacity: 0.6, fontSize: 11, marginTop: 2 }}>{sug.reason}</Text>
+                <Text style={{ color: palette.textSecondary, fontSize: 12 }}>{sug.days} days • {sug.priority.toUpperCase()}</Text>
+                <Text style={{ color: palette.textSecondary, fontSize: 11, marginTop: 2 }}>{sug.reason}</Text>
               </View>
               <A11yPressable onPress={() => { const due = new Date(); due.setDate(due.getDate() + sug.days); addDeadline({ title: sug.title, dueAt: due.toISOString(), notes: sug.reason }); Alert.alert('Added', `${sug.title} set for ${due.toLocaleDateString()}`); }} style={[s.chip, { backgroundColor: palette.primary }]}><Text style={{ color: palette.onPrimary, fontWeight: '700', fontSize: 12 }}>+ Add</Text></A11yPressable>
             </View>

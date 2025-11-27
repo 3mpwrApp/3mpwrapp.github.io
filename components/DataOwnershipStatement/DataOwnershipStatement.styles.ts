@@ -115,8 +115,7 @@ export const createStyles = (palette: ReturnType<typeof useAppPalette>) => Style
   
   verification: {
     fontSize: 12,
-    color: palette.text,
-    opacity: 0.7,
+    color: palette.textSecondary,
     textAlign: 'center',
     fontStyle: 'italic',
     lineHeight: 16,

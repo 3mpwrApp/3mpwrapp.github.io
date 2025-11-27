@@ -124,8 +124,7 @@ function CampaignsErrorFallback({ error, onReset }: { error: Error | null; onRes
     },
     helpText: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.6,
+      color: palette.textSecondary,
       textAlign: 'center',
       lineHeight: 20,
     },

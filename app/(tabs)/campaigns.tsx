@@ -129,7 +129,7 @@ export default function CampaignsTab() {
     return (
       <View style={createStyles(palette).loadingContainer}>
         <Text style={{ fontSize: 48, marginBottom: 16 }}>📣</Text>
-        <Text style={{ fontSize: 16, color: palette.text, opacity: 0.7 }}>Loading Campaigns...</Text>
+        <Text style={{ fontSize: 16, color: palette.textSecondary }}>Loading Campaigns...</Text>
       </View>
     );
   }

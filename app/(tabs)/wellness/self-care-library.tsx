@@ -1082,7 +1082,6 @@ const styles = StyleSheet.create({
   statLabel: {
     fontSize: 12,
     marginTop: 4,
-    opacity: 0.7,
   },
   searchCard: {
     flexDirection: 'row',
@@ -1243,7 +1242,6 @@ const styles = StyleSheet.create({
   },
   emptySubtext: {
     fontSize: 13,
-    opacity: 0.7,
     marginTop: 6,
   },
 });

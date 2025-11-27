@@ -145,7 +145,7 @@ function ScreenInner() {
               : features;
             if (fMatches.length === 0 && q) {
               return (
-                <Text style={[styles.subtitle, { marginBottom: 0, opacity: 0.7 }]}>\
+                <Text style={[styles.subtitle, { marginBottom: 0, color: palette.textSecondary }]}>\
                   {t('community.toolsEmpty','No tools match your search')}\
                 </Text>
               );

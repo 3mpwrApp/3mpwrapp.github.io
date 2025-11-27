@@ -220,7 +220,7 @@ export default function AICompanion() {
           <View style={s.emptyState}>
             <Text style={s.emptyText}>😊</Text>
             <Text style={s.text}>No mood entries yet.</Text>
-            <Text style={[s.text, { fontSize: 12, opacity: 0.7 }]}>
+            <Text style={[s.text, { fontSize: 12, color: palette.textSecondary }]}>
               Log your first mood above to start tracking!
             </Text>
           </View>
@@ -368,8 +368,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       lineHeight: 20,
     },
     moodDate: {
-      color: palette.text,
-      opacity: 0.6,
+      color: palette.textSecondary,
       fontSize: 12,
       marginTop: 2,
     },

@@ -309,8 +309,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     helpText: {
       fontSize: 13,
-      color: palette.text,
-      opacity: 0.75,
+      color: palette.textSecondary,
       marginBottom: 8,
     },
     label: {
@@ -363,8 +362,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     comingSoonText: {
       fontSize: 13,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginBottom: 4,
     },
     resetButton: {

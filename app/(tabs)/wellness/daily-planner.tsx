@@ -751,7 +751,6 @@ const styles = StyleSheet.create({
   statLabel: {
     fontSize: 12,
     marginTop: 4,
-    opacity: 0.7,
   },
   progressBar: {
     height: 8,
@@ -781,7 +780,6 @@ const styles = StyleSheet.create({
   dateSubtext: {
     fontSize: 12,
     marginTop: 2,
-    opacity: 0.7,
   },
   timelineCard: {
     borderRadius: 12,
@@ -963,7 +961,6 @@ const styles = StyleSheet.create({
   },
   suggestionDuration: {
     fontSize: 12,
-    opacity: 0.7,
   },
   actionsCard: {
     borderRadius: 12,

@@ -165,7 +165,7 @@ export default function UploadQueueStatus({ uploadFn, onRefresh }: UploadQueueSt
 
         {/* Offline Notice */}
         <Text
-          style={{ color: palette.text, opacity: 0.7, fontSize: 12, lineHeight: 18 }}
+          style={{ color: palette.textSecondary, fontSize: 12, lineHeight: 18 }}
           maxFontSizeMultiplier={MAX_FONT_SCALE}
         >
           {t('queue.notice', 'Items will auto-sync when online. Manual retry available anytime.')}

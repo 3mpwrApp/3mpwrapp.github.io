@@ -611,7 +611,7 @@ function OptionCard({ icon, label, description, selected, onPress, palette }: an
         {label}
       </Text>
       <Text
-        style={{ fontSize: 13, color: palette.text, opacity: 0.7 }}
+        style={{ fontSize: 13, color: palette.textSecondary }}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
         {description}
@@ -648,8 +648,7 @@ function createStyles(palette: any, factor: number) {
     },
     progressText: {
       fontSize: Math.round(13 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       textAlign: 'center',
     },
     
@@ -695,8 +694,7 @@ function createStyles(palette: any, factor: number) {
     },
     privacyNote: {
       fontSize: Math.round(14 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       textAlign: 'center',
       marginTop: 20,
       fontStyle: 'italic',
@@ -747,7 +745,7 @@ function createStyles(palette: any, factor: number) {
     },
     skipText: {
       fontSize: Math.round(15 * factor),
-      opacity: 0.7,
+      color: palette.textSecondary,
     },
   });
 }

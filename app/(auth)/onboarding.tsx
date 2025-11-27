@@ -15,6 +15,7 @@ import A11yPressable from '../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../components/A11yWrapper';
 import { GapView } from '../../components/GapView';
 import { useThemeColor } from '../../hooks/useThemeColor';
+import { useAppPalette } from '../../theme/usePalette';
 
 interface AccessibilityPreferences {
   dyslexiaMode: boolean;
@@ -49,6 +50,7 @@ interface AllyProfile {
 export default function OnboardingScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const palette = useAppPalette();
   const textColor = useThemeColor({}, 'text');
   const backgroundColor = useThemeColor({}, 'background');
   
@@ -86,6 +88,7 @@ export default function OnboardingScreen() {
 
   const colors = {
     text: textColor,
+    textSecondary: palette.textSecondary,
     background: backgroundColor,
     primary: textColor,
     secondary: textColor,
@@ -334,7 +337,7 @@ export default function OnboardingScreen() {
             <Ionicons name="contrast" size={20} color={colors.primary} />
             <View style={{ marginLeft: 12, flex: 1 }}>
               <Text style={[styles.preferenceName, { color: colors.text }]}>High Contrast Mode</Text>
-              <Text style={[styles.preferenceDescription, { color: colors.text }]}>Increases color contrast for better visibility</Text>
+              <Text style={[styles.preferenceDescription, { color: colors.textSecondary }]}>Increases color contrast for better visibility</Text>
             </View>
           </View>
           <Switch
@@ -351,7 +354,7 @@ export default function OnboardingScreen() {
             <Ionicons name="text" size={20} color={colors.primary} />
             <View style={{ marginLeft: 12, flex: 1 }}>
               <Text style={[styles.preferenceName, { color: colors.text }]}>Dyslexia-Friendly Font</Text>
-              <Text style={[styles.preferenceDescription, { color: colors.text }]}>Uses font optimized for dyslexia</Text>
+              <Text style={[styles.preferenceDescription, { color: colors.textSecondary }]}>Uses font optimized for dyslexia</Text>
             </View>
           </View>
           <Switch
@@ -403,7 +406,7 @@ export default function OnboardingScreen() {
             <Ionicons name="volume-high" size={20} color={colors.primary} />
             <View style={{ marginLeft: 12, flex: 1 }}>
               <Text style={[styles.preferenceName, { color: colors.text }]}>Audio Descriptions</Text>
-              <Text style={[styles.preferenceDescription, { color: colors.text }]}>Provides spoken descriptions of images</Text>
+              <Text style={[styles.preferenceDescription, { color: colors.textSecondary }]}>Provides spoken descriptions of images</Text>
             </View>
           </View>
           <Switch
@@ -420,7 +423,7 @@ export default function OnboardingScreen() {
             <Ionicons name="radio" size={20} color={colors.primary} />
             <View style={{ marginLeft: 12, flex: 1 }}>
               <Text style={[styles.preferenceName, { color: colors.text }]}>Screen Reader Optimized</Text>
-              <Text style={[styles.preferenceDescription, { color: colors.text }]}>Optimizes layout for screen reader navigation</Text>
+              <Text style={[styles.preferenceDescription, { color: colors.textSecondary }]}>Optimizes layout for screen reader navigation</Text>
             </View>
           </View>
           <Switch
@@ -441,7 +444,7 @@ export default function OnboardingScreen() {
             <Ionicons name="phone-portrait" size={20} color={colors.primary} />
             <View style={{ marginLeft: 12, flex: 1 }}>
               <Text style={[styles.preferenceName, { color: colors.text }]}>Haptic Feedback</Text>
-              <Text style={[styles.preferenceDescription, { color: colors.text }]}>Vibration feedback on interactions</Text>
+              <Text style={[styles.preferenceDescription, { color: colors.textSecondary }]}>Vibration feedback on interactions</Text>
             </View>
           </View>
           <Switch
@@ -963,7 +966,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 20,
     marginBottom: 24,
-    opacity: 0.7,
   },
   preferenceRow: {
     flexDirection: 'row',
@@ -983,7 +985,6 @@ const styles = StyleSheet.create({
   },
   preferenceDescription: {
     fontSize: 12,
-    opacity: 0.6,
     marginTop: 4,
   },
   fontSizeButtons: {

@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useThemeColor } from '../../hooks/useThemeColor';
 import { useTranslation } from '../../i18n';
 import { useProfileLocal } from '../../store/profileLocal';
+import { useAppPalette } from '../../theme/usePalette';
 import { GapView } from '../GapView';
 
 import type { BadgeType } from './UserBadge';
@@ -10,6 +11,7 @@ import UserBadge from './UserBadge';
 
 export default function UserBadgesDisplay() {
   const textColor = useThemeColor({}, 'text');
+  const palette = useAppPalette();
   const { t } = useTranslation();
   const { profile } = useProfileLocal();
 
@@ -30,7 +32,7 @@ export default function UserBadgesDisplay() {
       </Text>
       
       <Text
-        style={[styles.description, { color: textColor, opacity: 0.7 }]}
+        style={[styles.description, { color: palette.textSecondary }]}
       >
         {t('profile.badges.description', 'Recognition for your participation and contributions')}
       </Text>

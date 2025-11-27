@@ -72,7 +72,7 @@ export default function MoodInsights({ entries, currentScore }: MoodInsightsProp
           <Text style={[styles.sectionTitle, { color: palette.primary }]}>
             💡 Suggested for You
           </Text>
-          <Text style={[styles.sectionSubtitle, { color: palette.text }]}>
+          <Text style={[styles.sectionSubtitle, { color: palette.textSecondary }]}>
             Based on your current mood
           </Text>
           <GapView gap={12} style={{ marginTop: 12 }}>
@@ -110,7 +110,7 @@ export default function MoodInsights({ entries, currentScore }: MoodInsightsProp
         <Text style={[styles.sectionTitle, { color: palette.primary }]}>
           🔗 Connect Your Wellness
         </Text>
-        <Text style={[styles.sectionSubtitle, { color: palette.text }]}>
+        <Text style={[styles.sectionSubtitle, { color: palette.textSecondary }]}>
           Explore related tools for holistic support
         </Text>
         <GapView gap={8} style={{ marginTop: 12 }}>
@@ -211,7 +211,7 @@ function StreakCard({ streak, palette }: { streak: MoodStreak; palette: ReturnTy
       <Text style={[styles.cardIcon, { color: palette.text }]}>{info.icon}</Text>
       <View style={{ flex: 1 }}>
         <Text style={[styles.cardTitle, { color: palette.text }]}>{info.title}</Text>
-        <Text style={[styles.cardDescription, { color: palette.text }]}>{info.description}</Text>
+        <Text style={[styles.cardDescription, { color: palette.textSecondary }]}>{info.description}</Text>
       </View>
     </View>
   );
@@ -238,10 +238,10 @@ function CopingStrategyCard({ strategy, palette }: { strategy: CopingStrategy; p
         </Text>
         <Text style={[styles.strategyTitle, { color: palette.text }]}>{strategy.title}</Text>
       </View>
-      <Text style={[styles.strategyDescription, { color: palette.text }]}>
+      <Text style={[styles.strategyDescription, { color: palette.textSecondary }]}>
         {strategy.description}
       </Text>
-      <Text style={[styles.strategyTime, { color: palette.muted }]}>
+      <Text style={[styles.strategyTime, { color: palette.textSecondary }]}>
         ⏱ {strategy.estimatedMinutes} min
       </Text>
     </View>
@@ -280,7 +280,7 @@ function PatternCard({ pattern, palette }: { pattern: MoodPattern; palette: Retu
         </View>
       </View>
       {pattern.suggestion && (
-        <Text style={[styles.patternSuggestion, { color: palette.text }]}>
+        <Text style={[styles.patternSuggestion, { color: palette.textSecondary }]}>
           💡 {pattern.suggestion}
         </Text>
       )}
@@ -352,7 +352,7 @@ const styles = StyleSheet.create({
   },
   sectionSubtitle: {
     fontSize: 14,
-    opacity: 0.7,
+    // Use palette.textSecondary for secondary text - do not apply opacity
   },
   card: {
     flexDirection: 'row',
@@ -372,7 +372,7 @@ const styles = StyleSheet.create({
   },
   cardDescription: {
     fontSize: 14,
-    opacity: 0.8,
+    // Use palette.textSecondary for secondary text - do not apply opacity
   },
   strategyCard: {
     padding: 12,
@@ -395,12 +395,12 @@ const styles = StyleSheet.create({
   },
   strategyDescription: {
     fontSize: 14,
-    opacity: 0.85,
+    // Use palette.textSecondary for secondary text - do not apply opacity
     marginBottom: 6,
   },
   strategyTime: {
     fontSize: 12,
-    opacity: 0.6,
+    // Use palette.textSecondary for secondary text - do not apply opacity
   },
   patternCard: {
     padding: 12,
@@ -430,7 +430,7 @@ const styles = StyleSheet.create({
   },
   patternSuggestion: {
     fontSize: 14,
-    opacity: 0.85,
+    // Use palette.textSecondary for secondary text - do not apply opacity
     marginTop: 8,
     fontStyle: 'italic',
   },

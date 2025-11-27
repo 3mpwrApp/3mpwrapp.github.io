@@ -444,8 +444,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     privacyText: {
       fontSize: Math.round(12 * factor),
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginLeft: 8,
       flex: 1,
       lineHeight: Math.round(16 * factor),

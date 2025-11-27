@@ -365,9 +365,8 @@ function styles(palette: ReturnType<typeof useAppPalette>){
       marginBottom: 4,
     },
     historyDate: {
-      color: palette.text,
+      color: palette.textSecondary,
       fontSize: 12,
-      opacity: 0.6,
     },
   });
 }

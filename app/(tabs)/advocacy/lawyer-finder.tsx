@@ -162,11 +162,11 @@ export default function LawyerFinder() {
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <MaterialCommunityIcons name="star" size={16} color={palette.warning} />
                 <Text style={[s.cardText, { marginLeft: 4, fontWeight: '700' }]}>{rating.avgRating.toFixed(1)}</Text>
-                <Text style={[s.cardText, { marginLeft: 4, opacity: 0.7 }]}>({rating.reviewCount})</Text>
+                <Text style={[s.cardText, { marginLeft: 4, color: palette.textSecondary }]}>({rating.reviewCount})</Text>
               </View>
             )}
           </View>
-          {item.org && <Text style={[s.cardText, { opacity: 0.8, fontSize: 13 }]}>{item.org}</Text>}
+          {item.org && <Text style={[s.cardText, { color: palette.textSecondary, fontSize: 13 }]}>{item.org}</Text>}
           <Text style={s.cardText}>{[item.city, item.province].filter(Boolean).join(', ') || t('advocacy.finder.locationUnknown','—')}</Text>
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 6, marginBottom: 6 }}>
             {item.issues.map((iss: string, idx: number) => (

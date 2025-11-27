@@ -240,7 +240,7 @@ Sincerely,
             <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Calculate</Text>
           </Pressable>
         </View>
-        <Text style={{ color: palette.text, opacity: 0.7, fontSize: 12, marginTop: 6 }}>
+        <Text style={{ color: palette.textSecondary, fontSize: 12, marginTop: 6 }}>
           Standard appeal window: 6 months from denial date
         </Text>
       </View>
@@ -347,7 +347,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     msg: { padding: 12, borderRadius: 8, marginTop: 8 },
     msgUser: { backgroundColor: palette.card },
     msgCoach: { backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
-    msgLabel: { color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600' },
+    msgLabel: { color: palette.textSecondary, marginBottom: 6, fontWeight: '600' },
     msgText: { color: palette.text },
     chipBtn: {
       paddingHorizontal: 12,
@@ -377,8 +377,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     },
     checklistDesc: {
       fontSize: 13,
-      color: palette.text,
-      opacity: 0.8,
+      color: palette.textSecondary,
       marginTop: 4,
     },
     timeline: {

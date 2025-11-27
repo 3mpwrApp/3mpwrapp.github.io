@@ -135,8 +135,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     },
     pointsLabel: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
     },
     progressContainer: {
       width: '100%',
@@ -154,8 +153,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     },
     progressText: {
       fontSize: 12,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       textAlign: 'center',
       marginTop: 8,
     },

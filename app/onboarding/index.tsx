@@ -543,8 +543,7 @@ function createStyles(palette: any) {
     },
     subtitle: {
       fontSize: 16,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       textAlign: 'center',
     },
     progress: {
@@ -578,8 +577,7 @@ function createStyles(palette: any) {
     },
     stepDescription: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.7,
+      color: palette.textSecondary,
       marginBottom: 24,
     },
     optionsGrid: {
@@ -671,8 +669,7 @@ function createStyles(palette: any) {
     },
     skipText: {
       fontSize: 14,
-      color: palette.text,
-      opacity: 0.6,
+      color: palette.textSecondary,
     },
   });
 }

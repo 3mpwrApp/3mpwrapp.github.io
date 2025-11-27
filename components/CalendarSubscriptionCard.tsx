@@ -141,7 +141,7 @@ export default function CalendarSubscriptionCard() {
           ✓ Privacy-first - no tracking
         </Text>
         {lastSync && (
-          <Text style={[styles.feature, { color: palette.text, fontSize: 12, opacity: 0.7, marginTop: 4 }]}>
+          <Text style={[styles.feature, { color: palette.textSecondary, fontSize: 12, marginTop: 4 }]}>
             Last synced: {lastSync}
           </Text>
         )}

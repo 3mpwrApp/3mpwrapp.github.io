@@ -137,13 +137,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     secondaryBtnText: { color: palette.text, fontWeight:'600' },
     infoCard: { backgroundColor: palette.card, borderRadius:8, padding:12, borderWidth:1, borderColor: palette.muted, marginBottom:12 },
     infoTitle: { fontWeight:'700', color: palette.text, marginBottom:4 },
-    infoLine: { color: palette.text, opacity:0.85, marginBottom:2, fontSize:13 },
+    infoLine: { color: palette.textSecondary, marginBottom:2, fontSize:13 },
     progress: { color: palette.text, fontWeight:'600', marginBottom:8 },
     itemRow: { flexDirection:'row', alignItems:'center', paddingVertical:6 },
     checkbox: { width:20, height:20, borderRadius:4, borderWidth:StyleSheet.hairlineWidth, borderColor: palette.muted, backgroundColor:'transparent' },
     checkboxChecked: { backgroundColor: palette.primary, borderColor: palette.primary },
     itemText: { color: palette.text, flex:1 },
-    itemTextDone: { textDecorationLine:'line-through', opacity:0.6 },
-    tip: { color: palette.text, opacity:0.85 },
+    itemTextDone: { textDecorationLine:'line-through', color: palette.textSecondary },
+    tip: { color: palette.textSecondary },
   });
 }
