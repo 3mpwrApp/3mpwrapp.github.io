@@ -75,7 +75,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     id: 'cognitive-scanner',
     title: 'Cognitive Distortion Scanner',
     description: 'Real-time thought pattern recognition',
-    icon: 'brain',
+    icon: 'bulb',
     route: '/wellness/cognitive-scanner',
     color: 'success',
     badge: 'BETA',

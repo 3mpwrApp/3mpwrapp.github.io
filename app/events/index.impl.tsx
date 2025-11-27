@@ -4,8 +4,6 @@ import { useFocusEffect, useRouter } from "expo-router";
 import React from "react";
 import {
     Alert,
-    FlatList,
-    RefreshControl,
     ScrollView,
     StyleSheet,
     Text,
@@ -499,7 +497,10 @@ export default function EventsScreen() {
 
   return (
     <View style={[styles.container, { flex: 1 }]}>
-      <View style={{ paddingHorizontal: 20, paddingTop: 20 }}>
+      <ScrollView 
+        style={{ flex: 1 }}
+        contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 20, paddingBottom: 20 }}
+      >
         <View style={{ position: 'relative', minHeight: 60, marginBottom: 8 }}>
           <Text
             ref={titleRef}
@@ -687,15 +688,9 @@ export default function EventsScreen() {
             </Text>
           </>
         )}
-      </View>
-      
-      <FlatList
-        data={filtered}
-        keyExtractor={(item) => item.id}
-        contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 20, paddingTop: 8 }}
-        ListHeaderComponent={(
-          <>
-            <View style={styles.calHeader}>
+
+        {/* Calendar Section */}
+        <View style={styles.calHeader}>
               <A11yPressable
                 accessibilityRole="button"
                 accessibilityLabel={t('deadlines.prevMonth','Previous')}
@@ -722,106 +717,104 @@ export default function EventsScreen() {
               </A11yPressable>
             </View>
 
-            <View style={styles.weekRow}>
-              {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
-                <Text key={`dow-${i}`} style={styles.weekHdr}>
-                  {d}
-                </Text>
-              ))}
-            </View>
-
-            <View style={styles.calendarContainer}>
-              {daysMatrix.map((week, wi) => (
-              <View key={wi} style={styles.weekRow}>
-                {week.map((d, di) => {
-                  const key = dayKeyFromMatrix(month, d);
-                  const has = !!key && eventsByDay.has(key);
-                  const isSel = !!key && selectedDay === key;
-                  return (
-                    <A11yPressable
-                      key={`${wi}-${di}`}
-                      style={[
-                        styles.dayCell,
-                        isSel && { backgroundColor: palette.primary },
-                        has && { borderColor: palette.primary },
-                      ]}
-                      onPress={() =>
-                        key && setSelectedDay((cur) => (cur === key ? null : key))
-                      }
-                      accessibilityRole="button"
-                      accessibilityLabel={
-                        key ? `${t('common.select','Select')} ${key}${has ? ", " + t('eventsFeature.hasEvents','has events') : ""}` : t('common.empty','Empty')
-                      }
-                      disabled={!key}
-                    >
-                      <Text
-                        style={[
-                          styles.dayText,
-                          isSel && { color: palette.onPrimary },
-                        ]}
-                      >
-                        {d ?? ""}
-                      </Text>
-                    </A11yPressable>
-                  );
-                })}
-              </View>
-            ))}
-            </View>
-
-            {/* Add spacing after calendar matrix */}
-            <View style={{ height: 32 }} />
-
-            {/* Calendar Subscription Card - Auto-sync feature with error boundary */}
-            <ErrorBoundary>
-              <CalendarSubscriptionCard />
-            </ErrorBoundary>
-
-            {/* One-time Export Options */}
-            <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600', marginTop: 16 }}>
-              One-time exports (no auto-updates):
+        <View style={styles.weekRow}>
+          {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
+            <Text key={`dow-${i}`} style={styles.weekHdr}>
+              {d}
             </Text>
-            <GapView gap={8} style={{ flexDirection:'row', marginBottom: 20 }}>
-              <A11yPressable
-                onPress={async () => {
-                  // Export all filtered as single ICS concatenation
-                  try {
-                    const payload = filtered.map(it => makeICS(it as any)).join('\n');
-                    await shareText('events.ics', payload);
-                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { count: filtered.length, mode });
-                  } catch {}
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={t('common.export','Export') + ' ICS'}
-                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export ICS</Text>
-              </A11yPressable>
-              <A11yPressable
-                onPress={async () => {
-                  // Export CSV of filtered
-                  const header = '"Date","Title","Description","Location"';
-                  const rows = filtered.map(it => makeCSVRow(it as any)).join('\n');
-                  await shareText('events.csv', `${header}\n${rows}`);
-                  trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { count: filtered.length, mode });
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={t('common.export','Export') + ' CSV'}
-                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-              >
-                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
-              </A11yPressable>
-            </GapView>
+          ))}
+        </View>
 
-            {/* Add spacing before event list */}
-            <View style={{ marginBottom: 12 }}>
-              <Text style={[styles.subtitle, { fontSize: Math.round(16 * factor), fontWeight: '700', marginBottom: 0 }]}>
-                {filtered.length > 0 ? t('eventsFeature.upcomingEvents', 'Events') : t('eventsFeature.empty','No events match your filters')}
-              </Text>
-            </View>
-          </>
-        )}
-        ListEmptyComponent={(
+        <View style={styles.calendarContainer}>
+          {daysMatrix.map((week, wi) => (
+          <View key={wi} style={styles.weekRow}>
+            {week.map((d, di) => {
+              const key = dayKeyFromMatrix(month, d);
+              const has = !!key && eventsByDay.has(key);
+              const isSel = !!key && selectedDay === key;
+              return (
+                <A11yPressable
+                  key={`${wi}-${di}`}
+                  style={[
+                    styles.dayCell,
+                    isSel && { backgroundColor: palette.primary },
+                    has && { borderColor: palette.primary },
+                  ]}
+                  onPress={() =>
+                    key && setSelectedDay((cur) => (cur === key ? null : key))
+                  }
+                  accessibilityRole="button"
+                  accessibilityLabel={
+                    key ? `${t('common.select','Select')} ${key}${has ? ", " + t('eventsFeature.hasEvents','has events') : ""}` : t('common.empty','Empty')
+                  }
+                  disabled={!key}
+                >
+                  <Text
+                    style={[
+                      styles.dayText,
+                      isSel && { color: palette.onPrimary },
+                    ]}
+                  >
+                    {d ?? ""}
+                  </Text>
+                </A11yPressable>
+              );
+            })}
+          </View>
+        ))}
+        </View>
+
+        {/* Calendar Subscription Card - Auto-sync feature with error boundary */}
+        <View style={{ marginTop: 20, marginBottom: 16 }}>
+          <ErrorBoundary>
+            <CalendarSubscriptionCard />
+          </ErrorBoundary>
+        </View>
+
+        {/* One-time Export Options */}
+        <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600' }}>
+          One-time exports (no auto-updates):
+        </Text>
+        <GapView gap={8} style={{ flexDirection:'row', marginBottom: 24 }}>
+          <A11yPressable
+            onPress={async () => {
+              // Export all filtered as single ICS concatenation
+              try {
+                const payload = filtered.map(it => makeICS(it as any)).join('\n');
+                await shareText('events.ics', payload);
+                trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { count: filtered.length, mode });
+              } catch {}
+            }}
+            accessibilityRole="button"
+            accessibilityLabel={t('common.export','Export') + ' ICS'}
+            style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+          >
+            <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export ICS</Text>
+          </A11yPressable>
+          <A11yPressable
+            onPress={async () => {
+              // Export CSV of filtered
+              const header = '"Date","Title","Description","Location"';
+              const rows = filtered.map(it => makeCSVRow(it as any)).join('\n');
+              await shareText('events.csv', `${header}\n${rows}`);
+              trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { count: filtered.length, mode });
+            }}
+            accessibilityRole="button"
+            accessibilityLabel={t('common.export','Export') + ' CSV'}
+            style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+          >
+            <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
+          </A11yPressable>
+        </GapView>
+
+        {/* Events List Section */}
+        <View style={{ marginBottom: 12 }}>
+          <Text style={[styles.subtitle, { fontSize: Math.round(18 * factor), fontWeight: '700', marginBottom: 8 }]}>
+            {filtered.length > 0 ? t('eventsFeature.upcomingEvents', 'Upcoming Events') : t('eventsFeature.empty','No events match your filters')}
+          </Text>
+        </View>
+
+        {filtered.length === 0 ? (
           <View style={{ paddingVertical: 16 }}>
             <Text style={[styles.subtitle, { marginBottom: 6 }]}>
               {t('eventsFeature.empty','No events match your filters')}
@@ -837,92 +830,90 @@ export default function EventsScreen() {
               </A11yPressable>
             )}
           </View>
-        )}
-        renderItem={({ item }) => (
-          <View style={{ marginBottom:12 }}>
-            <EventDetailCard 
-              event={item}
-              onPress={() => {
-                if (router) {
-                  router.push({ pathname: "/events/[id]", params: { id: item.id } } as any);
-                }
-              }}
-            />
-            <EventActionsBar 
-              event={item} 
-              palette={palette}
-              showEditDelete={item.id.startsWith('evt-')}
-              showSubmitTo3mpwr={item.id.startsWith('evt-')}
-              onEdit={() => {
-                // Navigate to event detail page for editing
-                if (router) {
-                  router.push({ pathname: "/events/[id]", params: { id: item.id } });
-                }
-              }}
-              onDelete={async () => {
-                // Delete from local state (optimistic update)
-                setBaseItems(prev => prev.filter(e => e.id !== item.id));
-                
-                // Remove from local storage
-                try {
-                  const cached = await AsyncStorage.getItem('events:local:v1');
-                  if (cached) {
-                    const localEvents = JSON.parse(cached);
-                    const updated = localEvents.filter((e: any) => e.id !== item.id);
-                    await AsyncStorage.setItem('events:local:v1', JSON.stringify(updated));
+        ) : (
+          filtered.map((item) => (
+            <View key={item.id} style={{ marginBottom:12 }}>
+              <EventDetailCard 
+                event={item}
+                onPress={() => {
+                  if (router) {
+                    router.push({ pathname: "/events/[id]", params: { id: item.id } } as any);
                   }
-                } catch (err) {
-                  console.warn('[Events] Failed to update cache:', err);
-                }
-                
-                // Auto-sync deletion to cloud (no manual intervention)
-                setSyncStatus('syncing');
-                try {
-                  // Delete from both production and preview collections
-                  const prodDeleteSuccess = await deleteEventFromProduction(item.id, 'events_production');
-                  const previewDeleteSuccess = await deleteEventFromProduction(item.id, 'events_preview');
+                }}
+              />
+              <EventActionsBar 
+                event={item} 
+                palette={palette}
+                showEditDelete={item.id.startsWith('evt-')}
+                showSubmitTo3mpwr={item.id.startsWith('evt-')}
+                onEdit={() => {
+                  // Navigate to event detail page for editing
+                  if (router) {
+                    router.push({ pathname: "/events/[id]", params: { id: item.id } });
+                  }
+                }}
+                onDelete={async () => {
+                  // Delete from local state (optimistic update)
+                  setBaseItems(prev => prev.filter(e => e.id !== item.id));
                   
-                  const deleteSuccess = prodDeleteSuccess && previewDeleteSuccess;
+                  // Remove from local storage
+                  try {
+                    const cached = await AsyncStorage.getItem('events:local:v1');
+                    if (cached) {
+                      const localEvents = JSON.parse(cached);
+                      const updated = localEvents.filter((e: any) => e.id !== item.id);
+                      await AsyncStorage.setItem('events:local:v1', JSON.stringify(updated));
+                    }
+                  } catch (err) {
+                    console.warn('[Events] Failed to update cache:', err);
+                  }
                   
-                  if (deleteSuccess) {
-                    setSyncStatus('success');
-                    setLastSyncTime(Date.now());
-                    Alert.alert(
-                      '✅ Event Deleted', 
-                      `"${item.title}" has been removed from the 3mpwr website and will disappear from calendar feeds shortly.`
-                    );
-                    trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: true, autoSync: true });
-                  } else if (prodDeleteSuccess || previewDeleteSuccess) {
+                  // Auto-sync deletion to cloud (no manual intervention)
+                  setSyncStatus('syncing');
+                  try {
+                    // Delete from both production and preview collections
+                    const prodDeleteSuccess = await deleteEventFromProduction(item.id, 'events_production');
+                    const previewDeleteSuccess = await deleteEventFromProduction(item.id, 'events_preview');
+                    
+                    const deleteSuccess = prodDeleteSuccess && previewDeleteSuccess;
+                    
+                    if (deleteSuccess) {
+                      setSyncStatus('success');
+                      setLastSyncTime(Date.now());
+                      Alert.alert(
+                        '✅ Event Deleted', 
+                        `"${item.title}" has been removed from the 3mpwr website and will disappear from calendar feeds shortly.`
+                      );
+                      trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: true, autoSync: true });
+                    } else if (prodDeleteSuccess || previewDeleteSuccess) {
+                      setSyncStatus('error');
+                      Alert.alert(
+                        '⚠️ Partially Deleted', 
+                        `"${item.title}" removed from your device and partially synced. Cloud sync will retry automatically.`
+                      );
+                      trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false, partial: true });
+                    } else {
+                      setSyncStatus('error');
+                      Alert.alert(
+                        '📱 Deleted Locally', 
+                        `"${item.title}" removed from your device. Cloud sync will retry automatically when available.`
+                      );
+                      trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false });
+                    }
+                  } catch (err) {
+                    console.warn('[Events] Failed to delete from cloud:', err);
                     setSyncStatus('error');
-                    Alert.alert(
-                      '⚠️ Partially Deleted', 
-                      `"${item.title}" removed from your device and partially synced. Cloud sync will retry automatically.`
-                    );
-                    trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false, partial: true });
-                  } else {
-                    setSyncStatus('error');
-                    Alert.alert(
-                      '📱 Deleted Locally', 
-                      `"${item.title}" removed from your device. Cloud sync will retry automatically when available.`
-                    );
+                    Alert.alert('📱 Deleted Locally', `"${item.title}" removed from this device.`);
                     trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false });
+                  } finally {
+                    setTimeout(() => setSyncStatus('idle'), 3000);
                   }
-                } catch (err) {
-                  console.warn('[Events] Failed to delete from cloud:', err);
-                  setSyncStatus('error');
-                  Alert.alert('📱 Deleted Locally', `"${item.title}" removed from this device.`);
-                  trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false });
-                } finally {
-                  setTimeout(() => setSyncStatus('idle'), 3000);
-                }
-              }}
-            />
-          </View>
+                }}
+              />
+            </View>
+          ))
         )}
-        refreshControl={
-          <RefreshControl refreshing={loading} onRefresh={reload} />
-        }
-      />
+      </ScrollView>
     </View>
   );
 }
@@ -990,29 +981,32 @@ function createStyles(
     weekRow: {
       flexDirection: "row",
       justifyContent: "space-between",
-      marginBottom: 1,
+      marginBottom: 2,
     },
     calendarContainer: {
-      maxHeight: 140, // Further reduced for web
-      marginBottom: 12,
+      width: '100%',
+      marginBottom: 16,
     },
     weekHdr: {
-      width: 24,
+      flex: 1,
       textAlign: "center",
       color: palette.text,
       opacity: 0.7,
-      fontSize: 10,
+      fontSize: 11,
+      paddingVertical: 4,
     },
     dayCell: {
-      width: 24,
-      height: 24,
+      flex: 1,
+      aspectRatio: 1,
+      maxHeight: 40,
       borderRadius: 4,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
       alignItems: "center",
       justifyContent: "center",
+      margin: 1,
     },
-    dayText: { color: palette.text, fontSize: 10 },
+    dayText: { color: palette.text, fontSize: 12 },
   });
 }
 

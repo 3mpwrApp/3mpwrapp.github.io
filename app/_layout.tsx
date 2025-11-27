@@ -61,6 +61,13 @@ if (__DEV__) {
     /VirtualizedLists should never be nested/i,
     /componentWillReceiveProps has been renamed/i,
     /componentWillMount has been renamed/i,
+    /props\.pointerEvents is deprecated/i,
+    /\[Firebase\] App initialized/i,
+    /\[Events\]/i,
+    /\[UpdateSplashScreen\]/i,
+    /Community channels pre-loaded/i,
+    /Security framework initialized/i,
+    // DO NOT SUPPRESS [HomeScreen] or [Login] logs - we need to see these for debugging
   ];
   
   const shouldSuppress = (message: string) => {
@@ -80,8 +87,9 @@ if (__DEV__) {
     const isSentryError = /Cannot read property '__extends' of undefined/.test(message) ||
                           /InternalBytecode/.test(message);
     const isExpoGoWarning = shouldSuppress(message);
+    const isVirtualizedListWarning = /VirtualizedLists should never be nested/i.test(message);
     
-    if (!isSentryError && !isExpoGoWarning) {
+    if (!isSentryError && !isExpoGoWarning && !isVirtualizedListWarning) {
       originalError.apply(console, args);
     }
   };
@@ -164,11 +172,6 @@ import { ToastViewport } from "../utils/toast";
 // removed getFirebaseAnalytics direct import (handled via telemetry module)
 
 export default function RootLayout() {
-  // EMERGENCY DEBUG
-  React.useEffect(() => {
-    console.warn('🚨 [RootLayout] Component mounted');
-  }, []);
-
   const [_renderError, _setRenderError] = React.useState<Error | null>(null);
   
   // Ensure vector icon fonts are loaded before rendering UI
@@ -176,10 +179,6 @@ export default function RootLayout() {
     ...Ionicons.font,
     ...MaterialCommunityIcons.font,
   });
-  
-  React.useEffect(() => {
-    console.warn('🚨 [RootLayout] Fonts loaded:', fontsLoaded, 'Error:', fontsError);
-  }, [fontsLoaded, fontsError]);
 
   const [reduceMotion, setReduceMotion] = React.useState(false);
 
@@ -325,6 +324,10 @@ export default function RootLayout() {
                                             animation: reduceMotion ? "none" : "default",
                                           }}
                                         >
+                                          <Stack.Screen
+                                            name="index"
+                                            options={{ headerShown: false }}
+                                          />
                                           <Stack.Screen
                                             name="profile"
                                             options={{ headerShown: false }}

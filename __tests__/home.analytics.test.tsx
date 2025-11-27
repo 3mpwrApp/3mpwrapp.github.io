@@ -16,8 +16,11 @@ jest.mock('../services/toolRegistry', () => ({
   resolveToolRoute: () => '/',
   filterToolsByFlags: () => ([{ id:'coach', category:'advocacy', i18nLabelKey:'homeGuide.tool.coach', icon:'coach', a11yLabelKey:'a11y.tool.coach' }])
 }));
-// Mock expo-router Link to avoid navigation stack import chain
-jest.mock('expo-router', () => ({ Link: ({ children, onPress }: any) => <div onClick={onPress}>{children}</div> }));
+// Mock expo-router to avoid navigation stack import chain
+jest.mock('expo-router', () => ({
+  Link: ({ children, onPress }: any) => <div onClick={onPress}>{children}</div>,
+  useRouter: () => ({ push: jest.fn(), replace: jest.fn(), back: jest.fn() })
+}));
 // Mock react-native primitives for web test environment
 jest.mock('react-native', () => ({
   Pressable: (p:any) => <button onClick={p.onPress} aria-label={p.accessibilityLabel}>{p.children}</button>,

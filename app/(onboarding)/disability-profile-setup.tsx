@@ -84,7 +84,7 @@ export default function DisabilityProfileSetup() {
       lastUpdated: Date.now(),
     });
     setSaving(false);
-    router.replace('/(tabs)');
+    router.replace('/');
   };
   
   const handleFinish = async () => {
@@ -107,7 +107,7 @@ export default function DisabilityProfileSetup() {
       lastUpdated: Date.now(),
     });
     setSaving(false);
-    router.replace('/(tabs)');
+    router.replace('/');
   };
   
   // ============================================================================

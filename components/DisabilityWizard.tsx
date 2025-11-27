@@ -5,7 +5,7 @@
  */
 
 import { Ionicons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -39,6 +39,7 @@ export default function DisabilityWizard({
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
+  const router = useRouter();
   
   // Hook now handles errors internally
   const { suggestions, loading, error } = useDisabilityWizard();
@@ -105,6 +106,7 @@ export default function DisabilityWizard({
             onPress={() => setSelectedTool(suggestion.toolId)}
             styles={styles}
             palette={palette}
+            router={router}
           />
         ))}
       </ScrollView>
@@ -126,6 +128,7 @@ export default function DisabilityWizard({
                 suggestion={step}
                 styles={styles}
                 palette={palette}
+                router={router}
               />
             ))}
           </ScrollView>
@@ -133,21 +136,20 @@ export default function DisabilityWizard({
       )}
       
       {/* Customize Link */}
-      <Link href="/(tabs)/settings" asChild={true}>
-        <A11yPressable
-          style={styles.customizeButton}
-          accessibilityRole="button"
-          accessibilityLabel={t('wizard.customize', 'Customize wizard preferences')}
-          hitSlop={HIT_SLOP_8}
-        >
-          <GapView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} gap={6}>
-            <Ionicons name="settings-outline" size={18} color={palette.primary} />
-            <Text style={styles.customizeText}>
-              {t('wizard.customize', 'Customize preferences')}
-            </Text>
-          </GapView>
-        </A11yPressable>
-      </Link>
+      <A11yPressable
+        style={styles.customizeButton}
+        accessibilityRole="button"
+        accessibilityLabel={t('wizard.customize', 'Customize wizard preferences')}
+        hitSlop={HIT_SLOP_8}
+        onPress={() => router.push('/(tabs)/settings')}
+      >
+        <GapView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} gap={6}>
+          <Ionicons name="settings-outline" size={18} color={palette.primary} />
+          <Text style={styles.customizeText}>
+            {t('wizard.customize', 'Customize preferences')}
+          </Text>
+        </GapView>
+      </A11yPressable>
     </View>
   );
 }
@@ -162,9 +164,10 @@ interface SuggestionCardProps {
   onPress: () => void;
   styles: any;
   palette: any;
+  router: ReturnType<typeof useRouter>;
 }
 
-function SuggestionCard({ suggestion, showReasons, onPress, styles, palette }: SuggestionCardProps) {
+function SuggestionCard({ suggestion, showReasons, onPress, styles, palette, router }: SuggestionCardProps) {
   const { t } = useTranslation();
   
   // Get energy level icon and color
@@ -186,15 +189,14 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette }: S
   const cognitive = cognitiveConfig[suggestion.cognitiveLoad];
   
   return (
-    <Link href={suggestion.route as any} asChild={true}>
-      <A11yPressable
-        style={[styles.suggestionCard, suggestion.dayOfRotation !== undefined && styles.featuredCard]}
-        accessibilityRole="button"
-        accessibilityLabel={`${suggestion.title}. ${suggestion.description}. ${energy.label}. ${cognitive.label}. ${suggestion.estimatedTime} minutes.`}
-        accessibilityHint={t('wizard.cardHint', 'Double tap to open this feature')}
-        hitSlop={HIT_SLOP_8}
-        onPress={onPress}
-      >
+    <A11yPressable
+      style={[styles.suggestionCard, suggestion.dayOfRotation !== undefined && styles.featuredCard]}
+      accessibilityRole="button"
+      accessibilityLabel={`${suggestion.title}. ${suggestion.description}. ${energy.label}. ${cognitive.label}. ${suggestion.estimatedTime} minutes.`}
+      accessibilityHint={t('wizard.cardHint', 'Double tap to open this feature')}
+      hitSlop={HIT_SLOP_8}
+      onPress={() => { onPress(); router.push(suggestion.route as any); }}
+    >
         {/* Featured Badge */}
         {suggestion.dayOfRotation !== undefined && (
           <GapView style={styles.featuredBadge} gap={4}>
@@ -245,7 +247,6 @@ function SuggestionCard({ suggestion, showReasons, onPress, styles, palette }: S
           )}
         </View>
       </A11yPressable>
-    </Link>
   );
 }
 
@@ -257,17 +258,18 @@ interface NextStepCardProps {
   suggestion: WizardSuggestion;
   styles: any;
   palette: any;
+  router: ReturnType<typeof useRouter>;
 }
 
-function NextStepCard({ suggestion, styles, palette }: NextStepCardProps) {
+function NextStepCard({ suggestion, styles, palette, router }: NextStepCardProps) {
   return (
-    <Link href={suggestion.route as any} asChild={true}>
-      <A11yPressable
-        style={styles.nextStepCard}
-        accessibilityRole="button"
-        accessibilityLabel={`${suggestion.title}. ${suggestion.reasoning[0]?.label || ''}`}
-        hitSlop={HIT_SLOP_8}
-      >
+    <A11yPressable
+      style={styles.nextStepCard}
+      accessibilityRole="button"
+      accessibilityLabel={`${suggestion.title}. ${suggestion.reasoning[0]?.label || ''}`}
+      hitSlop={HIT_SLOP_8}
+      onPress={() => router.push(suggestion.route as any)}
+    >
         <View style={[styles.nextStepIcon, { backgroundColor: palette.surface }]}>
           <Ionicons name={suggestion.icon as any} size={24} color={palette.primary} />
         </View>
@@ -280,7 +282,6 @@ function NextStepCard({ suggestion, styles, palette }: NextStepCardProps) {
           </Text>
         )}
       </A11yPressable>
-    </Link>
   );
 }
 

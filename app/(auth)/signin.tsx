@@ -41,13 +41,19 @@ export default function LoginScreen() {
       setError("");
       logger.log('[Login] ===== STARTING LOGIN PROCESS =====');
       logger.log('[Login] Email:', email.trim());
-      await signInWithEmailAndPassword(auth, email.trim(), password);
+      const userCredential = await signInWithEmailAndPassword(auth, email.trim(), password);
       logger.log('[Login] ===== LOGIN SUCCESSFUL =====');
+      logger.log('[Login] User ID:', userCredential.user.uid);
       logger.log('[Login] Firebase auth state updated');
-      logger.log('[Login] AuthContext will detect this change');
-      logger.log('[Login] app/index.tsx will handle navigation to /(tabs)');
+      logger.log('[Login] Waiting for auth propagation...');
+      
+      // Wait longer for auth state to fully propagate
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      logger.log('[Login] Auth state settled, navigation will happen via app/index.tsx');
       logger.log('[Login] =====================================');
-      // Don't manually navigate - let AuthContext handle it via app/index.tsx
+      // Let the auth state change trigger navigation via app/index.tsx
+      // Don't manually navigate - this prevents route conflicts
     } catch (err: any) {
       logger.error('[Login] Login failed:', err);
       logger.error('[Login] Error code:', err?.code);
@@ -92,10 +98,15 @@ export default function LoginScreen() {
       await signInGuest();
       logger.log('[Login] ===== GUEST MODE SUCCESSFUL =====');
       logger.log('[Login] Firebase auth state updated (anonymous user)');
-      logger.log('[Login] AuthContext will detect this change');
-      logger.log('[Login] app/index.tsx will handle navigation to /(tabs)');
+      logger.log('[Login] Waiting for auth propagation...');
+      
+      // Wait longer for auth state to fully propagate
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      logger.log('[Login] Auth state settled, navigation will happen via app/index.tsx');
       logger.log('[Login] ========================================');
-      // Don't manually navigate - let AuthContext handle it via app/index.tsx
+      // Let the auth state change trigger navigation via app/index.tsx
+      // Don't manually navigate - this prevents route conflicts
     } catch (err) {
       logger.error('[Login] Guest mode failed:', err);
       Alert.alert(t("common.errorTitle", "Error"), t("auth.guestModeFailed", "Failed to enter guest mode"));

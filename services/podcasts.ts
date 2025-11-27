@@ -1,9 +1,9 @@
-import { podcasts as local } from "../data/podcasts";
 import type { Podcast } from "../data/podcasts";
+import { podcasts as local } from "../data/podcasts";
 
 import { retry } from "./api";
-import { fetchInjuredWorkerVideos } from "./youtube";
 import { getCachedJSON, setCachedJSON } from "./cache";
+import { fetchInjuredWorkerVideos } from "./youtube";
 
 const BASE = process.env.EXPO_PUBLIC_API_BASE ?? "";
 const HAS_YT = !!process.env.EXPO_PUBLIC_YT_API_KEY;
@@ -14,9 +14,14 @@ export const fetchPodcasts = async (): Promise<Podcast[]> => {
   // 1) Try remote API if provided
   if (BASE) {
     try {
-      const data = await retry(async () =>
-        (await fetch(`${BASE}/podcasts`)).json(),
-      );
+      const data = await retry(async () => {
+        const res = await fetch(`${BASE}/podcasts`);
+        if (!res.ok && res.status === 404) {
+          // Silently fail on 404 (expected in dev mode)
+          throw new Error('Not found');
+        }
+        return res.json();
+      });
       if (Array.isArray(data) && data.length) {
         setCachedJSON(CACHE_KEY, data).catch(() => {});
         return data as Podcast[];

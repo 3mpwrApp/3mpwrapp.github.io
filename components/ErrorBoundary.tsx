@@ -161,7 +161,7 @@ function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onR
 
   const handleGoHome = () => {
     onReset();
-    router.replace('/(tabs)');
+    router.replace('/');
   };
 
   const handleReload = () => {

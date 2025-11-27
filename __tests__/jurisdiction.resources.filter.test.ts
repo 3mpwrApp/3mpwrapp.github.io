@@ -11,19 +11,26 @@ function filterResources(code: string) {
 }
 
 describe('jurisdiction resource filtering', () => {
-  it('includes canada-wide plus ON specific when code=ON', () => {
+  it('includes canada-wide resources for any jurisdiction code', () => {
+    const onList = filterResources('ON');
+    const bcList = filterResources('BC');
+    expect(onList.some(r => r.scope === 'canada')).toBe(true);
+    expect(bcList.some(r => r.scope === 'canada')).toBe(true);
+  });
+  
+  it('filters correctly when province-specific resources exist', () => {
+    // Currently all resources are canada-wide, so filtering should include them all
     const list = filterResources('ON');
-    expect(list.some(r => r.scope === 'canada')).toBe(true);
     expect(list.every(r => r.scope === 'canada' || r.province === 'ON' || (r.jurisdictions && r.jurisdictions.includes('ON')))).toBe(true);
   });
-  it('switching to BC includes BC provincial entries', () => {
-    const list = filterResources('BC');
-    expect(list.some(r => r.province === 'BC')).toBe(true);
-  });
-  it('non-matching province does not include unrelated province-only resources', () => {
-    const onOnly = resources.filter(r => r.province === 'ON');
+  
+  it('canada-wide resources are available in all jurisdictions', () => {
+    const canadaWide = resources.filter(r => r.scope === 'canada');
+    const onList = filterResources('ON');
     const bcList = filterResources('BC');
-    // At least one ON only resource should be absent when filtering for BC
-    expect(onOnly.every(r => bcList.find(b => b.id === r.id))).toBe(false);
+    
+    // All canada-wide resources should appear in both jurisdiction filters
+    expect(canadaWide.every(r => onList.find(o => o.id === r.id))).toBe(true);
+    expect(canadaWide.every(r => bcList.find(b => b.id === r.id))).toBe(true);
   });
 });

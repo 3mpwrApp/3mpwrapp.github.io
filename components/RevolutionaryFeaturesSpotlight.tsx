@@ -1,4 +1,4 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -44,27 +44,27 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     beta: true,
   },
   {
-    id: 'cognitive-distortion',
+    id: 'cognitive-scanner',
     icon: '🧠',
     title: 'Cognitive Distortion Scanner',
     description: 'Real-time thought pattern analysis and reframing',
-    href: '/(tabs)/wellness/cognitive-distortion-scanner',
+    href: '/(tabs)/wellness/cognitive-scanner',
     beta: true,
   },
   {
-    id: 'energy-quantum',
+    id: 'energy-mood-dashboard',
     icon: '🌊',
-    title: 'Energy Quantum Mechanics',
-    description: 'Visualize energy flow with wave-particle tracking',
-    href: '/(tabs)/wellness/energy-quantum',
+    title: 'Energy & Mood Dashboard',
+    description: 'Quantum energy states with 24hr mood forecasting',
+    href: '/(tabs)/wellness/energy-mood-dashboard',
     beta: true,
   },
   {
-    id: 'symptom-symphony',
-    icon: '🎵',
-    title: 'Symptom Symphony',
-    description: 'Multi-modal symptom tracking with AI pattern detection',
-    href: '/(tabs)/wellness/symptom-symphony',
+    id: 'haptic-language',
+    icon: '📳',
+    title: 'Haptic Language',
+    description: 'Learn 14 vibration patterns with unique meanings',
+    href: '/(tabs)/wellness/haptic-language',
     beta: true,
   },
 ];
@@ -73,15 +73,17 @@ export const RevolutionaryFeaturesSpotlight = React.memo(() => {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const { factor } = useTextScale();
+  const router = useRouter();
   const styles = React.useMemo(() => createStyles(palette, factor), [palette, factor]);
 
   const [dismissed, setDismissed] = React.useState(false);
   const [error, setError] = React.useState(false);
 
-  // Catch any rendering errors
+  // Catch any rendering errors (web only)
   React.useEffect(() => {
-    const handleError = () => setError(true);
-    if (typeof window !== 'undefined' && Platform.OS === 'web') {
+    // Only set up error listener on web platform where window.addEventListener exists
+    if (typeof window !== 'undefined' && typeof window.addEventListener === 'function' && Platform.OS === 'web') {
+      const handleError = () => setError(true);
       window.addEventListener('error', handleError);
       return () => window.removeEventListener('error', handleError);
     }
@@ -116,34 +118,39 @@ export const RevolutionaryFeaturesSpotlight = React.memo(() => {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
       >
-        {REVOLUTIONARY_FEATURES.map((feature) => (
-          <Link key={feature.id} href={feature.href as any} asChild>
-            <A11yPressable
-              style={styles.featureCard}
-              accessibilityRole="button"
-              accessibilityLabel={`${feature.title}. ${feature.description}`}
-            >
-              <Text style={styles.featureIcon}>{feature.icon}</Text>
-              <View style={[styles.featureContent, { marginLeft: 12 }]}>
-                <View style={styles.featureTitleRow}>
-                  <Text style={styles.featureTitle}>{feature.title}</Text>
-                  {feature.beta && (
-                    <View style={[styles.betaBadge, { marginLeft: 6 }]}>
-                      <Text style={styles.betaText}>BETA</Text>
-                    </View>
-                  )}
+        {REVOLUTIONARY_FEATURES.map((feature) => {
+          // Verify route exists before rendering link
+          const safeHref = feature.href || '/(tabs)/wellness/revolutionary-features';
+          
+          return (
+              <A11yPressable
+                key={feature.id}
+                onPress={() => router.push(safeHref as any)}
+                style={styles.featureCard}
+                accessibilityRole="button"
+                accessibilityLabel={`${feature.title}. ${feature.description}`}
+              >
+                <Text style={styles.featureIcon}>{feature.icon}</Text>
+                <View style={[styles.featureContent, { marginLeft: 12 }]}>
+                  <View style={styles.featureTitleRow}>
+                    <Text style={styles.featureTitle}>{feature.title}</Text>
+                    {feature.beta && (
+                      <View style={[styles.betaBadge, { marginLeft: 6 }]}>
+                        <Text style={styles.betaText}>BETA</Text>
+                      </View>
+                    )}
+                  </View>
+                  <Text style={styles.featureDescription} numberOfLines={2}>
+                    {feature.description}
+                  </Text>
                 </View>
-                <Text style={styles.featureDescription} numberOfLines={2}>
-                  {feature.description}
-                </Text>
-              </View>
-            </A11yPressable>
-          </Link>
-        ))}
+              </A11yPressable>
+          );
+        })}
       </ScrollView>
 
-      <Link href="/(tabs)/wellness/revolutionary-features" asChild>
         <A11yPressable
+          onPress={() => router.push('/(tabs)/wellness/revolutionary-features')}
           style={styles.viewAllButton}
           accessibilityRole="button"
           accessibilityLabel="View all revolutionary features"
@@ -152,7 +159,6 @@ export const RevolutionaryFeaturesSpotlight = React.memo(() => {
             {t('revolutionaryFeatures.spotlight.viewAll', 'View All Features')} →
           </Text>
         </A11yPressable>
-      </Link>
     </View>
   );
 });

@@ -139,8 +139,12 @@ const ThemedHeader = React.memo(() => {
       <Pressable
         style={styles.brand}
         onPress={() => {
-          // Navigate to home - explicitly navigate to index route
-          router.replace("/(tabs)/index" as Href);
+          try {
+            // Navigate to home index
+            router.push("/" as Href);
+          } catch (err) {
+            console.error('Home navigation error:', err);
+          }
         }}
         accessibilityRole="link"
         accessibilityLabel="Go to Home"
@@ -308,7 +312,13 @@ const ThemedHeader = React.memo(() => {
 
         {/* Settings */}
         <Pressable
-          onPress={() => router.push("/(tabs)/settings" as Href)}
+          onPress={() => {
+            try {
+              router.push("/(tabs)/settings" as Href);
+            } catch (err) {
+              console.error('Settings navigation error:', err);
+            }
+          }}
           accessibilityRole="button"
           accessibilityLabel="Open settings"
           hitSlop={HIT_SLOP_8}
@@ -387,13 +397,13 @@ const ThemedHeader = React.memo(() => {
             accessibilityRole="button"
             accessibilityLabel="Close menu"
             onPress={() => setMenuOpen(false)}
-            style={[styles.menuBackdrop, { pointerEvents: 'auto' }]}
+            style={styles.menuBackdrop}
           />
           <View
             accessibilityLabel="Main menu"
             accessible={true}
             accessibilityViewIsModal={true}
-            style={[styles.menuWrap, { pointerEvents: 'auto' }]}
+            style={styles.menuWrap}
           >
             <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>
               <MenuSection title="Tools & Resources" palette={palette} />
@@ -500,17 +510,23 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
     menuWrap: {
       position: "absolute",
       right: 12,
-      top: Math.max(insets.top, 10) + 42, // Dynamic positioning based on safe area
+      top: Math.max(insets.top, 10) + 50, // Increased spacing to prevent overlap
       backgroundColor: palette.surface ?? palette.background,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
       borderRadius: 10,
       paddingVertical: 6,
-      minWidth: 180,
-      zIndex: 999,
+      minWidth: 200,
+      maxHeight: 400,
+      zIndex: 9999, // Increased z-index to ensure menu appears above everything
+      elevation: 10, // Android elevation
+      shadowColor: '#000', // iOS shadow
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
       // Improve layering/visibility on web
       ...(typeof navigator !== 'undefined' && /WebKit|Firefox|Chrome|Safari/.test(navigator.userAgent || '')
-        ? { boxShadow: '0 8px 24px rgba(0,0,0,0.2)' } as any
+        ? { boxShadow: '0 8px 24px rgba(0,0,0,0.3)' } as any
         : {}),
     },
     menuSection: {
@@ -527,8 +543,9 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
       right: 0,
       top: 0,
       bottom: 0,
-      backgroundColor: "rgba(0,0,0,0.2)",
-      zIndex: 998,
+      backgroundColor: "rgba(0,0,0,0.3)",
+      zIndex: 9998, // Just below menu
+      pointerEvents: 'auto',
     },
     social: { flexDirection: "row", marginEnd: 8 },
     countText: { color: palette.text, opacity: 1, fontSize: 14 },

@@ -49,6 +49,26 @@ export type Event = {
 // by `data/holidays-ca.ts` and shown as system items in the Events screen.
 export const events: Event[] = [
   {
+    id: 'evt-hdiwg-iwh-persistent-pain-presentation',
+    title: 'HDIWG - Institute for Work & Health: Persistent Pain Research Presentation',
+    description: 'Hamilton & District Injured Workers Group (HDIWG) is hosting the Institute for Work and Health for a presentation about their research on Persistent Pain following a work-related injury or illness.\n\nA Q & A session will follow the presentation.\n\nIn-Person: 709 Barton Street E, Hamilton\n• Please arrive at least 15 minutes early to settle in\n\nNot feeling well? Can\'t make it in-person?\n• Register to receive the Zoom link: https://us06web.zoom.us/meeting/register/OD1_phD8QtmdjE0M97KsHg#/registration\n\nWe are looking forward to this educational opportunity!\n\nMore info: hdiwg.net',
+    date: '2025-12-01T13:00:00-05:00', // December 1, 2025 at 1:00 PM EST
+    location: '709 Barton Street E, Hamilton, ON',
+    isVirtual: true, // Hybrid event - both in-person and virtual
+    virtualLink: 'https://us06web.zoom.us/meeting/register/OD1_phD8QtmdjE0M97KsHg#/registration',
+    category: 'educational',
+    tags: ['injured-workers', 'hamilton', 'persistent-pain', 'research', 'health', 'iwh', 'hdiwg'],
+    organizer: 'Hamilton & District Injured Workers Group (HDIWG)',
+    organizerContact: 'hdiwg.net',
+    status: 'published',
+    registrationRequired: true,
+    registrationLink: 'https://us06web.zoom.us/meeting/register/OD1_phD8QtmdjE0M97KsHg#/registration',
+    wheelchairAccessible: true,
+    stepFree: true,
+    energyCost: 'low',
+    accessibilityNotes: 'Hybrid event with both in-person and virtual attendance options. Please arrive 15 minutes early if attending in-person.',
+  },
+  {
     id: 'evt-oniwg-rally-dec8-2025',
     title: 'ONIWG - Support Injured Workers Rally',
     description: 'Join the Ontario Network of Injured Workers Groups (ONIWG) as we rally to support injured workers and demand justice for those who have been harmed on the job.\n\nStand with injured workers as we advocate for:\n• Fair treatment and adequate support for injured workers\n• Proper workplace safety enforcement\n• Access to necessary medical care and rehabilitation\n• Dignity and respect for all injured workers\n\nYour presence matters. Together we can make a difference for injured workers across Ontario.',

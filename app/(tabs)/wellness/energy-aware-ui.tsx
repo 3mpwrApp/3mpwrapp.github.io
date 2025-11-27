@@ -30,7 +30,7 @@ export default function EnergyAwareUIScreen() {
     crashed: 'battery-dead',
     depleted: 'battery-charging',
     conserving: 'battery-half',
-    baseline: 'battery-three-quarters',
+    baseline: 'battery-charging',
     energized: 'battery-full',
     hyperfocus: 'flash',
     manic_warning: 'warning',

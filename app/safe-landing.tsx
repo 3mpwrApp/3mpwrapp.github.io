@@ -64,7 +64,7 @@ export default function SafeLandingPage() {
   });
 
   const handleContinue = () => {
-    router.replace('/(tabs)');
+    router.replace('/');
   };
 
   const handleExit = () => {
@@ -73,7 +73,7 @@ export default function SafeLandingPage() {
     } else {
       // On mobile, navigate to a minimal exit confirmation
       // Note: Can't force close app on iOS, Android can use BackHandler
-      router.replace('/(tabs)');
+      router.replace('/');
     }
   };
 

@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { Href } from 'expo-router';
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
@@ -21,6 +21,7 @@ export function HomeGuide() {
   const suggestions = useSuggestions() ?? [];
   const palette = useAppPalette();
   const { t } = useTranslation();
+  const router = useRouter();
   // Placeholder for future feature flags (could be sourced from user settings or remote config)
   const enabledFlags: Set<string> | undefined = undefined;
   const filteredTools = (filterToolsByFlags(enabledFlags) ?? []) as Array<{ id: string }>;
@@ -82,9 +83,8 @@ export function HomeGuide() {
         <Text style={[styles.snapshotLabel,{ color: palette.text }]}>{t('home.guide.dailyFeatures','Today\'s Features')}</Text>
         <GapView gap={8}>
           {dailyFeatures.map(feature => (
-            <Link key={feature.id} href={feature.route} asChild={true} onPress={() => usage.view('home_guide_daily_feature', '/', { feature: feature.id })}>
-              <GapView gap={10} style={{ flexDirection: 'row', alignItems: 'center', padding: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, backgroundColor: palette.background }}>
-                <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+              <GapView key={feature.id} gap={10} style={{ flexDirection: 'row', alignItems: 'center', padding: 8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius: 8, backgroundColor: palette.background }}>
+                <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }} onPress={() => { usage.view('home_guide_daily_feature', '/', { feature: feature.id }); router.push(feature.route); }}>
                   <Text style={{ fontSize: 20 }}>{feature.icon}</Text>
                   <View style={{ flex: 1, marginLeft: 10 }}>
                     <Text style={{ color: palette.text, fontWeight: '600', fontSize: 14 }}>{feature.title}</Text>
@@ -93,7 +93,6 @@ export function HomeGuide() {
                   <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
                 </Pressable>
               </GapView>
-            </Link>
           ))}
         </GapView>
       </View>
@@ -136,11 +135,9 @@ export function HomeGuide() {
   {showNudge && (()=> { if (!nudgeLoggedRef.current) { usage.view('home_mood_nudge_view','/',{}); nudgeLoggedRef.current = true; } return (
         <View style={{ marginBottom:12, padding:8, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted, borderRadius:8, backgroundColor: palette.surface }}>
           <Text style={{ color: palette.text, fontSize:12, marginBottom:6 }}>{t('homeGuide.mood.nudge','Evening check-in? Log how you feel.')}</Text>
-          <Link href={resolveToolRoute('wellness_mood') as any} asChild={true} onPress={()=> usage.view('home_mood_nudge_tap','/',{})}>
-            <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:10, paddingVertical:6, alignSelf:'flex-start', borderRadius:6 }}>
+            <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ backgroundColor: palette.primary, paddingHorizontal:10, paddingVertical:6, alignSelf:'flex-start', borderRadius:6 }} onPress={()=> { usage.view('home_mood_nudge_tap','/',{}); router.push(resolveToolRoute('wellness_mood') as any); }}>
               <Text style={{ color: palette.onPrimary, fontWeight:'600', fontSize:12 }}>{t('homeGuide.mood.nudgeAction','Log Mood')}</Text>
             </Pressable>
-          </Link>
         </View>
       ); })()}
       {top3.length ? (
@@ -168,10 +165,7 @@ export function HomeGuide() {
                   <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down')} style={{ minWidth: 44, minHeight: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
                     <Text style={{ color: palette.text, textAlign:'center' }}>👎</Text>
                   </Pressable>
-                  <Link
-                    href={resolveToolRoute(sug.toolId) as any}
-                    asChild={true}
-                    onPress={()=> {
+                    <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ minWidth: 80, minHeight: 44, flex: 1, backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6, alignItems:'center', justifyContent:'center' }} onPress={()=> {
                       usage.view('home_guide_select', '/', {
                         tool: sug.toolId,
                         category: meta?.category,
@@ -179,12 +173,10 @@ export function HomeGuide() {
                         reasonDetail: sug.reason ?? [],
                         rank: idx+1
                       });
-                    }}
-                  >
-                    <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ minWidth: 80, minHeight: 44, flex: 1, backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
+                      router.push(resolveToolRoute(sug.toolId) as any);
+                    }}>
                       <Text style={{ color: palette.onPrimary, fontWeight:'700', textAlign:'center' }}>{t('home.guide.open','Open')}</Text>
                     </Pressable>
-                  </Link>
                 </GapView>
               </View>
             );

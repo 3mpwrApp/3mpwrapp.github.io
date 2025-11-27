@@ -11,9 +11,14 @@ export async function fetchResources(): Promise<Resource[]> {
   // Try remote API
   if (BASE) {
     try {
-      const data = await retry(async () =>
-        (await fetch(`${BASE}/resources`)).json(),
-      );
+      const data = await retry(async () => {
+        const res = await fetch(`${BASE}/resources`);
+        if (!res.ok && res.status === 404) {
+          // Silently fail on 404 (expected in dev mode)
+          throw new Error('Not found');
+        }
+        return res.json();
+      });
       if (Array.isArray(data) && data.length) {
         setCachedJSON(CACHE_KEY, data).catch(() => {});
         return data as Resource[];

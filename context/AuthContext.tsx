@@ -31,38 +31,28 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     // Handle strict BYOC mode where auth is null
     if (!auth) {
-      logger.log('[AuthContext] Strict BYOC mode - auth is null, user will be treated as guest');
-      console.warn('[AuthContext] No Firebase auth available (strict BYOC mode)');
+      if (__DEV__) logger.log('[AuthContext] Strict BYOC mode - auth is null');
       setLoading(false);
       setUser(null);
       setIsGuest(true);
       return;
     }
 
-    logger.log('[AuthContext] Setting up auth state listener');
-    console.warn('[AuthContext] Firebase auth initialized, setting up listener');
+    // Track if this is the initial mount
+    let isInitialMount = true;
 
     const unsubscribe = onAuthStateChanged(
       auth,
       async (firebaseUser) => {
         try {
-          logger.log('[AuthContext] ===== AUTH STATE CHANGED =====');
-          logger.log('[AuthContext] Auth state changed', { 
-            hasUser: !!firebaseUser, 
-            isAnonymous: firebaseUser?.isAnonymous,
-            uid: firebaseUser?.uid,
-            email: firebaseUser?.email,
-            provider: firebaseUser?.providerData?.[0]?.providerId,
-            timestamp: new Date().toISOString(),
-          });
+          if (__DEV__ && isInitialMount) {
+            logger.log('[AuthContext] Initial auth state');
+            isInitialMount = false;
+          }
           
           setUser(firebaseUser);
           setIsGuest(!!firebaseUser?.isAnonymous);
           setLoading(false);
-
-          logger.log('[AuthContext] User state updated, loading set to false');
-          logger.log('[AuthContext] This should trigger navigation in app/index.tsx');
-          logger.log('[AuthContext] ===================================');
 
           // Clear session expired flag when user is authenticated
           if (firebaseUser) {
@@ -85,7 +75,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             try {
               const res = await getIdTokenResult(firebaseUser, true);
               setIsAdmin(isSuperAdmin || Boolean((res.claims as any)?.admin));
-              logger.log('[AuthContext] Claims refreshed', { isAdmin: isSuperAdmin || Boolean((res.claims as any)?.admin) });
+              if (__DEV__) logger.log('[AuthContext] Claims refreshed');
             } catch (error) {
               logger.warn('[AuthContext] Failed to refresh claims', {
                 error: error instanceof Error ? error.message : 'Unknown',
@@ -96,13 +86,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               // Check if this is a real auth error (401/403) vs network error
               if (error instanceof Error) {
                 if (error.message.includes('401') || error.message.includes('403')) {
-                  logger.log('[AuthContext] Session expired - real auth error');
+                  if (__DEV__) logger.log('[AuthContext] Session expired - auth error');
                   setSessionExpired(true);
                 }
               }
             }
           } else {
-            logger.log('[AuthContext] No user - signed out');
+            if (__DEV__) logger.log('[AuthContext] No user - signed out');
             setIsAdmin(false);
             setSessionExpired(false);
           }

@@ -10,9 +10,7 @@
     "scheme": "empowrapp",
     "userInterfaceStyle": "automatic",
     "jsEngine": "hermes",
-    "privacy": "public",
     "primaryColor": "#000000",
-    "privacyPolicyUrl": "https://3mpwrapp.pages.dev/privacy/",
     "updates": {
       "checkAutomatically": "ON_LOAD",
       "fallbackToCacheTimeout": 0,
@@ -52,7 +50,6 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "usesCleartextTraffic": false,
       "package": "com.app3mpwr.app3mpwr",
       "allowBackup": false,
       "permissions": [

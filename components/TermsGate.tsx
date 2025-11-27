@@ -681,8 +681,9 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       }),
     },
     scrollView: {
-      flexGrow: 1,
+      flexGrow: 0,
       flexShrink: 1,
+      maxHeight: 400, // Fixed height for scrollable area
     },
     title: { 
       fontSize: 20, 

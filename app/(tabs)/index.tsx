@@ -1,9 +1,9 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
-import CelebrationToast from '../../components/CelebrationToast';
+import { CelebrationToast } from '../../components/CelebrationToast';
 import { CopilotSuggestionBanner } from '../../components/CopilotSuggestionBanner';
 import DisabilityWizard from '../../components/DisabilityWizard';
 import DisclaimerBanner from '../../components/DisclaimerBanner';
@@ -27,7 +27,7 @@ import { logger } from '../../utils/logger';
 import { createShadow } from '../../utils/shadow';
 
 // Welcome Modal Component
-const WelcomeModal = React.memo(({ visible, onDismiss }: { visible: boolean; onDismiss: () => void }) => {
+const WelcomeModal = React.memo(({ visible, onDismiss, router }: { visible: boolean; onDismiss: () => void; router: ReturnType<typeof useRouter> }) => {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const { factor } = useTextScale();
@@ -82,27 +82,25 @@ const WelcomeModal = React.memo(({ visible, onDismiss }: { visible: boolean; onD
         </Text>
         
         <GapView style={{ flexDirection: 'column' }} gap={12}>
-          <Link href={'/onboarding/first7' as any} asChild={true}>
-            <A11yPressable
-              style={{
-                backgroundColor: palette.primary,
-                paddingVertical: 14,
-                borderRadius: 8,
-                alignItems: 'center',
-              }}
-              onPress={onDismiss}
-              accessibilityRole="button"
-              accessibilityLabel={t('welcome.startOnboarding', 'Start onboarding')}
-            >
-              <Text style={{
-                color: palette.onPrimary,
-                fontSize: Math.round(16 * factor),
-                fontWeight: '600',
-              }}>
-                🚀 {t('welcome.startOnboarding', 'Get Started')}
-              </Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={{
+              backgroundColor: palette.primary,
+              paddingVertical: 14,
+              borderRadius: 8,
+              alignItems: 'center',
+            }}
+            onPress={() => { onDismiss(); router.push('/onboarding/first7' as any); }}
+            accessibilityRole="button"
+            accessibilityLabel={t('welcome.startOnboarding', 'Start onboarding')}
+          >
+            <Text style={{
+              color: palette.onPrimary,
+              fontSize: Math.round(16 * factor),
+              fontWeight: '600',
+            }}>
+              🚀 {t('welcome.startOnboarding', 'Get Started')}
+            </Text>
+          </A11yPressable>
           
           <A11yPressable
             style={{
@@ -138,6 +136,7 @@ const GuestModeBanner = React.memo(() => {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const { factor } = useTextScale();
+  const router = useRouter();
   
   if (!isGuest) return null;
   
@@ -176,52 +175,50 @@ const GuestModeBanner = React.memo(() => {
         {t('guest.banner.message', 'You\'re using guest mode. Your data isn\'t saved and some features are limited. Create an account to save your progress and access all features.')}
       </Text>
       <GapView style={{ flexDirection: 'row', marginTop: 8 }} gap={8}>
-        <Link href={'/(auth)/signup' as any} asChild={true}>
-          <A11yPressable
-            style={{
-              backgroundColor: palette.primary,
-              paddingVertical: 8,
-              paddingHorizontal: 12,
-              borderRadius: 6,
-              alignItems: 'center',
-              flex: 1,
-            }}
-            accessibilityRole="button"
-            accessibilityLabel={t('guest.banner.createAccount', 'Create account')}
-          >
-            <Text style={{
-              color: palette.onPrimary,
-              fontSize: Math.round(12 * factor),
-              fontWeight: '600',
-            }}>
-              {t('guest.banner.createAccount', 'Create Account')}
-            </Text>
-          </A11yPressable>
-        </Link>
-        <Link href={'/(auth)/signin' as any} asChild={true}>
-          <A11yPressable
-            style={{
-              backgroundColor: palette.surface,
-              borderWidth: 1,
-              borderColor: palette.muted,
-              paddingVertical: 8,
-              paddingHorizontal: 12,
-              borderRadius: 6,
-              alignItems: 'center',
-              flex: 1,
-            }}
-            accessibilityRole="button"
-            accessibilityLabel={t('guest.banner.signIn', 'Sign in')}
-          >
-            <Text style={{
-              color: palette.text,
-              fontSize: Math.round(12 * factor),
-              fontWeight: '600',
-            }}>
-              {t('guest.banner.signIn', 'Sign In')}
-            </Text>
-          </A11yPressable>
-        </Link>
+        <A11yPressable
+          style={{
+            backgroundColor: palette.primary,
+            paddingVertical: 8,
+            paddingHorizontal: 12,
+            borderRadius: 6,
+            alignItems: 'center',
+            flex: 1,
+          }}
+          accessibilityRole="button"
+          accessibilityLabel={t('guest.banner.createAccount', 'Create account')}
+          onPress={() => router.push('/(auth)/signup' as any)}
+        >
+          <Text style={{
+            color: palette.onPrimary,
+            fontSize: Math.round(12 * factor),
+            fontWeight: '600',
+          }}>
+            {t('guest.banner.createAccount', 'Create Account')}
+          </Text>
+        </A11yPressable>
+        <A11yPressable
+          style={{
+            backgroundColor: palette.surface,
+            borderWidth: 1,
+            borderColor: palette.muted,
+            paddingVertical: 8,
+            paddingHorizontal: 12,
+            borderRadius: 6,
+            alignItems: 'center',
+            flex: 1,
+          }}
+          accessibilityRole="button"
+          accessibilityLabel={t('guest.banner.signIn', 'Sign in')}
+          onPress={() => router.push('/(auth)/signin' as any)}
+        >
+          <Text style={{
+            color: palette.text,
+            fontSize: Math.round(12 * factor),
+            fontWeight: '600',
+          }}>
+            {t('guest.banner.signIn', 'Sign In')}
+          </Text>
+        </A11yPressable>
       </GapView>
     </View>
   );
@@ -272,7 +269,8 @@ const RecentPrompts = React.memo(() => {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const { t } = useTranslation();
-  const [items, setItems] = React.useState<{ label: string; route?: string; ts: number }[]>([]);
+  const router = useRouter();
+  const [items, setItems] = React.useState<{label:string;route?:string;ts:number}[]>([]);
   
   React.useEffect(()=>{
     try{
@@ -317,31 +315,31 @@ const RecentPrompts = React.memo(() => {
         accessibilityLabel={t('assistant.home.promptsList', 'List of recent prompts')}
       >
         {items.map((it, _index) => (
-          <Link key={it.label} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild={true}>
-            <A11yPressable
-              style={{
-                backgroundColor: palette.card,
-                borderWidth: 1,
-                borderColor: palette.muted,
-                paddingHorizontal: 10,
-                paddingVertical: 6,
-                borderRadius: 999,
+          <A11yPressable
+            key={it.label}
+            style={{
+              backgroundColor: palette.card,
+              borderWidth: 1,
+              borderColor: palette.muted,
+              paddingHorizontal: 10,
+              paddingVertical: 6,
+              borderRadius: 999,
+            }}
+            accessibilityLabel={t('assistant.home.promptAccessibilityLabel', 'Recent prompt: {{prompt}}', { prompt: it.label })}
+            accessibilityHint={t('assistant.home.promptHint', 'Double tap to use this prompt again')}
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push((it.route as any) || '/(tabs)/advocacy/assistant-hub')}
+          >
+            <Text 
+              style={{ 
+                color: palette.text, 
+                fontSize: Math.round(12 * factor)
               }}
-              accessibilityLabel={t('assistant.home.promptAccessibilityLabel', 'Recent prompt: {{prompt}}', { prompt: it.label })}
-              accessibilityHint={t('assistant.home.promptHint', 'Double tap to use this prompt again')}
-              hitSlop={HIT_SLOP_8}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
             >
-              <Text 
-                style={{ 
-                  color: palette.text, 
-                  fontSize: Math.round(12 * factor)
-                }}
-                maxFontSizeMultiplier={MAX_FONT_SCALE}
-              >
-                {it.label}
-              </Text>
-            </A11yPressable>
-          </Link>
+              {it.label}
+            </Text>
+          </A11yPressable>
         ))}
       </GapView>
     </View>
@@ -383,6 +381,7 @@ const BetaTestersQuickLink = React.memo(() => {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const { t } = useTranslation();
+  const router = useRouter();
   
   return (
     <View 
@@ -402,31 +401,30 @@ const BetaTestersQuickLink = React.memo(() => {
       >
         {t('home.quick.betaChat.title','Beta Testers Chat')}
       </Text>
-      <Link href={'/(tabs)/community/testers-chat' as any} asChild={true}>
-        <A11yPressable 
-          accessibilityLabel={t('home.quick.betaChat.label','Join the Beta Testers Chat')} 
-          accessibilityHint={t('home.quick.betaChat.hint', 'Opens the beta testers community chat')}
+      <A11yPressable 
+        accessibilityLabel={t('home.quick.betaChat.label','Join the Beta Testers Chat')} 
+        accessibilityHint={t('home.quick.betaChat.hint', 'Opens the beta testers community chat')}
+        style={{ 
+          backgroundColor: palette.surface, 
+          borderWidth: 1, 
+          borderColor: palette.muted, 
+          paddingHorizontal: 12, 
+          paddingVertical: 10, 
+          borderRadius: 8 
+        }}
+        hitSlop={HIT_SLOP_8}
+        onPress={() => router.push('/(tabs)/community/testers-chat' as any)}
+      >
+        <Text 
           style={{ 
-            backgroundColor: palette.surface, 
-            borderWidth: 1, 
-            borderColor: palette.muted, 
-            paddingHorizontal: 12, 
-            paddingVertical: 10, 
-            borderRadius: 8 
+            color: palette.text,
+            fontSize: Math.round(16 * factor)
           }}
-          hitSlop={HIT_SLOP_8}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
         >
-          <Text 
-            style={{ 
-              color: palette.text,
-              fontSize: Math.round(16 * factor)
-            }}
-            maxFontSizeMultiplier={MAX_FONT_SCALE}
-          >
-            🧪 {t('home.quick.betaChat.cta','Join the Beta Testers Chat')}
-          </Text>
-        </A11yPressable>
-      </Link>
+          🧪 {t('home.quick.betaChat.cta','Join the Beta Testers Chat')}
+        </Text>
+      </A11yPressable>
     </View>
   );
 });
@@ -439,12 +437,35 @@ const HomeScreen = React.memo(() => {
   const textStyles = createTextStyles(palette);
   const { factor } = useTextScale();
   const titleRef = React.useRef<Text>(null);
+  const { user } = useAuth();
   
   // Celebration state
   const [celebration, setCelebration] = React.useState<Celebration | null>(null);
   
   // Welcome modal for new users
   const [showWelcome, setShowWelcome] = React.useState(false);
+  
+  // Error state for debugging
+  const [renderError, setRenderError] = React.useState<Error | null>(null);
+  
+  // ALL HOOKS MUST BE CALLED BEFORE ANY CONDITIONAL RETURNS
+  
+  // Catch any errors during rendering (web only)
+  React.useEffect(() => {
+    // Only set up error listener on web platform
+    if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+      const handleError = (event: ErrorEvent) => {
+        if (__DEV__) {
+          console.error('[HomeScreen] Global error caught:', event.error);
+        }
+        setRenderError(event.error);
+      };
+      
+      window.addEventListener('error', handleError);
+      return () => window.removeEventListener('error', handleError);
+    }
+    return undefined;
+  }, []);
   
   // Check for celebrations on mount and periodically
   React.useEffect(() => {
@@ -488,6 +509,35 @@ const HomeScreen = React.memo(() => {
     return () => clearTimeout(timer);
   }, []);
   
+  // Debug logging to track mount and re-renders (only on mount and unmount)
+  React.useEffect(() => {
+    logger.log('[HomeScreen] ===== COMPONENT MOUNTED =====');
+    logger.log('[HomeScreen] User:', user?.uid || 'none');
+    logger.log('[HomeScreen] Palette:', palette ? 'loaded' : 'missing');
+    
+    return () => {
+      logger.log('[HomeScreen] ===== COMPONENT UNMOUNTED =====');
+    };
+  }, []);
+  
+  // Track palette and factor changes separately (dev only)
+  React.useEffect(() => {
+    if (__DEV__) {
+      logger.log('[HomeScreen] Theme updated');
+    }
+  }, [palette]);
+  
+  React.useEffect(() => {
+    if (__DEV__) {
+      logger.log('[HomeScreen] TextScale updated:', factor);
+    }
+  }, [factor]);
+  
+  // Announce page load and focus title for screen readers
+  useAnnounceOnMount(t('home.announcement', 'Home screen loaded. Beta features available.'));
+  useFocusOnRefOnMount(titleRef);
+  
+  // Handler functions
   const handleCelebrationDismiss = async () => {
     if (celebration) {
       await markCelebrationSeen(celebration.id);
@@ -498,174 +548,111 @@ const HomeScreen = React.memo(() => {
   const handleWelcomeDismiss = () => {
     setShowWelcome(false);
   };
-  
-  // Debug logging to track mount and re-renders (only on mount and unmount)
-  React.useEffect(() => {
-    logger.log('[HomeScreen] Mounted successfully');
-    return () => logger.log('[HomeScreen] Unmounted');
-  }, []);
-  
-  // Track palette and factor changes separately
-  React.useEffect(() => {
-    logger.log('[HomeScreen] Theme changed - Palette:', palette);
-  }, [palette]);
-  
-  React.useEffect(() => {
-    logger.log('[HomeScreen] TextScale changed - factor:', factor);
-  }, [factor]);
-  
-  // Announce page load and focus title for screen readers
-  useAnnounceOnMount(t('home.announcement', 'Home screen loaded. Beta features available.'));
-  useFocusOnRefOnMount(titleRef);
-  
-  // Error handling is done by ErrorBoundaryWrapper and SafeOptionalComponent
+
+  // NOW SAFE TO HAVE CONDITIONAL RETURNS AFTER ALL HOOKS
+
+  // RESTORED VERSION - Components fixed to use router.push instead of Link asChild
+  const router = useRouter();
   
   return (
-    <ResponsiveScreenWrapper 
-      testID="home-screen"
-    >
-      {/* Welcome Modal for New Users */}
-      <WelcomeModal visible={showWelcome} onDismiss={handleWelcomeDismiss} />
+    <ResponsiveScreenWrapper testID="home-screen">
+      {/* Welcome Modal for new users */}
+      <WelcomeModal visible={showWelcome} onDismiss={handleWelcomeDismiss} router={router} />
       
       {/* Celebration Toast */}
-      <CelebrationToast 
-        celebration={celebration}
-        onDismiss={handleCelebrationDismiss}
-      />
+      <SafeOptionalComponent>
+        {celebration && (
+          <CelebrationToast celebration={celebration} onDismiss={handleCelebrationDismiss} />
+        )}
+      </SafeOptionalComponent>
       
-      <Text 
+      <Text
         ref={titleRef}
-        accessibilityRole="header" 
+        accessibilityRole="header"
         style={[textStyles.h3, { marginBottom: 16 }]}
         maxFontSizeMultiplier={MAX_FONT_SCALE}
       >
-        {t('home.title','Home')} <Text style={[textStyles.bodySmall, { opacity: 0.8 }]}>(Beta)</Text>
+        {t('home.title', 'Home')}{' '}
+        <Text style={[textStyles.bodySmall, { opacity: 0.8 }]}>(Beta)</Text>
       </Text>
-      
+
       <DisclaimerBanner type="general" compact={true} />
-      
-      {/* Guest Mode Warning */}
       <GuestModeBanner />
-      
+
+      {/* Main Action Buttons */}
+      <GapView style={{ flexDirection: 'row', marginBottom: 16 }} gap={12}>
+        <A11yPressable
+          onPress={() => router.push('/search')}
+          style={[styles.searchButton, { backgroundColor: palette.surface, borderColor: palette.muted, flex: 1 }]}
+          accessibilityLabel={t('home.search.label', 'Search the app')}
+          hitSlop={HIT_SLOP_8}
+        >
+          <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={10}>
+            <Text style={{ fontSize: 20 }}>🔍</Text>
+            <Text style={{ fontSize: Math.round(15 * factor), color: palette.muted, flexShrink: 1 }} numberOfLines={1}>
+              {t('home.search.placeholder', 'Search...')}
+            </Text>
+          </GapView>
+        </A11yPressable>
+
+        <A11yPressable
+          onPress={() => router.push('/(tabs)/advocacy/ask')}
+          style={[styles.askButton, { backgroundColor: palette.primary, flex: 1 }]}
+          accessibilityLabel={t('home.ask.label', 'Ask 3mpwr')}
+          hitSlop={HIT_SLOP_8}
+        >
+          <Text style={[textStyles.button, { fontSize: Math.round(16 * factor) }]}>
+            💬 {t('home.ask.button', 'Ask 3mpwr')}
+          </Text>
+        </A11yPressable>
+      </GapView>
+
+      {/* 7-Day Onboarding Wizard */}
+      <A11yPressable
+        onPress={() => router.push('/onboarding/first7')}
+        style={[styles.wizardButton, { backgroundColor: palette.card, borderColor: palette.primary, borderWidth: 2 }]}
+        accessibilityLabel={t('home.wizard.label', 'Your First 7 Days')}
+        hitSlop={HIT_SLOP_8}
+      >
+        <GapView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} gap={8}>
+          <Text style={{ fontSize: 24 }}>🧙‍♀️</Text>
+          <View style={{ flex: 1 }}>
+            <Text style={{ fontSize: Math.round(16 * factor), color: palette.text, fontWeight: '600' }}>
+              {t('home.wizard.button', 'Your First 7 Days')}
+            </Text>
+            <Text style={[textStyles.caption, { fontSize: Math.round(12 * factor), color: palette.text, opacity: 0.7 }]}>
+              {t('home.wizard.subtitle', 'Quick wins to get started')}
+            </Text>
+          </View>
+        </GapView>
+      </A11yPressable>
+
       {/* Revolutionary Features Spotlight */}
       <SafeOptionalComponent>
         <RevolutionaryFeaturesSpotlight />
       </SafeOptionalComponent>
-      
-      {/* Main Action Buttons - Organized in a row */}
-      <GapView style={{ flexDirection: 'row', marginBottom: 16 }} gap={12}>
-        {/* Global Search Quick Access */}
-        <Link href={'/search' as any} asChild={true}>
-          <A11yPressable
-            style={[
-              styles.searchButton,
-              { backgroundColor: palette.surface, borderColor: palette.muted, flex: 1 }
-            ]}
-            accessibilityLabel={t('home.search.label', 'Search the app')}
-            accessibilityHint={t('home.search.hint', 'Opens global search for all features')}
-            hitSlop={HIT_SLOP_8}
-          >
-            <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={10}>
-              <Text style={{ fontSize: 20 }}>🔍</Text>
-              <Text
-                style={[
-                  { fontSize: Math.round(15 * factor), color: palette.muted, flex: 1 }
-                ]}
-                maxFontSizeMultiplier={MAX_FONT_SCALE}
-              >
-                {t('home.search.placeholder', 'Search for tools, help, resources...')}
-              </Text>
-            </GapView>
-          </A11yPressable>
-        </Link>
-        
-        {/* Ask 3mpwr - Quick Access to Ask an Advocate */}
-        <Link href={'/(tabs)/advocacy/ask' as any} asChild={true}>
-          <A11yPressable
-            style={[
-              styles.askButton,
-              { backgroundColor: palette.primary, flex: 1 }
-            ]}
-            accessibilityLabel={t('home.ask.label', 'Ask 3mpwr - Get help from advocates')}
-            accessibilityHint={t('home.ask.hint', 'Opens the Ask an Advocate form')}
-            hitSlop={HIT_SLOP_8}
-          >
-            <Text
-              style={[
-                textStyles.button,
-                { fontSize: Math.round(16 * factor) }
-              ]}
-              maxFontSizeMultiplier={MAX_FONT_SCALE}
-            >
-              💬 {t('home.ask.button', 'Ask 3mpwr')}
-            </Text>
-          </A11yPressable>
-        </Link>
-      </GapView>
-      
-      {/* 7-Day Onboarding Wizard - Full width */}
-      <Link href={'/onboarding/first7' as any} asChild={true}>
-        <A11yPressable
-          style={[
-            styles.wizardButton,
-            { backgroundColor: palette.card, borderColor: palette.primary, borderWidth: 2 }
-          ]}
-          accessibilityLabel={t('home.wizard.label', 'Your First 7 Days - Onboarding wizard')}
-          accessibilityHint={t('home.wizard.hint', 'Opens interactive onboarding checklist')}
-          hitSlop={HIT_SLOP_8}
-        >
-          <GapView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} gap={8}>
-            <Text style={{ fontSize: 24 }}>🧙‍♀️</Text>
-            <View style={{ flex: 1 }}>
-              <Text
-                style={[
-                  { fontSize: Math.round(16 * factor), color: palette.text, fontWeight: '600' }
-                ]}
-                maxFontSizeMultiplier={MAX_FONT_SCALE}
-              >
-                {t('home.wizard.button', 'Your First 7 Days')}
-              </Text>
-              <Text
-                style={[
-                  textStyles.caption,
-                  { fontSize: Math.round(12 * factor), color: palette.text, opacity: 0.7 }
-                ]}
-                maxFontSizeMultiplier={MAX_FONT_SCALE}
-              >
-                {t('home.wizard.subtitle', 'Quick wins to get started')}
-              </Text>
-            </View>
-          </GapView>
-        </A11yPressable>
-      </Link>
-      
-      {/* Disability Wizard - Personalized Recommendations (optional feature) */}
+
+      {/* Disability Wizard */}
       <SafeOptionalComponent>
-        <DisabilityWizard 
-          maxSuggestions={3}
-          title={t('wizard.homeTitle', 'Recommended For You')}
-          subtitle={t('wizard.homeSubtitle', 'Based on your needs and energy level')}
-          showReasons={true}
-        />
+        <DisabilityWizard maxSuggestions={3} showReasons={true} />
       </SafeOptionalComponent>
-      
-      <RecentPrompts />
-      <BetaTestersQuickLink />
-      
-      {/* Home Guide - optional feature */}
+
+      {/* Home Guide */}
       <SafeOptionalComponent>
         <HomeGuide />
       </SafeOptionalComponent>
-      
-      <Text 
-        style={[textStyles.caption, { opacity: 0.7, marginTop: 12 }]}
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
-      >
-        {t('home.personalization.note','Suggestions powered by the Disability Wizard (beta).')}
+
+      <RecentPrompts />
+      <BetaTestersQuickLink />
+
+      {/* SOS Button */}
+      <SafeOptionalComponent>
+        <SOSButton />
+      </SafeOptionalComponent>
+
+      <Text style={[textStyles.caption, { opacity: 0.7, marginTop: 12 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        {t('home.personalization.note', 'Suggestions powered by the Disability Wizard (beta).')}
       </Text>
-      
-      {/* Global SOS Button */}
-      <SOSButton position="bottom-right" compact={false} />
     </ResponsiveScreenWrapper>
   );
 });
@@ -688,7 +675,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: 48, // Accessibility tap target
+    minHeight: 48,
   },
   wizardButton: {
     paddingHorizontal: 16,
@@ -697,6 +684,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: 60, // Slightly taller for the two-line content
+    minHeight: 60,
   },
 });
