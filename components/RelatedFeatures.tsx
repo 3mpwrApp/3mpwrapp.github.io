@@ -5,7 +5,7 @@
  * to help users discover and navigate between interconnected tools
  */
 
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
@@ -33,6 +33,7 @@ export default function RelatedFeatures({
 }: RelatedFeaturesProps) {
   const { t } = useTranslation();
   const palette = useAppPalette();
+  const router = useRouter();
   const { related, smartSuggestion } = useRelatedFeatures(currentFeature, userAction);
   
   if (related.length === 0) return null;
@@ -59,24 +60,24 @@ export default function RelatedFeatures({
         {itemsToShow.map((feature) => {
           const isSmart = smartSuggestion?.id === feature.id;
           return (
-            <Link asChild
+            <Pressable
               key={feature.id}
-              href={feature.route}
-              onPress={() => trackNavigation(currentFeature, feature.id, feature.reason)}
+              style={[
+                compact ? styles.compactCard : styles.card,
+                {
+                  backgroundColor: isSmart ? palette.primary + '10' : palette.card,
+                  borderColor: isSmart ? palette.primary : palette.muted,
+                  borderWidth: isSmart ? 2 : StyleSheet.hairlineWidth,
+                }
+              ]}
+              accessibilityRole="button"
+              accessibilityLabel={`${feature.title}. ${feature.reason}`}
+              hitSlop={HIT_SLOP_8}
+              onPress={() => {
+                trackNavigation(currentFeature, feature.id, feature.reason);
+                router.push(feature.route as any);
+              }}
             >
-              <Pressable
-                style={[
-                  compact ? styles.compactCard : styles.card,
-                  {
-                    backgroundColor: isSmart ? palette.primary + '10' : palette.card,
-                    borderColor: isSmart ? palette.primary : palette.muted,
-                    borderWidth: isSmart ? 2 : StyleSheet.hairlineWidth,
-                  }
-                ]}
-                accessibilityRole="button"
-                accessibilityLabel={`${feature.title}. ${feature.reason}`}
-                hitSlop={HIT_SLOP_8}
-              >
                 {isSmart && (
                   <View style={[styles.smartBadge, { backgroundColor: palette.primary }]}>
                     <Text 
@@ -131,7 +132,6 @@ export default function RelatedFeatures({
                   <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
                 </View>
               </Pressable>
-            </Link>
           );
         })}
       </GapView>

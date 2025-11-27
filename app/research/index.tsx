@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -22,6 +22,7 @@ export default function ResearchScreen() {
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
   const { t } = useTranslation();
+  const router = useRouter();
   const { mode, isFeatureVisible } = useComplexityMode();
   useAnnounceOnMount(t('research.landing.screenLabel','Research screen'));
   useFocusOnRefOnMount(titleRef);
@@ -51,96 +52,90 @@ export default function ResearchScreen() {
 
         <GapView gap={16} style={styles.sectionGrid}>
           {/* Research Library - Primary Feature */}
-          <Link href="/research/library" asChild={true}>
-            <A11yPressable
-              style={[styles.sectionCard, styles.featuredCard]}
-              accessibilityRole="button"
-              accessibilityLabel={`${t('research.landing.libraryTitle','Research Library')} - ${t('research.landing.libraryDesc','Browse studies, reports, and articles with advanced filters')}`}
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name="library-outline" size={36} color={palette.primary} />
-              <Text style={styles.sectionTitle}>{t('research.landing.libraryTitle','Research Library')}</Text>
-              <Text style={styles.sectionDescription}>{t('research.landing.libraryDesc','Browse 100+ studies, reports, and articles with advanced filters')}</Text>
-              <View style={styles.newBadge}>
-                <Text style={styles.newBadgeText}>NEW</Text>
-              </View>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={[styles.sectionCard, styles.featuredCard]}
+            accessibilityRole="button"
+            accessibilityLabel={`${t('research.landing.libraryTitle','Research Library')} - ${t('research.landing.libraryDesc','Browse studies, reports, and articles with advanced filters')}`}
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/research/library')}
+          >
+            <Ionicons name="library-outline" size={36} color={palette.primary} />
+            <Text style={styles.sectionTitle}>{t('research.landing.libraryTitle','Research Library')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.libraryDesc','Browse 100+ studies, reports, and articles with advanced filters')}</Text>
+            <View style={styles.newBadge}>
+              <Text style={styles.newBadgeText}>NEW</Text>
+            </View>
+          </A11yPressable>
 
           {/* Master Index */}
           {isFeatureVisible('standard') && (
-          <Link href="/research/master-index" asChild={true}>
-            <A11yPressable
-              style={styles.sectionCard}
-              accessibilityRole="button"
-              accessibilityLabel={`${t('research.landing.masterIndexTitle','Master Index')} - ${t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}`}
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name="map-outline" size={32} color={palette.primary} />
-              <Text style={styles.sectionTitle}>{t('research.landing.masterIndexTitle','Master Index')}</Text>
-              <Text style={styles.sectionDescription}>{t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}</Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={styles.sectionCard}
+            accessibilityRole="button"
+            accessibilityLabel={`${t('research.landing.masterIndexTitle','Master Index')} - ${t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}`}
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/research/master-index')}
+          >
+            <Ionicons name="map-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>{t('research.landing.masterIndexTitle','Master Index')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.masterIndexDesc','Comprehensive map of data & research sources')}</Text>
+          </A11yPressable>
           )}
 
           {/* UN CRPD Guide */}
-          <Link href="/research/uncrpd-info" asChild={true}>
-            <A11yPressable
-              style={styles.sectionCard}
-              accessibilityRole="button"
-              accessibilityLabel={`${t('research.card.uncrpdGuideTitle')} - ${t('research.card.uncrpdGuideDesc')}`}
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name="people-circle-outline" size={32} color={palette.primary} />
-              <Text style={styles.sectionTitle}>{t('research.card.uncrpdGuideTitle')}</Text>
-              <Text style={styles.sectionDescription}>{t('research.card.uncrpdGuideDesc')}</Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={styles.sectionCard}
+            accessibilityRole="button"
+            accessibilityLabel={`${t('research.card.uncrpdGuideTitle')} - ${t('research.card.uncrpdGuideDesc')}`}
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/research/uncrpd-info')}
+          >
+            <Ionicons name="people-circle-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>{t('research.card.uncrpdGuideTitle')}</Text>
+            <Text style={styles.sectionDescription}>{t('research.card.uncrpdGuideDesc')}</Text>
+          </A11yPressable>
 
           {/* External Resources - Government Programs */}
-          <Link href="/research/external-resources" asChild={true}>
-            <A11yPressable
-              style={styles.sectionCard}
-              accessibilityRole="button"
-              accessibilityLabel="External Resources - Government programs, disability benefits, and human rights resources"
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name="globe-outline" size={32} color={palette.primary} />
-              <Text style={styles.sectionTitle}>External Resources</Text>
-              <Text style={styles.sectionDescription}>Government programs, disability benefits, and human rights resources</Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={styles.sectionCard}
+            accessibilityRole="button"
+            accessibilityLabel="External Resources - Government programs, disability benefits, and human rights resources"
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/research/external-resources')}
+          >
+            <Ionicons name="globe-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>External Resources</Text>
+            <Text style={styles.sectionDescription}>Government programs, disability benefits, and human rights resources</Text>
+          </A11yPressable>
 
           {/* History Timeline */}
           {isFeatureVisible('standard') && (
-          <Link href="/research/history-timeline" asChild={true}>
-            <A11yPressable
-              style={styles.sectionCard}
-              accessibilityRole="button"
-              accessibilityLabel={`${t('research.landing.timelineTitle','History Timeline')} (Coming soon) - ${t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}`}
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name="time-outline" size={32} color={palette.primary} />
-              <Text style={styles.sectionTitle}>{t('research.landing.timelineTitle','History Timeline')} (Coming soon)</Text>
-              <Text style={styles.sectionDescription}>{t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}</Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={styles.sectionCard}
+            accessibilityRole="button"
+            accessibilityLabel={`${t('research.landing.timelineTitle','History Timeline')} (Coming soon) - ${t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}`}
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/research/history-timeline')}
+          >
+            <Ionicons name="time-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>{t('research.landing.timelineTitle','History Timeline')} (Coming soon)</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.timelineDesc','Track milestones in disability, worker, and injured worker rights')}</Text>
+          </A11yPressable>
           )}
 
           {/* Wait Times */}
           {isFeatureVisible('standard') && (
-          <Link href="/research/wait-times" asChild={true}>
-            <A11yPressable
-              style={styles.sectionCard}
-              accessibilityRole="button"
-              accessibilityLabel={`${t('research.landing.waitTitle','Case/File Wait-Times')} (Coming soon) - ${t('research.landing.waitDesc','Estimate how long processes may take')}`}
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name="time-outline" size={32} color={palette.primary} />
-              <Text style={styles.sectionTitle}>{t('research.landing.waitTitle','Case/File Wait-Times')} (Coming soon)</Text>
-              <Text style={styles.sectionDescription}>{t('research.landing.waitDesc','Estimate how long processes may take')}</Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={styles.sectionCard}
+            accessibilityRole="button"
+            accessibilityLabel={`${t('research.landing.waitTitle','Case/File Wait-Times')} (Coming soon) - ${t('research.landing.waitDesc','Estimate how long processes may take')}`}
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/research/wait-times')}
+          >
+            <Ionicons name="time-outline" size={32} color={palette.primary} />
+            <Text style={styles.sectionTitle}>{t('research.landing.waitTitle','Case/File Wait-Times')} (Coming soon)</Text>
+            <Text style={styles.sectionDescription}>{t('research.landing.waitDesc','Estimate how long processes may take')}</Text>
+          </A11yPressable>
           )}
         </GapView>
       </View>
