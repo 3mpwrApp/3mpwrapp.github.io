@@ -539,23 +539,53 @@
       "directories": "Directories & Ratings",
       "collective": "Collective & Accountability"
     },
+    "hubs": {
+      "ai": {
+        "title": "AI Command Center",
+        "desc": "Translate legal docs, analyze case strength, navigate government forms - 5 AI tools unified"
+      },
+      "network": {
+        "title": "Find Advocates & Lawyers",
+        "desc": "Search verified disability-friendly lawyers, rate providers, connect with allies"
+      },
+      "accountability": {
+        "title": "Case Tracker & Coaching",
+        "desc": "Track your cases, get AI coaching, document discrimination patterns"
+      },
+      "evidence": {
+        "title": "Evidence Manager",
+        "desc": "Secure storage, organize documents, build timelines for your cases"
+      }
+    },
     "tools": {
       "ai_translator": "AI Advocate Translator",
       "ai_case": "AI Case Interpreter",
       "ai_gov": "AI Government Navigator",
-      "ally_hub": "Ally Hub",
-      "collective": "Collective Legal Action Hub",
+      "ally_hub": "Ally Resources",
+      "ally_hub_desc": "Resources and coaching for allies supporting disabled people",
+      "collective": "Collective Action",
+      "collective_desc": "Join forces with others facing similar issues",
       "finder": "Lawyer & Advocate Finder",
       "policy_simple": "Policy Simplifier",
-      "ratings": "Disability Justice Ratings",
-      "self_coach": "Self‑Advocacy Coach",
+      "ratings": "Community Ratings",
+      "ratings_desc": "Rate hospitals, employers, and service providers",
+      "self_coach": "Self-Advocacy Coach",
+      "self_coach_desc": "Build confidence and practice advocacy skills",
       "accountability": "Accountability Coach",
       "accountability_cases": "Accountability Cases",
       "negotiation_coach": "Negotiation Coach"
     },
+    "sections": {
+      "mainHubs": "Main Hubs",
+      "quickTools": "Quick Tools",
+      "directAccess": "Direct AI Access"
+    },
+    "directAccess": {
+      "help": "Power users can access individual AI tools directly. These are also available in the AI Command Center."
+    },
     "hub": {
       "title": "Advocacy Hub",
-      "subtitle": "Unified access to AI tools, directories, coaching, ratings, ally resources, and collective action features. Choose a tool below."
+      "subtitle": "AI-powered tools to help you navigate legal documents, find advocates, and build your case."
     },
     "ratings": {
       "title": "Disability Justice Ratings",

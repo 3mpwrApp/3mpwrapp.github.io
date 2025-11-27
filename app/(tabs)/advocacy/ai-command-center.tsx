@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Link, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useCallback, useRef, useState } from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
@@ -373,17 +373,16 @@ export default function AICommandCenter() {
                 </Text>
               </A11yPressable>
 
-              <Link href="/(tabs)/advocacy/evidence-vault" asChild>
-                <A11yPressable
-                  hitSlop={HIT_SLOP_8}
-                  style={[s.actionButton, { borderColor: palette.muted, borderWidth: 1 }]}
-                >
-                  <Ionicons name="folder-outline" size={20} color={palette.text} />
-                  <Text style={[s.actionButtonText, { color: palette.text }]}>
-                    {t('advocacy.aiCommand.saveToEvidence', 'Save to Evidence')}
-                  </Text>
-                </A11yPressable>
-              </Link>
+              <A11yPressable
+                hitSlop={HIT_SLOP_8}
+                style={[s.actionButton, { borderColor: palette.muted, borderWidth: 1 }]}
+                onPress={() => router.push('/(tabs)/advocacy/evidence-manager')}
+              >
+                <Ionicons name="folder-outline" size={20} color={palette.text} />
+                <Text style={[s.actionButtonText, { color: palette.text }]}>
+                  {t('advocacy.aiCommand.saveToEvidence', 'Save to Evidence')}
+                </Text>
+              </A11yPressable>
             </GapView>
           </View>
         )}
@@ -394,35 +393,33 @@ export default function AICommandCenter() {
         </Text>
 
         <View style={s.relatedTools}>
-          <Link href="/(tabs)/advocacy/accountability-network" asChild>
-            <A11yPressable
-              hitSlop={HIT_SLOP_8}
-              style={[s.relatedCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}
-            >
-              <Ionicons name="people" size={24} color={palette.primary} />
-              <Text style={[s.relatedTitle, { color: palette.text }]}>
-                {t('advocacy.aiCommand.accountabilityNetwork', 'Accountability Network')}
-              </Text>
-              <Text style={[s.relatedDesc, { color: palette.text }]}>
-                {t('advocacy.aiCommand.accountabilityDesc', 'Find advocates, rate lawyers, track cases')}
-              </Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            hitSlop={HIT_SLOP_8}
+            style={[s.relatedCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}
+            onPress={() => router.push('/(tabs)/advocacy/accountability-hub')}
+          >
+            <Ionicons name="people" size={24} color={palette.primary} />
+            <Text style={[s.relatedTitle, { color: palette.text }]}>
+              {t('advocacy.aiCommand.accountabilityNetwork', 'Case Tracker & Coaching')}
+            </Text>
+            <Text style={[s.relatedDesc, { color: palette.text }]}>
+              {t('advocacy.aiCommand.accountabilityDesc', 'Track cases, get AI coaching, build accountability')}
+            </Text>
+          </A11yPressable>
 
-          <Link href="/(tabs)/advocacy/evidence-vault" asChild>
-            <A11yPressable
-              hitSlop={HIT_SLOP_8}
-              style={[s.relatedCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}
-            >
-              <Ionicons name="shield-checkmark" size={24} color={palette.primary} />
-              <Text style={[s.relatedTitle, { color: palette.text }]}>
-                {t('advocacy.aiCommand.evidenceVault', 'Evidence Vault')}
-              </Text>
-              <Text style={[s.relatedDesc, { color: palette.text }]}>
-                {t('advocacy.aiCommand.evidenceVaultDesc', 'Secure document storage with AI categorization')}
-              </Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            hitSlop={HIT_SLOP_8}
+            style={[s.relatedCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}
+            onPress={() => router.push('/(tabs)/advocacy/evidence-manager')}
+          >
+            <Ionicons name="shield-checkmark" size={24} color={palette.primary} />
+            <Text style={[s.relatedTitle, { color: palette.text }]}>
+              {t('advocacy.aiCommand.evidenceVault', 'Evidence Manager')}
+            </Text>
+            <Text style={[s.relatedDesc, { color: palette.text }]}>
+              {t('advocacy.aiCommand.evidenceVaultDesc', 'Secure document storage with AI categorization')}
+            </Text>
+          </A11yPressable>
         </View>
 
         <AIDisclaimer />
