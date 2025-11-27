@@ -1,23 +1,23 @@
+import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 import type { ViewStyle } from "react-native";
 import { Pressable } from "react-native";
-import { Link } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
 
 import { HIT_SLOP_8 } from "../constants/A11Y";
 import { useAppPalette } from "../theme/usePalette";
 
 export default function SettingsLink({ style }: { style?: ViewStyle }) {
   const palette = useAppPalette();
+  const router = useRouter();
   return (
-    <Link href={"/(tabs)/settings" as any} asChild={true}>
-      <Pressable
-        accessibilityRole="link"
-        accessibilityLabel="Open settings"
-        hitSlop={HIT_SLOP_8}
-        style={({ pressed }) => [style, pressed && { opacity: 0.8 }]}
-      >
-        <Ionicons name="settings-outline" size={20} color={palette.text} />
-      </Pressable>
-    </Link>
+    <Pressable
+      accessibilityRole="link"
+      accessibilityLabel="Open settings"
+      hitSlop={HIT_SLOP_8}
+      style={({ pressed }) => [style, pressed && { opacity: 0.8 }]}
+      onPress={() => router.push('/(tabs)/settings')}
+    >
+      <Ionicons name="settings-outline" size={20} color={palette.text} />
+    </Pressable>
   );
 }

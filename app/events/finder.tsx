@@ -1,4 +1,4 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -15,6 +15,7 @@ export default function AccessibleEventFinder() {
   const palette = useAppPalette();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
+  const router = useRouter();
   useAnnounceOnMount('Accessible Event Finder');
   useFocusOnRefOnMount(titleRef);
   const [asl, setAsl] = React.useState(false);
@@ -35,9 +36,7 @@ export default function AccessibleEventFinder() {
         <View key={e.id} style={s.card}>
           <Text style={s.cardTitle}>{e.title} • {new Date(e.date).toLocaleString()}</Text>
           <Text style={s.cardText}>{e.isVirtual? 'Online': (e.location || '')}</Text>
-          <Link href={`/(tabs)/events/${e.id}` as any} asChild={true}>
-            <A11yPressable hitSlop={HIT_SLOP_8} style={s.btn}><Text style={s.btnText}>Details</Text></A11yPressable>
-          </Link>
+          <A11yPressable hitSlop={HIT_SLOP_8} style={s.btn} onPress={() => router.push(`/(tabs)/events/${e.id}` as any)}><Text style={s.btnText}>Details</Text></A11yPressable>
         </View>
       ))}
     </View>

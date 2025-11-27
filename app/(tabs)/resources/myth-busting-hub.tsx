@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 
@@ -12,6 +12,7 @@ export default function MythBustingHub() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
+  const router = useRouter();
   useAnnounceOnMount("Myth-Busting Knowledge Hub");
   useFocusOnRefOnMount(titleRef);
 
@@ -27,9 +28,7 @@ export default function MythBustingHub() {
       </DyslexiaText>
       <View>
         <Text style={styles.blockTitle}>Popular explainers</Text>
-        <Link href={("/(tabs)/advocacy/policy-simple" as any)} asChild={true}>
-          <Card title="Policy Made Simple" subtitle="Clear guides to accessibility and benefits" />
-        </Link>
+        <Card onPress={() => router.push("/(tabs)/advocacy/policy-simple" as any)} title="Policy Made Simple" subtitle="Clear guides to accessibility and benefits" />
         <Card title="CPP-Disability" subtitle="Eligibility, timelines, appeals — in plain language" />
         <Card title="EI Sickness" subtitle="Qualifying hours, duration, how to apply" />
         <Card title="Workers’ Compensation" subtitle="Claims, medical evidence, and common pitfalls" />

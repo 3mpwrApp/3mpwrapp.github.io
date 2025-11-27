@@ -1,19 +1,19 @@
+import { Stack, useRouter } from "expo-router";
 import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  useColorScheme,
+    Pressable,
+    StyleSheet,
+    Text,
+    useColorScheme,
+    View,
 } from "react-native";
-import { Link, Stack, useRouter } from "expo-router";
 
-import { colors, type Palette } from "../theme/colors";
 import {
-  MAX_FONT_SCALE,
-  useAnnounceOnMount,
-  useFocusOnRefOnMount,
+    MAX_FONT_SCALE,
+    useAnnounceOnMount,
+    useFocusOnRefOnMount,
 } from "../hooks/useA11y";
+import { colors, type Palette } from "../theme/colors";
 
 export default function NotFoundScreen() {
   const router = useRouter();
@@ -55,30 +55,25 @@ export default function NotFoundScreen() {
           </Text>
         </Pressable>
 
-        <Link
-          href={"/" as any}
-          replace={true}
-          asChild={true}
-          accessibilityRole="link"
+        <Pressable
+          onPress={() => router.replace('/' as any)}
+          accessibilityRole="button"
           accessibilityLabel="Go to home"
           accessibilityHint="Navigates to the home tab"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          style={({ pressed }) => [
+            styles.button,
+            { marginTop: 12 },
+            pressed && { opacity: 0.7 },
+          ]}
         >
-          <Pressable
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-            style={({ pressed }) => [
-              styles.button,
-              { marginTop: 12 },
-              pressed && { opacity: 0.7 },
-            ]}
+          <Text
+            style={styles.buttonText}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
           >
-            <Text
-              style={styles.buttonText}
-              maxFontSizeMultiplier={MAX_FONT_SCALE}
-            >
-              Go Home
-            </Text>
-          </Pressable>
-        </Link>
+            Go Home
+          </Text>
+        </Pressable>
       </View>
     </>
   );

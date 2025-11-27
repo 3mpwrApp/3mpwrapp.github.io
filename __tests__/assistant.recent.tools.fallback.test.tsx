@@ -31,6 +31,7 @@ describe('Assistant Recent Tools fallback route', () => {
     // Label should be raw tool name when unknown
     expect(screen.getByText('unknown_tool')).toBeTruthy();
     fireEvent.click(screen.getByText('unknown_tool'));
-    expect(pushMock).toHaveBeenCalledWith({ pathname: '/(tabs)/advocacy/assistant-hub' });
+    // Changed from object format to string format after Link asChild removal
+    expect(pushMock).toHaveBeenCalledWith('/(tabs)/advocacy/assistant-hub');
   });
 });

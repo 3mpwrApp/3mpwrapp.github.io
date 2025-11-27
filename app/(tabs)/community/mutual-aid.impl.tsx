@@ -1,4 +1,4 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { ActivityIndicator, Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
@@ -29,6 +29,7 @@ export default function MutualAidImpl() {
   const s = styles(palette);
   const { isAdmin } = useAuth();
   const titleRef = React.useRef<Text>(null);
+  const router = useRouter();
   useAnnounceOnMount('Mutual Aid Engine');
   useFocusOnRefOnMount(titleRef);
   
@@ -387,11 +388,9 @@ export default function MutualAidImpl() {
                   >
                     <Text style={s.actionBtnText}>💬 Reply</Text>
                   </A11yPressable>
-                  <Link href={{ pathname: '/(tabs)/community/mutual-chat', params: { id: p.id } }} asChild={true}>
-                    <A11yPressable hitSlop={HIT_SLOP_8} style={s.actionBtn}>
-                      <Text style={s.actionBtnText}>💭 Chat</Text>
-                    </A11yPressable>
-                  </Link>
+                  <A11yPressable onPress={() => router.push({ pathname: '/(tabs)/community/mutual-chat', params: { id: p.id } })} hitSlop={HIT_SLOP_8} style={s.actionBtn}>
+                    <Text style={s.actionBtnText}>💭 Chat</Text>
+                  </A11yPressable>
                   <A11yPressable 
                     hitSlop={HIT_SLOP_8} 
                     onPress={() => handleDelete(p.id)} 

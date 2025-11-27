@@ -1,5 +1,5 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Link, type Href } from "expo-router";
+import { useRouter } from "expo-router";
 import React from "react";
 import { Linking, SectionList, StyleSheet, Text, View } from "react-native";
 
@@ -53,17 +53,16 @@ type CategoryFilter = "all" | ResourceCategory;
 const ResourceLink = React.memo<{ href: string; title: string; badge?: string }>(
   ({ href, title, badge }) => {
     const palette = useAppPalette();
+    const router = useRouter();
     return (
-      <Link href={href as Href} asChild={true}>
-        <A11yPressable hitSlop={HIT_SLOP_8} style={{ marginBottom: 8 }}>
-          <Text
-            style={{ color: palette.primary, textDecorationLine: "underline", fontSize: 15, lineHeight: 22.5 }}
-            maxFontSizeMultiplier={MAX_FONT_SCALE}
-          >
-            {title} {badge && <Text style={{ opacity: 0.8 }}>({badge})</Text>}
-          </Text>
-        </A11yPressable>
-      </Link>
+      <A11yPressable hitSlop={HIT_SLOP_8} style={{ marginBottom: 8 }} onPress={() => router.push(href as any)}>
+        <Text
+          style={{ color: palette.primary, textDecorationLine: "underline", fontSize: 15, lineHeight: 22.5 }}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
+          {title} {badge && <Text style={{ opacity: 0.8 }}>({badge})</Text>}
+        </Text>
+      </A11yPressable>
     );
   }
 );

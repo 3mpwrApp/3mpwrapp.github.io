@@ -1,4 +1,4 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -88,30 +88,30 @@ export default function WellnessHub() {
 }
 
 function Card({ href, title, desc, icon, isBeta, palette }: { href: string; title: string; desc: string; icon: string; isBeta?: boolean; palette: any; }){
+  const router = useRouter();
   const s = cardStyles(palette);
   return (
-    <Link href={href as any} asChild={true}>
-      <Pressable // a11y-scan: attributes on following lines
-        hitSlop={HIT_SLOP_8} 
-        accessibilityRole="button" 
-        style={[s.card, isBeta && s.betaCard]}
-      >
-        <View style={s.iconContainer}>
-          <Text style={s.icon}>{icon}</Text>
+    <Pressable // a11y-scan: attributes on following lines
+      onPress={() => router.push(href as any)}
+      hitSlop={HIT_SLOP_8} 
+      accessibilityRole="button" 
+      style={[s.card, isBeta && s.betaCard]}
+    >
+      <View style={s.iconContainer}>
+        <Text style={s.icon}>{icon}</Text>
+      </View>
+      <View style={s.content}>
+        <View style={s.titleRow}>
+          <Text style={s.title}>{title}</Text>
+          {isBeta && (
+            <View style={s.miniBetaBadge}>
+              <Text style={s.miniBetaText}>BETA</Text>
+            </View>
+          )}
         </View>
-        <View style={s.content}>
-          <View style={s.titleRow}>
-            <Text style={s.title}>{title}</Text>
-            {isBeta && (
-              <View style={s.miniBetaBadge}>
-                <Text style={s.miniBetaText}>BETA</Text>
-              </View>
-            )}
-          </View>
-          <DyslexiaText style={s.desc}>{desc}</DyslexiaText>
-        </View>
-      </Pressable>
-    </Link>
+        <DyslexiaText style={s.desc}>{desc}</DyslexiaText>
+      </View>
+    </Pressable>
   );
 }
 

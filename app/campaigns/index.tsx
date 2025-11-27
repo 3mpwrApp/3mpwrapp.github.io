@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import React from "react";
 import {
     Alert,
@@ -72,6 +72,7 @@ function ScreenInner() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
+  const router = useRouter();
 
   const titleRef = React.useRef<Text>(null);
   
@@ -636,17 +637,14 @@ function ScreenInner() {
             
             return (
             <View style={styles.campaignCard}>
-              <Link
-                href={{ pathname: "/campaigns/[id]", params: { id: item.id } } as any}
-                asChild={true}
+              <Pressable // a11y-scan: accessibilityRole and hitSlop on next lines
+                onPress={() => router.push({ pathname: "/campaigns/[id]", params: { id: item.id } } as any)}
+                style={styles.cardContent}
+                accessibilityRole="button"
+                accessibilityLabel={`View campaign: ${item.title}`}
+                accessibilityHint="Opens campaign details"
+                hitSlop={{ top: 4, bottom: 4, left: 4, right: 4 }}
               >
-                <Pressable // a11y-scan: accessibilityRole and hitSlop on next lines
-                  style={styles.cardContent}
-                  accessibilityRole="button"
-                  accessibilityLabel={`View campaign: ${item.title}`}
-                  accessibilityHint="Opens campaign details"
-                  hitSlop={{ top: 4, bottom: 4, left: 4, right: 4 }}
-                >
                   <View style={styles.cardHeader}>
                     <View style={{ flex: 1 }}>
                       {/* Featured badge for important campaigns */}
@@ -718,7 +716,6 @@ function ScreenInner() {
                     </View>
                   )}
                 </Pressable>
-              </Link>
               <View style={styles.actionRow}>
                 {/* Submit to 3mpwr App button for user-created campaigns */}
                 {item.id.startsWith('cmp-') && (

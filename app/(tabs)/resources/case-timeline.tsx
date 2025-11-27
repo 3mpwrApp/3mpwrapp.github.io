@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import React from "react";
 import { Alert, ScrollView, Share, StyleSheet, Text, View } from "react-native";
 
@@ -18,6 +18,7 @@ export default function CaseTimelineTracker() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
+  const router = useRouter();
   useAnnounceOnMount(t('templates.timeline.title','Case Timeline Tracker'));
   useFocusOnRefOnMount(titleRef);
   const [showInfo, setShowInfo] = React.useState(true);
@@ -76,11 +77,9 @@ export default function CaseTimelineTracker() {
       )}
       <Text style={styles.subtitle}>{t('templates.timeline.subtitle','Organize documents, deadlines, hearings, and appointments. Export timelines for your case file or representative.')}</Text>
       <GapView gap={8}>
-        <Link href={("/(tabs)/resources/deadlines" as any)} asChild={true}>
-          <A11yPressable style={styles.cta} accessibilityLabel={t('templates.timeline.openDeadlines','Open Deadline Calculator')}>
-            <Text style={styles.ctaText}>{t('templates.timeline.openDeadlines','Open Deadline Calculator')}</Text>
-          </A11yPressable>
-        </Link>
+        <A11yPressable onPress={() => router.push("/(tabs)/resources/deadlines" as any)} style={styles.cta} accessibilityLabel={t('templates.timeline.openDeadlines','Open Deadline Calculator')}>
+          <Text style={styles.ctaText}>{t('templates.timeline.openDeadlines','Open Deadline Calculator')}</Text>
+        </A11yPressable>
         <A11yPressable
           style={styles.ctaSecondary}
           accessibilityLabel={t('templates.timeline.addDocuments','Add documents to Evidence Locker')}

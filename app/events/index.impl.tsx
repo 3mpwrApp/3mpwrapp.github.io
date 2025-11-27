@@ -21,6 +21,7 @@ import EventFilters, { type EventFilterOptions } from '../../components/EventFil
 import { GapView } from "../../components/GapView";
 import SearchBar from "../../components/SearchBar";
 import SettingsLink from "../../components/SettingsLink";
+import SimpleModeWelcome from "../../components/SimpleModeWelcome";
 import { SkeletonList } from '../../components/SkeletonLoader';
 import SkeletonRow from "../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
@@ -42,6 +43,7 @@ import { ANALYTICS_EVENTS, trackEvent } from "../../services/analyticsClient";
 import { addToSyncQueue, getSyncQueueStats, processSyncQueue, startBackgroundSync } from "../../services/eventAutoSync";
 import { fetchEvents } from "../../services/events";
 import { deleteEventFromProduction, isFirestoreSyncAvailable, syncEventToProduction } from "../../services/firestoreEventSync";
+import { useComplexityMode } from "../../store/complexityMode";
 import { useCounts } from "../../store/counts";
 import { useNetwork } from "../../store/network";
 import { useRefresh } from "../../store/refresh";
@@ -116,6 +118,7 @@ export default function EventsScreen() {
   const [error, setError] = React.useState<string | null>(null);
 
   const { setCount } = useCounts();
+  const { isFeatureVisible } = useComplexityMode();
   const { setOffline } = useNetwork();
   const { user } = useAuth();
 
@@ -522,6 +525,13 @@ export default function EventsScreen() {
           {t('eventsFeature.subtitle','Community events, workshops, and meetups.')}
         </Text>
 
+        {/* Simple Mode Welcome - shows when user is in Simple mode */}
+        <SimpleModeWelcome 
+          tabName="Events"
+          availableFeatures={['View Events', 'Calendar', 'Search']}
+          hiddenCount={8}
+        />
+
         {loading ? (
           <SkeletonList count={6} />
         ) : (
@@ -564,8 +574,8 @@ export default function EventsScreen() {
           </>
         )}
 
-        {/* Auto-Sync Status Indicator */}
-        {syncStatus !== 'idle' && (
+        {/* Auto-Sync Status Indicator - Power User only */}
+        {isFeatureVisible('power_user') && syncStatus !== 'idle' && (
           <View style={{ 
             padding: 10, 
             backgroundColor: syncStatus === 'syncing' ? palette.surface : syncStatus === 'success' ? '#047857' : '#991B1B', 
@@ -583,8 +593,8 @@ export default function EventsScreen() {
           </View>
         )}
 
-        {/* Pending syncs indicator */}
-        {pendingSyncs > 0 && (
+        {/* Pending syncs indicator - Power User only */}
+        {isFeatureVisible('power_user') && pendingSyncs > 0 && (
           <View style={{ 
             padding: 8, 
             backgroundColor: palette.surface, 
@@ -619,8 +629,8 @@ export default function EventsScreen() {
           </View>
         )}
 
-        {/* Last sync timestamp */}
-        {lastSyncTime && (
+        {/* Last sync timestamp - Power User only */}
+        {isFeatureVisible('power_user') && lastSyncTime && (
           <Text style={{ fontSize: 11, color: palette.muted, textAlign: 'center', marginBottom: 8 }}>
             Last synced: {new Date(lastSyncTime).toLocaleTimeString()}
           </Text>
@@ -645,14 +655,17 @@ export default function EventsScreen() {
           </A11yPressable>
         </GapView>
 
-        <A11yPressable
-          accessibilityRole="button"
-          accessibilityLabel={showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}
-          onPress={() => setShowCreate(v => !v)}
-          style={{ alignSelf:'flex-start', marginBottom: 8, paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.primary }}
-        >
-          <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}</Text>
-        </A11yPressable>
+        {/* Create Event - Standard+ only */}
+        {isFeatureVisible('standard') && (
+          <A11yPressable
+            accessibilityRole="button"
+            accessibilityLabel={showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}
+            onPress={() => setShowCreate(v => !v)}
+            style={{ alignSelf:'flex-start', marginBottom: 8, paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.primary }}
+          >
+            <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}</Text>
+          </A11yPressable>
+        )}
 
         {/* Filter chips */}
         <GapView gap={8} style={{ flexDirection:'row', marginBottom:8 }}>
@@ -771,41 +784,45 @@ export default function EventsScreen() {
           </ErrorBoundary>
         </View>
 
-        {/* One-time Export Options */}
-        <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600' }}>
-          One-time exports (no auto-updates):
-        </Text>
-        <GapView gap={8} style={{ flexDirection:'row', marginBottom: 24 }}>
-          <A11yPressable
-            onPress={async () => {
-              // Export all filtered as single ICS concatenation
-              try {
-                const payload = filtered.map(it => makeICS(it as any)).join('\n');
-                await shareText('events.ics', payload);
-                trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { count: filtered.length, mode });
-              } catch {}
-            }}
-            accessibilityRole="button"
-            accessibilityLabel={t('common.export','Export') + ' ICS'}
-            style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-          >
-            <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export ICS</Text>
-          </A11yPressable>
-          <A11yPressable
-            onPress={async () => {
-              // Export CSV of filtered
-              const header = '"Date","Title","Description","Location"';
-              const rows = filtered.map(it => makeCSVRow(it as any)).join('\n');
-              await shareText('events.csv', `${header}\n${rows}`);
-              trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { count: filtered.length, mode });
-            }}
-            accessibilityRole="button"
-            accessibilityLabel={t('common.export','Export') + ' CSV'}
-            style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
-          >
-            <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
-          </A11yPressable>
-        </GapView>
+        {/* One-time Export Options - Power User only */}
+        {isFeatureVisible('power_user') && (
+          <>
+            <Text style={{ fontSize: 12, color: palette.text, opacity: 0.7, marginBottom: 6, fontWeight: '600' }}>
+              One-time exports (no auto-updates):
+            </Text>
+            <GapView gap={8} style={{ flexDirection:'row', marginBottom: 24 }}>
+              <A11yPressable
+                onPress={async () => {
+                  // Export all filtered as single ICS concatenation
+                  try {
+                    const payload = filtered.map(it => makeICS(it as any)).join('\n');
+                    await shareText('events.ics', payload);
+                    trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_ICS, { count: filtered.length, mode });
+                  } catch {}
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.export','Export') + ' ICS'}
+                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export ICS</Text>
+              </A11yPressable>
+              <A11yPressable
+                onPress={async () => {
+                  // Export CSV of filtered
+                  const header = '"Date","Title","Description","Location"';
+                  const rows = filtered.map(it => makeCSVRow(it as any)).join('\n');
+                  await shareText('events.csv', `${header}\n${rows}`);
+                  trackEvent(ANALYTICS_EVENTS.EVENTS_EXPORT_CSV, { count: filtered.length, mode });
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={t('common.export','Export') + ' CSV'}
+                style={{ paddingVertical:6, paddingHorizontal:12, borderRadius:6, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }}
+              >
+                <Text style={{ color: palette.text, fontSize:12, fontWeight:'600' }}>Export CSV</Text>
+              </A11yPressable>
+            </GapView>
+          </>
+        )}
 
         {/* Events List Section */}
         <View style={{ marginBottom: 12 }}>

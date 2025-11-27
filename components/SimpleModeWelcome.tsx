@@ -5,7 +5,7 @@
  */
 
 import { Ionicons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
@@ -24,6 +24,7 @@ type SimpleModeWelcomeProps = {
 export default function SimpleModeWelcome({ tabName, availableFeatures, hiddenCount }: SimpleModeWelcomeProps) {
   const palette = useAppPalette();
   const { mode, isBadDayMode } = useComplexityMode();
+  const router = useRouter();
 
   // Only show in Simple mode
   if (mode !== 'simple' && !isBadDayMode) return null;
@@ -110,17 +111,16 @@ export default function SimpleModeWelcome({ tabName, availableFeatures, hiddenCo
         </Text>
       )}
 
-      <Link href="/(tabs)/settings" asChild>
-        <A11yPressable 
-          style={styles.link}
-          hitSlop={HIT_SLOP_8}
-          accessibilityLabel="Change complexity mode settings"
-        >
-          <Text style={styles.linkText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            See More Features (Settings)
-          </Text>
-        </A11yPressable>
-      </Link>
+      <A11yPressable 
+        onPress={() => router.push('/(tabs)/settings')}
+        style={styles.link}
+        hitSlop={HIT_SLOP_8}
+        accessibilityLabel="Change complexity mode settings"
+      >
+        <Text style={styles.linkText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          See More Features (Settings)
+        </Text>
+      </A11yPressable>
     </View>
   );
 }

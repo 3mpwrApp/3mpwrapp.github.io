@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { Link, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useCallback, useRef, useState } from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -302,39 +302,37 @@ function DashboardTab() {
           </View>
         </A11yPressable>
 
-        <Link href="/(tabs)/resources/doctor-visit-prep" asChild>
-          <A11yPressable
-            hitSlop={HIT_SLOP_8}
-            style={[s.exportButton, { backgroundColor: palette.surface, borderColor: palette.muted }]}
-          >
-            <Ionicons name="medical-outline" size={24} color={palette.primary} />
-            <View style={s.exportContent}>
-              <Text style={[s.exportTitle, { color: palette.text }]}>
-                {t('tracker.doctorReport', 'Generate Doctor Report')}
-              </Text>
-              <Text style={[s.exportDesc, { color: palette.text }]}>
-                {t('tracker.doctorReportDesc', 'Custom report for upcoming appointments')}
-              </Text>
-            </View>
-          </A11yPressable>
-        </Link>
+        <A11yPressable
+          onPress={() => router.push('/(tabs)/resources/doctor-visit-prep')}
+          hitSlop={HIT_SLOP_8}
+          style={[s.exportButton, { backgroundColor: palette.surface, borderColor: palette.muted }]}
+        >
+          <Ionicons name="medical-outline" size={24} color={palette.primary} />
+          <View style={s.exportContent}>
+            <Text style={[s.exportTitle, { color: palette.text }]}>
+              {t('tracker.doctorReport', 'Generate Doctor Report')}
+            </Text>
+            <Text style={[s.exportDesc, { color: palette.text }]}>
+              {t('tracker.doctorReportDesc', 'Custom report for upcoming appointments')}
+            </Text>
+          </View>
+        </A11yPressable>
 
-        <Link href="/(tabs)/advocacy/evidence-vault" asChild>
-          <A11yPressable
-            hitSlop={HIT_SLOP_8}
-            style={[s.exportButton, { backgroundColor: palette.surface, borderColor: palette.muted }]}
-          >
-            <Ionicons name="shield-checkmark-outline" size={24} color={palette.primary} />
-            <View style={s.exportContent}>
-              <Text style={[s.exportTitle, { color: palette.text }]}>
-                {t('tracker.saveEvidence', 'Save to Evidence Vault')}
-              </Text>
-              <Text style={[s.exportDesc, { color: palette.text }]}>
-                {t('tracker.saveEvidenceDesc', 'Secure storage for legal/insurance purposes')}
-              </Text>
-            </View>
-          </A11yPressable>
-        </Link>
+        <A11yPressable
+          onPress={() => router.push('/(tabs)/advocacy/evidence-vault')}
+          hitSlop={HIT_SLOP_8}
+          style={[s.exportButton, { backgroundColor: palette.surface, borderColor: palette.muted }]}
+        >
+          <Ionicons name="shield-checkmark-outline" size={24} color={palette.primary} />
+          <View style={s.exportContent}>
+            <Text style={[s.exportTitle, { color: palette.text }]}>
+              {t('tracker.saveEvidence', 'Save to Evidence Vault')}
+            </Text>
+            <Text style={[s.exportDesc, { color: palette.text }]}>
+              {t('tracker.saveEvidenceDesc', 'Secure storage for legal/insurance purposes')}
+            </Text>
+          </View>
+        </A11yPressable>
       </GapView>
 
       {/* Related Tools */}
@@ -343,29 +341,27 @@ function DashboardTab() {
       </Text>
 
       <View style={s.relatedGrid}>
-        <Link href="/(tabs)/resources/appeal-command-center" asChild>
-          <A11yPressable
-            hitSlop={HIT_SLOP_8}
-            style={[s.relatedCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}
-          >
-            <Ionicons name="shield" size={24} color={palette.primary} />
-            <Text style={[s.relatedTitle, { color: palette.text }]}>
-              {t('tracker.appealCenter', 'Appeal Command Center')}
-            </Text>
-          </A11yPressable>
-        </Link>
+        <A11yPressable
+          onPress={() => router.push('/(tabs)/resources/appeal-command-center')}
+          hitSlop={HIT_SLOP_8}
+          style={[s.relatedCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}
+        >
+          <Ionicons name="shield" size={24} color={palette.primary} />
+          <Text style={[s.relatedTitle, { color: palette.text }]}>
+            {t('tracker.appealCenter', 'Appeal Command Center')}
+          </Text>
+        </A11yPressable>
 
-        <Link href="/(tabs)/resources/rights-benefits-calculator" asChild>
-          <A11yPressable
-            hitSlop={HIT_SLOP_8}
-            style={[s.relatedCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}
-          >
-            <Ionicons name="calculator" size={24} color={palette.primary} />
-            <Text style={[s.relatedTitle, { color: palette.text }]}>
-              {t('tracker.benefitsCalc', 'Benefits Calculator')}
-            </Text>
-          </A11yPressable>
-        </Link>
+        <A11yPressable
+          onPress={() => router.push('/(tabs)/resources/rights-benefits-calculator')}
+          hitSlop={HIT_SLOP_8}
+          style={[s.relatedCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}
+        >
+          <Ionicons name="calculator" size={24} color={palette.primary} />
+          <Text style={[s.relatedTitle, { color: palette.text }]}>
+            {t('tracker.benefitsCalc', 'Benefits Calculator')}
+          </Text>
+        </A11yPressable>
       </View>
     </ScrollView>
   );
@@ -375,6 +371,7 @@ function DashboardTab() {
 function SymptomsTab() {
   const palette = useAppPalette();
   const { t } = useTranslation();
+  const router = useRouter();
   
   return (
     <ScrollView contentContainerStyle={styles(palette).container}>
@@ -384,13 +381,11 @@ function SymptomsTab() {
       <Text style={styles(palette).comingSoon}>
         {t('tracker.chronicTrackerMigration', 'Full symptom tracking features migrating from Chronic Tracker...')}
       </Text>
-      <Link href="/(tabs)/resources/chronic-tracker" asChild>
-        <A11yPressable style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
-          <Text style={{ color: palette.onPrimary }}>
-            {t('tracker.useChronicTracker', 'Use Chronic Tracker (Temporary)')}
-          </Text>
-        </A11yPressable>
-      </Link>
+      <A11yPressable onPress={() => router.push('/(tabs)/resources/chronic-tracker')} style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
+        <Text style={{ color: palette.onPrimary }}>
+          {t('tracker.useChronicTracker', 'Use Chronic Tracker (Temporary)')}
+        </Text>
+      </A11yPressable>
     </ScrollView>
   );
 }
@@ -398,6 +393,7 @@ function SymptomsTab() {
 function MedicationsTab() {
   const palette = useAppPalette();
   const { t } = useTranslation();
+  const router = useRouter();
   
   return (
     <ScrollView contentContainerStyle={styles(palette).container}>
@@ -407,13 +403,11 @@ function MedicationsTab() {
       <Text style={styles(palette).comingSoon}>
         {t('tracker.medsTrackerMigration', 'Full medication tracking features migrating from Meds Tracker...')}
       </Text>
-      <Link href="/(tabs)/resources/meds-tracker" asChild>
-        <A11yPressable style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
-          <Text style={{ color: palette.onPrimary }}>
-            {t('tracker.useMedsTracker', 'Use Meds Tracker (Temporary)')}
-          </Text>
-        </A11yPressable>
-      </Link>
+      <A11yPressable onPress={() => router.push('/(tabs)/resources/meds-tracker')} style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
+        <Text style={{ color: palette.onPrimary }}>
+          {t('tracker.useMedsTracker', 'Use Meds Tracker (Temporary)')}
+        </Text>
+      </A11yPressable>
     </ScrollView>
   );
 }
@@ -421,6 +415,7 @@ function MedicationsTab() {
 function RehabTab() {
   const palette = useAppPalette();
   const { t } = useTranslation();
+  const router = useRouter();
   
   return (
     <ScrollView contentContainerStyle={styles(palette).container}>
@@ -430,13 +425,11 @@ function RehabTab() {
       <Text style={styles(palette).comingSoon}>
         {t('tracker.rehabTrackerMigration', 'Full rehab tracking features migrating from Rehab Tracker...')}
       </Text>
-      <Link href="/(tabs)/resources/rehab-tracker" asChild>
-        <A11yPressable style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
-          <Text style={{ color: palette.onPrimary }}>
-            {t('tracker.useRehabTracker', 'Use Rehab Tracker (Temporary)')}
-          </Text>
-        </A11yPressable>
-      </Link>
+      <A11yPressable onPress={() => router.push('/(tabs)/resources/rehab-tracker')} style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
+        <Text style={{ color: palette.onPrimary }}>
+          {t('tracker.useRehabTracker', 'Use Rehab Tracker (Temporary)')}
+        </Text>
+      </A11yPressable>
     </ScrollView>
   );
 }
@@ -444,6 +437,7 @@ function RehabTab() {
 function AppointmentsTab() {
   const palette = useAppPalette();
   const { t } = useTranslation();
+  const router = useRouter();
   
   return (
     <ScrollView contentContainerStyle={styles(palette).container}>
@@ -453,13 +447,11 @@ function AppointmentsTab() {
       <Text style={styles(palette).comingSoon}>
         {t('tracker.doctorPrepMigration', 'Full appointment prep features migrating from Doctor Visit Prep...')}
       </Text>
-      <Link href="/(tabs)/resources/doctor-visit-prep" asChild>
-        <A11yPressable style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
-          <Text style={{ color: palette.onPrimary }}>
-            {t('tracker.useDoctorPrep', 'Use Doctor Visit Prep (Temporary)')}
-          </Text>
-        </A11yPressable>
-      </Link>
+      <A11yPressable onPress={() => router.push('/(tabs)/resources/doctor-visit-prep')} style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
+        <Text style={{ color: palette.onPrimary }}>
+          {t('tracker.useDoctorPrep', 'Use Doctor Visit Prep (Temporary)')}
+        </Text>
+      </A11yPressable>
     </ScrollView>
   );
 }
@@ -467,6 +459,7 @@ function AppointmentsTab() {
 function TimelineTab() {
   const palette = useAppPalette();
   const { t } = useTranslation();
+  const router = useRouter();
   
   return (
     <ScrollView contentContainerStyle={styles(palette).container}>
@@ -476,13 +469,11 @@ function TimelineTab() {
       <Text style={styles(palette).comingSoon}>
         {t('tracker.timelineMigration', 'Full timeline features migrating from Case Timeline...')}
       </Text>
-      <Link href="/(tabs)/resources/case-timeline" asChild>
-        <A11yPressable style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
-          <Text style={{ color: palette.onPrimary }}>
-            {t('tracker.useCaseTimeline', 'Use Case Timeline (Temporary)')}
-          </Text>
-        </A11yPressable>
-      </Link>
+      <A11yPressable onPress={() => router.push('/(tabs)/resources/case-timeline')} style={[styles(palette).tempLink, { backgroundColor: palette.primary }]}>
+        <Text style={{ color: palette.onPrimary }}>
+          {t('tracker.useCaseTimeline', 'Use Case Timeline (Temporary)')}
+        </Text>
+      </A11yPressable>
     </ScrollView>
   );
 }

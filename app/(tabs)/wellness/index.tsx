@@ -1,4 +1,4 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
 
@@ -15,41 +15,41 @@ import { useComplexityMode } from '../../../store/complexityMode';
 import { createTextStyles } from '../../../theme/typography.enhanced';
 import { useAppPalette } from '../../../theme/usePalette';
 
-// Memoized Card component for better performance
+// Memoized Card component for better performance - uses useRouter internally
 const Card = React.memo<{ href: string; title: string; desc: string }>(
   ({ href, title, desc }) => {
     const palette = useAppPalette();
+    const router = useRouter();
     return (
-      <Link href={href as any} asChild={true}>
-        <Pressable
-          hitSlop={HIT_SLOP_8}
-          accessibilityRole="button"
-          accessibilityLabel={`${title}. ${desc}`}
-          style={({ pressed }) => [
-            {
-              borderWidth: StyleSheet.hairlineWidth,
-              borderColor: palette.muted,
-              borderRadius: 8,
-              padding: 12,
-              backgroundColor: palette.card,
-            },
-            pressed && { opacity: 0.7 },
-          ]}
+      <Pressable
+        hitSlop={HIT_SLOP_8}
+        accessibilityRole="button"
+        accessibilityLabel={`${title}. ${desc}`}
+        onPress={() => router.push(href as any)}
+        style={({ pressed }) => [
+          {
+            borderWidth: StyleSheet.hairlineWidth,
+            borderColor: palette.muted,
+            borderRadius: 8,
+            padding: 12,
+            backgroundColor: palette.card,
+          },
+          pressed && { opacity: 0.7 },
+        ]}
+      >
+        <Text
+          style={{ color: palette.text, fontWeight: '700', fontSize: 16, lineHeight: 24 }}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
         >
-          <Text
-            style={{ color: palette.text, fontWeight: '700', fontSize: 16, lineHeight: 24 }}
-            maxFontSizeMultiplier={MAX_FONT_SCALE}
-          >
-            {title}
-          </Text>
-          <Text
-            style={{ color: palette.text, opacity: 0.9, marginTop: 4, fontSize: 14, lineHeight: 21 }}
-            maxFontSizeMultiplier={MAX_FONT_SCALE}
-          >
-            {desc}
-          </Text>
-        </Pressable>
-      </Link>
+          {title}
+        </Text>
+        <Text
+          style={{ color: palette.text, opacity: 0.9, marginTop: 4, fontSize: 14, lineHeight: 21 }}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
+          {desc}
+        </Text>
+      </Pressable>
     );
   }
 );
@@ -58,6 +58,7 @@ Card.displayName = 'Card';
 export default function WellnessHub() {
   const { t } = useTranslation();
   const palette = useAppPalette();
+  const router = useRouter();
   const textStyles = React.useMemo(() => createTextStyles(palette), [palette]);
   const { isFeatureVisible: _isFeatureVisible } = useComplexityMode();
   
@@ -167,22 +168,22 @@ export default function WellnessHub() {
       </Text>
       <GapView gap={12}>
         {matches('/wellness/energy-hub') && (
-          <Link href="/wellness/energy-hub" asChild={true}>
-            <Pressable
-              hitSlop={HIT_SLOP_8}
-              accessibilityRole="button"
-              accessibilityLabel="Energy and Mood Hub - Track energy, mood, sleep, and pacing in one place"
-              style={({ pressed }) => [
-                {
-                  borderWidth: 2,
-                  borderColor: palette.primary,
-                  borderRadius: 12,
-                  padding: 16,
-                  backgroundColor: palette.primary + '10',
-                },
-                pressed && { opacity: 0.7 },
-              ]}
-            >
+          <Pressable
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="button"
+            accessibilityLabel="Energy and Mood Hub - Track energy, mood, sleep, and pacing in one place"
+            onPress={() => router.push('/wellness/energy-hub')}
+            style={({ pressed }) => [
+              {
+                borderWidth: 2,
+                borderColor: palette.primary,
+                borderRadius: 12,
+                padding: 16,
+                backgroundColor: palette.primary + '10',
+              },
+              pressed && { opacity: 0.7 },
+            ]}
+          >
               <Text
                 style={{ color: palette.primary, fontWeight: 'bold', fontSize: 18, lineHeight: 24 }}
                 maxFontSizeMultiplier={MAX_FONT_SCALE}
@@ -202,7 +203,6 @@ export default function WellnessHub() {
                 Consolidates 6 tools: Spoons, Mood, Sleep, Pacing & More
               </Text>
             </Pressable>
-          </Link>
         )}
         {unifiedHealthTrackerEnabled && matches('/wellness/health-tracker') && (
           <Card

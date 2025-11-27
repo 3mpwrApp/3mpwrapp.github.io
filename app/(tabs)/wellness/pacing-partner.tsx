@@ -1,4 +1,4 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { addDoc, collection, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import React from 'react';
 import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
@@ -28,6 +28,7 @@ export const options = { href: null };
 export default function PacingPartner() {
   const palette = useAppPalette();
   const s = styles(palette);
+  const router = useRouter();
   
   // Activity logging state
   const [minutes, setMinutes] = React.useState('');
@@ -164,18 +165,17 @@ export default function PacingPartner() {
             <Text style={[s.cardText, { color: palette.text }]}>{bodyMindSync.message}</Text>
             <Text style={[s.cardSubtext, { color: palette.text }]}>{bodyMindSync.suggestion}</Text>
           </View>
-          <Link href="/(tabs)/wellness.mood" asChild>
-            <A11yPressable
-              style={[s.linkButton, { borderColor: palette.muted }]}
-              hitSlop={HIT_SLOP_8}
-              accessibilityRole="link"
-              accessibilityLabel="View mood tracker"
-            >
-              <Text style={[s.linkButtonText, { color: palette.text }]}>
-                📊 View Mood Tracker →
-              </Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            onPress={() => router.push('/(tabs)/wellness.mood')}
+            style={[s.linkButton, { borderColor: palette.muted }]}
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="link"
+            accessibilityLabel="View mood tracker"
+          >
+            <Text style={[s.linkButtonText, { color: palette.text }]}>
+              📊 View Mood Tracker →
+            </Text>
+          </A11yPressable>
         </View>
       )}
 

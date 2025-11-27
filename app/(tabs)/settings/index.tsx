@@ -2,7 +2,7 @@
 // Settings Screen – fully reconstructed (v2)
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Link, useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { deleteUser, EmailAuthProvider, reauthenticateWithCredential, sendPasswordResetEmail } from 'firebase/auth';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
@@ -43,6 +43,7 @@ export default function SettingsScreen() {
   const titleRef = useRef<Text>(null);
   const { user, isGuest } = useAuth();
   const { setOffline } = useNetwork();
+  const router = useRouter();
   useAnnounceOnMount(t('settings.title', 'Settings'));
   useFocusOnRefOnMount(titleRef);
   
@@ -116,90 +117,84 @@ export default function SettingsScreen() {
           <EnhancedA11ySettingsSection />
           
           {/* Complexity Mode Settings Link - NEW */}
-          <Link href={'/(tabs)/settings/complexity-mode' as any} asChild={true}>
-            <A11yPressable
-              style={[styles.linkButton, { justifyContent:'center', marginTop:12, backgroundColor: palette.primary, borderWidth: 2, borderColor: palette.primary }]}
-              accessibilityRole='button'
-              accessibilityLabel='Complexity Mode - Choose Simple, Standard, or Power User mode to control feature visibility'
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name='layers-outline' size={20} color={palette.onPrimary} />
-              <Text style={[styles.linkText, { color: palette.onPrimary, fontWeight: '700' }]}>🎯 Complexity Mode (Simple/Standard/Power)</Text>
-              <Ionicons name='chevron-forward' size={16} color={palette.onPrimary} style={{ marginLeft:'auto' }} />
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginTop:12, backgroundColor: palette.primary, borderWidth: 2, borderColor: palette.primary }]}
+            accessibilityRole='button'
+            accessibilityLabel='Complexity Mode - Choose Simple, Standard, or Power User mode to control feature visibility'
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/complexity-mode')}
+          >
+            <Ionicons name='layers-outline' size={20} color={palette.onPrimary} />
+            <Text style={[styles.linkText, { color: palette.onPrimary, fontWeight: '700' }]}>🎯 Complexity Mode (Simple/Standard/Power)</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.onPrimary} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
           
           {/* Cognitive Accessibility Settings Link */}
-          <Link href={'/(tabs)/settings/cognitive-accessibility' as any} asChild={true}>
-            <A11yPressable
-              style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
-              accessibilityRole='button'
-              accessibilityLabel={t('settings.cognitiveAccessibility', 'Cognitive Accessibility Settings - Simplified mode, auto-save, and navigation memory for ADHD, autism, and learning disabilities')}
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name='bulb-outline' size={20} color={palette.primary} />
-              <Text style={styles.linkText}>{t('settings.cognitiveAccessibilityTitle', 'Cognitive Accessibility')}</Text>
-              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
+            accessibilityRole='button'
+            accessibilityLabel={t('settings.cognitiveAccessibility', 'Cognitive Accessibility Settings - Simplified mode, auto-save, and navigation memory for ADHD, autism, and learning disabilities')}
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/cognitive-accessibility')}
+          >
+            <Ionicons name='bulb-outline' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>{t('settings.cognitiveAccessibilityTitle', 'Cognitive Accessibility')}</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
           
           {/* Advanced Accessibility Settings Link */}
-          <Link href={'/(tabs)/settings/advanced-accessibility' as any} asChild={true}>
-            <A11yPressable
-              style={[styles.linkButton, { justifyContent:'center', marginTop:8 }]}
-              accessibilityRole='button'
-              accessibilityLabel="Advanced Accessibility Settings - Additional accessibility options"
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name='options' size={20} color={palette.primary} />
-              <Text style={styles.linkText}>Advanced Accessibility</Text>
-              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginTop:8 }]}
+            accessibilityRole='button'
+            accessibilityLabel="Advanced Accessibility Settings - Additional accessibility options"
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/advanced-accessibility')}
+          >
+            <Ionicons name='options' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Advanced Accessibility</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
         </Section>
         
         <Section title="Cultural & Neurodiversity Support" subtitle="Inclusive settings for diverse communities" styles={styles}>
           {/* Neurodivergent Support Link */}
-          <Link href={'/(tabs)/settings/neurodivergent' as any} asChild={true}>
-            <A11yPressable
-              style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
-              accessibilityRole='button'
-              accessibilityLabel="Neurodivergent Support Settings"
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name='git-branch' size={20} color={palette.primary} />
-              <Text style={styles.linkText}>Neurodivergent Support</Text>
-              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+            accessibilityRole='button'
+            accessibilityLabel="Neurodivergent Support Settings"
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/neurodivergent')}
+          >
+            <Ionicons name='git-branch' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Neurodivergent Support</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
           
           {/* Cultural Safety Link */}
-          <Link href={'/(tabs)/settings/cultural-safety' as any} asChild={true}>
-            <A11yPressable
-              style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
-              accessibilityRole='button'
-              accessibilityLabel="Cultural Safety Settings"
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name='globe' size={20} color={palette.primary} />
-              <Text style={styles.linkText}>Cultural Safety</Text>
-              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+            accessibilityRole='button'
+            accessibilityLabel="Cultural Safety Settings"
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/cultural-safety')}
+          >
+            <Ionicons name='globe' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Cultural Safety</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
           
           {/* Indigenous Languages Link */}
-          <Link href={'/(tabs)/settings/indigenous-language' as any} asChild={true}>
-            <A11yPressable
-              style={[styles.linkButton, { justifyContent:'center' }]}
-              accessibilityRole='button'
-              accessibilityLabel="Indigenous Languages - Traditional language support"
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name='leaf' size={20} color={palette.primary} />
-              <Text style={styles.linkText}>Indigenous Languages</Text>
-              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center' }]}
+            accessibilityRole='button'
+            accessibilityLabel="Indigenous Languages - Traditional language support"
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/indigenous-language')}
+          >
+            <Ionicons name='leaf' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Indigenous Languages</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
         </Section>
         
         <LanguageSelector />
@@ -210,18 +205,17 @@ export default function SettingsScreen() {
           </React.Suspense>
           
           {/* Advanced Security Link */}
-          <Link href={'/(tabs)/settings/advanced-security' as any} asChild={true}>
-            <A11yPressable
-              style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
-              accessibilityRole='button'
-              accessibilityLabel="Advanced Security Settings"
-              hitSlop={HIT_SLOP_8}
-            >
-              <Ionicons name='shield-checkmark' size={20} color={palette.primary} />
-              <Text style={styles.linkText}>Advanced Security</Text>
-              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
+            accessibilityRole='button'
+            accessibilityLabel="Advanced Security Settings"
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/advanced-security')}
+          >
+            <Ionicons name='shield-checkmark' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Advanced Security</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
         </Section>
         
         <Section title={t('updates.title', 'App Updates')} subtitle={t('updates.subtitle', 'Check for and install the latest features')} styles={styles}>
@@ -256,29 +250,26 @@ export default function SettingsScreen() {
         <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>
           {/* Profile Editor Link */}
           {!isGuest && (
-            <Link href={'/(tabs)/settings/profile-editor' as any} asChild={true}>
-              <A11yPressable
-                style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
-                accessibilityRole='button'
-                accessibilityLabel="Profile Editor - Update your disability profile, role, and energy patterns"
-                hitSlop={HIT_SLOP_8}
-              >
-                <Ionicons name='person-circle' size={20} color={palette.primary} />
-                <Text style={styles.linkText}>Edit Profile</Text>
-                <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
-              </A11yPressable>
-            </Link>
+            <A11yPressable
+              style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+              accessibilityRole='button'
+              accessibilityLabel="Profile Editor - Update your disability profile, role, and energy patterns"
+              hitSlop={HIT_SLOP_8}
+              onPress={() => router.push('/(tabs)/settings/profile-editor')}
+            >
+              <Ionicons name='person-circle' size={20} color={palette.primary} />
+              <Text style={styles.linkText}>Edit Profile</Text>
+              <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+            </A11yPressable>
           )}
           
           {isGuest && (
             <View style={{ marginBottom:16 }}>
               <Text style={[styles.description, { marginBottom:8 }]}>{t('settings.account.guestNotice','You are browsing as a guest. Create an account to sync data across devices and enable full features.')}</Text>
-              <Link href={'/(auth)/signup' as any} asChild={true}>
-                <A11yPressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button' accessibilityLabel={t('settings.account.createAccount','Create Account')} hitSlop={HIT_SLOP_8}>
-                  <Ionicons name='person-add' size={20} color={palette.primary} />
-                  <Text style={styles.linkText}>{t('settings.account.createAccount','Create Account')}</Text>
-                </A11yPressable>
-              </Link>
+              <A11yPressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button' accessibilityLabel={t('settings.account.createAccount','Create Account')} hitSlop={HIT_SLOP_8} onPress={() => router.push('/(auth)/signup')}>
+                <Ionicons name='person-add' size={20} color={palette.primary} />
+                <Text style={styles.linkText}>{t('settings.account.createAccount','Create Account')}</Text>
+              </A11yPressable>
             </View>
           )}
           {!isGuest && (
@@ -378,6 +369,7 @@ function EnhancedA11ySettingsSection() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
+  const router = useRouter();
   const { textScale, setTextScale, resourcePreferredFormat, setResourcePreferredFormat } = useSettings();
   const { dyslexiaFriendly, setDyslexiaFriendly, plainLanguage, setPlainLanguage, captionsPreferred, setCaptionsPreferred, voiceMode, setVoiceMode } = useSettings();
   const ScaleButton = ({ label, value }: { label: string; value: TextScale }) => (
@@ -416,12 +408,10 @@ function EnhancedA11ySettingsSection() {
         </GapView>
       </View>
       <View style={styles.voiceHelpSection}>
-        <Link href={'/(tabs)/voice-help' as any} asChild={true}>
-          <A11yPressable style={styles.linkButton} accessibilityRole='button' accessibilityLabel='Open voice help guide' hitSlop={HIT_SLOP_8}>
-            <Ionicons name='help-circle' size={20} color={palette.primary} />
-            <Text style={styles.linkText}>Voice Help Guide</Text>
-          </A11yPressable>
-        </Link>
+        <A11yPressable style={styles.linkButton} accessibilityRole='button' accessibilityLabel='Open voice help guide' hitSlop={HIT_SLOP_8} onPress={() => router.push('/(tabs)/voice-help')}>
+          <Ionicons name='help-circle' size={20} color={palette.primary} />
+          <Text style={styles.linkText}>Voice Help Guide</Text>
+        </A11yPressable>
       </View>
     </View>
   );

@@ -1,4 +1,4 @@
-import { Link, Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import React from 'react';
 import { ScrollView, StyleSheet, Text } from 'react-native';
 
@@ -18,6 +18,7 @@ export default function UNCRPDInfoScreen() {
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
   const { t } = useTranslation();
+  const router = useRouter();
   useAnnounceOnMount(t('uncrpd.screenLabel'));
   useFocusOnRefOnMount(titleRef);
 
@@ -38,11 +39,9 @@ export default function UNCRPDInfoScreen() {
             { label: t('uncrpd.actions.gcLegalCapacity'), href: '/(tabs)/research/master-index?filter=uncrpd' },
             { label: t('uncrpd.actions.gcAccessibility'), href: '/(tabs)/research/master-index?filter=uncrpd' },
           ].map(item => (
-            <Link key={item.label} href={item.href as any} asChild={true}>
-              <A11yPressable style={styles.linkPress} accessibilityRole="link" accessibilityLabel={item.label} hitSlop={HIT_SLOP_8}>
+              <A11yPressable key={item.label} onPress={() => router.push(item.href as any)} style={styles.linkPress} accessibilityRole="link" accessibilityLabel={item.label} hitSlop={HIT_SLOP_8}>
                 <Text style={styles.linkText}>{item.label}</Text>
               </A11yPressable>
-            </Link>
           ))}
         </GapView>
         <GapView gap={8} style={[styles.section, { marginTop: 24 }]}>

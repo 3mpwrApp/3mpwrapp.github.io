@@ -45,6 +45,7 @@ describe('Assistant Recent Tools', () => {
 
     const btn = screen.getByRole('button', { name: /Open recent tool: Translator/i });
     fireEvent.click(btn);
-    expect(pushMock).toHaveBeenCalledWith({ pathname: '/(tabs)/advocacy/ai-advocate-translator' });
+    // Changed from object format to string format after Link asChild removal
+    expect(pushMock).toHaveBeenCalledWith('/(tabs)/advocacy/ai-advocate-translator');
   });
 });

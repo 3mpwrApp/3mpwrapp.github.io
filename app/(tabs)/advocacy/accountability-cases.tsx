@@ -1,7 +1,8 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import A11yPressable from '../../../components/A11yPressable';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import type { AccCase } from '../../../services/accountabilityTracker';
@@ -15,6 +16,7 @@ export default function AccountabilityCases() {
   const s = styles(palette);
   const { t } = useTranslation();
   const titleRef = React.useRef<Text>(null);
+  const router = useRouter();
   useAnnounceOnMount(t('accountability.casesTitle','Accountability Cases'));
   useFocusOnRefOnMount(titleRef);
 
@@ -36,19 +38,17 @@ export default function AccountabilityCases() {
         <Text style={s.subtitle}>{t('accountability.casesEmpty','No cases yet. Use the coach to create one.')}</Text>
       )}
       {cases.map(cs => (
-  <Link key={cs.id} href={{ pathname: '/(tabs)/advocacy/accountability-case', params: { id: cs.id } } as any} asChild={true}>
-          <View style={s.card} accessibilityRole="button" accessibilityLabel={t('accountability.casesTitle','Accountability Cases')}>
-            <Text style={s.cardTitle}>{cs.target || t('accountability.unknownTarget','Unknown target')}</Text>
-            <Text style={s.cardMeta}>{new Date(cs.updatedAt).toLocaleString()}</Text>
-            <Text style={s.cardIssue}>{cs.issue}</Text>
-            {!!cs.events?.length && (
-              <View style={{ marginTop: 6 }}>
-                <Text style={s.cardMeta}>{t('accountability.latestEvent','Latest event')}:</Text>
-                <Text style={s.cardEvent}>{cs.events[0].type.toUpperCase()}: {truncate(cs.events[0].text, 260)}</Text>
-              </View>
-            )}
-          </View>
-        </Link>
+        <A11yPressable key={cs.id} onPress={() => router.push({ pathname: '/(tabs)/advocacy/accountability-case', params: { id: cs.id } } as any)} style={s.card} accessibilityRole="button" accessibilityLabel={t('accountability.casesTitle','Accountability Cases')}>
+          <Text style={s.cardTitle}>{cs.target || t('accountability.unknownTarget','Unknown target')}</Text>
+          <Text style={s.cardMeta}>{new Date(cs.updatedAt).toLocaleString()}</Text>
+          <Text style={s.cardIssue}>{cs.issue}</Text>
+          {!!cs.events?.length && (
+            <View style={{ marginTop: 6 }}>
+              <Text style={s.cardMeta}>{t('accountability.latestEvent','Latest event')}:</Text>
+              <Text style={s.cardEvent}>{cs.events[0].type.toUpperCase()}: {truncate(cs.events[0].text, 260)}</Text>
+            </View>
+          )}
+        </A11yPressable>
       ))}
     </ScrollView>
   );

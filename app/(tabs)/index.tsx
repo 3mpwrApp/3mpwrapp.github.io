@@ -11,6 +11,7 @@ import GapView from '../../components/GapView';
 import { HomeGuide } from '../../components/HomeGuide';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import { RevolutionaryFeaturesSpotlight } from '../../components/RevolutionaryFeaturesSpotlight';
+import SimpleModeWelcome from '../../components/SimpleModeWelcome';
 import SOSButton from '../../components/SOSButton';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { useAuth } from '../../context/AuthContext';
@@ -19,6 +20,7 @@ import { useTranslation } from '../../i18n';
 import type { Celebration } from '../../services/celebrations';
 import { checkCelebrations, markCelebrationSeen } from '../../services/celebrations';
 import { getActiveSuggestions, type ProactiveSuggestion } from '../../services/copilotProactive';
+import { useComplexityMode } from '../../store/complexityMode';
 import { useTextScale } from '../../theme/typography';
 import { createTextStyles } from '../../theme/typography.enhanced';
 import { useAppPalette } from '../../theme/usePalette';
@@ -438,6 +440,7 @@ const HomeScreen = React.memo(() => {
   const { factor } = useTextScale();
   const titleRef = React.useRef<Text>(null);
   const { user } = useAuth();
+  const { isFeatureVisible } = useComplexityMode();
   
   // Celebration state
   const [celebration, setCelebration] = React.useState<Celebration | null>(null);
@@ -579,6 +582,13 @@ const HomeScreen = React.memo(() => {
       <DisclaimerBanner type="general" compact={true} />
       <GuestModeBanner />
 
+      {/* Simple Mode Welcome - shows when user is in Simple mode */}
+      <SimpleModeWelcome 
+        tabName="Home"
+        availableFeatures={['Ask 3mpwr', 'Search', 'First 7 Days', 'SOS Button']}
+        hiddenCount={10}
+      />
+
       {/* Main Action Buttons */}
       <GapView style={{ flexDirection: 'row', marginBottom: 16 }} gap={12}>
         <A11yPressable
@@ -627,23 +637,32 @@ const HomeScreen = React.memo(() => {
         </GapView>
       </A11yPressable>
 
-      {/* Revolutionary Features Spotlight */}
-      <SafeOptionalComponent>
-        <RevolutionaryFeaturesSpotlight />
-      </SafeOptionalComponent>
+      {/* Revolutionary Features Spotlight - Standard+ only */}
+      {isFeatureVisible('standard') && (
+        <SafeOptionalComponent>
+          <RevolutionaryFeaturesSpotlight />
+        </SafeOptionalComponent>
+      )}
 
-      {/* Disability Wizard */}
-      <SafeOptionalComponent>
-        <DisabilityWizard maxSuggestions={3} showReasons={true} />
-      </SafeOptionalComponent>
+      {/* Disability Wizard - Standard+ only */}
+      {isFeatureVisible('standard') && (
+        <SafeOptionalComponent>
+          <DisabilityWizard maxSuggestions={3} showReasons={true} />
+        </SafeOptionalComponent>
+      )}
 
-      {/* Home Guide */}
-      <SafeOptionalComponent>
-        <HomeGuide />
-      </SafeOptionalComponent>
+      {/* Home Guide - Standard+ only */}
+      {isFeatureVisible('standard') && (
+        <SafeOptionalComponent>
+          <HomeGuide />
+        </SafeOptionalComponent>
+      )}
 
-      <RecentPrompts />
-      <BetaTestersQuickLink />
+      {/* Recent Prompts - Power User only */}
+      {isFeatureVisible('power_user') && <RecentPrompts />}
+      
+      {/* Beta Testers Chat - Standard+ only */}
+      {isFeatureVisible('standard') && <BetaTestersQuickLink />}
 
       {/* SOS Button */}
       <SafeOptionalComponent>

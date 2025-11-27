@@ -10,7 +10,7 @@
  */
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -247,6 +247,7 @@ export default function AppealCommandCenter() {
 
 // Tool Card Component
 function ToolCard({ tool, palette }: { tool: AppealTool; palette: ReturnType<typeof useAppPalette> }) {
+  const router = useRouter();
   const isComingSoon = tool.badge === 'Coming soon';
   
   // Map color strings to palette tokens
@@ -340,15 +341,14 @@ function ToolCard({ tool, palette }: { tool: AppealTool; palette: ReturnType<typ
   }
 
   return (
-    <Link href={tool.route as any} asChild>
-      <A11yPressable
-        hitSlop={HIT_SLOP_8}
-        accessibilityRole="button"
-        accessibilityLabel={`${tool.title}. ${tool.description}${tool.badge ? `. ${tool.badge}` : ''}`}
-      >
-        {CardContent}
-      </A11yPressable>
-    </Link>
+    <A11yPressable
+      onPress={() => router.push(tool.route as any)}
+      hitSlop={HIT_SLOP_8}
+      accessibilityRole="button"
+      accessibilityLabel={`${tool.title}. ${tool.description}${tool.badge ? `. ${tool.badge}` : ''}`}
+    >
+      {CardContent}
+    </A11yPressable>
   );
 }
 

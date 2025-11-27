@@ -1,4 +1,4 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -96,6 +96,7 @@ const RESOURCES = [
 export default function SolidarityToolkit() {
   const palette = useAppPalette();
   const s = styles(palette);
+  const router = useRouter();
   const [expanded, setExpanded] = React.useState<Set<string>>(new Set());
 
   const toggleSection = (id: string) => {
@@ -151,31 +152,21 @@ export default function SolidarityToolkit() {
       <View style={{ height: 20 }} />
       <Text style={s.h2} accessibilityRole="header">Templates & Tools</Text>
       <GapView gap={8}>
-        <Link href={("/(tabs)/resources/templates-gallery" as any)} asChild={true}>
-          <A11yPressable hitSlop={HIT_SLOP_8} style={s.linkButton}>
-            <Text style={s.linkText}>📄 Letter Templates</Text>
-          </A11yPressable>
-        </Link>
-        <Link href={("/(tabs)/resources/letter-accommodation" as any)} asChild={true}>
-          <A11yPressable hitSlop={HIT_SLOP_8} style={s.linkButton}>
-            <Text style={s.linkText}>♿ Accommodation Request</Text>
-          </A11yPressable>
-        </Link>
-        <Link href={("/(tabs)/resources/letter-union-request" as any)} asChild={true}>
-          <A11yPressable hitSlop={HIT_SLOP_8} style={s.linkButton}>
-            <Text style={s.linkText}>🤝 Union Support Request</Text>
-          </A11yPressable>
-        </Link>
-        <Link href={("/(tabs)/resources/doctor-visit-prep" as any)} asChild={true}>
-          <A11yPressable hitSlop={HIT_SLOP_8} style={s.linkButton}>
-            <Text style={s.linkText}>🩺 Doctor Visit Prep</Text>
-          </A11yPressable>
-        </Link>
-        <Link href={("/(tabs)/resources/case-timeline" as any)} asChild={true}>
-          <A11yPressable hitSlop={HIT_SLOP_8} style={s.linkButton}>
-            <Text style={s.linkText}>📅 Case Timeline & Deadlines</Text>
-          </A11yPressable>
-        </Link>
+        <A11yPressable onPress={() => router.push("/(tabs)/resources/templates-gallery" as any)} hitSlop={HIT_SLOP_8} style={s.linkButton}>
+          <Text style={s.linkText}>📄 Letter Templates</Text>
+        </A11yPressable>
+        <A11yPressable onPress={() => router.push("/(tabs)/resources/letter-accommodation" as any)} hitSlop={HIT_SLOP_8} style={s.linkButton}>
+          <Text style={s.linkText}>♿ Accommodation Request</Text>
+        </A11yPressable>
+        <A11yPressable onPress={() => router.push("/(tabs)/resources/letter-union-request" as any)} hitSlop={HIT_SLOP_8} style={s.linkButton}>
+          <Text style={s.linkText}>🤝 Union Support Request</Text>
+        </A11yPressable>
+        <A11yPressable onPress={() => router.push("/(tabs)/resources/doctor-visit-prep" as any)} hitSlop={HIT_SLOP_8} style={s.linkButton}>
+          <Text style={s.linkText}>🩺 Doctor Visit Prep</Text>
+        </A11yPressable>
+        <A11yPressable onPress={() => router.push("/(tabs)/resources/case-timeline" as any)} hitSlop={HIT_SLOP_8} style={s.linkButton}>
+          <Text style={s.linkText}>📅 Case Timeline & Deadlines</Text>
+        </A11yPressable>
       </GapView>
 
       <View style={{ height: 20 }} />

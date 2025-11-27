@@ -1,5 +1,5 @@
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import React from "react";
 import {
     FlatList,
@@ -45,6 +45,7 @@ export default function SavedScreen() {
   const styles = createStyles(palette, factor);
   const titleRef = React.useRef<Text>(null);
   const { t } = useTranslation();
+  const router = useRouter();
   
   useAnnounceOnMount(t("nav.saved", "Saved"));
   useFocusOnRefOnMount(titleRef);
@@ -180,8 +181,8 @@ export default function SavedScreen() {
     if (item.kind === "podcast") {
       const yt = String(item.id).startsWith("yt:");
       return (
-        <Link
-          href={{
+        <Card
+          onPress={() => router.push({
             pathname: "/(tabs)/podcasts/[id]",
             params: {
               id: item.id,
@@ -189,57 +190,48 @@ export default function SavedScreen() {
               description: item.description,
               duration: item.duration,
             },
-          } as any}
-          asChild={true}
-        >
-          <Card
-            title={item.title}
-            subtitle={`${item.description} - ${item.duration}`}
-            rightIcon={yt ? "logo-youtube" : "chevron-forward"}
-            left={
-              item.thumbnailUrl ? (
-                <View
-                  style={{
-                    width: 44,
-                    height: 44,
-                    borderRadius: 4,
-                    overflow: "hidden",
-                    backgroundColor: palette.muted,
-                  }}
-                />
-              ) : undefined
-            }
-          />
-        </Link>
+          } as any)}
+          title={item.title}
+          subtitle={`${item.description} - ${item.duration}`}
+          rightIcon={yt ? "logo-youtube" : "chevron-forward"}
+          left={
+            item.thumbnailUrl ? (
+              <View
+                style={{
+                  width: 44,
+                  height: 44,
+                  borderRadius: 4,
+                  overflow: "hidden",
+                  backgroundColor: palette.muted,
+                }}
+              />
+            ) : undefined
+          }
+        />
       );
     }
     if (item.kind === "campaign") {
       return (
-        <Link
-          href={{
+        <Card
+          onPress={() => router.push({
             pathname: "/(tabs)/campaigns/[id]",
             params: { id: item.id },
-          } as any}
-          asChild={true}
-        >
-          <Card
-            title={item.title}
-            subtitle={item.summary}
-            rightIcon="megaphone-outline"
-          />
-        </Link>
+          } as any)}
+          title={item.title}
+          subtitle={item.summary}
+          rightIcon="megaphone-outline"
+        />
       );
     }
     return (
-      <Link
-        href={{
+      <Card
+        onPress={() => router.push({
           pathname: "/(tabs)/resources/[id]",
           params: { id: item.id },
-        } as any}
-        asChild={true}
-      >
-        <Card title={item.title} subtitle={item.description} />
-      </Link>
+        } as any)}
+        title={item.title}
+        subtitle={item.description}
+      />
     );
   };
 

@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Link, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
@@ -158,20 +158,20 @@ export default function AssistantHub() {
       <RecentTools />
       <GapView style={s.grid} gap={12}>
         {items.map((it) => (
-          <Link key={String(it.href)} href={it.href as any} asChild={true}>
-            <A11yPressable
-              hitSlop={HIT_SLOP_8}
-              accessibilityRole="button"
-              accessibilityLabel={`${it.label}. ${it.desc}`}
-              style={s.card}
-            >
-              <View style={s.iconWrap}>
-                <Ionicons name={it.icon} size={22} color={palette.primary} />
-              </View>
-              <Text style={s.cardTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{it.label}</Text>
-              <Text style={s.cardDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>{it.desc}</Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            key={String(it.href)}
+            onPress={() => router.push(it.href as any)}
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="button"
+            accessibilityLabel={`${it.label}. ${it.desc}`}
+            style={s.card}
+          >
+            <View style={s.iconWrap}>
+              <Ionicons name={it.icon} size={22} color={palette.primary} />
+            </View>
+            <Text style={s.cardTitle} maxFontSizeMultiplier={MAX_FONT_SCALE}>{it.label}</Text>
+            <Text style={s.cardDesc} maxFontSizeMultiplier={MAX_FONT_SCALE}>{it.desc}</Text>
+          </A11yPressable>
         ))}
       </GapView>
     </ScrollView>
@@ -183,6 +183,7 @@ function RecentTools() {
   const { factor } = useTextScale();
   const s = styles(palette, factor);
   const { t } = useTranslation();
+  const router = useRouter();
   const [items, setItems] = useState<{ tool: string; route?: string; ts: number }[]>([]);
   const refresh = () => {
     try {
@@ -251,17 +252,17 @@ function RecentTools() {
       </View>
       <GapView style={{ flexDirection: 'row', flexWrap: 'wrap' }} gap={8}>
         {items.map((it) => (
-          <Link key={it.tool} href={(it.route as any) || '/(tabs)/advocacy/assistant-hub'} asChild={true}>
-            <A11yPressable
-              hitSlop={HIT_SLOP_8}
-              style={s.recentChip}
-              accessibilityRole="link"
-              accessibilityLabel={`${t('assistant.hub.openRecent','Open recent tool')}: ${mapToolLabel(it.tool, t)}`}
-              accessibilityHint={t('assistant.hub.openRecentHint','Opens recent tool')}
-            >
-              <Text style={s.recentText}>{mapToolLabel(it.tool, t)}</Text>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            key={it.tool}
+            onPress={() => router.push((it.route as any) || '/(tabs)/advocacy/assistant-hub')}
+            hitSlop={HIT_SLOP_8}
+            style={s.recentChip}
+            accessibilityRole="link"
+            accessibilityLabel={`${t('assistant.hub.openRecent','Open recent tool')}: ${mapToolLabel(it.tool, t)}`}
+            accessibilityHint={t('assistant.hub.openRecentHint','Opens recent tool')}
+          >
+            <Text style={s.recentText}>{mapToolLabel(it.tool, t)}</Text>
+          </A11yPressable>
         ))}
       </GapView>
     </View>

@@ -5,7 +5,7 @@
  */
 
 import { Ionicons } from '@expo/vector-icons';
-import { Link, Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import {
     FlatList,
@@ -278,21 +278,22 @@ export default function GlobalSearchScreen() {
 const SearchResultCard = React.memo<{ result: SearchResult; palette: any }>(
   ({ result, palette }) => {
     const { t } = useTranslation();
+    const router = useRouter();
     
     return (
-      <Link href={result.route} asChild={true}>
-        <A11yPressable
-          style={[
-            styles.resultCard,
-            {
-              backgroundColor: palette.card,
-              borderColor: palette.muted,
-            }
-          ]}
-          accessibilityRole="button"
-          accessibilityLabel={`${result.title}. ${result.description}`}
-          hitSlop={HIT_SLOP_8}
-        >
+      <A11yPressable
+        onPress={() => router.push(result.route)}
+        style={[
+          styles.resultCard,
+          {
+            backgroundColor: palette.card,
+            borderColor: palette.muted,
+          }
+        ]}
+        accessibilityRole="button"
+        accessibilityLabel={`${result.title}. ${result.description}`}
+        hitSlop={HIT_SLOP_8}
+      >
           <View style={styles.resultIcon}>
             <Text style={{ fontSize: 24 }}>{result.icon}</Text>
           </View>
@@ -341,9 +342,8 @@ const SearchResultCard = React.memo<{ result: SearchResult; palette: any }>(
             )}
           </View>
           
-          <Ionicons name="chevron-forward" size={20} color={palette.muted} />
-        </A11yPressable>
-      </Link>
+        <Ionicons name="chevron-forward" size={20} color={palette.muted} />
+      </A11yPressable>
     );
   }
 );

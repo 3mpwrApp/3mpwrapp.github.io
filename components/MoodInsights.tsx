@@ -3,7 +3,7 @@
  * Displays insights, patterns, coping strategies, streaks, and achievements
  */
 
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useMemo } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -31,6 +31,7 @@ interface MoodInsightsProps {
 
 export default function MoodInsights({ entries, currentScore }: MoodInsightsProps) {
   const palette = useAppPalette();
+  const router = useRouter();
 
   const patterns = useMemo(() => detectPatterns(entries), [entries]);
   const strategies = useMemo(
@@ -113,62 +114,59 @@ export default function MoodInsights({ entries, currentScore }: MoodInsightsProp
           Explore related tools for holistic support
         </Text>
         <GapView gap={8} style={{ marginTop: 12 }}>
-          <Link href="/(tabs)/wellness/pacing-partner" asChild>
-            <A11yPressable
-              style={[styles.linkCard, { borderColor: palette.muted }]}
-              hitSlop={HIT_SLOP_8}
-              accessibilityRole="link"
-              accessibilityLabel="Navigate to Pacing Partner"
-              accessibilityHint="Manage your energy levels and avoid overexertion"
-            >
-              <View>
-                <Text style={[styles.linkTitle, { color: palette.text }]}>
-                  ⚡ Pacing Partner
-                </Text>
-                <Text style={[styles.linkSubtitle, { color: palette.text }]}>
-                  Low mood may signal low energy. Track your activity levels.
-                </Text>
-              </View>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            onPress={() => router.push('/(tabs)/wellness/pacing-partner')}
+            style={[styles.linkCard, { borderColor: palette.muted }]}
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="link"
+            accessibilityLabel="Navigate to Pacing Partner"
+            accessibilityHint="Manage your energy levels and avoid overexertion"
+          >
+            <View>
+              <Text style={[styles.linkTitle, { color: palette.text }]}>
+                ⚡ Pacing Partner
+              </Text>
+              <Text style={[styles.linkSubtitle, { color: palette.text }]}>
+                Low mood may signal low energy. Track your activity levels.
+              </Text>
+            </View>
+          </A11yPressable>
 
-          <Link href="/(tabs)/wellness/self-care-library" asChild>
-            <A11yPressable
-              style={[styles.linkCard, { borderColor: palette.muted }]}
-              hitSlop={HIT_SLOP_8}
-              accessibilityRole="link"
-              accessibilityLabel="Navigate to Self-Care Library"
-              accessibilityHint="Browse self-care resources and activities"
-            >
-              <View>
-                <Text style={[styles.linkTitle, { color: palette.text }]}>
-                  🌿 Self-Care Library
-                </Text>
-                <Text style={[styles.linkSubtitle, { color: palette.text }]}>
-                  Discover activities tailored to your current mood.
-                </Text>
-              </View>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            onPress={() => router.push('/(tabs)/wellness/self-care-library')}
+            style={[styles.linkCard, { borderColor: palette.muted }]}
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="link"
+            accessibilityLabel="Navigate to Self-Care Library"
+            accessibilityHint="Browse self-care resources and activities"
+          >
+            <View>
+              <Text style={[styles.linkTitle, { color: palette.text }]}>
+                🌿 Self-Care Library
+              </Text>
+              <Text style={[styles.linkSubtitle, { color: palette.text }]}>
+                Discover activities tailored to your current mood.
+              </Text>
+            </View>
+          </A11yPressable>
 
-          <Link href="/(tabs)/community" asChild>
-            <A11yPressable
-              style={[styles.linkCard, { borderColor: palette.muted }]}
-              hitSlop={HIT_SLOP_8}
-              accessibilityRole="link"
-              accessibilityLabel="Navigate to Community"
-              accessibilityHint="Connect with others for support"
-            >
-              <View>
-                <Text style={[styles.linkTitle, { color: palette.text }]}>
-                  👥 Community Support
-                </Text>
-                <Text style={[styles.linkSubtitle, { color: palette.text }]}>
-                  You're not alone. Connect with others who understand.
-                </Text>
-              </View>
-            </A11yPressable>
-          </Link>
+          <A11yPressable
+            onPress={() => router.push('/(tabs)/community')}
+            style={[styles.linkCard, { borderColor: palette.muted }]}
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="link"
+            accessibilityLabel="Navigate to Community"
+            accessibilityHint="Connect with others for support"
+          >
+            <View>
+              <Text style={[styles.linkTitle, { color: palette.text }]}>
+                👥 Community Support
+              </Text>
+              <Text style={[styles.linkSubtitle, { color: palette.text }]}>
+                You're not alone. Connect with others who understand.
+              </Text>
+            </View>
+          </A11yPressable>
         </GapView>
       </View>
     </ScrollView>

@@ -13,6 +13,7 @@ jest.mock('expo-router', () => ({
   Link: ({ children }: any) => children, 
   usePathname: () => '/', 
   useLocalSearchParams: () => ({}),
+  useRouter: () => ({ push: jest.fn(), back: jest.fn(), replace: jest.fn() }),
   useFocusEffect: (callback: any) => {
     const React = require('react');
     React.useEffect(() => {
@@ -37,6 +38,11 @@ jest.mock('@expo/vector-icons', () => ({ Ionicons: () => null }));
 // Mock UI chrome that uses style functions/arrays heavily
 jest.mock('../components/SettingsLink', () => () => null);
 jest.mock('../components/ContrastToggle', () => () => null);
+jest.mock('../components/SimpleModeWelcome', () => () => null);
+jest.mock('../components/SkeletonLoader', () => ({ 
+  SkeletonList: () => null, 
+  CardSkeletonLoader: () => null 
+}));
 
 // Silence network
 jest.mock('../services/events', () => ({ fetchEvents: async () => [] }));
@@ -62,6 +68,16 @@ jest.mock('../services/analytics', () => ({ logEvent: () => {} }));
 jest.mock('../store/counts', () => ({ useCounts: () => ({ counts: {}, setCount: jest.fn() }) }));
 // Mock network hook
 jest.mock('../store/network', () => ({ useNetwork: () => ({ offline: false, setOffline: jest.fn() }) }));
+// Mock complexity mode hook
+jest.mock('../store/complexityMode', () => ({ 
+  useComplexityMode: () => ({ 
+    mode: 'standard', 
+    setMode: jest.fn(), 
+    isBadDayMode: false, 
+    setBadDayMode: jest.fn(), 
+    isFeatureVisible: () => true 
+  }) 
+}));
 jest.mock('../store/refresh', () => ({ useRefresh: () => ({ tick: 0, refreshAll: jest.fn() }) }));
 // Mock auth hook to avoid provider wiring
 jest.mock('../context/AuthContext', () => ({ 

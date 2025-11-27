@@ -4,7 +4,7 @@
  * @a11y-ignore - All Pressables have proper accessibilityRole and hitSlop (scanner false positives)
  */
 
-import { Link, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
 import { Platform, Pressable, ScrollView, Text, View } from 'react-native';
 
@@ -151,47 +151,31 @@ export default function First7Screen(){
         <View style={{ height: 1, backgroundColor: palette.muted, marginVertical: 8 }} />
         <Text style={{ fontWeight: '600', color: palette.text }}>Quick links</Text>
         <GapView gap={8} style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-          <Link href="/(tabs)/wellness" asChild={true}>
-            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-              <Text style={{ color: palette.text }}>Health Tracker</Text>
-            </Pressable>
-          </Link>
-          <Link href="/(tabs)/advocacy/ai-assistant" asChild={true}>
-            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-              <Text style={{ color: palette.text }}>AI Assistant</Text>
-            </Pressable>
-          </Link>
-          <Link href="/(tabs)/advocacy/accountability-hub" asChild={true}>
-            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-              <Text style={{ color: palette.text }}>Accountability Hub</Text>
-            </Pressable>
-          </Link>
-          <Link href="/(tabs)/resources/evidence-locker" asChild={true}>
-            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-              <Text style={{ color: palette.text }}>Evidence Locker</Text>
-            </Pressable>
-          </Link>
-          <Link href="/(tabs)/resources" asChild={true}>
-            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-              <Text style={{ color: palette.text }}>Resources</Text>
-            </Pressable>
-          </Link>
-          <Link href="/(tabs)/advocacy" asChild={true}>
-            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-              <Text style={{ color: palette.text }}>Advocacy Hub</Text>
-            </Pressable>
-          </Link>
-          <Link href="/profile" asChild={true}>
-            <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-              <Text style={{ color: palette.text }}>Profile</Text>
-            </Pressable>
-          </Link>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/wellness')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+            <Text style={{ color: palette.text }}>Health Tracker</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/advocacy/ai-assistant')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+            <Text style={{ color: palette.text }}>AI Assistant</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/advocacy/accountability-hub')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+            <Text style={{ color: palette.text }}>Accountability Hub</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/resources/evidence-locker')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+            <Text style={{ color: palette.text }}>Evidence Locker</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/resources')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+            <Text style={{ color: palette.text }}>Resources</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/advocacy')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+            <Text style={{ color: palette.text }}>Advocacy Hub</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/profile')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+            <Text style={{ color: palette.text }}>Profile</Text>
+          </Pressable>
           {Platform.OS !== 'web' && (
-            <Link href="/modal" asChild={true}>
-              <Pressable accessibilityRole="button" style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-                <Text style={{ color: palette.text }}>Notifications</Text>
-              </Pressable>
-            </Link>
+            <Pressable accessibilityRole="button" onPress={() => router.push('/modal')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+              <Text style={{ color: palette.text }}>Notifications</Text>
+            </Pressable>
           )}
         </GapView>
         
