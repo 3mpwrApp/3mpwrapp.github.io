@@ -446,7 +446,7 @@ const HomeScreen = React.memo(() => {
   const [showWelcome, setShowWelcome] = React.useState(false);
   
   // Error state for debugging
-  const [renderError, setRenderError] = React.useState<Error | null>(null);
+  const [_renderError, setRenderError] = React.useState<Error | null>(null);
   
   // ALL HOOKS MUST BE CALLED BEFORE ANY CONDITIONAL RETURNS
   

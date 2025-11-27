@@ -520,7 +520,7 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
       maxHeight: 400,
       zIndex: 9999, // Increased z-index to ensure menu appears above everything
       elevation: 10, // Android elevation
-      shadowColor: '#000', // iOS shadow
+      shadowColor: palette.text, // Use palette token for shadow
       shadowOffset: { width: 0, height: 4 },
       shadowOpacity: 0.3,
       shadowRadius: 8,
