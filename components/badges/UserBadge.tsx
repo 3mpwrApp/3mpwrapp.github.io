@@ -2,6 +2,7 @@ import { StyleSheet, Text, useColorScheme } from 'react-native';
 
 import { useThemeColor } from '../../hooks/useThemeColor';
 import { useTranslation } from '../../i18n';
+import { useAppPalette } from '../../theme/usePalette';
 import { GapView } from '../GapView';
 
 
@@ -53,6 +54,7 @@ export default function UserBadge({
   showLabel = true 
 }: UserBadgeProps) {
   const textColor = useThemeColor({}, 'text');
+  const palette = useAppPalette();
   const { t } = useTranslation();
 
   const sizeStyles = {
@@ -143,7 +145,7 @@ export default function UserBadge({
             styles.phase,
             {
               fontSize: currentSize.fontSize - 2,
-              color: textSecondaryColor,
+              color: palette.textSecondary,
             },
           ]}
           numberOfLines={1}
