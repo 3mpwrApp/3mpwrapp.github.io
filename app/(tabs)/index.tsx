@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
-import { CelebrationToast } from '../../components/CelebrationToast';
+import CelebrationToast from '../../components/CelebrationToast';
 import { CopilotSuggestionBanner } from '../../components/CopilotSuggestionBanner';
 import DisabilityWizard from '../../components/DisabilityWizard';
 import DisclaimerBanner from '../../components/DisclaimerBanner';
