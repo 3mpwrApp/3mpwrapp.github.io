@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-28T00:06:22.069Z",
+  "lastUpdated": "2025-11-28T06:02:56.464Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3685,
+      "totalPosts": 3710,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-28T00:06:12.591Z"
+      "lastSeen": "2025-11-28T06:02:46.445Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3700,
+      "totalPosts": 3725,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-28T00:06:14.611Z"
+      "lastSeen": "2025-11-28T06:02:48.649Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3684,
+      "totalPosts": 3709,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-28T00:06:16.789Z"
+      "lastSeen": "2025-11-28T06:02:50.943Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3693,
+      "totalPosts": 3718,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-28T00:06:18.916Z"
+      "lastSeen": "2025-11-28T06:02:53.187Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3700,
+      "totalPosts": 3725,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-28T00:06:21.065Z"
+      "lastSeen": "2025-11-28T06:02:55.460Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Wow, I can't believe I am nominated along such amazing advocates I admire and respect so much. It is an honor! And 2nd time? 🥲\n\nI found my calling 7 years ago and I'll continue as long as I can. Our will for a more accessible gaming space is unbreakable.\n\nVote link in quoted post.\n\n#Accessibility",
-      "author": "black1976.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "There's a special place in hell reserved for web developers who break default browser functionality like pasting into input fields or ctrl+clicking on links to open in a new tab.\n\nAnd the special hell is reserved for those who implement navigation as anything but anchor tags.\n\n#rant #a11y",
-      "author": "mrdowden.com",
-      "engagement": 21,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,6 +320,24 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
+      "author": "lsto4.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 32
+      "count": 31
     },
     {
       "keyword": "cripthevote",
@@ -378,20 +378,20 @@
       "count": 11
     },
     {
-      "keyword": "wcag",
+      "keyword": "accessibility a11y",
       "count": 7
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 7
+      "keyword": "disability",
+      "count": 6
     },
     {
       "keyword": "inclusion",
       "count": 6
     },
     {
-      "keyword": "disability",
-      "count": 5
+      "keyword": "wcag",
+      "count": 6
     },
     {
       "keyword": "virtual",
