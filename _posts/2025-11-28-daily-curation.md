@@ -1,0 +1,155 @@
+---
+layout: post
+title: "Daily News Curation - 2025-11-28"
+date: 2025-11-28
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-11-28
+
+Curated 30 items from disability, accessibility, and social policy sources.
+
+## 1. Manitoba Government Announces Overpass North of Carberry at Trans-Canada Highway and Provincial Trunk Highway 5
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71677)
+**Score:** 20.00
+
+## 2. Calgary officials address memo claiming federal housing funds ‘paused' over rezoning repeal
+The Canada Mortgage and Housing Corporation is denying a pause to Calgary's federal housing money, noting it's reviewing details of council's proposal to repeal citywide rezoning.
+📍 [Source](https://globalnews.ca/news/11546488/city-officials-address-claims-calgary-housing-funds-paused/)
+**Score:** 14.50
+
+## 3. Ontario could avoid recession this year, even as Trump's tariffs take hold: fiscal watchdog
+<img src='https://i.cbc.ca/ais/9c686066-4de6-4835-932a-db22fca073f3,1764189382223/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A worker in a manufacturing plant handling some heavy equipment.' width='620' height='349' title='The latest report from Ontario's Financial Accountability Office shows the province has lost more than 20,000 manufacturing jobs over the past two years. The report comes as U.S. tariffs put further pressure on the sector.'/><p>Ontario’s fiscal watchdog says the province could avoid a recession this year, but the findings of his latest report show the trade war with the U.S. is taking a bite out of Ontario’s economy. The data is part of the latest update from the province’s Financial Accountability Office. </p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/ontario-recession-weakening-economy-9.6993575?cmp=rss)
+**Score:** 17.40
+
+## 4. Guilbeault resigns from cabinet after Carney signs Alberta pipeline deal
+Global News has confirmed Canadian Identity and Culture Minister Steven Guilbeault, the former federal environment minister, has resigned from cabinet.
+📍 [Source](https://globalnews.ca/news/11547077/guilbeault-resigns-cabinet-carney-alberta-pipeline-deal/)
+**Score:** 16.50
+
+## 5. Molson Canada accuses ex-managers of embezzling millions in fraud scheme
+In documents filed in Ontario Superior Court, the company claimed its former sales director oversaw 'a complex scheme to defraud the company of many millions of dollars.'
+📍 [Source](https://globalnews.ca/news/11547015/molson-canada-fraud-lawsuit-managers/)
+**Score:** 14.00
+
+## 6. Can Canadians still trust Canada Post with holiday mail after months of strikes?
+<img src='https://i.cbc.ca/ais/efeb5703-8086-4c3c-a53b-944105c6efe4,1764259739406/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C450%2C8640%2C4860%29%3BResize%3D%28620%29' alt='A red mailbox that  says Canada Post' width='620' height='349' title='A Canada Post mail box is pictured in Richmond B.C. on Friday, Sept. 26, 2025. '/><p>Technically, the rotating Canada Post strikes are over. But can Canadians trust the corporation to get their Christmas cards and packages delivered on time? Here's what to know.</p>
+📍 [Source](https://www.cbc.ca/news/canada/canada-post-mail-christmas-9.6994635?cmp=rss)
+**Score:** 14.00
+
+## 7. Montreal mayor, STM say efforts being made to curb rise in transit violence
+<img src='https://i.cbc.ca/ais/1.5493702,1583940917000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C194%2C3765%2C2117%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Photo: Radio-Canada / Ivanoh Demers Images génériques du Métro de Montréal,   Photo prise dans le métro de Montréal  Montréal, Québec, Canada Sur la photo: (Gauche à droite) Stations sur la ligne orange. Station Jean-Talon.    LE 23 MAI 2019 2019/05/23'/><p>Montreal transit officials and the city’s new mayor say they are taking steps to address growing concerns about safety on the city’s bus and Metro systems following a CBC analysis showing a rise in transit-related assaults in major Canadian cities.</p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/metro-violence-stm-montreal-9.6994002?cmp=rss)
+**Score:** 14.00
+
+## 8. Some commercial lobster fishers say Indigenous treaty fishing threatens stocks. Government memo says otherwise
+<img src='https://i.cbc.ca/ais/7ccf5136-3e9e-4118-8951-71fbd960bbc8,1764279641344/full/max/0/default.jpg?im=Crop%2Crect%3D%28220%2C0%2C1699%2C955%29%3BResize%3D%28620%29' alt='A man wearing sunglasses holds up a lobster by the claws' width='620' height='349' title='Matthew Cope holds up a jumbo lobster he rescued from pulling up ghost gear – traps cut or otherwise left on the ocean floor.'/><p>The fifth estate investigates misconceptions and allegations fuelling conflict in Canada’s largest lobster fishery, where Mi’kmaw fishers face broad opposition when exercising treaty rights.</p>
+📍 [Source](https://www.cbc.ca/news/canada/commercial-lobster-fishing-indigenous-rights-dfo-9.6995262?cmp=rss)
+**Score:** 12.50
+
+## 9. The Carney-Smith agreement surely won't make pipelines 'boring again'
+<img src='https://i.cbc.ca/ais/ec40320b-6b3c-483f-b9f7-3af64086274c,1764286197822/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C190%2C6000%2C3375%29%3BResize%3D%28620%29' alt='Prime Minister Mark Carney' width='620' height='349' title='Prime Minister Mark Carney, right, signs an MOU with Alberta Premier Danielle Smith in Calgary, Alta., Thursday, Nov. 27, 2025. THE CANADIAN PRESS/Jeff McIntosh'/><p>Guilbeault's resignation — the rare cabinet resignation due to a disagreement over government policy — both adds to and underlines the test of national and political leadership that Mark Carney signed up for when he put his signature on that memorandum.</p>
+📍 [Source](https://www.cbc.ca/news/politics/carney-smith-guilbeault-analysis-9.6995708?cmp=rss)
+**Score:** 14.00
+
+## 10. Ontario signs nearly $40M deal with another First Nation in Ring of Fire region
+<img src='https://i.cbc.ca/ais/69295e05-c640-4c58-b606-f4e9ae117d98,1764274622610/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C183%2C1534%2C862%29%3BResize%3D%28620%29' alt='Two people are seen shaking hands. One person is wearing a suit while the other is wearing traditional Indigenous regalia.' width='620' height='349' title='Ontario Premier Doug Ford, left, shakes hands with Marten Falls Chief Bruce Achneepineskum at Queen’s Park in Toronto on Thursday. The Ontario government has announced $39.5 million for the remote community, which aims to speed up the construction of an all-season access road to the mineral-rich Ring of Fire.'/><p>As part of its ongoing plans to develop in the mineral-rich Ring of Fire region, the Ontario government has signed a community partnership agreement with Marten Falls First Nation. Here's how the agreement builds on other deals the province has made with communities in the region, and why some First Nations are critical of the province's fast-tracked development approach.</p>
+📍 [Source](https://www.cbc.ca/news/canada/thunder-bay/marten-falls-first-nation-agreement-9.6995151?cmp=rss)
+**Score:** 15.00
+
+## 11. Carney-Smith Pipeline Plan Is Slammed in BC
+Eby said the project has ‘no proponent, no route, no money, no First Nations support.’
+📍 [Source](https://thetyee.ca/News/2025/11/27/Carney-Smith-Pipeline-Plan-Slammed-BC/)
+**Score:** 10.50
+
+## 12. New Brunswick parent concerned new religious accommodation policy will alienate students
+The approval would be needed for access to a prayer room, fasting or missing school for religious reasons within the Francophone South School District.
+📍 [Source](https://globalnews.ca/news/11547045/francophone-south-district-new-brunswick-religious-accommodation/)
+**Score:** 10.50
+
+## 13. ‘Bloody Good Drag' aims to increase blood donations and highlight N.S. drag artists
+In September 2022, Canadian Blood Services eliminated screening questions about sexual orientation and replaced them with sexual behaviour questions that apply to all donors.
+📍 [Source](https://globalnews.ca/news/11547035/bloody-good-drag-canadian-blood-services/)
+**Score:** 13.50
+
+## 14. Canada Calls Its Reactors Peaceful. It’s Not So Simple
+A venerable anti-nuclear war group says Carney’s SMR funding could fuel a new arms race.
+📍 [Source](https://thetyee.ca/Analysis/2025/11/28/Canada-Calls-Reactors-Peaceful-Not-So-Simple/)
+**Score:** 9.50
+
+## 15. Molson Canada accuses ex-managers of multimillion-dollar fraud scheme
+📍 [Source](https://www.cbc.ca/news/business/molson-canada-vendors-lawsuit-fraud-allegations-9.6995802?cmp=rss)
+**Score:** 9.50
+
+## 16. New trial ordered for Ontario man who spent 23 years in prison for 10-year-old girl’s murder
+<img src='https://i.cbc.ca/ais/cec8142a-f634-4a1a-857f-1e1f932064fe,1764284877470/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A man sitting in a law office.' width='620' height='349' title='Timothy Rees'/><p>Ontario’s court of appeal has set aside a conviction and ordered a new trial for a man who spent 23 years in prison for the murder of a 10-year-old girl in 1989 — but by all accounts, it’s unlikely that trial will ever happen.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/ontario-murder-conviction-appeal-rees-thurrott-9.6995519?cmp=rss)
+**Score:** 9.00
+
+## 17. Latest fiscal update shows Alberta’s budget deficit holding steady at $6.4B
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-second-quarter-fiscal-update-9.6995312?cmp=rss)
+**Score:** 9.00
+
+## 18. Manitoba Government Takes Action to Protect Children
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71680)
+**Score:** 7.50
+
+## 19. Manitoba Government Investing $9.4 Million in Bilingual Municipalities
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71679)
+**Score:** 7.50
+
+## 20. Advocates push for judicial change after murder of Kelowna woman
+James Plover has been charged with first-degree murder in the death of his estranged wife, Bailey McCourt. The charge is now before the courts and no verdicts have been made.
+📍 [Source](https://globalnews.ca/news/11548120/push-for-judicial-change-murder-kelowna-woman/)
+**Score:** 4.00
+
+## 21. Sport complaint process needs to improve, advocates say after helping bullied Hamilton teen hockey player
+<img src='https://i.cbc.ca/ais/1.3216905,1741389530000/full/max/0/default.jpg?im=Crop%2Crect%3D%2854%2C0%2C1866%2C1049%29%3BResize%3D%28620%29' alt='A closeup shows skates on ice.' width='620' height='349' title=''/><p>A Hamilton couple says it wasn’t until they connected with an athletes advocacy group that they felt supported after they made a complaint about the behaviour of players on their son's hockey team in 2024. The group says structural changes are needed to complaint processes.</p>
+📍 [Source](https://www.cbc.ca/news/canada/hamilton/athletes-empowered-9.6992223?cmp=rss)
+**Score:** 5.00
+
+## 22. Measles Update #49
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71741)
+**Score:** 4.50
+
+## 23. Measles Update #47
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71678)
+**Score:** 4.50
+
+## 24. B.C. woman wants to become youngest Canadian to climb the 7 summits
+Bajwa hopes to set the record by the time she’s 25, so it’s not a rush. There’s still time to savor the views from the summits and the little moments on every single trip.
+📍 [Source](https://globalnews.ca/news/11548196/bc-woman-become-youngest-canadian-climb-7-summits/)
+**Score:** 4.50
+
+## 25. U.K. to start enforcing new travel permit rules for Canadians visitors
+Canadians will not be able to legally enter the United Kingdom without an electronic travel authorization starting next February, or face being denied boarding.
+📍 [Source](https://globalnews.ca/news/11548064/uk-travel-rules-canada-eta/)
+**Score:** 4.50
+
+## 26. A fresh take on Little Women at Granville Island Stage
+A multi-generational fave returns with a refreshed and theatrical approach.
+📍 [Source](https://www.straight.com/arts/a-fresh-take-on-little-women-at-granville-island-stage)
+**Score:** 4.50
+
+## 27. Water From Your Eyes bring chaotic brilliance to the Biltmore Cabaret
+<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>.</h3><p></p>
+📍 [Source](https://www.straight.com/music/water-from-your-eyes-bring-chaotic-brilliance-to-biltmore-cabaret)
+**Score:** 4.50
+
+## 28. Human Rights Tribunal on RCMP Methods Delays Decision Nearly a Year
+Three of six complainants alleging racial bias have died while awaiting an outcome.
+📍 [Source](https://thetyee.ca/News/2025/11/28/Human-Rights-Tribunal-RCMP-Methods-Delays-Decision/)
+**Score:** 3.00
+
+## 29. Employer Prosecuted for Workplace Fatality
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71738)
+**Score:** 2.00
+
+## 30. Sinead X Sanders on traumatic brain injuries, cognitive dissonance, and a long-awaited killer debut
+Vancouver finest players rally around a singer with an extraordinary story.
+📍 [Source](https://www.straight.com/music/sinead-x-sanders-on-traumatic-brain-injuries-cognitive-dissonance-and-a-long-awaited-killer)
+**Score:** 2.00
+
