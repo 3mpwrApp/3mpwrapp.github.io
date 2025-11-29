@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-29T00:06:13.802Z",
+  "lastUpdated": "2025-11-29T06:02:59.314Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3785,
+      "totalPosts": 3810,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T00:06:02.544Z"
+      "lastSeen": "2025-11-29T06:02:49.123Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3800,
+      "totalPosts": 3825,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T00:06:05.416Z"
+      "lastSeen": "2025-11-29T06:02:51.417Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3784,
+      "totalPosts": 3809,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T00:06:07.955Z"
+      "lastSeen": "2025-11-29T06:02:53.595Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3793,
+      "totalPosts": 3818,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T00:06:10.484Z"
+      "lastSeen": "2025-11-29T06:02:55.964Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3800,
+      "totalPosts": 3825,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T00:06:12.798Z"
+      "lastSeen": "2025-11-29T06:02:58.310Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
-      "author": "lsto4.bsky.social",
-      "engagement": 23,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
       "author": "lsto4.bsky.social",
@@ -338,6 +314,30 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
+      "author": "lsto4.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "The hashtag #accessibility allows you to find lots of accessibility-related resources. To find accessibility resources in Spanish, use the hashtag #accesibilidad. The hashtag #accessibilité helps you find resources in French.",
+      "author": "a11yawareness.bsky.social",
+      "engagement": 27,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,14 +347,14 @@
     },
     {
       "keyword": "accessibility",
-      "count": 32
-    },
-    {
-      "keyword": "a11y",
-      "count": 27
+      "count": 31
     },
     {
       "keyword": "cripthevote",
+      "count": 26
+    },
+    {
+      "keyword": "a11y",
       "count": 26
     },
     {
@@ -378,16 +378,8 @@
       "count": 10
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 5
-    },
-    {
       "keyword": "digitalaccessibility",
       "count": 5
-    },
-    {
-      "keyword": "humanrights",
-      "count": 4
     },
     {
       "keyword": "inclusion",
@@ -399,10 +391,6 @@
     },
     {
       "keyword": "hansvestberg",
-      "count": 4
-    },
-    {
-      "keyword": "16days",
       "count": 4
     },
     {
@@ -419,6 +407,18 @@
     },
     {
       "keyword": "virtual",
+      "count": 4
+    },
+    {
+      "keyword": "foxlies",
+      "count": 4
+    },
+    {
+      "keyword": "stoptrump",
+      "count": 4
+    },
+    {
+      "keyword": "wearetheflood",
       "count": 4
     }
   ]
