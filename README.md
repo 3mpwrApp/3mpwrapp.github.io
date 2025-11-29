@@ -2,6 +2,10 @@
 
 A privacy-first empowerment app with enterprise-grade security, Indigenous language support, complete user data ownership, and ML-driven personalization.
 
+**Website:** https://3mpwrapp.pages.dev  
+**Privacy Policy:** https://3mpwrapp.pages.dev/privacy  
+**Terms of Service:** https://3mpwrapp.pages.dev/terms
+
 **Status**: Production Ready (99/100) | **Bundle Size**: 3.0 MB | **Tests**: 315 passing | **Last Update**: Nov 4, 2025 | **Email**: empowrapp08162025@gmail.com
 
 ## ⚠️ IMPORTANT LEGAL DISCLAIMERS
@@ -47,6 +51,18 @@ Upon first opening the app, ALL users are required to:
 - **When terms are updated, you must re-accept** on next app open
 
 **See** `docs/release-prep/legal/terms-of-service.md` **and** `docs/release-prep/legal/privacy-policy.md` **for complete legal protections.**
+
+**Legal Resources (Hosted):**
+- Privacy Policy: https://3mpwrapp.pages.dev/privacy
+- Terms of Service: https://3mpwrapp.pages.dev/terms
+- Data Ownership: https://3mpwrapp.pages.dev/data-ownership
+- Community Guidelines: https://3mpwrapp.pages.dev/community/guidelines
+- Accessibility Statement: https://3mpwrapp.pages.dev/accessibility
+- Delete My Data: https://3mpwrapp.pages.dev/delete-data
+- FAQ: https://3mpwrapp.pages.dev/faq
+- User Guide: https://3mpwrapp.pages.dev/user-guide
+- Site Map: https://3mpwrapp.pages.dev/site-map
+- Beta Testing: https://3mpwrapp.pages.dev/beta
 
 ---
 

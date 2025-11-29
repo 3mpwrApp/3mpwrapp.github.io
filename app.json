@@ -11,6 +11,10 @@
     "userInterfaceStyle": "automatic",
     "jsEngine": "hermes",
     "primaryColor": "#000000",
+    "privacy": "https://3mpwrapp.pages.dev/privacy",
+    "web": {
+      "url": "https://3mpwrapp.pages.dev"
+    },
     "updates": {
       "checkAutomatically": "ON_LOAD",
       "fallbackToCacheTimeout": 0,
@@ -51,7 +55,10 @@
       },
       "edgeToEdgeEnabled": true,
       "package": "com.app3mpwr.app3mpwr",
+      "versionCode": 1,
       "allowBackup": false,
+      "usesCleartextTraffic": false,
+      "networkSecurityConfig": "./network_security_config.xml",
       "permissions": [
         "android.permission.INTERNET",
         "android.permission.ACCESS_NETWORK_STATE",

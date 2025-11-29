@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Disable cleartext (HTTP) traffic for all connections -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Trust system certificate authorities -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    
+    <!-- 
+        All network connections must use HTTPS (TLS 1.3)
+        This prevents man-in-the-middle attacks and ensures data encryption
+        
+        Exception: If you need to support HTTP for development/debugging,
+        create a separate debug build configuration
+    -->
+</network-security-config>

@@ -91,7 +91,7 @@ export default function PodcastDetail() {
                 await Share.share({
                   title: title ?? "Podcast",
                   message: msg,
-                  url: `https://empowr.app/podcasts/${id}`,
+                  url: `https://3mpwrapp.pages.dev/podcasts/${id}`,
                 });
                 try { trackEvent("podcast_share", { id }); } catch {}
               } catch (e) {

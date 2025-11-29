@@ -1,6 +1,6 @@
+import { Ionicons } from '@expo/vector-icons';
 import type { ComponentPropsWithoutRef } from 'react';
 import { Linking, Pressable, ScrollView, Text, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 
 import { useAppPalette } from '../../theme/usePalette';
 
@@ -21,7 +21,7 @@ export default function DataOwnershipStatement({
   const styles = createStyles(palette);
 
   const openFullStatement = () => {
-    const url = "https://empowr.app/data-ownership"; // Update with actual URL
+    const url = "https://3mpwrapp.pages.dev/data-ownership";
     Linking.openURL(url).catch(() => {});
   };
 

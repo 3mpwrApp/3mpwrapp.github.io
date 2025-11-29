@@ -99,29 +99,31 @@ And here's the revolutionary part: ALL your data stays on YOUR phone. AES-256 en
 "Let me show you the 8 main tabs:
 
 [Screen recording with voiceover]
-1. HOME - Your personalized dashboard with AI energy forecasting
-2. CAMPAIGNS - Coordinate advocacy efforts with templates
-3. COMMUNITY - Find your people with peer support matching
-4. RESOURCES - Everything from evidence locker to legal guides
-5. WELLNESS - 41 tools including mood tracker, pacing partner, DBT skills
-6. ADVOCACY - Letter wizard, lawyer finder, benefits navigator
-7. SETTINGS - Privacy controls, accessibility options, 6 Indigenous languages
-8. WHAT'S NEW - Stay updated with auto-generated changelog
 
-Every single feature is WCAG AAA accessible. Works with TalkBack, VoiceOver, and cognitive accommodations."
+1. HOME - Your personalized dashboard with AI recommendations
+2. WELLNESS - Master Tracker Hub with 6 tracking tools + 4 Wellness Hubs
+3. RESOURCES - Master Tracker Hub, Letter Wizard, Appeal Command Center, Evidence Manager, 22+ legal templates
+4. ADVOCACY - AI Co-Pilot, Gaslighting Detector, Negotiation Coach, AI Case Interpreter, Ally Hub, Lawyer Finder
+5. COMMUNITY - Private messaging, campaigns, mutual aid, peer support
+6. CAMPAIGNS - Organize and join advocacy campaigns, submit to 3mpwr website
+7. EVENTS - Community calendar, TBDIWSG events auto-sync, export to your calendar
+8. RESEARCH - External links to studies, articles, and disability research
+
+AND - accessible Settings with 6 Indigenous languages supported!\"
 
 **[3:30-4:30] Unique Selling Points**
-"What makes 3mpwr different?
+\"What makes 3mpwr different?
 
-1. PRIVACY FIRST: All data encrypted locally, optional offline mode, BYOC (Bring Your Own Cloud)
-2. AI THAT LEARNS YOU: Not population averages - YOUR unique patterns, energy rhythms, mood triggers
-3. CULTURAL INCLUSIVITY: 6 Indigenous languages, traditional protocols integrated
-4. LEGAL COVERAGE: All 14 Canadian jurisdictions, 22 letter templates, deadline calculators
-5. ACCESSIBILITY LEADERSHIP: WCAG AAA compliant, dyslexia support, motor accessibility
-6. COMMUNITY-DRIVEN: Peer support matching, discussion threads, safety controls"
+1. PRIVACY FIRST: All data encrypted locally, optional offline mode, BYOC (Bring Your Own Cloud), AES-256 encryption
+2. COMPREHENSIVE TOOLS: Master Tracker Hub (6 trackers), 4 Wellness Hubs, Appeal Command Center, Evidence Manager, 22+ legal templates
+3. AI-POWERED: Gaslighting Detector, Negotiation Coach, AI Case Interpreter, AI Co-Pilot - all processing locally on your device
+4. CULTURAL INCLUSIVITY: 6 Indigenous languages (Anishinaabemowin, Cree, Inuktitut, Mi'kmaq, Oji-Cree, Ojibwe), traditional protocols integrated
+5. LEGAL COVERAGE: All 14 Canadian jurisdictions, automated letter generation, deadline tracking with Appeal Command Center
+6. ACCESSIBILITY LEADERSHIP: WCAG AAA compliant, Complexity Mode (Simple/Standard/Power User), Bad Day Mode for cognitive fatigue
+7. COMMUNITY-DRIVEN: Private messaging, campaign coordination, peer support, submit campaigns to 3mpwr website"
 
 **[4:30-5:00] Call to Action**
-"Ready to take control of your advocacy and your privacy? Join our closed beta by emailing empowrapp08162025@gmail.com. It's FREE for beta testers.
+"Ready to take control of your advocacy and your privacy? Join our closed beta at https://3mpwrapp.pages.dev/beta or email empowrapp08162025@gmail.com. It's FREE for beta testers.
 
 In the next video, I'll walk you through the first-time setup - including the 9-step legal acceptance flow (yes, we take disclaimers seriously).
 
@@ -140,10 +142,13 @@ Don't forget to like, subscribe, and hit the notification bell so you don't miss
 ✅ WCAG AAA accessibility
 
 🔗 Resources:
-- Beta signup: empowrapp08162025@gmail.com
-- Documentation: [GitHub link]
-- Privacy Policy: [Link]
-- Terms of Service: [Link]
+- Beta signup: https://3mpwrapp.pages.dev/beta
+- Email: empowrapp08162025@gmail.com
+- Website: https://3mpwrapp.pages.dev
+- Privacy Policy: https://3mpwrapp.pages.dev/privacy
+- Terms of Service: https://3mpwrapp.pages.dev/terms
+- User Guide: https://3mpwrapp.pages.dev/user-guide
+- FAQ: https://3mpwrapp.pages.dev/faq
 
 ⏰ Timestamps:
 0:00 Hook - The Problem with Most Health Apps
@@ -273,8 +278,10 @@ A detailed walkthrough of 3mpwr App's 9-step legal acceptance flow. Learn what y
 - Crisis (not emergency services)
 
 🔗 Read Full Terms:
-- Terms of Service v3.0: [Link]
-- Privacy Policy v2.0: [Link]
+- Terms of Service v3.0: https://3mpwrapp.pages.dev/terms
+- Privacy Policy v2.0: https://3mpwrapp.pages.dev/privacy
+- Community Guidelines: https://3mpwrapp.pages.dev/community/guidelines
+- Data Ownership: https://3mpwrapp.pages.dev/data-ownership
 
 ⏰ Timestamps:
 0:00 Why So Many Disclaimers?
@@ -839,9 +846,10 @@ BYOC (Bring Your Own Cloud) mode in 3mpwr App gives you 100% data ownership. Cho
 ✅ What gets synced vs what stays local
 
 🔗 Resources:
-- Nextcloud self-hosting guide: [Link]
-- WebDAV providers comparison: [Link]
-- Privacy policy: [Link]
+- User Guide - BYOC Setup: https://3mpwrapp.pages.dev/user-guide#byoc
+- Privacy Policy: https://3mpwrapp.pages.dev/privacy
+- Data Ownership: https://3mpwrapp.pages.dev/data-ownership
+- FAQ: https://3mpwrapp.pages.dev/faq
 
 ⏰ Timestamps:
 0:00 The Cloud Privacy Problem
@@ -986,10 +994,13 @@ Vote now!"
 ### Must-Include in Every Video Description:
 ```
 🔗 RESOURCES:
-- Beta signup: empowrapp08162025@gmail.com
-- Documentation: [GitHub link]
-- Privacy Policy: [Link]
-- Terms of Service: [Link]
+- Website: https://3mpwrapp.pages.dev
+- Beta signup: https://3mpwrapp.pages.dev/beta
+- Email: empowrapp08162025@gmail.com
+- Privacy Policy: https://3mpwrapp.pages.dev/privacy
+- Terms of Service: https://3mpwrapp.pages.dev/terms
+- User Guide: https://3mpwrapp.pages.dev/user-guide
+- FAQ: https://3mpwrapp.pages.dev/faq
 
 📱 FOLLOW US:
 - YouTube: @3mpwrApp

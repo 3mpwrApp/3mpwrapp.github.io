@@ -292,7 +292,19 @@ For questions, concerns, or to exercise your rights:
 **Email:** empowrapp08162025@gmail.com
 
 **Developer:** 3mpwr App Development  
-**Location:** [Your Location]
+**Location:** Toronto, ON, Canada  
+**Website:** https://3mpwrapp.pages.dev
+
+**Legal Resources:**
+- Privacy Policy: https://3mpwrapp.pages.dev/privacy
+- Terms of Service: https://3mpwrapp.pages.dev/terms
+- Data Ownership: https://3mpwrapp.pages.dev/data-ownership
+- Community Guidelines: https://3mpwrapp.pages.dev/community/guidelines
+- Accessibility Statement: https://3mpwrapp.pages.dev/accessibility
+- Delete My Data: https://3mpwrapp.pages.dev/delete-data
+- FAQ: https://3mpwrapp.pages.dev/faq
+- User Guide: https://3mpwrapp.pages.dev/user-guide
+- Beta Testing: https://3mpwrapp.pages.dev/beta
 
 ---
 

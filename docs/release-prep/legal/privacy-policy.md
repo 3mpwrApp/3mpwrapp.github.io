@@ -53,7 +53,7 @@ Previous major updates that maintain privacy-first design:
 - **Tamper Detection:** Real-time monitoring for unauthorized modifications
 - **Air-Gapped Operation:** Works 100% offline with no mandatory internet connections
 
-*For our complete Data Ownership and Security Statement, see [DATA_OWNERSHIP_STATEMENT.md](DATA_OWNERSHIP_STATEMENT.md).*
+*For our complete Data Ownership and Security Statement, see [https://3mpwrapp.pages.dev/data-ownership](https://3mpwrapp.pages.dev/data-ownership).*
 *For technical verification instructions, see [TECHNICAL_VERIFICATION_GUIDE.md](../TECHNICAL_VERIFICATION_GUIDE.md).*
 
 ## 📋 **Privacy Summary**
@@ -223,7 +223,16 @@ We may update this policy to reflect:
 - **Email:** empowrapp08162025@gmail.com
 - **Organization:** 3mpwr App
 - **Location:** Toronto, ON, Canada
-- **Website:** https://empowr.app
+- **Website:** https://3mpwrapp.pages.dev
+- **Privacy Policy:** https://3mpwrapp.pages.dev/privacy
+- **Terms of Service:** https://3mpwrapp.pages.dev/terms
+- **Data Ownership:** https://3mpwrapp.pages.dev/data-ownership
+- **Community Guidelines:** https://3mpwrapp.pages.dev/community/guidelines
+- **Accessibility:** https://3mpwrapp.pages.dev/accessibility
+- **Delete My Data:** https://3mpwrapp.pages.dev/delete-data
+- **FAQ:** https://3mpwrapp.pages.dev/faq
+- **User Guide:** https://3mpwrapp.pages.dev/user-guide
+- **Beta Testing:** https://3mpwrapp.pages.dev/beta
 
 For privacy-related questions, data requests, or security concerns, please contact us using the email above. We respond to all privacy inquiries within 48 hours and data rights requests within 30 days (or as required by applicable law).
 

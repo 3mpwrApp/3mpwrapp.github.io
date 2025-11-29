@@ -121,7 +121,7 @@ export default function CampaignRoom() {
     Share.share({ message: csv, title: "Campaign Room Tasks" }).catch(() => {});
   };
   const shareRoom = () => {
-    const url = `https://empowr.app/campaigns/room/${id}`;
+    const url = `https://3mpwrapp.pages.dev/campaigns/room/${id}`;
     Share.share({
       title: "Campaign Room",
       message: `Join our campaign room: ${url}`,
@@ -170,7 +170,7 @@ export default function CampaignRoom() {
     onPress={async () => {
       const token = await fsRoomCreateInvite(String(id || ""));
       if (!token) return Alert.alert("Invite", "Unable to create invite.");
-      const url = `${String((globalThis as any)?.location?.origin || "https://empowr.app")}/campaigns/room/${id}?token=${token}`;
+      const url = `${String((globalThis as any)?.location?.origin || "https://3mpwrapp.pages.dev")}/campaigns/room/${id}?token=${token}`;
       Share.share({ message: `Join as moderator: ${url}`, url, title: "Invite" }).catch(() => {});
     }}
     style={[s.button, { marginTop: 8 }]}
