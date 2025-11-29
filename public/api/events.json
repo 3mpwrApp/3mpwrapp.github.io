@@ -1,6 +1,90 @@
 {
   "events": [
     {
+      "id": "evt-hdiwg-iwh-persistent-pain-presentation",
+      "title": "HDIWG - Institute for Work & Health: Persistent Pain Research Presentation",
+      "description": "Hamilton & District Injured Workers Group (HDIWG) is hosting the Institute for Work and Health for a presentation about their research on Persistent Pain following a work-related injury or illness.\n\nA Q & A session will follow the presentation.\n\nIn-Person: 709 Barton Street E, Hamilton\n• Please arrive at least 15 minutes early to settle in\n\nNot feeling well? Can't make it in-person?\n• Register to receive the Zoom link: https://us06web.zoom.us/meeting/register/OD1_phD8QtmdjE0M97KsHg#/registration\n\nWe are looking forward to this educational opportunity!\n\nMore info: hdiwg.net",
+      "date": "2025-12-01T13:00:00-05:00",
+      "location": "709 Barton Street E, Hamilton, ON",
+      "isVirtual": true,
+      "virtualLink": "https://us06web.zoom.us/meeting/register/OD1_phD8QtmdjE0M97KsHg#/registration",
+      "category": "educational",
+      "tags": [
+        "injured-workers",
+        "hamilton",
+        "persistent-pain",
+        "research",
+        "health",
+        "iwh",
+        "hdiwg"
+      ],
+      "organizer": "Hamilton & District Injured Workers Group (HDIWG)",
+      "organizerContact": "hdiwg.net",
+      "status": "published",
+      "registrationRequired": true,
+      "registrationLink": "https://us06web.zoom.us/meeting/register/OD1_phD8QtmdjE0M97KsHg#/registration",
+      "wheelchairAccessible": true,
+      "stepFree": true,
+      "energyCost": "low",
+      "accessibilityNotes": "Hybrid event with both in-person and virtual attendance options. Please arrive 15 minutes early if attending in-person."
+    },
+    {
+      "id": "evt-tmu-surviving-to-thriving-dec3-2025",
+      "title": "From Surviving to Thriving - Every Canadian Counts",
+      "description": "Join Hubert Van Niekerk Sr., alongside researchers Dr. Christine Sheppard and Dr. Nadia Carvalho at this free hybrid event.\n\nHosted by Toronto Metropolitan University's Centre for Excellence in Research on Community (CERC), this event explores pathways from surviving to thriving for people with disabilities.\n\nHybrid Event:\n• In-Person: Toronto Metropolitan University\n• Virtual: Zoom (link provided upon registration)\n\nRegister: https://buff.ly/OTYRZg0r\n\nLearn more: everycanadiancounts.com",
+      "date": "2025-12-03T14:30:00-05:00",
+      "location": "Toronto Metropolitan University, Toronto, ON",
+      "isVirtual": true,
+      "virtualLink": "https://buff.ly/OTYRZg0r",
+      "category": "educational",
+      "tags": [
+        "disability-rights",
+        "research",
+        "toronto",
+        "tmu",
+        "cerc",
+        "every-canadian-counts",
+        "hybrid-event"
+      ],
+      "organizer": "Toronto Metropolitan University - CERC & Every Canadian Counts",
+      "organizerContact": "everycanadiancounts.com",
+      "status": "published",
+      "registrationRequired": true,
+      "registrationLink": "https://buff.ly/OTYRZg0r",
+      "wheelchairAccessible": true,
+      "stepFree": true,
+      "energyCost": "low",
+      "accessibilityNotes": "Free hybrid event with both in-person and virtual attendance options."
+    },
+    {
+      "id": "evt-disability-poverty-canada-dec3-2025",
+      "title": "Disability Poverty in Canada: Learning from Today to Make Tomorrow Better",
+      "description": "Join us for the launch of the 3rd Annual Disability Poverty Report Card!\n\nHear from lived experts, advocates, and researchers as people with disabilities, service providers, and policy researchers come together to share knowledge and lived experiences on equal footing.\n\nDiscover where we can partner to effect systemic change and work toward ending disability poverty in Canada.\n\nTwo Streams Available:\n• Stream A: https://plan-9.hubspotpagebuilder.com/dec-3-research-symposium-stream-a\n• Stream B: https://plan-9.hubspotpagebuilder.com/2025-dec-3-research-symposium-stream-b\n\nFor more information: https://www.disabilitywithoutpoverty.ca\n\n#IDPD2025 #DisabilityWithoutPoverty #EndDisabilityPoverty",
+      "date": "2025-12-03T10:00:00-05:00",
+      "location": "Virtual Event",
+      "isVirtual": true,
+      "virtualLink": "https://www.disabilitywithoutpoverty.ca",
+      "category": "advocacy",
+      "tags": [
+        "disability-poverty",
+        "advocacy",
+        "research",
+        "idpd2025",
+        "disability-without-poverty",
+        "report-card",
+        "symposium"
+      ],
+      "organizer": "Disability Without Poverty",
+      "organizerContact": "https://www.disabilitywithoutpoverty.ca",
+      "status": "published",
+      "registrationRequired": true,
+      "registrationLink": "https://plan-9.hubspotpagebuilder.com/dec-3-research-symposium-stream-a",
+      "captions": true,
+      "asl": true,
+      "energyCost": "low",
+      "accessibilityNotes": "Two streams available for registration. Virtual event with captions and ASL interpretation."
+    },
+    {
       "id": "evt-oniwg-rally-dec8-2025",
       "title": "ONIWG - Support Injured Workers Rally",
       "description": "Join the Ontario Network of Injured Workers Groups (ONIWG) as we rally to support injured workers and demand justice for those who have been harmed on the job.\n\nStand with injured workers as we advocate for:\n• Fair treatment and adequate support for injured workers\n• Proper workplace safety enforcement\n• Access to necessary medical care and rehabilitation\n• Dignity and respect for all injured workers\n\nYour presence matters. Together we can make a difference for injured workers across Ontario.",
@@ -22,6 +106,6 @@
       "energyCost": "medium"
     }
   ],
-  "count": 1,
-  "lastUpdated": "2025-11-25T03:22:59.422Z"
+  "count": 4,
+  "lastUpdated": "2025-11-29T00:00:00.000Z"
 }
