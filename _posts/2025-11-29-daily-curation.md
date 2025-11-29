@@ -1,0 +1,112 @@
+---
+layout: post
+title: "Daily News Curation - 2025-11-29"
+date: 2025-11-29
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-11-29
+
+Curated 21 items from disability, accessibility, and social policy sources.
+
+## 1. Government demanding public servants reimburse years-old Phoenix overpayments
+<img src='https://i.cbc.ca/ais/101c9217-0de3-42cf-a390-3a41fb0c24ac,1764275965055/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1%2C2048%2C1152%29%3BResize%3D%28620%29' alt='The Connaught Building of the Canada Revenue Agency' width='620' height='349' title='A view of the national headquarters of the Canada Revenue Agency on Mackenzie Avenue in Ottawa on 27 Nov. 2025.'/><p>Federal public servants are being threatened with legal action if they don’t repay money they were mistakenly overpaid during the error-plagued rollout of the Phoenix pay system nearly a decade ago, Radio-Canada has learned. </p>
+📍 [Source](https://www.cbc.ca/news/canada/ottawa/government-demanding-public-servants-reimburse-years-old-phoenix-overpayments-9.6995231?cmp=rss)
+**Score:** 20.00
+
+## 2. If you want to shop ethically this holiday season just buy less, Guelph prof says
+<img src='https://i.cbc.ca/ais/1.4781233,1533929117000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C51%2C1000%2C562%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Buying your Christmas gifts now will help you avoid the stress last-minute shoppers can feel, says Liz MacKay.'/><p>While it’s not always easy to shop with workers rights, animal welfare and the environment in mind, a University of Guelph professor says many customers want to support products made in Canada, with fair labour, or using environmentally-friendly practices.</p>
+📍 [Source](https://www.cbc.ca/news/canada/kitchener-waterloo/shopping-ethically-holiday-season-9.6995003?cmp=rss)
+**Score:** 12.50
+
+## 3. Central Okanagan Food bank sees increase in demand, drop in donations
+'Demand is real, it’s there,' Moss said. 'It’s driven by the cost of living and the cost of food. We feel like a bit of a broken record, but that is the reality of where we are.'
+📍 [Source](https://globalnews.ca/news/11549812/central-okanagan-food-bank-increased-demand-drop-in-donations/)
+**Score:** 7.50
+
+## 4. Manitoba will begin Brady Road landfill search for remains of First Nations women on Monday
+<img src='https://i.cbc.ca/ais/f9ced255-1032-4526-9656-9997d18d7660,1743085704873/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='' width='620' height='349' title=''/><p>A search of another Winnipeg landfill for the remains of First Nations women will begin on Monday, CBC News has learned.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/manitoba-search-brady-road-landfill-monday-9.6997072?cmp=rss)
+**Score:** 9.00
+
+## 5. 4 poultry farms in southwestern Ontario hit with avian flu resulting in 63k birds culled so far
+<img src='https://i.cbc.ca/ais/02a92377-ffc5-4b4a-9123-2dab1672ce4e,1764376929777/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C48%2C3000%2C1687%29%3BResize%3D%28620%29' alt='Turkeys at a farm in Pennsylvania in April 2012.' width='620' height='349' title='FILE - Turkeys at a farm in Pennsylvania in April 2012. The Canadian Food Inspection Agency says four avian influenza outbreaks are active in Strathroy-Caradoc, with three affecting more than 63,000 turkeys.'/><p>The Canadian Food Inspection Agency (CFIA) says it has identified additional outbreaks of avian influenza in Strathroy-Caradoc, bringing the total number declared in the last two weeks to four. </p>
+📍 [Source](https://www.cbc.ca/news/canada/london/4-poultry-farms-in-southwestern-ontario-hit-with-avian-flu-resulting-in-63k-birds-culled-so-far-9.6996593?cmp=rss)
+**Score:** 9.00
+
+## 6. Manitoba Government Invests $100,000 in Bairdmore School Playground
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71744)
+**Score:** 7.50
+
+## 7. ‘Cash for keys’ offers are making people homeless, say housing advocates in northern Ontario
+<img src='https://i.cbc.ca/ais/2eef70bb-81c7-4d7c-b243-8b2c714e9335,1764266430003/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C151%2C4800%2C2700%29%3BResize%3D%28620%29' alt='A close-up for a person's hand giving someone a set of keys.' width='620' height='349' title='In 'cash for keys' offers a landlord will give a tenant two months or more in cash if they move out from the property. '/><p>Housing advocates in the northern Ontario city of Sudbury say “cash for keys” agreements are making people homeless over the long term.</p>
+📍 [Source](https://www.cbc.ca/news/canada/sudbury/cash-for-keys-homelessness-9.6994856?cmp=rss)
+**Score:** 6.90
+
+## 8. Moose Hunting Season Opens in Manitoba on December 1
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71745)
+**Score:** 4.50
+
+## 9. Measles Update #48
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71698)
+**Score:** 4.50
+
+## 10. ‘Not enough butter': Calgary Transit sees funding boost but more required to expand service
+A $59 million boost is earmarked for Calgary Transit in the proposed budget to cover increased frequency on key routes, the low-income transit pass, and maintenance and upgrades.
+📍 [Source](https://globalnews.ca/news/11549020/calgary-transit-sees-funding-boost-but-more-required-to-expand-service/)
+**Score:** 4.50
+
+## 11. Popular Fredericton pub reopens after inspection prompts temporary closure
+The restaurant, which has been in business for 36 years, was temporarily closed last week after a report that highlighted several concerns, including rodent droppings.
+📍 [Source](https://globalnews.ca/news/11549569/popular-fredericton-pub-reopens-after-inspection-prompts-temporary-closure/)
+**Score:** 4.50
+
+## 12. Veteran broadcaster John Oakley signs off after 46 years on the air
+After 46 years behind the mic, John Oakley has signed off at 640 Toronto, marking the end of a defining era in Canadian talk radio.
+📍 [Source](https://globalnews.ca/news/11548884/broadcaster-john-oakley-signs-off/)
+**Score:** 4.50
+
+## 13. ‘Huge urgency’ in addressing rising extortion cases in B.C.: Eby
+Public Safety Minister Gary Anandasangaree says he can’t identify five individuals deported over extortion cases due to privacy concerns.
+📍 [Source](https://globalnews.ca/news/11549536/huge-urgency-rising-extortion-cases-bc-eby/)
+**Score:** 4.50
+
+## 14. Expect an Alberta election call shortly, before anyone realizes that pipeline to Prince Rupert is unlikely ever to be built
+📍 [Source](https://rabble.ca/politics/canadian-politics/expect-an-alberta-election-call-shortly-before-anyone-realizes-that-pipeline-to-prince-rupert-is-unlikely-ever-to-be-built/)
+**Score:** 4.50
+
+## 15. Toronto rockers PUP have that dog in them
+<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>.</h3><p class="p1"></p>
+📍 [Source](https://www.straight.com/music/toronto-rockers-pup-have-that-dog-in-them)
+**Score:** 4.50
+
+## 16. You Nearly Missed: Vancouver roots royalty joins Chest Fever at the Rickshaw for a tribute to the Band's Last Waltz
+Robbie Robertson would definitely approve.
+📍 [Source](https://www.straight.com/music/you-nearly-missed-vancouver-roots-royalty-joins-chest-fever-at-rickshaw-for-a-tribute-to-bands)
+**Score:** 4.50
+
+## 17. Photos: Atlanta rapper JID makes the most of a Monday night PNE Forum crowd
+The artist brought the crowd to its feet.
+📍 [Source](https://www.straight.com/music/photos-atlanta-rapper-jid-makes-most-of-a-monday-night-pne-forum-crowd)
+**Score:** 4.50
+
+## 18. Employer Prosecuted for Workplace Incident
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71740)
+**Score:** 2.40
+
+## 19. Employer Prosecuted for Workplace Incident
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71739)
+**Score:** 2.40
+
+## 20. Major housing project breaks ground on the West Island near future REM Station
+A major housing project, Lacey Green Village, on the West Island is being built near the future Fairview-Pointe-Claire REM station in Montreal.
+📍 [Source](https://globalnews.ca/news/11549493/major-housing-project-montreal-rem/)
+**Score:** 2.40
+
+## 21. Jamaican farm workers in N.S. prepare to head home to hurricane devastation
+<img src='https://i.cbc.ca/ais/dbe0c9e2-46e0-4ee3-b7ea-ff1f92ba1fb4,1764174057979/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C3520%2C1980%29%3BResize%3D%28620%29' alt='A man in a yellow high-visibility coat and hoodie is shown in a farmer's field feeding sheep.' width='620' height='349' title='Kensley Richards, from Manchester, Jamaica, is shown feeding sheep at Taproot Farms in Port Williams, N.S.'/><p>Jamaican farm workers in Nova Scotia are bracing for a difficult time when they return to their home country still reeling from the devastating impact of Hurricane Melissa.</p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/jamaican-farm-workers-hurricane-melissa-port-williams-jamaica-9.6993108?cmp=rss)
+**Score:** 1.30
+
