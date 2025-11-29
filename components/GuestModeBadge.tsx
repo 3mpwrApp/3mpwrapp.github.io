@@ -4,6 +4,7 @@ import { AccessibilityInfo, StyleSheet, Text, View } from 'react-native';
 
 import { useAuth } from '../context/AuthContext';
 import { useThemeColor } from '../hooks/useThemeColor';
+import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 
 import A11yPressable from './A11yPressable';
@@ -20,6 +21,7 @@ export default function GuestModeBadge() {
   const { isGuest, user } = useAuth();
   const router = useRouter();
   const palette = useAppPalette();
+  const { t } = useTranslation();
   const textColor = useThemeColor({}, 'text');
   const backgroundColor = useThemeColor({}, 'background');
 
@@ -37,12 +39,12 @@ export default function GuestModeBadge() {
   }
 
   const handleSignIn = async () => {
-    await AccessibilityInfo.announceForAccessibility?.('Navigating to login screen');
+    await AccessibilityInfo.announceForAccessibility?.(t('components.guestBadge.navigatingToLogin', 'Navigating to login screen'));
     router.push('/(auth)/signin' as any);
   };
 
   const handleCreateAccount = async () => {
-    await AccessibilityInfo.announceForAccessibility?.('Navigating to registration screen');
+    await AccessibilityInfo.announceForAccessibility?.(t('components.guestBadge.navigatingToSignup', 'Navigating to registration screen'));
     router.push('/(auth)/signup' as any);
   };
 
@@ -51,7 +53,7 @@ export default function GuestModeBadge() {
       style={[styles.container, { backgroundColor: colors.warning + '15', borderColor: colors.warning }]}
       accessible={true}
       accessibilityLiveRegion="polite"
-      accessibilityLabel="Guest mode active"
+      accessibilityLabel={t('components.guestBadge.active', 'Guest mode active')}
     >
       <View style={styles.content}>
         <Ionicons
@@ -65,13 +67,13 @@ export default function GuestModeBadge() {
             style={[styles.title, { color: colors.warning }]}
             accessibilityRole="header"
           >
-            Guest Mode
+            {t('components.guestBadge.title', 'Guest Mode')}
           </Text>
           <Text
             style={[styles.description, { color: colors.textSecondary }]}
             accessibilityRole="text"
           >
-            Your data will be kept private
+            {t('components.guestBadge.privacy', 'Your data will be kept private')}
           </Text>
         </View>
       </View>
@@ -80,21 +82,21 @@ export default function GuestModeBadge() {
         <A11yPressable
           onPress={handleSignIn}
           accessibilityRole="button"
-          accessibilityLabel="Sign in to your account"
-          accessibilityHint="Tap to navigate to login screen"
+          accessibilityLabel={t('components.guestBadge.signIn', 'Sign in to your account')}
+          accessibilityHint={t('components.guestBadge.signInHint', 'Tap to navigate to login screen')}
           style={[styles.button, { backgroundColor: colors.text }]}
         >
-          <Text style={styles.buttonText}>Sign In</Text>
+          <Text style={styles.buttonText}>{t('components.guestBadge.signInButton', 'Sign In')}</Text>
         </A11yPressable>
 
         <A11yPressable
           onPress={handleCreateAccount}
           accessibilityRole="button"
-          accessibilityLabel="Create a new account"
-          accessibilityHint="Tap to navigate to registration screen"
+          accessibilityLabel={t('components.guestBadge.createAccount', 'Create a new account')}
+          accessibilityHint={t('components.guestBadge.createAccountHint', 'Tap to navigate to registration screen')}
           style={[styles.button, { backgroundColor: colors.warning }]}
         >
-          <Text style={styles.buttonText}>Create Account</Text>
+          <Text style={styles.buttonText}>{t('components.guestBadge.createAccountButton', 'Create Account')}</Text>
         </A11yPressable>
       </GapView>
     </View>

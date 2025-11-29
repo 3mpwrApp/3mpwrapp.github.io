@@ -3871,29 +3871,259 @@
     }
   },
   "updates": {
-    "title": "App Updates",
-    "subtitle": "Check for and install the latest features",
-    "notAvailable": "Updates Not Available",
-    "notAvailableDesc": "OTA updates are not available in this build. Use a development build or production APK for update support.",
-    "available": "Update Available",
-    "availableDesc": "A new version is ready. Restart the app to apply updates.",
-    "upToDate": "Up to Date",
-    "upToDateDesc": "You're running the latest version!",
-    "checkFailed": "Update Check Failed",
-    "checkFailedDesc": "Could not check for updates. Please try again later.",
-    "checking": "Checking for updates...",
-    "downloading": "Downloading update... {{progress}}%",
-    "downloadProgress": "{{progress}}% complete",
-    "checkButton": "Check for Updates",
-    "checkHint": "Checks if a new version is available and downloads it",
-    "restartNow": "Restart Now",
-    "restartFailed": "Restart Failed",
-    "restartFailedDesc": "Please close and reopen the app manually.",
-    "lastChecked": "Last checked: {{time}}",
-    "justNow": "Just now",
-    "minsAgo": "{{count}} mins ago",
-    "hoursAgo": "{{count}} hours ago",
-    "readyToRestart": "Update ready! Restart to apply.",
-    "error": "Error: {{message}}"
+    "title": "Mises à jour de l'application",
+    "subtitle": "Vérifier et installer les dernières fonctionnalités",
+    "notAvailable": "Mises à jour non disponibles",
+    "notAvailableDesc": "Les mises à jour OTA ne sont pas disponibles dans cette version. Utilisez une version de développement ou un APK de production pour le support des mises à jour.",
+    "available": "Mise à jour disponible",
+    "availableDesc": "Une nouvelle version est prête. Redémarrez l'application pour appliquer les mises à jour.",
+    "upToDate": "À jour",
+    "upToDateDesc": "Vous utilisez la dernière version !",
+    "checkFailed": "Échec de la vérification des mises à jour",
+    "checkFailedDesc": "Impossible de vérifier les mises à jour. Veuillez réessayer plus tard.",
+    "checking": "Vérification des mises à jour...",
+    "downloading": "Téléchargement de la mise à jour... {{progress}}%",
+    "downloadProgress": "{{progress}}% terminé",
+    "checkButton": "Vérifier les mises à jour",
+    "checkHint": "Vérifie si une nouvelle version est disponible et la télécharge",
+    "restartNow": "Redémarrer maintenant",
+    "restartFailed": "Échec du redémarrage",
+    "restartFailedDesc": "Veuillez fermer et rouvrir l'application manuellement.",
+    "lastChecked": "Dernière vérification : {{time}}",
+    "justNow": "À l'instant",
+    "minsAgo": "il y a {{count}} min",
+    "hoursAgo": "il y a {{count}} heures",
+    "readyToRestart": "Mise à jour prête ! Redémarrez pour appliquer.",
+    "error": "Erreur : {{message}}"
+  },
+  "safeLanding": {
+    "title": "Vous êtes en sécurité ici",
+    "subtitle": "Prenez votre temps. Il n'y a pas d'urgence.",
+    "breathe": {
+      "title": "Prenez une respiration",
+      "instruction": "Inspirez lentement... retenez... expirez. Répétez."
+    },
+    "crisis": {
+      "title": "Soutien en cas de crise - Disponible maintenant",
+      "canada988": "988 - Ligne d'aide en cas de crise suicidaire (Canada)",
+      "kidsHelpPhone": "Jeunesse, J'écoute",
+      "kidsHelpPhoneNumber": "1-800-668-6868 ou textez CONNECT au 686868",
+      "crisisTextLine": "Ligne de texte en cas de crise",
+      "crisisTextLineInstruction": "Textez \"CHEZ\" au 686868"
+    },
+    "grounding": {
+      "title": "Exercice d'ancrage (5-4-3-2-1)",
+      "instruction": "Prenez un moment pour remarquer :",
+      "see": "choses que vous pouvez voir",
+      "touch": "choses que vous pouvez toucher",
+      "hear": "choses que vous pouvez entendre",
+      "smell": "choses que vous pouvez sentir",
+      "taste": "chose que vous pouvez goûter"
+    },
+    "actions": {
+      "returnToApp": "Retour à l'application",
+      "exitApp": "Quitter l'application"
+    }
+  },
+  "onboarding": {
+    "first7": {
+      "quickLinks": "Liens rapides",
+      "healthTracker": "Suivi de santé",
+      "accountabilityHub": "Hub de responsabilité",
+      "evidenceLocker": "Coffre de preuves",
+      "resources": "Ressources",
+      "advocacyHub": "Hub de défense",
+      "profile": "Profil",
+      "notifications": "Notifications",
+      "done": "Terminé"
+    },
+    "wizard": {
+      "welcome": "Personnalisons votre expérience ! Cet assistant nous aidera à comprendre vos besoins afin de recommander les bons outils au bon moment.",
+      "privacy": "🔒 Votre profil reste sur votre appareil. Vous pouvez ignorer cette étape ou modifier ces paramètres à tout moment.",
+      "features": {
+        "recommendations": "Recommandations intelligentes basées sur vos besoins",
+        "scheduling": "Suggestions d'activités quand vous avez de l'énergie",
+        "pacing": "Rythme adaptatif et rappels de pause",
+        "energyTracking": "Suivi des modèles d'énergie au fil du temps"
+      }
+    }
+  },
+  "events": {
+    "retryNow": "Réessayer maintenant",
+    "exportICS": "Exporter ICS",
+    "exportCSV": "Exporter CSV",
+    "accessibilityFeatures": "Caractéristiques d'accessibilité :",
+    "energyCostLevel": "Niveau de coût énergétique :",
+    "rsvpRegistration": "RSVP/Inscription :",
+    "finder": {
+      "title": "Recherche d'événements accessibles",
+      "captions": "Sous-titres",
+      "stepFree": "Sans marches",
+      "sensory": "Sensoriel"
+    }
+  },
+  "layout": {
+    "loadingFonts": "Chargement des polices...",
+    "checkConsole": "Vérifier la console du navigateur (F12) pour plus de détails",
+    "openConsole": "Ouvrir la console du navigateur (F12) pour plus de détails",
+    "offlineBanner": "Hors ligne : affichage du contenu en cache"
+  },
+  "campaigns": {
+    "notFound": "Cette campagne est introuvable.",
+    "launched": "Lancée : {{year}}",
+    "learnMore": "En savoir plus →",
+    "openCampaignRoom": "Ouvrir la salle de campagne",
+    "edit": {
+      "title": "Modifier la campagne",
+      "titleLabel": "Titre",
+      "summaryLabel": "Résumé",
+      "descriptionLabel": "Description",
+      "goalLabel": "Objectif",
+      "cancel": "Annuler"
+    },
+    "room": {
+      "title": "Salle de protestation et de campagne numérique"
+    }
+  },
+  "components": {
+    "a11y": {
+      "preferredFormat": "Format préféré"
+    },
+    "errorBoundary": {
+      "title": "Une erreur s'est produite",
+      "errorDetails": "Détails de l'erreur (Mode développement) :",
+      "tryAgain": "Réessayer",
+      "goHome": "Retour à l'accueil"
+    },
+    "dataOwnership": {
+      "title": "Déclaration de propriété des données",
+      "mainStatement": "Vos données vous appartiennent à 100%.",
+      "readFull": "Lire la déclaration complète"
+    },
+    "changelog": {
+      "title": "Quoi de neuf"
+    },
+    "dateTime": {
+      "done": "Terminé"
+    },
+    "enhanced": {
+      "private": "Privé",
+      "join": "Rejoindre",
+      "recommendedMatches": "Correspondances recommandées",
+      "sharedExperiences": "Expériences partagées :",
+      "connect": "Connecter",
+      "goals": "Objectifs :",
+      "details": "Détails",
+      "createNew": "Créer nouveau",
+      "advocacyGroup": "Groupe de défense",
+      "campaign": "Campagne",
+      "virtualMeetup": "Rencontre virtuelle"
+    },
+    "eventDetail": {
+      "accessibility": "Accessibilité :"
+    },
+    "eventFilters": {
+      "title": "Filtrer les événements",
+      "clearAll": "Tout effacer",
+      "cancel": "Annuler"
+    },
+    "feedback": {
+      "thankYou": "Merci !",
+      "shareYourFeedback": "Partagez vos commentaires",
+      "cancel": "Annuler",
+      "submit": "Soumettre"
+    },
+    "guestMode": {
+      "signIn": "Se connecter",
+      "createAccount": "Créer un compte"
+    },
+    "legal": {
+      "viewDetails": "Voir les détails",
+      "update": "Mettre à jour",
+      "startLegalProcess": "Démarrer le processus juridique",
+      "generateDocument": "Générer le document",
+      "processType": "Type de processus",
+      "jurisdiction": "Juridiction",
+      "cancel": "Annuler",
+      "startProcess": "Démarrer le processus"
+    },
+    "workflow": {
+      "startWorkflow": "Démarrer le flux de travail",
+      "viewDetails": "Voir les détails",
+      "pause": "Pause",
+      "priority": "Priorité :",
+      "executions": "Exécutions :"
+    },
+    "map": {
+      "listFallback": "Affichage d'une liste de secours. Installez un fournisseur de cartes Web pour un support complet.",
+      "installMaps": "Installez react-native-maps pour une carte intégrée. Affichage de la liste de secours."
+    },
+    "notifications": {
+      "eventReminders": "Rappels d'événements",
+      "rsvpConfirmations": "Confirmations de RSVP",
+      "capacityAlerts": "Alertes de capacité"
+    }
+  },
+  "research": {
+    "filterByRegion": "Filtrer par région :",
+    "resetFilters": "Réinitialiser les filtres"
+  },
+  "notFound": {
+    "title": "Non trouvé",
+    "announce": "Page non trouvée",
+    "message": "404 - Page non trouvée",
+    "goBack": "Retour",
+    "goBackHint": "Retourne à l'écran précédent",
+    "goHome": "Accueil",
+    "goHomeHint": "Navigue vers l'onglet d'accueil"
+  },
+  "components": {
+    "guestBadge": {
+      "active": "Mode invité actif",
+      "title": "Mode Invité",
+      "privacy": "Vos données resteront privées",
+      "signIn": "Se connecter à votre compte",
+      "signInHint": "Appuyez pour accéder à l'écran de connexion",
+      "signInButton": "Se connecter",
+      "createAccount": "Créer un nouveau compte",
+      "createAccountHint": "Appuyez pour accéder à l'écran d'inscription",
+      "createAccountButton": "Créer un compte",
+      "navigatingToLogin": "Navigation vers l'écran de connexion",
+      "navigatingToSignup": "Navigation vers l'écran d'inscription"
+    },
+    "feedback": {
+      "title": "Partagez vos commentaires",
+      "close": "Fermer le modal de commentaires",
+      "questionLabel": "Comment cette suggestion vous a-t-elle aidé ?",
+      "helpful": "Utile",
+      "notRelevant": "Non pertinent pour moi",
+      "misleading": "Trompeur ou incorrect",
+      "other": "Autre raison",
+      "commentLabel": "Ajouter un commentaire (optionnel)",
+      "commentPlaceholder": "Dites-nous en plus...",
+      "commentA11y": "Commentaire facultatif",
+      "cancel": "Annuler",
+      "submit": "Soumettre",
+      "thankYou": "Merci !",
+      "helpMessage": "Vos commentaires nous aident à nous améliorer",
+      "alertTitle": "Veuillez sélectionner une raison",
+      "alertMessage": "Choisissez une raison pour continuer",
+      "error": "Erreur",
+      "errorMessage": "Échec de l'envoi des commentaires. Veuillez réessayer."
+    },
+    "simpleMode": {
+      "badDayActive": "🌙 Mode Mauvais Jour Actif",
+      "simpleModeActive": "🎯 Mode Simple Actif",
+      "badDayMessage": "Vous êtes en Mode Mauvais Jour. Affichage uniquement des fonctionnalités essentielles de {{tabName}} pour réduire le stress.",
+      "simpleModeMessage": "Vous êtes en Mode Simple. Affichage de {{count}} fonctionnalité{{plural}} essentielle{{plural}} de {{tabName}}.",
+      "hiddenFeatures": "{{count}} fonctionnalité{{plural}} avancée{{plural}} {{verb}} masquée{{plural}}. Besoin de plus d'outils ?",
+      "settingsLabel": "Modifier les paramètres du mode de complexité",
+      "seeMore": "Voir plus de fonctionnalités (Paramètres)"
+    },
+    "panicButton": {
+      "label": "Sortie d'urgence - Mot de sécurité",
+      "hint": "Appuyez pour sortir immédiatement vers un espace calme et sûr",
+      "announce": "Sortie d'urgence activée. Vous êtes en sécurité. Navigation vers un espace calme."
+    }
   }
 }

@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import React from 'react';
 import { AccessibilityInfo, Platform, Pressable, StyleSheet, View } from 'react-native';
 
+import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 import { createShadow } from '../utils/shadow';
 
@@ -27,6 +28,7 @@ if (Platform.OS !== 'web') {
  */
 export function PanicButton() {
   const router = useRouter();
+  const { t } = useTranslation();
   const palette = useAppPalette();
   const styles = React.useMemo(() => createStyles(palette), [palette]);
   const [pressed, setPressed] = React.useState(false);
@@ -45,7 +47,7 @@ export function PanicButton() {
 
     // Screen reader announcement
     AccessibilityInfo.announceForAccessibility(
-      'Emergency exit activated. You are safe. Navigating to calm space.'
+      t('components.panicButton.announce', 'Emergency exit activated. You are safe. Navigating to calm space.')
     );
 
     // Navigate to safe landing page immediately
@@ -60,8 +62,8 @@ export function PanicButton() {
       <Pressable
         onPress={handlePress}
         accessibilityRole="button"
-        accessibilityLabel="Emergency exit - Safe word"
-        accessibilityHint="Tap to immediately exit to a calm, safe space"
+        accessibilityLabel={t('components.panicButton.label', 'Emergency exit - Safe word')}
+        accessibilityHint={t('components.panicButton.hint', 'Tap to immediately exit to a calm, safe space')}
         style={[
           styles.button,
           { backgroundColor: pressed ? palette.error : palette.primary },

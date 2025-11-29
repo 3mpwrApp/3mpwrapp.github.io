@@ -10,6 +10,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
+import { useTranslation } from '../i18n';
 import { useComplexityMode } from '../store/complexityMode';
 import { useAppPalette } from '../theme/usePalette';
 
@@ -23,6 +24,7 @@ type SimpleModeWelcomeProps = {
 
 export default function SimpleModeWelcome({ tabName, availableFeatures, hiddenCount }: SimpleModeWelcomeProps) {
   const palette = useAppPalette();
+  const { t } = useTranslation();
   const { mode, isBadDayMode } = useComplexityMode();
   const router = useRouter();
 
@@ -85,14 +87,18 @@ export default function SimpleModeWelcome({ tabName, availableFeatures, hiddenCo
       <View style={styles.header}>
         <Ionicons name="information-circle" size={24} color={palette.primary} />
         <Text style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-          {isBadDayMode ? '🌙 Bad Day Mode Active' : '🎯 Simple Mode Active'}
+          {isBadDayMode ? t('components.simpleMode.badDayActive', '🌙 Bad Day Mode Active') : t('components.simpleMode.simpleModeActive', '🎯 Simple Mode Active')}
         </Text>
       </View>
       
       <Text style={styles.message} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {isBadDayMode 
-          ? `You're in Bad Day Mode. Showing only essential ${tabName} features to reduce overwhelm.`
-          : `You're in Simple Mode. Showing ${availableFeatures?.length || 'core'} essential ${tabName} feature${(availableFeatures?.length || 0) === 1 ? '' : 's'}.`}
+          ? t('components.simpleMode.badDayMessage', `You're in Bad Day Mode. Showing only essential {{tabName}} features to reduce overwhelm.`, { tabName })
+          : t('components.simpleMode.simpleModeMessage', `You're in Simple Mode. Showing {{count}} essential {{tabName}} feature{{plural}}.`, { 
+              count: availableFeatures?.length || 'core',
+              tabName,
+              plural: (availableFeatures?.length || 0) === 1 ? '' : 's'
+            })}
       </Text>
 
       {availableFeatures && availableFeatures.length > 0 && (
@@ -107,7 +113,11 @@ export default function SimpleModeWelcome({ tabName, availableFeatures, hiddenCo
 
       {hiddenCount !== undefined && hiddenCount > 0 && (
         <Text style={[styles.message, { fontSize: 13, opacity: 0.8 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-          {hiddenCount} advanced feature{hiddenCount === 1 ? ' is' : 's are'} hidden. Need more tools?
+          {t('components.simpleMode.hiddenFeatures', '{{count}} advanced feature{{plural}} {{verb}} hidden. Need more tools?', {
+            count: hiddenCount,
+            plural: hiddenCount === 1 ? '' : 's',
+            verb: hiddenCount === 1 ? 'is' : 'are'
+          })}
         </Text>
       )}
 
@@ -115,10 +125,10 @@ export default function SimpleModeWelcome({ tabName, availableFeatures, hiddenCo
         onPress={() => router.push('/(tabs)/settings')}
         style={styles.link}
         hitSlop={HIT_SLOP_8}
-        accessibilityLabel="Change complexity mode settings"
+        accessibilityLabel={t('components.simpleMode.settingsLabel', 'Change complexity mode settings')}
       >
         <Text style={styles.linkText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-          See More Features (Settings)
+          {t('components.simpleMode.seeMore', 'See More Features (Settings)')}
         </Text>
       </A11yPressable>
     </View>

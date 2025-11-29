@@ -13,21 +13,23 @@ import {
     useAnnounceOnMount,
     useFocusOnRefOnMount,
 } from "../hooks/useA11y";
+import { useTranslation } from "../i18n";
 import { colors, type Palette } from "../theme/colors";
 
 export default function NotFoundScreen() {
   const router = useRouter();
+  const { t } = useTranslation();
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
   const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
 
-  useAnnounceOnMount("Page not found");
+  useAnnounceOnMount(t('notFound.announce', 'Page not found'));
   useFocusOnRefOnMount(titleRef);
 
   return (
     <>
-      <Stack.Screen options={{ title: "Not Found" }} />
+      <Stack.Screen options={{ title: t('notFound.title', 'Not Found') }} />
       <View style={styles.container}>
         <Text
           ref={titleRef}
@@ -36,14 +38,14 @@ export default function NotFoundScreen() {
           style={styles.text}
           maxFontSizeMultiplier={MAX_FONT_SCALE}
         >
-          404 - Page Not Found
+          {t('notFound.message', '404 - Page Not Found')}
         </Text>
 
         <Pressable
           onPress={() => router.back()}
           accessibilityRole="button"
-          accessibilityLabel="Go back"
-          accessibilityHint="Returns to the previous screen"
+          accessibilityLabel={t('notFound.goBack', 'Go back')}
+          accessibilityHint={t('notFound.goBackHint', 'Returns to the previous screen')}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           style={({ pressed }) => [styles.button, pressed && { opacity: 0.7 }]}
         >
@@ -51,15 +53,15 @@ export default function NotFoundScreen() {
             style={styles.buttonText}
             maxFontSizeMultiplier={MAX_FONT_SCALE}
           >
-            Go Back
+            {t('notFound.goBack', 'Go Back')}
           </Text>
         </Pressable>
 
         <Pressable
           onPress={() => router.replace('/' as any)}
           accessibilityRole="button"
-          accessibilityLabel="Go to home"
-          accessibilityHint="Navigates to the home tab"
+          accessibilityLabel={t('notFound.goHome', 'Go to home')}
+          accessibilityHint={t('notFound.goHomeHint', 'Navigates to the home tab')}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           style={({ pressed }) => [
             styles.button,
@@ -71,7 +73,7 @@ export default function NotFoundScreen() {
             style={styles.buttonText}
             maxFontSizeMultiplier={MAX_FONT_SCALE}
           >
-            Go Home
+            {t('notFound.goHome', 'Go Home')}
           </Text>
         </Pressable>
       </View>

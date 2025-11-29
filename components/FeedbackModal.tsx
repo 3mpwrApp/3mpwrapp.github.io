@@ -27,6 +27,7 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
+import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 
 import A11yPressable from './A11yPressable';
@@ -41,12 +42,7 @@ export interface FeedbackModalProps {
   onSubmit: (reason: FeedbackReason, comment?: string) => Promise<void>;
 }
 
-const FEEDBACK_REASONS: { label: string; value: FeedbackReason; icon: string }[] = [
-  { label: 'Helpful', value: 'helpful', icon: 'thumbs-up' },
-  { label: 'Not relevant to me', value: 'not_relevant', icon: 'close-circle' },
-  { label: 'Misleading or incorrect', value: 'misleading', icon: 'warning' },
-  { label: 'Other reason', value: 'other', icon: 'help-circle' },
-];
+// Feedback reasons will be translated in component using t() function
 
 export default function FeedbackModal({
   visible,
@@ -54,6 +50,7 @@ export default function FeedbackModal({
   onSubmit,
 }: FeedbackModalProps) {
   const palette = useAppPalette();
+  const { t } = useTranslation();
   const insets = useSafeAreaInsets();
 
   const [selectedReason, setSelectedReason] = useState<FeedbackReason | null>(null);
@@ -63,7 +60,7 @@ export default function FeedbackModal({
 
   const handleSubmit = async () => {
     if (!selectedReason) {
-      Alert.alert('Please select a reason', 'Choose a feedback reason to continue');
+      Alert.alert(t('components.feedback.alertTitle', 'Please select a reason'), t('components.feedback.alertMessage', 'Choose a feedback reason to continue'));
       return;
     }
 
@@ -76,7 +73,7 @@ export default function FeedbackModal({
         onClose();
       }, 1500);
     } catch {
-      Alert.alert('Error', 'Failed to submit feedback. Please try again.');
+      Alert.alert(t('components.feedback.error', 'Error'), t('components.feedback.errorMessage', 'Failed to submit feedback. Please try again.'));
     } finally {
       setLoading(false);
     }
@@ -91,15 +88,22 @@ export default function FeedbackModal({
 
   const styles = createStyles(palette, useSafeAreaInsets());
 
+  const feedbackReasons = [
+    { label: t('components.feedback.helpful', 'Helpful'), value: 'helpful' as FeedbackReason, icon: 'thumbs-up' },
+    { label: t('components.feedback.notRelevant', 'Not relevant to me'), value: 'not_relevant' as FeedbackReason, icon: 'close-circle' },
+    { label: t('components.feedback.misleading', 'Misleading or incorrect'), value: 'misleading' as FeedbackReason, icon: 'warning' },
+    { label: t('components.feedback.other', 'Other reason'), value: 'other' as FeedbackReason, icon: 'help-circle' },
+  ];
+
   if (submitted) {
     return (
       <Modal visible={visible} transparent={true} animationType="fade" onRequestClose={handleClose}>
         <View style={styles.centeredContainer}>
           <View style={styles.centeredContent}>
             <Ionicons name="checkmark-circle" size={64} color={palette.success} />
-            <Text style={[styles.successTitle, { color: palette.text }]}>Thank you!</Text>
+            <Text style={[styles.successTitle, { color: palette.text }]}>{t('components.feedback.thankYou', 'Thank you!')}</Text>
             <Text style={[styles.successMessage, { color: palette.muted }]}>
-              Your feedback helps us improve
+              {t('components.feedback.helpMessage', 'Your feedback helps us improve')}
             </Text>
           </View>
         </View>
@@ -117,12 +121,12 @@ export default function FeedbackModal({
           <View style={styles.content}>
             {/* Header */}
             <View style={styles.header}>
-              <Text style={[styles.title, { color: palette.text }]}>Share Your Feedback</Text>
+              <Text style={[styles.title, { color: palette.text }]}>{t('components.feedback.title', 'Share Your Feedback')}</Text>
               <A11yPressable
                 onPress={handleClose}
                 style={styles.closeButton}
                 accessibilityRole="button"
-                accessibilityLabel="Close feedback modal"
+                accessibilityLabel={t('components.feedback.close', 'Close feedback modal')}
                 hitSlop={HIT_SLOP_8}
               >
                 <Ionicons name="close" size={24} color={palette.text} />
@@ -132,10 +136,10 @@ export default function FeedbackModal({
             {/* Reason Selection */}
             <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
               <Text style={[styles.sectionLabel, { color: palette.text }]}>
-                How did this suggestion help you?
+                {t('components.feedback.questionLabel', 'How did this suggestion help you?')}
               </Text>
 
-              {FEEDBACK_REASONS.map(reason => (
+              {feedbackReasons.map(reason => (
                 <A11yPressable
                   key={reason.value}
                   onPress={() => setSelectedReason(reason.value)}
@@ -170,7 +174,7 @@ export default function FeedbackModal({
 
               {/* Comment Field */}
               <Text style={[styles.sectionLabel, { color: palette.text, marginTop: 24 }]}>
-                Add a comment (optional)
+                {t('components.feedback.commentLabel', 'Add a comment (optional)')}
               </Text>
               <TextInput
                 style={[
@@ -181,14 +185,14 @@ export default function FeedbackModal({
                     color: palette.text,
                   },
                 ]}
-                placeholder="Tell us more..."
+                placeholder={t('components.feedback.commentPlaceholder', 'Tell us more...')}
                 placeholderTextColor={palette.muted}
                 value={comment}
                 onChangeText={setComment}
                 multiline={true}
                 numberOfLines={4}
                 maxLength={500}
-                accessibilityLabel="Feedback comment (optional)"
+                accessibilityLabel={t('components.feedback.commentA11y', 'Feedback comment (optional)')}
               />
               <Text style={[styles.charCount, { color: palette.muted }]}>
                 {comment.length}/500
@@ -201,11 +205,11 @@ export default function FeedbackModal({
                 onPress={handleClose}
                 style={[styles.button, styles.cancelButton]}
                 accessibilityRole="button"
-                accessibilityLabel="Cancel"
+                accessibilityLabel={t('components.feedback.cancel', 'Cancel')}
                 disabled={loading}
                 hitSlop={HIT_SLOP_8}
               >
-                <Text style={[styles.buttonText, { color: palette.primary }]}>Cancel</Text>
+                <Text style={[styles.buttonText, { color: palette.primary }]}>{t('components.feedback.cancel', 'Cancel')}</Text>
               </A11yPressable>
 
               <A11yPressable
@@ -217,14 +221,14 @@ export default function FeedbackModal({
                 ]}
                 disabled={!selectedReason || loading}
                 accessibilityRole="button"
-                accessibilityLabel="Submit feedback"
+                accessibilityLabel={t('components.feedback.submit', 'Submit feedback')}
                 accessibilityState={{ disabled: !selectedReason || loading }}
                 hitSlop={HIT_SLOP_8}
               >
                 {loading ? (
                   <ActivityIndicator size="small" color={palette.onPrimary} />
                 ) : (
-                  <Text style={[styles.buttonText, { color: palette.onPrimary }]}>Submit</Text>
+                  <Text style={[styles.buttonText, { color: palette.onPrimary }]}>{t('components.feedback.submit', 'Submit')}</Text>
                 )}
               </A11yPressable>
             </GapView>

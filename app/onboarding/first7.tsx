@@ -9,6 +9,7 @@ import React from 'react';
 import { Platform, Pressable, ScrollView, Text, View } from 'react-native';
 
 import { GapView } from '../../components/GapView';
+import { useTranslation } from '../../i18n';
 import { useFirst7 } from '../../store/onboardingFirst7';
 import { useAppPalette } from '../../theme/usePalette';
 
@@ -37,6 +38,7 @@ export default function First7Screen(){
   const { state, toggle, start } = useFirst7();
   const router = useRouter();
   const palette = useAppPalette();
+  const { t } = useTranslation();
   const [selectedRole, setSelectedRole] = React.useState<string | null>(null);
   
   React.useEffect(()=>{ start(); }, [start]);
@@ -62,16 +64,16 @@ export default function First7Screen(){
     >
       <GapView gap={12}>
         <Text accessibilityRole="header" style={{ fontSize: 22, fontWeight: '700', color: palette.primary }}>
-          Your first 7 days
+          {t('onboarding.first7.title', 'Your first 7 days')}
         </Text>
         <Text style={{ color: palette.text }}>
-          Get oriented with a few quick wins. Your progress is private to your device.
+          {t('onboarding.first7.subtitle', 'Get oriented with a few quick wins. Your progress is private to your device.')}
         </Text>
         
         {/* Progress Bar */}
         <View style={{ padding: 12, backgroundColor: palette.card, borderRadius: 8 }}>
           <Text style={{ color: palette.text, fontWeight: '600', marginBottom: 8 }}>
-            Progress: {completedCount}/{steps.length} ({progress}%)
+            {t('onboarding.first7.progress', 'Progress: {{completed}}/{{total}} ({{percent}}%)', { completed: completedCount, total: steps.length, percent: progress })}
           </Text>
           <View style={{ height: 8, backgroundColor: palette.muted, borderRadius: 4, overflow: 'hidden' }}>
             <View style={{ 
@@ -86,10 +88,10 @@ export default function First7Screen(){
         {!selectedRole && !state.completed.choose_role && (
           <View style={{ padding: 16, backgroundColor: palette.card, borderRadius: 8, borderWidth: 2, borderColor: palette.primary }}>
             <Text style={{ fontSize: 18, fontWeight: '700', color: palette.text, marginBottom: 8 }}>
-              👋 Who are you here for?
+              {t('onboarding.first7.roleQuestion', '👋 Who are you here for?')}
             </Text>
             <Text style={{ color: palette.text, marginBottom: 12 }}>
-              This helps us personalize your experience
+              {t('onboarding.first7.roleHelp', 'This helps us personalize your experience')}
             </Text>
             <GapView gap={8}>
               {roleOptions.map(role => (
@@ -149,7 +151,7 @@ export default function First7Screen(){
         
         {/* Quick Links */}
         <View style={{ height: 1, backgroundColor: palette.muted, marginVertical: 8 }} />
-        <Text style={{ fontWeight: '600', color: palette.text }}>Quick links</Text>
+        <Text style={{ fontWeight: '600', color: palette.text }}>{t('onboarding.first7.quickLinks', 'Quick links')}</Text>
         <GapView gap={8} style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
           <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/wellness')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
             <Text style={{ color: palette.text }}>Health Tracker</Text>
@@ -181,7 +183,7 @@ export default function First7Screen(){
         
         {/* Done Button */}
         <Pressable accessibilityRole="button" hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }} style={{ marginTop: 20, padding: 14, backgroundColor: palette.primary, borderRadius: 12 }} onPress={()=>router.back()}>
-          <Text style={{ color: palette.onPrimary, textAlign: 'center', fontWeight: '700' }}>Done</Text>
+          <Text style={{ color: palette.onPrimary, textAlign: 'center', fontWeight: '700' }}>{t('onboarding.first7.done', 'Done')}</Text>
         </Pressable>
       </GapView>
     </ScrollView>

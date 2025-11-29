@@ -2,6 +2,7 @@ import { useRouter } from 'expo-router';
 import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 import { logError } from '../utils/errorLogger';
 import { createShadow } from '../utils/shadow';
@@ -156,6 +157,7 @@ function ErrorFallback({ error, onReset }: { error: Error | null; onReset: () =>
  */
 function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onReset: () => void }) {
   const palette = useAppPalette();
+  const { t } = useTranslation();
   const router = useRouter();
   const styles = createStyles(palette);
 
@@ -173,24 +175,24 @@ function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onR
       <ScrollView 
         contentContainerStyle={styles.content}
         accessibilityRole="alert"
-        accessibilityLabel="Error occurred"
+        accessibilityLabel={t('components.errorBoundary.occurred', 'Error occurred')}
       >
-        <Text style={styles.emoji} accessibilityLabel="Error icon">⚠️</Text>
+        <Text style={styles.emoji} accessibilityLabel={t('components.errorBoundary.icon', 'Error icon')}>⚠️</Text>
         
         <Text 
           style={styles.title}
           accessibilityRole="header"
         >
-          Something Went Wrong
+          {t('components.errorBoundary.title', 'Something Went Wrong')}
         </Text>
         
         <Text style={styles.message}>
-          The app encountered an unexpected error. Don't worry — your data is safe.
+          {t('components.errorBoundary.message', "The app encountered an unexpected error. Don't worry — your data is safe.")}
         </Text>
 
         {__DEV__ && error && (
           <View style={styles.errorDetails}>
-            <Text style={styles.errorTitle}>Error Details (Dev Mode):</Text>
+            <Text style={styles.errorTitle}>{t('components.errorBoundary.details', 'Error Details (Dev Mode):')}</Text>
             <Text style={styles.errorText}>{error.toString()}</Text>
             {error.stack && (
               <Text style={styles.stackText}>{error.stack}</Text>
@@ -203,11 +205,11 @@ function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onR
             style={[styles.button, styles.primaryButton, { backgroundColor: palette.primary }]}
             onPress={handleReload}
             accessibilityRole="button"
-            accessibilityLabel="Try again"
-            accessibilityHint="Attempts to reload the current screen"
+            accessibilityLabel={t('components.errorBoundary.tryAgain', 'Try again')}
+            accessibilityHint={t('components.errorBoundary.tryAgainHint', 'Attempts to reload the current screen')}
           >
             <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
-              Try Again
+              {t('components.errorBoundary.tryAgain', 'Try Again')}
             </Text>
           </Pressable>
 
@@ -215,17 +217,17 @@ function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onR
             style={[styles.button, styles.secondaryButton, { borderColor: palette.primary }]}
             onPress={handleGoHome}
             accessibilityRole="button"
-            accessibilityLabel="Go to home screen"
-            accessibilityHint="Returns to the main home screen"
+            accessibilityLabel={t('components.errorBoundary.goHome', 'Go to home screen')}
+            accessibilityHint={t('components.errorBoundary.goHomeHint', 'Returns to the main home screen')}
           >
             <Text style={[styles.buttonText, { color: palette.primary }]}>
-              Go to Home
+              {t('components.errorBoundary.goHome', 'Go to Home')}
             </Text>
           </Pressable>
         </GapView>
 
         <Text style={styles.supportText}>
-          If this problem persists, please contact support with the error details above.
+          {t('components.errorBoundary.support', 'If this problem persists, please contact support with the error details above.')}
         </Text>
       </ScrollView>
     </View>

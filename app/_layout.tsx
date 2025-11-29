@@ -129,6 +129,7 @@ import Footer from "../components/ThemedFooter";
 import ThemedHeader from "../components/ThemedHeader";
 import UpdateSplashScreen from "../components/UpdateSplashScreen";
 import { channels } from "../data/community";
+import { useTranslation , I18nProvider } from "../i18n";
 import { setSessionSeed } from "../services/session";
 import { CommunityProvider, useCommunity } from "../store/community";
 import { CountsProvider } from "../store/counts";
@@ -143,7 +144,6 @@ import { AuthProvider } from "../context/AuthContext";
 import { CognitiveAccessibilityProvider } from "../context/CognitiveAccessibilityContext";
 import { DyslexiaProvider } from "../context/DyslexiaContext";
 import { NeurodivergentProvider } from "../context/NeurodivergentContext";
-import { I18nProvider } from "../i18n";
 import { setBetaFlag } from "../services/analytics";
 import { fetchCampaigns } from "../services/campaigns";
 import { pruneExpiredReminders } from "../services/eventReminders";
@@ -488,14 +488,15 @@ function CommunityPreload() {
 function OfflineBanner() {
   const { offline } = useNetwork();
   const palette = useAppPalette();
+  const { t } = useTranslation();
   if (!offline) return null;
   return (
     <View
       style={[bannerStyles.wrap, { backgroundColor: palette.error }]}
       accessibilityRole="alert"
-      accessibilityLabel="Offline notice"
+      accessibilityLabel={t('layout.offline.notice', 'Offline notice')}
     >
-      <Text style={[bannerStyles.text, { color: palette.onPrimary }]}>Offline: showing cached content</Text>
+      <Text style={[bannerStyles.text, { color: palette.onPrimary }]}>{t('layout.offline.message', 'Offline: showing cached content')}</Text>
     </View>
   );
 }

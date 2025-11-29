@@ -7,16 +7,18 @@ import { GapView } from '../../components/GapView';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { events } from '../../data/events';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
+import { useTranslation } from '../../i18n';
 import { useAppPalette } from '../../theme/usePalette';
 
 export const options = { href: null };
 
 export default function AccessibleEventFinder() {
   const palette = useAppPalette();
+  const { t } = useTranslation();
   const s = styles(palette);
   const titleRef = React.useRef<Text>(null);
   const router = useRouter();
-  useAnnounceOnMount('Accessible Event Finder');
+  useAnnounceOnMount(t('events.finder.title', 'Accessible Event Finder'));
   useFocusOnRefOnMount(titleRef);
   const [asl, setAsl] = React.useState(false);
   const [captions, setCaptions] = React.useState(false);
@@ -25,18 +27,18 @@ export default function AccessibleEventFinder() {
   const filtered = events.filter(e => (!asl || e.asl) && (!captions || e.captions) && (!stepFree || e.stepFree) && (!sensory || e.sensorySpace));
   return (
     <View style={s.container}>
-      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Accessible Event Finder</Text>
+      <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>{t('events.finder.title', 'Accessible Event Finder')}</Text>
       <GapView gap={8} style={{ flexDirection:'row', flexWrap:'wrap', marginTop: 8 }}>
-  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setAsl(v=>!v)} style={[s.chip, asl && s.chipActive]}><Text style={{ color: asl? palette.onPrimary: palette.text, fontWeight:'700' }}>ASL</Text></A11yPressable>
-  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setCaptions(v=>!v)} style={[s.chip, captions && s.chipActive]}><Text style={{ color: captions? palette.onPrimary: palette.text, fontWeight:'700' }}>Captions</Text></A11yPressable>
-  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setStepFree(v=>!v)} style={[s.chip, stepFree && s.chipActive]}><Text style={{ color: stepFree? palette.onPrimary: palette.text, fontWeight:'700' }}>Step-free</Text></A11yPressable>
-  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSensory(v=>!v)} style={[s.chip, sensory && s.chipActive]}><Text style={{ color: sensory? palette.onPrimary: palette.text, fontWeight:'700' }}>Sensory</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setAsl(v=>!v)} style={[s.chip, asl && s.chipActive]}><Text style={{ color: asl? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('events.finder.filters.asl', 'ASL')}</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setCaptions(v=>!v)} style={[s.chip, captions && s.chipActive]}><Text style={{ color: captions? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('events.finder.filters.captions', 'Captions')}</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setStepFree(v=>!v)} style={[s.chip, stepFree && s.chipActive]}><Text style={{ color: stepFree? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('events.finder.filters.stepFree', 'Step-free')}</Text></A11yPressable>
+  <A11yPressable hitSlop={HIT_SLOP_8} onPress={()=>setSensory(v=>!v)} style={[s.chip, sensory && s.chipActive]}><Text style={{ color: sensory? palette.onPrimary: palette.text, fontWeight:'700' }}>{t('events.finder.filters.sensory', 'Sensory')}</Text></A11yPressable>
       </GapView>
       {filtered.map(e => (
         <View key={e.id} style={s.card}>
           <Text style={s.cardTitle}>{e.title} • {new Date(e.date).toLocaleString()}</Text>
-          <Text style={s.cardText}>{e.isVirtual? 'Online': (e.location || '')}</Text>
-          <A11yPressable hitSlop={HIT_SLOP_8} style={s.btn} onPress={() => router.push(`/(tabs)/events/${e.id}` as any)}><Text style={s.btnText}>Details</Text></A11yPressable>
+          <Text style={s.cardText}>{e.isVirtual? t('events.finder.online', 'Online'): (e.location || '')}</Text>
+          <A11yPressable hitSlop={HIT_SLOP_8} style={s.btn} onPress={() => router.push(`/(tabs)/events/${e.id}` as any)}><Text style={s.btnText}>{t('events.finder.details', 'Details')}</Text></A11yPressable>
         </View>
       ))}
     </View>

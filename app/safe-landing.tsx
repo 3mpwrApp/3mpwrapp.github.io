@@ -18,12 +18,14 @@ import {
 
 import { GapView } from '../components/GapView';
 import { useReduceMotionEnabled } from '../hooks/useA11y';
+import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 import { createShadow } from '../utils/shadow';
 
 export default function SafeLandingPage() {
   const router = useRouter();
   const palette = useAppPalette();
+  const { t } = useTranslation();
   const reduceMotion = useReduceMotionEnabled();
   const styles = createStyles(palette);
 
@@ -90,14 +92,14 @@ export default function SafeLandingPage() {
       {/* Calming Header */}
       <View style={styles.header}>
         <Text style={styles.title} accessibilityRole="header">
-          You Are Safe
+          {t('safeLanding.title', 'You Are Safe')}
         </Text>
-        <Text style={styles.subtitle}>Take your time. There's no rush.</Text>
+        <Text style={styles.subtitle}>{t('safeLanding.subtitle', "Take your time. There's no rush.")}</Text>
       </View>
 
       {/* Breathing Exercise */}
       <View style={styles.breathingSection}>
-        <Text style={styles.sectionTitle}>Take a Breath</Text>
+        <Text style={styles.sectionTitle}>{t('safeLanding.breathe.title', 'Take a Breath')}</Text>
         {reduceMotion ? (
           <View style={styles.staticBreathing}>
             <Text style={styles.breathingText}>
@@ -123,7 +125,7 @@ export default function SafeLandingPage() {
 
       {/* Crisis Resources */}
       <View style={styles.resourcesSection}>
-        <Text style={styles.sectionTitle}>Crisis Support - Available Now</Text>
+        <Text style={styles.sectionTitle}>{t('safeLanding.crisis.title', 'Crisis Support - Available Now')}</Text>
         
         <Pressable
           style={styles.resourceButton}
@@ -133,7 +135,7 @@ export default function SafeLandingPage() {
         >
           <Ionicons name="call" size={24} color={palette.primary} />
           <View style={styles.resourceText}>
-            <Text style={styles.resourceTitle}>988 - Suicide & Crisis Lifeline</Text>
+            <Text style={styles.resourceTitle}>{t('safeLanding.crisis.canada988', '988 - Suicide Crisis Helpline (Canada)')}</Text>
             <Text style={styles.resourceSubtitle}>24/7 Support</Text>
           </View>
         </Pressable>
@@ -146,48 +148,48 @@ export default function SafeLandingPage() {
         >
           <Ionicons name="call" size={24} color={palette.primary} />
           <View style={styles.resourceText}>
-            <Text style={styles.resourceTitle}>Kids Help Phone</Text>
-            <Text style={styles.resourceSubtitle}>1-800-668-6868</Text>
+            <Text style={styles.resourceTitle}>{t('safeLanding.crisis.kidsHelpPhone', 'Kids Help Phone')}</Text>
+            <Text style={styles.resourceSubtitle}>{t('safeLanding.crisis.kidsHelpPhoneNumber', '1-800-668-6868 or text CONNECT to 686868')}</Text>
           </View>
         </Pressable>
 
         <View style={styles.resourceButton}>
           <Ionicons name="chatbubble" size={24} color={palette.primary} />
           <View style={styles.resourceText}>
-            <Text style={styles.resourceTitle}>Crisis Text Line</Text>
-            <Text style={styles.resourceSubtitle}>Text "HOME" to 686868</Text>
+            <Text style={styles.resourceTitle}>{t('safeLanding.crisis.crisisTextLine', 'Crisis Text Line')}</Text>
+            <Text style={styles.resourceSubtitle}>{t('safeLanding.crisis.crisisTextLineInstruction', 'Text "HOME" to 686868')}</Text>
           </View>
         </View>
       </View>
 
       {/* Grounding Technique */}
       <View style={styles.groundingSection}>
-        <Text style={styles.sectionTitle}>Grounding Exercise (5-4-3-2-1)</Text>
-        <Text style={styles.groundingText}>Take a moment to notice:</Text>
+        <Text style={styles.sectionTitle}>{t('safeLanding.grounding.title', 'Grounding Exercise (5-4-3-2-1)')}</Text>
+        <Text style={styles.groundingText}>{t('safeLanding.grounding.instruction', 'Take a moment to notice:')}</Text>
         
         <View style={styles.groundingItem}>
           <Text style={styles.groundingNumber}>5</Text>
-          <Text style={styles.groundingLabel}>things you can see</Text>
+          <Text style={styles.groundingLabel}>{t('safeLanding.grounding.see', 'things you can see')}</Text>
         </View>
         
         <View style={styles.groundingItem}>
           <Text style={styles.groundingNumber}>4</Text>
-          <Text style={styles.groundingLabel}>things you can touch</Text>
+          <Text style={styles.groundingLabel}>{t('safeLanding.grounding.touch', 'things you can touch')}</Text>
         </View>
         
         <View style={styles.groundingItem}>
           <Text style={styles.groundingNumber}>3</Text>
-          <Text style={styles.groundingLabel}>things you can hear</Text>
+          <Text style={styles.groundingLabel}>{t('safeLanding.grounding.hear', 'things you can hear')}</Text>
         </View>
         
         <View style={styles.groundingItem}>
           <Text style={styles.groundingNumber}>2</Text>
-          <Text style={styles.groundingLabel}>things you can smell</Text>
+          <Text style={styles.groundingLabel}>{t('safeLanding.grounding.smell', 'things you can smell')}</Text>
         </View>
         
         <View style={styles.groundingItem}>
           <Text style={styles.groundingNumber}>1</Text>
-          <Text style={styles.groundingLabel}>thing you can taste</Text>
+          <Text style={styles.groundingLabel}>{t('safeLanding.grounding.taste', 'thing you can taste')}</Text>
         </View>
       </View>
 
@@ -208,7 +210,7 @@ export default function SafeLandingPage() {
           accessibilityRole="button"
           accessibilityLabel="Exit app completely"
         >
-          <Text style={styles.exitButtonText}>Exit App</Text>
+          <Text style={styles.exitButtonText}>{t('safeLanding.actions.exitApp', 'Exit App')}</Text>
         </Pressable>
       </GapView>
     </ScrollView>

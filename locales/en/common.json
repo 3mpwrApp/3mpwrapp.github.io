@@ -3754,5 +3754,235 @@
       "production": "In Production",
       "testing": "Testing"
     }
+  },
+  "safeLanding": {
+    "title": "You're Safe Here",
+    "subtitle": "Take your time. There's no rush.",
+    "breathe": {
+      "title": "Take a Breath",
+      "instruction": "Breathe in slowly... hold... breathe out. Repeat."
+    },
+    "crisis": {
+      "title": "Crisis Support - Available Now",
+      "canada988": "988 - Suicide Crisis Helpline (Canada)",
+      "kidsHelpPhone": "Kids Help Phone",
+      "kidsHelpPhoneNumber": "1-800-668-6868 or text CONNECT to 686868",
+      "crisisTextLine": "Crisis Text Line",
+      "crisisTextLineInstruction": "Text \"HOME\" to 686868"
+    },
+    "grounding": {
+      "title": "Grounding Exercise (5-4-3-2-1)",
+      "instruction": "Take a moment to notice:",
+      "see": "things you can see",
+      "touch": "things you can touch",
+      "hear": "things you can hear",
+      "smell": "things you can smell",
+      "taste": "thing you can taste"
+    },
+    "actions": {
+      "returnToApp": "Return to App",
+      "exitApp": "Exit App"
+    }
+  },
+  "onboarding": {
+    "first7": {
+      "quickLinks": "Quick links",
+      "healthTracker": "Health Tracker",
+      "accountabilityHub": "Accountability Hub",
+      "evidenceLocker": "Evidence Locker",
+      "resources": "Resources",
+      "advocacyHub": "Advocacy Hub",
+      "profile": "Profile",
+      "notifications": "Notifications",
+      "done": "Done"
+    },
+    "wizard": {
+      "welcome": "Let's personalize your experience! This wizard will help us understand your needs so we can recommend the right tools at the right time.",
+      "privacy": "🔒 Your profile stays on your device. You can skip this step or change these settings anytime.",
+      "features": {
+        "recommendations": "Smart recommendations based on your needs",
+        "scheduling": "Activity suggestions when you have energy",
+        "pacing": "Adaptive pacing and break reminders",
+        "energyTracking": "Track energy patterns over time"
+      }
+    }
+  },
+  "events": {
+    "retryNow": "Retry Now",
+    "exportICS": "Export ICS",
+    "exportCSV": "Export CSV",
+    "accessibilityFeatures": "Accessibility Features:",
+    "energyCostLevel": "Energy Cost Level:",
+    "rsvpRegistration": "RSVP/Registration:",
+    "finder": {
+      "title": "Accessible Event Finder",
+      "captions": "Captions",
+      "stepFree": "Step-free",
+      "sensory": "Sensory"
+    }
+  },
+  "layout": {
+    "loadingFonts": "Loading fonts...",
+    "checkConsole": "Check browser console (F12) for details",
+    "openConsole": "Open browser console (F12) for details",
+    "offlineBanner": "Offline: showing cached content"
+  },
+  "campaigns": {
+    "notFound": "This campaign could not be found.",
+    "launched": "Launched: {{year}}",
+    "learnMore": "Learn More →",
+    "openCampaignRoom": "Open Campaign Room",
+    "edit": {
+      "title": "Edit Campaign",
+      "titleLabel": "Title",
+      "summaryLabel": "Summary",
+      "descriptionLabel": "Description",
+      "goalLabel": "Goal",
+      "cancel": "Cancel"
+    },
+    "room": {
+      "title": "Digital Protest & Campaign Room"
+    }
+  },
+  "components": {
+    "a11y": {
+      "preferredFormat": "Preferred format"
+    },
+    "errorBoundary": {
+      "title": "Something Went Wrong",
+      "errorDetails": "Error Details (Dev Mode):",
+      "tryAgain": "Try Again",
+      "goHome": "Go Home"
+    },
+    "dataOwnership": {
+      "title": "Data Ownership Statement",
+      "mainStatement": "Your data belongs 100% to you.",
+      "readFull": "Read Full Statement"
+    },
+    "changelog": {
+      "title": "What's new"
+    },
+    "dateTime": {
+      "done": "Done"
+    },
+    "enhanced": {
+      "private": "Private",
+      "join": "Join",
+      "recommendedMatches": "Recommended Matches",
+      "sharedExperiences": "Shared experiences:",
+      "connect": "Connect",
+      "goals": "Goals:",
+      "details": "Details",
+      "createNew": "Create New",
+      "advocacyGroup": "Advocacy Group",
+      "campaign": "Campaign",
+      "virtualMeetup": "Virtual Meetup"
+    },
+    "eventDetail": {
+      "accessibility": "Accessibility:"
+    },
+    "eventFilters": {
+      "title": "Filter Events",
+      "clearAll": "Clear All",
+      "cancel": "Cancel"
+    },
+    "feedback": {
+      "thankYou": "Thank you!",
+      "shareYourFeedback": "Share Your Feedback",
+      "cancel": "Cancel",
+      "submit": "Submit"
+    },
+    "guestMode": {
+      "signIn": "Sign In",
+      "createAccount": "Create Account"
+    },
+    "legal": {
+      "viewDetails": "View Details",
+      "update": "Update",
+      "startLegalProcess": "Start Legal Process",
+      "generateDocument": "Generate Document",
+      "processType": "Process Type",
+      "jurisdiction": "Jurisdiction",
+      "cancel": "Cancel",
+      "startProcess": "Start Process"
+    },
+    "workflow": {
+      "startWorkflow": "Start Workflow",
+      "viewDetails": "View Details",
+      "pause": "Pause",
+      "priority": "Priority:",
+      "executions": "Executions:"
+    },
+    "map": {
+      "listFallback": "Showing a list fallback. Install a web map provider for full support.",
+      "installMaps": "Install react-native-maps for embedded map. Showing list fallback."
+    },
+    "notifications": {
+      "eventReminders": "Event Reminders",
+      "rsvpConfirmations": "RSVP Confirmations",
+      "capacityAlerts": "Capacity Alerts"
+    }
+  },
+  "research": {
+    "filterByRegion": "Filter by region:",
+    "resetFilters": "Reset filters"
+  },
+  "notFound": {
+    "title": "Not Found",
+    "announce": "Page not found",
+    "message": "404 - Page Not Found",
+    "goBack": "Go Back",
+    "goBackHint": "Returns to the previous screen",
+    "goHome": "Go Home",
+    "goHomeHint": "Navigates to the home tab"
+  },
+  "components": {
+    "guestBadge": {
+      "active": "Guest mode active",
+      "title": "Guest Mode",
+      "privacy": "Your data will be kept private",
+      "signIn": "Sign in to your account",
+      "signInHint": "Tap to navigate to login screen",
+      "signInButton": "Sign In",
+      "createAccount": "Create a new account",
+      "createAccountHint": "Tap to navigate to registration screen",
+      "createAccountButton": "Create Account",
+      "navigatingToLogin": "Navigating to login screen",
+      "navigatingToSignup": "Navigating to registration screen"
+    },
+    "feedback": {
+      "title": "Share Your Feedback",
+      "close": "Close feedback modal",
+      "questionLabel": "How did this suggestion help you?",
+      "helpful": "Helpful",
+      "notRelevant": "Not relevant to me",
+      "misleading": "Misleading or incorrect",
+      "other": "Other reason",
+      "commentLabel": "Add a comment (optional)",
+      "commentPlaceholder": "Tell us more...",
+      "commentA11y": "Feedback comment (optional)",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "thankYou": "Thank you!",
+      "helpMessage": "Your feedback helps us improve",
+      "alertTitle": "Please select a reason",
+      "alertMessage": "Choose a feedback reason to continue",
+      "error": "Error",
+      "errorMessage": "Failed to submit feedback. Please try again."
+    },
+    "simpleMode": {
+      "badDayActive": "🌙 Bad Day Mode Active",
+      "simpleModeActive": "🎯 Simple Mode Active",
+      "badDayMessage": "You're in Bad Day Mode. Showing only essential {{tabName}} features to reduce overwhelm.",
+      "simpleModeMessage": "You're in Simple Mode. Showing {{count}} essential {{tabName}} feature{{plural}}.",
+      "hiddenFeatures": "{{count}} advanced feature{{plural}} {{verb}} hidden. Need more tools?",
+      "settingsLabel": "Change complexity mode settings",
+      "seeMore": "See More Features (Settings)"
+    },
+    "panicButton": {
+      "label": "Emergency exit - Safe word",
+      "hint": "Tap to immediately exit to a calm, safe space",
+      "announce": "Emergency exit activated. You are safe. Navigating to calm space."
+    }
   }
 }
