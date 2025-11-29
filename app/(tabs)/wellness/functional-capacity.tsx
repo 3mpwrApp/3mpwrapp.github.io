@@ -333,6 +333,9 @@ export default function FunctionalCapacityScreen() {
             <Pressable 
               onPress={downloadReport} 
               style={[styles.downloadButton, { backgroundColor: palette.success, marginTop: 16 }]}
+              accessibilityRole="button"
+              accessibilityLabel="Download functional capacity report as PDF"
+              hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
             >
               <Ionicons name="document-text" size={20} color={palette.onPrimary} />
               <Text style={styles.downloadButtonText}>Download Medical Report (PDF)</Text>
@@ -370,7 +373,13 @@ export default function FunctionalCapacityScreen() {
 
         {/* Start Assessment */}
         <View style={[styles.card, { backgroundColor: palette.primary }]}>
-          <Pressable onPress={startWeeklyAssessment} style={styles.startButton}>
+          <Pressable 
+            onPress={startWeeklyAssessment} 
+            style={styles.startButton}
+            accessibilityRole="button"
+            accessibilityLabel="Start functional capacity assessment"
+            hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+          >
             <Ionicons name="play-circle" size={32} color={palette.onPrimary} />
             <Text style={styles.startButtonText}>Start Assessment</Text>
           </Pressable>

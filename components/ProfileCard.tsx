@@ -109,10 +109,22 @@ export default function ProfileCard() {
                 accessibilityLabel={t("settings.account.displayName", "Display name")}
               />
               <GapView style={{ flexDirection: 'row' }} gap={8}>
-                <Pressable onPress={handleSaveName} style={[styles.smallButton, { backgroundColor: palette.primary }]}>
+                <Pressable 
+                  onPress={handleSaveName} 
+                  style={[styles.smallButton, { backgroundColor: palette.primary }]}
+                  accessibilityRole="button"
+                  accessibilityLabel="Save display name"
+                  hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+                >
                   <Text style={[styles.smallButtonText, { color: palette.onPrimary }]}>{t("common.save", "Save")}</Text>
                 </Pressable>
-                <Pressable onPress={() => { setEditing(false); setDisplayName(user?.displayName ?? ""); }} style={[styles.smallButton, { backgroundColor: palette.surface }]}>
+                <Pressable 
+                  onPress={() => { setEditing(false); setDisplayName(user?.displayName ?? ""); }} 
+                  style={[styles.smallButton, { backgroundColor: palette.surface }]}
+                  accessibilityRole="button"
+                  accessibilityLabel="Cancel editing display name"
+                  hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+                >
                   <Text style={styles.smallButtonText}>{t("common.cancel", "Cancel")}</Text>
                 </Pressable>
               </GapView>
@@ -122,7 +134,13 @@ export default function ProfileCard() {
               <Text style={styles.name}>{user?.displayName || t("common.guest", "Guest User")}</Text>
               <Text style={styles.email}>{user?.email || (isGuest ? t("auth.guestMode", "Guest Mode") : "")}</Text>
               {!isGuest && (
-                <Pressable onPress={() => setEditing(true)} hitSlop={HIT_SLOP_8} style={{ marginTop: 4 }}>
+                <Pressable 
+                  onPress={() => setEditing(true)} 
+                  hitSlop={HIT_SLOP_8} 
+                  style={{ marginTop: 4 }}
+                  accessibilityRole="button"
+                  accessibilityLabel="Edit display name"
+                >
                   <Text style={[styles.link, { color: palette.primary }]}>
                     <Ionicons name="pencil" size={12} /> {t("profile.editName", "Edit name")}
                   </Text>

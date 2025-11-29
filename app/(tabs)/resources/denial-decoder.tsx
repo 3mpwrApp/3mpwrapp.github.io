@@ -444,11 +444,23 @@ export default function DenialDecoder() {
           
           {/* Actions */}
           <GapView style={{ flexDirection: 'row', flexWrap: 'wrap' }} gap={8}>
-            <Pressable onPress={shareAnalysis} style={s.button}>
+            <Pressable 
+              onPress={shareAnalysis} 
+              style={s.button}
+              accessibilityRole="button"
+              accessibilityLabel="Share denial analysis"
+              hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+            >
               <MaterialCommunityIcons name="share-variant" size={18} color={palette.onPrimary} />
               <Text style={s.buttonText}>Share Analysis</Text>
             </Pressable>
-            <Pressable onPress={() => Alert.alert('Coming Soon', 'Save to Evidence Locker')} style={[s.button, { backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted }]}>
+            <Pressable 
+              onPress={() => Alert.alert('Coming Soon', 'Save to Evidence Locker')} 
+              style={[s.button, { backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted }]}
+              accessibilityRole="button"
+              accessibilityLabel="Save analysis to evidence locker"
+              hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+            >
               <MaterialCommunityIcons name="safe-square" size={18} color={palette.text} />
               <Text style={[s.buttonText, { color: palette.text }]}>Save to Vault</Text>
             </Pressable>

@@ -437,15 +437,33 @@ export default function RightsChecker() {
 
           {/* Export Actions */}
           <GapView style={{ flexDirection: 'row', flexWrap: 'wrap' }} gap={8}>
-            <Pressable onPress={copySummary} style={styles.actionButton}>
+            <Pressable 
+              onPress={copySummary} 
+              style={styles.actionButton}
+              accessibilityRole="button"
+              accessibilityLabel="Copy rights summary"
+              hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+            >
               <MaterialCommunityIcons name="content-copy" size={18} color={palette.onPrimary} />
               <Text style={{ color: palette.onPrimary, fontWeight: '700', marginLeft: 6 }}>Copy</Text>
             </Pressable>
-            <Pressable onPress={exportSummary} style={styles.actionButton}>
+            <Pressable 
+              onPress={exportSummary} 
+              style={styles.actionButton}
+              accessibilityRole="button"
+              accessibilityLabel="Export rights summary"
+              hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+            >
               <MaterialCommunityIcons name="share-variant" size={18} color={palette.onPrimary} />
               <Text style={{ color: palette.onPrimary, fontWeight: '700', marginLeft: 6 }}>Export</Text>
             </Pressable>
-            <Pressable onPress={() => Alert.alert('Coming Soon', 'Save to Evidence Locker')} style={[styles.actionButton, { backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted }]}>
+            <Pressable 
+              onPress={() => Alert.alert('Coming Soon', 'Save to Evidence Locker')} 
+              style={[styles.actionButton, { backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted }]}
+              accessibilityRole="button"
+              accessibilityLabel="Save summary to evidence locker"
+              hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+            >
               <MaterialCommunityIcons name="safe-square" size={18} color={palette.text} />
               <Text style={{ color: palette.text, fontWeight: '700', marginLeft: 6 }}>Save</Text>
             </Pressable>

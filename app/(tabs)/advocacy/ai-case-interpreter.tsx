@@ -248,7 +248,13 @@ export default function AiCaseInterpreter() {
                     <Text style={{ color: palette.text, fontWeight: '700' }}>{dl.date}</Text>
                     <Text style={{ color: palette.text, opacity: 0.8, fontSize: 12 }}>{dl.description}</Text>
                   </View>
-                  <Pressable onPress={() => Alert.alert('Add to Calendar', 'Deadline tracking coming soon')} style={[s.chip, { backgroundColor: palette.primary }]}>
+                  <Pressable 
+                    onPress={() => Alert.alert('Add to Calendar', 'Deadline tracking coming soon')} 
+                    style={[s.chip, { backgroundColor: palette.primary }]}
+                    accessibilityRole="button"
+                    accessibilityLabel="Add deadline to calendar"
+                    hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+                  >
                     <Text style={{ color: palette.onPrimary, fontSize: 11, fontWeight: '700' }}>+ Add</Text>
                   </Pressable>
                 </View>

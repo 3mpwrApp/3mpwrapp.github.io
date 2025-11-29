@@ -209,7 +209,12 @@ export default function ExternalResourcesScreen() {
             <View style={styles.emptyState}>
               <Ionicons name="search-outline" size={48} color={palette.muted} />
               <Text style={styles.emptyText}>No resources match your search</Text>
-              <Pressable onPress={() => { setQuery(''); setProvinceFilter('all'); }}>
+              <Pressable 
+                onPress={() => { setQuery(''); setProvinceFilter('all'); }}
+                accessibilityRole="button"
+                accessibilityLabel="Reset search filters"
+                hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+              >
                 <Text style={styles.resetButton}>Reset filters</Text>
               </Pressable>
             </View>

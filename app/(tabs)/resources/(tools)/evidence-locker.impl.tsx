@@ -267,7 +267,12 @@ export default function EvidenceLockerImpl() {
                   <View style={styles.timelineDot} />
                   <View style={styles.timelineContent}>
                     <Text style={styles.timelineDate}>{doc.date}</Text>
-                    <Pressable onPress={() => setSelectedDoc(doc)}>
+                    <Pressable 
+                      onPress={() => setSelectedDoc(doc)}
+                      accessibilityRole="button"
+                      accessibilityLabel={`View ${doc.title}`}
+                      hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+                    >
                       <Text style={styles.cardTitle}>{doc.title}</Text>
                       <Text style={styles.cardType}>{doc.type.toUpperCase()}</Text>
                     </Pressable>
@@ -283,7 +288,14 @@ export default function EvidenceLockerImpl() {
                 <View key={type} style={styles.categoryGroup}>
                   <Text style={styles.categoryTitle}>{type.toUpperCase()} ({docs.length})</Text>
                   {docs.map(doc => (
-                    <Pressable key={doc.id} onPress={() => setSelectedDoc(doc)} style={styles.categoryItem}>
+                    <Pressable 
+                      key={doc.id} 
+                      onPress={() => setSelectedDoc(doc)} 
+                      style={styles.categoryItem}
+                      accessibilityRole="button"
+                      accessibilityLabel={`View ${doc.title} from ${doc.date}`}
+                      hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+                    >
                       <Text style={styles.cardTitle}>{doc.title}</Text>
                       <Text style={styles.cardDate}>{doc.date}</Text>
                     </Pressable>
@@ -456,7 +468,9 @@ export default function EvidenceLockerImpl() {
 
 function DocumentCard({ doc, onPress, palette }: { doc: Document; onPress: () => void; palette: ReturnType<typeof useAppPalette> }) {
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [
+    <Pressable 
+      onPress={onPress} 
+      style={({ pressed }) => [
       {
         borderWidth: 1,
         borderColor: palette.muted,
@@ -465,7 +479,11 @@ function DocumentCard({ doc, onPress, palette }: { doc: Document; onPress: () =>
         marginVertical: 6,
         backgroundColor: pressed ? palette.surface : palette.background,
       }
-    ]}>
+    ]}
+      accessibilityRole="button"
+      accessibilityLabel={`View document: ${doc.title} from ${doc.date}`}
+      hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+    >
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <View style={{ flex: 1 }}>
           <Text style={{ color: palette.text, fontWeight: '700', fontSize: 15, marginBottom: 4 }}>{doc.title}</Text>

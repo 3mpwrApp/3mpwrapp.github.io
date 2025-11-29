@@ -95,8 +95,8 @@
       [
         "sentry-expo",
         {
-          "project": "YOUR_SENTRY_PROJECT",
-          "organization": "YOUR_ORG",
+          "project": "empowrapp",
+          "organization": "3mpwrapp",
           "url": "https://sentry.io/",
           "autoInit": false
         }

@@ -236,7 +236,13 @@ Sincerely,
             placeholderTextColor={palette.text + '77'}
             style={[s.input, { flex: 1 }]}
           />
-          <Pressable onPress={calculateDeadline} style={[s.chipBtn, { backgroundColor: palette.primary }]}>
+          <Pressable 
+            onPress={calculateDeadline} 
+            style={[s.chipBtn, { backgroundColor: palette.primary }]}
+            accessibilityRole="button"
+            accessibilityLabel="Calculate appeal deadline"
+            hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+          >
             <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Calculate</Text>
           </Pressable>
         </View>
@@ -246,7 +252,13 @@ Sincerely,
       </View>
 
       {/* Appeal Checklist */}
-      <Pressable onPress={() => setShowChecklist(!showChecklist)} style={[s.card, { borderColor: palette.primary }]}>
+      <Pressable 
+        onPress={() => setShowChecklist(!showChecklist)} 
+        style={[s.card, { borderColor: palette.primary }]}
+        accessibilityRole="button"
+        accessibilityLabel={`${showChecklist ? 'Hide' : 'Show'} appeal preparation checklist`}
+        hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+      >
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
           <Text style={s.cardTitle}>✅ Appeal Preparation Checklist ({checklist.filter(c => c.done).length}/{checklist.length})</Text>
           <MaterialCommunityIcons name={showChecklist ? 'chevron-up' : 'chevron-down'} size={24} color={palette.text} />
@@ -257,7 +269,14 @@ Sincerely,
       </Pressable>
 
       {showChecklist && checklist.map((item) => (
-        <Pressable key={item.id} onPress={() => toggleChecklistItem(item.id)} style={[s.checklistItem, item.done && s.checklistItemDone]}>
+        <Pressable 
+          key={item.id} 
+          onPress={() => toggleChecklistItem(item.id)} 
+          style={[s.checklistItem, item.done && s.checklistItemDone]}
+          accessibilityRole="button"
+          accessibilityLabel={`${item.done ? 'Uncheck' : 'Check'} ${item.text}`}
+          hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+        >
           <View style={{ flexDirection: 'row', alignItems: 'flex-start', flex: 1 }}>
             <MaterialCommunityIcons 
               name={item.done ? 'checkbox-marked' : 'checkbox-blank-outline'} 
@@ -291,7 +310,13 @@ Sincerely,
               <Text style={s.cardTitle}>{template.name}</Text>
               <Text style={s.cardText}>{template.description}</Text>
             </View>
-            <Pressable onPress={() => loadTemplate(template)} style={[s.chipBtn, { backgroundColor: palette.primary }]}>
+            <Pressable 
+              onPress={() => loadTemplate(template)} 
+              style={[s.chipBtn, { backgroundColor: palette.primary }]}
+              accessibilityRole="button"
+              accessibilityLabel={`Use ${template.name} template`}
+              hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+            >
               <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>Use</Text>
             </Pressable>
           </View>
