@@ -296,5 +296,5 @@ All critical pre-beta issues resolved:
 ---
 
 *Document generated: November 29, 2025*  
-*Commit hash: [To be filled after commit]*  
-*EAS Update: Published to preview channel*
+*Commit hash: 243f5e7*  
+*EAS Update: Ready for publish to preview channel*
