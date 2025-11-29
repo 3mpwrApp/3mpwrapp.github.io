@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-29T06:02:59.314Z",
+  "lastUpdated": "2025-11-29T12:03:00.575Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3810,
+      "totalPosts": 3835,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T06:02:49.123Z"
+      "lastSeen": "2025-11-29T12:02:50.221Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3825,
+      "totalPosts": 3850,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T06:02:51.417Z"
+      "lastSeen": "2025-11-29T12:02:52.747Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3809,
+      "totalPosts": 3834,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T06:02:53.595Z"
+      "lastSeen": "2025-11-29T12:02:55.028Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3818,
+      "totalPosts": 3843,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T06:02:55.964Z"
+      "lastSeen": "2025-11-29T12:02:57.312Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3825,
+      "totalPosts": 3850,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T06:02:58.310Z"
+      "lastSeen": "2025-11-29T12:02:59.571Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
-      "author": "lsto4.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "#covid #DisabilityJustice #covid19 #MaskUp",
-      "author": "nihilamacabre.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
-      "author": "lsto4.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "#covid #DisabilityJustice #covid19 #MaskUp",
       "author": "nihilamacabre.bsky.social",
@@ -338,6 +308,36 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
+      "author": "nataliegreenpeer.bsky.social",
+      "engagement": 131,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
+      "author": "lsto4.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "The hashtag #accessibility allows you to find lots of accessibility-related resources. To find accessibility resources in Spanish, use the hashtag #accesibilidad. The hashtag #accessibilité helps you find resources in French.",
+      "author": "a11yawareness.bsky.social",
+      "engagement": 28,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,19 +347,27 @@
     },
     {
       "keyword": "accessibility",
-      "count": 31
+      "count": 30
+    },
+    {
+      "keyword": "a11y",
+      "count": 27
     },
     {
       "keyword": "cripthevote",
       "count": 26
     },
     {
-      "keyword": "a11y",
-      "count": 26
-    },
-    {
       "keyword": "disabilityjustice",
       "count": 25
+    },
+    {
+      "keyword": "a11yconf",
+      "count": 13
+    },
+    {
+      "keyword": "a11yconf2025",
+      "count": 13
     },
     {
       "keyword": "altcitizen",
@@ -378,12 +386,12 @@
       "count": 10
     },
     {
-      "keyword": "digitalaccessibility",
-      "count": 5
+      "keyword": "accesibilidad",
+      "count": 9
     },
     {
-      "keyword": "inclusion",
-      "count": 4
+      "keyword": "accessibilitat",
+      "count": 8
     },
     {
       "keyword": "verizon",
@@ -411,14 +419,6 @@
     },
     {
       "keyword": "foxlies",
-      "count": 4
-    },
-    {
-      "keyword": "stoptrump",
-      "count": 4
-    },
-    {
-      "keyword": "wearetheflood",
       "count": 4
     }
   ]
