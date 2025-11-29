@@ -92,7 +92,7 @@ export function CampaignsLocalProvider({
   }, [state]);
 
   const createCampaign = (title: string, summary: string) => {
-    const id = `uc_${Date.now()}`;
+    const id = `cmp-${Date.now()}`;
     const campaign: Campaign = { id, title, summary };
     setState((s) => ({
       ...s,

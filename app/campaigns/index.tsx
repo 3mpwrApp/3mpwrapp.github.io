@@ -564,6 +564,9 @@ function ScreenInner() {
                     `"${campaignData.title}" is now live on the 3mpwr website and Cloudflare Workers.`,
                     [{ text: 'Great!' }]
                   );
+                  
+                  // Reload campaigns to ensure fresh data from Firestore
+                  setTimeout(() => reload(), 500);
                 } else {
                   // Fallback: Add to local Firestore (old behavior)
                   await fsAddCampaign(campaignData);
@@ -572,6 +575,9 @@ function ScreenInner() {
                     'Campaign saved locally. Cloud sync will retry automatically.',
                     [{ text: 'OK' }]
                   );
+                  
+                  // Reload campaigns
+                  setTimeout(() => reload(), 500);
                 }
               } else {
                 // Offline or not signed in - save locally only
@@ -583,6 +589,9 @@ function ScreenInner() {
                     : 'Campaign saved locally. Sign in to publish to the 3mpwr website.',
                   [{ text: 'OK' }]
                 );
+                
+                // Reload campaigns
+                setTimeout(() => reload(), 500);
               }
             } catch (createErr) {
               logger.error('[Campaigns] Failed to create campaign:', createErr);

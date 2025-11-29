@@ -496,6 +496,9 @@ export default function EventsScreen() {
     }
     
     setShowCreate(false);
+    
+    // Reload events to ensure fresh data from Firestore
+    setTimeout(() => reload(), 500);
   };
 
   return (

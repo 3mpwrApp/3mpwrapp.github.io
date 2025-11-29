@@ -339,7 +339,7 @@ export default function EventActionsBar({
               borderColor: palette.primary
             }]}
           >
-            <Text style={[styles.buttonText, { color: palette.primary }]}>
+            <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
               🚀 Submit to 3mpwr App
             </Text>
           </A11yPressable>
