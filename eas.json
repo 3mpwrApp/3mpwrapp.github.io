@@ -16,6 +16,10 @@
     "preview": {
       "distribution": "internal",
       "channel": "preview",
+      "env": {
+        "EXPO_PUBLIC_EVENTS_API_BASE": "https://3mpwrapp-events.empowrapp08162025.workers.dev/api",
+        "EXPO_PUBLIC_DATA_POLICY": "hybrid_byoc"
+      },
       "android": {
         "buildType": "apk"
       }
