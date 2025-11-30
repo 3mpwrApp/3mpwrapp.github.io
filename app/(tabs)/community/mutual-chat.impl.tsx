@@ -109,7 +109,33 @@ export default function MutualChatImpl() {
         <A11yPressable hitSlop={HIT_SLOP_8} onPress={async()=>{ 
           try{ 
             if (!isCloudConsentEnabled()) { Alert.alert('Cloud disabled','Enable cloud features in Settings → Privacy to use chat.'); return; }
-            const author = auth.currentUser?.uid || 'anon'; 
+            const author = auth.currentUser?.uid || 'anon';
+            
+            // Check rate limit
+            if (!checkRateLimit(author, 5, 60000)) {
+              Alert.alert('Slow down', 'You\'re sending messages too quickly. Please wait a moment.');
+              return;
+            }
+            
+            // Moderate message
+            const moderationResult = moderateMessage(msg.trim(), author);
+            
+            // Handle crisis intervention
+            if (moderationResult.category === 'crisis') {
+              Alert.alert('🆘 Crisis Support', getCrisisInterventionMessage(), [
+                { text: 'Call 988', onPress: () => {/* Linking.openURL('tel:988') */} },
+                { text: 'I understand', style: 'cancel' }
+              ]);
+              await logModerationAction('', author, msg.trim(), moderationResult, chatId);
+            }
+            
+            // Block if not allowed
+            if (!moderationResult.allowed) {
+              Alert.alert('Message Blocked', getModerationMessage(moderationResult));
+              await logModerationAction('', author, msg.trim(), moderationResult, chatId);
+              return;
+            }
+            
             if (chatId === 'general') {
               // Send to general chat
               await addDoc(collection(db, 'chats', 'mutual_general', 'messages'), { 

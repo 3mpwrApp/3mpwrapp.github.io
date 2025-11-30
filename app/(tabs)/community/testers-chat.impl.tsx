@@ -9,6 +9,7 @@ import { auth, db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { setLastRead, setTyping, touchPresence } from '../../../services/community';
 import { isCloudConsentEnabled } from '../../../services/consent';
+import { checkRateLimit, getCrisisInterventionMessage, getModerationMessage, logModerationAction, moderateMessage } from '../../../services/moderationBot';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export type Message = { id?: string; text: string; authorUid: string; createdAt?: any };
@@ -82,8 +83,37 @@ export default function TestersChatImpl() {
     const uid = auth.currentUser?.uid;
     if (!uid) { Alert.alert('Sign in required', 'Please sign in to chat.'); return; }
     if (!text.trim()) return;
+    
     try {
       if (!isCloudConsentEnabled()) { Alert.alert('Cloud disabled','Enable cloud features in Settings → Privacy to use chat.'); return; }
+      
+      // Check rate limit
+      if (!checkRateLimit(uid, 5, 60000)) {
+        Alert.alert('Slow down', 'You\'re sending messages too quickly. Please wait a moment.');
+        return;
+      }
+      
+      // Moderate message
+      const moderationResult = moderateMessage(text.trim(), uid);
+      
+      // Handle crisis intervention
+      if (moderationResult.category === 'crisis') {
+        Alert.alert('🆘 Crisis Support', getCrisisInterventionMessage(), [
+          { text: 'Call 988', onPress: () => {/* In real app: Linking.openURL('tel:988') */} },
+          { text: 'I understand', style: 'cancel' }
+        ]);
+        // Still allow the message but log it
+        await logModerationAction('', uid, text.trim(), moderationResult, 'testers');
+      }
+      
+      // Block if not allowed
+      if (!moderationResult.allowed) {
+        Alert.alert('Message Blocked', getModerationMessage(moderationResult));
+        await logModerationAction('', uid, text.trim(), moderationResult, 'testers');
+        return;
+      }
+      
+      // Send message
       const col = collection(db, 'chats', 'testers', 'messages');
       await addDoc(col, { text: text.trim(), authorUid: uid, createdAt: serverTimestamp() });
       setText('');

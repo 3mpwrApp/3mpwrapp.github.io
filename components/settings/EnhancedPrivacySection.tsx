@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
-import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
 import AccessibilityToggle from '../../components/AccessibilityToggle';
@@ -34,6 +34,22 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number 
     backupButtonText: { color:palette.primary, fontSize:Math.round(14*factor), fontWeight:'500', marginLeft:8 },
     dangerButton: { borderColor:palette.error },
     dangerButtonText: { color:palette.error },
+    // Modal styles
+    modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center', alignItems: 'center', padding: 20 },
+    modalContent: { backgroundColor: palette.background, borderRadius: 12, padding: 20, maxWidth: 500, width: '100%', maxHeight: '80%' },
+    modalTitle: { fontSize: Math.round(20*factor), fontWeight: '700', color: palette.text, marginBottom: 12 },
+    modalDescription: { fontSize: Math.round(14*factor), color: palette.textSecondary, marginBottom: 20, lineHeight: Math.round(20*factor) },
+    providerOption: { backgroundColor: palette.card, borderWidth: 2, borderColor: palette.muted, borderRadius: 12, padding: 16, marginBottom: 12 },
+    providerOptionSelected: { borderColor: palette.primary, backgroundColor: palette.surface },
+    providerTitle: { fontSize: Math.round(16*factor), fontWeight: '600', color: palette.text, marginBottom: 8 },
+    providerDesc: { fontSize: Math.round(13*factor), color: palette.textSecondary, lineHeight: Math.round(18*factor) },
+    modalButtons: { flexDirection: 'row', gap: 12, marginTop: 20 },
+    modalButton: { flex: 1, padding: 14, borderRadius: 8, alignItems: 'center', minHeight: 48 },
+    modalButtonPrimary: { backgroundColor: palette.primary },
+    modalButtonSecondary: { backgroundColor: palette.card, borderWidth: 1, borderColor: palette.muted },
+    modalButtonText: { fontSize: Math.round(15*factor), fontWeight: '600' },
+    modalButtonTextPrimary: { color: palette.onPrimary },
+    modalButtonTextSecondary: { color: palette.text },
   });
 }
 
@@ -46,6 +62,7 @@ export default function EnhancedPrivacySection() {
   const { requirePasscodeOnLaunch, setRequirePasscodeOnLaunch, autoLockTimeout, setAutoLockTimeout, analyticsOptOut, setAnalyticsOptOut, saveSearchHistory, setSaveSearchHistory } = useSettings();
   const [cloudOn, setCloudOn] = React.useState<boolean>(isCloudConsentEnabled());
   const [cloudProvider, setCloudProvider] = React.useState<'firebase' | 'webdav' | 'none'>('firebase');
+  const [showProviderModal, setShowProviderModal] = React.useState(false);
   
   React.useEffect(() => {
     // Load saved cloud provider preference
@@ -61,17 +78,38 @@ export default function EnhancedPrivacySection() {
     loadProvider();
   }, []);
   
+  const handleCloudToggle = async (enabled: boolean) => {
+    if (enabled) {
+      // Show provider selection modal when enabling cloud
+      setShowProviderModal(true);
+    } else {
+      // Disable cloud features
+      setCloudOn(false);
+      try { 
+        setCloudConsent(false); 
+      } catch {}
+    }
+  };
+  
   const handleCloudProviderChange = async (provider: 'firebase' | 'webdav' | 'none') => {
     setCloudProvider(provider);
     try {
       const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
       await AsyncStorage.setItem('empowr.cloud.provider', provider);
       
-      // Auto-disable cloud features if 'none' selected
-      if (provider === 'none') {
-        setCloudOn(false);
-        setCloudConsent(false);
-      }
+      // Don't auto-disable cloud features - let user choose provider freely
+      // Cloud consent stays enabled, provider determines storage location
+    } catch {}
+  };
+  
+  const selectProviderAndEnable = async (provider: 'firebase' | 'webdav' | 'none') => {
+    await handleCloudProviderChange(provider);
+    setShowProviderModal(false);
+    
+    // Always enable cloud features (even for 'none' - just local storage)
+    setCloudOn(true);
+    try { 
+      setCloudConsent(true); 
     } catch {}
   };
   
@@ -138,7 +176,14 @@ export default function EnhancedPrivacySection() {
         </GapView>
       </View>
   <AccessibilityToggle title={t('settings.privacy.analytics','Opt Out of Analytics')} description={t('settings.privacy.analyticsDesc',"Don't share usage data")} value={analyticsOptOut} onValueChange={(v)=>{ setAnalyticsOptOut(v); try { setTelemetryConsent(!v); } catch {} }} icon='analytics' testID='analytics-toggle' />
-  <AccessibilityToggle title='Cloud Features (Chat & Sync)' description='Allow optional cloud features like community chat and device tokens' value={cloudOn} onValueChange={(v)=>{ setCloudOn(!!v); try { setCloudConsent(!!v); } catch {} }} icon='cloud-outline' testID='cloud-consent-toggle' />
+  <AccessibilityToggle 
+    title='Cloud Features (Chat & Sync)' 
+    description='Allow optional cloud features like community chat and device tokens' 
+    value={cloudOn} 
+    onValueChange={handleCloudToggle} 
+    icon='cloud-outline' 
+    testID='cloud-consent-toggle' 
+  />
       
       {/* Cloud Provider Selection */}
       {cloudOn && (
@@ -390,5 +435,110 @@ export default function EnhancedPrivacySection() {
         </GapView>
       </View>
     </View>
+    
+    {/* Cloud Provider Selection Modal */}
+    <Modal
+      visible={showProviderModal}
+      transparent={true}
+      animationType="fade"
+      onRequestClose={() => setShowProviderModal(false)}
+      accessibilityViewIsModal={true}
+    >
+      <Pressable 
+        style={s.modalOverlay}
+        onPress={() => setShowProviderModal(false)}
+        accessibilityRole="button"
+        accessibilityLabel="Close modal"
+      >
+        <Pressable style={s.modalContent} onPress={(e) => e.stopPropagation()}>
+          <ScrollView>
+            <Text style={s.modalTitle}>Choose Your Cloud Provider</Text>
+            <Text style={s.modalDescription}>
+              ⚠️ 3mpwr App does NOT provide cloud storage. You must use your own cloud service.
+            </Text>
+            
+            {/* Firebase Option */}
+            <Pressable
+              style={[s.providerOption, cloudProvider === 'firebase' && s.providerOptionSelected]}
+              onPress={() => setCloudProvider('firebase')}
+              accessibilityRole="button"
+              accessibilityState={{ selected: cloudProvider === 'firebase' }}
+            >
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
+                <Ionicons name="flame" size={24} color={palette.primary} style={{ marginRight: 12 }} />
+                <Text style={s.providerTitle}>🔥 Firebase (Your Project)</Text>
+              </View>
+              <Text style={s.providerDesc}>
+                • Full features: Chat, sync, notifications{'\n'}
+                • Requires YOUR own FREE Firebase account{'\n'}
+                • 100% data ownership in YOUR project{'\n'}
+                • Free tier: 1GB storage, 10GB bandwidth/month{'\n'}
+                • Setup required (see firebase/functions/README.md)
+              </Text>
+            </Pressable>
+            
+            {/* WebDAV Option */}
+            <Pressable
+              style={[s.providerOption, cloudProvider === 'webdav' && s.providerOptionSelected]}
+              onPress={() => setCloudProvider('webdav')}
+              accessibilityRole="button"
+              accessibilityState={{ selected: cloudProvider === 'webdav' }}
+            >
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
+                <Ionicons name="cloud" size={24} color={palette.primary} style={{ marginRight: 12 }} />
+                <Text style={s.providerTitle}>☁️ WebDAV (Your Server)</Text>
+              </View>
+              <Text style={s.providerDesc}>
+                • Sync and backup only (no chat/notifications){'\n'}
+                • Use Nextcloud, ownCloud, or any WebDAV server{'\n'}
+                • Maximum privacy with self-hosted storage{'\n'}
+                • Requires your own server or hosted service{'\n'}
+                • Configuration needed (endpoint + credentials)
+              </Text>
+            </Pressable>
+            
+            {/* Local Only Option */}
+            <Pressable
+              style={[s.providerOption, cloudProvider === 'none' && s.providerOptionSelected]}
+              onPress={() => setCloudProvider('none')}
+              accessibilityRole="button"
+              accessibilityState={{ selected: cloudProvider === 'none' }}
+            >
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
+                <Ionicons name="phone-portrait" size={24} color={palette.textSecondary} style={{ marginRight: 12 }} />
+                <Text style={s.providerTitle}>📱 Local Only (No Cloud Backup)</Text>
+              </View>
+              <Text style={s.providerDesc}>
+                • All data stored on this device only{'\n'}
+                • Community features still work (via app's Firebase){'\n'}
+                • No personal cloud backup or sync{'\n'}
+                • Maximum privacy for personal data{'\n'}
+                • No setup required
+              </Text>
+            </Pressable>
+            
+            <View style={s.modalButtons}>
+              <Pressable
+                style={[s.modalButton, s.modalButtonSecondary]}
+                onPress={() => setShowProviderModal(false)}
+                accessibilityRole="button"
+              >
+                <Text style={[s.modalButtonText, s.modalButtonTextSecondary]}>Cancel</Text>
+              </Pressable>
+              <Pressable
+                style={[s.modalButton, s.modalButtonPrimary]}
+                onPress={() => selectProviderAndEnable(cloudProvider)}
+                accessibilityRole="button"
+              >
+                <Text style={[s.modalButtonText, s.modalButtonTextPrimary]}>
+                  Continue with {cloudProvider === 'firebase' ? 'Firebase' : cloudProvider === 'webdav' ? 'WebDAV' : 'Local Only'}
+                </Text>
+              </Pressable>
+            </View>
+          </ScrollView>
+        </Pressable>
+      </Pressable>
+    </Modal>
+  </View>
   );
 }
