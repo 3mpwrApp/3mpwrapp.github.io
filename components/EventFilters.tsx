@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { HIT_SLOP_8 } from '../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../constants/A11Y';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
 
@@ -271,8 +271,10 @@ function FilterCheckbox({ label, checked, onToggle, palette, factor }: FilterChe
       style={{
         flexDirection: 'row',
         alignItems: 'center',
-        paddingVertical: 8,
+        paddingVertical: 12,
+        minHeight: 48,
       }}
+      hitSlop={HIT_SLOP_12}
       accessibilityRole="checkbox"
       accessibilityState={{ checked }}
     >

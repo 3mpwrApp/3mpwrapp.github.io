@@ -164,6 +164,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       style={styles.checkboxRow}
       accessibilityRole="checkbox"
       accessibilityState={{ checked }}
+      accessibilityLabel={label}
     >
       <View style={[styles.checkbox, checked && styles.checkboxChecked]}>
         {checked && <Ionicons name="checkmark" size={16} color={palette.onPrimary} />}
@@ -264,7 +265,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 style={[styles.button, !termsScrolledToBottom && styles.buttonDisabled]}
                 disabled={!termsScrolledToBottom}
               >
-                <Text style={styles.buttonText}>
+                <Text style={[styles.buttonText, !termsScrolledToBottom && styles.buttonTextDisabled]}>
                   {termsScrolledToBottom ? "Next" : "Scroll to Bottom"}
                 </Text>
               </Pressable>
@@ -329,7 +330,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 style={[styles.button, !privacyScrolledToBottom && styles.buttonDisabled]}
                 disabled={!privacyScrolledToBottom}
               >
-                <Text style={styles.buttonText}>
+                <Text style={[styles.buttonText, !privacyScrolledToBottom && styles.buttonTextDisabled]}>
                   {privacyScrolledToBottom ? "Next" : "Scroll to Bottom"}
                 </Text>
               </Pressable>
@@ -375,7 +376,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 style={[styles.button, !medicalChecked && styles.buttonDisabled]}
                 disabled={!medicalChecked}
               >
-                <Text style={styles.buttonText}>Next</Text>
+                <Text style={[styles.buttonText, !medicalChecked && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
             </GapView>
           </View>
@@ -420,7 +421,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 style={[styles.button, !legalChecked && styles.buttonDisabled]}
                 disabled={!legalChecked}
               >
-                <Text style={styles.buttonText}>Next</Text>
+                <Text style={[styles.buttonText, !legalChecked && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
             </GapView>
           </View>
@@ -463,7 +464,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 style={[styles.button, !financialChecked && styles.buttonDisabled]}
                 disabled={!financialChecked}
               >
-                <Text style={styles.buttonText}>Next</Text>
+                <Text style={[styles.buttonText, !financialChecked && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
             </GapView>
           </View>
@@ -507,7 +508,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 style={[styles.button, !aiChecked && styles.buttonDisabled]}
                 disabled={!aiChecked}
               >
-                <Text style={styles.buttonText}>Next</Text>
+                <Text style={[styles.buttonText, !aiChecked && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
             </GapView>
           </View>
@@ -560,7 +561,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 style={[styles.button, !(crisisChecked && emergencyChecked) && styles.buttonDisabled]}
                 disabled={!(crisisChecked && emergencyChecked)}
               >
-                <Text style={styles.buttonText}>Next</Text>
+                <Text style={[styles.buttonText, !(crisisChecked && emergencyChecked) && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
             </GapView>
           </View>
@@ -630,6 +631,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               >
                 <Text style={[
                   styles.buttonText,
+                  !allDisclaimersAccepted && styles.buttonTextDisabled,
                   allDisclaimersAccepted && styles.buttonTextEnabled
                 ]}>
                   {allDisclaimersAccepted ? '✓ I Accept All Terms' : 'I Accept All Terms'}
@@ -700,8 +702,11 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
     link: { 
       marginTop: 12,
-      padding: 8,
-      alignItems: "center"
+      paddingVertical: 12,
+      paddingHorizontal: 16,
+      minHeight: 48,
+      alignItems: "center",
+      justifyContent: "center"
     },
     linkText: { 
       color: palette.primary, 
@@ -714,7 +719,9 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 8,
       paddingVertical: 12,
       paddingHorizontal: 16,
+      minHeight: 48,
       alignItems: "center",
+      justifyContent: "center",
       flex: 1,
     },
     buttonText: { 
@@ -723,18 +730,23 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       fontSize: 16
     },
     buttonSecondary: {
-      backgroundColor: "transparent",
+      backgroundColor: palette.card || palette.surface,
       borderWidth: 2,
       borderColor: palette.primary,
     },
     buttonTextSecondary: {
-      color: palette.primary,
+      color: palette.text,
       fontWeight: "700",
       fontSize: 16
     },
     buttonDisabled: {
       backgroundColor: palette.muted,
-      opacity: 0.5,
+    },
+    buttonTextDisabled: {
+      color: palette.textSecondary,
+      fontWeight: "700",
+      fontSize: 16,
+      opacity: 0.7,
     },
     buttonEnabled: {
       backgroundColor: palette.success || palette.primary, // Success green color
@@ -754,13 +766,15 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       flexDirection: "row",
       alignItems: "flex-start",
       marginTop: 12,
-      paddingVertical: 8,
+      paddingVertical: 12,
+      minHeight: 48,
     },
     checkbox: {
       width: 24,
       height: 24,
       borderWidth: 2,
-      borderColor: palette.primary,
+      borderColor: palette.text,
+      backgroundColor: palette.surface,
       borderRadius: 4,
       marginRight: 12,
       alignItems: "center",

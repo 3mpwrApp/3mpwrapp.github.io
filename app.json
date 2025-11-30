@@ -101,6 +101,8 @@
           "autoInit": false
         }
       ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/crashlytics",
       [
         "expo-splash-screen",
         {

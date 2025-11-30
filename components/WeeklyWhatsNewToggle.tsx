@@ -7,6 +7,7 @@
 import React from 'react';
 import { StyleSheet, Switch, Text, View } from 'react-native';
 
+import { touchTarget } from '../constants/A11Y';
 import {
     getLastSummaryDate,
     isWeeklyWhatsNewEnabled,
@@ -67,22 +68,24 @@ export function WeeklyWhatsNewToggle() {
             </Text>
           )}
         </View>
-        <Switch
-          value={enabled}
-          onValueChange={handleToggle}
-          disabled={loading}
-          trackColor={{ 
-            false: palette.muted, 
-            true: palette.primary + '80' 
-          }}
-          thumbColor={enabled ? palette.primary : palette.background}
-          ios_backgroundColor={palette.muted}
-        />
+        <View style={touchTarget.enhanced}>
+          <Switch
+            value={enabled}
+            onValueChange={handleToggle}
+            disabled={loading}
+            trackColor={{ 
+              false: palette.muted, 
+              true: palette.primary + '80' 
+            }}
+            thumbColor={enabled ? palette.primary : palette.background}
+            ios_backgroundColor={palette.muted}
+          />
+        </View>
       </View>
       
       {enabled && (
-        <View style={[styles.info, { backgroundColor: palette.primary + '10' }]}>
-          <Text style={[styles.infoText, { color: palette.primary }]}>
+        <View style={[styles.info, { backgroundColor: palette.primaryBackground || palette.primary + '20', borderWidth: 1, borderColor: palette.primaryMuted || palette.primary + '40' }]}>
+          <Text style={[styles.infoText, { color: palette.text }]}>
             💡 Notifications are silent and auto-expire after 7 days
           </Text>
         </View>

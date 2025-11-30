@@ -466,6 +466,15 @@ function SecurityInit() {
         }
       });
 
+    // Initialize Firebase Crashlytics
+    import('../services/crashlytics')
+      .then((module) => module.initCrashlytics())
+      .catch((error: Error) => {
+        if (__DEV__) {
+          logError('Crashlytics', 'Failed to initialize Crashlytics', error);
+        }
+      });
+
     // Initialize weekly What's New notifications
     import('../services/weeklyWhatsNewNotification')
       .then((module) => module.initializeWeeklyWhatsNew())

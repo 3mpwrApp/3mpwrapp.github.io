@@ -1,0 +1,216 @@
+[
+  {
+    "comment": "=== TERMS GATE FLOW ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Continue"}]
+  },
+  {
+    "comment": "Scroll terms to bottom",
+    "type": "SCROLL_DOWN",
+    "elementDescriptors": [{"className": "android.widget.ScrollView"}]
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "comment": "Scroll privacy to bottom",
+    "type": "SCROLL_DOWN",
+    "elementDescriptors": [{"className": "android.widget.ScrollView"}]
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "comment": "Check all disclaimers - Medical",
+    "type": "CLICK",
+    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+  },
+  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
+  {
+    "comment": "Legal disclaimer",
+    "type": "CLICK",
+    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+  },
+  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
+  {
+    "comment": "Financial disclaimer",
+    "type": "CLICK",
+    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+  },
+  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
+  {
+    "comment": "AI disclaimer",
+    "type": "CLICK",
+    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+  },
+  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
+  {
+    "comment": "Crisis disclaimer - check both",
+    "type": "CLICK",
+    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 1}]
+  },
+  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
+  {
+    "comment": "Final page - check all",
+    "type": "CLICK",
+    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 1}]
+  },
+  {
+    "comment": "Accept all terms",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "I Accept All Terms"}]
+  },
+
+  {
+    "comment": "=== HOME TAB ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Home"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+
+  {
+    "comment": "=== CAMPAIGNS TAB ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Campaigns"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+
+  {
+    "comment": "=== COMMUNITY TAB ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Community"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+
+  {
+    "comment": "=== RESOURCES TAB ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Resources"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+
+  {
+    "comment": "=== WELLNESS TAB ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Wellness"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  
+  {
+    "comment": "Explore Wellness features",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Spoon Economist"}]
+  },
+  {"type": "WAIT", "durationMillis": 1500},
+  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  
+  {
+    "comment": "Try Energy & Mood Dashboard",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Energy & Mood Dashboard"}]
+  },
+  {"type": "WAIT", "durationMillis": 1500},
+  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+
+  {
+    "comment": "=== ADVOCACY TAB ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Advocacy"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  
+  {
+    "comment": "Check Advocacy Hub",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Advocacy Hub"}]
+  },
+  {"type": "WAIT", "durationMillis": 1500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  
+  {
+    "comment": "Check Legal DNA",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Legal DNA Sequencer"}]
+  },
+  {"type": "WAIT", "durationMillis": 1500},
+  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+
+  {
+    "comment": "=== SETTINGS TAB ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Settings"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  
+  {
+    "comment": "Check Profile",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Profile"}]
+  },
+  {"type": "WAIT", "durationMillis": 1500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  
+  {
+    "comment": "Check Accessibility Settings",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Accessibility"}]
+  },
+  {"type": "WAIT", "durationMillis": 1500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+
+  {
+    "comment": "Check Privacy Settings",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Privacy"}]
+  },
+  {"type": "WAIT", "durationMillis": 1500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+
+  {
+    "comment": "=== WHAT'S NEW TAB ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "What's New"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
+
+  {
+    "comment": "=== INBOX ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Inbox"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000},
+
+  {
+    "comment": "=== Return to Home ===",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Home"}]
+  },
+  {"type": "WAIT", "durationMillis": 1000}
+]

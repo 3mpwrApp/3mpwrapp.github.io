@@ -200,9 +200,9 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       lineHeight: Math.round(20 * factor),
     },
     dismissButton: {
-      width: 32,
-      height: 32,
-      borderRadius: 16,
+      minWidth: 48,
+      minHeight: 48,
+      borderRadius: 24,
       backgroundColor: palette.surface,
       alignItems: 'center',
       justifyContent: 'center',
