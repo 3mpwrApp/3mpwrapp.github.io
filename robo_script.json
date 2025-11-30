@@ -1,210 +1,379 @@
 [
   {
-    "comment": "=== TERMS GATE FLOW ===",
+    "comment": "=== TERMS GATE FLOW - Wait for app to load ===",
+    "type": "WAIT",
+    "durationMillis": 3000
+  },
+  {
+    "comment": "Click Continue on welcome screen",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Continue"}]
   },
   {
-    "comment": "Scroll terms to bottom",
+    "type": "WAIT",
+    "durationMillis": 1000
+  },
+  {
+    "comment": "Scroll terms multiple times to reach bottom",
     "type": "SCROLL_DOWN",
-    "elementDescriptors": [{"className": "android.widget.ScrollView"}]
+    "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]
+  },
+  {
+    "type": "SCROLL_DOWN",
+    "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]
+  },
+  {
+    "type": "SCROLL_DOWN",
+    "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]
+  },
+  {
+    "type": "SCROLL_DOWN",
+    "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 500
   },
   {
     "type": "CLICK",
     "elementDescriptors": [{"text": "Next"}]
   },
   {
-    "comment": "Scroll privacy to bottom",
+    "type": "WAIT",
+    "durationMillis": 1000
+  },
+  {
+    "comment": "Scroll privacy policy multiple times",
     "type": "SCROLL_DOWN",
-    "elementDescriptors": [{"className": "android.widget.ScrollView"}]
+    "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]
+  },
+  {
+    "type": "SCROLL_DOWN",
+    "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]
+  },
+  {
+    "type": "SCROLL_DOWN",
+    "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]
+  },
+  {
+    "type": "SCROLL_DOWN",
+    "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 500
   },
   {
     "type": "CLICK",
     "elementDescriptors": [{"text": "Next"}]
   },
   {
-    "comment": "Check all disclaimers - Medical",
-    "type": "CLICK",
-    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+    "type": "WAIT",
+    "durationMillis": 1000
   },
-  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
+  {
+    "comment": "Medical disclaimer - tap checkbox area",
+    "type": "CLICK",
+    "elementDescriptors": [{"contentDescription": ".*medical.*"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 500
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1000
+  },
   {
     "comment": "Legal disclaimer",
     "type": "CLICK",
-    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+    "elementDescriptors": [{"contentDescription": ".*legal.*"}]
   },
-  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
+  {
+    "type": "WAIT",
+    "durationMillis": 500
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1000
+  },
   {
     "comment": "Financial disclaimer",
     "type": "CLICK",
-    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+    "elementDescriptors": [{"contentDescription": ".*financial.*"}]
   },
-  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
+  {
+    "type": "WAIT",
+    "durationMillis": 500
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1000
+  },
   {
     "comment": "AI disclaimer",
     "type": "CLICK",
-    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+    "elementDescriptors": [{"contentDescription": ".*AI.*"}]
   },
-  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
   {
-    "comment": "Crisis disclaimer - check both",
-    "type": "CLICK",
-    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+    "type": "WAIT",
+    "durationMillis": 500
   },
   {
     "type": "CLICK",
-    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 1}]
+    "elementDescriptors": [{"text": "Next"}]
   },
-  {"type": "CLICK", "elementDescriptors": [{"text": "Next"}]},
   {
-    "comment": "Final page - check all",
+    "type": "WAIT",
+    "durationMillis": 1000
+  },
+  {
+    "comment": "Crisis disclaimers - tap both checkboxes",
     "type": "CLICK",
-    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 0}]
+    "elementDescriptors": [{"contentDescription": ".*crisis.*"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 300
   },
   {
     "type": "CLICK",
-    "elementDescriptors": [{"className": "android.view.ViewGroup", "index": 1}]
+    "elementDescriptors": [{"contentDescription": ".*emergency.*"}]
   },
   {
-    "comment": "Accept all terms",
+    "type": "WAIT",
+    "durationMillis": 500
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1000
+  },
+  {
+    "comment": "Final page - responsibility and data ownership",
+    "type": "CLICK",
+    "elementDescriptors": [{"contentDescription": ".*responsibility.*"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 300
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"contentDescription": ".*data.*ownership.*"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 500
+  },
+  {
+    "comment": "Accept all terms - final button",
     "type": "CLICK",
     "elementDescriptors": [{"text": "I Accept All Terms"}]
   },
-
+  {
+    "type": "WAIT",
+    "durationMillis": 2000
+  },
   {
     "comment": "=== HOME TAB ===",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Home"}]
   },
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
   {"type": "WAIT", "durationMillis": 1000},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
 
   {
     "comment": "=== CAMPAIGNS TAB ===",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Campaigns"}]
   },
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
   {"type": "WAIT", "durationMillis": 1000},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
 
   {
     "comment": "=== COMMUNITY TAB ===",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Community"}]
   },
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
   {"type": "WAIT", "durationMillis": 1000},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
 
   {
     "comment": "=== RESOURCES TAB ===",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Resources"}]
   },
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
   {"type": "WAIT", "durationMillis": 1000},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
 
   {
     "comment": "=== WELLNESS TAB ===",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Wellness"}]
   },
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
   {"type": "WAIT", "durationMillis": 1000},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
   
   {
-    "comment": "Explore Wellness features",
+    "comment": "Click Spoon Economist",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Spoon Economist"}]
   },
-  {"type": "WAIT", "durationMillis": 1500},
-  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 1000},
+  {
+    "comment": "Go back",
+    "type": "DEVICE_BACK_BUTTON"
+  },
+  {"type": "WAIT", "durationMillis": 1000},
   
   {
-    "comment": "Try Energy & Mood Dashboard",
+    "comment": "Click Energy Dashboard",
     "type": "CLICK",
-    "elementDescriptors": [{"text": "Energy & Mood Dashboard"}]
+    "elementDescriptors": [{"text": "Energy"}]
   },
-  {"type": "WAIT", "durationMillis": 1500},
-  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 1000},
+  {
+    "type": "DEVICE_BACK_BUTTON"
+  },
+  {"type": "WAIT", "durationMillis": 1000},
 
   {
     "comment": "=== ADVOCACY TAB ===",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Advocacy"}]
   },
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
   {"type": "WAIT", "durationMillis": 1000},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
   
   {
-    "comment": "Check Advocacy Hub",
+    "comment": "Click Advocacy Hub",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Advocacy Hub"}]
   },
-  {"type": "WAIT", "durationMillis": 1500},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 1000},
+  {
+    "type": "DEVICE_BACK_BUTTON"
+  },
+  {"type": "WAIT", "durationMillis": 1000},
   
   {
-    "comment": "Check Legal DNA",
+    "comment": "Click Legal DNA",
     "type": "CLICK",
-    "elementDescriptors": [{"text": "Legal DNA Sequencer"}]
+    "elementDescriptors": [{"text": "Legal DNA"}]
   },
-  {"type": "WAIT", "durationMillis": 1500},
-  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 1000},
+  {
+    "type": "DEVICE_BACK_BUTTON"
+  },
+  {"type": "WAIT", "durationMillis": 1000},
 
   {
     "comment": "=== SETTINGS TAB ===",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Settings"}]
   },
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
   {"type": "WAIT", "durationMillis": 1000},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
   
   {
-    "comment": "Check Profile",
+    "comment": "Click Profile",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Profile"}]
   },
-  {"type": "WAIT", "durationMillis": 1500},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 1000},
+  {
+    "type": "DEVICE_BACK_BUTTON"
+  },
+  {"type": "WAIT", "durationMillis": 1000},
   
   {
-    "comment": "Check Accessibility Settings",
+    "comment": "Click Accessibility",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Accessibility"}]
   },
-  {"type": "WAIT", "durationMillis": 1500},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 1000},
+  {
+    "type": "DEVICE_BACK_BUTTON"
+  },
+  {"type": "WAIT", "durationMillis": 1000},
 
   {
-    "comment": "Check Privacy Settings",
+    "comment": "Click Privacy",
     "type": "CLICK",
     "elementDescriptors": [{"text": "Privacy"}]
   },
-  {"type": "WAIT", "durationMillis": 1500},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-  {"type": "CLICK", "elementDescriptors": [{"className": "android.view.ViewGroup", "accessibilityLabel": "Go back"}]},
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 1000},
+  {
+    "type": "DEVICE_BACK_BUTTON"
+  },
+  {"type": "WAIT", "durationMillis": 1000},
 
   {
-    "comment": "=== WHAT'S NEW TAB ===",
+    "comment": "=== WHAT'S NEW (if visible) ===",
     "type": "CLICK",
     "elementDescriptors": [{"text": "What's New"}]
   },
-  {"type": "WAIT", "durationMillis": 1000},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-  {"type": "SCROLL_DOWN", "elementDescriptors": [{"className": "android.widget.ScrollView"}]},
-
-  {
-    "comment": "=== INBOX ===",
-    "type": "CLICK",
-    "elementDescriptors": [{"text": "Inbox"}]
-  },
+  {"type": "WAIT", "durationMillis": 2000},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
+  {"type": "WAIT", "durationMillis": 500},
+  {"type": "SCROLL_DOWN", "elementDescriptors": [{"resourceId": ".*ScrollView.*"}]},
   {"type": "WAIT", "durationMillis": 1000},
 
   {
@@ -212,5 +381,5 @@
     "type": "CLICK",
     "elementDescriptors": [{"text": "Home"}]
   },
-  {"type": "WAIT", "durationMillis": 1000}
+  {"type": "WAIT", "durationMillis": 2000}
 ]
