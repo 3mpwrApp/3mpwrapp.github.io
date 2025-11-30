@@ -434,16 +434,15 @@ export default function EnhancedPrivacySection() {
           <A11yPressable style={s.backupButton} onPress={onRetention} accessibilityRole='button' accessibilityLabel='Run retention sweep' hitSlop={HIT_SLOP_8}><Ionicons name='time-outline' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Prune Old Cache</Text></A11yPressable>
         </GapView>
       </View>
-    </View>
-    
-    {/* Cloud Provider Selection Modal */}
-    <Modal
-      visible={showProviderModal}
-      transparent={true}
-      animationType="fade"
-      onRequestClose={() => setShowProviderModal(false)}
-      accessibilityViewIsModal={true}
-    >
+      
+      {/* Cloud Provider Selection Modal */}
+      <Modal
+        visible={showProviderModal}
+        transparent={true}
+        animationType="fade"
+        onRequestClose={() => setShowProviderModal(false)}
+        accessibilityViewIsModal={true}
+      >
       <Pressable 
         style={s.modalOverlay}
         onPress={() => setShowProviderModal(false)}
