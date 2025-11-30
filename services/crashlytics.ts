@@ -16,6 +16,7 @@ export async function initCrashlytics(): Promise<void> {
     await crashlytics().setCrashlyticsCollectionEnabled(true);
     
     if (__DEV__) {
+      // eslint-disable-next-line no-console
       console.log('[Crashlytics] Initialized successfully');
     }
   } catch (error) {
