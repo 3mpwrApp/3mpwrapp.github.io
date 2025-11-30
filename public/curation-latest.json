@@ -1,29 +1,113 @@
 {
   "date": "2025-11-30",
-  "timestamp": "2025-11-30T15:07:47.410Z",
-  "count": 3,
+  "timestamp": "2025-11-30T21:07:15.917Z",
+  "count": 15,
   "minScore": 0.5,
   "items": [
     {
-      "title": "What this surgeon from Ukraine is learning in Canada about treating war victims",
-      "link": "https://www.cbc.ca/news/canada/hamilton/ukrainian-surgeon-in-hamilton-9.6996324?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/9f3b134e-6b94-44d7-9166-5e51d012eff8,1764348568402/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C3840%2C2160%29%3BResize%3D%28620%29' alt='A doctor in surgery holding a tool' width='620' height='349' title='Dr. Mariia Kuzeikiv is from Lviv, a city in western Ukraine. '/><p>Dr. Mariia Kuzeikiv, an Ukrainian surgeon, is learning skills that could help her save lives in the war while in Hamilton, Ont.</p>",
-      "score": 10.5,
+      "title": "Calgary renews programs, awareness as homeless face dire challenges of winter",
+      "link": "https://globalnews.ca/news/11550944/calgary-renews-programs-awareness-as-homeless-face-dire-challenges-of-winter/",
+      "description": "The City of Calgary and 20 other partners have started the annual extreme weather response, providing seasonal day spaces and other services for Calgarians who are homeless.",
+      "score": 15.9,
+      "pubDate": "Sun, 30 Nov 2025 17:42:48 +0000"
+    },
+    {
+      "title": "UNAIDS chief urges Carney to reverse planned global health funding cuts",
+      "link": "https://globalnews.ca/news/11550886/unaids-canada-mark-carney-cuts/",
+      "description": "The head of the United Nations' HIV/AIDS program is urging Prime Minister Mark Carney to reverse his government's planned cuts in global health funding and foreign aid.",
+      "score": 11.4,
+      "pubDate": "Sun, 30 Nov 2025 15:16:01 +0000"
+    },
+    {
+      "title": "American ALS patient died alone after paying $84K US in pursuit of healing at controversial Sask. facility",
+      "link": "https://www.cbc.ca/news/canada/saskatchewan/goodenowe-als-health-moose-jaw-9.6965651?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/51795ab6-e1ed-4ae5-93d5-039254fd4ec0,1762282146669/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A woman in a hospital bed with an oxygen tube.' width='620' height='349' title='In December, Susie Silvestri was no longer able to eat and was begging for a feeding tube. '/><p>A 70-year-old American ALS patient came to Saskatchewan chasing the promise of healing offered by the Dr. Goodenowe Restorative Health Center in Moose Jaw, Sask. But former Goodenowe employees say that as her condition worsened, Goodenowe centre management left Susie to fight for her life on her own. </p>",
+      "score": 9.5,
       "pubDate": "Sun, 30 Nov 2025 04:00:00 EST"
     },
     {
-      "title": "On Our Radar: Buddie turns its completely understandable stress into something beautiful",
-      "link": "https://www.straight.com/music/on-our-radar-buddie-turns-its-completely-understandable-stress-into-something-beautiful",
-      "description": "Guitar bands are back in Vancouver, and it’s beautiful.",
-      "score": 5,
-      "pubDate": "2025-11-06T20:19:28-08:00"
+      "title": "Couple weds in Nelson, B.C., with little notice — but great support from community",
+      "link": "https://www.cbc.ca/news/canada/british-columbia/nelson-last-minute-wedding-9.6996510?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/efd7a891-5df4-4785-b475-2854576d4f85,1764354862636/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C243%2C2048%2C1152%29%3BResize%3D%28620%29' alt='A woman and a man look off to the right while standing outside among a creek and trees' width='620' height='349' title='Leah Fried and Tim Bowman are celebrating their nuptials — and the community that came together to make it all happen.'/><p>There is no story that encapsulates the vibes of Nelson, B.C., quite like this. Witnesses, a photographer, an officiant and a musician all showed up at Cottonwood Falls Park, with very little notice, to help an out-of-town couple’s dreams come true. </p>",
+      "score": 10.5,
+      "pubDate": "Sat, 29 Nov 2025 08:00:00 EST"
     },
     {
-      "title": "Between Breaths dives into the life of a Newfoundland conservationist who loved people as much as whales",
-      "link": "https://www.straight.com/arts/between-breaths-dives-into-life-of-a-conservationist-who-loved-people-as-much-as-whales",
-      "description": "\"What is your life, and what is your life to you in its final moments?\"",
+      "title": "Manitoba Government Improving Roads and Infrastructure in 2026, Celebrating Construction Award Winners",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71699",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Fri, 21 Nov 2025 16:08:00 CST"
+    },
+    {
+      "title": "On Our Radar: Blue Jay Valley shows why East Van rules in video for &quot;Living In the City&quot;",
+      "link": "https://www.straight.com/music/on-our-radar-blue-jay-valley-shows-why-east-van-rules-in-video-for-living-in-city",
+      "description": "The kids are more than alright.",
+      "score": 5,
+      "pubDate": "2025-11-13T14:29:58-08:00"
+    },
+    {
+      "title": "On Our Radar: Scarlet Fever’s debut LP, Girl with Shank, cuts deep",
+      "link": "https://www.straight.com/music/on-our-radar-scarlet-fevers-debut-lp-girl-with-shank-cuts-deep",
+      "description": "The four-piece Vancouver band has been a regular at shows around town lately.",
+      "score": 5,
+      "pubDate": "2025-11-06T00:32:32-08:00"
+    },
+    {
+      "title": "Manitobans Invited to the Legislative Building's Holiday Open House",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71700",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Fri, 21 Nov 2025 16:43:00 CST"
+    },
+    {
+      "title": "Quebec coroner outlines steps to improve pedestrian safety at intersections",
+      "link": "https://globalnews.ca/news/11551070/quebec-coroner-pedestrial-safety-improvements/",
+      "description": "A Quebec coroner called on the city of Montreal and province to take steps to improve safety at intersections, including adding sun glare as a criteria.",
+      "score": 4.5,
+      "pubDate": "Sun, 30 Nov 2025 19:49:43 +0000"
+    },
+    {
+      "title": "Cyber Monday: Canadians search for meaningful, budget-friendly gifts",
+      "link": "https://globalnews.ca/news/11550947/cyber-monday-shopping-habits-shift/",
+      "description": "Canadians are shifting from splurges to essentials this Cyber Monday, focusing on simple discounts, tighter budgets and more meaningful, handmade or local gifts.",
+      "score": 4.5,
+      "pubDate": "Sun, 30 Nov 2025 19:07:35 +0000"
+    },
+    {
+      "title": "Alberta's Smith vows to keep up fight against Ottawa despite pipeline pact",
+      "link": "https://globalnews.ca/news/11550906/alberta-danielle-smith-ucp-convention/",
+      "description": "The milestone deal with Ottawa signed earlier this week clears regulatory hurdles for a potential pipeline from Alberta to the West Coast.",
+      "score": 4.5,
+      "pubDate": "Sun, 30 Nov 2025 16:10:07 +0000"
+    },
+    {
+      "title": "30 can't-miss Vancouver concerts for November 2025",
+      "link": "https://www.straight.com/music/30-cant-miss-vancouver-concerts-for-november-2025",
+      "description": "<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href=\"http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up for our free newsletter</a>.<br /></h3>",
+      "score": 4.5,
+      "pubDate": "2025-11-06T08:30:00-08:00"
+    },
+    {
+      "title": "‘So chaotic': No return date for displaced residents of 2 Toronto building fires",
+      "link": "https://globalnews.ca/news/11550568/toronto-fire-displaces-residents/",
+      "description": "A stubborn fire burning behind walls at two Thorncliffe Park towers has left hundreds displaced with no return timeline, as residents shelter in hotels with Red Cross support.",
+      "score": 3,
+      "pubDate": "Sat, 29 Nov 2025 23:50:48 +0000"
+    },
+    {
+      "title": "You Nearly Missed: Molly Grace makes her Vancouver debut at the Fox Cabaret",
+      "link": "https://www.straight.com/music/you-nearly-missed-molly-grace-makes-her-vancouver-debut-at-fox-cabaret",
+      "description": "The Nashville artist is touring in support of her new album, Blush.",
+      "score": 3,
+      "pubDate": "2025-11-21T15:12:18-08:00"
+    },
+    {
+      "title": "Ottawa Charge head coach Carla MacLeod diagnosed with breast cancer",
+      "link": "https://www.cbc.ca/news/canada/ottawa/ottawa-charge-head-coach-carla-macleod-diagnosed-with-breast-cancer-9.6998107?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/9af6d991-43fc-46db-b671-ae6f5fe6c6d3,1764533110466/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C105%2C6370%2C3583%29%3BResize%3D%28620%29' alt='A woman is seen holding a hockey stick and a whistle in a rink, looking to the right of the camera.' width='620' height='349' title='Ottawa Charge head coach Carla MacLeod looks on during training camp in Ottawa on Wednesday, Nov. 12, 2025.'/><p>Carla MacLeod says that while she'll begin treatment this week and will miss the Charge's upcoming game on Tuesday, she plans to return to the PWHL club later this season. </p>",
       "score": 1,
-      "pubDate": "2025-11-14T11:50:11-08:00"
+      "pubDate": "Sun, 30 Nov 2025 15:28:11 EST"
     }
   ]
 }
