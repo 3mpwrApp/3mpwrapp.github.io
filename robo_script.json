@@ -1,9 +1,128 @@
 [
   {
-    "comment": "=== TERMS GATE FLOW - Wait for app to load ===",
+    "comment": "Wait for app to load",
+    "type": "WAIT",
+    "durationMillis": 5000
+  },
+  {
+    "comment": "Click Continue",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Continue"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 2000
+  },
+  {
+    "comment": "Scroll to bottom of terms - just use basic scroll",
+    "type": "SCROLL_DOWN"
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 500
+  },
+  {
+    "type": "SCROLL_DOWN"
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 500
+  },
+  {
+    "type": "SCROLL_DOWN"
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1000
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 2000
+  },
+  {
+    "comment": "Scroll privacy policy",
+    "type": "SCROLL_DOWN"
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 500
+  },
+  {
+    "type": "SCROLL_DOWN"
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 500
+  },
+  {
+    "type": "SCROLL_DOWN"
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1000
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 2000
+  },
+  {
+    "comment": "Accept all terms - just tap and next repeatedly",
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1500
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1500
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1500
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1500
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "Next"}]
+  },
+  {
+    "type": "WAIT",
+    "durationMillis": 1500
+  },
+  {
+    "type": "CLICK",
+    "elementDescriptors": [{"text": "I Accept All Terms"}]
+  },
+  {
     "type": "WAIT",
     "durationMillis": 3000
-  },
+  }
+]
   {
     "comment": "Click Continue on welcome screen",
     "type": "CLICK",
