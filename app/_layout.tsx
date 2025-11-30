@@ -129,7 +129,7 @@ import Footer from "../components/ThemedFooter";
 import ThemedHeader from "../components/ThemedHeader";
 import UpdateSplashScreen from "../components/UpdateSplashScreen";
 import { channels } from "../data/community";
-import { useTranslation , I18nProvider } from "../i18n";
+import { I18nProvider, useTranslation } from "../i18n";
 import { setSessionSeed } from "../services/session";
 import { CommunityProvider, useCommunity } from "../store/community";
 import { CountsProvider } from "../store/counts";
@@ -414,12 +414,17 @@ function TelemetryInit() {
     if (state.errorReportingEnabled) {
       const dsn = process.env.EXPO_PUBLIC_SENTRY_DSN as string | undefined;
       if (dsn) {
-        initSentry(dsn).catch((error) => {
-          // Silent fail - don't crash the app if Sentry init fails
-          if (__DEV__) {
-            logError('TelemetryInit', 'Failed to initialize Sentry', error);
-          }
-        });
+        // Use new Sentry labeling service
+        import('../services/sentryLabeling')
+          .then((module) => module.initSentry(dsn))
+          .catch(() => {
+            // Fallback to old telemetry service
+            initSentry(dsn).catch((err) => {
+              if (__DEV__) {
+                logError('TelemetryInit', 'Failed to initialize Sentry', err);
+              }
+            });
+          });
       }
     }
   }, [state.errorReportingEnabled]);
@@ -458,6 +463,15 @@ function SecurityInit() {
         // Log error but don't crash the app - security is optional enhancement
         if (__DEV__) {
           logError('SecurityInit', 'Security initialization error', error);
+        }
+      });
+
+    // Initialize weekly What's New notifications
+    import('../services/weeklyWhatsNewNotification')
+      .then((module) => module.initializeWeeklyWhatsNew())
+      .catch((error: Error) => {
+        if (__DEV__) {
+          logError('WeeklyWhatsNew', 'Failed to initialize weekly notifications', error);
         }
       });
   }, []);

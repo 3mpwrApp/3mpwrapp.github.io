@@ -33,6 +33,7 @@ import { useAppPalette } from '../../../theme/usePalette';
 import { sendFeedbackEmailInternal } from '../../../utils/feedback';
 const NotificationPreferences = React.lazy(() => import('../../../components/NotificationPreferences'));
 const EmergencyWalletCard = React.lazy(() => import('../../../components/EmergencyWalletCard'));
+const WeeklyWhatsNewToggle = React.lazy(() => import('../../../components/WeeklyWhatsNewToggle').then(m => ({ default: m.WeeklyWhatsNewToggle })));
 
 export default function SettingsScreen() {
   const params = useLocalSearchParams<{ open?: string }>();
@@ -225,6 +226,13 @@ export default function SettingsScreen() {
         <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading notification preferences…</Text></View>}>
           <NotificationPreferences />
         </React.Suspense>
+
+        <Section title="What's New Notifications" subtitle="Weekly summaries of app updates and improvements" styles={styles}>
+          <React.Suspense fallback={<View accessibilityRole='progressbar' style={{ paddingVertical:8 }}><Text>Loading…</Text></View>}>
+            <WeeklyWhatsNewToggle />
+          </React.Suspense>
+        </Section>
+
         <Section title={t('settings.emergencyWallet.title','Emergency Wallet Card')} subtitle={t('settings.emergencyWallet.subtitle','Store key medical and emergency contact information locally')} styles={styles}>
           <A11yPressable
             onPress={() => setShowEmergencyCard(v => !v)}

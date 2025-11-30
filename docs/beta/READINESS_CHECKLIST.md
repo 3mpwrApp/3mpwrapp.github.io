@@ -29,11 +29,22 @@ This checklist ensures we can run a stable closed beta without paid accounts.
 - [x] Comprehensive Beta Tester Guide created and published (see docs/COMPREHENSIVE_BETA_TESTER_GUIDE.md)
 
 ## Nice-to-have (optional)
-- [ ] Weekly "What's New" summary in Notifications (silent, auto-expire)
-- [ ] Minimal crash labeling via Sentry DSN in .env (local only)
-- [ ] CI job to run analytics report and attach as artifact
-- [ ] Beta tester badge implementation (documented as "coming soon")
+- [x] Weekly "What's New" summary in Notifications (silent, auto-expire)
+  - Implemented: `services/weeklyWhatsNewNotification.ts` with Monday 9 AM scheduling
+  - UI: `components/WeeklyWhatsNewToggle.tsx` in Settings → What's New Notifications
+  - Features: Silent notifications, 7-day auto-expire, opt-in toggle
+- [x] Minimal crash labeling via Sentry DSN in .env (local only)
+  - Implemented: `services/sentryLabeling.ts` with automatic feature/type/severity tagging
+  - Integration: Replaces `initSentry()` in `app/_layout.tsx`
+  - Labels: feature (wellness, advocacy, etc.), type (network, validation), severity (critical, error, warning)
+- [x] CI job to run analytics report and attach as artifact
+  - Implemented: `.github/workflows/ci-consolidated.yml` step after `perf:budget`
+  - Artifact: `docs/analytics-report.md` uploaded with 30-day retention
+- [x] Beta tester badge implementation (documented as "coming soon")
+  - Implemented: `services/betaBadge.ts` with Firestore sync for cross-device persistence
+  - UI: `components/BetaTesterBadge.tsx` with welcome card and shield-star icon
+  - Display: Shown in Profile screen (ProfileCard.tsx) for authenticated users
 
 ---
 **Prepared:** 2025-10-06  
-**Last Updated:** 2025-10-20 (Beta Documentation Consolidation)
+**Last Updated:** 2025-01-XX (All nice-to-have features implemented)

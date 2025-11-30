@@ -186,6 +186,18 @@ jobs:
       - name: Performance bundle budget
         run: npm run perf:budget
 
+      - name: Generate analytics report
+        run: npm run analytics:report
+        continue-on-error: true # Advisory check
+
+      - name: Upload analytics report
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        if: always()
+        with:
+          name: analytics-report
+          path: docs/analytics-report.md
+          retention-days: 30
+
   expo-doctor:
     name: Expo Doctor
     needs: [install, lint, typecheck]

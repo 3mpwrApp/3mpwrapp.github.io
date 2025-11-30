@@ -17,6 +17,8 @@ import { logger } from "../utils/logger";
 
 import GapView from "./GapView";
 
+const BetaTesterBadge = React.lazy(() => import("./BetaTesterBadge").then(m => ({ default: m.BetaTesterBadge })));
+
 export default function ProfileCard() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
@@ -133,6 +135,16 @@ export default function ProfileCard() {
             <View>
               <Text style={styles.name}>{user?.displayName || t("common.guest", "Guest User")}</Text>
               <Text style={styles.email}>{user?.email || (isGuest ? t("auth.guestMode", "Guest Mode") : "")}</Text>
+              
+              {/* Beta Tester Badge */}
+              {!isGuest && (
+                <React.Suspense fallback={null}>
+                  <View style={{ marginTop: 8 }}>
+                    <BetaTesterBadge size="small" showWelcome />
+                  </View>
+                </React.Suspense>
+              )}
+
               {!isGuest && (
                 <Pressable 
                   onPress={() => setEditing(true)} 

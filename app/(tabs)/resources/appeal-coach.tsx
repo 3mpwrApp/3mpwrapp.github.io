@@ -274,7 +274,7 @@ Sincerely,
           onPress={() => toggleChecklistItem(item.id)} 
           style={[s.checklistItem, item.done && s.checklistItemDone]}
           accessibilityRole="button"
-          accessibilityLabel={`${item.done ? 'Uncheck' : 'Check'} ${item.text}`}
+          accessibilityLabel={`${item.done ? 'Uncheck' : 'Check'} ${item.title}`}
           hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
         >
           <View style={{ flexDirection: 'row', alignItems: 'flex-start', flex: 1 }}>

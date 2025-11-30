@@ -1,10 +1,11 @@
 /**
  * Centralized error logging utility
- * Replaces direct console.error calls with a consistent logging pattern
- * Can be extended to integrate with external logging services (Sentry, etc.)
+ * Integrates with Sentry for automatic crash labeling and categorization
  */
 
 /* eslint-disable no-console */
+
+import * as sentryLabeling from "../services/sentryLabeling";
 
 interface ErrorLogContext {
   component?: string;
@@ -26,8 +27,27 @@ class ErrorLogger {
         console.error('Context:', context.data);
       }
     }
-    // In production, this would send to external logging service
-    // if (Sentry) { Sentry.captureException(error, { contexts: { custom: context } }); }
+    // Send to Sentry with automatic labeling
+    if (error instanceof Error) {
+      const sentryContext: Record<string, unknown> = {
+        component: context?.component,
+        action: context?.action,
+        message,
+        ...(typeof context?.data === 'object' && context.data !== null ? context.data as Record<string, unknown> : {}),
+      };
+      sentryLabeling.captureException(error, {
+        extra: sentryContext,
+      });
+    } else if (error) {
+      const sentryContext: Record<string, unknown> = {
+        component: context?.component,
+        action: context?.action,
+        ...(typeof context?.data === 'object' && context.data !== null ? context.data as Record<string, unknown> : {}),
+      };
+      sentryLabeling.captureMessage(`${message}: ${String(error)}`, "error", {
+        extra: sentryContext,
+      });
+    }
   }
 
   /**
