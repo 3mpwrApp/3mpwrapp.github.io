@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-30T12:02:59.413Z",
+  "lastUpdated": "2025-11-30T18:02:48.416Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3935,
+      "totalPosts": 3960,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-30T12:02:49.554Z"
+      "lastSeen": "2025-11-30T18:02:39.364Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3950,
+      "totalPosts": 3975,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-30T12:02:51.762Z"
+      "lastSeen": "2025-11-30T18:02:41.682Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3934,
+      "totalPosts": 3959,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-30T12:02:54.099Z"
+      "lastSeen": "2025-11-30T18:02:43.468Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3943,
+      "totalPosts": 3968,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-30T12:02:56.190Z"
+      "lastSeen": "2025-11-30T18:02:45.202Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3950,
+      "totalPosts": 3975,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-30T12:02:58.409Z"
+      "lastSeen": "2025-11-30T18:02:47.412Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
-      "author": "lsto4.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
-      "author": "lsto4.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,6 +308,36 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
+      "author": "nataliegreenpeer.bsky.social",
+      "engagement": 206,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Annaleigh is a Cherokee woman living with PTSD and other health challenges. She needs $2,000 to cover bills and essential expenses. Please donate or share if you can. 🤍\n#MutualAid #IndigenousMutualAid #DisabilityJustice #BIPOCMA",
+      "author": "amparodo.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Voting closes tonight, last chance to decide the winners of the GAConf accessibility awards!\n\nVoting form and finalists' info here - www.gaconf.com/gaconf-award...\n\n#gamedev #indiedev #accessibility",
+      "author": "gaconf.bsky.social",
+      "engagement": 26,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 31
     },
     {
       "keyword": "accessibility",
-      "count": 27
+      "count": 30
     },
     {
       "keyword": "disabilityjustice",
@@ -363,19 +363,11 @@
     },
     {
       "keyword": "a11yconf",
-      "count": 21
+      "count": 13
     },
     {
       "keyword": "a11yconf2025",
-      "count": 20
-    },
-    {
-      "keyword": "accessibilitat",
-      "count": 11
-    },
-    {
-      "keyword": "accesibilidad",
-      "count": 10
+      "count": 12
     },
     {
       "keyword": "altcitizen",
@@ -394,8 +386,28 @@
       "count": 9
     },
     {
+      "keyword": "accessibilitat",
+      "count": 7
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 7
+    },
+    {
       "keyword": "disabilityjustice nico",
-      "count": 5
+      "count": 6
+    },
+    {
+      "keyword": "bluebeanieday",
+      "count": 6
+    },
+    {
+      "keyword": "inclusivedesign",
+      "count": 6
+    },
+    {
+      "keyword": "accesibilidad",
+      "count": 6
     },
     {
       "keyword": "disability",
@@ -407,18 +419,6 @@
     },
     {
       "keyword": "hansvestberg",
-      "count": 4
-    },
-    {
-      "keyword": "disabled people",
-      "count": 4
-    },
-    {
-      "keyword": "consumerrights",
-      "count": 4
-    },
-    {
-      "keyword": "accessibilitat accessibility",
       "count": 4
     }
   ]
