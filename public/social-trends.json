@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-11-29T18:02:41.669Z",
+  "lastUpdated": "2025-11-30T00:06:43.684Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 3860,
+      "totalPosts": 3885,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T18:02:32.727Z"
+      "lastSeen": "2025-11-30T00:06:34.362Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 3875,
+      "totalPosts": 3900,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T18:02:34.703Z"
+      "lastSeen": "2025-11-30T00:06:36.396Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 3859,
+      "totalPosts": 3884,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T18:02:36.676Z"
+      "lastSeen": "2025-11-30T00:06:38.433Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 3868,
+      "totalPosts": 3893,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T18:02:38.684Z"
+      "lastSeen": "2025-11-30T00:06:40.489Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 3875,
+      "totalPosts": 3900,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-11-29T18:02:40.665Z"
+      "lastSeen": "2025-11-30T00:06:42.681Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "The Case for AI as Accommodation (opinion) www.insidehighered.com/opinion/views/… #AI #education #accessibility",
-      "author": "nic221.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
-      "author": "lsto4.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "My 13yo daughter is using @kenney.nl 's \"Make Room\" as a 3D modeler for her game to come (cause Blender is a bit overwhelming for her and Make Room allows exporting models). Nice move sir, nice move ! #indiegame #accessibility",
-      "author": "casualgaragecoder.com",
-      "engagement": 19,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -338,6 +308,36 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
+      "author": "nataliegreenpeer.bsky.social",
+      "engagement": 202,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Voting closes tonight, last chance to decide the winners of the GAConf accessibility awards!\n\nVoting form and finalists' info here - www.gaconf.com/gaconf-award...\n\n#gamedev #indiedev #accessibility",
+      "author": "gaconf.bsky.social",
+      "engagement": 24,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "The hashtag #accessibility allows you to find lots of accessibility-related resources. To find accessibility resources in Spanish, use the hashtag #accesibilidad. The hashtag #accessibilité helps you find resources in French.",
+      "author": "a11yawareness.bsky.social",
+      "engagement": 28,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 30
     },
     {
       "keyword": "accessibility",
@@ -363,19 +363,19 @@
     },
     {
       "keyword": "a11yconf",
-      "count": 23
-    },
-    {
-      "keyword": "a11yconf2025",
       "count": 22
     },
     {
+      "keyword": "a11yconf2025",
+      "count": 21
+    },
+    {
       "keyword": "accessibilitat",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "accesibilidad",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "altcitizen",
@@ -394,15 +394,15 @@
       "count": 9
     },
     {
-      "keyword": "accessibilitat accessibility",
-      "count": 6
-    },
-    {
       "keyword": "disabilityjustice nico",
       "count": 5
     },
     {
-      "keyword": "specialeducation",
+      "keyword": "accessibilitat accessibility",
+      "count": 5
+    },
+    {
+      "keyword": "disability",
       "count": 4
     },
     {
@@ -414,11 +414,11 @@
       "count": 4
     },
     {
-      "keyword": "disability",
+      "keyword": "consumerrights",
       "count": 4
     },
     {
-      "keyword": "lgbtqia",
+      "keyword": "wcag",
       "count": 4
     }
   ]
