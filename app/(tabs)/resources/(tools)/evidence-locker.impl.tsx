@@ -634,3 +634,4 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     },
   });
 }
+
