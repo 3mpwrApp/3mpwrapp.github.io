@@ -159,11 +159,11 @@ export function HomeGuide() {
                   })}
                 </GapView>
                 <GapView style={{ flexDirection:'row', flexWrap:'wrap', alignItems:'center', marginTop:6 }} gap={8}>
-                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up')} style={{ minWidth: 44, minHeight: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
-                    <Text style={{ color: palette.text, textAlign:'center' }}>👍</Text>
+                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.up','Helpful suggestion')} onPress={()=>handleFeedback(sug.toolId,'up', setFeedbackStates)} style={{ minWidth: 44, minHeight: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: feedbackStates[sug.toolId] === 'up' ? palette.success : palette.muted, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
+                    <Text style={{ color: feedbackStates[sug.toolId] === 'up' ? palette.onPrimary : palette.text, textAlign:'center', fontSize: 18 }}>👍</Text>
                   </Pressable>
-                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down')} style={{ minWidth: 44, minHeight: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: palette.muted, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
-                    <Text style={{ color: palette.text, textAlign:'center' }}>👎</Text>
+                  <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' accessibilityLabel={t('home.guide.feedback.down','Not relevant')} onPress={()=>handleFeedback(sug.toolId,'down', setFeedbackStates)} style={{ minWidth: 44, minHeight: 44, paddingHorizontal:10, paddingVertical:6, backgroundColor: feedbackStates[sug.toolId] === 'down' ? palette.error : palette.muted, borderRadius:6, alignItems:'center', justifyContent:'center' }}>
+                    <Text style={{ color: feedbackStates[sug.toolId] === 'down' ? palette.onPrimary : palette.text, textAlign:'center', fontSize: 18 }}>👎</Text>
                   </Pressable>
                     <Pressable hitSlop={HIT_SLOP_8} accessibilityRole='button' style={{ minWidth: 80, minHeight: 44, flex: 1, backgroundColor: palette.primary, paddingHorizontal:12, paddingVertical:6, borderRadius:6, alignItems:'center', justifyContent:'center' }} onPress={()=> {
                       usage.view('home_guide_select', '/', {
@@ -189,13 +189,19 @@ export function HomeGuide() {
   );
 }
 
-async function handleFeedback(toolId: string, kind: 'up'|'down') {
+async function handleFeedback(toolId: string, kind: 'up'|'down', setFeedbackStates: React.Dispatch<React.SetStateAction<Record<string, 'up' | 'down' | null>>>) {
   try {
+    // Update UI immediately for responsiveness
+    setFeedbackStates(prev => ({ ...prev, [toolId]: kind }));
+    
     await submitFeedback(toolId, kind);
     // Re-score in background to reflect new feedback next render cycle (no direct state access here, hook will refresh on next mount or we could force an event bus)
     scoreTools();
     announce(kind === 'up' ? 'Thanks, we\'ll show more like this.' : 'Got it, we\'ll show fewer like this.');
-  } catch {}
+  } catch {
+    // Revert on error
+    setFeedbackStates(prev => ({ ...prev, [toolId]: null }));
+  }
 }
 
 function renderIcon(name?: string) {

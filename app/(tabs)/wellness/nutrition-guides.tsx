@@ -1,5 +1,6 @@
+import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
-import { Alert, Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, Linking, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
@@ -26,13 +27,59 @@ export default function NutritionGuides() {
   // Hydration tracking
   const [hydrationGoal, setHydrationGoal] = React.useState(8); // cups/day
   const [hydrationLog, setHydrationLog] = React.useState<{date: string, cups: number}[]>([]);
+  const [cupSize, setCupSize] = React.useState(250); // ml
+  const [reminderEnabled, setReminderEnabled] = React.useState(false);
+  const [reminderInterval, setReminderInterval] = React.useState(120); // minutes
+  const [showHydrationSettings, setShowHydrationSettings] = React.useState(false);
   const HYDRATION_KEY = 'nutrition.hydration.v1';
-  const HYDRATION_GOAL_KEY = 'nutrition.hydrationGoal.v1';
+  React.useEffect(()=>{ (async()=>{ try { const a = require('@react-native-async-storage/async-storage').default; const raw = await a.getItem(FAVS_KEY); if (raw) setFavs(new Set(JSON.parse(raw))); } catch {} })(); },[]);
+  React.useEffect(()=>{ (async()=>{ 
+    try { 
+      const a = require('@react-native-async-storage/async-storage').default; 
+      const raw = await a.getItem(HYDRATION_KEY); 
+      if (raw) setHydrationLog(JSON.parse(raw)); 
+      const goalRaw = await a.getItem(HYDRATION_GOAL_KEY); 
+      if (goalRaw) setHydrationGoal(parseInt(goalRaw, 10));
+      const cupRaw = await a.getItem(CUP_SIZE_KEY);
+      if (cupRaw) setCupSize(parseInt(cupRaw, 10));
+      const reminderRaw = await a.getItem(REMINDER_ENABLED_KEY);
+      if (reminderRaw) setReminderEnabled(reminderRaw === '1');
+      const intervalRaw = await a.getItem(REMINDER_INTERVAL_KEY);
+      if (intervalRaw) setReminderInterval(parseInt(intervalRaw, 10));
+    } catch {} 
+  })(); },[]);
+  const REMINDER_ENABLED_KEY = 'nutrition.reminderEnabled.v1';
+  const REMINDER_INTERVAL_KEY = 'nutrition.reminderInterval.v1';
   const today = new Date().toISOString().split('T')[0];
   const todayCups = hydrationLog.find(l => l.date === today)?.cups || 0;
+  const dailyMl = todayCups * cupSize;
+  const goalMl = hydrationGoal * cupSize;
   
-  React.useEffect(()=>{ (async()=>{ try { const a = require('@react-native-async-storage/async-storage').default; const raw = await a.getItem(FAVS_KEY); if (raw) setFavs(new Set(JSON.parse(raw))); } catch {} })(); },[]);
-  React.useEffect(()=>{ (async()=>{ try { const a = require('@react-native-async-storage/async-storage').default; const raw = await a.getItem(HYDRATION_KEY); if (raw) setHydrationLog(JSON.parse(raw)); const goalRaw = await a.getItem(HYDRATION_GOAL_KEY); if (goalRaw) setHydrationGoal(parseInt(goalRaw, 10)); } catch {} })(); },[]);
+  const saveGoal = async (newGoal: number) => {
+    setHydrationGoal(newGoal);
+    try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(HYDRATION_GOAL_KEY, newGoal.toString()); } catch {}
+  };
+  
+  const saveCupSize = async (size: number) => {
+    setCupSize(size);
+    try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(CUP_SIZE_KEY, size.toString()); } catch {}
+  };
+  
+  const saveReminderEnabled = async (enabled: boolean) => {
+    setReminderEnabled(enabled);
+    try { 
+      const a = require('@react-native-async-storage/async-storage').default; 
+      await a.setItem(REMINDER_ENABLED_KEY, enabled ? '1' : '0');
+      if (enabled) {
+        Alert.alert('Reminder Enabled', `You'll get a reminder every ${reminderInterval} minutes to drink water.`);
+      }
+    } catch {}
+  };
+  
+  const saveReminderInterval = async (interval: number) => {
+    setReminderInterval(interval);
+    try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(REMINDER_INTERVAL_KEY, interval.toString()); } catch {}
+  };
   
   const saveFavs = async (next: Set<string>) => { setFavs(new Set(next)); try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(FAVS_KEY, JSON.stringify(Array.from(next))); } catch {} };
   
@@ -52,11 +99,6 @@ export default function NutritionGuides() {
     const updated = hydrationLog.filter(l => l.date !== today);
     setHydrationLog(updated);
     try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(HYDRATION_KEY, JSON.stringify(updated)); } catch {}
-  };
-  
-  const saveGoal = async (newGoal: number) => {
-    setHydrationGoal(newGoal);
-    try { const a = require('@react-native-async-storage/async-storage').default; await a.setItem(HYDRATION_GOAL_KEY, newGoal.toString()); } catch {}
   };
   
   const exportFavorites = async () => {
@@ -86,33 +128,123 @@ export default function NutritionGuides() {
       
       {/* Hydration Tracker */}
       <View style={[s.card, { marginTop: 12, backgroundColor: palette.primary + '15' }]}>
-        <Text style={[s.cardTitle, { fontSize: 18 }]}>💧 Daily Hydration</Text>
-        <Text style={s.cardText}>Goal: {hydrationGoal} cups/day</Text>
+        <GapView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }} gap={8}>
+          <Text style={[s.cardTitle, { fontSize: 18, marginBottom: 0 }]}>💧 Daily Hydration</Text>
+          <A11yPressable 
+            onPress={() => setShowHydrationSettings(!showHydrationSettings)} 
+            style={{ padding: 8 }} 
+            accessibilityRole="button" 
+            accessibilityLabel={showHydrationSettings ? "Hide hydration settings" : "Show hydration settings"}
+            hitSlop={HIT_SLOP_8}
+          >
+            <Ionicons name={showHydrationSettings ? "chevron-up" : "settings-outline"} size={20} color={palette.primary} />
+          </A11yPressable>
+        </GapView>
+        
+        <Text style={s.cardText}>Goal: {hydrationGoal} cups/day ({goalMl}ml)</Text>
+        <Text style={[s.cardText, { fontSize: 12, opacity: 0.8 }]}>Today: {dailyMl}ml / {goalMl}ml</Text>
+        
         <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 8 }}>
-          <View style={{ flex: 1, height: 12, backgroundColor: palette.muted, borderRadius: 6, overflow: 'hidden' }}>
+          <View style={{ flex: 1, height: 16, backgroundColor: palette.muted, borderRadius: 8, overflow: 'hidden' }}>
             <View style={{ width: `${Math.min(100, (todayCups / hydrationGoal) * 100)}%`, height: '100%', backgroundColor: palette.primary }} />
           </View>
-          <Text style={[s.cardText, { marginLeft: 8, marginBottom: 0 }]}>{todayCups}/{hydrationGoal}</Text>
+          <Text style={[s.cardText, { marginLeft: 8, marginBottom: 0, fontWeight: '700' }]}>{todayCups}/{hydrationGoal}</Text>
         </View>
-        <GapView style={{ flexDirection: 'row', marginTop: 6 }} gap={6}>
-          <A11yPressable onPress={() => addWater(1)} style={s.btn} accessibilityRole="button" accessibilityLabel="Add 1 cup of water" hitSlop={HIT_SLOP_8}>
-            <Text style={s.btnText}>+1 cup</Text>
+        
+        {todayCups >= hydrationGoal && (
+          <View style={{ backgroundColor: palette.success + '20', padding: 8, borderRadius: 6, marginBottom: 8 }}>
+            <Text style={{ color: palette.success, fontWeight: '700', textAlign: 'center' }}>🎉 Goal reached! Great job staying hydrated!</Text>
+          </View>
+        )}
+        
+        <GapView style={{ flexDirection: 'row', marginTop: 6, flexWrap: 'wrap' }} gap={6}>
+          <A11yPressable onPress={() => addWater(1)} style={s.btn} accessibilityRole="button" accessibilityLabel={`Add 1 cup of water (${cupSize}ml)`} hitSlop={HIT_SLOP_8}>
+            <Text style={s.btnText}>+1 cup ({cupSize}ml)</Text>
           </A11yPressable>
-          <A11yPressable onPress={() => addWater(0.5)} style={s.btn} accessibilityRole="button" accessibilityLabel="Add half cup of water" hitSlop={HIT_SLOP_8}>
-            <Text style={s.btnText}>+½ cup</Text>
+          <A11yPressable onPress={() => addWater(0.5)} style={s.btn} accessibilityRole="button" accessibilityLabel={`Add half cup of water (${cupSize/2}ml)`} hitSlop={HIT_SLOP_8}>
+            <Text style={s.btnText}>+½ cup ({cupSize/2}ml)</Text>
           </A11yPressable>
           <A11yPressable onPress={resetToday} style={[s.btn, { backgroundColor: palette.error + '20' }]} accessibilityRole="button" accessibilityLabel="Reset today's water intake" hitSlop={HIT_SLOP_8}>
             <Text style={[s.btnText, { color: palette.error }]}>Reset</Text>
           </A11yPressable>
         </GapView>
-        <GapView style={{ flexDirection: 'row', marginTop: 8 }} gap={6}>
-          <Text style={[s.cardText, { marginBottom: 0 }]}>Daily goal:</Text>
-          {[6, 8, 10, 12].map(g => (
-            <A11yPressable key={g} onPress={() => saveGoal(g)} style={[s.btn, hydrationGoal === g && { backgroundColor: palette.primary, borderColor: palette.primary }]} accessibilityRole="button" accessibilityLabel={`Set goal to ${g} cups`} hitSlop={HIT_SLOP_8}>
-              <Text style={[s.btnText, hydrationGoal === g && { color: palette.onPrimary }]}>{g}</Text>
-            </A11yPressable>
-          ))}
-        </GapView>
+        
+        {showHydrationSettings && (
+          <View style={{ marginTop: 12, padding: 12, backgroundColor: palette.surface, borderRadius: 8, borderWidth: 1, borderColor: palette.muted }}>
+            <Text style={[s.cardTitle, { fontSize: 16 }]}>⚙️ Hydration Settings</Text>
+            
+            {/* Daily Goal */}
+            <Text style={[s.cardText, { marginTop: 8, fontWeight: '600' }]}>Daily goal (cups):</Text>
+            <GapView style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 4 }} gap={6}>
+              {[6, 8, 10, 12, 14, 16].map(g => (
+                <A11yPressable key={g} onPress={() => saveGoal(g)} style={[s.btn, hydrationGoal === g && { backgroundColor: palette.primary, borderColor: palette.primary }]} accessibilityRole="button" accessibilityLabel={`Set goal to ${g} cups`} hitSlop={HIT_SLOP_8}>
+                  <Text style={[s.btnText, hydrationGoal === g && { color: palette.onPrimary }]}>{g}</Text>
+                </A11yPressable>
+              ))}
+            </GapView>
+            
+            {/* Cup Size */}
+            <Text style={[s.cardText, { marginTop: 12, fontWeight: '600' }]}>Cup size (ml):</Text>
+            <GapView style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 4 }} gap={6}>
+              {[200, 250, 300, 350, 500].map(size => (
+                <A11yPressable key={size} onPress={() => saveCupSize(size)} style={[s.btn, cupSize === size && { backgroundColor: palette.primary, borderColor: palette.primary }]} accessibilityRole="button" accessibilityLabel={`Set cup size to ${size} milliliters`} hitSlop={HIT_SLOP_8}>
+                  <Text style={[s.btnText, cupSize === size && { color: palette.onPrimary }]}>{size}ml</Text>
+                </A11yPressable>
+              ))}
+            </GapView>
+            
+            {/* Reminders */}
+            <View style={{ marginTop: 12 }}>
+              <GapView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }} gap={8}>
+                <Text style={[s.cardText, { fontWeight: '600', flex: 1 }]}>Enable reminders:</Text>
+                <Switch 
+                  value={reminderEnabled} 
+                  onValueChange={saveReminderEnabled}
+                  trackColor={{ false: palette.muted, true: palette.primary }}
+                  thumbColor={palette.onPrimary}
+                />
+              </GapView>
+              
+              {reminderEnabled && (
+                <View style={{ marginTop: 8 }}>
+                  <Text style={[s.cardText, { fontWeight: '600' }]}>Remind me every:</Text>
+                  <GapView style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 4 }} gap={6}>
+                    {[60, 90, 120, 180, 240].map(interval => (
+                      <A11yPressable key={interval} onPress={() => saveReminderInterval(interval)} style={[s.btn, reminderInterval === interval && { backgroundColor: palette.primary, borderColor: palette.primary }]} accessibilityRole="button" accessibilityLabel={`Set reminder interval to ${interval} minutes`} hitSlop={HIT_SLOP_8}>
+                        <Text style={[s.btnText, reminderInterval === interval && { color: palette.onPrimary }]}>{interval < 120 ? `${interval}m` : `${interval/60}h`}</Text>
+                      </A11yPressable>
+                    ))}
+                  </GapView>
+                  <Text style={[s.cardText, { fontSize: 12, opacity: 0.7, marginTop: 4 }]}>
+                    💡 Tip: Set up wellness reminders in Settings for automatic hydration notifications
+                  </Text>
+                </View>
+              )}
+            </View>
+            
+            {/* Weekly Progress */}
+            <View style={{ marginTop: 12, paddingTop: 12, borderTopWidth: 1, borderTopColor: palette.muted }}>
+              <Text style={[s.cardText, { fontWeight: '600' }]}>Last 7 days:</Text>
+              <View style={{ flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', marginTop: 8, height: 60 }}>
+                {Array.from({ length: 7 }).map((_, i) => {
+                  const date = new Date();
+                  date.setDate(date.getDate() - (6 - i));
+                  const dateStr = date.toISOString().split('T')[0];
+                  const dayCups = hydrationLog.find(l => l.date === dateStr)?.cups || 0;
+                  const percentage = (dayCups / hydrationGoal) * 100;
+                  const dayLabel = i === 6 ? 'Today' : date.toLocaleDateString('en', { weekday: 'short' });
+                  return (
+                    <View key={i} style={{ flex: 1, alignItems: 'center' }}>
+                      <View style={{ width: '80%', backgroundColor: dayCups >= hydrationGoal ? palette.success : palette.primary, height: `${Math.max(10, Math.min(100, percentage))}%`, borderTopLeftRadius: 4, borderTopRightRadius: 4 }} />
+                      <Text style={{ color: palette.text, fontSize: 10, marginTop: 4 }}>{dayLabel}</Text>
+                      <Text style={{ color: palette.text, fontSize: 9, opacity: 0.7 }}>{dayCups}</Text>
+                    </View>
+                  );
+                })}
+              </View>
+            </View>
+          </View>
+        )}
       </View>
       
       <A11yPressable

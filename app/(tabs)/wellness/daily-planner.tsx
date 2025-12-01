@@ -68,20 +68,107 @@ const SMART_SUGGESTIONS = {
     { title: 'Light stretching', duration: 10 },
     { title: 'Listen to podcast', duration: 20 },
     { title: 'Breathing exercises', duration: 10 },
+    { title: 'Gentle yoga', duration: 15 },
+    { title: 'Journal reflection', duration: 10 },
   ],
   medium: [
     { title: 'Admin tasks (15min)', duration: 15 },
     { title: 'Check emails', duration: 15 },
     { title: 'Gentle walk', duration: 20 },
     { title: 'Creative hobby', duration: 30 },
+    { title: 'Phone calls', duration: 20 },
+    { title: 'Light housework', duration: 25 },
   ],
   high: [
     { title: 'Workout routine', duration: 30 },
     { title: 'Deep work session', duration: 60 },
     { title: 'Important meeting', duration: 45 },
     { title: 'Complex task', duration: 90 },
+    { title: 'Advocacy work', duration: 45 },
+    { title: 'Project planning', duration: 40 },
   ],
 };
+
+type DailyTemplate = {
+  name: string;
+  description: string;
+  appointments: Omit<Appointment, 'id' | 'completed'>[];
+};
+
+const DAILY_TEMPLATES: DailyTemplate[] = [
+  {
+    name: 'Balanced Day',
+    description: 'Mix of self-care, productivity, and rest',
+    appointments: [
+      { time: '08:00', title: 'Morning meditation', duration: 10, energy: 'low' },
+      { time: '09:00', title: 'Breakfast & meds', duration: 30, energy: 'medium' },
+      { time: '10:00', title: 'Focus work', duration: 60, energy: 'high' },
+      { time: '12:00', title: 'Lunch break', duration: 45, energy: 'medium' },
+      { time: '13:00', title: 'Rest period', duration: 30, energy: 'low' },
+      { time: '14:00', title: 'Light tasks', duration: 45, energy: 'medium' },
+      { time: '16:00', title: 'Gentle walk', duration: 20, energy: 'medium' },
+      { time: '17:00', title: 'Dinner prep', duration: 30, energy: 'medium' },
+      { time: '19:00', title: 'Evening wind-down', duration: 30, energy: 'low' },
+    ],
+  },
+  {
+    name: 'Low Energy Day',
+    description: 'Gentle schedule for flare-ups',
+    appointments: [
+      { time: '09:00', title: 'Wake up slowly', duration: 30, energy: 'low' },
+      { time: '10:00', title: 'Light breakfast', duration: 20, energy: 'low' },
+      { time: '11:00', title: 'Rest & hydrate', duration: 60, energy: 'low' },
+      { time: '13:00', title: 'Simple lunch', duration: 30, energy: 'low' },
+      { time: '14:00', title: 'Gentle stretching', duration: 15, energy: 'low' },
+      { time: '15:00', title: 'Nap or rest', duration: 90, energy: 'low' },
+      { time: '17:00', title: 'Easy dinner', duration: 30, energy: 'low' },
+      { time: '19:00', title: 'Self-care', duration: 20, energy: 'low' },
+    ],
+  },
+  {
+    name: 'Productive Day',
+    description: 'For high-energy days',
+    appointments: [
+      { time: '08:00', title: 'Morning routine', duration: 45, energy: 'medium' },
+      { time: '09:00', title: 'Priority task #1', duration: 90, energy: 'high' },
+      { time: '11:00', title: 'Break & snack', duration: 15, energy: 'medium' },
+      { time: '11:30', title: 'Priority task #2', duration: 60, energy: 'high' },
+      { time: '13:00', title: 'Lunch', duration: 45, energy: 'medium' },
+      { time: '14:00', title: 'Meetings/calls', duration: 60, energy: 'medium' },
+      { time: '15:30', title: 'Admin work', duration: 45, energy: 'medium' },
+      { time: '17:00', title: 'Exercise', duration: 30, energy: 'high' },
+      { time: '18:00', title: 'Evening routine', duration: 60, energy: 'medium' },
+    ],
+  },
+  {
+    name: 'Appointment Day',
+    description: 'Built around medical appointments',
+    appointments: [
+      { time: '08:00', title: 'Prepare for appointment', duration: 30, energy: 'medium' },
+      { time: '09:00', title: 'Travel to appointment', duration: 30, energy: 'medium' },
+      { time: '10:00', title: 'Medical appointment', duration: 90, energy: 'high' },
+      { time: '12:00', title: 'Recovery rest', duration: 60, energy: 'low' },
+      { time: '14:00', title: 'Light lunch', duration: 30, energy: 'low' },
+      { time: '15:00', title: 'Document visit notes', duration: 20, energy: 'medium' },
+      { time: '16:00', title: 'Rest period', duration: 120, energy: 'low' },
+      { time: '18:00', title: 'Easy dinner', duration: 30, energy: 'low' },
+    ],
+  },
+  {
+    name: 'Self-Care Sunday',
+    description: 'Rest and recharge',
+    appointments: [
+      { time: '09:00', title: 'Sleep in & relax', duration: 60, energy: 'low' },
+      { time: '10:00', title: 'Mindful breakfast', duration: 30, energy: 'low' },
+      { time: '11:00', title: 'Gentle movement', duration: 20, energy: 'low' },
+      { time: '12:00', title: 'Creative hobby', duration: 60, energy: 'medium' },
+      { time: '14:00', title: 'Meal prep', duration: 45, energy: 'medium' },
+      { time: '15:00', title: 'Connect with loved ones', duration: 60, energy: 'medium' },
+      { time: '17:00', title: 'Bath/spa time', duration: 30, energy: 'low' },
+      { time: '19:00', title: 'Evening gratitude', duration: 15, energy: 'low' },
+    ],
+  },
+];
 
 export const options = { href: null };
 
@@ -97,6 +184,7 @@ export default function DailyPlanner() {
   const [newApptEnergy, setNewApptEnergy] = useState<EnergyLevel>('medium');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [expandedAppt, setExpandedAppt] = useState<string | null>(null);
+  const [showTemplates, setShowTemplates] = useState(false);
   
   // Load appointments for selected date
   useEffect(() => {
@@ -235,6 +323,32 @@ export default function DailyPlanner() {
         t('dailyPlanner.unavailableMessage', 'Calendar access not available')
       );
     }
+  };
+
+  const handleLoadTemplate = (template: DailyTemplate) => {
+    Alert.alert(
+      t('dailyPlanner.loadTemplate', 'Load Template?'),
+      t('dailyPlanner.loadTemplateMessage', `Load "${template.name}"? This will replace your current schedule.`),
+      [
+        { text: t('common.cancel', 'Cancel'), style: 'cancel' },
+        {
+          text: t('dailyPlanner.load', 'Load'),
+          onPress: () => {
+            const newAppts: Appointment[] = template.appointments.map(appt => ({
+              ...appt,
+              id: `${Date.now()}-${Math.random()}`,
+              completed: false,
+            }));
+            setAppointments(newAppts);
+            setShowTemplates(false);
+            Alert.alert(
+              t('dailyPlanner.loaded', 'Template Loaded'),
+              t('dailyPlanner.loadedMessage', `"${template.name}" loaded successfully`)
+            );
+          },
+        },
+      ]
+    );
   };
 
   const totalMinutes = appointments.reduce((sum, a) => sum + a.duration, 0);
@@ -504,6 +618,54 @@ export default function DailyPlanner() {
             )}
           </View>
         )}
+
+        {/* Daily Templates */}
+        <View style={[styles.templatesCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}>
+          <A11yPressable
+            onPress={() => setShowTemplates(!showTemplates)}
+            style={styles.templatesHeader}
+            accessibilityRole="button"
+            accessibilityLabel={showTemplates ? 'Hide templates' : 'Show templates'}
+            hitSlop={HIT_SLOP_8}
+          >
+            <Text style={[styles.sectionTitle, { color: palette.text }]}>
+              📋 {t('dailyPlanner.templates', 'Daily Templates')}
+            </Text>
+            <Ionicons 
+              name={showTemplates ? 'chevron-up' : 'chevron-down'} 
+              size={20} 
+              color={palette.text} 
+            />
+          </A11yPressable>
+          
+          {showTemplates && (
+            <GapView gap={8} style={{ marginTop: 12 }}>
+              {DAILY_TEMPLATES.map((template, idx) => (
+                <A11yPressable
+                  key={idx}
+                  onPress={() => handleLoadTemplate(template)}
+                  style={[styles.templateCard, { backgroundColor: palette.background, borderColor: palette.muted }]}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Load ${template.name} template`}
+                  hitSlop={HIT_SLOP_8}
+                >
+                  <View>
+                    <Text style={[styles.templateName, { color: palette.text }]}>
+                      {template.name}
+                    </Text>
+                    <Text style={[styles.templateDescription, { color: palette.muted }]}>
+                      {template.description}
+                    </Text>
+                    <Text style={[styles.templateCount, { color: palette.muted, marginTop: 4 }]}>
+                      {template.appointments.length} tasks • {Math.floor(template.appointments.reduce((sum, a) => sum + a.duration, 0) / 60)}h {template.appointments.reduce((sum, a) => sum + a.duration, 0) % 60}m
+                    </Text>
+                  </View>
+                  <Ionicons name="download-outline" size={20} color={palette.primary} />
+                </A11yPressable>
+              ))}
+            </GapView>
+          )}
+        </View>
 
         {/* Quick Actions */}
         <View style={[styles.actionsCard, { backgroundColor: palette.surface, borderColor: palette.muted }]}>
@@ -967,6 +1129,37 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 16,
     marginBottom: 16,
+  },
+  templatesCard: {
+    borderRadius: 12,
+    borderWidth: 1,
+    padding: 16,
+    marginBottom: 16,
+  },
+  templatesHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  templateCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderRadius: 8,
+    borderWidth: 1,
+    padding: 12,
+  },
+  templateName: {
+    fontSize: 15,
+    fontWeight: '600',
+    marginBottom: 4,
+  },
+  templateDescription: {
+    fontSize: 13,
+    marginBottom: 2,
+  },
+  templateCount: {
+    fontSize: 11,
   },
   actionButton: {
     flexDirection: 'row',

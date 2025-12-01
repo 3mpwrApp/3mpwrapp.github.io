@@ -60,67 +60,265 @@ interface ProfileState {
 }
 
 const DISABILITY_OPTIONS = [
-  'Chronic Pain',
-  'Fatigue Conditions (ME/CFS, fibromyalgia)',
-  'Mobility Impairments',
-  'Cognitive Disabilities (brain fog, ADHD, autism)',
-  'Mental Health (depression, anxiety, PTSD)',
-  'Multiple Disabilities',
-  'Neurodivergence',
-  'Sensory Disabilities',
+  // Physical & Mobility
   'Physical Disabilities',
+  'Mobility Impairments (wheelchair, walker, cane)',
+  'Chronic Pain',
+  'Arthritis & Joint Conditions',
+  'Amputee/Limb Differences',
+  
+  // Vision & Sensory
+  'Vision Disabilities (blind, low vision)',
+  'Hearing Disabilities (Deaf, hard of hearing)',
+  'Sensory Processing Disorders',
+  'Dual Sensory Loss (deafblind)',
+  
+  // Cognitive & Learning
+  'Cognitive Disabilities (memory, executive function)',
+  'Learning Disabilities (dyslexia, dyscalculia)',
+  'Intellectual Disabilities',
+  'Brain Injury (TBI, acquired brain injury)',
+  
+  // Neurodivergent
+  'ADHD (Attention Deficit Hyperactivity Disorder)',
+  'Autism Spectrum Disorder',
+  'Neurodivergence (various types)',
+  
+  // Mental Health & Psychosocial
+  'Mental Health (depression, anxiety)',
+  'PTSD & Complex PTSD',
+  'Bipolar Disorder',
+  'Schizophrenia & Psychosis',
+  'Eating Disorders',
+  'Personality Disorders',
+  
+  // Chronic Illness & Medical
+  'Fatigue Conditions (ME/CFS, fibromyalgia)',
+  'Autoimmune Diseases (lupus, MS, etc.)',
+  'Long COVID & Post-Viral Syndromes',
+  'Ehlers-Danlos Syndrome (EDS)',
+  'POTS (Postural Orthostatic Tachycardia)',
+  'Chronic Migraine & Headache Disorders',
+  'Epilepsy & Seizure Disorders',
+  'Diabetes & Metabolic Conditions',
+  'Heart & Respiratory Conditions',
+  'Cancer & Treatment Effects',
+  'Endometriosis & Pelvic Pain',
+  'Interstitial Cystitis',
+  'MAST Cell Activation Syndrome',
+  
+  // Communication
+  'Speech Impairments',
+  'Language Disorders',
+  'Communication Device Users',
+  
+  // Environmental
+  'Environmental Illness (MCS, chemical sensitivity)',
+  'Severe Allergies',
+  
+  // Multiple/Complex
+  'Multiple Disabilities',
+  'Complex Medical Needs',
 ];
 
 const SYMPTOMS_OPTIONS = [
-  'Pain',
-  'Fatigue',
-  'Mobility issues',
-  'Cognitive fog',
+  // Pain & Physical
+  'Pain (general chronic pain)',
+  'Joint pain & stiffness',
+  'Muscle weakness & fatigue',
+  'Headaches & migraines',
+  'Nerve pain (neuropathy)',
+  'Back & neck pain',
+  
+  // Energy & Fatigue
+  'Fatigue (persistent tiredness)',
+  'Post-exertional malaise (PEM)',
+  'Energy crashes',
+  'Flare-ups (symptom worsening)',
+  
+  // Cognitive & Mental
+  'Cognitive fog (brain fog)',
+  'Memory problems',
+  'Concentration difficulties',
+  'Executive function challenges',
+  'Sensory overload',
+  'Processing delays',
+  
+  // Mental Health
   'Anxiety',
   'Depression',
-  'Nausea',
-  'Dizziness',
-  'Sensory sensitivity',
-  'Sleep disturbances',
-  'Flare-ups',
-  'Medication side effects',
+  'Panic attacks',
   'Emotional dysregulation',
-  'Muscle weakness',
-  'Joint stiffness',
+  'Mood swings',
+  'Dissociation',
+  'Intrusive thoughts',
+  
+  // Autonomic & Systemic
+  'Dizziness & vertigo',
+  'Orthostatic intolerance (POTS symptoms)',
+  'Heart palpitations',
+  'Temperature dysregulation',
+  'Sweating/chills',
+  
+  // Digestive & GI
+  'Nausea',
+  'Digestive issues',
+  'Appetite changes',
+  
+  // Sleep
+  'Sleep disturbances',
+  'Insomnia',
+  'Hypersomnia (excessive sleep)',
+  'Nightmares',
+  
+  // Sensory
+  'Sensory sensitivity (light, sound, touch)',
+  'Visual disturbances',
+  'Tinnitus (ringing in ears)',
+  
+  // Other
+  'Medication side effects',
+  'Allergic reactions',
+  'Mobility limitations',
+  'Balance problems',
+  'Speech difficulties',
+  'Tremors/shaking',
 ];
 
 const WELLNESS_TOOLS_OPTIONS = [
-  'Mood Tracker 2.0',
-  'Pacing Partner',
-  'DBT Skills',
-  'Meditation Library',
-  'Exercise Videos',
-  'Sleep Tracker',
-  'Pain Log',
-  'Energy Tracker',
-  'Symptom Tracker',
-  'Distress Tolerance',
+  // Core Tracking Tools
+  'Mood Tracker 2.0 (AI pattern detection)',
+  'Pain Log (trigger identification)',
+  'Energy Tracker (predictive analytics)',
+  'Symptom Tracker (pattern recognition)',
+  'Sleep Tracker (quality analysis)',
+  'Medication Tracker (schedule optimization)',
+  
+  // Pacing & Planning
+  'Pacing Partner (energy forecasting)',
+  'Daily Planner (adaptive scheduling)',
+  'Energy Coins (spoon theory)',
+  'Activity Scheduler',
+  
+  // DBT & Coping Skills
+  'DBT Skills Library',
+  'Distress Tolerance Tools',
   'Grounding Techniques',
-  'Crisis Resources',
+  'Breathing Exercises',
+  'Mindfulness Practices',
+  'Self-Compassion Exercises',
+  
+  // Wellness Practices
+  'Meditation Library',
+  'Exercise Videos (adaptive)',
+  'Stretching & Yoga',
+  'Progressive Muscle Relaxation',
+  'Body Scan Meditation',
+  
+  // Reflective Tools
+  'Reflections Calendar (gratitude, wins)',
+  'Dream Tracker & Interpreter',
+  'Acceptance & Function Tracker',
+  'Values Clarification',
+  
+  // Crisis & Safety
+  'Crisis Resources (988, helplines)',
+  'Safety Planning',
+  'Trigger Detector',
+  'Panic Button (quick exit)',
+  
+  // Social & Support
   'Caregiver Support Tools',
-  'Family Communication',
-  'Advocacy Resources',
+  'Family Communication Guides',
   'Community Connections',
+  'Peer Support Matching',
+  'Support Group Finder',
+  
+  // Advocacy & Education
+  'Advocacy Resources',
+  'Rights Education',
+  'Self-Advocacy Tools',
+  'Accommodation Request Builder',
+  
+  // Specialized Tools
+  'Harm Reduction Resources',
+  'Circadian Rhythm Tracker',
+  'Functional Capacity Evaluator',
+  'Wellness Reminders',
+  'Self-Care Library',
 ];
 
 const ADVOCACY_NEEDS_OPTIONS = [
-  'Legal help (workplace, appeals, benefits)',
-  'Benefits navigation (CPP-D, EI, provincial programs)',
-  'Housing accessibility',
-  'Healthcare access',
-  'Transportation',
-  'Employment support',
-  'Education advocacy',
+  // Legal & Benefits
+  'Legal help (workplace discrimination, wrongful termination)',
+  'Benefits appeals (CPP-D, EI Sickness, ODSP/OW)',
+  'WSIB claims & appeals',
+  'LTD/STD insurance disputes',
+  'Human rights complaints',
+  'IME (Independent Medical Exam) objections',
+  
+  // Healthcare Navigation
+  'Healthcare access (finding accessible providers)',
+  'Medical records requests',
+  'Doctor support letters',
+  'Prescription coverage appeals',
+  'Medical device/equipment funding',
+  'Second opinion navigation',
+  
+  // Housing & Accessibility
+  'Housing accessibility modifications',
+  'Housing discrimination',
+  'Service animal approval',
+  'Parking permit applications/appeals',
+  'Accessible housing search',
+  
+  // Employment & Education
+  'Employment accommodations (flexible schedule, remote work)',
+  'Workplace harassment/discrimination',
+  'Return-to-work planning',
+  'Education accommodations (IEP, post-secondary)',
+  'Vocational rehabilitation',
+  'Career transition support',
+  
+  // Transportation & Mobility
+  'Transportation assistance (accessible transit)',
+  'Driver\'s license medical reviews',
+  'Mobility device funding',
+  
+  // Family & Support Services
   'Family support services',
-  'Community resources',
-  'Policy advocacy',
-  'Rights education',
+  'Child/dependent care resources',
+  'Respite care access',
+  'Personal support worker (PSW) services',
+  
+  // Financial & Economic
+  'Debt relief & financial hardship',
+  'Tax credits & disability deductions',
+  'RDSP (Registered Disability Savings Plan)',
+  'Utility assistance programs',
+  
+  // Community & Social
+  'Community resources & programs',
   'Support group connections',
+  'Peer support matching',
+  'Recreation & leisure accessibility',
+  
+  // Advocacy & Rights
+  'Policy advocacy (systemic change)',
+  'Rights education (know your rights)',
+  'Self-advocacy skill building',
+  'Legislative advocacy',
+  
+  // Indigenous-Specific
+  'Indigenous disability rights & services',
+  'Treaty rights & disability benefits',
+  'Traditional healing access',
+  
+  // Intersectional Support
+  '2SLGBTQIA+ disability advocacy',
+  'Immigrant/refugee disability services',
+  'Racialized communities support',
+  'Gender-based violence & disability',
 ];
 
 const RELATIONSHIP_CONTEXT_OPTIONS = [
