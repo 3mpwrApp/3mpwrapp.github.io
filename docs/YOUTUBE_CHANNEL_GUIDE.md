@@ -123,7 +123,7 @@ AND - accessible Settings with 6 Indigenous languages supported!\"
 7. COMMUNITY-DRIVEN: Private messaging, campaign coordination, peer support, submit campaigns to 3mpwr website"
 
 **[4:30-5:00] Call to Action**
-"Ready to take control of your advocacy and your privacy? Join our closed beta at https://3mpwrapp.pages.dev/beta or email empowrapp08162025@gmail.com. It's FREE for beta testers.
+"Ready to take control of your advocacy and your privacy? Join our closed beta at https://3mpwrapp.pages.dev/beta or email empowrapp08162025@gmail.com. It's FREE !
 
 In the next video, I'll walk you through the first-time setup - including the 9-step legal acceptance flow (yes, we take disclaimers seriously).
 
