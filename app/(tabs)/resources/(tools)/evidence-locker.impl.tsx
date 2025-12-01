@@ -35,12 +35,7 @@ export default function EvidenceLockerImpl() {
   const [passModal, setPassModal] = React.useState<null | { mode: 'export' | 'import' }>(null);
   const [addModal, setAddModal] = React.useState(false);
   const [passValue, setPassValue] = React.useState('');
-  const [documents, setDocuments] = React.useState<Document[]>([
-    { id: '1', title: 'Dr. Smith - Medical Report', type: 'medical', date: '2025-11-15', tags: ['MRI', 'back pain'], notes: 'L4-L5 disc herniation confirmed', aiSummary: 'Objective medical evidence of spinal injury' },
-    { id: '2', title: 'WSIB Denial Letter', type: 'legal', date: '2025-11-10', tags: ['denial', 'appeal deadline'], notes: 'Denied claim #12345', aiSummary: 'Appealable within 6 months. Weak reasoning on causation.', extractedDate: '2025-05-10' },
-    { id: '3', title: 'Pay Stubs - Pre-injury', type: 'financial', date: '2025-10-01', tags: ['income proof'], notes: '3 months earnings', aiSummary: 'Shows $4,200/month average earnings' },
-    { id: '4', title: 'Employer Email - Accommodation Request', type: 'correspondence', date: '2025-10-20', tags: ['accommodation', 'denied'], notes: 'HR refused ergonomic chair', aiSummary: 'Possible human rights violation - employer duty to accommodate not met' },
-  ]);
+  const [documents, setDocuments] = React.useState<Document[]>([]);
   const [lastAdded, setLastAdded] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState(true);
   const [searchQuery, setSearchQuery] = React.useState('');

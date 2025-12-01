@@ -36,6 +36,7 @@ export default function EvidenceManager() {
         {t('evidence.manager.subtitle', 'Securely store evidence, manage uploads, track checklist, and organize documentation for advocacy.')}
       </Text>
 
+            <View style={{ flex: 1 }}>
       <Tab.Navigator
         screenOptions={{
           tabBarStyle: { backgroundColor: palette.surface },
@@ -61,6 +62,7 @@ export default function EvidenceManager() {
           options={{ title: t('evidence.manager.checklist', 'Checklist') }}
         />
       </Tab.Navigator>
+      </View>
     </View>
   );
 }

@@ -108,17 +108,18 @@ function ScreenInner() {
           <SkeletonList count={8} />
         ) : (
           <>
-            <GapView style={{ flexDirection:'row', marginBottom:8 }} gap={8}>
-              <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
-              <FilterChip label="Provinces" active={mode==='provinces'} onPress={() => setMode('provinces')} palette={palette} />
-              <FilterChip label="Topics" active={mode==='topics'} onPress={() => setMode('topics')} palette={palette} />
-            </GapView>
-
             <SearchBar
               value={query}
               onChangeText={setQuery}
               placeholder="Search channels & tools"
             />
+
+            
+            <GapView style={{ flexDirection:'row', marginTop: 12, marginBottom:12 }} gap={8}>
+              <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
+              <FilterChip label="Provinces" active={mode==='provinces'} onPress={() => setMode('provinces')} palette={palette} />
+              <FilterChip label="Topics" active={mode==='topics'} onPress={() => setMode('topics')} palette={palette} />
+            </GapView>
 
         {/* Community Features Navigation */}
         <View style={styles.featuresContainer}>
@@ -212,7 +213,7 @@ function ScreenInner() {
               )}
             </View>
           )}
-          contentContainerStyle={{ paddingTop: 8 }}
+          contentContainerStyle={{ paddingTop: 8, paddingBottom: 100 }}
         />
         <View style={{ marginTop: 16 }}>
           <A11yPressable
@@ -223,14 +224,7 @@ function ScreenInner() {
           >
             <Text style={styles.rowText}>My Posts</Text>
           </A11yPressable>
-          <A11yPressable
-            accessibilityRole="button"
-            accessibilityLabel="Open Direct Messages"
-            style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
-            onPress={() => router.push('/(tabs)/community/dms' as Href)}
-          >
-            <Text style={styles.rowText}>Direct Messages (beta)</Text>
-          </A11yPressable>
+          
           <A11yPressable
             accessibilityRole="button"
             accessibilityLabel="Open Community Safety"
