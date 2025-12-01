@@ -1,0 +1,63 @@
+---
+layout: post
+title: "Daily News Curation - 2025-12-01"
+date: 2025-12-01
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-12-01
+
+Curated 10 items from disability, accessibility, and social policy sources.
+
+## 1. A New Oilsands Pipeline? What Politicians Won’t Admit
+An energy expert lays out the risks and fallacies as Canada and the world fail to face the climate crisis.
+📍 [Source](https://thetyee.ca/Analysis/2025/12/01/New-Oilsands-Pipeline/)
+**Score:** 17.30
+
+## 2. What this surgeon from Ukraine is learning in Canada about treating war victims
+<img src='https://i.cbc.ca/ais/9f3b134e-6b94-44d7-9166-5e51d012eff8,1764348568402/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C3840%2C2160%29%3BResize%3D%28620%29' alt='A doctor in surgery holding a tool' width='620' height='349' title='Dr. Mariia Kuzeikiv is from Lviv, a city in western Ukraine. '/><p>Dr. Mariia Kuzeikiv, an Ukrainian surgeon, is learning skills that could help her save lives in the war while in Hamilton, Ont.</p>
+📍 [Source](https://www.cbc.ca/news/canada/hamilton/ukrainian-surgeon-in-hamilton-9.6996324?cmp=rss)
+**Score:** 10.50
+
+## 3. Homeowner says she’s out $381K after hiring Ottawa contractor to renovate kitchen
+<img src='https://i.cbc.ca/ais/def7fd30-55f1-42a5-828b-94a73521f48c,1764352585903/full/max/0/default.jpg?im=Crop%2Crect%3D%28153%2C85%2C4086%2C2298%29%3BResize%3D%28620%29' alt='A woman stands in her kitchen looking downcast. ' width='620' height='349' title='Katy Alp stands in her kitchen in Ottawa in October 2025. Alp and her husband have filed a lawsuit against Giuseppe ‘Joey’ Peloso, and his construction company Magnolia, after hiring them to renovate the kitchen. The claim states there were several ‘deficiencies,’ including plumbing work that they say ultimately broke and flooded their home.'/><p>An Ottawa couple says they’ve lost out on more than $381,000 after hiring Ottawa contractor Giuseppe "Joey" Peloso and his company Magnolia to renovate their kitchen, when plumbing broke and flooded their home. Plaintiffs in other lawsuits against Peloso and his business include other customers, subcontractors, investors, the Republic of Austria and Embassy of Niger.</p>
+📍 [Source](https://www.cbc.ca/news/canada/ottawa/homeowner-says-shes-out-381k-after-hiring-ottawa-contractor-to-renovate-kitchen-9.6995200?cmp=rss)
+**Score:** 8.50
+
+## 4. Olympic runner Moh Ahmed wins his 1st Canadian cross-country title
+<img src='https://i.cbc.ca/ais/919e06b1-2aa7-4245-afc9-16698325f0e9,1764536858105/full/max/0/default.jpg?im=Crop%2Crect%3D%2820%2C0%2C1139%2C640%29%3BResize%3D%28620%29' alt='Canadian distance runner Moh Ahmed crosses the finish line to win the men’s 5,000 metres at the Canadian track and field Olympic trials in Montreal, Quebec on June 27, 2024.' width='620' height='349' title='Saturday was the first race for 34-year-old Moh Ahmed since Sept. 14 when the St. Catharines, Ont., native exited early from the 10,000-metre final at the World Athletics Championships in Tokyo after aggravating a left calf strain.'/><p>In his long-awaited return to the Canadian cross-country championships, Olympic track medallist Moh Ahmed took control late in the open men’s 10-kilometre race and won in 29 minutes 30.4 seconds at Fanshawe Golf Course on Saturday in London, Ont.</p>
+📍 [Source](https://www.cbc.ca/sports/olympics/summer/athletics/moh-ahmed-victory-canadian-cross-country-championships-london-9.6998160?cmp=rss)
+**Score:** 9.00
+
+## 5. On Our Radar: Buddie turns its completely understandable stress into something beautiful
+Guitar bands are back in Vancouver, and it’s beautiful.
+📍 [Source](https://www.straight.com/music/on-our-radar-buddie-turns-its-completely-understandable-stress-into-something-beautiful)
+**Score:** 5.00
+
+## 6. Why excavators may be a tool of choice for some cash-seeking thieves
+<img src='https://i.cbc.ca/ais/c00d4e9e-f07e-4174-873b-56e11c951444,1764195313360/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C860%2C483%29%3BResize%3D%28620%29' alt='An excavator appears outside a CIBC branch with its arm destroying part of the building' width='620' height='349' title='An excavator crashed into a bank during a theft at a strip mall in Etobicoke November 24. (Pelin Sidki/CBC)'/><p>This unique form of theft has been happening all over the Greater Toronto Area and beyond. Thieves on the hunt for cash break through the walls of banks using excavators that experts say anyone capable of ordering a key online can drive off the lot. </p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/bank-theft-excavator-equipment-9.6993768?cmp=rss)
+**Score:** 6.50
+
+## 7. Pay high duties or lose U.S. shoppers? Some Canadian retailers forced to choose amid holiday sales
+<img src='https://i.cbc.ca/ais/1.7620171,1756404764000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1053%2C2000%2C1125%29%3BResize%3D%28620%29' alt='A woman uses a pencil and paper to trace a pattern over a garment on a table.' width='620' height='349' title='An employee is shown at Free Label Clothing's factory in Vancouver, B.C.'/><p>Months after the U.S. ended duty-free shipping on small packages, Canadian online retailers will have to make a tough gamble: pay pricey fees on low-value shipments, or get a holiday sales boost from American customers?</p>
+📍 [Source](https://www.cbc.ca/news/business/canadian-online-sellers-de-minimis-holiday-sales-9.6996413?cmp=rss)
+**Score:** 5.50
+
+## 8. Indigenous groups remain split on Alberta's pipeline pact with feds
+The Alberta Indigenous Opportunities Corporation was named a key partner in Ottawa and Alberta's MOU on on Friday for a pipeline to the B.C. coast, but others have concerns.
+📍 [Source](https://globalnews.ca/news/11551092/alberta-federal-pipeline-pact-indigenous-groups-weigh-in/)
+**Score:** 4.50
+
+## 9. WestJet and Air Transat passengers fight back after airlines falsely claim they can’t film disputes
+<img src='https://i.cbc.ca/ais/14c2bd91-b236-4f6a-985b-1f7c5c34eb71,1764278691223/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C440%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Man in blue button up shirt standing inside a room, looking directly at the camera. ' width='620' height='349' title='Jason Huang stands inside his home in Markham, Ontario on September 24, 2025.'/><p>Jason Huang says a WestJet employee grabbed his phone and threatened to deny him boarding when he began recording his conversation during airport check-in. Legal expert say passengers are within their rights to record these interactions, and video and audio recordings may help in battles for compensation. </p>
+📍 [Source](https://www.cbc.ca/news/gopublic/westjet-airtransat-recording-disputes-9.6995311?cmp=rss)
+**Score:** 4.50
+
+## 10. Between Breaths dives into the life of a Newfoundland conservationist who loved people as much as whales
+"What is your life, and what is your life to you in its final moments?"
+📍 [Source](https://www.straight.com/arts/between-breaths-dives-into-life-of-a-conservationist-who-loved-people-as-much-as-whales)
+**Score:** 1.00
+
