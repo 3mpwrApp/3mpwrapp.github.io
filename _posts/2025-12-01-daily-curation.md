@@ -9,50 +9,126 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-12-01
 
-Curated 9 items from disability, accessibility, and social policy sources.
+Curated 25 items from disability, accessibility, and social policy sources.
 
-## 1. American podiatrist leaving Nova Scotia over bureaucratic frustrations
-<img src='https://i.cbc.ca/ais/1.7390000,1732223285000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='A healthcare practitioner in blue gloves handles a foot, grasping its sole. ' width='620' height='349' title='With only 22 registered podiatrists in Saskatchewan, patients are seeking the service of foot care nurses, who are not eligible for insurance or most government funding. '/><p>A U.S. podiatrist says he is leaving the province because his patients have to wait years to see a surgeon for procedures on their feet, even though he's trained to do the procedures in his clinic.</p>
-📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/podiatrist-leaving-nova-scotia-over-bureaucracy-9.6994700?cmp=rss)
-**Score:** 24.30
+## 1. Montreal-area paramedics have a new dispatch system. They fear it's putting patients at risk
+<img src='https://i.cbc.ca/ais/14be8fbc-541d-4d66-8a81-e2ae33e0d54a,1764375949751/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C2200%2C1237%29%3BResize%3D%28620%29' alt='A paramedic standing before an ambulance. ' width='620' height='349' title='Several paramedics said they were sent to respond to 911 calls by mistake. '/><p>CBC News spoke with five paramedics who say they’ve been sent out to respond to 911 calls unnecessarily — either because the call had already been handled by another team and reappeared in the system, or because several ambulances were dispatched to the same call. Urgences-santé, meanwhile, insists there’s been no impact on patient care since the system was implemented. </p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/montreal-area-paramedics-issues-dispatch-system-9.6997226?cmp=rss)
+**Score:** 22.20
 
-## 2. Ontario extending transit fare integration program by 2 years
-Transportation Minister Prabmeet Sarkaria announced the extension of OneFare, which the government says saves transit users up to $1,600 per year, on Monday.
-📍 [Source](https://globalnews.ca/news/11551599/ontario-onefare-extension/)
-**Score:** 16.40
+## 2. Kneecap launches defamation case against Liberal MP over entry ban video
+The legal action comes after government documents revealed the Prime Minister’s Office and the Canada Border Services Agency were not 'involved' in Vince Gasparro's announcement.
+📍 [Source](https://globalnews.ca/news/11549284/kneecap-entry-ban-legal-action-vince-gasparro/)
+**Score:** 18.00
 
-## 3. Ford government takes over northern Ontario school board
-A ministry report in October outlined what it called overwhelming dysfunction at the Near North District School Board and suggested ministry intervention.
-📍 [Source](https://globalnews.ca/news/11551583/ontario-takes-control-near-north-district-school-board/)
-**Score:** 12.00
+## 3. A New Oilsands Pipeline? What Politicians Won’t Admit
+An energy expert lays out the risks and fallacies as Canada and the world fail to face the climate crisis.
+📍 [Source](https://thetyee.ca/Analysis/2025/12/01/New-Oilsands-Pipeline/)
+**Score:** 17.30
 
-## 4. Vancouver International Black Film Festival returns for its fifth edition
-A hybrid lineup of films, panels, and workshops spotlights creators from Canada and around the world.
-📍 [Source](https://www.straight.com/movies/vancouver-international-black-film-festival-returns-for-its-fifth-edition)
-**Score:** 9.50
+## 4. Calgary recertified as 'bird friendly city' for supporting local and migratory birds
+<img src='https://i.cbc.ca/ais/eb8f8e4b-16df-4104-8a39-85999a44118f,1764519486048/full/max/0/default.jpg?im=Crop%2Crect%3D%281051%2C1140%2C3815%2C2145%29%3BResize%3D%28620%29' alt='Black-capped chickadee.' width='620' height='349' title='The black-capped chickadee was named Calgary's mascot bird in 2022. It's one of nearly 300 types of birds found throughout the year in Calgary, which has been certified as a bird friendly city by Nature Canada for the third time this year.'/><p>Calgary's efforts to support local and migratory bird populations have earned it a recertification by Nature Canada as a bird friendly city, making it the first city to receive the distinction three times. </p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/calgary-bird-friendly-city-recertified-9.6997780?cmp=rss)
+**Score:** 17.00
 
-## 5. Northern B.C. bitcoin mines are transitioning into AI data centres
-<img src='https://i.cbc.ca/ais/3b18b728-0906-4451-9eb9-e09eb7950150,1764538860511/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C589%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A sign that reads Iren is positioned in front of large warehouse type buildings that house computers. ' width='620' height='349' title='Iren's Prince George data centre has a 50 megawatt capacity.  '/><p>Iren, the company behind major data centres in northern B.C. is converting its infrastructure from bitcoin mining into AI storage. The Australia-based company is upgrading equipment at its sites in Prince George, Mackenzie and Canal Flats sites. </p>
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/northern-bc-bitcoin-mines-ai-9.6998180?cmp=rss)
-**Score:** 3.60
+## 5. Canadian air passenger traffic to U.S. down for 9th consecutive month
+The drop comes almost a year after U.S. President Donald Trump first started musing about making Canada the 51st state, a threat he has repeated throughout the trade war.
+📍 [Source](https://globalnews.ca/news/11554355/canada-us-air-travel-ninth-straight-drop/)
+**Score:** 14.00
 
-## 6. Montreal museum spotlights sex workers history of activism and resistance
-When community group Mile End Chavurah held an event in 2023 to name Jewish Montreal's "new patron saint," Maimie Pinzer was the winning choice.
-📍 [Source](https://globalnews.ca/news/11551499/montreal-museum-sex-workers-history/)
-**Score:** 3.00
+## 6. Carney brings Trudeau-era minister back into cabinet, adds responsibilities to 2 others
+<img src='https://i.cbc.ca/ais/64506ddb-9afa-4301-a9aa-83ef12a826be,1764622539364/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C44%2C8335%2C4688%29%3BResize%3D%28620%29' alt='Two men in suits shake hands, while a third holding a book looks on.' width='620' height='349' title='Prime Minister Mark Carney shakes hands with Joel Lightbound, Minister of Government Transformation, Public Works and Procurement, after he was sworn in as Quebec Lieutenant. The New Minister of Canadian Identity and Culture and Minister responsible for Official Languages Marc Miller looks on, at a cabinet swearing in ceremony at Rideau Hall in Ottawa, on Monday, Dec. 1, 2025. '/><p>Marc Miller is the new minister of Canadian identity and culture, as well as official languages.</p>
+📍 [Source](https://www.cbc.ca/news/politics/carney-cabinet-culture-quebec-9.6998934?cmp=rss)
+**Score:** 16.50
 
-## 7. The Culinary Commons helps Vancouver chefs gather
-1250 East Georgia Street is serving Vancouver's culinary community. ]
-📍 [Source](https://www.straight.com/food/culinary-commons-helps-vancouver-chefs-gather)
-**Score:** 3.00
+## 7. Quebec unions launch legal fight against Law 14
+On Monday, the CSQ, CSN, FTQ, CSD and the APT filed a lawsuit in Quebec superior court, arguing Law 14 infringes on workers' rights and gives the government unprecedent power.
+📍 [Source](https://globalnews.ca/news/11554480/quebec-unions-legal-fight-law-14/)
+**Score:** 11.50
 
-## 8. Nova Scotia begins sell off of U.S. booze, plans to donate proceeds to charity
-Nova Scotia liquor stores will once again stock booze from the United States beginning today, but for a limited time only.
-📍 [Source](https://globalnews.ca/news/11551509/nova-scotia-sell-usa-booze/)
-**Score:** 1.20
+## 8. Manitoba schools ordered to review safety measures after student grabbed by sex offender
+<img src='https://i.cbc.ca/ais/1.7178539,1713525922000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C5821%2C3274%29%3BResize%3D%28620%29' alt='The legs of children underneath school desks' width='620' height='349' title='A file photo shows students sitting at their desk at school. In the Anglophone North district, absenteeism has been reduced by almost 20 per cent since the start of the school year, according to the superintendent. '/><p>Every school in Manitoba must undertake a safety review and send the assessment to the province's Department of Education, the provincial government says, responding to a child being assaulted last week.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/safety-review-schools-student-grabbed-9.6998823?cmp=rss)
+**Score:** 11.90
 
-## 9. All of Toronto's speed cameras are gone. How did we get to this point?
-<img src='https://i.cbc.ca/ais/bf58f9ae-7141-49d2-86cf-5b1007a87fb3,1764275376837/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C275%2C5288%2C2974%29%3BResize%3D%28620%29' alt='A sign warning drivers about a speed camera as cars drive by.' width='620' height='349' title='Rush hour motorists drive past a stanchion that once held a speed camera on Parkside Dr., which runs along the eastern edge of Toronto’s High Park, on July 9, 2025.'/><p>Toronto's speed cameras may be gone, but this time there are no mysterious vandals wielding power tools, no blurry suspect photos and no police investigation. </p>
-📍 [Source](https://www.cbc.ca/news/canada/toronto/all-of-toronto-s-speed-cameras-are-gone-how-did-we-get-to-this-point-9.6995207?cmp=rss)
-**Score:** 1.20
+## 9. Nor'easter to bring snow, rain and wind to the Maritimes starting Tuesday evening
+<img src='https://i.cbc.ca/ais/1.4041818,1490559105000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C620%2C348%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Snow, ice pellets, freezing rain and rain are forecasted for southwestern Nova Scotia beginning Monday, says a special weather statement from Environment Canada.'/><p>CBC meteorologist Ryan Snoddon says people should prepare for potential power outages and ferry and bridge delays or closures as wind gusts reach 70-90 km/h.</p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/nor-easter-to-bring-snow-rain-and-wind-to-the-maritimes-9.6998916?cmp=rss)
+**Score:** 10.80
+
+## 10. Algoma Steel to lay off 1,000 workers over ‘unprecedented tariffs'
+Algoma Steel said Monday that it plans to lay off about 1,000 workers due to impacts from tariffs imposed by U.S. President Donald Trump's tariff policies.
+📍 [Source](https://globalnews.ca/news/11554359/algoma-steel-layoffs/)
+**Score:** 7.50
+
+## 11. Manitoba Government Invests $500,000 to Support Safe Schools, Controlled Access Plans
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71757)
+**Score:** 10.50
+
+## 12. Montreal to open 500 new spaces in warming shelters for unhoused people
+Martinez Ferrada has promised to put an end to the homeless encampments that have cropped up across Montreal within four years by transitioning their occupants to housing.
+📍 [Source](https://globalnews.ca/news/11554211/montreal-crisis-unit-homeless-winter/)
+**Score:** 7.00
+
+## 13. Homeowner says she’s out $381K after hiring Ottawa contractor to renovate kitchen
+<img src='https://i.cbc.ca/ais/def7fd30-55f1-42a5-828b-94a73521f48c,1764352585903/full/max/0/default.jpg?im=Crop%2Crect%3D%28153%2C85%2C4086%2C2298%29%3BResize%3D%28620%29' alt='A woman stands in her kitchen looking downcast. ' width='620' height='349' title='Katy Alp stands in her kitchen in Ottawa in October 2025. Alp and her husband have filed a lawsuit against Giuseppe ‘Joey’ Peloso, and his construction company Magnolia, after hiring them to renovate the kitchen. The claim states there were several ‘deficiencies,’ including plumbing work that they say ultimately broke and flooded their home.'/><p>An Ottawa couple says they’ve lost out on more than $381,000 after hiring Ottawa contractor Giuseppe "Joey" Peloso and his company Magnolia to renovate their kitchen, when plumbing broke and flooded their home. Plaintiffs in other lawsuits against Peloso and his business include other customers, subcontractors, investors, the Republic of Austria and Embassy of Niger.</p>
+📍 [Source](https://www.cbc.ca/news/canada/ottawa/homeowner-says-shes-out-381k-after-hiring-ottawa-contractor-to-renovate-kitchen-9.6995200?cmp=rss)
+**Score:** 8.50
+
+## 14. ‘Barely holding on': More than 1M Ontarians visited a food bank in last year
+A new report shows more than one million Ontarians visited a food bank in the past year, with them making 8.7 million visits during this period.
+📍 [Source](https://globalnews.ca/news/11551686/ontario-food-bank-use-feed-ontario-report/)
+**Score:** 7.50
+
+## 15. Public service job cuts are a self-inflicted wound that affects everyone
+📍 [Source](https://rabble.ca/columnists/public-service-job-cuts-are-a-self-inflicted-wound-that-affects-everyone/)
+**Score:** 9.00
+
+## 16. On Our Radar: Buddie turns its completely understandable stress into something beautiful
+Guitar bands are back in Vancouver, and it’s beautiful.
+📍 [Source](https://www.straight.com/music/on-our-radar-buddie-turns-its-completely-understandable-stress-into-something-beautiful)
+**Score:** 5.00
+
+## 17. Why excavators may be a tool of choice for some cash-seeking thieves
+<img src='https://i.cbc.ca/ais/c00d4e9e-f07e-4174-873b-56e11c951444,1764195313360/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C860%2C483%29%3BResize%3D%28620%29' alt='An excavator appears outside a CIBC branch with its arm destroying part of the building' width='620' height='349' title='An excavator crashed into a bank during a theft at a strip mall in Etobicoke November 24. (Pelin Sidki/CBC)'/><p>This unique form of theft has been happening all over the Greater Toronto Area and beyond. Thieves on the hunt for cash break through the walls of banks using excavators that experts say anyone capable of ordering a key online can drive off the lot. </p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/bank-theft-excavator-equipment-9.6993768?cmp=rss)
+**Score:** 6.70
+
+## 18. Beyond public ownership: Time for ecosocialism
+📍 [Source](https://rabble.ca/columnists/beyond-public-ownership-time-for-ecosocialism/)
+**Score:** 5.50
+
+## 19. Pay high duties or lose U.S. shoppers? Some Canadian retailers forced to choose amid holiday sales
+<img src='https://i.cbc.ca/ais/1.7620171,1756404764000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1053%2C2000%2C1125%29%3BResize%3D%28620%29' alt='A woman uses a pencil and paper to trace a pattern over a garment on a table.' width='620' height='349' title='An employee is shown at Free Label Clothing's factory in Vancouver, B.C.'/><p>Months after the U.S. ended duty-free shipping on small packages, Canadian online retailers will have to make a tough gamble: pay pricey fees on low-value shipments, or get a holiday sales boost from American customers?</p>
+📍 [Source](https://www.cbc.ca/news/business/canadian-online-sellers-de-minimis-holiday-sales-9.6996413?cmp=rss)
+**Score:** 5.50
+
+## 20. May says voting for Carney's budget a ‘mistake' after Alberta pipeline deal
+Green Party leader Elizabeth May says the energy deal signed with Alberta amounted to a 'significant betrayal and a reversal' which has her questioning the worth of Carney's word.
+📍 [Source](https://globalnews.ca/news/11554632/elizabeth-may-carney-budget-vote-mistake-climate-alberta-deal/)
+**Score:** 4.50
+
+## 21. Energy regulator cancels New Brunswick gas price cuts promised by Liberal government
+Premier Susan Holt had campaigned in the 2024 election to eliminate the portion of the carbon adjuster tax on diesel and gas to help with the high cost of living.
+📍 [Source](https://globalnews.ca/news/11554455/energy-regulator-cancels-new-brunswick-gas-price-cuts/)
+**Score:** 4.00
+
+## 22. Crown Royal plant closure now a done deal, union says
+<img src='https://i.cbc.ca/ais/12243357-f5fd-4f09-8e47-b4f0f0a96d08,1756505435640/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A logo on a bottling plant.' width='620' height='349' title='The Crown Royal logo on the DIAGEO-owned bottling plant in Amherstburg, Ontario.'/><p>"They had made their mind up and they were not changing it," says the head of the union.</p>
+📍 [Source](https://www.cbc.ca/news/canada/windsor/diageo-deal-9.6998465?cmp=rss)
+**Score:** 4.50
+
+## 23. WestJet and Air Transat passengers fight back after airlines falsely claim they can’t film disputes
+<img src='https://i.cbc.ca/ais/14c2bd91-b236-4f6a-985b-1f7c5c34eb71,1764278691223/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C440%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Man in blue button up shirt standing inside a room, looking directly at the camera. ' width='620' height='349' title='Jason Huang stands inside his home in Markham, Ontario on September 24, 2025.'/><p>Jason Huang says a WestJet employee grabbed his phone and threatened to deny him boarding when he began recording his conversation during airport check-in. Legal expert say passengers are within their rights to record these interactions, and video and audio recordings may help in battles for compensation. </p>
+📍 [Source](https://www.cbc.ca/news/gopublic/westjet-airtransat-recording-disputes-9.6995311?cmp=rss)
+**Score:** 4.50
+
+## 24. Between Breaths dives into the life of a Newfoundland conservationist who loved people as much as whales
+"What is your life, and what is your life to you in its final moments?"
+📍 [Source](https://www.straight.com/arts/between-breaths-dives-into-life-of-a-conservationist-who-loved-people-as-much-as-whales)
+**Score:** 1.00
+
+## 25. 'Outpouring of kindness' for Ottawa Charge head coach after breast cancer diagnosis
+📍 [Source](https://www.cbc.ca/news/canada/ottawa/ottawachargecoachthankful-9.6999099?cmp=rss)
+**Score:** 1.00
 
