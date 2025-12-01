@@ -32,6 +32,11 @@ export default function NutritionGuides() {
   const [reminderInterval, setReminderInterval] = React.useState(120); // minutes
   const [showHydrationSettings, setShowHydrationSettings] = React.useState(false);
   const HYDRATION_KEY = 'nutrition.hydration.v1';
+  const HYDRATION_GOAL_KEY = 'nutrition.hydrationGoal.v1';
+  const CUP_SIZE_KEY = 'nutrition.cupSize.v1';
+  const REMINDER_ENABLED_KEY = 'nutrition.reminderEnabled.v1';
+  const REMINDER_INTERVAL_KEY = 'nutrition.reminderInterval.v1';
+  
   React.useEffect(()=>{ (async()=>{ try { const a = require('@react-native-async-storage/async-storage').default; const raw = await a.getItem(FAVS_KEY); if (raw) setFavs(new Set(JSON.parse(raw))); } catch {} })(); },[]);
   React.useEffect(()=>{ (async()=>{ 
     try { 
@@ -48,8 +53,7 @@ export default function NutritionGuides() {
       if (intervalRaw) setReminderInterval(parseInt(intervalRaw, 10));
     } catch {} 
   })(); },[]);
-  const REMINDER_ENABLED_KEY = 'nutrition.reminderEnabled.v1';
-  const REMINDER_INTERVAL_KEY = 'nutrition.reminderInterval.v1';
+  
   const today = new Date().toISOString().split('T')[0];
   const todayCups = hydrationLog.find(l => l.date === today)?.cups || 0;
   const dailyMl = todayCups * cupSize;

@@ -22,6 +22,7 @@ export function HomeGuide() {
   const palette = useAppPalette();
   const { t } = useTranslation();
   const router = useRouter();
+  const [feedbackStates, setFeedbackStates] = React.useState<Record<string, 'up' | 'down' | null>>({});
   // Placeholder for future feature flags (could be sourced from user settings or remote config)
   const enabledFlags: Set<string> | undefined = undefined;
   const filteredTools = (filterToolsByFlags(enabledFlags) ?? []) as Array<{ id: string }>;
