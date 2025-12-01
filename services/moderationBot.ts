@@ -115,7 +115,7 @@ function isReclaimedLanguage(text: string): boolean {
 /**
  * Moderate a message and return whether it should be allowed
  */
-export function moderateMessage(text: string, authorUid?: string): ModerationResult {
+export function moderateMessage(text: string, _authorUid?: string): ModerationResult {
   if (!text || text.trim().length === 0) {
     return { allowed: false, reason: 'Empty message' };
   }
