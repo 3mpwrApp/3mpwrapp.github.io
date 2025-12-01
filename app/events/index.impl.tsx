@@ -140,25 +140,27 @@ export default function EventsScreen() {
         console.warn('[Events] Failed to fetch from Firestore:', err);
       }
       
-      // Merge live events from Firestore and user-created events from AsyncStorage
-      let mergedData = [...data];
+      // Merge events with PRIORITY: Firestore > LocalStorage > Hardcoded
+      // Firestore community events override hardcoded events with same IDs
+      let mergedData = [...firestoreEvents];
+      
+      // Add hardcoded events that don't conflict with Firestore
+      const firestoreIds = new Set(firestoreEvents.map(e => e.id));
+      const nonConflictingHardcoded = data.filter((e: any) => !firestoreIds.has(e.id));
+      mergedData = [...mergedData, ...nonConflictingHardcoded];
+      
+      // Add local AsyncStorage events that don't conflict
       try {
         const cached = await AsyncStorage.getItem('events:local:v1');
         if (cached) {
           const localEvents = JSON.parse(cached);
-          // Add local events that aren't already in the data
-          const existingIds = new Set(data.map(e => e.id));
+          const existingIds = new Set(mergedData.map(e => e.id));
           const newLocalEvents = localEvents.filter((e: any) => !existingIds.has(e.id));
-          mergedData = [...newLocalEvents, ...data];
+          mergedData = [...mergedData, ...newLocalEvents];
         }
       } catch (err) {
         console.warn('[Events] Failed to merge cached events:', err);
       }
-      
-      // Merge Firestore events (live community events)
-      const existingIds = new Set(mergedData.map(e => e.id));
-      const newFirestoreEvents = firestoreEvents.filter((e: any) => !existingIds.has(e.id));
-      mergedData = [...newFirestoreEvents, ...mergedData];
       
       setBaseItems(mergedData);
       setOffline(false);
@@ -1199,3 +1201,4 @@ function dayKeyFromMatrix(baseMonth: Date, day: number | null) {
   const dd = `${day}`.padStart(2, "0");
   return `${y}-${m}-${dd}`;
 }
+
