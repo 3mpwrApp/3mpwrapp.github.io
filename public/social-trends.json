@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-01T12:03:18.107Z",
+  "lastUpdated": "2025-12-01T18:03:03.745Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4035,
+      "totalPosts": 4060,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-01T12:03:08.510Z"
+      "lastSeen": "2025-12-01T18:02:53.189Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4050,
+      "totalPosts": 4075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-01T12:03:10.693Z"
+      "lastSeen": "2025-12-01T18:02:55.679Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4034,
+      "totalPosts": 4059,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-01T12:03:12.831Z"
+      "lastSeen": "2025-12-01T18:02:57.870Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4043,
+      "totalPosts": 4068,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-01T12:03:14.878Z"
+      "lastSeen": "2025-12-01T18:02:59.954Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4050,
+      "totalPosts": 4075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-01T12:03:17.103Z"
+      "lastSeen": "2025-12-01T18:03:02.741Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
-      "author": "nataliegreenpeer.bsky.social",
-      "engagement": 131,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
-      "author": "lsto4.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "The hashtag #accessibility allows you to find lots of accessibility-related resources. To find accessibility resources in Spanish, use the hashtag #accesibilidad. The hashtag #accessibilité helps you find resources in French.",
-      "author": "a11yawareness.bsky.social",
-      "engagement": 28,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
-      "author": "nataliegreenpeer.bsky.social",
-      "engagement": 188,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "The trauma Emmanuel was put through. Emotional torture for almost two months. No school for 49 days. No therapy. No hugs from his mama. \n#disabilityrights #UScitizendetainedbyICE #autism #childabuse #fdt #meltICE #momsky #pinks #specialeducation",
-      "author": "lsto4.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Voting closes tonight, last chance to decide the winners of the GAConf accessibility awards!\n\nVoting form and finalists' info here - www.gaconf.com/gaconf-award...\n\n#gamedev #indiedev #accessibility",
       "author": "gaconf.bsky.social",
@@ -338,6 +296,48 @@
       "author": "karriehiggins.bsky.social",
       "engagement": 79,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
+      "author": "nataliegreenpeer.bsky.social",
+      "engagement": 211,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "A beautiful tribute to @sfdirewolf.bsky.social, from Rebecca Cokley. \n\nTogether, may we continue the work and the fight to ensure Alice’s vision becomes the norm. 💜 \n\n#DisabilityJustice #DisabilityVisibility www.thenation.com/article/soci...",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 18,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Annaleigh is a Cherokee woman living with PTSD and other health challenges. She needs $2,000 to cover bills and essential expenses. Please donate or share if you can. 🤍\n#MutualAid #IndigenousMutualAid #DisabilityJustice #BIPOCMA",
+      "author": "amparodo.bsky.social",
+      "engagement": 18,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "The accessibility insights I’ve learned from this calendar are better than chocolate #a11y",
+      "author": "gerireid.com",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Masterpiece by @zeldman.bsky.social was written in 2009 and it's still worth to read! It's one of the mandatory book that is in my library (www.ondrejkonecny.com/books/) #BlueBeanieDay #WorldWideWeb #a11y #W3C @dougvos.bsky.social",
+      "author": "ondrejkonecny.com",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
+      "author": "karriehiggins.bsky.social",
+      "engagement": 79,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 32
+      "count": 35
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 32
     },
     {
       "keyword": "disabilityjustice",
@@ -378,48 +378,48 @@
       "count": 9
     },
     {
-      "keyword": "a11yconf",
-      "count": 7
-    },
-    {
-      "keyword": "bluebeanieday",
-      "count": 6
-    },
-    {
-      "keyword": "accessibledesign",
-      "count": 6
-    },
-    {
-      "keyword": "digitalaccessibility",
-      "count": 6
-    },
-    {
-      "keyword": "a11yconf2025",
-      "count": 6
-    },
-    {
       "keyword": "disability",
-      "count": 5
+      "count": 8
     },
     {
       "keyword": "accessibility a11y",
-      "count": 5
+      "count": 7
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 7
+    },
+    {
+      "keyword": "webdev",
+      "count": 6
     },
     {
       "keyword": "inclusivedesign",
-      "count": 5
+      "count": 6
     },
     {
       "keyword": "inclusion",
-      "count": 4
-    },
-    {
-      "keyword": "verizon",
-      "count": 4
+      "count": 5
     },
     {
       "keyword": "hansvestberg",
       "count": 4
+    },
+    {
+      "keyword": "mutualaid",
+      "count": 4
+    },
+    {
+      "keyword": "disabilityjustice nico",
+      "count": 4
+    },
+    {
+      "keyword": "ux",
+      "count": 4
+    },
+    {
+      "keyword": "verizon",
+      "count": 3
     }
   ]
 }
