@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+ 
 /**
  * Cognitive Distortion Scanner
  * 
@@ -1054,7 +1054,7 @@ class CognitiveDistortionScannerManager {
     
     if (!topPattern) return null;
 
-    const relatedThoughts = this.thoughts
+    const _relatedThoughts = this.thoughts
       .filter(t => t.detectedDistortions.some(d => d.type === topPattern.distortionType))
       .slice(-5);
 
