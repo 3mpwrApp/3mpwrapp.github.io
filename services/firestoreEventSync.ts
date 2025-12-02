@@ -235,10 +235,11 @@ export async function subscribeToEventUpdates(
   }
 
   try {
+    // Subscribe to ALL published events (not just 'community' category)
+    // User-created events can have categories like 'advocacy', 'social', 'rally', 'community', etc.
     const q = m.query(
       m.collection(db, collection),
       m.where('status', '==', 'published'),
-      m.where('category', '==', 'community'),
       m.orderBy('date', 'asc')
     );
 
@@ -272,6 +273,7 @@ export async function subscribeToEventUpdates(
 
 /**
  * Fetch all published community events from events collections
+ * Fetches ALL published events (not just 'community' category) because users can create events with various categories
  * @param collection Which collection to fetch from ('events_production' or 'events_preview')
  * @returns Array of events
  */
@@ -284,10 +286,11 @@ export async function fetchEventUpdates(collection: 'events_production' | 'event
   }
 
   try {
+    // Fetch ALL published events (not just 'community' category)
+    // User-created events can have categories like 'advocacy', 'social', 'rally', 'community', etc.
     const q = m.query(
       m.collection(db, collection),
       m.where('status', '==', 'published'),
-      m.where('category', '==', 'community'),
       m.orderBy('date', 'asc')
     );
 

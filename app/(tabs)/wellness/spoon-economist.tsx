@@ -1,9 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { useTranslation } from '../../../i18n';
+import type { SpoonTask} from '../../../services/spoonEconomist';
 import { useSpoonEconomist } from '../../../services/spoonEconomist';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -14,14 +15,26 @@ export default function SpoonEconomistScreen() {
   const { account } = spoons;
 
   const [showCustomTaskModal, setShowCustomTaskModal] = useState(false);
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [showManageTasksModal, setShowManageTasksModal] = useState(false);
   const [customTaskName, setCustomTaskName] = useState('');
   const [customTaskCost, setCustomTaskCost] = useState('');
+  const [saveCustomTask, setSaveCustomTask] = useState(false);
+  const [maxSpoonsInput, setMaxSpoonsInput] = useState('');
+  const [customTasks, setCustomTasks] = useState<SpoonTask[]>([]);
   const [monthlyReport, setMonthlyReport] = useState<any>(null);
 
   useEffect(() => {
     const now = new Date();
     spoons.getMonthlyReport(now.getFullYear(), now.getMonth() + 1).then(setMonthlyReport);
+    setCustomTasks(spoons.getCustomTasks());
   }, []);
+
+  useEffect(() => {
+    if (account) {
+      setMaxSpoonsInput(account.maxSpoons.toString());
+    }
+  }, [account?.maxSpoons]);
 
   const spendTask = async (taskName: string, cost: number) => {
     await spoons.spendSpoons(taskName, cost);
@@ -33,11 +46,55 @@ export default function SpoonEconomistScreen() {
 
   const addCustomTask = async () => {
     const cost = parseInt(customTaskCost);
-    if (customTaskName && !isNaN(cost)) {
+    if (customTaskName && !isNaN(cost) && cost > 0) {
+      // Always spend the spoons
       await spendTask(customTaskName, cost);
+      
+      // Optionally save the task for reuse
+      if (saveCustomTask) {
+        await spoons.addCustomTask({
+          name: customTaskName,
+          category: 'physical',
+          baseCost: cost,
+          estimatedDuration: 30,
+          canDefer: true,
+          priority: 'medium',
+        });
+        setCustomTasks(spoons.getCustomTasks());
+      }
+      
       setShowCustomTaskModal(false);
       setCustomTaskName('');
       setCustomTaskCost('');
+      setSaveCustomTask(false);
+    }
+  };
+
+  const handleDeleteCustomTask = async (taskId: string, taskName: string) => {
+    Alert.alert(
+      'Delete Task',
+      `Are you sure you want to delete "${taskName}"?`,
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete',
+          style: 'destructive',
+          onPress: async () => {
+            await spoons.deleteCustomTask(taskId);
+            setCustomTasks(spoons.getCustomTasks());
+          },
+        },
+      ]
+    );
+  };
+
+  const handleSaveMaxSpoons = async () => {
+    const max = parseInt(maxSpoonsInput);
+    if (!isNaN(max) && max >= 1 && max <= 30) {
+      await spoons.setMaxSpoons(max);
+      setShowSettingsModal(false);
+    } else {
+      Alert.alert('Invalid Value', 'Please enter a number between 1 and 30');
     }
   };
 
@@ -59,6 +116,11 @@ export default function SpoonEconomistScreen() {
           title: t('Spoon Economist'),
           headerStyle: { backgroundColor: palette.surface },
           headerTintColor: palette.text,
+          headerRight: () => (
+            <Pressable onPress={() => setShowSettingsModal(true)} style={{ marginRight: 16 }}>
+              <Ionicons name="settings-outline" size={24} color={palette.text} />
+            </Pressable>
+          ),
         }}
       />
       <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
@@ -141,6 +203,31 @@ export default function SpoonEconomistScreen() {
           </Pressable>
         </View>
 
+        {/* Saved Custom Tasks Section */}
+        {customTasks.length > 0 && (
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <View style={styles.sectionHeader}>
+              <Text style={[styles.sectionTitle, { color: palette.text }]}>My Saved Tasks</Text>
+              <Pressable onPress={() => setShowManageTasksModal(true)}>
+                <Text style={[styles.manageLink, { color: palette.primary }]}>Manage</Text>
+              </Pressable>
+            </View>
+
+            <View style={styles.taskGrid}>
+              {customTasks.map((task) => (
+                <Pressable
+                  key={task.id}
+                  style={[styles.taskButton, { backgroundColor: palette.secondary + '20', borderColor: palette.secondary }]}
+                  onPress={() => spendTask(task.id, task.baseCost)}
+                >
+                  <Text style={[styles.taskName, { color: palette.text }]}>{task.name}</Text>
+                  <Text style={[styles.taskCost, { color: palette.secondary }]}>{task.baseCost} 🥄</Text>
+                </Pressable>
+              ))}
+            </View>
+          </View>
+        )}
+
         <View style={[styles.card, { backgroundColor: palette.surface }]}>
           <Text style={[styles.sectionTitle, { color: palette.text }]}>Borrow Spoons</Text>
           <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
@@ -196,6 +283,7 @@ export default function SpoonEconomistScreen() {
           </View>
         )}
 
+        {/* Custom Task Modal */}
         <Modal visible={showCustomTaskModal} transparent animationType="slide">
           <View style={styles.modalOverlay}>
             <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
@@ -211,17 +299,36 @@ export default function SpoonEconomistScreen() {
 
               <TextInput
                 style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
-                placeholder="Spoon cost (1-12)"
+                placeholder="Spoon cost (1-30)"
                 placeholderTextColor={palette.textSecondary}
                 keyboardType="numeric"
                 value={customTaskCost}
                 onChangeText={setCustomTaskCost}
               />
 
+              <Pressable
+                style={styles.checkboxRow}
+                onPress={() => setSaveCustomTask(!saveCustomTask)}
+              >
+                <Ionicons
+                  name={saveCustomTask ? 'checkbox' : 'square-outline'}
+                  size={24}
+                  color={palette.primary}
+                />
+                <Text style={[styles.checkboxLabel, { color: palette.text }]}>
+                  Save for future use
+                </Text>
+              </Pressable>
+
               <View style={styles.modalButtons}>
                 <Pressable
                   style={[styles.modalButton, { backgroundColor: palette.border }]}
-                  onPress={() => setShowCustomTaskModal(false)}
+                  onPress={() => {
+                    setShowCustomTaskModal(false);
+                    setCustomTaskName('');
+                    setCustomTaskCost('');
+                    setSaveCustomTask(false);
+                  }}
                 >
                   <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
                 </Pressable>
@@ -229,7 +336,93 @@ export default function SpoonEconomistScreen() {
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={addCustomTask}
                 >
-                  <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Add</Text>
+                  <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Spend</Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        </Modal>
+
+        {/* Settings Modal */}
+        <Modal visible={showSettingsModal} transparent animationType="slide">
+          <View style={styles.modalOverlay}>
+            <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>Spoon Settings</Text>
+
+              <Text style={[styles.settingsLabel, { color: palette.text }]}>
+                Daily Maximum Spoons
+              </Text>
+              <Text style={[styles.settingsHint, { color: palette.textSecondary }]}>
+                Set your baseline energy capacity (1-30)
+              </Text>
+              
+              <TextInput
+                style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+                placeholder="12"
+                placeholderTextColor={palette.textSecondary}
+                keyboardType="numeric"
+                value={maxSpoonsInput}
+                onChangeText={setMaxSpoonsInput}
+              />
+
+              <View style={styles.modalButtons}>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.border }]}
+                  onPress={() => {
+                    setShowSettingsModal(false);
+                    setMaxSpoonsInput(account?.maxSpoons.toString() || '12');
+                  }}
+                >
+                  <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
+                </Pressable>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.primary }]}
+                  onPress={handleSaveMaxSpoons}
+                >
+                  <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Save</Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        </Modal>
+
+        {/* Manage Tasks Modal */}
+        <Modal visible={showManageTasksModal} transparent animationType="slide">
+          <View style={styles.modalOverlay}>
+            <View style={[styles.modalContent, { backgroundColor: palette.surface, maxHeight: '80%' }]}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>Manage Custom Tasks</Text>
+
+              <ScrollView style={styles.taskList}>
+                {customTasks.length === 0 ? (
+                  <Text style={[styles.emptyText, { color: palette.textSecondary }]}>
+                    No custom tasks saved yet
+                  </Text>
+                ) : (
+                  customTasks.map((task) => (
+                    <View key={task.id} style={[styles.taskListItem, { borderBottomColor: palette.border }]}>
+                      <View style={styles.taskListInfo}>
+                        <Text style={[styles.taskListName, { color: palette.text }]}>{task.name}</Text>
+                        <Text style={[styles.taskListCost, { color: palette.textSecondary }]}>
+                          {task.baseCost} 🥄
+                        </Text>
+                      </View>
+                      <Pressable
+                        onPress={() => handleDeleteCustomTask(task.id, task.name)}
+                        style={styles.deleteButton}
+                      >
+                        <Ionicons name="trash-outline" size={20} color={palette.error} />
+                      </Pressable>
+                    </View>
+                  ))
+                )}
+              </ScrollView>
+
+              <View style={styles.modalButtons}>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.primary }]}
+                  onPress={() => setShowManageTasksModal(false)}
+                >
+                  <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Done</Text>
                 </Pressable>
               </View>
             </View>
@@ -256,8 +449,10 @@ const styles = StyleSheet.create({
   debtTitle: { fontSize: 18, fontWeight: 'bold', marginLeft: 8 },
   debtAmount: { fontSize: 24, fontWeight: 'bold', marginBottom: 8 },
   debtDescription: { fontSize: 14, marginBottom: 4 },
+  sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
   sectionTitle: { fontSize: 18, fontWeight: '600', marginBottom: 8 },
   sectionDescription: { fontSize: 14, marginBottom: 16 },
+  manageLink: { fontSize: 14, fontWeight: '600' },
   taskGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 16 },
   taskButton: { width: '48%', padding: 12, borderRadius: 8, borderWidth: 1 },
   taskName: { fontSize: 14, fontWeight: '600', marginBottom: 4 },
@@ -274,6 +469,17 @@ const styles = StyleSheet.create({
   modalContent: { borderRadius: 12, padding: 16 },
   modalTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 16 },
   input: { borderWidth: 1, borderRadius: 8, padding: 12, fontSize: 14, marginBottom: 12 },
+  checkboxRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 16 },
+  checkboxLabel: { fontSize: 14, marginLeft: 8 },
+  settingsLabel: { fontSize: 16, fontWeight: '600', marginBottom: 4 },
+  settingsHint: { fontSize: 13, marginBottom: 12 },
+  taskList: { maxHeight: 300, marginBottom: 16 },
+  taskListItem: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 12, borderBottomWidth: 1 },
+  taskListInfo: { flex: 1 },
+  taskListName: { fontSize: 14, fontWeight: '600' },
+  taskListCost: { fontSize: 13, marginTop: 2 },
+  deleteButton: { padding: 8 },
+  emptyText: { textAlign: 'center', fontSize: 14, paddingVertical: 24 },
   modalButtons: { flexDirection: 'row', gap: 8 },
   modalButton: { flex: 1, padding: 12, borderRadius: 8, alignItems: 'center' },
   modalButtonText: { fontSize: 14, fontWeight: '600' },

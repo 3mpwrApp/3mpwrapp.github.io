@@ -600,6 +600,26 @@ class SpoonEconomistManager {
     return newTask;
   }
 
+  async deleteCustomTask(taskId: string): Promise<boolean> {
+    const index = this.customTasks.findIndex(t => t.id === taskId);
+    if (index === -1) return false;
+    this.customTasks.splice(index, 1);
+    await this.saveData();
+    return true;
+  }
+
+  async updateCustomTask(taskId: string, updates: Partial<Omit<SpoonTask, 'id'>>): Promise<SpoonTask | null> {
+    const index = this.customTasks.findIndex(t => t.id === taskId);
+    if (index === -1) return null;
+    this.customTasks[index] = { ...this.customTasks[index], ...updates };
+    await this.saveData();
+    return this.customTasks[index];
+  }
+
+  getCustomTasks(): SpoonTask[] {
+    return [...this.customTasks];
+  }
+
   // ============================================================================
   // Public API
   // ============================================================================
@@ -848,6 +868,14 @@ export function useSpoonEconomist() {
     getMonthlyReport: (year: number, month: number) => spoonEconomist.getMonthlyReport(year, month),
     getAllTasks: () => spoonEconomist.getAllTasks(),
     getTransactions: (limit?: number) => spoonEconomist.getTransactions(limit),
+
+    // =========== CUSTOMIZATION ===========
+    setMaxSpoons: (max: number) => spoonEconomist.setMaxSpoons(max),
+    addCustomTask: (task: Omit<SpoonTask, 'id'>) => spoonEconomist.addCustomTask(task),
+    deleteCustomTask: (taskId: string) => spoonEconomist.deleteCustomTask(taskId),
+    updateCustomTask: (taskId: string, updates: Partial<Omit<SpoonTask, 'id'>>) => 
+      spoonEconomist.updateCustomTask(taskId, updates),
+    getCustomTasks: () => spoonEconomist.getCustomTasks(),
 
     // =========== AI PREDICTIVE FEATURES ===========
     predictCrash: () => spoonEconomist.predictSpoonCrash(),
