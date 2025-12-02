@@ -80,6 +80,7 @@ const CLAIM_TYPES: { value: ClaimType; label: string; icon: string }[] = [
   { value: 'other', label: 'Other/Multiple', icon: '📁' },
 ];
 
+/* eslint-disable no-restricted-syntax -- Phase colors config object for dynamic styling */
 const PHASE_CONFIG: Record<ClaimPhase, { label: string; icon: string; color: string }> = {
   initial: { label: 'Initial Report', icon: '📝', color: '#3b82f6' },
   medical: { label: 'Medical Evidence', icon: '🏥', color: '#10b981' },
@@ -88,6 +89,7 @@ const PHASE_CONFIG: Record<ClaimPhase, { label: string; icon: string; color: str
   review: { label: 'Under Review', icon: '⏳', color: '#6b7280' },
   appeal: { label: 'Appeal Process', icon: '⚖️', color: '#ef4444' },
 };
+/* eslint-enable no-restricted-syntax */
 
 const JURISDICTIONS = [
   'Ontario', 'British Columbia', 'Alberta', 'Quebec', 'Manitoba', 
@@ -788,7 +790,7 @@ Generated with 3MPWR App
                   >
                     <View style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
                       <View style={[s.checkbox, step.completed && s.checkboxChecked]}>
-                        {step.completed && <Ionicons name="checkmark" size={16} color="#fff" />}
+                        {step.completed && <Ionicons name="checkmark" size={16} color={palette.onPrimary} />}
                       </View>
                       <View style={{ flex: 1 }}>
                         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
@@ -834,7 +836,7 @@ Generated with 3MPWR App
                     style={[s.docItem, doc.collected && s.docItemCollected]}
                   >
                     <View style={[s.checkbox, doc.collected && s.checkboxChecked]}>
-                      {doc.collected && <Ionicons name="checkmark" size={16} color="#fff" />}
+                      {doc.collected && <Ionicons name="checkmark" size={16} color={palette.onPrimary} />}
                     </View>
                     <Text style={[s.docText, doc.collected && s.docTextCollected]}>
                       {doc.name}
@@ -943,7 +945,7 @@ Generated with 3MPWR App
                           onPress={() => { updatePhase(phase); setShowTypeModal(false); }}
                           style={[s.phaseChip, claim.phase === phase && { backgroundColor: cfg.color }]}
                         >
-                          <Text style={[s.phaseChipText, claim.phase === phase && { color: '#fff' }]}>
+                          <Text style={[s.phaseChipText, claim.phase === phase && { color: palette.onPrimary }]}>
                             {cfg.icon} {cfg.label}
                           </Text>
                         </Pressable>

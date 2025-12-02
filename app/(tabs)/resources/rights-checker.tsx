@@ -214,7 +214,7 @@ export default function RightsChecker() {
       if (answers[q.id] === 'yes') {
         q.triggersRights.forEach(rightId => {
           // Find the right in database
-          Object.entries(RIGHTS_DATABASE).forEach(([category, data]) => {
+          Object.entries(RIGHTS_DATABASE).forEach(([_category, data]) => {
             const right = data.rights.find(r => r.id === rightId);
             if (right && !rights.find(r => r.id === rightId)) {
               rights.push({
@@ -506,7 +506,7 @@ export default function RightsChecker() {
               <View key={q.id} style={s.questionCard}>
                 <View style={{ flexDirection: 'row', alignItems: 'flex-start', marginBottom: 8 }}>
                   <View style={[s.questionNumber, { backgroundColor: answers[q.id] ? palette.success : palette.muted }]}>
-                    <Text style={{ color: '#fff', fontWeight: '700', fontSize: 12 }}>{idx + 1}</Text>
+                    <Text style={{ color: palette.onPrimary, fontWeight: '700', fontSize: 12 }}>{idx + 1}</Text>
                   </View>
                   <View style={{ flex: 1, marginLeft: 10 }}>
                     <DyslexiaText style={s.questionText}>{q.text}</DyslexiaText>
@@ -556,12 +556,12 @@ export default function RightsChecker() {
                 {/* Urgency Banner */}
                 {summary.overallUrgency !== 'normal' && (
                   <View style={[s.urgencyBanner, { backgroundColor: summary.overallUrgency === 'critical' ? palette.error : palette.warning }]}>
-                    <MaterialCommunityIcons name="alert-circle" size={24} color="#fff" />
+                    <MaterialCommunityIcons name="alert-circle" size={24} color={palette.onPrimary} />
                     <View style={{ flex: 1, marginLeft: 12 }}>
-                      <Text style={{ color: '#fff', fontWeight: '700', fontSize: 16 }}>
+                      <Text style={{ color: palette.onPrimary, fontWeight: '700', fontSize: 16 }}>
                         {summary.overallUrgency === 'critical' ? 'Critical Situation Detected' : 'Action Required'}
                       </Text>
-                      <Text style={{ color: '#fff', opacity: 0.9 }}>
+                      <Text style={{ color: palette.onPrimary, opacity: 0.9 }}>
                         Review recommended actions and deadlines below.
                       </Text>
                     </View>
@@ -690,7 +690,7 @@ export default function RightsChecker() {
                 <Text style={s.emptyStateText}>Complete the rights checker and save your results to track changes over time.</Text>
               </View>
             ) : (
-              savedAssessments.map((assessment, idx) => (
+              savedAssessments.map((assessment, _idx) => (
                 <View key={assessment.id} style={s.historyCard}>
                   <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
                     <Text style={s.historyDate}>{new Date(assessment.date).toLocaleDateString()}</Text>

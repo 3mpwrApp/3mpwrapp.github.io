@@ -410,7 +410,7 @@ export default function DenialDecoder() {
   const palette = useAppPalette();
   const s = useMemo(() => styles(palette), [palette]);
   const titleRef = React.useRef<Text>(null);
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
   const router = useRouter();
   
   useAnnounceOnMount('Denial Decoder');
@@ -748,6 +748,7 @@ Generated with 3MPWR App - Denial Decoder
   const exportPDF = async () => {
     if (!result) return;
     
+    /* eslint-disable no-restricted-syntax */
     const html = `
       <!DOCTYPE html>
       <html>
@@ -827,6 +828,7 @@ Generated with 3MPWR App - Denial Decoder
       </body>
       </html>
     `;
+    /* eslint-enable no-restricted-syntax */
     
     try {
       const { printAsync } = await import('expo-print');
@@ -1351,7 +1353,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       alignItems: 'center',
       padding: 16,
       borderBottomWidth: 1,
-      borderBottomColor: '#e5e7eb',
+      borderBottomColor: palette.muted,
     },
   });
 }

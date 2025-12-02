@@ -60,6 +60,7 @@ interface TimelineStats {
   recentActivity: number;
 }
 
+/* eslint-disable no-restricted-syntax -- Config objects with hex colors for dynamic styling */
 const CATEGORY_CONFIG: Record<EventCategory, { icon: string; label: string; color: string }> = {
   medical: { icon: '🏥', label: 'Medical', color: '#10b981' },
   legal: { icon: '⚖️', label: 'Legal', color: '#8b5cf6' },
@@ -76,6 +77,7 @@ const IMPORTANCE_CONFIG: Record<EventImportance, { label: string; color: string 
   high: { label: 'High', color: '#f59e0b' },
   critical: { label: 'Critical', color: '#ef4444' },
 };
+/* eslint-enable no-restricted-syntax */
 
 const QUICK_EVENTS = [
   { title: 'Medical Appointment', category: 'medical' as EventCategory },
@@ -672,7 +674,7 @@ export default function CaseTimelineTracker() {
                       onPress={() => setNewCategory(cat)}
                       style={[s.catChip, newCategory === cat && { backgroundColor: cfg.color }]}
                     >
-                      <Text style={[s.catChipText, newCategory === cat && { color: '#fff' }]}>
+                      <Text style={[s.catChipText, newCategory === cat && { color: palette.onPrimary }]}>
                         {cfg.icon} {cfg.label}
                       </Text>
                     </Pressable>
@@ -690,7 +692,7 @@ export default function CaseTimelineTracker() {
                       onPress={() => setNewImportance(imp)}
                       style={[s.impChip, newImportance === imp && { backgroundColor: cfg.color }]}
                     >
-                      <Text style={[s.impChipText, newImportance === imp && { color: '#fff' }]}>
+                      <Text style={[s.impChipText, newImportance === imp && { color: palette.onPrimary }]}>
                         {cfg.label}
                       </Text>
                     </Pressable>
@@ -837,7 +839,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     eventDate: { fontSize: 12, color: palette.textSecondary },
     eventTitle: { fontSize: 16, fontWeight: '600', color: palette.text, marginTop: 2 },
     categoryBadge: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 6 },
-    categoryBadgeText: { fontSize: 11, fontWeight: '600', color: '#fff' },
+    categoryBadgeText: { fontSize: 11, fontWeight: '600', color: palette.onPrimary },
     importanceBadge: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 6, borderWidth: 1 },
     importanceBadgeText: { fontSize: 11, fontWeight: '600' },
     eventDetails: { fontSize: 14, color: palette.text, marginTop: 8, lineHeight: 20 },

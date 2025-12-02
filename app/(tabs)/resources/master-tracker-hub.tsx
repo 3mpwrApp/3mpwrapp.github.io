@@ -305,9 +305,9 @@ function DashboardTab() {
 
   const quickLogItems: QuickLogItem[] = [
     { icon: 'medical', label: t('tracker.logSymptom', 'Log Symptom'), type: 'symptoms', color: palette.error, emoji: '🩹' },
-    { icon: 'flash', label: t('tracker.logPain', 'Log Pain'), type: 'pain', color: '#FF6B6B', emoji: '⚡' },
+    { icon: 'flash', label: t('tracker.logPain', 'Log Pain'), type: 'pain', color: palette.error, emoji: '⚡' },
     { icon: 'battery-half', label: t('tracker.logEnergy', 'Log Energy'), type: 'energy', color: palette.warning, emoji: '🔋' },
-    { icon: 'flame', label: t('tracker.logFlare', 'Log Flare-Up'), type: 'flare', color: '#FF4500', emoji: '🔥' },
+    { icon: 'flame', label: t('tracker.logFlare', 'Log Flare-Up'), type: 'flare', color: palette.error, emoji: '🔥' },
     { icon: 'fitness', label: t('tracker.logRehab', 'Log Rehab'), type: 'rehab', color: palette.primary, emoji: '💪' },
     { icon: 'calendar', label: t('tracker.logAppointment', 'Log Appointment'), type: 'appointments', color: palette.primary, emoji: '📅' },
     { icon: 'medkit', label: t('tracker.logMed', 'Log Medication'), type: 'meds', color: palette.success, emoji: '💊' },
@@ -1664,6 +1664,7 @@ function AIInsightsTab() {
   );
 }
 
+/* eslint-disable no-restricted-syntax -- Static styles using neutral colors */
 const painMapStyles = StyleSheet.create({
   bodyPart: {
     position: 'absolute',
@@ -1675,6 +1676,7 @@ const painMapStyles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+/* eslint-enable no-restricted-syntax */
 
 function styles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({

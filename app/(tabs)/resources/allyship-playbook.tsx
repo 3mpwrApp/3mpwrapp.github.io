@@ -726,7 +726,7 @@ export default function AllyshipPlaybook() {
                     >
                       <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
                         <View style={[s.optionNumber, isSelected && { backgroundColor: option.isGood ? palette.success : palette.error }]}>
-                          <Text style={{ color: '#fff', fontWeight: '700' }}>{String.fromCharCode(65 + idx)}</Text>
+                          <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>{String.fromCharCode(65 + idx)}</Text>
                         </View>
                         <DyslexiaText style={[s.optionText, isSelected && { fontWeight: '600' }]}>{option.text}</DyslexiaText>
                       </View>

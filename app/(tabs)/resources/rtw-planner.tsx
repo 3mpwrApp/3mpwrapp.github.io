@@ -117,7 +117,7 @@ export default function RTWPlanner() {
   const [activeTab, setActiveTab] = useState<'plan' | 'phases' | 'comms'>('plan');
   const [showPhaseModal, setShowPhaseModal] = useState(false);
   const [showCommModal, setShowCommModal] = useState(false);
-  const [editingPhase, setEditingPhase] = useState<RTWPhase | null>(null);
+  const [_editingPhase, setEditingPhase] = useState<RTWPhase | null>(null);
 
   // Form state
   const [employerName, setEmployerName] = useState('');
@@ -816,7 +816,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     restrictionChip: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 6, backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted },
     restrictionChipSelected: { backgroundColor: palette.warning, borderColor: palette.warning },
     restrictionChipText: { fontSize: 11, color: palette.text },
-    restrictionChipTextSelected: { color: '#000' },
+    restrictionChipTextSelected: { color: palette.text },
     sectionTitle: { fontSize: 16, fontWeight: '700', color: palette.text, marginBottom: 12 },
     quickAction: { backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted, borderRadius: 12, padding: 16, alignItems: 'center', width: '47%', gap: 8 },
     quickActionText: { fontSize: 12, fontWeight: '600', color: palette.text, textAlign: 'center' },
@@ -829,7 +829,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     phaseAction: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 6 },
     phaseActionText: { fontSize: 12, fontWeight: '600' },
     statusBadge: { paddingHorizontal: 8, paddingVertical: 4, borderRadius: 12 },
-    statusText: { fontSize: 11, fontWeight: '700', color: '#fff', textTransform: 'uppercase' },
+    statusText: { fontSize: 11, fontWeight: '700', color: palette.onPrimary, textTransform: 'uppercase' },
     commCard: { backgroundColor: palette.surface, borderRadius: 12, padding: 16, borderWidth: 1, borderColor: palette.muted },
     commDate: { fontSize: 13, fontWeight: '600', color: palette.textSecondary },
     commTypeBadge: { backgroundColor: palette.primary + '20', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 8 },
