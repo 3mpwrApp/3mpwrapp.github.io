@@ -150,7 +150,26 @@ jest.mock('react-native', () => {
   const RefreshControl = () => null;
   // Share mock to enable jest.spyOn(Share, 'share')
   const Share = { share: async () => ({}) };
-  return { ...RN, StyleSheet, View, ScrollView, Text, TextInput, Pressable, FlatList, RefreshControl, Share, Modal, Alert, AccessibilityInfo, Linking };
+  // Animated API mock for SkeletonLoader and other animation components
+  class AnimatedValue {
+    constructor(val = 0) { this._value = val; }
+    setValue(val) { this._value = val; }
+    interpolate({ outputRange = [0, 1] }) { return outputRange[0]; }
+  }
+  const mockTiming = { start: jest.fn((cb) => cb && cb()), stop: jest.fn() };
+  const Animated = {
+    Value: AnimatedValue,
+    View: ({ children, ...props }) => React.createElement('div', stripProps(props), children),
+    Text: ({ children, ...props }) => React.createElement('span', stripProps(props), children),
+    timing: () => mockTiming,
+    loop: (anim) => anim,
+    sequence: (anims) => anims[0] || mockTiming,
+    parallel: (anims) => anims[0] || mockTiming,
+    spring: () => mockTiming,
+    event: () => jest.fn(),
+    createAnimatedComponent: (Comp) => Comp,
+  };
+  return { ...RN, StyleSheet, View, ScrollView, Text, TextInput, Pressable, FlatList, RefreshControl, Share, Modal, Alert, AccessibilityInfo, Linking, Animated };
 });
 
 // Alias fireEvent.press -> fireEvent.click for web-like test env

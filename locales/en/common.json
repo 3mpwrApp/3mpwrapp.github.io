@@ -2650,7 +2650,9 @@
       "hubsIntro": "Trusted national and global sources for disability, return-to-work, accessibility, assistive tech, and social protection evidence.",
       "regionCanada": "Canada",
       "regionWorldwide": "Worldwide"
-    }
+    },
+    "filterByRegion": "Filter by region:",
+    "resetFilters": "Reset filters"
   },
   "uncrpd": {
     "screenLabel": "UNCRPD information and application guide screen",
@@ -3923,10 +3925,6 @@
       "capacityAlerts": "Capacity Alerts"
     }
   },
-  "research": {
-    "filterByRegion": "Filter by region:",
-    "resetFilters": "Reset filters"
-  },
   "notFound": {
     "title": "Not Found",
     "announce": "Page not found",
@@ -3957,7 +3955,7 @@
       "helpful": "Helpful",
       "notRelevant": "Not relevant to me",
       "misleading": "Misleading or incorrect",
-      "other": "Other reason",
+      "otherReason": "Other reason",
       "commentLabel": "Add a comment (optional)",
       "commentPlaceholder": "Tell us more...",
       "commentA11y": "Feedback comment (optional)",

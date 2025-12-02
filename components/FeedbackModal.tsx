@@ -92,7 +92,7 @@ export default function FeedbackModal({
     { label: t('components.feedback.helpful', 'Helpful'), value: 'helpful' as FeedbackReason, icon: 'thumbs-up' },
     { label: t('components.feedback.notRelevant', 'Not relevant to me'), value: 'not_relevant' as FeedbackReason, icon: 'close-circle' },
     { label: t('components.feedback.misleading', 'Misleading or incorrect'), value: 'misleading' as FeedbackReason, icon: 'warning' },
-    { label: t('components.feedback.other', 'Other reason'), value: 'other' as FeedbackReason, icon: 'help-circle' },
+    { label: t('components.feedback.otherReason', 'Other reason'), value: 'other' as FeedbackReason, icon: 'help-circle' },
   ];
 
   if (submitted) {

@@ -15,6 +15,11 @@ export type EventSchema = Record<string, ParamSpec>;
 const E = ANALYTICS_EVENTS;
 
 export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
+  [E.AI_COMMAND_CENTER_USED]: { mode: { type: 'string', required: true }, jurisdiction: { type: 'string', required: true } },
+  [E.QUICK_LOG_USED]: { type: { type: 'string', required: true } },
+  [E.ERROR_DISPLAYED]: { code: { type: 'string', required: true }, message: { type: 'string', sensitive: true, classification: 'other' }, originalError: { type: 'string', sensitive: true, classification: 'other' } },
+  [E.EVENTS_SUBMIT_TO_3MPWR]: { id: { type: 'string', required: true } },
+  [E.CAMPAIGN_SUBMIT_TO_3MPWR]: { id: { type: 'string', required: true } },
   [E.CAMPAIGN_CREATE]: { id: { type: 'string', required: true } },
   [E.CAMPAIGN_JOIN]:   { id: { type: 'string', required: true } },
   [E.CAMPAIGN_LEAVE]:  { id: { type: 'string', required: true } },

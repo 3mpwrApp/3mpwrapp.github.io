@@ -1,4 +1,7 @@
 {
+  "AI_COMMAND_CENTER_USED": "ai_command_center_used",
+  "QUICK_LOG_USED": "quick_log_used",
+  "ERROR_DISPLAYED": "error_displayed",
   "CAMPAIGN_CREATE": "campaign_create",
   "CAMPAIGN_JOIN": "campaign_join",
   "CAMPAIGN_LEAVE": "campaign_leave",

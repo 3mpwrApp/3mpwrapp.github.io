@@ -1,22 +1,16 @@
 # Analytics Event Report
 
-Generated: 2025-12-02T08:56:28.498Z
+Generated: 2025-12-02T18:36:57.880Z
 
 ## Summary
 
-- Registry events: 53
+- Registry events: 56
 - Unique events referenced in code: 33
 - Total literal emissions (static scan): 36
-- Missing (used not registered): 3
+- Missing (used not registered): 0
 - Unused (registered not used): 23
-- Sensitive field occurrences (schema): 2
-- Classification counts: secret=1, pii=1
-
-### Missing
-
-- ai_command_center_used
-- quick_log_used
-- error_displayed
+- Sensitive field occurrences (schema): 4
+- Classification counts: other=2, secret=1, pii=1
 
 ### Unused
 
@@ -87,14 +81,14 @@ Generated: 2025-12-02T08:56:28.498Z
 | tracker_add_entry | 2 | OK |
 | tracker_share | 2 | OK |
 | campaign.submit_to_3mpwr | 2 | OK |
-| ai_command_center_used | 1 | MISSING |
+| ai_command_center_used | 1 | OK |
 | advocacy.ask.submitted | 1 | OK |
 | assistant.search_open | 1 | OK |
 | assistant.disability_wizard_cta | 1 | OK |
 | assistant.quick_prompt | 1 | OK |
 | assistant.recents.clear | 1 | OK |
 | advocacy.world.view | 1 | OK |
-| quick_log_used | 1 | MISSING |
+| quick_log_used | 1 | OK |
 | account_delete | 1 | OK |
 | account_delete_failed | 1 | OK |
 | energy_set_daily | 1 | OK |
@@ -116,4 +110,4 @@ Generated: 2025-12-02T08:56:28.498Z
 | bookmark_add | 1 | OK |
 | bookmark_remove | 1 | OK |
 | bookmark_clear_all | 1 | OK |
-| error_displayed | 1 | MISSING |
+| error_displayed | 1 | OK |

@@ -4098,7 +4098,7 @@
       "helpful": "Utile",
       "notRelevant": "Non pertinent pour moi",
       "misleading": "Trompeur ou incorrect",
-      "other": "Autre raison",
+      "otherReason": "Autre raison",
       "commentLabel": "Ajouter un commentaire (optionnel)",
       "commentPlaceholder": "Dites-nous en plus...",
       "commentA11y": "Commentaire facultatif",
