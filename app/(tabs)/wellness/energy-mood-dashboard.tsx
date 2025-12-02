@@ -501,7 +501,7 @@ export default function EnergyMoodDashboard() {
         {thoughtPatterns.length > 0 && (
           <View style={[styles.card, { backgroundColor: palette.surface }]}>
             <View style={styles.cognitiveHeader}>
-              <Ionicons name="brain" size={24} color={palette.primary} />
+              <Ionicons name="flash-outline" size={24} color={palette.primary} />
               <Text style={[styles.sectionTitle, { color: palette.text, marginLeft: 8 }]}>
                 Cognitive Patterns
               </Text>

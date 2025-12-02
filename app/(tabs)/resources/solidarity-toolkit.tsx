@@ -88,7 +88,7 @@ const SOLIDARITY_GUIDES = [
   {
     id: 'collective-action',
     title: 'Collective Action Tactics',
-    icon: 'fist-raised' as const,
+    icon: 'hand-back-left' as const,
     category: 'actions',
     items: [
       { title: 'Petitions', text: 'Gather signatures demanding changes. Numbers show widespread support.' },
@@ -368,7 +368,7 @@ export default function SolidarityToolkit() {
   );
 
   return (
-    <ResponsiveScreenWrapper scrollable backgroundColor={palette.background}>
+    <ResponsiveScreenWrapper scrollable>
       <View style={{ padding: 16 }}>
         <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
           Union & Worker Solidarity Toolkit

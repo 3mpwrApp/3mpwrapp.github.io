@@ -765,7 +765,7 @@ class CircadianRhythmDJManager {
 
   private smartDevices: SmartDevice[] = [];
   private weatherCorrelations: Map<string, WeatherSleepCorrelation> = new Map();
-  private moonCorrelations: Map<string, MoonPhaseCorrelation> = new Map();
+  private _moonCorrelations: Map<string, MoonPhaseCorrelation> = new Map();
 
   async connectSmartDevice(device: SmartDevice): Promise<{ success: boolean; message: string }> {
     try {
@@ -846,7 +846,7 @@ class CircadianRhythmDJManager {
       return true; // Simplified
     });
 
-    const _avgQuality = logsWithWeather.reduce((s, l) => s + l.sleepQuality, 0) / Math.max(1, logsWithWeather.length);
+    const avgQuality = logsWithWeather.reduce((s, l) => s + l.sleepQuality, 0) / Math.max(1, logsWithWeather.length);
     const avgDuration = logsWithWeather.reduce((s, l) => s + l.totalSleep, 0) / Math.max(1, logsWithWeather.length);
 
     let recommendation = '';
@@ -982,7 +982,7 @@ class CircadianRhythmDJManager {
       expectedBenefit = 'Improved energy, mood, and alertness';
     }
 
-    if (sleepDebt.totalHoursOwed > 5) {
+    if (sleepDebt && sleepDebt.totalHoursOwed > 5) {
       instructions.push('Address sleep debt alongside light therapy for best results');
     }
 
@@ -1364,6 +1364,7 @@ class CircadianRhythmDJManager {
     
     // Analyze recent patterns
     const recentLogs = this.sleepLogs.slice(-7);
+     
     const _avgQuality2 = recentLogs.reduce((s, l) => s + l.sleepQuality, 0) / Math.max(1, recentLogs.length);
     
     // Chronotype alignment

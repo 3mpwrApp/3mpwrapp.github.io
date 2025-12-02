@@ -50,7 +50,7 @@ export default function DiscordHub({
   const palette = useAppPalette();
   const [loading, setLoading] = React.useState(true);
   const [user, setUser] = React.useState<DiscordUser | null>(null);
-  const [_serverWidget, _setServerWidget] = React.useState<DiscordServerWidget | null>(null);
+  const [serverWidget, _setServerWidget] = React.useState<DiscordServerWidget | null>(null);
   const [quickLinks, setQuickLinks] = React.useState<Array<{
     id: string;
     title: string;

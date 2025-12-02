@@ -952,7 +952,7 @@ class FunctionalCapacityEvaluator {
     
     categories.forEach(cat => {
       const categoryDomains = ICF_DOMAINS.filter(d => d.category === cat);
-      const categoryScores = categoryDomains.map(d => latest.assessments[d.code] || 0);
+      const categoryScores: number[] = categoryDomains.map(d => latest.assessments[d.code] || 0);
       const avgSeverity = categoryScores.reduce((s, v) => s + v, 0) / Math.max(1, categoryScores.length);
       strengthsByCategory[cat] = Math.round(avgSeverity / 4 * 100);
     });

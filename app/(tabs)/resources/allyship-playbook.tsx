@@ -148,6 +148,7 @@ const SCENARIOS: Scenario[] = [
     id: 'scenario-1',
     title: 'Coworker Returns from Leave',
     context: 'workplace',
+    category: 'workplace',
     situation: 'Your coworker Sarah returns to work after 3 months of medical leave. She seems slower and needs more breaks. Another coworker complains about "picking up her slack."',
     options: [
       { text: 'Agree with the coworker and vent together', isGood: false, feedback: 'This creates a hostile environment and isn\'t supportive. Sarah is likely doing her best while recovering.' },
@@ -160,6 +161,7 @@ const SCENARIOS: Scenario[] = [
     id: 'scenario-2',
     title: 'Planning a Group Outing',
     context: 'social',
+    category: 'social',
     situation: 'You\'re planning a birthday dinner with friends. One friend uses a wheelchair. Someone suggests a trendy restaurant with stairs.',
     options: [
       { text: 'Choose the inaccessible restaurant anyway — it\'s really popular', isGood: false, feedback: 'This excludes your friend with a disability. Accessibility should be non-negotiable for group events.' },
@@ -172,6 +174,7 @@ const SCENARIOS: Scenario[] = [
     id: 'scenario-3',
     title: 'Medical Advice Situation',
     context: 'family',
+    category: 'family',
     situation: 'Your cousin has fibromyalgia. Your aunt keeps suggesting various "cures" she read about online and says "have you tried yoga?"',
     options: [
       { text: 'Stay silent — it\'s not your place to get involved', isGood: false, feedback: 'Your cousin may appreciate backup. Silence lets the unsolicited advice continue.' },
@@ -184,6 +187,7 @@ const SCENARIOS: Scenario[] = [
     id: 'scenario-4',
     title: 'Accommodation Request Backlash',
     context: 'workplace',
+    category: 'workplace',
     situation: 'A coworker with chronic pain gets a standing desk accommodation. Others grumble: "If they get one, we should all get one."',
     options: [
       { text: 'Agree — it does seem unfair', isGood: false, feedback: 'Accommodations aren\'t perks; they level the playing field. Fair ≠ same treatment for everyone.' },
@@ -196,6 +200,7 @@ const SCENARIOS: Scenario[] = [
     id: 'scenario-5',
     title: 'Service Animal Encounter',
     context: 'public',
+    category: 'public',
     situation: 'At a café, you see someone with a service dog. Your child wants to pet the cute dog.',
     options: [
       { text: 'Let your child pet the dog — dogs love attention!', isGood: false, feedback: 'Service animals are working and shouldn\'t be distracted. This could be dangerous for the handler.' },
@@ -208,6 +213,7 @@ const SCENARIOS: Scenario[] = [
     id: 'scenario-6',
     title: 'WSIB Denial Support',
     context: 'support',
+    category: 'support',
     situation: 'Your friend\'s WSIB claim was denied. They\'re devastated and don\'t know what to do.',
     options: [
       { text: 'Say "that sucks" and move on to a different topic', isGood: false, feedback: 'While you may be uncomfortable, minimizing their struggle isn\'t supportive.' },
@@ -474,7 +480,7 @@ export default function AllyshipPlaybook() {
   };
 
   return (
-    <ResponsiveScreenWrapper scrollable backgroundColor={palette.background}>
+    <ResponsiveScreenWrapper scrollable>
       <View style={{ padding: 16 }}>
         <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>
           Allyship Playbook
@@ -728,7 +734,7 @@ export default function AllyshipPlaybook() {
                         <View style={[s.optionNumber, isSelected && { backgroundColor: option.isGood ? palette.success : palette.error }]}>
                           <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>{String.fromCharCode(65 + idx)}</Text>
                         </View>
-                        <DyslexiaText style={[s.optionText, isSelected && { fontWeight: '600' }]}>{option.text}</DyslexiaText>
+                        <DyslexiaText style={[s.optionText, isSelected ? { fontWeight: '600' as const } : {}]}>{option.text}</DyslexiaText>
                       </View>
                       {showResult && (
                         <View style={[s.feedbackBox, { backgroundColor: option.isGood ? palette.success + '15' : palette.error + '15' }]}>

@@ -901,7 +901,7 @@ class CognitiveDistortionScannerManager {
       insight = 'Your thought reflects black-and-white thinking. Most situations exist on a spectrum rather than at extremes.';
       actionableSteps.push('Rate this situation on a scale of 0-100 instead of all-or-nothing');
       actionableSteps.push('List 3 shades of gray between the extremes');
-    } else if (primaryDistortion === 'catastrophizing' || primaryDistortion === 'magnification') {
+    } else if (primaryDistortion === 'magnification') {
       insight = 'You may be predicting the worst possible outcome. Let\'s examine the realistic probability.';
       therapeuticApproach = 'act';
       actionableSteps.push('What\'s the actual probability of the worst outcome?');

@@ -683,7 +683,7 @@ class AIGroundingCompanionService {
 
   private explainRecommendation(
     technique: GroundingTechnique,
-    context: GroundingContext,
+    _context: GroundingContext,
     distressLevel: DistressLevel
   ): string {
     const eff = this.state.effectiveness.find(e => e.techniqueId === technique.id);

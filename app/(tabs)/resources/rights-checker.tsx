@@ -448,10 +448,9 @@ export default function RightsChecker() {
   return (
     <ResponsiveScreenWrapper
       scrollable
-      backgroundColor={palette.background}
-      accessibilityLabel="Automated Rights Checker screen"
+      testID="rights-checker-screen"
     >
-      <View style={{ padding: 16 }}>
+      <View style={{ padding: 16 }} accessible accessibilityLabel="Automated Rights Checker screen">
         <Text
           ref={titleRef}
           accessibilityRole="header"

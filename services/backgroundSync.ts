@@ -354,7 +354,6 @@ export async function performSync(
   }
   
   const items = await getPendingItems();
-  const _total = items.length;
   
   // Filter by enabled types
   const eligibleItems = items.filter(item => {
