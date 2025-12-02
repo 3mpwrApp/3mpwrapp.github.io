@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax -- Status indicator colors */
 /**
  * Security Settings Screen
  * 

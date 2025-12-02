@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax -- Discord brand colors are required */
 /**
  * Discord Hub Component - Community Discord Integration
  * 
@@ -44,12 +45,12 @@ interface DiscordHubProps {
 export default function DiscordHub({
   compact = false,
   showQuickLinks = true,
-  onUserConnected,
+  onUserConnected: _onUserConnected,
 }: DiscordHubProps) {
   const palette = useAppPalette();
   const [loading, setLoading] = React.useState(true);
   const [user, setUser] = React.useState<DiscordUser | null>(null);
-  const [serverWidget, setServerWidget] = React.useState<DiscordServerWidget | null>(null);
+  const [_serverWidget, _setServerWidget] = React.useState<DiscordServerWidget | null>(null);
   const [quickLinks, setQuickLinks] = React.useState<Array<{
     id: string;
     title: string;
@@ -57,7 +58,7 @@ export default function DiscordHub({
     icon: string;
     action: () => Promise<void>;
   }>>([]);
-  const [isConnecting, setIsConnecting] = React.useState(false);
+  const [_isConnecting, _setIsConnecting] = React.useState(false);
 
   // Load Discord status and server info
   React.useEffect(() => {
