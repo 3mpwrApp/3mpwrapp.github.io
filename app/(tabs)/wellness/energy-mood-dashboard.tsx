@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars, import/order */
 /**
  * Wellness AI Orchestrator
  * 

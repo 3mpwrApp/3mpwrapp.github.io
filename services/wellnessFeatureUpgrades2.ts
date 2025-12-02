@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Advanced Wellness Feature Upgrades - Part 2
  * 

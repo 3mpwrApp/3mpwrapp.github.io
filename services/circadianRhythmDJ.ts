@@ -841,12 +841,12 @@ class CircadianRhythmDJManager {
 
   async analyzeWeatherImpact(weatherCondition: string): Promise<WeatherSleepCorrelation> {
     // Analyze sleep logs during this weather condition
-    const logsWithWeather = this.sleepLogs.filter(log => {
+    const logsWithWeather = this.sleepLogs.filter(_log => {
       // In production, would match actual weather data
       return true; // Simplified
     });
 
-    const avgQuality = logsWithWeather.reduce((s, l) => s + l.sleepQuality, 0) / Math.max(1, logsWithWeather.length);
+    const _avgQuality = logsWithWeather.reduce((s, l) => s + l.sleepQuality, 0) / Math.max(1, logsWithWeather.length);
     const avgDuration = logsWithWeather.reduce((s, l) => s + l.totalSleep, 0) / Math.max(1, logsWithWeather.length);
 
     let recommendation = '';
@@ -1364,7 +1364,7 @@ class CircadianRhythmDJManager {
     
     // Analyze recent patterns
     const recentLogs = this.sleepLogs.slice(-7);
-    const avgQuality = recentLogs.reduce((s, l) => s + l.sleepQuality, 0) / Math.max(1, recentLogs.length);
+    const _avgQuality2 = recentLogs.reduce((s, l) => s + l.sleepQuality, 0) / Math.max(1, recentLogs.length);
     
     // Chronotype alignment
     if (this.chronotype) {
