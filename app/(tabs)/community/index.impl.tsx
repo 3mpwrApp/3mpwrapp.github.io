@@ -4,6 +4,7 @@ import React from "react";
 import { SectionList, StyleSheet, Text, useColorScheme, View } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
+import DiscordHub from '../../../components/DiscordHub';
 import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../../components/SearchBar';
@@ -126,6 +127,7 @@ function ScreenInner() {
           {(() => {
             type Feature = { key: string; title: string; desc: string; href: Href; compose?: boolean; tier?: 'simple' | 'standard' | 'power' };
             const allFeatures: Feature[] = [
+              { key: 'discord', title: '🎮 Discord Server', desc: 'Join our live Discord community', href: '/(tabs)/community/mutual-chat?id=general' as Href, tier: 'simple' },
               { key: 'chat', title: '💬 Mutual Chat', desc: 'Real-time group & 1-1 conversations (Beta)', href: '/(tabs)/community/mutual-chat?id=general' as Href, tier: 'simple' },
               { key: 'testers', title: '🧪 Beta Testers Chat', desc: 'Live chat to collaborate & give feedback (Beta)', href: '/(tabs)/community/testers-chat' as Href, tier: 'simple' },
               { key: 'dm', title: '📥 Direct Messages', desc: 'Private 1‑1 conversations (beta)', href: '/(tabs)/community/dms' as Href, tier: 'simple' },
@@ -175,6 +177,9 @@ function ScreenInner() {
 
         <Text style={styles.sectionHeader}>Community Forum</Text>
         <Text style={styles.subtitle}>Join a province or topic channel to participate in discussions.</Text>
+
+        {/* Discord Integration */}
+        <DiscordHub compact={true} showQuickLinks={false} />
 
         <SectionList
           sections={(() => {

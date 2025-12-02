@@ -1698,6 +1698,20 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       marginBottom: 16,
       lineHeight: 24,
     },
+    alertCard: {
+      padding: 16,
+      borderRadius: 12,
+      borderWidth: 2,
+      marginBottom: 16,
+    },
+    alertTitle: {
+      fontSize: 16,
+      fontWeight: '700',
+    },
+    alertText: {
+      fontSize: 14,
+      lineHeight: 20,
+    },
     statsContainer: {
       padding: 16,
       borderRadius: 12,

@@ -4,6 +4,7 @@ import { getDownloadURL, ref, uploadBytes, uploadBytesResumable } from 'firebase
 import { auth, db, storage } from '../firebase/config';
 import { fetchWithRetry } from '../utils/network';
 
+import { isOnline, queueForSync } from './backgroundSync';
 import { isCloudConsentEnabled } from './consent';
 
 export type EvidenceFile = {
@@ -90,6 +91,20 @@ export async function addEvidenceNote({
   const uid = auth.currentUser?.uid;
   if (!uid) throw new Error('Not signed in');
   if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
+  
+  // Check if online - if not, queue for background sync
+  const online = await isOnline();
+  if (!online) {
+    // Queue for background sync
+    await queueForSync('evidence', 'create', {
+      text: text || '',
+      tags: tags || [],
+      files: files || [],
+      userId: uid,
+    }, 'high');
+    return; // Will be synced when online
+  }
+  
   const col = collection(db, 'users', uid, 'evidence');
   await addDoc(col, {
     text: text || '',

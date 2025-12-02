@@ -217,6 +217,19 @@ export default function SettingsScreen() {
             <Text style={styles.linkText}>Advanced Security</Text>
             <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
           </A11yPressable>
+          
+          {/* Evidence Encryption & Background Sync */}
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginTop:12 }]}
+            accessibilityRole='button'
+            accessibilityLabel="Evidence Security and Background Sync settings"
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/security')}
+          >
+            <Ionicons name='lock-closed' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>Evidence Encryption & Sync</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
         </Section>
         
         <Section title={t('updates.title', 'App Updates')} subtitle={t('updates.subtitle', 'Check for and install the latest features')} styles={styles}>

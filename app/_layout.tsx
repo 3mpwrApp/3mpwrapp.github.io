@@ -139,12 +139,13 @@ import { RefreshProvider } from "../store/refresh";
 import { useAppPalette } from "../theme/usePalette";
 import { announce } from "../utils/announce";
 import { logger } from "../utils/logger";
-// Ã°Å¸â€Â¹ Replace old AuthProvider with Firebase AuthProvider
+// 🔹 Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
 import { CognitiveAccessibilityProvider } from "../context/CognitiveAccessibilityContext";
 import { DyslexiaProvider } from "../context/DyslexiaContext";
 import { NeurodivergentProvider } from "../context/NeurodivergentContext";
 import { setBetaFlag } from "../services/analytics";
+import { initializeBackgroundSync, registerDefaultHandlers } from "../services/backgroundSync";
 import { fetchCampaigns } from "../services/campaigns";
 import { pruneExpiredReminders } from "../services/eventReminders";
 import { fetchEvents } from "../services/events";
@@ -213,6 +214,12 @@ export default function RootLayout() {
     pruneExpiredReminders().then(r => { if (r.removed && __DEV__) logger.debug('Pruned reminders', r.removed); }).catch(()=>{});
     // Run light pruning cycle (queue cleanup) on start
     maybeRunPruneCycle().catch(()=>{});
+    
+    // Initialize background sync system for offline-first reliability
+    registerDefaultHandlers();
+    initializeBackgroundSync().then(() => {
+      if (__DEV__) logger.debug('Background sync initialized');
+    }).catch(() => {});
   }, []);
 
   // Announce route changes for screen readers
