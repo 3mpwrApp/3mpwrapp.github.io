@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { useTranslation } from '../../../i18n';
-import type { SpoonTask} from '../../../services/spoonEconomist';
+import type { QuickTask, SpoonTask } from '../../../services/spoonEconomist';
 import { useSpoonEconomist } from '../../../services/spoonEconomist';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -17,17 +17,25 @@ export default function SpoonEconomistScreen() {
   const [showCustomTaskModal, setShowCustomTaskModal] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [showManageTasksModal, setShowManageTasksModal] = useState(false);
+  const [showManageQuickTasksModal, setShowManageQuickTasksModal] = useState(false);
+  const [showAddQuickTaskModal, setShowAddQuickTaskModal] = useState(false);
+  const [showEditQuickTaskModal, setShowEditQuickTaskModal] = useState(false);
+  const [editingQuickTask, setEditingQuickTask] = useState<QuickTask | null>(null);
   const [customTaskName, setCustomTaskName] = useState('');
   const [customTaskCost, setCustomTaskCost] = useState('');
   const [saveCustomTask, setSaveCustomTask] = useState(false);
   const [maxSpoonsInput, setMaxSpoonsInput] = useState('');
   const [customTasks, setCustomTasks] = useState<SpoonTask[]>([]);
+  const [quickTasks, setQuickTasks] = useState<QuickTask[]>([]);
+  const [newQuickTaskName, setNewQuickTaskName] = useState('');
+  const [newQuickTaskCost, setNewQuickTaskCost] = useState('');
   const [monthlyReport, setMonthlyReport] = useState<any>(null);
 
   useEffect(() => {
     const now = new Date();
     spoons.getMonthlyReport(now.getFullYear(), now.getMonth() + 1).then(setMonthlyReport);
     setCustomTasks(spoons.getCustomTasks());
+    setQuickTasks(spoons.getQuickTasks());
   }, []);
 
   useEffect(() => {
@@ -98,16 +106,74 @@ export default function SpoonEconomistScreen() {
     }
   };
 
-  const QUICK_TASKS = [
-    { name: 'Shower', cost: 2 },
-    { name: 'Get Dressed', cost: 1 },
-    { name: 'Cook Meal', cost: 4 },
-    { name: 'Groceries', cost: 6 },
-    { name: 'Laundry', cost: 3 },
-    { name: 'Dishes', cost: 2 },
-    { name: 'Doctor Appointment', cost: 8 },
-    { name: 'Social Event', cost: 7 },
-  ];
+  // Quick Task Management
+  const handleEditQuickTask = (task: QuickTask) => {
+    setEditingQuickTask(task);
+    setNewQuickTaskName(task.name);
+    setNewQuickTaskCost(task.cost.toString());
+    setShowEditQuickTaskModal(true);
+  };
+
+  const handleSaveQuickTask = async () => {
+    if (!editingQuickTask) return;
+    const cost = parseInt(newQuickTaskCost);
+    if (!newQuickTaskName || isNaN(cost) || cost < 1 || cost > 30) {
+      Alert.alert('Invalid', 'Please enter a valid name and cost (1-30)');
+      return;
+    }
+    await spoons.updateQuickTask(editingQuickTask.id, { name: newQuickTaskName, cost });
+    setQuickTasks(spoons.getQuickTasks());
+    setShowEditQuickTaskModal(false);
+    setEditingQuickTask(null);
+  };
+
+  const handleAddQuickTask = async () => {
+    const cost = parseInt(newQuickTaskCost);
+    if (!newQuickTaskName || isNaN(cost) || cost < 1 || cost > 30) {
+      Alert.alert('Invalid', 'Please enter a valid name and cost (1-30)');
+      return;
+    }
+    await spoons.addQuickTask({ name: newQuickTaskName, cost });
+    setQuickTasks(spoons.getQuickTasks());
+    setShowAddQuickTaskModal(false);
+    setNewQuickTaskName('');
+    setNewQuickTaskCost('');
+  };
+
+  const handleDeleteQuickTask = async (taskId: string, taskName: string) => {
+    Alert.alert(
+      'Delete Quick Task',
+      `Are you sure you want to delete "${taskName}"?`,
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete',
+          style: 'destructive',
+          onPress: async () => {
+            await spoons.deleteQuickTask(taskId);
+            setQuickTasks(spoons.getQuickTasks());
+          },
+        },
+      ]
+    );
+  };
+
+  const handleResetQuickTasks = async () => {
+    Alert.alert(
+      'Reset Quick Tasks',
+      'This will reset all quick tasks to their default values. Continue?',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Reset',
+          onPress: async () => {
+            await spoons.resetQuickTasksToDefaults();
+            setQuickTasks(spoons.getQuickTasks());
+          },
+        },
+      ]
+    );
+  };
 
   return (
     <>
@@ -179,14 +245,20 @@ export default function SpoonEconomistScreen() {
         )}
 
         <View style={[styles.card, { backgroundColor: palette.surface }]}>
-          <Text style={[styles.sectionTitle, { color: palette.text }]}>Quick Tasks</Text>
+          <View style={styles.sectionHeader}>
+            <Text style={[styles.sectionTitle, { color: palette.text }]}>Quick Tasks</Text>
+            <Pressable onPress={() => setShowManageQuickTasksModal(true)}>
+              <Text style={[styles.manageLink, { color: palette.primary }]}>Edit</Text>
+            </Pressable>
+          </View>
 
           <View style={styles.taskGrid}>
-            {QUICK_TASKS.map((task) => (
+            {quickTasks.map((task) => (
               <Pressable
-                key={task.name}
+                key={task.id}
                 style={[styles.taskButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
                 onPress={() => spendTask(task.name, task.cost)}
+                onLongPress={() => handleEditQuickTask(task)}
               >
                 <Text style={[styles.taskName, { color: palette.text }]}>{task.name}</Text>
                 <Text style={[styles.taskCost, { color: palette.primary }]}>{task.cost} 🥄</Text>
@@ -429,6 +501,149 @@ export default function SpoonEconomistScreen() {
           </View>
         </Modal>
 
+        {/* Manage Quick Tasks Modal */}
+        <Modal visible={showManageQuickTasksModal} transparent animationType="slide">
+          <View style={styles.modalOverlay}>
+            <View style={[styles.modalContent, { backgroundColor: palette.surface, maxHeight: '80%' }]}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>Edit Quick Tasks</Text>
+              <Text style={[styles.modalSubtitle, { color: palette.textSecondary }]}>
+                Tap a task to edit, long-press to delete
+              </Text>
+
+              <ScrollView style={styles.taskList}>
+                {quickTasks.map((task) => (
+                  <Pressable
+                    key={task.id}
+                    style={[styles.taskListItem, { borderBottomColor: palette.border }]}
+                    onPress={() => handleEditQuickTask(task)}
+                    onLongPress={() => handleDeleteQuickTask(task.id, task.name)}
+                  >
+                    <View style={styles.taskListInfo}>
+                      <Text style={[styles.taskListName, { color: palette.text }]}>{task.name}</Text>
+                      <Text style={[styles.taskListCost, { color: palette.textSecondary }]}>
+                        {task.cost} 🥄
+                      </Text>
+                    </View>
+                    <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
+                  </Pressable>
+                ))}
+              </ScrollView>
+
+              <Pressable
+                style={[styles.customButton, { backgroundColor: palette.surface, borderColor: palette.primary, marginTop: 12 }]}
+                onPress={() => {
+                  setNewQuickTaskName('');
+                  setNewQuickTaskCost('');
+                  setShowAddQuickTaskModal(true);
+                }}
+              >
+                <Ionicons name="add-circle" size={20} color={palette.primary} />
+                <Text style={[styles.customButtonText, { color: palette.primary }]}>Add New Task</Text>
+              </Pressable>
+
+              <View style={styles.modalButtons}>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.border }]}
+                  onPress={handleResetQuickTasks}
+                >
+                  <Text style={[styles.modalButtonText, { color: palette.text }]}>Reset</Text>
+                </Pressable>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.primary }]}
+                  onPress={() => setShowManageQuickTasksModal(false)}
+                >
+                  <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Done</Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        </Modal>
+
+        {/* Edit Quick Task Modal */}
+        <Modal visible={showEditQuickTaskModal} transparent animationType="slide">
+          <View style={styles.modalOverlay}>
+            <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>Edit Quick Task</Text>
+
+              <TextInput
+                style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+                placeholder="Task name"
+                placeholderTextColor={palette.textSecondary}
+                value={newQuickTaskName}
+                onChangeText={setNewQuickTaskName}
+              />
+
+              <TextInput
+                style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+                placeholder="Spoon cost (1-30)"
+                placeholderTextColor={palette.textSecondary}
+                keyboardType="numeric"
+                value={newQuickTaskCost}
+                onChangeText={setNewQuickTaskCost}
+              />
+
+              <View style={styles.modalButtons}>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.border }]}
+                  onPress={() => {
+                    setShowEditQuickTaskModal(false);
+                    setEditingQuickTask(null);
+                  }}
+                >
+                  <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
+                </Pressable>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.primary }]}
+                  onPress={handleSaveQuickTask}
+                >
+                  <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Save</Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        </Modal>
+
+        {/* Add Quick Task Modal */}
+        <Modal visible={showAddQuickTaskModal} transparent animationType="slide">
+          <View style={styles.modalOverlay}>
+            <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>Add Quick Task</Text>
+
+              <TextInput
+                style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+                placeholder="Task name"
+                placeholderTextColor={palette.textSecondary}
+                value={newQuickTaskName}
+                onChangeText={setNewQuickTaskName}
+              />
+
+              <TextInput
+                style={[styles.input, { backgroundColor: palette.background, color: palette.text, borderColor: palette.border }]}
+                placeholder="Spoon cost (1-30)"
+                placeholderTextColor={palette.textSecondary}
+                keyboardType="numeric"
+                value={newQuickTaskCost}
+                onChangeText={setNewQuickTaskCost}
+              />
+
+              <View style={styles.modalButtons}>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.border }]}
+                  onPress={() => setShowAddQuickTaskModal(false)}
+                >
+                  <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
+                </Pressable>
+                <Pressable
+                  style={[styles.modalButton, { backgroundColor: palette.primary }]}
+                  onPress={handleAddQuickTask}
+                >
+                  <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Add</Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        </Modal>
+
         <View style={styles.bottomSpacer} />
       </ScrollView>
     </>
@@ -468,6 +683,7 @@ const styles = StyleSheet.create({
   modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center', padding: 16 },
   modalContent: { borderRadius: 12, padding: 16 },
   modalTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 16 },
+  modalSubtitle: { fontSize: 13, marginBottom: 12, marginTop: -8 },
   input: { borderWidth: 1, borderRadius: 8, padding: 12, fontSize: 14, marginBottom: 12 },
   checkboxRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 16 },
   checkboxLabel: { fontSize: 14, marginLeft: 8 },

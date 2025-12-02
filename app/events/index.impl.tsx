@@ -1,6 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useRouter } from "expo-router";
+import * as Updates from 'expo-updates';
 import React from "react";
 import {
     Alert,
@@ -132,9 +133,11 @@ export default function EventsScreen() {
       let firestoreEvents: any[] = [];
       try {
         const { fetchEventUpdates } = await import('../../services/firestoreEventSync');
-        // Use preview collection for development, production collection for release builds
-        // __DEV__ is true in development and EAS preview builds
-        const collection = __DEV__ ? 'events_preview' : 'events_production';
+        // Use preview collection for development and EAS preview channel, production for release builds
+        // __DEV__ is only true in development, not in EAS preview builds
+        // Use expo-updates channel to detect if we're on preview channel
+        const isPreviewChannel = Updates.channel === 'preview';
+        const collection = (__DEV__ || isPreviewChannel) ? 'events_preview' : 'events_production';
         firestoreEvents = await fetchEventUpdates(collection);
       } catch (err) {
         console.warn('[Events] Failed to fetch from Firestore:', err);

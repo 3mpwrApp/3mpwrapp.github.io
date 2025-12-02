@@ -1,5 +1,6 @@
+import { Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { Alert, StyleSheet, Switch, Text, View } from "react-native";
+import { Alert, Pressable, StyleSheet, Switch, Text, View } from "react-native";
 
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTranslation } from "../i18n";
@@ -158,31 +159,44 @@ export default function NotificationPreferences() {
                 icon="bulb"
                 testID="quiet-hours-suggest"
               />
-              {/* Simple cycle buttons for now instead of time pickers (mobile platform pickers not in test env). */}
-              <AccessibilityToggle
-                title={t('settings.notifications.quietHoursStart', 'Toggle Start Hour')}
-                description={t('settings.notifications.quietHoursStartDesc', 'Cycles through preset start times')}
-                value={false}
-                onValueChange={() => {
-                  const presets = ['21:00','22:00','23:00','00:00'];
-                  const idx = presets.indexOf(quietHoursStart || '22:00');
-                  setQuietHoursStart(presets[(idx+1)%presets.length]);
-                }}
-                icon="time"
-                testID="quiet-hours-start-toggle"
-              />
-              <AccessibilityToggle
-                title={t('settings.notifications.quietHoursEnd', 'Toggle End Hour')}
-                description={t('settings.notifications.quietHoursEndDesc', 'Cycles through preset end times')}
-                value={false}
-                onValueChange={() => {
-                  const presets = ['06:00','07:00','08:00'];
-                  const idx = presets.indexOf(quietHoursEnd || '07:00');
-                  setQuietHoursEnd(presets[(idx+1)%presets.length]);
-                }}
-                icon="time"
-                testID="quiet-hours-end-toggle"
-              />
+              {/* Time selection buttons - tap to cycle through preset times */}
+              <View style={styles.timePickerRow}>
+                <Pressable
+                  style={[styles.timePickerButton, { backgroundColor: palette.card, borderColor: palette.primary }]}
+                  onPress={() => {
+                    const presets = ['21:00','22:00','23:00','00:00'];
+                    const idx = presets.indexOf(quietHoursStart || '22:00');
+                    setQuietHoursStart(presets[(idx+1)%presets.length]);
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('settings.notifications.quietHoursStart', 'Start Hour')}
+                  accessibilityHint={t('settings.notifications.quietHoursStartHint', 'Tap to change. Current: ') + (quietHoursStart || '22:00')}
+                  testID="quiet-hours-start-toggle"
+                >
+                  <Ionicons name="moon" size={20} color={palette.primary} />
+                  <Text style={[styles.timePickerLabel, { color: palette.textSecondary }]}>{t('settings.notifications.startLabel', 'Start')}</Text>
+                  <Text style={[styles.timePickerValue, { color: palette.text }]}>{quietHoursStart || '22:00'}</Text>
+                  <Ionicons name="chevron-forward" size={16} color={palette.textSecondary} />
+                </Pressable>
+                
+                <Pressable
+                  style={[styles.timePickerButton, { backgroundColor: palette.card, borderColor: palette.primary }]}
+                  onPress={() => {
+                    const presets = ['06:00','07:00','08:00','09:00'];
+                    const idx = presets.indexOf(quietHoursEnd || '07:00');
+                    setQuietHoursEnd(presets[(idx+1)%presets.length]);
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('settings.notifications.quietHoursEnd', 'End Hour')}
+                  accessibilityHint={t('settings.notifications.quietHoursEndHint', 'Tap to change. Current: ') + (quietHoursEnd || '07:00')}
+                  testID="quiet-hours-end-toggle"
+                >
+                  <Ionicons name="sunny" size={20} color={palette.warning} />
+                  <Text style={[styles.timePickerLabel, { color: palette.textSecondary }]}>{t('settings.notifications.endLabel', 'End')}</Text>
+                  <Text style={[styles.timePickerValue, { color: palette.text }]}>{quietHoursEnd || '07:00'}</Text>
+                  <Ionicons name="chevron-forward" size={16} color={palette.textSecondary} />
+                </Pressable>
+              </View>
             </View>
           )}
           <AccessibilityToggle
@@ -457,6 +471,29 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number)
       fontSize: Math.round(12 * factor),
       color: palette.muted,
       lineHeight: Math.round(16 * factor),
+    },
+    timePickerRow: {
+      flexDirection: 'row',
+      gap: 12,
+      marginTop: 8,
+    },
+    timePickerButton: {
+      flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
+      padding: 12,
+      borderRadius: 8,
+      borderWidth: 1,
+      gap: 8,
+      minHeight: 48,
+    },
+    timePickerLabel: {
+      fontSize: Math.round(12 * factor),
+    },
+    timePickerValue: {
+      fontSize: Math.round(16 * factor),
+      fontWeight: '600',
+      flex: 1,
     },
   });
 }

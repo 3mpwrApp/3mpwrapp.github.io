@@ -133,12 +133,32 @@ const STORAGE_KEYS = {
   TRANSACTIONS: 'spoonEconomist:transactions:v1',
   BUDGETS: 'spoonEconomist:budgets:v1',
   TASKS: 'spoonEconomist:tasks:v1',
+  QUICK_TASKS: 'spoonEconomist:quickTasks:v1',
   TRADES: 'spoonEconomist:trades:v1',
   PREFERENCES: 'spoonEconomist:preferences:v1',
   ML_TASK_COSTS: 'spoonEconomist:mlTaskCosts:v1',
   PREDICTIONS: 'spoonEconomist:predictions:v1',
   FORECASTS: 'spoonEconomist:forecasts:v1',
 } as const;
+
+// Default quick tasks (user can modify these)
+export interface QuickTask {
+  id: string;
+  name: string;
+  cost: number;
+  isDefault: boolean; // Whether this is a default task or user-added
+}
+
+const DEFAULT_QUICK_TASKS: QuickTask[] = [
+  { id: 'shower', name: 'Shower', cost: 2, isDefault: true },
+  { id: 'get_dressed', name: 'Get Dressed', cost: 1, isDefault: true },
+  { id: 'cook_meal', name: 'Cook Meal', cost: 4, isDefault: true },
+  { id: 'groceries', name: 'Groceries', cost: 6, isDefault: true },
+  { id: 'laundry', name: 'Laundry', cost: 3, isDefault: true },
+  { id: 'dishes', name: 'Dishes', cost: 2, isDefault: true },
+  { id: 'doctor_appt', name: 'Doctor Appointment', cost: 8, isDefault: true },
+  { id: 'social_event', name: 'Social Event', cost: 7, isDefault: true },
+];
 
 const INTEREST_RATE = 0.2; // 20% interest on saved spoons (rest day bonus)
 const DEBT_MULTIPLIER = 1.5; // Borrowing costs 1.5x to repay (compound interest)
@@ -173,6 +193,7 @@ class SpoonEconomistManager {
   private transactions: SpoonTransaction[] = [];
   private budgets: Map<string, SpoonBudget> = new Map();
   private customTasks: SpoonTask[] = [];
+  private quickTasks: QuickTask[] = [...DEFAULT_QUICK_TASKS];
 
   private constructor() {
     this.loadData();
@@ -194,11 +215,12 @@ class SpoonEconomistManager {
       // Skip on web during SSR
       if (Platform.OS === 'web' && typeof window === 'undefined') return;
       
-      const [accountStr, transactionsStr, budgetsStr, tasksStr] = await Promise.all([
+      const [accountStr, transactionsStr, budgetsStr, tasksStr, quickTasksStr] = await Promise.all([
         AsyncStorage.getItem(STORAGE_KEYS.ACCOUNT),
         AsyncStorage.getItem(STORAGE_KEYS.TRANSACTIONS),
         AsyncStorage.getItem(STORAGE_KEYS.BUDGETS),
         AsyncStorage.getItem(STORAGE_KEYS.TASKS),
+        AsyncStorage.getItem(STORAGE_KEYS.QUICK_TASKS),
       ]);
 
       if (accountStr) this.account = JSON.parse(accountStr);
@@ -208,6 +230,7 @@ class SpoonEconomistManager {
         this.budgets = new Map(Object.entries(budgetsObj));
       }
       if (tasksStr) this.customTasks = JSON.parse(tasksStr);
+      if (quickTasksStr) this.quickTasks = JSON.parse(quickTasksStr);
 
       // Initialize account if doesn't exist
       if (!this.account) {
@@ -229,6 +252,7 @@ class SpoonEconomistManager {
         AsyncStorage.setItem(STORAGE_KEYS.TRANSACTIONS, JSON.stringify(this.transactions.slice(-500))),
         AsyncStorage.setItem(STORAGE_KEYS.BUDGETS, JSON.stringify(budgetsObj)),
         AsyncStorage.setItem(STORAGE_KEYS.TASKS, JSON.stringify(this.customTasks)),
+        AsyncStorage.setItem(STORAGE_KEYS.QUICK_TASKS, JSON.stringify(this.quickTasks)),
       ]);
     } catch (err) {
       logError('spoonEconomist', 'Failed to save spoon economist data', err);
@@ -621,6 +645,46 @@ class SpoonEconomistManager {
   }
 
   // ============================================================================
+  // Quick Tasks Management (editable preset tasks)
+  // ============================================================================
+
+  getQuickTasks(): QuickTask[] {
+    return [...this.quickTasks];
+  }
+
+  async addQuickTask(task: Omit<QuickTask, 'id' | 'isDefault'>): Promise<QuickTask> {
+    const newTask: QuickTask = {
+      ...task,
+      id: `quick_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      isDefault: false,
+    };
+    this.quickTasks.push(newTask);
+    await this.saveData();
+    return newTask;
+  }
+
+  async updateQuickTask(taskId: string, updates: Partial<Omit<QuickTask, 'id' | 'isDefault'>>): Promise<QuickTask | null> {
+    const index = this.quickTasks.findIndex(t => t.id === taskId);
+    if (index === -1) return null;
+    this.quickTasks[index] = { ...this.quickTasks[index], ...updates };
+    await this.saveData();
+    return this.quickTasks[index];
+  }
+
+  async deleteQuickTask(taskId: string): Promise<boolean> {
+    const index = this.quickTasks.findIndex(t => t.id === taskId);
+    if (index === -1) return false;
+    this.quickTasks.splice(index, 1);
+    await this.saveData();
+    return true;
+  }
+
+  async resetQuickTasksToDefaults(): Promise<void> {
+    this.quickTasks = [...DEFAULT_QUICK_TASKS];
+    await this.saveData();
+  }
+
+  // ============================================================================
   // Public API
   // ============================================================================
 
@@ -876,6 +940,14 @@ export function useSpoonEconomist() {
     updateCustomTask: (taskId: string, updates: Partial<Omit<SpoonTask, 'id'>>) => 
       spoonEconomist.updateCustomTask(taskId, updates),
     getCustomTasks: () => spoonEconomist.getCustomTasks(),
+
+    // =========== QUICK TASKS (editable preset tasks) ===========
+    getQuickTasks: () => spoonEconomist.getQuickTasks(),
+    addQuickTask: (task: Omit<QuickTask, 'id' | 'isDefault'>) => spoonEconomist.addQuickTask(task),
+    updateQuickTask: (taskId: string, updates: Partial<Omit<QuickTask, 'id' | 'isDefault'>>) =>
+      spoonEconomist.updateQuickTask(taskId, updates),
+    deleteQuickTask: (taskId: string) => spoonEconomist.deleteQuickTask(taskId),
+    resetQuickTasksToDefaults: () => spoonEconomist.resetQuickTasksToDefaults(),
 
     // =========== AI PREDICTIVE FEATURES ===========
     predictCrash: () => spoonEconomist.predictSpoonCrash(),
