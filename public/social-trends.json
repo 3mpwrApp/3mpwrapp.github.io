@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-02T06:03:05.349Z",
+  "lastUpdated": "2025-12-02T12:03:07.249Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4110,
+      "totalPosts": 4135,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-02T06:02:56.995Z"
+      "lastSeen": "2025-12-02T12:02:57.558Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4125,
+      "totalPosts": 4150,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-02T06:02:58.638Z"
+      "lastSeen": "2025-12-02T12:02:59.712Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4109,
+      "totalPosts": 4134,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-02T06:03:00.586Z"
+      "lastSeen": "2025-12-02T12:03:01.964Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4118,
+      "totalPosts": 4143,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-02T06:03:02.398Z"
+      "lastSeen": "2025-12-02T12:03:04.112Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4125,
+      "totalPosts": 4150,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-02T06:03:04.346Z"
+      "lastSeen": "2025-12-02T12:03:06.246Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Voting closes tonight, last chance to decide the winners of the GAConf accessibility awards!\n\nVoting form and finalists' info here - www.gaconf.com/gaconf-award...\n\n#gamedev #indiedev #accessibility",
-      "author": "gaconf.bsky.social",
-      "engagement": 26,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
-      "author": "nataliegreenpeer.bsky.social",
-      "engagement": 206,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Annaleigh is a Cherokee woman living with PTSD and other health challenges. She needs $2,000 to cover bills and essential expenses. Please donate or share if you can. 🤍\n#MutualAid #IndigenousMutualAid #DisabilityJustice #BIPOCMA",
-      "author": "amparodo.bsky.social",
-      "engagement": 14,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Voting closes tonight, last chance to decide the winners of the GAConf accessibility awards!\n\nVoting form and finalists' info here - www.gaconf.com/gaconf-award...\n\n#gamedev #indiedev #accessibility",
-      "author": "gaconf.bsky.social",
-      "engagement": 26,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -338,12 +302,48 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
+      "author": "nataliegreenpeer.bsky.social",
+      "engagement": 212,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "The Center for Racial & Disability Justice has an incredibly compelling op-ed in the Chicago Sun Times about why #AssistedSuicide laws are bad, & asking @govpritzker.illinois.gov to veto SB 1950. #DisabilityJustice #DisabilitySky #DisabilityRightsAreHumanRights tinyurl.com/4nk7e6ru",
+      "author": "10minutesaday.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "A beautiful tribute to @sfdirewolf.bsky.social, from Rebecca Cokley. \n\nTogether, may we continue the work and the fight to ensure Alice’s vision becomes the norm. 💜 \n\n#DisabilityJustice #DisabilityVisibility www.thenation.com/article/soci...",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 20,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Ah I missed this at the time, great interview on audio description in Star Wars Outlaws, worth a read - www.godisageek.com/2025/01/star...\n#gamedev #accessibility",
+      "author": "ianhamilton.bsky.social",
+      "engagement": 16,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I started a new job today!\n\nI'm very thankful and grateful to @byowave.bsky.social for giving me this opportunity.\n\nBe sure to give them a follow to stay up to date on the awesome stuff they're working on (I suppose it \"we\" now that I work there 😁).\n\n#IrishGameDev #A11y #Accessibility #SpeirGorm",
+      "author": "craigbreathnach.bsky.social",
+      "engagement": 23,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "accessibility",
-      "count": 37
+      "count": 38
     },
     {
       "keyword": "disabilityrights",
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 32
+      "count": 31
     },
     {
       "keyword": "disabilityjustice",
@@ -363,7 +363,7 @@
     },
     {
       "keyword": "accessibility a11y",
-      "count": 10
+      "count": 11
     },
     {
       "keyword": "altcitizen",
@@ -383,18 +383,22 @@
     },
     {
       "keyword": "disability",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "inclusion",
-      "count": 5
+      "count": 6
     },
     {
-      "keyword": "digitalaccessibility",
+      "keyword": "givingtuesday",
       "count": 5
     },
     {
       "keyword": "ada",
+      "count": 4
+    },
+    {
+      "keyword": "dls50",
       "count": 4
     },
     {
@@ -410,15 +414,11 @@
       "count": 4
     },
     {
-      "keyword": "webdev",
-      "count": 4
-    },
-    {
-      "keyword": "verizon",
+      "keyword": "assistedsuicide",
       "count": 3
     },
     {
-      "keyword": "boycottverizon",
+      "keyword": "disabilities",
       "count": 3
     }
   ]
