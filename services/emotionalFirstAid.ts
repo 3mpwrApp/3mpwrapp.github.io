@@ -78,6 +78,50 @@ export interface CrisisLog {
 }
 
 // ============================================================================
+// AI-POWERED CRISIS PREDICTION - NEVER BEEN DONE BEFORE
+// ============================================================================
+
+export interface CrisisPattern {
+  triggerCombination: string[];
+  timeOfDay: number; // hour
+  dayOfWeek: number;
+  frequency: number;
+  avgSeverity: number;
+  effectiveTechniques: string[];
+}
+
+export interface CrisisPrediction {
+  riskLevel: 'low' | 'moderate' | 'elevated' | 'high' | 'imminent';
+  probability: number; // 0-100
+  warningWindow: number; // minutes until predicted crisis
+  triggers: string[];
+  preventiveActions: string[];
+  recommendedTechnique: string;
+  confidence: number;
+}
+
+export interface BiofeedbackSession {
+  id: string;
+  startTime: number;
+  endTime?: number;
+  heartRateData: Array<{ time: number; bpm: number }>;
+  hrvData: Array<{ time: number; ms: number }>;
+  breathingRate: number[];
+  coherenceScore: number; // 0-100
+  calmingProgress: number[]; // 0-100 over time
+}
+
+export interface AIPersonalizedIntervention {
+  interventionId: string;
+  technique: string;
+  personalizedSteps: string[];
+  estimatedDuration: number;
+  successProbability: number;
+  basedOnHistory: boolean;
+  adaptations: string[];
+}
+
+// ============================================================================
 // Constants
 // ============================================================================
 
@@ -87,6 +131,9 @@ const STORAGE_KEYS = {
   CRISIS_LOGS: 'emotionalFirstAid:crisisLogs:v1',
   PREFERENCES: 'emotionalFirstAid:preferences:v1',
   TAP_COUNT: 'emotionalFirstAid:tapCount:v1',
+  CRISIS_PATTERNS: 'emotionalFirstAid:crisisPatterns:v1',
+  BIOFEEDBACK_SESSIONS: 'emotionalFirstAid:biofeedback:v1',
+  AI_INTERVENTIONS: 'emotionalFirstAid:aiInterventions:v1',
 } as const;
 
 const TEMPERATURE_SHOCK_PROTOCOL: TemperatureShockStep[] = [
@@ -607,6 +654,260 @@ class EmotionalFirstAidManager {
     const best = entries.reduce((max, curr) => curr[1] > max[1] ? curr : max, entries[0]);
     return best[0];
   }
+
+  // ============================================================================
+  // AI-POWERED CRISIS PREDICTION
+  // ============================================================================
+
+  private crisisPatterns: CrisisPattern[] = [];
+  private biofeedbackSessions: BiofeedbackSession[] = [];
+
+  async predictCrisisRisk(): Promise<CrisisPrediction> {
+    await this.analyzeCrisisPatterns();
+
+    const now = new Date();
+    const currentHour = now.getHours();
+    const currentDay = now.getDay();
+
+    // Analyze recent crisis history
+    const recentCrises = this.crisisLogs.filter(
+      c => Date.now() - c.timestamp < 7 * 24 * 60 * 60 * 1000 // Last 7 days
+    );
+
+    // Find matching patterns
+    const matchingPatterns = this.crisisPatterns.filter(p => {
+      const hourMatch = Math.abs(p.timeOfDay - currentHour) <= 2;
+      const dayMatch = p.dayOfWeek === currentDay;
+      return hourMatch || dayMatch;
+    });
+
+    // Calculate base probability
+    let probability = 10; // Baseline
+    if (matchingPatterns.length > 0) {
+      probability += matchingPatterns.reduce((s, p) => s + p.frequency * 10, 0);
+    }
+    if (recentCrises.length > 3) probability += 20;
+    if (recentCrises.some(c => c.severity >= 4)) probability += 15;
+
+    probability = Math.min(95, Math.max(5, probability));
+
+    const riskLevel: CrisisPrediction['riskLevel'] = 
+      probability >= 80 ? 'imminent' :
+      probability >= 60 ? 'high' :
+      probability >= 40 ? 'elevated' :
+      probability >= 20 ? 'moderate' : 'low';
+
+    // Extract common triggers
+    const triggerCounts = new Map<string, number>();
+    recentCrises.forEach(c => {
+      c.triggers?.forEach(t => {
+        triggerCounts.set(t, (triggerCounts.get(t) || 0) + 1);
+      });
+    });
+    const topTriggers = Array.from(triggerCounts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3)
+      .map(([t]) => t);
+
+    // Generate preventive actions
+    const preventiveActions: string[] = [];
+    if (probability >= 40) preventiveActions.push('Consider doing a grounding exercise now');
+    if (probability >= 60) preventiveActions.push('Reach out to a support person');
+    if (probability >= 80) preventiveActions.push('IMMEDIATE: Use temperature shock protocol');
+    if (currentHour >= 22) preventiveActions.push('Practice sleep hygiene - crisis risk rises with fatigue');
+
+    return {
+      riskLevel,
+      probability: Math.round(probability),
+      warningWindow: probability >= 60 ? 30 : probability >= 40 ? 60 : 120,
+      triggers: topTriggers,
+      preventiveActions,
+      recommendedTechnique: this.getMostEffectiveTechnique(),
+      confidence: Math.min(90, 50 + this.crisisLogs.length * 2),
+    };
+  }
+
+  private async analyzeCrisisPatterns(): Promise<void> {
+    if (this.crisisLogs.length < 3) return;
+
+    const patternMap = new Map<string, CrisisPattern>();
+
+    this.crisisLogs.forEach(crisis => {
+      const date = new Date(crisis.timestamp);
+      const key = `${date.getDay()}-${date.getHours()}`;
+
+      const existing = patternMap.get(key) || {
+        triggerCombination: [],
+        timeOfDay: date.getHours(),
+        dayOfWeek: date.getDay(),
+        frequency: 0,
+        avgSeverity: 0,
+        effectiveTechniques: [],
+      };
+
+      existing.frequency++;
+      existing.avgSeverity = (existing.avgSeverity + crisis.severity) / 2;
+      if (crisis.triggers) {
+        existing.triggerCombination.push(...crisis.triggers);
+      }
+      existing.effectiveTechniques.push(...crisis.techniquesUsed);
+
+      patternMap.set(key, existing);
+    });
+
+    this.crisisPatterns = Array.from(patternMap.values());
+
+    try {
+      await AsyncStorage.setItem(STORAGE_KEYS.CRISIS_PATTERNS, JSON.stringify(this.crisisPatterns));
+    } catch (err) {
+      logError('emotionalFirstAid', 'Failed to save crisis patterns', err);
+    }
+  }
+
+  // ============================================================================
+  // BIOFEEDBACK-GUIDED BREATHING
+  // ============================================================================
+
+  private activeBiofeedback: BiofeedbackSession | null = null;
+
+  async startBiofeedbackSession(): Promise<BiofeedbackSession> {
+    const session: BiofeedbackSession = {
+      id: `biofeedback_${Date.now()}`,
+      startTime: Date.now(),
+      heartRateData: [],
+      hrvData: [],
+      breathingRate: [],
+      coherenceScore: 0,
+      calmingProgress: [],
+    };
+
+    this.activeBiofeedback = session;
+    this.biofeedbackSessions.push(session);
+
+    // Start haptic breathing guide
+    await hapticLanguage.play('breathing_guide');
+
+    return session;
+  }
+
+  async updateBiofeedback(heartRate: number, hrv: number): Promise<{ coherence: number; suggestion: string }> {
+    if (!this.activeBiofeedback) {
+      return { coherence: 0, suggestion: 'Start a biofeedback session first' };
+    }
+
+    const now = Date.now();
+    this.activeBiofeedback.heartRateData.push({ time: now, bpm: heartRate });
+    this.activeBiofeedback.hrvData.push({ time: now, ms: hrv });
+
+    // Calculate coherence (simplified HRV coherence calculation)
+    const recentHRV = this.activeBiofeedback.hrvData.slice(-10);
+    const avgHRV = recentHRV.reduce((s, d) => s + d.ms, 0) / Math.max(1, recentHRV.length);
+    const coherence = Math.min(100, Math.max(0, avgHRV / 0.8)); // Simplified
+
+    this.activeBiofeedback.coherenceScore = coherence;
+    this.activeBiofeedback.calmingProgress.push(coherence);
+
+    // Generate real-time suggestion
+    let suggestion = '';
+    if (coherence < 30) suggestion = 'Breathe slower - inhale 4s, exhale 6s';
+    else if (coherence < 60) suggestion = 'Good progress - maintain this rhythm';
+    else if (coherence < 80) suggestion = 'Excellent! You\'re entering coherence';
+    else suggestion = 'Peak coherence achieved! Stay here';
+
+    // Adaptive haptic feedback based on coherence
+    if (coherence >= 80) await hapticLanguage.play('achievement');
+
+    return { coherence, suggestion };
+  }
+
+  async endBiofeedbackSession(): Promise<BiofeedbackSession | null> {
+    if (!this.activeBiofeedback) return null;
+
+    this.activeBiofeedback.endTime = Date.now();
+    const session = { ...this.activeBiofeedback };
+    this.activeBiofeedback = null;
+
+    try {
+      await AsyncStorage.setItem(
+        STORAGE_KEYS.BIOFEEDBACK_SESSIONS,
+        JSON.stringify(this.biofeedbackSessions.slice(-50))
+      );
+    } catch (err) {
+      logError('emotionalFirstAid', 'Failed to save biofeedback session', err);
+    }
+
+    return session;
+  }
+
+  // ============================================================================
+  // AI PERSONALIZED INTERVENTIONS
+  // ============================================================================
+
+  async getPersonalizedIntervention(): Promise<AIPersonalizedIntervention> {
+    const stats = this.getEffectivenessStats();
+    const bestTechnique = this.getMostEffectiveTechnique();
+    const recentSessions = this.sessions.slice(-20);
+
+    // Analyze what works for this user
+    const successfulSessions = recentSessions.filter(s => s.effectiveness && s.effectiveness >= 4);
+    const avgDuration = successfulSessions.length > 0
+      ? successfulSessions.reduce((s, sess) => {
+          return s + ((sess.endTime || sess.startTime) - sess.startTime);
+        }, 0) / successfulSessions.length / 60000
+      : 5;
+
+    // Generate personalized steps
+    const personalizedSteps: string[] = [];
+    const adaptations: string[] = [];
+
+    if (bestTechnique === 'breathing') {
+      personalizedSteps.push(
+        'Start with 3 slow breaths to prepare',
+        'Use 4-7-8 pattern (your most effective)',
+        'Focus on extending the exhale',
+        'Continue for ' + Math.ceil(avgDuration) + ' minutes',
+        'End with body scan'
+      );
+      adaptations.push('Extended exhale based on your HRV response');
+    } else if (bestTechnique === 'temperature') {
+      personalizedSteps.push(
+        'Get ice or very cold water immediately',
+        'Apply to inner wrists first (30 seconds)',
+        'Move to back of neck',
+        'Take 3 deep breaths while cold is applied',
+        'Repeat if needed'
+      );
+      adaptations.push('Temperature shock is your fastest relief method');
+    } else if (bestTechnique === 'grounding') {
+      personalizedSteps.push(
+        'Look around - name 5 blue things',
+        'Touch 4 different textures',
+        'Listen for 3 distinct sounds',
+        'Notice 2 smells',
+        'Focus on 1 taste in your mouth'
+      );
+      adaptations.push('Starting with vision works best for you');
+    } else {
+      personalizedSteps.push(
+        'Choose a distraction game',
+        'Set a 5-minute timer',
+        'Fully engage in the activity',
+        'Rate your distress after',
+        'Repeat if above 5/10'
+      );
+      adaptations.push('Cognitive distraction reduces your distress fastest');
+    }
+
+    return {
+      interventionId: `intervention_${Date.now()}`,
+      technique: bestTechnique,
+      personalizedSteps,
+      estimatedDuration: Math.ceil(avgDuration),
+      successProbability: Math.round(stats[bestTechnique as keyof typeof stats] * 20),
+      basedOnHistory: successfulSessions.length >= 3,
+      adaptations,
+    };
+  }
 }
 
 // ============================================================================
@@ -621,11 +922,23 @@ export const emotionalFirstAid = EmotionalFirstAidManager.getInstance();
 
 export function useEmotionalFirstAid() {
   const [contacts, setContacts] = React.useState<CrisisContact[]>(emotionalFirstAid.getCrisisContacts());
+  const [crisisPrediction, setCrisisPrediction] = React.useState<CrisisPrediction | null>(null);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       setContacts(emotionalFirstAid.getCrisisContacts());
     }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Auto-update crisis prediction every minute
+  React.useEffect(() => {
+    const updatePrediction = async () => {
+      const prediction = await emotionalFirstAid.predictCrisisRisk();
+      setCrisisPrediction(prediction);
+    };
+    updatePrediction();
+    const interval = setInterval(updatePrediction, 60000);
     return () => clearInterval(interval);
   }, []);
 
@@ -667,5 +980,16 @@ export function useEmotionalFirstAid() {
     // Analytics
     getEffectiveness: () => emotionalFirstAid.getEffectivenessStats(),
     getMostEffective: () => emotionalFirstAid.getMostEffectiveTechnique(),
+
+    // =========== AI CRISIS PREDICTION ===========
+    crisisPrediction,
+    predictCrisisRisk: () => emotionalFirstAid.predictCrisisRisk(),
+    getPersonalizedIntervention: () => emotionalFirstAid.getPersonalizedIntervention(),
+
+    // =========== BIOFEEDBACK ===========
+    startBiofeedback: () => emotionalFirstAid.startBiofeedbackSession(),
+    updateBiofeedback: (heartRate: number, hrv: number) =>
+      emotionalFirstAid.updateBiofeedback(heartRate, hrv),
+    endBiofeedback: () => emotionalFirstAid.endBiofeedbackSession(),
   };
 }

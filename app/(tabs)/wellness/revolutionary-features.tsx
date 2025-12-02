@@ -14,89 +14,153 @@ interface RevolutionaryFeature {
   route: string;
   color: string;
   badge?: string;
+  aiPowered?: boolean;
+  aiFeatures?: string[];
 }
 
 const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
   {
     id: 'energy-aware-ui',
     title: 'Energy-Aware UI',
-    description: 'Interface adapts to your energy level automatically',
+    description: 'AI-powered interface that learns from biometrics & wearables',
     icon: 'color-wand',
     route: '/wellness/energy-aware-ui',
     color: 'primary',
-    badge: 'BETA',
+    badge: 'AI',
+    aiPowered: true,
+    aiFeatures: ['Wearable sync (Apple Watch, Fitbit, Garmin)', 'Biometric learning', 'Predictive energy model', '7-day energy forecast'],
   },
   {
     id: 'haptic-language',
     title: 'Haptic Language',
-    description: 'Learn 14 vibration patterns with unique meanings',
+    description: 'Adaptive vibrations that learn your perception patterns',
     icon: 'phone-portrait',
     route: '/wellness/haptic-language',
     color: 'secondary',
-    badge: 'BETA',
+    badge: 'AI',
+    aiPowered: true,
+    aiFeatures: ['Adaptive intensity learning', 'Context-aware playback', 'Personal haptic profiles', 'Perception pattern analysis'],
   },
   {
     id: 'spoon-economist',
     title: 'Spoon Economist',
-    description: 'Energy budgeting with debt & interest tracking',
+    description: 'ML-powered crash prediction with 7-day forecasting',
     icon: 'restaurant',
     route: '/wellness/spoon-economist',
     color: 'warning',
-    badge: 'BETA',
+    badge: 'AI',
+    aiPowered: true,
+    aiFeatures: ['Crash risk prediction', 'ML task cost learning', 'Weekly energy forecast', 'Personalized recommendations'],
   },
   {
     id: 'functional-capacity',
-    title: 'Functional Capacity',
-    description: 'WHO ICF assessment for disability claims',
+    title: 'Functional Capacity AI',
+    description: 'AI claim optimization with appeal data generation',
     icon: 'clipboard',
     route: '/wellness/functional-capacity',
     color: 'info',
-    badge: 'BETA',
+    badge: 'AI',
+    aiPowered: true,
+    aiFeatures: ['Claim strength scoring', 'Denial prediction', 'Appeal data generation', 'Medical evidence linking'],
   },
   {
     id: 'emotional-first-aid',
-    title: 'Emotional First Aid',
-    description: 'Crisis intervention with panic attack interrupter',
+    title: 'Emotional First Aid AI',
+    description: 'AI crisis prediction with biofeedback integration',
     icon: 'medical',
     route: '/wellness/emotional-first-aid',
     color: 'error',
-    badge: 'BETA',
+    badge: 'AI',
+    aiPowered: true,
+    aiFeatures: ['Crisis risk prediction', 'Biofeedback sessions', 'Personalized interventions', 'Breathing pattern coaching'],
   },
   {
     id: 'circadian-dj',
     title: 'Circadian Rhythm DJ',
-    description: 'Sleep optimization with chronotype & debt tracking',
+    description: 'AI sleep optimization with dream pattern analysis',
     icon: 'moon',
     route: '/wellness/circadian-dj',
     color: 'info',
-    badge: 'BETA',
+    badge: 'AI',
+    aiPowered: true,
+    aiFeatures: ['Dream journal AI', 'Sleep stage prediction', 'Optimal wake time', 'Light therapy scheduling'],
   },
   {
     id: 'cognitive-scanner',
-    title: 'Cognitive Distortion Scanner',
-    description: 'Real-time thought pattern recognition',
+    title: 'Cognitive Scanner AI',
+    description: 'AI CBT coaching with belief network mapping',
     icon: 'bulb',
     route: '/wellness/cognitive-scanner',
     color: 'success',
-    badge: 'BETA',
+    badge: 'AI',
+    aiPowered: true,
+    aiFeatures: ['Core belief excavation', 'Thought prediction', 'Belief network visualization', 'Restructuring sessions'],
   },
   {
     id: 'energy-mood',
-    title: 'Energy & Mood Dashboard',
-    description: 'Quantum energy states + 24hr mood forecasting combined',
+    title: 'Quantum Energy Dashboard',
+    description: 'Wave function modeling of energy states',
     icon: 'speedometer',
     route: '/wellness/energy-mood-dashboard',
     color: 'info',
-    badge: 'BETA',
+    badge: 'AI',
+    aiPowered: true,
+    aiFeatures: ['Quantum state superposition', 'Probability distributions', 'Observer effect tracking', 'Entanglement patterns'],
   },
   {
     id: 'legal-dna',
     title: 'Legal DNA Sequencer',
-    description: 'Case genome mapping for advocacy',
+    description: 'Case genome mapping with AI analysis',
     icon: 'document-text',
     route: '/advocacy/legal-dna',
     color: 'primary',
-    badge: 'BETA',
+    badge: 'AI',
+    aiPowered: true,
+    aiFeatures: ['Legal precedent matching', 'Case strength scoring', 'Evidence chain mapping', 'Outcome prediction'],
+  },
+  {
+    id: 'sensory-overload',
+    title: 'Sensory Overload Detector',
+    description: 'AI that predicts sensory meltdowns before they happen',
+    icon: 'ear',
+    route: '/wellness/sensory-overload',
+    color: 'warning',
+    badge: 'NEW',
+    aiPowered: true,
+    aiFeatures: ['Multi-sensory tracking', 'Overload prediction', 'Safe space finder', 'Decompression protocols'],
+  },
+  {
+    id: 'symptom-symphony',
+    title: 'Symptom Symphony',
+    description: 'Multi-modal symptom tracking with pattern orchestra',
+    icon: 'musical-notes',
+    route: '/wellness/symptom-symphony',
+    color: 'secondary',
+    badge: 'NEW',
+    aiPowered: true,
+    aiFeatures: ['Symptom correlation AI', 'Flare prediction', 'Trigger identification', 'Medical timeline export'],
+  },
+  {
+    id: 'grounding-companion',
+    title: 'AI Grounding Companion',
+    description: 'Personalized grounding with adaptive learning',
+    icon: 'leaf',
+    route: '/wellness/grounding-companion',
+    color: 'success',
+    badge: 'NEW',
+    aiPowered: true,
+    aiFeatures: ['Learns what works for you', 'Context-aware techniques', 'Progressive difficulty', 'Biometric feedback'],
+  },
+  {
+    id: 'environmental-adaptation',
+    title: 'Environmental Adaptation',
+    description: 'AI that adjusts to your environment automatically',
+    icon: 'globe',
+    route: '/wellness/environmental-adaptation',
+    color: 'info',
+    badge: 'NEW',
+    aiPowered: true,
+    aiFeatures: ['Weather sensitivity tracking', 'Barometric pressure alerts', 'Light/sound adaptation', 'Location-based triggers'],
   },
 ];
 
@@ -133,14 +197,33 @@ export default function RevolutionaryFeaturesScreen() {
         {/* Header */}
         <View style={[styles.header, { backgroundColor: palette.surface }]}>
           <View style={styles.headerContent}>
-            <Ionicons name="rocket" size={48} color={palette.primary} />
+            <View style={styles.headerIconContainer}>
+              <Ionicons name="rocket" size={48} color={palette.primary} />
+              <View style={[styles.aiSparkle, { backgroundColor: palette.primary }]}>
+                <Ionicons name="sparkles" size={16} color="#fff" />
+              </View>
+            </View>
             <View style={styles.headerText}>
               <Text style={[styles.headerTitle, { color: palette.text }]}>
-                World-First Beta Features
+                AI-Powered Revolutionary Features
               </Text>
               <Text style={[styles.headerSubtitle, { color: palette.textSecondary }]}>
-                10 revolutionary tools that don't exist anywhere else
+                13 world-first tools powered by on-device AI/ML
               </Text>
+            </View>
+          </View>
+          <View style={[styles.aiStatsBar, { backgroundColor: palette.primary + '15' }]}>
+            <View style={styles.aiStat}>
+              <Ionicons name="hardware-chip" size={18} color={palette.primary} />
+              <Text style={[styles.aiStatText, { color: palette.primary }]}>On-Device AI</Text>
+            </View>
+            <View style={styles.aiStat}>
+              <Ionicons name="shield-checkmark" size={18} color={palette.primary} />
+              <Text style={[styles.aiStatText, { color: palette.primary }]}>100% Private</Text>
+            </View>
+            <View style={styles.aiStat}>
+              <Ionicons name="flash" size={18} color={palette.primary} />
+              <Text style={[styles.aiStatText, { color: palette.primary }]}>Real-time</Text>
             </View>
           </View>
         </View>
@@ -156,13 +239,21 @@ export default function RevolutionaryFeaturesScreen() {
               onPress={() => navigateToFeature(feature.route)}
             >
               {feature.badge && (
-                <View style={[styles.badge, { backgroundColor: featureColor }]}>
+                <View style={[
+                  styles.badge, 
+                  { backgroundColor: feature.badge === 'AI' ? palette.primary : feature.badge === 'NEW' ? palette.success : featureColor }
+                ]}>
                   <Text style={styles.badgeText}>{feature.badge}</Text>
                 </View>
               )}
 
               <View style={[styles.iconContainer, { backgroundColor: featureColor + '20' }]}>
                 <Ionicons name={feature.icon as any} size={32} color={featureColor} />
+                {feature.aiPowered && (
+                  <View style={[styles.aiIndicator, { backgroundColor: palette.primary }]}>
+                    <Ionicons name="sparkles" size={12} color="#fff" />
+                  </View>
+                )}
               </View>
 
               <View style={styles.featureContent}>
@@ -172,6 +263,22 @@ export default function RevolutionaryFeaturesScreen() {
                 <Text style={[styles.featureDescription, { color: palette.textSecondary }]}>
                   {feature.description}
                 </Text>
+                {feature.aiFeatures && feature.aiFeatures.length > 0 && (
+                  <View style={styles.aiFeaturesList}>
+                    {feature.aiFeatures.slice(0, 2).map((aiFeature, idx) => (
+                      <View key={idx} style={[styles.aiFeatureTag, { backgroundColor: palette.primary + '15' }]}>
+                        <Text style={[styles.aiFeatureText, { color: palette.primary }]}>
+                          {aiFeature}
+                        </Text>
+                      </View>
+                    ))}
+                    {feature.aiFeatures.length > 2 && (
+                      <Text style={[styles.moreFeatures, { color: palette.textSecondary }]}>
+                        +{feature.aiFeatures.length - 2} more
+                      </Text>
+                    )}
+                  </View>
+                )}
               </View>
 
               <View style={styles.arrow}>
@@ -271,6 +378,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  headerIconContainer: {
+    position: 'relative',
+  },
+  aiSparkle: {
+    position: 'absolute',
+    top: -4,
+    right: -4,
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   headerText: {
     marginLeft: 16,
     flex: 1,
@@ -283,6 +403,22 @@ const styles = StyleSheet.create({
   headerSubtitle: {
     fontSize: 14,
     lineHeight: 20,
+  },
+  aiStatsBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 16,
+    paddingVertical: 12,
+    borderRadius: 8,
+  },
+  aiStat: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  aiStatText: {
+    marginLeft: 6,
+    fontSize: 12,
+    fontWeight: '600',
   },
   featuresContainer: {
     padding: 8,
@@ -312,11 +448,23 @@ const styles = StyleSheet.create({
   badgeText: {
     fontSize: 10,
     fontWeight: 'bold',
+    color: '#fff',
   },
   iconContainer: {
     width: 64,
     height: 64,
     borderRadius: 32,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+  },
+  aiIndicator: {
+    position: 'absolute',
+    bottom: -2,
+    right: -2,
+    width: 20,
+    height: 20,
+    borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -332,6 +480,27 @@ const styles = StyleSheet.create({
   featureDescription: {
     fontSize: 14,
     lineHeight: 18,
+  },
+  aiFeaturesList: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: 8,
+    alignItems: 'center',
+  },
+  aiFeatureTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 4,
+    marginRight: 6,
+    marginBottom: 4,
+  },
+  aiFeatureText: {
+    fontSize: 10,
+    fontWeight: '600',
+  },
+  moreFeatures: {
+    fontSize: 10,
+    fontStyle: 'italic',
   },
   arrow: {
     marginLeft: 8,

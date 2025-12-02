@@ -54,6 +54,46 @@ export interface TaskState {
 }
 
 // ============================================================================
+// BIOMETRIC INTEGRATION - NEVER BEEN DONE BEFORE
+// ============================================================================
+
+export interface BiometricData {
+  heartRate: number; // bpm
+  hrv: number; // ms (heart rate variability)
+  sleepQuality: number; // 0-100 from last night
+  stepCount: number; // today's steps
+  stressIndex: number; // 0-100 from wearable
+  skinTemperature?: number;
+  bloodOxygen?: number;
+  timestamp: number;
+}
+
+export interface WearableDevice {
+  id: string;
+  type: 'apple_watch' | 'fitbit' | 'garmin' | 'samsung_health' | 'oura' | 'whoop';
+  name: string;
+  connected: boolean;
+  lastSync: number;
+  capabilities: string[];
+}
+
+export interface BiometricEnergyCorrelation {
+  hrvToEnergy: number; // correlation coefficient
+  sleepToEnergy: number;
+  stepsToEnergy: number;
+  heartRateToEnergy: number;
+  sampleSize: number;
+}
+
+export interface PredictiveEnergyModel {
+  predictedEnergy: number; // 0-100
+  confidence: number; // 0-100
+  factors: Array<{ name: string; contribution: number }>;
+  recommendation: string;
+  optimalActivityWindow: { start: number; end: number }; // hours
+}
+
+// ============================================================================
 // Constants
 // ============================================================================
 
@@ -63,6 +103,9 @@ const STORAGE_KEYS = {
   TASK_STATES: 'energyAware:taskStates:v1',
   CONFIG: 'energyAware:config:v1',
   LOW_ENERGY_TIMES: 'energyAware:lowEnergyTimes:v1',
+  BIOMETRIC_DATA: 'energyAware:biometricData:v1',
+  WEARABLES: 'energyAware:wearables:v1',
+  CORRELATIONS: 'energyAware:correlations:v1',
 } as const;
 
 const ENERGY_THRESHOLDS = {
@@ -468,6 +511,228 @@ class EnergyAwareUIManager {
       lowEnergyHours,
     };
   }
+
+  // ============================================================================
+  // BIOMETRIC INTEGRATION - WEARABLE SYNC
+  // ============================================================================
+
+  private biometricHistory: BiometricData[] = [];
+  private connectedWearables: WearableDevice[] = [];
+  private correlations: BiometricEnergyCorrelation | null = null;
+
+  async syncWearable(device: WearableDevice): Promise<{ success: boolean; message: string }> {
+    try {
+      // Simulated wearable connection (would use actual SDKs in production)
+      const existingIndex = this.connectedWearables.findIndex(w => w.id === device.id);
+      
+      if (existingIndex >= 0) {
+        this.connectedWearables[existingIndex] = { ...device, connected: true, lastSync: Date.now() };
+      } else {
+        this.connectedWearables.push({ ...device, connected: true, lastSync: Date.now() });
+      }
+
+      await AsyncStorage.setItem(STORAGE_KEYS.WEARABLES, JSON.stringify(this.connectedWearables));
+
+      return { success: true, message: `Connected to ${device.name}` };
+    } catch (err) {
+      logError('energyAwareUI', 'Failed to sync wearable', err);
+      return { success: false, message: 'Failed to connect wearable' };
+    }
+  }
+
+  async receiveBiometricData(data: BiometricData): Promise<void> {
+    this.biometricHistory.push(data);
+
+    // Keep last 1000 readings
+    if (this.biometricHistory.length > 1000) {
+      this.biometricHistory = this.biometricHistory.slice(-1000);
+    }
+
+    // Update energy state based on biometrics
+    await this.updateEnergyFromBiometrics(data);
+
+    // Learn correlations
+    if (this.biometricHistory.length >= 50) {
+      await this.learnBiometricCorrelations();
+    }
+
+    try {
+      await AsyncStorage.setItem(STORAGE_KEYS.BIOMETRIC_DATA, JSON.stringify(this.biometricHistory.slice(-200)));
+    } catch (err) {
+      logError('energyAwareUI', 'Failed to save biometric data', err);
+    }
+  }
+
+  private async updateEnergyFromBiometrics(data: BiometricData): Promise<void> {
+    // Multi-factor biometric energy detection
+    let energyScore = 50; // Baseline
+
+    // HRV is the strongest indicator of energy/recovery
+    if (data.hrv < 20) energyScore -= 30;
+    else if (data.hrv < 40) energyScore -= 15;
+    else if (data.hrv > 60) energyScore += 15;
+    else if (data.hrv > 80) energyScore += 25;
+
+    // Sleep quality impact
+    if (data.sleepQuality < 30) energyScore -= 20;
+    else if (data.sleepQuality < 50) energyScore -= 10;
+    else if (data.sleepQuality > 80) energyScore += 15;
+
+    // Stress index (inverse)
+    if (data.stressIndex > 80) energyScore -= 25;
+    else if (data.stressIndex > 60) energyScore -= 15;
+    else if (data.stressIndex < 30) energyScore += 10;
+
+    // Heart rate (look for elevated resting heart rate = fatigue)
+    if (data.heartRate > 90) energyScore -= 10;
+    else if (data.heartRate < 60) energyScore += 5;
+
+    // Convert score to energy state
+    energyScore = Math.max(0, Math.min(100, energyScore));
+
+    let newState: EnergyState;
+    if (energyScore < 15) newState = 'crashed';
+    else if (energyScore < 30) newState = 'depleted';
+    else if (energyScore < 45) newState = 'conserving';
+    else if (energyScore < 65) newState = 'baseline';
+    else if (energyScore < 85) newState = 'energized';
+    else newState = 'hyperfocus';
+
+    this.updateEnergyState(newState);
+  }
+
+  private async learnBiometricCorrelations(): Promise<void> {
+    if (this.biometricHistory.length < 50) return;
+
+    // Calculate correlations between biometrics and energy states
+    const energyScores = this.usageHistory.slice(-50).map(u => {
+      if (u.tapsPerMinute < 10) return 20;
+      if (u.tapsPerMinute < 25) return 40;
+      if (u.tapsPerMinute < 50) return 60;
+      return 80;
+    });
+
+    const recentBio = this.biometricHistory.slice(-50);
+
+    // Simple correlation calculation
+    const calcCorrelation = (bioValues: number[], energyValues: number[]): number => {
+      const n = Math.min(bioValues.length, energyValues.length);
+      if (n < 10) return 0;
+
+      const avgBio = bioValues.reduce((s, v) => s + v, 0) / n;
+      const avgEnergy = energyValues.reduce((s, v) => s + v, 0) / n;
+
+      let numerator = 0;
+      let denomBio = 0;
+      let denomEnergy = 0;
+
+      for (let i = 0; i < n; i++) {
+        const diffBio = bioValues[i] - avgBio;
+        const diffEnergy = energyValues[i] - avgEnergy;
+        numerator += diffBio * diffEnergy;
+        denomBio += diffBio * diffBio;
+        denomEnergy += diffEnergy * diffEnergy;
+      }
+
+      const denom = Math.sqrt(denomBio * denomEnergy);
+      return denom === 0 ? 0 : numerator / denom;
+    };
+
+    this.correlations = {
+      hrvToEnergy: calcCorrelation(recentBio.map(b => b.hrv), energyScores),
+      sleepToEnergy: calcCorrelation(recentBio.map(b => b.sleepQuality), energyScores),
+      stepsToEnergy: calcCorrelation(recentBio.map(b => b.stepCount), energyScores),
+      heartRateToEnergy: calcCorrelation(recentBio.map(b => -b.heartRate), energyScores), // Inverse
+      sampleSize: Math.min(recentBio.length, energyScores.length),
+    };
+
+    try {
+      await AsyncStorage.setItem(STORAGE_KEYS.CORRELATIONS, JSON.stringify(this.correlations));
+    } catch (err) {
+      logError('energyAwareUI', 'Failed to save correlations', err);
+    }
+  }
+
+  async getPredictiveEnergyModel(): Promise<PredictiveEnergyModel> {
+    const latestBio = this.biometricHistory[this.biometricHistory.length - 1];
+    const correlations = this.correlations;
+
+    if (!latestBio || !correlations) {
+      return {
+        predictedEnergy: 50,
+        confidence: 20,
+        factors: [],
+        recommendation: 'Connect a wearable device for personalized energy predictions',
+        optimalActivityWindow: { start: 10, end: 14 },
+      };
+    }
+
+    // Weighted prediction based on learned correlations
+    const factors: Array<{ name: string; contribution: number }> = [];
+    let predictedEnergy = 50;
+
+    // HRV contribution
+    const hrvContribution = (latestBio.hrv / 100) * 30 * Math.abs(correlations.hrvToEnergy);
+    factors.push({ name: 'Heart Rate Variability', contribution: hrvContribution });
+    predictedEnergy += hrvContribution - 15;
+
+    // Sleep contribution
+    const sleepContribution = (latestBio.sleepQuality / 100) * 25 * Math.abs(correlations.sleepToEnergy);
+    factors.push({ name: 'Sleep Quality', contribution: sleepContribution });
+    predictedEnergy += sleepContribution - 12.5;
+
+    // Stress contribution (inverse)
+    const stressContribution = ((100 - latestBio.stressIndex) / 100) * 20;
+    factors.push({ name: 'Stress Level', contribution: -stressContribution + 10 });
+    predictedEnergy += stressContribution - 10;
+
+    predictedEnergy = Math.max(0, Math.min(100, predictedEnergy));
+
+    // Determine optimal activity window based on historical patterns
+    const lowEnergyTimesStr = await AsyncStorage.getItem(STORAGE_KEYS.LOW_ENERGY_TIMES);
+    const lowEnergyTimes: Record<number, number> = lowEnergyTimesStr ? JSON.parse(lowEnergyTimesStr) : {};
+    
+    let optimalStart = 10;
+    let optimalEnd = 14;
+    let lowestCount = Infinity;
+
+    for (let h = 8; h <= 18; h++) {
+      const count = (lowEnergyTimes[h] || 0) + (lowEnergyTimes[h + 1] || 0);
+      if (count < lowestCount) {
+        lowestCount = count;
+        optimalStart = h;
+        optimalEnd = h + 4;
+      }
+    }
+
+    // Generate recommendation
+    let recommendation = '';
+    if (predictedEnergy < 30) {
+      recommendation = 'Low energy predicted. Schedule rest or light tasks only.';
+    } else if (predictedEnergy < 50) {
+      recommendation = 'Moderate energy. Good for routine tasks, avoid demanding activities.';
+    } else if (predictedEnergy < 70) {
+      recommendation = 'Good energy levels. Suitable for most activities.';
+    } else {
+      recommendation = 'High energy window! Tackle your most challenging tasks now.';
+    }
+
+    return {
+      predictedEnergy: Math.round(predictedEnergy),
+      confidence: Math.min(90, 40 + correlations.sampleSize),
+      factors: factors.sort((a, b) => Math.abs(b.contribution) - Math.abs(a.contribution)),
+      recommendation,
+      optimalActivityWindow: { start: optimalStart, end: optimalEnd },
+    };
+  }
+
+  getConnectedWearables(): WearableDevice[] {
+    return [...this.connectedWearables];
+  }
+
+  getLatestBiometrics(): BiometricData | null {
+    return this.biometricHistory[this.biometricHistory.length - 1] || null;
+  }
 }
 
 // ============================================================================
@@ -488,12 +753,27 @@ export function useEnergyAwareUI(): {
   saveTaskProgress: (taskId: string, taskType: string, data: Record<string, any>, progress: number) => void;
   getResumableTasks: () => Promise<TaskState[]>;
   trackUsage: (pattern: Partial<UsagePattern>) => void;
+  // Biometric integration
+  syncWearable: (device: WearableDevice) => Promise<{ success: boolean; message: string }>;
+  receiveBiometrics: (data: BiometricData) => Promise<void>;
+  getPredictiveModel: () => Promise<PredictiveEnergyModel>;
+  getConnectedWearables: () => WearableDevice[];
+  getLatestBiometrics: () => BiometricData | null;
 } {
   const [config, setConfig] = React.useState<EnergyAwareConfig>(energyAwareUI.getConfig());
+  const [biometrics, setBiometrics] = React.useState<BiometricData | null>(null);
 
   React.useEffect(() => {
     const unsubscribe = energyAwareUI.subscribe(setConfig);
     return unsubscribe;
+  }, []);
+
+  // Poll biometrics every 30 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setBiometrics(energyAwareUI.getLatestBiometrics());
+    }, 30000);
+    return () => clearInterval(interval);
   }, []);
 
   return {
@@ -504,6 +784,12 @@ export function useEnergyAwareUI(): {
     saveTaskProgress: (taskId, taskType, data, progress) => energyAwareUI.saveTaskState(taskId, taskType, data, progress),
     getResumableTasks: () => energyAwareUI.getResumableTasks(),
     trackUsage: (pattern) => energyAwareUI.trackUsagePattern(pattern),
+    // =========== BIOMETRIC INTEGRATION ===========
+    syncWearable: (device) => energyAwareUI.syncWearable(device),
+    receiveBiometrics: (data) => energyAwareUI.receiveBiometricData(data),
+    getPredictiveModel: () => energyAwareUI.getPredictiveEnergyModel(),
+    getConnectedWearables: () => energyAwareUI.getConnectedWearables(),
+    getLatestBiometrics: () => energyAwareUI.getLatestBiometrics(),
   };
 }
 

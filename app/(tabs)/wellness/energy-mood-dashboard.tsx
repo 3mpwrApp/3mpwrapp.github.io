@@ -4,21 +4,41 @@ import { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { useTranslation } from '../../../i18n';
+import { useCognitiveDistortionScanner } from '../../../services/cognitiveDistortionScanner';
+import { useEmotionalFirstAid } from '../../../services/emotionalFirstAid';
 import { useEmotionalWeatherStation } from '../../../services/emotionalWeatherStation';
+import { useEnergyAwareUI } from '../../../services/energyAwareUI';
 import { useEnergyQuantumMechanics, type QuantumEnergyState } from '../../../services/energyQuantumMechanics';
+import { useSpoonEconomist } from '../../../services/spoonEconomist';
 import { useAppPalette } from '../../../theme/usePalette';
 import { createShadow } from '../../../utils/shadow';
+
+// ============================================================================
+// REAL-TIME BIOFEEDBACK UI - NEVER BEEN DONE BEFORE
+// ============================================================================
 
 export default function EnergyMoodDashboard() {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const quantum = useEnergyQuantumMechanics();
   const weather = useEmotionalWeatherStation();
+  const spoonEconomist = useSpoonEconomist();
+  const emotionalFirstAid = useEmotionalFirstAid();
+  const cognitiveScanner = useCognitiveDistortionScanner();
+  const energyAware = useEnergyAwareUI();
 
   const [quantumState, setQuantumState] = useState(quantum.getCurrentState());
   const [energyDebt, setEnergyDebt] = useState(quantum.getDebt());
   const [moodForecast, setMoodForecast] = useState(weather.forecastMood(24));
   const [currentWeather, setCurrentWeather] = useState(weather.currentMood);
+
+  // ============================================================================
+  // AI-POWERED STATE
+  // ============================================================================
+  const [biometrics, setBiometrics] = useState(energyAware.getLatestBiometrics());
+  const [crashPrediction, setCrashPrediction] = useState(spoonEconomist.crashPrediction);
+  const [crisisPrediction, setCrisisPrediction] = useState(emotionalFirstAid.crisisPrediction);
+  const [thoughtPatterns, setThoughtPatterns] = useState(cognitiveScanner.patterns);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,6 +46,11 @@ export default function EnergyMoodDashboard() {
       setEnergyDebt(quantum.getDebt());
       setMoodForecast(weather.forecastMood(24));
       setCurrentWeather(weather.currentMood);
+      // AI-powered updates
+      setBiometrics(energyAware.getLatestBiometrics());
+      setCrashPrediction(spoonEconomist.crashPrediction);
+      setCrisisPrediction(emotionalFirstAid.crisisPrediction);
+      setThoughtPatterns(cognitiveScanner.patterns);
     }, 5000);
 
     return () => clearInterval(interval);
@@ -306,6 +331,201 @@ export default function EnergyMoodDashboard() {
           </Pressable>
         </View>
 
+        {/* ============================================================================ */}
+        {/* AI-POWERED BIOFEEDBACK SECTION */}
+        {/* ============================================================================ */}
+
+        {/* Real-time Biometrics */}
+        {biometrics && (
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <View style={styles.biofeedbackHeader}>
+              <Ionicons name="heart" size={24} color={palette.error} />
+              <Text style={[styles.sectionTitle, { color: palette.text, marginLeft: 8 }]}>
+                Real-time Biofeedback
+              </Text>
+            </View>
+
+            <View style={styles.biometricGrid}>
+              <View style={[styles.biometricItem, { backgroundColor: palette.errorBackground }]}>
+                <Ionicons name="pulse" size={20} color={palette.error} />
+                <Text style={[styles.biometricValue, { color: palette.text }]}>
+                  {biometrics.heartRate} BPM
+                </Text>
+                <Text style={[styles.biometricLabel, { color: palette.textSecondary }]}>
+                  Heart Rate
+                </Text>
+              </View>
+
+              <View style={[styles.biometricItem, { backgroundColor: palette.successBackground }]}>
+                <Ionicons name="analytics" size={20} color={palette.success} />
+                <Text style={[styles.biometricValue, { color: palette.text }]}>
+                  {biometrics.hrv} ms
+                </Text>
+                <Text style={[styles.biometricLabel, { color: palette.textSecondary }]}>
+                  HRV
+                </Text>
+              </View>
+
+              <View style={[styles.biometricItem, { backgroundColor: palette.warningBackground }]}>
+                <Ionicons name="flash" size={20} color={palette.warning} />
+                <Text style={[styles.biometricValue, { color: palette.text }]}>
+                  {biometrics.stressIndex}%
+                </Text>
+                <Text style={[styles.biometricLabel, { color: palette.textSecondary }]}>
+                  Stress
+                </Text>
+              </View>
+
+              <View style={[styles.biometricItem, { backgroundColor: palette.infoBackground }]}>
+                <Ionicons name="moon" size={20} color={palette.info} />
+                <Text style={[styles.biometricValue, { color: palette.text }]}>
+                  {biometrics.sleepQuality}%
+                </Text>
+                <Text style={[styles.biometricLabel, { color: palette.textSecondary }]}>
+                  Sleep Quality
+                </Text>
+              </View>
+            </View>
+          </View>
+        )}
+
+        {/* AI Crash Prediction */}
+        {crashPrediction && (
+          <View style={[
+            styles.card,
+            {
+              backgroundColor: crashPrediction.crashRisk === 'critical' ? palette.errorBackground :
+                crashPrediction.crashRisk === 'high' ? palette.warningBackground :
+                palette.surface
+            }
+          ]}>
+            <View style={styles.predictionHeader}>
+              <Ionicons
+                name={crashPrediction.crashRisk === 'critical' ? 'alert-circle' : 'warning'}
+                size={24}
+                color={crashPrediction.crashRisk === 'critical' ? palette.error :
+                  crashPrediction.crashRisk === 'high' ? palette.warning : palette.info}
+              />
+              <Text style={[styles.sectionTitle, { color: palette.text, marginLeft: 8 }]}>
+                AI Energy Prediction
+              </Text>
+            </View>
+
+            <View style={styles.crashRiskContainer}>
+              <Text style={[styles.crashRiskLabel, { color: palette.textSecondary }]}>
+                Crash Risk:
+              </Text>
+              <View style={[
+                styles.crashRiskBadge,
+                {
+                  backgroundColor: crashPrediction.crashRisk === 'critical' ? palette.error :
+                    crashPrediction.crashRisk === 'high' ? palette.warning :
+                    crashPrediction.crashRisk === 'medium' ? palette.info : palette.success
+                }
+              ]}>
+                <Text style={styles.crashRiskText}>
+                  {crashPrediction.crashRisk.toUpperCase()} ({crashPrediction.crashProbability}%)
+                </Text>
+              </View>
+            </View>
+
+            <Text style={[styles.optimalRestText, { color: palette.textSecondary }]}>
+              Optimal rest window: {crashPrediction.optimalRestTime}
+            </Text>
+
+            {crashPrediction.recommendations.length > 0 && (
+              <View style={styles.recommendationsContainer}>
+                <Text style={[styles.recommendationsLabel, { color: palette.text }]}>
+                  AI Recommendations:
+                </Text>
+                {crashPrediction.recommendations.map((rec, index) => (
+                  <Text key={index} style={[styles.recommendationText, { color: palette.textSecondary }]}>
+                    • {rec}
+                  </Text>
+                ))}
+              </View>
+            )}
+          </View>
+        )}
+
+        {/* Crisis Risk Prediction */}
+        {crisisPrediction && crisisPrediction.riskLevel !== 'low' && (
+          <View style={[
+            styles.card,
+            {
+              backgroundColor: crisisPrediction.riskLevel === 'imminent' ? palette.errorBackground :
+                crisisPrediction.riskLevel === 'high' ? palette.warningBackground :
+                palette.infoBackground
+            }
+          ]}>
+            <View style={styles.crisisHeader}>
+              <Ionicons
+                name="shield-checkmark"
+                size={24}
+                color={crisisPrediction.riskLevel === 'imminent' ? palette.error :
+                  crisisPrediction.riskLevel === 'high' ? palette.warning : palette.info}
+              />
+              <Text style={[styles.sectionTitle, { color: palette.text, marginLeft: 8 }]}>
+                Emotional Safety Check
+              </Text>
+            </View>
+
+            <Text style={[styles.crisisRiskText, { color: palette.text }]}>
+              Risk Level: {crisisPrediction.riskLevel.toUpperCase()}
+            </Text>
+
+            {crisisPrediction.preventiveActions.length > 0 && (
+              <View style={styles.preventiveActions}>
+                {crisisPrediction.preventiveActions.map((action, index) => (
+                  <Text key={index} style={[styles.actionText, { color: palette.text }]}>
+                    ⚡ {action}
+                  </Text>
+                ))}
+              </View>
+            )}
+
+            <Pressable
+              style={[styles.crisisButton, { backgroundColor: palette.primary }]}
+              onPress={() => emotionalFirstAid.getPersonalizedIntervention()}
+            >
+              <Ionicons name="hand-left" size={20} color={palette.onPrimary} />
+              <Text style={[styles.crisisButtonText, { color: palette.onPrimary }]}>
+                Get Personalized Intervention
+              </Text>
+            </Pressable>
+          </View>
+        )}
+
+        {/* Cognitive Pattern Awareness */}
+        {thoughtPatterns.length > 0 && (
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <View style={styles.cognitiveHeader}>
+              <Ionicons name="brain" size={24} color={palette.primary} />
+              <Text style={[styles.sectionTitle, { color: palette.text, marginLeft: 8 }]}>
+                Cognitive Patterns
+              </Text>
+            </View>
+
+            {thoughtPatterns.slice(0, 3).map((pattern, index) => (
+              <View key={index} style={styles.patternItem}>
+                <View style={styles.patternInfo}>
+                  <Text style={[styles.patternType, { color: palette.text }]}>
+                    {pattern.distortionType.replace(/_/g, ' ')}
+                  </Text>
+                  <Text style={[styles.patternTrend, { color: pattern.trend === 'decreasing' ? palette.success : pattern.trend === 'increasing' ? palette.error : palette.textSecondary }]}>
+                    {pattern.trend === 'decreasing' ? '↓ Improving' : pattern.trend === 'increasing' ? '↑ Watch this' : '→ Stable'}
+                  </Text>
+                </View>
+                <View style={[styles.patternFrequency, { backgroundColor: palette.primary + '20' }]}>
+                  <Text style={[styles.frequencyText, { color: palette.primary }]}>
+                    {pattern.frequency}x
+                  </Text>
+                </View>
+              </View>
+            ))}
+          </View>
+        )}
+
         <View style={styles.bottomSpacer} />
       </ScrollView>
     </>
@@ -511,6 +731,139 @@ const styles = StyleSheet.create({
   },
   bottomSpacer: {
     height: 32,
+  },
+  // ============================================================================
+  // AI BIOFEEDBACK STYLES
+  // ============================================================================
+  biofeedbackHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  biometricGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+  },
+  biometricItem: {
+    flex: 1,
+    minWidth: '45%',
+    padding: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  biometricValue: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 4,
+  },
+  biometricLabel: {
+    fontSize: 11,
+    marginTop: 2,
+  },
+  predictionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  crashRiskContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  crashRiskLabel: {
+    fontSize: 14,
+    marginRight: 8,
+  },
+  crashRiskBadge: {
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  crashRiskText: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: '#FFF',
+  },
+  optimalRestText: {
+    fontSize: 13,
+    marginBottom: 12,
+  },
+  recommendationsContainer: {
+    marginTop: 8,
+  },
+  recommendationsLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    marginBottom: 4,
+  },
+  recommendationText: {
+    fontSize: 13,
+    marginLeft: 8,
+    marginBottom: 2,
+  },
+  crisisHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  crisisRiskText: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 8,
+  },
+  preventiveActions: {
+    marginBottom: 12,
+  },
+  actionText: {
+    fontSize: 13,
+    marginBottom: 4,
+  },
+  crisisButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 12,
+    borderRadius: 8,
+    gap: 8,
+  },
+  crisisButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  cognitiveHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  patternItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 8,
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#E0E0E0',
+  },
+  patternInfo: {
+    flex: 1,
+  },
+  patternType: {
+    fontSize: 14,
+    fontWeight: '500',
+    textTransform: 'capitalize',
+  },
+  patternTrend: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  patternFrequency: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  frequencyText: {
+    fontSize: 12,
+    fontWeight: '600',
   },
 });
 

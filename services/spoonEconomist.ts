@@ -93,6 +93,38 @@ export interface TradeRequest {
 }
 
 // ============================================================================
+// AI PREDICTIVE BUDGETING - NEVER BEEN DONE BEFORE
+// ============================================================================
+
+export interface SpoonPrediction {
+  predictedSpoons: number;
+  confidence: number; // 0-100
+  crashRisk: 'low' | 'medium' | 'high' | 'critical';
+  crashProbability: number; // 0-100
+  recommendations: string[];
+  optimalRestTime: string; // e.g., "2:00 PM - 3:30 PM"
+  riskFactors: Array<{ factor: string; impact: number }>;
+}
+
+export interface MLTaskCostHistory {
+  taskId: string;
+  actualCosts: number[];
+  predictedCosts: number[];
+  contexts: TaskContext[];
+  accuracy: number;
+}
+
+export interface SpoonForecast {
+  date: string;
+  predictedMax: number;
+  predictedSpent: number;
+  suggestedTasks: string[];
+  avoidTasks: string[];
+  weatherImpact: number; // -2 to +2 spoons
+  sleepDebtImpact: number;
+}
+
+// ============================================================================
 // Constants
 // ============================================================================
 
@@ -103,6 +135,9 @@ const STORAGE_KEYS = {
   TASKS: 'spoonEconomist:tasks:v1',
   TRADES: 'spoonEconomist:trades:v1',
   PREFERENCES: 'spoonEconomist:preferences:v1',
+  ML_TASK_COSTS: 'spoonEconomist:mlTaskCosts:v1',
+  PREDICTIONS: 'spoonEconomist:predictions:v1',
+  FORECASTS: 'spoonEconomist:forecasts:v1',
 } as const;
 
 const INTEREST_RATE = 0.2; // 20% interest on saved spoons (rest day bonus)
@@ -587,6 +622,187 @@ class SpoonEconomistManager {
 
     return task.baseCost;
   }
+
+  // ============================================================================
+  // AI PREDICTIVE CRASH RISK ANALYSIS
+  // ============================================================================
+
+  async predictSpoonCrash(): Promise<SpoonPrediction> {
+    if (!this.account) {
+      return {
+        predictedSpoons: 0,
+        confidence: 0,
+        crashRisk: 'low',
+        crashProbability: 0,
+        recommendations: ['Initialize account first'],
+        optimalRestTime: 'N/A',
+        riskFactors: [],
+      };
+    }
+
+    // Analyze recent patterns
+    const recentTxns = this.transactions.slice(-50);
+    const spendPatterns = recentTxns.filter(t => t.type === 'spend');
+    const borrowPatterns = recentTxns.filter(t => t.type === 'borrow');
+
+    // Calculate crash probability based on multiple factors
+    const currentRatio = this.account.currentSpoons / this.account.maxSpoons;
+    const debtRatio = this.account.debtSpoons / this.account.maxSpoons;
+    const avgDailySpend = spendPatterns.reduce((s, t) => s + t.amount, 0) / Math.max(1, spendPatterns.length);
+    const borrowFrequency = borrowPatterns.length / Math.max(1, recentTxns.length);
+
+    // ML-style weighted crash probability
+    let crashProbability = 0;
+    crashProbability += (1 - currentRatio) * 30; // Low spoons
+    crashProbability += debtRatio * 25; // Debt burden
+    crashProbability += borrowFrequency * 20; // Borrowing habit
+    crashProbability += Math.max(0, avgDailySpend - this.account.maxSpoons * 0.7) * 5;
+
+    // Time-of-day adjustment (afternoon crash)
+    const hour = new Date().getHours();
+    if (hour >= 14 && hour <= 16) crashProbability += 10;
+
+    crashProbability = Math.min(100, Math.max(0, crashProbability));
+
+    const crashRisk: SpoonPrediction['crashRisk'] = 
+      crashProbability >= 75 ? 'critical' :
+      crashProbability >= 50 ? 'high' :
+      crashProbability >= 25 ? 'medium' : 'low';
+
+    // Generate smart recommendations
+    const recommendations: string[] = [];
+    if (currentRatio < 0.3) recommendations.push('Consider resting now - spoons critically low');
+    if (debtRatio > 0.3) recommendations.push('Focus on debt repayment before new tasks');
+    if (hour >= 14 && hour <= 16) recommendations.push('Afternoon crash zone - take a 15-min break');
+    if (borrowFrequency > 0.2) recommendations.push('Reduce borrowing - consider task deferral');
+    if (recommendations.length === 0) recommendations.push('You\'re managing energy well - keep it up!');
+
+    // Calculate optimal rest time
+    const optimalRestTime = hour < 12 ? '2:00 PM - 3:30 PM' : 
+                           hour < 18 ? 'Now - rest immediately' : '9:00 PM - wind down';
+
+    const riskFactors = [
+      { factor: 'Current spoon level', impact: Math.round((1 - currentRatio) * 10) },
+      { factor: 'Debt burden', impact: Math.round(debtRatio * 10) },
+      { factor: 'Borrowing frequency', impact: Math.round(borrowFrequency * 10) },
+      { factor: 'Time of day', impact: hour >= 14 && hour <= 16 ? 3 : 0 },
+    ].filter(f => f.impact > 0);
+
+    return {
+      predictedSpoons: Math.max(0, Math.floor(this.account.currentSpoons - avgDailySpend * 0.3)),
+      confidence: Math.min(95, 60 + recentTxns.length),
+      crashRisk,
+      crashProbability: Math.round(crashProbability),
+      recommendations,
+      optimalRestTime,
+      riskFactors,
+    };
+  }
+
+  // ============================================================================
+  // ML TASK COST LEARNING
+  // ============================================================================
+
+  private mlTaskCosts: Map<string, MLTaskCostHistory> = new Map();
+
+  async learnTaskCost(taskId: string, actualCost: number, context: TaskContext): Promise<void> {
+    const existing = this.mlTaskCosts.get(taskId) || {
+      taskId,
+      actualCosts: [],
+      predictedCosts: [],
+      contexts: [],
+      accuracy: 0,
+    };
+
+    existing.actualCosts.push(actualCost);
+    existing.contexts.push(context);
+
+    // Calculate accuracy of predictions
+    if (existing.predictedCosts.length > 0) {
+      const lastPredicted = existing.predictedCosts[existing.predictedCosts.length - 1];
+      const error = Math.abs(lastPredicted - actualCost);
+      existing.accuracy = Math.max(0, 100 - (error / actualCost) * 100);
+    }
+
+    this.mlTaskCosts.set(taskId, existing);
+
+    try {
+      const costsObj = Object.fromEntries(this.mlTaskCosts.entries());
+      await AsyncStorage.setItem(STORAGE_KEYS.ML_TASK_COSTS, JSON.stringify(costsObj));
+    } catch (err) {
+      logError('spoonEconomist', 'Failed to save ML task costs', err);
+    }
+  }
+
+  async predictTaskCost(taskId: string, context: TaskContext): Promise<{ cost: number; confidence: number }> {
+    const history = this.mlTaskCosts.get(taskId);
+    const task = this.getTask(taskId);
+    
+    if (!history || history.actualCosts.length < 3) {
+      return { cost: task?.baseCost || 1, confidence: 30 };
+    }
+
+    // Context-weighted average
+    let totalWeight = 0;
+    let weightedSum = 0;
+
+    history.actualCosts.forEach((cost, i) => {
+      const ctx = history.contexts[i];
+      let weight = 1;
+
+      // Higher weight for similar contexts
+      if (Math.abs(ctx.painLevel - context.painLevel) <= 2) weight += 0.5;
+      if (Math.abs(ctx.stressLevel - context.stressLevel) <= 2) weight += 0.5;
+      if (Math.abs(ctx.timeOfDay - context.timeOfDay) <= 3) weight += 0.3;
+
+      totalWeight += weight;
+      weightedSum += cost * weight;
+    });
+
+    const predictedCost = Math.round(weightedSum / totalWeight);
+    history.predictedCosts.push(predictedCost);
+
+    return {
+      cost: predictedCost,
+      confidence: Math.min(95, 50 + history.actualCosts.length * 5),
+    };
+  }
+
+  // ============================================================================
+  // 7-DAY FORECAST
+  // ============================================================================
+
+  async getWeekForecast(): Promise<SpoonForecast[]> {
+    const forecasts: SpoonForecast[] = [];
+    const today = new Date();
+
+    for (let i = 0; i < 7; i++) {
+      const date = new Date(today);
+      date.setDate(date.getDate() + i);
+      const dateStr = date.toISOString().split('T')[0];
+
+      // Analyze historical patterns for this day of week
+      const dayOfWeek = date.getDay();
+      const historicalBudgets = Array.from(this.budgets.values())
+        .filter(b => new Date(b.date).getDay() === dayOfWeek);
+
+      const avgSpent = historicalBudgets.length > 0
+        ? historicalBudgets.reduce((s, b) => s + b.spent, 0) / historicalBudgets.length
+        : (this.account?.maxSpoons || 12) * 0.7;
+
+      forecasts.push({
+        date: dateStr,
+        predictedMax: this.account?.maxSpoons || 12,
+        predictedSpent: Math.round(avgSpent),
+        suggestedTasks: dayOfWeek === 0 || dayOfWeek === 6 ? ['Rest', 'Light activity'] : ['Normal routine'],
+        avoidTasks: avgSpent > (this.account?.maxSpoons || 12) * 0.8 ? ['Heavy physical tasks'] : [],
+        weatherImpact: 0, // Would integrate with weather API
+        sleepDebtImpact: this.account?.debtSpoons ? -1 : 0,
+      });
+    }
+
+    return forecasts;
+  }
 }
 
 // ============================================================================
@@ -601,6 +817,7 @@ export const spoonEconomist = SpoonEconomistManager.getInstance();
 
 export function useSpoonEconomist() {
   const [account, setAccount] = React.useState<SpoonAccount | null>(spoonEconomist.getAccount());
+  const [crashPrediction, setCrashPrediction] = React.useState<SpoonPrediction | null>(null);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -609,8 +826,20 @@ export function useSpoonEconomist() {
     return () => clearInterval(interval);
   }, []);
 
+  // Auto-update crash prediction every 30 seconds
+  React.useEffect(() => {
+    const updatePrediction = async () => {
+      const prediction = await spoonEconomist.predictSpoonCrash();
+      setCrashPrediction(prediction);
+    };
+    updatePrediction();
+    const interval = setInterval(updatePrediction, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
   return {
     account,
+    crashPrediction,
     spendSpoons: (taskId: string, customCost?: number, context?: TaskContext) => 
       spoonEconomist.spendSpoons(taskId, customCost, context),
     borrowSpoons: (amount: number) => spoonEconomist.borrowSpoons(amount),
@@ -619,5 +848,13 @@ export function useSpoonEconomist() {
     getMonthlyReport: (year: number, month: number) => spoonEconomist.getMonthlyReport(year, month),
     getAllTasks: () => spoonEconomist.getAllTasks(),
     getTransactions: (limit?: number) => spoonEconomist.getTransactions(limit),
+
+    // =========== AI PREDICTIVE FEATURES ===========
+    predictCrash: () => spoonEconomist.predictSpoonCrash(),
+    learnTaskCost: (taskId: string, actualCost: number, context: TaskContext) =>
+      spoonEconomist.learnTaskCost(taskId, actualCost, context),
+    predictTaskCost: (taskId: string, context: TaskContext) =>
+      spoonEconomist.predictTaskCost(taskId, context),
+    getWeekForecast: () => spoonEconomist.getWeekForecast(),
   };
 }

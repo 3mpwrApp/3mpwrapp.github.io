@@ -76,10 +76,43 @@ export interface HapticPreferences {
 }
 
 // ============================================================================
+// ADAPTIVE HAPTIC LEARNING - NEVER BEEN DONE BEFORE
+// ============================================================================
+
+export interface HapticLearningProfile {
+  userId: string;
+  preferredIntensities: Record<HapticMessageType, 'light' | 'medium' | 'heavy'>;
+  effectivenessScores: Record<HapticMessageType, number>; // 0-100
+  responseLatencies: Record<HapticMessageType, number[]>; // ms to respond
+  dismissRates: Record<HapticMessageType, number>; // 0-1
+  timeOfDayPreferences: Record<number, 'light' | 'medium' | 'heavy'>; // hour -> intensity
+  lastUpdated: number;
+}
+
+export interface HapticContext {
+  userState: 'active' | 'resting' | 'sleeping' | 'stressed' | 'unknown';
+  environment: 'quiet' | 'noisy' | 'moving' | 'unknown';
+  urgency: 'low' | 'medium' | 'high' | 'critical';
+  sentiment: 'positive' | 'neutral' | 'negative' | 'alert';
+  previousPattern?: HapticMessageType;
+  timeSinceLastHaptic: number; // ms
+}
+
+export interface AdaptiveHapticResult {
+  patternUsed: HapticMessageType;
+  intensityUsed: 'light' | 'medium' | 'heavy';
+  adapted: boolean;
+  adaptationReasons: string[];
+  predictedEffectiveness: number; // 0-100
+}
+
+// ============================================================================
 // Constants
 // ============================================================================
 
 const STORAGE_KEY = 'hapticLanguage:preferences:v1';
+const LEARNING_PROFILE_KEY = 'hapticLanguage:learningProfile:v1';
+const HAPTIC_HISTORY_KEY = 'hapticLanguage:history:v1';
 
 const DEFAULT_PATTERNS: Record<HapticMessageType, HapticPattern> = {
   urgent_deadline: {
@@ -516,6 +549,250 @@ class HapticLanguageManager {
     this.preferences.learnedPatterns = {} as any;
     await this.savePreferences();
   }
+
+  // ============================================================================
+  // ADAPTIVE HAPTIC LEARNING
+  // ============================================================================
+
+  private learningProfile: HapticLearningProfile | null = null;
+  private hapticHistory: Array<{ type: HapticMessageType; timestamp: number; responseTime?: number; dismissed?: boolean }> = [];
+  private lastHapticTime: number = 0;
+
+  async initLearningProfile(): Promise<void> {
+    try {
+      const profileStr = await AsyncStorage.getItem(LEARNING_PROFILE_KEY);
+      const historyStr = await AsyncStorage.getItem(HAPTIC_HISTORY_KEY);
+
+      if (profileStr) {
+        this.learningProfile = JSON.parse(profileStr);
+      } else {
+        this.learningProfile = {
+          userId: 'default',
+          preferredIntensities: {} as any,
+          effectivenessScores: {} as any,
+          responseLatencies: {} as any,
+          dismissRates: {} as any,
+          timeOfDayPreferences: {},
+          lastUpdated: Date.now(),
+        };
+      }
+
+      if (historyStr) {
+        this.hapticHistory = JSON.parse(historyStr);
+      }
+    } catch (err) {
+      logError('hapticLanguage', 'Failed to load learning profile', err);
+    }
+  }
+
+  async playAdaptive(type: HapticMessageType, context: HapticContext): Promise<AdaptiveHapticResult> {
+    const adaptationReasons: string[] = [];
+    let intensityUsed = this.preferences.intensity;
+    let adapted = false;
+
+    // Initialize learning profile if needed
+    if (!this.learningProfile) {
+      await this.initLearningProfile();
+    }
+
+    // Adaptive intensity based on context
+    if (context.userState === 'sleeping' || context.userState === 'resting') {
+      intensityUsed = 'light';
+      adaptationReasons.push('Reduced intensity for resting state');
+      adapted = true;
+    } else if (context.userState === 'stressed') {
+      intensityUsed = context.urgency === 'critical' ? 'heavy' : 'light';
+      adaptationReasons.push('Adjusted for stressed state');
+      adapted = true;
+    }
+
+    // Sentiment-based adaptation
+    if (context.sentiment === 'positive' && type === 'achievement') {
+      intensityUsed = 'heavy'; // Celebrate achievements!
+      adaptationReasons.push('Enhanced for positive sentiment');
+      adapted = true;
+    } else if (context.sentiment === 'negative' && type !== 'emergency_alert') {
+      intensityUsed = 'light';
+      adaptationReasons.push('Softened for negative sentiment');
+      adapted = true;
+    }
+
+    // Time-of-day learning
+    const hour = new Date().getHours();
+    if (this.learningProfile?.timeOfDayPreferences[hour]) {
+      intensityUsed = this.learningProfile.timeOfDayPreferences[hour];
+      adaptationReasons.push(`Learned preference for hour ${hour}`);
+      adapted = true;
+    }
+
+    // Haptic fatigue detection
+    if (context.timeSinceLastHaptic < 5000 && context.urgency !== 'critical') {
+      intensityUsed = 'light';
+      adaptationReasons.push('Reduced for haptic fatigue prevention');
+      adapted = true;
+    }
+
+    // Apply learned preferences for this type
+    if (this.learningProfile?.preferredIntensities[type]) {
+      intensityUsed = this.learningProfile.preferredIntensities[type];
+      adaptationReasons.push('Using learned preference for pattern type');
+      adapted = true;
+    }
+
+    // Record haptic event
+    this.lastHapticTime = Date.now();
+    this.hapticHistory.push({
+      type,
+      timestamp: Date.now(),
+    });
+
+    // Play the haptic with adapted intensity
+    const originalIntensity = this.preferences.intensity;
+    this.preferences.intensity = intensityUsed;
+    await this.play(type);
+    this.preferences.intensity = originalIntensity;
+
+    // Calculate predicted effectiveness
+    const effectiveness = this.learningProfile?.effectivenessScores[type] || 70;
+
+    // Keep history limited
+    if (this.hapticHistory.length > 500) {
+      this.hapticHistory = this.hapticHistory.slice(-500);
+    }
+
+    try {
+      await AsyncStorage.setItem(HAPTIC_HISTORY_KEY, JSON.stringify(this.hapticHistory));
+    } catch (err) {
+      logError('hapticLanguage', 'Failed to save haptic history', err);
+    }
+
+    return {
+      patternUsed: type,
+      intensityUsed,
+      adapted,
+      adaptationReasons,
+      predictedEffectiveness: effectiveness,
+    };
+  }
+
+  async recordUserResponse(type: HapticMessageType, responseTimeMs: number, dismissed: boolean): Promise<void> {
+    if (!this.learningProfile) await this.initLearningProfile();
+    if (!this.learningProfile) return;
+
+    // Update response latencies
+    if (!this.learningProfile.responseLatencies[type]) {
+      this.learningProfile.responseLatencies[type] = [];
+    }
+    this.learningProfile.responseLatencies[type].push(responseTimeMs);
+    // Keep only last 20 responses
+    if (this.learningProfile.responseLatencies[type].length > 20) {
+      this.learningProfile.responseLatencies[type] = this.learningProfile.responseLatencies[type].slice(-20);
+    }
+
+    // Update dismiss rates
+    const history = this.hapticHistory.filter(h => h.type === type);
+    const dismissedCount = history.filter(h => h.dismissed).length;
+    this.learningProfile.dismissRates[type] = dismissedCount / Math.max(1, history.length);
+
+    // Calculate effectiveness (inverse of dismiss rate + response time factor)
+    const avgResponseTime = this.learningProfile.responseLatencies[type].reduce((s, t) => s + t, 0) / 
+      this.learningProfile.responseLatencies[type].length;
+    const dismissRate = this.learningProfile.dismissRates[type];
+    const effectiveness = Math.round((1 - dismissRate) * 70 + (1 - Math.min(1, avgResponseTime / 10000)) * 30);
+    this.learningProfile.effectivenessScores[type] = effectiveness;
+
+    // Learn intensity preference based on response
+    if (responseTimeMs < 2000 && !dismissed) {
+      // Quick, non-dismissed response = current intensity works
+      this.learningProfile.preferredIntensities[type] = this.preferences.intensity;
+    } else if (dismissed) {
+      // Dismissed = might be too intrusive, reduce intensity
+      this.learningProfile.preferredIntensities[type] = 'light';
+    }
+
+    // Time-of-day learning
+    const hour = new Date().getHours();
+    if (!dismissed && responseTimeMs < 3000) {
+      this.learningProfile.timeOfDayPreferences[hour] = this.preferences.intensity;
+    }
+
+    // Update last haptic in history with response data
+    const lastHistoryItem = this.hapticHistory.find(
+      h => h.type === type && !h.responseTime
+    );
+    if (lastHistoryItem) {
+      lastHistoryItem.responseTime = responseTimeMs;
+      lastHistoryItem.dismissed = dismissed;
+    }
+
+    this.learningProfile.lastUpdated = Date.now();
+
+    try {
+      await AsyncStorage.setItem(LEARNING_PROFILE_KEY, JSON.stringify(this.learningProfile));
+      await AsyncStorage.setItem(HAPTIC_HISTORY_KEY, JSON.stringify(this.hapticHistory));
+    } catch (err) {
+      logError('hapticLanguage', 'Failed to save learning profile', err);
+    }
+  }
+
+  async getAdaptiveRecommendations(): Promise<{
+    mostEffective: HapticMessageType[];
+    leastEffective: HapticMessageType[];
+    optimalIntensity: 'light' | 'medium' | 'heavy';
+    suggestedQuietHours: { start: number; end: number } | null;
+  }> {
+    if (!this.learningProfile) await this.initLearningProfile();
+
+    const effectivenessEntries = Object.entries(this.learningProfile?.effectivenessScores || {});
+    const sorted = effectivenessEntries.sort((a, b) => b[1] - a[1]);
+
+    const mostEffective = sorted.slice(0, 3).map(([type]) => type as HapticMessageType);
+    const leastEffective = sorted.slice(-3).map(([type]) => type as HapticMessageType);
+
+    // Find optimal intensity from preferences
+    const intensityCounts = { light: 0, medium: 0, heavy: 0 };
+    Object.values(this.learningProfile?.preferredIntensities || {}).forEach(intensity => {
+      intensityCounts[intensity]++;
+    });
+    const optimalIntensity = Object.entries(intensityCounts)
+      .sort((a, b) => b[1] - a[1])[0][0] as 'light' | 'medium' | 'heavy';
+
+    // Suggest quiet hours based on dismiss patterns
+    let suggestedQuietHours: { start: number; end: number } | null = null;
+    const hourlyDismissRates: Record<number, number> = {};
+    this.hapticHistory.forEach(h => {
+      const hour = new Date(h.timestamp).getHours();
+      if (!hourlyDismissRates[hour]) hourlyDismissRates[hour] = 0;
+      if (h.dismissed) hourlyDismissRates[hour]++;
+    });
+
+    const highDismissHours = Object.entries(hourlyDismissRates)
+      .filter(([_, rate]) => rate > 3)
+      .map(([hour]) => parseInt(hour))
+      .sort((a, b) => a - b);
+
+    if (highDismissHours.length >= 2) {
+      suggestedQuietHours = {
+        start: highDismissHours[0],
+        end: highDismissHours[highDismissHours.length - 1],
+      };
+    }
+
+    return {
+      mostEffective,
+      leastEffective,
+      optimalIntensity,
+      suggestedQuietHours,
+    };
+  }
+
+  getLearningProfile(): HapticLearningProfile | null {
+    return this.learningProfile ? { ...this.learningProfile } : null;
+  }
+
+  getTimeSinceLastHaptic(): number {
+    return Date.now() - this.lastHapticTime;
+  }
 }
 
 // ============================================================================
@@ -535,6 +812,14 @@ export function useHapticLanguage() {
     setEnabled: (enabled: boolean) => hapticLanguage.setEnabled(enabled),
     getAllPatterns: () => hapticLanguage.getAllPatterns(),
     getUsageStats: () => hapticLanguage.getUsageStats(),
+    // =========== ADAPTIVE HAPTIC LEARNING ===========
+    playAdaptive: (type: HapticMessageType, context: HapticContext) =>
+      hapticLanguage.playAdaptive(type, context),
+    recordResponse: (type: HapticMessageType, responseTimeMs: number, dismissed: boolean) =>
+      hapticLanguage.recordUserResponse(type, responseTimeMs, dismissed),
+    getRecommendations: () => hapticLanguage.getAdaptiveRecommendations(),
+    getLearningProfile: () => hapticLanguage.getLearningProfile(),
+    getTimeSinceLastHaptic: () => hapticLanguage.getTimeSinceLastHaptic(),
   };
 }
 

@@ -87,6 +87,68 @@ export interface SocraticRound {
 }
 
 // ============================================================================
+// AI CBT COACHING - NEVER BEEN DONE BEFORE
+// ============================================================================
+
+export interface AITherapeuticInsight {
+  insight: string;
+  supportingEvidence: string[];
+  actionableSteps: string[];
+  relatedThoughts: string[];
+  therapeuticApproach: 'cbt' | 'act' | 'dbt' | 'metacognitive';
+  confidenceLevel: number;
+}
+
+export interface BeliefNetworkNode {
+  id: string;
+  belief: string;
+  type: 'core' | 'intermediate' | 'automatic';
+  strength: number; // 0-100
+  connections: Array<{ targetId: string; relationship: 'supports' | 'contradicts' | 'derives_from' }>;
+  distortions: CognitiveDistortionType[];
+  lastActivated: number;
+  challengeAttempts: number;
+  successfulChallenges: number;
+}
+
+export interface BeliefNetwork {
+  nodes: BeliefNetworkNode[];
+  coreBeliefs: string[];
+  primaryDistortionChain: string[];
+  suggestedInterventions: string[];
+}
+
+export interface ThoughtPrediction {
+  predictedThought: string;
+  triggerSituation: string;
+  probability: number;
+  preventiveIntervention: string;
+  copingStatement: string;
+}
+
+export interface CognitiveRestructuringSession {
+  sessionId: string;
+  startTime: number;
+  originalThought: string;
+  distortionsIdentified: CognitiveDistortionType[];
+  evidenceFor: string[];
+  evidenceAgainst: string[];
+  balancedThought: string;
+  believabilityShift: number;
+  moodShift: number;
+  techniques: string[];
+}
+
+export interface CoreBeliefExcavation {
+  surfaceThought: string;
+  downwardArrowSteps: Array<{ question: string; response: string }>;
+  excavatedCoreBelief: string;
+  beliefCategory: 'helplessness' | 'unlovability' | 'worthlessness' | 'vulnerability';
+  originHypothesis: string;
+  challengeStrategy: string;
+}
+
+// ============================================================================
 // Constants
 // ============================================================================
 
@@ -94,6 +156,9 @@ const STORAGE_KEYS = {
   THOUGHTS: 'cognitiveScanner:thoughts:v1',
   PATTERNS: 'cognitiveScanner:patterns:v1',
   DIALOGUES: 'cognitiveScanner:dialogues:v1',
+  BELIEF_NETWORK: 'cognitiveScanner:beliefNetwork:v1',
+  RESTRUCTURING_SESSIONS: 'cognitiveScanner:restructuring:v1',
+  CORE_BELIEFS: 'cognitiveScanner:coreBeliefs:v1',
 } as const;
 
 const DISTORTION_PATTERNS: Record<
@@ -799,6 +864,318 @@ class CognitiveDistortionScannerManager {
     thought.helpful = helpful;
     await this.saveData();
   }
+
+  // ============================================================================
+  // AI CBT COACHING
+  // ============================================================================
+
+  private beliefNetwork: BeliefNetworkNode[] = [];
+  private restructuringSessions: CognitiveRestructuringSession[] = [];
+
+  async getAITherapeuticInsight(thoughtId: string): Promise<AITherapeuticInsight> {
+    const thought = this.thoughts.find(t => t.id === thoughtId);
+    const patterns = this.getPatterns();
+    
+    if (!thought) {
+      return {
+        insight: 'No thought found with this ID',
+        supportingEvidence: [],
+        actionableSteps: ['Log a thought first to receive insights'],
+        relatedThoughts: [],
+        therapeuticApproach: 'cbt',
+        confidenceLevel: 0,
+      };
+    }
+
+    // Analyze distortion patterns
+    const primaryDistortion = thought.detectedDistortions[0]?.type;
+    const frequency = patterns.find(p => p.distortionType === primaryDistortion)?.frequency || 0;
+
+    // Generate insight based on patterns
+    let insight = '';
+    let therapeuticApproach: AITherapeuticInsight['therapeuticApproach'] = 'cbt';
+    const actionableSteps: string[] = [];
+
+    if (primaryDistortion === 'all_or_nothing') {
+      insight = 'Your thought reflects black-and-white thinking. Most situations exist on a spectrum rather than at extremes.';
+      actionableSteps.push('Rate this situation on a scale of 0-100 instead of all-or-nothing');
+      actionableSteps.push('List 3 shades of gray between the extremes');
+    } else if (primaryDistortion === 'catastrophizing' || primaryDistortion === 'magnification') {
+      insight = 'You may be predicting the worst possible outcome. Let\'s examine the realistic probability.';
+      therapeuticApproach = 'act';
+      actionableSteps.push('What\'s the actual probability of the worst outcome?');
+      actionableSteps.push('What would you do if the worst did happen?');
+      actionableSteps.push('What\'s a more likely outcome?');
+    } else if (primaryDistortion === 'should_statements') {
+      insight = 'Rigid "should" rules often lead to frustration. Consider replacing "should" with "prefer" or "would like".';
+      therapeuticApproach = 'dbt';
+      actionableSteps.push('Rewrite this thought using "I prefer" instead of "I should"');
+      actionableSteps.push('Ask: Is this rule serving me or causing suffering?');
+    } else if (primaryDistortion === 'emotional_reasoning') {
+      insight = 'Feelings are real but don\'t always reflect reality. Just because you feel something doesn\'t make it true.';
+      therapeuticApproach = 'metacognitive';
+      actionableSteps.push('Separate the feeling from the fact');
+      actionableSteps.push('What evidence exists outside of how you feel?');
+    } else {
+      insight = `This thought pattern (${primaryDistortion || 'general'}) is common but can be challenged with evidence-based thinking.`;
+      actionableSteps.push('Examine the evidence for and against this thought');
+      actionableSteps.push('Consider what you would tell a friend with this thought');
+    }
+
+    // Find related thoughts
+    const relatedThoughts = this.thoughts
+      .filter(t => t.id !== thoughtId && t.detectedDistortions.some(d => d.type === primaryDistortion))
+      .slice(0, 3)
+      .map(t => t.rawThought);
+
+    return {
+      insight,
+      supportingEvidence: [
+        `This distortion pattern has occurred ${frequency} times`,
+        thought.detectedDistortions.length > 1 ? `Multiple distortions detected: ${thought.detectedDistortions.map(d => d.type).join(', ')}` : 'Single distortion pattern',
+      ],
+      actionableSteps,
+      relatedThoughts,
+      therapeuticApproach,
+      confidenceLevel: Math.min(90, 50 + this.thoughts.length * 2),
+    };
+  }
+
+  async buildBeliefNetwork(): Promise<BeliefNetwork> {
+    // Analyze all thoughts to build a belief network
+    const beliefCounts = new Map<string, { count: number; distortions: CognitiveDistortionType[]; strength: number }>;
+
+    // Extract potential core beliefs from repeated thought patterns
+    this.thoughts.forEach(thought => {
+      // Identify potential belief statements
+      const lowerThought = thought.rawThought.toLowerCase();
+      
+      // Common core belief indicators
+      const coreBeliefIndicators = [
+        { pattern: /i am (worthless|useless|failure|stupid|bad|unlovable)/i, category: 'worthlessness' },
+        { pattern: /nobody (loves|cares|likes) me/i, category: 'unlovability' },
+        { pattern: /i can't (do anything|handle|cope|succeed)/i, category: 'helplessness' },
+        { pattern: /something bad will (happen|always happens)/i, category: 'vulnerability' },
+        { pattern: /i'm not (good enough|capable|worthy)/i, category: 'worthlessness' },
+      ];
+
+      coreBeliefIndicators.forEach(indicator => {
+        if (indicator.pattern.test(lowerThought)) {
+          const key = indicator.category;
+          const existing = beliefCounts.get(key) || { count: 0, distortions: [], strength: 0 };
+          existing.count++;
+          existing.distortions.push(...thought.detectedDistortions.map(d => d.type));
+          existing.strength = Math.min(100, existing.count * 10);
+          beliefCounts.set(key, existing);
+        }
+      });
+    });
+
+    // Build network nodes
+    const nodes: BeliefNetworkNode[] = [];
+    let nodeId = 0;
+
+    beliefCounts.forEach((data, belief) => {
+      nodes.push({
+        id: `node_${nodeId++}`,
+        belief,
+        type: data.count >= 5 ? 'core' : data.count >= 2 ? 'intermediate' : 'automatic',
+        strength: data.strength,
+        connections: [],
+        distortions: [...new Set(data.distortions)],
+        lastActivated: Date.now(),
+        challengeAttempts: 0,
+        successfulChallenges: 0,
+      });
+    });
+
+    // Add connections between nodes
+    nodes.forEach((node, i) => {
+      nodes.forEach((otherNode, j) => {
+        if (i !== j) {
+          // Connect nodes that share distortions
+          const sharedDistortions = node.distortions.filter(d => otherNode.distortions.includes(d));
+          if (sharedDistortions.length > 0) {
+            node.connections.push({
+              targetId: otherNode.id,
+              relationship: node.strength > otherNode.strength ? 'supports' : 'derives_from',
+            });
+          }
+        }
+      });
+    });
+
+    this.beliefNetwork = nodes;
+
+    // Identify core beliefs and intervention suggestions
+    const coreBeliefs = nodes.filter(n => n.type === 'core').map(n => n.belief);
+    const primaryChain = nodes
+      .sort((a, b) => b.strength - a.strength)
+      .slice(0, 5)
+      .map(n => n.belief);
+
+    const suggestedInterventions: string[] = [];
+    if (coreBeliefs.includes('worthlessness')) {
+      suggestedInterventions.push('Self-compassion exercises');
+      suggestedInterventions.push('Evidence log for accomplishments');
+    }
+    if (coreBeliefs.includes('unlovability')) {
+      suggestedInterventions.push('Relationship evidence gathering');
+      suggestedInterventions.push('Acts of kindness received journal');
+    }
+    if (coreBeliefs.includes('helplessness')) {
+      suggestedInterventions.push('Mastery and achievement activities');
+      suggestedInterventions.push('Problem-solving skills practice');
+    }
+
+    try {
+      await AsyncStorage.setItem(STORAGE_KEYS.BELIEF_NETWORK, JSON.stringify(nodes));
+    } catch (err) {
+      logError('cognitiveScanner', 'Failed to save belief network', err);
+    }
+
+    return {
+      nodes,
+      coreBeliefs,
+      primaryDistortionChain: primaryChain,
+      suggestedInterventions,
+    };
+  }
+
+  async predictNextThought(): Promise<ThoughtPrediction | null> {
+    if (this.thoughts.length < 5) {
+      return null; // Need more data for prediction
+    }
+
+    // Analyze patterns to predict likely future thoughts
+    const patterns = this.getPatterns();
+    const topPattern = patterns[0];
+    
+    if (!topPattern) return null;
+
+    const relatedThoughts = this.thoughts
+      .filter(t => t.detectedDistortions.some(d => d.type === topPattern.distortionType))
+      .slice(-5);
+
+    // Find common triggers
+    const commonTrigger = topPattern.commonTriggers[0] || 'stress';
+    const timePattern = topPattern.timePattern || 'afternoon';
+
+    // Generate predicted thought based on patterns
+    const distortionExamples: Record<CognitiveDistortionType, string> = {
+      all_or_nothing: 'I\'m going to completely fail at this',
+      overgeneralization: 'This always happens to me',
+      mental_filter: 'Nothing good ever happens',
+      disqualifying_positive: 'That doesn\'t really count',
+      jumping_to_conclusions: 'They probably think I\'m incompetent',
+      magnification: 'This is going to be a disaster',
+      emotional_reasoning: 'I feel anxious so something must be wrong',
+      should_statements: 'I should be able to handle this',
+      labeling: 'I\'m such a failure',
+      personalization: 'It\'s all my fault',
+      comparison: 'Everyone else is better than me',
+      what_if: 'What if everything goes wrong?',
+      fortune_telling: 'This will definitely end badly',
+      mind_reading: 'They\'re judging me right now',
+    };
+
+    const predictedThought = distortionExamples[topPattern.distortionType] || 'Negative automatic thought';
+
+    // Generate preventive intervention
+    const preventiveIntervention = `When you notice ${topPattern.distortionType.replace(/_/g, ' ')} thinking, pause and ask: "What evidence do I have for this thought?"`;
+
+    // Generate coping statement
+    const copingStatements: Record<CognitiveDistortionType, string> = {
+      all_or_nothing: 'Situations exist on a spectrum. I can look for the middle ground.',
+      overgeneralization: 'One instance doesn\'t define a pattern. I can consider the exceptions.',
+      mental_filter: 'I\'m choosing to also notice the positive aspects.',
+      disqualifying_positive: 'Positive experiences are valid and count just as much.',
+      jumping_to_conclusions: 'I don\'t have all the facts. I can wait and see.',
+      magnification: 'I can zoom out and see the bigger picture.',
+      emotional_reasoning: 'My feelings are valid but they\'re not always accurate.',
+      should_statements: 'I can replace "should" with "prefer" and be kinder to myself.',
+      labeling: 'A single action doesn\'t define my entire identity.',
+      personalization: 'Many factors contribute to outcomes. I\'m not solely responsible.',
+      comparison: 'I\'m on my own unique journey. Comparison isn\'t helpful.',
+      what_if: 'I can focus on what I can control right now.',
+      fortune_telling: 'I can\'t predict the future. Multiple outcomes are possible.',
+      mind_reading: 'I don\'t know what others think unless I ask.',
+    };
+
+    return {
+      predictedThought,
+      triggerSituation: `During ${timePattern} when experiencing ${commonTrigger}`,
+      probability: Math.min(85, 40 + topPattern.frequency * 3),
+      preventiveIntervention,
+      copingStatement: copingStatements[topPattern.distortionType],
+    };
+  }
+
+  async startCoreBeliefExcavation(surfaceThought: string): Promise<CoreBeliefExcavation> {
+    // Use downward arrow technique
+    const downwardArrowQuestions = [
+      'If that were true, what would it mean about you?',
+      'And if that were true, what would that say about you as a person?',
+      'What\'s the worst part about that for you?',
+      'What does that mean to you at the deepest level?',
+      'What core belief about yourself does this connect to?',
+    ];
+
+    const excavation: CoreBeliefExcavation = {
+      surfaceThought,
+      downwardArrowSteps: downwardArrowQuestions.slice(0, 3).map(q => ({
+        question: q,
+        response: '', // User will fill these in
+      })),
+      excavatedCoreBelief: '', // To be determined after responses
+      beliefCategory: 'worthlessness', // Default, will be updated
+      originHypothesis: 'This belief may have formed during early experiences where you felt criticized or not good enough.',
+      challengeStrategy: 'Gather evidence for and against this core belief. Notice when it\'s activated and practice more balanced thinking.',
+    };
+
+    try {
+      await AsyncStorage.setItem(STORAGE_KEYS.CORE_BELIEFS, JSON.stringify(excavation));
+    } catch (err) {
+      logError('cognitiveScanner', 'Failed to save core belief excavation', err);
+    }
+
+    return excavation;
+  }
+
+  async startRestructuringSession(thoughtId: string): Promise<CognitiveRestructuringSession> {
+    const thought = this.thoughts.find(t => t.id === thoughtId);
+    
+    if (!thought) {
+      throw new Error('Thought not found');
+    }
+
+    const session: CognitiveRestructuringSession = {
+      sessionId: `restructure_${Date.now()}`,
+      startTime: Date.now(),
+      originalThought: thought.rawThought,
+      distortionsIdentified: thought.detectedDistortions.map(d => d.type),
+      evidenceFor: [],
+      evidenceAgainst: [],
+      balancedThought: '',
+      believabilityShift: 0,
+      moodShift: 0,
+      techniques: ['Evidence examination', 'Cognitive restructuring', 'Balanced thinking'],
+    };
+
+    this.restructuringSessions.push(session);
+
+    try {
+      await AsyncStorage.setItem(STORAGE_KEYS.RESTRUCTURING_SESSIONS, JSON.stringify(this.restructuringSessions.slice(-50)));
+    } catch (err) {
+      logError('cognitiveScanner', 'Failed to save restructuring session', err);
+    }
+
+    return session;
+  }
+
+  getBeliefNetwork(): BeliefNetworkNode[] {
+    return [...this.beliefNetwork];
+  }
 }
 
 // ============================================================================
@@ -815,10 +1192,12 @@ export function useCognitiveDistortionScanner() {
   const [patterns, setPatterns] = React.useState<ThoughtPattern[]>(
     cognitiveDistortionScanner.getPatterns()
   );
+  const [beliefNetwork, setBeliefNetwork] = React.useState<BeliefNetworkNode[]>([]);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       setPatterns(cognitiveDistortionScanner.getPatterns());
+      setBeliefNetwork(cognitiveDistortionScanner.getBeliefNetwork());
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -847,6 +1226,19 @@ export function useCognitiveDistortionScanner() {
     // Feedback
     markHelpful: (thoughtId: string, helpful: boolean) =>
       cognitiveDistortionScanner.markHelpful(thoughtId, helpful),
+
+    // =========== AI CBT COACHING ===========
+    getAIInsight: (thoughtId: string) =>
+      cognitiveDistortionScanner.getAITherapeuticInsight(thoughtId),
+    buildBeliefNetwork: () =>
+      cognitiveDistortionScanner.buildBeliefNetwork(),
+    beliefNetwork,
+    predictNextThought: () =>
+      cognitiveDistortionScanner.predictNextThought(),
+    startCoreBeliefExcavation: (surfaceThought: string) =>
+      cognitiveDistortionScanner.startCoreBeliefExcavation(surfaceThought),
+    startRestructuringSession: (thoughtId: string) =>
+      cognitiveDistortionScanner.startRestructuringSession(thoughtId),
   };
 }
 
