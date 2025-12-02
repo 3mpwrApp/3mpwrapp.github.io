@@ -422,7 +422,7 @@ function DashboardTab() {
   const s = styles(palette);
 
   return (
-    <ScrollView contentContainerStyle={s.container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={s.container}>
       <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         📊 {t('tracker.dashboardTitle', 'Master Tracker Dashboard')}
       </Text>
@@ -721,7 +721,7 @@ function SymptomsTab() {
   const router = useRouter();
   
   return (
-    <ScrollView contentContainerStyle={styles(palette).container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={styles(palette).container}>
       <Text style={styles(palette).tabTitle}>
         {t('tracker.symptomsTracking', 'Symptom Tracking')}
       </Text>
@@ -743,7 +743,7 @@ function MedicationsTab() {
   const router = useRouter();
   
   return (
-    <ScrollView contentContainerStyle={styles(palette).container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={styles(palette).container}>
       <Text style={styles(palette).tabTitle}>
         {t('tracker.medsTracking', 'Medication Tracking')}
       </Text>
@@ -765,7 +765,7 @@ function RehabTab() {
   const router = useRouter();
   
   return (
-    <ScrollView contentContainerStyle={styles(palette).container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={styles(palette).container}>
       <Text style={styles(palette).tabTitle}>
         {t('tracker.rehabTracking', 'Rehab Progress Tracking')}
       </Text>
@@ -787,7 +787,7 @@ function AppointmentsTab() {
   const router = useRouter();
   
   return (
-    <ScrollView contentContainerStyle={styles(palette).container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={styles(palette).container}>
       <Text style={styles(palette).tabTitle}>
         {t('tracker.appointmentsTracking', 'Appointments & Doctor Visits')}
       </Text>
@@ -809,7 +809,7 @@ function TimelineTab() {
   const router = useRouter();
   
   return (
-    <ScrollView contentContainerStyle={styles(palette).container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={styles(palette).container}>
       <Text style={styles(palette).tabTitle}>
         {t('tracker.timelineTracking', 'Case Timeline')}
       </Text>
@@ -1280,7 +1280,7 @@ function PainMapTab() {
   const router = useRouter();
   
   return (
-    <ScrollView contentContainerStyle={styles(palette).container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={styles(palette).container}>
       <Text style={styles(palette).tabTitle}>
         {t('tracker.painMapTitle', '🗺️ Interactive Pain Map')}
       </Text>
@@ -1392,7 +1392,7 @@ function EnergyTab() {
   const remaining = spoons - usedSpoons;
   
   return (
-    <ScrollView contentContainerStyle={styles(palette).container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={styles(palette).container}>
       <Text style={styles(palette).tabTitle}>
         {t('tracker.energyTitle', '🥄 Energy Budget (Spoon Theory)')}
       </Text>
@@ -1528,7 +1528,7 @@ function FlareTab() {
   };
   
   return (
-    <ScrollView contentContainerStyle={styles(palette).container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={styles(palette).container}>
       <Text style={styles(palette).tabTitle}>
         {t('tracker.flaresTitle', '🔥 Flare-Up Tracker')}
       </Text>
@@ -1623,7 +1623,7 @@ function AIInsightsTab() {
   const { t } = useTranslation();
   
   return (
-    <ScrollView contentContainerStyle={styles(palette).container}>
+    <ScrollView style={{ backgroundColor: palette.background }} contentContainerStyle={styles(palette).container}>
       <Text style={styles(palette).tabTitle}>
         {t('tracker.insightsTitle', '🧠 AI Health Insights')}
       </Text>
@@ -1683,6 +1683,7 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     container: {
       padding: 16,
       paddingBottom: 40,
+      backgroundColor: palette.background,
     },
     title: {
       fontSize: 28,
