@@ -2051,7 +2051,9 @@
       "hubsIntro": "Sources nationales et mondiales sur handicap, retour au travail, accessibilité, technologies d’assistance et protection sociale.",
       "regionCanada": "Canada",
       "regionWorldwide": "Monde"
-    }
+    },
+    "filterByRegion": "Filtrer par région :",
+    "resetFilters": "Réinitialiser les filtres"
   },
   "uncrpd": {
     "screenLabel": "Écran informations et guide d'application UNCRPD",
@@ -4063,10 +4065,6 @@
       "rsvpConfirmations": "Confirmations de RSVP",
       "capacityAlerts": "Alertes de capacité"
     }
-  },
-  "research": {
-    "filterByRegion": "Filtrer par région :",
-    "resetFilters": "Réinitialiser les filtres"
   },
   "notFound": {
     "title": "Non trouvé",
