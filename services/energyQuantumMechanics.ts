@@ -304,6 +304,11 @@ class EnergyQuantumMechanicsManager {
     return Math.max(0, Math.min(100, decayedEnergy));
   }
 
+  async adjustEnergy(delta: number): Promise<void> {
+    const newEnergy = Math.max(0, Math.min(100, this.getCurrentEnergy() + delta));
+    await this.recordEnergyQuantum(newEnergy, delta >= 0 ? 'social' : 'exertion');
+  }
+
   getCurrentState(): QuantumEnergyState {
     return this.currentState;
   }
@@ -658,6 +663,7 @@ export function useEnergyQuantumMechanics() {
     metrics,
     getCurrentEnergy: () => energyQuantumMechanics.getCurrentEnergy(),
     getCurrentState: () => energyQuantumMechanics.getCurrentState(),
+    adjustEnergy: (delta: number) => energyQuantumMechanics.adjustEnergy(delta),
     
     // Energy recording
     recordEnergy: (level: number, source: EnergyQuantum['source'], state?: QuantumEnergyState) =>

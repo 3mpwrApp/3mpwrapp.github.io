@@ -5,13 +5,25 @@
  * Changes in Firestore are pushed to app via real-time listeners
  */
 
+import { getApp, getApps, initializeApp } from "firebase/app";
 import type * as Fire from "firebase/firestore";
 
-import { db as sharedDb } from "../firebase/config";
 import { logger } from "../utils/logger";
 
+// Firebase config for events (public data, not subject to BYOC restrictions)
+// Events are public community data that all users can read
+const firebaseConfig = {
+  apiKey: "AIzaSyBv4rtD3it2yoIIFpxckCEXC9haKIbVjA8",
+  authDomain: "empowrapp.firebaseapp.com",
+  projectId: "empowrapp",
+  storageBucket: "empowrapp.firebasestorage.app",
+  messagingSenderId: "733708119893",
+  appId: "1:733708119893:web:fdfb57d1be572fb3ee89dc",
+  measurementId: "G-LKEKHG4GQ6",
+};
 
 let mod: typeof Fire | null = null;
+let eventsDb: Fire.Firestore | null = null;
 
 async function ensure(): Promise<typeof Fire | null> {
   if (mod) return mod;
@@ -23,11 +35,48 @@ async function ensure(): Promise<typeof Fire | null> {
   }
 }
 
-export async function getDB() {
-  // OVERRIDE: Always allow Firestore for events (public data, not user-private)
-  // Events are public community data, not subject to BYOC restrictions
-  // if (isBYOCEnabled()) return null;
-  return sharedDb ?? null;
+/**
+ * Get or create a Firestore instance specifically for events.
+ * This bypasses BYOC mode since events are public community data.
+ */
+export async function getDB(): Promise<Fire.Firestore | null> {
+  // Return cached instance if available
+  if (eventsDb) return eventsDb;
+
+  const m = await ensure();
+  if (!m) {
+    logger.warn('[FirestoreSyncEvent] Firestore module not available');
+    return null;
+  }
+
+  try {
+    // Use existing Firebase app or create one
+    const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+    
+    // Initialize Firestore for events (with long polling for React Native)
+    const { initializeFirestore, getFirestore } = m;
+    const platformOS = (await import('react-native')).Platform?.OS || 'web';
+    
+    if (platformOS === 'web') {
+      eventsDb = getFirestore(app);
+    } else {
+      // Use long polling for React Native to avoid WebSocket issues
+      eventsDb = initializeFirestore(app, { experimentalForceLongPolling: true });
+    }
+    
+    logger.log('[FirestoreSyncEvent] Events Firestore initialized for platform:', platformOS);
+    return eventsDb;
+  } catch (error) {
+    // If Firestore is already initialized, get the existing instance
+    try {
+      const app = getApp();
+      eventsDb = m.getFirestore(app);
+      return eventsDb;
+    } catch {
+      logger.error('[FirestoreSyncEvent] Failed to initialize Firestore for events:', error);
+      return null;
+    }
+  }
 }
 
 /**

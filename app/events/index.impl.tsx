@@ -138,7 +138,14 @@ export default function EventsScreen() {
         // Use expo-updates channel to detect if we're on preview channel
         const isPreviewChannel = Updates.channel === 'preview';
         const collection = (__DEV__ || isPreviewChannel) ? 'events_preview' : 'events_production';
+        console.log('[Events] Fetching from Firestore:', { 
+          __DEV__, 
+          channel: Updates.channel, 
+          isPreviewChannel, 
+          collection 
+        });
         firestoreEvents = await fetchEventUpdates(collection);
+        console.log('[Events] Fetched', firestoreEvents.length, 'events from Firestore');
       } catch (err) {
         console.warn('[Events] Failed to fetch from Firestore:', err);
       }

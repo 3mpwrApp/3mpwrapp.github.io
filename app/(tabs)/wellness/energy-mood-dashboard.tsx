@@ -2,7 +2,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { useTranslation } from '../../../i18n';
 import { useCognitiveDistortionScanner } from '../../../services/cognitiveDistortionScanner';
@@ -13,6 +13,32 @@ import { useEnergyQuantumMechanics, type QuantumEnergyState } from '../../../ser
 import { useSpoonEconomist } from '../../../services/spoonEconomist';
 import { useAppPalette } from '../../../theme/usePalette';
 import { createShadow } from '../../../utils/shadow';
+
+// Social interaction types
+type InteractionType = 'conversation' | 'group_event' | 'video_call' | 'text' | 'work_meeting' | 'family' | 'date' | 'other';
+type EnergyImpact = 'draining' | 'neutral' | 'energizing';
+
+interface SocialInteraction {
+  id: string;
+  type: InteractionType;
+  person: string;
+  duration: number; // minutes
+  energyBefore: number;
+  energyAfter: number;
+  impact: EnergyImpact;
+  notes?: string;
+  timestamp: string;
+}
+
+interface TemporalShift {
+  id: string;
+  amount: number;
+  fromDate: string;
+  toDate: string;
+  reason: string;
+  repaid: boolean;
+  interestAccrued: number;
+}
 
 // ============================================================================
 // REAL-TIME BIOFEEDBACK UI - NEVER BEEN DONE BEFORE
@@ -40,6 +66,29 @@ export default function EnergyMoodDashboard() {
   const [crashPrediction, setCrashPrediction] = useState(spoonEconomist.crashPrediction);
   const [crisisPrediction, setCrisisPrediction] = useState(emotionalFirstAid.crisisPrediction);
   const [thoughtPatterns, setThoughtPatterns] = useState(cognitiveScanner.patterns);
+
+  // ============================================================================
+  // SOCIAL INTERACTION & TEMPORAL SHIFT STATE
+  // ============================================================================
+  const [showSocialModal, setShowSocialModal] = useState(false);
+  const [showTemporalModal, setShowTemporalModal] = useState(false);
+  const [socialInteractions, setSocialInteractions] = useState<SocialInteraction[]>([]);
+  const [temporalShifts, setTemporalShifts] = useState<TemporalShift[]>([]);
+
+  const [socialFormData, setSocialFormData] = useState({
+    type: 'conversation' as InteractionType,
+    person: '',
+    duration: 30,
+    energyBefore: 50,
+    energyAfter: 50,
+    notes: '',
+  });
+
+  const [temporalFormData, setTemporalFormData] = useState({
+    amount: 10,
+    fromDaysAhead: 1,
+    reason: '',
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -87,7 +136,94 @@ export default function EnergyMoodDashboard() {
   };
 
   const shiftEnergy = () => {
-    alert('Temporal energy shifting coming soon! This will let you borrow energy from your future self.');
+    setShowTemporalModal(true);
+  };
+
+  const logSocialInteraction = () => {
+    setShowSocialModal(true);
+  };
+
+  const saveSocialInteraction = () => {
+    const impact: EnergyImpact = 
+      socialFormData.energyAfter > socialFormData.energyBefore + 10 ? 'energizing' :
+      socialFormData.energyAfter < socialFormData.energyBefore - 10 ? 'draining' : 'neutral';
+
+    const interaction: SocialInteraction = {
+      id: `social_${Date.now()}`,
+      type: socialFormData.type,
+      person: socialFormData.person || 'Someone',
+      duration: socialFormData.duration,
+      energyBefore: socialFormData.energyBefore,
+      energyAfter: socialFormData.energyAfter,
+      impact,
+      notes: socialFormData.notes || undefined,
+      timestamp: new Date().toISOString(),
+    };
+
+    setSocialInteractions([interaction, ...socialInteractions]);
+    setShowSocialModal(false);
+    setSocialFormData({
+      type: 'conversation',
+      person: '',
+      duration: 30,
+      energyBefore: quantum.getCurrentEnergy(),
+      energyAfter: quantum.getCurrentEnergy(),
+      notes: '',
+    });
+
+    // Update energy based on the interaction
+    const energyChange = socialFormData.energyAfter - socialFormData.energyBefore;
+    if (energyChange !== 0) {
+      quantum.adjustEnergy(energyChange);
+      setQuantumState(quantum.getCurrentState());
+    }
+
+    Alert.alert(
+      'Interaction Logged',
+      `${impact === 'energizing' ? '⚡' : impact === 'draining' ? '🔋' : '➖'} This interaction was ${impact}. Energy ${energyChange >= 0 ? '+' : ''}${energyChange}`,
+    );
+  };
+
+  const executeTemporalShift = () => {
+    const interestRate = 0.15; // 15% interest on borrowed energy
+    const futureDate = new Date();
+    futureDate.setDate(futureDate.getDate() + temporalFormData.fromDaysAhead);
+
+    const shift: TemporalShift = {
+      id: `shift_${Date.now()}`,
+      amount: temporalFormData.amount,
+      fromDate: futureDate.toISOString().split('T')[0],
+      toDate: new Date().toISOString().split('T')[0],
+      reason: temporalFormData.reason || 'Needed extra energy today',
+      repaid: false,
+      interestAccrued: temporalFormData.amount * interestRate,
+    };
+
+    setTemporalShifts([shift, ...temporalShifts]);
+    quantum.borrowEnergy(temporalFormData.amount);
+    setQuantumState(quantum.getCurrentState());
+    setEnergyDebt(quantum.getDebt());
+    setShowTemporalModal(false);
+    setTemporalFormData({ amount: 10, fromDaysAhead: 1, reason: '' });
+
+    Alert.alert(
+      '⏱️ Temporal Shift Complete',
+      `Borrowed ${temporalFormData.amount} energy units from ${futureDate.toLocaleDateString()}.\n\nYou'll owe ${Math.round(temporalFormData.amount * (1 + interestRate))} units when it comes due.`,
+    );
+  };
+
+  const getInteractionIcon = (type: InteractionType) => {
+    const icons: Record<InteractionType, string> = {
+      conversation: 'chatbubbles',
+      group_event: 'people',
+      video_call: 'videocam',
+      text: 'phone-portrait',
+      work_meeting: 'briefcase',
+      family: 'home',
+      date: 'heart',
+      other: 'ellipse',
+    };
+    return icons[type] || 'ellipse';
   };
 
   return (
@@ -294,7 +430,7 @@ export default function EnergyMoodDashboard() {
 
           <Pressable
             style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
-            onPress={() => alert('Social energy tracking coming soon!')}
+            onPress={logSocialInteraction}
           >
             <Ionicons name="people" size={24} color={palette.primary} />
             <View style={styles.toolInfo}>
@@ -307,6 +443,38 @@ export default function EnergyMoodDashboard() {
             </View>
             <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
           </Pressable>
+
+          {/* Recent Interactions */}
+          {socialInteractions.length > 0 && (
+            <View style={styles.recentInteractions}>
+              <Text style={[styles.recentLabel, { color: palette.textSecondary }]}>Recent:</Text>
+              {socialInteractions.slice(0, 3).map((interaction) => (
+                <View key={interaction.id} style={[styles.interactionItem, { backgroundColor: palette.background }]}>
+                  <Ionicons
+                    name={getInteractionIcon(interaction.type) as any}
+                    size={18}
+                    color={
+                      interaction.impact === 'energizing' ? palette.success :
+                      interaction.impact === 'draining' ? palette.error : palette.muted
+                    }
+                  />
+                  <Text style={[styles.interactionPerson, { color: palette.text }]} numberOfLines={1}>
+                    {interaction.person}
+                  </Text>
+                  <Text style={[
+                    styles.interactionChange,
+                    {
+                      color: interaction.impact === 'energizing' ? palette.success :
+                        interaction.impact === 'draining' ? palette.error : palette.muted
+                    }
+                  ]}>
+                    {interaction.energyAfter - interaction.energyBefore >= 0 ? '+' : ''}
+                    {interaction.energyAfter - interaction.energyBefore}
+                  </Text>
+                </View>
+              ))}
+            </View>
+          )}
         </View>
 
         {/* Temporal Energy Shifting */}
@@ -529,6 +697,289 @@ export default function EnergyMoodDashboard() {
 
         <View style={styles.bottomSpacer} />
       </ScrollView>
+
+      {/* Social Interaction Modal */}
+      <Modal
+        visible={showSocialModal}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setShowSocialModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+            <View style={styles.modalHeader}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>Log Social Interaction</Text>
+              <Pressable onPress={() => setShowSocialModal(false)}>
+                <Ionicons name="close" size={24} color={palette.text} />
+              </Pressable>
+            </View>
+
+            <ScrollView style={styles.modalScroll}>
+              {/* Interaction Type */}
+              <View style={styles.inputGroup}>
+                <Text style={[styles.inputLabel, { color: palette.text }]}>Type of Interaction</Text>
+                <View style={styles.typeGrid}>
+                  {(['conversation', 'video_call', 'work_meeting', 'group_event', 'family', 'date', 'text', 'other'] as InteractionType[]).map((type) => (
+                    <Pressable
+                      key={type}
+                      style={[
+                        styles.typeButton,
+                        {
+                          backgroundColor: socialFormData.type === type ? palette.primary : palette.background,
+                          borderColor: palette.border,
+                        },
+                      ]}
+                      onPress={() => setSocialFormData({ ...socialFormData, type })}
+                    >
+                      <Ionicons
+                        name={getInteractionIcon(type) as any}
+                        size={20}
+                        color={socialFormData.type === type ? palette.onPrimary : palette.text}
+                      />
+                      <Text
+                        style={{
+                          color: socialFormData.type === type ? palette.onPrimary : palette.text,
+                          fontSize: 11,
+                          marginTop: 4,
+                        }}
+                      >
+                        {type.replace(/_/g, ' ')}
+                      </Text>
+                    </Pressable>
+                  ))}
+                </View>
+              </View>
+
+              {/* Person */}
+              <View style={styles.inputGroup}>
+                <Text style={[styles.inputLabel, { color: palette.text }]}>Who were you with?</Text>
+                <TextInput
+                  style={[styles.textInput, { color: palette.text, borderColor: palette.border }]}
+                  value={socialFormData.person}
+                  onChangeText={(v) => setSocialFormData({ ...socialFormData, person: v })}
+                  placeholder="Name or description"
+                  placeholderTextColor={palette.muted}
+                />
+              </View>
+
+              {/* Duration */}
+              <View style={styles.inputGroup}>
+                <Text style={[styles.inputLabel, { color: palette.text }]}>Duration: {socialFormData.duration} min</Text>
+                <View style={styles.durationRow}>
+                  {[15, 30, 60, 120, 180].map((dur) => (
+                    <Pressable
+                      key={dur}
+                      style={[
+                        styles.durationButton,
+                        {
+                          backgroundColor: socialFormData.duration === dur ? palette.primary : palette.background,
+                          borderColor: palette.border,
+                        },
+                      ]}
+                      onPress={() => setSocialFormData({ ...socialFormData, duration: dur })}
+                    >
+                      <Text style={{ color: socialFormData.duration === dur ? palette.onPrimary : palette.text, fontSize: 13 }}>
+                        {dur < 60 ? `${dur}m` : `${dur / 60}h`}
+                      </Text>
+                    </Pressable>
+                  ))}
+                </View>
+              </View>
+
+              {/* Energy Before */}
+              <View style={styles.inputGroup}>
+                <Text style={[styles.inputLabel, { color: palette.text }]}>
+                  Energy BEFORE: {socialFormData.energyBefore}%
+                </Text>
+                <View style={styles.energySlider}>
+                  {[0, 25, 50, 75, 100].map((level) => (
+                    <Pressable
+                      key={level}
+                      style={[
+                        styles.energyLevelButton,
+                        {
+                          backgroundColor: Math.abs(socialFormData.energyBefore - level) <= 12 ? palette.warning : palette.background,
+                          borderColor: palette.warning,
+                        },
+                      ]}
+                      onPress={() => setSocialFormData({ ...socialFormData, energyBefore: level })}
+                    >
+                      <Text style={{ color: Math.abs(socialFormData.energyBefore - level) <= 12 ? '#fff' : palette.text }}>
+                        {level}
+                      </Text>
+                    </Pressable>
+                  ))}
+                </View>
+              </View>
+
+              {/* Energy After */}
+              <View style={styles.inputGroup}>
+                <Text style={[styles.inputLabel, { color: palette.text }]}>
+                  Energy AFTER: {socialFormData.energyAfter}%
+                </Text>
+                <View style={styles.energySlider}>
+                  {[0, 25, 50, 75, 100].map((level) => (
+                    <Pressable
+                      key={level}
+                      style={[
+                        styles.energyLevelButton,
+                        {
+                          backgroundColor: Math.abs(socialFormData.energyAfter - level) <= 12 ? palette.success : palette.background,
+                          borderColor: palette.success,
+                        },
+                      ]}
+                      onPress={() => setSocialFormData({ ...socialFormData, energyAfter: level })}
+                    >
+                      <Text style={{ color: Math.abs(socialFormData.energyAfter - level) <= 12 ? '#fff' : palette.text }}>
+                        {level}
+                      </Text>
+                    </Pressable>
+                  ))}
+                </View>
+              </View>
+
+              {/* Notes */}
+              <View style={styles.inputGroup}>
+                <Text style={[styles.inputLabel, { color: palette.text }]}>Notes (optional)</Text>
+                <TextInput
+                  style={[styles.textInput, styles.textArea, { color: palette.text, borderColor: palette.border }]}
+                  value={socialFormData.notes}
+                  onChangeText={(v) => setSocialFormData({ ...socialFormData, notes: v })}
+                  placeholder="What affected your energy?"
+                  placeholderTextColor={palette.muted}
+                  multiline
+                  numberOfLines={2}
+                />
+              </View>
+            </ScrollView>
+
+            <View style={styles.modalActions}>
+              <Pressable
+                style={[styles.modalButton, { backgroundColor: palette.muted }]}
+                onPress={() => setShowSocialModal(false)}
+              >
+                <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
+              </Pressable>
+              <Pressable
+                style={[styles.modalButton, { backgroundColor: palette.primary }]}
+                onPress={saveSocialInteraction}
+              >
+                <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Save</Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
+
+      {/* Temporal Energy Shift Modal */}
+      <Modal
+        visible={showTemporalModal}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setShowTemporalModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+            <View style={styles.modalHeader}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>⏱️ Temporal Energy Shift</Text>
+              <Pressable onPress={() => setShowTemporalModal(false)}>
+                <Ionicons name="close" size={24} color={palette.text} />
+              </Pressable>
+            </View>
+
+            <Text style={[styles.temporalDescription, { color: palette.textSecondary }]}>
+              Borrow energy from your future self. Warning: There's a 15% interest rate!
+            </Text>
+
+            <View style={styles.inputGroup}>
+              <Text style={[styles.inputLabel, { color: palette.text }]}>
+                Amount to borrow: {temporalFormData.amount} units
+              </Text>
+              <View style={styles.amountRow}>
+                {[5, 10, 15, 20, 25].map((amt) => (
+                  <Pressable
+                    key={amt}
+                    style={[
+                      styles.amountButton,
+                      {
+                        backgroundColor: temporalFormData.amount === amt ? palette.primary : palette.background,
+                        borderColor: palette.primary,
+                      },
+                    ]}
+                    onPress={() => setTemporalFormData({ ...temporalFormData, amount: amt })}
+                  >
+                    <Text style={{ color: temporalFormData.amount === amt ? palette.onPrimary : palette.text }}>
+                      {amt}
+                    </Text>
+                  </Pressable>
+                ))}
+              </View>
+            </View>
+
+            <View style={styles.inputGroup}>
+              <Text style={[styles.inputLabel, { color: palette.text }]}>
+                Borrow from {temporalFormData.fromDaysAhead} day(s) ahead
+              </Text>
+              <View style={styles.daysRow}>
+                {[1, 2, 3, 5, 7].map((days) => (
+                  <Pressable
+                    key={days}
+                    style={[
+                      styles.daysButton,
+                      {
+                        backgroundColor: temporalFormData.fromDaysAhead === days ? palette.warning : palette.background,
+                        borderColor: palette.warning,
+                      },
+                    ]}
+                    onPress={() => setTemporalFormData({ ...temporalFormData, fromDaysAhead: days })}
+                  >
+                    <Text style={{ color: temporalFormData.fromDaysAhead === days ? '#fff' : palette.text }}>
+                      {days}d
+                    </Text>
+                  </Pressable>
+                ))}
+              </View>
+            </View>
+
+            <View style={styles.inputGroup}>
+              <Text style={[styles.inputLabel, { color: palette.text }]}>Why do you need this energy?</Text>
+              <TextInput
+                style={[styles.textInput, { color: palette.text, borderColor: palette.border }]}
+                value={temporalFormData.reason}
+                onChangeText={(v) => setTemporalFormData({ ...temporalFormData, reason: v })}
+                placeholder="Important event, deadline, etc."
+                placeholderTextColor={palette.muted}
+              />
+            </View>
+
+            <View style={[styles.warningBox, { backgroundColor: palette.warningBackground }]}>
+              <Ionicons name="warning" size={20} color={palette.warning} />
+              <View style={styles.warningContent}>
+                <Text style={[styles.warningText, { color: palette.warning }]}>
+                  You'll owe {Math.round(temporalFormData.amount * 1.15)} energy units on{' '}
+                  {new Date(Date.now() + temporalFormData.fromDaysAhead * 86400000).toLocaleDateString()}
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.modalActions}>
+              <Pressable
+                style={[styles.modalButton, { backgroundColor: palette.muted }]}
+                onPress={() => setShowTemporalModal(false)}
+              >
+                <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
+              </Pressable>
+              <Pressable
+                style={[styles.modalButton, { backgroundColor: palette.warning }]}
+                onPress={executeTemporalShift}
+              >
+                <Ionicons name="time" size={18} color="#fff" />
+                <Text style={[styles.modalButtonText, { color: '#fff', marginLeft: 6 }]}>Borrow Energy</Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </>
   );
 }
@@ -865,6 +1316,175 @@ const styles = StyleSheet.create({
   frequencyText: {
     fontSize: 12,
     fontWeight: '600',
+  },
+  // ============================================================================
+  // SOCIAL INTERACTION STYLES
+  // ============================================================================
+  recentInteractions: {
+    marginTop: 12,
+  },
+  recentLabel: {
+    fontSize: 12,
+    marginBottom: 8,
+  },
+  interactionItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+    borderRadius: 8,
+    marginBottom: 6,
+    gap: 8,
+  },
+  interactionPerson: {
+    flex: 1,
+    fontSize: 14,
+  },
+  interactionChange: {
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  // ============================================================================
+  // MODAL STYLES
+  // ============================================================================
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'flex-end',
+  },
+  modalContent: {
+    maxHeight: '85%',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    padding: 20,
+  },
+  modalHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 16,
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+  },
+  modalScroll: {
+    maxHeight: 400,
+  },
+  inputGroup: {
+    marginBottom: 16,
+  },
+  inputLabel: {
+    fontSize: 14,
+    fontWeight: '500',
+    marginBottom: 8,
+  },
+  typeGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  typeButton: {
+    width: '23%',
+    alignItems: 'center',
+    padding: 10,
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  textInput: {
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 15,
+  },
+  textArea: {
+    minHeight: 60,
+    textAlignVertical: 'top',
+  },
+  durationRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  durationButton: {
+    flex: 1,
+    marginHorizontal: 4,
+    padding: 10,
+    borderRadius: 8,
+    borderWidth: 1,
+    alignItems: 'center',
+  },
+  energySlider: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  energyLevelButton: {
+    width: 50,
+    padding: 10,
+    borderRadius: 8,
+    borderWidth: 2,
+    alignItems: 'center',
+  },
+  modalActions: {
+    flexDirection: 'row',
+    gap: 12,
+    marginTop: 16,
+    paddingTop: 16,
+    borderTopWidth: 1,
+    borderTopColor: '#ddd',
+  },
+  modalButton: {
+    flex: 1,
+    flexDirection: 'row',
+    padding: 14,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  modalButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  temporalDescription: {
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 16,
+  },
+  amountRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  amountButton: {
+    flex: 1,
+    marginHorizontal: 4,
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 2,
+    alignItems: 'center',
+  },
+  daysRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  daysButton: {
+    flex: 1,
+    marginHorizontal: 4,
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 2,
+    alignItems: 'center',
+  },
+  warningBox: {
+    flexDirection: 'row',
+    padding: 12,
+    borderRadius: 8,
+    gap: 10,
+    marginBottom: 8,
+  },
+  warningContent: {
+    flex: 1,
+  },
+  warningText: {
+    fontSize: 13,
+    lineHeight: 18,
   },
 });
 

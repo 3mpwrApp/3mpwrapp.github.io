@@ -106,6 +106,10 @@ export interface GroundingContext {
   availableItems?: string[];
   energyLevel?: DistressLevel;
   dissociationLevel?: DistressLevel;
+  timeAvailable?: number;        // Minutes available for grounding
+  safeToSpeak?: boolean;         // Whether user can speak aloud
+  hasPrivacy?: boolean;          // Whether user has privacy
+  mobilityLevel?: 'full' | 'limited' | 'seated_only';
 }
 
 export interface AdaptiveRecommendation {
@@ -1063,6 +1067,7 @@ export function useGroundingCompanion() {
 
   return {
     state,
+    initialize: aiGroundingCompanion.initialize.bind(aiGroundingCompanion),
     getRecommendations: aiGroundingCompanion.getRecommendations.bind(aiGroundingCompanion),
     startSession: aiGroundingCompanion.startSession.bind(aiGroundingCompanion),
     startTechnique: aiGroundingCompanion.startTechnique.bind(aiGroundingCompanion),

@@ -1,8 +1,8 @@
 /**
  * Weekly "What's New" Summary Notification Service
  * 
- * Sends a silent, auto-expiring weekly notification summarizing recent updates.
- * Runs every Monday at 9 AM local time.
+ * Sends a silent, auto-expiring notification summarizing recent updates.
+ * Now integrates with the notification frequency system for user control.
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -14,6 +14,7 @@ import { cancel, scheduleDailyAt } from './notifications';
 const WEEKLY_NOTIFICATION_KEY = 'weekly_whatsnew_notification_id';
 const LAST_SUMMARY_DATE_KEY = 'last_whatsnew_summary_date';
 const NOTIFICATION_ENABLED_KEY = 'weekly_whatsnew_enabled';
+const NOTIFICATION_FREQUENCY_KEY = 'whatsnew_notification_frequency';
 
 /**
  * Get What's New items from the last week

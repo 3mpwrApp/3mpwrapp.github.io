@@ -50,7 +50,9 @@ jest.mock('../services/firestore', () => ({ fsAddEvent: async () => true }));
 jest.mock('../services/firestoreEventSync', () => ({ 
   syncEventToProduction: async () => true, 
   deleteEventFromProduction: async () => true,
-  isFirestoreSyncAvailable: async () => true
+  isFirestoreSyncAvailable: async () => true,
+  fetchEventUpdates: async () => [],
+  getDB: async () => null,
 }));
 jest.mock('../services/eventAutoSync', () => ({ 
   addToSyncQueue: async () => {},

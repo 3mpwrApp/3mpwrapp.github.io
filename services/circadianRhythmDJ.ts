@@ -480,6 +480,11 @@ class CircadianRhythmDJManager {
     return this.chronotype;
   }
 
+  async setChronotype(profile: ChronotypeProfile): Promise<void> {
+    this.chronotype = profile;
+    await this.saveData();
+  }
+
   // ============================================================================
   // Sleep Logging
   // ============================================================================
@@ -1627,6 +1632,8 @@ export function useCircadianRhythmDJ() {
     getQuiz: () => circadianRhythmDJ.getChronotypeQuiz(),
     calculateChronotype: (answers: Record<number, number>) => 
       circadianRhythmDJ.calculateChronotype(answers),
+    setChronotype: (profile: ChronotypeProfile) =>
+      circadianRhythmDJ.setChronotype(profile),
     
     // Sleep logging
     logSleep: (log: Omit<SleepLog, 'id'>) => circadianRhythmDJ.logSleep(log),

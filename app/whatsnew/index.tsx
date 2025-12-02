@@ -69,10 +69,10 @@ export default function WhatsNewScreen() {
   React.useEffect(() => {
     (async () => {
       try {
-        const { current } = await getWhatsNewSplit();
-        // Keep current + archived accessible; here we merge into items for display grouping already below
-        // We only set items to current list; archived will still show via sections based on date checks
-        if (current?.length) setItems(current);
+        const { current, archived } = await getWhatsNewSplit();
+        // Merge both current and archived items so archive section displays properly
+        const allItems = [...(current || []), ...(archived || [])];
+        if (allItems.length) setItems(allItems);
       } catch {}
     })();
   }, []);
@@ -104,11 +104,12 @@ export default function WhatsNewScreen() {
           const AsyncStorage = mod.default;
           await AsyncStorage.setItem("whatsnew:lastSeen:v1", new Date().toISOString());
           
-          // Refresh items from local storage on focus
+          // Refresh items from local storage on focus - include archived items
           const local = await getLocalWhatsNew();
-          const { current } = await getWhatsNewSplit();
-          if (current?.length) {
-            setItems(current);
+          const { current, archived } = await getWhatsNewSplit();
+          const allItems = [...(current || []), ...(archived || [])];
+          if (allItems.length) {
+            setItems(allItems);
           } else if (local.length) {
             setItems([...local, ...defaultWN]);
           }
@@ -151,9 +152,10 @@ export default function WhatsNewScreen() {
     setRefreshing(true);
     try {
       const local = await getLocalWhatsNew();
-      const { current } = await getWhatsNewSplit();
-      if (current?.length) {
-        setItems(current);
+      const { current, archived } = await getWhatsNewSplit();
+      const allItems = [...(current || []), ...(archived || [])];
+      if (allItems.length) {
+        setItems(allItems);
       } else if (local.length) {
         setItems([...local, ...defaultWN]);
       }

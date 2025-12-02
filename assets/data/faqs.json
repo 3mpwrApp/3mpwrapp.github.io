@@ -2,126 +2,386 @@
   {
     "id": "f1",
     "q": "What is 3mpwr App?",
-    "a": "3mpwr App is a comprehensive hub for injured workers, the disability community, advocates, and allies. It brings together in-app interactive tools, external resources, community support, wellness tracking, campaigns, and advocacy tools. Now with 90% accessibility achieved and full offline support!"
+    "a": "3mpwr App is a comprehensive hub for injured workers, the disability community, advocates, and allies. It brings together in-app interactive tools, external resources, community support, wellness tracking, campaigns, and advocacy tools. Now with 90% accessibility achieved and full offline support!",
+    "category": "general",
+    "tabs": ["home"]
   },
   {
     "id": "f2",
     "q": "How do I navigate the app?",
-    "a": "Use the tabs at the bottom: Home, Campaigns, Community, Resources, Wellness, Advocacy, Research, Settings, and What's New. Set your Complexity Mode (Simple/Standard/Power User) in Settings to control how many features you see."
+    "a": "Use the tabs at the bottom: Home, Campaigns, Community, Resources, Wellness, Advocacy, Research, Settings, and What's New. Set your Complexity Mode (Simple/Standard/Power User) in Settings to control how many features you see.",
+    "category": "general",
+    "tabs": ["home", "settings"]
   },
   {
     "id": "f2a",
     "q": "What is Complexity Mode and how do I use it?",
-    "a": "Complexity Mode lets you choose your experience level: Simple Mode (5 core features), Standard Mode (20 common features), or Power User Mode (all 150+ features). Go to Settings → Complexity Mode to change. You can also use Bad Day Mode for emergency simplification during flare-ups."
+    "a": "Complexity Mode lets you choose your experience level: Simple Mode (5 core features), Standard Mode (20 common features), or Power User Mode (all 150+ features). Go to Settings → Complexity Mode to change. You can also use Bad Day Mode for emergency simplification during flare-ups.",
+    "category": "settings",
+    "tabs": ["settings"]
   },
   {
     "id": "f2b",
     "q": "What's the difference between Resources and Research tabs?",
-    "a": "Resources tab contains IN-APP interactive tools like Master Tracker Hub, Letter Wizard, and Appeal Command Center. Research tab contains EXTERNAL LINKS to 96 government programs, disability benefits, and advocacy resources. Resources stay in-app, Research opens your browser."
+    "a": "Resources tab contains IN-APP interactive tools like Master Tracker Hub, Letter Wizard, and Appeal Command Center. Research tab contains EXTERNAL LINKS to 96 government programs, disability benefits, and advocacy resources. Resources stay in-app, Research opens your browser.",
+    "category": "general",
+    "tabs": ["resources"]
   },
   {
     "id": "f3",
     "q": "How do I change text size and contrast?",
-    "a": "Open Settings and choose Text Size (Normal, Large, X‑Large). Toggle High Contrast to boost readability. Quick contrast buttons are available on most screens."
+    "a": "Open Settings and choose Text Size (Normal, Large, X‑Large). Toggle High Contrast to boost readability. Quick contrast buttons are available on most screens.",
+    "category": "accessibility",
+    "tabs": ["settings"]
   },
   {
     "id": "f4",
     "q": "How do I filter Resources by province?",
-    "a": "Set your province in Settings. The Resources tab shows a Canada section and provincial sections; you can also filter using the chips at the top."
+    "a": "Set your province in Settings. The Resources tab shows a Canada section and provincial sections; you can also filter using the chips at the top.",
+    "category": "resources",
+    "tabs": ["resources", "settings"]
   },
   {
     "id": "f5",
     "q": "Can I save items for later?",
-    "a": "Yes. On detail screens, tap 'Save to Favorites'. Find everything in the Saved tab."
+    "a": "Yes. On detail screens, tap 'Save to Favorites'. Find everything in the Saved tab.",
+    "category": "general",
+    "tabs": ["resources"]
   },
   {
     "id": "f6",
     "q": "Where do podcasts come from?",
-    "a": "Podcasts may include curated YouTube videos on WSIB/WCB and injured worker topics. We link out to YouTube for playback to respect their terms."
+    "a": "Podcasts may include curated YouTube videos on WSIB/WCB and injured worker topics. We link out to YouTube for playback to respect their terms.",
+    "category": "resources",
+    "tabs": ["resources"]
   },
   {
     "id": "f7",
     "q": "How does the Events calendar work?",
-    "a": "The Events tab shows a monthly grid. Select a day to filter the list. Open an event to see details and add a reminder."
+    "a": "The Events tab shows a monthly grid. Select a day to filter the list. Open an event to see details and add a reminder.",
+    "category": "campaigns",
+    "tabs": ["campaigns"]
   },
   {
     "id": "f8",
     "q": "What are the letter templates?",
-    "a": "The Letter Wizard in Resources tab offers 22+ professional letter templates including accommodation requests, appeals, reconsideration, medical leave, harassment complaints, and more. Fill in fields, preview, and share or export as PDF."
+    "a": "The Letter Wizard in Resources tab offers 22+ professional letter templates including accommodation requests, appeals, reconsideration, medical leave, harassment complaints, and more. Fill in fields, preview, and share or export as PDF.",
+    "category": "resources",
+    "tabs": ["resources"]
   },
   {
     "id": "f8a",
     "q": "What is the Master Tracker Hub?",
-    "a": "Master Tracker Hub (Resources → Master Tracker Hub) consolidates 6 tracking tools into one dashboard: symptoms, medications, rehab exercises, doctor appointments, case timeline, and accessibility needs. Features AI pattern detection and exports to PDF/CSV/JSON for sharing with doctors or lawyers."
+    "a": "Master Tracker Hub (Resources → Master Tracker Hub) consolidates 6 tracking tools into one dashboard: symptoms, medications, rehab exercises, doctor appointments, case timeline, and accessibility needs. Features AI pattern detection and exports to PDF/CSV/JSON for sharing with doctors or lawyers.",
+    "category": "resources",
+    "tabs": ["resources"]
   },
   {
     "id": "f8b",
     "q": "What is the Appeal Command Center?",
-    "a": "Appeal Command Center (Resources → Appeal Command Center) is your deadline warfare HQ. It includes deadline tracking with urgency color-coding, denial decoder (AI translates jargon to plain English), evidence strength meter, and appeal prep guide. Never miss a critical deadline again!"
+    "a": "Appeal Command Center (Resources → Appeal Command Center) is your deadline warfare HQ. It includes deadline tracking with urgency color-coding, denial decoder (AI translates jargon to plain English), evidence strength meter, and appeal prep guide. Never miss a critical deadline again!",
+    "category": "resources",
+    "tabs": ["resources"]
   },
   {
     "id": "f8c",
     "q": "Does the app work offline?",
-    "a": "Yes! The Evidence Locker has a full offline queue system. Upload documents without internet and they'll automatically sync when you reconnect. Includes exponential backoff retry (1s to 60s), manual retry buttons, and pending count badge. Your evidence is never lost."
+    "a": "Yes! The Evidence Locker has a full offline queue system. Upload documents without internet and they'll automatically sync when you reconnect. Includes exponential backoff retry (1s to 60s), manual retry buttons, and pending count badge. Your evidence is never lost.",
+    "category": "resources",
+    "tabs": ["resources"]
   },
   {
     "id": "f9",
     "q": "What's New vs Archive?",
-    "a": "What's New shows updates from the last 30 days. Older items automatically move to Archive."
+    "a": "What's New shows updates from the last 30 days. Older items automatically move to Archive. You can view archived items by scrolling to the Archive section on the What's New screen.",
+    "category": "whatsnew",
+    "tabs": ["whatsnew"]
   },
   {
     "id": "f10",
     "q": "What data is stored?",
-    "a": "Favorites and some content (What's New, FAQs you add) are stored locally on your device for convenience. You can clear app data from your device settings."
+    "a": "Favorites and some content (What's New, FAQs you add) are stored locally on your device for convenience. You can clear app data from your device settings.",
+    "category": "privacy",
+    "tabs": ["settings"]
   },
   {
     "id": "f11",
     "q": "How can I contact you?",
-    "a": "Use the About tab to send an email to empowrapp08162025@gmail.com with suggestions, requests, or questions."
+    "a": "Use the About tab to send an email to empowrapp08162025@gmail.com with suggestions, requests, or questions.",
+    "category": "general",
+    "tabs": ["settings"]
   },
   {
     "id": "f12",
     "q": "Where is the Emergency Wallet Card?",
-    "a": "It now lives under Settings → Emergency Wallet Card. You can also open it from Resources → Support & Directories → Emergency Info Wallet Card, which jumps to the Settings section."
+    "a": "It now lives under Settings → Emergency Wallet Card. You can also open it from Resources → Support & Directories → Emergency Info Wallet Card, which jumps to the Settings section.",
+    "category": "resources",
+    "tabs": ["settings", "resources"]
   },
   {
     "id": "f13",
     "q": "How do I find local resources for my province?",
-    "a": "Go to Research tab → External Resources. Use the province filter to select your province (AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT). You'll see employment standards, human rights commissions, disability benefits (like ODSP, PWD, AISH), and workers' compensation boards specific to your region."
+    "a": "Go to Research tab → External Resources. Use the province filter to select your province (AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT). You'll see employment standards, human rights commissions, disability benefits (like ODSP, PWD, AISH), and workers' compensation boards specific to your region.",
+    "category": "resources",
+    "tabs": ["resources"]
   },
   {
     "id": "f14",
     "q": "What is the SOS/Crisis button?",
-    "a": "The red SOS button (bottom-right on main screens) provides instant crisis access. Single tap opens crisis menu with options to call 988, text Crisis Line, access Safe Landing Page, or Quick Exit. Triple tap sends emergency SMS to your crisis contacts. It's always visible when you need help."
+    "a": "The red SOS button (bottom-right on main screens) provides instant crisis access. Single tap opens crisis menu with options to call 988, text Crisis Line, access Safe Landing Page, or Quick Exit. Triple tap sends emergency SMS to your crisis contacts. It's always visible when you need help.",
+    "category": "safety",
+    "tabs": ["home", "wellness"]
   },
   {
     "id": "f15",
     "q": "What are the 4 Wellness Hubs?",
-    "a": "Wellness tab features 4 consolidated hubs: Energy & Mood Hub (energy tracking, mood, sleep, pacing), Unified Health Tracker (symptoms, pain, chronic conditions, rehab), Mental Wellness Toolkit (8 CBT/DBT tools), and Movement & Rehab Hub (exercises, micro-movements, nutrition). Everything organized in one place!"
+    "a": "Wellness tab features 4 consolidated hubs: Energy & Mood Hub (energy tracking, mood, sleep, pacing), Unified Health Tracker (symptoms, pain, chronic conditions, rehab), Mental Wellness Toolkit (8 CBT/DBT tools), and Movement & Rehab Hub (exercises, micro-movements, nutrition). Everything organized in one place!",
+    "category": "wellness",
+    "tabs": ["wellness"]
   },
   {
     "id": "f16",
     "q": "Can I submit my own campaigns or events?",
-    "a": "Yes! On campaign and event detail pages, look for the 'Submit to 3mpwr' button (shows for user-created content). After review, your campaign/event will appear on the 3mpwrApp website and sync to all users. Privacy protected - you control what's shared."
+    "a": "Yes! On campaign and event detail pages, look for the 'Submit to 3mpwr' button (shows for user-created content). After review, your campaign/event will appear on the 3mpwrApp website and sync to all users. Privacy protected - you control what's shared.",
+    "category": "campaigns",
+    "tabs": ["campaigns"]
   },
   {
     "id": "f17",
     "q": "How do I customize my profile for better recommendations?",
-    "a": "Go to Settings → Profile Editor. Fill out 5 sections: Disability Types, Symptoms to Track, Wellness Tools Preferences, Advocacy Needs, and Family Role. The more you share, the better the app can recommend relevant tools. All optional and syncs across devices if using cloud backup."
+    "a": "Go to Settings → Profile Editor. Fill out 5 sections: Disability Types, Symptoms to Track, Wellness Tools Preferences, Advocacy Needs, and Family Role. The more you share, the better the app can recommend relevant tools. All optional and syncs across devices if using cloud backup.",
+    "category": "settings",
+    "tabs": ["settings"]
   },
   {
     "id": "f18",
     "q": "What accessibility features does the app have?",
-    "a": "Full screen reader support (VoiceOver/TalkBack), high contrast mode, text scaling up to 200%, dyslexia-friendly fonts (OpenDyslexic, Lexend), colored overlays for visual stress, motor accessibility (dwell-click, large touch targets), cognitive modes (Simple/Standard/Power), and trauma-informed design with SOS button."
+    "a": "Full screen reader support (VoiceOver/TalkBack), high contrast mode, text scaling up to 200%, dyslexia-friendly fonts (OpenDyslexic, Lexend), colored overlays for visual stress, motor accessibility (dwell-click, large touch targets), cognitive modes (Simple/Standard/Power), and trauma-informed design with SOS button.",
+    "category": "accessibility",
+    "tabs": ["settings"]
   },
   {
     "id": "f19",
     "q": "How do I use Bad Day Mode?",
-    "a": "Bad Day Mode is for flare-ups, brain fog, or overwhelming days. Go to Settings → Complexity Mode → tap 'Bad Day Mode'. This instantly switches you to Simple Mode (5 core features only). When you're feeling better, go back to Settings → Complexity Mode → choose your preferred mode."
+    "a": "Bad Day Mode is for flare-ups, brain fog, or overwhelming days. Go to Settings → Complexity Mode → tap 'Bad Day Mode'. This instantly switches you to Simple Mode (5 core features only). When you're feeling better, go back to Settings → Complexity Mode → choose your preferred mode.",
+    "category": "accessibility",
+    "tabs": ["settings"]
   },
   {
     "id": "f20",
     "q": "Where can I find government disability benefits information?",
-    "a": "Research tab → External Resources → Filter by 'Benefits' category and your province. You'll find links to ODSP (Ontario), PWD (BC), AISH (Alberta), SAID (Manitoba), Income Support (other provinces), CPP Disability, and federal programs. Each has descriptions and opens in your browser."
+    "a": "Research tab → External Resources → Filter by 'Benefits' category and your province. You'll find links to ODSP (Ontario), PWD (BC), AISH (Alberta), SAID (Manitoba), Income Support (other provinces), CPP Disability, and federal programs. Each has descriptions and opens in your browser.",
+    "category": "resources",
+    "tabs": ["resources"]
+  },
+  {
+    "id": "f21",
+    "q": "What is the Community tab for?",
+    "a": "The Community tab is your space to connect with other injured workers, advocates, and allies. Features include discussion threads, direct messaging, support groups, and real-time chat. Share experiences, ask questions, and build your support network.",
+    "category": "community",
+    "tabs": ["community"]
+  },
+  {
+    "id": "f22",
+    "q": "How do I join a community group?",
+    "a": "Go to Community → Groups → Browse available groups by topic (Work Injury, Chronic Illness, Mental Health, etc.). Tap a group to view details and tap 'Join' to become a member. Some groups are moderated and may require approval.",
+    "category": "community",
+    "tabs": ["community"]
+  },
+  {
+    "id": "f23",
+    "q": "What is the Energy & Mood Dashboard?",
+    "a": "The Energy & Mood Dashboard (Wellness → Energy & Mood Hub) uses quantum energy mechanics to track your energy levels, emotional weather, spoon budgeting, and social energy economics. Features include AI crash prediction, temporal energy shifting (borrow from future days), and biofeedback integration.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f24",
+    "q": "What is Spoon Theory and how does the app use it?",
+    "a": "Spoon Theory explains that people with chronic illness have limited energy 'spoons' each day. The app's Spoon Economist (Wellness → Energy & Mood Hub) helps you budget daily spoons, track spending, predict crash risk, and make informed decisions about energy allocation.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f25",
+    "q": "How does the Circadian Rhythm DJ work?",
+    "a": "The Circadian Rhythm DJ (Wellness → Unified Health Hub → Circadian Rhythm DJ) helps optimize your sleep. Take the chronotype quiz to discover if you're a Lion, Bear, Wolf, or Dolphin. Then use sleep logging, bedtime optimization, nap prescriptions, and sleep debt tracking.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f26",
+    "q": "What is the Symptom Symphony?",
+    "a": "Symptom Symphony (Wellness → Unified Health Hub → Symptom Symphony) is a multi-modal symptom tracker that finds hidden correlations between your symptoms. Log symptoms with severity, qualities, triggers, and what helps. AI discovers patterns and predicts flares. Export professional reports for doctors.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f27",
+    "q": "What is the Sensory Overload Detector?",
+    "a": "The Sensory Overload Detector (Wellness → Unified Health Hub → Sensory Overload) tracks sensory load across 8 modalities (visual, auditory, tactile, etc.). Features real-time load meter, overload prediction, safe space finder, and guided decompression protocols for sensory recovery.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f28",
+    "q": "What is Environmental Adaptation tracking?",
+    "a": "Environmental Adaptation (Wellness → Unified Health Hub → Environmental Adaptation) tracks how weather, pressure, temperature, humidity, and air quality affect your symptoms. Set sensitivity profiles, get alerts about concerning conditions, and receive personalized recommendations.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f29",
+    "q": "What is the AI Grounding Companion?",
+    "a": "The AI Grounding Companion (Wellness → Mental Wellness Toolkit → AI Grounding) provides personalized grounding techniques for anxiety, dissociation, or distress. Rate your distress level, tell it your context (location, time, whether you can speak), and get tailored techniques with guided exercises.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f30",
+    "q": "How do I use the Advocacy Hub?",
+    "a": "The Advocacy Hub (Advocacy tab) brings together 6 powerful advocacy tools: AI Case Interpreter, AI Translator, Ally Hub, Gov Navigator, Rights Encyclopedia, and Campaign Builder. Each tool is designed to help you understand, navigate, and advocate within complex systems.",
+    "category": "advocacy",
+    "tabs": ["advocacy"]
+  },
+  {
+    "id": "f31",
+    "q": "What is the AI Case Interpreter?",
+    "a": "The AI Case Interpreter (Advocacy → AI Case Interpreter) helps decode complex legal and administrative decisions. Paste denial letters or case documents and AI translates jargon to plain English, identifies key issues, and suggests next steps.",
+    "category": "advocacy",
+    "tabs": ["advocacy"]
+  },
+  {
+    "id": "f32",
+    "q": "What is the Gov Navigator?",
+    "a": "Gov Navigator (Advocacy → Gov Navigator) maps 96 government programs across all Canadian provinces. Filter by province, category (income support, healthcare, housing, employment), and eligibility. Get step-by-step application guides and deadline tracking.",
+    "category": "advocacy",
+    "tabs": ["advocacy"]
+  },
+  {
+    "id": "f33",
+    "q": "How do I use the notification system?",
+    "a": "The app sends notifications for: deadline reminders, medication reminders, campaign updates, community messages, and wellness check-ins. Control notification frequency per category in Settings → Notifications. Choose real-time, daily digest, weekly digest, monthly, or off for each category.",
+    "category": "settings",
+    "tabs": ["settings"]
+  },
+  {
+    "id": "f34",
+    "q": "What is the Evidence Locker?",
+    "a": "The Evidence Locker (Resources → Evidence Locker) securely stores all your case-related documents: medical records, correspondence, photos, audio recordings, and more. Features include offline upload queue, auto-sync, organization by category, and export for sharing with lawyers or doctors.",
+    "category": "resources",
+    "tabs": ["resources"]
+  },
+  {
+    "id": "f35",
+    "q": "How do I track medications?",
+    "a": "Go to Wellness → Unified Health Hub → Medication Tracker. Add medications with dosage, frequency, and reminders. Track adherence, side effects, and effectiveness. The app can remind you when to take meds and when to reorder refills.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f36",
+    "q": "What is the Pain Scale tool?",
+    "a": "The Pain Scale (Wellness → Unified Health Hub → Pain Tracker) lets you log pain levels (0-10), location, type (sharp, dull, burning, etc.), triggers, and what helps. AI detects patterns over time and can export pain diaries for medical appointments.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f37",
+    "q": "How do I use the CBT tools?",
+    "a": "The Mental Wellness Toolkit (Wellness → Mental Wellness) includes 8 CBT/DBT tools: Thought Record, Cognitive Distortion Scanner, Mood Tracker, Anxiety Toolkit, Grounding Exercises, Breathing Exercises, Progressive Muscle Relaxation, and Sleep Hygiene Guide.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f38",
+    "q": "What is the Accountability Tracker?",
+    "a": "The Accountability Tracker (Advocacy → Accountability Tracker) helps you document systemic issues with employers, insurers, or government agencies. Log incidents, track patterns, and build evidence for complaints or legal action. All data stays private on your device.",
+    "category": "advocacy",
+    "tabs": ["advocacy"]
+  },
+  {
+    "id": "f39",
+    "q": "How do I set up crisis contacts?",
+    "a": "Go to Settings → Crisis Contacts. Add up to 5 emergency contacts with name, relationship, and phone number. These contacts can receive emergency SMS when you triple-tap the SOS button. You can also set a custom crisis message.",
+    "category": "safety",
+    "tabs": ["settings"]
+  },
+  {
+    "id": "f40",
+    "q": "What is the Ally Hub?",
+    "a": "The Ally Hub (Advocacy → Ally Hub) connects you with advocates, peer supporters, and professionals who can help with your case. Browse by specialty, location, and availability. Includes video consultation booking and secure messaging.",
+    "category": "advocacy",
+    "tabs": ["advocacy"]
+  },
+  {
+    "id": "f41",
+    "q": "How do I create a campaign?",
+    "a": "Go to Campaigns → Create Campaign. Fill in title, description, goal, timeline, and action items. Add images, links to petitions, and social media handles. Once reviewed, your campaign can be shared with the community and featured on the 3mpwr website.",
+    "category": "campaigns",
+    "tabs": ["campaigns"]
+  },
+  {
+    "id": "f42",
+    "q": "What is the Movement & Rehab Hub?",
+    "a": "The Movement & Rehab Hub (Wellness → Movement & Rehab) includes gentle exercise videos, physiotherapy guides, micro-movement routines (for limited mobility), and nutrition tips. All exercises are disability-friendly with modifications for different ability levels.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f43",
+    "q": "How does the AI pattern detection work?",
+    "a": "Throughout the app, AI analyzes your tracked data (symptoms, energy, mood, sleep, etc.) to find patterns you might miss. It identifies correlations like 'Your pain increases 2 days after poor sleep' or 'Social events drain energy on Mondays'. All processing happens on-device for privacy.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f44",
+    "q": "Can I export my data?",
+    "a": "Yes! Most tracking features let you export to PDF, CSV, or JSON. Go to the relevant tracker (symptoms, energy, pain, etc.) and tap the export button. Great for sharing with doctors, lawyers, or keeping personal records. Evidence Locker can also export full document packages.",
+    "category": "general",
+    "tabs": ["resources", "wellness"]
+  },
+  {
+    "id": "f45",
+    "q": "What is the Denial Decoder?",
+    "a": "The Denial Decoder (Resources → Appeal Command Center → Denial Decoder) uses AI to translate confusing denial letters into plain English. Paste or upload your denial letter, and it identifies the key reasons for denial, explains the jargon, and suggests appeal strategies.",
+    "category": "resources",
+    "tabs": ["resources"]
+  },
+  {
+    "id": "f46",
+    "q": "How do I use voice input?",
+    "a": "Most text fields support voice dictation. Tap the microphone icon to speak instead of type. Especially useful during flare-ups or when typing is difficult. Works offline on most devices.",
+    "category": "accessibility",
+    "tabs": ["settings"]
+  },
+  {
+    "id": "f47",
+    "q": "What is the Quantum Energy system?",
+    "a": "The Quantum Energy system (Wellness → Energy & Mood Hub) treats energy like a quantum particle - it decays over time, can be borrowed from the future (with interest!), and can be shared socially. Features include energy half-life tracking, temporal shifting, and social energy ledgers.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f48",
+    "q": "How do I log social interactions for energy tracking?",
+    "a": "In the Energy & Mood Dashboard, tap 'Log Social Interaction'. Select the type (conversation, meeting, family, etc.), who you were with, duration, and your energy before/after. The app learns which people and situations drain or restore your energy.",
+    "category": "wellness",
+    "tabs": ["wellness"]
+  },
+  {
+    "id": "f49",
+    "q": "What languages is the app available in?",
+    "a": "Currently English and French (Canadian). Go to Settings → Language to change. Community translations for other languages are in progress. Some AI features may have limited multilingual support.",
+    "category": "settings",
+    "tabs": ["settings"]
+  },
+  {
+    "id": "f50",
+    "q": "How do I get push notifications?",
+    "a": "Enable notifications in Settings → Notifications. You'll be prompted to allow notifications on first launch. Control which categories send notifications and their frequency. For medication reminders, enable in Wellness → Medication Tracker.",
+    "category": "settings",
+    "tabs": ["settings"]
   }
 ]

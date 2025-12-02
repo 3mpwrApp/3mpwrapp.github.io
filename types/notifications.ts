@@ -1,4 +1,6 @@
-export type NotificationCategory = 'advocacy' | 'wellness' | 'resources' | 'community' | 'system' | 'evidence' | 'admin';
+export type NotificationCategory = 'advocacy' | 'wellness' | 'resources' | 'community' | 'system' | 'evidence' | 'admin' | 'whatsnew';
+
+export type NotificationFrequency = 'realtime' | 'daily' | 'weekly' | 'monthly' | 'never';
 
 export interface NotificationTemplate {
   id: string;
@@ -15,11 +17,19 @@ export interface NotificationTemplate {
   dedupe?: 'event' | 'template' | 'none';
 }
 
+export interface CategoryFrequencySettings {
+  enabled: boolean;
+  frequency: NotificationFrequency;
+  lastSent?: number; // timestamp of last notification sent for this category
+}
+
 export interface NotificationPreferences {
   categories: Record<NotificationCategory, boolean>;
+  categoryFrequencies: Record<NotificationCategory, CategoryFrequencySettings>;
   templates: Record<string, boolean | undefined>;
   channels: { push: boolean; inApp: boolean };
   quietHours?: { start: string; end: string; timezone: string };
+  defaultFrequency: NotificationFrequency;
   lastUpdated: number;
   version: number;
 }
@@ -47,6 +57,17 @@ export interface NotificationState {
   lastSent: Record<string, number>; // templateId -> timestamp
 }
 
+export const DEFAULT_CATEGORY_FREQUENCIES: Record<NotificationCategory, CategoryFrequencySettings> = {
+  advocacy: { enabled: true, frequency: 'daily' },
+  wellness: { enabled: true, frequency: 'daily' },
+  resources: { enabled: true, frequency: 'weekly' },
+  community: { enabled: false, frequency: 'realtime' },
+  system: { enabled: false, frequency: 'realtime' },
+  evidence: { enabled: true, frequency: 'realtime' },
+  admin: { enabled: false, frequency: 'weekly' },
+  whatsnew: { enabled: true, frequency: 'weekly' },
+};
+
 export const DEFAULT_NOTIFICATION_PREFERENCES = (): NotificationPreferences => ({
   categories: {
     advocacy: true,
@@ -56,9 +77,12 @@ export const DEFAULT_NOTIFICATION_PREFERENCES = (): NotificationPreferences => (
     system: false,
     evidence: true,
     admin: false,
+    whatsnew: true,
   },
+  categoryFrequencies: { ...DEFAULT_CATEGORY_FREQUENCIES },
   templates: {},
   channels: { push: true, inApp: true },
+  defaultFrequency: 'daily',
   lastUpdated: Date.now(),
-  version: 1,
+  version: 2,
 });
