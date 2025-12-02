@@ -224,8 +224,8 @@ Reserve time for audience questions
 ## 🔗 Resources to Share
 
 - **Website:** 3mpwrapp.pages.dev
-- **App Store:** [Link when live]
-- **Google Play:** [Link when live]
+- **App Store:** (Link when live)
+- **Google Play:** (Link when live)
 - **Email:** empowrapp08162025@gmail.com
 - **GitHub:** github.com/3mpwrApp/empowrapp-main
 

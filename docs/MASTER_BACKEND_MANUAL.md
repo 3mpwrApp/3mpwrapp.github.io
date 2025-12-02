@@ -8,16 +8,16 @@
 
 ## 📋 Table of Contents
 
-1. [Executive Summary](#executive-summary)
-2. [Technical Architecture](#technical-architecture)
-3. [Infrastructure & Services](#infrastructure--services)
-4. [Admin Operations](#admin-operations)
-5. [Security Framework](#security-framework)
-6. [Data Governance](#data-governance)
-7. [Legal & Compliance](#legal--compliance)
-8. [Financial Overview](#financial-overview)
-9. [Roadmap & Future Development](#roadmap--future-development)
-10. [Appendices](#appendices)
+1. [Executive Summary](#1-executive-summary)
+2. [Technical Architecture](#2-technical-architecture)
+3. [Infrastructure & Services](#3-infrastructure--services)
+4. [Admin Operations](#4-admin-operations)
+5. [Security Framework](#5-security-framework)
+6. [Data Governance](#6-data-governance)
+7. [Legal & Compliance](#7-legal--compliance)
+8. [Financial Overview](#8-financial-overview)
+9. [Roadmap & Future Development](#9-roadmap--future-development)
+10. [Appendices](#10-appendices)
 
 ---
 
