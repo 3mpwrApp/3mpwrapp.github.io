@@ -9,124 +9,79 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-12-02
 
-Curated 24 items from disability, accessibility, and social policy sources.
+Curated 16 items from disability, accessibility, and social policy sources.
 
-## 1. What does suspending Alberta’s clean electricity regulations mean for Canada’s climate goals?
-<img src='https://i.cbc.ca/ais/ff304450-8114-45ca-8626-ed301a1614ff,1764633148548/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C469%2C4449%2C2502%29%3BResize%3D%28620%29' alt='Two people shake hands' width='620' height='349' title='Prime Minister Mark Carney, right, signs an MOU with Alberta Premier Danielle Smith in Calgary, Alta., Thursday, Nov. 27, 2025. THE CANADIAN PRESS/Jeff McIntosh'/><p>The federal government suspended the regulations meant to rein in Canada’s worst polluter, but it hasn’t explained how it is going to ensure the country’s climate goals will be met. Carbon pricing, though, is expected to play a dominant role.</p>
-📍 [Source](https://www.cbc.ca/news/politics/clean-electricity-regulations-alberta-9.6999432?cmp=rss)
-**Score:** 26.95
+## 1. What a N.S. palliative care unit tells us about Canada’s rural health care challenges
+<img src='https://i.cbc.ca/ais/1.3965657,1620680164000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C620%2C348%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='New online resources for LGBTQ palliative care patients include a Bill of Rights they can show their doctor, and a step-by-step guide on how to plan for the end of life.'/><p>The five-bed palliative care hospital unit in Lunenburg, N.S., is still searching for staff, four years after it was first announced.</p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/what-a-n-s-palliative-care-unit-tells-us-about-canadas-rural-health-care-challenges-9.6996250?cmp=rss)
+**Score:** 25.30
 
-## 2. American podiatrist leaving Nova Scotia over bureaucratic frustrations
-<img src='https://i.cbc.ca/ais/1.7390000,1732223285000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='A healthcare practitioner in blue gloves handles a foot, grasping its sole. ' width='620' height='349' title='With only 22 registered podiatrists in Saskatchewan, patients are seeking the service of foot care nurses, who are not eligible for insurance or most government funding. '/><p>A U.S. podiatrist says he is leaving the province because his patients have to wait years to see a surgeon for procedures on their feet, even though he's trained to do the procedures in his clinic.</p>
-📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/podiatrist-leaving-nova-scotia-over-bureaucracy-9.6994700?cmp=rss)
-**Score:** 24.90
+## 2. Governments of Canada and Manitoba Invest $76.9 Million in Rural Infrastructure
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71717)
+**Score:** 18.70
 
-## 3. Alberta Metis eying ownership stake in proposed oil pipeline
-<img src='https://i.cbc.ca/ais/00117302-239d-41ed-98d9-59a61b6f9bc0,1764649818246/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C81%2C6500%2C3656%29%3BResize%3D%28620%29' alt='Construction workers in high-visibility vests and helmets stand next to an exposed trench with a green pipe on the bottom as two cranes lift sections of pipe into place. Mountains can be seen in the background.  ' width='620' height='349' title='Workers lay pipe for the Trans Mountain pipeline expansion in Abbotsford, B.C., in May 2023. Though there's still no route or private sector proponent for a new oil pipeline from Alberta to the West Coast, the Metis Settlements of Alberta says it wants to purchase a stake in the proposed project and plans to work with First Nations in B.C. who oppose it.'/><p>The Metis Settlements of Alberta say they’re interested in purchasing a stake in a proposed oil pipeline to the West Coast and want to work with First Nations in British Columbia who oppose the project and plan to bring forward an emergency resolution at the Assembly of First Nations meetings in Ottawa Tuesday.</p>
-📍 [Source](https://www.cbc.ca/news/politics/alberta-metis-oil-pipeline-ownership-stake-9.6999482?cmp=rss)
-**Score:** 15.50
-
-## 4. Canada secures membership in EU defence industry pact, Carney says
-Canada has reached an agreement to join the Security Action for Europe (SAFE) initiative, which will give Canadian defence companies expanded access to the European market.
-📍 [Source](https://globalnews.ca/news/11554735/canada-european-union-safe-defence-pact-negotiations/)
+## 3. Cal Foote, acquitted in world junior sex assault trial, signs with AHL team
+Cal Foote is the fourth of five players acquitted of sexual assault in the Hockey Canada sex assault trial to be signed by a team for him to continue his career.
+📍 [Source](https://globalnews.ca/news/11555500/cal-foote-ahl-chicago-wolves/)
 **Score:** 15.40
 
-## 5. Péladeau demands board shakeup — and a seat — at Transat
-Péladeau, Transat's second-largest shareholder and the CEO of Quebecor Inc., said the board should be reduced to six directors.
-📍 [Source](https://globalnews.ca/news/11554600/peladeau-board-air-transat/)
-**Score:** 12.00
-
-## 6. Vancouver International Black Film Festival returns for its fifth edition
-A hybrid lineup of films, panels, and workshops spotlights creators from Canada and around the world.
-📍 [Source](https://www.straight.com/movies/vancouver-international-black-film-festival-returns-for-its-fifth-edition)
+## 4. Laurentian Bank announces sale to Fairstone Bank and National Bank
+<img src='https://i.cbc.ca/ais/a5561085-754f-4181-ad1c-9cbf6b9758ad,1764679913088/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1156%2C7714%2C4339%29%3BResize%3D%28620%29' alt='A Laurentian Bank logo is seen on their head offices in Montreal, Friday, Aug. 30, 2024.' width='620' height='349' title='A Laurentian Bank logo is seen on their head offices in Montreal, Friday, Aug. 30, 2024.'/><p>Fairstone Bank of Canada has agreed to acquire Laurentian Bank of Canada for $1.9 billion in cash. As part of the deal, Laurentian Bank will sell its retail and small-and-medium-sized business banking portfolios and syndicated loan portfolio to National Bank of Canada.</p>
+📍 [Source](https://www.cbc.ca/news/canada/montreal/laurentian-bank-sale-9.6999757?cmp=rss)
 **Score:** 10.45
 
-## 7. In text messages, Ontario women accused of murder described boy in their care as ‘loser,’ trial hears
-<img src='https://i.cbc.ca/ais/dcefee9a-9f72-4d8e-afc3-8202ed669e58,1763769242541/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C320%2C180%29%3BResize%3D%28620%29' alt='two women in wedding attire smiling at each other' width='620' height='349' title='Becky Hamber and Brandy Cooney, left to right, as seen on their wedding day, have pleaded not guilty to first-degree murder and other charges.'/><p>The Ontario Provincial Police sergeant who led the investigation into Becky Hamber and Brandy Cooney testified at their first-degree murder trial Monday, outlining evidence collected in the case against the couple. The Crown showed multiple images and played audio recordings of women interacting with the boys in their care.</p>
-📍 [Source](https://www.cbc.ca/news/canada/hamilton/cooney-hamber-trial-milton-9.6999267?cmp=rss)
-**Score:** 11.40
-
-## 8. B.C. reaches transition agreement with long-term care, assisted living workers
-The agreement affects workers at more than 100 facilities that are part of the Health Employers Association of B.C., which receives at least half its funding from the province.
-📍 [Source](https://globalnews.ca/news/11554897/bc-transition-agreement-long-term-care-assisted-living-workers/)
+## 5. Manitoba Builds more than 5,300 Child-Care Spaces in Last Two Years
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71720)
 **Score:** 9.00
 
-## 9. ‘Buy now, pay later' use jumped this Black Friday weekend, data shows
-Shoppers were busy during the Black Friday holiday shopping period with data showing an increase in customers financing their purchases using buy now, pay later payment programs.
-📍 [Source](https://globalnews.ca/news/11551649/buy-now-pay-later-black-friday/)
+## 6. Manitoba Government Launches Tool to Combat Chronic Wasting Disease
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71619)
+**Score:** 8.80
+
+## 7. Carney to address Assembly of First Nations after Alberta pipeline deal
+Prime Minister Mark Carney's appearance before the chiefs could be a tense moment, coming just days after Ottawa signed a pipeline agreement with Alberta.
+📍 [Source](https://globalnews.ca/news/11555460/carney-assembly-of-first-nations-alberta-pipeline-deal/)
+**Score:** 9.00
+
+## 8. City of Ottawa pushes to make ByWard Market a national historic site
+<img src='https://i.cbc.ca/ais/f0a0c0aa-97a2-4c36-a171-c0f1b9602fba,1764628947930/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A woman in front of a building' width='620' height='349' title='Sylvie Bigras, president of the Lowertown Community Association, hopes getting national historic site status will draw more attention to the market.'/><p>City of Ottawa staff are looking to ask the federal government to deem the ByWard Market a national historic site to help celebrate its 200th birthday.</p>
+📍 [Source](https://www.cbc.ca/news/canada/ottawa/city-pushes-to-make-byward-market-a-national-historic-site-9.6999051?cmp=rss)
+**Score:** 9.00
+
+## 9. Manitoba Government Restores Funding for Lactation Consultants
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71719)
 **Score:** 7.50
 
-## 10. Polytechnique expands scholarship program to 14 women in memory of 1989 tragedy
-<img src='https://i.cbc.ca/ais/890fa214-1509-43ae-96ce-edb1e366db01,1764628563902/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C296%2C7623%2C4287%29%3BResize%3D%28620%29' alt='Flowers lay at a memorial for the victims of the 1989 Ecole Polytechnique mass shooting, in Montreal,' width='620' height='349' title='Flowers lay at a memorial for the victims of the 1989 Ecole Polytechnique mass shooting, in Montreal, Friday, Dec. 6, 2024. Today marks the 35th anniversary of the anti-feminist massacre, which left 14 women dead and injured 13 others. THE CANADIAN PRESS/Christinne Muschi'/><p>Polytechnique Montréal is expanding its scholarship program honouring the 14 women who were killed at the engineering school 36 years ago.</p>
-📍 [Source](https://www.cbc.ca/news/canada/montreal/polytechnique-expands-scholarship-memory-1989-tragedy-9.6999344?cmp=rss)
-**Score:** 8.40
-
-## 11. Manitoba Government Begins Search at Brady Landfill
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71758)
+## 10. Manitoba Government to Rename Bridge in Lac Du Bonnet
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71718)
 **Score:** 7.50
 
-## 12. BC Resets Labour Landscape for 5,000 Long-Term Care Workers
-The government will also continue funding some pandemic wage increases.
-📍 [Source](https://thetyee.ca/News/2025/12/02/BC-Resets-Labour-Landscape-Long-Term-Care-Workers/)
-**Score:** 7.50
+## 11. A Canadian border officer was the victim of India's ‘propaganda machine.' Now he's suing
+Sunny Sidhu is fighting back against an Indian 'disinformation campaign' that branded him a wanted terrorist.
+📍 [Source](https://globalnews.ca/news/11532994/cbsa-officer-sues-india-disinformation/)
+**Score:** 5.50
 
-## 13. Survivors, supporters mark 65th anniversary of central Alberta bus crash that killed 17 people
-<img src='https://i.cbc.ca/ais/0af8cec6-6009-4192-8b2d-7f2ff89be580,1764650244244/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C114%2C1210%2C680%29%3BResize%3D%28620%29' alt='A stone monument, with names, pictures and ages of the deceased.' width='620' height='349' title='A permanent stone memorial stands in Lamont, Alta., for the victims and survivors of a 1960 crash.'/><p>Seventeen teenagers were killed on Nov. 29, 1960 when a train crashed into their school bus as it was travelling from Chipman, Alta., to Lamont. </p>
-📍 [Source](https://www.cbc.ca/news/canada/edmonton/lamont-alberta-bus-crash-9.6998862?cmp=rss)
-**Score:** 7.50
-
-## 14. ‘Potential to be catastrophic': Fire sparked at the side of Rutland home
-For now, Cole says he walks the perimeter of his home every night, checking for any unwanted visitors and hoping nothing like this happens again.
-📍 [Source](https://globalnews.ca/news/11554789/fire-sparked-side-of-rutland-home/)
+## 12. Polytechnique expands scholarship program to 14 women in memory of 1989 tragedy
+Polytechnique Montréal is expanding its scholarship program honouring the 14 women who were killed at the engineering school 36 years ago.
+📍 [Source](https://globalnews.ca/news/11555430/polytechnique-expands-scholarship-program-memory-of-1989-tragedy/)
 **Score:** 4.50
 
-## 15. More questions about FIFA costs as host First Nations receive $6M each
-Global News has learned that $18 million has been paid to the Musqueam Indian Band, Squamish Nation and Tsleil-Waututh Nation with each getting $6 million.
-📍 [Source](https://globalnews.ca/news/11554985/questions-fifa-costs-host-first-nations-6m-each/)
+## 13. N.S. couple grieves baby after ‘traumatic' birth, calls for more sympathetic care
+A Yarmouth couple is calling for change after losing their baby in a traumatic early birth. They say they would like to see more sympathy for parents of micro-preemies.
+📍 [Source](https://globalnews.ca/news/11554544/baby-loss-micro-preemie-traumatic-birth-iwk-yarmouth/)
 **Score:** 4.50
 
-## 16. Treasury Board president ‘not aware' of any return-to-office rule changes
-Shafqat Ali on Monday denied having any knowledge about discussions to potentially order public servants to return to the office full time in 2027.
-📍 [Source](https://globalnews.ca/news/11554923/public-servants-return-to-office-changes-treasury-board/)
+## 14. This Ontario bill could change loyalty, rewards point rules
+📍 [Source](https://www.cbc.ca/player/play/9.6999389?cmp=rss)
 **Score:** 4.50
 
-## 17. Polytechnique expands scholarship program to 14 women in memory of 1989 tragedy
-The scholarships, set up to pay tribute not only to the victims but also to their families, were awarded during a ceremony at the school on Monday.
-📍 [Source](https://globalnews.ca/news/11554508/polytechnique-scholarship-women-1989-tragedy/)
-**Score:** 3.90
-
-## 18. What’s at Stake During DULF’s Constitutional Challenge
-The case’s outcome could affect the founders’ criminal charges, and Canadian drug laws. A Tyee explainer.
-📍 [Source](https://thetyee.ca/News/2025/12/02/What-Stake-DULF-Constitutional-Challenge/)
-**Score:** 4.50
-
-## 19. Eight Books for That Impossible-to-Shop-for Person on Your Gift List
-Gift the perfect book this holiday season from a Canadian independent literary publisher.
-📍 [Source](https://thetyee.ca/Presents/2025/12/02/Eight-Books-Impossible-Shop-Person-Gift-List/)
-**Score:** 4.50
-
-## 20. RCMP restricts use of its Chinese-made drones — the vast majority of its fleet
-<img src='https://i.cbc.ca/ais/ff430ce1-8044-4805-8529-826610d83f38,1764625711488/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C401%2C7701%2C4331%29%3BResize%3D%28620%29' alt='A drone flown by an RCMP officer in Windsor, Ont. hovers over the Detroit River, on Friday, March 7, 2025.' width='620' height='349' title='A drone flown by an RCMP officer in Windsor, Ont. hovers over the Detroit River, on Friday, March 7, 2025.'/><p>The Royal Canadian Mounted Police is limiting the use of its 973 Chinese-made drones to non-sensitive operations, stating the devices present "high security risks, primarily due to their country of origin."</p>
-📍 [Source](https://www.cbc.ca/news/politics/rcmp-restricts-chinese-drones-9.6999268?cmp=rss)
-**Score:** 4.50
-
-## 21. Calgary man guilty of terrorism offences for fighting with ISIS in Syria
-<img src='https://i.cbc.ca/ais/1.7161471,1764632593855/full/max/0/default.jpg?im=Crop%2Crect%3D%28325%2C132%2C913%2C513%29%3BResize%3D%28620%29' alt='A man with a beard and glasses takes a selfie.' width='620' height='349' title='Calgarian Jamal Borhot is charged with terrorism offences stemming from an RCMP investigation that began in 2013. Borhot was charged 7 years later, in 2020. He still has not gone to trial and his lawyer is asking the court to find Borhot's Charter rights have been violated by the extreme delay. '/><p>Jamal Borhot, who travelled to Syria with his cousin more than 12 years ago, has been found guilty of terrorism offences after a judge ruled that the evidence shows he was fighting for ISIS. </p>
-📍 [Source](https://www.cbc.ca/news/canada/calgary/jamal-borhot-guilty-terrorism-isis-syria-rcmp-9.6999395?cmp=rss)
+## 15. Sign of the times: Facing an uncertain future, the Penthouse looks back
+As development pressures mount, Danny Filippone reflects on the club's legacy, its community roots, and the memories that continue to shape Vancouver culture.
+📍 [Source](https://www.straight.com/city-culture/sign-of-times-facing-an-uncertain-future-penthouse-looks-back)
 **Score:** 3.00
 
-## 22. B.C. bitcoin mines are transitioning into AI data centres
-<img src='https://i.cbc.ca/ais/3b18b728-0906-4451-9eb9-e09eb7950150,1764538860511/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C589%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A sign that reads Iren is positioned in front of large warehouse type buildings that house computers. ' width='620' height='349' title='Iren's Prince George data centre has a 50 megawatt capacity.  '/><p>Iren, the company behind major data centres in northern B.C. is converting its infrastructure from bitcoin mining into AI storage. The Australia-based company is upgrading equipment at its sites in Prince George, Mackenzie and Canal Flats sites. </p>
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/northern-bc-bitcoin-mines-ai-9.6998180?cmp=rss)
-**Score:** 3.60
-
-## 23. The Culinary Commons helps Vancouver chefs gather
-1250 East Georgia Street is serving Vancouver's culinary community. ]
-📍 [Source](https://www.straight.com/food/culinary-commons-helps-vancouver-chefs-gather)
-**Score:** 3.00
-
-## 24. All of Toronto's speed cameras are gone. How did we get to this point?
-<img src='https://i.cbc.ca/ais/bf58f9ae-7141-49d2-86cf-5b1007a87fb3,1764275376837/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C275%2C5288%2C2974%29%3BResize%3D%28620%29' alt='A sign warning drivers about a speed camera as cars drive by.' width='620' height='349' title='Rush hour motorists drive past a stanchion that once held a speed camera on Parkside Dr., which runs along the eastern edge of Toronto’s High Park, on July 9, 2025.'/><p>Toronto's speed cameras may be gone, but this time there are no mysterious vandals wielding power tools, no blurry suspect photos and no police investigation. </p>
-📍 [Source](https://www.cbc.ca/news/canada/toronto/all-of-toronto-s-speed-cameras-are-gone-how-did-we-get-to-this-point-9.6995207?cmp=rss)
+## 16. Franklin the Turtle book publisher condemns Hegseth's ‘violent' post
+The publisher of the Franklin series of children's books condemned an online post by U.S. Defense Secretary Pete Hegseth depicting the titular character.
+📍 [Source](https://globalnews.ca/news/11555521/franklin-the-turtle-hegseth-post/)
 **Score:** 1.20
 
