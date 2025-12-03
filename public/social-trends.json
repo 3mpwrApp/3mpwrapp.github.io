@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-03T12:03:16.095Z",
+  "lastUpdated": "2025-12-03T18:03:07.832Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4235,
+      "totalPosts": 4260,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T12:03:05.391Z"
+      "lastSeen": "2025-12-03T18:02:57.567Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4250,
+      "totalPosts": 4275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T12:03:07.935Z"
+      "lastSeen": "2025-12-03T18:02:59.876Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4234,
+      "totalPosts": 4259,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T12:03:10.234Z"
+      "lastSeen": "2025-12-03T18:03:02.089Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4243,
+      "totalPosts": 4268,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T12:03:12.613Z"
+      "lastSeen": "2025-12-03T18:03:04.299Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4250,
+      "totalPosts": 4275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T12:03:15.091Z"
+      "lastSeen": "2025-12-03T18:03:06.829Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Annaleigh is a Cherokee woman living with PTSD and other health challenges. She needs $2,000 to cover bills and essential expenses. Please donate or share if you can. 🤍\n#MutualAid #IndigenousMutualAid #DisabilityJustice #BIPOCMA",
-      "author": "amparodo.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I started a new job today!\n\nI'm very thankful and grateful to @byowave.bsky.social for giving me this opportunity.\n\nBe sure to give them a follow to stay up to date on the awesome stuff they're working on (I suppose it \"we\" now that I work there 😁).\n\n#IrishGameDev #A11y #Accessibility #SpeirGorm",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 19,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "are you interested in writing or illustrating a blind character? check out this guide from my tumblr mutual and Actual Blind Person, awpie @actingwithportals.bsky.social !\n\n#accessibility #blindness #disability \n\n1/4",
-      "author": "antlerlad.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I started a new job today!\n\nI'm very thankful and grateful to @byowave.bsky.social for giving me this opportunity.\n\nBe sure to give them a follow to stay up to date on the awesome stuff they're working on (I suppose it \"we\" now that I work there 😁).\n\n#IrishGameDev #A11y #Accessibility #SpeirGorm",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 19,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
       "author": "karriehiggins.bsky.social",
@@ -338,88 +308,118 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
+      "author": "adulitingishard.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Public health must integrate #DisabilityJustice principles, not as an add-on, but as the foundation: flexibility, access, intersectionality, collective care, and trust in lived expertise.",
+      "author": "longcovidjustice.org",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "424-word hot take: “You Can’t Make Something Accessible to Everyone”\nadrianroselli.com/2025/12/you-...\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 32,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
-    {
-      "keyword": "accessibility",
-      "count": 38
-    },
     {
       "keyword": "disabilityrights",
       "count": 37
     },
     {
-      "keyword": "a11y",
-      "count": 28
+      "keyword": "accessibility",
+      "count": 36
     },
     {
-      "keyword": "cripthevote",
-      "count": 26
+      "keyword": "a11y",
+      "count": 29
     },
     {
       "keyword": "disabilityjustice",
+      "count": 27
+    },
+    {
+      "keyword": "cripthevote",
       "count": 25
     },
     {
       "keyword": "idpd",
-      "count": 19
-    },
-    {
-      "keyword": "altcitizen",
-      "count": 11
-    },
-    {
-      "keyword": "disabilityrebellion",
-      "count": 11
-    },
-    {
-      "keyword": "cripthevote disabilityrights",
-      "count": 11
-    },
-    {
-      "keyword": "disabilityrights disabilityrebellion",
-      "count": 11
-    },
-    {
-      "keyword": "disability",
-      "count": 9
+      "count": 21
     },
     {
       "keyword": "accessibility a11y",
-      "count": 9
+      "count": 12
     },
     {
       "keyword": "inclusion",
-      "count": 7
+      "count": 11
     },
     {
-      "keyword": "internationaldayofpersonswithdisabilities",
-      "count": 6
+      "keyword": "altcitizen",
+      "count": 10
     },
     {
-      "keyword": "idpd disabilityrights",
-      "count": 5
+      "keyword": "disabilityrebellion",
+      "count": 10
+    },
+    {
+      "keyword": "cripthevote disabilityrights",
+      "count": 10
+    },
+    {
+      "keyword": "disabilityrights disabilityrebellion",
+      "count": 10
+    },
+    {
+      "keyword": "idpd2025",
+      "count": 9
     },
     {
       "keyword": "idpwd",
+      "count": 9
+    },
+    {
+      "keyword": "inclusionmatters",
+      "count": 8
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 7
+    },
+    {
+      "keyword": "disability",
+      "count": 6
+    },
+    {
+      "keyword": "disabilityrights inclusionmatters",
       "count": 5
     },
     {
-      "keyword": "neurodiversity",
+      "keyword": "disabilities",
       "count": 5
     },
     {
-      "keyword": "autism adhd",
-      "count": 5
-    },
-    {
-      "keyword": "foxtakedown",
-      "count": 5
-    },
-    {
-      "keyword": "stoptheliesfox",
-      "count": 5
+      "keyword": "idpd disabilityrights",
+      "count": 4
     }
   ]
 }
