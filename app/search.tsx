@@ -19,7 +19,7 @@ import {
 import A11yPressable from '../components/A11yPressable';
 import GapView from '../components/GapView';
 import ResponsiveScreenWrapper from '../components/ResponsiveScreenWrapper';
-import { HIT_SLOP_12, HIT_SLOP_8 } from '../constants/a11y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import {

@@ -21,7 +21,7 @@ import SearchBar from "../../components/SearchBar";
 import SimpleModeWelcome from "../../components/SimpleModeWelcome";
 import { SkeletonList } from '../../components/SkeletonLoader';
 import SkeletonRow from "../../components/SkeletonRow";
-import { HIT_SLOP_12 } from '../../constants/a11y';
+import { HIT_SLOP_12 } from '../../constants/A11Y';
 import { useAuth } from "../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../data/campaigns";
 import {

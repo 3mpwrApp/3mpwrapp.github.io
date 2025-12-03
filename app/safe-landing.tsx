@@ -17,7 +17,7 @@ import {
 } from 'react-native';
 
 import { GapView } from '../components/GapView';
-import { HIT_SLOP_12 } from '../constants/a11y';
+import { HIT_SLOP_12 } from '../constants/A11Y';
 import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';

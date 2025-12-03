@@ -306,7 +306,7 @@ class EnergyQuantumMechanicsManager {
 
   async adjustEnergy(delta: number): Promise<void> {
     const newEnergy = Math.max(0, Math.min(100, this.getCurrentEnergy() + delta));
-    await this.recordEnergyQuantum(newEnergy, delta >= 0 ? 'social' : 'exertion');
+    await this.recordEnergyQuantum(newEnergy, delta >= 0 ? 'social' : 'rest');
   }
 
   getCurrentState(): QuantumEnergyState {

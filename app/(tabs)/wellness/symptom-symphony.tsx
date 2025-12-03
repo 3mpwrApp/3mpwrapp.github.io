@@ -10,7 +10,7 @@ import { Stack } from 'expo-router';
 import { useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { HIT_SLOP_12 } from '../../../constants/a11y';
+import { HIT_SLOP_12 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { useSymptomSymphony, type SymptomDefinition, type SymptomSeverity } from '../../../services/symptomSymphony';
 import { useAppPalette } from '../../../theme/usePalette';

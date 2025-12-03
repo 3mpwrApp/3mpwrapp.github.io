@@ -12,7 +12,7 @@ import {
 import ContrastToggle from "../../components/ContrastToggle";
 import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
-import { HIT_SLOP_12 } from "../../constants/a11y";
+import { HIT_SLOP_12 } from "../../constants/A11Y";
 import { whatsnew as defaultWN } from "../../data/whatsnew";
 import {
     MAX_FONT_SCALE,

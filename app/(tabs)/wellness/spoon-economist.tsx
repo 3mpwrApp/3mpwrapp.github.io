@@ -3,7 +3,7 @@ import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { HIT_SLOP_12 } from '../../../constants/a11y';
+import { HIT_SLOP_12 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import type { QuickTask, SpoonTask } from '../../../services/spoonEconomist';
 import { useSpoonEconomist } from '../../../services/spoonEconomist';
