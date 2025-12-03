@@ -88,6 +88,7 @@
     "analytics:pii": "node ./scripts/analytics-pii-scan.mjs",
     "deprecations:shadows": "node ./scripts/find-shadow-props.js",
     "deprecations:fragments": "node ./scripts/find-fragment-issues-simple.js",
+    "fonts:download": "powershell -ExecutionPolicy Bypass -File ./scripts/download-fonts.ps1",
     "analytics:pii:soft": "set PII_SCAN_SOFT=1&& node ./scripts/analytics-pii-scan.mjs",
     "perf:budget": "node ./scripts/perf-bundle-budget.mjs",
     "perf:breakdown": "node ./scripts/perf-bundle-breakdown.mjs",

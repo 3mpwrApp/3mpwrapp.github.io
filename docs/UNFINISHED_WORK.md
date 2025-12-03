@@ -1,7 +1,7 @@
 # 📋 Unfinished Work Tracker
 
-**Last Updated**: December 2, 2025  
-**Total Items**: 115 (59 ✅ Complete, 32 ⏳ Deferred, 24 📋 Future Roadmap)
+**Last Updated**: December 3, 2025  
+**Total Items**: 115 (60 ✅ Complete, 31 ⏳ Deferred, 24 📋 Future Roadmap)
 **Document Purpose**: Track all incomplete fixes, implementations, phases, and setup items
 
 ---
@@ -10,11 +10,11 @@
 
 | Category | Original | ✅ Complete | ⏳ Deferred | 📋 Future |
 |----------|----------|-------------|-------------|-----------|
-| 🔧 Fixes (TODOs/FIXMEs) | 38 | 24 | 8 | 6 |
+| 🔧 Fixes (TODOs/FIXMEs) | 38 | 25 | 7 | 6 |
 | 🚧 Implementations | 24 | 18 | 4 | 2 |
 | 📅 Phases/Roadmap | 35 | 10 | 15 | 10 |
 | ⚙️ Setup/Config | 18 | 7 | 5 | 6 |
-| **TOTAL** | **115** | **59** | **32** | **24** |
+| **TOTAL** | **115** | **60** | **31** | **24** |
 
 ---
 
@@ -39,11 +39,12 @@
 - **Endpoints**: `/api/events.json` ✅ Working
 - **Note**: `/campaigns.json` returns 404 due to Cloudflare Pages deployment lag, fallback to Firestore works
 
-### 5. ~~Missing Font Assets~~ ⏳ MANUAL STEP REQUIRED
+### 5. ~~Missing Font Assets~~ ✅ DOWNLOADED
 - **File**: `assets/fonts/`
-- **Issue**: OpenDyslexic and Lexend fonts are PLACEHOLDER files
-- **Action Required**: Download from opendyslexic.org and fonts.google.com/specimen/Lexend
-- **Note**: Network restrictions prevented automated download
+- **Status**: Both fonts successfully downloaded
+  - `OpenDyslexic-Regular.ttf` (175 KB) ✅
+  - `Lexend-Regular.ttf` (32 KB) ✅
+- **Script**: `scripts/download-fonts.ps1` available for reinstallation
 
 ---
 
@@ -67,7 +68,6 @@ These are enhancement TODOs, not bugs:
 |------|-------------|----------|
 | `services/celebrations.ts` | Context access for mood/pacing data | Low - Component should pass data |
 | `services/impactScore.ts` | Access mood entries from context | Low - Component integration |
-| `hooks/useDyslexiaFont.ts` | Font files need manual download | Medium - Accessibility |
 | `components/RepTracker.tsx` | Representatives API integration | Medium - Requires external API |
 | `services/disabilityWizard.ts` | Import feedback/preference data | Low - Enhancement |
 
