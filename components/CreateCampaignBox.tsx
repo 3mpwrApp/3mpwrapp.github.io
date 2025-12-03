@@ -102,11 +102,11 @@ export default function CreateCampaignBox({ onCreate, palette }: CreateCampaignB
         onPress={() => setExpanded(!expanded)} 
         style={boxStyles.header}
         accessibilityRole="button"
-        accessibilityLabel={expanded ? "Collapse create campaign form" : "Expand create campaign form"}
+        accessibilityLabel={expanded ? "Collapse submit campaign form" : "Expand submit campaign form"}
         accessibilityState={{ expanded }}
         hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
       >
-        <Text style={boxStyles.headerText}>✨ Create New Campaign</Text>
+        <Text style={boxStyles.headerText}>📤 Submit Campaign to 3mpwr App</Text>
         <View style={boxStyles.toggleButton}>
           <Text style={boxStyles.toggleText}>{expanded ? '−' : '+'}</Text>
         </View>
@@ -137,13 +137,13 @@ export default function CreateCampaignBox({ onCreate, palette }: CreateCampaignB
             }}
             disabled={!canCreate}
             accessibilityRole="button"
-            accessibilityLabel="Create new campaign"
+            accessibilityLabel="Submit campaign to 3mpwr App"
             accessibilityState={{ disabled: !canCreate }}
             hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[boxStyles.createButton, !canCreate && { opacity: 0.5 }]}
           >
             <Text style={boxStyles.createButtonText}>
-              🚀 Create Campaign
+              🚀 Submit to 3mpwr App
             </Text>
           </Pressable>
         </>

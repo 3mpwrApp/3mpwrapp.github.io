@@ -118,7 +118,7 @@ describe('Events export actions', () => {
     }
     
     // Open create event form
-    const toggle = await screen.findByText(/Create Event/i);
+    const toggle = await screen.findByText(/Submit Event to 3mpwr App/i);
     // @ts-ignore react-native testing library press alias
     fireEvent.press(toggle);
     
@@ -133,7 +133,7 @@ describe('Events export actions', () => {
     fireEvent.change(desc as any, { target: { value: 'Test Description' } });
     fireEvent.change(date as any, { target: { value: '2025-10-01' } });
     
-    const add = screen.getByText(/Add Event/i);
+    const add = screen.getByText(/🚀 Submit to 3mpwr App/i);
     // @ts-ignore
     fireEvent.press(add);
 

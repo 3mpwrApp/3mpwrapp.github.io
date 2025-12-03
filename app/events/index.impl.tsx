@@ -675,15 +675,15 @@ export default function EventsScreen() {
           </A11yPressable>
         </GapView>
 
-        {/* Create Event - Standard+ only */}
+        {/* Submit Event to 3mpwr App - Standard+ only */}
         {isFeatureVisible('standard') && (
           <A11yPressable
             accessibilityRole="button"
-            accessibilityLabel={showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}
+            accessibilityLabel={showCreate ? t('eventsFeature.createToggleClose','Close Form') : 'Submit Event to 3mpwr App'}
             onPress={() => setShowCreate(v => !v)}
             style={{ alignSelf:'flex-start', marginBottom: 8, paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.primary }}
           >
-            <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate ? t('eventsFeature.createToggleClose','Close Form') : t('eventsFeature.createToggleOpen','Create Event')}</Text>
+            <Text style={{ color: palette.onPrimary, fontWeight:'700' }}>{showCreate ? t('eventsFeature.createToggleClose','Close Form') : '📤 Submit Event to 3mpwr App'}</Text>
           </A11yPressable>
         )}
 
@@ -1106,7 +1106,7 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
         )}
         <A11yPressable
           accessibilityRole="button"
-          accessibilityLabel={t('eventsFeature.createToggleOpen','Create Event')}
+          accessibilityLabel="Submit event to 3mpwr App"
           onPress={() => { 
             if(!valid) {
               Alert.alert(
@@ -1148,7 +1148,7 @@ function CreateEventBox({ onCreate, palette }: { onCreate: (d: { title: string; 
           }}
           style={{ backgroundColor: valid ? palette.primary : palette.muted, paddingVertical:10, borderRadius:8, alignItems:'center', minHeight: 44, marginBottom: 8 }}
         >
-          <Text style={{ color: valid ? palette.onPrimary : palette.text, fontWeight:'700' }}>{t('eventsFeature.form.add','Add Event')}</Text>
+          <Text style={{ color: valid ? palette.onPrimary : palette.text, fontWeight:'700' }}>🚀 Submit to 3mpwr App</Text>
         </A11yPressable>
       </ScrollView>
     </View>
