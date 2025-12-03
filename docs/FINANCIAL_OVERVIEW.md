@@ -17,15 +17,15 @@ This document provides a comprehensive breakdown of all services, costs, and ong
 
 ## 🎯 Table of Contents
 
-1. [Core Services & Current Costs](#core-services--current-costs)
-2. [Development & Build Infrastructure](#development--build-infrastructure)
-3. [Third-Party Integrations](#third-party-integrations)
-4. [Ongoing Operational Expenses](#ongoing-operational-expenses)
-5. [Scaling Costs (User Growth Scenarios)](#scaling-costs-user-growth-scenarios)
-6. [Revenue Opportunities](#revenue-opportunities)
-7. [Zero-Cost Operation Mode](#zero-cost-operation-mode)
-8. [Annual Budget Projections](#annual-budget-projections)
-9. [Cost Optimization Strategies](#cost-optimization-strategies)
+1. [Core Services & Current Costs](#-core-services--current-costs)
+2. [Development & Build Infrastructure](#️-development--build-infrastructure)
+3. [Third-Party Integrations](#-third-party-integrations)
+4. [Ongoing Operational Expenses](#-ongoing-operational-expenses)
+5. [Scaling Costs (User Growth Scenarios)](#-scaling-costs-user-growth-scenarios)
+6. [Revenue Opportunities](#-revenue-opportunities)
+7. [Zero-Cost Operation Mode](#-zero-cost-operation-mode)
+8. [Annual Budget Projections](#-annual-budget-projections)
+9. [Cost Optimization Strategies](#-cost-optimization-strategies)
 
 ---
 
@@ -567,7 +567,7 @@ This document provides a comprehensive breakdown of all services, costs, and ong
 - **Approach Strategy**:
   - Start with 1-2 pilot organizations (free for 6 months)
   - Collect testimonials, usage data, impact metrics
-  - Create case study: "How [Organization] improved worker support by 40%"
+  - Create case study: "How \[Organization\] improved worker support by 40%"
   - Pitch to similar organizations with proven ROI
 - **Target Organizations**:
   - **Legal Aid Clinics** ($100-$500/month): Centralized case tracking for clients
@@ -605,7 +605,7 @@ This document provides a comprehensive breakdown of all services, costs, and ong
 - **Pitch Strategy**:
   - Focus on measurable impact: "# of users helped, # of successful claims"
   - Align with donor priorities (accessibility, inclusion, Indigenous rights)
-  - Offer naming opportunities: "Powered by [Company] Grant"
+  - Offer naming opportunities: "Powered by \[Company\] Grant"
   - One-time donations, no ongoing commitment required
 
 ---

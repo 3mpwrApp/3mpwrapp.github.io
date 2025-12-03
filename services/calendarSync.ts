@@ -235,14 +235,16 @@ export async function syncEventToCalendar(event: Event): Promise<{ success: bool
       notes += `\n\nRegister: ${event.registrationLink}`;
     }
     
-    // Create event
+    // Create event with dynamic timezone detection
+    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Toronto';
+    
     const calendarEventId = await Calendar.createEventAsync(calendarId, {
       title: event.title,
       startDate,
       endDate,
       location: event.isVirtual ? (event.virtualLink || 'Virtual Event') : (event.location || ''),
       notes,
-      timeZone: 'America/Toronto', // TODO: Make this dynamic based on user location
+      timeZone: userTimeZone,
       alarms: [
         { relativeOffset: -60 }, // 1 hour before
         event.energyCost === 'high' ? { relativeOffset: -1440 } : null, // 1 day before for high-energy events

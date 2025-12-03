@@ -312,8 +312,8 @@ const DISTRACTION_GAMES: DistractionGame[] = [
 // ============================================================================
 
 class EmotionalFirstAidManager {
-  getSessionHistory() {
-    throw new Error('Method not implemented.');
+  getSessionHistory(): PanicInterruptionSession[] {
+    return [...this.sessions];
   }
   private static instance: EmotionalFirstAidManager;
   private contacts: CrisisContact[] = [];

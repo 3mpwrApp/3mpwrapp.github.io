@@ -692,9 +692,8 @@ class LegalDNASequencerManager {
       }
     }
 
-    // Check for inconsistencies (e.g., conflicting witness accounts)
-    const inconsistencies: TimelineInconsistency[] = [];
-    // TODO: Implement logic to detect contradictory evidence
+    // Check for inconsistencies (e.g., conflicting witness accounts, contradictory evidence)
+    const inconsistencies: TimelineInconsistency[] = this.detectContradictoryEvidence(reconstructedEvents, legalCase);
 
     const completeness = Math.min(100, (reconstructedEvents.length / Math.max(1, gaps.length)) * 10);
 
@@ -705,6 +704,111 @@ class LegalDNASequencerManager {
       inconsistencies,
       completeness,
     };
+  }
+
+  /**
+   * Detect contradictory evidence and witness statements
+   */
+  private detectContradictoryEvidence(
+    events: ReconstructedEvent[], 
+    legalCase: LegalCase
+  ): TimelineInconsistency[] {
+    const inconsistencies: TimelineInconsistency[] = [];
+    
+    // Check for events on the same date with conflicting descriptions
+    const eventsByDate: Record<string, ReconstructedEvent[]> = {};
+    events.forEach(event => {
+      if (!eventsByDate[event.date]) eventsByDate[event.date] = [];
+      eventsByDate[event.date].push(event);
+    });
+    
+    // Look for conflicting accounts on the same date
+    Object.entries(eventsByDate).forEach(([_date, dateEvents]) => {
+      if (dateEvents.length < 2) return;
+      
+      // Compare each pair of events
+      for (let i = 0; i < dateEvents.length - 1; i++) {
+        for (let j = i + 1; j < dateEvents.length; j++) {
+          const event1 = dateEvents[i];
+          const event2 = dateEvents[j];
+          
+          // Check for conflicting times
+          if (event1.time && event2.time && event1.time === event2.time && 
+              event1.participants.length > 0 && event2.participants.length > 0) {
+            const sharedParticipants = event1.participants.filter(p => 
+              event2.participants.includes(p)
+            );
+            if (sharedParticipants.length > 0) {
+              inconsistencies.push({
+                eventIds: [event1.id, event2.id],
+                issue: `Same participant(s) at same time in different events: ${event1.title} vs ${event2.title}`,
+                resolutionSuggestions: [
+                  'Verify exact times with witnesses',
+                  'Check for recording errors',
+                  'Cross-reference with documentary evidence',
+                ],
+              });
+            }
+          }
+          
+          // Check for conflicting descriptions about the same topic
+          const keywords = ['said', 'stated', 'claimed', 'admitted', 'denied'];
+          const event1HasSpeech = keywords.some(kw => event1.description.toLowerCase().includes(kw));
+          const event2HasSpeech = keywords.some(kw => event2.description.toLowerCase().includes(kw));
+          
+          if (event1HasSpeech && event2HasSpeech) {
+            // Look for contradictory terms
+            const contradictions = [
+              ['admitted', 'denied'],
+              ['agreed', 'refused'],
+              ['accepted', 'rejected'],
+              ['confirmed', 'contradicted'],
+            ];
+            
+            for (const [term1, term2] of contradictions) {
+              const e1Has1 = event1.description.toLowerCase().includes(term1);
+              const e1Has2 = event1.description.toLowerCase().includes(term2);
+              const e2Has1 = event2.description.toLowerCase().includes(term1);
+              const e2Has2 = event2.description.toLowerCase().includes(term2);
+              
+              if ((e1Has1 && e2Has2) || (e1Has2 && e2Has1)) {
+                inconsistencies.push({
+                  eventIds: [event1.id, event2.id],
+                  issue: `Contradictory statements detected: ${term1} vs ${term2}`,
+                  resolutionSuggestions: [
+                    'Obtain written statements from all witnesses',
+                    'Review contemporaneous documentation',
+                    'Consider which account has more corroboration',
+                  ],
+                });
+              }
+            }
+          }
+        }
+      }
+    });
+    
+    // Check evidence against event descriptions
+    legalCase.evidence.forEach(evidence => {
+      const relevantEvents = events.filter(e => e.sources.includes(evidence.id));
+      if (relevantEvents.length < 2) return;
+      
+      // Check if multiple events reference same evidence with different interpretations
+      const lowConfidence = relevantEvents.filter(e => e.confidence < 60);
+      if (lowConfidence.length > 1) {
+        inconsistencies.push({
+          eventIds: lowConfidence.map(e => e.id),
+          issue: `Multiple low-confidence interpretations of evidence: ${evidence.title}`,
+          resolutionSuggestions: [
+            'Seek expert interpretation',
+            'Gather additional corroborating evidence',
+            'Document chain of custody concerns',
+          ],
+        });
+      }
+    });
+    
+    return inconsistencies;
   }
 
   // ============================================================================
