@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-03T06:02:47.709Z",
+  "lastUpdated": "2025-12-03T12:03:16.095Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4210,
+      "totalPosts": 4235,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T06:02:39.670Z"
+      "lastSeen": "2025-12-03T12:03:05.391Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4225,
+      "totalPosts": 4250,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T06:02:41.348Z"
+      "lastSeen": "2025-12-03T12:03:07.935Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4209,
+      "totalPosts": 4234,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T06:02:43.173Z"
+      "lastSeen": "2025-12-03T12:03:10.234Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4218,
+      "totalPosts": 4243,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T06:02:44.750Z"
+      "lastSeen": "2025-12-03T12:03:12.613Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4225,
+      "totalPosts": 4250,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T06:02:46.707Z"
+      "lastSeen": "2025-12-03T12:03:15.091Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "The accessibility insights I’ve learned from this calendar are better than chocolate #a11y",
-      "author": "gerireid.com",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Masterpiece by @zeldman.bsky.social was written in 2009 and it's still worth to read! It's one of the mandatory book that is in my library (www.ondrejkonecny.com/books/) #BlueBeanieDay #WorldWideWeb #a11y #W3C @dougvos.bsky.social",
-      "author": "ondrejkonecny.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
-      "author": "nataliegreenpeer.bsky.social",
-      "engagement": 211,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "A beautiful tribute to @sfdirewolf.bsky.social, from Rebecca Cokley. \n\nTogether, may we continue the work and the fight to ensure Alice’s vision becomes the norm. 💜 \n\n#DisabilityJustice #DisabilityVisibility www.thenation.com/article/soci...",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 20,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Annaleigh is a Cherokee woman living with PTSD and other health challenges. She needs $2,000 to cover bills and essential expenses. Please donate or share if you can. 🤍\n#MutualAid #IndigenousMutualAid #DisabilityJustice #BIPOCMA",
       "author": "amparodo.bsky.social",
@@ -338,20 +302,56 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
+      "author": "adulitingishard.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Public health must integrate #DisabilityJustice principles, not as an add-on, but as the foundation: flexibility, access, intersectionality, collective care, and trust in lived expertise.",
+      "author": "longcovidjustice.org",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "The Center for Racial & Disability Justice has an incredibly compelling op-ed in the Chicago Sun Times about why #AssistedSuicide laws are bad, & asking @govpritzker.illinois.gov to veto SB 1950. #DisabilityJustice #DisabilitySky #DisabilityRightsAreHumanRights tinyurl.com/4nk7e6ru",
+      "author": "10minutesaday.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "424-word hot take: “You Can’t Make Something Accessible to Everyone”\nadrianroselli.com/2025/12/you-...\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 28,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
+    {
+      "keyword": "accessibility",
+      "count": 38
+    },
     {
       "keyword": "disabilityrights",
       "count": 37
     },
     {
-      "keyword": "accessibility",
-      "count": 32
-    },
-    {
       "keyword": "a11y",
-      "count": 31
+      "count": 28
     },
     {
       "keyword": "cripthevote",
@@ -360,6 +360,10 @@
     {
       "keyword": "disabilityjustice",
       "count": 25
+    },
+    {
+      "keyword": "idpd",
+      "count": 19
     },
     {
       "keyword": "altcitizen",
@@ -378,19 +382,35 @@
       "count": 11
     },
     {
-      "keyword": "givingtuesday",
-      "count": 10
-    },
-    {
       "keyword": "disability",
       "count": 9
     },
     {
       "keyword": "accessibility a11y",
-      "count": 8
+      "count": 9
     },
     {
-      "keyword": "idpd",
+      "keyword": "inclusion",
+      "count": 7
+    },
+    {
+      "keyword": "internationaldayofpersonswithdisabilities",
+      "count": 6
+    },
+    {
+      "keyword": "idpd disabilityrights",
+      "count": 5
+    },
+    {
+      "keyword": "idpwd",
+      "count": 5
+    },
+    {
+      "keyword": "neurodiversity",
+      "count": 5
+    },
+    {
+      "keyword": "autism adhd",
       "count": 5
     },
     {
@@ -399,26 +419,6 @@
     },
     {
       "keyword": "stoptheliesfox",
-      "count": 5
-    },
-    {
-      "keyword": "virtual",
-      "count": 5
-    },
-    {
-      "keyword": "foxlies",
-      "count": 5
-    },
-    {
-      "keyword": "stoptrump",
-      "count": 5
-    },
-    {
-      "keyword": "wearetheflood",
-      "count": 5
-    },
-    {
-      "keyword": "50501movement",
       "count": 5
     }
   ]
