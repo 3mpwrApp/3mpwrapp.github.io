@@ -3,9 +3,11 @@ import { Platform, Text, View } from 'react-native';
 
 /**
  * Emergency diagnostic screen - shows if main app fails to render
+ * WCAG 2.2 AAA: Using #595959 for textSecondary (7:1 contrast ratio on white)
  */
 export default function EmergencyDiagnostic() {
-  const palette = { background: '#fff', primary: '#DC143C', text: '#000', textSecondary: '#666' };
+  // WCAG 2.2 AAA: #595959 provides 7:1 contrast ratio on white background
+  const palette = { background: '#fff', primary: '#DC143C', text: '#000', textSecondary: '#595959' };
   
   return (
     <View style={{ 
@@ -27,7 +29,8 @@ export default function EmergencyDiagnostic() {
       <Text style={{ fontSize: 14, color: palette.textSecondary, textAlign: 'center', marginTop: 20 }}>
         If you see this screen, the minimal renderer works.
       </Text>
-      <Text style={{ fontSize: 14, color: '#666', textAlign: 'center', marginTop: 10 }}>
+      {/* WCAG 2.2 AAA: Using palette.textSecondary (#595959) for 7:1 contrast */}
+      <Text style={{ fontSize: 14, color: palette.textSecondary, textAlign: 'center', marginTop: 10 }}>
         Main app failed to load. Check browser console (F12).
       </Text>
     </View>

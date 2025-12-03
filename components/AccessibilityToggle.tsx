@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
@@ -38,6 +39,7 @@ export default function AccessibilityToggle({
       accessibilityState={{ checked: value }}
       accessibilityLabel={title}
       accessibilityHint={description}
+      hitSlop={HIT_SLOP_12}
       testID={testID}
     >
       <View style={styles.content}>

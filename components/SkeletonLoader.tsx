@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import type { ViewStyle } from 'react-native';
 import { Animated, StyleSheet, View } from 'react-native';
 
+import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useAppPalette } from '../theme/usePalette';
 
 interface SkeletonLoaderProps {
@@ -16,9 +17,16 @@ export default function SkeletonLoader({
   style,
 }: SkeletonLoaderProps) {
   const palette = useAppPalette();
-  const shimmerAnim = useRef(new Animated.Value(0)).current;
+  const reduceMotion = useReduceMotionEnabled();
+  const shimmerAnim = useRef(new Animated.Value(reduceMotion ? 0.5 : 0)).current;
 
   useEffect(() => {
+    // Skip animation if reduce motion is enabled
+    if (reduceMotion) {
+      shimmerAnim.setValue(0.5);
+      return;
+    }
+    
     const shimmer = Animated.loop(
       Animated.sequence([
         Animated.timing(shimmerAnim, {
@@ -35,9 +43,9 @@ export default function SkeletonLoader({
     );
     shimmer.start();
     return () => shimmer.stop();
-  }, [shimmerAnim]);
+  }, [shimmerAnim, reduceMotion]);
 
-  const opacity = shimmerAnim.interpolate({
+  const opacity = reduceMotion ? 0.5 : shimmerAnim.interpolate({
     inputRange: [0, 1],
     outputRange: [0.3, 0.7],
   });
@@ -71,9 +79,16 @@ export default function SkeletonLoader({
 
 export function CardSkeletonLoader({ style }: { style?: ViewStyle }) {
   const palette = useAppPalette();
-  const shimmerAnim = useRef(new Animated.Value(0)).current;
+  const reduceMotion = useReduceMotionEnabled();
+  const shimmerAnim = useRef(new Animated.Value(reduceMotion ? 0.5 : 0)).current;
 
   useEffect(() => {
+    // Skip animation if reduce motion is enabled
+    if (reduceMotion) {
+      shimmerAnim.setValue(0.5);
+      return;
+    }
+    
     const shimmer = Animated.loop(
       Animated.sequence([
         Animated.timing(shimmerAnim, {
@@ -90,9 +105,9 @@ export function CardSkeletonLoader({ style }: { style?: ViewStyle }) {
     );
     shimmer.start();
     return () => shimmer.stop();
-  }, [shimmerAnim]);
+  }, [shimmerAnim, reduceMotion]);
 
-  const opacity = shimmerAnim.interpolate({
+  const opacity = reduceMotion ? 0.5 : shimmerAnim.interpolate({
     inputRange: [0, 1],
     outputRange: [0.3, 0.7],
   });
@@ -158,9 +173,16 @@ export function SkeletonList({ count = 5 }: { count?: number }) {
 
 export function SkeletonGrid({ columns = 2, count = 6 }: { columns?: number; count?: number }) {
   const palette = useAppPalette();
-  const shimmerAnim = useRef(new Animated.Value(0)).current;
+  const reduceMotion = useReduceMotionEnabled();
+  const shimmerAnim = useRef(new Animated.Value(reduceMotion ? 0.5 : 0)).current;
 
   useEffect(() => {
+    // Skip animation if reduce motion is enabled
+    if (reduceMotion) {
+      shimmerAnim.setValue(0.5);
+      return;
+    }
+    
     const shimmer = Animated.loop(
       Animated.sequence([
         Animated.timing(shimmerAnim, {
@@ -177,9 +199,9 @@ export function SkeletonGrid({ columns = 2, count = 6 }: { columns?: number; cou
     );
     shimmer.start();
     return () => shimmer.stop();
-  }, [shimmerAnim]);
+  }, [shimmerAnim, reduceMotion]);
 
-  const opacity = shimmerAnim.interpolate({
+  const opacity = reduceMotion ? 0.5 : shimmerAnim.interpolate({
     inputRange: [0, 1],
     outputRange: [0.3, 0.7],
   });

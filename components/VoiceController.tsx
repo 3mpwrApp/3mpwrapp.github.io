@@ -37,9 +37,11 @@ export default function VoiceController() {
             const res = handleVoiceCommand(text);
             if (res.handled) setToast(res.label || text);
             else setToast('Command not recognized');
+            // WCAG 2.2.1: Toast auto-dismiss for feedback display, not user-interaction timeout
             setTimeout(() => setToast(null), 2000);
           } else {
             setToast('Heard nothing');
+            // WCAG 2.2.1: Toast auto-dismiss for feedback display, not user-interaction timeout
             setTimeout(() => setToast(null), 1500);
           }
         }
@@ -47,6 +49,7 @@ export default function VoiceController() {
         // Prefer expo-audio, fallback to expo-av for SDK 53
         let AudioMod: any;
         try { AudioMod = require('expo-audio')?.Audio; } catch { try { AudioMod = require('expo-av')?.Audio; } catch {} }
+        // WCAG 2.2.1: Toast auto-dismiss for feedback display, not user-interaction timeout
         if (!AudioMod) { setToast('Voice unavailable'); setTimeout(()=>setToast(null),1500); return; }
         const { granted } = await AudioMod.requestPermissionsAsync();
         if (!granted) return;

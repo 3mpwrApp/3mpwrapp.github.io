@@ -5,7 +5,7 @@ import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View 
 import A11yPressable from '../../components/A11yPressable';
 import AccessibilityToggle from '../../components/AccessibilityToggle';
 import DataOwnershipStatement from '../../components/DataOwnershipStatement';
-import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../../constants/A11Y';
 import { useTranslation } from '../../i18n';
 import { clearAllData, exportBackup, importBackup } from '../../services/backup';
 import { isCloudConsentEnabled, setCloudConsent, setTelemetryConsent } from '../../services/consent';
@@ -448,8 +448,9 @@ export default function EnhancedPrivacySection() {
         onPress={() => setShowProviderModal(false)}
         accessibilityRole="button"
         accessibilityLabel="Close modal"
+        hitSlop={HIT_SLOP_12}
       >
-        <Pressable style={s.modalContent} onPress={(e) => e.stopPropagation()}>
+        <Pressable style={s.modalContent} onPress={(e) => e.stopPropagation()} hitSlop={HIT_SLOP_12}>
           <ScrollView>
             <Text style={s.modalTitle}>Choose Your Cloud Provider</Text>
             <Text style={s.modalDescription}>
@@ -462,6 +463,7 @@ export default function EnhancedPrivacySection() {
               onPress={() => setCloudProvider('firebase')}
               accessibilityRole="button"
               accessibilityState={{ selected: cloudProvider === 'firebase' }}
+              hitSlop={HIT_SLOP_12}
             >
               <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
                 <Ionicons name="flame" size={24} color={palette.primary} style={{ marginRight: 12 }} />
@@ -482,6 +484,7 @@ export default function EnhancedPrivacySection() {
               onPress={() => setCloudProvider('webdav')}
               accessibilityRole="button"
               accessibilityState={{ selected: cloudProvider === 'webdav' }}
+              hitSlop={HIT_SLOP_12}
             >
               <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
                 <Ionicons name="cloud" size={24} color={palette.primary} style={{ marginRight: 12 }} />
@@ -502,6 +505,7 @@ export default function EnhancedPrivacySection() {
               onPress={() => setCloudProvider('none')}
               accessibilityRole="button"
               accessibilityState={{ selected: cloudProvider === 'none' }}
+              hitSlop={HIT_SLOP_12}
             >
               <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
                 <Ionicons name="phone-portrait" size={24} color={palette.textSecondary} style={{ marginRight: 12 }} />
@@ -521,6 +525,7 @@ export default function EnhancedPrivacySection() {
                 style={[s.modalButton, s.modalButtonSecondary]}
                 onPress={() => setShowProviderModal(false)}
                 accessibilityRole="button"
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[s.modalButtonText, s.modalButtonTextSecondary]}>Cancel</Text>
               </Pressable>
@@ -528,6 +533,7 @@ export default function EnhancedPrivacySection() {
                 style={[s.modalButton, s.modalButtonPrimary]}
                 onPress={() => selectProviderAndEnable(cloudProvider)}
                 accessibilityRole="button"
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[s.modalButtonText, s.modalButtonTextPrimary]}>
                   Continue with {cloudProvider === 'firebase' ? 'Firebase' : cloudProvider === 'webdav' ? 'WebDAV' : 'Local Only'}

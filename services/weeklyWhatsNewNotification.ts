@@ -14,7 +14,7 @@ import { cancel, scheduleDailyAt } from './notifications';
 const WEEKLY_NOTIFICATION_KEY = 'weekly_whatsnew_notification_id';
 const LAST_SUMMARY_DATE_KEY = 'last_whatsnew_summary_date';
 const NOTIFICATION_ENABLED_KEY = 'weekly_whatsnew_enabled';
-const NOTIFICATION_FREQUENCY_KEY = 'whatsnew_notification_frequency';
+const _NOTIFICATION_FREQUENCY_KEY = 'whatsnew_notification_frequency'; // Reserved for future frequency customization
 
 /**
  * Get What's New items from the last week

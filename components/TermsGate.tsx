@@ -9,6 +9,7 @@ import {
     View
 } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { useAppPalette } from "../theme/usePalette";
 import { createShadow } from "../utils/shadow";
 
@@ -165,6 +166,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       accessibilityRole="checkbox"
       accessibilityState={{ checked }}
       accessibilityLabel={label}
+      hitSlop={HIT_SLOP_12}
     >
       <View style={[styles.checkbox, checked && styles.checkboxChecked]}>
         {checked && <Ionicons name="checkmark" size={16} color={palette.onPrimary} />}
@@ -207,6 +209,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               onPress={() => setCurrentStep("terms")}
               style={styles.button}
               accessibilityRole="button"
+              hitSlop={HIT_SLOP_12}
             >
               <Text style={styles.buttonText}>Continue</Text>
             </Pressable>
@@ -249,6 +252,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 onPress={() => openFullDocument("terms")}
                 style={styles.link}
                 accessibilityRole="link"
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.linkText}>📄 Read Full Terms of Service</Text>
               </Pressable>
@@ -257,6 +261,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               <Pressable
                 onPress={() => setCurrentStep("welcome")}
                 style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.buttonTextSecondary}>Back</Text>
               </Pressable>
@@ -264,6 +269,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 onPress={() => setCurrentStep("privacy")}
                 style={[styles.button, !termsScrolledToBottom && styles.buttonDisabled]}
                 disabled={!termsScrolledToBottom}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[styles.buttonText, !termsScrolledToBottom && styles.buttonTextDisabled]}>
                   {termsScrolledToBottom ? "Next" : "Scroll to Bottom"}
@@ -314,6 +320,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 onPress={() => openFullDocument("privacy")}
                 style={styles.link}
                 accessibilityRole="link"
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.linkText}>📄 Read Full Privacy Policy</Text>
               </Pressable>
@@ -322,6 +329,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               <Pressable
                 onPress={() => setCurrentStep("terms")}
                 style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.buttonTextSecondary}>Back</Text>
               </Pressable>
@@ -329,6 +337,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 onPress={() => setCurrentStep("medical")}
                 style={[styles.button, !privacyScrolledToBottom && styles.buttonDisabled]}
                 disabled={!privacyScrolledToBottom}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[styles.buttonText, !privacyScrolledToBottom && styles.buttonTextDisabled]}>
                   {privacyScrolledToBottom ? "Next" : "Scroll to Bottom"}
@@ -368,6 +377,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               <Pressable
                 onPress={() => setCurrentStep("privacy")}
                 style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.buttonTextSecondary}>Back</Text>
               </Pressable>
@@ -375,6 +385,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 onPress={() => setCurrentStep("legal")}
                 style={[styles.button, !medicalChecked && styles.buttonDisabled]}
                 disabled={!medicalChecked}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[styles.buttonText, !medicalChecked && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
@@ -413,6 +424,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               <Pressable
                 onPress={() => setCurrentStep("medical")}
                 style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.buttonTextSecondary}>Back</Text>
               </Pressable>
@@ -420,6 +432,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 onPress={() => setCurrentStep("financial")}
                 style={[styles.button, !legalChecked && styles.buttonDisabled]}
                 disabled={!legalChecked}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[styles.buttonText, !legalChecked && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
@@ -456,6 +469,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               <Pressable
                 onPress={() => setCurrentStep("legal")}
                 style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.buttonTextSecondary}>Back</Text>
               </Pressable>
@@ -463,6 +477,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 onPress={() => setCurrentStep("ai")}
                 style={[styles.button, !financialChecked && styles.buttonDisabled]}
                 disabled={!financialChecked}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[styles.buttonText, !financialChecked && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
@@ -500,6 +515,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               <Pressable
                 onPress={() => setCurrentStep("financial")}
                 style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.buttonTextSecondary}>Back</Text>
               </Pressable>
@@ -507,6 +523,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 onPress={() => setCurrentStep("crisis")}
                 style={[styles.button, !aiChecked && styles.buttonDisabled]}
                 disabled={!aiChecked}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[styles.buttonText, !aiChecked && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
@@ -553,6 +570,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               <Pressable
                 onPress={() => setCurrentStep("ai")}
                 style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.buttonTextSecondary}>Back</Text>
               </Pressable>
@@ -560,6 +578,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 onPress={() => setCurrentStep("final")}
                 style={[styles.button, !(crisisChecked && emergencyChecked) && styles.buttonDisabled]}
                 disabled={!(crisisChecked && emergencyChecked)}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[styles.buttonText, !(crisisChecked && emergencyChecked) && styles.buttonTextDisabled]}>Next</Text>
               </Pressable>
@@ -612,6 +631,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 style={[styles.button, styles.buttonSecondary]}
                 accessibilityRole="button"
                 accessibilityLabel="Go back to previous step"
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.buttonTextSecondary}>Back</Text>
               </Pressable>
@@ -628,6 +648,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                   ? "Accept all terms and continue" 
                   : "Please check all boxes to enable this button"}
                 accessibilityState={{ disabled: !allDisclaimersAccepted }}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={[
                   styles.buttonText,

@@ -16,7 +16,7 @@ import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-n
 
 import A11yPressable from '../../components/A11yPressable';
 import { GapView } from '../../components/GapView';
-import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
 import type { DisabilityProfile } from '../../services/disabilityWizard';
@@ -454,7 +454,7 @@ function OptionCard({ icon, label, description, selected, onPress, palette, styl
       ]}
       accessibilityRole="button"
       accessibilityState={{ selected }}
-      hitSlop={HIT_SLOP_8}
+      hitSlop={HIT_SLOP_12}
     >
       <View style={[styles.optionIcon, { backgroundColor: selected ? palette.primary : palette.surface }]}>
         <Ionicons name={icon as any} size={small ? 20 : 24} color={selected ? palette.onPrimary : palette.primary} />
@@ -484,7 +484,7 @@ function Chip({ icon, label, selected, onPress, palette, styles }: any) {
       ]}
       accessibilityRole="button"
       accessibilityState={{ selected }}
-      hitSlop={HIT_SLOP_8}
+      hitSlop={HIT_SLOP_12}
     >
       <GapView gap={6} style={{ flexDirection: 'row', alignItems: 'center' }}>
         <Ionicons name={icon as any} size={18} color={selected ? palette.primary : palette.text} />

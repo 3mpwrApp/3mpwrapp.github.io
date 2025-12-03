@@ -166,7 +166,7 @@ export default function DiscordHub({
           pressed && styles.buttonPressed,
         ]}
       >
-        <Ionicons name="logo-discord" size={20} color="#FFFFFF" />
+        <Ionicons name="logo-discord" size={20} color={palette.onPrimary} />
         <Text style={styles.joinButtonText}>
           {user ? 'Open Discord' : 'Join Discord Server'}
         </Text>
@@ -323,7 +323,7 @@ function createStyles(palette: any, compact: boolean) {
       gap: 8,
     },
     joinButtonText: {
-      color: '#FFFFFF',
+      color: palette.onPrimary,
       fontSize: 16,
       fontWeight: '600',
     },

@@ -2,6 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import { Alert, Pressable, StyleSheet, Switch, Text, View } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import { useTranslation } from "../i18n";
 import {
@@ -168,6 +169,7 @@ export default function NotificationPreferences() {
                     const idx = presets.indexOf(quietHoursStart || '22:00');
                     setQuietHoursStart(presets[(idx+1)%presets.length]);
                   }}
+                  hitSlop={HIT_SLOP_12}
                   accessibilityRole="button"
                   accessibilityLabel={t('settings.notifications.quietHoursStart', 'Start Hour')}
                   accessibilityHint={t('settings.notifications.quietHoursStartHint', 'Tap to change. Current: ') + (quietHoursStart || '22:00')}
@@ -186,6 +188,7 @@ export default function NotificationPreferences() {
                     const idx = presets.indexOf(quietHoursEnd || '07:00');
                     setQuietHoursEnd(presets[(idx+1)%presets.length]);
                   }}
+                  hitSlop={HIT_SLOP_12}
                   accessibilityRole="button"
                   accessibilityLabel={t('settings.notifications.quietHoursEnd', 'End Hour')}
                   accessibilityHint={t('settings.notifications.quietHoursEndHint', 'Tap to change. Current: ') + (quietHoursEnd || '07:00')}

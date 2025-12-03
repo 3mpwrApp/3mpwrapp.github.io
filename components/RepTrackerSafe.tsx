@@ -1,6 +1,7 @@
 import React from "react";
 import { Pressable, Text, useColorScheme, View } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { colors } from "../theme/colors";
 
 // Lazy load RepTracker - only loads when user clicks "Rep Tracker" button
@@ -33,6 +34,9 @@ export function RepTrackerSafe() {
             paddingHorizontal: 24,
             borderRadius: 8,
           }}
+          accessibilityRole="button"
+          accessibilityLabel="Try Again"
+          hitSlop={HIT_SLOP_12}
         >
           <Text style={{ color: palette.onPrimary, fontSize: 16, fontWeight: '600' }}>
             Try Again

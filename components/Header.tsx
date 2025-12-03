@@ -7,6 +7,7 @@ import {
     useColorScheme
 } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { colors, type Palette } from "../theme/colors";
 import { openExternalUrl } from "../utils/linking";
 
@@ -38,7 +39,8 @@ export default function Header() {
             openLink("https://www.facebook.com/profile.php?id=61579428783083")
           }
           accessibilityRole="link"
-              accessibilityLabel="Visit 3mpwr on Facebook"
+          accessibilityLabel="Visit 3mpwr on Facebook"
+          hitSlop={HIT_SLOP_12}
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
           <Ionicons name="logo-facebook" size={22} color={palette.primary} />
@@ -52,7 +54,8 @@ export default function Header() {
             )
           }
           accessibilityRole="link"
-              accessibilityLabel="Visit 3mpwr on Instagram"
+          accessibilityLabel="Visit 3mpwr on Instagram"
+          hitSlop={HIT_SLOP_12}
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
           <Ionicons name="logo-instagram" size={22} color={palette.primary} />
@@ -66,7 +69,8 @@ export default function Header() {
             )
           }
           accessibilityRole="link"
-              accessibilityLabel="Visit 3mpwr on X"
+          accessibilityLabel="Visit 3mpwr on X"
+          hitSlop={HIT_SLOP_12}
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
           <Ionicons name="logo-twitter" size={22} color={palette.text} />
@@ -76,7 +80,8 @@ export default function Header() {
         <Pressable
           onPress={() => openLink("mailto:empowrapp08162025@gmail.com")}
           accessibilityRole="link"
-              accessibilityLabel="Email 3mpwr at empowrapp08162025@gmail.com"
+          accessibilityLabel="Email 3mpwr at empowrapp08162025@gmail.com"
+          hitSlop={HIT_SLOP_12}
           style={({ pressed }) => [{ opacity: pressed ? 0.6 : 1 }]}
         >
           <Ionicons name="mail" size={22} color={palette.primary} />

@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import type { ComponentPropsWithoutRef } from 'react';
 import { Linking, Pressable, ScrollView, Text, View } from 'react-native';
 
+import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { useAppPalette } from '../../theme/usePalette';
 
 import { createStyles } from './DataOwnershipStatement.styles';
@@ -95,6 +96,7 @@ export default function DataOwnershipStatement({
         <Pressable
           onPress={openFullStatement}
           accessibilityRole="link"
+          hitSlop={HIT_SLOP_8}
           style={({ pressed }) => [
             styles.linkButton,
             pressed && { opacity: 0.8 }

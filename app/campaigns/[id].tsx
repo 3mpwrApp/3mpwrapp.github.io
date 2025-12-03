@@ -18,7 +18,7 @@ import {
 import A11yPressable from "../../components/A11yPressable";
 import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
-import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../../constants/A11Y';
 import { useAuth } from "../../context/AuthContext";
 import { campaigns } from "../../data/campaigns";
 import { useTranslation } from "../../i18n";
@@ -468,6 +468,7 @@ function CampaignDetailInner() {
               accessibilityRole="button"
               accessibilityLabel={saved ? t('a11y.removeCampaign') : t('a11y.saveCampaign')}
               focusable={true}
+              hitSlop={HIT_SLOP_12}
             >
               <Text style={styles.buttonText}>
                 {saved ? "Remove from Favorites" : "Save to Favorites"}
@@ -505,6 +506,7 @@ function CampaignDetailInner() {
               accessibilityRole="button"
               accessibilityLabel={joined ? t('a11y.leaveCampaign').replace('{{title}}', campaign.title) : t('a11y.joinCampaign').replace('{{title}}', campaign.title)}
               focusable={true}
+              hitSlop={HIT_SLOP_12}
             >
               <Text style={styles.secondaryText}>
                 {joined ? "Leave Campaign" : "Join Campaign"}
@@ -523,6 +525,7 @@ function CampaignDetailInner() {
               accessibilityRole="button"
               accessibilityLabel={t('a11y.openCampaignRoom')}
               focusable={true}
+              hitSlop={HIT_SLOP_12}
             >
               <Text style={styles.linkText}>Open Campaign Room</Text>
             </Pressable>
@@ -533,6 +536,7 @@ function CampaignDetailInner() {
               accessibilityRole="button"
               accessibilityLabel={t('a11y.shareCampaign').replace('{{title}}', campaign.title)}
               focusable={true}
+              hitSlop={HIT_SLOP_12}
             >
               <Text style={styles.linkText}>📤 Share to Socials</Text>
             </Pressable>
@@ -767,7 +771,7 @@ function createStyles(palette: Palette, factor: number) {
       backgroundColor: palette.warning || '#B45309',
     },
     statusText: {
-      color: '#FFFFFF',
+      color: palette.onPrimary,
       fontSize: Math.round(11 * factor),
       fontWeight: '700',
       textTransform: 'uppercase',
@@ -826,7 +830,7 @@ function createStyles(palette: Palette, factor: number) {
       justifyContent: 'center',
     },
     shareButtonText: {
-      color: '#fff',
+      color: palette.onPrimary,
       fontSize: Math.round(24 * factor),
       fontWeight: '600',
     },

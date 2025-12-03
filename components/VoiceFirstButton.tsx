@@ -29,7 +29,8 @@ if (Platform.OS !== 'web') {
   }
 }
 
-import { MAX_FONT_SCALE } from '../constants/A11Y';
+import { HIT_SLOP_8, MAX_FONT_SCALE } from '../constants/A11Y';
+import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import {
     processVoiceCommand,
@@ -45,11 +46,17 @@ interface VoiceFirstButtonProps {
 export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFirstButtonProps) {
   const palette = useAppPalette();
   const { t: _t } = useTranslation();
+  const reduceMotion = useReduceMotionEnabled();
   const [isListening, setIsListening] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [pulseAnim] = useState(new Animated.Value(1));
 
   useEffect(() => {
+    // WCAG 2.3.3: Skip animation if user prefers reduced motion
+    if (reduceMotion) {
+      pulseAnim.setValue(1);
+      return;
+    }
     if (isListening) {
       // Pulse animation while listening
       Animated.loop(
@@ -69,7 +76,7 @@ export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFir
     } else {
       pulseAnim.setValue(1);
     }
-  }, [isListening, pulseAnim]);
+  }, [isListening, pulseAnim, reduceMotion]);
 
   const handlePress = async () => {
     if (Haptics && Platform.OS !== 'web') {
@@ -129,7 +136,7 @@ export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFir
               <Text style={[styles.suggestionsTitle, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                 Voice Commands
               </Text>
-              <Pressable onPress={handleToggleSuggestions} accessibilityRole="button" accessibilityLabel="Close suggestions" hitSlop={8}>
+              <Pressable onPress={handleToggleSuggestions} accessibilityRole="button" accessibilityLabel="Close suggestions" hitSlop={HIT_SLOP_8}>
                 <Ionicons name="close" size={20} color={palette.textSecondary} />
               </Pressable>
             </View>
@@ -181,6 +188,7 @@ export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFir
           accessibilityRole="button"
           accessibilityLabel={isListening ? 'Stop listening' : 'Start voice mode'}
           accessibilityHint="Long press to see available commands"
+          hitSlop={HIT_SLOP_8}
         >
           <Ionicons 
             name={isListening ? 'stop' : 'mic'} 
@@ -196,6 +204,7 @@ export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFir
             onPress={handleToggleSuggestions}
             accessibilityRole="button"
             accessibilityLabel="Show voice commands"
+            hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="help-circle-outline" size={16} color={palette.primary} />
           </Pressable>

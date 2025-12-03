@@ -1,0 +1,109 @@
+# Navigation Stress Test Flow
+# Tests rapid navigation through all app screens
+# Validates stability under heavy navigation load
+
+appId: com.app3mpwr.app3mpwr
+
+---
+
+# Test: Rapid Tab Switching (100 cycles)
+- repeat:
+    times: 100
+    commands:
+      - tapOn:
+          text: "Home"
+      - waitForAnimationToEnd
+      - tapOn:
+          text: "Campaigns"
+      - waitForAnimationToEnd
+      - tapOn:
+          text: "Community"
+      - waitForAnimationToEnd
+      - tapOn:
+          text: "Resources"
+      - waitForAnimationToEnd
+      - tapOn:
+          text: "Wellness"
+      - waitForAnimationToEnd
+      - tapOn:
+          text: "Advocacy"
+      - waitForAnimationToEnd
+      - tapOn:
+          text: "Settings"
+      - waitForAnimationToEnd
+
+---
+
+# Test: Deep Navigation Stress
+- tapOn:
+    text: "Wellness"
+- waitForAnimationToEnd
+
+- repeat:
+    times: 20
+    commands:
+      # Navigate into a feature
+      - tapOn:
+          id: "first-wellness-item"
+          optional: true
+      - waitForAnimationToEnd
+      
+      # Go back
+      - back
+      - waitForAnimationToEnd
+
+---
+
+# Test: Scroll Stress
+- tapOn:
+    text: "Resources"
+- waitForAnimationToEnd
+
+- repeat:
+    times: 50
+    commands:
+      - scroll:
+          direction: DOWN
+      - scroll:
+          direction: DOWN
+      - scroll:
+          direction: UP
+      - scroll:
+          direction: UP
+
+---
+
+# Test: Orientation Change Stress
+- repeat:
+    times: 20
+    commands:
+      - setOrientation:
+          orientation: LANDSCAPE
+      - waitForAnimationToEnd
+      - setOrientation:
+          orientation: PORTRAIT
+      - waitForAnimationToEnd
+
+---
+
+# Test: Rapid Tap Stress
+- tapOn:
+    text: "Home"
+- waitForAnimationToEnd
+
+- repeat:
+    times: 50
+    commands:
+      - tapOn:
+          text: "Home"
+
+---
+
+# Verify app is still responsive
+- assertVisible:
+    text: "Home"
+- tapOn:
+    text: "Wellness"
+- waitForAnimationToEnd
+- assertVisible:
+    text: "Wellness"

@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { MAX_FONT_SCALE } from "../hooks/useA11y";
 import type { Lang } from "../i18n";
 import { useTranslation } from "../i18n";
@@ -42,6 +43,7 @@ export default function LanguageSelector() {
               pressed && { opacity: 0.7 },
             ]}
             onPress={() => setLanguage(language.code)}
+            hitSlop={HIT_SLOP_12}
             accessibilityRole="radio"
             accessibilityState={{ 
               checked: lang === language.code,

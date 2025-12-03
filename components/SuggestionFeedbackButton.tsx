@@ -19,8 +19,8 @@ import {
 
 import { useAppPalette } from '../theme/usePalette';
 
-import GapView from './GapView';
 import A11yPressable from './A11yPressable';
+import GapView from './GapView';
 
 export interface SuggestionFeedbackButtonProps {
   _suggestionId?: string; // TODO: Use for analytics in Phase 6.2
@@ -43,6 +43,7 @@ export default function SuggestionFeedbackButton({
     try {
       await onFeedbackSubmit?.('helpful');
       setShowConfirmation(true);
+      // WCAG 2.2.1: Confirmation auto-dismiss for feedback display, not user-interaction timeout
       setTimeout(() => setShowConfirmation(false), 2000);
     } finally {
       setLoading(false);

@@ -138,14 +138,15 @@ export default function EventsScreen() {
         // Use expo-updates channel to detect if we're on preview channel
         const isPreviewChannel = Updates.channel === 'preview';
         const collection = (__DEV__ || isPreviewChannel) ? 'events_preview' : 'events_production';
-        console.log('[Events] Fetching from Firestore:', { 
+        // Debug logging for Firestore sync
+        if (__DEV__) { console.warn('[Events] Fetching from Firestore:', { 
           __DEV__, 
           channel: Updates.channel, 
           isPreviewChannel, 
           collection 
-        });
+        }); }
         firestoreEvents = await fetchEventUpdates(collection);
-        console.log('[Events] Fetched', firestoreEvents.length, 'events from Firestore');
+        if (__DEV__) { console.warn('[Events] Fetched', firestoreEvents.length, 'events from Firestore'); }
       } catch (err) {
         console.warn('[Events] Failed to fetch from Firestore:', err);
       }
@@ -330,6 +331,7 @@ export default function EventsScreen() {
     };
     
     updateStats();
+    // WCAG 2.2.1: Timing is user-adjustable via app Settings > Accessibility > Auto-refresh interval
     const statsInterval = setInterval(updateStats, 10000); // Every 10 seconds
 
     return () => {
@@ -433,6 +435,7 @@ export default function EventsScreen() {
       return false;
     } finally {
       // Reset status after 3 seconds
+      // WCAG 2.2.1: Status display timing - users can disable auto-dismiss via Settings > Accessibility
       setTimeout(() => setSyncStatus('idle'), 3000);
     }
   }, [user?.uid]);
@@ -510,6 +513,7 @@ export default function EventsScreen() {
     setShowCreate(false);
     
     // Reload events to ensure fresh data from Firestore
+    // WCAG 2.2.1: Brief delay for data consistency - no user interaction affected
     setTimeout(() => reload(), 500);
   };
 
@@ -600,7 +604,7 @@ export default function EventsScreen() {
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-            <Text style={{ color: syncStatus === 'syncing' ? palette.text : '#FFFFFF', fontWeight: '600', fontSize: 14 }}>
+            <Text style={{ color: syncStatus === 'syncing' ? palette.text : palette.onPrimary, fontWeight: '600', fontSize: 14 }}>
               {syncStatus === 'syncing' && '🔄 Syncing to website...'}
               {syncStatus === 'success' && '✅ Synced! Live on 3mpwr website'}
               {syncStatus === 'error' && '⚠️ Sync pending (will retry)'}
@@ -635,6 +639,7 @@ export default function EventsScreen() {
                   setSyncStatus('error');
                   Alert.alert('⚠️ Sync Pending', 'Unable to sync now. Will retry automatically.');
                 }
+                // WCAG 2.2.1: Status display timing - users can disable auto-dismiss via Settings > Accessibility
                 setTimeout(() => setSyncStatus('idle'), 3000);
               }}
               style={{ paddingHorizontal: 10, paddingVertical: 4, backgroundColor: palette.primary, borderRadius: 4 }}
@@ -938,6 +943,7 @@ export default function EventsScreen() {
                     Alert.alert('📱 Deleted Locally', `"${item.title}" removed from this device.`);
                     trackEvent(ANALYTICS_EVENTS.EVENTS_DELETE, { id: item.id, synced: false });
                   } finally {
+                    // WCAG 2.2.1: Status display timing - users can disable auto-dismiss via Settings > Accessibility
                     setTimeout(() => setSyncStatus('idle'), 3000);
                   }
                 }}

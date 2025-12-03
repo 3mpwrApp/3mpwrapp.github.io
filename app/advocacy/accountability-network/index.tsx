@@ -144,6 +144,7 @@ export default function AccountabilityNetworkScreen() {
       <Pressable
         onPress={() => router.push('/advocacy/accountability-network/add-review')}
         style={[styles.addButton, { backgroundColor: palette.primary }]}
+        hitSlop={HIT_SLOP_8}
         accessibilityRole="button"
         accessibilityLabel="Add a review"
       >

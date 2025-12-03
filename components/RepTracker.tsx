@@ -541,15 +541,15 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     voteFor: {
       backgroundColor: '#047857',
-      color: '#FFFFFF',
+      color: palette.onPrimary,
     },
     voteAgainst: {
       backgroundColor: '#991B1B',
-      color: '#FFFFFF',
+      color: palette.onPrimary,
     },
     voteAbstain: {
       backgroundColor: '#374151',
-      color: '#FFFFFF',
+      color: palette.onPrimary,
     },
     voteDate: {
       fontSize: 12 * factor,

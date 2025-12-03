@@ -228,6 +228,7 @@ export function AutoSaveIndicator({ lastSaved, isSaving = false }: AutoSaveIndic
     };
     
     updateTime();
+    // WCAG 2.2.1: Passive display update, not a user-interaction timeout
     const interval = setInterval(updateTime, 60000); // Update every minute
     
     return () => clearInterval(interval);

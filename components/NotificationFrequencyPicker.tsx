@@ -115,6 +115,7 @@ export function NotificationFrequencyPicker({
         <Pressable
           style={[styles.frequencySelector, { borderColor: palette.border }]}
           onPress={() => setModalVisible(true)}
+          hitSlop={HIT_SLOP_16}
           accessibilityRole="button"
           accessibilityLabel={`Frequency: ${FREQUENCY_LABELS[frequency]}. Tap to change.`}
         >
@@ -137,6 +138,7 @@ export function NotificationFrequencyPicker({
         <Pressable
           style={styles.modalOverlay}
           onPress={() => setModalVisible(false)}
+          hitSlop={HIT_SLOP_16}
         >
           <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
             <Text style={[styles.modalTitle, { color: palette.text }]}>
@@ -158,6 +160,7 @@ export function NotificationFrequencyPicker({
                   },
                 ]}
                 onPress={() => handleFrequencyChange(option)}
+                hitSlop={HIT_SLOP_16}
                 accessibilityRole="radio"
                 accessibilityState={{ selected: frequency === option }}
               >
@@ -181,6 +184,7 @@ export function NotificationFrequencyPicker({
             <Pressable
               style={[styles.closeButton, { backgroundColor: palette.muted }]}
               onPress={() => setModalVisible(false)}
+              hitSlop={HIT_SLOP_16}
             >
               <Text style={[styles.closeButtonText, { color: palette.text }]}>Cancel</Text>
             </Pressable>
@@ -222,7 +226,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       alignItems: 'center',
     },
     toggleText: {
-      color: '#fff',
+      color: palette.onPrimary,
       fontSize: 12,
       fontWeight: '700',
     },

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Animated, StyleSheet, View, type ViewStyle } from 'react-native';
 
+import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useAppPalette } from '../theme/usePalette';
 
 interface SkeletonProps {
@@ -17,9 +18,16 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   style,
 }) => {
   const palette = useAppPalette();
-  const animatedValue = React.useRef(new Animated.Value(0)).current;
+  const reduceMotion = useReduceMotionEnabled();
+  const animatedValue = React.useRef(new Animated.Value(reduceMotion ? 0.5 : 0)).current;
 
   React.useEffect(() => {
+    // Skip animation if reduce motion is enabled
+    if (reduceMotion) {
+      animatedValue.setValue(0.5);
+      return;
+    }
+    
     const animation = Animated.loop(
       Animated.sequence([
         Animated.timing(animatedValue, {
@@ -36,9 +44,9 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     );
     animation.start();
     return () => animation.stop();
-  }, [animatedValue]);
+  }, [animatedValue, reduceMotion]);
 
-  const opacity = animatedValue.interpolate({
+  const opacity = reduceMotion ? 0.5 : animatedValue.interpolate({
     inputRange: [0, 1],
     outputRange: [0.3, 0.7],
   });

@@ -5,6 +5,8 @@
  * and adapts in real-time based on context and biometric feedback.
  */
 
+/* eslint-disable no-restricted-syntax */ // Hex colors needed for static StyleSheet definitions
+
 import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
@@ -70,12 +72,12 @@ export default function AIGroundingScreen() {
       if (technique.category === 'breathing') {
         startBreathingAnimation(technique);
       }
-    } catch (error) {
-      console.error('Failed to start technique:', error);
+    } catch {
+      console.error('Failed to start technique');
     }
   }
 
-  function startBreathingAnimation(technique: GroundingTechnique) {
+  function startBreathingAnimation(_technique: GroundingTechnique) {
     const cycle = () => {
       // 4-7-8 breathing pattern
       setBreathPhase('inhale');

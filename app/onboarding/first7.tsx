@@ -9,6 +9,7 @@ import React from 'react';
 import { Platform, Pressable, ScrollView, Text, View } from 'react-native';
 
 import { GapView } from '../../components/GapView';
+import { HIT_SLOP_12 } from '../../constants/A11Y';
 import { useTranslation } from '../../i18n';
 import { useFirst7 } from '../../store/onboardingFirst7';
 import { useAppPalette } from '../../theme/usePalette';
@@ -110,7 +111,7 @@ export default function First7Screen(){
                     borderColor: selectedRole === role.id ? palette.primary : palette.muted,
                     backgroundColor: selectedRole === role.id ? palette.card : palette.surface 
                   }}
-                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Text style={{ fontWeight: '600', color: palette.text, fontSize: 16 }}>{role.label}</Text>
                   <Text style={{ color: palette.text, fontSize: 14, marginTop: 4 }}>{role.hint}</Text>
@@ -127,7 +128,7 @@ export default function First7Screen(){
             if (s.id === 'choose_role' && !selectedRole && !state.completed.choose_role) return null;
             
             return (
-              <Pressable key={s.id} accessibilityRole="checkbox" accessibilityState={{ checked: !!state.completed[s.id as Step] }} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }} onPress={()=>toggle(s.id as Step)} style={{ 
+              <Pressable key={s.id} accessibilityRole="checkbox" accessibilityState={{ checked: !!state.completed[s.id as Step] }} hitSlop={HIT_SLOP_12} onPress={()=>toggle(s.id as Step)} style={{ 
                   padding: 12, 
                   borderRadius: 10, 
                   borderWidth: 1, 
@@ -153,36 +154,36 @@ export default function First7Screen(){
         <View style={{ height: 1, backgroundColor: palette.muted, marginVertical: 8 }} />
         <Text style={{ fontWeight: '600', color: palette.text }}>{t('onboarding.first7.quickLinks', 'Quick links')}</Text>
         <GapView gap={8} style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/wellness')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/wellness')} style={chipStyle} hitSlop={HIT_SLOP_12}>
             <Text style={{ color: palette.text }}>Health Tracker</Text>
           </Pressable>
-          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/advocacy/ai-assistant')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/advocacy/ai-assistant')} style={chipStyle} hitSlop={HIT_SLOP_12}>
             <Text style={{ color: palette.text }}>AI Assistant</Text>
           </Pressable>
-          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/advocacy/accountability-hub')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/advocacy/accountability-hub')} style={chipStyle} hitSlop={HIT_SLOP_12}>
             <Text style={{ color: palette.text }}>Accountability Hub</Text>
           </Pressable>
-          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/resources/evidence-locker')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/resources/evidence-locker')} style={chipStyle} hitSlop={HIT_SLOP_12}>
             <Text style={{ color: palette.text }}>Evidence Locker</Text>
           </Pressable>
-          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/resources')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/resources')} style={chipStyle} hitSlop={HIT_SLOP_12}>
             <Text style={{ color: palette.text }}>Resources</Text>
           </Pressable>
-          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/advocacy')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/(tabs)/advocacy')} style={chipStyle} hitSlop={HIT_SLOP_12}>
             <Text style={{ color: palette.text }}>Advocacy Hub</Text>
           </Pressable>
-          <Pressable accessibilityRole="button" onPress={() => router.push('/profile')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+          <Pressable accessibilityRole="button" onPress={() => router.push('/profile')} style={chipStyle} hitSlop={HIT_SLOP_12}>
             <Text style={{ color: palette.text }}>Profile</Text>
           </Pressable>
           {Platform.OS !== 'web' && (
-            <Pressable accessibilityRole="button" onPress={() => router.push('/modal')} style={chipStyle} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+            <Pressable accessibilityRole="button" onPress={() => router.push('/modal')} style={chipStyle} hitSlop={HIT_SLOP_12}>
               <Text style={{ color: palette.text }}>Notifications</Text>
             </Pressable>
           )}
         </GapView>
         
         {/* Done Button */}
-        <Pressable accessibilityRole="button" hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }} style={{ marginTop: 20, padding: 14, backgroundColor: palette.primary, borderRadius: 12 }} onPress={()=>router.back()}>
+        <Pressable accessibilityRole="button" hitSlop={HIT_SLOP_12} style={{ marginTop: 20, padding: 14, backgroundColor: palette.primary, borderRadius: 12 }} onPress={()=>router.back()}>
           <Text style={{ color: palette.onPrimary, textAlign: 'center', fontWeight: '700' }}>{t('onboarding.first7.done', 'Done')}</Text>
         </Pressable>
       </GapView>

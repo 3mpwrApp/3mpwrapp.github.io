@@ -29,7 +29,7 @@ if (Platform.OS !== 'web') {
   }
 }
 
-import { MAX_FONT_SCALE } from '../constants/A11Y';
+import { HIT_SLOP_8, MAX_FONT_SCALE } from '../constants/A11Y';
 import { useTranslation } from '../i18n';
 import {
     dismissSuggestion,
@@ -93,7 +93,7 @@ export function CopilotSuggestionBanner({
   const getTypeColor = () => {
     switch (suggestion.type) {
       case 'mood-log': return palette.secondary || palette.primary;
-      case 'pacing-break': return '#06b6d4';
+      case 'pacing-break': return palette.info || palette.primary;
       case 'evidence-capture': return palette.primary;
       case 'appeal-deadline': return palette.warning || palette.primary;
       case 'community-checkin': return palette.success || palette.primary;
@@ -125,7 +125,7 @@ export function CopilotSuggestionBanner({
       >
         <View style={styles.header}>
           <View style={[styles.iconBadge, { backgroundColor: getTypeColor() }]}>
-            <Ionicons name={getTypeIcon() as any} size={20} color="#ffffff" />
+            <Ionicons name={getTypeIcon() as any} size={20} color={palette.onPrimary} />
           </View>
           <View style={styles.headerText}>
             <View style={styles.titleRow}>
@@ -134,7 +134,7 @@ export function CopilotSuggestionBanner({
               </Text>
               {suggestion.priority === 'high' && (
                 <View style={styles.priorityBadge}>
-                  <Text style={styles.priorityText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                  <Text style={[styles.priorityText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                     {getPriorityLabel()}
                   </Text>
                 </View>
@@ -149,7 +149,7 @@ export function CopilotSuggestionBanner({
             style={styles.closeButton}
             accessibilityRole="button"
             accessibilityLabel="Dismiss suggestion"
-            hitSlop={8}
+            hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="close" size={20} color={palette.textSecondary} />
           </Pressable>
@@ -161,8 +161,9 @@ export function CopilotSuggestionBanner({
             onPress={handleAction}
             accessibilityRole="button"
             accessibilityLabel="Open suggestion"
+            hitSlop={HIT_SLOP_8}
           >
-            <Text style={styles.actionButtonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Text style={[styles.actionButtonText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
               Open
             </Text>
           </Pressable>
@@ -172,6 +173,7 @@ export function CopilotSuggestionBanner({
             onPress={() => setShowExplanation(true)}
             accessibilityRole="button"
             accessibilityLabel="Why this suggestion?"
+            hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="information-circle-outline" size={16} color={palette.primary} />
             <Text style={[styles.explainButtonText, { color: palette.primary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
@@ -184,6 +186,7 @@ export function CopilotSuggestionBanner({
             onPress={handleSnooze}
             accessibilityRole="button"
             accessibilityLabel="Snooze for now"
+            hitSlop={HIT_SLOP_8}
           >
             <Ionicons name="time-outline" size={16} color={palette.textSecondary} />
             <Text style={[styles.snoozeButtonText, { color: palette.textSecondary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
@@ -205,6 +208,7 @@ export function CopilotSuggestionBanner({
           onPress={() => setShowExplanation(false)}
           accessibilityRole="button"
           accessibilityLabel="Close explanation"
+          hitSlop={HIT_SLOP_8}
         >
           <View
             style={[styles.modalContent, { backgroundColor: palette.surface }]}
@@ -228,8 +232,9 @@ export function CopilotSuggestionBanner({
               onPress={() => setShowExplanation(false)}
               accessibilityRole="button"
               accessibilityLabel="Close"
+              hitSlop={HIT_SLOP_8}
             >
-              <Text style={styles.modalButtonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              <Text style={[styles.modalButtonText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                 Got it
               </Text>
             </Pressable>
@@ -286,7 +291,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   priorityText: {
-    color: '#ffffff',
+    // color set dynamically via palette.onPrimary
     fontSize: 10,
     fontWeight: '600',
   },
@@ -313,7 +318,7 @@ const styles = StyleSheet.create({
     flexShrink: 1,
   },
   actionButtonText: {
-    color: '#ffffff',
+    // color set dynamically via palette.onPrimary
     fontSize: 14,
     fontWeight: '600',
   },
@@ -407,7 +412,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalButtonText: {
-    color: '#ffffff',
+    // color set dynamically via palette.onPrimary
     fontSize: 14,
     fontWeight: '600',
   },

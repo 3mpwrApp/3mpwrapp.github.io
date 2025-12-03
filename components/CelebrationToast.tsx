@@ -5,12 +5,11 @@
  * with confetti effect and haptic feedback
  */
 
-/* eslint-disable no-restricted-syntax */
-
 import { useEffect, useRef } from 'react';
 import { Animated, Dimensions, Modal, StyleSheet, Text, View } from 'react-native';
 
 import { MAX_FONT_SCALE } from '../constants/A11Y';
+import { useReduceMotionEnabled } from '../hooks/useA11y';
 import type { Celebration } from '../services/celebrations';
 import { celebrateWithHaptics } from '../services/celebrations';
 import { useAppPalette } from '../theme/usePalette';
@@ -30,14 +29,30 @@ export default function CelebrationToast({
   duration = 3000 
 }: CelebrationToastProps) {
   const palette = useAppPalette();
-  const slideAnim = useRef(new Animated.Value(-100)).current;
-  const fadeAnim = useRef(new Animated.Value(0)).current;
-  const scaleAnim = useRef(new Animated.Value(0.8)).current;
+  const reduceMotion = useReduceMotionEnabled();
+  const slideAnim = useRef(new Animated.Value(reduceMotion ? 0 : -100)).current;
+  const fadeAnim = useRef(new Animated.Value(reduceMotion ? 1 : 0)).current;
+  const scaleAnim = useRef(new Animated.Value(reduceMotion ? 1 : 0.8)).current;
   
   useEffect(() => {
     if (celebration) {
       // Trigger haptic feedback
       celebrateWithHaptics();
+      
+      // Skip animations if reduce motion is enabled
+      if (reduceMotion) {
+        // Show content immediately
+        slideAnim.setValue(0);
+        fadeAnim.setValue(1);
+        scaleAnim.setValue(1);
+        
+        // Auto dismiss after duration
+        const timer = setTimeout(() => {
+          onDismiss();
+        }, duration);
+        
+        return () => clearTimeout(timer);
+      }
       
       // Animate in
       Animated.parallel([
@@ -68,9 +83,14 @@ export default function CelebrationToast({
       return () => clearTimeout(timer);
     }
     return undefined;
-  }, [celebration]);
+  }, [celebration, reduceMotion]);
   
   const dismissAnimation = () => {
+    if (reduceMotion) {
+      onDismiss();
+      return;
+    }
+    
     Animated.parallel([
       Animated.timing(slideAnim, {
         toValue: -100,
@@ -115,8 +135,8 @@ export default function CelebrationToast({
       onRequestClose={dismissAnimation}
     >
       <View style={styles.overlay}>
-        {/* Confetti particles */}
-        <ConfettiEffect show={true} />
+        {/* Confetti particles - skip if reduce motion is enabled */}
+        <ConfettiEffect show={!reduceMotion} />
         
         {/* Toast card */}
         <Animated.View
@@ -138,14 +158,14 @@ export default function CelebrationToast({
             {celebration.icon}
           </Text>
           <View style={styles.textContainer}>
-            <Text style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Text style={[styles.title, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
               {celebration.title}
             </Text>
-            <Text style={styles.message} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Text style={[styles.message, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
               {celebration.message}
             </Text>
             {celebration.points && (
-              <Text style={styles.points} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              <Text style={[styles.points, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                 +{celebration.points} points
               </Text>
             )}
@@ -192,11 +212,17 @@ function ConfettiEffect({ show }: { show: boolean }) {
  * Individual confetti piece
  */
 function ConfettiPiece({ x, color, delay }: { x: number; color: string; delay: number }) {
-  const fallAnim = useRef(new Animated.Value(0)).current;
+  const reduceMotion = useReduceMotionEnabled();
+  const fallAnim = useRef(new Animated.Value(reduceMotion ? height : 0)).current;
   const rotateAnim = useRef(new Animated.Value(0)).current;
   
   useEffect(() => {
-    setTimeout(() => {
+    // Skip animations if reduce motion is enabled
+    if (reduceMotion) {
+      return;
+    }
+    
+    const timeoutId = setTimeout(() => {
       Animated.parallel([
         Animated.timing(fallAnim, {
           toValue: height,
@@ -212,7 +238,9 @@ function ConfettiPiece({ x, color, delay }: { x: number; color: string; delay: n
         ),
       ]).start();
     }, delay);
-  }, []);
+    
+    return () => clearTimeout(timeoutId);
+  }, [reduceMotion]);
   
   const rotate = rotateAnim.interpolate({
     inputRange: [0, 1],
@@ -268,18 +296,15 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#FFFFFF',
     marginBottom: 4,
   },
   message: {
     fontSize: 14,
-    color: '#FFFFFF',
     opacity: 0.95,
   },
   points: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#FFFFFF',
     marginTop: 4,
     opacity: 0.9,
   },

@@ -193,7 +193,7 @@ export default function CircadianDJScreen() {
         chronotypeInfo[winningType].description,
         [{ text: 'Got it!' }]
       );
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Failed to save chronotype');
     }
   };
@@ -250,7 +250,7 @@ export default function CircadianDJScreen() {
       setShowSleepLogModal(false);
       
       Alert.alert('Sleep Logged', `Logged ${totalSleep.toFixed(1)} hours of sleep. Keep tracking for better insights!`);
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Failed to log sleep data');
     }
   };

@@ -24,7 +24,7 @@ import { useTextScale } from "../../theme/typography";
 import { useAppPalette } from "../../theme/usePalette";
 // Stories mirror YouTube list; we render a single combined list (podcasts only)
 import Card from "../../components/Card";
-import { HIT_SLOP_8 } from "../../constants/A11Y";
+import { HIT_SLOP_12 } from "../../constants/A11Y";
 import { fetchPodcasts } from "../../services/podcasts";
 import { useCounts } from "../../store/counts";
 // Link not needed; we open externally via Linking
@@ -161,7 +161,7 @@ export default function PodcastsScreen() {
           accessibilityLabel={
             saved ? "Remove from favorites" : "Save to favorites"
           }
-          hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+          hitSlop={HIT_SLOP_12}
           style={({ pressed }) => [
             { position: "absolute", top: 2, right: 2, padding: 2 },
             pressed && { opacity: 0.7 },
@@ -289,6 +289,7 @@ export default function PodcastsScreen() {
                 onPress={() => { setQuery(''); setMode('all'); }}
                 accessibilityRole="button"
                 accessibilityLabel={t('common.resetFilters','Reset filters')}
+                hitSlop={HIT_SLOP_12}
                 style={({ pressed }) => [{ alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted }, pressed && { opacity: 0.8 }]}
               >
                 <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
@@ -372,14 +373,13 @@ function createStyles(palette: any, factor: number) {
     },
   });
 }
-
 function FilterChip({ label, active, onPress, palette }: { label: string; active: boolean; onPress: () => void; palette: any; }) {
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={label}
-      hitSlop={HIT_SLOP_8}
+      hitSlop={HIT_SLOP_12}
       style={({ pressed }) => [
         { borderWidth:1, borderColor: active? palette.primary: palette.muted, backgroundColor: active? palette.primary: 'transparent', paddingHorizontal:10, paddingVertical:6, borderRadius:20 },
         pressed && { opacity: 0.7 }

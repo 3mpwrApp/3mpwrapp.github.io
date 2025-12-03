@@ -6,6 +6,7 @@ import React from "react";
 import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "react-native";
 
 // Global error handler for Web to catch white-screen crashes
+// WCAG 2.2 AAA: Error banners use high-contrast color combinations
 if (Platform.OS === 'web' && typeof window !== 'undefined') {
   window.addEventListener('error', (event) => {
     console.error('Global Error caught:', event.error);
@@ -14,7 +15,8 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     div.style.top = '0';
     div.style.left = '0';
     div.style.width = '100%';
-    div.style.backgroundColor = '#8B0000'; // AAA-compliant dark red (9.74:1)
+    // WCAG 2.2 AAA: #8B0000 dark red on #ffffff white provides 9.74:1 contrast
+    div.style.backgroundColor = '#8B0000';
     div.style.color = '#ffffff';
     div.style.padding = '20px';
     div.style.zIndex = '99999';
@@ -274,7 +276,8 @@ export default function RootLayout() {
   }
 
   if (_renderError) {
-    const errorPalette = { background: '#ffffff', error: '#8B0000', text: '#000000', textSecondary: '#555555' };
+    // WCAG 2.2 AAA: #8B0000 on white = 9.74:1, #000000 on white = 21:1, #595959 on white = 7:1
+    const errorPalette = { background: '#ffffff', error: '#8B0000', text: '#000000', textSecondary: '#595959' };
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: errorPalette.background, padding: 20 }}>
         <Text style={{ fontSize: 20, fontWeight: 'bold', color: errorPalette.error, marginBottom: 10 }}>App Error</Text>
@@ -396,13 +399,17 @@ export default function RootLayout() {
       console.error('[RootLayout] Critical render error:', error.message, error.stack);
     }
     // Emergency fallback - render a visible error screen
+    // WCAG 2.2 AAA: All colors provide minimum 7:1 contrast ratio
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff', padding: 20 }}>
+        {/* WCAG 2.2 AAA: #8B0000 on white = 9.74:1 contrast */}
         <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#8B0000', marginBottom: 10 }}>App Failed to Load</Text>
+        {/* WCAG 2.2 AAA: #000000 on white = 21:1 contrast */}
         <Text style={{ fontSize: 14, color: '#000000', textAlign: 'center' }}>
           {error instanceof Error ? error.message : 'Unknown error'}
         </Text>
-        <Text style={{ fontSize: 12, color: '#555555', marginTop: 20, textAlign: 'center' }}>Open browser console (F12) for details</Text>
+        {/* WCAG 2.2 AAA: #595959 on white = 7:1 contrast */}
+        <Text style={{ fontSize: 12, color: '#595959', marginTop: 20, textAlign: 'center' }}>Open browser console (F12) for details</Text>
       </View>
     );
   }

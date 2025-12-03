@@ -19,7 +19,7 @@ import {
     View
 } from 'react-native';
 
-import { MAX_FONT_SCALE } from '../../../constants/A11Y';
+import { HIT_SLOP_12, MAX_FONT_SCALE } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import {
     addLiveNote,
@@ -124,6 +124,7 @@ export default function NegotiationCoach() {
                     { backgroundColor: meetingType === type ? palette.primary : palette.background, borderColor: palette.muted }
                   ]}
                   onPress={() => setMeetingType(type)}
+                  hitSlop={HIT_SLOP_12}
                   accessibilityRole="radio"
                   accessibilityState={{ checked: meetingType === type }}
                 >
@@ -190,10 +191,11 @@ export default function NegotiationCoach() {
           <Pressable
             style={[styles.startButton, { backgroundColor: palette.primary }]}
             onPress={handleStartSession}
+            hitSlop={HIT_SLOP_12}
             accessibilityRole="button"
             accessibilityLabel="Start coaching session"
           >
-            <Text style={styles.startButtonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Text style={[styles.startButtonText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
               Start Session
             </Text>
             <Ionicons name="arrow-forward" size={20} color={palette.onPrimary} />
@@ -269,8 +271,8 @@ export default function NegotiationCoach() {
             </Text>
             {redFlags.length > 0 ? (
               redFlags.map((flag, index) => (
-                <View key={index} style={[styles.redFlagCard, { borderColor: '#dc2626' }]}>
-                  <Ionicons name="warning" size={20} color="#dc2626" />
+                <View key={index} style={[styles.redFlagCard, { borderColor: palette.error || '#991B1B' }]}>
+                  <Ionicons name="warning" size={20} color={palette.error || '#991B1B'} />
                   <Text style={[styles.redFlagText, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                     {flag}
                   </Text>
@@ -283,29 +285,35 @@ export default function NegotiationCoach() {
             )}
             <View style={styles.redFlagButtons}>
               <Pressable
-                style={[styles.redFlagButton, { borderColor: '#dc2626' }]}
+                style={[styles.redFlagButton, { borderColor: palette.error || '#991B1B' }]}
                 onPress={() => handleTrackRedFlag('Dismissive language about disability')}
+                hitSlop={HIT_SLOP_12}
                 accessibilityRole="button"
+                accessibilityLabel="Mark as dismissive behavior"
               >
-                <Text style={[styles.redFlagButtonText, { color: '#dc2626' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.redFlagButtonText, { color: palette.error || '#991B1B' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Dismissive
                 </Text>
               </Pressable>
               <Pressable
-                style={[styles.redFlagButton, { borderColor: '#dc2626' }]}
+                style={[styles.redFlagButton, { borderColor: palette.error || '#991B1B' }]}
                 onPress={() => handleTrackRedFlag('Threat of retaliation')}
+                hitSlop={HIT_SLOP_12}
                 accessibilityRole="button"
+                accessibilityLabel="Mark as threatening behavior"
               >
-                <Text style={[styles.redFlagButtonText, { color: '#dc2626' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.redFlagButtonText, { color: palette.error || '#991B1B' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Threatening
                 </Text>
               </Pressable>
               <Pressable
-                style={[styles.redFlagButton, { borderColor: '#dc2626' }]}
+                style={[styles.redFlagButton, { borderColor: palette.error || '#991B1B' }]}
                 onPress={() => handleTrackRedFlag('Denying legal rights')}
+                hitSlop={HIT_SLOP_12}
                 accessibilityRole="button"
+                accessibilityLabel="Mark as rights denied"
               >
-                <Text style={[styles.redFlagButtonText, { color: '#dc2626' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.redFlagButtonText, { color: palette.error || '#991B1B' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Rights Denied
                 </Text>
               </Pressable>
@@ -343,6 +351,7 @@ export default function NegotiationCoach() {
                   { backgroundColor: outcome === opt ? palette.primary : palette.background, borderColor: palette.muted }
                 ]}
                 onPress={() => setOutcome(opt)}
+                hitSlop={HIT_SLOP_12}
                 accessibilityRole="radio"
                 accessibilityState={{ checked: outcome === opt }}
               >
@@ -377,6 +386,7 @@ export default function NegotiationCoach() {
           style={[styles.emailButton, { backgroundColor: palette.primary }]}
           onPress={handleGenerateEmail}
           disabled={generatingEmail || !outcomeNotes.trim()}
+          hitSlop={HIT_SLOP_12}
           accessibilityRole="button"
           accessibilityLabel="Generate follow-up email"
         >
@@ -385,7 +395,7 @@ export default function NegotiationCoach() {
           ) : (
             <>
               <Ionicons name="mail" size={20} color={palette.onPrimary} />
-              <Text style={styles.emailButtonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+              <Text style={[styles.emailButtonText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                 Generate Follow-Up Email
               </Text>
             </>
@@ -405,6 +415,7 @@ export default function NegotiationCoach() {
             <Pressable
               style={[styles.copyButton, { borderColor: palette.primary }]}
               onPress={() => console.warn('Copy email not yet implemented')}
+              hitSlop={HIT_SLOP_12}
               accessibilityRole="button"
               accessibilityLabel="Copy email to clipboard"
             >
@@ -419,6 +430,7 @@ export default function NegotiationCoach() {
         <Pressable
           style={[styles.doneButton, { backgroundColor: palette.muted }]}
           onPress={() => router.back()}
+          hitSlop={HIT_SLOP_12}
           accessibilityRole="button"
           accessibilityLabel="Close session"
         >
@@ -506,7 +518,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   startButtonText: {
-    color: '#ffffff',
     fontSize: 16,
     fontWeight: '600',
   },
@@ -616,7 +627,6 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   emailButtonText: {
-    color: '#ffffff',
     fontSize: 14,
     fontWeight: '600',
   },

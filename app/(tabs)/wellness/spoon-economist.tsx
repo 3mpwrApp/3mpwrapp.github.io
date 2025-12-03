@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { HIT_SLOP_12 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import type { QuickTask, SpoonTask } from '../../../services/spoonEconomist';
 import { useSpoonEconomist } from '../../../services/spoonEconomist';
@@ -630,12 +631,18 @@ export default function SpoonEconomistScreen() {
                 <Pressable
                   style={[styles.modalButton, { backgroundColor: palette.border }]}
                   onPress={() => setShowAddQuickTaskModal(false)}
+                  hitSlop={HIT_SLOP_12}
+                  accessibilityRole="button"
+                  accessibilityLabel="Cancel adding quick task"
                 >
                   <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
                 </Pressable>
                 <Pressable
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={handleAddQuickTask}
+                  hitSlop={HIT_SLOP_12}
+                  accessibilityRole="button"
+                  accessibilityLabel="Add quick task"
                 >
                   <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Add</Text>
                 </Pressable>

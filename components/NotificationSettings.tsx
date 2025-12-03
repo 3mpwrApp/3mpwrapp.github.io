@@ -93,7 +93,7 @@ export function NotificationSettings() {
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>) {
+function createStyles(_palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: {
       flex: 1,

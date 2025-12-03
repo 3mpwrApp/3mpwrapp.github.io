@@ -78,7 +78,7 @@ export function BetaTesterBadge({
             accessibilityLabel="Dismiss beta badge welcome message"
             hitSlop={HIT_SLOP_8}
           >
-            <Text style={styles.welcomeButtonText}>Got it!</Text>
+            <Text style={[styles.welcomeButtonText, { color: palette.onPrimary }]}>Got it!</Text>
           </Pressable>
         </View>
       )}
@@ -149,8 +149,6 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
   welcomeButtonText: {
-    // Note: Using white color for button text - acceptable for high contrast buttons
-    color: '#ffffff', // eslint-disable-line no-restricted-syntax
     fontWeight: '700',
     fontSize: 14,
   },

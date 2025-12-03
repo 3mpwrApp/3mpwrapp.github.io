@@ -12,6 +12,7 @@ import { useState } from 'react';
 import type { GestureResponderEvent } from 'react-native';
 import { Pressable, StyleSheet, View } from 'react-native';
 
+import { HIT_SLOP_8 } from '../constants/A11Y';
 import { COLORED_OVERLAYS, READING_RULER } from '../constants/Dyslexia';
 import { useDyslexiaOptional } from '../context/DyslexiaContext';
 
@@ -63,6 +64,7 @@ export function DyslexiaVisualLayer() {
         <Pressable
           onPress={handleRulerDrag}
           onPressIn={handleRulerDrag}
+          hitSlop={HIT_SLOP_8}
           style={[
             styles.ruler,
             {

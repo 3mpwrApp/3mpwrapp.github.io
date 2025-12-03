@@ -1,6 +1,7 @@
 import React from "react";
 import { Linking, Pressable, StyleSheet, Text } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { useAppPalette } from "../theme/usePalette";
 import { logger } from '../utils/logger';
 
@@ -26,6 +27,7 @@ export default function ExternalLink({ href, children }: ExternalLinkProps) {
       onPress={handlePress}
       accessibilityRole="link"
       accessibilityLabel={`Open external link: ${href}`}
+      hitSlop={HIT_SLOP_12}
       style={({ pressed }) => [styles.link, pressed && styles.linkPressed]}
     >
       <Text style={styles.linkText}>{children}</Text>

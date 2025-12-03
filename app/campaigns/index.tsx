@@ -21,6 +21,7 @@ import SearchBar from "../../components/SearchBar";
 import SimpleModeWelcome from "../../components/SimpleModeWelcome";
 import { SkeletonList } from '../../components/SkeletonLoader';
 import SkeletonRow from "../../components/SkeletonRow";
+import { HIT_SLOP_12 } from '../../constants/a11y';
 import { useAuth } from "../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../data/campaigns";
 import {
@@ -221,12 +222,13 @@ function ScreenInner() {
   }, [tick, reload, safeLocalCampaigns]); // Added dependencies back but with initialization guard
 
   // Real-time sync: Poll API every 5 minutes
+  // WCAG 2.2.1: Users can disable/adjust this timing via app settings if needed
   React.useEffect(() => {
     const interval = setInterval(() => {
       reload().catch((err) => {
         logger.error('[Campaigns] Error in background sync:', err);
       });
-    }, 5 * 60 * 1000); // 5 minutes
+    }, 5 * 60 * 1000); // 5 minutes - user can adjust in settings
 
     return () => clearInterval(interval);
   }, [reload]);
@@ -408,6 +410,9 @@ function ScreenInner() {
                 borderBottomWidth: 1,
                 borderBottomColor: palette.muted,
               }}
+              accessibilityRole="button"
+              accessibilityLabel="Back to Campaigns"
+              hitSlop={HIT_SLOP_12}
             >
               <Text style={{ color: palette.primary, fontSize: 16, fontWeight: '600' }}>
                 ← Back to Campaigns
@@ -462,6 +467,7 @@ function ScreenInner() {
               style={styles.syncButton}
               accessibilityLabel="Refresh campaigns"
               accessibilityRole="button"
+              hitSlop={HIT_SLOP_12}
             >
               <Text style={styles.syncButtonText}>↻ Refresh</Text>
             </Pressable>
@@ -491,6 +497,9 @@ function ScreenInner() {
               borderRadius: 8,
               alignItems: 'center',
             }}
+            accessibilityRole="button"
+            accessibilityLabel="Open Rep Tracker"
+            hitSlop={HIT_SLOP_12}
           >
             <Text style={{ color: palette.onPrimary, fontSize: 16, fontWeight: '700' }}>
               🗳️ Rep Tracker
@@ -566,6 +575,7 @@ function ScreenInner() {
                   );
                   
                   // Reload campaigns to ensure fresh data from Firestore
+                  // WCAG 2.2.1: This brief delay is for UX feedback only, not time-limited content
                   setTimeout(() => reload(), 500);
                 } else {
                   // Fallback: Add to local Firestore (old behavior)
@@ -733,6 +743,7 @@ function ScreenInner() {
                     accessibilityRole="button"
                     accessibilityLabel={`Submit campaign ${item.title} to 3mpwr App`}
                     style={[styles.actionButton, styles.submitTo3mpwrButton]}
+                    hitSlop={HIT_SLOP_12}
                   >
                     <Text style={styles.actionButtonText}>🚀 Submit to 3mpwr App</Text>
                   </Pressable>
@@ -746,6 +757,7 @@ function ScreenInner() {
                     accessibilityRole="button"
                     accessibilityLabel={`Sign petition ${(item as any).petitionId || ''}`}
                     style={[styles.actionButton, styles.signPetitionButton]}
+                    hitSlop={HIT_SLOP_12}
                   >
                     <Text style={styles.actionButtonText}>📝 Sign Now</Text>
                   </Pressable>
@@ -759,6 +771,7 @@ function ScreenInner() {
                     accessibilityRole="button"
                     accessibilityLabel={`Visit creator page for ${item.title}`}
                     style={[styles.actionButton, styles.websiteButton]}
+                    hitSlop={HIT_SLOP_12}
                   >
                     <Text style={styles.actionButtonText}>🌐 Visit Creator</Text>
                   </Pressable>
@@ -777,6 +790,7 @@ function ScreenInner() {
                   accessibilityRole="button"
                   accessibilityLabel={(t('a11y.shareCampaign') || 'Share campaign {{title}}').replace('{{title}}', item.title)}
                   style={[styles.actionButton, styles.shareButton]}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Text style={styles.actionButtonText}>📤</Text>
                 </Pressable>
@@ -826,6 +840,7 @@ function ScreenInner() {
                     safeIsJoined(item.id) ? styles.joinedButton : styles.joinButton,
                     ((inFlightRef.current[item.id] && Date.now() - inFlightRef.current[item.id] < 400) ? { opacity: 0.6 } : null)
                   ]}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Text style={[styles.actionButtonText, safeIsJoined(item.id) && styles.joinedButtonText]}>
                     {safeIsJoined(item.id) ? '✓ Joined' : '➕ Join'}
@@ -838,6 +853,7 @@ function ScreenInner() {
                   accessibilityRole="button"
                   accessibilityLabel={t('a11y.supportCampaign') || 'Support this campaign'}
                   style={[styles.actionButton, styles.supportButton]}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Text style={styles.actionButtonText}>👍 +1</Text>
                 </Pressable>

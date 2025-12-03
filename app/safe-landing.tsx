@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 
 import { GapView } from '../components/GapView';
+import { HIT_SLOP_12 } from '../constants/a11y';
 import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
@@ -132,6 +133,7 @@ export default function SafeLandingPage() {
           onPress={() => openCrisisLine('tel:988')}
           accessibilityRole="button"
           accessibilityLabel="Call 988 Suicide and Crisis Lifeline"
+          hitSlop={HIT_SLOP_12}
         >
           <Ionicons name="call" size={24} color={palette.primary} />
           <View style={styles.resourceText}>
@@ -145,6 +147,7 @@ export default function SafeLandingPage() {
           onPress={() => openCrisisLine('tel:18006686868')}
           accessibilityRole="button"
           accessibilityLabel="Call Kids Help Phone at 1-800-668-6868"
+          hitSlop={HIT_SLOP_12}
         >
           <Ionicons name="call" size={24} color={palette.primary} />
           <View style={styles.resourceText}>
@@ -200,6 +203,7 @@ export default function SafeLandingPage() {
           onPress={handleContinue}
           accessibilityRole="button"
           accessibilityLabel="I'm ready to continue"
+          hitSlop={HIT_SLOP_12}
         >
           <Text style={styles.continueButtonText}>I'm Ready to Continue</Text>
         </Pressable>
@@ -209,6 +213,7 @@ export default function SafeLandingPage() {
           onPress={handleExit}
           accessibilityRole="button"
           accessibilityLabel="Exit app completely"
+          hitSlop={HIT_SLOP_12}
         >
           <Text style={styles.exitButtonText}>{t('safeLanding.actions.exitApp', 'Exit App')}</Text>
         </Pressable>
@@ -311,7 +316,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       marginVertical: 8,
       minHeight: 64,
       ...createShadow({
-        shadowColor: '#000',
+        shadowColor: palette.text,
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
@@ -374,7 +379,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     continueButtonText: {
       fontSize: 18,
       fontWeight: '600',
-      color: '#FFFFFF',
+      color: palette.onPrimary,
     },
     exitButton: {
       backgroundColor: isDark ? darkLightBg : '#FFFFFF',

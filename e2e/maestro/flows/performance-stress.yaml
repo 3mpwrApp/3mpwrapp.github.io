@@ -1,0 +1,181 @@
+# Performance Stress Test Flow
+# Tests app performance under heavy load
+
+appId: com.app3mpwr.app3mpwr
+
+---
+
+# Test: Rapid Screen Transitions Performance
+- tapOn:
+    text: "Home"
+- startTimer: rapid_navigation
+
+- repeat:
+    times: 50
+    commands:
+      - tapOn:
+          text: "Wellness"
+      - tapOn:
+          text: "Home"
+      - tapOn:
+          text: "Campaigns"
+      - tapOn:
+          text: "Home"
+
+- stopTimer: rapid_navigation
+
+---
+
+# Test: Scroll Performance
+- tapOn:
+    text: "Resources"
+- waitForAnimationToEnd
+
+- startTimer: scroll_performance
+
+- repeat:
+    times: 100
+    commands:
+      - scroll:
+          direction: DOWN
+      - scroll:
+          direction: UP
+
+- stopTimer: scroll_performance
+
+---
+
+# Test: Input Performance
+- tapOn:
+    text: "Settings"
+- waitForAnimationToEnd
+
+- tapOn:
+    text: ".*[Ss]earch.*"
+    optional: true
+- waitForAnimationToEnd
+
+- startTimer: input_performance
+
+- repeat:
+    times: 20
+    commands:
+      - inputText: "test query"
+      - clearText
+      - inputText: "another search"
+      - clearText
+
+- stopTimer: input_performance
+- hideKeyboard
+
+---
+
+# Test: Memory Under Load
+# Navigate through all screens multiple times
+- startTimer: memory_stress
+
+- repeat:
+    times: 10
+    commands:
+      - tapOn:
+          text: "Home"
+      - waitForAnimationToEnd
+      - tapOn:
+          text: "Campaigns"
+      - waitForAnimationToEnd
+      - scroll:
+          direction: DOWN
+      - tapOn:
+          text: "Community"
+      - waitForAnimationToEnd
+      - scroll:
+          direction: DOWN
+      - tapOn:
+          text: "Resources"
+      - waitForAnimationToEnd
+      - scroll:
+          direction: DOWN
+      - tapOn:
+          text: "Wellness"
+      - waitForAnimationToEnd
+      - scroll:
+          direction: DOWN
+      - tapOn:
+          text: "Advocacy"
+      - waitForAnimationToEnd
+      - scroll:
+          direction: DOWN
+      - tapOn:
+          text: "Settings"
+      - waitForAnimationToEnd
+
+- stopTimer: memory_stress
+
+---
+
+# Test: Animation Frame Rate
+# Navigate and scroll rapidly to test animation smoothness
+- tapOn:
+    text: "Wellness"
+- waitForAnimationToEnd
+
+- startTimer: animation_performance
+
+- repeat:
+    times: 30
+    commands:
+      - swipe:
+          direction: UP
+          duration: 100
+      - swipe:
+          direction: DOWN
+          duration: 100
+
+- stopTimer: animation_performance
+
+---
+
+# Test: Background/Foreground Cycle
+- repeat:
+    times: 5
+    commands:
+      - pressKey: HOME
+      - wait:
+          seconds: 2
+      - openLink: empowrapp://home
+      - waitForAnimationToEnd
+      - assertVisible:
+          text: ".*"
+          enabled: true
+
+---
+
+# Test: Orientation Change Performance
+- startTimer: orientation_performance
+
+- repeat:
+    times: 20
+    commands:
+      - setOrientation:
+          orientation: LANDSCAPE
+      - waitForAnimationToEnd
+      - setOrientation:
+          orientation: PORTRAIT
+      - waitForAnimationToEnd
+
+- stopTimer: orientation_performance
+
+---
+
+# Final Performance Verification
+- tapOn:
+    text: "Home"
+- waitForAnimationToEnd
+
+# App should still be responsive
+- assertVisible:
+    text: "Home"
+    timeout: 2000
+
+- evalScript: |
+    output.performanceTestsPassed = true

@@ -10,6 +10,7 @@ import { Stack } from 'expo-router';
 import { useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { HIT_SLOP_12 } from '../../../constants/a11y';
 import { useTranslation } from '../../../i18n';
 import { useSymptomSymphony, type SymptomDefinition, type SymptomSeverity } from '../../../services/symptomSymphony';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -39,7 +40,7 @@ export default function SymptomSymphonyScreen() {
   });
 
   // Load flare prediction on mount
-  async function loadPrediction() {
+  async function _loadPrediction() {
     try {
       const prediction = await symphony.predictFlare();
       setFlarePrediction({ probability: prediction.probability, predictedPhase: prediction.predictedPhase });
@@ -76,7 +77,7 @@ export default function SymptomSymphonyScreen() {
         notes: '',
       });
       Alert.alert('Success', 'Symptom logged successfully!');
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Failed to log symptom');
     }
   }
@@ -184,6 +185,9 @@ export default function SymptomSymphonyScreen() {
                 key={symptom.id}
                 style={[styles.symptomButton, { backgroundColor: palette.background }]}
                 onPress={() => openLogModal(symptom)}
+                hitSlop={HIT_SLOP_12}
+                accessibilityRole="button"
+                accessibilityLabel={`Log ${symptom.name} symptom`}
               >
                 <Ionicons
                   name={getCategoryIcon(symptom.category) as any}
@@ -200,6 +204,9 @@ export default function SymptomSymphonyScreen() {
           <Pressable
             style={[styles.viewAllButton, { borderColor: palette.border }]}
             onPress={() => Alert.alert('Coming Soon', 'Full symptom library and custom symptom creation')}
+            hitSlop={HIT_SLOP_12}
+            accessibilityRole="button"
+            accessibilityLabel="View all symptoms"
           >
             <Text style={[styles.viewAllText, { color: palette.primary }]}>
               View All Symptoms
@@ -228,7 +235,7 @@ export default function SymptomSymphonyScreen() {
                     <Text style={[styles.entryName, { color: palette.text }]}>{entry.name}</Text>
                   </View>
                   <View style={[styles.severityBadge, { backgroundColor: getSeverityColor(entry.severity) }]}>
-                    <Text style={styles.severityText}>{entry.severity}/10</Text>
+                    <Text style={[styles.severityText, { color: palette.onPrimary }]}>{entry.severity}/10</Text>
                   </View>
                 </View>
                 <View style={styles.entryMeta}>
@@ -320,6 +327,9 @@ export default function SymptomSymphonyScreen() {
           <Pressable
             style={[styles.exportButton, { backgroundColor: palette.primary }]}
             onPress={() => Alert.alert('Coming Soon', 'PDF export for medical professionals')}
+            hitSlop={HIT_SLOP_12}
+            accessibilityRole="button"
+            accessibilityLabel="Export medical timeline"
           >
             <Ionicons name="download" size={20} color={palette.onPrimary} />
             <Text style={[styles.exportButtonText, { color: palette.onPrimary }]}>
@@ -341,7 +351,12 @@ export default function SymptomSymphonyScreen() {
                 <Text style={[styles.modalTitle, { color: palette.text }]}>
                   Log: {selectedSymptom?.name}
                 </Text>
-                <Pressable onPress={() => setShowLogModal(false)}>
+                <Pressable 
+                  onPress={() => setShowLogModal(false)}
+                  hitSlop={HIT_SLOP_12}
+                  accessibilityRole="button"
+                  accessibilityLabel="Close modal"
+                >
                   <Ionicons name="close" size={24} color={palette.text} />
                 </Pressable>
               </View>
@@ -366,11 +381,15 @@ export default function SymptomSymphonyScreen() {
                           },
                         ]}
                         onPress={() => setLogData({ ...logData, severity: level as SymptomSeverity })}
+                        hitSlop={HIT_SLOP_12}
+                        accessibilityRole="radio"
+                        accessibilityState={{ checked: logData.severity === level }}
+                        accessibilityLabel={`Severity level ${level}`}
                       >
                         <Text
                           style={[
                             styles.severityButtonText,
-                            { color: logData.severity === level ? '#fff' : palette.text },
+                            { color: logData.severity === level ? palette.onPrimary : palette.text },
                           ]}
                         >
                           {level}
@@ -402,6 +421,10 @@ export default function SymptomSymphonyScreen() {
                             : [...logData.qualities, quality];
                           setLogData({ ...logData, qualities: newQualities });
                         }}
+                        hitSlop={HIT_SLOP_12}
+                        accessibilityRole="checkbox"
+                        accessibilityState={{ checked: logData.qualities.includes(quality) }}
+                        accessibilityLabel={`Quality: ${quality}`}
                       >
                         <Text
                           style={{
@@ -471,16 +494,22 @@ export default function SymptomSymphonyScreen() {
                 </View>
               </ScrollView>
 
-              <View style={styles.modalActions}>
+              <View style={[styles.modalActions, { borderTopColor: palette.border }]}>
                 <Pressable
                   style={[styles.modalButton, { backgroundColor: palette.muted }]}
                   onPress={() => setShowLogModal(false)}
+                  hitSlop={HIT_SLOP_12}
+                  accessibilityRole="button"
+                  accessibilityLabel="Cancel"
                 >
                   <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
                 </Pressable>
                 <Pressable
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={handleLogSymptom}
+                  hitSlop={HIT_SLOP_12}
+                  accessibilityRole="button"
+                  accessibilityLabel="Save symptom log"
                 >
                   <Text style={[styles.modalButtonText, { color: palette.onPrimary }]}>Save</Text>
                 </Pressable>
@@ -609,7 +638,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   severityText: {
-    color: '#fff',
     fontSize: 12,
     fontWeight: '600',
   },
@@ -759,7 +787,6 @@ const styles = StyleSheet.create({
     marginTop: 16,
     paddingTop: 16,
     borderTopWidth: 1,
-    borderTopColor: '#ddd',
   },
   modalButton: {
     flex: 1,

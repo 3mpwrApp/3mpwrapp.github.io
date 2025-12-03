@@ -9,6 +9,7 @@ import {
     useColorScheme,
 } from "react-native";
 
+import { HIT_SLOP_12 } from "../../constants/A11Y";
 import { useFavorites } from "../../store/favorites";
 import { colors, type Palette } from "../../theme/colors";
 import { useTextScale } from "../../theme/typography";
@@ -71,6 +72,7 @@ export default function PodcastDetail() {
             accessibilityLabel={
               saved ? "Remove from favorites" : "Save to favorites"
             }
+            hitSlop={HIT_SLOP_12}
           >
             <Text style={styles.buttonText}>
               {saved ? "Remove from Favorites" : "Save to Favorites"}
@@ -100,6 +102,7 @@ export default function PodcastDetail() {
             }}
             accessibilityRole="button"
             accessibilityLabel="Share podcast"
+            hitSlop={HIT_SLOP_12}
           >
             <Text style={styles.secondaryText}>Share</Text>
           </Pressable>

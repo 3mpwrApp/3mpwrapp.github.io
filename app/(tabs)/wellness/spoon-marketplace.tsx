@@ -21,7 +21,7 @@ import {
     View,
 } from 'react-native';
 
-import { MAX_FONT_SCALE } from '../../../constants/A11Y';
+import { HIT_SLOP_12, MAX_FONT_SCALE } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import {
     getBalance,
@@ -163,12 +163,13 @@ export default function SpoonMarketplace() {
   };
 
   const getTypeColor = (type: UISpoonType) => {
+    // AAA-compliant colors with contrast ratio >= 7:1
     switch (type) {
-      case 'emotional-support': return '#ec4899';
-      case 'task-help': return '#8b5cf6';
-      case 'errands': return '#3b82f6';
-      case 'companionship': return '#10b981';
-      case 'skill-share': return '#f59e0b';
+      case 'emotional-support': return '#9D174D'; // Dark pink - 7.2:1 on white
+      case 'task-help': return '#5B21B6'; // Dark purple - 8.5:1 on white
+      case 'errands': return '#1E40AF'; // Dark blue - 8.6:1 on white
+      case 'companionship': return '#065F46'; // Dark green - 7.5:1 on white
+      case 'skill-share': return '#92400E'; // Dark amber - 7.1:1 on white
       default: return palette.primary;
     }
   };
@@ -182,8 +183,8 @@ export default function SpoonMarketplace() {
             Spoon Marketplace
           </Text>
           <View style={[styles.balanceBadge, { backgroundColor: palette.primary }]}>
-            <Ionicons name="cafe" size={16} color="#fff" />
-            <Text style={styles.balanceText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            <Ionicons name="cafe" size={16} color={palette.onPrimary} />
+            <Text style={[styles.balanceText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
               {userStats.balance}
             </Text>
           </View>
@@ -207,7 +208,7 @@ export default function SpoonMarketplace() {
             </Text>
           </View>
           <View style={styles.statItem}>
-            <Ionicons name="star" size={16} color="#f59e0b" />
+            <Ionicons name="star" size={16} color="#92400E" />
             <Text style={[styles.statValue, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
               {userStats.reputation.toFixed(1)}
             </Text>
@@ -220,6 +221,7 @@ export default function SpoonMarketplace() {
         <Pressable
           style={[styles.tab, activeTab === 'offers' && { borderBottomColor: palette.primary }]}
           onPress={() => setActiveTab('offers')}
+          hitSlop={HIT_SLOP_12}
           accessibilityRole="tab"
           accessibilityState={{ selected: activeTab === 'offers' }}
         >
@@ -231,6 +233,7 @@ export default function SpoonMarketplace() {
         <Pressable
           style={[styles.tab, activeTab === 'requests' && { borderBottomColor: palette.primary }]}
           onPress={() => setActiveTab('requests')}
+          hitSlop={HIT_SLOP_12}
           accessibilityRole="tab"
           accessibilityState={{ selected: activeTab === 'requests' }}
         >
@@ -265,7 +268,7 @@ export default function SpoonMarketplace() {
                   </View>
                   <View style={[styles.spoonsBadge, { backgroundColor: palette.primary }]}>
                     <Ionicons name="cafe" size={14} color={palette.onPrimary} />
-                    <Text style={styles.spoonsText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                    <Text style={[styles.spoonsText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                       {offer.spoonsOffered}
                     </Text>
                   </View>
@@ -279,10 +282,11 @@ export default function SpoonMarketplace() {
                     // eslint-disable-next-line no-console
                     console.log('Accept offer not yet implemented:', offer.id);
                   }}
+                  hitSlop={HIT_SLOP_12}
                   accessibilityRole="button"
                   accessibilityLabel={`Accept offer from ${offer.userName}`}
                 >
-                  <Text style={styles.acceptButtonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                  <Text style={[styles.acceptButtonText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                     Accept Offer
                   </Text>
                 </Pressable>
@@ -313,8 +317,8 @@ export default function SpoonMarketplace() {
                         {Math.round((Date.now() - request.createdAt) / 60000)} minutes ago
                       </Text>
                       {request.urgency === 'high' && (
-                        <View style={styles.urgentBadge}>
-                          <Text style={styles.urgentText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                        <View style={[styles.urgentBadge, { backgroundColor: palette.error || '#991B1B' }]}>
+                          <Text style={[styles.urgentText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                             Urgent
                           </Text>
                         </View>
@@ -323,7 +327,7 @@ export default function SpoonMarketplace() {
                   </View>
                   <View style={[styles.spoonsBadge, { backgroundColor: palette.warning || palette.primary }]}>
                     <Ionicons name="cafe" size={14} color={palette.onPrimary} />
-                    <Text style={styles.spoonsText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                    <Text style={[styles.spoonsText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                       {request.spoonsOffered}
                     </Text>
                   </View>
@@ -337,10 +341,11 @@ export default function SpoonMarketplace() {
                     // eslint-disable-next-line no-console
                     console.log('Help with request not yet implemented:', request.id);
                   }}
+                  hitSlop={HIT_SLOP_12}
                   accessibilityRole="button"
                   accessibilityLabel={`Help ${request.userName}`}
                 >
-                  <Text style={styles.acceptButtonText} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                  <Text style={[styles.acceptButtonText, { color: palette.onPrimary }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                     Offer Help
                   </Text>
                 </Pressable>
@@ -361,6 +366,7 @@ export default function SpoonMarketplace() {
       <Pressable
         style={[styles.createButton, { backgroundColor: palette.primary }]}
         onPress={() => setShowCreateModal(true)}
+        hitSlop={HIT_SLOP_12}
         accessibilityRole="button"
         accessibilityLabel={`Create new ${activeTab === 'offers' ? 'offer' : 'request'}`}
       >
@@ -398,6 +404,7 @@ export default function SpoonMarketplace() {
                       { backgroundColor: formType === type ? getTypeColor(type) : palette.background, borderColor: palette.muted }
                     ]}
                     onPress={() => setFormType(type)}
+                    hitSlop={HIT_SLOP_12}
                     accessibilityRole="radio"
                     accessibilityState={{ checked: formType === type }}
                   >
@@ -458,6 +465,7 @@ export default function SpoonMarketplace() {
               <Pressable
                 style={[styles.modalButton, { borderColor: palette.muted }]}
                 onPress={() => setShowCreateModal(false)}
+                hitSlop={HIT_SLOP_12}
                 accessibilityRole="button"
                 accessibilityLabel="Cancel"
               >
@@ -469,6 +477,7 @@ export default function SpoonMarketplace() {
                 style={[styles.modalButton, { backgroundColor: palette.primary }]}
                 onPress={handleCreateListing}
                 disabled={loading || !formTitle.trim() || !formDescription.trim()}
+                hitSlop={HIT_SLOP_12}
                 accessibilityRole="button"
                 accessibilityLabel="Post listing"
               >
@@ -515,7 +524,6 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   balanceText: {
-    color: '#fff',
     fontSize: 16,
     fontWeight: '600',
   },
@@ -595,13 +603,11 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   urgentBadge: {
-    backgroundColor: '#dc2626',
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: 4,
   },
   urgentText: {
-    color: '#fff',
     fontSize: 10,
     fontWeight: '600',
   },
@@ -614,7 +620,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   spoonsText: {
-    color: '#fff',
     fontSize: 12,
     fontWeight: '600',
   },
@@ -630,7 +635,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   acceptButtonText: {
-    color: '#fff',
     fontSize: 14,
     fontWeight: '600',
   },

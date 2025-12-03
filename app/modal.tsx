@@ -2,6 +2,7 @@ import { Stack, useRouter } from "expo-router";
 import React from "react";
 import { Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../hooks/useA11y";
 import { colors, type Palette } from "../theme/colors";
 import { maxFontScale } from '../utils/platform';
@@ -34,7 +35,7 @@ export default function Modal() {
           accessibilityRole="button"
           accessibilityLabel="Close modal"
           accessibilityHint="Dismisses the modal and returns to the previous screen"
-          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          hitSlop={HIT_SLOP_12}
           style={({ pressed }) => [styles.button, pressed && { opacity: 0.7 }]}
         >
           <Text

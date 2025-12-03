@@ -5,6 +5,8 @@
  * safe space finder, and guided decompression protocols.
  */
 
+/* eslint-disable no-restricted-syntax */ // Hex colors needed for static StyleSheet definitions
+
 import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
 import { useState } from 'react';
@@ -21,9 +23,9 @@ export default function SensoryOverloadScreen() {
   const sensory = useSensoryOverload();
 
   // Use state from hook directly
-  const currentPhase = sensory.state.currentPhase;
+  const _currentPhase = sensory.state.currentPhase; // Stored for future UI integration
   const safeSpaces = sensory.state.safeSpaces;
-  const currentInputs = sensory.state.currentInputs;
+  const _currentInputs = sensory.state.currentInputs; // Stored for future UI integration
   const thresholds = sensory.state.thresholds;
 
   const [prediction, setPrediction] = useState<{ timeToOverload: number; probability: number } | null>(null);
@@ -32,7 +34,7 @@ export default function SensoryOverloadScreen() {
   const [showInputModal, setShowInputModal] = useState(false);
   const [showProtocolModal, setShowProtocolModal] = useState(false);
   const [activeProtocol, setActiveProtocol] = useState<DecompressionAction | null>(null);
-  const [protocolStep, setProtocolStep] = useState(0);
+  const [_protocolStep, setProtocolStep] = useState(0); // Stored for step navigation UI
 
   const [sensoryInputs, setSensoryInputs] = useState<Record<SensoryModality, number>>({
     visual: 3,
@@ -46,7 +48,7 @@ export default function SensoryOverloadScreen() {
   });
 
   // Load prediction on demand
-  async function loadPrediction() {
+  async function _loadPrediction() {
     try {
       const pred = await sensory.predict();
       setPrediction({ timeToOverload: pred.timeToOverload, probability: pred.probability });

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { useAppPalette } from "../theme/usePalette";
 export default function Collapsible({
   title,
@@ -18,6 +19,7 @@ export default function Collapsible({
         onPress={() => setOpen((v) => !v)}
         accessibilityLabel={`${open ? "Collapse" : "Expand"} ${title}`}
         accessibilityRole="button"
+        hitSlop={HIT_SLOP_12}
         style={({ pressed }) => [styles.header, { backgroundColor: palette.surface }, pressed && { opacity: 0.8 }]}
       >
         <Text style={[styles.headerText, { color: palette.text }]}>

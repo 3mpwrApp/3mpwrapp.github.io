@@ -19,7 +19,7 @@ import {
 import A11yPressable from '../components/A11yPressable';
 import GapView from '../components/GapView';
 import ResponsiveScreenWrapper from '../components/ResponsiveScreenWrapper';
-import { HIT_SLOP_8 } from '../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../constants/a11y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import {
@@ -90,6 +90,7 @@ export default function GlobalSearchScreen() {
             value={query}
             onChangeText={setQuery}
             onFocus={() => setInputFocused(true)}
+            // WCAG 2.2.1: 200ms delay is user-initiated blur handling, not a timed limit on interaction
             onBlur={() => setTimeout(() => setInputFocused(false), 200)}
             placeholder={t('search.placeholder', 'Search for tools, resources, help...')}
             placeholderTextColor={palette.muted}
@@ -100,7 +101,7 @@ export default function GlobalSearchScreen() {
           {query.length > 0 && (
             <Pressable
               onPress={() => setQuery('')}
-              hitSlop={HIT_SLOP_8}
+              hitSlop={HIT_SLOP_12}
               accessibilityRole="button"
               accessibilityLabel={t('search.clear', 'Clear search')}
             >
@@ -132,7 +133,7 @@ export default function GlobalSearchScreen() {
                   accessibilityRole="button"
                   accessibilityLabel={`Filter by ${item.label}`}
                   accessibilityState={{ selected: isActive }}
-                  hitSlop={HIT_SLOP_8}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Text style={{ fontSize: 14 }}>{item.icon}</Text>
                   <Text
@@ -176,7 +177,7 @@ export default function GlobalSearchScreen() {
                   ]}
                   accessibilityRole="button"
                   accessibilityLabel={`Search for ${suggestion}`}
-                  hitSlop={HIT_SLOP_8}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Ionicons name="search" size={16} color={palette.muted} />
                   <Text 
@@ -214,7 +215,7 @@ export default function GlobalSearchScreen() {
                   ]}
                   accessibilityRole="button"
                   accessibilityLabel={`Search for ${search}`}
-                  hitSlop={HIT_SLOP_8}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Text 
                     style={[styles.popularChipText, { color: palette.primary }]}

@@ -2,6 +2,7 @@ import { useRouter } from 'expo-router';
 import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import { HIT_SLOP_8 } from '../constants/A11Y';
 import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 import { logError } from '../utils/errorLogger';
@@ -116,6 +117,7 @@ function ErrorFallbackBasic({ error, onReset }: { error: Error | null; onReset: 
           onPress={onReset}
           accessibilityRole="button"
           accessibilityLabel="Try again"
+          hitSlop={HIT_SLOP_8}
         >
           <Text style={[styles.buttonText, { color: FALLBACK_PALETTE.onPrimary }]}>Try Again</Text>
         </Pressable>
@@ -207,6 +209,7 @@ function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onR
             accessibilityRole="button"
             accessibilityLabel={t('components.errorBoundary.tryAgain', 'Try again')}
             accessibilityHint={t('components.errorBoundary.tryAgainHint', 'Attempts to reload the current screen')}
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={[styles.buttonText, { color: palette.onPrimary }]}>
               {t('components.errorBoundary.tryAgain', 'Try Again')}
@@ -219,6 +222,7 @@ function ErrorFallbackWithContext({ error, onReset }: { error: Error | null; onR
             accessibilityRole="button"
             accessibilityLabel={t('components.errorBoundary.goHome', 'Go to home screen')}
             accessibilityHint={t('components.errorBoundary.goHomeHint', 'Returns to the main home screen')}
+            hitSlop={HIT_SLOP_8}
           >
             <Text style={[styles.buttonText, { color: palette.primary }]}>
               {t('components.errorBoundary.goHome', 'Go to Home')}

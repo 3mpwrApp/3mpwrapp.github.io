@@ -12,6 +12,7 @@ import {
 import ContrastToggle from "../../components/ContrastToggle";
 import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
+import { HIT_SLOP_12 } from "../../constants/a11y";
 import { whatsnew as defaultWN } from "../../data/whatsnew";
 import {
     MAX_FONT_SCALE,
@@ -226,9 +227,11 @@ export default function WhatsNewScreen() {
         </Pressable>
       </View>
       */}
+      {/* WCAG 2.2 AAA: hitSlop ensures 44×44 touch target */}
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={t("whatsNew.markAllReadA11y", "Mark all as read")}
+        hitSlop={HIT_SLOP_12}
         disabled={!AsyncStorageRef.current} // Disable until AsyncStorage loads
         onPress={async () => {
           // Get the newest date from combined list (activity + items)

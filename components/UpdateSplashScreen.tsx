@@ -8,6 +8,7 @@
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Modal, StyleSheet, Text, View } from 'react-native';
 
+import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 import { logger } from '../utils/logger';
@@ -31,6 +32,7 @@ const isExpoGo = Constants?.default?.appOwnership === 'expo' || Constants?.appOw
 export default function UpdateSplashScreen() {
   const { t } = useTranslation();
   const palette = useAppPalette();
+  const reduceMotion = useReduceMotionEnabled();
 
   const [isChecking, setIsChecking] = useState(true);
   const [isDownloading, setIsDownloading] = useState(false);
@@ -173,7 +175,8 @@ export default function UpdateSplashScreen() {
     <Modal
       visible={showSplash}
       transparent={true}
-      animationType="fade"
+      // WCAG 2.3.3: Respects user's reduce motion preference
+      animationType={reduceMotion ? 'none' : 'fade'}
       statusBarTranslucent={true}
     >
       <View style={[styles.container, { backgroundColor: palette.background }]}>

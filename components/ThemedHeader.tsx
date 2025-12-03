@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { HIT_SLOP_8, touchTarget } from "../constants/A11Y";
+import { HIT_SLOP_12, HIT_SLOP_8, touchTarget } from "../constants/A11Y";
 import { useAuth } from "../context/AuthContext";
 import { useTranslation } from "../i18n";
 import { useCounts } from "../store/counts";
@@ -59,8 +59,9 @@ const MenuItem = React.memo<{
     onPress={onPress}
     accessibilityRole="button"
     accessibilityLabel={`Go to ${label}`}
+    hitSlop={HIT_SLOP_12}
     style={({ pressed }) => [
-      { paddingVertical: 8, paddingHorizontal: 14 },
+      { paddingVertical: 8, paddingHorizontal: 14, minWidth: 44, minHeight: 44 },
       pressed && { opacity: 0.7 },
     ]}
   >
@@ -443,8 +444,9 @@ const ThemedHeader = React.memo(() => {
                 onPress={handleRefreshAdmin}
                 accessibilityRole="button"
                 accessibilityLabel="Refresh admin status"
+                hitSlop={HIT_SLOP_12}
                 style={({ pressed }) => [
-                  { paddingVertical: 8, paddingHorizontal: 14 },
+                  { paddingVertical: 8, paddingHorizontal: 14, minWidth: 44, minHeight: 44 },
                   pressed && { opacity: 0.7 },
                 ]}
               >
@@ -457,8 +459,9 @@ const ThemedHeader = React.memo(() => {
                   onPress={handleAdminPanel}
                   accessibilityRole="button"
                   accessibilityLabel="Go to Admin Panel"
+                  hitSlop={HIT_SLOP_12}
                   style={({ pressed }) => [
-                    { paddingVertical: 8, paddingHorizontal: 14 },
+                    { paddingVertical: 8, paddingHorizontal: 14, minWidth: 44, minHeight: 44 },
                     pressed && { opacity: 0.7 },
                   ]}
                 >

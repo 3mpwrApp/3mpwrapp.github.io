@@ -4,7 +4,7 @@ import { Linking, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'r
 
 import A11yPressable from '../../components/A11yPressable';
 import SettingsLink from '../../components/SettingsLink';
-import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../../constants/A11Y';
 import type { ResearchSection } from '../../data/research';
 import { researchItems } from '../../data/research';
 import { useTextScale } from '../../theme/typography';
@@ -141,7 +141,9 @@ export default function ResearchDetailScreen() {
                 <Pressable
                   key={section.id}
                   accessibilityRole="menuitem"
+                  accessibilityLabel={`Jump to ${section.heading}`}
                   onPress={() => scrollToSection(section.id)}
+                  hitSlop={HIT_SLOP_12}
                   style={({ pressed }) => [styles.tocItem, pressed && { opacity: 0.5 }]}
                 >
                   <Text style={styles.tocText}>{section.heading}</Text>
@@ -166,6 +168,8 @@ export default function ResearchDetailScreen() {
             onPress={() => scrollRef.current?.scrollTo({ y: 0, animated: true })}
             accessibilityRole="button"
             accessibilityLabel="Back to top"
+            accessibilityHint="Scrolls to the top of the page"
+            hitSlop={HIT_SLOP_12}
             style={styles.backToTop}
           >
             <Text style={styles.backToTopText}>Top</Text>

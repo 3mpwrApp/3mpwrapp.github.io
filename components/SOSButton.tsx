@@ -167,6 +167,7 @@ export default function SOSButton({ position = 'bottom-right', compact = false }
         accessibilityRole="button"
         accessibilityLabel="SOS Crisis Support Button - Tap for crisis resources, triple-tap for emergency contact"
         accessibilityHint="Opens crisis support menu with hotlines and resources"
+        hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
       >
         <Ionicons name="warning" size={compact ? 20 : 24} color={palette.onPrimary} />
         {!compact && <Text style={styles.buttonText}>SOS</Text>}

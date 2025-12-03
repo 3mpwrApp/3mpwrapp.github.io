@@ -41,6 +41,7 @@ export default function UploadQueueStatus({ uploadFn, onRefresh }: UploadQueueSt
       loadStats();
       onRefresh?.();
     });
+    // WCAG 2.2.1: Background polling for data sync, not a user-interaction timeout
     // Poll every 30 seconds
     const interval = setInterval(loadStats, 30000);
     return () => clearInterval(interval);

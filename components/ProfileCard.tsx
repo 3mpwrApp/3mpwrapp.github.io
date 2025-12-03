@@ -4,7 +4,7 @@ import { router } from "expo-router";
 import React from "react";
 import { Alert, Image, Pressable, RefreshControl, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
-import { HIT_SLOP_8 } from "../constants/A11Y";
+import { HIT_SLOP_12, HIT_SLOP_8 } from "../constants/A11Y";
 import { useAuth } from "../context/AuthContext";
 import { useTranslation } from "../i18n";
 import { useA11ySettings } from "../store/a11ySettings";
@@ -43,6 +43,8 @@ export default function ProfileCard() {
   const bookmarkTotal = bookmarksCtx?.items?.length || 0;
 
   // Refresh handler
+  // WCAG 2.2.1: Timing Adjustable - 500ms delay is non-interactive UI feedback only,
+  // does not affect user input or require user action within time limit
   const handleRefresh = React.useCallback(async () => {
     setRefreshing(true);
     try {
@@ -326,6 +328,7 @@ export default function ProfileCard() {
           onPress={signOut}
           accessibilityRole="button"
           accessibilityLabel={t("header.signOut", "Sign Out")}
+          hitSlop={HIT_SLOP_12}
         >
           <Ionicons name="log-out" size={20} color={palette.onPrimary} />
           <Text style={[styles.buttonText, { color: palette.onPrimary }]}>{t("header.signOut", "Sign Out")}</Text>
@@ -336,6 +339,7 @@ export default function ProfileCard() {
           onPress={() => router.push("/(auth)/signin" as Href)}
           accessibilityRole="button"
           accessibilityLabel={t("header.signIn", "Sign In")}
+          hitSlop={HIT_SLOP_12}
         >
           <Ionicons name="log-in" size={20} color={palette.onPrimary} />
           <Text style={[styles.buttonText, { color: palette.onPrimary }]}>{t("header.signIn", "Sign In")}</Text>
@@ -367,6 +371,7 @@ function StatCard({ icon, label, value, palette, color, onPress }: {
       onPress={onPress}
       accessibilityRole={onPress ? "button" : undefined}
       accessibilityLabel={`${label}: ${value}`}
+      hitSlop={onPress ? HIT_SLOP_8 : undefined}
     >
       <Ionicons name={icon as any} size={24} color={color || palette.primary} />
       <Text style={styles.statValue}>{value}</Text>

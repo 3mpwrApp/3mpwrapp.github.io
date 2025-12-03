@@ -320,6 +320,7 @@ function FilterChip({ label, active, onPress, palette, factor }: FilterChipProps
         marginRight: 8,
         marginBottom: 8,
       }}
+      hitSlop={HIT_SLOP_12}
       accessibilityRole="button"
       accessibilityState={{ selected: active }}
     >

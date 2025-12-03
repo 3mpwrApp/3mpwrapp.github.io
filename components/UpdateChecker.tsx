@@ -113,6 +113,7 @@ export default function UpdateChecker() {
                 try {
                   // Give user feedback before reload
                   logger.log('[UpdateChecker] User requested restart to apply update');
+                  // WCAG 2.2.1: Brief UI transition delay, not a user-interaction timeout
                   // Small delay to ensure alert is dismissed
                   await new Promise(resolve => setTimeout(resolve, 300));
                   await Updates.reloadAsync();

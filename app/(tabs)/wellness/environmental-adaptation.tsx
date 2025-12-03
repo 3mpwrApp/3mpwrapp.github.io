@@ -5,6 +5,8 @@
  * based on weather, air quality, and environmental triggers.
  */
 
+/* eslint-disable no-restricted-syntax */ // Hex colors needed for static StyleSheet definitions
+
 import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
 import { useState } from 'react';
@@ -44,7 +46,7 @@ export default function EnvironmentalAdaptationScreen() {
       setShowManualInput(false);
       setManualData({ temperature: '', humidity: '', pressure: '', airQuality: '' });
       Alert.alert('Success', 'Environmental data recorded successfully!');
-    } catch (error) {
+    } catch {
       Alert.alert('Error', 'Failed to record environmental data');
     }
   }

@@ -8,6 +8,7 @@ import {
     View,
 } from "react-native";
 
+import { HIT_SLOP_12 } from "../constants/A11Y";
 import { useTranslation } from "../i18n";
 import { usePrivacy } from "../store/privacy";
 import { useAppPalette } from "../theme/usePalette";
@@ -44,7 +45,7 @@ export default function PrivacyGate({
         style={styles.button}
         accessibilityRole="button"
         accessibilityLabel={t('privacyGate.unlock','Unlock')}
-        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+        hitSlop={HIT_SLOP_12}
       >
         <Text style={styles.buttonText}>{t('privacyGate.unlock','Unlock')}</Text>
       </Pressable>

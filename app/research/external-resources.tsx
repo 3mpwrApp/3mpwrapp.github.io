@@ -7,7 +7,7 @@ import ContrastToggle from '../../components/ContrastToggle';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import SearchBar from '../../components/SearchBar';
 import SettingsLink from '../../components/SettingsLink';
-import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../../constants/A11Y';
 import externalResources from '../../data/externalResources.json';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../hooks/useA11y';
 import { useSettings } from '../../store/settings';
@@ -147,6 +147,10 @@ export default function ExternalResourcesScreen() {
                   provinceFilter === opt && styles.filterButtonActive,
                 ]}
                 onPress={() => setProvinceFilter(opt)}
+                accessibilityRole="button"
+                accessibilityLabel={`Filter by ${opt === 'all' ? 'All regions' : opt === 'canada' ? 'Canada-wide' : opt}`}
+                accessibilityState={{ selected: provinceFilter === opt }}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text
                   style={[
@@ -165,6 +169,10 @@ export default function ExternalResourcesScreen() {
                   provinceFilter === province && styles.filterButtonActive,
                 ]}
                 onPress={() => setProvinceFilter(province)}
+                accessibilityRole="button"
+                accessibilityLabel={`Filter by my province ${province}`}
+                accessibilityState={{ selected: provinceFilter === province }}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text
                   style={[
@@ -213,7 +221,7 @@ export default function ExternalResourcesScreen() {
                 onPress={() => { setQuery(''); setProvinceFilter('all'); }}
                 accessibilityRole="button"
                 accessibilityLabel="Reset search filters"
-                hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+                hitSlop={HIT_SLOP_12}
               >
                 <Text style={styles.resetButton}>Reset filters</Text>
               </Pressable>

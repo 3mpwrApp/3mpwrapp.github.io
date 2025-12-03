@@ -1,0 +1,30 @@
+# 3mpwrApp Maestro E2E Test Suite
+# Comprehensive UI testing with accessibility validation
+#
+# Install Maestro: curl -Ls "https://get.maestro.mobile.dev" | bash
+# Run: maestro test e2e/maestro/flows/
+#
+# WCAG 2.2 AAA Compliance Tests Included:
+# - Touch target size validation (44x44 minimum)
+# - Screen reader announcements
+# - Focus management
+# - Animation and motion
+# - Color contrast (via visual comparison)
+# - Keyboard navigation
+
+appId: com.app3mpwr.app3mpwr
+
+---
+
+# Main Navigation Stress Test
+- runFlow:
+    file: navigation-stress.yaml
+    
+- runFlow:
+    file: accessibility-validation.yaml
+    
+- runFlow:
+    file: wcag-compliance.yaml
+    
+- runFlow:
+    file: performance-stress.yaml

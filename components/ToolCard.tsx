@@ -8,6 +8,7 @@ import { useRouter } from 'expo-router';
 import React, { useMemo } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { HIT_SLOP_12 } from '../constants/A11Y';
 import type { ToolMetadata } from '../services/phase6ToolRegistry';
 import { useAppPalette } from '../theme/usePalette';
 
@@ -82,6 +83,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
         accessibilityLabel={tool.name}
         accessibilityHint={tool.description}
         accessibilityRole="button"
+        hitSlop={HIT_SLOP_12}
       >
         <Ionicons
           name={tool.icon as any}
@@ -106,6 +108,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
       accessible={true}
       accessibilityLabel={accessibilityLabel}
       accessibilityRole="button"
+      hitSlop={HIT_SLOP_12}
     >
       <View style={styles.header}>
         <View style={styles.iconContainer}>
