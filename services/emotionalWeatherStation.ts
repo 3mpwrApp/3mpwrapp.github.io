@@ -612,7 +612,8 @@ class EmotionalWeatherStationManager {
       occurrences.forEach(mood => {
         // Find sessions within 2 hours of this mood reading
         const nearSessions = sessions.filter(s => {
-          const timeDiff = Math.abs(s.timestamp - mood.timestamp);
+          const sessionTime = s.startTime || 0; // PanicInterruptionSession uses startTime
+          const timeDiff = Math.abs(sessionTime - mood.timestamp);
           return timeDiff < 2 * 60 * 60 * 1000; // 2 hours
         });
         

@@ -49,9 +49,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
     // Log to console in development, Sentry in production
     // logError automatically routes to Sentry when EXPO_PUBLIC_SENTRY_DSN is configured
-    logError('ErrorBoundary', 'Caught an error', error, {
-      componentStack: errorInfo?.componentStack,
-    });
+    logError('ErrorBoundary', 'Caught an error', error);
   }
 
   handleReset = (): void => {
