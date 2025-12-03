@@ -1,98 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-03T00:06:17.658Z",
+  "lastUpdated": "2025-12-03T06:02:47.709Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4185,
+      "totalPosts": 4210,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T00:06:08.582Z"
+      "lastSeen": "2025-12-03T06:02:39.670Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4200,
+      "totalPosts": 4225,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T00:06:10.644Z"
+      "lastSeen": "2025-12-03T06:02:41.348Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4184,
+      "totalPosts": 4209,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T00:06:12.601Z"
+      "lastSeen": "2025-12-03T06:02:43.173Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4193,
+      "totalPosts": 4218,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T00:06:14.645Z"
+      "lastSeen": "2025-12-03T06:02:44.750Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4200,
+      "totalPosts": 4225,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T00:06:16.654Z"
+      "lastSeen": "2025-12-03T06:02:46.707Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Annaleigh is a Cherokee woman living with PTSD and other health challenges. She needs $2,000 to cover bills and essential expenses. Please donate or share if you can. 🤍\n#MutualAid #IndigenousMutualAid #DisabilityJustice #BIPOCMA",
-      "author": "amparodo.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "We believe #accessibility to be important to allow people to enjoy videogames. Rhythm games and the @play.date controls can present unique challenges, so we designed #AgentsOfGroove to be fairly relaxed, and implemented features to tailor the experience further 🧵\n\n#gamedev #indiedev #playdate",
-      "author": "synapticsugar.games",
-      "engagement": 24,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "If you can't attend my event tomorrow at University of Glasgow, it s available to live stream at the link below \n\nuofglasgow.zoom.us/j/8484798525...\n\nIt's going to be an interesting and lively conversation. \n\n1pm start. \n\n#Scotland #Glasgow #Reading #WritingCommunity #Books #Events #Accessibility",
-      "author": "kristiedegaris.bsky.social",
-      "engagement": 47,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "The accessibility insights I’ve learned from this calendar are better than chocolate #a11y",
-      "author": "gerireid.com",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
-      "author": "nataliegreenpeer.bsky.social",
-      "engagement": 211,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "A beautiful tribute to @sfdirewolf.bsky.social, from Rebecca Cokley. \n\nTogether, may we continue the work and the fight to ensure Alice’s vision becomes the norm. 💜 \n\n#DisabilityJustice #DisabilityVisibility www.thenation.com/article/soci...",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Annaleigh is a Cherokee woman living with PTSD and other health challenges. She needs $2,000 to cover bills and essential expenses. Please donate or share if you can. 🤍\n#MutualAid #IndigenousMutualAid #DisabilityJustice #BIPOCMA",
-      "author": "amparodo.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "The accessibility insights I’ve learned from this calendar are better than chocolate #a11y",
       "author": "gerireid.com",
@@ -338,6 +284,60 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We have witnessed attacks on the ADA, cuts to Special Education, and harmful shifts in attitudes toward the disabled community.\n\nJoin us Wednesday with Tony Coelho and Sara Minkara. \n\nRSVP: democratsabroad.org/dec_2025_gdc...\n\n#DemocratsAbroad #IDPD #DisabilityRights #Resist",
+      "author": "demsabroad.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Public health must integrate #DisabilityJustice principles, not as an add-on, but as the foundation: flexibility, access, intersectionality, collective care, and trust in lived expertise.",
+      "author": "longcovidjustice.org",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "The Center for Racial & Disability Justice has an incredibly compelling op-ed in the Chicago Sun Times about why #AssistedSuicide laws are bad, & asking @govpritzker.illinois.gov to veto SB 1950. #DisabilityJustice #DisabilitySky #DisabilityRightsAreHumanRights tinyurl.com/4nk7e6ru",
+      "author": "10minutesaday.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "A beautiful tribute to @sfdirewolf.bsky.social, from Rebecca Cokley. \n\nTogether, may we continue the work and the fight to ensure Alice’s vision becomes the norm. 💜 \n\n#DisabilityJustice #DisabilityVisibility www.thenation.com/article/soci...",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 21,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "424-word hot take: “You Can’t Make Something Accessible to Everyone”\nadrianroselli.com/2025/12/you-...\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 22,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I still recommend the FATE Accessibility Toolkit for anyone interested in disability representation, #accessibility - tabletop or otherwise. Don't assume it is ONLY applicable to FATE.",
+      "author": "foxdesign.tech",
+      "engagement": 34,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "424-word hot take: “You Can’t Make Something Accessible to Everyone”\nadrianroselli.com/2025/12/you-...\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 22,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 32
     },
     {
       "keyword": "a11y",
@@ -359,7 +359,7 @@
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "altcitizen",
@@ -390,6 +390,10 @@
       "count": 8
     },
     {
+      "keyword": "idpd",
+      "count": 5
+    },
+    {
       "keyword": "foxtakedown",
       "count": 5
     },
@@ -415,10 +419,6 @@
     },
     {
       "keyword": "50501movement",
-      "count": 5
-    },
-    {
-      "keyword": "disabilityrebellion stoptrump",
       "count": 5
     }
   ]
