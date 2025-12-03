@@ -286,11 +286,21 @@ export async function subscribeToEventUpdates(
   try {
     // Subscribe to ALL published events (not just 'community' category)
     // User-created events can have categories like 'advocacy', 'social', 'rally', 'community', etc.
-    const q = m.query(
-      m.collection(db, collection),
-      m.where('status', '==', 'published'),
-      m.orderBy('date', 'asc')
-    );
+    // Try compound query first, fallback to simple query if index not ready
+    let q;
+    try {
+      q = m.query(
+        m.collection(db, collection),
+        m.where('status', '==', 'published'),
+        m.orderBy('date', 'asc')
+      );
+    } catch {
+      // Fallback if compound query fails
+      q = m.query(
+        m.collection(db, collection),
+        m.where('status', '==', 'published')
+      );
+    }
 
     const unsubscribe = m.onSnapshot(
       q,
@@ -335,15 +345,27 @@ export async function fetchEventUpdates(collection: 'events_production' | 'event
   }
 
   try {
-    // Fetch ALL published events (not just 'community' category)
-    // User-created events can have categories like 'advocacy', 'social', 'rally', 'community', etc.
-    const q = m.query(
-      m.collection(db, collection),
-      m.where('status', '==', 'published'),
-      m.orderBy('date', 'asc')
-    );
+    // Try compound query first (requires index: status + date)
+    let snapshot;
+    try {
+      const q = m.query(
+        m.collection(db, collection),
+        m.where('status', '==', 'published'),
+        m.orderBy('date', 'asc')
+      );
+      snapshot = await m.getDocs(q);
+      logger.log('[FirestoreSyncEvent] Compound query succeeded:', snapshot.docs.length, 'events');
+    } catch (indexError: any) {
+      // If index not ready, fallback to simple query without orderBy
+      logger.warn('[FirestoreSyncEvent] Compound query failed (index may be building), using fallback:', indexError?.message);
+      const fallbackQ = m.query(
+        m.collection(db, collection),
+        m.where('status', '==', 'published')
+      );
+      snapshot = await m.getDocs(fallbackQ);
+      logger.log('[FirestoreSyncEvent] Fallback query succeeded:', snapshot.docs.length, 'events');
+    }
 
-    const snapshot = await m.getDocs(q);
     const events = snapshot.docs.map((doc) => {
       const data = doc.data();
       
