@@ -4,6 +4,8 @@ title: Features
 description: Explore 3mpwr App's comprehensive features designed to empower your advocacy, connect with community, and navigate systems with confidence. Production-Ready Beta with 90% Accessibility.
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+
 <!-- Status Banner -->
 {%- include status-banner.html -%}
 
@@ -65,6 +67,7 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 <div class="related-pages">
   <strong>📖 Related Pages:</strong>
   <ul>
+    <li><a href="/screenshots">Screenshot Gallery</a> - See all 100+ app screenshots organized by feature</li>
     <li><a href="/user-guide">User Guide</a> - Step-by-step tutorials for all features</li>
     <li><a href="/accessibility">Accessibility Guide</a> - Detailed accessibility settings</li>
     <li><a href="/privacy">Privacy & Security</a> - How we protect your data</li>
@@ -155,6 +158,9 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
   <div id="feature-cards-grid" class="feature-cards-grid">
     <!-- Advocacy Card -->
     <div class="feature-card" data-category="advocacy">
+      <a href="/screenshots/#advocacy" class="card-screenshot-link">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/advocacy/aicommandcenter1advocacytab3mpwrapp.png" alt="AI Advocacy Command Centre - See all advocacy screenshots" class="card-preview-img" loading="lazy">
+      </a>
       <div class="card-icon">📝</div>
       <h3 class="card-title">Advocacy Tools</h3>
       <p class="card-description">Professional letter templates, legal automation, and workflow tools to advocate for your rights</p>
@@ -165,10 +171,14 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
         <li>✅ Deadline tracking</li>
       </ul>
       <a href="#-advocacy-tab" class="card-link">Explore Advocacy →</a>
+      <a href="/screenshots/#advocacy" class="card-link-secondary">📷 View Screenshots →</a>
     </div>
 
     <!-- Wellness Card -->
     <div class="feature-card" data-category="wellness">
+      <a href="/screenshots/#wellness" class="card-screenshot-link">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstabunifiedhealthtracker13mpwrapp.png" alt="Wellness Health Tracker - See all wellness screenshots" class="card-preview-img" loading="lazy">
+      </a>
       <div class="card-icon">🧘</div>
       <h3 class="card-title">Wellness & Health</h3>
       <p class="card-description">Track your physical and mental health with 41 AI-enhanced wellness features designed for chronic conditions</p>
@@ -179,10 +189,14 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
         <li>✅ 14 accessibility-enhanced screens</li>
       </ul>
       <a href="#-wellness-tab" class="card-link">Explore Wellness →</a>
+      <a href="/screenshots/#wellness" class="card-link-secondary">📷 View Screenshots →</a>
     </div>
 
     <!-- Evidence Locker Card -->
     <div class="feature-card" data-category="evidence">
+      <a href="/screenshots/#resources" class="card-screenshot-link">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager - See all resource screenshots" class="card-preview-img" loading="lazy">
+      </a>
       <div class="card-icon">🔒</div>
       <h3 class="card-title">Evidence Locker</h3>
       <p class="card-description">Military-grade encrypted storage for all your documents, photos, and evidence. Your data, your control</p>
@@ -193,10 +207,14 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
         <li>✅ Case timeline</li>
       </ul>
       <a href="#evidence-locker---your-secure-document-vault" class="card-link">Explore Evidence →</a>
+      <a href="/screenshots/#resources" class="card-link-secondary">📷 View Screenshots →</a>
     </div>
 
     <!-- Letter Wizard Card -->
     <div class="feature-card" data-category="letters">
+      <a href="/screenshots/#resources" class="card-screenshot-link">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator - See all resource screenshots" class="card-preview-img" loading="lazy">
+      </a>
       <div class="card-icon">✉️</div>
       <h3 class="card-title">Letter Wizard</h3>
       <p class="card-description">Generate professional letters in minutes with 22 templates covering workplace, legal, and benefits issues</p>
@@ -207,10 +225,14 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
         <li>✅ Export as PDF</li>
       </ul>
       <a href="#letter-wizard---22-professional-letter-templates" class="card-link">Explore Letters →</a>
+      <a href="/screenshots/#resources" class="card-link-secondary">📷 View Screenshots →</a>
     </div>
 
     <!-- Community Card -->
     <div class="feature-card" data-category="community">
+      <a href="/screenshots/#community" class="card-screenshot-link">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/community/communityhubtab3mpwrapp.png" alt="Community Hub - See all community screenshots" class="card-preview-img" loading="lazy">
+      </a>
       <div class="card-icon">💬</div>
       <h3 class="card-title">Community & Support</h3>
       <p class="card-description">Connect with peers, share experiences, and find support in safe, moderated spaces built for the community</p>
@@ -221,10 +243,14 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
         <li>✅ Safety controls</li>
       </ul>
       <a href="#-community-tab" class="card-link">Explore Community →</a>
+      <a href="/screenshots/#community" class="card-link-secondary">📷 View Screenshots →</a>
     </div>
 
     <!-- Resources Card -->
     <div class="feature-card" data-category="resources">
+      <a href="/screenshots/#resources" class="card-screenshot-link">
+        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcesmastertrackerdashboard13mpwrapp.png" alt="Master Tracker - See all resource screenshots" class="card-preview-img" loading="lazy">
+      </a>
       <div class="card-icon">📚</div>
       <h3 class="card-title">Resources & Learning</h3>
       <p class="card-description">Comprehensive guides, legal resources, and educational content for every Canadian province</p>
@@ -235,6 +261,7 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
         <li>✅ Crisis support</li>
       </ul>
       <a href="#-resources-tab" class="card-link">Explore Resources →</a>
+      <a href="/screenshots/#resources" class="card-link-secondary">📷 View Screenshots →</a>
     </div>
   </div>
 
@@ -845,7 +872,18 @@ These features work across the entire app:
 ## 📖 Feature Highlights
 
 ### Evidence Locker - Your Secure Document Vault
-**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#evidence-locker)**
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#evidence-locker)** | **[📷 View Screenshots →](/screenshots/#resources)**
+
+<div class="screenshot-preview-row">
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager interface" loading="lazy">
+    <span>Evidence Manager</span>
+  </a>
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabappealcommandcenter13mpwrapp.png" alt="Appeal Command Center" loading="lazy">
+    <span>Appeal Center</span>
+  </a>
+</div>
 
 The Evidence Locker is your encrypted, private document storage system:
 
@@ -871,7 +909,22 @@ The Evidence Locker is your encrypted, private document storage system:
 ---
 
 ### Letter Wizard - 22 Professional Letter Templates
-**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#letter-wizard)**
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#letter-wizard)** | **[📷 View Screenshots →](/screenshots/#resources)**
+
+<div class="screenshot-preview-row">
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator interface" loading="lazy">
+    <span>Letter Generator</span>
+  </a>
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator23mpwrapp.png.png" alt="Template customization" loading="lazy">
+    <span>Template Selection</span>
+  </a>
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator33mpwrapp.png.png" alt="Professional letter output" loading="lazy">
+    <span>Generated Letter</span>
+  </a>
+</div>
 
 Generate professional, legally-sound letters in minutes with auto-populate from your profile, field validation, bilingual generation (English/French), and PDF export.
 
@@ -910,7 +963,22 @@ Generate professional, legally-sound letters in minutes with auto-populate from 
 ---
 
 ### Wellness Tools - 36 Features for Mental & Physical Health
-**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#wellness-tools)**
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#wellness-tools)** | **[📷 View Screenshots →](/screenshots/#wellness)**
+
+<div class="screenshot-preview-row">
+  <a href="/screenshots/#wellness" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstabunifiedhealthtracker13mpwrapp.png" alt="Health Tracker dashboard" loading="lazy">
+    <span>Health Tracker</span>
+  </a>
+  <a href="/screenshots/#wellness" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstabmentalwellnesstoolkit3mpwrapp.png" alt="Mental Wellness hub" loading="lazy">
+    <span>Mental Wellness</span>
+  </a>
+  <a href="/screenshots/#wellness" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstabmovementnrehabhub3mpwrapp.png" alt="Movement Hub" loading="lazy">
+    <span>Movement Hub</span>
+  </a>
+</div>
 
 Comprehensive wellness support across multiple dimensions:
 
@@ -940,7 +1008,18 @@ Automated workflows for common legal processes with step-by-step guidance, auto-
 ---
 
 ### Community - Connect & Support
-**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#community-features)**
+**Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#community-features)** | **[📷 View Screenshots →](/screenshots/#community)**
+
+<div class="screenshot-preview-row">
+  <a href="/screenshots/#community" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/community/communityhubtab3mpwrapp.png" alt="Community Hub interface" loading="lazy">
+    <span>Community Hub</span>
+  </a>
+  <a href="/screenshots/#community" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/community/testerschatcommunitytab3mpwrapp.png" alt="Beta Testers Chat" loading="lazy">
+    <span>Beta Testers Chat</span>
+  </a>
+</div>
 
 Safe, moderated spaces for disability community with discussion threads, direct messaging, peer support matching (94% accuracy), safety controls, and 12+ disability-specific communities.
 

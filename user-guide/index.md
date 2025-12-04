@@ -52,6 +52,7 @@ allFeaturesLive: 60+ features, 90% accessibility target achieved, full offline s
 
 ### 🔗 Quick Navigation
 - **[Features Overview](/features)** - Complete list of all features with details
+- **[Screenshot Gallery](/screenshots)** - 100+ app screenshots organized by feature
 - **[What's New Page](/whats-new)** - Latest updates and announcements
 - **[Accessibility Settings](/accessibility)** - Learn about dyslexia, motor, and cognitive accessibility
 - **[Privacy & Security](/privacy)** - How we protect your data
@@ -770,7 +771,18 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 > **ALL legal resources are educational only. This app does NOT provide legal advice. Laws vary by jurisdiction. Always consult a licensed attorney for legal matters specific to your situation.**
 
 ### Evidence Locker (Document Vault) 📁
-**Your secure AES-256 encrypted document storage**
+**Your secure AES-256 encrypted document storage** | [📷 View Screenshots →](/screenshots/#resources)
+
+<div class="screenshot-preview-row">
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager interface" loading="lazy">
+    <span>Evidence Manager</span>
+  </a>
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanagerbrowse3mpwrapp.png" alt="Document organization" loading="lazy">
+    <span>Organization</span>
+  </a>
+</div>
 
 - Securely store documents, photos, audio, videos
 - AES-256 military-grade encryption
@@ -782,7 +794,22 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - **Learn more:** [Evidence Locker Deep Dive →](/features#evidence-locker---your-secure-document-vault)
 
 ### Letter Wizard (22+ Professional Templates) ✉️
-**Ready-to-use legal letters for common situations**
+**Ready-to-use legal letters for common situations** | [📷 View Screenshots →](/screenshots/#resources)
+
+<div class="screenshot-preview-row">
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator" loading="lazy">
+    <span>Letter Generator</span>
+  </a>
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator23mpwrapp.png" alt="Template customization" loading="lazy">
+    <span>Templates</span>
+  </a>
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator33mpwrapp.png" alt="Generated letter" loading="lazy">
+    <span>Output</span>
+  </a>
+</div>
 
 - **Workplace Letters:** Accommodation requests, medical leave, FMLA, retaliation complaints
 - **Benefits Letters:** Disability benefit appeals, insurance disputes, medical documentation
@@ -1989,6 +2016,21 @@ The app includes legal information and resources for:
 
 <a id="getting-started-in-5-minutes"></a>
 ## Getting Started in 5 Minutes
+
+<div class="screenshot-preview-row">
+  <a href="/screenshots/#onboarding" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/termsgate/termsgate/1welcometo3mpwrapp.png" alt="Welcome screen" loading="lazy">
+    <span>Welcome</span>
+  </a>
+  <a href="/screenshots/#home" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/home1dashboard3mpwrapp.png" alt="Main dashboard" loading="lazy">
+    <span>Dashboard</span>
+  </a>
+  <a href="/screenshots/#settings" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/settings/settings/settingstab13mpwrapp.png" alt="Settings" loading="lazy">
+    <span>Settings</span>
+  </a>
+</div>
 
 ### Step 1: Download and Open
 - Open the 3mpwrApp on your phone or computer
@@ -3644,7 +3686,18 @@ Use Campaign Coordination for:
 <a id="evidence-locker"></a>
 ## Evidence Locker
 
-**What it does:** A secure place to store important documents, notes, and photos.
+**What it does:** A secure place to store important documents, notes, and photos. | [📷 View All Screenshots →](/screenshots/#resources)
+
+<div class="screenshot-preview-row">
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resources5evidencemanager3mpwrapp.png" alt="Evidence Manager" loading="lazy">
+    <span>Evidence Manager</span>
+  </a>
+  <a href="/screenshots/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resources6evidencemanager3mpwrapp.png" alt="Organization" loading="lazy">
+    <span>Organization</span>
+  </a>
+</div>
 
 ### 📝 Saving Important Information
 **How to use it:**
