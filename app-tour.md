@@ -198,6 +198,100 @@ permalink: /app-tour/
     gap: 1rem;
   }
 }
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .gallery-hero {
+    background: linear-gradient(135deg, #1a3d1a 0%, #2d2d2d 100%) !important;
+  }
+  
+  .gallery-hero h1 {
+    color: #81c784 !important;
+  }
+  
+  .gallery-hero p {
+    color: #e0e0e0 !important;
+  }
+  
+  .category-nav {
+    background: #2d2d2d !important;
+  }
+  
+  .category-section {
+    background: #2d2d2d !important;
+    border-left-color: #81c784;
+  }
+  
+  .category-section h2 {
+    color: #81c784 !important;
+  }
+  
+  .category-section .category-desc {
+    color: #e0e0e0 !important;
+  }
+  
+  .screenshot-card {
+    background: #3d3d3d !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  
+  .screenshot-card .caption {
+    background: #4d4d4d !important;
+    color: #ffffff !important;
+  }
+  
+  .lightbox-close {
+    background: #333333;
+    color: #ffffff;
+  }
+}
+
+/* Also support data attribute dark mode */
+[data-theme="dark"] .gallery-hero,
+.dark-mode .gallery-hero {
+  background: linear-gradient(135deg, #1a3d1a 0%, #2d2d2d 100%) !important;
+}
+
+[data-theme="dark"] .gallery-hero h1,
+.dark-mode .gallery-hero h1 {
+  color: #81c784 !important;
+}
+
+[data-theme="dark"] .gallery-hero p,
+.dark-mode .gallery-hero p {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .category-nav,
+.dark-mode .category-nav {
+  background: #2d2d2d !important;
+}
+
+[data-theme="dark"] .category-section,
+.dark-mode .category-section {
+  background: #2d2d2d !important;
+}
+
+[data-theme="dark"] .category-section h2,
+.dark-mode .category-section h2 {
+  color: #81c784 !important;
+}
+
+[data-theme="dark"] .category-section .category-desc,
+.dark-mode .category-section .category-desc {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .screenshot-card,
+.dark-mode .screenshot-card {
+  background: #3d3d3d !important;
+}
+
+[data-theme="dark"] .screenshot-card .caption,
+.dark-mode .screenshot-card .caption {
+  background: #4d4d4d !important;
+  color: #ffffff !important;
+}
 </style>
 
 <div class="gallery-hero">
