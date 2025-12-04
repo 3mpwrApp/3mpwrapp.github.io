@@ -108,6 +108,11 @@
           </a>
         </li>
         <li>
+          <a href="{{ lang_prefix | append: '/app-tour' | relative_url }}" {% if page.url contains '/app-tour' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Visite de l'appli{% else %}App Tour{% endif %}
+          </a>
+        </li>
+        <li>
           <a href="{{ lang_prefix | append: '/user-guide' | relative_url }}" {% if page.url contains '/user-guide' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Guide d'utilisation{% else %}User Guide{% endif %}
           </a>
