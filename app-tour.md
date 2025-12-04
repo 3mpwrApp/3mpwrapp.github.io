@@ -150,16 +150,16 @@ permalink: /app-tour/
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.95);
-  z-index: 9999;
+  z-index: 99999;
   cursor: zoom-out;
   padding: 2rem;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 }
 
 .lightbox.active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
 }
 
 .lightbox img {
@@ -750,41 +750,65 @@ permalink: /app-tour/
   <img src="" alt="" id="lightbox-img">
 </div>
 
+{% raw %}
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxClose = document.getElementById('lightbox-close');
-  
-  // Add click listeners to all preview images
-  document.querySelectorAll('.preview-card img').forEach(function(img) {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', function(e) {
-      e.preventDefault();
+(function() {
+  // Wait for full page load including images
+  window.addEventListener('load', function() {
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxClose = document.getElementById('lightbox-close');
+    var previewImages = document.querySelectorAll('.preview-card img');
+    
+    console.log('Lightbox initialized, found ' + previewImages.length + ' images');
+    
+    // Add click listeners to all preview images
+    for (var i = 0; i < previewImages.length; i++) {
+      (function(img) {
+        img.style.cursor = 'pointer';
+        img.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('Image clicked:', img.src);
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightbox.style.display = 'flex';
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          return false;
+        };
+      })(previewImages[i]);
+    }
+    
+    // Close lightbox function
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    // Close on background click
+    lightbox.onclick = function(e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    };
+    
+    // Close button
+    lightboxClose.onclick = function(e) {
       e.stopPropagation();
-      lightboxImg.src = this.src;
-      lightboxImg.alt = this.alt;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
+      closeLightbox();
+    };
+    
+    // Close on Escape key
+    document.onkeydown = function(e) {
+      if (e.key === 'Escape' || e.keyCode === 27) {
+        closeLightbox();
+      }
+    };
   });
-  
-  // Close on background click
-  lightbox.addEventListener('click', function(e) {
-    if (e.target === lightbox || e.target === lightboxClose) {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  });
-  
-  // Close on Escape key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  });
-});
+})();
 </script>
+{% endraw %}
 
 
