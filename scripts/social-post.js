@@ -22,6 +22,8 @@ const https = require('https');
 const CuratorAnalytics = require('./curator-analytics');
 // Load site configuration for centralized URL management
 const siteConfig = require('./site-config');
+// Load viral hooks for scroll-stopping content
+const viralHooks = require('./viral-hooks-config');
 
 // Blog URL constant - all social media posts link here
 const BLOG_URL = `${siteConfig.url}/blog/`;
@@ -168,56 +170,61 @@ class SocialPoster {
   }
 
   /**
-   * Format content for Mastodon
+   * Format content for Mastodon with viral hooks
    */
   formatMastodonPost(content) {
     const topItems = content.items.slice(0, 3);
-    const timeCtx = this.getTimeContext();
     const feature = this.getFeatureHighlight();
+    const monthlyTheme = viralHooks.getMonthlyTheme();
     
-    // Get today's date for blog link
-    const today = new Date().toISOString().split('T')[0];
+    // Get viral hook for daily news
+    const viralHook = viralHooks.getDailyNewsHook(
+      topItems[0]?.title ? topItems[0].title.substring(0, 50) : null
+    );
     
-    let post = `${timeCtx.greeting} 📰 Daily News Highlights\n\n`;
-    post += `${content.count} curated stories on disability rights, accessibility & workers' compensation from across Canada.\n\n`;
-    post += `💡 3mpwrApp Feature: ${feature}\n\n`;
-    post += `Today's Top Stories:\n\n`;
+    // Get random CTA
+    const ctaOptions = viralHooks.CTA_LIBRARY.daily_news;
+    const randomCta = ctaOptions[Math.floor(Math.random() * ctaOptions.length)]
+      .replace('{count}', content.count.toString())
+      .replace('{link}', `${BLOG_URL}#curated-daily`);
+    
+    let post = `${viralHook}\n\n`;
+    post += `📰 ${content.count} curated stories on disability rights, accessibility & workers' rights.\n\n`;
+    post += `🔥 Today's Headlines:\n\n`;
 
     topItems.forEach((item, idx) => {
       post += `${idx + 1}. ${item.title}\n`;
-      if (item.link) {
-        post += `   ${item.link}\n`;
-      }
-      post += '\n';
     });
 
-    post += `\n� Read all ${content.count} stories: ${BLOG_URL}#curated-daily\n`;
-    post += `\n#DisabilityRights #Accessibility #WorkersComp #News #Canada`;
+    post += `\n💡 Featured: ${feature}\n\n`;
+    post += `${randomCta}\n\n`;
+    post += `#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #WorkersRights #Canada #${monthlyTheme.theme.replace(/\s+/g, '')}`;
 
     return post;
   }
 
   /**
-   * Format content for Bluesky
+   * Format content for Bluesky with viral hooks
    */
   formatBlueskyPost(content) {
-    const topItems = content.items.slice(0, 2); // Reduced from 3 to 2 items
-    const timeCtx = this.getTimeContext();
+    const topItems = content.items.slice(0, 2);
     
-    // Build post with strict character limit (300 max)
-    let post = `${timeCtx.greeting} 📰 Daily News\n\n`;
-    post += `${content.count} disability rights & accessibility stories from Canada.\n\n`;
+    // Get viral hook (shorter for Bluesky's 300 char limit)
+    const viralHook = viralHooks.getDailyNewsHook();
+    
+    // Build post with strict character limit
+    let post = `${viralHook}\n\n`;
+    post += `${content.count} disability rights stories 🇨🇦\n\n`;
 
     topItems.forEach((item, idx) => {
-      // Truncate title to ~60 chars
-      const title = item.title.length > 60 ? item.title.substring(0, 57) + '...' : item.title;
+      const title = item.title.length > 50 ? item.title.substring(0, 47) + '...' : item.title;
       post += `${idx + 1}. ${title}\n`;
     });
 
-    post += `\n📰 ${BLOG_URL}#curated-daily\n`;
-    post += `#DisabilityRights #Accessibility`;
+    post += `\n👉 ${BLOG_URL}#curated-daily\n`;
+    post += `#3mpwrApp #DisabilityRights`;
 
-    // Safety check: truncate if still too long
+    // Safety check: truncate if too long
     if (post.length > 300) {
       post = post.substring(0, 297) + '...';
     }

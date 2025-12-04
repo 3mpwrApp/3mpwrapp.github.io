@@ -15,6 +15,7 @@
 const fs = require('fs');
 const path = require('path');
 const siteConfig = require('./site-config');
+const viralHooks = require('./viral-hooks-config');
 
 class DailyFeatureGenerator {
   constructor() {
@@ -1315,38 +1316,59 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
   }
 
   /**
-   * Generate social media post content
+   * Generate social media post content with viral hooks
    */
   generateSocialPost(feature, articleUrl) {
     const BLOG_URL = `${siteConfig.url}/blog`;
     const fullUrl = `${siteConfig.url}${articleUrl}`;  // Full article URL
     
-    // Short version for Twitter/Bluesky (< 280 chars with link)
-    const shortPost = `✨ Feature Spotlight: ${feature.name}
+    // Get viral hook for this feature's category
+    const hookData = viralHooks.getRandomHook(feature.category);
+    const monthlyTheme = viralHooks.getMonthlyTheme();
+    
+    // Get random CTA from library
+    const ctaOptions = viralHooks.CTA_LIBRARY.feature_spotlight;
+    const randomCta = ctaOptions[Math.floor(Math.random() * ctaOptions.length)]
+      .replace('{link}', fullUrl);
+    
+    // Short version for Bluesky (< 300 chars)
+    // Uses viral hook opener for maximum scroll-stop power
+    const shortPost = `${hookData.hook}
 
-${feature.description}
+✨ ${feature.name}
 
-Learn more: ${fullUrl}
+${feature.description.substring(0, 100)}${feature.description.length > 100 ? '...' : ''}
 
-#DisabilityRights #Accessibility #Tools`;
+${randomCta}
+
+#3mpwrApp #DisabilityRights #Accessibility`;
 
     // Longer version for Mastodon (500 chars)
-    const longPost = `✨ Feature Spotlight: ${feature.name}
+    // Full viral hook with highlights and themed content
+    const longPost = `${hookData.hook}
+
+✨ Feature Spotlight: ${feature.name}
 
 ${feature.description}
 
-Key highlights:
-${feature.highlights.slice(0, 2).map(h => `✓ ${h}`).join('\n')}
+🔑 Key highlights:
+${feature.highlights.slice(0, 3).map(h => `• ${h}`).join('\n')}
 
-Perfect for ${feature.category.toLowerCase()} support!
-
-📖 Read the full article: ${fullUrl}
+${hookData.cta} → ${fullUrl}
 
 📰 More features: ${BLOG_URL}#feature-articles
 
-#DisabilityRights #Accessibility #DisabilityJustice #A11y #3mpwrApp`;
+#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #${monthlyTheme.theme.replace(/\s+/g, '')}`;
 
-    return { shortPost, longPost, url: fullUrl, blogUrl: `${BLOG_URL}#feature-articles` };
+    return { 
+      shortPost, 
+      longPost, 
+      url: fullUrl, 
+      blogUrl: `${BLOG_URL}#feature-articles`,
+      hookUsed: hookData.hook,
+      emotion: hookData.emotion,
+      monthlyTheme: monthlyTheme.theme
+    };
   }
 
   /**
@@ -1372,9 +1394,9 @@ Perfect for ${feature.category.toLowerCase()} support!
     console.log(`✅ Created article: ${filepath}`);
 
     // Generate social posts
-    // Jekyll permalink: pretty converts YYYY-MM-DD-title.md to /YYYY/MM/DD/title/
+    // Jekyll permalink: pretty with categories: [features] converts to /features/YYYY/MM/DD/title/
     const [year, month, day] = dateStr.split('-');
-    const articleUrl = `/${year}/${month}/${day}/feature-spotlight-${slug}/`;
+    const articleUrl = `/features/${year}/${month}/${day}/feature-spotlight-${slug}/`;
     const social = this.generateSocialPost(feature, articleUrl);
 
     // Save social post content for posting script

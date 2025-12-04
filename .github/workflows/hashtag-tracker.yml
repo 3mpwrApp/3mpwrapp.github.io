@@ -1,0 +1,113 @@
+# HASHTAG TRACKER - Daily #3mpwrApp Monitoring
+# Tracks community usage of #3mpwrApp across social platforms
+# Identifies advocates and measures reach
+
+name: Hashtag Tracker
+
+on:
+  # Run daily at 6 AM UTC
+  schedule:
+    - cron: '0 6 * * *'
+  
+  # Weekly report on Sundays at 7 AM UTC
+  schedule:
+    - cron: '0 7 * * 0'
+  
+  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      generate_report:
+        description: 'Generate weekly report'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+env:
+  MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+  MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+  BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+  BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+
+jobs:
+  track-hashtags:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: npm ci || npm install
+        
+      - name: Track hashtag mentions
+        id: track
+        run: |
+          echo "🔍 Tracking #3mpwrApp mentions..."
+          node scripts/hashtag-tracker.js
+          
+      - name: Generate weekly report (if Sunday or requested)
+        if: github.event.schedule == '0 7 * * 0' || github.event.inputs.generate_report == 'true'
+        run: |
+          echo "📊 Generating weekly hashtag report..."
+          node -e "
+            const HashtagTracker = require('./scripts/hashtag-tracker.js');
+            const tracker = new HashtagTracker();
+            const report = tracker.generateWeeklyReport();
+            console.log('Weekly Report Generated:', JSON.stringify(report, null, 2));
+          "
+          
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet public/hashtag-tracking.json 2>/dev/null; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Commit tracking updates
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/hashtag-tracking.json
+          git commit -m "📊 chore(tracking): Update #3mpwrApp mentions [$(date +%Y-%m-%d)]"
+          git push
+          
+      - name: Generate summary
+        run: |
+          echo "## 📊 #3mpwrApp Hashtag Tracking" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f public/hashtag-tracking.json ]; then
+            echo "### Today's Results" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            TOTAL=$(jq '.mentions | length' public/hashtag-tracking.json 2>/dev/null || echo "0")
+            REACH=$(jq '.reachEstimate' public/hashtag-tracking.json 2>/dev/null || echo "0")
+            LAST=$(jq -r '.lastCheck' public/hashtag-tracking.json 2>/dev/null || echo "N/A")
+            
+            echo "- **Total mentions tracked:** $TOTAL" >> $GITHUB_STEP_SUMMARY
+            echo "- **Estimated reach (30d):** $REACH engagements" >> $GITHUB_STEP_SUMMARY
+            echo "- **Last check:** $LAST" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            echo "### Top Community Advocates" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            jq -r '.topAdvocates[:5] | .[] | "- @\(.author) (\(.mentionCount) mentions)"' public/hashtag-tracking.json 2>/dev/null >> $GITHUB_STEP_SUMMARY || echo "- No advocates tracked yet" >> $GITHUB_STEP_SUMMARY
+            
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "---" >> $GITHUB_STEP_SUMMARY
+            echo "✅ Tracking complete" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "📝 First run - no tracking data yet" >> $GITHUB_STEP_SUMMARY
+          fi

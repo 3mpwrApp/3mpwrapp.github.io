@@ -13,6 +13,8 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const viralHooks = require('./viral-hooks-config');
+const siteConfig = require('./site-config');
 
 class WeeklyUpdateGenerator {
   constructor() {
@@ -237,15 +239,89 @@ ${content}
     fs.writeFileSync(whatsNewPath, whatsNewContent);
     console.log(`✅ Created What's New entry: ${whatsNewPath}`);
 
-    // Jekyll permalink: pretty converts YYYY-MM-DD-title.md to /YYYY/MM/DD/title/
+    // Jekyll permalink: pretty with categories: [updates] converts to /updates/YYYY/MM/DD/title/
     const [year_part, month, day] = dateStr.split('-');
+    const articleUrl = `/updates/${year_part}/${month}/${day}/weekly-update-week-${weekNumber}/`;
+    const fullUrl = `${siteConfig.url}${articleUrl}`;
+    
+    // Generate viral social posts for weekly recap
+    const commits = this.getRecentCommits();
+    const updateCount = commits.length;
+    const socialPosts = this.generateSocialPosts(weekNumber, year, updateCount, fullUrl);
+    
+    // Save social post content
+    const socialPath = path.join(process.cwd(), 'public', 'weekly-update-social.json');
+    fs.writeFileSync(socialPath, JSON.stringify({
+      week: weekNumber,
+      year: year,
+      date: dateStr,
+      updateCount: updateCount,
+      shortPost: socialPosts.shortPost,
+      longPost: socialPosts.longPost,
+      url: fullUrl,
+      hookUsed: socialPosts.hookUsed
+    }, null, 2));
+    
+    console.log(`📱 Created social post content: ${socialPath}`);
     
     return {
       postPath,
       whatsNewPath,
       title: `Weekly Update — Week ${weekNumber} (${year})`,
-      url: `/${year_part}/${month}/${day}/weekly-update-week-${weekNumber}/`,
-      excerpt: `This week's updates to 3mpwrApp features, content, and improvements.`
+      url: articleUrl,
+      fullUrl: fullUrl,
+      excerpt: `This week's updates to 3mpwrApp features, content, and improvements.`,
+      social: socialPosts
+    };
+  }
+  
+  /**
+   * Generate viral social media posts for weekly recap
+   */
+  generateSocialPosts(weekNumber, year, updateCount, url) {
+    const viralHook = viralHooks.getWeeklyHook(updateCount);
+    const monthlyTheme = viralHooks.getMonthlyTheme();
+    const BLOG_URL = `${siteConfig.url}/blog`;
+    
+    // Get random CTA
+    const ctaOptions = viralHooks.CTA_LIBRARY.weekly_recap;
+    const randomCta = ctaOptions[Math.floor(Math.random() * ctaOptions.length)]
+      .replace('{link}', url);
+    
+    // Short version for Bluesky
+    const shortPost = `${viralHook}
+
+📅 Week ${weekNumber} Recap
+
+Your feedback is building this app. Thank you 💚
+
+${randomCta}
+
+#3mpwrApp #DisabilityRights #Accessibility`;
+    
+    // Longer version for Mastodon
+    const longPost = `${viralHook}
+
+📅 Weekly Recap — Week ${weekNumber} (${year})
+
+Every update is driven by disabled community feedback. Nothing about us without us.
+
+🔧 Highlights this week:
+• New features based on user requests
+• Accessibility improvements
+• Bug fixes and stability
+
+${randomCta}
+
+📰 All updates: ${BLOG_URL}#weekly-recaps
+
+#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #${monthlyTheme.theme.replace(/\s+/g, '')}`;
+    
+    return {
+      shortPost,
+      longPost,
+      hookUsed: viralHook,
+      monthlyTheme: monthlyTheme.theme
     };
   }
 }
