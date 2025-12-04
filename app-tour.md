@@ -11,7 +11,7 @@ permalink: /app-tour/
 .gallery-hero {
   text-align: center;
   padding: 3rem 1rem;
-  background: linear-gradient(135deg, var(--secondary-light, #e8f5e9) 0%, var(--background, #fff) 100%);
+  background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
   border-radius: 1rem;
   margin-bottom: 2rem;
 }
@@ -19,14 +19,14 @@ permalink: /app-tour/
 .gallery-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--primary-dark, #1b5e20);
+  color: #1b5e20;
 }
 
 .gallery-hero p {
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
-  color: var(--text-muted, #666);
+  color: #333333;
 }
 
 .category-nav {
@@ -36,14 +36,14 @@ permalink: /app-tour/
   justify-content: center;
   margin-bottom: 2rem;
   padding: 1rem;
-  background: var(--surface, #f5f5f5);
+  background: #f5f5f5;
   border-radius: 0.5rem;
 }
 
 .category-nav a {
   padding: 0.5rem 1rem;
-  background: var(--primary, #4caf50);
-  color: white;
+  background: #4caf50;
+  color: #ffffff !important;
   text-decoration: none;
   border-radius: 2rem;
   font-weight: 500;
@@ -52,16 +52,16 @@ permalink: /app-tour/
 
 .category-nav a:hover,
 .category-nav a:focus {
-  background: var(--primary-dark, #1b5e20);
+  background: #1b5e20;
   transform: translateY(-2px);
 }
 
 .category-section {
   margin-bottom: 3rem;
   padding: 1.5rem;
-  background: var(--surface, #fafafa);
+  background: #fafafa;
   border-radius: 1rem;
-  border-left: 4px solid var(--primary, #4caf50);
+  border-left: 4px solid #4caf50;
 }
 
 .category-section h2 {
@@ -69,11 +69,11 @@ permalink: /app-tour/
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
-  color: var(--primary-dark, #1b5e20);
+  color: #1b5e20;
 }
 
 .category-section .category-desc {
-  color: var(--text-muted, #666);
+  color: #333333;
   margin-bottom: 1.5rem;
   font-style: italic;
 }
@@ -107,9 +107,9 @@ permalink: /app-tour/
 .screenshot-card .caption {
   padding: 0.75rem;
   font-size: 0.9rem;
-  color: var(--text-primary, #333);
+  color: #333333;
   text-align: center;
-  background: var(--surface, #f5f5f5);
+  background: #f5f5f5;
 }
 
 .stats-bar {
@@ -119,23 +119,25 @@ permalink: /app-tour/
   flex-wrap: wrap;
   margin: 1.5rem 0;
   padding: 1rem;
-  background: var(--primary, #4caf50);
+  background: #4caf50;
   border-radius: 0.5rem;
-  color: white;
+  color: #ffffff;
 }
 
 .stat-item {
   text-align: center;
+  color: #ffffff;
 }
 
 .stat-number {
   font-size: 1.75rem;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .stat-label {
   font-size: 0.85rem;
-  opacity: 0.9;
+  color: #ffffff;
 }
 
 /* Lightbox styles */
