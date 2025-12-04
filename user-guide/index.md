@@ -52,7 +52,7 @@ allFeaturesLive: 60+ features, 90% accessibility target achieved, full offline s
 
 ### 🔗 Quick Navigation
 - **[Features Overview](/features)** - Complete list of all features with details
-- **[Screenshot Gallery](/screenshots)** - 100+ app screenshots organized by feature
+- **[Inside 3mpwrApp](/app-tour)** - Visual tour with 100+ app visuals
 - **[What's New Page](/whats-new)** - Latest updates and announcements
 - **[Accessibility Settings](/accessibility)** - Learn about dyslexia, motor, and cognitive accessibility
 - **[Privacy & Security](/privacy)** - How we protect your data
@@ -771,15 +771,15 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 > **ALL legal resources are educational only. This app does NOT provide legal advice. Laws vary by jurisdiction. Always consult a licensed attorney for legal matters specific to your situation.**
 
 ### Evidence Locker (Document Vault) 📁
-**Your secure AES-256 encrypted document storage** | [📷 View Screenshots →](/screenshots/#resources)
+**Your secure AES-256 encrypted document storage** | [📷 See it in Action →](/app-tour/#resources)
 
 <div class="screenshot-preview-row">
-  <a href="/screenshots/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager interface" loading="lazy">
+  <a href="/app-tour/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager interface" loading="lazy">
     <span>Evidence Manager</span>
   </a>
-  <a href="/screenshots/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanagerbrowse3mpwrapp.png" alt="Document organization" loading="lazy">
+  <a href="/app-tour/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanagerbrowse3mpwrapp.png" alt="Document organization" loading="lazy">
     <span>Organization</span>
   </a>
 </div>
@@ -794,19 +794,19 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 - **Learn more:** [Evidence Locker Deep Dive →](/features#evidence-locker---your-secure-document-vault)
 
 ### Letter Wizard (22+ Professional Templates) ✉️
-**Ready-to-use legal letters for common situations** | [📷 View Screenshots →](/screenshots/#resources)
+**Ready-to-use legal letters for common situations** | [📷 See it in Action →](/app-tour/#resources)
 
 <div class="screenshot-preview-row">
-  <a href="/screenshots/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator" loading="lazy">
+  <a href="/app-tour/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator" loading="lazy">
     <span>Letter Generator</span>
   </a>
-  <a href="/screenshots/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator23mpwrapp.png" alt="Template customization" loading="lazy">
+  <a href="/app-tour/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator23mpwrapp.png" alt="Template customization" loading="lazy">
     <span>Templates</span>
   </a>
-  <a href="/screenshots/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator33mpwrapp.png" alt="Generated letter" loading="lazy">
+  <a href="/app-tour/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator33mpwrapp.png" alt="Generated letter" loading="lazy">
     <span>Output</span>
   </a>
 </div>
@@ -2018,16 +2018,16 @@ The app includes legal information and resources for:
 ## Getting Started in 5 Minutes
 
 <div class="screenshot-preview-row">
-  <a href="/screenshots/#onboarding" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/termsgate/termsgate/1welcometo3mpwrapp.png" alt="Welcome screen" loading="lazy">
+  <a href="/app-tour/#onboarding" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/termsgate/termsgate/1welcometo3mpwrapp.png" alt="Welcome screen" loading="lazy">
     <span>Welcome</span>
   </a>
-  <a href="/screenshots/#home" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/home1dashboard3mpwrapp.png" alt="Main dashboard" loading="lazy">
+  <a href="/app-tour/#home" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/home/home1dashboard3mpwrapp.png" alt="Main dashboard" loading="lazy">
     <span>Dashboard</span>
   </a>
-  <a href="/screenshots/#settings" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/settings/settings/settingstab13mpwrapp.png" alt="Settings" loading="lazy">
+  <a href="/app-tour/#settings" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/settings/settings/settingstab13mpwrapp.png" alt="Settings" loading="lazy">
     <span>Settings</span>
   </a>
 </div>
@@ -3686,15 +3686,15 @@ Use Campaign Coordination for:
 <a id="evidence-locker"></a>
 ## Evidence Locker
 
-**What it does:** A secure place to store important documents, notes, and photos. | [📷 View All Screenshots →](/screenshots/#resources)
+**What it does:** A secure place to store important documents, notes, and photos. | [📷 View All Screenshots →](/app-tour/#resources)
 
 <div class="screenshot-preview-row">
-  <a href="/screenshots/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resources5evidencemanager3mpwrapp.png" alt="Evidence Manager" loading="lazy">
+  <a href="/app-tour/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resources5evidencemanager3mpwrapp.png" alt="Evidence Manager" loading="lazy">
     <span>Evidence Manager</span>
   </a>
-  <a href="/screenshots/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resources6evidencemanager3mpwrapp.png" alt="Organization" loading="lazy">
+  <a href="/app-tour/#resources" class="screenshot-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resources6evidencemanager3mpwrapp.png" alt="Organization" loading="lazy">
     <span>Organization</span>
   </a>
 </div>

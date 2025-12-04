@@ -1,8 +1,8 @@
 ---
 layout: default
-title: App Screenshots Gallery
-description: Explore 3mpwrApp's comprehensive features through our screenshot gallery. See how our platform empowers injured workers with advocacy tools, wellness tracking, research resources, and community support.
-permalink: /screenshots/
+title: Inside 3mpwrApp - Visual Tour
+description: Take a visual tour inside 3mpwrApp. See how our platform empowers injured workers with AI advocacy tools, wellness tracking, evidence management, research resources, and community support.
+permalink: /app-tour/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
@@ -198,14 +198,14 @@ permalink: /screenshots/
 </style>
 
 <div class="gallery-hero">
-  <h1>📱 3mpwrApp Screenshot Gallery</h1>
-  <p>Explore every corner of the platform designed to empower injured workers. Click any image to view full-size.</p>
+  <h1>🎯 Inside 3mpwrApp</h1>
+  <p>Take a visual tour of the platform built to empower injured workers. See our AI-powered advocacy tools, wellness features, and community support in action.</p>
 </div>
 
 <div class="stats-bar">
   <div class="stat-item">
     <div class="stat-number">100+</div>
-    <div class="stat-label">Screenshots</div>
+    <div class="stat-label">Visuals</div>
   </div>
   <div class="stat-item">
     <div class="stat-number">11</div>
