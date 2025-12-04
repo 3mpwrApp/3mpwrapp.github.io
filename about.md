@@ -165,6 +165,40 @@ description: Empowering Canada's disability and injured worker community with 10
 
 ---
 
+## 🔥 Meet the Founder
+
+### Lissa Beaulieu
+
+**🔥 "The Phoenix" — Founder & Creator**
+
+Former PSW (Personal Support Worker). Injured worker. Person with disabilities. Now a full-time advocate fighting for systemic change.
+
+*"I was the energizer bunny—bubbly, hyper, always going. Then came the workplace injuries. When I reached Maximum Medical Recovery, my employer let me go. WSIB denied my claim. Becoming permanently disabled changed my life in ways I still can't fully comprehend."*
+
+**Now I fight back.** As a meme & content creator, I use humor, truth, and technology to expose corruption and build solidarity.
+
+**Roles:**
+- 🎓 Alumni & Board Member — [Speakers School Canada](https://www.speakersschool.ca/)
+- ⚡ Board Member — [Thunder Bay & District Injured Workers Support Group](http://thunderbayinjuredworkers.com/)
+
+### 🌐 Also Building: Injured Workers Unite
+
+Beyond 3mpwrApp, I run **[Injured Workers Unite](https://injuredworkersunite.pages.dev/)** — a grassroots activist platform featuring:
+
+| Feature | Description |
+|---------|-------------|
+| 👁️ **The Eye Oracle** | Incorruptible evidence-driven intelligence. 11 Rabbit Holes, Daily Reports, Legal Framework. |
+| 🤖 **24/7 Monitoring** | Automated tracking of provincial & federal bills, WSIB policies, disability benefits. |
+| 🏛️ **Memetic Embassy** | Creative resistance through powerful narratives and viral storytelling. |
+| 🎯 **Target Acquisition** | Track entities causing harm to workers. Evidence-based accountability. |
+| 🚨 **Live Alerts** | Real-time notifications of critical policy changes and new bills. |
+| 😂 **Meme Gallery** | Creative resistance through humor. Share and spread awareness. |
+
+🔗 [Visit Injured Workers Unite →](https://injuredworkersunite.pages.dev/)  
+📚 [Find me on Goodreads →](https://www.goodreads.com/user/show/1581978-lissa)
+
+---
+
 ## 🔒 Privacy & Data Ownership
 
 <div class="privacy-highlights">

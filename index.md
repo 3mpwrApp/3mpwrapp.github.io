@@ -887,6 +887,20 @@ We're committed to transparency and protecting your rights:
 <p>No weekly updates in the past 7 days. Check back soon or <a href="{{ '/blog' | relative_url }}">view all posts →</a></p>
 {% endif %}
 
+---
+
+## 🔥 Meet the Creator
+
+**Lissa Beaulieu — "The Phoenix"**
+
+Former PSW. Injured worker. Person with disabilities. Now building the tools I wish I had.
+
+*"The system isn't broken—it's working exactly as designed. But when we organize and expose the truth, we become unstoppable."*
+
+🔗 [Read My Full Story →](/about/#meet-the-founder) | 🌐 [Injured Workers Unite](https://injuredworkersunite.pages.dev/)
+
+---
+
 ## Connect With Us
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 3px solid #ffd700;">
