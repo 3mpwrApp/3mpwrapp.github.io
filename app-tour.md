@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Inside 3mpwrApp - Visual Tour
-description: Take a visual tour inside 3mpwrApp. See how our platform empowers injured workers with AI advocacy tools, wellness tracking, evidence management, research resources, and community support.
+description: Take a visual tour inside 3mpwrApp. See how our platform empowers the disability community, injured workers, their families, supporters, and allies with AI advocacy tools, wellness tracking, evidence management, research resources, and community support.
 permalink: /app-tour/
 ---
 
@@ -199,7 +199,7 @@ permalink: /app-tour/
 
 <div class="gallery-hero">
   <h1>🎯 Inside 3mpwrApp</h1>
-  <p>Take a visual tour of the platform built to empower injured workers. See our AI-powered advocacy tools, wellness features, and community support in action.</p>
+  <p>Take a visual tour of the platform built to empower the disability community, injured workers, their families, supporters, and allies. See our AI-powered advocacy tools, wellness features, and community support in action.</p>
 </div>
 
 <div class="stats-bar">
