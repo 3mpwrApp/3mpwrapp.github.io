@@ -11,7 +11,7 @@ permalink: /app-tour/
 .gallery-hero {
   text-align: center;
   padding: 3rem 1rem;
-  background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%) !important;
   border-radius: 1rem;
   margin-bottom: 2rem;
 }
@@ -19,14 +19,14 @@ permalink: /app-tour/
 .gallery-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #1b5e20;
+  color: #1b5e20 !important;
 }
 
 .gallery-hero p {
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
-  color: #333333;
+  color: #1a1a1a !important;
 }
 
 .category-nav {
@@ -59,7 +59,7 @@ permalink: /app-tour/
 .category-section {
   margin-bottom: 3rem;
   padding: 1.5rem;
-  background: #fafafa;
+  background: #fafafa !important;
   border-radius: 1rem;
   border-left: 4px solid #4caf50;
 }
@@ -69,11 +69,11 @@ permalink: /app-tour/
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
-  color: #1b5e20;
+  color: #1b5e20 !important;
 }
 
 .category-section .category-desc {
-  color: #333333;
+  color: #1a1a1a !important;
   margin-bottom: 1.5rem;
   font-style: italic;
 }
@@ -85,7 +85,7 @@ permalink: /app-tour/
 }
 
 .screenshot-card {
-  background: white;
+  background: #ffffff !important;
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -107,7 +107,8 @@ permalink: /app-tour/
 .screenshot-card .caption {
   padding: 0.75rem;
   font-size: 0.9rem;
-  color: #333333;
+  color: #1a1a1a !important;
+  background: #e8e8e8 !important;
   text-align: center;
   background: #f5f5f5;
 }
