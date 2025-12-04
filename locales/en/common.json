@@ -1006,6 +1006,14 @@
     }
   },
   "profile": {
+    "quickActions": "Quick Actions",
+    "editProfile": "Edit Profile",
+    "evidenceLocker": "Evidence Locker",
+    "deadlines": "Deadlines & Events",
+    "rightsChecker": "Rights Checker",
+    "letterTemplates": "Letter Templates",
+    "translator": "Advocate Translator",
+    "community": "Community Chat",
     "quickLinks": {
       "title": "Quick links",
       "evidence": "Evidence Locker",

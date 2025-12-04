@@ -228,6 +228,12 @@ export default function ProfileCard() {
         <Text style={styles.sectionTitle}>{t("profile.quickActions", "Quick Actions")}</Text>
         <GapView gap={8}>
           <ActionButton
+            icon="person-circle"
+            label={t("profile.editProfile", "Edit Profile")}
+            onPress={() => router.push("/profile/editor" as Href)}
+            palette={palette}
+          />
+          <ActionButton
             icon="folder-open"
             label={t("profile.evidenceLocker", "Evidence Locker")}
             onPress={() => router.push("/(tabs)/resources/evidence-locker" as Href)}

@@ -4,6 +4,7 @@ import { router, usePathname, type Href } from "expo-router";
 import React from "react";
 import {
     Image,
+    Modal,
     Pressable,
     ScrollView,
     StyleSheet,
@@ -134,7 +135,7 @@ const ThemedHeader = React.memo(() => {
     setMenuOpen(false);
   }, [pathname]);
   return (
-    <View style={styles.container} accessibilityRole="header">
+    <View style={styles.container} accessibilityRole="header" collapsable={false}>
       {/* Brand */}
       <Pressable
         style={styles.brand}
@@ -391,21 +392,29 @@ const ThemedHeader = React.memo(() => {
         )}
       </GapView>
 
-      {menuOpen && (
-        <>
+      <Modal
+        visible={menuOpen}
+        transparent={true}
+        animationType="fade"
+        onRequestClose={() => setMenuOpen(false)}
+      >
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Close menu"
+          onPress={() => setMenuOpen(false)}
+          style={styles.menuBackdrop}
+        >
           <Pressable
-            accessibilityRole="button"
-            accessibilityLabel="Close menu"
-            onPress={() => setMenuOpen(false)}
-            style={styles.menuBackdrop}
-          />
-          <View
             accessibilityLabel="Main menu"
             accessible={true}
             accessibilityViewIsModal={true}
             style={styles.menuWrap}
+            onPress={(e) => e.stopPropagation()}
           >
-            <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>
+            <ScrollView 
+              contentContainerStyle={{ paddingBottom: 16 }}
+              removeClippedSubviews={false}
+            >
               <MenuSection title="Tools & Resources" palette={palette} />
               {MENU_SECTIONS.tools.map((item) => (
                 <MenuItem
@@ -471,9 +480,9 @@ const ThemedHeader = React.memo(() => {
                 </Pressable>
               )}
             </ScrollView>
-          </View>
-        </>
-      )}
+          </Pressable>
+        </Pressable>
+      </Modal>
     </View>
   );
 });
@@ -512,7 +521,7 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
     menuWrap: {
       position: "absolute",
       right: 12,
-      top: Math.max(insets.top, 10) + 50, // Increased spacing to prevent overlap
+      top: Math.max(insets.top, 10) + 50, // Position below header
       backgroundColor: palette.surface ?? palette.background,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
@@ -520,16 +529,11 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
       paddingVertical: 6,
       minWidth: 200,
       maxHeight: 400,
-      zIndex: 9999, // Increased z-index to ensure menu appears above everything
-      elevation: 10, // Android elevation
-      shadowColor: palette.text, // Use palette token for shadow
+      shadowColor: palette.text,
       shadowOffset: { width: 0, height: 4 },
       shadowOpacity: 0.3,
       shadowRadius: 8,
-      // Improve layering/visibility on web
-      ...(typeof navigator !== 'undefined' && /WebKit|Firefox|Chrome|Safari/.test(navigator.userAgent || '')
-        ? { boxShadow: '0 8px 24px rgba(0,0,0,0.3)' } as any
-        : {}),
+      elevation: 10,
     },
     menuSection: {
       color: palette.textSecondary,
@@ -539,14 +543,8 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
       fontWeight: "700",
     },
     menuBackdrop: {
-      position: "absolute",
-      left: 0,
-      right: 0,
-      top: 0,
-      bottom: 0,
+      flex: 1,
       backgroundColor: "rgba(0,0,0,0.3)",
-      zIndex: 9998, // Just below menu
-      pointerEvents: 'auto',
     },
     social: { flexDirection: "row", marginEnd: 8 },
     countText: { color: palette.text, opacity: 1, fontSize: 14 },

@@ -276,7 +276,7 @@ export default function SettingsScreen() {
               accessibilityRole='button'
               accessibilityLabel="Profile Editor - Update your disability profile, role, and energy patterns"
               hitSlop={HIT_SLOP_8}
-              onPress={() => router.push('/(tabs)/settings/profile-editor')}
+              onPress={() => router.push('/profile/editor')}
             >
               <Ionicons name='person-circle' size={20} color={palette.primary} />
               <Text style={styles.linkText}>Edit Profile</Text>
