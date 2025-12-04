@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/react-native';
 import { Platform } from 'react-native';
 
 import { logger } from '../utils/logger';
@@ -25,8 +26,7 @@ export async function initSentry(dsn?: string) {
     // Developer cost alert for Sentry network usage/init
     devCostAlert({ feature: 'sentry', action: 'init:sentry' });
     
-    // CRITICAL: Disable Sentry in Expo Go to prevent tslib conflicts
-    // sentry-expo has known compatibility issues with Expo Go in SDK 53+
+    // Skip in Expo Go - native modules not available
     // @ts-ignore - Constants is available in React Native/Expo
     const Constants = require('expo-constants').default;
     if (Constants?.appOwnership === 'expo') {
@@ -34,54 +34,100 @@ export async function initSentry(dsn?: string) {
       return;
     }
     
-    // Pre-check: Ensure tslib is available (sentry-expo dependency)
-    // This prevents the "__extends is undefined" error in some environments
-    try {
-      // @ts-ignore - checking for global tslib
-      if (typeof global.tslib === 'undefined') {
-        // Polyfill minimal tslib if missing (prevents sentry-expo from crashing)
-        // @ts-ignore
-        global.tslib = await import('tslib');
-      }
-    } catch (tslibError) {
-      if (__DEV__) logger.warn('Sentry init skipped: tslib unavailable', tslibError);
-      return;
-    }
-    
-    // Lazy-load sentry-expo to avoid loading native modules when unavailable
-    let sentryModule;
-    try {
-      sentryModule = await import('sentry-expo');
-    } catch (importError) {
-      if (__DEV__) logger.warn('Sentry init skipped: failed to import sentry-expo', importError);
-      return;
-    }
-    
-    // Check if Sentry module loaded correctly
-    if (!sentryModule || typeof sentryModule.init !== 'function') {
-      if (__DEV__) logger.warn('Sentry init skipped: Sentry.init is not a function');
-      return;
-    }
-    
-    // Wrap the actual initialization in a try-catch to prevent crashes
-    try {
-      await sentryModule.init({ 
-        dsn,
-        enableInExpoDevelopment: false, // Disable in development
-        debug: __DEV__, // Enable debug mode in dev
-      });
-      initialized = true;
-      if (__DEV__) logger.log('Sentry initialized successfully');
-    } catch (initError) {
-      if (__DEV__) logger.error('Sentry init failed:', initError);
-      // Don't set initialized = true if init failed
-      return;
-    }
+    // Initialize Sentry with @sentry/react-native
+    Sentry.init({ 
+      dsn,
+      debug: __DEV__,
+      environment: __DEV__ ? 'development' : 'production',
+      tracesSampleRate: __DEV__ ? 1.0 : 0.1,
+      enableAutoSessionTracking: true,
+      integrations: [
+        Sentry.feedbackIntegration({
+          // User feedback widget configuration
+          colorScheme: 'system',
+          isNameRequired: false,
+          isEmailRequired: false,
+          enableScreenshot: true,
+          showBranding: false,
+          formTitle: 'Send Feedback',
+          submitButtonLabel: 'Send Feedback',
+          cancelButtonLabel: 'Cancel',
+          confirmButtonLabel: 'Confirm',
+          addScreenshotButtonLabel: 'Add Screenshot',
+          removeScreenshotButtonLabel: 'Remove Screenshot',
+          nameLabel: 'Name',
+          namePlaceholder: 'Your name (optional)',
+          emailLabel: 'Email',
+          emailPlaceholder: 'your.email@example.com (optional)',
+          messageLabel: 'What went wrong?',
+          messagePlaceholder: 'Describe the issue or share your feedback...',
+          successMessageText: 'Thank you for your feedback!',
+          styles: {
+            submitButton: {
+              backgroundColor: '#6a1b9a', // Purple theme color
+            },
+          },
+        }),
+      ],
+    });
+    initialized = true;
+    if (__DEV__) logger.log('Sentry initialized successfully');
   } catch (e) {
     // If native module isn't available in this build/dev client, safely skip
     const error = e as Error;
     if (__DEV__) logger.error('Sentry init error:', error?.message, error?.stack);
   }
+}
+
+/**
+ * Show the Sentry User Feedback widget
+ * Opens an in-app form for users to submit feedback
+ */
+export function showFeedbackWidget(): void {
+  if (!initialized) {
+    if (__DEV__) logger.warn('Cannot show feedback widget: Sentry not initialized');
+    return;
+  }
+  try {
+    Sentry.showFeedbackWidget();
+  } catch (e) {
+    if (__DEV__) logger.error('Failed to show feedback widget:', e);
+  }
+}
+
+/**
+ * Show the floating feedback button
+ * Button opens the feedback widget when pressed
+ */
+export function showFeedbackButton(): void {
+  if (!initialized) {
+    if (__DEV__) logger.warn('Cannot show feedback button: Sentry not initialized');
+    return;
+  }
+  try {
+    Sentry.showFeedbackButton();
+  } catch (e) {
+    if (__DEV__) logger.error('Failed to show feedback button:', e);
+  }
+}
+
+/**
+ * Hide the floating feedback button
+ */
+export function hideFeedbackButton(): void {
+  if (!initialized) return;
+  try {
+    Sentry.hideFeedbackButton();
+  } catch (e) {
+    if (__DEV__) logger.error('Failed to hide feedback button:', e);
+  }
+}
+
+/**
+ * Check if Sentry is initialized
+ */
+export function isSentryInitialized(): boolean {
+  return initialized;
 }
 
 export async function initAnalytics() {

@@ -93,12 +93,10 @@
     "plugins": [
       "expo-router",
       [
-        "sentry-expo",
+        "@sentry/react-native/expo",
         {
-          "project": "empowrapp",
-          "organization": "3mpwrapp",
-          "url": "https://sentry.io/",
-          "autoInit": false
+          "project": "3mpwrapp",
+          "organization": "3mpwr-app"
         }
       ],
       "@react-native-firebase/app",

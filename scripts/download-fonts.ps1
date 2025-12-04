@@ -14,7 +14,7 @@ if (!(Test-Path $fontsDir)) {
 }
 
 # Function to download font
-function Download-Font {
+function Get-Font {
     param (
         [string]$Url,
         [string]$FileName,
@@ -84,7 +84,7 @@ Write-Host "Downloading OpenDyslexic..." -ForegroundColor Cyan
 
 $openDyslexicSuccess = $false
 foreach ($url in $openDyslexicUrls) {
-    if (Download-Font -Url $url -FileName "OpenDyslexic-Regular.ttf" -DisplayName "OpenDyslexic") {
+    if (Get-Font -Url $url -FileName "OpenDyslexic-Regular.ttf" -DisplayName "OpenDyslexic") {
         $openDyslexicSuccess = $true
         break
     }
@@ -95,7 +95,7 @@ Write-Host "Downloading Lexend..." -ForegroundColor Cyan
 
 $lexendSuccess = $false
 foreach ($url in $lexendUrls) {
-    if (Download-Font -Url $url -FileName "Lexend-Regular.ttf" -DisplayName "Lexend") {
+    if (Get-Font -Url $url -FileName "Lexend-Regular.ttf" -DisplayName "Lexend") {
         $lexendSuccess = $true
         break
     }

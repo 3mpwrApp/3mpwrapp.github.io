@@ -12,6 +12,8 @@
 /* eslint-disable no-console */
 // This file is the only place where direct console usage is allowed
 
+import * as Sentry from '@sentry/react-native';
+
 // TypeScript doesn't know about __DEV__ by default (it's injected by Metro/Expo)
 declare const __DEV__: boolean;
 
@@ -20,39 +22,12 @@ interface LoggerOptions {
   sendToSentry?: boolean;
 }
 
-// Lazy-loaded Sentry instance
-let sentryModule: any = null;
-let sentryLoadAttempted = false;
-
 class Logger {
   [x: string]: any;
   private isDevelopment: boolean;
   
   constructor() {
     this.isDevelopment = typeof __DEV__ !== 'undefined' ? __DEV__ : process.env.NODE_ENV !== 'production';
-    
-    // Attempt to load Sentry in production
-    if (!this.isDevelopment) {
-      this.loadSentry();
-    }
-  }
-
-  /**
-   * Lazy load Sentry module (production only)
-   */
-  private async loadSentry(): Promise<void> {
-    if (sentryLoadAttempted) return;
-    sentryLoadAttempted = true;
-
-    try {
-      // Only load if DSN is configured
-      if (process.env.EXPO_PUBLIC_SENTRY_DSN) {
-        sentryModule = await import('sentry-expo');
-      }
-    } catch {
-      // Silently fail if Sentry is not available
-      // This is expected in dev builds or when Sentry is not configured
-    }
   }
 
   /**
@@ -90,31 +65,29 @@ class Logger {
     console.error(...args);
     
     // Send to Sentry in production
-    if (!this.isDevelopment && sentryModule) {
+    if (!this.isDevelopment) {
       try {
-        // Extract the error object or create one from the message
         const errorArg = args[0];
         
         if (errorArg instanceof Error) {
-          // If it's already an Error, capture it directly
-          sentryModule.Native.captureException(errorArg);
+          Sentry.captureException(errorArg);
         } else if (typeof errorArg === 'string') {
-          // If it's a string, capture as a message with context
           const additionalData = args.slice(1);
-          sentryModule.Native.captureMessage(errorArg, {
-            level: 'error',
-            extra: additionalData.length > 0 ? { context: additionalData } : undefined,
+          Sentry.withScope((scope) => {
+            if (additionalData.length > 0) {
+              scope.setExtra('context', additionalData);
+            }
+            scope.setLevel('error');
+            Sentry.captureMessage(errorArg);
           });
         } else {
-          // For other types, stringify and send as message
-          sentryModule.Native.captureMessage(JSON.stringify(errorArg), {
-            level: 'error',
-            extra: { originalType: typeof errorArg },
+          Sentry.withScope((scope) => {
+            scope.setExtra('originalType', typeof errorArg);
+            scope.setLevel('error');
+            Sentry.captureMessage(JSON.stringify(errorArg));
           });
         }
       } catch (sentryError) {
-        // Silently fail - don't let Sentry errors break the app
-        // In development, we might want to know about this
         if (this.isDevelopment) {
           console.warn('[Logger] Failed to send error to Sentry:', sentryError);
         }
@@ -142,11 +115,14 @@ class Logger {
     }
     
     // Send to Sentry if explicitly requested
-    if (options.sendToSentry && !this.isDevelopment && sentryModule) {
+    if (options.sendToSentry && !this.isDevelopment) {
       try {
-        sentryModule.Native.captureMessage(message, {
-          level: 'info',
-          extra: args.length > 0 ? { context: args } : undefined,
+        Sentry.withScope((scope) => {
+          if (args.length > 0) {
+            scope.setExtra('context', args);
+          }
+          scope.setLevel('info');
+          Sentry.captureMessage(message);
         });
       } catch {
         // Silently fail
@@ -217,10 +193,13 @@ class Logger {
     console.error('[Exception]', error, context);
     
     // Send to Sentry in production
-    if (!this.isDevelopment && sentryModule) {
+    if (!this.isDevelopment) {
       try {
-        sentryModule.Native.captureException(error, {
-          extra: context,
+        Sentry.withScope((scope) => {
+          if (context) {
+            scope.setExtras(context);
+          }
+          Sentry.captureException(error);
         });
       } catch {
         // Silently fail
@@ -233,9 +212,9 @@ class Logger {
    * Useful for associating errors with specific users
    */
   setUser(user: { id: string; email?: string; username?: string } | null): void {
-    if (!this.isDevelopment && sentryModule) {
+    if (!this.isDevelopment) {
       try {
-        sentryModule.Native.setUser(user);
+        Sentry.setUser(user);
       } catch {
         // Silently fail
       }
@@ -247,9 +226,9 @@ class Logger {
    * Breadcrumbs help track the user's journey before an error occurred
    */
   addBreadcrumb(message: string, category?: string, data?: Record<string, any>): void {
-    if (!this.isDevelopment && sentryModule) {
+    if (!this.isDevelopment) {
       try {
-        sentryModule.Native.addBreadcrumb({
+        Sentry.addBreadcrumb({
           message,
           category: category || 'default',
           data,

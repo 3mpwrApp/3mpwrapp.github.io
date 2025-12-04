@@ -25,6 +25,7 @@ import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../
 import { useBetaTesterBadge } from '../../../hooks/useBetaTesterBadge';
 import { useTranslation } from '../../../i18n';
 import { useDevPrefs } from '../../../services/devPrefs';
+import { isSentryInitialized, showFeedbackWidget } from '../../../services/telemetry';
 import { useNetwork } from '../../../store/network';
 import type { ResourceFormat, TextScale } from '../../../store/settings';
 import { useSettings } from '../../../store/settings';
@@ -367,6 +368,22 @@ export default function SettingsScreen() {
         </Section>
         <DeveloperSection styles={styles} />
         <Section title={t('about.title','About & Contact')} styles={styles}>
+          <A11yPressable
+            onPress={() => {
+              if (isSentryInitialized()) {
+                showFeedbackWidget();
+              } else {
+                sendFeedbackEmail();
+              }
+            }}
+            accessibilityRole='button'
+            accessibilityLabel={t('about.sendFeedback','Send Feedback')}
+            hitSlop={HIT_SLOP_8}
+            style={[styles.linkButton, { justifyContent:'center', marginBottom:12 }]}
+          >
+            <Ionicons name='chatbubble-ellipses' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>{t('about.sendFeedback','Send Feedback')}</Text>
+          </A11yPressable>
           <A11yPressable
             onPress={sendFeedbackEmail}
             accessibilityRole='button'

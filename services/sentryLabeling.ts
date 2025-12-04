@@ -5,29 +5,27 @@
  * Only active when EXPO_PUBLIC_SENTRY_DSN is configured in .env
  */
 
+import * as Sentry from '@sentry/react-native';
 import * as Device from 'expo-device';
 import { Platform } from 'react-native';
 
-// Lazy load Sentry to avoid importing when not configured
-let SentryModule: any = null;
+// Track if Sentry is initialized
+let sentryInitialized = false;
 
 /**
  * Initialize Sentry with proper labeling
  */
 export async function initSentry(dsn: string): Promise<boolean> {
   // Skip if already initialized
-  if (SentryModule) return true;
+  if (sentryInitialized) return true;
 
   try {
-    // Dynamic import to avoid loading if not needed
-    const Sentry = await import('sentry-expo');
-    SentryModule = Sentry;
 
-    // Initialize with minimal config
+    // Initialize with @sentry/react-native
     Sentry.init({
       dsn,
-      enableInExpoDevelopment: false, // Only in production
-      debug: __DEV__, // Debug mode in development
+      debug: __DEV__,
+      environment: __DEV__ ? 'development' : 'production',
       
       // Automatic labeling via tags
       initialScope: {
@@ -150,9 +148,9 @@ export async function initSentry(dsn: string): Promise<boolean> {
 
       // Integrations
       enableAutoSessionTracking: true,
-      sessionTrackingIntervalMillis: 30000, // 30 seconds
     });
 
+    sentryInitialized = true;
     return true;
   } catch (error) {
     console.error('[Sentry] Failed to initialize:', error);
@@ -172,7 +170,7 @@ export function captureException(
     extra?: Record<string, any>;
   }
 ): void {
-  if (!SentryModule) {
+  if (!sentryInitialized) {
     // Sentry not initialized, log to console instead
     if (__DEV__) {
       console.error('[Sentry] Exception (not sent):', error, context);
@@ -181,14 +179,14 @@ export function captureException(
   }
 
   try {
-    SentryModule.Native.captureException(error, {
-      tags: {
-        ...context?.tags,
-        ...(context?.feature && { feature: context.feature }),
-        ...(context?.severity && { severity: context.severity }),
-      },
-      extra: context?.extra,
-      level: context?.severity || 'error',
+    Sentry.withScope((scope) => {
+      if (context?.tags) {
+        Object.entries(context.tags).forEach(([key, value]) => scope.setTag(key, value));
+      }
+      if (context?.feature) scope.setTag('feature', context.feature);
+      if (context?.severity) scope.setLevel(context.severity as Sentry.SeverityLevel);
+      if (context?.extra) scope.setExtras(context.extra);
+      Sentry.captureException(error);
     });
   } catch (err) {
     console.error('[Sentry] Failed to capture exception:', err);
@@ -207,7 +205,7 @@ export function captureMessage(
     extra?: Record<string, any>;
   }
 ): void {
-  if (!SentryModule) {
+  if (!sentryInitialized) {
     if (__DEV__) {
       // eslint-disable-next-line no-console
       console.log(`[Sentry] Message (not sent) [${level}]:`, message, context);
@@ -216,13 +214,14 @@ export function captureMessage(
   }
 
   try {
-    SentryModule.Native.captureMessage(message, {
-      level,
-      tags: {
-        ...context?.tags,
-        ...(context?.feature && { feature: context.feature }),
-      },
-      extra: context?.extra,
+    Sentry.withScope((scope) => {
+      if (context?.tags) {
+        Object.entries(context.tags).forEach(([key, value]) => scope.setTag(key, value));
+      }
+      if (context?.feature) scope.setTag('feature', context.feature);
+      if (context?.extra) scope.setExtras(context.extra);
+      scope.setLevel(level as Sentry.SeverityLevel);
+      Sentry.captureMessage(message);
     });
   } catch (err) {
     console.error('[Sentry] Failed to capture message:', err);
@@ -238,10 +237,10 @@ export function addBreadcrumb(
   level: 'debug' | 'info' | 'warning' | 'error' = 'info',
   data?: Record<string, any>
 ): void {
-  if (!SentryModule) return;
+  if (!sentryInitialized) return;
 
   try {
-    SentryModule.Native.addBreadcrumb({
+    Sentry.addBreadcrumb({
       message,
       category,
       level,
@@ -257,14 +256,16 @@ export function addBreadcrumb(
  * Set user context (no PII!)
  */
 export function setUser(userId: string, isBetaTester?: boolean): void {
-  if (!SentryModule) return;
+  if (!sentryInitialized) return;
 
   try {
-    SentryModule.Native.setUser({
+    Sentry.setUser({
       id: userId,
       // Never send email, name, or other PII
-      ...(isBetaTester && { betaTester: true }),
     });
+    if (isBetaTester) {
+      Sentry.setTag('betaTester', 'true');
+    }
   } catch (err) {
     console.error('[Sentry] Failed to set user:', err);
   }
@@ -274,10 +275,10 @@ export function setUser(userId: string, isBetaTester?: boolean): void {
  * Clear user context
  */
 export function clearUser(): void {
-  if (!SentryModule) return;
+  if (!sentryInitialized) return;
 
   try {
-    SentryModule.Native.setUser(null);
+    Sentry.setUser(null);
   } catch (err) {
     console.error('[Sentry] Failed to clear user:', err);
   }
@@ -287,5 +288,5 @@ export function clearUser(): void {
  * Check if Sentry is initialized
  */
 export function isSentryEnabled(): boolean {
-  return SentryModule !== null;
+  return sentryInitialized;
 }
