@@ -526,7 +526,7 @@ Complete these steps in your first week to get the most out of 3mpwrApp:
 **How to Report Issues:**
 - Use Settings → About → Contact Support
 - Include: Device type, OS version, steps to reproduce
-- Screenshots are very helpful!
+- previews are very helpful!
 - Mark priority: Critical, High, Medium, Low
 
 ---
@@ -773,13 +773,13 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 ### Evidence Locker (Document Vault) 📁
 **Your secure AES-256 encrypted document storage** | [📷 See it in Action →](/app-tour/#resources)
 
-<div class="screenshot-preview-row">
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager interface" loading="lazy">
+<div class="preview-preview-row">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager interface" loading="lazy">
     <span>Evidence Manager</span>
   </a>
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanagerbrowse3mpwrapp.png" alt="Document organization" loading="lazy">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabevidencemanagerbrowse3mpwrapp.png" alt="Document organization" loading="lazy">
     <span>Organization</span>
   </a>
 </div>
@@ -796,17 +796,17 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 ### Letter Wizard (22+ Professional Templates) ✉️
 **Ready-to-use legal letters for common situations** | [📷 See it in Action →](/app-tour/#resources)
 
-<div class="screenshot-preview-row">
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator" loading="lazy">
+<div class="preview-preview-row">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator" loading="lazy">
     <span>Letter Generator</span>
   </a>
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator23mpwrapp.png" alt="Template customization" loading="lazy">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabmasterlettergenerator23mpwrapp.png" alt="Template customization" loading="lazy">
     <span>Templates</span>
   </a>
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator33mpwrapp.png" alt="Generated letter" loading="lazy">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabmasterlettergenerator33mpwrapp.png" alt="Generated letter" loading="lazy">
     <span>Output</span>
   </a>
 </div>
@@ -2017,17 +2017,17 @@ The app includes legal information and resources for:
 <a id="getting-started-in-5-minutes"></a>
 ## Getting Started in 5 Minutes
 
-<div class="screenshot-preview-row">
-  <a href="/app-tour/#onboarding" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/termsgate/termsgate/1welcometo3mpwrapp.png" alt="Welcome screen" loading="lazy">
+<div class="preview-preview-row">
+  <a href="/app-tour/#onboarding" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/termsgate/termsgate/1welcometo3mpwrapp.png" alt="Welcome screen" loading="lazy">
     <span>Welcome</span>
   </a>
-  <a href="/app-tour/#home" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/home/home1dashboard3mpwrapp.png" alt="Main dashboard" loading="lazy">
+  <a href="/app-tour/#home" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/home/home1dashboard3mpwrapp.png" alt="Main dashboard" loading="lazy">
     <span>Dashboard</span>
   </a>
-  <a href="/app-tour/#settings" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/settings/settings/settingstab13mpwrapp.png" alt="Settings" loading="lazy">
+  <a href="/app-tour/#settings" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/settings/settings/settingstab13mpwrapp.png" alt="Settings" loading="lazy">
     <span>Settings</span>
   </a>
 </div>
@@ -3686,15 +3686,15 @@ Use Campaign Coordination for:
 <a id="evidence-locker"></a>
 ## Evidence Locker
 
-**What it does:** A secure place to store important documents, notes, and photos. | [📷 View All Screenshots →](/app-tour/#resources)
+**What it does:** A secure place to store important documents, notes, and photos. | [📷 View All previews →](/app-tour/#resources)
 
-<div class="screenshot-preview-row">
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resources5evidencemanager3mpwrapp.png" alt="Evidence Manager" loading="lazy">
+<div class="preview-preview-row">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resources5evidencemanager3mpwrapp.png" alt="Evidence Manager" loading="lazy">
     <span>Evidence Manager</span>
   </a>
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resources6evidencemanager3mpwrapp.png" alt="Organization" loading="lazy">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resources6evidencemanager3mpwrapp.png" alt="Organization" loading="lazy">
     <span>Organization</span>
   </a>
 </div>
@@ -3967,7 +3967,7 @@ A: Most actions can be undone. Look for "Undo" options or edit your entries. You
 - OS version (iOS 16.5, Android 13, etc.)
 - App version (see Settings > About)
 - Description of issue
-- Screenshots (if applicable)
+- previews (if applicable)
 
 ### Report Bugs:
 **Subject:** "Bug Report"  
@@ -3979,7 +3979,7 @@ A: Most actions can be undone. Look for "Undo" options or edit your entries. You
 
 ### Community Violations:
 **Subject:** "Community Guidelines Violation"  
-**Include:** Username, description, screenshot
+**Include:** Username, description, preview
 
 ### Feature Requests:
 **Subject:** "Feature Request"  
@@ -4491,3 +4491,4 @@ We're constantly improving based on your feedback. See what we're working on and
 *For detailed accessibility implementation status, see: `docs/ACCESSIBILITY_MASTER_ROADMAP.md`*
 
 {%- include page-feedback.html -%}
+

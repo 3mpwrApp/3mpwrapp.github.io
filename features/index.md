@@ -158,8 +158,8 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
   <div id="feature-cards-grid" class="feature-cards-grid">
     <!-- Advocacy Card -->
     <div class="feature-card" data-category="advocacy">
-      <a href="/app-tour/#advocacy" class="card-screenshot-link">
-        <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/advocacy/aicommandcenter1advocacytab3mpwrapp.png" alt="AI Advocacy Command Centre - See all advocacy screenshots" class="card-preview-img" loading="lazy">
+      <a href="/app-tour/#advocacy" class="card-preview-link">
+        <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/advocacy/aicommandcenter1advocacytab3mpwrapp.png" alt="AI Advocacy Command Centre - See all advocacy previews" class="card-preview-img" loading="lazy">
       </a>
       <div class="card-icon">📝</div>
       <h3 class="card-title">Advocacy Tools</h3>
@@ -176,8 +176,8 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 
     <!-- Wellness Card -->
     <div class="feature-card" data-category="wellness">
-      <a href="/app-tour/#wellness" class="card-screenshot-link">
-        <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstabunifiedhealthtracker13mpwrapp.png" alt="Wellness Health Tracker - See all wellness screenshots" class="card-preview-img" loading="lazy">
+      <a href="/app-tour/#wellness" class="card-preview-link">
+        <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/wellness/wellnesstabunifiedhealthtracker13mpwrapp.png" alt="Wellness Health Tracker - See all wellness previews" class="card-preview-img" loading="lazy">
       </a>
       <div class="card-icon">🧘</div>
       <h3 class="card-title">Wellness & Health</h3>
@@ -194,8 +194,8 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 
     <!-- Evidence Locker Card -->
     <div class="feature-card" data-category="evidence">
-      <a href="/app-tour/#resources" class="card-screenshot-link">
-        <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager - See all resource screenshots" class="card-preview-img" loading="lazy">
+      <a href="/app-tour/#resources" class="card-preview-link">
+        <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager - See all resource previews" class="card-preview-img" loading="lazy">
       </a>
       <div class="card-icon">🔒</div>
       <h3 class="card-title">Evidence Locker</h3>
@@ -212,8 +212,8 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 
     <!-- Letter Wizard Card -->
     <div class="feature-card" data-category="letters">
-      <a href="/app-tour/#resources" class="card-screenshot-link">
-        <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator - See all resource screenshots" class="card-preview-img" loading="lazy">
+      <a href="/app-tour/#resources" class="card-preview-link">
+        <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator - See all resource previews" class="card-preview-img" loading="lazy">
       </a>
       <div class="card-icon">✉️</div>
       <h3 class="card-title">Letter Wizard</h3>
@@ -230,8 +230,8 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 
     <!-- Community Card -->
     <div class="feature-card" data-category="community">
-      <a href="/app-tour/#community" class="card-screenshot-link">
-        <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/community/communityhubtab3mpwrapp.png" alt="Community Hub - See all community screenshots" class="card-preview-img" loading="lazy">
+      <a href="/app-tour/#community" class="card-preview-link">
+        <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/community/communityhubtab3mpwrapp.png" alt="Community Hub - See all community previews" class="card-preview-img" loading="lazy">
       </a>
       <div class="card-icon">💬</div>
       <h3 class="card-title">Community & Support</h3>
@@ -248,8 +248,8 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 
     <!-- Resources Card -->
     <div class="feature-card" data-category="resources">
-      <a href="/app-tour/#resources" class="card-screenshot-link">
-        <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcesmastertrackerdashboard13mpwrapp.png" alt="Master Tracker - See all resource screenshots" class="card-preview-img" loading="lazy">
+      <a href="/app-tour/#resources" class="card-preview-link">
+        <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcesmastertrackerdashboard13mpwrapp.png" alt="Master Tracker - See all resource previews" class="card-preview-img" loading="lazy">
       </a>
       <div class="card-icon">📚</div>
       <h3 class="card-title">Resources & Learning</h3>
@@ -874,13 +874,13 @@ These features work across the entire app:
 ### Evidence Locker - Your Secure Document Vault
 **Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#evidence-locker)** | **[📷 See it in Action →](/app-tour/#resources)**
 
-<div class="screenshot-preview-row">
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager interface" loading="lazy">
+<div class="preview-preview-row">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabevidencemanager3mpwrapp.png" alt="Evidence Manager interface" loading="lazy">
     <span>Evidence Manager</span>
   </a>
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabappealcommandcenter13mpwrapp.png" alt="Appeal Command Center" loading="lazy">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabappealcommandcenter13mpwrapp.png" alt="Appeal Command Center" loading="lazy">
     <span>Appeal Center</span>
   </a>
 </div>
@@ -911,17 +911,17 @@ The Evidence Locker is your encrypted, private document storage system:
 ### Letter Wizard - 22 Professional Letter Templates
 **Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#letter-wizard)** | **[📷 See it in Action →](/app-tour/#resources)**
 
-<div class="screenshot-preview-row">
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator interface" loading="lazy">
+<div class="preview-preview-row">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabmasterlettergenerator13mpwrapp.png" alt="Letter Generator interface" loading="lazy">
     <span>Letter Generator</span>
   </a>
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator23mpwrapp.png.png" alt="Template customization" loading="lazy">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabmasterlettergenerator23mpwrapp.png.png" alt="Template customization" loading="lazy">
     <span>Template Selection</span>
   </a>
-  <a href="/app-tour/#resources" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/resources/resourcestabmasterlettergenerator33mpwrapp.png.png" alt="Professional letter output" loading="lazy">
+  <a href="/app-tour/#resources" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/resources/resourcestabmasterlettergenerator33mpwrapp.png.png" alt="Professional letter output" loading="lazy">
     <span>Generated Letter</span>
   </a>
 </div>
@@ -965,17 +965,17 @@ Generate professional, legally-sound letters in minutes with auto-populate from 
 ### Wellness Tools - 36 Features for Mental & Physical Health
 **Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#wellness-tools)** | **[📷 See it in Action →](/app-tour/#wellness)**
 
-<div class="screenshot-preview-row">
-  <a href="/app-tour/#wellness" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstabunifiedhealthtracker13mpwrapp.png" alt="Health Tracker dashboard" loading="lazy">
+<div class="preview-preview-row">
+  <a href="/app-tour/#wellness" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/wellness/wellnesstabunifiedhealthtracker13mpwrapp.png" alt="Health Tracker dashboard" loading="lazy">
     <span>Health Tracker</span>
   </a>
-  <a href="/app-tour/#wellness" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstabmentalwellnesstoolkit3mpwrapp.png" alt="Mental Wellness hub" loading="lazy">
+  <a href="/app-tour/#wellness" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/wellness/wellnesstabmentalwellnesstoolkit3mpwrapp.png" alt="Mental Wellness hub" loading="lazy">
     <span>Mental Wellness</span>
   </a>
-  <a href="/app-tour/#wellness" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstabmovementnrehabhub3mpwrapp.png" alt="Movement Hub" loading="lazy">
+  <a href="/app-tour/#wellness" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/wellness/wellnesstabmovementnrehabhub3mpwrapp.png" alt="Movement Hub" loading="lazy">
     <span>Movement Hub</span>
   </a>
 </div>
@@ -1010,13 +1010,13 @@ Automated workflows for common legal processes with step-by-step guidance, auto-
 ### Community - Connect & Support
 **Available in Beta** ✅ | **[📖 How to Use Guide →](/user-guide#community-features)** | **[📷 See it in Action →](/app-tour/#community)**
 
-<div class="screenshot-preview-row">
-  <a href="/app-tour/#community" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/community/communityhubtab3mpwrapp.png" alt="Community Hub interface" loading="lazy">
+<div class="preview-preview-row">
+  <a href="/app-tour/#community" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/community/communityhubtab3mpwrapp.png" alt="Community Hub interface" loading="lazy">
     <span>Community Hub</span>
   </a>
-  <a href="/app-tour/#community" class="screenshot-preview-item">
-    <img src="/assets/images/app-tour/1-Official3mpwrAppScreenshots/laptop/community/testerschatcommunitytab3mpwrapp.png" alt="Beta Testers Chat" loading="lazy">
+  <a href="/app-tour/#community" class="preview-preview-item">
+    <img src="/assets/images/app-tour/1-Official3mpwrApppreviews/laptop/community/testerschatcommunitytab3mpwrapp.png" alt="Beta Testers Chat" loading="lazy">
     <span>Beta Testers Chat</span>
   </a>
 </div>
@@ -1302,3 +1302,4 @@ All AI processing happens on-device for privacy.
 <link rel="stylesheet" href="/assets/css/features.css">
 
 <script src="/assets/js/features.js" defer></script>
+
