@@ -899,7 +899,7 @@ Former PSW. Injured worker. Person with disabilities. Now building the tools I w
 
 **From the ashes, we rise. 🔥**
 
-🔗 [Read My Full Story →](/about/#meet-the-founder) | 🌐 [Injured Workers Unite](https://injuredworkersunite.pages.dev/) | 💬 [Discord](https://discord.gg/fJB2DJ7Yn)
+🔗 [Read My Full Story →](/about/#meet-the-founder) | 🌐 [Injured Workers Unite](https://injuredworkersunite.pages.dev/)
 
 ---
 
@@ -929,6 +929,7 @@ Follow 3mpwr on social media to stay connected and be part of the community:
   <li><a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='instagram' -%} Instagram</a> – See our latest posts and stories</li>
   <li><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='youtube' -%} YouTube</a> – Watch videos and live sessions</li>
   <li><a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='tiktok' -%} TikTok</a> – Short clips and updates</li>
+  <li><a href="https://discord.gg/fJB2DJ7Yn" target="_blank" rel="noopener noreferrer">{%- include social-icons.html name='discord' -%} Discord</a> – Chat with the community in real-time</li>
 </ul>
 
 {%- include social-share.html title="Connect with 3mpwrApp Community" description="Join injured workers and persons with disabilities across Canada" compact="true" -%}
