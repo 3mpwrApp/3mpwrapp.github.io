@@ -195,7 +195,10 @@ Beyond 3mpwrApp, I run **[Injured Workers Unite](https://injuredworkersunite.pag
 | 😂 **Meme Gallery** | Creative resistance through humor. Share and spread awareness. |
 
 🔗 [Visit Injured Workers Unite →](https://injuredworkersunite.pages.dev/)  
-📚 [Find me on Goodreads →](https://www.goodreads.com/user/show/1581978-lissa)
+📚 [Find me on Goodreads →](https://www.goodreads.com/user/show/1581978-lissa)  
+💬 [Join our Discord →](https://discord.gg/fJB2DJ7Yn)
+
+**From the ashes, we rise. 🔥**
 
 ---
 

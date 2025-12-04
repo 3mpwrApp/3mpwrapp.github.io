@@ -897,7 +897,9 @@ Former PSW. Injured worker. Person with disabilities. Now building the tools I w
 
 *"The system isn't broken—it's working exactly as designed. But when we organize and expose the truth, we become unstoppable."*
 
-🔗 [Read My Full Story →](/about/#meet-the-founder) | 🌐 [Injured Workers Unite](https://injuredworkersunite.pages.dev/)
+**From the ashes, we rise. 🔥**
+
+🔗 [Read My Full Story →](/about/#meet-the-founder) | 🌐 [Injured Workers Unite](https://injuredworkersunite.pages.dev/) | 💬 [Discord](https://discord.gg/fJB2DJ7Yn)
 
 ---
 
