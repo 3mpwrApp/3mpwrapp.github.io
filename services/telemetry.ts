@@ -52,7 +52,6 @@ export async function initSentry(dsn?: string) {
           formTitle: 'Send Feedback',
           submitButtonLabel: 'Send Feedback',
           cancelButtonLabel: 'Cancel',
-          confirmButtonLabel: 'Confirm',
           addScreenshotButtonLabel: 'Add Screenshot',
           removeScreenshotButtonLabel: 'Remove Screenshot',
           nameLabel: 'Name',
@@ -62,11 +61,6 @@ export async function initSentry(dsn?: string) {
           messageLabel: 'What went wrong?',
           messagePlaceholder: 'Describe the issue or share your feedback...',
           successMessageText: 'Thank you for your feedback!',
-          styles: {
-            submitButton: {
-              backgroundColor: '#6a1b9a', // Purple theme color
-            },
-          },
         }),
       ],
     });
