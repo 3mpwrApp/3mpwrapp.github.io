@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-03T18:03:07.832Z",
+  "lastUpdated": "2025-12-04T00:06:27.819Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4260,
+      "totalPosts": 4285,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T18:02:57.567Z"
+      "lastSeen": "2025-12-04T00:06:18.247Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4275,
+      "totalPosts": 4300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T18:02:59.876Z"
+      "lastSeen": "2025-12-04T00:06:20.543Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4259,
+      "totalPosts": 4284,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T18:03:02.089Z"
+      "lastSeen": "2025-12-04T00:06:22.839Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4268,
+      "totalPosts": 4293,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T18:03:04.299Z"
+      "lastSeen": "2025-12-04T00:06:24.946Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4275,
+      "totalPosts": 4300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-03T18:03:06.829Z"
+      "lastSeen": "2025-12-04T00:06:26.815Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Today I had to vote on a school bond to *bring local schools into compliance with the ADA.\" Read that again. \n\nI was 15 when the ADA passed and my old schools are STILL NOT ACCESSIBLE. I am 50 now, almost 51.\n\n#CripTheVote",
-      "author": "karriehiggins.bsky.social",
-      "engagement": 79,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "My letter in today's Financial Times\n\n#DisabilityRights #Discrimination #Equalities\n@disabledgreens.bsky.social",
-      "author": "nataliegreenpeer.bsky.social",
-      "engagement": 211,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "The Center for Racial & Disability Justice has an incredibly compelling op-ed in the Chicago Sun Times about why #AssistedSuicide laws are bad, & asking @govpritzker.illinois.gov to veto SB 1950. #DisabilityJustice #DisabilitySky #DisabilityRightsAreHumanRights tinyurl.com/4nk7e6ru",
-      "author": "10minutesaday.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "A beautiful tribute to @sfdirewolf.bsky.social, from Rebecca Cokley. \n\nTogether, may we continue the work and the fight to ensure Alice’s vision becomes the norm. 💜 \n\n#DisabilityJustice #DisabilityVisibility www.thenation.com/article/soci...",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 20,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Annaleigh is a Cherokee woman living with PTSD and other health challenges. She needs $2,000 to cover bills and essential expenses. Please donate or share if you can. 🤍\n#MutualAid #IndigenousMutualAid #DisabilityJustice #BIPOCMA",
-      "author": "amparodo.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I started a new job today!\n\nI'm very thankful and grateful to @byowave.bsky.social for giving me this opportunity.\n\nBe sure to give them a follow to stay up to date on the awesome stuff they're working on (I suppose it \"we\" now that I work there 😁).\n\n#IrishGameDev #A11y #Accessibility #SpeirGorm",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 22,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I started a new job today!\n\nI'm very thankful and grateful to @byowave.bsky.social for giving me this opportunity.\n\nBe sure to give them a follow to stay up to date on the awesome stuff they're working on (I suppose it \"we\" now that I work there 😁).\n\n#IrishGameDev #A11y #Accessibility #SpeirGorm",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 22,
-      "hashtag": "A11y"
-    },
     {
       "text": "Anyone pushing the WCAG 3.0 as the new standard doesn't know what they are talking about. Full stop.\n\nWCAG 2.2 is the W3C recommendation as of December 12th, 2024. \n\n#Accessibility #A11y",
       "author": "xirclebox.com",
@@ -338,12 +296,54 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
+      "author": "adulitingishard.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Public health must integrate #DisabilityJustice principles, not as an add-on, but as the foundation: flexibility, access, intersectionality, collective care, and trust in lived expertise.",
+      "author": "longcovidjustice.org",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "interested in reading how someone with cognitive and mobility related disabilities plays games? check out my Community Soapbox segment on the Can I Play That! huge thanks to @abitofaccess.com for including me in this fantastic series! #GameAccessibility #GameA11y #DisabledGamer #Accessibility",
+      "author": "shellelittle.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 37
+      "count": 38
     },
     {
       "keyword": "accessibility",
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 28
     },
     {
       "keyword": "disabilityjustice",
@@ -363,15 +363,19 @@
     },
     {
       "keyword": "idpd",
-      "count": 21
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 12
+      "count": 14
     },
     {
       "keyword": "inclusion",
+      "count": 13
+    },
+    {
+      "keyword": "idpd2025",
       "count": 11
+    },
+    {
+      "keyword": "accessibility a11y",
+      "count": 10
     },
     {
       "keyword": "altcitizen",
@@ -390,36 +394,32 @@
       "count": 10
     },
     {
-      "keyword": "idpd2025",
-      "count": 9
-    },
-    {
-      "keyword": "idpwd",
-      "count": 9
-    },
-    {
       "keyword": "inclusionmatters",
       "count": 8
     },
     {
-      "keyword": "digitalaccessibility",
+      "keyword": "idpd disabilityrights",
       "count": 7
+    },
+    {
+      "keyword": "internationaldayofpersonswithdisabilities",
+      "count": 6
+    },
+    {
+      "keyword": "disabilities",
+      "count": 6
     },
     {
       "keyword": "disability",
       "count": 6
     },
     {
-      "keyword": "disabilityrights inclusionmatters",
-      "count": 5
+      "keyword": "digitalaccessibility",
+      "count": 6
     },
     {
-      "keyword": "disabilities",
+      "keyword": "nothingaboutuswithoutus",
       "count": 5
-    },
-    {
-      "keyword": "idpd disabilityrights",
-      "count": 4
     }
   ]
 }
