@@ -9,68 +9,140 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-12-04
 
-Curated 13 items from disability, accessibility, and social policy sources.
+Curated 29 items from disability, accessibility, and social policy sources.
 
-## 1. Manitoba Government Adds Doctors to Health Links to Strengthen Care, Reduce Emergency Room Referrals
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71737)
-**Score:** 25.50
+## 1. Development charges might be adding 8-16% to home prices, CMHC data shows
+The development charges can vary greatly from city to city, the Canada Mortgage and Housing Corporation report found.
+📍 [Source](https://globalnews.ca/news/11559713/development-charges-home-prices-canada-cmhc/)
+**Score:** 19.90
 
-## 2. Key federal cabinet ministers set to address Assembly of First Nations
-AFN Chief Cindy Woodhouse Nepinak has said Budget 2025 failed First Nations because it did not include more infrastructure funding and educational resources for their communities.
-📍 [Source](https://globalnews.ca/news/11559144/cabinet-ministers-assembly-of-first-nations/)
+## 2. Debates commission looking at changes after 'perfect storm' clouded last leaders' showdown
+<img src='https://i.cbc.ca/ais/645587a8-0563-4484-a7ea-83b4f3897121,1764869765335/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C781%2C8640%2C4860%29%3BResize%3D%28620%29' alt='Four men in suits stand at podiums in a TV studio.' width='620' height='349' title='Liberal Leader Mark Carney, left to right, New Democratic Party Leader Jagmeet Singh, Conservative Leader Pierre Poilievre, and Bloc Quebecois Leader Yves-Francois Blanchet participate in the English-language federal leaders' debate in Montreal, Thursday, April 17, 2025.'/><p>The head of Canada's Leaders' Debates Commission says the independent body should stop organizing post-debate news conferences and will make changes to how it decides what leaders to invite after this spring's leadership debate was surrounded by controversy.</p>
+📍 [Source](https://www.cbc.ca/news/politics/debates-commission-changes-after-controversy-2025-9.7003156?cmp=rss)
+**Score:** 21.50
+
+## 3. Manitoba Government Helps Recruit Emergency Medical Responders in Rural Manitoba with Financial Aid, New Community Training
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71721)
+**Score:** 20.50
+
+## 4. Manitoba Government Invites Applications for Two Community Development Grant Programs
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71723)
+**Score:** 19.50
+
+## 5. Governments of Canada and Manitoba Invest $12.5 Million to Address Gender-Based Violence
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71722)
+**Score:** 17.00
+
+## 6. Brett Gallant, doing curling double duty at Olympics, will provide valuable insight to Canada's teams
+<img src='https://i.cbc.ca/ais/0ebc7d40-6f3c-4249-91a7-ec0702f4bdde,1764863480057/full/max/0/default.jpg?im=Crop%2Crect%3D%2820%2C0%2C1139%2C640%29%3BResize%3D%28620%29' alt='Brett Gallant sweeps as Jocelyn Peterman releases a rock in the gold-medal game at the Canadian mixed doubles curling championships in Fredericton, New Brunswick on March 24, 2019.' width='620' height='349' title='Brett Gallant and partner Jocelyn Peterman will open the Olympic mixed doubles curling tournament Feb. 4, one week before Gallant joins his Canadian men's team skipped by Brad Jacobs for their first match a week later in Italy. '/><p>Besides giving curlers two Olympic medal chances, doing double duty provides teams valuable insight into the ice, rocks and conditions in game scenarios.</p>
+📍 [Source](https://www.cbc.ca/sports/olympics/winter/curling/brett-gallant-olympic-curling-advantages-milan-cortina-9.7002908?cmp=rss)
+**Score:** 16.20
+
+## 7. Canada’s net-zero advisory process ‘performative,’ says co-chair in resignation
+In a post on his LinkedIn account, Simon Donner says he resigned on Tuesday and he is grateful for the opportunity to help shape climate policy in Canada.
+📍 [Source](https://globalnews.ca/news/11559994/canada-net-zero-co-chair-resigns/)
+**Score:** 11.50
+
+## 8. Windsor housing non-profit director fired after allegations of $500k in unauthorized pay hikes for family
+<img src='https://i.cbc.ca/ais/86595a77-385a-4df1-8518-67eae9a8a81a,1764796654027/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C853%2C479%29%3BResize%3D%28620%29' alt='A head shot of a woman with glasses.' width='620' height='349' title='Anna Angelidis, the former executive director of the Labour Sponsored Community Development Group, appears in a CBC file photo.'/><p>Court documents filed by LSCDG obtained by CBC News show accusations of financial misconduct totalling $3 million by the Labour Sponsored Community Development Group's former executive director Anna Angelidis and two administrators she supervised: her sons Jim and Danny.</p>
+📍 [Source](https://www.cbc.ca/news/canada/windsor/angelidis-public-housing-money-lawsuits-9.6986693?cmp=rss)
+**Score:** 14.00
+
+## 9. Food prices could increase in 2026, with meat leading the way, say Dalhousie researchers
+<img src='https://i.cbc.ca/ais/e6499323-79d1-4ed2-9f26-592ec016fbc3,1764798264321/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C195%2C3740%2C2103%29%3BResize%3D%28620%29' alt='A woman looks at the meat section of a grocery store.' width='620' height='349' title='A woman shops for meat at a Metro grocery store in Montreal on Oct. 26, 2022.'/><p>Food prices in Canada could increase by four to six per cent next year, largely led by pricier meat products, according to a forecast by researchers at Dalhousie University.</p>
+📍 [Source](https://www.cbc.ca/news/business/food-price-report-dalhousie-2025-9.7001661?cmp=rss)
+**Score:** 10.70
+
+## 10. Alberta Health Services CEO on leave of absence, province confirms
+📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-health-services-ceo-on-leave-of-absence-province-confirms-9.7002886?cmp=rss)
 **Score:** 13.50
 
-## 3. Carney ‘will have to answer' questions after tax credit flip-flop, Liberal MP says
-A British Columbia Liberal MP said Prime Minister Mark Carney "will have to answer" questions on why he reversed a budget commitment on tax credits in Alberta energy deal.
-📍 [Source](https://globalnews.ca/news/11559202/mark-carney-tax-credits-carbon-capture/)
-**Score:** 13.20
+## 11. Manitoba Government's Universal School Food Program Fed Nearly Half of Students Across the Province
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71764)
+**Score:** 12.00
 
-## 4. EQB to acquire PC Financial from Loblaw for about $800M
-Canada's seventh-largest bank has agreed to acquire PC Financial from Loblaws Co. Ltd. in the latest deal to shake up the country's financial landscape.
-📍 [Source](https://globalnews.ca/news/11559196/eq-bank-pc-financial-loblaw-deal/)
+## 12. Ranking Four Winds’ Pils Pack, which features some of Canada’s best breweries
+The pack includes drinks from breweries across the country.
+📍 [Source](https://www.straight.com/food/ranking-four-winds-pils-pack-which-features-some-of-canadas-best-breweries)
 **Score:** 9.50
 
-## 5. Consultations set to begin on controversial Quebec constitution bill
-Critics say the constitution bill would erode human rights and limit dissent, and could reopen an unnecessary debate on abortion.
-📍 [Source](https://globalnews.ca/news/11559094/consultations-controversial-quebec-constitution-bill/)
-**Score:** 8.50
+## 13. A Canadian Company Is Supplying Armoured Cars to ICE
+The Canadian government should consider companies’ complicity in US human rights violations when sourcing contracts.
+📍 [Source](https://thetyee.ca/Opinion/2025/12/04/Canadian-Company-Armoured-Cars-ICE/)
+**Score:** 10.50
 
-## 6. Equipment failure thwarts N.B. power plant from resuming production
-<img src='https://i.cbc.ca/ais/1.5652911,1764794234704/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C300%2C5445%2C3062%29%3BResize%3D%28620%29' alt='Waves crash over a rocky shore in the foreground, while a large industrial complex sits on the coast in the background. ' width='620' height='349' title='N.B. Power has been unable to pay down its multi billion debt as planned since 2013 in part because of production problems and maintenance costs at the Point Lepreau nuclear generating station.'/><p>As frigid temperatures approach New Brunswick, the troubled Point Lepreau nuclear generating station missed its expected return to service date earlier this week.   </p>
-📍 [Source](https://www.cbc.ca/news/canada/new-brunswick/point-lepreau-shutdown-continues-9.7001846?cmp=rss)
-**Score:** 10.00
+## 14. Manitoba Government will use Proceeds from U.S. Liquor Sales to Support Holiday Charities
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71817)
+**Score:** 10.50
 
-## 7. Canadian families could pay $1,000 more for groceries in 2026, report warns
-Canadians could face grocery bills up to $1,000 higher in 2026 as food prices rise 4-6 per cent, with restaurants and meat seeing the biggest jumps.
-📍 [Source](https://globalnews.ca/news/11558888/2026-canadian-food-report-cost-prediction/)
+## 15. Toronto police ask for public's help after targeted home invasion, kidnapping
+A targeted home invasion and kidnapping led to a gunpoint standoff with police and an overnight chase across Toronto. Two suspects remain at large, investigators say.
+📍 [Source](https://globalnews.ca/news/11559524/toronto-police-home-invasion-kidnapping/)
 **Score:** 9.00
 
-## 8. Tow truck operators urge drivers to slow down after fatal hit-and-run on 401
-<img src='https://i.cbc.ca/ais/1.6300286,1640824768000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C80%2C720%2C405%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Tow trucks in Fort McMurray are keeping busy as the cold snap wares on.'/><p>Southwestern Ontario’s towing industry is feeling a mixture of disappointment and heartbreak following the hit-and-run death of one of their own this week, with some saying the death is proof that the attitudes of drivers need to change for safety to be possible.</p>
-📍 [Source](https://www.cbc.ca/news/canada/london/tow-truck-operators-urge-drivers-to-slow-down-after-fatal-hit-and-run-on-401-9.7002360?cmp=rss)
+## 16. More people are using food banks as inflation grows, Manitoba report says
+A new report from a Manitoba food bank network says the number of people needing help is rising as the cost of living continues to escalate.
+📍 [Source](https://globalnews.ca/news/11559491/manitoba-food-banks-inflation-report/)
 **Score:** 9.00
 
-## 9. Richmond Christmas Fund marks another year of local support
-The long-running initiative invites the community to donate new toys and enjoy family-friendly activities.
-📍 [Source](https://www.straight.com/living/richmond-christmas-fund-marks-another-year-of-local-support)
-**Score:** 6.00
+## 17. Manitoba Government Honours Lives Lost to Gender-Based Violence
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71797)
+**Score:** 7.50
 
-## 10. Calgary city council 2026 budget passes, approves 1.64% property tax increase
-Calgary city council voted in favour of a 1.64 per cent property tax increase, which is anticipated to cost the typical homeowner an additional $4.50 monthly.
-📍 [Source](https://globalnews.ca/news/11558255/calgary-city-council-approves-2026-budget-property-tax-increase/)
+## 18. Manitoba Government Improves Asbestos Safety Requirements to Protect Workers
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71777)
+**Score:** 7.50
+
+## 19. NS Power dismisses premier's claim that utility could be breaking regulatory laws
+Nova Scotia’s largest utility is responding to a stinging letter from Premier Tim Houston by insisting it hasn't broken any laws.
+📍 [Source](https://globalnews.ca/news/11559386/ns-power-dismisses-premier-claim-break-regulatory-laws/)
+**Score:** 5.30
+
+## 20. Indigenous friendship centres want clarity on future federal funding
+<img src='https://i.cbc.ca/ais/1.7510746,1744735835000/full/max/0/default.jpg?im=Crop%2Crect%3D%284%2C0%2C1908%2C1073%29%3BResize%3D%28620%29' alt='A Mi'kmaw woman with long dark hair wears a beige turtleneck under a brown leather jacket. She is standing in a room with pieces of Mi'kmaw art on the walls behind her' width='620' height='349' title='Pam Glode-Desrochers, executive director of the Mi'kmaw Native Friendship Society, at the Mi'kmaw Native Friendship Centre in Halifax.'/><p>The president for the National Association of Friendship Centres says uncertainty around how much money they will have to work with next year is raising alarms for the centres that provide services for Indigenous people in urban areas.</p>
+📍 [Source](https://www.cbc.ca/news/indigenous/friendship-centres-federal-budget-9.6999206?cmp=rss)
+**Score:** 7.50
+
+## 21. Community ground search for Eli Wood happening in Kitchener on Sunday
+📍 [Source](https://www.cbc.ca/news/canada/kitchener-waterloo/eli-wood-ground-search-kitchener-sunday-missing-person-fire-9.7001352?cmp=rss)
+**Score:** 7.50
+
+## 22. Nova Scotia justice minister wants Mi'kmaw chiefs to help crack down on illegal cannabis
+The Nova Scotia government is cracking down on illegal cannabis dispensaries, which it says outnumber legal NSLC stores in the province.
+📍 [Source](https://globalnews.ca/news/11559317/nova-scotia-justice-minister-mikmaq-chiefs-illegal-cannabis/)
+**Score:** 4.30
+
+## 23. Children's hospitals seeing more flu cases as earlier season takes a toll
+Flu season has arrived early, with CHEO reporting eight times more cases than last year as hospitals warn of rising infections among children and seniors.
+📍 [Source](https://globalnews.ca/news/11559558/childrens-hospitals-flu-surge/)
 **Score:** 4.50
 
-## 11. You Nearly Missed: Jane Siberry continuing to write her own rule book at the Rickshaw
-Get ready for a true Canadian original.
-📍 [Source](https://www.straight.com/music/you-nearly-missed-jane-siberry-continuing-to-write-her-own-rule-book-at-rickshaw)
+## 24. Quebec unions are standing up against CAQ's Law 14
+📍 [Source](https://rabble.ca/labour/quebec-unions-are-standing-up-against-caqs-law-14/)
 **Score:** 4.50
 
-## 12. Munk debate featuring former Israeli officials met with protests, allegations of war crimes
-<img src='https://i.cbc.ca/ais/12f5eb01-67a8-448d-a916-f72e847a875c,1764815578583/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A fleet of police on horseback ride outside Meridan Hall as the Munk Debates happen inside.' width='620' height='349' title=''/><p>As many as 200 people protested outside the Munk Debates in Toronto on Wednesday, where a panel of all-Israeli speakers discussed whether a two-state solution is in the best interest of Israel.</p>
-📍 [Source](https://www.cbc.ca/news/canada/toronto/munk-debates-israeli-former-officials-protested-9.7002494?cmp=rss)
+## 25. Photos: Belfast electronic duo Chalk light up the Fox Cabaret
+The Irish duo made the most of their only Canadian tour stop.
+📍 [Source](https://www.straight.com/music/photos-belfast-electronic-duo-chalk-lights-up-fox-cabaret)
 **Score:** 4.50
 
-## 13. Nicotine pouches glamourized on social media, little talk about risks for youth, study finds
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/nicotine-pouch-youth-study-9.7002330?cmp=rss)
-**Score:** 2.00
+## 26. Why We Need New Stories of Fire and Ice
+What happens when scientists and artists meet to confront humanity’s melting future? A letter from Banff.
+📍 [Source](https://thetyee.ca/Culture/2025/12/03/Why-We-Need-New-Fire-Ice-Stories/)
+**Score:** 4.50
+
+## 27. Josh Naylor, who starred after trade to Mariners, named top Canadian in MLB for 2025
+<img src='https://i.cbc.ca/ais/550000ba-00f6-47ad-b57c-30dc1646ae78,1764875737482/full/max/0/default.jpg?im=Crop%2Crect%3D%2820%2C0%2C1139%2C640%29%3BResize%3D%28620%29' alt='Seattle Mariners first baseman Josh Naylor acknowledges the crowd before Game 1 of the American League Championship Series against the hometown Toronto Blue Jays on October 12, 2025.' width='620' height='349' title='Mariners first baseman Josh Naylor topped all Canadian players in MLB this year in batting average, RBI and stolen bases. He also ranked second among Canadian major leaguers in hits, runs, home runs, doubles and walks.'/><p>Seattle Mariners first baseman Josh Naylor of Mississauga, Ont., has won the 2025 Tip O'Neill Award, presented annually by the Canadian Baseball Hall of Fame to the top Canadian player in Major League Baseball.</p>
+📍 [Source](https://www.cbc.ca/sports/baseball/mlb/josh-naylor-tip-oneill-award-top-canadian-mlb-9.7003365?cmp=rss)
+**Score:** 4.50
+
+## 28. Manitoba to sell shelved U.S. booze with revenue going to holiday charities: premier
+<img src='https://i.cbc.ca/ais/3a85fc53-8429-4318-9735-d5603edf3180,1760980364837/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C111%2C1180%2C663%29%3BResize%3D%28620%29' alt='Liquor from the United States is covered at the Manitoba Liquor Mart on Ellice Avenue on March 4, 2025.' width='620' height='349' title='Liquor from the United States is covered at the Manitoba Liquor Mart on Ellice Avenue on March 4, 2025.'/><p>Manitoba is pulling out hundreds of thousands of dollars of U.S.-made alcohol it shelved months ago amid the tumultuous trade war with the U.S., with plans of now selling the liquor ahead of Christmas and sending the proceeds to holiday charities.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/american-alcohol-ban-revenue-holiday-charities-9.7002935?cmp=rss)
+**Score:** 4.50
+
+## 29. Man who killed attacker in Banff used 'excessive' force, sentenced to 2-year house arrest
+<img src='https://i.cbc.ca/ais/1.7462246,1764806025734/full/max/0/default.jpg?im=Crop%2Crect%3D%2851%2C20%2C1751%2C984%29%3BResize%3D%28620%29' alt='Side by side photos of two groups of two men. ' width='620' height='349' title='Ryden Brogden, second from the left, and his friend ended up at two of the same bars as John Sproule, black t-shirt, blue hat, on the night of September 2, 2022.'/><p>After learning the man who killed their loved one would not go to jail, several of Ryden Brogden’s family members stormed out of the courtroom. On Wednesday, a judge announced John Sproule would serve a conditional sentence order involving two years of house arrest. </p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/banff-bar-fight-excessive-self-defence-sproule-brogden-9.7002143?cmp=rss)
+**Score:** 1.20
 
