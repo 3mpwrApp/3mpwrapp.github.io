@@ -634,6 +634,18 @@ permalink: /app-tour/
       <div class="caption">Community Hub</div>
     </div>
     <div class="preview-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/community/communitytab13mpwrapp.png" alt="Community features and groups" loading="lazy">
+      <div class="caption">Community Features</div>
+    </div>
+    <div class="preview-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/community/communitytab23mpwrapp.png" alt="Community discussions and support" loading="lazy">
+      <div class="caption">Community Support</div>
+    </div>
+    <div class="preview-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/community/communitytab3discord3mpwrapp.png" alt="Discord integration for community chat" loading="lazy">
+      <div class="caption">Discord Integration</div>
+    </div>
+    <div class="preview-card">
       <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/community/testerschatcommunitytab3mpwrapp.png" alt="Beta Testers Chat room" loading="lazy">
       <div class="caption">Beta Testers Chat</div>
     </div>
@@ -654,6 +666,30 @@ permalink: /app-tour/
     <div class="preview-card">
       <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/profile/profile/profile23mpwrapp.png" alt="Profile settings and customization" loading="lazy">
       <div class="caption">Profile Settings</div>
+    </div>
+    <div class="preview-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/profile/profile/profileedit13mpwrapp.png" alt="Edit profile personal information" loading="lazy">
+      <div class="caption">Edit Profile</div>
+    </div>
+    <div class="preview-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/profile/profile/profileedit33mpwrapp.png" alt="Profile health information" loading="lazy">
+      <div class="caption">Health Info</div>
+    </div>
+    <div class="preview-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/profile/profile/profileedit43mpwrapp.png" alt="Profile work history" loading="lazy">
+      <div class="caption">Work History</div>
+    </div>
+    <div class="preview-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/profile/profile/profileedit53mpwrapp.png" alt="Profile legal case details" loading="lazy">
+      <div class="caption">Case Details</div>
+    </div>
+    <div class="preview-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/profile/profile/profileedit63mpwrapp.png" alt="Profile accessibility preferences" loading="lazy">
+      <div class="caption">Accessibility Prefs</div>
+    </div>
+    <div class="preview-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/profile/profile/profileedit73mpwrapp.png" alt="Profile notification settings" loading="lazy">
+      <div class="caption">Notifications</div>
     </div>
   </div>
 </section>
