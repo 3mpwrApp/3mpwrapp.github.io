@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Alert, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../components/A11yPressable";
@@ -10,6 +10,21 @@ import { MAX_FONT_SCALE } from "../../hooks/useA11y";
 import { useTranslation } from "../../i18n";
 import { useAppPalette } from "../../theme/usePalette";
 import { logger } from "../../utils/logger";
+
+// Check for Firebase Test Lab / E2E bypass
+let AsyncStorage: any;
+try {
+  AsyncStorage = require("@react-native-async-storage/async-storage").default;
+} catch {}
+
+async function checkTestLabBypass(): Promise<boolean> {
+  try {
+    const bypass = await AsyncStorage?.getItem?.('empowr.testlab.bypass');
+    return bypass === 'true';
+  } catch {
+    return false;
+  }
+}
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -21,6 +36,21 @@ export default function LoginScreen() {
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [working, setWorking] = useState(false);
+
+  // Auto-login as guest for Test Lab
+  useEffect(() => {
+    (async () => {
+      const isTestLab = await checkTestLabBypass();
+      if (isTestLab) {
+        logger.log('[Login] Test Lab bypass detected - auto-signing in as guest');
+        try {
+          await signInGuest();
+        } catch (err) {
+          logger.error('[Login] Test Lab auto-guest failed:', err);
+        }
+      }
+    })();
+  }, [signInGuest]);
 
   const handleLogin = async () => {
     if (!email.trim() || !password.trim()) {
@@ -166,6 +196,7 @@ export default function LoginScreen() {
         disabled={working}
         accessibilityRole="button"
         accessibilityLabel={t("auth.continueAsGuest", "Continue as Guest")}
+        testID="guest-mode-button"
         style={[styles.button, { backgroundColor: palette.surface, borderWidth: 1, borderColor: palette.muted }, working && { opacity: 0.6 }]}
       >
         <Text style={[styles.buttonText, { color: palette.text }]}>
