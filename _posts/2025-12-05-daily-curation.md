@@ -9,126 +9,71 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-12-05
 
-Curated 25 items from disability, accessibility, and social policy sources.
+Curated 14 items from disability, accessibility, and social policy sources.
 
-## 1. Manitoba Government Adds Doctors to Health Links to Strengthen Care, Reduce Emergency Room Referrals
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71737)
-**Score:** 25.50
+## 1. Canada added 54,000 jobs in November as unemployment rate falls
+Canada's national unemployment rate fell 0.4 per cent in November to 6.5 per cent, and marks the second straight monthly decline in the unemployment rate.
+📍 [Source](https://globalnews.ca/news/11562145/jobs-report-unemployment-november-2025/)
+**Score:** 11.50
 
-## 2. Former national chief says AFN lawsuit to move ahead, settlement talks 'stonewalled'
-<img src='https://i.cbc.ca/ais/c2c79881-6b80-42fa-b357-71a37f7ae88f,1764873762767/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C405%2C7043%2C3961%29%3BResize%3D%28620%29' alt='A woman in a headdress speaks with a Canadian flag in the background.' width='620' height='349' title='Assembly of First Nations National Chief, RoseAnne Archibald meets with Prime Minister Justin Trudeau on Parliament Hill Nov. 29, 2022.'/><p>Former Assembly of First Nations national chief RoseAnne Archibald says her $5-million lawsuit against the national advocacy organization is moving forward, after settlement talks “were stalled and stonewalled” for 18 months. </p>
-📍 [Source](https://www.cbc.ca/news/indigenous/archibald-afn-lawsuit-discovery-9.7003293?cmp=rss)
-**Score:** 14.50
+## 2. Quebec losing $1.5B a year as anglophones face high unemployment, lower wages: report
+A new report finds anglophones face higher unemployment and lower wages in Quebec; gaps that researchers say carry major economic consequences.
+📍 [Source](https://globalnews.ca/news/11559241/quebec-anglophones-economic-report/)
+**Score:** 12.30
 
-## 3. 2 Alberta cabinet ministers say money a key factor in using Charter override on teachers
-<img src='https://i.cbc.ca/ais/83bedb4a-5dd7-4849-8d44-a8e3d2b9f115,1764861333712/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C387%2C5415%2C3045%29%3BResize%3D%28620%29' alt='A man speaks at a podium in front of Alberta and Canadian flags. ' width='620' height='349' title='Alberta Education Minister Demetrios Nicolaides provides an update on teacher bargaining in Calgary, on Friday, Oct. 17, 2025. '/><p>Two Alberta cabinet ministers say money was a key factor in the United Conservative government's decision to use the Charter's notwithstanding clause to override teachers' rights and shut down a provincewide strike.</p>
-📍 [Source](https://www.cbc.ca/news/canada/edmonton/2-ministers-notwithstanding-teachers-9.7002817?cmp=rss)
-**Score:** 17.60
+## 3. Industry experts question Saab's pitch to bring 10,000 jobs to Canada
+Critics are questioning the solidity of Saab's pitch to deliver 10,000 jobs in Canada if it decides to set up shop here to assemble Gripen fighter jets.
+📍 [Source](https://globalnews.ca/news/11562395/saab-fighter-jets-jobs-canada/)
+**Score:** 9.50
 
-## 4. Joly says feds will serve Stellantis with notice of default on funding contracts
-<img src='https://i.cbc.ca/ais/9a5143ba-a73d-4dca-8a8e-dfaafcdace9f,1764883419133/full/max/0/default.jpg?im=Crop%2Crect%3D%2872%2C0%2C1693%2C952%29%3BResize%3D%28620%29' alt='A woman speaks into a microphone' width='620' height='349' title='Industry Minister Mélanie Joly speaks before a parliamentary committee on Thursday, Dec. 4, 2025.'/><p>The federal government is escalating its fight with automotive giant Stellantis over the company's decision to move some production to the U.S., despite receiving hundreds of millions of dollars in Canadian taxpayer incentives in recent years.</p>
-📍 [Source](https://www.cbc.ca/news/canada/windsor/canada-stellantis-sue-brampton-jobs-default-contracts-joly-9.7003596?cmp=rss)
-**Score:** 10.50
+## 4. Canada's Summer McIntosh wins 400M freestyle by more than 15 seconds at U.S. Open swim meet
+<img src='https://i.cbc.ca/ais/1231986f-4fdb-48a1-a2f3-4dee05c3cd59,1764941298702/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C219%2C4193%2C2358%29%3BResize%3D%28620%29' alt='A swimmer displays a medal.' width='620' height='349' title='AUSTIN, TEXAS - DECEMBER 04: Gold medalist Summer McIntosh poses after the Women's 400m Freestyle final during day 2 of the Toyota U.S. Open on December 04, 2025 in Austin, Texas.  (Photo by Alex Slitz/Getty Images)'/><p>Canada's Summer McIntosh set a new U.S. Open record in the women's 400-metre freestyle on Thursday night at the Toyota U.S. Open Championships.</p>
+📍 [Source](https://www.cbc.ca/sports/olympics/summer/aquatics/summer-mcintosh-us-open-record-swim-dec5-9.7004229?cmp=rss)
+**Score:** 9.50
 
-## 5. Natural resources minister takes heat from B.C. chiefs over potential West Coast pipeline
-<img src='https://i.cbc.ca/ais/35e0745e-64ad-4543-9da3-18012d166684,1764878841949/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Tim Hodgson stands at a podium addressing First Nations chief in Ottawa' width='620' height='349' title='Natural Resources Minister Tim Hodgson addresses the B.C. regional caucus at the Assembly of First Nations in Ottawa, after leaders raised concerns about a proposed pipeline from Alberta to B.C.'s coast.'/><p>Natural Resources Minister Tim Hodgson faced a failing grade and a cancelled speech at this week's Assembly of First Nations meeting as pushback grows among B.C. chiefs over the government's new  energy agreement  with Alberta.</p>
-📍 [Source](https://www.cbc.ca/news/politics/bc-chiefs-hodgson-pipeline-9.7003269?cmp=rss)
-**Score:** 8.50
+## 5. Long-awaited electronic medical records system to launch Saturday at IWK Health Centre
+<img src='https://i.cbc.ca/ais/16349212-ea21-4739-b3e1-bc9fcf2706da,1764883601195/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C46%2C1760%2C990%29%3BResize%3D%28620%29' alt='A sign in a hallway that says one person one record' width='620' height='349' title='Nova Scotia's new electronic medical record system will debut Saturday at the IWK Health Centre.'/><p>If all goes according to plan, at 6 a.m. AT on Saturday people working at the IWK Health Centre will become the test case for a generational change to Nova Scotia’s health-care system.</p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/one-person-one-record-health-care-patients-doctors-nurses-iwk-9.7003614?cmp=rss)
+**Score:** 11.30
 
-## 6. Third Session Ends With Important Legislation to Keep Communities Safe, More Inclusive
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71838)
-**Score:** 5.40
-
-## 7. Manitobans Invited to Participate in Budget 2026 Survey, Consultations
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71837)
-**Score:** 6.50
-
-## 8. Filipino BC defends funds distribution with former board members calling for transparency
-Lina Vargas was on the board for almost two years and told Global News that accountability and transparency are fundamental rights for all community members.
-📍 [Source](https://globalnews.ca/news/11560237/filipino-bc-funds-distribution-board-members-transparency/)
+## 6. Manitoba Government Signs onto National Electricity Grid Memorandum of Understanding
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71742)
 **Score:** 7.50
 
-## 9. Alberta legislation would change citizen referendum rules, restrict political party names
-📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-legislation-would-change-citizen-referendum-rules-restrict-political-party-names-9.7003718?cmp=rss)
-**Score:** 6.90
+## 7. Newfoundland girl’s disappearance prompts calls for tougher laws to stop abductions
+The girl’s disappearance underscores long-standing concerns about the ease with which a parent can take a child to another country without the other parent’s knowledge or consent.
+📍 [Source](https://globalnews.ca/news/11560868/child-disappeance-abductions/)
+**Score:** 5.50
 
-## 10. Richmond Christmas Fund marks another year of local support
-The long-running initiative invites the community to donate new toys and enjoy family-friendly activities.
-📍 [Source](https://www.straight.com/living/richmond-christmas-fund-marks-another-year-of-local-support)
-**Score:** 6.00
+## 8. What happens to the wood from this burnt forest?
+<img src='https://i.cbc.ca/ais/46fdf53a-6e9e-4be4-b378-eaa7033b0c2d,1764874895184/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1600%2C900%29%3BResize%3D%28620%29' alt='An green John Deere excavator lifts a charred tree in the forest.' width='620' height='349' title='Crews are hard at work cleaning up the burnt trees from the Long Lake wildfire in Nova Scotia's Annapolis County.'/><p>The cleanup of the Long Lake wildfire in Nova Scotia’s Annapolis County has begun. So what happens to the thousands of hectares of forest that was burned? The CBC’s Aly Thomson went to West Dalhousie to find out.</p>
+📍 [Source](https://www.cbc.ca/player/play/9.7003320?cmp=rss)
+**Score:** 5.80
 
-## 11. Calgary-Banff rail idea submitted to Major Projects Office
-<img src='https://i.cbc.ca/ais/a8152f37-956e-4703-8dc9-4d09ad649137,1764887830603/full/max/0/default.jpg?im=Crop%2Crect%3D%28145%2C81%2C3454%2C1942%29%3BResize%3D%28620%29' alt='A rendering of the proposed passenger rail between Calgary and Banff.' width='620' height='349' title='A rendering of the proposed passenger rail between Calgary and Banff.'/><p>A proposal for a hydrogen-powered passenger rail connecting Calgary and Banff has been submitted to the federal government in the hopes of having it fast-tracked.</p>
-📍 [Source](https://www.cbc.ca/news/canada/calgary/calgary-to-banff-rail-project-federal-funding-9.7003563?cmp=rss)
-**Score:** 6.00
-
-## 12. Take-home DNA test reunites Quebec man with long-lost Dutch brother after 80 years
-An at-home DNA test given as a birthday gift solved an 80-year family mystery by revealing that a man in Quebec and a man in the Netherlands were long-lost brothers.
-📍 [Source](https://globalnews.ca/news/11560094/take-home-dna-test-quebec-man-long-lost-dutch-brother/)
-**Score:** 4.50
-
-## 13. Calgary's budget applauded but ‘sustainability' of spending questioned
-To partly reduce the property tax increase, Calgary city council tapped into $50 million of investment income to help pay for city operations.
-📍 [Source](https://globalnews.ca/news/11560404/calgary-budget-applauded-sustainability-of-spending-questioned/)
-**Score:** 4.50
-
-## 14. Recent deaths highlight urgency for homelessness solution in New Brunswick
-Two recent deaths of unhoused people in New Brunswick as temperatures drop have highlighted the urgency of the situation and raised concerns at the provincial legislature.
-📍 [Source](https://globalnews.ca/news/11560080/unhoused-winter-deaths-new-brunswick/)
+## 9. Measles Update #50
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71743)
 **Score:** 3.60
 
-## 15. The Arts Club finds the enduring appeal of Little Women
-The timeless classic hits the Granville Island Stage.
-📍 [Source](https://www.straight.com/arts/arts-club-finds-enduring-appeal-of-little-women)
+## 10. Measles Update #49
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71741)
+**Score:** 3.60
+
+## 11. TTC maintenance, asbestos cleanup delaying parts of Rogers' 5G subway network build
+Asbestos cleanup, tight work windows and other TTC delays have slowed the build out of 5G cellular service in Toronto's subway system.
+📍 [Source](https://globalnews.ca/news/11560862/ttc-rogers-5g-subway-network-build/)
 **Score:** 4.50
 
-## 16. You Nearly Missed: Jane Siberry continuing to write her own rule book at the Rickshaw
-Get ready for a true Canadian original.
-📍 [Source](https://www.straight.com/music/you-nearly-missed-jane-siberry-continuing-to-write-her-own-rule-book-at-rickshaw)
+## 12. A fresh take on Little Women at Granville Island Stage
+A multi-generational fave returns with a refreshed and theatrical approach.
+📍 [Source](https://www.straight.com/arts/a-fresh-take-on-little-women-at-granville-island-stage)
 **Score:** 4.50
 
-## 17. Police find 'I hate my child' search made on couple's device 2 days before boy, 12, died
-<img src='https://i.cbc.ca/ais/9f06b6b1-fba7-4157-a289-20f97dcc2f94,1761166699492/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C12%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A sketch of a person in lawyer robes speaking in a court room next to a seated man and person in a green jumpsuit in a prisoner box.' width='620' height='349' title='Brandy Cooney, left, is one of the accused in a murder trial in Milton, Ont. Cooney is seen Monday as assistant Crown attorney Monica MacKenzie, centre, questions a witness.'/><p>The first-degree murder trial of Brandy Cooney and Becky Hamber in Milton, Ont., heard texts in which the women questioned whether a boy in their care might be dying a month before his death in December 2022.</p>
-📍 [Source](https://www.cbc.ca/news/canada/hamilton/cooney-hamber-trial-milton-9.7003688?cmp=rss)
-**Score:** 4.50
-
-## 18. Ottawa begins to consider the possibility of a Quebec referendum
-<img src='https://i.cbc.ca/ais/c30e6fd0-6b97-4a66-adf9-be615d20cef2,1764862949155/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C190%2C3500%2C1968%29%3BResize%3D%28620%29' alt='People wear miniature Quebec flags in their hair during the Saint-Jean-Baptiste Day parade in Montreal, Tuesday, June 24, 2025.' width='620' height='349' title='People wear miniature Quebec flags in their hair during the Saint-Jean-Baptiste Day parade in Montreal, Tuesday, June 24, 2025.'/><p>The Parti Québécois's dominance in the polls for nearly two years and its leader Paul St-Pierre Plamondon's promise to hold a referendum on Quebec sovereignty during his first term have reverberated all the way to Ottawa.</p>
-📍 [Source](https://www.cbc.ca/news/politics/ottawa-parti-quebecois-preparation-9.7002815?cmp=rss)
-**Score:** 4.50
-
-## 19. Key ministers address Assembly of First Nations in Ottawa after Hodgson is bumped
-Several key federal cabinet ministers addressed the Assembly of First Nations gathering in Ottawa Thursday, including Finance Minister François-Philippe Champagne.
-📍 [Source](https://globalnews.ca/news/11560303/afn-assembly/)
-**Score:** 3.00
-
-## 20. Ottawa serving Stellantis with default notice over Brampton cuts: Joly
-Industry Minister Melanie Joly told the House of Commons committee on international trade the move breaches federal contracts tied to manufacturing in Brampton and Windsor, Ont.
-📍 [Source](https://globalnews.ca/news/11560195/stellantis-brampton-cuts-default-notice-joly/)
-**Score:** 3.00
-
-## 21. The Tyee Has a New AI Policy
-Long story short: We’re mostly taking a pass on the robots.
-📍 [Source](https://thetyee.ca/Tyeenews/2025/12/05/The-Tyee-New-AI-Policy/)
+## 13. Employer Prosecuted for Workplace Fatality
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71738)
 **Score:** 2.00
 
-## 22. The Crofton Mill Closure Highlights Multiple Government Failures
-Raw log exports, capital flight and shuttered mills signal the fall of BC’s forestry sector.
-📍 [Source](https://thetyee.ca/Analysis/2025/12/05/Crofton-Mill-Closure-Government-Failures/)
-**Score:** 3.00
-
-## 23. Somali communities say ‘people feel insecure and live in fear’ after Trump's tirade
-<img src='https://i.cbc.ca/ais/e875ac95-bdb5-4715-b2f6-04c4ba45a076,1764892463741/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C240%2C1179%2C663%29%3BResize%3D%28620%29' alt='A man sits in a chair while posing for a photo. ' width='620' height='349' title='Ahmed Abdulkadir, 50, is a community advocate and content creator in Edmonton.'/><p>Many people in the Somali community say they feel fearful and angry in the aftermath of U.S. President Donald Trump’s tirade against Somali communities in Minnesota.</p>
-📍 [Source](https://www.cbc.ca/news/canada/somali-community-reaction-to-trump-9.7003621?cmp=rss)
-**Score:** 3.00
-
-## 24. Former Saskatoon school director receives additional 5-month sentence
-Former Saskatoon school director, John Olubobokun, received a second conditional sentence of five additional months for historic assault case.
-📍 [Source](https://globalnews.ca/news/11560395/former-saskatoon-school-director-additional-sentence/)
-**Score:** 1.30
-
-## 25. 30 can't-miss Vancouver events for December 2025
-Your guide to what's on in Vancouver in December.
-📍 [Source](https://www.straight.com/arts/30-cant-miss-vancouver-events-for-december-2025)
-**Score:** 1.00
+## 14. Sinéad X Sanders on traumatic brain injuries, cognitive dissonance, and a long-awaited killer debut
+Vancouver finest players rally around a singer with an extraordinary story.
+📍 [Source](https://www.straight.com/music/sinead-x-sanders-on-traumatic-brain-injuries-cognitive-dissonance-and-a-long-awaited-killer)
+**Score:** 2.00
 
