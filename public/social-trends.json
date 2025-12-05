@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-04T18:03:02.903Z",
+  "lastUpdated": "2025-12-05T00:06:24.477Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4360,
+      "totalPosts": 4385,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-04T18:02:52.686Z"
+      "lastSeen": "2025-12-05T00:06:16.864Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4375,
+      "totalPosts": 4400,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-04T18:02:55.124Z"
+      "lastSeen": "2025-12-05T00:06:18.504Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4358,
+      "totalPosts": 4382,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-12-04T18:02:57.346Z"
+      "lastSeen": "2025-12-05T00:06:19.999Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4368,
+      "totalPosts": 4393,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-04T18:02:59.676Z"
+      "lastSeen": "2025-12-05T00:06:21.812Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4375,
+      "totalPosts": 4400,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-04T18:03:01.899Z"
+      "lastSeen": "2025-12-05T00:06:23.473Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "424-word hot take: “You Can’t Make Something Accessible to Everyone”\nadrianroselli.com/2025/12/you-...\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 19,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I still recommend the FATE Accessibility Toolkit for anyone interested in disability representation, #accessibility - tabletop or otherwise. Don't assume it is ONLY applicable to FATE.",
-      "author": "foxdesign.tech",
-      "engagement": 32,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "424-word hot take: “You Can’t Make Something Accessible to Everyone”\nadrianroselli.com/2025/12/you-...\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 19,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "We have witnessed attacks on the ADA, cuts to Special Education, and harmful shifts in attitudes toward the disabled community.\n\nJoin us Wednesday with Tony Coelho and Sara Minkara. \n\nRSVP: democratsabroad.org/dec_2025_gdc...\n\n#DemocratsAbroad #IDPD #DisabilityRights #Resist",
       "author": "demsabroad.bsky.social",
@@ -338,6 +308,36 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
+      "author": "adulitingishard.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Basic screen reader support for combat is in! This is a lot of text, so even at 200% speed it takes awhile! I'm sure there's still lots of work left to do to make this something that's useful for folks, but we gotta do it one step at a time. #indiegame #a11y",
+      "author": "byobattleship.bsky.social",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -346,11 +346,11 @@
       "count": 37
     },
     {
-      "keyword": "a11y",
-      "count": 29
+      "keyword": "accessibility",
+      "count": 28
     },
     {
-      "keyword": "accessibility",
+      "keyword": "a11y",
       "count": 28
     },
     {
@@ -360,10 +360,6 @@
     {
       "keyword": "cripthevote",
       "count": 25
-    },
-    {
-      "keyword": "idpd2025",
-      "count": 11
     },
     {
       "keyword": "altcitizen",
@@ -386,15 +382,15 @@
       "count": 9
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 8
+      "keyword": "idpd2025",
+      "count": 9
     },
     {
       "keyword": "inclusionmatters",
       "count": 7
     },
     {
-      "keyword": "inclusion",
+      "keyword": "accessibility a11y",
       "count": 7
     },
     {
@@ -406,19 +402,23 @@
       "count": 4
     },
     {
+      "keyword": "disability",
+      "count": 4
+    },
+    {
       "keyword": "autism adhd",
       "count": 4
     },
     {
+      "keyword": "inclusivedesign",
+      "count": 4
+    },
+    {
+      "keyword": "webdev",
+      "count": 4
+    },
+    {
       "keyword": "foxtakedown",
-      "count": 4
-    },
-    {
-      "keyword": "stoptheliesfox",
-      "count": 4
-    },
-    {
-      "keyword": "virtual",
       "count": 4
     }
   ]
