@@ -118,7 +118,7 @@ export default function ProfileCard() {
                   style={[styles.smallButton, { backgroundColor: palette.primary }]}
                   accessibilityRole="button"
                   accessibilityLabel="Save display name"
-                  hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Text style={[styles.smallButtonText, { color: palette.onPrimary }]}>{t("common.save", "Save")}</Text>
                 </Pressable>
@@ -127,7 +127,7 @@ export default function ProfileCard() {
                   style={[styles.smallButton, { backgroundColor: palette.surface }]}
                   accessibilityRole="button"
                   accessibilityLabel="Cancel editing display name"
-                  hitSlop={{ top: 8, right: 8, bottom: 8, left: 8 }}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Text style={styles.smallButtonText}>{t("common.cancel", "Cancel")}</Text>
                 </Pressable>

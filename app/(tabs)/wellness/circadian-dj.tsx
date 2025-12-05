@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import { useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { HIT_SLOP_12 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { useCircadianRhythmDJ } from '../../../services/circadianRhythmDJ';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -466,7 +467,12 @@ export default function CircadianDJScreen() {
           <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
             <View style={styles.modalHeader}>
               <Text style={[styles.modalTitle, { color: palette.text }]}>Chronotype Quiz</Text>
-              <Pressable onPress={() => setShowQuizModal(false)}>
+              <Pressable 
+                onPress={() => setShowQuizModal(false)}
+                accessibilityRole="button"
+                accessibilityLabel="Close modal"
+                hitSlop={HIT_SLOP_12}
+              >
                 <Ionicons name="close" size={24} color={palette.text} />
               </Pressable>
             </View>
@@ -518,7 +524,12 @@ export default function CircadianDJScreen() {
           <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
             <View style={styles.modalHeader}>
               <Text style={[styles.modalTitle, { color: palette.text }]}>Log Sleep</Text>
-              <Pressable onPress={() => setShowSleepLogModal(false)}>
+              <Pressable 
+                onPress={() => setShowSleepLogModal(false)}
+                accessibilityRole="button"
+                accessibilityLabel="Close modal"
+                hitSlop={HIT_SLOP_12}
+              >
                 <Ionicons name="close" size={24} color={palette.text} />
               </Pressable>
             </View>

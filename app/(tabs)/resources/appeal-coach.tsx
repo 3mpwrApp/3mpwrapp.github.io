@@ -295,7 +295,7 @@ Sincerely,
       ))}
 
       {/* Appeal Templates */}
-      <Pressable onPress={() => setShowTemplates(!showTemplates)} style={[s.card, { borderColor: palette.success }]}>
+      <Pressable onPress={() => setShowTemplates(!showTemplates)} style={[s.card, { borderColor: palette.success }]} accessibilityRole="button" accessibilityLabel={`${showTemplates ? 'Hide' : 'Show'} appeal letter templates`} hitSlop={HIT_SLOP_8}>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
           <Text style={s.cardTitle}>📝 Appeal Letter Templates</Text>
           <MaterialCommunityIcons name={showTemplates ? 'chevron-up' : 'chevron-down'} size={24} color={palette.text} />

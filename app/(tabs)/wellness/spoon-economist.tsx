@@ -184,7 +184,13 @@ export default function SpoonEconomistScreen() {
           headerStyle: { backgroundColor: palette.surface },
           headerTintColor: palette.text,
           headerRight: () => (
-            <Pressable onPress={() => setShowSettingsModal(true)} style={{ marginRight: 16 }}>
+            <Pressable 
+              onPress={() => setShowSettingsModal(true)} 
+              style={{ marginRight: 16 }}
+              accessibilityRole="button"
+              accessibilityLabel="Open settings"
+              hitSlop={HIT_SLOP_12}
+            >
               <Ionicons name="settings-outline" size={24} color={palette.text} />
             </Pressable>
           ),
@@ -248,7 +254,12 @@ export default function SpoonEconomistScreen() {
         <View style={[styles.card, { backgroundColor: palette.surface }]}>
           <View style={styles.sectionHeader}>
             <Text style={[styles.sectionTitle, { color: palette.text }]}>Quick Tasks</Text>
-            <Pressable onPress={() => setShowManageQuickTasksModal(true)}>
+            <Pressable 
+              onPress={() => setShowManageQuickTasksModal(true)}
+              accessibilityRole="button"
+              accessibilityLabel="Edit quick tasks"
+              hitSlop={HIT_SLOP_12}
+            >
               <Text style={[styles.manageLink, { color: palette.primary }]}>Edit</Text>
             </Pressable>
           </View>
@@ -281,7 +292,12 @@ export default function SpoonEconomistScreen() {
           <View style={[styles.card, { backgroundColor: palette.surface }]}>
             <View style={styles.sectionHeader}>
               <Text style={[styles.sectionTitle, { color: palette.text }]}>My Saved Tasks</Text>
-              <Pressable onPress={() => setShowManageTasksModal(true)}>
+              <Pressable 
+                onPress={() => setShowManageTasksModal(true)}
+                accessibilityRole="button"
+                accessibilityLabel="Manage saved tasks"
+                hitSlop={HIT_SLOP_12}
+              >
                 <Text style={[styles.manageLink, { color: palette.primary }]}>Manage</Text>
               </Pressable>
             </View>

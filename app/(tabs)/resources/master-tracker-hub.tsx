@@ -9,7 +9,7 @@ import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { DyslexiaText } from '../../../components/DyslexiaText';
 import { GapView } from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { trackEvent } from '../../../services/analyticsClient';
@@ -1029,7 +1029,7 @@ function QuickLogModal({
           <ScrollView showsVerticalScrollIndicator={false}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
               <Text style={{ fontSize: 20, fontWeight: '700', color: palette.text }}>{getTitle()}</Text>
-              <Pressable onPress={onClose} hitSlop={HIT_SLOP_8}>
+              <Pressable onPress={onClose} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close modal">
                 <Ionicons name="close-circle" size={28} color={palette.muted} />
               </Pressable>
             </View>
@@ -1298,47 +1298,47 @@ function PainMapTab() {
         {/* Simplified body outline with tappable regions */}
         <View style={{ width: 200, height: 350, position: 'relative' }}>
           {/* Head */}
-          <Pressable style={[painMapStyles.bodyPart, { top: 0, left: 75, width: 50, height: 50, borderRadius: 25 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 0, left: 75, width: 50, height: 50, borderRadius: 25 }]} accessibilityRole="button" accessibilityLabel="Head pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 24 }}>🧠</Text>
           </Pressable>
           {/* Neck */}
-          <Pressable style={[painMapStyles.bodyPart, { top: 55, left: 85, width: 30, height: 20 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 55, left: 85, width: 30, height: 20 }]} accessibilityRole="button" accessibilityLabel="Neck pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 12 }}>Neck</Text>
           </Pressable>
           {/* Shoulders */}
-          <Pressable style={[painMapStyles.bodyPart, { top: 75, left: 40, width: 40, height: 30 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 75, left: 40, width: 40, height: 30 }]} accessibilityRole="button" accessibilityLabel="Left shoulder pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 10 }}>L Shoulder</Text>
           </Pressable>
-          <Pressable style={[painMapStyles.bodyPart, { top: 75, left: 120, width: 40, height: 30 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 75, left: 120, width: 40, height: 30 }]} accessibilityRole="button" accessibilityLabel="Right shoulder pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 10 }}>R Shoulder</Text>
           </Pressable>
           {/* Upper Back / Chest */}
-          <Pressable style={[painMapStyles.bodyPart, { top: 105, left: 60, width: 80, height: 50 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 105, left: 60, width: 80, height: 50 }]} accessibilityRole="button" accessibilityLabel="Torso pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 12 }}>Torso</Text>
           </Pressable>
           {/* Lower Back */}
-          <Pressable style={[painMapStyles.bodyPart, { top: 160, left: 65, width: 70, height: 40 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 160, left: 65, width: 70, height: 40 }]} accessibilityRole="button" accessibilityLabel="Lower back pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 12 }}>Lower Back</Text>
           </Pressable>
           {/* Hips */}
-          <Pressable style={[painMapStyles.bodyPart, { top: 205, left: 50, width: 45, height: 35 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 205, left: 50, width: 45, height: 35 }]} accessibilityRole="button" accessibilityLabel="Left hip pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 10 }}>L Hip</Text>
           </Pressable>
-          <Pressable style={[painMapStyles.bodyPart, { top: 205, left: 105, width: 45, height: 35 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 205, left: 105, width: 45, height: 35 }]} accessibilityRole="button" accessibilityLabel="Right hip pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 10 }}>R Hip</Text>
           </Pressable>
           {/* Knees */}
-          <Pressable style={[painMapStyles.bodyPart, { top: 260, left: 55, width: 35, height: 30 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 260, left: 55, width: 35, height: 30 }]} accessibilityRole="button" accessibilityLabel="Left knee pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 10 }}>L Knee</Text>
           </Pressable>
-          <Pressable style={[painMapStyles.bodyPart, { top: 260, left: 110, width: 35, height: 30 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 260, left: 110, width: 35, height: 30 }]} accessibilityRole="button" accessibilityLabel="Right knee pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 10 }}>R Knee</Text>
           </Pressable>
           {/* Ankles/Feet */}
-          <Pressable style={[painMapStyles.bodyPart, { top: 310, left: 55, width: 35, height: 30 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 310, left: 55, width: 35, height: 30 }]} accessibilityRole="button" accessibilityLabel="Left foot pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 10 }}>L Foot</Text>
           </Pressable>
-          <Pressable style={[painMapStyles.bodyPart, { top: 310, left: 110, width: 35, height: 30 }]}>
+          <Pressable style={[painMapStyles.bodyPart, { top: 310, left: 110, width: 35, height: 30 }]} accessibilityRole="button" accessibilityLabel="Right foot pain region" hitSlop={HIT_SLOP_12}>
             <Text style={{ fontSize: 10 }}>R Foot</Text>
           </Pressable>
         </View>
@@ -1439,6 +1439,9 @@ function EnergyTab() {
           <Pressable 
             onPress={() => setSpoons(s => Math.max(1, s - 1))}
             style={{ padding: 8, backgroundColor: palette.muted, borderRadius: 8, marginRight: 8 }}
+            accessibilityRole="button"
+            accessibilityLabel="Decrease daily spoons"
+            hitSlop={HIT_SLOP_12}
           >
             <Text style={{ color: palette.text, fontWeight: '700' }}>−</Text>
           </Pressable>
@@ -1446,6 +1449,9 @@ function EnergyTab() {
           <Pressable 
             onPress={() => setSpoons(s => Math.min(20, s + 1))}
             style={{ padding: 8, backgroundColor: palette.muted, borderRadius: 8, marginLeft: 8 }}
+            accessibilityRole="button"
+            accessibilityLabel="Increase daily spoons"
+            hitSlop={HIT_SLOP_12}
           >
             <Text style={{ color: palette.text, fontWeight: '700' }}>+</Text>
           </Pressable>
@@ -1471,6 +1477,9 @@ function EnergyTab() {
               minWidth: 100,
               alignItems: 'center',
             }}
+            accessibilityRole="button"
+            accessibilityLabel={`${activity.name}, costs ${activity.cost} spoons`}
+            hitSlop={HIT_SLOP_12}
           >
             <Text style={{ fontSize: 24 }}>{activity.emoji}</Text>
             <Text style={{ color: palette.text, fontWeight: '600', marginTop: 4 }}>
@@ -1493,6 +1502,9 @@ function EnergyTab() {
           alignItems: 'center',
           marginTop: 24,
         }}
+        accessibilityRole="button"
+        accessibilityLabel="Reset day spoons"
+        hitSlop={HIT_SLOP_12}
       >
         <Text style={{ color: palette.onPrimary, fontWeight: '700' }}>
           {t('tracker.resetDay', 'Reset Day')}

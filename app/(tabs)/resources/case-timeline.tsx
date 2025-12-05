@@ -21,7 +21,7 @@ import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { DyslexiaText } from "../../../components/DyslexiaText";
 import { GapView } from "../../../components/GapView";
 import ResponsiveScreenWrapper from "../../../components/ResponsiveScreenWrapper";
-import { HIT_SLOP_8 } from "../../../constants/A11Y";
+import { HIT_SLOP_12, HIT_SLOP_8 } from "../../../constants/A11Y";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
 import { useTranslation } from "../../../i18n";
 import { useAppPalette } from "../../../theme/usePalette";
@@ -413,7 +413,7 @@ export default function CaseTimelineTracker() {
 
         {/* Stats Summary */}
         {entries.length > 0 && (
-          <Pressable onPress={() => setShowStatsModal(true)} style={s.statsCard}>
+          <Pressable onPress={() => setShowStatsModal(true)} style={s.statsCard} accessibilityRole="button" accessibilityLabel="View case statistics" hitSlop={HIT_SLOP_8}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
               <View>
                 <Text style={s.statsTitle}>📊 Case Overview</Text>
@@ -499,7 +499,7 @@ export default function CaseTimelineTracker() {
             style={s.searchInput}
           />
           {searchQuery ? (
-            <Pressable onPress={() => setSearchQuery('')} hitSlop={HIT_SLOP_8}>
+            <Pressable onPress={() => setSearchQuery('')} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Clear search">
               <Ionicons name="close-circle" size={20} color={palette.muted} />
             </Pressable>
           ) : null}
@@ -529,10 +529,10 @@ export default function CaseTimelineTracker() {
                         <Text style={s.eventTitle}>{entry.title}</Text>
                       </View>
                       <View style={{ flexDirection: 'row', gap: 4 }}>
-                        <Pressable onPress={() => openEditModal(entry)} hitSlop={HIT_SLOP_8}>
+                        <Pressable onPress={() => openEditModal(entry)} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel={`Edit ${entry.title}`}>
                           <Ionicons name="pencil-outline" size={18} color={palette.primary} />
                         </Pressable>
-                        <Pressable onPress={() => deleteEntry(entry.id)} hitSlop={HIT_SLOP_8}>
+                        <Pressable onPress={() => deleteEntry(entry.id)} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel={`Delete ${entry.title}`}>
                           <Ionicons name="trash-outline" size={18} color={palette.error} />
                         </Pressable>
                       </View>
@@ -640,7 +640,7 @@ export default function CaseTimelineTracker() {
           <View style={{ backgroundColor: palette.surface, borderTopLeftRadius: 20, borderTopRightRadius: 20, maxHeight: '90%', padding: 20 }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
               <Text style={s.modalTitle}>{editingEntry ? 'Edit Event' : 'Add Event'}</Text>
-              <Pressable onPress={() => { setShowAddModal(false); resetForm(); }} hitSlop={HIT_SLOP_8}>
+              <Pressable onPress={() => { setShowAddModal(false); resetForm(); }} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close modal">
                 <Ionicons name="close-circle" size={28} color={palette.muted} />
               </Pressable>
             </View>
@@ -765,6 +765,9 @@ export default function CaseTimelineTracker() {
         <Pressable 
           style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center', padding: 20 }}
           onPress={() => setShowStatsModal(false)}
+          accessibilityRole="button"
+          accessibilityLabel="Close statistics modal"
+          hitSlop={HIT_SLOP_12}
         >
           <View style={{ backgroundColor: palette.surface, borderRadius: 16, padding: 20 }}>
             <Text style={s.modalTitle}>📊 Case Statistics</Text>

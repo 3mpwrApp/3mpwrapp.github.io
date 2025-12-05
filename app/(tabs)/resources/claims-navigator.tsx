@@ -21,7 +21,7 @@ import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { DyslexiaText } from "../../../components/DyslexiaText";
 import { GapView } from "../../../components/GapView";
 import ResponsiveScreenWrapper from "../../../components/ResponsiveScreenWrapper";
-import { HIT_SLOP_8 } from "../../../constants/A11Y";
+import { HIT_SLOP_12, HIT_SLOP_8 } from "../../../constants/A11Y";
 import {
     MAX_FONT_SCALE,
     useAnnounceOnMount,
@@ -661,7 +661,7 @@ Generated with 3MPWR App
                 <Text style={s.phaseLabel}>Current Phase</Text>
                 <Text style={s.phaseTitle}>{PHASE_CONFIG[claim.phase].label}</Text>
               </View>
-              <Pressable onPress={() => setShowTypeModal(true)} hitSlop={HIT_SLOP_8}>
+              <Pressable onPress={() => setShowTypeModal(true)} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Change claim phase">
                 <Ionicons name="chevron-down" size={24} color={palette.primary} />
               </Pressable>
             </View>
@@ -690,6 +690,9 @@ Generated with 3MPWR App
               key={tab}
               onPress={() => setActiveTab(tab)}
               style={[s.tab, activeTab === tab && s.tabActive]}
+              accessibilityRole="button"
+              accessibilityLabel={`Switch to ${tab} tab`}
+              hitSlop={HIT_SLOP_8}
             >
               <Text style={[s.tabText, activeTab === tab && s.tabTextActive]}>
                 {tab === 'info' && '📝 Info'}
@@ -704,7 +707,7 @@ Generated with 3MPWR App
         {activeTab === 'info' && (
           <View>
             <Text style={s.formLabel}>Claim Type</Text>
-            <Pressable onPress={() => setShowTypeModal(true)} style={s.selectButton}>
+            <Pressable onPress={() => setShowTypeModal(true)} style={s.selectButton} accessibilityRole="button" accessibilityLabel="Select claim type" hitSlop={HIT_SLOP_8}>
               <Text style={s.selectButtonText}>
                 {CLAIM_TYPES.find(c => c.value === claimType)?.icon} {CLAIM_TYPES.find(c => c.value === claimType)?.label}
               </Text>
@@ -719,6 +722,9 @@ Generated with 3MPWR App
                     key={j}
                     onPress={() => setJurisdiction(j)}
                     style={[s.jurisdictionChip, jurisdiction === j && s.jurisdictionChipActive]}
+                    accessibilityRole="button"
+                    accessibilityLabel={`Select ${j} jurisdiction`}
+                    hitSlop={HIT_SLOP_8}
                   >
                     <Text style={[s.jurisdictionChipText, jurisdiction === j && s.jurisdictionChipTextActive]}>
                       {j}
@@ -911,6 +917,9 @@ Generated with 3MPWR App
         <Pressable 
           style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' }}
           onPress={() => setShowTypeModal(false)}
+          accessibilityRole="button"
+          accessibilityLabel="Close modal"
+          hitSlop={HIT_SLOP_12}
         >
           <View style={{ backgroundColor: palette.surface, borderTopLeftRadius: 20, borderTopRightRadius: 20, padding: 20, maxHeight: '80%' }}>
             <Text style={s.modalTitle}>Select Claim Type</Text>
@@ -920,6 +929,9 @@ Generated with 3MPWR App
                   key={type.value}
                   onPress={() => { setClaimType(type.value); setShowTypeModal(false); }}
                   style={[s.typeOption, claimType === type.value && s.typeOptionActive]}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Select ${type.label}`}
+                  hitSlop={HIT_SLOP_8}
                 >
                   <Text style={{ fontSize: 24 }}>{type.icon}</Text>
                   <Text style={[s.typeOptionText, claimType === type.value && s.typeOptionTextActive]}>

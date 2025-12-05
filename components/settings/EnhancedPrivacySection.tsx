@@ -450,7 +450,7 @@ export default function EnhancedPrivacySection() {
         accessibilityLabel="Close modal"
         hitSlop={HIT_SLOP_12}
       >
-        <Pressable style={s.modalContent} onPress={(e) => e.stopPropagation()} hitSlop={HIT_SLOP_12}>
+        <Pressable style={s.modalContent} onPress={(e) => e.stopPropagation()} accessibilityRole="none" hitSlop={HIT_SLOP_12}>
           <ScrollView>
             <Text style={s.modalTitle}>Choose Your Cloud Provider</Text>
             <Text style={s.modalDescription}>

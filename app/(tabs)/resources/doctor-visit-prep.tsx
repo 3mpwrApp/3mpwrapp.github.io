@@ -524,7 +524,7 @@ export default function DoctorVisitPrep() {
                       </Text>
                       {sym.notes && <Text style={s.listItemNotes}>{sym.notes}</Text>}
                     </View>
-                    <Pressable onPress={() => setSymptoms(prev => prev.filter(s => s.id !== sym.id))} hitSlop={HIT_SLOP_8}>
+                    <Pressable onPress={() => setSymptoms(prev => prev.filter(s => s.id !== sym.id))} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel={`Delete symptom ${sym.symptom}`}>
                       <Ionicons name="trash-outline" size={20} color={palette.error} />
                     </Pressable>
                   </View>
@@ -588,7 +588,7 @@ export default function DoctorVisitPrep() {
                         </Text>
                       )}
                     </View>
-                    <Pressable onPress={() => setMedications(prev => prev.filter(m => m.id !== med.id))} hitSlop={HIT_SLOP_8}>
+                    <Pressable onPress={() => setMedications(prev => prev.filter(m => m.id !== med.id))} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel={`Delete medication ${med.name}`}>
                       <Ionicons name="trash-outline" size={20} color={palette.error} />
                     </Pressable>
                   </View>
@@ -626,7 +626,7 @@ export default function DoctorVisitPrep() {
                 {questions.map((q, i) => (
                   <View key={i} style={s.listItem}>
                     <Text style={[s.listItemTitle, { flex: 1 }]}>{i + 1}. {q}</Text>
-                    <Pressable onPress={() => setQuestions(prev => prev.filter((_, idx) => idx !== i))} hitSlop={HIT_SLOP_8}>
+                    <Pressable onPress={() => setQuestions(prev => prev.filter((_, idx) => idx !== i))} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel={`Delete question ${i + 1}`}>
                       <Ionicons name="trash-outline" size={20} color={palette.error} />
                     </Pressable>
                   </View>
@@ -656,7 +656,7 @@ export default function DoctorVisitPrep() {
           <View style={{ backgroundColor: palette.surface, borderTopLeftRadius: 20, borderTopRightRadius: 20, maxHeight: '80%', padding: 20 }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
               <Text style={s.cardTitle}>{t('doctorVisit.suggestedQuestions', 'Suggested Questions')}</Text>
-              <Pressable onPress={() => setShowSuggestions(false)} hitSlop={HIT_SLOP_8}>
+              <Pressable onPress={() => setShowSuggestions(false)} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close suggestions">
                 <Ionicons name="close-circle" size={28} color={palette.muted} />
               </Pressable>
             </View>

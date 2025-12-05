@@ -12,6 +12,7 @@ import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Animated, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import { HIT_SLOP_12 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { useGroundingCompanion, type DistressLevel, type GroundingContext, type GroundingSession, type GroundingTechnique } from '../../../services/aiGroundingCompanion';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -464,7 +465,12 @@ export default function AIGroundingScreen() {
                   <Text style={[styles.techniqueModalTitle, { color: palette.text }]}>
                     {activeTechnique.name}
                   </Text>
-                  <Pressable onPress={() => setShowTechniqueModal(false)}>
+                  <Pressable 
+                    onPress={() => setShowTechniqueModal(false)}
+                    accessibilityRole="button"
+                    accessibilityLabel="Close modal"
+                    hitSlop={HIT_SLOP_12}
+                  >
                     <Ionicons name="close" size={28} color={palette.text} />
                   </Pressable>
                 </View>

@@ -233,7 +233,8 @@
     "js-yaml": "^4.1.1",
     "esbuild": "^0.25.4",
     "tar": "^7.5.2",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "react-server-dom-webpack": "19.2.1"
   },
   "engines": {
     "node": ">=20.19.4"

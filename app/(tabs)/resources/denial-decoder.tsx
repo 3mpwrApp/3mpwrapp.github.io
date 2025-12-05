@@ -22,7 +22,7 @@ import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import DyslexiaText from '../../../components/DyslexiaText';
 import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useSettings } from '../../../store/settings';
@@ -890,6 +890,8 @@ Generated with 3MPWR App - Denial Decoder
               onPress={() => setShowHistory(true)} 
               style={s.historyButton}
               accessibilityLabel={`View ${history.length} previous analyses`}
+              accessibilityRole="button"
+              hitSlop={HIT_SLOP_12}
             >
               <Ionicons name="time-outline" size={18} color={palette.primary} />
               <Text style={{ color: palette.primary, fontWeight: '600', marginLeft: 4 }}>{history.length}</Text>
@@ -1029,6 +1031,7 @@ Generated with 3MPWR App - Denial Decoder
                     style={[s.patternCard, { borderLeftColor: getSeverityColor(pattern.severity) }]}
                     accessibilityRole="button"
                     accessibilityLabel={`${pattern.title}, ${pattern.severity} severity. Tap for details.`}
+                    hitSlop={HIT_SLOP_12}
                   >
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Text style={{ fontSize: 15, fontWeight: '700', color: palette.text, flex: 1 }}>{pattern.title}</Text>
@@ -1073,6 +1076,8 @@ Generated with 3MPWR App - Denial Decoder
                 <Pressable 
                   onPress={() => router.push('/resources/(tools)/letter-wizard')}
                   style={[s.quickAction, { backgroundColor: palette.primary }]}
+                  accessibilityRole="button"
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Ionicons name="document-text-outline" size={16} color={palette.onPrimary} />
                   <Text style={[s.quickActionText, { color: palette.onPrimary }]}>Draft Appeal Letter</Text>
@@ -1080,6 +1085,8 @@ Generated with 3MPWR App - Denial Decoder
                 <Pressable 
                   onPress={() => router.push('/resources/(tools)/lawyer-finder')}
                   style={s.quickAction}
+                  accessibilityRole="button"
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Ionicons name="briefcase-outline" size={16} color={palette.text} />
                   <Text style={s.quickActionText}>Find Lawyer</Text>
@@ -1087,6 +1094,8 @@ Generated with 3MPWR App - Denial Decoder
                 <Pressable 
                   onPress={() => router.push('/resources/master-tracker')}
                   style={s.quickAction}
+                  accessibilityRole="button"
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Ionicons name="list-outline" size={16} color={palette.text} />
                   <Text style={s.quickActionText}>Track in Hub</Text>
@@ -1141,7 +1150,7 @@ Generated with 3MPWR App - Denial Decoder
             <View style={[s.modalContainer, { backgroundColor: palette.background }]}>
               <View style={s.modalHeader}>
                 <Text style={[s.title, { flex: 1 }]}>{showPatternDetail.title}</Text>
-                <Pressable onPress={() => setShowPatternDetail(null)} hitSlop={HIT_SLOP_8}>
+                <Pressable onPress={() => setShowPatternDetail(null)} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close pattern details">
                   <Ionicons name="close" size={24} color={palette.text} />
                 </Pressable>
               </View>
@@ -1182,6 +1191,8 @@ Generated with 3MPWR App - Denial Decoder
                         router.push('/resources/(tools)/letter-wizard');
                       }}
                       style={[s.button, { paddingVertical: 10, paddingHorizontal: 12 }]}
+                      accessibilityRole="button"
+                      hitSlop={HIT_SLOP_12}
                     >
                       <Ionicons name="document-text-outline" size={16} color={palette.onPrimary} />
                       <Text style={[s.buttonText, { fontSize: 13 }]}>{letter}</Text>
@@ -1203,10 +1214,10 @@ Generated with 3MPWR App - Denial Decoder
           <View style={[s.modalContainer, { backgroundColor: palette.background }]}>
             <View style={s.modalHeader}>
               <Text style={[s.title, { flex: 1 }]}>📜 Previous Analyses</Text>
-              <Pressable onPress={clearHistory} hitSlop={HIT_SLOP_8} style={{ marginRight: 16 }}>
+              <Pressable onPress={clearHistory} hitSlop={HIT_SLOP_8} style={{ marginRight: 16 }} accessibilityRole="button" accessibilityLabel="Clear history">
                 <Ionicons name="trash-outline" size={20} color={palette.error} />
               </Pressable>
-              <Pressable onPress={() => setShowHistory(false)} hitSlop={HIT_SLOP_8}>
+              <Pressable onPress={() => setShowHistory(false)} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close history">
                 <Ionicons name="close" size={24} color={palette.text} />
               </Pressable>
             </View>

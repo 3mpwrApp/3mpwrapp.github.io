@@ -4,6 +4,7 @@ import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
+import { HIT_SLOP_12 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { useCognitiveDistortionScanner } from '../../../services/cognitiveDistortionScanner';
 import { useEmotionalFirstAid } from '../../../services/emotionalFirstAid';
@@ -709,7 +710,12 @@ export default function EnergyMoodDashboard() {
           <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
             <View style={styles.modalHeader}>
               <Text style={[styles.modalTitle, { color: palette.text }]}>Log Social Interaction</Text>
-              <Pressable onPress={() => setShowSocialModal(false)}>
+              <Pressable 
+                onPress={() => setShowSocialModal(false)}
+                accessibilityRole="button"
+                accessibilityLabel="Close modal"
+                hitSlop={HIT_SLOP_12}
+              >
                 <Ionicons name="close" size={24} color={palette.text} />
               </Pressable>
             </View>
@@ -882,7 +888,12 @@ export default function EnergyMoodDashboard() {
           <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
             <View style={styles.modalHeader}>
               <Text style={[styles.modalTitle, { color: palette.text }]}>⏱️ Temporal Energy Shift</Text>
-              <Pressable onPress={() => setShowTemporalModal(false)}>
+              <Pressable 
+                onPress={() => setShowTemporalModal(false)}
+                accessibilityRole="button"
+                accessibilityLabel="Close modal"
+                hitSlop={HIT_SLOP_12}
+              >
                 <Ionicons name="close" size={24} color={palette.text} />
               </Pressable>
             </View>

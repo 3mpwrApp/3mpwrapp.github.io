@@ -21,7 +21,7 @@ import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { DyslexiaText } from '../../../components/DyslexiaText';
 import { GapView } from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -575,6 +575,9 @@ Generated with 3MPWR App
                         <Pressable 
                           onPress={() => updatePhaseStatus(phase.id, 'completed')}
                           style={[s.phaseAction, { backgroundColor: palette.success + '20' }]}
+                          accessibilityRole="button"
+                          accessibilityLabel={`Complete phase ${phase.weekNumber}`}
+                          hitSlop={HIT_SLOP_12}
                         >
                           <Text style={[s.phaseActionText, { color: palette.success }]}>✓ Complete</Text>
                         </Pressable>
@@ -583,6 +586,9 @@ Generated with 3MPWR App
                         <Pressable 
                           onPress={() => updatePhaseStatus(phase.id, 'current')}
                           style={[s.phaseAction, { backgroundColor: palette.primary + '20' }]}
+                          accessibilityRole="button"
+                          accessibilityLabel={`Start phase ${phase.weekNumber}`}
+                          hitSlop={HIT_SLOP_12}
                         >
                           <Text style={[s.phaseActionText, { color: palette.primary }]}>▶ Start</Text>
                         </Pressable>
@@ -660,7 +666,7 @@ Generated with 3MPWR App
           <View style={{ backgroundColor: palette.surface, borderTopLeftRadius: 20, borderTopRightRadius: 20, maxHeight: '90%', padding: 20 }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
               <Text style={s.modalTitle}>{t('rtw.addPhaseTitle', 'Add RTW Phase')}</Text>
-              <Pressable onPress={() => { setShowPhaseModal(false); resetPhaseForm(); }} hitSlop={HIT_SLOP_8}>
+              <Pressable onPress={() => { setShowPhaseModal(false); resetPhaseForm(); }} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close add phase modal">
                 <Ionicons name="close-circle" size={28} color={palette.muted} />
               </Pressable>
             </View>
@@ -719,7 +725,7 @@ Generated with 3MPWR App
           <View style={{ backgroundColor: palette.surface, borderTopLeftRadius: 20, borderTopRightRadius: 20, padding: 20 }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
               <Text style={s.modalTitle}>{t('rtw.logCommTitle', 'Log Communication')}</Text>
-              <Pressable onPress={() => setShowCommModal(false)} hitSlop={HIT_SLOP_8}>
+              <Pressable onPress={() => setShowCommModal(false)} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close log communication modal">
                 <Ionicons name="close-circle" size={28} color={palette.muted} />
               </Pressable>
             </View>

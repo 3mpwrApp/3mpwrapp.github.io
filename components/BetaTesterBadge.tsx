@@ -8,7 +8,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { HIT_SLOP_8 } from '../constants/A11Y';
+import { HIT_SLOP_12 } from '../constants/A11Y';
 import { getBetaBadgeDisplay, markBetaBadgeWelcomeSeen, shouldShowBetaBadgeWelcome } from '../services/betaBadge';
 import { useAppPalette } from '../theme/usePalette';
 
@@ -76,7 +76,7 @@ export function BetaTesterBadge({
             style={[styles.welcomeButton, { backgroundColor: badgeData.color }]}
             accessibilityRole="button"
             accessibilityLabel="Dismiss beta badge welcome message"
-            hitSlop={HIT_SLOP_8}
+            hitSlop={HIT_SLOP_12}
           >
             <Text style={[styles.welcomeButtonText, { color: palette.onPrimary }]}>Got it!</Text>
           </Pressable>

@@ -478,7 +478,7 @@ export default function PrepareAppeal() {
                 <Text style={styles.modalTitle}>
                   {t('appeal.selectType', 'What type of appeal?')}
                 </Text>
-                <Pressable onPress={() => setShowTypeModal(false)} hitSlop={HIT_SLOP_8}>
+                <Pressable onPress={() => setShowTypeModal(false)} hitSlop={HIT_SLOP_8} accessibilityRole="button" accessibilityLabel="Close modal">
                   <Ionicons name="close-circle" size={28} color={palette.muted} />
                 </Pressable>
               </View>

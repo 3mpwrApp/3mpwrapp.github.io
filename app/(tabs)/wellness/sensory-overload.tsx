@@ -12,6 +12,7 @@ import { Stack } from 'expo-router';
 import { useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import { HIT_SLOP_12 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { useSensoryOverload, type DecompressionAction, type SensoryModality } from '../../../services/sensoryOverloadDetector';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -369,7 +370,12 @@ export default function SensoryOverloadScreen() {
             <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
               <View style={styles.modalHeader}>
                 <Text style={[styles.modalTitle, { color: palette.text }]}>Log Environment</Text>
-                <Pressable onPress={() => setShowInputModal(false)}>
+                <Pressable 
+                  onPress={() => setShowInputModal(false)}
+                  accessibilityRole="button"
+                  accessibilityLabel="Close modal"
+                  hitSlop={HIT_SLOP_12}
+                >
                   <Ionicons name="close" size={24} color={palette.text} />
                 </Pressable>
               </View>
