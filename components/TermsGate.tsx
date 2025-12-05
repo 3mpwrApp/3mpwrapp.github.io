@@ -66,7 +66,8 @@ async function isFirebaseTestLabEnvironment(): Promise<boolean> {
         const testDir = '/sdcard/googletest';
         const exists = await RNFS.exists(testDir);
         if (exists) {
-          console.log('[TermsGate] Firebase Test Lab directory detected');
+           
+          console.warn('[TermsGate] Firebase Test Lab directory detected');
           return true;
         }
       }
@@ -87,7 +88,8 @@ async function isFirebaseTestLabEnvironment(): Promise<boolean> {
     
     return false;
   } catch (error) {
-    console.log('[TermsGate] Test Lab detection error:', error);
+     
+    console.warn('[TermsGate] Test Lab detection error:', error);
     return false;
   }
 }
@@ -98,14 +100,16 @@ async function checkTestLabBypass(): Promise<boolean> {
     // First check automatic Test Lab detection
     const isTestLab = await isFirebaseTestLabEnvironment();
     if (isTestLab) {
-      console.log('[TermsGate] Firebase Test Lab environment detected');
+       
+      console.warn('[TermsGate] Firebase Test Lab environment detected');
       return true;
     }
     
     // Fallback: Check if manual bypass flag is set
     const bypass = await AsyncStorage?.getItem?.('empowr.testlab.bypass');
     if (bypass === 'true') {
-      console.log('[TermsGate] Manual test bypass flag detected');
+       
+      console.warn('[TermsGate] Manual test bypass flag detected');
       return true;
     }
     
@@ -171,7 +175,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         // Check for Firebase Test Lab / E2E test bypass FIRST
         const testLabBypass = await checkTestLabBypass();
         if (testLabBypass) {
-          console.log('[TermsGate] Test Lab bypass detected - auto-accepting terms');
+           
+          console.warn('[TermsGate] Test Lab bypass detected - auto-accepting terms');
           setAccepted(true);
           setLoading(false);
           return;
@@ -209,7 +214,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
 
   // Quick accept all for automated testing (triggered by testID button)
   const quickAcceptAll = async () => {
-    console.log('[TermsGate] Quick accept triggered (automated test mode)');
+     
+    console.warn('[TermsGate] Quick accept triggered (automated test mode)');
     await saveAcceptance();
   };
 
