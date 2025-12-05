@@ -2,7 +2,6 @@ import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import {
     Linking,
-    Platform,
     Pressable,
     ScrollView,
     StyleSheet,
@@ -11,6 +10,7 @@ import {
 } from "react-native";
 
 import { HIT_SLOP_12 } from "../constants/A11Y";
+import { checkTestLabBypass } from "../services/testLabBypass";
 import { useAppPalette } from "../theme/usePalette";
 import { createShadow } from "../utils/shadow";
 
@@ -20,104 +20,6 @@ let AsyncStorage: any;
 try {
   AsyncStorage = require("@react-native-async-storage/async-storage").default;
 } catch {}
-
-/**
- * Firebase Test Lab Detection
- * 
- * Firebase Test Lab sets a system setting "firebase.test.lab" = "true"
- * We can detect this to auto-bypass Terms Gate for automated testing.
- * 
- * On Android, Test Lab VMs have specific characteristics:
- * 1. System setting: firebase.test.lab = true
- * 2. Test output directory exists: /sdcard/googletest/
- * 3. Specific device properties
- */
-async function isFirebaseTestLabEnvironment(): Promise<boolean> {
-  if (Platform.OS !== 'android') return false;
-  
-  try {
-    // Method 1: Check via NativeModules for Settings
-    const { NativeModules } = require('react-native');
-    
-    // Check if we're running in test mode (Detox, Robo, etc.)
-    // @ts-ignore - testID environment check
-    if (global.__DEV__ === false && global.__TEST_RUNNER__) {
-      return true;
-    }
-    
-    // Method 2: Check for expo-constants testEnvironment
-    try {
-      const Constants = require('expo-constants').default;
-      if (Constants?.expoConfig?.extra?.testLab === true) {
-        return true;
-      }
-      // Check execution environment
-      if (Constants?.executionEnvironment === 'storeClient') {
-        // This is a production build - could be Test Lab
-        // Additional checks needed
-      }
-    } catch {}
-    
-    // Method 3: Check for the firebase test lab file marker
-    // Test Lab creates files in /sdcard/googletest/
-    try {
-      const RNFS = require('react-native-fs');
-      if (RNFS) {
-        const testDir = '/sdcard/googletest';
-        const exists = await RNFS.exists(testDir);
-        if (exists) {
-           
-          console.warn('[TermsGate] Firebase Test Lab directory detected');
-          return true;
-        }
-      }
-    } catch {}
-    
-    // Method 4: Check device info for emulator + specific test markers
-    try {
-      if (NativeModules?.PlatformConstants) {
-        const brand = NativeModules.PlatformConstants.Brand;
-        const model = NativeModules.PlatformConstants.Model;
-        // Test Lab often uses specific device models
-        if (brand === 'google' && (model?.includes('sdk') || model?.includes('emulator'))) {
-          // Likely an emulator, could be Test Lab
-          // Check for additional markers
-        }
-      }
-    } catch {}
-    
-    return false;
-  } catch (error) {
-     
-    console.warn('[TermsGate] Test Lab detection error:', error);
-    return false;
-  }
-}
-
-// Also check for E2E test mode via AsyncStorage flag (manual bypass)
-async function checkTestLabBypass(): Promise<boolean> {
-  try {
-    // First check automatic Test Lab detection
-    const isTestLab = await isFirebaseTestLabEnvironment();
-    if (isTestLab) {
-       
-      console.warn('[TermsGate] Firebase Test Lab environment detected');
-      return true;
-    }
-    
-    // Fallback: Check if manual bypass flag is set
-    const bypass = await AsyncStorage?.getItem?.('empowr.testlab.bypass');
-    if (bypass === 'true') {
-       
-      console.warn('[TermsGate] Manual test bypass flag detected');
-      return true;
-    }
-    
-    return false;
-  } catch {
-    return false;
-  }
-}
 
 const STORAGE_KEY = "empowr.legal.acceptance.v3";
 const CURRENT_TERMS_VERSION = "3.0";
@@ -175,8 +77,6 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         // Check for Firebase Test Lab / E2E test bypass FIRST
         const testLabBypass = await checkTestLabBypass();
         if (testLabBypass) {
-           
-          console.warn('[TermsGate] Test Lab bypass detected - auto-accepting terms');
           setAccepted(true);
           setLoading(false);
           return;
@@ -214,8 +114,6 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
 
   // Quick accept all for automated testing (triggered by testID button)
   const quickAcceptAll = async () => {
-     
-    console.warn('[TermsGate] Quick accept triggered (automated test mode)');
     await saveAcceptance();
   };
 
