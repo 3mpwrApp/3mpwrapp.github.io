@@ -4,6 +4,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { useTranslation } from '../i18n';
+import { notifyError } from '../services/discordNotifications';
 import { useAppPalette } from '../theme/usePalette';
 import { logError } from '../utils/errorLogger';
 import { createShadow } from '../utils/shadow';
@@ -50,6 +51,14 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     // Log to console in development, Sentry in production
     // logError automatically routes to Sentry when EXPO_PUBLIC_SENTRY_DSN is configured
     logError('ErrorBoundary', 'Caught an error', error);
+
+    // Also notify Discord as backup (fire and forget)
+    notifyError({
+      title: error.name || 'React Error',
+      message: error.message,
+      stack: errorInfo?.componentStack?.substring(0, 500),
+      severity: 'high',
+    }).catch(() => {});
   }
 
   handleReset = (): void => {

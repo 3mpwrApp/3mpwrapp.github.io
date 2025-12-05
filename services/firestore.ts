@@ -4,6 +4,7 @@ import { db as sharedDb } from "../firebase/config";
 import { logger } from "../utils/logger";
 
 import { isBYOCEnabled } from "./dataPolicy";
+import { notifyNewCampaign } from "./discordNotifications";
 
 let mod: typeof Fire | null = null;
 
@@ -83,6 +84,14 @@ export async function fsAddCampaign(c: {
         membersCount: 0,
       })
     );
+
+    // Notify Discord of new campaign (fire and forget)
+    notifyNewCampaign({
+      title: c.title,
+      description: c.summary,
+      goal: c.target,
+    }).catch(() => {});
+
     return true;
   } catch {
     return false;

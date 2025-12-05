@@ -151,8 +151,8 @@ export default function DiscordHub({
 
       {/* Description */}
       <Text style={styles.description}>
-        Join our Discord server to chat in real-time with beta testers, 
-        get support, and stay updated on new features!
+        Discord is our main community hub! Join to chat in real-time, 
+        get support, share feedback, and connect with other advocates.
       </Text>
 
       {/* Main Action Button */}

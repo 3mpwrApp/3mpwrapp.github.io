@@ -10,6 +10,8 @@ import type * as Fire from "firebase/firestore";
 
 import { logger } from "../utils/logger";
 
+import { notifyNewEvent } from "./discordNotifications";
+
 // Firebase config for events (public data, not subject to BYOC restrictions)
 // Events are public community data that all users can read
 const firebaseConfig = {
@@ -179,6 +181,21 @@ export async function syncEventToProduction(event: FirestoreSyncEvent, uid: stri
     );
 
     logger.log('[FirestoreSyncEvent] Event synced to', collection, ':', event.id);
+
+    // Notify Discord of new event (fire and forget)
+    if (collection === 'events_production') {
+      const dateStr = event.date instanceof Date 
+        ? event.date.toLocaleDateString()
+        : new Date(event.date).toLocaleDateString();
+      notifyNewEvent({
+        title: event.title,
+        date: dateStr,
+        location: event.location,
+        description: event.description,
+        type: 'Community',
+      }).catch(() => {});
+    }
+
     return true;
   } catch (error) {
     logger.error('[FirestoreSyncEvent] Failed to sync event to', collection, ':', error);

@@ -1,5 +1,6 @@
 import React from "react";
 
+import { notifyNewUser } from "../services/discordNotifications";
 import type { ProvinceCode } from "../types/models";
 import { logger } from "../utils/logger";
 
@@ -123,12 +124,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await persist(AUTH_MODE_KEY, "signedIn");
     await persist(USER_KEY, JSON.stringify(user));
     setState({ status: "signedIn", isOnboarded: true, user });
+    // Notify Discord of new user (fire and forget)
+    notifyNewUser({ isGuest: false, source: 'app' }).catch(() => {});
   };
 
   const continueAnonymously = async () => {
     await persist(AUTH_MODE_KEY, "anonymous");
     await persist(USER_KEY, null);
     setState({ status: "anonymous", isOnboarded: true, user: null });
+    // Notify Discord of new guest user (fire and forget)
+    notifyNewUser({ isGuest: true, source: 'app' }).catch(() => {});
   };
 
   const signOut = async () => {

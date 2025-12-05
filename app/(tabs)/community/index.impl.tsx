@@ -1,245 +1,278 @@
 import type { Href } from "expo-router";
 import { router } from "expo-router";
 import React from "react";
-import { SectionList, StyleSheet, Text, useColorScheme, View } from "react-native";
+import { Linking, ScrollView, StyleSheet, Text, useColorScheme, View } from "react-native";
 
 import A11yPressable from '../../../components/A11yPressable';
-import DiscordHub from '../../../components/DiscordHub';
 import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
-import SearchBar from '../../../components/SearchBar';
 import SimpleModeWelcome from '../../../components/SimpleModeWelcome';
 import { SkeletonList } from '../../../components/SkeletonLoader';
-import { HIT_SLOP_8, touchTarget } from "../../../constants/A11Y";
+import { HIT_SLOP_8 } from "../../../constants/A11Y";
 import { channels, seedComments, seedThreads } from "../../../data/community";
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from "../../../hooks/useA11y";
-import { usePostLoadAnnounce } from "../../../hooks/usePostLoadAnnounce";
 import { useTranslation } from "../../../i18n";
-import { getChannelUnread, setChannelLastRead } from "../../../services/community";
 import { CommunityProvider, useCommunity } from "../../../store/community";
 import { useComplexityMode } from "../../../store/complexityMode";
 import { colors, type Palette } from "../../../theme/colors";
 
-const ChannelListItem = React.memo<{ item: any; unread: Record<string, number>; palette: Palette; onPress: (slug: string) => Promise<void> }>(({ item, unread, palette, onPress }) => {
-  const styles = React.useMemo(() => ({
-    row: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
-    rowText: { color: palette.text, fontSize: 16 },
-  }), [palette]);
+// Section Header Component
+const SectionHeader = ({ title, subtitle, palette }: { title: string; subtitle?: string; palette: Palette }) => (
+  <View style={{ marginTop: 24, marginBottom: 12 }}>
+    <Text style={{ fontSize: 18, fontWeight: '700', color: palette.text, marginBottom: subtitle ? 4 : 0 }}>{title}</Text>
+    {subtitle && <Text style={{ fontSize: 14, color: palette.textSecondary }}>{subtitle}</Text>}
+  </View>
+);
 
+// Feature Card Component
+const FeatureCard = ({ 
+  icon, 
+  title, 
+  desc, 
+  onPress, 
+  variant = 'default',
+  palette 
+}: { 
+  icon: string; 
+  title: string; 
+  desc: string; 
+  onPress: () => void; 
+  variant?: 'default' | 'discord' | 'primary';
+  palette: Palette;
+}) => {
+  /* eslint-disable no-restricted-syntax -- Discord brand colors required */
+  const bgColor = variant === 'discord' ? '#5865F2' : variant === 'primary' ? palette.primary : palette.surface;
+  const textColor = variant === 'default' ? palette.text : '#FFFFFF';
+  /* eslint-enable no-restricted-syntax */
+  
   return (
     <A11yPressable
-      onPress={() => onPress(item.slug)}
+      onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={`Open channel ${item.title}`}
+      accessibilityLabel={`${title}: ${desc}`}
       hitSlop={HIT_SLOP_8}
-      style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
+      style={({ pressed }) => [{
+        backgroundColor: bgColor,
+        borderRadius: 16,
+        padding: 16,
+        marginBottom: 12,
+        borderWidth: variant === 'default' ? 1 : 0,
+        borderColor: palette.muted,
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 12,
+      }, pressed && { opacity: 0.8 }]}
     >
-      <Text style={styles.rowText}>{item.title}{unread[item.slug] ? ` (${unread[item.slug]})` : ''}</Text>
+      <Text style={{ fontSize: 28 }}>{icon}</Text>
+      <View style={{ flex: 1 }}>
+        <Text style={{ fontSize: 16, fontWeight: '600', color: textColor, marginBottom: 2 }}>{title}</Text>
+        <Text style={{ fontSize: 13, color: textColor, opacity: 0.9 }}>{desc}</Text>
+      </View>
+      <Text style={{ fontSize: 18, color: textColor, opacity: 0.6 }}>›</Text>
     </A11yPressable>
   );
-});
-ChannelListItem.displayName = 'ChannelListItem';
+};
+
+// Quick Link Button
+const QuickLink = ({ icon, label, onPress, palette }: { icon: string; label: string; onPress: () => void; palette: Palette }) => (
+  <A11yPressable
+    onPress={onPress}
+    accessibilityRole="button"
+    accessibilityLabel={label}
+    hitSlop={HIT_SLOP_8}
+    style={({ pressed }) => [{
+      backgroundColor: palette.surface,
+      borderRadius: 12,
+      paddingVertical: 12,
+      paddingHorizontal: 16,
+      borderWidth: 1,
+      borderColor: palette.muted,
+      alignItems: 'center',
+      flex: 1,
+      minWidth: 100,
+    }, pressed && { opacity: 0.8 }]}
+  >
+    <Text style={{ fontSize: 20, marginBottom: 4 }}>{icon}</Text>
+    <Text style={{ fontSize: 12, fontWeight: '600', color: palette.text, textAlign: 'center' }}>{label}</Text>
+  </A11yPressable>
+);
 
 function ScreenInner() {
   const scheme = useColorScheme();
   const palette = scheme === "dark" ? colors.dark : colors.light;
-  const styles = createStyles(palette);
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Community Hub");
   useFocusOnRefOnMount(titleRef);
   const { state, seed } = useCommunity();
-  const { t } = useTranslation();
-  const { mode: complexityMode, isFeatureVisible: _isFeatureVisible } = useComplexityMode();
-  const [unread, setUnread] = React.useState<Record<string, number>>({});
-  const [query, setQuery] = React.useState("");
-  const [mode, setMode] = React.useState<'all'|'provinces'|'topics'>('all');
+  const { t: _t } = useTranslation();
+  const { mode: complexityMode } = useComplexityMode();
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     if (state.channels.length === 0) {
       seed({ channels, threads: seedThreads, comments: seedComments });
     }
-    // Simulate initial data load
-    const timer = setTimeout(() => setLoading(false), 600);
+    const timer = setTimeout(() => setLoading(false), 400);
     return () => clearTimeout(timer);
   }, [state.channels.length, seed]);
 
-  const prov = state.channels.filter((c) => c.type === "province");
-  const topics = state.channels.filter((c) => c.type === "topic");
-
-  const q = query.trim().toLowerCase();
-  const filteredProv = React.useMemo(() =>
-    q ? prov.filter((c) => c.title.toLowerCase().includes(q) || c.slug.toLowerCase().includes(q)) : prov
-  , [prov, q]);
-  const filteredTopics = React.useMemo(() =>
-    q ? topics.filter((c) => c.title.toLowerCase().includes(q) || c.slug.toLowerCase().includes(q)) : topics
-  , [topics, q]);
-
-  React.useEffect(() => {
-    (async () => {
-      try {
-        const all = [...prov, ...topics];
-        const out: Record<string, number> = {};
-        for (const ch of all) {
-          out[ch.slug] = await getChannelUnread(ch.slug, 50);
-        }
-        setUnread(out);
-      } catch {}
-    })();
-  }, [prov.length, topics.length]);
-
-  const totalChannels = prov.length + topics.length;
-  usePostLoadAnnounce({ loading, count: totalChannels, ns: 'community', emptyKey: 'community.empty' });
+  const isSimpleMode = complexityMode === 'simple';
 
   return (
-    <ResponsiveScreenWrapper scrollable={false} testID="community-screen">
+    <ResponsiveScreenWrapper scrollable={true} testID="community-screen">
       <View style={styles.container} accessibilityLabel="Community Hub screen" accessible={true}>
-        <Text ref={titleRef} accessibilityRole="header" style={styles.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+        {/* Header */}
+        <Text ref={titleRef} accessibilityRole="header" style={[styles.title, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
           Community Hub
         </Text>
-        <Text style={styles.subtitle}>Connect, share, and support each other through various community features.</Text>
+        <Text style={[styles.subtitle, { color: palette.textSecondary }]}>
+          Connect with advocates, share experiences, and support each other.
+        </Text>
 
         <SimpleModeWelcome 
           tabName="Community"
-          availableFeatures={['Beta Testers Chat', 'Mutual Chat', 'Direct Messages']}
-          hiddenCount={complexityMode === 'simple' ? 3 : 0}
+          availableFeatures={['Discord Server', 'Beta Testers Chat']}
+          hiddenCount={isSimpleMode ? 4 : 0}
         />
 
         {loading ? (
-          <SkeletonList count={8} />
+          <SkeletonList count={6} />
         ) : (
-          <>
-            <SearchBar
-              value={query}
-              onChangeText={setQuery}
-              placeholder="Search channels & tools"
+          <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 100 }}>
+            
+            {/* Discord - Main CTA */}
+            <SectionHeader 
+              title="💬 Join the Conversation" 
+              subtitle="Discord is our main community hub"
+              palette={palette}
+            />
+            
+            <FeatureCard
+              icon="🎮"
+              title="Join Our Discord"
+              desc="Chat, get support, share feedback, and connect with advocates"
+              onPress={() => Linking.openURL('https://discord.gg/fJB2DJ7Yn')}
+              variant="discord"
+              palette={palette}
             />
 
-            
-            <GapView style={{ flexDirection:'row', marginTop: 12, marginBottom:12 }} gap={8}>
-              <FilterChip label="All" active={mode==='all'} onPress={() => setMode('all')} palette={palette} />
-              <FilterChip label="Provinces" active={mode==='provinces'} onPress={() => setMode('provinces')} palette={palette} />
-              <FilterChip label="Topics" active={mode==='topics'} onPress={() => setMode('topics')} palette={palette} />
+            {/* Quick Links to Discord Channels */}
+            <GapView style={{ flexDirection: 'row', marginBottom: 8 }} gap={8}>
+              <QuickLink 
+                icon="📢" 
+                label="Announcements" 
+                onPress={() => Linking.openURL('https://discord.com/channels/1444061902555840667/1444061903684112456')}
+                palette={palette}
+              />
+              <QuickLink 
+                icon="🧪" 
+                label="Beta Testers" 
+                onPress={() => Linking.openURL('https://discord.com/channels/1444061902555840667/1446264193580929066')}
+                palette={palette}
+              />
+              <QuickLink 
+                icon="🆘" 
+                label="Support" 
+                onPress={() => Linking.openURL('https://discord.com/channels/1444061902555840667/1446264655571058718')}
+                palette={palette}
+              />
             </GapView>
 
-        {/* Community Features Navigation */}
-        <View style={styles.featuresContainer}>
-          {(() => {
-            type Feature = { key: string; title: string; desc: string; href: Href; compose?: boolean; tier?: 'simple' | 'standard' | 'power' };
-            const allFeatures: Feature[] = [
-              { key: 'discord', title: '🎮 Discord Server', desc: 'Join our live Discord community', href: '/(tabs)/community/mutual-chat?id=general' as Href, tier: 'simple' },
-              { key: 'chat', title: '💬 Mutual Chat', desc: 'Real-time group & 1-1 conversations (Beta)', href: '/(tabs)/community/mutual-chat?id=general' as Href, tier: 'simple' },
-              { key: 'testers', title: '🧪 Beta Testers Chat', desc: 'Live chat to collaborate & give feedback (Beta)', href: '/(tabs)/community/testers-chat' as Href, tier: 'simple' },
-              { key: 'dm', title: '📥 Direct Messages', desc: 'Private 1‑1 conversations (beta)', href: '/(tabs)/community/dms' as Href, tier: 'simple' },
-              { key: 'media', title: '🎨 Media Studio', desc: 'Create & share memes, posters, graphics (Beta)', href: '/(tabs)/community/media-studio' as Href, tier: 'standard' },
-              { key: 'aid', title: '🤝 Mutual Aid', desc: 'Exchange support, resources, peer help (Beta)', href: '/(tabs)/community/mutual-aid' as Href, tier: 'standard' },
-              { key: 'compose', title: '✏️ Compose Post', desc: 'Create a new forum post (Beta)', href: '/(tabs)/community/compose' as Href, compose: true, tier: 'standard' },
-            ];
-            
-            // Filter by complexity mode
-            const features = complexityMode === 'simple' 
-              ? allFeatures.filter(f => f.tier === 'simple')
-              : allFeatures;
-            
-            const fMatches: Feature[] = q
-              ? features.filter(f =>
-                  f.title.toLowerCase().includes(q) || f.desc.toLowerCase().includes(q)
-                )
-              : features;
-            if (fMatches.length === 0 && q) {
-              return (
-                <Text style={[styles.subtitle, { marginBottom: 0, color: palette.textSecondary }]}>\
-                  {t('community.toolsEmpty','No tools match your search')}\
-                </Text>
-              );
-            }
-            const rows: Feature[][] = [];
-            for (let i = 0; i < fMatches.length; i += 2) rows.push(fMatches.slice(i, i + 2));
-            return rows.map((row, idx) => (
-              <GapView key={`feat-row-${idx}`} style={styles.featuresRow} gap={12}>
-                {row.map((f) => (
-                  <A11yPressable
-                    key={f.key}
-                    accessibilityRole="button"
-                    accessibilityLabel={(f.title + ' ' + f.desc).trim()}
-                    style={({ pressed }) => [styles.featureButton, f.compose && styles.composeButton, pressed && { opacity: 0.7 }]}
-                    onPress={() => router.push(f.href)}
-                  >
-                    <Text style={[styles.featureTitle, f.compose && { color: palette.onPrimary }]}>{f.title}</Text>
-                    <Text style={[styles.featureDesc, f.compose && { color: palette.onPrimary }]}>{f.desc}</Text>
-                  </A11yPressable>
-                ))}
-                {row.length === 1 && <View style={[styles.featureButton, { opacity: 0 }]} />}
-              </GapView>
-            ));
-          })()}
-        </View>
-
-        <Text style={styles.sectionHeader}>Community Forum</Text>
-        <Text style={styles.subtitle}>Join a province or topic channel to participate in discussions.</Text>
-
-        {/* Discord Integration */}
-        <DiscordHub compact={true} showQuickLinks={false} />
-
-        <SectionList
-          sections={(() => {
-            const secs: { title: string; data: typeof filteredProv }[] = [];
-            if (mode === 'all' || mode === 'provinces') secs.push({ title: "Provinces & Territories", data: filteredProv });
-            if (mode === 'all' || mode === 'topics') secs.push({ title: "Topics", data: filteredTopics });
-            return secs.filter(s => s.data.length > 0);
-          })()}
-          keyExtractor={(item) => `channel-${item.id}`}
-          renderSectionHeader={({ section }) => <Text style={styles.section}>{section.title}</Text>}
-          renderItem={({ item }) => (
-            <ChannelListItem
-              item={item}
-              unread={unread}
+            {/* In-App Features */}
+            <SectionHeader 
+              title="📱 In-App Features" 
+              subtitle="Community tools built into the app"
               palette={palette}
-              onPress={async (slug) => { await setChannelLastRead(slug); router.push(`/(tabs)/community/${slug}` as Href); }}
             />
-          )}
-          ListEmptyComponent={(
-            <View style={{ paddingVertical: 12 }}>
-              <Text style={[styles.subtitle, { marginBottom: 6, opacity: 0.8 }]}>\
-                {t('community.empty','No channels match your filters')}\
-              </Text>
-              {(query || mode !== 'all') && (
-                <A11yPressable
-                  onPress={() => { setQuery(''); setMode('all'); }}
-                  accessibilityRole="button"
-                  accessibilityLabel={t('common.resetFilters','Reset filters')}
-                  style={({ pressed }) => [
-                    { alignSelf:'flex-start', paddingVertical:6, paddingHorizontal:12, borderRadius:8, backgroundColor: palette.surface, borderWidth: StyleSheet.hairlineWidth, borderColor: palette.muted },
-                    pressed && { opacity: 0.8 }
-                  ]}
-                >
-                  <Text style={{ color: palette.text, fontWeight:'700' }}>{t('common.resetFilters','Reset filters')}</Text>
-                </A11yPressable>
-              )}
+
+            <FeatureCard
+              icon="🧪"
+              title="Beta Testers Chat"
+              desc="In-app chat for quick beta feedback and collaboration"
+              onPress={() => router.push('/(tabs)/community/testers-chat' as Href)}
+              variant="default"
+              palette={palette}
+            />
+
+            {!isSimpleMode && (
+              <>
+                <FeatureCard
+                  icon="🤝"
+                  title="Mutual Aid Network"
+                  desc="Exchange support, resources, and peer help"
+                  onPress={() => router.push('/(tabs)/community/mutual-aid' as Href)}
+                  variant="default"
+                  palette={palette}
+                />
+
+                <FeatureCard
+                  icon="🎨"
+                  title="Media Studio"
+                  desc="Create and share advocacy graphics, memes & posters"
+                  onPress={() => router.push('/(tabs)/community/media-studio' as Href)}
+                  variant="default"
+                  palette={palette}
+                />
+
+                <FeatureCard
+                  icon="✏️"
+                  title="Create Forum Post"
+                  desc="Start a discussion in the community forum"
+                  onPress={() => router.push('/(tabs)/community/compose' as Href)}
+                  variant="primary"
+                  palette={palette}
+                />
+              </>
+            )}
+
+            {/* Account & Safety */}
+            <SectionHeader 
+              title="⚙️ Your Account" 
+              palette={palette}
+            />
+
+            <View style={{ 
+              backgroundColor: palette.surface, 
+              borderRadius: 12, 
+              borderWidth: 1, 
+              borderColor: palette.muted,
+              overflow: 'hidden'
+            }}>
+              <A11yPressable
+                accessibilityRole="button"
+                accessibilityLabel="View your posts"
+                style={({ pressed }) => [styles.listItem, pressed && { backgroundColor: palette.muted }]}
+                onPress={() => router.push('/(tabs)/community/my-posts' as Href)}
+              >
+                <Text style={{ fontSize: 16, color: palette.text }}>📝 My Posts</Text>
+                <Text style={{ color: palette.textSecondary }}>›</Text>
+              </A11yPressable>
+              
+              <View style={{ height: 1, backgroundColor: palette.muted }} />
+              
+              <A11yPressable
+                accessibilityRole="button"
+                accessibilityLabel="Safety and blocking settings"
+                style={({ pressed }) => [styles.listItem, pressed && { backgroundColor: palette.muted }]}
+                onPress={() => router.push('/(tabs)/community/safety' as Href)}
+              >
+                <Text style={{ fontSize: 16, color: palette.text }}>🛡️ Safety & Blocking</Text>
+                <Text style={{ color: palette.textSecondary }}>›</Text>
+              </A11yPressable>
             </View>
-          )}
-          contentContainerStyle={{ paddingTop: 8, paddingBottom: 100 }}
-        />
-        <View style={{ marginTop: 16 }}>
-          <A11yPressable
-            accessibilityRole="button"
-            accessibilityLabel="Open My Posts"
-            style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
-            onPress={() => router.push('/(tabs)/community/my-posts' as Href)}
-          >
-            <Text style={styles.rowText}>My Posts</Text>
-          </A11yPressable>
-          
-          <A11yPressable
-            accessibilityRole="button"
-            accessibilityLabel="Open Community Safety"
-            style={({ pressed }) => [styles.row, touchTarget.min, { opacity: pressed ? 0.7 : 1 }]}
-            onPress={() => router.push('/(tabs)/community/safety' as Href)}
-          >
-            <Text style={styles.rowText}>Safety & Blocking</Text>
-          </A11yPressable>
-        </View>
-          </>
+
+            {/* Community Guidelines Footer */}
+            <View style={{ marginTop: 24, padding: 16, backgroundColor: palette.surface, borderRadius: 12, borderWidth: 1, borderColor: palette.muted }}>
+              <Text style={{ fontSize: 14, fontWeight: '600', color: palette.text, marginBottom: 8 }}>
+                📜 Community Guidelines
+              </Text>
+              <Text style={{ fontSize: 13, color: palette.textSecondary, lineHeight: 18 }}>
+                Be respectful, supportive, and inclusive. This is a safe space for disability advocates. 
+                Report any concerns via Safety & Blocking.
+              </Text>
+            </View>
+
+          </ScrollView>
         )}
       </View>
     </ResponsiveScreenWrapper>
@@ -254,62 +287,15 @@ export default function CommunityIndex() {
   );
 }
 
-function createStyles(palette: Palette) {
-  return StyleSheet.create({
-    container: { flex: 1 },
-    title: { fontSize: 24, fontWeight: "700", marginBottom: 8, color: palette.text },
-    subtitle: { fontSize: 17, color: palette.text, opacity: 1, marginBottom: 8 },
-    sectionHeader: { fontSize: 20, fontWeight: "700", marginTop: 16, marginBottom: 8, color: palette.text },
-    featuresContainer: { marginBottom: 16 },
-    featuresRow: { 
-      flexDirection: 'row', 
-      marginBottom: 12,
-      justifyContent: 'space-between'
-    },
-    featureButton: {
-      flex: 1,
-      backgroundColor: palette.surface,
-      borderRadius: 12,
-      padding: 16,
-      borderWidth: StyleSheet.hairlineWidth,
-      borderColor: palette.muted,
-      minHeight: 80,
-      justifyContent: 'center'
-    },
-    composeButton: {
-      backgroundColor: palette.primary,
-      borderColor: palette.primary,
-    },
-    featureTitle: {
-      fontSize: 16,
-      fontWeight: '700',
-      color: palette.text,
-      marginBottom: 4
-    },
-    featureDesc: {
-      fontSize: 14,
-      color: palette.text,
-      opacity: 0.8,
-      lineHeight: 18
-    },
-    section: { marginTop: 12, marginBottom: 6, fontWeight: "700", color: palette.text },
-    row: { paddingVertical: 12, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: palette.muted },
-    rowText: { color: palette.text, fontSize: 16 },
-  });
-}
-
-function FilterChip({ label, active, onPress, palette }: { label: string; active: boolean; onPress: () => void; palette: Palette }) {
-  return (
-    <A11yPressable
-      onPress={onPress}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-      style={({ pressed }) => [
-        { borderWidth: 1, borderColor: active? palette.primary: palette.muted, backgroundColor: active? palette.primary: 'transparent', paddingHorizontal: 10, paddingVertical: 6, borderRadius: 20 },
-        pressed && { opacity: 0.8 }
-      ]}
-    >
-      <Text style={{ color: active? palette.onPrimary: palette.text, fontWeight:'700', fontSize:12 }}>{label}</Text>
-    </A11yPressable>
-  );
-}
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+  title: { fontSize: 28, fontWeight: "800", marginBottom: 8 },
+  subtitle: { fontSize: 15, lineHeight: 22, marginBottom: 8 },
+  listItem: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    alignItems: 'center',
+    paddingVertical: 14, 
+    paddingHorizontal: 16,
+  },
+});

@@ -88,16 +88,16 @@ export interface DiscordChannel {
 
 /**
  * Default server configuration for 3mpwrApp Discord
- * Update these values with your actual Discord server details
+ * Main community communication hub
  */
 export const DEFAULT_SERVER_CONFIG: DiscordServerConfig = {
-  serverId: '', // Your Discord server ID
+  serverId: '1444061902555840667', // 3mpwrApp Discord server
   serverName: '3mpwrApp Community',
-  inviteCode: '', // Your permanent invite code (e.g., 'abc123' from discord.gg/abc123)
-  welcomeChannelId: '',
-  betaTestersChannelId: '',
-  supportChannelId: '',
-  announcementsChannelId: '',
+  inviteCode: 'fJB2DJ7Yn', // Main Discord invite: https://discord.gg/fJB2DJ7Yn
+  welcomeChannelId: '1444061903684112455',
+  betaTestersChannelId: '1446264193580929066',
+  supportChannelId: '1446264655571058718',
+  announcementsChannelId: '1444061903684112456',
 };
 
 /**
