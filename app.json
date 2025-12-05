@@ -93,8 +93,7 @@
         "@sentry/react-native/expo",
         {
           "project": "3mpwrapp",
-          "organization": "3mpwr-app",
-          "uploadSourceMaps": false
+          "organization": "3mpwr-app"
         }
       ],
       "@react-native-firebase/app",
