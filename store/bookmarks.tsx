@@ -53,6 +53,11 @@ export function BookmarksProvider({ children }: { children: React.ReactNode }) {
     (async () => {
       try {
         await AsyncStorage?.setItem?.(KEY, JSON.stringify(items));
+        // Trigger cloud sync
+        try {
+          const { scheduleSyncToCloud } = await import('../services/cloudSync');
+          scheduleSyncToCloud();
+        } catch {}
       } catch {}
     })();
   }, [items]);

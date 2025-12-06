@@ -277,6 +277,12 @@ service cloud.firestore {
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
+    // User Sync data (cross-platform sync for all app settings, bookmarks, favorites, etc.)
+    match /users/{uid}/user_sync/{docId} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
+    }
+
     // Testers chat room (signed-in users)
     match /chats/{room}/messages/{msgId} {
       allow read: if isSignedIn();

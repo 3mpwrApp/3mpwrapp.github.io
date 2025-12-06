@@ -53,6 +53,11 @@ export function JurisdictionProvider({ children }: { children: React.ReactNode }
       if (!AsyncStorage) return;
       try {
         await AsyncStorage.setItem(STORAGE_KEY, code);
+        // Trigger cloud sync
+        try {
+          const { scheduleSyncToCloud } = await import('../services/cloudSync');
+          scheduleSyncToCloud();
+        } catch {}
       } catch (e) {
         logger.warn("Failed to save jurisdiction", e);
       }

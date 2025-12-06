@@ -157,6 +157,11 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
       if (!AsyncStorage) return;
       try {
         await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        // Trigger cloud sync after local save
+        try {
+          const { scheduleSyncToCloud } = await import('../services/cloudSync');
+          scheduleSyncToCloud();
+        } catch {}
       } catch (e) {
         logger.warn("Failed to save settings", e);
       }

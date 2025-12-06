@@ -63,7 +63,14 @@ export const MoodProvider: React.FC<{children: React.ReactNode}> = ({ children }
   const persist = useCallback(async (next: MoodEntry[]) => {
     setEntries(next);
     if (!AsyncStorage) return;
-    try { await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch {}
+    try {
+      await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+      // Trigger cloud sync
+      try {
+        const { scheduleSyncToCloud } = await import('../services/cloudSync');
+        scheduleSyncToCloud();
+      } catch {}
+    } catch {}
   }, []);
 
   const addEntry = useCallback((

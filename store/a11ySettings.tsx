@@ -48,6 +48,11 @@ export function A11ySettingsProvider({
   const persist = async (s: State) => {
     if (!AsyncStorage) return;
     await AsyncStorage.setItem(KEY, JSON.stringify(s));
+    // Trigger cloud sync
+    try {
+      const { scheduleSyncToCloud } = await import('../services/cloudSync');
+      scheduleSyncToCloud();
+    } catch {}
   };
 
   const setHighContrast = async (val: boolean) => {

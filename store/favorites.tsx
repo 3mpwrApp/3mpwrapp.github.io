@@ -63,6 +63,11 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
       };
       try {
         await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
+        // Trigger cloud sync
+        try {
+          const { scheduleSyncToCloud } = await import('../services/cloudSync');
+          scheduleSyncToCloud();
+        } catch {}
       } catch {}
     })();
   }, [state]);

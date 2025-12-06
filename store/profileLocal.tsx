@@ -51,6 +51,11 @@ export function ProfileLocalProvider({
     setProfileState(p);
     try {
       await AsyncStorage?.setItem?.(KEY, JSON.stringify(p));
+      // Trigger cloud sync
+      try {
+        const { scheduleSyncToCloud } = await import('../services/cloudSync');
+        scheduleSyncToCloud();
+      } catch {}
     } catch {}
   };
 

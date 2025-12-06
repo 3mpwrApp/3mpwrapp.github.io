@@ -66,6 +66,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               } catch (notifErr) {
                 logger.warn('[AuthContext] Failed to register push token', { error: notifErr });
               }
+              
+              // Initialize cloud sync for authenticated users
+              try {
+                const { initializeCloudSync } = await import('../services/cloudSync');
+                await initializeCloudSync();
+                if (__DEV__) logger.log('[AuthContext] Cloud sync initialized');
+              } catch (syncErr) {
+                logger.warn('[AuthContext] Failed to initialize cloud sync', { error: syncErr });
+              }
             }
             
             // Grant absolute admin access to empowrapp08162025@gmail.com
