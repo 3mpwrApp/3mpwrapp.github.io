@@ -9,10 +9,19 @@
  * - Session summaries ("What did I do last time?")
  * - Focus lock ("Stay on this screen")
  * - Screen explanations ("What does this screen do?")
+ * 
+ * Cross-Platform Sync:
+ * - Local storage (AsyncStorage) for offline/guest mode
+ * - Cloud sync (Firestore) for authenticated users
+ * - Syncs across app and web browser seamlessly
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
 import { useCallback, useEffect, useState } from 'react';
+
+import { auth, db } from '../firebase/config';
+import { isCloudConsentEnabled } from '../services/consent';
 
 // Storage keys
 const STORAGE_KEYS = {
@@ -136,6 +145,11 @@ let focusLockScreen: string | null = null;
 let lastSessionEnd: number | null = null;
 let currentSessionStart: number = Date.now();
 let isLoaded = false;
+let lastCloudSync: number = 0;
+
+// Cloud sync debounce
+let syncTimeout: ReturnType<typeof setTimeout> | null = null;
+const SYNC_DEBOUNCE_MS = 2000; // Wait 2 seconds after last change before syncing
 
 // Listeners
 type Listener = () => void;
@@ -148,6 +162,123 @@ function notifyListeners() {
 export function subscribe(listener: Listener): () => void {
   listeners.add(listener);
   return () => listeners.delete(listener);
+}
+
+// ===== CLOUD SYNC FUNCTIONS =====
+
+/**
+ * Check if cloud sync is available
+ */
+function canSyncToCloud(): boolean {
+  try {
+    return !!(auth?.currentUser?.uid && db && isCloudConsentEnabled() && !auth.currentUser.isAnonymous);
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Get Firestore document reference for user's cognitive comfort data
+ */
+function getCognitiveComfortDocRef() {
+  const uid = auth?.currentUser?.uid;
+  if (!uid || !db) return null;
+  return doc(db, 'users', uid, 'cognitive_comfort', 'data');
+}
+
+/**
+ * Sync data to Firestore (debounced)
+ */
+function scheduleSyncToCloud() {
+  if (!canSyncToCloud()) return;
+  
+  // Clear existing timeout
+  if (syncTimeout) {
+    clearTimeout(syncTimeout);
+  }
+  
+  // Schedule new sync
+  syncTimeout = setTimeout(async () => {
+    try {
+      await syncToCloud();
+    } catch (error) {
+      console.warn('[CognitiveComfort] Cloud sync failed:', error);
+    }
+  }, SYNC_DEBOUNCE_MS);
+}
+
+/**
+ * Immediately sync all data to Firestore
+ */
+export async function syncToCloud(): Promise<void> {
+  if (!canSyncToCloud()) return;
+  
+  const docRef = getCognitiveComfortDocRef();
+  if (!docRef) return;
+  
+  try {
+    await setDoc(docRef, {
+      navigationHistory: navigationHistory.slice(0, 50), // Limit cloud storage
+      sessionSummary: sessionSummary.slice(0, 50),
+      preferences,
+      focusLockScreen,
+      lastSessionEnd,
+      currentSessionStart,
+      // Don't sync voice notes (too large, local only)
+      updatedAt: serverTimestamp(),
+    }, { merge: true });
+    
+    lastCloudSync = Date.now();
+    if (__DEV__) console.warn('[CognitiveComfort] Synced to cloud');
+  } catch (error) {
+    console.error('[CognitiveComfort] Cloud sync error:', error);
+    throw error;
+  }
+}
+
+/**
+ * Load data from Firestore and merge with local
+ */
+export async function loadFromCloud(): Promise<boolean> {
+  if (!canSyncToCloud()) return false;
+  
+  const docRef = getCognitiveComfortDocRef();
+  if (!docRef) return false;
+  
+  try {
+    const snapshot = await getDoc(docRef);
+    if (!snapshot.exists()) return false;
+    
+    const cloudData = snapshot.data();
+    
+    // Merge cloud data with local (cloud takes precedence for newer entries)
+    if (cloudData.navigationHistory?.length) {
+      // Merge histories - cloud entries may have newer data from other devices
+      const cloudTimestamps = new Set(cloudData.navigationHistory.map((e: NavigationHistoryEntry) => e.timestamp));
+      const uniqueLocal = navigationHistory.filter(e => !cloudTimestamps.has(e.timestamp));
+      navigationHistory = [...cloudData.navigationHistory, ...uniqueLocal].slice(0, preferences.maxHistoryItems);
+    }
+    
+    if (cloudData.sessionSummary?.length) {
+      const cloudTimestamps = new Set(cloudData.sessionSummary.map((e: SessionSummaryEntry) => e.timestamp));
+      const uniqueLocal = sessionSummary.filter(e => !cloudTimestamps.has(e.timestamp));
+      sessionSummary = [...cloudData.sessionSummary, ...uniqueLocal].slice(0, 50);
+    }
+    
+    if (cloudData.preferences) {
+      preferences = { ...DEFAULT_COGNITIVE_COMFORT_PREFERENCES, ...cloudData.preferences };
+    }
+    
+    if (cloudData.lastSessionEnd) {
+      lastSessionEnd = Math.max(lastSessionEnd || 0, cloudData.lastSessionEnd);
+    }
+    
+    if (__DEV__) console.warn('[CognitiveComfort] Loaded from cloud');
+    return true;
+  } catch (error) {
+    console.warn('[CognitiveComfort] Failed to load from cloud:', error);
+    return false;
+  }
 }
 
 // Load from storage
@@ -182,6 +313,15 @@ export async function loadCognitiveComfortData(): Promise<void> {
     if (storedFocusLock) focusLockScreen = storedFocusLock;
 
     isLoaded = true;
+    
+    // Try to load and merge cloud data for authenticated users
+    if (canSyncToCloud()) {
+      try {
+        await loadFromCloud();
+      } catch (error) {
+        console.warn('[CognitiveComfort] Cloud load failed, using local data:', error);
+      }
+    }
     
     // Start new session
     await startNewSession();
@@ -232,6 +372,7 @@ export async function recordNavigation(entry: Omit<NavigationHistoryEntry, 'time
   
   try {
     await AsyncStorage.setItem(STORAGE_KEYS.navigationHistory, JSON.stringify(navigationHistory));
+    scheduleSyncToCloud(); // Debounced cloud sync
     notifyListeners();
   } catch (error) {
     console.error('[CognitiveComfort] Failed to save navigation:', error);
@@ -251,6 +392,7 @@ export async function recordAction(description: string, screenName?: string): Pr
   
   try {
     await AsyncStorage.setItem(STORAGE_KEYS.sessionSummary, JSON.stringify(sessionSummary));
+    scheduleSyncToCloud(); // Debounced cloud sync
     notifyListeners();
   } catch (error) {
     console.error('[CognitiveComfort] Failed to save action:', error);
@@ -273,6 +415,7 @@ export async function clearNavigationHistory(): Promise<void> {
   navigationHistory = [];
   try {
     await AsyncStorage.removeItem(STORAGE_KEYS.navigationHistory);
+    scheduleSyncToCloud(); // Sync cleared state to cloud
     notifyListeners();
   } catch (error) {
     console.error('[CognitiveComfort] Failed to clear history:', error);
@@ -341,6 +484,7 @@ export async function updatePreferences(updates: Partial<CognitiveComfortPrefere
   preferences = { ...preferences, ...updates };
   try {
     await AsyncStorage.setItem(STORAGE_KEYS.preferences, JSON.stringify(preferences));
+    scheduleSyncToCloud(); // Sync preferences to cloud
     notifyListeners();
   } catch (error) {
     console.error('[CognitiveComfort] Failed to save preferences:', error);
@@ -444,6 +588,12 @@ export function useCognitiveComfort() {
     // Preferences
     updatePreferences,
     getPreferences,
+    
+    // Cloud sync
+    syncToCloud,
+    loadFromCloud,
+    canSyncToCloud: canSyncToCloud(),
+    lastCloudSync,
     
     // Utils
     formatRelativeTime,
