@@ -9,40 +9,126 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-12-06
 
-Curated 8 items from disability, accessibility, and social policy sources.
+Curated 25 items from disability, accessibility, and social policy sources.
 
-## 1. B.C. directs physicians to notify parents if child shows up with mental health, drug use issues
-<img src='https://i.cbc.ca/ais/fb62ccec-3483-4d23-9d39-1c303f492f4a,1764972201875/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C81%2C5000%2C2812%29%3BResize%3D%28620%29' alt='A man with his hair tied back in a bun is seen on a sunny day.' width='620' height='349' title='Dr. Daniel Vigo, B.C.'s chief scientific adviser for psychiatry, toxic drugs and concurrent disorders during the announcement of Alouette Homes, which will provide 18 beds for long-term involuntary care in Maple Ridge, B.C, on Tuesday, June 3, 2025.'/><p>The B.C. government is issuing new guidance for physicians treating youth with overlapping mental health and substance use issues. It directs doctors to notify parents and potentially involuntarily detain youth if they're unable or unwilling to seek care themselves.</p>
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/bc-new-guidance-involuntary-care-youth-drugs-mental-health-9.7005188?cmp=rss)
-**Score:** 19.50
+## 1. Canada proposes keeping Nunavut fishing licences with non-Inuit organization
+<img src='https://i.cbc.ca/ais/e52b476f-07df-45c6-b181-1de0a786f67a,1764959422487/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C306%2C3264%2C1836%29%3BResize%3D%28620%29' alt='fishery boat in the water with Nunavut flag flying' width='620' height='349' title='A government of Nunavut fishery boat.'/><p>The Department of Fisheries and Oceans Canada (DFO) is looking at reissuing fishing licences off Nunavut's coast to non-Inuit operations, despite a federal court judge saying the initial decision by Ottawa was unreasonable. </p>
+📍 [Source](https://www.cbc.ca/news/canada/north/dfo-fishing-licences-nunavut-9.7004849?cmp=rss)
+**Score:** 18.15
 
-## 2. Accused woman blames Children's Aid Society and eating disorder for child's death, court hears
-<img src='https://i.cbc.ca/ais/29c44098-8d09-4278-9706-cf97ad17fe20,1763422078425/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Two women in wedding attire smile. ' width='620' height='349' title='Brandy Cooney and Becky Hamber, left to right, are on trial in Ontario Superior Court in Milton, charged with first-degree murder of a 12-year-old boy in their care in 2022.. '/><p>In a note written six months after a child died in her care, Becky Hamber said she was not to blame for his death, a Milton, Ont., court heard Friday.</p>
-📍 [Source](https://www.cbc.ca/news/canada/hamilton/hamber-cooney-trial-9.7005236?cmp=rss)
-**Score:** 16.50
+## 2. Family, friends remember para athlete, reality TV star and 'fierce' disability advocate
+<img src='https://i.cbc.ca/ais/941fbe5d-6dfa-429c-9b65-952458f69dc9,1764903661662/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C29%2C400%2C225%29%3BResize%3D%28620%29' alt='man in front of cbc push signs' width='620' height='349' title='Brian McPherson was a star on the CBC reality TV show, Push, which explored a group of friends navigating their lives in wheelchairs. '/><p>Brian McPherson, an Edmonton-based pioneer in adaptive bobsled and star of the CBC TV show, Push, died on Nov. 12. He was 47.</p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/brian-mcpherson-edmonton-9.7004043?cmp=rss)
+**Score:** 12.00
 
-## 3. New restrictions placed on hunting, farming 'incredibly destructive' wild boars in Alberta
-<img src='https://i.cbc.ca/ais/1.6357405,1764791963804/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C657%2C4974%2C2797%29%3BResize%3D%28620%29' alt='Six or seven wild boars gathered in a tight group outside. ' width='620' height='349' title='University of Saskatchewan researcher Ryan Brook says wild boars populate easily and destroy crops.'/><p>Wild boars have been declared "a pest in all circumstances" by the Alberta government effective Dec. 1, meaning new restrictions have been placed on keeping them in captivity and hunting them in the wild.</p>
-📍 [Source](https://www.cbc.ca/news/canada/calgary/wild-boar-pest-nuisance-alberta-9.7001770?cmp=rss)
-**Score:** 12.70
+## 3. Indigenous cultural belongings return to Canada from Vatican after long journey
+<img src='https://i.cbc.ca/ais/e727b5f3-e67f-4a5d-b9d4-b216357c0f1c,1765049533519/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C292%2C3500%2C1968%29%3BResize%3D%28620%29' alt='Two people touch a crate that is covered in a white sheet.' width='620' height='349' title='Katisha Paul of the Lil'wat and Tsartlip Nations, left, and Peyal Laceese of the Tsilhqot'in nation touch a crate containing indigenous artifacts and cultural items at Trudeau Airport in Montreal, Saturday, December 6, 2025, after they were returned by the Vatican. THE CANADIAN PRESS/Graham Hughes'/><p></p>
+📍 [Source](https://www.cbc.ca/news/indigenous/indigenous-cultural-belongings-return-to-canada-from-vatican-after-long-journey-9.7005284?cmp=rss)
+**Score:** 14.00
 
-## 4. Indigenous cultural belongings return to Canada from Vatican
-📍 [Source](https://www.cbc.ca/news/indigenous/indigenous-cultural-belongings-return-to-canada-from-vatican-9.7005284?cmp=rss)
+## 4. Top court restores conviction of woman who tried to kill mother with insulin injection
+<img src='https://i.cbc.ca/ais/f903c269-b785-41fb-9d9e-d1a93930cf59,1764972012058/full/max/0/default.jpg?im=Crop%2Crect%3D%28881%2C257%2C6677%2C3755%29%3BResize%3D%28620%29' alt='The exterior of the Supreme Court of Canada building' width='620' height='349' title='General view of the Supreme Court of Canada building on Parliament Hill in Ottawa, Ontario, Canada September 17, 2020.  REUTERS/Blair Gable'/><p>The Supreme Court of Canada has restored a woman's conviction for attempting to kill her mother by injecting her with insulin.</p>
+📍 [Source](https://www.cbc.ca/news/canada/supreme-court-restores-conviction-attempted-killing-insulin-9.7005237?cmp=rss)
+**Score:** 14.00
+
+## 5. 2 B.C. First Nations say government is rushing mine expansion without proper review
+“We do not consent at this point. We have too much more we have to work through,” said Keith Crow, chief of Lower Similkameen on Friday.
+📍 [Source](https://globalnews.ca/news/11564301/bc-first-nations-government-rushing-mine-expansion-review/)
+**Score:** 10.50
+
+## 6. Kelowna residents raise concerns over social support facilities in neighbourhood
+The City of Kelowna, in partnership with BC Housing, plans to build a 40-unit supportive and complex care facility on Pacific Avenue near Capri Mall.
+📍 [Source](https://globalnews.ca/news/11564528/kelowna-residents-concerns-social-support-facilities/)
+**Score:** 10.90
+
+## 7. ‘Patients get relief': Researchers recommending nerve blockers to treat migraines
+The research recommends occipital nerve blocks should be offered in emergency rooms to treat acute migraine attacks.
+📍 [Source](https://globalnews.ca/news/11564773/nerve-blockers-migraines/)
+**Score:** 11.60
+
+## 8. First Nations wonder if Canada's decision on eels is best for future of species
+<img src='https://i.cbc.ca/ais/374b8040-135d-471c-848e-d5f4e549e4bd,1764965258554/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C76%2C862%2C484%29%3BResize%3D%28620%29' alt='Eel' width='620' height='349' title='After over a decade in consideration for a Species at Risk Act listing for the American Eel, Canada announced it would not be listed, instead opting to protect the eel through the Fisheries Act. '/><p>After Canada announced Tuesday it wouldn’t list the American eel under the Species at Risk Act, some First Nations people with cultural and spiritual ties to the species are questioning the decision. </p>
+📍 [Source](https://www.cbc.ca/news/indigenous/american-eel-first-nations-9.7004578?cmp=rss)
 **Score:** 9.50
 
-## 5. Manitoba Government Invests $100,000 in Bairdmore School Playground
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71744)
+## 9. Saskatchewan tables involuntary drug treatment bill as fall session ends
+Saskatchewan's government introduced its involuntary treatment bill Friday on the final day of its fall sitting with critics wondering how it will all play out.
+📍 [Source](https://globalnews.ca/news/11564425/saskatchewan-tables-involuntary-drug-treatment-bill/)
+**Score:** 8.10
+
+## 10. Manitoba Government Signs onto National Electricity Grid Memorandum of Understanding
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71742)
 **Score:** 7.50
 
-## 6. Moose Hunting Season Opens in Manitoba on December 1
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71745)
+## 11. What's In Your Fridge: Adam Popovich of American Lips
+In which we reveal the favourite records, concerts, and grocery items of interesting creatives.
+📍 [Source](https://www.straight.com/music/whats-in-your-fridge-adam-popovich-of-american-lips)
+**Score:** 5.00
+
+## 12. Should We Separate the Art from the Artist?
+American essayist Adam Gopnik thinks we’re better off without ‘trying to fence off our imaginations.’
+📍 [Source](https://thetyee.ca/Culture/2025/12/05/Should-We-Separate-Art-From-Artist-Adam-Gopnik/)
+**Score:** 5.00
+
+## 13. Calgary man highlights mobility challenges caused by snow, ice buildup
+The City of Calgary's snow plan schedules crews to clear wheelchair curb ramps and busy sidewalks within 36 hours of a snowfall, but that clock resets when the snow falls again.
+📍 [Source](https://globalnews.ca/news/11564539/calgary-man-highlights-mobility-challenges-snow-ice-buildup/)
+**Score:** 4.40
+
+## 14. Hastings Racecourse announces the immediate stopping of live horse racing
+"This is strictly a business decision."
+📍 [Source](https://www.straight.com/city-culture/hastings-racecourse-announces-immediate-stopping-of-live-horse-racing)
+**Score:** 4.00
+
+## 15. Measles Update #50
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71743)
 **Score:** 4.50
 
-## 7. Employer Prosecuted for Workplace Incident
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71740)
+## 16. Measles Update #49
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71741)
+**Score:** 4.50
+
+## 17. Fatal police-involved shooting under SIU investigation at GO Station
+The SIU is investigating after Toronto police fatally shot a man at Danforth GO Station early Sunday following reports of an armed individual.
+📍 [Source](https://globalnews.ca/news/11566144/siu-police-shooting/)
+**Score:** 4.95
+
+## 18. Toronto rockers PUP have that dog in them
+<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">Sign up for our free newsletter</a>.</h3><p class="p1"></p>
+📍 [Source](https://www.straight.com/music/toronto-rockers-pup-have-that-dog-in-them)
+**Score:** 4.50
+
+## 19. A fresh take on Little Women at Granville Island Stage
+A multi-generational fave returns with a refreshed and theatrical approach.
+📍 [Source](https://www.straight.com/arts/a-fresh-take-on-little-women-at-granville-island-stage)
+**Score:** 4.50
+
+## 20. You Nearly Missed: Vancouver roots royalty joins Chest Fever at the Rickshaw for a tribute to the Band's Last Waltz
+Robbie Robertson would definitely approve.
+📍 [Source](https://www.straight.com/music/you-nearly-missed-vancouver-roots-royalty-joins-chest-fever-at-rickshaw-for-a-tribute-to-bands)
+**Score:** 4.50
+
+## 21. Photos: Atlanta rapper JID makes the most of a Monday night PNE Forum crowd
+The artist brought the crowd to its feet.
+📍 [Source](https://www.straight.com/music/photos-atlanta-rapper-jid-makes-most-of-a-monday-night-pne-forum-crowd)
+**Score:** 4.50
+
+## 22. Senate unanimously passes bill to eliminate Indian Act's 2nd-generation cut-off
+<img src='https://i.cbc.ca/ais/fbc8e097-c025-402e-8771-590835bba8c6,1764971941551/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C105%2C4764%2C2679%29%3BResize%3D%28620%29' alt='man reading and speaking' width='620' height='349' title='Senator Paul Prosper speaks during a plenary session on economic reconciliation the first day of the Assembly of First Nations (AFN) Special Chiefs Assembly in Ottawa, on Tuesday, Dec. 3, 2024. THE CANADIAN PRESS/Spencer Colby'/><p>The Senate voted unanimously Thursday to advance Bill S-2 with an amendment calling for the removal of the second-generation cut-off from the Indian Act, where children are not eligible for Indian status after two generations of one non-status parent.</p>
+📍 [Source](https://www.cbc.ca/news/indigenous/bill-s2-indian-act-status-9.7004888?cmp=rss)
+**Score:** 4.50
+
+## 23. Employer Prosecuted for Workplace Fatality
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71738)
+**Score:** 2.40
+
+## 24. Sinéad X Sanders on traumatic brain injuries, cognitive dissonance, and a long-awaited killer debut
+Vancouver finest players rally around a singer with an extraordinary story.
+📍 [Source](https://www.straight.com/music/sinead-x-sanders-on-traumatic-brain-injuries-cognitive-dissonance-and-a-long-awaited-killer)
 **Score:** 2.00
 
-## 8. Employer Prosecuted for Workplace Incident
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71739)
-**Score:** 2.00
+## 25. Nurses continue push for increased security after incident at St. Paul's Hospital
+Nurses in Saskatoon are fighting for more security features in hospitals after a violent incident with a patient concealing a shotgun at St. Paul's Hospital.
+📍 [Source](https://globalnews.ca/news/11564463/nurses-continue-push-increased-security-incident-st-pauls-hospital/)
+**Score:** 1.30
 
