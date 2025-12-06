@@ -124,12 +124,14 @@ type RNSubscription = { remove?: () => void } | (() => void) | undefined;
 import ChangelogGate from "../components/ChangelogGate";
 import DyslexiaVisualLayer from "../components/DyslexiaVisualLayer";
 import ErrorBoundary from "../components/ErrorBoundary";
+import FocusLock from "../components/FocusLock";
 import GlobalAssistant from "../components/GlobalAssistant";
 import { SafeProviderWrapper } from "../components/SafeProviderWrapper";
 import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
 import ThemedHeader from "../components/ThemedHeader";
 import UpdateSplashScreen from "../components/UpdateSplashScreen";
+import WhereWasI from "../components/WhereWasI";
 import { channels } from "../data/community";
 import { I18nProvider, useTranslation } from "../i18n";
 import { setSessionSeed } from "../services/session";
@@ -160,6 +162,7 @@ import { A11ySettingsProvider } from "../store/a11ySettings";
 import { BlocksProvider } from "../store/blocks";
 import { BookmarksProvider } from "../store/bookmarks";
 import { CoachProgressProvider } from "../store/coachProgress";
+import { useCognitiveComfort } from "../store/cognitiveComfort";
 import { ComplexityModeProvider } from "../store/complexityMode";
 import { EnergyCoinsProvider } from "../store/energyCoins";
 import { JurisdictionProvider } from "../store/jurisdiction";
@@ -232,6 +235,9 @@ export default function RootLayout() {
       pathname === "/" ? "Home" : pathname.replace(/[/()-]+/g, " ").trim();
   announce(`${readable}`);
   }, [pathname]);
+  
+  // Cognitive Comfort: Track navigation for "Where Was I" feature
+  // This is handled by the CognitiveComfortTracker component below
 
   // Light prefetch: warm common data caches shortly after mount and on app foreground
   React.useEffect(() => {
@@ -363,6 +369,9 @@ export default function RootLayout() {
                             </TermsGate>
                             <GlobalAssistant />
                             <DyslexiaVisualLayer />
+                            <CognitiveComfortTracker />
+                            <WhereWasI />
+                            <FocusLock />
                             <ToastViewport />
                             {/* Show footer only on web to avoid overlapping native tab bar */}
                             {Platform.OS === 'web' ? <Footer /> : null}
@@ -519,6 +528,42 @@ function CommunityPreload() {
     }
      
   }, []); // Only run once on mount - seed function is stable but not memoized
+  return null;
+}
+
+/**
+ * CognitiveComfortTracker - Tracks navigation for "Where Was I" feature
+ * Records each screen visit to help users with brain fog/memory challenges
+ * remember where they've been in the app.
+ */
+function CognitiveComfortTracker() {
+  const pathname = usePathname();
+  const { recordNavigation, whereWasIEnabled } = useCognitiveComfort();
+  const lastPathRef = React.useRef<string | null>(null);
+  
+  React.useEffect(() => {
+    // Only track if feature is enabled and path changed
+    if (!whereWasIEnabled || !pathname || pathname === lastPathRef.current) return;
+    
+    lastPathRef.current = pathname;
+    
+    // Get readable screen name
+    const screenName = pathname === "/" 
+      ? "Home" 
+      : pathname
+          .replace(/^\/(tabs)?\//, '')
+          .replace(/[/()-]+/g, " ")
+          .replace(/\b\w/g, c => c.toUpperCase())
+          .trim() || "Home";
+    
+    // Record navigation (explanation lookup is handled in the store)
+    recordNavigation(pathname, screenName);
+    
+    if (__DEV__) {
+      logger.debug('📍 Cognitive Comfort: Recorded navigation to', screenName);
+    }
+  }, [pathname, recordNavigation, whereWasIEnabled]);
+  
   return null;
 }
 

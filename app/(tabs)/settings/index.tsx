@@ -172,6 +172,19 @@ export default function SettingsScreen() {
             <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
           </A11yPressable>
           
+          {/* Cognitive Comfort Link - For users with brain fog, memory challenges */}
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
+            accessibilityRole='button'
+            accessibilityLabel={t('cognitiveComfort.settings.title', 'Cognitive Comfort - Where Was I, breadcrumbs, focus lock for brain fog and memory support')}
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/cognitive-comfort' as never)}
+          >
+            <Ionicons name='cloudy-outline' size={20} color={palette.primary} />
+            <Text style={styles.linkText}>{t('cognitiveComfort.settings.title', 'Cognitive Comfort')}</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
+          
           {/* Cultural Safety Link */}
           <A11yPressable
             style={[styles.linkButton, { justifyContent:'center', marginBottom:8 }]}
