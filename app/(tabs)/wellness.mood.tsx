@@ -202,6 +202,7 @@ function MoodInner() {
           <View style={styles.weatherButtons}>
             {['sunny', 'cloudy', 'rainy', 'snowy', 'stormy'].map((w) => (
               <Pressable
+                accessibilityRole="button"
                 key={w}
                 hitSlop={HIT_SLOP_8}
                 style={[

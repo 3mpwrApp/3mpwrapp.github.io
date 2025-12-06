@@ -196,6 +196,8 @@ export default function SensoryOverloadScreen() {
           )}
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.updateButton, { backgroundColor: palette.primary }]}
             onPress={() => setShowInputModal(true)}
           >
@@ -281,6 +283,8 @@ export default function SensoryOverloadScreen() {
             ))
           ) : (
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.addSpaceButton, { borderColor: palette.border }]}
               onPress={() => Alert.alert('Coming Soon', 'Add your custom safe spaces')}
             >
@@ -303,6 +307,8 @@ export default function SensoryOverloadScreen() {
 
           {protocols.map((protocol) => (
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               key={protocol.id}
               style={[styles.protocolItem, { backgroundColor: palette.background }]}
               onPress={() => startProtocol(protocol)}
@@ -335,6 +341,8 @@ export default function SensoryOverloadScreen() {
 
             <View style={styles.emergencyActions}>
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.emergencyButton, { backgroundColor: palette.surface }]}
                 onPress={() => startProtocol(protocols[0])}
               >
@@ -342,6 +350,8 @@ export default function SensoryOverloadScreen() {
                 <Text style={[styles.emergencyText, { color: palette.text }]}>Reduce Stimuli</Text>
               </Pressable>
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.emergencyButton, { backgroundColor: palette.surface }]}
                 onPress={() => Alert.alert('Breathing', 'Starting calming breath exercise...')}
               >
@@ -349,6 +359,8 @@ export default function SensoryOverloadScreen() {
                 <Text style={[styles.emergencyText, { color: palette.text }]}>Deep Breaths</Text>
               </Pressable>
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.emergencyButton, { backgroundColor: palette.surface }]}
                 onPress={() => Alert.alert('Safe Space', 'Locating nearest quiet space...')}
               >
@@ -400,6 +412,8 @@ export default function SensoryOverloadScreen() {
                     <View style={styles.levelSelector}>
                       {[0, 2, 4, 6, 8, 10].map((level) => (
                         <Pressable
+                          accessibilityRole="button"
+                          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                           key={level}
                           style={[
                             styles.levelButton,
@@ -432,12 +446,16 @@ export default function SensoryOverloadScreen() {
 
               <View style={styles.modalActions}>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.muted }]}
                   onPress={() => setShowInputModal(false)}
                 >
                   <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
                 </Pressable>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={submitSensoryInput}
                 >
@@ -482,12 +500,16 @@ export default function SensoryOverloadScreen() {
 
                   <View style={styles.protocolActions}>
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       style={[styles.skipButton, { borderColor: palette.border }]}
                       onPress={() => setShowProtocolModal(false)}
                     >
                       <Text style={{ color: palette.textSecondary }}>Skip</Text>
                     </Pressable>
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       style={[styles.nextButton, { backgroundColor: palette.primary }]}
                       onPress={nextProtocolStep}
                     >

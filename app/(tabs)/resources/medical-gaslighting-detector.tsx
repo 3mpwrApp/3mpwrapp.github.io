@@ -102,6 +102,7 @@ export default function MedicalGaslightingDetector() {
           </Text>
         </View>
         <Pressable
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           onPress={() => setShowInfo(!showInfo)}
           style={styles.infoButton}
           accessibilityRole="button"
@@ -156,6 +157,7 @@ export default function MedicalGaslightingDetector() {
         />
         <View style={styles.inputActions}>
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.clearButton, { borderColor: palette.muted }]}
             onPress={handleClear}
             disabled={!noteText}
@@ -168,6 +170,7 @@ export default function MedicalGaslightingDetector() {
             </Text>
           </Pressable>
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.analyzeButton, { 
               backgroundColor: noteText.trim() ? palette.primary : palette.muted 
             }]}
@@ -275,6 +278,7 @@ export default function MedicalGaslightingDetector() {
           {/* Actions */}
           <View style={styles.resultActions}>
             <Pressable
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.actionButton, { borderColor: palette.primary }]}
               onPress={() => {
                 // TODO: Save to evidence locker

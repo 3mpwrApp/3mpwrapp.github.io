@@ -102,6 +102,7 @@ export default function FunctionalCapacityWizard() {
           headerTintColor: palette.text,
           headerLeft: () => (
             <Pressable
+              accessibilityRole="button"
               onPress={() => {
                 if (answeredCount > 0) {
                   const confirmExit = confirm('Are you sure? Your progress will be lost.');
@@ -206,6 +207,7 @@ export default function FunctionalCapacityWizard() {
               const isSelected = assessments[currentDomain.code] === option.value;
               return (
                 <Pressable
+                  accessibilityRole="button"
                   key={option.value}
                   onPress={() => handleSelectQualifier(option.value)}
                   style={[
@@ -255,6 +257,7 @@ export default function FunctionalCapacityWizard() {
         {/* Navigation Footer */}
         <View style={[styles.footer, { backgroundColor: palette.surface, borderTopColor: palette.border }]}>
           <Pressable
+            accessibilityRole="button"
             onPress={handlePrevious}
             disabled={currentDomainIndex === 0}
             style={[
@@ -270,6 +273,7 @@ export default function FunctionalCapacityWizard() {
 
           {currentDomainIndex < domains.length - 1 ? (
             <Pressable
+              accessibilityRole="button"
               onPress={handleNext}
               style={[styles.navButton, { backgroundColor: palette.primary, borderColor: palette.primary }]}
               hitSlop={HIT_SLOP_8}
@@ -279,6 +283,7 @@ export default function FunctionalCapacityWizard() {
             </Pressable>
           ) : (
             <Pressable
+              accessibilityRole="button"
               onPress={handleFinish}
               disabled={!isComplete || isSaving}
               style={[

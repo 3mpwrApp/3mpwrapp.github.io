@@ -109,6 +109,7 @@ export function ExplainThisScreen({
       ) : (
         <View style={styles.floatingContainer}>
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             onPress={handleOpen}
             accessibilityRole="button"
             accessibilityLabel={t('cognitive.explainThisScreen', 'Explain this screen')}
@@ -156,6 +157,7 @@ export function ExplainThisScreen({
             {/* Actions */}
             <View style={styles.actions}>
               <Pressable
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 onPress={handleSpeak}
                 accessibilityRole="button"
                 accessibilityLabel={isSpeaking ? t('cognitive.stopReading', 'Stop reading') : t('cognitive.readAloud', 'Read aloud')}
@@ -175,6 +177,7 @@ export function ExplainThisScreen({
               </Pressable>
               
               <Pressable
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 onPress={handleClose}
                 accessibilityRole="button"
                 accessibilityLabel={t('cognitive.gotIt', 'Got it')}
@@ -189,6 +192,7 @@ export function ExplainThisScreen({
             
             {/* Toggle Explanation Type */}
             <Pressable
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={toggleExplanationType}
               accessibilityRole="button"
               style={styles.toggleLink}

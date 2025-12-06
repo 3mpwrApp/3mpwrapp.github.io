@@ -103,8 +103,10 @@ function fixFile(file, verbose = false) {
     
     const tagContent = src.substring(startIdx, endIdx + 1);
     
-    // Skip if spreads props
-    if (/\{\s*\.\.\./.test(tagContent)) continue;
+    // Skip if spreads props (e.g., {...props})
+    // But don't falsely match things like style={[...]} or onPress={() => ...}
+    // Only skip if we see { followed by ... at the very start of attribute value
+    if (/=\{\s*\.\.\./.test(tagContent)) continue;
     
     const needsRole = !/accessibilityRole\s*=/.test(tagContent);
     const needsHitSlop = !/hitSlop\s*=/.test(tagContent);

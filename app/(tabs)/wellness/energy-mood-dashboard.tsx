@@ -298,18 +298,24 @@ export default function EnergyMoodDashboard() {
               </Text>
               <View style={styles.borrowButtons}>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.borrowButton, { backgroundColor: palette.error }]}
                   onPress={() => borrowEnergy(5)}
                 >
                   <Text style={styles.borrowButtonText}>+5 units</Text>
                 </Pressable>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.borrowButton, { backgroundColor: palette.error }]}
                   onPress={() => borrowEnergy(10)}
                 >
                   <Text style={styles.borrowButtonText}>+10 units</Text>
                 </Pressable>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.borrowButton, { backgroundColor: palette.error }]}
                   onPress={() => borrowEnergy(20)}
                 >
@@ -430,6 +436,8 @@ export default function EnergyMoodDashboard() {
           </Text>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={logSocialInteraction}
           >
@@ -485,6 +493,8 @@ export default function EnergyMoodDashboard() {
           </Text>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={shiftEnergy}
           >
@@ -655,6 +665,8 @@ export default function EnergyMoodDashboard() {
             )}
 
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.crisisButton, { backgroundColor: palette.primary }]}
               onPress={() => emotionalFirstAid.getPersonalizedIntervention()}
             >
@@ -727,6 +739,8 @@ export default function EnergyMoodDashboard() {
                 <View style={styles.typeGrid}>
                   {(['conversation', 'video_call', 'work_meeting', 'group_event', 'family', 'date', 'text', 'other'] as InteractionType[]).map((type) => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={type}
                       style={[
                         styles.typeButton,
@@ -774,6 +788,8 @@ export default function EnergyMoodDashboard() {
                 <View style={styles.durationRow}>
                   {[15, 30, 60, 120, 180].map((dur) => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={dur}
                       style={[
                         styles.durationButton,
@@ -800,6 +816,8 @@ export default function EnergyMoodDashboard() {
                 <View style={styles.energySlider}>
                   {[0, 25, 50, 75, 100].map((level) => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={level}
                       style={[
                         styles.energyLevelButton,
@@ -826,6 +844,8 @@ export default function EnergyMoodDashboard() {
                 <View style={styles.energySlider}>
                   {[0, 25, 50, 75, 100].map((level) => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={level}
                       style={[
                         styles.energyLevelButton,
@@ -861,12 +881,16 @@ export default function EnergyMoodDashboard() {
 
             <View style={styles.modalActions}>
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.modalButton, { backgroundColor: palette.muted }]}
                 onPress={() => setShowSocialModal(false)}
               >
                 <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
               </Pressable>
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.modalButton, { backgroundColor: palette.primary }]}
                 onPress={saveSocialInteraction}
               >
@@ -909,6 +933,8 @@ export default function EnergyMoodDashboard() {
               <View style={styles.amountRow}>
                 {[5, 10, 15, 20, 25].map((amt) => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={amt}
                     style={[
                       styles.amountButton,
@@ -934,6 +960,8 @@ export default function EnergyMoodDashboard() {
               <View style={styles.daysRow}>
                 {[1, 2, 3, 5, 7].map((days) => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={days}
                     style={[
                       styles.daysButton,
@@ -975,12 +1003,16 @@ export default function EnergyMoodDashboard() {
 
             <View style={styles.modalActions}>
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.modalButton, { backgroundColor: palette.muted }]}
                 onPress={() => setShowTemporalModal(false)}
               >
                 <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
               </Pressable>
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.modalButton, { backgroundColor: palette.warning }]}
                 onPress={executeTemporalShift}
               >

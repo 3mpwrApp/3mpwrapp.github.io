@@ -549,6 +549,8 @@ export default function PrepareAppeal() {
               
               return (
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   key={phase.id}
                   onPress={() => setCurrentPhase(phase.id)}
                   style={[
@@ -585,12 +587,14 @@ export default function PrepareAppeal() {
             return (
               <View key={step.id} style={styles.stepCard}>
                 <Pressable
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   onPress={() => setExpandedStep(isExpanded ? null : step.id)}
                   style={styles.stepHeader}
                   accessibilityRole="button"
                   accessibilityLabel={`${t(step.titleKey, step.titleKey)}. ${isCompleted ? 'Completed' : 'Not completed'}. Tap to expand.`}
                 >
                   <Pressable
+                    accessibilityRole="button"
                     onPress={() => toggleStepComplete(step.id)}
                     style={[styles.checkbox, isCompleted && styles.checkboxChecked]}
                     hitSlop={HIT_SLOP_8}

@@ -175,6 +175,7 @@ export default function PolicySimple() {
           <Text style={s.cardTitle}>{t(sec.title, sec.title)}</Text>
           {sec.items.map((it) => (
             <Pressable
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               key={it.label}
               onPress={() => open(it.url)}
               accessibilityRole="link"

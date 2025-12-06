@@ -435,6 +435,8 @@ export default function EnergyMoodHub() {
       {/* Advanced Mode Toggle */}
       <View style={[styles.card, { backgroundColor: palette.surface }]}>
         <Pressable
+          accessibilityRole="button"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           style={styles.advancedToggle}
           onPress={() => setAdvancedMode(!advancedMode)}
         >
@@ -660,6 +662,8 @@ export default function EnergyMoodHub() {
         <View style={styles.taskGrid}>
           {QUICK_TASKS.map((task) => (
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               key={task.name}
               style={[styles.taskButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
               onPress={() => spendTask(task.name, task.cost)}
@@ -671,6 +675,8 @@ export default function EnergyMoodHub() {
         </View>
 
         <Pressable
+          accessibilityRole="button"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           style={[styles.customButton, { backgroundColor: palette.surface, borderColor: palette.border }]}
           onPress={() => setShowCustomTaskModal(true)}
         >
@@ -686,6 +692,8 @@ export default function EnergyMoodHub() {
         <View style={styles.moodGrid}>
           {MOOD_OPTIONS.map((mood) => (
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               key={mood.value}
               style={[styles.moodButton, { backgroundColor: mood.color + '20', borderColor: mood.color }]}
               onPress={() => handleMoodLog(mood.value)}
@@ -751,6 +759,8 @@ export default function EnergyMoodHub() {
           </View>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.sleepLogButton, { backgroundColor: palette.primary }]}
             onPress={handleSleepLog}
             disabled={isSavingSleep}
@@ -785,6 +795,8 @@ export default function EnergyMoodHub() {
         <View style={styles.activityTypeRow}>
           {['low', 'moderate', 'high'].map((type) => (
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               key={type}
               style={[
                 styles.activityTypeButton,
@@ -841,6 +853,8 @@ export default function EnergyMoodHub() {
           </View>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.sleepLogButton, { backgroundColor: palette.primary }]}
             onPress={handleActivityLog}
             disabled={isSavingActivity}
@@ -875,18 +889,24 @@ export default function EnergyMoodHub() {
 
         <View style={styles.borrowButtons}>
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.borrowButton, { backgroundColor: palette.error }]}
             onPress={() => borrowSpoons(2)}
           >
             <Text style={styles.borrowButtonText}>+2 🥄</Text>
           </Pressable>
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.borrowButton, { backgroundColor: palette.error }]}
             onPress={() => borrowSpoons(5)}
           >
             <Text style={styles.borrowButtonText}>+5 🥄</Text>
           </Pressable>
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.borrowButton, { backgroundColor: palette.error }]}
             onPress={() => borrowSpoons(10)}
           >
@@ -1198,6 +1218,8 @@ export default function EnergyMoodHub() {
         {/* Tab Navigation */}
         <View style={[styles.tabBar, { backgroundColor: palette.surface, borderBottomColor: palette.border }]}>
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.tab, activeTab === 'dashboard' && styles.tabActive]}
             onPress={() => setActiveTab('dashboard')}
           >
@@ -1212,6 +1234,8 @@ export default function EnergyMoodHub() {
           </Pressable>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.tab, activeTab === 'track' && styles.tabActive]}
             onPress={() => setActiveTab('track')}
           >
@@ -1226,6 +1250,8 @@ export default function EnergyMoodHub() {
           </Pressable>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.tab, activeTab === 'analyze' && styles.tabActive]}
             onPress={() => setActiveTab('analyze')}
           >
@@ -1240,6 +1266,8 @@ export default function EnergyMoodHub() {
           </Pressable>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.tab, activeTab === 'community' && styles.tabActive]}
             onPress={() => setActiveTab('community')}
           >
@@ -1285,12 +1313,16 @@ export default function EnergyMoodHub() {
 
               <View style={styles.modalButtons}>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.border }]}
                   onPress={() => setShowCustomTaskModal(false)}
                 >
                   <Text style={styles.modalButtonText}>Cancel</Text>
                 </Pressable>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={addCustomTask}
                 >

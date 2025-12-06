@@ -144,6 +144,7 @@ export default function AccountabilityCase() {
                 multiline={true}
               />
               <Pressable
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={({ pressed }) => [s.button, pressed && { opacity: 0.8 }, saving && { opacity: 0.6 }]}
                 onPress={addResponse}
                 disabled={saving || !note.trim().length}

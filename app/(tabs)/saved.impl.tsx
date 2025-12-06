@@ -157,6 +157,7 @@ export default function SavedScreen() {
     icon: keyof typeof Ionicons.glyphMap;
   }) => (
     <Pressable
+      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
       style={[styles.filterButton, activeFilter === filter && styles.filterButtonActive]}
       onPress={() => setActiveFilter(filter)}
       accessibilityRole="button"
@@ -269,6 +270,7 @@ export default function SavedScreen() {
           />
           {searchQuery.length > 0 && (
             <Pressable
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={styles.clearButton}
               onPress={() => setSearchQuery("")}
               accessibilityRole="button"
@@ -290,6 +292,7 @@ export default function SavedScreen() {
 
           <View style={styles.viewControls}>
             <Pressable
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.viewButton, viewMode === "list" && styles.viewButtonActive]}
               onPress={() => setViewMode("list")}
               accessibilityRole="button"
@@ -299,6 +302,7 @@ export default function SavedScreen() {
               <Ionicons name="list" size={20} color={viewMode === "list" ? "white" : palette.text} />
             </Pressable>
             <Pressable
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.viewButton, viewMode === "grid" && styles.viewButtonActive]}
               onPress={() => setViewMode("grid")}
               accessibilityRole="button"

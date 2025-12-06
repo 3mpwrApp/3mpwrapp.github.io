@@ -21,6 +21,7 @@ export default function ReflectionsCalendarJestImpl() {
 
       <GapView style={{ flexDirection: 'row', marginTop: 4 }} gap={8}>
         <Pressable
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           onPress={() => setView('grid')}
           accessibilityRole="button"
           accessibilityLabel="Switch to grid view"
@@ -30,6 +31,7 @@ export default function ReflectionsCalendarJestImpl() {
           <Text style={{ color: view==='grid' ? palette.onPrimary : palette.text, fontWeight: '700' }}>GRID</Text>
         </Pressable>
         <Pressable
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           onPress={() => setView('list')}
           accessibilityRole="button"
           accessibilityLabel="Switch to list view"
@@ -43,6 +45,7 @@ export default function ReflectionsCalendarJestImpl() {
       <View style={{ height: 12 }} />
 
       <Pressable
+        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         accessibilityRole="button"
         accessibilityLabel="Export reflections as CSV"
         onPress={async () => {
@@ -63,6 +66,7 @@ export default function ReflectionsCalendarJestImpl() {
         <View>
           <Text style={{ color: palette.text, opacity: 0.8 }}>No reflections yet.</Text>
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             accessibilityRole="button"
             accessibilityLabel={`View day ${dayLabel} with entry`}
             onPress={() => setDetailsOpen(true)}
@@ -81,6 +85,7 @@ export default function ReflectionsCalendarJestImpl() {
             <Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>Details</Text>
             <GapView style={{ flexDirection: 'row', marginBottom: 8 }} gap={8}>
               <Pressable
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 accessibilityRole="button"
                 accessibilityLabel="Add reflection"
                 onPress={() => setEditorOpen(true)}
@@ -89,6 +94,7 @@ export default function ReflectionsCalendarJestImpl() {
                 <Text style={{ color: palette.text, fontWeight: '700' }}>Add reflection</Text>
               </Pressable>
               <Pressable
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 accessibilityRole="button"
                 accessibilityLabel="Close dialog"
                 onPress={() => setDetailsOpen(false)}
@@ -101,6 +107,7 @@ export default function ReflectionsCalendarJestImpl() {
             {editorOpen && (
               <View>
                 <Pressable
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   accessibilityRole="button"
                   accessibilityLabel="Save reflection"
                   onPress={async () => {

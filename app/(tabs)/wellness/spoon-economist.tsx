@@ -267,6 +267,8 @@ export default function SpoonEconomistScreen() {
           <View style={styles.taskGrid}>
             {quickTasks.map((task) => (
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 key={task.id}
                 style={[styles.taskButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
                 onPress={() => spendTask(task.name, task.cost)}
@@ -279,6 +281,8 @@ export default function SpoonEconomistScreen() {
           </View>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.customButton, { backgroundColor: palette.surface, borderColor: palette.border }]}
             onPress={() => setShowCustomTaskModal(true)}
           >
@@ -305,6 +309,8 @@ export default function SpoonEconomistScreen() {
             <View style={styles.taskGrid}>
               {customTasks.map((task) => (
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   key={task.id}
                   style={[styles.taskButton, { backgroundColor: palette.secondary + '20', borderColor: palette.secondary }]}
                   onPress={() => spendTask(task.id, task.baseCost)}
@@ -325,18 +331,24 @@ export default function SpoonEconomistScreen() {
 
           <View style={styles.borrowButtons}>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.borrowButton, { backgroundColor: palette.error }]}
               onPress={() => borrowSpoons(2)}
             >
               <Text style={[styles.borrowButtonText, { color: palette.onPrimary }]}>+2 🥄</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.borrowButton, { backgroundColor: palette.error }]}
               onPress={() => borrowSpoons(5)}
             >
               <Text style={[styles.borrowButtonText, { color: palette.onPrimary }]}>+5 🥄</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.borrowButton, { backgroundColor: palette.error }]}
               onPress={() => borrowSpoons(10)}
             >
@@ -396,6 +408,8 @@ export default function SpoonEconomistScreen() {
               />
 
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={styles.checkboxRow}
                 onPress={() => setSaveCustomTask(!saveCustomTask)}
               >
@@ -411,6 +425,8 @@ export default function SpoonEconomistScreen() {
 
               <View style={styles.modalButtons}>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.border }]}
                   onPress={() => {
                     setShowCustomTaskModal(false);
@@ -422,6 +438,8 @@ export default function SpoonEconomistScreen() {
                   <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
                 </Pressable>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={addCustomTask}
                 >
@@ -456,6 +474,8 @@ export default function SpoonEconomistScreen() {
 
               <View style={styles.modalButtons}>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.border }]}
                   onPress={() => {
                     setShowSettingsModal(false);
@@ -465,6 +485,8 @@ export default function SpoonEconomistScreen() {
                   <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
                 </Pressable>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={handleSaveMaxSpoons}
                 >
@@ -496,6 +518,8 @@ export default function SpoonEconomistScreen() {
                         </Text>
                       </View>
                       <Pressable
+                        accessibilityRole="button"
+                        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                         onPress={() => handleDeleteCustomTask(task.id, task.name)}
                         style={styles.deleteButton}
                       >
@@ -508,6 +532,8 @@ export default function SpoonEconomistScreen() {
 
               <View style={styles.modalButtons}>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={() => setShowManageTasksModal(false)}
                 >
@@ -530,6 +556,8 @@ export default function SpoonEconomistScreen() {
               <ScrollView style={styles.taskList}>
                 {quickTasks.map((task) => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={task.id}
                     style={[styles.taskListItem, { borderBottomColor: palette.border }]}
                     onPress={() => handleEditQuickTask(task)}
@@ -547,6 +575,8 @@ export default function SpoonEconomistScreen() {
               </ScrollView>
 
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.customButton, { backgroundColor: palette.surface, borderColor: palette.primary, marginTop: 12 }]}
                 onPress={() => {
                   setNewQuickTaskName('');
@@ -560,12 +590,16 @@ export default function SpoonEconomistScreen() {
 
               <View style={styles.modalButtons}>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.border }]}
                   onPress={handleResetQuickTasks}
                 >
                   <Text style={[styles.modalButtonText, { color: palette.text }]}>Reset</Text>
                 </Pressable>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={() => setShowManageQuickTasksModal(false)}
                 >
@@ -601,6 +635,8 @@ export default function SpoonEconomistScreen() {
 
               <View style={styles.modalButtons}>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.border }]}
                   onPress={() => {
                     setShowEditQuickTaskModal(false);
@@ -610,6 +646,8 @@ export default function SpoonEconomistScreen() {
                   <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
                 </Pressable>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={handleSaveQuickTask}
                 >

@@ -227,6 +227,7 @@ export default function ComplexityModeSettings() {
             Having a flare-up, brain fog, or just overwhelmed? Enable Bad Day Mode for one-tap simplification. Automatically switches to Simple Mode and hides everything except essential features.
           </Text>
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={styles.badDayButton}
             onPress={handleBadDayMode}
             accessibilityRole="button"
@@ -260,6 +261,7 @@ export default function ComplexityModeSettings() {
                 <Text style={styles.modeDescription}>{modeConfig.description}</Text>
                 <Text style={styles.modeBestFor}>Best for: {modeConfig.bestFor}</Text>
                 <Pressable
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[
                     styles.selectButton,
                     isActive ? styles.selectButtonActive : styles.selectButtonInactive,

@@ -84,6 +84,8 @@ export default function CognitiveScannerScreen() {
           />
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.scanButton, { backgroundColor: palette.primary }]}
             onPress={scanThought}
           >
@@ -136,6 +138,8 @@ export default function CognitiveScannerScreen() {
                     </Text>
 
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       style={[styles.dialogueButton, { backgroundColor: palette.primary + '20' }]}
                       onPress={() => startDialogue(distortion.type)}
                     >

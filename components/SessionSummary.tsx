@@ -143,6 +143,7 @@ export function SessionSummary({ autoShow = true, minAwayMinutes = 30 }: Session
             <ScrollView style={styles.summaryList} showsVerticalScrollIndicator={false}>
               {summary.map((entry, index) => (
                 <Pressable
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   key={`${entry.timestamp}-${index}`}
                   onPress={() => entry.path && handleNavigateToScreen(entry.path)}
                   disabled={!entry.path}
@@ -175,6 +176,7 @@ export function SessionSummary({ autoShow = true, minAwayMinutes = 30 }: Session
           {/* Actions */}
           <View style={styles.actions}>
             <Pressable
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={handleClose}
               accessibilityRole="button"
               accessibilityLabel={t('cognitive.startFresh', 'Start fresh')}
@@ -188,6 +190,7 @@ export function SessionSummary({ autoShow = true, minAwayMinutes = 30 }: Session
             
             {summary.length > 0 && summary[0].path && (
               <Pressable
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 onPress={() => handleNavigateToScreen(summary[0].path!)}
                 accessibilityRole="button"
                 accessibilityLabel={t('cognitive.continueWhere', 'Continue where I left off')}

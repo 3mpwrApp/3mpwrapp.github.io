@@ -97,6 +97,7 @@ export default function SelfAdvocacyCoach() {
       >
         {lessons.map((l) => (
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             key={l.id}
             onPress={() => onViewLesson(l.id)}
             style={[s.chip, active === l.id && s.chipActive]}
@@ -198,6 +199,7 @@ function PracticeCoach() {
         accessibilityLabel={t('advocacy.coach.practiceInputLabel', 'Practice prompt input')}
       />
       <Pressable
+        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         onPress={run}
         style={{
           backgroundColor: palette.primary,

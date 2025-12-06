@@ -437,6 +437,8 @@ export default function CaseTimelineTracker() {
           <View style={{ flexDirection: 'row', gap: 8, paddingBottom: 4 }}>
             {QUICK_EVENTS.map((preset, idx) => (
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 key={idx}
                 onPress={() => quickAdd(preset)}
                 style={[s.quickChip, { borderColor: CATEGORY_CONFIG[preset.category].color }]}
@@ -462,6 +464,8 @@ export default function CaseTimelineTracker() {
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginTop: 16 }}>
           <View style={{ flexDirection: 'row', gap: 8 }}>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={() => setFilter('all')}
               style={[s.filterTab, filter === 'all' && s.filterTabActive]}
             >
@@ -475,6 +479,8 @@ export default function CaseTimelineTracker() {
               const cfg = CATEGORY_CONFIG[cat];
               return (
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   key={cat}
                   onPress={() => setFilter(cat)}
                   style={[s.filterTab, filter === cat && { backgroundColor: cfg.color }]}
@@ -670,6 +676,8 @@ export default function CaseTimelineTracker() {
                   const cfg = CATEGORY_CONFIG[cat];
                   return (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={cat}
                       onPress={() => setNewCategory(cat)}
                       style={[s.catChip, newCategory === cat && { backgroundColor: cfg.color }]}
@@ -688,6 +696,8 @@ export default function CaseTimelineTracker() {
                   const cfg = IMPORTANCE_CONFIG[imp];
                   return (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={imp}
                       onPress={() => setNewImportance(imp)}
                       style={[s.impChip, newImportance === imp && { backgroundColor: cfg.color }]}

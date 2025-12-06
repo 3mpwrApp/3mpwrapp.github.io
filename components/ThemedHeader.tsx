@@ -399,12 +399,15 @@ const ThemedHeader = React.memo(() => {
         onRequestClose={() => setMenuOpen(false)}
       >
         <Pressable
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           accessibilityRole="button"
           accessibilityLabel="Close menu"
           onPress={() => setMenuOpen(false)}
           style={styles.menuBackdrop}
         >
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             accessibilityLabel="Main menu"
             accessible={true}
             accessibilityViewIsModal={true}

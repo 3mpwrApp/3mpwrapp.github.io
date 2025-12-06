@@ -110,6 +110,8 @@ export default function AiGovNavigator() {
       >
         {(Object.keys(STEPS) as Flow[]).map((f) => (
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             key={f}
             onPress={() => {
               setFlow(f);
@@ -139,6 +141,8 @@ export default function AiGovNavigator() {
         <DyslexiaText style={s.cardText}>{list[step]}</DyslexiaText>
         <GapView style={{ flexDirection: "row", marginTop: 8 }} gap={8}>
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             onPress={prev}
             style={[s.button, { opacity: step === 0 ? 0.6 : 1 }]}
             disabled={step === 0}
@@ -146,6 +150,8 @@ export default function AiGovNavigator() {
             <Text style={s.buttonText}>Back</Text>
           </Pressable>
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             onPress={next}
             style={[s.button, { opacity: step === list.length - 1 ? 0.6 : 1 }]}
             disabled={step === list.length - 1}
@@ -155,6 +161,8 @@ export default function AiGovNavigator() {
         </GapView>
         <View style={{ height: 8 }} />
         <Pressable
+          accessibilityRole="button"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           onPress={() =>
             Share.share({
               title: `Navigator ${flow}`,
@@ -167,6 +175,8 @@ export default function AiGovNavigator() {
         </Pressable>
         <View style={{ height: 8 }} />
         <Pressable
+          accessibilityRole="button"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           onPress={async () => {
             try {
               const mod = await import("expo-print");
@@ -186,6 +196,8 @@ export default function AiGovNavigator() {
         </Pressable>
         <View style={{ height: 8 }} />
         <Pressable
+          accessibilityRole="button"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           onPress={async () => {
             try {
               const FS = await import("expo-file-system");

@@ -416,6 +416,8 @@ Generated with 3MPWR App
           <View style={{ flexDirection: 'row', gap: 8 }}>
             {(['plan', 'phases', 'comms'] as const).map(tab => (
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 key={tab}
                 onPress={() => setActiveTab(tab)}
                 style={[s.tab, activeTab === tab && s.tabActive]}
@@ -487,6 +489,8 @@ Generated with 3MPWR App
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
               {COMMON_ACCOMMODATIONS.map(acc => (
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   key={acc}
                   onPress={() => {
                     setSelectedAccommodations(prev =>
@@ -702,6 +706,8 @@ Generated with 3MPWR App
               <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
                 {COMMON_RESTRICTIONS.map(r => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={r}
                     onPress={() => setPhaseRestrictions(prev => prev.includes(r) ? prev.filter(x => x !== r) : [...prev, r])}
                     style={[s.restrictionChip, phaseRestrictions.includes(r) && s.restrictionChipSelected]}
@@ -737,6 +743,8 @@ Generated with 3MPWR App
             <View style={{ flexDirection: 'row', gap: 8 }}>
               {(['email', 'phone', 'meeting', 'letter'] as const).map(type => (
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   key={type}
                   onPress={() => setCommType(type)}
                   style={[s.typeChip, commType === type && s.typeChipSelected]}

@@ -143,6 +143,7 @@ export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFir
             
             {VOICE_COMMANDS.map((cmd, index) => (
               <Pressable
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 key={index}
                 style={[styles.suggestionItem, { borderBottomColor: palette.muted }]}
                 onPress={() => handleSuggestionPress(cmd.phrases[0])}

@@ -64,6 +64,7 @@ export default function ReflectionsCalendarTestImpl() {
 			<DisclaimerBanner type="medical" compact={true} />
 
 			<Pressable
+			  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
 				accessibilityRole="button"
 				accessibilityLabel="Add mood or reflection"
 				style={[s.secondary, { backgroundColor: palette.surface, borderColor: palette.muted, alignSelf:'flex-start', marginBottom:8 }]}
@@ -98,6 +99,7 @@ export default function ReflectionsCalendarTestImpl() {
 			<View style={{ height: 8 }} />
 
 			<Pressable
+			  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
 				onPress={async () => {
 					try {
 						const FS = await import('expo-file-system');
@@ -141,6 +143,7 @@ export default function ReflectionsCalendarTestImpl() {
 						<Text style={{ color: palette.text, fontWeight: '700', marginBottom: 8 }}>Details</Text>
 						<GapView style={{ flexDirection: 'row', marginBottom: 8 }} gap={8}>
 							<Pressable
+							  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
 								accessibilityRole="button"
 								accessibilityLabel="Add reflection"
 								style={[s.secondary, { backgroundColor: palette.surface, borderColor: palette.muted }]}
@@ -149,6 +152,7 @@ export default function ReflectionsCalendarTestImpl() {
 								<Text style={[s.secondaryText, { color: palette.text }]}>Add reflection</Text>
 							</Pressable>
 							<Pressable
+							  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
 								accessibilityRole="button"
 								accessibilityLabel="Close dialog"
 								style={[s.secondary, { backgroundColor: palette.surface, borderColor: palette.muted }]}
@@ -161,6 +165,7 @@ export default function ReflectionsCalendarTestImpl() {
 						{editorOpen && (
 							<View>
 								<Pressable
+								  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
 									accessibilityRole="button"
 									accessibilityLabel="Save reflection"
 									style={[s.primary, { backgroundColor: palette.primary }]}
@@ -186,6 +191,7 @@ export default function ReflectionsCalendarTestImpl() {
 					accessibilityLabel="Add reflection inline" accessible={true}>
 					<Text style={{ color: palette.text, fontWeight:'700', marginBottom:8 }}>New Reflection</Text>
 					<Pressable
+					  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
 						accessibilityRole="button"
 						accessibilityLabel="Save reflection"
 						style={[s.primary, { backgroundColor: palette.primary }]}

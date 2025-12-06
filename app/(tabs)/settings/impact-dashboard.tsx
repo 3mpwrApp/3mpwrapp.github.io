@@ -151,6 +151,7 @@ export default function ImpactDashboard() {
       
       {/* Share Button */}
       <Pressable
+        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         onPress={handleShare}
         disabled={sharing}
         style={[styles.shareButton, { backgroundColor: palette.primary }]}
@@ -269,6 +270,7 @@ export default function ImpactDashboard() {
       
       {/* Refresh Button */}
       <Pressable
+        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         onPress={loadMetrics}
         style={[styles.refreshButton, { borderColor: palette.muted }]}
         accessibilityRole="button"

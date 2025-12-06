@@ -47,6 +47,7 @@ const LanguageOption: React.FC<LanguageOptionProps> = ({
 
   return (
     <Pressable
+      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
       onPress={onPress}
       disabled={disabled}
       accessibilityRole="button"
@@ -225,6 +226,7 @@ export default function IndigenousLanguageScreen() {
       {/* Header */}
       <View style={styles.header}>
         <Pressable
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           onPress={() => router.back()}
           accessibilityRole="button"
           accessibilityLabel="Go back"
@@ -240,6 +242,7 @@ export default function IndigenousLanguageScreen() {
       {/* Land Acknowledgment Banner */}
       {territorialAcknowledgment && selectedLanguage && (
         <Pressable
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           onPress={showTerritorialAcknowledgment}
           accessibilityRole="button"
           accessibilityLabel="View territorial acknowledgment"
@@ -319,6 +322,7 @@ export default function IndigenousLanguageScreen() {
       {/* View Protocols Button */}
       {selectedLanguage && (
         <Pressable
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           onPress={showTraditionalProtocols}
           accessibilityRole="button"
           accessibilityLabel="View traditional protocols for selected language"

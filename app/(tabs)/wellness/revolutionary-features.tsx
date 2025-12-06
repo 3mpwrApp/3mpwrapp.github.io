@@ -235,6 +235,8 @@ export default function RevolutionaryFeaturesScreen() {
             const featureColor = getFeatureColor(feature.color);
             return (
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               key={feature.id}
               style={[styles.featureCard, { backgroundColor: palette.surface }]}
               onPress={() => navigateToFeature(feature.route)}

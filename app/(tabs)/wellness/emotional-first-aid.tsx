@@ -56,6 +56,8 @@ export default function EmotionalFirstAidScreen() {
           </Text>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.emergencyButton, { backgroundColor: palette.surface }]}
             onPress={startBreathing}
           >
@@ -66,6 +68,8 @@ export default function EmotionalFirstAidScreen() {
           </Pressable>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.emergencyButton, { backgroundColor: palette.surface }]}
             onPress={startTemperatureShock}
           >
@@ -76,6 +80,8 @@ export default function EmotionalFirstAidScreen() {
           </Pressable>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.emergencyButton, { backgroundColor: palette.surface }]}
             onPress={spinGroundingWheel}
           >
@@ -98,6 +104,8 @@ export default function EmotionalFirstAidScreen() {
           </Text>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.crisisButton, { backgroundColor: palette.surface }]}
             onPress={() => firstAid.registerTap()}
           >
@@ -123,6 +131,8 @@ export default function EmotionalFirstAidScreen() {
 
           {firstAid.getAllGames().map(game => (
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               key={game.id}
               style={[styles.gameCard, { borderColor: palette.border }]}
               onPress={() => alert(`Starting ${game.name}...\n\n${game.instructions}`)}

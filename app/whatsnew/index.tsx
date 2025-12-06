@@ -203,6 +203,7 @@ export default function WhatsNewScreen() {
           placeholderTextColor={palette.text}
         />
         <Pressable
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           disabled={!title.trim() || !summary.trim()}
           onPress={async () => {
             const item = {

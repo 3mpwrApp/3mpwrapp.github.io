@@ -175,6 +175,8 @@ export default function AIGroundingScreen() {
             <View style={styles.distressSlider}>
               {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   key={level}
                   style={[
                     styles.distressButton,
@@ -206,6 +208,8 @@ export default function AIGroundingScreen() {
             </View>
 
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.startButton, { backgroundColor: palette.primary }]}
               onPress={() => setShowContextModal(true)}
             >
@@ -229,6 +233,8 @@ export default function AIGroundingScreen() {
                   </Text>
                 </View>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.endButton, { backgroundColor: palette.error }]}
                   onPress={() => endSession(distressLevel)}
                 >
@@ -243,6 +249,8 @@ export default function AIGroundingScreen() {
                 <View style={styles.miniSlider}>
                   {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={level}
                       style={[
                         styles.miniDistressButton,
@@ -278,6 +286,8 @@ export default function AIGroundingScreen() {
               {recommendations.length > 0 ? (
                 recommendations.map((technique) => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={technique.id}
                     style={[styles.techniqueCard, { borderColor: palette.primary }]}
                     onPress={() => startTechnique(technique)}
@@ -327,6 +337,8 @@ export default function AIGroundingScreen() {
           <View style={styles.categoryGrid}>
             {['sensory', 'breathing', 'body', 'movement', 'cognitive', 'visualization'].map((category) => (
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 key={category}
                 style={[styles.categoryButton, { backgroundColor: palette.background }]}
                 onPress={() => {
@@ -368,6 +380,8 @@ export default function AIGroundingScreen() {
                 <View style={styles.contextButtons}>
                   {['home', 'work', 'public', 'car'].map((loc) => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={loc}
                       style={[
                         styles.contextBtn,
@@ -391,6 +405,8 @@ export default function AIGroundingScreen() {
                 <View style={styles.contextButtons}>
                   {[1, 3, 5, 10, 15].map((mins) => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={mins}
                       style={[
                         styles.contextBtn,
@@ -413,6 +429,8 @@ export default function AIGroundingScreen() {
                 <Text style={[styles.contextLabel, { color: palette.text }]}>Can you speak aloud?</Text>
                 <View style={styles.contextButtons}>
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     style={[
                       styles.contextBtn,
                       {
@@ -425,6 +443,8 @@ export default function AIGroundingScreen() {
                     <Text style={{ color: context.safeToSpeak ? palette.onPrimary : palette.text }}>Yes</Text>
                   </Pressable>
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     style={[
                       styles.contextBtn,
                       {
@@ -440,6 +460,8 @@ export default function AIGroundingScreen() {
               </View>
 
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.startSessionBtn, { backgroundColor: palette.primary }]}
                 onPress={startSession}
               >
@@ -519,6 +541,8 @@ export default function AIGroundingScreen() {
                   <View style={styles.ratingButtons}>
                     {[1, 2, 3, 4, 5].map((rating) => (
                       <Pressable
+                        accessibilityRole="button"
+                        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                         key={rating}
                         style={[styles.ratingBtn, { backgroundColor: palette.primary + '20' }]}
                         onPress={() => completeTechnique(rating)}

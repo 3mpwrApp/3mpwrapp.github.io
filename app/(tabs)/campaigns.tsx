@@ -54,6 +54,8 @@ class CampaignsTabErrorBoundary extends React.Component<
             <Text style={styles.errorDetail}>{this.state.error.message}</Text>
           )}
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={styles.errorButton}
             onPress={() => this.setState({ hasError: false, error: null })}
           >
@@ -94,6 +96,8 @@ export default function CampaignsTab() {
           </Text>
         )}
         <Pressable
+          accessibilityRole="button"
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           style={{
             backgroundColor: palette.primary,
             paddingVertical: 12,

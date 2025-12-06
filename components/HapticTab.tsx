@@ -9,6 +9,7 @@ type Props = React.ComponentProps<typeof Pressable>;
 export default function HapticTab(props: Props) {
   return (
     <Pressable
+      accessibilityRole="button"
       {...props}
       hitSlop={HIT_SLOP_12}
       onPressIn={(ev: GestureResponderEvent) => {

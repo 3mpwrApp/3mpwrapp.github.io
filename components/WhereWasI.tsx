@@ -130,7 +130,9 @@ export function WhereWasI({
         onRequestClose={handleClose}
       >
         <View style={styles.modalOverlay}>
-          <Pressable style={styles.backdrop} onPress={handleClose} />
+          <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }} style={styles.backdrop} onPress={handleClose} />
           
           <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
             <View style={styles.modalHeader}>
@@ -161,6 +163,7 @@ export function WhereWasI({
                 
                 return (
                   <Pressable
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={`${entry.path}-${entry.timestamp}`}
                     onPress={() => handleNavigate(entry)}
                     accessibilityRole="button"

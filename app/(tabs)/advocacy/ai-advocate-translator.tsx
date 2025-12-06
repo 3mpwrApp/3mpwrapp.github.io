@@ -87,6 +87,8 @@ export default function AiAdvocateTranslator() {
         multiline={true}
       />
       <Pressable
+        accessibilityRole="button"
+        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         onPress={async () => {
           if(!input.trim()) return;
           const start = Date.now();
@@ -141,6 +143,8 @@ export default function AiAdvocateTranslator() {
             gap={8}
           >
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={async () => {
                 try {
                   const mod = await import("expo-clipboard");
@@ -153,6 +157,8 @@ export default function AiAdvocateTranslator() {
               <Text style={s.buttonText}>{t('common.copy','Copy')}</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={() =>
                 Share.share({
                   message: output,
@@ -164,6 +170,8 @@ export default function AiAdvocateTranslator() {
               <Text style={s.buttonText}>{t('common.share','Share')}</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={async () => {
                 try {
                   const mod = await import("expo-print");
@@ -185,6 +193,8 @@ export default function AiAdvocateTranslator() {
               <Text style={s.buttonText}>{t('translator.pdf','PDF')}</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={async () => {
                 try {
                   const FS = await import("expo-file-system");

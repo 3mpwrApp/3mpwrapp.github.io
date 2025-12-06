@@ -162,6 +162,8 @@ export default function EnvironmentalAdaptationScreen() {
           )}
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.actionButton, { backgroundColor: palette.primary }]}
             onPress={() => setShowManualInput(true)}
           >
@@ -372,12 +374,16 @@ export default function EnvironmentalAdaptationScreen() {
 
               <View style={styles.modalActions}>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.muted }]}
                   onPress={() => setShowManualInput(false)}
                 >
                   <Text style={[styles.modalButtonText, { color: palette.text }]}>Cancel</Text>
                 </Pressable>
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.modalButton, { backgroundColor: palette.primary }]}
                   onPress={handleManualSubmit}
                 >

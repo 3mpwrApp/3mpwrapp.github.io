@@ -1043,6 +1043,8 @@ function QuickLogModal({
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8 }}>
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={num}
                       onPress={() => setSeverity(num)}
                       style={{
@@ -1088,6 +1090,8 @@ function QuickLogModal({
                 <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
                   {BODY_LOCATIONS.map(loc => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={loc}
                       onPress={() => setLocation(loc)}
                       style={{
@@ -1120,6 +1124,8 @@ function QuickLogModal({
                 <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
                   {COMMON_TRIGGERS.map(trigger => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={trigger}
                       onPress={() => toggleTrigger(trigger)}
                       style={{
@@ -1253,6 +1259,8 @@ function QuickLogModal({
 
             {/* Save Button */}
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={handleSave}
               style={{
                 backgroundColor: palette.primary,
@@ -1569,6 +1577,8 @@ function FlareTab() {
               </Text>
             )}
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={endFlare}
               style={{
                 backgroundColor: palette.success,
@@ -1590,6 +1600,8 @@ function FlareTab() {
               {t('tracker.noFlare', 'No Active Flare-Up')}
             </Text>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={startFlare}
               style={{
                 backgroundColor: palette.error,

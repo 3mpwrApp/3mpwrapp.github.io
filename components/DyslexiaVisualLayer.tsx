@@ -62,6 +62,7 @@ export function DyslexiaVisualLayer() {
       {/* Reading Ruler - Interactive */}
       {ruler.enabled && (
         <Pressable
+          accessibilityRole="button"
           onPress={handleRulerDrag}
           onPressIn={handleRulerDrag}
           hitSlop={HIT_SLOP_8}

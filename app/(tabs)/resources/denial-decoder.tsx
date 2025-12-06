@@ -909,6 +909,7 @@ Generated with 3MPWR App - Denial Decoder
         {/* Input Method Toggle */}
         <GapView style={{ flexDirection: 'row' }} gap={8}>
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             onPress={() => setUseTextInput(false)}
             style={[s.toggleButton, !useTextInput && { backgroundColor: palette.primary, borderColor: palette.primary }]}
             accessibilityRole="button"
@@ -918,6 +919,7 @@ Generated with 3MPWR App - Denial Decoder
             <Text style={[s.toggleButtonText, !useTextInput && { color: palette.onPrimary }]}>Upload File</Text>
           </Pressable>
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             onPress={() => setUseTextInput(true)}
             style={[s.toggleButton, useTextInput && { backgroundColor: palette.primary, borderColor: palette.primary }]}
             accessibilityRole="button"
@@ -1230,6 +1232,8 @@ Generated with 3MPWR App - Denial Decoder
               ) : (
                 history.map((h, idx) => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={h.id}
                     onPress={() => {
                       setResult(h);

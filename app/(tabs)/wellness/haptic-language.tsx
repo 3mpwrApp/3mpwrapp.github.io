@@ -71,6 +71,8 @@ export default function HapticLanguageScreen() {
 
             return (
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 key={pattern}
                 style={[styles.patternCard, { borderColor: isLast ? palette.primary : palette.border }]}
                 onPress={() => playPattern(pattern)}
@@ -113,6 +115,8 @@ export default function HapticLanguageScreen() {
           </Text>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.trainingButton, { backgroundColor: palette.primary }]}
             onPress={startTraining}
           >

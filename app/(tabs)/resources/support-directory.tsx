@@ -108,6 +108,7 @@ export default function SupportDirectory() {
         </Text>
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             accessibilityRole="button"
             accessibilityLabel={t('advocacy.support.showAll', 'Show all organizations')}
             accessibilityState={{ selected: !selectedProvince }}
@@ -127,6 +128,7 @@ export default function SupportDirectory() {
           </Pressable>
           {provinces.map(prov => (
             <Pressable
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               key={prov}
               accessibilityRole="button"
               accessibilityLabel={`${t('advocacy.support.filterBy', 'Filter by')} ${provinceLabels[prov] || prov}`}
@@ -164,6 +166,7 @@ export default function SupportDirectory() {
             )}
             {!!item.url && (
               <Pressable
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 accessibilityRole="link"
                 accessibilityLabel={t('advocacy.support.openWebsiteLabel','Open {{name}} website',{ name: item.name })}
                 onPress={() => Linking.openURL(item.url!)}
@@ -189,6 +192,7 @@ export default function SupportDirectory() {
           style={styles.input}
         />
         <Pressable
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           accessibilityRole="button"
           accessibilityLabel={t('advocacy.support.submitSuggestion','Submit suggestion')}
           onPress={async () => {

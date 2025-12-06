@@ -77,6 +77,7 @@ function Inner() {
       >
         {topicChannels.map((c) => (
           <Pressable
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             key={c.id}
             onPress={() => setChannelId(c.id)}
             style={[styles.chip, channelId === c.id && styles.chipActive]}
@@ -110,6 +111,7 @@ function Inner() {
       />
 
       <Pressable
+        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         onPress={submit}
         style={styles.button}
         accessibilityRole="button"

@@ -63,6 +63,8 @@ export default function LegalDNAScreen() {
           <View style={styles.sectionHeader}>
             <Text style={[styles.sectionTitle, { color: palette.text }]}>Your Cases</Text>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.addButton, { backgroundColor: palette.primary }]}
               onPress={() => _setShowAddModal(true)}
             >
@@ -78,6 +80,8 @@ export default function LegalDNAScreen() {
           ) : (
             cases.map((caseItem: any) => (
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 key={caseItem.id}
                 style={[styles.caseCard, { borderColor: palette.border }]}
                 onPress={() => analyzeCase(caseItem.id)}
@@ -264,6 +268,8 @@ export default function LegalDNAScreen() {
           <Text style={[styles.sectionTitle, { color: palette.text }]}>Analysis Tools</Text>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.toolButton, { backgroundColor: palette.primaryBackground || palette.surface, borderColor: palette.primary }]}
             onPress={getClaimTemplates}
           >

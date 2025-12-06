@@ -256,6 +256,7 @@ export default function PacingPartner() {
         <GapView gap={8} style={{ flexDirection: 'row' }}>
           {(['low', 'moderate', 'high'] as const).map(i => (
             <Pressable
+              accessibilityRole="button"
               key={i}
               hitSlop={HIT_SLOP_8}
               style={[

@@ -327,6 +327,8 @@ export default function CircadianDJScreen() {
               Take the chronotype quiz to discover your sleep-wake pattern
             </Text>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               style={[styles.quizButton, { backgroundColor: palette.primary }]}
               onPress={takeChronotypeQuiz}
             >
@@ -411,6 +413,8 @@ export default function CircadianDJScreen() {
           <Text style={[styles.sectionTitle, { color: palette.text }]}>Sleep Optimization Tools</Text>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={logSleep}
           >
@@ -425,6 +429,8 @@ export default function CircadianDJScreen() {
           </Pressable>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={calculateOptimalBedtime}
           >
@@ -439,6 +445,8 @@ export default function CircadianDJScreen() {
           </Pressable>
 
           <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
             onPress={getNapPrescription}
           >
@@ -501,6 +509,8 @@ export default function CircadianDJScreen() {
             <View style={styles.quizOptions}>
               {QUIZ_QUESTIONS[quizStep].options.map((option, index) => (
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   key={index}
                   style={[styles.quizOption, { backgroundColor: palette.background, borderColor: palette.border }]}
                   onPress={() => answerQuiz(index)}
@@ -583,6 +593,8 @@ export default function CircadianDJScreen() {
                 <View style={styles.qualityRow}>
                   {[1, 2, 3, 4, 5].map((q) => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={q}
                       style={[
                         styles.qualityButton,
@@ -613,6 +625,8 @@ export default function CircadianDJScreen() {
                 <View style={styles.interruptionRow}>
                   {[0, 1, 2, 3, 4, 5].map((n) => (
                     <Pressable
+                      accessibilityRole="button"
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                       key={n}
                       style={[
                         styles.interruptionButton,
@@ -637,6 +651,8 @@ export default function CircadianDJScreen() {
                 <Text style={[styles.sleepLogLabel, { color: palette.text }]}>Did you remember any dreams?</Text>
                 <View style={styles.dreamToggle}>
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     style={[
                       styles.dreamButton,
                       { backgroundColor: sleepLogData.dreams ? palette.primary : palette.background },
@@ -646,6 +662,8 @@ export default function CircadianDJScreen() {
                     <Text style={{ color: sleepLogData.dreams ? palette.onPrimary : palette.text }}>Yes</Text>
                   </Pressable>
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     style={[
                       styles.dreamButton,
                       { backgroundColor: !sleepLogData.dreams ? palette.primary : palette.background },
@@ -711,6 +729,8 @@ export default function CircadianDJScreen() {
             <View style={styles.sleepLogActions}>
               {sleepLogStep > 0 && (
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   style={[styles.sleepLogButton, { backgroundColor: palette.muted }]}
                   onPress={() => setSleepLogStep(sleepLogStep - 1)}
                 >
@@ -718,6 +738,8 @@ export default function CircadianDJScreen() {
                 </Pressable>
               )}
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 style={[styles.sleepLogButton, { backgroundColor: palette.primary, flex: sleepLogStep === 0 ? 1 : undefined }]}
                 onPress={nextSleepLogStep}
               >

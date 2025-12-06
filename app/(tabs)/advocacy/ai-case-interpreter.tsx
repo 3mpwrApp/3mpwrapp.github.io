@@ -198,6 +198,8 @@ export default function AiCaseInterpreter() {
         multiline={true}
       />
       <Pressable
+        accessibilityRole="button"
+        hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         onPress={async () => {
           setLoading(true);
           try {
@@ -304,6 +306,8 @@ export default function AiCaseInterpreter() {
           {/* Action Buttons */}
           <GapView style={{ flexDirection: "row", marginTop: 12, flexWrap: "wrap" }} gap={8}>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={() =>
                 Share.share({
                   message: `Case Analysis\\n\\nStrength: ${out.strength}%\\n\\n${out.summary}\\n\\nNext steps:\\n${out.next.map((n) => "- " + n).join("\\n")}`,
@@ -316,6 +320,8 @@ export default function AiCaseInterpreter() {
               <Text style={s.buttonText}> Share</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={async () => {
                 try {
                   const mod = await import("expo-clipboard");
@@ -331,6 +337,8 @@ export default function AiCaseInterpreter() {
               <Text style={s.buttonText}> Copy</Text>
             </Pressable>
             <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
               onPress={() => Alert.alert('Save to Evidence', 'This analysis will be saved to your Evidence Locker')}
               style={[s.button, { backgroundColor: palette.primary + 'CC' }]}
             >

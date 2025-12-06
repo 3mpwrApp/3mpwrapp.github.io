@@ -373,6 +373,8 @@ export default function DoctorVisitPrep() {
           <View style={{ flexDirection: 'row', gap: 8 }}>
             {(['prep', 'symptoms', 'meds', 'questions'] as const).map(tab => (
               <Pressable
+                accessibilityRole="button"
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 key={tab}
                 onPress={() => setActiveTab(tab)}
                 style={[s.tab, activeTab === tab && s.tabActive]}
@@ -430,6 +432,8 @@ export default function DoctorVisitPrep() {
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
               {DOCUMENT_REQUESTS.map(doc => (
                 <Pressable
+                  accessibilityRole="button"
+                  hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                   key={doc}
                   onPress={() => toggleDocument(doc)}
                   style={[s.docChip, requestedDocs.includes(doc) && s.docChipSelected]}
@@ -480,6 +484,8 @@ export default function DoctorVisitPrep() {
               <View style={{ flexDirection: 'row', gap: 4 }}>
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(n => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={n}
                     onPress={() => setNewSeverity(n)}
                     style={[
@@ -665,6 +671,8 @@ export default function DoctorVisitPrep() {
               <View style={{ flexDirection: 'row', gap: 8 }}>
                 {Object.keys(SUGGESTED_QUESTIONS).map(cat => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={cat}
                     onPress={() => setSuggestionCategory(cat as keyof typeof SUGGESTED_QUESTIONS)}
                     style={[s.tab, suggestionCategory === cat && s.tabActive]}

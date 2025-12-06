@@ -790,6 +790,8 @@ Generated with 3MPWR App
               <GapView gap={10}>
                 {claim.steps.map((step, idx) => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={step.id}
                     onPress={() => toggleStep(step.id)}
                     style={[s.stepCard, step.completed && s.stepCardCompleted]}
@@ -837,6 +839,8 @@ Generated with 3MPWR App
               <GapView gap={8}>
                 {claim.documents.map(doc => (
                   <Pressable
+                    accessibilityRole="button"
+                    hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                     key={doc.name}
                     onPress={() => toggleDocument(doc.name)}
                     style={[s.docItem, doc.collected && s.docItemCollected]}
@@ -953,6 +957,8 @@ Generated with 3MPWR App
                       const cfg = PHASE_CONFIG[phase];
                       return (
                         <Pressable
+                          accessibilityRole="button"
+                          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                           key={phase}
                           onPress={() => { updatePhase(phase); setShowTypeModal(false); }}
                           style={[s.phaseChip, claim.phase === phase && { backgroundColor: cfg.color }]}

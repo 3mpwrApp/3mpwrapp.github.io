@@ -136,6 +136,7 @@ export function NotificationFrequencyPicker({
         onRequestClose={() => setModalVisible(false)}
       >
         <Pressable
+          accessibilityRole="button"
           style={styles.modalOverlay}
           onPress={() => setModalVisible(false)}
           hitSlop={HIT_SLOP_16}
@@ -182,6 +183,7 @@ export function NotificationFrequencyPicker({
             ))}
 
             <Pressable
+              accessibilityRole="button"
               style={[styles.closeButton, { backgroundColor: palette.muted }]}
               onPress={() => setModalVisible(false)}
               hitSlop={HIT_SLOP_16}

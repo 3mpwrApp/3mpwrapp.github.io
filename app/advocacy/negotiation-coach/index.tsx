@@ -237,6 +237,7 @@ export default function NegotiationCoach() {
             </Text>
             {(Object.entries(scriptTemplates) as Array<[string, string]>).map(([key, template]) => (
               <Pressable
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
                 key={key}
                 style={[
                   styles.scriptCard,
