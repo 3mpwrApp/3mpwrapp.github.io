@@ -1,0 +1,119 @@
+---
+layout: post
+title: "Daily News Curation - 2025-12-06"
+date: 2025-12-06
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-12-06
+
+Curated 22 items from disability, accessibility, and social policy sources.
+
+## 1. Canada removes Syria from list of foreign state supporters of terrorism
+Ottawa said it has also removed Hayat Tahrir al-Sham (HTS), the group that led a rebel takeover last year, from its list of terrorist entities under the Criminal Code.
+📍 [Source](https://globalnews.ca/news/11564294/canada-syria-terrorism-sponsor-list-hts/)
+**Score:** 20.00
+
+## 2. Canada proposes keeping Nunavut fishing licences with non-Inuit organization
+<img src='https://i.cbc.ca/ais/e52b476f-07df-45c6-b181-1de0a786f67a,1764959422487/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C306%2C3264%2C1836%29%3BResize%3D%28620%29' alt='fishery boat in the water with Nunavut flag flying' width='620' height='349' title='A government of Nunavut fishery boat.'/><p>The Department of Fisheries and Oceans Canada (DFO) is looking at reissuing fishing licences off Nunavut's coast to non-Inuit operations, despite a federal court judge saying the initial decision by Ottawa was unreasonable. </p>
+📍 [Source](https://www.cbc.ca/news/canada/north/dfo-fishing-licences-nunavut-9.7004849?cmp=rss)
+**Score:** 16.50
+
+## 3. Top court restores conviction of woman who tried to kill mother with insulin injection
+<img src='https://i.cbc.ca/ais/f903c269-b785-41fb-9d9e-d1a93930cf59,1764972012058/full/max/0/default.jpg?im=Crop%2Crect%3D%28881%2C257%2C6677%2C3755%29%3BResize%3D%28620%29' alt='The exterior of the Supreme Court of Canada building' width='620' height='349' title='General view of the Supreme Court of Canada building on Parliament Hill in Ottawa, Ontario, Canada September 17, 2020.  REUTERS/Blair Gable'/><p>The Supreme Court of Canada has restored a woman's conviction for attempting to kill her mother by injecting her with insulin.</p>
+📍 [Source](https://www.cbc.ca/news/canada/supreme-court-restores-conviction-attempted-killing-insulin-9.7005237?cmp=rss)
+**Score:** 14.00
+
+## 4. 2 B.C. First Nations say government is rushing mine expansion without proper review
+“We do not consent at this point. We have too much more we have to work through,” said Keith Crow, chief of Lower Similkameen on Friday.
+📍 [Source](https://globalnews.ca/news/11564301/bc-first-nations-government-rushing-mine-expansion-review/)
+**Score:** 10.50
+
+## 5. Kelowna residents raise concerns over social support facilities in neighbourhood
+The City of Kelowna, in partnership with BC Housing, plans to build a 40-unit supportive and complex care facility on Pacific Avenue near Capri Mall.
+📍 [Source](https://globalnews.ca/news/11564528/kelowna-residents-concerns-social-support-facilities/)
+**Score:** 10.50
+
+## 6. ‘Patients get relief': Researchers recommending nerve blockers to treat migraines
+The research recommends occipital nerve blocks should be offered in emergency rooms to treat acute migraine attacks.
+📍 [Source](https://globalnews.ca/news/11564773/nerve-blockers-migraines/)
+**Score:** 11.50
+
+## 7. Canada's Summer McIntosh wins 400M freestyle by more than 15 seconds at U.S. Open swim meet
+<img src='https://i.cbc.ca/ais/1231986f-4fdb-48a1-a2f3-4dee05c3cd59,1764941298702/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C219%2C4193%2C2358%29%3BResize%3D%28620%29' alt='A swimmer displays a medal.' width='620' height='349' title='AUSTIN, TEXAS - DECEMBER 04: Gold medalist Summer McIntosh poses after the Women's 400m Freestyle final during day 2 of the Toyota U.S. Open on December 04, 2025 in Austin, Texas.  (Photo by Alex Slitz/Getty Images)'/><p>Canada's Summer McIntosh set a new U.S. Open record in the women's 400-metre freestyle on Thursday night at the Toyota U.S. Open Championships.</p>
+📍 [Source](https://www.cbc.ca/sports/olympics/summer/aquatics/summer-mcintosh-us-open-record-swim-dec5-9.7004229?cmp=rss)
+**Score:** 9.50
+
+## 8. Long-awaited electronic medical records system to launch Saturday at IWK Health Centre
+<img src='https://i.cbc.ca/ais/16349212-ea21-4739-b3e1-bc9fcf2706da,1764883601195/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C46%2C1760%2C990%29%3BResize%3D%28620%29' alt='A sign in a hallway that says one person one record' width='620' height='349' title='Nova Scotia's new electronic medical record system will debut Saturday at the IWK Health Centre.'/><p>If all goes according to plan, at 6 a.m. AT on Saturday people working at the IWK Health Centre will become the test case for a generational change to Nova Scotia’s health-care system.</p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/one-person-one-record-health-care-patients-doctors-nurses-iwk-9.7003614?cmp=rss)
+**Score:** 11.50
+
+## 9. Saskatchewan tables involuntary drug treatment bill as fall session ends
+Saskatchewan's government introduced its involuntary treatment bill Friday on the final day of its fall sitting with critics wondering how it will all play out.
+📍 [Source](https://globalnews.ca/news/11564425/saskatchewan-tables-involuntary-drug-treatment-bill/)
+**Score:** 7.90
+
+## 10. Manitoba Government Signs onto National Electricity Grid Memorandum of Understanding
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71742)
+**Score:** 7.50
+
+## 11. Should We Separate the Art from the Artist?
+American essayist Adam Gopnik thinks we’re better off without ‘trying to fence off our imaginations.’
+📍 [Source](https://thetyee.ca/Culture/2025/12/05/Should-We-Separate-Art-From-Artist-Adam-Gopnik/)
+**Score:** 5.00
+
+## 12. Calgary man highlights mobility challenges caused by snow, ice buildup
+The City of Calgary's snow plan schedules crews to clear wheelchair curb ramps and busy sidewalks within 36 hours of a snowfall, but that clock resets when the snow falls again.
+📍 [Source](https://globalnews.ca/news/11564539/calgary-man-highlights-mobility-challenges-snow-ice-buildup/)
+**Score:** 4.00
+
+## 13. Hastings Racecourse announces the immediate stopping of live horse racing
+"This is strictly a business decision."
+📍 [Source](https://www.straight.com/city-culture/hastings-racecourse-announces-immediate-stopping-of-live-horse-racing)
+**Score:** 4.00
+
+## 14. What happens to the wood from this burnt forest?
+<img src='https://i.cbc.ca/ais/46fdf53a-6e9e-4be4-b378-eaa7033b0c2d,1764874895184/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1600%2C900%29%3BResize%3D%28620%29' alt='An green John Deere excavator lifts a charred tree in the forest.' width='620' height='349' title='Crews are hard at work cleaning up the burnt trees from the Long Lake wildfire in Nova Scotia's Annapolis County.'/><p>The cleanup of the Long Lake wildfire in Nova Scotia’s Annapolis County has begun. So what happens to the thousands of hectares of forest that was burned? The CBC’s Aly Thomson went to West Dalhousie to find out.</p>
+📍 [Source](https://www.cbc.ca/player/play/9.7003320?cmp=rss)
+**Score:** 5.80
+
+## 15. Measles Update #50
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71743)
+**Score:** 4.50
+
+## 16. Measles Update #49
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71741)
+**Score:** 4.50
+
+## 17. A fresh take on Little Women at Granville Island Stage
+A multi-generational fave returns with a refreshed and theatrical approach.
+📍 [Source](https://www.straight.com/arts/a-fresh-take-on-little-women-at-granville-island-stage)
+**Score:** 4.50
+
+## 18. Senate unanimously passes bill to eliminate Indian Act's 2nd-generation cut-off
+<img src='https://i.cbc.ca/ais/fbc8e097-c025-402e-8771-590835bba8c6,1764971941551/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C105%2C4764%2C2679%29%3BResize%3D%28620%29' alt='man reading and speaking' width='620' height='349' title='Senator Paul Prosper speaks during a plenary session on economic reconciliation the first day of the Assembly of First Nations (AFN) Special Chiefs Assembly in Ottawa, on Tuesday, Dec. 3, 2024. THE CANADIAN PRESS/Spencer Colby'/><p>The Senate voted unanimously Thursday to advance Bill S-2 with an amendment calling for the removal of the second-generation cut-off from the Indian Act, where children are not eligible for Indian status after two generations of one non-status parent.</p>
+📍 [Source](https://www.cbc.ca/news/indigenous/bill-s2-indian-act-status-9.7004888?cmp=rss)
+**Score:** 4.50
+
+## 19. Employer Prosecuted for Workplace Fatality
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71738)
+**Score:** 2.00
+
+## 20. Ottawa to proceed with promised firearm classification review: minister
+The government has been heavily criticized by gun control advocates for not banning the semi-automatic SKS, which is commonly used in Indigenous communities.
+📍 [Source](https://globalnews.ca/news/11564178/firearm-classification-review-canada-minister/)
+**Score:** 3.00
+
+## 21. Sinéad X Sanders on traumatic brain injuries, cognitive dissonance, and a long-awaited killer debut
+Vancouver finest players rally around a singer with an extraordinary story.
+📍 [Source](https://www.straight.com/music/sinead-x-sanders-on-traumatic-brain-injuries-cognitive-dissonance-and-a-long-awaited-killer)
+**Score:** 2.00
+
+## 22. Nurses continue push for increased security after incident at St. Paul's Hospital
+Nurses in Saskatoon are fighting for more security features in hospitals after a violent incident with a patient concealing a shotgun at St. Paul's Hospital.
+📍 [Source](https://globalnews.ca/news/11564463/nurses-continue-push-increased-security-incident-st-pauls-hospital/)
+**Score:** 1.20
+
