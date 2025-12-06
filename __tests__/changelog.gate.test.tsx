@@ -41,7 +41,8 @@ describe('ChangelogGate', () => {
     </></Wrapper>);
 
     // Overlay container is labeled for accessibility
-    const overlay = await screen.findByLabelText(/What’s new/i);
+    // Use character class to match both straight and curly apostrophes
+    const overlay = await screen.findByLabelText(/What[''']s new/i);
     expect(overlay).toBeTruthy();
 
     // Dismiss
@@ -50,7 +51,7 @@ describe('ChangelogGate', () => {
   (fireEvent as any).press ? (fireEvent as any).press(btn) : fireEvent.click(btn as any);
 
     await waitFor(() => {
-      expect(screen.queryByLabelText(/What’s new/i)).toBeNull();
+      expect(screen.queryByLabelText(/What[''']s new/i)).toBeNull();
     });
   });
 });

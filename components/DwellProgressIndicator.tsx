@@ -34,6 +34,7 @@ export function DwellProgressIndicator({ progress, size = 40 }: DwellProgressInd
         }
       ]}
       accessibilityElementsHidden={true}
+      collapsable={false}
     >
       {/* Background circle */}
       <View

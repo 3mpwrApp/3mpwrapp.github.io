@@ -99,6 +99,7 @@ export function WhereWasI({
     <>
       {/* Floating Button */}
       <Animated.View
+        collapsable={false}
         style={[
           styles.floatingButton,
           position === 'bottom-left' ? styles.bottomLeft : styles.bottomRight,

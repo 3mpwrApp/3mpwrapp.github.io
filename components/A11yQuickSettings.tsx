@@ -52,7 +52,7 @@ export default function A11yQuickSettings() {
       </A11yPressable>
 
       {open && (
-        <View style={styles.panel} accessibilityLabel="Accessibility settings" accessible={true}>
+        <View style={styles.panel} accessibilityLabel="Accessibility settings" accessible={true} collapsable={false}>
           <Row
             icon="contrast-outline"
             label={highContrast ? "High contrast: On" : "High contrast: Off"}

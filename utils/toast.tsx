@@ -79,6 +79,8 @@ export function ToastViewport() {
       accessible={false}
       // RN web/Android hint; iOS ignores this prop
       accessibilityLiveRegion={Platform.OS === 'android' ? 'polite' : undefined}
+      // Prevent Android view optimization crash (getChildDrawingOrder index error)
+      collapsable={false}
       style={[
         s.wrap,
         {

@@ -71,9 +71,9 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
   }
 
   return (
-    <View style={styles.overlayContainer}>
+    <View style={styles.overlayContainer} collapsable={false}>
       {children}
-      <View style={[styles.overlay, { backgroundColor: palette.background }, style]}>
+      <View style={[styles.overlay, { backgroundColor: palette.background }, style]} collapsable={false}>
         <Skeleton width={40} height={40} borderRadius={20} />
       </View>
     </View>

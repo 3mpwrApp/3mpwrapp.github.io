@@ -45,7 +45,8 @@ export default function ChangelogGate({
     <View
       style={styles.overlay}
       accessibilityViewIsModal={true}
-      accessibilityLabel="What’s new"
+      accessibilityLabel="What's new"
+      collapsable={false}
     >
       <View style={styles.card}>
   <Text accessibilityRole="header" style={styles.title}>What’s new</Text>

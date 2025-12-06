@@ -107,7 +107,7 @@ export function ExplainThisScreen({
           <Ionicons name="help-circle" size={24} color={palette.primary} />
         </Pressable>
       ) : (
-        <View style={styles.floatingContainer}>
+        <View style={styles.floatingContainer} collapsable={false}>
           <Pressable
             hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             onPress={handleOpen}

@@ -44,7 +44,7 @@ export function DyslexiaVisualLayer() {
   };
   
   return (
-    <View style={[styles.container, { pointerEvents: 'box-none' }]}>
+    <View style={[styles.container, { pointerEvents: 'box-none' }]} collapsable={false}>
       {/* Colored Overlay */}
       {overlay.color && (
         <View
