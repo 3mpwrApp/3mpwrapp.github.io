@@ -10,22 +10,25 @@ export default function Index() {
   const { user, loading } = useAuth();
   const palette = useAppPalette();
   const router = useRouter();
-  const hasNavigated = useRef(false);
+  // Track the last auth state we navigated for, not just "has navigated"
+  const lastAuthState = useRef<'authenticated' | 'unauthenticated' | null>(null);
 
   // React to auth state changes and navigate accordingly
   useEffect(() => {
     if (loading) return;
     
-    // Prevent multiple navigation attempts
-    if (hasNavigated.current) return;
+    const currentAuthState = user ? 'authenticated' : 'unauthenticated';
+    
+    // Only navigate if auth state actually changed
+    if (lastAuthState.current === currentAuthState) return;
+    
+    lastAuthState.current = currentAuthState;
     
     if (user) {
       logger.log('[Index] User authenticated, navigating to tabs');
-      hasNavigated.current = true;
       router.replace('/(tabs)');
     } else {
       logger.log('[Index] No user, navigating to sign in');
-      hasNavigated.current = true;
       router.replace('/(auth)/signin');
     }
   }, [user, loading, router]);
