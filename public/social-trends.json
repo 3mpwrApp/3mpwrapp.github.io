@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-06T06:02:51.489Z",
+  "lastUpdated": "2025-12-06T12:02:54.465Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4510,
+      "totalPosts": 4535,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-06T06:02:42.969Z"
+      "lastSeen": "2025-12-06T12:02:46.027Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4525,
+      "totalPosts": 4550,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-06T06:02:44.722Z"
+      "lastSeen": "2025-12-06T12:02:47.785Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4507,
+      "totalPosts": 4532,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-06T06:02:46.626Z"
+      "lastSeen": "2025-12-06T12:02:49.618Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4518,
+      "totalPosts": 4543,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-06T06:02:48.444Z"
+      "lastSeen": "2025-12-06T12:02:51.498Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4525,
+      "totalPosts": 4550,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-06T06:02:50.485Z"
+      "lastSeen": "2025-12-06T12:02:53.461Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
-      "author": "adulitingishard.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Looking for content creators to help promote the Games for Blind Gamers Game Jam #5!\nSmall paid opportunity.\nInfo: gamesforblindgamers.miraheze.org/wiki/Main_Page\n\nDM if interested! #ContentCreators #CreatorsWanted #GameJam #IndieDev #Accessibility",
-      "author": "ericbomb.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
-      "author": "cambsgreenparty.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
-      "author": "adulitingishard.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Tactile sensory bags, including a braille children's book and lots of other goodies, now available in the Mary Rose shop. #Accessibility\n\nshop.maryrose.org/products/tac...",
-      "author": "maryrosemuseum.bsky.social",
-      "engagement": 16,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -338,6 +290,54 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
+      "author": "adulitingishard.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "After playing Öoo this year I was really inspired by the possibilities of a completely wordless game. So I have redesigned the UI in #FlippingPhantom to use icons only. This should allow players of all languages to enjoy the game!\n\n#solodev #indiedev #gamedev #indiegame #pixelart #accessibility",
+      "author": "ryan-honig.com",
+      "engagement": 20,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Here's @leepetty.bsky.social announcing Keeper's new high contrast modes 😆👍🏻\n\nyoutu.be/Qhyf2NgZuVw?...\n#gamedev #indiedev #accessibility",
+      "author": "ianhamilton.bsky.social",
+      "engagement": 26,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Are there any press/Youtubers or accessibility folks who want a copy of Rhythm Doctor?\n\nWe can talk about whatever you want, including:\n- Roughly 10 year journey from Flash Game to Steam\n- One-button design for a rhythm game\n- Screen reader support + audio cues\n\n#accessibility #a11y",
+      "author": "rd.7thbe.at",
+      "engagement": 90,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Basic screen reader support for combat is in! This is a lot of text, so even at 200% speed it takes awhile! I'm sure there's still lots of work left to do to make this something that's useful for folks, but we gotta do it one step at a time. #indiegame #a11y",
+      "author": "byobattleship.bsky.social",
+      "engagement": 23,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 36
     },
     {
       "keyword": "a11y",
@@ -386,16 +386,8 @@
       "count": 8
     },
     {
-      "keyword": "a11y accessibility",
-      "count": 6
-    },
-    {
-      "keyword": "html",
-      "count": 6
-    },
-    {
       "keyword": "accessibility a11y",
-      "count": 6
+      "count": 8
     },
     {
       "keyword": "inclusionmatters",
@@ -406,11 +398,15 @@
       "count": 5
     },
     {
-      "keyword": "idpd",
-      "count": 4
+      "keyword": "a11y accessibility",
+      "count": 5
     },
     {
-      "keyword": "disability",
+      "keyword": "html",
+      "count": 5
+    },
+    {
+      "keyword": "idpd",
       "count": 4
     },
     {
@@ -418,7 +414,11 @@
       "count": 4
     },
     {
-      "keyword": "disabled people",
+      "keyword": "foxtakedown",
+      "count": 4
+    },
+    {
+      "keyword": "stoptheliesfox",
       "count": 4
     }
   ]
