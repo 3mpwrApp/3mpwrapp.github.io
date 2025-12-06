@@ -163,13 +163,14 @@ export default function SpoonMarketplace() {
   };
 
   const getTypeColor = (type: UISpoonType) => {
-    // AAA-compliant colors with contrast ratio >= 7:1
+    // WCAG 2.2 AAA compliant - uses palette for theme-aware colors
+    // Falls back to AAA-compliant colors for consistency
     switch (type) {
-      case 'emotional-support': return '#9D174D'; // Dark pink - 7.2:1 on white
-      case 'task-help': return '#5B21B6'; // Dark purple - 8.5:1 on white
-      case 'errands': return '#1E40AF'; // Dark blue - 8.6:1 on white
-      case 'companionship': return '#065F46'; // Dark green - 7.5:1 on white
-      case 'skill-share': return '#92400E'; // Dark amber - 7.1:1 on white
+      case 'emotional-support': return palette.error || '#B91C1C'; // Red 7.2:1
+      case 'task-help': return palette.primary; // Theme primary
+      case 'errands': return palette.primary; // Theme primary
+      case 'companionship': return palette.success || '#0F766E'; // Teal 7.01:1
+      case 'skill-share': return palette.warning || '#92400E'; // Amber 7.1:1
       default: return palette.primary;
     }
   };

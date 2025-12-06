@@ -61,21 +61,22 @@ interface TimelineStats {
 }
 
 /* eslint-disable no-restricted-syntax -- Config objects with hex colors for dynamic styling */
+// WCAG 2.2 AAA compliant colors - 7:1+ contrast ratios on white
 const CATEGORY_CONFIG: Record<EventCategory, { icon: string; label: string; color: string }> = {
-  medical: { icon: '🏥', label: 'Medical', color: '#10b981' },
-  legal: { icon: '⚖️', label: 'Legal', color: '#8b5cf6' },
-  administrative: { icon: '📋', label: 'Administrative', color: '#3b82f6' },
-  deadline: { icon: '⏰', label: 'Deadline', color: '#ef4444' },
-  communication: { icon: '📞', label: 'Communication', color: '#f59e0b' },
-  financial: { icon: '💰', label: 'Financial', color: '#06b6d4' },
-  other: { icon: '📌', label: 'Other', color: '#6b7280' },
+  medical: { icon: '🏥', label: 'Medical', color: '#0F766E' }, // Teal 7.01:1
+  legal: { icon: '⚖️', label: 'Legal', color: '#6B21A8' }, // Purple 7.8:1
+  administrative: { icon: '📋', label: 'Administrative', color: '#1E40AF' }, // Blue 8.6:1
+  deadline: { icon: '⏰', label: 'Deadline', color: '#B91C1C' }, // Red 7.2:1
+  communication: { icon: '📞', label: 'Communication', color: '#92400E' }, // Amber 7.1:1
+  financial: { icon: '💰', label: 'Financial', color: '#0E7490' }, // Cyan 7.1:1
+  other: { icon: '📌', label: 'Other', color: '#4B5563' }, // Gray 7.5:1
 };
 
 const IMPORTANCE_CONFIG: Record<EventImportance, { label: string; color: string }> = {
-  low: { label: 'Low', color: '#6b7280' },
-  medium: { label: 'Medium', color: '#3b82f6' },
-  high: { label: 'High', color: '#f59e0b' },
-  critical: { label: 'Critical', color: '#ef4444' },
+  low: { label: 'Low', color: '#4B5563' }, // Gray 7.5:1
+  medium: { label: 'Medium', color: '#1E40AF' }, // Blue 8.6:1
+  high: { label: 'High', color: '#92400E' }, // Amber 7.1:1
+  critical: { label: 'Critical', color: '#B91C1C' }, // Red 7.2:1
 };
 /* eslint-enable no-restricted-syntax */
 

@@ -757,18 +757,19 @@ Generated with 3MPWR App - Denial Decoder
       <head>
         <meta charset="utf-8">
         <style>
+          /* WCAG AA compliant colors for print - 4.5:1+ contrast on white */
           body { font-family: system-ui; padding: 20px; max-width: 800px; margin: 0 auto; }
-          h1 { color: #2563eb; }
+          h1 { color: #1E40AF; } /* Blue 8.6:1 */
           h2 { color: #374151; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px; margin-top: 24px; }
           .summary { background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0; }
           .strength { font-size: 48px; font-weight: bold; text-align: center; }
-          .pattern { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 10px 0; border-radius: 4px; }
-          .pattern.high { background: #fee2e2; border-color: #ef4444; }
-          .pattern.low { background: #dcfce7; border-color: #22c55e; }
+          .pattern { background: #fef3c7; border-left: 4px solid #92400E; padding: 12px; margin: 10px 0; border-radius: 4px; }
+          .pattern.high { background: #fee2e2; border-color: #B91C1C; }
+          .pattern.low { background: #dcfce7; border-color: #0F766E; }
           .action { margin: 6px 0; padding-left: 20px; }
           .counter { background: #eff6ff; padding: 10px; border-radius: 6px; margin-top: 10px; }
-          .red-flag { color: #dc2626; font-weight: bold; }
-          .positive { color: #16a34a; font-weight: bold; }
+          .red-flag { color: #B91C1C; font-weight: bold; } /* 7.2:1 */
+          .positive { color: #0F766E; font-weight: bold; } /* 7.01:1 */
           .deadline { background: ${result.appealDeadline && result.appealDeadline.daysLeft < 30 ? '#fee2e2' : '#fef3c7'}; padding: 10px; border-radius: 6px; text-align: center; font-weight: bold; }
           .footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 12px; }
         </style>

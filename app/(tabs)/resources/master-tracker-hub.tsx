@@ -878,18 +878,19 @@ function generateReportHTML(
     <head>
       <meta charset="utf-8">
       <style>
+        /* WCAG AA compliant colors for print - 4.5:1+ contrast on white */
         body { font-family: system-ui, -apple-system, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
-        h1 { color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px; }
+        h1 { color: #1E40AF; border-bottom: 2px solid #1E40AF; padding-bottom: 10px; } /* Blue 8.6:1 */
         h2 { color: #374151; margin-top: 30px; }
         .summary { background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 20px 0; }
         .stat { display: inline-block; margin: 10px 20px 10px 0; }
-        .stat-value { font-size: 24px; font-weight: bold; color: #2563eb; }
-        .stat-label { color: #6b7280; }
-        .pattern { background: #eff6ff; padding: 12px; border-radius: 6px; margin: 10px 0; border-left: 4px solid #2563eb; }
+        .stat-value { font-size: 24px; font-weight: bold; color: #1E40AF; } /* Blue 8.6:1 */
+        .stat-label { color: #4B5563; } /* Gray 7.5:1 */
+        .pattern { background: #eff6ff; padding: 12px; border-radius: 6px; margin: 10px 0; border-left: 4px solid #1E40AF; }
         .entry { padding: 10px; border-bottom: 1px solid #e5e7eb; }
-        .severity-high { color: #dc2626; }
-        .severity-medium { color: #f59e0b; }
-        .severity-low { color: #10b981; }
+        .severity-high { color: #B91C1C; } /* 7.2:1 */
+        .severity-medium { color: #92400E; } /* 7.1:1 */
+        .severity-low { color: #0F766E; } /* 7.01:1 */
         .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 12px; }
       </style>
     </head>

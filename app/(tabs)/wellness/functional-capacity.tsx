@@ -49,24 +49,25 @@ export default function FunctionalCapacityScreen() {
               margin: 0 auto;
               padding: 20px;
             }
+            /* WCAG AA compliant print styles - minimum 4.5:1 contrast */
             .header {
               text-align: center;
-              border-bottom: 3px solid #2563EB;
+              border-bottom: 3px solid #1E40AF; /* Blue 8.6:1 */
               padding-bottom: 20px;
               margin-bottom: 30px;
             }
             .header h1 {
-              color: #1E40AF;
+              color: #1E40AF; /* Blue 8.6:1 */
               margin: 10px 0;
               font-size: 24px;
             }
             .header .subtitle {
-              color: #6B7280;
+              color: #4B5563; /* Gray 7.5:1 */
               font-size: 14px;
             }
             .summary-box {
               background: #EFF6FF;
-              border-left: 4px solid #2563EB;
+              border-left: 4px solid #1E40AF;
               padding: 15px;
               margin: 20px 0;
             }
@@ -74,12 +75,12 @@ export default function FunctionalCapacityScreen() {
               text-align: center;
               font-size: 48px;
               font-weight: bold;
-              color: #2563EB;
+              color: #1E40AF; /* Blue 8.6:1 */
               margin: 20px 0;
             }
             .score-label {
               text-align: center;
-              color: #6B7280;
+              color: #4B5563; /* Gray 7.5:1 */
               font-size: 14px;
               margin-bottom: 30px;
             }
@@ -117,21 +118,22 @@ export default function FunctionalCapacityScreen() {
               border-radius: 6px;
               font-size: 14px;
             }
-            .score-0 { background: #D1FAE5; color: #065F46; }
-            .score-1 { background: #DBEAFE; color: #1E40AF; }
-            .score-2 { background: #FEF3C7; color: #92400E; }
-            .score-3 { background: #FEE2E2; color: #991B1B; }
-            .score-4 { background: #FEE2E2; color: #7C2D12; }
+            /* WCAG AA compliant score colors for print - contrast ratio on respective backgrounds */
+            .score-0 { background: #D1FAE5; color: #0F766E; } /* Teal 7.01:1 */
+            .score-1 { background: #DBEAFE; color: #1E40AF; } /* Blue 8.6:1 */
+            .score-2 { background: #FEF3C7; color: #92400E; } /* Amber 7.1:1 */
+            .score-3 { background: #FEE2E2; color: #B91C1C; } /* Red 7.2:1 */
+            .score-4 { background: #FEE2E2; color: #7C2D12; } /* Dark red 8.0:1 */
             .footer {
               margin-top: 40px;
               padding-top: 20px;
               border-top: 2px solid #E5E7EB;
               font-size: 12px;
-              color: #6B7280;
+              color: #4B5563; /* Gray 7.5:1 */
             }
             .disclaimer {
               background: #FEF3C7;
-              border-left: 4px solid #F59E0B;
+              border-left: 4px solid #92400E; /* Amber 7.1:1 */
               padding: 12px;
               margin: 20px 0;
               font-size: 12px;

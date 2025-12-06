@@ -183,7 +183,7 @@ export default function VoiceFirstButton({ position = 'bottom-right' }: VoiceFir
           onLongPress={handleToggleSuggestions}
           style={({ pressed }) => [
             styles.button,
-            { backgroundColor: isListening ? '#dc2626' : palette.primary },
+            { backgroundColor: isListening ? (palette.error || '#B91C1C') : palette.primary },
             pressed && styles.buttonPressed,
           ]}
           accessibilityRole="button"

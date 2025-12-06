@@ -272,8 +272,8 @@ export default function NegotiationCoach() {
             </Text>
             {redFlags.length > 0 ? (
               redFlags.map((flag, index) => (
-                <View key={index} style={[styles.redFlagCard, { borderColor: palette.error || '#991B1B' }]}>
-                  <Ionicons name="warning" size={20} color={palette.error || '#991B1B'} />
+                <View key={index} style={[styles.redFlagCard, { borderColor: palette.error || '#B91C1C' }]}>
+                  <Ionicons name="warning" size={20} color={palette.error || '#B91C1C'} />
                   <Text style={[styles.redFlagText, { color: palette.text }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                     {flag}
                   </Text>
@@ -286,35 +286,35 @@ export default function NegotiationCoach() {
             )}
             <View style={styles.redFlagButtons}>
               <Pressable
-                style={[styles.redFlagButton, { borderColor: palette.error || '#991B1B' }]}
+                style={[styles.redFlagButton, { borderColor: palette.error || '#B91C1C' }]}
                 onPress={() => handleTrackRedFlag('Dismissive language about disability')}
                 hitSlop={HIT_SLOP_12}
                 accessibilityRole="button"
                 accessibilityLabel="Mark as dismissive behavior"
               >
-                <Text style={[styles.redFlagButtonText, { color: palette.error || '#991B1B' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.redFlagButtonText, { color: palette.error || '#B91C1C' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Dismissive
                 </Text>
               </Pressable>
               <Pressable
-                style={[styles.redFlagButton, { borderColor: palette.error || '#991B1B' }]}
+                style={[styles.redFlagButton, { borderColor: palette.error || '#B91C1C' }]}
                 onPress={() => handleTrackRedFlag('Threat of retaliation')}
                 hitSlop={HIT_SLOP_12}
                 accessibilityRole="button"
                 accessibilityLabel="Mark as threatening behavior"
               >
-                <Text style={[styles.redFlagButtonText, { color: palette.error || '#991B1B' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.redFlagButtonText, { color: palette.error || '#B91C1C' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Threatening
                 </Text>
               </Pressable>
               <Pressable
-                style={[styles.redFlagButton, { borderColor: palette.error || '#991B1B' }]}
+                style={[styles.redFlagButton, { borderColor: palette.error || '#B91C1C' }]}
                 onPress={() => handleTrackRedFlag('Denying legal rights')}
                 hitSlop={HIT_SLOP_12}
                 accessibilityRole="button"
                 accessibilityLabel="Mark as rights denied"
               >
-                <Text style={[styles.redFlagButtonText, { color: palette.error || '#991B1B' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.redFlagButtonText, { color: palette.error || '#B91C1C' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Rights Denied
                 </Text>
               </Pressable>

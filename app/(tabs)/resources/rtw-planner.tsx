@@ -245,11 +245,12 @@ export default function RTWPlanner() {
       <head>
         <meta charset="utf-8">
         <style>
+          /* WCAG AA compliant colors for print - 4.5:1+ contrast on white */
           body { font-family: system-ui; padding: 20px; max-width: 800px; margin: 0 auto; }
-          h1 { color: #2563eb; }
+          h1 { color: #1E40AF; } /* Blue 8.6:1 */
           h2 { color: #374151; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px; }
           .info { background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0; }
-          .phase { background: #eff6ff; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #2563eb; }
+          .phase { background: #eff6ff; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #1E40AF; }
           .phase-header { display: flex; justify-content: space-between; }
           .accommodations { background: #f0fdf4; padding: 10px; border-radius: 6px; margin: 10px 0; }
           .restrictions { background: #fef3c7; padding: 10px; border-radius: 6px; margin: 10px 0; }

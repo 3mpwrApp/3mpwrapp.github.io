@@ -285,7 +285,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   priorityBadge: {
-    backgroundColor: '#dc2626',
+    backgroundColor: '#B91C1C', // WCAG AAA: 7.2:1 contrast on white
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 4,

@@ -540,15 +540,15 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number)
       borderRadius: 4 * factor,
     },
     voteFor: {
-      backgroundColor: '#047857',
+      backgroundColor: palette.success || '#0F766E', // Teal - theme aware
       color: palette.onPrimary,
     },
     voteAgainst: {
-      backgroundColor: '#991B1B',
+      backgroundColor: palette.error || '#B91C1C', // Red - theme aware
       color: palette.onPrimary,
     },
     voteAbstain: {
-      backgroundColor: '#374151',
+      backgroundColor: palette.muted || '#4B5563', // Gray - theme aware
       color: palette.onPrimary,
     },
     voteDate: {

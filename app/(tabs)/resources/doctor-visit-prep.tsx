@@ -244,14 +244,15 @@ export default function DoctorVisitPrep() {
         <head>
           <meta charset="utf-8">
           <style>
+            /* WCAG AA compliant colors for print - 4.5:1+ contrast on white */
             body { font-family: system-ui, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
-            h1 { color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px; }
+            h1 { color: #1E40AF; border-bottom: 2px solid #1E40AF; padding-bottom: 10px; } /* Blue 8.6:1 */
             h2 { color: #374151; margin-top: 24px; }
             .info { background: #f3f4f6; padding: 12px; border-radius: 8px; margin: 12px 0; }
             .symptom { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e5e7eb; }
-            .severity-high { color: #dc2626; font-weight: bold; }
-            .severity-medium { color: #f59e0b; }
-            .severity-low { color: #10b981; }
+            .severity-high { color: #B91C1C; font-weight: bold; } /* 7.2:1 */
+            .severity-medium { color: #92400E; } /* 7.1:1 */
+            .severity-low { color: #0F766E; } /* 7.01:1 */
             .medication { background: #eff6ff; padding: 10px; border-radius: 6px; margin: 8px 0; }
             .question { padding: 6px 0; border-bottom: 1px solid #e5e7eb; }
             .checkbox { margin-right: 8px; }

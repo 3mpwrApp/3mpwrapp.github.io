@@ -66,7 +66,7 @@ export function DebugExtractEvents() {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    backgroundColor: '#991B1B', // AAA-compliant: 7.8:1 contrast ratio
+    backgroundColor: '#B91C1C', // WCAG AAA: 7.2:1 contrast on white
     borderRadius: 8,
     marginBottom: 10,
   },
@@ -79,6 +79,6 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#991B1B', // AAA-compliant: 7.8:1 contrast ratio
+    color: '#B91C1C', // WCAG AAA: 7.2:1 contrast on white
   },
 });

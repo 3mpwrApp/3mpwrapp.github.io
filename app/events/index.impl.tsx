@@ -597,7 +597,7 @@ export default function EventsScreen() {
         {isFeatureVisible('power_user') && syncStatus !== 'idle' && (
           <View style={{ 
             padding: 10, 
-            backgroundColor: syncStatus === 'syncing' ? palette.surface : syncStatus === 'success' ? '#047857' : '#991B1B', 
+            backgroundColor: syncStatus === 'syncing' ? palette.surface : syncStatus === 'success' ? (palette.success || '#0F766E') : (palette.error || '#B91C1C'), 
             borderRadius: 8, 
             marginBottom: 8,
             flexDirection: 'row',

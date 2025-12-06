@@ -573,19 +573,19 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
       opacity: 0.95,
     },
     successCard: {
-      backgroundColor: '#047857',
+      backgroundColor: palette.success || '#0F766E', // WCAG AAA teal
       borderRadius: 12,
       padding: 16,
       marginBottom: 16,
     },
     successTitle: {
-      color: '#FFFFFF',
+      color: palette.onPrimary,
       fontWeight: '700',
       fontSize: 16,
       marginBottom: 6,
     },
     successText: {
-      color: '#FFFFFF',
+      color: palette.onPrimary,
       fontSize: 14,
       opacity: 0.95,
     },

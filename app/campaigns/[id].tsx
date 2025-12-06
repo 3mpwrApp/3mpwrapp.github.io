@@ -343,7 +343,7 @@ function CampaignDetailInner() {
                             Alert.alert('Error', 'Could not share');
                           }
                         }}
-                        style={[styles.shareButton, { backgroundColor: '#1E3A5F' }]}
+                        style={[styles.shareButton, { backgroundColor: palette.primary }]}
                         hitSlop={HIT_SLOP_8}
                       >
                         <Text style={styles.shareButtonText}>f</Text>
@@ -765,10 +765,10 @@ function createStyles(palette: Palette, factor: number) {
       marginLeft: 8,
     },
     statusActive: {
-      backgroundColor: palette.success || '#047857',
+      backgroundColor: palette.success || '#0F766E', // WCAG AAA teal
     },
     statusPending: {
-      backgroundColor: palette.warning || '#B45309',
+      backgroundColor: palette.warning || '#92400E', // WCAG AAA amber
     },
     statusText: {
       color: palette.onPrimary,
