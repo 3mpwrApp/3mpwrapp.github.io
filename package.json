@@ -115,7 +115,7 @@
     "@react-native-community/netinfo": "^11.4.1",
     "@react-native-firebase/app": "^23.5.0",
     "@react-native-firebase/crashlytics": "^23.5.0",
-    "@react-native-picker/picker": "2.11.1",
+    "@react-native-picker/picker": "^2.11.4",
     "@react-navigation/material-top-tabs": "^7.4.3",
     "@sentry/react-native": "~7.2.0",
     "@vitalets/google-translate-api": "^9.2.1",
