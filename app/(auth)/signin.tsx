@@ -75,15 +75,11 @@ export default function LoginScreen() {
       logger.log('[Login] ===== LOGIN SUCCESSFUL =====');
       logger.log('[Login] User ID:', userCredential.user.uid);
       logger.log('[Login] Firebase auth state updated');
-      logger.log('[Login] Waiting for auth propagation...');
+      logger.log('[Login] Navigating to root to trigger auth redirect...');
       
-      // Wait longer for auth state to fully propagate
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-      logger.log('[Login] Auth state settled, navigation will happen via app/index.tsx');
-      logger.log('[Login] =====================================');
-      // Let the auth state change trigger navigation via app/index.tsx
-      // Don't manually navigate - this prevents route conflicts
+      // Navigate to root - app/index.tsx will handle the redirect to /(tabs)
+      // This ensures the auth state change is detected by the root route
+      router.replace('/');
     } catch (err: any) {
       logger.error('[Login] Login failed:', err);
       logger.error('[Login] Error code:', err?.code);
@@ -128,15 +124,11 @@ export default function LoginScreen() {
       await signInGuest();
       logger.log('[Login] ===== GUEST MODE SUCCESSFUL =====');
       logger.log('[Login] Firebase auth state updated (anonymous user)');
-      logger.log('[Login] Waiting for auth propagation...');
+      logger.log('[Login] Navigating to root to trigger auth redirect...');
       
-      // Wait longer for auth state to fully propagate
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-      logger.log('[Login] Auth state settled, navigation will happen via app/index.tsx');
-      logger.log('[Login] ========================================');
-      // Let the auth state change trigger navigation via app/index.tsx
-      // Don't manually navigate - this prevents route conflicts
+      // Navigate to root - app/index.tsx will handle the redirect to /(tabs)
+      // This ensures the auth state change is detected by the root route
+      router.replace('/');
     } catch (err) {
       logger.error('[Login] Guest mode failed:', err);
       Alert.alert(t("common.errorTitle", "Error"), t("auth.guestModeFailed", "Failed to enter guest mode"));
@@ -218,7 +210,7 @@ export default function LoginScreen() {
       </A11yPressable>
       
       <View style={{ height: 16 }} />
-      <OAuthButtons styles={styles} tLabel={(k: string, d: string)=> t(k as any, d)} />
+      <OAuthButtons styles={styles} tLabel={(k: string, d: string)=> t(k as any, d)} router={router} />
     </View>
   );
 }
@@ -242,7 +234,7 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
   });
 }
 
-function OAuthButtons({ styles, tLabel }: { styles: any; tLabel: (k: string, d: string) => string }) {
+function OAuthButtons({ styles, tLabel, router }: { styles: any; tLabel: (k: string, d: string) => string; router: ReturnType<typeof useRouter> }) {
   const palette = useAppPalette();
   const [busy, setBusy] = React.useState(false);
   
@@ -251,8 +243,9 @@ function OAuthButtons({ styles, tLabel }: { styles: any; tLabel: (k: string, d: 
     try {
       const oauth = await import('../../services/auth/oauth');
       const ok = await oauth.signInWithGoogleAsync();
-      if (!ok) {
-        // Error already shown by oauth module
+      if (ok) {
+        // Navigate to root to trigger auth redirect
+        router.replace('/');
       }
     } catch {
       Alert.alert(
@@ -269,8 +262,9 @@ function OAuthButtons({ styles, tLabel }: { styles: any; tLabel: (k: string, d: 
     try {
       const oauth = await import('../../services/auth/oauth');
       const ok = await oauth.signInWithAppleAsync();
-      if (!ok) {
-        // Error already shown by oauth module
+      if (ok) {
+        // Navigate to root to trigger auth redirect
+        router.replace('/');
       }
     } catch {
       Alert.alert(

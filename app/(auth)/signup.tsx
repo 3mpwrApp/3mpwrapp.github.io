@@ -53,10 +53,11 @@ export default function RegisterScreen() {
       logger.log('[Signup] User profile created in Firestore');
       logger.log('[Signup] ===== REGISTRATION SUCCESSFUL =====');
       logger.log('[Signup] Firebase auth state updated');
-      logger.log('[Signup] AuthContext will detect this change');
-      logger.log('[Signup] app/index.tsx will handle navigation to /(tabs)');
-      logger.log('[Signup] ================================================');
-      // Don't manually navigate - let AuthContext handle it via app/index.tsx
+      logger.log('[Signup] Navigating to root to trigger auth redirect...');
+      
+      // Navigate to root - app/index.tsx will handle the redirect to /(tabs)
+      // This ensures the auth state change is detected by the root route
+      router.replace('/');
     } catch (err: any) {
       logger.error('[Signup] Registration failed:', err);
       logger.error('[Signup] Error code:', err?.code);
