@@ -9,25 +9,75 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-12-07
 
-Curated 4 items from disability, accessibility, and social policy sources.
+Curated 15 items from disability, accessibility, and social policy sources.
 
-## 1. Alberta lawyers must take Indigenous education course tied to TRC. New legislation could change that
-<img src='https://i.cbc.ca/ais/9baef6a8-db84-4e36-ac9e-31a90885cc59,1764968652380/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C265%2C5139%2C2890%29%3BResize%3D%28620%29' alt='A courtroom is pictured.' width='620' height='349' title='The Law Society of Alberta has a requirement for its members to complete a course on Indigenous history and culture. But that could be changing.'/><p>A little more than five years ago, the regulator for Alberta's lawyers announced that moving forward, all active Alberta lawyers would be required to take a mandatory Indigenous education course. But new Alberta legislation could change that.</p>
-📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-the-path-kent-teskey-law-society-amery-9.7005143?cmp=rss)
-**Score:** 14.41
+## 1. Canada has legal duty to provide safe water, housing to remote First Nations, federal judge rules
+<img src='https://i.cbc.ca/ais/1.6778726,1733448985000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C499%2C4032%2C2268%29%3BResize%3D%28620%29' alt='The Federal Court building located at 90 Sparks Street in Ottawa. ' width='620' height='349' title='The Federal Court predicts it will have 24,000 immigration case filings by the end of the year, a projected 44 per cent increase over last year. '/><p>A federal judge has sided with two First Nations in Manitoba and one in Ontario that sued the Canadian government over its duty to provide them with safe housing and clean drinking water, in separate rulings delivered Friday.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/st-theresa-point-shamattawa-sandy-lake-first-nation-class-action-ruling-9.7005716?cmp=rss)
+**Score:** 35.40
 
-## 2. Air Transat pilots' union issues 72-hour strike notice to Montreal-based airline
-<img src='https://i.cbc.ca/ais/06c39a57-596b-4807-be7a-b104b6f08907,1765116275709/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C62%2C2646%2C1488%29%3BResize%3D%28620%29' alt='An airplane is seen in the sky at dawn.' width='620' height='349' title='An Air Transat Airbus A330 approaches for landing in Lisbon just before sunrise, Monday, July 22, 2024. '/><p>The union that represents Air Transat's pilots said on Sunday that it has issued a 72-hour strike notice that could see pilots striking as of Wednesday. </p>
-📍 [Source](https://www.cbc.ca/news/canada/air-transat-pilots-union-strike-notice-9.7006280?cmp=rss)
-**Score:** 13.20
+## 2. Alberta clipper to bring snowy conditions to Atlantic provinces
+A special weather statement has been issued by Environment Canada for all of Nova Scotia, Prince Edward Island's Kings and Queens counties, and eastern parts of Newfoundland.
+📍 [Source](https://globalnews.ca/news/11566952/alberta-clipper-snowy-conditions-atlantic-provinces-dec-8/)
+**Score:** 18.30
 
-## 3. On Our Radar: Blue Jay Valley shows why East Van rules in video for &quot;Living In the City&quot;
-The kids are more than alright.
-📍 [Source](https://www.straight.com/music/on-our-radar-blue-jay-valley-shows-why-east-van-rules-in-video-for-living-in-city)
-**Score:** 5.00
+## 3. B.C. directs physicians to notify parents if child shows up with mental health, drug use issues
+<img src='https://i.cbc.ca/ais/fb62ccec-3483-4d23-9d39-1c303f492f4a,1764972201875/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C81%2C5000%2C2812%29%3BResize%3D%28620%29' alt='A man with his hair tied back in a bun is seen on a sunny day.' width='620' height='349' title='Dr. Daniel Vigo, B.C.'s chief scientific adviser for psychiatry, toxic drugs and concurrent disorders during the announcement of Alouette Homes, which will provide 18 beds for long-term involuntary care in Maple Ridge, B.C, on Tuesday, June 3, 2025.'/><p>The B.C. government is issuing new guidance for physicians treating youth with overlapping mental health and substance use issues. It directs doctors to notify parents and potentially involuntarily detain youth if they're unable or unwilling to seek care themselves.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/bc-new-guidance-involuntary-care-youth-drugs-mental-health-9.7005188?cmp=rss)
+**Score:** 19.50
 
-## 4. You Nearly Missed: Molly Grace makes her Vancouver debut at the Fox Cabaret
-The Nashville artist is touring in support of her new album, Blush.
-📍 [Source](https://www.straight.com/music/you-nearly-missed-molly-grace-makes-her-vancouver-debut-at-fox-cabaret)
-**Score:** 3.00
+## 4. B.C. Conservatives interim leader says party will ‘work co-operatively' to repeal DRIPA
+The appeal ruling says that the provincial declaration should be "properly interpreted" to incorporate UNDRIP into provincial laws with immediate effect.
+📍 [Source](https://globalnews.ca/news/11566873/bc-conservatives-calls-for-dripa-repeal/)
+**Score:** 14.90
+
+## 5. Liberals at risk in Quebec, appeasing Alberta with ‘solution that failed before’: Guilbeault
+<img src='https://i.cbc.ca/ais/0d1ce821-c636-4360-8705-98218eb74b10,1765130294617/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Split screen with large pipes on snow on the left. Stephen Guilbeault on the right' width='620' height='349' title=''/><p>Chief political correspondent Rosemary Barton speaks with Quebec Liberal MP Steven Guilbeault, who resigned from Prime Minister Mark Carney's cabinet last week, about his party’s deal with Alberta for a potential pipeline to the west coast of B.C., and why he thinks the federal government is stoking Quebec separatism by walking back its climate commitments.</p>
+📍 [Source](https://www.cbc.ca/player/play/9.7006412?cmp=rss)
+**Score:** 19.50
+
+## 6. Dozens of Indigenous artifacts return to Canada from Vatican
+First Nations, Inuit, and Métis leaders welcomed 61 Indigenous artifacts from the Vatican at Montreal’s airport, marking the first step in returning items held for decades.
+📍 [Source](https://globalnews.ca/news/11566494/vatican-indigenous-items/)
+**Score:** 9.50
+
+## 7. Canada's Summer McIntosh swims to butterfly win and sets U.S. Open record
+📍 [Source](https://www.cbc.ca/sports/olympics/summer/aquatics/summer-mcintosh-us-open-record-200-butterfly-austin-9.7006419?cmp=rss)
+**Score:** 9.50
+
+## 8. Manitoba Government Invests $100,000 in Bairdmore School Playground
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71744)
+**Score:** 7.50
+
+## 9. Alberta's Smith says courts should not be gatekeepers on constitutional questions
+Premier Danielle Smith says courts shouldn’t be “gatekeepers” to an independence referendum, defending legislation stopping a court case after a judge called it undemocratic.
+📍 [Source](https://globalnews.ca/news/11566344/alta-smith/)
+**Score:** 7.10
+
+## 10. Moose Hunting Season Opens in Manitoba on December 1
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71745)
+**Score:** 4.50
+
+## 11. Saint John to pilot using private security to tackle crime concerns
+<img src='https://i.cbc.ca/ais/e67def11-6166-4120-a0ff-7409e54d75d5,1764959783385/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Man, smiling,  looking off side of camera.' width='620' height='349' title='Pierre Castonguay and his partner have dealt with criminal activity since shortly after they opened their shop, The Nest Yoga, in 2023. The pilot program assures Castonguay his staff have someone to call when they’re facing dangerous activity in his uptown based store. '/><p>Saint John is launching a two-year, $780,000-per-year security pilot in crime-affected areas starting in early February. Guards will focus on de-escalation, not arrests, with oversight from the city.</p>
+📍 [Source](https://www.cbc.ca/news/canada/new-brunswick/saint-john-security-pilot-program-gardaworld-nest-yoga-police-crime-9.7004800?cmp=rss)
+**Score:** 4.50
+
+## 12. Employer Prosecuted for Workplace Incident
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71740)
+**Score:** 2.60
+
+## 13. Employer Prosecuted for Workplace Incident
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71739)
+**Score:** 2.60
+
+## 14. Winnipeg moves to scrap bird-friendly window bylaw developers argue is barrier to development
+<img src='https://i.cbc.ca/ais/c1628e96-08ee-4244-9ec3-a2ba409db3a9,1764357215153/full/max/0/default.jpg?im=Crop%2Crect%3D%281168%2C1430%2C5092%2C2864%29%3BResize%3D%28620%29' alt='A dead yellowish bird on the concrete at the base of a downtown high rise building after a window strike during migration.' width='620' height='349' title='A Tennessee warbler lies dead on the concrete at the base of a downtown Winnipeg high rise building it flew into during spring migration in 2024.'/><p>Conservation groups are raising concerns as the City of Winnipeg considers changing a development bylaw designed to help save birds from fatal window strikes.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/bird-friendly-bylaws-city-winnipeg-downtown-development-9.6996681?cmp=rss)
+**Score:** 2.00
+
+## 15. Why was 'incredible' giant cedar cut down, despite B.C.'s big-tree protection law?
+<img src='https://i.cbc.ca/ais/da7be20a-0367-4ac7-a94e-dd43046775c8,1764881255316/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C603%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A man in an orange t-shirt stands beside the end of a large cedar tree where it was cut from its base. The gnarled and moss covered trunk extends into the forest behind him.' width='620' height='349' title='Old-growth advocate Joshua Wright stands with a yellow cedar tree in this June, 2025 handout photo, the same tree he had previously photographed in June, 2024 when it was still standing, in a remote area of Vancouver Island, south of Gold River, B.C.'/><p>Conservationists are questioning why an old-growth yellow cedar tree with a diameter that should have ensured its protection and a buffer area around it under provincial law was logged.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/old-growth-tree-cut-down-vancouver-island-should-have-been-protected-advocates-9.7003408?cmp=rss)
+**Score:** 2.40
 
