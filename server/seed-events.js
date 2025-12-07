@@ -162,8 +162,8 @@ const sampleEvents = [
   {
     title: 'Christmas Day',
     description: 'Federal holiday',
-    date: new Date('2025-12-25'),
-    endDate: new Date('2025-12-25'),
+    date: new Date('2025-12-25T12:00:00Z'),
+    endDate: new Date('2025-12-25T12:00:00Z'),
     location: 'Canada',
     isVirtual: false,
     category: 'holiday',
@@ -177,8 +177,8 @@ const sampleEvents = [
   {
     title: 'Boxing Day',
     description: 'Federal holiday - December 26',
-    date: new Date('2025-12-26'),
-    endDate: new Date('2025-12-26'),
+    date: new Date('2025-12-26T12:00:00Z'),
+    endDate: new Date('2025-12-26T12:00:00Z'),
     location: 'Canada',
     isVirtual: false,
     category: 'holiday',

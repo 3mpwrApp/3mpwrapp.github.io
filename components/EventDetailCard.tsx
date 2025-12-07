@@ -21,8 +21,6 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
 
   const formatDate = (dateStr: string | Date) => {
     try {
-      // Convert to Date object if it's a string
-      const date = dateStr instanceof Date ? dateStr : new Date(dateStr);
       const dateStrForChecks = typeof dateStr === 'string' ? dateStr : '';
       
       // Detect if this is an all-day event (holidays, observances, health awareness)
@@ -33,7 +31,20 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
         event.id.startsWith('obs-') || 
         event.id.startsWith('health-') ||
         event.id.startsWith('prov-') ||
-        dateStrForChecks.includes('T12:00:00');
+        dateStrForChecks.includes('T12:00:00') ||
+        dateStrForChecks.includes('T00:00:00');
+      
+      // For all-day events, parse as local date to avoid timezone shift
+      // e.g., "2025-12-25T00:00:00.000Z" should display as Dec 25, not Dec 24 in EST
+      let date: Date;
+      if (isAllDayEvent && typeof dateStr === 'string') {
+        // Extract just the date part (YYYY-MM-DD) and parse as local
+        const datePart = dateStr.split('T')[0];
+        const [year, month, day] = datePart.split('-').map(Number);
+        date = new Date(year, month - 1, day); // month is 0-indexed
+      } else {
+        date = dateStr instanceof Date ? dateStr : new Date(dateStr);
+      }
       
       // For all-day events, only show date without time
       if (isAllDayEvent) {

@@ -104,8 +104,23 @@ export default function EventsScreen() {
     const y = month.getFullYear();
     const m = month.getMonth();
     return systemItems.filter((it) => {
-      const d = new Date(it.date);
-      return d.getFullYear() === y && d.getMonth() === m;
+      // Parse date as local for all-day events to avoid timezone shift
+      const dateStr = it.date;
+      let eventYear: number, eventMonth: number;
+      
+      if (typeof dateStr === 'string' && (dateStr.includes('T00:00:00') || dateStr.includes('T12:00:00'))) {
+        // All-day event - extract date parts directly from string
+        const [yearStr, monthStr] = dateStr.split('T')[0].split('-');
+        eventYear = parseInt(yearStr, 10);
+        eventMonth = parseInt(monthStr, 10) - 1; // Convert to 0-indexed
+      } else {
+        // Timed event - use normal Date parsing
+        const d = new Date(dateStr);
+        eventYear = d.getFullYear();
+        eventMonth = d.getMonth();
+      }
+      
+      return eventYear === y && eventMonth === m;
     });
   }, [systemItems, month]);
 
@@ -1172,7 +1187,15 @@ function FilterChip({ label, active, onPress, palette }: { label: string; active
 }
 
 // Calendar helpers
+// Parse date string as local date to avoid timezone shift for all-day events
+// e.g., "2025-12-25T00:00:00.000Z" should map to "2025-12-25", not "2025-12-24" in EST
 function toDayKey(input: string): string {
+  // If the input is an ISO string with T00:00:00 (all-day event), extract just the date part
+  if (input.includes('T00:00:00') || input.includes('T12:00:00')) {
+    const datePart = input.split('T')[0];
+    return datePart; // Already in YYYY-MM-DD format
+  }
+  // For other dates (with specific times), use local time conversion
   const d = new Date(input);
   const y = d.getFullYear();
   const m = `${d.getMonth() + 1}`.padStart(2, "0");

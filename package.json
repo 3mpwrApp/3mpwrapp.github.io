@@ -2,7 +2,7 @@
   "name": "empowrapp",
   "description": "A secure, privacy-first empowerment app with enterprise-grade security and complete user data ownership. Features air-gapped operation, AES-256 encryption, and OWASP Mobile Top 10 compliance.",
   "main": "expo-router/entry",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "scripts": {
     "start": "expo start",
     "start:tunnel": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& set EXPO_NO_METRO_FORK=1&& set EXPO_USE_METRO_FORK=0&& expo start --tunnel",
