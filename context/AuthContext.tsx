@@ -163,12 +163,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const signInGuest = async () => {
-    if (!auth) return;
+    if (!auth) {
+      throw new Error('Firebase auth is not available');
+    }
     try {
       await signInAnonymously(auth);
       setSessionExpired(false);
     } catch (error) {
       logger.error('Guest sign in error', { error: error instanceof Error ? error.message : 'Unknown' });
+      throw error; // Re-throw so caller can handle
     }
   };
 
