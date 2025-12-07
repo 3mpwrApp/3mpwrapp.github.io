@@ -60,8 +60,15 @@ scripts/sync-to-firestore-clean.ps1
 scripts/sync-to-firestore.ps1
 scripts/sync-new-tbdiwsg-events.ps1
 
-# Service account key
+# Service account keys and secrets (NEVER COMMIT THESE)
 serviceAccountKey.json
+server/.firebase-key.json
+server/firebase-key-compact.json
+server/.dev.vars
+.env
+
+# Discord webhooks and sensitive configs
+*webhook*
 
 # Temporary JSON files
 new-tbdiwsg-events-fixed.json
