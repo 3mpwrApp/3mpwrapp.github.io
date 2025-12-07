@@ -1,98 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-07T00:07:07.528Z",
+  "lastUpdated": "2025-12-07T06:02:44.998Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4585,
+      "totalPosts": 4610,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-07T00:06:58.818Z"
+      "lastSeen": "2025-12-07T06:02:36.272Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4600,
+      "totalPosts": 4625,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-07T00:07:00.948Z"
+      "lastSeen": "2025-12-07T06:02:38.211Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4582,
+      "totalPosts": 4607,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-07T00:07:02.742Z"
+      "lastSeen": "2025-12-07T06:02:40.066Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4593,
+      "totalPosts": 4618,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-07T00:07:04.488Z"
+      "lastSeen": "2025-12-07T06:02:41.873Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4600,
+      "totalPosts": 4625,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-07T00:07:06.524Z"
+      "lastSeen": "2025-12-07T06:02:43.995Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
-      "author": "cambsgreenparty.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
-      "author": "adulitingishard.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Today we‘d Updated our #new #audio #game AudioRoids.\n🔥👾👉 apps.apple.com/de/app/audio...\n\n#gamedev #blind #accessibility #ios #android #indiegame #gamedevelopment #mobilegames",
-      "author": "codedart.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Are there any press/Youtubers or accessibility folks who want a copy of Rhythm Doctor?\n\nWe can talk about whatever you want, including:\n- Roughly 10 year journey from Flash Game to Steam\n- One-button design for a rhythm game\n- Screen reader support + audio cues\n\n#accessibility #a11y",
-      "author": "rd.7thbe.at",
-      "engagement": 82,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Basic screen reader support for combat is in! This is a lot of text, so even at 200% speed it takes awhile! I'm sure there's still lots of work left to do to make this something that's useful for folks, but we gotta do it one step at a time. #indiegame #a11y",
-      "author": "byobattleship.bsky.social",
-      "engagement": 23,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
-      "author": "cambsgreenparty.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
       "author": "adulitingishard.bsky.social",
@@ -338,6 +284,60 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
+      "author": "adulitingishard.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Bluesky Users who depend on or benefit from ALT text: What do you want and don't want to hear in artwork descriptions? Any pet peeves? Let me know!\n\n#disabilitysky #alttext #visuallyimpaired #accessibility",
+      "author": "abrildelucia.bsky.social",
+      "engagement": 23,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "A severe #accessibility issue I've seen very few people talking about is the widespread adoption (in my country at least) of touch-only card payment terminals with no physical number buttons.\n\nNot only do these devices offer no tactile affordances, but the on-screen numbers move around to limit […]",
+      "author": "jscholes.dragonscave.space.ap.brid.gy",
+      "engagement": 19,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Does anyone have #AltText resources specifically for #comics? I can do at least a passable job but I’d like to do a GOOD job — need to write some alt text on kid-drawn single page comic strip stories. \n\nFollow-up — should accompanying audio read the alt text instead of the image text? #Accessibility",
+      "author": "kristinwrites.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Rocked my Accessibility fail ugly sweater tonight at the Holiday party. It was a big hit with everyone who knew HTML. Even one person who is learning HTML was giddy that she understood why this is bad.\n\n#Accessibility #A11y #UglySweater #RightBadCode",
+      "author": "xirclebox.com",
+      "engagement": 13,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Are there any press/Youtubers or accessibility folks who want a copy of Rhythm Doctor?\n\nWe can talk about whatever you want, including:\n- Roughly 10 year journey from Flash Game to Steam\n- One-button design for a rhythm game\n- Screen reader support + audio cues\n\n#accessibility #a11y",
+      "author": "rd.7thbe.at",
+      "engagement": 96,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 33
     },
     {
       "keyword": "disabilityjustice",
@@ -383,7 +383,7 @@
     },
     {
       "keyword": "inclusion",
-      "count": 7
+      "count": 6
     },
     {
       "keyword": "disabilityjustice nico",
@@ -398,7 +398,7 @@
       "count": 5
     },
     {
-      "keyword": "idpd",
+      "keyword": "disability",
       "count": 4
     },
     {
