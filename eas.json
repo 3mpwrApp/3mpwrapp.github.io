@@ -17,8 +17,15 @@
       "distribution": "internal",
       "channel": "preview",
       "env": {
-        "EXPO_PUBLIC_EVENTS_API_BASE": "https://3mpwrapp-events.empowrapp08162025.workers.dev/api",
         "EXPO_PUBLIC_DATA_POLICY": "hybrid_byoc",
+        "EXPO_PUBLIC_GOOGLE_CLIENT_ID": "733708119893-vagikeh1bu36n9boma32ic2lbfvbff08.apps.googleusercontent.com",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "733708119893-so14q85mmnrtt5ulnan3qjs2o7ll73vs.apps.googleusercontent.com",
+        "EXPO_PUBLIC_SENTRY_DSN": "https://98a48aaf6c0943d890f60329be15269a@o4510218500505600.ingest.us.sentry.io/4510218578231296",
+        "EXPO_PUBLIC_EVENTS_API_BASE": "https://3mpwrapp.pages.dev/api",
+        "EXPO_PUBLIC_CAMPAIGNS_API_BASE": "https://3mpwrapp.pages.dev/api",
+        "EXPO_PUBLIC_API_BASE": "https://3mpwrapp.pages.dev/api",
+        "EXPO_PUBLIC_CALENDAR_FEED_URL": "https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics",
+        "EXPO_PUBLIC_DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/1446290778765660335/RFgYwgfPUamtzAt-UcAuPMRVJSamWXTOWMAk0L2RrdSSlxE498bDb0YWOXw_1JIoGeUp",
         "SENTRY_DISABLE_AUTO_UPLOAD": "true"
       },
       "android": {
@@ -27,7 +34,18 @@
     },
     "production": {
       "autoIncrement": true,
-      "channel": "production"
+      "channel": "production",
+      "env": {
+        "EXPO_PUBLIC_DATA_POLICY": "hybrid_byoc",
+        "EXPO_PUBLIC_GOOGLE_CLIENT_ID": "733708119893-vagikeh1bu36n9boma32ic2lbfvbff08.apps.googleusercontent.com",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "733708119893-so14q85mmnrtt5ulnan3qjs2o7ll73vs.apps.googleusercontent.com",
+        "EXPO_PUBLIC_SENTRY_DSN": "https://98a48aaf6c0943d890f60329be15269a@o4510218500505600.ingest.us.sentry.io/4510218578231296",
+        "EXPO_PUBLIC_EVENTS_API_BASE": "https://3mpwrapp.pages.dev/api",
+        "EXPO_PUBLIC_CAMPAIGNS_API_BASE": "https://3mpwrapp.pages.dev/api",
+        "EXPO_PUBLIC_API_BASE": "https://3mpwrapp.pages.dev/api",
+        "EXPO_PUBLIC_CALENDAR_FEED_URL": "https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics",
+        "EXPO_PUBLIC_DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/1446290778765660335/RFgYwgfPUamtzAt-UcAuPMRVJSamWXTOWMAk0L2RrdSSlxE498bDb0YWOXw_1JIoGeUp"
+      }
     }
   },
   "submit": {
