@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-08T00:06:50.042Z",
+  "lastUpdated": "2025-12-08T06:03:04.776Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4685,
+      "totalPosts": 4710,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T00:06:43.994Z"
+      "lastSeen": "2025-12-08T06:02:55.948Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4700,
+      "totalPosts": 4725,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T00:06:45.202Z"
+      "lastSeen": "2025-12-08T06:02:57.964Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4679,
+      "totalPosts": 4703,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T00:06:46.563Z"
+      "lastSeen": "2025-12-08T06:02:59.845Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4693,
+      "totalPosts": 4718,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T00:06:47.716Z"
+      "lastSeen": "2025-12-08T06:03:01.778Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4700,
+      "totalPosts": 4725,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T00:06:49.039Z"
+      "lastSeen": "2025-12-08T06:03:03.773Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Rocked my Accessibility fail ugly sweater tonight at the Holiday party. It was a big hit with everyone who knew HTML. Even one person who is learning HTML was giddy that she understood why this is bad.\n\n#Accessibility #A11y #UglySweater #RightBadCode",
-      "author": "xirclebox.com",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "After playing Öoo this year I was really inspired by the possibilities of a completely wordless game. So I have redesigned the UI in #FlippingPhantom to use icons only. This should allow players of all languages to enjoy the game!\n\n#solodev #indiedev #gamedev #indiegame #pixelart #accessibility",
-      "author": "ryan-honig.com",
-      "engagement": 22,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Rocked my Accessibility fail ugly sweater tonight at the Holiday party. It was a big hit with everyone who knew HTML. Even one person who is learning HTML was giddy that she understood why this is bad.\n\n#Accessibility #A11y #UglySweater #RightBadCode",
-      "author": "xirclebox.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Are there any press/Youtubers or accessibility folks who want a copy of Rhythm Doctor?\n\nWe can talk about whatever you want, including:\n- Roughly 10 year journey from Flash Game to Steam\n- One-button design for a rhythm game\n- Screen reader support + audio cues\n\n#accessibility #a11y",
-      "author": "rd.7thbe.at",
-      "engagement": 96,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Basic screen reader support for combat is in! This is a lot of text, so even at 200% speed it takes awhile! I'm sure there's still lots of work left to do to make this something that's useful for folks, but we gotta do it one step at a time. #indiegame #a11y",
-      "author": "byobattleship.bsky.social",
-      "engagement": 23,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -319,6 +283,42 @@
       "text": "Fixing the housing crisis demands housing that's accessible for all types of people.\n\nNot just 1 able-bodied person, but big families, folks with different physical abilities.\n\nVaried housing with supports in place for the people living there.\n\n#ndp #cdnpoli #canpoli #housingcrisis #accessibility",
       "author": "votetanille.bsky.social",
       "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Rocked my Accessibility fail ugly sweater tonight at the Holiday party. It was a big hit with everyone who knew HTML. Even one person who is learning HTML was giddy that she understood why this is bad.\n\n#Accessibility #A11y #UglySweater #RightBadCode",
+      "author": "xirclebox.com",
+      "engagement": 24,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
+      "author": "adulitingishard.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Bluesky Users who depend on or benefit from ALT text: What do you want and don't want to hear in artwork descriptions? Any pet peeves? Let me know!\n\n#disabilitysky #alttext #visuallyimpaired #accessibility",
+      "author": "abrildelucia.bsky.social",
+      "engagement": 56,
       "hashtag": "Accessibility"
     },
     {
