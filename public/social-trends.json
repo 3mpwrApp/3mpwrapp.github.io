@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-08T12:03:03.540Z",
+  "lastUpdated": "2025-12-08T18:03:06.882Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4735,
+      "totalPosts": 4760,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T12:02:54.872Z"
+      "lastSeen": "2025-12-08T18:02:57.463Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4750,
+      "totalPosts": 4775,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T12:02:56.761Z"
+      "lastSeen": "2025-12-08T18:02:59.434Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4728,
-      "recentPosts": 25,
+      "totalPosts": 4750,
+      "recentPosts": 22,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T12:02:58.654Z"
+      "lastSeen": "2025-12-08T18:03:01.460Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4743,
+      "totalPosts": 4768,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T12:03:00.566Z"
+      "lastSeen": "2025-12-08T18:03:03.732Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4750,
+      "totalPosts": 4775,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T12:03:02.537Z"
+      "lastSeen": "2025-12-08T18:03:05.878Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Does anyone have #AltText resources specifically for #comics? I can do at least a passable job but I’d like to do a GOOD job — need to write some alt text on kid-drawn single page comic strip stories. \n\nFollow-up — should accompanying audio read the alt text instead of the image text? #Accessibility",
-      "author": "kristinwrites.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Rocked my Accessibility fail ugly sweater tonight at the Holiday party. It was a big hit with everyone who knew HTML. Even one person who is learning HTML was giddy that she understood why this is bad.\n\n#Accessibility #A11y #UglySweater #RightBadCode",
-      "author": "xirclebox.com",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Rocked my Accessibility fail ugly sweater tonight at the Holiday party. It was a big hit with everyone who knew HTML. Even one person who is learning HTML was giddy that she understood why this is bad.\n\n#Accessibility #A11y #UglySweater #RightBadCode",
-      "author": "xirclebox.com",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Are there any press/Youtubers or accessibility folks who want a copy of Rhythm Doctor?\n\nWe can talk about whatever you want, including:\n- Roughly 10 year journey from Flash Game to Steam\n- One-button design for a rhythm game\n- Screen reader support + audio cues\n\n#accessibility #a11y",
-      "author": "rd.7thbe.at",
-      "engagement": 96,
-      "hashtag": "A11y"
-    },
     {
       "text": "Basic screen reader support for combat is in! This is a lot of text, so even at 200% speed it takes awhile! I'm sure there's still lots of work left to do to make this something that's useful for folks, but we gotta do it one step at a time. #indiegame #a11y",
       "author": "byobattleship.bsky.social",
@@ -338,6 +314,30 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nun.\n\n#DisabilityRights\n#schwerbehinderung",
+      "author": "bloom-of-many.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 32
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 28
     },
     {
       "keyword": "cripthevote",
@@ -362,8 +362,8 @@
       "count": 26
     },
     {
-      "keyword": "digitalaccessibility",
-      "count": 9
+      "keyword": "accessibility a11y",
+      "count": 10
     },
     {
       "keyword": "altcitizen",
@@ -382,43 +382,43 @@
       "count": 9
     },
     {
+      "keyword": "ux",
+      "count": 7
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 7
+    },
+    {
+      "keyword": "disability",
+      "count": 6
+    },
+    {
       "keyword": "disabilityjustice nico",
       "count": 6
     },
     {
-      "keyword": "wcag",
-      "count": 6
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 6
+      "keyword": "rights movement",
+      "count": 4
     },
     {
       "keyword": "inclusion",
-      "count": 5
+      "count": 4
     },
     {
-      "keyword": "disabilities",
-      "count": 5
+      "keyword": "disabilityjustice disabilityrights",
+      "count": 4
     },
     {
-      "keyword": "digitalinclusion",
-      "count": 5
+      "keyword": "disabled people",
+      "count": 4
     },
     {
-      "keyword": "disabled",
-      "count": 5
+      "keyword": "wcag",
+      "count": 4
     },
     {
       "keyword": "inclusivedesign",
-      "count": 5
-    },
-    {
-      "keyword": "digitalaccessibility inclusivedesign",
-      "count": 5
-    },
-    {
-      "keyword": "inclusionmatters",
       "count": 4
     }
   ]
