@@ -11,6 +11,9 @@ export default function SettingsLayout() {
       screenOptions={{
         headerShown: true,
         headerBackTitle: 'Back',
+        headerTitleStyle: {
+          fontSize: 16,
+        },
       }}
     >
       <Stack.Screen
@@ -68,6 +71,22 @@ export default function SettingsLayout() {
       <Stack.Screen
         name="profile-editor"
         options={{ title: 'Profile Editor' }}
+      />
+      <Stack.Screen
+        name="cognitive-comfort"
+        options={{ title: 'Cognitive Comfort' }}
+      />
+      <Stack.Screen
+        name="complexity-mode"
+        options={{ title: 'Complexity Mode' }}
+      />
+      <Stack.Screen
+        name="impact-dashboard"
+        options={{ title: 'Impact Dashboard' }}
+      />
+      <Stack.Screen
+        name="security"
+        options={{ title: 'Security' }}
       />
     </Stack>
   );

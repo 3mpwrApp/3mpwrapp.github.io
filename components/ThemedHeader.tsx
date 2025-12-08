@@ -172,23 +172,27 @@ const ThemedHeader = React.memo(() => {
         style={({ pressed }) => [
           {
             backgroundColor: palette.primary,
-            paddingHorizontal: 12,
-            paddingVertical: 6,
-            borderRadius: 20,
+            paddingHorizontal: 10,
+            paddingVertical: 5,
+            borderRadius: 16,
             flexDirection: 'row',
             alignItems: 'center',
-            gap: 6,
-            marginLeft: 'auto',
+            gap: 4,
+            marginLeft: 8,
+            flexShrink: 1,
           },
           pressed && { opacity: 0.8 },
         ]}
       >
-        <Ionicons name="chatbubble-ellipses" size={16} color={palette.onPrimary} />
-        <Text style={{ color: palette.onPrimary, fontWeight: '700', fontSize: 14 }}>Ask</Text>
+        <Ionicons name="chatbubble-ellipses" size={14} color={palette.onPrimary} />
+        <Text style={{ color: palette.onPrimary, fontWeight: '700', fontSize: 13 }}>Ask</Text>
       </Pressable>
 
+      {/* Spacer to push right controls to the right */}
+      <View style={{ flex: 1 }} />
+
       {/* Right side controls */}
-      <GapView style={styles.right} gap={4}>
+      <GapView style={styles.right} gap={6}>
         {/* Social media links - hidden on smaller screens to prevent overlap */}
         <GapView
           style={[styles.social, { display: 'none' }]}
@@ -278,7 +282,7 @@ const ThemedHeader = React.memo(() => {
           {syncing ? " • Syncing…" : ""}
         </Text>
 
-        {/* Refresh */}
+        {/* Refresh - hidden to save space, available in pull-to-refresh */}
         <Pressable
           onPress={refreshAll}
           accessibilityRole="button"
@@ -287,7 +291,7 @@ const ThemedHeader = React.memo(() => {
           focusable={true}
           style={({ pressed }) => [
             touchTarget.min,
-            { opacity: pressed ? 0.7 : 1 },
+            { opacity: pressed ? 0.7 : 1, display: 'none' },
           ]}
         >
           <Ionicons name="refresh" size={18} color={palette.text} />
@@ -332,7 +336,7 @@ const ThemedHeader = React.memo(() => {
           <Ionicons name="settings-outline" size={18} color={palette.text} />
         </Pressable>
 
-        {/* Profile */}
+        {/* Profile - hidden, accessible via menu */}
         <Pressable
           onPress={() => {
             try {
@@ -348,7 +352,7 @@ const ThemedHeader = React.memo(() => {
           focusable={true}
           style={({ pressed }) => [
             touchTarget.min,
-            { opacity: pressed ? 0.7 : 1 },
+            { opacity: pressed ? 0.7 : 1, display: 'none' },
           ]}
         >
           <Ionicons
@@ -358,7 +362,7 @@ const ThemedHeader = React.memo(() => {
           />
         </Pressable>
 
-        {/* Auth control */}
+        {/* Auth control - hidden, accessible via menu */}
         {user ? (
           <Pressable
             onPress={signOut}
@@ -368,7 +372,7 @@ const ThemedHeader = React.memo(() => {
             focusable={true}
             style={({ pressed }) => [
               touchTarget.min,
-              { opacity: pressed ? 0.7 : 1 },
+              { opacity: pressed ? 0.7 : 1, display: 'none' },
             ]}
           >
             <Ionicons name="log-out" size={18} color={palette.text} />
@@ -384,7 +388,7 @@ const ThemedHeader = React.memo(() => {
             focusable={true}
             style={({ pressed }) => [
               touchTarget.min,
-              { opacity: pressed ? 0.7 : 1 },
+              { opacity: pressed ? 0.7 : 1, display: 'none' },
             ]}
           >
             <Ionicons name="log-in" size={18} color={palette.text} />
@@ -501,11 +505,12 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
       borderBottomWidth: StyleSheet.hairlineWidth,
       borderBottomColor: palette.muted,
       paddingTop: Math.max(insets.top, 10), // Ensure minimum padding, use safe area top
-      paddingHorizontal: 12,
+      paddingHorizontal: 8,
       paddingBottom: 10,
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
+      overflow: 'visible',
     },
     brand: { flexDirection: "row", alignItems: "center", flexShrink: 1, minWidth: 0 },
   logo: { height: 22, width: 22, marginRight: 6 },
@@ -518,8 +523,10 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
     right: {
       flexDirection: "row",
       alignItems: "center",
-      flexWrap: "wrap",
-      gap: 4,
+      flexWrap: "nowrap",
+      gap: 0,
+      flexShrink: 0,
+      marginRight: 4,
     },
     menuWrap: {
       position: "absolute",

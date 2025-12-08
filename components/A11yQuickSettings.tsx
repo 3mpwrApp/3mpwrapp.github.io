@@ -1,6 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
 
 import { touchTarget } from "../constants/A11Y";
 import type { ResourceFormat, TextScale } from "../store/settings";
@@ -41,8 +41,38 @@ export default function A11yQuickSettings() {
 
   const iconColor = palette.text;
 
+  const panelContent = (
+    <View style={styles.panel} accessibilityLabel="Accessibility settings" accessible={true} collapsable={false}>
+      <Row
+        icon="contrast-outline"
+        label={highContrast ? "High contrast: On" : "High contrast: Off"}
+        onPress={() => setHighContrast(!highContrast)}
+      />
+      <Row icon="resize-outline" label={`Text size: ${textScale}`} onPress={cycleScale} />
+      <Row
+        icon="book-outline"
+        label={dyslexiaFriendly ? "Dyslexia font: On" : "Dyslexia font: Off"}
+        onPress={() => setDyslexiaFriendly(!dyslexiaFriendly)}
+      />
+      <Row
+        icon="reader-outline"
+        label={plainLanguage ? "Plain language: On" : "Plain language: Off"}
+        onPress={() => setPlainLanguage(!plainLanguage)}
+      />
+      <Row
+        icon="chatbubble-ellipses-outline"
+        label={captionsPreferred ? "Captions: On" : "Captions: Off"}
+        onPress={() => setCaptionsPreferred(!captionsPreferred)}
+      />
+      <FormatRow
+        value={resourcePreferredFormat}
+        onChange={setResourcePreferredFormat}
+      />
+    </View>
+  );
+
   return (
-    <View>
+    <View style={{ overflow: 'visible' }}>
       <A11yPressable
         onPress={() => setOpen((v) => !v)}
         accessibilityLabel={open ? "Close accessibility settings" : "Open accessibility settings"}
@@ -52,33 +82,22 @@ export default function A11yQuickSettings() {
       </A11yPressable>
 
       {open && (
-        <View style={styles.panel} accessibilityLabel="Accessibility settings" accessible={true} collapsable={false}>
-          <Row
-            icon="contrast-outline"
-            label={highContrast ? "High contrast: On" : "High contrast: Off"}
-            onPress={() => setHighContrast(!highContrast)}
-          />
-          <Row icon="resize-outline" label={`Text size: ${textScale}`} onPress={cycleScale} />
-          <Row
-            icon="book-outline"
-            label={dyslexiaFriendly ? "Dyslexia font: On" : "Dyslexia font: Off"}
-            onPress={() => setDyslexiaFriendly(!dyslexiaFriendly)}
-          />
-          <Row
-            icon="reader-outline"
-            label={plainLanguage ? "Plain language: On" : "Plain language: Off"}
-            onPress={() => setPlainLanguage(!plainLanguage)}
-          />
-          <Row
-            icon="chatbubble-ellipses-outline"
-            label={captionsPreferred ? "Captions: On" : "Captions: Off"}
-            onPress={() => setCaptionsPreferred(!captionsPreferred)}
-          />
-          <FormatRow
-            value={resourcePreferredFormat}
-            onChange={setResourcePreferredFormat}
-          />
-        </View>
+        <Modal
+          visible={open}
+          transparent={true}
+          animationType="fade"
+          onRequestClose={() => setOpen(false)}
+        >
+          <Pressable 
+            style={styles.backdrop} 
+            onPress={() => setOpen(false)}
+            accessibilityLabel="Close accessibility settings"
+          >
+            <View style={styles.modalPanel}>
+              {panelContent}
+            </View>
+          </Pressable>
+        </Modal>
       )}
     </View>
   );
@@ -133,15 +152,26 @@ function FormatRow({ value, onChange }: { value: ResourceFormat; onChange: (v: R
 function createStyles(palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     panel: {
-      position: "absolute",
-      right: 12,
-      top: 36,
       minWidth: 220,
       backgroundColor: palette.surface ?? palette.background,
       borderWidth: StyleSheet.hairlineWidth,
       borderColor: palette.muted,
       borderRadius: 10,
-      zIndex: 9999,
+    },
+    backdrop: {
+      flex: 1,
+      backgroundColor: 'rgba(0,0,0,0.3)',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-end',
+      paddingTop: 60,
+      paddingRight: 12,
+    },
+    modalPanel: {
+      shadowColor: palette.text,
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.25,
+      shadowRadius: 8,
+      elevation: 10,
     },
   });
 }
