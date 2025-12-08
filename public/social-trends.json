@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-08T06:03:04.776Z",
+  "lastUpdated": "2025-12-08T12:03:03.540Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4710,
+      "totalPosts": 4735,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T06:02:55.948Z"
+      "lastSeen": "2025-12-08T12:02:54.872Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4725,
+      "totalPosts": 4750,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T06:02:57.964Z"
+      "lastSeen": "2025-12-08T12:02:56.761Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4703,
-      "recentPosts": 24,
+      "totalPosts": 4728,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T06:02:59.845Z"
+      "lastSeen": "2025-12-08T12:02:58.654Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4718,
+      "totalPosts": 4743,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T06:03:01.778Z"
+      "lastSeen": "2025-12-08T12:03:00.566Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4725,
+      "totalPosts": 4750,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T06:03:03.773Z"
+      "lastSeen": "2025-12-08T12:03:02.537Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
-      "author": "cambsgreenparty.bsky.social",
-      "engagement": 14,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
-      "author": "adulitingishard.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "A severe #accessibility issue I've seen very few people talking about is the widespread adoption (in my country at least) of touch-only card payment terminals with no physical number buttons.\n\nNot only do these devices offer no tactile affordances, but the on-screen numbers move around to limit […]",
-      "author": "jscholes.dragonscave.space.ap.brid.gy",
-      "engagement": 17,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Does anyone have #AltText resources specifically for #comics? I can do at least a passable job but I’d like to do a GOOD job — need to write some alt text on kid-drawn single page comic strip stories. \n\nFollow-up — should accompanying audio read the alt text instead of the image text? #Accessibility",
       "author": "kristinwrites.bsky.social",
@@ -338,6 +314,30 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Rocked my Accessibility fail ugly sweater tonight at the Holiday party. It was a big hit with everyone who knew HTML. Even one person who is learning HTML was giddy that she understood why this is bad.\n\n#Accessibility #A11y #UglySweater #RightBadCode",
+      "author": "xirclebox.com",
+      "engagement": 24,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,54 +347,50 @@
     },
     {
       "keyword": "accessibility",
-      "count": 31
+      "count": 34
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 29
+    },
+    {
+      "keyword": "cripthevote",
+      "count": 26
     },
     {
       "keyword": "disabilityjustice",
       "count": 26
     },
     {
-      "keyword": "cripthevote",
-      "count": 25
+      "keyword": "digitalaccessibility",
+      "count": 9
     },
     {
       "keyword": "altcitizen",
-      "count": 10
+      "count": 9
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 10
+      "count": 9
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 10
+      "count": 9
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 10
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 8
+      "count": 9
     },
     {
       "keyword": "disabilityjustice nico",
-      "count": 7
+      "count": 6
     },
     {
       "keyword": "wcag",
-      "count": 7
+      "count": 6
     },
     {
-      "keyword": "digitalaccessibility",
-      "count": 7
-    },
-    {
-      "keyword": "webdev",
+      "keyword": "accessibility a11y",
       "count": 6
     },
     {
@@ -402,11 +398,15 @@
       "count": 5
     },
     {
-      "keyword": "idpd2025",
+      "keyword": "disabilities",
       "count": 5
     },
     {
       "keyword": "digitalinclusion",
+      "count": 5
+    },
+    {
+      "keyword": "disabled",
       "count": 5
     },
     {
@@ -418,7 +418,7 @@
       "count": 5
     },
     {
-      "keyword": "disability",
+      "keyword": "inclusionmatters",
       "count": 4
     }
   ]
