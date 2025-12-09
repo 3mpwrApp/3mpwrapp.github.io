@@ -77,26 +77,37 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
       tokenEndpoint: 'https://oauth2.googleapis.com/token',
     };
     
-    // For Expo Go, use the proxy redirect URI
-    // For standalone builds, use the native scheme
-    const redirectUri = AuthSession.makeRedirectUri({ 
-      useProxy: true, // Always use proxy for Expo Go compatibility
-      scheme: 'empowrapp'
+    // For standalone builds (EAS), we need to use the native scheme redirect
+    // For Expo Go, the proxy is used automatically
+    // Check if running in Expo Go vs standalone
+    const isExpoGo = Constants.appOwnership === 'expo';
+    
+    // Generate redirect URI based on environment
+    const redirectUri = AuthSession.makeRedirectUri({
+      scheme: 'empowrapp',
+      // Only use proxy in Expo Go, not in standalone builds
+      useProxy: isExpoGo,
+      // For standalone Android, this creates: empowrapp://
+      // For web, this uses the current origin
     });
     
     logger.log('[OAuth] ====== GOOGLE SIGN-IN DEBUG ======');
     logger.log('[OAuth] Client ID:', clientId);
     logger.log('[OAuth] Redirect URI:', redirectUri);
-    logger.log('[OAuth] Expected: https://auth.expo.io/@3mpwrapp/empowrapp');
-    logger.log('[OAuth] Match:', redirectUri === 'https://auth.expo.io/@3mpwrapp/empowrapp');
+    logger.log('[OAuth] Is Expo Go:', isExpoGo);
+    logger.log('[OAuth] App Ownership:', Constants.appOwnership);
     logger.log('[OAuth] =====================================');
+    
+    // For standalone Android builds, we need to use authorization code flow with PKCE
+    // For Expo Go with proxy, we can use implicit flow
+    const useImplicitFlow = isExpoGo;
     
     const request = new AuthSession.AuthRequest({
       clientId,
-      responseType: AuthSession.ResponseType.IdToken,
+      responseType: useImplicitFlow ? AuthSession.ResponseType.IdToken : AuthSession.ResponseType.Code,
       scopes: ['openid', 'profile', 'email'],
       redirectUri,
-      usePKCE: false, // Disable PKCE for OAuth 2.0 Implicit Flow (id_token)
+      usePKCE: !useImplicitFlow, // Use PKCE for authorization code flow
     });
     
     const result = await request.promptAsync(discovery as any);
@@ -127,13 +138,39 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
       return false; // User cancelled or error occurred
     }
     
-    if (!result.params?.id_token) {
+    let idToken = result.params?.id_token;
+    
+    // For authorization code flow (standalone builds), exchange code for tokens
+    if (!idToken && result.params?.code) {
+      logger.log('[OAuth] Exchanging authorization code for tokens...');
+      try {
+        const tokenResponse = await AuthSession.exchangeCodeAsync(
+          {
+            clientId,
+            code: result.params.code,
+            redirectUri,
+            extraParams: {
+              code_verifier: request.codeVerifier || '',
+            },
+          },
+          discovery
+        );
+        idToken = tokenResponse.idToken;
+        logger.log('[OAuth] Token exchange successful, got id_token:', !!idToken);
+      } catch (tokenError: any) {
+        logger.error('[OAuth] Token exchange failed:', tokenError);
+        Alert.alert('Sign-In Error', 'Failed to complete authentication. Please try again.');
+        return false;
+      }
+    }
+    
+    if (!idToken) {
       Alert.alert('Sign-In incomplete', 'Did not receive authentication token from Google.');
       return false;
     }
     
     const { GoogleAuthProvider, signInWithCredential } = await import('firebase/auth');
-    const credential: AuthCredential = GoogleAuthProvider.credential(result.params.id_token);
+    const credential: AuthCredential = GoogleAuthProvider.credential(idToken);
     logger.log('[OAuth] ===== SIGNING IN WITH GOOGLE =====');
     await signInWithCredential(auth, credential);
     logger.log('[OAuth] ===== GOOGLE SIGN-IN SUCCESSFUL =====');
