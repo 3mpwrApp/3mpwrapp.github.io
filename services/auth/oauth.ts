@@ -1,9 +1,25 @@
+import Constants from 'expo-constants';
 import type { AuthCredential } from 'firebase/auth';
 import { Alert, Platform } from 'react-native';
 
 // internal modules
 import { auth } from '../../firebase/config';
 import { logger } from '../../utils/logger';
+
+// Helper to get environment variable from process.env or Constants.expoConfig.extra
+function getEnvVar(key: string): string | undefined {
+  // First check process.env (works in development and some EAS builds)
+  const processEnvValue = process.env[key];
+  if (processEnvValue) return processEnvValue;
+  
+  // Fallback to Constants.expoConfig.extra (works in EAS builds)
+  const extra = Constants.expoConfig?.extra;
+  if (extra && key in extra) {
+    return extra[key] as string;
+  }
+  
+  return undefined;
+}
 
 export async function signInWithGoogleAsync(): Promise<boolean> {
   try {
@@ -15,14 +31,28 @@ export async function signInWithGoogleAsync(): Promise<boolean> {
     
     // For Expo, we need to use the Web Client ID (not Android client ID)
     // Expo's OAuth flow uses web-based authentication even on mobile
-    const webClientId = process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
-    const androidClientId = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID;
+    // Check both process.env and Constants.expoConfig.extra for EAS build compatibility
+    const webClientId = getEnvVar('EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID');
+    const androidClientId = getEnvVar('EXPO_PUBLIC_GOOGLE_CLIENT_ID');
     
     // Prefer Web Client ID for Expo projects, fallback to Android ID
     const clientId = webClientId || androidClientId;
     
+    // Debug logging for environment variable sources
+    logger.log('[OAuth] Environment variable sources:', {
+      processEnvWeb: !!process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID,
+      processEnvAndroid: !!process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID,
+      constantsExtra: !!Constants.expoConfig?.extra?.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID,
+      resolvedWebId: !!webClientId,
+      resolvedAndroidId: !!androidClientId,
+    });
+    
     if (!clientId) {
-      Alert.alert('Not configured', 'Google Sign-In is not configured for this build. Please check your .env file.');
+      const debugInfo = `
+process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID: ${process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID ? 'SET' : 'NOT SET'}
+Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.extra || {}))}
+      `.trim();
+      Alert.alert('Not configured', `Google Sign-In is not configured for this build.\n\nDebug:\n${debugInfo}`);
       return false;
     }
     
