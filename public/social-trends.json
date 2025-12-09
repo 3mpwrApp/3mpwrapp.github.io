@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-09T00:06:19.218Z",
+  "lastUpdated": "2025-12-09T06:03:07.942Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4785,
+      "totalPosts": 4810,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T00:06:10.171Z"
+      "lastSeen": "2025-12-09T06:02:59.779Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4800,
+      "totalPosts": 4825,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T00:06:12.357Z"
+      "lastSeen": "2025-12-09T06:03:01.394Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4773,
-      "recentPosts": 23,
+      "totalPosts": 4797,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T00:06:14.485Z"
+      "lastSeen": "2025-12-09T06:03:03.156Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4793,
+      "totalPosts": 4818,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T00:06:16.373Z"
+      "lastSeen": "2025-12-09T06:03:04.984Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4800,
+      "totalPosts": 4825,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T00:06:18.214Z"
+      "lastSeen": "2025-12-09T06:03:06.939Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
-      "author": "adulitingishard.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Bluesky Users who depend on or benefit from ALT text: What do you want and don't want to hear in artwork descriptions? Any pet peeves? Let me know!\n\n#disabilitysky #alttext #visuallyimpaired #accessibility",
-      "author": "abrildelucia.bsky.social",
-      "engagement": 23,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "A severe #accessibility issue I've seen very few people talking about is the widespread adoption (in my country at least) of touch-only card payment terminals with no physical number buttons.\n\nNot only do these devices offer no tactile affordances, but the on-screen numbers move around to limit […]",
-      "author": "jscholes.dragonscave.space.ap.brid.gy",
-      "engagement": 19,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Does anyone have #AltText resources specifically for #comics? I can do at least a passable job but I’d like to do a GOOD job — need to write some alt text on kid-drawn single page comic strip stories. \n\nFollow-up — should accompanying audio read the alt text instead of the image text? #Accessibility",
-      "author": "kristinwrites.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Rocked my Accessibility fail ugly sweater tonight at the Holiday party. It was a big hit with everyone who knew HTML. Even one person who is learning HTML was giddy that she understood why this is bad.\n\n#Accessibility #A11y #UglySweater #RightBadCode",
       "author": "xirclebox.com",
@@ -338,6 +314,30 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nun.\n\n#DisabilityRights\n#schwerbehinderung",
+      "author": "bloom-of-many.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 32
+      "count": 33
     },
     {
       "keyword": "a11y",
@@ -363,7 +363,7 @@
     },
     {
       "keyword": "accessibility a11y",
-      "count": 11
+      "count": 10
     },
     {
       "keyword": "altcitizen",
@@ -390,15 +390,11 @@
       "count": 7
     },
     {
-      "keyword": "digitalaccessibility",
+      "keyword": "inclusion",
       "count": 6
     },
     {
       "keyword": "ux",
-      "count": 6
-    },
-    {
-      "keyword": "inclusion",
       "count": 5
     },
     {
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "disabled people",
+      "count": 4
+    },
+    {
+      "keyword": "digitalaccessibility",
       "count": 4
     }
   ]
