@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-08T18:03:06.882Z",
+  "lastUpdated": "2025-12-09T00:06:19.218Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4760,
+      "totalPosts": 4785,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T18:02:57.463Z"
+      "lastSeen": "2025-12-09T00:06:10.171Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4775,
+      "totalPosts": 4800,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T18:02:59.434Z"
+      "lastSeen": "2025-12-09T00:06:12.357Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4750,
-      "recentPosts": 22,
+      "totalPosts": 4773,
+      "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T18:03:01.460Z"
+      "lastSeen": "2025-12-09T00:06:14.485Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4768,
+      "totalPosts": 4793,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T18:03:03.732Z"
+      "lastSeen": "2025-12-09T00:06:16.373Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4775,
+      "totalPosts": 4800,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-08T18:03:05.878Z"
+      "lastSeen": "2025-12-09T00:06:18.214Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Basic screen reader support for combat is in! This is a lot of text, so even at 200% speed it takes awhile! I'm sure there's still lots of work left to do to make this something that's useful for folks, but we gotta do it one step at a time. #indiegame #a11y",
-      "author": "byobattleship.bsky.social",
-      "engagement": 23,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
-      "author": "cambsgreenparty.bsky.social",
-      "engagement": 14,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
       "author": "adulitingishard.bsky.social",
@@ -338,12 +314,36 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nun.\n\n#DisabilityRights\n#schwerbehinderung",
+      "author": "bloom-of-many.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
+      "author": "cambsgreenparty.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 38
+      "count": 39
     },
     {
       "keyword": "accessibility",
@@ -363,7 +363,7 @@
     },
     {
       "keyword": "accessibility a11y",
-      "count": 10
+      "count": 11
     },
     {
       "keyword": "altcitizen",
@@ -382,27 +382,35 @@
       "count": 9
     },
     {
-      "keyword": "ux",
+      "keyword": "disability",
+      "count": 7
+    },
+    {
+      "keyword": "disabilityjustice nico",
       "count": 7
     },
     {
       "keyword": "digitalaccessibility",
-      "count": 7
-    },
-    {
-      "keyword": "disability",
       "count": 6
     },
     {
-      "keyword": "disabilityjustice nico",
+      "keyword": "ux",
       "count": 6
-    },
-    {
-      "keyword": "rights movement",
-      "count": 4
     },
     {
       "keyword": "inclusion",
+      "count": 5
+    },
+    {
+      "keyword": "idea50",
+      "count": 4
+    },
+    {
+      "keyword": "idea50 disabilityrights",
+      "count": 4
+    },
+    {
+      "keyword": "inclusionmatters",
       "count": 4
     },
     {
@@ -411,14 +419,6 @@
     },
     {
       "keyword": "disabled people",
-      "count": 4
-    },
-    {
-      "keyword": "wcag",
-      "count": 4
-    },
-    {
-      "keyword": "inclusivedesign",
       "count": 4
     }
   ]
