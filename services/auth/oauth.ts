@@ -75,49 +75,59 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
     // Check if running on web
     const isWeb = Platform.OS === 'web';
 
+    // On WEB: Use Firebase's signInWithPopup which handles everything automatically
+    // This is much simpler and more reliable than manual OAuth on web
+    if (isWeb) {
+      try {
+        const { GoogleAuthProvider, signInWithPopup } = await import('firebase/auth');
+        const provider = new GoogleAuthProvider();
+        provider.addScope('profile');
+        provider.addScope('email');
+        
+        logger.log('[OAuth] Using Firebase signInWithPopup for web');
+        await signInWithPopup(auth, provider);
+        logger.log('[OAuth] Firebase signInWithPopup successful');
+        return true;
+      } catch (webError: any) {
+        logger.error('[OAuth] Firebase signInWithPopup failed:', webError);
+        if (webError.code === 'auth/popup-closed-by-user') {
+          // User closed popup, not an error
+          return false;
+        }
+        Alert.alert('Sign-In Error', webError.message || 'Failed to sign in with Google');
+        return false;
+      }
+    }
+
+    // For MOBILE: Use Expo AuthSession with the auth proxy
     const discovery = {
       authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
       tokenEndpoint: 'https://oauth2.googleapis.com/token',
     };
 
-    // For Google OAuth, we MUST use a proper HTTPS redirect URI that's registered
-    // in Google Cloud Console. The Expo auth proxy provides this for mobile apps.
-    // 
-    // For all platforms (including standalone APK builds), we use the Expo proxy
+    // For Google OAuth on mobile, we use the Expo auth proxy
     // because Google doesn't accept custom schemes like empowrapp://
     //
     // The proxy URL format is: https://auth.expo.io/@{owner}/{slug}
     // For this app: https://auth.expo.io/@3mpwrapp/empowrapp
-    
-    let redirectUri: string;
-    
-    if (isWeb) {
-      // On web, we can't use the Expo proxy - must use current origin
-      // This MUST be added to Google Cloud Console:
-      // - http://localhost:8081 (for local dev)
-      // - https://3mpwrapp.pages.dev (for production)
-      redirectUri = AuthSession.makeRedirectUri({ useProxy: false });
-    } else {
-      // On mobile (iOS/Android), ALWAYS use the Expo auth proxy
-      // This works for both Expo Go and standalone builds
-      // The proxy is: https://auth.expo.io/@3mpwrapp/empowrapp
-      redirectUri = 'https://auth.expo.io/@3mpwrapp/empowrapp';
-    }
+    const redirectUri = 'https://auth.expo.io/@3mpwrapp/empowrapp';
 
-    logger.log('[OAuth] ====== GOOGLE SIGN-IN DEBUG ======');
+    logger.log('[OAuth] ====== GOOGLE SIGN-IN DEBUG (MOBILE) ======');
     logger.log('[OAuth] Platform:', Platform.OS);
-    logger.log('[OAuth] Is Web:', isWeb);
     logger.log('[OAuth] Client ID:', clientId);
     logger.log('[OAuth] Redirect URI:', redirectUri);
     logger.log('[OAuth] App Ownership:', Constants.appOwnership);
-    logger.log('[OAuth] =====================================');    // For web, we need to handle the popup response differently
-    // On mobile with proxy, we use implicit flow (id_token)
+    logger.log('[OAuth] ==============================================');
+
+    // Use authorization code flow with PKCE instead of implicit flow
+    // Google now requires a nonce for id_token response type, so we use
+    // the code flow which is more secure anyway
     const request = new AuthSession.AuthRequest({
       clientId,
-      responseType: AuthSession.ResponseType.IdToken,
+      responseType: AuthSession.ResponseType.Code,
       scopes: ['openid', 'profile', 'email'],
       redirectUri,
-      usePKCE: false, // Implicit flow doesn't use PKCE
+      usePKCE: true, // Use PKCE for security
     });
     
     const result = await request.promptAsync(discovery as any);
@@ -148,11 +158,41 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
       return false; // User cancelled or error occurred
     }
     
-    // With implicit flow, we get id_token directly
-    const idToken = result.params?.id_token;
+    // With authorization code flow, we need to exchange the code for tokens
+    const code = result.params?.code;
+    
+    if (!code) {
+      logger.error('[OAuth] No authorization code in response. Params:', Object.keys(result.params || {}));
+      Alert.alert('Sign-In incomplete', 'Did not receive authorization code from Google.');
+      return false;
+    }
+    
+    logger.log('[OAuth] Got authorization code, exchanging for tokens...');
+    
+    // Exchange the authorization code for tokens
+    let idToken: string | undefined;
+    try {
+      const tokenResponse = await AuthSession.exchangeCodeAsync(
+        {
+          clientId,
+          code,
+          redirectUri,
+          extraParams: {
+            code_verifier: request.codeVerifier || '',
+          },
+        },
+        discovery
+      );
+      idToken = tokenResponse.idToken;
+      logger.log('[OAuth] Token exchange successful, got id_token:', !!idToken);
+    } catch (tokenError: any) {
+      logger.error('[OAuth] Token exchange failed:', tokenError);
+      Alert.alert('Sign-In Error', `Failed to complete authentication: ${tokenError.message || 'Unknown error'}`);
+      return false;
+    }
     
     if (!idToken) {
-      logger.error('[OAuth] No id_token in response. Params:', Object.keys(result.params || {}));
+      logger.error('[OAuth] No id_token after token exchange');
       Alert.alert('Sign-In incomplete', 'Did not receive authentication token from Google.');
       return false;
     }
