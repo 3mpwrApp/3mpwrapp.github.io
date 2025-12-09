@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-09T12:03:13.758Z",
+  "lastUpdated": "2025-12-09T18:02:56.689Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4835,
+      "totalPosts": 4860,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T12:03:04.646Z"
+      "lastSeen": "2025-12-09T18:02:46.497Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4850,
+      "totalPosts": 4875,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T12:03:06.490Z"
+      "lastSeen": "2025-12-09T18:02:48.643Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4819,
-      "recentPosts": 22,
+      "totalPosts": 4844,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T12:03:08.540Z"
+      "lastSeen": "2025-12-09T18:02:50.984Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4843,
+      "totalPosts": 4868,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T12:03:10.766Z"
+      "lastSeen": "2025-12-09T18:02:53.414Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4850,
+      "totalPosts": 4875,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T12:03:12.755Z"
+      "lastSeen": "2025-12-09T18:02:55.686Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
-      "author": "cambsgreenparty.bsky.social",
-      "engagement": 14,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
-      "author": "adulitingishard.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Bluesky Users who depend on or benefit from ALT text: What do you want and don't want to hear in artwork descriptions? Any pet peeves? Let me know!\n\n#disabilitysky #alttext #visuallyimpaired #accessibility",
-      "author": "abrildelucia.bsky.social",
-      "engagement": 44,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Fixing the housing crisis demands housing that's accessible for all types of people.\n\nNot just 1 able-bodied person, but big families, folks with different physical abilities.\n\nVaried housing with supports in place for the people living there.\n\n#ndp #cdnpoli #canpoli #housingcrisis #accessibility",
-      "author": "votetanille.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "A severe #accessibility issue I've seen very few people talking about is the widespread adoption (in my country at least) of touch-only card payment terminals with no physical number buttons.\n\nNot only do these devices offer no tactile affordances, but the on-screen numbers move around to limit […]",
       "author": "jscholes.dragonscave.space.ap.brid.gy",
@@ -338,20 +314,44 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nun.\n\n#DisabilityRights\n#schwerbehinderung",
+      "author": "bloom-of-many.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "This is free to submit to, and includes an accessibility category 👀 Get on it people!\n#indiedev #accessibility",
+      "author": "ianhamilton.bsky.social",
+      "engagement": 17,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 39
+      "count": 36
     },
     {
       "keyword": "accessibility",
-      "count": 29
+      "count": 32
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 27
     },
     {
       "keyword": "cripthevote",
@@ -360,14 +360,6 @@
     {
       "keyword": "disabilityjustice",
       "count": 26
-    },
-    {
-      "keyword": "disability",
-      "count": 9
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 9
     },
     {
       "keyword": "altcitizen",
@@ -387,31 +379,19 @@
     },
     {
       "keyword": "disabilityjustice nico",
-      "count": 7
+      "count": 8
     },
     {
-      "keyword": "inclusion",
+      "keyword": "accessibility a11y",
       "count": 6
     },
     {
-      "keyword": "idea50",
-      "count": 4
+      "keyword": "inclusion",
+      "count": 5
     },
     {
-      "keyword": "idea50 disabilityrights",
-      "count": 4
-    },
-    {
-      "keyword": "inclusionmatters",
-      "count": 4
-    },
-    {
-      "keyword": "disabilityjustice disabilityrights",
-      "count": 4
-    },
-    {
-      "keyword": "disabled people",
-      "count": 4
+      "keyword": "disability",
+      "count": 5
     },
     {
       "keyword": "foxtakedown",
@@ -419,6 +399,26 @@
     },
     {
       "keyword": "stoptheliesfox",
+      "count": 4
+    },
+    {
+      "keyword": "virtual",
+      "count": 4
+    },
+    {
+      "keyword": "foxlies",
+      "count": 4
+    },
+    {
+      "keyword": "stoptrump",
+      "count": 4
+    },
+    {
+      "keyword": "wearetheflood",
+      "count": 4
+    },
+    {
+      "keyword": "50501movement",
       "count": 4
     }
   ]
