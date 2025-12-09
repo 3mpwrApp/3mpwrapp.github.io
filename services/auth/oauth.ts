@@ -72,28 +72,46 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
     }
     WebBrowser.maybeCompleteAuthSession?.();
     
+    // Check if running on web
+    const isWeb = Platform.OS === 'web';
+
     const discovery = {
       authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
       tokenEndpoint: 'https://oauth2.googleapis.com/token',
     };
+
+    // For Google OAuth, we MUST use a proper HTTPS redirect URI that's registered
+    // in Google Cloud Console. The Expo auth proxy provides this for mobile apps.
+    // 
+    // For all platforms (including standalone APK builds), we use the Expo proxy
+    // because Google doesn't accept custom schemes like empowrapp://
+    //
+    // The proxy URL format is: https://auth.expo.io/@{owner}/{slug}
+    // For this app: https://auth.expo.io/@3mpwrapp/empowrapp
     
-    // IMPORTANT: For Google OAuth, we ALWAYS use the Expo auth proxy
-    // Google requires HTTPS redirect URIs with a valid domain
-    // The proxy at auth.expo.io handles this and redirects back to our app
-    // This works for both Expo Go AND standalone EAS builds
-    const redirectUri = AuthSession.makeRedirectUri({
-      scheme: 'empowrapp',
-      useProxy: true, // Always use proxy for Google OAuth
-      // This generates: https://auth.expo.io/@3mpwrapp/empowrapp
-    });
+    let redirectUri: string;
     
+    if (isWeb) {
+      // On web, we can't use the Expo proxy - must use current origin
+      // This MUST be added to Google Cloud Console:
+      // - http://localhost:8081 (for local dev)
+      // - https://3mpwrapp.pages.dev (for production)
+      redirectUri = AuthSession.makeRedirectUri({ useProxy: false });
+    } else {
+      // On mobile (iOS/Android), ALWAYS use the Expo auth proxy
+      // This works for both Expo Go and standalone builds
+      // The proxy is: https://auth.expo.io/@3mpwrapp/empowrapp
+      redirectUri = 'https://auth.expo.io/@3mpwrapp/empowrapp';
+    }
+
     logger.log('[OAuth] ====== GOOGLE SIGN-IN DEBUG ======');
+    logger.log('[OAuth] Platform:', Platform.OS);
+    logger.log('[OAuth] Is Web:', isWeb);
     logger.log('[OAuth] Client ID:', clientId);
     logger.log('[OAuth] Redirect URI:', redirectUri);
     logger.log('[OAuth] App Ownership:', Constants.appOwnership);
-    logger.log('[OAuth] =====================================');
-    
-    // With the proxy, we can use implicit flow (id_token) which is simpler
+    logger.log('[OAuth] =====================================');    // For web, we need to handle the popup response differently
+    // On mobile with proxy, we use implicit flow (id_token)
     const request = new AuthSession.AuthRequest({
       clientId,
       responseType: AuthSession.ResponseType.IdToken,
