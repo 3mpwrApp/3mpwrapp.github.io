@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-09T18:02:56.689Z",
+  "lastUpdated": "2025-12-10T00:06:31.454Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4860,
+      "totalPosts": 4885,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T18:02:46.497Z"
+      "lastSeen": "2025-12-10T00:06:22.122Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4875,
+      "totalPosts": 4900,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T18:02:48.643Z"
+      "lastSeen": "2025-12-10T00:06:24.405Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4844,
+      "totalPosts": 4869,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T18:02:50.984Z"
+      "lastSeen": "2025-12-10T00:06:26.392Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4868,
+      "totalPosts": 4893,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T18:02:53.414Z"
+      "lastSeen": "2025-12-10T00:06:28.342Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4875,
+      "totalPosts": 4900,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-09T18:02:55.686Z"
+      "lastSeen": "2025-12-10T00:06:30.450Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "A severe #accessibility issue I've seen very few people talking about is the widespread adoption (in my country at least) of touch-only card payment terminals with no physical number buttons.\n\nNot only do these devices offer no tactile affordances, but the on-screen numbers move around to limit […]",
-      "author": "jscholes.dragonscave.space.ap.brid.gy",
-      "engagement": 21,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Rocked my Accessibility fail ugly sweater tonight at the Holiday party. It was a big hit with everyone who knew HTML. Even one person who is learning HTML was giddy that she understood why this is bad.\n\n#Accessibility #A11y #UglySweater #RightBadCode",
-      "author": "xirclebox.com",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Are there any press/Youtubers or accessibility folks who want a copy of Rhythm Doctor?\n\nWe can talk about whatever you want, including:\n- Roughly 10 year journey from Flash Game to Steam\n- One-button design for a rhythm game\n- Screen reader support + audio cues\n\n#accessibility #a11y",
-      "author": "rd.7thbe.at",
-      "engagement": 96,
-      "hashtag": "A11y"
-    },
     {
       "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
       "author": "lisadiedrich.bsky.social",
@@ -338,48 +320,70 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nun.\n\n#DisabilityRights\n#schwerbehinderung",
+      "author": "bloom-of-many.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 36
+      "count": 38
     },
     {
       "keyword": "accessibility",
-      "count": 32
-    },
-    {
-      "keyword": "a11y",
-      "count": 27
+      "count": 31
     },
     {
       "keyword": "cripthevote",
-      "count": 26
+      "count": 28
+    },
+    {
+      "keyword": "a11y",
+      "count": 28
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 27
     },
     {
       "keyword": "altcitizen",
-      "count": 9
+      "count": 11
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 9
+      "count": 11
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 9
+      "count": 11
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 9
+      "count": 11
     },
     {
       "keyword": "disabilityjustice nico",
-      "count": 8
+      "count": 7
+    },
+    {
+      "keyword": "disability",
+      "count": 6
     },
     {
       "keyword": "accessibility a11y",
@@ -390,36 +394,32 @@
       "count": 5
     },
     {
-      "keyword": "disability",
+      "keyword": "foxtakedown",
       "count": 5
     },
     {
-      "keyword": "foxtakedown",
-      "count": 4
-    },
-    {
       "keyword": "stoptheliesfox",
-      "count": 4
+      "count": 5
     },
     {
       "keyword": "virtual",
-      "count": 4
+      "count": 5
     },
     {
       "keyword": "foxlies",
-      "count": 4
+      "count": 5
     },
     {
       "keyword": "stoptrump",
-      "count": 4
+      "count": 5
     },
     {
       "keyword": "wearetheflood",
-      "count": 4
+      "count": 5
     },
     {
       "keyword": "50501movement",
-      "count": 4
+      "count": 5
     }
   ]
 }
