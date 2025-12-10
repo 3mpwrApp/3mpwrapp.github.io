@@ -9,132 +9,61 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-12-10
 
-Curated 26 items from disability, accessibility, and social policy sources.
+Curated 12 items from disability, accessibility, and social policy sources.
 
-## 1. Toronto is Canada's 'rattiest' city, according to new ranking | Hanomansing Tonight
-<img src='https://i.cbc.ca/ais/c5e982de-ceb4-46db-8cb8-6e70f41b0136,1765331143737/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C98%2C2529%2C1422%29%3BResize%3D%28620%29' alt='A rat seen outside in Toronto.' width='620' height='349' title='A rat seen outside in Toronto.'/><p>Toronto retains its title as the ‘rattiest’ city in Canada, according to the latest ranking from pest control service Orkin Canada. Kaylee Byers, an assistant professor in the school of population and public health at the University of British Columbia, talks to Hanomansing Tonight about tracking rat populations.</p>
-📍 [Source](https://www.cbc.ca/player/play/9.7009725?cmp=rss)
-**Score:** 24.00
+## 1. Canada's border agency says it protects staff who face work-related threats
+The CBSA was responding to an officer who said the agency abandoned him amid an Indian disinformation campaign.
+📍 [Source](https://globalnews.ca/news/11570240/cbsa-responds-officer-india-disinformation/)
+**Score:** 18.30
 
-## 2. Liberals back Bloc's proposal to remove religious exemption from hate speech laws
-<img src='https://i.cbc.ca/ais/1d2082c6-4ce8-4121-aa10-b62050e4b6ea,1765327848451/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C348%2C6677%2C3755%29%3BResize%3D%28620%29' alt='A man in a suit gestures with his hand as he speaks at a podium.' width='620' height='349' title='Minister of Justice Sean Fraser speaks at a news conference in Ottawa, on Tuesday, Dec. 9, 2025. Fraser introduced Bill C-9 in September.'/><p>Liberal MPs on the House justice committee backed a Bloc Québécois proposal to remove a religious exemption from Canada’s hate speech laws — after the suggestion initially appeared to halt the government's anti-hate legislation.</p>
-📍 [Source](https://www.cbc.ca/news/politics/government-bill-religious-exemption-hate-speech-9.7009646?cmp=rss)
-**Score:** 24.10
+## 2. Manitoba Government Expands Virtual Medicine Ward to Support Home Recovery and Reduce Emergency Room Wait Times
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71762)
+**Score:** 23.40
 
-## 3. Winnipeg to explore emergency service line for mental health calls
-Mayor Scott Gillingham had made a motion for his office to work with a consulting firm to explore how an emergency service line for mental health could operate.
-📍 [Source](https://globalnews.ca/news/11570881/winnipeg-mental-health-service-line/)
-**Score:** 18.80
-
-## 4. Trump's threats to tariff Canadian fertilizer imports could hurt Sask. potash industry
-<img src='https://i.cbc.ca/ais/e22b45fd-8020-46d4-bb6d-21422b06e5cf,1743699553385/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A pair of hands grabbing potash' width='620' height='349' title='Potash industry spared from U.S.-Canada trade war'/><p>Donald Trump’s threats to tariff Canadian fertilizer imports could damage Saskatchewan’s potash industry if demand for the mineral critical in making fertilizer drops off, according to a University of Saskatchewan professor.</p>
-📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/potash-mining-tariffs-fertilizer-9.7008646?cmp=rss)
-**Score:** 17.90
-
-## 5. Canadian parents may ‘underestimate' the cost of raising a family, says RBC
-Most parents are surprised at just how expensive it can be to raise a family amid the high cost of living in Canada, according to the latest survey study.
-📍 [Source](https://globalnews.ca/news/11570272/royal-bank-of-canada-cost-of-living-families/)
+## 3. The Bank of Canada holds interest rates at 2.25%
+The Bank of Canada held its benchmark lending rate unchanged at 2.25 per cent in the final monetary policy update for 2025.
+📍 [Source](https://globalnews.ca/news/11571499/bank-of-canada-interest-rate-announcement-december-2025/)
 **Score:** 16.00
 
-## 6. Cost of Carney's Egypt summit flight ballooned to $736K with no air force plane available
-<img src='https://i.cbc.ca/ais/79d504f0-4d67-434d-a924-73da4aba583e,1765323169125/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C18%2C4872%2C2740%29%3BResize%3D%28620%29' alt='Prime Minister Mark Carney with U.S. President Donald Trump' width='620' height='349' title='President Donald Trump greets Canada's Prime Minister Mark Carney during a summit to support ending the more than two-year Israel-Hamas war in Gaza after a breakthrough ceasefire deal, Monday, Oct. 13, 2025, in Sharm El Sheikh, Egypt. (AP Photo/Evan Vucci, Pool)'/><p>Prime Minister Mark Carney’s last-minute trip to a Gaza peace summit in Egypt in October cost Canadian taxpayers over $736,466 — more than three times higher than it would have been if the Royal Canadian Air Force had been able to supply a plane.</p>
-📍 [Source](https://www.cbc.ca/news/politics/carney-trump-egypt-jet-9.7009396?cmp=rss)
-**Score:** 17.00
+## 4. Trump’s security strategy won’t meddle in Canada’s affairs, Hoekstra says
+The national security strategy says the U.S. government will "reward and encourage" governments, political parties and movements "broadly aligned" with its principles and strategy.
+📍 [Source](https://globalnews.ca/news/11571501/trump-security-strategy-meddle-canada-hoekstra/)
+**Score:** 12.50
 
-## 7. 'Not going to stop until I find him': First Nation man's family search for more remains in Ontario murder case
-<img src='https://i.cbc.ca/ais/9ebc1420-464a-463b-b1f9-5a03c29371d6,1765217313574/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C2000%2C1125%29%3BResize%3D%28620%29' alt='A person is seen wearing a straw hat indoors.' width='620' height='349' title='Anyone with information which may assist the investigation into Mekhi Pelly's disappearance and death is asked to contact the Kenora OPP or Crime Stoppers.'/><p>Ontario Provincial Police have stopped looking for the rest of Mekhi Pelly’s remains as two people face charges in the murder case, but the Kenora-area man's family vows to keep searching. Here's what we know about the investigation as a range of people, including from Manitoba, help in the search.</p>
-📍 [Source](https://www.cbc.ca/news/canada/thunder-bay/mekhi-pelly-search-continues-9.7007237?cmp=rss)
-**Score:** 17.30
+## 5. Trump wants to boost European nationalists. Should Canada be worried?
+The president’s National Security Strategy says American diplomacy should support 'patriotic' European political parties against continent’s perceived decline.
+📍 [Source](https://globalnews.ca/news/11570490/trump-boosting-european-nationalists-canada/)
+**Score:** 12.50
 
-## 8. NAC's new president, CEO is Annabelle Cloutier
-<img src='https://i.cbc.ca/ais/1.7064042,1703077621000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C33%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A woman in a jacket stands in an underground parking garage.' width='620' height='349' title='Annabelle Cloutier, executive director of strategy and communications at the National Arts Centre, said running a downtown public parking lot following the pandemic is an adjustment. '/><p>The National Arts Centre has promoted Annabelle Cloutier to president and CEO, saying she is the first francophone woman to hold those roles.</p>
-📍 [Source](https://www.cbc.ca/news/canada/ottawa/national-arts-centre-nac-president-annabelle-cloutier-9.7008389?cmp=rss)
-**Score:** 12.00
+## 6. Manitoba Government Introduces Legislation to Recognize Sign Languages
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71763)
+**Score:** 12.10
 
-## 9. Manitoba Government Matches Canadian Red Cross Donations to Support Wildfire Evacuees and Affected Businesses
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71759)
-**Score:** 15.00
-
-## 10. No charges laid in crash that killed 4 students and teacher from Walkerton, Ont.: police
-<img src='https://i.cbc.ca/ais/1.7545825,1748723885000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1919%2C1079%29%3BResize%3D%28620%29' alt='High school students Olivia Rourke, Rowan McLeod, Kaydance Ford and Danica Baker, and teacher Matt Eckert, left to right, died Friday after the multi-vehicle crash at the intersection of Cobble Hill and Thorndale roads, east of London, Ont. ' width='620' height='349' title='High school students Olivia Rourke, Rowan McLeod, Kaydance Ford and Danica Baker, and teacher Matt Eckert, left to right, died Friday after a multi-vehicle crash at the intersection of Cobble Hill and Thorndale roads, east of London, Ont. '/><p>Seven months after four students and their teacher were killed in a multi-vehicle crash while returning home to Walkerton, Ont. from a high school softball tournament, provincial police have ended their investigation and said no charges will be laid.</p>
-📍 [Source](https://www.cbc.ca/news/canada/london/police-conclude-investigation-into-crash-that-killed-4-students-teacher-from-walkerton-ont-no-charges-laid-9.7009598?cmp=rss)
-**Score:** 10.10
-
-## 11. Atmospheric river to bring heavy rain to B.C.'s South Coast, orange warning issued for Fraser Valley
-<img src='https://i.cbc.ca/ais/1b2aea44-e033-4fb0-ab71-76b42b27b82f,1765310119000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C106%2C851%2C478%29%3BResize%3D%28620%29' alt='A map of southwestern British Columbia showing yellow sections covering parts of western Vancouver Island and Metro Vancouver and an orange section covering much of the Fraser Valley.' width='620' height='349' title='Environment Canada has issued an orange warning for the Fraser Valley and areas extending inland as an atmospheric river is expected to bring heavy rain to southwestern B.C. through Wednesday evening. It's the first time the agency has issued an orange warning since instituting a new colour coded warning system last month. '/><p>An atmospheric river headed for B.C.'s South Coast will bring significant rainfall to parts of the Lower Mainland. It's prompting Environment and Climate Change Canada to issue an orange warning, under its new colour-coded warning system, for parts of the Fraser Valley.</p>
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/bc-heavy-rainfall-orange-warning-9.7009141?cmp=rss)
-**Score:** 10.50
-
-## 12. Carney protegé eyed to succeed Hillman as Canada’s U.S. ambassador: sources
-Kirsten Hillman, who became ambassador in 2020, has helped lead the on-and-off, sometimes tense negotiations for a new trade deal with the Trump administration this year.
-📍 [Source](https://globalnews.ca/news/11570641/canada-ambassador-us-kirsten-hillman-leaving-role/)
+## 7. On the Top Chef Canada finale, Alex Kim came second—but his story came first
+The Five Sails culinary director made a splash on the show.
+📍 [Source](https://www.straight.com/food/on-top-chef-canada-finale-alex-kim-came-second-but-his-story-came-first)
 **Score:** 9.50
 
-## 13. Vancouver International Black Film Festival returns for its fifth edition
-A hybrid lineup of films, panels, and workshops spotlights creators from Canada and around the world.
-📍 [Source](https://www.straight.com/movies/vancouver-international-black-film-festival-returns-for-its-fifth-edition)
-**Score:** 9.50
+## 8. Sipekne’katik First Nation bans Houston, cabinet ministers in scathing rebuke
+<img src='https://i.cbc.ca/ais/1.7406954,1764273185559/full/max/0/default.jpg?im=Crop%2Crect%3D%2840%2C24%2C1880%2C1057%29%3BResize%3D%28620%29' alt='A man in a suit and tie with white hair sits in front of Nova Scotia flags.' width='620' height='349' title='Premier Tim Houston met with reporters in Halifax on Tuesday.'/><p>Sipekne’katik First Nation is once again chastising the Houston government and says that the premier and two of his cabinet ministers are not welcome on reserve lands. The premier's office says it takes the message as a threat.</p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/sipeknekatik-first-nation-bans-houston-cabinet-ministers-9.7009262?cmp=rss)
+**Score:** 8.80
 
-## 14. Federal Immigration Cuts Put Strain on BC’s Health-Care Sector, Say Advocates
-‘Are we able to plan our life in BC, or should we leave?’ asks one student caught in limbo.
-📍 [Source](https://thetyee.ca/News/2025/12/09/Federal-Immigration-Cuts-Strain-BC-Health-Care/)
-**Score:** 12.00
-
-## 15. Kirsten Hillman, Canada’s longtime ambassador to the U.S., is stepping down
-<img src='https://i.cbc.ca/ais/0d3347d6-ed28-41b9-9693-bd250143565a,1765330068909/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A woman at a table. ' width='620' height='349' title='Ambassador of Canada to the U.S. Kirsten Hillman listens during a first ministers meeting in Ottawa, on Wednesday, Jan. 15, 2025.'/><p></p>
-📍 [Source](https://www.cbc.ca/news/politics/kirsten-hillman-stepping-down-9.7009333?cmp=rss)
-**Score:** 9.50
-
-## 16. How Canada’s Big 6 banks made a ton of money in 2025 | About That
-📍 [Source](https://www.cbc.ca/player/play/9.7009481?cmp=rss)
-**Score:** 9.50
-
-## 17. Air Transat, pilots' union have reached tentative deal to avert strike, airline's parent company says
-<img src='https://i.cbc.ca/ais/f22f7701-91da-4aae-afa4-b20f70f5d3d9,1765330040776/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A plane with the words 'Air transat' sits on a tarmac.' width='620' height='349' title='Air Transat and the union representing around 750 of its pilots have steered clear of a strike and reached a tentative deal, the leisure airline’s parent company said Tuesday evening. Neither the company nor the union released details of the tentative agreement.'/><p></p>
-📍 [Source](https://www.cbc.ca/news/business/air-transat-pilots-tentative-deal-9.7009203?cmp=rss)
+## 9. Manitoba Government Invests more than $2 Million for Interlake Infrastructure
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71761)
 **Score:** 7.50
 
-## 18. City of Burnaby pushes back on provincial housing density rules
-A public hearing held recently in the city received a lot of comments from residents that they don't want to see more towers and small-scale multi-unit housing districts.
-📍 [Source](https://globalnews.ca/news/11571013/city-of-burnaby-provincial-housing-density-rules/)
-**Score:** 9.70
-
-## 19. Manitoba Government Begins Search at Brady Landfill
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71758)
+## 10. Manitoba Government Adds Training Seats for Laboratory and X-Ray Technologists to Address Critical Rural Diagnostic Gaps
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71760)
 **Score:** 7.50
 
-## 20. Calgary airport launches new security screening program
-The Calgary International Airport is set to open its new centralized security screening area on Wednesday with the aim of reducing security wait times for domestic passengers.
-📍 [Source](https://globalnews.ca/news/11570210/calgary-airport-new-security-screening-program/)
-**Score:** 4.50
+## 11. TTC and Metrolinx battle over Eglinton Crosstown LRT date at tense private meeting
+Multiple sources, speaking on condition of anonymity, confirmed that there was a plan by Metrolinx and the Ministry of Transportation to open the line in the last week of December.
+📍 [Source](https://globalnews.ca/news/11570650/metrolinx-pushes-2025-opening-eglinton-crosstown-lrt/)
+**Score:** 3.00
 
-## 21. ‘Don't take him literally,' Moe says on Trump fertilizer tariff threats
-Premier Scott Moe says not to take U.S. President Donald Trump seriously following comments he may tariff Canadian fertilizer to bolster domestic production.
-📍 [Source](https://globalnews.ca/news/11570828/premier-moe-trump-fertilizer-tariff-threats/)
-**Score:** 4.50
-
-## 22. Sailor rescued off Vancouver Island after going overboard alone
-'We were alerted of a person in the water that had fallen off a Rigid Hull Inflatable Boat,' Maj. Greg Clarke with the Joint Rescue Coordination Centre told Global News.
-📍 [Source](https://globalnews.ca/news/11570923/sailor-rescued-vancouver-island-going-overboard-alone/)
-**Score:** 4.50
-
-## 23. Canadian swim star Penny Oleksiak denies drug use, says she'll keep training despite 2-year suspension
-<img src='https://i.cbc.ca/ais/66b8b597-79c1-40b7-af73-13ffef783529,1765242053923/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A woman sits for an interview' width='620' height='349' title='. In an exclusive interview, Oleksiak explains her whereabouts failures and maintains she’s a clean athlete who has never used performance-enhancing drugs.'/><p></p>
-📍 [Source](https://www.cbc.ca/sports/olympics/summer/aquatics/penny-oleksiak-cbc-interview-9.7006757?cmp=rss)
-**Score:** 4.50
-
-## 24. Inuit cultural items unveiled at Museum of History following journey from Vatican
-<img src='https://i.cbc.ca/ais/3390e361-b9be-4e3d-b42a-db7c0f47b5c0,1765327542938/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Inuit cultural items unveiled at the Canadian Museum of History.' width='620' height='349' title='Inuit cultural items unveiled at the Canadian Museum of History.'/><p></p>
-📍 [Source](https://www.cbc.ca/news/canada/inuit-cultural-items-vatican-canadian-museum-history-9.7009092?cmp=rss)
-**Score:** 4.50
-
-## 25. Dylan Cease says decision to join AL champion Blue Jays was 'inevitable'
-<img src='https://i.cbc.ca/ais/7acda264-6c41-45c0-9da3-a72b77f6edd8,1765316827803/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C2626%2C1477%29%3BResize%3D%28620%29' alt='Dylan Cease is wearing his new Blue Jays jersey and has both hands adjusting the bill of his Blue Jays hat.' width='620' height='349' title='Winter Meetings Baseball'/><p>At a news conference on Tuesday, the Blue Jays' newest starting pitcher Dylan Cease spoke about why he signed with Toronto. The right-hander inked a seven-year deal worth $210 million US, the largest free-agent contract in team history.</p>
-📍 [Source](https://www.cbc.ca/player/play/9.7009331?cmp=rss)
-**Score:** 4.50
-
-## 26. The Culinary Commons helps Vancouver chefs gather
-1250 East Georgia Street is serving Vancouver's culinary community. ]
-📍 [Source](https://www.straight.com/food/culinary-commons-helps-vancouver-chefs-gather)
+## 12. Sign of the times: Facing an uncertain future, the Penthouse looks back
+As development pressures mount, Danny Filippone reflects on the club's legacy, its community roots, and the memories that continue to shape Vancouver culture.
+📍 [Source](https://www.straight.com/city-culture/sign-of-times-facing-an-uncertain-future-penthouse-looks-back)
 **Score:** 2.60
 
