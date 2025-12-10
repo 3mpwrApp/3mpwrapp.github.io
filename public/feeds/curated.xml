@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Wed, 10 Dec 2025 15:10:35 GMT</lastBuildDate>
-    <pubDate>Wed, 10 Dec 2025 15:10:35 GMT</pubDate>
+    <lastBuildDate>Wed, 10 Dec 2025 21:09:25 GMT</lastBuildDate>
+    <pubDate>Wed, 10 Dec 2025 21:09:25 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -20,117 +20,285 @@
     <category>Benefits</category>
 
     <item>
-      <title>Canada&apos;s border agency says it protects staff who face work-related threats</title>
-      <link>https://globalnews.ca/news/11570240/cbsa-responds-officer-india-disinformation/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11570240/cbsa-responds-officer-india-disinformation/</guid>
-      <description><![CDATA[The CBSA was responding to an officer who said the agency abandoned him amid an Indian disinformation campaign.]]></description>
-      <pubDate>Wed, 10 Dec 2025 10:00:46 GMT</pubDate>
+      <title>Canada lists 4 new terrorist entities, including online extremist groups</title>
+      <link>https://globalnews.ca/news/11572033/canada-terrorist-list-764-online-extremism/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11572033/canada-terrorist-list-764-online-extremism/</guid>
+      <description><![CDATA[The move marks the first time any country has listed one of those IMVE groups, 764, as a terrorist organization, a statement from Public Safety Canada said Wednesday.]]></description>
+      <pubDate>Wed, 10 Dec 2025 19:20:50 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Expands Virtual Medicine Ward to Support Home Recovery and Reduce Emergency Room Wait Times</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=71762</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71762</guid>
-      <pubDate>Wed, 03 Dec 2025 19:39:00 GMT</pubDate>
+      <title>Toronto is Canada&apos;s &apos;rattiest&apos; city, according to new ranking | Hanomansing Tonight</title>
+      <link>https://www.cbc.ca/player/play/9.7009725?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/player/play/9.7009725?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/c5e982de-ceb4-46db-8cb8-6e70f41b0136,1765331143737/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C98%2C2529%2C1422%29%3BResize%3D%28620%29' alt='A rat seen outside in Toronto.' width='620' height='349' title='A rat seen outside in Toronto.'/><p>Toronto retains its title as the ‘rattiest’ city in Canada, according to the latest ranking from pest control service Orkin Canada. Kaylee Byers, an assistant professor in the school of population and public health at the University of British Columbia, talks to Hanomansing Tonight about tracking rat populations.</p>]]></description>
+      <pubDate>Wed, 10 Dec 2025 01:53:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>The Bank of Canada holds interest rates at 2.25%</title>
-      <link>https://globalnews.ca/news/11571499/bank-of-canada-interest-rate-announcement-december-2025/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11571499/bank-of-canada-interest-rate-announcement-december-2025/</guid>
-      <description><![CDATA[The Bank of Canada held its benchmark lending rate unchanged at 2.25 per cent in the final monetary policy update for 2025.]]></description>
-      <pubDate>Wed, 10 Dec 2025 14:20:01 GMT</pubDate>
+      <title>Liberals back Bloc&apos;s proposal to remove religious exemption from hate speech laws</title>
+      <link>https://www.cbc.ca/news/politics/government-bill-religious-exemption-hate-speech-9.7009646?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/politics/government-bill-religious-exemption-hate-speech-9.7009646?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1d2082c6-4ce8-4121-aa10-b62050e4b6ea,1765327848451/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C348%2C6677%2C3755%29%3BResize%3D%28620%29' alt='A man in a suit gestures with his hand as he speaks at a podium.' width='620' height='349' title='Minister of Justice Sean Fraser speaks at a news conference in Ottawa, on Tuesday, Dec. 9, 2025. Fraser introduced Bill C-9 in September.'/><p>Liberal MPs on the House justice committee backed a Bloc Québécois proposal to remove a religious exemption from Canada’s hate speech laws — after the suggestion initially appeared to halt the government's anti-hate legislation.</p>]]></description>
+      <pubDate>Wed, 10 Dec 2025 01:05:52 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Trump’s security strategy won’t meddle in Canada’s affairs, Hoekstra says</title>
-      <link>https://globalnews.ca/news/11571501/trump-security-strategy-meddle-canada-hoekstra/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11571501/trump-security-strategy-meddle-canada-hoekstra/</guid>
-      <description><![CDATA[The national security strategy says the U.S. government will "reward and encourage" governments, political parties and movements "broadly aligned" with its principles and strategy.]]></description>
-      <pubDate>Wed, 10 Dec 2025 13:26:44 GMT</pubDate>
+      <title>Trump&apos;s threats to tariff Canadian fertilizer imports could hurt Sask. potash industry</title>
+      <link>https://www.cbc.ca/news/canada/saskatchewan/potash-mining-tariffs-fertilizer-9.7008646?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/saskatchewan/potash-mining-tariffs-fertilizer-9.7008646?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/e22b45fd-8020-46d4-bb6d-21422b06e5cf,1743699553385/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A pair of hands grabbing potash' width='620' height='349' title='Potash industry spared from U.S.-Canada trade war'/><p>Donald Trump’s threats to tariff Canadian fertilizer imports could damage Saskatchewan’s potash industry if demand for the mineral critical in making fertilizer drops off, according to a University of Saskatchewan professor.</p>]]></description>
+      <pubDate>Tue, 09 Dec 2025 22:52:09 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Trump wants to boost European nationalists. Should Canada be worried?</title>
-      <link>https://globalnews.ca/news/11570490/trump-boosting-european-nationalists-canada/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11570490/trump-boosting-european-nationalists-canada/</guid>
-      <description><![CDATA[The president’s National Security Strategy says American diplomacy should support 'patriotic' European political parties against continent’s perceived decline.]]></description>
-      <pubDate>Wed, 10 Dec 2025 10:00:49 GMT</pubDate>
+      <title>Cost of Carney&apos;s Egypt summit flight ballooned to $736K with no air force plane available</title>
+      <link>https://www.cbc.ca/news/politics/carney-trump-egypt-jet-9.7009396?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/politics/carney-trump-egypt-jet-9.7009396?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/79d504f0-4d67-434d-a924-73da4aba583e,1765323169125/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C18%2C4872%2C2740%29%3BResize%3D%28620%29' alt='Prime Minister Mark Carney with U.S. President Donald Trump' width='620' height='349' title='President Donald Trump greets Canada's Prime Minister Mark Carney during a summit to support ending the more than two-year Israel-Hamas war in Gaza after a breakthrough ceasefire deal, Monday, Oct. 13, 2025, in Sharm El Sheikh, Egypt. (AP Photo/Evan Vucci, Pool)'/><p>Prime Minister Mark Carney’s last-minute trip to a Gaza peace summit in Egypt in October cost Canadian taxpayers over $736,466 — more than three times higher than it would have been if the Royal Canadian Air Force had been able to supply a plane.</p>]]></description>
+      <pubDate>Tue, 09 Dec 2025 23:48:16 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Introduces Legislation to Recognize Sign Languages</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=71763</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71763</guid>
-      <pubDate>Wed, 03 Dec 2025 20:02:00 GMT</pubDate>
+      <title>Rockslide strikes vehicle along Highway 97 near Summerland, B.C.</title>
+      <link>https://globalnews.ca/news/11571039/rockslide-strikes-vehicle-highway-97-summerland/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11571039/rockslide-strikes-vehicle-highway-97-summerland/</guid>
+      <description><![CDATA[“It wasn’t a shock, it was more like, ‘Okay, when is the next big one going to happen?’” said Penticton resident, Kandace Sztepanacz.]]></description>
+      <pubDate>Wed, 10 Dec 2025 19:14:58 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>On the Top Chef Canada finale, Alex Kim came second—but his story came first</title>
-      <link>https://www.straight.com/food/on-top-chef-canada-finale-alex-kim-came-second-but-his-story-came-first</link>
-      <guid isPermaLink="true">https://www.straight.com/food/on-top-chef-canada-finale-alex-kim-came-second-but-his-story-came-first</guid>
-      <description><![CDATA[The Five Sails culinary director made a splash on the show.]]></description>
-      <pubDate>Wed, 03 Dec 2025 19:22:05 GMT</pubDate>
+      <title>Manitoba Government Matches Canadian Red Cross Donations to Support Wildfire Evacuees and Affected Businesses</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71759</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71759</guid>
+      <pubDate>Tue, 02 Dec 2025 17:03:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Sipekne’katik First Nation bans Houston, cabinet ministers in scathing rebuke</title>
-      <link>https://www.cbc.ca/news/canada/nova-scotia/sipeknekatik-first-nation-bans-houston-cabinet-ministers-9.7009262?cmp=rss</link>
-      <guid isPermaLink="true">https://www.cbc.ca/news/canada/nova-scotia/sipeknekatik-first-nation-bans-houston-cabinet-ministers-9.7009262?cmp=rss</guid>
-      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.7406954,1764273185559/full/max/0/default.jpg?im=Crop%2Crect%3D%2840%2C24%2C1880%2C1057%29%3BResize%3D%28620%29' alt='A man in a suit and tie with white hair sits in front of Nova Scotia flags.' width='620' height='349' title='Premier Tim Houston met with reporters in Halifax on Tuesday.'/><p>Sipekne’katik First Nation is once again chastising the Houston government and says that the premier and two of his cabinet ministers are not welcome on reserve lands. The premier's office says it takes the message as a threat.</p>]]></description>
-      <pubDate>Tue, 09 Dec 2025 22:22:08 GMT</pubDate>
+      <title>Four hospitals in B.C.&apos;s Interior launching virtual emergency care</title>
+      <link>https://globalnews.ca/news/11572258/bc-interior-four-hospitals-virtual-emergency-care/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11572258/bc-interior-four-hospitals-virtual-emergency-care/</guid>
+      <description><![CDATA[Four hospitals in B.C.'s Interior say they're setting up virtual emergency care where patients can be seen by a doctor virtually as part of a pilot project.]]></description>
+      <pubDate>Wed, 10 Dec 2025 20:00:52 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Invests more than $2 Million for Interlake Infrastructure</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=71761</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71761</guid>
-      <pubDate>Wed, 03 Dec 2025 18:15:00 GMT</pubDate>
+      <title>&apos;Slow down,&apos; say police after 2 officers injured while responding to 400 southwestern Ontario crashes</title>
+      <link>https://www.cbc.ca/news/canada/london/slow-down-say-police-after-2-officers-injured-while-responding-to-400-southwestern-ontario-crashes-9.7010427?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/london/slow-down-say-police-after-2-officers-injured-while-responding-to-400-southwestern-ontario-crashes-9.7010427?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/d59022d5-d11d-4aab-88c3-e114597a5e18,1765393991529/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='OPP Sgt. Ed Sanchuk addresses the public in a video recorded from the scene of a crash that injured two police officers, Dec. 11, 2025.' width='620' height='349' title='OPP Sgt. Ed Sanchuk addresses the public in a video recorded from the scene of a crash that injured two police officers on Wednesday.'/><p>Two police officers were among the multiple people injured as treacherous road conditions resulted in more than 400 reported crashes early Wednesday in southwestern Ontario.</p>]]></description>
+      <pubDate>Wed, 10 Dec 2025 18:24:23 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Adds Training Seats for Laboratory and X-Ray Technologists to Address Critical Rural Diagnostic Gaps</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=71760</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71760</guid>
-      <pubDate>Tue, 02 Dec 2025 22:06:00 GMT</pubDate>
+      <title>No charges laid in crash that killed 4 students and teacher from Walkerton, Ont.: police</title>
+      <link>https://www.cbc.ca/news/canada/london/police-conclude-investigation-into-crash-that-killed-4-students-teacher-from-walkerton-ont-no-charges-laid-9.7009598?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/london/police-conclude-investigation-into-crash-that-killed-4-students-teacher-from-walkerton-ont-no-charges-laid-9.7009598?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1.7545825,1748723885000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1919%2C1079%29%3BResize%3D%28620%29' alt='High school students Olivia Rourke, Rowan McLeod, Kaydance Ford and Danica Baker, and teacher Matt Eckert, left to right, died Friday after the multi-vehicle crash at the intersection of Cobble Hill and Thorndale roads, east of London, Ont. ' width='620' height='349' title='High school students Olivia Rourke, Rowan McLeod, Kaydance Ford and Danica Baker, and teacher Matt Eckert, left to right, died Friday after a multi-vehicle crash at the intersection of Cobble Hill and Thorndale roads, east of London, Ont. '/><p>Seven months after four students and their teacher were killed in a multi-vehicle crash while returning home to Walkerton, Ont. from a high school softball tournament, provincial police have ended their investigation and said no charges will be laid.</p>]]></description>
+      <pubDate>Wed, 10 Dec 2025 01:01:41 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>TTC and Metrolinx battle over Eglinton Crosstown LRT date at tense private meeting</title>
-      <link>https://globalnews.ca/news/11570650/metrolinx-pushes-2025-opening-eglinton-crosstown-lrt/</link>
-      <guid isPermaLink="true">https://globalnews.ca/news/11570650/metrolinx-pushes-2025-opening-eglinton-crosstown-lrt/</guid>
-      <description><![CDATA[Multiple sources, speaking on condition of anonymity, confirmed that there was a plan by Metrolinx and the Ministry of Transportation to open the line in the last week of December.]]></description>
-      <pubDate>Wed, 10 Dec 2025 11:00:37 GMT</pubDate>
-      <category>High Priority</category>
+      <title>Vancouver International Black Film Festival returns for its fifth edition</title>
+      <link>https://www.straight.com/movies/vancouver-international-black-film-festival-returns-for-its-fifth-edition</link>
+      <guid isPermaLink="true">https://www.straight.com/movies/vancouver-international-black-film-festival-returns-for-its-fifth-edition</guid>
+      <description><![CDATA[A hybrid lineup of films, panels, and workshops spotlights creators from Canada and around the world.]]></description>
+      <pubDate>Mon, 24 Nov 2025 20:23:10 GMT</pubDate>
+      <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Sign of the times: Facing an uncertain future, the Penthouse looks back</title>
-      <link>https://www.straight.com/city-culture/sign-of-times-facing-an-uncertain-future-penthouse-looks-back</link>
-      <guid isPermaLink="true">https://www.straight.com/city-culture/sign-of-times-facing-an-uncertain-future-penthouse-looks-back</guid>
-      <description><![CDATA[As development pressures mount, Danny Filippone reflects on the club's legacy, its community roots, and the memories that continue to shape Vancouver culture.]]></description>
-      <pubDate>Mon, 24 Nov 2025 22:33:47 GMT</pubDate>
+      <title>Federal Immigration Cuts Put Strain on BC’s Health-Care Sector, Say Advocates</title>
+      <link>https://thetyee.ca/News/2025/12/09/Federal-Immigration-Cuts-Strain-BC-Health-Care/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2025/12/09/Federal-Immigration-Cuts-Strain-BC-Health-Care/</guid>
+      <description><![CDATA[‘Are we able to plan our life in BC, or should we leave?’ asks one student caught in limbo.]]></description>
+      <pubDate>Tue, 09 Dec 2025 20:59:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Kirsten Hillman, Canada’s longtime ambassador to the U.S., is stepping down</title>
+      <link>https://www.cbc.ca/news/politics/kirsten-hillman-stepping-down-9.7009333?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/politics/kirsten-hillman-stepping-down-9.7009333?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/0d3347d6-ed28-41b9-9693-bd250143565a,1765330068909/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A woman at a table. ' width='620' height='349' title='Ambassador of Canada to the U.S. Kirsten Hillman listens during a first ministers meeting in Ottawa, on Wednesday, Jan. 15, 2025.'/><p></p>]]></description>
+      <pubDate>Tue, 09 Dec 2025 22:13:20 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Air Transat, pilots&apos; union have reached tentative deal to avert strike, airline&apos;s parent company says</title>
+      <link>https://www.cbc.ca/news/business/air-transat-pilots-tentative-deal-9.7009203?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/business/air-transat-pilots-tentative-deal-9.7009203?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/f22f7701-91da-4aae-afa4-b20f70f5d3d9,1765330040776/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A plane with the words 'Air transat' sits on a tarmac.' width='620' height='349' title='Air Transat and the union representing around 750 of its pilots have steered clear of a strike and reached a tentative deal, the leisure airline’s parent company said Tuesday evening. Neither the company nor the union released details of the tentative agreement.'/><p></p>]]></description>
+      <pubDate>Wed, 03 Dec 2025 16:43:50 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>N.S. premier firm on cannabis crackdown as tensions grow with Mi&apos;kmaq communities</title>
+      <link>https://globalnews.ca/news/11571720/tim-houston-first-nations-cannabis-directive/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11571720/tim-houston-first-nations-cannabis-directive/</guid>
+      <description><![CDATA[The premier told reporters that there's 'multiple sides to the story' and that he's heard from 'lots of people' who are unhappy with cannabis dispensaries in their communities.]]></description>
+      <pubDate>Wed, 10 Dec 2025 20:35:48 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Ryan Wedding&apos;s ‘cocaine lawyer&apos; pitches plan if released at bail hearing</title>
+      <link>https://globalnews.ca/news/11571871/deepak-paradkar-bail-hearing/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11571871/deepak-paradkar-bail-hearing/</guid>
+      <description><![CDATA[An Ontario attorney with alleged ties to a Ryan Wedding says if he’s released on bail, he will follow the 'most stringent' plan he’s ever proposed in his career.]]></description>
+      <pubDate>Wed, 10 Dec 2025 19:32:35 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Quebec cracks down on organized crime, high-risk sex offenders and protests in new bill</title>
+      <link>https://www.cbc.ca/news/canada/montreal/caq-public-security-new-bill-9.7010259?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/montreal/caq-public-security-new-bill-9.7010259?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/23d5399d-3684-415c-a0c1-bbfe070ea898,1765383030970/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C261%2C4750%2C2671%29%3BResize%3D%28620%29' alt='Quebec Public Security Minister Ian Lafrenière, seen here during question period at the legislature in Quebec City, has tabled a bill that aims to crack down on members of organized crime who display logos, or patches, associated with their groups. T' width='620' height='349' title='Quebec Public Security Minister Ian Lafrenière, seen here during question period at the legislature in Quebec City, has tabled a bill that aims to crack down on members of organized crime who display logos, or patches, associated with their groups. The bill also aims to create a public registry for high-risk sex offenders.'/><p>Quebec's Public Security Minister Ian Lafrenière tabled a bill Wednesday aiming to create a public registry for high-risk sex offenders, prevent protests from taking place too close to the homes of elected officials and crack down on members of organized crime groups who show off their groups' logos or patches.</p>]]></description>
+      <pubDate>Wed, 10 Dec 2025 17:49:41 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Announces Removal Of 23 Grocery Property Controls</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71917</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71917</guid>
+      <pubDate>Wed, 10 Dec 2025 19:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Begins Search at Brady Landfill</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=71758</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=71758</guid>
+      <pubDate>Mon, 01 Dec 2025 22:18:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Ford government urged by Ontario Liberals to sell U.S. alcohol for charity</title>
+      <link>https://globalnews.ca/news/11572269/ontario-liberals-urge-us-booze-sell-off-charity/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11572269/ontario-liberals-urge-us-booze-sell-off-charity/</guid>
+      <description><![CDATA[The province's stockpile of U.S. liquor has been sitting in storage and the Ontario Liberals are calling on the Ford government to have it sold and donate the proceeds to charity.]]></description>
+      <pubDate>Wed, 10 Dec 2025 20:10:40 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Montreal pediatric clinic to close, calling Bill 2 ‘the nail in the coffin&apos;</title>
+      <link>https://globalnews.ca/news/11572359/montreal-pediatric-clinic-to-close-bill-2/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11572359/montreal-pediatric-clinic-to-close-bill-2/</guid>
+      <description><![CDATA[Tiny Tots in Decarie Square, operated by ELNA Medical Group, will begin phasing out operations in the new year, and it is working on relocating options to ensure care.]]></description>
+      <pubDate>Wed, 10 Dec 2025 21:06:11 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Ontario Liberals want province to sell off U.S. liquor and give proceeds to charity</title>
+      <link>https://www.cbc.ca/news/canada/toronto/lcbo-american-liquor-9.7010680?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/toronto/lcbo-american-liquor-9.7010680?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/1bba7a83-465a-4cbe-8697-15e7dbff022a,1765322044966/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C388%2C1180%2C663%29%3BResize%3D%28620%29' alt='Bottles of whiskey on a store shelf.' width='620' height='349' title='An undated file pictures of bottles of whiskey in a store shelf in British Columbia.'/><p></p>]]></description>
+      <pubDate>Wed, 10 Dec 2025 15:38:45 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Anti-corruption police launch investigation into allegations of Quebec Liberals&apos; wrongdoings</title>
+      <link>https://www.cbc.ca/news/canada/montreal/anti-corruption-police-launch-investigation-into-quebec-liberals-wrongdoing-allegations-9.7010367?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/montreal/anti-corruption-police-launch-investigation-into-quebec-liberals-wrongdoing-allegations-9.7010367?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/e6727e43-c18d-4c23-b944-1bb3e05e8854,1765387665872/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C40%2C4000%2C2250%29%3BResize%3D%28620%29' alt='Pablo Rodriguez in front of a podium with microphones.' width='620' height='349' title='Pablo Rodriguez at the National Assembly on Dec. 2. '/><p>Quebec's anti-corruption police have launched a criminal investigation into the Quebec Liberals' wrongdoing allegations.</p>]]></description>
+      <pubDate>Wed, 10 Dec 2025 17:29:51 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Canadian swim star Penny Oleksiak denies drug use, says she&apos;ll keep training despite 2-year suspension</title>
+      <link>https://www.cbc.ca/sports/olympics/summer/aquatics/penny-oleksiak-cbc-interview-9.7006757?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/sports/olympics/summer/aquatics/penny-oleksiak-cbc-interview-9.7006757?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/66b8b597-79c1-40b7-af73-13ffef783529,1765242053923/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A woman sits for an interview' width='620' height='349' title='. In an exclusive interview, Oleksiak explains her whereabouts failures and maintains she’s a clean athlete who has never used performance-enhancing drugs.'/><p></p>]]></description>
+      <pubDate>Tue, 25 Nov 2025 18:34:36 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Inuit cultural items unveiled at Museum of History following journey from Vatican</title>
+      <link>https://www.cbc.ca/news/canada/inuit-cultural-items-vatican-canadian-museum-history-9.7009092?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/inuit-cultural-items-vatican-canadian-museum-history-9.7009092?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/3390e361-b9be-4e3d-b42a-db7c0f47b5c0,1765327542938/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Inuit cultural items unveiled at the Canadian Museum of History.' width='620' height='349' title='Inuit cultural items unveiled at the Canadian Museum of History.'/><p></p>]]></description>
+      <pubDate>Sat, 06 Dec 2025 15:37:25 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>The Culinary Commons helps Vancouver chefs gather</title>
+      <link>https://www.straight.com/food/culinary-commons-helps-vancouver-chefs-gather</link>
+      <guid isPermaLink="true">https://www.straight.com/food/culinary-commons-helps-vancouver-chefs-gather</guid>
+      <description><![CDATA[1250 East Georgia Street is serving Vancouver's culinary community. ]]]></description>
+      <pubDate>Mon, 24 Nov 2025 20:37:52 GMT</pubDate>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>‘Unacceptable&apos;: N.B. auditor general raises concerns about MMIWG response</title>
+      <link>https://globalnews.ca/news/11572272/unacceptable-n-b-auditor-general-concerns-mmiwg-response/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11572272/unacceptable-n-b-auditor-general-concerns-mmiwg-response/</guid>
+      <description><![CDATA[Two years after releasing a plan in response to the National Inquiry into Missing and Murdered Indigenous Women and Girls, New Brunswick's auditor general found little progress.]]></description>
+      <pubDate>Wed, 10 Dec 2025 21:05:38 GMT</pubDate>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Threats force in-person GO station meeting to move online, Metrolinx says</title>
+      <link>https://globalnews.ca/news/11571646/metrolinx-closure-threats/</link>
+      <guid isPermaLink="true">https://globalnews.ca/news/11571646/metrolinx-closure-threats/</guid>
+      <description><![CDATA[Metrolinx has moved upcoming Simcoe Street closure info sessions online after receiving an “anonymous threat,” with authorities now investigating.]]></description>
+      <pubDate>Wed, 10 Dec 2025 20:16:04 GMT</pubDate>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Pro-Palestinian activist Yves Engler barred from running for NDP leadership</title>
+      <link>https://www.cbc.ca/news/politics/yves-engler-barred-ndp-leadership-9.7010236?cmp=rss</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/politics/yves-engler-barred-ndp-leadership-9.7010236?cmp=rss</guid>
+      <description><![CDATA[<img src='https://i.cbc.ca/ais/9cc5b972-4839-4d18-ab98-7a0297de4ee0,1765383040837/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C71%2C1400%2C787%29%3BResize%3D%28620%29' alt='A man speaking into a microphone.' width='620' height='349' title='Yves Engler, pictured in an image from his campaign website, says he has been barred from running for the leadership of the NDP.'/><p>Self-described "agitator" Yves Engler says he has been denied entry into the NDP leadership race.</p>]]></description>
+      <pubDate>Wed, 10 Dec 2025 16:16:32 GMT</pubDate>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
