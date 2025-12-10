@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-10T06:03:01.126Z",
+  "lastUpdated": "2025-12-10T12:03:14.194Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 4910,
+      "totalPosts": 4935,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-10T06:02:50.195Z"
+      "lastSeen": "2025-12-10T12:03:05.422Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 4925,
+      "totalPosts": 4950,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-10T06:02:52.541Z"
+      "lastSeen": "2025-12-10T12:03:07.228Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 4894,
+      "totalPosts": 4919,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-10T06:02:54.962Z"
+      "lastSeen": "2025-12-10T12:03:09.322Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 4918,
+      "totalPosts": 4943,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-10T06:02:57.759Z"
+      "lastSeen": "2025-12-10T12:03:11.188Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 4925,
+      "totalPosts": 4950,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-10T06:03:00.123Z"
+      "lastSeen": "2025-12-10T12:03:13.190Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Neurodivergent kids aren’t “behind.”\nThe system was built for one kind of brain and calls the rest of us failures.\nImagine grading a fish, elephant, and bird on the same task and calling it “fair.” 🙃🔥\n\n#Neurodiversity #ADHD #Dyslexia #DisabilityJustice #EducationReform #StopAbleism",
-      "author": "adulitingishard.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Bluesky Users who depend on or benefit from ALT text: What do you want and don't want to hear in artwork descriptions? Any pet peeves? Let me know!\n\n#disabilitysky #alttext #visuallyimpaired #accessibility",
-      "author": "abrildelucia.bsky.social",
-      "engagement": 54,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Fixing the housing crisis demands housing that's accessible for all types of people.\n\nNot just 1 able-bodied person, but big families, folks with different physical abilities.\n\nVaried housing with supports in place for the people living there.\n\n#ndp #cdnpoli #canpoli #housingcrisis #accessibility",
-      "author": "votetanille.bsky.social",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "A severe #accessibility issue I've seen very few people talking about is the widespread adoption (in my country at least) of touch-only card payment terminals with no physical number buttons.\n\nNot only do these devices offer no tactile affordances, but the on-screen numbers move around to limit […]",
       "author": "jscholes.dragonscave.space.ap.brid.gy",
@@ -338,6 +320,24 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nun.\n\n#DisabilityRights\n#schwerbehinderung",
+      "author": "bloom-of-many.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,14 +347,14 @@
     },
     {
       "keyword": "accessibility",
+      "count": 33
+    },
+    {
+      "keyword": "a11y",
       "count": 31
     },
     {
       "keyword": "cripthevote",
-      "count": 28
-    },
-    {
-      "keyword": "a11y",
       "count": 28
     },
     {
@@ -378,15 +378,19 @@
       "count": 11
     },
     {
+      "keyword": "accessibility a11y",
+      "count": 8
+    },
+    {
+      "keyword": "disabled people",
+      "count": 7
+    },
+    {
       "keyword": "disabilityjustice nico",
       "count": 7
     },
     {
-      "keyword": "disability",
-      "count": 6
-    },
-    {
-      "keyword": "accessibility a11y",
+      "keyword": "a11y accessibility",
       "count": 6
     },
     {
@@ -415,10 +419,6 @@
     },
     {
       "keyword": "wearetheflood",
-      "count": 5
-    },
-    {
-      "keyword": "50501movement",
       "count": 5
     }
   ]
