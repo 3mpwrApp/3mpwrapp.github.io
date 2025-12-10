@@ -99,12 +99,6 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
       }
     }
 
-    // For MOBILE: Use Expo AuthSession with the auth proxy
-    const discovery = {
-      authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
-      tokenEndpoint: 'https://oauth2.googleapis.com/token',
-    };
-
     // For Google OAuth on mobile, we use the Expo auth proxy
     // because Google doesn't accept custom schemes like empowrapp://
     //
@@ -112,90 +106,80 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
     // For this app: https://auth.expo.io/@3mpwrapp/empowrapp
     const redirectUri = 'https://auth.expo.io/@3mpwrapp/empowrapp';
 
+    // Generate a random nonce for security (required for id_token response type)
+    const generateNonce = () => {
+      const array = new Uint8Array(32);
+      for (let i = 0; i < array.length; i++) {
+        array[i] = Math.floor(Math.random() * 256);
+      }
+      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    };
+    const nonce = generateNonce();
+
     logger.log('[OAuth] ====== GOOGLE SIGN-IN DEBUG (MOBILE) ======');
     logger.log('[OAuth] Platform:', Platform.OS);
     logger.log('[OAuth] Client ID:', clientId);
     logger.log('[OAuth] Redirect URI:', redirectUri);
     logger.log('[OAuth] App Ownership:', Constants.appOwnership);
+    logger.log('[OAuth] Using implicit flow with id_token');
     logger.log('[OAuth] ==============================================');
 
-    // Use authorization code flow with PKCE instead of implicit flow
-    // Google now requires a nonce for id_token response type, so we use
-    // the code flow which is more secure anyway
-    const request = new AuthSession.AuthRequest({
-      clientId,
-      responseType: AuthSession.ResponseType.Code,
-      scopes: ['openid', 'profile', 'email'],
-      redirectUri,
-      usePKCE: true, // Use PKCE for security
-    });
-    
-    const result = await request.promptAsync(discovery as any);
+    // Use implicit flow with id_token response type
+    // This doesn't require a client secret and works better for mobile apps
+    // Google returns the id_token directly in the redirect URL fragment
+    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?` +
+      `client_id=${encodeURIComponent(clientId)}` +
+      `&redirect_uri=${encodeURIComponent(redirectUri)}` +
+      `&response_type=id_token` +
+      `&scope=${encodeURIComponent('openid profile email')}` +
+      `&nonce=${nonce}`;
+
+    const result = await WebBrowser.openAuthSessionAsync(authUrl, redirectUri);
     
     logger.log('[OAuth] ====== GOOGLE RESPONSE ======');
     logger.log('[OAuth] Result type:', result.type);
-    if (result.type === 'error') {
-      logger.error('[OAuth] Error code:', result.error?.code);
-      logger.error('[OAuth] Error message:', result.error?.message);
-      logger.error('[OAuth] Full error:', JSON.stringify(result.error, null, 2));
-    } else if (result.type === 'success') {
-      logger.log('[OAuth] Success! Got params:', Object.keys(result.params || {}));
+    if (result.type === 'success') {
+      logger.log('[OAuth] Success! Got URL:', result.url?.substring(0, 100) + '...');
     }
     logger.log('[OAuth] ==================================');
     
     // Check if user completed the flow
-    if (result.type !== 'success') {
-      if (result.type === 'error') {
-        logger.error('[OAuth] Google Sign-In error:', result.error);
-        
-        // Show detailed error to help debug
-        const errorDetails = result.error?.message || result.error?.code || 'Unknown error';
-        Alert.alert(
-          'Sign-In Error', 
-          `${errorDetails}\n\nRedirect URI: ${redirectUri}\n\nMake sure this exact URI is added to Google Cloud Console.`
-        );
+    if (result.type !== 'success' || !result.url) {
+      if (result.type === 'cancel') {
+        logger.log('[OAuth] User cancelled sign-in');
+      } else {
+        logger.error('[OAuth] Google Sign-In failed:', result.type);
       }
       return false; // User cancelled or error occurred
     }
     
-    // With authorization code flow, we need to exchange the code for tokens
-    const code = result.params?.code;
-    
-    if (!code) {
-      logger.error('[OAuth] No authorization code in response. Params:', Object.keys(result.params || {}));
-      Alert.alert('Sign-In incomplete', 'Did not receive authorization code from Google.');
-      return false;
-    }
-    
-    logger.log('[OAuth] Got authorization code, exchanging for tokens...');
-    
-    // Exchange the authorization code for tokens
-    let idToken: string | undefined;
-    try {
-      const tokenResponse = await AuthSession.exchangeCodeAsync(
-        {
-          clientId,
-          code,
-          redirectUri,
-          extraParams: {
-            code_verifier: request.codeVerifier || '',
-          },
-        },
-        discovery
-      );
-      idToken = tokenResponse.idToken;
-      logger.log('[OAuth] Token exchange successful, got id_token:', !!idToken);
-    } catch (tokenError: any) {
-      logger.error('[OAuth] Token exchange failed:', tokenError);
-      Alert.alert('Sign-In Error', `Failed to complete authentication: ${tokenError.message || 'Unknown error'}`);
-      return false;
-    }
-    
-    if (!idToken) {
-      logger.error('[OAuth] No id_token after token exchange');
+    // Extract id_token from the URL fragment
+    // The URL looks like: https://auth.expo.io/@3mpwrapp/empowrapp#id_token=xxx&...
+    const urlFragment = result.url.split('#')[1];
+    if (!urlFragment) {
+      logger.error('[OAuth] No fragment in redirect URL');
       Alert.alert('Sign-In incomplete', 'Did not receive authentication token from Google.');
       return false;
     }
+    
+    const params = new URLSearchParams(urlFragment);
+    const idToken = params.get('id_token');
+    
+    if (!idToken) {
+      // Check for error in response
+      const error = params.get('error');
+      const errorDescription = params.get('error_description');
+      if (error) {
+        logger.error('[OAuth] Google returned error:', error, errorDescription);
+        Alert.alert('Sign-In Error', errorDescription || error);
+      } else {
+        logger.error('[OAuth] No id_token in response. Params:', urlFragment.substring(0, 100));
+        Alert.alert('Sign-In incomplete', 'Did not receive authentication token from Google.');
+      }
+      return false;
+    }
+    
+    logger.log('[OAuth] Got id_token from implicit flow');
     
     const { GoogleAuthProvider, signInWithCredential } = await import('firebase/auth');
     const credential: AuthCredential = GoogleAuthProvider.credential(idToken);
