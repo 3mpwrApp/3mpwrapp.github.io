@@ -1,0 +1,24 @@
+diff --git a/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/stack/views/ChildDrawingOrderStrategyImpl.kt b/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/stack/views/ChildDrawingOrderStrategyImpl.kt
+index 9e3511c..58307f0 100644
+--- a/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/stack/views/ChildDrawingOrderStrategyImpl.kt
++++ b/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/stack/views/ChildDrawingOrderStrategyImpl.kt
+@@ -25,7 +25,18 @@ internal class ReverseFromIndex(
+             return
+         }
+ 
+-        var currentLeftIndex = startIndex
++        // Guard against IndexOutOfBoundsException when drawingOperations and stack are misaligned
++        // See: https://github.com/software-mansion/react-native-screens/issues/3096
++        if (drawingOperations.isEmpty()) {
++            return
++        }
++
++        // Ensure currentLeftIndex is within bounds
++        var currentLeftIndex = if (startIndex >= drawingOperations.size) {
++            drawingOperations.lastIndex
++        } else {
++            startIndex.coerceAtLeast(0)
++        }
+         var currentRightIndex = drawingOperations.lastIndex
+ 
+         while (currentLeftIndex < currentRightIndex) {

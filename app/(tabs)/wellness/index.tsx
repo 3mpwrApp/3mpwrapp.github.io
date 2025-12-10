@@ -60,7 +60,7 @@ export default function WellnessHub() {
   const palette = useAppPalette();
   const router = useRouter();
   const textStyles = React.useMemo(() => createTextStyles(palette), [palette]);
-  const { isFeatureVisible: _isFeatureVisible } = useComplexityMode();
+  const { isFeatureVisible } = useComplexityMode();
   
   const [query, setQuery] = React.useState('');
   const [unifiedHealthTrackerEnabled, setUnifiedHealthTrackerEnabled] = React.useState(false);
@@ -167,6 +167,7 @@ export default function WellnessHub() {
         {t('wellness.sections.featured', '⭐ Featured Hubs')}
       </Text>
       <GapView gap={12}>
+        {/* Energy Hub - available in Simple Mode */}
         {matches('/wellness/energy-hub') && (
           <Pressable
             hitSlop={HIT_SLOP_8}
@@ -204,21 +205,24 @@ export default function WellnessHub() {
               </Text>
             </Pressable>
         )}
-        {unifiedHealthTrackerEnabled && matches('/wellness/health-tracker') && (
+        {/* Health Tracker - Standard mode and above */}
+        {isFeatureVisible('standard') && unifiedHealthTrackerEnabled && matches('/wellness/health-tracker') && (
           <Card
             href="/wellness/health-tracker"
             title="🏥 Unified Health Tracker"
             desc="Track symptoms, pain, chronic conditions, rehab, and pacing in one place. Consolidates 5 tracking tools."
           />
         )}
-        {matches('/wellness/mental-wellness-toolkit') && (
+        {/* Mental Wellness Toolkit - Standard mode and above */}
+        {isFeatureVisible('standard') && matches('/wellness/mental-wellness-toolkit') && (
           <Card
             href="/wellness/mental-wellness-toolkit"
             title="🧠 Mental Wellness Toolkit"
             desc="All CBT/DBT tools in one place: thought reframing, emotion skills, grounding, and crisis tools. Consolidates 8 cognitive tools."
           />
         )}
-        {matches('/wellness/movement-rehab-hub') && (
+        {/* Movement & Rehab Hub - Standard mode and above */}
+        {isFeatureVisible('standard') && matches('/wellness/movement-rehab-hub') && (
           <Card
             href="/wellness/movement-rehab-hub"
             title="💪 Movement & Rehab Hub"
@@ -227,119 +231,127 @@ export default function WellnessHub() {
         )}
       </GapView>
 
-      {/* Additional Tools */}
-      <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-        {t('wellness.sections.additional', 'Additional Tools')}
-      </Text>
-      <GapView gap={12}>
-        {matches('/wellness/work-balance-ai') && (
-          <Card
-            href="/wellness/work-balance-ai"
-            title={t('wellness.workBalance.title', 'Work-Balance AI')}
-            desc={t('wellness.workBalance.desc', 'Balance work demands with health.')}
-          />
-        )}
-        {matches('/wellness/functional-capacity') && (
-          <Card
-            href="/wellness/functional-capacity"
-            title="Functional Capacity Assessment"
-            desc="WHO ICF-based disability documentation and tracking."
-          />
-        )}
-      </GapView>
+      {/* Additional Tools - Standard mode and above */}
+      {isFeatureVisible('standard') && (
+        <>
+          <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
+            {t('wellness.sections.additional', 'Additional Tools')}
+          </Text>
+          <GapView gap={12}>
+            {matches('/wellness/work-balance-ai') && (
+              <Card
+                href="/wellness/work-balance-ai"
+                title={t('wellness.workBalance.title', 'Work-Balance AI')}
+                desc={t('wellness.workBalance.desc', 'Balance work demands with health.')}
+              />
+            )}
+            {matches('/wellness/functional-capacity') && (
+              <Card
+                href="/wellness/functional-capacity"
+                title="Functional Capacity Assessment"
+                desc="WHO ICF-based disability documentation and tracking."
+              />
+            )}
+          </GapView>
+        </>
+      )}
 
 
 
-      {/* Miscellaneous */}
-      <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-        {t('wellness.sections.misc', 'Miscellaneous')}
-      </Text>
-      <GapView gap={12}>
-        {matches('/wellness/adaptive-meditation') && (
-          <Card
-            href="/wellness/adaptive-meditation"
-            title={label('/wellness/adaptive-meditation', t('wellness.adaptiveMeditation.title', 'Adaptive Meditation'))}
-            desc={t('wellness.adaptiveMeditation.desc', 'Meditations tuned to your state.')}
-          />
-        )}
-        {matches('/wellness/ai-companion') && (
-          <Card
-            href="/wellness/ai-companion"
-            title={label('/wellness/ai-companion', t('wellness.aiCompanion.title', 'AI Companion'))}
-            desc={t('wellness.aiCompanion.desc', 'A gentle assistant for wellness.')}
-          />
-        )}
-        {matches('/wellness/ambience') && (
-          <Card
-            href="/wellness/ambience"
-            title={label('/wellness/ambience', t('wellness.ambience.title', 'Ambience Sync AI'))}
-            desc={t('wellness.ambience.desc', 'Match background, color, soundscape to your mood.')}
-          />
-        )}
-        {matches('/wellness/grief-support') && (
-          <Card
-            href="/wellness/grief-support"
-            title={label('/wellness/grief-support', t('wellness.griefSupport.title', 'Grief Support'))}
-            desc={t('wellness.griefSupport.desc', 'Compassionate prompts and resources.')}
-          />
-        )}
-        {matches('/wellness/resilience') && (
-          <Card
-            href="/wellness/resilience"
-            title={label('/wellness/resilience', t('wellness.resilience.title', 'Resilience Points'))}
-            desc={t('wellness.resilience.desc', 'Gamified micro-wins for therapy and life steps.')}
-          />
-        )}
-        {matches('/wellness/reminders') && (
-          <Card
-            href="/wellness/reminders"
-            title={t('wellness.reminders.title', 'Wellness Reminders')}
-            desc={t('wellness.reminders.desc', 'Customize notifications for your wellness routine.')}
-          />
-        )}
-        {matches('/wellness/reflections-calendar') && (
-          <Card
-            href="/wellness/reflections-calendar"
-            title={label('/wellness/reflections-calendar', t('wellness.reflections.title', 'Reflections Calendar'))}
-            desc={t('wellness.reflections.desc', 'Daily notes, gratitude, and wins.')}
-          />
-        )}
-        {matches('/wellness/dreams') && (
-          <Card
-            href="/wellness/dreams"
-            title={label('/wellness/dreams', t('wellness.dreams.title', 'Dream Tracker & Interpreter'))}
-            desc={t('wellness.dreams.desc', 'Log dreams and get symbolic interpretations.')}
-          />
-        )}
-        {matches('/wellness/daily-planner') && (
-          <Card
-            href="/wellness/daily-planner"
-            title={label('/wellness/daily-planner', t('wellness.dailyPlanner.title', 'Daily Planner'))}
-            desc={t('wellness.dailyPlanner.desc', 'Plan tasks with your energy in mind.')}
-          />
-        )}
-        {matches('/wellness/self-care-library') && (
-          <Card
-            href="/wellness/self-care-library"
-            title={label('/wellness/self-care-library', t('wellness.selfCare.title', 'Self-Care Library'))}
-            desc={t('wellness.selfCare.desc', 'Curated self-care practices.')}
-          />
-        )}
-        {matches('/wellness/trigger-detector') && (
-          <Card
-            href="/wellness/trigger-detector"
-            title={t('wellness.triggers.title', 'Trigger Detector')}
-            desc={t('wellness.triggers.desc', 'Suggest correlations from logs.')}
-          />
-        )}
-        {matches('/wellness/harm-reduction') && (
-          <Card
-            href="/wellness/harm-reduction"
-            title={t('wellness.harm.title', 'Harm Reduction Guide')}
-            desc={t('wellness.harm.desc', 'Practical steps to increase safety.')}
-          />
-        )}
-      </GapView>
+      {/* Miscellaneous - Standard mode and above */}
+      {isFeatureVisible('standard') && (
+        <>
+          <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
+            {t('wellness.sections.misc', 'Miscellaneous')}
+          </Text>
+          <GapView gap={12}>
+            {matches('/wellness/adaptive-meditation') && (
+              <Card
+                href="/wellness/adaptive-meditation"
+                title={label('/wellness/adaptive-meditation', t('wellness.adaptiveMeditation.title', 'Adaptive Meditation'))}
+                desc={t('wellness.adaptiveMeditation.desc', 'Meditations tuned to your state.')}
+              />
+            )}
+            {matches('/wellness/ai-companion') && (
+              <Card
+                href="/wellness/ai-companion"
+                title={label('/wellness/ai-companion', t('wellness.aiCompanion.title', 'AI Companion'))}
+                desc={t('wellness.aiCompanion.desc', 'A gentle assistant for wellness.')}
+              />
+            )}
+            {matches('/wellness/ambience') && (
+              <Card
+                href="/wellness/ambience"
+                title={label('/wellness/ambience', t('wellness.ambience.title', 'Ambience Sync AI'))}
+                desc={t('wellness.ambience.desc', 'Match background, color, soundscape to your mood.')}
+              />
+            )}
+            {matches('/wellness/grief-support') && (
+              <Card
+                href="/wellness/grief-support"
+                title={label('/wellness/grief-support', t('wellness.griefSupport.title', 'Grief Support'))}
+                desc={t('wellness.griefSupport.desc', 'Compassionate prompts and resources.')}
+              />
+            )}
+            {matches('/wellness/resilience') && (
+              <Card
+                href="/wellness/resilience"
+                title={label('/wellness/resilience', t('wellness.resilience.title', 'Resilience Points'))}
+                desc={t('wellness.resilience.desc', 'Gamified micro-wins for therapy and life steps.')}
+              />
+            )}
+            {matches('/wellness/reminders') && (
+              <Card
+                href="/wellness/reminders"
+                title={t('wellness.reminders.title', 'Wellness Reminders')}
+                desc={t('wellness.reminders.desc', 'Customize notifications for your wellness routine.')}
+              />
+            )}
+            {matches('/wellness/reflections-calendar') && (
+              <Card
+                href="/wellness/reflections-calendar"
+                title={label('/wellness/reflections-calendar', t('wellness.reflections.title', 'Reflections Calendar'))}
+                desc={t('wellness.reflections.desc', 'Daily notes, gratitude, and wins.')}
+              />
+            )}
+            {matches('/wellness/dreams') && (
+              <Card
+                href="/wellness/dreams"
+                title={label('/wellness/dreams', t('wellness.dreams.title', 'Dream Tracker & Interpreter'))}
+                desc={t('wellness.dreams.desc', 'Log dreams and get symbolic interpretations.')}
+              />
+            )}
+            {matches('/wellness/daily-planner') && (
+              <Card
+                href="/wellness/daily-planner"
+                title={label('/wellness/daily-planner', t('wellness.dailyPlanner.title', 'Daily Planner'))}
+                desc={t('wellness.dailyPlanner.desc', 'Plan tasks with your energy in mind.')}
+              />
+            )}
+            {matches('/wellness/self-care-library') && (
+              <Card
+                href="/wellness/self-care-library"
+                title={label('/wellness/self-care-library', t('wellness.selfCare.title', 'Self-Care Library'))}
+                desc={t('wellness.selfCare.desc', 'Curated self-care practices.')}
+              />
+            )}
+            {matches('/wellness/trigger-detector') && (
+              <Card
+                href="/wellness/trigger-detector"
+                title={t('wellness.triggers.title', 'Trigger Detector')}
+                desc={t('wellness.triggers.desc', 'Suggest correlations from logs.')}
+              />
+            )}
+            {matches('/wellness/harm-reduction') && (
+              <Card
+                href="/wellness/harm-reduction"
+                title={t('wellness.harm.title', 'Harm Reduction Guide')}
+                desc={t('wellness.harm.desc', 'Practical steps to increase safety.')}
+              />
+            )}
+          </GapView>
+        </>
+      )}
 
 
     </ResponsiveScreenWrapper>
