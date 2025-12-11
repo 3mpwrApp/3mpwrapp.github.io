@@ -99,87 +99,106 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
       }
     }
 
-    // For Google OAuth on mobile, we use the Expo auth proxy
-    // because Google doesn't accept custom schemes like empowrapp://
+    // For Google OAuth on mobile, we need to use the Expo auth proxy
+    // The proxy handles the OAuth flow and redirects back to the app
     //
-    // The proxy URL format is: https://auth.expo.io/@{owner}/{slug}
-    // For this app: https://auth.expo.io/@3mpwrapp/empowrapp
-    const redirectUri = 'https://auth.expo.io/@3mpwrapp/empowrapp';
-
-    // Generate a random nonce for security (required for id_token response type)
-    const generateNonce = () => {
-      const array = new Uint8Array(32);
-      for (let i = 0; i < array.length; i++) {
-        array[i] = Math.floor(Math.random() * 256);
-      }
-      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-    };
-    const nonce = generateNonce();
+    // IMPORTANT: The redirect URI must be whitelisted in Google Cloud Console
+    // Add: https://auth.expo.io/@3mpwrapp/empowrapp
+    
+    // Always use the Expo auth proxy for consistency
+    const redirectUri = AuthSession.makeRedirectUri({
+      // Use auth.expo.io proxy for Google OAuth
+      useProxy: true,
+    });
 
     logger.log('[OAuth] ====== GOOGLE SIGN-IN DEBUG (MOBILE) ======');
     logger.log('[OAuth] Platform:', Platform.OS);
     logger.log('[OAuth] Client ID:', clientId);
     logger.log('[OAuth] Redirect URI:', redirectUri);
     logger.log('[OAuth] App Ownership:', Constants.appOwnership);
-    logger.log('[OAuth] Using implicit flow with id_token');
     logger.log('[OAuth] ==============================================');
 
-    // Use implicit flow with id_token response type
-    // This doesn't require a client secret and works better for mobile apps
-    // Google returns the id_token directly in the redirect URL fragment
-    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?` +
-      `client_id=${encodeURIComponent(clientId)}` +
-      `&redirect_uri=${encodeURIComponent(redirectUri)}` +
-      `&response_type=id_token` +
-      `&scope=${encodeURIComponent('openid profile email')}` +
-      `&nonce=${nonce}`;
+    // Use Google's discovery document for proper OAuth configuration
+    const discovery = AuthSession.useAutoDiscovery
+      ? await fetch('https://accounts.google.com/.well-known/openid-configuration').then(r => r.json())
+      : {
+          authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
+          tokenEndpoint: 'https://oauth2.googleapis.com/token',
+          revocationEndpoint: 'https://oauth2.googleapis.com/revoke',
+        };
 
-    const result = await WebBrowser.openAuthSessionAsync(authUrl, redirectUri);
+    // Use Token response type with useProxy (gets id_token directly)
+    const request = new AuthSession.AuthRequest({
+      clientId,
+      scopes: ['openid', 'profile', 'email'],
+      redirectUri,
+      responseType: AuthSession.ResponseType.Token,
+    });
+
+    // Prompt user for authentication
+    const result = await request.promptAsync(discovery, { useProxy: true });
     
     logger.log('[OAuth] ====== GOOGLE RESPONSE ======');
     logger.log('[OAuth] Result type:', result.type);
     if (result.type === 'success') {
-      logger.log('[OAuth] Success! Got URL:', result.url?.substring(0, 100) + '...');
+      logger.log('[OAuth] Success! Got params:', Object.keys(result.params || {}));
+      logger.log('[OAuth] Has id_token:', !!result.params?.id_token);
+      logger.log('[OAuth] Has access_token:', !!result.params?.access_token);
+    } else if (result.type === 'error') {
+      logger.error('[OAuth] Error:', result.error);
     }
     logger.log('[OAuth] ==================================');
     
     // Check if user completed the flow
-    if (result.type !== 'success' || !result.url) {
+    if (result.type !== 'success') {
       if (result.type === 'cancel') {
         logger.log('[OAuth] User cancelled sign-in');
-      } else {
-        logger.error('[OAuth] Google Sign-In failed:', result.type);
+        // Don't show alert for cancellation
+        return false;
+      } else if (result.type === 'error') {
+        const errorMsg = result.error?.message || result.error?.code || 'Unknown error';
+        logger.error('[OAuth] Google Sign-In error:', errorMsg);
+        Alert.alert(
+          'Sign-In Error',
+          `${errorMsg}\n\nPlease ensure you have internet connectivity and try again.`
+        );
       }
-      return false; // User cancelled or error occurred
-    }
-    
-    // Extract id_token from the URL fragment
-    // The URL looks like: https://auth.expo.io/@3mpwrapp/empowrapp#id_token=xxx&...
-    const urlFragment = result.url.split('#')[1];
-    if (!urlFragment) {
-      logger.error('[OAuth] No fragment in redirect URL');
-      Alert.alert('Sign-In incomplete', 'Did not receive authentication token from Google.');
       return false;
     }
     
-    const params = new URLSearchParams(urlFragment);
-    const idToken = params.get('id_token');
+    // Extract id_token from the response
+    const idToken = result.params?.id_token;
     
     if (!idToken) {
-      // Check for error in response
-      const error = params.get('error');
-      const errorDescription = params.get('error_description');
-      if (error) {
-        logger.error('[OAuth] Google returned error:', error, errorDescription);
-        Alert.alert('Sign-In Error', errorDescription || error);
-      } else {
-        logger.error('[OAuth] No id_token in response. Params:', urlFragment.substring(0, 100));
-        Alert.alert('Sign-In incomplete', 'Did not receive authentication token from Google.');
+      // Try using access_token to get user info from Google
+      const accessToken = result.params?.access_token;
+      if (accessToken) {
+        logger.log('[OAuth] No id_token, but have access_token. Attempting alternative sign-in...');
+        try {
+          // Get user info from Google using access token
+          const userInfoResponse = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+            headers: { Authorization: `Bearer ${accessToken}` },
+          });
+          const userInfo = await userInfoResponse.json();
+          logger.log('[OAuth] Got user info:', { email: userInfo.email, name: userInfo.name });
+          
+          // Use Google credential with access token
+          const { GoogleAuthProvider, signInWithCredential } = await import('firebase/auth');
+          const credential = GoogleAuthProvider.credential(null, accessToken);
+          await signInWithCredential(auth, credential);
+          logger.log('[OAuth] Signed in with access_token successfully');
+          return true;
+        } catch (altError: any) {
+          logger.error('[OAuth] Alternative sign-in failed:', altError);
+        }
       }
+      
+      logger.error('[OAuth] No id_token in response. Available params:', Object.keys(result.params || {}));
+      Alert.alert('Sign-In incomplete', 'Did not receive authentication token from Google. Please try again.');
       return false;
     }
     
-    logger.log('[OAuth] Got id_token from implicit flow');
+    logger.log('[OAuth] Got id_token, signing in with Firebase...');
     
     const { GoogleAuthProvider, signInWithCredential } = await import('firebase/auth');
     const credential: AuthCredential = GoogleAuthProvider.credential(idToken);
