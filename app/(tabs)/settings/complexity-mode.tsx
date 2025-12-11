@@ -16,6 +16,10 @@ export default function ComplexityModeSettings() {
   const { mode, setMode, isBadDayMode, setBadDayMode } = useComplexityMode();
 
   const handleModeChange = async (newMode: 'simple' | 'standard' | 'power_user') => {
+    // If switching modes while Bad Day Mode is active, turn off Bad Day Mode first
+    if (isBadDayMode) {
+      await setBadDayMode(false);
+    }
     await setMode(newMode);
     Alert.alert(
       'Mode Changed',
@@ -242,7 +246,8 @@ export default function ComplexityModeSettings() {
         {/* Mode Cards */}
         <View style={styles.modesSection}>
           {modes.map((modeConfig) => {
-            const isActive = mode === modeConfig.id && !isBadDayMode;
+            const isActive = mode === modeConfig.id;
+            const isBadDaySimple = isBadDayMode && modeConfig.id === 'simple';
             return (
               <View
                 key={modeConfig.id}
@@ -269,7 +274,6 @@ export default function ComplexityModeSettings() {
                   onPress={() => handleModeChange(modeConfig.id)}
                   accessibilityRole="button"
                   accessibilityLabel={`Select ${modeConfig.title}`}
-                  disabled={isBadDayMode}
                 >
                   <Text
                     style={[
@@ -277,7 +281,7 @@ export default function ComplexityModeSettings() {
                       isActive ? styles.selectButtonTextActive : styles.selectButtonTextInactive,
                     ]}
                   >
-                    {isActive ? '✓ Active' : 'Select This Mode'}
+                    {isActive ? (isBadDaySimple ? '✓ Active (Bad Day Mode)' : '✓ Active') : 'Select This Mode'}
                   </Text>
                 </Pressable>
               </View>

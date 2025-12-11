@@ -3,7 +3,7 @@
  * Manages Simple/Standard/Power User modes to reduce feature overwhelm
  */
 
-import type { ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import { createContext, useContext, useEffect, useState } from 'react';
 
 import { logError } from '../utils/errorLogger';
@@ -29,6 +29,7 @@ const ComplexityModeContext = createContext<ComplexityModeContextType | undefine
 
 const STORAGE_KEY = 'complexity:mode:v1';
 const BAD_DAY_KEY = 'complexity:badday:v1';
+const PREVIOUS_MODE_KEY = 'complexity:previousmode:v1';
 
 export function ComplexityModeProvider({ children }: { children: ReactNode }) {
   const [mode, setModeState] = useState<ComplexityMode>('standard');
@@ -79,18 +80,39 @@ export function ComplexityModeProvider({ children }: { children: ReactNode }) {
   };
 
   const setBadDayMode = async (enabled: boolean) => {
-    setBadDayModeState(enabled);
-    
-    // Bad Day Mode automatically switches to Simple
-    if (enabled) {
-      await setMode('simple');
-    }
-    
     if (AsyncStorage) {
       try {
+        if (enabled) {
+          // Save current mode before switching to simple
+          await AsyncStorage.setItem(PREVIOUS_MODE_KEY, mode);
+          setBadDayModeState(true);
+          await setMode('simple');
+        } else {
+          // Restore previous mode when disabling bad day mode
+          const previousMode = await AsyncStorage.getItem(PREVIOUS_MODE_KEY);
+          setBadDayModeState(false);
+          if (previousMode === 'simple' || previousMode === 'standard' || previousMode === 'power_user') {
+            await setMode(previousMode);
+          } else {
+            // Default to standard if no previous mode
+            await setMode('standard');
+          }
+        }
         await AsyncStorage.setItem(BAD_DAY_KEY, enabled ? 'true' : 'false');
       } catch (error) {
         logError('ComplexityMode', 'Failed to save bad day mode', error as Error);
+        setBadDayModeState(enabled);
+        if (enabled) {
+          await setMode('simple');
+        }
+      }
+    } else {
+      // No AsyncStorage - just toggle states in memory
+      setBadDayModeState(enabled);
+      if (enabled) {
+        await setMode('simple');
+      } else {
+        await setMode('standard');
       }
     }
   };
