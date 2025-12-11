@@ -33,7 +33,7 @@ You're invited to be one of the first to try **3mpwr App** — an accessibility-
 - [ ] **Settings** — Try Complexity Mode (Simple/Standard/Power User)
 - [ ] **What's New** — Check the latest updates
 
-**📖 Full Testing Guide:** https://github.com/3mpwr-App/empowrapp-main/blob/main/docs/COMPREHENSIVE_BETA_TESTER_GUIDE.md
+**📖 Full Testing Guide:** https://github.com/3mpwr-App/docs/blob/main/BETA_TESTER_GUIDE.md
 
 ---
 
