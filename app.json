@@ -12,12 +12,15 @@
     "jsEngine": "hermes",
     "primaryColor": "#000000",
     "web": {
-      "url": "https://3mpwrapp.pages.dev"
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png",
+      "template": "./web/index.html"
     },
     "updates": {
       "checkAutomatically": "ON_LOAD",
       "fallbackToCacheTimeout": 0,
-      "url": "https://u.expo.dev/6dd0264f-d796-4f63-9590-f82284a48354"
+      "url": "https://u.expo.dev/d9ce9c9a-c721-4a1a-9467-6ab3586cab4a"
     },
     "runtimeVersion": {
       "policy": "sdkVersion"
@@ -81,12 +84,6 @@
       ],
       "googleServicesFile": "./google-services.json"
     },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png",
-      "template": "./web/index.html"
-    },
     "plugins": [
       "expo-router",
       [
@@ -129,7 +126,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "6dd0264f-d796-4f63-9590-f82284a48354"
+        "projectId": "d9ce9c9a-c721-4a1a-9467-6ab3586cab4a"
       },
       "EXPO_PUBLIC_DATA_POLICY": "hybrid_byoc",
       "EXPO_PUBLIC_CAMPAIGNS_API_BASE": "https://3mpwrapp-campaigns.empowrapp08162025.workers.dev/api",
