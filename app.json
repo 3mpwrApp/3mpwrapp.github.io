@@ -115,7 +115,13 @@
       ],
       "expo-audio",
       "expo-asset",
-      "expo-web-browser"
+      "expo-web-browser",
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.733708119893-so14q85mmnrtt5ulnan3qjs2o7ll73vs"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

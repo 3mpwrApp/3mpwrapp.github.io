@@ -21,6 +21,43 @@ function getEnvVar(key: string): string | undefined {
   return undefined;
 }
 
+// Native Google Sign-In for mobile apps
+let GoogleSignin: any = null;
+let statusCodes: any = null;
+let isGoogleSignInConfigured = false;
+
+async function configureNativeGoogleSignIn(): Promise<boolean> {
+  if (Platform.OS === 'web') return false;
+  
+  try {
+    const googleSignInModule = require('@react-native-google-signin/google-signin');
+    GoogleSignin = googleSignInModule.GoogleSignin;
+    statusCodes = googleSignInModule.statusCodes;
+    
+    if (!isGoogleSignInConfigured) {
+      const webClientId = getEnvVar('EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID');
+      
+      if (!webClientId) {
+        logger.warn('[OAuth] No webClientId for native Google Sign-In');
+        return false;
+      }
+      
+      GoogleSignin.configure({
+        webClientId,
+        offlineAccess: true,
+        scopes: ['profile', 'email'],
+      });
+      
+      isGoogleSignInConfigured = true;
+      logger.log('[OAuth] Native Google Sign-In configured');
+    }
+    return true;
+  } catch (e) {
+    logger.log('[OAuth] Native Google Sign-In not available:', e);
+    return false;
+  }
+}
+
 export async function signInWithGoogleAsync(): Promise<boolean> {
   try {
     // Check if Firebase auth is available
@@ -63,15 +100,6 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
       clientIdPrefix: clientId.substring(0, 20) + '...'
     });
     
-    let WebBrowser: any; let AuthSession: any;
-    try { WebBrowser = require('expo-web-browser'); } catch {}
-    try { AuthSession = require('expo-auth-session'); } catch {}
-    if (!WebBrowser || !AuthSession) {
-      Alert.alert('Unavailable', 'OAuth libraries are not available in this build.');
-      return false;
-    }
-    WebBrowser.maybeCompleteAuthSession?.();
-    
     // Check if running on web
     const isWeb = Platform.OS === 'web';
 
@@ -99,6 +127,78 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
       }
     }
 
+    // MOBILE: Try native Google Sign-In first (best experience)
+    // Falls back to expo-auth-session if native module not available
+    const nativeAvailable = await configureNativeGoogleSignIn();
+    
+    if (nativeAvailable && GoogleSignin) {
+      try {
+        logger.log('[OAuth] Using native Google Sign-In for mobile');
+        
+        // Check if user is already signed in
+        const hasPreviousSignIn = GoogleSignin.hasPreviousSignIn();
+        if (hasPreviousSignIn) {
+          try {
+            await GoogleSignin.signInSilently();
+          } catch {
+            // Silent sign-in failed, proceed with interactive
+          }
+        }
+        
+        // Sign in with Google
+        await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+        const userInfo = await GoogleSignin.signIn();
+        
+        logger.log('[OAuth] Native Google Sign-In successful, user:', userInfo.user?.email);
+        
+        // Get the ID token for Firebase
+        const tokens = await GoogleSignin.getTokens();
+        const idToken = tokens.idToken;
+        
+        if (!idToken) {
+          logger.error('[OAuth] No idToken from native Google Sign-In');
+          Alert.alert('Sign-In Error', 'Could not get authentication token from Google.');
+          return false;
+        }
+        
+        // Sign in to Firebase with the Google credential
+        const { GoogleAuthProvider, signInWithCredential } = await import('firebase/auth');
+        const credential = GoogleAuthProvider.credential(idToken);
+        await signInWithCredential(auth, credential);
+        
+        logger.log('[OAuth] Firebase sign-in with native Google credential successful');
+        return true;
+      } catch (nativeError: any) {
+        logger.error('[OAuth] Native Google Sign-In error:', nativeError);
+        
+        if (nativeError.code === statusCodes?.SIGN_IN_CANCELLED) {
+          logger.log('[OAuth] User cancelled native sign-in');
+          return false;
+        } else if (nativeError.code === statusCodes?.IN_PROGRESS) {
+          logger.log('[OAuth] Sign-in already in progress');
+          return false;
+        } else if (nativeError.code === statusCodes?.PLAY_SERVICES_NOT_AVAILABLE) {
+          logger.warn('[OAuth] Play Services not available, falling back to web OAuth');
+          // Fall through to expo-auth-session fallback
+        } else {
+          // Show error but also fall through to try web OAuth
+          logger.warn('[OAuth] Native sign-in failed, trying web OAuth fallback');
+        }
+      }
+    }
+
+    // FALLBACK: Use expo-auth-session for mobile (less reliable but works without native module)
+    logger.log('[OAuth] Using expo-auth-session fallback for mobile');
+    
+    let WebBrowser: any; let AuthSession: any;
+    try { WebBrowser = require('expo-web-browser'); } catch {}
+    try { AuthSession = require('expo-auth-session'); } catch {}
+    if (!WebBrowser || !AuthSession) {
+      Alert.alert('Unavailable', 'OAuth libraries are not available in this build.');
+      return false;
+    }
+    WebBrowser.maybeCompleteAuthSession?.();
+
     // For Google OAuth on mobile, we need to use the Expo auth proxy
     // The proxy handles the OAuth flow and redirects back to the app
     //
@@ -119,13 +219,11 @@ Constants.expoConfig.extra: ${JSON.stringify(Object.keys(Constants.expoConfig?.e
     logger.log('[OAuth] ==============================================');
 
     // Use Google's discovery document for proper OAuth configuration
-    const discovery = AuthSession.useAutoDiscovery
-      ? await fetch('https://accounts.google.com/.well-known/openid-configuration').then(r => r.json())
-      : {
-          authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
-          tokenEndpoint: 'https://oauth2.googleapis.com/token',
-          revocationEndpoint: 'https://oauth2.googleapis.com/revoke',
-        };
+    const discovery = {
+      authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
+      tokenEndpoint: 'https://oauth2.googleapis.com/token',
+      revocationEndpoint: 'https://oauth2.googleapis.com/revoke',
+    };
 
     // Use Token response type with useProxy (gets id_token directly)
     const request = new AuthSession.AuthRequest({
