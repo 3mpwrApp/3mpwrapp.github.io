@@ -44,7 +44,8 @@
         "EXPO_PUBLIC_CAMPAIGNS_API_BASE": "https://3mpwrapp.pages.dev/api",
         "EXPO_PUBLIC_API_BASE": "https://3mpwrapp.pages.dev/api",
         "EXPO_PUBLIC_CALENDAR_FEED_URL": "https://3mpwrapp-calendar.empowrapp08162025.workers.dev/events.ics",
-        "EXPO_PUBLIC_DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/1446290778765660335/RFgYwgfPUamtzAt-UcAuPMRVJSamWXTOWMAk0L2RrdSSlxE498bDb0YWOXw_1JIoGeUp"
+        "EXPO_PUBLIC_DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/1446290778765660335/RFgYwgfPUamtzAt-UcAuPMRVJSamWXTOWMAk0L2RrdSSlxE498bDb0YWOXw_1JIoGeUp",
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true"
       }
     }
   },
