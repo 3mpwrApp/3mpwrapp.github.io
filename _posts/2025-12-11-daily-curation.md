@@ -9,59 +9,179 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-12-11
 
-Curated 12 items from disability, accessibility, and social policy sources.
+Curated 37 items from disability, accessibility, and social policy sources.
 
-## 1. Appeal over Doug Ford’s personal cellphone records heard at Ontario court
-A panel of three Ontario judges heard arguments on a request by the provincial government for a judicial review of a decision handed down by the IPC last year.
-📍 [Source](https://globalnews.ca/news/11572670/doug-ford-personal-phone-number-release-court-hears-arguments/)
+## 1. Manitoba Government Increasing Investment to Centreport Canada, Building Jobs and Strengthening Trade
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71938)
+**Score:** 21.50
+
+## 2. Environment Canada releases winter outlook. Time to get the snow pants out?
+Over the next three months, Canadians are likely to see above average temperatures across the eastern Arctic, around Hudson Bay, across Northern Quebec and Labrador.
+📍 [Source](https://globalnews.ca/news/11573855/environment-canada-winter-outlook/)
+**Score:** 18.50
+
+## 3. Manitoba Government Expands Virtual Medicine Ward to Support Home Recovery and Reduce Emergency Room Wait Times
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71762)
+**Score:** 23.40
+
+## 4. For 1st time since trade war, Canada exported more than it imported
+The Canadian economy achieved a trade surplus for the first time since the trade war began, as exports rebounded and imports fell in September, according to Statistics Canada.
+📍 [Source](https://globalnews.ca/news/11573407/trade-war-canada-exports-canada/)
+**Score:** 15.00
+
+## 5. Ontario's education unions say funding will mitigate violence crisis, low test scores
+📍 [Source](https://rabble.ca/labour/ontarios-education-unions-say-funding-will-mitigate-violence-crisis-low-test-scores/)
+**Score:** 12.50
+
+## 6. On Human Rights Day let’s reflect on Canada’s complicity in the Gaza genocide
+📍 [Source](https://rabble.ca/politics/canadian-politics/on-human-rights-day-lets-reflect-on-canadas-complicity-in-the-gaza-genocide/)
+**Score:** 12.50
+
+## 7. Man accused of attempted murder was discharged from involuntary mental health order, family says
+<img src='https://i.cbc.ca/ais/5d640391-8295-4bc8-9974-fe74a83edb4c,1765398702438/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='A man in a white shirt with a long beard.' width='620' height='349' title='Mitchell Rose walked into court on Wednesday for the second time since being charged with two counts of attempted murder.'/><p>The family of a man charged with two counts of attempted murder says they were shocked to learn he'd been released from a community treatment order months ago, and say he was denied vital care before the near-fatal attacks.</p>
+📍 [Source](https://www.cbc.ca/news/canada/newfoundland-labrador/man-accused-of-attempted-murder-was-discharged-from-involuntary-mental-health-order-family-says-9.7010787?cmp=rss)
 **Score:** 14.60
 
-## 2. Manitoba Government's Universal School Food Program Fed Nearly Half of Students Across the Province
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71764)
+## 8. Manitoba Government Introduces Legislation to Recognize Sign Languages
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71763)
+**Score:** 12.10
+
+## 9. Ottawa using AI to review public comments on its AI strategy
+The federal government is using artificial intelligence to sort through public input on AI policy.
+📍 [Source](https://globalnews.ca/news/11573982/canada-artificial-intelligence-public-comments/)
+**Score:** 12.50
+
+## 10. Manitoba Government Launches $10 Million Business Security Rebate Program
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71937)
 **Score:** 12.00
 
-## 3. Extortion suspects have all claimed refugee status, Canada's border agency says
-The development has frustrated deportations of foreign nationals accused of fuelling B.C.'s extortion boom.
-📍 [Source](https://globalnews.ca/news/11572311/extortion-suspects-claim-refugee-status-cbsa/)
+## 11. TikTok class action accuses platform of not protecting kids, seeks damages
+The civil claim was filed after Canadian privacy commissioners reached similar conclusions about TikTok's targeted advertising practices and age verification measures.
+📍 [Source](https://globalnews.ca/news/11573680/tiktok-class-action-lawsuit-kids-privacy/)
 **Score:** 9.50
 
-## 4. Ranking Four Winds’ Pils Pack, which features some of Canada’s best breweries
-The pack includes drinks from breweries across the country.
-📍 [Source](https://www.straight.com/food/ranking-four-winds-pils-pack-which-features-some-of-canadas-best-breweries)
+## 12. ‘Canada is not for sale!' Unless we’re quietly arming the fascists next door
+📍 [Source](https://rabble.ca/politics/canadian-politics/canada-is-not-for-sale-unless-were-quietly-arming-the-fascists-next-door/)
 **Score:** 9.50
 
-## 5. Manitoba Government will use Proceeds from U.S. Liquor Sales to Support Holiday Charities
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71817)
-**Score:** 10.50
+## 13. On the Top Chef Canada finale, Alex Kim came second—but his story came first
+The Five Sails culinary director made a splash on the show.
+📍 [Source](https://www.straight.com/food/on-top-chef-canada-finale-alex-kim-came-second-but-his-story-came-first)
+**Score:** 9.50
 
-## 6. Straight, No Chaser: Kabir Sehgal is an average guy who loves weird rabbit holes
-<h3>Get the best of Vancouver in your inbox, every Tuesday and Thursday. <a class="c-link" href="http://newsletter.straight.com/subscribe/?utm_source=straight&amp;utm_medium=article" target="_blank" rel="noopener noreferrer" data-stringify-link="http://newsletter.straight.com/subscribe/?utm_source=s&lt;/body&gt;&lt;/html&gt;"></a></h3>
-📍 [Source](https://www.straight.com/food/straight-no-chaser-kabir-sehgal-is-an-average-guy-who-loves-weird-rabbit-holes)
-**Score:** 8.40
-
-## 7. Manitoba Government Honours Lives Lost to Gender-Based Violence
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71797)
+## 14. Dollarama sales spike 22% as many seek lower-cost ‘consumables'
+The company’s business model has shown 'resilience' in what is an 'unpredictable' economic environment, Dollarama CEO Neil Rossy said in a statement.
+📍 [Source](https://globalnews.ca/news/11573661/dollarama-sales-cost-of-living/)
 **Score:** 7.50
 
-## 8. Manitoba Government Improves Asbestos Safety Requirements to Protect Workers
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71777)
+## 15. 'Profound failure of care' led to death of Winnipeg infant who had meth in bloodstream, prosecutor argues
+<img src='https://i.cbc.ca/ais/1.7626868,1757114075000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C91%2C1019%2C573%29%3BResize%3D%28620%29' alt='A baby bottle next to a yellow evidence marker with the number 1 on it.' width='620' height='349' title='A toxicology report submitted to court found three baby bottles seized from the home after the infant died tested positive for methamphetamine. '/><p>A prosecutor says a constellation of events in a Winnipeg home that included unsafe sleeping conditions, rampant drug use and the parents' tumultuous relationship shows a "profound failure of care" in the weeks leading up to the death of a three-month-old in 2022.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/alison-muise-trial-closing-arguments-9.7010750?cmp=rss)
+**Score:** 10.20
+
+## 16. ‘I believe in his innocence,’ wife of lawyer tied to Ryan Wedding tells court
+The wife of an Ontario lawyer allegedly involved in a violent transnational drug ring headed by a Canadian Olympian says she believes in his innocence.
+📍 [Source](https://globalnews.ca/news/11573205/mandy-deepak-paradkar-bail-hearing/)
+**Score:** 9.00
+
+## 17. Industries Pay Much Less for Water in BC, Report Finds
+Charging rates that match Quebec would raise millions for key watershed projects, advocates say.
+📍 [Source](https://thetyee.ca/News/2025/12/11/Industries-Pay-Much-Less-Water-BC/)
+**Score:** 9.00
+
+## 18. National museum CEO leaves role after report alleged she mistreated staff for over a decade
+<img src='https://i.cbc.ca/ais/20ca4078-f021-401e-9806-cf89df984ede,1765485551211/full/max/0/default.jpg?im=Crop%2Crect%3D%2811%2C0%2C910%2C511%29%3BResize%3D%28620%29' alt='A headshot of a woman wearing a scarf' width='620' height='349' title='Marie Chapman holds the most senior job at the Canadian Museum of Immigration at Pier 21 in Halifax.'/><p></p>
+📍 [Source](https://www.cbc.ca/news/politics/pier-21-ceo-departure-9.7012253?cmp=rss)
+**Score:** 9.00
+
+## 19. Officer who shot Deer Lake First Nation man 5 times cleared of wrongdoing, Ontario police watchdog says
+<img src='https://i.cbc.ca/ais/1.7593210,1753382667000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C2000%2C1125%29%3BResize%3D%28620%29' alt='Two men wearing jackets are seen standing beside each other.' width='620' height='349' title='Eric Nothing, left, and his father, Bruce Wallace Frogg. Nothing was shot and killed Tuesday following an interaction with police in Deer Lake First Nation in northwestern Ontario. Meanwhile, Frogg was shot and killed last summer by a Kenora OPP officer.'/><p>Ontario’s police watchdog has cleared a Nishnawbe Aski Police Service (NAPS) officer of wrongdoing in connection with the death of a Deer Lake First Nation man who was shot five times. The decision comes a year after the 40-year-old's father was also shot and killed by police.</p>
+📍 [Source](https://www.cbc.ca/news/canada/thunder-bay/eric-nothing-siu-report-9.7012139?cmp=rss)
+**Score:** 9.00
+
+## 20. Flooding in parts of B.C.’s Fraser Valley leads to major highway closures, state of emergency
+<img src='https://i.cbc.ca/ais/07295a0b-b4e8-4091-bbb9-13b25766cc3c,1765414981791/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C322%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A flooded yard is pictured with a house above the water line.' width='620' height='349' title='A flooded yard is pictured along Chilliwack Lake Road in B.C.'s Fraser Valley on Wednesday,'/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/livestory/bc-flooding-fraser-valley-sumas-river-live-updates-9.7010864?cmp=rss)
+**Score:** 9.00
+
+## 21. Alberta boy, 12, pleads guilty to attempted murder of 7-year-old brother
+<img src='https://i.cbc.ca/ais/4a5b5741-6328-4a77-817a-ea6ae262e0dd,1765409756593/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C55%2C3000%2C1687%29%3BResize%3D%28620%29' alt='A female police officer walks up to a building that says 'Courthouse 320.'' width='620' height='349' title='A police officer arrives at the provincial court building in Lethbridge, Alta., Wednesday, Sept. 23, 2015. A third member of an Alberta high school football team accused of sexually assaulting a teammate has pleaded not guilty. '/><p>A 12-year-old Lethbridge, Alta., boy who “had been researching murder on YouTube” before he stabbed his seven-year-old brother nine times, pleaded guilty to attempted murder Wednesday afternoon. </p>
+📍 [Source](https://www.cbc.ca/news/canada/calgary/lethbridge-attempted-murder-brothers-9.7011080?cmp=rss)
+**Score:** 8.10
+
+## 22. Manitoba Government Invests more than $2 Million for Interlake Infrastructure
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71761)
 **Score:** 7.50
 
-## 9. CRA says it’ll hire 1,700 call centre staff ahead of busy tax season
-Melanie Serjak, CRA assistant commissioner, told reporters Wednesday the agency is aiming to reach a total of about 4,500 agents to handle a "very high forecast" in demand.
-📍 [Source](https://globalnews.ca/news/11573269/cra-hire-staff-tax-season/)
+## 23. Manitoba Government Adds Training Seats for Laboratory and X-Ray Technologists to Address Critical Rural Diagnostic Gaps
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71760)
+**Score:** 7.50
+
+## 24. Immigration museum CEO in Halifax accused of bullying, creating environment of fear
+A federal investigation of the CEO leading the Canadian Museum of Immigration has found Marie Chapman bullied staff and created an environment of fear that caused emotional harm.
+📍 [Source](https://globalnews.ca/news/11573539/halifax-immigration-museum-ceo-accused-bullying/)
+**Score:** 7.50
+
+## 25. Nenshi Grills Smith in Legislature over Jordan Peterson’s School
+Alberta’s premier defended her quiet efforts to accredit the psychologist’s for-profit online ‘academy.’
+📍 [Source](https://thetyee.ca/News/2025/12/11/Nenshi-Grills-Smith-Jordan-Peterson-School/)
+**Score:** 5.50
+
+## 26. Study Shows Wide Wage Gap for Trans and Non-Binary Workers
+A StatCan report examines gender-diverse workers’ economic outcomes for the first time.
+📍 [Source](https://thetyee.ca/News/2025/12/10/Statistics-Canada-Study-Shows-Gap-Trans-Non-Binary-Worker/)
+**Score:** 5.50
+
+## 27. N.B. appeals court rules Wolastoqey Nation can't fight Crown over private forest land
+The Wolastoqey Nation had been seeking a declaration of Aboriginal title on over half of the province, saying the land was unceded and sold by the Crown without their consent.
+📍 [Source](https://globalnews.ca/news/11574153/new-brunswick-appeals-court-wolastoqey-nation-crown-private-land/)
 **Score:** 4.50
 
-## 10. Quebec unions are standing up against CAQ's Law 14
-📍 [Source](https://rabble.ca/labour/quebec-unions-are-standing-up-against-caqs-law-14/)
+## 28. The Alberta pipeline deal will bring us closer to climate Armageddon
+📍 [Source](https://rabble.ca/columnists/the-alberta-pipeline-deal-will-bring-us-closer-to-climate-armageddon/)
 **Score:** 4.50
 
-## 11. Homeowner shaken after vandals destroy Christmas inflatables display in Scarborough
-<img src='https://i.cbc.ca/ais/3c2dfc38-11ac-4928-aa1e-0db3b6f4c9e5,1765409971898/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Christmas display destroyed by vandals. ' width='620' height='349' title='Vandals have destroyed a Scarborough family's Christmas display and as  CBC's Ali Chiasson reports, the destruction has left the homeowners shaken.'/><p>A Scarborough homeowner is shaken after masked vandals using hammers destroyed a display of large Christmas inflatables on his front lawn over the weekend.</p>
-📍 [Source](https://www.cbc.ca/news/canada/toronto/christmas-display-destroyed-scarborough-9.7011268?cmp=rss)
+## 29. NDP leadership committee rejects Yves Engler’s candidacy application
+📍 [Source](https://rabble.ca/politics/canadian-politics/ndp-leadership-committee-rejects-yves-englers-candidacy-application/)
 **Score:** 4.50
 
-## 12. As Fort William First Nation grieves 5 sudden deaths, its chief calls for more support
-📍 [Source](https://www.cbc.ca/news/canada/thunder-bay/fort-william-first-nation-sudden-deaths-9.7010852?cmp=rss)
+## 30. Jordan Peterson’s School Isn’t Accredited. Smith Offered Alberta’s Help
+The premier met with the controversial psychologist and tried to help his business, finds a Tyee investigation.
+📍 [Source](https://thetyee.ca/News/2025/12/10/Jordan-Peterson-School/)
+**Score:** 4.50
+
+## 31. Toronto police ID killer in 3 homicide cold cases involving young women
+<img src='https://i.cbc.ca/ais/00d8d31e-63f1-4e17-a60f-f7565333e252,1765477307167/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1214%2C682%29%3BResize%3D%28620%29' alt='A composite image of three women, photographed in the 1980s. All three are in their 20s, smiling for the camera.' width='620' height='349' title='Toronto police provided an update Thursday on historical investigations into the homicides of three women, pictured left to right, Christine Prince, Gracelyn Greenidge and Claire Samson.'/><p>Toronto police say DNA testing has identified Kenneth Smith, who died in Windsor in 2019, as the killer of three women in Toronto between 1982 and 1997.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/tps-update-historical-homicides-9.7012021?cmp=rss)
+**Score:** 4.50
+
+## 32. House of Commons agrees to break for 6-week holiday recess, will return in new year
+<img src='https://i.cbc.ca/ais/b31d2cef-466d-43d6-ad65-11180d221dd5,1765480774503/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C400%2C8640%2C4860%29%3BResize%3D%28620%29' alt='A Christmas tree stands beside a window. A traditional legislative brick building is seen outside in a snowy setting.' width='620' height='349' title='The Mackenzie Tower of West Block on Parliament Hill is pictured through a window of the Wellington Building as Christmas holiday season decorations adorn the lobby in Ottawa on Thursday, Dec. 11, 2025.'/><p>The House of Commons is wrapping up the fall sitting Thursday, meaning MPs will be heading back to their ridings for a six-week holiday break.</p>
+📍 [Source](https://www.cbc.ca/news/politics/house-of-commons-rises-winter-break-9.7012237?cmp=rss)
+**Score:** 4.50
+
+## 33. Wife of Ontario lawyer arrested in Ryan Wedding case testifies at bail hearing
+<img src='https://i.cbc.ca/ais/23da0c72-47dc-45b2-b52d-e2c90d5477d8,1765476691284/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C165%2C3376%2C1899%29%3BResize%3D%28620%29' alt='Deepak Paradkar,, the lawyer for the alleged Yahoo hacker Karim Baratov, leaves the courthouse after his client was denied bail, in Hamilton, Ont., on Tuesday, April 11, 2017. ' width='620' height='349' title=''/><p>The wife of an Ontario lawyer allegedly involved in a transnational drug smuggling ring told his bail hearing Thursday she never saw her husband receive luxurious gifts or suspicious amounts of cash from clients in their decades together.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/wife-ontario-lawyer-testifies-bail-hearing-9.7012096?cmp=rss)
+**Score:** 4.50
+
+## 34. House of Commons set to rise for 6 weeks as Liberal bills still face votes
+House Leader Steven MacKinnon says his government has 'accomplished an incredible amount' during the fall sitting, pointing to budget and crime bills which have yet to become law.
+📍 [Source](https://globalnews.ca/news/11573854/house-of-commons-winter-break-liberal-bills-budget/)
 **Score:** 3.00
+
+## 35. Sign of the times: Facing an uncertain future, the Penthouse looks back
+As development pressures mount, Danny Filippone reflects on the club's legacy, its community roots, and the memories that continue to shape Vancouver culture.
+📍 [Source](https://www.straight.com/city-culture/sign-of-times-facing-an-uncertain-future-penthouse-looks-back)
+**Score:** 2.60
+
+## 36. Case involving teen alleged to be part of online extremist group back in Halifax court
+A case involving a Halifax teenager, who police allege is affiliated with the violent online extremist group known as 764, was back in court.
+📍 [Source](https://globalnews.ca/news/11573880/terrorist-group-charge-halifax-764-network/)
+**Score:** 1.00
+
+## 37. Some provinces are selling U.S. booze again — with a holiday twist. Is yours one of them?
+<img src='https://i.cbc.ca/ais/d1bca747-58d6-4c06-8bbc-4e998646be46,1765414231575/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C189%2C2016%2C1134%29%3BResize%3D%28620%29' alt='Bottles of wine on a store shelf with signage reading United States behind it' width='620' height='349' title='Premier Susan Holt says N.B. Liquor stores in New Brunswick will remove U.S. alcohol from store shelves as part of the province's response to a tariff threat from President Donald Trump. Premier Susan Holt says N.B. Liquor stores in New Brunswick will remove U.S. alcohol from store shelves as part of the province's response to a tariff threat from President Donald Trump.'/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/u-s-tariffs-alcohol-sales-canada-charity-9.7011151?cmp=rss)
+**Score:** 1.00
 
