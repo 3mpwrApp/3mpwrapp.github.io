@@ -1,55 +1,75 @@
-Subject: 3mpwr App — Closed Beta Invite (Expo Go)
+Subject: 🎉 You're Invited to the 3mpwr App Closed Beta!
 From: empowrapp08162025@gmail.com
 To: <Tester Name/Group>
 
 Hi <Name>,
 
-You're invited to try the 3mpwr App in our closed beta. It's free and runs through Expo Go on iOS and Android.
-
-What you'll do (about 10 minutes):
-- Explore Wellness (Daily Planner, Reflections, a couple of exercises)
-- Check Resources (Deadlines, Rights, Evidence basics)
-- Try one Advocacy page (Policy Made Simple) and read the disclaimer
-- Open What's New and Settings → About
-
-**📖 Full Testing Guide:** https://github.com/empowrapp/empowrapp-new/blob/main/docs/COMPREHENSIVE_BETA_TESTER_GUIDE.md
-
-How to join (free):
-1) Install "Expo Go"
-   - iOS: App Store → search "Expo Go" (by Expo)
-   - Android: Play Store → search "Expo Go"
-2) Open our private link or scan the QR
-   - Link: <PASTE_UNLISTED_EXPO_LINK_HERE>
-   - QR: attach/insert QR image generated from the link (see QR tips below)
-3) Sign in or use Guest
-   - You can explore the app as a Guest—no account needed
-   - 🏅 Beta testers will receive a special badge once the badge system is live
-
-Share feedback (please):
-- Email: empowrapp08162025@gmail.com (screenshots welcome)
-- What to include: your phone model/OS, steps to reproduce, and approx. time you tested
-
-Privacy & safety:
-- Don’t share personal or confidential details in screenshots.
-- AI outputs are educational, not legal advice.
-- You can clear local data in Settings → Privacy at any time.
-
-Thank you!
-— The 3mpwr Team
+You're invited to be one of the first to try **3mpwr App** — an accessibility-first advocacy and wellness app built for people with disabilities, by people with disabilities.
 
 ---
 
-QR tips (for the sender)
+## 🚀 How to Join (Android Only for Now)
 
-Option A: Use a free QR generator
-- Copy your unlisted Expo link (e.g., https://expo.dev/@<org>/<project>?…)
-- Use any free QR site (e.g., qrcode-monkey.com or qr-code-generator.com)
-- Download the PNG as QR.png and attach it to the email.
+### Option A: Google Play Store (Recommended)
+1. **You've been added to our beta testers group** — no action needed on your part!
+2. Click this link to download from Google Play:
+   👉 <PASTE_GOOGLE_PLAY_BETA_LINK_HERE>
+3. Sign in with Google or use **Guest Mode** (no account needed)
 
-Option B: From Expo CLI (for quick tests)
-- Run: npx expo start --tunnel (shows a QR in the terminal/app)
-- Testers can scan the QR in the Expo CLI output directly (screenshot and attach if needed).
+### Option B: Direct APK Install (If Play Store Doesn't Work)
+1. Open this link on your Android phone:
+   👉 https://expo.dev/accounts/3mpwrapp03/projects/empowrapp/builds
+2. Find the latest **preview** build and tap **Install**
+3. Allow "Install from unknown sources" if prompted
 
-Notes
-- If the QR fails on iOS, ask testers to open the link directly in Safari → open in Expo Go.
-- If testers are prompted, they can create a free Expo account and sign in.
+---
+
+## 📱 What to Test (About 10-15 Minutes)
+
+- [ ] **Sign In** — Try Google Sign-In or Guest Mode
+- [ ] **Wellness Tab** — Daily Planner, Mood Tracker, Energy Pacing
+- [ ] **Resources Tab** — Deadlines, Rights & Benefits, Evidence Locker
+- [ ] **Advocacy Tab** — AI Translator, Letter Wizard
+- [ ] **Settings** — Try Complexity Mode (Simple/Standard/Power User)
+- [ ] **What's New** — Check the latest updates
+
+**📖 Full Testing Guide:** https://github.com/3mpwr-App/empowrapp-main/blob/main/docs/COMPREHENSIVE_BETA_TESTER_GUIDE.md
+
+---
+
+## 💬 Share Your Feedback
+
+We'd love to hear what works, what doesn't, and any ideas you have!
+
+**How to report:**
+- **Email:** empowrapp08162025@gmail.com
+- **Include:** Your phone model, Android version, what happened, and screenshots if possible
+
+**What we're looking for:**
+- Bugs or crashes
+- Confusing navigation
+- Features you love or hate
+- Accessibility issues (screen reader, contrast, text size)
+
+---
+
+## 🔒 Privacy & Safety
+
+- Don't share personal or confidential details in screenshots
+- AI outputs are educational, not legal advice
+- You can clear all local data anytime: Settings → Privacy
+- Your feedback helps build a better app for the disability community
+
+---
+
+## 🏅 Beta Tester Badge
+
+As a thank you, all beta testers will receive a special **Beta Tester Badge** in the app once our badge system goes live!
+
+---
+
+Thank you for being part of this journey! Your feedback is invaluable.
+
+— The 3mpwr Team ❤️
+
+P.S. Having trouble? Reply to this email and we'll help you get set up.
