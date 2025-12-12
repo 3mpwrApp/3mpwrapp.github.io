@@ -1,0 +1,58 @@
+{
+  "code": "US-FL",
+  "name": "Florida",
+  "country": "US",
+  "workplaceInjury": {
+    "name": "Florida Division of Workers' Compensation",
+    "initialClaimForm": "DFS-F2-DWC-1 (First Report of Injury)",
+    "appealLevels": [
+      {"name": "Judge of Compensation Claims", "body": "FL OJCC", "notes": "Formal hearing for disputed claims."},
+      {"name": "First District Court of Appeal", "body": "FL 1st DCA", "typicalDeadlineDays": 30, "notes": "Appeal within 30 days of JCC order."}
+    ],
+    "links": [
+      {"label": "FL DWC", "url": "https://www.myfloridacfo.com/division/wc/"},
+      {"label": "Employee Info", "url": "https://www.myfloridacfo.com/division/wc/employee/"}
+    ],
+    "notes": "Florida uses assigned judges (JCC) for workers' comp disputes."
+  },
+  "humanRights": {
+    "name": "Florida Commission on Human Relations",
+    "complaintDeadlineMonths": 12,
+    "url": "https://fchr.myflorida.com/",
+    "notes": "365 days from discriminatory act. FCRA covers employers with 15+ employees."
+  },
+  "benefitPrograms": [
+    {
+      "code": "FL-RTBS",
+      "name": "Reemployment Assistance",
+      "administeringBody": "Florida Department of Economic Opportunity",
+      "description": "Unemployment benefits (Florida's term for unemployment insurance).",
+      "links": [
+        {"label": "FL Reemployment", "url": "https://floridajobs.org/office-directory/division-of-workforce-services/reemployment-assistance-program"}
+      ]
+    },
+    {
+      "code": "FL-WC",
+      "name": "Florida Workers' Compensation",
+      "administeringBody": "Florida Division of Workers' Compensation",
+      "description": "Medical and wage benefits for work-related injuries.",
+      "evidenceTips": ["Authorized treating physician records", "IME reports", "Wage statements"],
+      "links": [
+        {"label": "FL WC Benefits", "url": "https://www.myfloridacfo.com/division/wc/employee/benefits.htm"}
+      ]
+    }
+  ],
+  "accommodationGuidance": [
+    "Florida follows federal ADA requirements",
+    "Florida Civil Rights Act mirrors federal protections",
+    "Document accommodation requests in writing",
+    "Engage in good faith interactive process"
+  ],
+  "evidenceFocus": ["Medical records from authorized providers", "Functional capacity evaluations", "IME reports"],
+  "limitationNotes": [
+    "Workers' comp claims: 2 years from injury date",
+    "FCHR complaints: 365 days from discriminatory act",
+    "Statute of limitations for FCRA lawsuit: 1 year from FCHR determination"
+  ],
+  "updated": "2025-06-08"
+}

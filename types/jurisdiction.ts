@@ -32,8 +32,9 @@ export interface WorkplaceInjuryBoard {
 }
 
 export interface JurisdictionData {
-  code: string;              // Province/Territory or FED
+  code: string;              // Province/Territory, State, or FED/US-FED
   name: string;
+  country?: 'CA' | 'US';     // Country code (default CA for legacy)
   workplaceInjury?: WorkplaceInjuryBoard;
   humanRights?: HumanRightsBody;
   benefitPrograms?: BenefitProgram[];

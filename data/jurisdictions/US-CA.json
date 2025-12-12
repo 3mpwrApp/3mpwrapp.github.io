@@ -1,0 +1,69 @@
+{
+  "code": "US-CA",
+  "name": "California",
+  "country": "US",
+  "workplaceInjury": {
+    "name": "California Division of Workers' Compensation (DWC)",
+    "initialClaimForm": "DWC Form 1 (Workers' Compensation Claim Form)",
+    "appealLevels": [
+      {"name": "Workers' Compensation Appeals Board (WCAB)", "body": "WCAB", "notes": "File Application for Adjudication within 1 year of injury or 5 years for some benefits."},
+      {"name": "Reconsideration", "body": "WCAB", "typicalDeadlineDays": 25, "notes": "Petition for reconsideration within 25 days of decision."},
+      {"name": "Writ of Review", "body": "California Court of Appeal", "typicalDeadlineDays": 45, "notes": "Appeal to Court of Appeal within 45 days."}
+    ],
+    "links": [
+      {"label": "CA DWC", "url": "https://www.dir.ca.gov/dwc/"},
+      {"label": "Claim Form", "url": "https://www.dir.ca.gov/dwc/forms.html"}
+    ],
+    "notes": "California has specific rules for permanent disability ratings and medical treatment guidelines."
+  },
+  "humanRights": {
+    "name": "California Civil Rights Department (CRD)",
+    "complaintDeadlineMonths": 36,
+    "url": "https://calcivilrights.ca.gov/",
+    "notes": "FEHA provides broader protections than federal ADA. 3-year filing deadline."
+  },
+  "benefitPrograms": [
+    {
+      "code": "SDI",
+      "name": "State Disability Insurance",
+      "administeringBody": "California Employment Development Department (EDD)",
+      "description": "Short-term wage replacement for non-work-related illness, injury, or pregnancy.",
+      "keyForms": ["DE 2501 (Claim for Disability Insurance)"],
+      "evidenceTips": ["Physician certification", "Wage records"],
+      "links": [
+        {"label": "CA SDI", "url": "https://edd.ca.gov/disability/"}
+      ]
+    },
+    {
+      "code": "CA-SSP",
+      "name": "State Supplementary Payment",
+      "administeringBody": "California Department of Social Services",
+      "description": "State supplement to SSI benefits.",
+      "links": [
+        {"label": "SSP Info", "url": "https://www.cdss.ca.gov/ssi-ssp"}
+      ]
+    },
+    {
+      "code": "IHSS",
+      "name": "In-Home Supportive Services",
+      "administeringBody": "California Department of Social Services",
+      "description": "Services to help disabled persons remain safely in their homes.",
+      "links": [
+        {"label": "IHSS", "url": "https://www.cdss.ca.gov/in-home-supportive-services"}
+      ]
+    }
+  ],
+  "accommodationGuidance": [
+    "California FEHA requires interactive accommodation process",
+    "Broader definition of disability than federal ADA",
+    "Employers must explore all possible accommodations",
+    "Medical documentation should focus on functional limitations"
+  ],
+  "evidenceFocus": ["Medical records", "FEHA disability documentation", "Accommodation request correspondence"],
+  "limitationNotes": [
+    "FEHA complaints: 3 years from discriminatory act",
+    "Workers' comp claims: 1 year from injury date",
+    "SDI claims: Must file within 49 days of disability start"
+  ],
+  "updated": "2025-06-08"
+}

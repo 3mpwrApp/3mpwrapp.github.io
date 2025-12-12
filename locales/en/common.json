@@ -3209,6 +3209,21 @@
     "change": "Change",
     "cycle": "Tap to cycle through jurisdictions",
     "select": "Select jurisdiction",
+    "country": {
+      "label": "Country",
+      "select": "Select your country",
+      "canada": "Canada",
+      "usa": "United States",
+      "changed": "Country changed to {{name}}"
+    },
+    "region": {
+      "label": "Province/State",
+      "selectProvince": "Select province/territory",
+      "selectState": "Select state",
+      "select": "Select region",
+      "provinceTerritory": "Province/Territory",
+      "state": "State"
+    },
     "evidenceFocus": "Evidence Focus",
     "accommodationGuidance": "Accommodation Principles",
     "limitationNotes": "Limitations / Deadlines",
@@ -3260,6 +3275,7 @@
       "label": "Filter by jurisdiction",
       "all": "All jurisdictions",
       "canada": "National (Canada)",
+      "usa": "Federal (USA)",
       "selectPlaceholder": "Choose...",
       "noResults": "No results for this jurisdiction"
     }

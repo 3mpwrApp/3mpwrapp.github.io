@@ -1,0 +1,75 @@
+{
+  "code": "US-FED",
+  "name": "United States Federal",
+  "country": "US",
+  "workplaceInjury": {
+    "name": "Federal Workers' Compensation (OWCP)",
+    "initialClaimForm": "CA-1 (Traumatic) / CA-2 (Occupational Disease)",
+    "appealLevels": [
+      {"name": "Reconsideration", "body": "OWCP", "typicalDeadlineDays": 365, "notes": "Request within 1 year for reconsideration of decision."},
+      {"name": "Hearing", "body": "ECAB Branch of Hearings and Review", "notes": "Request oral or written hearing within 30 days."},
+      {"name": "Review", "body": "Employees' Compensation Appeals Board (ECAB)", "typicalDeadlineDays": 180, "notes": "Appeal within 180 days of final OWCP decision."}
+    ],
+    "links": [
+      {"label": "OWCP Overview", "url": "https://www.dol.gov/agencies/owcp"},
+      {"label": "FECA Claims", "url": "https://www.dol.gov/agencies/owcp/FECA"}
+    ],
+    "notes": "Federal Employees' Compensation Act (FECA) covers federal workers. Private sector covered by state workers' comp."
+  },
+  "humanRights": {
+    "name": "Equal Employment Opportunity Commission (EEOC)",
+    "complaintDeadlineMonths": 6,
+    "url": "https://www.eeoc.gov/",
+    "notes": "180 days for federal sector; 300 days if state/local agency exists. ADA, Rehabilitation Act enforcement."
+  },
+  "benefitPrograms": [
+    {
+      "code": "SSDI",
+      "name": "Social Security Disability Insurance",
+      "administeringBody": "Social Security Administration (SSA)",
+      "description": "Monthly benefits for workers with disabilities who have earned sufficient work credits.",
+      "keyForms": ["SSA-16 (Application)", "SSA-3368 (Function Report)", "SSA-3369 (Work History)"],
+      "evidenceTips": ["Complete medical records", "RFC assessments", "Treatment notes over 12+ months", "Work history documentation"],
+      "appealPath": ["Reconsideration", "Administrative Law Judge Hearing", "Appeals Council", "Federal Court"],
+      "links": [
+        {"label": "SSDI Overview", "url": "https://www.ssa.gov/benefits/disability/"},
+        {"label": "Apply Online", "url": "https://www.ssa.gov/applyfordisability/"}
+      ]
+    },
+    {
+      "code": "SSI",
+      "name": "Supplemental Security Income",
+      "administeringBody": "Social Security Administration (SSA)",
+      "description": "Needs-based monthly benefits for disabled individuals with limited income and resources.",
+      "evidenceTips": ["Medical evidence of disability", "Financial documentation", "Living arrangement info"],
+      "appealPath": ["Reconsideration", "Administrative Law Judge Hearing", "Appeals Council", "Federal Court"],
+      "links": [
+        {"label": "SSI Overview", "url": "https://www.ssa.gov/ssi/"}
+      ]
+    },
+    {
+      "code": "VA-DISABILITY",
+      "name": "VA Disability Compensation",
+      "administeringBody": "Department of Veterans Affairs",
+      "description": "Tax-free monthly benefits for veterans with service-connected disabilities.",
+      "evidenceTips": ["Service records", "Medical evidence linking condition to service", "C&P exam results"],
+      "links": [
+        {"label": "VA Disability", "url": "https://www.va.gov/disability/"}
+      ]
+    }
+  ],
+  "accommodationGuidance": [
+    "Request accommodations in writing under the ADA",
+    "Engage in interactive process with employer",
+    "Provide medical documentation of functional limitations (not diagnoses)",
+    "Document all accommodation requests and responses",
+    "Know that employers must provide reasonable accommodations unless undue hardship"
+  ],
+  "evidenceFocus": ["Medical records with functional limitations", "RFC (Residual Functional Capacity) assessments", "Treatment history", "Work limitations documentation"],
+  "limitationNotes": [
+    "EEOC charges: 180 days (federal) or 300 days (state agency exists) from discriminatory act",
+    "SSDI appeals: 60 days from decision notice",
+    "ADA claims: Follow EEOC process before federal court"
+  ],
+  "updated": "2025-06-08"
+}

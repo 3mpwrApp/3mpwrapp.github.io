@@ -596,5 +596,101 @@
     "scope": "province",
     "province": "YT",
     "category": "workers_comp"
+  },
+  {
+    "id": "us-988",
+    "title": "988 Suicide & Crisis Lifeline (USA)",
+    "description": "Call or text 988 for immediate crisis help. Available 24/7.",
+    "url": "https://988lifeline.org/",
+    "scope": "usa",
+    "category": "crisis"
+  },
+  {
+    "id": "us-samhsa",
+    "title": "SAMHSA National Helpline",
+    "description": "Free, confidential mental health and substance abuse support. 1-800-662-4357.",
+    "url": "https://www.samhsa.gov/find-help/national-helpline",
+    "scope": "usa",
+    "category": "crisis"
+  },
+  {
+    "id": "us-crisis-text",
+    "title": "Crisis Text Line",
+    "description": "Text HOME to 741741 for free crisis counseling.",
+    "url": "https://www.crisistextline.org/",
+    "scope": "usa",
+    "category": "crisis"
+  },
+  {
+    "id": "us-211",
+    "title": "211 United States",
+    "description": "Connect to local resources: food, housing, healthcare, crisis intervention.",
+    "url": "https://www.211.org/",
+    "scope": "usa",
+    "category": "crisis"
+  },
+  {
+    "id": "us-ndvh",
+    "title": "National Domestic Violence Hotline",
+    "description": "24/7 support for domestic violence. 1-800-799-7233.",
+    "url": "https://www.thehotline.org/",
+    "scope": "usa",
+    "category": "crisis"
+  },
+  {
+    "id": "us-ssa",
+    "title": "Social Security Administration (SSDI/SSI)",
+    "description": "Federal disability benefits information and applications.",
+    "url": "https://www.ssa.gov/benefits/disability/",
+    "scope": "usa",
+    "category": "benefits"
+  },
+  {
+    "id": "us-eeoc",
+    "title": "EEOC (Equal Employment Opportunity Commission)",
+    "description": "Enforces ADA workplace protections. File discrimination complaints.",
+    "url": "https://www.eeoc.gov/disability-discrimination",
+    "scope": "usa",
+    "category": "human_rights"
+  },
+  {
+    "id": "us-ada",
+    "title": "ADA.gov",
+    "description": "Americans with Disabilities Act information and guidance.",
+    "url": "https://www.ada.gov/",
+    "scope": "usa",
+    "category": "human_rights"
+  },
+  {
+    "id": "us-job-accommodations",
+    "title": "Job Accommodation Network (JAN)",
+    "description": "Free consultation on workplace accommodations.",
+    "url": "https://askjan.org/",
+    "scope": "usa",
+    "category": "employment"
+  },
+  {
+    "id": "us-dol-owcp",
+    "title": "OWCP (Federal Workers' Compensation)",
+    "description": "Federal employee workers' compensation claims.",
+    "url": "https://www.dol.gov/agencies/owcp",
+    "scope": "usa",
+    "category": "workers_comp"
+  },
+  {
+    "id": "us-nami",
+    "title": "NAMI (National Alliance on Mental Illness)",
+    "description": "Mental health education, support groups, and advocacy.",
+    "url": "https://www.nami.org/",
+    "scope": "usa",
+    "category": "mental_health"
+  },
+  {
+    "id": "us-disability-rights",
+    "title": "National Disability Rights Network",
+    "description": "Legal advocacy and protection for people with disabilities.",
+    "url": "https://www.ndrn.org/",
+    "scope": "usa",
+    "category": "legal"
   }
 ]

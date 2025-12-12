@@ -5,10 +5,11 @@ import { getJurisdiction, listJurisdictions } from '../data/jurisdictions';
 describe('jurisdictions data integrity', () => {
   const all = listJurisdictions();
 
-  it('includes expected codes (FED + ON)', () => {
+  it('includes expected codes (FED + ON + US-FED)', () => {
     const codes = all.map(j => j.code);
     expect(codes).toContain('FED');
     expect(codes).toContain('ON');
+    expect(codes).toContain('US-FED'); // USA Federal
   });
 
   it('federal (FED) and Ontario (ON) have core fields populated', () => {
@@ -22,7 +23,9 @@ describe('jurisdictions data integrity', () => {
 
   it('no jurisdiction objects are missing required basics', () => {
     for (const j of all) {
-      expect(j.code).toMatch(/^[A-Z]{2,3}$/);
+      // CA codes: 2-3 uppercase letters (FED, ON, BC, etc.)
+      // US codes: US-XX or US-XXX format (US-FED, US-CA, US-NY, etc.)
+      expect(j.code).toMatch(/^([A-Z]{2,3}|US-[A-Z]{2,3})$/);
       expect(j.name.length).toBeGreaterThan(1);
     }
   });

@@ -1,0 +1,51 @@
+{
+  "code": "US-TX",
+  "name": "Texas",
+  "country": "US",
+  "workplaceInjury": {
+    "name": "Texas Department of Insurance - Division of Workers' Compensation",
+    "initialClaimForm": "DWC-041 (Employee's Claim for Compensation)",
+    "appealLevels": [
+      {"name": "Benefit Review Conference", "body": "TDI-DWC", "notes": "Informal dispute resolution."},
+      {"name": "Contested Case Hearing", "body": "TDI-DWC", "notes": "Formal hearing before ALJ."},
+      {"name": "Appeals Panel", "body": "TDI-DWC", "typicalDeadlineDays": 15, "notes": "Appeal within 15 days of CCH decision."},
+      {"name": "District Court", "body": "Texas District Court", "typicalDeadlineDays": 45, "notes": "Judicial review within 45 days."}
+    ],
+    "links": [
+      {"label": "TX DWC", "url": "https://www.tdi.texas.gov/wc/"},
+      {"label": "Claim Forms", "url": "https://www.tdi.texas.gov/forms/dwc/index.html"}
+    ],
+    "notes": "Texas is the only state where workers' comp coverage is optional for private employers."
+  },
+  "humanRights": {
+    "name": "Texas Workforce Commission Civil Rights Division",
+    "complaintDeadlineMonths": 6,
+    "url": "https://www.twc.texas.gov/partners/civil-rights-discrimination-complaints",
+    "notes": "180 days from discriminatory act. Covers employers with 15+ employees."
+  },
+  "benefitPrograms": [
+    {
+      "code": "TX-WC",
+      "name": "Texas Workers' Compensation",
+      "administeringBody": "Texas Department of Insurance",
+      "description": "Benefits for work-related injuries (when employer has coverage).",
+      "evidenceTips": ["Medical records", "Employer injury report", "Wage documentation"],
+      "links": [
+        {"label": "TX WC Benefits", "url": "https://www.tdi.texas.gov/wc/employee/"}
+      ]
+    }
+  ],
+  "accommodationGuidance": [
+    "Texas follows federal ADA requirements",
+    "Request accommodations in writing",
+    "Provide medical documentation of limitations",
+    "Engage in interactive process"
+  ],
+  "evidenceFocus": ["Medical records", "Functional capacity evaluations", "Treating physician notes"],
+  "limitationNotes": [
+    "Workers' comp claims: 1 year from injury date",
+    "Civil rights complaints: 180 days from discriminatory act",
+    "Note: Many Texas employers are non-subscribers to workers' comp"
+  ],
+  "updated": "2025-06-08"
+}

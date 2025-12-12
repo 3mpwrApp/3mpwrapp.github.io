@@ -1,6 +1,7 @@
 {
   "code": "ON",
   "name": "Ontario",
+  "country": "CA",
   "workplaceInjury": {
     "name": "Workplace Safety and Insurance Board (WSIB)",
     "initialClaimForm": "Form 6 (Worker's Report)",

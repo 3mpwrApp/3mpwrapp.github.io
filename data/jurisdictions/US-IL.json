@@ -1,0 +1,60 @@
+{
+  "code": "US-IL",
+  "name": "Illinois",
+  "country": "US",
+  "workplaceInjury": {
+    "name": "Illinois Workers' Compensation Commission",
+    "initialClaimForm": "Application for Adjustment of Claim",
+    "appealLevels": [
+      {"name": "Arbitrator Hearing", "body": "IWCC", "notes": "Initial hearing before assigned arbitrator."},
+      {"name": "Commission Review", "body": "IWCC", "typicalDeadlineDays": 30, "notes": "Petition for review within 30 days."},
+      {"name": "Circuit Court", "body": "IL Circuit Court", "typicalDeadlineDays": 20, "notes": "Judicial review within 20 days of Commission decision."},
+      {"name": "Appellate Court", "body": "IL Appellate Court", "notes": "Further appeal as permitted."}
+    ],
+    "links": [
+      {"label": "IWCC", "url": "https://iwcc.illinois.gov/"},
+      {"label": "Employee Info", "url": "https://iwcc.illinois.gov/workers.html"}
+    ],
+    "notes": "Illinois has a 3-year statute of limitations from date of injury or last payment."
+  },
+  "humanRights": {
+    "name": "Illinois Department of Human Rights",
+    "complaintDeadlineMonths": 12,
+    "url": "https://dhr.illinois.gov/",
+    "notes": "300 days from discriminatory act. IHRA covers employers with 1+ employees for disability."
+  },
+  "benefitPrograms": [
+    {
+      "code": "IL-UI",
+      "name": "Illinois Unemployment Insurance",
+      "administeringBody": "Illinois Department of Employment Security",
+      "description": "Temporary income for unemployed workers.",
+      "links": [
+        {"label": "IL IDES", "url": "https://ides.illinois.gov/unemployment-insurance.html"}
+      ]
+    },
+    {
+      "code": "IL-WC",
+      "name": "Illinois Workers' Compensation",
+      "administeringBody": "Illinois Workers' Compensation Commission",
+      "description": "Benefits for work-related injuries and occupational diseases.",
+      "evidenceTips": ["Medical records", "Choice of physician documentation", "Wage statements"],
+      "links": [
+        {"label": "IL WC Info", "url": "https://iwcc.illinois.gov/workers.html"}
+      ]
+    }
+  ],
+  "accommodationGuidance": [
+    "Illinois Human Rights Act provides strong disability protections",
+    "IHRA covers employers with 1+ employees (broader than federal)",
+    "Request accommodations in writing",
+    "Document interactive process"
+  ],
+  "evidenceFocus": ["Medical records", "Treating physician opinions", "Functional limitations documentation"],
+  "limitationNotes": [
+    "Workers' comp claims: 3 years from injury or last payment",
+    "IDHR complaints: 300 days from discriminatory act",
+    "IHRA lawsuit: Within 90 days of IDHR right-to-sue"
+  ],
+  "updated": "2025-06-08"
+}

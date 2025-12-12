@@ -1,0 +1,60 @@
+{
+  "code": "US-NY",
+  "name": "New York",
+  "country": "US",
+  "workplaceInjury": {
+    "name": "New York Workers' Compensation Board",
+    "initialClaimForm": "C-3 (Employee Claim Form)",
+    "appealLevels": [
+      {"name": "Workers' Compensation Board Hearing", "body": "NY WCB", "notes": "Administrative law judge hearing."},
+      {"name": "Board Panel Review", "body": "NY WCB", "typicalDeadlineDays": 30, "notes": "Application for review within 30 days."},
+      {"name": "Appellate Division", "body": "NY Third Department", "typicalDeadlineDays": 30, "notes": "Appeal to Appellate Division within 30 days."}
+    ],
+    "links": [
+      {"label": "NY WCB", "url": "https://www.wcb.ny.gov/"},
+      {"label": "File a Claim", "url": "https://www.wcb.ny.gov/content/main/Workers/Workers.jsp"}
+    ],
+    "notes": "NY requires employers to post WCB notices and provide claim forms."
+  },
+  "humanRights": {
+    "name": "New York State Division of Human Rights",
+    "complaintDeadlineMonths": 12,
+    "url": "https://dhr.ny.gov/",
+    "notes": "NY Human Rights Law covers more employers than federal law. NYC has additional protections."
+  },
+  "benefitPrograms": [
+    {
+      "code": "NY-DBL",
+      "name": "New York Disability Benefits Law",
+      "administeringBody": "NY Workers' Compensation Board",
+      "description": "Short-term disability benefits for off-the-job illness or injury.",
+      "keyForms": ["DB-450 (Notice and Proof of Claim)"],
+      "evidenceTips": ["Physician certification", "Employer information"],
+      "links": [
+        {"label": "NY DBL", "url": "https://www.wcb.ny.gov/content/main/DisabilityBenefits/employer-db-requirements.jsp"}
+      ]
+    },
+    {
+      "code": "NY-PFL",
+      "name": "New York Paid Family Leave",
+      "administeringBody": "NY Workers' Compensation Board",
+      "description": "Job-protected, paid time off for family care and bonding.",
+      "links": [
+        {"label": "NY PFL", "url": "https://paidfamilyleave.ny.gov/"}
+      ]
+    }
+  ],
+  "accommodationGuidance": [
+    "NY Human Rights Law has broader disability definition",
+    "Employers must engage in cooperative dialogue",
+    "Document all accommodation requests and responses",
+    "NYC employers have additional notice requirements"
+  ],
+  "evidenceFocus": ["Medical records", "Functional limitations documentation", "Accommodation correspondence"],
+  "limitationNotes": [
+    "NY DHR complaints: 1 year from discriminatory act (3 years for employment in NYC)",
+    "Workers' comp: File within 2 years of injury",
+    "DBL claims: Within 30 days of disability"
+  ],
+  "updated": "2025-06-08"
+}

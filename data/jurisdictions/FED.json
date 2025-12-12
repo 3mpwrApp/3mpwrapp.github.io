@@ -1,6 +1,7 @@
 {
   "code": "FED",
   "name": "Canada (Federal)",
+  "country": "CA",
   "workplaceInjury": {
     "name": "(Provincial boards handle workplace injury)",
     "notes": "Workplace injury compensation is administered provincially; federal layer relevant mainly to federally regulated employers via the provincial boards in most cases."

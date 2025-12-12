@@ -14,8 +14,16 @@ import PE from './PE.json';
 import QC from './QC.json';
 import SK from './SK.json';
 import YT from './YT.json';
+// US Jurisdictions
+import US_CA from './US-CA.json';
+import US_FED from './US-FED.json';
+import US_FL from './US-FL.json';
+import US_IL from './US-IL.json';
+import US_NY from './US-NY.json';
+import US_TX from './US-TX.json';
 
 const MAP: Record<string, JurisdictionData> = {
+  // Canadian jurisdictions
   AB: AB as unknown as JurisdictionData,
   BC: BC as unknown as JurisdictionData,
   FED: FED as unknown as JurisdictionData,
@@ -30,18 +38,37 @@ const MAP: Record<string, JurisdictionData> = {
   QC: QC as unknown as JurisdictionData,
   SK: SK as unknown as JurisdictionData,
   YT: YT as unknown as JurisdictionData,
+  // US jurisdictions
+  'US-FED': US_FED as unknown as JurisdictionData,
+  'US-CA': US_CA as unknown as JurisdictionData,
+  'US-NY': US_NY as unknown as JurisdictionData,
+  'US-TX': US_TX as unknown as JurisdictionData,
+  'US-FL': US_FL as unknown as JurisdictionData,
+  'US-IL': US_IL as unknown as JurisdictionData,
 };
 
 function load(code: string): JurisdictionData | null {
-  return MAP[code.toUpperCase()] || null;
+  return MAP[code.toUpperCase()] || MAP[code] || null;
 }
 
-export const ALL_JURISDICTION_CODES = ['AB','BC','FED','MB','NB','NL','NS','NT','NU','ON','PE','QC','SK','YT'];
+// Canadian jurisdiction codes
+export const CA_JURISDICTION_CODES = ['AB','BC','FED','MB','NB','NL','NS','NT','NU','ON','PE','QC','SK','YT'];
+
+// US jurisdiction codes
+export const US_JURISDICTION_CODES = ['US-FED','US-CA','US-NY','US-TX','US-FL','US-IL'];
+
+// All jurisdiction codes
+export const ALL_JURISDICTION_CODES = [...CA_JURISDICTION_CODES, ...US_JURISDICTION_CODES];
 
 export function getJurisdiction(code: string): JurisdictionData | null {
-  return load(code.toUpperCase());
+  return load(code.toUpperCase()) || load(code);
 }
 
 export function listJurisdictions(): JurisdictionData[] {
   return ALL_JURISDICTION_CODES.map(c => load(c)).filter(Boolean) as JurisdictionData[];
+}
+
+export function listJurisdictionsByCountry(country: 'CA' | 'US'): JurisdictionData[] {
+  const codes = country === 'CA' ? CA_JURISDICTION_CODES : US_JURISDICTION_CODES;
+  return codes.map(c => load(c)).filter(Boolean) as JurisdictionData[];
 }
