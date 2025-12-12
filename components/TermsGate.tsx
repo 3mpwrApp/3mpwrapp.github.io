@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import {
+    AccessibilityInfo,
     Linking,
     Pressable,
     ScrollView,
@@ -22,8 +23,13 @@ try {
 } catch {}
 
 const STORAGE_KEY = "empowr.legal.acceptance.v3";
+const PROGRESS_STORAGE_KEY = "empowr.legal.progress.v1";
 const CURRENT_TERMS_VERSION = "3.0";
 const CURRENT_PRIVACY_VERSION = "2.0";
+
+// Accessibility constants - WCAG minimum 44px tap targets
+const MIN_TAP_SIZE = 44;
+const CHECKBOX_SIZE = 44;
 
 type AcceptanceState = {
   termsVersion: string | null;
@@ -38,7 +44,27 @@ type AcceptanceState = {
   dataOwnership: boolean;
 };
 
+// Progress state for resuming later
+type ProgressState = {
+  mode: ReviewMode;
+  currentStep: Step;
+  termsScrolledToBottom: boolean;
+  privacyScrolledToBottom: boolean;
+  medicalChecked: boolean;
+  legalChecked: boolean;
+  financialChecked: boolean;
+  aiChecked: boolean;
+  crisisChecked: boolean;
+  emergencyChecked: boolean;
+  responsibilityChecked: boolean;
+  dataOwnershipChecked: boolean;
+  lastSaved: number;
+};
+
+type ReviewMode = "quick" | "detailed";
+
 type Step =
+  | "mode-selection"
   | "welcome"
   | "terms"
   | "privacy"
@@ -47,7 +73,30 @@ type Step =
   | "financial"
   | "ai"
   | "crisis"
-  | "final";
+  | "final"
+  // Quick mode steps
+  | "quick-overview"
+  | "quick-disclaimers"
+  | "quick-final";
+
+const DETAILED_STEPS: Step[] = [
+  "welcome", "terms", "privacy", "medical", "legal", "financial", "ai", "crisis", "final"
+];
+const QUICK_STEPS: Step[] = ["quick-overview", "quick-disclaimers", "quick-final"];
+
+function getStepNumber(step: Step, mode: ReviewMode): number {
+  const steps = mode === "quick" ? QUICK_STEPS : DETAILED_STEPS;
+  const index = steps.indexOf(step);
+  return index >= 0 ? index + 1 : 1;
+}
+
+function getTotalSteps(mode: ReviewMode): number {
+  return mode === "quick" ? QUICK_STEPS.length : DETAILED_STEPS.length;
+}
+
+function getEstimatedTime(mode: ReviewMode): string {
+  return mode === "quick" ? "~2 minutes" : "~8-10 minutes";
+}
 
 export default function TermsGate({ children }: { children: React.ReactNode }) {
   const palette = useAppPalette();
@@ -55,7 +104,9 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
   
   const [loading, setLoading] = React.useState(true);
   const [accepted, setAccepted] = React.useState(false);
-  const [currentStep, setCurrentStep] = React.useState<Step>("welcome");
+  const [reviewMode, setReviewMode] = React.useState<ReviewMode | null>(null);
+  const [currentStep, setCurrentStep] = React.useState<Step>("mode-selection");
+  const [hasResumableProgress, setHasResumableProgress] = React.useState(false);
   
   // Individual acceptance checkboxes
   const [medicalChecked, setMedicalChecked] = React.useState(false);
@@ -70,6 +121,80 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
   // Scroll tracking
   const [termsScrolledToBottom, setTermsScrolledToBottom] = React.useState(false);
   const [privacyScrolledToBottom, setPrivacyScrolledToBottom] = React.useState(false);
+  
+  // Refs for scroll views
+  const termsScrollRef = React.useRef<ScrollView>(null);
+  const privacyScrollRef = React.useRef<ScrollView>(null);
+
+  // Save progress to AsyncStorage
+  const saveProgress = React.useCallback(async (step: Step, mode: ReviewMode) => {
+    const progress: ProgressState = {
+      mode,
+      currentStep: step,
+      termsScrolledToBottom,
+      privacyScrolledToBottom,
+      medicalChecked,
+      legalChecked,
+      financialChecked,
+      aiChecked,
+      crisisChecked,
+      emergencyChecked,
+      responsibilityChecked,
+      dataOwnershipChecked,
+      lastSaved: Date.now(),
+    };
+    try {
+      await AsyncStorage?.setItem?.(PROGRESS_STORAGE_KEY, JSON.stringify(progress));
+    } catch {
+      // Silent failure
+    }
+  }, [termsScrolledToBottom, privacyScrolledToBottom, medicalChecked, legalChecked, 
+      financialChecked, aiChecked, crisisChecked, emergencyChecked, 
+      responsibilityChecked, dataOwnershipChecked]);
+
+  // Load saved progress
+  const loadProgress = async (): Promise<ProgressState | null> => {
+    try {
+      const raw = await AsyncStorage?.getItem?.(PROGRESS_STORAGE_KEY);
+      if (raw) {
+        const progress: ProgressState = JSON.parse(raw);
+        // Check if progress is less than 24 hours old
+        const isRecent = Date.now() - progress.lastSaved < 24 * 60 * 60 * 1000;
+        return isRecent ? progress : null;
+      }
+    } catch {}
+    return null;
+  };
+
+  // Resume from saved progress
+  const resumeProgress = async () => {
+    const progress = await loadProgress();
+    if (progress) {
+      setReviewMode(progress.mode);
+      setCurrentStep(progress.currentStep);
+      setTermsScrolledToBottom(progress.termsScrolledToBottom);
+      setPrivacyScrolledToBottom(progress.privacyScrolledToBottom);
+      setMedicalChecked(progress.medicalChecked);
+      setLegalChecked(progress.legalChecked);
+      setFinancialChecked(progress.financialChecked);
+      setAiChecked(progress.aiChecked);
+      setCrisisChecked(progress.crisisChecked);
+      setEmergencyChecked(progress.emergencyChecked);
+      setResponsibilityChecked(progress.responsibilityChecked);
+      setDataOwnershipChecked(progress.dataOwnershipChecked);
+      
+      AccessibilityInfo.announceForAccessibility(
+        `Resuming from step ${getStepNumber(progress.currentStep, progress.mode)} of ${getTotalSteps(progress.mode)}`
+      );
+    }
+  };
+
+  // Clear saved progress
+  const clearProgress = async () => {
+    try {
+      await AsyncStorage?.removeItem?.(PROGRESS_STORAGE_KEY);
+    } catch {}
+  };
 
   React.useEffect(() => {
     (async () => {
@@ -99,7 +224,14 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             state.dataOwnership
           ) {
             setAccepted(true);
+            await clearProgress();
           }
+        }
+        
+        // Check for resumable progress
+        const progress = await loadProgress();
+        if (progress) {
+          setHasResumableProgress(true);
         }
       } catch {
         // If error, require re-acceptance
@@ -132,10 +264,33 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
     };
     try {
       await AsyncStorage?.setItem?.(STORAGE_KEY, JSON.stringify(state));
+      await clearProgress(); // Clear progress on successful completion
       setAccepted(true);
     } catch {
       // Handle error - could show alert
     }
+  };
+
+  // Navigate to next step with progress saving
+  const goToStep = async (step: Step) => {
+    setCurrentStep(step);
+    if (reviewMode) {
+      await saveProgress(step, reviewMode);
+      // Announce step change for screen readers
+      const stepNum = getStepNumber(step, reviewMode);
+      const total = getTotalSteps(reviewMode);
+      AccessibilityInfo.announceForAccessibility(
+        `Step ${stepNum} of ${total}`
+      );
+    }
+  };
+
+  // Skip to bottom for screen reader users
+  const skipToBottom = (scrollRef: React.RefObject<ScrollView | null>) => {
+    scrollRef.current?.scrollToEnd({ animated: true });
+    AccessibilityInfo.announceForAccessibility(
+      "Scrolled to bottom. You can now proceed to the next step."
+    );
   };
 
   const allDisclaimersAccepted =
@@ -183,18 +338,388 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       hitSlop={HIT_SLOP_12}
     >
       <View style={[styles.checkbox, checked && styles.checkboxChecked]}>
-        {checked && <Ionicons name="checkmark" size={16} color={palette.onPrimary} />}
+        {checked && <Ionicons name="checkmark" size={24} color={palette.onPrimary} />}
       </View>
       <Text style={styles.checkboxLabel}>{label}</Text>
     </Pressable>
   );
 
+  // Progress indicator component
+  const renderProgressIndicator = () => {
+    if (!reviewMode) return null;
+    const stepNum = getStepNumber(currentStep, reviewMode);
+    const total = getTotalSteps(reviewMode);
+    const progress = stepNum / total;
+    
+    return (
+      <View 
+        style={styles.progressContainer}
+        accessibilityRole="progressbar"
+        accessibilityValue={{ now: stepNum, min: 1, max: total }}
+        accessibilityLabel={`Step ${stepNum} of ${total}`}
+      >
+        <View style={styles.progressHeader}>
+          <Text style={[styles.progressText, { color: palette.text }]}>
+            Step {stepNum} of {total}
+          </Text>
+          <Text style={[styles.progressTime, { color: palette.textSecondary }]}>
+            {getEstimatedTime(reviewMode)} total
+          </Text>
+        </View>
+        <View style={[styles.progressBarBg, { backgroundColor: palette.surface }]}>
+          <View 
+            style={[
+              styles.progressBarFill, 
+              { backgroundColor: palette.primary, width: `${progress * 100}%` }
+            ]} 
+          />
+        </View>
+      </View>
+    );
+  };
+
   const renderStep = () => {
     switch (currentStep) {
+      case "mode-selection":
+        return (
+          <View style={styles.card} testID="terms-gate-mode-selection">
+            <Text style={styles.title} accessibilityRole="header">
+              ⚖️ Legal Review Required
+            </Text>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
+              <Text style={[styles.text, { fontSize: 16, marginBottom: 16 }]}>
+                Before using 3mpwrApp, you must review and accept our legal terms and disclaimers.
+              </Text>
+              
+              {/* Resume option if progress exists */}
+              {hasResumableProgress && (
+                <Pressable
+                  onPress={() => resumeProgress()}
+                  style={[styles.modeCard, { borderColor: palette.success, backgroundColor: palette.success + '15' }]}
+                  accessibilityRole="button"
+                  accessibilityLabel="Resume previous progress"
+                  hitSlop={HIT_SLOP_12}
+                >
+                  <View style={styles.modeCardContent}>
+                    <Ionicons name="bookmark" size={28} color={palette.success} />
+                    <View style={styles.modeCardText}>
+                      <Text style={[styles.modeTitle, { color: palette.success }]}>
+                        📌 Continue Where You Left Off
+                      </Text>
+                      <Text style={[styles.modeDesc, { color: palette.text }]}>
+                        Resume your saved progress from before.
+                      </Text>
+                    </View>
+                  </View>
+                </Pressable>
+              )}
+              
+              <Text style={[styles.text, { fontWeight: "600", marginBottom: 12, marginTop: 8 }]}>
+                Choose your review style:
+              </Text>
+              
+              {/* Quick Review Option */}
+              <Pressable
+                onPress={() => {
+                  setReviewMode("quick");
+                  goToStep("quick-overview");
+                }}
+                style={[styles.modeCard, { borderColor: palette.primary }]}
+                accessibilityRole="button"
+                accessibilityLabel="Quick Review, 3 steps, about 2 minutes. Recommended for most users."
+                hitSlop={HIT_SLOP_12}
+              >
+                <View style={styles.modeCardContent}>
+                  <Ionicons name="flash" size={28} color={palette.primary} />
+                  <View style={styles.modeCardText}>
+                    <Text style={[styles.modeTitle, { color: palette.primary }]}>
+                      ⚡ Quick Review
+                    </Text>
+                    <Text style={[styles.modeDesc, { color: palette.text }]}>
+                      3 steps • ~2 minutes{'\n'}
+                      Summarized terms with single acceptance
+                    </Text>
+                    <Text style={[styles.modeBadge, { color: palette.success }]}>
+                      ✓ Recommended for most users
+                    </Text>
+                  </View>
+                </View>
+              </Pressable>
+              
+              {/* Detailed Review Option */}
+              <Pressable
+                onPress={() => {
+                  setReviewMode("detailed");
+                  goToStep("welcome");
+                }}
+                style={[styles.modeCard, { borderColor: palette.textSecondary }]}
+                accessibilityRole="button"
+                accessibilityLabel="Detailed Review, 9 steps, about 8 to 10 minutes. For those who want to read everything."
+                hitSlop={HIT_SLOP_12}
+              >
+                <View style={styles.modeCardContent}>
+                  <Ionicons name="document-text" size={28} color={palette.textSecondary} />
+                  <View style={styles.modeCardText}>
+                    <Text style={[styles.modeTitle, { color: palette.text }]}>
+                      📋 Detailed Review
+                    </Text>
+                    <Text style={[styles.modeDesc, { color: palette.text }]}>
+                      9 steps • ~8-10 minutes{'\n'}
+                      Full text of each disclaimer separately
+                    </Text>
+                    <Text style={[styles.modeBadge, { color: palette.textSecondary }]}>
+                      For those who want to read everything
+                    </Text>
+                  </View>
+                </View>
+              </Pressable>
+            </ScrollView>
+            
+            {/* Quick-accept for automated testing */}
+            <Pressable
+              accessibilityRole="button"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+              onPress={quickAcceptAll}
+              accessibilityLabel="Quick Accept All Terms"
+              accessibilityHint="Accept all terms for automated testing"
+              testID="terms-quick-accept"
+              style={styles.testSkipButton}
+            >
+              <Text style={{ fontSize: 10, color: palette.muted }}>Skip (Test)</Text>
+            </Pressable>
+          </View>
+        );
+
+      // QUICK MODE STEPS
+      case "quick-overview":
+        return (
+          <View style={styles.card}>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">
+              📋 Terms Overview
+            </Text>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
+              <Text style={[styles.text, { fontSize: 16, fontWeight: "600", marginBottom: 12 }]}>
+                Here's a plain-language summary of what you're agreeing to:
+              </Text>
+              
+              <View style={styles.summaryBox}>
+                <Text style={[styles.summaryItem, { color: palette.text }]}>
+                  <Text style={{ fontWeight: "700" }}>🏥 Medical:</Text> This app doesn't provide medical advice. Always see real doctors for health decisions.
+                </Text>
+              </View>
+              
+              <View style={styles.summaryBox}>
+                <Text style={[styles.summaryItem, { color: palette.text }]}>
+                  <Text style={{ fontWeight: "700" }}>⚖️ Legal:</Text> This app isn't a lawyer. Get professional legal help for legal matters.
+                </Text>
+              </View>
+              
+              <View style={styles.summaryBox}>
+                <Text style={[styles.summaryItem, { color: palette.text }]}>
+                  <Text style={{ fontWeight: "700" }}>💰 Financial:</Text> This app can't give financial advice. Consult professionals for money decisions.
+                </Text>
+              </View>
+              
+              <View style={styles.summaryBox}>
+                <Text style={[styles.summaryItem, { color: palette.text }]}>
+                  <Text style={{ fontWeight: "700" }}>🤖 AI Content:</Text> AI can make mistakes. Always double-check AI-generated content.
+                </Text>
+              </View>
+              
+              <View style={styles.summaryBox}>
+                <Text style={[styles.summaryItem, { color: palette.text }]}>
+                  <Text style={{ fontWeight: "700" }}>🚨 Emergencies:</Text> In any emergency, call 911 immediately. This app cannot help in emergencies.
+                </Text>
+              </View>
+              
+              <View style={styles.summaryBox}>
+                <Text style={[styles.summaryItem, { color: palette.text }]}>
+                  <Text style={{ fontWeight: "700" }}>🔐 Your Data:</Text> You own 100% of your data. It stays on your device unless you choose to sync.
+                </Text>
+              </View>
+              
+              <View style={styles.linksRow}>
+                <Pressable
+                  onPress={() => openFullDocument("terms")}
+                  style={styles.link}
+                  accessibilityRole="link"
+                  hitSlop={HIT_SLOP_12}
+                >
+                  <Text style={styles.linkText}>📄 Full Terms</Text>
+                </Pressable>
+                <Pressable
+                  onPress={() => openFullDocument("privacy")}
+                  style={styles.link}
+                  accessibilityRole="link"
+                  hitSlop={HIT_SLOP_12}
+                >
+                  <Text style={styles.linkText}>🔐 Privacy Policy</Text>
+                </Pressable>
+              </View>
+            </ScrollView>
+            <GapView style={styles.buttonRow}>
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => goToStep("mode-selection")}
+                style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
+              >
+                <Text style={styles.buttonTextSecondary}>Back</Text>
+              </Pressable>
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => goToStep("quick-disclaimers")}
+                style={styles.button}
+                hitSlop={HIT_SLOP_12}
+              >
+                <Text style={styles.buttonText}>Next</Text>
+              </Pressable>
+            </GapView>
+          </View>
+        );
+
+      case "quick-disclaimers":
+        return (
+          <View style={styles.card}>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">
+              ⚠️ Important Disclaimers
+            </Text>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
+              <Text style={[styles.text, { fontSize: 15, fontWeight: "600", marginBottom: 16, color: palette.error }]}>
+                Please read and check each box to confirm you understand:
+              </Text>
+            </ScrollView>
+            
+            {renderCheckbox(
+              medicalChecked && legalChecked && financialChecked,
+              () => {
+                const newValue = !(medicalChecked && legalChecked && financialChecked);
+                setMedicalChecked(newValue);
+                setLegalChecked(newValue);
+                setFinancialChecked(newValue);
+              },
+              "I understand this app does NOT provide medical, legal, or financial advice. I will consult qualified professionals for these matters."
+            )}
+            
+            {renderCheckbox(
+              aiChecked,
+              () => setAiChecked(!aiChecked),
+              "I understand AI-generated content may contain errors and I will verify important information."
+            )}
+            
+            {renderCheckbox(
+              crisisChecked && emergencyChecked,
+              () => {
+                const newValue = !(crisisChecked && emergencyChecked);
+                setCrisisChecked(newValue);
+                setEmergencyChecked(newValue);
+              },
+              "I understand that in any emergency, I must call 911 immediately. This app is NOT a substitute for emergency services."
+            )}
+            
+            <GapView style={styles.buttonRow}>
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => goToStep("quick-overview")}
+                style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
+              >
+                <Text style={styles.buttonTextSecondary}>Back</Text>
+              </Pressable>
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => goToStep("quick-final")}
+                style={[
+                  styles.button, 
+                  !(medicalChecked && legalChecked && financialChecked && aiChecked && crisisChecked && emergencyChecked) && styles.buttonDisabled
+                ]}
+                disabled={!(medicalChecked && legalChecked && financialChecked && aiChecked && crisisChecked && emergencyChecked)}
+                hitSlop={HIT_SLOP_12}
+              >
+                <Text style={[
+                  styles.buttonText, 
+                  !(medicalChecked && legalChecked && financialChecked && aiChecked && crisisChecked && emergencyChecked) && styles.buttonTextDisabled
+                ]}>
+                  Next
+                </Text>
+              </Pressable>
+            </GapView>
+          </View>
+        );
+
+      case "quick-final":
+        return (
+          <View style={styles.card}>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">
+              ✅ Final Agreement
+            </Text>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
+              <Text style={[styles.text, { fontSize: 15, marginBottom: 12 }]}>
+                You're almost done! Please confirm these final items:
+              </Text>
+            </ScrollView>
+            
+            {renderCheckbox(
+              responsibilityChecked,
+              () => setResponsibilityChecked(!responsibilityChecked),
+              "I am responsible for my own decisions. This app is a tool to help me, not a replacement for professional services."
+            )}
+            
+            {renderCheckbox(
+              dataOwnershipChecked,
+              () => setDataOwnershipChecked(!dataOwnershipChecked),
+              "I understand my data belongs to me and is stored on my device."
+            )}
+            
+            <Text style={[styles.text, { marginTop: 16, fontSize: 12, opacity: 0.8 }]}>
+              By clicking "I Accept All Terms", you agree to our Terms of Service (v{CURRENT_TERMS_VERSION}), Privacy Policy (v{CURRENT_PRIVACY_VERSION}), and all disclaimers.
+            </Text>
+            
+            <GapView style={styles.buttonRow}>
+              <Pressable
+                onPress={() => goToStep("quick-disclaimers")}
+                style={[styles.button, styles.buttonSecondary]}
+                accessibilityRole="button"
+                hitSlop={HIT_SLOP_12}
+              >
+                <Text style={styles.buttonTextSecondary}>Back</Text>
+              </Pressable>
+              <Pressable
+                onPress={saveAcceptance}
+                style={[
+                  styles.button, 
+                  !allDisclaimersAccepted && styles.buttonDisabled,
+                  allDisclaimersAccepted && styles.buttonEnabled
+                ]}
+                disabled={!allDisclaimersAccepted}
+                accessibilityRole="button"
+                accessibilityLabel={allDisclaimersAccepted 
+                  ? "Accept all terms and continue" 
+                  : "Please check all boxes to enable this button"}
+                accessibilityState={{ disabled: !allDisclaimersAccepted }}
+                hitSlop={HIT_SLOP_12}
+              >
+                <Text style={[
+                  styles.buttonText,
+                  !allDisclaimersAccepted && styles.buttonTextDisabled,
+                  allDisclaimersAccepted && styles.buttonTextEnabled
+                ]}>
+                  {allDisclaimersAccepted ? '✓ I Accept All Terms' : 'I Accept All Terms'}
+                </Text>
+              </Pressable>
+            </GapView>
+          </View>
+        );
+
+      // DETAILED MODE STEPS
       case "welcome":
         return (
           <View style={styles.card} testID="terms-gate-welcome">
-            <Text style={styles.title}>⚠️ Welcome to 3mpwrApp</Text>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">⚠️ Welcome to 3mpwrApp</Text>
             <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontSize: 16, fontWeight: "600", marginBottom: 12 }]}>
                 Before you begin, you must review and accept our legal terms and disclaimers.
@@ -219,16 +744,26 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
                 ⚠️ You must accept ALL terms to use this app.
               </Text>
             </ScrollView>
-            <Pressable
-              onPress={() => setCurrentStep("terms")}
-              style={styles.button}
-              accessibilityRole="button"
-              accessibilityLabel="Continue to terms"
-              testID="terms-continue-button"
-              hitSlop={HIT_SLOP_12}
-            >
-              <Text style={styles.buttonText}>Continue</Text>
-            </Pressable>
+            <GapView style={styles.buttonRow}>
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => goToStep("mode-selection")}
+                style={[styles.button, styles.buttonSecondary]}
+                hitSlop={HIT_SLOP_12}
+              >
+                <Text style={styles.buttonTextSecondary}>Back</Text>
+              </Pressable>
+              <Pressable
+                onPress={() => goToStep("terms")}
+                style={styles.button}
+                accessibilityRole="button"
+                accessibilityLabel="Continue to terms"
+                testID="terms-continue-button"
+                hitSlop={HIT_SLOP_12}
+              >
+                <Text style={styles.buttonText}>Continue</Text>
+              </Pressable>
+            </GapView>
             {/* Quick-accept for automated testing - Robo can tap this 
                 Made visible as small button in corner for Robo to find */}
             <Pressable
@@ -238,15 +773,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               accessibilityLabel="Quick Accept All Terms"
               accessibilityHint="Accept all terms for automated testing"
               testID="terms-quick-accept"
-              style={{ 
-                position: 'absolute', 
-                top: 8, 
-                right: 8, 
-                paddingHorizontal: 8,
-                paddingVertical: 4,
-                backgroundColor: 'rgba(0,0,0,0.1)',
-                borderRadius: 4,
-              }}
+              style={styles.testSkipButton}
             >
               <Text style={{ fontSize: 10, color: palette.muted }}>Skip (Test)</Text>
             </Pressable>
@@ -256,8 +783,25 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       case "terms":
         return (
           <View style={styles.card}>
-            <Text style={styles.title}>Terms of Service v{CURRENT_TERMS_VERSION}</Text>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">Terms of Service v{CURRENT_TERMS_VERSION}</Text>
+            
+            {/* Skip to bottom button for screen reader users */}
+            <Pressable
+              onPress={() => skipToBottom(termsScrollRef)}
+              style={styles.skipToBottomButton}
+              accessibilityRole="button"
+              accessibilityLabel="Skip to bottom of terms. Use this if you've read the terms before."
+              hitSlop={HIT_SLOP_12}
+            >
+              <Ionicons name="arrow-down" size={16} color={palette.primary} />
+              <Text style={[styles.skipToBottomText, { color: palette.primary }]}>
+                Skip to Bottom
+              </Text>
+            </Pressable>
+            
             <ScrollView
+              ref={termsScrollRef}
               style={styles.scrollView}
               contentContainerStyle={{ paddingBottom: 12 }}
               onScroll={(e) => handleScroll(e, "terms")}
@@ -297,7 +841,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             <GapView style={styles.buttonRow}>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("welcome")}
+                onPress={() => goToStep("welcome")}
                 style={[styles.button, styles.buttonSecondary]}
                 hitSlop={HIT_SLOP_12}
               >
@@ -305,7 +849,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               </Pressable>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("privacy")}
+                onPress={() => goToStep("privacy")}
                 style={[styles.button, !termsScrolledToBottom && styles.buttonDisabled]}
                 disabled={!termsScrolledToBottom}
                 hitSlop={HIT_SLOP_12}
@@ -321,8 +865,25 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       case "privacy":
         return (
           <View style={styles.card}>
-            <Text style={styles.title}>Privacy Policy v{CURRENT_PRIVACY_VERSION}</Text>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">Privacy Policy v{CURRENT_PRIVACY_VERSION}</Text>
+            
+            {/* Skip to bottom button for screen reader users */}
+            <Pressable
+              onPress={() => skipToBottom(privacyScrollRef)}
+              style={styles.skipToBottomButton}
+              accessibilityRole="button"
+              accessibilityLabel="Skip to bottom of privacy policy. Use this if you've read it before."
+              hitSlop={HIT_SLOP_12}
+            >
+              <Ionicons name="arrow-down" size={16} color={palette.primary} />
+              <Text style={[styles.skipToBottomText, { color: palette.primary }]}>
+                Skip to Bottom
+              </Text>
+            </Pressable>
+            
             <ScrollView
+              ref={privacyScrollRef}
               style={styles.scrollView}
               contentContainerStyle={{ paddingBottom: 12 }}
               onScroll={(e) => handleScroll(e, "privacy")}
@@ -367,7 +928,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             <GapView style={styles.buttonRow}>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("terms")}
+                onPress={() => goToStep("terms")}
                 style={[styles.button, styles.buttonSecondary]}
                 hitSlop={HIT_SLOP_12}
               >
@@ -375,7 +936,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               </Pressable>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("medical")}
+                onPress={() => goToStep("medical")}
                 style={[styles.button, !privacyScrolledToBottom && styles.buttonDisabled]}
                 disabled={!privacyScrolledToBottom}
                 hitSlop={HIT_SLOP_12}
@@ -391,7 +952,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       case "medical":
         return (
           <View style={styles.card}>
-            <Text style={styles.title}>🏥 Medical Disclaimer</Text>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">🏥 Medical Disclaimer</Text>
             <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ THIS APP DOES NOT PROVIDE MEDICAL ADVICE
@@ -417,7 +979,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             <GapView style={styles.buttonRow}>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("privacy")}
+                onPress={() => goToStep("privacy")}
                 style={[styles.button, styles.buttonSecondary]}
                 hitSlop={HIT_SLOP_12}
               >
@@ -425,7 +987,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               </Pressable>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("legal")}
+                onPress={() => goToStep("legal")}
                 style={[styles.button, !medicalChecked && styles.buttonDisabled]}
                 disabled={!medicalChecked}
                 hitSlop={HIT_SLOP_12}
@@ -439,7 +1001,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       case "legal":
         return (
           <View style={styles.card}>
-            <Text style={styles.title}>⚖️ Legal Disclaimer</Text>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">⚖️ Legal Disclaimer</Text>
             <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ THIS APP DOES NOT PROVIDE LEGAL ADVICE
@@ -466,7 +1029,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             <GapView style={styles.buttonRow}>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("medical")}
+                onPress={() => goToStep("medical")}
                 style={[styles.button, styles.buttonSecondary]}
                 hitSlop={HIT_SLOP_12}
               >
@@ -474,7 +1037,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               </Pressable>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("financial")}
+                onPress={() => goToStep("financial")}
                 style={[styles.button, !legalChecked && styles.buttonDisabled]}
                 disabled={!legalChecked}
                 hitSlop={HIT_SLOP_12}
@@ -488,7 +1051,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       case "financial":
         return (
           <View style={styles.card}>
-            <Text style={styles.title}>💰 Financial Disclaimer</Text>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">💰 Financial Disclaimer</Text>
             <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ THIS APP DOES NOT PROVIDE FINANCIAL ADVICE
@@ -513,7 +1077,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             <GapView style={styles.buttonRow}>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("legal")}
+                onPress={() => goToStep("legal")}
                 style={[styles.button, styles.buttonSecondary]}
                 hitSlop={HIT_SLOP_12}
               >
@@ -521,7 +1085,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               </Pressable>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("ai")}
+                onPress={() => goToStep("ai")}
                 style={[styles.button, !financialChecked && styles.buttonDisabled]}
                 disabled={!financialChecked}
                 hitSlop={HIT_SLOP_12}
@@ -535,7 +1099,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       case "ai":
         return (
           <View style={styles.card}>
-            <Text style={styles.title}>🤖 AI Content Disclaimer</Text>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">🤖 AI Content Disclaimer</Text>
             <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ AI-GENERATED CONTENT MAY CONTAIN ERRORS
@@ -561,7 +1126,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             <GapView style={styles.buttonRow}>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("financial")}
+                onPress={() => goToStep("financial")}
                 style={[styles.button, styles.buttonSecondary]}
                 hitSlop={HIT_SLOP_12}
               >
@@ -569,7 +1134,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               </Pressable>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("crisis")}
+                onPress={() => goToStep("crisis")}
                 style={[styles.button, !aiChecked && styles.buttonDisabled]}
                 disabled={!aiChecked}
                 hitSlop={HIT_SLOP_12}
@@ -583,7 +1148,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       case "crisis":
         return (
           <View style={styles.card}>
-            <Text style={styles.title}>🚨 Crisis & Emergency Disclaimer</Text>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">🚨 Crisis & Emergency Disclaimer</Text>
             <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "700", color: palette.error, marginBottom: 8 }]}>
                 ⚠️ THIS APP IS NOT A SUBSTITUTE FOR EMERGENCY SERVICES
@@ -618,7 +1184,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             <GapView style={styles.buttonRow}>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("ai")}
+                onPress={() => goToStep("ai")}
                 style={[styles.button, styles.buttonSecondary]}
                 hitSlop={HIT_SLOP_12}
               >
@@ -626,7 +1192,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
               </Pressable>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setCurrentStep("final")}
+                onPress={() => goToStep("final")}
                 style={[styles.button, !(crisisChecked && emergencyChecked) && styles.buttonDisabled]}
                 disabled={!(crisisChecked && emergencyChecked)}
                 hitSlop={HIT_SLOP_12}
@@ -650,7 +1216,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
 
         return (
           <View style={styles.card}>
-            <Text style={styles.title}>✅ Final Agreement</Text>
+            {renderProgressIndicator()}
+            <Text style={styles.title} accessibilityRole="header">✅ Final Agreement</Text>
             <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingBottom: 12 }}>
               <Text style={[styles.text, { fontWeight: "600", marginBottom: 8 }]}>
                 Please confirm you understand and accept:
@@ -678,7 +1245,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
             </Text>
             <GapView style={styles.buttonRow}>
               <Pressable
-                onPress={() => setCurrentStep("crisis")}
+                onPress={() => goToStep("crisis")}
                 style={[styles.button, styles.buttonSecondary]}
                 accessibilityRole="button"
                 accessibilityLabel="Go back to previous step"
@@ -838,16 +1405,16 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       flexDirection: "row",
       alignItems: "flex-start",
       marginTop: 12,
-      paddingVertical: 12,
-      minHeight: 48,
+      paddingVertical: 8,
+      minHeight: MIN_TAP_SIZE,
     },
     checkbox: {
-      width: 24,
-      height: 24,
+      width: CHECKBOX_SIZE,
+      height: CHECKBOX_SIZE,
       borderWidth: 2,
       borderColor: palette.text,
       backgroundColor: palette.surface,
-      borderRadius: 4,
+      borderRadius: 6,
       marginRight: 12,
       alignItems: "center",
       justifyContent: "center",
@@ -859,8 +1426,107 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
     checkboxLabel: {
       flex: 1,
       color: palette.text,
+      fontSize: 15,
+      lineHeight: 22,
+    },
+    // Progress indicator styles
+    progressContainer: {
+      marginBottom: 16,
+    },
+    progressHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginBottom: 8,
+    },
+    progressText: {
+      fontSize: 14,
+      fontWeight: '600',
+    },
+    progressTime: {
+      fontSize: 12,
+    },
+    progressBarBg: {
+      height: 8,
+      borderRadius: 4,
+      overflow: 'hidden',
+    },
+    progressBarFill: {
+      height: '100%',
+      borderRadius: 4,
+    },
+    // Mode selection styles
+    modeCard: {
+      borderWidth: 2,
+      borderRadius: 12,
+      padding: 16,
+      marginBottom: 12,
+      minHeight: MIN_TAP_SIZE,
+    },
+    modeCardContent: {
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+      gap: 12,
+    },
+    modeCardText: {
+      flex: 1,
+    },
+    modeTitle: {
+      fontSize: 17,
+      fontWeight: '700',
+      marginBottom: 4,
+    },
+    modeDesc: {
       fontSize: 14,
       lineHeight: 20,
+      marginBottom: 4,
+    },
+    modeBadge: {
+      fontSize: 12,
+      fontWeight: '600',
+      marginTop: 4,
+    },
+    // Skip to bottom button
+    skipToBottomButton: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingVertical: 8,
+      paddingHorizontal: 12,
+      marginBottom: 8,
+      minHeight: MIN_TAP_SIZE,
+      gap: 4,
+    },
+    skipToBottomText: {
+      fontSize: 14,
+      fontWeight: '600',
+    },
+    // Summary box for quick mode
+    summaryBox: {
+      padding: 12,
+      marginBottom: 8,
+      borderRadius: 8,
+      backgroundColor: 'rgba(0,0,0,0.03)',
+    },
+    summaryItem: {
+      fontSize: 14,
+      lineHeight: 20,
+    },
+    // Links row
+    linksRow: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      marginTop: 16,
+    },
+    // Test skip button
+    testSkipButton: {
+      position: 'absolute', 
+      top: 8, 
+      right: 8, 
+      paddingHorizontal: 8,
+      paddingVertical: 4,
+      backgroundColor: 'rgba(0,0,0,0.1)',
+      borderRadius: 4,
     },
   });
 }
