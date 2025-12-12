@@ -149,7 +149,7 @@ function printSection(title, arr, fields) {
 }
 
 const totalFindings = suspicious.schema.length + suspicious.trackEventParams.length + suspicious.literals.length;
-const soft = process.env.PII_SCAN_SOFT === '1';
+const soft = process.env.PII_SCAN_SOFT === '1' || process.argv.includes('--soft');
 if (totalFindings === 0) {
   console.log('[analytics-pii-scan] No suspicious patterns found.');
   process.exit(0);
