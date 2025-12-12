@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-11T18:06:04.374Z",
+  "lastUpdated": "2025-12-12T00:06:26.911Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 5060,
+      "totalPosts": 5085,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-11T18:05:54.794Z"
+      "lastSeen": "2025-12-12T00:06:18.503Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 5075,
+      "totalPosts": 5100,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-11T18:05:57.000Z"
+      "lastSeen": "2025-12-12T00:06:20.280Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 5044,
-      "recentPosts": 25,
+      "totalPosts": 5067,
+      "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-11T18:05:59.173Z"
+      "lastSeen": "2025-12-12T00:06:22.188Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 5068,
+      "totalPosts": 5093,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-11T18:06:01.248Z"
+      "lastSeen": "2025-12-12T00:06:23.961Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 5075,
+      "totalPosts": 5100,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-11T18:06:03.371Z"
+      "lastSeen": "2025-12-12T00:06:25.908Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Nun.\n\n#DisabilityRights\n#schwerbehinderung",
-      "author": "bloom-of-many.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Throwing it back to @zackpolanski.bsky.social on Channel 4’s The Last Leg for International Day of Persons With Disabilities (Disabled People) today.\n\n#NothingAboutUsWithoutUs #DisabilityJustice\n#DisabilityRights\n#InclusionMatters #AccessibilityForAll\n#EquityNotCharity\n#BreakTheBarriers #EndAbleism",
-      "author": "cambsgreenparty.bsky.social",
-      "engagement": 14,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Nun.\n\n#DisabilityRights\n#schwerbehinderung",
       "author": "bloom-of-many.bsky.social",
@@ -338,6 +314,30 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 38,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Trying to help a blind Disney fan out by signal-boosting this. Disney makes phenomenal Audio Description tracks, and he'd love to see them added to these particular movies. Please consider helping him out by signing.\n\nc.org/Gw5JJJmJkH\n\n#AudioDescription #Accessibility #ZombieMovies",
+      "author": "dave-wallace.bsky.social",
+      "engagement": 22,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 36
+      "count": 32
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 30
     },
     {
       "keyword": "cripthevote",
@@ -360,10 +360,6 @@
     {
       "keyword": "disabilityjustice",
       "count": 27
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 14
     },
     {
       "keyword": "altcitizen",
@@ -380,6 +376,10 @@
     {
       "keyword": "disabilityrights disabilityrebellion",
       "count": 12
+    },
+    {
+      "keyword": "accessibility a11y",
+      "count": 10
     },
     {
       "keyword": "disabled people",
