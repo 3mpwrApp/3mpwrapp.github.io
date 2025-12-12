@@ -1,6 +1,6 @@
 # Analytics Event Report
 
-Generated: 2025-12-12T02:34:06.557Z
+Generated: 2025-12-12T03:38:20.307Z
 
 ## Summary
 
@@ -95,10 +95,10 @@ Generated: 2025-12-12T02:34:06.557Z
 | energy_spend | 1 | OK |
 | energy_reset_day | 1 | OK |
 | wellness_opposite_next_step | 1 | OK |
-| campaign_create | 1 | OK |
 | campaign_share | 1 | OK |
 | campaign_leave | 1 | OK |
 | campaign_join | 1 | OK |
+| campaign_create | 1 | OK |
 | podcast_share | 1 | OK |
 | letter_wizard_save | 1 | OK |
 | letter_wizard_load | 1 | OK |
