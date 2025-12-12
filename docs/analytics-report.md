@@ -1,6 +1,6 @@
 # Analytics Event Report
 
-Generated: 2025-12-12T17:55:25.133Z
+Generated: 2025-12-12T18:05:40.886Z
 
 ## Summary
 
@@ -9,8 +9,8 @@ Generated: 2025-12-12T17:55:25.133Z
 - Total literal emissions (static scan): 127
 - Missing (used not registered): 0
 - Unused (registered not used): 42
-- Sensitive field occurrences (schema): 5
-- Classification counts: other=2, secret=1, pii=2
+- Sensitive field occurrences (schema): 6
+- Classification counts: other=2, secret=1, pii=3
 
 ### Unused
 
