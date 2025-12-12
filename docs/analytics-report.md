@@ -1,16 +1,16 @@
 # Analytics Event Report
 
-Generated: 2025-12-12T03:38:20.307Z
+Generated: 2025-12-12T16:57:19.236Z
 
 ## Summary
 
-- Registry events: 56
+- Registry events: 78
 - Unique events referenced in code: 33
 - Total literal emissions (static scan): 36
 - Missing (used not registered): 0
-- Unused (registered not used): 23
-- Sensitive field occurrences (schema): 4
-- Classification counts: other=2, secret=1, pii=1
+- Unused (registered not used): 45
+- Sensitive field occurrences (schema): 5
+- Classification counts: other=2, secret=1, pii=2
 
 ### Unused
 
@@ -37,6 +37,28 @@ Generated: 2025-12-12T03:38:20.307Z
 - jurisdiction.changed
 - jurisdiction.deadline_calculated
 - jurisdiction.form_helper_used
+- beta.session.start
+- beta.session.end
+- beta.feedback.banner.shown
+- beta.feedback.banner.dismissed
+- beta.feedback.initiated
+- beta.discord.opened
+- beta.nps.survey.shown
+- beta.nps.score.selected
+- beta.nps.survey.completed
+- beta.nps.survey.dismissed
+- beta.donation.button.shown
+- beta.donation.button.pressed
+- beta.onboarding.quick.started
+- beta.onboarding.quick.completed
+- beta.feature.first_use
+- beta.tab.visit
+- beta.complexity.mode.changed
+- beta.error.encountered
+- beta.crash.recovered
+- beta.a11y.feature.enabled
+- beta.tool.usage
+- beta.session.duration
 
 ## Categories
 
@@ -47,6 +69,7 @@ Generated: 2025-12-12T03:38:20.307Z
 | advocacy | 8 |
 | ai_command_center_used | 1 |
 | assistant | 4 |
+| beta | 22 |
 | bookmark_add | 1 |
 | bookmark_clear_all | 1 |
 | bookmark_remove | 1 |
@@ -95,10 +118,10 @@ Generated: 2025-12-12T03:38:20.307Z
 | energy_spend | 1 | OK |
 | energy_reset_day | 1 | OK |
 | wellness_opposite_next_step | 1 | OK |
+| campaign_create | 1 | OK |
 | campaign_share | 1 | OK |
 | campaign_leave | 1 | OK |
 | campaign_join | 1 | OK |
-| campaign_create | 1 | OK |
 | podcast_share | 1 | OK |
 | letter_wizard_save | 1 | OK |
 | letter_wizard_load | 1 | OK |

@@ -1,6 +1,8 @@
 /**
  * Security Manager - Central coordinator for all security features
  * Manages initialization, monitoring, and enforcement of security policies
+ * 
+ * MAXIMUM PROTECTION MODE - Integrates all security subsystems
  */
 
 import { Platform } from 'react-native';
@@ -8,35 +10,63 @@ import { Platform } from 'react-native';
 import { logger } from '../../utils/logger';
 import { logActivity } from '../activity';
 
-interface SecurityConfig {
+import { getBiometricCapabilities } from './biometricAuth';
+import { startMemoryProtection, stopMemoryProtection } from './memoryProtection';
+import { isRASPActive, startRASPMonitoring, stopRASPMonitoring } from './raspEngine';
+import { getSecurityState as getCoreState, initializeSecurityCore } from './securityCore';
+import { performFullThreatScan } from './threatDetection';
+
+export interface SecurityConfig {
   enableTamperDetection: boolean;
   enableRootJailbreakCheck: boolean;
   enableIntegrityValidation: boolean;
   enableSecureStorage: boolean;
+  enableRASP: boolean;
+  enableMemoryProtection: boolean;
+  enableBiometric: boolean;
   strictBYOCMode: boolean;
   allowDebugging: boolean;
+  raspCheckIntervalMs: number;
 }
 
-interface SecurityState {
+export interface SecurityState {
   initialized: boolean;
   isSecure: boolean;
   threats: SecurityThreat[];
   lastCheck: number;
+  raspActive: boolean;
+  biometricAvailable: boolean;
+  riskScore: number;
 }
 
-interface SecurityThreat {
-  type: 'tamper' | 'root' | 'debug' | 'integrity' | 'network';
+export interface SecurityThreat {
+  type: 'tamper' | 'root' | 'debug' | 'integrity' | 'network' | 'hook' | 'emulator';
   severity: 'low' | 'medium' | 'high' | 'critical';
   message: string;
   timestamp: number;
   blocked: boolean;
 }
 
+export interface SecurityStatus {
+  initialized: boolean;
+  secure: boolean;
+  threatLevel: 'none' | 'low' | 'medium' | 'high' | 'critical';
+  threatCount: number;
+  riskScore: number;
+  raspActive: boolean;
+  biometricAvailable: boolean;
+  lastCheck: number;
+  recommendations: string[];
+}
+
 let securityState: SecurityState = {
   initialized: false,
   isSecure: false,
   threats: [],
-  lastCheck: 0
+  lastCheck: 0,
+  raspActive: false,
+  biometricAvailable: false,
+  riskScore: 0,
 };
 
 let securityConfig: SecurityConfig = {
@@ -44,12 +74,16 @@ let securityConfig: SecurityConfig = {
   enableRootJailbreakCheck: true,
   enableIntegrityValidation: true,
   enableSecureStorage: true,
+  enableRASP: true,
+  enableMemoryProtection: true,
+  enableBiometric: true,
   strictBYOCMode: process.env.EXPO_PUBLIC_DATA_POLICY === 'strict_byoc',
-  allowDebugging: __DEV__
+  allowDebugging: __DEV__,
+  raspCheckIntervalMs: 30000,
 };
 
 /**
- * Initialize security framework
+ * Initialize security framework with MAXIMUM PROTECTION
  * Call this early in app lifecycle
  */
 
@@ -60,24 +94,52 @@ export async function initializeSecurity(config?: Partial<SecurityConfig>): Prom
       securityConfig = { ...securityConfig, ...config };
     }
 
+    // Initialize security core
+    initializeSecurityCore();
+
     // Log security initialization
     await logActivity({
       type: 'security.init',
       metadata: {
         platform: Platform.OS,
         strictMode: securityConfig.strictBYOCMode,
-        debugMode: securityConfig.allowDebugging
+        debugMode: securityConfig.allowDebugging,
+        raspEnabled: securityConfig.enableRASP,
+        memoryProtectionEnabled: securityConfig.enableMemoryProtection,
       }
     });
 
-    // Perform initial security checks
-    const threats = await performSecurityCheck();
-    
+    // Perform comprehensive threat scan
+    const threatScan = await performFullThreatScan();
+    const threats = convertThreatScanToThreats(threatScan);
+
+    // Start RASP monitoring if enabled
+    if (securityConfig.enableRASP && !securityConfig.allowDebugging) {
+      startRASPMonitoring({
+        checkIntervalMs: securityConfig.raspCheckIntervalMs,
+        enabled: true,
+      });
+    }
+
+    // Start memory protection if enabled
+    if (securityConfig.enableMemoryProtection) {
+      startMemoryProtection({
+        enabled: true,
+        wipeOnBackground: true,
+      });
+    }
+
+    // Check biometric capabilities
+    const biometricCaps = await getBiometricCapabilities();
+
     securityState = {
       initialized: true,
       isSecure: threats.length === 0,
       threats,
-      lastCheck: Date.now()
+      lastCheck: Date.now(),
+      raspActive: isRASPActive(),
+      biometricAvailable: biometricCaps.available && biometricCaps.enrolled,
+      riskScore: threatScan.riskScore,
     };
 
     // Handle critical threats immediately
@@ -87,11 +149,82 @@ export async function initializeSecurity(config?: Partial<SecurityConfig>): Prom
       return false;
     }
 
+    logger.log('[Security] Framework initialized successfully');
     return true;
   } catch (error) {
     logger.error('Security initialization failed:', error);
     return false;
   }
+}
+
+/**
+ * Convert threat scan result to SecurityThreat array
+ */
+function convertThreatScanToThreats(scan: Awaited<ReturnType<typeof performFullThreatScan>>): SecurityThreat[] {
+  const threats: SecurityThreat[] = [];
+  const now = Date.now();
+
+  if (scan.root.detected) {
+    threats.push({
+      type: 'root',
+      severity: scan.root.confidence >= 80 ? 'critical' : 'high',
+      message: 'Device appears to be rooted',
+      timestamp: now,
+      blocked: scan.root.confidence >= 80,
+    });
+  }
+
+  if (scan.jailbreak.detected) {
+    threats.push({
+      type: 'root',
+      severity: scan.jailbreak.confidence >= 80 ? 'critical' : 'high',
+      message: 'Device appears to be jailbroken',
+      timestamp: now,
+      blocked: scan.jailbreak.confidence >= 80,
+    });
+  }
+
+  if (scan.emulator.detected) {
+    threats.push({
+      type: 'emulator',
+      severity: 'medium',
+      message: 'Running in emulator/simulator',
+      timestamp: now,
+      blocked: false,
+    });
+  }
+
+  if (scan.debugger.detected) {
+    threats.push({
+      type: 'debug',
+      severity: 'high',
+      message: 'Debugger detected',
+      timestamp: now,
+      blocked: !securityConfig.allowDebugging,
+    });
+  }
+
+  if (scan.hooks.detected) {
+    threats.push({
+      type: 'hook',
+      severity: 'critical',
+      message: 'Hooking framework detected (Frida/Xposed)',
+      timestamp: now,
+      blocked: true,
+    });
+  }
+
+  if (scan.proxy.detected) {
+    threats.push({
+      type: 'network',
+      severity: 'medium',
+      message: 'Network proxy detected',
+      timestamp: now,
+      blocked: false,
+    });
+  }
+
+  return threats;
 }
 
 /**
@@ -269,6 +402,52 @@ export function getSecurityState(): SecurityState {
 }
 
 /**
+ * Get comprehensive security status
+ */
+export function getSecurityStatus(): SecurityStatus {
+  const coreState = getCoreState();
+  
+  const recommendations: string[] = [];
+  
+  if (securityState.threats.some(t => t.type === 'root')) {
+    recommendations.push('Consider using a non-rooted device for sensitive operations');
+  }
+  
+  if (!securityState.biometricAvailable) {
+    recommendations.push('Enable biometric authentication for additional security');
+  }
+  
+  if (!securityState.raspActive && !securityConfig.allowDebugging) {
+    recommendations.push('RASP monitoring is not active');
+  }
+  
+  if (securityState.threats.some(t => t.type === 'hook')) {
+    recommendations.push('Remove hooking frameworks like Frida or Xposed');
+  }
+
+  return {
+    initialized: securityState.initialized,
+    secure: securityState.isSecure,
+    threatLevel: coreState.threatLevel,
+    threatCount: securityState.threats.length,
+    riskScore: securityState.riskScore,
+    raspActive: securityState.raspActive,
+    biometricAvailable: securityState.biometricAvailable,
+    lastCheck: securityState.lastCheck,
+    recommendations,
+  };
+}
+
+/**
+ * Stop all security monitoring
+ */
+export function stopSecurityMonitoring(): void {
+  stopRASPMonitoring();
+  stopMemoryProtection();
+  logger.log('[Security] All monitoring stopped');
+}
+
+/**
  * Update security configuration
  */
 
@@ -305,9 +484,16 @@ export async function monitorSecurity(): Promise<void> {
  */
 
 export {
-    securityConfig,
-    type SecurityConfig,
-    type SecurityState,
-    type SecurityThreat
+    securityConfig
+};
+
+export default {
+  initializeSecurity,
+  performSecurityCheck,
+  getSecurityState,
+  getSecurityStatus,
+  updateSecurityConfig,
+  monitorSecurity,
+  stopSecurityMonitoring,
 };
 

@@ -461,7 +461,7 @@ function TelemetryInit() {
 
 function SecurityInit() {
   React.useEffect(() => {
-    // Initialize security framework on app startup
+    // Initialize MAXIMUM PROTECTION security framework on app startup
     import("../services/security")
       .then((module) => {
         if (module && typeof module.initializeSecurity === 'function') {
@@ -470,8 +470,12 @@ function SecurityInit() {
             enableRootJailbreakCheck: true,
             enableIntegrityValidation: true,
             enableSecureStorage: true,
+            enableRASP: true,               // Runtime Application Self-Protection
+            enableMemoryProtection: true,   // Memory scrambling & protection
+            enableBiometric: true,          // Biometric authentication support
             strictBYOCMode: process.env.EXPO_PUBLIC_DATA_POLICY === 'strict_byoc',
-            allowDebugging: __DEV__
+            allowDebugging: __DEV__,
+            raspCheckIntervalMs: 30000,     // Check every 30 seconds
           });
         } else {
           throw new Error('initializeSecurity is not a function (module may have failed to load)');
@@ -479,7 +483,7 @@ function SecurityInit() {
       })
       .then((success: boolean) => {
         if (__DEV__) {
-          logger.log('🔒 Security framework initialized:', success ? 'SUCCESS' : 'FAILED');
+          logger.log('🔒 Security framework initialized:', success ? 'SUCCESS (MAXIMUM PROTECTION)' : 'FAILED');
         }
       })
       .catch((error: Error) => {

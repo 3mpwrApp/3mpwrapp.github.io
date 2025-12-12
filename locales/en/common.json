@@ -1055,7 +1055,21 @@
     "exportFailedTitle": "Export failed",
     "exportFailedBody": "Could not create file.",
     "subtitle": "Paste a bureaucratic letter to simplify into plain language. ASL video summary requires server integration.",
-    "placeholder": "Paste text here"
+    "placeholder": "Paste text here",
+    "noText": "No text",
+    "enterText": "Please enter some text to translate",
+    "quickTitle": "Quick Translate",
+    "quickDesc": "Paste complex legal, medical, or government text to get a plain language explanation.",
+    "inputLabel": "Text to translate",
+    "translate": "Translate to plain language",
+    "translateBtn": "Translate to Plain Language",
+    "common": "Common Translations",
+    "denialLetter": "Translate Denial Letter",
+    "medicalReport": "Translate Medical Report",
+    "legalDoc": "Translate Legal Document",
+    "needMore": "Need more AI help?",
+    "goInterpreter": "Analyze full documents",
+    "goAssistant": "Ask a question"
   },
   "settings": {
     "wellness": "Wellness",
@@ -2166,6 +2180,14 @@
     "show": "Show"
   },
   "templates": {
+    "total": "Templates",
+    "created": "Created",
+    "saved": "Saved",
+    "categories": "Categories",
+    "actions": "Actions",
+    "customTemplate": "Create Custom Template",
+    "importTemplate": "Import Template",
+    "exportAll": "Export All Letters",
     "evidenceLocker": {
       "subtitle": "Securely store notes and files",
       "title": "Evidence Locker",
@@ -2931,6 +2953,23 @@
     "emailNotConfiguredTitle": "Email not configured",
     "emailNotConfiguredBody": "Please email {{email}}",
     "validationMissing": "Subject and message required"
+  },
+  
+  "referral": {
+    "title": "Invite Friends",
+    "subtitle": "Share 3mpwr and earn rewards",
+    "yourCode": "Your referral code",
+    "friends": "Friends joined",
+    "rewards": "Rewards earned",
+    "nextReward": "Invite {{count}} more for: {{reward}}",
+    "share": "Share Invite Link",
+    "copied": "Copied!",
+    "shareTitle": "Join me on 3mpwr",
+    "shareMessage": "I'm using 3mpwr App for disability advocacy. Use my code {{code}}!",
+    "invalidCode": "Invalid referral code",
+    "alreadyReferred": "You've already used a referral code",
+    "success": "Referral code applied!",
+    "rewardUnlocked": "New reward unlocked: {{reward}}"
   },
   
   "auth": {
@@ -4074,6 +4113,326 @@
       "label": "Emergency exit - Safe word",
       "hint": "Tap to immediately exit to a calm, safe space",
       "announce": "Emergency exit activated. You are safe. Navigating to calm space."
+    }
+  },
+  "betaFeedback": {
+    "title": "Help Us Improve 3mpwr",
+    "message": "Your feedback shapes the app. Found a bug? Have an idea?",
+    "emailButton": "Send Feedback",
+    "discordButton": "Join Discord",
+    "dismiss": "Dismiss",
+    "a11yBanner": "Beta feedback banner. Help us improve 3mpwr by sharing feedback.",
+    "a11yDismiss": "Dismiss beta feedback banner"
+  },
+  "nps": {
+    "title": "Quick Question",
+    "question": "How likely are you to recommend 3mpwr to a friend or colleague with a disability?",
+    "notLikely": "Not likely",
+    "veryLikely": "Very likely",
+    "promoterFollowUp": "Awesome! What do you love most about 3mpwr?",
+    "passiveFollowUp": "Thanks! What would make 3mpwr better for you?",
+    "detractorFollowUp": "We're sorry to hear that. What's the main issue you're experiencing?",
+    "placeholder": "Share your thoughts (optional)",
+    "submit": "Submit",
+    "skip": "Skip",
+    "thankYou": "Thank you!",
+    "thankYouMessage": "Your feedback helps us build a better app for everyone.",
+    "a11yScore": "Score {{score}} out of 10",
+    "a11yQuestion": "How likely are you to recommend 3mpwr? Rate from 0 not likely to 10 very likely."
+  },
+  "quickOnboarding": {
+    "welcome": "Welcome to 3mpwr",
+    "welcomeMessage": "Your companion for disability advocacy, wellness, and community.",
+    "disclaimers": "By continuing, you agree to our Terms of Service and Privacy Policy.",
+    "readTerms": "Read Full Terms",
+    "readPrivacy": "Read Privacy Policy",
+    "continue": "Continue",
+    "chooseMode": "Choose Your Experience",
+    "chooseModeDesc": "Select how much of the app you want to see. You can change this anytime in Settings.",
+    "simpleMode": "Simple",
+    "simpleModeDesc": "Essential features only. Best for new users or when you want less overwhelm.",
+    "standardMode": "Standard",
+    "standardModeDesc": "Balanced experience with most features. Recommended for most users.",
+    "powerMode": "Power User",
+    "powerModeDesc": "All features unlocked. For experienced users who want everything.",
+    "ready": "You're All Set!",
+    "readyMessage": "Explore the app at your own pace. Here are some tips to get started:",
+    "tip1": "Tap the tabs at the bottom to explore different areas",
+    "tip2": "Use the Settings tab to customize your experience",
+    "tip3": "Check out Wellness for self-care tools and exercises",
+    "getStarted": "Get Started",
+    "a11yStepIndicator": "Step {{current}} of {{total}}"
+  },
+  "donation": {
+    "support": "Support",
+    "supportUs": "Support 3mpwr",
+    "supportA11y": "Support 3mpwr development. Opens donation page.",
+    "bannerMessage": "Help keep 3mpwr free and growing",
+    "donateNow": "Donate now",
+    "cardTitle": "Support 3mpwr",
+    "cardMessage": "3mpwr is free and community-driven. Your support helps us keep developing features for the disability community.",
+    "cardFooter": "Every contribution makes a difference",
+    "chooseMethod": "Choose how to support"
+  },
+  "powerTool": {
+    "moreTabs": "{{count}} more tabs in {{mode}} mode",
+    "noTabs": "No tabs available"
+  },
+  "energy": {
+    "commandCenter": {
+      "title": "Energy Command Center",
+      "subtitle": "Track energy, mood, sleep, and pacing in one place"
+    },
+    "current": "Current Energy",
+    "spendSpoon": "Spend 1 spoon",
+    "recoverSpoon": "Recover 1 spoon",
+    "coinsDesc": "Earn coins by completing pacing goals and wellness activities",
+    "quickActions": "Quick Actions",
+    "logActivity": "Log Energy-Spending Activity",
+    "planDay": "Plan Today's Energy Budget",
+    "viewHistory": "View Energy History",
+    "explore": "Explore More",
+    "goToMood": "Go to Mood tab",
+    "trackMood": "Track your mood",
+    "goToPacing": "Go to Pacing tab",
+    "pacingTools": "Pacing tools",
+    "search": "Search energy tools..."
+  },
+  "mood": {
+    "howFeeling": "How are you feeling?",
+    "logged": "Mood logged",
+    "tools": "Mood Tools",
+    "history": "View Mood History",
+    "reflections": "Gratitude & Reflections",
+    "dailyPlanner": "Daily Planner"
+  },
+  "sleep": {
+    "lastNight": "Last Night's Sleep",
+    "hours": "hours",
+    "quality": "quality",
+    "tools": "Sleep Tools",
+    "logSleep": "Log Last Night's Sleep",
+    "reframe": "Sleep Reframe (for insomnia)",
+    "circadian": "Circadian DJ",
+    "ambience": "Sleep Ambience",
+    "tip": "Consistent sleep and wake times help regulate your circadian rhythm, even on weekends."
+  },
+  "pacing": {
+    "reminder": "Pacing Reminder",
+    "reminderText": "Activity and rest in balance. Take a break before you need one.",
+    "tools": "Pacing Tools",
+    "partner": "Pacing Partner",
+    "workBalance": "Work-Life Balance AI",
+    "microMovement": "Micro-Movement Breaks",
+    "spoonEconomist": "Spoon Economist",
+    "backToDashboard": "Back to Energy Dashboard"
+  },
+  "forecast": {
+    "title": "Predictive Insights",
+    "desc": "AI-powered predictions based on your health patterns, weather, and activity data.",
+    "tools": "Forecast Tools",
+    "pain": "Pain Forecast",
+    "symptoms": "Symptom Symphony",
+    "triggers": "Trigger Detector",
+    "beta": "Forecasting features are in beta. Predictions improve with more data."
+  },
+  "aiSuite": {
+    "title": "AI Advocacy Suite",
+    "subtitle": "AI-powered tools for disability advocacy",
+    "search": "Search AI tools..."
+  },
+  "interpreter": {
+    "title": "AI Case Interpreter",
+    "desc": "Upload documents or paste text for AI-powered analysis. Get insights on key points, deadlines, and action items.",
+    "start": "Start AI case interpretation",
+    "startBtn": "Start Interpreting",
+    "features": "What It Can Do",
+    "f1": "Extract key dates and deadlines",
+    "f2": "Identify required actions",
+    "f3": "Summarize in plain language",
+    "f4": "Flag potential issues",
+    "related": "Related Tools",
+    "denialDecoder": "Denial Decoder",
+    "evidenceManager": "Evidence Manager"
+  },
+  "navigator": {
+    "title": "Government Navigator",
+    "desc": "Step-by-step guidance through complex government processes. Get jurisdiction-specific help for Canadian disability systems.",
+    "chooseProcess": "Choose a Process",
+    "tip": "Set your province in Settings → Jurisdiction for province-specific forms and deadlines."
+  },
+  "assistant": {
+    "askTitle": "Ask Anything",
+    "askDesc": "Get answers about disability rights, benefits, appeals, and advocacy.",
+    "placeholder": "Type your question...",
+    "inputLabel": "Your question",
+    "ask": "Ask question",
+    "askBtn": "Ask",
+    "suggested": "Popular Questions"
+  },
+  "command": {
+    "title": "AI Command Center",
+    "desc": "All AI-powered advocacy tools in one place. Choose the right tool for your task.",
+    "allTools": "All AI Tools",
+    "usage": "Your AI Usage",
+    "translations": "Translations",
+    "questions": "Questions",
+    "documents": "Documents"
+  },
+  "docFactory": {
+    "title": "Document Factory",
+    "subtitle": "Letters, appeals, and accommodation requests",
+    "search": "Search templates..."
+  },
+  "docs": {
+    "quickTitle": "Quick Letters",
+    "quickDesc": "Choose a template to create a professional letter. AI will help you customize it for your situation.",
+    "mostUsed": "Most Used Templates",
+    "needMore": "Need a different template?",
+    "viewAll": "View All Templates",
+    "recentDrafts": "Recent Drafts",
+    "noDrafts": "No recent drafts. Start a letter above!",
+    "allTemplates": "All Templates ({{count}})"
+  },
+  "appeals": {
+    "title": "Appeal Hub",
+    "desc": "Tools to help you prepare and track your appeal. Works with WSIB, ODSP, CPP-D, and more.",
+    "tools": "Appeal Tools",
+    "commandCenter": "Appeal Command Center",
+    "coach": "Appeal Coach",
+    "denialDecoder": "Denial Decoder",
+    "deadlines": "Appeal Deadlines",
+    "writeLetter": "Write Appeal Letter",
+    "startLetter": "Start Appeal Letter",
+    "startLetterDesc": "AI-assisted appeal letter generator",
+    "evidenceChecklist": "Appeal Evidence Checklist"
+  },
+  "accommodation": {
+    "title": "Accommodation Requests",
+    "desc": "Create professional accommodation request letters. Employers have a duty to accommodate to the point of undue hardship.",
+    "types": "Type of Accommodation",
+    "rights": "Know Your Rights",
+    "rightsDesc": "In Canada, employers must accommodate disabilities unless it causes undue hardship.",
+    "learnMore": "Learn more about your rights"
+  },
+  "powerTools": {
+    "energyCommand": {
+      "title": "Energy Command Center",
+      "subtitle": "Manage energy, pacing & mental wellness",
+      "tabs": {
+        "energy": "Energy",
+        "pacing": "Pacing",
+        "mood": "Mood",
+        "cognitive": "Cognitive",
+        "sleep": "Sleep"
+      }
+    },
+    "aiAdvocacy": {
+      "title": "AI Advocacy Suite",
+      "subtitle": "AI-powered advocacy & legal tools",
+      "tabs": {
+        "translator": "Translator",
+        "interpreter": "Interpreter",
+        "assistant": "Assistant",
+        "analyzer": "Analyzer",
+        "predictor": "Predictor"
+      }
+    },
+    "documentFactory": {
+      "title": "Document Factory",
+      "subtitle": "Letters, forms & document management",
+      "tabs": {
+        "letters": "Letters",
+        "forms": "Forms",
+        "records": "Records",
+        "vault": "Vault",
+        "export": "Export"
+      }
+    },
+    "movement": {
+      "title": "Movement & Rehab Hub",
+      "subtitle": "Exercise, rehabilitation & adaptive movement",
+      "tabs": {
+        "exercise": "Exercise",
+        "rehab": "Rehab",
+        "adaptive": "Adaptive",
+        "recovery": "Recovery"
+      }
+    },
+    "healthTracker": {
+      "title": "Health Tracker Pro",
+      "subtitle": "Comprehensive health & symptom tracking",
+      "tabs": {
+        "symptoms": "Symptoms",
+        "body": "Body",
+        "environment": "Environment",
+        "nutrition": "Nutrition",
+        "selfCare": "Self-Care"
+      }
+    },
+    "evidenceCommand": {
+      "title": "Evidence Command Center",
+      "subtitle": "Secure evidence collection & management",
+      "tabs": {
+        "locker": "Locker",
+        "timeline": "Timeline",
+        "voice": "Voice",
+        "checklist": "Checklist"
+      }
+    },
+    "legalAction": {
+      "title": "Legal Action Hub",
+      "subtitle": "Legal tools & accountability tracking",
+      "tabs": {
+        "accountability": "Accountability",
+        "legal": "Legal",
+        "automation": "Automation",
+        "policy": "Policy"
+      }
+    },
+    "allySupport": {
+      "title": "Ally & Support Network",
+      "subtitle": "Build and manage your support network",
+      "tabs": {
+        "directory": "Directory",
+        "allies": "Allies",
+        "selfCoach": "Self-Coach",
+        "ratings": "Ratings",
+        "world": "World"
+      }
+    },
+    "caseTracker": {
+      "title": "Case Tracker Pro",
+      "subtitle": "Deadlines, claims & case management",
+      "tabs": {
+        "deadlines": "Deadlines",
+        "masterHub": "Master Hub",
+        "denial": "Denial",
+        "claims": "Claims",
+        "rtw": "RTW"
+      }
+    },
+    "healthManagement": {
+      "title": "Health Management Hub",
+      "subtitle": "Medications, appointments & health tracking",
+      "tabs": {
+        "meds": "Meds",
+        "doctor": "Doctor",
+        "chronic": "Chronic",
+        "rehab": "Rehab",
+        "body": "Body"
+      }
+    },
+    "knowledgeBase": {
+      "title": "Knowledge Base",
+      "subtitle": "Rights, resources & emergency information",
+      "tabs": {
+        "rights": "Rights",
+        "tech": "Tech",
+        "myths": "Myths",
+        "tools": "Tools",
+        "emergency": "Emergency"
+      }
     }
   }
 }

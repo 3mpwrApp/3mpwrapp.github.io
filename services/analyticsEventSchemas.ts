@@ -106,6 +106,30 @@ export const ANALYTICS_EVENT_SCHEMAS: Record<string, EventSchema> = {
   [E.LETTER_WIZARD_SAVE]: { letterType: { type: 'string', required: true }, isUpdate: { type: 'boolean', required: true } },
   [E.LETTER_WIZARD_LOAD]: { letterType: { type: 'string', required: true } },
   [E.LETTER_WIZARD_DELETE]: {},
+
+  // Beta analytics events
+  [E.BETA_SESSION_START]: {},
+  [E.BETA_SESSION_END]: { duration: { type: 'number' } },
+  [E.BETA_FEEDBACK_BANNER_SHOWN]: {},
+  [E.BETA_FEEDBACK_BANNER_DISMISSED]: {},
+  [E.BETA_FEEDBACK_INITIATED]: { source: { type: 'string' } },
+  [E.BETA_DISCORD_OPENED]: {},
+  [E.BETA_NPS_SURVEY_SHOWN]: {},
+  [E.BETA_NPS_SCORE_SELECTED]: { score: { type: 'number' } },
+  [E.BETA_NPS_SURVEY_COMPLETED]: { score: { type: 'number' }, feedback: { type: 'string', sensitive: true, classification: 'pii' } },
+  [E.BETA_NPS_SURVEY_DISMISSED]: {},
+  [E.BETA_DONATION_BUTTON_SHOWN]: {},
+  [E.BETA_DONATION_BUTTON_PRESSED]: {},
+  [E.BETA_QUICK_ONBOARDING_STARTED]: {},
+  [E.BETA_QUICK_ONBOARDING_COMPLETED]: {},
+  [E.BETA_FEATURE_FIRST_USE]: { feature: { type: 'string' } },
+  [E.BETA_TAB_VISIT]: { tab: { type: 'string' } },
+  [E.BETA_COMPLEXITY_MODE_CHANGED]: { mode: { type: 'string' } },
+  [E.BETA_ERROR_ENCOUNTERED]: { error: { type: 'string' }, screen: { type: 'string' } },
+  [E.BETA_CRASH_RECOVERED]: {},
+  [E.BETA_ACCESSIBILITY_FEATURE_ENABLED]: { feature: { type: 'string' } },
+  [E.BETA_TOOL_USAGE]: { tool: { type: 'string' } },
+  [E.BETA_SESSION_DURATION]: { duration: { type: 'number' } },
 };
 
 export interface ValidationResult {

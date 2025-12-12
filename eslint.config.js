@@ -55,7 +55,12 @@ module.exports = defineConfig([
     },
   rules: {
       // TypeScript / code quality
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': ['warn', { 
+        argsIgnorePattern: '^_', 
+        varsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
+        ignoreRestSiblings: true
+      }],
       '@typescript-eslint/consistent-type-imports': 'warn',
       '@typescript-eslint/no-redeclare': ['warn', { ignoreDeclarationMerge: true }],
       '@typescript-eslint/no-explicit-any': 'off',

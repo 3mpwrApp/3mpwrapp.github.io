@@ -7,6 +7,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
 import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import ComplexityModeStats from '../../../components/ComplexityModeStats';
+import { GapView } from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { useComplexityMode } from '../../../store/complexityMode';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -220,6 +222,10 @@ export default function ComplexityModeSettings() {
             Reduce feature overwhelm by selecting how many features you want to see. You can change this anytime.
           </Text>
         </View>
+        
+        {/* Feature Stats Overview */}
+        <ComplexityModeStats detailed showUpgrade={false} />
+        <GapView gap={20} />
 
         {/* Bad Day Mode */}
         <View style={styles.badDaySection}>

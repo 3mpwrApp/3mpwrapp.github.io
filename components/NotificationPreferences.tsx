@@ -51,6 +51,11 @@ export default function NotificationPreferences() {
     rsvpConfirmations: true,
     capacityAlerts: true,
     cancellations: true,
+    wellness: true,
+    medication: true,
+    deadlines: true,
+    achievements: true,
+    community: true,
   });
 
   React.useEffect(() => {

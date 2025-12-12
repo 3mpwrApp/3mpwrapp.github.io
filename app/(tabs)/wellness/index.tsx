@@ -1,7 +1,8 @@
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { Pressable, StyleSheet, Text } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import ComplexityModeIndicator from '../../../components/ComplexityModeIndicator';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
@@ -140,9 +141,14 @@ export default function WellnessHub() {
   
   return (
     <ResponsiveScreenWrapper>
-      <Text accessibilityRole="header" style={textStyles.h1}>
-        {t('wellness.hub.title', 'Wellness & Recovery')}
-      </Text>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <View style={{ flex: 1 }}>
+          <Text accessibilityRole="header" style={textStyles.h1}>
+            {t('wellness.hub.title', 'Wellness & Recovery')}
+          </Text>
+        </View>
+        <ComplexityModeIndicator variant="badge" />
+      </View>
       <Text style={textStyles.body} maxFontSizeMultiplier={MAX_FONT_SCALE}>
         {t('wellness.hub.subtitle', 'Evidence-based tools for mood, pain, resilience, and recovery.')}
       </Text>
@@ -167,13 +173,13 @@ export default function WellnessHub() {
         {t('wellness.sections.featured', '⭐ Featured Hubs')}
       </Text>
       <GapView gap={12}>
-        {/* Energy Hub - available in Simple Mode */}
-        {matches('/wellness/energy-hub') && (
+        {/* Power Tool: Energy Command Center - available in Simple Mode */}
+        {matches('/wellness/energy-command-center') && (
           <Pressable
             hitSlop={HIT_SLOP_8}
             accessibilityRole="button"
-            accessibilityLabel="Energy and Mood Hub - Track energy, mood, sleep, and pacing in one place"
-            onPress={() => router.push('/wellness/energy-hub')}
+            accessibilityLabel="Energy Command Center - Complete energy, pacing, mood, and sleep management"
+            onPress={() => router.push('/(tabs)/wellness/energy-command-center' as any)}
             style={({ pressed }) => [
               {
                 borderWidth: 2,
@@ -189,7 +195,61 @@ export default function WellnessHub() {
                 style={{ color: palette.primary, fontWeight: 'bold', fontSize: 18, lineHeight: 24 }}
                 maxFontSizeMultiplier={MAX_FONT_SCALE}
               >
-                ⚡ Energy & Mood Hub
+                ⚡ Energy Command Center
+              </Text>
+              <Text
+                style={{ color: palette.text, marginTop: 6, fontSize: 15, lineHeight: 22 }}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                Complete energy management with spoons, pacing, mood tracking, cognitive support, and sleep optimization.
+              </Text>
+              <Text
+                style={{ color: palette.primary, marginTop: 8, fontSize: 13, fontWeight: '600' }}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                🔧 Power Tool • 5 Tabs • Consolidates 15+ features
+              </Text>
+            </Pressable>
+        )}
+        {/* Power Tool: Health Tracker Pro - Standard mode */}
+        {isFeatureVisible('standard') && matches('/wellness/health-tracker-pro') && (
+          <Card
+            href="/wellness/health-tracker-pro"
+            title="📊 Health Tracker Pro"
+            desc="Comprehensive health tracking: symptoms, body mapping, environment, nutrition, and self-care. Power Tool with 5 tabs."
+          />
+        )}
+        {/* Power Tool: Movement Power Tool - Standard mode */}
+        {isFeatureVisible('standard') && matches('/wellness/movement-power-tool') && (
+          <Card
+            href="/wellness/movement-power-tool"
+            title="💪 Movement & Rehab Hub"
+            desc="Exercise, rehabilitation, adaptive movement, and recovery tools. Power Tool with 4 tabs."
+          />
+        )}
+        {/* Legacy: Energy Hub - available in Simple Mode */}
+        {matches('/wellness/energy-hub') && (
+          <Pressable
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="button"
+            accessibilityLabel="Energy and Mood Hub - Track energy, mood, sleep, and pacing in one place"
+            onPress={() => router.push('/wellness/energy-hub')}
+            style={({ pressed }) => [
+              {
+                borderWidth: StyleSheet.hairlineWidth,
+                borderColor: palette.muted,
+                borderRadius: 12,
+                padding: 16,
+                backgroundColor: palette.card,
+              },
+              pressed && { opacity: 0.7 },
+            ]}
+          >
+              <Text
+                style={{ color: palette.text, fontWeight: 'bold', fontSize: 16, lineHeight: 24 }}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                ⚡ Energy & Mood Hub (Classic)
               </Text>
               <Text
                 style={{ color: palette.text, marginTop: 6, fontSize: 15, lineHeight: 22 }}

@@ -59,3 +59,29 @@ export async function logEvent(name: string, params?: Record<string, any>) {
 export function logView(contentId: string, extra?: Record<string, any>) {
   return logEvent("screen_view", { content_id: contentId, ...extra });
 }
+
+/**
+ * Get current session analytics stats (for admin dashboard)
+ */
+export function getSessionAnalyticsStats() {
+  const totalEvents = Object.values(eventCounts).reduce((a, b) => a + b, 0);
+  const topEvents = Object.entries(eventCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 10)
+    .map(([name, count]) => ({ name, count }));
+  
+  return {
+    sessionId,
+    totalEvents,
+    uniqueEventTypes: Object.keys(eventCounts).length,
+    topEvents,
+    eventCounts: { ...eventCounts },
+  };
+}
+
+/**
+ * Reset session analytics (for testing)
+ */
+export function resetSessionAnalytics() {
+  Object.keys(eventCounts).forEach(key => delete eventCounts[key]);
+}

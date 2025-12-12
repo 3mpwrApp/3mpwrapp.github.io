@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import ComplexityModeIndicator from '../../../components/ComplexityModeIndicator';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import { GapView } from '../../../components/GapView';
 import JurisdictionDeadlineCalculator from '../../../components/JurisdictionDeadlineCalculator';
@@ -183,9 +184,12 @@ export default function AdvocacyHub() {
 
   return (
     <ResponsiveScreenWrapper testID="advocacy-screen">
-      <Text ref={titleRef} accessibilityRole="header" style={s.title} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        {t('advocacy.hub.title', 'Advocacy Hub')}
-      </Text>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <Text ref={titleRef} accessibilityRole="header" style={[s.title, { flex: 1 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+          {t('advocacy.hub.title', 'Advocacy Hub')}
+        </Text>
+        <ComplexityModeIndicator variant="badge" />
+      </View>
       <Text style={s.subtitle}>
         {t('advocacy.hub.subtitle', 'AI-powered tools to help you navigate legal documents, find advocates, and build your case.')}
       </Text>
@@ -214,6 +218,109 @@ export default function AdvocacyHub() {
         onChangeText={setQuery} 
         placeholder={t('advocacy.search', 'Search advocacy tools...')} 
       />
+
+      {/* Power Tools Section */}
+      <Text style={s.sectionHeader}>
+        {t('advocacy.sections.powerTools', '🔧 Power Tools')}
+      </Text>
+      <GapView gap={12}>
+        {/* AI Advocacy Suite */}
+        {matchesSearch('AI Advocacy Suite') && (
+          <A11yPressable
+            style={[s.card, s.featuredCard, { borderColor: palette.primary, borderWidth: 2 }]}
+            accessibilityRole="button"
+            accessibilityLabel="AI Advocacy Suite. AI-powered advocacy and legal interpretation tools."
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/advocacy/ai-advocacy-suite' as any)}
+          >
+            <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={12}>
+              <Text style={s.hubIcon}>🤖</Text>
+              <View style={{ flex: 1 }}>
+                <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={8}>
+                  <Text style={s.cardTitle}>AI Advocacy Suite</Text>
+                  <View style={[s.badge, { backgroundColor: palette.primary + '20' }]}>
+                    <Text style={[s.badgeText, { color: palette.primary }]}>POWER TOOL</Text>
+                  </View>
+                </GapView>
+                <Text style={s.cardDesc} numberOfLines={2}>5 tabs: Translator, Interpreter, Assistant, Analyzer, Predictor</Text>
+              </View>
+              <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
+            </GapView>
+          </A11yPressable>
+        )}
+        {/* Evidence Command Center */}
+        {isFeatureVisible('standard') && matchesSearch('Evidence Command Center') && (
+          <A11yPressable
+            style={s.card}
+            accessibilityRole="button"
+            accessibilityLabel="Evidence Command Center. Secure evidence collection and management."
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/advocacy/evidence-command-center' as any)}
+          >
+            <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={12}>
+              <Text style={s.hubIcon}>📁</Text>
+              <View style={{ flex: 1 }}>
+                <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={8}>
+                  <Text style={s.cardTitle}>Evidence Command Center</Text>
+                  <View style={[s.badge, { backgroundColor: palette.primary + '20' }]}>
+                    <Text style={[s.badgeText, { color: palette.primary }]}>POWER TOOL</Text>
+                  </View>
+                </GapView>
+                <Text style={s.cardDesc} numberOfLines={2}>4 tabs: Locker, Timeline, Voice, Checklist</Text>
+              </View>
+              <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
+            </GapView>
+          </A11yPressable>
+        )}
+        {/* Legal Action Hub */}
+        {isFeatureVisible('standard') && matchesSearch('Legal Action Hub') && (
+          <A11yPressable
+            style={s.card}
+            accessibilityRole="button"
+            accessibilityLabel="Legal Action Hub. Legal tools and accountability tracking."
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/advocacy/legal-action-hub' as any)}
+          >
+            <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={12}>
+              <Text style={s.hubIcon}>⚖️</Text>
+              <View style={{ flex: 1 }}>
+                <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={8}>
+                  <Text style={s.cardTitle}>Legal Action Hub</Text>
+                  <View style={[s.badge, { backgroundColor: palette.primary + '20' }]}>
+                    <Text style={[s.badgeText, { color: palette.primary }]}>POWER TOOL</Text>
+                  </View>
+                </GapView>
+                <Text style={s.cardDesc} numberOfLines={2}>4 tabs: Accountability, Legal, Automation, Policy</Text>
+              </View>
+              <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
+            </GapView>
+          </A11yPressable>
+        )}
+        {/* Ally & Support Network */}
+        {isFeatureVisible('standard') && matchesSearch('Ally Support Network') && (
+          <A11yPressable
+            style={s.card}
+            accessibilityRole="button"
+            accessibilityLabel="Ally and Support Network. Build and manage your support network."
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/advocacy/ally-support-network' as any)}
+          >
+            <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={12}>
+              <Text style={s.hubIcon}>🤝</Text>
+              <View style={{ flex: 1 }}>
+                <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={8}>
+                  <Text style={s.cardTitle}>Ally & Support Network</Text>
+                  <View style={[s.badge, { backgroundColor: palette.primary + '20' }]}>
+                    <Text style={[s.badgeText, { color: palette.primary }]}>POWER TOOL</Text>
+                  </View>
+                </GapView>
+                <Text style={s.cardDesc} numberOfLines={2}>5 tabs: Directory, Allies, Self-Coach, Ratings, World</Text>
+              </View>
+              <Text style={{ color: palette.primary, fontSize: 20 }}>→</Text>
+            </GapView>
+          </A11yPressable>
+        )}
+      </GapView>
 
       {/* Main Hubs */}
       <Text style={s.sectionHeader}>

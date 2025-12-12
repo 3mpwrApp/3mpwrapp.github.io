@@ -5,6 +5,7 @@ import { Linking, SectionList, StyleSheet, Text, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
 import Card from "../../../components/Card";
+import ComplexityModeIndicator from "../../../components/ComplexityModeIndicator";
 import ContrastToggle from "../../../components/ContrastToggle";
 import DisclaimerBanner from "../../../components/DisclaimerBanner";
 import { GapView } from "../../../components/GapView";
@@ -73,6 +74,7 @@ export default function ResourcesScreen() {
   const textStyles = React.useMemo(() => createTextStyles(palette), [palette]);
   const { t } = useTranslation();
   const { isFeatureVisible } = useComplexityMode();
+  const router = useRouter();
   const titleRef = React.useRef<Text>(null);
   useAnnounceOnMount("Resources");
   useFocusOnRefOnMount(titleRef);
@@ -190,6 +192,7 @@ export default function ResourcesScreen() {
             Resources
           </Text>
           <GapView gap={8} style={{ marginLeft: 'auto', flexDirection: 'row' }}>
+            <ComplexityModeIndicator variant="minimal" />
             <ContrastToggle />
             <SettingsLink />
           </GapView>
@@ -207,6 +210,103 @@ export default function ResourcesScreen() {
           availableFeatures={['Master Tracker Hub', 'Letter Wizard', 'Appeal Command Center', 'Evidence Manager']}
           hiddenCount={35}
         />
+        
+        {/* Power Tools Section */}
+        <Text accessibilityRole="header" style={[textStyles.h2, { marginTop: 16 }]}>
+          🔧 Power Tools
+        </Text>
+        
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          style={{ 
+            borderWidth: 2, 
+            borderColor: palette.primary, 
+            borderRadius: 12, 
+            padding: 12, 
+            marginBottom: 12,
+            backgroundColor: palette.primary + '10'
+          }}
+          onPress={() => router.push('/(tabs)/resources/document-factory' as any)}
+        >
+          <Text style={{ color: palette.primary, fontWeight: '700', fontSize: 16 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            📄 Document Factory
+          </Text>
+          <Text style={{ color: palette.text, fontSize: 14, marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            5 tabs: Letters, Forms, Records, Vault, Export. Complete document management.
+          </Text>
+          <Text style={{ color: palette.primary, fontSize: 12, fontWeight: '600', marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            POWER TOOL • Consolidates 15+ document features
+          </Text>
+        </A11yPressable>
+        
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          style={{ 
+            borderWidth: StyleSheet.hairlineWidth, 
+            borderColor: palette.muted, 
+            borderRadius: 12, 
+            padding: 12, 
+            marginBottom: 12,
+            backgroundColor: palette.card
+          }}
+          onPress={() => router.push('/(tabs)/resources/case-tracker-pro' as any)}
+        >
+          <Text style={{ color: palette.text, fontWeight: '700', fontSize: 16 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            📊 Case Tracker Pro
+          </Text>
+          <Text style={{ color: palette.text, fontSize: 14, marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            5 tabs: Deadlines, Master Hub, Denial, Claims, RTW
+          </Text>
+          <Text style={{ color: palette.primary, fontSize: 12, fontWeight: '600', marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            POWER TOOL
+          </Text>
+        </A11yPressable>
+        
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          style={{ 
+            borderWidth: StyleSheet.hairlineWidth, 
+            borderColor: palette.muted, 
+            borderRadius: 12, 
+            padding: 12, 
+            marginBottom: 12,
+            backgroundColor: palette.card
+          }}
+          onPress={() => router.push('/(tabs)/resources/health-management-hub' as any)}
+        >
+          <Text style={{ color: palette.text, fontWeight: '700', fontSize: 16 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            🏥 Health Management Hub
+          </Text>
+          <Text style={{ color: palette.text, fontSize: 14, marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            5 tabs: Meds, Doctor, Chronic, Rehab, Body
+          </Text>
+          <Text style={{ color: palette.primary, fontSize: 12, fontWeight: '600', marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            POWER TOOL
+          </Text>
+        </A11yPressable>
+        
+        <A11yPressable
+          hitSlop={HIT_SLOP_8}
+          style={{ 
+            borderWidth: StyleSheet.hairlineWidth, 
+            borderColor: palette.muted, 
+            borderRadius: 12, 
+            padding: 12, 
+            marginBottom: 12,
+            backgroundColor: palette.card
+          }}
+          onPress={() => router.push('/(tabs)/resources/knowledge-base' as any)}
+        >
+          <Text style={{ color: palette.text, fontWeight: '700', fontSize: 16 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            📚 Knowledge Base
+          </Text>
+          <Text style={{ color: palette.text, fontSize: 14, marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            5 tabs: Rights, Tech, Myths, Tools, Emergency
+          </Text>
+          <Text style={{ color: palette.primary, fontSize: 12, fontWeight: '600', marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+            POWER TOOL
+          </Text>
+        </A11yPressable>
         
         {/* Featured Tools - Working & Ready */}
         <Text accessibilityRole="header" style={[textStyles.h2, { marginTop: 16 }]}>

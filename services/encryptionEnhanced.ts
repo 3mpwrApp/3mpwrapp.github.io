@@ -32,8 +32,10 @@ const DEVICE_KEY_SECURE = 'evidence:deviceKey:secure:v2';
 const USER_PASSPHRASE_HASH = 'evidence:passphraseHash:v1';
 const ENCRYPTION_CONFIG_KEY = 'evidence:encryptionConfig:v1';
 
-// Constants
-const PBKDF2_ITERATIONS = 100000;
+// Constants - OWASP 2024 recommendations
+// PBKDF2-HMAC-SHA256 minimum 600,000 iterations for passwords
+// Using 310,000 as balance between security and mobile performance
+const PBKDF2_ITERATIONS = 310000;
 const KEY_LENGTH = 32; // 256 bits
 const SALT_LENGTH = 16;
 const IV_LENGTH = 16;

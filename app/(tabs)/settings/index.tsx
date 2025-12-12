@@ -11,13 +11,13 @@ import { Alert, Button, Image, Linking, StyleSheet, Text, TextInput, View } from
 
 import A11yPressable from '../../../components/A11yPressable';
 import AccessibilityToggle from '../../../components/AccessibilityToggle';
+import UserBadgesDisplay from '../../../components/badges/UserBadgesDisplay';
 import { GapView } from '../../../components/GapView';
 import LanguageSelector from '../../../components/LanguageSelector';
+import ReferralCard from '../../../components/ReferralCard';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
-import UpdateChecker from '../../../components/UpdateChecker';
-import { logError } from '../../../utils/errorLogger';
-// import UserBadgesDisplay from '../../../components/UserBadgesDisplay';
 import * as SettingsLazy from '../../../components/settings';
+import UpdateChecker from '../../../components/UpdateChecker';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
 import { auth, db, storage } from '../../../firebase/config';
@@ -31,6 +31,7 @@ import type { ResourceFormat, TextScale } from '../../../store/settings';
 import { useSettings } from '../../../store/settings';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
+import { logError } from '../../../utils/errorLogger';
 import { sendFeedbackEmailInternal } from '../../../utils/feedback';
 const NotificationPreferences = React.lazy(() => import('../../../components/NotificationPreferences'));
 const EmergencyWalletCard = React.lazy(() => import('../../../components/EmergencyWalletCard'));
@@ -282,6 +283,12 @@ export default function SettingsScreen() {
             <SettingsLazy.BookmarksSection />
           </React.Suspense>
         </Section>
+        
+        {/* Referral Section - Viral Growth */}
+        <Section title={t('referral.title', 'Invite Friends')} subtitle={t('referral.subtitle', 'Share 3mpwr with others and earn rewards')} styles={styles}>
+          <ReferralCard compact />
+        </Section>
+        
         <Section title={t('settings.account.title','Account Management')} subtitle={t('settings.account.subtitle','Manage your profile and preferences')} styles={styles}>
           {/* Profile Editor Link */}
           {!isGuest && (
@@ -312,7 +319,7 @@ export default function SettingsScreen() {
               {photoURL ? <Image source={{ uri: photoURL }} style={styles.avatar} accessibilityLabel={t('settings.account.photo','Profile picture')} /> : <View style={styles.avatarPlaceholder}><Ionicons name='person' size={40} color={palette.text} /></View>}
               <Button title={t('settings.account.changePhoto','Change Profile Picture')} onPress={handleUploadPhoto} />
               
-              {/* <UserBadgesDisplay /> */}
+              <UserBadgesDisplay />
               
               <Text style={styles.rowLabel}>{t('settings.account.displayName','Display Name')}</Text>
               <TextInput style={styles.input} placeholder={t('settings.account.displayNamePlaceholder','Enter display name')} value={displayName} onChangeText={setDisplayName} accessibilityLabel={t('settings.account.displayName','Display Name')} />
@@ -502,6 +509,7 @@ function TermsSection() {
 function DeveloperSection({ styles }: { styles: ReturnType<typeof createStyles> }) {
   const palette = useAppPalette();
   const { user } = useAuth();
+  const router = useRouter();
   const { costAlertsEnabled, setCostAlertsEnabled } = useDevPrefs();
   
   // Only show developer section for specific email
@@ -512,6 +520,19 @@ function DeveloperSection({ styles }: { styles: ReturnType<typeof createStyles> 
   return (
     <Section title='Developer' subtitle='Local-only toggles for development' styles={styles}>
       <View style={{ paddingVertical:8 }}>
+        {/* Admin Panel Link */}
+        <A11yPressable
+          accessibilityRole='button'
+          accessibilityLabel='Admin Panel - A/B Testing, Feature Flags, Analytics Dashboard'
+          onPress={() => router.push('/(tabs)/settings/admin' as never)}
+          hitSlop={HIT_SLOP_8}
+          style={[styles.linkButton, { marginBottom:12 }]}
+        >
+          <Ionicons name='construct' size={20} color={palette.primary} />
+          <Text style={styles.linkText}>🔧 Admin Panel</Text>
+          <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
+        </A11yPressable>
+        
         <A11yPressable
           accessibilityRole='switch'
           accessibilityState={{ checked: !!costAlertsEnabled }}

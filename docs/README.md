@@ -62,6 +62,7 @@
 | **[beta/](./beta/)** | Beta testing materials, invite templates, tester guide |
 | **[release-prep/](./release-prep/)** | Release checklists, launch commands, OTA update docs |
 | **[store-listing/](./store-listing/)** | App store descriptions, screenshots, videos |
+| **[strategies/](./strategies/)** | Growth strategies, ASO, notifications, A/B testing |
 | **[legal/](./legal/)** | Mission statement, IP agreements |
 | **[website/](./website/)** | Website assets (delete-account page) |
 | **[archive/](./archive/)** | 315+ historical docs organized by category |
