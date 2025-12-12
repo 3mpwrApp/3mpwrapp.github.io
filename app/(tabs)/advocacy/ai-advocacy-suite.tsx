@@ -33,7 +33,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
 // ============================================
@@ -57,7 +57,7 @@ function TranslatorTab(props: PowerToolTabProps) {
       return;
     }
     
-    logEvent('ai.translator.quick_translate', { length: inputText.length });
+    trackEvent('ai.translator.quick_translate', { length: inputText.length });
     router.push({
       pathname: '/advocacy/ai-advocate-translator',
       params: { text: inputText },
@@ -299,7 +299,7 @@ function AssistantTab(_props: PowerToolTabProps) {
 
   const handleAsk = () => {
     if (!question.trim()) return;
-    logEvent('ai.assistant.question_asked', { length: question.length });
+    trackEvent('ai.assistant.question_asked', { length: question.length });
     router.push({
       pathname: '/advocacy/ask',
       params: { q: question },

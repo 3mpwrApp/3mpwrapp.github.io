@@ -29,7 +29,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
-import { logEvent } from '../services/analytics';
+import { trackEvent } from '../services/analyticsClient';
 import { useAppPalette } from '../theme/usePalette';
 import { createShadow } from '../utils/shadow';
 
@@ -109,7 +109,7 @@ export default function NPSSurvey({
       // Show if either trigger condition is met
       if (currentCount + 1 >= TRIGGER_SESSION_COUNT || daysSinceFirstOpen >= TRIGGER_DAYS) {
         setVisible(true);
-        logEvent('nps_survey_shown', { 
+        trackEvent('nps_survey_shown', { 
           sessions: currentCount + 1, 
           days_since_install: Math.floor(daysSinceFirstOpen) 
         });
@@ -121,7 +121,7 @@ export default function NPSSurvey({
 
   const handleScoreSelect = (selectedScore: number) => {
     setScore(selectedScore);
-    logEvent('nps_score_selected', { score: selectedScore });
+    trackEvent('nps_score_selected', { score: selectedScore });
   };
 
   const handleContinue = () => {
@@ -148,7 +148,7 @@ export default function NPSSurvey({
       }));
 
       // Log analytics
-      logEvent('nps_survey_completed', { 
+      trackEvent('nps_survey_completed', { 
         score,
         has_feedback: !!feedback,
         feedback_length: feedback.length,
@@ -173,7 +173,7 @@ export default function NPSSurvey({
   };
 
   const handleDismiss = async () => {
-    logEvent('nps_survey_dismissed', { step, score_selected: score !== null });
+    trackEvent('nps_survey_dismissed', { step, score_selected: score !== null });
     onDismiss?.();
     setVisible(false);
   };
@@ -378,7 +378,7 @@ export function useNPSSurvey() {
 
   const triggerSurvey = () => {
     setShowSurvey(true);
-    logEvent('nps_survey_manual_trigger');
+    trackEvent('nps_survey_manual_trigger');
   };
 
   const hideSurvey = () => {

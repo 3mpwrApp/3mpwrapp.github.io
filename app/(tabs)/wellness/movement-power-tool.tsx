@@ -31,7 +31,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
 
@@ -77,7 +77,7 @@ function ExerciseTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={ex.id}
             onPress={() => {
-              logEvent('movement.exercise.start', { exercise: ex.id });
+              trackEvent('movement.exercise.start', { exercise: ex.id });
               router.push({
                 pathname: '/wellness/exercise-hub',
                 params: { exercise: ex.id },
@@ -108,7 +108,7 @@ function ExerciseTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={cat.id}
               onPress={() => {
-                logEvent('movement.category.select', { category: cat.id });
+                trackEvent('movement.category.select', { category: cat.id });
                 router.push({
                   pathname: '/wellness/exercise-hub',
                   params: { category: cat.id },
@@ -234,7 +234,7 @@ function RehabTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={prog.id}
             onPress={() => {
-              logEvent('rehab.program.start', { program: prog.id });
+              trackEvent('rehab.program.start', { program: prog.id });
               router.push({
                 pathname: '/wellness/movement-rehab-hub',
                 params: { program: prog.id },
@@ -265,7 +265,7 @@ function RehabTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={game.id}
               onPress={() => {
-                logEvent('rehab.game.start', { game: game.id });
+                trackEvent('rehab.game.start', { game: game.id });
                 Alert.alert(t('common.comingSoon', 'Coming Soon'), game.name);
               }}
               accessibilityLabel={game.name}
@@ -381,7 +381,7 @@ function AdaptiveTab({ navigateToTab }: PowerToolTabProps) {
               <A11yPressable
                 key={move.id}
                 onPress={() => {
-                  logEvent('adaptive.micro.start', { movement: move.id });
+                  trackEvent('adaptive.micro.start', { movement: move.id });
                   Alert.alert(move.name, `${move.time} - Starting...`);
                 }}
                 accessibilityLabel={`${move.name}, ${move.time}`}
@@ -405,7 +405,7 @@ function AdaptiveTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={cap.id}
             onPress={() => {
-              logEvent('adaptive.capacity.open', { capacity: cap.id });
+              trackEvent('adaptive.capacity.open', { capacity: cap.id });
               router.push('/wellness/functional-capacity' as any);
             }}
             accessibilityLabel={cap.name}
@@ -513,7 +513,7 @@ function RecoveryTab(_props: PowerToolTabProps) {
           <A11yPressable
             key={tool.id}
             onPress={() => {
-              logEvent('recovery.tool.open', { tool: tool.id });
+              trackEvent('recovery.tool.open', { tool: tool.id });
               router.push({
                 pathname: '/wellness/resilience',
                 params: { tool: tool.id },

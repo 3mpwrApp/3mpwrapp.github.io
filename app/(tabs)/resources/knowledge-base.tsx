@@ -34,7 +34,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useJurisdiction } from '../../../store/jurisdiction';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -89,7 +89,7 @@ function RightsTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={right.id}
             onPress={() => {
-              logEvent('rights.featured.view', { id: right.id });
+              trackEvent('rights.featured.view', { id: right.id });
               router.push('/resources/know-your-rights' as any);
             }}
             accessibilityLabel={right.title}
@@ -114,7 +114,7 @@ function RightsTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={category.id}
               onPress={() => {
-                logEvent('rights.category.browse', { category: category.id });
+                trackEvent('rights.category.browse', { category: category.id });
                 router.push('/resources/know-your-rights' as any);
               }}
               accessibilityLabel={`${category.name}, ${category.count} articles`}
@@ -238,7 +238,7 @@ function TechTab({ navigateToTab }: PowerToolTabProps) {
               <A11yPressable
                 key={tool.id}
                 onPress={() => {
-                  logEvent('tech.tool.featured', { tool: tool.id });
+                  trackEvent('tech.tool.featured', { tool: tool.id });
                   router.push('/resources/assistive-tech' as any);
                 }}
                 accessibilityLabel={`${tool.name}, ${tool.category}, ${tool.rating} stars`}
@@ -265,7 +265,7 @@ function TechTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={category.id}
             onPress={() => {
-              logEvent('tech.category.browse', { category: category.id });
+              trackEvent('tech.category.browse', { category: category.id });
               router.push('/resources/assistive-tech' as any);
             }}
             accessibilityLabel={category.name}
@@ -406,7 +406,7 @@ function MythsTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={category.id}
               onPress={() => {
-                logEvent('myths.category.browse', { category: category.id });
+                trackEvent('myths.category.browse', { category: category.id });
                 router.push('/resources/myth-busters' as any);
               }}
               accessibilityLabel={`${category.name}, ${category.count} myths busted`}
@@ -527,7 +527,7 @@ function ToolsTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={tool.id}
               onPress={() => {
-                logEvent('tools.power.open', { tool: tool.id });
+                trackEvent('tools.power.open', { tool: tool.id });
                 router.push('/resources/power-toolkit' as any);
               }}
               accessibilityLabel={tool.name}
@@ -553,7 +553,7 @@ function ToolsTab({ navigateToTab }: PowerToolTabProps) {
               if (resource.locked) {
                 Alert.alert('Pro Feature', 'This feature requires a pro subscription.');
               } else {
-                logEvent('tools.advanced.open', { resource: resource.id });
+                trackEvent('tools.advanced.open', { resource: resource.id });
                 router.push('/resources' as any);
               }
             }}
@@ -664,7 +664,7 @@ function EmergencyTab(_props: PowerToolTabProps) {
               if (contact.number.includes('-') || contact.number === '988') {
                 Linking.openURL(`tel:${contact.number.replace(/-/g, '')}`);
               } else {
-                logEvent('emergency.contact.find', { type: contact.id });
+                trackEvent('emergency.contact.find', { type: contact.id });
               }
             }}
             accessibilityLabel={`${contact.name}, ${contact.number}`}
@@ -695,7 +695,7 @@ function EmergencyTab(_props: PowerToolTabProps) {
             <A11yPressable
               key={resource.id}
               onPress={() => {
-                logEvent('emergency.resource.open', { resource: resource.id });
+                trackEvent('emergency.resource.open', { resource: resource.id });
               }}
               accessibilityLabel={resource.name}
               hitSlop={HIT_SLOP_8}

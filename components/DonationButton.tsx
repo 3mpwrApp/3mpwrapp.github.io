@@ -21,7 +21,7 @@ import {
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
-import { logEvent } from '../services/analytics';
+import { trackEvent } from '../services/analyticsClient';
 import { useAppPalette } from '../theme/usePalette';
 import { createShadow } from '../utils/shadow';
 
@@ -115,7 +115,7 @@ export default function DonationButton({
     if (dismissible) {
       checkDismissal();
     }
-    logEvent('beta.donation.button.shown', { platform, variant });
+    trackEvent('beta.donation.button.shown', { platform, variant });
   }, []);
 
   const checkDismissal = async () => {
@@ -137,13 +137,13 @@ export default function DonationButton({
   const handleDismiss = async () => {
     try {
       await AsyncStorage?.setItem?.(DISMISSAL_KEY, String(Date.now()));
-      logEvent('beta.donation.button.dismissed', { platform });
+      trackEvent('beta.donation.button.dismissed', { platform });
     } catch {}
     setVisible(false);
   };
 
   const handlePress = async () => {
-    logEvent('beta.donation.button.pressed', { 
+    trackEvent('beta.donation.button.pressed', { 
       platform,
       variant,
       url: config.url,
@@ -311,7 +311,7 @@ export function DonationOptions() {
 
   const handlePlatformPress = (platform: DonationPlatform) => {
     const config = DONATION_PLATFORMS[platform];
-    logEvent('beta.donation.platform.selected', { platform });
+    trackEvent('beta.donation.platform.selected', { platform });
     Linking.openURL(config.url);
   };
 

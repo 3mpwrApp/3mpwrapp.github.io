@@ -32,7 +32,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
 
@@ -77,7 +77,7 @@ function SymptomsTab({ navigateToTab }: PowerToolTabProps) {
               key={level.value}
               onPress={() => {
                 setTodaySeverity(level.value);
-                logEvent('symptoms.quick.severity', { level: level.value });
+                trackEvent('symptoms.quick.severity', { level: level.value });
               }}
               accessibilityLabel={`${level.label}, level ${level.value} of 5`}
               accessibilityState={{ selected: todaySeverity === level.value }}
@@ -115,7 +115,7 @@ function SymptomsTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={symptom.id}
               onPress={() => {
-                logEvent('symptoms.individual.open', { symptom: symptom.id });
+                trackEvent('symptoms.individual.open', { symptom: symptom.id });
                 router.push({
                   pathname: '/wellness/symptom-tracker',
                   params: { symptom: symptom.id },
@@ -261,7 +261,7 @@ function BodyTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={tracker.id}
             onPress={() => {
-              logEvent('body.tracker.open', { tracker: tracker.id });
+              trackEvent('body.tracker.open', { tracker: tracker.id });
               router.push('/wellness/health-tracker' as any);
             }}
             accessibilityLabel={tracker.name}
@@ -291,7 +291,7 @@ function BodyTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={tool.id}
             onPress={() => {
-              logEvent('body.cognitive.open', { tool: tool.id });
+              trackEvent('body.cognitive.open', { tool: tool.id });
               router.push('/wellness/cognitive-scanner' as any);
             }}
             accessibilityLabel={tool.name}
@@ -408,7 +408,7 @@ function EnvironmentTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={factor.id}
               onPress={() => {
-                logEvent('environment.factor.open', { factor: factor.id });
+                trackEvent('environment.factor.open', { factor: factor.id });
                 router.push('/wellness/environmental-adaptation' as any);
               }}
               accessibilityLabel={factor.name}
@@ -430,7 +430,7 @@ function EnvironmentTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={tool.id}
             onPress={() => {
-              logEvent('environment.sensory.open', { tool: tool.id });
+              trackEvent('environment.sensory.open', { tool: tool.id });
               router.push('/wellness/sensory-overload' as any);
             }}
             accessibilityLabel={tool.name}
@@ -535,7 +535,7 @@ function NutritionTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={guide.id}
             onPress={() => {
-              logEvent('nutrition.guide.open', { guide: guide.id });
+              trackEvent('nutrition.guide.open', { guide: guide.id });
               router.push('/wellness/nutrition-guides' as any);
             }}
             accessibilityLabel={guide.name}
@@ -561,7 +561,7 @@ function NutritionTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={item.id}
               onPress={() => {
-                logEvent('nutrition.harm.open', { item: item.id });
+                trackEvent('nutrition.harm.open', { item: item.id });
                 router.push('/wellness/harm-reduction' as any);
               }}
               accessibilityLabel={item.name}
@@ -664,7 +664,7 @@ function SelfCareTab(_props: PowerToolTabProps) {
           <A11yPressable
             key={item.id}
             onPress={() => {
-              logEvent('selfcare.checklist.toggle', { item: item.id, done: !item.done });
+              trackEvent('selfcare.checklist.toggle', { item: item.id, done: !item.done });
             }}
             accessibilityLabel={`${item.name}, ${item.done ? 'completed' : 'not completed'}`}
             hitSlop={HIT_SLOP_8}
@@ -698,7 +698,7 @@ function SelfCareTab(_props: PowerToolTabProps) {
           <A11yPressable
             key={cat.id}
             onPress={() => {
-              logEvent('selfcare.library.open', { category: cat.id });
+              trackEvent('selfcare.library.open', { category: cat.id });
               router.push({
                 pathname: '/wellness/self-care-library',
                 params: { category: cat.id },

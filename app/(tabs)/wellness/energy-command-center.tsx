@@ -32,7 +32,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
 let AsyncStorage: any;
@@ -73,7 +73,7 @@ function DashboardTab(props: PowerToolTabProps) {
   const updateEnergy = async (delta: number) => {
     const newEnergy = Math.max(0, Math.min(maxEnergy, currentEnergy + delta));
     setCurrentEnergy(newEnergy);
-    logEvent('energy.updated', { from: currentEnergy, to: newEnergy, delta });
+    trackEvent('energy.updated', { from: currentEnergy, to: newEnergy, delta });
     
     try {
       await AsyncStorage?.setItem?.('energy.dashboard.v1', JSON.stringify({
@@ -202,7 +202,7 @@ function MoodTab(_props: PowerToolTabProps) {
 
   const handleMoodSelect = async (value: number) => {
     setTodayMood(value);
-    logEvent('mood.logged', { value, source: 'energy_command_center' });
+    trackEvent('mood.logged', { value, source: 'energy_command_center' });
     
     try {
       await AsyncStorage?.setItem?.('mood.today.v1', JSON.stringify({

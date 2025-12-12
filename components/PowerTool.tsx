@@ -26,7 +26,7 @@ import {
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
-import { logEvent } from '../services/analytics';
+import { trackEvent } from '../services/analyticsClient';
 import { useComplexityMode } from '../store/complexityMode';
 import { useNetwork } from '../store/network';
 import { useAppPalette } from '../theme/usePalette';
@@ -205,7 +205,7 @@ export default function PowerTool({
   // Handle tab change
   const handleTabChange = useCallback((tabId: string) => {
     setActiveTabId(tabId);
-    logEvent(`${analyticsPrefix}.tab.changed`, { tab: tabId });
+    trackEvent(`${analyticsPrefix}.tab.changed`, { tab: tabId });
   }, [analyticsPrefix]);
 
   // Navigate to tab from within a tab component

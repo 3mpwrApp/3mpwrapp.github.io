@@ -32,7 +32,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
 
@@ -77,7 +77,7 @@ function LockerTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={action.id}
               onPress={() => {
-                logEvent('evidence.add', { type: action.action });
+                trackEvent('evidence.add', { type: action.action });
                 router.push({
                   pathname: '/advocacy/evidence-manager',
                   params: { action: action.action },
@@ -122,7 +122,7 @@ function LockerTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={file.id}
             onPress={() => {
-              logEvent('evidence.file.open', { id: file.id });
+              trackEvent('evidence.file.open', { id: file.id });
               router.push('/advocacy/evidence-manager' as any);
             }}
             accessibilityLabel={file.name}
@@ -284,7 +284,7 @@ function TimelineTab({ navigateToTab }: PowerToolTabProps) {
             {/* Content */}
             <A11yPressable
               onPress={() => {
-                logEvent('evidence.timeline.event', { id: event.id });
+                trackEvent('evidence.timeline.event', { id: event.id });
                 router.push('/advocacy/case-timeline' as any);
               }}
               accessibilityLabel={`${event.date}: ${event.event}`}
@@ -313,7 +313,7 @@ function TimelineTab({ navigateToTab }: PowerToolTabProps) {
         label={t('evidence.timeline.add', 'Add Timeline Event')}
         icon="add-circle"
         onPress={() => {
-          logEvent('evidence.timeline.add');
+          trackEvent('evidence.timeline.add');
           router.push('/advocacy/case-timeline' as any);
         }}
         variant="primary"
@@ -405,7 +405,7 @@ function VoiceTab({ navigateToTab }: PowerToolTabProps) {
         <A11yPressable
           onPress={() => {
             setIsRecording(!isRecording);
-            logEvent('evidence.voice.toggle', { recording: !isRecording });
+            trackEvent('evidence.voice.toggle', { recording: !isRecording });
           }}
           accessibilityLabel={isRecording ? 'Stop recording' : 'Start recording'}
           style={[
@@ -447,7 +447,7 @@ function VoiceTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={recording.id}
             onPress={() => {
-              logEvent('evidence.voice.play', { id: recording.id });
+              trackEvent('evidence.voice.play', { id: recording.id });
               Alert.alert(recording.name, `Playing ${recording.duration}...`);
             }}
             accessibilityLabel={`${recording.name}, ${recording.duration}`}
@@ -606,7 +606,7 @@ function ChecklistTab(_props: PowerToolTabProps) {
               <A11yPressable
                 key={item.id}
                 onPress={() => {
-                  logEvent('evidence.checklist.toggle', { item: item.id, done: !item.done });
+                  trackEvent('evidence.checklist.toggle', { item: item.id, done: !item.done });
                 }}
                 accessibilityLabel={`${item.name}, ${item.done ? 'completed' : 'not completed'}${item.required ? ', required' : ''}`}
                 hitSlop={HIT_SLOP_8}

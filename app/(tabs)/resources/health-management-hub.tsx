@@ -32,7 +32,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
 
@@ -84,7 +84,7 @@ function MedsTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={med.id}
             onPress={() => {
-              logEvent('meds.toggle', { id: med.id, taken: !med.taken });
+              trackEvent('meds.toggle', { id: med.id, taken: !med.taken });
             }}
             accessibilityLabel={`${med.name}, ${med.dosage}, ${med.time}, ${med.taken ? 'taken' : 'not taken'}`}
             hitSlop={HIT_SLOP_8}
@@ -260,7 +260,7 @@ function DoctorTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={appt.id}
             onPress={() => {
-              logEvent('doctor.appt.view', { id: appt.id });
+              trackEvent('doctor.appt.view', { id: appt.id });
               router.push('/resources/doctor-visit-prep' as any);
             }}
             accessibilityLabel={`${appt.doctor}, ${appt.specialty}, ${appt.date}`}
@@ -293,7 +293,7 @@ function DoctorTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={tool.id}
               onPress={() => {
-                logEvent('doctor.prep.tool', { tool: tool.id });
+                trackEvent('doctor.prep.tool', { tool: tool.id });
                 router.push('/resources/doctor-visit-prep' as any);
               }}
               accessibilityLabel={tool.name}
@@ -414,7 +414,7 @@ function ChronicTab({ navigateToTab }: PowerToolTabProps) {
               <A11yPressable
                 key={condition.id}
                 onPress={() => {
-                  logEvent('chronic.condition.select', { condition: condition.id });
+                  trackEvent('chronic.condition.select', { condition: condition.id });
                   router.push('/wellness/chronic-tracker' as any);
                 }}
                 accessibilityLabel={condition.name}
@@ -430,7 +430,7 @@ function ChronicTab({ navigateToTab }: PowerToolTabProps) {
             ))}
             <A11yPressable
               onPress={() => {
-                logEvent('chronic.condition.add');
+                trackEvent('chronic.condition.add');
                 router.push('/wellness/chronic-tracker' as any);
               }}
               accessibilityLabel="Add condition"
@@ -452,7 +452,7 @@ function ChronicTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={option.id}
             onPress={() => {
-              logEvent('chronic.tool.open', { tool: option.id });
+              trackEvent('chronic.tool.open', { tool: option.id });
               router.push('/wellness/chronic-tracker' as any);
             }}
             accessibilityLabel={option.name}
@@ -571,7 +571,7 @@ function RehabTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={program.id}
             onPress={() => {
-              logEvent('rehab.program.open', { id: program.id });
+              trackEvent('rehab.program.open', { id: program.id });
               router.push('/wellness/rehab-tracker' as any);
             }}
             accessibilityLabel={`${program.name}, ${program.progress}% complete`}
@@ -725,7 +725,7 @@ function BodyTab(_props: PowerToolTabProps) {
             <A11yPressable
               key={area.id}
               onPress={() => {
-                logEvent('body.area.view', { area: area.id });
+                trackEvent('body.area.view', { area: area.id });
                 router.push('/wellness/body-mechanics-advisor' as any);
               }}
               accessibilityLabel={`${area.name}: ${area.status}`}
@@ -748,7 +748,7 @@ function BodyTab(_props: PowerToolTabProps) {
           <A11yPressable
             key={tool.id}
             onPress={() => {
-              logEvent('body.tool.open', { tool: tool.id });
+              trackEvent('body.tool.open', { tool: tool.id });
               router.push('/wellness/body-mechanics-advisor' as any);
             }}
             accessibilityLabel={tool.name}

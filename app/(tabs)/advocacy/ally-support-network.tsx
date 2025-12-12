@@ -33,7 +33,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
 
@@ -71,7 +71,7 @@ function DirectoryTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={cat.id}
               onPress={() => {
-                logEvent('support.category.select', { category: cat.id });
+                trackEvent('support.category.select', { category: cat.id });
                 router.push('/advocacy/support-directory' as any);
               }}
               accessibilityLabel={`${cat.name}, ${cat.count} resources`}
@@ -96,7 +96,7 @@ function DirectoryTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={resource.id}
             onPress={() => {
-              logEvent('support.resource.view', { id: resource.id });
+              trackEvent('support.resource.view', { id: resource.id });
               router.push('/advocacy/support-directory' as any);
             }}
             accessibilityLabel={`${resource.name}, ${resource.type}`}
@@ -210,7 +210,7 @@ function AlliesTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={ally.id}
             onPress={() => {
-              logEvent('allies.type.select', { type: ally.id });
+              trackEvent('allies.type.select', { type: ally.id });
               router.push('/advocacy/ally-hub' as any);
             }}
             accessibilityLabel={ally.name}
@@ -240,7 +240,7 @@ function AlliesTab({ navigateToTab }: PowerToolTabProps) {
               <A11yPressable
                 key={resource.id}
                 onPress={() => {
-                  logEvent('allies.resource.view', { resource: resource.id });
+                  trackEvent('allies.resource.view', { resource: resource.id });
                   router.push('/advocacy/ally-hub' as any);
                 }}
                 accessibilityLabel={resource.name}
@@ -351,7 +351,7 @@ function CoachTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={mod.id}
             onPress={() => {
-              logEvent('coach.module.open', { module: mod.id });
+              trackEvent('coach.module.open', { module: mod.id });
               router.push('/advocacy/self-advocacy-coach' as any);
             }}
             accessibilityLabel={`${mod.name}, ${mod.progress}% complete`}
@@ -392,7 +392,7 @@ function CoachTab({ navigateToTab }: PowerToolTabProps) {
               <A11yPressable
                 key={lesson.id}
                 onPress={() => {
-                  logEvent('coach.lesson.start', { lesson: lesson.id });
+                  trackEvent('coach.lesson.start', { lesson: lesson.id });
                   router.push('/advocacy/self-advocacy-coach' as any);
                 }}
                 accessibilityLabel={`${lesson.name}, ${lesson.time}`}
@@ -516,7 +516,7 @@ function RatingsTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={cat.id}
               onPress={() => {
-                logEvent('ratings.category.select', { category: cat.id });
+                trackEvent('ratings.category.select', { category: cat.id });
                 router.push('/advocacy/ratings' as any);
               }}
               accessibilityLabel={`${cat.name}, ${cat.ratings} ratings`}
@@ -541,7 +541,7 @@ function RatingsTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={review.id}
             onPress={() => {
-              logEvent('ratings.review.view', { id: review.id });
+              trackEvent('ratings.review.view', { id: review.id });
               router.push('/advocacy/ratings' as any);
             }}
             accessibilityLabel={`${review.provider}, ${review.rating} stars`}
@@ -571,7 +571,7 @@ function RatingsTab({ navigateToTab }: PowerToolTabProps) {
           label={t('ratings.add.button', 'Add a Review')}
           icon="create"
           onPress={() => {
-            logEvent('ratings.add.start');
+            trackEvent('ratings.add.start');
             router.push('/advocacy/ratings' as any);
           }}
           variant="primary"
@@ -678,7 +678,7 @@ function WorldTab(_props: PowerToolTabProps) {
           label={t('world.map.explore', 'Explore Interactive Map')}
           icon="map"
           onPress={() => {
-            logEvent('world.map.open');
+            trackEvent('world.map.open');
             router.push('/advocacy/world-map' as any);
           }}
           variant="primary"
@@ -694,7 +694,7 @@ function WorldTab(_props: PowerToolTabProps) {
             <A11yPressable
               key={region.id}
               onPress={() => {
-                logEvent('world.region.select', { region: region.id });
+                trackEvent('world.region.select', { region: region.id });
                 router.push('/advocacy/world-map' as any);
               }}
               accessibilityLabel={`${region.name}, ${region.orgs} organizations`}
@@ -719,7 +719,7 @@ function WorldTab(_props: PowerToolTabProps) {
           <A11yPressable
             key={campaign.id}
             onPress={() => {
-              logEvent('world.campaign.view', { id: campaign.id });
+              trackEvent('world.campaign.view', { id: campaign.id });
               Alert.alert(campaign.name, `${campaign.supporters.toLocaleString()} supporters`);
             }}
             accessibilityLabel={campaign.name}

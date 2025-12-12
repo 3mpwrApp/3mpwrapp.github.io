@@ -23,7 +23,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { HIT_SLOP_12 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
-import { logEvent } from '../services/analytics';
+import { trackEvent } from '../services/analyticsClient';
 import { useComplexityMode, type ComplexityMode } from '../store/complexityMode';
 import { useAppPalette } from '../theme/usePalette';
 import { createShadow } from '../utils/shadow';
@@ -63,12 +63,12 @@ export default function QuickOnboardingBeta({
 
   const handleAcceptAll = () => {
     setAllAccepted(true);
-    logEvent('beta.onboarding.quick.disclaimers_accepted');
+    trackEvent('beta.onboarding.quick.disclaimers_accepted');
   };
 
   const handleModeSelect = (newMode: ComplexityMode) => {
     setSelectedMode(newMode);
-    logEvent('beta.onboarding.quick.mode_selected', { mode: newMode });
+    trackEvent('beta.onboarding.quick.mode_selected', { mode: newMode });
   };
 
   const handleComplete = async () => {
@@ -95,7 +95,7 @@ export default function QuickOnboardingBeta({
       // Apply complexity mode
       setMode(selectedMode);
       
-      logEvent('beta.onboarding.quick.completed', { 
+      trackEvent('beta.onboarding.quick.completed', { 
         mode: selectedMode,
         steps_viewed: step,
       });

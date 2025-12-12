@@ -32,7 +32,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useJurisdiction } from '../../../store/jurisdiction';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -75,7 +75,7 @@ function QuickTab(props: PowerToolTabProps) {
   const styles = createQuickStyles(palette);
 
   const handleTemplateSelect = (template: typeof TOP_TEMPLATES[0]) => {
-    logEvent('document.template.selected', { 
+    trackEvent('document.template.selected', { 
       template: template.id, 
       source: 'quick_tab',
       jurisdiction: jurisdictionCode,

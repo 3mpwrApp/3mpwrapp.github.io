@@ -32,7 +32,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
 
@@ -66,7 +66,7 @@ function AccountabilityTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={caseItem.id}
               onPress={() => {
-                logEvent('legal.case.open', { id: caseItem.id });
+                trackEvent('legal.case.open', { id: caseItem.id });
                 router.push('/advocacy/accountability-hub' as any);
               }}
               accessibilityLabel={`${caseItem.entity}: ${caseItem.type}`}
@@ -111,7 +111,7 @@ function AccountabilityTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={action.id}
             onPress={() => {
-              logEvent('legal.action', { action: action.id });
+              trackEvent('legal.action', { action: action.id });
               router.push('/advocacy/accountability-hub' as any);
             }}
             accessibilityLabel={action.name}
@@ -239,7 +239,7 @@ function LegalTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={resource.id}
             onPress={() => {
-              logEvent('legal.resource', { resource: resource.id });
+              trackEvent('legal.resource', { resource: resource.id });
               router.push('/advocacy/lawyer-finder' as any);
             }}
             accessibilityLabel={resource.name}
@@ -273,7 +273,7 @@ function LegalTab({ navigateToTab }: PowerToolTabProps) {
               <A11yPressable
                 key={match.id}
                 onPress={() => {
-                  logEvent('legal.match.view', { id: match.id });
+                  trackEvent('legal.match.view', { id: match.id });
                   router.push('/advocacy/lawyer-finder' as any);
                 }}
                 accessibilityLabel={`${match.name}, ${match.specialty}, ${match.rating} stars`}
@@ -409,7 +409,7 @@ function AutomationTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={tool.id}
             onPress={() => {
-              logEvent('legal.automation.tool', { tool: tool.id });
+              trackEvent('legal.automation.tool', { tool: tool.id });
               router.push('/advocacy/legal-automation' as any);
             }}
             accessibilityLabel={tool.name}
@@ -454,7 +454,7 @@ function AutomationTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={service.id}
             onPress={() => {
-              logEvent('legal.jaas.service', { service: service.id });
+              trackEvent('legal.jaas.service', { service: service.id });
               Alert.alert(t('common.comingSoon', 'Coming Soon'), service.name);
             }}
             accessibilityLabel={service.name}
@@ -601,7 +601,7 @@ function PolicyTab(_props: PowerToolTabProps) {
             <A11yPressable
               key={area.id}
               onPress={() => {
-                logEvent('policy.area', { area: area.id });
+                trackEvent('policy.area', { area: area.id });
                 router.push('/advocacy/policy-simple' as any);
               }}
               accessibilityLabel={area.name}
@@ -626,7 +626,7 @@ function PolicyTab(_props: PowerToolTabProps) {
           <A11yPressable
             key={action.id}
             onPress={() => {
-              logEvent('policy.action', { action: action.id });
+              trackEvent('policy.action', { action: action.id });
               router.push('/advocacy/policy-simple' as any);
             }}
             accessibilityLabel={action.name}

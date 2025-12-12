@@ -15,7 +15,7 @@ import { Linking, StyleSheet, Text, View } from 'react-native';
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
-import { logEvent } from '../services/analytics';
+import { trackEvent } from '../services/analyticsClient';
 import { useAppPalette } from '../theme/usePalette';
 import { sendFeedbackEmailInternal } from '../utils/feedback';
 
@@ -75,13 +75,13 @@ export default function BetaFeedbackBanner({
   const handleDismiss = async () => {
     try {
       await AsyncStorage?.setItem?.(DISMISSAL_KEY, String(Date.now()));
-      logEvent('beta_feedback_banner_dismissed');
+      trackEvent('beta_feedback_banner_dismissed');
     } catch {}
     setVisible(false);
   };
 
   const handleFeedback = async () => {
-    logEvent('beta_feedback_initiated', { source: 'banner' });
+    trackEvent('beta_feedback_initiated', { source: 'banner' });
     
     if (onFeedbackPress) {
       onFeedbackPress();
@@ -102,7 +102,7 @@ export default function BetaFeedbackBanner({
   };
 
   const handleDiscord = () => {
-    logEvent('beta_discord_opened', { source: 'banner' });
+    trackEvent('beta_discord_opened', { source: 'banner' });
     Linking.openURL('https://discord.gg/3mpwr');
   };
 

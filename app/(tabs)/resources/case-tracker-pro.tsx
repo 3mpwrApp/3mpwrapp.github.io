@@ -31,7 +31,7 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { logEvent } from '../../../services/analytics';
+import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
 
@@ -81,7 +81,7 @@ function DeadlinesTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={deadline.id}
             onPress={() => {
-              logEvent('deadlines.open', { id: deadline.id });
+              trackEvent('deadlines.open', { id: deadline.id });
               router.push('/resources/deadlines' as any);
             }}
             accessibilityLabel={`${deadline.title}, ${deadline.daysLeft} days left`}
@@ -118,7 +118,7 @@ function DeadlinesTab({ navigateToTab }: PowerToolTabProps) {
         label={t('deadlines.add', 'Add New Deadline')}
         icon="add-circle"
         onPress={() => {
-          logEvent('deadlines.add');
+          trackEvent('deadlines.add');
           router.push('/resources/deadlines' as any);
         }}
         variant="primary"
@@ -226,7 +226,7 @@ function MasterTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={caseItem.id}
             onPress={() => {
-              logEvent('master.case.open', { id: caseItem.id });
+              trackEvent('master.case.open', { id: caseItem.id });
               router.push('/resources/master-tracker-hub' as any);
             }}
             accessibilityLabel={`${caseItem.name}, ${caseItem.status}, ${caseItem.progress}% complete`}
@@ -371,7 +371,7 @@ function DenialTab({ navigateToTab }: PowerToolTabProps) {
           label={t('denial.analyze.button', 'Start Analysis')}
           icon="scan"
           onPress={() => {
-            logEvent('denial.analyze.start');
+            trackEvent('denial.analyze.start');
             router.push('/resources/denial-decoder' as any);
           }}
           variant="primary"
@@ -386,7 +386,7 @@ function DenialTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={reason.id}
             onPress={() => {
-              logEvent('denial.reason.view', { reason: reason.id });
+              trackEvent('denial.reason.view', { reason: reason.id });
               router.push('/resources/denial-decoder' as any);
             }}
             accessibilityLabel={reason.name}
@@ -491,7 +491,7 @@ function ClaimsTab({ navigateToTab }: PowerToolTabProps) {
             <A11yPressable
               key={type.id}
               onPress={() => {
-                logEvent('claims.type.select', { type: type.id });
+                trackEvent('claims.type.select', { type: type.id });
                 router.push('/resources/claims-navigator' as any);
               }}
               accessibilityLabel={`${type.name}, ${type.guides} guides`}
@@ -516,7 +516,7 @@ function ClaimsTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={tool.id}
             onPress={() => {
-              logEvent('claims.tool.open', { tool: tool.id });
+              trackEvent('claims.tool.open', { tool: tool.id });
               router.push('/resources/claims-navigator' as any);
             }}
             accessibilityLabel={tool.name}
@@ -651,7 +651,7 @@ function RTWTab(_props: PowerToolTabProps) {
             </View>
             <A11yPressable
               onPress={() => {
-                logEvent('rtw.stage.open', { stage: stage.id });
+                trackEvent('rtw.stage.open', { stage: stage.id });
                 router.push('/resources/rtw-planner' as any);
               }}
               accessibilityLabel={`${stage.name}, ${stage.status}`}
@@ -684,7 +684,7 @@ function RTWTab(_props: PowerToolTabProps) {
           <A11yPressable
             key={resource.id}
             onPress={() => {
-              logEvent('rtw.resource.open', { resource: resource.id });
+              trackEvent('rtw.resource.open', { resource: resource.id });
               router.push('/resources/rtw-planner' as any);
             }}
             accessibilityLabel={resource.name}
