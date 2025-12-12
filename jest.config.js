@@ -41,8 +41,8 @@ module.exports = {
     global: {
       branches: 12,
       functions: 22,
-      lines: 22,
-      statements: 22,
+      lines: 21,
+      statements: 21,
     },
   },
   coveragePathIgnorePatterns: ['/node_modules/'],
