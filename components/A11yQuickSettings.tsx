@@ -92,6 +92,8 @@ export default function A11yQuickSettings() {
             style={styles.backdrop} 
             onPress={() => setOpen(false)}
             accessibilityLabel="Close accessibility settings"
+            accessibilityRole="button"
+            hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
           >
             <View style={styles.modalPanel}>
               {panelContent}

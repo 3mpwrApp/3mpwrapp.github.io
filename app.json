@@ -59,6 +59,7 @@
       "package": "com.app3mpwr.app3mpwr",
       "versionCode": 1,
       "allowBackup": false,
+      "usesCleartextTraffic": false,
       "permissions": [
         "android.permission.INTERNET",
         "android.permission.ACCESS_NETWORK_STATE",
