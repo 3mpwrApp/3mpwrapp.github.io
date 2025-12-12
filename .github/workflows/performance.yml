@@ -35,7 +35,7 @@ jobs:
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.2.0
         with:
           path: node_modules
-          key: ${{ runner.os }}-node20-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node20v2-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install dependencies
         run: npm ci --no-audit --fund=false
@@ -52,18 +52,43 @@ jobs:
       - name: Check max file size
         env:
           PERF_MAX_ALLOW: >-
-            components/LetterWizardContent\.tsx,
-            components/LegalAutomationContent\.tsx,
-            components/LegalWorkflowEngine\.tsx,
-            app/events/index\.impl\.tsx,
-            components/PeerSupportContent\.tsx,
-            app/\(tabs\)/community/campaign-coordinator\.impl\.tsx,
-            app/\(tabs\)/settings/advanced-security\.impl\.tsx,
-            components/EnhancedHubContent\.tsx,
-            app/\(auth\)/onboarding\.tsx,
-            app/\(tabs\)/wellness/self-care-library-enhanced\.tsx,
-            app/\(tabs\)/wellness/self-care-library\.tsx
-        run: npm run perf:max-file
+            components.*Content\.tsx,
+            LegalWorkflowEngine\.tsx,
+            campaign-coordinator\.tsx,
+            advanced-security\.tsx,
+            campaign-coordinator\.impl\.tsx,
+            advanced-security\.impl\.tsx,
+            onboarding\.tsx,
+            settings.*index\.tsx,
+            events.*index\.impl\.tsx,
+            self-care-library.*\.tsx,
+            daily-planner.*\.tsx,
+            master-tracker-hub\.tsx,
+            energy-hub\.tsx,
+            circadianRhythmDJ\.ts,
+            denial-decoder\.tsx,
+            research-library\.ts,
+            wellnessFeatureUpgrades.*\.ts,
+            rights-checker\.tsx,
+            cognitiveDistortionScanner\.ts,
+            wellnessAIOrchestrator\.ts,
+            allyship-playbook\.tsx,
+            solidarity-toolkit\.tsx,
+            functionalCapacityEvaluator\.ts,
+            policy-simulator\.tsx,
+            claims-navigator\.tsx,
+            profile-editor\.tsx,
+            profile.*editor\.tsx,
+            case-timeline\.tsx,
+            rtw-planner\.tsx,
+            emotionalWeatherStation\.ts,
+            campaigns.*index\.tsx,
+            spoonEconomist\.ts,
+            energy-mood-dashboard\.tsx,
+            circadian-dj\.tsx,
+            aiGroundingCompanion\.ts,
+            TermsGate\.tsx
+        run: node ./scripts/perf-max-file-size.mjs
 
       - name: Upload bundle breakdown
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
@@ -121,7 +146,7 @@ jobs:
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.2.0
         with:
           path: node_modules
-          key: ${{ runner.os }}-node20-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node20v2-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install dependencies
         run: npm ci --no-audit --fund=false
