@@ -32,8 +32,11 @@
     ✅ stale.yml                  (NEW - cleanup)
     ✅ performance.yml            (NEW - bundle tracking)
   
-  ✅ dependabot.yml               (NEW - auto updates)
+  ✅ dependabot.yml               (auto security updates - npm + actions)
   ✅ labeler.yml                  (NEW - labeling rules)
+  ✅ SECURITY.md                  (security policy & disclosure)
+  ✅ CODEOWNERS                   (require reviews for critical files)
+  ✅ BRANCH_PROTECTION_SETUP.md   (branch protection guide)
   
   📚 Documentation (56 pages):
     ✅ WORKFLOWS_INDEX.md         (This navigation guide)

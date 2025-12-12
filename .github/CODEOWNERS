@@ -1,0 +1,35 @@
+# CODEOWNERS - Require reviews from specific teams/individuals for critical files
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+* @empowrapp-team
+
+# Security-critical files - require security team review
+/.github/workflows/security.yml @empowrapp-team @security-reviewers
+/.github/dependabot.yml @empowrapp-team
+/.github/SECURITY.md @empowrapp-team
+/firebase/firestore.rules @empowrapp-team
+/firebase/storage.rules @empowrapp-team
+
+# Authentication and sensitive services
+/store/auth.tsx @empowrapp-team
+/services/firestore.ts @empowrapp-team
+/services/auth*.ts @empowrapp-team
+
+# Configuration files - require careful review
+/app.config.js @empowrapp-team
+/eas.json @empowrapp-team
+/firebase.json @empowrapp-team
+/*.json @empowrapp-team
+
+# CI/CD workflows
+/.github/workflows/*.yml @empowrapp-team
+
+# Cloudflare Workers (server-side code)
+/cloudflare-workers/** @empowrapp-team
+
+# Server code
+/server/** @empowrapp-team
+
+# Scripts that may have elevated privileges
+/scripts/** @empowrapp-team
