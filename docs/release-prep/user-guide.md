@@ -1,6 +1,6 @@
 # 3mpwrApp — Complete User Guide
 
-**Version: 1.0 | Last Updated: October 24, 2025**
+**Version: 1.0 | Last Updated: December 12, 2025**
 
 ---
 
@@ -531,4 +531,4 @@ See full changelog: Settings > About > What's New
 ---
 
 **© 2025 3mpwr App. All rights reserved.**  
-**Last Updated: October 24, 2025 | Version 1.0**
+**Last Updated: December 12, 2025 | Version 1.0**

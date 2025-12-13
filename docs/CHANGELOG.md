@@ -7,10 +7,13 @@ Note for authors (plain language):
 - One idea per bullet, present tense, start with a verb (Add, Fix, Improve). Keep it brief and clear.
 - The app's What's New generator pulls from this file and strips technical jargon automatically.
 
-## [1.0.0] - December 7, 2025
+## [1.0.0] - December 12, 2025
 
 ### 🎉 Production Release
 
+- **Documentation refresh** - All docs updated from November to December 2025
+- **What's New updated** - New entries for December 2025 production readiness
+- **Tester Guide v4.0** - Refreshed with production-ready messaging
 - **Final stress test complete** - 721 tests passing across all app features
 - **Security verified** - AES-256-GCM encryption, XSS/SQL injection protection confirmed
 - **Offline-first verified** - Complete offline support with automatic sync

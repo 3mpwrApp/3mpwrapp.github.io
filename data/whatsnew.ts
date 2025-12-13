@@ -7,7 +7,33 @@ export type WhatsNewItem = {
 };
 
 export const whatsnew: WhatsNewItem[] = [
-  // November 2025 - Latest Updates
+  // December 2025 - Latest Updates
+  {
+    id: "wn-2025-12-12-a",
+    title: "Production Ready Release",
+    summary: "We completed our final stress test with 721 tests passing. All security, accessibility, and offline features verified and ready for beta.",
+    date: "2025-12-12T00:00:00.000Z",
+  },
+  {
+    id: "wn-2025-12-12-b",
+    title: "Documentation Updated",
+    summary: "All guides and documentation updated for December 2025. Check out our refreshed tester guide and release notes.",
+    date: "2025-12-12T00:00:00.000Z",
+  },
+  {
+    id: "wn-2025-12-07-a",
+    title: "Comprehensive Stress Testing",
+    summary: "52 new tests added covering authentication, security, offline mode, and all major features. Zero issues found.",
+    date: "2025-12-07T00:00:00.000Z",
+  },
+  {
+    id: "wn-2025-12-07-b",
+    title: "Discord Integration Ready",
+    summary: "Webhook notification system now available for team communications and automated updates.",
+    date: "2025-12-07T00:00:00.000Z",
+  },
+
+  // November 2025 - Major Updates
   {
     id: "wn-2025-11-30-a",
     title: "Community Safety Tools",

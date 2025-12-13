@@ -1,6 +1,6 @@
 # 3mpwrApp — Terms of Service
 
-**Last Updated: December 7, 2025**  
+**Last Updated: December 12, 2025**  
 **Version: 4.1 (December 2025 Production Release)**
 
 ## 🆕 **DECEMBER 2025 UPDATES (Version 4.1)**

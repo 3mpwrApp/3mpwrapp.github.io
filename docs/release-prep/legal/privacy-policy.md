@@ -1,6 +1,6 @@
 # 3mpwrApp — Privacy Policy
 
-**Last updated: December 7, 2025**
+**Last updated: December 12, 2025**
 **Version: 3.1 (December 2025 Production Release)**
 
 This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and protects information in the 3mpwrApp mobile application and web experience. By using the app, you agree to these practices.

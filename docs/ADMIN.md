@@ -460,5 +460,5 @@ For admin-related questions or issues:
 
 ---
 
-**Last Updated:** October 13, 2025
-**Version:** 1.0.0-rc.1
+**Last Updated:** December 12, 2025
+**Version:** 1.0.0

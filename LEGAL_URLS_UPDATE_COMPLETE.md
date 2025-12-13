@@ -12,12 +12,14 @@ All legal and support documents are now hosted at **Cloudflare Pages** and integ
 
 ### 1. **Privacy Policy**
 - **URL:** https://3mpwrapp.pages.dev/privacy
-- **Version:** 3.0 (November 2025)
+- **Version:** 3.0 (December 2025)
+- **Updated:** December 12, 2025
 - **File:** `docs/release-prep/legal/privacy-policy.md`
 
 ### 2. **Terms of Service**
 - **URL:** https://3mpwrapp.pages.dev/terms
-- **Version:** 4.0 (November 2025)
+- **Version:** 4.0 (December 2025)
+- **Updated:** December 12, 2025
 - **File:** `docs/release-prep/legal/terms-of-service.md`
 
 ### 3. **Data Ownership Statement**
