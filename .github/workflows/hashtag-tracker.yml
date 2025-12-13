@@ -5,12 +5,9 @@
 name: Hashtag Tracker
 
 on:
-  # Run daily at 6 AM UTC
+  # Run daily at 6 AM UTC, and weekly report on Sundays at 7 AM UTC
   schedule:
     - cron: '0 6 * * *'
-  
-  # Weekly report on Sundays at 7 AM UTC
-  schedule:
     - cron: '0 7 * * 0'
   
   # Manual trigger
