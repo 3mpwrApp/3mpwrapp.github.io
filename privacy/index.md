@@ -15,21 +15,23 @@ description: Our commitment to your privacy and 100% user data ownership.
 
 📖 **10 minute read** | ⚡ **Quick summary below**
 
-**Last updated: December 7, 2025**  
-**Version: 3.1 (December 2025 Production Release)**
+**Last updated: December 12, 2025**  
+**Version: 3.2 (December 2025 Production Release + USA Lite)**
 
 ---
 
-## 🆕 **December 2025 Updates (Version 3.1)**
+## 🆕 **December 2025 Updates (Version 3.2)**
 
-Final stress test complete - 721 tests passing, production ready:
+First demo successful, USA Lite launched - 721 tests passing, production ready:
 
+- **🎉 First Demo Success:** December 12, 2025 presentation received positive feedback
+- **🇺🇸 USA Lite Launched:** American supporters can now join with same privacy protections
 - **🔒 Security Verified:** AES-256-GCM encryption confirmed across all sensitive data
 - **📴 Offline-First Verified:** Complete offline support with AsyncStorage persistence
 - **✅ Zero Issues:** 0 ESLint errors, 0 TypeScript errors, 0 accessibility issues
 - **🧪 Comprehensive Testing:** 721 tests covering auth, security, offline, features, accessibility
 
-**All privacy protections from previous versions remain in effect.**
+**USA Lite users receive identical privacy protections.** All privacy protections from previous versions remain in effect.**
 
 ---
 

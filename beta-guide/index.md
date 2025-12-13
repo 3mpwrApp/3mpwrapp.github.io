@@ -1,53 +1,88 @@
 ---
 layout: default
-title: 3mpwr App – Closed Beta Tester Guide
+title: 3mpwr App – Beta Tester Guide
 permalink: /beta-guide/
-description: Comprehensive guide for 3mpwr App beta testers - November 2025 production-ready release with 90% accessibility, complete feature consolidation, and revolutionary new features.
-version: 3.0 (November 2025 Consolidation Update)
-lastUpdated: 2025-11-23
+description: Comprehensive guide for 3mpwr App beta testers - December 2025 production-ready release with 721 tests passing, complete security verification, and USA Lite for American supporters!
+version: 4.0 (December 2025 Production Release + USA Lite)
+lastUpdated: 2025-12-12
 ---
 
 
 {%- include status-banner.html -%}
 
-# 3mpwr App – Closed Beta Tester Guide
+# 3mpwr App – Beta Tester Guide
 
 **Welcome to the 3mpwr App Beta Testing Program!** This guide shows you how to join the beta, test the app using Expo Go (free), and share your valuable feedback.
 
 > 📱 **New to Beta Testing?** No worries! This guide is designed for testers of all experience levels. If you can use a smartphone, you can beta test!
 
-> 🎉 **November 2025 Update:** We've achieved 90% accessibility with complete feature consolidation, offline support, and revolutionary new features. This beta tests production-ready code!
+> 🎉 **December 2025 Update:** First demo presentation with Thunder Bay & District Injured Workers Support Group was a success! 721 tests passing, 100% production ready, and **USA Lite now available for American supporters!**
 
 ---
 
 ## 📋 Table of Contents
 
 1. [How to Join Beta Testing](#-how-to-join-beta-testing)
-2. [Known Limitations in Expo Go](#️-known-limitations-in-expo-go)
-3. [What to Test](#-what-to-test)
-4. [How to Report Feedback](#-how-to-report-feedback)
-5. [Privacy & Safety](#-privacy--safety)
-6. [FAQ](#-frequently-asked-questions)
-7. [Quick Testing Checklist](#-quick-testing-checklist)
-8. [Need Help?](#-need-help)
+2. [USA Lite - For American Testers](#-usa-lite---for-american-testers)
+3. [Known Limitations in Expo Go](#️-known-limitations-in-expo-go)
+4. [What to Test](#-what-to-test)
+5. [How to Report Feedback](#-how-to-report-feedback)
+6. [Privacy & Safety](#-privacy--safety)
+7. [FAQ](#-frequently-asked-questions)
+8. [Quick Testing Checklist](#-quick-testing-checklist)
+9. [Need Help?](#-need-help)
 
 ---
 
 ## 📧 How to Join Beta Testing
 
-### Phase 1: Closed Beta (Current)
+### Phase 1: Closed Internal Testing 🚀 STARTING SOON!
 
-**Status:** Invitations being sent to selected testers
+**Status:** Phase 1 closed internal testing is about to begin! First demo presentation was successful.
+
+### Phase 2: Open Beta ⏳ COMING NEXT
+
+**Status:** Will open after Phase 1 completes - Canadian AND USA testers welcome!
 
 **To join:**
-1. **Wait for your invitation email** from empowrapp08162025@gmail.com
-2. Your email will include:
+1. **Email us** at empowrapp08162025@gmail.com with subject "Beta Testing Interest"
+2. Include your:
+   - Name
+   - Device type (iPhone/Android)
+   - Location (Canada or USA)
+3. You'll receive:
    - Installation instructions specific to your device
    - Beta access link or QR code
    - Beta tester welcome information
 
-**Not invited yet?**
-- Phase 1 is limited to 20-50 testers
+---
+
+## 🇺🇸 USA Lite - For American Testers
+
+**NEW!** Following strong interest during our first demo presentation, American supporters can now join beta testing!
+
+### What's Included in USA Lite
+
+| Feature | Availability |
+|---------|-------------|
+| **Wellness Tools** | ✅ Full access |
+| **Community** | ✅ Full access |
+| **Evidence Locker** | ✅ Full access |
+| **Letter Wizard** | ✅ General templates |
+| **Crisis Resources** | ✅ US hotlines (988, Crisis Text Line) |
+| **Accessibility** | ✅ Full WCAG AAA |
+| **Workers' Comp** | ⚠️ General (state-specific coming 2026) |
+| **Benefits** | ⚠️ General (SSDI/SSI-specific coming 2026) |
+
+### Why USA Lite?
+
+During our December 9, 2025 demo with the Thunder Bay & District Injured Workers Support Group, USA listeners expressed strong interest in testing. Rather than making them wait for our planned 2026 US launch, we streamlined access to core features.
+
+**Full US launch with 50-state compliance is planned for Q1-Q2 2026.**
+
+---
+
+## ⚠️ Known Limitations in Expo Go
 - **Sign up for Phase 2** (Open Beta): Email empowrapp08162025@gmail.com with subject "Phase 2 Beta Interest"
 - Phase 2 will begin approximately 2 weeks after Phase 1 starts
 

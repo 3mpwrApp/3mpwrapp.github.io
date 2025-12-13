@@ -145,6 +145,16 @@ description: A community-powered hub for injured workers and persons with disabi
 
 <span aria-hidden="true">📖</span> **3 minute read** <span aria-hidden="true">🔋🔋</span> **Energy: Light**
 
+<!-- December 2025 Announcement Banner -->
+<div class="gradient-banner" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
+  <h3 style="margin: 0 0 0.5rem; color: white; font-size: 1.4rem;">🎉 First Demo Presentation Successful! + USA Lite Launched 🇺🇸</h3>
+  <p style="margin: 0; font-size: 1rem; opacity: 0.95;">December 12, 2025 — 721 tests passing, 100% production ready. American supporters can now join with USA Lite!</p>
+  <p style="margin: 0.75rem 0 0;">
+    <a href="/whats-new/" style="color: white; text-decoration: underline; font-weight: bold;">See What's New →</a> &nbsp;|&nbsp;
+    <a href="/roadmap/#-new-usa-lite---now-available" style="color: white; text-decoration: underline; font-weight: bold;">USA Lite Details →</a>
+  </p>
+</div>
+
 **Be part of building something meaningful.**
 
 3mpwr App is a **free, community-powered platform** where injured workers, persons with disabilities, supporters, and allies come together. Whether you identify as disabled or are still figuring things out—**you belong here.**
@@ -730,8 +740,8 @@ function copyCampaignHome() {
 Ready to join the movement? Here's how you can get started:
 
 <div class="gradient-banner" style="color: white !important;">
-  <h3 style="margin: 0 0 0.5rem; color: white !important;"><span aria-hidden="true">🚀</span> Phase 1 Beta Testing - Now Accepting Signups!</h3>
-  <p style="margin: 0 0 1rem; font-size: 1rem; color: white !important;">Be among the first testers to shape the future of disability advocacy technology.</p>
+  <h3 style="margin: 0 0 0.5rem; color: white !important;"><span aria-hidden="true">🚀</span> Phase 1 Closed Internal Testing - Starting Soon!</h3>
+  <p style="margin: 0 0 1rem; font-size: 1rem; color: white !important;">First demo was a success! 🎉 Be among the first testers to shape the future of disability advocacy technology.</p>
   <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: #ffffff !important; color: #5568d3 !important; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
   <p style="margin: 1rem 0 0; font-size: 0.9rem; color: white !important;"><a href="{{ '/app-waitlist' | relative_url }}" style="color: white !important; text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="{{ '/beta-guide' | relative_url }}" style="color: white !important; text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
 </div>

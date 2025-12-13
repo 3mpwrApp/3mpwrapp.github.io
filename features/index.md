@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Features
-description: Explore 3mpwr App's comprehensive features designed to empower your advocacy, connect with community, and navigate systems with confidence. Production-Ready Beta with 90% Accessibility.
+description: Explore 3mpwr App's comprehensive features designed to empower your advocacy, connect with community, and navigate systems with confidence. 100% Production-Ready with USA Lite now available!
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
@@ -13,11 +13,13 @@ description: Explore 3mpwr App's comprehensive features designed to empower your
 
 📖 **12 minute read** | ⚡ **Feature highlights below**
 
-**Version:** 4.1 (December 2025 Production Release)  
-**Status:** 100% Production Ready • 721 Tests Passing • WCAG AAA Compliant  
-**Last Updated:** December 7, 2025
+**Version:** 4.1 (December 2025 Production Release + USA Lite)  
+**Status:** 100% Production Ready • 721 Tests Passing • WCAG AAA Compliant • First Demo Successful! 🎉  
+**Last Updated:** December 12, 2025
 
 Welcome to 3mpwr App - your complete toolkit for disability advocacy, community connection, and system navigation. With **60+ core features** organized by Complexity Mode (Simple: 5, Standard: 20, Power User: 150+), every tool is designed to empower you while protecting your privacy.
+
+**🇺🇸 NEW: USA Lite now available!** American supporters can join beta testing with access to core features. [Learn more →](/roadmap/#-new-usa-lite---now-available)
 
 ---
 
@@ -79,6 +81,8 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 ---
 
 ### 🆕 December 2025 Updates (Production Release)
+- ✅ **First Demo Presentation Successful:** December 12, 2025 - positive reception from Canada & USA audiences
+- ✅ **USA Lite Launched:** American supporters can now join with access to core features
 - ✅ **721 Tests Passing:** Comprehensive coverage across all features - app is 100% production ready
 - ✅ **AES-256-GCM Encryption:** Military-grade security verified across all sensitive data
 - ✅ **Offline-First Complete:** Full functionality without internet connection using AsyncStorage

@@ -1,12 +1,12 @@
 ---
 layout: default
 title: 3mpwrApp — Complete User Guide
-description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community. Now 100% production ready with 721 tests passing, full security verification, and WCAG AAA compliance.
-version: 4.0 (December 2025 - Production Release)
-lastUpdated: 2025-12-07
+description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community. Now 100% production ready with 721 tests passing, full security verification, WCAG AAA compliance, and USA Lite for American supporters!
+version: 4.1 (December 2025 - Production Release + USA Lite)
+lastUpdated: 2025-12-12
 accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
 currentPhase: Production Release (100% Complete)
-allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline support, complete security verification
+allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline support, complete security verification, USA Lite available
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
@@ -15,9 +15,9 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 # 3mpwrApp — Complete User Guide
 
-📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 4.0** — December 7, 2025 (Production Release)
+📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 4.1** — December 12, 2025 (Production Release + USA Lite)
 
-> **What's new?** December 2025 marks our production release with 721 tests passing, AES-256-GCM encryption verified, WCAG AAA compliance, and complete offline support. [See what's new →](#whats-new-december-2025)
+> **What's new?** December 2025 marks our production release with 721 tests passing, first demo presentation successful, and USA Lite launched for American supporters! [See what's new →](#whats-new-december-2025)
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (90 seconds)</summary>
@@ -65,9 +65,33 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 ## 🆕 What's New - December 2025 (Production Release!) {#whats-new-december-2025}
 
-### 🎉 December 7, 2025 - 100% Production Ready!
+### 🎉 December 12, 2025 - 100% Production Ready + First Demo Success!
 
 **Final Stress Test Complete - All Systems Verified:**
+
+#### 🎤 **First Demo Presentation - SUCCESS!**
+On December 12, 2025, we completed our **first official demo/intro presentation** for 3mpwr App:
+- **Positive reception** from attendees across Canada and USA
+- **Strong interest** from USA-based supporters and allies
+- **Led directly to USA Lite launch** (see below)
+
+#### 🇺🇸 **USA Lite - Now Available!**
+Following demo interest from American supporters, we've launched **USA Lite**:
+
+| Feature | USA Lite |
+|---------|----------|
+| Wellness Tools | ✅ Full access |
+| Community | ✅ Full access |
+| Evidence Locker | ✅ Full access |
+| Letter Wizard | ✅ General templates |
+| Crisis Resources | ✅ US (988, Crisis Text Line) |
+| Accessibility | ✅ Full WCAG AAA |
+| Workers' Comp | ⚠️ General (state-specific coming 2026) |
+| Benefits | ⚠️ General (SSDI/SSI-specific coming 2026) |
+
+**Full US launch with 50-state compliance planned for Q1-Q2 2026.**
+
+[Join beta testing →](/beta/) | [See roadmap →](/roadmap/)
 
 #### ✅ **721 Tests Passing**
 Comprehensive test coverage across all app features:
@@ -416,7 +440,7 @@ All legal and policy documents updated:
 ### Beta Testing Access
 
 <div class="info-box-light">
-  <p style="margin: 0 0 0.5rem;"><strong>3mpwrApp is currently in Phase 1 - Closed Beta Testing.</strong></p>
+  <p style="margin: 0 0 0.5rem;"><strong>3mpwrApp is entering Phase 1 - Closed Internal Testing (Starting Soon!).</strong></p>
   <p style="margin: 0;">Installation instructions and access details will be sent directly to beta testers via email and messaging.</p>
   <p style="margin: 0.5rem 0 0;"><strong>📖 Full beta information:</strong> See the <a href="/beta">Beta Testing Guide</a> for complete procedures, reporting issues, and testing priorities.</p>
 </div>

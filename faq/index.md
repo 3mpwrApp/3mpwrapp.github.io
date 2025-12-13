@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Frequently Asked Questions (FAQ)
-description: Common questions about 3mpwr App - privacy, features, accessibility, beta testing, and more. Updated November 2025 with 90% accessibility and production-ready features.
+description: Common questions about 3mpwr App - privacy, features, accessibility, beta testing, USA Lite, and more. Updated December 2025 with production-ready status and USA Lite launch.
 permalink: /faq/
-lastUpdated: 2025-11-23
+lastUpdated: 2025-12-12
 ---
 
 {%- include status-banner.html -%}
 
 # Frequently Asked Questions (FAQ)
 
-**Last Updated:** November 23, 2025
+**Last Updated:** December 12, 2025
 
 📖 **15 minute read** | ⚡ Use search or table of contents to jump to your question
 
@@ -62,7 +62,8 @@ Quick answers to common questions about 3mpwr App. Can't find what you're lookin
 
 ## 📑 Table of Contents
 
-- [What's New - November 2025](#whats-new---november-2025)
+- [What's New - December 2025](#whats-new---december-2025)
+- [USA Lite - For American Users](#usa-lite---for-american-users)
 - [Getting Started](#getting-started)
 - [Common Concerns & Trust Questions](#common-concerns--trust-questions)
 - [Privacy & Data](#privacy--data)
@@ -72,6 +73,29 @@ Quick answers to common questions about 3mpwr App. Can't find what you're lookin
 - [Beta Testing](#beta-testing)
 - [Troubleshooting](#troubleshooting)
 - [Legal & Disclaimers](#legal--disclaimers)
+
+---
+
+## What's New - December 2025
+
+### What's the December 2025 milestone?
+
+**🎉 First Demo Presentation Successful + USA Lite Launch!**
+
+On December 12, 2025, we completed our first demo/intro presentation for 3mpwr App — and it was a success!
+
+**Key achievements:**
+- ✅ **721 Tests Passing** - Complete test coverage across all features
+- ✅ **0 ESLint/TypeScript Errors** - Clean, maintainable codebase
+- ✅ **0 Accessibility Issues** - WCAG AAA compliant
+- ✅ **AES-256-GCM Encryption** - Security verified
+- ✅ **Full Offline Support** - Works without internet
+- ✅ **First Demo Successful** - Positive community response
+- ✅ **USA Lite Launched** - American supporters can now join!
+
+### What is USA Lite?
+
+Following strong interest from USA listeners during our demo, we've launched **USA Lite** - a streamlined version for American supporters and allies. [See full details below →](#usa-lite---for-american-users)
 
 ---
 
@@ -115,6 +139,90 @@ Quick answers to common questions about 3mpwr App. Can't find what you're lookin
 - Consolidates 10+ separate screens into 4 integrated hubs
 
 [See full November 2025 updates in User Guide →](/user-guide#whats-new-november-2025)
+
+---
+
+## USA Lite - For American Users
+
+<div class="faq-accordion-section">
+
+<details class="faq-accordion" id="faq-usa-lite" open>
+  <summary class="faq-question">
+    <span class="question-icon">🇺🇸</span>
+    <span class="question-text">What is USA Lite?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
+
+**USA Lite** is a streamlined version of 3mpwr App designed for American supporters and allies who want to join our disability rights community.
+
+**Why we launched it:** During our first demo presentation (December 12, 2025), USA listeners expressed strong interest in beta testing. Rather than making them wait for our planned 2026 US launch, we streamlined our roadmap to provide immediate access to core features.
+
+**What's included:**
+- ✅ Full wellness tools (energy tracking, mood, pacing partner AI)
+- ✅ Community access (connect with disability rights movement)
+- ✅ Evidence Locker (AES-256 encrypted document storage)
+- ✅ Letter Wizard (general advocacy templates)
+- ✅ Crisis resources (US hotlines: 988, Crisis Text Line)
+- ✅ All accessibility features (WCAG AAA, Complexity Mode, voice)
+- ✅ Full offline support
+
+**What's different:**
+- ⚠️ Workers' comp templates are general (not state-specific)
+- ⚠️ Benefit workflows are general (not SSDI/SSI-specific)
+- ⚠️ Legal workflows focus on advocacy (not US tribunal-specific)
+
+**Full US launch with state-specific features is planned for Q1-Q2 2026.**
+
+  </div>
+</details>
+
+<details class="faq-accordion" id="faq-usa-signup">
+  <summary class="faq-question">
+    <span class="question-icon">📝</span>
+    <span class="question-text">How do I sign up for USA Lite?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
+
+**Same process as Canadian users!**
+
+1. Go to [/beta/](/beta/) to sign up for beta testing
+2. When asked about location, select United States
+3. You'll receive access to USA Lite automatically
+4. All core features work immediately
+
+**No separate app** - USA Lite is the same app with region-appropriate features.
+
+  </div>
+</details>
+
+<details class="faq-accordion" id="faq-usa-canada-difference">
+  <summary class="faq-question">
+    <span class="question-icon">🇨🇦</span>
+    <span class="question-text">What's the difference between Canada and USA versions?</span>
+    <span class="accordion-arrow" aria-hidden="true">▼</span>
+  </summary>
+  <div class="faq-answer">
+
+| Feature | Canada (Full) | USA Lite |
+|---------|---------------|----------|
+| **Wellness Tools** | ✅ Full | ✅ Full |
+| **Community** | ✅ Full | ✅ Full |
+| **Evidence Locker** | ✅ Full | ✅ Full |
+| **Accessibility** | ✅ WCAG AAA | ✅ WCAG AAA |
+| **Crisis Resources** | 🇨🇦 Canadian | 🇺🇸 US (988, etc.) |
+| **Workers' Comp** | ✅ WSIB/WCB specific | ⚠️ General templates |
+| **Benefits** | ✅ ODSP, AISH, CPP-D | ⚠️ General resources |
+| **Legal Workflows** | ✅ Canadian tribunals | ⚠️ Advocacy tools |
+| **Province Filter** | ✅ All provinces | ❌ Not applicable |
+
+**Bottom line:** Universal features work the same. Country-specific legal/benefits features are tailored to each region.
+
+  </div>
+</details>
+
+</div>
 
 ---
 

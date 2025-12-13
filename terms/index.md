@@ -10,19 +10,21 @@ description: The terms and conditions for using the 3mpwr website and app.
 
 # 3mpwrApp — Terms of Service
 
-**Last Updated: December 7, 2025**  
-**Version: 4.1 (December 2025 Production Release)**
+**Last Updated: December 12, 2025**  
+**Version: 4.2 (December 2025 Production Release + USA Lite)**
 
-## 🆕 **DECEMBER 2025 UPDATES (Version 4.1)**
+## 🆕 **DECEMBER 2025 UPDATES (Version 4.2)**
 
-Final stress test complete - app is 100% production ready:
+First demo successful, USA Lite launched - app is 100% production ready:
 
+- **🎉 First Demo Success:** December 12, 2025 presentation received positive feedback
+- **🇺🇸 USA Lite Launched:** American supporters can now join beta testing
 - **🧪 721 Tests Passing:** Comprehensive coverage across all features
 - **🔒 Security Verified:** AES-256-GCM encryption, XSS/SQL injection prevention
 - **📴 Offline-First Complete:** Full functionality without internet connection
 - **♿ Accessibility:** WCAG AAA compliant, 0 issues detected
 
-**All terms below apply to December 2025 production release and all existing features.**
+**USA Lite users are subject to the same terms.** All terms below apply to December 2025 production release and all existing features.**
 
 ---
 
@@ -268,7 +270,7 @@ By accessing or using 3mpwrApp's website, progressive web app, or services, you 
 
 ### 3. Beta Testing & Current Status
 
-**Current Status**: 3mpwrApp is in **Phase 1 - Closed Beta** testing.
+**Current Status**: 3mpwrApp is entering **Phase 1 - Closed Internal Testing** (starting soon!).
 
 **What this means**:
 - Features may change without notice during beta development

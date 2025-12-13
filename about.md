@@ -108,7 +108,38 @@ description: Empowering Canada's disability and injured worker community with 10
 
 **Our approach:** Perfect our platform for Canada first, building the strongest disability rights and workers' rights tool in the nation - serving ALL people who care about these issues. Once we've proven our model works and serves our diverse community effectively, we'll expand globally to support disability rights movements worldwide.
 
+**🆕 December 2025 Update:** Following our successful first demo presentation, we've launched **USA Lite** for American supporters! [Learn more →](/roadmap/#-new-usa-lite---now-available)
+
 **What's next?** Check out our **[Roadmap](/roadmap/)** to see our vision for global expansion (2026-2028), including plans to serve 100+ countries and connect disability rights movements internationally. From Canada to the world - building collective power for persons with disabilities, injured workers, and everyone who stands with us.
+
+---
+
+## 🎤 December 2025 Milestone: First Demo Complete!
+
+<div class="gradient-banner" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+  <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem;">🎉 Our First Demo/Intro Presentation Was Successful!</h3>
+  <p style="margin: 0 0 1rem; font-size: 1rem;">
+    On December 9, 2025, we presented 3mpwr App to the <strong>Thunder Bay & District Injured Workers Support Group</strong> — and the response was incredible! 
+    With <strong>721 tests passing</strong> and <strong>100% production ready</strong> status, we're proud of what we've built together.
+  </p>
+  <p style="margin: 0; font-size: 0.95rem;">
+    <strong>Exciting news:</strong> USA listeners expressed strong interest in beta testing, leading us to launch <strong>USA Lite</strong> — 
+    making core features available to our American supporters and allies!
+  </p>
+</div>
+
+### 🇺🇸 USA Lite Now Available!
+
+Following the demo, we're thrilled to welcome American users with **USA Lite** — a streamlined version for US supporters:
+
+- ✅ **Full Wellness Tools** - Energy tracking, mood, pacing partner AI
+- ✅ **Community Access** - Connect with the disability rights movement
+- ✅ **Evidence Locker** - Secure AES-256 encrypted document storage
+- ✅ **Crisis Resources** - US hotlines (988, Crisis Text Line)
+- ✅ **Accessibility** - Full WCAG AAA compliance, Complexity Mode
+- ⚠️ **Canadian-Specific** - Workers' comp & benefit workflows remain Canada-only (full US launch planned 2026)
+
+[Join beta testing →](/beta/) | [See full USA Lite details →](/roadmap/#-new-usa-lite---now-available)
 
 ### Why 3mpwrApp is Different
 

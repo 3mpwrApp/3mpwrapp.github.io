@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Roadmap
-description: Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations
+description: Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!
 permalink: /roadmap/
-lastUpdated: 2025-10-25
+lastUpdated: 2025-12-12
 ---
 
 
@@ -11,7 +11,9 @@ lastUpdated: 2025-10-25
 
 # 🗺️ 3mpwrApp Roadmap
 
-**Current Status: Phase 1 - Closed Beta Testing**
+**Current Status: Production Ready - 721 Tests Passing - Preparing for Open Beta**
+
+🎉 **December 9, 2025 Milestone:** First demo/intro presentation with Thunder Bay & District Injured Workers Support Group was a success! USA Lite now available for American supporters and allies.
 
 We're constantly improving 3mpwrApp based on your feedback and the community's needs. Here's what we're working on and what's coming next.
 
@@ -21,27 +23,29 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
   <p class="timeline-subtitle">Track our progress from closed beta to global expansion</p>
   
   <div class="timeline">
-    <!-- Phase 1 - Current -->
+    <!-- Phase 1 - STARTING SOON -->
     <div class="timeline-item current" data-phase="1">
       <div class="timeline-marker">
         <span class="marker-dot"></span>
         <span class="marker-line"></span>
       </div>
       <div class="timeline-content">
-        <div class="timeline-badge current-badge">🔄 Current Phase</div>
-        <h3 class="timeline-heading">Phase 1: Closed Beta Testing</h3>
-        <p class="timeline-date">October - November 2025</p>
+        <div class="timeline-badge current-badge">🚀 Starting Soon</div>
+        <h3 class="timeline-heading">Phase 1: Closed Internal Testing</h3>
+        <p class="timeline-date">December 2025</p>
         <div class="timeline-details">
           <div class="progress-bar">
-            <div class="progress-fill" style="width: 35%"></div>
+            <div class="progress-fill" style="width: 0%"></div>
           </div>
-          <p class="progress-label">35% Complete</p>
+          <p class="progress-label">About to Begin! First Demo Complete 🎉</p>
           <ul class="timeline-features">
-            <li>✅ Core feature testing (Evidence Locker, Letter Wizard, Wellness)</li>
-            <li>✅ Accessibility validation with screen readers</li>
-            <li>🔄 Security audits and penetration testing</li>
-            <li>🔄 Bug fixes and performance optimization</li>
-            <li>⏳ Community guidelines enforcement testing</li>
+            <li>🚀 Core feature testing (Evidence Locker, Letter Wizard, Wellness)</li>
+            <li>🚀 Accessibility validation with screen readers</li>
+            <li>✅ Security audits - AES-256-GCM encryption verified</li>
+            <li>🚀 Bug fixes and performance optimization</li>
+            <li>🚀 Community guidelines enforcement testing</li>
+            <li>✅ First demo/intro presentation with Thunder Bay & District Injured Workers Support Group - SUCCESS!</li>
+            <li>✅ USA Lite launched for American supporters</li>
           </ul>
           <button class="timeline-expand" aria-expanded="false">
             <span class="expand-text">Show Details</span>
@@ -63,21 +67,22 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
       </div>
     </div>
 
-    <!-- Phase 2 - Upcoming -->
-    <div class="timeline-item upcoming" data-phase="2">
+    <!-- Phase 2 - UPCOMING -->
+    <div class="timeline-item future" data-phase="2">
       <div class="timeline-marker">
         <span class="marker-dot"></span>
         <span class="marker-line"></span>
       </div>
       <div class="timeline-content">
-        <div class="timeline-badge upcoming-badge">📅 Coming Soon</div>
+        <div class="timeline-badge future-badge">⏳ Coming Next</div>
         <h3 class="timeline-heading">Phase 2: Open Beta</h3>
-        <p class="timeline-date">December 2025 - January 2026</p>
+        <p class="timeline-date">Q1 2026 (After Phase 1)</p>
         <div class="timeline-details">
           <ul class="timeline-features">
             <li>📋 Expand to more Canadian users</li>
             <li>📋 Public sign-ups accepted</li>
-            <li>📋 Additional features based on closed beta feedback</li>
+            <li>✅ USA Lite available for American supporters</li>
+            <li>📋 Additional features based on demo feedback</li>
             <li>📋 Continued refinement and optimization</li>
             <li>📋 Community growth and engagement</li>
           </ul>
@@ -225,7 +230,7 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 
 ---
 
-## 🇨🇦 **Current Scope: Canada-Wide**
+## 🇨🇦 **Current Scope: Canada-Wide + USA Lite**
 
 **3mpwrApp is currently focused on serving the Canadian disability community**, including:
 - Persons with Disabilities across all provinces and territories
@@ -239,22 +244,62 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 
 ---
 
+## 🇺🇸 **NEW: USA Lite - Now Available!**
+
+Following strong interest from American supporters during our first demo presentation (December 12, 2025), we've streamlined our roadmap to offer **USA Lite** for our allies south of the border!
+
+### What's in USA Lite?
+
+| Feature | Availability |
+|---------|-------------|
+| **Wellness Tools** | ✅ Full access - Energy tracking, mood, pacing AI |
+| **Community** | ✅ Full access - Connect with disability movement |
+| **Letter Wizard** | ✅ Templates (general advocacy) |
+| **Evidence Locker** | ✅ Full access - AES-256 encrypted storage |
+| **Crisis Resources** | ✅ US hotlines (988, Crisis Text Line) |
+| **Accessibility** | ✅ Full WCAG AAA, Complexity Mode, voice |
+| **Offline Support** | ✅ Full offline-first functionality |
+| **Workers' Comp** | ⚠️ General templates (not state-specific) |
+| **Benefit Programs** | ⚠️ General resources (not SSDI/SSI-specific) |
+| **Legal Workflows** | ⚠️ Advocacy tools only (not US tribunal-specific) |
+
+### Why USA Lite?
+
+- **Immediate need:** US supporters asked to join during our demo
+- **Shared mission:** Disability rights transcend borders
+- **Stepping stone:** Full US launch planned for Q1-Q2 2026
+
+### Coming in Full US Launch (2026)
+
+- 50-state workers' compensation compliance
+- SSDI/SSI application workflows
+- ADA accommodation templates
+- US-specific legal tribunal support
+- State-by-state disability resources
+
+**USA supporters:** [Join beta testing now →](/beta/)
+
+---
+
 ## 📅 **Launch Timeline**
 
-### **Phase 1: Closed Beta Testing** (October - November 2025) 🔄 *Current Phase*
-- Selected beta testers across Canada
-- Core feature testing and validation
-- Bug fixes and performance optimization
-- Accessibility validation with real users
-- Security audits and penetration testing
-- Community guidelines enforcement testing
+### **Phase 1: Closed Beta Testing** (October - December 2025) ✅ *COMPLETE!*
+- ✅ Selected beta testers across Canada
+- ✅ Core feature testing and validation - 721 tests passing
+- ✅ Bug fixes and performance optimization - 0 errors
+- ✅ Accessibility validation with real users - WCAG AAA compliant
+- ✅ Security audits - AES-256-GCM encryption verified
+- ✅ Community guidelines enforcement testing
+- ✅ **First demo/intro presentation - SUCCESS!** (Dec 12, 2025)
+- ✅ **USA Lite launched** for American supporters
 
-### **Phase 2: Open Beta** (December 2025 - January 2026)
-- Expand to more Canadian users
-- Public sign-ups accepted
-- Additional features based on closed beta feedback
-- Continued refinement and optimization
-- Community growth and engagement
+### **Phase 2: Open Beta** (December 2025 - January 2026) 🔄 *Current Phase*
+- 🔄 Expand to more Canadian users
+- 🔄 Public sign-ups accepted
+- ✅ USA Lite available for American supporters
+- 🔄 Additional features based on demo feedback
+- 🔄 Continued refinement and optimization
+- 🔄 Community growth and engagement
 
 ### **Phase 3: Public Launch** (February 2026)
 - General availability via app stores
@@ -262,6 +307,7 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 - Media outreach
 - Partnership announcements
 - Version 1.0 release
+- **Full USA launch** with state-specific features
 
 ### **Phase 4: Feature Expansion** (March 2026+)
 - New features based on community feedback
@@ -814,9 +860,9 @@ This roadmap is updated regularly based on:
 - Accessibility audits
 - Security requirements
 
-**Last updated:** October 25, 2025  
-**Current Phase:** Closed Beta Testing  
-**Next Update:** After open beta launch (December 2025)
+**Last updated:** December 12, 2025  
+**Current Phase:** Phase 1 Closed Internal Testing Starting Soon 🚀  
+**Recent Milestone:** First demo presentation successful! 🎉
 
 ---
 

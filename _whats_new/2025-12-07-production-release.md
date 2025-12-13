@@ -8,6 +8,8 @@ date: 2025-12-07
 
 Final stress test complete - the app is now fully production ready with comprehensive verification:
 
+**📢 Update:** See also [December 12 - First Demo Success + USA Lite Launch](/whats-new/)!
+
 ### ✅ Testing & Quality
 
 - **🧪 721 Tests Passing:** Complete coverage across all features
