@@ -303,40 +303,12 @@ Before using 3mpwrApp features, please understand:
 
 ---
 
-## 📑 Table of Contents
-
-### Quick Navigation
-- [🚀 Closed Beta Release](#-closed-beta-release)
-  - [Quick Overview](#quick-overview)
-- [📱 Features by Tab](#-features-by-tab---detailed-breakdown)
-  - [🏠 Home Tab](#-home-tab)
-  - [📢 Campaigns Tab](#-campaigns-tab)
-  - [💬 Community Tab](#-community-tab)
-  - [📚 Resources Tab](#-resources-tab)
-  - [🧘 Wellness Tab](#-wellness-tab)
-  - [📝 Advocacy Tab](#-advocacy-tab)
-  - [⚙️ Settings Tab](#%EF%B8%8F-settings-tab)
-  - [🆕 What's New Tab](#-whats-new-tab)
-- [🌟 Core Capabilities](#-core-capabilities-all-tabs)
-  - [♿ Accessibility](#-accessibility-wcag-aaa-compliant)
-  - [🔐 Security & Privacy](#-security--privacy-enterprise-grade)
-  - [🌍 Indigenous Language Support](#-indigenous-language-support-6-languages)
-  - [🤖 ML Personalization](#-ml-personalization-phase-6)
-- [📖 Feature Highlights](#-feature-highlights)
-  - [Evidence Locker](#evidence-locker---your-secure-document-vault)
-  - [Letter Wizard](#letter-wizard---22-professional-letter-templates)
-  - [Wellness Tools](#wellness-tools---36-features-for-mental--physical-health)
-  - [Legal Automation](#legal-automation---streamlined-legal-processes)
-  - [Community](#community---connect--support)
-  - [Campaign Coordination](#campaign-coordination---organize-for-change)
-  - [AI-Powered Advocacy Tools](#ai-powered-advocacy-tools)
-- [🔮 Coming Soon](#-coming-soon---post-beta-features)
-- [🎯 Priority Testing Areas](#-priority-testing-areas-for-beta)
-- [📊 Technical Specifications](#-technical-specifications)
-- [Recent Updates](#recent-updates-oct-2025)
-- [🙏 Acknowledgments](#-acknowledgments)
-- [Getting Help](#getting-help)
-- [📅 Beta Timeline](#-beta-timeline)
+<div class="cross-reference-box">
+  <h3>📖 Page Navigation Guide</h3>
+  <p><strong>This Page (Features):</strong> Complete feature list with descriptions — what each tool does.</p>
+  <p><strong><a href="/user-guide">User Guide →</a></strong> Step-by-step tutorials — how to use each feature.</p>
+  <p>💡 <em>Use the visual category cards above for quick navigation, or scroll for the full feature breakdown.</em></p>
+</div>
 
 ---
 

@@ -810,3 +810,105 @@ body[data-contrast="high"] .feature-card:hover .card-preview-img {
   border-color: #FFD54F;
 }
 
+/* Cross-Reference Navigation Box */
+.cross-reference-box {
+  background: linear-gradient(135deg, #e8f4fd 0%, #d1e7f9 100%);
+  border: 3px solid #0066CC;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.cross-reference-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #0066CC 0%, #4DB8FF 100%);
+  border-radius: 12px 0 0 12px;
+}
+
+.cross-reference-box h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0052a3;
+}
+
+.cross-reference-box p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  color: #1a365d;
+}
+
+.cross-reference-box a {
+  color: #0066CC;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.cross-reference-box a:hover,
+.cross-reference-box a:focus {
+  color: #004080;
+  text-decoration-thickness: 3px;
+}
+
+.cross-reference-box em {
+  font-style: italic;
+  color: #4a5568;
+}
+
+/* Dark mode for cross-reference box */
+body[data-theme="dark"] .cross-reference-box {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0d2840 100%);
+  border-color: #66B2FF;
+}
+
+body[data-theme="dark"] .cross-reference-box::before {
+  background: linear-gradient(180deg, #66B2FF 0%, #99D0FF 100%);
+}
+
+body[data-theme="dark"] .cross-reference-box h3 {
+  color: #99D0FF;
+}
+
+body[data-theme="dark"] .cross-reference-box p {
+  color: #e2e8f0;
+}
+
+body[data-theme="dark"] .cross-reference-box a {
+  color: #66B2FF;
+}
+
+body[data-theme="dark"] .cross-reference-box a:hover,
+body[data-theme="dark"] .cross-reference-box a:focus {
+  color: #99D0FF;
+}
+
+body[data-theme="dark"] .cross-reference-box em {
+  color: #a0aec0;
+}
+
+/* High contrast for cross-reference box */
+body[data-contrast="high"] .cross-reference-box {
+  background: #000000;
+  border: 3px solid #FFFFFF;
+}
+
+body[data-contrast="high"] .cross-reference-box::before {
+  background: #FFD54F;
+}
+
+body[data-contrast="high"] .cross-reference-box h3,
+body[data-contrast="high"] .cross-reference-box p,
+body[data-contrast="high"] .cross-reference-box em {
+  color: #FFFFFF;
+}
+
+body[data-contrast="high"] .cross-reference-box a {
+  color: #FFD54F;
+}

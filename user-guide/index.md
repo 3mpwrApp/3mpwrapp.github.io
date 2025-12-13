@@ -365,9 +365,40 @@ All legal and policy documents updated:
 
 ---
 
+<div class="cross-reference-box">
+  <h3>📖 Page Navigation Guide</h3>
+  <p><strong>This Page (User Guide):</strong> Step-by-step tutorials — how to use each feature.</p>
+  <p><strong><a href="/features">Features Page →</a></strong> Complete feature list with descriptions — what each tool does.</p>
+</div>
+
+---
+
 ## 📚 Table of Contents
 
 > **Pro Tip:** You don't need to read this all at once. Use Ctrl+F (or Cmd+F on Mac) to search for what you need, or click any link below to jump directly to that section.
+
+### Quick Start
+- [🚀 Getting Started](#getting-started) — 5-minute setup
+- [📝 First-Time Setup](#first-time-setup-9-step-acceptance) — 9-step acceptance flow
+- [✅ First Week Checklist](#first-week-checklist-) — Essential onboarding steps
+- [🧪 Beta Testing Priorities](#beta-testing-priorities-) — What to test first
+
+### How-To Guides by Feature
+- [🎯 Features Overview](#features-overview-145-total-features) — Quick summary of all tools
+- [🧘 Wellness Tools](#wellness-tools-detailed) — AI-powered health tracking tutorials
+- [⚖️ Advocacy & Legal](#advocacy--legal-resources) — Evidence Locker, Letter Wizard, Legal Automation
+- [🤝 Community Features](#community-features) — Connect with peers, forums, support
+
+### Reference Sections
+- [⚖️ Legal & Privacy](#legal--privacy) — What the app does NOT provide
+- [🔐 Privacy & Security](#privacy--security) — Data ownership, encryption
+- [♿ Accessibility Features](#accessibility-features-detailed-guide) — Cognitive, dyslexia, motor support
+- [📊 Complete Features Inventory](#complete-features-inventory---all-50-features-) — All phases breakdown
+- [📋 All Disability Types Supported](#all-disability-types-supported) — Comprehensive support list
+
+### Updates & Support
+- [🆕 What's New](#whats-new---full-update-history) — Full update history
+- [📞 Contact & Support](#contact--support) — Get help
 
 <div class="features-grid">
   <div class="feature-box">
@@ -381,22 +412,22 @@ All legal and policy documents updated:
   </div>
   
   <div class="feature-box">
-    <h3>🧠 <a href="#mood-tracker-tracking-emotions">AI Wellness Tools</a></h3>
+    <h3>🧠 <a href="#wellness-tools-detailed">AI Wellness Tools</a></h3>
     <p>Mood Tracker 2.0, Pacing Partner AI, Energy Forecasting</p>
   </div>
   
   <div class="feature-box">
-    <h3>� <a href="#evidence-locker">Evidence Locker</a></h3>
+    <h3>📁 <a href="#evidence-locker-document-vault-">Evidence Locker</a></h3>
     <p>Secure document storage with AES-256 encryption</p>
   </div>
   
   <div class="feature-box">
-    <h3>✉️ <a href="#letter-wizard">Letter Wizard</a></h3>
+    <h3>✉️ <a href="#letter-wizard-22-professional-templates-">Letter Wizard</a></h3>
     <p>22 professional letter templates for legal issues</p>
   </div>
   
   <div class="feature-box">
-    <h3>⚖️ <a href="#legal--appeals">Legal & Appeals</a></h3>
+    <h3>⚖️ <a href="#legal-workflow-automation-">Legal & Appeals</a></h3>
     <p>Legal automation, appeals, deadline tracking</p>
   </div>
   
@@ -406,7 +437,7 @@ All legal and policy documents updated:
   </div>
   
   <div class="feature-box">
-    <h3>♿ <a href="/accessibility">Accessibility Features</a></h3>
+    <h3>♿ <a href="/accessibility">Accessibility Guide</a></h3>
     <p>Dyslexia, motor, and cognitive accessibility support</p>
   </div>
   
@@ -421,7 +452,7 @@ All legal and policy documents updated:
   </div>
   
   <div class="feature-box">
-    <h3>� <a href="#contact--support">Support</a></h3>
+    <h3>📞 <a href="#contact--support">Support</a></h3>
     <p>Contact us for help anytime</p>
   </div>
   
@@ -624,7 +655,11 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ## 🎯 Features Overview (145+ Total Features)
 
-**For a complete list of all 145+ features with detailed descriptions, visit: [📋 Full Features Page →](/features)**
+<div class="cross-reference-box">
+  <h3>📋 Full Feature Details on Features Page</h3>
+  <p>This section provides a quick summary. For <strong>complete feature descriptions</strong>, visit the <a href="/features">Features Page →</a></p>
+  <p>Below, we focus on <strong>how to use</strong> each feature. The Features page focuses on <strong>what each feature does</strong>.</p>
+</div>
 
 ### 🏠 Home Tab
 - Personalized daily suggestions
@@ -733,7 +768,11 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ## 🧘 Wellness Tools (Detailed)
 
-> **For a comprehensive list of all 41 wellness features, visit:** [📋 Wellness Tab on Features Page →](/features#wellness-tools---41-features-for-mental--physical-health)
+<div class="cross-reference-box">
+  <h3>🔗 Feature Descriptions vs How-To Tutorials</h3>
+  <p><strong>What each wellness tool does:</strong> <a href="/features#wellness-tools---41-features-for-mental--physical-health">Features Page → Wellness Section</a></p>
+  <p><strong>How to use each wellness tool:</strong> This section (below)</p>
+</div>
 
 ### ⚕️ Medical Disclaimer:
 > **ALL wellness tools are informational only. This app does NOT provide medical advice. Always consult qualified healthcare providers for medical decisions. In emergencies, call 911.**
@@ -835,7 +874,11 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ## ⚖️ Advocacy & Legal Resources
 
-> **For a comprehensive list of all advocacy tools, visit:** [📋 Advocacy Tools on Features Page →](/features#advocacy-tools---tools-for-legal--systemic-change)
+<div class="cross-reference-box">
+  <h3>🔗 Feature Descriptions vs How-To Tutorials</h3>
+  <p><strong>What each advocacy tool does:</strong> <a href="/features#advocacy-tools---tools-for-legal--systemic-change">Features Page → Advocacy Section</a></p>
+  <p><strong>How to use each advocacy tool:</strong> This section (below)</p>
+</div>
 
 ### ⚖️ Legal Disclaimer:
 > **ALL legal resources are educational only. This app does NOT provide legal advice. Laws vary by jurisdiction. Always consult a licensed attorney for legal matters specific to your situation.**
@@ -967,7 +1010,12 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 ---
 
 ## 🤝 Community Features
-**[⚙️ See all Community features →](/features#community---connect--support)**
+
+<div class="cross-reference-box">
+  <h3>🔗 Feature Descriptions vs How-To Tutorials</h3>
+  <p><strong>What each community feature does:</strong> <a href="/features#community---connect--support">Features Page → Community Section</a></p>
+  <p><strong>How to use community features:</strong> This section (below)</p>
+</div>
 
 > Connect with 8+ disability-specific communities (ADHD, Autism, Long COVID, Chronic Illness, Mental Health, Deaf/Hard of Hearing, Blind/Low Vision, Mobility Disabilities, and more)
 
@@ -1167,7 +1215,12 @@ See full Privacy Policy at: https://3mpwrapp.pages.dev/privacy
 
 ## ♿ Accessibility Features (Detailed Guide)
 
-> **For a comprehensive Accessibility Walkthrough with step-by-step instructions, visit:** [📋 Full Accessibility Guide →](/accessibility)
+<div class="cross-reference-box">
+  <h3>🔗 Related Accessibility Documentation</h3>
+  <p><strong>Full Accessibility Guide:</strong> <a href="/accessibility">Accessibility Page →</a> (comprehensive walkthrough)</p>
+  <p><strong>Accessibility Features List:</strong> <a href="/features#accessibility-features">Features Page → Accessibility</a></p>
+  <p><strong>How to enable accessibility:</strong> This section (below)</p>
+</div>
 
 ### 🆕 November 2025: Enhanced Accessibility Features
 
