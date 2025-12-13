@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-13T12:03:05.972Z",
+  "lastUpdated": "2025-12-13T18:02:38.402Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 5235,
+      "totalPosts": 5260,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T12:02:57.536Z"
+      "lastSeen": "2025-12-13T18:02:28.434Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 5250,
+      "totalPosts": 5275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T12:02:59.315Z"
+      "lastSeen": "2025-12-13T18:02:30.591Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 5213,
-      "recentPosts": 25,
+      "totalPosts": 5235,
+      "recentPosts": 22,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T12:03:01.149Z"
+      "lastSeen": "2025-12-13T18:02:32.768Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 5243,
+      "totalPosts": 5268,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T12:03:03.151Z"
+      "lastSeen": "2025-12-13T18:02:35.148Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 5250,
+      "totalPosts": 5275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T12:03:04.967Z"
+      "lastSeen": "2025-12-13T18:02:37.398Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I just finished adding screen reader support to the last widget in Torment Hexus, the spell targeting UI. The next step is to try playing the game using only the screen reader to guide me. This is going to be an entertaining disaster... #a11y #indiedev\n\nstore.steampowered.com/app/3238420/...",
-      "author": "byobattleship.bsky.social",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "aria-busy is not your friend\n\ngerardkcohen.me/writing/2025...\n\n#Accessibility #A11y #FrontEndDev @gerardkcohen.me",
-      "author": "xirclebox.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Lies.\n\nchrome.dev/css-wrapped-...\n\n#CSS #accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
       "author": "ellatholmes.bsky.social",
@@ -338,6 +308,36 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 39,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "PSA this \"joke\" that ASL interpreters can't follow Trump is exceptionally unoriginal, not even remotely accurate, and so. fucking. annoying.\n\nHere's 30 replies to ONE post. Just stop. Bc if you only mention #accessibility when you're trying to insult someone's intelligence, you're no ally to me.",
+      "author": "ashleemboyer.com",
+      "engagement": 13,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "The best compliment we could have received this year! \n\nWhat would have been unthinkable even 5 years ago, is now considered \"standard\" from us by our audience <3\n\nThere is still a ton of work to do to improve the #a11y of our games. Meanwhile, I'm going to savour this milestone over the break",
+      "author": "tisseranddavid.bsky.social",
+      "engagement": 33,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -346,80 +346,80 @@
       "count": 37
     },
     {
-      "keyword": "accessibility",
-      "count": 32
+      "keyword": "cripthevote",
+      "count": 27
     },
     {
-      "keyword": "cripthevote",
-      "count": 28
+      "keyword": "accessibility",
+      "count": 27
+    },
+    {
+      "keyword": "a11y",
+      "count": 27
     },
     {
       "keyword": "disabilityjustice",
       "count": 26
     },
     {
-      "keyword": "a11y",
-      "count": 26
-    },
-    {
       "keyword": "altcitizen",
-      "count": 12
+      "count": 11
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 12
+      "count": 11
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 12
+      "count": 11
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 12
+      "count": 11
     },
     {
       "keyword": "disabilityjustice nico",
-      "count": 6
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 6
+      "count": 7
     },
     {
       "keyword": "disabled people",
       "count": 5
     },
     {
+      "keyword": "vote",
+      "count": 4
+    },
+    {
+      "keyword": "disability",
+      "count": 4
+    },
+    {
+      "keyword": "human rights",
+      "count": 4
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 4
+    },
+    {
       "keyword": "foxtakedown",
-      "count": 5
+      "count": 4
     },
     {
       "keyword": "stoptheliesfox",
-      "count": 5
+      "count": 4
     },
     {
       "keyword": "virtual",
-      "count": 5
+      "count": 4
     },
     {
       "keyword": "foxlies",
-      "count": 5
+      "count": 4
     },
     {
       "keyword": "stoptrump",
-      "count": 5
-    },
-    {
-      "keyword": "wearetheflood",
-      "count": 5
-    },
-    {
-      "keyword": "50501movement",
-      "count": 5
-    },
-    {
-      "keyword": "disabilityrebellion stoptrump",
-      "count": 5
+      "count": 4
     }
   ]
 }
