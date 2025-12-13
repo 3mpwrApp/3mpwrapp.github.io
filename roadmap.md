@@ -246,7 +246,7 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 
 ## 🇺🇸 **NEW: USA Lite - Now Available!**
 
-Following strong interest from American supporters during our first demo presentation (December 12, 2025), we've streamlined our roadmap to offer **USA Lite** for our allies south of the border!
+Following strong interest from American supporters during our first demo presentation (December 9, 2025), we've streamlined our roadmap to offer **USA Lite** for our allies south of the border!
 
 ### What's in USA Lite?
 

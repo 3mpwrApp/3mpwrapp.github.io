@@ -65,12 +65,12 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 ## 🆕 What's New - December 2025 (Production Release!) {#whats-new-december-2025}
 
-### 🎉 December 12, 2025 - 100% Production Ready + First Demo Success!
+### 🎉 December 9, 2025 - 100% Production Ready + First Demo Success!
 
 **Final Stress Test Complete - All Systems Verified:**
 
 #### 🎤 **First Demo Presentation - SUCCESS!**
-On December 12, 2025, we completed our **first official demo/intro presentation** for 3mpwr App:
+On December 9, 2025, we completed our **first official demo/intro presentation** for 3mpwr App:
 - **Positive reception** from attendees across Canada and USA
 - **Strong interest** from USA-based supporters and allies
 - **Led directly to USA Lite launch** (see below)

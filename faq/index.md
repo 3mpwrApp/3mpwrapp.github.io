@@ -82,7 +82,7 @@ Quick answers to common questions about 3mpwr App. Can't find what you're lookin
 
 **🎉 First Demo Presentation Successful + USA Lite Launch!**
 
-On December 12, 2025, we completed our first demo/intro presentation for 3mpwr App — and it was a success!
+On December 9, 2025, we completed our first demo/intro presentation for 3mpwr App — and it was a success!
 
 **Key achievements:**
 - ✅ **721 Tests Passing** - Complete test coverage across all features
@@ -156,7 +156,7 @@ Following strong interest from USA listeners during our demo, we've launched **U
 
 **USA Lite** is a streamlined version of 3mpwr App designed for American supporters and allies who want to join our disability rights community.
 
-**Why we launched it:** During our first demo presentation (December 12, 2025), USA listeners expressed strong interest in beta testing. Rather than making them wait for our planned 2026 US launch, we streamlined our roadmap to provide immediate access to core features.
+**Why we launched it:** During our first demo presentation (December 9, 2025), USA listeners expressed strong interest in beta testing. Rather than making them wait for our planned 2026 US launch, we streamlined our roadmap to provide immediate access to core features.
 
 **What's included:**
 - ✅ Full wellness tools (energy tracking, mood, pacing partner AI)
