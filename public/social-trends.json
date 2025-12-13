@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-13T00:06:33.040Z",
+  "lastUpdated": "2025-12-13T06:02:44.895Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 5185,
+      "totalPosts": 5210,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T00:06:23.830Z"
+      "lastSeen": "2025-12-13T06:02:36.372Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 5200,
+      "totalPosts": 5225,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T00:06:25.932Z"
+      "lastSeen": "2025-12-13T06:02:38.315Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 5163,
-      "recentPosts": 23,
+      "totalPosts": 5188,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T00:06:28.049Z"
+      "lastSeen": "2025-12-13T06:02:40.249Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 5193,
+      "totalPosts": 5218,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T00:06:30.021Z"
+      "lastSeen": "2025-12-13T06:02:42.022Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 5200,
+      "totalPosts": 5225,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-13T00:06:32.036Z"
+      "lastSeen": "2025-12-13T06:02:43.892Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I just finished adding screen reader support to the last widget in Torment Hexus, the spell targeting UI. The next step is to try playing the game using only the screen reader to guide me. This is going to be an entertaining disaster... #a11y #indiedev\n\nstore.steampowered.com/app/3238420/...",
-      "author": "byobattleship.bsky.social",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 20,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Followed a bunch of new SWer accounts today and I want to shout out everyone for using alt text on their images 🥹🎄💕 Most accounts I clicked on were already using alt text which made following y’all an easy yes for me! #alttext #disability #accessibility",
-      "author": "peachfleurr.bsky.social",
-      "engagement": 20,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I just finished adding screen reader support to the last widget in Torment Hexus, the spell targeting UI. The next step is to try playing the game using only the screen reader to guide me. This is going to be an entertaining disaster... #a11y #indiedev\n\nstore.steampowered.com/app/3238420/...",
-      "author": "byobattleship.bsky.social",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
       "author": "ellatholmes.bsky.social",
@@ -338,6 +290,54 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 39,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I'm not great with social media, but if you're seeing this, please consider joining our 5th annual game jam for blind accessibility this February! Over 100 accessible games created in 5 years—let's make even more! \n\nJoin us: itch.io/jam/games-fo... #GameDev #Accessibility",
+      "author": "ericbomb.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Incredibly proud of my Auntie Tara. World changer, advocate, and champion for accessibility. 20 years in the making this victory means so much. 🥹🙏🏽🎉👏🏽🩷🇺🇸 #repost #mbta #boston #accessibility #fyp #foryou #advocacy #disabled",
+      "author": "triciarampersad007.bsky.social",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "The best compliment we could have received this year! \n\nWhat would have been unthinkable even 5 years ago, is now considered \"standard\" from us by our audience <3\n\nThere is still a ton of work to do to improve the #a11y of our games. Meanwhile, I'm going to savour this milestone over the break",
+      "author": "tisseranddavid.bsky.social",
+      "engagement": 32,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I'm really bad at social media, but if you are reading this, please take a moment and consider joining for our 5th annual blind accessibility game jam starting in Feb! 5 years, over 100 accessible games made, help us do even better!\n\nitch.io/jam/games-fo...\n\n#GameDev #A11y",
+      "author": "ericbomb.bsky.social",
+      "engagement": 20,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I'm really bad at social media, but if you are reading this, please take a moment and consider joining for our 5th annual blind accessibility game jam starting in Feb! 5 years, over 100 accessible games made, help us do even better!\n\nitch.io/jam/games-fo...\n\n#GameDev #A11y",
+      "author": "ericbomb.bsky.social",
+      "engagement": 37,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -346,11 +346,11 @@
       "count": 37
     },
     {
-      "keyword": "a11y",
-      "count": 30
+      "keyword": "accessibility",
+      "count": 31
     },
     {
-      "keyword": "accessibility",
+      "keyword": "a11y",
       "count": 29
     },
     {
@@ -359,7 +359,7 @@
     },
     {
       "keyword": "disabilityjustice",
-      "count": 27
+      "count": 26
     },
     {
       "keyword": "altcitizen",
