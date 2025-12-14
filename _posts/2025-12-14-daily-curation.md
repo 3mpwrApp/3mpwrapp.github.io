@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Daily News Curation - 2025-12-14"
+date: 2025-12-14
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-12-14
+
+Curated 6 items from disability, accessibility, and social policy sources.
+
+## 1. B.C. government looks to offer loan guarantees to property owners in Cowichan Aboriginal title area
+<img src='https://i.cbc.ca/ais/7bca8d23-96bc-4a53-8dd0-4e0b869ffd98,1765599013331/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C312%2C6000%2C3375%29%3BResize%3D%28620%29' alt='B.C. premier speaks at meeting.' width='620' height='349' title='Premier David Eby, pictured on Nov., 28, 2025, said his government plans to offer private owners of land in the Cowichan Aboriginal title area more than $150 million in loan guarantees.'/><p>British Columbia’s premier says his government is working on a plan to underwrite mortgages and loans for property owners and businesses in the Cowichan Aboriginal title area.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/bc-financial-support-cowichan-decision-9.7014613?cmp=rss)
+**Score:** 11.80
+
+## 2. Children’s Aid Society knew women zip-tied boys into pyjamas but didn’t intervene, Ontario murder trial told
+<img src='https://i.cbc.ca/ais/82e9357b-5d8c-4a71-90a7-8f6b151746c7,1765572510325/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='two smiling women with tennis rackets with a boy' width='620' height='349' title='Brandy Cooney, centre, with J.L., left, and Cooney's wife Becky Hamber. CBC has blurred the boy's face to protect his identity as required by a publication ban. '/><p>A Halton Children's Aid Society worker advised the Burlington, Ont., couple not to zip-tie the two brothers in their care into tents overnight, which the Crown has argued the women continued to do, the two women's murder trial in Milton has been told. </p>
+📍 [Source](https://www.cbc.ca/news/canada/hamilton/hamber-cooney-trial-milton-ontario-9.7014081?cmp=rss)
+**Score:** 13.50
+
+## 3. How Canada’s refugee system has changed since 2015
+📍 [Source](https://www.cbc.ca/radio/sunday/canada-refugee-support-decline-change-9.7013578?cmp=rss)
+**Score:** 9.50
+
+## 4. 4 years after Indigenous woman died in Niagara hospital waiting room, family still waits for coroner's inquest
+<img src='https://i.cbc.ca/ais/9796d748-2bab-4589-af40-4f9b26f5f6e6,1765486044946/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C46%2C580%2C326%29%3BResize%3D%28620%29' alt='woman stands in store wearing yellow shirt' width='620' height='349' title='Heather Winterstein died in the waiting room of a St. Catharines, Ont., hospital in 2021. '/><p>Heather Winterstein's family believes she didn't receive proper medical assessment or care at the St. Catharines, Ont., hospital because of systemic racism and biases. Niagara Health says it's committed to change.</p>
+📍 [Source](https://www.cbc.ca/news/canada/hamilton/heather-winterstein-ontario-death-9.7012283?cmp=rss)
+**Score:** 10.00
+
+## 5. Lawyer says B.C. Mountie should be fired immediately or quit over group-chat remarks
+<img src='https://i.cbc.ca/ais/1.7463472,1747785960000/full/max/0/default.jpg?im=Crop%2Crect%3D%2849%2C27%2C1583%2C890%29%3BResize%3D%28620%29' alt='RCMP Const Const. Ian Solven leaves a code of conduct hearing where he faces dismissal over his alleged involvement in a private chat group.' width='620' height='349' title='RCMP Const Const. Ian Solven leaves a code of conduct hearing where he faces dismissal over his alleged involvement in a private chat group.'/><p>John MacLaughlan says Const. Ian Solven "has severed the employment relationship with the RCMP" with misconduct that "strikes at the core of the RCMP organizational values."</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/lawyer-rcmp-group-chat-remarks-9.7014570?cmp=rss)
+**Score:** 6.80
+
+## 6. Inside the Ring of Fire: A tale of two First Nations and a road that could change everything
+Two closely linked First Nations are taking different paths as Ontario pushes ahead with Ring of Fire roads and mining in a region reshaped by climate change and geopolitics.
+📍 [Source](https://globalnews.ca/news/11576673/ont-ring-of-fire/)
+**Score:** 4.50
+
