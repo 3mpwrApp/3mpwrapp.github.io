@@ -215,13 +215,15 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   
   // Render a single event card with appropriate styling
   function renderEventCard(event, now) {
-    const eventDate = new Date(event.date);
+    // Use dateISO if available (from Cloudflare Worker API), otherwise fall back to date
+    const dateString = event.dateISO || event.date;
+    const eventDate = new Date(dateString);
     const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
     const isHappeningSoon = eventDate >= now && eventDate <= sevenDaysFromNow;
     const isPast = eventDate < now;
     
     // Pre-calculate formatted date (pass event to check if all-day)
-    const formattedDate = formatDate(event.date, event);
+    const formattedDate = formatDate(dateString, event);
     
     // Clean description - remove "Powered by" text if it exists (for display only)
     let displayDescription = event.description;
@@ -551,18 +553,30 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
   // Format date nicely - uses EST timezone
   // For all-day events (holidays, awareness days), only show date without time
   function formatDate(dateString, event) {
-    // Check if this is an all-day event (holidays, awareness days stored as midnight UTC)
-    // All-day events have time set to 00:00:00.000Z
-    const isAllDay = dateString && dateString.endsWith('T00:00:00.000Z');
+    // Check if this is an all-day event using multiple methods:
+    // 1. API provides isAllDay flag directly
+    // 2. Date ends with T00:00:00.000Z (midnight UTC)
+    // 3. Date is just YYYY-MM-DD format (no time component)
+    const hasIsAllDayFlag = event && event.isAllDay === true;
+    const endsWithMidnightUTC = dateString && dateString.endsWith('T00:00:00.000Z');
+    const isDateOnly = dateString && /^\d{4}-\d{2}-\d{2}$/.test(dateString);
     
     // Also check category - holidays and awareness days are typically all-day
-    const isHolidayOrAwareness = event && (event.category === 'holiday' || event.category === 'awareness' || event.category === 'health');
+    const isHolidayOrAwareness = event && (
+      event.category === 'holiday' || 
+      event.category === 'awareness' || 
+      event.category === 'health' ||
+      event.category === 'health-awareness'
+    );
     
-    if (isAllDay || isHolidayOrAwareness) {
+    const isAllDay = hasIsAllDayFlag || endsWithMidnightUTC || isDateOnly || isHolidayOrAwareness;
+    
+    if (isAllDay) {
       // For all-day events, parse the date as LOCAL date to avoid timezone shift
-      // Extract year, month, day from ISO string to preserve the intended date
-      // e.g., "2025-12-25T00:00:00.000Z" should display as December 25, not December 24
-      const dateParts = dateString.split('T')[0].split('-');
+      // Extract year, month, day from the date string to preserve the intended date
+      // e.g., "2025-12-25T00:00:00.000Z" or "2025-12-25" should display as December 25, not December 24
+      const dateOnly = dateString.split('T')[0]; // handles both "2025-12-25" and "2025-12-25T00:00:00.000Z"
+      const dateParts = dateOnly.split('-');
       const year = parseInt(dateParts[0], 10);
       const month = parseInt(dateParts[1], 10) - 1; // months are 0-indexed
       const day = parseInt(dateParts[2], 10);
