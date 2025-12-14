@@ -159,7 +159,7 @@ export function useComplexityMode() {
  * 
  * SIMPLE (5 core features):
  * - Evidence Locker
- * - Letter Wizard (top 3 templates)
+ * - Document Factory (letters, appeals, accommodations)
  * - Crisis Resources
  * - Mood Tracker
  * - Community (Beta Testers Chat)

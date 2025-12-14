@@ -1,29 +1,19 @@
 /**
- * Master Letter Generator Wizard Route
+ * Letter Wizard Route - Redirects to Document Factory
  * 
- * Lazy-loaded route wrapper for the letter wizard.
- * The heavy component logic is split into LetterWizardContent for better bundle optimization.
+ * This route now redirects to the unified Document Factory which includes
+ * all letter generation functionality in the "Letters" tab.
  */
 
-import React from "react";
-
-import LazyLoadWrapper from "../../../../components/LazyLoadWrapper";
+import { Redirect } from "expo-router";
 
 // Export options for Expo Router
 export const options = { href: null };
 
-// Lazy load the actual wizard content (66.5KB)
-const LetterWizardContent = React.lazy(() => import("../../../../components/LetterWizardContent"));
-
 /**
- * Letter Wizard Route Component
+ * Letter Wizard Route - Redirects to Document Factory
  */
 export default function LetterWizardRoute() {
-  return (
-    <LazyLoadWrapper 
-      component={LetterWizardContent}
-      loadingMessage="Loading Letter Wizard..."
-    />
-  );
+  return <Redirect href="/(tabs)/resources/document-factory" />;
 }
 

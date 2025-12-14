@@ -321,10 +321,10 @@ export function getAdvocacyRecommendations(context?: {
     });
     recommendations.push({
       id: 'advocacy-letter',
-      title: 'Letter Wizard',
-      description: 'Generate professional appeal letters',
-      targetScreen: '/(tabs)/advocacy/letter-wizard',
-      icon: '✍️',
+      title: 'Document Factory',
+      description: 'Generate professional letters & appeals',
+      targetScreen: '/(tabs)/resources/document-factory',
+      icon: '📄',
       priority: 'high',
       triggers: ['disagreement', 'letter_needed'],
     });
@@ -344,7 +344,7 @@ export function getAdvocacyRecommendations(context?: {
       id: 'evidence-to-letter',
       title: 'Create Appeal Letter',
       description: 'Use your evidence to build a strong case',
-      targetScreen: '/(tabs)/advocacy/letter-wizard',
+      targetScreen: '/(tabs)/resources/document-factory',
       icon: '📝',
       priority: 'high',
       triggers: ['evidence_ready', 'next_step'],

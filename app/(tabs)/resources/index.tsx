@@ -207,7 +207,7 @@ export default function ResourcesScreen() {
         {/* Simple Mode Welcome */}
         <SimpleModeWelcome 
           tabName="Resources"
-          availableFeatures={['Master Tracker Hub', 'Letter Wizard', 'Appeal Command Center', 'Evidence Manager']}
+          availableFeatures={['Master Tracker Hub', 'Document Factory', 'Appeal Command Center', 'Evidence Manager']}
           hiddenCount={35}
         />
         
@@ -316,11 +316,6 @@ export default function ResourcesScreen() {
         <ResourceLink href="/(tabs)/resources/master-tracker-hub" title="📊 Master Tracker Hub" badge="Beta" />
         <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
           All-in-one health tracking: symptoms, meds, rehab, appointments - with AI insights & pattern detection
-        </Text>
-        
-        <ResourceLink href="/(tabs)/resources/letter-wizard" title="✍️ Letter Wizard" badge="22+ Templates" />
-        <Text style={[textStyles.bodySmall, { opacity: 0.85, marginBottom: 12, marginTop: -4 }]}>
-          Generate professional letters: accommodation, appeal, complaint, union grievance - with tone adjustment
         </Text>
         
         <ResourceLink href="/(tabs)/resources/appeal-command-center" title="⚖️ Appeal Command Center" badge="Beta" />

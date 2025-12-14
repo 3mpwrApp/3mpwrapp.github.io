@@ -33,9 +33,9 @@ export const VOICE_COMMANDS: VoiceCommand[] = [
     description: 'Open evidence locker',
   },
   {
-    phrases: ['open letter wizard', 'letter wizard', 'write letter'],
-    action: () => router.push('/resources/letter-wizard' as any),
-    description: 'Open letter generator',
+    phrases: ['open letter wizard', 'letter wizard', 'write letter', 'document factory', 'open document factory'],
+    action: () => router.push('/resources/document-factory' as any),
+    description: 'Open document factory',
   },
   {
     phrases: ['go home', 'home screen', 'main screen'],
