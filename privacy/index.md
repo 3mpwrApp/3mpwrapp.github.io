@@ -15,23 +15,28 @@ description: Our commitment to your privacy and 100% user data ownership.
 
 📖 **10 minute read** | ⚡ **Quick summary below**
 
-**Last updated: December 12, 2025**  
-**Version: 3.2 (December 2025 Production Release + USA Lite)**
+**Last updated: December 14, 2025**  
+**Version: 3.2 (December 2025 Production Release + USA Lite Expansion)**
 
 ---
 
 ## 🆕 **December 2025 Updates (Version 3.2)**
 
-First demo successful, USA Lite launched - 721 tests passing, production ready:
+USA Lite expansion complete with 13 US jurisdictions - 721 tests passing, production ready:
 
-- **🎉 First Demo Success:** December 9, 2025 presentation received positive feedback
-- **🇺🇸 USA Lite Launched:** American supporters can now join with same privacy protections
+- **🇺🇸 USA Lite Expansion:** 13 US jurisdictions added (Federal + CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS)
+- **⚖️ US Legal Coverage:** Workers' compensation, civil rights frameworks, disability programs for all 13 jurisdictions
 - **🔒 Security Verified:** AES-256-GCM encryption confirmed across all sensitive data
 - **📴 Offline-First Verified:** Complete offline support with AsyncStorage persistence
 - **✅ Zero Issues:** 0 ESLint errors, 0 TypeScript errors, 0 accessibility issues
 - **🧪 Comprehensive Testing:** 721 tests covering auth, security, offline, features, accessibility
 
-**USA Lite users receive identical privacy protections.** All privacy protections from previous versions remain in effect.**
+**USA Lite Privacy Protections:**
+- **🔒 Same local-first architecture** - US jurisdiction data stored/processed locally like Canadian data
+- **📍 No Location Tracking** - Jurisdiction selection is manual, we don't track your location
+- **🏠 Local Processing** - All jurisdiction-related features process data locally on your device
+
+**USA Lite users receive identical privacy protections.** All privacy protections from previous versions remain in effect.
 
 ---
 
@@ -716,7 +721,7 @@ This policy reflects our actual technical implementation. You can verify our pri
 
 ---
 
-*Version 3.1 (December 2025 Production Release) - Updated December 7, 2025*
+*Version 3.2 (December 2025 USA Lite Expansion) - Updated December 14, 2025*
 
 <script src="{{ '/assets/js/page-enhancements.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/privacy.js' | relative_url }}"></script>

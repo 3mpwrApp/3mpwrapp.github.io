@@ -11,8 +11,14 @@ description: Important disclaimers about medical, legal, financial advice, AI co
 # 3mpwrApp — All Disclaimers
 
 **For Website FAQ / Legal Section**  
-**Last Updated: November 24, 2025**  
-**Version: 3.0 (November 2025 Consolidation Update)**
+**Last Updated: December 14, 2025**  
+**Version: 3.1 (December 2025 USA Lite Expansion)**
+
+---
+
+## 🆕 **December 2025 Updates**
+
+**USA Lite Expansion:** 13 US jurisdictions added (Federal + CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS). All US legal information is subject to the same disclaimers as Canadian content—general education only, not legal advice, varies by state.
 
 ---
 
@@ -84,6 +90,8 @@ The following new features are covered by our existing disclaimers:
 ### **What This Means:**
 - Form generators, letter templates, rights checklists, and AI legal assistants are **educational tools only**
 - Laws, regulations, and procedures vary significantly by jurisdiction (province, state, country)
+- **🇨🇦 Canada:** Information covers 14 Canadian jurisdictions (10 provinces, 3 territories, federal). Provincial/territorial laws differ significantly.
+- **🇺🇸 USA Lite:** Information covers 13 US jurisdictions (Federal + 12 states). Each state has unique workers' compensation, civil rights, and disability program laws. Information may not apply to unlisted states.
 - Legal information provided may be incomplete, outdated, or not applicable to your situation
 - Templates may require customization for your specific situation
 - Deadlines, procedures, and requirements change frequently
@@ -96,13 +104,17 @@ The following new features are covered by our existing disclaimers:
 - Verify all deadlines and procedures with official sources
 
 ### **Features Covered:**
-- Letter Wizard (all 22 templates)
-- Legal Workflow Automation
+- Letter Wizard (all 22+ templates including new accommodation, appeal, medical leave, harassment, housing templates)
+- Master Tracker Hub (case timeline tracking)
+- Appeal Command Center (deadline tracking, denial decoder, evidence strength meter, appeal prep guide)
+- Legal Workflow Automation (all automated processes)
 - Lawyer Finder (we don't endorse or verify attorneys)
-- Jurisdiction Resources
+- **Jurisdiction Resources** (🇨🇦 14 Canadian + 🇺🇸 13 US jurisdictions)
+- **USA Lite Jurisdiction Data** (workers' comp, civil rights, disability programs for 13 US states)
 - Rights Checklists
-- Policy Explainer
+- Policy Explainer & Policy Made Simple
 - Government Navigator
+- AI Case Interpreter
 
 ---
 
@@ -352,6 +364,6 @@ Before using this app, confirm you understand:
 ---
 
 **© 2025 3mpwrApp. All rights reserved.**  
-**Last Updated: October 25, 2025 | Version 3.0**
+**Last Updated: December 14, 2025 | Version 3.1 (USA Lite Expansion)**
 
 {%- include page-feedback.html -%}

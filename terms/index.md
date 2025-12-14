@@ -10,21 +10,21 @@ description: The terms and conditions for using the 3mpwr website and app.
 
 # 3mpwrApp — Terms of Service
 
-**Last Updated: December 12, 2025**  
-**Version: 4.2 (December 2025 Production Release + USA Lite)**
+**Last Updated: December 14, 2025**  
+**Version: 4.2 (December 2025 USA Lite Expansion)**
 
 ## 🆕 **DECEMBER 2025 UPDATES (Version 4.2)**
 
-First demo successful, USA Lite launched - app is 100% production ready:
+USA Lite expansion complete with 13 US jurisdictions + production verification:
 
-- **🎉 First Demo Success:** December 9, 2025 presentation received positive feedback
-- **🇺🇸 USA Lite Launched:** American supporters can now join beta testing
+- **🇺🇸 USA Lite Expansion:** 13 US jurisdictions (Federal + 12 states: CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS)
+- **⚖️ US Legal Coverage:** Workers' compensation, civil rights frameworks, disability programs
 - **🧪 721 Tests Passing:** Comprehensive coverage across all features
 - **🔒 Security Verified:** AES-256-GCM encryption, XSS/SQL injection prevention
 - **📴 Offline-First Complete:** Full functionality without internet connection
 - **♿ Accessibility:** WCAG AAA compliant, 0 issues detected
 
-**USA Lite users are subject to the same terms.** All terms below apply to December 2025 production release and all existing features.**
+**USA Lite users are subject to the same terms.** All terms below apply to December 2025 production release and all existing features.
 
 ---
 
@@ -85,6 +85,8 @@ We've completed comprehensive consolidation to production-ready beta with 90% ac
 - This app provides general legal information, document templates, and educational resources only
 - **NO CONTENT IN THIS APP CONSTITUTES LEGAL ADVICE**
 - Laws, regulations, and procedures vary significantly by jurisdiction, province, state, and country
+- **🇨🇦 CANADA:** Information covers 14 Canadian jurisdictions (10 provinces, 3 territories, federal). Provincial/territorial laws differ significantly.
+- **🇺🇸 USA LITE:** Information covers 13 US jurisdictions (Federal + 12 states: CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS). Each state has unique workers' compensation, civil rights, and disability program laws. Information may not apply to unlisted states.
 - Legal information provided may be incomplete, outdated, or not applicable to your situation
 - **DO NOT RELY ON THIS APP FOR LEGAL DECISIONS**
 - Always consult a licensed attorney in your jurisdiction for legal advice specific to your situation
@@ -529,9 +531,9 @@ See our **[Accessibility](/accessibility/)** page or email with "Accessibility" 
 
 **Language**: This agreement is available in English, French, Spanish, Arabic, Chinese, and Punjabi. In case of discrepancy, the English version prevails.
 
-**Version**: 4.1  
-**Effective**: December 7, 2025  
-**Current Phase**: Production Release
+**Version**: 4.2  
+**Effective**: December 14, 2025  
+**Current Phase**: Production Release + USA Lite Expansion
 
 ---
 

@@ -9,15 +9,18 @@ description: Our unwavering commitment to 100% user data ownership and sovereign
 
 # 3mpwrApp — Data Ownership and Security Statement
 
-**Last updated:** December 12, 2025  
-**Version: 2.2 (December 2025 Production Release + USA Lite)**
+**Last updated:** December 14, 2025  
+**Version: 2.1 (December 2025 USA Lite Expansion)**
 
 ## 🆕 **December 2025 Updates**
 
-First demo successful, USA Lite launched - 721 tests passing, production ready:
+USA Lite expansion follows the same privacy-first principles - 721 tests passing, production ready:
 
-- **🎉 First Demo Success:** December 9, 2025 presentation received positive feedback
-- **🇺🇸 USA Lite Launched:** American supporters receive identical data ownership protections
+- **🇺🇸 USA Lite Expansion:** 13 US jurisdictions (Federal + 12 states) with same data ownership protections
+- **📍 USA Lite Jurisdiction Data:** Workers' comp, civil rights, and disability program information for 13 US jurisdictions stored locally within the app bundle (read-only reference data)
+- **🔒 User-Selected Jurisdiction:** Your jurisdiction preference stored locally on your device only
+- **📍 No Location Tracking:** Jurisdiction selection is manual—we don't track your location
+- **🏠 Local Processing:** All jurisdiction-related features process data locally
 - **🔒 Security Verified:** AES-256-GCM encryption confirmed across all sensitive data storage
 - **📴 Offline-First Verified:** Complete offline functionality with AsyncStorage persistence
 - **✅ Zero Security Issues:** XSS and SQL injection prevention verified across all inputs
@@ -299,4 +302,4 @@ For questions about data ownership or to verify these claims:
 *This statement represents our core commitment to user data sovereignty. Your privacy and data ownership are not just promises—they're technically guaranteed by our architecture.*
 
 **Version:** 2.1
-**Effective:** December 7, 2025
+**Effective:** December 14, 2025
