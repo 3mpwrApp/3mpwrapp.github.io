@@ -1,6 +1,6 @@
 # 3mpwrApp — Complete User Guide
 
-**Version: 1.1 | Last Updated: December 13, 2025 | USA Lite: 13 Jurisdictions**
+**Version: 1.2 | Last Updated: December 14, 2025 | USA Lite: 13 Jurisdictions**
 
 ---
 
@@ -489,11 +489,16 @@ Currently, we don't. Future funding may include grants, donations, or optional p
 
 ## 🔄 **Version History & Updates**
 
-### **Current Version: 1.0.0-rc.1**
-- Released: October 2025
-- Status: Production Ready (99/100)
+### **Current Version: 1.0.0**
+- Released: December 2025
+- Status: Production Ready (100/100)
 
 ### **Major Updates:**
+- **December 2025:** USA Lite expansion (13 US jurisdictions)
+- **December 2025:** 721 tests passing, complete stress test
+- **December 2025:** Full security verification complete
+- **November 2025:** 90% accessibility achieved, Complexity Mode
+- **November 2025:** Resources vs Research split
 - **October 2025:** Comprehensive legal disclaimers, 9-step acceptance flow
 - **October 2025:** Phase 6 ML-driven personalization
 - **October 2025:** Trauma-informed safety features
@@ -531,4 +536,4 @@ See full changelog: Settings > About > What's New
 ---
 
 **© 2025 3mpwr App. All rights reserved.**  
-**Last Updated: December 12, 2025 | Version 1.0**
+**Last Updated: December 14, 2025 | Version 1.2**

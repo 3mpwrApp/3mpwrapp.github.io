@@ -453,6 +453,6 @@ Your participation helps us create an app that truly empowers Canadians living w
 
 ---
 
-*Last Updated: **December 12, 2025***  
-*Guide Version: **4.0** (December 2025 Production Ready Update)*  
+*Last Updated: **December 14, 2025***  
+*Guide Version: **4.1** (December 2025 Production Ready + USA Lite)*  
 *For questions about this guide: empowrapp08162025@gmail.com*

@@ -1,8 +1,8 @@
 ---
 title: 3mpwrApp — User Guide for Everyone
 description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
-version: 4.1 (December 2025 - USA Lite Expansion)
-lastUpdated: 2025-12-13
+version: 4.2 (December 2025 - USA Lite Expansion)
+lastUpdated: 2025-12-14
 accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
 currentPhase: Production Release (100% Complete)
 allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline support, complete security verification, 13 US jurisdictions
@@ -95,7 +95,7 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 ## 🆕 **What's New - December 2025**
 
-### 🎊 **December 13, 2025 - USA Lite Expansion!** ✅ **CURRENT VERSION**
+### 🎊 **December 14, 2025 - USA Lite Expansion!** ✅ **CURRENT VERSION**
 
 **13 US Jurisdictions Fully Built** - Comprehensive legal framework for workers' comp, civil rights, and disability programs:
 
@@ -120,7 +120,7 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 ---
 
-### 🎊 **December 12, 2025 - Production Ready Release!**
+### 🎊 **December 12-14, 2025 - Production Ready Release!**
 
 **100% Production Ready** - Final stress test complete with comprehensive verification across all systems:
 
@@ -132,6 +132,7 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 - **Documentation Refreshed** - All docs updated for December 2025 release
 - **FAQs Updated** - New December 2025 entries with production-ready status
 - **Discord Integration** - Webhook notification system ready for team communications
+- **USA Lite Expansion** - 13 US jurisdictions now fully supported
 
 ---
 
@@ -4371,7 +4372,7 @@ We're constantly improving 3mpwrApp based on your feedback and the community's n
 
 ---
 
-*This guide is updated regularly to reflect new features and improvements. Last updated: **November 23, 2025***
+*This guide is updated regularly to reflect new features and improvements. Last updated: **December 14, 2025***
 
 *For the most current information, check the What's New section in the app or visit our website.*
 
