@@ -80,6 +80,25 @@ USA Lite provides core features that work universally, while Canadian-specific f
 - Help shape future US-specific features
 - Experience disability-first app design
 
+### 🎯 Initial Focus States
+
+We're starting USA Lite development with a focus on **10 key states**:
+
+| State | Abbreviation |
+|-------|-------------|
+| California | CA |
+| New York | NY |
+| Michigan | MI |
+| Texas | TX |
+| Washington | WA |
+| Ohio | OH |
+| Pennsylvania | PA |
+| Tennessee | TN |
+| Georgia | GA |
+| Mississippi | MS |
+
+*These states were selected based on community interest and workers' compensation complexity. Additional states will be added as we expand.*
+
 ---
 
 ## 📊 Current Status

@@ -59,6 +59,14 @@ A version of 3mpwrApp for US-based users who want to:
 ### Why the Difference?
 3mpwrApp was built for Canadian disability benefits (ODSP, CPP-D, AISH, etc.). USA Lite offers universal features while we work on US-specific adaptations.
 
+### 🎯 Focus States for USA Lite
+
+We're prioritizing development for these **10 states** first:
+- 🇺🇸 California, New York, Michigan, Texas, Washington
+- 🇺🇸 Ohio, Pennsylvania, Tennessee, Georgia, Mississippi
+
+*More states coming as we expand!*
+
 ---
 
 ## 📊 Current Status Update

@@ -78,6 +78,15 @@ lastUpdated: 2025-12-12
 
 During our December 9, 2025 demo with the Thunder Bay & District Injured Workers Support Group, USA listeners expressed strong interest in testing. Rather than making them wait for our planned 2026 US launch, we streamlined access to core features.
 
+### 🎯 Focus States
+
+We're prioritizing these **10 states** for USA Lite development:
+
+- **California** • **New York** • **Michigan** • **Texas** • **Washington**
+- **Ohio** • **Pennsylvania** • **Tennessee** • **Georgia** • **Mississippi**
+
+*Selected based on community interest and workers' comp complexity. More states coming in 2026!*
+
 **Full US launch with 50-state compliance is planned for Q1-Q2 2026.**
 
 ---

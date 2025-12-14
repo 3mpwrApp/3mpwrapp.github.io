@@ -269,6 +269,33 @@ Following strong interest from American supporters during our first demo present
 - **Shared mission:** Disability rights transcend borders
 - **Stepping stone:** Full US launch planned for Q1-Q2 2026
 
+### 🎯 Initial Focus States
+
+We're starting with **10 priority states** for USA Lite development:
+
+| Region | States |
+|--------|--------|
+| **West Coast** | California, Washington |
+| **Southwest** | Texas |
+| **Midwest** | Michigan, Ohio |
+| **Northeast** | New York, Pennsylvania |
+| **South** | Tennessee, Georgia, Mississippi |
+
+*These states were selected based on community interest, workers' compensation complexity, and disability advocacy needs.*
+
+### 🗺️ Full US Expansion (2026)
+
+The remaining 40 states will be added during the 2026 expansion:
+
+| Region | States |
+|--------|--------|
+| **New England** | Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, Vermont |
+| **Mid-Atlantic** | Delaware, Maryland, New Jersey, Washington D.C. |
+| **Southeast** | Alabama, Arkansas, Florida, Kentucky, Louisiana, North Carolina, South Carolina, Virginia, West Virginia |
+| **Midwest** | Illinois, Indiana, Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota, Wisconsin |
+| **Mountain West** | Arizona, Colorado, Idaho, Montana, Nevada, New Mexico, Utah, Wyoming |
+| **Pacific** | Alaska, Hawaii, Oregon |
+
 ### Coming in Full US Launch (2026)
 
 - 50-state workers' compensation compliance

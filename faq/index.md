@@ -174,6 +174,8 @@ Following strong interest from USA listeners during our demo, we've launched **U
 
 **Full US launch with state-specific features is planned for Q1-Q2 2026.**
 
+**🎯 Initial Focus States:** We're starting with California, New York, Michigan, Texas, Washington, Ohio, Pennsylvania, Tennessee, Georgia, and Mississippi. More states coming as we expand!
+
   </div>
 </details>
 

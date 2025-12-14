@@ -48,6 +48,17 @@ We presented to the **Thunder Bay & District Injured Workers Support Group**, ma
 
 **Note:** USA Lite focuses on universal disability advocacy tools while Canadian-specific legal and benefits features remain Canada-only.
 
+### 🎯 Initial Focus States
+
+We're prioritizing these **10 states** for USA Lite development:
+
+**West Coast & Southwest:** California, Texas, Washington  
+**Midwest:** Michigan, Ohio  
+**Northeast:** New York, Pennsylvania  
+**South:** Tennessee, Georgia, Mississippi
+
+*Selected based on community interest and workers' compensation system complexity. More states coming soon!*
+
 ---
 
 ## 🎯 What This Means for the Community
