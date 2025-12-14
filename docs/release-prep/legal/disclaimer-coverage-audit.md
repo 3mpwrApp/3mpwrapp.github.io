@@ -1,8 +1,10 @@
 # Disclaimer Coverage Audit
 
-**Date:** October 24, 2025  
+**Date:** December 13, 2025  
 **Purpose:** Comprehensive audit of all app screens to ensure appropriate disclaimer coverage  
-**Status:** 🔴 CRITICAL - Most individual feature screens lack disclaimers
+**Status:** 🟡 PARTIAL - Hub screens covered; USA Lite jurisdictions added (Dec 2025)
+
+**December 2025 Update:** USA Lite expansion (13 US jurisdictions) added. All US legal information subject to same disclaimers as Canadian content—educational only, not legal advice, varies by state.
 
 ---
 

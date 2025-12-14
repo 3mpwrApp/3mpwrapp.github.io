@@ -1,11 +1,11 @@
 ---
 title: 3mpwrApp — User Guide for Everyone
 description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
-version: 4.0 (December 2025 - Production Release)
-lastUpdated: 2025-12-12
+version: 4.1 (December 2025 - USA Lite Expansion)
+lastUpdated: 2025-12-13
 accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
 currentPhase: Production Release (100% Complete)
-allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline support, complete security verification
+allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline support, complete security verification, 13 US jurisdictions
 ---
 
 # 3mpwrApp — User Guide for Everyone
@@ -95,7 +95,32 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 ## 🆕 **What's New - December 2025**
 
-### 🎊 **December 12, 2025 - Production Ready Release!** ✅ **CURRENT VERSION**
+### 🎊 **December 13, 2025 - USA Lite Expansion!** ✅ **CURRENT VERSION**
+
+**13 US Jurisdictions Fully Built** - Comprehensive legal framework for workers' comp, civil rights, and disability programs:
+
+#### 🇺🇸 **USA Lite - Complete US Coverage**
+- **Federal + 12 Priority States**: CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS
+- **6-Component Structure** for each jurisdiction:
+  1. **Workers' Compensation System** - Statutes, agencies, benefits, appeals
+  2. **Disability & Income Support** - State TDI/PFML, Medicaid, TANF
+  3. **Civil Rights Framework** - State protections, protected classes
+  4. **Legislative Authority** - Enabling statutes, tribunals
+  5. **Enforcement Oversight** - Labor, civil rights, OSHA
+  6. **Procedural Safeguards** - Deadlines, due process, judicial review
+
+**State-Specific Details Captured**:
+- **California**: SDI, PFL, Cal/OSHA, strongest state protections
+- **Washington & Ohio**: Monopolistic state fund systems
+- **Texas**: Non-subscriber system (only state allowing WC opt-out)
+- **Mississippi**: Lowest WC max in nation; no state civil rights law
+- **Georgia**: Limited state protections; federal reliance noted
+
+**How to Access**: Settings → Jurisdiction → Switch to USA
+
+---
+
+### 🎊 **December 12, 2025 - Production Ready Release!**
 
 **100% Production Ready** - Final stress test complete with comprehensive verification across all systems:
 

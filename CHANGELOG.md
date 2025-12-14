@@ -50,6 +50,33 @@ All notable changes to this project will be documented in this file.
 - **All Systems Verified** - Auth, security, offline-first, all features
 - **Beta Ready** - Closed beta deployment validated
 
+#### 🇺🇸 **USA Lite - Comprehensive US Jurisdiction Support (December 13, 2025)**
+- **13 US Jurisdictions** - Complete legal data with 6-component framework for each:
+  - **US-FED** - Federal (ADA, SSDI, SSI, FMLA, FECA, EEOC, DOL, federal workers' comp)
+  - **US-CA** - California (FEHA, SDI, PFL, Cal/OSHA, CRD, DWC, WCAB)
+  - **US-NY** - New York (NYS Human Rights Law, NYS Workers' Comp, DBL, PFL, DHR)
+  - **US-TX** - Texas (TWC, TDI-DWC workers' comp, non-subscriber system documented)
+  - **US-FL** - Florida (FCHR, FL Division of Workers' Compensation, JCC)
+  - **US-IL** - Illinois (IDHR, IWCC workers' comp, no fee schedule noted)
+  - **US-MI** - Michigan (WDCA, MDCR, PWDCRA, Elliott-Larsen, MIOSHA)
+  - **US-WA** - Washington (L&I monopolistic fund, WSHRC, WLAD, PFML, DOSH)
+  - **US-OH** - Ohio (BWC monopolistic fund, OCRC, Industrial Commission)
+  - **US-PA** - Pennsylvania (BWC, PHRC, PHRA, IRE provision)
+  - **US-TN** - Tennessee (BWC, THRC, THRA, AMA Guides 6th Ed. required)
+  - **US-GA** - Georgia (SBWC, GCEO, limited state protections noted)
+  - **US-MS** - Mississippi (MWCC, lowest WC max $596/week, no state civil rights law)
+- **6-Component Structure for Each Jurisdiction**:
+  1. Workers' Compensation System (statutes, agencies, benefits, appeals)
+  2. Disability & Income Support (TDI/PFML, Medicaid, TANF, gaps)
+  3. Constitutional & Civil Rights Framework (state laws, protected classes)
+  4. Legislative Authority & Rulemaking (enabling statutes, tribunals)
+  5. Enforcement & Oversight Bodies (labor, civil rights, OSHA)
+  6. Procedural Safeguards (deadlines, due process, judicial review)
+- **Jurisdiction Switcher** - Country toggle (CA/US) in jurisdiction settings
+- **Data Files** - Complete JSON data for each jurisdiction in `data/jurisdictions/`
+- **Type Support** - Updated `types/jurisdiction.ts` with US support and country field
+- **Store Integration** - `store/jurisdiction.tsx` supports country-aware jurisdiction selection
+
 ---
 
 ## [1.0.0-rc.3] - 2025-11-25

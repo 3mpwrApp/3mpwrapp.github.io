@@ -1,14 +1,15 @@
 # 3mpwrApp — Privacy Policy
 
-**Last updated: December 12, 2025**
-**Version: 3.1 (December 2025 Production Release)**
+**Last updated: December 13, 2025**
+**Version: 3.2 (December 2025 USA Lite Expansion)**
 
 This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and protects information in the 3mpwrApp mobile application and web experience. By using the app, you agree to these practices.
 
-## 🆕 **December 2025 Updates (Version 3.1)**
+## 🆕 **December 2025 Updates (Version 3.2)**
 
-Final stress test complete - 721 tests passing, production ready:
+USA Lite expansion complete with 13 US jurisdictions:
 
+- **🇺🇸 USA Lite Added:** 13 US jurisdictions with workers' comp, civil rights, disability program information — all stored/processed locally like Canadian data
 - **🔒 Security Verified:** AES-256-GCM encryption confirmed across all sensitive data
 - **📴 Offline-First Verified:** Complete offline support with AsyncStorage persistence
 - **✅ Zero Issues:** 0 ESLint errors, 0 TypeScript errors, 0 accessibility issues

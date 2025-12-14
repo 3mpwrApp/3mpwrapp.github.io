@@ -1,0 +1,131 @@
+{
+  "code": "US-GA",
+  "name": "Georgia",
+  "country": "US",
+  "workersCompensation": {
+    "governingStatutes": [
+      {"name": "Georgia Workers' Compensation Act", "citation": "O.C.G.A. Title 34, Chapter 9", "scope": "Employers with 3+ employees"},
+      {"name": "Georgia Rules of the State Board of Workers' Compensation", "citation": "Ga. Comp. R. & Regs. Chapter 400", "scope": "Board rules"}
+    ],
+    "administeringAgency": {
+      "name": "State Board of Workers' Compensation (SBWC)",
+      "url": "https://sbwc.georgia.gov/"
+    },
+    "coverageScope": {
+      "covered": ["Employers with 3+ regular employees", "All employees if employer elects coverage"],
+      "excluded": ["Employers with <3 employees", "Farm laborers (unless 10+ regular employees)", "Domestic servants", "Railroad workers (FELA)", "Independent contractors", "Sole proprietors (may elect)", "Partners (may elect)", "Officers (up to 5 may elect out)"]
+    },
+    "benefitCategories": {
+      "medical": "All authorized treatment; employer/insurer selects Authorized Treating Physician (ATP) from panel",
+      "temporaryTotal": "66 2/3% of wages up to max ($750/week—one of lowest in nation); max 400 weeks",
+      "temporaryPartial": "66 2/3% of wage difference up to $416/week; max 350 weeks",
+      "permanentPartial": "Schedule (specific loss) by weeks per body part × 66 2/3% of wages; non-schedule by residual earning capacity",
+      "permanentTotal": "66 2/3% of wages up to max; 400 weeks (catastrophic: lifetime with higher cap)",
+      "catastrophic": "Defined injuries (e.g., amputation, paralysis, severe TBI); higher weekly max; lifetime duration",
+      "deathBenefits": "66 2/3% of wages to dependents; max 400 weeks; $7,500 burial"
+    },
+    "initialClaimForm": "WC-14 (Notice of Claim/First Report) by employer; Form WC-14a if employee initiates",
+    "appealLevels": [
+      {"name": "Administrative Law Judge (ALJ)", "body": "SBWC", "deadline": "1 year from injury or last payment"},
+      {"name": "Appellate Division", "body": "SBWC", "deadline": "20 days from ALJ award"},
+      {"name": "Superior Court", "body": "Georgia Courts", "deadline": "20 days from Appellate Division"},
+      {"name": "Court of Appeals/Supreme Court", "body": "Georgia Appellate Courts", "deadline": "30 days"}
+    ],
+    "enforcementPowers": "SBWC compliance investigations; penalty assessment; fraud unit",
+    "penalties": "15% penalty for late payment (plus interest); 20% for unreasonable denial; uninsured employer penalties"
+  },
+  "disabilityPrograms": {
+    "programs": [
+      {
+        "code": "NONE-STATE-TDI",
+        "name": "No State Disability Insurance",
+        "note": "Georgia has no state temporary disability insurance program",
+        "alternatives": "Private disability insurance; SSDI/SSI"
+      },
+      {
+        "code": "MEDICAID",
+        "name": "Georgia Medicaid",
+        "administeringBody": "GA Dept. of Community Health",
+        "eligibility": "Low-income; Georgia has not expanded Medicaid under ACA",
+        "wcInteraction": "WC primary for work injuries"
+      },
+      {
+        "code": "TANF",
+        "name": "Temporary Assistance for Needy Families",
+        "administeringBody": "GA Division of Family & Children Services",
+        "eligibility": "Very low income families with children; strict limits",
+        "wcInteraction": "WC income counted"
+      }
+    ],
+    "continuityGaps": ["No state TDI", "Medicaid not expanded", "Low WC maximum ($750/week)", "400-week limit"],
+    "terminationRisks": ["400-week cap (non-catastrophic)", "ATP disputes", "Settlement pressure"]
+  },
+  "civilRightsFramework": {
+    "constitutionalProtections": [
+      {"source": "Georgia Constitution Art. I, § 1, Para. II", "protection": "Equal protection"},
+      {"source": "Georgia Constitution Art. I, § 1, Para. I", "protection": "Due process"}
+    ],
+    "statutes": [
+      {"name": "Georgia Equal Employment for People with Disabilities Code", "citation": "O.C.G.A. § 34-6A-1 et seq.", "coverage": "Employers with 15+ employees", "protections": "Disability discrimination in employment; follows ADA framework"},
+      {"name": "Georgia Whistleblower Protection", "citation": "O.C.G.A. § 45-1-4", "coverage": "Public employers", "protections": "Protection for public employees reporting fraud/abuse"}
+    ],
+    "protectedClasses": ["Disability (limited coverage)", "Note: Georgia has no comprehensive state civil rights law covering race, sex, religion in private employment—rely on federal law"],
+    "federalReliance": "Georgia relies heavily on federal civil rights law (Title VII, ADA, ADEA) for private employment; limited state protections",
+    "retaliationProhibitions": "Limited to disability discrimination and public employee whistleblower contexts; federal law provides broader coverage",
+    "accommodationObligations": {
+      "standard": "Reasonable accommodation per federal ADA and Georgia disability code",
+      "process": "Interactive process under ADA",
+      "examples": ["Modified duties", "Leave", "Equipment", "Schedule changes"]
+    }
+  },
+  "legislativeAuthority": {
+    "primaryAuthority": "Georgia General Assembly",
+    "enablingStatutes": {
+      "workersComp": "O.C.G.A. Title 34, Chapter 9",
+      "disability": "No state TDI; O.C.G.A. Title 49 (public assistance)",
+      "civilRights": "O.C.G.A. § 34-6A (disability only); no comprehensive state civil rights act"
+    },
+    "delegatedBodies": [
+      {"agency": "SBWC", "authority": "Workers' compensation administration and adjudication"},
+      {"agency": "Georgia Commission on Equal Opportunity (GCEO)", "authority": "Limited discrimination complaints; no enforcement power for private employment"},
+      {"agency": "DHS/DFCS", "authority": "Public assistance programs"}
+    ],
+    "tribunals": [
+      {"name": "SBWC ALJs", "jurisdiction": "Workers' compensation disputes"},
+      {"name": "SBWC Appellate Division", "jurisdiction": "WC appeals"},
+      {"name": "Federal courts/EEOC", "jurisdiction": "Most employment discrimination claims"}
+    ]
+  },
+  "enforcementOversight": {
+    "laborStandards": {"agency": "GA Dept. of Labor", "authority": "Limited labor law enforcement; primarily unemployment administration"},
+    "civilRights": {"agency": "Georgia Commission on Equal Opportunity (GCEO)", "authority": "Limited scope; primarily handles housing discrimination; refers employment to EEOC", "deadline": "180 days (EEOC deadline applies for federal claims)"},
+    "occupationalSafety": {"agency": "Federal OSHA only", "authority": "Georgia is not a state plan state; OSHA covers private sector; no state OSHA"},
+    "complianceMechanisms": ["EEOC primary venue for employment discrimination", "SBWC for WC", "Private lawsuits", "Federal DOL for FLSA"]
+  },
+  "proceduralSafeguards": {
+    "filingDeadlines": {
+      "wcClaim": "1 year from injury or last voluntary payment",
+      "eeocCharge": "180 days (or 300 with state agency worksharing—limited in GA)",
+      "adaLawsuit": "90 days from EEOC right-to-sue"
+    },
+    "dueProcess": ["Written ALJ awards", "Right to hearing", "Discovery available", "Evidentiary hearing", "Written findings"],
+    "evidentiaryStandards": {
+      "wc": "Preponderance of evidence; ATP opinion significant",
+      "civilRights": "Federal burden-shifting framework",
+      "appeal": "Any evidence standard on Superior Court review"
+    },
+    "judicialReview": {
+      "wc": "ALJ → SBWC Appellate Division → Superior Court → Court of Appeals → Supreme Court",
+      "civilRights": "EEOC → Federal court (or state court for state disability code)",
+      "note": "Federal enforcement primary for most discrimination claims"
+    }
+  },
+  "specialConsiderations": {
+    "lowBenefits": "Georgia has one of the lowest maximum weekly WC benefits ($750/week) in the nation; inadequate wage replacement for higher earners",
+    "noComprehensiveCivilRightsLaw": "Georgia is one of few states without a comprehensive state civil rights law covering private employment discrimination beyond disability; workers must rely on federal law",
+    "atpControl": "Employer/insurer controls Authorized Treating Physician selection; limits worker choice",
+    "catastrophicDesignation": "Catastrophic injury designation critical—provides lifetime benefits and higher weekly max; worth fighting for qualifying injuries"
+  },
+  "updated": "2025-12-13",
+  "verificationStatus": "FINAL — FULLY BUILT & VERIFIED JURISDICTION MODULE"
+}

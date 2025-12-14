@@ -26,6 +26,26 @@ Note for authors (plain language):
 - **Discord integration testing** - Webhook notification system ready
 - **Documentation overhaul** - All docs updated for December 2025 release
 
+### 🇺🇸 USA Lite - Comprehensive US Jurisdiction Support (December 13, 2025)
+
+- **US support now available** - Switch to USA in Settings to access US-specific legal info
+- **13 jurisdictions covered** - Federal + 12 priority states fully built
+- **States included**: California, New York, Texas, Florida, Illinois, Michigan, Washington, Ohio, Pennsylvania, Tennessee, Georgia, Mississippi
+- **Each jurisdiction contains 6 comprehensive components**:
+  1. **Workers' Compensation System** - Governing statutes, agencies, benefits, appeals
+  2. **Disability & Income Support** - State TDI/PFML programs, Medicaid status, TANF
+  3. **Constitutional & Civil Rights Framework** - State protections, protected classes, accommodations
+  4. **Legislative Authority & Rulemaking** - Enabling statutes, delegated bodies
+  5. **Enforcement & Oversight Bodies** - Labor, civil rights, OSHA coverage
+  6. **Procedural Safeguards** - Filing deadlines, due process, judicial review
+- **State-specific details captured**:
+  - TX: Non-subscriber system (only state allowing WC opt-out)
+  - WA & OH: Monopolistic state fund systems
+  - CA: SDI, PFL, Cal/OSHA, strongest state protections
+  - MS: Lowest WC max in nation ($596/week); no state civil rights law
+  - GA: Limited state protections; federal reliance noted
+- **All files verified** - `verificationStatus: FINAL — FULLY BUILT & VERIFIED JURISDICTION MODULE`
+
 ---
 
 ## [Unreleased]

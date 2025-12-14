@@ -371,6 +371,21 @@
       }
     }
 
+    // Parse date correctly for all-day vs timed events
+    function parseEventDate(dateStr, isAllDay) {
+      if (!dateStr) return null;
+      
+      // For all-day events, parse date without timezone conversion
+      // This prevents "2025-12-25" from becoming Dec 24 at 7pm in EST
+      if (isAllDay && dateStr.length === 10 && dateStr.match(/^\d{4}-\d{2}-\d{2}$/)) {
+        const [year, month, day] = dateStr.split('-').map(Number);
+        return new Date(year, month - 1, day); // Local midnight, not UTC
+      }
+      
+      // For timed events, parse normally
+      return new Date(dateStr);
+    }
+
     // Apply filters and sort
     function applyFilters() {
       const categoryFilter = document.getElementById('category-filter').value;
@@ -394,9 +409,9 @@
       filteredEvents.sort((a, b) => {
         switch (sortOrder) {
           case 'date-asc':
-            return new Date(a.startDate || a.date) - new Date(b.startDate || b.date);
+            return parseEventDate(a.date || a.startDate, a.isAllDay) - parseEventDate(b.date || b.startDate, b.isAllDay);
           case 'date-desc':
-            return new Date(b.startDate || b.date) - new Date(a.startDate || a.date);
+            return parseEventDate(b.date || b.startDate, b.isAllDay) - parseEventDate(a.date || a.startDate, a.isAllDay);
           case 'title':
             return (a.title || '').localeCompare(b.title || '');
           default:
@@ -420,9 +435,12 @@
       }
 
       container.innerHTML = filteredEvents.map(event => {
-        const eventDate = new Date(event.startDate || event.date);
-        const endDate = event.endDate ? new Date(event.endDate) : null;
-        const dateString = formatDate(eventDate, endDate);
+        const isAllDay = event.isAllDay === true;
+        // For all-day events, prefer the date field; for timed events, use startDate
+        const dateSource = isAllDay ? (event.date || event.startDate) : (event.startDate || event.date);
+        const eventDate = parseEventDate(dateSource, isAllDay);
+        const endDate = event.endDate ? parseEventDate(event.endDate, isAllDay) : null;
+        const dateString = formatDate(eventDate, endDate, isAllDay);
         
         const location = event.location || (event.isVirtual ? 'Virtual Event' : '');
         const badges = getBadges(event);
@@ -440,7 +458,7 @@
     }
 
     // Format date nicely
-    function formatDate(startDate, endDate) {
+    function formatDate(startDate, endDate, isAllDay) {
       const options = {
         weekday: 'long',
         year: 'numeric',
@@ -453,6 +471,11 @@
       if (endDate && endDate.getTime() !== startDate.getTime()) {
         const endStr = endDate.toLocaleDateString('en-US', options);
         return `${startStr} - ${endStr}`;
+      }
+
+      // For all-day events, just show the date
+      if (isAllDay) {
+        return startStr;
       }
 
       return startStr;

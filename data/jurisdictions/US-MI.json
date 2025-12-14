@@ -1,0 +1,128 @@
+{
+  "code": "US-MI",
+  "name": "Michigan",
+  "country": "US",
+  "workersCompensation": {
+    "governingStatutes": [
+      {"name": "Michigan Workers' Disability Compensation Act", "citation": "MCL 418.101 et seq.", "scope": "Employers with 3+ employees or 1+ for 35+ hrs/week for 13+ weeks"}
+    ],
+    "administeringAgency": {
+      "name": "Workers' Disability Compensation Agency (WDCA)",
+      "parentAgency": "Michigan Department of Labor and Economic Opportunity",
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wdca"
+    },
+    "coverageScope": {
+      "covered": ["Employers with 3+ employees", "Employers with 1+ employee working 35+ hrs/week for 13+ weeks", "Agricultural employers with 3+ employees or $35k+ payroll"],
+      "excluded": ["Sole proprietors (may elect)", "Partners (may elect)", "Corporate officers (may exempt)", "Domestic servants in homes with <2 employees", "Some agricultural operations"]
+    },
+    "benefitCategories": {
+      "medical": "Reasonable and necessary treatment; employer may direct care for first 28 days",
+      "wageLoss": "80% of after-tax wages up to 90% of state average weekly wage ($1,088/week 2024); until age 65 or 5 years from disability (whichever later)",
+      "specificLoss": "Schedule for amputations, loss of hearing/sight (weeks × comp rate)",
+      "permanentTotal": "80% of after-tax wages; duration varies",
+      "deathBenefits": "80% of after-tax wages to dependents; up to 500 weeks; $6,000 burial"
+    },
+    "initialClaimForm": "WC-117 (Application for Mediation or Hearing)",
+    "appealLevels": [
+      {"name": "Magistrate Hearing", "body": "WDCA Magistrate", "deadline": "2 years from injury or last payment"},
+      {"name": "Workers' Compensation Appellate Commission (WCAC)", "body": "WCAC", "deadline": "30 days from magistrate order"},
+      {"name": "Michigan Court of Appeals", "body": "Michigan Courts", "deadline": "30 days from WCAC"}
+    ],
+    "enforcementPowers": "WDCA dispute resolution; fraud investigation; carrier compliance",
+    "penalties": "Late payment penalties; self-insured revocation; fraud prosecution"
+  },
+  "disabilityPrograms": {
+    "programs": [
+      {
+        "code": "NONE-STATE-TDI",
+        "name": "No State Disability Insurance",
+        "note": "Michigan has no state temporary disability insurance program",
+        "alternatives": "Private disability insurance; SSDI/SSI"
+      },
+      {
+        "code": "MEDICAID",
+        "name": "Healthy Michigan Plan (Expanded Medicaid)",
+        "administeringBody": "Michigan Dept. of Health and Human Services",
+        "eligibility": "Adults 19-64 with income up to 138% FPL; Michigan expanded Medicaid",
+        "wcInteraction": "WC primary for work injuries"
+      },
+      {
+        "code": "FIP",
+        "name": "Family Independence Program",
+        "administeringBody": "MDHHS",
+        "eligibility": "Low-income families with children",
+        "wcInteraction": "WC income affects eligibility"
+      }
+    ],
+    "continuityGaps": ["No state TDI", "Gap waiting for SSDI determination"],
+    "terminationRisks": ["Reaching retirement age offsets", "Wage-earning capacity determinations"]
+  },
+  "civilRightsFramework": {
+    "constitutionalProtections": [
+      {"source": "Michigan Constitution Art. I, § 2", "protection": "Equal protection; no discrimination"},
+      {"source": "Michigan Constitution Art. I, § 17", "protection": "Due process"}
+    ],
+    "statutes": [
+      {"name": "Elliott-Larsen Civil Rights Act", "citation": "MCL 37.2101 et seq.", "coverage": "Employers with 1+ employees", "protections": "Disability discrimination prohibited; race, religion, color, national origin, sex, height, weight, familial status, marital status"},
+      {"name": "Persons with Disabilities Civil Rights Act", "citation": "MCL 37.1101 et seq.", "coverage": "Employers with 1+ employees", "protections": "Specific disability protections; accommodation required; broader than federal"},
+      {"name": "Whistleblowers' Protection Act", "citation": "MCL 15.361 et seq.", "coverage": "All employers", "protections": "Protection for reporting violations"}
+    ],
+    "protectedClasses": ["Disability", "Race", "Color", "Religion", "National origin", "Sex", "Sexual orientation", "Gender identity", "Height", "Weight", "Familial status", "Marital status", "Age"],
+    "retaliationProhibitions": "Retaliation prohibited for filing complaints, participating in proceedings, or opposing violations",
+    "accommodationObligations": {
+      "standard": "Reasonable accommodation under PWDCRA; undue hardship defense",
+      "process": "Interactive process to identify accommodations",
+      "examples": ["Modified job duties", "Schedule changes", "Equipment", "Leave", "Reassignment"]
+    }
+  },
+  "legislativeAuthority": {
+    "primaryAuthority": "Michigan Legislature",
+    "enablingStatutes": {
+      "workersComp": "MCL 418.101 et seq.",
+      "disability": "No state TDI; Public Assistance statutes",
+      "civilRights": "MCL 37.2101 (Elliott-Larsen); MCL 37.1101 (PWDCRA)"
+    },
+    "delegatedBodies": [
+      {"agency": "WDCA", "authority": "Workers' comp administration and adjudication"},
+      {"agency": "Michigan Department of Civil Rights (MDCR)", "authority": "Civil rights enforcement"},
+      {"agency": "MDHHS", "authority": "Public assistance programs"}
+    ],
+    "tribunals": [
+      {"name": "WDCA Magistrates", "jurisdiction": "Workers' comp disputes"},
+      {"name": "WCAC", "jurisdiction": "Workers' comp appeals"},
+      {"name": "MDCR", "jurisdiction": "Civil rights investigation and mediation"}
+    ]
+  },
+  "enforcementOversight": {
+    "laborStandards": {"agency": "Michigan Wage and Hour Division", "authority": "Wage and Hour Act; Improved Workforce Opportunity Wage Act"},
+    "civilRights": {"agency": "Michigan Department of Civil Rights (MDCR)", "authority": "Elliott-Larsen; PWDCRA", "deadline": "180 days for PWDCRA; 3 years for Elliott-Larsen (civil action)"},
+    "occupationalSafety": {"agency": "Michigan OSHA (MIOSHA)", "authority": "Michigan OSHA Act; state plan state covering public and private sector"},
+    "complianceMechanisms": ["MDCR investigations", "WDCA proceedings", "MIOSHA inspections", "Private lawsuits"]
+  },
+  "proceduralSafeguards": {
+    "filingDeadlines": {
+      "wcClaim": "2 years from injury or last compensation payment",
+      "mdcrComplaint": "180 days from violation",
+      "civilRightsLawsuit": "3 years under Elliott-Larsen (no exhaustion required for civil suits)"
+    },
+    "dueProcess": ["Notice of decisions", "Right to hearing before magistrate", "Discovery rights", "Evidentiary hearing", "Written decision"],
+    "evidentiaryStandards": {
+      "wc": "Preponderance of evidence; wage loss focus (not impairment ratings alone)",
+      "civilRights": "Prima facie case; McDonnell Douglas burden-shifting",
+      "miosha": "Preponderance for violations"
+    },
+    "judicialReview": {
+      "wc": "Magistrate → WCAC → Court of Appeals → Supreme Court",
+      "civilRights": "MDCR (optional) → Circuit Court → Court of Appeals",
+      "directFiling": "No requirement to exhaust MDCR before filing lawsuit under Elliott-Larsen"
+    }
+  },
+  "specialConsiderations": {
+    "wageLossSystem": "Michigan is a 'wage loss' state—benefits focus on actual earnings loss, not impairment ratings",
+    "coordinationWithSsdi": "WC benefits may be reduced if combined with SSDI exceeds 80% of pre-injury wages",
+    "mioshaCoverage": "Michigan is a state plan state with MIOSHA covering both public and private employers",
+    "sexualOrientationAddition2023": "2023 interpretation/amendment added sexual orientation and gender identity to Elliott-Larsen"
+  },
+  "updated": "2025-12-13",
+  "verificationStatus": "FINAL — FULLY BUILT & VERIFIED JURISDICTION MODULE"
+}

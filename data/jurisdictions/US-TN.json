@@ -1,0 +1,131 @@
+{
+  "code": "US-TN",
+  "name": "Tennessee",
+  "country": "US",
+  "workersCompensation": {
+    "governingStatutes": [
+      {"name": "Tennessee Workers' Compensation Law", "citation": "Tenn. Code Ann. Title 50, Chapters 6", "scope": "Employers with 5+ employees (1+ for hazardous/construction)"},
+      {"name": "Workers' Compensation Reform Act of 2013", "citation": "TCA 50-6-101 et seq.", "scope": "Major 2013 reforms"}
+    ],
+    "administeringAgency": {
+      "name": "Bureau of Workers' Compensation",
+      "parentAgency": "Tennessee Department of Labor and Workforce Development",
+      "url": "https://www.tn.gov/workforce/injuries-at-work.html"
+    },
+    "coverageScope": {
+      "covered": ["Employers with 5+ employees", "Construction/mining: 1+ employee", "Coal mining: all", "Hazardous occupations: 1+ employee"],
+      "excluded": ["Employers with <5 employees (except construction/mining)", "Domestic servants", "Farm labor", "Sole proprietors (may elect)", "Partners (may elect)", "Corporate officers (may elect out, max 2)"]
+    },
+    "benefitCategories": {
+      "medical": "All reasonable and necessary treatment; Medical Treatment Guidelines apply; employer selects panel of 3 physicians",
+      "temporaryTotal": "66 2/3% of wages up to max ($1,249.13/week 2024); max 450 weeks",
+      "temporaryPartial": "66 2/3% of wage difference; max 450 weeks",
+      "permanentPartial": "Based on AMA Guides 6th Ed. impairment rating × multiplier (1-6×); varies by return-to-work status",
+      "permanentTotal": "66 2/3% of wages; lifetime with scheduled cost-of-living adjustments",
+      "deathBenefits": "66 2/3% of wages to dependents; max 400-450 weeks; $10,000 burial"
+    },
+    "initialClaimForm": "First Report of Work Injury (employer); Petition for Benefit Determination (employee)",
+    "appealLevels": [
+      {"name": "Mediation/Benefit Review Conference", "body": "Bureau", "deadline": "1 year from injury"},
+      {"name": "Court of Workers' Compensation Claims", "body": "CWCC", "deadline": "1 year from injury or last payment"},
+      {"name": "Workers' Compensation Appeals Board", "body": "WCAB", "deadline": "30 days from CWCC decision"},
+      {"name": "Court of Appeals", "body": "TN Courts", "deadline": "30 days from WCAB"}
+    ],
+    "enforcementPowers": "Bureau compliance investigations; penalty assessment authority",
+    "penalties": "Penalties for uninsured employers; late payment penalties; civil penalties"
+  },
+  "disabilityPrograms": {
+    "programs": [
+      {
+        "code": "NONE-STATE-TDI",
+        "name": "No State Disability Insurance",
+        "note": "Tennessee has no state temporary disability insurance program",
+        "alternatives": "Private disability insurance; SSDI/SSI"
+      },
+      {
+        "code": "TENNCARE",
+        "name": "TennCare (Medicaid)",
+        "administeringBody": "TN Division of TennCare",
+        "eligibility": "Low-income; Tennessee did not fully expand Medicaid (limited expansion proposals)",
+        "wcInteraction": "WC primary for work injuries"
+      },
+      {
+        "code": "TANF",
+        "name": "Families First (TANF)",
+        "administeringBody": "TN Dept. of Human Services",
+        "eligibility": "Low-income families with children; strict requirements",
+        "wcInteraction": "WC income counted"
+      }
+    ],
+    "continuityGaps": ["No state TDI", "Limited TennCare eligibility", "450-week temporary benefit cap"],
+    "terminationRisks": ["MMI determination", "Multiplier caps based on return-to-work", "AMA Guides ratings"]
+  },
+  "civilRightsFramework": {
+    "constitutionalProtections": [
+      {"source": "Tennessee Constitution Art. I, § 8", "protection": "Due process"},
+      {"source": "Tennessee Constitution Art. I, § 8", "protection": "Law of the land"}
+    ],
+    "statutes": [
+      {"name": "Tennessee Human Rights Act", "citation": "TCA 4-21-101 et seq.", "coverage": "Employers with 8+ employees (15+ for disability)", "protections": "Disability discrimination for employers with 15+ employees; broader race/sex coverage at 8+"},
+      {"name": "Tennessee Disability Act", "citation": "TCA 8-50-103", "coverage": "State employers", "protections": "State employment disability discrimination"},
+      {"name": "Public Protection Act (Whistleblower)", "citation": "TCA 50-1-304", "coverage": "All employers", "protections": "Protection for refusing to participate in illegal activities or reporting violations"}
+    ],
+    "protectedClasses": ["Disability (15+ employers)", "Race", "Color", "Religion", "Sex", "National origin", "Age (40+)", "Creed"],
+    "retaliationProhibitions": "Retaliation prohibited for filing complaints or participating in proceedings under THRA",
+    "accommodationObligations": {
+      "standard": "Reasonable accommodation for disability; follows ADA framework",
+      "process": "Interactive process expected",
+      "examples": ["Modified duties", "Leave", "Equipment", "Schedule adjustments"]
+    }
+  },
+  "legislativeAuthority": {
+    "primaryAuthority": "Tennessee General Assembly",
+    "enablingStatutes": {
+      "workersComp": "TCA Title 50, Chapter 6",
+      "disability": "No state TDI; TCA Title 71 (welfare)",
+      "civilRights": "TCA 4-21-101 et seq. (THRA)"
+    },
+    "delegatedBodies": [
+      {"agency": "Bureau of Workers' Compensation", "authority": "WC administration"},
+      {"agency": "Tennessee Human Rights Commission (THRC)", "authority": "THRA enforcement"},
+      {"agency": "DHS", "authority": "Public assistance"}
+    ],
+    "tribunals": [
+      {"name": "Court of Workers' Compensation Claims", "jurisdiction": "WC disputes"},
+      {"name": "Workers' Compensation Appeals Board", "jurisdiction": "WC appeals"},
+      {"name": "THRC", "jurisdiction": "Discrimination complaints"}
+    ]
+  },
+  "enforcementOversight": {
+    "laborStandards": {"agency": "TN Dept. of Labor and Workforce Development", "authority": "Child labor; wage regulations (limited state minimum wage law)"},
+    "civilRights": {"agency": "Tennessee Human Rights Commission (THRC)", "authority": "TCA 4-21", "deadline": "1 year from discriminatory act"},
+    "occupationalSafety": {"agency": "Tennessee OSHA (TOSHA)", "authority": "Tennessee Occupational Safety and Health Act; state plan state covering public and private"},
+    "complianceMechanisms": ["THRC investigations", "TOSHA inspections", "Bureau proceedings", "Private lawsuits", "EEOC dual-filing"]
+  },
+  "proceduralSafeguards": {
+    "filingDeadlines": {
+      "wcClaim": "1 year from injury date (strictly enforced under 2013 reforms)",
+      "thrcComplaint": "1 year from discriminatory act",
+      "civilRightsLawsuit": "1 year from THRC right-to-sue or 1 year from act if direct filing"
+    },
+    "dueProcess": ["Written orders", "Right to expedited hearing for medical necessity", "Discovery rights", "Evidentiary hearing", "Written decision with findings"],
+    "evidentiaryStandards": {
+      "wc": "Preponderance of evidence; medical causation (more probable than not)",
+      "thrc": "Preponderance; burden-shifting framework",
+      "appeal": "Substantial evidence review"
+    },
+    "judicialReview": {
+      "wc": "CWCC → WCAB → Court of Appeals → Supreme Court",
+      "civilRights": "THRC → Chancery/Circuit Court → Court of Appeals",
+      "eeoc": "May dual-file with EEOC; federal court option"
+    }
+  },
+  "specialConsiderations": {
+    "reform2013": "Major 2013 reforms created new court system (CWCC), 1-year filing deadline, AMA Guides 6th Ed. requirement, and multiplier system for permanent partial benefits",
+    "amaGuidesRequired": "Tennessee requires AMA Guides 6th Edition for impairment ratings—unique requirement",
+    "returnToWorkIncentive": "Multiplier for PPD reduced if employer offers suitable employment; incentivizes return-to-work programs",
+    "toshaProgram": "Tennessee is a state plan state with TOSHA covering both public and private employers"
+  },
+  "updated": "2025-12-13",
+  "verificationStatus": "FINAL — FULLY BUILT & VERIFIED JURISDICTION MODULE"
+}

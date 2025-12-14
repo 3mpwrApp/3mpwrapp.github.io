@@ -5,7 +5,7 @@
 
 ## 🎯 Subtitle/Short Description (30 characters max for iOS, 80 for Android)
 **iOS:** Rights, Resources, Your Voice
-**Android:** Disability & workplace injury—rights, wellness, advocacy tools for Canadians
+**Android:** Disability & injury rights, wellness, advocacy tools for Canada + USA
 
 ## 📝 Full Description
 
@@ -15,8 +15,11 @@
 
 Living with a disability—whether you were born with it, developed it over time, acquired it through illness, or sustained it from a workplace injury—comes with unique challenges. 3mpwr App is your comprehensive companion across the entire disability spectrum: physical, mental, cognitive, developmental, sensory, chronic conditions, and workplace injuries. Built by and for the Canadian disability and injured worker communities, we've created powerful, accessible tools to support you at every stage—from birth or diagnosis through lifelong advocacy and community building.
 
-**🇨🇦 Built for ALL Canadians, ALL Disabilities, ALL 14 Jurisdictions**
-Whether you were born with cerebral palsy, have developmental disabilities like autism or Down syndrome, acquired a disability through accident or illness, are navigating WCB/WSIB as an injured worker, managing chronic pain or mental illness, applying for CPP-D or ODSP or AISH, documenting workplace discrimination, or fighting for your rights—3mpwr provides province and territory-specific guidance tailored to YOUR location and YOUR needs (BC, AB, SK, MB, ON, QC, NB, NS, PE, NL, YT, NT, NU, Federal).
+**🇨🇦🇺🇸 Built for North America — Canada + USA Lite**
+Whether you were born with cerebral palsy, have developmental disabilities like autism or Down syndrome, acquired a disability through accident or illness, are navigating WCB/WSIB as an injured worker, managing chronic pain or mental illness, applying for CPP-D or ODSP or AISH, documenting workplace discrimination, or fighting for your rights—3mpwr provides jurisdiction-specific guidance tailored to YOUR location and YOUR needs.
+
+**🇨🇦 Canada (14 Jurisdictions):** BC, AB, SK, MB, ON, QC, NB, NS, PE, NL, YT, NT, NU, Federal
+**🇺🇸 USA Lite (13 Jurisdictions):** Federal + CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS — covering workers' compensation, disability programs, civil rights frameworks, and procedural safeguards for each state.
 
 **🔒 100% YOUR DATA**
 Unlike other apps, 3mpwr never owns your data. Everything stays on your device unless you choose to sync to YOUR cloud (Google Drive, iCloud, OneDrive, Dropbox, AWS S3, or WebDAV). No tracking. No hidden servers. No data sales. Ever.
@@ -91,8 +94,11 @@ Questions? Email empowrapp08162025@gmail.com or use in-app support (Settings →
 
 Living with disability—whether born with it, developed over time, acquired through illness, or from workplace injury—3mpwr is your companion across the entire spectrum: physical, mental, cognitive, developmental, sensory, chronic conditions, workplace injuries. Built by and for Canadian disability and injured worker communities.
 
-**🇨🇦 Built for Canada's Complex Disability Systems**
-Canada has 10 provinces, 3 territories, federal programs—each with different workers' compensation (WCB, WSIB, WorkSafeBC), disability programs (ODSP, AISH), appeal processes, legal rights. Born with cerebral palsy, autism, Down syndrome, acquired disability, injured at work, managing chronic pain or mental illness—3mpwr auto-tailors guidance, deadlines, forms, resources to YOUR province/territory (BC, AB, SK, MB, ON, QC, NB, NS, PE, NL, YT, NT, NU) plus federal (CPP-D, EI Sickness, Veterans Affairs). No more searching "WSIB vs WCB"—the app knows your location.
+**🇨🇦🇺🇸 Built for North America's Complex Disability Systems**
+Canada has 10 provinces, 3 territories, federal programs. USA has 50 states with different workers' comp systems. 3mpwr auto-tailors guidance, deadlines, forms, resources to YOUR jurisdiction.
+
+**🇨🇦 Canada (14 Jurisdictions):** BC, AB, SK, MB, ON, QC, NB, NS, PE, NL, YT, NT, NU + Federal (CPP-D, EI Sickness, Veterans Affairs)
+**🇺🇸 USA Lite (13 Jurisdictions):** Federal + 12 priority states (CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS) — workers' compensation, disability programs, civil rights, procedural safeguards
 
 **🔒 100% YOUR DATA**
 We never own your data. Everything on your device unless you sync to YOUR cloud (Google Drive, iCloud, OneDrive, Dropbox, AWS S3, WebDAV). No tracking. No servers. No sales. Ever.

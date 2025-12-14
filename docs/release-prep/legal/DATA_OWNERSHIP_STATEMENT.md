@@ -1,7 +1,15 @@
 # 3mpwr App — Data Ownership and Security Statement
 
-**Last updated:** November 24, 2025  
-**Version: 2.0 (November 2025 Consolidation Update)**
+**Last updated:** December 13, 2025  
+**Version: 2.1 (December 2025 USA Lite Expansion)**
+
+## 🆕 **December 2025 Updates**
+
+USA Lite expansion (13 US jurisdictions) follows the same privacy-first principles:
+- **USA Lite Jurisdiction Data:** Workers' comp, civil rights, and disability program information for 13 US jurisdictions stored locally within the app bundle (read-only reference data)
+- **User-Selected Jurisdiction:** Your jurisdiction preference stored locally on your device only
+- **No Location Tracking:** Jurisdiction selection is manual—we don't track your location
+- **Local Processing:** All jurisdiction-related features process data locally
 
 ## 🆕 **November 2025 Updates**
 
@@ -14,7 +22,7 @@ Our commitment to 100% user data ownership extends to all new November 2025 feat
 - **Campaign Submissions:** You explicitly choose what to submit to 3mpwr - nothing shared without your consent
 - **Complexity Mode:** Your experience level and Bad Day Mode preferences stored locally only
 
-**Privacy-First Architecture Maintained:** All November 2025 features follow the same local-first, user-owned data model.
+**Privacy-First Architecture Maintained:** All features follow the same local-first, user-owned data model.
 
 ---
 

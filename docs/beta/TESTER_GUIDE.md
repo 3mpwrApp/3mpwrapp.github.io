@@ -4,7 +4,7 @@ Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join 
 
 > 📱 **New to Beta Testing?** No worries! This guide is designed for testers of all experience levels. If you can use a smartphone, you can beta test!
 
-> 🎉 **December 2025 Update:** We've completed our final stress test with 721 tests passing! 100% accessibility, complete security verification, offline support, and all features production-ready. This beta tests fully verified production code!
+> 🎉 **December 2025 Update:** We've completed our final stress test with 721 tests passing! 100% accessibility, complete security verification, offline support, and all features production-ready. **NEW: USA Lite now includes 13 US jurisdictions (Federal + 12 states) with comprehensive workers' comp, civil rights, and disability program information!**
 
 ---
 

@@ -1,6 +1,6 @@
 # 3mpwrApp — Complete User Guide
 
-**Version: 1.0 | Last Updated: December 12, 2025**
+**Version: 1.1 | Last Updated: December 13, 2025 | USA Lite: 13 Jurisdictions**
 
 ---
 

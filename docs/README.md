@@ -1,7 +1,7 @@
 # 3mpwr App Documentation Index
-**Last Updated:** December 12, 2025  
-**App Version:** 1.0.0 (Production Release)  
-**Status:** ✅ 721 tests passing | 0 errors | Production Ready
+**Last Updated:** December 13, 2025  
+**App Version:** 1.0.0 (Production Release + USA Lite Expansion)  
+**Status:** ✅ 721 tests passing | 0 errors | 13 US jurisdictions | Production Ready
 
 ---
 

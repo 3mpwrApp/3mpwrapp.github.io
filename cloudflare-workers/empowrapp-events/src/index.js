@@ -96,11 +96,80 @@ export default {
 };
 
 /**
- * Format date for ICS (YYYYMMDDTHHMMSSZ)
+ * Format date for ICS (YYYYMMDDTHHMMSSZ for timed events)
  */
 function formatICSDate(date) {
   const d = new Date(date);
   return d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+}
+
+/**
+ * Format date for ICS all-day events (YYYYMMDD format, no time)
+ * For date-only strings, we extract YYYYMMDD directly to avoid timezone issues
+ */
+function formatICSDateOnly(dateStr) {
+  // For date-only strings like "2025-01-04", extract just YYYYMMDD directly
+  if (typeof dateStr === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+    return dateStr.replace(/-/g, '');
+  }
+  // For ISO strings with time, extract just the date part
+  if (typeof dateStr === 'string' && dateStr.includes('T')) {
+    return dateStr.split('T')[0].replace(/-/g, '');
+  }
+  // For Date objects, use local date to avoid timezone shift
+  const d = new Date(dateStr);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}${month}${day}`;
+}
+
+/**
+ * Get next day for all-day event end date (ICS uses exclusive end date)
+ */
+function getNextDayDateOnly(dateStr) {
+  // For date-only strings, parse and add one day
+  if (typeof dateStr === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+    const [year, month, day] = dateStr.split('-').map(Number);
+    const d = new Date(year, month - 1, day + 1); // month is 0-indexed
+    const nextYear = d.getFullYear();
+    const nextMonth = String(d.getMonth() + 1).padStart(2, '0');
+    const nextDay = String(d.getDate()).padStart(2, '0');
+    return `${nextYear}${nextMonth}${nextDay}`;
+  }
+  // For ISO strings with time, extract date and add one day
+  if (typeof dateStr === 'string' && dateStr.includes('T')) {
+    const datePart = dateStr.split('T')[0];
+    const [year, month, day] = datePart.split('-').map(Number);
+    const d = new Date(year, month - 1, day + 1);
+    const nextYear = d.getFullYear();
+    const nextMonth = String(d.getMonth() + 1).padStart(2, '0');
+    const nextDay = String(d.getDate()).padStart(2, '0');
+    return `${nextYear}${nextMonth}${nextDay}`;
+  }
+  // Fallback
+  const d = new Date(dateStr);
+  d.setDate(d.getDate() + 1);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}${month}${day}`;
+}
+
+/**
+ * Check if an event is an all-day event based on ID prefix or date format
+ */
+function isAllDayEvent(event) {
+  // All-day events: holidays, observances, health awareness, provincial
+  const allDayPrefixes = ['holiday-', 'obs-', 'health-', 'hol-', 'prov-'];
+  if (allDayPrefixes.some(prefix => event.id.startsWith(prefix))) {
+    return true;
+  }
+  // Also check if date is date-only (no time component)
+  if (typeof event.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(event.date)) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -260,24 +329,45 @@ async function handleBulkSync(request, env, corsHeaders) {
           return Promise.reject(new Error(`Invalid event: missing id, title, or date`));
         }
         
-        const inputDate = new Date(event.date);
-        const estDateString = inputDate.toLocaleString('en-US', { 
-          timeZone: 'America/New_York',
-          year: 'numeric',
-          month: '2-digit',
-          day: '2-digit',
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: false
-        });
-        const eventData = {
-          ...event,
-          date: estDateString,
-          dateISO: inputDate.toISOString(),
-          updatedAt: Date.now(),
-          syncedAt: Date.now(),
-          timezone: 'America/New_York'
-        };
+        // Check if this is an all-day event - preserve original date format
+        const allDay = isAllDayEvent(event);
+        
+        let eventData;
+        if (allDay) {
+          // All-day events: preserve the original date string (YYYY-MM-DD format)
+          eventData = {
+            ...event,
+            // Keep date as-is for all-day events
+            dateISO: typeof event.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(event.date) 
+              ? `${event.date}T00:00:00.000Z`
+              : new Date(event.date).toISOString(),
+            isAllDay: true,
+            updatedAt: Date.now(),
+            syncedAt: Date.now(),
+            timezone: 'America/New_York'
+          };
+        } else {
+          // Timed events: convert to EST display string
+          const inputDate = new Date(event.date);
+          const estDateString = inputDate.toLocaleString('en-US', { 
+            timeZone: 'America/New_York',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+          });
+          eventData = {
+            ...event,
+            date: estDateString,
+            dateISO: inputDate.toISOString(),
+            isAllDay: false,
+            updatedAt: Date.now(),
+            syncedAt: Date.now(),
+            timezone: 'America/New_York'
+          };
+        }
         
         // Store to both production and preview
         return [
@@ -378,17 +468,30 @@ async function handleICSFeed(env) {
     ics += 'X-WR-CALDESC:Community events, workshops, and meetups from 3mpwr App\r\n';
 
     for (const event of validEvents) {
-      const eventDate = new Date(event.date);
-      const dtstart = formatICSDate(eventDate);
-      const dtend = event.duration 
-        ? formatICSDate(new Date(eventDate.getTime() + (event.duration * 60000)))
-        : formatICSDate(new Date(eventDate.getTime() + 3600000)); // Default 1 hour
-
+      const allDay = isAllDayEvent(event);
+      
       ics += 'BEGIN:VEVENT\r\n';
       ics += `UID:${event.id}@3mpwrapp.pages.dev\r\n`;
       ics += `DTSTAMP:${formatICSDate(new Date())}\r\n`;
-      ics += `DTSTART:${dtstart}\r\n`;
-      ics += `DTEND:${dtend}\r\n`;
+      
+      if (allDay) {
+        // All-day event: use VALUE=DATE format (no time, just YYYYMMDD)
+        const dateOnly = formatICSDateOnly(event.date);
+        ics += `DTSTART;VALUE=DATE:${dateOnly}\r\n`;
+        // For all-day events, DTEND is the next day (exclusive end date in ICS)
+        const endDateOnly = getNextDayDateOnly(event.date);
+        ics += `DTEND;VALUE=DATE:${endDateOnly}\r\n`;
+      } else {
+        // Timed event: use full datetime with timezone
+        const eventDate = new Date(event.date);
+        const dtstart = formatICSDate(eventDate);
+        const dtend = event.duration 
+          ? formatICSDate(new Date(eventDate.getTime() + (event.duration * 60000)))
+          : formatICSDate(new Date(eventDate.getTime() + 3600000)); // Default 1 hour
+        ics += `DTSTART:${dtstart}\r\n`;
+        ics += `DTEND:${dtend}\r\n`;
+      }
+      
       ics += `SUMMARY:${event.title.replace(/\n/g, '\\n')}\r\n`;
       
       if (event.description) {
@@ -399,7 +502,7 @@ async function handleICSFeed(env) {
         ics += `LOCATION:${event.location.replace(/\n/g, '\\n')}\r\n`;
       }
       
-      ics += 'ORGANIZER;CN=3mpwr App:mailto:info@3mpwrapp.com\r\n';
+      ics += 'ORGANIZER;CN=3mpwr App:mailto:empowrapp08162025@gmail.com\r\n';
       ics += 'STATUS:CONFIRMED\r\n';
       ics += 'SEQUENCE:0\r\n';
       ics += 'END:VEVENT\r\n';

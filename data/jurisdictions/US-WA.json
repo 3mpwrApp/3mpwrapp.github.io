@@ -1,0 +1,134 @@
+{
+  "code": "US-WA",
+  "name": "Washington",
+  "country": "US",
+  "workersCompensation": {
+    "governingStatutes": [
+      {"name": "Industrial Insurance Act", "citation": "RCW Title 51", "scope": "All Washington employers"},
+      {"name": "Washington Administrative Code", "citation": "WAC Title 296", "scope": "L&I rules"}
+    ],
+    "administeringAgency": {
+      "name": "Department of Labor & Industries (L&I)",
+      "url": "https://www.lni.wa.gov/"
+    },
+    "coverageScope": {
+      "covered": ["All employees", "Sole proprietors (may elect)", "Partners (may elect)", "Corporate officers (may elect out of State Fund)"],
+      "excluded": ["Federal employees", "Interstate railroad/maritime (federal)", "Some domestic workers", "Some casual workers"]
+    },
+    "fundingModel": "MONOPOLISTIC STATE FUND — Washington is one of four states where private workers' comp insurance is not allowed; all employers must insure through L&I State Fund or be certified self-insurers",
+    "benefitCategories": {
+      "medical": "All proper and necessary treatment; no fee schedule limits for most services",
+      "timeLoss": "60-75% of wages (varies by marital/dependent status) up to 120% of state average; until claim closes or pension",
+      "permanentPartialDisability": "Category ratings or scheduled awards; lump sum or monthly based on impairment",
+      "permanentTotalDisability": "Pension at 60-75% of wages for life; cost-of-living adjustments",
+      "deathBenefits": "Pension to spouse; lump sum to children; burial $11,000+"
+    },
+    "initialClaimForm": "Report of Industrial Injury/Occupational Disease (filed by worker or employer)",
+    "appealLevels": [
+      {"name": "Reconsideration", "body": "L&I Reconsideration", "deadline": "60 days from order"},
+      {"name": "Board of Industrial Insurance Appeals (BIIA)", "body": "BIIA", "deadline": "60 days from L&I order or 30 days from reconsideration"},
+      {"name": "Superior Court", "body": "Washington Courts", "deadline": "30 days from BIIA"},
+      {"name": "Court of Appeals/Supreme Court", "body": "Washington Appellate Courts", "deadline": "30 days"}
+    ],
+    "enforcementPowers": "L&I investigations; penalties for non-compliance; premium audits",
+    "penalties": "Penalties for late premium; benefits for retaliation against claimants; fraud prosecution"
+  },
+  "disabilityPrograms": {
+    "programs": [
+      {
+        "code": "PFML",
+        "name": "Paid Family and Medical Leave",
+        "administeringBody": "Employment Security Department",
+        "statute": "RCW 50A",
+        "eligibility": "820 hours worked in qualifying period; own serious health condition or family care",
+        "benefitAmount": "Up to 90% of wages (progressive formula); max $1,456/week (2024)",
+        "duration": "Up to 12 weeks medical; 12 weeks family; 16 weeks combined; 18 weeks pregnancy complications",
+        "wcInteraction": "Cannot receive PFML and workers' comp time-loss simultaneously"
+      },
+      {
+        "code": "APPLE-HEALTH",
+        "name": "Apple Health (Medicaid)",
+        "administeringBody": "Health Care Authority",
+        "eligibility": "Low-income; Washington expanded Medicaid under ACA",
+        "wcInteraction": "L&I primary for work injuries"
+      },
+      {
+        "code": "TANF",
+        "name": "Temporary Assistance for Needy Families (WorkFirst)",
+        "administeringBody": "DSHS",
+        "wcInteraction": "WC income counted"
+      }
+    ],
+    "continuityGaps": ["PFML/WC coordination", "820-hour PFML eligibility requirement"],
+    "terminationRisks": ["Claim closure", "Vocational determination", "Pension denial"]
+  },
+  "civilRightsFramework": {
+    "constitutionalProtections": [
+      {"source": "Washington Constitution Art. I, § 12", "protection": "Special privileges prohibited"},
+      {"source": "Washington Constitution Art. I, § 3", "protection": "Due process"}
+    ],
+    "statutes": [
+      {"name": "Washington Law Against Discrimination (WLAD)", "citation": "RCW 49.60", "coverage": "Employers with 8+ employees (1+ for some provisions)", "protections": "Disability discrimination; one of oldest and broadest state civil rights laws"},
+      {"name": "Washington Family Leave Act", "citation": "RCW 49.78", "coverage": "Employers with 50+ employees", "protections": "12 weeks unpaid leave; coordinates with PFML"},
+      {"name": "Healthy Workplaces Act", "citation": "RCW 49.46", "coverage": "All employers", "protections": "Paid sick leave"}
+    ],
+    "protectedClasses": ["Disability", "Sensory, mental, or physical disability", "Use of guide dog/service animal", "HIV/AIDS/hepatitis C status", "Race", "Creed", "Color", "National origin", "Citizenship/immigration status", "Sex", "Sexual orientation", "Gender identity", "Marital status", "Age (40+)", "Military status", "Honorably discharged veteran status"],
+    "retaliationProhibitions": "Retaliation prohibited for opposing violations, filing complaints, or participating in proceedings",
+    "accommodationObligations": {
+      "standard": "Reasonable accommodation; interactive process; broader than ADA",
+      "process": "Good faith interactive process required",
+      "examples": ["Modified duties", "Leave", "Reassignment", "Equipment", "Schedule changes", "Work-from-home"]
+    }
+  },
+  "legislativeAuthority": {
+    "primaryAuthority": "Washington State Legislature",
+    "enablingStatutes": {
+      "workersComp": "RCW Title 51",
+      "disability": "RCW 50A (PFML); RCW Title 74 (public assistance)",
+      "civilRights": "RCW 49.60 (WLAD)"
+    },
+    "delegatedBodies": [
+      {"agency": "L&I", "authority": "Workers' comp and workplace safety rules (WAC 296)"},
+      {"agency": "Washington State Human Rights Commission (WSHRC)", "authority": "WLAD enforcement"},
+      {"agency": "ESD", "authority": "PFML and unemployment"}
+    ],
+    "tribunals": [
+      {"name": "L&I/BIIA", "jurisdiction": "Workers' compensation disputes"},
+      {"name": "WSHRC", "jurisdiction": "Discrimination complaints"},
+      {"name": "Office of Administrative Hearings", "jurisdiction": "Various agency matters"}
+    ]
+  },
+  "enforcementOversight": {
+    "laborStandards": {"agency": "L&I Employment Standards", "authority": "Minimum Wage Act; Paid Sick Leave; wage claims"},
+    "civilRights": {"agency": "Washington State Human Rights Commission", "authority": "RCW 49.60", "deadline": "6 months from violation (for WSHRC filing)"},
+    "occupationalSafety": {"agency": "L&I Division of Occupational Safety and Health (DOSH)", "authority": "Washington OSHA; state plan state covering public and private"},
+    "complianceMechanisms": ["WSHRC investigations", "L&I claim management", "DOSH inspections", "Private lawsuits", "Attorney General enforcement"]
+  },
+  "proceduralSafeguards": {
+    "filingDeadlines": {
+      "wcClaim": "1 year from injury (occupational disease: 2 years from knowledge)",
+      "wshrcComplaint": "6 months from discriminatory act",
+      "wladLawsuit": "3 years from violation (no exhaustion required)",
+      "pfmlClaim": "Submit claim at least 30 days before leave when foreseeable"
+    },
+    "dueProcess": ["Written L&I orders", "Right to reconsideration", "BIIA evidentiary hearing", "Right to representation", "Written findings"],
+    "evidentiaryStandards": {
+      "wc": "Preponderance of evidence; objective findings required for many conditions",
+      "wlad": "Preponderance; burden-shifting framework",
+      "dosh": "Preponderance for violations"
+    },
+    "judicialReview": {
+      "wc": "L&I → BIIA → Superior Court → Court of Appeals → Supreme Court",
+      "wlad": "WSHRC (optional) or direct Superior Court filing → appellate courts",
+      "directFiling": "No requirement to exhaust WSHRC before filing civil lawsuit"
+    }
+  },
+  "specialConsiderations": {
+    "monopolisticStateFund": "Washington is one of 4 monopolistic state fund states (with Ohio, North Dakota, Wyoming). Private WC insurance not sold; employers use State Fund or self-insure.",
+    "pfmlProgram": "Washington's PFML (2020) is one of the most generous state programs; combines with FMLA for comprehensive leave",
+    "doshCoverage": "State OSHA plan covers both public and private sectors with strong enforcement",
+    "strongProtections": "Washington is considered one of the most worker-protective states for both WC and civil rights"
+  },
+  "updated": "2025-12-13",
+  "verificationStatus": "FINAL — FULLY BUILT & VERIFIED JURISDICTION MODULE"
+}

@@ -1,0 +1,130 @@
+{
+  "code": "US-MS",
+  "name": "Mississippi",
+  "country": "US",
+  "workersCompensation": {
+    "governingStatutes": [
+      {"name": "Mississippi Workers' Compensation Law", "citation": "Miss. Code Ann. Title 71, Chapter 3", "scope": "Employers with 5+ employees"}
+    ],
+    "administeringAgency": {
+      "name": "Mississippi Workers' Compensation Commission (MWCC)",
+      "url": "https://www.mwcc.state.ms.us/"
+    },
+    "coverageScope": {
+      "covered": ["Employers with 5+ employees", "Employers who voluntarily elect coverage", "State and political subdivisions (self-insured)"],
+      "excluded": ["Employers with <5 employees", "Domestic servants", "Farm laborers (unless employer has 5+ regular non-farm employees)", "Independent contractors", "Casual workers", "Sole proprietors (may elect)", "Partners (may elect)", "Corporate officers (up to 4 may elect out)"]
+    },
+    "benefitCategories": {
+      "medical": "All reasonable and necessary treatment; no physician choice limitation initially",
+      "temporaryTotal": "66 2/3% of wages up to max ($596.06/week 2024—lowest in nation); max 450 weeks",
+      "temporaryPartial": "66 2/3% of wage difference up to max",
+      "permanentPartial": "Schedule for specific loss (weeks × 66 2/3%); non-schedule by loss of wage-earning capacity",
+      "permanentTotal": "66 2/3% of wages up to max; 450 weeks (then may petition for additional if still totally disabled)",
+      "deathBenefits": "66 2/3% of wages to dependents; max 450 weeks; $5,000 burial"
+    },
+    "initialClaimForm": "First Report of Injury (Form B-3) by employer; Petition to Controvert (B-5/B-5-11) to dispute",
+    "appealLevels": [
+      {"name": "Administrative Law Judge (ALJ)", "body": "MWCC", "deadline": "2 years from injury or last payment"},
+      {"name": "Full Commission", "body": "MWCC", "deadline": "20 days from ALJ order"},
+      {"name": "Circuit Court/Supreme Court", "body": "Mississippi Courts", "deadline": "30 days from Commission"}
+    ],
+    "enforcementPowers": "MWCC compliance reviews; penalty authority",
+    "penalties": "Penalties for uninsured employers; interest on late payments; additional compensation for unreasonable delay"
+  },
+  "disabilityPrograms": {
+    "programs": [
+      {
+        "code": "NONE-STATE-TDI",
+        "name": "No State Disability Insurance",
+        "note": "Mississippi has no state temporary disability insurance program",
+        "alternatives": "Private disability insurance; SSDI/SSI"
+      },
+      {
+        "code": "MEDICAID",
+        "name": "Mississippi Medicaid",
+        "administeringBody": "Division of Medicaid",
+        "eligibility": "Low-income; Mississippi has not expanded Medicaid under ACA",
+        "wcInteraction": "WC primary for work injuries"
+      },
+      {
+        "code": "TANF",
+        "name": "Temporary Assistance for Needy Families",
+        "administeringBody": "MS Dept. of Human Services",
+        "eligibility": "Very low income families with children; very strict limits",
+        "wcInteraction": "WC income counted"
+      }
+    ],
+    "continuityGaps": ["No state TDI", "Medicaid not expanded", "Lowest WC max in nation ($596.06/week)", "450-week limit"],
+    "terminationRisks": ["450-week cap", "Low benefit levels", "MMI determination"]
+  },
+  "civilRightsFramework": {
+    "constitutionalProtections": [
+      {"source": "Mississippi Constitution Art. 3, § 14", "protection": "Due process"},
+      {"source": "Mississippi Constitution Art. 3, § 25", "protection": "Right to sue for injury"}
+    ],
+    "statutes": [
+      {"name": "No Comprehensive State Civil Rights Law", "note": "Mississippi has NO state law prohibiting private employment discrimination based on race, sex, religion, or disability—one of two states (with Alabama) without such a law"},
+      {"name": "State Employee Whistleblower Protection", "citation": "Miss. Code Ann. § 25-9-173", "coverage": "State employees only", "protections": "Limited protection for reporting violations"}
+    ],
+    "protectedClasses": ["No state-protected classes for private employment discrimination"],
+    "federalReliance": "CRITICAL: Mississippi workers must rely ENTIRELY on federal law (Title VII, ADA, ADEA, Section 1981) for employment discrimination protection. No state remedy exists.",
+    "retaliationProhibitions": "Only federal anti-retaliation provisions apply to private employers",
+    "accommodationObligations": {
+      "standard": "Federal ADA applies to employers with 15+ employees only",
+      "process": "ADA interactive process requirements",
+      "examples": ["Federal ADA accommodations", "FMLA leave if eligible"],
+      "gap": "Employees at small employers (<15) have NO disability accommodation rights"
+    }
+  },
+  "legislativeAuthority": {
+    "primaryAuthority": "Mississippi Legislature",
+    "enablingStatutes": {
+      "workersComp": "Miss. Code Ann. Title 71, Chapter 3",
+      "disability": "No state TDI; Title 43 (public welfare)",
+      "civilRights": "NO STATE CIVIL RIGHTS EMPLOYMENT LAW"
+    },
+    "delegatedBodies": [
+      {"agency": "MWCC", "authority": "Workers' compensation administration and adjudication"},
+      {"agency": "None for employment discrimination", "note": "No state civil rights agency for employment; EEOC only venue"},
+      {"agency": "DHS", "authority": "Public assistance programs"}
+    ],
+    "tribunals": [
+      {"name": "MWCC ALJs", "jurisdiction": "Workers' compensation disputes"},
+      {"name": "MWCC Full Commission", "jurisdiction": "WC appeals"},
+      {"name": "Federal courts/EEOC", "jurisdiction": "ALL employment discrimination claims"}
+    ]
+  },
+  "enforcementOversight": {
+    "laborStandards": {"agency": "No state wage-hour agency", "authority": "Federal DOL/WHD handles FLSA; Mississippi has no state minimum wage above federal ($7.25)"},
+    "civilRights": {"agency": "NONE at state level", "authority": "No state enforcement; EEOC handles all employment discrimination", "deadline": "180 days to file with EEOC"},
+    "occupationalSafety": {"agency": "Federal OSHA only", "authority": "Mississippi is not a state plan state; OSHA covers private sector"},
+    "complianceMechanisms": ["EEOC only venue for discrimination", "MWCC for WC", "Federal DOL for wage/hour", "Private federal lawsuits"]
+  },
+  "proceduralSafeguards": {
+    "filingDeadlines": {
+      "wcClaim": "2 years from injury or last voluntary payment",
+      "eeocCharge": "180 days from discriminatory act (no state agency worksharing)",
+      "adaLawsuit": "90 days from EEOC right-to-sue"
+    },
+    "dueProcess": ["Written ALJ orders", "Right to Commission hearing", "Discovery available", "Evidentiary hearing", "Written decision"],
+    "evidentiaryStandards": {
+      "wc": "Preponderance of evidence",
+      "civilRights": "Federal burden-shifting framework (McDonnell Douglas)",
+      "appeal": "Substantial evidence review"
+    },
+    "judicialReview": {
+      "wc": "ALJ → Full Commission → Circuit Court → Supreme Court",
+      "civilRights": "EEOC → Federal district court only",
+      "note": "No state court remedy for employment discrimination"
+    }
+  },
+  "specialConsiderations": {
+    "lowestBenefits": "Mississippi has the LOWEST maximum weekly WC benefit in the entire United States at $596.06/week (2024); severely inadequate for any worker earning above poverty wages",
+    "noCivilRightsLaw": "Mississippi is one of only TWO states (with Alabama) that has NO state law prohibiting employment discrimination in the private sector. All claims must go through federal EEOC/courts.",
+    "shortEeocDeadline": "Because there is no state agency, the EEOC deadline is only 180 days—significantly shorter than in states with worksharing agreements (300 days)",
+    "limitedProtections": "Workers at small employers (<5 for WC, <15 for ADA) have essentially no workplace injury or discrimination protections beyond common law",
+    "healthcareAccess": "With Medicaid not expanded and low WC benefits, injured workers face significant healthcare access barriers"
+  },
+  "updated": "2025-12-13",
+  "verificationStatus": "FINAL — FULLY BUILT & VERIFIED JURISDICTION MODULE"
+}

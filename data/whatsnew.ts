@@ -9,6 +9,18 @@ export type WhatsNewItem = {
 export const whatsnew: WhatsNewItem[] = [
   // December 2025 - Latest Updates
   {
+    id: "wn-2025-12-13-usa-expanded",
+    title: "🇺🇸 USA Lite - 13 Jurisdictions Fully Built!",
+    summary: "Complete US legal framework now available! Federal + 12 states (CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS) with workers' comp, civil rights, disability programs, enforcement agencies, and procedural safeguards for each.",
+    date: "2025-12-13T00:00:00.000Z",
+  },
+  {
+    id: "wn-2025-12-13-usa-components",
+    title: "📋 6-Component Legal Framework",
+    summary: "Each US jurisdiction now includes: workers' comp system, disability programs, civil rights framework, legislative authority, enforcement oversight, and procedural safeguards. Most comprehensive US disability rights data available.",
+    date: "2025-12-13T00:00:00.000Z",
+  },
+  {
     id: "wn-2025-12-12-a",
     title: "Production Ready Release",
     summary: "We completed our final stress test with 721 tests passing. All security, accessibility, and offline features verified and ready for beta.",

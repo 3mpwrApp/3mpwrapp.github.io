@@ -1,17 +1,25 @@
 # Additional Legal Requirements - Compliance Audit
 
-**Date: November 24, 2025**  
-**Review Status: Updated for November 2025 Consolidation**
+**Date: December 13, 2025**  
+**Review Status: Updated for December 2025 USA Lite Expansion**
 
 ## ✅ Currently Implemented
 
-1. **Terms of Service v4.0** - Comprehensive disclaimers (updated Nov 23, 2025)
-2. **Privacy Policy v3.0** - 100% user data ownership (updated Nov 23, 2025)
+1. **Terms of Service v4.2** - Comprehensive disclaimers (updated Dec 13, 2025 for USA Lite)
+2. **Privacy Policy v3.2** - 100% user data ownership (updated Dec 13, 2025)
 3. **Community Guidelines v2.0** - Updated for Campaign Submissions, Profile features (Nov 23, 2025)
 4. **Data Ownership Statement v2.0** - Covers all November 2025 features (Nov 23, 2025)
 5. **9-Step Acceptance Flow** - Mandatory on first app open
 6. **DisclaimerBanner Component** - On all major screens including new Master Tracker Hub, Appeal Command Center
 7. **Version Tracking** - Users must re-accept when terms update
+
+## 🆕 **December 2025 USA Lite Expansion**
+
+USA Lite legal coverage added for 13 US jurisdictions:
+- Federal + 12 states (CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS)
+- Workers' compensation, civil rights frameworks, disability programs
+- Terms & disclaimers updated to explicitly cover US-specific legal information
+- Same disclaimer framework applies: educational information only, not legal advice
 
 ## 🆕 **November 2025 Feature Coverage**
 

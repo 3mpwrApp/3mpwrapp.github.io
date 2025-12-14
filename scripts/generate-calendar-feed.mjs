@@ -265,6 +265,69 @@ function formatICSDate(dateStr) {
   return `${year}${month}${day}T${hour}${minute}${second}Z`;
 }
 
+// Format date for ICS all-day events (YYYYMMDD format, no time)
+// For date-only strings, we extract YYYYMMDD directly to avoid timezone issues
+function formatICSDateOnly(dateStr) {
+  // For date-only strings like "2025-01-04", extract just YYYYMMDD directly
+  if (typeof dateStr === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+    return dateStr.replace(/-/g, '');
+  }
+  // For ISO strings with time, extract just the date part
+  if (typeof dateStr === 'string' && dateStr.includes('T')) {
+    return dateStr.split('T')[0].replace(/-/g, '');
+  }
+  // For Date objects, use local date to avoid timezone shift
+  const d = new Date(dateStr);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}${month}${day}`;
+}
+
+// Get next day for all-day event end date (ICS uses exclusive end date)
+function getNextDayDateOnly(dateStr) {
+  // For date-only strings, parse and add one day
+  if (typeof dateStr === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+    const [year, month, day] = dateStr.split('-').map(Number);
+    const d = new Date(year, month - 1, day + 1); // month is 0-indexed
+    const nextYear = d.getFullYear();
+    const nextMonth = String(d.getMonth() + 1).padStart(2, '0');
+    const nextDay = String(d.getDate()).padStart(2, '0');
+    return `${nextYear}${nextMonth}${nextDay}`;
+  }
+  // For ISO strings with time, extract date and add one day
+  if (typeof dateStr === 'string' && dateStr.includes('T')) {
+    const datePart = dateStr.split('T')[0];
+    const [year, month, day] = datePart.split('-').map(Number);
+    const d = new Date(year, month - 1, day + 1);
+    const nextYear = d.getFullYear();
+    const nextMonth = String(d.getMonth() + 1).padStart(2, '0');
+    const nextDay = String(d.getDate()).padStart(2, '0');
+    return `${nextYear}${nextMonth}${nextDay}`;
+  }
+  // Fallback
+  const d = new Date(dateStr);
+  d.setDate(d.getDate() + 1);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}${month}${day}`;
+}
+
+// Check if an event is an all-day event based on ID prefix or date format
+function isAllDayEvent(event) {
+  // All-day events: holidays, observances, health awareness, provincial
+  const allDayPrefixes = ['holiday-', 'obs-', 'health-', 'hol-', 'prov-'];
+  if (allDayPrefixes.some(prefix => event.id.startsWith(prefix))) {
+    return true;
+  }
+  // Also check if date is date-only (no time component)
+  if (typeof event.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(event.date)) {
+    return true;
+  }
+  return false;
+}
+
 // Escape ICS text (replace newlines, commas, semicolons)
 function escapeICS(text) {
   if (!text) return '';
@@ -277,18 +340,31 @@ function escapeICS(text) {
 
 // Generate single event ICS entry
 function generateEvent(event) {
-  const startDate = formatICSDate(event.date);
-  const endDate = startDate; // All-day events or 1-hour duration
   const uid = `${event.id}@3mpwrapp.pages.dev`;
   const dtstamp = formatICSDate(new Date().toISOString());
-  
   const location = event.isVirtual ? 'Virtual Event' : (event.location || '');
+  const allDay = isAllDayEvent(event);
+  
+  let dateLines;
+  if (allDay) {
+    // All-day event: use VALUE=DATE format (no time)
+    const dateOnly = formatICSDateOnly(event.date);
+    // For all-day events, DTEND is the next day (exclusive end date in ICS)
+    const endDateOnly = getNextDayDateOnly(event.date);
+    dateLines = `DTSTART;VALUE=DATE:${dateOnly}
+DTEND;VALUE=DATE:${endDateOnly}`;
+  } else {
+    // Timed event
+    const startDate = formatICSDate(event.date);
+    const endDate = startDate; // Default same end time (1-hour default handled by calendar apps)
+    dateLines = `DTSTART:${startDate}
+DTEND:${endDate}`;
+  }
   
   return `BEGIN:VEVENT
 UID:${uid}
 DTSTAMP:${dtstamp}
-DTSTART:${startDate}
-DTEND:${endDate}
+${dateLines}
 SUMMARY:${escapeICS(event.title)}
 DESCRIPTION:${escapeICS(event.description || '')}
 LOCATION:${escapeICS(location)}

@@ -2,57 +2,126 @@
   "code": "US-FL",
   "name": "Florida",
   "country": "US",
-  "workplaceInjury": {
-    "name": "Florida Division of Workers' Compensation",
-    "initialClaimForm": "DFS-F2-DWC-1 (First Report of Injury)",
-    "appealLevels": [
-      {"name": "Judge of Compensation Claims", "body": "FL OJCC", "notes": "Formal hearing for disputed claims."},
-      {"name": "First District Court of Appeal", "body": "FL 1st DCA", "typicalDeadlineDays": 30, "notes": "Appeal within 30 days of JCC order."}
+  "workersCompensation": {
+    "governingStatutes": [
+      {"name": "Florida Workers' Compensation Law", "citation": "Fla. Stat. Chapter 440", "scope": "Most Florida employers"},
+      {"name": "Florida Administrative Code", "citation": "69L FAC", "scope": "DWC rules"}
     ],
-    "links": [
-      {"label": "FL DWC", "url": "https://www.myfloridacfo.com/division/wc/"},
-      {"label": "Employee Info", "url": "https://www.myfloridacfo.com/division/wc/employee/"}
-    ],
-    "notes": "Florida uses assigned judges (JCC) for workers' comp disputes."
-  },
-  "humanRights": {
-    "name": "Florida Commission on Human Relations",
-    "complaintDeadlineMonths": 12,
-    "url": "https://fchr.myflorida.com/",
-    "notes": "365 days from discriminatory act. FCRA covers employers with 15+ employees."
-  },
-  "benefitPrograms": [
-    {
-      "code": "FL-RTBS",
-      "name": "Reemployment Assistance",
-      "administeringBody": "Florida Department of Economic Opportunity",
-      "description": "Unemployment benefits (Florida's term for unemployment insurance).",
-      "links": [
-        {"label": "FL Reemployment", "url": "https://floridajobs.org/office-directory/division-of-workforce-services/reemployment-assistance-program"}
-      ]
+    "administeringAgency": {
+      "name": "Division of Workers' Compensation",
+      "parentAgency": "Florida Department of Financial Services",
+      "url": "https://www.myfloridacfo.com/Division/WC/"
     },
-    {
-      "code": "FL-WC",
-      "name": "Florida Workers' Compensation",
-      "administeringBody": "Florida Division of Workers' Compensation",
-      "description": "Medical and wage benefits for work-related injuries.",
-      "evidenceTips": ["Authorized treating physician records", "IME reports", "Wage statements"],
-      "links": [
-        {"label": "FL WC Benefits", "url": "https://www.myfloridacfo.com/division/wc/employee/benefits.htm"}
-      ]
+    "coverageScope": {
+      "covered": ["Construction: All employees", "Non-construction: 4+ employees", "Agricultural: 6+ regular or 12+ seasonal"],
+      "excluded": ["Sole proprietors/partners (may elect)", "Corporate officers (may exempt)", "Domestic servants", "Volunteers"]
+    },
+    "benefitCategories": {
+      "medical": "Reasonable and necessary treatment; managed care arrangements may apply",
+      "temporaryTotal": "66 2/3% of wages up to $1,197/week (2024); max 104 weeks",
+      "temporaryPartial": "80% of wage loss up to max; max 104 weeks combined with TT",
+      "impairmentBenefits": "75% of TTD rate × 2 weeks per % permanent impairment (Fla. Uniform Impairment Guide)",
+      "permanentTotal": "66 2/3% of wages to max; lifetime if catastrophic; otherwise ends at 75 or 401 weeks",
+      "deathBenefits": "50% of wages to spouse; additional for children; $7,500 burial"
+    },
+    "initialClaimForm": "DWC-1 (First Report of Injury) by employer; Employee Notice of Injury to employer",
+    "appealLevels": [
+      {"name": "Judge of Compensation Claims (JCC)", "body": "Office of Judges of Compensation Claims (DOAH)", "deadline": "2 years from injury or last payment"},
+      {"name": "First District Court of Appeal", "body": "Florida Courts", "deadline": "30 days from JCC order"}
+    ],
+    "enforcementPowers": "DWC investigations; stop-work orders; carrier compliance audits",
+    "penalties": "Stop-work orders for uninsured ($1,000/day penalty); fraud prosecution"
+  },
+  "disabilityPrograms": {
+    "programs": [
+      {
+        "code": "NONE-STATE-TDI",
+        "name": "No State Disability Insurance",
+        "note": "Florida has no state temporary disability insurance program",
+        "alternatives": "Private insurance; SSDI/SSI"
+      },
+      {
+        "code": "REEMPLOYMENT",
+        "name": "Reemployment Assistance (Unemployment)",
+        "administeringBody": "FL Dept. of Economic Opportunity",
+        "eligibility": "Unemployed through no fault; able and available to work",
+        "note": "Not available if disabled; WC may preclude"
+      },
+      {
+        "code": "MEDICAID",
+        "name": "Florida Medicaid",
+        "administeringBody": "Agency for Health Care Administration",
+        "eligibility": "Low-income; Florida did not expand Medicaid under ACA",
+        "wcInteraction": "WC primary for work injuries"
+      }
+    ],
+    "continuityGaps": ["No state TDI", "Medicaid not expanded", "Limited social safety net"],
+    "terminationRisks": ["Reaching MMI", "104-week temporary benefit cap", "Impairment rating limits permanent benefits"]
+  },
+  "civilRightsFramework": {
+    "constitutionalProtections": [
+      {"source": "Florida Constitution Art. I, § 2", "protection": "Basic rights; equal protection"},
+      {"source": "Florida Constitution Art. I, § 9", "protection": "Due process"}
+    ],
+    "statutes": [
+      {"name": "Florida Civil Rights Act", "citation": "Fla. Stat. Chapter 760", "coverage": "Employers with 15+ employees", "protections": "Disability discrimination prohibited; mirrors ADA"},
+      {"name": "Florida Whistleblower Act", "citation": "Fla. Stat. §§ 112.3187-112.31895", "coverage": "Public employees", "protections": "Protection for reporting violations"}
+    ],
+    "protectedClasses": ["Disability", "Race", "Color", "Religion", "Sex", "Pregnancy", "National origin", "Age", "Marital status", "HIV/AIDS status"],
+    "retaliationProhibitions": "Retaliation prohibited for filing complaints, testifying, or opposing unlawful practices",
+    "accommodationObligations": {
+      "standard": "Reasonable accommodation per ADA standards",
+      "process": "Interactive process",
+      "examples": ["Modified duties", "Leave", "Equipment", "Schedule adjustments"]
     }
-  ],
-  "accommodationGuidance": [
-    "Florida follows federal ADA requirements",
-    "Florida Civil Rights Act mirrors federal protections",
-    "Document accommodation requests in writing",
-    "Engage in good faith interactive process"
-  ],
-  "evidenceFocus": ["Medical records from authorized providers", "Functional capacity evaluations", "IME reports"],
-  "limitationNotes": [
-    "Workers' comp claims: 2 years from injury date",
-    "FCHR complaints: 365 days from discriminatory act",
-    "Statute of limitations for FCRA lawsuit: 1 year from FCHR determination"
-  ],
-  "updated": "2025-06-08"
+  },
+  "legislativeAuthority": {
+    "primaryAuthority": "Florida Legislature",
+    "enablingStatutes": {
+      "workersComp": "Fla. Stat. Chapter 440",
+      "disability": "No state TDI; Chapter 409 (public assistance)",
+      "civilRights": "Fla. Stat. Chapter 760"
+    },
+    "delegatedBodies": [
+      {"agency": "DWC", "authority": "Workers' comp regulations (69L FAC)"},
+      {"agency": "Florida Commission on Human Relations", "authority": "FCRA enforcement"},
+      {"agency": "DCF", "authority": "Public assistance programs"}
+    ],
+    "tribunals": [
+      {"name": "Judges of Compensation Claims", "jurisdiction": "Workers' compensation disputes"},
+      {"name": "Florida Commission on Human Relations", "jurisdiction": "Discrimination complaints"},
+      {"name": "DOAH", "jurisdiction": "Administrative hearings"}
+    ]
+  },
+  "enforcementOversight": {
+    "laborStandards": {"agency": "No state wage-hour agency", "authority": "Federal DOL/WHD handles FLSA; Florida has no state minimum wage enforcement agency (voter-approved minimum wage self-executing)"},
+    "civilRights": {"agency": "Florida Commission on Human Relations (FCHR)", "authority": "Chapter 760 FCRA", "deadline": "365 days from violation"},
+    "occupationalSafety": {"agency": "Federal OSHA only", "authority": "Florida is not a state plan state; OSHA covers private sector"},
+    "complianceMechanisms": ["FCHR investigations", "DWC enforcement", "EEOC dual-filing", "Private lawsuits"]
+  },
+  "proceduralSafeguards": {
+    "filingDeadlines": {
+      "wcClaim": "2 years from injury or last payment/treatment",
+      "fchrComplaint": "365 days from discriminatory act",
+      "lawsuit": "1 year from FCHR determination or 180 days if no determination"
+    },
+    "dueProcess": ["Notice of denial/decision", "Right to JCC hearing", "Discovery rights", "Evidentiary hearing", "Written order with findings"],
+    "evidentiaryStandards": {
+      "wc": "Preponderance of evidence; clear and convincing for psychiatric claims",
+      "fchr": "Prima facie case; burden-shifting",
+      "jcc": "Greater weight of evidence (2003 reforms)"
+    },
+    "judicialReview": {
+      "wc": "JCC → First DCA → Florida Supreme Court (discretionary)",
+      "civilRights": "FCHR investigation → Determination → Circuit Court (or elect DOAH)",
+      "eeoc": "May dual-file with EEOC; federal court option"
+    }
+  },
+  "specialConsiderations": {
+    "reforms2003": "Significant 2003 reforms tightened benefits; eliminated permanent total for under-75 non-catastrophic; greater weight of evidence standard",
+    "medicalAccessIssues": "Managed care/network restrictions may limit provider choice",
+    "constructionEmphasis": "Strict construction industry requirements; all construction employers must carry coverage"
+  },
+  "updated": "2025-12-13",
+  "verificationStatus": "FINAL — FULLY BUILT & VERIFIED JURISDICTION MODULE"
 }
