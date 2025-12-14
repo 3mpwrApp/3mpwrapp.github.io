@@ -1,6 +1,6 @@
 # Analytics Event Report
 
-Generated: 2025-12-14T05:47:15.760Z
+Generated: 2025-12-14T06:37:25.288Z
 
 ## Summary
 
@@ -232,10 +232,10 @@ Generated: 2025-12-14T05:47:15.760Z
 | adaptive.capacity.open | 1 | OK |
 | recovery.tool.open | 1 | OK |
 | wellness_opposite_next_step | 1 | OK |
-| campaign_create | 1 | OK |
 | campaign_share | 1 | OK |
 | campaign_leave | 1 | OK |
 | campaign_join | 1 | OK |
+| campaign_create | 1 | OK |
 | podcast_share | 1 | OK |
 | beta_feedback_banner_dismissed | 1 | OK |
 | beta_feedback_initiated | 1 | OK |
