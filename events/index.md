@@ -220,8 +220,8 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     const isHappeningSoon = eventDate >= now && eventDate <= sevenDaysFromNow;
     const isPast = eventDate < now;
     
-    // Pre-calculate formatted date
-    const formattedDate = formatDate(event.date);
+    // Pre-calculate formatted date (pass event to check if all-day)
+    const formattedDate = formatDate(event.date, event);
     
     // Clean description - remove "Powered by" text if it exists (for display only)
     let displayDescription = event.description;
@@ -548,9 +548,30 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
     }, 1000);
   }
   
-  // Format date nicely
-  function formatDate(dateString) {
+  // Format date nicely - uses EST timezone
+  // For all-day events (holidays, awareness days), only show date without time
+  function formatDate(dateString, event) {
     const date = new Date(dateString);
+    
+    // Check if this is an all-day event (holidays, awareness days stored as midnight UTC)
+    // All-day events have time set to 00:00:00.000Z
+    const isAllDay = dateString && dateString.endsWith('T00:00:00.000Z');
+    
+    // Also check category - holidays and awareness days are typically all-day
+    const isHolidayOrAwareness = event && (event.category === 'holiday' || event.category === 'awareness' || event.category === 'health');
+    
+    if (isAllDay || isHolidayOrAwareness) {
+      // For all-day events, show date only (no time) in EST
+      return date.toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        timeZone: 'America/New_York'
+      });
+    }
+    
+    // For timed events, show full date and time in EST
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
@@ -558,6 +579,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       day: 'numeric',
       hour: 'numeric',
       minute: '2-digit',
+      timeZone: 'America/New_York',
       timeZoneName: 'short'
     });
   }
