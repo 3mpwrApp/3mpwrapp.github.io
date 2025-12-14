@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-14T06:02:53.830Z",
+  "lastUpdated": "2025-12-14T12:03:00.651Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 5310,
+      "totalPosts": 5335,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-14T06:02:46.090Z"
+      "lastSeen": "2025-12-14T12:02:51.920Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 5325,
+      "totalPosts": 5350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-14T06:02:47.856Z"
+      "lastSeen": "2025-12-14T12:02:53.763Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 5284,
+      "totalPosts": 5309,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-14T06:02:49.389Z"
+      "lastSeen": "2025-12-14T12:02:55.735Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 5318,
+      "totalPosts": 5343,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-14T06:02:50.952Z"
+      "lastSeen": "2025-12-14T12:02:57.777Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 5325,
+      "totalPosts": 5350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-14T06:02:52.828Z"
+      "lastSeen": "2025-12-14T12:02:59.647Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I'm really bad at social media, but if you are reading this, please take a moment and consider joining for our 5th annual blind accessibility game jam starting in Feb! 5 years, over 100 accessible games made, help us do even better!\n\nitch.io/jam/games-fo...\n\n#GameDev #A11y",
-      "author": "ericbomb.bsky.social",
-      "engagement": 18,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "I'm really bad at social media, but if you are reading this, please take a moment and consider joining for our 5th annual blind accessibility game jam starting in Feb! 5 years, over 100 accessible games made, help us do even better!\n\nitch.io/jam/games-fo...\n\n#GameDev #A11y",
-      "author": "ericbomb.bsky.social",
-      "engagement": 27,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
       "author": "ellatholmes.bsky.social",
@@ -338,6 +314,30 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Some people probably thought we were being dramatic when we said Nazi's came for people with disabilities first. \n\nI'm gonna call it what is, this is Genocide against people with disabilities. I wish everyone would write their congressman  a letter demanding #DisabilityRights",
+      "author": "knighthawk899.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 39,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -382,15 +382,15 @@
       "count": 7
     },
     {
+      "keyword": "disabled",
+      "count": 5
+    },
+    {
       "keyword": "gamedev",
       "count": 5
     },
     {
       "keyword": "disabled people",
-      "count": 4
-    },
-    {
-      "keyword": "disabled",
       "count": 4
     },
     {
