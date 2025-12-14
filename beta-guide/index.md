@@ -3,8 +3,8 @@ layout: default
 title: 3mpwr App – Beta Tester Guide
 permalink: /beta-guide/
 description: Comprehensive guide for 3mpwr App beta testers - December 2025 production-ready release with 721 tests passing, complete security verification, and USA Lite for American supporters!
-version: 4.0 (December 2025 Production Release + USA Lite)
-lastUpdated: 2025-12-12
+version: 4.1 (December 2025 Production Release + USA Lite)
+lastUpdated: 2025-12-14
 ---
 
 
@@ -521,8 +521,8 @@ Your participation helps us create an app that truly empowers Canadians living w
 
 ---
 
-*Last Updated: **November 23, 2025***  
-*Guide Version: **3.0** (November 2025 Consolidation Update)*  
+*Last Updated: **December 14, 2025***  
+*Guide Version: **4.1** (December 2025 Production Release + USA Lite)*  
 *For questions about this guide: empowrapp08162025@gmail.com*
 
 {%- include page-feedback.html -%}

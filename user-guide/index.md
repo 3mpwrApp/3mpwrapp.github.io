@@ -2,8 +2,8 @@
 layout: default
 title: 3mpwrApp — Complete User Guide
 description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community. Now 100% production ready with 721 tests passing, full security verification, WCAG AAA compliance, and USA Lite for American supporters!
-version: 4.1 (December 2025 - Production Release + USA Lite)
-lastUpdated: 2025-12-12
+version: 4.2 (December 2025 - Production Release + USA Lite)
+lastUpdated: 2025-12-14
 accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
 currentPhase: Production Release (100% Complete)
 allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline support, complete security verification, USA Lite available
@@ -15,7 +15,7 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 # 3mpwrApp — Complete User Guide
 
-📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 4.1** — December 12, 2025 (Production Release + USA Lite)
+📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 4.2** — December 14, 2025 (Production Release + USA Lite)
 
 > **What's new?** December 2025 marks our production release with 721 tests passing, first demo presentation successful, and USA Lite launched for American supporters! [See what's new →](#whats-new-december-2025)
 

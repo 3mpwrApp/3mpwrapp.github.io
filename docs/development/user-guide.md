@@ -2,11 +2,11 @@
 layout: default
 title: 3mpwrApp — Complete User Guide
 description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community.
-version: 1.0
-lastUpdated: 2025-10-25
+version: 4.2
+lastUpdated: 2025-12-14
 accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
-currentPhase: Phase 6 - ML-Driven Personalization (COMPLETE)
-allFeaturesLive: 50+ features, 100% accessibility, enterprise security
+currentPhase: Production Release (100% Complete)
+allFeaturesLive: 60+ features, 100% accessibility, enterprise security, USA Lite available
 ---
 
 <div class="status-banner" role="status" aria-live="polite">
@@ -15,7 +15,7 @@ allFeaturesLive: 50+ features, 100% accessibility, enterprise security
 
 # 3mpwrApp — Complete User Guide
 
-**Version: 1.0 | Last Updated: October 25, 2025**
+**Version: 4.2 | Last Updated: December 14, 2025**
 
 📖 **20 minute read** | ⚡ Key sections linked below
 
@@ -40,7 +40,7 @@ allFeaturesLive: 50+ features, 100% accessibility, enterprise security
   💙 <strong>Rest Reminder:</strong> This is a long guide. You don't need to read it all at once. Bookmark the sections you need and come back when you have energy. Your wellbeing comes first.
 </div>
 
-**Version: 1.0 | Last Updated: October 25, 2025**
+**Version: 4.2 | Last Updated: December 14, 2025**
 
 > **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, and their supporters. **Now featuring AI-powered personalization, energy forecasting, and smart notifications.**
 
@@ -3620,7 +3620,7 @@ We're constantly improving based on your feedback. See what we're working on and
 
 ---
 
-*This guide is updated regularly to reflect new features and improvements. Last updated: October 13, 2025*
+*This guide is updated regularly to reflect new features and improvements. Last updated: December 14, 2025*
 
 *For the most current information, check the What's New section in the app or visit our website.*
 

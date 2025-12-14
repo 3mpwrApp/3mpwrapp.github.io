@@ -2,8 +2,8 @@
 layout: default
 title: 3mpwrApp — Complete User Guide for Everyone
 description: Comprehensive guide to using 3mpwrApp's tools and community features. Written for the disability community, Indigenous peoples, injured workers, and their supporters.
-version: 2.1 (Phase 2)
-date: 2025-10-13
+version: 4.2 (Production Release + USA Lite)
+date: 2025-12-14
 author: 3mpwrApp Team
 accessibility: WCAG 2.1 AAA compliant, screen reader optimized
 format: PDF/Print Version
@@ -15,9 +15,9 @@ pages: Approximately 75 pages
 
 # 3mpwrApp — Complete User Guide for Everyone
 
-**Version 2.1 (Phase 2) • October 13, 2025**
+**Version 4.2 (Production Release + USA Lite) • December 14, 2025**
 
-> **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, Indigenous peoples, and their supporters.
+> **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, Indigenous peoples, and their supporters. **Now 100% production ready with 721 tests passing, complete security verification, and USA Lite for American supporters!**
 
 **This is the complete, comprehensive user guide with all features, legal coverage, and detailed instructions.**
 
@@ -26,8 +26,8 @@ pages: Approximately 75 pages
 ## Document Information
 
 **Document Type:** Complete User Guide (PDF/Print Version)  
-**Version:** 2.1 (Phase 2)  
-**Last Updated:** October 13, 2025  
+**Version:** 4.2 (Production Release + USA Lite)  
+**Last Updated:** December 14, 2025  
 **Accessibility:** WCAG 2.1 AAA Compliant  
 **Languages:** English (French version available separately)  
 **Estimated Reading Time:** 2-3 hours (or browse sections as needed)
@@ -801,8 +801,8 @@ Read through sections in order. Each builds on previous information.
 - Accessibility enhancements
 - User testing results
 
-**Current Version:** 2.1 (Phase 2)  
-**Last Updated:** October 13, 2025  
+**Current Version:** 4.2 (Production Release + USA Lite)  
+**Last Updated:** December 14, 2025  
 **Next Update:** Continuous (check app for latest)
 
 **Thank you for being part of the 3mpwrApp community. Together, we're building the tools we all deserve.**

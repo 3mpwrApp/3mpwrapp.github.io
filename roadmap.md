@@ -3,7 +3,7 @@ layout: default
 title: Roadmap
 description: Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!
 permalink: /roadmap/
-lastUpdated: 2025-12-12
+lastUpdated: 2025-12-14
 ---
 
 
