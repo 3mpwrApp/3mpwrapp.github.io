@@ -9,63 +9,57 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2025-12-15
 
-Curated 12 items from disability, accessibility, and social policy sources.
+Curated 11 items from disability, accessibility, and social policy sources.
 
-## 1. 'It was fully ignored': This woman's medical emergency in Ontario jail reflects broader health-care crisis
-<img src='https://i.cbc.ca/ais/15ac2188-0637-4376-92ae-ce9ee75b90e2,1765493080769/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C223%2C4240%2C2385%29%3BResize%3D%28620%29' alt='A woman with red-dyed hair, glasses and a bear tattoo on her chest holds paperwork behind a desk as she poses for a portrait.' width='620' height='349' title='Ashley Stevens says she miscarried and got a severe infection while incarcerated in an Ontario jail earlier in 2025.'/><p>More than a third of complaints filed by prisoners in Ontario jails this year were health-related, as medical staffing dropped by nearly 50 per cent and inmate populations kept rising, a CBC data analysis shows. One former inmate suffered a septic wound and a miscarriage while incarcerated.</p>
-📍 [Source](https://www.cbc.ca/news/canada/ontario-jail-health-care-crisis-9.7012663?cmp=rss)
-**Score:** 31.90
+## 1. There's a happiness gap between young people in Quebec and in the rest of Canada
+Joshua Bujold, an upbeat psychology student in his first semester at Montreal's Dawson College, was taken aback to find out that happiness among young Canadians has plunged.
+📍 [Source](https://globalnews.ca/news/11578028/quebec-happiness-gap-canada-report/)
+**Score:** 23.00
 
-## 2. Want to recall a Canadian politician? It's not easy — if it's even allowed where you live
-<img src='https://i.cbc.ca/ais/f2c78acd-9a82-4d09-a4f1-ac20292d9fba,1765596616138/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1300%2C731%29%3BResize%3D%28620%29' alt='A woman stands at a podium.' width='620' height='349' title='Danielle Smith recall'/><p>Only two provinces allow for the recall of politicians. But with the bar set high for the process, most politicians targeted are likely not in any jeopardy. Here's a closer look at recall legislation in Canada, its history, arguments for and against, and the chances of a recall succeeding.</p>
-📍 [Source](https://www.cbc.ca/news/politics/recall-election-alberta-bc-9.7013963?cmp=rss)
-**Score:** 16.60
-
-## 3. U.S. downs Canada 4-1 to sweep women's hockey Rivalry Series
-<img src='https://i.cbc.ca/ais/c1d541e3-3283-4936-9a15-0678ac31f8f1,1765731644072/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C325%2C4418%2C2485%29%3BResize%3D%28620%29' alt='Three women's hockey players representing the United States wrap their arms around each other in celebration as a Canadian player skates away.' width='620' height='349' title='U.S. players celebrate a goal during the third period of a Rivalry Series game against Canada in Edmonton on Saturday.'/><p>Hilary Knight scored twice, including an empty-netter, to lead the United States to a 4-1 win over Canada in a women's hockey Rivalry Series game Saturday.</p>
-📍 [Source](https://www.cbc.ca/sports/hockey/rivalry-series-us-canada-9.7015164?cmp=rss)
+## 2. Transport Canada probing plane crash near Ontario city
+Transport Canada is investigating a small plane crash that occurred on Friday near Orillia's Chris Hadfield Airport, with police saying the pilot survived.
+📍 [Source](https://globalnews.ca/news/11578155/sarnia-plane-crash-pilot-safe-transport-canada-probe/)
 **Score:** 14.00
 
-## 4. Transforming Health Care in the DTES Through Culture and Connection
-At Kílala Lelum, we walk alongside our relatives to provide culturally grounded health care, harm reduction and social support.
-📍 [Source](https://thetyee.ca/Presents/2025/12/15/Transforming-Health-Care-DTES/)
-**Score:** 13.00
+## 3. Food prices spiked in November, says StatCan in latest inflation report
+Grocery prices in Canada increased an average of 4.7 per cent in November compared to a year earlier, according to the latest Consumer Price Index.
+📍 [Source](https://globalnews.ca/news/11578082/consumer-price-index-december-2025/)
+**Score:** 14.00
 
-## 5. Montreal police to 'increase vigilance' after mass shooting at Hanukkah event in Australia
-<img src='https://i.cbc.ca/ais/1.4267671,1504045041000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C634%2C356%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Two Montreal police officers are responsible for the arrest of one of America's most sought-after criminals.'/><p>Montreal police said they will increase their vigilance and visibility in areas where Jewish neighbourhood celebrations are taking place until the end of Hanukkah after a mass shooting in Australia.</p>
-📍 [Source](https://www.cbc.ca/news/canada/montreal/montreal-police-safety-jewish-community-australia-shooting-9.7015549?cmp=rss)
-**Score:** 7.50
+## 4. ‘A normal thing now': Canadian family says extortion gang is preying on them
+After their house in Caledon, Ont., was shot at last week, the Mands are speaking out about Canada's extortion problem, saying police and politicians are not doing enough.
+📍 [Source](https://globalnews.ca/news/11577459/canadian-family-extortion-gang/)
+**Score:** 14.00
 
-## 6. BC’s Hospital Crowding Problem Isn’t Improving, Data Shows
-In the seven most overcapacity facilities, one in six patients was cared for in an unfunded ‘surge bed’ last year. First in a series.
-📍 [Source](https://thetyee.ca/News/2025/12/15/BC-Hospital-Crowding-Problem/)
-**Score:** 9.10
-
-## 7. Linguistic experts urge Carney government to stop using British spellings
-<img src='https://i.cbc.ca/ais/1b890e5a-31bc-441c-9cfa-c6fd52d4e9b2,1765762813144/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C261%2C5680%2C3195%29%3BResize%3D%28620%29' alt='Mark Carney holds up a book' width='620' height='349' title='Prime Minister Mark Carney holds up a copy of the budget as he and Minister of Finance and National Revenue Francois-Philippe Champagne, not shown, make their way to the House of Commons for the tabling of the federal budget on Parliament Hill in Ottawa, on Tuesday, Nov. 4, 2025. THE CANADIAN PRESS/Justin Tang'/><p>Promoters of Canadian English say the federal government is sending the wrong message to the world with its recent use of British spelling in official documents, including the 2025 federal budget.</p>
-📍 [Source](https://www.cbc.ca/news/canada/carney-criticized-for-british-spelling-9.7015702?cmp=rss)
+## 5. Manitoba Government Supports Roof Rebuild at Foxwarren District Recreation Centre
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71897)
 **Score:** 10.50
 
-## 8. Manitoba Government Invests $100,000 in Bairdmore School Playground
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71744)
-**Score:** 7.50
+## 6. Construction to Begin on New Eriksdale Emergency Department in New Year
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71898)
+**Score:** 7.80
 
-## 9. ‘We do not give in to terror': Canadians voice support for Sydney Hanukkah shooting victims
-At least 15 people were killed and about 40 were injured in the Bondi Beach shooting, but some Canadian Jewish communities say they are moving ahead with their own celebrations.
-📍 [Source](https://globalnews.ca/news/11577341/sydney-jewish-celebration-shooting-canada-reaction/)
-**Score:** 7.50
+## 7. Nova Scotia teams up with federal government to build hundreds of new homes
+The Nova Scotia government says work will soon begin on hundreds of new affordable homes, with the majority slated for Shannon Park in Dartmouth.
+📍 [Source](https://globalnews.ca/news/11578031/nova-scotia-dartmouth-new-homes/)
+**Score:** 7.30
 
-## 10. Founder of Moose Jaw health centre suggests ‘ALS drug industry’ was behind CBC investigation of his business
-<img src='https://i.cbc.ca/ais/3752d5ec-cf8a-4098-b38d-160fdb558a08,1765567437617/full/max/0/default.jpg?im=Crop%2Crect%3D%2813%2C10%2C743%2C417%29%3BResize%3D%28620%29' alt='Man wearing a blazer and dress shirt sits in front of a curtain. ' width='620' height='349' title='Dayan Goodenowe, the founder of the Dr. Goodenowe Restorative Health Center in Moose Jaw, Sask., responds to a CBC investigation about his facility in a 30 minute online video. '/><p>The man behind the Moose Jaw health centre that has claimed “a 100 per cent success rate in stopping the progression and in restoring function of people with ALS” says a recent CBC story about his company is evidence that he is seen as “a direct threat to the ALS drug industry.”</p>
-📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/goodenowe-moose-jaw-health-centre-als-9.7013950?cmp=rss)
-**Score:** 5.50
-
-## 11. Moose Hunting Season Opens in Manitoba on December 1
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71745)
+## 8. Measles Update #52
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71877)
 **Score:** 4.50
 
-## 12. Toronto man outruns newly-opened light rail train by 18 minutes
-<img src='https://i.cbc.ca/ais/a2cb681e-0ab2-4b3b-ab0e-c178b79b68f4,1765752823464/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C534%2C1179%2C663%29%3BResize%3D%28620%29' alt='Man standing in intersection wearing running gear with Strava run details beside' width='620' height='349' title='Bauer started racing TTC vehicles approximately one year ago, once he and his wife realized how long it took them to get to Roncesvalles from the east end of the city. That’s when he started making videos under the username 514runner on Instagram.'/><p>A Toronto man challenged the newly-opened Finch Light-Rail Transit to a race — and he won.</p>
-📍 [Source](https://www.cbc.ca/news/canada/toronto/toronto-man-outruns-finch-lrt-9.7015667?cmp=rss)
+## 9. SIU investigates after man killed in gunfire exchange with police in Welland
+Ontario's police watchdog is investigating after a 26-year-old man was shot and killed by police in Welland.
+📍 [Source](https://globalnews.ca/news/11578038/welland-ontario-police-shooting-man-killed/)
 **Score:** 4.50
+
+## 10. You Nearly Missed: Molly Grace makes her Vancouver debut at the Fox Cabaret
+The Nashville artist is touring in support of her new album, Blush.
+📍 [Source](https://www.straight.com/music/you-nearly-missed-molly-grace-makes-her-vancouver-debut-at-fox-cabaret)
+**Score:** 3.00
+
+## 11. B.C. watchdog to investigate after woman struck by Surrey police vehicle
+British Columbia's police watchdog has been called in to investigate after a woman was hit late Sunday by an officer's vehicle.
+📍 [Source](https://globalnews.ca/news/11578045/bc-woman-struck-surrey-police-vehicle/)
+**Score:** 1.30
 
