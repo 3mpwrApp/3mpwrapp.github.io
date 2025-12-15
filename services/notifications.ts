@@ -389,6 +389,13 @@ export async function registerUserPushToken(userId: string) {
     const { getDB } = await import('./firestore');
     
     const db = await getDB();
+    
+    // Check if Firestore is available (will be null in BYOC mode)
+    if (!db) {
+      if (__DEV__) console.warn('[Notifications] Skipping token registration - Firestore not available (BYOC mode)');
+      return token; // Still return token, but don't store to Firestore
+    }
+    
     await setDoc(doc(db, 'userTokens', userId), {
       token,
       platform: Platform.OS,

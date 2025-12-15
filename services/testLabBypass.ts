@@ -11,7 +11,13 @@ import { Platform } from 'react-native';
 let AsyncStorage: any;
 try {
   AsyncStorage = require("@react-native-async-storage/async-storage").default;
-} catch {}
+} catch {
+  AsyncStorage = {
+    getItem: async () => null,
+    setItem: async () => {},
+    removeItem: async () => {},
+  };
+}
 
 /**
  * Firebase Test Lab Detection

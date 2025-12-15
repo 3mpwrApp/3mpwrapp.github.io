@@ -29,26 +29,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [sessionExpired, setSessionExpired] = useState(false);
 
   useEffect(() => {
-    // Handle strict BYOC mode where auth is null
     if (!auth) {
-      if (__DEV__) logger.log('[AuthContext] Strict BYOC mode - auth is null');
       setLoading(false);
       setUser(null);
       setIsGuest(true);
       return;
     }
 
-    // Track if this is the initial mount
-    let isInitialMount = true;
-
     const unsubscribe = onAuthStateChanged(
       auth,
       async (firebaseUser) => {
         try {
-          if (__DEV__ && isInitialMount) {
-            logger.log('[AuthContext] Initial auth state');
-            isInitialMount = false;
-          }
           
           setUser(firebaseUser);
           setIsGuest(!!firebaseUser?.isAnonymous);
@@ -61,17 +52,28 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             // Register push notification token for non-anonymous users
             if (!firebaseUser.isAnonymous) {
               try {
-                const { registerUserPushToken } = await import('../services/notifications');
-                await registerUserPushToken(firebaseUser.uid);
+                // Check if Firestore is available before attempting to register token
+                const { db } = await import('../firebase/config');
+                if (db) {
+                  const { registerUserPushToken } = await import('../services/notifications');
+                  await registerUserPushToken(firebaseUser.uid);
+                } else if (__DEV__) {
+                  logger.log('[AuthContext] Skipping push token registration - Firestore not available (BYOC mode)');
+                }
               } catch (notifErr) {
                 logger.warn('[AuthContext] Failed to register push token', { error: notifErr });
               }
               
-              // Initialize cloud sync for authenticated users
+              // Initialize cloud sync for authenticated users (only if Firestore available)
               try {
-                const { initializeCloudSync } = await import('../services/cloudSync');
-                await initializeCloudSync();
-                if (__DEV__) logger.log('[AuthContext] Cloud sync initialized');
+                const { db } = await import('../firebase/config');
+                if (db) {
+                  const { initializeCloudSync } = await import('../services/cloudSync');
+                  await initializeCloudSync();
+                  if (__DEV__) logger.log('[AuthContext] Cloud sync initialized');
+                } else if (__DEV__) {
+                  logger.log('[AuthContext] Skipping cloud sync - Firestore not available (BYOC mode)');
+                }
               } catch (syncErr) {
                 logger.warn('[AuthContext] Failed to initialize cloud sync', { error: syncErr });
               }

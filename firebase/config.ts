@@ -68,29 +68,27 @@ let app: FirebaseApp | null = null;
 try {
   if (!STRICT) {
     app = getFirebaseApp();
-    console.warn('[Firebase] App initialized successfully', { mode: STRICT ? 'strict' : HYBRID ? 'hybrid' : 'default', platform: platformOS });
     
     if (!IS_TEST && platformOS !== "web") {
       try {
-        // Dynamically import RN-only APIs to avoid type mismatch on web
         const { initializeAuth, getReactNativePersistence } = require("firebase/auth");
         initializeAuth(app, { persistence: getReactNativePersistence(ReactNativeAsyncStorage) });
-        console.warn('[Firebase] Auth persistence initialized for native');
-      } catch (authError) {
-        // ignore if already initialized or not available
-        console.warn('[Firebase] Auth persistence setup failed (may already be initialized):', authError);
+      } catch {
+        // ignore if already initialized
       }
     }
   }
 } catch (error) {
-  console.error('[Firebase] Critical initialization error:', error);
-  // Re-throw in non-production to surface the issue
-  if (!__DEV__) throw error;
+  console.error('[Firebase] Init error:', error);
+  if (__DEV__) {
+    app = null;
+  } else {
+    throw error;
+  }
 }
 
-// Export configured instances or nulls in strict mode
-// In hybrid mode: auth is enabled, but db/storage are null (user's cloud only)
 export const auth = STRICT ? (null as any) : app ? getAuth(app) : null;
+
 export const db = STRICT || HYBRID
   ? (null as any)
   : app && platformOS === "web"

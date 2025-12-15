@@ -20,7 +20,15 @@ import GapView from "./GapView";
 let AsyncStorage: any;
 try {
   AsyncStorage = require("@react-native-async-storage/async-storage").default;
-} catch {}
+} catch (err) {
+  console.error('[TermsGate] AsyncStorage not available:', err);
+  // Provide mock AsyncStorage for environments where it's not available
+  AsyncStorage = {
+    getItem: async () => null,
+    setItem: async () => {},
+    removeItem: async () => {},
+  };
+}
 
 const STORAGE_KEY = "empowr.legal.acceptance.v3";
 const PROGRESS_STORAGE_KEY = "empowr.legal.progress.v1";
@@ -144,7 +152,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       lastSaved: Date.now(),
     };
     try {
-      await AsyncStorage?.setItem?.(PROGRESS_STORAGE_KEY, JSON.stringify(progress));
+      await AsyncStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progress));
     } catch {
       // Silent failure
     }
@@ -155,7 +163,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
   // Load saved progress
   const loadProgress = async (): Promise<ProgressState | null> => {
     try {
-      const raw = await AsyncStorage?.getItem?.(PROGRESS_STORAGE_KEY);
+      const raw = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
       if (raw) {
         const progress: ProgressState = JSON.parse(raw);
         // Check if progress is less than 24 hours old
@@ -192,7 +200,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
   // Clear saved progress
   const clearProgress = async () => {
     try {
-      await AsyncStorage?.removeItem?.(PROGRESS_STORAGE_KEY);
+      await AsyncStorage.removeItem(PROGRESS_STORAGE_KEY);
     } catch {}
   };
 
@@ -207,7 +215,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
           return;
         }
 
-        const raw = await AsyncStorage?.getItem?.(STORAGE_KEY);
+        const raw = await AsyncStorage.getItem(STORAGE_KEY);
         if (raw) {
           const state: AcceptanceState = JSON.parse(raw);
           // Check if versions match and all disclaimers accepted
@@ -233,7 +241,8 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
         if (progress) {
           setHasResumableProgress(true);
         }
-      } catch {
+      } catch (err) {
+        console.error('[TermsGate] Init error:', err);
         // If error, require re-acceptance
       } finally {
         setLoading(false);
@@ -263,7 +272,7 @@ export default function TermsGate({ children }: { children: React.ReactNode }) {
       dataOwnership: true,
     };
     try {
-      await AsyncStorage?.setItem?.(STORAGE_KEY, JSON.stringify(state));
+      await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       await clearProgress(); // Clear progress on successful completion
       setAccepted(true);
     } catch {
