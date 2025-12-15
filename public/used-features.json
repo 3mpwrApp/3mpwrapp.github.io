@@ -1,7 +1,8 @@
 {
   "features": [
     "3mpwrApp Production Release: 721 Tests Passing",
-    "Energy Forecast & Smart Scheduling"
+    "Energy Forecast & Smart Scheduling",
+    "Disability Wizard"
   ],
   "lastReset": "2025-12-13T10:05:19.567Z"
 }
