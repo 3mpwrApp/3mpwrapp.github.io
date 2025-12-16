@@ -51,10 +51,15 @@ export function getDataPolicyMode(): DataPolicyMode {
 
 // Runtime, session-only BYOC config (not persisted)
 export type BYOCConfig = {
-  kind: 'webdav';
-  endpoint: string; // e.g., https://dav.example.com/remote.php/dav/files/username/
+  kind: 'webdav' | 'gdrive';
+  endpoint?: string; // e.g., https://dav.example.com/remote.php/dav/files/username/ (for WebDAV)
   username?: string;
   password?: string;
+  // Google Drive specific
+  accessToken?: string;
+  refreshToken?: string;
+  expiresAt?: number;
+  folderId?: string;
 };
 
 let byocConfig: BYOCConfig | null = null;
@@ -73,6 +78,10 @@ export function getBYOCConfig(): BYOCConfig | null {
  */
 export async function testBYOCConnection(cfg: BYOCConfig): Promise<{ ok: boolean; status?: number; error?: string }> {
   try {
+    if (!cfg.endpoint) {
+      return { ok: false, error: 'No endpoint configured' };
+    }
+    
     const headers: Record<string, string> = {};
     if (cfg.username && cfg.password) {
       const token = typeof btoa !== 'undefined'

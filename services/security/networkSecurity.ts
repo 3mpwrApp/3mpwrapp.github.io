@@ -174,7 +174,7 @@ class NetworkSecurityManager {
       const { getBYOCConfig } = await import('../dataPolicy');
       const byocConfig = getBYOCConfig();
       
-      if (!byocConfig) {
+      if (!byocConfig || !byocConfig.endpoint) {
         return false; // No BYOC config means no external connections
       }
 

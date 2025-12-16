@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams } from 'expo-router';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import React from 'react';
@@ -9,6 +10,7 @@ import { useAuth } from '../../../context/AuthContext';
 import { channels as seedChannels } from '../../../data/community';
 import { auth, db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { isCloudConsentEnabled } from '../../../services/consent';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export default function CommunityCompose() {
@@ -23,8 +25,18 @@ export default function CommunityCompose() {
   const [channelSlug, setChannelSlug] = React.useState(initialSlug);
   const [title, setTitle] = React.useState('');
   const [body, setBody] = React.useState('');
+  const [cloudEnabled, setCloudEnabled] = React.useState<boolean>(isCloudConsentEnabled());
+  
+  // Check cloud consent status on mount and periodically
+  React.useEffect(() => {
+    const checkConsent = () => setCloudEnabled(isCloudConsentEnabled());
+    checkConsent();
+    const interval = setInterval(checkConsent, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   const save = async () => {
+    if (!cloudEnabled) { Alert.alert('Cloud disabled', 'Enable cloud features in Settings → Privacy to post.'); return; }
     if (!user) { Alert.alert('Sign in required', 'Please sign in to post.'); return; }
     if (!title.trim() || !body.trim()) { Alert.alert('Missing', 'Title and body are required.'); return; }
     try {
@@ -46,6 +58,25 @@ export default function CommunityCompose() {
       Alert.alert('Not posted', e?.message || 'Unable to post.');
     }
   };
+
+  // Show cloud consent required banner if not enabled
+  if (!cloudEnabled) {
+    return (
+      <View style={s.container} accessibilityLabel="Compose post" accessible={true}>
+        <Text ref={titleRef} style={s.title} accessibilityRole="header" maxFontSizeMultiplier={MAX_FONT_SCALE}>Compose Post</Text>
+        <View style={{ padding: 16, backgroundColor: palette.card, borderRadius: 8, borderWidth: 1, borderColor: palette.warning || palette.muted }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
+            <Ionicons name="cloud-offline" size={24} color={palette.warning || palette.text} />
+            <Text style={{ color: palette.text, fontSize: 16, fontWeight: '600', marginLeft: 8 }}>Cloud Features Required</Text>
+          </View>
+          <Text style={{ color: palette.textSecondary, fontSize: 14, lineHeight: 20 }}>
+            To create forum posts, you need to enable cloud features.{'\n\n'}
+            Go to <Text style={{ fontWeight: '700' }}>Settings → Privacy</Text> and turn on "Cloud Features (Chat & Sync)".
+          </Text>
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View style={s.container} accessibilityLabel="Compose post" accessible={true}>

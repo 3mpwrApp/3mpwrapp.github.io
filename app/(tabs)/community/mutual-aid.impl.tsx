@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React from 'react';
 import { ActivityIndicator, Alert, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
@@ -7,6 +8,7 @@ import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useAuth } from '../../../context/AuthContext';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
+import { isCloudConsentEnabled } from '../../../services/consent';
 import { flagItem } from '../../../services/moderation';
 import { addAidPost, listAidPosts, respondToPost, softDeletePost } from '../../../services/mutual';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -44,8 +46,18 @@ export default function MutualAidImpl() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [isPosting, setIsPosting] = React.useState(false);
   const [categoryFilter, setCategoryFilter] = React.useState<string | null>(null);
+  const [cloudEnabled, setCloudEnabled] = React.useState<boolean>(isCloudConsentEnabled());
+  
+  // Check cloud consent status on mount and periodically
+  React.useEffect(() => {
+    const checkConsent = () => setCloudEnabled(isCloudConsentEnabled());
+    checkConsent();
+    const interval = setInterval(checkConsent, 2000);
+    return () => clearInterval(interval);
+  }, []);
   
   const load = React.useCallback(async()=>{ 
+    if (!cloudEnabled) return;
     try { 
       setIsLoading(true);
       setItems(await listAidPosts()); 
@@ -54,11 +66,15 @@ export default function MutualAidImpl() {
     } finally {
       setIsLoading(false);
     }
-  },[]);
+  },[cloudEnabled]);
   
   React.useEffect(()=>{ load(); },[load]);
 
   const handlePost = async () => {
+    if (!cloudEnabled) {
+      Alert.alert('Cloud disabled', 'Enable cloud features in Settings → Privacy to post.');
+      return;
+    }
     if (!desc.trim()) {
       Alert.alert('Missing Description', 'Please provide a description of your need.');
       return;
@@ -165,6 +181,32 @@ export default function MutualAidImpl() {
   const getCategoryIcon = (type: string) => {
     return CATEGORIES.find(c => c.id === type)?.icon || '❓';
   };
+
+  // Show cloud consent required banner if not enabled
+  if (!cloudEnabled) {
+    return (
+      <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>
+        <Text 
+          ref={titleRef}
+          style={s.title}
+          accessibilityRole="header"
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
+          Mutual Aid Engine
+        </Text>
+        <View style={{ padding: 16, backgroundColor: palette.card, borderRadius: 8, borderWidth: 1, borderColor: palette.warning || palette.muted }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
+            <Ionicons name="cloud-offline" size={24} color={palette.warning || palette.text} />
+            <Text style={{ color: palette.text, fontSize: 16, fontWeight: '600', marginLeft: 8 }}>Cloud Features Required</Text>
+          </View>
+          <Text style={{ color: palette.textSecondary, fontSize: 14, lineHeight: 20 }}>
+            To use the Mutual Aid Network, you need to enable cloud features.{'\n\n'}
+            Go to <Text style={{ fontWeight: '700' }}>Settings → Privacy</Text> and turn on "Cloud Features (Chat & Sync)".
+          </Text>
+        </View>
+      </ScrollView>
+    );
+  }
 
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 16 }}>

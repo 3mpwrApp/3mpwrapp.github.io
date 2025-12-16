@@ -9,7 +9,7 @@ import { useTextScale } from "../theme/typography";
 import { useAppPalette } from "../theme/usePalette";
 
 const LANGUAGES = [
-  { code: "en" as Lang, name: "English", nativeName: "English", flag: "🇺🇸" },
+  { code: "en" as Lang, name: "English", nativeName: "English", flag: "�🇦" },
   { code: "fr" as Lang, name: "French", nativeName: "Français", flag: "🇫🇷" },
   { code: "es" as Lang, name: "Spanish", nativeName: "Español", flag: "🇪🇸" },
 ];

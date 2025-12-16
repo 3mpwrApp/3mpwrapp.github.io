@@ -68,11 +68,15 @@ export default function RegisterScreen() {
       if (err?.code === 'auth/email-already-in-use') {
         msg = "This email is already registered. Try signing in instead.";
       } else if (err?.code === 'auth/invalid-email') {
-        msg = "Invalid email address format.";
+        msg = "Invalid email address format. Please check your email.";
       } else if (err?.code === 'auth/weak-password') {
-        msg = "Password is too weak. Use at least 6 characters.";
+        msg = "Password is too weak. Use at least 6 characters with letters and numbers.";
       } else if (err?.code === 'auth/network-request-failed') {
-        msg = "Network error. Check your connection.";
+        msg = "Network error. Check your internet connection and try again.";
+      } else if (err?.code === 'auth/too-many-requests') {
+        msg = "Too many registration attempts. Please wait a few minutes and try again.";
+      } else if (err?.code === 'auth/configuration-not-found' || err?.code === 'auth/admin-restricted-operation') {
+        msg = "Email/Password registration is not enabled.\n\nPlease sign up with Google or Apple instead, or contact support.";
       } else if (err?.code === 'auth/unauthorized-domain' || err?.code === 'auth/operation-not-allowed' || msg.includes('unauthorized-domain')) {
         msg = "Authorization Error: This domain is not authorized for Firebase Authentication.\n\n" +
               "SOLUTION:\n" +
@@ -83,6 +87,8 @@ export default function RegisterScreen() {
       } else if (err?.code === 'auth/invalid-api-key') {
         msg = "Invalid API Key: Firebase configuration may be incorrect.\n\n" +
               "Check firebase/config.ts and verify your Firebase project credentials.";
+      } else if (err?.message?.includes('permission') || err?.message?.includes('Permission') || err?.code === 'permission-denied') {
+        msg = "Unable to complete registration. Firestore permissions may need to be updated.\n\nPlease try signing up with Google or Apple instead.";
       }
       
       setError(msg);

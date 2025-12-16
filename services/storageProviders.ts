@@ -1,7 +1,8 @@
 import { getBYOCConfig, isBYOCEnabled, type BYOCConfig } from './dataPolicy';
+import { isGDriveConfigured, loadFromGDrive, removeFromGDrive, saveToGDrive } from './gdrive';
 
 export type StorageProvider = {
-  id: 'ephemeral' | 'webdav';
+  id: 'ephemeral' | 'webdav' | 'gdrive';
   name: string;
   save: (path: string, data: string | Uint8Array, contentType?: string) => Promise<boolean>;
   load: (path: string) => Promise<string | Uint8Array | null>;
@@ -24,7 +25,7 @@ const webdavProvider: StorageProvider = {
   name: 'WebDAV',
   async save(path, data, contentType) {
     const cfg = getBYOCConfig();
-    if (!cfg || cfg.kind !== 'webdav') return false;
+    if (!cfg || cfg.kind !== 'webdav' || !cfg.endpoint) return false;
     try {
   const headers = getHeaders(cfg);
   if (contentType) headers['Content-Type'] = contentType;
@@ -37,7 +38,7 @@ const webdavProvider: StorageProvider = {
   },
   async load(path) {
     const cfg = getBYOCConfig();
-    if (!cfg || cfg.kind !== 'webdav') return null;
+    if (!cfg || cfg.kind !== 'webdav' || !cfg.endpoint) return null;
     try {
       const headers = getHeaders(cfg);
       const res = await fetch(cfg.endpoint.replace(/\/$/, '') + '/' + path.replace(/^\//, ''), { headers });
@@ -48,12 +49,30 @@ const webdavProvider: StorageProvider = {
   },
   async remove(path) {
     const cfg = getBYOCConfig();
-    if (!cfg || cfg.kind !== 'webdav') return false;
+    if (!cfg || cfg.kind !== 'webdav' || !cfg.endpoint) return false;
     try {
       const headers = getHeaders(cfg);
       const res = await fetch(cfg.endpoint.replace(/\/$/, '') + '/' + path.replace(/^\//, ''), { method: 'DELETE', headers });
       return res.ok || res.status === 404; // 404 means it's already gone
     } catch { return false; }
+  },
+};
+
+// Google Drive provider: uses user's own Google Drive for storage
+const gdriveProvider: StorageProvider = {
+  id: 'gdrive',
+  name: 'Google Drive',
+  async save(path, data, contentType) {
+    if (!isGDriveConfigured()) return false;
+    return saveToGDrive(path, data, contentType);
+  },
+  async load(path) {
+    if (!isGDriveConfigured()) return null;
+    return loadFromGDrive(path);
+  },
+  async remove(path) {
+    if (!isGDriveConfigured()) return false;
+    return removeFromGDrive(path);
   },
 };
 
@@ -71,9 +90,11 @@ export function getActiveStorage(): StorageProvider {
   const cfg = getBYOCConfig();
   if (isBYOCEnabled()) {
     if (cfg?.kind === 'webdav') return webdavProvider;
+    if (cfg?.kind === 'gdrive' || isGDriveConfigured()) return gdriveProvider;
     return ephemeralProvider;
   }
   // Default mode: still prefer BYOC if configured; otherwise ephemeral
   if (cfg?.kind === 'webdav') return webdavProvider;
+  if (cfg?.kind === 'gdrive' || isGDriveConfigured()) return gdriveProvider;
   return ephemeralProvider;
 }
