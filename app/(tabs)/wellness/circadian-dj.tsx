@@ -1,13 +1,59 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Stack } from 'expo-router';
-import { useState } from 'react';
-import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Link, Stack } from 'expo-router';
+import { useCallback, useEffect, useState } from 'react';
+import { Alert, Animated, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { HIT_SLOP_12 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
-import { useCircadianRhythmDJ } from '../../../services/circadianRhythmDJ';
+import {
+    type CircadianAlignment,
+    type DreamAIAnalysis,
+    type LightTherapyPrescription,
+    type MoonPhaseCorrelation,
+    type SleepOptimizationPlan,
+    type SleepQualityPrediction,
+    type SleepStagePrediction,
+    type SocialJetLagAnalysis,
+    useCircadianRhythmDJ,
+} from '../../../services/circadianRhythmDJ';
 import { useAppPalette } from '../../../theme/usePalette';
 import { createShadow } from '../../../utils/shadow';
+
+// Feature Interlink Routes - where chronotype data enhances other features
+const INTERLINK_FEATURES = [
+  {
+    id: 'daily-planner',
+    name: 'Daily Planner',
+    description: 'Schedule tasks during YOUR peak energy hours',
+    icon: 'calendar' as const,
+    route: '/wellness/daily-planner' as const,
+    benefit: 'AI-optimized task scheduling based on your chronotype',
+  },
+  {
+    id: 'energy-hub',
+    name: 'Energy Command Center',
+    description: 'Track energy aligned with your natural rhythm',
+    icon: 'flash' as const,
+    route: '/wellness/energy-command-center' as const,
+    benefit: 'Predict energy dips before they happen',
+  },
+  {
+    id: 'spoon-economist',
+    name: 'Spoon Economist',
+    description: 'Pace your day with circadian awareness',
+    icon: 'analytics' as const,
+    route: '/wellness/spoon-economist' as const,
+    benefit: 'Smart spoon budgeting for your body clock',
+  },
+  {
+    id: 'movement',
+    name: 'Movement Hub',
+    description: 'Exercise when your body is naturally ready',
+    icon: 'fitness' as const,
+    route: '/wellness/exercise-hub' as const,
+    benefit: 'Optimal workout timing for your chronotype',
+  },
+];
 
 // Quiz questions for chronotype determination
 // Based on Dr. Michael Breus's chronotype research and MEQ (Morningness-Eveningness Questionnaire)
@@ -123,6 +169,123 @@ export default function CircadianDJScreen() {
     dreamContent: '',
     notes: '',
   });
+
+  // === NEW STATE FOR ADVANCED FEATURES ===
+  const [activeTab, setActiveTab] = useState<'overview' | 'insights' | 'advanced' | 'interlink'>('overview');
+  const [sleepPrediction, setSleepPrediction] = useState<SleepQualityPrediction | null>(null);
+  const [alignment, setAlignment] = useState<CircadianAlignment | null>(null);
+  const [optimizationPlan, setOptimizationPlan] = useState<SleepOptimizationPlan | null>(null);
+  const [lightTherapy, setLightTherapy] = useState<LightTherapyPrescription | null>(null);
+  const [socialJetLag, setSocialJetLag] = useState<SocialJetLagAnalysis | null>(null);
+  const [moonCorrelations, setMoonCorrelations] = useState<MoonPhaseCorrelation[]>([]);
+  const [_stagePrediction, setStagePrediction] = useState<SleepStagePrediction | null>(null);
+  const [showStagePredictionModal, setShowStagePredictionModal] = useState(false);
+  const [stagePredictionData, setStagePredictionData] = useState<SleepStagePrediction | null>(null);
+  const [stageInputBedtime, setStageInputBedtime] = useState('22:30');
+  const [stageInputWakeTime, setStageInputWakeTime] = useState('07:00');
+  const [showDreamAnalysisModal, setShowDreamAnalysisModal] = useState(false);
+  const [dreamInput, setDreamInput] = useState('');
+  const [dreamEmotions, setDreamEmotions] = useState<string[]>([]);
+  const [dreamAnalysis, setDreamAnalysis] = useState<DreamAIAnalysis | null>(null);
+  const [showOptimizationModal, setShowOptimizationModal] = useState(false);
+  const [isLoadingInsights, setIsLoadingInsights] = useState(false);
+  const alignmentPulse = new Animated.Value(1);
+
+  // Load AI insights when chronotype exists
+  const loadInsights = useCallback(async () => {
+    if (!chronotype) return;
+    setIsLoadingInsights(true);
+    try {
+      const [pred, align, plan, light, jetLag, moon] = await Promise.all([
+        circadian.predictTonightQuality(),
+        circadian.analyzeAlignment(),
+        circadian.generateOptimizationPlan(),
+        circadian.prescribeLightTherapy(),
+        circadian.calculateSocialJetLag(),
+        circadian.analyzeMoonPhase(),
+      ]);
+      setSleepPrediction(pred);
+      setAlignment(align);
+      setOptimizationPlan(plan);
+      setLightTherapy(light);
+      setSocialJetLag(jetLag);
+      setMoonCorrelations(moon);
+    } catch (e) {
+      console.error('Failed to load insights:', e);
+    } finally {
+      setIsLoadingInsights(false);
+    }
+  }, [chronotype, circadian]);
+
+  useEffect(() => {
+    loadInsights();
+  }, [loadInsights]);
+
+  // Pulse animation for alignment score
+  useEffect(() => {
+    if (alignment) {
+      Animated.loop(
+        Animated.sequence([
+          Animated.timing(alignmentPulse, { toValue: 1.05, duration: 1000, useNativeDriver: true }),
+          Animated.timing(alignmentPulse, { toValue: 1, duration: 1000, useNativeDriver: true }),
+        ])
+      ).start();
+    }
+  }, [alignment]);
+
+  const predictSleepStages = async () => {
+    try {
+      const prediction = await circadian.predictSleepStages(stageInputBedtime, stageInputWakeTime);
+      setStagePrediction(prediction);
+      setStagePredictionData(prediction);
+    } catch {
+      Alert.alert('Error', 'Failed to predict sleep stages');
+    }
+  };
+
+  const openStagePredictionModal = () => {
+    setStagePredictionData(null);
+    setShowStagePredictionModal(true);
+  };
+
+  const getStageColor = (stage: string) => {
+    switch (stage) {
+      case 'awake': return palette.warning;
+      case 'light': return palette.info;
+      case 'deep': return palette.primary;
+      case 'rem': return palette.success;
+      default: return palette.muted;
+    }
+  };
+
+  const getStageEmoji = (stage: string) => {
+    switch (stage) {
+      case 'awake': return '👁️';
+      case 'light': return '🌙';
+      case 'deep': return '🌊';
+      case 'rem': return '💭';
+      default: return '😴';
+    }
+  };
+
+  const analyzeDreamWithAI = async () => {
+    if (!dreamInput.trim()) {
+      Alert.alert('Enter Dream', 'Please describe your dream first');
+      return;
+    }
+    try {
+      const analysis = await circadian.analyzeDream(dreamInput, dreamEmotions);
+      setDreamAnalysis(analysis);
+    } catch {
+      Alert.alert('Error', 'Failed to analyze dream');
+    }
+  };
+
+  const toggleEmotion = (emotion: string) => {
+    setDreamEmotions(prev => 
+      prev.includes(emotion) ? prev.filter(e => e !== emotion) : [...prev, emotion]
+    );
+  };
 
   const chronotypeInfo: Record<
     string,
@@ -346,7 +509,7 @@ export default function CircadianDJScreen() {
         }}
       />
       <ScrollView style={[styles.container, { backgroundColor: palette.background }]}>
-        {/* Chronotype */}
+        {/* Chronotype Card - Always visible */}
         {chronotype ? (
           <View style={[styles.card, { backgroundColor: palette.surface }]}>
             <View style={styles.chronotypeHeader}>
@@ -361,6 +524,31 @@ export default function CircadianDJScreen() {
                   {chronotype.confidence}% confidence
                 </Text>
               </View>
+              {/* Circadian Alignment Score Badge */}
+              {alignment && (
+                <Animated.View 
+                  style={[
+                    styles.alignmentBadge, 
+                    { 
+                      backgroundColor: alignment.score >= 70 ? palette.success + '20' : 
+                                       alignment.score >= 40 ? palette.warning + '20' : palette.error + '20',
+                      borderColor: alignment.score >= 70 ? palette.success : 
+                                   alignment.score >= 40 ? palette.warning : palette.error,
+                      transform: [{ scale: alignmentPulse }],
+                    }
+                  ]}
+                >
+                  <Text style={[styles.alignmentScore, { 
+                    color: alignment.score >= 70 ? palette.success : 
+                           alignment.score >= 40 ? palette.warning : palette.error 
+                  }]}>
+                    {alignment.score}%
+                  </Text>
+                  <Text style={[styles.alignmentLabel, { color: palette.textSecondary }]}>
+                    Aligned
+                  </Text>
+                </Animated.View>
+              )}
             </View>
 
             <View style={styles.chronotypeDetails}>
@@ -393,7 +581,7 @@ export default function CircadianDJScreen() {
         ) : (
           <View style={[styles.card, { backgroundColor: palette.surface }]}>
             <Text style={[styles.emptyText, { color: palette.textSecondary }]}>
-              Take the chronotype quiz to discover your sleep-wake pattern
+              Take the chronotype quiz to discover your sleep-wake pattern and unlock AI-powered insights
             </Text>
             <Pressable
               accessibilityRole="button"
@@ -407,131 +595,926 @@ export default function CircadianDJScreen() {
           </View>
         )}
 
-        {/* Sleep Debt */}
-        {sleepDebt && sleepDebt.totalHoursOwed > 0 && (
-          <View style={[styles.card, { backgroundColor: palette.warningBackground }]}>
-            <View style={styles.debtHeader}>
-              <Ionicons name="warning" size={24} color={palette.warning} />
-              <Text style={[styles.debtTitle, { color: palette.warning }]}>Sleep Debt</Text>
-            </View>
-
-            <Text style={[styles.debtAmount, { color: palette.error }]}>
-              {sleepDebt.totalHoursOwed.toFixed(1)} hours owed
-            </Text>
-
-            <Text style={[styles.debtDescription, { color: palette.warning }]}>
-              Repayment plan: +{sleepDebt.repaymentPlan.dailyExtraMinutes} minutes per night
-            </Text>
-            <Text style={[styles.debtDescription, { color: palette.warning }]}>
-              Target debt-free date: {sleepDebt.repaymentPlan.targetDate}
-            </Text>
-            <Text style={[styles.debtDescription, { color: palette.warning }]}>
-              This week's progress: {sleepDebt.repaymentPlan.weeklyProgress.toFixed(1)} hours repaid
-            </Text>
-          </View>
-        )}
-
-        {/* Dream Interference */}
-        {dreamPatterns && dreamPatterns.length > 0 && (
-          <View style={[styles.card, { backgroundColor: palette.surface }]}>
-            <Text style={[styles.sectionTitle, { color: palette.text }]}>
-              Dream Interference Patterns
-            </Text>
-
-            {dreamPatterns.slice(0, 3).map((pattern, index) => (
-              <View key={index} style={[styles.dreamCard, { borderColor: palette.border }]}>
-                <View style={styles.dreamHeader}>
-                  <Ionicons
-                    name={pattern.pattern === 'recurring' ? 'repeat' : 'alert-circle'}
-                    size={20}
-                    color={
-                      pattern.pattern === 'recurring'
-                        ? palette.error
-                        : pattern.pattern === 'clustered'
-                        ? palette.warning
-                        : palette.textSecondary
-                    }
-                  />
-                  <Text style={[styles.dreamPattern, { color: palette.text }]}>
-                    {pattern.pattern.toUpperCase()}
-                  </Text>
-                  <Text style={[styles.dreamDate, { color: palette.textSecondary }]}>
-                    {new Date(pattern.date).toLocaleDateString()}
-                  </Text>
-                </View>
-
-                {pattern.possibleTriggers.length > 0 && (
-                  <View style={styles.triggerSection}>
-                    <Text style={[styles.triggerLabel, { color: palette.textSecondary }]}>
-                      Possible triggers:
-                    </Text>
-                    {pattern.possibleTriggers.map((trigger, i) => (
-                      <Text key={i} style={[styles.triggerText, { color: palette.text }]}>
-                        • {trigger}
-                      </Text>
-                    ))}
-                  </View>
-                )}
-              </View>
+        {/* === TAB NAVIGATION === */}
+        {chronotype && (
+          <View style={[styles.tabContainer, { backgroundColor: palette.surface }]}>
+            {(['overview', 'insights', 'advanced', 'interlink'] as const).map(tab => (
+              <Pressable
+                key={tab}
+                accessibilityRole="tab"
+                accessibilityState={{ selected: activeTab === tab }}
+                style={[
+                  styles.tab,
+                  activeTab === tab && { borderBottomColor: palette.primary, borderBottomWidth: 2 }
+                ]}
+                onPress={() => setActiveTab(tab)}
+              >
+                <Ionicons
+                  name={
+                    tab === 'overview' ? 'home' :
+                    tab === 'insights' ? 'bulb' :
+                    tab === 'advanced' ? 'flask' : 'link'
+                  }
+                  size={18}
+                  color={activeTab === tab ? palette.primary : palette.textSecondary}
+                />
+                <Text style={[
+                  styles.tabText,
+                  { color: activeTab === tab ? palette.primary : palette.textSecondary }
+                ]}>
+                  {tab === 'overview' ? 'Overview' :
+                   tab === 'insights' ? 'AI Insights' :
+                   tab === 'advanced' ? 'Advanced' : 'Interlink'}
+                </Text>
+              </Pressable>
             ))}
           </View>
         )}
 
-        {/* Tools */}
-        <View style={[styles.card, { backgroundColor: palette.surface }]}>
-          <Text style={[styles.sectionTitle, { color: palette.text }]}>Sleep Optimization Tools</Text>
+        {/* === OVERVIEW TAB === */}
+        {activeTab === 'overview' && (
+          <>
+            {/* Sleep Debt */}
+            {sleepDebt && sleepDebt.totalHoursOwed > 0 && (
+              <View style={[styles.card, { backgroundColor: palette.warningBackground }]}>
+                <View style={styles.debtHeader}>
+                  <Ionicons name="warning" size={24} color={palette.warning} />
+                  <Text style={[styles.debtTitle, { color: palette.warning }]}>Sleep Debt</Text>
+                </View>
+                <Text style={[styles.debtAmount, { color: palette.error }]}>
+                  {sleepDebt.totalHoursOwed.toFixed(1)} hours owed
+                </Text>
+                <Text style={[styles.debtDescription, { color: palette.warning }]}>
+                  Repayment plan: +{sleepDebt.repaymentPlan.dailyExtraMinutes} minutes per night
+                </Text>
+                <Text style={[styles.debtDescription, { color: palette.warning }]}>
+                  Target debt-free date: {sleepDebt.repaymentPlan.targetDate}
+                </Text>
+              </View>
+            )}
 
-          <Pressable
-            accessibilityRole="button"
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
-            onPress={logSleep}
-          >
-            <Ionicons name="moon" size={24} color={palette.primary} />
-            <View style={styles.toolInfo}>
-              <Text style={[styles.toolTitle, { color: palette.text }]}>Log Sleep</Text>
-              <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
-                Record bedtime, wake time, and quality
-              </Text>
-            </View>
-            <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
-          </Pressable>
+            {/* Tonight's Prediction Card */}
+            {sleepPrediction && (
+              <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                <View style={styles.predictionHeader}>
+                  <Text style={styles.predictionEmoji}>🔮</Text>
+                  <View>
+                    <Text style={[styles.sectionTitle, { color: palette.text, marginBottom: 0 }]}>
+                      Tonight's Sleep Prediction
+                    </Text>
+                    <Text style={[styles.predictionConfidence, { color: palette.textSecondary }]}>
+                      {Math.round(sleepPrediction.confidence * 100)}% confidence
+                    </Text>
+                  </View>
+                </View>
+                <View style={styles.predictionScore}>
+                  <Text style={[styles.predictionValue, { color: 
+                    sleepPrediction.predictedQuality >= 4 ? palette.success :
+                    sleepPrediction.predictedQuality >= 3 ? palette.warning : palette.error
+                  }]}>
+                    {sleepPrediction.predictedQuality.toFixed(1)}/5
+                  </Text>
+                  <Text style={[styles.predictionLabel, { color: palette.textSecondary }]}>
+                    Expected Quality
+                  </Text>
+                </View>
+                {sleepPrediction.factors.length > 0 && (
+                  <View style={styles.factorsList}>
+                    {sleepPrediction.factors.slice(0, 4).map((factor, i) => (
+                      <View key={i} style={[styles.factorItem, { 
+                        backgroundColor: factor.impact === 'positive' ? palette.success + '15' : palette.error + '15' 
+                      }]}>
+                        <Ionicons 
+                          name={factor.impact === 'positive' ? 'arrow-up' : 'arrow-down'} 
+                          size={14} 
+                          color={factor.impact === 'positive' ? palette.success : palette.error} 
+                        />
+                        <Text style={[styles.factorText, { color: palette.text }]}>
+                          {factor.factor}
+                        </Text>
+                      </View>
+                    ))}
+                  </View>
+                )}
+              </View>
+            )}
 
-          <Pressable
-            accessibilityRole="button"
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
-            onPress={calculateOptimalBedtime}
-          >
-            <Ionicons name="time" size={24} color={palette.primary} />
-            <View style={styles.toolInfo}>
-              <Text style={[styles.toolTitle, { color: palette.text }]}>Wake-Up Optimizer</Text>
-              <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
-                Calculate ideal bedtime for complete sleep cycles
-              </Text>
-            </View>
-            <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
-          </Pressable>
+            {/* Tools */}
+            <View style={[styles.card, { backgroundColor: palette.surface }]}>
+              <Text style={[styles.sectionTitle, { color: palette.text }]}>Sleep Optimization Tools</Text>
 
-          <Pressable
-            accessibilityRole="button"
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-            style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
-            onPress={getNapPrescription}
-          >
-            <Ionicons name="cafe" size={24} color={palette.primary} />
-            <View style={styles.toolInfo}>
-              <Text style={[styles.toolTitle, { color: palette.text }]}>Nap Prescription</Text>
-              <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
-                Get personalized nap recommendations
-              </Text>
+              <Pressable
+                accessibilityRole="button"
+                hitSlop={HIT_SLOP_12}
+                style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
+                onPress={logSleep}
+              >
+                <Ionicons name="moon" size={24} color={palette.primary} />
+                <View style={styles.toolInfo}>
+                  <Text style={[styles.toolTitle, { color: palette.text }]}>Log Sleep</Text>
+                  <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
+                    Record bedtime, wake time, and quality
+                  </Text>
+                </View>
+                <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
+              </Pressable>
+
+              <Pressable
+                accessibilityRole="button"
+                hitSlop={HIT_SLOP_12}
+                style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
+                onPress={calculateOptimalBedtime}
+              >
+                <Ionicons name="time" size={24} color={palette.primary} />
+                <View style={styles.toolInfo}>
+                  <Text style={[styles.toolTitle, { color: palette.text }]}>Wake-Up Optimizer</Text>
+                  <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
+                    Calculate ideal bedtime for complete sleep cycles
+                  </Text>
+                </View>
+                <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
+              </Pressable>
+
+              <Pressable
+                accessibilityRole="button"
+                hitSlop={HIT_SLOP_12}
+                style={[styles.toolButton, { backgroundColor: palette.primary + '20', borderColor: palette.primary }]}
+                onPress={getNapPrescription}
+              >
+                <Ionicons name="cafe" size={24} color={palette.primary} />
+                <View style={styles.toolInfo}>
+                  <Text style={[styles.toolTitle, { color: palette.text }]}>Nap Prescription</Text>
+                  <Text style={[styles.toolDescription, { color: palette.textSecondary }]}>
+                    Get personalized nap recommendations
+                  </Text>
+                </View>
+                <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
+              </Pressable>
             </View>
-            <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
-          </Pressable>
-        </View>
+          </>
+        )}
+
+        {/* === AI INSIGHTS TAB === */}
+        {activeTab === 'insights' && chronotype && (
+          <>
+            {isLoadingInsights ? (
+              <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                <Text style={[styles.loadingText, { color: palette.textSecondary }]}>
+                  🧠 Analyzing your circadian data...
+                </Text>
+              </View>
+            ) : (
+              <>
+                {/* Sleep Stage Prediction */}
+                <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                  <Text style={[styles.sectionTitle, { color: palette.text }]}>
+                    🧬 AI Sleep Stage Predictor
+                  </Text>
+                  <Text style={[styles.cardDescription, { color: palette.textSecondary }]}>
+                    Visualize your night: Light, Deep, and REM sleep cycles with optimal wake times
+                  </Text>
+                  <Pressable
+                    accessibilityRole="button"
+                    style={[styles.actionButton, { backgroundColor: palette.primary }]}
+                    onPress={openStagePredictionModal}
+                  >
+                    <Ionicons name="analytics" size={20} color={palette.onPrimary} />
+                    <Text style={[styles.actionButtonText, { color: palette.onPrimary }]}>
+                      Predict Tonight's Stages
+                    </Text>
+                  </Pressable>
+                </View>
+
+                {/* Light Therapy */}
+                {lightTherapy && (
+                  <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                    <View style={styles.therapyHeader}>
+                      <Text style={styles.therapyEmoji}>☀️</Text>
+                      <Text style={[styles.sectionTitle, { color: palette.text, marginBottom: 0 }]}>
+                        Light Therapy Prescription
+                      </Text>
+                    </View>
+                    <View style={[styles.therapyBadge, { backgroundColor: palette.warning + '20' }]}>
+                      <Text style={[styles.therapyType, { color: palette.warning }]}>
+                        {lightTherapy.type.replace(/_/g, ' ').toUpperCase()}
+                      </Text>
+                    </View>
+                    <View style={styles.therapyDetails}>
+                      <View style={styles.therapyRow}>
+                        <Ionicons name="time-outline" size={16} color={palette.textSecondary} />
+                        <Text style={[styles.therapyText, { color: palette.text }]}>
+                          {lightTherapy.duration} mins at {lightTherapy.idealTime}
+                        </Text>
+                      </View>
+                      <View style={styles.therapyRow}>
+                        <Ionicons name="sunny-outline" size={16} color={palette.textSecondary} />
+                        <Text style={[styles.therapyText, { color: palette.text }]}>
+                          {lightTherapy.intensity > 0 ? `${lightTherapy.intensity} lux` : 'Avoid bright light'}
+                        </Text>
+                      </View>
+                    </View>
+                    <Text style={[styles.therapyBenefit, { color: palette.success }]}>
+                      ✨ {lightTherapy.expectedBenefit}
+                    </Text>
+                  </View>
+                )}
+
+                {/* Social Jet Lag */}
+                {socialJetLag && (
+                  <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                    <View style={styles.jetLagHeader}>
+                      <Text style={styles.jetLagEmoji}>✈️</Text>
+                      <View>
+                        <Text style={[styles.sectionTitle, { color: palette.text, marginBottom: 0 }]}>
+                          Social Jet Lag
+                        </Text>
+                        <Text style={[styles.jetLagSubtitle, { color: palette.textSecondary }]}>
+                          Weekday vs Weekend difference
+                        </Text>
+                      </View>
+                    </View>
+                    <View style={[styles.jetLagScore, { 
+                      backgroundColor: socialJetLag.impact === 'minimal' ? palette.success + '20' :
+                                       socialJetLag.impact === 'moderate' ? palette.warning + '20' : palette.error + '20'
+                    }]}>
+                      <Text style={[styles.jetLagValue, { 
+                        color: socialJetLag.impact === 'minimal' ? palette.success :
+                               socialJetLag.impact === 'moderate' ? palette.warning : palette.error
+                      }]}>
+                        {socialJetLag.jetLagHours.toFixed(1)}h
+                      </Text>
+                      <Text style={[styles.jetLagImpact, { color: palette.textSecondary }]}>
+                        {socialJetLag.impact.toUpperCase()} impact
+                      </Text>
+                    </View>
+                    {socialJetLag.recoveryStrategies.length > 0 && (
+                      <View style={styles.strategiesList}>
+                        <Text style={[styles.strategiesTitle, { color: palette.text }]}>
+                          Recovery Strategies:
+                        </Text>
+                        {socialJetLag.recoveryStrategies.map((strategy, i) => (
+                          <Text key={i} style={[styles.strategyText, { color: palette.textSecondary }]}>
+                            • {strategy}
+                          </Text>
+                        ))}
+                      </View>
+                    )}
+                  </View>
+                )}
+
+                {/* Dream AI Analysis */}
+                <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                  <Text style={[styles.sectionTitle, { color: palette.text }]}>
+                    💭 Dream AI Interpreter
+                  </Text>
+                  <Text style={[styles.cardDescription, { color: palette.textSecondary }]}>
+                    Analyze your dreams for insights, patterns, and psychological themes
+                  </Text>
+                  <Pressable
+                    accessibilityRole="button"
+                    style={[styles.actionButton, { backgroundColor: palette.info }]}
+                    onPress={() => setShowDreamAnalysisModal(true)}
+                  >
+                    <Ionicons name="cloud" size={20} color={palette.onPrimary} />
+                    <Text style={[styles.actionButtonText, { color: palette.onPrimary }]}>
+                      Analyze a Dream
+                    </Text>
+                  </Pressable>
+                </View>
+              </>
+            )}
+          </>
+        )}
+
+        {/* === ADVANCED TAB === */}
+        {activeTab === 'advanced' && chronotype && (
+          <>
+            {/* Moon Phase Correlations */}
+            <View style={[styles.card, { backgroundColor: palette.surface }]}>
+              <Text style={[styles.sectionTitle, { color: palette.text }]}>
+                🌙 Moon Phase Sleep Patterns
+              </Text>
+              {moonCorrelations.length > 0 ? (
+                <View style={styles.moonGrid}>
+                  {moonCorrelations.map((moon, i) => (
+                    <View key={i} style={[styles.moonCard, { backgroundColor: palette.background }]}>
+                      <Text style={styles.moonEmoji}>
+                        {moon.phase === 'full' ? '🌕' : 
+                         moon.phase === 'new' ? '🌑' :
+                         moon.phase.includes('waxing') ? '🌓' : '🌗'}
+                      </Text>
+                      <Text style={[styles.moonPhase, { color: palette.text }]}>
+                        {moon.phase.replace(/_/g, ' ')}
+                      </Text>
+                      <Text style={[styles.moonQuality, { color: palette.textSecondary }]}>
+                        Quality: {moon.avgSleepQuality.toFixed(1)}/5
+                      </Text>
+                      {moon.personalImpact !== 'none' && (
+                        <View style={[styles.moonImpactBadge, { 
+                          backgroundColor: moon.personalImpact === 'significant' ? palette.error + '20' : palette.warning + '20'
+                        }]}>
+                          <Text style={[styles.moonImpactText, { 
+                            color: moon.personalImpact === 'significant' ? palette.error : palette.warning 
+                          }]}>
+                            {moon.personalImpact}
+                          </Text>
+                        </View>
+                      )}
+                    </View>
+                  ))}
+                </View>
+              ) : (
+                <Text style={[styles.emptyText, { color: palette.textSecondary }]}>
+                  Log more sleep to see moon phase patterns
+                </Text>
+              )}
+            </View>
+
+            {/* Sleep Optimization Plan */}
+            {optimizationPlan && (
+              <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                <View style={styles.planHeader}>
+                  <Text style={styles.planEmoji}>📋</Text>
+                  <View>
+                    <Text style={[styles.sectionTitle, { color: palette.text, marginBottom: 0 }]}>
+                      AI Optimization Plan
+                    </Text>
+                    <Text style={[styles.planFocus, { color: palette.primary }]}>
+                      Focus: {optimizationPlan.weeklyGoals.focusArea}
+                    </Text>
+                  </View>
+                </View>
+                <View style={styles.planGoals}>
+                  <View style={styles.goalRow}>
+                    <Ionicons name="bed" size={18} color={palette.textSecondary} />
+                    <Text style={[styles.goalText, { color: palette.text }]}>
+                      Target bedtime: {optimizationPlan.weeklyGoals.targetBedtime}
+                    </Text>
+                  </View>
+                  <View style={styles.goalRow}>
+                    <Ionicons name="alarm" size={18} color={palette.textSecondary} />
+                    <Text style={[styles.goalText, { color: palette.text }]}>
+                      Target wake: {optimizationPlan.weeklyGoals.targetWakeTime}
+                    </Text>
+                  </View>
+                  <View style={styles.goalRow}>
+                    <Ionicons name="hourglass" size={18} color={palette.textSecondary} />
+                    <Text style={[styles.goalText, { color: palette.text }]}>
+                      Target duration: {optimizationPlan.weeklyGoals.targetDuration}h
+                    </Text>
+                  </View>
+                </View>
+                <Pressable
+                  accessibilityRole="button"
+                  style={[styles.actionButton, { backgroundColor: palette.success }]}
+                  onPress={() => setShowOptimizationModal(true)}
+                >
+                  <Ionicons name="list" size={20} color={palette.onPrimary} />
+                  <Text style={[styles.actionButtonText, { color: palette.onPrimary }]}>
+                    View Full Plan
+                  </Text>
+                </Pressable>
+              </View>
+            )}
+
+            {/* Dream Interference Patterns */}
+            {dreamPatterns && dreamPatterns.length > 0 && (
+              <View style={[styles.card, { backgroundColor: palette.surface }]}>
+                <Text style={[styles.sectionTitle, { color: palette.text }]}>
+                  😰 Dream Interference Patterns
+                </Text>
+                {dreamPatterns.slice(0, 3).map((pattern, index) => (
+                  <View key={index} style={[styles.dreamCard, { borderColor: palette.border }]}>
+                    <View style={styles.dreamHeader}>
+                      <Ionicons
+                        name={pattern.pattern === 'recurring' ? 'repeat' : 'alert-circle'}
+                        size={20}
+                        color={
+                          pattern.pattern === 'recurring' ? palette.error :
+                          pattern.pattern === 'clustered' ? palette.warning : palette.textSecondary
+                        }
+                      />
+                      <Text style={[styles.dreamPattern, { color: palette.text }]}>
+                        {pattern.pattern.toUpperCase()}
+                      </Text>
+                      <Text style={[styles.dreamDate, { color: palette.textSecondary }]}>
+                        {new Date(pattern.date).toLocaleDateString()}
+                      </Text>
+                    </View>
+                    {pattern.possibleTriggers.length > 0 && (
+                      <View style={styles.triggerSection}>
+                        <Text style={[styles.triggerLabel, { color: palette.textSecondary }]}>
+                          Possible triggers:
+                        </Text>
+                        {pattern.possibleTriggers.map((trigger, i) => (
+                          <Text key={i} style={[styles.triggerText, { color: palette.text }]}>
+                            • {trigger}
+                          </Text>
+                        ))}
+                      </View>
+                    )}
+                  </View>
+                ))}
+              </View>
+            )}
+          </>
+        )}
+
+        {/* === INTERLINK TAB === */}
+        {activeTab === 'interlink' && chronotype && (
+          <View style={[styles.card, { backgroundColor: palette.surface }]}>
+            <Text style={[styles.sectionTitle, { color: palette.text }]}>
+              🔗 Your Chronotype Powers Other Features
+            </Text>
+            <Text style={[styles.cardDescription, { color: palette.textSecondary, marginBottom: 16 }]}>
+              Your {chronotype.type} chronotype unlocks personalized optimizations across the app
+            </Text>
+            {INTERLINK_FEATURES.map(feature => (
+              <Link key={feature.id} href={feature.route as any} asChild>
+                <Pressable
+                  accessibilityRole="link"
+                  style={[styles.interlinkCard, { backgroundColor: palette.background, borderColor: palette.border }]}
+                >
+                  <View style={[styles.interlinkIcon, { backgroundColor: palette.primary + '20' }]}>
+                    <Ionicons name={feature.icon} size={24} color={palette.primary} />
+                  </View>
+                  <View style={styles.interlinkContent}>
+                    <Text style={[styles.interlinkTitle, { color: palette.text }]}>
+                      {feature.name}
+                    </Text>
+                    <Text style={[styles.interlinkDesc, { color: palette.textSecondary }]}>
+                      {feature.description}
+                    </Text>
+                    <View style={[styles.interlinkBenefit, { backgroundColor: palette.success + '15' }]}>
+                      <Ionicons name="sparkles" size={12} color={palette.success} />
+                      <Text style={[styles.interlinkBenefitText, { color: palette.success }]}>
+                        {feature.benefit}
+                      </Text>
+                    </View>
+                  </View>
+                  <Ionicons name="chevron-forward" size={20} color={palette.textSecondary} />
+                </Pressable>
+              </Link>
+            ))}
+          </View>
+        )}
 
         <View style={styles.bottomSpacer} />
       </ScrollView>
+
+      {/* Sleep Stage Prediction Modal */}
+      <Modal
+        visible={showStagePredictionModal}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setShowStagePredictionModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+            <View style={styles.modalHeader}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>🧬 Sleep Stage Predictor</Text>
+              <Pressable 
+                onPress={() => setShowStagePredictionModal(false)}
+                accessibilityRole="button"
+                accessibilityLabel="Close modal"
+                hitSlop={HIT_SLOP_12}
+              >
+                <Ionicons name="close" size={24} color={palette.text} />
+              </Pressable>
+            </View>
+
+            {!stagePredictionData ? (
+              <>
+                <Text style={[styles.modalSubtitle, { color: palette.textSecondary }]}>
+                  Enter your planned sleep times to see predicted sleep stages and optimal wake times
+                </Text>
+                
+                <View style={styles.stageInputSection}>
+                  <Text style={[styles.stageInputLabel, { color: palette.text }]}>
+                    🛏️ Bedtime
+                  </Text>
+                  <TextInput
+                    style={[styles.stageTimeInput, { color: palette.text, borderColor: palette.border, backgroundColor: palette.background }]}
+                    value={stageInputBedtime}
+                    onChangeText={setStageInputBedtime}
+                    placeholder="22:30"
+                    placeholderTextColor={palette.muted}
+                    keyboardType="numbers-and-punctuation"
+                  />
+                </View>
+                
+                <View style={styles.stageInputSection}>
+                  <Text style={[styles.stageInputLabel, { color: palette.text }]}>
+                    ⏰ Wake Time
+                  </Text>
+                  <TextInput
+                    style={[styles.stageTimeInput, { color: palette.text, borderColor: palette.border, backgroundColor: palette.background }]}
+                    value={stageInputWakeTime}
+                    onChangeText={setStageInputWakeTime}
+                    placeholder="07:00"
+                    placeholderTextColor={palette.muted}
+                    keyboardType="numbers-and-punctuation"
+                  />
+                </View>
+
+                <Pressable
+                  accessibilityRole="button"
+                  style={[styles.actionButton, { backgroundColor: palette.primary, marginTop: 20 }]}
+                  onPress={predictSleepStages}
+                >
+                  <Ionicons name="pulse" size={20} color={palette.onPrimary} />
+                  <Text style={[styles.actionButtonText, { color: palette.onPrimary }]}>
+                    Generate Prediction
+                  </Text>
+                </Pressable>
+              </>
+            ) : (
+              <ScrollView style={styles.stageResultsContainer}>
+                {/* Quality Score */}
+                <View style={[styles.stageQualityCard, { 
+                  backgroundColor: stagePredictionData.predictedQuality >= 4 ? palette.success + '15' :
+                                   stagePredictionData.predictedQuality >= 3 ? palette.warning + '15' : palette.error + '15'
+                }]}>
+                  <Text style={[styles.stageQualityValue, { 
+                    color: stagePredictionData.predictedQuality >= 4 ? palette.success :
+                           stagePredictionData.predictedQuality >= 3 ? palette.warning : palette.error
+                  }]}>
+                    {stagePredictionData.predictedQuality.toFixed(1)}/5
+                  </Text>
+                  <Text style={[styles.stageQualityLabel, { color: palette.textSecondary }]}>
+                    Predicted Quality
+                  </Text>
+                  <Text style={[styles.stageConfidence, { color: palette.textSecondary }]}>
+                    {Math.round(stagePredictionData.confidence * 100)}% confidence
+                  </Text>
+                </View>
+
+                {/* Sleep Cycles Count */}
+                <View style={[styles.stageCyclesCard, { backgroundColor: palette.background }]}>
+                  <Text style={[styles.stageCyclesValue, { color: palette.primary }]}>
+                    {Math.floor(stagePredictionData.stages.length / 3)}
+                  </Text>
+                  <Text style={[styles.stageCyclesLabel, { color: palette.text }]}>
+                    Complete Sleep Cycles
+                  </Text>
+                </View>
+
+                {/* Visual Sleep Timeline */}
+                <Text style={[styles.stageSectionTitle, { color: palette.text }]}>
+                  🌙 Sleep Stage Timeline
+                </Text>
+                <View style={styles.stageTimeline}>
+                  {stagePredictionData.stages.map((stage, index) => (
+                    <View 
+                      key={index} 
+                      style={[
+                        styles.stageBar,
+                        { 
+                          backgroundColor: getStageColor(stage.stage),
+                          flex: stage.duration,
+                          opacity: 0.7 + (stage.quality * 0.3),
+                        }
+                      ]}
+                    >
+                      <Text style={styles.stageBarEmoji}>{getStageEmoji(stage.stage)}</Text>
+                    </View>
+                  ))}
+                </View>
+                
+                {/* Stage Legend */}
+                <View style={styles.stageLegend}>
+                  {['light', 'deep', 'rem'].map(stage => (
+                    <View key={stage} style={styles.legendItem}>
+                      <View style={[styles.legendDot, { backgroundColor: getStageColor(stage) }]} />
+                      <Text style={[styles.legendText, { color: palette.textSecondary }]}>
+                        {getStageEmoji(stage)} {stage.toUpperCase()}
+                      </Text>
+                    </View>
+                  ))}
+                </View>
+
+                {/* Stage Breakdown */}
+                <Text style={[styles.stageSectionTitle, { color: palette.text, marginTop: 20 }]}>
+                  📊 Stage Breakdown
+                </Text>
+                <View style={styles.stageBreakdown}>
+                  {['light', 'deep', 'rem'].map(stageType => {
+                    const stagesOfType = stagePredictionData.stages.filter(s => s.stage === stageType);
+                    const totalMins = stagesOfType.reduce((sum, s) => sum + s.duration, 0);
+                    const avgQuality = stagesOfType.length > 0 
+                      ? stagesOfType.reduce((sum, s) => sum + s.quality, 0) / stagesOfType.length 
+                      : 0;
+                    return (
+                      <View key={stageType} style={[styles.stageBreakdownItem, { backgroundColor: palette.background }]}>
+                        <Text style={styles.stageBreakdownEmoji}>{getStageEmoji(stageType)}</Text>
+                        <View style={styles.stageBreakdownInfo}>
+                          <Text style={[styles.stageBreakdownType, { color: palette.text }]}>
+                            {stageType.toUpperCase()}
+                          </Text>
+                          <Text style={[styles.stageBreakdownDuration, { color: palette.textSecondary }]}>
+                            {totalMins} mins
+                          </Text>
+                        </View>
+                        <View style={[styles.stageBreakdownQuality, { backgroundColor: getStageColor(stageType) + '30' }]}>
+                          <Text style={[styles.stageBreakdownQualityText, { color: getStageColor(stageType) }]}>
+                            {Math.round(avgQuality * 100)}%
+                          </Text>
+                        </View>
+                      </View>
+                    );
+                  })}
+                </View>
+
+                {/* Optimal Wake Times */}
+                <Text style={[styles.stageSectionTitle, { color: palette.text, marginTop: 20 }]}>
+                  ⏰ Optimal Wake Times
+                </Text>
+                <Text style={[styles.stageOptimalDesc, { color: palette.textSecondary }]}>
+                  Wake at these times to feel refreshed (end of REM cycles)
+                </Text>
+                <View style={styles.optimalTimesGrid}>
+                  {stagePredictionData.optimalWakeTimes.map((time, i) => (
+                    <View key={i} style={[styles.optimalTimeCard, { 
+                      backgroundColor: i === stagePredictionData.optimalWakeTimes.length - 1 ? palette.success + '20' : palette.background,
+                      borderColor: i === stagePredictionData.optimalWakeTimes.length - 1 ? palette.success : palette.border,
+                    }]}>
+                      <Ionicons 
+                        name="alarm" 
+                        size={18} 
+                        color={i === stagePredictionData.optimalWakeTimes.length - 1 ? palette.success : palette.textSecondary} 
+                      />
+                      <Text style={[styles.optimalTimeText, { 
+                        color: i === stagePredictionData.optimalWakeTimes.length - 1 ? palette.success : palette.text 
+                      }]}>
+                        {time}
+                      </Text>
+                      {i === stagePredictionData.optimalWakeTimes.length - 1 && (
+                        <Text style={[styles.optimalTimeBest, { color: palette.success }]}>BEST</Text>
+                      )}
+                    </View>
+                  ))}
+                </View>
+
+                {/* Warnings */}
+                {stagePredictionData.warnings.length > 0 && (
+                  <View style={[styles.stageWarnings, { backgroundColor: palette.warning + '15' }]}>
+                    <Ionicons name="warning" size={20} color={palette.warning} />
+                    <View style={styles.stageWarningsList}>
+                      {stagePredictionData.warnings.map((warning, i) => (
+                        <Text key={i} style={[styles.stageWarningText, { color: palette.warning }]}>
+                          • {warning}
+                        </Text>
+                      ))}
+                    </View>
+                  </View>
+                )}
+
+                {/* Reset Button */}
+                <Pressable
+                  accessibilityRole="button"
+                  style={[styles.actionButton, { backgroundColor: palette.muted, marginTop: 20 }]}
+                  onPress={() => setStagePredictionData(null)}
+                >
+                  <Ionicons name="refresh" size={20} color={palette.text} />
+                  <Text style={[styles.actionButtonText, { color: palette.text }]}>
+                    Try Different Times
+                  </Text>
+                </Pressable>
+              </ScrollView>
+            )}
+          </View>
+        </View>
+      </Modal>
+
+      {/* Dream Analysis Modal */}
+      <Modal
+        visible={showDreamAnalysisModal}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setShowDreamAnalysisModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+            <View style={styles.modalHeader}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>💭 Dream AI Analysis</Text>
+              <Pressable 
+                onPress={() => { setShowDreamAnalysisModal(false); setDreamAnalysis(null); }}
+                accessibilityRole="button"
+                accessibilityLabel="Close modal"
+                hitSlop={HIT_SLOP_12}
+              >
+                <Ionicons name="close" size={24} color={palette.text} />
+              </Pressable>
+            </View>
+
+            {!dreamAnalysis ? (
+              <>
+                <Text style={[styles.modalSubtitle, { color: palette.textSecondary }]}>
+                  Describe your dream and we'll analyze it for themes, symbols, and insights
+                </Text>
+                <TextInput
+                  style={[styles.dreamInputLarge, { color: palette.text, borderColor: palette.border, backgroundColor: palette.background }]}
+                  value={dreamInput}
+                  onChangeText={setDreamInput}
+                  placeholder="I dreamed that I was..."
+                  placeholderTextColor={palette.muted}
+                  multiline
+                  numberOfLines={5}
+                />
+                <Text style={[styles.emotionLabel, { color: palette.text }]}>
+                  How did you feel in the dream?
+                </Text>
+                <View style={styles.emotionGrid}>
+                  {['Fear', 'Anxiety', 'Joy', 'Sad', 'Anger', 'Confusion', 'Peace', 'Excitement'].map(emotion => (
+                    <Pressable
+                      key={emotion}
+                      accessibilityRole="checkbox"
+                      accessibilityState={{ checked: dreamEmotions.includes(emotion.toLowerCase()) }}
+                      style={[
+                        styles.emotionChip,
+                        { 
+                          backgroundColor: dreamEmotions.includes(emotion.toLowerCase()) ? palette.primary : palette.background,
+                          borderColor: palette.border 
+                        }
+                      ]}
+                      onPress={() => toggleEmotion(emotion.toLowerCase())}
+                    >
+                      <Text style={{ color: dreamEmotions.includes(emotion.toLowerCase()) ? palette.onPrimary : palette.text }}>
+                        {emotion}
+                      </Text>
+                    </Pressable>
+                  ))}
+                </View>
+                <Pressable
+                  accessibilityRole="button"
+                  style={[styles.analyzeButton, { backgroundColor: palette.primary }]}
+                  onPress={analyzeDreamWithAI}
+                >
+                  <Ionicons name="sparkles" size={20} color={palette.onPrimary} />
+                  <Text style={[styles.analyzeButtonText, { color: palette.onPrimary }]}>
+                    Analyze Dream
+                  </Text>
+                </Pressable>
+              </>
+            ) : (
+              <ScrollView style={styles.analysisResults}>
+                <View style={styles.analysisSection}>
+                  <Text style={[styles.analysisSectionTitle, { color: palette.text }]}>
+                    🎭 Themes Detected
+                  </Text>
+                  <View style={styles.themeChips}>
+                    {dreamAnalysis.themes.map((theme, i) => (
+                      <View key={i} style={[styles.themeChip, { backgroundColor: palette.primary + '20' }]}>
+                        <Text style={[styles.themeChipText, { color: palette.primary }]}>{theme}</Text>
+                      </View>
+                    ))}
+                  </View>
+                </View>
+                {dreamAnalysis.symbols.length > 0 && (
+                  <View style={styles.analysisSection}>
+                    <Text style={[styles.analysisSectionTitle, { color: palette.text }]}>
+                      🔮 Symbols & Meanings
+                    </Text>
+                    {dreamAnalysis.symbols.map((symbol, i) => (
+                      <View key={i} style={[styles.symbolCard, { backgroundColor: palette.background }]}>
+                        <Text style={[styles.symbolName, { color: palette.text }]}>{symbol.symbol}</Text>
+                        <Text style={[styles.symbolMeaning, { color: palette.textSecondary }]}>
+                          {symbol.possibleMeaning}
+                        </Text>
+                        <Text style={[styles.symbolFrequency, { color: palette.info }]}>
+                          ({symbol.frequency})
+                        </Text>
+                      </View>
+                    ))}
+                  </View>
+                )}
+                <View style={styles.analysisSection}>
+                  <Text style={[styles.analysisSectionTitle, { color: palette.text }]}>
+                    🧠 Processing Type
+                  </Text>
+                  <View style={[styles.processingBadge, { backgroundColor: palette.info + '20' }]}>
+                    <Text style={[styles.processingText, { color: palette.info }]}>
+                      {dreamAnalysis.processingType.replace(/_/g, ' ')}
+                    </Text>
+                  </View>
+                </View>
+                {dreamAnalysis.insights.length > 0 && (
+                  <View style={styles.analysisSection}>
+                    <Text style={[styles.analysisSectionTitle, { color: palette.text }]}>
+                      💡 Insights
+                    </Text>
+                    {dreamAnalysis.insights.map((insight, i) => (
+                      <Text key={i} style={[styles.insightText, { color: palette.textSecondary }]}>
+                        • {insight}
+                      </Text>
+                    ))}
+                  </View>
+                )}
+                {dreamAnalysis.actionableAdvice.length > 0 && (
+                  <View style={styles.analysisSection}>
+                    <Text style={[styles.analysisSectionTitle, { color: palette.text }]}>
+                      ✨ Recommended Actions
+                    </Text>
+                    {dreamAnalysis.actionableAdvice.map((advice, i) => (
+                      <Text key={i} style={[styles.adviceText, { color: palette.success }]}>
+                        ✓ {advice}
+                      </Text>
+                    ))}
+                  </View>
+                )}
+                <Pressable
+                  accessibilityRole="button"
+                  style={[styles.analyzeButton, { backgroundColor: palette.muted, marginTop: 16 }]}
+                  onPress={() => { setDreamAnalysis(null); setDreamInput(''); setDreamEmotions([]); }}
+                >
+                  <Text style={[styles.analyzeButtonText, { color: palette.text }]}>
+                    Analyze Another Dream
+                  </Text>
+                </Pressable>
+              </ScrollView>
+            )}
+          </View>
+        </View>
+      </Modal>
+
+      {/* Optimization Plan Modal */}
+      <Modal
+        visible={showOptimizationModal}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setShowOptimizationModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={[styles.modalContent, { backgroundColor: palette.surface }]}>
+            <View style={styles.modalHeader}>
+              <Text style={[styles.modalTitle, { color: palette.text }]}>📋 Sleep Optimization Plan</Text>
+              <Pressable 
+                onPress={() => setShowOptimizationModal(false)}
+                accessibilityRole="button"
+                accessibilityLabel="Close modal"
+                hitSlop={HIT_SLOP_12}
+              >
+                <Ionicons name="close" size={24} color={palette.text} />
+              </Pressable>
+            </View>
+
+            {optimizationPlan && (
+              <ScrollView>
+                <View style={[styles.planSection, { backgroundColor: palette.background }]}>
+                  <Text style={[styles.planSectionTitle, { color: palette.text }]}>
+                    📅 Daily Actions
+                  </Text>
+                  {optimizationPlan.dailyActions.map((action, i) => (
+                    <View key={i} style={styles.dailyAction}>
+                      <View style={[styles.actionTime, { backgroundColor: palette.primary + '20' }]}>
+                        <Text style={[styles.actionTimeText, { color: palette.primary }]}>{action.time}</Text>
+                      </View>
+                      <View style={styles.actionDetails}>
+                        <Text style={[styles.actionText, { color: palette.text }]}>{action.action}</Text>
+                        <Text style={[styles.actionImportance, { 
+                          color: action.importance === 'required' ? palette.error : palette.textSecondary 
+                        }]}>
+                          {action.importance.toUpperCase()}
+                        </Text>
+                      </View>
+                    </View>
+                  ))}
+                </View>
+
+                <View style={[styles.planSection, { backgroundColor: palette.background }]}>
+                  <Text style={[styles.planSectionTitle, { color: palette.text }]}>
+                    🎯 Weekly Milestones
+                  </Text>
+                  {optimizationPlan.weeklyMilestones.map((milestone, i) => (
+                    <View key={i} style={styles.milestone}>
+                      <View style={[styles.weekBadge, { backgroundColor: palette.success + '20' }]}>
+                        <Text style={[styles.weekText, { color: palette.success }]}>Week {milestone.week}</Text>
+                      </View>
+                      <Text style={[styles.milestoneGoal, { color: palette.text }]}>{milestone.goal}</Text>
+                      <Text style={[styles.milestoneMetric, { color: palette.textSecondary }]}>{milestone.metric}</Text>
+                    </View>
+                  ))}
+                </View>
+
+                <View style={[styles.planSection, { backgroundColor: palette.success + '10' }]}>
+                  <Text style={[styles.planSectionTitle, { color: palette.success }]}>
+                    📈 Expected Improvements
+                  </Text>
+                  <Text style={[styles.improvementText, { color: palette.text }]}>
+                    • Quality increase: +{optimizationPlan.estimatedImprovement.qualityIncrease.toFixed(1)} points
+                  </Text>
+                  <Text style={[styles.improvementText, { color: palette.text }]}>
+                    • Debt repayment: ~{optimizationPlan.estimatedImprovement.debtRepaymentWeeks} weeks
+                  </Text>
+                  <Text style={[styles.improvementText, { color: palette.text }]}>
+                    • Energy boost: +{optimizationPlan.estimatedImprovement.energyImprovement}%
+                  </Text>
+                </View>
+              </ScrollView>
+            )}
+          </View>
+        </View>
+      </Modal>
 
       {/* Chronotype Quiz Modal */}
       <Modal
@@ -1128,6 +2111,620 @@ const styles = StyleSheet.create({
   sleepLogButtonText: {
     fontSize: 16,
     fontWeight: '600',
+  },
+  // === NEW STYLES FOR EXPANDED FEATURES ===
+  tabContainer: {
+    flexDirection: 'row',
+    marginHorizontal: 16,
+    marginBottom: 8,
+    borderRadius: 12,
+    padding: 4,
+  },
+  tab: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    gap: 4,
+  },
+  tabText: {
+    fontSize: 11,
+    fontWeight: '600',
+  },
+  alignmentBadge: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 8,
+    borderRadius: 12,
+    borderWidth: 2,
+    marginLeft: 'auto',
+  },
+  alignmentScore: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  alignmentLabel: {
+    fontSize: 10,
+  },
+  predictionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 16,
+  },
+  predictionEmoji: {
+    fontSize: 32,
+  },
+  predictionConfidence: {
+    fontSize: 12,
+  },
+  predictionScore: {
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  predictionValue: {
+    fontSize: 42,
+    fontWeight: 'bold',
+  },
+  predictionLabel: {
+    fontSize: 14,
+  },
+  factorsList: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  factorItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 16,
+    gap: 4,
+  },
+  factorText: {
+    fontSize: 12,
+  },
+  loadingText: {
+    textAlign: 'center',
+    padding: 24,
+    fontSize: 16,
+  },
+  cardDescription: {
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 12,
+  },
+  actionButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 14,
+    borderRadius: 10,
+    gap: 8,
+  },
+  actionButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  therapyHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 12,
+  },
+  therapyEmoji: {
+    fontSize: 28,
+  },
+  therapyBadge: {
+    alignSelf: 'flex-start',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 8,
+    marginBottom: 12,
+  },
+  therapyType: {
+    fontSize: 12,
+    fontWeight: '700',
+  },
+  therapyDetails: {
+    gap: 8,
+    marginBottom: 12,
+  },
+  therapyRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  therapyText: {
+    fontSize: 14,
+  },
+  therapyBenefit: {
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  jetLagHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 16,
+  },
+  jetLagEmoji: {
+    fontSize: 28,
+  },
+  jetLagSubtitle: {
+    fontSize: 12,
+  },
+  jetLagScore: {
+    alignItems: 'center',
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 16,
+  },
+  jetLagValue: {
+    fontSize: 36,
+    fontWeight: 'bold',
+  },
+  jetLagImpact: {
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  strategiesList: {
+    marginTop: 8,
+  },
+  strategiesTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    marginBottom: 8,
+  },
+  strategyText: {
+    fontSize: 13,
+    lineHeight: 20,
+    marginBottom: 4,
+  },
+  moonGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  moonCard: {
+    width: '48%',
+    padding: 12,
+    borderRadius: 10,
+    alignItems: 'center',
+  },
+  moonEmoji: {
+    fontSize: 24,
+    marginBottom: 4,
+  },
+  moonPhase: {
+    fontSize: 12,
+    fontWeight: '600',
+    textTransform: 'capitalize',
+    marginBottom: 4,
+  },
+  moonQuality: {
+    fontSize: 11,
+  },
+  moonImpactBadge: {
+    marginTop: 6,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 10,
+  },
+  moonImpactText: {
+    fontSize: 10,
+    fontWeight: '600',
+    textTransform: 'uppercase',
+  },
+  planHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 16,
+  },
+  planEmoji: {
+    fontSize: 28,
+  },
+  planFocus: {
+    fontSize: 12,
+    fontWeight: '600',
+    textTransform: 'capitalize',
+  },
+  planGoals: {
+    gap: 10,
+    marginBottom: 16,
+  },
+  goalRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  goalText: {
+    fontSize: 14,
+  },
+  interlinkCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 14,
+    borderRadius: 12,
+    borderWidth: 1,
+    marginBottom: 12,
+  },
+  interlinkIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  interlinkContent: {
+    flex: 1,
+    marginLeft: 12,
+  },
+  interlinkTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 2,
+  },
+  interlinkDesc: {
+    fontSize: 13,
+    marginBottom: 6,
+  },
+  interlinkBenefit: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+    alignSelf: 'flex-start',
+  },
+  interlinkBenefitText: {
+    fontSize: 11,
+    fontWeight: '500',
+  },
+  modalSubtitle: {
+    fontSize: 14,
+    marginBottom: 16,
+    lineHeight: 20,
+  },
+  dreamInputLarge: {
+    borderWidth: 1,
+    borderRadius: 12,
+    padding: 14,
+    fontSize: 15,
+    minHeight: 120,
+    textAlignVertical: 'top',
+    marginBottom: 16,
+  },
+  emotionLabel: {
+    fontSize: 14,
+    fontWeight: '500',
+    marginBottom: 10,
+  },
+  emotionGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginBottom: 20,
+  },
+  emotionChip: {
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 20,
+    borderWidth: 1,
+  },
+  analyzeButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 14,
+    borderRadius: 10,
+    gap: 8,
+  },
+  analyzeButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  analysisResults: {
+    maxHeight: 400,
+  },
+  analysisSection: {
+    marginBottom: 20,
+  },
+  analysisSectionTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 10,
+  },
+  themeChips: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  themeChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 16,
+  },
+  themeChipText: {
+    fontSize: 13,
+    fontWeight: '500',
+    textTransform: 'capitalize',
+  },
+  symbolCard: {
+    padding: 12,
+    borderRadius: 10,
+    marginBottom: 8,
+  },
+  symbolName: {
+    fontSize: 15,
+    fontWeight: '600',
+    textTransform: 'capitalize',
+    marginBottom: 4,
+  },
+  symbolMeaning: {
+    fontSize: 13,
+    lineHeight: 18,
+  },
+  symbolFrequency: {
+    fontSize: 11,
+    marginTop: 4,
+    fontStyle: 'italic',
+  },
+  processingBadge: {
+    alignSelf: 'flex-start',
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 8,
+  },
+  processingText: {
+    fontSize: 14,
+    fontWeight: '600',
+    textTransform: 'capitalize',
+  },
+  insightText: {
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 6,
+  },
+  adviceText: {
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 6,
+  },
+  planSection: {
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 16,
+  },
+  planSectionTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 12,
+  },
+  dailyAction: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: 12,
+  },
+  actionTime: {
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 8,
+  },
+  actionTimeText: {
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  actionDetails: {
+    flex: 1,
+    marginLeft: 12,
+  },
+  actionText: {
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 4,
+  },
+  actionImportance: {
+    fontSize: 10,
+    fontWeight: '600',
+  },
+  milestone: {
+    marginBottom: 14,
+  },
+  weekBadge: {
+    alignSelf: 'flex-start',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+    marginBottom: 6,
+  },
+  weekText: {
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  milestoneGoal: {
+    fontSize: 14,
+    fontWeight: '500',
+    marginBottom: 4,
+  },
+  milestoneMetric: {
+    fontSize: 12,
+  },
+  improvementText: {
+    fontSize: 14,
+    marginBottom: 6,
+  },
+  // === SLEEP STAGE PREDICTION STYLES ===
+  stageInputSection: {
+    marginBottom: 16,
+  },
+  stageInputLabel: {
+    fontSize: 16,
+    fontWeight: '500',
+    marginBottom: 8,
+  },
+  stageTimeInput: {
+    borderWidth: 1,
+    borderRadius: 12,
+    padding: 16,
+    fontSize: 24,
+    textAlign: 'center',
+    fontWeight: '600',
+  },
+  stageResultsContainer: {
+    maxHeight: 500,
+  },
+  stageQualityCard: {
+    alignItems: 'center',
+    padding: 20,
+    borderRadius: 16,
+    marginBottom: 16,
+  },
+  stageQualityValue: {
+    fontSize: 48,
+    fontWeight: 'bold',
+  },
+  stageQualityLabel: {
+    fontSize: 14,
+    marginTop: 4,
+  },
+  stageConfidence: {
+    fontSize: 12,
+    marginTop: 4,
+  },
+  stageCyclesCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 20,
+    gap: 12,
+  },
+  stageCyclesValue: {
+    fontSize: 36,
+    fontWeight: 'bold',
+  },
+  stageCyclesLabel: {
+    fontSize: 16,
+  },
+  stageSectionTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 12,
+  },
+  stageTimeline: {
+    flexDirection: 'row',
+    height: 60,
+    borderRadius: 12,
+    overflow: 'hidden',
+    marginBottom: 12,
+  },
+  stageBar: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: 20,
+  },
+  stageBarEmoji: {
+    fontSize: 16,
+  },
+  stageLegend: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 20,
+    marginBottom: 16,
+  },
+  legendItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  legendDot: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+  },
+  legendText: {
+    fontSize: 12,
+  },
+  stageBreakdown: {
+    gap: 10,
+  },
+  stageBreakdownItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 14,
+    borderRadius: 12,
+  },
+  stageBreakdownEmoji: {
+    fontSize: 24,
+    marginRight: 12,
+  },
+  stageBreakdownInfo: {
+    flex: 1,
+  },
+  stageBreakdownType: {
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  stageBreakdownDuration: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  stageBreakdownQuality: {
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 8,
+  },
+  stageBreakdownQualityText: {
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  stageOptimalDesc: {
+    fontSize: 13,
+    marginBottom: 12,
+  },
+  optimalTimesGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+  },
+  optimalTimeCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 10,
+    borderWidth: 1,
+    gap: 8,
+  },
+  optimalTimeText: {
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  optimalTimeBest: {
+    fontSize: 10,
+    fontWeight: '700',
+  },
+  stageWarnings: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    padding: 14,
+    borderRadius: 12,
+    marginTop: 16,
+    gap: 10,
+  },
+  stageWarningsList: {
+    flex: 1,
+  },
+  stageWarningText: {
+    fontSize: 13,
+    lineHeight: 20,
   },
 });
 
