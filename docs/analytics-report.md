@@ -1,6 +1,6 @@
 # Analytics Event Report
 
-Generated: 2025-12-16T05:58:13.585Z
+Generated: 2025-12-16T17:27:20.961Z
 
 ## Summary
 
@@ -188,15 +188,6 @@ Generated: 2025-12-16T05:58:13.585Z
 | rtw.stage.open | 1 | OK |
 | rtw.resource.open | 1 | OK |
 | document.template.selected | 1 | OK |
-| meds.toggle | 1 | OK |
-| doctor.appt.view | 1 | OK |
-| doctor.prep.tool | 1 | OK |
-| chronic.condition.select | 1 | OK |
-| chronic.condition.add | 1 | OK |
-| chronic.tool.open | 1 | OK |
-| rehab.program.open | 1 | OK |
-| body.area.view | 1 | OK |
-| body.tool.open | 1 | OK |
 | rights.featured.view | 1 | OK |
 | rights.category.browse | 1 | OK |
 | tech.tool.featured | 1 | OK |
@@ -214,6 +205,15 @@ Generated: 2025-12-16T05:58:13.585Z
 | energy_reset_day | 1 | OK |
 | energy.updated | 1 | OK |
 | mood.logged | 1 | OK |
+| meds.toggle | 1 | OK |
+| doctor.appt.view | 1 | OK |
+| doctor.prep.tool | 1 | OK |
+| chronic.condition.select | 1 | OK |
+| chronic.condition.add | 1 | OK |
+| chronic.tool.open | 1 | OK |
+| rehab.program.open | 1 | OK |
+| body.area.view | 1 | OK |
+| body.tool.open | 1 | OK |
 | symptoms.quick.severity | 1 | OK |
 | symptoms.individual.open | 1 | OK |
 | body.tracker.open | 1 | OK |

@@ -24,6 +24,7 @@ import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
 
 import A11yQuickSettings from "./A11yQuickSettings";
+import ComplexityModeIndicator from "./ComplexityModeIndicator";
 import GapView from "./GapView";
 
 // Memoize menu items to prevent recreation on every render
@@ -296,6 +297,9 @@ const ThemedHeader = React.memo(() => {
         >
           <Ionicons name="refresh" size={18} color={palette.text} />
         </Pressable>
+
+        {/* Complexity Mode - easy access to change feature level */}
+        <ComplexityModeIndicator variant="minimal" />
 
         {/* A11y quick settings */}
         <A11yQuickSettings />

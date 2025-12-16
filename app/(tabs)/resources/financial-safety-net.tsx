@@ -34,6 +34,77 @@ export default function FinancialSafetyNetNavigator() {
   const [hasBenefits, setHasBenefits] = React.useState<string>("");
   const [summary, setSummary] = React.useState<string>("");
 
+  // Budget calculator state (Step 3)
+  const [monthlyIncome, setMonthlyIncome] = React.useState<string>("");
+  const [selectedProgram, setSelectedProgram] = React.useState<string>("");
+  const [rent, setRent] = React.useState<string>("");
+  const [utilities, setUtilities] = React.useState<string>("");
+  const [phone, setPhone] = React.useState<string>("");
+  const [transit, setTransit] = React.useState<string>("");
+  const [medications, setMedications] = React.useState<string>("");
+  const [otherFixed, setOtherFixed] = React.useState<string>("");
+  const [budgetResult, setBudgetResult] = React.useState<{
+    remaining: number;
+    dailyGroceries: number;
+    weeklyGroceries: number;
+    fixedExpenses: number;
+  } | null>(null);
+
+  // Canadian disability benefit presets (2024-2025 rates, approximate)
+  // These are rough monthly maximums - actual amounts vary by situation
+  const BENEFIT_PRESETS: { id: string; label: string; province?: string; amount: number; note: string }[] = [
+    // Federal Programs
+    { id: "cpp-d", label: "CPP Disability", amount: 1606, note: "Max $1,606.78/mo (2024)" },
+    { id: "cpp-d-child", label: "CPP-D + Child Benefit", amount: 1900, note: "CPP-D + approx child portion" },
+    { id: "oas-gis", label: "OAS + GIS (65+)", amount: 1800, note: "Combined for single, low income" },
+    
+    // Provincial Programs
+    { id: "odsp-single", label: "ODSP (ON) - Single", province: "ON", amount: 1308, note: "$1,308/mo (2024)" },
+    { id: "odsp-couple", label: "ODSP (ON) - Couple", province: "ON", amount: 1981, note: "$1,981/mo (2024)" },
+    { id: "aish-single", label: "AISH (AB) - Single", province: "AB", amount: 1863, note: "$1,863/mo (2024)" },
+    { id: "aish-couple", label: "AISH (AB) - Couple", province: "AB", amount: 2583, note: "$2,583/mo (2024)" },
+    { id: "pwd-single", label: "PWD (BC) - Single", province: "BC", amount: 1483, note: "$1,483.50/mo (2024)" },
+    { id: "said-single", label: "SAID (SK) - Single", province: "SK", amount: 1200, note: "~$1,200/mo varies" },
+    { id: "eia-single", label: "EIA-Disability (MB)", province: "MB", amount: 1200, note: "~$1,200/mo varies" },
+    { id: "nb-single", label: "NB Disability (NB)", province: "NB", amount: 950, note: "~$950/mo varies" },
+    { id: "ns-single", label: "NS Disability (NS)", province: "NS", amount: 950, note: "~$950/mo varies" },
+    
+    // Combined scenarios
+    { id: "cpp-odsp", label: "CPP-D + ODSP top-up (ON)", province: "ON", amount: 1700, note: "CPP-D with ODSP supplement" },
+    { id: "cpp-aish", label: "CPP-D + AISH (AB)", province: "AB", amount: 1863, note: "AISH claws back CPP-D" },
+    { id: "custom", label: "Enter custom amount", amount: 0, note: "" },
+  ];
+
+  const selectBenefitProgram = (programId: string) => {
+    setSelectedProgram(programId);
+    const preset = BENEFIT_PRESETS.find(p => p.id === programId);
+    if (preset && preset.amount > 0) {
+      setMonthlyIncome(preset.amount.toString());
+    }
+  };
+
+  const calculateBudget = () => {
+    const income = parseFloat(monthlyIncome) || 0;
+    const fixedExpenses = 
+      (parseFloat(rent) || 0) +
+      (parseFloat(utilities) || 0) +
+      (parseFloat(phone) || 0) +
+      (parseFloat(transit) || 0) +
+      (parseFloat(medications) || 0) +
+      (parseFloat(otherFixed) || 0);
+    
+    const remaining = income - fixedExpenses;
+    const dailyGroceries = remaining / 30;
+    const weeklyGroceries = remaining / 4;
+    
+    setBudgetResult({
+      remaining,
+      dailyGroceries,
+      weeklyGroceries,
+      fixedExpenses,
+    });
+  };
+
   const parseDate = (s: string) => {
     const m = /^\s*(\d{4})-(\d{2})-(\d{2})\s*$/.exec(s);
     if (!m) return null;
@@ -120,7 +191,141 @@ export default function FinancialSafetyNetNavigator() {
               </A11yPressable>
             </View>
           )}
-          <NavButtons onBack={() => setStep(1)} />
+          <NavButtons onBack={() => setStep(1)} onNext={() => setStep(3)} />
+        </Step>
+      )}
+
+      {step === 3 && (
+        <Step n={3} title="Budget Calculator">
+          <Text style={[styles.text, { marginBottom: 8 }]}>
+            Track your disability income and expenses. See how much you have left for groceries and essentials each month.
+          </Text>
+
+          {/* Income Program Selection */}
+          <Text style={[styles.text, { fontWeight: "700", marginTop: 8 }]}>💵 Select your income program:</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginVertical: 8 }}>
+            <GapView gap={8} style={{ flexDirection: "row" }}>
+              {BENEFIT_PRESETS.filter(p => !p.province || p.province === province.toUpperCase() || province === "").slice(0, 8).map((preset) => (
+                <A11yPressable
+                  key={preset.id}
+                  onPress={() => selectBenefitProgram(preset.id)}
+                  accessibilityLabel={`${preset.label}: ${preset.note}`}
+                  style={{
+                    borderWidth: 1,
+                    borderColor: selectedProgram === preset.id ? palette.primary : palette.muted,
+                    backgroundColor: selectedProgram === preset.id ? palette.primary : "transparent",
+                    paddingVertical: 8,
+                    paddingHorizontal: 12,
+                    borderRadius: 8,
+                    minWidth: 100,
+                  }}
+                >
+                  <Text style={{ color: selectedProgram === preset.id ? palette.onPrimary : palette.text, fontWeight: "600", fontSize: 12 }}>
+                    {preset.label}
+                  </Text>
+                  {preset.amount > 0 && (
+                    <Text style={{ color: selectedProgram === preset.id ? palette.onPrimary : palette.textSecondary, fontSize: 11 }}>
+                      ${preset.amount}/mo
+                    </Text>
+                  )}
+                </A11yPressable>
+              ))}
+            </GapView>
+          </ScrollView>
+
+          <Text style={styles.text}>Monthly income ($)</Text>
+          <TextInput
+            value={monthlyIncome}
+            onChangeText={setMonthlyIncome}
+            placeholder="e.g., 1308"
+            style={styles.input}
+            keyboardType="numeric"
+            accessibilityLabel="Monthly income in dollars"
+          />
+
+          <Text style={[styles.text, { fontWeight: "700", marginTop: 12 }]}>🏠 Fixed Monthly Expenses:</Text>
+          
+          <Text style={styles.text}>Rent / Mortgage ($)</Text>
+          <TextInput value={rent} onChangeText={setRent} placeholder="e.g., 800" style={styles.input} keyboardType="numeric" />
+          
+          <Text style={styles.text}>Utilities (hydro, heat, water) ($)</Text>
+          <TextInput value={utilities} onChangeText={setUtilities} placeholder="e.g., 100" style={styles.input} keyboardType="numeric" />
+          
+          <Text style={styles.text}>Phone / Internet ($)</Text>
+          <TextInput value={phone} onChangeText={setPhone} placeholder="e.g., 60" style={styles.input} keyboardType="numeric" />
+          
+          <Text style={styles.text}>Transit / Transportation ($)</Text>
+          <TextInput value={transit} onChangeText={setTransit} placeholder="e.g., 50" style={styles.input} keyboardType="numeric" />
+          
+          <Text style={styles.text}>Medications / Medical ($)</Text>
+          <TextInput value={medications} onChangeText={setMedications} placeholder="e.g., 30" style={styles.input} keyboardType="numeric" />
+          
+          <Text style={styles.text}>Other fixed expenses ($)</Text>
+          <TextInput value={otherFixed} onChangeText={setOtherFixed} placeholder="e.g., 50" style={styles.input} keyboardType="numeric" />
+
+          <View style={{ height: 12 }} />
+          <A11yPressable onPress={calculateBudget} accessibilityLabel="Calculate remaining budget" style={styles.cta}>
+            <Text style={styles.ctaText}>Calculate Budget</Text>
+          </A11yPressable>
+
+          {budgetResult && (
+            <View style={{ marginTop: 16, backgroundColor: palette.card, padding: 16, borderRadius: 12 }}>
+              <Text style={[styles.text, { fontWeight: "700", fontSize: 16, marginBottom: 8 }]}>📊 Your Budget Breakdown</Text>
+              
+              <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 4 }}>
+                <Text style={styles.text}>Total Income:</Text>
+                <Text style={[styles.text, { fontWeight: "600" }]}>${parseFloat(monthlyIncome) || 0}</Text>
+              </View>
+              
+              <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 4 }}>
+                <Text style={styles.text}>Fixed Expenses:</Text>
+                <Text style={[styles.text, { fontWeight: "600", color: palette.error }]}>-${budgetResult.fixedExpenses.toFixed(2)}</Text>
+              </View>
+              
+              <View style={{ height: 1, backgroundColor: palette.muted, marginVertical: 8 }} />
+              
+              <View style={{ flexDirection: "row", justifyContent: "space-between", marginBottom: 8 }}>
+                <Text style={[styles.text, { fontWeight: "700" }]}>Remaining for Groceries & Essentials:</Text>
+                <Text style={[styles.text, { fontWeight: "700", color: budgetResult.remaining >= 0 ? palette.success : palette.error }]}>
+                  ${budgetResult.remaining.toFixed(2)}
+                </Text>
+              </View>
+
+              <View style={{ backgroundColor: palette.info + "22", padding: 12, borderRadius: 8, marginTop: 8 }}>
+                <Text style={[styles.text, { fontWeight: "600", marginBottom: 4 }]}>💡 Budget Tips:</Text>
+                <Text style={styles.text}>• Weekly grocery budget: ~${budgetResult.weeklyGroceries.toFixed(2)}</Text>
+                <Text style={styles.text}>• Daily spending limit: ~${budgetResult.dailyGroceries.toFixed(2)}</Text>
+                {budgetResult.remaining < 200 && (
+                  <Text style={[styles.text, { color: palette.warning, marginTop: 4 }]}>
+                    ⚠️ Budget is tight. Consider food banks, community meals, or emergency funds.
+                  </Text>
+                )}
+                {budgetResult.remaining < 0 && (
+                  <Text style={[styles.text, { color: palette.error, marginTop: 4 }]}>
+                    🚨 Expenses exceed income. Contact your worker about emergency support.
+                  </Text>
+                )}
+              </View>
+
+              <View style={{ height: 8 }} />
+              <A11yPressable 
+                onPress={() => copyToClipboard(
+                  `Monthly Budget Summary\n` +
+                  `Income: $${monthlyIncome}\n` +
+                  `Fixed Expenses: $${budgetResult.fixedExpenses.toFixed(2)}\n` +
+                  `Remaining: $${budgetResult.remaining.toFixed(2)}\n` +
+                  `Weekly Groceries: $${budgetResult.weeklyGroceries.toFixed(2)}\n` +
+                  `Daily Limit: $${budgetResult.dailyGroceries.toFixed(2)}`
+                )} 
+                accessibilityLabel="Copy budget summary" 
+                style={styles.secondary}
+              >
+                <Text style={{ color: palette.text, fontWeight: "700" }}>Copy Summary</Text>
+              </A11yPressable>
+            </View>
+          )}
+
+          <NavButtons onBack={() => setStep(2)} />
         </Step>
       )}
     </ScrollView>

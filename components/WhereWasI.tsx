@@ -24,6 +24,7 @@ import {
     formatRelativeTime,
     getRecentHistory,
     subscribe,
+    useCognitiveComfort,
     type NavigationHistoryEntry,
 } from '../store/cognitiveComfort';
 import { useAppPalette } from '../theme/usePalette';
@@ -53,6 +54,7 @@ export function WhereWasI({
   const { t } = useTranslation();
   const palette = useAppPalette();
   const router = useRouter();
+  const { whereWasIEnabled } = useCognitiveComfort();
   
   const [isOpen, setIsOpen] = useState(false);
   const [history, setHistory] = useState<NavigationHistoryEntry[]>([]);
@@ -93,7 +95,8 @@ export function WhereWasI({
     announce(t('cognitive.navigatingTo', 'Navigating to {{screen}}', { screen: entry.screenName }));
   }, [router, t]);
   
-  if (!visible || history.length === 0) return null;
+  // Don't show if disabled in settings, or if visible prop is false, or no history
+  if (!whereWasIEnabled || !visible || history.length === 0) return null;
   
   return (
     <>

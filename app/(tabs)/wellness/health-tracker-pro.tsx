@@ -1,12 +1,14 @@
 /**
- * Health Tracker Pro - Power Tool
+ * Unified Health Hub - Power Tool
  * 
- * Consolidates 12 tracking/monitoring features into 5 tabs:
+ * Consolidates ALL health tracking and management features into 7 tabs:
  * - Symptoms: Symptom Tracker, Chronic Tracker, Trigger Detector
- * - Body: Health Tracker, Cognitive Scanner
+ * - Meds: Medication tracking, refills, reminders
+ * - Doctor: Appointments, visit prep, medical history
+ * - Body: Health Tracker, Cognitive Scanner, vitals
  * - Environment: Environmental Adaptation, Sensory Overload
  * - Nutrition: Nutrition Guides, Harm Reduction
- * - Self-Care: Self-Care Library
+ * - Self-Care: Self-Care Library, daily checklist
  */
 
 /* eslint-disable no-restricted-syntax */ // Severity level colors are intentional
@@ -231,7 +233,351 @@ const createSymptomsStyles = (_palette: any) => StyleSheet.create({
 
 
 // ============================================
-// TAB 2: BODY (Standard Mode)
+// TAB 2: MEDS (Simple Mode)
+// ============================================
+function MedsTab({ navigateToTab }: PowerToolTabProps) {
+  const { t } = useTranslation();
+  const palette = useAppPalette();
+
+  const todayMeds = [
+    { id: '1', name: 'Pain Medication', dosage: '10mg', time: '8:00 AM', taken: true },
+    { id: '2', name: 'Vitamin D', dosage: '1000 IU', time: '8:00 AM', taken: true },
+    { id: '3', name: 'Anti-inflammatory', dosage: '200mg', time: '12:00 PM', taken: false },
+    { id: '4', name: 'Evening Medication', dosage: '25mg', time: '8:00 PM', taken: false },
+  ];
+
+  const upcomingRefills = [
+    { id: '1', name: 'Pain Medication', refillDate: 'Dec 18', daysLeft: 7 },
+    { id: '2', name: 'Anti-inflammatory', refillDate: 'Dec 25', daysLeft: 14 },
+  ];
+
+  const takenCount = todayMeds.filter(m => m.taken).length;
+  const totalCount = todayMeds.length;
+
+  const styles = createMedsStyles(palette);
+
+  return (
+    <PowerToolTabContent scrollable>
+      {/* Today's Progress */}
+      <View style={[styles.progressCard, { backgroundColor: palette.primary + '15' }]}>
+        <Text style={[styles.progressTitle, { color: palette.text }]}>
+          {t('meds.today.title', 'Today\'s Medications')}
+        </Text>
+        <View style={styles.progressCircle}>
+          <Text style={[styles.progressNumber, { color: palette.primary }]}>
+            {takenCount}/{totalCount}
+          </Text>
+          <Text style={[styles.progressLabel, { color: palette.secondaryText }]}>taken</Text>
+        </View>
+      </View>
+
+      <GapView style={{ height: 16 }} />
+
+      {/* Medication List */}
+      <PowerToolSection title={t('meds.schedule.title', 'Schedule')}>
+        {todayMeds.map((med) => (
+          <A11yPressable
+            key={med.id}
+            onPress={() => {
+              trackEvent('meds.toggle', { id: med.id, taken: !med.taken });
+            }}
+            accessibilityLabel={`${med.name}, ${med.dosage}, ${med.time}, ${med.taken ? 'taken' : 'not taken'}`}
+            hitSlop={HIT_SLOP_8}
+            style={[styles.medCard, { backgroundColor: palette.card }]}
+          >
+            <View style={[
+              styles.checkbox,
+              { 
+                backgroundColor: med.taken ? palette.success : 'transparent',
+                borderColor: med.taken ? palette.success : palette.border,
+              },
+            ]}>
+              {med.taken && <Ionicons name="checkmark" size={16} color="#FFFFFF" />}
+            </View>
+            <View style={styles.medInfo}>
+              <Text style={[
+                styles.medName, 
+                { color: palette.text, opacity: med.taken ? 0.6 : 1 }
+              ]}>
+                {med.name}
+              </Text>
+              <Text style={[styles.medDosage, { color: palette.secondaryText }]}>
+                {med.dosage} • {med.time}
+              </Text>
+            </View>
+          </A11yPressable>
+        ))}
+      </PowerToolSection>
+
+      <GapView style={{ height: 16 }} />
+
+      {/* Refills */}
+      <PowerToolSection title={t('meds.refills.title', 'Upcoming Refills')}>
+        {upcomingRefills.map((refill) => (
+          <View key={refill.id} style={[styles.refillCard, { backgroundColor: palette.card }]}>
+            <View style={styles.refillInfo}>
+              <Text style={[styles.refillName, { color: palette.text }]}>{refill.name}</Text>
+              <Text style={[styles.refillDate, { color: palette.secondaryText }]}>
+                Refill by {refill.refillDate}
+              </Text>
+            </View>
+            <View style={[
+              styles.refillBadge, 
+              { backgroundColor: refill.daysLeft <= 7 ? palette.warning + '20' : palette.primary + '20' }
+            ]}>
+              <Text style={[
+                styles.refillDays, 
+                { color: refill.daysLeft <= 7 ? palette.warning : palette.primary }
+              ]}>
+                {refill.daysLeft}d
+              </Text>
+            </View>
+          </View>
+        ))}
+      </PowerToolSection>
+
+      <GapView style={{ height: 16 }} />
+
+      <PowerToolAction
+        label={t('meds.doctor.explore', 'Doctor Visit Prep')}
+        icon="medical"
+        onPress={() => navigateToTab('doctor')}
+      />
+    </PowerToolTabContent>
+  );
+}
+
+const createMedsStyles = (_palette: any) => StyleSheet.create({
+  progressCard: {
+    padding: 20,
+    borderRadius: 16,
+    alignItems: 'center',
+  },
+  progressTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 12,
+  },
+  progressCircle: {
+    alignItems: 'center',
+  },
+  progressNumber: {
+    fontSize: 36,
+    fontWeight: '700',
+  },
+  progressLabel: {
+    fontSize: 14,
+  },
+  medCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 8,
+  },
+  checkbox: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
+  },
+  medInfo: {
+    flex: 1,
+  },
+  medName: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  medDosage: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  refillCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 8,
+  },
+  refillInfo: {
+    flex: 1,
+  },
+  refillName: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  refillDate: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  refillBadge: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 12,
+  },
+  refillDays: {
+    fontSize: 14,
+    fontWeight: '700',
+  },
+});
+
+
+// ============================================
+// TAB 3: DOCTOR (Standard Mode)
+// ============================================
+function DoctorTab({ navigateToTab }: PowerToolTabProps) {
+  const { t } = useTranslation();
+  const palette = useAppPalette();
+  const router = useRouter();
+
+  const upcomingAppts = [
+    { id: '1', doctor: 'Dr. Smith', specialty: 'Primary Care', date: 'Dec 18, 2024', time: '10:00 AM' },
+    { id: '2', doctor: 'Dr. Johnson', specialty: 'Rheumatology', date: 'Jan 5, 2025', time: '2:30 PM' },
+  ];
+
+  const prepTools = [
+    { id: 'symptoms', emoji: '📝', name: 'Symptom Summary', desc: 'Prepare your symptom report' },
+    { id: 'questions', emoji: '❓', name: 'Questions List', desc: 'Don\'t forget to ask' },
+    { id: 'history', emoji: '📋', name: 'Medical History', desc: 'Your health timeline' },
+    { id: 'meds', emoji: '💊', name: 'Medication List', desc: 'Current medications' },
+  ];
+
+  const styles = createDoctorStyles(palette);
+
+  return (
+    <PowerToolTabContent scrollable>
+      {/* Upcoming Appointments */}
+      <PowerToolSection title={t('doctor.appts.title', 'Upcoming Appointments')}>
+        {upcomingAppts.map((appt) => (
+          <A11yPressable
+            key={appt.id}
+            onPress={() => {
+              trackEvent('doctor.appt.view', { id: appt.id });
+              router.push('/resources/doctor-visit-prep' as any);
+            }}
+            accessibilityLabel={`${appt.doctor}, ${appt.specialty}, ${appt.date}`}
+            hitSlop={HIT_SLOP_8}
+            style={[styles.apptCard, { backgroundColor: palette.card }]}
+          >
+            <View style={[styles.apptIcon, { backgroundColor: palette.primary + '20' }]}>
+              <Ionicons name="person" size={24} color={palette.primary} />
+            </View>
+            <View style={styles.apptInfo}>
+              <Text style={[styles.apptDoctor, { color: palette.text }]}>{appt.doctor}</Text>
+              <Text style={[styles.apptSpecialty, { color: palette.secondaryText }]}>{appt.specialty}</Text>
+              <Text style={[styles.apptDateTime, { color: palette.primary }]}>
+                {appt.date} at {appt.time}
+              </Text>
+            </View>
+            <View style={styles.prepButton}>
+              <Text style={[styles.prepButtonText, { color: palette.primary }]}>Prep</Text>
+            </View>
+          </A11yPressable>
+        ))}
+      </PowerToolSection>
+
+      <GapView style={{ height: 16 }} />
+
+      {/* Prep Tools */}
+      <PowerToolSection title={t('doctor.prep.title', 'Visit Preparation')}>
+        <View style={styles.prepGrid}>
+          {prepTools.map((tool) => (
+            <A11yPressable
+              key={tool.id}
+              onPress={() => {
+                trackEvent('doctor.prep.tool', { tool: tool.id });
+                router.push('/resources/doctor-visit-prep' as any);
+              }}
+              accessibilityLabel={tool.name}
+              hitSlop={HIT_SLOP_8}
+              style={[styles.prepCard, { backgroundColor: palette.card }]}
+            >
+              <Text style={styles.prepEmoji}>{tool.emoji}</Text>
+              <Text style={[styles.prepName, { color: palette.text }]}>{tool.name}</Text>
+            </A11yPressable>
+          ))}
+        </View>
+      </PowerToolSection>
+
+      <GapView style={{ height: 16 }} />
+
+      <PowerToolAction
+        label={t('doctor.body.explore', 'Body Metrics')}
+        icon="fitness"
+        onPress={() => navigateToTab('body')}
+      />
+    </PowerToolTabContent>
+  );
+}
+
+const createDoctorStyles = (_palette: any) => StyleSheet.create({
+  apptCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 8,
+  },
+  apptIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
+  },
+  apptInfo: {
+    flex: 1,
+  },
+  apptDoctor: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  apptSpecialty: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  apptDateTime: {
+    fontSize: 12,
+    fontWeight: '600',
+    marginTop: 4,
+  },
+  prepButton: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+  },
+  prepButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  prepGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+  },
+  prepCard: {
+    width: '48%',
+    padding: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+  },
+  prepEmoji: {
+    fontSize: 32,
+    marginBottom: 8,
+  },
+  prepName: {
+    fontSize: 12,
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+});
+
+
+// ============================================
+// TAB 4: BODY (Standard Mode)
 // ============================================
 function BodyTab({ navigateToTab }: PowerToolTabProps) {
   const { t } = useTranslation();
@@ -776,7 +1122,7 @@ const createSelfCareStyles = (_palette: any) => StyleSheet.create({
 // ============================================
 // MAIN EXPORT
 // ============================================
-export default function HealthTrackerPro() {
+export default function UnifiedHealthHub() {
   const { t } = useTranslation();
 
   const tabs: PowerToolTab[] = [
@@ -786,7 +1132,23 @@ export default function HealthTrackerPro() {
       icon: '🩹',
       component: SymptomsTab,
       complexity: 'simple',
-      keywords: ['symptom', 'pain', 'fatigue', 'track', 'log'],
+      keywords: ['symptom', 'pain', 'fatigue', 'track', 'log', 'chronic'],
+    },
+    {
+      id: 'meds',
+      label: t('health.tabs.meds', 'Meds'),
+      icon: '💊',
+      component: MedsTab,
+      complexity: 'simple',
+      keywords: ['medication', 'pills', 'prescription', 'refill', 'dose'],
+    },
+    {
+      id: 'doctor',
+      label: t('health.tabs.doctor', 'Doctor'),
+      icon: '👨‍⚕️',
+      component: DoctorTab,
+      complexity: 'standard',
+      keywords: ['doctor', 'appointment', 'visit', 'prep', 'medical'],
     },
     {
       id: 'body',
@@ -826,16 +1188,18 @@ export default function HealthTrackerPro() {
   return (
     <ResponsiveScreenWrapper>
       <PowerTool
-        title={t('health.title', 'Health Tracker Pro')}
-        subtitle={t('health.subtitle', 'Comprehensive health & wellness monitoring')}
-        icon="📊"
+        title={t('health.title', 'Unified Health Hub')}
+        subtitle={t('health.subtitle', 'Complete health tracking, medications & medical management')}
+        icon="🏥"
         tabs={tabs}
         defaultTab="symptoms"
         showSearch
         searchPlaceholder={t('health.search', 'Search health tools...')}
-        analyticsPrefix="health_tracker"
+        analyticsPrefix="unified_health"
       />
     </ResponsiveScreenWrapper>
   );
 }
 
+// Keep legacy export name for backwards compatibility
+export { UnifiedHealthHub as HealthTrackerPro };

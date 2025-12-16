@@ -53,6 +53,7 @@ const DEFAULT_ALLOW = [
   'circadian-dj\\.tsx',
   'aiGroundingCompanion\\.ts',
   'TermsGate\\.tsx',
+  'health-tracker-pro\\.tsx', // Unified Health Hub - consolidates 7 health tracking features
 ];
 
 const envAllow = process.env.PERF_MAX_ALLOW || '';

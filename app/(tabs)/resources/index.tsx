@@ -272,29 +272,6 @@ export default function ResourcesScreen() {
             marginBottom: 12,
             backgroundColor: palette.card
           }}
-          onPress={() => router.push('/(tabs)/resources/health-management-hub' as any)}
-        >
-          <Text style={{ color: palette.text, fontWeight: '700', fontSize: 16 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            🏥 Health Management Hub
-          </Text>
-          <Text style={{ color: palette.text, fontSize: 14, marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            5 tabs: Meds, Doctor, Chronic, Rehab, Body
-          </Text>
-          <Text style={{ color: palette.primary, fontSize: 12, fontWeight: '600', marginTop: 4 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-            POWER TOOL
-          </Text>
-        </A11yPressable>
-        
-        <A11yPressable
-          hitSlop={HIT_SLOP_8}
-          style={{ 
-            borderWidth: StyleSheet.hairlineWidth, 
-            borderColor: palette.muted, 
-            borderRadius: 12, 
-            padding: 12, 
-            marginBottom: 12,
-            backgroundColor: palette.card
-          }}
           onPress={() => router.push('/(tabs)/resources/knowledge-base' as any)}
         >
           <Text style={{ color: palette.text, fontWeight: '700', fontSize: 16 }} maxFontSizeMultiplier={MAX_FONT_SCALE}>

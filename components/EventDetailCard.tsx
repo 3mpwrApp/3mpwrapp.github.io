@@ -277,7 +277,7 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     energyText: {
       fontSize: 11 * factor,
-      color: palette.textMuted,
+      color: palette.textSecondary,
       fontWeight: '600',
     },
     metaRow: {
@@ -288,7 +288,7 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     metaText: {
       fontSize: 14 * factor,
-      color: palette.textMuted,
+      color: palette.textSecondary,
     },
     linkText: {
       fontSize: 12 * factor,
@@ -336,7 +336,7 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     notesText: {
       fontSize: 13 * factor,
-      color: palette.textMuted,
+      color: palette.textSecondary,
       lineHeight: 18 * factor,
     },
     registrationSection: {
@@ -355,7 +355,7 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     capacityText: {
       fontSize: 12 * factor,
-      color: palette.textMuted,
+      color: palette.textSecondary,
       marginTop: 2 * factor,
     },
     deadlineText: {
@@ -376,7 +376,7 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     contactText: {
       fontSize: 12 * factor,
-      color: palette.textMuted,
+      color: palette.textSecondary,
       marginTop: 2 * factor,
     },
     tagContainer: {
@@ -396,7 +396,7 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number)
     },
     tagText: {
       fontSize: 11 * factor,
-      color: palette.textMuted,
+      color: palette.textSecondary,
       fontWeight: '500',
     },
   });

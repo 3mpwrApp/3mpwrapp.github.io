@@ -11,7 +11,6 @@ import SimpleModeWelcome from '../../../components/SimpleModeWelcome';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
-import { CONSOLIDATION_FLAGS, isConsolidationFeatureEnabled } from '../../../services/consolidationFlags';
 import { useComplexityMode } from '../../../store/complexityMode';
 import { createTextStyles } from '../../../theme/typography.enhanced';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -64,14 +63,6 @@ export default function WellnessHub() {
   const { isFeatureVisible } = useComplexityMode();
   
   const [query, setQuery] = React.useState('');
-  const [unifiedHealthTrackerEnabled, setUnifiedHealthTrackerEnabled] = React.useState(false);
-
-  // Check feature flag on mount
-  React.useEffect(() => {
-    isConsolidationFeatureEnabled(CONSOLIDATION_FLAGS.UNIFIED_HEALTH_TRACKER)
-      .then(setUnifiedHealthTrackerEnabled)
-      .catch(() => setUnifiedHealthTrackerEnabled(false));
-  }, []);
   
   // Memoize helper functions
   const norm = React.useCallback((v: string) => v.toLowerCase().replace(/\s+/g, '-'), []);
@@ -129,7 +120,8 @@ export default function WellnessHub() {
     []
   );
   
-  const label = React.useCallback(
+  // Helper for labeling beta/coming soon features (kept for future use)
+  const _label = React.useCallback(
     (href: string, title: string) =>
       BETA.has(href)
         ? `${title} (Beta)`
@@ -168,12 +160,12 @@ export default function WellnessHub() {
         placeholder={t('wellness.search', 'Search wellness tools...')}
       />
 
-      {/* Featured: Consolidated Hubs */}
+      {/* Featured: 4 Main Consolidated Power Hubs */}
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-        {t('wellness.sections.featured', '⭐ Featured Hubs')}
+        {t('wellness.sections.featured', '⭐ Wellness Power Hubs')}
       </Text>
       <GapView gap={12}>
-        {/* Power Tool: Energy Command Center - available in Simple Mode */}
+        {/* Power Tool 1: Energy Command Center - available in Simple Mode */}
         {matches('/wellness/energy-command-center') && (
           <Pressable
             hitSlop={HIT_SLOP_8}
@@ -211,29 +203,53 @@ export default function WellnessHub() {
               </Text>
             </Pressable>
         )}
-        {/* Power Tool: Health Tracker Pro - Standard mode */}
-        {isFeatureVisible('standard') && matches('/wellness/health-tracker-pro') && (
-          <Card
-            href="/wellness/health-tracker-pro"
-            title="📊 Health Tracker Pro"
-            desc="Comprehensive health tracking: symptoms, body mapping, environment, nutrition, and self-care. Power Tool with 5 tabs."
-          />
-        )}
-        {/* Power Tool: Movement Power Tool - Standard mode */}
-        {isFeatureVisible('standard') && matches('/wellness/movement-power-tool') && (
-          <Card
-            href="/wellness/movement-power-tool"
-            title="💪 Movement & Rehab Hub"
-            desc="Exercise, rehabilitation, adaptive movement, and recovery tools. Power Tool with 4 tabs."
-          />
-        )}
-        {/* Legacy: Energy Hub - available in Simple Mode */}
-        {matches('/wellness/energy-hub') && (
+        
+        {/* Power Tool 2: Unified Health Hub - available in Simple Mode for meds */}
+        {matches('/wellness/health-tracker-pro') && (
           <Pressable
             hitSlop={HIT_SLOP_8}
             accessibilityRole="button"
-            accessibilityLabel="Energy and Mood Hub - Track energy, mood, sleep, and pacing in one place"
-            onPress={() => router.push('/wellness/energy-hub')}
+            accessibilityLabel="Unified Health Hub - Symptoms, medications, doctor visits, body metrics, and self-care"
+            onPress={() => router.push('/(tabs)/wellness/health-tracker-pro' as any)}
+            style={({ pressed }) => [
+              {
+                borderWidth: 2,
+                borderColor: palette.success,
+                borderRadius: 12,
+                padding: 16,
+                backgroundColor: palette.success + '10',
+              },
+              pressed && { opacity: 0.7 },
+            ]}
+          >
+            <Text
+              style={{ color: palette.success, fontWeight: 'bold', fontSize: 18, lineHeight: 24 }}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              🏥 Unified Health Hub
+            </Text>
+            <Text
+              style={{ color: palette.text, marginTop: 6, fontSize: 15, lineHeight: 22 }}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              All-in-one health management: symptoms, medications, doctor visits, body metrics, environment, nutrition, and self-care.
+            </Text>
+            <Text
+              style={{ color: palette.success, marginTop: 8, fontSize: 13, fontWeight: '600' }}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              🔧 Power Tool • 7 Tabs • Consolidates 20+ features
+            </Text>
+          </Pressable>
+        )}
+        
+        {/* Power Tool 3: Mental Wellness Toolkit - Standard mode and above */}
+        {isFeatureVisible('standard') && matches('/wellness/mental-wellness-toolkit') && (
+          <Pressable
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="button"
+            accessibilityLabel="Mental Wellness Toolkit - CBT, DBT, grounding, and crisis tools"
+            onPress={() => router.push('/(tabs)/wellness/mental-wellness-toolkit' as any)}
             style={({ pressed }) => [
               {
                 borderWidth: StyleSheet.hairlineWidth,
@@ -245,54 +261,85 @@ export default function WellnessHub() {
               pressed && { opacity: 0.7 },
             ]}
           >
-              <Text
-                style={{ color: palette.text, fontWeight: 'bold', fontSize: 16, lineHeight: 24 }}
-                maxFontSizeMultiplier={MAX_FONT_SCALE}
-              >
-                ⚡ Energy & Mood Hub (Classic)
-              </Text>
-              <Text
-                style={{ color: palette.text, marginTop: 6, fontSize: 15, lineHeight: 22 }}
-                maxFontSizeMultiplier={MAX_FONT_SCALE}
-              >
-                Track energy (spoons), mood, sleep, and pacing. Includes forecasting and community features.
-              </Text>
-              <Text
-                style={{ color: palette.primary, marginTop: 8, fontSize: 13, fontWeight: '600' }}
-                maxFontSizeMultiplier={MAX_FONT_SCALE}
-              >
-                Consolidates 6 tools: Spoons, Mood, Sleep, Pacing & More
-              </Text>
-            </Pressable>
+            <Text
+              style={{ color: palette.text, fontWeight: 'bold', fontSize: 16, lineHeight: 24 }}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              🧠 Mental Wellness Toolkit
+            </Text>
+            <Text
+              style={{ color: palette.text, marginTop: 6, fontSize: 15, lineHeight: 22 }}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              All CBT/DBT tools in one place: thought reframing, emotion skills, grounding, and crisis tools.
+            </Text>
+            <Text
+              style={{ color: palette.primary, marginTop: 8, fontSize: 13, fontWeight: '600' }}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              🔧 Power Tool • 8 Tabs • Consolidates 8 cognitive tools
+            </Text>
+          </Pressable>
         )}
-        {/* Health Tracker - Standard mode and above */}
-        {isFeatureVisible('standard') && unifiedHealthTrackerEnabled && matches('/wellness/health-tracker') && (
-          <Card
-            href="/wellness/health-tracker"
-            title="🏥 Unified Health Tracker"
-            desc="Track symptoms, pain, chronic conditions, rehab, and pacing in one place. Consolidates 5 tracking tools."
-          />
-        )}
-        {/* Mental Wellness Toolkit - Standard mode and above */}
-        {isFeatureVisible('standard') && matches('/wellness/mental-wellness-toolkit') && (
-          <Card
-            href="/wellness/mental-wellness-toolkit"
-            title="🧠 Mental Wellness Toolkit"
-            desc="All CBT/DBT tools in one place: thought reframing, emotion skills, grounding, and crisis tools. Consolidates 8 cognitive tools."
-          />
-        )}
-        {/* Movement & Rehab Hub - Standard mode and above */}
-        {isFeatureVisible('standard') && matches('/wellness/movement-rehab-hub') && (
-          <Card
-            href="/wellness/movement-rehab-hub"
-            title="💪 Movement & Rehab Hub"
-            desc="Gentle exercises, micro-movements, rehab games, and nutrition guides. Consolidates 4 movement tools."
-          />
+        
+        {/* Power Tool 4: Movement & Rehab Hub - Standard mode and above */}
+        {isFeatureVisible('standard') && matches('/wellness/movement-power-tool') && (
+          <Pressable
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="button"
+            accessibilityLabel="Movement and Rehab Hub - Exercise, rehabilitation, adaptive movement, and recovery"
+            onPress={() => router.push('/(tabs)/wellness/movement-power-tool' as any)}
+            style={({ pressed }) => [
+              {
+                borderWidth: StyleSheet.hairlineWidth,
+                borderColor: palette.muted,
+                borderRadius: 12,
+                padding: 16,
+                backgroundColor: palette.card,
+              },
+              pressed && { opacity: 0.7 },
+            ]}
+          >
+            <Text
+              style={{ color: palette.text, fontWeight: 'bold', fontSize: 16, lineHeight: 24 }}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              💪 Movement & Rehab Hub
+            </Text>
+            <Text
+              style={{ color: palette.text, marginTop: 6, fontSize: 15, lineHeight: 22 }}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              Exercise, rehabilitation, adaptive movement, and recovery tools.
+            </Text>
+            <Text
+              style={{ color: palette.primary, marginTop: 8, fontSize: 13, fontWeight: '600' }}
+              maxFontSizeMultiplier={MAX_FONT_SCALE}
+            >
+              🔧 Power Tool • 4 Tabs • Consolidates 5 movement tools
+            </Text>
+          </Pressable>
         )}
       </GapView>
 
-      {/* Additional Tools - Standard mode and above */}
-      {isFeatureVisible('standard') && (
+      {/* Legacy Hub (for existing users) - shown below main hubs */}
+      {isFeatureVisible('power_user') && matches('/wellness/energy-hub') && (
+        <>
+          <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
+            {t('wellness.sections.legacy', 'Classic Tools')}
+          </Text>
+          <GapView gap={12}>
+            <Card
+              href="/wellness/energy-hub"
+              title="⚡ Energy & Mood Hub (Classic)"
+              desc="Legacy version - Track energy (spoons), mood, sleep, and pacing."
+            />
+          </GapView>
+        </>
+      )}
+
+      {/* Additional Tools - Power User mode */}
+      {isFeatureVisible('power_user') && (
         <>
           <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
             {t('wellness.sections.additional', 'Additional Tools')}
@@ -310,89 +357,6 @@ export default function WellnessHub() {
                 href="/wellness/functional-capacity"
                 title="Functional Capacity Assessment"
                 desc="WHO ICF-based disability documentation and tracking."
-              />
-            )}
-          </GapView>
-        </>
-      )}
-
-
-
-      {/* Miscellaneous - Standard mode and above */}
-      {isFeatureVisible('standard') && (
-        <>
-          <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-            {t('wellness.sections.misc', 'Miscellaneous')}
-          </Text>
-          <GapView gap={12}>
-            {matches('/wellness/adaptive-meditation') && (
-              <Card
-                href="/wellness/adaptive-meditation"
-                title={label('/wellness/adaptive-meditation', t('wellness.adaptiveMeditation.title', 'Adaptive Meditation'))}
-                desc={t('wellness.adaptiveMeditation.desc', 'Meditations tuned to your state.')}
-              />
-            )}
-            {matches('/wellness/ai-companion') && (
-              <Card
-                href="/wellness/ai-companion"
-                title={label('/wellness/ai-companion', t('wellness.aiCompanion.title', 'AI Companion'))}
-                desc={t('wellness.aiCompanion.desc', 'A gentle assistant for wellness.')}
-              />
-            )}
-            {matches('/wellness/ambience') && (
-              <Card
-                href="/wellness/ambience"
-                title={label('/wellness/ambience', t('wellness.ambience.title', 'Ambience Sync AI'))}
-                desc={t('wellness.ambience.desc', 'Match background, color, soundscape to your mood.')}
-              />
-            )}
-            {matches('/wellness/grief-support') && (
-              <Card
-                href="/wellness/grief-support"
-                title={label('/wellness/grief-support', t('wellness.griefSupport.title', 'Grief Support'))}
-                desc={t('wellness.griefSupport.desc', 'Compassionate prompts and resources.')}
-              />
-            )}
-            {matches('/wellness/resilience') && (
-              <Card
-                href="/wellness/resilience"
-                title={label('/wellness/resilience', t('wellness.resilience.title', 'Resilience Points'))}
-                desc={t('wellness.resilience.desc', 'Gamified micro-wins for therapy and life steps.')}
-              />
-            )}
-            {matches('/wellness/reminders') && (
-              <Card
-                href="/wellness/reminders"
-                title={t('wellness.reminders.title', 'Wellness Reminders')}
-                desc={t('wellness.reminders.desc', 'Customize notifications for your wellness routine.')}
-              />
-            )}
-            {matches('/wellness/reflections-calendar') && (
-              <Card
-                href="/wellness/reflections-calendar"
-                title={label('/wellness/reflections-calendar', t('wellness.reflections.title', 'Reflections Calendar'))}
-                desc={t('wellness.reflections.desc', 'Daily notes, gratitude, and wins.')}
-              />
-            )}
-            {matches('/wellness/dreams') && (
-              <Card
-                href="/wellness/dreams"
-                title={label('/wellness/dreams', t('wellness.dreams.title', 'Dream Tracker & Interpreter'))}
-                desc={t('wellness.dreams.desc', 'Log dreams and get symbolic interpretations.')}
-              />
-            )}
-            {matches('/wellness/daily-planner') && (
-              <Card
-                href="/wellness/daily-planner"
-                title={label('/wellness/daily-planner', t('wellness.dailyPlanner.title', 'Daily Planner'))}
-                desc={t('wellness.dailyPlanner.desc', 'Plan tasks with your energy in mind.')}
-              />
-            )}
-            {matches('/wellness/self-care-library') && (
-              <Card
-                href="/wellness/self-care-library"
-                title={label('/wellness/self-care-library', t('wellness.selfCare.title', 'Self-Care Library'))}
-                desc={t('wellness.selfCare.desc', 'Curated self-care practices.')}
               />
             )}
             {matches('/wellness/trigger-detector') && (

@@ -32,7 +32,9 @@ const BAD_DAY_KEY = 'complexity:badday:v1';
 const PREVIOUS_MODE_KEY = 'complexity:previousmode:v1';
 
 export function ComplexityModeProvider({ children }: { children: ReactNode }) {
-  const [mode, setModeState] = useState<ComplexityMode>('standard');
+  // Default to 'simple' for new users - reduces overwhelm on first use
+  // Users can always upgrade to 'standard' or 'power_user' when ready
+  const [mode, setModeState] = useState<ComplexityMode>('simple');
   const [isBadDayMode, setBadDayModeState] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -50,9 +52,11 @@ export function ComplexityModeProvider({ children }: { children: ReactNode }) {
           AsyncStorage.getItem(BAD_DAY_KEY)
         ]);
         
+        // If user has a saved mode, use it; otherwise stay on 'simple' default
         if (savedMode === 'simple' || savedMode === 'standard' || savedMode === 'power_user') {
           setModeState(savedMode);
         }
+        // Note: If no savedMode, we keep the default 'simple' for new users
         
         if (savedBadDay === 'true') {
           setBadDayModeState(true);

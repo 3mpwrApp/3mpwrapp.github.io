@@ -25,10 +25,19 @@ export default function TestersChatImpl() {
   const [present, setPresent] = React.useState<number>(0);
   const [typing, setTypingUsers] = React.useState<number>(0);
   const [unread, setUnread] = React.useState<number>(0);
+  const [cloudEnabled, setCloudEnabled] = React.useState<boolean>(isCloudConsentEnabled());
   const roomId = 'testers';
 
+  // Check cloud consent status on mount and periodically
   React.useEffect(() => {
-    if (!isCloudConsentEnabled()) return;
+    const checkConsent = () => setCloudEnabled(isCloudConsentEnabled());
+    checkConsent();
+    const interval = setInterval(checkConsent, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  React.useEffect(() => {
+    if (!cloudEnabled) return;
     const col = collection(db, 'chats', roomId, 'messages');
     const q = query(col, orderBy('createdAt', 'desc'));
     let lastReadTs = 0;
@@ -72,12 +81,12 @@ export default function TestersChatImpl() {
   React.useEffect(() => {
     let mounted = true;
     const beat = async () => { if (mounted) await touchPresence('testers'); };
-    if (isCloudConsentEnabled()) beat();
+    if (cloudEnabled) beat();
   const id = setInterval(beat, 30000);
   try { (id as any)?.unref?.(); } catch {}
-  if (isCloudConsentEnabled()) setLastRead('testers');
+  if (cloudEnabled) setLastRead('testers');
     return () => { mounted = false; clearInterval(id); };
-  }, []);
+  }, [cloudEnabled]);
 
   const send = async () => {
     const uid = auth.currentUser?.uid;
@@ -85,7 +94,7 @@ export default function TestersChatImpl() {
     if (!text.trim()) return;
     
     try {
-      if (!isCloudConsentEnabled()) { Alert.alert('Cloud disabled','Enable cloud features in Settings → Privacy to use chat.'); return; }
+      if (!cloudEnabled) { Alert.alert('Cloud disabled','Enable cloud features in Settings → Privacy to use chat.'); return; }
       
       // Check rate limit
       if (!checkRateLimit(uid, 5, 60000)) {
@@ -128,6 +137,12 @@ export default function TestersChatImpl() {
         Testers Chat {unread > 0 ? `(${unread} new)` : ''}
       </Text>
       <DisclaimerBanner type="general" compact={true} />
+      {!cloudEnabled && (
+        <View style={s.cloudDisabledBanner}>
+          <Text style={s.cloudDisabledText}>⚠️ Cloud features are disabled</Text>
+          <Text style={s.cloudDisabledSubtext}>Enable cloud features in Settings → Privacy to use chat</Text>
+        </View>
+      )}
       <Text style={s.meta}>Online: {present}{typing > 0 ? ` — typing…` : ''}</Text>
       <FlatList
         inverted={true}
@@ -173,5 +188,8 @@ function styles(palette: ReturnType<typeof useAppPalette>) {
     input: { flex: 1, borderWidth: 1, borderColor: palette.muted, borderRadius: 999, paddingHorizontal: 12, color: palette.text },
     sendBtn: { backgroundColor: palette.primary, borderRadius: 999, paddingHorizontal: 16, paddingVertical: 10 },
     sendText: { color: palette.onPrimary, fontWeight: '700' },
+    cloudDisabledBanner: { backgroundColor: palette.warning + '22', borderRadius: 8, padding: 12, marginHorizontal: 16, marginVertical: 8 },
+    cloudDisabledText: { color: palette.text, fontWeight: '700', fontSize: 14 },
+    cloudDisabledSubtext: { color: palette.textSecondary, fontSize: 12, marginTop: 4 },
   });
 }

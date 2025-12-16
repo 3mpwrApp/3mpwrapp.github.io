@@ -210,9 +210,9 @@ export const STANDARD_FEATURES: FeatureDefinition[] = [
 export const POWER_USER_FEATURES: FeatureDefinition[] = [
   // Power Tools (consolidated features)
   {
-    id: 'health-tracker-pro',
-    name: 'Health Tracker Pro',
-    description: 'Complete symptom and health tracking',
+    id: 'unified-health-hub',
+    name: 'Unified Health Hub',
+    description: 'Complete health tracking, medications, doctor visits & self-care',
     level: 'power_user',
     icon: '🏥',
     route: '/wellness/health-tracker-pro',
@@ -220,14 +220,22 @@ export const POWER_USER_FEATURES: FeatureDefinition[] = [
     badge: 'new',
   },
   {
+    id: 'health-tracker-pro',
+    name: 'Unified Health Hub',
+    description: 'Redirects to Unified Health Hub',
+    level: 'power_user',
+    icon: '🏥',
+    route: '/wellness/health-tracker-pro',
+    tab: 'wellness',
+  },
+  {
     id: 'health-management-hub',
-    name: 'Health Management Hub',
-    description: 'Medications, doctors, and health management',
+    name: 'Health Management Hub (Merged)',
+    description: 'Now part of Unified Health Hub',
     level: 'power_user',
     icon: '💊',
-    route: '/resources/health-management-hub',
-    tab: 'resources',
-    badge: 'new',
+    route: '/wellness/health-tracker-pro',
+    tab: 'wellness',
   },
   {
     id: 'knowledge-base',
