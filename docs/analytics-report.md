@@ -1,14 +1,14 @@
 # Analytics Event Report
 
-Generated: 2025-12-16T17:27:20.961Z
+Generated: 2025-12-16T18:28:36.847Z
 
 ## Summary
 
 - Registry events: 166
-- Unique events referenced in code: 124
-- Total literal emissions (static scan): 127
+- Unique events referenced in code: 118
+- Total literal emissions (static scan): 121
 - Missing (used not registered): 0
-- Unused (registered not used): 42
+- Unused (registered not used): 48
 - Sensitive field occurrences (schema): 6
 - Classification counts: other=2, secret=1, pii=3
 
@@ -56,6 +56,12 @@ Generated: 2025-12-16T17:27:20.961Z
 - beta.a11y.feature.enabled
 - beta.tool.usage
 - beta.session.duration
+- body.area.view
+- body.tool.open
+- chronic.condition.add
+- chronic.condition.select
+- chronic.tool.open
+- rehab.program.open
 
 ## Categories
 
@@ -205,17 +211,11 @@ Generated: 2025-12-16T17:27:20.961Z
 | energy_reset_day | 1 | OK |
 | energy.updated | 1 | OK |
 | mood.logged | 1 | OK |
+| symptoms.quick.severity | 1 | OK |
+| symptoms.individual.open | 1 | OK |
 | meds.toggle | 1 | OK |
 | doctor.appt.view | 1 | OK |
 | doctor.prep.tool | 1 | OK |
-| chronic.condition.select | 1 | OK |
-| chronic.condition.add | 1 | OK |
-| chronic.tool.open | 1 | OK |
-| rehab.program.open | 1 | OK |
-| body.area.view | 1 | OK |
-| body.tool.open | 1 | OK |
-| symptoms.quick.severity | 1 | OK |
-| symptoms.individual.open | 1 | OK |
 | body.tracker.open | 1 | OK |
 | body.cognitive.open | 1 | OK |
 | environment.factor.open | 1 | OK |
