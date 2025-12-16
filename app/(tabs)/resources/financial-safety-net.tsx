@@ -18,7 +18,57 @@ async function copyToClipboard(text: string) {
     );
   }
 }
+// Tab Navigation Component
+function TabNav({ activeTab, onTabChange, palette }: { 
+  activeTab: number; 
+  onTabChange: (tab: number) => void; 
+  palette: ReturnType<typeof useAppPalette>;
+}) {
+  const tabs = [
+    { id: 1, label: "📋 Situation", short: "1" },
+    { id: 2, label: "📅 Plan", short: "2" },
+    { id: 3, label: "💰 Budget", short: "3" },
+  ];
+  
+  return (
+    <View style={{ flexDirection: "row", marginBottom: 16, gap: 8 }}>
+      {tabs.map((tab) => (
+        <A11yPressable
+          key={tab.id}
+          onPress={() => onTabChange(tab.id)}
+          accessibilityLabel={`Go to ${tab.label}`}
+          accessibilityRole="tab"
+          accessibilityState={{ selected: activeTab === tab.id }}
+          style={{
+            flex: 1,
+            paddingVertical: 10,
+            paddingHorizontal: 8,
+            borderRadius: 8,
+            backgroundColor: activeTab === tab.id ? palette.primary : palette.surface,
+            borderWidth: 1,
+            borderColor: activeTab === tab.id ? palette.primary : palette.muted,
+            alignItems: "center",
+          }}
+        >
+          <Text style={{ 
+            color: activeTab === tab.id ? palette.onPrimary : palette.text, 
+            fontWeight: "600",
+            fontSize: 13,
+          }}>
+            {tab.label}
+          </Text>
+        </A11yPressable>
+      ))}
+    </View>
+  );
+}
 
+// Custom expense type
+interface CustomExpense {
+  id: string;
+  name: string;
+  amount: string;
+}
 export default function FinancialSafetyNetNavigator() {
   const palette = useAppPalette();
   const styles = createStyles(palette);
@@ -43,12 +93,41 @@ export default function FinancialSafetyNetNavigator() {
   const [transit, setTransit] = React.useState<string>("");
   const [medications, setMedications] = React.useState<string>("");
   const [otherFixed, setOtherFixed] = React.useState<string>("");
+  const [customExpenses, setCustomExpenses] = React.useState<CustomExpense[]>([]);
+  const [newExpenseName, setNewExpenseName] = React.useState<string>("");
+  const [newExpenseAmount, setNewExpenseAmount] = React.useState<string>("");
   const [budgetResult, setBudgetResult] = React.useState<{
     remaining: number;
     dailyGroceries: number;
     weeklyGroceries: number;
     fixedExpenses: number;
   } | null>(null);
+
+  // Add a custom expense
+  const addCustomExpense = () => {
+    if (!newExpenseName.trim()) {
+      Alert.alert("Name required", "Please enter a name for the expense.");
+      return;
+    }
+    const expense: CustomExpense = {
+      id: Date.now().toString(),
+      name: newExpenseName.trim(),
+      amount: newExpenseAmount || "0",
+    };
+    setCustomExpenses([...customExpenses, expense]);
+    setNewExpenseName("");
+    setNewExpenseAmount("");
+  };
+
+  // Remove a custom expense
+  const removeCustomExpense = (id: string) => {
+    setCustomExpenses(customExpenses.filter(e => e.id !== id));
+  };
+
+  // Update a custom expense amount
+  const updateCustomExpenseAmount = (id: string, amount: string) => {
+    setCustomExpenses(customExpenses.map(e => e.id === id ? { ...e, amount } : e));
+  };
 
   // Canadian disability benefit presets (2024-2025 rates, approximate)
   // These are rough monthly maximums - actual amounts vary by situation
@@ -85,13 +164,15 @@ export default function FinancialSafetyNetNavigator() {
 
   const calculateBudget = () => {
     const income = parseFloat(monthlyIncome) || 0;
+    const customTotal = customExpenses.reduce((sum, e) => sum + (parseFloat(e.amount) || 0), 0);
     const fixedExpenses = 
       (parseFloat(rent) || 0) +
       (parseFloat(utilities) || 0) +
       (parseFloat(phone) || 0) +
       (parseFloat(transit) || 0) +
       (parseFloat(medications) || 0) +
-      (parseFloat(otherFixed) || 0);
+      (parseFloat(otherFixed) || 0) +
+      customTotal;
     
     const remaining = income - fixedExpenses;
     const dailyGroceries = remaining / 30;
@@ -158,7 +239,8 @@ export default function FinancialSafetyNetNavigator() {
         Step-by-step guidance to combine Workers’ Comp, CPP‑D, ODSP/provincial supports, and EI without overlap penalties.
         This is a planning tool — verify specifics with official program rules.
       </Text>
-
+      {/* Tab Navigation - jump to any step directly */}
+      <TabNav activeTab={step} onTabChange={setStep} palette={palette} />
       {step === 1 && (
         <Step n={1} title="Your situation">
           <Text style={styles.text}>Employment status</Text>
@@ -262,6 +344,93 @@ export default function FinancialSafetyNetNavigator() {
           
           <Text style={styles.text}>Other fixed expenses ($)</Text>
           <TextInput value={otherFixed} onChangeText={setOtherFixed} placeholder="e.g., 50" style={styles.input} keyboardType="numeric" />
+
+          {/* Custom Expenses Section */}
+          <Text style={[styles.text, { fontWeight: "700", marginTop: 12 }]}>➕ Custom Expenses:</Text>
+          <Text style={[styles.text, { fontSize: 12, opacity: 0.8, marginBottom: 8 }]}>
+            Add your own expenses like insurance, subscriptions, pet care, debt payments, etc.
+          </Text>
+
+          {/* List existing custom expenses */}
+          {customExpenses.length > 0 && (
+            <View style={{ marginBottom: 12 }}>
+              {customExpenses.map((expense) => (
+                <View 
+                  key={expense.id} 
+                  style={{ 
+                    flexDirection: "row", 
+                    alignItems: "center", 
+                    marginBottom: 8,
+                    backgroundColor: palette.surface,
+                    padding: 8,
+                    borderRadius: 8,
+                    borderWidth: 1,
+                    borderColor: palette.muted,
+                  }}
+                >
+                  <Text style={[styles.text, { flex: 1, marginBottom: 0 }]}>{expense.name}</Text>
+                  <TextInput
+                    value={expense.amount}
+                    onChangeText={(val) => updateCustomExpenseAmount(expense.id, val)}
+                    placeholder="0"
+                    style={[styles.input, { width: 80, marginBottom: 0, marginRight: 8 }]}
+                    keyboardType="numeric"
+                    accessibilityLabel={`Amount for ${expense.name}`}
+                  />
+                  <A11yPressable
+                    onPress={() => removeCustomExpense(expense.id)}
+                    accessibilityLabel={`Remove ${expense.name}`}
+                    style={{ padding: 4 }}
+                  >
+                    <Text style={{ color: palette.error, fontSize: 18 }}>✕</Text>
+                  </A11yPressable>
+                </View>
+              ))}
+            </View>
+          )}
+
+          {/* Add new custom expense */}
+          <View style={{ 
+            flexDirection: "row", 
+            alignItems: "flex-end", 
+            gap: 8,
+            marginBottom: 12,
+          }}>
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.text, { fontSize: 12 }]}>Expense name</Text>
+              <TextInput
+                value={newExpenseName}
+                onChangeText={setNewExpenseName}
+                placeholder="e.g., Pet food"
+                style={styles.input}
+                accessibilityLabel="New expense name"
+              />
+            </View>
+            <View style={{ width: 80 }}>
+              <Text style={[styles.text, { fontSize: 12 }]}>Amount ($)</Text>
+              <TextInput
+                value={newExpenseAmount}
+                onChangeText={setNewExpenseAmount}
+                placeholder="50"
+                style={styles.input}
+                keyboardType="numeric"
+                accessibilityLabel="New expense amount"
+              />
+            </View>
+            <A11yPressable
+              onPress={addCustomExpense}
+              accessibilityLabel="Add custom expense"
+              style={{
+                backgroundColor: palette.primary,
+                paddingVertical: 10,
+                paddingHorizontal: 14,
+                borderRadius: 8,
+                marginBottom: 8,
+              }}
+            >
+              <Text style={{ color: palette.onPrimary, fontWeight: "600" }}>Add</Text>
+            </A11yPressable>
+          </View>
 
           <View style={{ height: 12 }} />
           <A11yPressable onPress={calculateBudget} accessibilityLabel="Calculate remaining budget" style={styles.cta}>

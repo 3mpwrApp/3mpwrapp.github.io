@@ -165,45 +165,114 @@ export default function NotificationPreferences() {
                 icon="bulb"
                 testID="quiet-hours-suggest"
               />
-              {/* Time selection buttons - tap to cycle through preset times */}
+              {/* Time selection - fully customizable with hour picker */}
               <View style={styles.timePickerRow}>
-                <Pressable
-                  style={[styles.timePickerButton, { backgroundColor: palette.card, borderColor: palette.primary }]}
-                  onPress={() => {
-                    const presets = ['21:00','22:00','23:00','00:00'];
-                    const idx = presets.indexOf(quietHoursStart || '22:00');
-                    setQuietHoursStart(presets[(idx+1)%presets.length]);
-                  }}
-                  hitSlop={HIT_SLOP_12}
-                  accessibilityRole="button"
-                  accessibilityLabel={t('settings.notifications.quietHoursStart', 'Start Hour')}
-                  accessibilityHint={t('settings.notifications.quietHoursStartHint', 'Tap to change. Current: ') + (quietHoursStart || '22:00')}
-                  testID="quiet-hours-start-toggle"
-                >
+                <View style={[styles.timePickerButton, { backgroundColor: palette.card, borderColor: palette.primary }]}>
                   <Ionicons name="moon" size={20} color={palette.primary} />
                   <Text style={[styles.timePickerLabel, { color: palette.textSecondary }]}>{t('settings.notifications.startLabel', 'Start')}</Text>
-                  <Text style={[styles.timePickerValue, { color: palette.text }]}>{quietHoursStart || '22:00'}</Text>
-                  <Ionicons name="chevron-forward" size={16} color={palette.textSecondary} />
-                </Pressable>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                    <Pressable
+                      onPress={() => {
+                        const current = parseInt((quietHoursStart || '22:00').split(':')[0]);
+                        const newHour = current <= 0 ? 23 : current - 1;
+                        setQuietHoursStart(`${String(newHour).padStart(2, '0')}:00`);
+                      }}
+                      hitSlop={HIT_SLOP_12}
+                      accessibilityRole="button"
+                      accessibilityLabel={t('settings.notifications.decreaseStartHour', 'Decrease start hour')}
+                      style={{ padding: 4 }}
+                    >
+                      <Ionicons name="remove-circle-outline" size={24} color={palette.primary} />
+                    </Pressable>
+                    <Text style={[styles.timePickerValue, { color: palette.text, minWidth: 50, textAlign: 'center' }]}>{quietHoursStart || '22:00'}</Text>
+                    <Pressable
+                      onPress={() => {
+                        const current = parseInt((quietHoursStart || '22:00').split(':')[0]);
+                        const newHour = current >= 23 ? 0 : current + 1;
+                        setQuietHoursStart(`${String(newHour).padStart(2, '0')}:00`);
+                      }}
+                      hitSlop={HIT_SLOP_12}
+                      accessibilityRole="button"
+                      accessibilityLabel={t('settings.notifications.increaseStartHour', 'Increase start hour')}
+                      style={{ padding: 4 }}
+                    >
+                      <Ionicons name="add-circle-outline" size={24} color={palette.primary} />
+                    </Pressable>
+                  </View>
+                </View>
                 
-                <Pressable
-                  style={[styles.timePickerButton, { backgroundColor: palette.card, borderColor: palette.primary }]}
-                  onPress={() => {
-                    const presets = ['06:00','07:00','08:00','09:00'];
-                    const idx = presets.indexOf(quietHoursEnd || '07:00');
-                    setQuietHoursEnd(presets[(idx+1)%presets.length]);
-                  }}
-                  hitSlop={HIT_SLOP_12}
-                  accessibilityRole="button"
-                  accessibilityLabel={t('settings.notifications.quietHoursEnd', 'End Hour')}
-                  accessibilityHint={t('settings.notifications.quietHoursEndHint', 'Tap to change. Current: ') + (quietHoursEnd || '07:00')}
-                  testID="quiet-hours-end-toggle"
-                >
+                <View style={[styles.timePickerButton, { backgroundColor: palette.card, borderColor: palette.warning }]}>
                   <Ionicons name="sunny" size={20} color={palette.warning} />
                   <Text style={[styles.timePickerLabel, { color: palette.textSecondary }]}>{t('settings.notifications.endLabel', 'End')}</Text>
-                  <Text style={[styles.timePickerValue, { color: palette.text }]}>{quietHoursEnd || '07:00'}</Text>
-                  <Ionicons name="chevron-forward" size={16} color={palette.textSecondary} />
-                </Pressable>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                    <Pressable
+                      onPress={() => {
+                        const current = parseInt((quietHoursEnd || '07:00').split(':')[0]);
+                        const newHour = current <= 0 ? 23 : current - 1;
+                        setQuietHoursEnd(`${String(newHour).padStart(2, '0')}:00`);
+                      }}
+                      hitSlop={HIT_SLOP_12}
+                      accessibilityRole="button"
+                      accessibilityLabel={t('settings.notifications.decreaseEndHour', 'Decrease end hour')}
+                      style={{ padding: 4 }}
+                    >
+                      <Ionicons name="remove-circle-outline" size={24} color={palette.warning} />
+                    </Pressable>
+                    <Text style={[styles.timePickerValue, { color: palette.text, minWidth: 50, textAlign: 'center' }]}>{quietHoursEnd || '07:00'}</Text>
+                    <Pressable
+                      onPress={() => {
+                        const current = parseInt((quietHoursEnd || '07:00').split(':')[0]);
+                        const newHour = current >= 23 ? 0 : current + 1;
+                        setQuietHoursEnd(`${String(newHour).padStart(2, '0')}:00`);
+                      }}
+                      hitSlop={HIT_SLOP_12}
+                      accessibilityRole="button"
+                      accessibilityLabel={t('settings.notifications.increaseEndHour', 'Increase end hour')}
+                      style={{ padding: 4 }}
+                    >
+                      <Ionicons name="add-circle-outline" size={24} color={palette.warning} />
+                    </Pressable>
+                  </View>
+                </View>
+              </View>
+              
+              {/* Common presets for quick selection */}
+              <Text style={[styles.testDescription, { marginTop: 8, marginBottom: 4 }]}>{t('settings.notifications.quickPresets', 'Quick presets:')}</Text>
+              <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+                {[
+                  { label: '10pm-6am', start: '22:00', end: '06:00' },
+                  { label: '10pm-7am', start: '22:00', end: '07:00' },
+                  { label: '11pm-7am', start: '23:00', end: '07:00' },
+                  { label: '9pm-8am', start: '21:00', end: '08:00' },
+                  { label: '12am-8am', start: '00:00', end: '08:00' },
+                ].map((preset) => (
+                  <Pressable
+                    key={preset.label}
+                    onPress={() => {
+                      setQuietHoursStart(preset.start);
+                      setQuietHoursEnd(preset.end);
+                    }}
+                    hitSlop={HIT_SLOP_12}
+                    accessibilityRole="button"
+                    accessibilityLabel={t('settings.notifications.applyPreset', 'Apply preset: ') + preset.label}
+                    style={{
+                      paddingVertical: 6,
+                      paddingHorizontal: 12,
+                      borderRadius: 16,
+                      backgroundColor: (quietHoursStart === preset.start && quietHoursEnd === preset.end) ? palette.primary : palette.surface,
+                      borderWidth: 1,
+                      borderColor: (quietHoursStart === preset.start && quietHoursEnd === preset.end) ? palette.primary : palette.muted,
+                    }}
+                  >
+                    <Text style={{ 
+                      color: (quietHoursStart === preset.start && quietHoursEnd === preset.end) ? palette.onPrimary : palette.text,
+                      fontSize: 12,
+                      fontWeight: '600',
+                    }}>
+                      {preset.label}
+                    </Text>
+                  </Pressable>
+                ))}
               </View>
             </View>
           )}
