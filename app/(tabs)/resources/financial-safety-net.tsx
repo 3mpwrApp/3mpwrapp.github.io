@@ -466,14 +466,142 @@ export default function FinancialSafetyNetNavigator() {
                 <Text style={styles.text}>• Daily spending limit: ~${budgetResult.dailyGroceries.toFixed(2)}</Text>
                 {budgetResult.remaining < 200 && (
                   <Text style={[styles.text, { color: palette.warning, marginTop: 4 }]}>
-                    ⚠️ Budget is tight. Consider food banks, community meals, or emergency funds.
+                    ⚠️ Budget is tight. See mutual aid resources below.
                   </Text>
                 )}
                 {budgetResult.remaining < 0 && (
                   <Text style={[styles.text, { color: palette.error, marginTop: 4 }]}>
-                    🚨 Expenses exceed income. Contact your worker about emergency support.
+                    🚨 Expenses exceed income — this is common on disability benefits. You deserve support. See resources below.
                   </Text>
                 )}
+              </View>
+
+              {/* COMPREHENSIVE RESOURCE SECTION */}
+              <View style={{ marginTop: 16 }}>
+                <Text style={[styles.text, { fontWeight: "700", fontSize: 16, marginBottom: 12 }]}>
+                  🆘 Survival Resources & Mutual Aid
+                </Text>
+                <Text style={[styles.text, { fontSize: 13, opacity: 0.9, marginBottom: 12 }]}>
+                  Legislated poverty is real. These resources exist because benefit rates don't cover actual costs of living. You're not alone.
+                </Text>
+
+                {/* EMERGENCY FOOD */}
+                <View style={{ backgroundColor: palette.success + "15", padding: 12, borderRadius: 8, marginBottom: 12 }}>
+                  <Text style={[styles.text, { fontWeight: "700", marginBottom: 6 }]}>🥫 Emergency Food</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Food banks:</Text> Most allow monthly visits. Call 211 for locations.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Community fridges:</Text> Free, no questions asked. Search "community fridge [city]"</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Meal programs:</Text> Churches, community centres often serve free meals.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Grocery rescue:</Text> Apps like Flashfood, Too Good To Go for 50-70% off.</Text>
+                  <Text style={[styles.text, { fontStyle: "italic", marginTop: 4 }]}>Tip: Food banks often have hygiene items, diapers, pet food too.</Text>
+                </View>
+
+                {/* HIDDEN BENEFITS */}
+                <View style={{ backgroundColor: palette.primary + "15", padding: 12, borderRadius: 8, marginBottom: 12 }}>
+                  <Text style={[styles.text, { fontWeight: "700", marginBottom: 6 }]}>💵 Hidden Benefits (Ask Your Worker)</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Special Diet Allowance:</Text> Extra $10-250/mo for medical dietary needs (diabetes, celiac, allergies, etc.)</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Discretionary Benefits:</Text> One-time help for furniture, moving, winter clothes, etc.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Community Start-Up:</Text> Help when moving to new housing.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Medical Transportation:</Text> Gas/transit costs for medical appointments.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Guide/Service Dog Benefit:</Text> Extra allowance if you have a service animal.</Text>
+                  <Text style={[styles.text, { fontStyle: "italic", marginTop: 4 }]}>Tip: These are often not offered — you must ASK. Get denials in writing to appeal.</Text>
+                </View>
+
+                {/* UTILITY & HOUSING HELP */}
+                <View style={{ backgroundColor: palette.warning + "15", padding: 12, borderRadius: 8, marginBottom: 12 }}>
+                  <Text style={[styles.text, { fontWeight: "700", marginBottom: 6 }]}>🏠 Housing & Utility Help</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>LEAP/Emergency Heat:</Text> Provincial programs to prevent utility disconnection.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Rent banks:</Text> Interest-free loans to prevent eviction (call 211).</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Utility arrears programs:</Text> Most hydro companies have low-income credits.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Housing stabilization:</Text> Ask your worker about one-time rent arrears help.</Text>
+                  <Text style={[styles.text, { fontStyle: "italic", marginTop: 4 }]}>Tip: Utilities can't disconnect in winter without a payment plan offer. Know your rights.</Text>
+                </View>
+
+                {/* MEDICATION & HEALTH */}
+                <View style={{ backgroundColor: palette.info + "15", padding: 12, borderRadius: 8, marginBottom: 12 }}>
+                  <Text style={[styles.text, { fontWeight: "700", marginBottom: 6 }]}>💊 Medication & Health</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Trillium Drug Program (ON):</Text> Covers meds if costs exceed 4% of income.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Provincial drug plans:</Text> Most provinces cover prescriptions for disability recipients.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Compassionate supply:</Text> Many pharmacies will advance meds if you're short.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Medical equipment:</Text> Assistive devices programs cover wheelchairs, hearing aids, etc.</Text>
+                  <Text style={[styles.text, { fontStyle: "italic", marginTop: 4 }]}>Tip: Ask your pharmacist about generic alternatives and patient assistance programs.</Text>
+                </View>
+
+                {/* MUTUAL AID */}
+                <View style={{ backgroundColor: palette.secondary + "15", padding: 12, borderRadius: 8, marginBottom: 12 }}>
+                  <Text style={[styles.text, { fontWeight: "700", marginBottom: 6 }]}>🤝 Mutual Aid Networks</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Buy Nothing groups:</Text> Free items from neighbours. Search Facebook for your area.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Disability mutual aid:</Text> Search "disability mutual aid [province]" for peer support.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Tool libraries:</Text> Borrow tools, sports equipment, kitchen items free.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Clothing swaps:</Text> Free clothing exchanges at community centres.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Free fridges/pantries:</Text> Community-stocked, take what you need.</Text>
+                  <Text style={[styles.text, { fontStyle: "italic", marginTop: 4 }]}>Remember: Mutual aid is community care, not charity. You deserve support.</Text>
+                </View>
+
+                {/* LOW-INCOME PROGRAMS */}
+                <View style={{ backgroundColor: palette.muted + "30", padding: 12, borderRadius: 8, marginBottom: 12 }}>
+                  <Text style={[styles.text, { fontWeight: "700", marginBottom: 6 }]}>📱 Low-Income Discounts</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Connecting Families:</Text> $20/mo internet for low-income households.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Affordable Connectivity:</Text> Reduced phone/internet from most carriers.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Transit passes:</Text> Many cities offer 50% discount for PWD/low-income.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Library cards:</Text> Free internet, printing, e-books, museum passes.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Recreation subsidies:</Text> Free/reduced gym, pool, programs through your city.</Text>
+                </View>
+
+                {/* ADVOCACY TIPS */}
+                <View style={{ backgroundColor: palette.error + "10", padding: 12, borderRadius: 8, marginBottom: 12, borderWidth: 1, borderColor: palette.error + "30" }}>
+                  <Text style={[styles.text, { fontWeight: "700", marginBottom: 6, color: palette.error }]}>⚖️ Advocacy Tips</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Document everything:</Text> Keep copies of all requests, denials, communications.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Get denials in writing:</Text> Verbal "no" isn't official. Request written decisions.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Appeal deadlines:</Text> Usually 30 days. Mark your calendar.</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Legal clinics:</Text> Free legal help for benefit appeals (search "legal aid [province]").</Text>
+                  <Text style={styles.text}>• <Text style={{ fontWeight: "600" }}>Peer advocates:</Text> Disability organizations often have advocates who can help.</Text>
+                  <Text style={[styles.text, { fontWeight: "600", marginTop: 8 }]}>Call your worker BEFORE crisis hits. Proactive requests are easier than emergency ones.</Text>
+                </View>
+
+                {/* SHORTFALL DOCUMENTATION */}
+                {budgetResult.remaining < 0 && (
+                  <View style={{ backgroundColor: palette.error + "15", padding: 12, borderRadius: 8, marginBottom: 12 }}>
+                    <Text style={[styles.text, { fontWeight: "700", marginBottom: 6 }]}>📝 Document Your Shortfall</Text>
+                    <Text style={styles.text}>Your budget shows a ${Math.abs(budgetResult.remaining).toFixed(2)} monthly shortfall. This is evidence of inadequate benefits.</Text>
+                    <Text style={[styles.text, { marginTop: 8 }]}>You can use this to:</Text>
+                    <Text style={styles.text}>• Request discretionary benefits from your worker</Text>
+                    <Text style={styles.text}>• Support appeals for increased benefits</Text>
+                    <Text style={styles.text}>• Advocate for policy change (rates haven't kept up with inflation)</Text>
+                    <Text style={styles.text}>• Apply for additional support programs</Text>
+                    <View style={{ height: 8 }} />
+                    <A11yPressable 
+                      onPress={() => copyToClipboard(
+                        `BUDGET SHORTFALL DOCUMENTATION\n` +
+                        `Date: ${new Date().toISOString().split('T')[0]}\n\n` +
+                        `Monthly Income: $${monthlyIncome}\n` +
+                        `Fixed Expenses: $${budgetResult.fixedExpenses.toFixed(2)}\n` +
+                        `SHORTFALL: $${Math.abs(budgetResult.remaining).toFixed(2)}\n\n` +
+                        `This shortfall means I cannot cover basic living expenses on my current benefit rate.\n` +
+                        `I am requesting assistance with: [specify need]\n\n` +
+                        `Expense Breakdown:\n` +
+                        `- Rent: $${rent || 0}\n` +
+                        `- Utilities: $${utilities || 0}\n` +
+                        `- Phone/Internet: $${phone || 0}\n` +
+                        `- Transit: $${transit || 0}\n` +
+                        `- Medications: $${medications || 0}\n` +
+                        `- Other: $${otherFixed || 0}\n` +
+                        (customExpenses.length > 0 ? customExpenses.map(e => `- ${e.name}: $${e.amount}`).join('\n') : '')
+                      )} 
+                      accessibilityLabel="Copy shortfall documentation" 
+                      style={[styles.secondary, { backgroundColor: palette.error + "20" }]}
+                    >
+                      <Text style={{ color: palette.text, fontWeight: "700" }}>📋 Copy Shortfall Documentation</Text>
+                    </A11yPressable>
+                  </View>
+                )}
+
+                {/* CALL 211 */}
+                <View style={{ backgroundColor: palette.primary, padding: 16, borderRadius: 12, marginTop: 8 }}>
+                  <Text style={{ color: palette.onPrimary, fontWeight: "700", fontSize: 16, marginBottom: 4 }}>📞 Call 211</Text>
+                  <Text style={{ color: palette.onPrimary, opacity: 0.95 }}>
+                    211 connects you to local community services: food banks, housing help, utility assistance, and more. Available 24/7.
+                  </Text>
+                </View>
               </View>
 
               <View style={{ height: 8 }} />

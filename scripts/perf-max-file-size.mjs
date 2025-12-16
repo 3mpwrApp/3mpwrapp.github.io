@@ -54,6 +54,7 @@ const DEFAULT_ALLOW = [
   'aiGroundingCompanion\\.ts',
   'TermsGate\\.tsx',
   'health-tracker-pro\\.tsx', // Unified Health Hub - consolidates 7 health tracking features
+  'financial-safety-net\\.tsx', // Includes comprehensive poverty resources & mutual aid guide
 ];
 
 const envAllow = process.env.PERF_MAX_ALLOW || '';
