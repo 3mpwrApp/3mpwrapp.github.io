@@ -20,14 +20,22 @@ let Constants: any = null;
 try {
   Updates = require('expo-updates');
   Constants = require('expo-constants');
-} catch {
+  logger.log('[UpdateSplashScreen] Loaded modules - Updates:', !!Updates, 'Constants:', !!Constants);
+} catch (err) {
   // expo-updates not available (e.g., in Expo Go)
-  if (__DEV__) {
-    logger.warn('[UpdateSplashScreen] expo-updates not available');
-  }
+  logger.warn('[UpdateSplashScreen] Failed to load expo-updates:', err);
 }
 
 const isExpoGo = Constants?.default?.appOwnership === 'expo' || Constants?.appOwnership === 'expo';
+const shouldSkipUpdates = __DEV__ || isExpoGo || !Updates || Updates?.isEnabled === false;
+
+logger.log('[UpdateSplashScreen] Environment check:', {
+  isDev: __DEV__,
+  isExpoGo,
+  hasUpdates: !!Updates,
+  updatesEnabled: Updates?.isEnabled,
+  shouldSkip: shouldSkipUpdates
+});
 
 export default function UpdateSplashScreen() {
   const { t } = useTranslation();
@@ -43,22 +51,23 @@ export default function UpdateSplashScreen() {
   const checkingRef = React.useRef(false);
 
   useEffect(() => {
-    // Skip if in Expo Go or updates not available
-    if (isExpoGo || !Updates || Updates?.isEnabled === false) {
-      setShowSplash(false);
+    // Skip update check if updates should be skipped
+    if (shouldSkipUpdates) {
+      logger.log('[UpdateSplashScreen] Skipping update check');
       setIsChecking(false);
       return;
     }
-
+    logger.log('[UpdateSplashScreen] Starting update check...');
     checkAndDownloadUpdate();
   }, []);
 
   // Re-check for updates when app comes to foreground
   useEffect(() => {
-    if (isExpoGo || !Updates || Updates?.isEnabled === false) {
+    // Skip if updates should be skipped
+    if (shouldSkipUpdates) {
       return;
     }
-
+    
     // Use AppState directly (no need to import since it's used by parent)
     const { AppState } = require('react-native');
     
@@ -80,13 +89,6 @@ export default function UpdateSplashScreen() {
     // Prevent multiple simultaneous checks
     if (checkingRef.current) {
       logger.log('[UpdateSplashScreen] Update check already in progress, skipping...');
-      return;
-    }
-
-    // Skip in development mode - updates only work in production builds
-    if (__DEV__) {
-      setShowSplash(false);
-      setIsChecking(false);
       return;
     }
 
@@ -166,8 +168,8 @@ export default function UpdateSplashScreen() {
     }
   };
 
-  // Don't render anything if not checking or no update
-  if (!showSplash) {
+  // Don't render anything if updates are skipped or no update is showing
+  if (shouldSkipUpdates || !showSplash) {
     return null;
   }
 

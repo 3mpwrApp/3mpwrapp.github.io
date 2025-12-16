@@ -454,6 +454,116 @@ Thank you for supporting injured workers' rights.`,
       };
     };
   },
+  {
+    id: 'national-living-benefit',
+    title: 'National Living Benefit for Canadians with Disabilities & Seniors',
+    summary: 'Petition e-6898: Establish a National Living Benefit ensuring all Canadians with disabilities and seniors receive a guaranteed income above the poverty line, protected from provincial claw-backs and indexed to inflation.',
+    target: 'Parliament of Canada',
+    goalCount: 50000,
+    membersCount: 0, // New campaign as of December 15, 2025
+    contactEmail: 'info@example.com', // Placeholder - update with actual contact
+    createdAt: Date.now(), // December 15, 2025
+    // Extended fields for this specific campaign
+    petitionId: 'e-6898',
+    petitionUrl: 'https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6898',
+    description: `Millions of Canadians living with disabilities and many seniors continue to struggle below the poverty line despite decades of public service, contributions, or hardship.
+
+**The Problem:**
+
+• The cost of housing, food, and essential needs has risen faster than provincial and federal benefits
+• Many are forced to choose between basic necessities
+• Existing programs such as the Canada Disability Benefit, Old Age Security, and the Guaranteed Income Supplement are not yet sufficient to guarantee dignity, stability, and freedom from poverty
+• Canada's Charter of Rights and Freedoms affirms the right to security of the person and equal protection under the law - values that require tangible action
+
+**Petition e-6898 Calls on Parliament to:**
+
+1. **Establish a National Living Benefit** ensuring that all Canadians with disabilities and seniors receive a guaranteed income above the official poverty line
+
+2. **Protect this benefit from provincial claw-backs or deductions** - so that federal support actually reaches those who need it
+
+3. **Index the benefit annually to the Canadian Consumer Price Index (CPI)** so that no person is left behind due to inflation or rising housing costs
+
+This is about dignity. This is about the Charter. This is about making sure no Canadian with a disability or senior is left in poverty.`,
+    legislation: [
+      {
+        name: 'Bill C-22',
+        fullName: 'An Act to Reduce Poverty and to Support the Financial Security of Persons with Disabilities',
+        status: 'Passed',
+        description: 'Establishes the Canada Disability Benefit, but current amounts remain insufficient to lift recipients above the poverty line.',
+      },
+      {
+        name: 'Old Age Security Act',
+        fullName: 'Old Age Security Act',
+        status: 'In Force',
+        description: 'Provides OAS and GIS benefits, but amounts have not kept pace with rising cost of living.',
+      },
+      {
+        name: 'Canadian Charter of Rights and Freedoms',
+        fullName: 'Canadian Charter of Rights and Freedoms',
+        status: 'In Force',
+        description: 'Section 7 right to security of the person and Section 15 equality rights require action to end poverty.',
+      },
+    ],
+    actionItems: [
+      { id: 1, text: 'Sign petition e-6898', completed: false },
+      { id: 2, text: 'Share petition on social media', completed: false },
+      { id: 3, text: 'Email your MP about the National Living Benefit', completed: false },
+      { id: 4, text: 'Share your story of living below the poverty line', completed: false },
+      { id: 5, text: 'Connect with local disability and seniors advocacy groups', completed: false },
+    ],
+    shareTemplates: {
+      twitter: 'Canadians with disabilities & seniors deserve to live ABOVE the poverty line! Sign petition e-6898 for a National Living Benefit - protected from claw-backs & indexed to inflation. #NationalLivingBenefit #DisabilityRights #SeniorsRights 🇨🇦\n\n🔗 https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6898\n\n🔗 Powered by 3mpwr App',
+      facebook: 'Millions of Canadians with disabilities and seniors are forced to live below the poverty line - choosing between food, housing, and medication.\n\nPetition e-6898 calls on Parliament to:\n✓ Establish a National Living Benefit above the poverty line\n✓ Protect it from provincial claw-backs\n✓ Index it to inflation annually\n\nCanada\'s Charter guarantees security of the person and equal protection. It\'s time for action!\n\nSign now: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6898\n\n#NationalLivingBenefit #DisabilityRights #SeniorsRights\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/',
+      email: {
+        subject: 'Support Petition e-6898 - National Living Benefit for Canadians with Disabilities & Seniors',
+        body: `Hi,
+
+I wanted to share an important petition with you: Petition e-6898 for a National Living Benefit.
+
+Millions of Canadians with disabilities and seniors continue to struggle below the poverty line. The cost of housing, food, and essential needs has risen faster than benefits, forcing many to choose between basic necessities.
+
+This petition calls on Parliament to:
+
+1. Establish a National Living Benefit ensuring all Canadians with disabilities and seniors receive a guaranteed income ABOVE the official poverty line
+
+2. Protect this benefit from provincial claw-backs or deductions
+
+3. Index the benefit annually to the Consumer Price Index so no one is left behind due to inflation
+
+Canada's Charter of Rights and Freedoms affirms the right to security of the person. It's time for tangible action.
+
+Please sign and share: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6898
+
+🔗 Powered by 3mpwr App
+🌐 https://3mpwrapp.pages.dev/campaigns/
+
+Thank you for supporting Canadians with disabilities and seniors!`,
+      },
+    },
+  } as Campaign & {
+    petitionId?: string;
+    petitionUrl?: string;
+    description?: string;
+    legislation?: Array<{
+      name: string;
+      fullName: string;
+      status: string;
+      description: string;
+    }>;
+    actionItems?: Array<{
+      id: number;
+      text: string;
+      completed: boolean;
+    }>;
+    shareTemplates?: {
+      twitter: string;
+      facebook: string;
+      email: {
+        subject: string;
+        body: string;
+      };
+    };
+  },
 ];
 
 
