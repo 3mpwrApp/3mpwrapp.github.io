@@ -10,55 +10,88 @@ import { useAppPalette } from '../../../theme/usePalette';
 import { createShadow } from '../../../utils/shadow';
 
 // Quiz questions for chronotype determination
+// Based on Dr. Michael Breus's chronotype research and MEQ (Morningness-Eveningness Questionnaire)
 const QUIZ_QUESTIONS = [
   {
     id: 1,
     question: "If you had no obligations, what time would you naturally wake up?",
     options: [
-      { text: "Before 6am", score: { lion: 3, bear: 1, wolf: 0, dolphin: 1 } },
-      { text: "6am-8am", score: { lion: 2, bear: 3, wolf: 0, dolphin: 2 } },
-      { text: "8am-10am", score: { lion: 0, bear: 2, wolf: 3, dolphin: 1 } },
-      { text: "After 10am", score: { lion: 0, bear: 0, wolf: 3, dolphin: 0 } },
+      { text: "Before 6am", score: { lion: 4, bear: 1, wolf: 0, dolphin: 2 } },
+      { text: "6am-7:30am", score: { lion: 3, bear: 3, wolf: 0, dolphin: 1 } },
+      { text: "7:30am-9am", score: { lion: 1, bear: 4, wolf: 2, dolphin: 1 } },
+      { text: "9am-11am", score: { lion: 0, bear: 1, wolf: 4, dolphin: 2 } },
+      { text: "After 11am", score: { lion: 0, bear: 0, wolf: 4, dolphin: 1 } },
     ],
   },
   {
     id: 2,
-    question: "When do you feel most alert and focused?",
+    question: "When do you feel most mentally alert and productive?",
     options: [
-      { text: "Early morning (6-9am)", score: { lion: 3, bear: 1, wolf: 0, dolphin: 1 } },
-      { text: "Mid-morning to early afternoon", score: { lion: 1, bear: 3, wolf: 1, dolphin: 2 } },
-      { text: "Late afternoon to evening", score: { lion: 0, bear: 1, wolf: 3, dolphin: 2 } },
-      { text: "Late at night", score: { lion: 0, bear: 0, wolf: 3, dolphin: 1 } },
+      { text: "5am-9am (early morning)", score: { lion: 4, bear: 1, wolf: 0, dolphin: 1 } },
+      { text: "9am-12pm (mid-morning)", score: { lion: 2, bear: 4, wolf: 1, dolphin: 2 } },
+      { text: "12pm-4pm (afternoon)", score: { lion: 1, bear: 3, wolf: 2, dolphin: 3 } },
+      { text: "4pm-9pm (evening)", score: { lion: 0, bear: 1, wolf: 4, dolphin: 2 } },
+      { text: "9pm-2am (late night)", score: { lion: 0, bear: 0, wolf: 4, dolphin: 1 } },
     ],
   },
   {
     id: 3,
-    question: "How would you describe your sleep quality?",
+    question: "How easily do you fall asleep at night?",
     options: [
-      { text: "I fall asleep easily and sleep deeply", score: { lion: 2, bear: 3, wolf: 1, dolphin: 0 } },
-      { text: "Generally good but wake early", score: { lion: 3, bear: 1, wolf: 0, dolphin: 1 } },
-      { text: "Hard to fall asleep, hard to wake", score: { lion: 0, bear: 0, wolf: 3, dolphin: 1 } },
-      { text: "Light sleeper, often restless", score: { lion: 0, bear: 0, wolf: 1, dolphin: 3 } },
+      { text: "Very easily, often before I want to", score: { lion: 4, bear: 2, wolf: 0, dolphin: 0 } },
+      { text: "Within 15-20 minutes, no problem", score: { lion: 2, bear: 4, wolf: 1, dolphin: 0 } },
+      { text: "Takes 30+ minutes, mind is active", score: { lion: 0, bear: 1, wolf: 3, dolphin: 2 } },
+      { text: "Very difficult, often lie awake for hours", score: { lion: 0, bear: 0, wolf: 2, dolphin: 4 } },
     ],
   },
   {
     id: 4,
-    question: "How do you feel when you wake up?",
+    question: "How do you typically feel in the first 30 minutes after waking?",
     options: [
-      { text: "Refreshed and ready to go", score: { lion: 3, bear: 2, wolf: 0, dolphin: 0 } },
-      { text: "Need some time but generally okay", score: { lion: 1, bear: 3, wolf: 1, dolphin: 1 } },
-      { text: "Groggy, takes a while to feel awake", score: { lion: 0, bear: 1, wolf: 3, dolphin: 1 } },
-      { text: "Often anxious or restless", score: { lion: 0, bear: 0, wolf: 0, dolphin: 3 } },
+      { text: "Alert and energized, ready to start", score: { lion: 4, bear: 2, wolf: 0, dolphin: 1 } },
+      { text: "Okay after coffee or some movement", score: { lion: 2, bear: 4, wolf: 1, dolphin: 1 } },
+      { text: "Groggy and slow, need time to wake up", score: { lion: 0, bear: 1, wolf: 4, dolphin: 1 } },
+      { text: "Anxious or already thinking about the day", score: { lion: 1, bear: 0, wolf: 1, dolphin: 4 } },
     ],
   },
   {
     id: 5,
-    question: "How would you describe your appetite pattern?",
+    question: "How would you describe your overall sleep?",
     options: [
-      { text: "Hungry first thing in the morning", score: { lion: 3, bear: 2, wolf: 0, dolphin: 1 } },
-      { text: "Ready for breakfast within an hour of waking", score: { lion: 1, bear: 3, wolf: 1, dolphin: 1 } },
-      { text: "Not hungry until late morning/noon", score: { lion: 0, bear: 1, wolf: 3, dolphin: 1 } },
-      { text: "Appetite is inconsistent", score: { lion: 0, bear: 0, wolf: 1, dolphin: 3 } },
+      { text: "Deep and consistent, rarely wake at night", score: { lion: 3, bear: 4, wolf: 2, dolphin: 0 } },
+      { text: "Generally good but wake up early", score: { lion: 4, bear: 2, wolf: 0, dolphin: 1 } },
+      { text: "Irregular, better on weekends when I sleep late", score: { lion: 0, bear: 1, wolf: 4, dolphin: 2 } },
+      { text: "Light and fragmented, sensitive to noise", score: { lion: 0, bear: 0, wolf: 1, dolphin: 4 } },
+    ],
+  },
+  {
+    id: 6,
+    question: "If you had to do a mentally demanding task, when would you prefer?",
+    options: [
+      { text: "First thing in the morning (6-9am)", score: { lion: 4, bear: 2, wolf: 0, dolphin: 2 } },
+      { text: "Late morning (9am-12pm)", score: { lion: 2, bear: 4, wolf: 1, dolphin: 2 } },
+      { text: "Afternoon (2-5pm)", score: { lion: 1, bear: 2, wolf: 3, dolphin: 3 } },
+      { text: "Evening or night (after 6pm)", score: { lion: 0, bear: 0, wolf: 4, dolphin: 1 } },
+    ],
+  },
+  {
+    id: 7,
+    question: "What is your energy pattern throughout the day?",
+    options: [
+      { text: "Highest in morning, steadily decreases", score: { lion: 4, bear: 2, wolf: 0, dolphin: 1 } },
+      { text: "Peaks mid-morning, dips after lunch, recovers", score: { lion: 1, bear: 4, wolf: 1, dolphin: 2 } },
+      { text: "Slow start, builds through day, peaks evening", score: { lion: 0, bear: 1, wolf: 4, dolphin: 1 } },
+      { text: "Unpredictable, varies day to day", score: { lion: 0, bear: 0, wolf: 2, dolphin: 4 } },
+    ],
+  },
+  {
+    id: 8,
+    question: "On weekends or days off, do you sleep differently?",
+    options: [
+      { text: "No, I wake up at the same time naturally", score: { lion: 4, bear: 2, wolf: 0, dolphin: 2 } },
+      { text: "Maybe 30-60 minutes later", score: { lion: 2, bear: 4, wolf: 1, dolphin: 1 } },
+      { text: "1-2 hours later, I need to catch up", score: { lion: 0, bear: 2, wolf: 3, dolphin: 2 } },
+      { text: "2+ hours later, very different schedule", score: { lion: 0, bear: 0, wolf: 4, dolphin: 2 } },
     ],
   },
 ];
@@ -157,15 +190,31 @@ export default function CircadianDJScreen() {
   };
 
   const finishQuiz = async (scores: typeof quizScores) => {
-    // Determine winning chronotype
-    const maxScore = Math.max(scores.lion, scores.bear, scores.wolf, scores.dolphin);
-    const totalScore = scores.lion + scores.bear + scores.wolf + scores.dolphin;
-    const confidence = Math.round((maxScore / totalScore) * 100);
+    // Determine winning chronotype with improved algorithm
+    const scoreArray = [
+      { type: 'lion' as const, score: scores.lion },
+      { type: 'bear' as const, score: scores.bear },
+      { type: 'wolf' as const, score: scores.wolf },
+      { type: 'dolphin' as const, score: scores.dolphin },
+    ];
     
-    let winningType: 'lion' | 'bear' | 'wolf' | 'dolphin' = 'bear';
-    if (scores.lion === maxScore) winningType = 'lion';
-    else if (scores.wolf === maxScore) winningType = 'wolf';
-    else if (scores.dolphin === maxScore) winningType = 'dolphin';
+    // Sort by score descending
+    scoreArray.sort((a, b) => b.score - a.score);
+    const winningType = scoreArray[0].type;
+    const maxScore = scoreArray[0].score;
+    const secondScore = scoreArray[1].score;
+    const totalScore = scores.lion + scores.bear + scores.wolf + scores.dolphin;
+    
+    // Calculate confidence based on how much the winner leads
+    // Higher gap between 1st and 2nd = higher confidence
+    // Max possible per question is 4, with 8 questions = 32 max per type
+    const maxPossible = QUIZ_QUESTIONS.length * 4;
+    const scoreDifferential = maxScore - secondScore;
+    const dominanceRatio = scoreDifferential / maxPossible;
+    const baseConfidence = (maxScore / totalScore) * 100;
+    
+    // Blend base confidence with dominance (how clearly one type won)
+    const confidence = Math.min(95, Math.round(baseConfidence + (dominanceRatio * 30)));
     
     // Get peak energy hours and sleep window based on chronotype
     const chronotypeData = {
@@ -184,6 +233,14 @@ export default function CircadianDJScreen() {
       socialJetLagHours: 0,
     };
     
+    // Build a more detailed result message
+    const secondType = scoreArray[1].type;
+    const secondEmoji = chronotypeInfo[secondType].icon;
+    const hasSecondary = scoreDifferential < 4 && secondScore > 0;
+    const secondaryMsg = hasSecondary 
+      ? `\n\nYou also show some ${secondType} ${secondEmoji} traits.`
+      : '';
+    
     try {
       await circadian.setChronotype(newChronotype);
       setChronotype(newChronotype);
@@ -191,7 +248,7 @@ export default function CircadianDJScreen() {
       
       Alert.alert(
         `You're a ${winningType.toUpperCase()}! ${chronotypeInfo[winningType].icon}`,
-        chronotypeInfo[winningType].description,
+        `${chronotypeInfo[winningType].description}${secondaryMsg}`,
         [{ text: 'Got it!' }]
       );
     } catch {
@@ -320,6 +377,18 @@ export default function CircadianDJScreen() {
                 </Text>
               </View>
             </View>
+
+            {/* Retake Quiz Button */}
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Retake chronotype quiz"
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+              style={[styles.retakeButton, { borderColor: palette.primary }]}
+              onPress={takeChronotypeQuiz}
+            >
+              <Ionicons name="refresh" size={18} color={palette.primary} />
+              <Text style={[styles.retakeButtonText, { color: palette.primary }]}>Retake Quiz</Text>
+            </Pressable>
           </View>
         ) : (
           <View style={[styles.card, { backgroundColor: palette.surface }]}>
@@ -800,6 +869,20 @@ const styles = StyleSheet.create({
   detailText: {
     fontSize: 14,
     marginLeft: 8,
+  },
+  retakeButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 10,
+    borderRadius: 8,
+    borderWidth: 1,
+    marginTop: 16,
+  },
+  retakeButtonText: {
+    fontSize: 14,
+    fontWeight: '500',
+    marginLeft: 6,
   },
   emptyText: {
     fontSize: 14,
