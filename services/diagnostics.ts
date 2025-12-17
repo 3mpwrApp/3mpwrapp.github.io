@@ -87,7 +87,7 @@ export function addConsoleCapture(limit = 500) {
     // Capture warnings and errors only to avoid lint/no-console failures
     console.warn = (...a: any[]) => { pushLog('warn', a); origWarn(...a); };
     console.error = (...a: any[]) => { pushLog('error', a); origError(...a); };
-  } catch (e) {
+  } catch {
     // noop
   }
 }

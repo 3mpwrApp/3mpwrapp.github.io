@@ -45,6 +45,6 @@ const styles = StyleSheet.create({
   card: { padding: 16, borderRadius: 12 },
   title: { fontSize: 20, fontWeight: '700', marginBottom: 8 },
   desc: { fontSize: 14, marginBottom: 16 },
-  button: { backgroundColor: '#2563eb', padding: 12, borderRadius: 10, alignItems: 'center' },
-  buttonText: { color: '#fff', fontWeight: '700' },
+  button: { padding: 12, borderRadius: 10, alignItems: 'center' },
+  buttonText: { fontWeight: '700' },
 });
