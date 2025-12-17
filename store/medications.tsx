@@ -35,10 +35,9 @@ export const MedicationsProvider = ({ children }: { children: React.ReactNode })
   const persist = React.useCallback(async (items: MedicationSchedule[]) => {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-    } catch (err) {
+    } catch {
       // ignore persistence errors
-       
-      console.warn('Failed to persist medications', err);
+      console.warn('Failed to persist medications');
     }
   }, []);
 
@@ -48,7 +47,7 @@ export const MedicationsProvider = ({ children }: { children: React.ReactNode })
       const raw = await AsyncStorage.getItem(STORAGE_KEY);
       const stored = raw ? JSON.parse(raw) : [];
       setMedications((prev) => (prev && prev.length ? prev : stored));
-    } catch (err) {
+    } catch {
       setMedications((prev) => (prev && prev.length ? prev : []));
     } finally {
       setLoading(false);
