@@ -32,8 +32,8 @@ export default function SendDiagnosticsScreen() {
           <Text style={[styles.desc, { color: palette.textSecondary }]}>
             Collect device info, local storage and recent logs to help debugging. This data may include usage information and non-sensitive app state. Do not share private data you do not want to send.
           </Text>
-          <A11yPressable onPress={send} style={styles.button} hitSlop={HIT_SLOP_12} accessibilityRole="button">
-            <Text style={styles.buttonText}>Collect & Share Diagnostics</Text>
+          <A11yPressable onPress={send} style={[styles.button, { backgroundColor: palette.primary }]} hitSlop={HIT_SLOP_12} accessibilityRole="button">
+            <Text style={[styles.buttonText, { color: palette.onPrimary }]}>Collect & Share Diagnostics</Text>
           </A11yPressable>
         </View>
       </ScrollView>

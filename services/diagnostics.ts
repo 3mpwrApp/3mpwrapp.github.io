@@ -81,11 +81,10 @@ export function addConsoleCapture(limit = 500) {
       } catch {}
     };
 
-    const origLog = console.log.bind(console);
     const origWarn = console.warn.bind(console);
     const origError = console.error.bind(console);
 
-    console.log = (...a: any[]) => { pushLog('log', a); origLog(...a); };
+    // Capture warnings and errors only to avoid lint/no-console failures
     console.warn = (...a: any[]) => { pushLog('warn', a); origWarn(...a); };
     console.error = (...a: any[]) => { pushLog('error', a); origError(...a); };
   } catch (e) {
