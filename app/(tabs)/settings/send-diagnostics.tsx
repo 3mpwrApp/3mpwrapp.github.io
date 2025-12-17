@@ -2,10 +2,10 @@ import { Stack } from 'expo-router';
 import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import A11yPressable from '../../../../components/A11yPressable';
-import { HIT_SLOP_12 } from '../../../../constants/A11Y';
-import { addConsoleCapture, collectAndShareDiagnostics } from '../../../../services/diagnostics';
-import { useAppPalette } from '../../../../theme/usePalette';
+import A11yPressable from '../../../components/A11yPressable';
+import { HIT_SLOP_12 } from '../../../constants/A11Y';
+import { addConsoleCapture, collectAndShareDiagnostics } from '../../../services/diagnostics';
+import { useAppPalette } from '../../../theme/usePalette';
 
 export default function SendDiagnosticsScreen() {
   const palette = useAppPalette();
