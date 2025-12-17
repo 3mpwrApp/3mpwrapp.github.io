@@ -1,3 +1,4 @@
+import React from 'react';
 import type { TextProps, ViewProps } from 'react-native';
 import { Platform, Text, View } from 'react-native';
 
