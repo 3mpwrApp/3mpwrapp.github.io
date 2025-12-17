@@ -31,14 +31,14 @@ export async function scheduleForMedication(med: MedicationSchedule) {
           },
         });
         scheduled.push(id);
-      } catch (e) {
+      } catch {
         // best-effort: try immediate notify
         try {
           await Notifications.sendLocalNotification({ title, body, data: { medicationId: med.id } });
         } catch {}
       }
     }
-  } catch (err) {
+  } catch {
     // ignore scheduling errors
   }
   return scheduled;
@@ -54,7 +54,7 @@ export async function cancelMedicationSchedules(medId: string) {
         } catch {}
       }
     }
-  } catch (e) {
+  } catch {
     // ignore
   }
 }

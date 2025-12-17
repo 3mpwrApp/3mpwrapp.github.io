@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, FlatList, Pressable, Text, View } from 'react-native';
 
+import { useAppPalette } from '../../../theme/usePalette';
 import MedicationEditor from '../../../components/MedicationEditor';
 import { MedicationsProvider, useMedications } from '../../../store/medications';
 
@@ -8,6 +9,8 @@ function MedicationsInner() {
   const { medications, loading, removeMedication, toggleMedication } = useMedications();
   const [editing, setEditing] = React.useState<string | null>(null);
   const [showEditor, setShowEditor] = React.useState(false);
+
+  const palette = useAppPalette();
 
   if (loading) return <Text>Loading...</Text>;
 
@@ -31,7 +34,7 @@ function MedicationsInner() {
       />
 
       {showEditor && (
-        <View style={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0, backgroundColor: '#ffffff' }}>
+        <View style={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0, backgroundColor: palette.background }}>
           <Button title="Close" onPress={() => setShowEditor(false)} />
           <MedicationEditor
             initial={medications.find((m) => m.id === editing) || undefined}
