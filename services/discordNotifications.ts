@@ -5,10 +5,9 @@
  * Used for events, campaigns, user activity, and system alerts.
  */
 
-import { sendWebhookMessage } from './discord';
+import Constants from 'expo-constants';
 
-// Get webhook URL from environment
-const DISCORD_WEBHOOK_URL = process.env.EXPO_PUBLIC_DISCORD_WEBHOOK_URL || '';
+import { sendWebhookMessage } from './discord';
 
 // Discord embed colors (decimal values)
 const COLORS = {
@@ -21,10 +20,23 @@ const COLORS = {
 };
 
 /**
+ * Get Discord webhook URL at runtime (handles EAS builds correctly)
+ * Uses Constants.expoConfig.extra which is properly bundled in EAS builds
+ */
+function getDiscordWebhookUrl(): string {
+  // Try Constants.expoConfig.extra first (works in EAS builds)
+  const fromExtra = Constants.expoConfig?.extra?.EXPO_PUBLIC_DISCORD_WEBHOOK_URL;
+  if (fromExtra) return fromExtra;
+  
+  // Fallback to process.env (works in development)
+  return process.env.EXPO_PUBLIC_DISCORD_WEBHOOK_URL || '';
+}
+
+/**
  * Check if notifications are configured
  */
 export function isDiscordNotificationsEnabled(): boolean {
-  return !!DISCORD_WEBHOOK_URL;
+  return !!getDiscordWebhookUrl();
 }
 
 /**
@@ -37,9 +49,9 @@ export async function notifyNewEvent(event: {
   description?: string;
   type?: string;
 }): Promise<boolean> {
-  if (!DISCORD_WEBHOOK_URL) return false;
+  const webhookUrl = getDiscordWebhookUrl(); if (!webhookUrl) return false;
 
-  return sendWebhookMessage(DISCORD_WEBHOOK_URL, '', {
+  return sendWebhookMessage(webhookUrl, '', {
     username: '3mpwrApp Events',
     embeds: [{
       title: '📅 New Event Created',
@@ -65,9 +77,9 @@ export async function notifyNewCampaign(campaign: {
   startDate?: string;
   endDate?: string;
 }): Promise<boolean> {
-  if (!DISCORD_WEBHOOK_URL) return false;
+  const webhookUrl = getDiscordWebhookUrl(); if (!webhookUrl) return false;
 
-  return sendWebhookMessage(DISCORD_WEBHOOK_URL, '', {
+  return sendWebhookMessage(webhookUrl, '', {
     username: '3mpwrApp Campaigns',
     embeds: [{
       title: '🎯 New Campaign Launched!',
@@ -92,7 +104,7 @@ export async function notifyBetaFeedback(feedback: {
   screen?: string;
   userId?: string;
 }): Promise<boolean> {
-  if (!DISCORD_WEBHOOK_URL) return false;
+  const webhookUrl = getDiscordWebhookUrl(); if (!webhookUrl) return false;
 
   const typeEmoji = {
     bug: '🐛',
@@ -108,7 +120,7 @@ export async function notifyBetaFeedback(feedback: {
     praise: COLORS.success,
   };
 
-  return sendWebhookMessage(DISCORD_WEBHOOK_URL, '', {
+  return sendWebhookMessage(webhookUrl, '', {
     username: '3mpwrApp Feedback',
     embeds: [{
       title: `${typeEmoji[feedback.type]} Beta Feedback: ${feedback.type.charAt(0).toUpperCase() + feedback.type.slice(1)}`,
@@ -129,11 +141,11 @@ export async function notifyNewUser(options?: {
   isGuest?: boolean;
   source?: string;
 }): Promise<boolean> {
-  if (!DISCORD_WEBHOOK_URL) return false;
+  const webhookUrl = getDiscordWebhookUrl(); if (!webhookUrl) return false;
 
   const userType = options?.isGuest ? 'Guest User' : 'Registered User';
   
-  return sendWebhookMessage(DISCORD_WEBHOOK_URL, '', {
+  return sendWebhookMessage(webhookUrl, '', {
     username: '3mpwrApp',
     embeds: [{
       title: '👋 New User Joined!',
@@ -155,7 +167,7 @@ export async function notifyAppUpdate(update: {
   channel: 'production' | 'preview' | 'development';
   changes?: string[];
 }): Promise<boolean> {
-  if (!DISCORD_WEBHOOK_URL) return false;
+  const webhookUrl = getDiscordWebhookUrl(); if (!webhookUrl) return false;
 
   const channelEmoji = {
     production: '🚀',
@@ -163,7 +175,7 @@ export async function notifyAppUpdate(update: {
     development: '🔧',
   };
 
-  return sendWebhookMessage(DISCORD_WEBHOOK_URL, '', {
+  return sendWebhookMessage(webhookUrl, '', {
     username: '3mpwrApp Updates',
     embeds: [{
       title: `${channelEmoji[update.channel]} App Update: v${update.version}`,
@@ -191,7 +203,7 @@ export async function notifyError(error: {
   screen?: string;
   severity?: 'low' | 'medium' | 'high' | 'critical';
 }): Promise<boolean> {
-  if (!DISCORD_WEBHOOK_URL) return false;
+  const webhookUrl = getDiscordWebhookUrl(); if (!webhookUrl) return false;
 
   const severityEmoji = {
     low: '⚠️',
@@ -202,7 +214,7 @@ export async function notifyError(error: {
 
   const severity = error.severity || 'medium';
 
-  return sendWebhookMessage(DISCORD_WEBHOOK_URL, '', {
+  return sendWebhookMessage(webhookUrl, '', {
     username: '3mpwrApp Alerts',
     embeds: [{
       title: `${severityEmoji[severity]} Error: ${error.title}`,
@@ -226,9 +238,9 @@ export async function notifyMilestone(milestone: {
   metric?: string;
   value?: number;
 }): Promise<boolean> {
-  if (!DISCORD_WEBHOOK_URL) return false;
+  const webhookUrl = getDiscordWebhookUrl(); if (!webhookUrl) return false;
 
-  return sendWebhookMessage(DISCORD_WEBHOOK_URL, '', {
+  return sendWebhookMessage(webhookUrl, '', {
     username: '3mpwrApp',
     embeds: [{
       title: `🎉 ${milestone.title}`,
@@ -255,9 +267,9 @@ export async function notifyCustom(options: {
   fields?: Array<{ name: string; value: string; inline?: boolean }>;
   username?: string;
 }): Promise<boolean> {
-  if (!DISCORD_WEBHOOK_URL) return false;
+  const webhookUrl = getDiscordWebhookUrl(); if (!webhookUrl) return false;
 
-  return sendWebhookMessage(DISCORD_WEBHOOK_URL, '', {
+  return sendWebhookMessage(webhookUrl, '', {
     username: options.username || '3mpwrApp',
     embeds: [{
       title: options.title,
