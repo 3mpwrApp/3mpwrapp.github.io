@@ -3,6 +3,7 @@ import type * as Fire from "firebase/firestore";
 import { db as sharedDb } from "../firebase/config";
 import { logger } from "../utils/logger";
 
+import { syncCampaignToWebsite } from "./campaignSync";
 import { isBYOCEnabled } from "./dataPolicy";
 import { notifyNewCampaign } from "./discordNotifications";
 
@@ -90,6 +91,18 @@ export async function fsAddCampaign(c: {
       title: c.title,
       description: c.summary,
       goal: c.target,
+    }).catch(() => {});
+
+    // Sync to Cloudflare Worker for website (fire and forget)
+    syncCampaignToWebsite({
+      id: c.id,
+      title: c.title,
+      summary: c.summary,
+      target: c.target,
+      goalCount: c.goalCount,
+      contactEmail: c.contactEmail,
+      createdBy: c.createdBy,
+      createdAt: c.createdAt ?? Date.now(),
     }).catch(() => {});
 
     return true;
