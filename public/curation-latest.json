@@ -1,57 +1,246 @@
 {
   "date": "2025-12-17",
-  "timestamp": "2025-12-17T15:09:52.415Z",
-  "count": 7,
+  "timestamp": "2025-12-17T21:09:00.878Z",
+  "count": 34,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Fighting the addictions crisis in northern Manitoba's Nisichawayasihk Cree Nation",
-      "link": "https://globalnews.ca/news/11578637/fighting-addictions-crisis-in-northern-manitoba-nisichawayasihk-cree-nation/",
-      "description": "The addictions crisis is seeping into every corner of the province, including in remote and isolated communities in northern Manitoba.",
-      "score": 12.3,
-      "pubDate": "Wed, 17 Dec 2025 12:00:38 +0000"
+      "title": "Bare trust tax filings on pause again as government mulls exemptions",
+      "link": "https://www.cbc.ca/news/politics/bare-trust-changes-2026-9.7018566?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.7646649,1759186309000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C394%2C5712%2C3213%29%3BResize%3D%28620%29' alt='A hand holding a pen prepares to fill in a tax form.' width='620' height='349' title='The federal government introduced new tax reporting rules in 2022 that required Canadians to report certain trusts to the Canada Revenue Agency.'/><p>Canada's tax agency says it doesn't expect Canadians who hold simple trusts, known as bare trusts, to file required tax forms this coming tax season — but legislative changes currently before the House of Commons means the requirements will likely be there in 2027.</p>",
+      "score": 24.5,
+      "pubDate": "Wed, 17 Dec 2025 04:00:00 EST"
     },
     {
-      "title": "Vancouver International Black Film Festival returns for its fifth edition",
-      "link": "https://www.straight.com/movies/vancouver-international-black-film-festival-returns-for-its-fifth-edition",
-      "description": "A hybrid lineup of films, panels, and workshops spotlights creators from Canada and around the world.",
+      "title": "Canada's appeal dismissed in battle over fixing mould in Oneida grandmother’s home",
+      "link": "https://www.cbc.ca/news/indigenous/powless-federal-appeal-decision-9.6981976?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.7535451,1765924651385/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1919%2C1079%29%3BResize%3D%28620%29' alt='Powless says the last three years have been an uphill battle and her granddaughters' illness has forced them to regularly skip school and miss out on a normal childhood. ' width='620' height='349' title='Joanne Powless says the last three years have been an uphill battle and her granddaughters' illness has forced them to regularly skip school and miss out on a normal childhood. '/><p>The Canadian government has lost in court a second time to a First Nations grandmother fighting to fix extensive mould at her home on Oneida Nation of the Thames, near London, Ont. The decision is the first time the Federal Court of Appeal has considered the legal issues surrounding Jordan's Principle.</p>",
+      "score": 24.5,
+      "pubDate": "Tue, 16 Dec 2025 17:41:50 EST"
+    },
+    {
+      "title": "Undocumented children fear being stuck in state of limbo that could last years",
+      "link": "https://www.cbc.ca/news/canada/ottawa/undocumented-children-at-risk-due-to-unviable-immigration-wait-times-lawyers-warn-9.7016069?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/0334e3fd-1e8c-4408-aa9c-31f82318a8d5,1765811293399/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A youth with a black backpack sits on a bench in a snowy park.' width='620' height='349' title='Anna, a 17-year-old youth whose identity CBC agreed not to identify due to risks of deportation, says she was shocked to learn she had no legal immigration status recently. Now, she's among other youth across Ontario who are undocumented and are waiting for their PR applications to process, which may take decades.'/><p>Undocumented youth in Canada say they’re feeling worried and hopeless as they face decades-long processing times for permanent residence under the humanitarian and compassionate pathway. Lawyers fear more children will lose their status in the coming years, forcing them to go underground.</p>",
+      "score": 21.5,
+      "pubDate": "Wed, 17 Dec 2025 04:00:00 EST"
+    },
+    {
+      "title": "Canada sees record population drop, driven by fewer temporary residents",
+      "link": "https://globalnews.ca/news/11581900/canada-record-population-drop/",
+      "description": "Statistics Canada said Wednesday the national population fell by 76,068 people, or 0.2 per cent, in the third quarter of this year.",
+      "score": 18,
+      "pubDate": "Wed, 17 Dec 2025 21:00:51 +0000"
+    },
+    {
+      "title": "$18M proposed settlement reached in 2015 Air Canada crash landing in Halifax",
+      "link": "https://globalnews.ca/news/11581526/air-canada-624-proposed-settlement-halifax/",
+      "description": "A proposed settlement of $18 million has been reached in a class action filed on behalf of passengers of Air Canada Flight 624, 10 years after the crash landing.",
+      "score": 17.5,
+      "pubDate": "Wed, 17 Dec 2025 18:19:45 +0000"
+    },
+    {
+      "title": "Quebec Liberals at a crossroads amid mounting pressure on leader to step down",
+      "link": "https://www.cbc.ca/player/play/9.7018712?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/83e9e758-df54-433b-8593-baddcffd8b2d,1765926398892/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Quebec Liberal Leader Pablo Rodriguez speaks alongside several others during a news conference ' width='620' height='349' title=''/><p>With Quebec Liberal Party Leader Pablo Rodriguez and his party facing an internal crisis for nearly a month, the Journal de Montréal has revealed more allegations of financial schemes during his leadership race. The Liberal caucus says it is behind Rodriguez but if that changes, any dissent could create a domino effect. </p>",
+      "score": 16.8,
+      "pubDate": "Tue, 16 Dec 2025 18:07:57 EST"
+    },
+    {
+      "title": "This H3N2 flu strain is spreading ‘rapidly.' Why subclade K is hitting hard",
+      "link": "https://globalnews.ca/news/11582077/new-flu-strain-h3n2-subclade-k-canada/",
+      "description": "Children are among those being hit hard this flu season, with most infections being detected in people under 19, according to Health Canada.",
+      "score": 14,
+      "pubDate": "Wed, 17 Dec 2025 20:51:29 +0000"
+    },
+    {
+      "title": "19 more pistachio and pistachio-related products recalled in Canada",
+      "link": "https://www.cbc.ca/news/health/pistachio-products-recall-dec-16-9.7018830?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/7fd7be5c-4a0e-47f1-85e6-d9d653a2230c,1765933782216/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C57%2C4000%2C2250%29%3BResize%3D%28620%29' alt='A person holding up a bunch of pistachios, with a giant pile of pistachios appearing in the background' width='620' height='349' title='A staff member conducts a quality check on roasted pistachios in the kitchen of Kwan Hong Bakery in Hong Kong, Saturday, Jan. 18, 2025. (AP Photo/Chan Long Hei)'/><p>Nineteen more pistachio and pistachio-containing products have been recalled in Canada. </p>",
+      "score": 14,
+      "pubDate": "Tue, 16 Dec 2025 21:09:04 EST"
+    },
+    {
+      "title": "This BC Premier Said No to an Oil Pipeline. Sound Familiar?",
+      "link": "https://thetyee.ca/Culture/2025/12/16/Horgan-Said-No-To-Pipeline/",
+      "description": "The PM and Alberta’s premier backed TMX. In his memoir, the late John Horgan gives his inside account of resisting.",
+      "score": 12,
+      "pubDate": "Tue, 16 Dec 2025 21:01:00 +0000"
+    },
+    {
+      "title": "Manitoba Government Appoints New Board Chairs for Manitoba Hydro and Efficiency Manitoba",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72037",
+      "description": "",
+      "score": 12,
+      "pubDate": "Tue, 16 Dec 2025 16:00:00 CST"
+    },
+    {
+      "title": "Why Are BC’s Emergency Departments So Crowded?",
+      "link": "https://thetyee.ca/News/2025/12/17/Why-BC-Emergency-Departments-Crowded/",
+      "description": "How past policy decisions and the unmet needs of an aging population are pushing the system to the brink.",
+      "score": 11,
+      "pubDate": "Wed, 17 Dec 2025 08:10:00 +0000"
+    },
+    {
+      "title": "Canada’s strong Olympic short track speed skating team for Milano Cortina unveiled",
+      "link": "https://www.cbc.ca/sports/olympics/winter/short-track-speed-skating/canada-short-track-speed-skating-olympic-team-announced-milano-cortina-9.7019154?cmp=rss",
+      "description": "",
       "score": 9.5,
-      "pubDate": "2025-11-24T12:23:10-08:00"
+      "pubDate": "Wed, 17 Dec 2025 14:01:00 EST"
     },
     {
-      "title": "Manitoba Government Announces Removal Of 23 Grocery Property Controls",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71917",
+      "title": "‘They came to us,' Carney says on Conservative MPs crossing the floor",
+      "link": "https://globalnews.ca/news/11581609/mark-carney-year-end-interview-floor-crossings/",
+      "description": "Prime Minister Mark Carney said he played a role in the floor crossings and hinted that he is 'open' to more MPs crossing the floor over to the Liberals.",
+      "score": 7.5,
+      "pubDate": "Wed, 17 Dec 2025 17:21:44 +0000"
+    },
+    {
+      "title": "19-year-old pleads guilty to impaired driving in Toronto crash that killed 3 children",
+      "link": "https://www.cbc.ca/news/canada/toronto/driver-pleads-guilty-etobicoke-crash-killed-3-children-9.7018366?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.7548422,1749927096000/full/max/0/default.jpg?im=Crop%2Crect%3D%28272%2C937%2C2600%2C1462%29%3BResize%3D%28620%29' alt='Four people sitting down.' width='620' height='349' title='The Laviña-Galve family said relatives are still reeling from the crash that took the lives of Ramone, Jace, and Mya on May 18.'/><p>The young man accused of being impaired and behind the wheel at the time he slammed into a Toronto family’s van, killing three children, has pleaded guilty in the case. </p>",
+      "score": 7.5,
+      "pubDate": "Tue, 16 Dec 2025 15:30:07 EST"
+    },
+    {
+      "title": "62% of Canadians less likely to travel to the U.S. next year: Flight Centre",
+      "link": "https://globalnews.ca/news/11581906/canadians-travel-united-states-flight-centre/",
+      "description": "Nearly two thirds of Canadians who plan on travelling next year are setting their sights on destinations other than the U.S., according to the latest travel survey data.",
+      "score": 9.6,
+      "pubDate": "Wed, 17 Dec 2025 20:12:38 +0000"
+    },
+    {
+      "title": "Provincial Snowplows Ready as Blizzard Conditions Expected for Parts of Manitoba",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72058",
+      "description": "",
+      "score": 7.7,
+      "pubDate": "Wed, 17 Dec 2025 12:31:00 CST"
+    },
+    {
+      "title": "OneCity mayoral candidate William Azaroff is building support",
+      "link": "https://www.straight.com/city-culture/onecity-mayoral-candidate-william-azaroff-is-building-support",
+      "description": "The CEO of affordable housing nonprofit Brightside Community Homes Foundation has big plans for Vancouver.",
+      "score": 8.4,
+      "pubDate": "2025-12-16T13:15:04-08:00"
+    },
+    {
+      "title": "Drivers warned to stay off roads as winter storm wallops Alberta and Saskatchewan",
+      "link": "https://www.cbc.ca/news/canada/livestory/snowstorm-live-updates-9.7001003?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/e7cf5db4-2906-40d8-9116-294018fcf0b3,1766000066052/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='' width='620' height='349' title=''/><p></p>",
+      "score": 8.1,
+      "pubDate": "Wed, 17 Dec 2025 10:57:14 EST"
+    },
+    {
+      "title": "Manitoba Government Invests in First Nations Women's Homeownership Through Mino'ayaawag Ikwewag",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72057",
       "description": "",
       "score": 7.5,
-      "pubDate": "Wed, 10 Dec 2025 13:30:00 CST"
+      "pubDate": "Wed, 17 Dec 2025 12:19:00 CST"
     },
     {
-      "title": "Olivia and Noah are most popular baby names in Ontario. Muhammad cracks top 10",
-      "link": "https://www.cbc.ca/news/canada/windsor/ontario-top-baby-names-2024-9.7018926?cmp=rss",
+      "title": "Manitoba Government Announces New Crown-Indigenous Corporation to Lead Churchill Plus Project",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71901",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Tue, 09 Dec 2025 13:20:00 CST"
+    },
+    {
+      "title": "Man accused of severing essential undersea telecom cable between Nova Scotia, Newfoundland",
+      "link": "https://www.cbc.ca/news/canada/nova-scotia/man-accused-of-severing-telecom-link-ns-nl-9.7019779?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.7462736,1739982555000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1600%2C900%29%3BResize%3D%28620%29' alt='A person holds a severed cable up to the camera.' width='620' height='349' title='In this photo supplied by Bell, a crew member onboard the repair ship show the subsea cable between Cape Breton and Newfoundland that the company believes was deliberately cut in December 2024. '/><p>Wrapped in coils of thick wire, the cable was a primary connection for internet, TV and long-distance communication between the two provinces.</p>",
+      "score": 6.5,
+      "pubDate": "Wed, 17 Dec 2025 13:59:52 EST"
+    },
+    {
+      "title": "Wintery storm wallops Alberta Wednesday, bringing heavy snow and gusting winds",
+      "link": "https://www.cbc.ca/news/canada/edmonton/alberta-snow-storm-9.7017521?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.6250779,1637082203000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C375%2C4032%2C2268%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='City roads were slick Tuesday as a major winter storm whipped through Alberta. '/><p>After a blast of freezing rain and brutal cold, much of Alberta is now bracing for another wintery storm that has forecasters cautioning of blizzard conditions.</p>",
+      "score": 5.7,
+      "pubDate": "Tue, 16 Dec 2025 09:19:13 EST"
+    },
+    {
+      "title": "Measles Update #56",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72059",
       "description": "",
       "score": 4.5,
-      "pubDate": "Wed, 17 Dec 2025 06:10:25 EST"
+      "pubDate": "Wed, 17 Dec 2025 13:38:00 CST"
     },
     {
-      "title": "The Culinary Commons helps Vancouver chefs gather",
-      "link": "https://www.straight.com/food/culinary-commons-helps-vancouver-chefs-gather",
-      "description": "1250 East Georgia Street is serving Vancouver's culinary community. ]",
-      "score": 3,
-      "pubDate": "2025-11-24T12:37:52-08:00"
+      "title": "Province Issues Thin Ice Advisory for Rivers and Lakes Across Manitoba",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71902",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 09 Dec 2025 14:33:00 CST"
     },
     {
-      "title": "2 new cases of ‘zombie deer disease' found in B.C.'s Kootenay area",
-      "link": "https://globalnews.ca/news/11581428/zombie-deer-disease-bc-kootenay/",
-      "description": "Two deer hunted in British Columbia's Kootenay region has tested positive for chronic wasting disease, also known as \"zombie deer disease,\" the province says.",
-      "score": 1.3,
-      "pubDate": "Wed, 17 Dec 2025 15:07:27 +0000"
+      "title": "Measles Update #53",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71899",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 09 Dec 2025 09:39:00 CST"
     },
     {
-      "title": "#TheMoment boats decked out in Christmas lights lit up the Newfoundland coast",
-      "link": "https://www.cbc.ca/player/play/9.7019041?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/a906b1b9-4111-486e-b0d8-bb7889df6c31,1765926453223/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Boats and houses lit up by Christmas lights by the water. ' width='620' height='349' title=''/><p>Joyce Morgan, chairperson of the Boat Lighting Committee, tells The National about the moment over 50 boats decked out in Christmas lights lit up Port de Grave, N.L.</p>",
+      "title": "N.S. dispensary raided following government directive for crackdown on cannabis",
+      "link": "https://globalnews.ca/news/11582045/nova-scotia-dispensary-raided-cannabis-crackdown/",
+      "description": "Nova Scotia RCMP say they issued a ticket and seized cannabis and cash after executing a search warrant on Monday at a cannabis dispensary in Digby, N.S.",
+      "score": 4,
+      "pubDate": "Wed, 17 Dec 2025 19:39:17 +0000"
+    },
+    {
+      "title": "Ontario backs Toronto's bid to be selected as potential host for defence bank",
+      "link": "https://globalnews.ca/news/11581667/toronto-bid-defence-security-resilience-bank/",
+      "description": "A grouping of leaders, including Ontario Premier Doug Ford, gathered at the Toronto Stock Exchange to launch a bid to host the Defence, Security and Resilience Bank.",
+      "score": 4.5,
+      "pubDate": "Wed, 17 Dec 2025 18:17:52 +0000"
+    },
+    {
+      "title": "Charges won't be laid after Winnipeg police shooting left man dead, officer stabbed",
+      "link": "https://globalnews.ca/news/11581792/charges-wont-be-laid-after-winnipeg-police-shooting-left-man-dead-officer-stabbed/",
+      "description": "Manitoba’s police watchdog says charges won't be laid after a shooting left one man dead and an officer recovering from a stab wound to the throat.",
+      "score": 4.5,
+      "pubDate": "Wed, 17 Dec 2025 17:40:10 +0000"
+    },
+    {
+      "title": "Alberta shuts down supervised drug consumption site in Edmonton hospital",
+      "link": "https://www.cbc.ca/news/canada/edmonton/alta-drug-sites-9.7019248?cmp=rss",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Wed, 17 Dec 2025 09:58:14 EST"
+    },
+    {
+      "title": "Carney, Ford to sign a deal to reduce regulatory burden on Ring of Fire, speed up Ontario projects",
+      "link": "https://www.cbc.ca/news/canada/toronto/ottawa-ontario-ring-of-fire-9.7019753?cmp=rss",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Wed, 17 Dec 2025 13:35:05 EST"
+    },
+    {
+      "title": "Nova Scotia man accused of severing telecom link between Nova Scotia and Newfoundland",
+      "link": "https://globalnews.ca/news/11582017/fibre-optic-cable-cut-charge-nova-scotia-newfoundland/",
+      "description": "The Mounties stressed the accused didn’t intend to damage essential infrastructure or harm national security.",
+      "score": 2,
+      "pubDate": "Wed, 17 Dec 2025 19:17:16 +0000"
+    },
+    {
+      "title": "Your ultra-local Vancouver gift guide for everyone in your life",
+      "link": "https://www.straight.com/living/your-ultra-local-vancouver-gift-guide-for-everyone-in-your-life",
+      "description": "Shop our list of dozens of local gifts.",
+      "score": 1.2,
+      "pubDate": "2025-12-08T13:38:44-08:00"
+    },
+    {
+      "title": "The UCP Separatist Wing Is Winning. Here’s What Comes Next",
+      "link": "https://thetyee.ca/Opinion/2025/12/17/UCP-Separatist-Wing-Winning/",
+      "description": "Be ready for a Brexit-style disinformation campaign, weak opposition and turmoil.",
+      "score": 1.2,
+      "pubDate": "Wed, 17 Dec 2025 08:20:00 +0000"
+    },
+    {
+      "title": "'It's really scary': Thousands of people in Newfoundland remain without power after wind storm",
+      "link": "https://www.cbc.ca/news/canada/newfoundland-labrador/it-s-really-scary-thousands-of-people-in-newfoundland-remain-without-power-after-wind-storm-9.7018790?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/1.5057939,1552659203000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C115%2C1728%2C972%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Scenic Fogo Island.'/><p>Residents of Fogo Island, Change Islands and other parts of central Newfoundland remain without power Tuesday evening following hurricane-force gusts, with some areas nearing 20 hours without heat and light.</p>",
       "score": 1,
-      "pubDate": "Tue, 16 Dec 2025 22:05:26 EST"
+      "pubDate": "Tue, 16 Dec 2025 19:07:47 EST"
     }
   ]
 }
