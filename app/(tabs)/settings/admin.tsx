@@ -258,7 +258,7 @@ export default function AdminPanel() {
                         const overview = await getSystemOverview();
                         setSystemOverview(overview);
                         Alert.alert('Refreshed', 'System overview refreshed.');
-                      } catch (err) {
+                      } catch {
                         Alert.alert('Error', 'Failed to refresh system overview');
                       }
                     }}
@@ -327,7 +327,7 @@ export default function AdminPanel() {
 
                           <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8 }}>
                             <Button title={`Approve (${selectedIds.length})`} onPress={() => bulkUpdate('approve')} />
-                            <Button title={`Reject (${selectedIds.length})`} color="#D9534F" onPress={() => bulkUpdate('reject')} />
+                            <Button title={`Reject (${selectedIds.length})`} color={palette.error} onPress={() => bulkUpdate('reject')} />
                             <Button title="Clear" onPress={() => { setSelectedIds([]); setSearchText(''); }} />
                           </View>
 
@@ -386,7 +386,7 @@ export default function AdminPanel() {
                                 style={{ borderWidth: 1, borderColor: palette.border, padding: 8, borderRadius: 8, minHeight: 80 }}
                               />
                               <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
-                                <Button title="Reject" color="#D9534F" onPress={async () => {
+                                <Button title="Reject" color={palette.error} onPress={async () => {
                                   try {
                                     await fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions`, {
                                       method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_API_KEY },
@@ -572,8 +572,8 @@ export default function AdminPanel() {
                 hitSlop={HIT_SLOP_8}
                 style={[styles.dangerButton, { marginTop: 8, backgroundColor: palette.primary }]}
               >
-                <Ionicons name="send-outline" size={18} color={palette.onPrimary ?? '#fff'} />
-                <Text style={[styles.dangerButtonText, { color: palette.onPrimary ?? '#fff' }]}>Send Broadcast</Text>
+                <Ionicons name="send-outline" size={18} color={palette.onPrimary ?? palette.text} />
+                <Text style={[styles.dangerButtonText, { color: palette.onPrimary ?? palette.text }]}>Send Broadcast</Text>
               </A11yPressable>
             </Section>
 

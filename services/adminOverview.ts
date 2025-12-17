@@ -39,7 +39,7 @@ export async function getSystemOverview(): Promise<SystemOverview> {
           if (Array.isArray(json)) pending = json.length;
           else if (typeof json.count === 'number') pending = json.count;
         }
-      } catch (err) {
+      } catch {
         // ignore - fall back to 0
       }
     }
@@ -50,7 +50,7 @@ export async function getSystemOverview(): Promise<SystemOverview> {
       usersCount: usersSnap.size ?? 0,
       pendingSubmissions: pending,
     };
-  } catch (error) {
+  } catch {
     return { eventsCount: 0, campaignsCount: 0, usersCount: 0, pendingSubmissions: 0 };
   }
 }

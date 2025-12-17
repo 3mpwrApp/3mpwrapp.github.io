@@ -72,12 +72,12 @@ export async function sendBroadcast(evt: Omit<BaseActivityEvent<'broadcast'>, 't
           console.warn('[sendBroadcast] notifyAllUsers failed', e);
         }
       }
-    } catch (e) {
+    } catch {
       // dynamic import failed - ignore
     }
 
     return ref.id;
-  } catch (err) {
+  } catch {
     return null;
   }
 }
