@@ -11,11 +11,11 @@
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
     "expo-server-sdk": "^3.13.0",
-    "express": "^4.19.2",
-    "firebase-admin": "^13.0.0",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
     "multer": "^2.0.2"
   },
   "devDependencies": {
-    "wrangler": "^4.46.0"
+    "wrangler": "^4.54.0"
   }
 }
