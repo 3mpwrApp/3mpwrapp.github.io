@@ -9,8 +9,8 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import { Stack } from 'expo-router';
-import { useEffect, useState } from 'react';
-import { Animated, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Animated, Modal, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { HIT_SLOP_12 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
@@ -31,7 +31,7 @@ export default function AIGroundingScreen() {
   const [showTechniqueModal, setShowTechniqueModal] = useState(false);
   const [recommendations, setRecommendations] = useState<GroundingTechnique[]>([]);
   const [breathPhase, setBreathPhase] = useState<'inhale' | 'hold' | 'exhale' | 'rest'>('inhale');
-  const [breathProgress] = useState(new Animated.Value(0));
+  const breathProgress = React.useRef<Animated.Value | null>(Platform.OS !== 'web' ? new Animated.Value(0) : null);
 
   const [context, setContext] = useState<GroundingContext>({
     trigger: undefined,
@@ -80,26 +80,56 @@ export default function AIGroundingScreen() {
 
   function startBreathingAnimation(_technique: GroundingTechnique) {
     const cycle = () => {
-      // 4-7-8 breathing pattern
-      setBreathPhase('inhale');
-      Animated.timing(breathProgress, {
-        toValue: 1,
-        duration: 4000,
-        useNativeDriver: false,
-      }).start(() => {
-        setBreathPhase('hold');
+      try {
+        // 4-7-8 breathing pattern
+        setBreathPhase('inhale');
+        if (!breathProgress.current || typeof breathProgress.current === 'undefined') {
+          // Animated not available on this platform — use time-based fallbacks
+          setTimeout(() => {
+            setBreathPhase('hold');
+            setTimeout(() => {
+              setBreathPhase('exhale');
+              setTimeout(() => {
+                setBreathPhase('rest');
+                setTimeout(cycle, 1000);
+              }, 8000);
+            }, 7000);
+          }, 4000);
+          return;
+        }
+
+        Animated.timing(breathProgress.current, {
+          toValue: 1,
+          duration: 4000,
+          useNativeDriver: false,
+        }).start(() => {
+          setBreathPhase('hold');
+          setTimeout(() => {
+            setBreathPhase('exhale');
+            Animated.timing(breathProgress.current as Animated.Value, {
+              toValue: 0,
+              duration: 8000,
+              useNativeDriver: false,
+            }).start(() => {
+              setBreathPhase('rest');
+              setTimeout(cycle, 1000);
+            });
+          }, 7000);
+        });
+      } catch (e) {
+        console.error('Breathing animation failed, falling back to timers:', e);
+        // Fallback to timer-only cycle
         setTimeout(() => {
-          setBreathPhase('exhale');
-          Animated.timing(breathProgress, {
-            toValue: 0,
-            duration: 8000,
-            useNativeDriver: false,
-          }).start(() => {
-            setBreathPhase('rest');
-            setTimeout(cycle, 1000);
-          });
-        }, 7000);
-      });
+          setBreathPhase('hold');
+          setTimeout(() => {
+            setBreathPhase('exhale');
+            setTimeout(() => {
+              setBreathPhase('rest');
+              setTimeout(cycle, 1000);
+            }, 8000);
+          }, 7000);
+        }, 4000);
+      }
     };
     cycle();
   }
@@ -501,18 +531,20 @@ export default function AIGroundingScreen() {
                   <View style={styles.breathingVisual}>
                     <Animated.View
                       style={[
-                        styles.breathCircle,
-                        {
-                          backgroundColor: palette.primary + '30',
-                          borderColor: palette.primary,
-                          transform: [{
-                            scale: breathProgress.interpolate({
-                              inputRange: [0, 1],
-                              outputRange: [0.5, 1],
-                            }),
-                          }],
-                        },
-                      ]}
+                          styles.breathCircle,
+                          {
+                            backgroundColor: palette.primary + '30',
+                            borderColor: palette.primary,
+                            transform: [{
+                              scale: breathProgress.current
+                                ? (breathProgress.current as Animated.Value).interpolate({
+                                    inputRange: [0, 1],
+                                    outputRange: [0.5, 1],
+                                  })
+                                : 1,
+                            }],
+                          },
+                        ]}
                     >
                       <Text style={[styles.breathText, { color: palette.primary }]}>
                         {breathPhase.toUpperCase()}

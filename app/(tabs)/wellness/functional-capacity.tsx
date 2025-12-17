@@ -245,11 +245,23 @@ export default function FunctionalCapacityScreen() {
       `;
 
       const { uri } = await Print.printToFileAsync({ html: reportHTML });
-      
-      await Share.share({
-        url: uri,
-        title: `WHO ICF Functional Capacity Report - ${new Date(assessment.timestamp).toLocaleDateString()}`,
-      });
+
+      const ExpoShare = await import('expo-sharing').catch(() => null);
+      if (ExpoShare?.isAvailableAsync && await ExpoShare.isAvailableAsync()) {
+        await ExpoShare.shareAsync(uri);
+      } else {
+        try {
+          await Share.share({
+            url: uri,
+            title: `WHO ICF Functional Capacity Report - ${new Date(assessment.timestamp).toLocaleDateString()}`,
+          });
+        } catch {
+          Alert.alert(
+            t('translator.pdfUnavailableTitle', 'PDF unavailable'),
+            t('translator.pdfUnavailableBody', 'Install expo-print in a dev build to export PDFs.')
+          );
+        }
+      }
       
     } catch (error) {
       console.error('Error generating report:', error);
