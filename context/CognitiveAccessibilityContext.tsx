@@ -5,18 +5,27 @@
  * Supports users with ADHD, autism, learning disabilities, and memory challenges.
  */
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// AsyncStorage dynamic import helper
+async function getAsyncStorage() {
+  try {
+    const mod = await import('@react-native-async-storage/async-storage');
+    if (mod && (mod.default || mod)) {
+      return mod.default || mod;
+    }
+  } catch {}
+  return null;
+}
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
 import type {
-  CognitiveMode,
-  CognitivePreferences,
-  TaskReminder
+    CognitiveMode,
+    CognitivePreferences,
+    TaskReminder
 } from '../constants/Cognitive';
 import {
-  COGNITIVE_MODES,
-  COGNITIVE_STORAGE_KEYS,
-  DEFAULT_COGNITIVE_PREFERENCES
+    COGNITIVE_MODES,
+    COGNITIVE_STORAGE_KEYS,
+    DEFAULT_COGNITIVE_PREFERENCES
 } from '../constants/Cognitive';
 import { announce } from '../utils/announce';
 import { logError } from '../utils/errorLogger';
@@ -93,6 +102,8 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
 
   const loadPreferences = async () => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       const [
         storedPreferences,
         storedLocation,
@@ -132,6 +143,8 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
 
   const savePreferences = async (newPreferences: CognitivePreferences) => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       await AsyncStorage.setItem(
         COGNITIVE_STORAGE_KEYS.preferences,
         JSON.stringify(newPreferences)
@@ -181,6 +194,8 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
 
   const saveLocation = useCallback(async (location: string) => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       await AsyncStorage.setItem(COGNITIVE_STORAGE_KEYS.lastLocation, location);
       setLastLocation(location);
     } catch (error) {
@@ -190,6 +205,8 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
 
   const clearLocation = useCallback(async () => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       await AsyncStorage.removeItem(COGNITIVE_STORAGE_KEYS.lastLocation);
       setLastLocation(null);
     } catch (error) {
@@ -200,9 +217,10 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
   const saveScrollPosition = useCallback(
     async (screen: string, position: number) => {
       if (!preferences.saveScrollPosition) return;
-      
       const newPositions = { ...scrollPositions, [screen]: position };
       try {
+        const AsyncStorage = await getAsyncStorage();
+        if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
         await AsyncStorage.setItem(
           COGNITIVE_STORAGE_KEYS.scrollPosition,
           JSON.stringify(newPositions)
@@ -225,9 +243,10 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
   const saveFormData = useCallback(
     async (formId: string, data: any) => {
       if (!preferences.rememberFormData) return;
-      
       const newFormData = { ...formData, [formId]: { data, timestamp: Date.now() } };
       try {
+        const AsyncStorage = await getAsyncStorage();
+        if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
         await AsyncStorage.setItem(
           COGNITIVE_STORAGE_KEYS.formData,
           JSON.stringify(newFormData)
@@ -260,8 +279,9 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
     async (formId: string) => {
       const newFormData = { ...formData };
       delete newFormData[formId];
-      
       try {
+        const AsyncStorage = await getAsyncStorage();
+        if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
         await AsyncStorage.setItem(
           COGNITIVE_STORAGE_KEYS.formData,
           JSON.stringify(newFormData)
@@ -278,7 +298,6 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
     async (taskId: string, taskName: string) => {
       const existingTask = incompleteTasks.find(t => t.taskId === taskId);
       if (existingTask) return;
-      
       const modeConfig = COGNITIVE_MODES[preferences.mode];
       const newTask: TaskReminder = {
         taskId,
@@ -288,9 +307,10 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
         maxReminders: 5,
         reminderCount: 0,
       };
-      
       const newTasks = [...incompleteTasks, newTask];
       try {
+        const AsyncStorage = await getAsyncStorage();
+        if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
         await AsyncStorage.setItem(
           COGNITIVE_STORAGE_KEYS.incompleteTasks,
           JSON.stringify(newTasks)
@@ -307,6 +327,8 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
     async (taskId: string) => {
       const newTasks = incompleteTasks.filter(t => t.taskId !== taskId);
       try {
+        const AsyncStorage = await getAsyncStorage();
+        if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
         await AsyncStorage.setItem(
           COGNITIVE_STORAGE_KEYS.incompleteTasks,
           JSON.stringify(newTasks)
@@ -376,6 +398,8 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
   
   const clearIncompleteTasks = useCallback(async () => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       await AsyncStorage.setItem(
         COGNITIVE_STORAGE_KEYS.incompleteTasks,
         JSON.stringify([])
@@ -390,6 +414,8 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
     async (updates: Partial<CognitivePreferences>) => {
       const newPreferences = { ...preferences, ...updates };
       try {
+        const AsyncStorage = await getAsyncStorage();
+        if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
         await AsyncStorage.setItem(
           COGNITIVE_STORAGE_KEYS.preferences,
           JSON.stringify(newPreferences)
@@ -405,6 +431,8 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
   
   const reset = useCallback(async () => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       await Promise.all([
         AsyncStorage.removeItem(COGNITIVE_STORAGE_KEYS.preferences),
         AsyncStorage.removeItem(COGNITIVE_STORAGE_KEYS.lastLocation),
@@ -412,7 +440,6 @@ export function CognitiveAccessibilityProvider({ children }: { children: React.R
         AsyncStorage.removeItem(COGNITIVE_STORAGE_KEYS.formData),
         AsyncStorage.removeItem(COGNITIVE_STORAGE_KEYS.incompleteTasks),
       ]);
-      
       setPreferences(DEFAULT_COGNITIVE_PREFERENCES);
       setLastLocation(null);
       setScrollPositions({});

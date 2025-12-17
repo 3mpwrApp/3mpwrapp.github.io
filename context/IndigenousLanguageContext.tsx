@@ -1,4 +1,13 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// AsyncStorage dynamic import helper
+async function getAsyncStorage() {
+  try {
+    const mod = await import('@react-native-async-storage/async-storage');
+    if (mod && (mod.default || mod)) {
+      return mod.default || mod;
+    }
+  } catch {}
+  return null;
+}
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 import { logger } from '../utils/logger';
@@ -247,6 +256,8 @@ export function IndigenousLanguageProvider({ children }: { children: React.React
 
   const loadSettings = async () => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       const stored = await AsyncStorage.getItem(STORAGE_KEY);
       if (stored) {
         const parsed = JSON.parse(stored);
@@ -261,6 +272,8 @@ export function IndigenousLanguageProvider({ children }: { children: React.React
 
   const saveSettings = async (newSettings: IndigenousLanguageSupport) => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newSettings));
     } catch (error) {
       logger.warn('Failed to save Indigenous language settings:', error);

@@ -1,4 +1,13 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// AsyncStorage dynamic import helper
+async function getAsyncStorage() {
+  try {
+    const mod = await import('@react-native-async-storage/async-storage');
+    if (mod && (mod.default || mod)) {
+      return mod.default || mod;
+    }
+  } catch {}
+  return null;
+}
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 import { logger } from '../utils/logger';
@@ -45,6 +54,8 @@ export function MotorAccessibilityProvider({ children }: { children: React.React
   useEffect(() => {
     (async () => {
       try {
+        const AsyncStorage = await getAsyncStorage();
+        if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
         const stored = await AsyncStorage.getItem(STORAGE_KEY);
         if (stored) {
           const parsed = JSON.parse(stored);
@@ -63,6 +74,8 @@ export function MotorAccessibilityProvider({ children }: { children: React.React
     const updated = { ...preferences, ...partial };
     setPreferencesState(updated);
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
     } catch (error) {
       logger.warn('[MotorAccessibility] Failed to save preferences:', error);
@@ -73,6 +86,8 @@ export function MotorAccessibilityProvider({ children }: { children: React.React
   const reset = async () => {
     setPreferencesState(DEFAULT_PREFERENCES);
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       await AsyncStorage.removeItem(STORAGE_KEY);
     } catch (error) {
       logger.warn('[MotorAccessibility] Failed to reset preferences:', error);

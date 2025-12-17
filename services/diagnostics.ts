@@ -2,9 +2,15 @@ import { Alert, Platform, Share } from 'react-native';
 
 export async function collectAndShareDiagnostics(): Promise<void> {
   try {
+
     const FS = await import('expo-file-system');
     const Sharing = await import('expo-sharing').catch(() => null);
-    const AsyncStorage = await import('@react-native-async-storage/async-storage');
+    let AsyncStorage: any = null;
+    try {
+      AsyncStorage = await import('@react-native-async-storage/async-storage');
+    } catch {
+      AsyncStorage = null;
+    }
 
     const now = Date.now();
     const cacheDir: string = (FS as any).cacheDirectory || (FS as any).default?.cacheDirectory || '';
@@ -18,18 +24,22 @@ export async function collectAndShareDiagnostics(): Promise<void> {
 
     // Gather AsyncStorage keys + values (safe, limited size)
     let storageSnapshot: Record<string, any> = {};
-    try {
-      const keys = await (AsyncStorage as any).getAllKeys();
-      const items = await (AsyncStorage as any).multiGet(keys || []);
-      for (const [k, v] of items || []) {
-        try {
-          storageSnapshot[k] = JSON.parse(v as string);
-        } catch {
-          storageSnapshot[k] = v;
+    if (!AsyncStorage || !AsyncStorage.getAllKeys) {
+      storageSnapshot = { error: 'AsyncStorage native module is missing. This is expected in Expo Go or if the module is not installed. See https://react-native-async-storage.github.io/async-storage/docs/installation/' };
+    } else {
+      try {
+        const keys = await (AsyncStorage as any).getAllKeys();
+        const items = await (AsyncStorage as any).multiGet(keys || []);
+        for (const [k, v] of items || []) {
+          try {
+            storageSnapshot[k] = JSON.parse(v as string);
+          } catch {
+            storageSnapshot[k] = v;
+          }
         }
+      } catch {
+        storageSnapshot = { error: 'Could not read AsyncStorage' };
       }
-    } catch {
-      storageSnapshot = { error: 'Could not read AsyncStorage' };
     }
 
     // Try to include aiGroundingCompanion state if available

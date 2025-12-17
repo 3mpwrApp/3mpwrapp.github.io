@@ -11,10 +11,18 @@
  * Persisted to AsyncStorage for cross-session consistency.
  */
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// AsyncStorage dynamic import helper
+async function getAsyncStorage() {
+  try {
+    const mod = await import('@react-native-async-storage/async-storage');
+    if (mod && (mod.default || mod)) {
+      return mod.default || mod;
+    }
+  } catch {}
+  return null;
+}
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
-import { logger } from '../utils/logger';
 import {
     DEFAULT_DYSLEXIA_PREFERENCES,
     DYSLEXIA_PRESETS,
@@ -22,6 +30,7 @@ import {
     type DyslexiaPreferences,
     type DyslexiaPresetKey,
 } from '../constants/Dyslexia';
+import { logger } from '../utils/logger';
 
 // ============================================================================
 // Context Interface
@@ -60,6 +69,8 @@ export function DyslexiaProvider({ children }: { children: React.ReactNode }) {
 
   const loadPreferences = async () => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       const [savedPrefs, savedPreset] = await Promise.all([
         AsyncStorage.getItem(DYSLEXIA_STORAGE_KEYS.PREFERENCES),
         AsyncStorage.getItem(DYSLEXIA_STORAGE_KEYS.PRESET),
@@ -83,19 +94,30 @@ export function DyslexiaProvider({ children }: { children: React.ReactNode }) {
   const setPreferences = useCallback(async (prefs: Partial<DyslexiaPreferences>) => {
     setPreferencesState(prev => {
       const updated = { ...prev, ...prefs };
-      
       // Persist to AsyncStorage
-      AsyncStorage.setItem(
-        DYSLEXIA_STORAGE_KEYS.PREFERENCES,
-        JSON.stringify(updated)
-      ).catch(err => logger.warn('Failed to save dyslexia preferences:', err));
-      
+      (async () => {
+        try {
+          const AsyncStorage = await getAsyncStorage();
+          if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
+          await AsyncStorage.setItem(
+            DYSLEXIA_STORAGE_KEYS.PREFERENCES,
+            JSON.stringify(updated)
+          );
+        } catch (err) {
+          logger.warn('Failed to save dyslexia preferences:', err);
+        }
+      })();
       return updated;
     });
-    
     // Mark as custom preset since user manually adjusted
     setCurrentPreset('custom');
-    await AsyncStorage.setItem(DYSLEXIA_STORAGE_KEYS.PRESET, 'custom');
+    try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
+      await AsyncStorage.setItem(DYSLEXIA_STORAGE_KEYS.PRESET, 'custom');
+    } catch (err) {
+      logger.warn('Failed to save dyslexia preset:', err);
+    }
   }, []);
 
   const applyPreset = useCallback(async (preset: DyslexiaPresetKey) => {
@@ -104,24 +126,34 @@ export function DyslexiaProvider({ children }: { children: React.ReactNode }) {
 
     setPreferencesState(presetConfig.preferences);
     setCurrentPreset(preset);
-
-    await Promise.all([
-      AsyncStorage.setItem(
-        DYSLEXIA_STORAGE_KEYS.PREFERENCES,
-        JSON.stringify(presetConfig.preferences)
-      ),
-      AsyncStorage.setItem(DYSLEXIA_STORAGE_KEYS.PRESET, preset),
-    ]);
+    try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
+      await Promise.all([
+        AsyncStorage.setItem(
+          DYSLEXIA_STORAGE_KEYS.PREFERENCES,
+          JSON.stringify(presetConfig.preferences)
+        ),
+        AsyncStorage.setItem(DYSLEXIA_STORAGE_KEYS.PRESET, preset),
+      ]);
+    } catch (err) {
+      logger.warn('Failed to save dyslexia preset:', err);
+    }
   }, []);
 
   const reset = useCallback(async () => {
     setPreferencesState(DEFAULT_DYSLEXIA_PREFERENCES);
     setCurrentPreset('standard');
-    
-    await Promise.all([
-      AsyncStorage.removeItem(DYSLEXIA_STORAGE_KEYS.PREFERENCES),
-      AsyncStorage.removeItem(DYSLEXIA_STORAGE_KEYS.PRESET),
-    ]);
+    try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
+      await Promise.all([
+        AsyncStorage.removeItem(DYSLEXIA_STORAGE_KEYS.PREFERENCES),
+        AsyncStorage.removeItem(DYSLEXIA_STORAGE_KEYS.PRESET),
+      ]);
+    } catch (err) {
+      logger.warn('Failed to reset dyslexia preferences:', err);
+    }
   }, []);
 
   // Check if any dyslexia feature is enabled

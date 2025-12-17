@@ -1,4 +1,13 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// AsyncStorage dynamic import helper
+async function getAsyncStorage() {
+  try {
+    const mod = await import('@react-native-async-storage/async-storage');
+    if (mod && (mod.default || mod)) {
+      return mod.default || mod;
+    }
+  } catch {}
+  return null;
+}
 import React from 'react';
 
 export type MedicationSchedule = {
@@ -34,21 +43,28 @@ export const MedicationsProvider = ({ children }: { children: React.ReactNode })
 
   const persist = React.useCallback(async (items: MedicationSchedule[]) => {
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-    } catch {
+    } catch (e) {
       // ignore persistence errors
-      console.warn('Failed to persist medications');
+      const msg = e instanceof Error ? e.message : String(e);
+      console.warn('Failed to persist medications', msg);
     }
   }, []);
 
   const reload = React.useCallback(async () => {
     setLoading(true);
     try {
+      const AsyncStorage = await getAsyncStorage();
+      if (!AsyncStorage) throw new Error('AsyncStorage unavailable');
       const raw = await AsyncStorage.getItem(STORAGE_KEY);
       const stored = raw ? JSON.parse(raw) : [];
       setMedications((prev) => (prev && prev.length ? prev : stored));
-    } catch {
+    } catch (e) {
       setMedications((prev) => (prev && prev.length ? prev : []));
+      const msg = e instanceof Error ? e.message : String(e);
+      console.warn('Failed to load medications', msg);
     } finally {
       setLoading(false);
     }
