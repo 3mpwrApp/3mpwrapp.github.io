@@ -20,6 +20,7 @@ import {
     View
 } from 'react-native';
 
+import { HIT_SLOP_12 } from '../../constants/a11y';
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import PowerTool, {
@@ -187,6 +188,7 @@ function LettersTab(props: PowerToolTabProps) {
             onPress={() => setFilter(cat.id)}
             accessibilityRole="tab"
             accessibilityState={{ selected: filter === cat.id }}
+            hitSlop={HIT_SLOP_12}
           >
             <Text style={[styles.filterText, filter === cat.id && styles.filterTextActive]}>
               {cat.label}

@@ -608,6 +608,7 @@ export default function CircadianDJScreen() {
                   activeTab === tab && { borderBottomColor: palette.primary, borderBottomWidth: 2 }
                 ]}
                 onPress={() => setActiveTab(tab)}
+                hitSlop={HIT_SLOP_12}
               >
                 <Ionicons
                   name={
@@ -777,6 +778,7 @@ export default function CircadianDJScreen() {
                     accessibilityRole="button"
                     style={[styles.actionButton, { backgroundColor: palette.primary }]}
                     onPress={openStagePredictionModal}
+                    hitSlop={HIT_SLOP_12}
                   >
                     <Ionicons name="analytics" size={20} color={palette.onPrimary} />
                     <Text style={[styles.actionButtonText, { color: palette.onPrimary }]}>
@@ -874,6 +876,7 @@ export default function CircadianDJScreen() {
                     accessibilityRole="button"
                     style={[styles.actionButton, { backgroundColor: palette.info }]}
                     onPress={() => setShowDreamAnalysisModal(true)}
+                    hitSlop={HIT_SLOP_12}
                   >
                     <Ionicons name="cloud" size={20} color={palette.onPrimary} />
                     <Text style={[styles.actionButtonText, { color: palette.onPrimary }]}>
@@ -968,6 +971,7 @@ export default function CircadianDJScreen() {
                   accessibilityRole="button"
                   style={[styles.actionButton, { backgroundColor: palette.success }]}
                   onPress={() => setShowOptimizationModal(true)}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Ionicons name="list" size={20} color={palette.onPrimary} />
                   <Text style={[styles.actionButtonText, { color: palette.onPrimary }]}>
@@ -1034,6 +1038,7 @@ export default function CircadianDJScreen() {
                 <Pressable
                   accessibilityRole="link"
                   style={[styles.interlinkCard, { backgroundColor: palette.background, borderColor: palette.border }]}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <View style={[styles.interlinkIcon, { backgroundColor: palette.primary + '20' }]}>
                     <Ionicons name={feature.icon} size={24} color={palette.primary} />
@@ -1121,6 +1126,7 @@ export default function CircadianDJScreen() {
                   accessibilityRole="button"
                   style={[styles.actionButton, { backgroundColor: palette.primary, marginTop: 20 }]}
                   onPress={predictSleepStages}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Ionicons name="pulse" size={20} color={palette.onPrimary} />
                   <Text style={[styles.actionButtonText, { color: palette.onPrimary }]}>
@@ -1274,6 +1280,7 @@ export default function CircadianDJScreen() {
                   accessibilityRole="button"
                   style={[styles.actionButton, { backgroundColor: palette.muted, marginTop: 20 }]}
                   onPress={() => setStagePredictionData(null)}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Ionicons name="refresh" size={20} color={palette.text} />
                   <Text style={[styles.actionButtonText, { color: palette.text }]}>
@@ -1338,6 +1345,7 @@ export default function CircadianDJScreen() {
                         }
                       ]}
                       onPress={() => toggleEmotion(emotion.toLowerCase())}
+                      hitSlop={HIT_SLOP_12}
                     >
                       <Text style={{ color: dreamEmotions.includes(emotion.toLowerCase()) ? palette.onPrimary : palette.text }}>
                         {emotion}
@@ -1426,6 +1434,7 @@ export default function CircadianDJScreen() {
                   accessibilityRole="button"
                   style={[styles.analyzeButton, { backgroundColor: palette.muted, marginTop: 16 }]}
                   onPress={() => { setDreamAnalysis(null); setDreamInput(''); setDreamEmotions([]); }}
+                  hitSlop={HIT_SLOP_12}
                 >
                   <Text style={[styles.analyzeButtonText, { color: palette.text }]}>
                     Analyze Another Dream

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, FlatList, Pressable, Text, View } from 'react-native';
 
-import { useAppPalette } from '../../../theme/usePalette';
 import MedicationEditor from '../../../components/MedicationEditor';
+import { A11Y_ROLES, HIT_SLOP_12 } from '../../../constants/a11y';
 import { MedicationsProvider, useMedications } from '../../../store/medications';
+import { useAppPalette } from '../../../theme/usePalette';
 
 function MedicationsInner() {
   const { medications, loading, removeMedication, toggleMedication } = useMedications();
@@ -21,7 +22,7 @@ function MedicationsInner() {
         data={medications}
         keyExtractor={(i) => i.id}
         renderItem={({ item }) => (
-          <Pressable onPress={() => { setEditing(item.id); setShowEditor(true); }} style={{ padding: 12, borderBottomWidth: 1 }}>
+          <Pressable onPress={() => { setEditing(item.id); setShowEditor(true); }} style={{ padding: 12, borderBottomWidth: 1 }} accessibilityRole={A11Y_ROLES.button} hitSlop={HIT_SLOP_12}>
             <Text style={{ fontWeight: '700' }}>{item.name} {item.dose ? `· ${item.dose}` : ''}</Text>
             <Text>{item.times.join(', ')}</Text>
             <View style={{ flexDirection: 'row', marginTop: 8 }}>

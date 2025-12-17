@@ -19,6 +19,7 @@ import {
     View
 } from 'react-native';
 
+import { HIT_SLOP_12 } from '../../../constants/a11y';
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import GapView from '../../../components/GapView';
@@ -232,6 +233,7 @@ function MoodTab(_props: PowerToolTabProps) {
               accessibilityRole="radio"
               accessibilityState={{ checked: todayMood === mood.value }}
               accessibilityLabel={`${mood.label} mood`}
+              hitSlop={HIT_SLOP_12}
             >
               <Text style={styles.moodEmoji}>{mood.emoji}</Text>
               <Text style={[
