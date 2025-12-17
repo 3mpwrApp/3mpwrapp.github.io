@@ -36,6 +36,17 @@ export default function A11yPressable({
   children,
   ...rest 
 }: Props) {
+  // Preserve original handlers so we can call them but avoid forwarding
+  // native-only props to the underlying DOM element on web which causes
+  // React DOM to warn about unknown event handler properties.
+  const originalOnPressIn = (rest as any).onPressIn;
+  const originalOnPressOut = (rest as any).onPressOut;
+  const originalOnLongPress = (rest as any).onLongPress;
+
+  // Create a safe props object that removes native-only handlers before
+  // spreading into the Pressable. This prevents unknown DOM prop warnings
+  // when running under react-native-web / Jest DOM environment.
+  const { onPressIn: _omit1, onPressOut: _omit2, onLongPress: _omit3, ...safeRest } = rest as any;
   const resolvedRole = accessibilityRole ?? role ?? "button";
   const isScreenReaderActive = useScreenReaderEnabled();
   const isReduceMotionEnabled = useReduceMotionEnabled();
@@ -91,7 +102,14 @@ export default function A11yPressable({
         setInteractionMode('touch');
       }
     }
-    rest.onPressIn?.(e);
+    // Call original handler if provided by the caller. Do NOT rely on
+    // spreading `rest` to forward this on web, because that will leak
+    // the `onPressIn` prop to the DOM and trigger warnings.
+    try { originalOnPressIn?.(e); } catch {}
+  };
+
+  const handlePressOut = (e: any) => {
+    try { originalOnPressOut?.(e); } catch {}
   };
   
   return (
@@ -147,14 +165,17 @@ export default function A11yPressable({
       {...(Platform.OS === 'web' && {
         onFocus: (e: any) => {
           setIsFocused(true);
-          rest.onFocus?.(e);
+          // call original focus handler if provided
+          (rest as any).onFocus?.(e);
         },
         onBlur: (e: any) => {
           setIsFocused(false);
-          rest.onBlur?.(e);
+          (rest as any).onBlur?.(e);
         },
       })}
-      {...rest}
+      onPressOut={handlePressOut}
+      {...(originalOnLongPress ? { onLongPress: (e: any) => { try { originalOnLongPress?.(e); } catch {} } } : {})}
+      {...safeRest}
     >
       {children}
     </Pressable>

@@ -1,5 +1,5 @@
 import type { TextProps, ViewProps } from 'react-native';
-import { Text, View } from 'react-native';
+import { Platform, Text, View } from 'react-native';
 
 import { useScreenReaderEnabled } from '../hooks/useA11y';
 
@@ -56,11 +56,31 @@ export function A11yWrapper({
     })
   };
 
+  const safeRest = React.useMemo(() => {
+    if (Platform.OS !== 'web') return rest;
+    const s: any = { ...rest };
+    [
+      'onPressIn',
+      'onPressOut',
+      'onLongPress',
+      'onResponderGrant',
+      'onResponderMove',
+      'onResponderRelease',
+      'onResponderTerminate',
+      'onResponderTerminationRequest',
+      'onStartShouldSetResponder',
+      'pressRetentionOffset',
+      'showsHorizontalScrollIndicator',
+      'horizontal',
+    ].forEach((k) => delete s[k]);
+    return s;
+  }, [rest]);
+
   return (
     <View
       style={style}
       {...accessibilityProps}
-      {...rest}
+      {...safeRest}
     >
       {children}
     </View>
@@ -127,7 +147,14 @@ export function A11yText({
       {...(isScreenReaderEnabled && {
         accessibilityLiveRegion: importance === 'high' ? 'polite' : 'none'
       })}
-      {...rest}
+      {...(Platform.OS === 'web'
+        ? // avoid forwarding native-only handlers to DOM on web
+          (() => {
+            const s: any = { ...rest };
+            ['onPressIn', 'onPressOut', 'onLongPress'].forEach((k) => delete s[k]);
+            return s;
+          })()
+        : rest)}
     >
       {children}
     </Text>

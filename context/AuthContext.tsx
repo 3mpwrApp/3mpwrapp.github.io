@@ -102,6 +102,27 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 }
               }
             }
+            // Attempt to identify device/user in optional vexo analytics
+            try {
+              import('vexo-analytics')
+                .then((mod) => {
+                  try {
+                    const identifyDevice = (mod as any).identifyDevice;
+                    if (typeof identifyDevice === 'function') {
+                      const id = firebaseUser.email || firebaseUser.uid || firebaseUser.phoneNumber || 'unknown';
+                      identifyDevice(id);
+                      if (__DEV__) logger.log('[AuthContext] vexo identifyDevice called', id);
+                    }
+                  } catch (e) {
+                    if (__DEV__) logger.warn('[AuthContext] vexo identify failed', e);
+                  }
+                })
+                .catch(() => {
+                  if (__DEV__) logger.log('[AuthContext] vexo-analytics not installed (identify skipped)');
+                });
+            } catch {
+              // ignore dynamic import errors
+            }
           } else {
             if (__DEV__) logger.log('[AuthContext] No user - signed out');
             setIsAdmin(false);

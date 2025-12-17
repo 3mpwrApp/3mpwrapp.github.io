@@ -69,6 +69,9 @@ export default function AdminPanel() {
   const [reviewNotes, setReviewNotes] = useState('');
   const [searchText, setSearchText] = useState('');
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [lastBulkRemoved, setLastBulkRemoved] = useState<any[] | null>(null);
+  const [lastBulkAction, setLastBulkAction] = useState<'approve'|'reject'|null>(null);
+  const [undoTimer, setUndoTimer] = useState<number | null>(null);
 
   const toggleSelect = (id: string) => {
     setSelectedIds(prev => {
@@ -88,19 +91,67 @@ export default function AdminPanel() {
   const bulkUpdate = async (action: 'approve' | 'reject') => {
     if (!ADMIN_API_URL || !ADMIN_API_KEY) return Alert.alert('Not configured', 'ADMIN_API_URL or ADMIN_API_KEY not set');
     if (selectedIds.length === 0) return Alert.alert('No selection', 'Select items to perform bulk action');
+
+    // Confirm action with the admin before proceeding
+    Alert.alert(
+      `${action === 'approve' ? 'Approve' : 'Reject'} ${selectedIds.length} items?`,
+      'This will apply the action to the selected submissions. You will have a short time to undo.',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        { text: 'Confirm', style: 'destructive', onPress: async () => {
+          try {
+            // keep removed items locally so we can undo the UI immediately
+            const toRemove = pendingItems.filter(p => selectedIds.includes(p.id));
+
+            await Promise.all(selectedIds.map(id => fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions`, {
+              method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_API_KEY },
+              body: JSON.stringify({ id, action, notes: null }),
+            })));
+
+            setPendingItems(prev => prev.filter(p => !selectedIds.includes(p.id)));
+            setLastBulkRemoved(toRemove);
+            setLastBulkAction(action);
+            // show a short undo window (10s)
+            if (undoTimer) { clearTimeout(undoTimer); }
+            const timer = setTimeout(() => { setLastBulkRemoved(null); setLastBulkAction(null); setUndoTimer(null); }, 10000) as unknown as number;
+            setUndoTimer(timer);
+
+            // clear selection and refresh counts
+            setSelectedIds([]);
+            try { setSystemOverview(await getSystemOverview()); } catch {}
+
+            // show actionable feedback with Undo button
+            Alert.alert('Done', `Bulk ${action} completed`, [
+              { text: 'OK' },
+              { text: 'Undo', onPress: () => undoBulk() },
+            ]);
+          } catch (err) {
+            console.warn('Bulk update failed', err);
+            Alert.alert('Error', 'Bulk update failed');
+          }
+        } },
+      ]
+    );
+  };
+
+  const undoBulk = async () => {
+    if (!lastBulkRemoved || !lastBulkAction) return;
+    // Restore locally first
+    setPendingItems(prev => [...lastBulkRemoved!, ...prev]);
+    // Attempt to call server revert if supported (best-effort)
     try {
-      await Promise.all(selectedIds.map(id => fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions`, {
+      await Promise.all(lastBulkRemoved.map((it) => fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions`, {
         method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_API_KEY },
-        body: JSON.stringify({ id, action, notes: null }),
+        body: JSON.stringify({ id: it.id, action: 'revert', notes: null }),
       })));
-      setPendingItems(prev => prev.filter(p => !selectedIds.includes(p.id)));
-      setSelectedIds([]);
-      try { setSystemOverview(await getSystemOverview()); } catch {}
-      Alert.alert('Done', `Bulk ${action} completed`);
-    } catch (err) {
-      console.warn('Bulk update failed', err);
-      Alert.alert('Error', 'Bulk update failed');
+    } catch {
+      // ignore server errors; UI restored locally
     }
+    setLastBulkRemoved(null);
+    setLastBulkAction(null);
+    if (undoTimer) { clearTimeout(undoTimer); setUndoTimer(null); }
+    try { setSystemOverview(await getSystemOverview()); } catch {}
+    Alert.alert('Undone', 'Bulk action has been undone (UI restored).');
   };
 
   // Broadcast state
@@ -337,31 +388,34 @@ export default function AdminPanel() {
                             renderItem={({ item }) => (
                               <A11yPressable
                                 onPress={() => { setSelectedItem(item); setReviewNotes(''); }}
-                                style={[styles.debugRow, { marginBottom: 8 }]}
+                                style={[styles.debugRow, selectedIds.includes(item.id) && styles.debugRowSelected, { marginBottom: 8 }]}
                               >
-                                <A11yPressable onPress={() => toggleSelect(item.id)} style={{ paddingRight: 12 }}>
-                                  <Text style={{ fontSize: 18 }}>{selectedIds.includes(item.id) ? '☑' : '☐'}</Text>
+                                <A11yPressable onPress={() => toggleSelect(item.id)} accessibilityLabel={`Select ${item.title || item.name || item.id}`} style={styles.checkboxWrap}>
+                                  <Ionicons name={selectedIds.includes(item.id) ? 'checkmark-circle' : 'ellipse-outline'} size={22} color={selectedIds.includes(item.id) ? palette.primary : palette.muted} />
                                 </A11yPressable>
+
                                 <View style={{ flex: 1 }}>
-                                  <Text style={styles.debugLabel}>{item.title || item.name || `${item.type} ${item.id}`}</Text>
-                                  <Text style={styles.debugDesc}>{item.submitted_by_name || item.submitted_by_email}</Text>
+                                  <View style={styles.itemRowTop}>
+                                    <Text style={styles.debugLabel}>{item.title || item.name || `${item.type} ${item.id}`}</Text>
+                                    <View style={styles.typeBadge}><Text style={styles.typeBadgeText}>{(item.type || '').toUpperCase()}</Text></View>
+                                  </View>
+                                  <Text style={styles.submitterText}>{item.submitted_by_name || item.submitted_by_email}</Text>
                                 </View>
+
                                 <A11yPressable
                                   onPress={async () => {
-                                    // quick approve
                                     try {
                                       await fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions`, {
-                                        method: 'POST',
-                                        headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_API_KEY },
+                                        method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_API_KEY },
                                         body: JSON.stringify({ id: item.id, action: 'approve', notes: null }),
                                       });
                                       setPendingItems(prev => prev.filter(p => p.id !== item.id));
                                       try { setSystemOverview(await getSystemOverview()); } catch {}
                                     } catch (err) { console.warn(err); }
                                   }}
-                                  style={{ padding: 8 }}
+                                  style={styles.quickApprove}
                                 >
-                                  <Text style={{ color: palette.primary }}>Approve</Text>
+                                  <Text style={[styles.quickApproveText, { color: palette.success }]}>Approve</Text>
                                 </A11yPressable>
                               </A11yPressable>
                             )}
@@ -1009,5 +1063,42 @@ const createStyles = (palette: any) => StyleSheet.create({
     fontWeight: '600',
     color: palette.primary,
     marginLeft: 8,
+  },
+  checkboxWrap: {
+    paddingRight: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  debugRowSelected: {
+    borderWidth: 1,
+    borderColor: palette.primary,
+  },
+  itemRowTop: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  typeBadge: {
+    backgroundColor: palette.primary,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+  },
+  typeBadgeText: {
+    color: palette.onPrimary,
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  submitterText: {
+    fontSize: 12,
+    color: palette.muted,
+    marginTop: 2,
+  },
+  quickApprove: {
+    padding: 8,
+  },
+  quickApproveText: {
+    fontSize: 13,
+    fontWeight: '600',
   },
 });

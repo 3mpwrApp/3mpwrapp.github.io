@@ -1,6 +1,6 @@
 import React from 'react';
 import type { ViewProps } from 'react-native';
-import { View } from 'react-native';
+import { Platform, View } from 'react-native';
 
 import { A11Y_ROLES } from '../constants/A11Y';
 import { useLiveRegion } from '../hooks/useA11y';
@@ -122,7 +122,27 @@ export default function A11yContainer({
       {...(skipLinkTarget && {
         nativeID: skipLinkTarget,
       })}
-      {...rest}
+      {...(Platform.OS === 'web'
+        ? // Remove native-only props that would generate DOM warnings on web
+          ((() => {
+            const safe: any = { ...rest };
+            [
+              'onPressIn',
+              'onPressOut',
+              'onLongPress',
+              'onResponderGrant',
+              'onResponderMove',
+              'onResponderRelease',
+              'onResponderTerminate',
+              'onResponderTerminationRequest',
+              'onStartShouldSetResponder',
+              'pressRetentionOffset',
+              'showsHorizontalScrollIndicator',
+              'horizontal',
+            ].forEach((k) => delete safe[k]);
+            return safe;
+          })())
+        : rest)}
     >
       {children}
     </View>

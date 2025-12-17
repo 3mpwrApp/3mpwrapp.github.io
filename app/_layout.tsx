@@ -454,6 +454,27 @@ function TelemetryInit() {
   React.useEffect(() => {
     if (state.analyticsEnabled) {
       initAnalytics();
+      // Initialize optional 3rd-party analytics (vexo) if available
+      try {
+        import('vexo-analytics')
+          .then((mod) => {
+            try {
+              const vexo = (mod as any).vexo;
+              if (typeof vexo === 'function') {
+                // Project-specific key provided by the user
+                vexo('84eb4c3f-7580-4a13-97d3-314b7b4c8bc1');
+                if (__DEV__) logger.log('[TelemetryInit] vexo initialized');
+              }
+            } catch (e) {
+              if (__DEV__) logger.warn('[TelemetryInit] vexo init failed', e);
+            }
+          })
+          .catch(() => {
+            if (__DEV__) logger.log('[TelemetryInit] vexo-analytics not installed');
+          });
+      } catch {
+        // ignore
+      }
     }
   }, [state.analyticsEnabled]);
   return null;
