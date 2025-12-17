@@ -28,8 +28,8 @@ export async function collectAndShareDiagnostics(): Promise<void> {
           storageSnapshot[k] = v;
         }
       }
-    } catch (e) {
-      storageSnapshot = { error: 'Could not read AsyncStorage', message: String(e) };
+    } catch {
+      storageSnapshot = { error: 'Could not read AsyncStorage' };
     }
 
     // Try to include aiGroundingCompanion state if available
@@ -64,7 +64,7 @@ export async function collectAndShareDiagnostics(): Promise<void> {
       }
     }
   } catch (err) {
-    console.error('Diagnostics collection failed', err);
+    console.warn('Diagnostics collection failed', String(err));
     Alert.alert('Diagnostics failed', 'Could not collect diagnostics.');
   }
 }
