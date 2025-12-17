@@ -11,15 +11,20 @@
  */
 
 import { Ionicons } from '@expo/vector-icons';
+import Constants from 'expo-constants';
 import { Stack } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import {
     ActivityIndicator,
     Alert,
+    Button,
+    FlatList,
+    Modal,
     ScrollView,
     StyleSheet,
     Text,
-    View
+    TextInput,
+    View,
 } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
@@ -36,7 +41,10 @@ import {
     type Experiment,
     type Variant,
 } from '../../../services/abTesting';
+import { sendBroadcast } from '../../../services/activity';
+import { getSystemOverview, type SystemOverview } from '../../../services/adminOverview';
 import { getSessionAnalyticsStats, resetSessionAnalytics } from '../../../services/analytics';
+import useNotificationDispatcher from '../../../services/notificationsDispatcher';
 import { getReferralStats } from '../../../services/referral';
 import { useComplexityMode } from '../../../store/complexityMode';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -49,8 +57,62 @@ export default function AdminPanel() {
   const [assignments, setAssignments] = useState<Record<string, Variant | null>>({});
   const [referralStats, setReferralStats] = useState<any>(null);
   const [analyticsStats, setAnalyticsStats] = useState<ReturnType<typeof getSessionAnalyticsStats> | null>(null);
+  const [systemOverview, setSystemOverview] = useState<SystemOverview | null>(null);
 
   const styles = createStyles(palette);
+
+  // Moderation state
+  const [pendingItems, setPendingItems] = useState<any[]>([]);
+  const [page, setPage] = useState(0);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<any | null>(null);
+  const [reviewNotes, setReviewNotes] = useState('');
+  const [searchText, setSearchText] = useState('');
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+
+  const toggleSelect = (id: string) => {
+    setSelectedIds(prev => {
+      if (prev.includes(id)) return prev.filter(x => x !== id);
+      return [...prev, id];
+    });
+  };
+
+  const filteredItems = pendingItems.filter((it) => {
+    if (!searchText) return true;
+    const s = searchText.toLowerCase();
+    const title = (it.title || it.name || '').toLowerCase();
+    const by = (it.submitted_by_name || it.submitted_by_email || '').toLowerCase();
+    return title.includes(s) || by.includes(s) || (it.summary || it.description || '').toLowerCase().includes(s);
+  });
+
+  const bulkUpdate = async (action: 'approve' | 'reject') => {
+    if (!ADMIN_API_URL || !ADMIN_API_KEY) return Alert.alert('Not configured', 'ADMIN_API_URL or ADMIN_API_KEY not set');
+    if (selectedIds.length === 0) return Alert.alert('No selection', 'Select items to perform bulk action');
+    try {
+      await Promise.all(selectedIds.map(id => fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_API_KEY },
+        body: JSON.stringify({ id, action, notes: null }),
+      })));
+      setPendingItems(prev => prev.filter(p => !selectedIds.includes(p.id)));
+      setSelectedIds([]);
+      try { setSystemOverview(await getSystemOverview()); } catch {}
+      Alert.alert('Done', `Bulk ${action} completed`);
+    } catch (err) {
+      console.warn('Bulk update failed', err);
+      Alert.alert('Error', 'Bulk update failed');
+    }
+  };
+
+  // Broadcast state
+  const [broadcastTitle, setBroadcastTitle] = useState('');
+  const [broadcastBody, setBroadcastBody] = useState('');
+  const [broadcastImportance, setBroadcastImportance] = useState<'info'|'warn'|'critical'>('info');
+  const { dispatchDomainEvent } = useNotificationDispatcher();
+
+  // Admin API config (optional) - set via app config extra or env
+  const cfg = (Constants.expoConfig && (Constants.expoConfig as any).extra) || {};
+  const ADMIN_API_URL = cfg.ADMIN_API_URL || process.env.EXPO_PUBLIC_ADMIN_API_URL || null;
+  const ADMIN_API_KEY = cfg.ADMIN_API_KEY || process.env.EXPO_PUBLIC_ADMIN_API_KEY || null;
 
   // Load current experiment assignments
   useEffect(() => {
@@ -72,6 +134,13 @@ export default function AdminPanel() {
         // Load analytics stats
         const analytics = getSessionAnalyticsStats();
         setAnalyticsStats(analytics);
+        // Load system overview counts
+        try {
+          const overview = await getSystemOverview();
+          setSystemOverview(overview);
+        } catch (err) {
+          console.warn('Failed to load system overview', err);
+        }
       } catch (error) {
         console.error('Failed to load admin data:', error);
       } finally {
@@ -169,6 +238,185 @@ export default function AdminPanel() {
                 <Text style={styles.dangerButtonText}>Reset All Experiments</Text>
               </A11yPressable>
             </Section>
+
+            {/* System Overview */}
+            <Section title="🔍 System Overview" styles={styles}>
+              {systemOverview ? (
+                <>
+                  <View style={styles.statsGrid}>
+                    <StatCard label="Events" value={String(systemOverview.eventsCount)} palette={palette} styles={styles} />
+                    <StatCard label="Campaigns" value={String(systemOverview.campaignsCount)} palette={palette} styles={styles} />
+                    <StatCard label="Users" value={String(systemOverview.usersCount)} palette={palette} styles={styles} />
+                    <StatCard label="Pending Submissions" value={String(systemOverview.pendingSubmissions)} palette={palette} styles={styles} />
+                  </View>
+
+                  <GapView style={{ height: 12 }} />
+
+                  <A11yPressable
+                    onPress={async () => {
+                      try {
+                        const overview = await getSystemOverview();
+                        setSystemOverview(overview);
+                        Alert.alert('Refreshed', 'System overview refreshed.');
+                      } catch (err) {
+                        Alert.alert('Error', 'Failed to refresh system overview');
+                      }
+                    }}
+                    accessibilityRole="button"
+                    accessibilityLabel="Refresh system overview"
+                    hitSlop={HIT_SLOP_8}
+                    style={styles.secondaryButton}
+                  >
+                    <Ionicons name="refresh-outline" size={18} color={palette.primary} />
+                    <Text style={styles.secondaryButtonText}>Refresh</Text>
+                  </A11yPressable>
+                </>
+              ) : (
+                <Text style={styles.sectionDesc}>Loading system stats...</Text>
+              )}
+            </Section>
+
+                  {/* Moderation */}
+                  <Section title="🗂 Moderation" styles={styles}>
+                    <Text style={styles.sectionDesc}>
+                      Review and approve or reject pending website submissions (if configured).
+                    </Text>
+
+                    <GapView style={{ height: 12 }} />
+
+                    <A11yPressable
+                      onPress={async () => {
+                        if (!ADMIN_API_URL || !ADMIN_API_KEY) {
+                          Alert.alert('Not configured', 'ADMIN_API_URL or ADMIN_API_KEY not set in app config.');
+                          return;
+                        }
+
+                        try {
+                          const res = await fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions?status=pending`, {
+                            headers: { 'X-Admin-Key': ADMIN_API_KEY },
+                          });
+                          if (!res.ok) throw new Error(`API ${res.status}`);
+                          const items = await res.json();
+                          if (!Array.isArray(items) || items.length === 0) {
+                            Alert.alert('No pending submissions', 'There are no submissions waiting for review.');
+                            return;
+                          }
+
+                          setPendingItems(items);
+                          setPage(0);
+                          setModalVisible(true);
+                        } catch (err) {
+                          console.warn(err);
+                          Alert.alert('Error', 'Failed to fetch pending submissions');
+                        }
+                      }}
+                      accessibilityRole="button"
+                      accessibilityLabel="Review pending submissions"
+                      hitSlop={HIT_SLOP_8}
+                      style={styles.secondaryButton}
+                    >
+                      <Ionicons name="document-text-outline" size={18} color={palette.primary} />
+                      <Text style={styles.secondaryButtonText}>Review Pending Submissions</Text>
+                    </A11yPressable>
+
+                    <Modal visible={modalVisible} animationType="slide">
+                      <ResponsiveScreenWrapper>
+                        <View style={{ flex: 1, padding: 16 }}>
+                          <Text style={styles.title}>Pending Submissions</Text>
+                          <TextInput placeholder="Search by title or submitter" value={searchText} onChangeText={setSearchText} style={{ borderWidth: 1, borderColor: palette.border, padding: 8, borderRadius: 8, marginBottom: 8 }} />
+
+                          <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8 }}>
+                            <Button title={`Approve (${selectedIds.length})`} onPress={() => bulkUpdate('approve')} />
+                            <Button title={`Reject (${selectedIds.length})`} color="#D9534F" onPress={() => bulkUpdate('reject')} />
+                            <Button title="Clear" onPress={() => { setSelectedIds([]); setSearchText(''); }} />
+                          </View>
+
+                          <FlatList
+                            data={filteredItems.slice(page * 10, (page + 1) * 10)}
+                            keyExtractor={(i) => i.id}
+                            renderItem={({ item }) => (
+                              <A11yPressable
+                                onPress={() => { setSelectedItem(item); setReviewNotes(''); }}
+                                style={[styles.debugRow, { marginBottom: 8 }]}
+                              >
+                                <A11yPressable onPress={() => toggleSelect(item.id)} style={{ paddingRight: 12 }}>
+                                  <Text style={{ fontSize: 18 }}>{selectedIds.includes(item.id) ? '☑' : '☐'}</Text>
+                                </A11yPressable>
+                                <View style={{ flex: 1 }}>
+                                  <Text style={styles.debugLabel}>{item.title || item.name || `${item.type} ${item.id}`}</Text>
+                                  <Text style={styles.debugDesc}>{item.submitted_by_name || item.submitted_by_email}</Text>
+                                </View>
+                                <A11yPressable
+                                  onPress={async () => {
+                                    // quick approve
+                                    try {
+                                      await fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions`, {
+                                        method: 'POST',
+                                        headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_API_KEY },
+                                        body: JSON.stringify({ id: item.id, action: 'approve', notes: null }),
+                                      });
+                                      setPendingItems(prev => prev.filter(p => p.id !== item.id));
+                                      try { setSystemOverview(await getSystemOverview()); } catch {}
+                                    } catch (err) { console.warn(err); }
+                                  }}
+                                  style={{ padding: 8 }}
+                                >
+                                  <Text style={{ color: palette.primary }}>Approve</Text>
+                                </A11yPressable>
+                              </A11yPressable>
+                            )}
+                          />
+
+                          <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 12 }}>
+                            <Button title="Prev" onPress={() => setPage(Math.max(0, page - 1))} />
+                            <Button title="Close" onPress={() => setModalVisible(false)} />
+                            <Button title="Next" onPress={() => setPage(page + 1)} />
+                          </View>
+
+                          {selectedItem && (
+                            <View style={{ marginTop: 16 }}>
+                              <Text style={styles.sectionTitle}>{selectedItem.title || selectedItem.name}</Text>
+                              <Text style={styles.sectionDesc}>{selectedItem.summary || selectedItem.description}</Text>
+                              <GapView style={{ height: 8 }} />
+                              <TextInput
+                                placeholder="Review notes (optional)"
+                                value={reviewNotes}
+                                onChangeText={setReviewNotes}
+                                multiline
+                                style={{ borderWidth: 1, borderColor: palette.border, padding: 8, borderRadius: 8, minHeight: 80 }}
+                              />
+                              <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
+                                <Button title="Reject" color="#D9534F" onPress={async () => {
+                                  try {
+                                    await fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions`, {
+                                      method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_API_KEY },
+                                      body: JSON.stringify({ id: selectedItem.id, action: 'reject', notes: reviewNotes || null }),
+                                    });
+                                    setPendingItems(prev => prev.filter(p => p.id !== selectedItem.id));
+                                    setSelectedItem(null);
+                                    setReviewNotes('');
+                                    setSystemOverview(await getSystemOverview());
+                                  } catch (err) { console.warn(err); Alert.alert('Error', 'Failed to reject'); }
+                                }} />
+                                <Button title="Approve" onPress={async () => {
+                                  try {
+                                    await fetch(`${ADMIN_API_URL.replace(/\/$/, '')}/api/admin/submissions`, {
+                                      method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_API_KEY },
+                                      body: JSON.stringify({ id: selectedItem.id, action: 'approve', notes: reviewNotes || null }),
+                                    });
+                                    setPendingItems(prev => prev.filter(p => p.id !== selectedItem.id));
+                                    setSelectedItem(null);
+                                    setReviewNotes('');
+                                    setSystemOverview(await getSystemOverview());
+                                  } catch (err) { console.warn(err); Alert.alert('Error', 'Failed to approve'); }
+                                }} />
+                              </View>
+                            </View>
+                          )}
+                        </View>
+                      </ResponsiveScreenWrapper>
+                    </Modal>
+                  </Section>
 
             {/* Referral Stats Section */}
             <Section title="🎁 Referral System" styles={styles}>
@@ -280,6 +528,53 @@ export default function AdminPanel() {
                   </A11yPressable>
                 </>
               )}
+            </Section>
+
+            {/* Broadcast Announcement */}
+            <Section title="📢 Broadcast Announcement" styles={styles}>
+              <Text style={styles.sectionDesc}>Send a platform-wide announcement to users.</Text>
+              <GapView style={{ height: 12 }} />
+              <TextInput placeholder="Title" value={broadcastTitle} onChangeText={setBroadcastTitle} style={{ borderWidth: 1, borderColor: palette.border, padding: 8, borderRadius: 8, marginBottom: 8 }} />
+              <TextInput placeholder="Body (optional)" value={broadcastBody} onChangeText={setBroadcastBody} multiline style={{ borderWidth: 1, borderColor: palette.border, padding: 8, borderRadius: 8, minHeight: 80 }} />
+
+              <GapView style={{ height: 8 }} />
+              <View style={{ flexDirection: 'row', gap: 8 }}>
+                <A11yPressable onPress={() => setBroadcastImportance('info')} style={[styles.variantButton, broadcastImportance==='info' && styles.variantButtonActive]}>
+                  <Text style={[styles.variantButtonText, broadcastImportance==='info' && styles.variantButtonTextActive]}>Info</Text>
+                </A11yPressable>
+                <A11yPressable onPress={() => setBroadcastImportance('warn')} style={[styles.variantButton, broadcastImportance==='warn' && styles.variantButtonActive]}>
+                  <Text style={[styles.variantButtonText, broadcastImportance==='warn' && styles.variantButtonTextActive]}>Warn</Text>
+                </A11yPressable>
+                <A11yPressable onPress={() => setBroadcastImportance('critical')} style={[styles.variantButton, broadcastImportance==='critical' && styles.variantButtonActive]}>
+                  <Text style={[styles.variantButtonText, broadcastImportance==='critical' && styles.variantButtonTextActive]}>Critical</Text>
+                </A11yPressable>
+              </View>
+
+              <GapView style={{ height: 12 }} />
+
+              <A11yPressable
+                onPress={async () => {
+                  if (!broadcastTitle.trim()) return Alert.alert('Validation', 'Title is required');
+                  try {
+                    const id = await sendBroadcast({ type: 'broadcast', payload: { title: broadcastTitle.trim(), body: broadcastBody.trim() || undefined, importance: broadcastImportance }, summaryKey: 'broadcast.generic' });
+                    if (!id) throw new Error('Failed');
+                    // show local delivered notification via dispatcher
+                    try { await dispatchDomainEvent({ event: 'broadcast', templateId: 'broadcast.generic', payload: { title: broadcastTitle.trim(), body: broadcastBody.trim() || undefined } }, { force: true } as any); } catch {}
+                    setBroadcastTitle(''); setBroadcastBody('');
+                    setSystemOverview(await getSystemOverview());
+                    Alert.alert('✅ Success', 'Broadcast sent to all users');
+                  } catch (err) {
+                    console.warn(err);
+                    Alert.alert('❌ Error', 'Could not send broadcast');
+                  }
+                }}
+                accessibilityLabel="Send broadcast announcement"
+                hitSlop={HIT_SLOP_8}
+                style={[styles.dangerButton, { marginTop: 8, backgroundColor: palette.primary }]}
+              >
+                <Ionicons name="send-outline" size={18} color={palette.onPrimary ?? '#fff'} />
+                <Text style={[styles.dangerButtonText, { color: palette.onPrimary ?? '#fff' }]}>Send Broadcast</Text>
+              </A11yPressable>
             </Section>
 
             {/* Debug Tools */}

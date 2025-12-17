@@ -40,6 +40,48 @@ export async function logActivity<T extends ActivityEventType>(evt: Omit<BaseAct
   }
 }
 
+// Admin broadcast helper: allows admin UI to create a broadcast activity
+// This intentionally bypasses telemetry consent checks so admins can send
+// system-wide announcements. Use with care.
+export async function sendBroadcast(evt: Omit<BaseActivityEvent<'broadcast'>, 'ts'> & { ts?: number }) {
+  try {
+    const db = getFirestore();
+    if (!db) return null;
+
+    const toStore: any = {
+      type: evt.type,
+      ts: evt.ts || Date.now(),
+      userId: evt.userId || null,
+      payload: evt.payload || null,
+      summaryKey: evt.summaryKey || null,
+      metadata: evt.metadata || null,
+      createdAt: serverTimestamp(),
+    };
+
+    const ref = await addDoc(collection(db, ACTIVITY_COLLECTION), toStore);
+
+    // Try to send push notifications to all users when broadcast payload contains title/body
+    try {
+      const notifModule = await import('./notifications');
+      const payload = evt.payload as any;
+      if (notifModule && typeof notifModule.notifyAllUsers === 'function' && payload && payload.title) {
+        try {
+          await notifModule.notifyAllUsers({ title: payload.title, body: payload.body || '', data: { type: 'broadcast' } });
+        } catch (e) {
+          // Don't fail the broadcast write if push fails
+          console.warn('[sendBroadcast] notifyAllUsers failed', e);
+        }
+      }
+    } catch (e) {
+      // dynamic import failed - ignore
+    }
+
+    return ref.id;
+  } catch (err) {
+    return null;
+  }
+}
+
 export interface FeedSubscriptionOptions {
   limit?: number;
   onError?: (e: Error) => void;
