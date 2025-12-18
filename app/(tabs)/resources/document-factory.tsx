@@ -20,7 +20,6 @@ import {
     View
 } from 'react-native';
 
-import { HIT_SLOP_12 } from '../../constants/a11y';
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
 import PowerTool, {
@@ -31,7 +30,7 @@ import PowerTool, {
     type PowerToolTabProps,
 } from '../../../components/PowerTool';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
+import { HIT_SLOP_12, HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
 import { trackEvent } from '../../../services/analyticsClient';
 import { useJurisdiction } from '../../../store/jurisdiction';

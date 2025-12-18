@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, FlatList, Pressable, Text, View } from 'react-native';
 
 import MedicationEditor from '../../../components/MedicationEditor';
-import { A11Y_ROLES, HIT_SLOP_12 } from '../../../constants/a11y';
+import { A11Y_ROLES, HIT_SLOP_12 } from '../../../constants/A11Y';
 import { MedicationsProvider, useMedications } from '../../../store/medications';
 import { useAppPalette } from '../../../theme/usePalette';
 
