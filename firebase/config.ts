@@ -1,5 +1,11 @@
 // Defensive Platform import (may be partially mocked in Jest)
-import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
+let ReactNativeAsyncStorage: any;
+try {
+  ReactNativeAsyncStorage = require('@react-native-async-storage/async-storage').default;
+} catch (e) {
+  console.warn('[Firebase Config] AsyncStorage not available, using null:', e);
+  ReactNativeAsyncStorage = null;
+}
 import { getApp, getApps, initializeApp, type FirebaseApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { enableIndexedDbPersistence, getFirestore, initializeFirestore, setLogLevel } from "firebase/firestore";
@@ -68,13 +74,22 @@ let app: FirebaseApp | null = null;
 try {
   if (!STRICT) {
     app = getFirebaseApp();
-    
+
     if (!IS_TEST && platformOS !== "web") {
       try {
-        const { initializeAuth, getReactNativePersistence } = require("firebase/auth");
-        initializeAuth(app, { persistence: getReactNativePersistence(ReactNativeAsyncStorage) });
-      } catch {
-        // ignore if already initialized
+        // Only initialize auth with AsyncStorage if the native module is available
+        if (ReactNativeAsyncStorage) {
+          const { initializeAuth, getReactNativePersistence } = require("firebase/auth");
+          initializeAuth(app, { persistence: getReactNativePersistence(ReactNativeAsyncStorage) });
+        } else {
+          console.warn('[Firebase] AsyncStorage not available, Firebase Auth will use default persistence');
+          // Initialize auth without persistence (will use memory-only persistence)
+          const { initializeAuth } = require("firebase/auth");
+          initializeAuth(app);
+        }
+      } catch (e) {
+        // ignore if already initialized or other errors
+        console.warn('[Firebase] Auth initialization warning:', e);
       }
     }
   }
