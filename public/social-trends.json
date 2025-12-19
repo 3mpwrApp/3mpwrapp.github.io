@@ -1,34 +1,34 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-19T06:02:55.726Z",
+  "lastUpdated": "2025-12-19T12:02:58.225Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 5810,
+      "totalPosts": 5835,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-19T06:02:46.911Z"
+      "lastSeen": "2025-12-19T12:02:49.782Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 5825,
+      "totalPosts": 5850,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-19T06:02:48.759Z"
+      "lastSeen": "2025-12-19T12:02:52.040Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 5779,
-      "recentPosts": 25,
+      "totalPosts": 5801,
+      "recentPosts": 22,
       "peakPosts": 25,
-      "lastSeen": "2025-12-19T06:02:50.820Z"
+      "lastSeen": "2025-12-19T12:02:54.133Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 5818,
+      "totalPosts": 5843,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-19T06:02:52.683Z"
+      "lastSeen": "2025-12-19T12:02:56.133Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
@@ -39,24 +39,6 @@
     }
   },
   "viralPosts": [
-    {
-      "text": "The Nu HTML Checker has gotten a bunch of updates to validate ARIA. Try it:\nvalidator.w3.org/nu/\n\nOr run it locally:\nvalidator.github.io/validator/\n\nIf you find issues with ARIA validation, _report them_:\ngithub.com/validator/va...\n\n#HTML #ARIA #accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 27,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
       "author": "sheffgreenparty.bsky.social",
@@ -338,88 +320,106 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
+      "author": "sheffgreenparty.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
+      "author": "ellatholmes.bsky.social",
+      "engagement": 41,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I'm posting this as screenshots because I know threads don't get read. The screenshots might not either, but I'm trying to increase my chances because it'll just be one post. 💜\n\n#disability #accessibility #NEISvoid",
+      "author": "yarns-and-d20s.bsky.social",
+      "engagement": 22,
+      "hashtag": "Accessibility"
     }
   ],
   "emergingTopics": [
     {
-      "keyword": "disabilityrights",
-      "count": 40
+      "keyword": "accessibility",
+      "count": 32
     },
     {
-      "keyword": "accessibility",
-      "count": 38
+      "keyword": "disabilityrights",
+      "count": 28
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 28
     },
     {
       "keyword": "disabilityjustice",
-      "count": 27
-    },
-    {
-      "keyword": "cripthevote",
       "count": 26
     },
     {
-      "keyword": "altcitizen",
-      "count": 12
-    },
-    {
-      "keyword": "disabilityrebellion",
-      "count": 12
-    },
-    {
-      "keyword": "cripthevote disabilityrights",
-      "count": 12
-    },
-    {
-      "keyword": "disabilityrights disabilityrebellion",
-      "count": 12
+      "keyword": "disability",
+      "count": 8
     },
     {
       "keyword": "disabilityjustice nico",
       "count": 8
     },
     {
-      "keyword": "disability",
-      "count": 7
-    },
-    {
-      "keyword": "foxtakedown",
+      "keyword": "disability rights",
       "count": 6
     },
     {
-      "keyword": "stoptheliesfox",
+      "keyword": "digitalaccessibility",
       "count": 6
     },
     {
-      "keyword": "virtual",
-      "count": 6
+      "keyword": "a11y accessibility",
+      "count": 5
     },
     {
-      "keyword": "foxlies",
-      "count": 6
-    },
-    {
-      "keyword": "stoptrump",
-      "count": 6
-    },
-    {
-      "keyword": "wearetheflood",
-      "count": 6
-    },
-    {
-      "keyword": "50501movement",
-      "count": 6
-    },
-    {
-      "keyword": "disabilityrebellion stoptrump",
-      "count": 6
+      "keyword": "disabilities",
+      "count": 4
     },
     {
       "keyword": "accessibility a11y",
-      "count": 6
+      "count": 4
+    },
+    {
+      "keyword": "ux",
+      "count": 4
+    },
+    {
+      "keyword": "inclusivedesign",
+      "count": 4
+    },
+    {
+      "keyword": "civilrights",
+      "count": 3
+    },
+    {
+      "keyword": "neurodiversity",
+      "count": 3
+    },
+    {
+      "keyword": "pakistan",
+      "count": 3
+    },
+    {
+      "keyword": "uncrpd",
+      "count": 3
+    },
+    {
+      "keyword": "2025 disabilityrights",
+      "count": 3
+    },
+    {
+      "keyword": "disabilityrights pakistan",
+      "count": 3
+    },
+    {
+      "keyword": "climatejustice",
+      "count": 3
     }
   ]
 }
