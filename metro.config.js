@@ -5,9 +5,11 @@ const { getDefaultConfig } = require("@expo/metro-config");
 const config = getDefaultConfig(__dirname);
 
 // Enable inlineRequires to improve startup/TTI on RN
+// Set unstable_allowRequireContext to fix React Navigation module interop
 config.transformer = {
   ...(config.transformer || {}),
   inlineRequires: true,
+  unstable_allowRequireContext: true,
 };
 
 config.serializer = {
