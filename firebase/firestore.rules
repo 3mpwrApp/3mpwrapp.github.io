@@ -283,6 +283,13 @@ service cloud.firestore {
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
+    // Activity feed (public read; signed-in write for logging actions)
+    match /activity/{docId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin();
+    }
+
     // Testers chat room (signed-in users)
     match /chats/{room}/messages/{msgId} {
       allow read: if isSignedIn();

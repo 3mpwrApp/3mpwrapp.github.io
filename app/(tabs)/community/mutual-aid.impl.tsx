@@ -81,16 +81,17 @@ export default function MutualAidImpl() {
     }
 
     setIsPosting(true);
-    try { 
-      await addAidPost({ type, description: desc, city, contact }); 
-      setDesc(''); 
-      setCity(''); 
-      setContact(''); 
+    try {
+      await addAidPost({ type, description: desc, city, contact });
+      setDesc('');
+      setCity('');
+      setContact('');
       await load();
       Alert.alert('Posted!', 'Your mutual aid request has been posted.');
-    } catch (err) { 
+    } catch (err) {
       console.error('Error posting:', err);
-      Alert.alert('Failed','Could not post. Please try again.'); 
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+      Alert.alert('Failed', `Could not post: ${errorMessage}`);
     } finally {
       setIsPosting(false);
     }

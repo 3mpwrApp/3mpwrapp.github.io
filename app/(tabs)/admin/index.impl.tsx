@@ -235,7 +235,10 @@ export default function AdminPanel() {
                 try {
                   await logActivity({ type:'broadcast', payload:{ title: broadcastTitle.trim(), body: broadcastBody.trim()||undefined, importance:'info' }, summaryKey:'broadcast.generic' });
                   setBroadcastTitle(''); setBroadcastBody(''); Alert.alert('✅ Success', 'Broadcast sent to all users');
-                } catch { Alert.alert('❌ Error','Could not send broadcast'); }
+                } catch (err) {
+                  const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+                  Alert.alert('❌ Error', `Could not send broadcast: ${errorMessage}`);
+                }
               }}
               style={[s.primaryButton, { opacity: broadcastTitle.trim()?1:0.5 }]}
             >
