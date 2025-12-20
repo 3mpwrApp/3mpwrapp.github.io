@@ -146,7 +146,7 @@ const REVOLUTIONARY_FEATURES: RevolutionaryFeature[] = [
     title: 'AI Grounding Companion',
     description: 'Personalized grounding with adaptive learning',
     icon: 'leaf',
-    route: '/wellness/grounding-companion',
+    route: '/wellness/ai-grounding',
     color: 'success',
     badge: 'NEW',
     aiPowered: true,
