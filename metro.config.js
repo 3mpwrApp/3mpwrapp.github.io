@@ -5,17 +5,9 @@ const { getDefaultConfig } = require("@expo/metro-config");
 const config = getDefaultConfig(__dirname);
 
 // Enable inlineRequires to improve startup/TTI on RN
-// Fix for "Cannot set property default" error in @react-navigation/native-stack on web
 config.transformer = {
   ...(config.transformer || {}),
   inlineRequires: true,
-  babelTransformerPath: require.resolve("@expo/metro-config/babel-transformer"),
-  getTransformOptions: async () => ({
-    transform: {
-      experimentalImportSupport: false,
-      inlineRequires: true,
-    },
-  }),
 };
 
 config.serializer = {
