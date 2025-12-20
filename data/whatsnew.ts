@@ -9,6 +9,18 @@ export type WhatsNewItem = {
 export const whatsnew: WhatsNewItem[] = [
   // December 2025 - Latest Updates
   {
+    id: "wn-2025-12-20-cognitive-comfort-fix",
+    title: "🧠 'Where Was I' Feature Fix",
+    summary: "Fixed an issue where the 'Where Was I' navigation memory button would show even when turned off in settings. The feature now properly respects your cognitive comfort preferences.",
+    date: "2025-12-20T00:00:00.000Z",
+  },
+  {
+    id: "wn-2025-12-20-navigation-stability",
+    title: "🔧 Navigation Stability Improvements",
+    summary: "Resolved React Navigation module compatibility issues that could cause app loading problems. Enhanced module loading for better reliability across all platforms.",
+    date: "2025-12-20T00:00:00.000Z",
+  },
+  {
     id: "wn-2025-12-13-usa-expanded",
     title: "🇺🇸 USA Lite - 13 Jurisdictions Fully Built!",
     summary: "Complete US legal framework now available! Federal + 12 states (CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS) with workers' comp, civil rights, disability programs, enforcement agencies, and procedural safeguards for each.",
