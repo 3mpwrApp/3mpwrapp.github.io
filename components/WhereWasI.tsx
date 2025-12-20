@@ -60,12 +60,17 @@ export function WhereWasI({
   const [isOpen, setIsOpen] = useState(false);
   const [history, setHistory] = useState<NavigationHistoryEntry[]>([]);
   const [bounceAnim] = useState(new Animated.Value(1));
+  const [isLoading, setIsLoading] = useState(true);
 
   // Load cognitive comfort data on mount if not already loaded
   useEffect(() => {
-    loadCognitiveComfortData().catch(() => {
-      // Silently fail - data will use defaults
-    });
+    loadCognitiveComfortData()
+      .catch(() => {
+        // Silently fail - data will use defaults
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   // Subscribe to history changes
@@ -102,9 +107,9 @@ export function WhereWasI({
     router.push(entry.path as any);
     announce(t('cognitive.navigatingTo', 'Navigating to {{screen}}', { screen: entry.screenName }));
   }, [router, t]);
-  
-  // Don't show if disabled in settings, or if visible prop is false, or no history
-  if (!whereWasIEnabled || !visible || history.length === 0) return null;
+
+  // Don't show while loading, if disabled in settings, if visible prop is false, or no history
+  if (isLoading || !whereWasIEnabled || !visible || history.length === 0) return null;
   
   return (
     <>
