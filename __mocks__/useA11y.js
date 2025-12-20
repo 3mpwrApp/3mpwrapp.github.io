@@ -14,7 +14,7 @@ const useA11yAnnounce = jest.fn(() => ({
 }));
 
 // Export as both named exports and default exports for compatibility
-module.exports = {
+const mockExports = {
   useScreenReaderEnabled,
   useReduceMotionEnabled,
   useAnnounceOnMount,
@@ -28,5 +28,4 @@ module.exports = {
   MAX_CONTRAST_RATIO: 21.0,
 };
 
-// Also export as default for ESM compatibility
-module.exports.default = module.exports;
+module.exports = mockExports;

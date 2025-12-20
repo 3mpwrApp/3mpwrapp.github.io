@@ -1,4 +1,6 @@
 // Mock for hooks/useColorScheme.ts
-export default function useColorScheme() {
+function useColorScheme() {
   return 'light';
 }
+
+module.exports = useColorScheme;
