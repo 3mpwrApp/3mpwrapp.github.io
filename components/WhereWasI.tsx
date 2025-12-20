@@ -23,6 +23,7 @@ import { useTranslation } from '../i18n';
 import {
     formatRelativeTime,
     getRecentHistory,
+    loadCognitiveComfortData,
     subscribe,
     useCognitiveComfort,
     type NavigationHistoryEntry,
@@ -46,8 +47,8 @@ const TAB_ICONS: Record<string, string> = {
   campaigns: 'flag',
 };
 
-export function WhereWasI({ 
-  visible = true, 
+export function WhereWasI({
+  visible = true,
   position = 'bottom-left',
   maxItems = 5,
 }: WhereWasIProps) {
@@ -55,17 +56,24 @@ export function WhereWasI({
   const palette = useAppPalette();
   const router = useRouter();
   const { whereWasIEnabled } = useCognitiveComfort();
-  
+
   const [isOpen, setIsOpen] = useState(false);
   const [history, setHistory] = useState<NavigationHistoryEntry[]>([]);
   const [bounceAnim] = useState(new Animated.Value(1));
-  
+
+  // Load cognitive comfort data on mount if not already loaded
+  useEffect(() => {
+    loadCognitiveComfortData().catch(() => {
+      // Silently fail - data will use defaults
+    });
+  }, []);
+
   // Subscribe to history changes
   useEffect(() => {
     const updateHistory = () => {
       setHistory(getRecentHistory(maxItems));
     };
-    
+
     updateHistory();
     return subscribe(updateHistory);
   }, [maxItems]);
