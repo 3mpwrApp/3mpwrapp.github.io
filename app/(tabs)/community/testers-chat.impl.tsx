@@ -75,7 +75,7 @@ export default function TestersChatImpl() {
       } catch { setTypingUsers(0); }
     });
     return () => { unsubMessages?.(); unsubPresence(); unsubTyping(); };
-  }, []);
+  }, [cloudEnabled, roomId]);
 
   // Presence heartbeat and mark as read when opening
   React.useEffect(() => {
