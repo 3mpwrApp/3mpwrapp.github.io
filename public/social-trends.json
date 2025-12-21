@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-21T12:03:04.319Z",
+  "lastUpdated": "2025-12-21T18:02:39.400Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6035,
+      "totalPosts": 6060,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T12:02:54.939Z"
+      "lastSeen": "2025-12-21T18:02:30.441Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6050,
+      "totalPosts": 6075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T12:02:56.967Z"
+      "lastSeen": "2025-12-21T18:02:32.327Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 5987,
-      "recentPosts": 25,
+      "totalPosts": 6008,
+      "recentPosts": 21,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T12:02:59.070Z"
+      "lastSeen": "2025-12-21T18:02:34.338Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6043,
+      "totalPosts": 6068,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T12:03:01.199Z"
+      "lastSeen": "2025-12-21T18:02:36.385Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6025,
+      "totalPosts": 6050,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T12:03:03.316Z"
+      "lastSeen": "2025-12-21T18:02:38.396Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 41,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 41,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Reposting or Cross-Posting your art? THIS IS A SIGN TO PUT THE ALT TEXT IN A TEXT DOC SO YOU DONT HAVE TO REWRITE IT OVER AND OVER IN LESSER AND LESSER DETAIL BECAUSE YOU'RE TIRED. Just have them all archived. You're welcome.\n\n#ALT #disability #accessibility",
-      "author": "abrildelucia.bsky.social",
-      "engagement": 20,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "🔥Transparent descriptions of gameplay?\n🔥Setting clear expectations for players from the start?\n\n💖Communicating gameplay options to players helps literally everyone. 🔥🔥🔥 A+++++ design!!!\n\n#gamedesign #accessibility #indiedev #indegamedev #gamedev",
-      "author": "just-write-studios.itch.io",
-      "engagement": 19,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
       "author": "lisadiedrich.bsky.social",
@@ -338,6 +296,48 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
+      "author": "sheffgreenparty.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Piczle World of Puzzles (s.team/a/2174300) now has an option to change colour nonogram puzzles to use CUDO's Easily Distinguishable Colors for all Color Vision Types (jfly.uni-koeln.de/color/ichiha...) so people with colour vision issues can focus on the logic of the puzzles. #accessibility #gamedev",
+      "author": "scorestudios.bsky.social",
+      "engagement": 15,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Been catching up on @amyhupe.bsky.social's wonderful Systems of Harm podcast and really enjoyed this episode with @tink.uk. Covers a lot from #a11y to #AI and I always find Léonie's perspective valuable. \n\nsystems-of-harm.fireside.fm/ep2-leonie-w...",
+      "author": "davatron5000.bsky.social",
+      "engagement": 16,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -346,12 +346,12 @@
       "count": 40
     },
     {
-      "keyword": "accessibility",
+      "keyword": "a11y",
       "count": 29
     },
     {
-      "keyword": "a11y",
-      "count": 29
+      "keyword": "accessibility",
+      "count": 26
     },
     {
       "keyword": "disabilityjustice",
@@ -378,20 +378,24 @@
       "count": 11
     },
     {
-      "keyword": "disability",
+      "keyword": "disabilityjustice nico",
       "count": 8
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 7
+      "keyword": "inclusivedesign",
+      "count": 8
     },
     {
       "keyword": "digitalaccessibility",
       "count": 6
     },
     {
-      "keyword": "inclusivedesign",
-      "count": 6
+      "keyword": "disability",
+      "count": 5
+    },
+    {
+      "keyword": "accessibility a11y",
+      "count": 5
     },
     {
       "keyword": "foxtakedown",
@@ -415,10 +419,6 @@
     },
     {
       "keyword": "wearetheflood",
-      "count": 5
-    },
-    {
-      "keyword": "50501movement",
       "count": 5
     }
   ]
