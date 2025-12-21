@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-21T06:02:52.001Z",
+  "lastUpdated": "2025-12-21T12:03:04.319Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6010,
+      "totalPosts": 6035,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T06:02:42.877Z"
+      "lastSeen": "2025-12-21T12:02:54.939Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6025,
+      "totalPosts": 6050,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T06:02:44.807Z"
+      "lastSeen": "2025-12-21T12:02:56.967Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 5962,
-      "recentPosts": 24,
+      "totalPosts": 5987,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T06:02:46.764Z"
+      "lastSeen": "2025-12-21T12:02:59.070Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6018,
+      "totalPosts": 6043,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T06:02:49.077Z"
+      "lastSeen": "2025-12-21T12:03:01.199Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6000,
+      "totalPosts": 6025,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T06:02:50.997Z"
+      "lastSeen": "2025-12-21T12:03:03.316Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I'm posting this as screenshots because I know threads don't get read. The screenshots might not either, but I'm trying to increase my chances because it'll just be one post. 💜\n\n#disability #accessibility #NEISvoid",
-      "author": "yarns-and-d20s.bsky.social",
-      "engagement": 20,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "A rant in the face of the industry's continued neglect and outright hostility towards digital accessibility and care for users.\n\nvale.rocks/posts/access...\n\n#WebDev #Accessibility #a11y #FrontEndDevelopment",
-      "author": "vale.rocks",
-      "engagement": 58,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 41,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I'm posting this as screenshots because I know threads don't get read. The screenshots might not either, but I'm trying to increase my chances because it'll just be one post. 💜\n\n#disability #accessibility #NEISvoid",
-      "author": "yarns-and-d20s.bsky.social",
-      "engagement": 22,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
       "author": "ellatholmes.bsky.social",
@@ -338,6 +290,54 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
+      "author": "sheffgreenparty.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Piczle World of Puzzles (s.team/a/2174300) now has an option to change colour nonogram puzzles to use CUDO's Easily Distinguishable Colors for all Color Vision Types (jfly.uni-koeln.de/color/ichiha...) so people with colour vision issues can focus on the logic of the puzzles. #accessibility #gamedev",
+      "author": "scorestudios.bsky.social",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 13,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "2.6k followers?! My 666th post on Bluesky?!??!?!\n\nA very big \"thank you\" from our most gregarious demon for following development!!!❤️🖤\n\nLooking forward to sharing many more #indiegamedev updates on this #darkfantasy and #horror VN, #accessibility, #art, #writing & more stuff I love. ❤️🖤❤️🖤",
+      "author": "just-write-studios.itch.io",
+      "engagement": 22,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 13,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Been catching up on @amyhupe.bsky.social's wonderful Systems of Harm podcast and really enjoyed this episode with @tink.uk. Covers a lot from #a11y to #AI and I always find Léonie's perspective valuable. \n\nsystems-of-harm.fireside.fm/ep2-leonie-w...",
+      "author": "davatron5000.bsky.social",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -346,12 +346,12 @@
       "count": 40
     },
     {
-      "keyword": "a11y",
+      "keyword": "accessibility",
       "count": 29
     },
     {
-      "keyword": "accessibility",
-      "count": 28
+      "keyword": "a11y",
+      "count": 29
     },
     {
       "keyword": "disabilityjustice",
@@ -379,7 +379,7 @@
     },
     {
       "keyword": "disability",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "disabilityjustice nico",
@@ -387,15 +387,11 @@
     },
     {
       "keyword": "digitalaccessibility",
-      "count": 7
+      "count": 6
     },
     {
       "keyword": "inclusivedesign",
       "count": 6
-    },
-    {
-      "keyword": "wcag",
-      "count": 5
     },
     {
       "keyword": "foxtakedown",
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "wearetheflood",
+      "count": 5
+    },
+    {
+      "keyword": "50501movement",
       "count": 5
     }
   ]
