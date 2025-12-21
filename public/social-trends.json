@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-20T18:02:40.153Z",
+  "lastUpdated": "2025-12-21T00:07:28.731Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 5960,
+      "totalPosts": 5985,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-20T18:02:28.599Z"
+      "lastSeen": "2025-12-21T00:07:19.521Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 5975,
+      "totalPosts": 6000,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-20T18:02:31.223Z"
+      "lastSeen": "2025-12-21T00:07:21.510Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 5918,
-      "recentPosts": 23,
+      "totalPosts": 5938,
+      "recentPosts": 20,
       "peakPosts": 25,
-      "lastSeen": "2025-12-20T18:02:34.070Z"
+      "lastSeen": "2025-12-21T00:07:23.571Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 5968,
+      "totalPosts": 5993,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-20T18:02:36.328Z"
+      "lastSeen": "2025-12-21T00:07:25.649Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 5950,
+      "totalPosts": 5975,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-20T18:02:39.150Z"
+      "lastSeen": "2025-12-21T00:07:27.727Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "A rant in the face of the industry's continued neglect and outright hostility towards digital accessibility and care for users.\n\nvale.rocks/posts/access...\n\n#WebDev #Accessibility #a11y #FrontEndDevelopment",
-      "author": "vale.rocks",
-      "engagement": 53,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Hey Devs,\nJust a heads up... This is what digital ableism looks like. Don't do this. And if you do, you must add a styled focus indicator to replace the one you hid. \n\nFocus Visible (Level AA)\nwww.w3.org/WAI/WCAG22/U...\n\n#Accessibility #A11y #WebDev",
-      "author": "xirclebox.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
       "author": "ellatholmes.bsky.social",
@@ -338,6 +296,48 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
+      "author": "sheffgreenparty.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "2.6k followers?! My 666th post on Bluesky?!??!?!\n\nA very big \"thank you\" from our most gregarious demon for following development!!!❤️🖤\n\nLooking forward to sharing many more #indiegamedev updates on this #darkfantasy and #horror VN, #accessibility, #art, #writing & more stuff I love. ❤️🖤❤️🖤",
+      "author": "just-write-studios.itch.io",
+      "engagement": 20,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "For 5+ years, I've been wearing what the tech industry is now calling AI glasses, so it was only a matter of time before I cover them from a healthcare angle! Here's my deep dive!\n\n🧪 #smartglasses #AI #digitalhealth #medicine #accessibility #tech #future \n\nmedicalfuturist.com/smart-glasse...",
+      "author": "pranslab.bsky.social",
+      "engagement": 13,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Hey game publishers and developers, you there? Is your game catalog in @abletoplay.com database yet? Let us help you highlight strong accessibility features to players, and identify areas for improvement.\n\n#accessibility #videogames",
+      "author": "tarjapk.bsky.social",
+      "engagement": 26,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Been catching up on @amyhupe.bsky.social's wonderful Systems of Harm podcast and really enjoyed this episode with @tink.uk. Covers a lot from #a11y to #AI and I always find Léonie's perspective valuable. \n\nsystems-of-harm.fireside.fm/ep2-leonie-w...",
+      "author": "davatron5000.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -346,12 +346,8 @@
       "count": 40
     },
     {
-      "keyword": "accessibility",
-      "count": 27
-    },
-    {
       "keyword": "a11y",
-      "count": 27
+      "count": 28
     },
     {
       "keyword": "disabilityjustice",
@@ -360,6 +356,10 @@
     {
       "keyword": "cripthevote",
       "count": 25
+    },
+    {
+      "keyword": "accessibility",
+      "count": 24
     },
     {
       "keyword": "altcitizen",
@@ -378,20 +378,24 @@
       "count": 11
     },
     {
-      "keyword": "disability",
-      "count": 7
-    },
-    {
       "keyword": "disabilityjustice nico",
       "count": 7
     },
     {
-      "keyword": "wcag",
+      "keyword": "digitalaccessibility",
+      "count": 7
+    },
+    {
+      "keyword": "disability",
       "count": 6
     },
     {
-      "keyword": "digitalaccessibility",
+      "keyword": "inclusivedesign",
       "count": 6
+    },
+    {
+      "keyword": "wcag",
+      "count": 5
     },
     {
       "keyword": "foxtakedown",
@@ -415,10 +419,6 @@
     },
     {
       "keyword": "wearetheflood",
-      "count": 5
-    },
-    {
-      "keyword": "50501movement",
       "count": 5
     }
   ]
