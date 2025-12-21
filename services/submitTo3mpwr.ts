@@ -118,10 +118,14 @@ export async function submitEventTo3mpwr(
         message: `✅ Event "${event.title}" submitted to 3mpwr App for review!\n\nOur team will review your submission and publish it to the main calendar if approved.`,
       };
     } else {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      // Don't throw on expected HTTP errors - just log and save for retry
+      const errorMsg = `HTTP ${response.status}: ${response.statusText}`;
+      logger.warn('[SubmitTo3mpwr] Event submission API unavailable:', errorMsg);
+      throw new Error(errorMsg);
     }
   } catch (error) {
-    logger.error('[SubmitTo3mpwr] Event submission failed:', error);
+    // Expected error when submission endpoint is unavailable - don't log to Sentry
+    logger.warn('[SubmitTo3mpwr] Event submission deferred (will retry):', error);
     
     // Store failed submission for retry
     try {
@@ -201,11 +205,15 @@ export async function submitCampaignTo3mpwr(
         message: `✅ Campaign "${campaign.title}" submitted to 3mpwr App for review!\n\nOur team will review your submission and add it to the campaigns list if approved.`,
       };
     } else {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      // Don't throw on expected HTTP errors - just log and save for retry
+      const errorMsg = `HTTP ${response.status}: ${response.statusText}`;
+      logger.warn('[SubmitTo3mpwr] Campaign submission API unavailable:', errorMsg);
+      throw new Error(errorMsg);
     }
   } catch (error) {
-    logger.error('[SubmitTo3mpwr] Campaign submission failed:', error);
-    
+    // Expected error when submission endpoint is unavailable - don't log to Sentry
+    logger.warn('[SubmitTo3mpwr] Campaign submission deferred (will retry):', error);
+
     // Store failed submission for retry
     try {
       const AsyncStorage = await import('@react-native-async-storage/async-storage');
