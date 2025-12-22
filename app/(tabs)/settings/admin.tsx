@@ -45,6 +45,7 @@ import {
 import { sendBroadcast } from '../../../services/activity';
 import { getSystemOverview, type SystemOverview } from '../../../services/adminOverview';
 import { getSessionAnalyticsStats, resetSessionAnalytics } from '../../../services/analytics';
+import { useDevPrefs } from '../../../services/devPrefs';
 import useNotificationDispatcher from '../../../services/notificationsDispatcher';
 import { getReferralStats } from '../../../services/referral';
 import { useComplexityMode } from '../../../store/complexityMode';
@@ -54,6 +55,7 @@ export default function AdminPanel() {
   const { t: _t } = useTranslation();
   const palette = useAppPalette();
   const { mode } = useComplexityMode();
+  const { costAlertsEnabled, setCostAlertsEnabled } = useDevPrefs();
   const [loading, setLoading] = useState(true);
   const [assignments, setAssignments] = useState<Record<string, Variant | null>>({});
   const [referralStats, setReferralStats] = useState<any>(null);
@@ -331,6 +333,56 @@ export default function AdminPanel() {
             {/* Analytics Platforms Stats */}
             <Section title="📊 Analytics Platforms" styles={styles}>
               <AnalyticsPlatformsStats />
+            </Section>
+
+            {/* Developer Mode Section */}
+            <Section title="👨‍💻 Developer Mode" styles={styles}>
+              <Text style={styles.sectionDesc}>
+                Local-only development features. These settings only affect this device and are not synced.
+              </Text>
+
+              <GapView style={{ height: 16 }} />
+
+              <View style={styles.toggleRow}>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.toggleLabel}>💰 Cost Alerts</Text>
+                  <Text style={styles.toggleDesc}>
+                    Show alerts when using expensive APIs (OpenAI, Anthropic, etc.). Useful for monitoring costs during development.
+                  </Text>
+                </View>
+                <A11yPressable
+                  onPress={() => setCostAlertsEnabled(!costAlertsEnabled)}
+                  accessibilityRole="switch"
+                  accessibilityState={{ checked: costAlertsEnabled }}
+                  accessibilityLabel={`Cost alerts ${costAlertsEnabled ? 'enabled' : 'disabled'}`}
+                  hitSlop={HIT_SLOP_8}
+                  style={[
+                    styles.toggle,
+                    { backgroundColor: costAlertsEnabled ? palette.success : palette.muted },
+                  ]}
+                >
+                  <View
+                    style={[
+                      styles.toggleThumb,
+                      {
+                        transform: [{ translateX: costAlertsEnabled ? 20 : 0 }],
+                        backgroundColor: palette.onPrimary,
+                      },
+                    ]}
+                  />
+                </A11yPressable>
+              </View>
+
+              <GapView style={{ height: 12 }} />
+
+              <View style={styles.infoBox}>
+                <Ionicons name="information-circle" size={18} color={palette.primary} />
+                <Text style={styles.infoText}>
+                  Status: {costAlertsEnabled ? '✅ Enabled' : '⚠️ Disabled'}
+                  {'\n'}
+                  {__DEV__ ? '🛠️ Running in development mode' : '📦 Running in production mode'}
+                </Text>
+              </View>
             </Section>
 
                   {/* Moderation */}
@@ -1000,6 +1052,49 @@ const createStyles = (palette: any) => StyleSheet.create({
     fontSize: 13,
     color: palette.textSecondary,
     marginTop: 2,
+  },
+  toggleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+  },
+  toggleLabel: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: palette.text,
+    marginBottom: 4,
+  },
+  toggleDesc: {
+    fontSize: 13,
+    color: palette.textSecondary,
+    lineHeight: 18,
+  },
+  toggle: {
+    width: 50,
+    height: 30,
+    borderRadius: 15,
+    padding: 3,
+    justifyContent: 'center',
+  },
+  toggleThumb: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+  },
+  infoBox: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    backgroundColor: palette.primary + '10',
+    borderRadius: 8,
+    padding: 12,
+    gap: 8,
+  },
+  infoText: {
+    flex: 1,
+    fontSize: 13,
+    color: palette.text,
+    lineHeight: 18,
   },
   dangerButton: {
     flexDirection: 'row',

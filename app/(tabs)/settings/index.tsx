@@ -245,6 +245,19 @@ export default function SettingsScreen() {
             <Text style={styles.linkText}>Evidence Encryption & Sync</Text>
             <Ionicons name='chevron-forward' size={16} color={palette.muted} style={{ marginLeft:'auto' }} />
           </A11yPressable>
+
+          {/* Bring Your Own Cloud (BYOC) */}
+          <A11yPressable
+            style={[styles.linkButton, { justifyContent:'center', marginTop:12, backgroundColor: palette.primary, borderWidth: 2, borderColor: palette.primary }]}
+            accessibilityRole='button'
+            accessibilityLabel="Bring Your Own Cloud - Connect WebDAV or Google Drive for complete data ownership"
+            hitSlop={HIT_SLOP_8}
+            onPress={() => router.push('/(tabs)/settings/byoc' as any)}
+          >
+            <Ionicons name='cloud-upload' size={20} color={palette.onPrimary} />
+            <Text style={[styles.linkText, { color: palette.onPrimary, fontWeight: '700' }]}>☁️ Bring Your Own Cloud (BYOC)</Text>
+            <Ionicons name='chevron-forward' size={16} color={palette.onPrimary} style={{ marginLeft:'auto' }} />
+          </A11yPressable>
         </Section>
         
         <Section title={t('updates.title', 'App Updates')} subtitle={t('updates.subtitle', 'Check for and install the latest features')} styles={styles}>

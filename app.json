@@ -140,6 +140,8 @@
       },
       "EXPO_PUBLIC_DATA_POLICY": "hybrid_byoc",
       "EXPO_PUBLIC_CAMPAIGNS_API_BASE": "https://3mpwrapp-campaigns.empowrapp08162025.workers.dev/api",
+      "EXPO_PUBLIC_ADMIN_API_URL": "https://3mpwrapp.pages.dev",
+      "EXPO_PUBLIC_ADMIN_API_KEY": "empowrapp-admin-key-2025",
       "EXPO_PUBLIC_GOOGLE_CLIENT_ID": "733708119893-vagikeh1bu36n9boma32ic2lbfvbff08.apps.googleusercontent.com",
       "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "733708119893-so14q85mmnrtt5ulnan3qjs2o7ll73vs.apps.googleusercontent.com"
     }
