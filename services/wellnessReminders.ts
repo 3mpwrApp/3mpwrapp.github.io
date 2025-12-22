@@ -23,7 +23,8 @@ export type WellnessReminderType =
   | 'symptom_log'
   | 'sleep_prep'
   | 'gratitude'
-  | 'breathing';
+  | 'breathing'
+  | 'custom'; // Allow custom reminders
 
 export interface WellnessReminder {
   id: string;
@@ -217,6 +218,49 @@ export async function saveReminders(reminders: WellnessReminder[]): Promise<void
 }
 
 /**
+ * Add a new custom reminder
+ */
+export async function addCustomReminder(
+  reminder: Omit<WellnessReminder, 'id' | 'skipCount' | 'lastShown'>
+): Promise<string> {
+  try {
+    const reminders = await getReminders();
+    const newReminder: WellnessReminder = {
+      ...reminder,
+      id: `custom_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      skipCount: 0,
+    };
+
+    reminders.push(newReminder);
+    await saveReminders(reminders);
+
+    // Schedule if enabled
+    if (newReminder.enabled) {
+      await scheduleReminder(newReminder);
+    }
+
+    return newReminder.id;
+  } catch (error) {
+    logger.error('Failed to add custom wellness reminder', error);
+    throw error;
+  }
+}
+
+/**
+ * Delete a reminder by ID
+ */
+export async function deleteReminder(id: string): Promise<void> {
+  try {
+    const reminders = await getReminders();
+    const filtered = reminders.filter(r => r.id !== id);
+    await saveReminders(filtered);
+    await cancelReminder(id);
+  } catch (error) {
+    logger.error('Failed to delete wellness reminder', error);
+  }
+}
+
+/**
  * Update a specific reminder
  */
 export async function updateReminder(
@@ -226,11 +270,11 @@ export async function updateReminder(
   try {
     const reminders = await getReminders();
     const index = reminders.findIndex(r => r.id === id);
-    
+
     if (index !== -1) {
       reminders[index] = { ...reminders[index], ...updates };
       await saveReminders(reminders);
-      
+
       // If enabled state changed, reschedule
       if ('enabled' in updates) {
         if (updates.enabled) {

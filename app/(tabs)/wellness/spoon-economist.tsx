@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
@@ -11,6 +11,7 @@ import { useAppPalette } from '../../../theme/usePalette';
 
 export default function SpoonEconomistScreen() {
   const { t } = useTranslation();
+  const router = useRouter();
   const palette = useAppPalette();
   const spoons = useSpoonEconomist();
   const { account } = spoons;
@@ -288,6 +289,29 @@ export default function SpoonEconomistScreen() {
           >
             <Ionicons name="add-circle" size={20} color={palette.primary} />
             <Text style={[styles.customButtonText, { color: palette.primary }]}>Custom Task</Text>
+          </Pressable>
+        </View>
+
+        {/* Self-Care Activities Section */}
+        <View style={[styles.card, { backgroundColor: palette.surface }]}>
+          <View style={styles.sectionHeader}>
+            <Ionicons name="heart" size={24} color={palette.primary} />
+            <Text style={[styles.sectionTitle, { color: palette.text, marginLeft: 8 }]}>Self-Care Activities</Text>
+          </View>
+
+          <Text style={[styles.sectionDescription, { color: palette.textSecondary }]}>
+            Browse 50+ accessible self-care activities organized by energy level (spoons). Each activity shows how many spoons it costs.
+          </Text>
+
+          <Pressable
+            accessibilityRole="button"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            style={[styles.selfCareButton, { backgroundColor: palette.primary }]}
+            onPress={() => router.push('/(tabs)/wellness/self-care-library-enhanced' as any)}
+          >
+            <Ionicons name="sparkles" size={20} color={palette.onPrimary} />
+            <Text style={[styles.selfCareButtonText, { color: palette.onPrimary }]}>Browse Self-Care Library</Text>
+            <Ionicons name="chevron-forward" size={20} color={palette.onPrimary} />
           </Pressable>
         </View>
 
@@ -727,7 +751,7 @@ const styles = StyleSheet.create({
   debtDescription: { fontSize: 14, marginBottom: 4 },
   sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
   sectionTitle: { fontSize: 18, fontWeight: '600', marginBottom: 8 },
-  sectionDescription: { fontSize: 14, marginBottom: 16 },
+  sectionDescription: { fontSize: 14, marginBottom: 16, lineHeight: 20 },
   manageLink: { fontSize: 14, fontWeight: '600' },
   taskGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 16 },
   taskButton: { width: '48%', padding: 12, borderRadius: 8, borderWidth: 1 },
@@ -735,6 +759,8 @@ const styles = StyleSheet.create({
   taskCost: { fontSize: 13 },
   customButton: { padding: 12, borderRadius: 8, borderWidth: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' },
   customButtonText: { fontSize: 14, fontWeight: '600', marginLeft: 8 },
+  selfCareButton: { padding: 14, borderRadius: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 },
+  selfCareButtonText: { fontSize: 15, fontWeight: '600' },
   borrowButtons: { flexDirection: 'row', gap: 8 },
   borrowButton: { flex: 1, padding: 12, borderRadius: 8, alignItems: 'center' },
   borrowButtonText: { fontSize: 14, fontWeight: '600' },
