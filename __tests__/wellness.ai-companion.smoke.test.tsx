@@ -25,7 +25,7 @@ jest.mock('../services/notifications', () => ({ scheduleAt: jest.fn(async ()=>{}
 jest.mock('expo-file-system', () => ({ cacheDirectory: '/tmp/', EncodingType: { UTF8:'utf8' }, writeAsStringAsync: async () => {} }));
 jest.mock('expo-sharing', () => ({ isAvailableAsync: async () => false, shareAsync: async () => {} }));
 
-const Mod = require('../app/(tabs)/wellness/ai-companion');
+const Mod = require('../app/(tabs)/settings/ai-companion');
 const AICompanion = (Mod && Mod.default) ? Mod.default : Mod;
 
 describe('Wellness — Adaptive AI Companion (smoke)', () => {

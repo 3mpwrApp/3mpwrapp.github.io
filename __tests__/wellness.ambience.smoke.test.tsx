@@ -17,7 +17,7 @@ jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ text:'#111', o
 jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (_k: string, d?: string) => d || '' }) }));
 jest.mock('../store/mood', () => ({ useMood: () => ({ entries: [], recentAverage: 0 }) }));
 
-const Mod = require('../app/(tabs)/wellness/ambience');
+const Mod = require('../app/(tabs)/settings/ambience');
 const Ambience = (Mod && Mod.default) ? Mod.default : Mod;
 
 describe('Wellness — Ambience Sync AI (smoke)', () => {
