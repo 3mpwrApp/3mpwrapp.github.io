@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-21T18:02:39.400Z",
+  "lastUpdated": "2025-12-22T00:06:31.255Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6060,
+      "totalPosts": 6085,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T18:02:30.441Z"
+      "lastSeen": "2025-12-22T00:06:22.215Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6075,
+      "totalPosts": 6100,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T18:02:32.327Z"
+      "lastSeen": "2025-12-22T00:06:24.177Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6008,
+      "totalPosts": 6029,
       "recentPosts": 21,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T18:02:34.338Z"
+      "lastSeen": "2025-12-22T00:06:26.172Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6068,
+      "totalPosts": 6093,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T18:02:36.385Z"
+      "lastSeen": "2025-12-22T00:06:28.229Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6050,
+      "totalPosts": 6075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-21T18:02:38.396Z"
+      "lastSeen": "2025-12-22T00:06:30.251Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Just learned 'access fatigue' 🤯\n\nmeaning: the effects of constantly having to explain, teach, & reinvent access. This demand wears us down, shapes how we see ourselves, and makes pushing for inclusion harder. \n\nIt IS exhausting. I'm so glad I have the vocabulary for this now.\n\n#DisabilityJustice",
-      "author": "ellatholmes.bsky.social",
-      "engagement": 41,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Reposting or Cross-Posting your art? THIS IS A SIGN TO PUT THE ALT TEXT IN A TEXT DOC SO YOU DONT HAVE TO REWRITE IT OVER AND OVER IN LESSER AND LESSER DETAIL BECAUSE YOU'RE TIRED. Just have them all archived. You're welcome.\n\n#ALT #disability #accessibility",
-      "author": "abrildelucia.bsky.social",
-      "engagement": 21,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "🔥Transparent descriptions of gameplay?\n🔥Setting clear expectations for players from the start?\n\n💖Communicating gameplay options to players helps literally everyone. 🔥🔥🔥 A+++++ design!!!\n\n#gamedesign #accessibility #indiedev #indegamedev #gamedev",
-      "author": "just-write-studios.itch.io",
-      "engagement": 20,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -338,6 +296,48 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
+      "author": "sheffgreenparty.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Piczle World of Puzzles (s.team/a/2174300) now has an option to change colour nonogram puzzles to use CUDO's Easily Distinguishable Colors for all Color Vision Types (jfly.uni-koeln.de/color/ichiha...) so people with colour vision issues can focus on the logic of the puzzles. #accessibility #gamedev",
+      "author": "scorestudios.bsky.social",
+      "engagement": 15,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "To celebrate hitting the 13.000th rating in Art of Fauna, here is a particularly lovely review I recently got about its accessibility. 🦾\n\nIt’s in German, so see the English translation in the next two posts!\n\n#a11y #gamedev #puzzle",
+      "author": "strasser.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,15 +347,15 @@
     },
     {
       "keyword": "a11y",
-      "count": 29
-    },
-    {
-      "keyword": "accessibility",
-      "count": 26
+      "count": 27
     },
     {
       "keyword": "disabilityjustice",
       "count": 26
+    },
+    {
+      "keyword": "accessibility",
+      "count": 25
     },
     {
       "keyword": "cripthevote",
@@ -378,16 +378,16 @@
       "count": 11
     },
     {
+      "keyword": "inclusivedesign",
+      "count": 9
+    },
+    {
       "keyword": "disabilityjustice nico",
       "count": 8
     },
     {
-      "keyword": "inclusivedesign",
-      "count": 8
-    },
-    {
       "keyword": "digitalaccessibility",
-      "count": 6
+      "count": 7
     },
     {
       "keyword": "disability",
@@ -395,6 +395,10 @@
     },
     {
       "keyword": "accessibility a11y",
+      "count": 5
+    },
+    {
+      "keyword": "uxdesign",
       "count": 5
     },
     {
@@ -415,10 +419,6 @@
     },
     {
       "keyword": "stoptrump",
-      "count": 5
-    },
-    {
-      "keyword": "wearetheflood",
       "count": 5
     }
   ]
