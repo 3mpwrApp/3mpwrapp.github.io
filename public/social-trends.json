@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-22T12:03:12.951Z",
+  "lastUpdated": "2025-12-22T18:02:53.916Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6135,
+      "totalPosts": 6160,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T12:03:02.602Z"
+      "lastSeen": "2025-12-22T18:02:44.504Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6150,
+      "totalPosts": 6175,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T12:03:04.673Z"
+      "lastSeen": "2025-12-22T18:02:46.481Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6074,
-      "recentPosts": 24,
+      "totalPosts": 6099,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T12:03:07.245Z"
+      "lastSeen": "2025-12-22T18:02:48.527Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6143,
+      "totalPosts": 6168,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T12:03:09.732Z"
+      "lastSeen": "2025-12-22T18:02:50.512Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6125,
+      "totalPosts": 6150,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T12:03:11.948Z"
+      "lastSeen": "2025-12-22T18:02:52.913Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "2.6k followers?! My 666th post on Bluesky?!??!?!\n\nA very big \"thank you\" from our most gregarious demon for following development!!!❤️🖤\n\nLooking forward to sharing many more #indiegamedev updates on this #darkfantasy and #horror VN, #accessibility, #art, #writing & more stuff I love. ❤️🖤❤️🖤",
-      "author": "just-write-studios.itch.io",
-      "engagement": 20,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "For 5+ years, I've been wearing what the tech industry is now calling AI glasses, so it was only a matter of time before I cover them from a healthcare angle! Here's my deep dive!\n\n🧪 #smartglasses #AI #digitalhealth #medicine #accessibility #tech #future \n\nmedicalfuturist.com/smart-glasse...",
-      "author": "pranslab.bsky.social",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Hey game publishers and developers, you there? Is your game catalog in @abletoplay.com database yet? Let us help you highlight strong accessibility features to players, and identify areas for improvement.\n\n#accessibility #videogames",
-      "author": "tarjapk.bsky.social",
-      "engagement": 26,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Been catching up on @amyhupe.bsky.social's wonderful Systems of Harm podcast and really enjoyed this episode with @tink.uk. Covers a lot from #a11y to #AI and I always find Léonie's perspective valuable. \n\nsystems-of-harm.fireside.fm/ep2-leonie-w...",
       "author": "davatron5000.bsky.social",
@@ -338,20 +302,56 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
+      "author": "sheffgreenparty.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "We've tested #Silksong to evaluate its #accessibility ! Even with some options, this game will be hard to play for lot of players.\n\nHere is our review:\n\nwww.game-lover.org/en/hollow-kn... \n\n#AccessibleGaming #GamingForEveryone @teamcherry.bsky.social",
+      "author": "capgame.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "To celebrate hitting the 13.000th rating in Art of Fauna, here is a particularly lovely review I recently got about its accessibility. 🦾\n\nIt’s in German, so see the English translation in the next two posts!\n\n#a11y #gamedev #puzzle",
+      "author": "strasser.bsky.social",
+      "engagement": 13,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 16,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 40
+      "count": 39
     },
     {
       "keyword": "accessibility",
-      "count": 32
+      "count": 35
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 32
     },
     {
       "keyword": "disabilityjustice",
@@ -378,16 +378,16 @@
       "count": 11
     },
     {
-      "keyword": "inclusivedesign",
+      "keyword": "digitalaccessibility",
+      "count": 10
+    },
+    {
+      "keyword": "a11y accessibility",
       "count": 8
     },
     {
-      "keyword": "digitalaccessibility",
-      "count": 7
-    },
-    {
-      "keyword": "disability",
-      "count": 6
+      "keyword": "inclusivedesign",
+      "count": 8
     },
     {
       "keyword": "disabilityjustice nico",
@@ -396,6 +396,14 @@
     {
       "keyword": "accessibility a11y",
       "count": 6
+    },
+    {
+      "keyword": "disability",
+      "count": 5
+    },
+    {
+      "keyword": "inclusion",
+      "count": 5
     },
     {
       "keyword": "foxtakedown",
@@ -411,14 +419,6 @@
     },
     {
       "keyword": "foxlies",
-      "count": 5
-    },
-    {
-      "keyword": "stoptrump",
-      "count": 5
-    },
-    {
-      "keyword": "wearetheflood",
       "count": 5
     }
   ]
