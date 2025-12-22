@@ -9,6 +9,24 @@ export type WhatsNewItem = {
 export const whatsnew: WhatsNewItem[] = [
   // December 2025 - Latest Updates
   {
+    id: "wn-2025-12-22-analytics-dashboard",
+    title: "📊 Analytics Platform Dashboard in Admin Panel",
+    summary: "New analytics overview in Admin Panel shows real-time status of Firebase Analytics, Sentry Performance Monitoring, and Vexo Analytics. See all platform benefits, configuration details, and direct dashboard links in one place.",
+    date: "2025-12-22T00:00:00.000Z",
+  },
+  {
+    id: "wn-2025-12-22-sentry-performance",
+    title: "⚡ Sentry Performance Monitoring Active",
+    summary: "Comprehensive performance tracking now monitors auth operations, evidence uploads, campaign fetching, and resource loading. Automatic error categorization by feature and severity helps us fix issues faster.",
+    date: "2025-12-22T00:00:00.000Z",
+  },
+  {
+    id: "wn-2025-12-22-vexo-integration",
+    title: "🔍 Vexo Analytics Integrated",
+    summary: "Device-level analytics now active for cross-platform tracking, user journey mapping, and engagement metrics. Privacy-first approach with opt-in consent and no personal data collection.",
+    date: "2025-12-22T00:00:00.000Z",
+  },
+  {
     id: "wn-2025-12-20-cognitive-comfort-fix",
     title: "🧠 'Where Was I' Feature Fix",
     summary: "Fixed an issue where the 'Where Was I' navigation memory button would show even when turned off in settings. The feature now properly respects your cognitive comfort preferences.",
