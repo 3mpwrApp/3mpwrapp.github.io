@@ -105,6 +105,8 @@ export async function addEvidenceNote({
     return; // Will be synced when online
   }
   
+  if (!db) throw new Error('Firestore not initialized');
+
   const col = collection(db, 'users', uid, 'evidence');
   await addDoc(col, {
     text: text || '',
@@ -117,6 +119,8 @@ export async function addEvidenceNote({
 export async function listEvidence(): Promise<any[]> {
   const uid = auth.currentUser?.uid;
   if (!uid) throw new Error('Not signed in');
+  if (!db) throw new Error('Firestore not initialized');
+
   const col = collection(db, 'users', uid, 'evidence');
   const q = query(col, orderBy('createdAt', 'desc'));
   const snap = await getDocs(q);
@@ -126,6 +130,8 @@ export async function listEvidence(): Promise<any[]> {
 export async function listEvidencePage(pageSize = 10, cursor?: any): Promise<{ items: any[]; cursor: any | null }> {
   const uid = auth.currentUser?.uid;
   if (!uid) throw new Error('Not signed in');
+  if (!db) throw new Error('Firestore not initialized');
+
   const col = collection(db, 'users', uid, 'evidence');
   const base = query(col, orderBy('createdAt', 'desc'), fsLimit(pageSize));
   const q = cursor ? query(base, fsStartAfter(cursor)) : base;
