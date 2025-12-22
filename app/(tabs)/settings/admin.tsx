@@ -28,6 +28,7 @@ import {
 } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
+import AnalyticsPlatformsStats from '../../../components/admin/AnalyticsPlatformsStats';
 import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
@@ -325,6 +326,11 @@ export default function AdminPanel() {
               ) : (
                 <Text style={styles.sectionDesc}>Loading system stats...</Text>
               )}
+            </Section>
+
+            {/* Analytics Platforms Stats */}
+            <Section title="📊 Analytics Platforms" styles={styles}>
+              <AnalyticsPlatformsStats />
             </Section>
 
                   {/* Moderation */}

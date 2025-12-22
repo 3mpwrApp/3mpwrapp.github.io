@@ -143,11 +143,42 @@ export async function initSentry(dsn: string): Promise<boolean> {
         return event;
       },
 
-      // Sample rate for performance monitoring
-      tracesSampleRate: __DEV__ ? 1.0 : 0.1, // 10% in production
+      // Performance Monitoring Configuration
+      tracesSampleRate: __DEV__ ? 1.0 : 0.2, // 20% in production for better insights
 
-      // Integrations
+      // Profiling Configuration (requires @sentry/profiling-node or native profiling)
+      profilesSampleRate: __DEV__ ? 1.0 : 0.2, // 20% of traced transactions
+
+      // Enable automatic instrumentation
       enableAutoSessionTracking: true,
+      enableAutoPerformanceTracing: true,
+      enableNative: true,
+      enableNativeCrashHandling: true,
+
+      // Routing instrumentation for React Navigation
+      integrations: [
+        Sentry.reactNavigationIntegration({
+          enableTimeToInitialDisplay: true,
+        }),
+        // HTTP instrumentation for API calls
+        Sentry.httpClientIntegration({
+          failedRequestStatusCodes: [400, 599],
+          failedRequestTargets: [/.*/],
+        }),
+      ],
+
+      // Custom instrumentation options
+      tracePropagationTargets: [
+        'localhost',
+        /^https:\/\/.*\.firebaseio\.com/,
+        /^https:\/\/.*\.googleapis\.com/,
+        /api\//,
+      ],
+
+      // Performance monitoring options
+      maxBreadcrumbs: 100,
+      attachStacktrace: true,
+      sendDefaultPii: false, // Never send PII
     });
 
     sentryInitialized = true;
@@ -289,4 +320,134 @@ export function clearUser(): void {
  */
 export function isSentryEnabled(): boolean {
   return sentryInitialized;
+}
+
+/**
+ * Start a performance transaction
+ * Use this to track custom operations like data loading, form submissions, etc.
+ *
+ * @example
+ * const transaction = startTransaction('load_evidence', 'task');
+ * try {
+ *   await loadEvidence();
+ *   transaction?.finish();
+ * } catch (error) {
+ *   transaction?.setStatus('internal_error');
+ *   transaction?.finish();
+ *   captureException(error);
+ * }
+ */
+export function startTransaction(
+  name: string,
+  op: 'navigation' | 'task' | 'http.client' | 'db.query' | 'custom' = 'custom',
+  options?: {
+    description?: string;
+    tags?: Record<string, string>;
+    data?: Record<string, any>;
+  }
+): Sentry.Span | undefined {
+  if (!sentryInitialized) return undefined;
+
+  try {
+    const transaction = Sentry.startTransaction({
+      name,
+      op,
+      description: options?.description,
+      tags: options?.tags,
+      data: options?.data,
+    });
+
+    return transaction as Sentry.Span;
+  } catch (err) {
+    console.error('[Sentry] Failed to start transaction:', err);
+    return undefined;
+  }
+}
+
+/**
+ * Start a child span within a transaction
+ * Use this to measure specific operations within a larger transaction
+ *
+ * @example
+ * const transaction = startTransaction('submit_form', 'task');
+ * const uploadSpan = startSpan(transaction, 'upload_files', 'http.client');
+ * await uploadFiles();
+ * uploadSpan?.finish();
+ * transaction?.finish();
+ */
+export function startSpan(
+  parentTransaction: Sentry.Span | undefined,
+  operation: string,
+  description?: string
+): Sentry.Span | undefined {
+  if (!sentryInitialized || !parentTransaction) return undefined;
+
+  try {
+    return parentTransaction.startChild({
+      op: operation,
+      description,
+    });
+  } catch (err) {
+    console.error('[Sentry] Failed to start span:', err);
+    return undefined;
+  }
+}
+
+/**
+ * Measure async operation performance
+ * Automatically creates and finishes a transaction
+ *
+ * @example
+ * await measurePerformance('fetch_podcasts', async () => {
+ *   return await fetchPodcasts();
+ * }, { op: 'http.client', tags: { feature: 'podcasts' } });
+ */
+export async function measurePerformance<T>(
+  name: string,
+  operation: () => Promise<T>,
+  options?: {
+    op?: 'navigation' | 'task' | 'http.client' | 'db.query' | 'custom';
+    tags?: Record<string, string>;
+    description?: string;
+  }
+): Promise<T> {
+  const transaction = startTransaction(name, options?.op || 'custom', {
+    description: options?.description,
+    tags: options?.tags,
+  });
+
+  try {
+    const result = await operation();
+    transaction?.setStatus('ok');
+    transaction?.finish();
+    return result;
+  } catch (error) {
+    transaction?.setStatus('internal_error');
+    transaction?.finish();
+    throw error;
+  }
+}
+
+/**
+ * Set performance measurement for a specific metric
+ * Useful for tracking custom performance metrics like render times
+ *
+ * @example
+ * setMeasurement('component_render_time', 150, 'millisecond');
+ */
+export function setMeasurement(
+  name: string,
+  value: number,
+  unit: 'millisecond' | 'second' | 'byte' | 'none' = 'millisecond'
+): void {
+  if (!sentryInitialized) return;
+
+  try {
+    const activeTransaction = Sentry.getCurrentScope().getTransaction();
+    if (activeTransaction) {
+      activeTransaction.setMeasurement(name, value, unit);
+    }
+  } catch (err) {
+    console.error('[Sentry] Failed to set measurement:', err);
+  }
 }

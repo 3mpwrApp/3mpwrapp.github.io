@@ -5,6 +5,13 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 import { auth } from '../firebase/config';
 import { logger } from '../utils/logger';
+import {
+  startTransaction,
+  startSpan,
+  captureException,
+  addBreadcrumb,
+  setMeasurement,
+} from '../services/sentryLabeling';
 
 type AuthContextValue = {
   user: User | null;
@@ -157,20 +164,46 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const signOut = async () => {
     if (!auth) return;
+
+    const transaction = startTransaction('user_signout', 'task', {
+      description: 'User signing out',
+      tags: { feature: 'auth', action: 'signout' },
+    });
+
     try {
+      addBreadcrumb('User initiating sign out', 'user.action', 'info');
       await fbSignOut(auth);
       setSessionExpired(false);
+      transaction?.setStatus('ok');
+      addBreadcrumb('Sign out successful', 'auth', 'info');
     } catch (error) {
       logger.error('Sign out error', { error: error instanceof Error ? error.message : 'Unknown' });
+      transaction?.setStatus('internal_error');
+      captureException(error as Error, {
+        feature: 'auth',
+        severity: 'error',
+        tags: { operation: 'signout' },
+      });
+    } finally {
+      transaction?.finish();
     }
   };
 
   const refreshClaims = async () => {
     if (!user || !auth) return;
+
+    const transaction = startTransaction('refresh_claims', 'task', {
+      description: 'Refreshing user claims and permissions',
+      tags: { feature: 'auth', action: 'refresh_claims' },
+    });
+
     try {
+      addBreadcrumb('Refreshing user claims', 'auth', 'info');
       const res = await getIdTokenResult(user, true);
       setIsAdmin(Boolean((res.claims as any)?.admin));
       setSessionExpired(false);
+      transaction?.setStatus('ok');
+      addBreadcrumb('Claims refreshed successfully', 'auth', 'info');
     } catch (error) {
       logger.warn('Failed to refresh claims', {
         error: error instanceof Error ? error.message : 'Unknown',
@@ -180,8 +213,21 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       if (error instanceof Error) {
         if (error.message.includes('401') || error.message.includes('403')) {
           setSessionExpired(true);
+          transaction?.setStatus('unauthenticated');
+        } else {
+          transaction?.setStatus('internal_error');
         }
+      } else {
+        transaction?.setStatus('internal_error');
       }
+
+      captureException(error as Error, {
+        feature: 'auth',
+        severity: 'warning',
+        tags: { operation: 'refresh_claims' },
+      });
+    } finally {
+      transaction?.finish();
     }
   };
 
@@ -189,12 +235,29 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     if (!auth) {
       throw new Error('Firebase auth is not available');
     }
+
+    const transaction = startTransaction('guest_signin', 'task', {
+      description: 'Guest user signing in anonymously',
+      tags: { feature: 'auth', action: 'guest_signin' },
+    });
+
     try {
+      addBreadcrumb('Guest sign in initiated', 'user.action', 'info');
       await signInAnonymously(auth);
       setSessionExpired(false);
+      transaction?.setStatus('ok');
+      addBreadcrumb('Guest sign in successful', 'auth', 'info');
     } catch (error) {
       logger.error('Guest sign in error', { error: error instanceof Error ? error.message : 'Unknown' });
+      transaction?.setStatus('internal_error');
+      captureException(error as Error, {
+        feature: 'auth',
+        severity: 'error',
+        tags: { operation: 'guest_signin' },
+      });
       throw error; // Re-throw so caller can handle
+    } finally {
+      transaction?.finish();
     }
   };
 

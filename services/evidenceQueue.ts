@@ -2,6 +2,12 @@ import { trackEvent } from './analyticsClient';
 import { ANALYTICS_EVENTS } from './analyticsEvents';
 import { addEvidenceNote, uploadEvidenceFileWithProgress, type EvidenceFile } from './evidence';
 import { decryptString, encryptString } from './evidenceCrypto';
+import {
+  startTransaction,
+  startSpan,
+  setMeasurement,
+  captureException,
+} from './sentryLabeling';
 
 let AsyncStorage: any;
 try {
@@ -66,25 +72,69 @@ export async function clearQueue() {
 }
 
 export async function processQueue(onProgress?: (index: number, total: number, pct?: number) => void) {
-  const items = await getQueue();
-  const total = items.length;
-  for (let i = 0; i < items.length; i++) {
-    const n = items[i];
-    onProgress?.(i + 1, total, 0);
-    let uploaded: EvidenceFile[] = [];
-    if (n.files?.length) {
-      for (const f of n.files) {
-        // best-effort progress; callers may ignore pct
-        const file = await uploadEvidenceFileWithProgress(f.uri, f.name, (p) => onProgress?.(i + 1, total, p));
-        uploaded.push(file);
+  // Start performance tracking for queue processing
+  const transaction = startTransaction('process_evidence_queue', 'task', {
+    description: 'Processing evidence upload queue',
+    tags: { feature: 'evidence' },
+  });
+
+  try {
+    const items = await getQueue();
+    const total = items.length;
+
+    // Track queue metrics
+    setMeasurement('queue_items_count', total, 'none');
+
+    for (let i = 0; i < items.length; i++) {
+      const n = items[i];
+      onProgress?.(i + 1, total, 0);
+      let uploaded: EvidenceFile[] = [];
+
+      if (n.files?.length) {
+        // Track file upload performance
+        const uploadSpan = startSpan(
+          transaction,
+          'upload_evidence_files',
+          `Upload ${n.files.length} files for item ${i + 1}`
+        );
+
+        setMeasurement(`item_${i}_files_count`, n.files.length, 'none');
+
+        for (const f of n.files) {
+          // best-effort progress; callers may ignore pct
+          const file = await uploadEvidenceFileWithProgress(f.uri, f.name, (p) =>
+            onProgress?.(i + 1, total, p)
+          );
+          uploaded.push(file);
+        }
+
+        uploadSpan?.finish();
       }
+
+      // Track note creation performance
+      const noteSpan = startSpan(transaction, 'add_evidence_note', `Add note for item ${i + 1}`);
+      await addEvidenceNote({ text: n.text, tags: n.tags, files: uploaded });
+      noteSpan?.finish();
+
+      // mark completed timestamp to support pruning
+      n.completedAt = now();
+      onProgress?.(i + 1, total, 100);
     }
-    await addEvidenceNote({ text: n.text, tags: n.tags, files: uploaded });
-    // mark completed timestamp to support pruning
-    n.completedAt = now();
-    onProgress?.(i + 1, total, 100);
+
+    await clearQueue();
+
+    transaction?.setStatus('ok');
+  } catch (error) {
+    transaction?.setStatus('internal_error');
+    captureException(error as Error, {
+      feature: 'evidence',
+      severity: 'error',
+      tags: { operation: 'process_queue' },
+    });
+    throw error;
+  } finally {
+    transaction?.finish();
   }
-  await clearQueue();
 }
 
 // Sweep completed items older than 30 days from the queue (idempotent)
