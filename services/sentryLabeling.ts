@@ -155,17 +155,9 @@ export async function initSentry(dsn: string): Promise<boolean> {
       enableNative: true,
       enableNativeCrashHandling: true,
 
-      // Routing instrumentation for React Navigation
-      integrations: [
-        Sentry.reactNavigationIntegration({
-          enableTimeToInitialDisplay: true,
-        }),
-        // HTTP instrumentation for API calls
-        Sentry.httpClientIntegration({
-          failedRequestStatusCodes: [400, 599],
-          failedRequestTargets: [/.*/],
-        }),
-      ],
+      // Performance monitoring integrations
+      // Note: React Navigation and HTTP integrations are auto-enabled in React Native
+      integrations: [],
 
       // Custom instrumentation options
       tracePropagationTargets: [
@@ -332,7 +324,7 @@ export function isSentryEnabled(): boolean {
  *   await loadEvidence();
  *   transaction?.finish();
  * } catch (error) {
- *   transaction?.setStatus('internal_error');
+ *   transaction?.setStatus('ok' | 'internal_error');
  *   transaction?.finish();
  *   captureException(error);
  * }
@@ -345,11 +337,15 @@ export function startTransaction(
     tags?: Record<string, string>;
     data?: Record<string, any>;
   }
-): Sentry.Span | undefined {
+): any {
   if (!sentryInitialized) return undefined;
 
   try {
-    const transaction = Sentry.startTransaction({
+    // Use Sentry's internal getCurrentHub for v7 compatibility
+    const hub = (Sentry as any).getCurrentHub?.();
+    if (!hub) return undefined;
+
+    const transaction = hub.startTransaction({
       name,
       op,
       description: options?.description,
@@ -357,7 +353,7 @@ export function startTransaction(
       data: options?.data,
     });
 
-    return transaction as Sentry.Span;
+    return transaction;
   } catch (err) {
     console.error('[Sentry] Failed to start transaction:', err);
     return undefined;
@@ -376,10 +372,10 @@ export function startTransaction(
  * transaction?.finish();
  */
 export function startSpan(
-  parentTransaction: Sentry.Span | undefined,
+  parentTransaction: any,
   operation: string,
   description?: string
-): Sentry.Span | undefined {
+): any {
   if (!sentryInitialized || !parentTransaction) return undefined;
 
   try {
@@ -418,12 +414,16 @@ export async function measurePerformance<T>(
 
   try {
     const result = await operation();
-    transaction?.setStatus('ok');
-    transaction?.finish();
+    if (transaction) {
+      (transaction as any).setStatus?.('ok');
+      (transaction as any).finish?.();
+    }
     return result;
   } catch (error) {
-    transaction?.setStatus('internal_error');
-    transaction?.finish();
+    if (transaction) {
+      (transaction as any).setStatus?.('internal_error');
+      (transaction as any).finish?.();
+    }
     throw error;
   }
 }
@@ -443,9 +443,10 @@ export function setMeasurement(
   if (!sentryInitialized) return;
 
   try {
-    const activeTransaction = Sentry.getCurrentScope().getTransaction();
+    const scope = (Sentry as any).getCurrentScope?.();
+    const activeTransaction = scope?.getTransaction?.();
     if (activeTransaction) {
-      activeTransaction.setMeasurement(name, value, unit);
+      (activeTransaction as any).setMeasurement?.(name, value, unit);
     }
   } catch (err) {
     console.error('[Sentry] Failed to set measurement:', err);

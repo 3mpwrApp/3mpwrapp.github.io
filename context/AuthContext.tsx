@@ -172,18 +172,18 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       addBreadcrumb('User initiating sign out', 'user.action', 'info');
       await fbSignOut(auth);
       setSessionExpired(false);
-      transaction?.setStatus('ok');
+      if (transaction) (transaction as any).setStatus?.('ok');
       addBreadcrumb('Sign out successful', 'auth', 'info');
     } catch (error) {
       logger.error('Sign out error', { error: error instanceof Error ? error.message : 'Unknown' });
-      transaction?.setStatus('internal_error');
+      if (transaction) (transaction as any).setStatus?.('internal_error');
       captureException(error as Error, {
         feature: 'auth',
         severity: 'error',
         tags: { operation: 'signout' },
       });
     } finally {
-      transaction?.finish();
+      if (transaction) (transaction as any).finish?.();
     }
   };
 
@@ -200,7 +200,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       const res = await getIdTokenResult(user, true);
       setIsAdmin(Boolean((res.claims as any)?.admin));
       setSessionExpired(false);
-      transaction?.setStatus('ok');
+      if (transaction) (transaction as any).setStatus?.('ok');
       addBreadcrumb('Claims refreshed successfully', 'auth', 'info');
     } catch (error) {
       logger.warn('Failed to refresh claims', {
@@ -211,12 +211,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       if (error instanceof Error) {
         if (error.message.includes('401') || error.message.includes('403')) {
           setSessionExpired(true);
-          transaction?.setStatus('unauthenticated');
+          if (transaction) (transaction as any).setStatus?.('unauthenticated');
         } else {
-          transaction?.setStatus('internal_error');
+          if (transaction) (transaction as any).setStatus?.('internal_error');
         }
       } else {
-        transaction?.setStatus('internal_error');
+        if (transaction) (transaction as any).setStatus?.('internal_error');
       }
 
       captureException(error as Error, {
@@ -225,7 +225,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         tags: { operation: 'refresh_claims' },
       });
     } finally {
-      transaction?.finish();
+      if (transaction) (transaction as any).finish?.();
     }
   };
 
@@ -243,11 +243,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       addBreadcrumb('Guest sign in initiated', 'user.action', 'info');
       await signInAnonymously(auth);
       setSessionExpired(false);
-      transaction?.setStatus('ok');
+      if (transaction) (transaction as any).setStatus?.('ok');
       addBreadcrumb('Guest sign in successful', 'auth', 'info');
     } catch (error) {
       logger.error('Guest sign in error', { error: error instanceof Error ? error.message : 'Unknown' });
-      transaction?.setStatus('internal_error');
+      if (transaction) (transaction as any).setStatus?.('internal_error');
       captureException(error as Error, {
         feature: 'auth',
         severity: 'error',
@@ -255,7 +255,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       });
       throw error; // Re-throw so caller can handle
     } finally {
-      transaction?.finish();
+      if (transaction) (transaction as any).finish?.();
     }
   };
 

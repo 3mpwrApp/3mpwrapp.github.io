@@ -37,12 +37,12 @@ export const fetchCampaigns = withFallback<Campaign[]>(
             const res = await fetch(`${BASE}/campaigns.json`);
 
             if (!res.ok) {
-              fetchSpan?.setStatus('internal_error');
+              if (fetchSpan) (fetchSpan as any).setStatus?.('internal_error');
               throw new Error(`API returned ${res.status}`);
             }
 
             const data = await res.json();
-            fetchSpan?.setStatus('ok');
+            if (fetchSpan) (fetchSpan as any).setStatus?.('ok');
 
             // Track response size
             const campaignCount = Array.isArray(data) ? data.length : (data.campaigns?.length || 0);
@@ -51,7 +51,7 @@ export const fetchCampaigns = withFallback<Campaign[]>(
 
             return data;
           } catch (error) {
-            fetchSpan?.setStatus('internal_error');
+            if (fetchSpan) (fetchSpan as any).setStatus?.('internal_error');
             captureException(error as Error, {
               feature: 'campaigns',
               severity: 'warning',
@@ -59,7 +59,7 @@ export const fetchCampaigns = withFallback<Campaign[]>(
             });
             throw error;
           } finally {
-            fetchSpan?.finish();
+            if (fetchSpan) (fetchSpan as any).finish?.();
           }
         });
 

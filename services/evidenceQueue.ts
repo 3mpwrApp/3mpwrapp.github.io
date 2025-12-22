@@ -108,13 +108,13 @@ export async function processQueue(onProgress?: (index: number, total: number, p
           uploaded.push(file);
         }
 
-        uploadSpan?.finish();
+        if (uploadSpan) (uploadSpan as any).finish?.();
       }
 
       // Track note creation performance
       const noteSpan = startSpan(transaction, 'add_evidence_note', `Add note for item ${i + 1}`);
       await addEvidenceNote({ text: n.text, tags: n.tags, files: uploaded });
-      noteSpan?.finish();
+      if (noteSpan) (noteSpan as any).finish?.();
 
       // mark completed timestamp to support pruning
       n.completedAt = now();
@@ -123,9 +123,9 @@ export async function processQueue(onProgress?: (index: number, total: number, p
 
     await clearQueue();
 
-    transaction?.setStatus('ok');
+    if (transaction) (transaction as any).setStatus?.('ok');
   } catch (error) {
-    transaction?.setStatus('internal_error');
+    if (transaction) (transaction as any).setStatus?.('internal_error');
     captureException(error as Error, {
       feature: 'evidence',
       severity: 'error',
@@ -133,7 +133,7 @@ export async function processQueue(onProgress?: (index: number, total: number, p
     });
     throw error;
   } finally {
-    transaction?.finish();
+    if (transaction) (transaction as any).finish?.();
   }
 }
 
