@@ -46,6 +46,7 @@ const REMINDER_ICONS: Record<WellnessReminderType, string> = {
   sleep_prep: 'moon',
   gratitude: 'heart-circle',
   breathing: 'body',
+  custom: 'star',
 };
 
 const REMINDER_DESCRIPTIONS: Record<WellnessReminderType, string> = {
@@ -59,6 +60,7 @@ const REMINDER_DESCRIPTIONS: Record<WellnessReminderType, string> = {
   sleep_prep: 'Prepare for restful sleep',
   gratitude: 'Daily gratitude practice',
   breathing: 'Mindful breathing exercises',
+  custom: 'Your personalized wellness reminder',
 };
 
 export default function WellnessRemindersScreen() {
