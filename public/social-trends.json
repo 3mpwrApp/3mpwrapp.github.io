@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-22T06:03:01.996Z",
+  "lastUpdated": "2025-12-22T12:03:12.951Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6110,
+      "totalPosts": 6135,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T06:02:51.439Z"
+      "lastSeen": "2025-12-22T12:03:02.602Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6125,
+      "totalPosts": 6150,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T06:02:53.889Z"
+      "lastSeen": "2025-12-22T12:03:04.673Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6050,
-      "recentPosts": 21,
+      "totalPosts": 6074,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T06:02:56.136Z"
+      "lastSeen": "2025-12-22T12:03:07.245Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6118,
+      "totalPosts": 6143,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T06:02:58.584Z"
+      "lastSeen": "2025-12-22T12:03:09.732Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6100,
+      "totalPosts": 6125,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-22T06:03:00.992Z"
+      "lastSeen": "2025-12-22T12:03:11.948Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "For 5+ years, I've been wearing what the tech industry is now calling AI glasses, so it was only a matter of time before I cover them from a healthcare angle! Here's my deep dive!\n\n🧪 #smartglasses #AI #digitalhealth #medicine #accessibility #tech #future \n\nmedicalfuturist.com/smart-glasse...",
-      "author": "pranslab.bsky.social",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Hey game publishers and developers, you there? Is your game catalog in @abletoplay.com database yet? Let us help you highlight strong accessibility features to players, and identify areas for improvement.\n\n#accessibility #videogames",
-      "author": "tarjapk.bsky.social",
-      "engagement": 16,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Reposting or Cross-Posting your art? THIS IS A SIGN TO PUT THE ALT TEXT IN A TEXT DOC SO YOU DONT HAVE TO REWRITE IT OVER AND OVER IN LESSER AND LESSER DETAIL BECAUSE YOU'RE TIRED. Just have them all archived. You're welcome.\n\n#ALT #disability #accessibility",
-      "author": "abrildelucia.bsky.social",
-      "engagement": 25,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Been catching up on @amyhupe.bsky.social's wonderful Systems of Harm podcast and really enjoyed this episode with @tink.uk. Covers a lot from #a11y to #AI and I always find Léonie's perspective valuable. \n\nsystems-of-harm.fireside.fm/ep2-leonie-w...",
-      "author": "davatron5000.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
     {
       "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
       "author": "lisadiedrich.bsky.social",
@@ -338,6 +308,36 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
+      "author": "sheffgreenparty.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "To celebrate hitting the 13.000th rating in Art of Fauna, here is a particularly lovely review I recently got about its accessibility. 🦾\n\nIt’s in German, so see the English translation in the next two posts!\n\n#a11y #gamedev #puzzle",
+      "author": "strasser.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -346,20 +346,20 @@
       "count": 40
     },
     {
+      "keyword": "accessibility",
+      "count": 32
+    },
+    {
+      "keyword": "a11y",
+      "count": 27
+    },
+    {
       "keyword": "disabilityjustice",
       "count": 26
     },
     {
-      "keyword": "a11y",
-      "count": 25
-    },
-    {
       "keyword": "cripthevote",
       "count": 25
-    },
-    {
-      "keyword": "accessibility",
-      "count": 24
     },
     {
       "keyword": "altcitizen",
@@ -378,28 +378,24 @@
       "count": 11
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 8
-    },
-    {
       "keyword": "inclusivedesign",
       "count": 8
     },
     {
       "keyword": "digitalaccessibility",
-      "count": 6
+      "count": 7
     },
     {
       "keyword": "disability",
-      "count": 5
+      "count": 6
     },
     {
-      "keyword": "wcag",
-      "count": 5
+      "keyword": "disabilityjustice nico",
+      "count": 6
     },
     {
       "keyword": "accessibility a11y",
-      "count": 5
+      "count": 6
     },
     {
       "keyword": "foxtakedown",
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "stoptrump",
+      "count": 5
+    },
+    {
+      "keyword": "wearetheflood",
       "count": 5
     }
   ]
