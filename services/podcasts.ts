@@ -6,7 +6,6 @@ import { getCachedJSON, setCachedJSON } from "./cache";
 import { fetchInjuredWorkerVideos } from "./youtube";
 import {
   measurePerformance,
-  startSpan,
   captureException,
   addBreadcrumb,
   setMeasurement,

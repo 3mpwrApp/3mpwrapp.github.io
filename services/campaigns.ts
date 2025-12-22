@@ -5,7 +5,6 @@ import { retry, withFallback } from "./api";
 import {
   measurePerformance,
   startTransaction,
-  startSpan,
   captureException,
   addBreadcrumb,
   setMeasurement,

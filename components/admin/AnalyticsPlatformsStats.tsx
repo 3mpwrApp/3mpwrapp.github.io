@@ -65,7 +65,7 @@ export default function AnalyticsPlatformsStats() {
         name: 'Firebase Analytics',
         icon: 'flame',
         status: firebaseStatus,
-        color: '#FFCA28',
+        color: palette.warning,
         benefits: [
           '📊 Real-time user behavior tracking',
           '🎯 Audience segmentation & insights',
@@ -83,12 +83,12 @@ export default function AnalyticsPlatformsStats() {
         ],
         dashboardUrl: 'https://console.firebase.google.com/',
       });
-    } catch (error) {
+    } catch {
       platformsData.push({
         name: 'Firebase Analytics',
         icon: 'flame',
         status: 'inactive',
-        color: '#FFCA28',
+        color: palette.warning,
         benefits: ['Not configured'],
       });
     }
@@ -101,7 +101,7 @@ export default function AnalyticsPlatformsStats() {
         name: 'Sentry Performance',
         icon: 'flash',
         status: sentryStatus,
-        color: '#362D59',
+        color: palette.primary,
         benefits: [
           '⚡ Real-time performance monitoring',
           '🔍 Error tracking & debugging',
@@ -123,12 +123,12 @@ export default function AnalyticsPlatformsStats() {
         ],
         dashboardUrl: 'https://sentry.io/',
       });
-    } catch (error) {
+    } catch {
       platformsData.push({
         name: 'Sentry Performance',
         icon: 'flash',
         status: 'inactive',
-        color: '#362D59',
+        color: palette.primary,
         benefits: ['Not configured'],
       });
     }
@@ -149,7 +149,7 @@ export default function AnalyticsPlatformsStats() {
         name: 'Vexo Analytics',
         icon: 'analytics',
         status: vexoStatus,
-        color: '#7C3AED',
+        color: palette.accent || palette.primary,
         benefits: [
           '📱 Device-level user tracking',
           '🔄 Cross-platform analytics',
@@ -169,12 +169,12 @@ export default function AnalyticsPlatformsStats() {
         ],
         dashboardUrl: 'https://www.vexo.co/',
       });
-    } catch (error) {
+    } catch {
       platformsData.push({
         name: 'Vexo Analytics',
         icon: 'analytics',
         status: 'inactive',
-        color: '#7C3AED',
+        color: palette.accent || palette.primary,
         benefits: ['Not configured'],
       });
     }

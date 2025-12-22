@@ -7,10 +7,8 @@ import { auth } from '../firebase/config';
 import { logger } from '../utils/logger';
 import {
   startTransaction,
-  startSpan,
   captureException,
   addBreadcrumb,
-  setMeasurement,
 } from '../services/sentryLabeling';
 
 type AuthContextValue = {
