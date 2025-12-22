@@ -8,6 +8,7 @@ export type Thread = { id?: string; channel: string; title: string; body: string
 export type Comment = { id?: string; threadId: string; text: string; authorUid: string; createdAt?: any; flagged?: boolean; hidden?: boolean };
 
 export async function listThreads(_channel: string, pageSize = 10) {
+  if (!db) throw new Error('Firestore not initialized');
   const col = collection(db, 'threads');
   let q = query(col, orderBy('createdAt','desc'), limit(pageSize));
   const snap = await getDocs(q);
@@ -16,12 +17,14 @@ export async function listThreads(_channel: string, pageSize = 10) {
 
 export async function postThread(channel: string, title: string, body: string) {
   if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
+  if (!db) throw new Error('Firestore not initialized');
   const col = collection(db, 'threads');
   return addDoc(col, { channel, title, body, authorUid: auth.currentUser?.uid, createdAt: serverTimestamp(), flagged:false, hidden:false });
 }
 
 export async function postComment(threadId: string, text: string) {
   if (!isCloudConsentEnabled()) throw new Error('Cloud features are disabled');
+  if (!db) throw new Error('Firestore not initialized');
   const col = collection(db, 'comments');
   return addDoc(col, { threadId, text, authorUid: auth.currentUser?.uid, createdAt: serverTimestamp(), flagged:false, hidden:false });
 }
@@ -55,6 +58,7 @@ export async function setChannelLastRead(slug: string) {
 export async function getChannelUnread(slug: string, max: number = 50): Promise<number> {
   try {
     const uid = auth.currentUser?.uid; if (!uid) return 0;
+    if (!db) return 0;
     const lr = await getDocs(query(collection(db, 'chats', `channel_${slug}`, 'last_read')));
     let lastTs = 0;
     lr.forEach(d => { if (d.id === uid) { const t = (d.data() as any)?.ts?.toDate?.()?.getTime?.() || 0; if (t) lastTs = t; } });
