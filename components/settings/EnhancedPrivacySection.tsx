@@ -227,26 +227,9 @@ export default function EnhancedPrivacySection() {
         </GapView>
       </View>
   <AccessibilityToggle title={t('settings.privacy.analytics','Opt Out of Analytics')} description={t('settings.privacy.analyticsDesc',"Don't share usage data")} value={analyticsOptOut} onValueChange={(v)=>{ setAnalyticsOptOut(v); try { setTelemetryConsent(!v); } catch {} }} icon='analytics' testID='analytics-toggle' />
-  <AccessibilityToggle 
-    title='Cloud Features (Chat & Sync)' 
-    description='Allow optional cloud features like community chat and device tokens' 
-    value={cloudOn} 
-    onValueChange={handleCloudToggle} 
-    icon='cloud-outline' 
-    testID='cloud-consent-toggle' 
-  />
-      
-      {/* Cloud Provider Selection - Extracted to separate component for file size */}
-      {cloudOn && (
-        <BYOCCloudProviderSection
-          cloudProvider={cloudProvider}
-          onProviderChange={handleCloudProviderChange}
-          showProviderModal={showProviderModal}
-          setShowProviderModal={setShowProviderModal}
-          onSelectProviderAndEnable={selectProviderAndEnable}
-        />
-      )}
-      
+
+      {/* Cloud provider selection moved to BYOC screen for clarity */}
+
       <AccessibilityToggle 
         title='Error Reporting' 
         description='Help improve the app by sharing crash reports' 

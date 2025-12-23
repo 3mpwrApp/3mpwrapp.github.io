@@ -121,10 +121,20 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     const result = await authRequest.promptAsync(discovery);
 
     if (result.type !== 'success' || !result.params.code) {
-      logger.log('[GDrive] Auth cancelled or failed:', result.type);
-      return { 
-        success: false, 
-        error: result.type === 'cancel' ? 'Authentication cancelled' : 'Authentication failed' 
+      logger.log('[GDrive] Auth cancelled or failed:', result.type, result.params);
+
+      // Check for redirect URI mismatch error
+      if (result.params?.error === 'redirect_uri_mismatch' ||
+          (result.params?.error_description && result.params.error_description.includes('redirect_uri'))) {
+        return {
+          success: false,
+          error: `Authorization blocked: The redirect URI (${redirectUri}) is not registered in your Google Cloud Console. Please add it to your OAuth 2.0 Client ID's authorized redirect URIs.`
+        };
+      }
+
+      return {
+        success: false,
+        error: result.type === 'cancel' ? 'Authentication cancelled' : `Authentication failed: ${result.params?.error || result.type}`
       };
     }
 

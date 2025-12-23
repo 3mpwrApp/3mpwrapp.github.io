@@ -125,7 +125,7 @@ export default function BYOCSettingsScreen() {
         } else {
           Alert.alert(
             '❌ Connection Failed',
-            'Could not connect to Google Drive. Please try again.',
+            result.error || 'Could not connect to Google Drive. Please try again.',
             [{ text: 'OK' }]
           );
         }
