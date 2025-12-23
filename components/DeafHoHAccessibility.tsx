@@ -18,7 +18,6 @@ import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
-    AccessibilityInfo,
     Animated,
     Linking,
     Modal,
@@ -26,7 +25,6 @@ import {
     Pressable,
     StyleSheet,
     Text,
-    Vibration,
     View,
 } from 'react-native';
 
@@ -36,6 +34,14 @@ import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 
 import A11yPressable from './A11yPressable';
+
+// AccessibilityInfo and Vibration are not available on web, conditionally import
+const AccessibilityInfo = Platform.OS !== 'web'
+  ? require('react-native').AccessibilityInfo
+  : null;
+const Vibration = Platform.OS !== 'web'
+  ? require('react-native').Vibration
+  : null;
 
 let AsyncStorage: any;
 try {
@@ -160,12 +166,12 @@ export function VisualAlert({
       // Also trigger vibration
       if (Platform.OS !== 'web') {
         try {
-          if (type === 'urgent') {
+          if (type === 'urgent' && Vibration) {
             Vibration.vibrate([100, 100, 100, 100, 200]);
           } else {
             Haptics.notificationAsync(
-              type === 'warning' 
-                ? Haptics.NotificationFeedbackType.Warning 
+              type === 'warning'
+                ? Haptics.NotificationFeedbackType.Warning
                 : Haptics.NotificationFeedbackType.Success
             );
           }
@@ -711,8 +717,10 @@ export function useAccessibleNotification() {
     message: string,
     type: 'info' | 'warning' | 'urgent' | 'success' = 'info'
   ) => {
-    // Announce for screen readers
-    AccessibilityInfo.announceForAccessibility(message);
+    // Announce for screen readers (native only)
+    if (Platform.OS !== 'web') {
+      AccessibilityInfo.announceForAccessibility(message);
+    }
 
     // Visual alert if enabled
     if (prefs.visualAlerts || (prefs.flashForUrgent && type === 'urgent')) {
@@ -722,7 +730,7 @@ export function useAccessibleNotification() {
     // Vibration if enabled
     if (prefs.vibrationAlerts && Platform.OS !== 'web') {
       try {
-        if (type === 'urgent') {
+        if (type === 'urgent' && Vibration) {
           Vibration.vibrate([100, 100, 100, 100, 200]);
         } else {
           Haptics.notificationAsync(
