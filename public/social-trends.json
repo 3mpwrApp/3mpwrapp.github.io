@@ -1,63 +1,45 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-23T12:03:18.794Z",
+  "lastUpdated": "2025-12-23T18:02:58.598Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6235,
+      "totalPosts": 6260,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T12:03:07.703Z"
+      "lastSeen": "2025-12-23T18:02:52.276Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6244,
+      "totalPosts": 6267,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T12:03:10.142Z"
+      "lastSeen": "2025-12-23T18:02:53.552Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6169,
+      "totalPosts": 6192,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T12:03:12.675Z"
+      "lastSeen": "2025-12-23T18:02:54.791Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6243,
+      "totalPosts": 6268,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T12:03:15.233Z"
+      "lastSeen": "2025-12-23T18:02:56.195Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6225,
+      "totalPosts": 6250,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T12:03:17.790Z"
+      "lastSeen": "2025-12-23T18:02:57.595Z"
     }
   },
   "viralPosts": [
     {
-      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Been catching up on @amyhupe.bsky.social's wonderful Systems of Harm podcast and really enjoyed this episode with @tink.uk. Covers a lot from #a11y to #AI and I always find Léonie's perspective valuable. \n\nsystems-of-harm.fireside.fm/ep2-leonie-w...",
-      "author": "davatron5000.bsky.social",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
       "engagement": 14,
@@ -326,6 +308,24 @@
       "author": "ianhamilton.bsky.social",
       "engagement": 13,
       "hashtag": "Accessibility"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
+      "author": "sheffgreenparty.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
     },
     {
       "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 33
+      "count": 30
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 27
     },
     {
       "keyword": "cripthevote",
@@ -359,7 +359,7 @@
     },
     {
       "keyword": "disabilityjustice",
-      "count": 24
+      "count": 23
     },
     {
       "keyword": "altcitizen",
@@ -378,20 +378,16 @@
       "count": 11
     },
     {
-      "keyword": "a11y accessibility",
-      "count": 10
-    },
-    {
-      "keyword": "disability",
-      "count": 7
-    },
-    {
       "keyword": "disabilityjustice nico",
       "count": 6
     },
     {
-      "keyword": "digitalaccessibility",
-      "count": 6
+      "keyword": "disability",
+      "count": 5
+    },
+    {
+      "keyword": "a11y accessibility",
+      "count": 5
     },
     {
       "keyword": "foxtakedown",
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "50501movement",
+      "count": 5
+    },
+    {
+      "keyword": "disabilityrebellion stoptrump",
       "count": 5
     }
   ]
