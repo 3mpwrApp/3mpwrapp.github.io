@@ -104,7 +104,9 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       useProxy: true, // Use Expo's auth.expo.io proxy for web OAuth
     });
 
+    logger.log('[GDrive] Client ID:', clientId);
     logger.log('[GDrive] Redirect URI:', redirectUri);
+    logger.log('[GDrive] Using proxy:', true);
 
     // Create auth request with Drive file scope
     const authRequest = new AuthSession.AuthRequest({
@@ -134,13 +136,18 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
         };
       }
 
+      // Provide detailed error message
+      const errorDetails = result.params?.error_description || result.params?.error || result.type;
       return {
         success: false,
-        error: result.type === 'cancel' ? 'Authentication cancelled' : `Authentication failed: ${result.params?.error || result.type}`
+        error: result.type === 'cancel'
+          ? 'Authentication cancelled'
+          : `Authentication failed: ${errorDetails}\n\nError type: ${result.params?.error || result.type}\nRedirect URI used: ${redirectUri}`
       };
     }
 
     // Exchange code for tokens
+    logger.log('[GDrive] Auth successful, exchanging code for tokens...');
     const tokenResult = await AuthSession.exchangeCodeAsync(
       {
         clientId,
