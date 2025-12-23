@@ -1,92 +1,246 @@
 {
   "date": "2025-12-23",
-  "timestamp": "2025-12-23T15:09:16.026Z",
-  "count": 12,
+  "timestamp": "2025-12-23T21:08:18.400Z",
+  "count": 34,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Trump said he didn’t want Canadian cars — now one built in Windsor, Ont., is racking up big U.S. awards",
-      "link": "https://www.cbc.ca/news/canada/windsor/dodge-charger-sixpack-windsor-stellantis-auto-tariffs-gas-trump-9.7025672?cmp=rss",
-      "description": "",
-      "score": 12,
+      "title": "This year's flu is packing a punch. How hospitals are trying to deal with surging cases",
+      "link": "https://www.cbc.ca/news/health/canada-flu-season-hospitals-9.7025077?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/22f7b29d-8b20-440d-b1b2-a6a0fd116b0d,1766450285985/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C57%2C1000%2C562%29%3BResize%3D%28620%29' alt='A young girl with a grey scarf around her neck laying on a bed with a green blanket over her. A woman has one hand on the girl's forehead and a thermometer in her other hand.' width='620' height='349' title='Canada is seeing a surging number of flu cases, particularly among young children and senior citizens. Hospitals in many provinces are taking extra steps to deal with the overflow of patients turning up in emergency rooms.'/><p>Flu cases across Canada are on the rise and may push hospitals to their limits over the holidays and into the new year, leading health officials in regions across the country to warn people not to visit emergency rooms unless it's absolutely necessary.</p>",
+      "score": 24,
       "pubDate": "Tue, 23 Dec 2025 04:00:00 EST"
     },
     {
-      "title": "Canada's GDP shrank 0.3% in October, erasing September's gain: StatCan",
-      "link": "https://globalnews.ca/news/11588871/canada-gdp-october-2025/",
-      "description": "Canada's GDP fell 0.3 per cent in October, which more than offset the previous increase of 0.2 per cent, according to Statistics Canada.",
-      "score": 10.5,
-      "pubDate": "Tue, 23 Dec 2025 14:22:33 +0000"
+      "title": "Canada, led by 6 returning players, looking to rebound off world junior flops",
+      "link": "https://www.cbc.ca/sports/hockey/canada-world-juniors-seeking-rebound-quarterfinal-losses-9.7026503?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/585878a0-cdbb-47ea-b8e9-221c010115c0,1766512830475/full/max/0/default.jpg?im=Crop%2Crect%3D%2820%2C0%2C1139%2C640%29%3BResize%3D%28620%29' alt='Canada forward Porter Martone bows his forehead in expressing his disappointment while standing on the ice with teammates following their 4-3 quarterfinal loss to the Czech Republic at the world junior hockey championship on January 2, 2025 in Otta' width='620' height='349' title='Six returning players and their teammates looking to make amends following Canada's quarterfinal loss to the Czech Republic last January at the world junior hockey championship in Ottawa. 'You lose on home ice, it's not the way that anyone draws it up,' says returning forward Porter Martone, second from left. '/><p>Gavin McKenna's first experience at the world junior hockey championship ended in bitter heartbreak nearly a year ago. The 18-year-old Canadian forward and five fellow returnees from the Ottawa horror show are looking to make amends.</p>",
+      "score": 21.5,
+      "pubDate": "Tue, 23 Dec 2025 13:25:07 EST"
     },
     {
-      "title": "New autism service dogs lend a helping paw to eastern Ontario families",
-      "link": "https://www.cbc.ca/news/canada/ottawa/new-autism-service-dogs-lend-a-helping-paw-to-eastern-ontario-families-9.7024536?cmp=rss",
-      "description": "",
-      "score": 11,
-      "pubDate": "Tue, 23 Dec 2025 04:00:00 EST"
+      "title": "Canadian return trips from U.S. tank nearly 30% in October: StatCan",
+      "link": "https://globalnews.ca/news/11588976/canadians-avoiding-travel-united-states/",
+      "description": "Canadian residents continued to take fewer trips to the United States in October, according to the latest data from Statistics Canada.",
+      "score": 19.5,
+      "pubDate": "Tue, 23 Dec 2025 17:22:22 +0000"
     },
     {
-      "title": "Manitoba Government Supports Roof Rebuild at Foxwarren District Recreation Centre",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71897",
-      "description": "",
-      "score": 10.1,
-      "pubDate": "Mon, 08 Dec 2025 14:03:00 CST"
+      "title": "Trucking companies face interprovincial issues amid national conversation on alleviating barriers",
+      "link": "https://www.cbc.ca/news/canada/manitoba/interprovincial-trucking-issues-9.7025509?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/fe58964a-e54c-4c4d-b00f-5e9796aea6f8,1766435538058/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A man in a high-visibility jacket poses for a picture in front of a truck' width='620' height='349' title='McKeen's Trucking in Flin Flon, Sask., which hauls gravel in Manitoba and Saskatchewan, says it often has to duplicate administrative tasks as it navigates safety, regulatory and tax differences in the two provinces.'/><p>The Manitoba Trucking Association says businesses in the industry continue to grapple with interprovincial issues every day, despite a national conversation on alleviating barriers in light of American tariffs. One company on the Manitoba-Saskatchewan border says navigating two sets of provincial rules adds administrative burdens.</p>",
+      "score": 18.6,
+      "pubDate": "Tue, 23 Dec 2025 06:00:00 EST"
     },
     {
-      "title": "How N.S. premier is arguing against updating privacy legislation",
-      "link": "https://globalnews.ca/news/11588917/nova-scotia-freedom-of-information-requests-tim-houston/",
-      "description": "Nova Scotia Premier Tim Houston previously ran for leadership on updating freedom of information rules, but he appears to have changed his stance.",
-      "score": 9,
-      "pubDate": "Tue, 23 Dec 2025 14:43:43 +0000"
+      "title": "Nova Scotia missing kids case ‘extremely rare': RCMP officer",
+      "link": "https://globalnews.ca/news/11589006/nova-scotia-missing-kids-rcmp-interview/",
+      "description": "Nova Scotia RCMP criminal operations officer Dan Morrow said in an interview with Global News that he hasn't seen a case quite like this in his 33 years of policing.",
+      "score": 16.5,
+      "pubDate": "Tue, 23 Dec 2025 19:35:03 +0000"
     },
     {
-      "title": "Construction to Begin on New Eriksdale Emergency Department in New Year",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71898",
-      "description": "",
-      "score": 9,
-      "pubDate": "Mon, 08 Dec 2025 14:15:00 CST"
-    },
-    {
-      "title": "Manitoba Government Announces Second Round of Funding for Gate Project",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72017",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Tue, 16 Dec 2025 12:24:00 CST"
-    },
-    {
-      "title": "Manitoba Government Invests $2.6 Million in Parkland and Westman Municipalities",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71999",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Mon, 15 Dec 2025 15:25:00 CST"
-    },
-    {
-      "title": "Parents of stillborn baby channel grief into advocacy for health system improvements",
-      "link": "https://www.cbc.ca/news/canada/british-columbia/stillborn-grief-advocacy-9.7023435?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/5e4e32cd-e90e-48f4-b7e1-252510a0a7b5,1766180294208/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Makayla written in sand on beach' width='620' height='349' title='The grief Laura and Nick Bordignon's experienced when their daughter was stillborn was compounded when they received an invoice in the mail for her autopsy.'/><p>Laura and Nick Bordignon were devastated when they mistakenly received an autopsy invoice addressed to their stillborn daughter. Since then, they have met with health officials to push for administrative changes, to make sure their grief wasn't in vain.</p>",
-      "score": 6.5,
-      "pubDate": "Tue, 23 Dec 2025 09:00:00 EST"
-    },
-    {
-      "title": "Measles Update #55",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72000",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 15 Dec 2025 15:46:00 CST"
-    },
-    {
-      "title": "Measles Update #52",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71877",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 08 Dec 2025 11:00:00 CST"
-    },
-    {
-      "title": "Bitter feud ensues after landlord's failed attempt to raise tenants' rent 65%",
-      "link": "https://www.cbc.ca/news/canada/new-brunswick/chipman-new-brunswick-tenant-landlord-9.7021623?cmp=rss",
-      "description": "<img src='https://i.cbc.ca/ais/8dfd8761-5df1-4c1d-8716-02f88341b576,1766173518211/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C535%2C5712%2C3213%29%3BResize%3D%28620%29' alt='Jonathan King sits outside the home he rents in Chipman, N.B.' width='620' height='349' title='Jonathan King is fighting his landlord's repeated attempts at terminating his rental lease, which he says was issued in retribution to him complaining about a 65 per cent rent increase.'/><p>A New Brunswick tenant and his landlord have been in a bitter year-long dispute that involves a 65 per cent rent increase, a failed eviction attempt, and claims that the rental unit, a bungalow, is needed to house the owner's aging mother-in-law.</p>",
-      "score": 1,
+      "title": "Losing ground: Northern communities seek solutions for threatened cemeteries",
+      "link": "https://www.cbc.ca/news/canada/north/erosion-cemeteries-north-9.7021275?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/a95459b0-b236-490a-94a3-0d68a0dafaae,1766514953846/full/max/0/default.jpg?im=Crop%2Crect%3D%2848%2C408%2C3505%2C1971%29%3BResize%3D%28620%29' alt='A head shot of a man against a grey wall.' width='620' height='349' title='Dennis Wright, a project manager with Rat River Development Corporation, said it's estimated his community of Fort McPherson, N.W.T., will lose more than half its cemetery within 30 years.'/><p>More than half the cemetery in Fort McPherson, N.W.T., could be lost to erosion in 30 years. Communities in the Yukon and Nunavut share what they've learned from dealing with similar challenges. </p>",
+      "score": 12.1,
       "pubDate": "Tue, 23 Dec 2025 05:00:00 EST"
+    },
+    {
+      "title": "Manitoba Government Supports Winnipeg Police Service Initiatives",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72100",
+      "description": "",
+      "score": 14.6,
+      "pubDate": "Tue, 23 Dec 2025 10:00:00 CST"
+    },
+    {
+      "title": "Pulled '60 Minutes' segment surfaces on web with Canadian broadcaster's branding",
+      "link": "https://globalnews.ca/news/11589088/60-minutes-cbs-segment-canada/",
+      "description": "Multiple media reports say the program was uploaded to StackTV, Global's streaming platform, though it is no longer available to watch.",
+      "score": 13.9,
+      "pubDate": "Tue, 23 Dec 2025 17:30:03 +0000"
+    },
+    {
+      "title": "Is Trans Mountain’s Profitability an Accounting Illusion?",
+      "link": "https://thetyee.ca/Analysis/2025/12/23/Trans-Mountain-Profitability-Accounting-Illusion/",
+      "description": "How the finances of Canada’s government-owned pipeline may look better than they are.",
+      "score": 12.5,
+      "pubDate": "Tue, 23 Dec 2025 08:40:00 +0000"
+    },
+    {
+      "title": "The Bank of Canada is ‘cautious' heading into 2026, with all eyes on CUSMA",
+      "link": "https://globalnews.ca/news/11589286/bank-of-canada-summary-december-2025/",
+      "description": "The Bank of Canada says it's staying 'cautious' heading into 2026 as uncertainty remains high with the global trade war, tariffs and a trade deal with the U.S. set for review.",
+      "score": 9.5,
+      "pubDate": "Tue, 23 Dec 2025 20:53:07 +0000"
+    },
+    {
+      "title": "Academic whose report led to fracking ban questions N.S. government's gas claims",
+      "link": "https://globalnews.ca/news/11589245/academic-whose-report-led-fracking-ban-questions-governments-gas-claims/",
+      "description": "The government announced it was putting Dalhousie University in charge of a $30-million program that will see a call for onshore natural gas exploration issued in the new year.",
+      "score": 11.4,
+      "pubDate": "Tue, 23 Dec 2025 18:38:14 +0000"
+    },
+    {
+      "title": "Override or overreach? Canada’s notwithstanding clause",
+      "link": "https://rabble.ca/politics/canadian-politics/override-or-overreach-canadas-notwithstanding-clause/",
+      "description": "",
+      "score": 9.5,
+      "pubDate": "Tue, 23 Dec 2025 20:57:36 +0000"
+    },
+    {
+      "title": "Basic Income in Canada is closer than you think",
+      "link": "https://rabble.ca/columnists/basic-income-in-canada-is-closer-than-you-think/",
+      "description": "",
+      "score": 9.5,
+      "pubDate": "Mon, 22 Dec 2025 21:58:23 +0000"
+    },
+    {
+      "title": "Quebec approves roadwork in rare forest under review for protected status",
+      "link": "https://www.cbc.ca/news/canada/montreal/quebec-forest-protection-9.7026654?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/89ccf7d2-bf30-46a8-887e-8babe788288f,1766517125198/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C3840%2C2160%29%3BResize%3D%28620%29' alt='forest' width='620' height='349' title='Conservationists say this old-growth forest near Sainte-Thècle, Que., ought to be protected.'/><p>Tensions are mounting in Quebec’s Mauricie region as citizens, environmental groups and scientists push back against provincially approved forestry roadwork in a rare old-growth forest near Sainte-Thècle.</p>",
+      "score": 11.6,
+      "pubDate": "Tue, 23 Dec 2025 14:38:33 EST"
+    },
+    {
+      "title": "For decades, Canada's military had no combat uniforms designed for women. That's about to change",
+      "link": "https://www.cbc.ca/news/politics/army-air-force-combat-uniform-specifically-designed-women-9.7021680?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/ad300fd7-64a1-477e-a8ef-7512ed4da3c9,1766097629296/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C5333%2C2999%29%3BResize%3D%28620%29' alt='Lt.-Col. Melanie Lake tries out a prototype of the army's combat uniform in the works and a body armour carriage system designed for women with shorter protective plates.' width='620' height='349' title='Lt.-Col. Melanie Lake tries out a prototype of the army's combat uniform in the works and a body armour carriage system designed for women with shorter protective plates.'/><p>More than 30 years after Canada's military allowed women to serve in combat roles, it's now specifically designing uniforms and body armour systems to fit their bodies. </p>",
+      "score": 9.5,
+      "pubDate": "Tue, 23 Dec 2025 04:00:00 EST"
+    },
+    {
+      "title": "Manitoba Justice Reports In-Custody Death",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71998",
+      "description": "",
+      "score": 9,
+      "pubDate": "Mon, 15 Dec 2025 14:12:00 CST"
+    },
+    {
+      "title": "Quebec paramedics, ambulance technicians to strike Dec. 24 but keep essential service",
+      "link": "https://globalnews.ca/news/11589226/quebec-paramedic-strike/",
+      "description": "The 39 unions are associated with the Fédération du préhospitalier du Québec and represent more than 2,000 paramedics and ambulance technicians across the province.",
+      "score": 9,
+      "pubDate": "Tue, 23 Dec 2025 18:30:04 +0000"
+    },
+    {
+      "title": "Danielle Smith’s Alberta Next Panel Report Lands with a Whimper",
+      "link": "https://thetyee.ca/Culture/2025/12/22/Smith-Alberta-Panel-Report-Lands-Whimper/",
+      "description": "Albertans paid $2 million for gruel this thin?",
+      "score": 9,
+      "pubDate": "Mon, 22 Dec 2025 19:16:00 +0000"
+    },
+    {
+      "title": "War museum acquires rare WW II-era knife after it winds up at community tool library",
+      "link": "https://www.cbc.ca/news/canada/ottawa/parachute-knife-ottawa-tool-library-9.7025188?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/fb9f3b6c-fb33-465d-8adc-52991e5f66e9,1766438850339/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C221%2C2424%2C1363%29%3BResize%3D%28620%29' alt='Brian Smith of the Ottawa Tool Library, left, poses with the Second World War-era knife the library received as a donation and that the library has now passed on to the Canadian War Museum. Receiving the knife is acquisitions and documentation office' width='620' height='349' title='Brian Smith of the Ottawa Tool Library, left, poses with the Second World War-era knife the library received as a donation and that the library has now passed on to the Canadian War Museum. Receiving the knife is acquisitions and documentation officer Erin Monette.'/><p>A parachute release knife of the type used by soldiers in the Second World War has found a new home at the Canadian War Museum, after being found among other donations to the Ottawa Tool Library. </p>",
+      "score": 8.3,
+      "pubDate": "Tue, 23 Dec 2025 04:00:00 EST"
+    },
+    {
+      "title": "Affordability tops the list for many Canadian holiday shoppers",
+      "link": "https://www.cbc.ca/player/play/9.7026037?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/4c47be63-313d-418a-bd0d-99ea616cc580,1766455193900/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Woman holds shopping bags. ' width='620' height='349' title='FILE PHOTO: A woman carries shopping bags during the Christmas shopping season in Toronto, December 7, 2012.'/><p>A recent Angus Reid report shows that affordability is a top concern for Canadians this holiday season, causing some shoppers to pull back on gift giving. </p>",
+      "score": 9,
+      "pubDate": "Mon, 22 Dec 2025 22:02:02 EST"
+    },
+    {
+      "title": "Saskatoon police shoot man during standoff triggered by mental health call",
+      "link": "https://www.cbc.ca/news/canada/saskatoon/police-shooting-mental-health-threats-sirt-9.7026339?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/8f54d082-6511-484f-8e4c-2bce3a8e90af,1766507390529/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C179%2C1179%2C663%29%3BResize%3D%28620%29' alt='cop on roof of truck' width='620' height='349' title='Saskatoon police officers at the scene of a standoff that began on Dec. 19, 2025, on Rayner Avenue. This photo was obtained by CBC from a person in the neighbourhood who CBC is not naming due to fears about their safety.'/><p>The province's Serious Incident Response Team has provided some information about how Saskatoon police shot a 25-year-old man while responding to a mental health call.</p>",
+      "score": 7.5,
+      "pubDate": "Tue, 23 Dec 2025 11:46:27 EST"
+    },
+    {
+      "title": "Manitoba Government Lowers Breast Cancer Screening Age to 45",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72103",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Tue, 23 Dec 2025 12:29:00 CST"
+    },
+    {
+      "title": "Alberta government raises the cost of referendum petitions by nearly 5K%",
+      "link": "https://rabble.ca/politics/canadian-politics/alberta-government-raises-the-cost-of-referendum-petitions-by-nearly-5k/",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Mon, 22 Dec 2025 21:20:17 +0000"
+    },
+    {
+      "title": "Measles Update #58",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72104",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 23 Dec 2025 14:57:00 CST"
+    },
+    {
+      "title": "Province Reminds Manitobans It's Not Too Late to Act as Flu Season Underway",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72101",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 23 Dec 2025 10:07:00 CST"
+    },
+    {
+      "title": "Measles Update #57",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72099",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Mon, 22 Dec 2025 15:21:00 CST"
+    },
+    {
+      "title": "Manitoba Maintains Fiscal Path Even as Climate Change and Trump's Tariffs Pose Challenges",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71997",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Mon, 15 Dec 2025 13:39:00 CST"
+    },
+    {
+      "title": "Toronto transit ridership sputters, failing to hit projections or 2024 totals",
+      "link": "https://globalnews.ca/news/11589127/ttc-ridership-fall-2025/",
+      "description": "The TTC has frozen fares for three years, slowly ramped up service and opened a new rapid transit line, but ridership is still lower than in 2019 and falling below expectations",
+      "score": 4.5,
+      "pubDate": "Tue, 23 Dec 2025 18:24:35 +0000"
+    },
+    {
+      "title": "Ryan Wedding's alleged ‘cocaine lawyer' granted bail",
+      "link": "https://globalnews.ca/news/11588975/deepak-paradkar-cocaine-lawyer-granted-bail-ryan-wedding/",
+      "description": "Deepak Paradkar, a lawyer who has ties to Canadian Olympian Ryan Wedding, was granted bail as he awaits an extradition hearing.",
+      "score": 4.5,
+      "pubDate": "Tue, 23 Dec 2025 16:37:02 +0000"
+    },
+    {
+      "title": "Some alcohol prices in Ontario could rise in the new year",
+      "link": "https://globalnews.ca/news/11588988/ontario-alcohol-price-changes/",
+      "description": "Some alcohol prices in Ontario could rise in the new year, with several changes to the alcohol marketplace set to take effect.",
+      "score": 4.5,
+      "pubDate": "Tue, 23 Dec 2025 15:32:54 +0000"
+    },
+    {
+      "title": "Covering news in food and agriculture in 2025",
+      "link": "https://rabble.ca/columnists/covering-news-in-food-and-agriculture-in-2025/",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 23 Dec 2025 20:23:13 +0000"
+    },
+    {
+      "title": "A Year of Health Science Under Siege",
+      "link": "https://thetyee.ca/Opinion/2025/12/23/Year-Health-Science-Under-Siege/",
+      "description": "When leaders mirror Stalin by promoting false dogma, we must defend evidence-based reason. Lives depend on it.",
+      "score": 4.5,
+      "pubDate": "Tue, 23 Dec 2025 08:10:00 +0000"
+    },
+    {
+      "title": "GoFundMe launched to support family after Regina carbon monoxide death",
+      "link": "https://globalnews.ca/news/11589032/regina-carbon-monoxide-death/",
+      "description": "First responders found two unconscious occupants inside an apartment building in Regina on Friday due to carbon monoxide poisoning.",
+      "score": 2.6,
+      "pubDate": "Tue, 23 Dec 2025 20:07:12 +0000"
+    },
+    {
+      "title": "Giving a voice to youth is a priority for Nunavut’s new suicide prevention minister",
+      "link": "https://www.cbc.ca/news/canada/north/youth-voice-nunavut-suicide-prevention-minister-9.7001641?cmp=rss",
+      "description": "",
+      "score": 1,
+      "pubDate": "Tue, 23 Dec 2025 04:00:00 EST"
     }
   ]
 }
