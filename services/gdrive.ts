@@ -97,9 +97,11 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     };
 
     // Get redirect URI based on platform
+    // Use Expo's auth proxy for web OAuth compatibility
     const redirectUri = AuthSession.makeRedirectUri({
       scheme: 'empowrapp',
       path: 'gdrive-callback',
+      useProxy: true, // Use Expo's auth.expo.io proxy for web OAuth
     });
 
     logger.log('[GDrive] Redirect URI:', redirectUri);
