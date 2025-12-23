@@ -1,0 +1,143 @@
+---
+layout: post
+title: "Daily News Curation - 2025-12-23"
+date: 2025-12-23
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-12-23
+
+Curated 27 items from disability, accessibility, and social policy sources.
+
+## 1. This year's flu is packing a punch. How hospitals are trying to deal with surging cases
+<img src='https://i.cbc.ca/ais/22f7b29d-8b20-440d-b1b2-a6a0fd116b0d,1766450285985/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C57%2C1000%2C562%29%3BResize%3D%28620%29' alt='A young girl with a grey scarf around her neck laying on a bed with a green blanket over her. A woman has one hand on the girl's forehead and a thermometer in her other hand.' width='620' height='349' title='Canada is seeing a surging number of flu cases, particularly among young children and senior citizens. Hospitals in many provinces are taking extra steps to deal with the overflow of patients turning up in emergency rooms.'/><p>Flu cases across Canada are on the rise and may push hospitals to their limits over the holidays and into the new year, leading health officials in regions across the country to warn people not to visit emergency rooms unless it's absolutely necessary.</p>
+📍 [Source](https://www.cbc.ca/news/health/canada-flu-season-hospitals-9.7025077?cmp=rss)
+**Score:** 24.00
+
+## 2. Advocates push to legalize the sale of raw milk
+<img src='https://i.cbc.ca/ais/dc6d41a9-a457-46c2-b0c9-0613ce2aa5a8,1766432068192/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='Glass of unpasteurized milk on table. ' width='620' height='349' title='Selling unpasteurized milk has been illegal in Canada since 1991, due to its high risk of carrying potentially deadly bacteria. But advocates argue there’s still demand for the product, with some Alberta municipalities lobbying the federal government to make sales legal.'/><p>Selling unpasteurized milk has been illegal in Canada since 1991, due to its high risk of carrying potentially deadly bacteria. But advocates argue there’s still demand for the product, with some Alberta municipalities lobbying the federal government to make sales legal.</p>
+📍 [Source](https://www.cbc.ca/player/play/9.7025469?cmp=rss)
+**Score:** 20.00
+
+## 3. Proposed Alberta separation referendum question approved
+Elections Alberta has approved the proposed referendum question, 'Do you agree that the province of Alberta should cease to be a part of Canada to become an independent state?'
+📍 [Source](https://globalnews.ca/news/11588446/alberta-separation-referendum-question/)
+**Score:** 18.50
+
+## 4. CBSA says 'fragile' IT systems are a 'top government risk' following border outages
+<img src='https://i.cbc.ca/ais/1.7652858,1759794265000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1919%2C1079%29%3BResize%3D%28620%29' alt='Transport trucks cross the Ambassador Bridge connecting Windsor to Detroit. ' width='620' height='349' title='Transport trucks cross the Ambassador Bridge connecting Windsor to Detroit. '/><p>An internal review of technical outages that caused significant delays at airports and international land borders this fall has exposed critical flaws with the Canada Border Services Agency's IT services.</p>
+📍 [Source](https://www.cbc.ca/news/cbsa-it-outage-minister-report-9.7025182?cmp=rss)
+**Score:** 17.00
+
+## 5. Is Trans Mountain’s Profitability an Accounting Illusion?
+How accounting manoeuvres make the finances of Canada’s government-owned pipeline look better than they are.
+📍 [Source](https://thetyee.ca/Analysis/2025/12/23/Trans-Mountain-Profitability-Accounting-Illusion/)
+**Score:** 12.50
+
+## 6. Basic Income in Canada is closer than you think
+📍 [Source](https://rabble.ca/columnists/basic-income-in-canada-is-closer-than-you-think/)
+**Score:** 9.50
+
+## 7. For decades, Canada's military had no combat uniforms designed for women. That's about to change
+<img src='https://i.cbc.ca/ais/ad300fd7-64a1-477e-a8ef-7512ed4da3c9,1766097629296/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C5333%2C2999%29%3BResize%3D%28620%29' alt='Lt.-Col. Melanie Lake tries out a prototype of the army's combat uniform in the works and a body armour carriage system designed for women with shorter protective plates.' width='620' height='349' title='Lt.-Col. Melanie Lake tries out a prototype of the army's combat uniform in the works and a body armour carriage system designed for women with shorter protective plates.'/><p>More than 30 years after Canada's military allowed women to serve in combat roles, it's now specifically designing uniforms and body armour systems to fit their bodies. </p>
+📍 [Source](https://www.cbc.ca/news/politics/army-air-force-combat-uniform-specifically-designed-women-9.7021680?cmp=rss)
+**Score:** 9.50
+
+## 8. As tiny tots sing, tap and play in music class, experts say it boosts their brain development
+<img src='https://i.cbc.ca/ais/2878c726-1bf4-45ee-ba7d-fef5117b49ba,1765480700465/full/max/0/default.jpg?im=Crop%2Crect%3D%28753%2C921%2C3099%2C1743%29%3BResize%3D%28620%29' alt='A woman taps wood rhythm sticks while kneeling on the floor, as a group of seated adults and toddlers join in a circle around her.' width='620' height='349' title='A music teacher, top left, leads caregivers and toddlers in a Smart Start class at the Royal Conservatory of Music in Toronto on October 31, 2025. '/><p>Music classes for the very youngest children can set them up to one day play an instrument, but experts say the classes can also bring broader cognitive benefits: firing up areas of their developing brains linked to attention, memory and language development.</p>
+📍 [Source](https://www.cbc.ca/news/canada/music-ed-toddlers-brain-development-9.7012249?cmp=rss)
+**Score:** 9.50
+
+## 9. Is it lights out for overnight flights at Montreal’s Trudeau airport?
+<img src='https://i.cbc.ca/ais/1bc3ec57-cfaa-4572-96a9-76f092eefbec,1766448615529/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C168%2C3231%2C1817%29%3BResize%3D%28620%29' alt='An Air Canada jet passes in front of a full moon over Toronto on Dec. 4, 2025 — the Cold Moon.' width='620' height='349' title='An Air Canada jet passes in front of a full moon over Toronto on Dec. 4, 2025 — the Cold Moon.'/><p>Aéroports de Montréal is proposing to ban planes from taking off and landing at the airport between 1 a.m. and 6 a.m. in an effort to curb the noise that has been keeping some nearby residents up at night.</p>
+📍 [Source](https://www.cbc.ca/player/play/9.7025888?cmp=rss)
+**Score:** 9.50
+
+## 10. Calgary's new event centre project on time, budget heading into busy 2026
+Calgary Sports and Entertainment Corporation said it's planning to open an experience centre in the new year for fans to get a behind-the-scenes look at Scotia Place.
+📍 [Source](https://globalnews.ca/news/11588444/calgary-new-event-centre-on-time-budget-2026/)
+**Score:** 7.50
+
+## 11. Ottawa, First Nations submit latest child welfare reform plans to tribunal
+Progress on a child welfare agreement to reform the system stalled last year when First Nations twice rejected a $47.8-billion deal they said did not go far enough to protect kids.
+📍 [Source](https://globalnews.ca/news/11588445/canada-indigenous-child-welfare-reform-proposals/)
+**Score:** 7.50
+
+## 12. Manitoba Justice Reports In-Custody Death
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71998)
+**Score:** 9.00
+
+## 13. Saskatchewan airports see uptick in passengers during busiest travel period
+Airports in Saskatchewan's two largest cities are reporting an uptick in passengers as the busiest travel period of the year is underway.
+📍 [Source](https://globalnews.ca/news/11588497/sask-airports-uptick-passengers-busiest-travel-period/)
+**Score:** 7.50
+
+## 14. Danielle Smith’s Alberta Next Panel Report Lands with a Whimper
+Albertans paid $2 million for gruel this thin?
+📍 [Source](https://thetyee.ca/Culture/2025/12/22/Smith-Alberta-Panel-Report-Lands-Whimper/)
+**Score:** 9.00
+
+## 15. Five things to know about Quebec Premier François Legault's tough year in 2025
+With just nine months until the next provincial election, here are five things to know about the premier's tough year.
+📍 [Source](https://globalnews.ca/news/11588688/legault-tough-year-2025-polls/)
+**Score:** 7.10
+
+## 16. Alberta government raises the cost of referendum petitions by nearly 5K%
+📍 [Source](https://rabble.ca/politics/canadian-politics/alberta-government-raises-the-cost-of-referendum-petitions-by-nearly-5k/)
+**Score:** 7.50
+
+## 17. Winter conditions catching drivers off guard on Okanagan forest service roads
+In a surprising twist, Central Okanagan Search and Rescue says it was the same driver who required assistance from the same location just over a week earlier.
+📍 [Source](https://globalnews.ca/news/11588541/winter-conditions-catching-drivers-off-guard-on-okanagan-forest-service-roads/)
+**Score:** 5.70
+
+## 18. Ottawa cobbler on 25 years of fixes — and the sidewalk staple 'that will kill your shoes'
+<img src='https://i.cbc.ca/ais/505a5455-c720-4569-8ae5-44f133b727ec,1765913669743/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C221%2C4032%2C2268%29%3BResize%3D%28620%29' alt='Muhamad Merhi, the owner of Merhi Quality Shoe Repair in downtown Ottawa's government-owned C.D. Howe Building, will celebrate 25 years of business next year.' width='620' height='349' title='Muhamad Merhi, the owner of Merhi Quality Shoe Repair in downtown Ottawa's government-owned C.D. Howe Building, will celebrate 25 years of business next year.'/><p>Muhamad Merhi has operated a shoe repair stand inside the federal government's C.D. Howe Building for a quarter-century. 'I don't think I would have survived outside,' he says. </p>
+📍 [Source](https://www.cbc.ca/news/canada/ottawa/ottawa-cobbler-on-25-years-of-fixes-and-the-sidewalk-staple-that-will-kill-your-shoes-9.7005164?cmp=rss)
+**Score:** 6.00
+
+## 19. Measles Update #57
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72099)
+**Score:** 4.50
+
+## 20. Manitoba Maintains Fiscal Path Even as Climate Change and Trump's Tariffs Pose Challenges
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71997)
+**Score:** 4.50
+
+## 21. Young child hurt after gunfire exchange involving police in northern Quebec: mayor
+Quebec's police watchdog says Nunavik officers exchanged gunshots with an individual outside a home after they were called about a person who allegedly posed a danger to others.
+📍 [Source](https://globalnews.ca/news/11588691/young-child-hurt-gunfire-police-northern-quebec/)
+**Score:** 4.50
+
+## 22. Calgary Mayor Jeromy Farkas reflects on first months in office
+Calgary Mayor Jeromy Farkas sat down with Global News for a year-end interview to reflect on his first few months in office.
+📍 [Source](https://globalnews.ca/news/11586226/calgary-mayor-jeromy-farkas-first-months-in-office/)
+**Score:** 4.50
+
+## 23. A Year of Health Science Under Siege
+When leaders mirror Stalin by promoting false dogma, we must defend evidence-based reason. Lives depend on it.
+📍 [Source](https://thetyee.ca/Opinion/2025/12/23/Year-Health-Science-Under-Siege/)
+**Score:** 4.50
+
+## 24. Four people hospitalized related to Pizza Pops recall, CFIA says
+<img src='https://i.cbc.ca/ais/0ffb1e7b-467c-414d-9878-8317a8c7b170,1766415796620/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C1%2C773%2C434%29%3BResize%3D%28620%29' alt='a picture of the pizza pops packaging shows an image of one of the pizza snacks and the  words "pizza pops pepperoni and bacon", plus details about the product' width='620' height='349' title='A package of Pepperoni and Bacon Pillsbury Pizza Pops are shown in this undated handout photo from the Canadian Food Inspection Agency. '/><p>The recall extends to a number of kinds of Pizza Pops of various packaging sizes with best-before dates for mid-June 2026. The Canadian Food Inspection Agency says the contaminated food may not look or smell spoiled, but can still make you sick.</p>
+📍 [Source](https://www.cbc.ca/news/health/pizza-pops-recall-9.7024961?cmp=rss)
+**Score:** 4.50
+
+## 25. Ontario senior's friends found gift cards given to them were empty. Consumers warned of 'gift card draining'
+<img src='https://i.cbc.ca/ais/08dc4811-a2bd-43fb-bd9f-0dba24052a1b,1766414082427/full/max/0/default.jpg?im=Crop%2Crect%3D%28930%2C54%2C3101%2C1744%29%3BResize%3D%28620%29' alt='A senior-age man with Tim Hortons gift cards.' width='620' height='349' title='Windsor senior Mark Duguay with the empty Tim Hortons gift cards he bought for friends.'/><p>Mark Duguay of Windsor says $275 worth of Tim Hortons cards he bought for friends couldn't be redeemed because they'd already been drained of funds. The CEO of the Better Business Bureau for Western Ontario says it's not an uncommon issue due to scams that may include bar code tampering.</p>
+📍 [Source](https://www.cbc.ca/news/canada/windsor/scammed-gift-cards-tim-hortons-windsor-9.7021349?cmp=rss)
+**Score:** 4.50
+
+## 26. National trends point to Canadians spending less this holiday season
+<img src='https://i.cbc.ca/ais/1.7422432,1735914045000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C15%2C1000%2C562%29%3BResize%3D%28620%29' alt='abstract blur image of shopping mall and people on Christmas time' width='620' height='349' title=''/><p>As people look to save money any way they can, those who represent businesses in the retail sector hope the "shop local" campaign results in a solid bottom line for retailers during the holiday shopping period.</p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/national-trend-spending-less-holiday-season-9.7010570?cmp=rss)
+**Score:** 4.50
+
+## 27. Bank denies allegations it gave bad advice to Tesla investor who lost $415 million
+<img src='https://i.cbc.ca/ais/1.7579287,1766444567682/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C258%2C4621%2C2599%29%3BResize%3D%28620%29' alt='A statue of a blindfolded female figure holding a scale inside a glass-roofed building' width='620' height='349' title='RBC has denied any wrongdoing in the case of the Tesla investor who turned $88,000 into $415 million, only to lose it all'/><p>A carpenter from Sooke, B.C., claims he turned $88,000 into $415 million trading Tesla stock options but lost it all because of "inadequate advice" from the bank.</p>
+📍 [Source](https://www.cbc.ca/news/canada/british-columbia/rbc-bank-tesla-investor-advice-9.7025751?cmp=rss)
+**Score:** 2.00
+
