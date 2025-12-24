@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-24T00:06:29.467Z",
+  "lastUpdated": "2025-12-24T06:02:55.850Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6285,
+      "totalPosts": 6310,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T00:06:20.583Z"
+      "lastSeen": "2025-12-24T06:02:47.007Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6290,
+      "totalPosts": 6313,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T00:06:22.682Z"
+      "lastSeen": "2025-12-24T06:02:49.075Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6217,
-      "recentPosts": 25,
+      "totalPosts": 6239,
+      "recentPosts": 22,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T00:06:24.524Z"
+      "lastSeen": "2025-12-24T06:02:51.053Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6293,
+      "totalPosts": 6318,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T00:06:26.553Z"
+      "lastSeen": "2025-12-24T06:02:52.947Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6275,
+      "totalPosts": 6300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T00:06:28.465Z"
+      "lastSeen": "2025-12-24T06:02:54.847Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Been catching up on @amyhupe.bsky.social's wonderful Systems of Harm podcast and really enjoyed this episode with @tink.uk. Covers a lot from #a11y to #AI and I always find Léonie's perspective valuable. \n\nsystems-of-harm.fireside.fm/ep2-leonie-w...",
-      "author": "davatron5000.bsky.social",
-      "engagement": 16,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -338,6 +314,30 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Does anyone have a shower chair they like?\n\nMust: swivel 360 degrees and have a back\n\nSmaller is better bc the space is small and shared (I need assistance).\n\nTime to replace my backless stool and the options are overwhelming me. #Disability #Accessibility",
+      "author": "kristinwrites.bsky.social",
+      "engagement": 23,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Oh hey, come work with me!\n\nWe're seeking an earlier-career front-end dev who is able to work in-office (multiple US locations).\n\nCheck it out if you have interest and experience in: #designsystems #CSS #a11y #webcomponents\n\nadobe.design/jobs/job-pos...",
+      "author": "5t3ph.bsky.social",
+      "engagement": 61,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 30
+      "count": 27
     },
     {
       "keyword": "cripthevote",
@@ -419,7 +419,7 @@
     },
     {
       "keyword": "disabilityjustice nico",
-      "count": 6
+      "count": 5
     }
   ]
 }
