@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-23T18:02:58.598Z",
+  "lastUpdated": "2025-12-24T00:06:29.467Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6260,
+      "totalPosts": 6285,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T18:02:52.276Z"
+      "lastSeen": "2025-12-24T00:06:20.583Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6267,
+      "totalPosts": 6290,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T18:02:53.552Z"
+      "lastSeen": "2025-12-24T00:06:22.682Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6192,
-      "recentPosts": 23,
+      "totalPosts": 6217,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T18:02:54.791Z"
+      "lastSeen": "2025-12-24T00:06:24.524Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6268,
+      "totalPosts": 6293,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T18:02:56.195Z"
+      "lastSeen": "2025-12-24T00:06:26.553Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6250,
+      "totalPosts": 6275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-23T18:02:57.595Z"
+      "lastSeen": "2025-12-24T00:06:28.465Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Piczle World of Puzzles (s.team/a/2174300) now has an option to change colour nonogram puzzles to use CUDO's Easily Distinguishable Colors for all Color Vision Types (jfly.uni-koeln.de/color/ichiha...) so people with colour vision issues can focus on the logic of the puzzles. #accessibility #gamedev",
-      "author": "scorestudios.bsky.social",
-      "engagement": 15,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
       "author": "xirclebox.com",
@@ -338,88 +320,106 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Oh hey, come work with me!\n\nWe're seeking an earlier-career front-end dev who is able to work in-office (multiple US locations).\n\nCheck it out if you have interest and experience in: #designsystems #CSS #a11y #webcomponents\n\nadobe.design/jobs/job-pos...",
+      "author": "5t3ph.bsky.social",
+      "engagement": 57,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 39
+      "count": 41
     },
     {
       "keyword": "accessibility",
       "count": 30
     },
     {
-      "keyword": "a11y",
-      "count": 27
+      "keyword": "cripthevote",
+      "count": 26
     },
     {
-      "keyword": "cripthevote",
-      "count": 25
+      "keyword": "a11y",
+      "count": 26
     },
     {
       "keyword": "disabilityjustice",
-      "count": 23
+      "count": 25
     },
     {
       "keyword": "altcitizen",
-      "count": 11
+      "count": 13
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 11
+      "count": 13
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 11
+      "count": 13
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 11
+      "count": 13
+    },
+    {
+      "keyword": "inclusivedesign",
+      "count": 7
+    },
+    {
+      "keyword": "foxtakedown",
+      "count": 7
+    },
+    {
+      "keyword": "stoptheliesfox",
+      "count": 7
+    },
+    {
+      "keyword": "virtual",
+      "count": 7
+    },
+    {
+      "keyword": "foxlies",
+      "count": 7
+    },
+    {
+      "keyword": "stoptrump",
+      "count": 7
+    },
+    {
+      "keyword": "wearetheflood",
+      "count": 7
+    },
+    {
+      "keyword": "50501movement",
+      "count": 7
+    },
+    {
+      "keyword": "disabilityrebellion stoptrump",
+      "count": 7
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 7
     },
     {
       "keyword": "disabilityjustice nico",
       "count": 6
-    },
-    {
-      "keyword": "disability",
-      "count": 5
-    },
-    {
-      "keyword": "a11y accessibility",
-      "count": 5
-    },
-    {
-      "keyword": "foxtakedown",
-      "count": 5
-    },
-    {
-      "keyword": "stoptheliesfox",
-      "count": 5
-    },
-    {
-      "keyword": "virtual",
-      "count": 5
-    },
-    {
-      "keyword": "foxlies",
-      "count": 5
-    },
-    {
-      "keyword": "stoptrump",
-      "count": 5
-    },
-    {
-      "keyword": "wearetheflood",
-      "count": 5
-    },
-    {
-      "keyword": "50501movement",
-      "count": 5
-    },
-    {
-      "keyword": "disabilityrebellion stoptrump",
-      "count": 5
     }
   ]
 }
