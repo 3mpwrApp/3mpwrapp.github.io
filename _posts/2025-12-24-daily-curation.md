@@ -1,0 +1,85 @@
+---
+layout: post
+title: "Daily News Curation - 2025-12-24"
+date: 2025-12-24
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-12-24
+
+Curated 15 items from disability, accessibility, and social policy sources.
+
+## 1. Humboldt Broncos families will appeal decision to dismiss lawsuit, lawyer says
+<img src='https://i.cbc.ca/ais/1.4955947,1716931911000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C670%2C4032%2C2268%29%3BResize%3D%28620%29' alt='A memorial featuring jerseys, hockey sticks and a cross with the message "Humboldt Strong."' width='620' height='349' title='The Humboldt Broncos team and community has received support from around the world - something they say has helped them survive this tragedy. '/><p>A Saskatoon King's Bench Court judge dismissed the lawsuit initially filed in July 2018, just months after a semi-trailer went through a stop sign and collided with the junior hockey team’s bus, killing 16 people. Their lawyer says they will appeal.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/court-dismiss-lawsuit-humboldt-broncos-families-9.7025457?cmp=rss)
+**Score:** 14.10
+
+## 2. N.S. fiddler Ashley MacIssac says AI content may have defamed him
+Nova Scotia fiddler Ashley MacIsaac said the summary falsely asserted he had been convicted of a series of offences, including sexual assault and internet luring.
+📍 [Source](https://globalnews.ca/news/11589560/ashley-macissac-ai-content-accusation/)
+**Score:** 12.00
+
+## 3. American billionaire wins defamation lawsuit against Peter Nygard
+<img src='https://i.cbc.ca/ais/550c9630-94ad-4c79-8733-fa47c123e6c0,1759956705347/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C31%2C3897%2C2192%29%3BResize%3D%28620%29' alt='A sketch shows a man wearing an orange prison jumpsuit and a blue non-surgical mask. He is resting his head on his hand.' width='620' height='349' title='This sketch shows Peter Nygard as he appeared at the bail decision hearing on Jan. 19, 2022, via video from the Toronto South Detention Centre, where he is being held.'/><p>Billionaire hedge fund manager Louis Bacon has won his long-running defamation lawsuit alleging that former fashion mogul and convicted sex offender Peter Nygard spread lies about him during a public spat over their adjacent properties in the Bahamas.</p>
+📍 [Source](https://www.cbc.ca/news/canada/manitoba/louis-bacon-peter-nygard-defamation-lawsuit-9.7027125?cmp=rss)
+**Score:** 12.10
+
+## 4. Vancouver's newest transition house will help more women fleeing domestic violence
+A 2023 B.C. Census report found that during a 24-hour period, 1,750 women, children and youth were helped through transition housing programs.
+📍 [Source](https://globalnews.ca/news/11589276/vancouver-new-transition-house-women-fleeing-domestic-violence/)
+**Score:** 11.00
+
+## 5. Sask. shoppers spending with intention this holiday season, report says
+As shoppers in Saskatchewan head to shopping centres for last minute purchases, a new report suggests they are more likely to be spending with intention this year.
+📍 [Source](https://globalnews.ca/news/11589628/sask-shoppers-spending-with-intention-this-holiday-season-report-says/)
+**Score:** 8.10
+
+## 6. Here’s Why Involuntary Care Won’t Work for Most People
+We need a total rethink of our failed approach to drugs and homelessness.
+📍 [Source](https://thetyee.ca/Opinion/2025/12/24/Involuntary-Care-Need-Rethink/)
+**Score:** 9.00
+
+## 7. Manitoba Government Announces Second Round of Funding for Gate Project
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72017)
+**Score:** 7.50
+
+## 8. Manitoba Government Invests $2.6 Million in Parkland and Westman Municipalities
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71999)
+**Score:** 7.50
+
+## 9. Measles Update #55
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72000)
+**Score:** 4.50
+
+## 10. The Calgary communities seeing effects of citywide rezoning the most and least
+After Calgary city council voted to kickstart the process, a public hearing on whether or not to repeal citywide rezoning is expected in the spring.
+📍 [Source](https://globalnews.ca/news/11589501/calgary-communities-effects-citywide-rezoning/)
+**Score:** 3.60
+
+## 11. FBI sought interview with former prince Andrew during Peter Nygard investigation
+The FBI and U.S. Attorney for the Southern District of New York sought an interview with ex-prince Andrew for connections to Canadian sex offender and fashion mogul Peter Nygard.
+📍 [Source](https://globalnews.ca/news/11589680/fbi-sought-interview-former-prince-andrew-peter-nygard-investigation/)
+**Score:** 4.50
+
+## 12. Quebec Liberals to choose new leader at March 14 convention
+The party announced Tuesday its nine-week leadership race will officially begin on Jan. 12.
+📍 [Source](https://globalnews.ca/news/11589754/quebec-liberals-new-leader/)
+**Score:** 4.50
+
+## 13. Calgary Transit takes 19 shuttle buses out of service following fire
+The shuttle buses were removed as part of an investigation into a Calgary Transit shuttle bus that caught fire on Nose Hill Drive N.W. earlier this month.
+📍 [Source](https://globalnews.ca/news/11589683/calgary-transit-takes-19-shuttle-buses-out-of-service-following-fire/)
+**Score:** 4.50
+
+## 14. It's so cold in the Yukon, the power grid can't keep up
+<img src='https://i.cbc.ca/ais/7c29bea5-e701-470c-9dab-a20d87ff98b6,1766528425530/full/max/0/default.jpg?im=Crop%2Crect%3D%285%2C0%2C1354%2C761%29%3BResize%3D%28620%29' alt='A busy street corner in downtown Whitehorse. Car exhaust rises.' width='620' height='349' title='Downtown Whitehorse Tuesday afternoon. Temperatures remain below -40 C, which is putting intense pressure on the grid.'/><p>Frigid temperatures that hover around -40 C — or -50 C in some communities — continue to keep much of the territory in their grip. There’s no sign of that weather, patterns of which are coming from Siberia, easing up any time soon. </p>
+📍 [Source](https://www.cbc.ca/news/canada/north/yukon-energy-blackouts-extreme-cold-9.7026976?cmp=rss)
+**Score:** 1.00
+
+## 15. Bitter feud ensues after landlord's failed attempt to raise tenants' rent 65%
+<img src='https://i.cbc.ca/ais/8dfd8761-5df1-4c1d-8716-02f88341b576,1766173518211/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C535%2C5712%2C3213%29%3BResize%3D%28620%29' alt='Jonathan King sits outside the home he rents in Chipman, N.B.' width='620' height='349' title='Jonathan King is fighting his landlord's repeated attempts at terminating his rental lease, which he says was issued in retribution to him complaining about a 65 per cent rent increase.'/><p>A New Brunswick tenant and his landlord have been in a bitter year-long dispute that involves a 65 per cent rent increase, a failed eviction attempt, and claims that the rental unit, a bungalow, is needed to house the owner's aging mother-in-law.</p>
+📍 [Source](https://www.cbc.ca/news/canada/new-brunswick/chipman-new-brunswick-tenant-landlord-9.7021623?cmp=rss)
+**Score:** 1.00
+
