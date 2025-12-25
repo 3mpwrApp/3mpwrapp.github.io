@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-24T18:02:54.283Z",
+  "lastUpdated": "2025-12-25T00:06:25.771Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6360,
+      "totalPosts": 6385,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T18:02:42.998Z"
+      "lastSeen": "2025-12-25T00:06:16.963Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6359,
+      "totalPosts": 6382,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T18:02:45.440Z"
+      "lastSeen": "2025-12-25T00:06:18.890Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6279,
-      "recentPosts": 21,
+      "totalPosts": 6301,
+      "recentPosts": 22,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T18:02:48.007Z"
+      "lastSeen": "2025-12-25T00:06:20.724Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6368,
+      "totalPosts": 6393,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T18:02:50.628Z"
+      "lastSeen": "2025-12-25T00:06:22.846Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6350,
+      "totalPosts": 6375,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-24T18:02:53.279Z"
+      "lastSeen": "2025-12-25T00:06:24.769Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Piczle World of Puzzles (s.team/a/2174300) now has an option to change colour nonogram puzzles to use CUDO's Easily Distinguishable Colors for all Color Vision Types (jfly.uni-koeln.de/color/ichiha...) so people with colour vision issues can focus on the logic of the puzzles. #accessibility #gamedev",
-      "author": "scorestudios.bsky.social",
-      "engagement": 16,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 15,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "To celebrate hitting the 13.000th rating in Art of Fauna, here is a particularly lovely review I recently got about its accessibility. 🦾\n\nIt’s in German, so see the English translation in the next two posts!\n\n#a11y #gamedev #puzzle",
-      "author": "strasser.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
     {
       "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
       "author": "lisadiedrich.bsky.social",
@@ -338,6 +308,36 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
+      "author": "phil-brighton.bsky.social",
+      "engagement": 23,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Does anyone have a shower chair they like?\n\nMust: swivel 360 degrees and have a back\n\nSmaller is better bc the space is small and shared (I need assistance).\n\nTime to replace my backless stool and the options are overwhelming me. #Disability #Accessibility",
+      "author": "kristinwrites.bsky.social",
+      "engagement": 23,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Oh hey, come work with me!\n\nWe're seeking an earlier-career front-end dev who is able to work in-office (multiple US locations).\n\nCheck it out if you have interest and experience in: #designsystems #CSS #a11y #webcomponents\n\nadobe.design/jobs/job-pos...",
+      "author": "5t3ph.bsky.social",
+      "engagement": 67,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -346,12 +346,12 @@
       "count": 41
     },
     {
-      "keyword": "a11y",
-      "count": 29
+      "keyword": "accessibility",
+      "count": 30
     },
     {
-      "keyword": "accessibility",
-      "count": 28
+      "keyword": "a11y",
+      "count": 30
     },
     {
       "keyword": "cripthevote",
@@ -382,8 +382,8 @@
       "count": 13
     },
     {
-      "keyword": "digitalaccessibility",
-      "count": 9
+      "keyword": "accessibility a11y",
+      "count": 8
     },
     {
       "keyword": "foxtakedown",
@@ -418,7 +418,7 @@
       "count": 7
     },
     {
-      "keyword": "id24",
+      "keyword": "disabilityjustice nico",
       "count": 6
     }
   ]
