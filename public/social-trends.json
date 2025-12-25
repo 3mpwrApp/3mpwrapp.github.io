@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-25T00:06:25.771Z",
+  "lastUpdated": "2025-12-25T06:03:01.035Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6385,
+      "totalPosts": 6410,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T00:06:16.963Z"
+      "lastSeen": "2025-12-25T06:02:46.824Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6382,
+      "totalPosts": 6405,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T00:06:18.890Z"
+      "lastSeen": "2025-12-25T06:02:49.073Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6301,
-      "recentPosts": 22,
+      "totalPosts": 6326,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T00:06:20.724Z"
+      "lastSeen": "2025-12-25T06:02:51.136Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6393,
-      "recentPosts": 25,
+      "totalPosts": 6416,
+      "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T00:06:22.846Z"
+      "lastSeen": "2025-12-25T06:02:57.549Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6375,
+      "totalPosts": 6400,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T00:06:24.769Z"
+      "lastSeen": "2025-12-25T06:03:00.033Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "To celebrate hitting the 13.000th rating in Art of Fauna, here is a particularly lovely review I recently got about its accessibility. 🦾\n\nIt’s in German, so see the English translation in the next two posts!\n\n#a11y #gamedev #puzzle",
-      "author": "strasser.bsky.social",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Just submitted my first Chrome extension for review.\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
     {
       "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
       "author": "lisadiedrich.bsky.social",
@@ -338,32 +308,58 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
+      "author": "phil-brighton.bsky.social",
+      "engagement": 30,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Does anyone have a shower chair they like?\n\nMust: swivel 360 degrees and have a back\n\nSmaller is better bc the space is small and shared (I need assistance).\n\nTime to replace my backless stool and the options are overwhelming me. #Disability #Accessibility",
+      "author": "kristinwrites.bsky.social",
+      "engagement": 23,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Oh hey, come work with me!\n\nWe're seeking an earlier-career front-end dev who is able to work in-office (multiple US locations).\n\nCheck it out if you have interest and experience in: #designsystems #CSS #a11y #webcomponents\n\nadobe.design/jobs/job-pos...",
+      "author": "5t3ph.bsky.social",
+      "engagement": 67,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 41
+      "count": 40
     },
     {
       "keyword": "accessibility",
-      "count": 30
+      "count": 31
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 28
+    },
+    {
+      "keyword": "disabilityjustice",
+      "count": 26
     },
     {
       "keyword": "cripthevote",
       "count": 26
-    },
-    {
-      "keyword": "disabilityjustice",
-      "count": 25
-    },
-    {
-      "keyword": "inclusivedesign",
-      "count": 16
     },
     {
       "keyword": "altcitizen",
@@ -382,8 +378,8 @@
       "count": 13
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 8
+      "keyword": "inclusivedesign",
+      "count": 10
     },
     {
       "keyword": "foxtakedown",
@@ -420,6 +416,10 @@
     {
       "keyword": "disabilityjustice nico",
       "count": 6
+    },
+    {
+      "keyword": "disability rights",
+      "count": 5
     }
   ]
 }
