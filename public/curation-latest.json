@@ -1,36 +1,64 @@
 {
   "date": "2025-12-26",
-  "timestamp": "2025-12-26T09:08:00.105Z",
-  "count": 4,
+  "timestamp": "2025-12-26T15:08:36.337Z",
+  "count": 8,
   "minScore": 0.5,
   "items": [
     {
-      "title": "Chanthy Yen brings contemporary Cambodian cuisine to Vancouver with TOUK",
-      "link": "https://www.straight.com/food/chanthy-yen-brings-contemporary-cambodian-cuisine-with-touk",
-      "description": "Canada’s first restaurant of its kind opens downtown.",
-      "score": 9.5,
-      "pubDate": "2025-12-17T12:57:00-08:00"
-    },
-    {
-      "title": "Manitoba Government Announces Removal Of 23 Grocery Property Controls",
-      "link": "https://news.gov.mb.ca/news/index.html?item=71917",
+      "title": "Manitoba Government Increasing Investment to Centreport Canada, Building Jobs and Strengthening Trade",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71938",
       "description": "",
-      "score": 7.5,
-      "pubDate": "Wed, 10 Dec 2025 13:30:00 CST"
+      "score": 21.5,
+      "pubDate": "Thu, 11 Dec 2025 13:34:00 CST"
     },
     {
-      "title": "Here are 5 tips to stick to your New Year's financial resolutions in 2026",
-      "link": "https://globalnews.ca/news/11590351/new-years-financial-resolutions-in-2026/",
-      "description": "Personal finance experts agree that the way you approach, structure and keep tabs on your financial goals dictates how successful you are in maintaining them throughout the year.",
+      "title": "New Provincial Health Report Maps Path to Better Health and Reduced Inequities for Manitobans",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72078",
+      "description": "",
+      "score": 16.1,
+      "pubDate": "Fri, 19 Dec 2025 13:36:00 CST"
+    },
+    {
+      "title": "How Crowded Emergency Departments Impact Patients and Staff",
+      "link": "https://thetyee.ca/News/2025/12/19/Crowded-Emergency-Departments-Patients-Staff/",
+      "description": "Overfull hospitals are worsening delirium, causing bedsores and leading to patient care in hospital bays and bathrooms.",
+      "score": 14.7,
+      "pubDate": "Fri, 19 Dec 2025 08:40:00 +0000"
+    },
+    {
+      "title": "Manitoba Government Launches $10 Million Business Security Rebate Program",
+      "link": "https://news.gov.mb.ca/news/index.html?item=71937",
+      "description": "",
+      "score": 11.4,
+      "pubDate": "Thu, 11 Dec 2025 11:03:00 CST"
+    },
+    {
+      "title": "Manitoba Government Donates $2.6 Million From U.S. Liquor Sales to Support Charities During Holiday Season",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72077",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Fri, 19 Dec 2025 11:25:00 CST"
+    },
+    {
+      "title": "Highway in B.C. reopens after atmospheric rivers washed out sections",
+      "link": "https://globalnews.ca/news/11591246/bc-highway-3-reopens-hope-princeton/",
+      "description": "A portion of a British Columbia highway linking the Lower Mainland to Alberta that's been closed since atmospheric rivers washed away sections of the road earlier has reopened.",
+      "score": 5.5,
+      "pubDate": "Fri, 26 Dec 2025 11:43:20 +0000"
+    },
+    {
+      "title": "Looking back on the transformative year in news that was 2025",
+      "link": "https://rabble.ca/labour/looking-back-on-the-transformative-year-in-news-that-was-2025/",
+      "description": "",
       "score": 4.5,
-      "pubDate": "Fri, 26 Dec 2025 09:00:01 +0000"
+      "pubDate": "Fri, 19 Dec 2025 19:26:27 +0000"
     },
     {
-      "title": "Boxing Day? More Like Tyee Hat Day",
-      "link": "https://thetyee.ca/Culture/2025/12/26/Boxing-Day-Tyee-Hat-Day/",
-      "description": "Support independent, non-profit journalism. Get our limited-edition cap.",
-      "score": 3,
-      "pubDate": "Sat, 27 Dec 2025 01:30:00 +0000"
+      "title": "10 Toronto stories that mattered in 2025",
+      "link": "https://www.cbc.ca/news/canada/toronto/10-toronto-stories-2025-9.7027725?cmp=rss",
+      "description": "<img src='https://i.cbc.ca/ais/4a4164cf-966d-4c90-a98f-4e5ddd0e0879,1766606122472/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1152%2C648%29%3BResize%3D%28620%29' alt='A collage of Doug Ford, the Toronto Pearson plane crash and Vladimir Guerrero Jr. at bat.' width='620' height='349' title='CBC Toronto takes a look back at a wild year of news that included two elections, a Blue Jays World Series run and a plane. crash. '/><p>This has been one wild year in the CBC Toronto newsroom.  But we’ve taken a crack at looking back at some of the biggest stories of 2025 — particularly the ones that will still matter as we enter the new year. </p>",
+      "score": 4.5,
+      "pubDate": "Fri, 26 Dec 2025 04:00:00 EST"
     }
   ]
 }
