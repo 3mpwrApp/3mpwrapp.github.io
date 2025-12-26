@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-25T18:02:48.835Z",
+  "lastUpdated": "2025-12-26T00:06:28.041Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6460,
+      "totalPosts": 6485,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T18:02:42.246Z"
+      "lastSeen": "2025-12-26T00:06:21.953Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6451,
+      "totalPosts": 6474,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T18:02:43.576Z"
+      "lastSeen": "2025-12-26T00:06:23.246Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6376,
+      "totalPosts": 6401,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T18:02:45.009Z"
+      "lastSeen": "2025-12-26T00:06:24.478Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6466,
+      "totalPosts": 6491,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T18:02:46.329Z"
+      "lastSeen": "2025-12-26T00:06:25.812Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6450,
+      "totalPosts": 6475,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-25T18:02:47.832Z"
+      "lastSeen": "2025-12-26T00:06:27.037Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "We've tested #Silksong to evaluate its #accessibility ! Even with some options, this game will be hard to play for lot of players.\n\nHere is our review:\n\nwww.game-lover.org/en/hollow-kn... \n\n#AccessibleGaming #GamingForEveryone @teamcherry.bsky.social",
-      "author": "capgame.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "To celebrate hitting the 13.000th rating in Art of Fauna, here is a particularly lovely review I recently got about its accessibility. 🦾\n\nIt’s in German, so see the English translation in the next two posts!\n\n#a11y #gamedev #puzzle",
-      "author": "strasser.bsky.social",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled people across the world are on the frontline of climate breakdown, facing higher rates of injury, illness and death in climate disasters. \n\nThe climate crisis is a disability justice issue. ⬇️\n#disabilityrights #disabilityjustice #climatejustice \n\nsheffieldgreenparty.org.uk/2025/12/16/c...",
-      "author": "sheffgreenparty.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "'Together, we win': When losing a Game Award is still a victory\nwww.polygon.com/assassins-cr...\n#accessibility #gamedev",
       "author": "ianhamilton.bsky.social",
@@ -338,6 +302,42 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
+      "author": "phil-brighton.bsky.social",
+      "engagement": 40,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
+      "author": "xirclebox.com",
+      "engagement": 24,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
+      "author": "xirclebox.com",
+      "engagement": 24,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Oh hey, come work with me!\n\nWe're seeking an earlier-career front-end dev who is able to work in-office (multiple US locations).\n\nCheck it out if you have interest and experience in: #designsystems #CSS #a11y #webcomponents\n\nadobe.design/jobs/job-pos...",
+      "author": "5t3ph.bsky.social",
+      "engagement": 67,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 30
     },
     {
       "keyword": "cripthevote",
