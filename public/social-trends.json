@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-28T12:03:09.475Z",
+  "lastUpdated": "2025-12-28T18:02:51.436Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6735,
+      "totalPosts": 6760,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T12:03:00.105Z"
+      "lastSeen": "2025-12-28T18:02:42.247Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6704,
+      "totalPosts": 6727,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T12:03:02.172Z"
+      "lastSeen": "2025-12-28T18:02:44.352Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6634,
+      "totalPosts": 6658,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T12:03:04.210Z"
+      "lastSeen": "2025-12-28T18:02:46.353Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6741,
+      "totalPosts": 6766,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T12:03:06.321Z"
+      "lastSeen": "2025-12-28T18:02:48.425Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6725,
+      "totalPosts": 6750,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T12:03:08.473Z"
+      "lastSeen": "2025-12-28T18:02:50.433Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
-      "author": "phil-brighton.bsky.social",
-      "engagement": 41,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
-      "author": "xirclebox.com",
-      "engagement": 38,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
-      "author": "xirclebox.com",
-      "engagement": 38,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
       "author": "wentrogue.bsky.social",
@@ -338,44 +302,80 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
+      "author": "phil-brighton.bsky.social",
+      "engagement": 43,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "The Yorkshire Dales Access Hub is a one‑stop online resource designed to make the outdoors more accessible -  helping people with a wide range of disabilities plan their perfect visit to the National Park. \n\n👉 https://accesshub.yorkshiredales.org.uk/\n\n📷 Andy Kay | #YorkshireDales #Accessibility",
+      "author": "yorkshiredales.org.uk",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "On touchscreens and UI controls acuity.design/touchscreens... as Wired has article about car controls and buttons. We did a lot of work on this about 10 years ago. #accessibility",
+      "author": "acuity.design",
+      "engagement": 46,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
+      "author": "xirclebox.com",
+      "engagement": 41,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 41
+      "count": 40
     },
     {
       "keyword": "accessibility",
-      "count": 35
+      "count": 34
     },
     {
       "keyword": "cripthevote",
-      "count": 26
+      "count": 27
+    },
+    {
+      "keyword": "disabilityjustice",
+      "count": 25
     },
     {
       "keyword": "a11y",
       "count": 25
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 24
-    },
-    {
       "keyword": "altcitizen",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "inclusivedesign",
@@ -383,7 +383,7 @@
     },
     {
       "keyword": "digitalaccessibility",
-      "count": 10
+      "count": 11
     },
     {
       "keyword": "disabilityjustice nico",
