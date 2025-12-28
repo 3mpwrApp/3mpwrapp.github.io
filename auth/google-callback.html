@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to 3mpwr App...</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        h1 {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .message {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        .error {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        a {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>3mpwr App</h1>
+        <div class="spinner"></div>
+        <div class="message" id="message">Redirecting to the app...</div>
+    </div>
+
+    <script>
+        (function() {
+            const messageEl = document.getElementById('message');
+
+            try {
+                // Get the full URL query string
+                const queryString = window.location.search;
+
+                // Check if we have any parameters
+                if (!queryString || queryString.length <= 1) {
+                    messageEl.innerHTML = '<div class="error"><strong>Error:</strong> No authentication data received. Please try connecting again from the app.</div>';
+                    return;
+                }
+
+                // Build the deep link URL
+                const deepLink = 'empowrapp://gdrive-callback' + queryString;
+
+                // Log for debugging (will show in browser console)
+                console.log('Redirecting to:', deepLink);
+
+                // Attempt to open the app
+                window.location.href = deepLink;
+
+                // Show fallback message after a short delay
+                setTimeout(function() {
+                    messageEl.innerHTML =
+                        '<strong>Opening the 3mpwr app...</strong><br><br>' +
+                        'If the app doesn\'t open automatically:<br>' +
+                        '1. Make sure the 3mpwr app is installed<br>' +
+                        '2. Manually open the app and try connecting again<br><br>' +
+                        '<small>You can safely close this page.</small>';
+                }, 1500);
+
+            } catch (error) {
+                console.error('Redirect error:', error);
+                messageEl.innerHTML =
+                    '<div class="error">' +
+                    '<strong>Error:</strong> ' + error.message + '<br><br>' +
+                    'Please try connecting again from the app.' +
+                    '</div>';
+            }
+        })();
+    </script>
+</body>
+</html>
