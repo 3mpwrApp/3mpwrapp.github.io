@@ -58,6 +58,21 @@
             color: #93c5fd;
             text-decoration: underline;
         }
+        button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: white;
+        }
     </style>
 </head>
 <body>
@@ -81,24 +96,28 @@
                     return;
                 }
 
-                // Build the deep link URL
-                const deepLink = 'empowrapp://gdrive-callback' + queryString;
-
                 // Log for debugging (will show in browser console)
-                console.log('Redirecting to:', deepLink);
+                console.log('OAuth callback received with params:', queryString);
 
-                // Attempt to open the app
+                // Try custom URL scheme first (works with new builds that have intent filters)
+                const deepLink = 'empowrapp://gdrive-callback' + queryString;
+                console.log('Attempting deep link:', deepLink);
                 window.location.href = deepLink;
 
-                // Show fallback message after a short delay
+                // If the custom scheme doesn't work, the page will still be visible
+                // Show message and manual retry option
                 setTimeout(function() {
-                    messageEl.innerHTML =
-                        '<strong>Opening the 3mpwr app...</strong><br><br>' +
-                        'If the app doesn\'t open automatically:<br>' +
-                        '1. Make sure the 3mpwr app is installed<br>' +
-                        '2. Manually open the app and try connecting again<br><br>' +
-                        '<small>You can safely close this page.</small>';
-                }, 1500);
+                    // Create a clickable link that will work in older builds
+                    // by using an <a> tag that Android can intercept
+                    const manualLink = document.createElement('a');
+                    manualLink.href = deepLink;
+                    manualLink.textContent = 'Tap here to open 3mpwr';
+                    manualLink.style.cssText = 'color: #93c5fd; font-weight: bold; text-decoration: underline; font-size: 18px;';
+                    
+                    messageEl.innerHTML = '<strong>Almost there!</strong><br><br>';
+                    messageEl.appendChild(manualLink);
+                    messageEl.innerHTML += '<br><br><small>If nothing happens, make sure the 3mpwr app is installed and try connecting again.</small>';
+                }, 2000);
 
             } catch (error) {
                 console.error('Redirect error:', error);
