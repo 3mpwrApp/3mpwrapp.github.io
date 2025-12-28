@@ -8,13 +8,9 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as AuthSession from 'expo-auth-session';
-import * as WebBrowser from 'expo-web-browser';
 import { Platform } from 'react-native';
 
 import { logger } from '../utils/logger';
-
-// Ensure WebBrowser is ready for auth redirects
-WebBrowser.maybeCompleteAuthSession();
 
 // AsyncStorage key for persisting GDrive config
 const GDRIVE_CONFIG_KEY = '@gdrive_config';

@@ -1,9 +1,13 @@
 /* eslint-disable no-restricted-syntax */
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import * as WebBrowser from 'expo-web-browser';
 import { useFonts } from "expo-font";
 import { Stack, usePathname } from "expo-router";
 import React from "react";
 import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "react-native";
+
+// Enable OAuth redirect handling for web browser-based authentication
+WebBrowser.maybeCompleteAuthSession();
 
 // Global error handler for Web to catch white-screen crashes
 // WCAG 2.2 AAA: Error banners use high-contrast color combinations
