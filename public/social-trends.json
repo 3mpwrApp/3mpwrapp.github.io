@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-28T06:02:48.859Z",
+  "lastUpdated": "2025-12-28T12:03:09.475Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6710,
+      "totalPosts": 6735,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T06:02:41.365Z"
+      "lastSeen": "2025-12-28T12:03:00.105Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6681,
+      "totalPosts": 6704,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T06:02:43.111Z"
+      "lastSeen": "2025-12-28T12:03:02.172Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6610,
+      "totalPosts": 6634,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T06:02:44.763Z"
+      "lastSeen": "2025-12-28T12:03:04.210Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6716,
+      "totalPosts": 6741,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T06:02:46.266Z"
+      "lastSeen": "2025-12-28T12:03:06.321Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6700,
+      "totalPosts": 6725,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T06:02:47.856Z"
+      "lastSeen": "2025-12-28T12:03:08.473Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Oh hey, come work with me!\n\nWe're seeking an earlier-career front-end dev who is able to work in-office (multiple US locations).\n\nCheck it out if you have interest and experience in: #designsystems #CSS #a11y #webcomponents\n\nadobe.design/jobs/job-pos...",
-      "author": "5t3ph.bsky.social",
-      "engagement": 67,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
-      "author": "phil-brighton.bsky.social",
-      "engagement": 41,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
-      "author": "xirclebox.com",
-      "engagement": 32,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
-      "author": "xirclebox.com",
-      "engagement": 32,
-      "hashtag": "A11y"
-    },
     {
       "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
       "author": "lisadiedrich.bsky.social",
@@ -338,6 +302,42 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
+      "author": "phil-brighton.bsky.social",
+      "engagement": 43,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "selfish reasons to use alt text:\n\n- use SEO terms that to be picked up in the alt text *as a natural part* of effective image description\n\n- show off writing/communication skills in alt text\n\n- point out image/art details that might otherwise be missed\n\n- greater peace of mind on #accessibility\n\n🥰💜.",
+      "author": "sineadthefae.bsky.social",
+      "engagement": 111,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "while talking #accessibility here are a few things to consider for screen readers:\n\n- specially-formatted fonts are apparently read aloud as painful nonsense.\n\n- emoji are read aloud. consider limiting how many in a row you use with this in mind.\n\n- extensive keysmashing read aloud? just imagine!\n💜.",
+      "author": "sineadthefae.bsky.social",
+      "engagement": 49,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
+      "author": "xirclebox.com",
+      "engagement": 41,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 35
     },
     {
       "keyword": "cripthevote",
