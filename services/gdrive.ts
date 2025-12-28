@@ -156,10 +156,21 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
 
     // Prompt user for consent
     logger.log('[GDrive] Opening auth prompt...');
+    logger.log('[GDrive] Auth request config:', {
+      clientId: clientId.substring(0, 20) + '...',
+      redirectUri,
+      scopes: authRequest.scopes,
+      usePKCE: authRequest.usePKCE,
+      codeVerifier: authRequest.codeVerifier ? 'present' : 'missing'
+    });
+
     let result;
     try {
       result = await authRequest.promptAsync(discovery);
-      logger.log('[GDrive] Prompt result:', result.type);
+      logger.log('[GDrive] Prompt result type:', result.type);
+      if ('params' in result) {
+        logger.log('[GDrive] Prompt result params:', result.params);
+      }
     } catch (promptError: any) {
       logger.error('[GDrive] Error during promptAsync:', promptError);
       return {
@@ -189,11 +200,21 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
         };
       }
 
+      // Provide user-friendly error messages
+      let errorMessage: string;
+      if (result.type === 'cancel') {
+        errorMessage = 'You cancelled the Google sign-in. Please try again when ready.';
+      } else if (result.type === 'dismiss') {
+        errorMessage = 'The sign-in window was closed before completing. This can happen if:\n\n• You closed the browser window\n• The app couldn\'t redirect back properly\n• There was a network issue\n\nPlease try again and complete the sign-in process.';
+      } else if (result.type === 'locked') {
+        errorMessage = 'Another authentication is in progress. Please wait and try again.';
+      } else {
+        errorMessage = `Authentication failed: ${result.type}`;
+      }
+
       return {
         success: false,
-        error: result.type === 'cancel'
-          ? 'Authentication cancelled'
-          : `Authentication failed: ${result.type}`
+        error: errorMessage
       };
     }
 
