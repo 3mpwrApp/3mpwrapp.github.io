@@ -90,8 +90,8 @@
           "data": [
             {
               "scheme": "https",
-              "host": "auth.expo.io",
-              "pathPrefix": "/@3mpwrapp03/empowrapp"
+              "host": "3mpwrapp.pages.dev",
+              "pathPrefix": "/auth/google-callback"
             }
           ],
           "category": [

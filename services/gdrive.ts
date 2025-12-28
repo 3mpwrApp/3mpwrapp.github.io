@@ -96,9 +96,9 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       revocationEndpoint: 'https://oauth2.googleapis.com/revoke',
     };
 
-    // For standalone builds, we must use the Expo proxy explicitly
-    // because Google OAuth web clients don't accept custom URL schemes
-    const redirectUri = 'https://auth.expo.io/@3mpwrapp03/empowrapp';
+    // Use our own domain for OAuth redirect to avoid Expo proxy CSP issues
+    // This requires adding https://3mpwrapp.pages.dev/auth/google-callback to Google Console
+    const redirectUri = 'https://3mpwrapp.pages.dev/auth/google-callback';
 
     logger.log('[GDrive] Client ID:', clientId);
     logger.log('[GDrive] Redirect URI:', redirectUri);
