@@ -115,10 +115,22 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       ],
       redirectUri,
       usePKCE: true,
+      responseType: AuthSession.ResponseType.Code,
     });
 
     // Prompt user for consent
-    const result = await authRequest.promptAsync(discovery);
+    logger.log('[GDrive] Opening auth prompt...');
+    let result;
+    try {
+      result = await authRequest.promptAsync(discovery);
+      logger.log('[GDrive] Prompt result:', result.type);
+    } catch (promptError: any) {
+      logger.error('[GDrive] Error during promptAsync:', promptError);
+      return {
+        success: false,
+        error: `Failed to open Google sign-in: ${promptError.message || 'Unknown error'}. Make sure your browser/WebView is working.`
+      };
+    }
 
     if (result.type !== 'success' || !result.params.code) {
       logger.log('[GDrive] Auth cancelled or failed:', result.type, result.params);
