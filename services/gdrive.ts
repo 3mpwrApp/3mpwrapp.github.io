@@ -9,6 +9,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as AuthSession from 'expo-auth-session';
 import * as WebBrowser from 'expo-web-browser';
+import { Platform } from 'react-native';
 
 import { logger } from '../utils/logger';
 
@@ -128,13 +129,16 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       revocationEndpoint: 'https://oauth2.googleapis.com/revoke',
     };
 
-    // Use our own domain for OAuth redirect to avoid Expo proxy CSP issues
-    // This requires adding https://3mpwrapp.pages.dev/auth/google-callback to Google Console
-    const redirectUri = 'https://3mpwrapp.pages.dev/auth/google-callback';
+    // Use platform-specific redirect URI
+    // Web: Use AuthSession.makeRedirectUri() which returns the current web URL
+    // Mobile: Use our custom domain that deep links back to the app
+    const redirectUri = Platform.OS === 'web'
+      ? AuthSession.makeRedirectUri({ path: 'gdrive-callback' })
+      : 'https://3mpwrapp.pages.dev/auth/google-callback';
 
+    logger.log('[GDrive] Platform:', Platform.OS);
     logger.log('[GDrive] Client ID:', clientId);
     logger.log('[GDrive] Redirect URI:', redirectUri);
-    logger.log('[GDrive] Using Expo auth proxy');
 
     // Create auth request with Drive file scope
     const authRequest = new AuthSession.AuthRequest({
