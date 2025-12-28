@@ -51,21 +51,29 @@ export default function BYOCSettingsScreen() {
   const mode = getDataPolicyMode();
   const byocEnabled = isBYOCEnabled();
 
-  // Load existing config on mount
+  // Load existing config on mount and when screen gets focus
   React.useEffect(() => {
-    const config = getBYOCConfig();
-    if (config) {
-      setSelectedProvider(config.kind);
-      setConnected(true);
-      if (config.kind === 'webdav') {
-        setWebdavEndpoint(config.endpoint || '');
-        setWebdavUsername(config.username || '');
-        // Don't show password for security
+    const checkConfig = () => {
+      const config = getBYOCConfig();
+      if (config) {
+        setSelectedProvider(config.kind);
+        setConnected(true);
+        if (config.kind === 'webdav') {
+          setWebdavEndpoint(config.endpoint || '');
+          setWebdavUsername(config.username || '');
+          // Don't show password for security
+        }
+      } else if (isGDriveConfigured()) {
+        setSelectedProvider('gdrive');
+        setConnected(true);
       }
-    } else if (isGDriveConfigured()) {
-      setSelectedProvider('gdrive');
-      setConnected(true);
-    }
+    };
+
+    checkConfig();
+
+    // Check again when screen gets focus (e.g., after OAuth redirect)
+    const intervalId = setInterval(checkConfig, 1000);
+    return () => clearInterval(intervalId);
   }, []);
 
   const handleTestConnection = async () => {
@@ -93,8 +101,8 @@ export default function BYOCSettingsScreen() {
           [
             {
               text: 'Connect',
-              onPress: () => {
-                setBYOCConfig(config);
+              onPress: async () => {
+                await setBYOCConfig(config);
                 setConnected(true);
               },
             },
@@ -115,7 +123,7 @@ export default function BYOCSettingsScreen() {
         const result = await authenticateGDrive();
 
         if (result.success) {
-          setBYOCConfig({ kind: 'gdrive' });
+          await setBYOCConfig({ kind: 'gdrive' });
           setConnected(true);
           Alert.alert(
             '✅ Connected to Google Drive',
@@ -147,8 +155,8 @@ export default function BYOCSettingsScreen() {
         {
           text: 'Disconnect',
           style: 'destructive',
-          onPress: () => {
-            setBYOCConfig(null);
+          onPress: async () => {
+            await setBYOCConfig(null);
             setConnected(false);
             setWebdavEndpoint('');
             setWebdavUsername('');

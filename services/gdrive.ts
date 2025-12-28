@@ -6,6 +6,7 @@
  * User authenticates with their Google account and files are stored in their Drive.
  */
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as AuthSession from 'expo-auth-session';
 import * as WebBrowser from 'expo-web-browser';
 
@@ -13,6 +14,9 @@ import { logger } from '../utils/logger';
 
 // Ensure WebBrowser is ready for auth redirects
 WebBrowser.maybeCompleteAuthSession();
+
+// AsyncStorage key for persisting GDrive config
+const GDRIVE_CONFIG_KEY = '@gdrive_config';
 
 // Google Drive API endpoints
 const DRIVE_API_BASE = 'https://www.googleapis.com/drive/v3';
@@ -48,10 +52,38 @@ export function getGDriveConfig(): GDriveConfig | null {
 }
 
 /**
- * Set the Google Drive configuration
+ * Set the Google Drive configuration and persist to storage
  */
-export function setGDriveConfig(config: GDriveConfig | null): void {
+export async function setGDriveConfig(config: GDriveConfig | null): Promise<void> {
   gdriveConfig = config;
+
+  try {
+    if (config) {
+      await AsyncStorage.setItem(GDRIVE_CONFIG_KEY, JSON.stringify(config));
+      logger.log('[GDrive] Config persisted to storage');
+    } else {
+      await AsyncStorage.removeItem(GDRIVE_CONFIG_KEY);
+      logger.log('[GDrive] Config removed from storage');
+    }
+  } catch (error) {
+    logger.error('[GDrive] Failed to persist config:', error);
+  }
+}
+
+/**
+ * Load Google Drive configuration from storage
+ * Call this on app startup to restore the session
+ */
+export async function loadGDriveConfig(): Promise<void> {
+  try {
+    const stored = await AsyncStorage.getItem(GDRIVE_CONFIG_KEY);
+    if (stored) {
+      gdriveConfig = JSON.parse(stored);
+      logger.log('[GDrive] Config loaded from storage');
+    }
+  } catch (error) {
+    logger.error('[GDrive] Failed to load config:', error);
+  }
 }
 
 /**
@@ -189,9 +221,9 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       logger.warn('[GDrive] Could not get/create app folder:', e);
     }
 
-    setGDriveConfig(config);
+    await setGDriveConfig(config);
     logger.log('[GDrive] Authentication successful');
-    
+
     return { success: true, config };
   } catch (error: any) {
     logger.error('[GDrive] Authentication error:', error);
@@ -233,12 +265,12 @@ export async function refreshGDriveToken(): Promise<boolean> {
     }
 
     const data = await response.json();
-    
-    setGDriveConfig({
+
+    await setGDriveConfig({
       ...gdriveConfig,
       accessToken: data.access_token,
-      expiresAt: data.expires_in 
-        ? Date.now() + data.expires_in * 1000 
+      expiresAt: data.expires_in
+        ? Date.now() + data.expires_in * 1000
         : undefined,
     });
 
@@ -485,7 +517,7 @@ export async function testGDriveConnection(): Promise<{ ok: boolean; error?: str
 /**
  * Disconnect Google Drive (clear tokens)
  */
-export function disconnectGDrive(): void {
-  setGDriveConfig(null);
+export async function disconnectGDrive(): Promise<void> {
+  await setGDriveConfig(null);
   logger.log('[GDrive] Disconnected');
 }

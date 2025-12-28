@@ -207,6 +207,16 @@ export default function RootLayout() {
     };
   }, []);
 
+  // Load persisted BYOC and Google Drive configs on startup
+  React.useEffect(() => {
+    const loadConfigs = async () => {
+      const { loadBYOCConfig } = await import('../services/dataPolicy');
+      const { loadGDriveConfig } = await import('../services/gdrive');
+      await Promise.all([loadBYOCConfig(), loadGDriveConfig()]);
+    };
+    loadConfigs().catch(() => {});
+  }, []);
+
   // Notifications setup
   React.useEffect(() => {
     // establish a per-launch session seed (enables suggestion rotation)
@@ -219,7 +229,7 @@ export default function RootLayout() {
     pruneExpiredReminders().then(r => { if (r.removed && __DEV__) logger.debug('Pruned reminders', r.removed); }).catch(()=>{});
     // Run light pruning cycle (queue cleanup) on start
     maybeRunPruneCycle().catch(()=>{});
-    
+
     // Initialize background sync system for offline-first reliability
     registerDefaultHandlers();
     initializeBackgroundSync().then(() => {

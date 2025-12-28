@@ -1,11 +1,17 @@
 /**
  * Data Policy Service
  * Manages data retention, privacy policies, and user data controls
- * 
+ *
  * pii-scan-ignore-file - Contains contact email addresses for privacy/policy info
  */
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { fetchWithRetry, getErrorMessage, isNetworkError } from '../utils/network';
+import { logger } from '../utils/logger';
+
+// AsyncStorage key for persisting BYOC config
+const BYOC_CONFIG_KEY = '@byoc_config';
 
 export type DataPolicyMode = 'default' | 'hybrid_byoc' | 'strict_byoc';
 
@@ -64,12 +70,40 @@ export type BYOCConfig = {
 
 let byocConfig: BYOCConfig | null = null;
 
-export function setBYOCConfig(cfg: BYOCConfig | null) {
+export async function setBYOCConfig(cfg: BYOCConfig | null): Promise<void> {
   byocConfig = cfg;
+
+  try {
+    if (cfg) {
+      await AsyncStorage.setItem(BYOC_CONFIG_KEY, JSON.stringify(cfg));
+      logger.log('[BYOC] Config persisted to storage');
+    } else {
+      await AsyncStorage.removeItem(BYOC_CONFIG_KEY);
+      logger.log('[BYOC] Config removed from storage');
+    }
+  } catch (error) {
+    logger.error('[BYOC] Failed to persist config:', error);
+  }
 }
 
 export function getBYOCConfig(): BYOCConfig | null {
   return byocConfig;
+}
+
+/**
+ * Load BYOC configuration from storage
+ * Call this on app startup to restore the session
+ */
+export async function loadBYOCConfig(): Promise<void> {
+  try {
+    const stored = await AsyncStorage.getItem(BYOC_CONFIG_KEY);
+    if (stored) {
+      byocConfig = JSON.parse(stored);
+      logger.log('[BYOC] Config loaded from storage');
+    }
+  } catch (error) {
+    logger.error('[BYOC] Failed to load config:', error);
+  }
 }
 
 /**
