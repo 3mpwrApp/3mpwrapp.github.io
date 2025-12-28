@@ -164,25 +164,40 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       };
     }
 
-    if (result.type !== 'success' || !result.params.code) {
-      logger.log('[GDrive] Auth cancelled or failed:', result.type, result.params);
+    if (result.type !== 'success') {
+      logger.log('[GDrive] Auth cancelled or failed:', result.type);
 
       // Check for redirect URI mismatch error
-      if (result.params?.error === 'redirect_uri_mismatch' ||
-          (result.params?.error_description && result.params.error_description.includes('redirect_uri'))) {
+      if (result.type === 'error' && 'params' in result) {
+        if (result.params?.error === 'redirect_uri_mismatch' ||
+            (result.params?.error_description && result.params.error_description.includes('redirect_uri'))) {
+          return {
+            success: false,
+            error: `Authorization blocked: The redirect URI (${redirectUri}) is not registered in your Google Cloud Console. Please add it to your OAuth 2.0 Client ID's authorized redirect URIs.`
+          };
+        }
+
+        // Provide detailed error message
+        const errorDetails = result.params?.error_description || result.params?.error || result.type;
         return {
           success: false,
-          error: `Authorization blocked: The redirect URI (${redirectUri}) is not registered in your Google Cloud Console. Please add it to your OAuth 2.0 Client ID's authorized redirect URIs.`
+          error: `Authentication failed: ${errorDetails}\n\nError type: ${result.params?.error || result.type}\nRedirect URI used: ${redirectUri}`
         };
       }
 
-      // Provide detailed error message
-      const errorDetails = result.params?.error_description || result.params?.error || result.type;
       return {
         success: false,
         error: result.type === 'cancel'
           ? 'Authentication cancelled'
-          : `Authentication failed: ${errorDetails}\n\nError type: ${result.params?.error || result.type}\nRedirect URI used: ${redirectUri}`
+          : `Authentication failed: ${result.type}`
+      };
+    }
+
+    // Type guard: at this point we know result.type === 'success'
+    if (!('params' in result) || !result.params.code) {
+      return {
+        success: false,
+        error: 'Authentication succeeded but no authorization code received'
       };
     }
 

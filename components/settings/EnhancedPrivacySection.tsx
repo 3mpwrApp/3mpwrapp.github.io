@@ -8,7 +8,7 @@ import DataOwnershipStatement from '../../components/DataOwnershipStatement';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
 import { useTranslation } from '../../i18n';
 import { clearAllData, exportBackup, importBackup } from '../../services/backup';
-import { isCloudConsentEnabled, setCloudConsent, setTelemetryConsent } from '../../services/consent';
+import { setTelemetryConsent } from '../../services/consent';
 import { getBYOCConfig, isStrictBYOC, setBYOCConfig, testBYOCConnection } from '../../services/dataPolicy';
 import { runRetentionSweep } from '../../services/retention';
 import { usePrivacy } from '../../store/privacy';
@@ -16,8 +16,6 @@ import { useSettings } from '../../store/settings';
 import { useTextScale } from '../../theme/typography';
 import { useAppPalette } from '../../theme/usePalette';
 import GapView from '../GapView';
-
-import BYOCCloudProviderSection, { type CloudProviderType } from './BYOCCloudProviderSection';
 
 function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number = 1) {
   return StyleSheet.create({
@@ -46,123 +44,6 @@ export default function EnhancedPrivacySection() {
   const { t } = useTranslation();
   const { state, setPasscode, setLockWellness, setErrorReportingEnabled } = usePrivacy();
   const { requirePasscodeOnLaunch, setRequirePasscodeOnLaunch, autoLockTimeout, setAutoLockTimeout, analyticsOptOut, setAnalyticsOptOut, saveSearchHistory, setSaveSearchHistory } = useSettings();
-  const [cloudOn, setCloudOn] = React.useState<boolean>(isCloudConsentEnabled());
-  const [cloudProvider, setCloudProvider] = React.useState<CloudProviderType>('firebase');
-  const [showProviderModal, setShowProviderModal] = React.useState(false);
-  
-  React.useEffect(() => {
-    // Load saved cloud provider preference
-    const loadProvider = async () => {
-      try {
-        const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
-        const saved = await AsyncStorage.getItem('empowr.cloud.provider');
-        if (saved === 'webdav' || saved === 'firebase' || saved === 'gdrive' || saved === 'icloud' || saved === 'dropbox' || saved === 'onedrive' || saved === 'none') {
-          setCloudProvider(saved);
-        }
-      } catch {}
-    };
-    loadProvider();
-  }, []);
-  
-  const handleCloudToggle = async (enabled: boolean) => {
-    if (enabled) {
-      // Show provider selection modal when enabling cloud
-      setShowProviderModal(true);
-    } else {
-      // Disable cloud features
-      setCloudOn(false);
-      try { 
-        setCloudConsent(false); 
-        // Also disconnect Google Drive if connected
-        const { disconnectGDrive } = await import('../../services/gdrive');
-        disconnectGDrive();
-      } catch {}
-    }
-  };
-  
-  const handleCloudProviderChange = async (provider: 'firebase' | 'webdav' | 'gdrive' | 'icloud' | 'dropbox' | 'onedrive' | 'none') => {
-    // Check if provider is coming soon (NOT Google Drive anymore!)
-    if (provider === 'icloud' || provider === 'dropbox' || provider === 'onedrive') {
-      Alert.alert(
-        'Coming Soon!',
-        `${provider === 'icloud' ? 'iCloud' : provider === 'dropbox' ? 'Dropbox' : 'OneDrive'} integration is coming in a future update.\n\nFor now, you can use:\n• Google Drive (your own account)\n• Firebase (your own project)\n• WebDAV (Nextcloud, ownCloud, etc.)\n• Local Only (no cloud)`,
-        [{ text: 'OK' }]
-      );
-      return;
-    }
-    
-    // Handle Google Drive authentication
-    if (provider === 'gdrive') {
-      try {
-        const { authenticateGDrive, isGDriveConfigured } = await import('../../services/gdrive');
-        
-        if (isGDriveConfigured()) {
-          // Already connected
-          setCloudProvider(provider);
-          const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
-          await AsyncStorage.setItem('empowr.cloud.provider', provider);
-          Alert.alert('Connected', 'Google Drive is already connected.');
-          return;
-        }
-        
-        // Start authentication
-        Alert.alert(
-          'Connect Google Drive',
-          'You will be redirected to sign in with your Google account. Your data will be stored in YOUR Google Drive, in a folder called "3mpwr_App_Data".',
-          [
-            { text: 'Cancel', style: 'cancel' },
-            { 
-              text: 'Connect', 
-              onPress: async () => {
-                const result = await authenticateGDrive();
-                if (result.success) {
-                  setCloudProvider('gdrive');
-                  const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
-                  await AsyncStorage.setItem('empowr.cloud.provider', 'gdrive');
-                  Alert.alert('Success!', 'Google Drive connected. Your data will be stored in your own Drive.');
-                } else {
-                  Alert.alert('Connection Failed', result.error || 'Could not connect to Google Drive. Please try again.');
-                }
-              }
-            }
-          ]
-        );
-        return;
-      } catch (error: any) {
-        Alert.alert('Error', error?.message || 'Could not connect to Google Drive.');
-        return;
-      }
-    }
-    
-    setCloudProvider(provider);
-    try {
-      const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
-      await AsyncStorage.setItem('empowr.cloud.provider', provider);
-      
-      // Don't auto-disable cloud features - let user choose provider freely
-      // Cloud consent stays enabled, provider determines storage location
-    } catch {}
-  };
-  
-  const selectProviderAndEnable = async (provider: 'firebase' | 'webdav' | 'gdrive' | 'icloud' | 'dropbox' | 'onedrive' | 'none') => {
-    // Check if provider is coming soon (NOT Google Drive anymore!)
-    if (provider === 'icloud' || provider === 'dropbox' || provider === 'onedrive') {
-      Alert.alert(
-        'Coming Soon!',
-        `${provider === 'icloud' ? 'iCloud' : provider === 'dropbox' ? 'Dropbox' : 'OneDrive'} integration is coming in a future update.\n\nFor now, you can use:\n• Google Drive (your own account)\n• Firebase (your own project)\n• WebDAV (Nextcloud, ownCloud, etc.)\n• Local Only (no cloud)`,
-        [{ text: 'OK' }]
-      );
-      return;
-    }
-    await handleCloudProviderChange(provider);
-    setShowProviderModal(false);
-    
-    // Always enable cloud features (even for 'none' - just local storage)
-    setCloudOn(true);
-    try { 
-      setCloudConsent(true); 
-    } catch {}
-  };
   
   const onExport = async () => {
      const bundle = await exportBackup();
@@ -329,7 +210,7 @@ export default function EnhancedPrivacySection() {
       <AccessibilityToggle title='Save Search History' description='Remember your searches for quick access and autocomplete' value={saveSearchHistory} onValueChange={setSaveSearchHistory} icon='search' testID='search-history-toggle' />
       <View style={s.backupSection}>
         <Text style={s.sectionSubtitle} accessibilityRole='header'>Data Management</Text>
-        {(strict || cloudProvider === 'webdav') && (
+        {strict && (
           <View style={{ marginBottom:16 }}>
             <Text style={[s.description, { marginBottom:8 }]}>
               {strict 
