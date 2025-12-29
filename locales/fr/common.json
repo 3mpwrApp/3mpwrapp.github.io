@@ -2281,6 +2281,70 @@
     "suggestions": " bodyMechanics.suggestions",
     "noSuggestionsYet": " bodyMechanics.noSuggestionsYet"
   },
+  "collective": {
+    "loading": "Chargement des informations collectives...",
+    "title": "Preuves Collectives",
+    "subtitle": "Force dans le nombre, solidarité dans les modèles",
+    "yourContributions": "Vos Contributions",
+    "evidenceShared": "Preuves Partagées",
+    "lastShared": "Dernier Partage",
+    "optOut": "Se Désinscrire et Supprimer Mes Données",
+    "optIn": {
+      "title": "Vous Construisez Quelque Chose de Puissant",
+      "subtitle": "{{count}} notes de preuves enregistrées",
+      "privacy1": "Noms, dates et lieux supprimés",
+      "privacy2": "Affiché uniquement lorsque 50+ utilisateurs contribuent",
+      "privacy3": "Désinscription à tout moment et suppression de vos données",
+      "joinButton": "Oui, je participe",
+      "joinHint": "Rejoindre le coffre-fort de preuves collectives",
+      "learnMore": "En Savoir Plus",
+      "notNow": "Pas Maintenant"
+    },
+    "privacy": {
+      "title": "Comment Fonctionnent les Preuves Collectives",
+      "close": "Fermer",
+      "visionTitle": "La Vision",
+      "visionText": "Imaginez si les compagnies d'assurance ne pouvaient pas rejeter votre refus comme un cas isolé. Imaginez montrer à un décideur : \"Vous ne me refusez pas seulement—vous faites partie d'un modèle affectant des centaines.\" C'est le pouvoir des preuves collectives.",
+      "principlesTitle": "Principes de Confidentialité d'Abord",
+      "principle1Title": "Suppression des DPI",
+      "principle1Text": "Les noms, dates, lieux et identifiants sont automatiquement supprimés. Nous conservons uniquement les thèmes et catégories.",
+      "principle2Title": "Seuil de 50 Utilisateurs",
+      "principle2Text": "Les modèles n'apparaissent que lorsque 50+ utilisateurs contribuent. Pas de petits ensembles de données = aucun risque de ré-identification.",
+      "principle3Title": "Désinscription Facile",
+      "principle3Text": "Un simple toucher pour se désinscrire et supprimer toutes vos contributions. Aucune question posée, aucune donnée conservée.",
+      "exampleTitle": "Exemple : Avant et Après",
+      "beforeLabel": "AVANT (Vos Notes Privées)",
+      "beforeText": "\"Le 15 mars, mon médecin à l'Hôpital Général de Vancouver a soumis une autorisation préalable pour Humira. Refusée le 2 avril car 'pas de nécessité médicale.' J'habite au 123 rue Principale, contact : jane.doe@email.com\"",
+      "afterLabel": "APRÈS (Contribution Anonymisée)",
+      "afterText": "Région : Sud-Ouest\nCondition : Inflammatoire chronique\nRaison du refus : Nécessité médicale\nDélai : ~18 jours\nAssurance : Publique\nThèmes : autorisation-préalable, produits biologiques",
+      "sharedTitle": "Ce Qui Est Partagé",
+      "shared1": "Raisons de refus (catégories, pas de détails)",
+      "shared2": "Catégories générales de conditions (p. ex., \"douleur chronique\")",
+      "shared3": "Régions larges (p. ex., \"Sud-Ouest\", pas de villes)",
+      "shared4": "Délais (jours/semaines, pas de dates exactes)",
+      "shared5": "Types d'assurance (public/privé, pas de noms de compagnies)",
+      "joinButton": "Oui, je participe"
+    },
+    "pattern": {
+      "tapHint": "Appuyez deux fois pour plus de détails"
+    },
+    "patterns": {
+      "title": "Modèles Détectés",
+      "subtitle": "Basé sur {{count}} contributions",
+      "none": "Aucun modèle clair détecté pour l'instant. Continuez à contribuer!"
+    },
+    "belowThreshold": {
+      "title": "Construction de Notre Base de Données",
+      "message": "Nous avons besoin d'au moins 50 utilisateurs pour partager des informations en toute sécurité. Vous aidez à construire quelque chose de puissant!",
+      "cta": "Partagez 3MPWR avec d'autres pour débloquer plus rapidement les informations collectives!"
+    },
+    "optOutConfirm": {
+      "title": "Se Désinscrire des Preuves Collectives?",
+      "message": "Cela supprimera toutes vos contributions anonymisées du coffre-fort collectif. Vos preuves privées restent intactes.",
+      "confirm": "Oui, Se Désinscrire",
+      "cancel": "Annuler"
+    }
+  },
   "mood": {
     "title": "Mood Tracker",
     "subtitle": "Log how you feel to spot trends.",

@@ -3579,6 +3579,70 @@
       "testing": "Pruebas"
     }
   },
+  "collective": {
+    "loading": "Cargando información colectiva...",
+    "title": "Evidencia Colectiva",
+    "subtitle": "Fuerza en números, solidaridad en patrones",
+    "yourContributions": "Tus Contribuciones",
+    "evidenceShared": "Evidencia Compartida",
+    "lastShared": "Último Compartido",
+    "optOut": "Optar por Salir y Eliminar Mis Datos",
+    "optIn": {
+      "title": "Estás Construyendo Algo Poderoso",
+      "subtitle": "{{count}} notas de evidencia guardadas",
+      "privacy1": "Nombres, fechas y ubicaciones eliminados",
+      "privacy2": "Solo se muestra cuando 50+ usuarios contribuyen",
+      "privacy3": "Optar por salir en cualquier momento y eliminar tus datos",
+      "joinButton": "Sí, Cuenten Conmigo",
+      "joinHint": "Únete a la bóveda de evidencia colectiva",
+      "learnMore": "Más Información",
+      "notNow": "Ahora No"
+    },
+    "privacy": {
+      "title": "Cómo Funciona la Evidencia Colectiva",
+      "close": "Cerrar",
+      "visionTitle": "La Visión",
+      "visionText": "Imagina si las compañías de seguros no pudieran desestimar tu denegación como un caso aislado. Imagina mostrar a un tomador de decisiones: \"No solo me estás negando a mí—eres parte de un patrón que afecta a cientos.\" Ese es el poder de la evidencia colectiva.",
+      "principlesTitle": "Principios de Privacidad Primero",
+      "principle1Title": "Eliminación de DPI",
+      "principle1Text": "Los nombres, fechas, ubicaciones e identificadores se eliminan automáticamente. Solo conservamos temas y categorías.",
+      "principle2Title": "Umbral de 50 Usuarios",
+      "principle2Text": "Los patrones solo aparecen cuando 50+ usuarios contribuyen. Sin conjuntos de datos pequeños = sin riesgo de re-identificación.",
+      "principle3Title": "Optar por Salir Fácilmente",
+      "principle3Text": "Un toque para optar por salir y eliminar todas tus contribuciones. Sin preguntas, sin datos retenidos.",
+      "exampleTitle": "Ejemplo: Antes y Después",
+      "beforeLabel": "ANTES (Tus Notas Privadas)",
+      "beforeText": "\"El 15 de marzo, mi médico en el Hospital General de Vancouver presentó autorización previa para Humira. Denegada el 2 de abril porque 'no es necesidad médica.' Vivo en 123 Calle Principal, contacto: jane.doe@email.com\"",
+      "afterLabel": "DESPUÉS (Contribución Anonimizada)",
+      "afterText": "Región: Suroeste\nCondición: Inflamatoria crónica\nRazón de denegación: Necesidad médica\nTiempo: ~18 días\nSeguro: Público\nTemas: autorización-previa, biológicos",
+      "sharedTitle": "Qué Se Comparte",
+      "shared1": "Razones de denegación (categorías, no detalles)",
+      "shared2": "Categorías generales de condiciones (ej., \"dolor crónico\")",
+      "shared3": "Regiones amplias (ej., \"Suroeste\", no ciudades)",
+      "shared4": "Retrasos en el tiempo (días/semanas, no fechas exactas)",
+      "shared5": "Tipos de seguro (público/privado, no nombres de compañías)",
+      "joinButton": "Sí, Cuenten Conmigo"
+    },
+    "pattern": {
+      "tapHint": "Toca dos veces para más detalles"
+    },
+    "patterns": {
+      "title": "Patrones Detectados",
+      "subtitle": "Basado en {{count}} contribuciones",
+      "none": "No se han detectado patrones claros todavía. ¡Sigue contribuyendo!"
+    },
+    "belowThreshold": {
+      "title": "Construyendo Nuestra Base de Datos",
+      "message": "Necesitamos al menos 50 usuarios para compartir información de forma segura. ¡Estás ayudando a construir algo poderoso!",
+      "cta": "¡Comparte 3MPWR con otros para desbloquear información colectiva más rápido!"
+    },
+    "optOutConfirm": {
+      "title": "¿Optar por Salir de la Evidencia Colectiva?",
+      "message": "Esto eliminará todas tus contribuciones anonimizadas de la bóveda colectiva. Tu evidencia privada permanece intacta.",
+      "confirm": "Sí, Optar por Salir",
+      "cancel": "Cancelar"
+    }
+  },
   "disclaimer": {
     "title": "Important Disclaimer",
     "general": "⚠️ DISCLAIMER: This app provides general information and support tools. It does not replace professional advice (medical, legal, financial, or otherwise). Users are solely responsible for their decisions and actions. The app developer assumes no liability for outcomes resulting from app use. See Terms of Service for complete legal protections.",

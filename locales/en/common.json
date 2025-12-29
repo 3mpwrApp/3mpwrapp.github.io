@@ -883,10 +883,59 @@
     "title": "Welcome to 3mpwr App",
     "subtitle": "Support. Advocacy. Empowerment.",
     "welcome": "Welcome! This is your hub for community, education, advocacy tools, and podcasts — all in one place!",
-    "announcement": "Home screen loaded. Beta features available.",
+    "announcement": "Home screen loaded. Evidence-first design.",
     "screenLabel": "Home screen",
     "personalization": {
       "note": "Suggestions powered by the Personalization Engine (beta)."
+    },
+    "hero": {
+      "title": "Document What Happened",
+      "subtitle": "Save evidence in your own words",
+      "label": "Document what happened - Add evidence",
+      "hint": "Navigate to Evidence Command Center"
+    },
+    "evidence": {
+      "title": "Evidence Timeline",
+      "section": "Evidence timeline section",
+      "empty": "Get started - save your first note",
+      "building": "Building your case - add 2-3 more for strength",
+      "strong": "Strong case! Ready to generate letters?",
+      "recent": "Recent Evidence",
+      "viewAll": "View All Evidence",
+      "viewHint": "Double tap to view all evidence",
+      "viewAllHint": "Navigate to Evidence Command Center",
+      "loading": "Loading evidence...",
+      "justNow": "Just now",
+      "minsAgo": "{{count}} min ago",
+      "hoursAgo": "{{count}}h ago",
+      "daysAgo": "{{count}}d ago"
+    },
+    "nextAction": {
+      "badge": "NEXT STEP",
+      "hint": "Double tap to continue",
+      "firstEvidence": {
+        "title": "Start collecting evidence",
+        "subtitle": "Document what happened in your own words",
+        "cta": "Add First Note"
+      },
+      "moreEvidence": {
+        "title": "Keep building your case",
+        "subtitle": "Add 2-3 more notes for a strong foundation",
+        "cta": "Add More Evidence"
+      },
+      "generateLetter": {
+        "title": "Generate your first letter",
+        "subtitle": "Turn your evidence into a professional appeal",
+        "cta": "Generate Letter"
+      }
+    },
+    "quickAction": {
+      "search": "Search",
+      "ask": "Ask AI",
+      "first7": "First 7"
+    },
+    "footer": {
+      "note": "Evidence-first design. Your notes are private and encrypted."
     },
     "guide": {
       "moodSummary": "Mood 7d avg: {{avg}} • Today entries: {{count}}",
@@ -909,6 +958,70 @@
         "hint": "Opens the beta testers community chat",
         "section": "Beta testers section"
       }
+    }
+  },
+  "collective": {
+    "loading": "Loading collective insights...",
+    "title": "Collective Evidence",
+    "subtitle": "Strength in numbers, patterns in solidarity",
+    "yourContributions": "Your Contributions",
+    "evidenceShared": "Evidence Shared",
+    "lastShared": "Last Shared",
+    "optOut": "Opt Out & Delete My Data",
+    "optIn": {
+      "title": "You're Building Something Powerful",
+      "subtitle": "{{count}} evidence notes saved",
+      "privacy1": "Names, dates & locations removed",
+      "privacy2": "Only shown when 50+ users contribute",
+      "privacy3": "Opt out anytime & delete your data",
+      "joinButton": "Yes, Count Me In",
+      "joinHint": "Join the collective evidence vault",
+      "learnMore": "Learn More",
+      "notNow": "Not Now"
+    },
+    "privacy": {
+      "title": "How Collective Evidence Works",
+      "close": "Close",
+      "visionTitle": "The Vision",
+      "visionText": "Imagine if insurance companies couldn't dismiss your denial as a one-off. Imagine showing a decision-maker: \"You're not just denying me—you're part of a pattern affecting hundreds.\" That's the power of collective evidence.",
+      "principlesTitle": "Privacy-First Principles",
+      "principle1Title": "PII Removal",
+      "principle1Text": "Names, dates, locations, and identifiers are automatically stripped. We only keep themes and categories.",
+      "principle2Title": "50-User Threshold",
+      "principle2Text": "Patterns only appear when 50+ users contribute. No small datasets = no re-identification risk.",
+      "principle3Title": "Easy Opt-Out",
+      "principle3Text": "One tap to opt out & delete all your contributions. No questions asked, no data retained.",
+      "exampleTitle": "Example: Before & After",
+      "beforeLabel": "BEFORE (Your Private Notes)",
+      "beforeText": "\"On March 15, my doctor at Vancouver General submitted prior auth for Humira. Denied April 2 because 'not medical necessity.' I live at 123 Main St, contact is jane.doe@email.com\"",
+      "afterLabel": "AFTER (Anonymized Contribution)",
+      "afterText": "Region: Southwest\nCondition: Chronic inflammatory\nDenial reason: Medical necessity\nTimeline: ~18 days\nInsurance: Public\nThemes: prior-auth, biologics",
+      "sharedTitle": "What Gets Shared",
+      "shared1": "Denial reasons (categories, not specifics)",
+      "shared2": "General condition categories (e.g., \"chronic pain\")",
+      "shared3": "Broad regions (e.g., \"Southwest\", not cities)",
+      "shared4": "Timeline delays (days/weeks, not exact dates)",
+      "shared5": "Insurance types (public/private, not company names)",
+      "joinButton": "Yes, Count Me In"
+    },
+    "pattern": {
+      "tapHint": "Double tap for more details"
+    },
+    "patterns": {
+      "title": "Detected Patterns",
+      "subtitle": "Based on {{count}} contributions",
+      "none": "No clear patterns detected yet. Keep contributing!"
+    },
+    "belowThreshold": {
+      "title": "Building Our Database",
+      "message": "We need at least 50 users to share insights safely. You're helping build something powerful!",
+      "cta": "Share 3MPWR with others to unlock collective insights faster!"
+    },
+    "optOutConfirm": {
+      "title": "Opt Out of Collective Evidence?",
+      "message": "This will delete all your anonymized contributions from the collective vault. Your private evidence remains untouched.",
+      "confirm": "Yes, Opt Out",
+      "cancel": "Cancel"
     }
   },
   "mood": {
