@@ -126,11 +126,14 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     };
 
     // Use platform-specific redirect URI
-    // Web: Use AuthSession.makeRedirectUri() which returns the current web URL
-    // Mobile: Use our custom domain that deep links back to the app
-    const redirectUri = Platform.OS === 'web'
-      ? AuthSession.makeRedirectUri({ path: 'gdrive-callback' })
-      : 'https://3mpwrapp.pages.dev/auth/google-callback';
+    // For all platforms, use AuthSession.makeRedirectUri which handles:
+    // - Web: Returns the current web URL with the callback path
+    // - Native/Preview: Returns the proper deep link URI based on app config
+    const redirectUri = AuthSession.makeRedirectUri({
+      // Use 'native' for preview builds to ensure proper deep linking
+      scheme: Platform.OS === 'web' ? undefined : 'exp',
+      path: 'gdrive-callback'
+    });
 
     logger.log('[GDrive] Platform:', Platform.OS);
     logger.log('[GDrive] Client ID:', clientId);
