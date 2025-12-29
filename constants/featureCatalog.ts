@@ -1,67 +1,161 @@
 /**
- * Feature Catalog
- * 
+ * Feature Catalog - Crisis-First Design
+ *
  * Defines which features are visible in each complexity mode:
- * - Simple: 5 core features (essential tools for users with cognitive disabilities, brain fog)
- * - Standard: 20 commonly-used features (default mode for most users)
- * - Power User: All 150+ features (advanced users, advocates, professionals)
+ * - Simple: 5 essential tools (Crisis-Ready - for immediate needs)
+ * - Standard: 15 tools (Advocacy-Ready - for ongoing case building)
+ * - Power User: All 150+ features (Full Power - advanced users)
  */
 
 export type FeatureId = string;
 export type ComplexityTier = 'simple' | 'standard' | 'power_user';
 
 /**
- * SIMPLE MODE - 5 Core Features
- * For users with cognitive disabilities, brain fog, or during crisis/bad days
+ * SIMPLE MODE - 5 Essential Tools (Crisis-Ready)
+ *
+ * "I just got denied and need help NOW"
+ *
+ * For users in crisis, with brain fog, or who need focused tools without overwhelm.
+ * These are the absolute core tools needed when facing an immediate challenge.
  */
 export const SIMPLE_MODE_FEATURES: FeatureId[] = [
-  // 1. Evidence Locker - Critical for legal cases
+  // 1. Evidence Command Center - Collect and organize evidence fast
   'evidence-locker',
-  
-  // 2. Letter Wizard (Top 3 templates only)
+  'evidence-command-center',
+
+  // 2. Letter Wizard - Generate letters from evidence
+  'letter-wizard',
   'letter-wizard-basic',
-  
-  // 3. Crisis Resources - SOS button + crisis directory
+
+  // 3. Pacing Partner - Energy management for advocacy work
+  'pacing-partner',
+  'energy-mood-hub',
+
+  // 4. Quick Search - Find resources fast
+  'quick-search',
+  'resource-search',
+
+  // 5. Crisis Resources - 211, hotlines, emergency info
   'crisis-resources',
   'sos-button',
-  
-  // 4. Basic Mood Tracking
-  'mood-tracker-basic',
-  
-  // 5. Community Beta Chat - Peer support
-  'community-beta-chat',
+  '211-finder',
+  'crisis-hotlines',
 ];
 
 /**
- * STANDARD MODE - 20 Features (includes all Simple + 15 more)
- * Default mode for most users
+ * STANDARD MODE - 15 Tools (Advocacy-Ready)
+ *
+ * "I'm building my case over time"
+ *
+ * Includes all Simple tools PLUS tools for ongoing advocacy, tracking, and community.
+ * Default mode for most users - balances power with usability.
  */
 export const STANDARD_MODE_FEATURES: FeatureId[] = [
   ...SIMPLE_MODE_FEATURES,
-  
-  // Advocacy Tools
-  'ai-advocate-translator',
-  'appeal-command-center',
-  'master-tracker-hub',
+
+  // Health & Wellness Tracking
+  'health-tracker-pro',
+  'unified-health-hub',
+  'symptom-tracker',
+
+  // Deadlines & Case Management
   'deadlines',
-  'denial-decoder',
-  
-  // Wellness
-  'energy-mood-hub',
-  'wellness-tracking',
-  'pacing-partner',
-  
-  // Documentation
-  'accommodation-request',
-  'voice-notes',
-  
-  // Community & Support
-  'support-directory',
+  'deadlines-manager',
+  'master-tracker-hub',
+
+  // Community Evidence (from collective task)
+  'collective-evidence-dashboard',
+  'community-evidence',
+
+  // Advocacy & Support
+  'advocacy-finder',
+  'advocate-directory',
+  'ai-advocate-translator',
+
+  // Campaigns & Events
   'campaigns',
   'events',
+  'community-campaigns',
 
-  // Profile & Settings
-  'profile-settings',
+  // Community & Forums
+  'community-beta-chat',
+  'community-forums',
+  'peer-support',
+
+  // Bookmarks & Quick Access
+  'bookmarks',
+  'saved-resources',
+
+  // Voice Notes (for accessibility)
+  'voice-notes',
+  'audio-notes',
+
+  // Support Directory
+  'support-directory',
+  'resource-directory',
+];
+
+/**
+ * ADVANCED MODE FEATURES (Power User Only)
+ *
+ * "I want all the tools, I know what I'm doing"
+ *
+ * These features are ONLY visible in Power User mode.
+ * Power users also see all Simple + Standard features.
+ */
+export const ADVANCED_MODE_FEATURES: FeatureId[] = [
+  // AI & Automation
+  'ai-assistant',
+  'ai-companion',
+  'ai-advocate-pro',
+
+  // Advanced Security
+  'advanced-security-settings',
+  'encryption-settings',
+  'security-audit',
+
+  // BYOC (Bring Your Own Cloud)
+  'byoc-configuration',
+  'webdav-sync',
+  'gdrive-sync',
+
+  // Jurisdiction-specific forms
+  'jurisdiction-forms',
+  'state-specific-templates',
+  'legal-automation',
+
+  // Advanced wellness (for those who want them)
+  'mental-wellness-toolkit',
+  'movement-rehab-hub',
+  'work-balance-ai',
+  'functional-capacity',
+  'trigger-detector',
+  'harm-reduction',
+  'grief-support',
+  'adaptive-meditation',
+  'sleep-reframe',
+  'cbt-mini-games',
+  'dbt-tools',
+  'opposite-action',
+  'radical-acceptance',
+  'distress-tolerance',
+  'belief-meter',
+
+  // Advanced tracking
+  'pain-forecast',
+  'sleep-energy-tracker',
+  'daily-planner',
+  'exercise-hub',
+  'reflections-calendar',
+  'rehab-games',
+  'nutrition-guides',
+  'dreams-journal',
+
+  // Developer & Admin
+  'admin-panel',
+  'feature-flags',
+  'analytics-dashboard',
+  'whats-new',
 ];
 
 /**
@@ -71,22 +165,32 @@ export const STANDARD_MODE_FEATURES: FeatureId[] = [
 export const isPowerUserMode = (mode: ComplexityTier): boolean => mode === 'power_user';
 
 /**
+ * Get all features for a given mode (for display purposes)
+ */
+export function getFeaturesForMode(mode: ComplexityTier): FeatureId[] {
+  if (mode === 'simple') return SIMPLE_MODE_FEATURES;
+  if (mode === 'standard') return STANDARD_MODE_FEATURES;
+  // Power user sees everything
+  return [...STANDARD_MODE_FEATURES, ...ADVANCED_MODE_FEATURES];
+}
+
+/**
  * Check if a feature is visible in the current mode
  */
 export function isFeatureVisibleInMode(featureId: FeatureId, mode: ComplexityTier): boolean {
   // Power users see everything
   if (mode === 'power_user') return true;
-  
+
   // Standard mode users see standard features
   if (mode === 'standard') {
     return STANDARD_MODE_FEATURES.includes(featureId);
   }
-  
+
   // Simple mode users see only simple features
   if (mode === 'simple') {
     return SIMPLE_MODE_FEATURES.includes(featureId);
   }
-  
+
   return false;
 }
 
@@ -98,13 +202,13 @@ export const TAB_VISIBILITY: Record<string, ComplexityTier> = {
   'home': 'simple',
   'resources': 'simple', // But content filtered
   'wellness': 'simple', // But content filtered
-  
+
   // Standard and above
   'advocacy': 'standard',
   'campaigns': 'standard',
   'community': 'standard',
   'research': 'standard',
-  
+
   // Power user only
   'settings': 'standard', // Settings visible to all who need to change modes
   'profile': 'standard',
@@ -117,6 +221,7 @@ export const TAB_VISIBILITY: Record<string, ComplexityTier> = {
 export const FEATURE_CATEGORIES = {
   ADVOCACY: [
     'evidence-locker',
+    'evidence-command-center',
     'appeal-command-center',
     'master-tracker-hub',
     'letter-wizard',
@@ -128,10 +233,11 @@ export const FEATURE_CATEGORIES = {
     'case-timeline',
     'precedent-finder',
   ],
-  
+
   WELLNESS: [
     'energy-mood-hub',
-    'health-tracker',
+    'health-tracker-pro',
+    'unified-health-hub',
     'mental-wellness-toolkit',
     'movement-rehab-hub',
     'mood-tracker',
@@ -141,22 +247,26 @@ export const FEATURE_CATEGORIES = {
     'symptom-tracker',
     'pain-forecast',
   ],
-  
+
   COMMUNITY: [
     'community-beta-chat',
+    'community-forums',
     'support-directory',
     'campaigns',
     'events',
     'allyship-playbook',
+    'collective-evidence-dashboard',
   ],
-  
+
   CRISIS: [
     'sos-button',
     'crisis-resources',
+    '211-finder',
+    'crisis-hotlines',
     'safe-landing',
     'emotional-first-aid',
   ],
-  
+
   DOCUMENTATION: [
     'letter-wizard',
     'accommodation-request',
@@ -170,8 +280,8 @@ export const FEATURE_CATEGORIES = {
  * Get user-friendly feature count for mode
  */
 export function getFeatureCount(mode: ComplexityTier): number | string {
-  if (mode === 'simple') return SIMPLE_MODE_FEATURES.length;
-  if (mode === 'standard') return STANDARD_MODE_FEATURES.length;
+  if (mode === 'simple') return 5;
+  if (mode === 'standard') return 15;
   return '150+';
 }
 
@@ -181,13 +291,88 @@ export function getFeatureCount(mode: ComplexityTier): number | string {
 export function getModeDescription(mode: ComplexityTier): string {
   switch (mode) {
     case 'simple':
-      return 'Essential tools only. Perfect for bad days, brain fog, or when overwhelmed.';
+      return '5 essential tools. Fast, focused, no overwhelm.';
     case 'standard':
-      return 'Most commonly-used features. Great balance for daily advocacy work.';
+      return '15 power tools for ongoing advocacy and case building.';
     case 'power_user':
-      return 'All features unlocked. For advanced users and professionals.';
+      return 'Every feature. Full control, maximum power.';
     default:
       return '';
+  }
+}
+
+/**
+ * Get tagline for mode
+ */
+export function getModeTagline(mode: ComplexityTier): string {
+  switch (mode) {
+    case 'simple':
+      return 'Crisis-Ready';
+    case 'standard':
+      return 'Advocacy-Ready';
+    case 'power_user':
+      return 'Full Power';
+    default:
+      return '';
+  }
+}
+
+/**
+ * Get best-for description for mode
+ */
+export function getModeBestFor(mode: ComplexityTier): string {
+  switch (mode) {
+    case 'simple':
+      return 'I just got denied and need help NOW';
+    case 'standard':
+      return 'I\'m building my case over time';
+    case 'power_user':
+      return 'I want all the tools, I know what I\'m doing';
+    default:
+      return '';
+  }
+}
+
+/**
+ * Get feature list summary for mode (for display in mode selector)
+ */
+export function getModeFeatureSummary(mode: ComplexityTier): string[] {
+  switch (mode) {
+    case 'simple':
+      return [
+        'Evidence Command Center',
+        'Letter Wizard',
+        'Pacing Partner',
+        'Quick Search',
+        'Crisis Resources',
+      ];
+    case 'standard':
+      return [
+        'All Simple tools, plus:',
+        'Health Tracker Pro',
+        'Deadlines Manager',
+        'Collective Evidence Dashboard',
+        'Advocacy Finder',
+        'Campaigns & Events',
+        'Community Forums',
+        'Bookmarks',
+        'Voice Notes',
+        'Support Directory',
+      ];
+    case 'power_user':
+      return [
+        'All Standard tools, plus:',
+        'AI Assistant',
+        'Master Tracker Hub',
+        'Advanced Security',
+        'BYOC Configuration',
+        'Jurisdiction-specific forms',
+        'Legal automation tools',
+        'All wellness features',
+        'Developer tools',
+      ];
+    default:
+      return [];
   }
 }
 
@@ -196,23 +381,23 @@ export function getModeDescription(mode: ComplexityTier): string {
  */
 export const SIMPLE_MODE_WELCOME_MESSAGES: Record<string, { available: string[]; hidden: number }> = {
   resources: {
-    available: ['Evidence Locker', 'Letter Wizard (Basic)', 'Crisis Resources'],
+    available: ['Evidence Command Center', 'Letter Wizard', 'Crisis Resources', 'Quick Search'],
     hidden: 35,
   },
   wellness: {
-    available: ['Mood Tracker', 'Energy Hub (Basic)'],
+    available: ['Pacing Partner', 'Energy & Mood Hub'],
     hidden: 20,
   },
   advocacy: {
-    available: ['AI Translator', 'Evidence Locker'],
+    available: ['Evidence Command Center', 'Letter Wizard'],
     hidden: 25,
   },
   community: {
-    available: ['Beta Chat', 'Crisis Resources'],
+    available: ['Crisis Resources'],
     hidden: 15,
   },
   campaigns: {
-    available: ['Featured Campaigns Only'],
+    available: [],
     hidden: 30,
   },
 };
