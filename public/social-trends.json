@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-28T18:02:51.436Z",
+  "lastUpdated": "2025-12-29T00:07:06.803Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6760,
+      "totalPosts": 6785,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T18:02:42.247Z"
+      "lastSeen": "2025-12-29T00:06:58.089Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6727,
+      "totalPosts": 6750,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T18:02:44.352Z"
+      "lastSeen": "2025-12-29T00:06:59.954Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6658,
-      "recentPosts": 24,
+      "totalPosts": 6683,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T18:02:46.353Z"
+      "lastSeen": "2025-12-29T00:07:01.870Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6766,
+      "totalPosts": 6791,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T18:02:48.425Z"
+      "lastSeen": "2025-12-29T00:07:03.879Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6750,
+      "totalPosts": 6775,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-28T18:02:50.433Z"
+      "lastSeen": "2025-12-29T00:07:05.799Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
-      "author": "phil-brighton.bsky.social",
-      "engagement": 42,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
-      "author": "xirclebox.com",
-      "engagement": 40,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
-      "author": "xirclebox.com",
-      "engagement": 40,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
       "author": "phil-brighton.bsky.social",
@@ -338,16 +302,52 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
+      "author": "phil-brighton.bsky.social",
+      "engagement": 46,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "The Yorkshire Dales Access Hub is a one‑stop online resource designed to make the outdoors more accessible -  helping people with a wide range of disabilities plan their perfect visit to the National Park. \n\n👉 https://accesshub.yorkshiredales.org.uk/\n\n📷 Andy Kay | #YorkshireDales #Accessibility",
+      "author": "yorkshiredales.org.uk",
+      "engagement": 15,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "On touchscreens and UI controls acuity.design/touchscreens... as Wired has article about car controls and buttons. We did a lot of work on this about 10 years ago. #accessibility",
+      "author": "acuity.design",
+      "engagement": 65,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
+      "author": "xirclebox.com",
+      "engagement": 41,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
+      "author": "wentrogue.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 40
+      "count": 39
     },
     {
       "keyword": "accessibility",
-      "count": 34
+      "count": 36
     },
     {
       "keyword": "cripthevote",
@@ -378,12 +378,12 @@
       "count": 12
     },
     {
-      "keyword": "inclusivedesign",
+      "keyword": "digitalaccessibility",
       "count": 11
     },
     {
-      "keyword": "digitalaccessibility",
-      "count": 11
+      "keyword": "inclusivedesign",
+      "count": 10
     },
     {
       "keyword": "disabilityjustice nico",
