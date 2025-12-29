@@ -15,6 +15,7 @@ type AuthContextValue = {
   user: User | null;
   loading: boolean;
   isAdmin: boolean;
+  isSuperAdmin: boolean;
   isGuest: boolean;
   sessionExpired: boolean;
   setSessionExpired: React.Dispatch<React.SetStateAction<boolean>>;
@@ -26,10 +27,14 @@ type AuthContextValue = {
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
+// Super Admin email (founder with god-mode access)
+const SUPER_ADMIN_EMAIL = 'empowrapp08162025@gmail.com';
+
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isSuperAdmin, setIsSuperAdmin] = useState(false);
   const [isGuest, setIsGuest] = useState(false);
   const [sessionExpired, setSessionExpired] = useState(false);
 
@@ -84,20 +89,26 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               }
             }
             
-            // Grant absolute admin access to empowrapp08162025@gmail.com
-            const superAdminEmail = 'empowrapp08162025@gmail.com';
-            const isSuperAdmin = firebaseUser.email === superAdminEmail;
-            
+            // Two-tier admin system:
+            // 1. Super Admin (founder) - God-mode access to everything
+            // 2. General Admin - Delegated permissions via Firebase custom claims
+            const isSuperAdminUser = firebaseUser.email === SUPER_ADMIN_EMAIL;
+            setIsSuperAdmin(isSuperAdminUser);
+
             try {
               const res = await getIdTokenResult(firebaseUser, true);
-              setIsAdmin(isSuperAdmin || Boolean((res.claims as any)?.admin));
-              if (__DEV__) logger.log('[AuthContext] Claims refreshed');
+              // Super Admin OR General Admin (via custom claims)
+              setIsAdmin(isSuperAdminUser || Boolean((res.claims as any)?.admin));
+              if (__DEV__) logger.log('[AuthContext] Claims refreshed', {
+                isSuperAdmin: isSuperAdminUser,
+                hasAdminClaim: Boolean((res.claims as any)?.admin)
+              });
             } catch (error) {
               logger.warn('[AuthContext] Failed to refresh claims', {
                 error: error instanceof Error ? error.message : 'Unknown',
               });
               // Still grant admin if super admin email, even if claims fail
-              setIsAdmin(isSuperAdmin);
+              setIsAdmin(isSuperAdminUser);
 
               // Check if this is a real auth error (401/403) vs network error
               if (error instanceof Error) {
@@ -131,6 +142,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           } else {
             if (__DEV__) logger.log('[AuthContext] No user - signed out');
             setIsAdmin(false);
+            setIsSuperAdmin(false);
             setSessionExpired(false);
           }
         } catch (error) {
@@ -265,6 +277,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         user,
         loading,
         isAdmin,
+        isSuperAdmin,
         isGuest,
         sessionExpired,
         setSessionExpired,

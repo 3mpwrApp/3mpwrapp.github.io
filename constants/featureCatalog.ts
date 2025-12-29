@@ -59,10 +59,9 @@ export const STANDARD_MODE_FEATURES: FeatureId[] = [
   'support-directory',
   'campaigns',
   'events',
-  
+
   // Profile & Settings
   'profile-settings',
-  'self-care-library',
 ];
 
 /**

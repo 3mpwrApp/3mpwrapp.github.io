@@ -15,7 +15,10 @@ const BYOC_CONFIG_KEY = '@byoc_config';
 
 export type DataPolicyMode = 'default' | 'hybrid_byoc' | 'strict_byoc';
 
-const mode: DataPolicyMode = (process.env.EXPO_PUBLIC_DATA_POLICY as DataPolicyMode) || 'hybrid_byoc';
+// STRATEGIC CHANGE: Default to 'default' (local AsyncStorage) instead of 'hybrid_byoc'
+// This removes onboarding complexity - users can enable BYOC later in Settings
+// Preserves trust moat (BYOC exists) while removing adoption barrier
+const mode: DataPolicyMode = (process.env.EXPO_PUBLIC_DATA_POLICY as DataPolicyMode) || 'default';
 
 export function isStrictBYOC(): boolean {
   return mode === 'strict_byoc';
@@ -29,26 +32,26 @@ export function isBYOCEnabled(): boolean {
   return mode === 'hybrid_byoc' || mode === 'strict_byoc';
 }
 
+// Super Admin email (founder with god-mode Firestore access)
+// Matches SUPER_ADMIN_EMAIL in context/AuthContext.tsx
+const SUPER_ADMIN_EMAIL = 'empowrapp08162025@gmail.com';
+
 /**
  * Check if Firestore should be enabled for the current user.
- * ONLY empowrapp08162025@gmail.com gets Firestore access in ALL modes.
- * All other users use BYOC storage regardless of mode.
+ * ONLY Super Admin (founder) gets Firestore access in ALL modes.
+ * All other users (including general admins) use BYOC storage.
  */
 export function isFirestoreEnabledForUser(userEmail?: string | null): boolean {
-  // Only admin gets Firestore in ALL modes
-  const ADMIN_EMAIL = 'empowrapp08162025@gmail.com';
-  return userEmail === ADMIN_EMAIL;
+  return userEmail === SUPER_ADMIN_EMAIL;
 }
 
 /**
  * Check if BYOC mode should be active for the current user.
  * Returns true if user should use BYOC storage instead of Firestore.
- * Everyone except admin uses BYOC in ALL modes.
+ * Everyone except Super Admin uses BYOC in ALL modes.
  */
 export function isBYOCEnabledForUser(userEmail?: string | null): boolean {
-  // Everyone except admin uses BYOC in ALL modes
-  const ADMIN_EMAIL = 'empowrapp08162025@gmail.com';
-  return userEmail !== ADMIN_EMAIL;
+  return userEmail !== SUPER_ADMIN_EMAIL;
 }
 
 export function getDataPolicyMode(): DataPolicyMode {

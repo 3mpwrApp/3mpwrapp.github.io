@@ -9,7 +9,6 @@ import { useAuth } from "../context/AuthContext";
 import { useTranslation } from "../i18n";
 import { useA11ySettings } from "../store/a11ySettings";
 import { useBookmarks } from "../store/bookmarks";
-import { useEnergyCoins } from "../store/energyCoins";
 import { useFavorites } from "../store/favorites";
 import type { Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
@@ -26,7 +25,6 @@ export default function ProfileCard() {
   const { t } = useTranslation();
   const { state: favorites } = useFavorites();
   const bookmarksCtx = useBookmarks();
-  const { coins } = useEnergyCoins();
   const { state: a11y } = useA11ySettings();
   
   const [displayName, setDisplayName] = React.useState(user?.displayName ?? "");
@@ -174,19 +172,12 @@ export default function ProfileCard() {
           palette={palette}
           onPress={() => router.push("/(tabs)/saved" as Href)}
         />
-        <StatCard 
-          icon="bookmark" 
-          label={t("nav.bookmarks", "Bookmarks")} 
-          value={String(bookmarkTotal)} 
+        <StatCard
+          icon="bookmark"
+          label={t("nav.bookmarks", "Bookmarks")}
+          value={String(bookmarkTotal)}
           palette={palette}
           onPress={() => router.push("/(tabs)/saved" as Href)}
-        />
-        <StatCard 
-          icon="flash" 
-          label={t("wellness.energyCoins", "Energy Coins")} 
-          value={String(coins)} 
-          palette={palette}
-          onPress={() => router.push("/(tabs)/wellness" as Href)}
         />
         {isAdmin && (
           <StatCard 

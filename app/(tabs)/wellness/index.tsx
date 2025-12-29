@@ -80,7 +80,6 @@ export default function WellnessHub() {
   const COMING_SOON = React.useMemo(
     () =>
       new Set<string>([
-        '/wellness/self-care-library',
         '/wellness/resilience',
       ]),
     []
@@ -94,13 +93,11 @@ export default function WellnessHub() {
         '/wellness/micro-movement',
         '/wellness/pacing-partner',
         '/wellness/work-balance-ai',
-        '/wellness/self-care-library',
         '/wellness/ambience',
         '/wellness/grief-support',
         '/wellness/symptom-tracker',
         '/wellness/pain-forecast',
         '/wellness/sleep-energy-tracker',
-        '/wellness/energy-coins',
         '/wellness/daily-planner',
         '/wellness/exercise-hub',
         '/wellness/reflections-calendar',

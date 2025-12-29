@@ -39,7 +39,6 @@ const FEATURE_RELATIONSHIPS: Record<string, RelatedFeature[]> = {
     { id: 'resources_letter', title: 'Letter Builder', route: '/resources/letter-builder' as Href, icon: '📝', category: 'resources', reason: 'Document for claims' },
   ],
   'wellness_daily_planner': [
-    { id: 'wellness_energy', title: 'Energy Coins', route: '/wellness/energy-coins' as Href, icon: '🪙', category: 'wellness', reason: 'Budget your energy' },
     { id: 'events', title: 'Events Calendar', route: '/(tabs)/events' as Href, icon: '📅', category: 'events', reason: 'Plan community activities' },
     { id: 'wellness_pacing', title: 'Pacing Partner', route: '/wellness/pacing-partner' as Href, icon: '⚖️', category: 'wellness', reason: 'Avoid overexertion' },
   ],

@@ -133,24 +133,6 @@ export default function MoodInsights({ entries, currentScore }: MoodInsightsProp
           </A11yPressable>
 
           <A11yPressable
-            onPress={() => router.push('/(tabs)/wellness/self-care-library')}
-            style={[styles.linkCard, { borderColor: palette.muted }]}
-            hitSlop={HIT_SLOP_8}
-            accessibilityRole="link"
-            accessibilityLabel="Navigate to Self-Care Library"
-            accessibilityHint="Browse self-care resources and activities"
-          >
-            <View>
-              <Text style={[styles.linkTitle, { color: palette.text }]}>
-                🌿 Self-Care Library
-              </Text>
-              <Text style={[styles.linkSubtitle, { color: palette.text }]}>
-                Discover activities tailored to your current mood.
-              </Text>
-            </View>
-          </A11yPressable>
-
-          <A11yPressable
             onPress={() => router.push('/(tabs)/community')}
             style={[styles.linkCard, { borderColor: palette.muted }]}
             hitSlop={HIT_SLOP_8}

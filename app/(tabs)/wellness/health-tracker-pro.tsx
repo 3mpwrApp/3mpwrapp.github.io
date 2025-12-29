@@ -1044,11 +1044,7 @@ function SelfCareTab(_props: PowerToolTabProps) {
           <A11yPressable
             key={cat.id}
             onPress={() => {
-              trackEvent('selfcare.library.open', { category: cat.id });
-              router.push({
-                pathname: '/wellness/self-care-library',
-                params: { category: cat.id },
-              } as any);
+              router.push('/(tabs)/wellness' as any);
             }}
             accessibilityLabel={`${cat.name}, ${cat.items} activities`}
             hitSlop={HIT_SLOP_8}

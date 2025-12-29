@@ -8,7 +8,7 @@ try {
   AsyncStorage = null;
 }
 
-const KEY = 'energyCoins:v1';
+const KEY = '@energyCoins_deprecated';
 
 export type CoinsState = {
   date: string; // YYYY-MM-DD

@@ -594,12 +594,12 @@ describe('🎯 SECTION 4: Complete Feature Coverage', () => {
   describe('4.1 Wellness Features', () => {
     const wellnessFeatures = [
       'adaptive-meditation', 'ai-companion', 'ambience', 'belief-meter',
-      'cbt-coach', 'cbt-mini-games', 'daily-planner', 'dbt', 
-      'distress-tolerance', 'dreams', 'emotional-first-aid', 'energy-coins',
+      'cbt-coach', 'cbt-mini-games', 'daily-planner', 'dbt',
+      'distress-tolerance', 'dreams', 'emotional-first-aid',
       'exercise-hub', 'grief-support', 'micro-movement', 'mood',
       'nutrition-guides', 'opposite-action', 'pacing-partner', 'pain-forecast',
       'radical-acceptance', 'reflections-calendar', 'rehab-games', 'resilience',
-      'self-care-library', 'sleep-energy-tracker', 'sleep-reframe',
+      'sleep-energy-tracker', 'sleep-reframe',
       'spoon-economist', 'symptom-symphony', 'work-balance-ai',
     ];
 

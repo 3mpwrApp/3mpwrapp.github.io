@@ -166,5 +166,12 @@
   "TOOLS_POWER_OPEN": "tools.power.open",
   "WORLD_CAMPAIGN_VIEW": "world.campaign.view",
   "WORLD_MAP_OPEN": "world.map.open",
-  "WORLD_REGION_SELECT": "world.region.select"
+  "WORLD_REGION_SELECT": "world.region.select",
+
+  "ONBOARDING_APP_FIRST_OPENED": "onboarding.app.first_opened",
+  "ONBOARDING_FIRST_VALUE_ACTION": "onboarding.first_value_action",
+  "ONBOARDING_LEGAL_BANNER_SHOWN": "onboarding.legal_banner.shown",
+  "ONBOARDING_LEGAL_TERMS_ACCEPTED": "onboarding.legal_terms.accepted",
+  "ONBOARDING_LEGAL_BANNER_DISMISSED": "onboarding.legal_banner.dismissed",
+  "ONBOARDING_CONVERSION_COMPLETED": "onboarding.conversion.completed"
 }

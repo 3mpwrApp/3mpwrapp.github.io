@@ -26,7 +26,6 @@ const DEFAULT_ALLOW = [
   'onboarding\\.tsx',
   'settings.*index\\.tsx',
   'events.*index\\.impl\\.tsx',
-  'self-care-library.*\\.tsx',
   'daily-planner.*\\.tsx',
   'master-tracker-hub\\.tsx',
   'energy-hub\\.tsx',

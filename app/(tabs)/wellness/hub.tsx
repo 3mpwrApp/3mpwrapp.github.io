@@ -34,7 +34,6 @@ export default function WellnessHub() {
     { href: '/wellness/radical-acceptance', title: t('wellness.acceptance.title','Radical Acceptance'), desc: t('wellness.acceptance.desc','Reduce suffering; take wise action.'), icon: '🕊️' },
     { href: '/wellness/sleep-reframe', title: t('wellness.sleepReframe.title','Sleep Reframe'), desc: t('wellness.sleepReframe.desc','Kind reframes and routines for better sleep.'), icon: '😴' },
     { href: '/wellness/micro-movement', title: t('wellness.micro.title','Micro-Movement Coach'), desc: t('wellness.micro.desc','Gentle, chair-friendly movement ideas.'), icon: '🪑' },
-    { href: '/wellness/energy-coins', title: t('wellness.energy.title','Daily Energy Coins'), desc: t('wellness.energy.desc','Set a budget and spend coins on tasks.'), icon: '🪙' },
     { href: '/wellness/distress-tolerance', title: t('wellness.distress.title','Distress Tolerance'), desc: t('wellness.distress.desc','Brief skills to reduce crisis intensity.'), icon: '🛡️' },
     { href: '/wellness/belief-meter', title: t('wellness.belief.title','Belief Strength Meter'), desc: t('wellness.belief.desc','Rate belief strength and track change.'), icon: '📏' },
     { href: '/wellness/cbt-mini-games', title: t('wellness.mini.title','CBT Mini-Games'), desc: t('wellness.mini.desc','Quick grounding games to calm.'), icon: '🎮' },

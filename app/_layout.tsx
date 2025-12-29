@@ -131,7 +131,6 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import FocusLock from "../components/FocusLock";
 import GlobalAssistant from "../components/GlobalAssistant";
 import { SafeProviderWrapper } from "../components/SafeProviderWrapper";
-import TermsGate from "../components/TermsGate";
 import Footer from "../components/ThemedFooter";
 import ThemedHeader from "../components/ThemedHeader";
 import UpdateSplashScreen from "../components/UpdateSplashScreen";
@@ -147,6 +146,7 @@ import { RefreshProvider } from "../store/refresh";
 import { useAppPalette } from "../theme/usePalette";
 import { announce } from "../utils/announce";
 import { logger } from "../utils/logger";
+import { trackAppFirstOpened } from "../services/onboardingTracking";
 // 🔹 Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
 import { CognitiveAccessibilityProvider } from "../context/CognitiveAccessibilityContext";
@@ -168,7 +168,6 @@ import { BookmarksProvider } from "../store/bookmarks";
 import { CoachProgressProvider } from "../store/coachProgress";
 import { useCognitiveComfort } from "../store/cognitiveComfort";
 import { ComplexityModeProvider } from "../store/complexityMode";
-import { EnergyCoinsProvider } from "../store/energyCoins";
 import { JurisdictionProvider } from "../store/jurisdiction";
 import { NotificationsProvider } from "../store/notifications";
 import { First7Provider } from "../store/onboardingFirst7";
@@ -239,6 +238,9 @@ export default function RootLayout() {
     initializeBackgroundSync().then(() => {
       if (__DEV__) logger.debug('Background sync initialized');
     }).catch(() => {});
+
+    // Track app first opened (onboarding analytics)
+    trackAppFirstOpened();
   }, []);
 
   // Announce route changes for screen readers
@@ -320,7 +322,6 @@ export default function RootLayout() {
             <ComplexityModeProvider>
             <CoachProgressProvider>
             <ResilienceProvider>
-            <EnergyCoinsProvider>
             <BookmarksProvider>
             <ProfileLocalProvider>
               <PrivacyProvider>
@@ -340,47 +341,45 @@ export default function RootLayout() {
                               <OfflineBanner />
                               <ThemedHeader />
                             </View>
-                            <TermsGate>
-                              <ChangelogGate>
-                                <TelemetryInit />
-                                <SecurityInit />
-                                <CommunityPreload />
-                                <SafeProviderWrapper providerName="NotificationsProvider">
-                                  <NotificationsProvider>
-                                    <SafeProviderWrapper providerName="First7Provider">
-                                      <First7Provider>
-                                        <Stack
-                                          screenOptions={{
-                                            animation: reduceMotion ? "none" : "default",
-                                          }}
-                                        >
-                                          <Stack.Screen
-                                            name="index"
-                                            options={{ headerShown: false }}
+                            <ChangelogGate>
+                              <TelemetryInit />
+                              <SecurityInit />
+                              <CommunityPreload />
+                              <SafeProviderWrapper providerName="NotificationsProvider">
+                                <NotificationsProvider>
+                                  <SafeProviderWrapper providerName="First7Provider">
+                                    <First7Provider>
+                                      <Stack
+                                        screenOptions={{
+                                          animation: reduceMotion ? "none" : "default",
+                                        }}
+                                      >
+                                        <Stack.Screen
+                                          name="index"
+                                          options={{ headerShown: false }}
                                           />
-                                          <Stack.Screen
-                                            name="profile"
-                                            options={{ headerShown: false }}
-                                          />
-                                          <Stack.Screen
-                                            name="(auth)"
-                                            options={{ headerShown: false }}
-                                          />
-                                          <Stack.Screen
-                                            name="(tabs)"
-                                            options={{ headerShown: false }}
-                                          />
-                                          <Stack.Screen
-                                            name="modal"
-                                            options={{ presentation: "modal" }}
-                                          />
-                                        </Stack>
-                                      </First7Provider>
-                                    </SafeProviderWrapper>
-                                  </NotificationsProvider>
-                                </SafeProviderWrapper>
-                              </ChangelogGate>
-                            </TermsGate>
+                                        <Stack.Screen
+                                          name="profile"
+                                          options={{ headerShown: false }}
+                                        />
+                                        <Stack.Screen
+                                          name="(auth)"
+                                          options={{ headerShown: false }}
+                                        />
+                                        <Stack.Screen
+                                          name="(tabs)"
+                                          options={{ headerShown: false }}
+                                        />
+                                        <Stack.Screen
+                                          name="modal"
+                                          options={{ presentation: "modal" }}
+                                        />
+                                      </Stack>
+                                    </First7Provider>
+                                  </SafeProviderWrapper>
+                                </NotificationsProvider>
+                              </SafeProviderWrapper>
+                            </ChangelogGate>
                             <GlobalAssistant />
                             <DyslexiaVisualLayer />
                             <CognitiveComfortTracker />
@@ -401,7 +400,6 @@ export default function RootLayout() {
               </PrivacyProvider>
             </ProfileLocalProvider>
             </BookmarksProvider>
-            </EnergyCoinsProvider>
             </ResilienceProvider>
             </CoachProgressProvider>
             </ComplexityModeProvider>

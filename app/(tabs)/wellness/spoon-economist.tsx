@@ -307,7 +307,7 @@ export default function SpoonEconomistScreen() {
             accessibilityRole="button"
             hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             style={[styles.selfCareButton, { backgroundColor: palette.primary }]}
-            onPress={() => router.push('/(tabs)/wellness/self-care-library-enhanced' as any)}
+            onPress={() => router.push('/(tabs)/wellness' as any)}
           >
             <Ionicons name="sparkles" size={20} color={palette.onPrimary} />
             <Text style={[styles.selfCareButtonText, { color: palette.onPrimary }]}>Browse Self-Care Library</Text>

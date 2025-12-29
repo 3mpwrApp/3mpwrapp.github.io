@@ -2,11 +2,15 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     function isSignedIn() { return request.auth != null; }
+    // General Admin: Delegated permissions via Firebase custom claims
     function isAdmin() { return request.auth.token.admin == true; }
-    // Super admin has god-mode access to everything
-    function isSuperAdmin() { 
-      return request.auth != null && request.auth.token.email == 'empowrapp08162025@gmail.com'; 
+    // Super Admin (founder): God-mode access to everything
+    // This is the ONLY hardcoded email - represents founder sovereignty
+    function isSuperAdmin() {
+      return request.auth != null && request.auth.token.email == 'empowrapp08162025@gmail.com';
     }
+    // Either Super Admin OR General Admin
+    function isAnyAdmin() { return isSuperAdmin() || isAdmin(); }
     function threadParticipants(threadId) {
       return get(/databases/$(database)/documents/dm_threads/$(threadId)).data.participants;
     }
@@ -33,13 +37,13 @@ service cloud.firestore {
     // Admin namespace for privileged data
     match /admin/{docId} {
       allow read: if isSignedIn();
-      allow write, update, delete: if isAdmin();
+      allow write, update, delete: if isAnyAdmin();
     }
 
     // Admin audit log: admin-only read/write
     match /admin_audit/{docId} {
-      allow read: if isAdmin();
-      allow create, update, delete: if isAdmin();
+      allow read: if isAnyAdmin();
+      allow create, update, delete: if isAnyAdmin();
     }
 
     // Campaign rooms metadata: owner/moderator control
@@ -101,13 +105,13 @@ service cloud.firestore {
       allow read: if true;
       // create if signed-in; update/delete if admin or author
       allow create: if isSignedIn();
-      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == resource.data.authorUid);
+      allow update, delete: if isAnyAdmin() || (isSignedIn() && request.auth.uid == resource.data.authorUid);
     }
 
     match /comments/{docId} {
       allow read: if true;
       allow create: if isSignedIn();
-      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == resource.data.authorUid);
+      allow update, delete: if isAnyAdmin() || (isSignedIn() && request.auth.uid == resource.data.authorUid);
     }
 
     // Direct Messages (threads + messages)
@@ -121,14 +125,14 @@ service cloud.firestore {
       allow update: if isDmParticipant(threadId) &&
         request.resource.data.diff(resource.data).changedKeys().hasOnly(["last","updatedAt","participants"]) &&
         request.resource.data.participants == resource.data.participants;
-      allow delete: if isAdmin();
+      allow delete: if isAnyAdmin();
     }
     match /dm_threads/{threadId}/messages/{msgId} {
       allow read: if isDmParticipant(threadId);
       allow create: if isDmParticipant(threadId) &&
         request.resource.data.authorUid == request.auth.uid &&
         !isBlockedBetween(request.auth.uid, otherParticipant(threadId));
-      allow update, delete: if isAdmin() || (isDmParticipant(threadId) && request.auth.uid == resource.data.authorUid);
+      allow update, delete: if isAnyAdmin() || (isDmParticipant(threadId) && request.auth.uid == resource.data.authorUid);
     }
 
     // User block lists
@@ -143,48 +147,48 @@ service cloud.firestore {
 
     // Users collection
     match /users/{uid} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow create: if isSignedIn() && request.auth.uid == uid;
-      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow update, delete: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
     }
 
     // Evidence items under a user
     match /users/{uid}/evidence/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
     // Deadlines under a user
     match /users/{uid}/deadlines/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
     // RTW goals under a user
     match /users/{uid}/rtw_goals/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
     // Medications and logs under a user
     match /users/{uid}/medications/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
     match /users/{uid}/med_logs/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
     // Chronic condition tracker entries
     match /users/{uid}/chronic_entries/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
     // Adaptive AI Companion moods (allow anon + signed-in read/write to their namespace)
     match /users/{uid}/moods/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid) || (request.auth == null && uid == 'anon');
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid) || (request.auth == null && uid == 'anon');
       allow write, update, delete: if (isSignedIn() && request.auth.uid == uid) || (request.auth == null && uid == 'anon');
     }
 
@@ -192,7 +196,7 @@ service cloud.firestore {
     match /mutual_aid_posts/{docId} {
       allow read: if true;
       allow create: if isSignedIn();
-      allow update, delete: if isAdmin();
+      allow update, delete: if isAnyAdmin();
     }
     match /mutual_aid_posts/{docId}/responses/{rid} {
       allow read: if true;
@@ -209,7 +213,7 @@ service cloud.firestore {
     match /media_posts/{docId} {
       allow read: if true;
       allow create: if isSignedIn();
-      allow delete: if isAdmin();
+      allow delete: if isAnyAdmin();
     }
 
     // Timeline entries (public read; create signed-in)
@@ -228,9 +232,9 @@ service cloud.firestore {
         request.resource.data.status == 'published' &&
         request.resource.data.createdBy == request.auth.uid;
       allow update: if isSignedIn() &&
-        (request.auth.uid == resource.data.createdBy || isAdmin());
+        (request.auth.uid == resource.data.createdBy || isAnyAdmin());
       allow delete: if isSignedIn() &&
-        (request.auth.uid == resource.data.createdBy || isAdmin());
+        (request.auth.uid == resource.data.createdBy || isAnyAdmin());
     }
 
     // Preview collection: events_preview
@@ -242,15 +246,15 @@ service cloud.firestore {
         request.resource.data.status == 'published' &&
         request.resource.data.createdBy == request.auth.uid;
       allow update: if isSignedIn() &&
-        (request.auth.uid == resource.data.createdBy || isAdmin());
+        (request.auth.uid == resource.data.createdBy || isAnyAdmin());
       allow delete: if isSignedIn() &&
-        (request.auth.uid == resource.data.createdBy || isAdmin());
+        (request.auth.uid == resource.data.createdBy || isAnyAdmin());
     }
 
     // FAQs (public read; admin write)
     match /faqs/{docId} {
       allow read: if true;
-      allow create, update, delete: if isAdmin();
+      allow create, update, delete: if isAnyAdmin();
     }
 
     // Ratings (public read; one-per-user-per-target via doc id)
@@ -267,19 +271,19 @@ service cloud.firestore {
 
     // Wellness reflections under a user
     match /users/{uid}/wellness_reflections/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
     // Cognitive Comfort data (cross-platform session/navigation sync)
     match /users/{uid}/cognitive_comfort/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
     // User Sync data (cross-platform sync for all app settings, bookmarks, favorites, etc.)
     match /users/{uid}/user_sync/{docId} {
-      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow read: if isAnyAdmin() || (isSignedIn() && request.auth.uid == uid);
       allow write, update, delete: if isSignedIn() && request.auth.uid == uid;
     }
 
@@ -287,14 +291,14 @@ service cloud.firestore {
     match /activity/{docId} {
       allow read: if true;
       allow create: if isSignedIn();
-      allow update, delete: if isAdmin();
+      allow update, delete: if isAnyAdmin();
     }
 
     // Testers chat room (signed-in users)
     match /chats/{room}/messages/{msgId} {
       allow read: if isSignedIn();
       allow create: if isSignedIn();
-      allow update, delete: if isAdmin() || (isSignedIn() && request.auth.uid == resource.data.authorUid);
+      allow update, delete: if isAnyAdmin() || (isSignedIn() && request.auth.uid == resource.data.authorUid);
     }
 
     // Presence/typing/last_read per room

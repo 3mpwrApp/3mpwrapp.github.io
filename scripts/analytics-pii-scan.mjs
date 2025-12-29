@@ -68,7 +68,6 @@ const FILE_WHITELIST = [
   'app/(tabs)/admin/index.tsx',
   'app/(tabs)/settings.tsx',
   'app/(tabs)/wellness/grief-support.tsx',
-  'app/(tabs)/wellness/self-care-library.tsx',
   'components/Header.tsx',
   'data/faqs.ts',
   'data/lawyers.ts',

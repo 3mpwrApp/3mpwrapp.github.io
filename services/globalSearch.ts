@@ -113,15 +113,6 @@ const SEARCH_INDEX: SearchResult[] = [
     icon: '🎯',
     keywords: ['dbt', 'dialectical', 'therapy', 'emotion', 'skills', 'coping'],
   },
-  {
-    id: 'wellness-self-care',
-    title: 'Self-Care Library',
-    description: 'Curated self-care practices',
-    category: 'wellness',
-    route: '/wellness/self-care-library' as Href,
-    icon: '🛁',
-    keywords: ['self-care', 'self care', 'wellness', 'relaxation', 'comfort'],
-  },
 
   // Resources
   {

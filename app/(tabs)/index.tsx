@@ -9,6 +9,7 @@ import DisabilityWizard from '../../components/DisabilityWizard';
 import DisclaimerBanner from '../../components/DisclaimerBanner';
 import GapView from '../../components/GapView';
 import { HomeGuide } from '../../components/HomeGuide';
+import LegalAcceptanceBanner from '../../components/LegalAcceptanceBanner';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import { RevolutionaryFeaturesSpotlight } from '../../components/RevolutionaryFeaturesSpotlight';
 import SimpleModeWelcome from '../../components/SimpleModeWelcome';
@@ -580,6 +581,7 @@ const HomeScreen = React.memo(() => {
       </Text>
 
       <DisclaimerBanner type="general" compact={true} />
+      <LegalAcceptanceBanner />
       <GuestModeBanner />
 
       {/* Simple Mode Welcome - shows when user is in Simple mode */}

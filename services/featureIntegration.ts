@@ -74,15 +74,6 @@ export function getMoodBasedRecommendations(moodScore: number): FeatureRecommend
       priority: 'medium',
       triggers: ['neutral_mood', 'energy_management'],
     });
-    recommendations.push({
-      id: 'mood-neutral-selfcare',
-      title: 'Self-Care Library',
-      description: 'Browse personalized self-care activities',
-      targetScreen: '/(tabs)/wellness/self-care-library',
-      icon: '💆',
-      priority: 'medium',
-      triggers: ['neutral_mood', 'self_care'],
-    });
   }
 
   if (moodScore >= 1) {
