@@ -65,8 +65,6 @@ export async function trackAppFirstOpened(): Promise<void> {
       sessionId,
       timestamp,
     });
-
-    console.log('[OnboardingTracking] App first opened tracked');
   } catch (error) {
     console.error('[OnboardingTracking] Failed to track app first opened:', error);
   }
@@ -102,8 +100,6 @@ export async function trackFirstValueAction(actionType: 'evidence' | 'letter'): 
     });
 
     await checkAndTrackConversion();
-
-    console.log('[OnboardingTracking] First value action tracked:', actionType);
   } catch (error) {
     console.error('[OnboardingTracking] Failed to track first value action:', error);
   }
@@ -135,8 +131,6 @@ export async function trackLegalBannerShown(): Promise<void> {
       timestamp,
       timeSinceValueMs: timeSinceValue,
     });
-
-    console.log('[OnboardingTracking] Legal banner shown tracked');
   } catch (error) {
     console.error('[OnboardingTracking] Failed to track legal banner shown:', error);
   }
@@ -170,8 +164,6 @@ export async function trackLegalTermsAccepted(): Promise<void> {
     });
 
     await checkAndTrackConversion();
-
-    console.log('[OnboardingTracking] Legal terms accepted tracked');
   } catch (error) {
     console.error('[OnboardingTracking] Failed to track legal terms accepted:', error);
   }
@@ -200,8 +192,6 @@ export async function trackLegalBannerDismissed(): Promise<void> {
       timestamp,
       timeToDismissMs: timeToDismiss,
     });
-
-    console.log('[OnboardingTracking] Legal banner dismissed tracked');
   } catch (error) {
     console.error('[OnboardingTracking] Failed to track legal banner dismissed:', error);
   }
@@ -238,8 +228,6 @@ async function checkAndTrackConversion(): Promise<void> {
         totalTimeMs: totalTime,
         valueActionType: JSON.parse(firstValueAction).actionType,
       });
-
-      console.log('[OnboardingTracking] Conversion completed tracked');
     }
   } catch (error) {
     console.error('[OnboardingTracking] Failed to check conversion:', error);
