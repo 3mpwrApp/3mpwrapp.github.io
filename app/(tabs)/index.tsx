@@ -1,17 +1,27 @@
+/**
+ * Home Screen - Evidence-First Redesign (Phase 2)
+ *
+ * PRODUCT POSITIONING: "Evidence vault for disability rights"
+ * - Evidence collection is the unmistakable center of the app
+ * - Hero CTA: 80px tall, green, "Document What Happened"
+ * - Evidence Timeline shows progress and next steps
+ * - Next Best Action provides one obvious path forward
+ * - Remove wellness promotion entirely
+ */
+
+import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import A11yPressable from '../../components/A11yPressable';
 import CelebrationToast from '../../components/CelebrationToast';
-import { CopilotSuggestionBanner } from '../../components/CopilotSuggestionBanner';
-import DisabilityWizard from '../../components/DisabilityWizard';
+import CollectiveEvidenceOptIn from '../../components/CollectiveEvidenceOptIn';
 import DisclaimerBanner from '../../components/DisclaimerBanner';
+import EvidenceTimeline, { type EvidenceEntry } from '../../components/EvidenceTimeline';
 import GapView from '../../components/GapView';
-import { HomeGuide } from '../../components/HomeGuide';
 import LegalAcceptanceBanner from '../../components/LegalAcceptanceBanner';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
-import { RevolutionaryFeaturesSpotlight } from '../../components/RevolutionaryFeaturesSpotlight';
 import SimpleModeWelcome from '../../components/SimpleModeWelcome';
 import SOSButton from '../../components/SOSButton';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
@@ -20,7 +30,11 @@ import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../
 import { useTranslation } from '../../i18n';
 import type { Celebration } from '../../services/celebrations';
 import { checkCelebrations, markCelebrationSeen } from '../../services/celebrations';
-import { getActiveSuggestions, type ProactiveSuggestion } from '../../services/copilotProactive';
+import {
+  checkShouldShowOptIn,
+  hasUserOptedInToCollectiveEvidence,
+  optInToCollectiveEvidence,
+} from '../../services/collectiveEvidence';
 import { useComplexityMode } from '../../store/complexityMode';
 import { useTextScale } from '../../theme/typography';
 import { createTextStyles } from '../../theme/typography.enhanced';
@@ -30,107 +44,135 @@ import { logger } from '../../utils/logger';
 import { createShadow } from '../../utils/shadow';
 
 // Welcome Modal Component
-const WelcomeModal = React.memo(({ visible, onDismiss, router }: { visible: boolean; onDismiss: () => void; router: ReturnType<typeof useRouter> }) => {
-  const { t } = useTranslation();
-  const palette = useAppPalette();
-  const { factor } = useTextScale();
-  
-  if (!visible) return null;
-  
-  return (
-    <View style={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: 'rgba(0,0,0,0.8)',
-      justifyContent: 'center',
-      alignItems: 'center',
-      zIndex: 1000,
-      padding: 20,
-    }}>
-      <View style={{
-        backgroundColor: palette.card,
-        borderRadius: 16,
-        padding: 24,
-        maxWidth: 400,
-        width: '100%',
-        ...createShadow({
-          shadowColor: palette.text,
-          shadowOffset: { width: 0, height: 4 },
-          shadowOpacity: 0.3,
-          shadowRadius: 8,
-          elevation: 8,
-        }),
-      }}>
-        <Text style={{
-          fontSize: Math.round(24 * factor),
-          fontWeight: '700',
-          color: palette.text,
-          textAlign: 'center',
-          marginBottom: 16,
-        }}>
-          🎉 {t('welcome.title', 'Welcome to 3mpwr!')}
-        </Text>
-        
-        <Text style={{
-          fontSize: Math.round(16 * factor),
-          color: palette.text,
-          textAlign: 'center',
-          marginBottom: 24,
-          lineHeight: Math.round(24 * factor),
-        }}>
-          {t('welcome.message', 'Let\'s get you set up with personalized tools and resources for your disability advocacy journey.')}
-        </Text>
-        
-        <GapView style={{ flexDirection: 'column' }} gap={12}>
-          <A11yPressable
+const WelcomeModal = React.memo(
+  ({
+    visible,
+    onDismiss,
+    router,
+  }: {
+    visible: boolean;
+    onDismiss: () => void;
+    router: ReturnType<typeof useRouter>;
+  }) => {
+    const { t } = useTranslation();
+    const palette = useAppPalette();
+    const { factor } = useTextScale();
+
+    if (!visible) return null;
+
+    return (
+      <View
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.8)',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 1000,
+          padding: 20,
+        }}
+      >
+        <View
+          style={{
+            backgroundColor: palette.card,
+            borderRadius: 16,
+            padding: 24,
+            maxWidth: 400,
+            width: '100%',
+            ...createShadow({
+              shadowColor: palette.text,
+              shadowOffset: { width: 0, height: 4 },
+              shadowOpacity: 0.3,
+              shadowRadius: 8,
+              elevation: 8,
+            }),
+          }}
+        >
+          <Text
             style={{
-              backgroundColor: palette.primary,
-              paddingVertical: 14,
-              borderRadius: 8,
-              alignItems: 'center',
-            }}
-            onPress={() => { onDismiss(); router.push('/onboarding/first7' as any); }}
-            accessibilityRole="button"
-            accessibilityLabel={t('welcome.startOnboarding', 'Start onboarding')}
-          >
-            <Text style={{
-              color: palette.onPrimary,
-              fontSize: Math.round(16 * factor),
-              fontWeight: '600',
-            }}>
-              🚀 {t('welcome.startOnboarding', 'Get Started')}
-            </Text>
-          </A11yPressable>
-          
-          <A11yPressable
-            style={{
-              backgroundColor: palette.surface,
-              borderWidth: 1,
-              borderColor: palette.muted,
-              paddingVertical: 14,
-              borderRadius: 8,
-              alignItems: 'center',
-            }}
-            onPress={onDismiss}
-            accessibilityRole="button"
-            accessibilityLabel={t('welcome.exploreLater', 'Explore the app first')}
-          >
-            <Text style={{
+              fontSize: Math.round(24 * factor),
+              fontWeight: '700',
               color: palette.text,
+              textAlign: 'center',
+              marginBottom: 16,
+            }}
+          >
+            🎉 {t('welcome.title', 'Welcome to 3mpwr!')}
+          </Text>
+
+          <Text
+            style={{
               fontSize: Math.round(16 * factor),
-              fontWeight: '600',
-            }}>
-              {t('welcome.exploreLater', 'Explore First')}
-            </Text>
-          </A11yPressable>
-        </GapView>
+              color: palette.text,
+              textAlign: 'center',
+              marginBottom: 24,
+              lineHeight: Math.round(24 * factor),
+            }}
+          >
+            {t(
+              'welcome.message',
+              "Let's get you set up with personalized tools and resources for your disability advocacy journey."
+            )}
+          </Text>
+
+          <GapView style={{ flexDirection: 'column' }} gap={12}>
+            <A11yPressable
+              style={{
+                backgroundColor: palette.primary,
+                paddingVertical: 14,
+                borderRadius: 8,
+                alignItems: 'center',
+              }}
+              onPress={() => {
+                onDismiss();
+                router.push('/onboarding/first7' as any);
+              }}
+              accessibilityRole="button"
+              accessibilityLabel={t('welcome.startOnboarding', 'Start onboarding')}
+            >
+              <Text
+                style={{
+                  color: palette.onPrimary,
+                  fontSize: Math.round(16 * factor),
+                  fontWeight: '600',
+                }}
+              >
+                🚀 {t('welcome.startOnboarding', 'Get Started')}
+              </Text>
+            </A11yPressable>
+
+            <A11yPressable
+              style={{
+                backgroundColor: palette.surface,
+                borderWidth: 1,
+                borderColor: palette.muted,
+                paddingVertical: 14,
+                borderRadius: 8,
+                alignItems: 'center',
+              }}
+              onPress={onDismiss}
+              accessibilityRole="button"
+              accessibilityLabel={t('welcome.exploreLater', 'Explore the app first')}
+            >
+              <Text
+                style={{
+                  color: palette.text,
+                  fontSize: Math.round(16 * factor),
+                  fontWeight: '600',
+                }}
+              >
+                {t('welcome.exploreLater', 'Explore First')}
+              </Text>
+            </A11yPressable>
+          </GapView>
+        </View>
       </View>
-    </View>
-  );
-});
+    );
+  }
+);
 WelcomeModal.displayName = 'WelcomeModal';
 
 // Guest Mode Banner Component
@@ -140,42 +182,51 @@ const GuestModeBanner = React.memo(() => {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const router = useRouter();
-  
+
   if (!isGuest) return null;
-  
+
   return (
-    <View style={{
-      backgroundColor: palette.surface,
-      borderLeftWidth: 4,
-      borderLeftColor: palette.warning,
-      borderRadius: 8,
-      padding: 12,
-      marginVertical: 8,
-      ...createShadow({
-        shadowColor: palette.text,
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        elevation: 2,
-      }),
-    }}>
+    <View
+      style={{
+        backgroundColor: palette.surface,
+        borderLeftWidth: 4,
+        borderLeftColor: palette.warning,
+        borderRadius: 8,
+        padding: 12,
+        marginVertical: 8,
+        ...createShadow({
+          shadowColor: palette.text,
+          shadowOffset: { width: 0, height: 1 },
+          shadowOpacity: 0.1,
+          shadowRadius: 2,
+          elevation: 2,
+        }),
+      }}
+    >
       <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
         <Text style={{ fontSize: 16, marginRight: 8 }}>👤</Text>
-        <Text style={{
-          fontSize: Math.round(14 * factor),
-          fontWeight: '700',
-          color: palette.warning,
-        }}>
+        <Text
+          style={{
+            fontSize: Math.round(14 * factor),
+            fontWeight: '700',
+            color: palette.warning,
+          }}
+        >
           {t('guest.banner.title', 'Guest Mode')}
         </Text>
       </View>
-      <Text style={{
-        fontSize: Math.round(12 * factor),
-        lineHeight: Math.round(18 * factor),
-        color: palette.text,
-        opacity: 0.85,
-      }}>
-        {t('guest.banner.message', 'You\'re using guest mode. Your data isn\'t saved and some features are limited. Create an account to save your progress and access all features.')}
+      <Text
+        style={{
+          fontSize: Math.round(12 * factor),
+          lineHeight: Math.round(18 * factor),
+          color: palette.text,
+          opacity: 0.85,
+        }}
+      >
+        {t(
+          'guest.banner.message',
+          "You're using guest mode. Your data isn't saved and some features are limited. Create an account to save your progress and access all features."
+        )}
       </Text>
       <GapView style={{ flexDirection: 'row', marginTop: 8 }} gap={8}>
         <A11yPressable
@@ -191,11 +242,13 @@ const GuestModeBanner = React.memo(() => {
           accessibilityLabel={t('guest.banner.createAccount', 'Create account')}
           onPress={() => router.push('/(auth)/signup' as any)}
         >
-          <Text style={{
-            color: palette.onPrimary,
-            fontSize: Math.round(12 * factor),
-            fontWeight: '600',
-          }}>
+          <Text
+            style={{
+              color: palette.onPrimary,
+              fontSize: Math.round(12 * factor),
+              fontWeight: '600',
+            }}
+          >
             {t('guest.banner.createAccount', 'Create Account')}
           </Text>
         </A11yPressable>
@@ -214,11 +267,13 @@ const GuestModeBanner = React.memo(() => {
           accessibilityLabel={t('guest.banner.signIn', 'Sign in')}
           onPress={() => router.push('/(auth)/signin' as any)}
         >
-          <Text style={{
-            color: palette.text,
-            fontSize: Math.round(12 * factor),
-            fontWeight: '600',
-          }}>
+          <Text
+            style={{
+              color: palette.text,
+              fontSize: Math.round(12 * factor),
+              fontWeight: '600',
+            }}
+          >
             {t('guest.banner.signIn', 'Sign In')}
           </Text>
         </A11yPressable>
@@ -228,17 +283,19 @@ const GuestModeBanner = React.memo(() => {
 });
 GuestModeBanner.displayName = 'GuestModeBanner';
 
-// Safe wrapper for optional components - prevents crashes from non-critical features
-const SafeOptionalComponent = ({ children, fallback = null }: { children: React.ReactNode; fallback?: React.ReactNode }) => {
+// Safe wrapper for optional components
+const SafeOptionalComponent = ({
+  children,
+  fallback = null,
+}: {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}) => {
   const [error, setError] = React.useState(false);
-  
+
   if (error) return <>{fallback}</>;
-  
-  return (
-    <ErrorBoundaryWrapper onError={() => setError(true)}>
-      {children}
-    </ErrorBoundaryWrapper>
-  );
+
+  return <ErrorBoundaryWrapper onError={() => setError(true)}>{children}</ErrorBoundaryWrapper>;
 };
 
 class ErrorBoundaryWrapper extends React.Component<
@@ -267,211 +324,162 @@ class ErrorBoundaryWrapper extends React.Component<
   }
 }
 
-// Memoize subcomponents for better performance
-const RecentPrompts = React.memo(() => {
+// Next Best Action Component - Contextual guidance based on user state
+const NextBestAction = React.memo(({ evidenceCount }: { evidenceCount: number }) => {
+  const { t } = useTranslation();
   const palette = useAppPalette();
   const { factor } = useTextScale();
-  const { t } = useTranslation();
   const router = useRouter();
-  const [items, setItems] = React.useState<{label:string;route?:string;ts:number}[]>([]);
-  
-  React.useEffect(()=>{
-    try{
-      const mod = require('../../services/usage') as any;
-      const buf = mod.usage?.getBuffer?.() || [];
-      const recent = buf.filter((e: any) => ['usage.view','usage.complete'].includes(e.type) && e.meta?.quickPrompt)
-        .slice(-200).reverse();
-      const seen = new Set<string>();
-      const uniq: { label: string; route?: string; ts: number }[] = [];
-      for(const e of recent){
-        if(seen.has(e.meta.quickPrompt)) continue; seen.add(e.meta.quickPrompt);
-        uniq.push({ label: e.meta.quickPrompt, route: e.route, ts: e.ts });
-        if(uniq.length>=3) break;
-      }
-      setItems(uniq);
-    }catch{}
-  },[]);
-  
-  if(!items.length) return null;
-  
-  return (
-    <View 
-      style={{ marginBottom: 12 }}
-      accessibilityLabel={t('assistant.home.recentPromptsRegion', 'Recent prompts section')}
-      accessible={true}
-    >
-      <Text 
-        style={{ 
-          color: palette.text, 
-          fontWeight: '700', 
-          marginBottom: 6,
-          fontSize: Math.round(16 * factor)
-        }}
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
-        accessibilityRole="header"
-      >
-        {t('assistant.home.recentPrompts','Recently used prompts')}
-      </Text>
-      <GapView 
-        style={{ flexDirection:'row', flexWrap:'wrap' }}
-        gap={8}
-        accessibilityLabel={t('assistant.home.promptsList', 'List of recent prompts')}
-      >
-        {items.map((it, _index) => (
-          <A11yPressable
-            key={it.label}
-            style={{
-              backgroundColor: palette.card,
-              borderWidth: 1,
-              borderColor: palette.muted,
-              paddingHorizontal: 10,
-              paddingVertical: 6,
-              borderRadius: 999,
-            }}
-            accessibilityLabel={t('assistant.home.promptAccessibilityLabel', 'Recent prompt: {{prompt}}', { prompt: it.label })}
-            accessibilityHint={t('assistant.home.promptHint', 'Double tap to use this prompt again')}
-            hitSlop={HIT_SLOP_8}
-            onPress={() => router.push((it.route as any) || '/(tabs)/advocacy/assistant-hub')}
-          >
-            <Text 
-              style={{ 
-                color: palette.text, 
-                fontSize: Math.round(12 * factor)
-              }}
-              maxFontSizeMultiplier={MAX_FONT_SCALE}
-            >
-              {it.label}
-            </Text>
-          </A11yPressable>
-        ))}
-      </GapView>
-    </View>
-  );
-});
-RecentPrompts.displayName = 'RecentPrompts';
 
-const CopilotSuggestions = React.memo(() => {
-  const [suggestions, setSuggestions] = React.useState<ProactiveSuggestion[]>([]);
-  
-  React.useEffect(() => {
-    getActiveSuggestions().then(setSuggestions).catch(() => {});
-  }, []);
-  
-  if (!suggestions.length) return null;
-  
-  return (
-    <>
-      {suggestions.map(suggestion => (
-        <CopilotSuggestionBanner
-          key={suggestion.id}
-          suggestion={suggestion}
-          onDismiss={() => {
-            setSuggestions(prev => prev.filter(s => s.id !== suggestion.id));
-          }}
-          onAction={() => {
-            // Navigate based on suggestion type
-            // TODO: Implement navigation with router.push()
-            logger.log('[CopilotSuggestions] Navigate to:', suggestion.type);
-          }}
-        />
-      ))}
-    </>
-  );
-});
-CopilotSuggestions.displayName = 'CopilotSuggestions';
+  const getNextAction = () => {
+    if (evidenceCount === 0) {
+      return {
+        icon: '📝',
+        title: t('home.nextAction.firstEvidence.title', 'Start collecting evidence'),
+        subtitle: t('home.nextAction.firstEvidence.subtitle', 'Document what happened in your own words'),
+        cta: t('home.nextAction.firstEvidence.cta', 'Add First Note'),
+        route: '/(tabs)/advocacy/evidence-locker',
+      };
+    }
+    if (evidenceCount <= 2) {
+      return {
+        icon: '📋',
+        title: t('home.nextAction.moreEvidence.title', 'Keep building your case'),
+        subtitle: t('home.nextAction.moreEvidence.subtitle', 'Add 2-3 more notes for a strong foundation'),
+        cta: t('home.nextAction.moreEvidence.cta', 'Add More Evidence'),
+        route: '/(tabs)/advocacy/evidence-locker',
+      };
+    }
+    return {
+      icon: '✉️',
+      title: t('home.nextAction.generateLetter.title', 'Generate your first letter'),
+      subtitle: t('home.nextAction.generateLetter.subtitle', 'Turn your evidence into a professional appeal'),
+      cta: t('home.nextAction.generateLetter.cta', 'Generate Letter'),
+      route: '/(tabs)/advocacy/letter-wizard',
+    };
+  };
 
-const BetaTestersQuickLink = React.memo(() => {
-  const palette = useAppPalette();
-  const { factor } = useTextScale();
-  const { t } = useTranslation();
-  const router = useRouter();
-  
+  const action = getNextAction();
+
   return (
-    <View 
-      style={{ marginBottom: 12 }}
-      accessibilityLabel={t('home.quick.betaChat.section', 'Beta testers section')}
-      accessible={true}
+    <A11yPressable
+      onPress={() => router.push(action.route as any)}
+      style={[styles.nextActionCard, { backgroundColor: palette.info + '10', borderColor: palette.info }]}
+      accessibilityLabel={`${action.title}. ${action.subtitle}`}
+      accessibilityHint={t('home.nextAction.hint', 'Double tap to continue')}
+      hitSlop={HIT_SLOP_8}
     >
-      <Text 
-        style={{ 
-          color: palette.text, 
-          fontWeight: '700', 
-          marginBottom: 6,
-          fontSize: Math.round(16 * factor)
-        }}
-        maxFontSizeMultiplier={MAX_FONT_SCALE}
-        accessibilityRole="header"
-      >
-        {t('home.quick.betaChat.title','Beta Testers Chat')}
-      </Text>
-      <A11yPressable 
-        accessibilityLabel={t('home.quick.betaChat.label','Join the Beta Testers Chat')} 
-        accessibilityHint={t('home.quick.betaChat.hint', 'Opens the beta testers community chat')}
-        style={{ 
-          backgroundColor: palette.surface, 
-          borderWidth: 1, 
-          borderColor: palette.muted, 
-          paddingHorizontal: 12, 
-          paddingVertical: 10, 
-          borderRadius: 8 
-        }}
-        hitSlop={HIT_SLOP_8}
-        onPress={() => router.push('/(tabs)/community/testers-chat' as any)}
-      >
-        <Text 
-          style={{ 
-            color: palette.text,
-            fontSize: Math.round(16 * factor)
-          }}
+      <View style={styles.nextActionHeader}>
+        <Text style={{ fontSize: 32 }}>{action.icon}</Text>
+        <Text
+          style={[styles.nextActionBadge, { fontSize: Math.round(10 * factor), color: palette.info }]}
           maxFontSizeMultiplier={MAX_FONT_SCALE}
         >
-          🧪 {t('home.quick.betaChat.cta','Join the Beta Testers Chat')}
+          {t('home.nextAction.badge', 'NEXT STEP')}
         </Text>
-      </A11yPressable>
-    </View>
+      </View>
+      <Text
+        style={[styles.nextActionTitle, { fontSize: Math.round(16 * factor), color: palette.text }]}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
+        {action.title}
+      </Text>
+      <Text
+        style={[styles.nextActionSubtitle, { fontSize: Math.round(13 * factor), color: palette.textSecondary }]}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
+        {action.subtitle}
+      </Text>
+      <View style={[styles.nextActionButton, { backgroundColor: palette.info }]}>
+        <Text
+          style={[styles.nextActionButtonText, { fontSize: Math.round(14 * factor), color: '#FFFFFF' }]}
+          maxFontSizeMultiplier={MAX_FONT_SCALE}
+        >
+          {action.cta} →
+        </Text>
+      </View>
+    </A11yPressable>
   );
 });
-BetaTestersQuickLink.displayName = 'BetaTestersQuickLink';
+NextBestAction.displayName = 'NextBestAction';
 
-// Main home screen component (memoized for performance)
+// Main home screen component
 const HomeScreen = React.memo(() => {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const textStyles = createTextStyles(palette);
   const { factor } = useTextScale();
   const titleRef = React.useRef<Text>(null);
-  const { user } = useAuth();
+  const router = useRouter();
   const { isFeatureVisible } = useComplexityMode();
-  
-  // Celebration state
+
+  // State
   const [celebration, setCelebration] = React.useState<Celebration | null>(null);
-  
-  // Welcome modal for new users
   const [showWelcome, setShowWelcome] = React.useState(false);
-  
-  // Error state for debugging
-  const [_renderError, setRenderError] = React.useState<Error | null>(null);
-  
-  // ALL HOOKS MUST BE CALLED BEFORE ANY CONDITIONAL RETURNS
-  
-  // Catch any errors during rendering (web only)
+  const [evidenceCount, setEvidenceCount] = React.useState(0);
+  const [recentEvidence, setRecentEvidence] = React.useState<EvidenceEntry[]>([]);
+  const [isLoadingEvidence, setIsLoadingEvidence] = React.useState(true);
+  const [showCollectiveOptIn, setShowCollectiveOptIn] = React.useState(false);
+
+  // Load evidence from Evidence Locker
   React.useEffect(() => {
-    // Only set up error listener on web platform
-    if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
-      const handleError = (event: ErrorEvent) => {
-        if (__DEV__) {
-          console.error('[HomeScreen] Global error caught:', event.error);
+    const loadEvidence = async () => {
+      try {
+        const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
+        const evidenceData = await AsyncStorage.getItem('evidenceLocker:entries:v1');
+
+        if (evidenceData) {
+          const entries = JSON.parse(evidenceData);
+          setEvidenceCount(entries.length);
+
+          // Get 3 most recent entries
+          const sorted = entries.sort((a: any, b: any) => {
+            const aTime =
+              a.createdAt instanceof Date ? a.createdAt.getTime() : a.createdAt.seconds * 1000;
+            const bTime =
+              b.createdAt instanceof Date ? b.createdAt.getTime() : b.createdAt.seconds * 1000;
+            return bTime - aTime;
+          });
+          setRecentEvidence(sorted.slice(0, 3));
+        } else {
+          setEvidenceCount(0);
+          setRecentEvidence([]);
         }
-        setRenderError(event.error);
-      };
-      
-      window.addEventListener('error', handleError);
-      return () => window.removeEventListener('error', handleError);
-    }
-    return undefined;
+      } catch (error) {
+        logError('HomeScreen', 'Load evidence', error as Error);
+      } finally {
+        setIsLoadingEvidence(false);
+      }
+    };
+
+    loadEvidence();
+
+    // Refresh evidence when screen comes into focus
+    const interval = setInterval(loadEvidence, 5000);
+    return () => clearInterval(interval);
   }, []);
-  
-  // Check for celebrations on mount and periodically
+
+  // Check if should show collective evidence opt-in
+  React.useEffect(() => {
+    const checkOptIn = async () => {
+      try {
+        const hasOptedIn = await hasUserOptedInToCollectiveEvidence();
+        if (!hasOptedIn) {
+          const shouldShow = await checkShouldShowOptIn();
+          setShowCollectiveOptIn(shouldShow);
+        }
+      } catch (error) {
+        logError('HomeScreen', 'Check collective opt-in', error as Error);
+      }
+    };
+
+    // Only check if user has evidence
+    if (evidenceCount >= 3) {
+      checkOptIn();
+    }
+  }, [evidenceCount]);
+
+  // Check for celebrations
   React.useEffect(() => {
     const checkForCelebrations = async () => {
       try {
@@ -483,93 +491,83 @@ const HomeScreen = React.memo(() => {
         logError('HomeScreen', 'Check celebrations', error as Error);
       }
     };
-    
+
     checkForCelebrations();
-    const interval = setInterval(checkForCelebrations, 30000); // Check every 30s
-    
+    const interval = setInterval(checkForCelebrations, 30000);
     return () => clearInterval(interval);
   }, []);
-  
-  // Check if user is new (no onboarding started)
+
+  // Check if user is new
   React.useEffect(() => {
     const checkNewUser = async () => {
       try {
         const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
         const onboardingData = await AsyncStorage.getItem('onboarding:first7:v1');
         const disabilityProfile = await AsyncStorage.getItem('disabilityWizard:profile:v1');
-        
-        // Show welcome if no onboarding data exists
+
         if (!onboardingData && !disabilityProfile) {
           setShowWelcome(true);
         }
       } catch (error) {
-        // If we can't check, assume they're not new
         logError('HomeScreen', 'Check new user', error as Error);
       }
     };
-    
-    // Delay check to avoid interfering with initial load
+
     const timer = setTimeout(checkNewUser, 2000);
     return () => clearTimeout(timer);
   }, []);
-  
-  // Debug logging to track mount and re-renders (only on mount and unmount)
+
+  // Debug logging
   React.useEffect(() => {
-    logger.log('[HomeScreen] ===== COMPONENT MOUNTED =====');
-    logger.log('[HomeScreen] User:', user?.uid || 'none');
-    logger.log('[HomeScreen] Palette:', palette ? 'loaded' : 'missing');
-    
+    logger.log('[HomeScreen] ===== COMPONENT MOUNTED (Evidence-First) =====');
     return () => {
       logger.log('[HomeScreen] ===== COMPONENT UNMOUNTED =====');
     };
   }, []);
-  
-  // Track palette and factor changes separately (dev only)
-  React.useEffect(() => {
-    if (__DEV__) {
-      logger.log('[HomeScreen] Theme updated');
-    }
-  }, [palette]);
-  
-  React.useEffect(() => {
-    if (__DEV__) {
-      logger.log('[HomeScreen] TextScale updated:', factor);
-    }
-  }, [factor]);
-  
-  // Announce page load and focus title for screen readers
-  useAnnounceOnMount(t('home.announcement', 'Home screen loaded. Beta features available.'));
+
+  // Announce page load
+  useAnnounceOnMount(t('home.announcement', 'Home screen loaded. Evidence-first design.'));
   useFocusOnRefOnMount(titleRef);
-  
-  // Handler functions
+
+  // Handlers
   const handleCelebrationDismiss = async () => {
     if (celebration) {
       await markCelebrationSeen(celebration.id);
       setCelebration(null);
     }
   };
-  
+
   const handleWelcomeDismiss = () => {
     setShowWelcome(false);
   };
 
-  // NOW SAFE TO HAVE CONDITIONAL RETURNS AFTER ALL HOOKS
+  const handleCollectiveOptIn = async () => {
+    try {
+      await optInToCollectiveEvidence();
+      setShowCollectiveOptIn(false);
+    } catch (error) {
+      logError('HomeScreen', 'Collective opt-in', error as Error);
+    }
+  };
 
-  // RESTORED VERSION - Components fixed to use router.push instead of Link asChild
-  const router = useRouter();
-  
+  const handleCollectiveOptInDismiss = () => {
+    setShowCollectiveOptIn(false);
+  };
+
+  const handleViewAllEvidence = () => {
+    router.push('/(tabs)/advocacy/evidence-locker' as any);
+  };
+
   return (
     <ResponsiveScreenWrapper testID="home-screen">
-      {/* Welcome Modal for new users */}
+      {/* Welcome Modal */}
       <WelcomeModal visible={showWelcome} onDismiss={handleWelcomeDismiss} router={router} />
-      
+
       {/* Celebration Toast */}
       <SafeOptionalComponent>
-        {celebration && (
-          <CelebrationToast celebration={celebration} onDismiss={handleCelebrationDismiss} />
-        )}
+        {celebration && <CelebrationToast celebration={celebration} onDismiss={handleCelebrationDismiss} />}
       </SafeOptionalComponent>
-      
+
       <Text
         ref={titleRef}
         accessibilityRole="header"
@@ -584,95 +582,123 @@ const HomeScreen = React.memo(() => {
       <LegalAcceptanceBanner />
       <GuestModeBanner />
 
-      {/* Simple Mode Welcome - shows when user is in Simple mode */}
-      <SimpleModeWelcome 
+      {/* Simple Mode Welcome */}
+      <SimpleModeWelcome
         tabName="Home"
-        availableFeatures={['Ask 3mpwr', 'Search', 'First 7 Days', 'SOS Button']}
+        availableFeatures={['Evidence Command Center', 'Letter Wizard', 'Crisis Resources', 'Quick Search']}
         hiddenCount={10}
       />
 
-      {/* Main Action Buttons */}
-      <GapView style={{ flexDirection: 'row', marginBottom: 16 }} gap={12}>
+      {/* HERO CTA - Evidence Collection (80px tall, green, unmissable) */}
+      <A11yPressable
+        onPress={() => router.push('/(tabs)/advocacy/evidence-locker' as any)}
+        style={[styles.heroCTA, { backgroundColor: palette.success }]}
+        accessibilityRole="button"
+        accessibilityLabel={t('home.hero.label', 'Document what happened - Add evidence')}
+        accessibilityHint={t('home.hero.hint', 'Navigate to Evidence Command Center')}
+        hitSlop={HIT_SLOP_8}
+      >
+        <View style={styles.heroIconContainer}>
+          <Ionicons name="folder-open" size={32} color="#FFFFFF" />
+        </View>
+        <View style={styles.heroTextContainer}>
+          <Text
+            style={[styles.heroTitle, { fontSize: Math.round(18 * factor), color: '#FFFFFF' }]}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            {t('home.hero.title', 'Document What Happened')}
+          </Text>
+          <Text
+            style={[styles.heroSubtitle, { fontSize: Math.round(13 * factor), color: '#FFFFFF' }]}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            {t('home.hero.subtitle', 'Save evidence in your own words')}
+          </Text>
+        </View>
+        <Ionicons name="chevron-forward" size={28} color="#FFFFFF" />
+      </A11yPressable>
+
+      {/* Evidence Timeline Widget */}
+      <EvidenceTimeline
+        evidenceCount={evidenceCount}
+        recentEvidence={recentEvidence}
+        onViewAll={handleViewAllEvidence}
+        isLoading={isLoadingEvidence}
+      />
+
+      {/* Collective Evidence Opt-In Banner */}
+      {showCollectiveOptIn && (
+        <SafeOptionalComponent>
+          <CollectiveEvidenceOptIn
+            onOptIn={handleCollectiveOptIn}
+            onDismiss={handleCollectiveOptInDismiss}
+            evidenceCount={evidenceCount}
+          />
+        </SafeOptionalComponent>
+      )}
+
+      {/* Next Best Action */}
+      <NextBestAction evidenceCount={evidenceCount} />
+
+      {/* Quick Actions Row */}
+      <GapView style={styles.quickActionsRow} gap={12}>
         <A11yPressable
-          onPress={() => router.push('/search')}
-          style={[styles.searchButton, { backgroundColor: palette.surface, borderColor: palette.muted, flex: 1 }]}
-          accessibilityLabel={t('home.search.label', 'Search the app')}
+          onPress={() => router.push('/search' as any)}
+          style={[styles.quickActionButton, { backgroundColor: palette.surface, borderColor: palette.muted }]}
+          accessibilityLabel={t('home.quickAction.search', 'Search resources')}
           hitSlop={HIT_SLOP_8}
         >
-          <GapView style={{ flexDirection: 'row', alignItems: 'center' }} gap={10}>
-            <Text style={{ fontSize: 20 }}>🔍</Text>
-            <Text style={{ fontSize: Math.round(15 * factor), color: palette.muted, flexShrink: 1 }} numberOfLines={1}>
-              {t('home.search.placeholder', 'Search...')}
-            </Text>
-          </GapView>
+          <Ionicons name="search" size={20} color={palette.text} />
+          <Text
+            style={[styles.quickActionText, { fontSize: Math.round(13 * factor), color: palette.text }]}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            {t('home.quickAction.search', 'Search')}
+          </Text>
         </A11yPressable>
 
         <A11yPressable
-          onPress={() => router.push('/(tabs)/advocacy/ask')}
-          style={[styles.askButton, { backgroundColor: palette.primary, flex: 1 }]}
-          accessibilityLabel={t('home.ask.label', 'Ask 3mpwr')}
+          onPress={() => router.push('/(tabs)/advocacy/ask' as any)}
+          style={[styles.quickActionButton, { backgroundColor: palette.surface, borderColor: palette.muted }]}
+          accessibilityLabel={t('home.quickAction.ask', 'Ask 3mpwr AI')}
           hitSlop={HIT_SLOP_8}
         >
-          <Text style={[textStyles.button, { fontSize: Math.round(16 * factor) }]}>
-            💬 {t('home.ask.button', 'Ask 3mpwr')}
+          <Ionicons name="chatbubble-ellipses" size={20} color={palette.text} />
+          <Text
+            style={[styles.quickActionText, { fontSize: Math.round(13 * factor), color: palette.text }]}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            {t('home.quickAction.ask', 'Ask AI')}
+          </Text>
+        </A11yPressable>
+
+        <A11yPressable
+          onPress={() => router.push('/onboarding/first7' as any)}
+          style={[styles.quickActionButton, { backgroundColor: palette.surface, borderColor: palette.muted }]}
+          accessibilityLabel={t('home.quickAction.first7', 'First 7 days guide')}
+          hitSlop={HIT_SLOP_8}
+        >
+          <Ionicons name="rocket" size={20} color={palette.text} />
+          <Text
+            style={[styles.quickActionText, { fontSize: Math.round(13 * factor), color: palette.text }]}
+            maxFontSizeMultiplier={MAX_FONT_SCALE}
+          >
+            {t('home.quickAction.first7', 'First 7')}
           </Text>
         </A11yPressable>
       </GapView>
 
-      {/* 7-Day Onboarding Wizard */}
-      <A11yPressable
-        onPress={() => router.push('/onboarding/first7')}
-        style={[styles.wizardButton, { backgroundColor: palette.card, borderColor: palette.primary, borderWidth: 2 }]}
-        accessibilityLabel={t('home.wizard.label', 'Your First 7 Days')}
-        hitSlop={HIT_SLOP_8}
-      >
-        <GapView style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} gap={8}>
-          <Text style={{ fontSize: 24 }}>🧙‍♀️</Text>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: Math.round(16 * factor), color: palette.text, fontWeight: '600' }}>
-              {t('home.wizard.button', 'Your First 7 Days')}
-            </Text>
-            <Text style={[textStyles.caption, { fontSize: Math.round(12 * factor), color: palette.textSecondary }]}>
-              {t('home.wizard.subtitle', 'Quick wins to get started')}
-            </Text>
-          </View>
-        </GapView>
-      </A11yPressable>
-
-      {/* Revolutionary Features Spotlight - Standard+ only */}
-      {isFeatureVisible('standard') && (
-        <SafeOptionalComponent>
-          <RevolutionaryFeaturesSpotlight />
-        </SafeOptionalComponent>
-      )}
-
-      {/* Disability Wizard - Standard+ only */}
-      {isFeatureVisible('standard') && (
-        <SafeOptionalComponent>
-          <DisabilityWizard maxSuggestions={3} showReasons={true} />
-        </SafeOptionalComponent>
-      )}
-
-      {/* Home Guide - Standard+ only */}
-      {isFeatureVisible('standard') && (
-        <SafeOptionalComponent>
-          <HomeGuide />
-        </SafeOptionalComponent>
-      )}
-
-      {/* Recent Prompts - Power User only */}
-      {isFeatureVisible('power_user') && <RecentPrompts />}
-      
-      {/* Beta Testers Chat - Standard+ only */}
-      {isFeatureVisible('standard') && <BetaTestersQuickLink />}
-
-      {/* SOS Button */}
+      {/* SOS Button (Always visible) */}
       <SafeOptionalComponent>
         <SOSButton />
       </SafeOptionalComponent>
 
-      <Text style={[textStyles.caption, { color: palette.textSecondary, marginTop: 12 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
-        {t('home.personalization.note', 'Suggestions powered by the Disability Wizard (beta).')}
+      {/* Footer note */}
+      <Text
+        style={[textStyles.caption, { color: palette.textSecondary, marginTop: 12 }]}
+        maxFontSizeMultiplier={MAX_FONT_SCALE}
+      >
+        {t('home.footer.note', 'Evidence-first design. Your notes are private and encrypted.')}
       </Text>
     </ResponsiveScreenWrapper>
   );
@@ -682,29 +708,96 @@ HomeScreen.displayName = 'HomeScreen';
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  searchButton: {
-    paddingHorizontal: 12,
+  heroCTA: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    minHeight: 80,
+    ...createShadow({
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 3 },
+      shadowOpacity: 0.2,
+      shadowRadius: 6,
+      elevation: 6,
+    }),
+  },
+  heroIconContainer: {
+    marginRight: 12,
+  },
+  heroTextContainer: {
+    flex: 1,
+  },
+  heroTitle: {
+    fontWeight: '700',
+    marginBottom: 4,
+    lineHeight: 24,
+  },
+  heroSubtitle: {
+    fontWeight: '500',
+    opacity: 0.9,
+    lineHeight: 18,
+  },
+  nextActionCard: {
+    borderRadius: 12,
+    borderWidth: 2,
+    padding: 16,
+    marginBottom: 16,
+    ...createShadow({
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 4,
+      elevation: 3,
+    }),
+  },
+  nextActionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
+  nextActionBadge: {
+    fontWeight: '700',
+    letterSpacing: 1,
+  },
+  nextActionTitle: {
+    fontWeight: '700',
+    marginBottom: 4,
+    lineHeight: 22,
+  },
+  nextActionSubtitle: {
+    marginBottom: 12,
+    lineHeight: 20,
+  },
+  nextActionButton: {
+    borderRadius: 8,
     paddingVertical: 12,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+  },
+  nextActionButtonText: {
+    fontWeight: '600',
+  },
+  quickActionsRow: {
+    flexDirection: 'row',
+    marginBottom: 16,
+  },
+  quickActionButton: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 8,
     borderWidth: 1.5,
-    minHeight: 50,
-    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 8,
+    minHeight: 72,
   },
-  askButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 14,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: 48,
-  },
-  wizardButton: {
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    borderRadius: 8,
-    marginBottom: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: 60,
+  quickActionText: {
+    fontWeight: '600',
+    marginTop: 6,
+    textAlign: 'center',
   },
 });
