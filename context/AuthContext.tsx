@@ -99,10 +99,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               const res = await getIdTokenResult(firebaseUser, true);
               // Super Admin OR General Admin (via custom claims)
               setIsAdmin(isSuperAdminUser || Boolean((res.claims as any)?.admin));
-              if (__DEV__) logger.log('[AuthContext] Claims refreshed', {
+              if (__DEV__) {logger.log('[AuthContext] Claims refreshed', {
                 isSuperAdmin: isSuperAdminUser,
                 hasAdminClaim: Boolean((res.claims as any)?.admin)
-              });
+              });}
             } catch (error) {
               logger.warn('[AuthContext] Failed to refresh claims', {
                 error: error instanceof Error ? error.message : 'Unknown',
