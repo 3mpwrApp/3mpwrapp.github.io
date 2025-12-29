@@ -21,7 +21,7 @@ import { useTranslation } from '../../../i18n';
 import {
   getCollectiveInsights,
   getUserContributionStats,
-  optOutOfCollectiveEvidence,
+  optOut,
   type CollectiveInsights,
   type DetectedPattern,
 } from '../../../services/collectiveEvidence';
@@ -37,7 +37,7 @@ export default function CollectiveEvidenceScreen() {
   const styles = createStyles(palette);
 
   const [insights, setInsights] = useState<CollectiveInsights | null>(null);
-  const [userStats, setUserStats] = useState<{ contributionCount: number; lastContributed: Date | null } | null>(null);
+  const [userStats, setUserStats] = useState<{ optedIn: boolean; contributionCount: number; lastContribution?: number } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [showOptOutConfirm, setShowOptOutConfirm] = useState(false);
@@ -69,16 +69,16 @@ export default function CollectiveEvidenceScreen() {
 
   const handleOptOut = useCallback(async () => {
     try {
-      await optOutOfCollectiveEvidence();
+      await optOut();
       router.back();
     } catch (error) {
       console.error('Error opting out:', error);
     }
   }, [router]);
 
-  const handlePatternPress = useCallback((pattern: DetectedPattern) => {
+  const handlePatternPress = useCallback((_pattern: DetectedPattern) => {
     // Could navigate to detailed view or show modal
-    console.log('Pattern pressed:', pattern.id);
+    // TODO: Implement pattern detail view
   }, []);
 
   const renderPattern = useCallback(
@@ -258,13 +258,13 @@ export default function CollectiveEvidenceScreen() {
                 {t('collective.evidenceShared', 'Evidence Shared')}
               </Text>
             </View>
-            {userStats.lastContributed && (
+            {userStats.lastContribution && (
               <View style={styles.statItem}>
                 <Text
                   style={[styles.statValue, { fontSize: Math.round(14 * factor), color: palette.text }]}
                   maxFontSizeMultiplier={MAX_FONT_SCALE}
                 >
-                  {new Date(userStats.lastContributed).toLocaleDateString()}
+                  {new Date(userStats.lastContribution).toLocaleDateString()}
                 </Text>
                 <Text
                   style={[styles.statLabel, { fontSize: Math.round(12 * factor), color: palette.textSecondary }]}
@@ -383,7 +383,7 @@ export default function CollectiveEvidenceScreen() {
                 hitSlop={HIT_SLOP_8}
               >
                 <Text
-                  style={[styles.confirmButtonText, { fontSize: Math.round(14 * factor), color: '#FFFFFF' }]}
+                  style={[styles.confirmButtonText, { fontSize: Math.round(14 * factor), color: palette.onPrimary }]}
                   maxFontSizeMultiplier={MAX_FONT_SCALE}
                 >
                   {t('collective.optOutConfirm.confirm', 'Yes, Opt Out')}
@@ -411,7 +411,7 @@ export default function CollectiveEvidenceScreen() {
   );
 }
 
-function createStyles(palette: ReturnType<typeof useAppPalette>) {
+function createStyles(_palette: ReturnType<typeof useAppPalette>) {
   return StyleSheet.create({
     container: {
       flex: 1,
@@ -458,7 +458,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       padding: 16,
       marginBottom: 16,
       ...createShadow({
-        shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
@@ -500,7 +499,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       padding: 24,
       alignItems: 'center',
       ...createShadow({
-        shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
@@ -551,7 +549,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       borderRadius: 12,
       padding: 16,
       ...createShadow({
-        shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
@@ -621,7 +618,6 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       maxWidth: 400,
       width: '100%',
       ...createShadow({
-        shadowColor: '#000',
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.2,
         shadowRadius: 8,

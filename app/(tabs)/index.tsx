@@ -31,11 +31,9 @@ import { useTranslation } from '../../i18n';
 import type { Celebration } from '../../services/celebrations';
 import { checkCelebrations, markCelebrationSeen } from '../../services/celebrations';
 import {
-  checkShouldShowOptIn,
-  hasUserOptedInToCollectiveEvidence,
-  optInToCollectiveEvidence,
+  getOptInState,
+  optIn,
 } from '../../services/collectiveEvidence';
-import { useComplexityMode } from '../../store/complexityMode';
 import { useTextScale } from '../../theme/typography';
 import { createTextStyles } from '../../theme/typography.enhanced';
 import { useAppPalette } from '../../theme/usePalette';
@@ -392,7 +390,7 @@ const NextBestAction = React.memo(({ evidenceCount }: { evidenceCount: number })
       </Text>
       <View style={[styles.nextActionButton, { backgroundColor: palette.info }]}>
         <Text
-          style={[styles.nextActionButtonText, { fontSize: Math.round(14 * factor), color: '#FFFFFF' }]}
+          style={[styles.nextActionButtonText, { fontSize: Math.round(14 * factor), color: palette.onPrimary }]}
           maxFontSizeMultiplier={MAX_FONT_SCALE}
         >
           {action.cta} →
@@ -411,7 +409,6 @@ const HomeScreen = React.memo(() => {
   const { factor } = useTextScale();
   const titleRef = React.useRef<Text>(null);
   const router = useRouter();
-  const { isFeatureVisible } = useComplexityMode();
 
   // State
   const [celebration, setCelebration] = React.useState<Celebration | null>(null);
@@ -463,10 +460,10 @@ const HomeScreen = React.memo(() => {
   React.useEffect(() => {
     const checkOptIn = async () => {
       try {
-        const hasOptedIn = await hasUserOptedInToCollectiveEvidence();
-        if (!hasOptedIn) {
-          const shouldShow = await checkShouldShowOptIn();
-          setShowCollectiveOptIn(shouldShow);
+        const optInState = await getOptInState();
+        // Show opt-in banner if user has 3+ evidence and hasn't opted in yet
+        if (!optInState.optedIn && evidenceCount >= 3) {
+          setShowCollectiveOptIn(true);
         }
       } catch (error) {
         logError('HomeScreen', 'Check collective opt-in', error as Error);
@@ -543,7 +540,7 @@ const HomeScreen = React.memo(() => {
 
   const handleCollectiveOptIn = async () => {
     try {
-      await optInToCollectiveEvidence();
+      await optIn();
       setShowCollectiveOptIn(false);
     } catch (error) {
       logError('HomeScreen', 'Collective opt-in', error as Error);
@@ -603,13 +600,13 @@ const HomeScreen = React.memo(() => {
         </View>
         <View style={styles.heroTextContainer}>
           <Text
-            style={[styles.heroTitle, { fontSize: Math.round(18 * factor), color: '#FFFFFF' }]}
+            style={[styles.heroTitle, { fontSize: Math.round(18 * factor), color: palette.onPrimary }]}
             maxFontSizeMultiplier={MAX_FONT_SCALE}
           >
             {t('home.hero.title', 'Document What Happened')}
           </Text>
           <Text
-            style={[styles.heroSubtitle, { fontSize: Math.round(13 * factor), color: '#FFFFFF' }]}
+            style={[styles.heroSubtitle, { fontSize: Math.round(13 * factor), color: palette.onPrimary }]}
             maxFontSizeMultiplier={MAX_FONT_SCALE}
           >
             {t('home.hero.subtitle', 'Save evidence in your own words')}
@@ -716,7 +713,6 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     minHeight: 80,
     ...createShadow({
-      shadowColor: '#000',
       shadowOffset: { width: 0, height: 3 },
       shadowOpacity: 0.2,
       shadowRadius: 6,
@@ -745,7 +741,6 @@ const styles = StyleSheet.create({
     padding: 16,
     marginBottom: 16,
     ...createShadow({
-      shadowColor: '#000',
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.1,
       shadowRadius: 4,

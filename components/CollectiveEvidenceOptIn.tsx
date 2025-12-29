@@ -133,7 +133,7 @@ export default function CollectiveEvidenceOptIn({
             hitSlop={HIT_SLOP_8}
           >
             <Text
-              style={[styles.primaryButtonText, { fontSize: Math.round(14 * factor), color: '#FFFFFF' }]}
+              style={[styles.primaryButtonText, { fontSize: Math.round(14 * factor), color: palette.onPrimary }]}
               maxFontSizeMultiplier={MAX_FONT_SCALE}
             >
               {t('collective.optIn.joinButton', 'Yes, Count Me In')} ✊
@@ -434,7 +434,7 @@ export default function CollectiveEvidenceOptIn({
               hitSlop={HIT_SLOP_8}
             >
               <Text
-                style={[styles.modalJoinButtonText, { fontSize: Math.round(16 * factor), color: '#FFFFFF' }]}
+                style={[styles.modalJoinButtonText, { fontSize: Math.round(16 * factor), color: palette.onPrimary }]}
                 maxFontSizeMultiplier={MAX_FONT_SCALE}
               >
                 {t('collective.privacy.joinButton', 'Yes, Count Me In')} ✊
