@@ -596,7 +596,7 @@ const HomeScreen = React.memo(() => {
         hitSlop={HIT_SLOP_8}
       >
         <View style={styles.heroIconContainer}>
-          <Ionicons name="folder-open" size={32} color="#FFFFFF" />
+          <Ionicons name="folder-open" size={32} color={palette.onPrimary} />
         </View>
         <View style={styles.heroTextContainer}>
           <Text
@@ -612,7 +612,7 @@ const HomeScreen = React.memo(() => {
             {t('home.hero.subtitle', 'Save evidence in your own words')}
           </Text>
         </View>
-        <Ionicons name="chevron-forward" size={28} color="#FFFFFF" />
+        <Ionicons name="chevron-forward" size={28} color={palette.onPrimary} />
       </A11yPressable>
 
       {/* Evidence Timeline Widget */}
