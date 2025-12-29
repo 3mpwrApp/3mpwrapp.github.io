@@ -6,7 +6,6 @@
  */
 
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -44,7 +43,6 @@ export default function EvidenceTimeline({
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette);
-  const router = useRouter();
 
   // Determine progress message based on count
   const getProgressMessage = () => {
@@ -110,7 +108,6 @@ export default function EvidenceTimeline({
   return (
     <View
       style={styles.container}
-      accessibilityRole="region"
       accessibilityLabel={t('home.evidence.section', 'Evidence timeline section')}
     >
       {/* Progress Header */}
@@ -128,7 +125,6 @@ export default function EvidenceTimeline({
       {/* Progress Message */}
       <View
         style={[styles.progressCard, { borderLeftColor: getProgressColor() }]}
-        accessibilityRole="status"
         accessibilityLabel={getProgressMessage()}
       >
         <Text style={styles.progressIcon}>{getProgressIcon()}</Text>
