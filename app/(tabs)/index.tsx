@@ -12,8 +12,19 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import analytics from '@react-native-firebase/analytics';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+
+// Firebase Analytics (native only)
+let analytics: any;
+try {
+  if (Platform.OS !== 'web') {
+    analytics = require('@react-native-firebase/analytics').default;
+  }
+} catch {
+  analytics = () => ({
+    logEvent: async () => {},
+  });
+}
 
 import A11yPressable from '../../components/A11yPressable';
 import CelebrationToast from '../../components/CelebrationToast';

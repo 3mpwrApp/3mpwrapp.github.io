@@ -13,8 +13,19 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
-import { Modal, ScrollView, StyleSheet, Text, View } from 'react-native';
-import analytics from '@react-native-firebase/analytics';
+import { Modal, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
+
+// Firebase Analytics (native only)
+let analytics: any;
+try {
+  if (Platform.OS !== 'web') {
+    analytics = require('@react-native-firebase/analytics').default;
+  }
+} catch {
+  analytics = () => ({
+    logEvent: async () => {},
+  });
+}
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
