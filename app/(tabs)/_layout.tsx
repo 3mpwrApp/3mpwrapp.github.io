@@ -1,6 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Tabs } from "expo-router";
-import { StyleSheet, useColorScheme } from "react-native";
+import { Tabs , useRouter } from "expo-router";
+import { Pressable, StyleSheet, useColorScheme , Alert, Linking } from "react-native";
 
 import VoiceController from "../../components/VoiceController";
 import { useTranslation } from "../../i18n";
@@ -12,14 +12,79 @@ export default function TabsLayout() {
   const activeTint = palette.primary;
   const inactiveTint = palette.muted;
   const { t } = useTranslation();
+  const router = useRouter();
   // Unread badge for Inbox (tab hidden) — not used currently
+
+  // SOS Crisis Menu Handler
+  const showCrisisMenu = () => {
+    Alert.alert(
+      '🆘 Crisis Support',
+      'Choose immediate support:',
+      [
+        {
+          text: '📞 Call 988 (Suicide & Crisis)',
+          onPress: () => Linking.openURL('tel:988'),
+        },
+        {
+          text: '💬 Crisis Text Line',
+          onPress: () => Linking.openURL('sms:741741&body=HOME'),
+        },
+        {
+          text: '🛟 Emotional First Aid',
+          onPress: () => router.push('/(tabs)/wellness/emotional-first-aid'),
+        },
+        {
+          text: '⚡ Quick Exit',
+          onPress: () => {
+            // Quick escape to innocuous screen
+            Linking.openURL('https://weather.com').catch(() => {});
+          },
+        },
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+      ],
+      { cancelable: true }
+    );
+  };
+
+  // SOS Header Button Component
+  const SOSHeaderButton = () => (
+    <Pressable
+      onPress={showCrisisMenu}
+      style={{
+        marginRight: 16,
+        backgroundColor: palette.error,
+        paddingHorizontal: 12,
+        paddingVertical: 6,
+        borderRadius: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 6,
+      }}
+      accessibilityRole="button"
+      accessibilityLabel="SOS Crisis Support - Tap for emergency resources"
+      hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+    >
+      <Ionicons name="warning" size={18} color={palette.onPrimary} />
+    </Pressable>
+  );
 
   return (
     <>
       <Tabs
         initialRouteName="index"
         screenOptions={{
-          headerShown: false,
+          headerShown: true,
+          headerRight: () => <SOSHeaderButton />,
+          headerStyle: {
+            backgroundColor: palette.surface,
+          },
+          headerTintColor: palette.text,
+          headerTitleStyle: {
+            fontWeight: '600',
+          },
           // Lazy render tab screens on first focus to reduce initial bundle work
           lazy: true,
           tabBarActiveTintColor: activeTint,

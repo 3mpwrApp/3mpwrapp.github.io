@@ -127,12 +127,16 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
 
     // Use platform-specific redirect URI
     // For all platforms, use AuthSession.makeRedirectUri which handles:
-    // - Web: Returns the current web URL with the callback path
-    // - Native/Preview: Returns the proper deep link URI based on app config
+    // - Web: Returns the current web URL with the callback path (https://3mpwrapp.pages.dev/gdrive-callback)
+    // - Native/Preview: Uses the app's custom scheme (empowrapp://gdrive-callback)
+    // This ensures the redirect URI is registered in Google Cloud Console
     const redirectUri = AuthSession.makeRedirectUri({
-      // Use 'native' for preview builds to ensure proper deep linking
-      scheme: Platform.OS === 'web' ? undefined : 'exp',
-      path: 'gdrive-callback'
+      // Use the app's custom scheme for non-web platforms
+      scheme: Platform.OS === 'web' ? undefined : 'empowrapp',
+      path: 'gdrive-callback',
+      // For native, prefer the custom scheme over exp://
+      preferLocalhost: false,
+      native: Platform.OS === 'web' ? undefined : 'empowrapp://gdrive-callback'
     });
 
     logger.log('[GDrive] Platform:', Platform.OS);
@@ -187,7 +191,7 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
             (result.params?.error_description && result.params.error_description.includes('redirect_uri'))) {
           return {
             success: false,
-            error: `Authorization blocked: The redirect URI (${redirectUri}) is not registered in your Google Cloud Console. Please add it to your OAuth 2.0 Client ID's authorized redirect URIs.`
+            error: `Authorization blocked: Redirect URI mismatch\n\nThe redirect URI "${redirectUri}" is not registered in Google Cloud Console.\n\nPlease add these URIs to your OAuth 2.0 Client ID:\n• empowrapp://gdrive-callback (for app)\n• https://3mpwrapp.pages.dev/gdrive-callback (for web)\n\nGo to: Google Cloud Console → APIs & Services → Credentials → Your OAuth Client ID → Authorized redirect URIs`
           };
         }
 
