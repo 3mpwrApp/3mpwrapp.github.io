@@ -15,16 +15,20 @@ import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
 import { Modal, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-// Firebase Analytics (native only)
+// Firebase Analytics (handled by metro.config.js - empty module on web)
 let analytics: any;
 try {
-  if (Platform.OS !== 'web') {
-    analytics = require('@react-native-firebase/analytics').default;
+  analytics = require('@react-native-firebase/analytics').default;
+  if (typeof analytics === 'function') {
+    analytics = analytics(); // Call if it's a function
   }
 } catch {
-  analytics = () => ({
-    logEvent: async () => {},
-  });
+  // Fallback if module not available
+  analytics = { logEvent: async () => {} };
+}
+if (!analytics || typeof analytics.logEvent !== 'function') {
+  // Ensure analytics has logEvent method
+  analytics = { logEvent: async () => {} };
 }
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
