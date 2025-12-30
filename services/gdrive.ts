@@ -125,19 +125,12 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       revocationEndpoint: 'https://oauth2.googleapis.com/revoke',
     };
 
-    // Use platform-specific redirect URI
-    // For all platforms, use AuthSession.makeRedirectUri which handles:
-    // - Web: Returns the current web URL with the callback path (https://3mpwrapp.pages.dev/gdrive-callback)
-    // - Native/Preview: Uses the app's custom scheme (empowrapp://gdrive-callback)
-    // This ensures the redirect URI is registered in Google Cloud Console
-    const redirectUri = AuthSession.makeRedirectUri({
-      // Use the app's custom scheme for non-web platforms
-      scheme: Platform.OS === 'web' ? undefined : 'empowrapp',
-      path: 'gdrive-callback',
-      // For native, prefer the custom scheme over exp://
-      preferLocalhost: false,
-      native: Platform.OS === 'web' ? undefined : 'empowrapp://gdrive-callback'
-    });
+    // Use web redirect URI for ALL platforms (Google OAuth doesn't support custom schemes)
+    // For native apps, we redirect to web page first, then web page deep-links back to app
+    // This is the standard OAuth flow for mobile apps using web OAuth clients
+    const redirectUri = Platform.OS === 'web'
+      ? AuthSession.makeRedirectUri({ path: 'gdrive-callback' })
+      : 'https://3mpwrapp.pages.dev/gdrive-callback';
 
     logger.log('[GDrive] Platform:', Platform.OS);
     logger.log('[GDrive] Client ID:', clientId);
@@ -191,7 +184,7 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
             (result.params?.error_description && result.params.error_description.includes('redirect_uri'))) {
           return {
             success: false,
-            error: `Authorization blocked: Redirect URI mismatch\n\nThe redirect URI "${redirectUri}" is not registered in Google Cloud Console.\n\nPlease add these URIs to your OAuth 2.0 Client ID:\n• empowrapp://gdrive-callback (for app)\n• https://3mpwrapp.pages.dev/gdrive-callback (for web)\n\nGo to: Google Cloud Console → APIs & Services → Credentials → Your OAuth Client ID → Authorized redirect URIs`
+            error: `Authorization blocked: Redirect URI mismatch\n\nThe redirect URI "${redirectUri}" is not registered in Google Cloud Console.\n\nPlease add this URI to your OAuth 2.0 Client ID:\n• https://3mpwrapp.pages.dev/gdrive-callback\n\nGo to: Google Cloud Console → APIs & Services → Credentials → Your OAuth Client ID → Authorized redirect URIs`
           };
         }
 
