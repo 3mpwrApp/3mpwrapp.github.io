@@ -12,7 +12,7 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import {
     ActivityIndicator,
@@ -54,6 +54,7 @@ import { useAppPalette } from '../../../theme/usePalette';
 export default function AdminPanel() {
   const { t: _t } = useTranslation();
   const palette = useAppPalette();
+  const router = useRouter();
   const { mode } = useComplexityMode();
   const { costAlertsEnabled, setCostAlertsEnabled } = useDevPrefs();
   const [loading, setLoading] = useState(true);
@@ -305,6 +306,19 @@ export default function AdminPanel() {
                   </View>
 
                   <GapView style={{ height: 12 }} />
+
+                  <A11yPressable
+                    onPress={() => router.push('/settings/admin-analytics')}
+                    accessibilityRole="button"
+                    accessibilityLabel="View Phase 2 Analytics Dashboard"
+                    hitSlop={HIT_SLOP_8}
+                    style={[styles.secondaryButton, { backgroundColor: palette.primary, borderColor: palette.primary }]}
+                  >
+                    <Ionicons name="analytics-outline" size={18} color={palette.onPrimary} />
+                    <Text style={[styles.secondaryButtonText, { color: palette.onPrimary }]}>Phase 2 Analytics</Text>
+                  </A11yPressable>
+
+                  <GapView style={{ height: 8 }} />
 
                   <A11yPressable
                     onPress={async () => {

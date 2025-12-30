@@ -12,6 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useState } from 'react';
 import { RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native';
+import analytics from '@react-native-firebase/analytics';
 
 import A11yPressable from '../../../components/A11yPressable';
 import GapView from '../../../components/GapView';
@@ -28,6 +29,7 @@ import {
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
 import { createShadow } from '../../../utils/shadow';
+import { logError } from '../../../utils/errorLogger';
 
 export default function CollectiveEvidenceScreen() {
   const { t } = useTranslation();
@@ -62,6 +64,24 @@ export default function CollectiveEvidenceScreen() {
     loadData();
   }, [loadData]);
 
+  // Track dashboard view
+  useEffect(() => {
+    const trackDashboardView = async () => {
+      if (userStats && insights !== undefined) {
+        try {
+          await analytics().logEvent('collective_dashboard_view', {
+            opted_in: userStats.optedIn,
+            contribution_count: userStats.contributionCount,
+            patterns_available: insights?.patterns.length || 0,
+          });
+        } catch (error) {
+          logError('CollectiveEvidenceScreen', 'Dashboard view analytics', error as Error);
+        }
+      }
+    };
+    trackDashboardView();
+  }, [userStats, insights]);
+
   const handleRefresh = useCallback(async () => {
     setIsRefreshing(true);
     await loadData();
@@ -69,14 +89,31 @@ export default function CollectiveEvidenceScreen() {
 
   const handleOptOut = useCallback(async () => {
     try {
+      // Track opt-out analytics
+      await analytics().logEvent('collective_opt_out', {
+        contribution_count: userStats?.contributionCount || 0,
+        days_opted_in: userStats?.lastContribution
+          ? Math.floor((Date.now() - userStats.lastContribution) / 86400000)
+          : 0,
+      });
       await optOut();
       router.back();
     } catch (error) {
+      logError('CollectiveEvidenceScreen', 'Opt-out analytics', error as Error);
       console.error('Error opting out:', error);
     }
-  }, [router]);
+  }, [router, userStats]);
 
-  const handlePatternPress = useCallback((_pattern: DetectedPattern) => {
+  const handlePatternPress = useCallback(async (pattern: DetectedPattern) => {
+    try {
+      await analytics().logEvent('collective_pattern_view', {
+        pattern_type: pattern.type,
+        frequency: pattern.frequency,
+        user_count: pattern.userCount,
+      });
+    } catch (error) {
+      logError('CollectiveEvidenceScreen', 'Pattern view analytics', error as Error);
+    }
     // Could navigate to detailed view or show modal
     // TODO: Implement pattern detail view
   }, []);

@@ -88,6 +88,14 @@ export default function SettingsLayout() {
         name="security"
         options={{ title: 'Security' }}
       />
+      <Stack.Screen
+        name="admin"
+        options={{ title: 'Admin Panel' }}
+      />
+      <Stack.Screen
+        name="admin-analytics"
+        options={{ title: 'Analytics Dashboard' }}
+      />
     </Stack>
   );
 }

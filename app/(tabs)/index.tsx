@@ -13,6 +13,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import analytics from '@react-native-firebase/analytics';
 
 import A11yPressable from '../../components/A11yPressable';
 import CelebrationToast from '../../components/CelebrationToast';
@@ -337,6 +338,7 @@ const NextBestAction = React.memo(({ evidenceCount }: { evidenceCount: number })
         subtitle: t('home.nextAction.firstEvidence.subtitle', 'Document what happened in your own words'),
         cta: t('home.nextAction.firstEvidence.cta', 'Add First Note'),
         route: '/(tabs)/advocacy/evidence-locker',
+        actionType: 'first_evidence',
       };
     }
     if (evidenceCount <= 2) {
@@ -346,6 +348,7 @@ const NextBestAction = React.memo(({ evidenceCount }: { evidenceCount: number })
         subtitle: t('home.nextAction.moreEvidence.subtitle', 'Add 2-3 more notes for a strong foundation'),
         cta: t('home.nextAction.moreEvidence.cta', 'Add More Evidence'),
         route: '/(tabs)/advocacy/evidence-locker',
+        actionType: 'more_evidence',
       };
     }
     return {
@@ -354,14 +357,27 @@ const NextBestAction = React.memo(({ evidenceCount }: { evidenceCount: number })
       subtitle: t('home.nextAction.generateLetter.subtitle', 'Turn your evidence into a professional appeal'),
       cta: t('home.nextAction.generateLetter.cta', 'Generate Letter'),
       route: '/(tabs)/advocacy/letter-wizard',
+      actionType: 'generate_letter',
     };
   };
 
   const action = getNextAction();
 
+  const handleNextActionPress = async () => {
+    try {
+      await analytics().logEvent('next_best_action_click', {
+        action_type: action.actionType,
+        evidence_count: evidenceCount,
+      });
+    } catch (error) {
+      logError('HomeScreen', 'Next action analytics', error as Error);
+    }
+    router.push(action.route as any);
+  };
+
   return (
     <A11yPressable
-      onPress={() => router.push(action.route as any)}
+      onPress={handleNextActionPress}
       style={[styles.nextActionCard, { backgroundColor: palette.info + '10', borderColor: palette.info }]}
       accessibilityLabel={`${action.title}. ${action.subtitle}`}
       accessibilityHint={t('home.nextAction.hint', 'Double tap to continue')}
@@ -551,7 +567,28 @@ const HomeScreen = React.memo(() => {
     setShowCollectiveOptIn(false);
   };
 
-  const handleViewAllEvidence = () => {
+  const handleViewAllEvidence = async () => {
+    try {
+      await analytics().logEvent('evidence_timeline_view_all', {
+        evidence_count: evidenceCount,
+        recent_evidence_count: recentEvidence.length,
+      });
+    } catch (error) {
+      logError('HomeScreen', 'View all evidence analytics', error as Error);
+    }
+    router.push('/(tabs)/advocacy/evidence-locker' as any);
+  };
+
+  const handleHeroCTAPress = async () => {
+    try {
+      await analytics().logEvent('evidence_hero_cta_click', {
+        screen: 'home',
+        evidence_count: evidenceCount,
+        user_type: evidenceCount === 0 ? 'new' : 'returning',
+      });
+    } catch (error) {
+      logError('HomeScreen', 'Hero CTA analytics', error as Error);
+    }
     router.push('/(tabs)/advocacy/evidence-locker' as any);
   };
 
@@ -588,7 +625,7 @@ const HomeScreen = React.memo(() => {
 
       {/* HERO CTA - Evidence Collection (80px tall, green, unmissable) */}
       <A11yPressable
-        onPress={() => router.push('/(tabs)/advocacy/evidence-locker' as any)}
+        onPress={handleHeroCTAPress}
         style={[styles.heroCTA, { backgroundColor: palette.success }]}
         accessibilityRole="button"
         accessibilityLabel={t('home.hero.label', 'Document what happened - Add evidence')}

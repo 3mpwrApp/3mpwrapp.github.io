@@ -12,8 +12,9 @@
  */
 
 import { Ionicons } from '@expo/vector-icons';
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, ScrollView, StyleSheet, Text, View } from 'react-native';
+import analytics from '@react-native-firebase/analytics';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
 import { MAX_FONT_SCALE } from '../hooks/useA11y';
@@ -21,6 +22,7 @@ import { useTranslation } from '../i18n';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
 import { createShadow } from '../utils/shadow';
+import { logError } from '../utils/errorLogger';
 
 import GapView from './GapView';
 import A11yPressable from './A11yPressable';
@@ -43,12 +45,54 @@ export default function CollectiveEvidenceOptIn({
 
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
 
-  const handleOptIn = () => {
+  // Track when banner is shown
+  useEffect(() => {
+    const trackBannerShown = async () => {
+      try {
+        await analytics().logEvent('collective_opt_in_banner_shown', {
+          evidence_count: evidenceCount,
+          trigger_reason: evidenceCount >= 3 ? 'threshold_met' : 'manual',
+        });
+      } catch (error) {
+        logError('CollectiveEvidenceOptIn', 'Banner shown analytics', error as Error);
+      }
+    };
+    trackBannerShown();
+  }, [evidenceCount]);
+
+  const handleOptIn = async () => {
+    try {
+      await analytics().logEvent('collective_opt_in_accepted', {
+        evidence_count: evidenceCount,
+        source: 'banner',
+      });
+    } catch (error) {
+      logError('CollectiveEvidenceOptIn', 'Opt-in analytics', error as Error);
+    }
     onOptIn();
   };
 
-  const handleLearnMore = () => {
+  const handleLearnMore = async () => {
+    try {
+      await analytics().logEvent('collective_opt_in_learn_more', {
+        evidence_count: evidenceCount,
+      });
+    } catch (error) {
+      logError('CollectiveEvidenceOptIn', 'Learn more analytics', error as Error);
+    }
     setShowPrivacyModal(true);
+  };
+
+  const handleDismiss = async () => {
+    try {
+      await analytics().logEvent('collective_opt_in_declined', {
+        evidence_count: evidenceCount,
+        reason: 'not_now',
+      });
+    } catch (error) {
+      logError('CollectiveEvidenceOptIn', 'Declined analytics', error as Error);
+    }
+    onDismiss();
   };
 
   const handleCloseModal = () => {
@@ -157,7 +201,7 @@ export default function CollectiveEvidenceOptIn({
             </A11yPressable>
 
             <A11yPressable
-              onPress={onDismiss}
+              onPress={handleDismiss}
               style={styles.secondaryButton}
               accessibilityRole="button"
               accessibilityLabel={t('collective.optIn.notNow', 'Not now')}
