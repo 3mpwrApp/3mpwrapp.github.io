@@ -112,10 +112,13 @@ function getGoogleClientId(): string | null {
  * Authenticate user with Google and request Drive API access
  */
 export async function authenticateGDrive(): Promise<GDriveAuthResult> {
+  logger.log('[GDrive] === Starting authentication flow ===');
   const clientId = getGoogleClientId();
   if (!clientId) {
+    logger.error('[GDrive] No client ID configured');
     return { success: false, error: 'Google client ID not configured' };
   }
+  logger.log('[GDrive] Client ID found, proceeding with OAuth');
 
   try {
     // Create the OAuth discovery document
@@ -259,6 +262,11 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
 
     await setGDriveConfig(config);
     logger.log('[GDrive] Authentication successful');
+    logger.log('[GDrive] Config saved:', { hasToken: !!config.accessToken, hasRefreshToken: !!config.refreshToken, hasFolderId: !!config.folderId });
+
+    // Verify it was saved
+    const verification = await AsyncStorage.getItem(GDRIVE_CONFIG_KEY);
+    logger.log('[GDrive] Verification - config persisted:', !!verification);
 
     return { success: true, config };
   } catch (error: any) {
