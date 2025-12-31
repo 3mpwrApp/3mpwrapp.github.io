@@ -29,31 +29,57 @@ export default function GDriveCallbackScreen() {
     // Get the full URL with query parameters
     const url = typeof window !== 'undefined' ? window.location.href : '';
 
+    console.log('[GDrive Callback] Platform:', Platform.OS);
     console.log('[GDrive Callback] URL:', url);
     console.log('[GDrive Callback] Params:', params);
+    console.log('[GDrive Callback] window.opener exists:', typeof window !== 'undefined' && !!window.opener);
 
     // Check if we're on web or native
     if (Platform.OS === 'web') {
       // On web: Close the OAuth popup and send code to parent window
       if (typeof window !== 'undefined' && window.opener) {
         console.log('[GDrive Callback] Sending auth result to parent window');
+        console.log('[GDrive Callback] Message payload:', { type: 'expo-auth-session', url });
 
         // Send the full URL back to the parent window
-        window.opener.postMessage(
-          {
-            type: 'expo-auth-session',
-            url: url,
-          },
-          '*' // In production, specify your domain: 'https://3mpwrapp.pages.dev'
-        );
+        // This is the format expo-auth-session expects
+        try {
+          window.opener.postMessage(
+            {
+              type: 'expo-auth-session',
+              url: url,
+            },
+            window.location.origin // Use same origin for security
+          );
+          console.log('[GDrive Callback] Message sent successfully');
+        } catch (error) {
+          console.error('[GDrive Callback] Error sending message:', error);
+        }
 
         // Close the popup after a short delay
         setTimeout(() => {
+          console.log('[GDrive Callback] Closing popup window');
           window.close();
-        }, 1000);
+        }, 1500);
       } else {
         // Not in a popup - might be direct navigation
         console.log('[GDrive Callback] Not in popup, redirecting to home');
+
+        // Extract auth code from URL and redirect to home with it
+        const urlObj = new URL(url);
+        const code = urlObj.searchParams.get('code');
+        const error = urlObj.searchParams.get('error');
+
+        if (code) {
+          console.log('[GDrive Callback] Auth code present, redirecting to home');
+          // Store the auth result temporarily
+          if (typeof window !== 'undefined' && window.sessionStorage) {
+            window.sessionStorage.setItem('gdrive_auth_code', code);
+          }
+        } else if (error) {
+          console.error('[GDrive Callback] OAuth error:', error);
+        }
+
         router.replace('/');
       }
     } else {
