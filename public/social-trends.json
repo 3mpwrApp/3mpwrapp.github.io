@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-12-30T18:02:57.234Z",
+  "lastUpdated": "2025-12-31T00:06:29.393Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 6960,
+      "totalPosts": 6985,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-30T18:02:48.402Z"
+      "lastSeen": "2025-12-31T00:06:20.475Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 6911,
+      "totalPosts": 6934,
       "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2025-12-30T18:02:50.349Z"
+      "lastSeen": "2025-12-31T00:06:22.421Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 6852,
+      "totalPosts": 6877,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-30T18:02:52.398Z"
+      "lastSeen": "2025-12-31T00:06:24.444Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 6966,
+      "totalPosts": 6991,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-30T18:02:54.309Z"
+      "lastSeen": "2025-12-31T00:06:26.419Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 6950,
+      "totalPosts": 6975,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2025-12-30T18:02:56.231Z"
+      "lastSeen": "2025-12-31T00:06:28.391Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "On touchscreens and UI controls acuity.design/touchscreens... as Wired has article about car controls and buttons. We did a lot of work on this about 10 years ago. #accessibility",
-      "author": "acuity.design",
-      "engagement": 65,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
-      "author": "xirclebox.com",
-      "engagement": 41,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I think my introduction to Alice Wong came when @sesmith.lol wrote about the #CripTheVote movement",
-      "author": "wentrogue.bsky.social",
-      "engagement": 14,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
-      "author": "phil-brighton.bsky.social",
-      "engagement": 53,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "The Yorkshire Dales Access Hub is a one‑stop online resource designed to make the outdoors more accessible -  helping people with a wide range of disabilities plan their perfect visit to the National Park. \n\n👉 https://accesshub.yorkshiredales.org.uk/\n\n📷 Andy Kay | #YorkshireDales #Accessibility",
-      "author": "yorkshiredales.org.uk",
-      "engagement": 16,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "On touchscreens and UI controls acuity.design/touchscreens... as Wired has article about car controls and buttons. We did a lot of work on this about 10 years ago. #accessibility",
-      "author": "acuity.design",
-      "engagement": 96,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Woke up this morning and saw that my first Chrome extension has been published! I have been using it locally for a while now and figured I'd submit it for everyone else to use.\n\nchromewebstore.google.com/detail/lgfli...\n\n#A11y #Accessibility #WebDev #Design",
       "author": "xirclebox.com",
@@ -338,83 +296,125 @@
       "author": "wentrogue.bsky.social",
       "engagement": 14,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "If you oppose\n- #HumanRights\n- #WomensRights\n- #DisabilityRights\netc\n\nTo say\n-Certain people don't deserve human rights\n-your personal/religious beliefs should control women's bodies\n-disabilities don't deserve equality\netc\n\nThis isn't 'thinking differently'; it's a difference of morals w/ #humanity",
+      "author": "authorstuartmiller.bsky.social",
+      "engagement": 21,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Nu for starshumansnests.com/ages - Ages, a joyous celebration of our amazing human bodies, at whatever age we happen to be.\n\n#realBodies #disabilityRights #lgbtqi #trans #nakedInPublic #nude\n\nLike it? Share it 🙂",
+      "author": "phil-brighton.bsky.social",
+      "engagement": 132,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Hey Jon Stewart, Jokes About Wearing Masks Aren’t Funny\n\n#MaskUp #CovidIsNotOver #DisabilityJustice  \n\nwww.motherjones.com/politics/202...",
+      "author": "thunderhoneysnow.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Vor einer Woche lief mein Text „Die Grenzen der Autonomie“ im Dlf — ich habe das Stück live im Radio gehört und bin, obwohl ich den Text geschrieben und oft gelesen habe, in Tränen ausgebrochen, an der Stelle mit dem Dinosaurier 🦕 #MECFS #CureMECFS #disabilityjustice #criptime #crip4crip",
+      "author": "janaxpetersen.bsky.social",
+      "engagement": 32,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "i want to hear from people who use screen readers: what makes alt text useful to you? what doesn't help?\n\n#accessibility #a11y #blind #alttext",
+      "author": "micr0.wetdry.world.ap.brid.gy",
+      "engagement": 23,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "i want to hear from people who use screen readers: what makes alt text useful to you? what doesn't help?\n\n#accessibility #a11y #blind #alttext",
+      "author": "micr0.wetdry.world.ap.brid.gy",
+      "engagement": 23,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 39
+      "count": 40
     },
     {
       "keyword": "accessibility",
-      "count": 35
-    },
-    {
-      "keyword": "cripthevote",
-      "count": 28
+      "count": 36
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 30
+    },
+    {
+      "keyword": "cripthevote",
+      "count": 29
     },
     {
       "keyword": "disabilityjustice",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "altcitizen",
-      "count": 14
+      "count": 16
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 14
+      "count": 16
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 14
+      "count": 16
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 12
+      "count": 14
     },
     {
       "keyword": "foxtakedown",
-      "count": 9
+      "count": 11
     },
     {
       "keyword": "stoptrump",
-      "count": 9
+      "count": 11
     },
     {
       "keyword": "wearetheflood",
-      "count": 9
+      "count": 11
     },
     {
       "keyword": "50501movement",
-      "count": 9
+      "count": 11
     },
     {
       "keyword": "disabilityrebellion stoptrump",
-      "count": 9
+      "count": 11
     },
     {
       "keyword": "stoptheliesfox",
-      "count": 7
+      "count": 9
     },
     {
       "keyword": "virtual",
-      "count": 7
+      "count": 9
     },
     {
       "keyword": "foxlies",
-      "count": 7
+      "count": 9
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 7
+      "keyword": "disability",
+      "count": 8
     },
     {
-      "keyword": "digitalaccessibility",
+      "keyword": "accessibility a11y",
       "count": 7
     },
     {
