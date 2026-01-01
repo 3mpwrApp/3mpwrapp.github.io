@@ -46,6 +46,7 @@ export default function BYOCSettingsScreen() {
   const [showPassword, setShowPassword] = useState(false);
   const [testing, setTesting] = useState(false);
   const [connected, setConnected] = useState(false);
+  const [isAuthenticating, setIsAuthenticating] = useState(false);
 
   const titleRef = React.useRef<Text>(null);
   const mode = getDataPolicyMode();
@@ -54,7 +55,17 @@ export default function BYOCSettingsScreen() {
   // Load existing config on mount and when screen gets focus
   React.useEffect(() => {
     const checkConfig = () => {
+      // Skip config checks while OAuth is in progress
+      if (isAuthenticating) {
+        console.log('[BYOC] Skipping config check - authentication in progress');
+        return;
+      }
+
       const config = getBYOCConfig();
+      const gdriveConfigured = isGDriveConfigured();
+
+      console.log('[BYOC] checkConfig:', { hasConfig: !!config, gdriveConfigured });
+
       if (config) {
         setSelectedProvider(config.kind);
         setConnected(true);
@@ -63,9 +74,16 @@ export default function BYOCSettingsScreen() {
           setWebdavUsername(config.username || '');
           // Don't show password for security
         }
-      } else if (isGDriveConfigured()) {
+      } else if (gdriveConfigured) {
         setSelectedProvider('gdrive');
         setConnected(true);
+      } else {
+        // No config found - reset to disconnected state
+        setSelectedProvider(null);
+        setConnected(false);
+        setWebdavEndpoint('');
+        setWebdavUsername('');
+        setWebdavPassword('');
       }
     };
 
@@ -74,7 +92,7 @@ export default function BYOCSettingsScreen() {
     // Check again when screen gets focus (e.g., after OAuth redirect)
     const intervalId = setInterval(checkConfig, 1000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [isAuthenticating]);
 
   const handleTestConnection = async () => {
     console.log('[BYOC] handleTestConnection called, provider:', selectedProvider);
@@ -121,6 +139,7 @@ export default function BYOCSettingsScreen() {
     } else if (selectedProvider === 'gdrive') {
       // Google Drive OAuth flow
       console.log('[BYOC] Starting Google Drive OAuth flow...');
+      setIsAuthenticating(true);
       try {
         console.log('[BYOC] Importing gdrive service...');
         const { authenticateGDrive } = await import('../../../services/gdrive');
@@ -150,45 +169,46 @@ export default function BYOCSettingsScreen() {
           error instanceof Error ? error.message : 'Unknown error',
           [{ text: 'OK' }]
         );
+      } finally {
+        setIsAuthenticating(false);
       }
     }
   };
 
-  const handleDisconnect = () => {
+  const handleDisconnect = async () => {
     console.log('[BYOC] handleDisconnect called');
-    Alert.alert(
-      'Disconnect Cloud Storage?',
-      'Your data will no longer be saved to the cloud. Local data will remain on your device.',
-      [
-        {
-          text: 'Disconnect',
-          style: 'destructive',
-          onPress: async () => {
-            console.log('[BYOC] Disconnect confirmed, starting disconnect process...');
-            // If Google Drive is connected, disconnect it properly
-            if (selectedProvider === 'gdrive') {
-              try {
-                console.log('[BYOC] Disconnecting Google Drive...');
-                const { disconnectGDrive } = await import('../../../services/gdrive');
-                await disconnectGDrive();
-                console.log('[BYOC] Google Drive disconnected successfully');
-              } catch (error) {
-                console.error('[BYOC] Error disconnecting Google Drive:', error);
-              }
-            }
 
-            console.log('[BYOC] Clearing BYOC config...');
-            await setBYOCConfig(null);
-            setConnected(false);
-            setWebdavEndpoint('');
-            setWebdavUsername('');
-            setWebdavPassword('');
-            setSelectedProvider(null);
-            console.log('[BYOC] Disconnect complete');
-          },
-        },
-        { text: 'Cancel', style: 'cancel' },
-      ]
+    // Perform disconnect immediately
+    console.log('[BYOC] Starting disconnect process...');
+
+    // If Google Drive is connected, disconnect it properly
+    if (selectedProvider === 'gdrive') {
+      try {
+        console.log('[BYOC] Disconnecting Google Drive...');
+        const { disconnectGDrive } = await import('../../../services/gdrive');
+        await disconnectGDrive();
+        console.log('[BYOC] Google Drive disconnected successfully');
+      } catch (error) {
+        console.error('[BYOC] Error disconnecting Google Drive:', error);
+      }
+    }
+
+    console.log('[BYOC] Clearing BYOC config...');
+    await setBYOCConfig(null);
+
+    // Force immediate state update
+    setConnected(false);
+    setWebdavEndpoint('');
+    setWebdavUsername('');
+    setWebdavPassword('');
+    setSelectedProvider(null);
+
+    console.log('[BYOC] Disconnect complete - UI should update now');
+
+    Alert.alert(
+      'Disconnected',
+      'Cloud storage has been disconnected. Your data will now be stored locally only.',
+      [{ text: 'OK' }]
     );
   };
 
