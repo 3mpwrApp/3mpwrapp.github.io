@@ -14,7 +14,7 @@
  *    - On native: Deep-links back to app with code (empowrapp://gdrive-callback?code=...)
  */
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, StyleSheet, Platform } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
@@ -24,55 +24,104 @@ export default function GDriveCallbackScreen() {
   const palette = useAppPalette();
   const params = useLocalSearchParams();
   const router = useRouter();
+  const [statusMessage, setStatusMessage] = useState('Processing OAuth callback...');
 
   useEffect(() => {
-    // Get the full URL with query parameters
+    // Get the full URL with hash (for implicit flow tokens)
     const url = typeof window !== 'undefined' ? window.location.href : '';
+    const hash = typeof window !== 'undefined' ? window.location.hash : '';
 
+    console.log('[GDrive Callback] ===== OAUTH CALLBACK RECEIVED =====');
     console.log('[GDrive Callback] Platform:', Platform.OS);
-    console.log('[GDrive Callback] URL:', url);
+    console.log('[GDrive Callback] Full URL:', url);
+    console.log('[GDrive Callback] Hash fragment:', hash);
     console.log('[GDrive Callback] Params:', params);
     console.log('[GDrive Callback] window.opener exists:', typeof window !== 'undefined' && !!window.opener);
 
+    // Parse the hash to see what we got
+    if (hash) {
+      const hashParams = new URLSearchParams(hash.replace('#', ''));
+      const accessToken = hashParams.get('access_token');
+      const error = hashParams.get('error');
+      const errorDesc = hashParams.get('error_description');
+
+      console.log('[GDrive Callback] Parsed hash params:');
+      console.log('  - access_token present:', !!accessToken);
+      console.log('  - access_token length:', accessToken?.length || 0);
+      console.log('  - error:', error || 'none');
+      console.log('  - error_description:', errorDesc || 'none');
+    }
+
     // Check if we're on web or native
     if (Platform.OS === 'web') {
-      // On web: Close the OAuth popup and send code to parent window
+      // On web: Close the OAuth popup and send token to parent window
       if (typeof window !== 'undefined' && window.opener) {
         console.log('[GDrive Callback] Sending auth result to parent window');
-        console.log('[GDrive Callback] Message payload:', { type: 'expo-auth-session', url });
+        setStatusMessage('Sending authentication result to app...');
 
-        // Send the full URL back to the parent window
-        // This is the format expo-auth-session expects
+        // For implicit flow, tokens are in the hash fragment
+        // Convert hash fragment to query string format for expo-auth-session
+        let messageUrl = url;
+        if (hash && hash.includes('access_token')) {
+          // Convert hash to query params: #access_token=... -> ?access_token=...
+          messageUrl = url.replace('#', '?');
+          console.log('[GDrive Callback] Converted hash to query format:', messageUrl);
+          setStatusMessage('✓ Access token received! Sending to app...');
+        } else if (hash && hash.includes('error')) {
+          const hashParams = new URLSearchParams(hash.replace('#', ''));
+          const error = hashParams.get('error');
+          const errorDesc = hashParams.get('error_description');
+          setStatusMessage(`❌ OAuth error: ${error}\n${errorDesc}`);
+        }
+
+        console.log('[GDrive Callback] Message payload:', { type: 'expo-auth-session', url: messageUrl });
+
+        // Send the URL back to the parent window
         try {
+          // Use '*' origin for cross-origin communication (OAuth callback scenario)
+          // This is safe because we're only sending the OAuth result back
           window.opener.postMessage(
             {
               type: 'expo-auth-session',
-              url: url,
+              url: messageUrl,
             },
-            window.location.origin // Use same origin for security
+            '*' // Allow cross-origin for OAuth callback
           );
           console.log('[GDrive Callback] Message sent successfully');
+          setStatusMessage('✓ Success! Closing window...');
         } catch (error) {
           console.error('[GDrive Callback] Error sending message:', error);
+          setStatusMessage(`❌ Error sending result: ${error}`);
         }
 
-        // Close the popup after a short delay
+        // Close the popup after a longer delay to ensure message is received
         setTimeout(() => {
           console.log('[GDrive Callback] Closing popup window');
           window.close();
-        }, 1500);
+        }, 3000);
       } else {
         // Not in a popup - might be direct navigation
         console.log('[GDrive Callback] Not in popup, redirecting to home');
 
-        // Extract auth code from URL and redirect to home with it
+        // Extract token from hash or code from query params
         const urlObj = new URL(url);
+        const hashParams = new URLSearchParams(hash.replace('#', ''));
+        const accessToken = hashParams.get('access_token');
         const code = urlObj.searchParams.get('code');
-        const error = urlObj.searchParams.get('error');
+        const error = urlObj.searchParams.get('error') || hashParams.get('error');
 
-        if (code) {
+        if (accessToken) {
+          console.log('[GDrive Callback] Access token present, redirecting to home');
+          // Store the token temporarily
+          if (typeof window !== 'undefined' && window.sessionStorage) {
+            window.sessionStorage.setItem('gdrive_access_token', accessToken);
+            const expiresIn = hashParams.get('expires_in');
+            if (expiresIn) {
+              window.sessionStorage.setItem('gdrive_expires_in', expiresIn);
+            }
+          }
+        } else if (code) {
           console.log('[GDrive Callback] Auth code present, redirecting to home');
-          // Store the auth result temporarily
           if (typeof window !== 'undefined' && window.sessionStorage) {
             window.sessionStorage.setItem('gdrive_auth_code', code);
           }
@@ -83,12 +132,10 @@ export default function GDriveCallbackScreen() {
         router.replace('/');
       }
     } else {
-      // On native: Deep-link back to the app with the auth code
+      // On native: Deep-link back to the app
       const deepLinkUrl = `empowrapp://gdrive-callback${url.split('gdrive-callback')[1] || ''}`;
       console.log('[GDrive Callback] Deep-linking to:', deepLinkUrl);
 
-      // This will be handled by expo-auth-session automatically
-      // The URL scheme (empowrapp://) will trigger the app to open
       if (typeof window !== 'undefined') {
         window.location.href = deepLinkUrl;
       }
@@ -114,10 +161,9 @@ export default function GDriveCallbackScreen() {
   return (
     <View style={styles.container}>
       <ActivityIndicator size="large" color={palette.primary} />
-      <Text style={styles.text}>
-        {Platform.OS === 'web'
-          ? 'Completing authentication...'
-          : 'Returning to app...'}
+      <Text style={styles.text}>{statusMessage}</Text>
+      <Text style={[styles.text, { fontSize: 12, marginTop: 8, opacity: 0.6 }]}>
+        Check console for detailed logs
       </Text>
     </View>
   );
