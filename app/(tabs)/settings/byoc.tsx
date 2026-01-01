@@ -64,7 +64,7 @@ export default function BYOCSettingsScreen() {
       const config = getBYOCConfig();
       const gdriveConfigured = isGDriveConfigured();
 
-      console.log('[BYOC] checkConfig:', { hasConfig: !!config, gdriveConfigured });
+      console.log('[BYOC] checkConfig:', { hasConfig: !!config, gdriveConfigured, currentlyConnected: connected });
 
       if (config) {
         setSelectedProvider(config.kind);
@@ -77,14 +77,18 @@ export default function BYOCSettingsScreen() {
       } else if (gdriveConfigured) {
         setSelectedProvider('gdrive');
         setConnected(true);
-      } else {
-        // No config found - reset to disconnected state
+      } else if (connected) {
+        // Only reset if we were previously connected but now have no config
+        // This handles the disconnect case
+        console.log('[BYOC] Was connected but no config found - disconnecting');
         setSelectedProvider(null);
         setConnected(false);
         setWebdavEndpoint('');
         setWebdavUsername('');
         setWebdavPassword('');
       }
+      // If not connected and no config, don't touch selectedProvider
+      // This allows user to select a provider without it being reset
     };
 
     checkConfig();
@@ -92,7 +96,7 @@ export default function BYOCSettingsScreen() {
     // Check again when screen gets focus (e.g., after OAuth redirect)
     const intervalId = setInterval(checkConfig, 1000);
     return () => clearInterval(intervalId);
-  }, [isAuthenticating]);
+  }, [isAuthenticating, connected]);
 
   const handleTestConnection = async () => {
     console.log('[BYOC] handleTestConnection called, provider:', selectedProvider);
