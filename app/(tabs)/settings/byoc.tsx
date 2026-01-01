@@ -155,6 +155,7 @@ export default function BYOCSettingsScreen() {
   };
 
   const handleDisconnect = () => {
+    console.log('[BYOC] handleDisconnect called');
     Alert.alert(
       'Disconnect Cloud Storage?',
       'Your data will no longer be saved to the cloud. Local data will remain on your device.',
@@ -163,12 +164,27 @@ export default function BYOCSettingsScreen() {
           text: 'Disconnect',
           style: 'destructive',
           onPress: async () => {
+            console.log('[BYOC] Disconnect confirmed, starting disconnect process...');
+            // If Google Drive is connected, disconnect it properly
+            if (selectedProvider === 'gdrive') {
+              try {
+                console.log('[BYOC] Disconnecting Google Drive...');
+                const { disconnectGDrive } = await import('../../../services/gdrive');
+                await disconnectGDrive();
+                console.log('[BYOC] Google Drive disconnected successfully');
+              } catch (error) {
+                console.error('[BYOC] Error disconnecting Google Drive:', error);
+              }
+            }
+
+            console.log('[BYOC] Clearing BYOC config...');
             await setBYOCConfig(null);
             setConnected(false);
             setWebdavEndpoint('');
             setWebdavUsername('');
             setWebdavPassword('');
             setSelectedProvider(null);
+            console.log('[BYOC] Disconnect complete');
           },
         },
         { text: 'Cancel', style: 'cancel' },
@@ -383,16 +399,92 @@ export default function BYOCSettingsScreen() {
         )}
 
         {connected && (
-          <A11yPressable
-            onPress={handleDisconnect}
-            accessibilityRole="button"
-            accessibilityLabel="Disconnect cloud storage"
-            hitSlop={HIT_SLOP_8}
-            style={[styles.primaryButton, { backgroundColor: palette.error }]}
-          >
-            <Ionicons name="cloud-offline" size={20} color={palette.onPrimary} />
-            <Text style={styles.primaryButtonText}>Disconnect</Text>
-          </A11yPressable>
+          <>
+            {selectedProvider === 'gdrive' && (
+              <A11yPressable
+                onPress={async () => {
+                  console.log('[BYOC] Testing Google Drive file operations...');
+                  try {
+                    const { testGDriveConnection, saveToGDrive, loadFromGDrive } = await import('../../../services/gdrive');
+
+                    // Test 1: Connection test
+                    console.log('[BYOC] Test 1: Testing connection...');
+                    const connTest = await testGDriveConnection();
+                    if (!connTest.ok) {
+                      Alert.alert('Connection Test Failed', connTest.error || 'Unknown error');
+                      return;
+                    }
+                    console.log('[BYOC] ✓ Connection test passed');
+
+                    // Test 2: Upload a test file
+                    console.log('[BYOC] Test 2: Uploading test file...');
+                    const testData = 'Hello from EmpowrApp! Test timestamp: ' + new Date().toISOString();
+                    const uploadSuccess = await saveToGDrive('/test-file.txt', testData, 'text/plain');
+                    if (!uploadSuccess) {
+                      Alert.alert('Upload Test Failed', 'Could not upload test file');
+                      return;
+                    }
+                    console.log('[BYOC] ✓ Upload test passed');
+
+                    // Test 3: Download the test file
+                    console.log('[BYOC] Test 3: Downloading test file...');
+                    const downloadedData = await loadFromGDrive('/test-file.txt');
+                    if (!downloadedData) {
+                      Alert.alert('Download Test Failed', 'Could not download test file');
+                      return;
+                    }
+                    console.log('[BYOC] ✓ Download test passed');
+
+                    // Test 4: Verify contents
+                    console.log('[BYOC] Test 4: Verifying file contents...');
+                    const downloadedText = typeof downloadedData === 'string'
+                      ? downloadedData
+                      : new TextDecoder().decode(downloadedData);
+
+                    if (downloadedText === testData) {
+                      console.log('[BYOC] ✓ All tests passed!');
+                      Alert.alert(
+                        '✅ Google Drive Test Successful!',
+                        `All tests passed:\n\n✓ Connection verified\n✓ File upload works\n✓ File download works\n✓ Data integrity confirmed\n\nYour Google Drive integration is fully functional!`,
+                        [{ text: 'Great!' }]
+                      );
+                    } else {
+                      Alert.alert(
+                        '⚠️ Data Mismatch',
+                        `File was uploaded and downloaded, but contents don't match.\n\nExpected: ${testData}\n\nGot: ${downloadedText}`,
+                        [{ text: 'OK' }]
+                      );
+                    }
+                  } catch (error) {
+                    console.error('[BYOC] Test error:', error);
+                    Alert.alert(
+                      '❌ Test Failed',
+                      error instanceof Error ? error.message : 'Unknown error during test',
+                      [{ text: 'OK' }]
+                    );
+                  }
+                }}
+                accessibilityRole="button"
+                accessibilityLabel="Test Google Drive connection and file operations"
+                hitSlop={HIT_SLOP_8}
+                style={[styles.primaryButton, { backgroundColor: palette.success, marginBottom: 12 }]}
+              >
+                <Ionicons name="checkmark-circle" size={20} color={palette.onPrimary} />
+                <Text style={styles.primaryButtonText}>Test Google Drive</Text>
+              </A11yPressable>
+            )}
+
+            <A11yPressable
+              onPress={handleDisconnect}
+              accessibilityRole="button"
+              accessibilityLabel="Disconnect cloud storage"
+              hitSlop={HIT_SLOP_8}
+              style={[styles.primaryButton, { backgroundColor: palette.error }]}
+            >
+              <Ionicons name="cloud-offline" size={20} color={palette.onPrimary} />
+              <Text style={styles.primaryButtonText}>Disconnect</Text>
+            </A11yPressable>
+          </>
         )}
 
         <GapView style={{ height: 32 }} />

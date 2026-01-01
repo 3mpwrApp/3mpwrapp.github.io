@@ -34,7 +34,7 @@ const MAIN_HUBS: FeatureHub[] = [
   {
     id: 'ai-hub',
     icon: '🤖',
-    route: '/(tabs)/advocacy/ai-command-center',
+    route: '/(tabs)/advocacy/ai-advocacy-suite',
     titleKey: 'advocacy.hubs.ai.title',
     descKey: 'advocacy.hubs.ai.desc',
     badge: 'new',

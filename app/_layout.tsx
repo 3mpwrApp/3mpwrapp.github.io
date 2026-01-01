@@ -13,6 +13,17 @@ WebBrowser.maybeCompleteAuthSession();
 // WCAG 2.2 AAA: Error banners use high-contrast color combinations
 if (Platform.OS === 'web' && typeof window !== 'undefined') {
   window.addEventListener('error', (event) => {
+    // Suppress harmless ResizeObserver errors that don't affect functionality
+    if (event.message?.includes('ResizeObserver')) {
+      return;
+    }
+
+    // Ignore null/undefined errors (often harmless React updates)
+    if (!event.error && !event.message) {
+      console.warn('Global Error caught: null (suppressed - likely harmless)');
+      return;
+    }
+
     console.error('Global Error caught:', event.error);
     const div = document.createElement('div');
     div.style.position = 'fixed';
