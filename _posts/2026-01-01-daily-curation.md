@@ -9,81 +9,31 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-01-01
 
-Curated 16 items from disability, accessibility, and social policy sources.
+Curated 6 items from disability, accessibility, and social policy sources.
 
-## 1. Andre De Grasse, Nardwuar among 80 new appointments to the Order of Canada
-<img src='https://i.cbc.ca/ais/7b82f2ba-d831-48d9-a4b4-6dfbf9819ffa,1767119493262/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='from left, TV personality Mandy Rennehan, music journalist Nardwaur the Human Serviette, Olympic sprinter Andre De Grasse and former CBC Igalaaq host Rassi Nashalik.' width='620' height='349' title='The list of 80 Canadians being appointed to the Order of Canada include, from left, TV personality Mandy Rennehan, music journalist Nardwuar the Human Serviette, Olympic sprinter Andre De Grasse and former CBC Igalaaq host Rassi Nashalik.'/><p>Gov. Gen. Mary Simon has announced 80 appointments to the Order of Canada — a list that includes Olympians, journalists, Indigenous leaders and doctors.</p>
-📍 [Source](https://www.cbc.ca/news/politics/olympians-journalists-order-of-canada-9.7030299?cmp=rss)
-**Score:** 18.50
+## 1. Provincial Snowplows Ready as Blizzard Conditions Expected for Parts of Manitoba
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72058)
+**Score:** 10.40
 
-## 2. Disability rights and wrongs in Canada
-📍 [Source](https://rabble.ca/books/disability-rights-and-wrongs-in-canada/)
-**Score:** 17.40
+## 2. Manitoba Government Appoints New Board Chairs for Manitoba Hydro and Efficiency Manitoba
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72037)
+**Score:** 12.00
 
-## 3. Many Canadians feel hopeful about 2026 but sour on actual solutions: poll
-The Ipsos poll for Global News found Canadians are generally positive about their personal health and happiness after the past year, but less so about their financial situation.
-📍 [Source](https://globalnews.ca/news/11587764/canada-ipsos-poll-2026-year-ahead/)
-**Score:** 18.00
+## 3. OneCity mayoral candidate William Azaroff is building support
+The CEO of affordable housing nonprofit Brightside Community Homes Foundation has big plans for Vancouver.
+📍 [Source](https://www.straight.com/city-culture/onecity-mayoral-candidate-william-azaroff-is-building-support)
+**Score:** 7.60
 
-## 4. ‘Families are freezing': Manitoba power outage leaves Pimicikamak in crisis, chief says
-Residents of Pimicikamak Cree Nation are evacuating as a prolonged power outage leaves the community without heat and water in extreme cold, Manitoba Hydro says.
-📍 [Source](https://globalnews.ca/news/11595706/manitoba-power-outage-cold/)
-**Score:** 14.10
-
-## 5. New year, new tax measures: What to expect in 2026
-<img src='https://i.cbc.ca/ais/88781f0d-a296-4ba1-bc40-13bc0c0c2a20,1766162548371/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C404%2C7761%2C4365%29%3BResize%3D%28620%29' alt='Patty Hajdu poses for photos with personal support workers who are all wearing purple T-shirts' width='620' height='349' title='Minister of Jobs and Families Patty Hajdu poses for photos with personal support workers after a pre-budget announcement at the Extendicare Medex long-term care residence, in Ottawa, on Monday, Oct. 27, 2025. '/><p>The coming year will see some changes to existing tax measures, the abandonment of others and some help for personal support workers. But overall changes to the taxes individuals pay will be minor in 2026.</p>
-📍 [Source](https://www.cbc.ca/news/politics/2026-tax-measures-changes-new-9.7022831?cmp=rss)
-**Score:** 12.50
-
-## 6. Governor General praises Canada's 'resounding sense of national pride' in New Year's message
-<img src='https://i.cbc.ca/ais/4c07d94e-5aab-4b50-a93e-f5370c234854,1767190129617/full/max/0/default.jpg?im=Crop%2Crect%3D%283%2C0%2C2184%2C1228%29%3BResize%3D%28620%29' alt='Governor General praises Canada's 'resounding sense of national pride' in New Year's message' width='620' height='349' title=''/><p>Gov. Gen. Mary Simon praised the 'extraordinary solidarity' she saw in Canada in 2025 in her New Year’s address, pointing to the displays of support in communities hit hard by wildfire, the 'unprecedented economic co-operation' and the revitalization of Indigenous cultures and languages.</p>
-📍 [Source](https://www.cbc.ca/player/play/9.7024743?cmp=rss)
-**Score:** 12.50
-
-## 7. Snowmobiler dies in avalanche in the Rocky Mountains near Tumbler Ridge, B.C.
-<img src='https://i.cbc.ca/ais/05268236-3938-4367-8f95-7e22cf150bcb,1767238214755/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C378%2C4032%2C2268%29%3BResize%3D%28620%29' alt='The image shows the right hand side of the avalanche taken the day after the avalanche' width='620' height='349' title='An avalanche near Tumbler Ridge, B.C., resulted in the death of a snowmobiler Thursday, Dec. 30, 2025. The image shows the right hand side of the avalanche taken Dec. 31.'/><p>Avalanche Canada says three snowmobilers were riding about 35 kilometres southwest of Tumbler Ridge when the avalanche was remotely triggered from the base of the slope.</p>
-📍 [Source](https://www.cbc.ca/news/canada/british-columbia/avalanche-death-tumbler-ridge-bc-9.7031829?cmp=rss)
-**Score:** 9.50
-
-## 8. Talented forward group led by Crosby, McDavid should be Canada's Olympic superpower
-<img src='https://i.cbc.ca/ais/935825a0-b763-4a91-ae32-53f84ed5a28c,1767236533716/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C215%2C4136%2C2326%29%3BResize%3D%28620%29' alt='Three hockey players dressed in red jerseys embrace on the ice.' width='620' height='349' title='Canada's Sidney Crosby, center, celebrates after his goal against Finland during the third period of a 4 Nations Face-Off hockey game, Monday, Feb. 17, 2025, in Boston. (AP Photo/Charles Krupa)'/><p></p>
-📍 [Source](https://www.cbc.ca/sports/olympics/winter/hockey/canada-mens-hockey-announcement-olympics-2026-analysis-9.7031677?cmp=rss)
-**Score:** 9.50
-
-## 9. New Ontario fire code rules require carbon monoxide alarms on every floor
-<img src='https://i.cbc.ca/ais/0fbba6d7-1d1a-420a-ab15-413534af3cc7,1765904810277/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C235%2C4032%2C2268%29%3BResize%3D%28620%29' alt=' Matt Hepditch, London's deputy chief of fire prevention and public education, stands with two carbon monoxide alarms in front of a row of fire trucks at the Horton Street station.' width='620' height='349' title=' Matt Hepditch, London's deputy chief of fire prevention and public education, with two carbon monoxide alarms. '/><p>Changes to the Ontario Fire Code coming in the new year will require carbon monoxide alarms on every level of a home in a bid to better protect people from the deadly, odorless gas.</p>
-📍 [Source](https://www.cbc.ca/news/canada/london/carbon-monoxide-new-rules-9.7017962?cmp=rss)
-**Score:** 11.00
-
-## 10. Here’s Why Involuntary Care Won’t Work for Most People
-We need a total rethink of our failed approach to drugs and homelessness.
-📍 [Source](https://thetyee.ca/Opinion/2025/12/24/Involuntary-Care-Need-Rethink/)
-**Score:** 9.00
-
-## 11. 8 things to watch for in Alberta politics in 2026
-<img src='https://i.cbc.ca/ais/00a001ad-077e-460b-aa74-cc8d292ba0f3,1765039060877/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1919%2C1079%29%3BResize%3D%28620%29' alt='The Alberta legislature on a snowy winter day ' width='620' height='349' title='The Alberta legislature seen here in Jan 22, 2020. The year ahead is shaping up to be a busy one on the province's political landscape. '/><p>Duelling citizen-led petitions related to separation, multiple uses of the notwithstanding clause, a slew of recall petitions, progress on a pipeline deal and municipal elections across the province — 2025 was rife with political news. And already, the year ahead is looking to be just as consequential. </p>
-📍 [Source](https://www.cbc.ca/news/canada/calgary/alberta-politics-2026-lookahead-9.7005914?cmp=rss)
-**Score:** 9.00
-
-## 12. Manitoba Government Announces Second Round of Funding for Gate Project
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72017)
+## 4. Manitoba Government Invests in First Nations Women's Homeownership Through Mino'ayaawag Ikwewag
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72057)
 **Score:** 7.50
 
-## 13. Manitoba Government Invests $2.6 Million in Parkland and Westman Municipalities
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=71999)
-**Score:** 7.50
-
-## 14. Calgary taxi driver hailed as hero after baby born in back seat
-Hardeep Singh Toor answered a late-night call for an urgent hospital trip, only to find himself racing to deliver a couple’s baby instead of a routine fare.
-📍 [Source](https://globalnews.ca/news/11594850/baby-born-backseat-taxi-calgary/)
-**Score:** 4.00
-
-## 15. Measles Update #55
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72000)
+## 5. Measles Update #56
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72059)
 **Score:** 4.50
 
-## 16. Orange-crowned warbler spotted in rare sighting during Christmas bird count in Hamilton, Ont.
-<img src='https://i.cbc.ca/ais/5550c532-17a0-4d9a-8da3-6a44c7d73965,1767115915492/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C56%2C1156%2C650%29%3BResize%3D%28620%29' alt='orange-crowned warbler' width='620' height='349' title='An orange-crowned warbler photographed by Mourad Jabra at Hamilton's Woodland Cemetery (Carroll's Point) on Saturday, Dec. 27, 2025.'/><p>An orange-crowned warbler was spotted during Hamilton’s annual Christmas bird survey, a “rarity” for birdwatchers, organizers say.</p>
-📍 [Source](https://www.cbc.ca/news/canada/hamilton/hamilton-bird-count-2025-9.7029182?cmp=rss)
-**Score:** 1.00
+## 6. Your ultra-local Vancouver gift guide for everyone in your life
+Shop our list of dozens of local gifts.
+📍 [Source](https://www.straight.com/living/your-ultra-local-vancouver-gift-guide-for-everyone-in-your-life)
+**Score:** 3.60
 
