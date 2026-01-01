@@ -110,6 +110,9 @@ function getGoogleClientId(): string | null {
 
 /**
  * Authenticate user with Google and request Drive API access
+ *
+ * WEB: Uses implicit flow (token response type) - no client_secret needed
+ * NATIVE: Currently uses implicit flow too (code flow needs backend token exchange)
  */
 export async function authenticateGDrive(): Promise<GDriveAuthResult> {
   logger.log('[GDrive] === Starting authentication flow ===');
@@ -129,8 +132,6 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     };
 
     // Use web redirect URI for ALL platforms (Google OAuth doesn't support custom schemes)
-    // For native apps, we redirect to web page first, then web page deep-links back to app
-    // This is the standard OAuth flow for mobile apps using web OAuth clients
     const redirectUri = Platform.OS === 'web'
       ? AuthSession.makeRedirectUri({ path: 'gdrive-callback' })
       : 'https://3mpwrapp.pages.dev/gdrive-callback';
@@ -139,7 +140,8 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     logger.log('[GDrive] Client ID:', clientId);
     logger.log('[GDrive] Redirect URI:', redirectUri);
 
-    // Create auth request with Drive file scope
+    // Use implicit flow (token response type) to avoid needing client_secret
+    // This is appropriate for client-side apps where client_secret cannot be secured
     const authRequest = new AuthSession.AuthRequest({
       clientId,
       scopes: [
@@ -149,8 +151,8 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
         'email',
       ],
       redirectUri,
-      usePKCE: true,
-      responseType: AuthSession.ResponseType.Code,
+      responseType: AuthSession.ResponseType.Token, // Changed from Code to Token
+      usePKCE: false, // PKCE not used with implicit flow
     });
 
     // Prompt user for consent
@@ -159,8 +161,8 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       clientId: clientId.substring(0, 20) + '...',
       redirectUri,
       scopes: authRequest.scopes,
+      responseType: authRequest.responseType,
       usePKCE: authRequest.usePKCE,
-      codeVerifier: authRequest.codeVerifier ? 'present' : 'missing'
     });
 
     let result;
@@ -168,7 +170,7 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       result = await authRequest.promptAsync(discovery);
       logger.log('[GDrive] Prompt result type:', result.type);
       if ('params' in result) {
-        logger.log('[GDrive] Prompt result params:', result.params);
+        logger.log('[GDrive] Prompt result params keys:', Object.keys(result.params));
       }
     } catch (promptError: any) {
       logger.error('[GDrive] Error during promptAsync:', promptError);
@@ -218,37 +220,33 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     }
 
     // Type guard: at this point we know result.type === 'success'
-    if (!('params' in result) || !result.params.code) {
+    if (!('params' in result)) {
       return {
         success: false,
-        error: 'Authentication succeeded but no authorization code received'
+        error: 'Authentication succeeded but no parameters received'
       };
     }
 
-    // Exchange code for tokens
-    logger.log('[GDrive] Auth successful, exchanging code for tokens...');
-    const tokenResult = await AuthSession.exchangeCodeAsync(
-      {
-        clientId,
-        code: result.params.code,
-        redirectUri,
-        extraParams: {
-          code_verifier: authRequest.codeVerifier || '',
-        },
-      },
-      discovery
-    );
+    // For implicit flow, tokens are in the response params directly
+    logger.log('[GDrive] Auth successful, extracting tokens...');
+    const { access_token, expires_in } = result.params;
 
-    if (!tokenResult.accessToken) {
-      return { success: false, error: 'Failed to get access token' };
+    if (!access_token) {
+      logger.error('[GDrive] No access token in response');
+      return {
+        success: false,
+        error: 'No access token received from Google'
+      };
     }
+
+    logger.log('[GDrive] Access token received, length:', access_token.length);
 
     const config: GDriveConfig = {
       kind: 'gdrive',
-      accessToken: tokenResult.accessToken,
-      refreshToken: tokenResult.refreshToken || undefined,
-      expiresAt: tokenResult.expiresIn 
-        ? Date.now() + tokenResult.expiresIn * 1000 
+      accessToken: access_token,
+      refreshToken: undefined, // Implicit flow doesn't provide refresh tokens
+      expiresAt: expires_in
+        ? Date.now() + parseInt(expires_in, 10) * 1000
         : undefined,
     };
 

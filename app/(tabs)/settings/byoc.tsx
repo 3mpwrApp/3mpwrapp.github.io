@@ -77,6 +77,8 @@ export default function BYOCSettingsScreen() {
   }, []);
 
   const handleTestConnection = async () => {
+    console.log('[BYOC] handleTestConnection called, provider:', selectedProvider);
+
     if (selectedProvider === 'webdav') {
       if (!webdavEndpoint.trim()) {
         Alert.alert('Missing Information', 'Please enter the WebDAV endpoint URL.');
@@ -118,9 +120,13 @@ export default function BYOCSettingsScreen() {
       }
     } else if (selectedProvider === 'gdrive') {
       // Google Drive OAuth flow
+      console.log('[BYOC] Starting Google Drive OAuth flow...');
       try {
+        console.log('[BYOC] Importing gdrive service...');
         const { authenticateGDrive } = await import('../../../services/gdrive');
+        console.log('[BYOC] Calling authenticateGDrive()...');
         const result = await authenticateGDrive();
+        console.log('[BYOC] OAuth result:', result);
 
         if (result.success) {
           await setBYOCConfig({ kind: 'gdrive' });
@@ -138,6 +144,7 @@ export default function BYOCSettingsScreen() {
           );
         }
       } catch (error) {
+        console.error('[BYOC] Error during Google Drive OAuth:', error);
         Alert.alert(
           '❌ Connection Failed',
           error instanceof Error ? error.message : 'Unknown error',
