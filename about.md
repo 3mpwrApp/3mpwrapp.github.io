@@ -226,7 +226,7 @@ Beyond 3mpwrApp, I run **[Injured Workers Unite](https://injuredworkersunite.pag
 | 😂 **Meme Gallery** | Creative resistance through humor. Share and spread awareness. |
 
 🔗 [Visit Injured Workers Unite →](https://injuredworkersunite.pages.dev/)  
-� [Follow @ODSPoor on X →](https://x.com/ODSPoor)  
+
 🐦 [Follow @PhoenixRizin09 on X →](https://x.com/PhoenixRizin09)  
 �📚 [Find me on Goodreads →](https://www.goodreads.com/user/show/1581978-lissa)
 

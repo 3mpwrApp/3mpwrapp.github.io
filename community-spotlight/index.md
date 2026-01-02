@@ -236,9 +236,6 @@ permalink: /community-spotlight/
   
   <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🔗 Connect with Lissa:</strong></p>
   <p style="color: #1f2937 !important;">
-    <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
-      🐦 @ODSPoor on X
-    </a> | 
     <a href="https://x.com/PhoenixRizin09" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
       🐦 @PhoenixRizin09 on X
     </a> | 
