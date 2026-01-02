@@ -643,6 +643,108 @@ function copyCampaignHome() {
 
 ---
 
+<!-- Featured Community Members Carousel -->
+<div style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); padding: 2.5rem; border-radius: 12px; margin: 2rem 0;">
+  <h2 style="margin: 0 0 0.5rem; font-size: 1.8rem; color: #1f2937;">
+    <span aria-hidden="true">👥</span> Follow These Voices
+  </h2>
+  <p style="margin: 0 0 2rem; font-size: 1.05rem; color: #4b5563;">
+    Real disability advocates and community leaders making a difference. <strong>Like and follow them on X to amplify their work!</strong>
+  </p>
+
+  <!-- Carousel Container -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+    
+    <!-- Card 1: Emily Pot -->
+    <div style="background: white; border: 2px solid #f97316; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+      <div style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+        <h3 style="margin: 0; font-size: 1.3rem;">📰 Emily Pot</h3>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Disability Journalist</p>
+      </div>
+      <p style="margin: 0 0 1rem; color: #4b5563; font-size: 0.95rem;">
+        Co-founder of The Disability Bulletin. Breaking disability news, centering lived experience.
+      </p>
+      <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+        <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="display: block; background: #f97316; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#ea580c'" onmouseout="this.style.background='#f97316'">
+          🐦 Follow on X
+        </a>
+        <a href="https://linktr.ee/thedisabilitybulletin" target="_blank" rel="noopener noreferrer" style="display: block; background: #f3f4f6; color: #f97316; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #f97316; transition: background 0.2s;" onmouseover="this.style.background='#fee2e2'" onmouseout="this.style.background='#f3f4f6'">
+          🔗 The Bulletin
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 2: Occupy WSIB -->
+    <div style="background: white; border: 2px solid #22c55e; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+      <div style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+        <h3 style="margin: 0; font-size: 1.3rem;">✊ Occupy WSIB</h3>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Workers' Rights Org</p>
+      </div>
+      <p style="margin: 0 0 1rem; color: #4b5563; font-size: 0.95rem;">
+        Fighting for WSIB reform and injured workers' justice through grassroots organizing.
+      </p>
+      <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+        <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="display: block; background: #22c55e; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#16a34a'" onmouseout="this.style.background='#22c55e'">
+          🐦 Follow on X
+        </a>
+        <a href="/community/" style="display: block; background: #f3f4f6; color: #22c55e; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #22c55e; transition: background 0.2s;" onmouseover="this.style.background='#dcfce7'" onmouseout="this.style.background='#f3f4f6'">
+          👥 Learn More
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 3: CrAP We Matter -->
+    <div style="background: white; border: 2px solid #6366f1; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+      <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+        <h3 style="margin: 0; font-size: 1.3rem;">♿ CrAP We Matter</h3>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Chronic Illness Advocates</p>
+      </div>
+      <p style="margin: 0 0 1rem; color: #4b5563; font-size: 0.95rem;">
+        Bold voices centering chronic illness perspectives and authentic disability truths.
+      </p>
+      <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+        <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="display: block; background: #6366f1; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
+          🐦 Follow on X
+        </a>
+        <a href="/community/" style="display: block; background: #f3f4f6; color: #6366f1; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #6366f1; transition: background 0.2s;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f3f4f6'">
+          👥 Learn More
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 4: Lissa Beaulieu -->
+    <div style="background: white; border: 2px solid #f59e0b; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+      <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+        <h3 style="margin: 0; font-size: 1.3rem;">🔥 Lissa Beaulieu</h3>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">3mpwrApp Founder</p>
+      </div>
+      <p style="margin: 0 0 1rem; color: #4b5563; font-size: 0.95rem;">
+        Building community tools for disability justice. Fierce advocate for injured workers & disability rights.
+      </p>
+      <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+        <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: block; background: #f59e0b; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#d97706'" onmouseout="this.style.background='#f59e0b'">
+          🐦 Follow on X
+        </a>
+        <a href="/about/" style="display: block; background: #f3f4f6; color: #f59e0b; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #f59e0b; transition: background 0.2s;" onmouseover="this.style.background='#fef3c7'" onmouseout="this.style.background='#f3f4f6'">
+          📖 About
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #d1d5db;">
+    <p style="margin: 0 0 1rem; color: #4b5563; font-size: 1rem;">
+      <strong>👉 Your likes, follows, and shares help amplify these voices and the disability community.</strong>
+    </p>
+    <a href="/community-spotlight/" style="display: inline-block; background: #1f2937; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s;" onmouseover="this.style.background='#111827'" onmouseout="this.style.background='#1f2937'">
+      🌟 View All Community Members
+    </a>
+  </div>
+</div>
+
+---
+
 ## <span aria-hidden="true">✨</span> Built Different—By Design
 
 <div class="gradient-banner-pink" style="color: white !important;">
