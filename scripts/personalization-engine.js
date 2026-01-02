@@ -134,35 +134,35 @@ const recommendationAlgorithm = {
   
   factors_weighted: {
     
-    1_content_match: {
+    content_match: {
       weight: "40%",
       description: "Does this article match reader's topics of interest?",
       calculation: "Compare article tags/category to user's saved interests",
       example: "If reader has saved 3 WSIB articles, recommend 'Return to Work' guide with high score"
     },
     
-    2_reading_level_match: {
+    reading_level_match: {
       weight: "20%",
       description: "Is this too simple/complex for what they've already read?",
       calculation: "Track 'essential guide' vs 'advanced strategy' content",
       example: "If reader has read 5 advanced benefits articles, don't recommend introductory guide"
     },
     
-    3_temporal_relevance: {
+    temporal_relevance: {
       weight: "15%",
       description: "Does this article matter right now for this reader?",
       calculation: "Track deadlines, timely alerts, seasonal info",
       example: "If it's January, recommend 'Tax deductions for disability' articles"
     },
     
-    4_community_signals: {
+    community_signals: {
       weight: "15%",
       description: "Are other people like you finding this valuable?",
       calculation: "Track engagement metrics by segment",
       example: "If injured workers are heavily engaging with 'Pain management' articles, recommend to similar reader"
     },
     
-    5_discover_factor: {
+    discover_factor: {
       weight: "10%",
       description: "Show some serendipitous content outside main interests",
       calculation: "5-10% of recommendations should surprise/expand horizons",
@@ -192,7 +192,7 @@ Top 5 highest-scoring articles displayed
 
 const recommendationPlacements = {
   
-  placement_1_article_sidebar: {
+  article_sidebar: {
     location: "Right sidebar of blog post",
     layout: "3-card vertical stack",
     content: "Related articles (refined by recommendation engine)",
@@ -222,7 +222,7 @@ const recommendationPlacements = {
     `.trim()
   },
   
-  placement_2_email: {
+  email: {
     location: "Bottom of newsletter (before footer)",
     layout: "3-column grid",
     content: "Articles aligned with reader's newsletter segment",
@@ -237,14 +237,14 @@ Title               Title               Title
     `.trim()
   },
   
-  placement_3_homepage: {
+  homepage: {
     location: "After main content, before footer",
     layout: "4-card horizontal scroll or grid",
     content: "Personalized recommendations (if logged in)",
     personalization_note: "If not logged in, show most popular articles instead"
   },
   
-  placement_4_search_results: {
+  search_results: {
     location: "Below search results",
     content: "Related topics the reader didn't search for but might want",
     example: `

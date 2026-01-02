@@ -1,19 +1,48 @@
 {
+  "name": "3mpwrapp-autonomous-content",
+  "version": "1.0.0",
+  "description": "Fully autonomous content system with 4 AI agents",
+  "main": "scripts/agent-orchestrator.js",
+  "scripts": {
+    "deploy": "node deploy.js",
+    "deploy:agents": "node scripts/agent-orchestrator.js deploy",
+    "deploy:curation": "node scripts/agent-curation-production.js",
+    "deploy:blog": "node scripts/agent-blog-production.js",
+    "status": "node scripts/agent-orchestrator.js status",
+    "logs": "tail -f logs/agents/*",
+    "start": "npm run deploy:agents"
+  },
   "dependencies": {
     "@axe-core/playwright": "^4.10.2",
     "@playwright/test": "^1.55.1",
     "date-fns": "^2.30.0",
-    "playwright": "^1.55.1"
+    "dotenv": "^16.3.1",
+    "luxon": "^3.4.1",
+    "openai": "^4.104.0",
+    "playwright": "^1.55.1",
+    "rss-parser": "^3.13.0"
   },
   "devDependencies": {
     "@axe-core/cli": "^4.10.2",
     "@axe-core/playwright": "^4.10.2",
     "clean-css": "^5.3.3",
     "cssnano": "^7.1.2",
+    "eslint": "^8.56.0",
     "linkinator": "^7.3.0",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
+    "prettier": "^3.1.1",
     "sharp": "^0.34.4",
     "terser": "^5.44.0"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "autonomous-agents",
+    "ai-content-generation",
+    "rss-curation",
+    "blog-automation",
+    "newsletter-generation"
+  ]
 }
