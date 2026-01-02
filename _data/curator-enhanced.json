@@ -25,12 +25,15 @@
     "https://www.gov.nl.ca/releases/2024/",
     "https://www.cpsa.org/news-publications/feed/",
     "https://www.ccpa.ca/feed/",
-    "https://www.openparliament.ca/feeds/recent-bills/"
+    "https://www.openparliament.ca/feeds/recent-bills/",
+    "https://www.disabilityrightsbc.ca/feed/",
+    "https://www.ableist.ca/feed/",
+    "https://www.peopleserved.org/feed/"
   ],
   "scoring": {
     "critical": {
       "score": 5,
-      "description": "Breaking/urgent news, court decisions, legislation, major policy changes - immediate action needed",
+      "description": "Highest impact: direct policy changes, court victories, funding wins affecting community",
       "terms": [
         "breaking",
         "urgent",
@@ -53,39 +56,33 @@
         "funding increase",
         "program expansion",
         "benefit increase",
-        "application deadline",
-        "intake closing",
-        "enrollment period",
-        "voting opens"
+        "wage increase",
+        "rate increase"
       ]
     },
     "direct_action": {
       "score": 4.5,
-      "description": "Time-sensitive opportunities requiring action (deadlines, applications, registrations, calls for input)",
+      "description": "Actionable items: applications open, deadline approaching, rights being violated",
       "terms": [
-        "deadline",
+        "application deadline",
+        "deadline approaching",
         "apply now",
-        "open enrollment",
-        "applications now open",
-        "registration opens",
-        "last day",
-        "hurry",
-        "limited time",
-        "while supplies last",
-        "now accepting",
-        "public consultation",
-        "comments due",
-        "feedback requested",
-        "call for proposals",
-        "grants available",
-        "funding available",
-        "tax credit",
-        "refund"
+        "sign up",
+        "register now",
+        "voting opens",
+        "consultation open",
+        "comment deadline",
+        "rights violation",
+        "urgent action",
+        "take action",
+        "contact your",
+        "petition",
+        "call to action"
       ]
     },
     "high_priority": {
       "score": 4,
-      "description": "Core disability/accessibility content (benefits, rights, accommodations, WSIB)",
+      "description": "Core community topics: disabilities, benefits, rights, accessibility",
       "terms": [
         "accessibility",
         "disability",
@@ -118,6 +115,7 @@
         "WCB",
         "injured worker",
         "workplace injury",
+        "workplace accommodation",
         "return to work",
         "vocational rehabilitation",
         "disability benefits navigator",
@@ -129,15 +127,14 @@
         "WCAG",
         "ARIA",
         "keyboard navigation",
-        "mental health",
-        "chronic illness",
-        "pain management",
-        "caregiver support"
+        "inclusive hiring",
+        "disability hiring",
+        "employment equity"
       ]
     },
     "provincial_specific": {
       "score": 3.8,
-      "description": "Provincial program updates (ODSP, AISH, provincial policies affecting readers)",
+      "description": "Province-specific benefits and programs that directly impact readers",
       "terms": [
         "ODSP",
         "Ontario Disability Support Program",
@@ -159,108 +156,113 @@
         "prescription coverage",
         "mobility allowance",
         "transportation subsidy",
-        "provincial program",
-        "provincial policy",
-        "provincial legislation"
+        "housing subsidy",
+        "rent subsidy"
       ]
     },
     "economic_impact": {
       "score": 3.5,
-      "description": "Financial/economic news affecting disabled people (costs, wages, taxes, income)",
+      "description": "Financial implications: costs, taxes, benefits, income changes",
       "terms": [
-        "cost of living",
-        "inflation",
+        "cost increase",
+        "price increase",
+        "cost reduction",
+        "savings",
+        "financial",
+        "budget",
         "tax",
         "income",
         "wage",
-        "employment",
-        "job market",
-        "income support",
-        "financial",
-        "economic",
-        "money",
-        "cost",
-        "expense",
-        "afford",
-        "poverty",
+        "salary",
         "minimum wage",
-        "workplace accommodation",
-        "workplace rights",
-        "pay equity"
+        "universal basic income",
+        "inflation",
+        "affordability",
+        "poverty",
+        "financial support",
+        "grants",
+        "subsidies"
       ]
     },
     "health_wellness": {
       "score": 3,
-      "description": "Health, wellness, mental health, chronic illness management",
+      "description": "Health topics affecting disability community",
       "terms": [
-        "health",
-        "healthcare",
-        "medical",
-        "therapy",
         "mental health",
-        "wellness",
-        "wellbeing",
+        "PTSD",
         "chronic illness",
-        "pain",
+        "chronic pain",
+        "fibromyalgia",
+        "ME/CFS",
+        "long covid",
+        "mental health support",
+        "mental health services",
+        "trauma",
+        "anxiety",
+        "depression",
+        "medication",
+        "drug coverage",
+        "healthcare access",
+        "prescription",
         "rehabilitation",
-        "treatment",
-        "diagnosis",
-        "condition",
-        "symptom",
-        "recovery",
-        "self-care",
-        "nutrition",
-        "exercise",
-        "sleep",
-        "stress management"
+        "therapy",
+        "counseling",
+        "wellness"
       ]
     },
     "medium_priority": {
       "score": 2,
-      "description": "Broader accessibility, advocacy, and community topics",
+      "description": "Related topics with moderate relevance",
       "terms": [
         "ADA",
         "ADHD",
+        "autism",
         "accessibility audit",
         "accessibility features",
-        "accessible format",
         "adaptive equipment",
         "advocacy",
         "alternative text",
         "app",
         "assistive devices",
         "audio description",
-        "autism",
         "barrier",
         "barriers",
         "benefits",
         "blind",
         "braille",
+        "canada",
+        "canadian",
         "captions",
         "care",
         "cognitive",
         "community",
         "community services",
+        "data",
         "deaf",
         "digital inclusion",
         "disability advocate",
         "disability justice",
         "disability rights",
         "education",
-        "employment support",
+        "emergency",
+        "employment",
         "equity",
         "federal",
         "government",
+        "handicap",
+        "health",
+        "healthcare",
         "housing",
         "inclusion",
         "inclusive design",
         "legislation",
         "living with disability",
-        "mobile accessibility",
-        "mobility",
         "neurodivergent",
+        "news",
+        "people with disabilities",
         "policy",
         "program",
+        "provincial",
         "public",
         "reasonable accommodation",
         "report",
@@ -279,7 +281,7 @@
     },
     "contextual": {
       "score": 1,
-      "description": "General news and context (catch-all for relevant but non-priority content)",
+      "description": "General context and background",
       "terms": [
         "social",
         "service",
@@ -295,21 +297,7 @@
         "survey",
         "consultation",
         "public",
-        "canada",
-        "canadian",
-        "ontario",
-        "british columbia",
-        "alberta",
-        "manitoba",
-        "saskatchewan",
-        "quebec",
-        "nova scotia",
-        "new brunswick",
-        "newfoundland",
-        "prince edward island",
-        "northwest territories",
-        "yukon",
-        "nunavut",
+        "app",
         "website",
         "platform",
         "digital",
@@ -320,14 +308,9 @@
         "information",
         "navigator",
         "directory",
-        "responsive design",
-        "patient",
-        "support group",
-        "peer support",
-        "self-advocacy",
-        "empowerment",
-        "independent living",
-        "quality of life"
+        "wellbeing",
+        "care",
+        "caregiver"
       ]
     }
   },
@@ -382,7 +365,9 @@
       "benefits",
       "increase",
       "eligibility",
-      "application"
+      "application",
+      "rate",
+      "amount"
     ],
     "workers_comp": [
       "WSIB",
@@ -390,17 +375,72 @@
       "WCB",
       "workplace injury",
       "compensation",
-      "return to work"
+      "return to work",
+      "workplace accommodation"
     ],
     "accessibility_update": [
       "accessibility",
       "barrier removal",
       "accommodation",
       "universal design",
-      "AODA"
+      "AODA",
+      "inclusive"
+    ],
+    "employment": [
+      "employment",
+      "hiring",
+      "job",
+      "workplace",
+      "work",
+      "income"
+    ],
+    "housing": [
+      "housing",
+      "rent",
+      "rental",
+      "housing subsidy",
+      "homelessness"
     ]
   },
-  "minScore": 0.5,
+  "topics": {
+    "workers_rights": {
+      "category": "Workplace & Compensation",
+      "keywords": ["WSIB", "WorkSafe", "WCB", "workplace injury", "return to work", "accommodation", "injured worker"],
+      "priority": 4.5,
+      "cta": "Know Your Rights"
+    },
+    "disability_benefits": {
+      "category": "Financial Support",
+      "keywords": ["ODSP", "AISH", "EIA disability", "CPP-D", "DTC", "benefits", "eligibility"],
+      "priority": 4.5,
+      "cta": "Explore Benefits"
+    },
+    "accessibility_rights": {
+      "category": "Access & Design",
+      "keywords": ["AODA", "accessibility", "barrier", "inclusive", "accommodation", "WCAG"],
+      "priority": 4,
+      "cta": "Learn More"
+    },
+    "legal_victories": {
+      "category": "Legal & Rights",
+      "keywords": ["court decision", "ruling", "settlement", "human rights", "discrimination case"],
+      "priority": 5,
+      "cta": "Read Full Story"
+    },
+    "health_wellness": {
+      "category": "Health Support",
+      "keywords": ["mental health", "chronic illness", "therapy", "medication", "healthcare"],
+      "priority": 3,
+      "cta": "Find Resources"
+    },
+    "community_action": {
+      "category": "Community",
+      "keywords": ["advocacy", "campaign", "petition", "coalition", "protest"],
+      "priority": 3.5,
+      "cta": "Get Involved"
+    }
+  },
+  "minScore": 1,
   "maxItems": 50,
   "languages": [
     "en",
@@ -409,7 +449,8 @@
   "excludePatterns": [
     "spam",
     "advertisement",
-    "promotional"
+    "promotional",
+    "clickbait"
   ],
   "requireKeywords": false,
   "postingSchedule": {
@@ -420,5 +461,40 @@
       "21:00 UTC"
     ],
     "description": "3 posts daily (morning, midday, evening) - within free tier limits"
+  },
+  "headlineOptimization": {
+    "patterns": [
+      {
+        "description": "Action-oriented wins",
+        "template": "How [community] won [outcome] - and what it means for you",
+        "example": "How injured workers won WSIB rate increase - and what it means for you"
+      },
+      {
+        "description": "Deadline urgency",
+        "template": "[Opportunity] closes [when] - Here's what you need to do",
+        "example": "DTC application deadline extended to March - Here's what you need to do"
+      },
+      {
+        "description": "Hidden benefit revelation",
+        "template": "You may qualify for [benefit] - 3 things you need to know",
+        "example": "You may qualify for Canada Disability Benefit - 3 things you need to know"
+      },
+      {
+        "description": "Barrier removal",
+        "template": "[Organization] removes barrier: Why [change] matters",
+        "example": "Ontario removes waiting period: Why this accessibility win matters"
+      },
+      {
+        "description": "Policy impact",
+        "template": "New [policy] will [impact] — Here's your action plan",
+        "example": "New AODA regulations will strengthen accessibility — Here's your action plan"
+      }
+    ]
+  },
+  "qualityChecks": {
+    "naval_clarity": "Is the core insight clear in the first sentence? Can someone understand the relevance in 10 seconds?",
+    "ogilvy_headline": "Does the headline pass the 'would I click this' test? Does it lead with benefit, not feature?",
+    "annHandley_story": "Is there a clear reason-to-care? Does it speak to the reader's real situation?",
+    "skim_test": "Can someone who has 30 seconds understand: what happened, why it matters, what to do?"
   }
 }

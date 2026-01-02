@@ -1,0 +1,370 @@
+---
+# COMMUNITY CURATION WORKFLOW
+# Submit stories, vote on relevance, suggest topics
+---
+
+<!-- STORY SUBMISSION FORM -->
+<form id="story-submission-form" method="POST" action="/api/story-submission">
+  <div style="max-width: 600px; margin: 0 auto; padding: 24px;">
+    
+    <h2>📰 Suggest a Story for 3mpwrApp</h2>
+    <p style="color: #666; margin-bottom: 24px;">
+      Found an article that affects our community? Submit it below and we'll review it for coverage.
+    </p>
+    
+    <!-- ARTICLE LINK -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; font-weight: 600; margin-bottom: 6px;">Article link or title *</label>
+      <input type="text" name="article_url" placeholder="https://..." required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0 0;">Paste the full URL or just the article title</p>
+    </div>
+    
+    <!-- TOPIC CATEGORY -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; font-weight: 600; margin-bottom: 10px;">Which topic does this relate to? *</label>
+      <div style="border: 1px solid #ccc; border-radius: 4px; padding: 12px;">
+        <label style="display: flex; margin-bottom: 10px; cursor: pointer;">
+          <input type="radio" name="topic" value="workers-rights" required style="margin-right: 10px;">
+          <span>⚖️ Workers' Rights & WSIB</span>
+        </label>
+        <label style="display: flex; margin-bottom: 10px; cursor: pointer;">
+          <input type="radio" name="topic" value="disability-benefits" style="margin-right: 10px;">
+          <span>💰 Disability Benefits</span>
+        </label>
+        <label style="display: flex; margin-bottom: 10px; cursor: pointer;">
+          <input type="radio" name="topic" value="accessibility" style="margin-right: 10px;">
+          <span>♿ Accessibility</span>
+        </label>
+        <label style="display: flex; margin-bottom: 10px; cursor: pointer;">
+          <input type="radio" name="topic" value="legal-rights" style="margin-right: 10px;">
+          <span>⚔️ Legal Victories</span>
+        </label>
+        <label style="display: flex; margin-bottom: 10px; cursor: pointer;">
+          <input type="radio" name="topic" value="health-wellness" style="margin-right: 10px;">
+          <span>🧘 Health & Wellness</span>
+        </label>
+        <label style="display: flex; cursor: pointer;">
+          <input type="radio" name="topic" value="community" style="margin-right: 10px;">
+          <span>🤝 Community Action</span>
+        </label>
+      </div>
+    </div>
+    
+    <!-- WHY SUBMIT -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; font-weight: 600; margin-bottom: 6px;">Why should we cover this? *</label>
+      <textarea name="reason" placeholder="How does this article affect our community? What makes it important?" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; min-height: 100px; font-family: inherit;"></textarea>
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0 0;">Help us understand why this matters (2-3 sentences)</p>
+    </div>
+    
+    <!-- SUBMITTER INFO -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; font-weight: 600; margin-bottom: 6px;">Your email (optional)</label>
+      <input type="email" name="submitter_email" placeholder="so we can follow up if needed" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+      <p style="font-size: 12px; color: #999; margin: 6px 0 0 0;">We'll only contact you if we need clarification</p>
+    </div>
+    
+    <!-- AGREEMENT -->
+    <div style="margin-bottom: 20px; padding: 12px; background: #F8F9FA; border-radius: 4px;">
+      <label style="display: flex; cursor: pointer;">
+        <input type="checkbox" name="agree" value="yes" required style="margin-right: 10px; margin-top: 2px;">
+        <span style="font-size: 14px;">
+          I confirm this article is publicly available and directly relevant to people with disabilities, injured workers, or accessibility advocates in Canada.
+        </span>
+      </label>
+    </div>
+    
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" style="width: 100%; padding: 12px; background: #E74C3C; color: white; border: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer;">
+      Submit Story
+    </button>
+    
+    <p style="text-align: center; font-size: 12px; color: #999; margin-top: 16px;">
+      Thank you for helping us stay informed. Every submission helps.
+    </p>
+    
+  </div>
+</form>
+
+<!-- ARTICLE VOTING WIDGET -->
+<div id="article-voting-widget" style="max-width: 600px; margin: 32px auto; padding: 20px; background: #F8F9FA; border-radius: 8px; border-left: 4px solid #3498DB;">
+  
+  <h3 style="margin-top: 0;">📊 Was This Article Relevant to You?</h3>
+  <p style="color: #666; margin: 8px 0 16px 0;">Help us improve our curation by voting on relevance</p>
+  
+  <div style="display: flex; gap: 12px;">
+    <button class="vote-btn" data-vote="very-relevant" style="flex: 1; padding: 12px; border: 2px solid #27AE60; background: white; color: #27AE60; border-radius: 4px; font-weight: 600; cursor: pointer;">
+      ✓ Very Relevant
+    </button>
+    <button class="vote-btn" data-vote="somewhat-relevant" style="flex: 1; padding: 12px; border: 2px solid #F39C12; background: white; color: #F39C12; border-radius: 4px; font-weight: 600; cursor: pointer;">
+      ~ Somewhat
+    </button>
+    <button class="vote-btn" data-vote="not-relevant" style="flex: 1; padding: 12px; border: 2px solid #E74C3C; background: white; color: #E74C3C; border-radius: 4px; font-weight: 600; cursor: pointer;">
+      ✗ Not Relevant
+    </button>
+  </div>
+  
+  <p id="vote-thanks" style="text-align: center; color: #27AE60; margin-top: 12px; display: none;">
+    ✓ Thanks! Your feedback helps us improve.
+  </p>
+  
+</div>
+
+<!-- TOPIC REQUEST POLL -->
+<div id="topic-request" style="max-width: 600px; margin: 32px auto; padding: 20px; background: #ECFDF5; border-radius: 8px; border-left: 4px solid #059669;">
+  
+  <h3 style="margin-top: 0;">💭 What Topics Should We Cover More?</h3>
+  <p style="color: #666; margin: 8px 0 16px 0;">Let us know what's missing from our coverage</p>
+  
+  <form id="topic-request-form">
+    <div style="margin-bottom: 12px;">
+      <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+        <input type="checkbox" name="topic-request" value="housing" style="margin-right: 10px;">
+        <span>🏠 Housing accessibility and affordability</span>
+      </label>
+      <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+        <input type="checkbox" name="topic-request" value="transportation" style="margin-right: 10px;">
+        <span>🚌 Transportation and mobility</span>
+      </label>
+      <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+        <input type="checkbox" name="topic-request" value="employment" style="margin-right: 10px;">
+        <span>💼 Employment and return-to-work</span>
+      </label>
+      <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+        <input type="checkbox" name="topic-request" value="education" style="margin-right: 10px;">
+        <span>🎓 Education access</span>
+      </label>
+      <label style="display: flex; margin-bottom: 8px; cursor: pointer;">
+        <input type="checkbox" name="topic-request" value="technology" style="margin-right: 10px;">
+        <span>💻 Assistive technology</span>
+      </label>
+      <label style="display: flex; cursor: pointer;">
+        <input type="checkbox" name="topic-request" value="other" style="margin-right: 10px;">
+        <span>Other (please specify below)</span>
+      </label>
+    </div>
+    
+    <div style="margin-bottom: 16px;">
+      <textarea name="topic-details" placeholder="Any other topics you'd like us to cover?" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; min-height: 80px; font-family: inherit;"></textarea>
+    </div>
+    
+    <button type="submit" style="width: 100%; padding: 12px; background: #059669; color: white; border: none; border-radius: 4px; font-weight: 600; cursor: pointer;">
+      Submit Topic Request
+    </button>
+  </form>
+  
+  <p id="topic-thanks" style="text-align: center; color: #047857; margin-top: 12px; display: none;">
+    ✓ Thanks! We'll consider these topics.
+  </p>
+  
+</div>
+
+<!-- FEEDBACK & MODERATION INFO -->
+<div style="max-width: 600px; margin: 32px auto; padding: 20px; background: #FEF3C7; border-radius: 8px;">
+  
+  <h4 style="margin-top: 0;">📋 Our Moderation Standards</h4>
+  
+  <p style="font-size: 14px; margin-bottom: 12px;">
+    We review every submission and approve articles that:
+  </p>
+  
+  <ul style="font-size: 14px; margin: 0; padding-left: 20px;">
+    <li style="margin-bottom: 8px;">✓ Are directly relevant to disability, injury, or accessibility</li>
+    <li style="margin-bottom: 8px;">✓ Come from credible news sources or official announcements</li>
+    <li style="margin-bottom: 8px;">✓ Respect all members of our community</li>
+    <li style="margin-bottom: 8px;">✓ Don't promote unproven treatments or discrimination</li>
+    <li>✓ Are in English or French</li>
+  </ul>
+  
+  <p style="font-size: 12px; color: #666; margin-top: 16px;">
+    <a href="/community-curation-guidelines" style="color: #D97706; text-decoration: none;">Read our full moderation guidelines →</a>
+  </p>
+  
+</div>
+
+<!-- JAVASCRIPT FOR FORMS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Story submission
+  document.getElementById('story-submission-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    // Send to backend
+    fetch('/api/community/submit-story', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+      if (result.success) {
+        alert('✓ Thank you! We'll review your submission.');
+        this.reset();
+      }
+    });
+  });
+  
+  // Article voting
+  document.querySelectorAll('.vote-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const vote = this.dataset.vote;
+      
+      // Send vote
+      fetch('/api/community/vote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          article_url: window.location.href,
+          vote_type: vote
+        })
+      });
+      
+      // Show thanks message
+      document.getElementById('vote-thanks').style.display = 'block';
+      
+      // Disable voting
+      document.querySelectorAll('.vote-btn').forEach(b => b.disabled = true);
+    });
+  });
+  
+  // Topic request
+  document.getElementById('topic-request-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const selected = Array.from(document.querySelectorAll('input[name="topic-request"]:checked'))
+      .map(cb => cb.value);
+    
+    const details = document.querySelector('textarea[name="topic-details"]').value;
+    
+    fetch('/api/community/request-topic', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        topics: selected,
+        details: details
+      })
+    });
+    
+    document.getElementById('topic-thanks').style.display = 'block';
+    this.style.display = 'none';
+  });
+});
+</script>
+
+---
+
+## BACKEND IMPLEMENTATION
+
+### API Endpoint: POST /api/community/submit-story
+
+**Request body:**
+```json
+{
+  "article_url": "https://...",
+  "topic": "workers-rights",
+  "reason": "This affects WSIB claimants...",
+  "submitter_email": "optional@email.com"
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Story submitted for review",
+  "id": "story_123"
+}
+```
+
+**Backend actions:**
+1. Validate URL is publicly accessible
+2. Store in "pending_stories" database table
+3. Send to moderation queue
+4. Flag with topic category
+5. Log submitter email (if provided)
+6. Send confirmation email
+
+### API Endpoint: POST /api/community/vote
+
+**Request body:**
+```json
+{
+  "article_url": "https://...",
+  "vote_type": "very-relevant|somewhat-relevant|not-relevant"
+}
+```
+
+**Backend actions:**
+1. Record vote in analytics
+2. Aggregate votes per article
+3. Feed into curator scoring algorithm
+4. Track voting patterns by topic
+
+### API Endpoint: POST /api/community/request-topic
+
+**Request body:**
+```json
+{
+  "topics": ["housing", "transportation"],
+  "details": "We need more coverage of..."
+}
+```
+
+**Backend actions:**
+1. Store in "topic_requests" table
+2. Aggregate by frequency
+3. Report to editorial team monthly
+4. Adjust curator weights based on patterns
+
+---
+
+## MODERATION WORKFLOW
+
+### Daily Moderation Process
+
+1. **Morning:** Editor checks "pending_stories" queue
+2. **Review:** Assess each submission against criteria (3 min per story)
+3. **Approve:** Add to curation feed with "Community Suggested" tag
+4. **Decline:** Send decline message explaining why
+5. **Track:** Log decision for patterns
+
+### Criteria for Approval
+
+✅ **APPROVE if:**
+- From credible news source (news org, government, academic, nonprofit)
+- Directly relevant to disability/injury/accessibility
+- Not already covered (check recent curations)
+- Respectful and factual
+- Complete article available (not paywalled)
+
+❌ **DECLINE if:**
+- Promotional/sponsored content
+- Unproven treatments/pseudoscience
+- Paywall-only (users can't read)
+- Discriminatory language
+- Off-topic or tangential
+- Already covered recently
+
+### Declining Respectfully
+
+Send brief, constructive response:
+
+> "Thank you for the suggestion! This article doesn't quite fit our focus on disability rights and practical navigation. We appreciate your help in keeping us informed though—keep them coming!"
+
+---
+
+## MONTHLY REPORTING
+
+**Community Curation Report includes:**
+1. Stories submitted this month
+2. Approval rate
+3. Top topic requests
+4. Vote patterns (which articles rated most relevant)
+5. Engagement from suggested articles
+6. Adjustments to curator.json based on feedback
+
+---

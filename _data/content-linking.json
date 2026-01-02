@@ -1,0 +1,309 @@
+{
+  "linkingRules": {
+    "description": "Thematic cross-linking between curated articles, blog posts, and essential guides based on topic categories",
+    "strategy": "Create discovery pathways so readers naturally flow between related content: daily curation → relevant blog post → foundational guide"
+  },
+  "topicClusters": {
+    "workers_rights": {
+      "label": "Workers' Rights & Compensation",
+      "color": "#E74C3C",
+      "emoji": "⚖️",
+      "keywords": [
+        "WSIB",
+        "workplace injury",
+        "workers compensation",
+        "return to work",
+        "workplace accommodation",
+        "workplace rights",
+        "workplace discrimination",
+        "workplace harassment",
+        "occupational health",
+        "injured worker"
+      ],
+      "blogTags": ["workers-rights", "WSIB", "workplace-accommodation"],
+      "curatorsScore": 4.5,
+      "essentialGuides": [
+        "/essential-guides/wsib-claims-101",
+        "/essential-guides/wsib-appeals",
+        "/essential-guides/return-to-work",
+        "/essential-guides/workplace-accommodation",
+        "/essential-guides/workplace-rights"
+      ],
+      "relatedTopics": ["accessibility", "legal_victories"],
+      "cta": "Learning about your workplace rights? Get the complete WSIB guide."
+    },
+    "disability_benefits": {
+      "label": "Disability Benefits Navigation",
+      "color": "#27AE60",
+      "emoji": "💰",
+      "keywords": [
+        "ODSP",
+        "AISH",
+        "CPP-D",
+        "CPP disability",
+        "DTC",
+        "disability tax credit",
+        "Canada Disability Benefit",
+        "EIA disability",
+        "SAID",
+        "benefit application",
+        "benefit eligibility",
+        "benefit increase",
+        "benefit denial",
+        "benefit appeal",
+        "income assistance",
+        "disability pension"
+      ],
+      "blogTags": ["disability-benefits", "ODSP", "AISH", "CPP-D", "DTC"],
+      "curatorsScore": 4,
+      "essentialGuides": [
+        "/essential-guides/canada-disability-benefit",
+        "/essential-guides/cpp-d-guide",
+        "/essential-guides/dtc-guide",
+        "/essential-guides/odsp-handbook",
+        "/essential-guides/aish-guide",
+        "/essential-guides/eia-guide"
+      ],
+      "relatedTopics": ["economic_impact", "health_wellness"],
+      "cta": "Applying for disability benefits? Start with our step-by-step application guides."
+    },
+    "accessibility_rights": {
+      "label": "Accessibility & Inclusive Design",
+      "color": "#9B59B6",
+      "emoji": "♿",
+      "keywords": [
+        "accessibility",
+        "accessible",
+        "AODA",
+        "barrier",
+        "barrier removal",
+        "accessible canada act",
+        "accommodation",
+        "assistive technology",
+        "universal design",
+        "web accessibility",
+        "WCAG",
+        "inclusive design",
+        "accessibility violation",
+        "accessibility audit",
+        "accessible format",
+        "screen reader"
+      ],
+      "blogTags": ["accessibility", "AODA", "inclusive-design", "accessibility-rights"],
+      "curatorsScore": 4,
+      "essentialGuides": [
+        "/essential-guides/accessibility-rights",
+        "/essential-guides/web-accessibility",
+        "/essential-guides/accessible-formats",
+        "/essential-guides/assistive-technology"
+      ],
+      "relatedTopics": ["legal_victories", "workers_rights"],
+      "cta": "Know your accessibility rights. We have guides for legal claims and inclusive design."
+    },
+    "legal_victories": {
+      "label": "Legal Victories & Rights",
+      "color": "#3498DB",
+      "emoji": "⚔️",
+      "keywords": [
+        "court decision",
+        "ruling",
+        "settlement",
+        "class action",
+        "lawsuit",
+        "human rights complaint",
+        "human rights decision",
+        "discrimination case",
+        "appeal",
+        "tribunal decision",
+        "legal victory",
+        "legal win",
+        "landmark decision",
+        "precedent",
+        "legislation",
+        "policy change"
+      ],
+      "blogTags": ["legal-victories", "human-rights", "court-decisions"],
+      "curatorsScore": 5,
+      "essentialGuides": [
+        "/essential-guides/reading-legal-decisions",
+        "/essential-guides/human-rights-complaints"
+      ],
+      "relatedTopics": ["workers_rights", "accessibility_rights"],
+      "cta": "Stay informed on disability rights wins. We break down legal decisions that affect you."
+    },
+    "health_wellness": {
+      "label": "Health & Wellness Support",
+      "color": "#16A085",
+      "emoji": "🧘",
+      "keywords": [
+        "mental health",
+        "chronic illness",
+        "chronic pain",
+        "health",
+        "healthcare",
+        "medical",
+        "therapy",
+        "treatment",
+        "wellness",
+        "wellbeing",
+        "self-care",
+        "rehabilitation",
+        "recovery",
+        "condition management",
+        "symptom management",
+        "support group",
+        "peer support"
+      ],
+      "blogTags": ["health-wellness", "mental-health", "chronic-illness"],
+      "curatorsScore": 3,
+      "essentialGuides": [
+        "/essential-guides/mental-health-support",
+        "/essential-guides/chronic-illness-management",
+        "/essential-guides/finding-services",
+        "/essential-guides/caregiver-support"
+      ],
+      "relatedTopics": ["disability_benefits", "community_action"],
+      "cta": "Struggling with mental health or chronic illness? We have evidence-based support resources."
+    },
+    "community_action": {
+      "label": "Community Action & Events",
+      "color": "#F39C12",
+      "emoji": "🤝",
+      "keywords": [
+        "event",
+        "campaign",
+        "activism",
+        "advocacy",
+        "community",
+        "community organization",
+        "petition",
+        "rally",
+        "protest",
+        "coalition",
+        "volunteer",
+        "fundraiser",
+        "celebration",
+        "community spotlight"
+      ],
+      "blogTags": ["community-action", "events", "advocacy-campaigns"],
+      "curatorsScore": 2.5,
+      "essentialGuides": [],
+      "relatedTopics": ["workers_rights", "disability_benefits"],
+      "cta": "Get involved. See upcoming events, campaigns, and community spotlights."
+    }
+  },
+  "contentLinkingPatterns": {
+    "curated_to_blog": {
+      "description": "When curated article matches blog topic, link to related blog post",
+      "trigger": "Article keyword matches blog tag",
+      "placement": "End of curated article summary",
+      "template": "Learn more: [Blog Post Title] →",
+      "example": "Curated article about WSIB → Link to 'WSIB Claims 101' blog post"
+    },
+    "blog_to_guide": {
+      "description": "Blog posts link to foundational essential guides for deeper learning",
+      "trigger": "Blog post tags match guide topics",
+      "placement": "Related links section at end of post",
+      "template": "Want the full story? Read our complete guide: [Guide Title]",
+      "example": "Blog post about WSIB return-to-work → Essential Guide: 'Return-to-Work Planning'"
+    },
+    "curation_to_guide": {
+      "description": "Curated articles in essential topics link directly to guides",
+      "trigger": "Article is about perennial topic (not breaking news)",
+      "placement": "Sidebar 'Go Deeper' section",
+      "template": "This topic explained: [Essential Guide]",
+      "example": "CPP-D eligibility article → Essential Guide: 'CPP-D: Step-by-Step Application'"
+    },
+    "related_articles_sidebar": {
+      "description": "Show 2-3 related articles from same topic cluster",
+      "trigger": "Reader viewing article in specific cluster",
+      "placement": "Post sidebar, 'Related Reading' section",
+      "template": "You might also want to read: [Article 1] [Article 2]",
+      "example": "Reader on Workers Rights article → See 2 more workers rights articles"
+    },
+    "topic_cross_reference": {
+      "description": "When article touches multiple topics, link to related clusters",
+      "trigger": "Article contains keywords from 2+ topic clusters",
+      "placement": "Post end: 'Related Topics'",
+      "template": "Also interested in [Topic]? Explore our [Topic] collection",
+      "example": "Accessibility + workplace accommodation → Link to both accessibility AND workers rights sections"
+    }
+  },
+  "linkingImplementation": {
+    "jekyll_liquid_filters": [
+      "{% assign related_posts = site.posts | where_exp: 'p', \"p.tags contains 'category'\" | limit: 3 %}",
+      "{% assign guides = site.data.guides | where_exp: 'g', \"g.topics contains 'topic'\" %}"
+    ],
+    "automated_tagging": {
+      "process": "During curation, articles automatically tagged by curator.json scoring category",
+      "tagging_rules": {
+        "workers_rights": "WSIB, workplace injury, workers compensation score > 3.5",
+        "disability_benefits": "ODSP, AISH, CPP-D, benefits score > 3.5",
+        "accessibility_rights": "accessibility, AODA, barrier, universal design score > 3.5",
+        "legal_victories": "court, ruling, settlement, lawsuit score > 4.5",
+        "health_wellness": "mental health, chronic illness, wellness score > 2.5",
+        "community_action": "event, campaign, activism, community score > 2"
+      }
+    },
+    "guide_linking_rules": {
+      "essential_guides_index": "Links to guides from topic cluster main page",
+      "blog_posts": "Feature spotlights and curation summaries include 'Learn more' links",
+      "navigation": "Topic cluster navigation shows 'Jump to Essential Guide' for evergreen topics",
+      "search": "Search results include guide results when topic-related"
+    }
+  },
+  "linkingMetrics": {
+    "track": [
+      "click_through_rate_on_related_links",
+      "reader_topic_exploration_patterns",
+      "guide_traffic_from_blog_vs_navigation",
+      "bounce_rate_by_topic_cluster",
+      "average_articles_read_per_session",
+      "guide_to_curation_exploration_ratio"
+    ],
+    "optimization_triggers": {
+      "low_ctr_links": "If link CTR < 5%, revise link text and placement",
+      "unused_guides": "If guide traffic < 20/day, feature more prominently",
+      "broken_paths": "If readers leaving without exploring related content, add more links",
+      "topic_confusion": "If readers bouncing between unrelated topics, improve category clarity"
+    }
+  },
+  "contentHierarchy": {
+    "level_1_entry_points": [
+      "Homepage topic cards",
+      "Newsletter segment headers",
+      "Social media link clicks"
+    ],
+    "level_2_discovery": [
+      "Blog post topic archive",
+      "Curated articles in category",
+      "Related articles sidebar"
+    ],
+    "level_3_deep_dive": [
+      "Essential guide (comprehensive, evergreen)",
+      "Blog post deep-dive article",
+      "Feature spotlight with case study"
+    ],
+    "reader_journey_example": {
+      "step_1": "Newsletter headline: 'WSIB rate increase just passed'",
+      "step_2": "Reader clicks → Curated article with full news",
+      "step_3": "Sidebar link: 'Want to understand WSIB appeals? Read our guide'",
+      "step_4": "Reader explores → Essential Guide: WSIB Appeals",
+      "step_5": "Reader sees blog link: 'Return-to-Work Success Stories'",
+      "step_6": "Reader engaged, exploring 4 different content pieces on related topics"
+    }
+  },
+  "implementationChecklist": [
+    "Tag all existing blog posts with topic cluster tags",
+    "Tag all essential guides with topic cluster tags",
+    "Add 'related_posts' liquid loop to post layout template",
+    "Create 'topic_cluster_sidebar.html' include for post sidebars",
+    "Add guide linking to curator.json output formatting",
+    "Create 'go_deeper' section template for curation summaries",
+    "Update homepage to show topic navigation cards",
+    "Implement related-links in blog post frontmatter",
+    "Set up analytics tracking for link clicks",
+    "Test content journey for each topic cluster",
+    "Monitor metrics weekly, optimize quarterly"
+  ]
+}

@@ -1,0 +1,489 @@
+# EMAIL SEGMENTATION SYSTEM
+## 4 Newsletter Variants for Different Audience Segments
+
+---
+
+## SEGMENT OVERVIEW
+
+Each segment receives a completely different email experience tailored to their specific needs and context.
+
+### Segment 1: WORKERS' RIGHTS DIGEST
+**Audience:** Injured workers, WSIB claimants, workplace advocates  
+**Percentage:** ~35% of list  
+**Send day:** Thursday at 9 AM  
+**Frequency:** 2x per week  
+**Subject line style:** Deadline-urgent, action-oriented, empowering
+
+### Segment 2: BENEFITS NAVIGATION DIGEST
+**Audience:** People seeking/managing disability income programs  
+**Percentage:** ~30% of list  
+**Send day:** Wednesday at 9 AM  
+**Frequency:** Bi-weekly (1st & 15th)  
+**Subject line style:** Educational, progress-focused, hopeful
+
+### Segment 3: ACCESSIBILITY WINS DIGEST
+**Audience:** Accessibility advocates, accessibility policy followers  
+**Percentage:** ~20% of list  
+**Send day:** Monday at 9 AM  
+**Frequency:** Weekly  
+**Subject line style:** Inspiring, barrier-breaking, progress-driven
+
+### Segment 4: COMMUNITY ACTION DIGEST
+**Audience:** Community organizers, activists, event-focused readers  
+**Percentage:** ~15% of list  
+**Send day:** Friday at 9 AM  
+**Frequency:** Weekly  
+**Subject line style:** Participation-driven, urgency, solidarity
+
+---
+
+## EMAIL TEMPLATE 1: WORKERS' RIGHTS DIGEST
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Workers' Rights Digest</title>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2C3E50; background: #F8F9FA;">
+
+<!-- HEADER -->
+<div style="background: #E74C3C; color: white; padding: 24px 20px; text-align: center;">
+  <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🏭 Workers' Rights Digest</h1>
+  <p style="margin: 8px 0 0 0; font-size: 14px; opacity: 0.9;">Your weekly guide to WSIB, workplace rights, and injury recovery</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div style="max-width: 600px; margin: 0 auto; background: white; padding: 32px 24px;">
+
+<!-- OPENING -->
+<p style="margin: 0 0 24px 0; font-size: 16px;">Hi [FIRST_NAME],</p>
+
+<p style="margin: 0 0 24px 0; font-size: 15px; line-height: 1.6;">
+  This week's digest focuses on <strong>WSIB appeals</strong>—specifically, what strengthens your case when you're fighting a denial.
+</p>
+
+<!-- TOP STORY -->
+<div style="border-left: 4px solid #E74C3C; padding: 20px; background: #FEF2F0; margin-bottom: 28px;">
+  <h2 style="margin: 0 0 12px 0; font-size: 18px; color: #C0392B;">⚠️ BREAKING: New WSIB Appeal Win for Workers with Chronic Pain</h2>
+  <p style="margin: 0 0 12px 0; font-size: 14px; color: #666;">Ontario Court of Appeal just ruled that WSIB must consider delayed pain onset in workplace injuries. This affects hundreds of claims.</p>
+  <p style="margin: 0; font-size: 14px;"><strong>Why this matters:</strong> If your injury caused pain that developed weeks or months later, you may have grounds to appeal a denial.</p>
+  <p style="margin: 12px 0 0 0;"><a href="#" style="color: #E74C3C; font-weight: bold; text-decoration: none;">→ Read the full decision and what it means for you</a></p>
+</div>
+
+<!-- FEATURED ARTICLE -->
+<div style="border: 2px solid #E8EAED; padding: 20px; margin-bottom: 28px;">
+  <h3 style="margin: 0 0 8px 0; font-size: 16px; color: #2C3E50;">📰 Featured This Week</h3>
+  <h4 style="margin: 0 0 8px 0; font-size: 15px;">8 Documents That Strengthen Your WSIB Appeal</h4>
+  <p style="margin: 0 0 12px 0; font-size: 14px; color: #666;">A complete checklist of evidence that helps you win. Many workers forget the obvious ones.</p>
+  <a href="#" style="display: inline-block; background: #E74C3C; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; font-weight: 500;">Read Article</a>
+</div>
+
+<!-- DEADLINE ALERT -->
+<div style="background: #FFF3CD; border-left: 4px solid #FFC107; padding: 16px 20px; margin-bottom: 28px;">
+  <p style="margin: 0; font-weight: 600; color: #856404;">⏰ DEADLINE ALERT</p>
+  <p style="margin: 8px 0 0 0; font-size: 14px; color: #333;">WSIB appeals must be filed within <strong>6 months of your denial letter</strong>. If your denial is dated [DATE_6_MONTHS_AGO], you have until [DEADLINE_DATE] to file. Don't wait.</p>
+</div>
+
+<!-- BENEFITS SNAPSHOT -->
+<div style="background: #ECFDF5; padding: 20px; margin-bottom: 28px; border-radius: 4px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px; color: #047857;">💡 Quick Tip of the Week</h3>
+  <p style="margin: 0; font-size: 14px;">When writing your appeal letter, lead with medical evidence—not your feelings. "My doctor states that I remain partially disabled" is stronger than "I still can't work."</p>
+</div>
+
+<!-- RELATED ARTICLES -->
+<div style="margin-bottom: 28px;">
+  <h3 style="margin: 0 0 16px 0; font-size: 15px; color: #2C3E50;">📚 Related Reading</h3>
+  
+  <div style="margin-bottom: 12px; padding: 12px; background: #F8F9FA; border-radius: 4px;">
+    <p style="margin: 0 0 8px 0; font-weight: 500; font-size: 14px;">Workplace Accommodation Denied? Here's Your Next Move</p>
+    <p style="margin: 0; font-size: 13px; color: #666;">When an employer refuses reasonable accommodation, you have legal options.</p>
+  </div>
+  
+  <div style="margin-bottom: 12px; padding: 12px; background: #F8F9FA; border-radius: 4px;">
+    <p style="margin: 0 0 8px 0; font-weight: 500; font-size: 14px;">Return to Work While Protecting Your Case</p>
+    <p style="margin: 0; font-size: 13px; color: #666;">You can work modified duty without weakening your WSIB claim. Here's how.</p>
+  </div>
+</div>
+
+<!-- CTA SECTION -->
+<div style="background: #E8F4F8; border-left: 4px solid #3498DB; padding: 20px; margin-bottom: 28px; text-align: center;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px;">Need Step-by-Step Guidance?</h3>
+  <p style="margin: 0 0 16px 0; font-size: 14px;">Our complete WSIB Appeals guide walks you through the process. No surprises.</p>
+  <a href="#" style="display: inline-block; background: #3498DB; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: 600;">Read Our Complete Guide</a>
+</div>
+
+<!-- COMMUNITY HIGHLIGHT -->
+<div style="background: #F3E8FF; border-left: 4px solid #9B59B6; padding: 20px; margin-bottom: 28px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px; color: #6B21A8;">🤝 From Our Community</h3>
+  <blockquote style="margin: 0; font-size: 14px; font-style: italic; color: #666;">
+    "Your article about evidence collection saved my appeal. I compiled everything before filing and the appeal officer said my documentation was 'exceptional.' Thank you." — Marcus, Toronto
+  </blockquote>
+</div>
+
+<!-- FOOTER -->
+<div style="border-top: 1px solid #E8EAED; padding-top: 24px; margin-top: 32px; color: #7F8C8D; font-size: 12px;">
+  <p style="margin: 0 0 12px 0;">Got a workplace rights story? <a href="#" style="color: #E74C3C; text-decoration: none;">Tell us</a> and it might be featured next week.</p>
+  <p style="margin: 0 0 12px 0;">Questions about your specific situation? <a href="#" style="color: #E74C3C; text-decoration: none;">Find a local advocate</a> who can help.</p>
+  <p style="margin: 0;">📧 This email is personalized for workplace and WSIB topics. <a href="#" style="color: #3498DB; text-decoration: none;">Change your preferences</a> or <a href="#" style="color: #3498DB; text-decoration: none;">unsubscribe</a>.</p>
+</div>
+
+</div>
+</body>
+</html>
+```
+
+---
+
+## EMAIL TEMPLATE 2: BENEFITS NAVIGATION DIGEST
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Benefits Navigation Digest</title>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2C3E50; background: #F8F9FA;">
+
+<!-- HEADER -->
+<div style="background: #27AE60; color: white; padding: 24px 20px; text-align: center;">
+  <h1 style="margin: 0; font-size: 28px; font-weight: bold;">💰 Benefits Navigation Digest</h1>
+  <p style="margin: 8px 0 0 0; font-size: 14px; opacity: 0.9;">Your guide to disability benefits: CPP-D, ODSP, DTC, and more</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div style="max-width: 600px; margin: 0 auto; background: white; padding: 32px 24px;">
+
+<!-- OPENING -->
+<p style="margin: 0 0 24px 0; font-size: 16px;">Hi [FIRST_NAME],</p>
+
+<p style="margin: 0 0 24px 0; font-size: 15px; line-height: 1.6;">
+  Great news: <strong>Two benefit programs are accepting applications now</strong>. Let's break down which ones apply to your situation.
+</p>
+
+<!-- BENEFIT UPDATE -->
+<div style="border-left: 4px solid #27AE60; padding: 20px; background: #ECFDF5; margin-bottom: 28px;">
+  <h2 style="margin: 0 0 12px 0; font-size: 18px; color: #047857;">🎉 ODSP Increase Takes Effect This Month</h2>
+  <p style="margin: 0 0 12px 0; font-size: 14px; color: #666;">Ontario increased ODSP rates by 2.7%. Single adults now receive $1,307/month (up from $1,273).</p>
+  <p style="margin: 0; font-size: 14px;"><strong>What you need to do:</strong> Nothing—it's automatic. You'll see it in your next deposit.</p>
+</div>
+
+<!-- APPLICATION GUIDE -->
+<div style="background: #F0F9FF; border: 2px solid #3498DB; padding: 20px; margin-bottom: 28px; border-radius: 4px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 16px; color: #0C63E4;">📋 CPP-D Application Now Open</h3>
+  <p style="margin: 0 0 12px 0; font-size: 14px;">CPP Disability is accepting applications. Here's what you need to submit:</p>
+  <ul style="margin: 12px 0; padding-left: 20px;">
+    <li style="margin: 6px 0; font-size: 14px;">Completed form T4001</li>
+    <li style="margin: 6px 0; font-size: 14px;">Doctor's medical report (form T4004)</li>
+    <li style="margin: 6px 0; font-size: 14px;">Proof of CPP contributions</li>
+  </ul>
+  <a href="#" style="color: #3498DB; font-weight: bold; text-decoration: none;">→ Start your CPP-D application today</a>
+</div>
+
+<!-- TIMELINE -->
+<div style="background: #FFFBEB; border-left: 4px solid #F59E0B; padding: 16px 20px; margin-bottom: 28px;">
+  <p style="margin: 0; font-weight: 600; color: #78350F;">⏳ Timeline to Know</p>
+  <p style="margin: 8px 0 0 0; font-size: 14px; color: #333;">CPP-D applications typically take <strong>4-6 months</strong> to process. If you apply this month, you could have approval by summer.</p>
+</div>
+
+<!-- COMPARISON TABLE -->
+<div style="margin-bottom: 28px; border: 1px solid #E8EAED; border-radius: 4px; overflow: hidden;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tr style="background: #F3F4F6;">
+      <th style="padding: 12px; text-align: left; font-weight: 600; border-right: 1px solid #E8EAED;">Program</th>
+      <th style="padding: 12px; text-align: left; font-weight: 600; border-right: 1px solid #E8EAED;">Amount/Month</th>
+      <th style="padding: 12px; text-align: left; font-weight: 600;">Timeline</th>
+    </tr>
+    <tr style="border-bottom: 1px solid #E8EAED;">
+      <td style="padding: 12px; border-right: 1px solid #E8EAED;">ODSP (Ontario)</td>
+      <td style="padding: 12px; border-right: 1px solid #E8EAED;"><strong>$1,307</strong></td>
+      <td style="padding: 12px;">4-8 weeks</td>
+    </tr>
+    <tr style="background: #FAFAFA;">
+      <td style="padding: 12px; border-right: 1px solid #E8EAED;">CPP-D (Federal)</td>
+      <td style="padding: 12px; border-right: 1px solid #E8EAED;"><strong>$1,700-2,000</strong></td>
+      <td style="padding: 12px;">4-6 months</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #E8EAED;">
+      <td style="padding: 12px; border-right: 1px solid #E8EAED;">DTC (Tax Credit)</td>
+      <td style="padding: 12px; border-right: 1px solid #E8EAED;">$3,000+ refund</td>
+      <td style="padding: 12px;">6-12 months</td>
+    </tr>
+  </table>
+</div>
+
+<!-- READER QUESTION -->
+<div style="background: #FDF2F8; border-left: 4px solid #EC4899; padding: 20px; margin-bottom: 28px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px; color: #BE185D;">💬 This Week's Common Question</h3>
+  <p style="margin: 0 0 12px 0; font-size: 14px;"><strong>"Can I apply for ODSP and CPP-D at the same time?"</strong></p>
+  <p style="margin: 0; font-size: 14px;">Yes. Many people get approved for ODSP first (faster process), then CPP-D later. Benefits stack differently depending on how much you receive, so plan accordingly.</p>
+  <p style="margin: 12px 0 0 0;"><a href="#" style="color: #EC4899; font-weight: bold; text-decoration: none;">→ Read: How benefits combine</a></p>
+</div>
+
+<!-- CTA SECTION -->
+<div style="background: #E8F4F8; border-left: 4px solid #3498DB; padding: 20px; margin-bottom: 28px; text-align: center;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px;">Not Sure Which Benefit You Qualify For?</h3>
+  <p style="margin: 0 0 16px 0; font-size: 14px;">Our interactive tool asks 5 questions and shows you exactly which programs might work for your situation.</p>
+  <a href="#" style="display: inline-block; background: #3498DB; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: 600;">Take the Benefits Quiz</a>
+</div>
+
+<!-- FOOTER -->
+<div style="border-top: 1px solid #E8EAED; padding-top: 24px; margin-top: 32px; color: #7F8C8D; font-size: 12px;">
+  <p style="margin: 0 0 12px 0;">Have questions about a specific benefit? <a href="#" style="color: #27AE60; text-decoration: none;">Ask our community</a>—someone's probably been through it.</p>
+  <p style="margin: 0;">📧 This email focuses on disability benefits. <a href="#" style="color: #3498DB; text-decoration: none;">Change your topics</a> or <a href="#" style="color: #3498DB; text-decoration: none;">unsubscribe</a>.</p>
+</div>
+
+</div>
+</body>
+</html>
+```
+
+---
+
+## EMAIL TEMPLATE 3: ACCESSIBILITY WINS DIGEST
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Accessibility Wins Digest</title>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2C3E50; background: #F8F9FA;">
+
+<!-- HEADER -->
+<div style="background: #9B59B6; color: white; padding: 24px 20px; text-align: center;">
+  <h1 style="margin: 0; font-size: 28px; font-weight: bold;">♿ Accessibility Wins Digest</h1>
+  <p style="margin: 8px 0 0 0; font-size: 14px; opacity: 0.9;">Barrier removals, legal victories, and inclusive innovation</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div style="max-width: 600px; margin: 0 auto; background: white; padding: 32px 24px;">
+
+<!-- OPENING -->
+<p style="margin: 0 0 24px 0; font-size: 16px;">Hi [FIRST_NAME],</p>
+
+<p style="margin: 0 0 24px 0; font-size: 15px; line-height: 1.6;">
+  <strong>This week's highlight:</strong> Three major barriers were just removed—and you can use them now.
+</p>
+
+<!-- WIN #1 -->
+<div style="border-left: 4px solid #9B59B6; padding: 20px; background: #F3E8FF; margin-bottom: 28px;">
+  <h2 style="margin: 0 0 12px 0; font-size: 18px; color: #6B21A8;">🎉 Transport Canada Mandates Accessible Air Travel (Effective NOW)</h2>
+  <p style="margin: 0 0 12px 0; font-size: 14px; color: #333;">New accessibility standards require airlines to provide accessible seating, bathrooms, and communication aids. Non-compliance = fines.</p>
+  <p style="margin: 0; font-size: 14px;"><strong>What changed:</strong> Airlines must now accommodate wheelchairs, mobility devices, and communication disabilities. Service animals get dedicated space.</p>
+  <p style="margin: 12px 0 0 0;"><a href="#" style="color: #9B59B6; font-weight: bold; text-decoration: none;">→ Know your air travel rights (checklist included)</a></p>
+</div>
+
+<!-- WIN #2 -->
+<div style="border: 2px solid #E8EAED; padding: 20px; margin-bottom: 28px;">
+  <h3 style="margin: 0 0 8px 0; font-size: 16px; color: #2C3E50;">📱 Google Accessibility Features Get Huge Upgrade</h3>
+  <p style="margin: 0 0 12px 0; font-size: 14px; color: #666;">New screen reader improvements make reading websites 40% faster. Live Relay helps deaf/hard of hearing use video calls.</p>
+  <a href="#" style="display: inline-block; background: #9B59B6; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; font-weight: 500; margin-top: 12px;">Download New Features</a>
+</div>
+
+<!-- LEGAL VICTORY -->
+<div style="background: #FEF3C7; border-left: 4px solid #F59E0B; padding: 20px; margin-bottom: 28px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px; color: #92400E;">⚔️ Court Rules: Websites MUST Be Accessible (With Timeline)</h3>
+  <p style="margin: 0 0 12px 0; font-size: 14px;">B.C. Supreme Court ruled that all provincial government websites must meet WCAG 2.1 AA by end of 2024. This sets precedent for Canada.</p>
+  <p style="margin: 0; font-size: 14px;"><strong>Why it matters:</strong> When one province wins, it becomes the standard others must meet. This is how barriers fall.</p>
+  <p style="margin: 12px 0 0 0;"><a href="#" style="color: #D97706; font-weight: bold; text-decoration: none;">→ Read the full decision</a></p>
+</div>
+
+<!-- ADVOCACY TIP -->
+<div style="background: #ECFDF5; border-left: 4px solid #059669; padding: 20px; margin-bottom: 28px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px; color: #047857;">💡 How to Report Inaccessible Websites</h3>
+  <p style="margin: 0 0 12px 0; font-size: 14px;">Found an inaccessible government or commercial website? You can report it and it counts. Here's the 3-step process that works.</p>
+  <a href="#" style="display: inline-block; background: #059669; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; font-weight: 500; margin-top: 12px;">Learn How to Report</a>
+</div>
+
+<!-- COMMUNITY ACTION -->
+<div style="background: #E0E7FF; border-left: 4px solid #4F46E5; padding: 20px; margin-bottom: 28px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px; color: #3730A3;">🤝 Your Advocacy Works</h3>
+  <p style="margin: 0; font-size: 14px;">Three readers reported the same banking website's accessibility issues. The bank invested $500K in fixes. Your report matters more than you know.</p>
+</div>
+
+<!-- PRODUCT SPOTLIGHT -->
+<div style="border: 1px solid #E8EAED; padding: 20px; margin-bottom: 28px; border-radius: 4px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px;">🔧 Featured: New Accessible Tool This Week</h3>
+  <p style="margin: 0 0 8px 0; font-weight: 500; font-size: 14px;">Voice-Control Mouse for PC & Mac — Control your cursor with voice commands</p>
+  <p style="margin: 0 0 12px 0; font-size: 13px; color: #666;">Works with screen readers. Free trial, then $8/month. Reduces hand strain significantly.</p>
+  <a href="#" style="color: #9B59B6; font-weight: bold; text-decoration: none;">→ Learn more</a>
+</p>
+</div>
+
+<!-- CTA SECTION -->
+<div style="background: #E8F4F8; border-left: 4px solid #3498DB; padding: 20px; margin-bottom: 28px; text-align: center;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px;">Found an Accessibility Barrier?</h3>
+  <p style="margin: 0 0 16px 0; font-size: 14px;">We help you report it the right way so organizations actually fix it. Your voice drives change.</p>
+  <a href="#" style="display: inline-block; background: #3498DB; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: 600;">Report a Barrier</a>
+</div>
+
+<!-- FOOTER -->
+<div style="border-top: 1px solid #E8EAED; padding-top: 24px; margin-top: 32px; color: #7F8C8D; font-size: 12px;">
+  <p style="margin: 0 0 12px 0;">Celebrating an accessibility win at your workplace or in your community? <a href="#" style="color: #9B59B6; text-decoration: none;">Share your story</a>—it inspires others.</p>
+  <p style="margin: 0;">📧 This email focuses on accessibility news. <a href="#" style="color: #3498DB; text-decoration: none;">Change your topics</a> or <a href="#" style="color: #3498DB; text-decoration: none;">unsubscribe</a>.</p>
+</div>
+
+</div>
+</body>
+</html>
+```
+
+---
+
+## EMAIL TEMPLATE 4: COMMUNITY ACTION DIGEST
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Community Action Digest</title>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2C3E50; background: #F8F9FA;">
+
+<!-- HEADER -->
+<div style="background: #F39C12; color: white; padding: 24px 20px; text-align: center;">
+  <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🤝 Community Action Digest</h1>
+  <p style="margin: 8px 0 0 0; font-size: 14px; opacity: 0.9;">Events, campaigns, and where you can make a difference</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div style="max-width: 600px; margin: 0 auto; background: white; padding: 32px 24px;">
+
+<!-- OPENING -->
+<p style="margin: 0 0 24px 0; font-size: 16px;">Hi [FIRST_NAME],</p>
+
+<p style="margin: 0 0 24px 0; font-size: 15px; line-height: 1.6;">
+  <strong>This week:</strong> Two campaigns launching + four events near you. Here's how to get involved.
+</p>
+
+<!-- FEATURED CAMPAIGN -->
+<div style="border-left: 4px solid #F39C12; padding: 20px; background: #FFFBEB; margin-bottom: 28px;">
+  <h2 style="margin: 0 0 12px 0; font-size: 18px; color: #B45309;">📢 LAUNCH: Accessible Transit Campaign 2026</h2>
+  <p style="margin: 0 0 12px 0; font-size: 14px; color: #333;">Major cities are expanding transit. NOW is the time to demand accessibility improvements. We're organizing coordinated city council submissions.</p>
+  <p style="margin: 0 0 12px 0; font-size: 14px;"><strong>Your role:</strong> Send a 2-minute email to your city council member. We provide the template. Takes 5 minutes, impacts policy.</p>
+  <a href="#" style="display: inline-block; background: #F39C12; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: 600; margin-top: 12px;">Get the Email Template</a>
+</div>
+
+<!-- UPCOMING EVENTS -->
+<div style="margin-bottom: 28px;">
+  <h3 style="margin: 0 0 16px 0; font-size: 16px; color: #2C3E50;">📅 Events This Week (Virtual + In-Person)</h3>
+  
+  <div style="border: 1px solid #E8EAED; padding: 16px; margin-bottom: 12px; border-radius: 4px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+      <h4 style="margin: 0; font-weight: 600; font-size: 14px;">Disability Rights Discussion: WSIB Reform</h4>
+      <span style="background: #E8F4F8; color: #0C63E4; padding: 4px 8px; border-radius: 3px; font-size: 12px; font-weight: 500;">ONLINE</span>
+    </div>
+    <p style="margin: 0 0 8px 0; font-size: 13px; color: #666;">Thursday, 7-8:30 PM — Join disability advocates discussing proposed WSIB changes. Live Q&A.</p>
+    <a href="#" style="color: #F39C12; font-weight: bold; text-decoration: none; font-size: 13px;">Register →</a>
+  </div>
+  
+  <div style="border: 1px solid #E8EAED; padding: 16px; margin-bottom: 12px; border-radius: 4px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+      <h4 style="margin: 0; font-weight: 600; font-size: 14px;">Community Accessibility Audit Walking Tour</h4>
+      <span style="background: #ECFDF5; color: #047857; padding: 4px 8px; border-radius: 3px; font-size: 12px; font-weight: 500;">IN PERSON</span>
+    </div>
+    <p style="margin: 0 0 8px 0; font-size: 13px; color: #666;">Saturday, 2 PM — Toronto downtown. Volunteers identify barriers. Learn how to report them effectively. Wheelchair accessible. Coffee & snacks provided.</p>
+    <a href="#" style="color: #F39C12; font-weight: bold; text-decoration: none; font-size: 13px;">Learn More →</a>
+  </div>
+  
+  <div style="border: 1px solid #E8EAED; padding: 16px; margin-bottom: 12px; border-radius: 4px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+      <h4 style="margin: 0; font-weight: 600; font-size: 14px;">Peer Support Circle: Chronic Illness & Community</h4>
+      <span style="background: #E8F4F8; color: #0C63E4; padding: 4px 8px; border-radius: 3px; font-size: 12px; font-weight: 500;">HYBRID</span>
+    </div>
+    <p style="margin: 0 0 8px 0; font-size: 13px; color: #666;">Tuesday, 6-7 PM — Vancouver chapter + online. Share what's working, ask what's hard. Judgment-free space. ASL interpreted.</p>
+    <a href="#" style="color: #F39C12; font-weight: bold; text-decoration: none; font-size: 13px;">Join Us →</a>
+  </div>
+</div>
+
+<!-- COMMUNITY SPOTLIGHT -->
+<div style="background: #FDFCFF; border-left: 4px solid #9B59B6; padding: 20px; margin-bottom: 28px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px; color: #6B21A8;">⭐ Spotlight: Maya's Victory</h3>
+  <p style="margin: 0 0 12px 0; font-size: 14px;"><strong>What she did:</strong> Started a workplace accessibility task force at her company after accommodation was denied.</p>
+  <p style="margin: 0 0 12px 0; font-size: 14px;"><strong>What happened:</strong> The company now has 15 active accessibility projects. 40+ employees have accommodations in place.</p>
+  <p style="margin: 0; font-size: 14px;"><a href="#" style="color: #9B59B6; text-decoration: none; font-weight: bold;">Read Maya's story →</a> (You might see yourself here.)</p>
+</div>
+
+<!-- CALL TO ACTION -->
+<div style="background: #FEF2F0; border-left: 4px solid #E74C3C; padding: 20px; margin-bottom: 28px;">
+  <h3 style="margin: 0 0 12px 0; font-size: 15px; color: #C0392B;">🎯 Your Moment to Act</h3>
+  <p style="margin: 0 0 12px 0; font-size: 14px;">The accessible transit campaign needs 500 community members to send emails to city council. If everyone does it, policy changes. That's you.</p>
+  <a href="#" style="display: inline-block; background: #E74C3C; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: 600;">Send Your Email Now</a>
+</div>
+
+<!-- FOOTER -->
+<div style="border-top: 1px solid #E8EAED; padding-top: 24px; margin-top: 32px; color: #7F8C8D; font-size: 12px;">
+  <p style="margin: 0 0 12px 0;">Organizing an event or campaign? <a href="#" style="color: #F39C12; text-decoration: none;">Tell us</a> and we'll help promote it.</p>
+  <p style="margin: 0;">📧 This email focuses on events and community action. <a href="#" style="color: #3498DB; text-decoration: none;">Change your topics</a> or <a href="#" style="color: #3498DB; text-decoration: none;">unsubscribe</a>.</p>
+</div>
+
+</div>
+</body>
+</html>
+```
+
+---
+
+## IMPLEMENTATION STEPS
+
+### 1. Email Service Setup
+- Choose email platform: MailChimp, ConvertKit, or GetResponse
+- Create 4 separate email templates
+- Set up custom fields for segment tracking
+
+### 2. Signup Form Enhancement
+Update newsletter signup to ask:
+```
+What topics matter most to you? (Select all that apply)
+[ ] Workers' Rights & WSIB
+[ ] Disability Benefits
+[ ] Accessibility
+[ ] Community Events
+```
+
+### 3. List Segmentation
+Create automation:
+- If "Workers' Rights" selected → Add to Workers' Digest list
+- If "Disability Benefits" selected → Add to Benefits Digest list
+- If "Accessibility" selected → Add to Accessibility Wins list
+- If "Community Events" selected → Add to Community Action list
+
+### 4. Scheduling
+- Workers' Rights: Thursdays, 9 AM (2x/week)
+- Benefits: Wednesdays, 9 AM (bi-weekly)
+- Accessibility: Mondays, 9 AM (weekly)
+- Community Action: Fridays, 9 AM (weekly)
+
+### 5. Testing
+- Send to test addresses
+- Review for mobile responsiveness
+- Check all links work
+- Verify segment routing
+
+### 6. Analytics Tracking
+Monitor per segment:
+- Open rate
+- Click rate
+- Unsubscribe rate
+- Engagement time
+- Conversion (action taken)
+
+---
+
+## SUCCESS METRICS
+
+| Metric | Target | Current |
+|--------|--------|---------|
+| Open rate (overall) | 35-40% | 25% |
+| Click rate (overall) | 5-8% | 3% |
+| Segment-specific open rate | 40-50% | 25% |
+| Action-taken rate (from email) | 10-15% | N/A |
+| Unsubscribe rate | <0.5% | N/A |
+
+---
+

@@ -1,0 +1,659 @@
+---
+# ENGAGEMENT VOTING & POLLS IMPLEMENTATION
+# Add interactive elements to curated articles and blog posts
+# Captures reader feedback to improve curation algorithm
+---
+
+<!-- ENGAGEMENT WIDGET INCLUDE FILE -->
+<!-- Place this in _includes/engagement-widget.html -->
+
+<div class="engagement-widget" id="engagement-{{ page.id | default: page.url | md5 }}">
+  
+  <!-- RELEVANCE VOTING -->
+  <section class="engagement-section voting-section" id="relevance-vote">
+    <h4 class="engagement-title">Was this article helpful?</h4>
+    <p class="engagement-subtitle">Your feedback helps us curate better content</p>
+    
+    <div class="vote-buttons" role="group" aria-label="Rate article relevance">
+      <button class="vote-btn vote-yes" data-vote="relevant" aria-label="Very relevant">
+        <svg class="vote-icon" viewBox="0 0 24 24" width="20" height="20">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/>
+        </svg>
+        <span class="vote-label">Very relevant</span>
+      </button>
+      
+      <button class="vote-btn vote-maybe" data-vote="somewhat" aria-label="Somewhat relevant">
+        <svg class="vote-icon" viewBox="0 0 24 24" width="20" height="20">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" fill="currentColor"/>
+        </svg>
+        <span class="vote-label">Somewhat relevant</span>
+      </button>
+      
+      <button class="vote-btn vote-no" data-vote="not_relevant" aria-label="Not relevant">
+        <svg class="vote-icon" viewBox="0 0 24 24" width="20" height="20">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+        </svg>
+        <span class="vote-label">Not relevant</span>
+      </button>
+    </div>
+    
+    <p class="vote-thanks" style="display:none; margin-top: 12px; font-size: 0.95em; color: #27AE60;">
+      ✓ Thanks for your feedback! This helps us improve.
+    </p>
+  </section>
+
+  <!-- TOPIC PREFERENCE POLL -->
+  <section class="engagement-section poll-section" id="topic-poll">
+    <h4 class="engagement-title">What topics matter most to you?</h4>
+    <p class="engagement-subtitle">Help us prioritize content</p>
+    
+    <div class="poll-options" role="group" aria-label="Select your interest topics">
+      <label class="poll-option">
+        <input type="checkbox" name="topic" value="workers-rights" class="topic-checkbox">
+        <span class="poll-checkbox"></span>
+        <span class="poll-label">⚖️ Workers' Rights & Compensation</span>
+      </label>
+      
+      <label class="poll-option">
+        <input type="checkbox" name="topic" value="disability-benefits" class="topic-checkbox">
+        <span class="poll-checkbox"></span>
+        <span class="poll-label">💰 Disability Benefits</span>
+      </label>
+      
+      <label class="poll-option">
+        <input type="checkbox" name="topic" value="accessibility" class="topic-checkbox">
+        <span class="poll-checkbox"></span>
+        <span class="poll-label">♿ Accessibility & Inclusive Design</span>
+      </label>
+      
+      <label class="poll-option">
+        <input type="checkbox" name="topic" value="legal" class="topic-checkbox">
+        <span class="poll-checkbox"></span>
+        <span class="poll-label">⚔️ Legal Victories & Rights</span>
+      </label>
+      
+      <label class="poll-option">
+        <input type="checkbox" name="topic" value="health" class="topic-checkbox">
+        <span class="poll-checkbox"></span>
+        <span class="poll-label">🧘 Health & Wellness</span>
+      </label>
+      
+      <label class="poll-option">
+        <input type="checkbox" name="topic" value="community" class="topic-checkbox">
+        <span class="poll-checkbox"></span>
+        <span class="poll-label">🤝 Community Action & Events</span>
+      </label>
+    </div>
+    
+    <button class="poll-submit" id="poll-submit">Save preferences</button>
+    <p class="poll-thanks" style="display:none; margin-top: 12px; font-size: 0.95em; color: #27AE60;">
+      ✓ Preferences saved!
+    </p>
+  </section>
+
+  <!-- ACTION TRACKER -->
+  <section class="engagement-section action-section" id="action-tracker">
+    <h4 class="engagement-title">Did you take action?</h4>
+    <p class="engagement-subtitle">Help us understand what changes lives</p>
+    
+    <div class="action-options" role="group" aria-label="What action did you take">
+      <label class="action-option">
+        <input type="checkbox" name="action" value="saved-article" class="action-checkbox">
+        <span class="action-checkbox-visual"></span>
+        <span class="action-label">Saved this article for later</span>
+      </label>
+      
+      <label class="action-option">
+        <input type="checkbox" name="action" value="shared" class="action-checkbox">
+        <span class="action-checkbox-visual"></span>
+        <span class="action-label">Shared with someone</span>
+      </label>
+      
+      <label class="action-option">
+        <input type="checkbox" name="action" value="filed-application" class="action-checkbox">
+        <span class="action-checkbox-visual"></span>
+        <span class="action-label">Filed an application</span>
+      </label>
+      
+      <label class="action-option">
+        <input type="checkbox" name="action" value="contacted-org" class="action-checkbox">
+        <span class="action-checkbox-visual"></span>
+        <span class="action-label">Contacted an organization</span>
+      </label>
+      
+      <label class="action-option">
+        <input type="checkbox" name="action" value="reported-issue" class="action-checkbox">
+        <span class="action-checkbox-visual"></span>
+        <span class="action-label">Reported a barrier or issue</span>
+      </label>
+      
+      <label class="action-option">
+        <input type="checkbox" name="action" value="learned-something" class="action-checkbox">
+        <span class="action-checkbox-visual"></span>
+        <span class="action-label">Learned something important</span>
+      </label>
+    </div>
+    
+    <button class="action-submit" id="action-submit">Log actions</button>
+    <p class="action-thanks" style="display:none; margin-top: 12px; font-size: 0.95em; color: #27AE60;">
+      ✓ Thank you! Knowing what works helps us do better.
+    </p>
+  </section>
+
+  <!-- STORY SUBMISSION -->
+  <section class="engagement-section submission-section" id="story-form">
+    <h4 class="engagement-title">Found something important?</h4>
+    <p class="engagement-subtitle">Suggest a story for us to cover</p>
+    
+    <form id="story-submission" class="story-form">
+      <div class="form-group">
+        <label for="story-title">Article title or link</label>
+        <input type="text" id="story-title" name="title" placeholder="https://... or article title" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="story-reason">Why should we cover this?</label>
+        <textarea id="story-reason" name="reason" placeholder="How does this affect our community?" rows="3" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="story-name">Your name (optional)</label>
+        <input type="text" id="story-name" name="name" placeholder="Stay anonymous if you prefer">
+      </div>
+      
+      <button type="submit" class="form-submit">Submit suggestion</button>
+    </form>
+    
+    <p class="submission-thanks" style="display:none; margin-top: 12px; font-size: 0.95em; color: #27AE60;">
+      ✓ Thank you! We'll review this for coverage.
+    </p>
+  </section>
+
+  <!-- SAVE ARTICLE FEATURE -->
+  <section class="engagement-section save-section" id="save-article">
+    <button class="save-btn" id="save-article-btn" aria-label="Save this article">
+      <svg class="save-icon" viewBox="0 0 24 24" width="20" height="20">
+        <path d="M17 3H5c-1.11 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.89-2-2-2z" fill="currentColor"/>
+      </svg>
+      <span class="save-label">Save article</span>
+    </button>
+  </section>
+
+</div>
+
+<!-- ENGAGEMENT STYLES -->
+<style>
+.engagement-widget {
+  border-top: 3px solid #ECF0F1;
+  padding-top: 24px;
+  margin-top: 32px;
+  font-size: 14px;
+  color: #2C3E50;
+}
+
+.engagement-section {
+  margin-bottom: 28px;
+  padding: 18px;
+  background: #F8F9FA;
+  border-radius: 8px;
+  border-left: 4px solid #E8EAED;
+}
+
+.engagement-title {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2C3E50;
+}
+
+.engagement-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #7F8C8D;
+}
+
+/* VOTE BUTTONS */
+.vote-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.vote-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border: 2px solid #E8EAED;
+  background: white;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #2C3E50;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vote-btn:hover {
+  border-color: #BDC3C7;
+  background: #FAFAFA;
+}
+
+.vote-btn:focus {
+  outline: none;
+  border-color: #3498DB;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.vote-yes:active {
+  border-color: #27AE60;
+  color: #27AE60;
+}
+
+.vote-maybe:active {
+  border-color: #F39C12;
+  color: #F39C12;
+}
+
+.vote-no:active {
+  border-color: #E74C3C;
+  color: #E74C3C;
+}
+
+.vote-icon {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* POLL OPTIONS */
+.poll-options {
+  margin-top: 14px;
+}
+
+.poll-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+  margin-bottom: 8px;
+}
+
+.poll-option:hover {
+  background: rgba(52, 152, 219, 0.05);
+}
+
+.poll-option input[type="checkbox"] {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #3498DB;
+}
+
+.poll-label {
+  font-size: 14px;
+  color: #2C3E50;
+}
+
+.poll-submit {
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #3498DB;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.poll-submit:hover {
+  background: #2980B9;
+}
+
+.poll-submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+/* ACTION OPTIONS */
+.action-options {
+  margin-top: 14px;
+}
+
+.action-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  transition: background 0.15s ease;
+}
+
+.action-option:hover {
+  background: rgba(46, 125, 50, 0.05);
+}
+
+.action-option input[type="checkbox"] {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #27AE60;
+}
+
+.action-label {
+  font-size: 14px;
+  color: #2C3E50;
+}
+
+.action-submit {
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #27AE60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.action-submit:hover {
+  background: #229954;
+}
+
+/* STORY SUBMISSION FORM */
+.story-form {
+  margin-top: 14px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2C3E50;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #BDC3C7;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  color: #2C3E50;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498DB;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-submit {
+  padding: 10px 18px;
+  background: #E74C3C;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.form-submit:hover {
+  background: #C0392B;
+}
+
+/* SAVE BUTTON */
+.save-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 2px solid #F39C12;
+  background: #FFF8E7;
+  color: #F39C12;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-btn:hover {
+  background: #FFF3CC;
+  border-color: #E67E22;
+}
+
+.save-btn.saved {
+  background: #27AE60;
+  border-color: #27AE60;
+  color: white;
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .engagement-widget * {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .engagement-widget {
+    padding: 0 12px;
+  }
+  
+  .engagement-section {
+    padding: 14px;
+  }
+  
+  .vote-buttons {
+    flex-direction: column;
+  }
+  
+  .vote-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>
+
+<!-- ENGAGEMENT JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // VOTE FUNCTIONALITY
+  document.querySelectorAll('.vote-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const vote = this.dataset.vote;
+      const articleId = document.getElementById('engagement-{{ page.id | default: page.url | md5 }}').id;
+      
+      // Send vote to analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'article_vote', {
+          'article_id': articleId,
+          'vote_type': vote
+        });
+      }
+      
+      // Show thanks message
+      document.querySelector('.vote-thanks').style.display = 'block';
+      
+      // Disable all vote buttons
+      document.querySelectorAll('.vote-btn').forEach(b => b.disabled = true);
+    });
+  });
+  
+  // POLL FUNCTIONALITY
+  document.getElementById('poll-submit')?.addEventListener('click', function() {
+    const selected = Array.from(document.querySelectorAll('.topic-checkbox:checked'))
+      .map(cb => cb.value);
+    
+    if (selected.length === 0) {
+      alert('Please select at least one topic');
+      return;
+    }
+    
+    // Send to analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'topic_preference', {
+        'topics': selected.join(',')
+      });
+    }
+    
+    // Show thanks message
+    document.querySelector('.poll-thanks').style.display = 'block';
+    this.disabled = true;
+  });
+  
+  // ACTION TRACKER
+  document.getElementById('action-submit')?.addEventListener('click', function() {
+    const selected = Array.from(document.querySelectorAll('.action-checkbox:checked'))
+      .map(cb => cb.value);
+    
+    if (selected.length === 0) {
+      alert('Please select at least one action');
+      return;
+    }
+    
+    // Send to analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'reader_action', {
+        'actions': selected.join(',')
+      });
+    }
+    
+    // Show thanks message
+    document.querySelector('.action-thanks').style.display = 'block';
+    this.disabled = true;
+  });
+  
+  // STORY SUBMISSION
+  document.getElementById('story-submission')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const data = new FormData(this);
+    
+    // Send to backend or email service
+    fetch('/api/story-submission', {
+      method: 'POST',
+      body: JSON.stringify(Object.fromEntries(data))
+    }).then(() => {
+      document.querySelector('.submission-thanks').style.display = 'block';
+      this.reset();
+      this.style.display = 'none';
+    });
+  });
+  
+  // SAVE ARTICLE
+  document.getElementById('save-article-btn')?.addEventListener('click', function() {
+    const articleUrl = window.location.href;
+    const articleTitle = document.title;
+    
+    // Store in browser
+    let saved = JSON.parse(localStorage.getItem('savedArticles') || '[]');
+    saved.push({
+      url: articleUrl,
+      title: articleTitle,
+      saved_at: new Date().toISOString()
+    });
+    localStorage.setItem('savedArticles', JSON.stringify(saved));
+    
+    // Update button
+    this.classList.add('saved');
+    this.innerHTML = '<svg class="save-icon" viewBox="0 0 24 24" width="20" height="20"><path d="M17 3H5c-1.11 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.89-2-2-2z" fill="currentColor"/></svg><span class="save-label">Saved!</span>';
+    
+    // Analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'article_saved', {
+        'article_title': articleTitle
+      });
+    }
+  });
+});
+</script>
+
+---
+
+## IMPLEMENTATION INSTRUCTIONS
+
+### 1. Add to Blog Post Layout
+Include in `_layouts/post.html`:
+```liquid
+{% include engagement-widget.html %}
+```
+
+### 2. Add to Curation Index
+Include in `_layouts/curation.html`:
+```liquid
+{% include engagement-widget.html %}
+```
+
+### 3. Backend for Story Submissions
+Create endpoint `/api/story-submission` that:
+- Receives form data
+- Validates URL/title
+- Stores in database or emails editorial team
+- Returns success response
+
+### 4. Analytics Tracking
+Connect to Google Analytics 4 to track:
+- `article_vote` (events for each vote type)
+- `topic_preference` (which topics readers select)
+- `reader_action` (what actions readers take)
+- `article_saved` (which articles are saved)
+
+### 5. Data Usage
+Monthly report should include:
+- Most relevant articles (by vote)
+- Most popular topics
+- Most impactful actions
+- Top suggested stories
+- Highest saved articles
+
+### 6. Curator Algorithm Updates
+Use voting data to adjust `curator.json`:
+- Articles with 80%+ "very relevant" votes → boost score by +0.5
+- Articles with 50%+ "not relevant" votes → reduce score by -1.0
+- Popular topics in polls → increase keyword weight in curator
+
+---
+
+## METRICS TO TRACK
+
+| Metric | Target | Review Frequency |
+|--------|--------|------------------|
+| Vote engagement rate | 15-25% | Weekly |
+| Poll completion rate | 8-12% | Weekly |
+| Action tracker usage | 5-10% | Weekly |
+| Story suggestions/week | 3-5 | Daily |
+| Saved articles/day | 20-50 | Weekly |
+| Vote sentiment score | 70%+ "very relevant" | Monthly |
+| Impact on curator accuracy | +15% over 3 months | Monthly |
+
+---
+
+## FEEDBACK LOOP CYCLE
+
+**Week 1:** Engagement data collected  
+**Week 2:** Data analyzed, patterns identified  
+**Week 3:** Curator.json adjusted based on patterns  
+**Week 4:** Community sees improved content recommendations  
+**Month 2:** Cycle repeats with refined algorithm  
+
+---
