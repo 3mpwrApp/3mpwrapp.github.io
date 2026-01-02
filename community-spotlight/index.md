@@ -223,7 +223,7 @@ permalink: /community-spotlight/
   <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💪 Impact:</strong></p>
   <ul style="color: #1f2937 !important;">
     <li style="color: #1f2937 !important;">🚀 Founder of 3mpwrApp — platform for disability community</li>
-    <li style="color: #1f2937 !important;">⚡ Co-founder/Board Member — Speakers School Canada</li>
+    <li style="color: #1f2937 !important;">⚡ Board Member — Speakers School Canada</li>
     <li style="color: #1f2937 !important;">✊ Board Member — Thunder Bay & District Injured Workers Support Group</li>
     <li style="color: #1f2937 !important;">🎨 Creator of Injured Workers Unite (grassroots activist platform)</li>
     <li style="color: #1f2937 !important;">😂 Using memes and humor to expose corruption and build solidarity</li>
@@ -249,8 +249,6 @@ permalink: /community-spotlight/
   
   <p style="margin-top: 1.5rem; color: #1f2937 !important;"><em style="color: #1f2937 !important;">🌟 Thank you Lissa for building tools of liberation and fighting fiercely for disabled people and injured workers!</em></p>
 </div>
-
----
 
 ## 💪 More Community Profiles Coming Soon
   <h3 style="margin-top: 0;">🌟 Community Profiles Coming Soon!</h3>
