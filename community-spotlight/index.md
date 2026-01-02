@@ -205,7 +205,7 @@ permalink: /community-spotlight/
 
 ---
 
-### 🔥 Lissa Beaulieu (@ODSPoor & Founder)
+### 🔥 Lissa Beaulieu (@PhoenixRizin09 & Founder)
 
 <div class="info-box-bordered" style="background: #fef3c7 !important; border: 2px solid #f59e0b; border-left: 4px solid #f59e0b; color: #1f2937 !important;">
   <h4 style="margin-top: 0; color: #92400e !important;">🔥 Founder & Disability Rights Activist</h4>
