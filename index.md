@@ -628,6 +628,9 @@ function copyCampaignHome() {
     </p>
     
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+      <a href="https://linktr.ee/thedisabilitybulletin" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #6d28d9; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.3)'">
+        🔗 All Links (Linktree)
+      </a>
       <a href="https://thedisabilitybulletin.blogspot.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #6d28d9; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.3)'">
         📰 Read Latest Posts
       </a>

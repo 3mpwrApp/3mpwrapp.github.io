@@ -87,9 +87,22 @@ Created by [@ODSPoor](https://x.com/ODSPoor) and [@emilypot_](https://x.com/emil
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: minimal">🔋 Energy: Minimal</span>
 
 <div class="info-box-light">
-  <h3>📌 Primary Channels</h3>
+  <h3>📌 All Links in One Place</h3>
   
-  <ul style="margin: 0; padding-left: 1.5rem;">
+  <p style="margin: 0 0 1.5rem;"><strong>Visit their Linktree for all channels and resources:</strong></p>
+  
+  <div style="text-align: center; margin: 1.5rem 0;">
+    <a href="https://linktr.ee/thedisabilitybulletin" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white; padding: 16px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.2)'">
+      🔗 linktr.ee/thedisabilitybulletin
+    </a>
+  </div>
+  
+  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #666; text-align: center;">One link to access everything: blog, social media, newsletters, and more</p>
+</div>
+
+### Primary Channels
+
+<ul style="margin: 0; padding-left: 1.5rem;">
     <li>
       <strong><a href="https://thedisabilitybulletin.blogspot.com/" target="_blank" rel="noopener noreferrer">📖 The Disability Bulletin Blog</a></strong>
       <br><span style="font-size: 0.9rem; color: #666;">Full articles, archives, and subscription</span>
@@ -103,11 +116,11 @@ Created by [@ODSPoor](https://x.com/ODSPoor) and [@emilypot_](https://x.com/emil
       <br><span style="font-size: 0.9rem; color: #666;">Disability policy analysis, community insights, real stories</span>
     </li>
     <li style="margin-top: 1rem;">
-      <strong>Blogger Profile</strong>
-      <br><span style="font-size: 0.9rem; color: #666;"><a href="https://www.blogger.com/profile/00362411661072793873" target="_blank" rel="noopener noreferrer">View creator profile</a> on Blogger</span>
+      <strong><a href="https://www.blogger.com/profile/00362411661072793873" target="_blank" rel="noopener noreferrer">👤 Creator Profile</a></strong>
+      <br><span style="font-size: 0.9rem; color: #666;">Blogger profile for direct connection</span>
     </li>
   </ul>
-</div>
+
 
 ---
 
