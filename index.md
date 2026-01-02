@@ -607,6 +607,39 @@ function copyCampaignHome() {
 
 ---
 
+<!-- The Disability Bulletin - Community Spotlight Banner -->
+<div class="gradient-banner" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <h2 style="margin: 0 0 0.5rem; color: white; font-size: 1.8rem;">
+    <span aria-hidden="true">📰</span> Community Spotlight
+    <span class="badge badge--trending" style="background: #ec4899; color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Trending">Trending</span>
+  </h2>
+  
+  <div style="background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 8px; margin: 1rem 0; text-align: left;">
+    <h3 style="margin: 0 0 1rem; color: white; font-size: 1.6rem; font-weight: bold;">
+      📰 The Disability Bulletin
+    </h3>
+    
+    <p style="margin: 0 0 1rem; font-size: 1.05rem; line-height: 1.6; color: white;">
+      Independent disability journalism by <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="color: #a7f3d0; text-decoration: underline; font-weight: 600;">@ODSPoor</a> and <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="color: #a7f3d0; text-decoration: underline; font-weight: 600;">@emilypot_</a>. Real stories about ODSP, WSIB, and disability policy—<strong>written by disabled people, for disabled people.</strong>
+    </p>
+    
+    <p style="margin: 0 0 1.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.9); padding: 1rem; background: rgba(0,0,0,0.25); border-left: 3px solid #a7f3d0; border-radius: 4px;">
+      <span aria-hidden="true">✨</span> <strong>Why we love it:</strong> Authentic disabled voices. Breaking policy news. No corporate speak. Community-focused, independent journalism.
+    </p>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+      <a href="https://thedisabilitybulletin.blogspot.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #6d28d9; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.3)'">
+        📰 Read Latest Posts
+      </a>
+      <a href="/community/disability-bulletin/" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.2)'">
+        👥 More Community Spotlights
+      </a>
+    </div>
+  </div>
+</div>
+
+---
+
 ## <span aria-hidden="true">✨</span> Built Different—By Design
 
 <div class="gradient-banner-pink" style="color: white !important;">

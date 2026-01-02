@@ -77,6 +77,24 @@ permalink: /community/
 
 ---
 
+## 🌟 Community Spotlights
+
+<span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
+
+### 📰 The Disability Bulletin
+
+Independent disability journalism by [@ODSPoor](https://x.com/ODSPoor) and [@emilypot_](https://x.com/emilypot_). A grassroots publication covering the stories mainstream media ignores.
+
+✅ **Authentic disabled voices** — Written by disabled people who live these systems  
+✅ **Breaking policy news** — First to cover ODSP, WSIB, and benefits changes  
+✅ **No corporate speak** — Real talk about systemic barriers  
+✅ **Community-focused** — Stories that matter to disabled Canadians  
+✅ **Independent** — Not beholden to government or corporate interests
+
+[📖 Read The Disability Bulletin](https://thedisabilitybulletin.blogspot.com/) | [🐦 Follow @ODSPoor](https://x.com/ODSPoor) | [🐦 Follow @emilypot_](https://x.com/emilypot_) | [📚 Full Hub](/community/disability-bulletin/)
+
+---
+
 ## 👥 Who's Welcome
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: minimal">🔋 Energy: Minimal</span>
