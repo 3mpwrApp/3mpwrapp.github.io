@@ -239,6 +239,9 @@ permalink: /community-spotlight/
     <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
       🐦 @ODSPoor on X
     </a> | 
+    <a href="https://x.com/PhoenixRizin09" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+      🐦 @PhoenixRizin09 on X
+    </a> | 
     <a href="https://injuredworkersunite.pages.dev/" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
       🔥 Injured Workers Unite
     </a> | 
