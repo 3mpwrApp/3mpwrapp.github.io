@@ -128,6 +128,13 @@ Independent disability journalism by [@ODSPoor](https://x.com/ODSPoor) and [@emi
     <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Building community tools for disability justice, fighting WSIB injustice, creative activism</p>
     <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #f59e0b; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow Lissa on X →</a><a href="/about/" style="display: inline-block; background: #92400e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📖 Learn More →</a>
   </div>
+
+  <div style="border: 2px solid #3b82f6; border-left: 4px solid #3b82f6; padding: 1rem; border-radius: 8px; background: #eff6ff;">
+    <h4 style="margin-top: 0; color: #1e40af; font-size: 1.1rem;">🇨🇦 Mitchell Tremblay (@ODSPoverty)</h4>
+    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Disability Rights Advocate</p>
+    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Fighting for ODSP reform, disability rights, and economic justice for disabled Canadians</p>
+    <a href="https://x.com/ODSPoverty" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #3b82f6; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow on X →</a><a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #1e40af; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🔗 Linktree →</a>
+  </div>
 </div>
 
 **🌟 [View Full Community Spotlights →](/community-spotlight/)** to see detailed profiles and learn how to nominate yourself or someone else!

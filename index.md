@@ -731,6 +731,25 @@ function copyCampaignHome() {
       </div>
     </div>
 
+    <!-- Card 5: Mitchell Tremblay -->
+    <div style="background: white; border: 2px solid #3b82f6; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+      <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+        <h3 style="margin: 0; font-size: 1.3rem;">🇨🇦 Mitchell Tremblay</h3>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Disability Advocate</p>
+      </div>
+      <p style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
+        Passionate advocate for ODSP reform and disability rights. Fighting for economic justice.
+      </p>
+      <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+        <a href="https://x.com/ODSPoverty" target="_blank" rel="noopener noreferrer" style="display: block; background: #3b82f6; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#2563eb'" onmouseout="this.style.background='#3b82f6'">
+          🐦 Follow on X
+        </a>
+        <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="display: block; background: #f3f4f6; color: #3b82f6; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #3b82f6; transition: background 0.2s;" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='#f3f4f6'">
+          🔗 Linktree
+        </a>
+      </div>
+    </div>
+
   </div>
 
   <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #d1d5db;">
