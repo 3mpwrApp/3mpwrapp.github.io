@@ -1,0 +1,160 @@
+---
+layout: post
+title: "Daily News Curation - 2025-12-31"
+date: 2025-12-31
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-12-31
+
+Curated 32 items from disability, accessibility, and social policy sources.
+
+## 1. Alberta, Quebec referendums likely would fail due to Canadians' anxiety: pollster
+Abacus Data has been studying what it calls the 'precarity mindset' in Canada for the last year.
+📍 [Source](https://globalnews.ca/news/11595533/alberta-quebec-referendums-poll/)
+**Score:** 27.60
+
+## 2. CRA says its owed more than $10B in COVID benefit payments
+The CRA says that as of Nov. 30, it had disbursed $83.5 billion in COVID benefits to Canadians, including $45.3 billion for the Canada Emergency Response Benefit
+📍 [Source](https://globalnews.ca/news/11595446/cra-owed-covid-benefit-payments/)
+**Score:** 25.00
+
+## 3. Jobs, economy top voters' priorities at the end of a turbulent 2025: Nanos poll
+<img src='https://i.cbc.ca/ais/e78582ff-b434-45bc-9aeb-252afdde80e0,1767208853637/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C285%2C3600%2C2025%29%3BResize%3D%28620%29' alt='A woman checks out a jobs advertisement sign, in Toronto' width='620' height='349' title='Statistics Canada says the number of payroll employees in December rose 0.5 per cent compared with negligible gains in November. A woman checks out a jobs advertisement sign, in Toronto on Wednesday, April 29, 2020. THE CANADIAN PRESS/Nathan Denette'/><p>A year-end poll from Nanos suggests Canadians will want to see action from the Liberal government on major economic files in the new year.</p>
+📍 [Source](https://www.cbc.ca/news/politics/jobs-economy-voters-priorities-2025-9.7031388?cmp=rss)
+**Score:** 18.00
+
+## 4. Nardwuar the Human Serviette awestruck as he announces Order of Canada appointment
+"I can’t even explain myself, so I can’t imagine how people would explain me."
+📍 [Source](https://www.straight.com/music/nardwuar-human-serviette-awestruck-as-he-announces-order-of-canada-appointment)
+**Score:** 14.00
+
+## 5. How a good old-fashioned boycott got Canada to trade Kentucky bourbon for Canadian whisky
+<img src='https://i.cbc.ca/ais/cc054d91-7580-4fd0-a06b-152851b06cdf,1767152789918/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C8256%2C4644%29%3BResize%3D%28620%29' alt=' A woman pours bourbon from a bottle into a glass on a mirrored bar.' width='620' height='349' title='An employee pours a glass of The Bard's product in what will be a new production area at The Bard Distillery in Graham, Ky., on Sunday, March 9, 2025.'/><p>The aromatic, spicy and sometimes smoky flavour of a smooth, Kentucky bourbon has been but a memory for consumers in this country ever since the spirit was caught in the crossfire of U.S. President Donald Trump's tariff war and annexation sabre-rattling. As a result, angry Canadians have united behind a "Buy Canadian" movement that experts say is elevating our own whiskies.</p>
+📍 [Source](https://www.cbc.ca/news/business/canada-us-bourbon-popularity-9.7028355?cmp=rss)
+**Score:** 14.00
+
+## 6. Manitoba Government Supports Winnipeg Police Service Initiatives
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72100)
+**Score:** 15.00
+
+## 7. Is Trans Mountain’s Profitability an Accounting Illusion?
+How the finances of Canada’s government-owned pipeline may look better than they are.
+📍 [Source](https://thetyee.ca/Analysis/2025/12/23/Trans-Mountain-Profitability-Accounting-Illusion/)
+**Score:** 12.50
+
+## 8. Team Canada men's hockey lineup unveiled for 2026 Winter Olympics
+Hockey Canada unveiled its 25-player Olympic men’s hockey roster for February’s Milan Cortina Games on Wednesday.
+📍 [Source](https://globalnews.ca/news/11595410/team-canada-mens-hockey-lineup-2026/)
+**Score:** 9.50
+
+## 9. How Ryan Wedding went from Olympian to alleged drug lord wanted by FBI
+The FBI, RCMP and U.S. prosecutors say Wedding has grown his criminal enterprise to become the largest supplier of cocaine to Canada, as well as parts of the U.S.
+📍 [Source](https://globalnews.ca/news/11594282/ryan-wedding-olympics-drug-trafficking-timeline/)
+**Score:** 9.50
+
+## 10. Override or overreach? Canada’s notwithstanding clause
+📍 [Source](https://rabble.ca/politics/canadian-politics/override-or-overreach-canadas-notwithstanding-clause/)
+**Score:** 9.50
+
+## 11. Basic Income in Canada is closer than you think
+📍 [Source](https://rabble.ca/columnists/basic-income-in-canada-is-closer-than-you-think/)
+**Score:** 9.50
+
+## 12. Some B.C. highways in North Coast reopen after closures due to flooding
+DriveBC said Highway 16 has reopened after heavy rains caused flooding in the area, with the main road access to Prince Rupert among the pathways cut off.
+📍 [Source](https://globalnews.ca/news/11595615/bc-flooding-highway-reopening-haida-gwaii-north-coast/)
+**Score:** 7.50
+
+## 13. Manitoba Justice Reports In-Custody Death
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71998)
+**Score:** 9.00
+
+## 14. Danielle Smith’s Alberta Next Panel Report Lands with a Whimper
+Albertans paid $2 million for gruel this thin?
+📍 [Source](https://thetyee.ca/Culture/2025/12/22/Smith-Alberta-Panel-Report-Lands-Whimper/)
+**Score:** 9.00
+
+## 15. Craig's Cookies workers vote to unionize at 5 Toronto stores as franchise expands nationally
+<img src='https://i.cbc.ca/ais/99efc696-9743-4ba1-8f25-69b45ea99786,1767211087641/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C238%2C709%2C398%29%3BResize%3D%28620%29' alt='Several stacks of small pink boxes printed with multicoloured hearts and the words 'Craig's Cookies' are shown.' width='620' height='349' title='Boxes of Craig's Cookies are shown in this photo taken from the company's public Instagram account. '/><p>Nearly 90 employees of Craig’s Cookies have voted to unionize across five shops in Toronto as the Canadian cookie chain expands nationally. </p>
+📍 [Source](https://www.cbc.ca/news/business/craigs-cookies-workers-unionize-toronto-locations-9.7031213?cmp=rss)
+**Score:** 9.00
+
+## 16. Landfill search for First Nation woman's remains in Thunder Bay, Ont., comes up empty
+<img src='https://i.cbc.ca/ais/1.7407588,1733939184000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C2000%2C1125%29%3BResize%3D%28620%29' alt='A person is seen sitting on some rocks. They are smiling.' width='620' height='349' title='Deborah Anishinabie, 42, is described by her family as a kind and bubbly person who enjoys shopping, spending time outdoors, and playing games.'/><p>After a nearly month-long search of the city’s landfill, Deborah Anishinabie’s family is still seeking closure as an investigation into her homicide in Thunder Bay, Ont., continues. Here's what we know about the search for the rest of the 42-year-old's remains, and what First Nation leaders want to see done to address the ongoing crisis of missing and murdered Indigenous women, girls, Two Spirit and gender-diverse people.</p>
+📍 [Source](https://www.cbc.ca/news/canada/thunder-bay/deborah-anishinabie-landfill-search-ends-9.7030421?cmp=rss)
+**Score:** 6.00
+
+## 17. Manitoba Government Lowers Breast Cancer Screening Age to 45
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72103)
+**Score:** 7.50
+
+## 18. Alberta government raises the cost of referendum petitions by nearly 5K%
+📍 [Source](https://rabble.ca/politics/canadian-politics/alberta-government-raises-the-cost-of-referendum-petitions-by-nearly-5k/)
+**Score:** 7.50
+
+## 19. Measles Update #61
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72137)
+**Score:** 4.50
+
+## 20. Measles Update #58
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72104)
+**Score:** 4.50
+
+## 21. Province Reminds Manitobans It's Not Too Late to Act as Flu Season Underway
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72101)
+**Score:** 4.50
+
+## 22. Measles Update #57
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72099)
+**Score:** 4.50
+
+## 23. Manitoba Maintains Fiscal Path Even as Climate Change and Trump's Tariffs Pose Challenges
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71997)
+**Score:** 4.50
+
+## 24. Canadians among dozens injured in fatal Peru train crash, officials say
+A train coming from Machu Picchu collided with a train heading there on Tuesday, according to the company that operates the railway. A rail worker was killed, police say.
+📍 [Source](https://globalnews.ca/news/11595339/peru-train-crash-machu-picchu-canadians-hurt/)
+**Score:** 4.50
+
+## 25. Covering news in food and agriculture in 2025
+📍 [Source](https://rabble.ca/columnists/covering-news-in-food-and-agriculture-in-2025/)
+**Score:** 4.50
+
+## 26. A Year of Health Science Under Siege
+When leaders mirror Stalin by promoting false dogma, we must defend evidence-based reason. Lives depend on it.
+📍 [Source](https://thetyee.ca/Opinion/2025/12/23/Year-Health-Science-Under-Siege/)
+**Score:** 4.50
+
+## 27. Increasing AI use in Canadian courtrooms carries risk of errors, penalties: lawyers
+<img src='https://i.cbc.ca/ais/d38aae88-e8da-4178-b0c9-0c1469677473,1767198471811/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C270%2C5184%2C2916%29%3BResize%3D%28620%29' alt='Judges bench at the Edmonton Law Courts building, in Edmonton.' width='620' height='349' title=''/><p>As AI infiltrates more and more aspects of daily life, it is increasingly making its way into the courts and legal system, lawyers say.</p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/increasing-ai-use-canadian-courtrooms-carries-risk-9.7031131?cmp=rss)
+**Score:** 4.50
+
+## 28. Transit fares are going up. Why do Canadian cities struggle to keep it affordable?
+<img src='https://i.cbc.ca/ais/b5382b4b-9345-4af8-8240-a7afa32afb2f,1767167332954/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C335%2C4244%2C2387%29%3BResize%3D%28620%29' alt='A person wearing a parka boards a city bus.' width='620' height='349' title='People board an STM bus, in Montreal on Friday, Nov. 14, 2025. THE CANADIAN PRESS/Christopher Katsarov'/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/public-transit-fares-canada-9.7025634?cmp=rss)
+**Score:** 4.50
+
+## 29. 1 man dead, police still searching for 2 armed men after shooting on northern Sask. First Nation
+<img src='https://i.cbc.ca/ais/d8cc120a-a13f-4aae-9fa7-d0fbcfa7889e,1767130702738/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C22%2C599%2C336%29%3BResize%3D%28620%29' alt='A boy' width='620' height='349' title='Neil Wahpistikwan was shot and killed early on the morning of Tuesday, Dec. 30, 2025, according to his father, Larry.  '/><p>One man is dead and Saskatchewan RCMP say they are still searching for two armed men after an early morning shooting on Big Island Lake Cree Nation.</p>
+📍 [Source](https://www.cbc.ca/news/canada/saskatchewan/big-island-lake-cree-nation-fatal-shooting-9.7029987?cmp=rss)
+**Score:** 3.90
+
+## 30. Community gathers to honour 11-year-old Regina carbon monoxide victim
+📍 [Source](https://globalnews.ca/news/11595301/community-gathers-to-honour-11-year-old-regina-carbon-monoxide-victim/)
+**Score:** 2.40
+
+## 31. Final Day! Join The Tyee’s Year-End Builder Drive
+Last call to get a 2025 tax receipt for supporting the independent journalism you read here.
+📍 [Source](https://thetyee.ca/Tyeenews/2025/12/31/Final-Day-Tyee-Builder-Drive/)
+**Score:** 3.00
+
+## 32. COVID-19 Is Six Today. What We’ve Learned
+We need cleaner air, which requires changes in medical culture.
+📍 [Source](https://thetyee.ca/Analysis/2025/12/31/COVID-Six-What-Learned/)
+**Score:** 1.00
+

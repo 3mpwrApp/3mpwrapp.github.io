@@ -1,0 +1,173 @@
+---
+layout: post
+title: "Daily News Curation - 2025-12-17"
+date: 2025-12-17
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2025-12-17
+
+Curated 34 items from disability, accessibility, and social policy sources.
+
+## 1. Bare trust tax filings on pause again as government mulls exemptions
+<img src='https://i.cbc.ca/ais/1.7646649,1759186309000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C394%2C5712%2C3213%29%3BResize%3D%28620%29' alt='A hand holding a pen prepares to fill in a tax form.' width='620' height='349' title='The federal government introduced new tax reporting rules in 2022 that required Canadians to report certain trusts to the Canada Revenue Agency.'/><p>Canada's tax agency says it doesn't expect Canadians who hold simple trusts, known as bare trusts, to file required tax forms this coming tax season — but legislative changes currently before the House of Commons means the requirements will likely be there in 2027.</p>
+📍 [Source](https://www.cbc.ca/news/politics/bare-trust-changes-2026-9.7018566?cmp=rss)
+**Score:** 24.50
+
+## 2. Canada's appeal dismissed in battle over fixing mould in Oneida grandmother’s home
+<img src='https://i.cbc.ca/ais/1.7535451,1765924651385/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1919%2C1079%29%3BResize%3D%28620%29' alt='Powless says the last three years have been an uphill battle and her granddaughters' illness has forced them to regularly skip school and miss out on a normal childhood. ' width='620' height='349' title='Joanne Powless says the last three years have been an uphill battle and her granddaughters' illness has forced them to regularly skip school and miss out on a normal childhood. '/><p>The Canadian government has lost in court a second time to a First Nations grandmother fighting to fix extensive mould at her home on Oneida Nation of the Thames, near London, Ont. The decision is the first time the Federal Court of Appeal has considered the legal issues surrounding Jordan's Principle.</p>
+📍 [Source](https://www.cbc.ca/news/indigenous/powless-federal-appeal-decision-9.6981976?cmp=rss)
+**Score:** 24.50
+
+## 3. Undocumented children fear being stuck in state of limbo that could last years
+<img src='https://i.cbc.ca/ais/0334e3fd-1e8c-4408-aa9c-31f82318a8d5,1765811293399/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C6000%2C3375%29%3BResize%3D%28620%29' alt='A youth with a black backpack sits on a bench in a snowy park.' width='620' height='349' title='Anna, a 17-year-old youth whose identity CBC agreed not to identify due to risks of deportation, says she was shocked to learn she had no legal immigration status recently. Now, she's among other youth across Ontario who are undocumented and are waiting for their PR applications to process, which may take decades.'/><p>Undocumented youth in Canada say they’re feeling worried and hopeless as they face decades-long processing times for permanent residence under the humanitarian and compassionate pathway. Lawyers fear more children will lose their status in the coming years, forcing them to go underground.</p>
+📍 [Source](https://www.cbc.ca/news/canada/ottawa/undocumented-children-at-risk-due-to-unviable-immigration-wait-times-lawyers-warn-9.7016069?cmp=rss)
+**Score:** 21.50
+
+## 4. Canada sees record population drop, driven by fewer temporary residents
+Statistics Canada said Wednesday the national population fell by 76,068 people, or 0.2 per cent, in the third quarter of this year.
+📍 [Source](https://globalnews.ca/news/11581900/canada-record-population-drop/)
+**Score:** 18.00
+
+## 5. $18M proposed settlement reached in 2015 Air Canada crash landing in Halifax
+A proposed settlement of $18 million has been reached in a class action filed on behalf of passengers of Air Canada Flight 624, 10 years after the crash landing.
+📍 [Source](https://globalnews.ca/news/11581526/air-canada-624-proposed-settlement-halifax/)
+**Score:** 17.50
+
+## 6. Quebec Liberals at a crossroads amid mounting pressure on leader to step down
+<img src='https://i.cbc.ca/ais/83e9e758-df54-433b-8593-baddcffd8b2d,1765926398892/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1280%2C720%29%3BResize%3D%28620%29' alt='Quebec Liberal Leader Pablo Rodriguez speaks alongside several others during a news conference ' width='620' height='349' title=''/><p>With Quebec Liberal Party Leader Pablo Rodriguez and his party facing an internal crisis for nearly a month, the Journal de Montréal has revealed more allegations of financial schemes during his leadership race. The Liberal caucus says it is behind Rodriguez but if that changes, any dissent could create a domino effect. </p>
+📍 [Source](https://www.cbc.ca/player/play/9.7018712?cmp=rss)
+**Score:** 16.80
+
+## 7. This H3N2 flu strain is spreading ‘rapidly.' Why subclade K is hitting hard
+Children are among those being hit hard this flu season, with most infections being detected in people under 19, according to Health Canada.
+📍 [Source](https://globalnews.ca/news/11582077/new-flu-strain-h3n2-subclade-k-canada/)
+**Score:** 14.00
+
+## 8. 19 more pistachio and pistachio-related products recalled in Canada
+<img src='https://i.cbc.ca/ais/7fd7be5c-4a0e-47f1-85e6-d9d653a2230c,1765933782216/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C57%2C4000%2C2250%29%3BResize%3D%28620%29' alt='A person holding up a bunch of pistachios, with a giant pile of pistachios appearing in the background' width='620' height='349' title='A staff member conducts a quality check on roasted pistachios in the kitchen of Kwan Hong Bakery in Hong Kong, Saturday, Jan. 18, 2025. (AP Photo/Chan Long Hei)'/><p>Nineteen more pistachio and pistachio-containing products have been recalled in Canada. </p>
+📍 [Source](https://www.cbc.ca/news/health/pistachio-products-recall-dec-16-9.7018830?cmp=rss)
+**Score:** 14.00
+
+## 9. This BC Premier Said No to an Oil Pipeline. Sound Familiar?
+The PM and Alberta’s premier backed TMX. In his memoir, the late John Horgan gives his inside account of resisting.
+📍 [Source](https://thetyee.ca/Culture/2025/12/16/Horgan-Said-No-To-Pipeline/)
+**Score:** 12.00
+
+## 10. Manitoba Government Appoints New Board Chairs for Manitoba Hydro and Efficiency Manitoba
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72037)
+**Score:** 12.00
+
+## 11. Why Are BC’s Emergency Departments So Crowded?
+How past policy decisions and the unmet needs of an aging population are pushing the system to the brink.
+📍 [Source](https://thetyee.ca/News/2025/12/17/Why-BC-Emergency-Departments-Crowded/)
+**Score:** 11.00
+
+## 12. Canada’s strong Olympic short track speed skating team for Milano Cortina unveiled
+📍 [Source](https://www.cbc.ca/sports/olympics/winter/short-track-speed-skating/canada-short-track-speed-skating-olympic-team-announced-milano-cortina-9.7019154?cmp=rss)
+**Score:** 9.50
+
+## 13. ‘They came to us,' Carney says on Conservative MPs crossing the floor
+Prime Minister Mark Carney said he played a role in the floor crossings and hinted that he is 'open' to more MPs crossing the floor over to the Liberals.
+📍 [Source](https://globalnews.ca/news/11581609/mark-carney-year-end-interview-floor-crossings/)
+**Score:** 7.50
+
+## 14. 19-year-old pleads guilty to impaired driving in Toronto crash that killed 3 children
+<img src='https://i.cbc.ca/ais/1.7548422,1749927096000/full/max/0/default.jpg?im=Crop%2Crect%3D%28272%2C937%2C2600%2C1462%29%3BResize%3D%28620%29' alt='Four people sitting down.' width='620' height='349' title='The Laviña-Galve family said relatives are still reeling from the crash that took the lives of Ramone, Jace, and Mya on May 18.'/><p>The young man accused of being impaired and behind the wheel at the time he slammed into a Toronto family’s van, killing three children, has pleaded guilty in the case. </p>
+📍 [Source](https://www.cbc.ca/news/canada/toronto/driver-pleads-guilty-etobicoke-crash-killed-3-children-9.7018366?cmp=rss)
+**Score:** 7.50
+
+## 15. 62% of Canadians less likely to travel to the U.S. next year: Flight Centre
+Nearly two thirds of Canadians who plan on travelling next year are setting their sights on destinations other than the U.S., according to the latest travel survey data.
+📍 [Source](https://globalnews.ca/news/11581906/canadians-travel-united-states-flight-centre/)
+**Score:** 9.60
+
+## 16. Provincial Snowplows Ready as Blizzard Conditions Expected for Parts of Manitoba
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72058)
+**Score:** 7.70
+
+## 17. OneCity mayoral candidate William Azaroff is building support
+The CEO of affordable housing nonprofit Brightside Community Homes Foundation has big plans for Vancouver.
+📍 [Source](https://www.straight.com/city-culture/onecity-mayoral-candidate-william-azaroff-is-building-support)
+**Score:** 8.40
+
+## 18. Drivers warned to stay off roads as winter storm wallops Alberta and Saskatchewan
+<img src='https://i.cbc.ca/ais/e7cf5db4-2906-40d8-9116-294018fcf0b3,1766000066052/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D%28620%29' alt='' width='620' height='349' title=''/><p></p>
+📍 [Source](https://www.cbc.ca/news/canada/livestory/snowstorm-live-updates-9.7001003?cmp=rss)
+**Score:** 8.10
+
+## 19. Manitoba Government Invests in First Nations Women's Homeownership Through Mino'ayaawag Ikwewag
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72057)
+**Score:** 7.50
+
+## 20. Manitoba Government Announces New Crown-Indigenous Corporation to Lead Churchill Plus Project
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71901)
+**Score:** 7.50
+
+## 21. Man accused of severing essential undersea telecom cable between Nova Scotia, Newfoundland
+<img src='https://i.cbc.ca/ais/1.7462736,1739982555000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1600%2C900%29%3BResize%3D%28620%29' alt='A person holds a severed cable up to the camera.' width='620' height='349' title='In this photo supplied by Bell, a crew member onboard the repair ship show the subsea cable between Cape Breton and Newfoundland that the company believes was deliberately cut in December 2024. '/><p>Wrapped in coils of thick wire, the cable was a primary connection for internet, TV and long-distance communication between the two provinces.</p>
+📍 [Source](https://www.cbc.ca/news/canada/nova-scotia/man-accused-of-severing-telecom-link-ns-nl-9.7019779?cmp=rss)
+**Score:** 6.50
+
+## 22. Wintery storm wallops Alberta Wednesday, bringing heavy snow and gusting winds
+<img src='https://i.cbc.ca/ais/1.6250779,1637082203000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C375%2C4032%2C2268%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='City roads were slick Tuesday as a major winter storm whipped through Alberta. '/><p>After a blast of freezing rain and brutal cold, much of Alberta is now bracing for another wintery storm that has forecasters cautioning of blizzard conditions.</p>
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alberta-snow-storm-9.7017521?cmp=rss)
+**Score:** 5.70
+
+## 23. Measles Update #56
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72059)
+**Score:** 4.50
+
+## 24. Province Issues Thin Ice Advisory for Rivers and Lakes Across Manitoba
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71902)
+**Score:** 4.50
+
+## 25. Measles Update #53
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=71899)
+**Score:** 4.50
+
+## 26. N.S. dispensary raided following government directive for crackdown on cannabis
+Nova Scotia RCMP say they issued a ticket and seized cannabis and cash after executing a search warrant on Monday at a cannabis dispensary in Digby, N.S.
+📍 [Source](https://globalnews.ca/news/11582045/nova-scotia-dispensary-raided-cannabis-crackdown/)
+**Score:** 4.00
+
+## 27. Ontario backs Toronto's bid to be selected as potential host for defence bank
+A grouping of leaders, including Ontario Premier Doug Ford, gathered at the Toronto Stock Exchange to launch a bid to host the Defence, Security and Resilience Bank.
+📍 [Source](https://globalnews.ca/news/11581667/toronto-bid-defence-security-resilience-bank/)
+**Score:** 4.50
+
+## 28. Charges won't be laid after Winnipeg police shooting left man dead, officer stabbed
+Manitoba’s police watchdog says charges won't be laid after a shooting left one man dead and an officer recovering from a stab wound to the throat.
+📍 [Source](https://globalnews.ca/news/11581792/charges-wont-be-laid-after-winnipeg-police-shooting-left-man-dead-officer-stabbed/)
+**Score:** 4.50
+
+## 29. Alberta shuts down supervised drug consumption site in Edmonton hospital
+📍 [Source](https://www.cbc.ca/news/canada/edmonton/alta-drug-sites-9.7019248?cmp=rss)
+**Score:** 4.50
+
+## 30. Carney, Ford to sign a deal to reduce regulatory burden on Ring of Fire, speed up Ontario projects
+📍 [Source](https://www.cbc.ca/news/canada/toronto/ottawa-ontario-ring-of-fire-9.7019753?cmp=rss)
+**Score:** 4.50
+
+## 31. Nova Scotia man accused of severing telecom link between Nova Scotia and Newfoundland
+The Mounties stressed the accused didn’t intend to damage essential infrastructure or harm national security.
+📍 [Source](https://globalnews.ca/news/11582017/fibre-optic-cable-cut-charge-nova-scotia-newfoundland/)
+**Score:** 2.00
+
+## 32. Your ultra-local Vancouver gift guide for everyone in your life
+Shop our list of dozens of local gifts.
+📍 [Source](https://www.straight.com/living/your-ultra-local-vancouver-gift-guide-for-everyone-in-your-life)
+**Score:** 1.20
+
+## 33. The UCP Separatist Wing Is Winning. Here’s What Comes Next
+Be ready for a Brexit-style disinformation campaign, weak opposition and turmoil.
+📍 [Source](https://thetyee.ca/Opinion/2025/12/17/UCP-Separatist-Wing-Winning/)
+**Score:** 1.20
+
+## 34. 'It's really scary': Thousands of people in Newfoundland remain without power after wind storm
+<img src='https://i.cbc.ca/ais/1.5057939,1552659203000/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C115%2C1728%2C972%29%3BResize%3D%28620%29' alt='' width='620' height='349' title='Scenic Fogo Island.'/><p>Residents of Fogo Island, Change Islands and other parts of central Newfoundland remain without power Tuesday evening following hurricane-force gusts, with some areas nearing 20 hours without heat and light.</p>
+📍 [Source](https://www.cbc.ca/news/canada/newfoundland-labrador/it-s-really-scary-thousands-of-people-in-newfoundland-remain-without-power-after-wind-storm-9.7018790?cmp=rss)
+**Score:** 1.00
+
