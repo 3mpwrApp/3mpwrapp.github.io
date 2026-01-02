@@ -147,8 +147,8 @@ description: A community-powered hub for injured workers and persons with disabi
 
 <!-- January 2026 Status Update -->
 <div class="gradient-banner" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-  <h3 style="margin: 0 0 0.5rem; color: white; font-size: 1.4rem;">🚀 Slow Release to Beta Testers Started!</h3>
-  <p style="margin: 0; font-size: 1rem; opacity: 0.95;">January 2, 2026 — 721 tests passing, 100% production ready. Closed internal testing complete. Gradual rollout to selected beta testers now active. 🇺🇸 USA Lite available!</p>
+  <h3 style="margin: 0 0 0.5rem; color: white; font-size: 1.4rem;">🚀 Closed Internal Testing Now Active</h3>
+  <p style="margin: 0; font-size: 1rem; opacity: 0.95;">January 2, 2026 — Slow release phase to selected beta testers underway. 721 tests passing, 100% production ready. 🇺🇸 USA Lite available!</p>
   <p style="margin: 0.75rem 0 0;">
     <a href="/beta/" style="color: white; text-decoration: underline; font-weight: bold;">Join Beta Testing →</a> &nbsp;|&nbsp;
     <a href="/roadmap/" style="color: white; text-decoration: underline; font-weight: bold;">Release Roadmap →</a>
