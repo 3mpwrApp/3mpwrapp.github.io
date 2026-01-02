@@ -334,39 +334,39 @@ permalink: /community-spotlight/
 
 ## 📝 Submit Your Story {#submit-your-story}
 
-<div class="info-box-bordered" style="background: #f8f9fa !important; border: 2px solid #3b82f6; color: #1f2937 !important;">
-  <h3 style="margin-top: 0; color: #1e40af !important;">🌟 Want to Be Featured?</h3>
+<div class="info-box-bordered" style="background: #e0e7ff !important; border: 3px solid #3b82f6; color: #1f2937 !important; padding: 1.5rem;">
+  <h3 style="margin-top: 0; color: #1e40af !important; font-size: 1.4rem; font-weight: 700;">🌟 Want to Be Featured?</h3>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">We want to hear about YOUR activism!</strong></p>
+  <p style="color: #1f2937 !important; font-size: 1.05rem; font-weight: 600; margin: 1rem 0;"><strong style="color: #1f2937 !important;">We want to hear about YOUR activism!</strong></p>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">Tell us about:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">📱 Your social media advocacy work</li>
-    <li style="color: #1f2937 !important;">📣 Rallies or events you've organized</li>
-    <li style="color: #1f2937 !important;">🤝 Peer support you've provided</li>
-    <li style="color: #1f2937 !important;">📝 Content you've created</li>
-    <li style="color: #1f2937 !important;">💙 Behind-the-scenes contributions</li>
-    <li style="color: #1f2937 !important;">🎤 Public speaking or media work</li>
-    <li style="color: #1f2937 !important;">💼 Workplace or union organizing</li>
-    <li style="color: #1f2937 !important;">🎓 Educational efforts</li>
+  <p style="color: #1f2937 !important; font-size: 1.05rem; font-weight: 600; margin: 1rem 0;"><strong style="color: #1f2937 !important;">Tell us about:</strong></p>
+  <ul style="color: #1f2937 !important; font-size: 1rem; margin: 0.5rem 0; line-height: 1.6;">
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📱 Your social media advocacy work</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📣 Rallies or events you've organized</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🤝 Peer support you've provided</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📝 Content you've created</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">💙 Behind-the-scenes contributions</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🎤 Public speaking or media work</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">💼 Workplace or union organizing</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🎓 Educational efforts</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">What to include:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li>📖 Your name and pronouns (if comfortable sharing)</li>
-    <li>📍 Your location (city/province is fine)</li>
-    <li>🎯 Your advocacy focus areas</li>
-    <li>💪 What you've accomplished or contributed</li>
-    <li>🔗 Links to your website, social media, or work</li>
-    <li>📸 Optional: Photo or image</li>
-    <li>💬 A quote about why you do this work</li>
+  <p style="color: #1f2937 !important; font-size: 1.05rem; font-weight: 600; margin: 1rem 0;"><strong style="color: #1f2937 !important;">What to include:</strong></p>
+  <ul style="color: #1f2937 !important; font-size: 1rem; margin: 0.5rem 0; line-height: 1.6;">
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📖 Your name and pronouns (if comfortable sharing)</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📍 Your location (city/province is fine)</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🎯 Your advocacy focus areas</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">💪 What you've accomplished or contributed</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🔗 Links to your website, social media, or work</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📸 Optional: Photo or image</li>
+    <li style="color: #1f2937 !important; margin: 0.5rem 0;">💬 A quote about why you do this work</li>
   </ul>
   
-  <p style="color: #1f2937;"><strong>Submit your story:</strong></p>
-  <p style="color: #1f2937;">📧 Email: <a href="mailto:empowrapp08162025@gmail.com" style="color: #0645ad; text-decoration: underline;">empowrapp08162025@gmail.com</a></p>
-  <p style="color: #1f2937;">📝 Subject line: "Community Spotlight Submission"</p>
+  <p style="color: #1f2937; font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 0.5rem;"><strong>Submit your story:</strong></p>
+  <p style="color: #1f2937; font-size: 1rem; margin: 0.5rem 0;">📧 Email: <a href="mailto:empowrapp08162025@gmail.com" style="color: #0645ad; text-decoration: underline; font-weight: 600;">empowrapp08162025@gmail.com</a></p>
+  <p style="color: #1f2937; font-size: 1rem; margin: 0.5rem 0 1rem;">📝 Subject line: <strong>"Community Spotlight Submission"</strong></p>
   
-  <p style="color: #1f2937;"><em>We feature new advocates monthly. Your story inspires others!</em></p>
+  <p style="color: #1f2937; font-size: 1rem; font-weight: 500; font-style: italic;">💡 We feature new advocates monthly. Your story inspires others!</p>
 </div>
 
 ---
