@@ -145,13 +145,13 @@ description: A community-powered hub for injured workers and persons with disabi
 
 <span aria-hidden="true">📖</span> **3 minute read** <span aria-hidden="true">🔋🔋</span> **Energy: Light**
 
-<!-- December 2025 Announcement Banner -->
-<div class="gradient-banner" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
-  <h3 style="margin: 0 0 0.5rem; color: white; font-size: 1.4rem;">🎉 First Demo Presentation Successful! + USA Lite Launched 🇺🇸</h3>
-  <p style="margin: 0; font-size: 1rem; opacity: 0.95;">December 12, 2025 — 721 tests passing, 100% production ready. American supporters can now join with USA Lite!</p>
+<!-- January 2026 Status Update -->
+<div class="gradient-banner" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
+  <h3 style="margin: 0 0 0.5rem; color: white; font-size: 1.4rem;">🚀 Slow Release to Beta Testers Started!</h3>
+  <p style="margin: 0; font-size: 1rem; opacity: 0.95;">January 2, 2026 — 721 tests passing, 100% production ready. Closed internal testing complete. Gradual rollout to selected beta testers now active. 🇺🇸 USA Lite available!</p>
   <p style="margin: 0.75rem 0 0;">
-    <a href="/whats-new/" style="color: white; text-decoration: underline; font-weight: bold;">See What's New →</a> &nbsp;|&nbsp;
-    <a href="/roadmap/#-new-usa-lite---now-available" style="color: white; text-decoration: underline; font-weight: bold;">USA Lite Details →</a>
+    <a href="/beta/" style="color: white; text-decoration: underline; font-weight: bold;">Join Beta Testing →</a> &nbsp;|&nbsp;
+    <a href="/roadmap/" style="color: white; text-decoration: underline; font-weight: bold;">Release Roadmap →</a>
   </p>
 </div>
 
