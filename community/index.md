@@ -43,6 +43,40 @@ permalink: /community/
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
+### 🎉 Issue #1 Now Live!
+
+**Your Canadian Community Newspaper About Disability**
+
+The Disability Bulletin team is proud to announce the launch of Issue #1! 
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="/assets/images/disability-bulletin-issue1.jpg" alt="The Disability Bulletin - Winter 2026 Quarterly Issue 1" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+</div>
+
+**1.5 Million Disabled Canadians Live in Poverty: A National Disability Insurance Plan Can Fix That**
+
+> "The Disability Bulletin issue 1 was created by myself and the director of Disposable: Life on #ODSP, a two person team using lived experience, secondary education and whatever tools at hand to showcase the disability community with respect and without fluff."
+>
+> — The Disability Bulletin Team
+
+**Featured in Issue #1:**
+- Letters from the editors
+- Updates on the Canada Disability Benefit
+- Latest disability news stories from across Canada
+- How to kick off into digital advocacy
+- The founders of disability activism in Canada
+
+<div class="button-group" role="navigation" aria-label="The Disability Bulletin links">
+  <a href="https://linktr.ee/thedisabilitybulletin" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Visit The Disability Bulletin linktree for digital PDF and physical copy requests">📖 Read or Request Copy</a>
+  <a href="https://x.com/ODSPoor" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Follow @ODSPoor on X for updates">🐦 @ODSPoor</a>
+</div>
+
+**Upcoming:** Check the last page of Issue #1 for information on how to submit your work or art for the **March 2026 issue**!
+
+---
+
+### About the Publication
+
 Independent disability journalism by [@ODSPoor](https://x.com/ODSPoor) and [@emilypot_](https://x.com/emilypot_). A grassroots publication covering the stories mainstream media ignores.
 
 ✅ **Authentic disabled voices** — Written by disabled people who live these systems  
@@ -51,7 +85,11 @@ Independent disability journalism by [@ODSPoor](https://x.com/ODSPoor) and [@emi
 ✅ **Community-focused** — Stories that matter to disabled Canadians  
 ✅ **Independent** — Not beholden to government or corporate interests
 
-[🔗 All Links (Linktree)](https://linktr.ee/thedisabilitybulletin) | [📖 Read Latest](https://thedisabilitybulletin.blogspot.com/) | [🐦 @ODSPoor](https://x.com/ODSPoor) | [🐦 @emilypot_](https://x.com/emilypot_) | [📚 Full Hub](/community/disability-bulletin/)
+**Options to Access:**
+- 📄 **Hyperlinked Digital PDF** — Download and share
+- 📮 **Physical Copy** — Limited printed copies available by request
+
+[🔗 All Links (Linktree)](https://linktr.ee/thedisabilitybulletin) | [🐦 @ODSPoor](https://x.com/ODSPoor) | [🐦 @emilypot_](https://x.com/emilypot_)
 
 ---
 
