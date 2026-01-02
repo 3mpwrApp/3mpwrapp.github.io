@@ -209,7 +209,7 @@ Former PSW (Personal Support Worker). Injured worker. Person with disabilities. 
 **Now I fight back.** As a meme & content creator, I use humor, truth, and technology to expose corruption and build solidarity.
 
 **Roles:**
-- 🎓 Alumni & Board Member — [Speakers School Canada](https://www.speakersschool.ca/)
+- 🎓 Board Member — [Speakers School Canada](https://www.speakersschool.ca/)
 - ⚡ Board Member — [Thunder Bay & District Injured Workers Support Group](http://thunderbayinjuredworkers.com/)
 
 ### 🌐 Also Building: Injured Workers Unite

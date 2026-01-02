@@ -661,7 +661,7 @@ function copyCampaignHome() {
         <h3 style="margin: 0; font-size: 1.3rem;">📰 Emily Pot</h3>
         <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Disability Journalist</p>
       </div>
-      <p style="margin: 0 0 1rem; color: #4b5563; font-size: 0.95rem;">
+      <p style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
         Co-founder of The Disability Bulletin. Breaking disability news, centering lived experience.
       </p>
       <div style="display: flex; gap: 0.75rem; flex-direction: column;">
@@ -680,7 +680,7 @@ function copyCampaignHome() {
         <h3 style="margin: 0; font-size: 1.3rem;">✊ Occupy WSIB</h3>
         <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Workers' Rights Org</p>
       </div>
-      <p style="margin: 0 0 1rem; color: #4b5563; font-size: 0.95rem;">
+      <p style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
         Fighting for WSIB reform and injured workers' justice through grassroots organizing.
       </p>
       <div style="display: flex; gap: 0.75rem; flex-direction: column;">
@@ -699,7 +699,7 @@ function copyCampaignHome() {
         <h3 style="margin: 0; font-size: 1.3rem;">♿ CrAP We Matter</h3>
         <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Chronic Illness Advocates</p>
       </div>
-      <p style="margin: 0 0 1rem; color: #4b5563; font-size: 0.95rem;">
+      <p style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
         Bold voices centering chronic illness perspectives and authentic disability truths.
       </p>
       <div style="display: flex; gap: 0.75rem; flex-direction: column;">
@@ -718,7 +718,7 @@ function copyCampaignHome() {
         <h3 style="margin: 0; font-size: 1.3rem;">🔥 Lissa Beaulieu</h3>
         <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">3mpwrApp Founder</p>
       </div>
-      <p style="margin: 0 0 1rem; color: #4b5563; font-size: 0.95rem;">
+      <p style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
         Building community tools for disability justice. Fierce advocate for injured workers & disability rights.
       </p>
       <div style="display: flex; gap: 0.75rem; flex-direction: column;">

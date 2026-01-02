@@ -102,31 +102,31 @@ Independent disability journalism by [@ODSPoor](https://x.com/ODSPoor) and [@emi
 
 <div style="display: grid; gap: 1.5rem; margin: 1.5rem 0;">
   <div style="border: 2px solid #f97316; border-left: 4px solid #f97316; padding: 1rem; border-radius: 8px; background: #fff5f0;">
-    <h4 style="margin-top: 0; color: #c2410c;">📰 Emily Pot (@emilypot_)</h4>
-    <p><strong>Independent disability journalist & co-founder of The Disability Bulletin</strong></p>
-    <p>Breaking disability news, centering lived experience, holding power accountable</p>
-    <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="color: #0645ad; font-weight: 600;">🐦 Follow Emily on X →</a>
+    <h4 style="margin-top: 0; color: #c2410c; font-size: 1.1rem;">📰 Emily Pot (@emilypot_)</h4>
+    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Independent disability journalist & co-founder of The Disability Bulletin</p>
+    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Breaking disability news, centering lived experience, holding power accountable</p>
+    <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #f97316; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow Emily on X →</a>
   </div>
 
   <div style="border: 2px solid #22c55e; border-left: 4px solid #22c55e; padding: 1rem; border-radius: 8px; background: #f0fdf4;">
-    <h4 style="margin-top: 0; color: #15803d;">✊ Occupy WSIB (@occupywsib)</h4>
-    <p><strong>Injured workers' rights organizers</strong></p>
-    <p>Fighting for WSIB reform, justice, and accountability through grassroots action</p>
-    <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="color: #0645ad; font-weight: 600;">🐦 Follow Occupy WSIB on X →</a>
+    <h4 style="margin-top: 0; color: #15803d; font-size: 1.1rem;">✊ Occupy WSIB (@occupywsib)</h4>
+    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Injured workers' rights organizers</p>
+    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Fighting for WSIB reform, justice, and accountability through grassroots action</p>
+    <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #22c55e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow Occupy WSIB on X →</a>
   </div>
 
   <div style="border: 2px solid #6366f1; border-left: 4px solid #6366f1; padding: 1rem; border-radius: 8px; background: #f3f4f6;">
-    <h4 style="margin-top: 0; color: #3730a3;">♿ CrAP We Matter (@CrAPwematter)</h4>
-    <p><strong>Chronic illness & disability advocates</strong></p>
-    <p>Bold voices centering chronic illness perspectives and authentic disability truths</p>
-    <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="color: #0645ad; font-weight: 600;">🐦 Follow CrAP We Matter on X →</a>
+    <h4 style="margin-top: 0; color: #3730a3; font-size: 1.1rem;">♿ CrAP We Matter (@CrAPwematter)</h4>
+    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Chronic illness & disability advocates</p>
+    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Bold voices centering chronic illness perspectives and authentic disability truths</p>
+    <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #6366f1; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow CrAP We Matter on X →</a>
   </div>
 
   <div style="border: 2px solid #f59e0b; border-left: 4px solid #f59e0b; padding: 1rem; border-radius: 8px; background: #fef3c7;">
-    <h4 style="margin-top: 0; color: #92400e;">🔥 Lissa Beaulieu - Founder & Disability Rights Activist</h4>
-    <p><strong>Founder of 3mpwrApp, Board Member - Thunder Bay & District Injured Workers Support Group</strong></p>
-    <p>Building community tools for disability justice, fighting WSIB injustice, creative activism</p>
-    <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="color: #0645ad; font-weight: 600;">🐦 Follow Lissa on X →</a> | <a href="/about/" style="color: #0645ad; font-weight: 600;">📖 Learn More →</a>
+    <h4 style="margin-top: 0; color: #92400e; font-size: 1.1rem;">🔥 Lissa Beaulieu - Founder & Disability Rights Activist</h4>
+    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Founder of 3mpwrApp, Board Member - Thunder Bay & District Injured Workers Support Group</p>
+    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Building community tools for disability justice, fighting WSIB injustice, creative activism</p>
+    <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #f59e0b; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow Lissa on X →</a><a href="/about/" style="display: inline-block; background: #92400e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📖 Learn More →</a>
   </div>
 </div>
 
