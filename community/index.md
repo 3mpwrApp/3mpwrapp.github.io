@@ -152,8 +152,8 @@ Independent disability journalism by [@ODSPoor](https://x.com/ODSPoor) and [@emi
 
   <div style="border: 2px solid #22c55e; border-left: 4px solid #22c55e; padding: 1rem; border-radius: 8px; background: #f0fdf4;">
     <h4 style="margin-top: 0; color: #15803d; font-size: 1.1rem;">✊ Occupy WSIB (@occupywsib)</h4>
-    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Injured workers' rights organizers</p>
-    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Fighting for WSIB reform, justice, and accountability through grassroots action</p>
+    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Injured workers' rights activist organizing in London, Ontario</p>
+    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Conducting public pickets and demonstrations to expose WSIB to the community, keeping the focus on injured workers' rights and accountability</p>
     <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #22c55e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow Occupy WSIB on X →</a>
   </div>
 
