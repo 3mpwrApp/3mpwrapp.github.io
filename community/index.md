@@ -43,7 +43,7 @@ permalink: /community/
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
-### 🎉 Issue #1 Now Live!
+### 🎉 Issue #1 is Now Live!
 
 **Your Canadian Community Newspaper About Disability**
 
