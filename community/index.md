@@ -50,7 +50,7 @@ permalink: /community/
 The Disability Bulletin team is proud to announce the launch of Issue #1! 
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="/assets/images/disability-bulletin-issue1.jpg" alt="The Disability Bulletin - Winter 2026 Quarterly Issue 1" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/images/disabilitybulletin.jpg" alt="The Disability Bulletin - Winter 2026 Quarterly Issue 1" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
 </div>
 
 **1.5 Million Disabled Canadians Live in Poverty: A National Disability Insurance Plan Can Fix That**
