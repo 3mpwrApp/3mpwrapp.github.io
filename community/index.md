@@ -145,7 +145,7 @@ The Disability Bulletin team is so proud to announce the launch of Issue #1 feat
 
   <div style="border: 2px solid #3b82f6; border-left: 4px solid #3b82f6; padding: 1rem; border-radius: 8px; background: #eff6ff;">
     <h4 style="margin-top: 0; color: #1e40af; font-size: 1.1rem;">🇨🇦 Mitchell Tremblay (@ODSPoverty)</h4>
-    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Disability Rights Advocate</p>
+    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Disability Rights Advocate & Co-founder of The Disability Bulletin</p>
     <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Fighting for ODSP reform, disability rights, and economic justice for disabled Canadians</p>
     <a href="https://x.com/ODSPoverty" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #3b82f6; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow on X →</a><a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #1e40af; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🔗 Linktree →</a>
   </div>
