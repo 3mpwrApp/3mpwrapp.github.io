@@ -244,7 +244,7 @@ class CurationAgentProduction {
 
     // Check scoring tiers in order of priority
     for (const [tierName, tierConfig] of Object.entries(this.curatorConfig.scoring || {})) {
-      if (tierConfig.terms && Array.isArray(tierConfig.terms)) {
+      if (tierConfig && tierConfig.terms && Array.isArray(tierConfig.terms)) {
         for (const term of tierConfig.terms) {
           if (text.includes(term.toLowerCase())) {
             score = tierConfig.score;
