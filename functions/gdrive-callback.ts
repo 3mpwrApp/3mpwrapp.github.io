@@ -8,7 +8,13 @@
  * Deploy to: functions/gdrive-callback.ts
  */
 
-export const onRequest: PagesFunction = async (context) => {
+interface PagesContext {
+  request: Request;
+  env?: unknown;
+  params?: Record<string, string>;
+}
+
+export const onRequest = async (context: PagesContext): Promise<Response> => {
   const { request } = context;
   const url = new URL(request.url);
   const code = url.searchParams.get('code');
