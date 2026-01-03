@@ -150,10 +150,10 @@ The Disability Bulletin team is so proud to announce the launch of Issue #1 feat
   </div>
 
   <div style="border: 2px solid #6366f1; border-left: 4px solid #6366f1; padding: 1rem; border-radius: 8px; background: #f3f4f6;">
-    <h4 style="margin-top: 0; color: #3730a3; font-size: 1.1rem;">♿ CrAP We Matter (@CrAPwematter)</h4>
+    <h4 style="margin-top: 0; color: #3730a3; font-size: 1.1rem;">♿ democracy4all (@CrAPwematter)</h4>
     <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Chronic illness & disability advocates</p>
     <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Bold voices centering chronic illness perspectives and authentic disability truths</p>
-    <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #6366f1; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow CrAP We Matter on X →</a>
+    <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #6366f1; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow democracy4all on X →</a>
   </div>
 
   <div style="border: 2px solid #f59e0b; border-left: 4px solid #f59e0b; padding: 1rem; border-radius: 8px; background: #fef3c7;">

@@ -170,12 +170,12 @@ permalink: /community-spotlight/
 
 ---
 
-### 🎯 CrAP We Matter (@CrAPwematter)
+### 🎯 democracy4all (@CrAPwematter)
 
 <div class="info-box-bordered" style="background: #f3f4f6 !important; border: 2px solid #6366f1; border-left: 4px solid #6366f1; color: #1f2937 !important;">
   <h4 style="margin-top: 0; color: #3730a3 !important;">♿ Chronic Illness & Disability Advocacy</h4>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">CrAP We Matter</strong> (Chronic illness, Real, Authentic Perspectives) is a bold voice centering chronically ill and disabled perspectives in conversations about health, access, and disability justice.</p>
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">democracy4all</strong> (formerly CrAP We Matter - Chronic illness, Real, Authentic Perspectives) is a bold voice centering chronically ill and disabled perspectives in conversations about health, access, and disability justice.</p>
   
   <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🎯 Advocacy Focus:</strong></p>
   <ul style="color: #1f2937 !important;">
@@ -193,14 +193,14 @@ permalink: /community-spotlight/
     <li style="color: #1f2937 !important;">💬 Challenging narratives that erase chronic illness</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🔗 Connect with CrAP We Matter:</strong></p>
+  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🔗 Connect with democracy4all:</strong></p>
   <p style="color: #1f2937 !important;">
     <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
       🐦 @CrAPwematter on X
     </a>
   </p>
   
-  <p style="margin-top: 1.5rem; color: #1f2937 !important;"><em style="color: #1f2937 !important;">🌟 Thank you CrAP We Matter for bold, authentic advocacy for chronic illness and disability!</em></p>
+  <p style="margin-top: 1.5rem; color: #1f2937 !important;"><em style="color: #1f2937 !important;">🌟 Thank you democracy4all for bold, authentic advocacy for chronic illness and disability!</em></p>
 </div>
 
 ---

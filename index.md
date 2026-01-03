@@ -715,7 +715,7 @@ function copyCampaignHome() {
       <!-- Card 3: CrAP We Matter -->
       <div class="carousel-card" style="background: white; border: 2px solid #6366f1; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
         <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
-          <h3 style="margin: 0; font-size: 1.3rem;">♿ CrAP We Matter</h3>
+          <h3 style="margin: 0; font-size: 1.3rem;">♿ democracy4all</h3>
           <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Chronic Illness Advocates</p>
         </div>
         <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
