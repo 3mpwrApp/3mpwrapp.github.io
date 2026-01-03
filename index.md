@@ -917,8 +917,9 @@ function copyCampaignHome() {
 Ready to join the movement? Here's how you can get started:
 
 <div class="gradient-banner" style="color: white !important;">
-  <h3 style="margin: 0 0 0.5rem; color: white !important;"><span aria-hidden="true">🚀</span> Phase 1 Closed Internal Testing - Starting Soon!</h3>
-  <p style="margin: 0 0 1rem; font-size: 1rem; color: white !important;">First demo was a success! 🎉 Be among the first testers to shape the future of disability advocacy technology.</p>
+  <h3 style="margin: 0 0 0.5rem; color: white !important;"><span aria-hidden="true">🚀</span> Phase 1: Closed Internal Testing NOW ACTIVE (Slow Release)</h3>
+  <p style="margin: 0 0 0.5rem; font-size: 0.95rem; color: white !important; font-weight: 600;">✅ Production Ready: 721 Tests Passing | 🌍 Available Canada-wide (Coast to Coast to Coast) + USA Lite 🇨🇦🇺🇸</p>
+  <p style="margin: 0 0 1rem; font-size: 1rem; color: white !important;">Be among the first testers to shape the future of disability advocacy technology for injured workers and persons with disabilities across North America.</p>
   <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: #ffffff !important; color: #5568d3 !important; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
   <p style="margin: 1rem 0 0; font-size: 0.9rem; color: white !important;"><a href="{{ '/app-waitlist' | relative_url }}" style="color: white !important; text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="{{ '/beta-guide' | relative_url }}" style="color: white !important; text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
 </div>
