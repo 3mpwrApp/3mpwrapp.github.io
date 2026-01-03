@@ -13,7 +13,7 @@ permalink: /community/
 
 # 🤝 Community
 
-📖 **4 minute read** | 🔋🔋 **Energy: Light**
+📖 **4 minute read** | 🔋🔋 **Energy: Light** | Updated Jan 2, 2026
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
