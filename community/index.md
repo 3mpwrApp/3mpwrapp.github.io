@@ -43,7 +43,9 @@ permalink: /community/
 
 Your Canadian Community Newspaper About Disability - **Issue #1 is Now Live!**
 
-<img src="/assets/images/disability-bulletin-issue1.jpg" alt="The Disability Bulletin Issue #1 Cover" style="max-width: 400px; width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: block;">
+<div style="text-align: center; margin: 1.5rem 0;">
+  <img src="{{ site.baseurl }}/assets/images/disabilitybulletin.jpg" alt="The Disability Bulletin Issue #1 Cover" style="max-width: 500px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+</div>
 
 The Disability Bulletin team is so proud to announce the launch of Issue #1 featuring:
 - Letters from the editors
