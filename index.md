@@ -681,7 +681,7 @@ function copyCampaignHome() {
           <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Disability Journalist</p>
         </div>
         <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
-          Co-founder of The Disability Bulletin. Breaking disability news, centering lived experience.
+          Independent disability journalist & co-founder of The Disability Bulletin. Breaking disability news, centering lived experience, holding power accountable.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-direction: column;">
           <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="display: block; background: #f97316; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#ea580c'" onmouseout="this.style.background='#f97316'">
@@ -697,10 +697,10 @@ function copyCampaignHome() {
       <div class="carousel-card" style="background: white; border: 2px solid #22c55e; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
         <div style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
           <h3 style="margin: 0; font-size: 1.3rem;">✊ Occupy WSIB</h3>
-          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Workers' Rights Org</p>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Workers' Rights Activist</p>
         </div>
         <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
-          Fighting for WSIB reform and injured workers' justice through grassroots organizing.
+          Injured workers' rights activist organizing in London, Ontario. Conducting public pickets and demonstrations to expose WSIB and keep focus on injured workers' rights.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-direction: column;">
           <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="display: block; background: #22c55e; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#16a34a'" onmouseout="this.style.background='#22c55e'">
@@ -735,10 +735,10 @@ function copyCampaignHome() {
       <div class="carousel-card" style="background: white; border: 2px solid #f59e0b; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
         <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
           <h3 style="margin: 0; font-size: 1.3rem;">🔥 Lissa Beaulieu</h3>
-          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">3mpwrApp Founder</p>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Founder & Disability Rights Activist</p>
         </div>
         <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
-          Building community tools for disability justice. Fierce advocate for injured workers & disability rights.
+          Founder of 3mpwrApp, Board Member - Thunder Bay & District Injured Workers Support Group. Building community tools for disability justice, fighting WSIB injustice, creative activism.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-direction: column;">
           <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: block; background: #f59e0b; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#d97706'" onmouseout="this.style.background='#f59e0b'">
@@ -757,7 +757,7 @@ function copyCampaignHome() {
           <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Disability Advocate</p>
         </div>
         <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
-          Passionate advocate for ODSP reform and disability rights. Fighting for economic justice.
+          Disability Rights Advocate & Co-founder of The Disability Bulletin. Fighting for ODSP reform, disability rights, and economic justice for disabled Canadians.
         </p>
         <div style="display: flex; gap: 0.75rem; flex-direction: column;">
           <a href="https://x.com/ODSPoverty" target="_blank" rel="noopener noreferrer" style="display: block; background: #3b82f6; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#2563eb'" onmouseout="this.style.background='#3b82f6'">
