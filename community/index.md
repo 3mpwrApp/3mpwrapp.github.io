@@ -112,9 +112,27 @@ The Disability Bulletin team is so proud to announce the launch of Issue #1 feat
 
 <span class="energy-cost" data-energy="1" aria-label="Energy cost: very light">🔋 Energy: Very Light</span>
 
+<style>
+  @media (prefers-color-scheme: dark) {
+    .featured-members-container {
+      --text-primary: #f3f4f6;
+      --text-secondary: #d1d5db;
+    }
+    .featured-members-container > div {
+      background-color: #1f2937 !important;
+    }
+    .featured-members-container h4 {
+      color: #f0f9ff !important;
+    }
+    .featured-members-container p {
+      color: var(--text-secondary) !important;
+    }
+  }
+</style>
+
 **Follow these voices making a difference:**
 
-<div style="display: grid; gap: 1.5rem; margin: 1.5rem 0;">
+<div class="featured-members-container" style="display: grid; gap: 1.5rem; margin: 1.5rem 0;">
   <div style="border: 2px solid #f97316; border-left: 4px solid #f97316; padding: 1rem; border-radius: 8px; background: #fff5f0;">
     <h4 style="margin-top: 0; color: #c2410c; font-size: 1.1rem;">📰 Emily Pot (@emilypot_)</h4>
     <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Independent disability journalist & co-founder of The Disability Bulletin</p>
