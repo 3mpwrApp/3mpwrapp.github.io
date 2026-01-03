@@ -7,8 +7,6 @@ image_alt: "3mpwrApp Community - Inclusive peer support and advocacy"
 permalink: /community/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
-
 {%- include status-banner.html -%}
 
 # 🤝 Community
