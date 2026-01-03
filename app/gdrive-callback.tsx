@@ -31,12 +31,12 @@ export default function GDriveCallbackScreen() {
     const url = typeof window !== 'undefined' ? window.location.href : '';
     const hash = typeof window !== 'undefined' ? window.location.hash : '';
 
-    console.log('[GDrive Callback] ===== OAUTH CALLBACK RECEIVED =====');
-    console.log('[GDrive Callback] Platform:', Platform.OS);
-    console.log('[GDrive Callback] Full URL:', url);
-    console.log('[GDrive Callback] Hash fragment:', hash);
-    console.log('[GDrive Callback] Params:', params);
-    console.log('[GDrive Callback] window.opener exists:', typeof window !== 'undefined' && !!window.opener);
+    console.warn('[GDrive Callback] ===== OAUTH CALLBACK RECEIVED =====');
+    console.warn('[GDrive Callback] Platform:', Platform.OS);
+    console.warn('[GDrive Callback] Full URL:', url);
+    console.warn('[GDrive Callback] Hash fragment:', hash);
+    console.warn('[GDrive Callback] Params:', params);
+    console.warn('[GDrive Callback] window.opener exists:', typeof window !== 'undefined' && !!window.opener);
 
     // Parse the hash to see what we got
     if (hash) {
@@ -45,18 +45,18 @@ export default function GDriveCallbackScreen() {
       const error = hashParams.get('error');
       const errorDesc = hashParams.get('error_description');
 
-      console.log('[GDrive Callback] Parsed hash params:');
-      console.log('  - access_token present:', !!accessToken);
-      console.log('  - access_token length:', accessToken?.length || 0);
-      console.log('  - error:', error || 'none');
-      console.log('  - error_description:', errorDesc || 'none');
+      console.warn('[GDrive Callback] Parsed hash params:');
+      console.warn('  - access_token present:', !!accessToken);
+      console.warn('  - access_token length:', accessToken?.length || 0);
+      console.warn('  - error:', error || 'none');
+      console.warn('  - error_description:', errorDesc || 'none');
     }
 
     // Check if we're on web or native
     if (Platform.OS === 'web') {
       // On web: Close the OAuth popup and send token to parent window
       if (typeof window !== 'undefined' && window.opener) {
-        console.log('[GDrive Callback] Sending auth result to parent window');
+        console.warn('[GDrive Callback] Sending auth result to parent window');
         setStatusMessage('Sending authentication result to app...');
 
         // For implicit flow, tokens are in the hash fragment
@@ -65,7 +65,7 @@ export default function GDriveCallbackScreen() {
         if (hash && hash.includes('access_token')) {
           // Convert hash to query params: #access_token=... -> ?access_token=...
           messageUrl = url.replace('#', '?');
-          console.log('[GDrive Callback] Converted hash to query format:', messageUrl);
+          console.warn('[GDrive Callback] Converted hash to query format:', messageUrl);
           setStatusMessage('✓ Access token received! Sending to app...');
         } else if (hash && hash.includes('error')) {
           const hashParams = new URLSearchParams(hash.replace('#', ''));
@@ -74,7 +74,7 @@ export default function GDriveCallbackScreen() {
           setStatusMessage(`❌ OAuth error: ${error}\n${errorDesc}`);
         }
 
-        console.log('[GDrive Callback] Message payload:', { type: 'expo-auth-session', url: messageUrl });
+        console.warn('[GDrive Callback] Message payload:', { type: 'expo-auth-session', url: messageUrl });
 
         // Send the URL back to the parent window
         try {
@@ -87,7 +87,7 @@ export default function GDriveCallbackScreen() {
             },
             '*' // Allow cross-origin for OAuth callback
           );
-          console.log('[GDrive Callback] Message sent successfully');
+          console.warn('[GDrive Callback] Message sent successfully');
           setStatusMessage('✓ Success! Closing window...');
         } catch (error) {
           console.error('[GDrive Callback] Error sending message:', error);
@@ -96,12 +96,12 @@ export default function GDriveCallbackScreen() {
 
         // Close the popup after a longer delay to ensure message is received
         setTimeout(() => {
-          console.log('[GDrive Callback] Closing popup window');
+          console.warn('[GDrive Callback] Closing popup window');
           window.close();
         }, 3000);
       } else {
         // Not in a popup - might be direct navigation
-        console.log('[GDrive Callback] Not in popup, redirecting to home');
+        console.warn('[GDrive Callback] Not in popup, redirecting to home');
 
         // Extract token from hash or code from query params
         const urlObj = new URL(url);
@@ -111,7 +111,7 @@ export default function GDriveCallbackScreen() {
         const error = urlObj.searchParams.get('error') || hashParams.get('error');
 
         if (accessToken) {
-          console.log('[GDrive Callback] Access token present, redirecting to home');
+          console.warn('[GDrive Callback] Access token present, redirecting to home');
           // Store the token temporarily
           if (typeof window !== 'undefined' && window.sessionStorage) {
             window.sessionStorage.setItem('gdrive_access_token', accessToken);
@@ -121,7 +121,7 @@ export default function GDriveCallbackScreen() {
             }
           }
         } else if (code) {
-          console.log('[GDrive Callback] Auth code present, redirecting to home');
+          console.warn('[GDrive Callback] Auth code present, redirecting to home');
           if (typeof window !== 'undefined' && window.sessionStorage) {
             window.sessionStorage.setItem('gdrive_auth_code', code);
           }
@@ -134,7 +134,7 @@ export default function GDriveCallbackScreen() {
     } else {
       // On native: Deep-link back to the app
       const deepLinkUrl = `empowrapp://gdrive-callback${url.split('gdrive-callback')[1] || ''}`;
-      console.log('[GDrive Callback] Deep-linking to:', deepLinkUrl);
+      console.warn('[GDrive Callback] Deep-linking to:', deepLinkUrl);
 
       if (typeof window !== 'undefined') {
         window.location.href = deepLinkUrl;
@@ -168,3 +168,4 @@ export default function GDriveCallbackScreen() {
     </View>
   );
 }
+

@@ -43,6 +43,16 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 ---
 
+### 🧭 **Phase 2: Evidence-First Navigation (Dec 28-30, 2025)**
+
+- **Evidence-First Home**: Home hero now routes straight into Evidence Command Center with quick actions to upload, scan, or back up evidence.
+- **Evidence Command Center (Hub)**: Four tabs replace six legacy screens—Capture, Organize, Analyze, Share—integrated with offline queue and BYOC backup.
+- **Redirects Plan**: Legacy evidence/doc screens are scheduled to redirect to the hub in Week 4 to reduce clutter (no feature loss).
+- **Complexity Modes**: Simple Mode shows Capture + Summary only; Standard adds Organize; Power User shows all tabs plus BYOC sync controls.
+- **How to Access**: Home → “Start with Evidence” CTA, or Resources tab → Evidence Command Center.
+
+---
+
 ## 📢 **Major Updates Since November 4th, 2025**
 
 ### 🎯 **Summary of Key Changes**

@@ -1,25 +1,39 @@
 # Analytics Event Report
 
-Generated: 2025-12-22T18:37:46.887Z
+Generated: 2026-01-03T03:39:30.471Z
 
 ## Summary
 
-- Registry events: 166
-- Unique events referenced in code: 118
-- Total literal emissions (static scan): 121
-- Missing (used not registered): 0
-- Unused (registered not used): 48
+- Registry events: 176
+- Unique events referenced in code: 115
+- Total literal emissions (static scan): 116
+- Missing (used not registered): 1
+- Unused (registered not used): 62
 - Sensitive field occurrences (schema): 6
 - Classification counts: other=2, secret=1, pii=3
 
+### Missing
+
+- SCREEN_REDIRECT
+
 ### Unused
 
+- ai_command_center_used
+- quick_log_used
+- advocacy.ask.submitted
 - advocacy.finder.search
 - advocacy.finder.open_website
 - advocacy.finder.email
 - advocacy.finder.open_map
 - advocacy.finder.save_toggle
 - letter_insert_from_trackers
+- energy_set_daily
+- energy_spend
+- energy_reset_day
+- wellness_opposite_next_step
+- assistant.quick_prompt
+- assistant.recents.clear
+- assistant.search_open
 - events.export.ics
 - events.export.csv
 - events.subscribe.calendar
@@ -37,6 +51,7 @@ Generated: 2025-12-22T18:37:46.887Z
 - jurisdiction.changed
 - jurisdiction.deadline_calculated
 - jurisdiction.form_helper_used
+- assistant.disability_wizard_cta
 - beta.session.start
 - beta.session.end
 - beta.feedback.banner.shown
@@ -61,7 +76,10 @@ Generated: 2025-12-22T18:37:46.887Z
 - chronic.condition.add
 - chronic.condition.select
 - chronic.tool.open
+- legal.action
+- legal.case.open
 - rehab.program.open
+- selfcare.library.open
 
 ## Categories
 
@@ -105,7 +123,7 @@ Generated: 2025-12-22T18:37:46.887Z
 | events | 8 |
 | evidence | 13 |
 | jurisdiction | 3 |
-| legal | 6 |
+| legal | 10 |
 | letter_insert_from_trackers | 1 |
 | letter_wizard_delete | 1 |
 | letter_wizard_insert_trackers | 1 |
@@ -123,6 +141,7 @@ Generated: 2025-12-22T18:37:46.887Z
 | nps_survey_manual_trigger | 1 |
 | nps_survey_shown | 1 |
 | nutrition | 2 |
+| onboarding | 6 |
 | podcast_share | 1 |
 | policy | 2 |
 | quick_log_used | 1 |
@@ -131,6 +150,7 @@ Generated: 2025-12-22T18:37:46.887Z
 | rehab | 3 |
 | rights | 2 |
 | rtw | 2 |
+| SCREEN_REDIRECT | 1 |
 | selfcare | 2 |
 | support | 2 |
 | symptoms | 2 |
@@ -145,12 +165,9 @@ Generated: 2025-12-22T18:37:46.887Z
 
 | Event | Count | Status |
 |-------|------:|--------|
-| tracker_add_entry | 2 | OK |
-| tracker_share | 2 | OK |
 | campaign.submit_to_3mpwr | 2 | OK |
 | ai.translator.quick_translate | 1 | OK |
 | ai.assistant.question_asked | 1 | OK |
-| ai_command_center_used | 1 | OK |
 | support.category.select | 1 | OK |
 | support.resource.view | 1 | OK |
 | allies.type.select | 1 | OK |
@@ -163,11 +180,6 @@ Generated: 2025-12-22T18:37:46.887Z
 | world.map.open | 1 | OK |
 | world.region.select | 1 | OK |
 | world.campaign.view | 1 | OK |
-| advocacy.ask.submitted | 1 | OK |
-| assistant.search_open | 1 | OK |
-| assistant.disability_wizard_cta | 1 | OK |
-| assistant.quick_prompt | 1 | OK |
-| assistant.recents.clear | 1 | OK |
 | evidence.add | 1 | OK |
 | evidence.file.open | 1 | OK |
 | evidence.timeline.event | 1 | OK |
@@ -175,8 +187,10 @@ Generated: 2025-12-22T18:37:46.887Z
 | evidence.voice.toggle | 1 | OK |
 | evidence.voice.play | 1 | OK |
 | evidence.checklist.toggle | 1 | OK |
-| legal.case.open | 1 | OK |
-| legal.action | 1 | OK |
+| legal.track.case.open | 1 | OK |
+| legal.track.action | 1 | OK |
+| legal.coach.script | 1 | OK |
+| legal.coach.action | 1 | OK |
 | legal.resource | 1 | OK |
 | legal.match.view | 1 | OK |
 | legal.automation.tool | 1 | OK |
@@ -203,12 +217,8 @@ Generated: 2025-12-22T18:37:46.887Z
 | tools.advanced.open | 1 | OK |
 | emergency.contact.find | 1 | OK |
 | emergency.resource.open | 1 | OK |
-| quick_log_used | 1 | OK |
 | account_delete | 1 | OK |
 | account_delete_failed | 1 | OK |
-| energy_set_daily | 1 | OK |
-| energy_spend | 1 | OK |
-| energy_reset_day | 1 | OK |
 | energy.updated | 1 | OK |
 | mood.logged | 1 | OK |
 | symptoms.quick.severity | 1 | OK |
@@ -223,7 +233,6 @@ Generated: 2025-12-22T18:37:46.887Z
 | nutrition.guide.open | 1 | OK |
 | nutrition.harm.open | 1 | OK |
 | selfcare.checklist.toggle | 1 | OK |
-| selfcare.library.open | 1 | OK |
 | movement.exercise.start | 1 | OK |
 | movement.category.select | 1 | OK |
 | rehab.program.start | 1 | OK |
@@ -231,7 +240,8 @@ Generated: 2025-12-22T18:37:46.887Z
 | adaptive.micro.start | 1 | OK |
 | adaptive.capacity.open | 1 | OK |
 | recovery.tool.open | 1 | OK |
-| wellness_opposite_next_step | 1 | OK |
+| tracker_add_entry | 1 | OK |
+| tracker_share | 1 | OK |
 | campaign_create | 1 | OK |
 | campaign_share | 1 | OK |
 | campaign_leave | 1 | OK |
@@ -256,8 +266,15 @@ Generated: 2025-12-22T18:37:46.887Z
 | beta.onboarding.quick.disclaimers_accepted | 1 | OK |
 | beta.onboarding.quick.mode_selected | 1 | OK |
 | beta.onboarding.quick.completed | 1 | OK |
+| SCREEN_REDIRECT | 1 | MISSING |
 | notification.delivered | 1 | OK |
 | notification.quiet_suppressed | 1 | OK |
+| onboarding.app.first_opened | 1 | OK |
+| onboarding.first_value_action | 1 | OK |
+| onboarding.legal_banner.shown | 1 | OK |
+| onboarding.legal_terms.accepted | 1 | OK |
+| onboarding.legal_banner.dismissed | 1 | OK |
+| onboarding.conversion.completed | 1 | OK |
 | advocacy.collective.submit | 1 | OK |
 | bookmark_add | 1 | OK |
 | bookmark_remove | 1 | OK |

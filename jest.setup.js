@@ -1,5 +1,6 @@
 /* eslint-env jest */
 // Basic globals expected by react-native / metro environment
+jest.mock('expo-router');
 if (typeof global.__DEV__ === 'undefined') {
   global.__DEV__ = true;
 }
@@ -225,25 +226,40 @@ const NOISY_WARN_PATTERNS = [
   /\[analytics\] Unused registry events/i,
   /screen_view \{/i,
   // React Native DOM prop warnings (test environment only - not production issues)
-  /Unknown event handler property.*onPressIn/i,
+  /Unknown event handler property/i,
   /React does not recognize the `keyboardType` prop/i,
   /React does not recognize the `showsHorizontalScrollIndicator` prop/i,
+  /React does not recognize[\s\S]*showsHorizontalScrollIndicator/i,
   /React does not recognize the `scrollEnabled` prop/i,
   /React does not recognize the `nestedScrollEnabled` prop/i,
   /Received `true` for a non-boolean attribute `horizontal`/i,
+  /Received[\s\S]*non-boolean attribute[\s\S]*horizontal/i,
   // Expo modules test environment warnings (not production issues)
   /An error occurred while requiring the 'ExpoModulesCoreJSLogger'/i,
   /The global process\.env\.EXPO_OS is not defined/i,
   /Clipboard not available/i
 ];
 function shouldFilter(message, args){
-  if (typeof message === 'string') {
-    return NOISY_WARN_PATTERNS.some(r=> r.test(message));
+  const { format } = require('util');
+  const toText = (val) => {
+    if (typeof val === 'string') return val;
+    try { return JSON.stringify(val); } catch { return String(val); }
+  };
+  const candidates = [];
+  if (typeof message !== 'undefined') candidates.push(toText(message));
+  if (typeof message === 'string' && args && args.length) {
+    try {
+      candidates.push(format(message, ...args));
+    } catch {}
   }
-  if (args && args.length && typeof args[0] === 'string') {
-    return NOISY_WARN_PATTERNS.some(r=> r.test(args[0]));
+  if (args && args.length) {
+    for (const arg of args) {
+      candidates.push(toText(arg));
+    }
   }
-  return false;
+  const joined = candidates.join(' ');
+  if (joined) candidates.push(joined);
+  return candidates.some(text => NOISY_WARN_PATTERNS.some(r => r.test(text)));
 }
 console.warn = function(...args){
   if (shouldFilter(args[0], args)) return; // swallow

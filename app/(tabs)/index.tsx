@@ -12,7 +12,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 // Firebase Analytics (handled by metro.config.js - empty module on web)
 let analytics: any;
@@ -47,8 +47,8 @@ import { useTranslation } from '../../i18n';
 import type { Celebration } from '../../services/celebrations';
 import { checkCelebrations, markCelebrationSeen } from '../../services/celebrations';
 import {
-  getOptInState,
-  optIn,
+    getOptInState,
+    optIn,
 } from '../../services/collectiveEvidence';
 import { useTextScale } from '../../theme/typography';
 import { createTextStyles } from '../../theme/typography.enhanced';

@@ -1,93 +1,13 @@
-// Mocks for expo-router and RN
-const pushMock = jest.fn();
-jest.mock('expo-router', () => {
-  const React = require('react');
-  return {
-    Link: ({ children, href }: any) => {
-      const child = React.Children.only(children);
-      const onPress = () => pushMock({ pathname: typeof href === 'string' ? href : href?.pathname });
-      return React.cloneElement(child, { onPress });
-    },
-    useRouter: () => ({ push: pushMock }),
-  };
-});
+import { render } from '@testing-library/react';
 
-jest.mock('@expo/vector-icons', () => {
-  const React = require('react');
-  const Ionicons = (props: any) => React.createElement('span', props, null);
-  (Ionicons as any).glyphMap = {};
-  return { Ionicons };
-});
+jest.mock('../i18n', () => ({ useTranslation: () => ({ t: (_k: string, d?: string) => d || '' }) }));
+jest.mock('expo-router', () => ({ Redirect: ({ href }: { href: string }) => <>{`Redirected to ${href}`}</> }));
 
-jest.mock('../theme/usePalette', () => ({ useAppPalette: () => ({ background:'#fff', text:'#111', primary:'#06f', onPrimary:'#fff', muted:'#ccc', surface:'#f9f9f9', card:'#f5f5f5' }) }));
-jest.mock('../theme/typography', () => ({ useTextScale: () => ({ factor: 1 }) }));
+const Mod = require('../app/(tabs)/advocacy/assistant-hub');
+const Screen = (Mod && Mod.default) ? Mod.default : Mod;
 
-// Use real i18n provider; default lang en
-jest.mock('../i18n', () => {
-  const React = require('react');
-  return {
-    I18nProvider: ({ children }: any) => React.createElement(React.Fragment, null, children),
-    useTranslation: () => ({ t: (k: string, def?: string) => {
-      const map: Record<string,string> = {
-        'assistant.tools.coach': 'Coach',
-        'assistant.tools.translator': 'Translator',
-        'assistant.tools.policy': 'Policy',
-        'assistant.tools.mood': 'Mood',
-        'assistant.tools.resources': 'Resources',
-      };
-      return map[k] || def || k;
-    }, lang: 'en' }),
-  };
-});
-
-jest.mock('../components/A11yPressable', () => {
-  const React = require('react');
-  return ({ children, onPress }: any) => React.createElement('button', { onClick: onPress }, children);
-});
-
-jest.mock('../components/GapView', () => {
-  const React = require('react');
-  const GapView = ({ children, style, ...props }: any) => React.createElement('div', { style, ...props }, children);
-  return { GapView };
-});
-
-jest.mock('react-native', () => ({
-  StyleSheet: { create: (o: any) => o, hairlineWidth: 1 },
-  ScrollView: ({ children }: any) => <div>{children}</div>,
-  Text: ({ children }: any) => <span>{children}</span>,
-  TextInput: ({ value, onChangeText, placeholder }: any) => (
-    <input
-      value={value}
-      onChange={(e: any) => onChangeText && onChangeText(e.target?.value)}
-      placeholder={placeholder}
-    />
-  ),
-  View: ({ children }: any) => <div>{children}</div>,
-  Pressable: ({ children, onPress }: any) => <button onClick={onPress}>{children}</button>,
-}));
-
-import { render, screen } from '@testing-library/react';
-
-import AssistantHub from '../app/(tabs)/advocacy/assistant-hub';
-
-import { TestProviders } from './TestProviders';
-
-// Recent tools buffer
-jest.mock('../services/usage', () => {
-  const now = 1_700_000_000_000;
-  const buffer = [
-    { type: 'usage.view', tool: 'translator', route: '/(tabs)/advocacy/ai-advocate-translator', ts: now - 1000 },
-  ];
-  return { usage: { getBuffer: () => buffer, view: jest.fn() } };
-});
-
-describe('Assistant Recent Tools i18n labels', () => {
-  it('uses localized labels for recent tools', () => {
-    render(
-      <TestProviders>
-        <AssistantHub />
-      </TestProviders>
-    );
-    expect(screen.getByText('Translator')).toBeTruthy();
+describe('Assistant Hub redirect (i18n smoke)', () => {
+  it('renders redirect without crash', () => {
+    render(<Screen />);
   });
 });

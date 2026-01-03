@@ -13,7 +13,7 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
-import { Modal, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Modal, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 // Firebase Analytics (handled by metro.config.js - empty module on web)
 let analytics: any;
@@ -36,11 +36,11 @@ import { MAX_FONT_SCALE } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
-import { createShadow } from '../utils/shadow';
 import { logError } from '../utils/errorLogger';
+import { createShadow } from '../utils/shadow';
 
-import GapView from './GapView';
 import A11yPressable from './A11yPressable';
+import GapView from './GapView';
 
 type CollectiveEvidenceOptInProps = {
   onOptIn: () => void;

@@ -1,8 +1,9 @@
 /**
  * Legal Action Hub - Power Tool
  * 
- * Consolidates 10 legal/accountability features into 4 tabs:
- * - Accountability: Accountability Hub, Cases, Coach, Network
+ * Consolidates 10 legal/accountability features into 5 tabs:
+ * - Track: Accountability Hub, Cases, Network
+ * - Coach: Accountability Coach + scripts
  * - Legal: Lawyer Finder, Collective Legal, Legal DNA
  * - Automation: Legal Automation, Justice as a Service
  * - Policy: Policy Simple
@@ -12,6 +13,7 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { useEffect, useState } from 'react';
 import {
     Alert,
     ScrollView,
@@ -32,6 +34,8 @@ import PowerTool, {
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { useTranslation } from '../../../i18n';
+import type { AccCase } from '../../../services/accountabilityTracker';
+import { listCases } from '../../../services/accountabilityTracker';
 import { trackEvent } from '../../../services/analyticsClient';
 import { useAppPalette } from '../../../theme/usePalette';
 
@@ -44,15 +48,29 @@ function AccountabilityTab({ navigateToTab }: PowerToolTabProps) {
   const palette = useAppPalette();
   const router = useRouter();
 
-  const activeCases = [
-    { id: '1', entity: 'Insurance Corp', type: 'Claim Denial', status: 'In Progress', days: 45 },
-    { id: '2', entity: 'Employer Inc', type: 'Accommodation', status: 'Pending', days: 12 },
-  ];
+  const [cases, setCases] = useState<AccCase[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let on = true;
+    (async () => {
+      try {
+        const all = await listCases();
+        if (on) setCases(all);
+      } finally {
+        if (on) setLoading(false);
+      }
+    })();
+    return () => {
+      on = false;
+    };
+  }, []);
 
   const quickActions = [
-    { id: 'new-case', emoji: '📋', name: 'Start New Case', desc: 'Track a new accountability case' },
-    { id: 'coach', emoji: '🧑‍🏫', name: 'Accountability Coach', desc: 'Get guidance on your case' },
-    { id: 'network', emoji: '🤝', name: 'Support Network', desc: 'Connect with others' },
+    { id: 'new-case', emoji: '📋', name: 'Start New Case', desc: 'Track a new accountability case', route: '/(tabs)/advocacy/accountability-case' },
+    { id: 'cases', emoji: '📑', name: 'View All Cases', desc: 'See every active matter', route: '/(tabs)/advocacy/accountability-cases' },
+    { id: 'coach', emoji: '🧑‍🏫', name: 'Accountability Coach', desc: 'Get guidance on your case', route: '/(tabs)/advocacy/accountability-coach' },
+    { id: 'network', emoji: '🤝', name: 'Support Network', desc: 'Connect with others', route: '/(tabs)/advocacy/accountability-network' },
   ];
 
   const styles = createAccountabilityStyles(palette);
@@ -61,45 +79,56 @@ function AccountabilityTab({ navigateToTab }: PowerToolTabProps) {
     <PowerToolTabContent scrollable>
       {/* Active Cases */}
       <PowerToolSection title={t('legal.cases.active', 'Active Cases')}>
-        {activeCases.length > 0 ? (
-          activeCases.map((caseItem) => (
-            <A11yPressable
-              key={caseItem.id}
-              onPress={() => {
-                trackEvent('legal.case.open', { id: caseItem.id });
-                router.push('/advocacy/accountability-hub' as any);
-              }}
-              accessibilityLabel={`${caseItem.entity}: ${caseItem.type}`}
-              hitSlop={HIT_SLOP_8}
-              style={[styles.caseCard, { backgroundColor: palette.card }]}
-            >
-              <View style={styles.caseHeader}>
-                <Text style={[styles.caseEntity, { color: palette.text }]}>{caseItem.entity}</Text>
-                <View style={[
-                  styles.statusBadge, 
-                  { backgroundColor: caseItem.status === 'In Progress' ? palette.primary + '20' : palette.warning + '20' }
-                ]}>
-                  <Text style={[
-                    styles.statusText, 
-                    { color: caseItem.status === 'In Progress' ? palette.primary : palette.warning }
-                  ]}>
-                    {caseItem.status}
-                  </Text>
-                </View>
-              </View>
-              <Text style={[styles.caseType, { color: palette.secondaryText }]}>{caseItem.type}</Text>
-              <Text style={[styles.caseDays, { color: palette.secondaryText }]}>
-                Day {caseItem.days}
-              </Text>
-            </A11yPressable>
-          ))
-        ) : (
-          <View style={[styles.emptyState, { backgroundColor: palette.card }]}>
+        {loading && (
+          <View style={[styles.emptyState, { backgroundColor: palette.card }]}
+          >
+            <Text style={styles.emptyEmoji}>⏳</Text>
+            <Text style={[styles.emptyText, { color: palette.secondaryText }]}>
+              {t('legal.cases.loading', 'Loading your cases...')}
+            </Text>
+          </View>
+        )}
+        {!loading && cases.length === 0 && (
+          <View style={[styles.emptyState, { backgroundColor: palette.card }]}
+          >
             <Text style={styles.emptyEmoji}>📋</Text>
             <Text style={[styles.emptyText, { color: palette.secondaryText }]}>
               {t('legal.cases.empty', 'No active cases. Start tracking to hold entities accountable.')}
             </Text>
           </View>
+        )}
+        {!loading && cases.length > 0 && (
+          cases.map((caseItem) => (
+            <A11yPressable
+              key={caseItem.id}
+              onPress={() => {
+                trackEvent('legal.track.case.open', { id: caseItem.id });
+                router.push({ pathname: '/(tabs)/advocacy/accountability-case', params: { id: caseItem.id } } as any);
+              }}
+              accessibilityLabel={`${caseItem.target || t('legal.cases.unknownTarget', 'Unknown target')}: ${caseItem.issue}`}
+              hitSlop={HIT_SLOP_8}
+              style={[styles.caseCard, { backgroundColor: palette.card }]}
+            >
+              <View style={styles.caseHeader}>
+                <Text style={[styles.caseEntity, { color: palette.text }]}>{caseItem.target || t('legal.cases.unknownTarget', 'Unknown target')}</Text>
+                <View style={[
+                  styles.statusBadge, 
+                  { backgroundColor: palette.primary + '20' }
+                ]}>
+                  <Text style={[
+                    styles.statusText, 
+                    { color: palette.primary }
+                  ]}>
+                    {t('legal.cases.activeStatus', 'Active')}
+                  </Text>
+                </View>
+              </View>
+              <Text style={[styles.caseType, { color: palette.secondaryText }]}>{caseItem.issue}</Text>
+              <Text style={[styles.caseDays, { color: palette.secondaryText }]}>
+                {t('legal.cases.updated', 'Updated')} {new Date(caseItem.updatedAt).toLocaleDateString()}
+              </Text>
+            </A11yPressable>
+          ))
         )}
       </PowerToolSection>
 
@@ -111,8 +140,8 @@ function AccountabilityTab({ navigateToTab }: PowerToolTabProps) {
           <A11yPressable
             key={action.id}
             onPress={() => {
-              trackEvent('legal.action', { action: action.id });
-              router.push('/advocacy/accountability-hub' as any);
+                trackEvent('legal.track.action', { action: action.id });
+                router.push(action.route as any);
             }}
             accessibilityLabel={action.name}
             hitSlop={HIT_SLOP_8}
@@ -175,6 +204,7 @@ const createAccountabilityStyles = (_palette: any) => StyleSheet.create({
     padding: 24,
     borderRadius: 12,
     alignItems: 'center',
+    marginBottom: 8,
   },
   emptyEmoji: {
     fontSize: 48,
@@ -210,7 +240,136 @@ const createAccountabilityStyles = (_palette: any) => StyleSheet.create({
 
 
 // ============================================
-// TAB 2: LEGAL (Standard Mode)
+// TAB 2: COACH (Simple Mode)
+function CoachTab({ navigateToTab }: PowerToolTabProps) {
+  const { t } = useTranslation();
+  const palette = useAppPalette();
+  const router = useRouter();
+
+  const scripts = [
+    { id: 'evidence', emoji: '🧾', title: 'Evidence ask', desc: 'Ask for documents politely but firmly' },
+    { id: 'timeline', emoji: '⏱️', title: 'Timeline demand', desc: 'Request clear timelines and escalation path' },
+    { id: 'accommodation', emoji: '🛟', title: 'Accommodation script', desc: 'State needs + reference policy' },
+    { id: 'appeal', emoji: '🧭', title: 'Appeal prep', desc: 'Checklist before filing' },
+  ];
+
+  const coachActions = [
+    { id: 'coach', emoji: '🧑‍🏫', name: 'Open Accountability Coach', desc: 'Guided steps + scripts', route: '/advocacy/accountability-coach' },
+    { id: 'network', emoji: '🤝', name: 'Ask Allies for Support', desc: 'Share context with trusted people', route: '/advocacy/accountability-network' },
+    { id: 'evidence', emoji: '📂', name: 'Attach Evidence', desc: 'Jump to Evidence Command Center', route: '/advocacy/evidence-command-center' },
+  ];
+
+  const styles = createCoachStyles(palette);
+
+    return (
+      <PowerToolTabContent scrollable>
+        <PowerToolSection title={t('legal.coach.topScripts', 'Top Coach Scripts')}>
+          {scripts.map((script) => (
+            <A11yPressable
+              key={script.id}
+              onPress={() => {
+                trackEvent('legal.coach.script', { script: script.id });
+                router.push('/advocacy/accountability-coach' as any);
+              }}
+              accessibilityLabel={script.title}
+              hitSlop={HIT_SLOP_8}
+              style={[styles.scriptCard, { backgroundColor: palette.card }]}
+            >
+              <Text style={styles.scriptEmoji}>{script.emoji}</Text>
+              <View style={styles.scriptInfo}>
+                <Text style={[styles.scriptTitle, { color: palette.text }]}>{script.title}</Text>
+                <Text style={[styles.scriptDesc, { color: palette.secondaryText }]}>{script.desc}</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={20} color={palette.secondaryText} />
+            </A11yPressable>
+          ))}
+        </PowerToolSection>
+
+        <GapView style={{ height: 16 }} />
+
+        <PowerToolSection title={t('legal.coach.actions', 'Do This Next')}>
+          {coachActions.map((action) => (
+            <A11yPressable
+              key={action.id}
+              onPress={() => {
+                trackEvent('legal.coach.action', { action: action.id });
+                router.push(action.route as any);
+              }}
+              accessibilityLabel={action.name}
+              hitSlop={HIT_SLOP_8}
+              style={[styles.actionCard, { backgroundColor: palette.primary + '12' }]}
+            >
+              <Text style={styles.actionEmoji}>{action.emoji}</Text>
+              <View style={styles.actionInfo}>
+                <Text style={[styles.actionName, { color: palette.text }]}>{action.name}</Text>
+                <Text style={[styles.actionDesc, { color: palette.secondaryText }]}>{action.desc}</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={20} color={palette.primary} />
+            </A11yPressable>
+          ))}
+        </PowerToolSection>
+
+        <GapView style={{ height: 16 }} />
+
+        <PowerToolAction
+          label={t('legal.coach.goToLegal', 'Find Legal Help')}
+          icon="search"
+          onPress={() => navigateToTab('legal')}
+        />
+      </PowerToolTabContent>
+    );
+  }
+
+  const createCoachStyles = (_palette: any) => StyleSheet.create({
+    scriptCard: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      padding: 16,
+      borderRadius: 12,
+      marginBottom: 8,
+    },
+    scriptEmoji: {
+      fontSize: 28,
+      marginRight: 12,
+    },
+    scriptInfo: {
+      flex: 1,
+    },
+    scriptTitle: {
+      fontSize: 16,
+      fontWeight: '600',
+    },
+    scriptDesc: {
+      fontSize: 12,
+      marginTop: 2,
+    },
+    actionCard: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      padding: 16,
+      borderRadius: 12,
+      marginBottom: 8,
+    },
+    actionEmoji: {
+      fontSize: 28,
+      marginRight: 12,
+    },
+    actionInfo: {
+      flex: 1,
+    },
+    actionName: {
+      fontSize: 16,
+      fontWeight: '600',
+    },
+    actionDesc: {
+      fontSize: 12,
+      marginTop: 2,
+    },
+  });
+
+
+  // ============================================
+  // TAB 3: LEGAL (Standard Mode)
 // ============================================
 function LegalTab({ navigateToTab }: PowerToolTabProps) {
   const { t } = useTranslation();
@@ -218,10 +377,10 @@ function LegalTab({ navigateToTab }: PowerToolTabProps) {
   const router = useRouter();
 
   const legalResources = [
-    { id: 'lawyer', emoji: '👨‍⚖️', name: 'Find a Lawyer', desc: 'Disability law specialists', featured: true },
-    { id: 'collective', emoji: '👥', name: 'Collective Legal Action', desc: 'Join or start class actions' },
-    { id: 'legal-aid', emoji: '🆓', name: 'Legal Aid Services', desc: 'Free legal help' },
-    { id: 'dna', emoji: '🧬', name: 'Legal DNA', desc: 'Your case strength analysis' },
+    { id: 'lawyer', emoji: '👨‍⚖️', name: 'Find a Lawyer', desc: 'Disability law specialists', featured: true, route: '/advocacy/lawyer-finder' },
+    { id: 'collective', emoji: '👥', name: 'Collective Legal Action', desc: 'Join or start class actions', route: '/advocacy/collective-legal' },
+    { id: 'legal-aid', emoji: '🆓', name: 'Legal Aid Services', desc: 'Free legal help', route: '/advocacy/lawyer-finder' },
+    { id: 'dna', emoji: '🧬', name: 'Legal DNA', desc: 'Your case strength analysis', route: '/advocacy/legal-dna' },
   ];
 
   const recentMatches = [
@@ -240,7 +399,7 @@ function LegalTab({ navigateToTab }: PowerToolTabProps) {
             key={resource.id}
             onPress={() => {
               trackEvent('legal.resource', { resource: resource.id });
-              router.push('/advocacy/lawyer-finder' as any);
+              router.push(resource.route as any);
             }}
             accessibilityLabel={resource.name}
             hitSlop={HIT_SLOP_8}
@@ -708,6 +867,14 @@ export default function LegalActionHub() {
       component: AccountabilityTab,
       complexity: 'simple',
       keywords: ['case', 'accountability', 'track', 'entity'],
+    },
+    {
+      id: 'coach',
+      label: t('legal.tabs.coach', 'Coach'),
+      icon: '🧑‍🏫',
+      component: CoachTab,
+      complexity: 'simple',
+      keywords: ['coach', 'script', 'support', 'network'],
     },
     {
       id: 'legal',

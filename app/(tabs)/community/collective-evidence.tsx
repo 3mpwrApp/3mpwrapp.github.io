@@ -10,8 +10,8 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import React, { useCallback, useEffect, useState } from 'react';
-import { Platform, RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useCallback, useEffect, useState } from 'react';
+import { RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 // Firebase Analytics (handled by metro.config.js - empty module on web)
 let analytics: any;
@@ -35,16 +35,16 @@ import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import {
-  getCollectiveInsights,
-  getUserContributionStats,
-  optOut,
-  type CollectiveInsights,
-  type DetectedPattern,
+    getCollectiveInsights,
+    getUserContributionStats,
+    optOut,
+    type CollectiveInsights,
+    type DetectedPattern,
 } from '../../../services/collectiveEvidence';
 import { useTextScale } from '../../../theme/typography';
 import { useAppPalette } from '../../../theme/usePalette';
-import { createShadow } from '../../../utils/shadow';
 import { logError } from '../../../utils/errorLogger';
+import { createShadow } from '../../../utils/shadow';
 
 export default function CollectiveEvidenceScreen() {
   const { t } = useTranslation();

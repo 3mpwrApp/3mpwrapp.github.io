@@ -57,14 +57,14 @@ export default function BYOCSettingsScreen() {
     const checkConfig = () => {
       // Skip config checks while OAuth is in progress
       if (isAuthenticating) {
-        console.log('[BYOC] Skipping config check - authentication in progress');
+        console.warn('[BYOC] Skipping config check - authentication in progress');
         return;
       }
 
       const config = getBYOCConfig();
       const gdriveConfigured = isGDriveConfigured();
 
-      console.log('[BYOC] checkConfig:', { hasConfig: !!config, gdriveConfigured, currentlyConnected: connected });
+      console.warn('[BYOC] checkConfig:', { hasConfig: !!config, gdriveConfigured, currentlyConnected: connected });
 
       if (config) {
         setSelectedProvider(config.kind);
@@ -80,7 +80,7 @@ export default function BYOCSettingsScreen() {
       } else if (connected) {
         // Only reset if we were previously connected but now have no config
         // This handles the disconnect case
-        console.log('[BYOC] Was connected but no config found - disconnecting');
+        console.warn('[BYOC] Was connected but no config found - disconnecting');
         setSelectedProvider(null);
         setConnected(false);
         setWebdavEndpoint('');
@@ -99,7 +99,7 @@ export default function BYOCSettingsScreen() {
   }, [isAuthenticating, connected]);
 
   const handleTestConnection = async () => {
-    console.log('[BYOC] handleTestConnection called, provider:', selectedProvider);
+    console.warn('[BYOC] handleTestConnection called, provider:', selectedProvider);
 
     if (selectedProvider === 'webdav') {
       if (!webdavEndpoint.trim()) {
@@ -142,14 +142,14 @@ export default function BYOCSettingsScreen() {
       }
     } else if (selectedProvider === 'gdrive') {
       // Google Drive OAuth flow
-      console.log('[BYOC] Starting Google Drive OAuth flow...');
+      console.warn('[BYOC] Starting Google Drive OAuth flow...');
       setIsAuthenticating(true);
       try {
-        console.log('[BYOC] Importing gdrive service...');
+        console.warn('[BYOC] Importing gdrive service...');
         const { authenticateGDrive } = await import('../../../services/gdrive');
-        console.log('[BYOC] Calling authenticateGDrive()...');
+        console.warn('[BYOC] Calling authenticateGDrive()...');
         const result = await authenticateGDrive();
-        console.log('[BYOC] OAuth result:', result);
+        console.warn('[BYOC] OAuth result:', result);
 
         if (result.success) {
           await setBYOCConfig({ kind: 'gdrive' });
@@ -180,24 +180,24 @@ export default function BYOCSettingsScreen() {
   };
 
   const handleDisconnect = async () => {
-    console.log('[BYOC] handleDisconnect called');
+    console.warn('[BYOC] handleDisconnect called');
 
     // Perform disconnect immediately
-    console.log('[BYOC] Starting disconnect process...');
+    console.warn('[BYOC] Starting disconnect process...');
 
     // If Google Drive is connected, disconnect it properly
     if (selectedProvider === 'gdrive') {
       try {
-        console.log('[BYOC] Disconnecting Google Drive...');
+        console.warn('[BYOC] Disconnecting Google Drive...');
         const { disconnectGDrive } = await import('../../../services/gdrive');
         await disconnectGDrive();
-        console.log('[BYOC] Google Drive disconnected successfully');
+        console.warn('[BYOC] Google Drive disconnected successfully');
       } catch (error) {
         console.error('[BYOC] Error disconnecting Google Drive:', error);
       }
     }
 
-    console.log('[BYOC] Clearing BYOC config...');
+    console.warn('[BYOC] Clearing BYOC config...');
     await setBYOCConfig(null);
 
     // Force immediate state update
@@ -207,7 +207,7 @@ export default function BYOCSettingsScreen() {
     setWebdavPassword('');
     setSelectedProvider(null);
 
-    console.log('[BYOC] Disconnect complete - UI should update now');
+    console.warn('[BYOC] Disconnect complete - UI should update now');
 
     Alert.alert(
       'Disconnected',
@@ -427,46 +427,46 @@ export default function BYOCSettingsScreen() {
             {selectedProvider === 'gdrive' && (
               <A11yPressable
                 onPress={async () => {
-                  console.log('[BYOC] Testing Google Drive file operations...');
+                  console.warn('[BYOC] Testing Google Drive file operations...');
                   try {
                     const { testGDriveConnection, saveToGDrive, loadFromGDrive } = await import('../../../services/gdrive');
 
                     // Test 1: Connection test
-                    console.log('[BYOC] Test 1: Testing connection...');
+                    console.warn('[BYOC] Test 1: Testing connection...');
                     const connTest = await testGDriveConnection();
                     if (!connTest.ok) {
                       Alert.alert('Connection Test Failed', connTest.error || 'Unknown error');
                       return;
                     }
-                    console.log('[BYOC] ✓ Connection test passed');
+                    console.warn('[BYOC] ✓ Connection test passed');
 
                     // Test 2: Upload a test file
-                    console.log('[BYOC] Test 2: Uploading test file...');
+                    console.warn('[BYOC] Test 2: Uploading test file...');
                     const testData = 'Hello from EmpowrApp! Test timestamp: ' + new Date().toISOString();
                     const uploadSuccess = await saveToGDrive('/test-file.txt', testData, 'text/plain');
                     if (!uploadSuccess) {
                       Alert.alert('Upload Test Failed', 'Could not upload test file');
                       return;
                     }
-                    console.log('[BYOC] ✓ Upload test passed');
+                    console.warn('[BYOC] ✓ Upload test passed');
 
                     // Test 3: Download the test file
-                    console.log('[BYOC] Test 3: Downloading test file...');
+                    console.warn('[BYOC] Test 3: Downloading test file...');
                     const downloadedData = await loadFromGDrive('/test-file.txt');
                     if (!downloadedData) {
                       Alert.alert('Download Test Failed', 'Could not download test file');
                       return;
                     }
-                    console.log('[BYOC] ✓ Download test passed');
+                    console.warn('[BYOC] ✓ Download test passed');
 
                     // Test 4: Verify contents
-                    console.log('[BYOC] Test 4: Verifying file contents...');
+                    console.warn('[BYOC] Test 4: Verifying file contents...');
                     const downloadedText = typeof downloadedData === 'string'
                       ? downloadedData
                       : new TextDecoder().decode(downloadedData);
 
                     if (downloadedText === testData) {
-                      console.log('[BYOC] ✓ All tests passed!');
+                      console.warn('[BYOC] ✓ All tests passed!');
                       Alert.alert(
                         '✅ Google Drive Test Successful!',
                         `All tests passed:\n\n✓ Connection verified\n✓ File upload works\n✓ File download works\n✓ Data integrity confirmed\n\nYour Google Drive integration is fully functional!`,
@@ -706,3 +706,4 @@ const createStyles = (palette: ReturnType<typeof useAppPalette>) =>
       marginBottom: 4,
     },
   });
+

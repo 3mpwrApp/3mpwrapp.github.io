@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import { router } from 'expo-router';
+import { Redirect } from 'expo-router';
+
 export const options = { href: null };
-export default function AccommodationRequest() {
-  useEffect(() => { try { router.replace('/(tabs)/resources/letter-accommodation' as any); } catch {} }, []);
-  return null;
+
+export default function AccommodationRequestRedirect() {
+  return <Redirect href="/(tabs)/resources/document-factory" />;
 }

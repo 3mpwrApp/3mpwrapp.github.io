@@ -1,6 +1,5 @@
 // Harden Metro config to avoid path errors on Windows by filtering modules
 // without a real filepath. Export a static config object as expected by Expo.
-const path = require("path");
 
 const { getDefaultConfig } = require("@expo/metro-config");
 

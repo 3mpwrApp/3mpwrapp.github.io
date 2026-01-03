@@ -72,7 +72,7 @@ function DirectoryTab({ navigateToTab }: PowerToolTabProps) {
               key={cat.id}
               onPress={() => {
                 trackEvent('support.category.select', { category: cat.id });
-                router.push('/advocacy/support-directory' as any);
+                  router.push('/(tabs)/advocacy/support-directory' as any);
               }}
               accessibilityLabel={`${cat.name}, ${cat.count} resources`}
               hitSlop={HIT_SLOP_8}
@@ -97,7 +97,7 @@ function DirectoryTab({ navigateToTab }: PowerToolTabProps) {
             key={resource.id}
             onPress={() => {
               trackEvent('support.resource.view', { id: resource.id });
-              router.push('/advocacy/support-directory' as any);
+                router.push('/(tabs)/advocacy/support-directory' as any);
             }}
             accessibilityLabel={`${resource.name}, ${resource.type}`}
             hitSlop={HIT_SLOP_8}
@@ -211,7 +211,7 @@ function AlliesTab({ navigateToTab }: PowerToolTabProps) {
             key={ally.id}
             onPress={() => {
               trackEvent('allies.type.select', { type: ally.id });
-              router.push('/advocacy/ally-hub' as any);
+                router.push('/(tabs)/advocacy/ally-hub' as any);
             }}
             accessibilityLabel={ally.name}
             hitSlop={HIT_SLOP_8}
@@ -241,7 +241,7 @@ function AlliesTab({ navigateToTab }: PowerToolTabProps) {
                 key={resource.id}
                 onPress={() => {
                   trackEvent('allies.resource.view', { resource: resource.id });
-                  router.push('/advocacy/ally-hub' as any);
+                    router.push('/(tabs)/advocacy/ally-hub' as any);
                 }}
                 accessibilityLabel={resource.name}
                 hitSlop={HIT_SLOP_8}
@@ -352,7 +352,7 @@ function CoachTab({ navigateToTab }: PowerToolTabProps) {
             key={mod.id}
             onPress={() => {
               trackEvent('coach.module.open', { module: mod.id });
-              router.push('/advocacy/self-advocacy-coach' as any);
+                router.push('/(tabs)/advocacy/self-advocacy-coach' as any);
             }}
             accessibilityLabel={`${mod.name}, ${mod.progress}% complete`}
             hitSlop={HIT_SLOP_8}
@@ -393,7 +393,7 @@ function CoachTab({ navigateToTab }: PowerToolTabProps) {
                 key={lesson.id}
                 onPress={() => {
                   trackEvent('coach.lesson.start', { lesson: lesson.id });
-                  router.push('/advocacy/self-advocacy-coach' as any);
+                    router.push('/(tabs)/advocacy/self-advocacy-coach' as any);
                 }}
                 accessibilityLabel={`${lesson.name}, ${lesson.time}`}
                 hitSlop={HIT_SLOP_8}
@@ -517,7 +517,7 @@ function RatingsTab({ navigateToTab }: PowerToolTabProps) {
               key={cat.id}
               onPress={() => {
                 trackEvent('ratings.category.select', { category: cat.id });
-                router.push('/advocacy/ratings' as any);
+                  router.push('/(tabs)/advocacy/ratings' as any);
               }}
               accessibilityLabel={`${cat.name}, ${cat.ratings} ratings`}
               hitSlop={HIT_SLOP_8}
@@ -542,7 +542,7 @@ function RatingsTab({ navigateToTab }: PowerToolTabProps) {
             key={review.id}
             onPress={() => {
               trackEvent('ratings.review.view', { id: review.id });
-              router.push('/advocacy/ratings' as any);
+                router.push('/(tabs)/advocacy/ratings' as any);
             }}
             accessibilityLabel={`${review.provider}, ${review.rating} stars`}
             hitSlop={HIT_SLOP_8}

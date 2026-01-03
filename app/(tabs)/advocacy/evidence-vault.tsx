@@ -1,15 +1,8 @@
-import ComingSoon from '../../../components/ComingSoon';
-import { useTranslation } from '../../../i18n';
-import { sendFeedbackEmailInternal } from '../../../utils/feedback';
+import { Redirect } from 'expo-router';
 
 export const options = { href: null };
 
-export default function EvidenceVault() {
-  const { t } = useTranslation();
-  return (
-    <ComingSoon 
-      title={t('advocacy.evidenceVault.title', '🔒 Evidence Vault')}
-      onFeedback={() => sendFeedbackEmailInternal(t, { subject: 'Evidence Vault feedback' })} 
-    />
-  );
+export default function EvidenceVaultRedirect() {
+  return <Redirect href="/(tabs)/advocacy/evidence-command-center" />;
 }
+

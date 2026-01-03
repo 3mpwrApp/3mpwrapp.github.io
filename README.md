@@ -1032,6 +1032,8 @@ This app integrates `sentry-expo` via the config plugin. To enable reporting:
 
 During local dev, Sentry only reports if you configure a DSN. You can add `EXPO_PUBLIC_SENTRY_DSN` to a `.env` and load it via Expo env support.
 
+See `docs/SENTRY_GUIDE.md` for the consolidated setup, privacy controls, testing checklist, and source map plan.
+
 ## OTA updates (EAS Update)
 
 - Use EAS Update channels (production/preview/development) and consider enabling Code Signing for tamper resistance.
