@@ -23,14 +23,50 @@ description: Empowering Canada's disability and injured worker community with 10
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
-  <ul>
-    <li><strong>100% Free Forever:</strong> No subscriptions, no in-app purchases, no paid tiers - ever</li>
-    <li><strong>Community-Funded:</strong> Built BY persons with disabilities, injured workers, supporters, allies, unions, and advocates FOR everyone</li>
-    <li><strong>Canadian Focus First:</strong> Serving all people across all provinces/territories - whether you're disabled, injured, a supporter, or an ally</li>
-    <li><strong>No Corporate Control:</strong> No venture capital, no profit motive - just community empowerment</li>
-    <li><strong>Privacy First:</strong> Your data stays on YOUR device - we can't see it</li>
-    <li><strong>Global Vision:</strong> Perfect it for Canada, then expand worldwide by 2026-2028</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">💚</span>
+      <div>
+        <strong>100% Free Forever</strong>
+        <p style="margin: 0; font-size: 0.95rem;">No subscriptions, no in-app purchases, no paid tiers - ever</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🫂</span>
+      <div>
+        <strong>Community-Funded</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Built BY persons with disabilities, injured workers, supporters, allies, unions, and advocates FOR everyone</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🍁</span>
+      <div>
+        <strong>Canadian Focus First</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Serving all people across all provinces/territories - whether you're disabled, injured, a supporter, or an ally</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">✊</span>
+      <div>
+        <strong>No Corporate Control</strong>
+        <p style="margin: 0; font-size: 0.95rem;">No venture capital, no profit motive - just community empowerment</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔒</span>
+      <div>
+        <strong>Privacy First</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Your data stays on YOUR device - we can't see it</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🌍</span>
+      <div>
+        <strong>Global Vision</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Perfect it for Canada, then expand worldwide by 2026-2028</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 ## 100% Free. Community-Funded. Built by People Who Understand.

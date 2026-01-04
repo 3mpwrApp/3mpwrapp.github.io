@@ -15,14 +15,50 @@ permalink: /privacy-controls/
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
-  <ul>
-    <li><strong>One Place:</strong> All privacy settings in Settings → Privacy & Security</li>
-    <li><strong>You Choose:</strong> Toggle analytics, crash reports, search history on/off</li>
-    <li><strong>Opt-Out Anytime:</strong> Change your mind? Toggle instantly</li>
-    <li><strong>BYOC Control:</strong> Choose which cloud services to use (if any)</li>
-    <li><strong>Delete Everything:</strong> Export or delete all data with one tap</li>
-    <li><strong>Privacy by Default:</strong> Most restrictive settings are always available</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">⚙️</span>
+      <div>
+        <strong>One Place</strong>
+        <p style="margin: 0; font-size: 0.95rem;">All privacy settings in Settings → Privacy & Security</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🎛️</span>
+      <div>
+        <strong>You Choose</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Toggle analytics, crash reports, search history on/off</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">✏️</span>
+      <div>
+        <strong>Opt-Out Anytime</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Change your mind? Toggle instantly</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">☁️</span>
+      <div>
+        <strong>BYOC Control</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Choose which cloud services to use (if any)</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🗑️</span>
+      <div>
+        <strong>Delete Everything</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Export or delete all data with one tap</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔒</span>
+      <div>
+        <strong>Privacy by Default</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Most restrictive settings are always available</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 ---

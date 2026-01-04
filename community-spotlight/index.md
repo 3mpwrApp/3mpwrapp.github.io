@@ -39,12 +39,36 @@ permalink: /community-spotlight/
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
-  <ul>
-    <li><strong>Purpose:</strong> Celebrate community members making a difference</li>
-    <li><strong>Who We Feature:</strong> Advocates, activists, organizers, supporters, allies</li>
-    <li><strong>All Activism Counts:</strong> Online, in-person, behind-the-scenes, creative</li>
-    <li><strong>Get Featured:</strong> Submit your story or nominate someone</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">⭐</span>
+      <div>
+        <strong>Purpose</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Celebrate community members making a difference</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">👥</span>
+      <div>
+        <strong>Who We Feature</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Advocates, activists, organizers, supporters, allies</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🎨</span>
+      <div>
+        <strong>All Activism Counts</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Online, in-person, behind-the-scenes, creative</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">✍️</span>
+      <div>
+        <strong>Get Featured</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Submit your story or nominate someone</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 <div class="warning-box">

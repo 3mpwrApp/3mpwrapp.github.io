@@ -15,13 +15,43 @@ permalink: /community/
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
-  <ul>
-    <li><strong>Everyone Welcome:</strong> Persons with disabilities, injured workers, supporters, allies, and advocates</li>
-    <li><strong>Safe Space:</strong> Peer support, shared experiences, and mutual aid</li>
-    <li><strong>Provincial Spaces:</strong> Connect with others in your province</li>
-    <li><strong>Grassroots Power:</strong> Community-led, community-governed</li>
-    <li><strong>100% Free:</strong> No paid tiers, no gatekeeping, ever</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">🫂</span>
+      <div>
+        <strong>Everyone Welcome</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Persons with disabilities, injured workers, supporters, allies, and advocates</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🛡️</span>
+      <div>
+        <strong>Safe Space</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Peer support, shared experiences, and mutual aid</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🗺️</span>
+      <div>
+        <strong>Provincial Spaces</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Connect with others in your province</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">✊</span>
+      <div>
+        <strong>Grassroots Power</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Community-led, community-governed</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">💚</span>
+      <div>
+        <strong>100% Free</strong>
+        <p style="margin: 0; font-size: 0.95rem;">No paid tiers, no gatekeeping, ever</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 <div class="gradient-banner">

@@ -105,19 +105,85 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 <!-- TL;DR Summary -->
 <details class="tldr-box" open>
   <summary><strong>⚡ Quick Overview (1 minute)</strong></summary>
-  <ul>
-    <li><strong>60+ core features</strong> in production-ready beta (Simple: 5, Standard: 20, Power User: 150+)</li>
-    <li><strong>90% Accessibility (NEW):</strong> Complexity Mode integration, Bad Day Mode, global SOS button, complete consolidation</li>
-    <li><strong>Master Tracker Hub (NEW):</strong> All health tracking unified - symptoms, meds, rehab, appointments, AI patterns</li>
-    <li><strong>Appeal Command Center (NEW):</strong> Deadline warfare, denial decoder, evidence strength meter</li>
-    <li><strong>Offline Queue (NEW):</strong> Upload evidence without internet - critical for rural areas and court dates</li>
-    <li><strong>4 Wellness Hubs (NEW):</strong> Energy & Mood, Health Tracker, Mental Wellness, Movement & Rehab</li>
-    <li><strong>Resources vs Research:</strong> Clear split - in-app tools vs 96 external resources with province filtering</li>
-    <li><strong>Evidence Locker:</strong> Secure document storage with AES-256 encryption + offline queue</li>
-    <li><strong>Letter Wizard:</strong> 22 professional letter templates for appeals & advocacy</li>
-    <li><strong>Community:</strong> Connect with 8+ communities in safe, moderated spaces</li>
-    <li><strong>Enterprise Security:</strong> Air-gapped mode, zero cloud dependencies, user data ownership</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">🚀</span>
+      <div>
+        <strong>60+ core features</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Production-ready beta (Simple: 5, Standard: 20, Power User: 150+)</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">♿</span>
+      <div>
+        <strong>90% Accessibility (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Complexity Mode integration, Bad Day Mode, global SOS button, complete consolidation</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📊</span>
+      <div>
+        <strong>Master Tracker Hub (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">All health tracking unified - symptoms, meds, rehab, appointments, AI patterns</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">⚖️</span>
+      <div>
+        <strong>Appeal Command Center (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Deadline warfare, denial decoder, evidence strength meter</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📴</span>
+      <div>
+        <strong>Offline Queue (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Upload evidence without internet - critical for rural areas and court dates</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">💪</span>
+      <div>
+        <strong>4 Wellness Hubs (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Energy & Mood, Health Tracker, Mental Wellness, Movement & Rehab</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔍</span>
+      <div>
+        <strong>Resources vs Research</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Clear split - in-app tools vs 96 external resources with province filtering</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔐</span>
+      <div>
+        <strong>Evidence Locker</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Secure document storage with AES-256 encryption + offline queue</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📄</span>
+      <div>
+        <strong>Letter Wizard</strong>
+        <p style="margin: 0; font-size: 0.95rem;">22 professional letter templates for appeals & advocacy</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">👥</span>
+      <div>
+        <strong>Community</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Connect with 8+ communities in safe, moderated spaces</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🛡️</span>
+      <div>
+        <strong>Enterprise Security</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Air-gapped mode, zero cloud dependencies, user data ownership</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 > 📖 **Looking for detailed instructions?** Check our [User Guide](/user-guide) for step-by-step tutorials on how to use each feature effectively.

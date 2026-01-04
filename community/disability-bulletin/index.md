@@ -21,13 +21,43 @@ Created by [@ODSPoor](https://x.com/ODSPoor) and [@emilypot_](https://x.com/emil
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
-  <ul>
-    <li><strong>What it is:</strong> Independent disability journalism by disabled journalists</li>
-    <li><strong>Coverage:</strong> ODSP, WSIB, disability policy, breaking news, real experiences</li>
-    <li><strong>Who writes it:</strong> Disabled people living these systems</li>
-    <li><strong>Why it matters:</strong> Mainstream media misses disability stories</li>
-    <li><strong>Read it:</strong> thedisabilitybulletin.blogspot.com</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">📰</span>
+      <div>
+        <strong>What it is</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Independent disability journalism by disabled journalists</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📰</span>
+      <div>
+        <strong>Coverage</strong>
+        <p style="margin: 0; font-size: 0.95rem;">ODSP, WSIB, disability policy, breaking news, real experiences</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">✍️</span>
+      <div>
+        <strong>Who writes it</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Disabled people living these systems</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">💡</span>
+      <div>
+        <strong>Why it matters</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Mainstream media misses disability stories</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔗</span>
+      <div>
+        <strong>Read it</strong>
+        <p style="margin: 0; font-size: 0.95rem;\">thedisabilitybulletin.blogspot.com</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 <div class="gradient-banner" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white;">

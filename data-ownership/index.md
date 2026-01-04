@@ -49,14 +49,50 @@ Our commitment to 100% user data ownership extends to all new November 2025 feat
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
-  <ul>
-    <li><strong>100% Ownership:</strong> Your data belongs entirely to YOU - not us, not anyone else</li>
-    <li><strong>Local-First:</strong> Everything stays on YOUR device by default</li>
-    <li><strong>We Can't See It:</strong> We don't collect, store, or access your data - ever</li>
-    <li><strong>BYOC Options:</strong> Choose your own cloud storage if you want backup</li>
-    <li><strong>Military Encryption:</strong> AES-256 encryption protects your data</li>
-    <li><strong>Delete Anytime:</strong> Full control to export or delete everything instantly</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">👤</span>
+      <div>
+        <strong>100% Ownership</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Your data belongs entirely to YOU - not us, not anyone else</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📱</span>
+      <div>
+        <strong>Local-First</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Everything stays on YOUR device by default</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🚫</span>
+      <div>
+        <strong>We Can't See It</strong>
+        <p style="margin: 0; font-size: 0.95rem;">We don't collect, store, or access your data - ever</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">☁️</span>
+      <div>
+        <strong>BYOC Options</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Choose your own cloud storage if you want backup</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔐</span>
+      <div>
+        <strong>Military Encryption</strong>
+        <p style="margin: 0; font-size: 0.95rem;\">AES-256 encryption protects your data</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon\">🗑️</span>
+      <div>
+        <strong>Delete Anytime</strong>
+        <p style="margin: 0; font-size: 0.95rem;\">Full control to export or delete everything instantly</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 ## Our Commitment to 100% User Data Ownership

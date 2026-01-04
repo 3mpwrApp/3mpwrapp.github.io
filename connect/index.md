@@ -17,12 +17,36 @@ permalink: /connect/
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
-  <ul>
-    <li><strong>We're Just Starting:</strong> Building from the ground up, grassroots style</li>
-    <li><strong>Open to Connections:</strong> Partnerships, collaborations, ideas welcome</li>
-    <li><strong>Community-First:</strong> All decisions guided by community needs</li>
-    <li><strong>Get in Touch:</strong> Multiple ways to connect with us</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">🌱</span>
+      <div>
+        <strong>We're Just Starting</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Building from the ground up, grassroots style</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔗</span>
+      <div>
+        <strong>Open to Connections</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Partnerships, collaborations, ideas welcome</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">👥</span>
+      <div>
+        <strong>Community-First</strong>
+        <p style="margin: 0; font-size: 0.95rem;">All decisions guided by community needs</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">💬</span>
+      <div>
+        <strong>Get in Touch</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Multiple ways to connect with us</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 <div class="gradient-banner">

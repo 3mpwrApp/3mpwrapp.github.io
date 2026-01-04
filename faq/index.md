@@ -48,14 +48,50 @@ Quick answers to common questions about 3mpwr App. Can't find what you're lookin
 
 <details class="tldr-box" open>
   <summary>⚡ Most Common Questions</summary>
-  <ul>
-    <li><strong>Is it really free?</strong> Yes, 100% free forever - no subscriptions, no hidden costs</li>
-    <li><strong>Is my data private?</strong> Absolutely - your data stays on YOUR device, we can't see it</li>
-    <li><strong>Do I need to be tech-savvy?</strong> No - designed for all skill levels with step-by-step guides</li>
-    <li><strong>What about accessibility?</strong> 100% accessible - built by and for the disability community</li>
-    <li><strong>When can I join?</strong> Currently in closed beta - sign up at <a href="/beta">/beta</a></li>
-    <li><strong>Works in my province?</strong> Yes - supports all Canadian provinces and territories</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">💚</span>
+      <div>
+        <strong>Is it really free?</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Yes, 100% free forever - no subscriptions, no hidden costs</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔒</span>
+      <div>
+        <strong>Is my data private?</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Absolutely - your data stays on YOUR device, we can't see it</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🧠</span>
+      <div>
+        <strong>Do I need to be tech-savvy?</strong>
+        <p style="margin: 0; font-size: 0.95rem;">No - designed for all skill levels with step-by-step guides</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">♿</span>
+      <div>
+        <strong>What about accessibility?</strong>
+        <p style="margin: 0; font-size: 0.95rem;">100% accessible - built by and for the disability community</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">⏰</span>
+      <div>
+        <strong>When can I join?</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Currently in closed beta - sign up at <a href="/beta">/beta</a></p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🍁</span>
+      <div>
+        <strong>Works in my province?</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Yes - supports all Canadian provinces and territories</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 ---

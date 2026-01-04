@@ -21,19 +21,85 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (90 seconds)</summary>
-  <ul>
-    <li><strong>🎉 100% Production Ready:</strong> 721 tests passing, 0 ESLint/TypeScript errors, 0 accessibility issues</li>
-    <li><strong>🔒 Security Verified:</strong> AES-256-GCM encryption, XSS/SQL injection prevention, complete security framework</li>
-    <li><strong>📴 Offline-First Complete:</strong> Full functionality without internet using AsyncStorage persistence</li>
-    <li><strong>♿ WCAG AAA Compliant:</strong> Complete accessibility across all features with Complexity Mode integration</li>
-    <li><strong>📚 Resources vs Research Split:</strong> In-app tools (Resources) vs external links (Research) - clear separation with 96 external resources</li>
-    <li><strong>🗂️ Master Tracker Hub:</strong> All health tracking in one place (symptoms, meds, rehab, appointments, timeline, accessibility)</li>
-    <li><strong>⚖️ Appeal Command Center:</strong> Deadline warfare, denial decoder, evidence strength meter, appeal prep guide</li>
-    <li><strong>🆘 Global SOS Button:</strong> Crisis resources accessible from any screen (single tap: crisis menu, triple tap: emergency contact)</li>
-    <li><strong>💪 4 Wellness Hubs:</strong> Energy & Mood Hub, Unified Health Tracker, Mental Wellness Toolkit, Movement & Rehab Hub</li>
-    <li><strong>🔐 100% Private:</strong> Your data stays on YOUR device - enterprise-grade AES-256-GCM encryption, optional cloud backup</li>
-    <li><strong>60+ Features:</strong> All organized by need with AI recommendations and complexity mode filtering</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">🎉</span>
+      <div>
+        <strong>100% Production Ready</strong>
+        <p style="margin: 0; font-size: 0.95rem;">721 tests passing, 0 ESLint/TypeScript errors, 0 accessibility issues</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔒</span>
+      <div>
+        <strong>Security Verified</strong>
+        <p style="margin: 0; font-size: 0.95rem;">AES-256-GCM encryption, XSS/SQL injection prevention, complete security framework</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📴</span>
+      <div>
+        <strong>Offline-First Complete</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Full functionality without internet using AsyncStorage persistence</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">♿</span>
+      <div>
+        <strong>WCAG AAA Compliant</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Complete accessibility across all features with Complexity Mode integration</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📚</span>
+      <div>
+        <strong>Resources vs Research Split</strong>
+        <p style="margin: 0; font-size: 0.95rem;">In-app tools (Resources) vs external links (Research) - clear separation with 96 external resources</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🗂️</span>
+      <div>
+        <strong>Master Tracker Hub</strong>
+        <p style="margin: 0; font-size: 0.95rem;">All health tracking in one place (symptoms, meds, rehab, appointments, timeline, accessibility)</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">⚖️</span>
+      <div>
+        <strong>Appeal Command Center</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Deadline warfare, denial decoder, evidence strength meter, appeal prep guide</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🆘</span>
+      <div>
+        <strong>Global SOS Button</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Crisis resources accessible from any screen (single tap: crisis menu, triple tap: emergency contact)</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">💪</span>
+      <div>
+        <strong>4 Wellness Hubs</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Energy & Mood Hub, Unified Health Tracker, Mental Wellness Toolkit, Movement & Rehab Hub</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔐</span>
+      <div>
+        <strong>100% Private</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Your data stays on YOUR device - enterprise-grade AES-256-GCM encryption, optional cloud backup</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">✨</span>
+      <div>
+        <strong>60+ Features</strong>
+        <p style="margin: 0; font-size: 0.95rem;">All organized by need with AI recommendations and complexity mode filtering</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 <div class="info-box-light">

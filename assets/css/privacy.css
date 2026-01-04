@@ -384,13 +384,35 @@
     color: #dbeafe;
   }
 
+  .tldr-box[open] summary {
+    border-bottom-color: #3b82f6;
+  }
+
+  .tldr-content {
+    background: #0f172a;
+  }
+
   .tldr-item {
-    background-color: #2d2d2d;
-    border-left-color: #4DB8FF;
+    background-color: #1e293b;
+    border-left-color: #60a5fa;
+    color: #e2e8f0;
+  }
+
+  .tldr-item:hover {
+    background-color: #334155;
+    border-left-color: #93c5fd;
   }
 
   .tldr-item strong {
     color: #93c5fd;
+  }
+
+  .tldr-item p {
+    color: #cbd5e1;
+  }
+
+  .tldr-icon {
+    opacity: 0.9;
   }
 
   .guarantee-card,

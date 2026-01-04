@@ -42,15 +42,57 @@ image_alt: "3mpwrApp Événements - Rassemblements et ateliers communautaires ac
 
 <details class="tldr-box" open>
   <summary>⚡ Résumé rapide (30 secondes)</summary>
-  <ul>
-    <li><strong>Synchronisation en temps réel:</strong> Le calendrier des événements est maintenant EN DIRECT avec des mises à jour automatiques!</li>
-    <li><strong>Calendrier à synchronisation automatique:</strong> Abonnez-vous à notre flux ICS pour des mises à jour automatiques d'événements (131+ événements!)</li>
-    <li><strong>Événements utilisateur:</strong> Les événements créés dans 3mpwrApp apparaissent automatiquement sur ce site dans les 5 minutes</li>
-    <li><strong>Événements intégrés:</strong> Journées de sensibilisation au handicap, observances de santé, jours fériés canadiens et provinciaux inclus</li>
-    <li><strong>Tous accessibles:</strong> Chaque événement comprend des détails d'accessibilité, des options virtuelles et des coûts énergétiques</li>
-    <li><strong>Mises à jour rapides:</strong> Le site web se rafraîchit toutes les 5 minutes, le flux de calendrier se met à jour toutes les heures</li>
-    <li><strong>Compatibilité universelle:</strong> Fonctionne avec iPhone, Android, Mac, Windows, toutes les applications de calendrier</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">⚡</span>
+      <div>
+        <strong>Synchronisation en temps réel</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Le calendrier des événements est maintenant EN DIRECT avec des mises à jour automatiques!</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📅</span>
+      <div>
+        <strong>Calendrier à synchronisation automatique</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Abonnez-vous à notre flux ICS pour des mises à jour automatiques d'événements (131+ événements!)</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">👥</span>
+      <div>
+        <strong>Événements utilisateur</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Les événements créés dans 3mpwrApp apparaissent automatiquement sur ce site dans les 5 minutes</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🗓️</span>
+      <div>
+        <strong>Événements intégrés</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Journées de sensibilisation au handicap, observances de santé, jours fériés canadiens et provinciaux inclus</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">♿</span>
+      <div>
+        <strong>Tous accessibles</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Chaque événement comprend des détails d'accessibilité, des options virtuelles et des coûts énergétiques</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">⚙️</span>
+      <div>
+        <strong>Mises à jour rapides</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Le site web se rafraîchit toutes les 5 minutes, le flux de calendrier se met à jour toutes les heures</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📱</span>
+      <div>
+        <strong>Compatibilité universelle</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Fonctionne avec iPhone, Android, Mac, Windows, toutes les applications de calendrier</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 {%- include social-share.html title="Calendrier des événements 3mpwrApp - Rassemblements communautaires" description="Abonnez-vous aux événements accessibles pour les droits des personnes handicapées et la justice des travailleurs" compact="true" -%}

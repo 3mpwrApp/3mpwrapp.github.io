@@ -608,6 +608,34 @@ body[data-contrast="high"] .tldr-box {
   color: #FFFFFF;
 }
 
+body[data-contrast="high"] .tldr-box summary {
+  color: #FFFF00;
+}
+
+body[data-contrast="high"] .tldr-content {
+  background: #000000;
+}
+
+body[data-contrast="high"] .tldr-item {
+  background: #000000;
+  border: 2px solid #FFFF00;
+  border-left: 4px solid #FFFF00;
+  color: #FFFFFF;
+}
+
+body[data-contrast="high"] .tldr-item strong {
+  color: #FFFF00;
+  font-weight: 700;
+}
+
+body[data-contrast="high"] .tldr-item p {
+  color: #FFFFFF;
+}
+
+body[data-contrast="high"] .tldr-icon {
+  color: #FFFF00;
+}
+
 body[data-contrast="high"] .info-box,
 body[data-contrast="high"] .info-box-light,
 body[data-contrast="high"] .warning-box,

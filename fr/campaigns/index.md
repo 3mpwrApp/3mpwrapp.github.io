@@ -18,13 +18,43 @@ permalink: /fr/campaigns/
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
-  <ul>
-    <li><strong>Coming Soon:</strong> When our app launches, community members can create campaigns and events</li>
-    <li><strong>Auto-Sync:</strong> Campaigns created in-app will automatically appear here</li>
-    <li><strong>Grassroots Power:</strong> Anyone can start a campaign for disability rights or workers' issues</li>
-    <li><strong>All Accessible:</strong> Every event includes accessibility features and virtual options</li>
-    <li><strong>Everyone Welcome:</strong> PWDs, injured workers, supporters, allies, unions, and general public can organize</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">⏰</span>
+      <div>
+        <strong>Coming Soon</strong>
+        <p style="margin: 0; font-size: 0.95rem;">When our app launches, community members can create campaigns and events</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🔄</span>
+      <div>
+        <strong>Auto-Sync</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Campaigns created in-app will automatically appear here</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">✊</span>
+      <div>
+        <strong>Grassroots Power</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Anyone can start a campaign for disability rights or workers' issues</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">♿</span>
+      <div>
+        <strong>All Accessible</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Every event includes accessibility features and virtual options</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🫂</span>
+      <div>
+        <strong>Everyone Welcome</strong>
+        <p style="margin: 0; font-size: 0.95rem;">PWDs, injured workers, supporters, allies, unions, and general public can organize</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 <div class="gradient-banner" role="region" aria-labelledby="campaigns-intro-heading">

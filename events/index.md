@@ -41,15 +41,57 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (30 seconds)</summary>
-  <ul>
-    <li><strong>Real-Time Sync:</strong> Events calendar is now LIVE with automatic updates!</li>
-    <li><strong>Auto-Sync Calendar:</strong> Subscribe to our ICS feed for automatic event updates (131+ events!)</li>
-    <li><strong>User Events:</strong> Events created in the 3mpwrApp automatically appear on this site within 5 minutes</li>
-    <li><strong>Built-In Events:</strong> Disability awareness days, health observances, Canadian & provincial holidays included</li>
-    <li><strong>All Accessible:</strong> Every event includes accessibility details, virtual options, and energy costs</li>
-    <li><strong>Fast Updates:</strong> Website refreshes every 5 minutes, calendar feed updates hourly</li>
-    <li><strong>Universal Compatibility:</strong> Works with iPhone, Android, Mac, Windows, all calendar apps</li>
-  </ul>
+  <div class="tldr-content">
+    <div class="tldr-item">
+      <span class="tldr-icon">⚡</span>
+      <div>
+        <strong>Real-Time Sync</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Events calendar is now LIVE with automatic updates!</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📅</span>
+      <div>
+        <strong>Auto-Sync Calendar</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Subscribe to our ICS feed for automatic event updates (131+ events!)</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">👥</span>
+      <div>
+        <strong>User Events</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Events created in the 3mpwrApp automatically appear on this site within 5 minutes</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">🗓️</span>
+      <div>
+        <strong>Built-In Events</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Disability awareness days, health observances, Canadian & provincial holidays included</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">♿</span>
+      <div>
+        <strong>All Accessible</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Every event includes accessibility details, virtual options, and energy costs</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">⚙️</span>
+      <div>
+        <strong>Fast Updates</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Website refreshes every 5 minutes, calendar feed updates hourly</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📱</span>
+      <div>
+        <strong>Universal Compatibility</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Works with iPhone, Android, Mac, Windows, all calendar apps</p>
+      </div>
+    </div>
+  </div>
 </details>
 
 {%- include social-share.html title="3mpwrApp Events Calendar - Community Gatherings" description="Subscribe to accessible events for disability rights and worker justice" compact="true" -%}

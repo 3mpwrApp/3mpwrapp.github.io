@@ -1566,6 +1566,26 @@ details summary {
   background: #f0f0f0 !important;
 }
 
+/* Light Mode tldr-item styling */
+.tldr-item {
+  background: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  border-left: 4px solid #3b82f6 !important;
+  color: #333333 !important;
+}
+
+.tldr-item strong {
+  color: #1e40af !important;
+}
+
+.tldr-item p {
+  color: #555555 !important;
+}
+
+.tldr-icon {
+  color: inherit !important;
+}
+
 [data-theme="dark"] summary {
   color: #ffffff !important; /* White text for dark backgrounds */
 }
@@ -1576,8 +1596,46 @@ details summary {
   background: #1a1a1a !important;
 }
 
+/* Dark Mode tldr-item styling */
+[data-theme="dark"] .tldr-item {
+  background: #1e293b !important;
+  border: 1px solid #334155 !important;
+  border-left: 4px solid #60a5fa !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .tldr-item strong {
+  color: #93c5fd !important;
+}
+
+[data-theme="dark"] .tldr-item p {
+  color: #cbd5e1 !important;
+}
+
+/* High Contrast Mode tldr-item styling */
 [data-contrast="high"] summary {
   color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+[data-contrast="high"] .tldr-item {
+  background: #000000 !important;
+  border: 2px solid #FFFF00 !important;
+  border-left: 4px solid #FFFF00 !important;
+  color: #FFFFFF !important;
+}
+
+[data-contrast="high"] .tldr-item strong {
+  color: #FFFF00 !important;
+  font-weight: 900 !important;
+}
+
+[data-contrast="high"] .tldr-item p {
+  color: #FFFFFF !important;
+}
+
+[data-contrast="high"] .tldr-icon {
+  color: #FFFF00 !important;
   font-weight: 900 !important;
 }
 
