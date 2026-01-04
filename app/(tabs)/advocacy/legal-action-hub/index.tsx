@@ -8,13 +8,14 @@ import React, { useCallback, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { useTranslation } from '../../../../i18n';
+
 import AccountabilityTab from './tabs/accountability';
 import AutomationTab from './tabs/automation';
 import CoachTab from './tabs/coach';
 import LegalHelpTab from './tabs/legal-help';
 import PolicyTab from './tabs/policy';
 
-import { useTranslation } from '@/i18n';
 
 type TabType = 'accountability' | 'coach' | 'legal-help' | 'automation' | 'policy';
 

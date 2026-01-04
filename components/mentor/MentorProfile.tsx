@@ -16,21 +16,21 @@ import {
     View,
 } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import GapView from '../../../components/GapView';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { useTranslation } from '../../../i18n';
-import { useAppPalette } from '../../../theme/usePalette';
-import type { MentorProfile } from '../../../types/mentor';
+import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { useTranslation } from '../../i18n';
+import { useAppPalette } from '../../theme/usePalette';
+import type { MentorProfile as MentorProfileType } from '../../types/mentor';
+import A11yPressable from '../A11yPressable';
+import GapView from '../GapView';
 
 interface MentorProfileProps {
-    mentor: MentorProfile | null;
+    mentor: MentorProfileType | null;
     /** Called when close button is pressed */
     onClose?: () => void;
     /** Called when request button is pressed */
-    onRequest?: (mentor: MentorProfile) => void;
+    onRequest?: (mentor: MentorProfileType) => void;
     /** Called when message button is pressed */
-    onMessage?: (mentor: MentorProfile) => void;
+    onMessage?: (mentor: MentorProfileType) => void;
     /** Is loading actions */
     isLoading?: boolean;
 }

@@ -12,10 +12,10 @@ import {
     View,
 } from 'react-native';
 
-import GapView from '../../../components/GapView';
-import { useTranslation } from '../../../i18n';
-import { useAppPalette } from '../../../theme/usePalette';
-import type { MentorProfile } from '../../../types/mentor';
+import { useTranslation } from '../../i18n';
+import { useAppPalette } from '../../theme/usePalette';
+import type { MentorProfile } from '../../types/mentor';
+import GapView from '../GapView';
 
 import { MentorCard } from './MentorCard';
 

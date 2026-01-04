@@ -16,20 +16,21 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Alert, StyleSheet, View } from 'react-native';
 import { useDebounce } from 'use-debounce';
 
-import PowerToolTabContent from '../../../components/PowerToolTabContent';
-import { auth } from '../../../firebase/config';
-import { useTranslation } from '../../../i18n';
-import { trackEvent } from '../../../services/analyticsClient';
-import { useAppPalette } from '../../../theme/usePalette';
-import { logger } from '../../../utils/logger';
+import { auth } from '../../firebase/config';
+import { useTranslation } from '../../i18n';
+import { trackEvent } from '../../services/analyticsClient';
 import {
     createMentorshipRequest,
     getMentorProfile,
     searchMentors,
-} from '../../../services/mentorService';
-import type { MentorFilterOptions, MentorProfile } from '../../../types/mentor';
+} from '../../services/mentorService';
+import { useAppPalette } from '../../theme/usePalette';
+import type { MentorFilterOptions, MentorProfile as MentorProfileType } from '../../types/mentor';
+import { logger } from '../../utils/logger';
+import { PowerToolTabContent } from '../PowerTool';
 
 import { MentorList } from './MentorList';
+import { MentorProfile } from './MentorProfile';
 import { MentorSearchBar } from './MentorSearchBar';
 
 interface MentorDiscoveryProps {
@@ -53,12 +54,12 @@ export const MentorDiscovery: React.FC<MentorDiscoveryProps> = ({
     const [debouncedSearch] = useDebounce(searchQuery, 500);
     const [filters, setFilters] = useState<MentorFilterOptions>({});
     const [showFilters, setShowFilters] = useState(false);
-    const [mentors, setMentors] = useState<MentorProfile[]>([]);
+    const [mentors, setMentors] = useState<MentorProfileType[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [cursor, setCursor] = useState<any>(null);
     const [hasMore, setHasMore] = useState(true);
-    const [selectedMentor, setSelectedMentor] = useState<MentorProfile | null>(null);
+    const [selectedMentor, setSelectedMentor] = useState<MentorProfileType | null>(null);
     const [isRequestingMentorship, setIsRequestingMentorship] = useState(false);
 
     // Search effect - triggered when search or filters change
@@ -137,7 +138,7 @@ export const MentorDiscovery: React.FC<MentorDiscoveryProps> = ({
 
     // Handle mentor card press
     const handleMentorPress = useCallback(
-        async (mentor: MentorProfile) => {
+        async (mentor: MentorProfileType) => {
             try {
                 // Get fresh data
                 const fullProfile = await getMentorProfile(mentor.id);
@@ -154,7 +155,7 @@ export const MentorDiscovery: React.FC<MentorDiscoveryProps> = ({
 
     // Handle mentorship request
     const handleMentorshipRequest = useCallback(
-        async (mentor: MentorProfile) => {
+        async (mentor: MentorProfileType) => {
             if (!auth.currentUser) {
                 Alert.alert(
                     t('auth.required', 'Sign In Required'),
@@ -213,7 +214,7 @@ export const MentorDiscovery: React.FC<MentorDiscoveryProps> = ({
 
     // Handle message
     const handleMessage = useCallback(
-        (mentor: MentorProfile) => {
+        (mentor: MentorProfileType) => {
             if (!auth.currentUser) {
                 Alert.alert(
                     t('auth.required', 'Sign In Required'),

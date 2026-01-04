@@ -4,10 +4,17 @@
  * Maintaining backward compatibility for deep links and navigation
  */
 
-import LegalActionHub from './legal-action-hub';
+import { useRouter } from 'expo-router';
+import { useEffect } from 'react';
 
 export const options = { href: null };
 
 export default function AccountabilityHub() {
-  return <LegalActionHub initialTab="accountability" />;
+  const router = useRouter();
+  
+  useEffect(() => {
+    router.replace('/advocacy/legal-action-hub');
+  }, [router]);
+
+  return null;
 }

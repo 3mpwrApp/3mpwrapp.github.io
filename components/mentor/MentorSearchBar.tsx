@@ -14,12 +14,12 @@ import {
     View,
 } from 'react-native';
 
-import A11yPressable from '../../../components/A11yPressable';
-import GapView from '../../../components/GapView';
-import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { useTranslation } from '../../../i18n';
-import { useAppPalette } from '../../../theme/usePalette';
-import type { MentorFilterOptions } from '../../../types/mentor';
+import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { useTranslation } from '../../i18n';
+import { useAppPalette } from '../../theme/usePalette';
+import type { MentorFilterOptions } from '../../types/mentor';
+import A11yPressable from '../A11yPressable';
+import GapView from '../GapView';
 
 interface MentorSearchBarProps {
     /** Current search query */
