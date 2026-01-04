@@ -32,33 +32,33 @@ const LegalActionHub: React.FC<LegalActionHubProps> = ({ initialTab = 'accountab
   const tabs: Array<{ id: TabType; label: string; icon: string; description: string }> = [
     {
       id: 'accountability',
-      label: t('legal.tabs.accountability'),
+      label: t('legal.tabs.accountability', 'Accountability'),
       icon: '📋',
-      description: t('legal.tabs.accountability_desc'),
+      description: t('legal.tabs.accountability_desc', 'Track cases and action items'),
     },
     {
       id: 'coach',
-      label: t('legal.tabs.coach'),
+      label: t('legal.tabs.coach', 'Coach'),
       icon: '🎓',
-      description: t('legal.tabs.coach_desc'),
+      description: t('legal.tabs.coach_desc', 'Communication scripts and guidance'),
     },
     {
       id: 'legal-help',
-      label: t('legal.tabs.legal_help'),
+      label: t('legal.tabs.legal_help', 'Legal Help'),
       icon: '⚖️',
-      description: t('legal.tabs.legal_help_desc'),
+      description: t('legal.tabs.legal_help_desc', 'Find lawyers and legal resources'),
     },
     {
       id: 'automation',
-      label: t('legal.tabs.automation'),
+      label: t('legal.tabs.automation', 'Automation'),
       icon: '⚡',
-      description: t('legal.tabs.automation_desc'),
+      description: t('legal.tabs.automation_desc', 'Automated legal tools and processes'),
     },
     {
       id: 'policy',
-      label: t('legal.tabs.policy'),
+      label: t('legal.tabs.policy', 'Policy'),
       icon: '📢',
-      description: t('legal.tabs.policy_desc'),
+      description: t('legal.tabs.policy_desc', 'Policy advocacy and campaigns'),
     },
   ];
 
