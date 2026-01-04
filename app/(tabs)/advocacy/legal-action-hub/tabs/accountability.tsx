@@ -3,7 +3,6 @@
  * Consolidates: accountability-hub, accountability-cases, accountability-case, case-timeline
  */
 
-import { useRoute } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -18,7 +17,6 @@ interface Case {
 const AccountabilityTab: React.FC = () => {
   const [cases, setCases] = useState<Case[]>([]);
   const [loading, setLoading] = useState(true);
-  const route = useRoute();
 
   useEffect(() => {
     // Load cases from Firestore or AsyncStorage
