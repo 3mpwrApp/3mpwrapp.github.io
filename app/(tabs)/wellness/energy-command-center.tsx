@@ -144,12 +144,12 @@ function DashboardTab(props: PowerToolTabProps) {
         <PowerToolAction
           label={t('energy.planDay', 'Plan Today\'s Energy Budget')}
           icon="📅"
-          onPress={() => router.push('/wellness/daily-planner')}
+          onPress={() => navigateToTab('dashboard')}
         />
         <PowerToolAction
           label={t('energy.viewHistory', 'View Energy History')}
           icon="📊"
-          onPress={() => router.push('/wellness/energy-hub')}
+          onPress={() => navigateToTab('dashboard')}
         />
       </PowerToolSection>
 
@@ -319,12 +319,15 @@ function SleepTab(_props: PowerToolTabProps) {
         <PowerToolAction
           label={t('sleep.circadian', 'Circadian DJ')}
           icon="🎵"
-          onPress={() => router.push('/wellness/circadian-dj')}
+          onPress={() => router.push('/(tabs)/wellness/circadian-dj')}
         />
         <PowerToolAction
           label={t('sleep.ambience', 'Sleep Ambience')}
           icon="🌌"
-          onPress={() => router.push('/wellness/ambience')}
+          onPress={() => {
+            // Sleep ambience feature - navigate to wellness tab
+            router.push('/(tabs)/wellness');
+          }}
         />
       </PowerToolSection>
 

@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { ActivityIndicator, View } from 'react-native';
 
 import { useAppPalette } from '../theme/usePalette';
+import { logger } from '../utils/logger';
 
 interface RedirectScreenProps {
   to: string;
@@ -31,16 +32,18 @@ export default function RedirectScreen({
   const palette = useAppPalette();
 
   useEffect(() => {
-    // Build target URL with tab if provided
-    const targetUrl = tab ? `${to}?tab=${tab}` : to;
-
-    // Perform redirect
+    // Perform redirect - router.replace expects a valid route string
     const timer = setTimeout(() => {
-      router.replace(targetUrl);
+      try {
+        // Type-cast to handle dynamic route strings
+        router.replace(to as any);
+      } catch (error) {
+        logger.warn('[RedirectScreen] Navigation failed:', error);
+      }
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [router, to, tab]);
+  }, [router, to]);
 
   return (
     <View
