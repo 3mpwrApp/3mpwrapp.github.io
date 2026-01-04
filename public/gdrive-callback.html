@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Authorization</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .success {
+            display: none;
+            color: #10b981;
+        }
+        
+        .success h1 {
+            color: #10b981;
+        }
+        
+        .error {
+            display: none;
+            color: #ef4444;
+        }
+        
+        .error h1 {
+            color: #ef4444;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <h1>Authorizing...</h1>
+            <p>Connecting your Google Drive account</p>
+            <div class="status-message">This window will close automatically</div>
+        </div>
+        
+        <div id="success" class="success">
+            <h1>✓ Success!</h1>
+            <p>Your Google Drive account is now connected</p>
+            <div class="status-message">You can close this window</div>
+        </div>
+        
+        <div id="error" class="error">
+            <h1>✗ Authorization Failed</h1>
+            <p id="errorMessage">An error occurred during authorization</p>
+            <div class="status-message">Please try again or contact support</div>
+        </div>
+    </div>
+
+    <script>
+        // Parse URL parameters
+        const url = new URL(window.location.href);
+        const code = url.searchParams.get('code');
+        const error = url.searchParams.get('error');
+        const state = url.searchParams.get('state');
+        const errorDescription = url.searchParams.get('error_description');
+
+        const loadingEl = document.getElementById('loading');
+        const successEl = document.getElementById('success');
+        const errorEl = document.getElementById('error');
+        const errorMessageEl = document.getElementById('errorMessage');
+
+        // Handle error response
+        if (error) {
+            loadingEl.style.display = 'none';
+            errorEl.style.display = 'block';
+            errorMessageEl.textContent = `${error}: ${errorDescription || 'Unknown error'}`;
+            
+            // Close window after 5 seconds
+            setTimeout(() => window.close(), 5000);
+        }
+        // Handle success response
+        else if (code) {
+            // Send code back to opener
+            if (window.opener) {
+                window.opener.postMessage({
+                    type: 'GDRIVE_AUTH_CODE',
+                    code: code,
+                    state: state || ''
+                }, '*');
+            }
+            
+            // Show success message
+            setTimeout(() => {
+                loadingEl.style.display = 'none';
+                successEl.style.display = 'block';
+                
+                // Close window after 1.5 seconds
+                setTimeout(() => window.close(), 1500);
+            }, 500);
+        }
+        // Missing code
+        else {
+            loadingEl.style.display = 'none';
+            errorEl.style.display = 'block';
+            errorMessageEl.textContent = 'Authorization code not received. Please try again.';
+            
+            // Close window after 5 seconds
+            setTimeout(() => window.close(), 5000);
+        }
+    </script>
+</body>
+</html>
