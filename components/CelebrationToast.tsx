@@ -3,24 +3,16 @@
  * 
  * Beautiful animated toast for celebrating user achievements
  * with confetti effect and haptic feedback.
- * 
- * Accessibility Features:
- * - Respects user's reduce-motion preference
- * - Announcement before auto-dismiss (3 seconds remaining)
- * - Pauses on app focus loss
- * - Haptic feedback for non-visual awareness
  */
 
-import { useCallback, useEffect, useRef } from 'react';
-import { AccessibilityInfo, Animated, Dimensions, Modal, StyleSheet, Text, View } from 'react-native';
+import { useEffect, useRef } from 'react';
+import { Animated, Dimensions, Modal, StyleSheet, Text, View } from 'react-native';
 
 import { MAX_FONT_SCALE } from '../constants/A11Y';
 import { useReduceMotionEnabled } from '../hooks/useA11y';
-import { useModalTimer } from '../hooks/useModalTimer';
 import type { Celebration } from '../services/celebrations';
 import { celebrateWithHaptics } from '../services/celebrations';
 import { useAppPalette } from '../theme/usePalette';
-import { logger } from '../utils/logger';
 import { createShadow } from '../utils/shadow';
 
 const { width, height } = Dimensions.get('window');
@@ -31,59 +23,69 @@ interface CelebrationToastProps {
   duration?: number;
 }
 
-async function announceForAccessibility(message: string): Promise<void> {
-  if (typeof AccessibilityInfo?.announceForAccessibility === 'function') {
-    try {
-      await AccessibilityInfo.announceForAccessibility(message);
-    } catch (error) {
-      logger.warn('CelebrationToast', 'Failed to announce', error);
-    }
-  }
-}
-
-export default function CelebrationToast({ 
-  celebration, 
+export default function CelebrationToast({
+  celebration,
   onDismiss,
-  duration = 5000  // Increased to 5s to match modal timing standard
+  duration = 3000
 }: CelebrationToastProps) {
   const palette = useAppPalette();
   const reduceMotion = useReduceMotionEnabled();
   const slideAnim = useRef(new Animated.Value(reduceMotion ? 0 : -100)).current;
   const fadeAnim = useRef(new Animated.Value(reduceMotion ? 1 : 0)).current;
   const scaleAnim = useRef(new Animated.Value(reduceMotion ? 1 : 0.8)).current;
-  
-  const { startTimer, cancelTimer } = useModalTimer({
-    duration,
-    onDismiss,
-    announceBeforeDismiss: true,
-    announceAtSeconds: 3,
-    onAccessibilityDismiss: (action) => {
-      if (action === 'auto') {
-        logger.info('CelebrationToast', 'Modal auto-dismissed after timeout');
-      }
-    },
-  });
-  
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  const dismissAnimation = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+
+    if (reduceMotion) {
+      onDismiss();
+      return;
+    }
+
+    Animated.parallel([
+      Animated.timing(slideAnim, {
+        toValue: -100,
+        duration: 300,
+        useNativeDriver: true,
+      }),
+      Animated.timing(fadeAnim, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true,
+      }),
+    ]).start(() => {
+      onDismiss();
+    });
+  };
+
   useEffect(() => {
     if (celebration) {
       // Trigger haptic feedback
       celebrateWithHaptics();
-      
+
       // Skip animations if reduce motion is enabled
       if (reduceMotion) {
         // Show content immediately
         slideAnim.setValue(0);
         fadeAnim.setValue(1);
         scaleAnim.setValue(1);
-        
-        // Announce to accessibility users
-        announceForAccessibility(`${celebration.title}. ${celebration.message}`);
-        
-        // Start timer
-        startTimer();
-        return () => cancelTimer();
+
+        // Auto dismiss after duration
+        timerRef.current = setTimeout(() => {
+          dismissAnimation();
+        }, duration);
+
+        return () => {
+          if (timerRef.current) {
+            clearTimeout(timerRef.current);
+          }
+        };
       }
-      
+
       // Animate in
       Animated.parallel([
         Animated.spring(slideAnim, {
@@ -103,43 +105,21 @@ export default function CelebrationToast({
           tension: 100,
           friction: 7,
         }),
-      ]).start(() => {
-        // Announce after animation completes
-        announceForAccessibility(`${celebration.title}. ${celebration.message}`);
-        
-        // Start timer after animation
-        startTimer();
-      });
-      
-      return () => cancelTimer();
+      ]).start();
+
+      // Auto dismiss after duration
+      timerRef.current = setTimeout(() => {
+        dismissAnimation();
+      }, duration);
+
+      return () => {
+        if (timerRef.current) {
+          clearTimeout(timerRef.current);
+        }
+      };
     }
     return undefined;
-  }, [celebration, reduceMotion, startTimer, cancelTimer]);
-  
-  
-  const dismissAnimation = useCallback(() => {
-    cancelTimer();
-    
-    if (reduceMotion) {
-      onDismiss();
-      return;
-    }
-    
-    Animated.parallel([
-      Animated.timing(slideAnim, {
-        toValue: -100,
-        duration: 300,
-        useNativeDriver: true,
-      }),
-      Animated.timing(fadeAnim, {
-        toValue: 0,
-        duration: 300,
-        useNativeDriver: true,
-      }),
-    ]).start(() => {
-      onDismiss();
-    });
-  }, [cancelTimer, reduceMotion, onDismiss, slideAnim, fadeAnim]);
+  }, [celebration, reduceMotion, duration]);
   
   if (!celebration) return null;
   
