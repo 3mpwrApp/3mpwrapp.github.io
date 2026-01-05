@@ -61,11 +61,18 @@ try {
 }
 
 try {
-  analytics = require('@react-native-firebase/analytics').default;
+  const analyticsModule = require('@react-native-firebase/analytics').default;
+  // The module might be a factory function or an instance
+  if (typeof analyticsModule === 'function') {
+    analytics = analyticsModule();
+  } else {
+    analytics = analyticsModule;
+  }
 } catch {
-  analytics = () => ({
+  // Fallback: provide a mock analytics object
+  analytics = {
     logEvent: async () => {},
-  });
+  };
 }
 
 // Storage keys
@@ -926,12 +933,15 @@ export async function contributeEvidence(
 
     // Track contribution analytics
     try {
-      await analytics().logEvent('collective_contribution_submitted', {
-        themes_count: contribution.themes.length,
-        has_denial_reason: !!contribution.denialReason,
-        has_timeline: !!contribution.timelineDelayDays,
-        region: contribution.region || 'unknown',
-      });
+      // analytics is already an instance, call logEvent directly
+      if (analytics && typeof analytics.logEvent === 'function') {
+        await analytics.logEvent('collective_contribution_submitted', {
+          themes_count: contribution.themes.length,
+          has_denial_reason: !!contribution.denialReason,
+          has_timeline: !!contribution.timelineDelayDays,
+          region: contribution.region || 'unknown',
+        });
+      }
     } catch (analyticsError) {
       // Log error but don't fail the contribution
       console.error('Analytics error in contributeEvidence:', analyticsError);

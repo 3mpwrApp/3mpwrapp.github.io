@@ -17,16 +17,20 @@ import { StyleSheet, Text, View } from 'react-native';
 // Firebase Analytics (handled by metro.config.js - empty module on web)
 let analytics: any;
 try {
-  analytics = require('@react-native-firebase/analytics').default;
-  if (typeof analytics === 'function') {
-    analytics = analytics(); // Call if it's a function
+  const analyticsModule = require('@react-native-firebase/analytics').default;
+  // The module export is already the analytics instance, not a factory function
+  if (typeof analyticsModule === 'function') {
+    analytics = analyticsModule(); // Call if it's a factory
+  } else {
+    analytics = analyticsModule; // Use directly if it's already an instance
   }
 } catch {
   // Fallback if module not available
   analytics = { logEvent: async () => {} };
 }
+
+// Ensure analytics is always an object with logEvent method
 if (!analytics || typeof analytics.logEvent !== 'function') {
-  // Ensure analytics has logEvent method
   analytics = { logEvent: async () => {} };
 }
 
@@ -596,11 +600,14 @@ const HomeScreen = React.memo(() => {
 
   const handleHeroCTAPress = async () => {
     try {
-      await analytics().logEvent('evidence_hero_cta_click', {
-        screen: 'home',
-        evidence_count: evidenceCount,
-        user_type: evidenceCount === 0 ? 'new' : 'returning',
-      });
+      // analytics is already an instance, call logEvent directly
+      if (analytics && typeof analytics.logEvent === 'function') {
+        await analytics.logEvent('evidence_hero_cta_click', {
+          screen: 'home',
+          evidence_count: evidenceCount,
+          user_type: evidenceCount === 0 ? 'new' : 'returning',
+        });
+      }
     } catch (error) {
       logError('HomeScreen', 'Hero CTA analytics', error as Error);
     }
