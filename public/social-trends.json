@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-05T12:03:21.365Z",
+  "lastUpdated": "2026-01-05T18:03:07.329Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 7535,
+      "totalPosts": 7560,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-05T12:03:09.645Z"
+      "lastSeen": "2026-01-05T18:02:58.274Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 7473,
+      "totalPosts": 7498,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-05T12:03:12.470Z"
+      "lastSeen": "2026-01-05T18:03:00.178Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 7394,
+      "totalPosts": 7419,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-05T12:03:15.296Z"
+      "lastSeen": "2026-01-05T18:03:02.190Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 7523,
+      "totalPosts": 7548,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-05T12:03:17.586Z"
+      "lastSeen": "2026-01-05T18:03:04.152Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 7525,
+      "totalPosts": 7550,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-05T12:03:20.361Z"
+      "lastSeen": "2026-01-05T18:03:06.325Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Hey Jon Stewart, Jokes About Wearing Masks Aren’t Funny\n\n#MaskUp #CovidIsNotOver #DisabilityJustice  \n\nwww.motherjones.com/politics/202...",
-      "author": "thunderhoneysnow.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Vor einer Woche lief mein Text „Die Grenzen der Autonomie“ im Dlf — ich habe das Stück live im Radio gehört und bin, obwohl ich den Text geschrieben und oft gelesen habe, in Tränen ausgebrochen, an der Stelle mit dem Dinosaurier 🦕 #MECFS #CureMECFS #disabilityjustice #criptime #crip4crip",
-      "author": "janaxpetersen.bsky.social",
-      "engagement": 33,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "The 5th Annual Games for Blind Gamers game jam starts at the end of this month, so we made a small video showing off entrants from last year! \n\nyoutu.be/eYe_9Bonn20\nJoin:\nitch.io/jam/games-fo...\n\n#GameJam #Gamedev #accessibility #A11y",
-      "author": "ericbomb.bsky.social",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Follow @byowave.bsky.social to learn more about all of the accessibility features of the #ProteusController and other cool stuff this Irish company is working on.\n\n#IrishCreatives #SpeirGhorm #SpotLight #Promote #OneHandedController #ModularController #ProteusBuilder #FYP #A11y #Accessibility",
-      "author": "craigbreathnach.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 309,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "We all know someone who will be harmed amongst our most vulnerable citizens.\n\nDo not put up with it.\n\nCall your legislators. \n☎️ 202 224 3121\nCongressional Switchboard \n\nresist.bot/petitions/PZ...\n\n@resist.bot \n#ADA\n#DisabilityRights\n#CivilRights\n#MentalHealth\n#wheelchairs\n#BlueSkyVets",
       "author": "airshipwriter.bsky.social",
@@ -338,20 +302,56 @@
       "author": "lisadiedrich.bsky.social",
       "engagement": 15,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We all know someone who will be harmed amongst our most vulnerable citizens.\n\nDo not put up with it.\n\nCall your legislators. \n☎️ 202 224 3121\nCongressional Switchboard \n\nresist.bot/petitions/PZ...\n\n@resist.bot \n#ADA\n#DisabilityRights\n#CivilRights\n#MentalHealth\n#wheelchairs\n#BlueSkyVets",
+      "author": "airshipwriter.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Hey Jon Stewart, Jokes About Wearing Masks Aren’t Funny\n\n#MaskUp #CovidIsNotOver #DisabilityJustice  \n\nwww.motherjones.com/politics/202...",
+      "author": "thunderhoneysnow.bsky.social",
+      "engagement": 18,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Vor einer Woche lief mein Text „Die Grenzen der Autonomie“ im Dlf — ich habe das Stück live im Radio gehört und bin, obwohl ich den Text geschrieben und oft gelesen habe, in Tränen ausgebrochen, an der Stelle mit dem Dinosaurier 🦕 #MECFS #CureMECFS #disabilityjustice #criptime #crip4crip",
+      "author": "janaxpetersen.bsky.social",
+      "engagement": 33,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Please join us in welcoming Oliwia to the Cats team. \nOur new Accessibility Intern, joining us thanks to the Boost program by @intogames.bsky.social!\n#accessibility",
+      "author": "manycatsstudios.bsky.social",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 309,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
-      "keyword": "accessibility",
-      "count": 43
+      "keyword": "disabilityrights",
+      "count": 44
     },
     {
-      "keyword": "disabilityrights",
-      "count": 42
+      "keyword": "accessibility",
+      "count": 39
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 33
     },
     {
       "keyword": "cripthevote",
@@ -374,12 +374,12 @@
       "count": 17
     },
     {
-      "keyword": "disability",
+      "keyword": "cripthevote disabilityrights",
       "count": 14
     },
     {
-      "keyword": "cripthevote disabilityrights",
-      "count": 14
+      "keyword": "disability",
+      "count": 13
     },
     {
       "keyword": "foxtakedown",
@@ -406,8 +406,12 @@
       "count": 8
     },
     {
+      "keyword": "a11y accessibility",
+      "count": 7
+    },
+    {
       "keyword": "accessibility a11y",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "stoptheliesfox",
@@ -415,10 +419,6 @@
     },
     {
       "keyword": "virtual",
-      "count": 7
-    },
-    {
-      "keyword": "foxlies",
       "count": 7
     }
   ]
