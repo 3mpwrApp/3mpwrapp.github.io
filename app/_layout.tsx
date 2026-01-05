@@ -1,8 +1,8 @@
 /* eslint-disable no-restricted-syntax */
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
-import * as WebBrowser from 'expo-web-browser';
 import { useFonts } from "expo-font";
 import { Stack, usePathname } from "expo-router";
+import * as WebBrowser from 'expo-web-browser';
 import React from "react";
 import { AccessibilityInfo, AppState, Platform, StyleSheet, Text, View } from "react-native";
 
@@ -148,6 +148,7 @@ import UpdateSplashScreen from "../components/UpdateSplashScreen";
 import WhereWasI from "../components/WhereWasI";
 import { channels } from "../data/community";
 import { I18nProvider, useTranslation } from "../i18n";
+import { trackAppFirstOpened } from "../services/onboardingTracking";
 import { setSessionSeed } from "../services/session";
 import { CommunityProvider, useCommunity } from "../store/community";
 import { CountsProvider } from "../store/counts";
@@ -157,11 +158,11 @@ import { RefreshProvider } from "../store/refresh";
 import { useAppPalette } from "../theme/usePalette";
 import { announce } from "../utils/announce";
 import { logger } from "../utils/logger";
-import { trackAppFirstOpened } from "../services/onboardingTracking";
 // 🔹 Replace old AuthProvider with Firebase AuthProvider
 import { AuthProvider } from "../context/AuthContext";
 import { CognitiveAccessibilityProvider } from "../context/CognitiveAccessibilityContext";
 import { DyslexiaProvider } from "../context/DyslexiaContext";
+import { IndigenousLanguageProvider } from "../context/IndigenousLanguageContext";
 import { NeurodivergentProvider } from "../context/NeurodivergentContext";
 import { setBetaFlag } from "../services/analytics";
 import { initializeBackgroundSync, registerDefaultHandlers } from "../services/backgroundSync";
@@ -325,6 +326,7 @@ export default function RootLayout() {
       <ErrorBoundary>
       <SafeProviderWrapper providerName="RootProviderTree">
       <I18nProvider>
+    <IndigenousLanguageProvider>
     <CognitiveAccessibilityProvider>
       <DyslexiaProvider>
       <A11ySettingsProvider>
@@ -419,6 +421,7 @@ export default function RootLayout() {
         </A11ySettingsProvider>
       </DyslexiaProvider>
       </CognitiveAccessibilityProvider>
+      </IndigenousLanguageProvider>
       </I18nProvider>
       </SafeProviderWrapper>
       </ErrorBoundary>
