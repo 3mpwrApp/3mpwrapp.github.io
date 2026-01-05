@@ -266,6 +266,7 @@ export function AccessibleTypingIndicator({
       dot1.setValue(0.6);
       dot2.setValue(0.6);
       dot3.setValue(0.6);
+      return undefined;
     }
   }, [isTyping, reduceMotion]);
 
