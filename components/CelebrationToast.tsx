@@ -33,7 +33,7 @@ export default function CelebrationToast({
   const slideAnim = useRef(new Animated.Value(reduceMotion ? 0 : -100)).current;
   const fadeAnim = useRef(new Animated.Value(reduceMotion ? 1 : 0)).current;
   const scaleAnim = useRef(new Animated.Value(reduceMotion ? 1 : 0.8)).current;
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const dismissAnimation = () => {
     if (timerRef.current) {
