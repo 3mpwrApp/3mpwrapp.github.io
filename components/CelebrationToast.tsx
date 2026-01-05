@@ -11,7 +11,7 @@
  * - Haptic feedback for non-visual awareness
  */
 
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { AccessibilityInfo, Animated, Dimensions, Modal, StyleSheet, Text, View } from 'react-native';
 
 import { MAX_FONT_SCALE } from '../constants/A11Y';
@@ -55,12 +55,6 @@ export default function CelebrationToast({
   const { startTimer, cancelTimer } = useModalTimer({
     duration,
     onDismiss,
-    onCountdownChange: (remaining) => {
-      // Could use this for visual countdown display if needed
-      if (remaining <= 0) {
-        dismissAnimation();
-      }
-    },
     announceBeforeDismiss: true,
     announceAtSeconds: 3,
     onAccessibilityDismiss: (action) => {
@@ -120,9 +114,10 @@ export default function CelebrationToast({
       return () => cancelTimer();
     }
     return undefined;
-  }, [celebration, reduceMotion]);
+  }, [celebration, reduceMotion, startTimer, cancelTimer]);
   
-  const dismissAnimation = () => {
+  
+  const dismissAnimation = useCallback(() => {
     cancelTimer();
     
     if (reduceMotion) {
@@ -144,7 +139,7 @@ export default function CelebrationToast({
     ]).start(() => {
       onDismiss();
     });
-  };
+  }, [cancelTimer, reduceMotion, onDismiss, slideAnim, fadeAnim]);
   
   if (!celebration) return null;
   
