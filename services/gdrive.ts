@@ -289,14 +289,14 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
 
     logger.log('[GDrive] Access token received, length:', access_token.length);
 
-      const config: GDriveConfig = {
-        kind: 'gdrive',
-        accessToken: access_token,
-        refreshToken: refresh_token || undefined,
-        expiresAt: expires_in
-          ? Date.now() + parseInt(expires_in, 10) * 1000
-          : undefined,
-      };
+    const config: GDriveConfig = {
+      kind: 'gdrive',
+      accessToken: access_token,
+      refreshToken: refresh_token || undefined,
+      expiresAt: expires_in
+        ? Date.now() + parseInt(expires_in, 10) * 1000
+        : undefined,
+    };
 
     // Try to get/create the app folder
     try {
