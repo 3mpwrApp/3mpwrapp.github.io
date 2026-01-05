@@ -8,6 +8,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as AuthSession from 'expo-auth-session';
+import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 
 import { logger } from '../utils/logger';
@@ -97,14 +98,24 @@ export function isGDriveConfigured(): boolean {
 
 /**
  * Get Google OAuth2 client ID from environment
+ * Tries multiple sources to ensure it works in all environments
  */
 function getGoogleClientId(): string | null {
-  // Use the web client ID for OAuth
-  const clientId = process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
+  // Try process.env first (works in most Expo environments)
+  let clientId = process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
+  
+  // If not found in process.env, try Constants.expoConfig?.extra (works in all Expo environments)
+  if (!clientId && typeof Constants !== 'undefined' && Constants.expoConfig?.extra) {
+    clientId = Constants.expoConfig.extra.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID as string | undefined;
+  }
+  
   if (!clientId) {
     logger.warn('[GDrive] No EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID configured');
+    logger.warn('[GDrive] Checked process.env and Constants.expoConfig.extra');
     return null;
   }
+  
+  logger.log('[GDrive] Successfully loaded EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID');
   return clientId;
 }
 

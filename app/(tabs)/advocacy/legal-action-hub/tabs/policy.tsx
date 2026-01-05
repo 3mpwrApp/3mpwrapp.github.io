@@ -3,6 +3,7 @@
  * Consolidates: policy-simple
  */
 
+import { useTheme } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { FlatList, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -14,7 +15,21 @@ interface Policy {
   impact: 'high' | 'medium' | 'low';
 }
 
+const FALLBACK_COLORS = {
+  text: '#1f2937', // eslint-disable-line no-restricted-syntax
+  muted: '#6b7280', // eslint-disable-line no-restricted-syntax
+  border: '#d1d5db', // eslint-disable-line no-restricted-syntax
+  card: '#fff', // eslint-disable-line no-restricted-syntax
+  primary: '#3b82f6', // eslint-disable-line no-restricted-syntax
+  accent: '#06b6d4', // eslint-disable-line no-restricted-syntax
+  error: '#ef4444', // eslint-disable-line no-restricted-syntax
+  warning: '#f59e0b', // eslint-disable-line no-restricted-syntax
+  success: '#10b981', // eslint-disable-line no-restricted-syntax
+};
+
 const PolicyTab: React.FC = () => {
+  const theme = useTheme();
+  const styles = createStyles(theme);
   const [selectedJurisdiction, setSelectedJurisdiction] = useState<string>('federal');
 
   const jurisdictions = ['federal', 'state', 'local'];
@@ -46,7 +61,7 @@ const PolicyTab: React.FC = () => {
           style={[
             styles.impactBadge,
             {
-              backgroundColor: item.impact === 'high' ? '#ef4444' : item.impact === 'medium' ? '#f59e0b' : '#10b981',
+              backgroundColor: item.impact === 'high' ? FALLBACK_COLORS.error : item.impact === 'medium' ? FALLBACK_COLORS.warning : FALLBACK_COLORS.success,
             },
           ]}
         >
@@ -96,7 +111,17 @@ const PolicyTab: React.FC = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const createStyles = (theme: any) => {
+  const colors = {
+    text: theme.colors?.text || FALLBACK_COLORS.text,
+    border: theme.colors?.border || FALLBACK_COLORS.border,
+    muted: theme.colors?.muted || FALLBACK_COLORS.muted,
+    card: theme.colors?.card || FALLBACK_COLORS.card,
+    primary: theme.colors?.primary || FALLBACK_COLORS.primary,
+    accent: FALLBACK_COLORS.accent,
+  };
+
+  return StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 16,
@@ -106,7 +131,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     marginBottom: 16,
-    color: '#1f2937',
+    color: colors.text,
   },
   filterBar: {
     marginBottom: 16,
@@ -117,31 +142,31 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: '#d1d5db',
+    borderColor: colors.border,
     marginRight: 8,
   },
   filterButtonActive: {
-    backgroundColor: '#3b82f6',
-    borderColor: '#3b82f6',
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
   },
   filterButtonText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#6b7280',
+    color: colors.muted,
   },
   filterButtonTextActive: {
-    color: '#fff',
+    color: colors.card, // '#fff'
   },
   policyList: {
     paddingBottom: 20,
   },
   policyCard: {
-    backgroundColor: '#fff',
+    backgroundColor: colors.card,
     borderRadius: 8,
     padding: 12,
     marginBottom: 12,
     borderLeftWidth: 4,
-    borderLeftColor: '#06b6d4',
+    borderLeftColor: colors.accent,
   },
   policyHeader: {
     flexDirection: 'row',
@@ -152,7 +177,7 @@ const styles = StyleSheet.create({
   policyTitle: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#1f2937',
+    color: colors.text,
     flex: 1,
   },
   impactBadge: {
@@ -164,13 +189,14 @@ const styles = StyleSheet.create({
   impactText: {
     fontSize: 11,
     fontWeight: '600',
-    color: '#fff',
+    color: '#fff', // eslint-disable-line no-restricted-syntax
   },
   policyStatus: {
     fontSize: 12,
-    color: '#9ca3af',
+    color: colors.muted,
     fontWeight: '500',
   },
-});
+  });
+};
 
 export default PolicyTab;

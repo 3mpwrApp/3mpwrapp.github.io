@@ -3,6 +3,7 @@
  * Consolidates: legal-automation, justice-as-a-service
  */
 
+import { useTheme } from '@react-navigation/native';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -13,7 +14,20 @@ interface AutomationWorkflow {
   status: 'available' | 'beta' | 'coming-soon';
 }
 
+const FALLBACK_COLORS = {
+  text: '#1f2937', // eslint-disable-line no-restricted-syntax
+  muted: '#6b7280', // eslint-disable-line no-restricted-syntax
+  primary: '#3b82f6', // eslint-disable-line no-restricted-syntax
+  card: '#fff', // eslint-disable-line no-restricted-syntax
+  border: '#d1d5db', // eslint-disable-line no-restricted-syntax
+  accentWarning: '#f59e0b', // eslint-disable-line no-restricted-syntax
+  success: '#10b981', // eslint-disable-line no-restricted-syntax
+  coming: '#d1d5db', // eslint-disable-line no-restricted-syntax
+};
+
 const AutomationTab: React.FC = () => {
+  const theme = useTheme();
+  const styles = createStyles(theme);
   const workflows: AutomationWorkflow[] = [
     {
       id: '1',
@@ -67,75 +81,86 @@ const AutomationTab: React.FC = () => {
 const getStatusColor = (status: string) => {
   switch (status) {
     case 'available':
-      return '#10b981';
+      return FALLBACK_COLORS.success;
     case 'beta':
-      return '#f59e0b';
+      return FALLBACK_COLORS.accentWarning;
     case 'coming-soon':
-      return '#d1d5db';
+      return FALLBACK_COLORS.coming;
     default:
-      return '#6b7280';
+      return FALLBACK_COLORS.muted;
   }
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 16,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: '700',
-    marginBottom: 4,
-    color: '#1f2937',
-  },
-  subtitle: {
-    fontSize: 14,
-    color: '#6b7280',
-    marginBottom: 16,
-  },
-  workflowsList: {
-    marginBottom: 20,
-  },
-  workflowCard: {
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    padding: 12,
-    marginBottom: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: '#f59e0b',
-  },
-  workflowCardDisabled: {
-    opacity: 0.5,
-  },
-  workflowHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-  },
-  workflowInfo: {
-    flex: 1,
-    marginRight: 12,
-  },
-  workflowTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#1f2937',
-    marginBottom: 4,
-  },
-  workflowDescription: {
-    fontSize: 13,
-    color: '#6b7280',
-  },
-  statusBadge: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 4,
-  },
-  statusText: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: '#fff',
-  },
-});
+const createStyles = (theme: any) => {
+  const colors = {
+    text: theme.colors?.text || FALLBACK_COLORS.text,
+    muted: theme.colors?.text ? FALLBACK_COLORS.muted : FALLBACK_COLORS.muted,
+    primary: theme.colors?.primary || FALLBACK_COLORS.primary,
+    card: theme.colors?.card || FALLBACK_COLORS.card,
+    border: theme.colors?.border || FALLBACK_COLORS.border,
+    accentWarning: FALLBACK_COLORS.accentWarning,
+  };
+
+  return StyleSheet.create({
+    container: {
+      flex: 1,
+      paddingHorizontal: 16,
+    },
+    title: {
+      fontSize: 20,
+      fontWeight: '700',
+      marginBottom: 4,
+      color: colors.text,
+    },
+    subtitle: {
+      fontSize: 14,
+      color: colors.muted,
+      marginBottom: 16,
+    },
+    workflowsList: {
+      marginBottom: 20,
+    },
+    workflowCard: {
+      backgroundColor: colors.card,
+      borderRadius: 8,
+      padding: 12,
+      marginBottom: 12,
+      borderLeftWidth: 4,
+      borderLeftColor: colors.accentWarning,
+    },
+    workflowCardDisabled: {
+      opacity: 0.5,
+    },
+    workflowHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+    },
+    workflowInfo: {
+      flex: 1,
+      marginRight: 12,
+    },
+    workflowTitle: {
+      fontSize: 16,
+      fontWeight: '600',
+      color: colors.text,
+      marginBottom: 4,
+    },
+    workflowDescription: {
+      fontSize: 13,
+      color: colors.muted,
+    },
+    statusBadge: {
+      paddingHorizontal: 8,
+      paddingVertical: 4,
+      borderRadius: 4,
+    },
+    statusText: {
+      fontSize: 11,
+      fontWeight: '600',
+      color: '#fff', // eslint-disable-line no-restricted-syntax
+    },
+  });
+};
 
 export default AutomationTab;

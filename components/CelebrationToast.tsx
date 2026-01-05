@@ -2,17 +2,25 @@
  * Celebration Toast Component
  * 
  * Beautiful animated toast for celebrating user achievements
- * with confetti effect and haptic feedback
+ * with confetti effect and haptic feedback.
+ * 
+ * Accessibility Features:
+ * - Respects user's reduce-motion preference
+ * - Announcement before auto-dismiss (3 seconds remaining)
+ * - Pauses on app focus loss
+ * - Haptic feedback for non-visual awareness
  */
 
 import { useEffect, useRef } from 'react';
-import { Animated, Dimensions, Modal, StyleSheet, Text, View } from 'react-native';
+import { AccessibilityInfo, Animated, Dimensions, Modal, StyleSheet, Text, View } from 'react-native';
 
 import { MAX_FONT_SCALE } from '../constants/A11Y';
 import { useReduceMotionEnabled } from '../hooks/useA11y';
+import { useModalTimer } from '../hooks/useModalTimer';
 import type { Celebration } from '../services/celebrations';
 import { celebrateWithHaptics } from '../services/celebrations';
 import { useAppPalette } from '../theme/usePalette';
+import { logger } from '../utils/logger';
 import { createShadow } from '../utils/shadow';
 
 const { width, height } = Dimensions.get('window');
@@ -23,16 +31,44 @@ interface CelebrationToastProps {
   duration?: number;
 }
 
+async function announceForAccessibility(message: string): Promise<void> {
+  if (typeof AccessibilityInfo?.announceForAccessibility === 'function') {
+    try {
+      await AccessibilityInfo.announceForAccessibility(message);
+    } catch (error) {
+      logger.warn('CelebrationToast', 'Failed to announce', error);
+    }
+  }
+}
+
 export default function CelebrationToast({ 
   celebration, 
   onDismiss,
-  duration = 3000 
+  duration = 5000  // Increased to 5s to match modal timing standard
 }: CelebrationToastProps) {
   const palette = useAppPalette();
   const reduceMotion = useReduceMotionEnabled();
   const slideAnim = useRef(new Animated.Value(reduceMotion ? 0 : -100)).current;
   const fadeAnim = useRef(new Animated.Value(reduceMotion ? 1 : 0)).current;
   const scaleAnim = useRef(new Animated.Value(reduceMotion ? 1 : 0.8)).current;
+  
+  const { startTimer, cancelTimer } = useModalTimer({
+    duration,
+    onDismiss,
+    onCountdownChange: (remaining) => {
+      // Could use this for visual countdown display if needed
+      if (remaining <= 0) {
+        dismissAnimation();
+      }
+    },
+    announceBeforeDismiss: true,
+    announceAtSeconds: 3,
+    onAccessibilityDismiss: (action) => {
+      if (action === 'auto') {
+        logger.info('CelebrationToast', 'Modal auto-dismissed after timeout');
+      }
+    },
+  });
   
   useEffect(() => {
     if (celebration) {
@@ -46,12 +82,12 @@ export default function CelebrationToast({
         fadeAnim.setValue(1);
         scaleAnim.setValue(1);
         
-        // Auto dismiss after duration
-        const timer = setTimeout(() => {
-          onDismiss();
-        }, duration);
+        // Announce to accessibility users
+        announceForAccessibility(`${celebration.title}. ${celebration.message}`);
         
-        return () => clearTimeout(timer);
+        // Start timer
+        startTimer();
+        return () => cancelTimer();
       }
       
       // Animate in
@@ -73,19 +109,22 @@ export default function CelebrationToast({
           tension: 100,
           friction: 7,
         }),
-      ]).start();
+      ]).start(() => {
+        // Announce after animation completes
+        announceForAccessibility(`${celebration.title}. ${celebration.message}`);
+        
+        // Start timer after animation
+        startTimer();
+      });
       
-      // Auto dismiss after duration
-      const timer = setTimeout(() => {
-        dismissAnimation();
-      }, duration);
-      
-      return () => clearTimeout(timer);
+      return () => cancelTimer();
     }
     return undefined;
   }, [celebration, reduceMotion]);
   
   const dismissAnimation = () => {
+    cancelTimer();
+    
     if (reduceMotion) {
       onDismiss();
       return;

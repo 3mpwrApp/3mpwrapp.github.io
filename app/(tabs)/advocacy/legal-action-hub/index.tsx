@@ -79,14 +79,16 @@ const LegalActionHub: React.FC<LegalActionHubProps> = ({ initialTab = 'accountab
     }
   }, [activeTab]);
 
+  const s = styles(theme);
+
   return (
-    <View style={[styles.container, { paddingTop: insets.top, backgroundColor: theme.colors.background }]}>
+    <View style={[s.container, { paddingTop: insets.top, backgroundColor: theme.colors.background }]}>
       {/* Tab Navigation */}
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={styles.tabBar}
-        contentContainerStyle={styles.tabBarContent}
+        style={s.tabBar}
+        contentContainerStyle={s.tabBarContent}
       >
         {tabs.map((tab) => (
           <TabButton
@@ -101,9 +103,9 @@ const LegalActionHub: React.FC<LegalActionHubProps> = ({ initialTab = 'accountab
 
       {/* Tab Content */}
       <ScrollView
-        style={styles.content}
+        style={s.content}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.contentContainer}
+        contentContainerStyle={s.contentContainer}
       >
         {renderTabContent()}
       </ScrollView>
@@ -118,39 +120,44 @@ interface TabButtonProps {
   theme: any;
 }
 
-const TabButton: React.FC<TabButtonProps> = ({ isActive, tab, onPress, theme }) => (
-  <View
-    style={[
-      styles.tabButton,
-      isActive && [
-        styles.tabButtonActive,
-        { borderBottomColor: theme.colors.primary },
-      ],
-    ]}
-  >
-    <Text
+const TabButton: React.FC<TabButtonProps> = ({ isActive, tab, onPress, theme }) => {
+  const s = styles(theme) as any;
+  return (
+    <View
       style={[
-        styles.tabButtonText,
-        { color: isActive ? theme.colors.primary : theme.colors.text },
+        s.tabButton,
+        isActive && [
+          s.tabButtonActive,
+          { borderBottomColor: theme.colors.primary },
+        ],
       ]}
-      onPress={onPress}
     >
-      {tab.icon} {tab.label}
-    </Text>
-  </View>
-);
+      <Text
+        style={[
+          s.tabButtonText,
+          { color: isActive ? theme.colors.primary : theme.colors.text },
+        ]}
+        onPress={onPress}
+      >
+        {tab.icon} {tab.label}
+      </Text>
+    </View>
+  );
+};
 
 // Placeholder component imports (to be replaced with actual components)
 const Text = (props: any) => <View {...props} />;
 
-const styles = StyleSheet.create({
+const styles = (theme: any) => StyleSheet.create({
   container: {
     flex: 1,
   },
   tabBar: {
-    backgroundColor: '#f5f5f5',
+    // eslint-disable-next-line no-restricted-syntax
+    backgroundColor: theme.colors?.card || '#f5f5f5',
     borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
+    // eslint-disable-next-line no-restricted-syntax
+    borderBottomColor: theme.colors?.border || '#e0e0e0',
   },
   tabBarContent: {
     paddingHorizontal: 12,

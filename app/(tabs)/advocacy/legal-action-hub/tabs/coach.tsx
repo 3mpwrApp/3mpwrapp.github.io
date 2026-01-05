@@ -3,6 +3,7 @@
  * Consolidates: accountability-coach, accountability-network
  */
 
+import { useTheme } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -14,7 +15,22 @@ interface CoachResource {
   duration: string;
 }
 
+const FALLBACK_COLORS = {
+  text: '#1f2937', // eslint-disable-line no-restricted-syntax
+  muted: '#6b7280', // eslint-disable-line no-restricted-syntax
+  mutedLight: '#9ca3af', // eslint-disable-line no-restricted-syntax
+  primary: '#3b82f6', // eslint-disable-line no-restricted-syntax
+  card: '#fff', // eslint-disable-line no-restricted-syntax
+  border: '#d1d5db', // eslint-disable-line no-restricted-syntax
+  accent: '#8b5cf6', // eslint-disable-line no-restricted-syntax
+  success: '#10b981', // eslint-disable-line no-restricted-syntax
+  warning: '#f59e0b', // eslint-disable-line no-restricted-syntax
+  error: '#ef4444', // eslint-disable-line no-restricted-syntax
+};
+
 const CoachTab: React.FC = () => {
+  const theme = useTheme();
+  const styles = createStyles(theme);
   const [selectedCategory, setSelectedCategory] = useState<'script' | 'support' | 'evidence' | 'all'>('all');
 
   const resources: CoachResource[] = [
@@ -88,91 +104,103 @@ const CoachTab: React.FC = () => {
 const getDifficultyColor = (difficulty: string) => {
   switch (difficulty) {
     case 'easy':
-      return '#10b981';
+      return FALLBACK_COLORS.success;
     case 'medium':
-      return '#f59e0b';
+      return FALLBACK_COLORS.warning;
     case 'advanced':
-      return '#ef4444';
+      return FALLBACK_COLORS.error;
     default:
-      return '#6b7280';
+      return FALLBACK_COLORS.muted;
   }
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 16,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: '700',
-    marginBottom: 16,
-    color: '#1f2937',
-    paddingHorizontal: 16,
-  },
-  filterBar: {
-    paddingHorizontal: 16,
-    marginBottom: 16,
-    flexDirection: 'row',
-  },
-  filterButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: '#d1d5db',
-    marginRight: 8,
-  },
-  filterButtonActive: {
-    backgroundColor: '#3b82f6',
-    borderColor: '#3b82f6',
-  },
-  filterButtonText: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#6b7280',
-  },
-  filterButtonTextActive: {
-    color: '#fff',
-  },
-  resourcesList: {
-    paddingHorizontal: 16,
-  },
-  resourceCard: {
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    padding: 12,
-    marginBottom: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: '#8b5cf6',
-  },
-  resourceHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    marginBottom: 8,
-  },
-  resourceTitle: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#1f2937',
-    flex: 1,
-  },
-  difficultyBadge: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 4,
-    marginLeft: 8,
-  },
-  difficultyText: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: '#fff',
-  },
-  resourceDuration: {
-    fontSize: 12,
-    color: '#9ca3af',
-  },
-});
+const createStyles = (theme: any) => {
+  const colors = {
+    text: theme.colors?.text || FALLBACK_COLORS.text,
+    muted: theme.colors?.text ? FALLBACK_COLORS.muted : FALLBACK_COLORS.muted,
+    mutedLight: FALLBACK_COLORS.mutedLight,
+    primary: theme.colors?.primary || FALLBACK_COLORS.primary,
+    card: theme.colors?.card || FALLBACK_COLORS.card,
+    border: theme.colors?.border || FALLBACK_COLORS.border,
+    accent: FALLBACK_COLORS.accent,
+  };
+
+  return StyleSheet.create({
+    container: {
+      flex: 1,
+      paddingTop: 16,
+    },
+    title: {
+      fontSize: 20,
+      fontWeight: '700',
+      marginBottom: 16,
+      color: colors.text,
+      paddingHorizontal: 16,
+    },
+    filterBar: {
+      paddingHorizontal: 16,
+      marginBottom: 16,
+      flexDirection: 'row',
+    },
+    filterButton: {
+      paddingHorizontal: 12,
+      paddingVertical: 6,
+      borderRadius: 20,
+      borderWidth: 1,
+      borderColor: colors.border,
+      marginRight: 8,
+    },
+    filterButtonActive: {
+      backgroundColor: colors.primary,
+      borderColor: colors.primary,
+    },
+    filterButtonText: {
+      fontSize: 12,
+      fontWeight: '600',
+      color: colors.muted,
+    },
+    filterButtonTextActive: {
+      color: '#fff', // eslint-disable-line no-restricted-syntax
+    },
+    resourcesList: {
+      paddingHorizontal: 16,
+    },
+    resourceCard: {
+      backgroundColor: colors.card,
+      borderRadius: 8,
+      padding: 12,
+      marginBottom: 12,
+      borderLeftWidth: 4,
+      borderLeftColor: colors.accent,
+    },
+    resourceHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+      marginBottom: 8,
+    },
+    resourceTitle: {
+      fontSize: 14,
+      fontWeight: '600',
+      color: colors.text,
+      flex: 1,
+    },
+    difficultyBadge: {
+      paddingHorizontal: 8,
+      paddingVertical: 4,
+      borderRadius: 4,
+      marginLeft: 8,
+    },
+    difficultyText: {
+      fontSize: 11,
+      fontWeight: '600',
+      color: '#fff', // eslint-disable-line no-restricted-syntax
+    },
+    resourceDuration: {
+      fontSize: 12,
+      color: colors.mutedLight,
+    },
+  });
+};
 
 export default CoachTab;

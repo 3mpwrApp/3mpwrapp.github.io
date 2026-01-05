@@ -1,83 +1,19 @@
 # Analytics Event Report
 
-Generated: 2026-01-03T03:39:30.471Z
+Generated: 2026-01-05T03:01:16.294Z
 
 ## Summary
 
-- Registry events: 176
-- Unique events referenced in code: 115
-- Total literal emissions (static scan): 116
-- Missing (used not registered): 1
-- Unused (registered not used): 62
+- Registry events: 111
+- Unique events referenced in code: 109
+- Total literal emissions (static scan): 110
+- Missing (used not registered): 0
+- Unused (registered not used): 2
 - Sensitive field occurrences (schema): 6
 - Classification counts: other=2, secret=1, pii=3
 
-### Missing
-
-- SCREEN_REDIRECT
-
 ### Unused
 
-- ai_command_center_used
-- quick_log_used
-- advocacy.ask.submitted
-- advocacy.finder.search
-- advocacy.finder.open_website
-- advocacy.finder.email
-- advocacy.finder.open_map
-- advocacy.finder.save_toggle
-- letter_insert_from_trackers
-- energy_set_daily
-- energy_spend
-- energy_reset_day
-- wellness_opposite_next_step
-- assistant.quick_prompt
-- assistant.recents.clear
-- assistant.search_open
-- events.export.ics
-- events.export.csv
-- events.subscribe.calendar
-- events.create
-- events.delete
-- events.share
-- events.add_to_calendar
-- events.submit_to_3mpwr
-- evidence.export.encrypted
-- evidence.import.encrypted
-- evidence.save.single
-- evidence.save.bulk
-- evidence.queue.enqueued
-- evidence.queue.processed
-- jurisdiction.changed
-- jurisdiction.deadline_calculated
-- jurisdiction.form_helper_used
-- assistant.disability_wizard_cta
-- beta.session.start
-- beta.session.end
-- beta.feedback.banner.shown
-- beta.feedback.banner.dismissed
-- beta.feedback.initiated
-- beta.discord.opened
-- beta.nps.survey.shown
-- beta.nps.score.selected
-- beta.nps.survey.completed
-- beta.nps.survey.dismissed
-- beta.onboarding.quick.started
-- beta.feature.first_use
-- beta.tab.visit
-- beta.complexity.mode.changed
-- beta.error.encountered
-- beta.crash.recovered
-- beta.a11y.feature.enabled
-- beta.tool.usage
-- beta.session.duration
-- body.area.view
-- body.tool.open
-- chronic.condition.add
-- chronic.condition.select
-- chronic.tool.open
-- legal.action
-- legal.case.open
 - rehab.program.open
 - selfcare.library.open
 
@@ -88,16 +24,14 @@ Generated: 2026-01-03T03:39:30.471Z
 | account_delete | 1 |
 | account_delete_failed | 1 |
 | adaptive | 2 |
-| advocacy | 8 |
+| advocacy | 2 |
 | ai | 2 |
-| ai_command_center_used | 1 |
 | allies | 2 |
-| assistant | 4 |
-| beta | 26 |
+| beta | 7 |
 | beta_discord_opened | 1 |
 | beta_feedback_banner_dismissed | 1 |
 | beta_feedback_initiated | 1 |
-| body | 4 |
+| body | 2 |
 | bookmark_add | 1 |
 | bookmark_clear_all | 1 |
 | bookmark_remove | 1 |
@@ -106,7 +40,6 @@ Generated: 2026-01-03T03:39:30.471Z
 | campaign_join | 1 |
 | campaign_leave | 1 |
 | campaign_share | 1 |
-| chronic | 3 |
 | claims | 2 |
 | coach | 2 |
 | deadlines | 2 |
@@ -115,22 +48,16 @@ Generated: 2026-01-03T03:39:30.471Z
 | document | 1 |
 | emergency | 2 |
 | energy | 1 |
-| energy_reset_day | 1 |
-| energy_set_daily | 1 |
-| energy_spend | 1 |
 | environment | 2 |
 | error_displayed | 1 |
-| events | 8 |
-| evidence | 13 |
-| jurisdiction | 3 |
-| legal | 10 |
-| letter_insert_from_trackers | 1 |
+| evidence | 7 |
 | letter_wizard_delete | 1 |
 | letter_wizard_insert_trackers | 1 |
 | letter_wizard_load | 1 |
 | letter_wizard_save | 1 |
 | master | 1 |
 | meds | 1 |
+| mentor | 5 |
 | mood | 1 |
 | movement | 2 |
 | myths | 1 |
@@ -143,14 +70,11 @@ Generated: 2026-01-03T03:39:30.471Z
 | nutrition | 2 |
 | onboarding | 6 |
 | podcast_share | 1 |
-| policy | 2 |
-| quick_log_used | 1 |
 | ratings | 3 |
 | recovery | 1 |
 | rehab | 3 |
 | rights | 2 |
 | rtw | 2 |
-| SCREEN_REDIRECT | 1 |
 | selfcare | 2 |
 | support | 2 |
 | symptoms | 2 |
@@ -158,7 +82,6 @@ Generated: 2026-01-03T03:39:30.471Z
 | tools | 2 |
 | tracker_add_entry | 1 |
 | tracker_share | 1 |
-| wellness_opposite_next_step | 1 |
 | world | 3 |
 
 ## Event Usage
@@ -187,16 +110,6 @@ Generated: 2026-01-03T03:39:30.471Z
 | evidence.voice.toggle | 1 | OK |
 | evidence.voice.play | 1 | OK |
 | evidence.checklist.toggle | 1 | OK |
-| legal.track.case.open | 1 | OK |
-| legal.track.action | 1 | OK |
-| legal.coach.script | 1 | OK |
-| legal.coach.action | 1 | OK |
-| legal.resource | 1 | OK |
-| legal.match.view | 1 | OK |
-| legal.automation.tool | 1 | OK |
-| legal.jaas.service | 1 | OK |
-| policy.area | 1 | OK |
-| policy.action | 1 | OK |
 | advocacy.world.view | 1 | OK |
 | deadlines.open | 1 | OK |
 | deadlines.add | 1 | OK |
@@ -258,6 +171,11 @@ Generated: 2026-01-03T03:39:30.471Z
 | letter_wizard_load | 1 | OK |
 | letter_wizard_delete | 1 | OK |
 | letter_wizard_insert_trackers | 1 | OK |
+| mentor.search | 1 | OK |
+| mentor.loadMore | 1 | OK |
+| mentor.profileView | 1 | OK |
+| mentor.requestSent | 1 | OK |
+| mentor.messageInitiated | 1 | OK |
 | nps_survey_shown | 1 | OK |
 | nps_score_selected | 1 | OK |
 | nps_survey_completed | 1 | OK |
@@ -266,7 +184,6 @@ Generated: 2026-01-03T03:39:30.471Z
 | beta.onboarding.quick.disclaimers_accepted | 1 | OK |
 | beta.onboarding.quick.mode_selected | 1 | OK |
 | beta.onboarding.quick.completed | 1 | OK |
-| SCREEN_REDIRECT | 1 | MISSING |
 | notification.delivered | 1 | OK |
 | notification.quiet_suppressed | 1 | OK |
 | onboarding.app.first_opened | 1 | OK |

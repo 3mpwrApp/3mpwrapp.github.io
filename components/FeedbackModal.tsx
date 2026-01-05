@@ -6,13 +6,14 @@
  * - Reason selection (helpful, not relevant, misleading, other)
  * - Optional comment field
  * - Store feedback in Firestore and analytics
- * - Confirmation message
- * - Full accessibility
+ * - Confirmation message with auto-dismiss
+ * - Full accessibility with announcements
  */
 
 import { Ionicons } from '@expo/vector-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
+    AccessibilityInfo,
     ActivityIndicator,
     Alert,
     KeyboardAvoidingView,
@@ -27,8 +28,10 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { HIT_SLOP_8 } from '../constants/A11Y';
+import { useModalTimer } from '../hooks/useModalTimer';
 import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
+import { logger } from '../utils/logger';
 
 import A11yPressable from './A11yPressable';
 import { GapView } from './GapView';
@@ -44,6 +47,16 @@ export interface FeedbackModalProps {
 
 // Feedback reasons will be translated in component using t() function
 
+async function announceForAccessibility(message: string): Promise<void> {
+  if (typeof AccessibilityInfo?.announceForAccessibility === 'function') {
+    try {
+      await AccessibilityInfo.announceForAccessibility(message);
+    } catch (error) {
+      logger.warn('FeedbackModal', 'Failed to announce', error);
+    }
+  }
+}
+
 export default function FeedbackModal({
   visible,
   onClose,
@@ -58,6 +71,29 @@ export default function FeedbackModal({
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const { startTimer, cancelTimer } = useModalTimer({
+    duration: 4000,  // Shorter duration for success message - user already completed action
+    onDismiss: () => {
+      setSubmitted(false);
+      onClose();
+    },
+    announceBeforeDismiss: true,
+    announceAtSeconds: 2,  // Announce at 2s for quicker messages
+    onAccessibilityDismiss: (action) => {
+      if (action === 'auto') {
+        logger.info('FeedbackModal', 'Success modal auto-dismissed');
+      }
+    },
+  });
+
+  // Start timer when success is shown
+  useEffect(() => {
+    if (submitted) {
+      startTimer();
+    }
+    return () => cancelTimer();
+  }, [submitted, startTimer, cancelTimer]);
+
   const handleSubmit = async () => {
     if (!selectedReason) {
       Alert.alert(t('components.feedback.alertTitle', 'Please select a reason'), t('components.feedback.alertMessage', 'Choose a feedback reason to continue'));
@@ -67,13 +103,14 @@ export default function FeedbackModal({
     setLoading(true);
     try {
       await onSubmit(selectedReason, comment || undefined);
+      
+      // Announce success before showing confirmation
+      await announceForAccessibility(t('components.feedback.thankYou', 'Thank you! Your feedback helps us improve'));
+      
       setSubmitted(true);
-      setTimeout(() => {
-        setSubmitted(false);
-        onClose();
-      }, 1500);
-    } catch {
+    } catch (error) {
       Alert.alert(t('components.feedback.error', 'Error'), t('components.feedback.errorMessage', 'Failed to submit feedback. Please try again.'));
+      logger.warn('FeedbackModal', 'Feedback submission failed', error);
     } finally {
       setLoading(false);
     }

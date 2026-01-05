@@ -26,7 +26,7 @@ interface RedirectScreenProps {
  */
 export default function RedirectScreen({
   to,
-  tab,
+  tab: _tab,
 }: RedirectScreenProps) {
   const router = useRouter();
   const palette = useAppPalette();

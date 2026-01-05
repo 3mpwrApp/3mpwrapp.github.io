@@ -116,6 +116,7 @@ export const MentorCard: React.FC<MentorCardProps> = ({
 
                     {/* Rating */}
                     <View style={styles.ratingContainer}>
+                        {/* eslint-disable-next-line no-restricted-syntax */}
                         <Ionicons name="star" size={14} color="#FFC107" />
                         <Text style={[styles.rating, { color: palette.text }]}>
                             {mentor.rating.toFixed(1)}

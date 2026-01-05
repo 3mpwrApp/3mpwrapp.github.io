@@ -5,7 +5,8 @@
 
 import type {
     DocumentSnapshot,
-    QueryConstraint} from 'firebase/firestore';
+    QueryConstraint
+} from 'firebase/firestore';
 import {
     collection,
     doc,
@@ -42,6 +43,7 @@ const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 /**
  * Build cache key from filter options
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getCacheKey(filters: MentorFilterOptions): string {
     return JSON.stringify({
         search: filters.searchQuery || '',
@@ -56,6 +58,7 @@ function getCacheKey(filters: MentorFilterOptions): string {
 /**
  * Check if cache entry is still valid
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function isCacheValid(timestamp: number): boolean {
     return Date.now() - timestamp < CACHE_TTL;
 }

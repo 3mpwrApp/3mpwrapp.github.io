@@ -29,7 +29,7 @@ import {
 } from 'react-native';
 
 import { HIT_SLOP_12 } from '../constants/A11Y';
-import { MAX_FONT_SCALE } from '../hooks/useA11y';
+import { MAX_FONT_SCALE, useReduceMotionEnabled } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import { useAppPalette } from '../theme/usePalette';
 
@@ -130,6 +130,7 @@ export function VisualAlert({
 }: VisualAlertProps) {
   const opacity = useRef(new Animated.Value(0)).current;
   const palette = useAppPalette();
+  const reduceMotion = useReduceMotionEnabled();
 
   const getColor = () => {
     switch (type) {
@@ -142,26 +143,35 @@ export function VisualAlert({
 
   useEffect(() => {
     if (active) {
-      // Create flash animation sequence
-      const flashes: Animated.CompositeAnimation[] = [];
-      for (let i = 0; i < flashCount; i++) {
-        flashes.push(
-          Animated.timing(opacity, {
-            toValue: 0.7,
-            duration: 100,
-            useNativeDriver: true,
-          }),
-          Animated.timing(opacity, {
-            toValue: 0,
-            duration: 100,
-            useNativeDriver: true,
-          })
-        );
-      }
+      if (!reduceMotion) {
+        // Create flash animation sequence (skip if reduce motion is enabled)
+        const flashes: Animated.CompositeAnimation[] = [];
+        for (let i = 0; i < flashCount; i++) {
+          flashes.push(
+            Animated.timing(opacity, {
+              toValue: 0.7,
+              duration: 100,
+              useNativeDriver: true,
+            }),
+            Animated.timing(opacity, {
+              toValue: 0,
+              duration: 100,
+              useNativeDriver: true,
+            })
+          );
+        }
 
-      Animated.sequence(flashes).start(() => {
-        onComplete?.();
-      });
+        Animated.sequence(flashes).start(() => {
+          onComplete?.();
+        });
+      } else {
+        // Snap to opacity 0.7 without animation and immediately complete
+        opacity.setValue(0.7);
+        setTimeout(() => {
+          opacity.setValue(0);
+          onComplete?.();
+        }, 200);
+      }
 
       // Also trigger vibration
       if (Platform.OS !== 'web') {
@@ -216,6 +226,7 @@ export function AccessibleTypingIndicator({
 }: TypingIndicatorProps) {
   const { t } = useTranslation();
   const palette = useAppPalette();
+  const reduceMotion = useReduceMotionEnabled();
   const dot1 = useRef(new Animated.Value(0)).current;
   const dot2 = useRef(new Animated.Value(0)).current;
   const dot3 = useRef(new Animated.Value(0)).current;
@@ -224,31 +235,39 @@ export function AccessibleTypingIndicator({
     if (!isTyping) {
       return;
     }
-    
-    const animate = (dot: Animated.Value, delay: number) => {
-      return Animated.loop(
-        Animated.sequence([
-          Animated.delay(delay),
-          Animated.timing(dot, { toValue: 1, duration: 300, useNativeDriver: true }),
-          Animated.timing(dot, { toValue: 0, duration: 300, useNativeDriver: true }),
-        ])
-      );
-    };
 
-    const anim1 = animate(dot1, 0);
-    const anim2 = animate(dot2, 150);
-    const anim3 = animate(dot3, 300);
+    if (!reduceMotion) {
+      // Only run animation if reduce motion is not enabled
+      const animate = (dot: Animated.Value, delay: number) => {
+        return Animated.loop(
+          Animated.sequence([
+            Animated.delay(delay),
+            Animated.timing(dot, { toValue: 1, duration: 300, useNativeDriver: true }),
+            Animated.timing(dot, { toValue: 0, duration: 300, useNativeDriver: true }),
+          ])
+        );
+      };
 
-    anim1.start();
-    anim2.start();
-    anim3.start();
+      const anim1 = animate(dot1, 0);
+      const anim2 = animate(dot2, 150);
+      const anim3 = animate(dot3, 300);
 
-    return () => {
-      anim1.stop();
-      anim2.stop();
-      anim3.stop();
-    };
-  }, [isTyping]);
+      anim1.start();
+      anim2.start();
+      anim3.start();
+
+      return () => {
+        anim1.stop();
+        anim2.stop();
+        anim3.stop();
+      };
+    } else {
+      // Snap dots to visible state without animation
+      dot1.setValue(0.6);
+      dot2.setValue(0.6);
+      dot3.setValue(0.6);
+    }
+  }, [isTyping, reduceMotion]);
 
   if (!isTyping) return null;
 

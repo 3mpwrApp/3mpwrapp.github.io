@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 
 import { HIT_SLOP_12 } from '../constants/A11Y';
+import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import {
     getFocusLock,
@@ -34,6 +35,7 @@ export interface FocusLockProps {
 export default function FocusLock({ visible = true }: FocusLockProps) {
   const { t } = useTranslation();
   const palette = useAppPalette();
+  const reduceMotion = useReduceMotionEnabled();
   const pathname = usePathname();
   
   // Get readable screen name from path
@@ -65,16 +67,21 @@ export default function FocusLock({ visible = true }: FocusLockProps) {
   // Pulse animation when locked
   useEffect(() => {
     if (isLocked) {
-      Animated.loop(
-        Animated.sequence([
-          Animated.timing(pulseAnim, { toValue: 1.1, duration: 1000, useNativeDriver: true }),
-          Animated.timing(pulseAnim, { toValue: 1, duration: 1000, useNativeDriver: true }),
-        ])
-      ).start();
+      if (!reduceMotion) {
+        Animated.loop(
+          Animated.sequence([
+            Animated.timing(pulseAnim, { toValue: 1.1, duration: 1000, useNativeDriver: true }),
+            Animated.timing(pulseAnim, { toValue: 1, duration: 1000, useNativeDriver: true }),
+          ])
+        ).start();
+      } else {
+        // Snap to base scale without animation for users with motion sensitivity
+        pulseAnim.setValue(1);
+      }
     } else {
       pulseAnim.setValue(1);
     }
-  }, [isLocked, pulseAnim]);
+  }, [isLocked, pulseAnim, reduceMotion]);
   
   const handleToggleLock = useCallback(async () => {
     if (isLocked) {

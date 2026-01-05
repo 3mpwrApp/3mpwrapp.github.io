@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-01-05T00:47:43.496Z",
+  "duration": 7,
+  "summary": {
+    "total": 15,
+    "passed": 2,
+    "failed": 13,
+    "criticalFailed": 3,
+    "passRate": "13%"
+  },
+  "results": [
+    {
+      "name": "ESLint (Code Quality)",
+      "status": "FAIL",
+      "critical": true,
+      "output": "Command failed: npm run lint 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run lint 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "TypeScript (Type Checking)",
+      "status": "FAIL",
+      "critical": true,
+      "output": "Command failed: npm run typecheck:strict 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run typecheck:strict 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "i18n Validation",
+      "status": "PASS",
+      "critical": true,
+      "output": "\n> empowrapp@1.0.0 i18n:validate\n> node ./scripts/i18n-validate-json.js\n\ni18n-validate-json: OK\n"
+    },
+    {
+      "name": "i18n Test Suite",
+      "status": "FAIL",
+      "critical": false,
+      "output": "Command failed: npm run i18n:test 2>&1 | head -30\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run i18n:test 2>&1 | head -30\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Structure Validation",
+      "status": "FAIL",
+      "critical": false,
+      "output": "Command failed: npm run validate:structure 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run validate:structure 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Analytics Validation",
+      "status": "FAIL",
+      "critical": false,
+      "output": "Command failed: npm run check:analytics 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run check:analytics 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Incomplete Code Scan",
+      "status": "FAIL",
+      "critical": false,
+      "output": "Command failed: npm run scan:incomplete:soft 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run scan:incomplete:soft 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Tab Names Check",
+      "status": "PASS",
+      "critical": false,
+      "output": "\n> empowrapp@1.0.0 check:tabs:names\n> node ./scripts/check-tabs-screen-names.mjs\n\n"
+    },
+    {
+      "name": "Security Validation",
+      "status": "FAIL",
+      "critical": false,
+      "output": "\n> empowrapp@1.0.0 security:validate\n> node ./scripts/security-validate.js\n\n🔒 3mpwrApp Security Validation\n\n📊 Validating security framework...\n🔐 Validating encryption...\n🌐 Validating network security...\n📱 Validating app configuration...\n🔍 Checking for hardcoded secrets...\n☁️ Validating BYOC mode...\n🏗️ Validating build security...\n\n🔒 Security Validation Results\n==============================\n\n✅ PASSED (9):\n  ✅ Security framework files present\n  ✅ AES-256 encryption implemented\n  ✅ Secure ",
+      "error": "Command failed: npm run security:validate 2>&1"
+    },
+    {
+      "name": "Bundle Budget Check",
+      "status": "FAIL",
+      "critical": false,
+      "output": "Command failed: npm run perf:budget 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run perf:budget 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "WCAG AAA Audit",
+      "status": "FAIL",
+      "critical": false,
+      "output": "Command failed: npm run wcag:aaa 2>&1 | head -30\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run wcag:aaa 2>&1 | head -30\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Accessibility Scan",
+      "status": "FAIL",
+      "critical": false,
+      "output": "Command failed: npm run a11y:scan 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run a11y:scan 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Jest Tests",
+      "status": "FAIL",
+      "critical": true,
+      "output": "Command failed: npm test 2>&1 | tail -30\n'tail' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm test 2>&1 | tail -30\n'tail' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Expo Doctor",
+      "status": "FAIL",
+      "critical": false,
+      "output": "Command failed: npx expo doctor 2>&1 | head -40\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npx expo doctor 2>&1 | head -40\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Web Build Compatibility",
+      "status": "FAIL",
+      "critical": false,
+      "output": "Command failed: npm run web:validate 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n",
+      "error": "Command failed: npm run web:validate 2>&1 | head -20\n'head' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    }
+  ]
+}

@@ -139,7 +139,7 @@ export const MentorList: React.FC<MentorListProps> = ({
     );
 };
 
-function createStyles(palette: any) {
+function createStyles(_palette: any) {
     return StyleSheet.create({
         listContent: {
             paddingHorizontal: 16,

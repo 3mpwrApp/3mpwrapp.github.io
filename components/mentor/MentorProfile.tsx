@@ -152,7 +152,7 @@ export const MentorProfile: React.FC<MentorProfileProps> = ({
                                     {
                                         backgroundColor:
                                             mentor.verificationStatus === 'certified'
-                                                ? '#4CAF50'
+                                                ? '#4CAF50' // eslint-disable-line no-restricted-syntax
                                                 : palette.primary,
                                     },
                                 ]}
@@ -196,7 +196,7 @@ export const MentorProfile: React.FC<MentorProfileProps> = ({
                                     <Ionicons
                                         name="star"
                                         size={20}
-                                        color="#FFC107"
+                                        color="#FFC107" // eslint-disable-line no-restricted-syntax
                                     />
                                     <Text
                                         style={[

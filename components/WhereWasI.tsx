@@ -19,6 +19,7 @@ import {
 } from 'react-native';
 
 import { HIT_SLOP_12 } from '../constants/A11Y';
+import { useReduceMotionEnabled } from '../hooks/useA11y';
 import { useTranslation } from '../i18n';
 import {
     formatRelativeTime,
@@ -56,6 +57,7 @@ export function WhereWasI({
   const palette = useAppPalette();
   const router = useRouter();
   const { whereWasIEnabled } = useCognitiveComfort();
+  const reduceMotion = useReduceMotionEnabled();
 
   const [isOpen, setIsOpen] = useState(false);
   const [history, setHistory] = useState<NavigationHistoryEntry[]>([]);
@@ -83,15 +85,18 @@ export function WhereWasI({
     return subscribe(updateHistory);
   }, [maxItems]);
   
-  // Bounce animation when history updates
+  // Bounce animation when history updates (respects reduceMotion preference)
   useEffect(() => {
-    if (history.length > 0) {
+    if (history.length > 0 && !reduceMotion) {
       Animated.sequence([
         Animated.timing(bounceAnim, { toValue: 1.2, duration: 150, useNativeDriver: true }),
         Animated.timing(bounceAnim, { toValue: 1, duration: 150, useNativeDriver: true }),
       ]).start();
+    } else if (reduceMotion) {
+      // Snap to final value without animation
+      bounceAnim.setValue(1);
     }
-  }, [history.length, bounceAnim]);
+  }, [history.length, bounceAnim, reduceMotion]);
   
   const handleOpen = useCallback(() => {
     setIsOpen(true);

@@ -107,7 +107,12 @@
     "byoc:validate": "set EXPO_PUBLIC_DATA_POLICY=strict_byoc&& npm run security:validate",
     "validate:structure": "node ./scripts/validate-structure.mjs",
     "validate:structure:verbose": "node ./scripts/validate-structure.mjs --verbose",
-    "validate:structure:report": "node ./scripts/validate-structure.mjs --report"
+    "validate:structure:report": "node ./scripts/validate-structure.mjs --report",
+    "doctor": "npx expo-doctor",
+    "audit": "node ./scripts/comprehensive-audit.mjs",
+    "audit:quick": "npm run lint && npm run typecheck:strict && npm test",
+    "audit:full": "npm run audit",
+    "audit:ci": "npm run audit"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
