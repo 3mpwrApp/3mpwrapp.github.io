@@ -56,15 +56,19 @@ export default function GDriveCallbackScreen() {
         if (code) {
           setStatusMessage('✓ Authorization successful! Sending to app...');
           console.warn('[GDrive Callback] Sending authorization code to parent window');
+          console.warn('[GDrive Callback] Code:', code.substring(0, 20) + '...');
           
           // Send the code back to the parent window (the app)
-          window.opener.postMessage(
-            {
-              type: 'expo-auth-session',
-              url: url, // Send full URL with code
-            },
-            '*' // Allow cross-origin for OAuth callback
-          );
+          // Multiple retries to ensure message gets through
+          for (let i = 0; i < 3; i++) {
+            window.opener.postMessage(
+              {
+                type: 'expo-auth-session',
+                url: url, // Send full URL with code
+              },
+              '*' // Allow cross-origin for OAuth callback
+            );
+          }
         } else if (error) {
           setStatusMessage(`❌ OAuth error: ${error}\n${errorDesc || ''}`);
           console.warn('[GDrive Callback] Error:', error);

@@ -125,6 +125,99 @@ function getGoogleClientId(): string | null {
  * WEB: Uses implicit flow (token response type) - no client_secret needed
  * NATIVE: Currently uses implicit flow too (code flow needs backend token exchange)
  */
+/**
+ * Web-specific OAuth flow: Open popup and listen for postMessage from callback
+ */
+function webOAuthFlow(
+  clientId: string,
+  redirectUri: string,
+): Promise<{ code?: string; error?: string }> {
+  return new Promise((resolve) => {
+    logger.log('[GDrive] Web OAuth: Opening popup to OAuth endpoint');
+
+    // Build the OAuth URL
+    const oauthUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
+    oauthUrl.searchParams.set('client_id', clientId);
+    oauthUrl.searchParams.set('redirect_uri', redirectUri);
+    oauthUrl.searchParams.set('response_type', 'code');
+    oauthUrl.searchParams.set(
+      'scope',
+      'https://www.googleapis.com/auth/drive.file openid profile email'
+    );
+    oauthUrl.searchParams.set('access_type', 'offline'); // Get refresh token
+
+    logger.log('[GDrive] OAuth URL:', oauthUrl.toString());
+
+    // Open popup to OAuth endpoint
+    const popup = window.open(oauthUrl.toString(), 'gdrive-oauth', 'width=500,height=600');
+    if (!popup) {
+      logger.error('[GDrive] Could not open popup - blocked by browser');
+      resolve({ error: 'Browser blocked popup. Please allow popups and try again.' });
+      return;
+    }
+
+    // Set up listener for postMessage from callback page
+    const handleMessage = (event: MessageEvent) => {
+      logger.warn('[GDrive] Web OAuth: Received message event');
+      logger.warn('[GDrive] Message origin:', event.origin);
+      logger.warn('[GDrive] Message type:', event.data?.type);
+
+      // Check message is from our callback page
+      if (event.data?.type === 'expo-auth-session') {
+        logger.log('[GDrive] Web OAuth: Received expo-auth-session message');
+        
+        // Parse the URL from the message
+        const url = event.data.url;
+        if (url) {
+          const urlObj = new URL(url);
+          const code = urlObj.searchParams.get('code');
+          const error = urlObj.searchParams.get('error');
+
+          logger.warn('[GDrive] Web OAuth: Parsed from callback URL');
+          logger.warn('[GDrive] - code present:', !!code);
+          logger.warn('[GDrive] - error:', error || 'none');
+
+          if (code) {
+            resolve({ code });
+          } else if (error) {
+            const errorDesc = urlObj.searchParams.get('error_description');
+            resolve({ error: `${error}: ${errorDesc}` });
+          } else {
+            resolve({ error: 'No code or error in callback' });
+          }
+        } else {
+          resolve({ error: 'No URL in message' });
+        }
+
+        // Clean up listener
+        window.removeEventListener('message', handleMessage);
+      }
+    };
+
+    // Listen for messages from callback page
+    window.addEventListener('message', handleMessage);
+
+    // Timeout after 5 minutes
+    const timeout = setTimeout(() => {
+      logger.error('[GDrive] Web OAuth: Timeout waiting for callback');
+      popup.close();
+      window.removeEventListener('message', handleMessage);
+      resolve({ error: 'OAuth timeout - took too long to authorize' });
+    }, 5 * 60 * 1000);
+
+    // If popup closes before we get a message, timeout
+    const popupCheckInterval = setInterval(() => {
+      if (popup.closed) {
+        clearInterval(popupCheckInterval);
+        clearTimeout(timeout);
+        window.removeEventListener('message', handleMessage);
+        logger.log('[GDrive] Web OAuth: Popup closed');
+        resolve({ error: 'OAuth window was closed' });
+      }
+    }, 500);
+  });
+}
+
 export async function authenticateGDrive(): Promise<GDriveAuthResult> {
   logger.log('[GDrive] === Starting authentication flow ===');
   const clientId = getGoogleClientId();
@@ -135,126 +228,88 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
   logger.log('[GDrive] Client ID found, proceeding with OAuth');
 
   try {
-    // Create the OAuth discovery document
-    const discovery = {
-      authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
-      tokenEndpoint: TOKEN_ENDPOINT,
-      revocationEndpoint: 'https://oauth2.googleapis.com/revoke',
-    };
-
-    // Use web redirect URI for ALL platforms (Google OAuth doesn't support custom schemes)
-    const redirectUri = Platform.OS === 'web'
-      ? AuthSession.makeRedirectUri({ path: 'gdrive-callback' })
-      : 'https://3mpwrapp.pages.dev/gdrive-callback';
-
+    const redirectUri = 'https://3mpwrapp.pages.dev/gdrive-callback';
     logger.log('[GDrive] Platform:', Platform.OS);
-    logger.log('[GDrive] Client ID:', clientId);
     logger.log('[GDrive] Redirect URI:', redirectUri);
 
-    // Use authorization code flow
-    // Google OAuth returns a code which is then exchanged for a token
-    const authRequest = new AuthSession.AuthRequest({
-      clientId,
-      scopes: [
-        'https://www.googleapis.com/auth/drive.file', // Only files created by app
-        'openid',
-        'profile',
-        'email',
-      ],
-      redirectUri,
-      responseType: AuthSession.ResponseType.Code,
-      usePKCE: false,
-    });
+    let code: string | undefined;
+    let authError: string | undefined;
 
-    // Prompt user for consent
-    logger.log('[GDrive] Opening auth prompt...');
-    logger.log('[GDrive] Auth request config:', {
-      clientId: clientId.substring(0, 20) + '...',
-      redirectUri,
-      scopes: authRequest.scopes,
-      responseType: authRequest.responseType,
-      usePKCE: authRequest.usePKCE,
-    });
+    // For web, use popup + postMessage approach
+    if (Platform.OS === 'web') {
+      logger.log('[GDrive] Using web OAuth flow (popup + postMessage)');
+      const webResult = await webOAuthFlow(clientId, redirectUri);
+      code = webResult.code;
+      authError = webResult.error;
 
-    let result;
-    try {
-      result = await authRequest.promptAsync(discovery);
-      logger.log('[GDrive] Prompt result type:', result.type);
-      if ('params' in result) {
-        logger.log('[GDrive] Prompt result params keys:', Object.keys(result.params));
+      if (authError) {
+        return { success: false, error: authError };
       }
-    } catch (promptError: any) {
-      logger.error('[GDrive] Error during promptAsync:', promptError);
-      return {
-        success: false,
-        error: `Failed to open Google sign-in: ${promptError.message || 'Unknown error'}. Make sure your browser/WebView is working.`
+    } else {
+      // For native, use expo-auth-session promptAsync
+      logger.log('[GDrive] Using native OAuth flow (expo-auth-session)');
+
+      const discovery = {
+        authorizationEndpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
+        tokenEndpoint: TOKEN_ENDPOINT,
+        revocationEndpoint: 'https://oauth2.googleapis.com/revoke',
       };
-    }
 
-    if (result.type !== 'success') {
-      logger.log('[GDrive] Auth cancelled or failed:', result.type);
+      const authRequest = new AuthSession.AuthRequest({
+        clientId,
+        scopes: [
+          'https://www.googleapis.com/auth/drive.file',
+          'openid',
+          'profile',
+          'email',
+        ],
+        redirectUri,
+        responseType: AuthSession.ResponseType.Code,
+        usePKCE: false,
+      });
 
-      // Check for redirect URI mismatch error
-      if (result.type === 'error' && 'params' in result) {
-        if (result.params?.error === 'redirect_uri_mismatch' ||
-            (result.params?.error_description && result.params.error_description.includes('redirect_uri'))) {
-          return {
-            success: false,
-            error: `Authorization blocked: Redirect URI mismatch\n\nThe redirect URI "${redirectUri}" is not registered in Google Cloud Console.\n\nPlease add this URI to your OAuth 2.0 Client ID:\n• https://3mpwrapp.pages.dev/gdrive-callback\n\nGo to: Google Cloud Console → APIs & Services → Credentials → Your OAuth Client ID → Authorized redirect URIs`
-          };
-        }
-
-        // Provide detailed error message
-        const errorDetails = result.params?.error_description || result.params?.error || result.type;
+      logger.log('[GDrive] Opening native auth prompt...');
+      let result;
+      try {
+        result = await authRequest.promptAsync(discovery);
+        logger.log('[GDrive] Native prompt result type:', result.type);
+      } catch (promptError: any) {
+        logger.error('[GDrive] Error during promptAsync:', promptError);
         return {
           success: false,
-          error: `Authentication failed: ${errorDetails}\n\nError type: ${result.params?.error || result.type}\nRedirect URI used: ${redirectUri}`
+          error: `Failed to open Google sign-in: ${promptError.message || 'Unknown error'}`
         };
       }
 
-      // Provide user-friendly error messages
-      let errorMessage: string;
-      if (result.type === 'cancel') {
-        errorMessage = 'You cancelled the Google sign-in. Please try again when ready.';
-      } else if (result.type === 'dismiss') {
-        errorMessage = 'The sign-in window was closed before completing. This can happen if:\n\n• You closed the browser window\n• The app couldn\'t redirect back properly\n• There was a network issue\n\nPlease try again and complete the sign-in process.';
-      } else if (result.type === 'locked') {
-        errorMessage = 'Another authentication is in progress. Please wait and try again.';
-      } else {
-        errorMessage = `Authentication failed: ${result.type}`;
+      if (result.type !== 'success') {
+        logger.log('[GDrive] Native auth failed:', result.type);
+        let errorMessage = `Authentication failed: ${result.type}`;
+        
+        if (result.type === 'cancel') {
+          errorMessage = 'You cancelled the Google sign-in. Please try again when ready.';
+        } else if (result.type === 'dismiss') {
+          errorMessage = 'The sign-in window was closed before completing. Please try again.';
+        }
+
+        return { success: false, error: errorMessage };
       }
 
-      return {
-        success: false,
-        error: errorMessage
-      };
-    }
+      if (!('params' in result) || !result.params) {
+        return { success: false, error: 'No parameters received from native auth' };
+      }
 
-    // Type guard: at this point we know result.type === 'success'
-    if (!('params' in result)) {
-      return {
-        success: false,
-        error: 'Authentication succeeded but no parameters received'
-      };
+      code = result.params.code;
     }
-
-    // For authorization code flow, we get a code that needs to be exchanged for a token
-    logger.log('[GDrive] Auth successful, extracting authorization code...');
-    const { code } = result.params;
 
     if (!code) {
-      logger.error('[GDrive] No authorization code in response');
-      return {
-        success: false,
-        error: 'No authorization code received from Google'
-      };
+      logger.error('[GDrive] No authorization code received');
+      return { success: false, error: 'No authorization code received from Google' };
     }
 
-    logger.log('[GDrive] Authorization code received');
+    logger.log('[GDrive] Authorization code received, exchanging for access token...');
 
-    // Exchange the code for an access token using Google's token endpoint
-    logger.log('[GDrive] Exchanging code for access token...');
-    const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
+    // Exchange the code for an access token
+    const tokenResponse = await fetch(TOKEN_ENDPOINT, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -268,11 +323,11 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     });
 
     if (!tokenResponse.ok) {
-      const errorData = await tokenResponse.json();
+      const errorData = await tokenResponse.json().catch(() => ({}));
       logger.error('[GDrive] Token exchange failed:', errorData);
       return {
         success: false,
-        error: `Failed to exchange code for token: ${errorData.error_description || errorData.error}`
+        error: `Failed to exchange code for token: ${errorData.error_description || errorData.error || 'Unknown error'}`
       };
     }
 
@@ -280,11 +335,8 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     const { access_token, expires_in, refresh_token } = tokenData;
 
     if (!access_token) {
-      logger.error('[GDrive] No access token in token response');
-      return {
-        success: false,
-        error: 'No access token received from token endpoint'
-      };
+      logger.error('[GDrive] No access token in response');
+      return { success: false, error: 'No access token received from Google' };
     }
 
     logger.log('[GDrive] Access token received, length:', access_token.length);
@@ -308,11 +360,11 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
 
     await setGDriveConfig(config);
     logger.log('[GDrive] Authentication successful');
-    logger.log('[GDrive] Config saved:', { hasToken: !!config.accessToken, hasRefreshToken: !!config.refreshToken, hasFolderId: !!config.folderId });
-
-    // Verify it was saved
-    const verification = await AsyncStorage.getItem(GDRIVE_CONFIG_KEY);
-    logger.log('[GDrive] Verification - config persisted:', !!verification);
+    logger.log('[GDrive] Config saved:', { 
+      hasToken: !!config.accessToken, 
+      hasRefreshToken: !!config.refreshToken, 
+      hasFolderId: !!config.folderId 
+    });
 
     return { success: true, config };
   } catch (error: any) {
