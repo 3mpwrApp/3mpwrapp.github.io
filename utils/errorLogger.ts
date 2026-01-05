@@ -1,10 +1,11 @@
 /**
  * Centralized error logging utility
- * Integrates with Sentry for automatic crash labeling and categorization
+ * Integrates with Sentry and Firebase Crashlytics for comprehensive error tracking
  */
 
 /* eslint-disable no-console */
 
+import * as crashlytics from "../services/crashlytics";
 import * as sentryLabeling from "../services/sentryLabeling";
 
 interface ErrorLogContext {
@@ -18,6 +19,7 @@ class ErrorLogger {
 
   /**
    * Log an error with context
+   * Sends to both Sentry (production debugging) and Crashlytics (native crashes)
    */
   error(message: string, error?: Error | unknown, context?: ErrorLogContext): void {
     if (this.isDevelopment) {
@@ -27,6 +29,29 @@ class ErrorLogger {
         console.error('Context:', context.data);
       }
     }
+
+    // Log to Crashlytics (all platforms)
+    if (error instanceof Error) {
+      crashlytics.logError(error, {
+        message,
+        component: context?.component,
+        action: context?.action,
+        ...(typeof context?.data === 'object' && context.data !== null ? context.data as Record<string, unknown> : {}),
+      }).catch((e) => {
+        if (this.isDevelopment) console.warn('[ErrorLogger] Failed to log to Crashlytics:', e);
+      });
+    } else if (error) {
+      const errorObj = new Error(`${message}: ${String(error)}`);
+      crashlytics.logError(errorObj, {
+        originalError: String(error),
+        component: context?.component,
+        action: context?.action,
+        ...(typeof context?.data === 'object' && context.data !== null ? context.data as Record<string, unknown> : {}),
+      }).catch((e) => {
+        if (this.isDevelopment) console.warn('[ErrorLogger] Failed to log to Crashlytics:', e);
+      });
+    }
+
     // Send to Sentry with automatic labeling
     if (error instanceof Error) {
       const sentryContext: Record<string, unknown> = {
