@@ -151,8 +151,8 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     logger.log('[GDrive] Client ID:', clientId);
     logger.log('[GDrive] Redirect URI:', redirectUri);
 
-    // Use implicit flow (token response type) to avoid needing client_secret
-    // This is appropriate for client-side apps where client_secret cannot be secured
+    // Use authorization code flow
+    // Google OAuth returns a code which is then exchanged for a token
     const authRequest = new AuthSession.AuthRequest({
       clientId,
       scopes: [
@@ -162,8 +162,8 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
         'email',
       ],
       redirectUri,
-      responseType: AuthSession.ResponseType.Token, // Changed from Code to Token
-      usePKCE: false, // PKCE not used with implicit flow
+      responseType: AuthSession.ResponseType.Code,
+      usePKCE: false,
     });
 
     // Prompt user for consent
@@ -238,28 +238,65 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       };
     }
 
-    // For implicit flow, tokens are in the response params directly
-    logger.log('[GDrive] Auth successful, extracting tokens...');
-    const { access_token, expires_in } = result.params;
+    // For authorization code flow, we get a code that needs to be exchanged for a token
+    logger.log('[GDrive] Auth successful, extracting authorization code...');
+    const { code } = result.params;
 
-    if (!access_token) {
-      logger.error('[GDrive] No access token in response');
+    if (!code) {
+      logger.error('[GDrive] No authorization code in response');
       return {
         success: false,
-        error: 'No access token received from Google'
+        error: 'No authorization code received from Google'
+      };
+    }
+
+    logger.log('[GDrive] Authorization code received');
+
+    // Exchange the code for an access token using Google's token endpoint
+    logger.log('[GDrive] Exchanging code for access token...');
+    const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        code,
+        client_id: clientId,
+        redirect_uri: redirectUri,
+        grant_type: 'authorization_code',
+      }).toString(),
+    });
+
+    if (!tokenResponse.ok) {
+      const errorData = await tokenResponse.json();
+      logger.error('[GDrive] Token exchange failed:', errorData);
+      return {
+        success: false,
+        error: `Failed to exchange code for token: ${errorData.error_description || errorData.error}`
+      };
+    }
+
+    const tokenData = await tokenResponse.json();
+    const { access_token, expires_in, refresh_token } = tokenData;
+
+    if (!access_token) {
+      logger.error('[GDrive] No access token in token response');
+      return {
+        success: false,
+        error: 'No access token received from token endpoint'
       };
     }
 
     logger.log('[GDrive] Access token received, length:', access_token.length);
 
-    const config: GDriveConfig = {
-      kind: 'gdrive',
-      accessToken: access_token,
-      refreshToken: undefined, // Implicit flow doesn't provide refresh tokens
-      expiresAt: expires_in
-        ? Date.now() + parseInt(expires_in, 10) * 1000
-        : undefined,
-    };
+      const config: GDriveConfig = {
+        kind: 'gdrive',
+        accessToken: access_token,
+        refreshToken: refresh_token || undefined,
+        expiresAt: expires_in
+          ? Date.now() + parseInt(expires_in, 10) * 1000
+          : undefined,
+      };
 
     // Try to get/create the app folder
     try {
