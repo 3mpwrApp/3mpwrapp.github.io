@@ -54,33 +54,22 @@ export default function GDriveCallbackScreen() {
         console.warn('[GDrive Callback] Sending auth result to parent window');
 
         if (code) {
-          setStatusMessage('✓ Authorization successful! Returning to app...');
+          setStatusMessage('✓ Authorization successful! Window will close automatically...');
           console.warn('[GDrive Callback] Sending authorization code to parent window');
           console.warn('[GDrive Callback] Code:', code.substring(0, 20) + '...');
           
           // Send the code back to the parent window (the app)
-          // Multiple retries to ensure message gets through
-          for (let i = 0; i < 3; i++) {
-            window.opener.postMessage(
-              {
-                type: 'expo-auth-session',
-                url: url, // Send full URL with code
-              },
-              '*' // Allow cross-origin for OAuth callback
-            );
-          }
+          // The parent window will close this popup after receiving the code
+          window.opener.postMessage(
+            {
+              type: 'expo-auth-session',
+              url: url, // Send full URL with code
+            },
+            '*' // Allow cross-origin for OAuth callback
+          );
           
-          // Immediately close and redirect parent to app home
-          // This prevents the user from manually closing the popup
-          setTimeout(() => {
-            console.warn('[GDrive Callback] Redirecting parent to app home');
-            if (window.opener && !window.opener.closed) {
-              // Redirect parent window to app home
-              window.opener.location.href = window.location.origin + '/';
-            }
-            console.warn('[GDrive Callback] Closing callback popup');
-            window.close();
-          }, 500); // Give a tiny delay to ensure postMessage is delivered
+          console.warn('[GDrive Callback] Authorization message sent to parent, waiting for popup to close...');
+          
         } else if (error) {
           setStatusMessage(`❌ OAuth error: ${error}\n${errorDesc || ''}`);
           console.warn('[GDrive Callback] Error:', error);
@@ -94,11 +83,8 @@ export default function GDriveCallbackScreen() {
             '*'
           );
           
-          // Close after showing error
-          setTimeout(() => {
-            console.warn('[GDrive Callback] Closing popup after error');
-            window.close();
-          }, 3000);
+          console.warn('[GDrive Callback] Error message sent to parent');
+          
         } else {
           setStatusMessage('❌ No authorization code or error found');
           console.warn('[GDrive Callback] Neither code nor error found');
@@ -111,11 +97,7 @@ export default function GDriveCallbackScreen() {
             '*'
           );
           
-          // Close after showing status
-          setTimeout(() => {
-            console.warn('[GDrive Callback] Closing popup');
-            window.close();
-          }, 2000);
+          console.warn('[GDrive Callback] Invalid callback message sent to parent');
         }
       } else {
         // Not in a popup - might be direct navigation

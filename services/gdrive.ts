@@ -178,9 +178,14 @@ function webOAuthFlow(
           logger.warn('[GDrive] - error:', error || 'none');
 
           if (code) {
+            logger.log('[GDrive] Web OAuth: Authorization code received, closing popup');
+            // Close popup immediately after receiving code
+            popup.close();
             resolve({ code });
           } else if (error) {
             const errorDesc = urlObj.searchParams.get('error_description');
+            logger.log('[GDrive] Web OAuth: Error received, closing popup');
+            popup.close();
             resolve({ error: `${error}: ${errorDesc}` });
           } else {
             resolve({ error: 'No code or error in callback' });
@@ -191,6 +196,8 @@ function webOAuthFlow(
 
         // Clean up listener
         window.removeEventListener('message', handleMessage);
+        clearTimeout(timeout);
+        clearInterval(popupCheckInterval);
       }
     };
 
