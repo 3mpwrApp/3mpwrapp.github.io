@@ -101,8 +101,14 @@ class FeaturePoster {
         }
       };
 
+      // Truncate to 500-character Mastodon limit (with 10 char buffer)
+      let statusText = content.longPost;
+      if (statusText.length > 490) {
+        statusText = statusText.substring(0, 487) + '...';
+      }
+
       const postData = {
-        status: content.longPost,
+        status: statusText,
         visibility: 'public',
         language: 'en'
       };

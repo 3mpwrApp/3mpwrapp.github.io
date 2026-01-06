@@ -200,6 +200,11 @@ class SocialPoster {
     post += `${randomCta}\n\n`;
     post += `#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #WorkersRights #Canada #${monthlyTheme.theme.replace(/\s+/g, '')}`;
 
+    // Truncate to 500-character Mastodon limit (with 10 char buffer)
+    if (post.length > 490) {
+      post = post.substring(0, 487) + '...';
+    }
+
     return post;
   }
 
