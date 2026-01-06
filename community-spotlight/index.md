@@ -113,6 +113,9 @@ permalink: /community-spotlight/
   <p style="color: #1f2937 !important;">
     <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
       🌐 linktr.ee/odspoor
+    </a><br/>
+    <a href="https://thepwdcast.wordpress.com/where-to-listen/" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+      🎙️ The PWD Cast Podcast
     </a>
   </p>
   
