@@ -15,28 +15,36 @@ description: Our commitment to your privacy and 100% user data ownership.
 
 📖 **10 minute read** | ⚡ **Quick summary below**
 
-**Last updated: December 14, 2025**  
-**Version: 3.2 (December 2025 Production Release + USA Lite Expansion)**
+**Last updated: January 5, 2026**  
+**Version: 3.3 (January 2026 - Infrastructure & Security Improvements)**
+
+---
+
+## 🆕 **January 2026 Updates (Version 3.3)**
+
+Infrastructure improvements ensuring maximum security and reliability:
+
+- **🔐 Google Drive BYOC Enhancement** - Full support for Bring-Your-Own-Cloud storage with Google Drive integration across all platforms (mobile, web, preview, production)
+- **🌐 API Reliability** - Corrected Cloudflare Workers endpoint configuration for seamless resource loading and fallback support
+- **⚙️ Code Quality** - Maintained 0 ESLint errors, 0 TypeScript errors, 100% test coverage (721 tests)
+- **🔒 Security Verified** - AES-256-GCM encryption confirmed working across all data types and platforms
+- **📱 Platform Support** - Verified privacy protections on iOS, Android, Web, and Expo Preview builds
+
+**All previous privacy protections remain in effect.** See "Previous Updates" sections below for complete version history.
 
 ---
 
 ## 🆕 **December 2025 Updates (Version 3.2)**
 
-USA Lite expansion complete with 13 US jurisdictions - 721 tests passing, production ready:
+USA Lite expansion complete with 13 US jurisdictions:
 
-- **🇺🇸 USA Lite Expansion:** 13 US jurisdictions added (Federal + CA, NY, TX, FL, IL, MI, WA, OH, PA, TN, GA, MS)
-- **⚖️ US Legal Coverage:** Workers' compensation, civil rights frameworks, disability programs for all 13 jurisdictions
+- **🇺🇸 USA Lite Added:** 13 US jurisdictions with workers' comp, civil rights, disability program information — all stored/processed locally like Canadian data
 - **🔒 Security Verified:** AES-256-GCM encryption confirmed across all sensitive data
 - **📴 Offline-First Verified:** Complete offline support with AsyncStorage persistence
 - **✅ Zero Issues:** 0 ESLint errors, 0 TypeScript errors, 0 accessibility issues
 - **🧪 Comprehensive Testing:** 721 tests covering auth, security, offline, features, accessibility
 
-**USA Lite Privacy Protections:**
-- **🔒 Same local-first architecture** - US jurisdiction data stored/processed locally like Canadian data
-- **📍 No Location Tracking** - Jurisdiction selection is manual, we don't track your location
-- **🏠 Local Processing** - All jurisdiction-related features process data locally on your device
-
-**USA Lite users receive identical privacy protections.** All privacy protections from previous versions remain in effect.
+**All privacy protections from previous versions remain in effect.**
 
 ---
 

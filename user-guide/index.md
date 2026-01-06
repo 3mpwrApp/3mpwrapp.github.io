@@ -2,11 +2,11 @@
 layout: default
 title: 3mpwrApp — Complete User Guide
 description: A comprehensive guide to using 3mpwrApp's tools and community features. Written by/for the disability community. Now 100% production ready with 721 tests passing, full security verification, WCAG AAA compliance, and USA Lite for American supporters!
-version: 4.2 (December 2025 - Production Release + USA Lite)
-lastUpdated: 2025-12-14
+version: 4.3 (January 2026 - Infrastructure & Fixes)
+lastUpdated: 2026-01-05
 accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
 currentPhase: Production Release (100% Complete)
-allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline support, complete security verification, USA Lite available
+allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline support, complete security verification, 13 US jurisdictions
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
@@ -15,9 +15,9 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 
 # 3mpwrApp — Complete User Guide
 
-📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 4.2** — December 14, 2025 (Production Release + USA Lite)
+📖 **20 minute read** | 🔋🔋🔋 **Energy: Medium** | **Version 4.3** — January 5, 2026 (Production Release - Infrastructure Updates)
 
-> **What's new?** December 2025 marks our production release with 721 tests passing, first demo presentation successful, and USA Lite launched for American supporters! [See what's new →](#whats-new-december-2025)
+> **What's new?** January 2026 brings critical infrastructure fixes ensuring Google Drive BYOC works across all platforms, API endpoints are reliable with fallback support, and all code quality remains at 0 errors. [See what's new →](#whats-new-january-2026)
 
 <details class="tldr-box" open>
   <summary>⚡ Quick Summary (90 seconds)</summary>
@@ -126,6 +126,40 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 - **[Privacy & Security](/privacy)** - How we protect your data
 - **[Beta Testing Guide](/beta-guide)** - Comprehensive beta tester guide
 - **[Contact & Support](#contact--support)** - Get help when you need it
+
+---
+
+## 🆕 What's New - January 2026 (Infrastructure & Fixes) {#whats-new-january-2026}
+
+### ✅ **January 4-5, 2026 - Critical Fixes Deployed**
+
+**All Systems Restored** - Infrastructure fixes ensure reliability across all platforms:
+
+#### 🔐 **Google Drive BYOC Fully Functional**
+- Connect your own Google Drive for personal data ownership
+- Works on mobile, browser, and preview builds
+- Secure OAuth authentication with implicit flow
+- Complete file management (upload, download, organize)
+- Settings → BYOC → Choose Provider → Google Drive
+
+#### ✅ **Resources Tab & Campaigns Working**
+- Fixed API endpoints for Cloudflare Workers backend
+- Campaigns load correctly with real data
+- Podcasts now fetch from proper servers
+- Graceful fallback to local data if offline
+- Resources tab displays without white screen
+
+#### ⚙️ **Code Quality Maintained**
+- 0 ESLint errors (all inline hex colors converted to theme)
+- 0 TypeScript errors
+- 721 tests still passing (121 suites, 0 failures)
+- Full accessibility compliance maintained
+
+#### 📱 **What to Expect This Version**
+- **Fully functional Google Drive integration** for data ownership
+- **Reliable resource access** with API fallbacks
+- **Better visual consistency** with theme-based styling
+- **100% stable** across all devices (mobile, tablet, desktop)
 
 ---
 

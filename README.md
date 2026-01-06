@@ -6,9 +6,11 @@
 [![Lighthouse](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/lighthouse.yml)
 [![Pages build](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/3mpwrApp/3mpwrapp.github.io/actions/workflows/jekyll.yml)
 
+**Last Updated**: January 5, 2026 | **Version**: 1.0.0 (Production Ready) | **Status**: ✅ All Systems Operational
+
 > ⚠️ WEBSITE NOT LIVE YET? → See the Activation Guide: [ACTIVATION.md](ACTIVATION.md) (2–5 minutes)
 
-This is the official website repository for the 3mpowr App — a community‑driven platform for injured workers and persons with disabilities across Canada.
+This is the official website repository for the 3mpowr App — a community‑driven platform for injured workers and persons with disabilities across Canada and the USA.
 
 🌐 Live Site: [https://3mpwrapp.github.io](https://3mpwrapp.github.io)
 
