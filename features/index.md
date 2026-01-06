@@ -13,13 +13,13 @@ description: Explore 3mpwr App's comprehensive features designed to empower your
 
 📖 **12 minute read** | ⚡ **Feature highlights below**
 
-**Version:** 4.2 (December 2025 Production Release + USA Lite)  
-**Status:** 100% Production Ready • 721 Tests Passing • WCAG AAA Compliant • First Demo Successful! 🎉  
-**Last Updated:** December 14, 2025
+**Version:** 4.3 (January 2026 - Infrastructure & Fixes)  
+**Status:** 100% Production Ready • 721 Tests Passing • WCAG AAA Compliant • All Systems Operational 🎉  
+**Last Updated:** January 5, 2026
 
 Welcome to 3mpwr App - your complete toolkit for disability advocacy, community connection, and system navigation. With **60+ core features** organized by Complexity Mode (Simple: 5, Standard: 20, Power User: 150+), every tool is designed to empower you while protecting your privacy.
 
-**🇺🇸 NEW: USA Lite now available!** American supporters can join beta testing with access to core features. [Learn more →](/roadmap/#-new-usa-lite---now-available)
+**🇺🇸 USA Lite now available!** American supporters can join with access to core features. [Learn more →](/roadmap/#-new-usa-lite---now-available)
 
 ---
 
@@ -73,12 +73,19 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
     <li><a href="/user-guide">User Guide</a> - Step-by-step tutorials for all features</li>
     <li><a href="/accessibility">Accessibility Guide</a> - Detailed accessibility settings</li>
     <li><a href="/privacy">Privacy & Security</a> - How we protect your data</li>
-    <li><a href="/beta">Beta Testing Guide</a> - Join our beta program</li>
+    <li><a href="/beta-guide">Beta Testing Guide</a> - Join our beta program</li>
     <li><a href="/whats-new">What's New</a> - Latest updates and announcements</li>
   </ul>
 </div>
 
 ---
+
+### 🆕 January 2026 Updates (Infrastructure & Fixes)
+- ✅ **Google Drive BYOC Fully Functional:** Works on all platforms (iOS, Android, Web, Expo Preview)
+- ✅ **API Endpoints Fixed:** Resources tab, Campaigns, and Podcasts load reliably with graceful fallback
+- ✅ **Code Quality Maintained:** 0 ESLint errors, 0 TypeScript errors, 721 tests still passing
+- ✅ **Visual Consistency Improved:** All inline colors converted to theme-based styling
+- ✅ **Production-Ready Verified:** All systems tested and operational across all platforms
 
 ### 🆕 December 2025 Updates (Production Release)
 - ✅ **First Demo Presentation Successful:** December 9, 2025 - positive reception from Canada & USA audiences
