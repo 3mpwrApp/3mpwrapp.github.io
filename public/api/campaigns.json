@@ -77,7 +77,7 @@
     "goalCount": 50000,
     "membersCount": 0,
     "contactEmail": "contact@ashoutabout.ca",
-    "createdAt": 1765672549240,
+    "createdAt": 1767739785178,
     "websiteUrl": "https://x.com/AShoutAbout",
     "description": "No More Poverty PWD is a grassroots movement demanding adequate financial support for ALL disabled Canadians living on disability income support across Canada.\n\nThe current system forces people with disabilities to live in government-imposed POVERTY, unable to afford:\n\n• Basic housing and utilities\n• Nutritious food and medications\n• Essential medical equipment and assistive devices\n• Transportation and accessibility accommodations\n• Participation in community and social activities\n\nThis campaign fights for:\n\n• Increased disability benefit amounts that meet the actual cost of living\n• Removal of asset limits that trap people in poverty\n• Fair income thresholds that allow part-time work without clawbacks\n• Provincial and federal coordination to ensure consistent support\n• Recognition that disability supports are NOT \"welfare\" but human rights\n\nEvery disabled Canadian deserves to live with dignity, not in poverty.",
     "legislation": [
@@ -132,7 +132,7 @@
     "goalCount": 25000,
     "membersCount": 0,
     "contactEmail": "karen@thetiderises.ca",
-    "createdAt": 1765672549240,
+    "createdAt": 1767739785178,
     "petitionId": "e-6873",
     "petitionUrl": "https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6873",
     "websiteUrl": "https://x.com/TheTideRises333",
@@ -206,7 +206,7 @@
     "goalCount": 10000,
     "membersCount": 0,
     "contactEmail": "info@injuredworkerscommunitylegalclinic.ca",
-    "createdAt": 1765672549240,
+    "createdAt": 1767739785178,
     "websiteUrl": "https://win.newmode.net/injuredworkerscommunitylegalclinic/rightsdontretire-1",
     "eventDate": 1732492800000,
     "description": "Rights Don't Retire is a movement to end age discrimination against Older Injured Workers in Ontario.\n\n**The Issue:**\n\nCurrently, the Workplace Safety and Insurance Act (WSIA) contains an arbitrary age 65 cut-off that strips injured workers of their rights and benefits simply because they turn 65 - regardless of their ongoing medical needs, disability, or work history.\n\nThis discriminatory policy:\n\n• Forces injured workers into poverty at age 65\n• Denies ongoing medical care and rehabilitation\n• Violates the Ontario Human Rights Code\n• Treats older workers as less deserving of support\n• Ignores the reality that many Canadians work past 65 by choice or necessity\n\n**Join us at Queens Park on November 25th, 2025** to stand with Older Injured Workers and demand:\n\n• Removal of the age 65 cut-off from the WSIA\n• Continued benefits based on medical need, not arbitrary age limits\n• Equal treatment under the law for all injured workers\n• Recognition that workplace injuries don't stop mattering at 65\n\n**Take Action Now:**\nEmail your MPP through the NewMode platform and demand they support removing this discriminatory provision.",
@@ -261,52 +261,51 @@
     }
   },
   {
-    "id": "national-living-benefit-e6898",
-    "title": "National Living Benefit - Petition e-6898",
-    "summary": "Establish a National Living Benefit ensuring all Canadians with disabilities and seniors receive a guaranteed income above the official poverty line, protected from provincial claw-backs and indexed to CPI. Sign petition e-6898.",
+    "id": "national-living-benefit",
+    "title": "National Living Benefit for Canadians with Disabilities & Seniors",
+    "summary": "Petition e-6898: Establish a National Living Benefit ensuring all Canadians with disabilities and seniors receive a guaranteed income above the poverty line, protected from provincial claw-backs and indexed to inflation.",
     "target": "Parliament of Canada",
     "goalCount": 50000,
     "membersCount": 0,
-    "contactEmail": "",
-    "createdAt": 1734220800000,
-    "createdBy": "Tanner Bergsma",
+    "contactEmail": "info@example.com",
+    "createdAt": 1767739785178,
     "petitionId": "e-6898",
     "petitionUrl": "https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6898",
-    "description": "**Petition e-6898: National Living Benefit**\n\nMillions of Canadians living with disabilities and many seniors continue to struggle below the poverty line despite decades of public service, contributions, or hardship.\n\n**The Problem:**\n\n• The cost of housing, food, and essential needs has risen faster than provincial and federal benefits\n• People are forced to choose between basic necessities\n• Existing programs such as the Canada Disability Benefit, Old Age Security, and the Guaranteed Income Supplement are not yet sufficient to guarantee dignity, stability, and freedom from poverty\n• Canada's Charter of Rights and Freedoms affirms the right to security of the person and equal protection under the law - values that require tangible action\n\n**We Call Upon Parliament to:**\n\n1. **Establish a National Living Benefit** ensuring that all Canadians with disabilities and seniors receive a guaranteed income above the official poverty line\n\n2. **Protect this benefit from provincial claw-backs or deductions** so that people actually receive the full support\n\n3. **Index the benefit annually to the Canadian Consumer Price Index (CPI)** so that no person is left behind due to inflation or rising housing costs\n\nNo Canadian should have to choose between rent, food, or medication. Sign petition e-6898 and demand a National Living Benefit now!",
+    "description": "Millions of Canadians living with disabilities and many seniors continue to struggle below the poverty line despite decades of public service, contributions, or hardship.\n\n**The Problem:**\n\n• The cost of housing, food, and essential needs has risen faster than provincial and federal benefits\n• Many are forced to choose between basic necessities\n• Existing programs such as the Canada Disability Benefit, Old Age Security, and the Guaranteed Income Supplement are not yet sufficient to guarantee dignity, stability, and freedom from poverty\n• Canada's Charter of Rights and Freedoms affirms the right to security of the person and equal protection under the law - values that require tangible action\n\n**Petition e-6898 Calls on Parliament to:**\n\n1. **Establish a National Living Benefit** ensuring that all Canadians with disabilities and seniors receive a guaranteed income above the official poverty line\n\n2. **Protect this benefit from provincial claw-backs or deductions** - so that federal support actually reaches those who need it\n\n3. **Index the benefit annually to the Canadian Consumer Price Index (CPI)** so that no person is left behind due to inflation or rising housing costs\n\nThis is about dignity. This is about the Charter. This is about making sure no Canadian with a disability or senior is left in poverty.",
     "legislation": [
       {
         "name": "Bill C-22",
-        "fullName": "Canada Disability Benefit Act",
+        "fullName": "An Act to Reduce Poverty and to Support the Financial Security of Persons with Disabilities",
         "status": "Passed",
-        "description": "Establishes the Canada Disability Benefit, but current amounts remain inadequate to lift people above poverty."
-      },
-      {
-        "name": "Canadian Charter of Rights",
-        "fullName": "Canadian Charter of Rights and Freedoms",
-        "status": "In Force",
-        "description": "Section 7 affirms the right to security of the person; Section 15 guarantees equal protection under the law."
+        "description": "Establishes the Canada Disability Benefit, but current amounts remain insufficient to lift recipients above the poverty line."
       },
       {
         "name": "Old Age Security Act",
         "fullName": "Old Age Security Act",
         "status": "In Force",
-        "description": "Provides OAS and GIS to seniors, but benefits remain insufficient for many to live above poverty."
+        "description": "Provides OAS and GIS benefits, but amounts have not kept pace with rising cost of living."
+      },
+      {
+        "name": "Canadian Charter of Rights and Freedoms",
+        "fullName": "Canadian Charter of Rights and Freedoms",
+        "status": "In Force",
+        "description": "Section 7 right to security of the person and Section 15 equality rights require action to end poverty."
       }
     ],
     "actionItems": [
       {
         "id": 1,
-        "text": "Sign petition e-6898 for National Living Benefit",
+        "text": "Sign petition e-6898",
         "completed": false
       },
       {
         "id": 2,
-        "text": "Share petition on social media with #NationalLivingBenefit",
+        "text": "Share petition on social media",
         "completed": false
       },
       {
         "id": 3,
-        "text": "Email your MP about supporting a National Living Benefit",
+        "text": "Email your MP about the National Living Benefit",
         "completed": false
       },
       {
@@ -316,16 +315,16 @@
       },
       {
         "id": 5,
-        "text": "Ask friends and family to sign the petition",
+        "text": "Connect with local disability and seniors advocacy groups",
         "completed": false
       }
     ],
     "shareTemplates": {
-      "twitter": "Millions of Canadians with disabilities & seniors struggle below the poverty line. Petition e-6898 calls for a National Living Benefit - guaranteed income ABOVE poverty, protected from claw-backs, indexed to CPI. Sign now! #NationalLivingBenefit #CanadaDisabilityBenefit 🇨🇦\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/",
-      "facebook": "No Canadian should have to choose between rent, food, or medication.\n\nPetition e-6898 calls on Parliament to:\n\n✓ Establish a National Living Benefit above the poverty line\n✓ Protect it from provincial claw-backs\n✓ Index it annually to CPI (so inflation doesn't leave you behind)\n\nMillions of Canadians with disabilities and seniors continue to struggle despite decades of contributions and hardship. It's time for tangible action.\n\nSign petition e-6898 and demand dignity for all Canadians!\n\n#NationalLivingBenefit #DisabilityRights #EndPoverty\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/",
+      "twitter": "Canadians with disabilities & seniors deserve to live ABOVE the poverty line! Sign petition e-6898 for a National Living Benefit - protected from claw-backs & indexed to inflation. #NationalLivingBenefit #DisabilityRights #SeniorsRights 🇨🇦\n\n🔗 https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6898\n\n🔗 Powered by 3mpwr App",
+      "facebook": "Millions of Canadians with disabilities and seniors are forced to live below the poverty line - choosing between food, housing, and medication.\n\nPetition e-6898 calls on Parliament to:\n✓ Establish a National Living Benefit above the poverty line\n✓ Protect it from provincial claw-backs\n✓ Index it to inflation annually\n\nCanada's Charter guarantees security of the person and equal protection. It's time for action!\n\nSign now: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6898\n\n#NationalLivingBenefit #DisabilityRights #SeniorsRights\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/",
       "email": {
-        "subject": "Sign Petition e-6898: National Living Benefit for Canadians with Disabilities & Seniors",
-        "body": "Hi,\n\nI wanted to share an important petition with you: e-6898 for a National Living Benefit.\n\nMillions of Canadians with disabilities and seniors continue to struggle below the poverty line despite decades of public service, contributions, or hardship.\n\nThe cost of housing, food, and essential needs has risen faster than benefits - forcing people to choose between basic necessities.\n\nPetition e-6898 calls on Parliament to:\n\n1. Establish a National Living Benefit ensuring all Canadians with disabilities and seniors receive a guaranteed income ABOVE the official poverty line\n\n2. Protect this benefit from provincial claw-backs or deductions\n\n3. Index the benefit annually to the Canadian Consumer Price Index (CPI) so no one is left behind due to inflation\n\nCanada's Charter of Rights and Freedoms affirms the right to security of the person and equal protection under the law. It's time for tangible action.\n\nPlease sign and share: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6898\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/\n\nThank you for supporting this important cause!"
+        "subject": "Support Petition e-6898 - National Living Benefit for Canadians with Disabilities & Seniors",
+        "body": "Hi,\n\nI wanted to share an important petition with you: Petition e-6898 for a National Living Benefit.\n\nMillions of Canadians with disabilities and seniors continue to struggle below the poverty line. The cost of housing, food, and essential needs has risen faster than benefits, forcing many to choose between basic necessities.\n\nThis petition calls on Parliament to:\n\n1. Establish a National Living Benefit ensuring all Canadians with disabilities and seniors receive a guaranteed income ABOVE the official poverty line\n\n2. Protect this benefit from provincial claw-backs or deductions\n\n3. Index the benefit annually to the Consumer Price Index so no one is left behind due to inflation\n\nCanada's Charter of Rights and Freedoms affirms the right to security of the person. It's time for tangible action.\n\nPlease sign and share: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6898\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/campaigns/\n\nThank you for supporting Canadians with disabilities and seniors!"
       }
     }
   }
