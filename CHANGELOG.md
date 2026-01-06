@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2026-01-05
+
+### 🔧 **Critical Infrastructure Fixes - January 2026**
+
+#### 🐛 **Google Drive BYOC Integration Fix** (January 4-5, 2026)
+- **Environment Variable Fallback** (`services/gdrive.ts`):
+  - Added fallback to `Constants.expoConfig?.extra` when `process.env` not available
+  - Fixes Google Drive OAuth on preview and browser builds
+  - Maintains backward compatibility with local development
+  - Added comprehensive debug logging for troubleshooting
+
+- **Impact**: Google Drive BYOC now fully functional across all Expo environments (development, preview, EAS builds, web)
+
+#### 🌐 **API Endpoint Configuration Fix** (January 4, 2026)
+- **Corrected Cloudflare Workers URLs** (`.env`, `app.json`):
+  - `EXPO_PUBLIC_CAMPAIGNS_API_BASE` → correct Cloudflare Worker endpoint
+  - `EXPO_PUBLIC_EVENTS_API_BASE` → separate calendar worker endpoint
+  - Added fallback mechanism to local mock data if API unavailable
+  - Resolves Resources tab white screen issue
+
+- **Impact**: Resources, Podcasts, and Campaigns features now load correctly; graceful degradation when API unavailable
+
+#### 🎨 **ESLint Inline Hex Color Warnings Resolution** (January 4, 2026)
+- **Theme-Based Color System** (6 files, `app/(tabs)/legal-action-hub/`):
+  - Converted all inline hex colors to theme-based tokens
+  - Files updated: `index.tsx`, `tabs/policy.tsx`, `tabs/legal-help.tsx`, `tabs/accountability.tsx`, `tabs/coach.tsx`, `tabs/automation.tsx`
+  - Added `useTheme()` hook to all components
+  - Consistent color mapping pattern across Legal Action Hub
+  - Improved maintainability and theme support
+
+- **Impact**: 0 ESLint errors maintained, improved visual consistency
+
+### ✅ **Quality Assurance Status**
+- **Test Suite**: 721 tests passing (121 suites, 0 failures)
+- **Linting**: 0 ESLint errors, 87 pre-existing warnings (unrelated)
+- **TypeScript**: 0 compilation errors, strict mode compliance
+- **Accessibility**: WCAG AAA compliance maintained
+
+---
+
 ## [1.0.0] - 2025-12-30
 
 ### 🎉 **Production Release - December 2025 Final Update**

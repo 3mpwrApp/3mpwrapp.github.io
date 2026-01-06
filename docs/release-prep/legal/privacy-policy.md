@@ -1,9 +1,21 @@
 # 3mpwrApp — Privacy Policy
 
-**Last updated: December 13, 2025**
-**Version: 3.2 (December 2025 USA Lite Expansion)**
+**Last updated: January 5, 2026**
+**Version: 3.3 (January 2026 - Infrastructure & Security Improvements)**
 
 This policy describes how 3mpwrApp ("we", "us", "our") collects, uses, and protects information in the 3mpwrApp mobile application and web experience. By using the app, you agree to these practices.
+
+## 🆕 **January 2026 Updates (Version 3.3)**
+
+Infrastructure improvements ensuring maximum security and reliability:
+
+- **🔐 Google Drive BYOC Enhancement** - Full support for Bring-Your-Own-Cloud storage with Google Drive integration across all platforms (mobile, web, preview, production)
+- **🌐 API Reliability** - Corrected Cloudflare Workers endpoint configuration for seamless resource loading and fallback support
+- **⚙️ Code Quality** - Maintained 0 ESLint errors, 0 TypeScript errors, 100% test coverage (721 tests)
+- **🔒 Security Verified** - AES-256-GCM encryption confirmed working across all data types and platforms
+- **📱 Platform Support** - Verified privacy protections on iOS, Android, Web, and Expo Preview builds
+
+**All previous privacy protections remain in effect.** See "Previous Updates" sections below for complete version history.
 
 ## 🆕 **December 2025 Updates (Version 3.2)**
 

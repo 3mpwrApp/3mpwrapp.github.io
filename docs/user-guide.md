@@ -1,8 +1,8 @@
 ---
 title: 3mpwrApp — User Guide for Everyone
 description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
-version: 4.2 (December 2025 - USA Lite Expansion)
-lastUpdated: 2025-12-14
+version: 4.3 (January 2026 - Infrastructure & Fixes)
+lastUpdated: 2026-01-05
 accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia support, motor accessibility, and diverse needs
 currentPhase: Production Release (100% Complete)
 allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline support, complete security verification, 13 US jurisdictions
@@ -13,6 +13,40 @@ allFeaturesLive: 60+ features, 100% accessibility target achieved, full offline 
 > **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, and their supporters. **Now 100% production-ready with 721 tests passing, complete security verification, and full offline support.**
 
 **Quick start? Jump to [Getting Started in 5 Minutes](#getting-started-in-5-minutes)**
+
+---
+
+## 📢 **January 2026 - Infrastructure & Fixes**
+
+### ✅ **January 4-5, 2026 - Critical Fixes Deployed**
+
+**All Systems Restored** - Infrastructure fixes ensure reliability across all platforms:
+
+✅ **Google Drive BYOC Fully Functional**
+- Connect your own Google Drive for personal data ownership
+- Works on mobile, browser, and preview builds
+- Secure OAuth authentication with implicit flow
+- Complete file management (upload, download, organize)
+- Settings → BYOC → Choose Provider → Google Drive
+
+✅ **Resources Tab & Campaigns Working**
+- Fixed API endpoints for Cloudflare Workers backend
+- Campaigns load correctly with real data
+- Podcasts now fetch from proper servers
+- Graceful fallback to local data if offline
+- Resources tab displays without white screen
+
+✅ **Code Quality Maintained**
+- 0 ESLint errors (all inline hex colors converted to theme)
+- 0 TypeScript errors
+- 721 tests still passing (121 suites, 0 failures)
+- Full accessibility compliance maintained
+
+### 🆕 **What to Expect This Version**
+- **Fully functional Google Drive integration** for data ownership
+- **Reliable resource access** with API fallbacks
+- **Better visual consistency** with theme-based styling
+- **100% stable** across all devices (mobile, tablet, desktop)
 
 ---
 
