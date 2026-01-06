@@ -54,7 +54,7 @@ export default function GDriveCallbackScreen() {
         console.warn('[GDrive Callback] Sending auth result to parent window');
 
         if (code) {
-          setStatusMessage('✓ Authorization successful! Sending to app...');
+          setStatusMessage('✓ Authorization successful! Returning to app...');
           console.warn('[GDrive Callback] Sending authorization code to parent window');
           console.warn('[GDrive Callback] Code:', code.substring(0, 20) + '...');
           
@@ -69,6 +69,18 @@ export default function GDriveCallbackScreen() {
               '*' // Allow cross-origin for OAuth callback
             );
           }
+          
+          // Immediately close and redirect parent to app home
+          // This prevents the user from manually closing the popup
+          setTimeout(() => {
+            console.warn('[GDrive Callback] Redirecting parent to app home');
+            if (window.opener && !window.opener.closed) {
+              // Redirect parent window to app home
+              window.opener.location.href = window.location.origin + '/';
+            }
+            console.warn('[GDrive Callback] Closing callback popup');
+            window.close();
+          }, 500); // Give a tiny delay to ensure postMessage is delivered
         } else if (error) {
           setStatusMessage(`❌ OAuth error: ${error}\n${errorDesc || ''}`);
           console.warn('[GDrive Callback] Error:', error);
@@ -81,6 +93,12 @@ export default function GDriveCallbackScreen() {
             },
             '*'
           );
+          
+          // Close after showing error
+          setTimeout(() => {
+            console.warn('[GDrive Callback] Closing popup after error');
+            window.close();
+          }, 3000);
         } else {
           setStatusMessage('❌ No authorization code or error found');
           console.warn('[GDrive Callback] Neither code nor error found');
@@ -92,13 +110,13 @@ export default function GDriveCallbackScreen() {
             },
             '*'
           );
+          
+          // Close after showing status
+          setTimeout(() => {
+            console.warn('[GDrive Callback] Closing popup');
+            window.close();
+          }, 2000);
         }
-
-        // Close the popup after a delay to ensure message is received
-        setTimeout(() => {
-          console.warn('[GDrive Callback] Closing popup window');
-          window.close();
-        }, 2000);
       } else {
         // Not in a popup - might be direct navigation
         console.warn('[GDrive Callback] Not in popup, redirecting to home');
