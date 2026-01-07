@@ -131,15 +131,16 @@ function getGoogleClientId(): string | null {
 function webOAuthFlow(
   clientId: string,
   redirectUri: string,
-): Promise<{ code?: string; error?: string }> {
+): Promise<{ code?: string; accessToken?: string; isToken?: boolean; error?: string }> {
   return new Promise((resolve) => {
     logger.log('[GDrive] Web OAuth: Opening popup to OAuth endpoint');
 
-    // Build the OAuth URL
+    // Build the OAuth URL - use implicit flow (token response) for web
+    // This avoids the need for backend token exchange (no CORS issues)
     const oauthUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
     oauthUrl.searchParams.set('client_id', clientId);
     oauthUrl.searchParams.set('redirect_uri', redirectUri);
-    oauthUrl.searchParams.set('response_type', 'code');
+    oauthUrl.searchParams.set('response_type', Platform.OS === 'web' ? 'token' : 'code');
     oauthUrl.searchParams.set(
       'scope',
       'https://www.googleapis.com/auth/drive.file openid profile email'
@@ -170,16 +171,25 @@ function webOAuthFlow(
         const url = event.data.url;
         if (url) {
           const urlObj = new URL(url);
+          // For implicit flow (token response), token is in URL hash
+          // For code flow, code is in query string
+          const accessToken = urlObj.hash.substring(1).split('&').find(param => param.startsWith('access_token='))?.split('=')[1];
           const code = urlObj.searchParams.get('code');
           const error = urlObj.searchParams.get('error');
 
           logger.warn('[GDrive] Web OAuth: Parsed from callback URL');
           logger.warn('[GDrive] - code present:', !!code);
+          logger.warn('[GDrive] - access_token present:', !!accessToken);
           logger.warn('[GDrive] - error:', error || 'none');
 
-          if (code) {
-            logger.log('[GDrive] Web OAuth: Authorization code received, closing popup');
-            // Close popup immediately after receiving code
+          if (accessToken) {
+            // Implicit flow: token is directly available
+            logger.log('[GDrive] Web OAuth: Access token received (implicit flow), closing popup');
+            popup.close();
+            resolve({ code: accessToken, isToken: true }); // Mark as token, not code
+          } else if (code) {
+            // Code flow: need to exchange code for token
+            logger.log('[GDrive] Web OAuth: Authorization code received (code flow), closing popup');
             popup.close();
             resolve({ code });
           } else if (error) {
@@ -241,12 +251,14 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
 
     let code: string | undefined;
     let authError: string | undefined;
+    let implicitAccessToken: string | undefined;
 
     // For web, use popup + postMessage approach
     if (Platform.OS === 'web') {
       logger.log('[GDrive] Using web OAuth flow (popup + postMessage)');
       const webResult = await webOAuthFlow(clientId, redirectUri);
       code = webResult.code;
+      implicitAccessToken = webResult.accessToken;
       authError = webResult.error;
 
       if (authError) {
@@ -308,123 +320,114 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       code = result.params.code;
     }
 
-    if (!code) {
-      logger.error('[GDrive] No authorization code received');
-      return { success: false, error: 'No authorization code received from Google' };
+    if (!code && !implicitAccessToken) {
+      logger.error('[GDrive] No authorization code or access token received');
+      return { success: false, error: 'No authorization code or access token received from Google' };
     }
 
-    logger.log('[GDrive] Authorization code received, exchanging for access token...');
+    // Handle implicit flow (direct token) vs code flow
+    let finalAccessToken: string | undefined;
+    let finalRefreshToken: string | undefined;
+    let finalExpiresIn: number | undefined;
+    let tokenData: any = {};
 
-    // For web, use backend endpoint to exchange code (CORS-safe)
-    // For native, use direct exchange (Expo handles CORS)
-    let tokenData: any;
-    let tokenResponse: Response;
+    if (implicitAccessToken) {
+      // Implicit flow: token is directly available
+      logger.log('[GDrive] Using implicit flow (direct access token)');
+      finalAccessToken = implicitAccessToken;
+      // Implicit flow doesn't provide refresh token or expiration by default
+      // Assume 1 hour expiration
+      finalExpiresIn = 3600;
+      logger.warn('[GDrive] Note: Implicit flow token has limited refresh capability');
+    } else if (code) {
+      // Code flow: need to exchange code for token
+      logger.log('[GDrive] Authorization code received, exchanging for access token...');
 
-    if (Platform.OS === 'web') {
-      // Web: Use backend endpoint for token exchange (avoids CORS issues)
-      logger.log('[GDrive] Using backend token exchange endpoint (web)');
-      logger.warn('[GDrive] Token exchange URL:', 'https://3mpwrapp.pages.dev/gdrive-token-exchange');
-      logger.warn('[GDrive] Request body:', { code: code?.substring(0, 20) + '...', redirectUri });
-      
-      try {
-        tokenResponse = await fetch('https://3mpwrapp.pages.dev/gdrive-token-exchange', {
+      // For web, use backend endpoint to exchange code (CORS-safe)
+      // For native, use direct exchange (Expo handles CORS)
+      let tokenResponse: Response;
+
+      if (Platform.OS === 'web') {
+        // Web: Try backend endpoint first, but fall back to direct if it fails
+        logger.log('[GDrive] Attempting backend token exchange endpoint...');
+        logger.warn('[GDrive] Token exchange URL:', 'https://3mpwrapp.pages.dev/gdrive-token-exchange');
+        logger.warn('[GDrive] Request body:', { code: code?.substring(0, 20) + '...', redirectUri });
+        
+        try {
+          tokenResponse = await fetch('https://3mpwrapp.pages.dev/gdrive-token-exchange', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              code,
+              redirectUri,
+            }),
+          });
+
+          logger.warn('[GDrive] Backend response status:', tokenResponse.status);
+
+          if (tokenResponse.ok) {
+            tokenData = await tokenResponse.json();
+            logger.warn('[GDrive] Backend response data:', { 
+              success: tokenData.success, 
+              hasAccessToken: !!tokenData.accessToken
+            });
+            
+            if (tokenData.success) {
+              finalAccessToken = tokenData.accessToken;
+              finalRefreshToken = tokenData.refreshToken;
+              finalExpiresIn = tokenData.expiresIn;
+            } else {
+              logger.warn('[GDrive] Backend token exchange returned error, will try direct exchange');
+              code = undefined; // Clear code to prevent direct exchange
+            }
+          } else {
+            logger.warn('[GDrive] Backend endpoint failed (status ' + tokenResponse.status + '), will try direct exchange');
+          }
+        } catch (fetchError: any) {
+          logger.warn('[GDrive] Backend endpoint error:', fetchError.message, ' - will try direct exchange');
+        }
+      }
+
+      // If backend exchange didn't work, try direct exchange for web
+      // Or always use direct for native
+      if (!finalAccessToken) {
+        logger.log('[GDrive] Using direct Google token exchange endpoint');
+        tokenResponse = await fetch(TOKEN_ENDPOINT, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: JSON.stringify({
+          body: new URLSearchParams({
             code,
-            redirectUri,
-          }),
-        });
-
-        logger.warn('[GDrive] Backend response status:', tokenResponse.status);
-        logger.warn('[GDrive] Backend response headers:', {
-          'content-type': tokenResponse.headers.get('content-type'),
+            client_id: clientId,
+            redirect_uri: redirectUri,
+            grant_type: 'authorization_code',
+          }).toString(),
         });
 
         if (!tokenResponse.ok) {
-          const errorText = await tokenResponse.text();
-          logger.error('[GDrive] Backend returned error status:', tokenResponse.status);
-          logger.error('[GDrive] Backend error response:', errorText);
-          
-          try {
-            const errorData = JSON.parse(errorText);
-            return {
-              success: false,
-              error: `Token exchange failed (${tokenResponse.status}): ${(errorData as any).error || errorText}`
-            };
-          } catch {
-            return {
-              success: false,
-              error: `Token exchange failed (${tokenResponse.status}): ${errorText}`
-            };
-          }
+          const errorData = await tokenResponse.json().catch(() => ({}));
+          logger.error('[GDrive] Token exchange failed:', errorData);
+          return {
+            success: false,
+            error: `Failed to exchange code for token: ${(errorData as any).error_description || (errorData as any).error || 'Unknown error'}`
+          };
         }
 
         tokenData = await tokenResponse.json();
-        logger.warn('[GDrive] Backend response data:', { 
-          success: tokenData.success, 
-          hasAccessToken: !!tokenData.accessToken,
-          expiresIn: tokenData.expiresIn,
-          error: tokenData.error 
-        });
-        
-        if (!tokenData.success) {
-          logger.error('[GDrive] Backend token exchange returned error:', tokenData.error);
-          return {
-            success: false,
-            error: tokenData.error || 'Token exchange failed'
-          };
-        }
-      } catch (fetchError: any) {
-        logger.error('[GDrive] Backend fetch error:', fetchError.message);
-        logger.error('[GDrive] Stack:', fetchError.stack);
-        return {
-          success: false,
-          error: `Failed to reach token exchange endpoint: ${fetchError.message}`
-        };
+        finalAccessToken = tokenData.access_token;
+        finalRefreshToken = tokenData.refresh_token;
+        finalExpiresIn = tokenData.expires_in;
       }
-    } else {
-      // Native: Use direct Google token endpoint
-      logger.log('[GDrive] Using direct Google token endpoint (native)');
-      tokenResponse = await fetch(TOKEN_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-          code,
-          client_id: clientId,
-          redirect_uri: redirectUri,
-          grant_type: 'authorization_code',
-        }).toString(),
-      });
-
-      if (!tokenResponse.ok) {
-        const errorData = await tokenResponse.json().catch(() => ({}));
-        logger.error('[GDrive] Token exchange failed:', errorData);
-        return {
-          success: false,
-          error: `Failed to exchange code for token: ${(errorData as any).error_description || (errorData as any).error || 'Unknown error'}`
-        };
-      }
-
-      tokenData = await tokenResponse.json();
     }
 
-    const { access_token, expires_in, refresh_token } = tokenData;
-
-    if (!access_token && !tokenData.accessToken) {
+    if (!finalAccessToken) {
       logger.error('[GDrive] No access token in response');
       logger.error('[GDrive] Response keys:', Object.keys(tokenData));
       return { success: false, error: 'No access token received from Google' };
     }
-
-    // Handle both backend response format and direct Google response format
-    const finalAccessToken = access_token || tokenData.accessToken;
-    const finalExpiresIn = expires_in || tokenData.expiresIn;
-    const finalRefreshToken = refresh_token || tokenData.refreshToken;
 
     logger.log('[GDrive] Access token received, length:', finalAccessToken.length);
 
