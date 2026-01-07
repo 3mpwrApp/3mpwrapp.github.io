@@ -369,7 +369,7 @@ async function handleBulkSync(request, env, corsHeaders) {
           // Timed events: preserve original date string and create EST display
           // The original date string has EST offset (e.g., 2026-01-07T19:00:00-05:00)
           // Parse it correctly and always display in EST
-          const inputDate = new Date(event.date); // This preserves the timezone offset
+          const inputDate = new Date(event.date); // This correctly parses with timezone offset
           
           // Get EST formatted date
           const estDateString = inputDate.toLocaleString('en-US', { 
@@ -382,28 +382,13 @@ async function handleBulkSync(request, env, corsHeaders) {
             hour12: false
           });
           
-          // Generate ISO string that represents the ORIGINAL EST time
-          // Extract the EST date parts to create proper ISO
-          const estDateParts = inputDate.toLocaleString('en-US', {
-            timeZone: 'America/New_York',
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: false
-          }).split(', ');
-          const [estDate, estTime] = [estDateParts[0], estDateParts[1]];
-          const [m, d, y] = estDate.split('/');
-          const [h, min, s] = estTime.split(':');
-          const correctISO = `${y}-${m}-${d}T${h}:${min}:${s}.000Z`;
-          
+          // The inputDate.toISOString() gives us the correct UTC representation
+          // of the EST time - this is what websites expect to parse correctly
           eventData = {
             ...event,
             date: estDateString, // Store as MM/DD/YYYY, HH:mm format (EST)
             dateOriginal: event.date, // Keep original for reference
-            dateISO: correctISO, // ISO format representing the EST time
+            dateISO: inputDate.toISOString(), // UTC equivalent (correct for parsing)
             dateEST: estDateString, // Explicit EST format
             isAllDay: false,
             updatedAt: Date.now(),
