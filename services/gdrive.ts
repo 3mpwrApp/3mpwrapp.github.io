@@ -315,45 +315,91 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
 
     logger.log('[GDrive] Authorization code received, exchanging for access token...');
 
-    // Exchange the code for an access token
-    const tokenResponse = await fetch(TOKEN_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams({
-        code,
-        client_id: clientId,
-        redirect_uri: redirectUri,
-        grant_type: 'authorization_code',
-      }).toString(),
-    });
+    // For web, use backend endpoint to exchange code (CORS-safe)
+    // For native, use direct exchange (Expo handles CORS)
+    let tokenData: any;
+    let tokenResponse: Response;
 
-    if (!tokenResponse.ok) {
-      const errorData = await tokenResponse.json().catch(() => ({}));
-      logger.error('[GDrive] Token exchange failed:', errorData);
-      return {
-        success: false,
-        error: `Failed to exchange code for token: ${errorData.error_description || errorData.error || 'Unknown error'}`
-      };
+    if (Platform.OS === 'web') {
+      // Web: Use backend endpoint for token exchange (avoids CORS issues)
+      logger.log('[GDrive] Using backend token exchange endpoint (web)');
+      tokenResponse = await fetch('https://3mpwrapp.pages.dev/gdrive-token-exchange', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          code,
+          redirectUri,
+        }),
+      });
+
+      if (!tokenResponse.ok) {
+        const errorData = await tokenResponse.json().catch(() => ({}));
+        logger.error('[GDrive] Backend token exchange failed:', errorData);
+        return {
+          success: false,
+          error: `Failed to exchange code for token: ${(errorData as any).error || 'Unknown error'}`
+        };
+      }
+
+      tokenData = await tokenResponse.json();
+      
+      if (!tokenData.success) {
+        logger.error('[GDrive] Backend token exchange returned error:', tokenData.error);
+        return {
+          success: false,
+          error: tokenData.error || 'Token exchange failed'
+        };
+      }
+    } else {
+      // Native: Use direct Google token endpoint
+      logger.log('[GDrive] Using direct Google token endpoint (native)');
+      tokenResponse = await fetch(TOKEN_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          code,
+          client_id: clientId,
+          redirect_uri: redirectUri,
+          grant_type: 'authorization_code',
+        }).toString(),
+      });
+
+      if (!tokenResponse.ok) {
+        const errorData = await tokenResponse.json().catch(() => ({}));
+        logger.error('[GDrive] Token exchange failed:', errorData);
+        return {
+          success: false,
+          error: `Failed to exchange code for token: ${(errorData as any).error_description || (errorData as any).error || 'Unknown error'}`
+        };
+      }
+
+      tokenData = await tokenResponse.json();
     }
 
-    const tokenData = await tokenResponse.json();
     const { access_token, expires_in, refresh_token } = tokenData;
 
-    if (!access_token) {
+    if (!access_token && !tokenData.accessToken) {
       logger.error('[GDrive] No access token in response');
       return { success: false, error: 'No access token received from Google' };
     }
 
-    logger.log('[GDrive] Access token received, length:', access_token.length);
+    // Handle both backend response format and direct Google response format
+    const finalAccessToken = access_token || tokenData.accessToken;
+    const finalExpiresIn = expires_in || tokenData.expiresIn;
+    const finalRefreshToken = refresh_token || tokenData.refreshToken;
+
+    logger.log('[GDrive] Access token received, length:', finalAccessToken.length);
 
     const config: GDriveConfig = {
       kind: 'gdrive',
-      accessToken: access_token,
-      refreshToken: refresh_token || undefined,
-      expiresAt: expires_in
-        ? Date.now() + parseInt(expires_in, 10) * 1000
+      accessToken: finalAccessToken,
+      refreshToken: finalRefreshToken || undefined,
+      expiresAt: finalExpiresIn
+        ? Date.now() + parseInt(finalExpiresIn.toString(), 10) * 1000
         : undefined,
     };
 
