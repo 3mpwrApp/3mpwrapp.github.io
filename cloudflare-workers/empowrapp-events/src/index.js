@@ -249,12 +249,28 @@ async function handleCreateEvent(request, env, corsHeaders) {
       hour12: false
     });
     
+    // Generate ISO string that represents the ORIGINAL EST time
+    const estDateParts = inputDate.toLocaleString('en-US', {
+      timeZone: 'America/New_York',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    }).split(', ');
+    const [estDate, estTime] = [estDateParts[0], estDateParts[1]];
+    const [m, d, y] = estDate.split('/');
+    const [h, min, s] = estTime.split(':');
+    const correctISO = `${y}-${m}-${d}T${h}:${min}:${s}.000Z`;
+    
     // Store with EST formatting
     const eventData = {
       ...event,
       date: estDateString, // MM/DD/YYYY, HH:mm format in EST
       dateOriginal: event.date,
-      dateISO: inputDate.toISOString(),
+      dateISO: correctISO, // ISO format representing the EST time
       dateEST: estDateString,
       timezone: 'America/New_York (EST)',
       displayFormat: 'MM/DD/YYYY, HH:mm',
@@ -366,11 +382,28 @@ async function handleBulkSync(request, env, corsHeaders) {
             hour12: false
           });
           
+          // Generate ISO string that represents the ORIGINAL EST time
+          // Extract the EST date parts to create proper ISO
+          const estDateParts = inputDate.toLocaleString('en-US', {
+            timeZone: 'America/New_York',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+          }).split(', ');
+          const [estDate, estTime] = [estDateParts[0], estDateParts[1]];
+          const [m, d, y] = estDate.split('/');
+          const [h, min, s] = estTime.split(':');
+          const correctISO = `${y}-${m}-${d}T${h}:${min}:${s}.000Z`;
+          
           eventData = {
             ...event,
             date: estDateString, // Store as MM/DD/YYYY, HH:mm format (EST)
             dateOriginal: event.date, // Keep original for reference
-            dateISO: inputDate.toISOString(),
+            dateISO: correctISO, // ISO format representing the EST time
             dateEST: estDateString, // Explicit EST format
             isAllDay: false,
             updatedAt: Date.now(),
