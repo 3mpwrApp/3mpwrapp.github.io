@@ -238,7 +238,7 @@ async function handleCreateEvent(request, env, corsHeaders) {
     }
 
     // Normalize date to EST/EDT (America/New_York timezone)
-    const inputDate = new Date(event.date);
+    const inputDate = new Date(event.date); // Correctly parses timezone offset
     const estDateString = inputDate.toLocaleString('en-US', { 
       timeZone: 'America/New_York',
       year: 'numeric',
@@ -249,14 +249,17 @@ async function handleCreateEvent(request, env, corsHeaders) {
       hour12: false
     });
     
-    // Ensure event has required metadata
+    // Store with EST formatting
     const eventData = {
       ...event,
-      date: estDateString, // Store in EST format: MM/DD/YYYY, HH:mm
-      dateISO: inputDate.toISOString(), // Keep original ISO for sorting/comparison
+      date: estDateString, // MM/DD/YYYY, HH:mm format in EST
+      dateOriginal: event.date,
+      dateISO: inputDate.toISOString(),
+      dateEST: estDateString,
+      timezone: 'America/New_York (EST)',
+      displayFormat: 'MM/DD/YYYY, HH:mm',
       updatedAt: Date.now(),
-      syncedAt: Date.now(),
-      timezone: 'America/New_York' // EST/EDT
+      syncedAt: Date.now()
     };
 
     // Store in both production and preview KV (30-day expiration for events)
@@ -347,8 +350,12 @@ async function handleBulkSync(request, env, corsHeaders) {
             timezone: 'America/New_York'
           };
         } else {
-          // Timed events: convert to EST display string
-          const inputDate = new Date(event.date);
+          // Timed events: preserve original date string and create EST display
+          // The original date string has EST offset (e.g., 2026-01-07T19:00:00-05:00)
+          // Parse it correctly and always display in EST
+          const inputDate = new Date(event.date); // This preserves the timezone offset
+          
+          // Get EST formatted date
           const estDateString = inputDate.toLocaleString('en-US', { 
             timeZone: 'America/New_York',
             year: 'numeric',
@@ -358,14 +365,18 @@ async function handleBulkSync(request, env, corsHeaders) {
             minute: '2-digit',
             hour12: false
           });
+          
           eventData = {
             ...event,
-            date: estDateString,
+            date: estDateString, // Store as MM/DD/YYYY, HH:mm format (EST)
+            dateOriginal: event.date, // Keep original for reference
             dateISO: inputDate.toISOString(),
+            dateEST: estDateString, // Explicit EST format
             isAllDay: false,
             updatedAt: Date.now(),
             syncedAt: Date.now(),
-            timezone: 'America/New_York'
+            timezone: 'America/New_York (EST)',
+            displayFormat: 'MM/DD/YYYY, HH:mm'
           };
         }
         
