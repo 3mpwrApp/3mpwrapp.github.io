@@ -101,9 +101,8 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
             // Pass the authorization code back to the opener window (web app)
             if (window.opener) {
               window.opener.postMessage({
-                type: 'GDRIVE_AUTH_CODE',
-                code: '${code}',
-                state: '${state || ''}'
+                type: 'expo-auth-session',
+                url: window.location.href
               }, '*');
               
               // Close this window after a short delay
