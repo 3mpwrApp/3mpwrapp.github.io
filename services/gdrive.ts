@@ -323,33 +323,66 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     if (Platform.OS === 'web') {
       // Web: Use backend endpoint for token exchange (avoids CORS issues)
       logger.log('[GDrive] Using backend token exchange endpoint (web)');
-      tokenResponse = await fetch('https://3mpwrapp.pages.dev/gdrive-token-exchange', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          code,
-          redirectUri,
-        }),
-      });
-
-      if (!tokenResponse.ok) {
-        const errorData = await tokenResponse.json().catch(() => ({}));
-        logger.error('[GDrive] Backend token exchange failed:', errorData);
-        return {
-          success: false,
-          error: `Failed to exchange code for token: ${(errorData as any).error || 'Unknown error'}`
-        };
-      }
-
-      tokenData = await tokenResponse.json();
+      logger.warn('[GDrive] Token exchange URL:', 'https://3mpwrapp.pages.dev/gdrive-token-exchange');
+      logger.warn('[GDrive] Request body:', { code: code?.substring(0, 20) + '...', redirectUri });
       
-      if (!tokenData.success) {
-        logger.error('[GDrive] Backend token exchange returned error:', tokenData.error);
+      try {
+        tokenResponse = await fetch('https://3mpwrapp.pages.dev/gdrive-token-exchange', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            code,
+            redirectUri,
+          }),
+        });
+
+        logger.warn('[GDrive] Backend response status:', tokenResponse.status);
+        logger.warn('[GDrive] Backend response headers:', {
+          'content-type': tokenResponse.headers.get('content-type'),
+        });
+
+        if (!tokenResponse.ok) {
+          const errorText = await tokenResponse.text();
+          logger.error('[GDrive] Backend returned error status:', tokenResponse.status);
+          logger.error('[GDrive] Backend error response:', errorText);
+          
+          try {
+            const errorData = JSON.parse(errorText);
+            return {
+              success: false,
+              error: `Token exchange failed (${tokenResponse.status}): ${(errorData as any).error || errorText}`
+            };
+          } catch {
+            return {
+              success: false,
+              error: `Token exchange failed (${tokenResponse.status}): ${errorText}`
+            };
+          }
+        }
+
+        tokenData = await tokenResponse.json();
+        logger.warn('[GDrive] Backend response data:', { 
+          success: tokenData.success, 
+          hasAccessToken: !!tokenData.accessToken,
+          expiresIn: tokenData.expiresIn,
+          error: tokenData.error 
+        });
+        
+        if (!tokenData.success) {
+          logger.error('[GDrive] Backend token exchange returned error:', tokenData.error);
+          return {
+            success: false,
+            error: tokenData.error || 'Token exchange failed'
+          };
+        }
+      } catch (fetchError: any) {
+        logger.error('[GDrive] Backend fetch error:', fetchError.message);
+        logger.error('[GDrive] Stack:', fetchError.stack);
         return {
           success: false,
-          error: tokenData.error || 'Token exchange failed'
+          error: `Failed to reach token exchange endpoint: ${fetchError.message}`
         };
       }
     } else {
@@ -384,6 +417,7 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
 
     if (!access_token && !tokenData.accessToken) {
       logger.error('[GDrive] No access token in response');
+      logger.error('[GDrive] Response keys:', Object.keys(tokenData));
       return { success: false, error: 'No access token received from Google' };
     }
 

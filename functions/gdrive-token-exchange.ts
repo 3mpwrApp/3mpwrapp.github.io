@@ -65,11 +65,17 @@ export const onRequest = async (context: any): Promise<Response> => {
     }
 
     // Get client ID from environment
-    const clientId = context.env?.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
-    if (!clientId) {
-      console.error('[Token Exchange] Missing EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID in environment');
+    // Try multiple sources: context.env (Cloudflare Workers), env object, or hardcoded fallback
+    const clientId = 
+      context.env?.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID ||
+      process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID ||
+      '733708119893-so14q85mmnrtt5ulnan3qjs2o7ll73vs.apps.googleusercontent.com';
+    
+    if (!clientId || clientId.length < 10) {
+      console.error('[Token Exchange] Invalid or missing EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID in environment');
+      console.error('[Token Exchange] clientId value:', clientId);
       return new Response(
-        JSON.stringify({ success: false, error: 'Server configuration error' }),
+        JSON.stringify({ success: false, error: 'Server configuration error - missing client ID' }),
         {
           status: 500,
           headers: { 'Content-Type': 'application/json' },
