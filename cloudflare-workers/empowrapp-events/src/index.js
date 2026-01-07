@@ -263,14 +263,14 @@ async function handleCreateEvent(request, env, corsHeaders) {
     const [estDate, estTime] = [estDateParts[0], estDateParts[1]];
     const [m, d, y] = estDate.split('/');
     const [h, min, s] = estTime.split(':');
-    const correctISO = `${y}-${m}-${d}T${h}:${min}:${s}.000Z`;
+    const correctISO = `${y}-${m}-${d}T${h}:${min}:${s}-05:00`; // Include EST offset
     
     // Store with EST formatting
     const eventData = {
       ...event,
       date: estDateString, // MM/DD/YYYY, HH:mm format in EST
       dateOriginal: event.date,
-      dateISO: correctISO, // ISO format representing the EST time
+      dateISO: correctISO, // ISO format WITH EST offset - critical for parsing!
       dateEST: estDateString,
       timezone: 'America/New_York (EST)',
       displayFormat: 'MM/DD/YYYY, HH:mm',
@@ -298,7 +298,7 @@ async function handleCreateEvent(request, env, corsHeaders) {
       id: event.id,
       message: 'Event synced successfully to production and preview',
       date: estDateString,
-      dateISO: inputDate.toISOString(),
+      dateISO: correctISO, // Return the ISO with EST offset
       timezone: 'America/New_York (EST/EDT)',
       timestamp: new Date().toISOString()
     }), {
@@ -366,12 +366,12 @@ async function handleBulkSync(request, env, corsHeaders) {
             timezone: 'America/New_York'
           };
         } else {
-          // Timed events: preserve original date string and create EST display
+          // Timed events: preserve original date WITH timezone offset
           // The original date string has EST offset (e.g., 2026-01-07T19:00:00-05:00)
-          // Parse it correctly and always display in EST
-          const inputDate = new Date(event.date); // This correctly parses with timezone offset
+          // Keep this format - websites need the timezone to parse correctly!
+          const inputDate = new Date(event.date); // Parse with timezone offset
           
-          // Get EST formatted date
+          // Get EST formatted date for display
           const estDateString = inputDate.toLocaleString('en-US', { 
             timeZone: 'America/New_York',
             year: 'numeric',
@@ -382,13 +382,11 @@ async function handleBulkSync(request, env, corsHeaders) {
             hour12: false
           });
           
-          // The inputDate.toISOString() gives us the correct UTC representation
-          // of the EST time - this is what websites expect to parse correctly
           eventData = {
             ...event,
             date: estDateString, // Store as MM/DD/YYYY, HH:mm format (EST)
-            dateOriginal: event.date, // Keep original for reference
-            dateISO: inputDate.toISOString(), // UTC equivalent (correct for parsing)
+            dateOriginal: event.date, // Keep original ISO with offset
+            dateISO: event.date, // Use original ISO WITH timezone offset - this is critical!
             dateEST: estDateString, // Explicit EST format
             isAllDay: false,
             updatedAt: Date.now(),
