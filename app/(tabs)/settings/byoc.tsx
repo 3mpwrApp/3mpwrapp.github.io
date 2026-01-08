@@ -8,13 +8,13 @@
 import { Ionicons } from '@expo/vector-icons';
 import React, { useState } from 'react';
 import {
-  Alert,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
+    Alert,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    View,
 } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
@@ -23,12 +23,12 @@ import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import {
-  getBYOCConfig,
-  getDataPolicyMode,
-  isBYOCEnabled,
-  setBYOCConfig,
-  testBYOCConnection,
-  type BYOCConfig,
+    getBYOCConfig,
+    getDataPolicyMode,
+    isBYOCEnabled,
+    setBYOCConfig,
+    testBYOCConnection,
+    type BYOCConfig,
 } from '../../../services/dataPolicy';
 import { isGDriveConfigured } from '../../../services/gdrive';
 import { useAppPalette } from '../../../theme/usePalette';
@@ -152,8 +152,12 @@ export default function BYOCSettingsScreen() {
         console.warn('[BYOC] OAuth result:', result);
 
         if (result.success) {
+          console.warn('[BYOC] Setting BYOC config to gdrive...');
           await setBYOCConfig({ kind: 'gdrive' });
+          console.warn('[BYOC] Updating connected state to true...');
           setConnected(true);
+          setSelectedProvider('gdrive'); // Explicitly set provider
+          console.warn('[BYOC] Google Drive connection complete!');
           Alert.alert(
             '✅ Connected to Google Drive',
             'Your data will now be saved to your Google Drive.',

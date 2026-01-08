@@ -79,7 +79,13 @@ export default function GDriveCallbackScreen() {
             '*' // Allow cross-origin for OAuth callback
           );
           
-          console.warn('[GDrive Callback] Authorization message sent to parent, waiting for popup to close...');
+          console.warn('[GDrive Callback] Authorization message sent to parent, closing popup in 500ms...');
+          
+          // Auto-close popup after a short delay to ensure message is received
+          setTimeout(() => {
+            console.warn('[GDrive Callback] Closing popup window now');
+            window.close();
+          }, 500);
           
         } else if (error) {
           setStatusMessage(`❌ OAuth error: ${error}\n${errorDesc || ''}`);
