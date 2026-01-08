@@ -17,6 +17,7 @@ interface TokenExchangeRequest {
   redirectUri: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface TokenExchangeResponse {
   success: boolean;
   accessToken?: string;
@@ -84,9 +85,9 @@ export const onRequest = async (context: any): Promise<Response> => {
     }
 
     // Exchange code for token with Google
-    console.log('[Token Exchange] Exchanging code for token...');
-    console.log('[Token Exchange] Client ID:', clientId.substring(0, 20) + '...');
-    console.log('[Token Exchange] Redirect URI:', redirectUri);
+    console.warn('[Token Exchange] Exchanging code for token...');
+    console.warn('[Token Exchange] Client ID:', clientId.substring(0, 20) + '...');
+    console.warn('[Token Exchange] Redirect URI:', redirectUri);
 
     const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
       method: 'POST',
@@ -135,10 +136,10 @@ export const onRequest = async (context: any): Promise<Response> => {
       );
     }
 
-    console.log('[Token Exchange] Token exchange successful');
-    console.log('[Token Exchange] Token length:', access_token.length);
-    console.log('[Token Exchange] Expires in:', expires_in, 'seconds');
-    console.log('[Token Exchange] Refresh token present:', !!refresh_token);
+    console.warn('[Token Exchange] Token exchange successful');
+    console.warn('[Token Exchange] Token length:', access_token.length);
+    console.warn('[Token Exchange] Expires in:', expires_in, 'seconds');
+    console.warn('[Token Exchange] Refresh token present:', !!refresh_token);
 
     // Return tokens to browser
     return new Response(

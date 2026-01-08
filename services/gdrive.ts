@@ -145,7 +145,13 @@ function webOAuthFlow(
       'scope',
       'https://www.googleapis.com/auth/drive.file openid profile email'
     );
-    oauthUrl.searchParams.set('access_type', 'offline'); // Get refresh token
+    
+    // Note: For implicit flow (response_type=token), Google doesn't allow access_type=offline
+    // Implicit flow tokens expire in 1 hour, which is acceptable for this use case
+    // Native flow (code) still requests offline access
+    if (Platform.OS !== 'web') {
+      oauthUrl.searchParams.set('access_type', 'offline'); // Get refresh token (only for code flow)
+    }
 
     logger.log('[GDrive] OAuth URL:', oauthUrl.toString());
 
@@ -173,7 +179,8 @@ function webOAuthFlow(
           const urlObj = new URL(url);
           // For implicit flow (token response), token is in URL hash
           // For code flow, code is in query string
-          const accessToken = urlObj.hash.substring(1).split('&').find(param => param.startsWith('access_token='))?.split('=')[1];
+          const hashParams = new URLSearchParams(urlObj.hash.substring(1));
+          const accessToken = hashParams.get('access_token');
           const code = urlObj.searchParams.get('code');
           const error = urlObj.searchParams.get('error');
 
@@ -257,12 +264,18 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
     if (Platform.OS === 'web') {
       logger.log('[GDrive] Using web OAuth flow (popup + postMessage)');
       const webResult = await webOAuthFlow(clientId, redirectUri);
-      code = webResult.code;
-      implicitAccessToken = webResult.accessToken;
       authError = webResult.error;
 
       if (authError) {
         return { success: false, error: authError };
+      }
+
+      // webResult.code might contain either a code or an access token
+      // Check webResult.isToken to see which one it is
+      if (webResult.isToken) {
+        implicitAccessToken = webResult.code;
+      } else {
+        code = webResult.code;
       }
     } else {
       // For native, use expo-auth-session promptAsync

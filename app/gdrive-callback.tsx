@@ -42,28 +42,39 @@ export default function GDriveCallbackScreen() {
     const error = urlObj.searchParams.get('error');
     const errorDesc = urlObj.searchParams.get('error_description');
 
+    // For implicit flow, check the hash
+    const hashParams = new URLSearchParams(urlObj.hash.substring(1));
+    const accessToken = hashParams.get('access_token');
+
     console.warn('[GDrive Callback] Parsed query params:');
     console.warn('  - code present:', !!code);
+    console.warn('  - access_token present:', !!accessToken);
     console.warn('  - error:', error || 'none');
     console.warn('  - error_description:', errorDesc || 'none');
 
     // Check if we're on web or native
     if (Platform.OS === 'web') {
-      // On web: Send the authorization code to parent window
+      // On web: Send the authorization code/token to parent window
       if (typeof window !== 'undefined' && window.opener) {
         console.warn('[GDrive Callback] Sending auth result to parent window');
 
-        if (code) {
-          setStatusMessage('✓ Authorization successful! Window will close automatically...');
-          console.warn('[GDrive Callback] Sending authorization code to parent window');
-          console.warn('[GDrive Callback] Code:', code.substring(0, 20) + '...');
+        if (code || accessToken) {
+          if (code) {
+            console.warn('[GDrive Callback] Sending authorization code to parent window');
+            console.warn('[GDrive Callback] Code:', code.substring(0, 20) + '...');
+            setStatusMessage('✓ Authorization successful! Window will close automatically...');
+          } else if (accessToken) {
+            console.warn('[GDrive Callback] Sending access token to parent window (implicit flow)');
+            console.warn('[GDrive Callback] Token:', accessToken.substring(0, 20) + '...');
+            setStatusMessage('✓ Authorization successful (implicit)! Window will close automatically...');
+          }
           
-          // Send the code back to the parent window (the app)
-          // The parent window will close this popup after receiving the code
+          // Send the full URL back to the parent window (the app)
+          // The parent window will close this popup after receiving the result
           window.opener.postMessage(
             {
               type: 'expo-auth-session',
-              url: url, // Send full URL with code
+              url: url, // Send full URL with code/token
             },
             '*' // Allow cross-origin for OAuth callback
           );
