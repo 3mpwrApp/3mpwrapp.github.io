@@ -54,7 +54,12 @@ export default function BYOCSettingsScreen() {
 
   // Load existing config on mount and when screen gets focus
   React.useEffect(() => {
-    const checkConfig = () => {
+    const checkConfig = async () => {
+      // Load Google Drive config from AsyncStorage on every check
+      // This ensures we pick up the config saved during OAuth
+      const { loadGDriveConfig } = await import('../../../services/gdrive');
+      await loadGDriveConfig();
+
       // Skip config checks while OAuth is in progress
       if (isAuthenticating) {
         console.warn('[BYOC] Skipping config check - authentication in progress');
@@ -94,7 +99,10 @@ export default function BYOCSettingsScreen() {
     checkConfig();
 
     // Check again when screen gets focus (e.g., after OAuth redirect)
-    const intervalId = setInterval(checkConfig, 1000);
+    // Use a wrapper to handle the async function
+    const intervalId = setInterval(() => {
+      checkConfig().catch(err => console.error('[BYOC] checkConfig error:', err));
+    }, 1000);
     return () => clearInterval(intervalId);
   }, [isAuthenticating, connected]);
 
