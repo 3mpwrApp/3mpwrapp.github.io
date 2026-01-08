@@ -405,7 +405,7 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
 
       // If backend exchange didn't work, try direct exchange for web
       // Or always use direct for native
-      if (!finalAccessToken) {
+      if (!finalAccessToken && code) {
         logger.log('[GDrive] Using direct Google token exchange endpoint');
         tokenResponse = await fetch(TOKEN_ENDPOINT, {
           method: 'POST',
@@ -413,7 +413,7 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
             'Content-Type': 'application/x-www-form-urlencoded',
           },
           body: new URLSearchParams({
-            code,
+            code: code,
             client_id: clientId,
             redirect_uri: redirectUri,
             grant_type: 'authorization_code',

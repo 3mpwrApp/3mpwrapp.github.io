@@ -118,6 +118,7 @@ try {
   const IS_TEST_ENV = typeof process !== 'undefined' && !!(process as any).env?.JEST_WORKER_ID;
   if (!STRICT && !HYBRID && platformOS === 'web' && !IS_TEST_ENV && db) {
     enableIndexedDbPersistence(db as any, { 
+      // @ts-expect-error - synchronizeTabs exists in Firebase v9+ but may not be in older type definitions
       synchronizeTabs: true // Allow multiple tabs to access Firestore simultaneously
     }).catch((err) => {
       console.warn('[Firebase] IndexedDB persistence not enabled:', err);
