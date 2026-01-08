@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "description": "Route configuration for Cloudflare Pages - explicitly exclude OAuth callback from Functions",
+  "exclude": [
+    "/gdrive-callback*"
+  ],
+  "include": [
+    "/*"
+  ]
+}

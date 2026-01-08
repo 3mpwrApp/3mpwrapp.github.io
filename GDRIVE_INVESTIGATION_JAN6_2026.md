@@ -70,7 +70,7 @@ if (Platform.OS === 'web') {
    - Native uses direct Google endpoint
    - Proper error handling for both flows
 
-3. [functions/gdrive-callback.ts](functions/gdrive-callback.ts) - PREVIOUSLY FIXED
+3. [functions/gdrive-callback.ts.disabled](functions/gdrive-callback.ts.disabled) - DISABLED (was conflicting with React component)
    - Message type corrected (expo-auth-session)
    - Sends full callback URL to parent window
 
@@ -126,7 +126,7 @@ const tokenResponse = await fetch('https://3mpwrapp.pages.dev/gdrive-token-excha
 
 - 📁 [services/gdrive.ts](services/gdrive.ts) - OAuth service (UPDATED)
 - 📁 [functions/gdrive-token-exchange.ts](functions/gdrive-token-exchange.ts) - Token exchange endpoint (NEW)
-- 📁 [functions/gdrive-callback.ts](functions/gdrive-callback.ts) - Callback handler (FIXED)
+- 📁 [functions/gdrive-callback.ts.disabled](functions/gdrive-callback.ts.disabled) - Callback handler (DISABLED Jan 8 - conflicted with implicit flow)
 - 📁 [app/gdrive-callback.tsx](app/gdrive-callback.tsx) - React callback page
 
 ## Status
