@@ -256,14 +256,25 @@ function webOAuthFlow(
     let resolved = false;
 
     // If popup closes before we get a message, timeout
+    // Use try-catch to avoid COOP (Cross-Origin-Opener-Policy) errors
     const popupCheckInterval = setInterval(() => {
-      if (popup.closed && !resolved) {
-        resolved = true;
-        clearInterval(popupCheckInterval);
-        clearTimeout(timeout);
-        window.removeEventListener('message', handleMessage);
-        logger.log('[GDrive] Web OAuth: Popup closed without receiving auth result');
-        resolve({ error: 'OAuth window was closed before receiving authorization' });
+      if (!resolved) {
+        try {
+          // Try to access popup.closed - will throw if COOP blocks access
+          if (popup.closed) {
+            resolved = true;
+            clearInterval(popupCheckInterval);
+            clearTimeout(timeout);
+            window.removeEventListener('message', handleMessage);
+            logger.log('[GDrive] Web OAuth: Popup closed without receiving auth result');
+            resolve({ error: 'OAuth window was closed before receiving authorization' });
+          }
+        } catch {
+          // COOP error - can't access popup.closed, but that's OK
+          // We'll still get the postMessage when auth completes
+          // Don't resolve with error, just continue checking
+          logger.warn('[GDrive] Cannot check popup.closed (COOP), relying on postMessage');
+        }
       }
     }, 500);
   });
