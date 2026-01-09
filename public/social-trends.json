@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-09T06:02:47.558Z",
+  "lastUpdated": "2026-01-09T12:03:17.018Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 7905,
+      "totalPosts": 7930,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T06:02:41.078Z"
+      "lastSeen": "2026-01-09T12:03:03.274Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 7848,
+      "totalPosts": 7873,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T06:02:42.363Z"
+      "lastSeen": "2026-01-09T12:03:05.289Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 7766,
+      "totalPosts": 7790,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T06:02:43.800Z"
+      "lastSeen": "2026-01-09T12:03:07.700Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 7895,
+      "totalPosts": 7919,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T06:02:45.137Z"
+      "lastSeen": "2026-01-09T12:03:10.005Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 7900,
+      "totalPosts": 7925,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T06:02:46.554Z"
+      "lastSeen": "2026-01-09T12:03:16.014Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "We have transcripts for every episode of #TheSojourn released so far, making them more accessible for those who have more difficulty with audio dramas as a medium! You can access them for free on our website!\n\nwww.thesojournaudiodrama.com/transcripts\n\n#AudioDrama #Accessibility #scifi",
-      "author": "thesojourn.bsky.social",
-      "engagement": 15,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 309,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We all know someone who will be harmed amongst our most vulnerable citizens.\n\nDo not put up with it.\n\nCall your legislators. \n☎️ 202 224 3121\nCongressional Switchboard \n\nresist.bot/petitions/PZ...\n\n@resist.bot \n#ADA\n#DisabilityRights\n#CivilRights\n#MentalHealth\n#wheelchairs\n#BlueSkyVets",
-      "author": "airshipwriter.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
       "author": "hoydenspark.bsky.social",
@@ -338,12 +314,36 @@
       "author": "lisadiedrich.bsky.social",
       "engagement": 15,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "This is why “just try harder” is nonsense.\nThe course isn’t neutral.\nThe system chooses who struggles.\n♿🔥🧱\nDrop a 🧠 if you get it.\n#EquityNotEquality #DisabilityRights #ChronicIllness #AccessIsEverything #JusticeEducation #CripHumor #RealTalk",
+      "author": "crabbyratwhisperer.bsky.social",
+      "engagement": 18,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 66,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 309,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 45
+      "count": 44
     },
     {
       "keyword": "accessibility",
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 34
+      "count": 33
     },
     {
       "keyword": "cripthevote",
@@ -378,10 +378,6 @@
       "count": 18
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 12
-    },
-    {
       "keyword": "foxtakedown",
       "count": 11
     },
@@ -403,7 +399,7 @@
     },
     {
       "keyword": "disability",
-      "count": 10
+      "count": 9
     },
     {
       "keyword": "stoptheliesfox",
@@ -415,6 +411,10 @@
     },
     {
       "keyword": "foxlies",
+      "count": 9
+    },
+    {
+      "keyword": "accessibility a11y",
       "count": 9
     },
     {
