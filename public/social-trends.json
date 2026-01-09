@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-09T12:03:17.018Z",
+  "lastUpdated": "2026-01-09T18:03:09.583Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 7930,
+      "totalPosts": 7955,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T12:03:03.274Z"
+      "lastSeen": "2026-01-09T18:02:59.932Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 7873,
+      "totalPosts": 7898,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T12:03:05.289Z"
+      "lastSeen": "2026-01-09T18:03:02.111Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 7790,
-      "recentPosts": 24,
+      "totalPosts": 7813,
+      "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T12:03:07.700Z"
+      "lastSeen": "2026-01-09T18:03:04.239Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 7919,
+      "totalPosts": 7943,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T12:03:10.005Z"
+      "lastSeen": "2026-01-09T18:03:06.249Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 7925,
+      "totalPosts": 7950,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-09T12:03:16.014Z"
+      "lastSeen": "2026-01-09T18:03:08.579Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 66,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Hey Jon Stewart, Jokes About Wearing Masks Aren’t Funny\n\n#MaskUp #CovidIsNotOver #DisabilityJustice  \n\nwww.motherjones.com/politics/202...",
-      "author": "thunderhoneysnow.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Vor einer Woche lief mein Text „Die Grenzen der Autonomie“ im Dlf — ich habe das Stück live im Radio gehört und bin, obwohl ich den Text geschrieben und oft gelesen habe, in Tränen ausgebrochen, an der Stelle mit dem Dinosaurier 🦕 #MECFS #CureMECFS #disabilityjustice #criptime #crip4crip",
-      "author": "janaxpetersen.bsky.social",
-      "engagement": 33,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "We have transcripts for every episode of #TheSojourn released so far, making them more accessible for those who have more difficulty with audio dramas as a medium! You can access them for free on our website!\n\nwww.thesojournaudiodrama.com/transcripts\n\n#AudioDrama #Accessibility #scifi",
-      "author": "thesojourn.bsky.social",
-      "engagement": 15,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
       "author": "juliametraux.bsky.social",
@@ -338,20 +314,44 @@
       "author": "lisadiedrich.bsky.social",
       "engagement": 15,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "This is why “just try harder” is nonsense.\nThe course isn’t neutral.\nThe system chooses who struggles.\n♿🔥🧱\nDrop a 🧠 if you get it.\n#EquityNotEquality #DisabilityRights #ChronicIllness #AccessIsEverything #JusticeEducation #CripHumor #RealTalk",
+      "author": "crabbyratwhisperer.bsky.social",
+      "engagement": 27,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 66,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 309,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 44
+      "count": 43
     },
     {
       "keyword": "accessibility",
-      "count": 42
+      "count": 41
     },
     {
       "keyword": "a11y",
-      "count": 33
+      "count": 35
     },
     {
       "keyword": "cripthevote",
@@ -398,8 +398,8 @@
       "count": 11
     },
     {
-      "keyword": "disability",
-      "count": 9
+      "keyword": "accessibility a11y",
+      "count": 10
     },
     {
       "keyword": "stoptheliesfox",
@@ -414,8 +414,8 @@
       "count": 9
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 9
+      "keyword": "inclusion",
+      "count": 7
     },
     {
       "keyword": "disabilityjustice nico",
