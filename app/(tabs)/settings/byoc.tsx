@@ -360,35 +360,37 @@ export default function BYOCSettingsScreen() {
               autoCorrect={false}
             />
 
-            <Text style={styles.label}>Password (Optional)</Text>
-            <View style={{ position: 'relative' }}>
-              <TextInput
-                style={[styles.input, { paddingRight: 48 }]}
-                placeholder="Your password"
-                placeholderTextColor={palette.muted}
-                value={webdavPassword}
-                onChangeText={setWebdavPassword}
-                secureTextEntry={!showPassword}
-                autoCapitalize="none"
-                autoCorrect={false}
-              />
-              <Pressable
-                style={{
-                  position: 'absolute',
-                  right: 12,
-                  top: 12,
-                  padding: 4,
-                }}
-                onPress={() => setShowPassword(!showPassword)}
-                accessibilityRole="button"
-                accessibilityLabel={showPassword ? 'Hide password' : 'Show password'}
-              >
-                <Ionicons
-                  name={showPassword ? 'eye-off' : 'eye'}
-                  size={20}
-                  color={palette.muted}
+            <View accessible={false}>
+              <Text style={styles.label}>Password (Optional)</Text>
+              <View style={{ position: 'relative' }}>
+                <TextInput
+                  style={[styles.input, { paddingRight: 48 }]}
+                  placeholder="Your password"
+                  placeholderTextColor={palette.muted}
+                  value={webdavPassword}
+                  onChangeText={setWebdavPassword}
+                  secureTextEntry={!showPassword}
+                  autoCapitalize="none"
+                  autoCorrect={false}
                 />
-              </Pressable>
+                <Pressable
+                  style={{
+                    position: 'absolute',
+                    right: 12,
+                    top: 12,
+                    padding: 4,
+                  }}
+                  onPress={() => setShowPassword(!showPassword)}
+                  accessibilityRole="button"
+                  accessibilityLabel={showPassword ? 'Hide password' : 'Show password'}
+                >
+                  <Ionicons
+                    name={showPassword ? 'eye-off' : 'eye'}
+                    size={20}
+                    color={palette.muted}
+                  />
+                </Pressable>
+              </View>
             </View>
 
             <Text style={styles.helperText}>
