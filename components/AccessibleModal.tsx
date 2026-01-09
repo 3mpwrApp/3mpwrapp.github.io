@@ -111,6 +111,8 @@ export const AccessibleModal = React.forwardRef<
 
         return () => clearTimeout(timer);
       }
+      // No cleanup needed when not visible
+      return undefined;
     }, [visible, title, announceOnOpen]);
 
     // Store previous focus and set up focus trap
