@@ -1,5 +1,6 @@
 import type {
-    FeatureFlag} from '../services/featureFlags';
+    FeatureFlag
+} from '../services/featureFlags';
 import {
     clearAllOverrides,
     getAllFeatureFlags,
@@ -151,7 +152,6 @@ describe('featureFlags', () => {
     it('should distribute users consistently across rollout percentage', () => {
       setFeatureFlagRolloutPercentage('AI_COACH', 25);
 
-      const enabledCount = 0;
       const sampleSize = 100;
 
       // Note: This is a statistical test and may occasionally fail

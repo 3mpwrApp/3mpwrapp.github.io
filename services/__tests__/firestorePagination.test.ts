@@ -407,28 +407,7 @@ describe('Firestore Pagination Service', () => {
   });
 
   describe('Query constraints', () => {
-    it.skip('should apply order direction correctly', async () => {
-      const { orderBy } = require('firebase/firestore');
-
-       
-      const _paginatorAsc = await createPaginator({
-        collection: 'campaigns',
-        orderBy: 'createdAt',
-        orderDirection: 'asc',
-      });
-
-       
-      const _paginatorDesc = await createPaginator({
-        collection: 'campaigns',
-        orderBy: 'createdAt',
-        orderDirection: 'desc',
-      });
-
-      // Just verify they use different directions
-      expect(orderBy).toHaveBeenCalledWith('createdAt', 'asc');
-      expect(orderBy).toHaveBeenCalledWith('createdAt', 'desc');
-    });
-
+    // Query order test - skipped for Firebase-dependent validation
     it('should apply custom constraints', async () => {
       const { where } = require('firebase/firestore');
 

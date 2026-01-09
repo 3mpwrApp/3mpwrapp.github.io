@@ -254,16 +254,16 @@ export function clearMetrics(): void {
 export function logPerformanceSummary(): void {
   const metrics = getRenderMetrics();
   if (metrics.length === 0) {
-    console.log('📊 No render metrics collected yet');
+    console.warn('📊 No render metrics collected yet');
     return;
   }
 
-  console.log('\n📊 RENDER PERFORMANCE SUMMARY');
-  console.log('─'.repeat(70));
+  console.warn('\n📊 RENDER PERFORMANCE SUMMARY');
+  console.warn('─'.repeat(70));
   
   metrics.forEach(m => {
     const icon = m.averageRenderTime > 100 ? '🐌' : m.averageRenderTime > 50 ? '⚡' : '✅';
-    console.log(
+    console.warn(
       `${icon} ${m.componentName.padEnd(30)} | ` +
       `Renders: ${String(m.renderCount).padStart(3)} | ` +
       `Avg: ${m.averageRenderTime.toFixed(2)}ms | ` +
@@ -271,7 +271,7 @@ export function logPerformanceSummary(): void {
     );
   });
   
-  console.log('─'.repeat(70) + '\n');
+  console.warn('─'.repeat(70) + '\n');
 }
 
 // ============================================================================
@@ -369,7 +369,6 @@ export function useSelector<State, Selected>(
   selector: (state: State) => Selected
 ): Selected {
   const resultRef = useRef<Selected | undefined>(undefined);
-  const stateRef = useRef<State>(state);
 
   const result = useMemo(() => {
     const newResult = selector(state);
