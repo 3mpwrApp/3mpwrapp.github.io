@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react";
 import { Alert, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../components/A11yPressable";
-import { useAuth } from "../../context/AuthContext";
 import { auth } from "../../firebase/config";
 import { MAX_FONT_SCALE } from "../../hooks/useA11y";
+import { useAuth } from "../../hooks/useAppStore";
 import { useTranslation } from "../../i18n";
 import { useAppPalette } from "../../theme/usePalette";
 import { logger } from "../../utils/logger";
@@ -31,7 +31,7 @@ export default function LoginScreen() {
   const { t } = useTranslation();
   const palette = useAppPalette();
   const styles = React.useMemo(() => createStyles(palette), [palette]);
-  const { signInGuest } = useAuth();
+  const { continueAnonymously } = useAuth();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -44,13 +44,13 @@ export default function LoginScreen() {
       if (isTestLab) {
         logger.log('[Login] Test Lab bypass detected - auto-signing in as guest');
         try {
-          await signInGuest();
+          await continueAnonymously();
         } catch (err) {
           logger.error('[Login] Test Lab auto-guest failed:', err);
         }
       }
     })();
-  }, [signInGuest]);
+  }, [continueAnonymously]);
 
   const handleLogin = async () => {
     if (!email.trim() || !password.trim()) {
@@ -121,9 +121,9 @@ export default function LoginScreen() {
     try {
       setWorking(true);
       logger.log('[Login] ===== STARTING GUEST MODE =====');
-      await signInGuest();
+      await continueAnonymously();
       logger.log('[Login] ===== GUEST MODE SUCCESSFUL =====');
-      logger.log('[Login] Firebase auth state updated (anonymous user)');
+      logger.log('[Login] Auth state updated (anonymous user)');
       logger.log('[Login] Navigating to root to trigger auth redirect...');
       
       // Navigate to root - app/index.tsx will handle the redirect to /(tabs)

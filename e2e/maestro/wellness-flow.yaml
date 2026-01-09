@@ -1,0 +1,130 @@
+appId: com.empowrapp.expo
+---
+# Wellness Flow Test
+# Validates navigation to wellness, viewing tools, and accessing tool details
+
+tags:
+  - wellness
+  - critical
+  - features
+
+steps:
+  # Setup
+  - launchApp
+
+  # Wait for app to load
+  - waitForElement:
+      selector:
+        text: "Home"
+      timeout: 8000
+      description: "Wait for home screen"
+
+  # Navigate to Wellness tab
+  - tapOn:
+      selector:
+        id: "wellness-tab"
+      description: "Tap wellness tab in navigation"
+
+  - waitForElement:
+      selector:
+        text: "Wellness"
+      timeout: 5000
+      description: "Wait for wellness screen"
+
+  # Verify wellness screen loaded
+  - assertVisible:
+      selector:
+        text: "Wellness"
+      description: "Wellness screen should be visible"
+
+  # Wait for wellness tools/features to load
+  - waitForElement:
+      selector:
+        id: "wellness-grid"
+      timeout: 5000
+      description: "Wait for wellness tools grid to load"
+
+  # Verify first wellness tool is visible
+  - assertVisible:
+      selector:
+        id: "wellness-tool-0"
+      description: "First wellness tool should be visible"
+
+  # Tap first wellness tool
+  - tapOn:
+      selector:
+        id: "wellness-tool-0"
+      description: "Tap first wellness tool"
+
+  # Wait for tool details/content to load
+  - waitForElement:
+      selector:
+        id: "tool-content"
+      timeout: 5000
+      description: "Wait for tool content to load"
+
+  # Verify tool is loaded
+  - assertVisible:
+      selector:
+        id: "tool-content"
+      description: "Tool content should be visible"
+
+  # Wait for tool-specific elements based on type
+  - waitForElement:
+      selector:
+        id: "tool-title"
+      timeout: 3000
+      description: "Wait for tool title to display"
+
+  # Verify description/details are visible
+  - assertVisible:
+      selector:
+        id: "tool-description"
+      description: "Tool description should be visible"
+
+  # Scroll down to see more tool content
+  - scroll:
+      direction: down
+      duration: 1000
+      description: "Scroll down in tool details"
+
+  # Wait for action button (e.g., Start, Play, Begin)
+  - waitForElement:
+      selector:
+        id: "tool-action-button"
+      timeout: 3000
+      description: "Wait for tool action button"
+
+  # Verify action button is visible
+  - assertVisible:
+      selector:
+        id: "tool-action-button"
+      description: "Action button should be visible"
+
+  # Scroll back up to find back button
+  - scroll:
+      direction: up
+      duration: 500
+      description: "Scroll back up to find navigation"
+
+  # Navigate back to wellness screen
+  - tapOn:
+      selector:
+        id: "back-button"
+      description: "Tap back button to return to wellness"
+
+  - waitForElement:
+      selector:
+        id: "wellness-grid"
+      timeout: 5000
+      description: "Wait for wellness grid to reappear"
+
+  # Verify back at wellness screen
+  - assertVisible:
+      selector:
+        id: "wellness-grid"
+      description: "Should be back at wellness tools screen"
+
+  # Cleanup
+  - appKill:
+      description: "Close app after test completion"

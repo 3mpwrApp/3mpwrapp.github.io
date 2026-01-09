@@ -4,10 +4,10 @@ import type { Resource } from "../types/models";
 import { retry } from "./api";
 import { getCachedJSON, setCachedJSON } from "./cache";
 import {
-  measurePerformance,
-  captureException,
-  addBreadcrumb,
-  setMeasurement,
+    addBreadcrumb,
+    captureException,
+    measurePerformance,
+    setMeasurement,
 } from "./sentryLabeling";
 
 const BASE = process.env.EXPO_PUBLIC_API_BASE ?? "";
@@ -26,8 +26,12 @@ export async function fetchResources(): Promise<Resource[]> {
           const data = await retry(async () => {
             const res = await fetch(`${BASE}/resources`);
             if (!res.ok && res.status === 404) {
-              // Silently fail on 404 (expected in dev mode)
+              // Silently fail on 404 (expected when API not deployed)
+              addBreadcrumb('Resources API returned 404 (not deployed), using fallback', 'resources', 'info');
               throw new Error('Not found');
+            }
+            if (!res.ok) {
+              throw new Error(`API returned ${res.status}`);
             }
             return res.json();
           });

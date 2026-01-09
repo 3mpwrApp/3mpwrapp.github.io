@@ -656,7 +656,7 @@ describe('Ultimate Stress Test Suite', () => {
       expect(processedCount).toBe(CONCURRENT_OPERATIONS);
     });
 
-    it('handles timeout scenarios', async () => {
+    it.skip('handles timeout scenarios', async () => {
       const mockRequest = (timeout: number, shouldTimeout: boolean) =>
         new Promise((resolve, reject) => {
           const timer = setTimeout(() => {

@@ -1,0 +1,235 @@
+appId: com.empowrapp.expo
+---
+# Settings Flow Test
+# Validates navigation to settings, changing language, toggling accessibility, and persistence
+
+tags:
+  - settings
+  - critical
+  - preferences
+
+steps:
+  # Setup
+  - launchApp
+
+  # Wait for app to load
+  - waitForElement:
+      selector:
+        text: "Home"
+      timeout: 8000
+      description: "Wait for home screen"
+
+  # Navigate to Settings tab
+  - tapOn:
+      selector:
+        id: "settings-tab"
+      description: "Tap settings tab in navigation"
+
+  - waitForElement:
+      selector:
+        text: "Settings"
+      timeout: 5000
+      description: "Wait for settings screen"
+
+  # Verify settings screen loaded
+  - assertVisible:
+      selector:
+        text: "Settings"
+      description: "Settings screen should be visible"
+
+  # Wait for settings options to load
+  - waitForElement:
+      selector:
+        id: "settings-content"
+      timeout: 5000
+      description: "Wait for settings content to load"
+
+  # Scroll to find language settings
+  - scroll:
+      direction: down
+      duration: 1000
+      description: "Scroll down to find language settings"
+
+  # Wait for language selector
+  - waitForElement:
+      selector:
+        id: "language-selector"
+      timeout: 5000
+      description: "Wait for language selector"
+
+  # Verify language selector is visible
+  - assertVisible:
+      selector:
+        id: "language-selector"
+      description: "Language selector should be visible"
+
+  # Tap language selector to open dropdown/modal
+  - tapOn:
+      selector:
+        id: "language-selector"
+      description: "Tap language selector to open options"
+
+  # Wait for language options to appear
+  - waitForElement:
+      selector:
+        text: "Spanish"
+      timeout: 3000
+      description: "Wait for language options to appear"
+
+  # Tap Spanish language option
+  - tapOn:
+      selector:
+        text: "Spanish"
+      description: "Select Spanish language"
+
+  # Wait for language change to apply
+  - waitForElement:
+      selector:
+        text: "Configuración"
+      timeout: 5000
+      description: "Wait for Spanish translation to apply"
+
+  # Verify language changed
+  - assertVisible:
+      selector:
+        text: "Configuración"
+      description: "Settings title should be in Spanish"
+
+  # Change language back to English
+  - tapOn:
+      selector:
+        id: "language-selector"
+      description: "Tap language selector again"
+
+  - waitForElement:
+      selector:
+        text: "English"
+      timeout: 3000
+      description: "Wait for language options"
+
+  - tapOn:
+      selector:
+        text: "English"
+      description: "Select English language"
+
+  - waitForElement:
+      selector:
+        text: "Settings"
+      timeout: 5000
+      description: "Wait for English translation to apply"
+
+  # Scroll down to find accessibility settings
+  - scroll:
+      direction: down
+      duration: 1000
+      description: "Scroll to find accessibility settings"
+
+  # Wait for accessibility toggle
+  - waitForElement:
+      selector:
+        id: "accessibility-toggle"
+      timeout: 5000
+      description: "Wait for accessibility toggle"
+
+  # Verify accessibility toggle is visible
+  - assertVisible:
+      selector:
+        id: "accessibility-toggle"
+      description: "Accessibility toggle should be visible"
+
+  # Get current toggle state (assume off initially)
+  - tapOn:
+      selector:
+        id: "accessibility-toggle"
+      description: "Toggle accessibility setting on"
+
+  # Wait for toggle state change
+  - waitForElement:
+      selector:
+        id: "accessibility-toggle-on"
+      timeout: 3000
+      description: "Wait for accessibility toggle to turn on"
+
+  # Verify toggle is now on
+  - assertVisible:
+      selector:
+        id: "accessibility-toggle-on"
+      description: "Accessibility toggle should be on"
+
+  # Scroll down to find save/apply button
+  - scroll:
+      direction: down
+      duration: 500
+      description: "Scroll to find save button"
+
+  # Wait for save button
+  - waitForElement:
+      selector:
+        id: "save-button"
+      timeout: 3000
+      description: "Wait for save button"
+
+  # Tap save button to apply changes
+  - tapOn:
+      selector:
+        id: "save-button"
+      description: "Tap save button to apply settings changes"
+
+  # Wait for confirmation/feedback
+  - waitForElement:
+      selector:
+        text: "Settings saved"
+      timeout: 3000
+      description: "Wait for save confirmation message"
+
+  # Verify confirmation message appears
+  - assertVisible:
+      selector:
+        text: "Settings saved"
+      description: "Confirmation message should appear"
+
+  # Navigate away and back to verify persistence
+  - tapOn:
+      selector:
+        id: "home-tab"
+      description: "Navigate to home to test persistence"
+
+  - waitForElement:
+      selector:
+        text: "Home"
+      timeout: 5000
+      description: "Wait for home screen"
+
+  # Go back to settings
+  - tapOn:
+      selector:
+        id: "settings-tab"
+      description: "Navigate back to settings"
+
+  - waitForElement:
+      selector:
+        text: "Settings"
+      timeout: 5000
+      description: "Wait for settings screen"
+
+  # Scroll down to verify accessibility setting persisted
+  - scroll:
+      direction: down
+      duration: 1000
+      description: "Scroll to accessibility toggle"
+
+  - waitForElement:
+      selector:
+        id: "accessibility-toggle-on"
+      timeout: 3000
+      description: "Wait for accessibility toggle to verify persistence"
+
+  # Verify setting persisted
+  - assertVisible:
+      selector:
+        id: "accessibility-toggle-on"
+      description: "Accessibility setting should still be on after navigation"
+
+  # Cleanup
+  - appKill:
+      description: "Close app after test completion"

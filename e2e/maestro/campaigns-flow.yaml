@@ -1,0 +1,117 @@
+appId: com.empowrapp.expo
+---
+# Campaigns Flow Test
+# Validates navigation to campaigns, viewing list, and accessing campaign details
+
+tags:
+  - campaigns
+  - critical
+
+steps:
+  # Setup
+  - launchApp
+
+  # Wait for app to load and auth to complete
+  - waitForElement:
+      selector:
+        text: "Home"
+      timeout: 8000
+      description: "Wait for home screen"
+
+  # Navigate to Campaigns tab
+  - tapOn:
+      selector:
+        id: "campaigns-tab"
+      description: "Tap campaigns tab in navigation"
+
+  - waitForElement:
+      selector:
+        text: "Campaigns"
+      timeout: 5000
+      description: "Wait for campaigns screen"
+
+  # Verify campaign list is visible
+  - assertVisible:
+      selector:
+        text: "Campaigns"
+      description: "Campaigns screen should be visible"
+
+  # Wait for campaign list items to load
+  - waitForElement:
+      selector:
+        id: "campaign-list"
+      timeout: 5000
+      description: "Wait for campaign list to render"
+
+  # Verify at least one campaign is displayed
+  - assertVisible:
+      selector:
+        id: "campaign-item-0"
+      description: "First campaign should be visible in list"
+
+  # Tap first campaign to view details
+  - tapOn:
+      selector:
+        id: "campaign-item-0"
+      description: "Tap first campaign in list"
+
+  # Wait for campaign details screen to load
+  - waitForElement:
+      selector:
+        text: "Campaign Details"
+      timeout: 5000
+      description: "Wait for campaign details to load"
+
+  # Verify campaign details are displayed
+  - assertVisible:
+      selector:
+        text: "Campaign Details"
+      description: "Campaign details screen should be visible"
+
+  # Verify campaign image loads
+  - waitForElement:
+      selector:
+        id: "campaign-image"
+      timeout: 3000
+      description: "Wait for campaign image to load"
+
+  # Verify campaign description loads
+  - assertVisible:
+      selector:
+        id: "campaign-description"
+      description: "Campaign description should be visible"
+
+  # Scroll down to see more details
+  - scroll:
+      direction: down
+      duration: 1000
+      description: "Scroll down in campaign details"
+
+  # Wait for join button or action button
+  - waitForElement:
+      selector:
+        id: "campaign-action-button"
+      timeout: 3000
+      description: "Wait for campaign action button"
+
+  # Go back to campaign list
+  - tapOn:
+      selector:
+        id: "back-button"
+      description: "Tap back button to return to list"
+
+  - waitForElement:
+      selector:
+        text: "Campaigns"
+      timeout: 5000
+      description: "Wait for campaigns list screen"
+
+  # Verify back at campaign list
+  - assertVisible:
+      selector:
+        id: "campaign-list"
+      description: "Should be back at campaign list"
+
+  # Cleanup
+  - appKill:
+      description: "Close app after test completion"

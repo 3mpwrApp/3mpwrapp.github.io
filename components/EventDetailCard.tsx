@@ -1,9 +1,11 @@
  
+import { useCallback, useMemo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import type { Event } from '../data/events';
 import { useTextScale } from '../theme/typography';
 import { useAppPalette } from '../theme/usePalette';
+import { memoWithComparison, useRenderPerformance } from '../utils/optimization';
 import { createShadow } from '../utils/shadow';
 
 import A11yPressable from './A11yPressable';
@@ -14,12 +16,15 @@ interface EventDetailCardProps {
   showFullDetails?: boolean;
 }
 
-export default function EventDetailCard({ event, onPress, showFullDetails = false }: EventDetailCardProps) {
+function EventDetailCardImpl({ event, onPress, showFullDetails = false }: EventDetailCardProps) {
   const palette = useAppPalette();
   const { factor } = useTextScale();
-  const styles = createStyles(palette, factor);
+  const styles = useMemo(() => createStyles(palette, factor), [palette, factor]);
 
-  const formatDate = (dateStr: string | Date) => {
+  // Performance monitoring
+  useRenderPerformance('EventDetailCard', 100);
+
+  const formatDate = useCallback((dateStr: string | Date) => {
     try {
       const dateStrForChecks = typeof dateStr === 'string' ? dateStr : '';
       
@@ -82,30 +87,38 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
     } catch {
       return typeof dateStr === 'string' ? dateStr : dateStr?.toString?.() || 'Invalid date';
     }
-  };
+  }, [event.id, event.endDate]);
 
-  const energyIcons = {
-    low: '🟢',
-    medium: '🟡',
-    high: '🔴',
-  };
+  // Memoize accessibility features filtering
+  const availableFeatures = useMemo(() => {
+    const accessibilityFeatures = [
+      { key: 'asl', icon: '🤟', label: 'ASL interpretation' },
+      { key: 'captions', icon: '📝', label: 'Closed captions' },
+      { key: 'wheelchairAccessible', icon: '♿', label: 'Wheelchair accessible' },
+      { key: 'stepFree', icon: '🚪', label: 'Step-free entrance' },
+      { key: 'sensorySpace', icon: '🎧', label: 'Quiet/sensory space' },
+      { key: 'quietRoom', icon: '🤫', label: 'Quiet room available' },
+      { key: 'parkingAccessible', icon: '🅿️', label: 'Accessible parking' },
+      { key: 'assistiveListening', icon: '👂', label: 'Assistive listening' },
+      { key: 'braille', icon: '⠃', label: 'Braille materials' },
+      { key: 'serviceAnimalsWelcome', icon: '🐕', label: 'Service animals welcome' },
+    ];
+    return accessibilityFeatures.filter(
+      (feature) => event[feature.key as keyof Event]
+    );
+  }, [event]);
 
-  const accessibilityFeatures = [
-    { key: 'asl', icon: '🤟', label: 'ASL interpretation' },
-    { key: 'captions', icon: '📝', label: 'Closed captions' },
-    { key: 'wheelchairAccessible', icon: '♿', label: 'Wheelchair accessible' },
-    { key: 'stepFree', icon: '🚪', label: 'Step-free entrance' },
-    { key: 'sensorySpace', icon: '🎧', label: 'Quiet/sensory space' },
-    { key: 'quietRoom', icon: '🤫', label: 'Quiet room available' },
-    { key: 'parkingAccessible', icon: '🅿️', label: 'Accessible parking' },
-    { key: 'assistiveListening', icon: '👂', label: 'Assistive listening' },
-    { key: 'braille', icon: '⠃', label: 'Braille materials' },
-    { key: 'serviceAnimalsWelcome', icon: '🐕', label: 'Service animals welcome' },
-  ];
+  // Memoize energy cost rendering
+  const energyBadgeContent = useMemo(() => {
+    if (!event.energyCost) return null;
+    const energyIcons = { low: '🟢', medium: '🟡', high: '🔴' };
+    const energyLabels = { low: 'Low energy', medium: 'Med energy', high: 'High energy' };
+    return { icon: energyIcons[event.energyCost], label: energyLabels[event.energyCost] };
+  }, [event.energyCost]);
 
-  const availableFeatures = accessibilityFeatures.filter(
-    (feature) => event[feature.key as keyof Event]
-  );
+  const handlePress = useCallback(() => {
+    onPress?.();
+  }, [onPress]);
 
   const content = (
     <View style={[styles.card, { backgroundColor: palette.card, borderRadius: 12 * factor }, createShadow({ shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 4, elevation: 3 })]}>
@@ -114,14 +127,10 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
         <Text style={styles.title} numberOfLines={showFullDetails ? undefined : 2}>
           {event.title}
         </Text>
-        {event.energyCost && (
+        {energyBadgeContent && (
           <View style={styles.energyBadge}>
-            <Text style={styles.energyIcon}>{energyIcons[event.energyCost]}</Text>
-            <Text style={styles.energyText}>
-              {event.energyCost === 'low' && 'Low energy'}
-              {event.energyCost === 'medium' && 'Med energy'}
-              {event.energyCost === 'high' && 'High energy'}
-            </Text>
+            <Text style={styles.energyIcon}>{energyBadgeContent.icon}</Text>
+            <Text style={styles.energyText}>{energyBadgeContent.label}</Text>
           </View>
         )}
       </View>
@@ -230,7 +239,7 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
   if (onPress) {
     return (
       <A11yPressable
-        onPress={onPress}
+        onPress={handlePress}
         accessibilityLabel={`${event.title}. ${formatDate(event.date)}. ${
           event.isVirtual ? 'Virtual event' : event.location || 'Location TBD'
         }. Tap for details.`}
@@ -243,6 +252,9 @@ export default function EventDetailCard({ event, onPress, showFullDetails = fals
 
   return content;
 }
+
+// Export memoized version to prevent unnecessary re-renders
+export default memoWithComparison(EventDetailCardImpl);
 
 const createStyles = (palette: ReturnType<typeof useAppPalette>, factor: number) =>
   StyleSheet.create({

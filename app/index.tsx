@@ -2,7 +2,7 @@ import { Redirect, useRouter } from 'expo-router';
 import { useEffect, useRef } from 'react';
 import { View } from 'react-native';
 
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../hooks/useAppStore';
 import { useAppPalette } from '../theme/usePalette';
 
 export default function Index() {

@@ -1,0 +1,139 @@
+appId: com.empowrapp.expo
+---
+# Community Flow Test
+# Validates navigation to community, viewing channels, and sending messages
+
+tags:
+  - community
+  - critical
+  - messaging
+
+steps:
+  # Setup
+  - launchApp
+
+  # Wait for app to load
+  - waitForElement:
+      selector:
+        text: "Home"
+      timeout: 8000
+      description: "Wait for home screen"
+
+  # Navigate to Community tab
+  - tapOn:
+      selector:
+        id: "community-tab"
+      description: "Tap community tab in navigation"
+
+  - waitForElement:
+      selector:
+        text: "Community"
+      timeout: 5000
+      description: "Wait for community screen"
+
+  # Verify community screen loaded
+  - assertVisible:
+      selector:
+        text: "Community"
+      description: "Community screen should be visible"
+
+  # Wait for channel list to load
+  - waitForElement:
+      selector:
+        id: "channel-list"
+      timeout: 5000
+      description: "Wait for channel list to render"
+
+  # Verify first channel is visible
+  - assertVisible:
+      selector:
+        id: "channel-item-0"
+      description: "First channel should be visible"
+
+  # Tap first channel to open
+  - tapOn:
+      selector:
+        id: "channel-item-0"
+      description: "Tap first channel to view messages"
+
+  # Wait for chat screen to load
+  - waitForElement:
+      selector:
+        id: "message-list"
+      timeout: 5000
+      description: "Wait for messages to load"
+
+  # Verify messages are displayed
+  - assertVisible:
+      selector:
+        id: "message-list"
+      description: "Message list should be visible"
+
+  # Scroll up to see older messages (optional)
+  - scroll:
+      direction: up
+      duration: 500
+      description: "Scroll to view message history"
+
+  # Scroll back down
+  - scroll:
+      direction: down
+      duration: 500
+      description: "Scroll back to latest messages"
+
+  # Wait for message input field
+  - waitForElement:
+      selector:
+        id: "message-input"
+      timeout: 3000
+      description: "Wait for message input field"
+
+  # Tap message input field
+  - tapOn:
+      selector:
+        id: "message-input"
+      description: "Tap message input field"
+
+  # Type test message
+  - inputText: "Test message from E2E automation"
+
+  # Tap send button
+  - tapOn:
+      selector:
+        id: "send-button"
+      description: "Tap send button to post message"
+
+  # Wait for message to appear in list
+  - waitForElement:
+      selector:
+        text: "Test message from E2E automation"
+      timeout: 5000
+      description: "Wait for sent message to appear"
+
+  # Verify message is visible
+  - assertVisible:
+      selector:
+        text: "Test message from E2E automation"
+      description: "Sent message should appear in chat"
+
+  # Go back to channel list
+  - tapOn:
+      selector:
+        id: "back-button"
+      description: "Tap back button to return to channels"
+
+  - waitForElement:
+      selector:
+        id: "channel-list"
+      timeout: 5000
+      description: "Wait for channel list"
+
+  # Verify back at community screen
+  - assertVisible:
+      selector:
+        id: "channel-list"
+      description: "Should be back at community screen"
+
+  # Cleanup
+  - appKill:
+      description: "Close app after test completion"

@@ -1,0 +1,206 @@
+appId: com.empowrapp.expo
+---
+# Search Flow Test
+# Validates search functionality across campaigns, community, and wellness content
+
+tags:
+  - search
+  - critical
+  - discovery
+
+steps:
+  # Setup
+  - launchApp
+
+  # Wait for app to load
+  - waitForElement:
+      selector:
+        text: "Home"
+      timeout: 8000
+      description: "Wait for home screen"
+
+  # Look for search button in header or navigation
+  - waitForElement:
+      selector:
+        id: "search-button"
+      timeout: 5000
+      description: "Wait for search button to appear"
+
+  # Verify search button is visible
+  - assertVisible:
+      selector:
+        id: "search-button"
+      description: "Search button should be visible"
+
+  # Tap search button to open search screen
+  - tapOn:
+      selector:
+        id: "search-button"
+      description: "Tap search button to open search"
+
+  # Wait for search screen to load
+  - waitForElement:
+      selector:
+        id: "search-input"
+      timeout: 5000
+      description: "Wait for search input field"
+
+  # Verify search input is visible
+  - assertVisible:
+      selector:
+        id: "search-input"
+      description: "Search input field should be visible"
+
+  # Tap search input to focus
+  - tapOn:
+      selector:
+        id: "search-input"
+      description: "Tap search input to focus"
+
+  # Type search query
+  - inputText: "health"
+
+  # Wait for search results to load
+  - waitForElement:
+      selector:
+        id: "search-results"
+      timeout: 5000
+      description: "Wait for search results to load"
+
+  # Verify search results are displayed
+  - assertVisible:
+      selector:
+        id: "search-results"
+      description: "Search results should be visible"
+
+  # Verify at least one result is shown
+  - assertVisible:
+      selector:
+        id: "search-result-0"
+      description: "First search result should be visible"
+
+  # Verify result has title and metadata
+  - assertVisible:
+      selector:
+        id: "result-title-0"
+      description: "Result title should be visible"
+
+  # Scroll down to see more results
+  - scroll:
+      direction: down
+      duration: 1000
+      description: "Scroll down to see more search results"
+
+  # Verify more results are visible
+  - assertVisible:
+      selector:
+        id: "search-result-1"
+      description: "Second search result should be visible after scroll"
+
+  # Scroll back up to first result
+  - scroll:
+      direction: up
+      duration: 500
+      description: "Scroll back to first results"
+
+  # Tap first search result to view details
+  - tapOn:
+      selector:
+        id: "search-result-0"
+      description: "Tap first search result"
+
+  # Wait for result details screen to load
+  - waitForElement:
+      selector:
+        id: "result-details"
+      timeout: 5000
+      description: "Wait for result details to load"
+
+  # Verify details are displayed
+  - assertVisible:
+      selector:
+        id: "result-details"
+      description: "Result details should be visible"
+
+  # Verify result content elements are loaded
+  - waitForElement:
+      selector:
+        id: "result-content"
+      timeout: 3000
+      description: "Wait for result content to load"
+
+  # Verify content is displayed
+  - assertVisible:
+      selector:
+        id: "result-content"
+      description: "Result content should be visible"
+
+  # Scroll down to see full details
+  - scroll:
+      direction: down
+      duration: 1000
+      description: "Scroll down to see full result details"
+
+  # Go back to search results
+  - tapOn:
+      selector:
+        id: "back-button"
+      description: "Tap back button to return to search results"
+
+  - waitForElement:
+      selector:
+        id: "search-results"
+      timeout: 5000
+      description: "Wait for search results to reappear"
+
+  # Verify back at search results
+  - assertVisible:
+      selector:
+        id: "search-results"
+      description: "Should be back at search results"
+
+  # Clear search query
+  - tapOn:
+      selector:
+        id: "search-input"
+      description: "Tap search input"
+
+  - tapOn:
+      selector:
+        id: "clear-button"
+      description: "Tap clear button to clear search query"
+
+  # Wait for search input to be cleared
+  - waitForElement:
+      selector:
+        id: "search-empty-state"
+      timeout: 3000
+      description: "Wait for empty search state"
+
+  # Verify empty state is displayed
+  - assertVisible:
+      selector:
+        id: "search-empty-state"
+      description: "Empty search state should be displayed"
+
+  # Go back to home
+  - tapOn:
+      selector:
+        id: "back-button"
+      description: "Tap back to return to home"
+
+  - waitForElement:
+      selector:
+        text: "Home"
+      timeout: 5000
+      description: "Wait for home screen"
+
+  # Verify back at home
+  - assertVisible:
+      selector:
+        text: "Home"
+      description: "Should be back at home screen"
+
+  # Cleanup
+  - appKill:
+      description: "Close app after test completion"

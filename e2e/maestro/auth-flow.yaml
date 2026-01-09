@@ -1,0 +1,118 @@
+appId: com.empowrapp.expo
+---
+# Authentication Flow Test
+# Validates sign in, redirect to home, and sign out flows
+
+tags:
+  - auth
+  - critical
+
+steps:
+  # Setup: Ensure app is launched
+  - launchApp
+
+  # Wait for auth screen to be visible
+  - waitForElement:
+      selector:
+        text: "Sign In"
+      timeout: 5000
+      description: "Wait for sign in button to appear"
+
+  # Verify auth screen is displayed
+  - assertVisible:
+      selector:
+        text: "Sign In"
+      description: "Auth screen should be visible"
+
+  # Test: Sign in with email
+  - tapOn:
+      selector:
+        id: "email-input"
+      description: "Tap email input field"
+
+  - inputText: "testuser@empowrapp.com"
+
+  # Tap password field and enter password
+  - tapOn:
+      selector:
+        id: "password-input"
+      description: "Tap password input field"
+
+  - inputText: "TestPassword123!"
+
+  # Tap sign in button
+  - tapOn:
+      selector:
+        text: "Sign In"
+      description: "Submit sign in form"
+
+  # Wait for navigation to home
+  - waitForElement:
+      selector:
+        text: "Home"
+      timeout: 8000
+      description: "Wait for home screen after successful sign in"
+
+  # Verify home screen is displayed
+  - assertVisible:
+      selector:
+        text: "Home"
+      description: "Should redirect to home after sign in"
+
+  # Navigate to settings to find sign out
+  - tapOn:
+      selector:
+        id: "settings-tab"
+      description: "Navigate to settings tab"
+
+  - waitForElement:
+      selector:
+        text: "Settings"
+      timeout: 5000
+      description: "Wait for settings screen"
+
+  # Scroll down to find sign out button
+  - scroll:
+      direction: down
+      duration: 1000
+      description: "Scroll down to find sign out option"
+
+  - waitForElement:
+      selector:
+        text: "Sign Out"
+      timeout: 5000
+      description: "Wait for sign out button"
+
+  # Tap sign out button
+  - tapOn:
+      selector:
+        text: "Sign Out"
+      description: "Tap sign out button"
+
+  # Confirm sign out if alert appears
+  - waitForElement:
+      selector:
+        text: "Confirm"
+      timeout: 3000
+      description: "Wait for confirmation dialog"
+
+  - tapOn:
+      selector:
+        text: "Confirm"
+      description: "Confirm sign out action"
+
+  # Verify back at auth screen
+  - waitForElement:
+      selector:
+        text: "Sign In"
+      timeout: 8000
+      description: "Wait for auth screen after sign out"
+
+  - assertVisible:
+      selector:
+        text: "Sign In"
+      description: "Should return to auth screen after sign out"
+
+  # Cleanup
+  - appKill:
+      description: "Close app after test completion"

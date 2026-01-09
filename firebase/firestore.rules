@@ -1,5 +1,33 @@
 rules_version = '2';
 service cloud.firestore {
+  // ===== REQUIRED FIRESTORE INDEXES =====
+  // The following composite indexes are REQUIRED for pagination queries:
+  //
+  // 1. campaigns collection:
+  //    - Fields: active (Ascending), createdAt (Descending)
+  //    - Status: Create via Firebase Console or use command below
+  //
+  // 2. events collection:
+  //    - Fields: province (Ascending), startDate (Descending)
+  //    - Status: Create via Firebase Console or use command below
+  //
+  // 3. threads collection (community):
+  //    - Fields: channel (Ascending), createdAt (Descending)
+  //    - Status: Create via Firebase Console or use command below
+  //
+  // 4. admin_audit collection:
+  //    - Fields: (auto-indexed) ts (Descending)
+  //    - Status: Single-field index (auto-created)
+  //
+  // FIREBASE CLI COMMAND TO CREATE INDEXES:
+  // firebase firestore:indexes:create --collection campaigns --field active --field createdAt --direction descending
+  // firebase firestore:indexes:create --collection events --field province --field startDate --direction descending
+  // firebase firestore:indexes:create --collection threads --field channel --field createdAt --direction descending
+  //
+  // OR manually create in Firebase Console:
+  // Go to Firestore > Indexes > Create Index
+  // ========================================
+
   match /databases/{database}/documents {
     function isSignedIn() { return request.auth != null; }
     // General Admin: Delegated permissions via Firebase custom claims

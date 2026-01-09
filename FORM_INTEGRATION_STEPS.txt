@@ -1,0 +1,388 @@
+EXACT CODE TO COPY FOR FORM INTEGRATION
+========================================
+
+FORM 1: LetterWizardForm.tsx
+============================
+
+STEP 1: ADD IMPORTS (at top of file)
+────────────────────────────────────
+import { useFormValidation, getFieldError } from '../../hooks/useFormValidation';
+import { LetterFormSchema, validateData, type LetterForm } from '../../types/validation';
+
+
+STEP 2: COPY INTERFACE (if not already present)
+────────────────────────────────────────────────
+interface LetterWizardFormProps {
+  initialValues?: Partial<LetterForm>;
+  onSubmit: (values: LetterForm) => Promise<void> | void;
+  onCancel?: () => void;
+}
+
+
+STEP 3: COPY FUNCTION START (replace old function)
+───────────────────────────────────────────────────
+export default function LetterWizardForm({
+  initialValues,
+  onSubmit,
+  onCancel,
+}: LetterWizardFormProps) {
+  const palette = useAppPalette();
+
+  const defaultValues: LetterForm = {
+    letterType: initialValues?.letterType || '',
+    title: initialValues?.title || '',
+    subject: initialValues?.subject || '',
+    body: initialValues?.body || '',
+    recipient: initialValues?.recipient || '',
+    formData: initialValues?.formData || {},
+  };
+
+  const form = useFormValidation(LetterFormSchema, defaultValues, {
+    debounceMs: 500,
+    validateOnChange: true,
+    validateOnBlur: true,
+  });
+
+  const handleFormSubmit = form.handleSubmit(async (values) => {
+    try {
+      const result = validateData(LetterFormSchema, values);
+      if (!result.success) {
+        Alert.alert('Validation Error', 'Please fix the errors and try again');
+        return;
+      }
+      await onSubmit(values);
+      form.reset();
+    } catch (error) {
+      Alert.alert('Error', error instanceof Error ? error.message : 'Failed to save letter');
+    }
+  });
+
+
+STEP 4: UPDATE EACH TEXTINPUT
+──────────────────────────────
+
+OLD:
+<TextInput
+  value={someState}
+  onChangeText={setSomeState}
+/>
+
+NEW:
+<TextInput
+  value={form.values.letterType}
+  onChangeText={form.handleChange('letterType')}
+  onBlur={form.handleBlur('letterType')}
+/>
+
+(Replace 'letterType' with field name: 'title', 'subject', 'body', 'recipient')
+
+
+STEP 5: ADD ERROR DISPLAY AFTER EACH FIELD
+────────────────────────────────────────────
+
+{getFieldError(form.errors, form.touched, 'letterType') && (
+  <ErrorText
+    text={getFieldError(form.errors, form.touched, 'letterType')!}
+    palette={palette}
+  />
+)}
+
+(Replace 'letterType' with appropriate field name for each)
+
+
+STEP 6: UPDATE SUBMIT BUTTON
+────────────────────────────
+
+OLD:
+<Button onPress={oldHandleSubmit} title="Save Letter" />
+
+NEW:
+<A11yPressable
+  style={[
+    styles.submitButton,
+    { opacity: form.isSubmitting ? 0.6 : 1 },
+  ]}
+  onPress={handleFormSubmit}
+  disabled={form.isSubmitting || !form.values.body}
+  accessibilityLabel="Save letter"
+  accessibilityRole="button"
+  accessibilityHint={form.isSubmitting ? 'Saving letter' : 'Submit the letter'}
+>
+  <Text style={[styles.submitButtonText, { color: palette.background }]}>
+    {form.isSubmitting ? 'Saving...' : 'Save Letter'}
+  </Text>
+</A11yPressable>
+
+
+DONE! LetterWizardForm now has full validation.
+===============================================
+
+
+FORM 2: CampaignForm.tsx
+========================
+
+STEP 1: ADD IMPORTS (at top of file)
+────────────────────────────────────
+import { useFormValidation, getFieldError } from '../../hooks/useFormValidation';
+import { CampaignFormSchema, validateData, type CampaignForm } from '../../types/validation';
+
+
+STEP 2: COPY INTERFACE (if not already present)
+────────────────────────────────────────────────
+interface CampaignFormProps {
+  onSubmit: (values: CampaignForm) => Promise<void> | void;
+  onCancel?: () => void;
+  initialValues?: Partial<CampaignForm>;
+}
+
+
+STEP 3: COPY FUNCTION START (replace old function)
+───────────────────────────────────────────────────
+export default function CampaignForm({
+  onSubmit,
+  onCancel,
+  initialValues,
+}: CampaignFormProps) {
+  const palette = useAppPalette();
+
+  const defaultValues: CampaignForm = {
+    title: initialValues?.title || '',
+    summary: initialValues?.summary || '',
+    description: initialValues?.description || '',
+    target: initialValues?.target || '',
+    goal: initialValues?.goal || undefined,
+    contactEmail: initialValues?.contactEmail || '',
+    contactName: initialValues?.contactName || '',
+    tags: initialValues?.tags || [],
+  };
+
+  const form = useFormValidation(CampaignFormSchema, defaultValues, {
+    debounceMs: 500,
+    validateOnChange: true,
+    validateOnBlur: true,
+  });
+
+  const handleSubmit = form.handleSubmit(async (values) => {
+    try {
+      const result = validateData(CampaignFormSchema, values);
+      if (!result.success) {
+        Alert.alert('Validation Error', 'Please fix the errors and try again');
+        return;
+      }
+      await onSubmit(values);
+      form.reset();
+    } catch (error) {
+      Alert.alert('Error', error instanceof Error ? error.message : 'Failed to create campaign');
+    }
+  });
+
+
+STEP 4: UPDATE EACH FIELD
+──────────────────────────
+
+For text fields (title, summary, description, target, contactName, contactEmail):
+──────────────────────────────────────────────────────────────────────────────
+
+OLD:
+<TextInput
+  value={someState}
+  onChangeText={setSomeState}
+  placeholder="..."
+  maxLength={200}
+/>
+
+NEW:
+<FormField
+  label="Campaign Title *"
+  hint="What is your campaign about?"
+  value={form.values.title}
+  onChangeText={form.handleChange('title')}
+  onBlur={form.handleBlur('title')}
+  maxLength={200}
+  error={getFieldError(form.errors, form.touched, 'title')}
+  characterCount={form.values.title.length}
+  maxCharacters={200}
+  palette={palette}
+  accessibilityLabel="Campaign title"
+/>
+
+(Adjust label, hint, placeholder for each field)
+
+
+For number field (goal):
+─────────────────────
+
+OLD:
+<TextInput
+  value={goal}
+  onChangeText={setGoal}
+  keyboardType="number-pad"
+  placeholder="Number of supporters..."
+/>
+
+NEW:
+<FormField
+  label="Goal (Optional)"
+  hint="Number of supporters needed"
+  value={form.values.goal?.toString() || ''}
+  onChangeText={(text) =>
+    form.setFieldValue('goal', text ? parseInt(text, 10) : undefined)
+  }
+  onBlur={form.handleBlur('goal')}
+  keyboardType="number-pad"
+  error={getFieldError(form.errors, form.touched, 'goal')}
+  palette={palette}
+  accessibilityLabel="Campaign goal"
+/>
+
+
+STEP 5: UPDATE SUBMIT BUTTON
+────────────────────────────
+
+OLD:
+<Button 
+  onPress={oldHandleSubmit} 
+  title="Create Campaign" 
+  disabled={isLoading}
+/>
+
+NEW:
+<A11yPressable
+  style={[
+    styles.submitButton,
+    {
+      opacity: form.isSubmitting ? 0.6 : 1,
+      backgroundColor: form.values.title && form.values.summary ? palette.primary : palette.muted,
+    },
+  ]}
+  onPress={handleSubmit}
+  disabled={form.isSubmitting || !form.values.title || !form.values.summary}
+  accessibilityLabel="Create campaign"
+  accessibilityRole="button"
+  accessibilityHint={
+    form.isSubmitting
+      ? 'Creating campaign'
+      : form.values.title && form.values.summary
+      ? 'Submit campaign'
+      : 'Fill required fields to create campaign'
+  }
+>
+  <Text style={[styles.submitButtonText, { color: palette.background }]}>
+    {form.isSubmitting ? 'Creating...' : 'Create Campaign'}
+  </Text>
+</A11yPressable>
+
+
+STEP 6: UPDATE CANCEL BUTTON (if exists)
+──────────────────────────────────────────
+
+Keep as-is, just make sure it still calls onCancel:
+
+{onCancel && (
+  <A11yPressable
+    style={[styles.cancelButton, { borderColor: palette.muted }]}
+    onPress={onCancel}
+    accessibilityLabel="Cancel"
+    accessibilityRole="button"
+  >
+    <Text style={{ color: palette.text }}>Cancel</Text>
+  </A11yPressable>
+)}
+
+
+DONE! CampaignForm now has full validation.
+============================================
+
+
+WHAT EACH FIELD VALIDATES
+==========================
+
+LetterWizardForm:
+  - letterType: Required, must be non-empty string
+  - title: 3-200 chars, text only, no HTML
+  - subject: 3-500 chars, text only, no HTML
+  - body: 50-50000 chars, text only, no HTML (minimum required)
+  - recipient: Optional, 2-200 chars, text only
+
+CampaignForm:
+  - title: Required, 5-200 chars, text only, no HTML
+  - summary: Required, 20-5000 chars, text only, no HTML
+  - description: Optional, up to 5000 chars, no HTML
+  - target: Optional, up to 200 chars, no HTML
+  - goal: Optional, positive integer only
+  - contactEmail: Optional, must be valid email if provided
+  - contactName: Optional, up to 100 chars
+  - tags: Optional, string array
+
+
+ERROR MESSAGES SHOWN
+====================
+
+LetterWizardForm:
+  - "Please select a letter type" (letterType required)
+  - "Title must be at least 3 characters" (title < 3)
+  - "Title must be less than 200 characters" (title > 200)
+  - "Subject must be at least 3 characters" (subject < 3)
+  - "Subject must be less than 500 characters" (subject > 500)
+  - "Letter body must be at least 50 characters" (body < 50)
+  - "Letter body must be less than 50000 characters" (body > 50000)
+  - "Recipient must be specified" (recipient required if field touched)
+  - "Recipient must be less than 200 characters" (recipient > 200)
+
+CampaignForm:
+  - "Campaign title must be at least 5 characters" (title < 5)
+  - "Campaign title must be less than 200 characters" (title > 200)
+  - "Campaign summary must be at least 20 characters" (summary < 20)
+  - "Campaign summary must be less than 5000 characters" (summary > 5000)
+  - "Target must be less than 200 characters" (target > 200)
+  - "Goal must be at least 1" (goal < 1)
+  - "Goal must be a whole number" (goal not integer)
+  - "Must be a valid email address" (contactEmail invalid)
+  - "Contact name must be less than 100 characters" (contactName > 100)
+
+
+TESTING THE FORMS
+=================
+
+Letter Form:
+  1. Try submitting with blank body → "Letter body must be at least 50 characters"
+  2. Type 3 characters in title, blur → should be OK
+  3. Type 2 characters in title, blur → "Title must be at least 3 characters"
+  4. Type "<script>alert(1)</script>" in subject → sanitized to "alert(1)"
+  5. Type "hello" in body → after blur, shows "Letter body must be at least 50 characters"
+  6. Type long body (50+ chars) → error goes away
+  7. Fill all required fields → submit button enables
+  8. Click submit → shows "Saving..." while submitting
+  9. After successful submit → form resets to blank
+
+Campaign Form:
+  1. Try submitting with blank title/summary → submit button disabled
+  2. Type 2 chars in title, blur → "Campaign title must be at least 5 characters"
+  3. Type 5+ chars in title → error goes away
+  4. Type 10 chars in summary, blur → "Campaign summary must be at least 20 characters"
+  5. Type 20+ chars in summary → error goes away
+  6. Enter invalid email in contactEmail → "Must be a valid email address"
+  7. Enter valid email → error goes away
+  8. Enter negative number in goal → "Goal must be at least 1"
+  9. Enter "123.45" in goal → "Goal must be a whole number"
+  10. Enter valid goal number → error goes away
+  11. Fill title + summary → submit button enables
+  12. Click submit → shows "Creating..." while submitting
+  13. After successful submit → form resets to blank
+
+
+THAT'S IT!
+==========
+
+Both forms now have:
+  ✅ Real-time validation (500ms debounce)
+  ✅ Field error messages
+  ✅ HTML/script sanitization
+  ✅ Character counters
+  ✅ Submit prevention if invalid
+  ✅ Loading states
+  ✅ Form reset on success
+  ✅ Full TypeScript type safety
+  ✅ Accessibility attributes
+
+No breaking changes. Works with existing code.

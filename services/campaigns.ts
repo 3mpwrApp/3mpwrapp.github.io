@@ -3,11 +3,11 @@ import type { Campaign } from "../types/models";
 
 import { retry, withFallback } from "./api";
 import {
-  measurePerformance,
-  startTransaction,
-  captureException,
-  addBreadcrumb,
-  setMeasurement,
+    addBreadcrumb,
+    captureException,
+    measurePerformance,
+    setMeasurement,
+    startTransaction,
 } from "./sentryLabeling";
 
 // Use dedicated campaigns API or fall back to main API
@@ -38,6 +38,11 @@ export const fetchCampaigns = withFallback<Campaign[]>(
 
             if (!res.ok) {
               if (fetchSpan) (fetchSpan as any).setStatus?.('internal_error');
+              // Silently fail on 404 - expected when worker not deployed
+              if (res.status === 404) {
+                addBreadcrumb('Campaigns API returned 404 (worker not deployed), using fallback', 'campaigns', 'info');
+                throw new Error('Not found');
+              }
               throw new Error(`API returned ${res.status}`);
             }
 
