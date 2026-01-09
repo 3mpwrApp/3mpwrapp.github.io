@@ -279,7 +279,7 @@ assert(badResult.error?.includes('401'));
 ```
 
 **Document Compatibility:**
-Create [docs/WEBDAV_COMPATIBILITY.md](docs/WEBDAV_COMPATIBILITY.md):
+Create a WebDAV compatibility matrix document:
 
 ```markdown
 # WebDAV Compatibility Matrix
@@ -564,20 +564,20 @@ export function StorageQuotaBar({ quota }: { quota: StorageQuota }) {
 
 **Create documentation for each provider:**
 
-- [ ] [docs/GOOGLE_DRIVE_SETUP.md](docs/GOOGLE_DRIVE_SETUP.md)
+- [ ] **Google Drive Setup Guide** (`docs/GOOGLE_DRIVE_SETUP.md`)
   - How to create OAuth app
   - How to get client ID
   - Troubleshooting connection issues
   - FAQ
 
-- [ ] [docs/WEBDAV_SETUP.md](docs/WEBDAV_SETUP.md)
+- [ ] **WebDAV Setup Guide** (`docs/WEBDAV_SETUP.md`)
   - Nextcloud setup instructions
   - OwnCloud setup instructions
   - Finding your DAV endpoint
   - Creating app-specific password
   - Troubleshooting
 
-- [ ] [docs/FIREBASE_SETUP.md](docs/FIREBASE_SETUP.md)
+- [ ] **Firebase Setup Guide** (`docs/FIREBASE_SETUP.md`)
   - Create Firebase project
   - Enable Auth methods
   - Deploy Cloud Functions
