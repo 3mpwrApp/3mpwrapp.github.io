@@ -54,10 +54,17 @@ export function getGDriveConfig(): GDriveConfig | null {
  */
 export async function setGDriveConfig(config: GDriveConfig | null): Promise<void> {
   gdriveConfig = config;
+  console.warn('[GDrive] setGDriveConfig - storing to AsyncStorage:', {
+    hasConfig: !!config,
+    hasToken: !!config?.accessToken,
+    tokenLength: config?.accessToken?.length,
+  });
 
   try {
     if (config) {
-      await AsyncStorage.setItem(GDRIVE_CONFIG_KEY, JSON.stringify(config));
+      const jsonStr = JSON.stringify(config);
+      await AsyncStorage.setItem(GDRIVE_CONFIG_KEY, jsonStr);
+      console.warn('[GDrive] Config persisted to AsyncStorage, size:', jsonStr.length);
       logger.log('[GDrive] Config persisted to storage');
     } else {
       await AsyncStorage.removeItem(GDRIVE_CONFIG_KEY);
@@ -75,9 +82,20 @@ export async function setGDriveConfig(config: GDriveConfig | null): Promise<void
 export async function loadGDriveConfig(): Promise<void> {
   try {
     const stored = await AsyncStorage.getItem(GDRIVE_CONFIG_KEY);
+    console.warn('[GDrive] loadGDriveConfig - retrieved from AsyncStorage:', {
+      hasStored: !!stored,
+      storedLength: stored?.length,
+    });
+    
     if (stored) {
       gdriveConfig = JSON.parse(stored);
+      console.warn('[GDrive] Config loaded and parsed:', {
+        hasAccessToken: !!gdriveConfig?.accessToken,
+        tokenLength: gdriveConfig?.accessToken?.length,
+      });
       logger.log('[GDrive] Config loaded from storage');
+    } else {
+      console.warn('[GDrive] No stored config found in AsyncStorage');
     }
   } catch (error) {
     logger.error('[GDrive] Failed to load config:', error);

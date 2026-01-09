@@ -55,10 +55,12 @@ export default function BYOCSettingsScreen() {
   // Load existing config on mount and when screen gets focus
   React.useEffect(() => {
     const checkConfig = async () => {
-      // Load Google Drive config from AsyncStorage on every check
-      // This ensures we pick up the config saved during OAuth
+      // Load both BYOC and Google Drive configs from AsyncStorage
+      // This ensures we pick up any configs saved during OAuth or previous sessions
       const { loadGDriveConfig } = await import('../../../services/gdrive');
-      await loadGDriveConfig();
+      const { loadBYOCConfig } = await import('../../../services/dataPolicy');
+      
+      await Promise.all([loadGDriveConfig(), loadBYOCConfig()]);
 
       // Skip config checks while OAuth is in progress
       if (isAuthenticating) {
@@ -96,7 +98,8 @@ export default function BYOCSettingsScreen() {
       // This allows user to select a provider without it being reset
     };
 
-    checkConfig();
+    // Initial check - handle async properly
+    checkConfig().catch(err => console.error('[BYOC] Initial checkConfig error:', err));
 
     // Check again when screen gets focus (e.g., after OAuth redirect)
     // Use a wrapper to handle the async function
