@@ -229,7 +229,8 @@ function webOAuthFlow(
           resolve({ error: 'No URL in message' });
         }
 
-        // Clean up listener
+        // Mark as resolved and clean up listener
+        resolved = true;
         window.removeEventListener('message', handleMessage);
         clearTimeout(timeout);
         clearInterval(popupCheckInterval);
@@ -241,20 +242,28 @@ function webOAuthFlow(
 
     // Timeout after 5 minutes
     const timeout = setTimeout(() => {
-      logger.error('[GDrive] Web OAuth: Timeout waiting for callback');
-      popup.close();
-      window.removeEventListener('message', handleMessage);
-      resolve({ error: 'OAuth timeout - took too long to authorize' });
+      if (!resolved) {
+        resolved = true;
+        logger.error('[GDrive] Web OAuth: Timeout waiting for callback');
+        popup.close();
+        window.removeEventListener('message', handleMessage);
+        clearInterval(popupCheckInterval);
+        resolve({ error: 'OAuth timeout - took too long to authorize' });
+      }
     }, 5 * 60 * 1000);
+
+    // Track if we've already resolved
+    let resolved = false;
 
     // If popup closes before we get a message, timeout
     const popupCheckInterval = setInterval(() => {
-      if (popup.closed) {
+      if (popup.closed && !resolved) {
+        resolved = true;
         clearInterval(popupCheckInterval);
         clearTimeout(timeout);
         window.removeEventListener('message', handleMessage);
-        logger.log('[GDrive] Web OAuth: Popup closed');
-        resolve({ error: 'OAuth window was closed' });
+        logger.log('[GDrive] Web OAuth: Popup closed without receiving auth result');
+        resolve({ error: 'OAuth window was closed before receiving authorization' });
       }
     }, 500);
   });

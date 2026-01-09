@@ -161,6 +161,9 @@ export default function BYOCSettingsScreen() {
         console.warn('[BYOC] Calling authenticateGDrive()...');
         const result = await authenticateGDrive();
         console.warn('[BYOC] OAuth result:', result);
+        console.warn('[BYOC] OAuth success:', result.success);
+        console.warn('[BYOC] OAuth error:', result.error || 'none');
+        console.warn('[BYOC] OAuth config present:', !!result.config);
 
         if (result.success) {
           console.warn('[BYOC] Setting BYOC config to gdrive...');
