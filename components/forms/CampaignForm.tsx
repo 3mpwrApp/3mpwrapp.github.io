@@ -39,7 +39,7 @@ interface CampaignFormProps {
  * - Real-time field validation
  * - Better error messages
  */
-export default function CampaignForm({
+function CampaignFormComponent({
   onSubmit,
   onCancel,
   initialValues,
@@ -324,7 +324,8 @@ function FormField({
   characterCount,
   maxCharacters,
 }: FormFieldProps) {
-  const isRequired = label.endsWith('*');
+  // Check if field is required from label
+  const _isRequired = label.endsWith('*');
   const isError = !!error;
   const isWarning =
     characterCount && maxCharacters
@@ -471,3 +472,5 @@ const styles = StyleSheet.create({
     minHeight: 48,
   },
 });
+
+export default CampaignFormComponent;

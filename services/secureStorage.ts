@@ -215,7 +215,7 @@ export async function clearAllCredentials(): Promise<void> {
             await SecureStore.deleteItemAsync(key);
           }
           await AsyncStorage.removeItem(key);
-        } catch (e) {
+        } catch {
           // Continue on individual delete failures
         }
       }

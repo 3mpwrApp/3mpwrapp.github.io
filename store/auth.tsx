@@ -47,7 +47,8 @@ const ONBOARDED_KEY = "empowr.onboarded";
 const AUTH_MODE_KEY = "empowr.authMode"; // anonymous | signedIn | signedOut
 const USER_KEY = "empowr.user";
 const PROVINCE_KEY = "empowr.province";
-const AUTH_TOKEN_KEY = "auth_token_v1";
+// Auth token managed via secure storage
+const _AUTH_TOKEN_KEY = "auth_token_v1";
 
 const defaultState: AuthState = {
   status: "loading",

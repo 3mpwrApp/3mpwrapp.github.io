@@ -152,7 +152,7 @@ describe('Firestore Pagination Service', () => {
       const mockUnsubscribe = jest.fn();
       onSnapshot.mockReturnValue(mockUnsubscribe);
 
-      const mockDocs = [
+      const _mockDocs = [
         { id: '1', data: () => ({ title: 'Campaign 1' }) },
       ];
 

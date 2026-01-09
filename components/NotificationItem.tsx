@@ -113,7 +113,7 @@ export const NotificationItem = memoWithComparison(NotificationItemImpl, (prev, 
   );
 });
 
-const createStyles = (palette: ReturnType<typeof useAppPalette>) =>
+const createStyles = (_palette: ReturnType<typeof useAppPalette>) =>
   StyleSheet.create({
     container: {
       flexDirection: 'row',

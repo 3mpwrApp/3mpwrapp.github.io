@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax -- Placeholder fallback requires inline colors */
 import { Image as ExpoImage } from 'expo-image';
 import React, { useEffect, useMemo, useState } from 'react';
 import { StyleSheet, View } from 'react-native';

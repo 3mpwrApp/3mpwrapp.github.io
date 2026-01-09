@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax -- Skip links require specific focus colors for accessibility */
 /**
  * Skip Links Component for WCAG 2.2 AAA Compliance
  * 

@@ -1,7 +1,8 @@
 import type { StateCreator, StoreMutatorIdentifier } from 'zustand';
 
 import type {
-    FeatureFlag} from '../services/featureFlags';
+    FeatureFlag
+} from '../services/featureFlags';
 import {
     getFeatureFlagState,
     isFeatureEnabled,
@@ -24,7 +25,7 @@ export function featureFlagsPersist<
   Mcs extends [StoreMutatorIdentifier, unknown][] = [],
 >(
   f: StateCreator<T, Mps, Mcs>,
-  options?: {
+  _options?: {
     name?: string;
   }
 ): StateCreator<T, Mps, Mcs> {
@@ -97,7 +98,7 @@ export function createFeatureFlagsSlice(): StateCreator<
   [],
   []
 > {
-  return (set, get) => ({
+  return (_set, _get) => ({
     featureFlags: {
       isEnabled: (flag: FeatureFlag, userId?: string, isBetaTester?: boolean) => {
         return isFeatureEnabled(flag, userId, isBetaTester);

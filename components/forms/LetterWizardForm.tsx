@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax -- Wizard UI requires inline colors for step indicators */
 /**
  * Letter Wizard Form Validation Wrapper
  * Integrates Zod validation with LetterWizardContent

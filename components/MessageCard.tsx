@@ -84,7 +84,7 @@ export const MessageCard = memoWithComparison(MessageCardImpl, (prev, next) => {
   );
 });
 
-const createStyles = (palette: ReturnType<typeof useAppPalette>) =>
+const createStyles = (_palette: ReturnType<typeof useAppPalette>) =>
   StyleSheet.create({
     container: {
       marginVertical: 4,

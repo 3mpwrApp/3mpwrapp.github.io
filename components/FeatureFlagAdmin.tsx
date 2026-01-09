@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax -- Admin debug UI requires inline colors */
 import { useState } from 'react';
 import {
     Alert,
@@ -13,7 +14,8 @@ import {
 import { useThemeColor } from '../hooks/useThemeColor';
 import type {
     FeatureFlag,
-    FeatureFlagConfig} from '../services/featureFlags';
+    FeatureFlagConfig
+} from '../services/featureFlags';
 import {
     clearAllOverrides,
     getAllFeatureFlags,

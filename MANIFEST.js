@@ -485,14 +485,14 @@ const manifest = {
 // EXPORT FOR VERIFICATION
 // ============================================
 
-console.log('✅ FIRESTORE PAGINATION IMPLEMENTATION COMPLETE');
-console.log('');
-console.log('📦 Total Files:', summary.total_files);
-console.log('📝 Total Lines:', summary.total_lines_of_code);
-console.log('');
-console.log('✅ Status: READY TO IMPLEMENT');
-console.log('');
-console.log('Start with: MASTER_INDEX.md');
+console.warn('✅ FIRESTORE PAGINATION IMPLEMENTATION COMPLETE');
+console.warn('');
+console.warn('📦 Total Files:', summary.total_files);
+console.warn('📝 Total Lines:', summary.total_lines_of_code);
+console.warn('');
+console.warn('✅ Status: READY TO IMPLEMENT');
+console.warn('');
+console.warn('Start with: MASTER_INDEX.md');
 
 module.exports = {
   summary,

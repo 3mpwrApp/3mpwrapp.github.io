@@ -100,7 +100,7 @@ export const CampaignCard = memoWithComparison(CampaignCardImpl, (prev, next) =>
   );
 });
 
-const createStyles = (palette: ReturnType<typeof useAppPalette>) =>
+const createStyles = (_palette: ReturnType<typeof useAppPalette>) =>
   StyleSheet.create({
     container: {
       marginHorizontal: 12,

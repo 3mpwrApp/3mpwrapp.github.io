@@ -38,7 +38,7 @@ interface EventFormProps {
  * - Required/optional field handling
  * - Real-time validation feedback
  */
-export default function EventForm({
+function EventFormComponent({
   onSubmit,
   onCancel,
   initialValues,
@@ -579,3 +579,5 @@ const styles = StyleSheet.create({
     minHeight: 48,
   },
 });
+
+export default EventFormComponent;
