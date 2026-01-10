@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-10T12:02:58.726Z",
+  "lastUpdated": "2026-01-10T18:02:52.887Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 8030,
+      "totalPosts": 8055,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-10T12:02:47.426Z"
+      "lastSeen": "2026-01-10T18:02:43.258Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 7973,
+      "totalPosts": 7998,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-10T12:02:50.332Z"
+      "lastSeen": "2026-01-10T18:02:45.236Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 7888,
-      "recentPosts": 25,
+      "totalPosts": 7911,
+      "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2026-01-10T12:02:52.737Z"
+      "lastSeen": "2026-01-10T18:02:47.715Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 8018,
+      "totalPosts": 8043,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-10T12:02:55.213Z"
+      "lastSeen": "2026-01-10T18:02:49.795Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 8025,
+      "totalPosts": 8050,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-10T12:02:57.723Z"
+      "lastSeen": "2026-01-10T18:02:51.883Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "MDN accessibility claim about CSS carousels:\nbsky.app/profile/deve...\n\nMy very limited PR to limit that false claim:\ngithub.com/mdn/content/...\n\nYay. Megacorps out there making the claims, me taking spare time, again, to try to fix them.\n\n#CSS #accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 15,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "MDN accessibility claim about CSS carousels:\nbsky.app/profile/deve...\n\nMy very limited PR to limit that false claim:\ngithub.com/mdn/content/...\n\nYay. Megacorps out there making the claims, me taking spare time, again, to try to fix them.\n\n#CSS #accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Mantis & Co. kindly asked me about my predictions for digital #a11y for 2026. I'm not very optimistic about it: mantisandco.com/resources/gu...",
-      "author": "ericwbailey.website",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 309,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 66,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Hey Jon Stewart, Jokes About Wearing Masks Aren’t Funny\n\n#MaskUp #CovidIsNotOver #DisabilityJustice  \n\nwww.motherjones.com/politics/202...",
       "author": "thunderhoneysnow.bsky.social",
@@ -338,16 +302,52 @@
       "author": "lisadiedrich.bsky.social",
       "engagement": 15,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "This is why “just try harder” is nonsense.\nThe course isn’t neutral.\nThe system chooses who struggles.\n♿🔥🧱\nDrop a 🧠 if you get it.\n#EquityNotEquality #DisabilityRights #ChronicIllness #AccessIsEverything #JusticeEducation #CripHumor #RealTalk",
+      "author": "crabbyratwhisperer.bsky.social",
+      "engagement": 32,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 66,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "When considering what keyboard shortcuts to support in your application, don’t stress about JAWS/NVDA. They have pass-through commands (a key combo that tells the SR to ignore the next key/combo).\n\n• NVDA + F2\n• JAWS + 3\n• Narrator + 3\n\nStress about other languages instead.\n\n#a11y #i18n",
+      "author": "aardrian.bsky.social",
+      "engagement": 16,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 47,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 309,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
-      "keyword": "accessibility",
-      "count": 45
-    },
-    {
       "keyword": "disabilityrights",
       "count": 43
+    },
+    {
+      "keyword": "accessibility",
+      "count": 41
     },
     {
       "keyword": "a11y",
@@ -398,10 +398,6 @@
       "count": 11
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 11
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 9
     },
@@ -414,12 +410,16 @@
       "count": 9
     },
     {
+      "keyword": "accessibility a11y",
+      "count": 9
+    },
+    {
       "keyword": "disabilityjustice nico",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "disability",
-      "count": 7
+      "count": 6
     }
   ]
 }
