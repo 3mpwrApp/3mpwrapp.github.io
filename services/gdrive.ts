@@ -117,23 +117,55 @@ export function isGDriveConfigured(): boolean {
 /**
  * Get Google OAuth2 client ID from environment
  * Tries multiple sources to ensure it works in all environments
+ * Returns platform-specific client ID (web for web, Android for Android, iOS for iOS)
  */
 function getGoogleClientId(): string | null {
-  // Try process.env first (works in most Expo environments)
-  let clientId = process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
+  let clientId: string | undefined;
   
-  // If not found in process.env, try Constants.expoConfig?.extra (works in all Expo environments)
-  if (!clientId && typeof Constants !== 'undefined' && Constants.expoConfig?.extra) {
-    clientId = Constants.expoConfig.extra.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID as string | undefined;
+  // Use platform-specific client ID
+  if (Platform.OS === 'web') {
+    // Web client ID
+    clientId = process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
+    if (!clientId && typeof Constants !== 'undefined' && Constants.expoConfig?.extra) {
+      clientId = Constants.expoConfig.extra.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID as string | undefined;
+    }
+  } else if (Platform.OS === 'android') {
+    // Android client ID
+    clientId = process.env.EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID;
+    if (!clientId && typeof Constants !== 'undefined' && Constants.expoConfig?.extra) {
+      clientId = Constants.expoConfig.extra.EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID as string | undefined;
+    }
+    // Fallback to web client ID for testing (not recommended for production)
+    if (!clientId) {
+      logger.warn('[GDrive] No Android client ID, falling back to web client ID (not recommended)');
+      clientId = process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
+      if (!clientId && typeof Constants !== 'undefined' && Constants.expoConfig?.extra) {
+        clientId = Constants.expoConfig.extra.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID as string | undefined;
+      }
+    }
+  } else if (Platform.OS === 'ios') {
+    // iOS client ID
+    clientId = process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID;
+    if (!clientId && typeof Constants !== 'undefined' && Constants.expoConfig?.extra) {
+      clientId = Constants.expoConfig.extra.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID as string | undefined;
+    }
+    // Fallback to web client ID for testing
+    if (!clientId) {
+      logger.warn('[GDrive] No iOS client ID, falling back to web client ID');
+      clientId = process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID;
+      if (!clientId && typeof Constants !== 'undefined' && Constants.expoConfig?.extra) {
+        clientId = Constants.expoConfig.extra.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID as string | undefined;
+      }
+    }
   }
   
   if (!clientId) {
-    logger.warn('[GDrive] No EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID configured');
+    logger.warn('[GDrive] No Google Client ID configured for platform:', Platform.OS);
     logger.warn('[GDrive] Checked process.env and Constants.expoConfig.extra');
     return null;
   }
   
-  logger.log('[GDrive] Successfully loaded EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID');
+  logger.log('[GDrive] Successfully loaded Google Client ID for platform:', Platform.OS);
   return clientId;
 }
 
@@ -290,13 +322,30 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
   logger.log('[GDrive] Client ID found, proceeding with OAuth');
 
   try {
-    const redirectUri = 'https://3mpwrapp.pages.dev/gdrive-callback';
+    // Set redirect URI based on platform
+    let redirectUri: string;
+    if (Platform.OS === 'web') {
+      redirectUri = 'https://3mpwrapp.pages.dev/gdrive-callback';
+    } else if (Platform.OS === 'android') {
+      // For Android, use custom scheme or makeRedirectUri
+      redirectUri = AuthSession.makeRedirectUri({
+        scheme: 'empowrapp',
+        path: 'gdrive-callback',
+      });
+    } else {
+      // iOS uses reverse client ID as scheme
+      redirectUri = AuthSession.makeRedirectUri({
+        path: 'gdrive-callback',
+      });
+    }
+    
     logger.log('[GDrive] Platform:', Platform.OS);
     logger.log('[GDrive] Redirect URI:', redirectUri);
 
     let code: string | undefined;
     let authError: string | undefined;
     let implicitAccessToken: string | undefined;
+    let codeVerifier: string | undefined; // For PKCE on native platforms
 
     // For web, use popup + postMessage approach
     if (Platform.OS === 'web') {
@@ -325,6 +374,9 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
         revocationEndpoint: 'https://oauth2.googleapis.com/revoke',
       };
 
+      // Use PKCE for Android/iOS (more secure for native apps)
+      const usePKCE = Platform.OS !== 'web';
+
       const authRequest = new AuthSession.AuthRequest({
         clientId,
         scopes: [
@@ -335,7 +387,11 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
         ],
         redirectUri,
         responseType: AuthSession.ResponseType.Code,
-        usePKCE: false,
+        usePKCE, // Enable PKCE for native platforms
+        extraParams: {
+          access_type: 'offline', // Request refresh token
+          prompt: 'consent', // Always show consent screen to ensure refresh token
+        },
       });
 
       logger.log('[GDrive] Opening native auth prompt...');
@@ -343,6 +399,12 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       try {
         result = await authRequest.promptAsync(discovery);
         logger.log('[GDrive] Native prompt result type:', result.type);
+        
+        // Log more details for debugging
+        if (result.type === 'success' && 'params' in result) {
+          logger.log('[GDrive] Received authorization code');
+          logger.log('[GDrive] Code verifier available:', !!authRequest.codeVerifier);
+        }
       } catch (promptError: any) {
         logger.error('[GDrive] Error during promptAsync:', promptError);
         return {
@@ -369,6 +431,9 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       }
 
       code = result.params.code;
+      
+      // Store code verifier for PKCE token exchange
+      const codeVerifier = authRequest.codeVerifier;
     }
 
     if (!code && !implicitAccessToken) {
@@ -445,17 +510,26 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       // Or always use direct for native
       if (!finalAccessToken && code) {
         logger.log('[GDrive] Using direct Google token exchange endpoint');
+        
+        const tokenParams: Record<string, string> = {
+          code: code,
+          client_id: clientId,
+          redirect_uri: redirectUri,
+          grant_type: 'authorization_code',
+        };
+        
+        // Add code verifier for PKCE (native platforms)
+        if (codeVerifier) {
+          logger.log('[GDrive] Including PKCE code verifier in token exchange');
+          tokenParams.code_verifier = codeVerifier;
+        }
+        
         tokenResponse = await fetch(TOKEN_ENDPOINT, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: new URLSearchParams({
-            code: code,
-            client_id: clientId,
-            redirect_uri: redirectUri,
-            grant_type: 'authorization_code',
-          }).toString(),
+          body: new URLSearchParams(tokenParams).toString(),
         });
 
         if (!tokenResponse.ok) {
