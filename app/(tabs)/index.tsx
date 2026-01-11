@@ -21,6 +21,7 @@ import { type EvidenceEntry } from '../../components/EvidenceTimeline';
 import GapView from '../../components/GapView';
 import ResponsiveScreenWrapper from '../../components/ResponsiveScreenWrapper';
 import { HIT_SLOP_8 } from '../../constants/A11Y';
+import { DIAGNOSTIC_COLORS } from '../../constants/diagnosticColors';
 import { MAX_FONT_SCALE } from '../../hooks/useA11y';
 import { useTranslation } from '../../i18n';
 import { useAuth } from '../../store/auth';
@@ -154,19 +155,19 @@ export default function HomeScreen() {
             <View style={styles.heroCardContent}>
               <Text style={styles.heroCardIcon}>⚡</Text>
               <View style={styles.heroCardText}>
-                <Text style={[styles.heroCardTitle, { color: '#fff' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.heroCardTitle, { color: DIAGNOSTIC_COLORS.white }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Wellness Command
                 </Text>
-                <Text style={[styles.heroCardSubtitle, { color: '#fff', opacity: 0.9 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.heroCardSubtitle, { color: DIAGNOSTIC_COLORS.white, opacity: 0.9 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Track health & manage energy
                 </Text>
                 <View style={[styles.heroCardBadge, { backgroundColor: 'rgba(255,255,255,0.2)' }]}>
-                  <Text style={[styles.heroCardBadgeText, { color: '#fff' }]}>
+                  <Text style={[styles.heroCardBadgeText, { color: DIAGNOSTIC_COLORS.white }]}>
                     Energy, mood, symptoms, more
                   </Text>
                 </View>
               </View>
-              <Ionicons name="chevron-forward" size={28} color="#fff" />
+              <Ionicons name="chevron-forward" size={28} color={DIAGNOSTIC_COLORS.white} />
             </View>
           </A11yPressable>
 
@@ -181,19 +182,19 @@ export default function HomeScreen() {
             <View style={styles.heroCardContent}>
               <Text style={styles.heroCardIcon}>💬</Text>
               <View style={styles.heroCardText}>
-                <Text style={[styles.heroCardTitle, { color: '#fff' }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.heroCardTitle, { color: DIAGNOSTIC_COLORS.white }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Community Hub
                 </Text>
-                <Text style={[styles.heroCardSubtitle, { color: '#fff', opacity: 0.9 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
+                <Text style={[styles.heroCardSubtitle, { color: DIAGNOSTIC_COLORS.white, opacity: 0.9 }]} maxFontSizeMultiplier={MAX_FONT_SCALE}>
                   Connect with allies & advocates
                 </Text>
                 <View style={[styles.heroCardBadge, { backgroundColor: 'rgba(255,255,255,0.2)' }]}>
-                  <Text style={[styles.heroCardBadgeText, { color: '#fff' }]}>
+                  <Text style={[styles.heroCardBadgeText, { color: DIAGNOSTIC_COLORS.white }]}>
                     Peer support, campaigns, events
                   </Text>
                 </View>
               </View>
-              <Ionicons name="chevron-forward" size={28} color="#fff" />
+              <Ionicons name="chevron-forward" size={28} color={DIAGNOSTIC_COLORS.white} />
             </View>
           </A11yPressable>
 

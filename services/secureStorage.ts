@@ -29,7 +29,7 @@ async function initSecureStore(): Promise<void> {
     await SecureStore.getItemAsync(testKey);
     await SecureStore.deleteItemAsync(testKey);
     isSecureStoreAvailable = true;
-  } catch (_error) {
+  } catch {
     // Expected on web - SecureStore only works on native platforms
     isSecureStoreAvailable = false;
     // Only log in development, this is normal behavior
@@ -254,7 +254,7 @@ export async function initializeSecureStorage(): Promise<void> {
     if (__DEV__ && isSecureStoreAvailable) {
       logger.debug('[SecureStorage] SecureStore initialized');
     }
-  } catch (_error) {
+  } catch {
     // Silently fail - fallback is automatic
     if (__DEV__) {
       logger.debug('[SecureStorage] Using fallback storage');

@@ -19,6 +19,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import ComplexityModeIndicator from '../../../components/ComplexityModeIndicator';
 import GapView from '../../../components/GapView';
 import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper';
+import { DIAGNOSTIC_COLORS } from '../../../constants/diagnosticColors';
 import { MAX_FONT_SCALE } from '../../../hooks/useA11y';
 import { useTranslation } from '../../../i18n';
 import { useComplexityMode } from '../../../store/complexityMode';
@@ -464,7 +465,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   badgeText: {
-    color: '#fff',
+    color: DIAGNOSTIC_COLORS.white,
     fontSize: 10,
     fontWeight: '700',
   },

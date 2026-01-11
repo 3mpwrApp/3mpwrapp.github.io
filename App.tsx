@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { RootProviders } from './components/RootProviders';
-
-// Import all tab screens
 import AdvocacyScreen from './app/(tabs)/advocacy/index';
 import CampaignsScreen from './app/(tabs)/campaigns';
 import CommunityScreen from './app/(tabs)/community/index';
@@ -11,6 +8,7 @@ import HomeScreen from './app/(tabs)/index';
 import ResourcesScreen from './app/(tabs)/resources/index';
 import SettingsScreen from './app/(tabs)/settings/index';
 import WellnessScreen from './app/(tabs)/wellness/index';
+import { RootProviders } from './components/RootProviders';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');

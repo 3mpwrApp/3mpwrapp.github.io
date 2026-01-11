@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import { DIAGNOSTIC_COLORS } from '../constants/diagnosticColors';
+
 export default function Index() {
   const [activeTab, setActiveTab] = useState('home');
   
@@ -27,10 +29,10 @@ export default function Index() {
             justifyContent: 'center',
             padding: '12px',
             border: 'none',
-            background: isActive ? '#f0fdf4' : 'transparent',
+            background: isActive ? DIAGNOSTIC_COLORS.successLight : 'transparent',
             cursor: 'pointer',
             fontSize: '12px',
-            color: isActive ? '#22c55e' : '#666',
+            color: isActive ? DIAGNOSTIC_COLORS.successAccent : DIAGNOSTIC_COLORS.mediumGray,
             fontWeight: isActive ? '600' : 'normal',
           }}
         >
@@ -170,10 +172,10 @@ function CommunityTab() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: DIAGNOSTIC_COLORS.white,
   },
   header: {
-    backgroundColor: '#22c55e',
+    backgroundColor: DIAGNOSTIC_COLORS.successAccent,
     padding: 20,
     paddingTop: 40,
     alignItems: 'center',
@@ -181,16 +183,16 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: '#fff',
+    color: DIAGNOSTIC_COLORS.white,
   },
   headerSubtitle: {
     fontSize: 14,
-    color: '#f0f0f0',
+    color: DIAGNOSTIC_COLORS.lightText,
     marginTop: 4,
   },
   debugInfo: {
     fontSize: 14,
-    color: '#f0f0f0',
+    color: DIAGNOSTIC_COLORS.lightText,
     marginTop: 4,
   },
   debugButton: {
@@ -202,7 +204,7 @@ const styles = StyleSheet.create({
   },
   debugButtonText: {
     fontSize: 12,
-    color: '#fff',
+    color: DIAGNOSTIC_COLORS.white,
     fontWeight: '600',
   },
   navLogBox: {
@@ -213,7 +215,7 @@ const styles = StyleSheet.create({
   },
   navLogText: {
     fontSize: 11,
-    color: '#fff',
+    color: DIAGNOSTIC_COLORS.white,
     fontFamily: 'monospace',
     marginBottom: 2,
   },
@@ -226,59 +228,59 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#000',
+    color: DIAGNOSTIC_COLORS.black,
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
-    color: '#666',
+    color: DIAGNOSTIC_COLORS.mediumGray,
     marginBottom: 20,
   },
   card: {
-    backgroundColor: '#f9fafb',
+    backgroundColor: DIAGNOSTIC_COLORS.lightestGray,
     padding: 15,
     borderRadius: 8,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#e5e7eb',
+    borderColor: DIAGNOSTIC_COLORS.border,
   },
   cardTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#000',
+    color: DIAGNOSTIC_COLORS.black,
     marginBottom: 4,
   },
   cardText: {
     fontSize: 14,
-    color: '#666',
+    color: DIAGNOSTIC_COLORS.mediumGray,
   },
   statusCard: {
-    backgroundColor: '#f0fdf4',
+    backgroundColor: DIAGNOSTIC_COLORS.successLight,
     padding: 15,
     borderRadius: 8,
     marginTop: 10,
     borderWidth: 1,
-    borderColor: '#22c55e',
+    borderColor: DIAGNOSTIC_COLORS.successAccent,
   },
   statusTitle: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#22c55e',
+    color: DIAGNOSTIC_COLORS.successAccent,
     marginBottom: 8,
   },
   statusItem: {
     fontSize: 12,
-    color: '#16a34a',
+    color: DIAGNOSTIC_COLORS.successDark,
     marginBottom: 4,
   },
   tabBar: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
+    backgroundColor: DIAGNOSTIC_COLORS.white,
     borderTopWidth: 1,
-    borderTopColor: '#e5e7eb',
+    borderTopColor: DIAGNOSTIC_COLORS.border,
     paddingBottom: 10,
     elevation: 8,
-    shadowColor: '#000',
+    shadowColor: DIAGNOSTIC_COLORS.black,
     shadowOffset: { width: 0, height: -2 },
     shadowOpacity: 0.1,
   },
@@ -289,19 +291,19 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
   },
   tabActive: {
-    backgroundColor: '#f0fdf4',
+    backgroundColor: DIAGNOSTIC_COLORS.successLight,
   },
   tabPressed: {
     opacity: 0.6,
   },
   tabText: {
     fontSize: 12,
-    color: '#666',
+    color: DIAGNOSTIC_COLORS.mediumGray,
     textAlign: 'center',
   },
   tabTextActive: {
     fontSize: 12,
-    color: '#22c55e',
+    color: DIAGNOSTIC_COLORS.successAccent,
     fontWeight: '600',
   },
 });

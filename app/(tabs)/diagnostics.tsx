@@ -7,6 +7,8 @@
 import { useEffect, useState } from 'react';
 import { Alert, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+import { DIAGNOSTIC_COLORS } from '../../constants/diagnosticColors';
+
 interface DiagnosticInfo {
   [key: string]: boolean | string | null | undefined;
 }
@@ -181,7 +183,7 @@ export default function DiagnosticsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: DIAGNOSTIC_COLORS.lightGray,
   },
   content: {
     padding: 16,
@@ -190,7 +192,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '700',
     marginBottom: 16,
-    color: '#000',
+    color: DIAGNOSTIC_COLORS.black,
   },
   statusBox: {
     padding: 16,
@@ -199,26 +201,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   okBox: {
-    backgroundColor: '#d4edda',
-    borderColor: '#28a745',
+    backgroundColor: DIAGNOSTIC_COLORS.successBg,
+    borderColor: DIAGNOSTIC_COLORS.successBorder,
     borderWidth: 1,
   },
   errorBox: {
-    backgroundColor: '#f8d7da',
-    borderColor: '#dc3545',
+    backgroundColor: DIAGNOSTIC_COLORS.errorBg,
+    borderColor: DIAGNOSTIC_COLORS.errorBorder,
     borderWidth: 1,
   },
   statusText: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#000',
+    color: DIAGNOSTIC_COLORS.black,
   },
   sectionTitle: {
     fontSize: 16,
     fontWeight: '700',
     marginBottom: 12,
     marginTop: 16,
-    color: '#333',
+    color: DIAGNOSTIC_COLORS.darkGray,
   },
   row: {
     flexDirection: 'row',
@@ -226,14 +228,14 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 12,
     marginBottom: 4,
-    backgroundColor: '#fff',
+    backgroundColor: DIAGNOSTIC_COLORS.white,
     borderRadius: 4,
   },
   label: {
     flex: 1,
     fontSize: 14,
     fontWeight: '600',
-    color: '#333',
+    color: DIAGNOSTIC_COLORS.darkGray,
   },
   value: {
     flex: 1,
@@ -241,42 +243,42 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   errorText: {
-    color: '#dc3545',
+    color: DIAGNOSTIC_COLORS.errorText,
     fontWeight: '600',
   },
   okText: {
-    color: '#28a745',
+    color: DIAGNOSTIC_COLORS.successText,
     fontWeight: '600',
   },
   instructions: {
     marginTop: 24,
     padding: 16,
-    backgroundColor: '#e3f2fd',
+    backgroundColor: DIAGNOSTIC_COLORS.infoBg,
     borderRadius: 8,
-    borderLeftColor: '#1976d2',
+    borderLeftColor: DIAGNOSTIC_COLORS.infoBorder,
     borderLeftWidth: 4,
   },
   instructionTitle: {
     fontSize: 14,
     fontWeight: '700',
     marginBottom: 8,
-    color: '#1976d2',
+    color: DIAGNOSTIC_COLORS.infoText,
   },
   instruction: {
     fontSize: 12,
-    color: '#333',
+    color: DIAGNOSTIC_COLORS.darkGray,
     lineHeight: 18,
   },
   actions: {
     marginTop: 16,
     padding: 12,
-    backgroundColor: '#fff3cd',
+    backgroundColor: DIAGNOSTIC_COLORS.warningBg,
     borderRadius: 8,
   },
   link: {
     fontSize: 14,
     fontWeight: '700',
-    color: '#0066cc',
+    color: DIAGNOSTIC_COLORS.infoLink,
     textDecorationLine: 'underline',
     textAlign: 'center',
     paddingVertical: 8,
