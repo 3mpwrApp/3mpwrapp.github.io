@@ -433,7 +433,7 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       code = result.params.code;
       
       // Store code verifier for PKCE token exchange
-      const codeVerifier = authRequest.codeVerifier;
+      codeVerifier = authRequest.codeVerifier;
     }
 
     if (!code && !implicitAccessToken) {
