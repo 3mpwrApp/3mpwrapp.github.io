@@ -11,7 +11,16 @@ import * as persistence from "../store/persistence";
 import type { ProvinceCode } from "../types/models";
 import { logger } from "../utils/logger";
 
-type User = { id: string; name: string } | null;
+// Extended user type to match Firebase User interface properties
+type User = {
+  id: string;
+  name: string;
+  uid: string; // Alias for id
+  email?: string;
+  displayName?: string;
+  photoURL?: string;
+  providerData?: Array<{ providerId: string }>;
+} | null;
 
 type AuthStatus =
   | "loading"
@@ -35,6 +44,11 @@ type AuthContextType = {
   signIn: (name?: string, token?: string) => Promise<void>;
   continueAnonymously: () => Promise<void>;
   signOut: () => Promise<void>;
+  // Convenience properties (derived from state)
+  user: User;
+  isGuest: boolean;
+  isAdmin: boolean;
+  refreshClaims: () => Promise<void>;
 };
 
 let AsyncStorage: any;
@@ -167,7 +181,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signIn = async (name = "3mpwr User", token?: string) => {
-    const user: User = { id: "local", name };
+    const user: User = {
+      id: "local",
+      name,
+      uid: "local", // Match Firebase User structure
+      displayName: name,
+      email: undefined,
+      photoURL: undefined,
+      providerData: [],
+    };
     await persist(AUTH_MODE_KEY, "signedIn");
     await persist(USER_KEY, JSON.stringify(user));
     if (token) {
@@ -198,6 +220,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
+  const refreshClaims = async () => {
+    // Placeholder for Firebase custom claims refresh
+    // In a real app with Firebase, this would re-fetch the ID token
+    logger.info('AuthProvider', 'refreshClaims called (no-op in local auth)');
+  };
+
   const value: AuthContextType = {
     state,
     completeOnboarding,
@@ -205,6 +233,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     signIn,
     continueAnonymously,
     signOut,
+    // Convenience properties
+    user: state.user,
+    isGuest: state.status === 'anonymous',
+    isAdmin: false, // No admin role in local auth; override if using Firebase
+    refreshClaims,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

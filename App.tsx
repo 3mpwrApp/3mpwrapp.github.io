@@ -79,6 +79,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
   header: {
     backgroundColor: '#4F46E5',
     padding: 20,
@@ -94,9 +97,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#E0E7FF',
     marginTop: 4,
-  },
-    flex: 1,
-    backgroundColor: '#fff',
   },
   content: {
     flex: 1,

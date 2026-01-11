@@ -38,7 +38,7 @@ export default function HomeScreen() {
   const router = useRouter();
   const { user: _user, isGuest: _isGuest } = useAuth();
   const { mode: _mode, isFeatureVisible } = useComplexityMode();
-  const textStyles = createTextStyles(palette, factor);
+  const textStyles = createTextStyles(palette);
   const styles = createStyles(palette, factor);
   
   const [evidenceCount, setEvidenceCount] = useState(0);
