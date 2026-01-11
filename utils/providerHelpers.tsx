@@ -9,14 +9,14 @@
  * 5. Log errors but continue execution
  */
 
-import type { ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import React, { useEffect, useState } from 'react';
 
 /**
  * AsyncProvider - Wraps a provider with async initialization
  * Ensures the provider doesn't block rendering during initialization
  */
-export function createAsyncProvider<T>(
+export function createAsyncProvider<_T>(
   Provider: React.ComponentType<{ children: ReactNode }>,
   initFn: () => Promise<void>,
   options: {
@@ -28,10 +28,10 @@ export function createAsyncProvider<T>(
   const { name, timeout = 3000, fallbackComponent: Fallback } = options;
   
   return function AsyncProviderWrapper({ children }: { children: ReactNode }) {
-    const [status, setStatus] = useState<'loading' | 'ready' | 'failed'>('loading');
+    const [_status, setStatus] = useState<'loading' | 'ready' | 'failed'>('loading');
     
     useEffect(() => {
-      if (__DEV__) console.log(`[${name}] Starting async initialization...`);
+      if (__DEV__) console.warn(`[${name}] Starting async initialization...`);
       
       const timeoutId = setTimeout(() => {
         if (__DEV__) console.warn(`[${name}] Initialization timeout - proceeding with defaults`);
@@ -41,7 +41,7 @@ export function createAsyncProvider<T>(
       initFn()
         .then(() => {
           clearTimeout(timeoutId);
-          if (__DEV__) console.log(`[${name}] Initialization complete`);
+          if (__DEV__) console.warn(`[${name}] Initialization complete`);
           setStatus('ready');
         })
         .catch((error) => {
@@ -94,11 +94,11 @@ export function createLazyProvider(
     const [Provider, setProvider] = useState<React.ComponentType<{ children: ReactNode }> | null>(null);
     
     useEffect(() => {
-      if (__DEV__) console.log(`[${name}] Loading provider...`);
+      if (__DEV__) console.warn(`[${name}] Loading provider...`);
       importFn()
         .then((mod) => {
           setProvider(() => mod.default);
-          if (__DEV__) console.log(`[${name}] Provider loaded`);
+          if (__DEV__) console.warn(`[${name}] Provider loaded`);
         })
         .catch((error) => {
           console.error(`[${name}] Failed to load provider:`, error);
@@ -143,7 +143,7 @@ export function logProviderStatus(
   const allReady = providers.every(p => p.status === 'ready');
   const anyFailed = providers.some(p => p.status === 'failed');
   
-  console.log('[Provider Status]', {
+  console.warn('[Provider Status]', {
     state: anyFailed ? 'FAILED' : allReady ? 'READY' : 'LOADING',
     providers: providers.map(p => `${p.name}: ${p.status === 'ready' ? '✓' : p.status === 'failed' ? '✗' : '⏳'}`).join(', ')
   });

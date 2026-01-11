@@ -40,7 +40,7 @@ import { SettingsProvider } from '../store/settings';
  * 16. Community (community features - needs Auth)
  */
 export function RootProviders({ children }: { children: ReactNode }) {
-  console.log('[RootProviders] Rendering with core providers');
+  if (__DEV__) console.warn('[RootProviders] Rendering with core providers');
   
   try {
     return (

@@ -35,14 +35,14 @@ export default function HomeScreen() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const router = useRouter();
-  const { user, isGuest } = useAuth();
-  const { mode, isFeatureVisible } = useComplexityMode();
+  const { user: _user, isGuest: _isGuest } = useAuth();
+  const { mode: _mode, isFeatureVisible } = useComplexityMode();
   const textStyles = createTextStyles(palette, factor);
   const styles = createStyles(palette, factor);
   
   const [evidenceCount, setEvidenceCount] = useState(0);
-  const [recentEvidence, setRecentEvidence] = useState<EvidenceEntry[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [_recentEvidence, setRecentEvidence] = useState<EvidenceEntry[]>([]);
+  const [_isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     loadEvidenceData();
@@ -61,11 +61,11 @@ export default function HomeScreen() {
     }
   };
 
-  const handleHeroPress = () => {
+  const _handleHeroPress = () => {
     router.push('/(tabs)/advocacy/evidence-command-center' as any);
   };
 
-  const handleViewAll = () => {
+  const _handleViewAll = () => {
     router.push('/(tabs)/advocacy/evidence-command-center' as any);
   };
 
@@ -94,7 +94,7 @@ export default function HomeScreen() {
     };
   };
 
-  const nextAction = getNextBestAction();
+  const _nextAction = getNextBestAction();
 
   return (
     <ResponsiveScreenWrapper>

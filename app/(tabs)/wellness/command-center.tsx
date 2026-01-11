@@ -46,10 +46,10 @@ interface AIFeature {
 }
 
 export default function WellnessCommandCenter() {
-  const { t } = useTranslation();
+  const { t: _t } = useTranslation();
   const palette = useAppPalette();
   const textStyles = createTextStyles(palette);
-  const { mode, isFeatureVisible } = useComplexityMode();
+  const { mode: _mode, isFeatureVisible } = useComplexityMode();
   const [activeTab, setActiveTab] = useState<TabId>('dashboard');
 
   const tabs: { id: TabId; label: string; icon: string }[] = [

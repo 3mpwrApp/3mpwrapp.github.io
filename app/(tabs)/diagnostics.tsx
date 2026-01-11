@@ -29,7 +29,7 @@ export default function DiagnosticsScreen() {
 
       // Check React Native version
       try {
-        const RN = await import('react-native');
+        const _RN = await import('react-native');
         diagnostics['React Native'] = '✅ Loaded';
       } catch (e) {
         diagnostics['React Native Error'] = (e as Error).message;
@@ -37,7 +37,7 @@ export default function DiagnosticsScreen() {
 
       // Check i18n
       try {
-        const { useTranslation } = await import('../../i18n');
+        const { useTranslation: _useTranslation } = await import('../../i18n');
         diagnostics['i18n'] = '✅ Loaded';
       } catch (e) {
         diagnostics['i18n Error'] = (e as Error).message;
@@ -45,7 +45,7 @@ export default function DiagnosticsScreen() {
 
       // Check Theme
       try {
-        const { useAppPalette } = await import('../../theme/usePalette');
+        const { useAppPalette: _useAppPalette } = await import('../../theme/usePalette');
         diagnostics['Theme/Palette'] = '✅ Loaded';
       } catch (e) {
         diagnostics['Theme Error'] = (e as Error).message;
@@ -53,7 +53,7 @@ export default function DiagnosticsScreen() {
 
       // Check Auth store
       try {
-        const authModule = await import('../../store/auth');
+        const _authModule = await import('../../store/auth');
         diagnostics['Auth Store'] = '✅ Loaded';
       } catch (e) {
         diagnostics['Auth Store Error'] = (e as Error).message;
@@ -61,7 +61,7 @@ export default function DiagnosticsScreen() {
 
       // Check Firebase config
       try {
-        const firebaseModule = await import('../../firebase/config');
+        const _firebaseModule = await import('../../firebase/config');
         diagnostics['Firebase Config'] = '✅ Loaded';
       } catch (e) {
         diagnostics['Firebase Error'] = (e as Error).message;
@@ -69,7 +69,7 @@ export default function DiagnosticsScreen() {
 
       // Check ErrorBoundary
       try {
-        const { default: ErrorBoundary } = await import('../../components/ErrorBoundary');
+        const { default: _ErrorBoundary } = await import('../../components/ErrorBoundary');
         diagnostics['ErrorBoundary'] = '✅ Loaded';
       } catch (e) {
         diagnostics['ErrorBoundary Error'] = (e as Error).message;
@@ -77,7 +77,7 @@ export default function DiagnosticsScreen() {
 
       // Check SafeProviderWrapper
       try {
-        const { SafeProviderWrapper } = await import('../../components/SafeProviderWrapper');
+        const { SafeProviderWrapper: _SafeProviderWrapper } = await import('../../components/SafeProviderWrapper');
         diagnostics['SafeProviderWrapper'] = '✅ Loaded';
       } catch (e) {
         diagnostics['SafeProviderWrapper Error'] = (e as Error).message;
@@ -167,7 +167,7 @@ export default function DiagnosticsScreen() {
                 .map(([k, v]) => `${k}: ${v}`)
                 .join('\n');
               // Navigator.clipboard.writeText(text);
-              console.log('[DIAGNOSTICS OUTPUT]\n' + text);
+              if (__DEV__) console.warn('[DIAGNOSTICS OUTPUT]\n' + text);
             }}
           >
             📋 Copy Diagnostics to Console

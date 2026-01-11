@@ -1,7 +1,7 @@
 import { Tabs } from "expo-router";
 
 export default function TabsLayout() {
-  console.log('[TabsLayout] Rendering ULTRA MINIMAL...');
+  if (__DEV__) console.warn('[TabsLayout] Rendering ULTRA MINIMAL...');
   
   return (
     <Tabs>

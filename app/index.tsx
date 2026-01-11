@@ -4,10 +4,10 @@ import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-n
 export default function Index() {
   const [activeTab, setActiveTab] = useState('home');
   
-  console.log('[Index] Rendering single-screen app, tab:', activeTab);
+  if (__DEV__) console.warn('[Index] Rendering single-screen app, tab:', activeTab);
   
   const handleTabChange = (tab: string) => {
-    console.log('[Index] Tab changed to:', tab);
+    if (__DEV__) console.warn('[Index] Tab changed to:', tab);
     setActiveTab(tab);
   };
 

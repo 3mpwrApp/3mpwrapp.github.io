@@ -15,7 +15,7 @@ import WellnessScreen from './app/(tabs)/wellness/index';
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   
-  console.log('[App] Rendering with tab:', activeTab);
+  if (__DEV__) console.warn('[App] Rendering with tab:', activeTab);
   
   // Tab configuration
   const tabs = [
@@ -60,7 +60,7 @@ export default function App() {
                 pressed && styles.tabPressed
               ]}
               onPress={() => {
-                console.log('[App] Tab changed to:', tab.id);
+                if (__DEV__) console.warn('[App] Tab changed to:', tab.id);
                 setActiveTab(tab.id);
               }}
             >

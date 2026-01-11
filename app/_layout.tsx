@@ -14,12 +14,12 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
   });
 }
 
-console.log('[RootLayout] Starting...');
+if (__DEV__) console.warn('[RootLayout] Starting...');
 
 export default function RootLayout() {
   const [fontsLoaded, fontsError] = useFonts({});
 
-  console.log('[RootLayout] Render - fontsLoaded:', fontsLoaded);
+  if (__DEV__) console.warn('[RootLayout] Render - fontsLoaded:', fontsLoaded);
 
   if (!fontsLoaded && !fontsError) {
     return (
@@ -30,7 +30,7 @@ export default function RootLayout() {
   }
 
   try {
-    console.log('[RootLayout] Rendering Stack with all routes...');
+    if (__DEV__) console.warn('[RootLayout] Rendering Stack with all routes...');
     return (
       <RootProviders>
         <Stack screenOptions={{ headerShown: false }}>
