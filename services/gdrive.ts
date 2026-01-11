@@ -375,7 +375,7 @@ export async function authenticateGDrive(): Promise<GDriveAuthResult> {
       };
 
       // Use PKCE for Android/iOS (more secure for native apps)
-      const usePKCE = Platform.OS !== 'web';
+      const usePKCE = Platform.OS === 'android' || Platform.OS === 'ios';
 
       const authRequest = new AuthSession.AuthRequest({
         clientId,
