@@ -22,7 +22,6 @@ import SimpleModeWelcome from "../../components/SimpleModeWelcome";
 import { SkeletonList } from '../../components/SkeletonLoader';
 import SkeletonRow from "../../components/SkeletonRow";
 import { HIT_SLOP_12 } from '../../constants/A11Y';
-import { useAuth } from "../../context/AuthContext";
 import { campaigns as localCampaigns } from "../../data/campaigns";
 import {
     MAX_FONT_SCALE,
@@ -45,6 +44,7 @@ import {
     syncCampaignToProduction,
 } from "../../services/firestoreCampaignSync";
 import { submitCampaignTo3mpwr } from "../../services/submitTo3mpwr";
+import { useAuth } from "../../store/auth";
 import {
     CampaignsLocalProvider,
     useCampaignsLocal,

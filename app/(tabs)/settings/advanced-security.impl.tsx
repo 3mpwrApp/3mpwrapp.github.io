@@ -25,10 +25,10 @@ try {
 import A11yPressable from '../../../components/A11yPressable';
 import { A11yTitle, A11yWrapper } from '../../../components/A11yWrapper';
 import { GapView } from '../../../components/GapView';
-import { useAuth } from '../../../context/AuthContext';
 import { useIndigenousLanguage } from '../../../context/IndigenousLanguageContext';
 import { useThemeColor } from '../../../hooks/useThemeColor';
 import { useTranslation } from '../../../i18n';
+import { useAuth } from '../../../store/auth';
 import type {
     SecurityAudit,
     SecurityConfig,

@@ -6,11 +6,11 @@ import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import A11yPressable from '../../../components/A11yPressable';
 import DisclaimerBanner from '../../../components/DisclaimerBanner';
-import { useAuth } from '../../../context/AuthContext';
 import { channels as seedChannels } from '../../../data/community';
 import { auth, db } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { isCloudConsentEnabled } from '../../../services/consent';
+import { useAuth } from '../../../store/auth';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export default function CommunityCompose() {

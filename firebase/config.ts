@@ -8,7 +8,7 @@ try {
 }
 import { getApp, getApps, initializeApp, type FirebaseApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { enableIndexedDbPersistence, getFirestore, initializeFirestore, setLogLevel } from "firebase/firestore";
+import { getFirestore, initializeFirestore, persistentLocalCache, persistentMultipleTabManager, setLogLevel } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { Platform } from "react-native";
 
@@ -104,29 +104,22 @@ try {
 
 export const auth = STRICT ? (null as any) : app ? getAuth(app) : null;
 
+// Initialize Firestore with new cache-based persistence API
+const IS_TEST_ENV = typeof process !== 'undefined' && !!(process as any).env?.JEST_WORKER_ID;
+
 export const db = STRICT || HYBRID
   ? (null as any)
-  : app && platformOS === "web"
-    ? getFirestore(app)
+  : app && platformOS === "web" && !IS_TEST_ENV
+    ? initializeFirestore(app, {
+        localCache: persistentLocalCache({
+          tabManager: persistentMultipleTabManager() // Enable multi-tab synchronization
+        })
+      })
+    : app && platformOS === "web" && IS_TEST_ENV
+    ? getFirestore(app) // Don't use persistence in tests
     : app 
       ? initializeFirestore(app, { experimentalForceLongPolling: true })
       : null;
-
-// Web-only: enable IndexedDB persistence for offline reads/write queue (non-strict, non-hybrid only)
-// Enable multi-tab synchronization to prevent exclusive lock errors
-try {
-  const IS_TEST_ENV = typeof process !== 'undefined' && !!(process as any).env?.JEST_WORKER_ID;
-  if (!STRICT && !HYBRID && platformOS === 'web' && !IS_TEST_ENV && db) {
-    enableIndexedDbPersistence(db as any, { 
-      // @ts-expect-error - synchronizeTabs exists in Firebase v9+ but may not be in older type definitions
-      synchronizeTabs: true // Allow multiple tabs to access Firestore simultaneously
-    }).catch((err) => {
-      console.warn('[Firebase] IndexedDB persistence not enabled:', err);
-    });
-  }
-} catch (err) {
-  console.warn('[Firebase] Persistence setup error:', err);
-}
 
 export const storage = STRICT || HYBRID ? (null as any) : app ? getStorage(app) : null;
 

@@ -157,12 +157,58 @@ export default function WellnessHub() {
         placeholder={t('wellness.search', 'Search wellness tools...')}
       />
 
-      {/* Featured: 4 Main Consolidated Power Hubs */}
+      {/* PRIMARY: Wellness Command Center */}
       <Text style={[textStyles.h3, { marginTop: 16, marginBottom: 8 }]}>
-        {t('wellness.sections.featured', '⭐ Wellness Power Hubs')}
+        {t('wellness.sections.command', '🎯 Start Here')}
       </Text>
       <GapView gap={12}>
-        {/* Power Tool 1: Energy Command Center - available in Simple Mode */}
+        {matches('/wellness/command-center') && (
+          <Pressable
+            hitSlop={HIT_SLOP_8}
+            accessibilityRole="button"
+            accessibilityLabel="Wellness Command Center - All-in-one health, energy, and wellness hub"
+            onPress={() => router.push('/(tabs)/wellness/command-center' as any)}
+            style={({ pressed }) => [
+              {
+                borderWidth: 3,
+                borderColor: palette.success,
+                borderRadius: 16,
+                padding: 20,
+                backgroundColor: palette.success + '15',
+              },
+              pressed && { opacity: 0.7 },
+            ]}
+          >
+              <Text
+                style={{ color: palette.success, fontWeight: 'bold', fontSize: 22, lineHeight: 28 }}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                ⚡ Wellness Command Center
+              </Text>
+              <Text
+                style={{ color: palette.text, marginTop: 8, fontSize: 16, lineHeight: 24 }}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                All-in-one hub for energy, health, mental wellness, and movement. Consolidates 40+ features into one powerful interface.
+              </Text>
+              <Text
+                style={{ color: palette.success, marginTop: 12, fontSize: 14, fontWeight: '700' }}
+                maxFontSizeMultiplier={MAX_FONT_SCALE}
+              >
+                🚀 NEW • 5 Tabs • Dashboard + Quick Log + AI Features
+              </Text>
+            </Pressable>
+        )}
+      </GapView>
+
+      {/* Consolidated Power Hubs (Standard/Power User) */}
+      {isFeatureVisible('standard') && (
+        <>
+          <Text style={[textStyles.h3, { marginTop: 24, marginBottom: 8 }]}>
+            {t('wellness.sections.featured', 'Advanced Hubs')}
+          </Text>
+          <GapView gap={12}>
+        {/* Power Tool 1: Energy Command Center (Legacy) - available in Simple Mode */}
         {matches('/wellness/energy-command-center') && (
           <Pressable
             hitSlop={HIT_SLOP_8}
@@ -171,29 +217,29 @@ export default function WellnessHub() {
             onPress={() => router.push('/(tabs)/wellness/energy-command-center' as any)}
             style={({ pressed }) => [
               {
-                borderWidth: 2,
-                borderColor: palette.primary,
+                borderWidth: 1,
+                borderColor: palette.muted,
                 borderRadius: 12,
                 padding: 16,
-                backgroundColor: palette.primary + '10',
+                backgroundColor: palette.card,
               },
               pressed && { opacity: 0.7 },
             ]}
           >
               <Text
-                style={{ color: palette.primary, fontWeight: 'bold', fontSize: 18, lineHeight: 24 }}
+                style={{ color: palette.text, fontWeight: 'bold', fontSize: 16, lineHeight: 24 }}
                 maxFontSizeMultiplier={MAX_FONT_SCALE}
               >
-                ⚡ Energy Command Center
+                ⚡ Energy Command Center (Classic)
               </Text>
               <Text
-                style={{ color: palette.text, marginTop: 6, fontSize: 15, lineHeight: 22 }}
+                style={{ color: palette.text, marginTop: 6, fontSize: 14, lineHeight: 20 }}
                 maxFontSizeMultiplier={MAX_FONT_SCALE}
               >
                 Complete energy management with spoons, pacing, mood tracking, cognitive support, and sleep optimization.
               </Text>
               <Text
-                style={{ color: palette.primary, marginTop: 8, fontSize: 13, fontWeight: '600' }}
+                style={{ color: palette.primary, marginTop: 8, fontSize: 12, fontWeight: '600' }}
                 maxFontSizeMultiplier={MAX_FONT_SCALE}
               >
                 🔧 Power Tool • 5 Tabs • Consolidates 15+ features
@@ -373,8 +419,8 @@ export default function WellnessHub() {
           </GapView>
         </>
       )}
-
-
+      </>
+      )}
     </ResponsiveScreenWrapper>
   );
 }

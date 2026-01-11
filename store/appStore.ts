@@ -1,4 +1,3 @@
-import AsyncStorageLib from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
@@ -7,6 +6,15 @@ import type { ProvinceCode } from '../types/models';
 import type { DeliveredNotification, NotificationPreferences } from '../types/notifications';
 import { DEFAULT_NOTIFICATION_PREFERENCES } from '../types/notifications';
 import { logger } from '../utils/logger';
+
+// Safe AsyncStorage import for web/native compatibility
+let AsyncStorageLib: any = null;
+try {
+  AsyncStorageLib = require('@react-native-async-storage/async-storage').default;
+} catch {
+  // AsyncStorage not available (e.g., web, test environment)
+  AsyncStorageLib = null;
+}
 
 // ============================================================================
 // AUTH DOMAIN
@@ -207,16 +215,15 @@ export interface AppState
     MedicationsActions,
     SettingsActions {}
 
-// Fallback for AsyncStorage
-let AsyncStorage: any = AsyncStorageLib;
-try {
-  if (!AsyncStorage) {
-    AsyncStorage = require('@react-native-async-storage/async-storage').default;
-  }
-} catch {
-  // Web or environments without AsyncStorage
-  AsyncStorage = null;
-}
+// Fallback storage object for web
+const fallbackStorage = {
+  getItem: async () => null,
+  setItem: async () => {},
+  removeItem: async () => {},
+};
+
+let AsyncStorage: any = AsyncStorageLib || fallbackStorage;
+
 
 const DEFAULT_SETTINGS_STATE: SettingsState = {
   highContrast: false,
@@ -463,11 +470,7 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: 'empowrapp-store',
-      storage: createJSONStorage(() => AsyncStorage || {
-        getItem: async () => null,
-        setItem: async () => {},
-        removeItem: async () => {},
-      }),
+      storage: AsyncStorageLib ? createJSONStorage(() => AsyncStorageLib) : undefined,
       partialize: (state) => ({
         // Persist only these fields
         isOnboarded: state.isOnboarded,

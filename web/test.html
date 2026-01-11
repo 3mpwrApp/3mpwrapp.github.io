@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Test - Bypass Expo</title>
+</head>
+<body>
+    <div id="app" style="padding: 50px; text-align: center;">
+        <h1>Direct HTML Click Test</h1>
+        <p id="counter">Clicks: 0</p>
+        <button 
+            id="testBtn"
+            style="
+                padding: 20px 40px;
+                font-size: 24px;
+                background: red;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 8px;
+                margin: 20px;
+            "
+        >
+            CLICK ME
+        </button>
+        <p id="status">Status: Waiting for click...</p>
+    </div>
+
+    <script>
+        let count = 0;
+        const btn = document.getElementById('testBtn');
+        const counter = document.getElementById('counter');
+        const status = document.getElementById('status');
+        
+        btn.addEventListener('click', function() {
+            count++;
+            counter.textContent = 'Clicks: ' + count;
+            status.textContent = 'Status: Button clicked ' + count + ' times!';
+            status.style.color = 'green';
+            console.log('[DIRECT HTML] Button clicked! Count:', count);
+            alert('Direct HTML button works! Count: ' + count);
+        });
+        
+        console.log('[DIRECT HTML] Test page loaded, button ready');
+    </script>
+</body>
+</html>

@@ -19,11 +19,11 @@ import A11yPressable from "../../components/A11yPressable";
 import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_12, HIT_SLOP_8 } from '../../constants/A11Y';
-import { useAuth } from "../../context/AuthContext";
 import { campaigns } from "../../data/campaigns";
 import { useTranslation } from "../../i18n";
 import { fsDeleteCampaign, fsGetCampaign, fsJoinCampaign, fsLeaveCampaign, fsUpdateCampaign } from "../../services/firestore";
 import { submitCampaignTo3mpwr } from '../../services/submitTo3mpwr';
+import { useAuth } from "../../store/auth";
 import {
     CampaignsLocalProvider,
     useCampaignsLocal,

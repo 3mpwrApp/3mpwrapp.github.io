@@ -45,7 +45,7 @@
 
 ## 📄 DOCUMENT OVERVIEW
 
-### <a name="executive-summary"></a>MIGRATION_ANALYSIS_EXECUTIVE_SUMMARY.md
+### MIGRATION_ANALYSIS_EXECUTIVE_SUMMARY.md {#executive-summary}
 
 **Key Contents:**
 - Decision summary (Yes/No/When)
@@ -71,7 +71,7 @@ When Firebase costs exceed $500/month:
 
 ---
 
-### <a name="detailed-analysis"></a>FIREBASE_TO_SUPABASE_MIGRATION_ANALYSIS.md
+### FIREBASE_TO_SUPABASE_MIGRATION_ANALYSIS.md {#detailed-analysis}
 
 **Key Contents:**
 - Detailed cost comparison (3 scale levels)
@@ -101,7 +101,7 @@ Savings: $69,600/year (97% reduction)
 
 ---
 
-### <a name="roadmap"></a>IMPLEMENTATION_ROADMAP_JAN2026.md
+### IMPLEMENTATION_ROADMAP_JAN2026.md {#roadmap}
 
 **Key Contents:**
 - 24-month timeline with 6 phases
@@ -132,7 +132,7 @@ Phase 6: Scale (Months 16-24) - $3K/month
 
 ---
 
-### <a name="technical-guide"></a>TECHNICAL_IMPLEMENTATION_GUIDE.md
+### TECHNICAL_IMPLEMENTATION_GUIDE.md {#technical-guide}
 
 **Key Contents:**
 - Pre-migration checklist
@@ -446,7 +446,7 @@ Before starting Phase 3 cutover:
 
 **Existing 3mpwr Docs:**
 - [docs/PHASE_3_PLANNING.md](./docs/PHASE_3_PLANNING.md) - Phase 3 server-side aggregation planning
-- README.md - Project overview & setup
+- [README.md](./README.md) - Project overview & setup
 
 **External References:**
 - [Supabase Docs](https://supabase.com/docs)

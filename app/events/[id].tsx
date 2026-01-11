@@ -18,7 +18,6 @@ import EventActionsBar from '../../components/EventActionsBar';
 import { GapView } from "../../components/GapView";
 import SettingsLink from "../../components/SettingsLink";
 import { HIT_SLOP_8 } from '../../constants/A11Y';
-import { useAuth } from "../../context/AuthContext";
 import { events } from "../../data/events";
 import { useTranslation } from "../../i18n";
 import { syncEventToCalendar } from "../../services/calendarSync";
@@ -26,6 +25,7 @@ import { isScheduled, removeReminder, scheduleForEvent } from "../../services/ev
 import { cancelRSVP, hasRSVPed, isEventFull, rsvpToEvent } from "../../services/eventRSVP";
 import { fsDeleteEvent, fsGetEvent, fsUpdateEvent } from "../../services/firestore";
 import { deleteEventFromProduction, isFirestoreSyncAvailable, updateEventInProduction } from "../../services/firestoreEventSync";
+import { useAuth } from "../../store/auth";
 import { useSettings } from "../../store/settings";
 import { useAppPalette } from "../../theme/usePalette";
 import { logError } from '../../utils/errorLogger';

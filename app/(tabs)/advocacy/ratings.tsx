@@ -7,10 +7,10 @@ import A11yPressable from '../../../components/A11yPressable';
 import { GapView } from '../../../components/GapView';
 import SimpleBarChart from '../../../components/SimpleBarChart';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { useAuth } from '../../../context/AuthContext';
 import { useTranslation } from '../../../i18n';
 import { flagItem } from '../../../services/moderation';
 import { ensureTarget, listRatings, listTargets, upsertRating } from '../../../services/ratings';
+import { useAuth } from '../../../store/auth';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export const options = { href: null };

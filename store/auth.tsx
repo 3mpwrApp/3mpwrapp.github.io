@@ -2,10 +2,10 @@ import React from "react";
 
 import { notifyNewUser } from "../services/discordNotifications";
 import {
-    clearAuthToken,
-    getAuthToken,
-    initializeSecureStorage,
-    saveAuthToken,
+  clearAuthToken,
+  getAuthToken,
+  initializeSecureStorage,
+  saveAuthToken,
 } from "../services/secureStorage";
 import * as persistence from "../store/persistence";
 import type { ProvinceCode } from "../types/models";
@@ -68,8 +68,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     (async () => {
       try {
-        // Initialize secure storage
-        await initializeSecureStorage();
+        // Initialize secure storage (non-blocking)
+        initializeSecureStorage().catch(() => {});
 
         let onboarded = false;
         let mode: string | null = null;

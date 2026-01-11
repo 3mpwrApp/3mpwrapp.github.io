@@ -3,7 +3,6 @@ import React from "react";
 import { Alert, ScrollView, Share, StyleSheet, Text, TextInput, View } from "react-native";
 
 import A11yPressable from "../../../components/A11yPressable";
-import { useAuth } from "../../../context/AuthContext";
 import { getCachedJSON, setCachedJSON } from "../../../services/cache";
 import {
     fsRoomAcceptInvite,
@@ -14,6 +13,7 @@ import {
     fsRoomSubscribe,
     fsRoomToggleTask,
 } from "../../../services/firestore";
+import { useAuth } from "../../../store/auth";
 import { useAppPalette } from "../../../theme/usePalette";
 
 type Task = {

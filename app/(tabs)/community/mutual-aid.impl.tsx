@@ -6,11 +6,11 @@ import { ActivityIndicator, Alert, ScrollView, StyleSheet, Text, TextInput, View
 import A11yPressable from '../../../components/A11yPressable';
 import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { useAuth } from '../../../context/AuthContext';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { isCloudConsentEnabled } from '../../../services/consent';
 import { flagItem } from '../../../services/moderation';
 import { addAidPost, listAidPosts, respondToPost, softDeletePost } from '../../../services/mutual';
+import { useAuth } from '../../../store/auth';
 import { useAppPalette } from '../../../theme/usePalette';
 
 const CATEGORIES = [

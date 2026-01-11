@@ -1,8 +1,9 @@
 import React from "react";
 
-import { useAuth } from "../context/AuthContext";
 import { fsFetchJoinedCampaigns } from "../services/firestore";
 import type { Campaign, ID } from "../types/models";
+
+import { useAuth } from "./auth";
 
 let AsyncStorage: any;
 try {

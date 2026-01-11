@@ -6,10 +6,10 @@ import { FlatList, StyleSheet, Text, TextInput, useColorScheme, View } from "rea
 import A11yPressable from '../../../../components/A11yPressable';
 import { GapView } from '../../../../components/GapView';
 import { HIT_SLOP_8, touchTarget } from "../../../../constants/A11Y";
-import { useAuth } from "../../../../context/AuthContext";
 import { db } from "../../../../firebase/config";
 import { setLastRead, setTyping } from "../../../../services/community";
 import { useNotificationDispatcher } from "../../../../services/notificationsDispatcher";
+import { useAuth } from "../../../../store/auth";
 import { useBlocks } from "../../../../store/blocks";
 import { CommunityProvider } from "../../../../store/community";
 import { colors, type Palette } from "../../../../theme/colors";

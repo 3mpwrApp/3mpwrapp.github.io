@@ -7,8 +7,8 @@ import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 import A11yPressable from '../../../components/A11yPressable';
 import GapView from '../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { useAuth } from '../../../context/AuthContext';
 import { auth, db, storage } from '../../../firebase/config';
+import { useAuth } from '../../../store/auth';
 import { useAppPalette } from '../../../theme/usePalette';
 
 export default function MediaStudioImpl() {

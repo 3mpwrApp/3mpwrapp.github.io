@@ -14,9 +14,9 @@ import {
 import A11yPressable from '../../../components/A11yPressable';
 import { GapView } from '../../../components/GapView';
 import { HIT_SLOP_8, touchTarget } from "../../../constants/A11Y";
-import { useAuth } from "../../../context/AuthContext";
 import { channels as seedChannels } from "../../../data/community";
 import { db } from "../../../firebase/config";
+import { useAuth } from "../../../store/auth";
 import { useBlocks } from "../../../store/blocks";
 import { CommunityProvider } from "../../../store/community";
 import { colors, type Palette } from "../../../theme/colors";

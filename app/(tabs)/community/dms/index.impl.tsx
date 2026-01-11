@@ -5,7 +5,7 @@ import { FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 import A11yPressable from '../../../../components/A11yPressable';
 import GapView from '../../../../components/GapView';
 import { HIT_SLOP_8 } from '../../../../constants/A11Y';
-import { useAuth } from '../../../../context/AuthContext';
+import { useAuth } from '../../../../store/auth';
 import { useBlocks } from '../../../../store/blocks';
 import { useAppPalette } from '../../../../theme/usePalette';
 

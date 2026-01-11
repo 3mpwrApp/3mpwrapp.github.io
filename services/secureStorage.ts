@@ -30,11 +30,12 @@ async function initSecureStore(): Promise<void> {
     await SecureStore.deleteItemAsync(testKey);
     isSecureStoreAvailable = true;
   } catch (error) {
-    logger.warn(
-      '[SecureStorage] SecureStore unavailable, falling back to encrypted AsyncStorage:',
-      error
-    );
+    // Expected on web - SecureStore only works on native platforms
     isSecureStoreAvailable = false;
+    // Only log in development, this is normal behavior
+    if (__DEV__) {
+      logger.debug('[SecureStorage] Using AsyncStorage fallback (expected on web)');
+    }
   }
 }
 
@@ -249,11 +250,15 @@ export function isSecureStoreSupported(): boolean {
 export async function initializeSecureStorage(): Promise<void> {
   try {
     await initSecureStore();
-    logger.debug(
-      `[SecureStorage] Initialized - SecureStore available: ${isSecureStoreAvailable}`
-    );
+    // Only log in development
+    if (__DEV__ && isSecureStoreAvailable) {
+      logger.debug('[SecureStorage] SecureStore initialized');
+    }
   } catch (error) {
-    logger.error('[SecureStorage] Initialization failed:', error);
+    // Silently fail - fallback is automatic
+    if (__DEV__) {
+      logger.debug('[SecureStorage] Using fallback storage');
+    }
   }
 }
 

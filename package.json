@@ -1,7 +1,7 @@
 {
   "name": "empowrapp",
   "description": "A secure, privacy-first empowerment app with enterprise-grade security and complete user data ownership. Features air-gapped operation, AES-256 encryption, and OWASP Mobile Top 10 compliance.",
-  "main": "expo-router/entry",
+  "main": "index.js",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",

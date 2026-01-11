@@ -19,13 +19,13 @@ import ResponsiveScreenWrapper from '../../../components/ResponsiveScreenWrapper
 import * as SettingsLazy from '../../../components/settings';
 import UpdateChecker from '../../../components/UpdateChecker';
 import { HIT_SLOP_8 } from '../../../constants/A11Y';
-import { useAuth } from '../../../context/AuthContext';
 import { auth, db, storage } from '../../../firebase/config';
 import { MAX_FONT_SCALE, useAnnounceOnMount, useFocusOnRefOnMount } from '../../../hooks/useA11y';
 import { useBetaTesterBadge } from '../../../hooks/useBetaTesterBadge';
 import { useTranslation } from '../../../i18n';
 import { useDevPrefs } from '../../../services/devPrefs';
 import { isSentryInitialized, showFeedbackWidget } from '../../../services/telemetry';
+import { useAuth } from '../../../store/auth';
 import { useNetwork } from '../../../store/network';
 import type { ResourceFormat, TextScale } from '../../../store/settings';
 import { useSettings } from '../../../store/settings';

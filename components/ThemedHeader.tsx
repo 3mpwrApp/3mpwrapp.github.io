@@ -14,8 +14,8 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { HIT_SLOP_12, HIT_SLOP_8, touchTarget } from "../constants/A11Y";
-import { useAuth } from "../context/AuthContext";
 import { useTranslation } from "../i18n";
+import { useAuth } from "../store/auth";
 import { useCounts } from "../store/counts";
 import { useFavorites } from "../store/favorites";
 import { useNetwork } from "../store/network";

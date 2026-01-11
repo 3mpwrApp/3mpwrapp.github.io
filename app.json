@@ -14,8 +14,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png",
-      "template": "./web/index.html"
+      "favicon": "./assets/images/favicon.png"
     },
     "updates": {
       "checkAutomatically": "ON_LOAD",

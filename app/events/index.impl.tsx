@@ -26,7 +26,6 @@ import SimpleModeWelcome from "../../components/SimpleModeWelcome";
 import { SkeletonList } from '../../components/SkeletonLoader';
 import SkeletonRow from "../../components/SkeletonRow";
 import { HIT_SLOP_8 } from "../../constants/A11Y";
-import { useAuth } from "../../context/AuthContext";
 import { generateDisabilityObservances } from "../../data/disability-observances";
 import { generateHealthAwarenessEvents } from "../../data/health-awareness-months";
 import {
@@ -44,6 +43,7 @@ import { ANALYTICS_EVENTS, trackEvent } from "../../services/analyticsClient";
 import { addToSyncQueue, getSyncQueueStats, processSyncQueue, startBackgroundSync } from "../../services/eventAutoSync";
 import { fetchEvents } from "../../services/events";
 import { deleteEventFromProduction, isFirestoreSyncAvailable, syncEventToProduction } from "../../services/firestoreEventSync";
+import { useAuth } from "../../store/auth";
 import { useComplexityMode } from "../../store/complexityMode";
 import { useCounts } from "../../store/counts";
 import { useNetwork } from "../../store/network";
