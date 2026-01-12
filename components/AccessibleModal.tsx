@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 20,
     ...createShadow({
-      shadowColor: '#000',
+      shadowColor: '#000', // eslint-disable-line no-restricted-syntax
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.25,
       shadowRadius: 4,
