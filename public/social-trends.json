@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-11T18:02:43.458Z",
+  "lastUpdated": "2026-01-12T00:06:47.637Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 8154,
+      "totalPosts": 8178,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-11T18:02:33.866Z"
+      "lastSeen": "2026-01-12T00:06:37.798Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 8095,
+      "totalPosts": 8117,
       "recentPosts": 22,
       "peakPosts": 25,
-      "lastSeen": "2026-01-11T18:02:36.094Z"
+      "lastSeen": "2026-01-12T00:06:39.995Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 8004,
-      "recentPosts": 24,
+      "totalPosts": 8029,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-11T18:02:38.467Z"
+      "lastSeen": "2026-01-12T00:06:42.075Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 8143,
+      "totalPosts": 8168,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-11T18:02:40.457Z"
+      "lastSeen": "2026-01-12T00:06:44.335Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 8150,
+      "totalPosts": 8175,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-11T18:02:42.454Z"
+      "lastSeen": "2026-01-12T00:06:46.633Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "This is why “just try harder” is nonsense.\nThe course isn’t neutral.\nThe system chooses who struggles.\n♿🔥🧱\nDrop a 🧠 if you get it.\n#EquityNotEquality #DisabilityRights #ChronicIllness #AccessIsEverything #JusticeEducation #CripHumor #RealTalk",
-      "author": "crabbyratwhisperer.bsky.social",
-      "engagement": 32,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 66,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 41,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 309,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
       "author": "lisadiedrich.bsky.social",
@@ -338,12 +308,42 @@
       "author": "lisadiedrich.bsky.social",
       "engagement": 15,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 66,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Links should be underlined. Don't try to be fancy. The old-fashioned browser default is all you need. Here's a perfect bad example from a blog post I opened on my phone with bedtime mode on. Can you tell how many links are on the screen? #a11y #accessibility",
+      "author": "amberhinds.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 48,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 309,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "accessibility",
-      "count": 43
+      "count": 48
     },
     {
       "keyword": "disabilityrights",
@@ -351,11 +351,11 @@
     },
     {
       "keyword": "a11y",
-      "count": 33
+      "count": 37
     },
     {
       "keyword": "cripthevote",
-      "count": 28
+      "count": 27
     },
     {
       "keyword": "disabilityjustice",
@@ -363,23 +363,27 @@
     },
     {
       "keyword": "altcitizen",
-      "count": 20
+      "count": 19
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 20
+      "count": 19
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 20
+      "count": 19
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 18
+      "count": 17
     },
     {
       "keyword": "accessibility a11y",
-      "count": 13
+      "count": 14
+    },
+    {
+      "keyword": "a11y accessibility",
+      "count": 12
     },
     {
       "keyword": "foxtakedown",
@@ -415,10 +419,6 @@
     },
     {
       "keyword": "foxlies",
-      "count": 9
-    },
-    {
-      "keyword": "disabilityjustice nico",
       "count": 9
     }
   ]
