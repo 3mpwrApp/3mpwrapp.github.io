@@ -9,31 +9,31 @@
 
 **New to this audit?** Read in this order:
 
-1. **[AUDIT_DELIVERY_SUMMARY.md](AUDIT_DELIVERY_SUMMARY.md)** ← You are here (5 min read)
+1. **[AUDIT_DELIVERY_SUMMARY.md](../reports/AUDIT_DELIVERY_SUMMARY.md)** ← You are here (5 min read)
    - What was audited
    - Root cause found
    - What to do next
    - Timeline & success criteria
 
-2. **[TECHNICAL_AUDIT_RECOVERY_PLAN.md](TECHNICAL_AUDIT_RECOVERY_PLAN.md)** ← Deep dive (20 min read)
+2. **[TECHNICAL_AUDIT_RECOVERY_PLAN.md](../archive/TECHNICAL_AUDIT_RECOVERY_PLAN.md)** ← Deep dive (20 min read)
    - Full architecture analysis
    - All issues explained
    - Recovery plan with code
    - Long-term roadmap
 
-3. **[QUICK_START_RECOVERY.md](QUICK_START_RECOVERY.md)** ← Implementation (3-4 hours)
+3. **[QUICK_START_RECOVERY.md](../quick-reference/QUICK_START_RECOVERY.md)** ← Implementation (3-4 hours)
    - 10 concrete steps
    - Copy-paste code examples
    - Test after each step
    - Expected outputs
 
-4. **[ADVANCED_DEBUGGING_GUIDE.md](ADVANCED_DEBUGGING_GUIDE.md)** ← When stuck (reference)
+4. **[ADVANCED_DEBUGGING_GUIDE.md](../guides/ADVANCED_DEBUGGING_GUIDE.md)** ← When stuck (reference)
    - Diagnostic commands
    - Provider debugging
    - Hook errors explained
    - Real-world examples
 
-5. **[PRODUCTION_READINESS_CHECKLIST.md](PRODUCTION_READINESS_CHECKLIST.md)** ← Before release (checklist)
+5. **[PRODUCTION_READINESS_CHECKLIST.md](../archive/PRODUCTION_READINESS_CHECKLIST.md)** ← Before release (checklist)
    - 100+ items across 10 categories
    - Test procedures
    - Validation gates

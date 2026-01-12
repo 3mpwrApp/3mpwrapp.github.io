@@ -136,11 +136,11 @@ export default function RootLayout() {
 
 1. **Read:** [AUDIT_DELIVERY_SUMMARY.md](AUDIT_DELIVERY_SUMMARY.md) (5 min)
 
-2. **Understand:** [TECHNICAL_AUDIT_RECOVERY_PLAN.md](TECHNICAL_AUDIT_RECOVERY_PLAN.md) Part 2 (10 min)
+2. **Understand:** [TECHNICAL_AUDIT_RECOVERY_PLAN.md](../archive/TECHNICAL_AUDIT_RECOVERY_PLAN.md) Part 2 (10 min)
 
-3. **Implement:** [QUICK_START_RECOVERY.md](QUICK_START_RECOVERY.md) Steps 1-10 (3-4 hours)
+3. **Implement:** [QUICK_START_RECOVERY.md](../quick-reference/QUICK_START_RECOVERY.md) Steps 1-10 (3-4 hours)
 
-4. **Validate:** [PRODUCTION_READINESS_CHECKLIST.md](PRODUCTION_READINESS_CHECKLIST.md) (2-4 hours)
+4. **Validate:** [PRODUCTION_READINESS_CHECKLIST.md](../archive/PRODUCTION_READINESS_CHECKLIST.md) (2-4 hours)
 
 5. **Deploy:** Ship the fixed version
 
@@ -237,6 +237,6 @@ After stabilization:
 
 Start here: [AUDIT_DELIVERY_SUMMARY.md](AUDIT_DELIVERY_SUMMARY.md)
 
-Then follow: [QUICK_START_RECOVERY.md](QUICK_START_RECOVERY.md)
+Then follow: [QUICK_START_RECOVERY.md](../quick-reference/QUICK_START_RECOVERY.md)
 
 Good luck! 💪

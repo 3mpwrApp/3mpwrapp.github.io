@@ -403,8 +403,8 @@ export default function MyScreen() {
 ```
 
 **Check console:**
-1. Is "[MyScreen] Mounted" logged? If not, route didn't load
-2. Is "[MyScreen] Render error" logged? If yes, component has error
+1. Is "MyScreen Mounted" logged? If not, route didn't load
+2. Is "MyScreen Render error" logged? If yes, component has error
 3. Is screen rendering but blank? Check if content is being returned
 
 **If route didn't load:**
