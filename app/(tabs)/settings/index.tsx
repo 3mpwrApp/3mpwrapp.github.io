@@ -46,7 +46,7 @@ export default function SettingsScreen() {
   const titleRef = useRef<Text>(null);
   const { user, isGuest } = useAuth();
   const { setOffline } = useNetwork();
-  const router = useRouter();
+  const _router = useRouter();
   useAnnounceOnMount(t('settings.title', 'Settings'));
   useFocusOnRefOnMount(titleRef);
   
@@ -62,6 +62,22 @@ export default function SettingsScreen() {
   const [hasPasswordProvider, setHasPasswordProvider] = useState(false);
   // Removed unused isAnonymous state (previously tracked anonymous account status)
   const [providerList, setProviderList] = useState<string[]>([]);
+
+  // Safe navigation helper to prevent router.isReady errors
+  const safeNavigate = (path: string) => {
+    try {
+      // Add small delay to ensure router is ready
+      setTimeout(() => {
+        try {
+          _router.push(path as any);
+        } catch (navError) {
+          if (__DEV__) console.warn('[Settings] Navigation error:', navError);
+        }
+      }, 0);
+    } catch (e) {
+      if (__DEV__) console.warn('[Settings] Navigation setup error:', e);
+    }
+  };
 
   useEffect(() => { 
     if (!user || !db) return; // Safety check: skip if Firestore not available
@@ -144,7 +160,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel='Complexity Mode - Choose Simple, Standard, or Power User mode to control feature visibility'
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/complexity-mode')}
+            onPress={() => safeNavigate('/(tabs)/settings/complexity-mode')}
           >
             <Ionicons name='layers-outline' size={20} color={palette.onPrimary} />
             <Text style={[styles.linkText, { color: palette.onPrimary, fontWeight: '700' }]}>🎯 Complexity Mode (Simple/Standard/Power)</Text>
@@ -157,7 +173,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel={t('settings.cognitiveAccessibility', 'Cognitive Accessibility Settings - Simplified mode, auto-save, and navigation memory for ADHD, autism, and learning disabilities')}
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/cognitive-accessibility')}
+            onPress={() => safeNavigate('/(tabs)/settings/cognitive-accessibility')}
           >
             <Ionicons name='bulb-outline' size={20} color={palette.primary} />
             <Text style={styles.linkText}>{t('settings.cognitiveAccessibilityTitle', 'Cognitive Accessibility')}</Text>
@@ -170,7 +186,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel="Advanced Accessibility Settings - Additional accessibility options"
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/advanced-accessibility')}
+            onPress={() => safeNavigate('/(tabs)/settings/advanced-accessibility')}
           >
             <Ionicons name='options' size={20} color={palette.primary} />
             <Text style={styles.linkText}>Advanced Accessibility</Text>
@@ -185,7 +201,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel="Neurodivergent Support Settings"
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/neurodivergent')}
+            onPress={() => safeNavigate('/(tabs)/settings/neurodivergent')}
           >
             <Ionicons name='git-branch' size={20} color={palette.primary} />
             <Text style={styles.linkText}>Neurodivergent Support</Text>
@@ -198,7 +214,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel={t('cognitiveComfort.settings.title', 'Cognitive Comfort - Where Was I, breadcrumbs, focus lock for brain fog and memory support')}
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/cognitive-comfort' as never)}
+            onPress={() => safeNavigate('/(tabs)/settings/cognitive-comfort' as never)}
           >
             <Ionicons name='cloudy-outline' size={20} color={palette.primary} />
             <Text style={styles.linkText}>{t('cognitiveComfort.settings.title', 'Cognitive Comfort')}</Text>
@@ -211,7 +227,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel="Cultural Safety Settings"
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/cultural-safety')}
+            onPress={() => safeNavigate('/(tabs)/settings/cultural-safety')}
           >
             <Ionicons name='globe' size={20} color={palette.primary} />
             <Text style={styles.linkText}>Cultural Safety</Text>
@@ -224,7 +240,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel="Indigenous Languages - Traditional language support"
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/indigenous-language')}
+            onPress={() => safeNavigate('/(tabs)/settings/indigenous-language')}
           >
             <Ionicons name='leaf' size={20} color={palette.primary} />
             <Text style={styles.linkText}>Indigenous Languages</Text>
@@ -245,7 +261,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel="Advanced Security Settings"
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/advanced-security')}
+            onPress={() => safeNavigate('/(tabs)/settings/advanced-security')}
           >
             <Ionicons name='shield-checkmark' size={20} color={palette.primary} />
             <Text style={styles.linkText}>Advanced Security</Text>
@@ -258,7 +274,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel="Evidence Security and Background Sync settings"
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/security')}
+            onPress={() => safeNavigate('/(tabs)/settings/security')}
           >
             <Ionicons name='lock-closed' size={20} color={palette.primary} />
             <Text style={styles.linkText}>Evidence Encryption & Sync</Text>
@@ -271,7 +287,7 @@ export default function SettingsScreen() {
             accessibilityRole='button'
             accessibilityLabel="Bring Your Own Cloud - Connect WebDAV or Google Drive for complete data ownership"
             hitSlop={HIT_SLOP_8}
-            onPress={() => router.push('/(tabs)/settings/byoc' as any)}
+            onPress={() => safeNavigate('/(tabs)/settings/byoc' as any)}
           >
             <Ionicons name='cloud-upload' size={20} color={palette.onPrimary} />
             <Text style={[styles.linkText, { color: palette.onPrimary, fontWeight: '700' }]}>☁️ Bring Your Own Cloud (BYOC)</Text>
@@ -329,7 +345,7 @@ export default function SettingsScreen() {
               accessibilityRole='button'
               accessibilityLabel="Profile Editor - Update your disability profile, role, and energy patterns"
               hitSlop={HIT_SLOP_8}
-              onPress={() => router.push('/profile/editor')}
+              onPress={() => safeNavigate('/profile/editor')}
             >
               <Ionicons name='person-circle' size={20} color={palette.primary} />
               <Text style={styles.linkText}>Edit Profile</Text>
@@ -340,7 +356,7 @@ export default function SettingsScreen() {
           {isGuest && (
             <View style={{ marginBottom:16 }}>
               <Text style={[styles.description, { marginBottom:8 }]}>{t('settings.account.guestNotice','You are browsing as a guest. Create an account to sync data across devices and enable full features.')}</Text>
-              <A11yPressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button' accessibilityLabel={t('settings.account.createAccount','Create Account')} hitSlop={HIT_SLOP_8} onPress={() => router.push('/(auth)/signup')}>
+              <A11yPressable style={[styles.linkButton,{ justifyContent:'center' }]} accessibilityRole='button' accessibilityLabel={t('settings.account.createAccount','Create Account')} hitSlop={HIT_SLOP_8} onPress={() => safeNavigate('/(auth)/signup')}>
                 <Ionicons name='person-add' size={20} color={palette.primary} />
                 <Text style={styles.linkText}>{t('settings.account.createAccount','Create Account')}</Text>
               </A11yPressable>
@@ -498,7 +514,7 @@ function EnhancedA11ySettingsSection() {
         </GapView>
       </View>
       <View style={styles.voiceHelpSection}>
-        <A11yPressable style={styles.linkButton} accessibilityRole='button' accessibilityLabel='Open voice help guide' hitSlop={HIT_SLOP_8} onPress={() => router.push('/(tabs)/voice-help')}>
+        <A11yPressable style={styles.linkButton} accessibilityRole='button' accessibilityLabel='Open voice help guide' hitSlop={HIT_SLOP_8} onPress={() => safeNavigate('/(tabs)/voice-help')}>
           <Ionicons name='help-circle' size={20} color={palette.primary} />
           <Text style={styles.linkText}>Voice Help Guide</Text>
         </A11yPressable>
@@ -556,7 +572,7 @@ function DeveloperSection({ styles }: { styles: ReturnType<typeof createStyles> 
         <A11yPressable
           accessibilityRole='button'
           accessibilityLabel='Admin Panel - A/B Testing, Feature Flags, Analytics Dashboard'
-          onPress={() => router.push('/(tabs)/settings/admin' as never)}
+          onPress={() => safeNavigate('/(tabs)/settings/admin' as never)}
           hitSlop={HIT_SLOP_8}
           style={[styles.linkButton, { marginBottom:12 }]}
         >
@@ -635,3 +651,4 @@ function createStyles(palette: ReturnType<typeof useAppPalette>, factor: number 
 }
 
 // END settings.impl.tsx
+
