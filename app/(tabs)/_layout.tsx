@@ -65,8 +65,8 @@ export default function TabsLayout() {
       <Tabs.Screen name="advocacy" options={{ href: null, headerShown: false }} />
       <Tabs.Screen name="events" options={{ href: null }} />
       <Tabs.Screen name="inbox" options={{ href: null }} />
-      <Tabs.Screen name="saved.tsx" options={{ href: null }} />
-      <Tabs.Screen name="saved.impl.tsx" options={{ href: null }} />
+      <Tabs.Screen name="saved" options={{ href: null }} />
+      <Tabs.Screen name="saved.impl" options={{ href: null }} />
       <Tabs.Screen name="research" options={{ href: null }} />
       <Tabs.Screen name="about" options={{ href: null }} />
       <Tabs.Screen name="faqs" options={{ href: null }} />

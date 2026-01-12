@@ -29,7 +29,10 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
 if (__DEV__) console.warn('[RootLayout] Starting...');
 
 export default function RootLayout() {
-  const [fontsLoaded, fontsError] = useFonts({});
+  const [fontsLoaded, fontsError] = useFonts(
+    {},
+    { timeout: 10000 } // Increase timeout to 10 seconds
+  );
 
   if (__DEV__) console.warn('[RootLayout] Render - fontsLoaded:', fontsLoaded);
 
