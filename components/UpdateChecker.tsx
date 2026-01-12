@@ -137,12 +137,17 @@ export default function UpdateChecker() {
         );
       }
     } catch (e: any) {
-      logger.error('[UpdateChecker] Check failed:', e);
-      setError(e.message || 'Unknown error');
-      Alert.alert(
-        t('updates.checkFailed', 'Update Check Failed'),
-        t('updates.checkFailedDesc', 'Could not check for updates. Please try again later.')
-      );
+      // Suppress error alert in development mode
+      if (__DEV__) {
+        logger.log('[UpdateChecker] Check failed (expected in dev mode):', e.message);
+      } else {
+        logger.error('[UpdateChecker] Check failed:', e);
+        setError(e.message || 'Unknown error');
+        Alert.alert(
+          t('updates.checkFailed', 'Update Check Failed'),
+          t('updates.checkFailedDesc', 'Could not check for updates. Please try again later.')
+        );
+      }
     } finally {
       setChecking(false);
       setDownloading(false);

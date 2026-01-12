@@ -27,6 +27,7 @@ import {
     type SessionSummaryEntry,
 } from '../store/cognitiveComfort';
 import { useAppPalette } from '../theme/usePalette';
+import { createShadow } from '../utils/shadow';
 
 interface SessionSummaryProps {
   autoShow?: boolean;
@@ -222,11 +223,12 @@ const styles = StyleSheet.create({
     maxWidth: 400,
     borderRadius: 20,
     padding: 20,
-    shadowColor: undefined, // Handled by elevation on Android; iOS uses boxShadow
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 8,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 8,
+    }),
   },
   header: {
     flexDirection: 'row',

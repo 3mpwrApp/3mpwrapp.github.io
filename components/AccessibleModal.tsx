@@ -21,6 +21,8 @@ import {
     View,
 } from 'react-native';
 
+import { createShadow } from '../utils/shadow';
+
 interface AccessibleModalProps {
   visible: boolean;
   onClose: () => void;
@@ -43,14 +45,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff', // eslint-disable-line no-restricted-syntax
     borderRadius: 12,
     padding: 20,
-    shadowColor: '#000', // eslint-disable-line no-restricted-syntax
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
+    ...createShadow({
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.25,
+      shadowRadius: 4,
+      elevation: 5,
+    }),
     maxWidth: '90%',
     minWidth: 280,
   },

@@ -31,6 +31,7 @@ import {
 } from '../store/cognitiveComfort';
 import { useAppPalette } from '../theme/usePalette';
 import { announce } from '../utils/announce';
+import { createShadow } from '../utils/shadow';
 
 interface WhereWasIProps {
   visible?: boolean;
@@ -251,11 +252,12 @@ const styles = StyleSheet.create({
     borderRadius: 28,
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: undefined, // Handled by elevation on Android; iOS uses boxShadow
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
+    ...createShadow({
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.25,
+      shadowRadius: 4,
+      elevation: 5,
+    }),
   },
   badge: {
     position: 'absolute',

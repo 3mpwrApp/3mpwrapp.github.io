@@ -22,6 +22,7 @@ import { useNetwork } from "../store/network";
 import { useRefresh } from "../store/refresh";
 import { type Palette } from "../theme/colors";
 import { useAppPalette } from "../theme/usePalette";
+import { createShadow } from "../utils/shadow";
 
 import A11yQuickSettings from "./A11yQuickSettings";
 import ComplexityModeIndicator from "./ComplexityModeIndicator";
@@ -543,11 +544,13 @@ function createStyles(palette: Palette, insets: { top: number; right: number; bo
       paddingVertical: 6,
       minWidth: 200,
       maxHeight: 400,
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.3,
-      shadowRadius: 8,
-      elevation: 10,
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
+        elevation: 10,
+      }),
     },
     menuSection: {
       color: palette.textSecondary,

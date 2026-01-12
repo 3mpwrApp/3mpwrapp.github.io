@@ -41,17 +41,18 @@ const WeeklyWhatsNewToggle = React.lazy(() => import('../../../components/Weekly
 function useSafeNavigate() {
   const router = useRouter();
   return React.useCallback((path: string) => {
-    try {
-      setTimeout(() => {
-        try {
-          router.push(path as any);
-        } catch (navError) {
-          if (__DEV__) console.warn('[Settings] Navigation error:', navError);
+    // Use requestAnimationFrame to ensure DOM is ready and router is initialized
+    requestAnimationFrame(() => {
+      try {
+        router.push(path as any);
+      } catch (navError: any) {
+        // Suppress router.isReady errors on web - this is a known timing issue
+        // The navigation often succeeds despite the error
+        if (__DEV__ && !navError?.message?.includes('isReady')) {
+          console.warn('[Settings] Navigation error:', navError);
         }
-      }, 0);
-    } catch (e) {
-      if (__DEV__) console.warn('[Settings] Navigation setup error:', e);
-    }
+      }
+    });
   }, [router]);
 }
 
@@ -386,7 +387,7 @@ export default function SettingsScreen() {
               {deleteMode && (
                 <View style={styles.deletePanel}>
                   {hasPasswordProvider ? (
-                    <>
+                    <form onSubmit={(e) => { e.preventDefault(); if (password) confirmDelete(); }}>
                       <Text style={{ color:palette.error, fontWeight:'600', marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordTitle','Confirm Deletion')}</Text>
                       <Text style={{ color:palette.text, opacity:0.8, marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordBody','Enter your password to permanently delete your account.')}</Text>
                       <TextInput style={styles.input} secureTextEntry={true} value={password} onChangeText={setPassword} placeholder={t('settings.account.passwordPlaceholder','Password')} accessibilityLabel={t('settings.account.passwordPlaceholder','Password')} />
@@ -398,7 +399,7 @@ export default function SettingsScreen() {
                           <Text style={{ color:palette.text, fontWeight:'600' }}>{t('common.cancel','Cancel')}</Text>
                         </A11yPressable>
                       </GapView>
-                    </>
+                    </form>
                   ) : (
                     <>
                       <Text style={{ color:palette.error, fontWeight:'600', marginBottom:8 }}>{t('settings.account.deleteConfirmPasswordTitle','Confirm Deletion')}</Text>

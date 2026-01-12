@@ -12,6 +12,18 @@ if (Platform.OS === 'web' && typeof window !== 'undefined') {
     if (!event.error && !event.message) return;
     console.error('[GlobalError]', event.message);
   });
+  
+  // Handle unhandled promise rejections (like the 6000ms timeout)
+  window.addEventListener('unhandledrejection', (event) => {
+    const msg = event.reason?.message || String(event.reason);
+    // Suppress known timeout errors in development
+    if (__DEV__ && msg?.includes('timeout')) {
+      console.warn('[UnhandledPromise] Timeout (suppressed):', msg);
+      event.preventDefault(); // Prevent console error
+      return;
+    }
+    console.error('[UnhandledPromise]', msg);
+  });
 }
 
 if (__DEV__) console.warn('[RootLayout] Starting...');

@@ -6,6 +6,7 @@ import { touchTarget } from "../constants/A11Y";
 import type { ResourceFormat, TextScale } from "../store/settings";
 import { useSettings } from "../store/settings";
 import { useAppPalette } from "../theme/usePalette";
+import { createShadow } from "../utils/shadow";
 
 import A11yPressable from "./A11yPressable";
 import GapView from "./GapView";
@@ -169,11 +170,13 @@ function createStyles(palette: ReturnType<typeof useAppPalette>) {
       paddingRight: 12,
     },
     modalPanel: {
-      shadowColor: palette.text,
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.25,
-      shadowRadius: 8,
-      elevation: 10,
+      ...createShadow({
+        shadowColor: palette.text,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.25,
+        shadowRadius: 8,
+        elevation: 10,
+      }),
     },
   });
 }

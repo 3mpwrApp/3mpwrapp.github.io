@@ -48,21 +48,25 @@ config.serializer = {
     try {
       if (!module || !module.path) return false;
       
-      // Filter out Node.js-only packages from bundle
-      const nodejsPackages = [
-        'deepl-node',
-        'firebase-admin',
-        'pdf-parse',
-        'puppeteer',
-        'google-translate-api',
-        'cheerio',
+      const modulePath = module.path.replace(/\\/g, '/'); // Normalize Windows paths
+      
+      // Filter out Node.js-only packages and server code from bundle
+      const nodejsPatterns = [
+        '/deepl-node/',
+        '/firebase-admin/',
+        '/pdf-parse/',
+        '/puppeteer/',
+        '/google-translate-api/',
+        '/cheerio/',
         '/server/',
         '/scripts/',
-        '/firebase/functions',
+        '/firebase/functions/',
+        'check-events.js',
+        'seed-events.js',
+        'proxy-server.js',
       ];
       
-      const modulePath = module.path;
-      if (nodejsPackages.some(pkg => modulePath.includes(pkg))) {
+      if (nodejsPatterns.some(pattern => modulePath.includes(pattern))) {
         return false; // Exclude from bundle
       }
       

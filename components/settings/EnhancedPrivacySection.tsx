@@ -217,12 +217,14 @@ export default function EnhancedPrivacySection() {
                 ? 'Strict mode is ON: 100% user-owned storage. App/server storage is disabled.' 
                 : 'WebDAV Storage: Connect your personal cloud storage (Nextcloud, ownCloud, etc.)'}
             </Text>
-            <Text style={s.rowLabel}>WebDAV Endpoint</Text>
-            <TextInput style={s.input} placeholder='https://dav.example.com/remote.php/dav/files/username/' value={endpoint} onChangeText={setEndpoint} autoCapitalize='none' autoCorrect={false} keyboardType='url' accessibilityLabel='WebDAV endpoint' />
-            <Text style={s.rowLabel}>Username (optional)</Text>
-            <TextInput style={s.input} placeholder='Username' value={username} onChangeText={setUsername} autoCapitalize='none' autoCorrect={false} accessibilityLabel='WebDAV username' />
-            <Text style={s.rowLabel}>Password (optional)</Text>
-            <TextInput style={s.input} placeholder='Password' value={password} onChangeText={setPassword} secureTextEntry={true} accessibilityLabel='WebDAV password' />
+            <form onSubmit={(e) => { e.preventDefault(); onConnectBYOC(); }}>
+              <Text style={s.rowLabel}>WebDAV Endpoint</Text>
+              <TextInput style={s.input} placeholder='https://dav.example.com/remote.php/dav/files/username/' value={endpoint} onChangeText={setEndpoint} autoCapitalize='none' autoCorrect={false} keyboardType='url' accessibilityLabel='WebDAV endpoint' />
+              <Text style={s.rowLabel}>Username (optional)</Text>
+              <TextInput style={s.input} placeholder='Username' value={username} onChangeText={setUsername} autoCapitalize='none' autoCorrect={false} accessibilityLabel='WebDAV username' />
+              <Text style={s.rowLabel}>Password (optional)</Text>
+              <TextInput style={s.input} placeholder='Password' value={password} onChangeText={setPassword} secureTextEntry={true} accessibilityLabel='WebDAV password' />
+            </form>
             <GapView style={s.buttonRow} gap={8}>
               <A11yPressable style={s.backupButton} onPress={onConnectBYOC} accessibilityRole='button' accessibilityLabel='Connect personal storage' hitSlop={HIT_SLOP_8}><Ionicons name='cloud-done' size={16} color={palette.primary} /><Text style={s.backupButtonText}>Connect Storage</Text></A11yPressable>
               <A11yPressable style={[s.backupButton, s.dangerButton]} onPress={onClearBYOC} accessibilityRole='button' accessibilityLabel='Clear storage session' hitSlop={HIT_SLOP_8}><Ionicons name='close' size={16} color={palette.error} /><Text style={[s.backupButtonText, s.dangerButtonText]}>Clear Session</Text></A11yPressable>
@@ -232,7 +234,9 @@ export default function EnhancedPrivacySection() {
         )}
         <View style={{ marginBottom:16 }}>
           <Text style={s.rowLabel}>Set/Change Passcode</Text>
-          <TextInput style={s.input} placeholder='New passcode' secureTextEntry={true} onSubmitEditing={(e)=> setPasscode(e.nativeEvent.text || undefined)} accessibilityLabel='New passcode' accessibilityHint='Enter a new passcode for the app' />
+          <form onSubmit={(e) => { e.preventDefault(); }}>
+            <TextInput style={s.input} placeholder='New passcode' secureTextEntry={true} onSubmitEditing={(e)=> setPasscode(e.nativeEvent.text || undefined)} accessibilityLabel='New passcode' accessibilityHint='Enter a new passcode for the app' />
+          </form>
         </View>
         <AccessibilityToggle title='Wellness Lock' description='Require passcode to access wellness features' value={state.lockWellness ?? false} onValueChange={setLockWellness} icon='heart-outline' testID='wellness-lock-toggle' />
         <GapView style={s.backupButtons} gap={8}>
