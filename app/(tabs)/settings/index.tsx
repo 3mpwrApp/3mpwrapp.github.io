@@ -37,6 +37,24 @@ const NotificationPreferences = React.lazy(() => import('../../../components/Not
 const EmergencyWalletCard = React.lazy(() => import('../../../components/EmergencyWalletCard'));
 const WeeklyWhatsNewToggle = React.lazy(() => import('../../../components/WeeklyWhatsNewToggle').then(m => ({ default: m.WeeklyWhatsNewToggle })));
 
+// Shared safe navigation utility for all components
+function useSafeNavigate() {
+  const router = useRouter();
+  return React.useCallback((path: string) => {
+    try {
+      setTimeout(() => {
+        try {
+          router.push(path as any);
+        } catch (navError) {
+          if (__DEV__) console.warn('[Settings] Navigation error:', navError);
+        }
+      }, 0);
+    } catch (e) {
+      if (__DEV__) console.warn('[Settings] Navigation setup error:', e);
+    }
+  }, [router]);
+}
+
 export default function SettingsScreen() {
   const params = useLocalSearchParams<{ open?: string }>();
   const { t } = useTranslation();
@@ -46,7 +64,7 @@ export default function SettingsScreen() {
   const titleRef = useRef<Text>(null);
   const { user, isGuest } = useAuth();
   const { setOffline } = useNetwork();
-  const _router = useRouter();
+  const safeNavigate = useSafeNavigate();
   useAnnounceOnMount(t('settings.title', 'Settings'));
   useFocusOnRefOnMount(titleRef);
   
@@ -62,22 +80,6 @@ export default function SettingsScreen() {
   const [hasPasswordProvider, setHasPasswordProvider] = useState(false);
   // Removed unused isAnonymous state (previously tracked anonymous account status)
   const [providerList, setProviderList] = useState<string[]>([]);
-
-  // Safe navigation helper to prevent router.isReady errors
-  const safeNavigate = (path: string) => {
-    try {
-      // Add small delay to ensure router is ready
-      setTimeout(() => {
-        try {
-          _router.push(path as any);
-        } catch (navError) {
-          if (__DEV__) console.warn('[Settings] Navigation error:', navError);
-        }
-      }, 0);
-    } catch (e) {
-      if (__DEV__) console.warn('[Settings] Navigation setup error:', e);
-    }
-  };
 
   useEffect(() => { 
     if (!user || !db) return; // Safety check: skip if Firestore not available
@@ -475,7 +477,7 @@ function EnhancedA11ySettingsSection() {
   const palette = useAppPalette();
   const { factor } = useTextScale();
   const styles = createStyles(palette, factor);
-  const router = useRouter();
+  const safeNavigate = useSafeNavigate();
   const { textScale, setTextScale, resourcePreferredFormat, setResourcePreferredFormat } = useSettings();
   const { dyslexiaFriendly, setDyslexiaFriendly, plainLanguage, setPlainLanguage, captionsPreferred, setCaptionsPreferred, voiceMode, setVoiceMode } = useSettings();
   const ScaleButton = ({ label, value }: { label: string; value: TextScale }) => (
@@ -557,7 +559,7 @@ function TermsSection() {
 function DeveloperSection({ styles }: { styles: ReturnType<typeof createStyles> }) {
   const palette = useAppPalette();
   const { user } = useAuth();
-  const router = useRouter();
+  const safeNavigate = useSafeNavigate();
   const { costAlertsEnabled, setCostAlertsEnabled } = useDevPrefs();
   
   // Only show developer section for specific email
