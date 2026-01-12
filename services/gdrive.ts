@@ -255,10 +255,13 @@ function webOAuthFlow(
             popup.close();
             resolve({ error: `${error}: ${errorDesc}` });
           } else {
-            resolve({ error: 'No code or error in callback' });
+            logger.error('[GDrive] Web OAuth: No code, token, or error in callback URL');
+            logger.error('[GDrive] Callback URL:', url);
+            resolve({ error: 'Authorization response missing - please try again' });
           }
         } else {
-          resolve({ error: 'No URL in message' });
+          logger.error('[GDrive] Web OAuth: Message received but no URL');
+          resolve({ error: 'Invalid callback message received' });
         }
 
         // Mark as resolved and clean up listener

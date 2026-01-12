@@ -40,6 +40,7 @@ config.transformer = {
   ...(config.transformer || {}),
   inlineRequires: true,
   unstable_allowRequireContext: true,
+  babelTransformerPath: require.resolve('./metro-transformer.js'),
 };
 
 config.serializer = {
@@ -50,24 +51,22 @@ config.serializer = {
       
       const modulePath = module.path.replace(/\\/g, '/'); // Normalize Windows paths
       
-      // Filter out Node.js-only packages and server code from bundle
-      const nodejsPatterns = [
+      // Only exclude the specific problematic files, not broad patterns
+      if (modulePath.endsWith('.mjs') && 
+          (modulePath.includes('/server/') || modulePath.includes('/scripts/'))) {
+        return false;
+      }
+      
+      // Exclude specific problematic packages
+      const excludePackages = [
         '/deepl-node/',
         '/firebase-admin/',
         '/pdf-parse/',
         '/puppeteer/',
-        '/google-translate-api/',
-        '/cheerio/',
-        '/server/',
-        '/scripts/',
-        '/firebase/functions/',
-        'check-events.js',
-        'seed-events.js',
-        'proxy-server.js',
       ];
       
-      if (nodejsPatterns.some(pattern => modulePath.includes(pattern))) {
-        return false; // Exclude from bundle
+      if (excludePackages.some(pkg => modulePath.includes(pkg))) {
+        return false;
       }
       
       return true;

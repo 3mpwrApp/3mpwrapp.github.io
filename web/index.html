@@ -180,7 +180,16 @@
       </div>
     </div>
     
-    <!-- Load bundle as ES module to support import.meta -->
-    <script type="module" src="/index.bundle?platform=web&dev=true&hot=false"></script>
+    <!-- Polyfill import.meta for bundled code -->
+    <script>
+      // Create import.meta polyfill before bundle loads
+      if (typeof globalThis !== 'undefined' && !globalThis.import) {
+        globalThis.import = { meta: { url: window.location.href } };
+      }
+      window.import = { meta: { url: window.location.href } };
+    </script>
+    
+    <!-- Load expo bundle -->
+    <script src="/index.bundle?platform=web&dev=true&hot=false"></script>
   </body>
 </html>

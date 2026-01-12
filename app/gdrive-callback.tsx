@@ -123,11 +123,23 @@ export default function GDriveCallbackScreen() {
       }
     } else {
       // On native: Deep-link back to the app
-      const deepLinkUrl = `empowrapp://gdrive-callback${url.split('gdrive-callback')[1] || ''}`;
-      console.warn('[GDrive Callback] Deep-linking to:', deepLinkUrl);
+      console.warn('[GDrive Callback] Native platform detected, preparing deep link');
+      
+      if (code || accessToken) {
+        setStatusMessage('✓ Authorization successful!\n\nReturning to app...');
+        const deepLinkUrl = `empowrapp://gdrive-callback${url.split('gdrive-callback')[1] || ''}`;
+        console.warn('[GDrive Callback] Deep-linking to:', deepLinkUrl);
 
-      if (typeof window !== 'undefined') {
-        window.location.href = deepLinkUrl;
+        // Delay to show message before deep-linking
+        setTimeout(() => {
+          if (typeof window !== 'undefined') {
+            window.location.href = deepLinkUrl;
+          }
+        }, 1000);
+      } else if (error) {
+        setStatusMessage(`❌ Authorization failed:\n${error}\n${errorDesc || ''}`);
+      } else {
+        setStatusMessage('❌ No authorization data received.\n\nPlease close this window and try again.');
       }
     }
   }, [params, router]);
