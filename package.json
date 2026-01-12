@@ -16,6 +16,7 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "set NODE_OPTIONS=--max-old-space-size=8192&& expo start --web",
+    "web:build": "npx expo export:web && node scripts/copy-routes-to-dist.js",
     "web:validate": "node scripts/validate-web-compat.mjs",
     "doctor": "npx expo-doctor",
     "lint": "eslint .",
