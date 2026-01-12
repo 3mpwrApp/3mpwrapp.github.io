@@ -110,10 +110,10 @@ export default function SettingsScreen() {
     const { trackEvent } = require('../../../services/analyticsClient');
     setDeleting(true);
     try {
-      const cred = EmailAuthProvider.credential(user.email, password);
+      const _cred = EmailAuthProvider.credential(user.email, password);
       // Note: reauthenticateWithCredential and deleteUser require Firebase User type
       // This local auth implementation doesn't support these operations
-      // await reauthenticateWithCredential(user as any, cred);
+      // await reauthenticateWithCredential(user as any, _cred);
       // await deleteUser(user as any);
       trackEvent('account_delete', { method: 'password' });
       Alert.alert(t('settings.account.deleted','Account deleted'));
