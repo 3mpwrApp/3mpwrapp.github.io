@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-12T18:02:56.324Z",
+  "lastUpdated": "2026-01-13T00:06:06.204Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 8250,
+      "totalPosts": 8274,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-12T18:02:44.263Z"
+      "lastSeen": "2026-01-13T00:05:55.987Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 8183,
+      "totalPosts": 8205,
       "recentPosts": 22,
       "peakPosts": 25,
-      "lastSeen": "2026-01-12T18:02:47.028Z"
+      "lastSeen": "2026-01-13T00:05:58.800Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 8104,
+      "totalPosts": 8129,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-12T18:02:49.863Z"
+      "lastSeen": "2026-01-13T00:06:00.802Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 8243,
+      "totalPosts": 8268,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-12T18:02:52.326Z"
+      "lastSeen": "2026-01-13T00:06:02.731Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 8250,
+      "totalPosts": 8275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-12T18:02:55.321Z"
+      "lastSeen": "2026-01-13T00:06:05.200Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 66,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "When considering what keyboard shortcuts to support in your application, don’t stress about JAWS/NVDA. They have pass-through commands (a key combo that tells the SR to ignore the next key/combo).\n\n• NVDA + F2\n• JAWS + 3\n• Narrator + 3\n\nStress about other languages instead.\n\n#a11y #i18n",
-      "author": "aardrian.bsky.social",
-      "engagement": 18,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 48,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 308,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "This is why “just try harder” is nonsense.\nThe course isn’t neutral.\nThe system chooses who struggles.\n♿🔥🧱\nDrop a 🧠 if you get it.\n#EquityNotEquality #DisabilityRights #ChronicIllness #AccessIsEverything #JusticeEducation #CripHumor #RealTalk",
       "author": "crabbyratwhisperer.bsky.social",
@@ -338,23 +308,53 @@
       "author": "lisadiedrich.bsky.social",
       "engagement": 15,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 66,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "look at this absolutely wonderful picture taken at the @horrorgameawards.bsky.social !\n\nso many beautiful disabled people came to talk to me afterwards about the (slightly dark) comments I made on accessibility during my award presentation.\n\n#a11y #accessibility #thga #horrorgameawards",
+      "author": "spoonienet.com",
+      "engagement": 39,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 48,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 311,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
-    {
-      "keyword": "accessibility",
-      "count": 44
-    },
     {
       "keyword": "disabilityrights",
       "count": 42
     },
     {
-      "keyword": "cripthevote",
-      "count": 27
+      "keyword": "accessibility",
+      "count": 40
     },
     {
       "keyword": "a11y",
+      "count": 30
+    },
+    {
+      "keyword": "cripthevote",
       "count": 27
     },
     {
@@ -410,12 +410,12 @@
       "count": 9
     },
     {
-      "keyword": "accessibility a11y",
+      "keyword": "disabilityjustice nico",
       "count": 9
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 8
+      "keyword": "accessibility a11y",
+      "count": 9
     },
     {
       "keyword": "disability",
