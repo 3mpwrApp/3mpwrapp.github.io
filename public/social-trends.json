@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-14T12:03:08.299Z",
+  "lastUpdated": "2026-01-14T18:03:08.701Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 8396,
+      "totalPosts": 8421,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-14T12:02:57.012Z"
+      "lastSeen": "2026-01-14T18:02:55.328Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 8315,
-      "recentPosts": 22,
+      "totalPosts": 8339,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-14T12:02:59.683Z"
+      "lastSeen": "2026-01-14T18:02:58.945Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 8278,
-      "recentPosts": 25,
+      "totalPosts": 8302,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-14T12:03:02.415Z"
+      "lastSeen": "2026-01-14T18:03:01.878Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 8418,
+      "totalPosts": 8443,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-14T12:03:04.936Z"
+      "lastSeen": "2026-01-14T18:03:04.677Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 8425,
+      "totalPosts": 8450,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-14T12:03:07.295Z"
+      "lastSeen": "2026-01-14T18:03:07.697Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 311,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 15,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "🚨DEADLINE TOMORROW\n\nKEEP BRITT OFF THE STREETS\n\nHelp now >> www.paypal.me/brittox\n\n1900 to stay safe for a week...\n\nEvery 10, 50, 100 helps\n\n#KeepFolksAlive #BIPOCMA #HelpFolksLive2026 #PWD #TransCrowdFund #FundSky #Emergency #DisabilityJustice",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 66,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Looking for #accessibility or #UX work. Recently with MCDM (for PDF accessibility), & Delinea. \n\nCase studies: kitsa11y.work \n\nPersonal site is over at: www.flowerstorm.tech (& is more accessible)",
-      "author": "foxdesign.tech",
-      "engagement": 15,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "2 weeks until the 5th annual Games for Blind Gamers jam!\n\nIt's an amazingly fun experience and a great learning opprotunity, and some awesome teams are forming! Click the link and think about joining! itch.io/jam/games-fo... \n#GameJam #GameDev #A11y",
-      "author": "ericbomb.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
     {
       "text": "look at this absolutely wonderful picture taken at the @horrorgameawards.bsky.social !\n\nso many beautiful disabled people came to talk to me afterwards about the (slightly dark) comments I made on accessibility during my award presentation.\n\n#a11y #accessibility #thga #horrorgameawards",
       "author": "spoonienet.com",
@@ -338,20 +308,50 @@
       "author": "lisadiedrich.bsky.social",
       "engagement": 15,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Organizers share where they find hope in the struggle for disability justice as we go into the second year of Trump 2.0.\n\ntruthout.org/articles/dis...\n\n#disabilitysky #disabilityjustice #indigisky #truthout",
+      "author": "johnniejae.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "No streams this week, I'm at snowcamp.io, the local web dev conference in my home town 🏔️🏂\n\nOn today's menu: workshops!\n\n🦀 Building real-time TUIs with @rust-lang.org\n🙈 Navigating websites blindfolded, using only the screen reader #a11y",
+      "author": "francoisbest.com",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Noticed this too & have replied to @zohrankmamdani.bsky.social before to encourage use of alt text. I’ve been rereading Alice Wong’s Year of the Tiger & she says it best, “Make your shit accessible” by using plain language, image descriptions, transcripts, live caption. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 15,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 44
+      "count": 43
+    },
+    {
+      "keyword": "a11y",
+      "count": 33
     },
     {
       "keyword": "accessibility",
       "count": 32
-    },
-    {
-      "keyword": "a11y",
-      "count": 29
     },
     {
       "keyword": "cripthevote",
@@ -359,7 +359,7 @@
     },
     {
       "keyword": "disabilityjustice",
-      "count": 23
+      "count": 25
     },
     {
       "keyword": "altcitizen",
@@ -410,16 +410,16 @@
       "count": 9
     },
     {
-      "keyword": "digitalaccessibility",
+      "keyword": "disability",
+      "count": 7
+    },
+    {
+      "keyword": "accessibility a11y",
       "count": 7
     },
     {
       "keyword": "disabilityjustice nico",
       "count": 6
-    },
-    {
-      "keyword": "disabled",
-      "count": 5
     }
   ]
 }
