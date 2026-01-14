@@ -533,6 +533,71 @@ if (document.readyState === 'loading') {
 
 ---
 
+<!-- Injured Worker's Legal Side Podcast -->
+<div class="gradient-banner" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <h2 style="margin: 0 0 0.5rem; color: white; font-size: 1.8rem;">
+    <span aria-hidden="true">🎙️</span> Featured Podcast
+    <span class="badge badge--new" style="background: rgba(0,0,0,0.3); color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Weekly episodes">Weekly</span>
+  </h2>
+  
+  <div style="background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 8px; margin: 1rem 0; text-align: left; color: white;">
+    <h3 style="margin: 0 0 1rem; color: white; font-size: 1.6rem; font-weight: bold;">
+      ⚖️ The Injured Worker's Legal Side with Richard and Paul
+    </h3>
+    
+    <p style="margin: 0 0 1rem; font-size: 1.1rem; line-height: 1.6; color: white;">
+      A weekly podcast discussing various issues that many injured workers face when they are on WSIB. 
+      <strong style="color: white;">Real legal insights from experienced professionals helping injured workers across Ontario.</strong>
+    </p>
+    
+    <p style="margin: 0 0 1.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.9);">
+      👤 <strong style="color: white;">Hosted by:</strong> Richard Fink (Lawyer) & Paul Spagnuolo (Paralegal)
+    </p>
+    
+    <div style="background: rgba(0,0,0,0.25); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border: 2px solid rgba(255,255,255,0.2);">
+      <p style="margin: 0 0 1rem; font-size: 1.05rem; color: white; font-weight: 600;">
+        🔗 Need WSIB assistance or want to participate in the podcast?
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <div>
+          <p style="margin: 0; font-size: 0.9rem; color: #fecaca; font-weight: 600;">Richard Fink Law</p>
+          <a href="https://www.finklegal.com/" target="_blank" rel="noopener noreferrer" style="color: #fef2f2; text-decoration: underline; font-size: 0.95rem; font-weight: 500;">finklegal.com</a>
+        </div>
+        <div>
+          <p style="margin: 0; font-size: 0.9rem; color: #fecaca; font-weight: 600;">Paul's Paralegal</p>
+          <a href="https://paulsparalegal.ca/" target="_blank" rel="noopener noreferrer" style="color: #fef2f2; text-decoration: underline; font-size: 0.95rem; font-weight: 500;">paulsparalegal.ca</a>
+        </div>
+      </div>
+    </div>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; justify-content: center;">
+      <a href="https://www.youtube.com/@finkbornsteinlawfirm1184" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="display: inline-block; background: white; color: #991b1b; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s;" 
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.4)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.3)'">
+        ▶️ Watch on YouTube
+      </a>
+      
+      <a href="https://www.youtube.com/@finkbornsteinlawfirm1184?sub_confirmation=1" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="display: inline-block; background: rgba(0,0,0,0.3); color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s, background 0.2s;" 
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(0,0,0,0.4)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(0,0,0,0.3)'">
+        🔔 Subscribe
+      </a>
+    </div>
+    
+    <p style="margin: 1.5rem 0 0; font-size: 0.9rem; color: rgba(255,255,255,0.85); text-align: center; font-style: italic;">
+      💡 <strong style="color: white;">Help spread the word!</strong> If you like the podcast videos, please like and subscribe to support Richard and Paul's work helping injured workers.
+    </p>
+  </div>
+</div>
+
+---
+
 <!-- The Disability Bulletin - Community Spotlight Banner -->
 <div class="gradient-banner" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
   <h2 style="margin: 0 0 0.5rem; color: white; font-size: 1.8rem;">

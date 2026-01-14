@@ -67,6 +67,52 @@ permalink: /community/
 
 ---
 
+## 🎙️ The Injured Worker's Legal Side Podcast
+
+🔋 **Energy: Very Light**
+
+**Weekly Podcast with Richard and Paul - Expert WSIB Insights**
+
+<div class="info-box" style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; margin: 1.5rem 0;">
+  <p style="margin: 0 0 1rem; font-size: 1.1rem; font-weight: 600; color: #000000;">
+    ⚖️ Real legal insights from experienced professionals helping injured workers across Ontario.
+  </p>
+  <p style="margin: 0 0 1rem; color: #000000; line-height: 1.6;">
+    Join Richard Fink (Lawyer) and Paul Spagnuolo (Paralegal) as they discuss various issues that many injured workers face when they are on WSIB. Weekly episodes covering your rights, navigating the system, and getting the support you deserve.
+  </p>
+  
+  <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 6px; margin: 1rem 0; border-left: 4px solid #dc2626;">
+    <p style="margin: 0 0 0.5rem; font-weight: 600; color: #000000;">📞 Need WSIB assistance or want to participate?</p>
+    <p style="margin: 0; color: #000000;">
+      <strong style="color: #dc2626;">Richard Fink Law:</strong> <a href="https://www.finklegal.com/" target="_blank" rel="noopener noreferrer" style="color: #0052a3; text-decoration: underline; font-weight: 600;">finklegal.com</a><br>
+      <strong style="color: #dc2626;">Paul's Paralegal:</strong> <a href="https://paulsparalegal.ca/" target="_blank" rel="noopener noreferrer" style="color: #0052a3; text-decoration: underline; font-weight: 600;">paulsparalegal.ca</a>
+    </p>
+  </div>
+  
+  <div style="text-align: center; margin-top: 1rem;">
+    <a href="https://www.youtube.com/@finkbornsteinlawfirm1184" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="btn btn-primary"
+       style="display: inline-block; margin: 0.5rem; padding: 12px 28px; background: #dc2626 !important; color: white !important; border: 3px solid #991b1b; font-weight: 700; text-decoration: none; border-radius: 8px;">
+      ▶️ Watch on YouTube
+    </a>
+    <a href="https://www.youtube.com/@finkbornsteinlawfirm1184?sub_confirmation=1" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="btn btn-secondary"
+       style="display: inline-block; margin: 0.5rem; padding: 12px 28px; background: #f3f4f6 !important; color: #dc2626 !important; border: 3px solid #dc2626; font-weight: 700; text-decoration: none; border-radius: 8px;">
+      🔔 Subscribe
+    </a>
+  </div>
+  
+  <p style="margin: 1rem 0 0; font-size: 0.95rem; color: #000000; text-align: center; font-style: italic;">
+    💡 <strong style="color: #000000;">If you like the podcast videos, please like and subscribe!</strong> Help spread the word about this valuable resource for injured workers.
+  </p>
+</div>
+
+---
+
 ## 📰 The Disability Bulletin
 
 🔋 **Energy: Very Light**
