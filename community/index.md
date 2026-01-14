@@ -78,7 +78,7 @@ permalink: /community/
     ⚖️ Real legal insights from experienced professionals helping injured workers across Ontario.
   </p>
   <p style="margin: 0 0 1rem; color: #000000; line-height: 1.6;">
-    Join Richard Fink (Lawyer) and Paul Spagnuolo (Paralegal) as they discuss various issues that many injured workers face when they are on WSIB. Weekly episodes covering your rights, navigating the system, and getting the support you deserve.
+    Join Richard Fink (Lawyer) and Paul Taylor (Paralegal) as they discuss various issues that many injured workers face when they are on WSIB. Weekly episodes covering your rights, navigating the system, and getting the support you deserve.
   </p>
   
   <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 6px; margin: 1rem 0; border-left: 4px solid #dc2626;">

@@ -551,7 +551,7 @@ if (document.readyState === 'loading') {
     </p>
     
     <p style="margin: 0 0 1.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.9);">
-      👤 <strong style="color: white;">Hosted by:</strong> Richard Fink (Lawyer) & Paul Spagnuolo (Paralegal)
+      👤 <strong style="color: white;">Hosted by:</strong> Richard Fink (Lawyer) & Paul Taylor (Paralegal)
     </p>
     
     <div style="background: rgba(0,0,0,0.25); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border: 2px solid rgba(255,255,255,0.2);">
