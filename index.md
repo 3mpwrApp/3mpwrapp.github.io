@@ -212,15 +212,15 @@ async function loadDailyEvents() {
       return true;
     });
     
-    // Filter to show ONLY community events on homepage
-    // Exclude ALL holiday and health awareness events
+    // Filter to show community and support events on homepage
+    // Exclude holiday and health awareness events
     const now = new Date();
     const communityEvents = events.filter(event => {
-      // ONLY keep community events (user-created events from app)
-      return event.category === 'community';
+      // Keep community and support events (user-created events and support groups)
+      return event.category === 'community' || event.category === 'support';
     });
     
-    console.log(`🏠 Homepage: Filtered to ${communityEvents.length} community events only`);
+    console.log(`🏠 Homepage: Filtered to ${communityEvents.length} community/support events`);
     
     // Get today's date and next 7 days
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
