@@ -226,6 +226,11 @@ permalink: /campaigns/
     // Display campaigns
     container.innerHTML = campaigns.map(campaign => `
         <article class="campaign-card" style="border: 3px solid #0066cc; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: #f8f9fa !important; box-shadow: 0 2px 8px rgba(0,0,0,0.15); color: #000000 !important;">
+          ${campaign.status === 'completed' ? `
+            <div style="display: inline-block; padding: 8px 16px; background: #6b7280 !important; color: #ffffff !important; border: 2px solid #000000; border-radius: 6px; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem;">
+              ✓ Completed
+            </div>
+          ` : ''}
           <h3 style="margin-top: 0; color: #003d7a !important; font-size: 1.5rem; font-weight: 700;">
             ${campaign.icon || '📣'} ${campaign.title}
           </h3>
@@ -282,13 +287,33 @@ permalink: /campaigns/
           ` : ''}
           
           <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-            <button 
-              onclick="joinCampaign('${campaign.id}', '${campaign.title}')" 
-              class="btn btn-primary"
-              style="padding: 12px 24px; background: #0052a3 !important; color: #ffffff !important; border: 3px solid #003d7a; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; min-height: 48px;"
-            >
-              💪 Join Campaign
-            </button>
+            ${campaign.status === 'completed' && campaign.nextStepsUrl ? `
+              <a 
+                href="${campaign.nextStepsUrl}" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                style="padding: 12px 24px; background: #0052a3 !important; color: #ffffff !important; border: 3px solid #003d7a; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; min-height: 48px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;"
+              >
+                👉 Follow for Updates
+              </a>
+            ` : campaign.status === 'completed' ? `
+              <button 
+                disabled
+                class="btn btn-secondary"
+                style="padding: 12px 24px; background: #6b7280 !important; color: #ffffff !important; border: 3px solid #4b5563; border-radius: 8px; font-weight: 700; cursor: not-allowed; font-size: 1rem; min-height: 48px; opacity: 0.7;"
+              >
+                ✓ Campaign Ended
+              </button>
+            ` : `
+              <button 
+                onclick="joinCampaign('${campaign.id}', '${campaign.title}')" 
+                class="btn btn-primary"
+                style="padding: 12px 24px; background: #0052a3 !important; color: #ffffff !important; border: 3px solid #003d7a; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; min-height: 48px;"
+              >
+                💪 Join Campaign
+              </button>
+            `}
             
             <div class="share-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
               <button onclick="shareCampaignToSocial('${campaign.title.replace(/'/g, "\\'")}', '${(campaign.summary || '').substring(0, 100).replace(/'/g, "\\'")}', 'twitter')" style="padding: 10px 16px; background: #0d47a1 !important; color: #ffffff !important; border: 3px solid #002171; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 700; min-height: 44px;" title="Share on X/Twitter" aria-label="Share on X/Twitter">𝕏 Share</button>
