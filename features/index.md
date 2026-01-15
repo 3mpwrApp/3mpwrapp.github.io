@@ -1,240 +1,161 @@
 ---
 layout: default
 title: Features
-description: Explore 3mpwr App's comprehensive features designed to empower your advocacy, connect with community, and navigate systems with confidence. 100% Production-Ready with USA Lite now available!
+description: Explore 3mpwr App's comprehensive features designed to empower your advocacy, connect with community, and navigate systems with confidence.
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 
-<!-- Status Banner -->
 {%- include status-banner.html -%}
 
 # 3mpwr App Features
 
-📖 **12 minute read** | ⚡ **Feature highlights below**
+**Version:** 4.4 (PowerTools Complete) | **Status:** 97% Complete | **Last Updated:** January 15, 2026
 
-**Version:** 4.4 (January 2026 - PowerTools Complete)  
-**Status:** 97% Complete • Week 3 PowerTools Active • 721 Tests Passing • WCAG AAA Compliant 🎉  
-**Last Updated:** January 15, 2026
+Your complete toolkit for disability advocacy, community connection, and system navigation. **60+ features** designed to empower you while protecting your privacy.
 
-Welcome to 3mpwr App - your complete toolkit for disability advocacy, community connection, and system navigation. With **60+ core features** organized into PowerTools hubs and Complexity Mode (Simple: 5, Standard: 20, Power User: 150+), every tool is designed to empower you while protecting your privacy.
-
-**🎉 NEW: PowerTools Complete!** Wellness Hub with 6 categories, Document Management, Wellness Checks, Legal Action Hub, and Support Groups all live.  
-**🇺🇸 USA Lite now available!** American supporters can join with access to core features. [Learn more →](/roadmap/#-new-usa-lite---now-available)
+> 🆕 **Latest Updates:** PowerTools complete! [See What's New →](/whats-new/)  
+> 📖 **How to Use:** Each feature links to detailed instructions in our [User Guide →](/user-guide/)
 
 ---
 
-## 📚 Table of Contents
+## PowerTools Hubs
 
-**Quick Navigation** — Use these links to jump directly to the section you need:
+### 🧘 [Wellness Hub](/user-guide/#wellness-hub)
+41 wellness tools organized into 6 categories: Mental Health & Crisis, Energy & Pain, Daily Living, Physical Health, Communication & Growth, and Specialty tools.
 
-<div class="toc-grid">
-  <div class="toc-item">
-    <a href="#wellness-tools---41-features-for-mental--physical-health">
-      <span class="toc-icon">🧘</span>
-      <span class="toc-text">Wellness Tools (41)</span>
-    </a>
-  </div>
-  <div class="toc-item">
-    <a href="#resources-tools---43-features-for-advocacy--legal-support">
-      <span class="toc-icon">📖</span>
-      <span class="toc-text">Resources (43)</span>
-    </a>
-  </div>
-  <div class="toc-item">
-    <a href="#advocacy-tools---tools-for-legal--systemic-change">
-      <span class="toc-icon">⚖️</span>
-      <span class="toc-text">Advocacy Tools</span>
-    </a>
-  </div>
-  <div class="toc-item">
-    <a href="#community---connect--support">
-      <span class="toc-icon">🤝</span>
-      <span class="toc-text">Community</span>
-    </a>
-  </div>
-  <div class="toc-item">
-    <a href="#accessibility-features">
-      <span class="toc-icon">♿</span>
-      <span class="toc-text">Accessibility (18)</span>
-    </a>
-  </div>
-  <div class="toc-item">
-    <a href="#coming-soon-features">
-      <span class="toc-icon">🚀</span>
-      <span class="toc-text">Coming Soon</span>
-    </a>
-  </div>
-</div>
+### ⚖️ [Legal Action Hub](/user-guide/#legal-action-hub)
+5-tab hub consolidating all legal tools: Accountability Tracker, Legal Coach, Legal Help, Automation, and Policy Advocacy.
 
-<div class="related-pages">
-  <strong>📖 Related Pages:</strong>
-  <ul>
-    <li><a href="/app-tour">Inside 3mpwrApp</a> - Visual tour of all features with 100+ app visuals</li>
-    <li><a href="/user-guide">User Guide</a> - Step-by-step tutorials for all features</li>
-    <li><a href="/accessibility">Accessibility Guide</a> - Detailed accessibility settings</li>
-    <li><a href="/privacy">Privacy & Security</a> - How we protect your data</li>
-    <li><a href="/beta-guide">Beta Testing Guide</a> - Join our beta program</li>
-    <li><a href="/whats-new">What's New</a> - Latest updates and announcements</li>
-  </ul>
-</div>
+### 📁 [Evidence Command Center](/user-guide/#evidence-command-center)
+Secure document storage and management with 4 tabs: Upload, Timeline, Tags, and Analytics. AES-256-GCM encryption.
+
+### 📄 [Document Management](/user-guide/#document-management)
+Store PDFs, images, Word docs, and spreadsheets with end-to-end encryption and smart organization.
+
+### 💚 [Wellness Checks](/user-guide/#wellness-checks)
+Configurable inactivity alerts with emergency contact notifications to keep your support network connected.
+
+### 👥 [Support Groups](/user-guide/#support-groups)
+24 active groups with advanced filtering by disability type, meeting format, focus area, and language.
 
 ---
 
-## 🆕 Latest Updates
+## Core Features
 
-**January 15, 2026 - PowerTools Complete (Week 3)**
+### 🏠 Home & Dashboard
+- **[Quick Actions](/user-guide/#quick-actions)** - Fast access to most-used features
+- **[Personalized Dashboard](/user-guide/#dashboard)** - Activity feed and recommendations
+- **[Global SOS Button](/user-guide/#global-sos)** - Crisis resources accessible from any screen
 
-Major consolidation and feature delivery complete! Week 3 brings Wellness Hub (6 categories, 41 tools), Document Management, Wellness Checks, Legal Action Hub (5 tabs), and Support Groups (24 groups with advanced filtering).
+### 📊 Health Tracking
+- **[Master Tracker Hub](/user-guide/#master-tracker-hub)** - Unified tracking for symptoms, meds, rehab, appointments
+- **[Mood Tracker 2.0](/user-guide/#mood-tracker-20)** - AI pattern detection, trigger identification, coping strategies
+- **[Pacing Partner](/user-guide/#pacing-partner)** - Energy predictions, adaptive pacing, body-mind sync
+- **[Energy Coins](/user-guide/#energy-coins)** - Spoon theory digitized with daily budgeting
+- **[Pain Forecast](/user-guide/#pain-forecast)** - ML-powered pain prediction
+- **[Symptom Tracker](/user-guide/#symptom-tracker)** - Track physical symptoms with severity ratings
+- **[Medication Tracker](/user-guide/#medication-tracker)** - Med schedules, doses, refills, side effects
 
-**[📰 See Full Update Details & Release History →](/whats-new/)**
+### 🧘 Mental Health & Wellness
+- **[CBT Coach](/user-guide/#cbt-coach)** - Cognitive behavioral therapy techniques
+- **[DBT Skills](/user-guide/#dbt-skills)** - Dialectical behavior therapy tools
+- **[Grounding Techniques](/user-guide/#grounding-techniques)** - Quick anxiety relief
+- **[Distress Tolerance](/user-guide/#distress-tolerance)** - Cope with crisis moments
+- **[Grief Support](/user-guide/#grief-support)** - Process loss and grief
+- **[Adaptive Meditation](/user-guide/#adaptive-meditation)** - Accessible meditation adapted for disabilities
+- **[Self-Care Library](/user-guide/#self-care-library)** - Self-care techniques database
 
-Project Status: **97% Complete** • 721 tests passing • 0 errors • WCAG AAA compliant
+### 💪 Physical Wellness
+- **[Exercise Hub](/user-guide/#exercise-hub)** - Accessible fitness videos
+- **[Rehab Tracker](/user-guide/#rehab-tracker)** - Physical therapy progress tracking
+- **[Micro-Movement](/user-guide/#micro-movement)** - Gentle exercises for any ability
+- **[Sleep Tracker](/user-guide/#sleep-tracker)** - Sleep quality and energy correlation
+- **[Nutrition Guides](/user-guide/#nutrition-guides)** - Healthy eating simplified
 
----
+### ⚖️ Legal & Advocacy
+- **[Appeal Command Center](/user-guide/#appeal-command-center)** - Deadline tracking, denial decoder, evidence strength meter
+- **[Letter Wizard](/user-guide/#letter-wizard)** - 22 professional letter templates
+- **[Accountability Coach](/user-guide/#accountability-coach)** - Track and resolve employer/provider issues
+- **[Legal Automation](/user-guide/#legal-automation)** - Automated legal workflows
+- **[Claims Navigator](/user-guide/#claims-navigator)** - Navigate claims process step-by-step
+- **[Rights Checker](/user-guide/#rights-checker)** - Know your legal rights
+- **[Policy Simulator](/user-guide/#policy-simulator)** - Test policy scenarios
 
-<!-- TL;DR Summary -->
-<details class="tldr-box" open>
-  <summary><strong>⚡ Quick Overview (1 minute)</strong></summary>
-  <div class="tldr-content">
-    <div class="tldr-item">
-      <span class="tldr-icon">🌟</span>
-      <div>
-        <strong>PowerTools Hubs (NEW)</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Consolidated interfaces: Wellness Hub (6 categories), Legal Action Hub (5 tabs), Evidence Command Center (4 tabs), Ally & Support Network</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">🧘</span>
-      <div>
-        <strong>Wellness Hub (NEW)</strong>
-        <p style="margin: 0; font-size: 0.95rem;">41 tools in 6 categories: Mental Health & Crisis, Energy & Pain, Daily Living, Physical Health, Communication & Growth, Specialty</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">📁</span>
-      <div>
-        <strong>Document Management (NEW)</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Secure storage for PDFs, images, Word docs, spreadsheets with AES-256-GCM encryption</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">💚</span>
-      <div>
-        <strong>Wellness Checks (NEW)</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Inactivity alerts with emergency contacts - stay connected with your support network</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">⚖️</span>
-      <div>
-        <strong>Legal Action Hub (NEW)</strong>
-        <p style="margin: 0; font-size: 0.95rem;">5 tabs: Accountability Tracker, Legal Coach, Legal Help, Automation, Policy Advocacy</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">👥</span>
-      <div>
-        <strong>Support Groups (NEW)</strong>
-        <p style="margin: 0; font-size: 0.95rem;">24 groups with filtering by disability type, meeting format, focus area, language</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">📊</span>
-      <div>
-        <strong>Master Tracker Hub</strong>
-        <p style="margin: 0; font-size: 0.95rem;">All health tracking unified - symptoms, meds, rehab, appointments, AI patterns</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">⚖️</span>
-      <div>
-        <strong>Appeal Command Center</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Deadline warfare, denial decoder, evidence strength meter</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">♿</span>
-      <div>
-        <strong>90% Accessibility</strong>
-        <p style="margin: 0; font-size: 0.95rem;">WCAG AAA compliant with Complexity Mode, Bad Day Mode, global SOS button</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">📄</span>
-      <div>
-        <strong>Letter Wizard</strong>
-        <p style="margin: 0; font-size: 0.95rem;">22 professional letter templates for appeals & advocacy</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">🛡️</span>
-      <div>
-        <strong>Enterprise Security</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Air-gapped mode, zero cloud dependencies, user data ownership</p>
-      </div>
-    </div>
-  </div>
-</details>
+### 🤖 AI Tools
+- **[AI Advocate Translator](/user-guide/#ai-advocate-translator)** - Legal-to-plain language (100+ terms)
+- **[AI Case Interpreter](/user-guide/#ai-case-interpreter)** - Understand case notes and decisions
+- **[AI Gov Navigator](/user-guide/#ai-gov-navigator)** - Navigate government services
+- **[Policy Made Simple](/user-guide/#policy-made-simple)** - Explain policies clearly
+- **[Ask AI](/user-guide/#ask-ai)** - General advocacy questions
 
-> 📖 **Looking for detailed instructions?** Check our [User Guide](/user-guide) for step-by-step tutorials on how to use each feature effectively.
+### 👥 Community & Support
+- **[Community Hub](/user-guide/#community-hub)** - 12+ discussion spaces
+- **[Discussion Threads](/user-guide/#discussion-threads)** - Topic-based conversations
+- **[Direct Messages](/user-guide/#direct-messages)** - Private one-on-one chat
+- **[Peer Support Matching](/user-guide/#peer-support-matching)** - Find support based on disability
+- **[Safety Controls](/user-guide/#safety-controls)** - Block, report, privacy settings
+
+### 📢 Campaigns
+- **[Campaign List](/user-guide/#campaigns)** - View and join active campaigns
+- **[Campaign Details](/user-guide/#campaign-details)** - Full campaign information
+- **[Progress Tracking](/user-guide/#campaign-progress)** - Visual progress indicators
+- **[Member Management](/user-guide/#campaign-members)** - See participants and roles
+
+### 📚 External Resources
+- **[Resource Directory](/user-guide/#resource-directory)** - 96 curated resources
+- **[Province Filtering](/user-guide/#province-filter)** - Filter by Canadian province
+- **[Calendar Subscription](/user-guide/#calendar-subscription)** - 30+ disability awareness events
+- **[Support Directory](/user-guide/#support-directory)** - Find local accessible services
+
+### ♿ Accessibility
+- **[Complexity Mode](/user-guide/#complexity-mode)** - Simple (5), Standard (20), Power User (150+)
+- **[Bad Day Mode](/user-guide/#bad-day-mode)** - One-tap emergency simplification
+- **[Screen Reader Support](/user-guide/#screen-reader)** - Full WCAG AAA compliance
+- **[Dyslexia Font](/user-guide/#dyslexia-font)** - OpenDyslexic font option
+- **[High Contrast Mode](/user-guide/#high-contrast)** - Enhanced visibility
+- **[Voice Control](/user-guide/#voice-control)** - Navigate by voice
+- **[Text Scaling](/user-guide/#text-scaling)** - Adjustable text size
+- **[Motor Accessibility](/user-guide/#motor-accessibility)** - Larger touch targets, simplified gestures
+
+### 🔐 Security & Privacy
+- **[AES-256-GCM Encryption](/user-guide/#encryption)** - Military-grade security for sensitive data
+- **[Air-Gapped Mode](/user-guide/#air-gapped-mode)** - Zero cloud dependencies
+- **[BYOC (Bring Your Own Cloud)](/user-guide/#byoc)** - Store data in your own Google Drive
+- **[Biometric Protection](/user-guide/#biometric-protection)** - Fingerprint/Face ID locks
+- **[Data Ownership](/user-guide/#data-ownership)** - You control your data 100%
+- **[Offline-First](/user-guide/#offline-first)** - Full functionality without internet
 
 ---
 
-## 📋 Complete Feature List (Quick Links)
+## Coming Soon
 
-All features below link to detailed step-by-step instructions in our [User Guide](/user-guide/).
+- Campaign Creation (UI ready, workflow pending)
+- AI Companion (conversational wellness AI)
+- Virtual Meetups (video/audio group calls)
+- Medical Records Integration
+- Blockchain Evidence Verification
+- Multi-Language Documents
 
-### PowerTools Hubs (NEW - January 2026)
-
-- **[Wellness Hub →](/user-guide/#wellness-hub)** - 41 tools in 6 categories (Mental Health & Crisis, Energy & Pain, Daily Living, Physical Health, Communication & Growth, Specialty)
-- **[Document Management →](/user-guide/#document-management)** - Secure storage for PDFs, images, Word docs, spreadsheets with AES-256-GCM encryption
-- **[Wellness Checks →](/user-guide/#wellness-checks)** - Inactivity alerts with emergency contacts
-- **[Legal Action Hub →](/user-guide/#legal-action-hub)** - 5 tabs: Accountability Tracker, Legal Coach, Legal Help, Automation, Policy Advocacy
-- **[Support Groups →](/user-guide/#support-groups)** - 24 groups with filtering by disability type, meeting format, focus area, language
-
-### Core Features
-
-- **[Evidence Command Center →](/user-guide/#evidence-command-center)** - Document upload, tagging, timeline, 4-tab interface
-- **[Appeal Command Center →](/user-guide/#appeal-command-center)** - Deadline tracking, denial decoder, evidence strength meter
-- **[Master Tracker Hub →](/user-guide/#master-tracker-hub)** - Unified health tracking (symptoms, meds, rehab, appointments, AI patterns)
-- **[Letter Wizard →](/user-guide/#letter-wizard)** - 22 professional letter templates for appeals & advocacy
-- **[AI Advocacy Suite →](/user-guide/#ai-advocacy-suite)** - 6 AI tools (Translator, Interpreter, Navigator, Policy Simplifier, Ask AI)
-- **[Community Hub →](/user-guide/#community-hub)** - 12+ discussion spaces, direct messaging, peer support matching
-- **[Accessibility Features →](/user-guide/#accessibility-features)** - Complexity Mode, Bad Day Mode, Global SOS, WCAG AAA compliance
-- **[Campaigns →](/user-guide/#campaigns)** - Create and participate in advocacy campaigns
-- **[External Resources →](/user-guide/#external-resources)** - 96 curated resources with province filtering
-
-### Wellness Features
-
-- **[Mood Tracker 2.0 →](/user-guide/#mood-tracker-20-with-ai)** - AI pattern detection, trigger identification, coping strategies
-- **[Pacing Partner →](/user-guide/#pacing-partner-with-ai-forecasting)** - Energy predictions, adaptive pacing, body-mind sync
-- **[CBT Coach →](/user-guide/#cbt-coach)** - Cognitive behavioral therapy techniques
-- **[Energy Coins →](/user-guide/#energy-coins)** - Spoon theory digitized with daily budgeting
-- **[Grounding Techniques →](/user-guide/#grounding-techniques)** - Quick anxiety relief
-- **[Exercise Hub →](/user-guide/#exercise-hub)** - Accessible fitness videos
-- **[Complete Wellness Calendar →](/user-guide/#complete-awareness-calendar)** - 30+ observances including Indigenous days
-
-### Legal & Advocacy Tools
-
-- **[Accountability Coach →](/user-guide/#accountability-coach)** - Track and resolve employer/provider issues
-- **[Legal Automation →](/user-guide/#legal-automation)** - Automated legal workflows
-- **[Claims Navigator →](/user-guide/#claims-navigator)** - Navigate claims process
-- **[Rights Checker →](/user-guide/#rights-checker)** - Know your legal rights
-- **[Policy Simulator →](/user-guide/#policy-simulator)** - Test policy scenarios
-
-### Security & Privacy
-
-- **[Air-Gapped Mode →](/user-guide/#air-gapped-mode)** - Zero cloud dependencies
-- **[BYOC (Bring Your Own Cloud) →](/user-guide/#byoc)** - Store data in your own Google Drive
-- **[Encryption →](/user-guide/#encryption)** - AES-256-GCM for all sensitive data
-- **[Data Ownership →](/user-guide/#data-ownership)** - You control your data 100%
-
-> 💡 **Tip:** Each feature name above links to detailed step-by-step instructions in our comprehensive [User Guide](/user-guide/). Beta testers can also reference the [Beta Testing Guide](/beta-guide/) for testing priorities and feedback procedures.
+**[See Full Roadmap →](/roadmap/)**
 
 ---
 
-<!-- Feature Filter & Visual Cards -->
+## Legal Disclaimers
+
+⚕️ **NOT Medical Advice** | ⚖️ **NOT Legal Advice** | 💰 **NOT Financial Advice** | 🤖 **AI May Contain Errors** | 🆘 **NOT Emergency Services**
+
+**[Read Full Disclaimers →](/legal/disclaimers/)**
+
+---
+
+## Learn More
+
+- **[User Guide](/user-guide/)** - Step-by-step tutorials for all features
+- **[What's New](/whats-new/)** - Latest updates and release history
+- **[App Tour](/app-tour/)** - Visual tour with 100+ screenshots
+- **[Beta Testing](/beta-guide/)** - Join our beta program
+- **[FAQ](/faq/)** - Frequently asked questions
 <div class="features-filter-section">
   <h2 class="filter-title">🔍 Explore Features by Category</h2>
   <p class="filter-description">Browse our 133 features organized by your needs. Click any category to filter, or search for specific features.</p>
