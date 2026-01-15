@@ -6,6 +6,9 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
 {%- comment -%} Canonical URL: Always point to Cloudflare Pages as primary {%- endcomment -%}
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
+{%- comment -%} International SEO: hreflang tags for language/region targeting {%- endcomment -%}
+{%- include hreflang-tags.html -%}
+
 {%- comment -%} Microsoft Clarity - Privacy-friendly analytics (free, unlimited) {%- endcomment -%}
 {% if jekyll.environment == 'production' %}
 <script type="text/javascript">

@@ -7,6 +7,7 @@ version: 4.4
 lastUpdated: 2026-01-15
 ---
 
+{%- include faq-schema.html -%}
 {%- include status-banner.html -%}
 
 # ❓ FAQ - Frequently Asked Questions

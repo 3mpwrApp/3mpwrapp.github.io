@@ -1,0 +1,27 @@
+<!-- hreflang tags for international SEO -->
+<!-- English Canada (primary) -->
+<link rel="alternate" hreflang="en-CA" href="{{ page.url | absolute_url }}" />
+
+<!-- French Canada -->
+{% assign fr_url = page.url | replace: '/index.html', '/' %}
+{% if page.lang == 'fr' %}
+<link rel="alternate" hreflang="fr-CA" href="{{ page.url | absolute_url }}" />
+<link rel="alternate" hreflang="en-CA" href="{{ page.url | replace: '/fr/', '/' | absolute_url }}" />
+{% else %}
+<link rel="alternate" hreflang="fr-CA" href="{{ '/fr' | append: page.url | absolute_url }}" />
+{% endif %}
+
+<!-- USA (when available) -->
+{% if page.usa_lite_available %}
+<link rel="alternate" hreflang="en-US" href="{{ page.url | absolute_url }}?region=us" />
+{% endif %}
+
+<!-- Default fallback (English Canada) -->
+<link rel="alternate" hreflang="x-default" href="{{ page.url | replace: '/fr/', '/' | absolute_url }}" />
+
+<!-- Future language expansions (add as they go live) -->
+<!-- 
+<link rel="alternate" hreflang="es" href="{{ page.url | absolute_url }}" />
+<link rel="alternate" hreflang="ar" href="{{ page.url | absolute_url }}" />
+<link rel="alternate" hreflang="zh-CN" href="{{ page.url | absolute_url }}" />
+-->
