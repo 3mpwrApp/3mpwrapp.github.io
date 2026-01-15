@@ -121,6 +121,12 @@
 /public/*.json
   Cache-Control: public, max-age=300, must-revalidate
 
+# Android App Links - assetlinks.json must be JSON and publicly accessible
+/.well-known/assetlinks.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+
 # Updates database - cache for 10 minutes
 /_data/updates.yml
   Cache-Control: public, max-age=600, must-revalidate
