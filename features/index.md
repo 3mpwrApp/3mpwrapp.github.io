@@ -19,6 +19,30 @@ Your complete toolkit for disability advocacy, community connection, and system 
 
 ---
 
+## Complexity Modes
+
+Choose the right feature set for your needs and energy level:
+
+| Tab | ✅ Core Features | 🔋 Simple Mode | 📊 Standard Mode | 🚀 Power User |
+|-----|------------------|----------------|------------------|---------------|
+| 🏠 **Home**      | Dashboard, Quick Actions | ✅ | ✅ | ✅ |
+| 📢 **Campaigns** | Every Canadian Counts, TBDIWSG Events | ❌ | ✅ (5) | ✅ (All) |
+| 👥 **Community** | Beta Chat, Support Groups | ✅ (1) | ✅ (3) | ✅ (8+) |
+| 📚 **Resources** | Master Tracker Hub, Letter Wizard, Appeal Command Center | ✅ (2) | ✅ (5) | ✅ (All) |
+| 🔬 **Research** | 96 External Resources | ✅ (2) | ✅ (5) | ✅ (All) |
+| 💪 **Wellness** | Wellness Hub (6 categories) | ✅ (1) | ✅ (4) | ✅ (All) |
+| ⚖️ **Advocacy** | Evidence Locker, Legal Tools | ✅ (1) | ✅ (3) | ✅ (All) |
+| ⚙️ **Settings** | Complexity Mode, Profile, Accessibility | ✅ | ✅ | ✅ |
+| 🆕 **What's New** | Updates, Changelog | ✅ | ✅ | ✅ |
+
+**🔋 Simple Mode (5 features)** - For bad days, flare-ups, brain fog  
+**📊 Standard Mode (20 features)** - For most users most of the time  
+**🚀 Power User Mode (150+ features)** - Everything unlocked
+
+**[Learn how to switch modes →](/user-guide/#complexity-mode)**
+
+---
+
 ## PowerTools Hubs
 
 ### 🧘 [Wellness Hub](/user-guide/#wellness-hub)
@@ -158,30 +182,6 @@ Configurable inactivity alerts with emergency contact notifications to keep your
 - **[App Tour](/app-tour/)** - Visual tour with 100+ screenshots
 - **[Beta Testing](/beta-guide/)** - Join our beta program
 - **[FAQ](/faq/)** - Frequently asked questions
-
----
-
-## Complexity Modes
-
-Choose the right feature set for your needs and energy level:
-
-| Tab | ✅ Core Features | 🔋 Simple Mode | 📊 Standard Mode | 🚀 Power User |
-|-----|------------------|----------------|------------------|---------------|
-| 🏠 **Home**      | Dashboard, Quick Actions | ✅ | ✅ | ✅ |
-| 📢 **Campaigns** | Every Canadian Counts, TBDIWSG Events | ❌ | ✅ (5) | ✅ (All) |
-| 👥 **Community** | Beta Chat, Support Groups | ✅ (1) | ✅ (3) | ✅ (8+) |
-| 📚 **Resources** | Master Tracker Hub, Letter Wizard, Appeal Command Center | ✅ (2) | ✅ (5) | ✅ (All) |
-| 🔬 **Research** | 96 External Resources | ✅ (2) | ✅ (5) | ✅ (All) |
-| 💪 **Wellness** | Wellness Hub (6 categories) | ✅ (1) | ✅ (4) | ✅ (All) |
-| ⚖️ **Advocacy** | Evidence Locker, Legal Tools | ✅ (1) | ✅ (3) | ✅ (All) |
-| ⚙️ **Settings** | Complexity Mode, Profile, Accessibility | ✅ | ✅ | ✅ |
-| 🆕 **What's New** | Updates, Changelog | ✅ | ✅ | ✅ |
-
-**🔋 Simple Mode (5 features)** - For bad days, flare-ups, brain fog  
-**📊 Standard Mode (20 features)** - For most users most of the time  
-**🚀 Power User Mode (150+ features)** - Everything unlocked
-
-**[Learn how to switch modes →](/user-guide/#complexity-mode)**
 
 ---
 

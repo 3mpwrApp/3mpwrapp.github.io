@@ -48,6 +48,27 @@ It's built for survivors, activists, and anyone seeking justice, support, and co
 
 ---
 
+### Is Empowr finished?
+
+**97% complete!** (145 of 150 features done as of January 15, 2026)
+
+**✅ What's Done:**
+- All 6 PowerTools hubs (Legal Action Hub, Wellness Hub, Document Management, Evidence Locker, Support Groups, Master Tracker Hub)
+- 41 wellness tools across 6 categories
+- Community chat & support groups
+- Accessibility features (WCAG AAA compliant)
+- Complexity modes (Simple/Standard/Power User)
+
+**🚧 What's Coming:**
+- 5 remaining features in final polish
+- Enhanced AI features
+- More languages
+
+**Quality:** 721 tests passing, 0 errors, 0 warnings  
+**[See What's New →](/whats-new/)**
+
+---
+
 ### Who is Empowr for?
 
 Empowr is designed for:
@@ -90,6 +111,8 @@ Into 5 organized tabs instead of 5 separate screens.
 
 **Why?** Less app navigation, more focus on what you need.
 
+**All 6 PowerTools are now complete!** [See full list below →](#what-are-the-powertools-hubs)
+
 ---
 
 ### Can I use Empowr offline?
@@ -121,22 +144,33 @@ Currently: **English, Spanish, French, ASL**
 
 **PowerTools are consolidated hubs that organize related features into one intuitive interface.**
 
-Currently available:
-1. **Legal Action Hub** (Advocacy tab)
+All 6 PowerTools hubs are now complete:
+
+1. **Master Tracker Hub** (Resources tab)
+   - 4 tabs: Cases, Calendar, Documents, Reports
+   - Consolidated view of all your data
+
+2. **Legal Action Hub** (Advocacy tab)
    - 5 tabs: Accountability, Coach, Legal Help, Automation, Policy
    - Consolidates 12 legal screens into organized hub
 
-2. **Wellness Hub** (Wellness tab)
+3. **Wellness Hub** (Wellness tab)
    - 6 categories organizing 41 wellness tools
    - Mental Health & Crisis, Energy & Pain, Daily Living, Physical Health, Communication & Growth, Specialty
 
-3. **Evidence Command Center** (Resources tab)
+4. **Document Management** (Resources tab)
+   - Upload, organize, categorize all documents
+   - Medical, legal, evidence, personal files
+   - Encrypted storage, easy search
+
+5. **Evidence Locker** (Advocacy tab)
    - 4 tabs: Capture, Organize, Analyze, Share
    - Consolidates evidence and documentation tools
 
-4. **Ally & Support Network** (Community tab)
-   - Peer Mentor Discovery (150+ mentors)
-   - Support Groups (24 groups with filtering)
+6. **Support Groups** (Community tab)
+   - 24+ active support groups
+   - Advanced filtering by topic, language, meeting time
+   - Integrated with Peer Mentor Discovery
 
 ---
 
