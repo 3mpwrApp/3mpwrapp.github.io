@@ -15,7 +15,8 @@ lastUpdated: 2026-01-15
 Step-by-step tutorials for using all app features. Each section includes clear instructions, tips, and troubleshooting help.
 
 > 🆕 **What's New?** PowerTools complete! [See latest updates →](/whats-new/)  
-> 📋 **Feature List:** [Browse all features →](/features/)
+> 📋 **Feature List:** [Browse all features →](/features/)  
+> 🧪 **Beta Testing:** [Join our beta program →](/beta-guide/)
 
 ---
 
@@ -893,5 +894,15 @@ Step-by-step tutorials for using all app features. Each section includes clear i
 - Complexity Mode matches your capacity
 
 ---
+
+---
+
+## Related Pages
+
+- **[Features](/features/)** - Browse all features with descriptions
+- **[Beta Testing Guide](/beta-guide/)** - Test features and provide feedback
+- **[What's New](/whats-new/)** - Latest updates and release history
+- **[FAQ](/faq/)** - Frequently asked questions
+- **[Contact](mailto:empowrapp08162025@gmail.com)** - Get support
 
 **Need more help?** Check [FAQ](/faq/) or email empowrapp08162025@gmail.com

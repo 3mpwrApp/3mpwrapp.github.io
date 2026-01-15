@@ -182,3 +182,13 @@ Choose the right feature set for your needs and energy level:
 **🚀 Power User Mode (150+ features)** - Everything unlocked
 
 **[Learn how to switch modes →](/user-guide/#complexity-mode)**
+
+---
+
+## Related Pages
+
+- **[User Guide](/user-guide/)** - Step-by-step tutorials for all features
+- **[Beta Testing](/beta-guide/)** - Test features and provide feedback
+- **[What's New](/whats-new/)** - Latest updates and release history
+- **[App Tour](/app-tour/)** - Visual tour with 100+ screenshots
+- **[FAQ](/faq/)** - Frequently asked questions

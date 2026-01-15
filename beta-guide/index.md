@@ -17,6 +17,10 @@ Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join 
 
 > 🎉 **January 2026 Update:** Week 3 PowerTools complete! Wellness Hub with 6 categories consolidating 41 tools, Document Management System, Wellness Check System, Legal Action Hub, and Ally & Support Network all live. 721 tests passing, 0 errors, 0 warnings. Project 97% complete. **NEW: All wellness tools organized into intuitive categories, support groups with advanced filtering, and seamless document management!**
 
+> 📖 **Resources for Testers:**  
+> [User Guide](/user-guide/) - Step-by-step tutorials for all features  
+> [Features List](/features/) - Browse all features with descriptions
+
 ---
 
 ## 📧 How to Join Beta Testing
@@ -67,18 +71,18 @@ Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join 
 
 ### 🆕 **PRIORITY: January 2026 PowerTools** (Test These First!)
 
-**🌟 Wellness Hub (15 minutes)**
+**🌟 Wellness Hub (15 minutes)** → [User Guide: Wellness Hub](/user-guide/#wellness-hub)
 - Go to Wellness tab → Browse 6 categories
 - **Mental Health & Crisis** - Try AI Companion, Emotional First Aid, Grief Support
-- **Energy & Pain** - Test Energy Coins, Pacing Partner, Pain Forecast
+- **Energy & Pain** - Test Energy Coins, [Pacing Partner](/user-guide/#pacing-partner), Pain Forecast
 - **Daily Living** - Try Daily Planner, Work-Life Balance
-- **Physical Health** - Test Exercise Hub, Symptom Tracker, Meds Tracker
-- **Communication & Growth** - Explore DBT Skills, CBT Tools
+- **Physical Health** - Test [Exercise Hub](/user-guide/#exercise-hub), Symptom Tracker, Meds Tracker
+- **Communication & Growth** - Explore DBT Skills, [CBT Tools](/user-guide/#cbt-coach)
 - **Specialty** - Try Rehab Games, Ambience Sync
 - Check if search finds tools across all categories
 - Verify old wellness tool links redirect correctly
 
-**📁 Document Management (10 minutes)**
+**📁 Document Management (10 minutes)** → [User Guide: Document Management](/user-guide/#document-management)
 - Go to Resources → Document Manager
 - Upload a test PDF or image
 - Try categorizing it (medical, legal, evidence)
@@ -86,14 +90,14 @@ Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join 
 - Test retrieval and organization
 - Verify encryption notice appears
 
-**💚 Wellness Check System (10 minutes)**
+**💚 Wellness Check System (10 minutes)** → [User Guide: Wellness Checks](/user-guide/#wellness-checks)
 - Go to Settings → Wellness Checks
 - Set up an inactivity alert (e.g., 7 days)
 - Add a test emergency contact
 - Review privacy controls
 - Test notification preferences
 
-**⚖️ Legal Action Hub (15 minutes)**
+**⚖️ Legal Action Hub (15 minutes)** → [User Guide: Legal Action Hub](/user-guide/#legal-action-hub)
 - Go to Advocacy → Legal Action Hub
 - **Accountability Tracker** - Create a test case
 - **Legal Coach** - Browse communication scripts
