@@ -159,40 +159,44 @@ permalink: /gdrive-callback.html
 
         // Function to redirect to native app via deep link
         function redirectToNativeApp(token, err) {
-            let deepLink;
             let params = '';
             
+            // ALWAYS use query string for Android compatibility
+            // Hash fragments don't work well with intent:// URLs
             if (token) {
                 params = 'access_token=' + encodeURIComponent(token);
                 if (expiresIn) params += '&expires_in=' + expiresIn;
                 if (tokenType) params += '&token_type=' + tokenType;
-                deepLink = 'empowrapp://gdrive-callback#' + params;
             } else if (err) {
                 params = 'error=' + encodeURIComponent(err);
-                deepLink = 'empowrapp://gdrive-callback?' + params;
             } else {
-                deepLink = 'empowrapp://gdrive-callback?error=unknown';
+                params = 'error=unknown';
             }
             
-            console.log('[GDrive Callback] Redirecting to native app:', deepLink);
+            // Use query string format for all deep links (more reliable on Android)
+            const deepLink = 'empowrapp://gdrive-callback?' + params;
             
-            // For Android, also try intent:// scheme which is more reliable
+            console.log('[GDrive Callback] Redirecting to native app:', deepLink);
+            console.log('[GDrive Callback] Is Android:', isAndroid);
+            
+            // For Android, try intent:// scheme with query params
             if (isAndroid) {
-                const intentUrl = 'intent://gdrive-callback' + 
-                    (token ? '#' + params : '?' + params) + 
-                    '#Intent;scheme=empowrapp;package=com.app3mpwr.app3mpwr;end';
+                // Intent URL format: intent://path?params#Intent;scheme=xxx;package=xxx;end
+                const intentUrl = 'intent://gdrive-callback?' + params + '#Intent;scheme=empowrapp;package=com.app3mpwr.app3mpwr;end';
                 console.log('[GDrive Callback] Android intent URL:', intentUrl);
                 
-                // Try intent:// first for Android
+                // Try intent:// first for Android (most reliable in Custom Tabs)
                 try {
                     window.location.href = intentUrl;
+                    console.log('[GDrive Callback] Intent redirect initiated');
                 } catch (e) {
                     console.error('[GDrive Callback] Intent redirect failed:', e);
                 }
             }
             
-            // Also try regular deep link
+            // Also try regular deep link after a short delay
             setTimeout(function() {
+                console.log('[GDrive Callback] Trying regular deep link...');
                 try {
                     var a = document.createElement('a');
                     a.href = deepLink;
@@ -204,11 +208,13 @@ permalink: /gdrive-callback.html
                 } catch (e) {
                     console.error('[GDrive Callback] Anchor click failed:', e);
                 }
-            }, 200);
+            }, 300);
             
+            // Fallback: try window.location
             setTimeout(function() {
+                console.log('[GDrive Callback] Trying window.location...');
                 window.location.href = deepLink;
-            }, 400);
+            }, 600);
             
             // Show success after a delay
             setTimeout(function() {
