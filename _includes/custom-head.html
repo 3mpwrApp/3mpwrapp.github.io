@@ -9,6 +9,13 @@ We add favicons, webmanifest, and optional GA4 (via analytics.html).
 {%- comment -%} International SEO: hreflang tags for language/region targeting {%- endcomment -%}
 {%- include hreflang-tags.html -%}
 
+{%- comment -%} Complexity Mode for Cognitive Accessibility {%- endcomment -%}
+<link rel="stylesheet" href="{{ '/assets/css/complexity-mode.css' | relative_url }}">
+<script src="{{ '/assets/js/complexity-mode.js' | relative_url }}" defer></script>
+
+{%- comment -%} Open Graph Social Share Tags {%- endcomment -%}
+{%- include social-share-tags.html -%}
+
 {%- comment -%} Microsoft Clarity - Privacy-friendly analytics (free, unlimited) {%- endcomment -%}
 {% if jekyll.environment == 'production' %}
 <script type="text/javascript">

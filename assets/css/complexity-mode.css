@@ -1,0 +1,333 @@
+/**
+ * Complexity Mode Styles
+ * WCAG 2.2 AAA compliant
+ * Reduces cognitive load for users with brain fog, fatigue, or cognitive disabilities
+ */
+
+/* ==========================================================================
+   Complexity Toggle Button
+   ========================================================================== */
+
+#complexity-toggle {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 999;
+  
+  background: linear-gradient(135deg, #3d4eaa 0%, #4a2867 100%);
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  padding: 12px 20px;
+  
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  
+  min-width: 160px;
+  min-height: 44px;
+}
+
+#complexity-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  border-color: #ffd54f;
+}
+
+#complexity-toggle:focus {
+  outline: 3px solid #ffd54f;
+  outline-offset: 2px;
+  border-color: #ffd54f;
+}
+
+.complexity-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.complexity-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.complexity-hint {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  #complexity-toggle {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    min-width: 140px;
+    padding: 10px 16px;
+  }
+  
+  .complexity-label {
+    font-size: 0.85rem;
+  }
+  
+  .complexity-hint {
+    font-size: 0.7rem;
+  }
+}
+
+/* ==========================================================================
+   Screen Reader Announcer (visually hidden)
+   ========================================================================== */
+
+#complexity-announcer {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Content Visibility by Mode
+   ========================================================================== */
+
+/* Simple Mode - Hide detailed content */
+body.complexity-simple .content-detailed,
+body.complexity-simple [data-complexity="detailed"] {
+  display: none !important;
+}
+
+/* Simple Mode - Show simplified content */
+body.complexity-simple .content-simple,
+body.complexity-simple [data-complexity="simple"] {
+  display: block !important;
+}
+
+/* Standard Mode - Hide simple-only content */
+body.complexity-standard .content-simple,
+body.complexity-standard [data-complexity="simple"] {
+  display: none !important;
+}
+
+/* Standard Mode - Show standard and detailed (but collapsed) */
+body.complexity-standard .content-detailed,
+body.complexity-standard [data-complexity="detailed"],
+body.complexity-standard .content-standard,
+body.complexity-standard [data-complexity="standard"] {
+  display: block !important;
+}
+
+/* Detailed Mode - Show everything */
+body.complexity-detailed .content-simple {
+  display: none !important;
+}
+
+body.complexity-detailed .content-detailed,
+body.complexity-detailed [data-complexity="detailed"],
+body.complexity-detailed .content-standard,
+body.complexity-detailed [data-complexity="standard"] {
+  display: block !important;
+}
+
+/* ==========================================================================
+   Progressive Disclosure (details/summary)
+   ========================================================================== */
+
+details.auto-collapse {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--bg-elevated, #f8f9fa);
+  border: 2px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+details.auto-collapse:hover {
+  border-color: var(--brand-color, #3d4eaa);
+}
+
+details.auto-collapse summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  
+  /* Accessibility */
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+details.auto-collapse summary:hover {
+  background: rgba(61, 78, 170, 0.1);
+}
+
+details.auto-collapse summary:focus {
+  outline: 3px solid #ffd54f;
+  outline-offset: 2px;
+  background: rgba(61, 78, 170, 0.15);
+}
+
+/* Expand/collapse icon */
+details.auto-collapse summary::before {
+  content: '▶';
+  display: inline-block;
+  width: 1em;
+  transition: transform 0.2s ease;
+  color: var(--brand-color, #3d4eaa);
+}
+
+details.auto-collapse[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Content inside details */
+details.auto-collapse .details-content {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color, #e0e0e0);
+}
+
+/* ==========================================================================
+   Simple Language Styles
+   ========================================================================== */
+
+.content-simple {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 65ch;
+}
+
+.content-simple h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.content-simple h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.content-simple p {
+  margin-bottom: 1.5rem;
+}
+
+.content-simple ul,
+.content-simple ol {
+  margin-left: 0;
+  padding-left: 1.5em;
+}
+
+.content-simple li {
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   Mode-Specific Adjustments
+   ========================================================================== */
+
+/* Simple Mode: Larger fonts, more spacing */
+body.complexity-simple {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+body.complexity-simple h1 {
+  font-size: 2rem;
+}
+
+body.complexity-simple h2 {
+  font-size: 1.5rem;
+}
+
+body.complexity-simple h3 {
+  font-size: 1.25rem;
+}
+
+/* Standard Mode: Default styling */
+body.complexity-standard {
+  /* Uses default site styles */
+}
+
+/* Detailed Mode: Compact, information-dense */
+body.complexity-detailed {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+body.complexity-detailed details.auto-collapse {
+  margin: 1rem 0;
+  padding: 0.75rem;
+}
+
+/* ==========================================================================
+   Dark Mode Support
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  details.auto-collapse {
+    background: var(--bg-elevated, #1a202c);
+    border-color: var(--border-color, #2d3748);
+  }
+  
+  details.auto-collapse summary:hover {
+    background: rgba(61, 78, 170, 0.2);
+  }
+}
+
+/* ==========================================================================
+   High Contrast Mode
+   ========================================================================== */
+
+body[data-contrast="high"] #complexity-toggle {
+  background: #000 !important;
+  color: #fff !important;
+  border: 4px solid #fff !important;
+}
+
+body[data-contrast="high"] #complexity-toggle:hover,
+body[data-contrast="high"] #complexity-toggle:focus {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+body[data-contrast="high"] details.auto-collapse {
+  background: #000 !important;
+  border: 3px solid #fff !important;
+  color: #fff !important;
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  #complexity-toggle {
+    display: none !important;
+  }
+  
+  /* Print detailed view always */
+  .content-detailed,
+  [data-complexity="detailed"] {
+    display: block !important;
+  }
+  
+  details.auto-collapse {
+    border: 1px solid #000;
+  }
+  
+  details.auto-collapse[open] summary::before {
+    content: '';
+  }
+}

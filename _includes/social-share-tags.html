@@ -1,0 +1,89 @@
+{%- comment -%}
+Open Graph and Twitter Card Meta Tags for Rich Social Sharing
+Generates custom tags per page for optimal social media previews
+{%- endcomment -%}
+
+{%- comment -%} Default values {%- endcomment -%}
+{%- assign og_title = page.title | default: site.title -%}
+{%- assign og_description = page.description | default: site.description -%}
+{%- assign og_url = page.url | absolute_url -%}
+{%- assign og_type = "website" -%}
+{%- assign og_image = site.url | append: '/assets/images/social-share-default.png' -%}
+{%- assign og_image_alt = "3mpwrApp - Community-powered support for injured workers and persons with disabilities" -%}
+
+{%- comment -%} Page-specific overrides {%- endcomment -%}
+{%- if page.url == '/' or page.url == '/index.html' -%}
+  {%- assign og_title = "3mpwrApp - Community-Powered Disability Support" -%}
+  {%- assign og_description = "Free platform connecting injured workers & persons with disabilities across Canada. 60+ tools, revolutionary accessibility, 100% community-built. Join thousands in beta." -%}
+  {%- assign og_image = site.url | append: '/assets/images/social-share-home.png' -%}
+  {%- assign og_image_alt = "3mpwrApp homepage showing community members connecting, accessibility tools, and disability advocacy resources" -%}
+{%- elsif page.url contains '/about' -%}
+  {%- assign og_title = "About 3mpwrApp - Nothing About Us Without Us" -%}
+  {%- assign og_description = "Built by injured workers & disabled people, for the community. Learn our story, meet the team, and discover how we're changing disability support in Canada." -%}
+  {%- assign og_image = site.url | append: '/assets/images/social-share-about.png' -%}
+  {%- assign og_image_alt = "3mpwrApp team and community members with text: Nothing About Us Without Us" -%}
+{%- elsif page.url contains '/features' -%}
+  {%- assign og_title = "60+ Features - 3mpwrApp" -%}
+  {%- assign og_description = "Evidence Locker, Pain Tracker, Brain Fog Helper, Legal Resources, Community Support, and 55+ more tools designed BY disabled people FOR disabled people." -%}
+  {%- assign og_image = site.url | append: '/assets/images/social-share-features.png' -%}
+  {%- assign og_image_alt = "Grid of 3mpwrApp features including accessibility tools, health tracking, legal resources, and community support" -%}
+{%- elsif page.url contains '/accessibility' -%}
+  {%- assign og_title = "Revolutionary Accessibility - 3mpwrApp" -%}
+  {%- assign og_description = "WCAG AAA 82% compliant. Brain Fog Helper, Pain Flare Mode, Spoons Tracker, Need a Break Button. Accessibility features you won't find anywhere else." -%}
+  {%- assign og_image = site.url | append: '/assets/images/social-share-accessibility.png' -%}
+  {%- assign og_image_alt = "3mpwrApp accessibility badge showing WCAG AAA 82% compliance with innovative disability features" -%}
+{%- elsif page.url contains '/app-waitlist' or page.url contains '/beta' -%}
+  {%- assign og_title = "Join the Beta - 3mpwrApp" -%}
+  {%- assign og_description = "Be among the first to access 3mpwrApp's revolutionary disability support platform. Public beta now open. 100% free forever. Your voice shapes the future." -%}
+  {%- assign og_image = site.url | append: '/assets/images/social-share-beta.png' -%}
+  {%- assign og_image_alt = "Join 3mpwrApp Beta - Limited spots available for injured workers and persons with disabilities" -%}
+{%- elsif page.url contains '/contact' -%}
+  {%- assign og_title = "Contact 3mpwrApp - We're Here to Help" -%}
+  {%- assign og_description = "Get in touch with the 3mpwrApp team. Questions, feedback, partnerships, or support - we respond within 24 hours." -%}
+{%- elsif page.url contains '/events' -%}
+  {%- assign og_title = "Community Events - 3mpwrApp" -%}
+  {%- assign og_description = "Weekly support groups, advocacy workshops, and community gatherings for injured workers and persons with disabilities. Virtual and in-person options." -%}
+{%- elsif page.url contains '/campaigns' -%}
+  {%- assign og_title = "Advocacy Campaigns - 3mpwrApp" -%}
+  {%- assign og_description = "Join the fight for disability rights. Active campaigns for WSIB reform, ODSP increases, accessibility legislation, and systemic change." -%}
+{%- endif -%}
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:site_name" content="3mpwrApp">
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ og_description }}">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:alt" content="{{ og_image_alt }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA">
+{%- if page.lang == 'fr' -%}
+<meta property="og:locale:alternate" content="fr_CA">
+{%- else -%}
+<meta property="og:locale:alternate" content="fr_CA">
+{%- endif -%}
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpwrApp">
+<meta name="twitter:creator" content="@ODSPoor">
+<meta name="twitter:title" content="{{ og_title }}">
+<meta name="twitter:description" content="{{ og_description }}">
+<meta name="twitter:image" content="{{ og_image }}">
+<meta name="twitter:image:alt" content="{{ og_image_alt }}">
+
+<!-- Additional Meta for Rich Previews -->
+<meta property="article:publisher" content="https://www.facebook.com/3mpwrApp">
+{%- if page.date -%}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- endif -%}
+{%- if page.modified_date -%}
+<meta property="article:modified_time" content="{{ page.modified_date | date_to_xmlschema }}">
+{%- endif -%}
+
+<!-- Facebook App ID (if available) -->
+{%- if site.facebook_app_id -%}
+<meta property="fb:app_id" content="{{ site.facebook_app_id }}">
+{%- endif -%}
