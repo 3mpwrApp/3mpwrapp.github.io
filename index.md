@@ -4,40 +4,40 @@ title: 3mpwrApp - Community Support for Injured Workers & Persons with Disabilit
 description: Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy.
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}">
+
 {%- include complexity-toggle.html -%}
 {%- include status-banner.html -%}
 
 <!-- Hero Section -->
-<section class="hero" style="text-align: center; padding: 3rem 1rem; background: linear-gradient(135deg, rgba(61, 78, 170, 0.05) 0%, rgba(74, 40, 103, 0.05) 100%); border-radius: 16px; margin-bottom: 3rem;">
+<section class="homepage-hero">
   <picture>
     <source type="image/webp" srcset="{{ '/assets/empwrapp-logo.webp' | relative_url }}">
     <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="140" height="140" loading="eager" style="margin-bottom: 1.5rem;">
   </picture>
   
-  <h1 style="font-size: 2.5rem; margin: 0 0 1rem; color: var(--text-color); line-height: 1.2;">
-    You're Not Alone. Your Voice Matters.
-  </h1>
+  <h1>You're Not Alone. Your Voice Matters.</h1>
   
-  <p style="font-size: 1.25rem; max-width: 700px; margin: 0 auto 2rem; color: var(--text-secondary); line-height: 1.6;">
+  <p class="homepage-hero-subtitle">
     Free community-powered support for injured workers, persons with disabilities, and allies across Canada
   </p>
   
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-    <a href="/app-waitlist/" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #3d4eaa 0%, #2d3a7a 100%); color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(61, 78, 170, 0.3); transition: transform 0.2s, box-shadow 0.2s;">
+    <a href="/app-waitlist/" class="homepage-btn-primary">
       <span>Join the Beta</span>
       <span aria-hidden="true">→</span>
     </a>
-    <a href="/about/" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: #3d4eaa; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border: 2px solid #3d4eaa; transition: all 0.2s;">
+    <a href="/about/" class="homepage-btn-secondary">
       <span>Learn More</span>
     </a>
   </div>
   
-  <div style="margin-top: 2rem; padding: 1rem; background: rgba(255, 255, 255, 0.8); border-radius: 8px; display: inline-block;">
-    <p style="margin: 0; font-weight: 600; color: #2e7d32;">
+  <div class="homepage-badge">
+    <p>
       <span aria-hidden="true">💚</span> 100% Free Forever
-      <span style="margin: 0 1rem; opacity: 0.3;">|</span>
+      <span style="margin: 0 1rem; opacity: 0.5;">|</span>
       <span aria-hidden="true">🇨🇦</span> Built for Canada
-      <span style="margin: 0 1rem; opacity: 0.3;">|</span>
+      <span style="margin: 0 1rem; opacity: 0.5;">|</span>
       <span aria-hidden="true">♿</span> Accessibility First
     </p>
   </div>
@@ -52,10 +52,10 @@ description: Free community-powered platform connecting injured workers, persons
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
     
     <!-- Card 1: Community -->
-    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); transition: transform 0.2s, box-shadow 0.2s;">
+    <div class="homepage-value-card">
       <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
-      <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #3d4eaa;">Built BY Community, FOR Community</h3>
-      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+      <h3>Built BY Community, FOR Community</h3>
+      <p>
         Created by someone who lived it. Every feature designed with real experiences from injured workers and disabled people.
       </p>
       <a href="/about/" style="color: #3d4eaa; text-decoration: none; font-weight: 600;">
@@ -64,10 +64,10 @@ description: Free community-powered platform connecting injured workers, persons
     </div>
     
     <!-- Card 2: Tools -->
-    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); transition: transform 0.2s, box-shadow 0.2s;">
+    <div class="homepage-value-card">
       <div style="font-size: 3rem; margin-bottom: 1rem;">🛠️</div>
-      <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #047857;">60+ Practical Tools</h3>
-      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+      <h3>60+ Practical Tools</h3>
+      <p>
         Evidence locker, pain tracker, medication manager, legal resources, and more. Everything you need in one place.
       </p>
       <a href="/features/" style="color: #047857; text-decoration: none; font-weight: 600;">
@@ -76,10 +76,10 @@ description: Free community-powered platform connecting injured workers, persons
     </div>
     
     <!-- Card 3: Accessibility -->
-    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); transition: transform 0.2s, box-shadow 0.2s;">
+    <div class="homepage-value-card">
       <div style="font-size: 3rem; margin-bottom: 1rem;">♿</div>
-      <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #9333ea;">Revolutionary Accessibility</h3>
-      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+      <h3>Revolutionary Accessibility</h3>
+      <p>
         Built for brain fog, chronic pain, and fatigue. Complexity toggle, need-a-break button, and pain flare mode.
       </p>
       <a href="/accessibility/" style="color: #9333ea; text-decoration: none; font-weight: 600;">
@@ -91,8 +91,8 @@ description: Free community-powered platform connecting injured workers, persons
 </section>
 
 <!-- Quick Stats -->
-<section class="stats" style="background: linear-gradient(135deg, #3d4eaa 0%, #4a2867 100%); color: white; padding: 3rem 2rem; border-radius: 16px; margin-bottom: 4rem; text-align: center;">
-  <h2 style="font-size: 2rem; margin-bottom: 2rem; color: white;">Our Impact</h2>
+<section class="homepage-stats">
+  <h2>Our Impact</h2>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
     <div>
       <div style="font-size: 3rem; font-weight: bold; margin-bottom: 0.5rem;">60+</div>
@@ -118,8 +118,8 @@ description: Free community-powered platform connecting injured workers, persons
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
     
     <!-- Events Column -->
-    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
-      <h2 style="margin-top: 0; color: white; font-size: 1.75rem; margin-bottom: 1rem;">
+    <div class="homepage-events-box">
+      <h2>
         <span aria-hidden="true">📅</span> This Week's Events
       </h2>
       <p style="opacity: 0.9; margin-bottom: 1.5rem;">Community meetups, support groups, and advocacy gatherings</p>
@@ -128,14 +128,14 @@ description: Free community-powered platform connecting injured workers, persons
         <p>Loading upcoming events...</p>
       </div>
       
-      <a href="/events/" style="display: inline-block; margin-top: 1.5rem; padding: 12px 24px; background: white; color: #667eea; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s;">
+      <a href="/events/" class="homepage-box-link">
         View Full Calendar →
       </a>
     </div>
     
     <!-- Campaigns Column -->
-    <div style="background: linear-gradient(135deg, #047857 0%, #065f46 100%); color: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
-      <h2 style="margin-top: 0; color: white; font-size: 1.75rem; margin-bottom: 1rem;">
+    <div class="homepage-campaigns-box">
+      <h2>
         <span aria-hidden="true">✊</span> Active Campaigns
       </h2>
       <p style="opacity: 0.9; margin-bottom: 1.5rem;">Join us in advocating for disability rights and policy change</p>
@@ -144,7 +144,7 @@ description: Free community-powered platform connecting injured workers, persons
         <p>Loading advocacy campaigns...</p>
       </div>
       
-      <a href="/campaigns/" style="display: inline-block; margin-top: 1.5rem; padding: 12px 24px; background: white; color: #047857; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s;">
+      <a href="/campaigns/" class="homepage-box-link">
         All Campaigns →
       </a>
     </div>
@@ -160,50 +160,50 @@ description: Free community-powered platform connecting injured workers, persons
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto;">
     
-    <div style="padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 12px; transition: all 0.2s;">
+    <div class="homepage-feature-box">
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🗂️</div>
-      <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #3d4eaa;">Evidence Locker</h3>
-      <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">
+      <h3>Evidence Locker</h3>
+      <p>
         Secure document storage for WSIB claims, medical records, and legal files
       </p>
     </div>
     
-    <div style="padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 12px; transition: all 0.2s;">
+    <div class="homepage-feature-box">
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📊</div>
-      <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #047857;">Pain Tracker</h3>
-      <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">
+      <h3>Pain Tracker</h3>
+      <p>
         Track symptoms daily with visual charts for medical appointments
       </p>
     </div>
     
-    <div style="padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 12px; transition: all 0.2s;">
+    <div class="homepage-feature-box">
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">💊</div>
-      <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #9333ea;">Med Manager</h3>
-      <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">
+      <h3>Med Manager</h3>
+      <p>
         Never miss a dose with smart reminders and refill tracking
       </p>
     </div>
     
-    <div style="padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 12px; transition: all 0.2s;">
+    <div class="homepage-feature-box">
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🤝</div>
-      <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #667eea;">Community</h3>
-      <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">
+      <h3>Community</h3>
+      <p>
         Connect with peers who understand your journey
       </p>
     </div>
     
-    <div style="padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 12px; transition: all 0.2s;">
+    <div class="homepage-feature-box">
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📝</div>
-      <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #dc2626;">Legal Hub</h3>
-      <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">
+      <h3>Legal Hub</h3>
+      <p>
         Know your rights with guides for WSIB, ODSP, and disability law
       </p>
     </div>
     
-    <div style="padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 12px; transition: all 0.2s;">
+    <div class="homepage-feature-box">
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🥄</div>
-      <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #f59e0b;">Spoons Tracker</h3>
-      <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">
+      <h3>Spoons Tracker</h3>
+      <p>
         Manage your energy with spoon theory tracking
       </p>
     </div>
@@ -218,17 +218,17 @@ description: Free community-powered platform connecting injured workers, persons
 </section>
 
 <!-- CTA Section -->
-<section class="cta" style="background: linear-gradient(135deg, rgba(61, 78, 170, 0.1) 0%, rgba(74, 40, 103, 0.1) 100%); padding: 3rem 2rem; border-radius: 16px; text-align: center; margin-bottom: 4rem;">
-  <h2 style="font-size: 2.25rem; margin-bottom: 1rem; color: var(--text-color);">
+<section class="homepage-cta">
+  <h2>
     Ready to Join Our Community?
   </h2>
-  <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; color: var(--text-secondary); line-height: 1.6;">
+  <p>
     Be part of building something meaningful. Your voice matters, your experience counts, and you belong here.
   </p>
-  <a href="/app-waitlist/" style="display: inline-block; background: linear-gradient(135deg, #3d4eaa 0%, #2d3a7a 100%); color: white; padding: 18px 40px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.2rem; box-shadow: 0 4px 16px rgba(61, 78, 170, 0.3); transition: all 0.2s;">
+  <a href="/app-waitlist/" class="homepage-btn-primary" style="display: inline-block; padding: 18px 40px; font-size: 1.2rem;">
     Join the Beta Waitlist →
   </a>
-  <p style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.95rem;">
+  <p style="margin-top: 1.5rem; opacity: 0.9; font-size: 0.95rem;">
     No credit card required • 100% free forever • Cancel anytime (but there's nothing to cancel!)
   </p>
 </section>
@@ -320,9 +320,9 @@ async function loadSimpleEvents() {
       const dateStr = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
       const timeStr = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
       return `
-        <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-          <div style="font-weight: 600; font-size: 1.05rem; margin-bottom: 0.25rem;">${e.title}</div>
-          <div style="opacity: 0.9; font-size: 0.9rem;">📅 ${dateStr} at ${timeStr}</div>
+        <div class="homepage-event-item">
+          <div class="event-title">${e.title}</div>
+          <div class="event-meta">📅 ${dateStr} at ${timeStr}</div>
         </div>
       `;
     }).join('');
