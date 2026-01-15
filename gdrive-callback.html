@@ -115,14 +115,32 @@ permalink: /gdrive-callback.html
 
     <script>
         console.log('[GDrive Callback] Page loaded, parsing response...');
+        console.log('[GDrive Callback] Full URL:', window.location.href);
+        console.log('[GDrive Callback] Hash:', window.location.hash);
+        console.log('[GDrive Callback] Search:', window.location.search);
+        console.log('[GDrive Callback] Has opener:', !!window.opener);
+        console.log('[GDrive Callback] User Agent:', navigator.userAgent);
+        
+        // Detect if this is from a native app (no opener window + mobile)
+        const isNativeApp = !window.opener;
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const isAndroid = /Android/i.test(navigator.userAgent);
+        console.log('[GDrive Callback] Is native app:', isNativeApp);
+        console.log('[GDrive Callback] Is mobile:', isMobile);
+        console.log('[GDrive Callback] Is Android:', isAndroid);
         
         // Parse URL parameters from both query string and hash fragment
         const url = new URL(window.location.href);
         
+        // Check state parameter to see if this is from native app
+        const state = url.searchParams.get('state') || '';
+        const isFromNativeApp = state.startsWith('native_app_') || (isNativeApp && isMobile);
+        console.log('[GDrive Callback] State:', state);
+        console.log('[GDrive Callback] Is from native app:', isFromNativeApp);
+        
         // Code flow: code is in query string
         const code = url.searchParams.get('code');
         const error = url.searchParams.get('error');
-        const state = url.searchParams.get('state');
         const errorDescription = url.searchParams.get('error_description');
         
         // Implicit flow: access_token is in hash fragment
@@ -139,82 +157,160 @@ permalink: /gdrive-callback.html
 
         console.log('[GDrive Callback] Parsed - code:', !!code, 'access_token:', !!accessToken, 'error:', error);
 
+        // Function to redirect to native app via deep link
+        function redirectToNativeApp(token, err) {
+            let deepLink;
+            let params = '';
+            
+            if (token) {
+                params = 'access_token=' + encodeURIComponent(token);
+                if (expiresIn) params += '&expires_in=' + expiresIn;
+                if (tokenType) params += '&token_type=' + tokenType;
+                deepLink = 'empowrapp://gdrive-callback#' + params;
+            } else if (err) {
+                params = 'error=' + encodeURIComponent(err);
+                deepLink = 'empowrapp://gdrive-callback?' + params;
+            } else {
+                deepLink = 'empowrapp://gdrive-callback?error=unknown';
+            }
+            
+            console.log('[GDrive Callback] Redirecting to native app:', deepLink);
+            
+            // For Android, also try intent:// scheme which is more reliable
+            if (isAndroid) {
+                const intentUrl = 'intent://gdrive-callback' + 
+                    (token ? '#' + params : '?' + params) + 
+                    '#Intent;scheme=empowrapp;package=com.app3mpwr.app3mpwr;end';
+                console.log('[GDrive Callback] Android intent URL:', intentUrl);
+                
+                // Try intent:// first for Android
+                try {
+                    window.location.href = intentUrl;
+                } catch (e) {
+                    console.error('[GDrive Callback] Intent redirect failed:', e);
+                }
+            }
+            
+            // Also try regular deep link
+            setTimeout(function() {
+                try {
+                    var a = document.createElement('a');
+                    a.href = deepLink;
+                    a.style.display = 'none';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    console.log('[GDrive Callback] Anchor click triggered');
+                } catch (e) {
+                    console.error('[GDrive Callback] Anchor click failed:', e);
+                }
+            }, 200);
+            
+            setTimeout(function() {
+                window.location.href = deepLink;
+            }, 400);
+            
+            // Show success after a delay
+            setTimeout(function() {
+                loadingEl.style.display = 'none';
+                if (token) {
+                    successEl.style.display = 'block';
+                } else {
+                    errorEl.style.display = 'block';
+                    errorMessageEl.textContent = err || 'Unknown error';
+                }
+            }, 2000);
+        }
+
         // Handle error response
         if (error) {
             console.error('[GDrive Callback] OAuth error:', error, errorDescription);
-            loadingEl.style.display = 'none';
-            errorEl.style.display = 'block';
-            errorMessageEl.textContent = `${error}: ${errorDescription || 'Unknown error'}`;
+            var errMsg = error + ': ' + (errorDescription || 'Unknown error');
             
-            // Send error to opener
-            if (window.opener) {
-                window.opener.postMessage({
-                    type: 'expo-auth-session',
-                    url: window.location.href
-                }, '*');
+            if (isFromNativeApp) {
+                redirectToNativeApp(null, errMsg);
+            } else {
+                loadingEl.style.display = 'none';
+                errorEl.style.display = 'block';
+                errorMessageEl.textContent = errMsg;
+                
+                // Send error to opener
+                if (window.opener) {
+                    window.opener.postMessage({
+                        type: 'expo-auth-session',
+                        url: window.location.href
+                    }, '*');
+                }
+                
+                // Close window after 5 seconds
+                setTimeout(function() { window.close(); }, 5000);
             }
-            
-            // Close window after 5 seconds
-            setTimeout(() => window.close(), 5000);
         }
         // Handle implicit flow success (access_token in hash)
         else if (accessToken) {
-            console.log('[GDrive Callback] Implicit flow - access token received');
-            console.log('[GDrive Callback] Token type:', tokenType);
-            console.log('[GDrive Callback] Expires in:', expiresIn, 'seconds');
-            console.log('[GDrive Callback] Scope:', scope);
+            console.log('[GDrive Callback] Implicit flow - access token received, length:', accessToken.length);
             
-            // Send token back to opener using expo-auth-session message format
-            if (window.opener) {
-                console.log('[GDrive Callback] Sending token to opener window...');
-                window.opener.postMessage({
-                    type: 'expo-auth-session',
-                    url: window.location.href  // Full URL with hash fragment
-                }, '*');
-                console.log('[GDrive Callback] Message sent!');
+            if (isFromNativeApp) {
+                // Redirect to native app with token
+                redirectToNativeApp(accessToken, null);
             } else {
-                console.warn('[GDrive Callback] No opener window found!');
-            }
-            
-            // Show success message
-            setTimeout(() => {
-                loadingEl.style.display = 'none';
-                successEl.style.display = 'block';
+                // Send token back to opener using expo-auth-session message format
+                if (window.opener) {
+                    console.log('[GDrive Callback] Sending token to opener window...');
+                    window.opener.postMessage({
+                        type: 'expo-auth-session',
+                        url: window.location.href  // Full URL with hash fragment
+                    }, '*');
+                    console.log('[GDrive Callback] Message sent!');
+                } else {
+                    console.warn('[GDrive Callback] No opener window found!');
+                }
                 
-                // Close window after 1.5 seconds
-                setTimeout(() => {
-                    console.log('[GDrive Callback] Closing window...');
-                    window.close();
-                }, 1500);
-            }, 500);
+                // Show success message
+                setTimeout(function() {
+                    loadingEl.style.display = 'none';
+                    successEl.style.display = 'block';
+                    
+                    // Close window after 1.5 seconds
+                    setTimeout(function() {
+                        console.log('[GDrive Callback] Closing window...');
+                        window.close();
+                    }, 1500);
+                }, 500);
+            }
         }
         // Handle code flow success (authorization code in query)
         else if (code) {
             console.log('[GDrive Callback] Code flow - authorization code received');
             
-            // Send code back to opener using expo-auth-session message format
-            if (window.opener) {
-                console.log('[GDrive Callback] Sending code to opener window...');
-                window.opener.postMessage({
-                    type: 'expo-auth-session',
-                    url: window.location.href
-                }, '*');
-                console.log('[GDrive Callback] Message sent!');
+            if (isFromNativeApp) {
+                // Redirect to native app with code
+                window.location.href = 'empowrapp://gdrive-callback?code=' + encodeURIComponent(code);
             } else {
-                console.warn('[GDrive Callback] No opener window found!');
-            }
-            
-            // Show success message
-            setTimeout(() => {
-                loadingEl.style.display = 'none';
-                successEl.style.display = 'block';
+                // Send code back to opener using expo-auth-session message format
+                if (window.opener) {
+                    console.log('[GDrive Callback] Sending code to opener window...');
+                    window.opener.postMessage({
+                        type: 'expo-auth-session',
+                        url: window.location.href
+                    }, '*');
+                    console.log('[GDrive Callback] Message sent!');
+                } else {
+                    console.warn('[GDrive Callback] No opener window found!');
+                }
                 
-                // Close window after 1.5 seconds
-                setTimeout(() => {
-                    console.log('[GDrive Callback] Closing window...');
-                    window.close();
-                }, 1500);
-            }, 500);
+                // Show success message
+                setTimeout(function() {
+                    loadingEl.style.display = 'none';
+                    successEl.style.display = 'block';
+                    
+                    // Close window after 1.5 seconds
+                    setTimeout(function() {
+                        console.log('[GDrive Callback] Closing window...');
+                        window.close();
+                    }, 1500);
+                }, 500);
+            }
         }
         // Missing both code and token
         else {
@@ -223,20 +319,26 @@ permalink: /gdrive-callback.html
             console.error('[GDrive Callback] Hash:', url.hash);
             console.error('[GDrive Callback] Search:', url.search);
             
-            loadingEl.style.display = 'none';
-            errorEl.style.display = 'block';
-            errorMessageEl.textContent = 'Authorization code not found in callback.';
+            var errMsg = 'Authorization code not found in callback.';
             
-            // Send error to opener
-            if (window.opener) {
-                window.opener.postMessage({
-                    type: 'expo-auth-session',
-                    url: window.location.href
-                }, '*');
+            if (isFromNativeApp) {
+                redirectToNativeApp(null, errMsg);
+            } else {
+                loadingEl.style.display = 'none';
+                errorEl.style.display = 'block';
+                errorMessageEl.textContent = errMsg;
+                
+                // Send error to opener
+                if (window.opener) {
+                    window.opener.postMessage({
+                        type: 'expo-auth-session',
+                        url: window.location.href
+                    }, '*');
+                }
+                
+                // Close window after 5 seconds
+                setTimeout(function() { window.close(); }, 5000);
             }
-            
-            // Close window after 5 seconds
-            setTimeout(() => window.close(), 5000);
         }
     </script>
 </body>
