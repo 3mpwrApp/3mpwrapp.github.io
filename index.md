@@ -334,17 +334,7 @@ async function loadSimpleEvents() {
 // Simple campaigns loading
 async function loadSimpleCampaigns() {
   const container = document.getElementById('campaigns-simple-container');
-  // Placeholder - replace with actual campaigns API
-  container.innerHTML = `
-    <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-      <div style="font-weight: 600; font-size: 1.05rem; margin-bottom: 0.25rem;">Accessible Transit Now</div>
-      <div style="opacity: 0.9; font-size: 0.9rem;">✊ 234 supporters</div>
-    </div>
-    <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-      <div style="font-weight: 600; font-size: 1.05rem; margin-bottom: 0.25rem;">ODSP Rate Increase</div>
-      <div style="opacity: 0.9; font-size: 0.9rem;">✊ 512 supporters</div>
-    </div>
-  `;
+  container.innerHTML = '<p style="opacity: 0.9;">New campaigns launching soon. Check back!</p>';
 }
 
 if (document.readyState === 'loading') {
