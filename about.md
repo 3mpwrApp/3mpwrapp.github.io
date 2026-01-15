@@ -5,6 +5,16 @@ description: Empowering Canada's disability and injured worker community with 10
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
+---
+layout: default
+title: About
+description: Empowering Canada's disability and injured worker community with 100% free advocacy tools, resources, and connection.
+---
+
+<!-- Complexity Mode Toggle -->
+{%- include complexity-toggle.html -%}
+
+<link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
 
 {%- include status-banner.html -%}
@@ -88,6 +98,26 @@ description: Empowering Canada's disability and injured worker community with 10
 
 ### 💚 Grassroots & Community-Funded
 
+<!-- SIMPLE: Condensed funding overview -->
+<div class="content-simple" data-complexity="simple">
+  <p><strong>3mpwrApp is 100% free forever.</strong> We're funded by community donations and mission-aligned grants - never corporate money or venture capital.</p>
+  
+  <details class="auto-collapse" open>
+    <summary>How We're Funded</summary>
+    <div class="details-content">
+      <ul>
+        <li>✅ <strong>Community donations</strong> - Optional support from those who can afford it</li>
+        <li>✅ <strong>Disability rights grants</strong> - Mission-aligned funding only</li>
+        <li>✅ <strong>Ethical partnerships</strong> - Organizations that respect our values</li>
+        <li>❌ <strong>NO venture capital</strong> - No corporate control or profit motive</li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!-- STANDARD/DETAILED: Full funding grid -->
+<div class="content-detailed" data-complexity="detailed">
+
 <div class="funding-grid">
   <div class="funding-card highlight">
     <div class="funding-icon" aria-hidden="true">🎯</div>
@@ -104,9 +134,38 @@ description: Empowering Canada's disability and injured worker community with 10
   <div class="funding-card">
     <div class="funding-icon" aria-hidden="true">🤝</div>
     <h4>Mission-Aligned Grants</h4>
-    <p>Focused on disability rights and accessibility</p>
-  </div>
+</div>
+<!-- End content-detailed -->
+
+### 🇨🇦 Currently Serving Canada-Wide
+
+<!-- SIMPLE: Quick overview -->
+<div class="content-simple" data-complexity="simple">
+  <p><strong>Everyone is welcome:</strong> persons with disabilities, injured workers, family supporters, allies, advocates, and anyone passionate about disability rights.</p>
   
+  <details class="auto-collapse" open>
+    <summary>Who We Serve</summary>
+    <div class="details-content">
+      <ul>
+        <li>🦽 Persons with all types of disabilities</li>
+        <li>🏗️ Injured workers navigating WSIB/WCB</li>
+        <li>💙 Family supporters and caregivers</li>
+        <li>🤝 Allies committed to disability justice</li>
+        <li>⚖️ Legal advocates and healthcare providers</li>
+      </ul>
+      <p><strong>Canada-focused now, expanding globally 2026-2028.</strong></p>
+    </div>
+  </details>
+</div>
+
+<!-- STANDARD/DETAILED: Full explanation -->
+<div class="content-detailed" data-complexity="detailed">
+
+<p><strong>3mpwrApp welcomes everyone across Canada</strong> - persons with disabilities, injured workers, family supporters, caregivers, allies, union members, healthcare providers, legal advocates, social justice activists, employers committed to accessibility, and anyone passionate about disability rights and workers' rights.</p>
+
+<details class="auto-collapse">
+  <summary>Detailed: Who We Serve & How</summary>
+  <div class="details-content">
   <div class="funding-card">
     <div class="funding-icon" aria-hidden="true">🎯</div>
     <h4>Values-First Partnerships</h4>
@@ -143,10 +202,40 @@ description: Empowering Canada's disability and injured worker community with 10
 - 🌍 **General public** - Anyone learning about disability rights, wanting to support, or seeking resources
 
 **Our approach:** Perfect our platform for Canada first, building the strongest disability rights and workers' rights tool in the nation - serving ALL people who care about these issues. Once we've proven our model works and serves our diverse community effectively, we'll expand globally to support disability rights movements worldwide.
+  </div>
+</details>
+
+</div>
+<!-- End content-detailed for Canada section -->
+
+<!-- Simple mode gets quick USA Lite mention -->
+<div class="content-simple" data-complexity="simple">
+  <p><strong>🆕 USA Lite now available!</strong> Basic features for American supporters. <a href="/roadmap/#-new-usa-lite---now-available">Learn more →</a></p>
+</div>
+
+<!-- Full details for standard/detailed -->
+<div class="content-detailed" data-complexity="detailed">
+
+<p><strong>We understand Canadian systems</strong> (WSIB/WCB, provincial disability programs, EI Sickness Benefits, CPP Disability, ODSP, AISH, and more), Indigenous sovereignty and OCAP principles, French/English language services, and the unique challenges faced by disabled people, injured workers, and their supporters navigating Canadian legal, healthcare, and compensation systems.</p>
+- 🦽 **Persons with disabilities** - All disabilities welcomed: physical, cognitive, mental health, chronic illness, invisible disabilities, and more
+- 🏗️ **Injured workers** - Workplace injuries, occupational diseases, repetitive strain, psychological injuries
+- 💙 **Family supporters & caregivers** - Parents, spouses, partners, siblings, chosen family
+- 🤝 **Allies** - Non-disabled people committed to disability justice and accessibility
+- 🛠️ **Union members** - Collective organizing for workers' rights and disability accommodations
+- 🏥 **Healthcare providers** - Doctors, nurses, therapists, social workers supporting patients
+- ⚖️ **Legal advocates** - Lawyers, paralegals, advocates supporting disability/injury claims
+- ✊ **Social justice activists** - Fighting ableism, workplace exploitation, systemic barriers
+- 🏢 **Employers** - Businesses genuinely committed to accessibility and inclusion
+- 🌍 **General public** - Anyone learning about disability rights, wanting to support, or seeking resources
+
+**Our approach:** Perfect our platform for Canada first, building the strongest disability rights and workers' rights tool in the nation - serving ALL people who care about these issues. Once we've proven our model works and serves our diverse community effectively, we'll expand globally to support disability rights movements worldwide.
 
 **🆕 December 2025 Update:** Following our successful first demo presentation, we've launched **USA Lite** for American supporters! [Learn more →](/roadmap/#-new-usa-lite---now-available)
 
 **What's next?** Check out our **[Roadmap](/roadmap/)** to see our vision for global expansion (2026-2028), including plans to serve 100+ countries and connect disability rights movements internationally. From Canada to the world - building collective power for persons with disabilities, injured workers, and everyone who stands with us.
+
+</div>
+<!-- End content-detailed USA Lite section -->
 
 ---
 

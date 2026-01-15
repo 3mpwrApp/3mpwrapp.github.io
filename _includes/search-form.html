@@ -1,0 +1,188 @@
+<!-- Site Search Form - WCAG 2.2 AAA Compliant -->
+<div class="search-container" role="search">
+  <form 
+    action="/search/" 
+    method="get" 
+    class="search-form"
+    aria-labelledby="search-heading"
+  >
+    <h3 id="search-heading" class="visually-hidden">Search 3mpwrApp</h3>
+    
+    <div class="search-group">
+      <label for="search-query" class="search-label">
+        <span class="visually-hidden">Search our site</span>
+      </label>
+      <div class="input-with-help">
+        <input 
+          type="search" 
+          id="search-query" 
+          name="q" 
+          aria-describedby="search-help-desc search-examples"
+          autocomplete="off"
+          placeholder="Search articles, features, guides..."
+          class="search-input"
+        >
+        <button 
+          type="button" 
+          class="help-button" 
+          aria-label="Help: How to search effectively"
+          onclick="toggleSearchHelp()"
+        >
+          <span class="help-icon" aria-hidden="true">?</span>
+        </button>
+        <button type="submit" class="search-button" aria-label="Search">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+        </button>
+      </div>
+      <div id="search-examples" class="search-hint">Try: "WSIB", "disability rights", "evidence locker"</div>
+      <div id="search-help" class="help-text" hidden>
+        <div id="search-help-desc">
+          <strong>Search Tips:</strong>
+          <ul>
+            <li>Enter keywords like "WSIB claims" or "accessibility features"</li>
+            <li>Use quotes for exact phrases: "injured workers support"</li>
+            <li>Searches include page titles, content, and tags</li>
+          </ul>
+          <strong>Popular Searches:</strong>
+          <ul>
+            <li>Evidence Locker</li>
+            <li>Disability Rights</li>
+            <li>Community Forums</li>
+            <li>Accessibility Settings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+function toggleSearchHelp() {
+  const helpElement = document.getElementById('search-help');
+  const isHidden = helpElement.hidden;
+  helpElement.hidden = !isHidden;
+  
+  const button = event.target.closest('.help-button');
+  button.setAttribute('aria-expanded', !isHidden);
+}
+</script>
+
+<style>
+.search-container {
+  margin: 1rem 0;
+}
+
+.search-form {
+  max-width: 600px;
+}
+
+.search-group {
+  position: relative;
+}
+
+.search-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.input-with-help {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid var(--border-color, #ced4da);
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color, #3d4eaa);
+  box-shadow: 0 0 0 3px rgba(61, 78, 170, 0.1);
+}
+
+.help-button,
+.search-button {
+  background: var(--primary-color, #3d4eaa);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.help-button {
+  width: 28px;
+  height: 28px;
+}
+
+.help-button:hover,
+.help-button:focus,
+.search-button:hover,
+.search-button:focus {
+  background: var(--primary-dark, #2d3a7a);
+  transform: scale(1.1);
+}
+
+.help-button:focus,
+.search-button:focus {
+  outline: 3px solid #ffd54f;
+  outline-offset: 2px;
+}
+
+.search-hint {
+  font-size: 14px;
+  color: var(--text-secondary, #6c757d);
+  margin-top: 4px;
+}
+
+.help-text {
+  background: #e7f3ff;
+  border-left: 4px solid var(--primary-color, #3d4eaa);
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.help-text ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.help-text[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .help-button:hover,
+  .search-button:hover {
+    transform: none;
+  }
+}
+</style>

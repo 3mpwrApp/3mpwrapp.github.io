@@ -6,12 +6,56 @@ permalink: /accessibility/
 ---
 
 
+---
+layout: default
+title: Accessibility Statement
+description: Our commitment to inclusive accessible design
+permalink: /accessibility/
+---
+
+<!-- Complexity Mode Toggle -->
+{%- include complexity-toggle.html -%}
+
 {%- include status-banner.html -%}
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/accessibility.css' | relative_url }}">
 
 # Accessibility Statement
+
+<!-- SIMPLE MODE: Quick overview -->
+<div class="content-simple" data-complexity="simple">
+  
+<div class="hero-banner">
+  <p class="hero-text">3mpwrApp is built for maximum accessibility. We meet WCAG 2.2 Level AA standards and include features you won't find anywhere else.</p>
+</div>
+
+<details class="auto-collapse" open>
+  <summary>⚡ Quick Summary</summary>
+  <div class="details-content">
+    <ul>
+      <li>✅ WCAG 2.2 Level AA compliant (82% AAA)</li>
+      <li>✅ Works with all screen readers</li>
+      <li>✅ Full keyboard navigation</li>
+      <li>✅ Dark mode & high contrast options</li>
+      <li>✅ Dyslexia-friendly fonts available</li>
+      <li>✅ No time limits on any actions</li>
+    </ul>
+    <p><strong>Need help?</strong> <a href="/contact/">Contact our accessibility team</a></p>
+  </div>
+</details>
+
+<div style="margin: 2rem 0;">
+  <a href="/accessibility-settings/" style="display: inline-block; padding: 12px 24px; background: #3d4eaa; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">
+    Customize Your Settings →
+  </a>
+</div>
+
+</div>
+<!-- End simple mode -->
+
+<!-- STANDARD/DETAILED MODE: Full content -->
+<div class="content-detailed" data-complexity="detailed">
 
 <div class="hero-banner">
   <p class="hero-text">3mpwrApp is committed to inclusive design. We aim to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA, and we adopt selected AAA practices where feasible.</p>
@@ -65,7 +109,12 @@ permalink: /accessibility/
       <span class="toc-icon">👂</span>
       <span class="toc-text">Hearing</span>
     </a>
-  </div>
+</div>
+<!-- End content-detailed for intro section -->
+
+---
+
+<!-- Sections below available in all modes but with auto-collapse in standard mode -->/div>
   <div class="toc-item">
     <a href="#mental-health-accessibility">
       <span class="toc-icon">💭</span>
@@ -259,7 +308,8 @@ We meet **all** WCAG 2.2 Level A, Level AA, and Level AAA success criteria, achi
 
 **Full AA Compliance Checklist:**
 
-<details>
+<div class="content-detailed" data-complexity="detailed">
+<details class="auto-collapse">
 <summary><strong>Perceivable (25 criteria) - 100% compliant</strong></summary>
 
 **Text Alternatives:**
@@ -359,6 +409,8 @@ We meet **all** WCAG 2.2 Level A, Level AA, and Level AAA success criteria, achi
 - ✅ 4.1.3 Status Messages (AA) - ARIA live regions for updates
 
 </details>
+</div>
+<!-- End content-detailed WCAG checklists -->
 
 ### What we've tested:
 
@@ -421,6 +473,10 @@ In addition to WCAG 2.2 Level AAA conformance, 3mpwrApp website adheres to **W3C
 
 **We practice radical transparency about accessibility gaps:**
 
+<details class="auto-collapse" open>
+<summary><strong>View Current Limitations & Progress</strong></summary>
+<div class="details-content">
+
 ### Current Limitations:
 
 **Third-Party Content:**
@@ -465,6 +521,9 @@ In addition to WCAG 2.2 Level AAA conformance, 3mpwrApp website adheres to **W3C
 If you encounter any barrier, even if listed here, **please report it**. Your specific use case helps us prioritize fixes.
 
 **[Report Accessibility Barrier →](/contact?subject=Accessibility+Barrier)**
+
+</div>
+</details>
 
 ---
 

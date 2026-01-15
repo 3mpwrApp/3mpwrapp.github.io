@@ -1,0 +1,291 @@
+<!-- Newsletter Signup Form - WCAG 2.2 AAA Compliant -->
+<div class="newsletter-container">
+  <form 
+    action="https://formspree.io/f/xdkoorbd" 
+    method="POST" 
+    class="newsletter-form"
+    aria-labelledby="newsletter-heading"
+  >
+    <h3 id="newsletter-heading">Stay Updated</h3>
+    <p class="newsletter-description">Get monthly updates on advocacy campaigns, new features, and accessibility improvements.</p>
+    
+    <div class="form-group">
+      <label for="newsletter-email" class="form-label">
+        Email Address <span class="required-indicator" aria-label="required">*</span>
+      </label>
+      <div class="input-with-help">
+        <input 
+          type="email" 
+          id="newsletter-email" 
+          name="email" 
+          required 
+          aria-required="true"
+          aria-describedby="email-help-desc email-format-hint"
+          autocomplete="email"
+          class="form-input"
+          placeholder="your.email@example.com"
+        >
+        <button 
+          type="button" 
+          class="help-button" 
+          aria-label="Help: Why we need your email"
+          onclick="toggleHelp('email-help')"
+        >
+          <span class="help-icon" aria-hidden="true">?</span>
+        </button>
+      </div>
+      <div id="email-format-hint" class="form-hint">Format: name@example.com</div>
+      <div id="email-help" class="help-text" hidden>
+        <div id="email-help-desc">
+          <strong>Why we need this:</strong> We'll send you monthly newsletters with campaign updates, new features, and accessibility improvements. We never share your email with third parties.
+          <br><br>
+          <strong>Privacy:</strong> You can unsubscribe anytime using the link in every email. See our <a href="/privacy-policy/">Privacy Policy</a> for details.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="newsletter-frequency" class="form-label">
+        Frequency Preference
+      </label>
+      <div class="input-with-help">
+        <select 
+          id="newsletter-frequency" 
+          name="frequency"
+          aria-describedby="frequency-help-desc"
+          class="form-select"
+        >
+          <option value="monthly" selected>Monthly Digest (Recommended)</option>
+          <option value="weekly">Weekly Updates</option>
+          <option value="announcements">Major Announcements Only</option>
+        </select>
+        <button 
+          type="button" 
+          class="help-button" 
+          aria-label="Help: Choose email frequency"
+          onclick="toggleHelp('frequency-help')"
+        >
+          <span class="help-icon" aria-hidden="true">?</span>
+        </button>
+      </div>
+      <div id="frequency-help" class="help-text" hidden>
+        <div id="frequency-help-desc">
+          <strong>Monthly Digest:</strong> One email per month with highlights (recommended for most users)
+          <br>
+          <strong>Weekly Updates:</strong> More frequent updates on campaigns and features
+          <br>
+          <strong>Announcements Only:</strong> Critical updates only (app launches, major policy changes)
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="checkbox-label">
+        <input 
+          type="checkbox" 
+          name="consent" 
+          required 
+          aria-required="true"
+          aria-describedby="consent-text"
+        >
+        <span id="consent-text">
+          I agree to receive emails from 3mpwrApp. I can unsubscribe anytime.
+        </span>
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-primary">
+        <span class="btn-text">Subscribe</span>
+        <span class="btn-icon" aria-hidden="true">📬</span>
+      </button>
+    </div>
+
+    <!-- Hidden honeypot field for spam protection -->
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+  </form>
+</div>
+
+<script>
+function toggleHelp(id) {
+  const helpElement = document.getElementById(id);
+  const isHidden = helpElement.hidden;
+  
+  // Hide all other help texts first
+  document.querySelectorAll('.help-text').forEach(el => {
+    if (el.id !== id) el.hidden = true;
+  });
+  
+  // Toggle the clicked help text
+  helpElement.hidden = !isHidden;
+  
+  // Update button state
+  const button = event.target.closest('.help-button');
+  button.setAttribute('aria-expanded', !isHidden);
+}
+</script>
+
+<style>
+.newsletter-container {
+  background: var(--bg-secondary, #f8f9fa);
+  border: 2px solid var(--border-color, #dee2e6);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.newsletter-form {
+  max-width: 500px;
+}
+
+#newsletter-heading {
+  margin-top: 0;
+  color: var(--text-primary, #212529);
+}
+
+.newsletter-description {
+  color: var(--text-secondary, #6c757d);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary, #212529);
+}
+
+.required-indicator {
+  color: #dc3545;
+}
+
+.input-with-help {
+  display: flex;
+  gap: 8px;
+  align-items: start;
+}
+
+.form-input,
+.form-select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid var(--border-color, #ced4da);
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary-color, #3d4eaa);
+  box-shadow: 0 0 0 3px rgba(61, 78, 170, 0.1);
+}
+
+.help-button {
+  background: var(--primary-color, #3d4eaa);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.help-button:hover,
+.help-button:focus {
+  background: var(--primary-dark, #2d3a7a);
+  transform: scale(1.1);
+}
+
+.help-button:focus {
+  outline: 2px solid #ffd54f;
+  outline-offset: 2px;
+}
+
+.help-icon {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-hint {
+  font-size: 14px;
+  color: var(--text-secondary, #6c757d);
+  margin-top: 4px;
+}
+
+.help-text {
+  background: #e7f3ff;
+  border-left: 4px solid var(--primary-color, #3d4eaa);
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.help-text[hidden] {
+  display: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3d4eaa 0%, #2d3a7a 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(61, 78, 170, 0.3);
+}
+
+.btn-primary:focus {
+  outline: 3px solid #ffd54f;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary:hover,
+  .help-button:hover {
+    transform: none;
+  }
+}
+</style>
