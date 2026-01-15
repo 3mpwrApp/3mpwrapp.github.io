@@ -1,3 +1,14 @@
+---
+layout: default
+title: 3mpwr App - Beta Testers Guide & Feedback Program
+permalink: /beta-guide/
+description: Complete beta testing guide for 3mpwr App. Learn what to test, how to report bugs, and join the testing program for a privacy-first accessibility tool.
+version: 1.0 (Production Ready - January 2026)
+lastUpdated: 2026-01-15
+---
+
+{%- include status-banner.html -%}
+
 # 3mpwr App – Closed Beta Tester Guide
 
 Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join the beta, test the app using Expo Go (free), and share your valuable feedback.

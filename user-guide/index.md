@@ -1,4 +1,5 @@
 ---
+layout: default
 title: 3mpwrApp — User Guide for Everyone
 description: A simple guide to using 3mpwrApp's tools and community features. Written for the disability community.
 version: 4.4 (January 2026 - PowerTools Complete)
@@ -7,6 +8,8 @@ accessibility: Enhanced for screen readers, cognitive accessibility, dyslexia su
 currentPhase: Production Release (97% Complete - PowerTools Active)
 allFeaturesLive: 60+ features, Wellness Hub with 6 categories, Legal Action Hub, Ally & Support Network, Document Management, Wellness Checks, full offline support, complete security verification, 13 US jurisdictions
 ---
+
+{%- include status-banner.html -%}
 
 # 3mpwrApp — User Guide for Everyone
 

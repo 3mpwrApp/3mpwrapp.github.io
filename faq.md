@@ -1,863 +1,2079 @@
 ---
 layout: default
-title: Frequently Asked Questions (FAQ) - Old Version
-description: Old version of FAQ page
-permalink: /faq-old/
-published: false
+title: FAQ - Frequently Asked Questions
+permalink: /faq/
+description: Answers to common questions about 3mpwr App features, PowerTools, privacy, accessibility, and more.
+version: 4.4
+lastUpdated: 2026-01-15
 ---
 
 {%- include status-banner.html -%}
 
-# Frequently Asked Questions (FAQ)
+# ❓ FAQ - Frequently Asked Questions
 
-**Last Updated:** October 26, 2025
-
-📖 **15 minute read** | ⚡ Use search or table of contents to jump to your question
-
-Quick answers to common questions about 3mpwrApp. Can't find what you're looking for? [Contact us](/contact).
-
-<!-- FAQ Search -->
-<div class="faq-search-container">
-  <label for="faq-search" class="search-label">
-    <span class="search-icon" aria-hidden="true">🔍</span>
-    Search FAQs
-  </label>
-  <input 
-    type="search" 
-    id="faq-search" 
-    class="faq-search-input"
-    placeholder="Type keywords to search FAQs..."
-    aria-describedby="search-help search-results-count"
-    autocomplete="off">
-  <small id="search-help" class="search-help">Try searching: "privacy", "cost", "beta testing"</small>
-  <div id="search-results-count" class="search-results-count" role="status" aria-live="polite" style="display: none;"></div>
-  <button type="button" id="clear-search" class="clear-search-btn" style="display: none;" aria-label="Clear search">
-    ✕ Clear
-  </button>
-</div>
-
-<!-- Expand/Collapse All Controls -->
-<div class="accordion-controls">
-  <button type="button" id="expand-all-btn" class="accordion-control-btn">
-    <span class="icon">📖</span> Expand All Questions
-  </button>
-  <button type="button" id="collapse-all-btn" class="accordion-control-btn">
-    <span class="icon">📕</span> Collapse All Questions
-  </button>
-</div>
-
-<details class="tldr-box" open>
-  <summary>⚡ Most Common Questions</summary>
-  <ul>
-    <li><strong>Is it really free?</strong> Yes, 100% free forever - no subscriptions, no hidden costs</li>
-    <li><strong>Is my data private?</strong> Absolutely - your data stays on YOUR device, we can't see it</li>
-    <li><strong>Do I need to be tech-savvy?</strong> No - designed for all skill levels with step-by-step guides</li>
-    <li><strong>What about accessibility?</strong> 100% accessible - built by and for the disability community</li>
-    <li><strong>When can I join?</strong> Currently in closed beta - sign up at <a href="/beta">/beta</a></li>
-    <li><strong>Works in my province?</strong> Yes - supports all Canadian provinces and territories</li>
-  </ul>
-</details>
+**Last Updated:** January 15, 2026
 
 ---
 
-## 📑 Table of Contents
+## Quick Navigation
 
-- [Getting Started](#getting-started)
-- [Common Concerns & Trust Questions](#common-concerns--trust-questions)
-- [Privacy & Data](#privacy--data)
-- [BYOC Modes Explained](#byoc-modes-explained)
-- [Features & Functionality](#features--functionality)
+- [General Questions](#general-questions)
+- [PowerTools & Hubs](#powertools--hubs)
+- [Account & Login](#account--login)
+- [Legal Action Hub](#legal-action-hub)
+- [Wellness Hub](#wellness-hub)
+- [Document Management](#document-management)
+- [Peer Mentorship & Support Groups](#peer-mentorship--support-groups)
+- [Community & Chat](#community--chat)
+- [Privacy & Security](#privacy--security)
+- [Technical Issues](#technical-issues)
+- [Billing & Costs](#billing--costs)
 - [Accessibility](#accessibility)
-- [Beta Testing](#beta-testing)
-- [Troubleshooting](#troubleshooting)
-- [Legal & Disclaimers](#legal--disclaimers)
+- [Getting Help](#getting-help)
 
 ---
 
-## Getting Started
+## General Questions
 
-### What is 3mpwrApp?
+### What is Empowr?
 
-3mpwrApp is a comprehensive platform built for injured workers and persons with disabilities in Canada. We provide tools for advocacy, community connection, wellness tracking, legal workflow automation, and system navigation - all designed with accessibility and privacy as top priorities.
+**Empowr is a mobile and web app designed to help you:**
+- Track accountability cases and legal matters
+- Access templates, tools, and resources for taking action
+- Find peer mentors and supportive community
+- Navigate wellness and self-care
+- Organize evidence and build your case
 
-### Who is 3mpwrApp for?
-
-- **Persons with disabilities** (any disability type)
-- **Injured workers** navigating workers' compensation systems
-- **Supporters and allies** helping disabled friends/family
-- **Unions and advocacy groups** organizing for change
-- **Healthcare providers** supporting disabled clients
-
-We're built BY the disability community, FOR the disability community.
+It's built for survivors, activists, and anyone seeking justice, support, and community.
 
 ---
 
-## Common Concerns & Trust Questions
+### Who is Empowr for?
 
-<div class="faq-accordion-section">
+Empowr is designed for:
+- ✅ Survivors of harassment, discrimination, or abuse
+- ✅ People seeking legal help or accountability
+- ✅ Activists and advocates
+- ✅ Anyone needing support and community
+- ✅ People with disabilities seeking accessible tools
 
-<details class="faq-accordion" id="faq-different">
-  <summary class="faq-question">
-    <span class="question-icon">❓</span>
-    <span class="question-text">How is 3mpwrApp different from other disability apps?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**Key Differences:**
-
-| 3mpwrApp | Other Apps |
-|----------|------------|
-| 🆓 **100% free forever** | Often have paid tiers, subscriptions |
-| 🔒 **You own your data** (BYOC options) | They own your data |
-| 🇨🇦 **Canadian-focused** (all provinces) | Often US-focused |
-| ♿ **Built BY disabled people** | Often built by corporations |
-| 🔓 **Open about limitations** | Often overpromise capabilities |
-| 💚 **Community-funded mission** | Profit-driven |
-| 🏛️ **Advocacy-focused** | Health tracking only |
-
-**Bottom line:** We're not trying to make money off the disability community—we're trying to empower it.
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-funding">
-  <summary class="faq-question">
-    <span class="question-icon">💰</span>
-    <span class="question-text">If it's free, how do you make money? What's the catch?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**Great question!** Here's our honest answer:
-
-**How We're Funded (Currently):**
-- 💰 Personal funds from founder
-- 🤝 Community donations (optional, not required)
-- 🎯 Grants for disability advocacy (applied for, not guaranteed)
-
-**Future Funding (Being Explored):**
-- 🏢 Institutional partnerships (unions, advocacy orgs) - they pay, members use free
-- 💼 Optional professional tools (lawyers, case workers) - NOT required for users
-- 🎓 Training/workshops for organizations - again, users always free
-
-**What We'll NEVER Do:**
-- ❌ Charge users a subscription
-- ❌ Sell your data to third parties
-- ❌ Show you ads
-- ❌ Require payment for core features
-- ❌ Create "premium" tiers
-
-**The Catch?** There isn't one. We're a grassroots community project, not a Silicon Valley startup looking for an exit strategy. We survive on donations and founder's personal investment because we believe in this mission.
-
-**[Read our funding transparency statement →](/about#funding-transparency)**
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-trust">
-  <summary class="faq-question">
-    <span class="question-icon">🔒</span>
-    <span class="question-text">How can I trust you with my sensitive data?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**We understand this concern completely. Here's how we've addressed it:**
-
-**1. You Don't Have to Trust Us**
-- Use **Strict BYOC Mode** - your data never touches our servers
-- Your data stays on YOUR device and YOUR cloud provider
-- We literally can't access it even if we wanted to
-
-**2. Technical Safeguards**
-- Military-grade encryption (AES-256)
-- Open-source security audit (coming Q1 2026)
-- Third-party penetration testing
-- Regular security audits
-
-**3. Legal Commitments**
-- Detailed privacy policy with no loopholes
-- GDPR and Canadian privacy law compliance
-- Data deletion on request (within 30 days)
-- No data sales - ever (written into Terms of Service)
-
-**4. Community Accountability**
-- Built with input from disability advocates
-- Transparent about what we collect and why
-- Regular community updates
-- Open to audits from disability rights organizations
-
-**[Read our detailed security documentation →](/privacy#security-measures)**
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-shutdown">
-  <summary class="faq-question">
-    <span class="question-icon">💾</span>
-    <span class="question-text">What if 3mpwrApp shuts down? Will I lose my data?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**No, your data is safe!**
-
-**If you use Default Mode:**
-- Export all your data anytime (Settings → Export Data)
-- Download JSON, PDF, or CSV formats
-- Data remains on your device until you delete it
-
-**If you use BYOC Modes (Hybrid or Strict):**
-- Your data lives in YOUR cloud storage (Google Drive, Dropbox, etc.)
-- You have complete copies independent of 3mpwrApp
-- Even if we shut down tomorrow, you keep everything
-
-**Our Shutdown Promise:**
-- ✅ 90-day advance notice before any shutdown
-- ✅ Tools to export all community posts/resources
-- ✅ Open-source the app code so community can continue
-- ✅ Provide migration guide to alternatives
-
-**Bottom Line:** You're not locked in. Your data is portable. You can leave anytime with everything you created.
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-privacy">
-  <summary class="faq-question">
-    <span class="question-icon">🕵️</span>
-    <span class="question-text">What about privacy? Can employers/insurance companies see my data?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**Absolutely NOT - unless YOU choose to share it.**
-
-**Default Privacy Protections:**
-- 🔒 All data encrypted on your device
-- 🔒 Only you have the decryption keys
-- 🔒 We cannot access your Evidence Locker, wellness logs, or personal notes
-- 🔒 No backdoors for law enforcement, employers, or insurance companies
-
-**Community Privacy:**
-- Use anonymous usernames (no real names required)
-- Control what you share publicly vs. privately
-- Delete your posts anytime
-- Opt out of public community entirely (still use tools)
-
-**Legal Requests:**
-- We fight subpoenas for user data
-- We comply only when legally required (with notice to you)
-- We collect minimal data, so there's little to hand over
-- BYOC modes mean we literally don't have your data to share
-
-**[Read our Privacy Policy →](/privacy)**  
-**[Read our Data Warrant Transparency Report →](/transparency-report)** (coming Q1 2026)
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-afford">
-  <summary class="faq-question">
-    <span class="question-icon">📱</span>
-    <span class="question-text">What if I can't afford a smartphone or data plan?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**We hear you. Digital divide is a real accessibility barrier.**
-
-**Current Solutions:**
-- 📱 App works 100% offline (no data needed after download)
-- 💻 Web version coming Phase 3 (use library computers)
-- 📄 Printable resources available (download PDFs)
-
-**Future Solutions (Advocating For):**
-- 📞 Partnership with free phone programs (SafeLink, Assurance Wireless)
-- 📡 Lobbying for disability tech subsidies
-- 🏢 Institutional access (union halls, community centers provide devices)
-
-**Right Now:**
-- Check if you qualify for [Connecting Families](https://ised-isde.canada.ca/site/connecting-families/en) (Canada) - $20/month internet
-- Ask local library about device lending programs
-- Contact your provincial disability program about tech assistance
-
-**We're working on this. Digital access IS a disability justice issue.**
-
-  </div>
-</details>
-
-<details class="faq-accordion" id="faq-scam">
-  <summary class="faq-question">
-    <span class="question-icon">🔍</span>
-    <span class="question-text">How do I know this isn't a scam or data harvesting scheme?</span>
-    <span class="accordion-arrow" aria-hidden="true">▼</span>
-  </summary>
-  <div class="faq-answer">
-
-**Healthy skepticism is smart! Here's how to verify we're legitimate:**
-
-**Transparency Markers:**
-- ✅ Detailed [Terms of Service](/terms) and [Privacy Policy](/privacy) (no vague corporate speak)
-- ✅ Real person contact: [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-- ✅ Active social media with real community engagement
-- ✅ Open about limitations and what we DON'T do
-- ✅ Beta testing with real community members
-- ✅ Source code available for security audit (upon request during beta)
-
-**Red Flags We DON'T Have:**
-- ❌ No "too good to be true" promises
-- ❌ No pressure to upgrade or pay
-- ❌ No vague privacy policies
-- ❌ No requests for banking info or SIN numbers
-- ❌ No multi-level marketing or "refer 5 friends" schemes
-
-**You Can Verify:**
-- Google our app name + "reviews" or "scam"
-- Check our social media for real user interactions
-- Join beta and test with dummy data first
-- Ask questions in our public community forums
-
-**If something feels off, trust your gut.** We want informed, empowered users - not victims.
-
-  </div>
-</details>
-
-</div>
-
----
-- Join beta and test with dummy data first
-- Ask questions in our public community forums
-
-**If something feels off, trust your gut.** We want informed, empowered users - not victims.
+**Empowr is NOT a lawyer or medical service.** For legal advice, consult an attorney. For mental health crises, contact a mental health professional.
 
 ---
 
-## Getting Started
+### Is Empowr Free?
 
-### How much does 3mpwrApp cost?
+**Yes, the core app is 100% free.**
 
-**3mpwrApp is completely FREE.** There are no paid tiers, no subscriptions, no in-app purchases - ever.
+- All main features included
+- No premium tier or paywalls
+- No ads or tracking (unless you opt-in)
+- Peer mentoring is free
+- Lawyer finder is free
 
-We're building this for the disability community, funded by the community. Our mission is accessibility and empowerment, not profit. All features will always be free for everyone.
-
-### Is 3mpwrApp available now?
-
-We're currently in **Phase 1 Closed Beta Testing**. [Sign up for beta access →](https://forms.gle/46yVp37vfitfitLT9)
-
-### What platforms does 3mpwrApp support?
-
-- **iOS** (iPhone, iPad)
-- **Android** (phones, tablets)
-- **Web version** (coming in Phase 3)
+We're funded by grants and donations, not user fees.
 
 ---
 
-## Privacy & Data
+### What's a "PowerTool"?
 
-### Who owns my data?
+PowerTools are consolidated hubs that combine multiple related features into one intuitive interface.
 
-**YOU DO.** 100% of your data belongs to you, not us. We never claim ownership of your content, evidence, wellness data, or anything you create in the app.
+**Example:** Legal Action Hub combines:
+- Case tracking
+- Communication scripts
+- Lawyer finder
+- Document automation
+- Campaign participation
 
-**[Read our Data Ownership Statement →](/data-ownership/)**
+Into 5 organized tabs instead of 5 separate screens.
 
-### Where is my data stored?
-
-That depends on which privacy mode you choose:
-
-- **Default Mode:** On your device by default, optional backup to Firebase (our secure cloud)
-- **Hybrid BYOC Mode:** On your device AND your chosen cloud (Google Drive, Dropbox, etc.)
-- **Strict BYOC Mode:** Only on your device and YOUR chosen cloud (we never see it)
-
-**[Learn about privacy modes →](/privacy-controls/#choose-your-privacy-mode)**
-
-### Can you see my data?
-
-**In Default Mode:** Only if you enable cloud backup (and even then, it's encrypted)  
-**In Hybrid Mode:** We handle your login, but never see your content  
-**In Strict Mode:** No - we're completely disconnected, the app only talks to YOUR cloud
-
-### Do you sell my data?
-
-**ABSOLUTELY NOT.** We will never sell, rent, or trade your personal information to third parties. This is a core promise we will never break.
-
-### How secure is my data?
-
-- **Military-grade encryption** (AES-256, same as banks use)
-- **Hardware-backed security** (encryption keys stored in your device's secure chip)
-- **Secure connections** (all network traffic encrypted with HTTPS/TLS)
-- **No backdoors** (we don't have access keys to your encrypted data)
-
-**[Read our Privacy Policy →](/privacy/)**
-
-### Can I delete my data?
-
-**YES!** You have the right to delete:
-- Your entire account (permanently)
-- Individual pieces of data (selective deletion)
-- All cloud backups (if you use them)
-
-Deletion is permanent and cannot be undone.
-
-**[Learn how to delete your data →](/delete-data)**
+**Why?** Less app navigation, more focus on what you need.
 
 ---
 
-## BYOC Modes Explained
+### Can I use Empowr offline?
 
-### What does BYOC mean?
+**Partially:**
+- View your saved cases, documents, and chat messages (downloaded locally)
+- Create new entries (auto-save when reconnected)
+- Use templates and tools
 
-**BYOC = Bring Your Own Cloud**
+**Features that need internet:**
+- Community chat (real-time)
+- Mentor messaging (real-time)
+- Fetching new resources
+- Syncing across devices
 
-It means you can connect your own cloud storage provider (Google Drive, Dropbox, iCloud, Nextcloud, etc.) and have ALL your data stored there instead of on our servers.
-
-### What's the difference between the three privacy modes?
-
-| Feature | Default Mode | Hybrid BYOC ⭐ | Strict BYOC |
-|---------|-------------|----------------|-------------|
-| **Login** | Easy (email, Google, Apple) | Easy (email, Google, Apple) | Custom only |
-| **Your data location** | Device + optional Firebase | Device + YOUR cloud | Device + YOUR cloud |
-| **What we can see** | Only what you backup | Only your login, never content | Nothing at all |
-| **Setup difficulty** | 🟢 Easy | 🟡 Medium | 🔴 Advanced |
-| **Best for** | Most users | Privacy + convenience | Maximum privacy |
-
-### Which mode should I choose?
-
-**Default Mode** - Start here if you're new and want the easiest experience
-
-**Hybrid BYOC Mode** ⭐ **RECOMMENDED** - Best balance of easy login + full data privacy
-
-**Strict BYOC Mode** - For maximum privacy advocates, healthcare settings, or legal work requiring complete air-gap
-
-You can switch modes anytime in Settings → Privacy & Security.
-
-### What cloud providers are supported?
-
-**ANY cloud storage that supports standard protocols:**
-
-- ✅ Google Drive
-- ✅ Dropbox
-- ✅ Microsoft OneDrive
-- ✅ Apple iCloud
-- ✅ Nextcloud
-- ✅ ownCloud
-- ✅ AWS S3
-- ✅ Azure Storage
-- ✅ Any WebDAV-compatible service
-- ✅ Your own server
-
-### Do I need technical skills for BYOC modes?
-
-**Hybrid Mode:** No - if you can sign into Google Drive or Dropbox, you can use Hybrid Mode
-
-**Strict Mode:** Some technical knowledge helpful (knowing what WebDAV is, how to connect to cloud storage)
-
-**[Full BYOC setup guide →](/data-ownership/#3-user-cloud-user-control--three-privacy-modes)**
+**Pro Tip:** Download important documents before traveling!
 
 ---
 
-## Features & Functionality
+### What languages does Empowr support?
 
-### How many features does 3mpwrApp have?
+Currently: **English, Spanish, French, ASL**
 
-**133 features available in beta**, with 35 more coming soon (168 total planned for Phase 1).
+---
 
-Features span 8 major areas:
-- 🏠 Home & Dashboard (9 features)
-- 📢 Campaigns (5 features)
-- 💬 Community (8 features)
-- 📚 Resources (42 features)
-- 🧘 Wellness (36 features)
-- 📝 Advocacy Tools (18 features)
-- ⚙️ Settings (12 features)
-- 🆕 What's New (3 features)
+## PowerTools & Hubs
 
-**[See all features →](/features)**
+### What are the PowerTools hubs?
 
-### What's the Evidence Locker?
+**PowerTools are consolidated hubs that organize related features into one intuitive interface.**
 
-Your secure, encrypted document vault for storing:
-- Photos of workplace incidents
-- Medical documents
-- Accommodation requests and responses
-- Communication records
-- Legal evidence
+Currently available:
+1. **Legal Action Hub** (Advocacy tab)
+   - 5 tabs: Accountability, Coach, Legal Help, Automation, Policy
+   - Consolidates 12 legal screens into organized hub
 
-All files are encrypted with military-grade security (AES-256).
+2. **Wellness Hub** (Wellness tab)
+   - 6 categories organizing 41 wellness tools
+   - Mental Health & Crisis, Energy & Pain, Daily Living, Physical Health, Communication & Growth, Specialty
 
-**[Learn how to use Evidence Locker →](/user-guide#evidence-locker)**
+3. **Evidence Command Center** (Resources tab)
+   - 4 tabs: Capture, Organize, Analyze, Share
+   - Consolidates evidence and documentation tools
 
-### What's the Letter Wizard?
+4. **Ally & Support Network** (Community tab)
+   - Peer Mentor Discovery (150+ mentors)
+   - Support Groups (24 groups with filtering)
 
-Generate professional, legally-sound letters in minutes with **22 pre-built templates:**
+---
 
-- Workplace accommodation requests
-- Disability benefit applications
-- Human rights complaints
-- Housing accessibility requests
-- Legal demand letters
-- Appeal letters
-- And 16 more!
+### How do I find wellness tools now?
 
-All templates auto-populate from your profile and include field validation.
+**All 41 wellness tools are organized in the Wellness Hub:**
 
-**[See all letter templates →](/features#letter-wizard---22-professional-letter-templates)**
+Go to **Wellness tab** → Browse by category:
+- **Mental Health & Crisis** - AI Companion, Emotional First Aid, Grief Support, Crisis Resources (12 tools)
+- **Energy & Pain** - Energy Coins, Pacing Partner, Pain Forecast, Spoon Marketplace (10 tools)
+- **Daily Living & Planning** - Daily Planner, Work-Life Balance, Micro-Movement Coach (8 tools)
+- **Physical Health** - Exercise Hub, Symptom Tracker, Meds Tracker, Sleep Tracker (6 tools)
+- **Communication & Growth** - DBT Skills, CBT Tools, Mindfulness (3 tools)
+- **Specialty Tools** - Rehab Games, Ambience Sync (2 tools)
 
-### Does 3mpwrApp provide medical advice?
+**Tip:** Use the search bar to find specific tools quickly!
 
-**NO.** Our wellness tools (mood tracking, symptom logging, meditation, etc.) are for information and self-tracking only.
+---
 
-❌ We do NOT diagnose, treat, or prevent medical conditions  
-❌ We are NOT a replacement for healthcare providers  
-✅ Always consult qualified medical professionals for health decisions
+### What happened to my old wellness tool bookmarks?
 
-**[Read medical disclaimer →](/legal/disclaimers/#1-medical-information-disclaimer)**
+**Don't worry - they still work!**
 
-### Does 3mpwrApp provide legal advice?
+We created 41 redirect wrappers so all your old links automatically take you to the right place in the new Wellness Hub. Your bookmarks, saved links, and deep links will continue working seamlessly.
 
-**NO.** Our legal tools (letter templates, workflow automation, resources) are educational only.
+---
 
-❌ We do NOT create attorney-client relationships  
-❌ We do NOT provide legal representation  
-✅ Always consult licensed attorneys for legal matters
+### How do I manage my documents now?
 
-**[Read legal disclaimer →](/legal/disclaimers/#2-legal-information-disclaimer)**
+**New Document Management System** (January 2026):
 
-### Does 3mpwrApp work offline?
+Go to **Resources** → **Document Manager**
 
-**YES!** Core features work 100% offline:
-- Evidence Locker
-- Wellness tracking
-- Letter generation
-- Resources library
-- Settings
+**Features:**
+- Upload PDFs, images, Word docs, spreadsheets
+- Categorize by type (medical, legal, evidence, personal)
+- All documents encrypted at rest
+- Easy search and retrieval
+- Organized folder system
 
-**Requires internet:**
-- Community features (chat, forums)
-- Cloud sync (if you enable it)
-- Campaign coordination
-- Real-time updates
+**Supported formats:** PDF, JPG, PNG, DOC, DOCX, XLS, XLSX
 
-### Can I use 3mpwrApp without creating an account?
+---
+Coming soon: Mandarin, Arabic, Vietnamese, and 10 more.
 
-**YES!** Guest Mode lets you use core features without creating an account:
+**Missing your language?** [Suggest it here](https://forms.gle/empowrapp).
 
-✅ Wellness tracking  
-✅ Evidence Locker  
-✅ Letter Wizard  
-✅ Resources library  
+---
 
-❌ No community features  
-❌ No cloud sync  
-❌ No campaign coordination
+## Account & Login
 
-**[Learn about Guest Mode →](/user-guide#getting-started)**
+### I forgot my password. How do I reset it?
+
+1. On the login screen, tap **"Forgot Password?"**
+2. Enter your email address
+3. Check your inbox for a reset link
+4. Click the link and create a new password
+5. Log in with your new password
+
+**Didn't receive the email?**
+- Check spam/junk folder
+- Wait 5 minutes (sometimes slow)
+- Try again or contact support
+
+---
+
+### Can I use Empowr without creating an account?
+
+**Yes, with Guest Mode:**
+1. Tap "Continue as Guest" on login
+2. Explore features freely
+3. ⚠️ **Important**: Guest data is NOT saved. 
+
+**Create an account anytime** to keep your progress, sync across devices, and unlock mentoring.
+
+---
+
+### Can I have multiple accounts?
+
+**One account per email address.** If you need a separate account:
+1. Use a different email address
+2. Sign up as new user
+3. Both accounts work independently
+
+**Team/Organization accounts?** Contact us at hello@empowrapp.org.
+
+---
+
+### How do I change my email address?
+
+1. Tap **Settings** (⚙️)
+2. Tap **Account**
+3. Tap **Email Address**
+4. Enter new email
+5. Verify new email (check your inbox)
+6. Done!
+
+**Old email still works?** It takes 24 hours to fully update.
+
+---
+
+### How do I delete my account?
+
+1. Tap **Settings** (⚙️)
+2. Tap **Account** → **Delete Account**
+3. Confirm deletion (⚠️ This is permanent!)
+4. All your data will be erased within 30 days
+
+**Change your mind?** You have 30 days to contact support and restore.
+
+---
+
+## Legal Action Hub
+
+### What is the Legal Action Hub?
+
+A consolidated hub combining 10+ legal features into 5 tabs:
+
+| Tab | Purpose | Use When |
+|-----|---------|----------|
+| 📋 Accountability | Track cases & timeline | You're building a case against an entity |
+| 🎓 Coach | Communication scripts | You need guidance on what to say |
+| ⚖️ Legal Help | Find lawyers & resources | You need legal advice or representation |
+| ⚡ Automation | Generate documents | You need letters, complaints, or evidence lists |
+| 📢 Policy | Campaign participation | You want to push policy changes |
+
+---
+
+### How do I start a new case?
+
+**Step-by-step:**
+1. Go to **Advocacy** tab
+2. Tap **Legal Action Hub**
+3. Go to **Accountability tab** (📋)
+4. Tap **"Start New Case"** button
+5. **Fill in the form:**
+   - **Who/what are you tracking?** (entity name, e.g., "ABC Corporation")
+   - **What's the issue?** (brief description, e.g., "Wage theft - not paid for overtime")
+   - **When did it happen?** (date, or "Ongoing")
+   - **Case priority** (High, Medium, Low) - optional
+6. Tap **"Create Case"**
+7. ✅ Case is now tracked!
+
+**Your case includes:**
+- Automatic case ID (starts with ACC-)
+- Timeline of all updates
+- Evidence uploads section
+- Status tracking
+- Notes and follow-up items
+- Reminder notifications for due dates
+
+**Can I edit a case after creating?**
+- Yes! Tap the case, then tap edit (pencil icon)
+- Change any field except case ID
+- History of changes is recorded
+- Useful for tracking how situation evolved
+
+**What counts as a "case"?**
+- One specific incident or ongoing situation
+- Against one primary entity
+- Under one issue type
+- Examples:
+  - ✅ "Harassment by Manager X at Company Y" = 1 case
+  - ✅ "Discrimination by School District Z" = 1 case
+  - ❌ "Multiple incidents by different people" = Multiple cases
+
+**Case Types (pick one):**
+- Employment/wages
+- Housing/landlord
+- Healthcare/disability
+- Education
+- Law enforcement
+- Government agency
+- Discrimination/civil rights
+- Harassment/abuse
+- Other
+
+**Setting Case Priority:**
+- **High**: Urgent legal deadline, safety risk, time-sensitive
+- **Medium**: Important but some flexibility on timeline
+- **Low**: Ongoing situation, can be addressed when ready
+
+---
+
+### How do I track progress on a case?
+
+**Add Updates to Timeline:**
+1. Open your case
+2. Tap **"Timeline"** or **"Add Update"**
+3. Write what happened (date, summary, who you contacted, response)
+4. Tag people/entities involved
+5. Add evidence (photos, documents, screenshots)
+6. Set status: "In Progress", "Escalated", "Resolved", "On Hold"
+7. Tap "Post Update"
+
+**Timeline shows:**
+- Chronological record of everything
+- What you did and when
+- Evidence you collected
+- Responses from involved parties
+- Action items and follow-ups
+- Searchable and filterable
+
+**Why keep a timeline?**
+- Shows a pattern of behavior (important for legal cases)
+- Helps you remember details months later
+- Strengthens case when sharing with lawyer
+- Documents progress for accountability
+- Legally defensible record
+
+---
+
+### Can I export my case information?
+
+**Yes! Multiple formats:**
+
+1. Open your case
+2. Tap **"Export"** or **"..."** (menu) → **Export Case**
+3. Choose format:
+   - **PDF**: Professional, printable, good for lawyers
+   - **Word**: Editable, can customize
+   - **Plain Text**: Copy-paste anywhere
+   - **Email**: Send directly to lawyer/advocate
+4. File downloads or email sends
+
+**What's included in export:**
+- Case title and ID
+- Timeline of all updates
+- Evidence file list
+- Notes and observations
+- People/entities involved
+- Current status and priority
+- Dates of all interactions
+
+**Use cases:**
+- **Share with lawyer**: PDF is most professional
+- **Keep backup**: Export weekly to email or cloud storage
+- **Print for filing**: Use PDF format
+- **Edit and customize**: Use Word format
+- **Quick reference**: Use Plain Text
+- **Backup in crisis**: Email to trusted person
+
+**Export regularly!**
+- Week 1: Export initial case
+- After major updates: Export again
+- Before meeting with lawyer: Fresh export
+- Monthly: Backup to cloud storage
+
+---
+
+### What's the difference between a "Case" and an "Issue"?
+
+- **Case**: A specific instance of accountability
+  - Example: "Harassment by Manager X at Company Y starting January 2024"
+  
+- **Issue**: The broader category
+  - Example: "Workplace Harassment"
+
+- **One case can have multiple issues:**
+  - Harassment + wage theft + disability discrimination
+  - All experienced in one situation
+  - One case, three issues tagged
+  
+- **One issue can span multiple cases:**
+  - Harassment in 2022 (Case 1)
+  - Harassment in 2023 (Case 2)
+  - Harassment in 2024 (Case 3)
+  - Same type of issue, different cases/times
+
+**Why does this matter?**
+- Helps lawyers understand scope of conduct
+- Shows pattern of behavior across time
+- Allows filtering (find all discrimination cases)
+- Helps connect related situations
+
+---
+
+### How do I use the Coach scripts?
+
+**Finding & Using Scripts:**
+
+1. Go to **Coach tab** (🎓)
+2. Browse categories or search:
+   - Addressing harassment
+   - Setting boundaries
+   - Making a complaint
+   - Demanding accountability
+   - Responding to retaliation
+   - Other situations
+3. Tap a script to open
+4. Read through to understand context
+5. Choose your action:
+   - **Copy**: Copy text, paste into own document
+   - **Customize**: Edit the script to fit your situation
+   - **Send**: Share directly via email/message/letter
+   - **Save**: Store in your case for later
+   - **Print**: Print for mailing
+
+**Example Script:**
+```
+Subject: Formal Complaint - Wage Theft
+
+Dear [Manager Name],
+
+I am writing to formally document non-payment of overtime 
+worked during [date range]. I worked X hours at my regular 
+rate of $Y per hour, which totals $Z owed.
+
+I expect payment by [date]. Failure to pay will result in 
+escalation to [labor board/attorney].
+
+Sincerely,
+[Your Name]
+```
+
+**Customization tips:**
+- Replace [BRACKETS] with your specific details
+- Change tone to match your style
+- Can be less formal for chat messages
+- Can be more formal for official letters
+- Review before sending
+
+**Why use scripts?**
+- ✅ Professional language tested by advocates
+- ✅ Removes emotion from tough conversations
+- ✅ Legally protective (says the right things)
+- ✅ Accessible language for clarity
+- ✅ Organized and clear
+- ✅ Shows you're serious and documented
+
+**Script Categories:**
+- **Demand letters**: Get paid, provide accommodation, fix issue
+- **Complaint forms**: Formal complaints to agencies
+- **Responses**: How to reply to threats or retaliation
+- **Boundary-setting**: Say "no" clearly and professionally
+- **Documentation**: What to write down when something happens
+- **Escalation**: When to push harder
+
+---
+
+### How do I find a lawyer using the app?
+
+**Search & Filter:**
+
+1. Go to **Legal Help tab** (⚖️)
+2. Tap **"Find a Lawyer"**
+3. **Filter by:**
+   - **Specialty**: Select all that apply
+     - Civil rights/discrimination
+     - Employment law
+     - Housing/landlord-tenant
+     - Disability rights
+     - Immigration
+     - Criminal defense
+     - Administrative law
+     - Other
+   - **Location**: Your state/country, or nearby
+   - **Cost**: 
+     - Free (legal aid, pro bono)
+     - Sliding scale (pay what you can)
+     - Hourly rate
+     - Contingency (pay from settlement)
+   - **Availability**: 
+     - Taking new clients?
+     - Accepts phone consultation?
+     - Offers payment plans?
+   - **Languages**: Spoken by attorney
+4. **Browse results:**
+   - Tap lawyer to see full profile
+   - Read reviews/ratings
+   - Check experience (years practicing)
+   - See success rate if available
+5. **Contact lawyer:**
+   - Tap "Call" to phone
+   - Tap "Email" to request consultation
+   - Some have "Book Consultation" button
+
+**Lawyer Profile Includes:**
+- Name, photo, contact info
+- Specialties and experience level
+- Fees and payment options
+- Years practicing law
+- Bar number (verify their license)
+- Client reviews
+- Languages spoken
+- Office location
+- Whether they take your case type
+
+**What to Ask in First Consultation:**
+- Do you handle cases like mine?
+- What's your experience with this issue?
+- What's your fee structure?
+- What are next steps?
+- What evidence do I need?
+- How long does this usually take?
+- What are my chances of winning?
+- Are you available for ongoing support?
+
+**Free & Cheap Lawyer Options:**
+
+1. **Legal Aid Societies**
+   - Free for low-income people
+   - Find at: empowrapp.org/legal-aid
+   - Usually handle: family law, housing, benefits
+
+2. **Law School Clinics**
+   - Free services, law student + supervising attorney
+   - Contact nearby law schools
+   - Usually handle: housing, immigration, some employment
+
+3. **Pro Bono Organizations**
+   - Volunteer lawyers work for free
+   - Find by specialty/location
+   - Usually handle: civil rights, discrimination, housing
+
+4. **Disability Rights Organizations**
+   - Free or reduced cost help
+   - Specialize in disability law
+   - Often work on contingency (no upfront cost)
+
+5. **Union Legal Services**
+   - If you're in a union, free legal help
+   - Contact your union rep
+   - Help with employment issues
+
+---
+
+### What's "Legal DNA Testing"?
+
+**What It Is:**
+A guided assessment that helps you understand your legal situation without needing a lawyer (yet).
+
+**How It Works:**
+1. Go to **Legal Help tab** (⚖️)
+2. Tap **"Legal DNA Test"**
+3. Answer questions about your situation:
+   - What happened?
+   - Who was involved?
+   - When did it happen?
+   - What type of issue is it?
+   - What outcome do you want?
+4. Get personalized results:
+   - Potential legal claims
+   - Evidence you'd need
+   - Next steps
+   - Urgency level
+   - What a lawyer would do
+
+**Example Results:**
+```
+Your situation may involve:
+- Wage & Hour Violation (potential $5,000-50,000)
+- Disability Discrimination (potential $10,000-100,000)
+- Retaliation (potential $5,000-25,000)
+
+Evidence you'd need:
+✓ Pay stubs (you have this)
+✓ Medical documentation (you have this)
+✓ Communications showing disability disclosure (you need this)
+✓ Proof of adverse action (you have this)
+
+Next steps:
+1. Gather disability disclosure evidence
+2. File EEOC complaint (180-300 days deadline)
+3. Consult employment attorney
+4. Potential settlement: $15,000-75,000
+
+Urgency: HIGH - 180 day EEOC filing deadline
+```
+
+**Legal DNA Test Results Include:**
+- Potential causes of action (legal claims)
+- Likelihood of success (low, medium, high)
+- Evidence you have vs. need
+- Timeline and deadlines
+- Potential damages/awards
+- Next steps
+- Cost estimate (if going to court)
+- Where to file (court, agency, tribunal)
+
+**⚠️ Important Note:**
+- This is NOT legal advice
+- Use it to prepare for lawyer consultation
+- Results don't guarantee outcome
+- Each case is unique
+- Some factors need lawyer analysis
+- Use this to ask better questions when consulting lawyer
+
+**When to use Legal DNA Test:**
+- ✅ Before talking to lawyer (prepare questions)
+- ✅ When you can't afford lawyer yet (get guidance)
+- ✅ To understand your legal options
+- ✅ To understand urgency/deadlines
+- ❌ NOT a substitute for actual lawyer
+
+---
+
+### Can I upload documents and evidence?
+
+**Yes! Step-by-step:**
+
+1. Open your case
+2. Tap **"Evidence"** or **"Documents"** tab
+3. Tap **"+"** or **"Add Evidence"** button
+4. Choose upload method:
+   - **Take a photo** (camera icon)
+   - **Upload from files** (file manager)
+   - **Scan document** (camera + OCR processing)
+   - **Record audio** (record yourself for notes)
+5. Select file(s)
+6. **Tag the evidence:**
+   - Type (screenshot, email, photo, letter, etc.)
+   - Category (witness statement, contract, incident report)
+   - Date of evidence (when did it happen)
+   - Notes (brief description)
+7. Tap **"Save Evidence"**
+8. Evidence is encrypted and backed up
+
+**What to Upload (Examples):**
+- ✅ Screenshots of messages/social media
+- ✅ Emails and email chains
+- ✅ Text message photos
+- ✅ Voicemail (transcribed or audio)
+- ✅ Photos/videos of incident or damage
+- ✅ Medical records
+- ✅ Witness statements
+- ✅ Pay stubs
+- ✅ Demand letters you sent
+- ✅ Responses received
+- ✅ Documentation of dates/times
+- ✅ Incident reports
+- ✅ Communications with HR or management
+
+**Storage & Security:**
+- All evidence is encrypted (AES-256)
+- Stored in secure cloud backup
+- Only you can access it
+- Can revoke access if account compromised
+- Evidence stays even if app updated
+
+**Organizing Evidence:**
+- Tag by category (witness, contract, incident, response)
+- Sort by date
+- Add detailed notes
+- Can export evidence list (PDF) to share with lawyer
+
+**How Many Files Can I Upload?**
+- Unlimited documents
+- Each file max 100 MB
+- Total storage: depends on your plan
+- Free plan: 5 GB storage
+- Premium: Unlimited (when available)
+
+**Evidence Best Practices:**
+- **Date everything**: Write date on documents before taking photos
+- **Keep originals**: Take photo/scan AND keep original
+- **Get witnesses**: If someone saw it, get their statement
+- **Document immediately**: Upload within 24 hours while fresh
+- **Backup copies**: Export case monthly, save to cloud/email
+- **Chain of custody**: Note where you got evidence (found in mailbox, emailed to you, etc.)
+- **No editing**: Don't alter screenshots or documents (can hurt case)
+- **Organize as you go**: Tag and categorize immediately
+- **Get help**: Share with mentor, they can advise what else to collect
+
+---
+
+### How do I track deadlines for my case?
+
+**Setting Reminders:**
+1. Open case
+2. Tap **"Timeline"** or **"Add Deadline"**
+3. Add important dates:
+   - EEOC filing deadline (180-300 days)
+   - Statute of limitations (varies by case type)
+   - Court filing deadline
+   - Response deadline if sued
+   - Lawyer consultation appointment
+   - Deposition date
+4. Set reminder notifications:
+   - 1 week before
+   - 1 day before
+   - Same day
+5. Tap "Save Deadline"
+
+**Why track deadlines:**
+- ❌ Miss deadline = lose right to sue
+- ❌ Miss deadline = case dismissed
+- ✅ Accurate tracking = protects your rights
+- ✅ Reminders = don't forget important dates
+
+**Common Deadlines by Issue:**
+- **Employment**: EEOC filing (180-300 days), statute of limitations (2-6 years)
+- **Housing**: Lease termination notice (30-90 days), eviction response (3-30 days)
+- **Insurance**: Claim deadline (varies), appeal deadline (30-90 days)
+- **Medical**: Malpractice deadline (1-3 years from discovery)
+- **Discrimination**: Title VII (EEOC 180-300 days), Section 1983 (2-3 years)
+
+**Missing a Deadline?**
+- Sometimes there are extensions possible
+- Contact lawyer IMMEDIATELY
+- Some deadlines can't be extended
+- Don't assume you have more time
+- When in doubt, file before deadline
+
+
+
+---
+
+## Peer Mentorship & Support Groups
+
+### What is a peer mentor?
+
+A **trained peer mentor** is someone who:
+- ✅ Has lived experience similar to yours
+- ✅ Completed an 8-week training program
+- ✅ Passed a certification exam
+- ✅ Understands confidentiality and boundaries
+- ✅ Can provide emotional support and guidance
+
+**NOT a substitute for:**
+- Lawyers (legal advice)
+- Therapists (mental health treatment)
+- Doctors (medical care)
+
+**Access:** Community tab → Find Mentors (150+ mentors available)
+
+---
+
+### What are support groups?
+
+**Support groups** are community spaces where people with similar experiences can:
+- Share stories and challenges
+- Offer mutual support and encouragement
+- Learn from each other's experiences
+- Build connections and friendships
+- Meet regularly (virtual, in-person, or hybrid)
+
+**Currently 24 active groups** covering different disabilities, focus areas, and formats.
+
+**Access:** Community tab → Support Groups
+
+---
+
+### How do I find a support group?
+
+Go to **Community** → **Support Groups**
+
+**Filter by:**
+- **Disability Type** (12 options): Physical, Chronic Pain, Mental Health, Neurodivergent, Sensory, etc.
+- **Meeting Type**: Virtual, In-Person, Hybrid
+- **Focus Area** (8 categories): Peer Support, Advocacy, Wellness, Career, Social, Learning, Creative, Recreation
+- **Language**: English, Spanish, ASL
+
+**Each group shows:**
+- Description and focus
+- Current member count
+- Meeting schedule and format
+- Moderators
+- Join button (for open groups)
+
+---
+
+### How do I join a support group?
+
+**Easy 3 steps:**
+1. Browse available groups or use filters
+2. Click on a group to see details
+3. Tap "Join Group" button
+
+**You'll see:**
+- ✅ Confirmation you've joined
+- Meeting information
+- How to access group chat/meetings
+- Current members (if privacy allows)
+
+**Can I leave anytime?** Yes! Just tap "Leave Group" - no questions asked.
+
+---
+
+### How does mentor matching work?
+
+Our algorithm matches you based on:
+1. **Expertise**: What area do you need help? (legal, emotional, practical)
+2. **Language**: Your preferred language
+3. **Timezone**: Convenient meeting times
+4. **Mentor Load**: Fair distribution among mentors
+5. **User Preferences**: Any specific requests
+
+**Matching takes 24-72 hours.** You'll get a notification when matched.
+
+---
+
+### Can I choose my mentor or request a specific person?
+
+**After matching:**
+- ✅ You can see the mentor's profile
+- ✅ You can request a different mentor if it's not a fit
+- ✅ No penalty for requesting a change
+
+**Before matching:**
+- You can't choose, but we collect your preferences
+- Preferences help our matching algorithm
+- Example: "I prefer a mentor with legal experience" or "Someone who speaks Spanish"
+
+---
+
+### What do I do in my first mentoring session?
+
+**Typical first session (30-60 min):**
+
+1. **Introduction** (5-10 min)
+   - Mentor shares their background
+   - You share yours
+
+2. **Understanding** (10-15 min)
+   - Mentor asks about your situation
+   - What brought you to seek mentoring?
+
+3. **Goal Setting** (10-15 min)
+   - What do you hope to accomplish?
+   - Short-term vs. long-term goals
+   - Mentor's role in achieving them
+
+4. **Next Steps** (5-10 min)
+   - Schedule follow-up sessions
+   - Any resources to explore before next session
+
+**Feeling nervous?** That's normal! Mentors train to make people comfortable.
+
+---
+
+### How often will I meet with my mentor?
+
+**You decide!** Common schedules:
+- Weekly (30-60 min per session)
+- Bi-weekly (longer sessions)
+- Monthly check-ins
+- As-needed basis
+
+You can change the schedule anytime. Just talk to your mentor!
+
+---
+
+### What if I don't like my mentor?
+
+**No problem!**
+1. You can request a different mentor anytime
+2. No judgment or explanation needed
+3. You'll be matched with someone new
+4. Previous conversations stay confidential
+
+**Good fit indicators:**
+- You feel heard and respected
+- Mentor offers practical guidance
+- You trust them
+- You look forward to sessions
+
+If these aren't happening, request a change!
+
+---
+
+### Is mentoring confidential?
+
+**Yes, 100% confidential.** Your mentor is bound by:
+- Confidentiality agreement
+- Ethics code
+- Privacy laws
+
+**Exceptions** (mentor MUST report):
+- Immediate danger to yourself or others
+- Active abuse of a child or elder
+- As legally required
+
+Your mentor will tell you upfront if they must report something.
+
+---
+
+### Can I mentor others?
+
+**Yes! To become a mentor:**
+
+1. **Application**
+   - Tell us about your experience
+   - Why you want to mentor
+   - Your availability
+
+2. **8-Week Training**
+   - Modules on: boundaries, active listening, crisis response
+   - Guest speakers from organizations
+   - Practice sessions with feedback
+
+3. **Certification Exam**
+   - Test your knowledge
+   - Real-world scenario practice
+   - Need 80%+ to pass
+
+4. **Matching & Mentoring**
+   - Start receiving mentees
+   - Ongoing support and resources
+   - Annual recertification
+
+**Interested?** Tap **Settings → Become a Mentor** or email hello@empowrapp.org.
+
+---
+
+## Community & Chat
+
+### How do I join the Community?
+
+1. Tap the **Community** tab (👥)
+2. Browse public channels
+3. Tap a channel that interests you
+4. Tap **"Join"**
+5. Introduce yourself in #introductions
+
+**Popular channels:**
+- #introductions (introduce yourself)
+- #legal-help (case advice)
+- #mentorship (pairing discussions)
+- #wins (celebrate victories)
+- #resources (share helpful links)
+- Plus 20+ more organized by topic
+
+---
+
+### Are community chats private?
+
+**It depends on the channel:**
+
+- **Public channels**: Anyone can join and read (even guests)
+- **Private channels**: Invite-only, member list visible
+- **Direct messages**: Private, encrypted chats between two people
+- **Threads**: Replies nested under one message for organization
+
+**Moderators** monitor all channels to keep them safe and supportive.
+
+---
+
+### Can I report inappropriate behavior in Community?
+
+**Yes, absolutely.**
+
+1. Long-press the message (mobile) or right-click (web)
+2. Tap **"Report"**
+3. Select reason:
+   - Harassment or abuse
+   - Spam or scam
+   - Hateful content
+   - Other
+4. Moderators review within 24 hours
+
+**Consequences for violators:**
+- Warning
+- Message removal
+- Channel mute/ban
+- Permanent ban for serious violations
+
+---
+
+### How do I delete a message I sent?
+
+1. Long-press your message (mobile) or right-click (web)
+2. Tap **"Delete"**
+3. Message removed instantly for everyone
+
+**Note:** If someone quoted or replied to your message, those replies stay visible.
+
+---
+
+### Can I search the chat history?
+
+**Yes!**
+1. Tap **Search** icon (🔍) in the channel
+2. Type keywords
+3. Results show matching messages with context
+
+**Search across:**
+- Current channel
+- All channels (if you have access)
+- Your direct messages
+- Date range
+
+---
+
+## Privacy & Security
+
+### What data does Empowr collect?
+
+**We collect:**
+- Account info (name, email, phone)
+- Profile information (optional)
+- Your cases, documents, and activities (to serve you)
+- Mentoring preferences
+- Usage analytics (if opted-in)
+
+**We DON'T:**
+- ❌ Sell your data
+- ❌ Share with third parties without consent
+- ❌ Use cookies for tracking (unless you opt-in)
+- ❌ Store payment info (we use secure processors)
+
+---
+
+### How is my data encrypted?
+
+**Encryption protections:**
+- 🔒 All data in transit is **HTTPS/TLS encrypted**
+- 🔒 Sensitive data at rest is **AES-256 encrypted**
+- 🔒 Mentoring conversations are **end-to-end encrypted** (in development)
+- 🔒 Evidence uploads are **virus-scanned and secured**
+
+**Advanced option:** BYOC (Bring Your Own Cloud)
+- You host your own Firestore
+- We're just the interface
+- Zero access for Empowr
+
+---
+
+### Can I use a pseudonym instead of my real name?
+
+**Yes!**
+- Use a first name only
+- Use initials
+- Use an alias
+- Just provide a real email for account recovery
+
+**When we need your real name:**
+- Legal documents (you control when/if shared)
+- For mentoring (mentor needs to know you)
+- For lawyer consultation
+
+---
+
+### What if I'm in an unsafe situation?
+
+**Empowr prioritizes your safety:**
+
+1. **Device Protection**
+   - Don't share passwords
+   - Use app lock (Settings → Security)
+   - Clear cache if shared device
+
+2. **Private Browsing**
+   - Use Incognito/Private mode if concerned
+   - Or access via web browser in private mode
+
+3. **Safety Features**
+   - Create a "safe contact" in Settings
+   - Emergency exit button (quick to home screen)
+   - Disable notifications (so messages don't show on lock screen)
+
+4. **Talk to Your Mentor**
+   - Tell them if you're unsafe
+   - They can help with a safety plan
+   - Confidential support available
+
+---
+
+### Do you comply with GDPR/CCPA?
+
+**Yes.** Empowr complies with:
+- ✅ GDPR (Europe)
+- ✅ CCPA (California)
+- ✅ HIPAA guidelines
+- ✅ International data protection laws
+
+**Your rights:**
+- Access your data: Settings → Download My Data
+- Delete your data: Settings → Delete Account
+- Export your data: Settings → Export
+
+See our full [Privacy Policy](https://www.empowrapp.org/privacy).
+
+---
+
+## Technical Issues
+
+### The app keeps crashing. What should I do?
+
+**Crash means the app closes unexpectedly (not the same as being slow).**
+
+**Step 1: Clear Cache (Usually Fixes It)**
+- **iPhone:**
+  - Settings → General → iPhone Storage → Empowr → "Offload App"
+  - Wait for it to install (this clears the cache)
+  - Reopen app
+- **Android:**
+  - Settings → Apps & notifications → Empowr → Storage → Clear Cache
+  - ⚠️ Don't tap "Clear Data"
+  - Reopen app
+- **Web:**
+  - Chrome: Press Ctrl+Shift+Delete (Cmd+Shift+Delete on Mac)
+  - Firefox: Press Ctrl+Shift+Delete
+  - Safari: Develop → Empty Web Storage
+  - Refresh page
+
+**Step 2: Restart Device**
+- Turn off completely (not sleep mode)
+- Wait 10 seconds
+- Turn back on
+- Open Empowr
+
+**Step 3: Update or Reinstall**
+- **Update (if available):**
+  - App Store/Play Store → Search Empowr → Update
+  - This may fix bugs causing crashes
+- **Reinstall (if still crashing):**
+  - Long-press Empowr app → Remove/Uninstall
+  - Restart device
+  - Reinstall from App Store/Play Store
+  - Log in (your data syncs back)
+
+**Step 4: Free Storage Space**
+- Delete unused apps/photos/videos
+- You need 500+ MB free space
+- When storage is low, apps crash more often
+- Check device settings → Storage to see what's using space
+
+**If It Keeps Crashing:**
+- Email: support@empowrapp.org
+- Include:
+  - Device and OS version
+  - When does it crash? (on startup, after 2 minutes, specific screen?)
+  - What were you doing?
+  - How many times has it happened?
+  - Error message (if shown)
+  - Screenshot of error if possible
+- Support will help debug
+
+**Common Crash Causes:**
+1. Cache corruption (fix: clear cache) ← Try this first
+2. Insufficient storage (fix: delete files)
+3. Old iOS/Android (fix: update device OS)
+4. Outdated app version (fix: update app)
+5. Bug in latest app release (fix: contact support)
+
+---
+
+### Why is the app running slowly?
+
+**Slow vs. Crashing:**
+- **Slow**: App opens but takes time to respond
+- **Crashing**: App closes unexpectedly
+
+**Speed Troubleshooting:**
+
+1. **Check Internet Speed:**
+   - If WiFi: Move closer to router
+   - If cellular: Try a different location
+   - Open web browser, try loading a website
+   - If website is slow too, it's your internet, not the app
+
+2. **Close Background Apps:**
+   - Too many open apps use device memory
+   - On iPhone: Swipe up from bottom → swipe other apps away
+   - On Android: Tap recent apps button → swipe other apps away
+   - Leave only Empowr open
+
+3. **Reduce Features Using Battery:**
+   - Turn off: Bluetooth, location services (if not needed)
+   - Reduce screen brightness
+   - Close background app refresh
+   - This frees RAM for Empowr
+
+4. **Clear App Cache (Not Data):**
+   - iPhone: Settings → General → Storage → Empowr → Offload
+   - Android: Settings → Apps → Empowr → Storage → Clear Cache
+   - Web: Clear cache (see crash section above)
+
+5. **Update the App:**
+   - Updates often include performance improvements
+   - App Store/Play Store → Search Empowr → Update
+
+6. **Restart Device:**
+   - Turn off for 10 seconds
+   - Turn back on
+   - Open Empowr
+
+7. **Check Server Status:**
+   - Sometimes our servers are slow
+   - Visit: status.empowrapp.org
+   - If showing "degraded performance", wait an hour
+
+**Still Slow After All Steps?**
+- Email: support@empowrapp.org with:
+  - Device type and OS version
+  - Internet speed (WiFi or cellular)
+  - How long do different actions take?
+  - Which screens are slowest?
+  - Approximate device storage (GB free)
+
+**Performance Tips:**
+- Log out and back in monthly (refreshes connection)
+- Restart device weekly
+- Update app when available
+- Keep 1+ GB free storage
+- Don't keep 100+ chats open
+
+---
+
+### I see an error message. What do I do?
+
+**Common Error Messages & Fixes:**
+
+| Error | What It Means | How to Fix |
+|-------|---------------|-----------|
+| "Connection Failed" | Can't reach servers | Check internet connection, wait 5 min, try again |
+| "Try Again Later" | Our servers are busy | This is temporary, wait 30-60 minutes |
+| "Unauthorized" | You're not logged in | Log out (Settings → Log Out) then log back in |
+| "Something Went Wrong" | Generic error | Restart app (close completely & reopen) |
+| "Storage Full" | Device has no space | Delete photos/apps to free up space |
+| "Timeout" | Request took too long | Check internet, try again in a few minutes |
+
+**Error Message Best Practices:**
+1. **Screenshot the error** (important!)
+2. **Note the error code** (numbers/letters in error)
+3. **Remember what you were doing**
+4. **Try once more** (sometimes it fixes itself)
+5. **If it repeats**, email support with screenshot + code
+
+**When to Contact Support:**
+- Same error 3+ times
+- Error prevents you from using app
+- Error message has a code like "ERR-4029"
+- Error appears after app update
+
+**Email support with:**
+- Screenshot of error
+- Device type and OS version
+- Error code (if shown)
+- What you were doing when error happened
+- When did it first occur?
+- Has it happened multiple times?
+
+---
+
+### My data isn't syncing across devices
+
+**You have multiple devices (phone + tablet, or phone + computer)?**
+
+**How Syncing Works:**
+- When you log in on Device A → Data saves to cloud
+- When you log in on Device B → It pulls data from cloud
+- If online, syncs automatically every 10-30 seconds
+
+**Why Data Might Not Sync:**
+
+1. **One device isn't logged in:**
+   - Sync only works when logged in on BOTH devices
+   - Check: Open app on both, tap Settings → see if logged in
+
+2. **Internet not connected on one device:**
+   - Needs internet on both to sync
+   - Check WiFi or cellular on both
+
+3. **App isn't running in background:**
+   - iPhone: Settings → Privacy → Background App Refresh → Empowr → ON
+   - Android: Settings → Apps → Empowr → Battery → Unrestricted
+   - Also check: Device power saving mode (should be OFF for background sync)
+
+4. **Cache corruption:**
+   - Clear app cache on both devices (see Speed Troubleshooting above)
+   - Log out and back in on both
+
+5. **Accounts are different:**
+   - Make sure you're logged into SAME email on both devices
+   - Different accounts = different data
+
+**Manual Sync:**
+1. On each device, open app
+2. Pull down (swipe from top)
+3. Look for "Syncing..." then "Updated"
+4. Wait for sync to complete
+5. Check if data appears now
+
+**Still Not Syncing?**
+- Email support with:
+  - Email address of account
+  - Device types (iPhone + iPad, Android + web, etc.)
+  - What data isn't syncing?
+  - When did you last see it sync properly?
+  - Device OS versions
+
+---
+
+### The app is asking for permissions. What do I say yes/no to?
+
+**Why Permissions Matter:**
+- Protects your privacy
+- You control what app can access
+- You can change permissions anytime
+
+**Common Permissions & What They're For:**
+
+| Permission | What It Does | Should You Allow? |
+|-----------|-------------|------------------|
+| Camera | Take photos/videos for evidence | Yes (optional if don't plan to photograph) |
+| Photo Library | Upload photos from device | Yes (needed for evidence) |
+| Microphone | Record audio notes | Yes (optional if don't want voice notes) |
+| Location | Know where you are | No (not required, hurts privacy) |
+| Contacts | Access your phone contacts | No (not required) |
+| Calendar | Access your schedule | No (not required) |
+| Storage | Read/write files | Yes (needed to upload documents) |
+| Internet/Data | Connect to internet | Yes (required for all features) |
+| Notifications | Send you alerts | Yes (so you remember important deadlines) |
+
+**Giving Permission After Install:**
+1. Go to Device Settings
+2. Find Apps or Applications
+3. Search for Empowr
+4. Tap "Permissions"
+5. Toggle each permission On/Off as you prefer
+
+**Revoking Permissions:**
+- Same steps as above, toggle Off
+- App will ask again next time it needs it
+
+**Privacy Best Practices:**
+- ✅ Allow: Camera, Photos, Microphone, Storage, Internet, Notifications
+- ❌ Block: Location, Contacts, Calendar
+
+---
+
+### Why can't I upload a document?
+
+**Possible Reasons:**
+
+1. **File is Too Large:**
+   - Max file size: 100 MB per file
+   - Compress large PDFs or images
+   - How to compress:
+     - Photos: Use device camera to retake (lower quality)
+     - PDFs: Use online PDF compressor
+     - Video: Use phone's video editor to trim/compress
+
+2. **Wrong File Type:**
+   - Accepted: PDF, JPG, PNG, DOC, DOCX, TXT, MP3
+   - Not accepted: EXE, ZIP, AVI (large video files)
+   - If wrong type, convert first using online tools
+
+3. **Internet Not Connected:**
+   - Need WiFi or cellular to upload
+   - Upload fails silently if no internet
+   - Check WiFi/cellular before trying again
+
+4. **Storage Full:**
+   - Your cloud storage limit reached
+   - Free plan: 5 GB
+   - Delete old files to free space
+   - Or upgrade plan (when available)
+
+5. **File is Corrupted:**
+   - File got damaged somehow
+   - Try uploading different version
+   - Or recreate file and try again
+
+**How to Upload Successfully:**
+1. Make sure file is under 100 MB
+2. Make sure file type is supported
+3. Make sure you're online (WiFi or cellular)
+4. Make sure you have storage space
+5. Tap upload, wait for progress bar to complete
+6. Don't close app while uploading
+
+**Upload Best Practices:**
+- Upload during daytime (servers less busy)
+- Use WiFi if possible (faster, more reliable)
+- Upload one file at a time
+- Don't use app while uploading (might cancel)
+- Screenshot shows "Uploading..." while in progress
+
+
+
+---
+
+## Billing & Costs
+
+### Is Empowr really free?
+
+**Yes, 100% free.** There are:
+- ❌ No subscriptions
+- ❌ No "pro" tier
+- ❌ No ads
+- ❌ No hidden costs
+
+**How are we funded?**
+- Grants from nonprofits
+- Donations
+- Corporate sponsorships
+- Volunteer staff
+
+---
+
+### Are peer mentors compensated?
+
+**Yes, mentors are paid.** They receive:
+- Hourly rate for mentoring sessions
+- Bonuses for impact milestones
+- Professional development stipends
+
+We believe mentorship is valuable work and should be paid.
+
+---
+
+### What if I can't afford to pay a lawyer?
+
+**Free and low-cost options:**
+
+1. **Legal Aid Societies** (free for low-income)
+   - empowrapp.org/legal-aid
+
+2. **Law School Clinics** (free)
+   - Nearby law schools offer free clinics
+
+3. **Pro Bono Organizations** (free)
+   - Nonprofits match volunteers with cases
+
+4. **Community Organizations** (free/sliding scale)
+   - Local nonprofits often have legal resources
+
+5. **Empowr Lawyer Finder**
+   - Filter by "free" or "sliding scale"
+   - Many participate in our network
 
 ---
 
 ## Accessibility
 
-### Is 3mpwrApp accessible?
+### Does Empowr meet accessibility standards?
 
-**YES!** We aim for **WCAG 2.1 Level AAA compliance** (the highest accessibility standard).
+**Yes.** Empowr is designed to meet:
+- ✅ WCAG 2.1 Level AAA (highest standard)
+- ✅ ADA (Americans with Disabilities Act)
+- ✅ Section 508 (US federal accessibility)
 
-Every feature is designed from the ground up to work for all disabilities and abilities.
-
-**[See our Accessibility Statement →](/accessibility)**
-
-### What accessibility features are included?
-
-**Vision:**
-- Screen reader optimization (TalkBack, VoiceOver)
-- Adjustable text sizes (up to 200%)
-- High contrast modes (3 options)
-- Colorblind-friendly palettes (5 types)
-- Large tap targets (minimum 44x44dp)
-
-**Hearing:**
-- Visual alerts for sounds
-- Captions for all audio/video
-- Text-based alternatives
-
-**Motor/Dexterity:**
-- Voice navigation
-- Switch control support
-- Reduced motion options
-- No time limits on actions
-
-**Cognitive:**
-- Simple, clear language
-- Consistent navigation
-- Distraction-free mode
-- Step-by-step wizards
-- Progress indicators
-
-**[See all accessibility features →](/accessibility-settings)**
-
-### Does 3mpwrApp support Indigenous languages?
-
-**YES!** We support **6 Indigenous languages** in beta:
-
-- Plains Cree (ᓀᐦᐃᔭᐍᐏᐣ / nehiyawewin)
-- Ojibwe (ᐊᓂᔑᓈᐯᒧᐎᐣ / Anishinaabemowin)
-- Inuktitut (ᐃᓄᒃᑎᑐᑦ)
-- Mi'kmaq (Mi'kmawi'simk)
-- Mohawk (Kanien'kéha)
-- Dene (Dënesųłiné)
-
-We also support syllabics rendering, cultural protocols, and OCAP principles for Indigenous data sovereignty.
-
-**[Learn about Indigenous language support →](/features#-indigenous-language-support-6-languages)**
-
-### Can I customize accessibility settings?
-
-**YES!** Settings → Accessibility lets you customize:
-
-- Text size and font
-- Color schemes and contrast
-- Motion and animation
-- Audio and visual alerts
-- Voice navigation
-- Keyboard shortcuts
-- And much more!
-
-**[Accessibility walkthrough →](/accessibility-walkthrough)**
+**Tested with:**
+- Screen readers (NVDA, JAWS, VoiceOver)
+- Keyboard-only navigation
+- High contrast readers
+- Users with disabilities
 
 ---
 
-## Beta Testing
+### Can I use a screen reader?
 
-### How do I join the beta?
+**Yes!** Empowr works with:
+- **iOS**: VoiceOver
+- **Android**: TalkBack
+- **Web**: NVDA, JAWS, VoiceOver
 
-**[Sign up for beta access →](https://forms.gle/46yVp37vfitfitLT9)**
+**To enable:**
+- iOS: Settings → Accessibility → VoiceOver → On
+- Android: Settings → Accessibility → TalkBack → On
+- Web: Built-in screen reader features
 
-We're accepting beta testers in waves during Phase 1 Closed Beta (October-December 2025).
-
-### What do beta testers do?
-
-Beta testers help us by:
-
-1. **Using the app** in real-world situations
-2. **Reporting bugs** when things don't work right
-3. **Providing feedback** on features and usability
-4. **Testing accessibility** with assistive technologies
-5. **Suggesting improvements** based on your needs
-
-### Do I need technical skills to be a beta tester?
-
-**NO!** We need testers of all skill levels:
-
-- First-time smartphone users
-- Power users
-- Assistive technology users
-- Non-technical community members
-
-Your perspective is valuable no matter your tech experience!
-
-### What if I find a bug?
-
-**Report it!** We have several ways to report issues:
-
-1. **In-app:** Settings → Help & Support → Report a Bug
-2. **Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-3. **Forms:** Use our bug report template
-
-**[Bug report template →](/bug-report-template)**
-
-### Will my beta feedback be confidential?
-
-**YES.** All feedback, bug reports, and testing data is kept confidential. We never share individual tester information publicly.
-
-### When does beta testing end?
-
-**Phase 1 Closed Beta:** October - December 2025  
-**Phase 2 Open Beta:** Q1 2026  
-**Phase 3 Public Launch:** Q2 2026
-
-**[See full roadmap →](/roadmap)**
+**Troubleshooting?** Email: accessibility@empowrapp.org
 
 ---
 
-## Troubleshooting
+### Can I adjust text size?
 
-### The app won't open / keeps crashing
+**Yes, multiple ways:**
 
-**Try these steps:**
+1. **In-App**
+   - Settings → Accessibility → Text Size (small, normal, large, extra-large)
 
-1. **Force close the app** and reopen it
-2. **Restart your device**
-3. **Check for updates** in the App Store / Google Play
-4. **Clear app cache** (Settings → Apps → 3mpwrApp → Clear Cache)
-5. **Reinstall the app** (won't lose data if you have cloud backup enabled)
+2. **Device Level**
+   - iOS: Settings → Display & Brightness → Text Size
+   - Android: Settings → Accessibility → Text and Display → Font Size
 
-Still not working? [Contact support →](/contact)
-
-### I can't log in
-
-**Common solutions:**
-
-- **Check your internet connection** - Login requires internet
-- **Reset your password** - Tap "Forgot Password" on login screen
-- **Check email for verification link** - May be in spam folder
-- **Try a different login method** (email vs. Google vs. Apple)
-
-**[Login troubleshooting guide →](/user-guide#troubleshooting)**
-
-### My cloud sync isn't working
-
-**Check these settings:**
-
-1. **Internet connection** - Cloud sync requires internet
-2. **Cloud provider credentials** - May need to re-authenticate
-3. **Storage space** - Your cloud may be full
-4. **Privacy mode** - Confirm correct mode is selected (Hybrid or Strict BYOC)
-
-**[Cloud sync troubleshooting →](/privacy-controls/#choose-your-privacy-mode)**
-
-### Features are missing / not showing up
-
-**Possible reasons:**
-
-- **Guest Mode** - Some features require an account
-- **Beta limitations** - Some features coming in future phases
-- **Privacy mode** - Strict BYOC mode disables some cloud features
-- **Platform differences** - Some features iOS/Android only
-
-**[See feature availability →](/features#-closed-beta-release)**
-
-### The app is running slowly
-
-**Try these steps:**
-
-1. **Close other apps** to free up memory
-2. **Clear app cache** (Settings → Apps → 3mpwrApp → Clear Cache)
-3. **Restart your device**
-4. **Check device storage** - Low storage slows performance
-5. **Update to latest version**
-
-### Screen reader isn't working properly
-
-**Troubleshooting:**
-
-1. **Enable screen reader** in device settings (TalkBack/VoiceOver)
-2. **Check app permissions** - May need accessibility permissions
-3. **Update the app** - We continuously improve screen reader support
-4. **Report specific issues** - [Contact accessibility team →](/contact)
-
-**[Accessibility troubleshooting →](/accessibility-walkthrough)**
+Both work together—they stack!
 
 ---
 
-## Legal & Disclaimers
+### Is there a high contrast mode?
 
-### What are the main disclaimers I should know?
+**Yes.**
+1. Settings → Accessibility → High Contrast Mode
+2. Choose: Off, On, Maximum
+3. Refreshes immediately
 
-**5 Critical Disclaimers:**
+**What changes:**
+- Darker backgrounds
+- Brighter text
+- Stronger color contrasts
+- Better visibility
 
-1. ⚕️ **NOT Medical Advice** - Always consult healthcare professionals
-2. ⚖️ **NOT Legal Advice** - Always consult licensed attorneys
-3. 💰 **NOT Financial Advice** - Always consult financial advisors
-4. 🤖 **AI May Contain Errors** - Verify all AI-generated content with professionals
-5. 🆘 **NOT Emergency Services** - Call 911 in emergencies, not the app
+---
 
-**[Read all 10 comprehensive disclaimers →](/legal/disclaimers/)**
+### What about dyslexia support?
 
-### What happens to my data if I delete my account?
+**Built-in features:**
+- **Dyslexia-Friendly Font**: OpenDyslexic option in Settings → Accessibility
+- **Larger Line Spacing**: Reduces visual crowding
+- **Color Overlays**: Yellow, blue, gray tints available
+- **High Contrast**: Easier to distinguish letters
 
-**Permanent deletion within 30 days:**
+---
 
-- All account information deleted
-- All app data deleted from our servers
-- Cloud backups remain in YOUR cloud (you control deletion)
-- Community posts anonymized (cannot be undone)
+### Can I navigate with keyboard only?
 
-**[Data deletion policy →](/delete-account)**
+**Yes!** Empowr is fully keyboard accessible:
+- Tab through buttons and fields
+- Enter to activate
+- Arrow keys to scroll
+- Escape to close modals
 
-### Can I use 3mpwrApp for legal cases?
+**Testing?** We test regularly with keyboard-only users.
 
-You CAN use 3mpwrApp's **Evidence Locker** to organize documents and the **Letter Wizard** to draft letters, BUT:
+---
 
-❌ This does NOT replace a lawyer  
-❌ This does NOT create attorney-client privilege  
-✅ Always consult a licensed attorney for legal matters  
-✅ Use the Lawyer Finder to connect with disability law specialists
+## Getting Help
 
-**[Find legal resources →](/user-guide#legal-resources)**
+### How do I contact support?
 
-### Is my Evidence Locker admissible in court?
+**Multiple ways:**
 
-**Possibly, but depends on your jurisdiction and case.**
+1. **In-App Chat**
+   - Settings → Help → Chat with Support
+   - Average response: 2 hours
 
-The Evidence Locker:
-- ✅ Provides timestamps
-- ✅ Encrypts files securely
-- ✅ Maintains chain of custody metadata
-- ⚠️ May require authentication by lawyer
-- ⚠️ Subject to court rules of evidence
+2. **Email**
+   - support@empowrapp.org
+   - Average response: 24 hours
 
-**Always consult your attorney** about evidence admissibility.
+3. **Community**
+   - Ask in #help channel
+   - Usually answered within 1 hour by community
 
-### Is there a cost to use 3mpwrApp?
+4. **Phone**
+   - 1-800-EMPOWR-1 (1-800-367-9751)
+   - Business hours: Mon-Fri 9am-5pm PT
 
-**No, 3mpwrApp is completely FREE.** There are no paid tiers, subscriptions, or in-app purchases. All features are free for everyone, forever. We're a community-funded project focused on disability empowerment, not profit.
+---
 
-**[See Terms of Service →](/terms/)**
+### I want to report a bug
 
-### How do I report copyright violations?
+1. **In-App**
+   - Settings → Help → Report a Bug
+   - Describe what happened
+   - Attach screenshot
+   - Include steps to reproduce
 
-Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com) with:
+2. **Email**
+   - bugs@empowrapp.org
+   - Include: Device, OS version, steps to reproduce
 
-- Description of copyrighted work
-- URL/location of infringing content
-- Your contact information
-- Statement of good faith belief
+3. **GitHub**
+   - Found a security bug? Report confidentially
+   - security@empowrapp.org
 
-**[DMCA policy →](/terms/#7-intellectual-property)**
+---
+
+### I have a feature request
+
+**We love suggestions!**
+
+1. **In-App**
+   - Settings → Feedback → Suggest Feature
+
+2. **Community**
+   - Post in #feature-requests channel
+   - Vote on others' ideas
+
+3. **Email**
+   - ideas@empowrapp.org
+
+4. **Form**
+   - https://forms.gle/empowrapp-ideas
+
+---
+
+### How do I give feedback?
+
+**Share your experience:**
+
+1. **Settings → Feedback**
+2. Choose feedback type:
+   - What's going well?
+   - What needs improvement?
+   - Feature request
+   - Other
+
+3. Include optional info:
+   - Context (what were you doing?)
+   - Device type
+   - Suggestions
+
+**All feedback is read by our team.** You may hear back from designers!
+
+---
+
+### Is there a community forum?
+
+**Yes!** [community.empowrapp.org](https://community.empowrapp.org)
+
+Here you can:
+- Get help from community members
+- Vote on feature requests
+- Share your success stories
+- Join organized discussions
+
+---
+
+### I want to partner with Empowr
+
+**Great!** Email: partnerships@empowrapp.org
+
+We're interested in:
+- Legal aid organizations
+- Nonprofit partnerships
+- Corporate sponsorships
+- University collaborations
+- Advocacy groups
+
+---
+
+## Data Management & Backup
+
+### How do I backup my data?
+
+**Automatic Backups:**
+- Empowr automatically backs up to cloud when online
+- Every 10-30 seconds while app is open
+- Happens in background (you don't need to do anything)
+- Even if app crashes, cloud backup is safe
+
+**Manual Backups:**
+
+1. **Export Individual Cases:**
+   - Open case → Tap "Export" → Choose PDF/Word/Text
+   - Save to your device
+   - Email to yourself or trusted person
+   - Store on cloud drive (Google Drive, OneDrive, iCloud)
+
+2. **Export All Cases at Once:**
+   - Settings → Data & Privacy → Export All Data
+   - Receives .ZIP file with all cases in PDF
+   - Download to device or email to yourself
+
+3. **Email Backup:**
+   - Tap Settings → Data & Privacy → Email Backup
+   - We send you a backup file
+   - Useful if phone is lost or stolen
+
+**How Often to Backup:**
+- After major case update: Export immediately
+- Before important meeting with lawyer: Fresh export
+- Weekly: Minimum backup schedule
+- Monthly: Full system backup
+
+**Where to Store Backups:**
+- ✅ Email (to yourself or trusted person)
+- ✅ Cloud storage (Google Drive, OneDrive, Dropbox)
+- ✅ External drive (USB stick)
+- ✅ Computer (download file)
+- ❌ Don't store on shared device/public computer
+
+**If Your Phone is Lost/Stolen:**
+1. Contact support immediately: security@empowrapp.org
+2. All your data is still safe in cloud
+3. Get new device
+4. Log into Empowr with same email
+5. All your cases and documents sync back
+
+---
+
+### Can I delete a case or document?
+
+**Deleting a Case:**
+1. Open case
+2. Tap "..." (menu) or "More Options"
+3. Tap "Delete Case" or "Archive Case"
+4. Confirm you want to delete
+
+**Where It Goes:**
+- First goes to "Trash" or "Archived"
+- Stays there for 30 days
+- After 30 days, permanently deleted
+
+**Recover Deleted Case:**
+- Within 30 days: Go to Trash/Archive
+- Find your case
+- Tap "Restore" or "Unarchive"
+- Case comes back with all data
+
+**Deleting a Document/Evidence:**
+- Open case
+- Go to Evidence tab
+- Long-press file → "Delete"
+- Same 30-day recovery window
+
+**Can't Undo After 30 Days:**
+- Permanent deletion is final
+- Make sure you want to delete
+- If unsure, archive instead (hides but keeps)
+
+---
+
+### How do I organize my many cases?
+
+**Using Tags/Categories:**
+1. When creating case, add category tag:
+   - Employment/wages
+   - Housing
+   - Healthcare
+   - Discrimination
+   - Harassment
+   - Other
+
+2. Filter by tag to see specific types:
+   - Tap filter icon
+   - Select category
+   - See only that type of case
+
+**Using Status:**
+- Active: Currently working on it
+- On Hold: Paused, will resume
+- Escalated: Moved to lawyer/court
+- Resolved: Finished/settled
+- Use status to track progress
+
+**Using Sorting:**
+- Sort by: Date created, last updated, priority, status
+- Helps find what you need quickly
+
+**Favorites/Pinning:**
+- Pin your 2-3 most important cases
+- They appear at top of list
+- Pin how to: Tap case → Star icon
+
+**Using Notes:**
+- Add detailed notes to each case
+- Searchable, helps find cases later
+- Include: Key people, dates, important details
+
+**Cleanup:**
+- Archive old resolved cases (don't delete)
+- Keeps list manageable
+- Archived cases still searchable
+
+---
+
+## Advanced Features
+
+### What is BYOC (Bring Your Own Cloud)?
+
+**BYOC = You control your data completely**
+
+**Normal Setup (Empowr Cloud):**
+- You log in to Empowr
+- Your data stores on Empowr's servers
+- We back it up, secure it, manage it
+- You trust us with your data
+- ✅ Easier, less technical
+
+**BYOC Setup (Your Google Drive/Dropbox):**
+- You connect your own Google Drive account
+- Your data stores ON YOUR GOOGLE DRIVE
+- Only you (and people you share with) can access
+- Empowr is just the interface
+- ❌ More technical, but full privacy
+
+**When to Use BYOC:**
+- ✅ Ultra-sensitive cases
+- ✅ You don't trust cloud providers
+- ✅ You want maximum privacy
+- ✅ You need compliance (HIPAA, etc.)
+- ❌ If not technical (stick with normal)
+
+**Setting Up BYOC:**
+1. Settings → Privacy → BYOC
+2. Choose provider: Google Drive, Dropbox, etc.
+3. Connect your account (grant permissions)
+4. Empowr accesses ONLY the Empowr folder
+5. All future data stores in YOUR cloud
+6. You're in complete control
+
+**BYOC + Offline:**
+- Works even better offline
+- Data syncs to YOUR cloud when reconnected
+- You're never dependent on Empowr servers
+
+**Important Notes:**
+- Can't switch back easily (stick with choice)
+- You're responsible for backups
+- If your account is hacked, data is at risk
+- You need to maintain your own cloud account
+
+---
+
+### How do I use Complexity Mode?
+
+**Complexity Mode = Adapt app to your brain**
+
+**Simple Mode:**
+- Fewer options
+- Fewer buttons
+- Bigger text
+- Fewer tabs
+- Best when: Brain fog, overwhelmed, bad day
+- Shows: Only essentials (evidence, home, help)
+
+**Standard Mode (Default):**
+- Most features visible
+- Balanced number of options
+- Normal text size
+- All tabs available
+- Best when: Normal functioning, making decisions
+
+**Power User Mode:**
+- All options visible
+- Advanced filters
+- Keyboard shortcuts visible
+- Detailed settings
+- Best when: Technical, want full control
+
+**Switching Modes:**
+1. Settings → Accessibility → Complexity Mode
+2. Choose: Simple, Standard, Power User
+3. App refreshes immediately
+4. Change anytime
+
+**What Changes Between Modes:**
+- **Homepage**: Different layouts
+- **Tab Bar**: Different number of tabs
+- **Buttons**: Different options visible
+- **Text**: Same, but more/fewer sections
+- **Advanced features**: Hidden in Simple, visible in Power User
+
+**Bad Day Mode:**
+- When you're in crisis or overwhelmed
+- Tap SOS button → "Bad Day Mode"
+- App simplifies to absolute essentials
+- One button to crisis resources
+- Quickly return to normal when better
+
+---
+
+### How do I secure my account from hacking?
+
+**Security Best Practices:**
+
+1. **Strong Password:**
+   - 12+ characters (even better than 8+)
+   - Mix: uppercase, lowercase, numbers, symbols
+   - Example: `Empowr!Case#2024`
+   - ❌ Don't use: Pet names, birthdays, common words
+   - ✅ Use: Random combination
+
+2. **Change Password Regularly:**
+   - Settings → Security → Change Password
+   - Every 90 days is good
+   - Immediately if breach suspected
+
+3. **Two-Factor Authentication (2FA):**
+   - Settings → Security → Enable 2FA
+   - You'll get code via email when logging in
+   - Much harder to hack (even with password)
+   - Recommended for all
+
+4. **Never Share Password:**
+   - ❌ Not to mentors (they don't need it)
+   - ❌ Not to lawyers (we can share securely)
+   - ❌ Not in chat or email
+   - ✅ Only you know your password
+
+5. **Log Out of Shared Devices:**
+   - If using friend's device, log out after
+   - Settings → Log Out
+   - Don't stay logged in
+
+6. **Update App Regularly:**
+   - Security patches in updates
+   - App Store/Play Store → Update when available
+   - Restart device after update
+
+7. **Secure Your Device:**
+   - Device password/PIN (not just fingerprint)
+   - Keep device OS updated
+   - Install security apps
+   - Don't jailbreak/root device
+
+**If Your Password is Compromised:**
+1. Change password immediately
+2. Change all other accounts if same password
+3. Enable 2FA
+4. Contact support: security@empowrapp.org
+5. We'll help secure your account
+
+**If Account is Hacked:**
+1. Contact support: security@empowrapp.org
+2. We'll help you regain control
+3. Audit who accessed your account
+4. Change password
+5. Enable 2FA
+6. Reset all linked devices
+
+---
+
+### What if I'm reporting abuse/harassment?
+
+**Important: Your Safety First**
+
+**If You're in Immediate Danger:**
+- Call 911 (US) or emergency number
+- Leave the location
+- Call a domestic violence hotline
+- Text 911 if can't call safely
+- DON'T wait, leave first
+
+**Safe Reporting in Empowr:**
+
+1. **Create Private Case:**
+   - When creating case, select "Private"
+   - Only you can see it
+   - Won't appear in shared devices
+
+2. **Use Pseudonym (Nickname):**
+   - Don't use real name in app
+   - Use "Case #1", initials, or alias
+   - Settings → Profile → Edit Name to use safer name
+
+3. **Delete History:**
+   - If using shared device:
+   - Export case first (backup)
+   - Delete from app (goes to trash)
+   - Clear device cache (Settings → Storage)
+
+4. **Tell Someone Safe:**
+   - Share case with trusted mentor
+   - Or trusted friend/family
+   - Or lawyer
+   - Don't isolate
+
+5. **Make Safety Plan:**
+   - Tap SOS → Safety Resources
+   - Create exit plan if needed
+   - Document incidents immediately
+   - Keep backup copies
+
+**Empowr's Privacy Promise:**
+- ✅ End-to-end encryption for sensitive data
+- ✅ Will never share case without permission
+- ✅ Can't be subpoenaed by abuser (usually)
+- ✅ Law enforcement needs warrant to access
+- ❌ We cannot protect you if you share link publicly
+
+**Legal Protection:**
+- Document everything (dates, times, what happened)
+- Keep evidence safe
+- Make copies (multiple locations)
+- Share with lawyer only
+- Testimony in court will be powerful
+
+---
+
+## Payment & Upgrades
+
+### What if I need legal help but can't pay?
+
+**Free & Low-Cost Options:**
+
+1. **Legal Aid Societies**
+   - Free for low-income people
+   - Find at: empowrapp.org/legal-aid
+   - Usually help: family law, housing, benefits
+
+2. **Pro Bono Organizations**
+   - Volunteer lawyers, free service
+   - Search: [probono.net](https://probono.net)
+   - Usually help: civil rights, discrimination, housing
+
+3. **Law School Clinics**
+   - Free legal clinics run by law students
+   - Supervised by licensed attorney
+   - Find: Search "[your state] law school clinic"
+
+4. **Disability Rights Organizations**
+   - Free legal help for disability cases
+   - Often work on contingency (no upfront cost)
+   - Find at: ndrn.org (national directory)
+
+5. **Contingency Basis**
+   - Lawyer only gets paid if you win
+   - Lawyer takes percentage of settlement (usually 25-40%)
+   - You pay $0 upfront
+   - Best for cases where you might win money
+
+6. **Sliding Scale**
+   - Pay based on your income
+   - Make $20k/year? Pay less
+   - Make $60k/year? Pay more
+   - Find in Empowr Lawyer Finder
+
+7. **Union Legal Services**
+   - If you're in a union, free legal help
+   - Contact your union rep
+   - Usually help: employment, wages
+
+8. **Bar Association Referral**
+   - Many offer free consultations
+   - Some have reduced-cost services
+   - Search: "[your state] state bar"
+
+**Empowr's Free Legal Tools:**
+- ✅ Case tracking (free)
+- ✅ Document templates (free)
+- ✅ Communication scripts (free)
+- ✅ Legal resources (free)
+- ✅ Lawyer finder (free)
+- ✅ Peer mentoring (free)
 
 ---
 
 ## Still Have Questions?
 
-### Contact Us
+If your question isn't answered here:
 
-📧 **Email:** [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
-
-📱 **Social Media:**
-- [Facebook](https://www.facebook.com/3mpowrapp)
-- [X/Twitter](https://x.com/3mpowrApp0816)
-- [Instagram](https://www.instagram.com/3mpowrapp/)
-
-📖 **Resources:**
-- [Complete User Guide](/user-guide) - Step-by-step tutorials
-- [All Features](/features) - Full feature list
-- [Beta Guide](/beta-guide) - Beta testing handbook
-- [Roadmap](/roadmap) - What's coming next
+1. **Check the Tutorial** – In-app guided tour
+2. **Search Community** – Likely answered by others
+3. **Email Support** – We'll get back to you!
+4. **Contact Help** – In-app support chat
 
 ---
 
-<div class="alternative-formats">
-  <p><strong>📄 Alternative Formats</strong></p>
-  <p>
-    <a href="/downloads/faq.pdf" class="format-link">📄 Download as PDF</a>
-    <a href="javascript:window.print()" class="format-link">🖨️ Print-friendly version</a>
-    <a href="mailto:?subject=3mpwrApp FAQ&body=Check out these FAQs: https://3mpwrapp.pages.dev/faq" class="format-link">📧 Email to yourself</a>
-  </p>
-</div>
+## Additional Resources
 
-<div class="crisis-resources" role="alert">
-  <p><strong>🆘 Need immediate help?</strong></p>
-  <p>24/7 Crisis Line: <a href="tel:1-833-456-4566">1-833-456-4566</a> | <a href="/crisis-resources">More resources →</a></p>
-</div>
+- [Getting Started Guide](./GETTING_STARTED_GUIDE.md)
+- [Feature Roadmap](./FEATURE_ROADMAP.md)
+- [Privacy Policy](https://www.empowrapp.org/privacy)
+- [Terms of Service](https://www.empowrapp.org/terms)
+- [Accessibility Statement](https://www.empowrapp.org/accessibility)
+- [Blog](https://blog.empowrapp.org)
+- [YouTube Channel](https://youtube.com/@empowrapp)
 
+---
 
-
-{%- include page-feedback.html -%}
-
-**3mpwrApp - Your voice, your power, your data.**
-
-*Last Updated: October 25, 2025*
-
-<link rel="stylesheet" href="/assets/css/faq.css">
-
-<script src="/assets/js/faq.js" defer></script>
+*Last updated: January 2026*  
+*Have a question not listed? Email support@empowrapp.org or chat with us in the app.*
