@@ -110,36 +110,66 @@
     </div>
 
     <script>
-        // Parse URL parameters
+        console.log('[GDrive Callback] Page loaded, parsing response...');
+        
+        // Parse URL parameters from both query string and hash fragment
         const url = new URL(window.location.href);
+        
+        // Code flow: code is in query string
         const code = url.searchParams.get('code');
         const error = url.searchParams.get('error');
         const state = url.searchParams.get('state');
         const errorDescription = url.searchParams.get('error_description');
+        
+        // Implicit flow: access_token is in hash fragment
+        const hashParams = new URLSearchParams(url.hash.substring(1));
+        const accessToken = hashParams.get('access_token');
+        const tokenType = hashParams.get('token_type');
+        const expiresIn = hashParams.get('expires_in');
+        const scope = hashParams.get('scope');
 
         const loadingEl = document.getElementById('loading');
         const successEl = document.getElementById('success');
         const errorEl = document.getElementById('error');
         const errorMessageEl = document.getElementById('errorMessage');
 
+        console.log('[GDrive Callback] Parsed - code:', !!code, 'access_token:', !!accessToken, 'error:', error);
+
         // Handle error response
         if (error) {
+            console.error('[GDrive Callback] OAuth error:', error, errorDescription);
             loadingEl.style.display = 'none';
             errorEl.style.display = 'block';
             errorMessageEl.textContent = `${error}: ${errorDescription || 'Unknown error'}`;
             
+            // Send error to opener
+            if (window.opener) {
+                window.opener.postMessage({
+                    type: 'expo-auth-session',
+                    url: window.location.href
+                }, '*');
+            }
+            
             // Close window after 5 seconds
             setTimeout(() => window.close(), 5000);
         }
-        // Handle success response
-        else if (code) {
-            // Send code back to opener
+        // Handle implicit flow success (access_token in hash)
+        else if (accessToken) {
+            console.log('[GDrive Callback] Implicit flow - access token received');
+            console.log('[GDrive Callback] Token type:', tokenType);
+            console.log('[GDrive Callback] Expires in:', expiresIn, 'seconds');
+            console.log('[GDrive Callback] Scope:', scope);
+            
+            // Send token back to opener using expo-auth-session message format
             if (window.opener) {
+                console.log('[GDrive Callback] Sending token to opener window...');
                 window.opener.postMessage({
-                    type: 'GDRIVE_AUTH_CODE',
-                    code: code,
-                    state: state || ''
+                    type: 'expo-auth-session',
+                    url: window.location.href  // Full URL with hash fragment
                 }, '*');
+                console.log('[GDrive Callback] Message sent!');
+            } else {
+                console.warn('[GDrive Callback] No opener window found!');
             }
             
             // Show success message
@@ -148,14 +178,58 @@
                 successEl.style.display = 'block';
                 
                 // Close window after 1.5 seconds
-                setTimeout(() => window.close(), 1500);
+                setTimeout(() => {
+                    console.log('[GDrive Callback] Closing window...');
+                    window.close();
+                }, 1500);
             }, 500);
         }
-        // Missing code
+        // Handle code flow success (authorization code in query)
+        else if (code) {
+            console.log('[GDrive Callback] Code flow - authorization code received');
+            
+            // Send code back to opener using expo-auth-session message format
+            if (window.opener) {
+                console.log('[GDrive Callback] Sending code to opener window...');
+                window.opener.postMessage({
+                    type: 'expo-auth-session',
+                    url: window.location.href
+                }, '*');
+                console.log('[GDrive Callback] Message sent!');
+            } else {
+                console.warn('[GDrive Callback] No opener window found!');
+            }
+            
+            // Show success message
+            setTimeout(() => {
+                loadingEl.style.display = 'none';
+                successEl.style.display = 'block';
+                
+                // Close window after 1.5 seconds
+                setTimeout(() => {
+                    console.log('[GDrive Callback] Closing window...');
+                    window.close();
+                }, 1500);
+            }, 500);
+        }
+        // Missing both code and token
         else {
+            console.error('[GDrive Callback] No authorization code or access token found');
+            console.error('[GDrive Callback] Full URL:', window.location.href);
+            console.error('[GDrive Callback] Hash:', url.hash);
+            console.error('[GDrive Callback] Search:', url.search);
+            
             loadingEl.style.display = 'none';
             errorEl.style.display = 'block';
-            errorMessageEl.textContent = 'Authorization code not received. Please try again.';
+            errorMessageEl.textContent = 'Authorization code not found in callback.';
+            
+            // Send error to opener
+            if (window.opener) {
+                window.opener.postMessage({
+                    type: 'expo-auth-session',
+                    url: window.location.href
+                }, '*');
+            }
             
             // Close window after 5 seconds
             setTimeout(() => window.close(), 5000);
