@@ -1,177 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Drive Authorization</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: system-ui;
-            padding: 20px;
-            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 0;
         }
+        
         .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             text-align: center;
             max-width: 500px;
+            width: 90%;
         }
-        .processing {
-            background: #e3f2fd;
-            border: 1px solid #90caf9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .success {
-            background: #e8f5e9;
-            border: 1px solid #81c784;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .error {
-            background: #fee;
-            border: 1px solid #f88;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        h1 {
-            margin: 0 0 10px 0;
-        }
-        p {
-            margin: 10px 0;
-            color: #666;
-        }
+        
         .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
+            display: inline-block;
             width: 40px;
             height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin: 20px auto;
+            margin-bottom: 20px;
         }
+        
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .success {
+            display: none;
+            color: #10b981;
+        }
+        
+        .success h1 {
+            color: #10b981;
+        }
+        
+        .error {
+            display: none;
+            color: #ef4444;
+        }
+        
+        .error h1 {
+            color: #ef4444;
+        }
+        
+        .status-message {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #999;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="processing" id="processing">
-            <h1>🔐 Processing Authorization</h1>
+        <div id="loading" class="loading">
             <div class="spinner"></div>
-            <p>Connecting to your Google Drive...</p>
-            <p style="font-size: 12px; color: #999;">Please do not close this window.</p>
+            <h1>Authorizing...</h1>
+            <p>Connecting your Google Drive account</p>
+            <div class="status-message">This window will close automatically</div>
         </div>
         
-        <div class="success" id="success" style="display: none;">
-            <h1>✓ Authorization Successful</h1>
-            <p>Your Google Drive connection is being established.</p>
-            <p>This window will close automatically.</p>
+        <div id="success" class="success">
+            <h1>✓ Success!</h1>
+            <p>Your Google Drive account is now connected</p>
+            <div class="status-message">You can close this window</div>
         </div>
         
-        <div class="error" id="error" style="display: none;">
+        <div id="error" class="error">
             <h1>✗ Authorization Failed</h1>
-            <p id="error-message"></p>
-            <p style="font-size: 12px; color: #999;">You can close this window.</p>
+            <p id="errorMessage">An error occurred during authorization</p>
+            <div class="status-message">Please try again or contact support</div>
         </div>
     </div>
-    
+
     <script>
-        (function() {
-            console.log('[GDrive Callback] Page loaded, URL:', window.location.href);
-            console.log('[GDrive Callback] Has opener:', !!window.opener);
-            
-            const url = new URL(window.location.href);
-            
-            // Check for code in query params (code flow)
-            const code = url.searchParams.get('code');
-            const error = url.searchParams.get('error');
-            const state = url.searchParams.get('state');
-            
-            // Check for access_token in hash (implicit flow)
-            const hashParams = new URLSearchParams(url.hash.substring(1));
-            const accessToken = hashParams.get('access_token');
-            
-            console.log('[GDrive Callback] Parsed:', { code: !!code, accessToken: !!accessToken, error });
-            
-            // Show appropriate message
-            if (error) {
-                const errorDesc = url.searchParams.get('error_description') || 'Unknown error';
-                document.getElementById('processing').style.display = 'none';
-                document.getElementById('error').style.display = 'block';
-                document.getElementById('error-message').textContent = `${error}: ${errorDesc}`;
-            } else if (accessToken) {
-                // Implicit flow - token in hash
-                console.log('[GDrive Callback] Processing access token (implicit flow)');
-                document.getElementById('processing').style.display = 'none';
-                document.getElementById('success').style.display = 'block';
-                
-                // Try to post message to opener
-                if (window.opener) {
-                    // Build the callback URL with the token in hash
-                    const callbackUrl = new URL(window.location.origin + '/gdrive-callback');
-                    callbackUrl.hash = url.hash; // Preserve the entire hash with token
-                    
-                    const message = {
-                        type: 'expo-auth-session',
-                        url: callbackUrl.toString()
-                    };
-                    
-                    console.log('[GDrive Callback] Posting message to opener:', message);
+        console.log('[GDrive Callback] Page loaded, parsing response...');
+        console.log('[GDrive Callback] Full URL:', window.location.href);
+        console.log('[GDrive Callback] Has opener:', !!window.opener);
+        
+        // Parse URL parameters from both query string and hash fragment
+        const url = new URL(window.location.href);
+        
+        // Code flow: code is in query string
+        const code = url.searchParams.get('code');
+        const error = url.searchParams.get('error');
+        const state = url.searchParams.get('state');
+        const errorDescription = url.searchParams.get('error_description');
+        
+        // Implicit flow: access_token is in hash fragment
+        const hashParams = new URLSearchParams(url.hash.substring(1));
+        const accessToken = hashParams.get('access_token');
+        const tokenType = hashParams.get('token_type');
+        const expiresIn = hashParams.get('expires_in');
+        const scope = hashParams.get('scope');
+
+        const loadingEl = document.getElementById('loading');
+        const successEl = document.getElementById('success');
+        const errorEl = document.getElementById('error');
+        const errorMessageEl = document.getElementById('errorMessage');
+
+        console.log('[GDrive Callback] Parsed - code:', !!code, 'access_token:', !!accessToken, 'error:', error);
+
+        // Helper function to send message to opener
+        function sendMessageToOpener(message) {
+            if (window.opener) {
+                console.log('[GDrive Callback] Sending message to opener:', message.type);
+                try {
                     window.opener.postMessage(message, '*');
-                    console.log('[GDrive Callback] Message posted, will close in 1.5s');
-                    
-                    // Close after delay
-                    setTimeout(() => {
-                        console.log('[GDrive Callback] Closing window');
-                        window.close();
-                    }, 1500);
-                } else {
-                    console.error('[GDrive Callback] No window.opener - cannot send message');
-                }
-            } else if (code) {
-                // Code flow - code in query params
-                console.log('[GDrive Callback] Processing authorization code (code flow)');
-                document.getElementById('processing').style.display = 'none';
-                document.getElementById('success').style.display = 'block';
-                
-                // Try to post message to opener
-                if (window.opener) {
-                    // Build the callback URL with the code
-                    const callbackUrl = new URL(window.location.origin + '/gdrive-callback');
-                    callbackUrl.searchParams.set('code', code);
-                    if (state) {
-                        callbackUrl.searchParams.set('state', state);
-                    }
-                    
-                    const message = {
-                        type: 'expo-auth-session',
-                        url: callbackUrl.toString()
-                    };
-                    
-                    console.log('[GDrive Callback] Posting message to opener:', message);
-                    window.opener.postMessage(message, '*');
-                    console.log('[GDrive Callback] Message posted, will close in 1.5s');
-                    
-                    // Close after delay
-                    setTimeout(() => {
-                        console.log('[GDrive Callback] Closing window');
-                        window.close();
-                    }, 1500);
-                } else {
-                    console.error('[GDrive Callback] No window.opener - cannot send message');
+                    console.log('[GDrive Callback] Message sent successfully!');
+                    return true;
+                } catch (e) {
+                    console.error('[GDrive Callback] Failed to post message:', e);
+                    return false;
                 }
             } else {
-                console.error('[GDrive Callback] No code or token found in URL');
-                document.getElementById('processing').style.display = 'none';
-                document.getElementById('error').style.display = 'block';
-                document.getElementById('error-message').textContent = 'No authorization code or token found. Please try again.';
+                console.warn('[GDrive Callback] No opener window found!');
+                return false;
             }
-        })();
+        }
+
+        // Handle error response
+        if (error) {
+            console.error('[GDrive Callback] OAuth error:', error, errorDescription);
+            loadingEl.style.display = 'none';
+            errorEl.style.display = 'block';
+            errorMessageEl.textContent = `${error}: ${errorDescription || 'Unknown error'}`;
+            
+            // Send error to opener - include full URL so parent can parse error
+            sendMessageToOpener({
+                type: 'expo-auth-session',
+                url: window.location.href
+            });
+            
+            // Close window after 5 seconds
+            setTimeout(() => window.close(), 5000);
+        }
+        // Handle implicit flow success (access_token in hash)
+        else if (accessToken) {
+            console.log('[GDrive Callback] Implicit flow - access token received');
+            console.log('[GDrive Callback] Token type:', tokenType);
+            console.log('[GDrive Callback] Expires in:', expiresIn, 'seconds');
+            console.log('[GDrive Callback] Scope:', scope);
+            console.log('[GDrive Callback] Token length:', accessToken.length);
+            
+            // Send token back to opener using expo-auth-session message format
+            // CRITICAL: Send full URL including hash fragment so parent can extract token
+            const sent = sendMessageToOpener({
+                type: 'expo-auth-session',
+                url: window.location.href  // Full URL with hash fragment containing token
+            });
+            
+            // Show success message
+            setTimeout(() => {
+                loadingEl.style.display = 'none';
+                successEl.style.display = 'block';
+                
+                // Close window after 1.5 seconds
+                setTimeout(() => {
+                    console.log('[GDrive Callback] Closing window...');
+                    window.close();
+                }, 1500);
+            }, 500);
+        }
+        // Handle code flow success (authorization code in query)
+        else if (code) {
+            console.log('[GDrive Callback] Code flow - authorization code received');
+            console.log('[GDrive Callback] Code length:', code.length);
+            
+            // Send code back to opener using expo-auth-session message format
+            const sent = sendMessageToOpener({
+                type: 'expo-auth-session',
+                url: window.location.href
+            });
+            
+            // Show success message
+            setTimeout(() => {
+                loadingEl.style.display = 'none';
+                successEl.style.display = 'block';
+                
+                // Close window after 1.5 seconds
+                setTimeout(() => {
+                    console.log('[GDrive Callback] Closing window...');
+                    window.close();
+                }, 1500);
+            }, 500);
+        }
+        // Missing both code and token
+        else {
+            console.error('[GDrive Callback] No authorization code or access token found');
+            console.error('[GDrive Callback] Full URL:', window.location.href);
+            console.error('[GDrive Callback] Hash:', url.hash);
+            console.error('[GDrive Callback] Search:', url.search);
+            
+            loadingEl.style.display = 'none';
+            errorEl.style.display = 'block';
+            errorMessageEl.textContent = 'Authorization code not found in callback.';
+            
+            // Still send message to opener so it knows auth failed
+            sendMessageToOpener({
+                type: 'expo-auth-session',
+                url: window.location.href
+            });
+            
+            // Close window after 5 seconds
+            setTimeout(() => window.close(), 5000);
+        }
     </script>
 </body>
 </html>
