@@ -10,9 +10,6 @@ description: Community support for injured workers and persons with disabilities
 <!-- Status Banner -->
 {%- include status-banner.html -%}
 
-<!-- Accessibility Toolbar (collapsed by default for simple mode) -->
-{%- include accessibility-toolbar.html -%}
-
 <!-- Hero Section -->
 <div style="text-align: center; margin: 2rem 0;">
   <picture>
