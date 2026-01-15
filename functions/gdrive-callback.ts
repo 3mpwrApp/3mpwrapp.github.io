@@ -8,8 +8,8 @@
  * to the server. So this function always returns an HTML page with JavaScript
  * that reads the hash client-side and posts it to the opener window.
  * 
- * For code flow, the code is in the query string which IS sent to the server,
- * but we handle it the same way for consistency.
+ * For native apps (no opener window), it redirects to the app's deep link scheme
+ * with the token in the URL.
  * 
  * Location: functions/gdrive-callback.ts
  * Deployed to: https://3mpwrapp.pages.dev/gdrive-callback
@@ -68,7 +68,7 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
     .success h1 { color: #10b981; }
     .error h1 { color: #ef4444; }
     .status { margin-top: 15px; font-size: 14px; color: #999; }
-    #loading, #success, #error { display: none; }
+    #loading, #success, #error, #redirecting { display: none; }
   </style>
 </head>
 <body>
@@ -78,6 +78,12 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
       <h1>Authorizing...</h1>
       <p>Connecting your Google Drive account</p>
       <div class="status">This window will close automatically</div>
+    </div>
+    <div id="redirecting">
+      <div class="spinner"></div>
+      <h1>Redirecting to App...</h1>
+      <p>Taking you back to the app</p>
+      <div class="status">Please wait...</div>
     </div>
     <div id="success" class="success">
       <h1>✓ Success!</h1>
@@ -100,9 +106,22 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
     console.log('[GDrive Callback] Hash:', window.location.hash);
     console.log('[GDrive Callback] Search:', window.location.search);
     console.log('[GDrive Callback] Has opener:', !!window.opener);
+    console.log('[GDrive Callback] User Agent:', navigator.userAgent);
+    
+    // Detect if this is from a native app (no opener window)
+    const isNativeApp = !window.opener;
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    console.log('[GDrive Callback] Is native app:', isNativeApp);
+    console.log('[GDrive Callback] Is mobile:', isMobile);
     
     // Parse URL parameters
     const url = new URL(window.location.href);
+    
+    // Check state parameter to see if this is from native app
+    const state = url.searchParams.get('state') || '';
+    const isFromNativeApp = state.startsWith('native_app_') || (isNativeApp && isMobile);
+    console.log('[GDrive Callback] State:', state);
+    console.log('[GDrive Callback] Is from native app:', isFromNativeApp);
     
     // Code flow: code is in query string
     const code = url.searchParams.get('code');
@@ -117,13 +136,31 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
     
     console.log('[GDrive Callback] Parsed - code:', !!code, 'access_token:', !!accessToken, 'error:', error);
     
+    function showLoading() {
+      document.getElementById('loading').style.display = 'block';
+      document.getElementById('redirecting').style.display = 'none';
+      document.getElementById('success').style.display = 'none';
+      document.getElementById('error').style.display = 'none';
+    }
+    
+    function showRedirecting() {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('redirecting').style.display = 'block';
+      document.getElementById('success').style.display = 'none';
+      document.getElementById('error').style.display = 'none';
+    }
+    
     function showSuccess() {
       document.getElementById('loading').style.display = 'none';
+      document.getElementById('redirecting').style.display = 'none';
       document.getElementById('success').style.display = 'block';
+      document.getElementById('error').style.display = 'none';
     }
     
     function showError(message) {
       document.getElementById('loading').style.display = 'none';
+      document.getElementById('redirecting').style.display = 'none';
+      document.getElementById('success').style.display = 'none';
       document.getElementById('error').style.display = 'block';
       document.getElementById('errorMessage').textContent = message;
     }
@@ -131,8 +168,6 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
     function sendMessageToOpener() {
       if (window.opener) {
         try {
-          // CRITICAL: Send the full URL including hash fragment
-          // The parent window expects 'expo-auth-session' type
           const message = {
             type: 'expo-auth-session',
             url: window.location.href
@@ -145,38 +180,88 @@ export const onRequest = async (context: PagesContext): Promise<Response> => {
           console.error('[GDrive Callback] Failed to post message:', e);
           return false;
         }
-      } else {
-        console.warn('[GDrive Callback] No opener window found');
-        return false;
       }
+      return false;
+    }
+    
+    function redirectToNativeApp(token, err) {
+      // Build deep link URL to redirect back to the app
+      // The app listens for: empowrapp://gdrive-callback#access_token=...
+      let deepLink;
+      if (token) {
+        // Include the hash fragment with the token
+        deepLink = 'empowrapp://gdrive-callback#access_token=' + encodeURIComponent(token);
+        if (expiresIn) deepLink += '&expires_in=' + expiresIn;
+        if (tokenType) deepLink += '&token_type=' + tokenType;
+      } else if (err) {
+        deepLink = 'empowrapp://gdrive-callback?error=' + encodeURIComponent(err);
+      } else {
+        deepLink = 'empowrapp://gdrive-callback?error=unknown';
+      }
+      
+      console.log('[GDrive Callback] Redirecting to native app:', deepLink);
+      showRedirecting();
+      
+      // Try to redirect
+      window.location.href = deepLink;
+      
+      // If redirect doesn't work (e.g., app not installed), show success/error
+      setTimeout(() => {
+        if (token) {
+          showSuccess();
+        } else {
+          showError(err || 'Unknown error');
+        }
+      }, 2000);
     }
     
     // Handle the response
     if (error) {
       console.error('[GDrive Callback] OAuth error:', error, errorDescription);
-      showError(error + ': ' + (errorDescription || 'Unknown error'));
-      sendMessageToOpener();
-      setTimeout(() => window.close(), 5000);
+      const errMsg = error + ': ' + (errorDescription || 'Unknown error');
+      
+      if (isFromNativeApp) {
+        redirectToNativeApp(null, errMsg);
+      } else {
+        showError(errMsg);
+        sendMessageToOpener();
+        setTimeout(() => window.close(), 5000);
+      }
     } else if (accessToken) {
-      // Implicit flow - token in hash
       console.log('[GDrive Callback] Implicit flow - token received, length:', accessToken.length);
-      console.log('[GDrive Callback] Token type:', tokenType);
-      console.log('[GDrive Callback] Expires in:', expiresIn, 'seconds');
-      sendMessageToOpener();
-      showSuccess();
-      setTimeout(() => window.close(), 1500);
+      
+      if (isFromNativeApp) {
+        // Redirect to native app with token
+        redirectToNativeApp(accessToken, null);
+      } else {
+        // Web flow - send to opener window
+        sendMessageToOpener();
+        showSuccess();
+        setTimeout(() => window.close(), 1500);
+      }
     } else if (code) {
-      // Code flow - code in query string
       console.log('[GDrive Callback] Code flow - authorization code received');
-      sendMessageToOpener();
-      showSuccess();
-      setTimeout(() => window.close(), 1500);
+      
+      if (isFromNativeApp) {
+        // Redirect to native app with code (though native should use implicit flow)
+        window.location.href = 'empowrapp://gdrive-callback?code=' + encodeURIComponent(code);
+        showRedirecting();
+      } else {
+        sendMessageToOpener();
+        showSuccess();
+        setTimeout(() => window.close(), 1500);
+      }
     } else {
-      // No code or token
       console.error('[GDrive Callback] No code or token found in URL');
-      showError('Authorization code not found. Please try again.');
-      sendMessageToOpener();
-      setTimeout(() => window.close(), 5000);
+      const errMsg = 'Authorization code not found. Please try again.';
+      
+      if (isFromNativeApp) {
+        redirectToNativeApp(null, errMsg);
+      } else {
+        showError(errMsg);
+        sendMessageToOpener();
+        setTimeout(() => window.close(), 5000);
+      }
     }
   </script>
 </body>
