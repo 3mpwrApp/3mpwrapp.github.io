@@ -97,9 +97,11 @@ Configurable inactivity alerts with emergency contact notifications to keep your
 - **[Safety Controls](/user-guide/#safety-controls)** - Block, report, privacy settings
 
 ### 📢 Campaigns
+- **[Campaign Coordination](/user-guide/#campaign-coordination)** - Organize advocacy campaigns and collective action
 - **[Campaign List](/user-guide/#campaigns)** - View and join active campaigns
-- **[Campaign Details](/user-guide/#campaign-details)** - Full campaign information
-- **[Progress Tracking](/user-guide/#campaign-progress)** - Visual progress indicators
+- **[Campaign Details](/user-guide/#campaign-details)** - Full campaign information with goals, timeline, tasks
+- **[Progress Tracking](/user-guide/#campaign-progress)** - Track campaign progress and milestones
+- **[Task Management](/user-guide/#campaign-tasks)** - Assign and manage campaign tasks
 - **[Member Management](/user-guide/#campaign-members)** - See participants and roles
 
 ### 📚 External Resources
