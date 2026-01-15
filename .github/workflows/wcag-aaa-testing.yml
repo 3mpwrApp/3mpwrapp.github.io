@@ -1,0 +1,182 @@
+name: WCAG 2.2 AAA Testing
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  schedule:
+    - cron: '0 8 * * 1' # Weekly Monday at 08:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write # For creating issues on failures
+  pull-requests: write # For commenting on PRs
+
+concurrency:
+  group: wcag-aaa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  wcag-aaa-validation:
+    name: WCAG 2.2 AAA Compliance Testing
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Ensure reports directory
+        run: mkdir -p reports/screenshots reports/pa11y reports/contrast reports/keyboard
+
+      - name: Preflight site availability check
+        run: |
+          URL="https://3mpwrapp.github.io/?no-modal=1"
+          echo "Checking site availability: $URL"
+          for i in {1..5}; do
+            if curl -sSfL "$URL" -o /dev/null --max-time 10; then
+              echo "✅ Site is reachable"
+              exit 0
+            fi
+            echo "⏳ Attempt $i/5 failed, retrying in 5s..."
+            sleep 5
+          done
+          echo "❌ Site not reachable after 5 attempts"
+          exit 1
+
+      - name: Run pa11y-ci AAA tests
+        id: pa11y
+        continue-on-error: true
+        run: |
+          echo "Running pa11y-ci with WCAG2AAA standard..."
+          npx pa11y-ci --config .pa11yci-aaa.json --reporter json > reports/pa11y/pa11y-aaa-report.json 2>&1 || true
+          
+          # Also generate human-readable report
+          npx pa11y-ci --config .pa11yci-aaa.json > reports/pa11y/pa11y-aaa-report.txt 2>&1 || true
+
+      - name: Run contrast ratio tests (AAA)
+        id: contrast
+        continue-on-error: true
+        run: node scripts/test-contrast-aaa.js
+
+      - name: Run keyboard navigation tests
+        id: keyboard
+        continue-on-error: true
+        run: node scripts/test-keyboard-navigation.js
+
+      - name: Run enhanced axe-core AAA tests
+        id: axe
+        continue-on-error: true
+        run: node scripts/axe-check-aaa.js
+
+      - name: Analyze test results
+        id: analyze
+        if: always()
+        run: node scripts/analyze-aaa-results.js
+
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wcag-aaa-test-results-${{ github.run_number }}
+          path: |
+            reports/
+            *.json
+          retention-days: 30
+
+      - name: Generate summary report
+        if: always()
+        run: |
+          echo "# WCAG 2.2 AAA Test Results 🔍" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Test Run:** ${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Triggered by:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Test status
+          echo "## Test Suite Status" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Test Type | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| pa11y-ci AAA | ${{ steps.pa11y.outcome == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Contrast Ratio (AAA) | ${{ steps.contrast.outcome == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Keyboard Navigation | ${{ steps.keyboard.outcome == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| axe-core AAA | ${{ steps.axe.outcome == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Include detailed results if analysis script generated summary
+          if [ -f "reports/summary.md" ]; then
+            cat reports/summary.md >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Comment on PR with results
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let comment = '## 🔍 WCAG 2.2 AAA Test Results\n\n';
+            
+            const outcomes = {
+              pa11y: '${{ steps.pa11y.outcome }}',
+              contrast: '${{ steps.contrast.outcome }}',
+              keyboard: '${{ steps.keyboard.outcome }}',
+              axe: '${{ steps.axe.outcome }}'
+            };
+            
+            const failed = Object.values(outcomes).filter(o => o !== 'success').length;
+            
+            if (failed === 0) {
+              comment += '✅ **All AAA compliance tests passed!**\n\n';
+            } else {
+              comment += `⚠️ **${failed} test suite(s) found violations**\n\n`;
+            }
+            
+            comment += '| Test Type | Result |\n';
+            comment += '|-----------|--------|\n';
+            comment += `| pa11y-ci AAA | ${outcomes.pa11y === 'success' ? '✅' : '❌'} |\n`;
+            comment += `| Contrast Ratio (7:1) | ${outcomes.contrast === 'success' ? '✅' : '❌'} |\n`;
+            comment += `| Keyboard Navigation | ${outcomes.keyboard === 'success' ? '✅' : '❌'} |\n`;
+            comment += `| axe-core AAA | ${outcomes.axe === 'success' ? '✅' : '❌'} |\n\n`;
+            
+            if (fs.existsSync('reports/summary.md')) {
+              const summary = fs.readFileSync('reports/summary.md', 'utf8');
+              comment += summary;
+            }
+            
+            comment += `\n\n📊 [View detailed reports in artifacts](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+      - name: Fail build if violations found
+        if: always()
+        run: |
+          if [ -f "reports/has-violations.flag" ]; then
+            echo "❌ WCAG 2.2 AAA violations detected. Build failed."
+            echo ""
+            echo "Please review the test artifacts and fix the violations."
+            echo "Local testing: npm run a11y:test"
+            exit 1
+          else
+            echo "✅ No AAA violations detected!"
+            exit 0
+          fi

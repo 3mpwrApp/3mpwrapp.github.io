@@ -5,8 +5,24 @@ permalink: /offline.html
 description: You're currently offline. 3mpwrApp will work again when you reconnect.
 ---
 
-<div style="text-align: center; padding: 4rem 1rem;">
-  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.3; margin: 0 auto;">
+<!-- AAA Compliant Offline Page -->
+<div class="offline-container" style="text-align: center; padding: 4rem 1rem; max-width: 800px; margin: 0 auto;">
+  
+  <!-- Offline Icon with proper aria label -->
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="200" 
+    height="200" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    style="opacity: 0.5; margin: 0 auto; display: block;"
+    role="img"
+    aria-label="Offline icon - no internet connection"
+  >
     <line x1="1" y1="1" x2="23" y2="23"></line>
     <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
     <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
@@ -16,32 +32,105 @@ description: You're currently offline. 3mpwrApp will work again when you reconne
     <line x1="12" y1="20" x2="12.01" y2="20"></line>
   </svg>
 
-  <h1 style="margin-top: 2rem;">You're Offline</h1>
+  <h1 style="margin-top: 2rem; font-size: 2.5rem; color: var(--text-color, #111);">You're Offline</h1>
   
-  <p style="font-size: 1.25rem; color: #666; max-width: 600px; margin: 1rem auto;">
+  <!-- AAA: High contrast text with 7:1+ ratio -->
+  <p style="font-size: 1.25rem; color: var(--text-secondary, #595959); max-width: 600px; margin: 1.5rem auto; line-height: 1.6;">
     It looks like you've lost your internet connection. Don't worry - 3mpwrApp will work again as soon as you reconnect.
   </p>
 
+  <!-- Status announcement for screen readers -->
+  <div role="status" aria-live="polite" aria-atomic="true" class="visually-hidden" id="offline-status">
+    You are currently offline. The page will automatically refresh when your connection is restored.
+  </div>
+
   <div style="margin-top: 3rem;">
-    <h2 style="font-size: 1.5rem;">What you can do:</h2>
+    <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem;">What you can do:</h2>
     <ul style="list-style: none; padding: 0; max-width: 500px; margin: 1rem auto; text-align: left;">
-      <li style="padding: 0.5rem 0;">✅ Browse cached pages</li>
-      <li style="padding: 0.5rem 0;">✅ Review previously loaded content</li>
-      <li style="padding: 0.5rem 0;">✅ Check your network connection</li>
-      <li style="padding: 0.5rem 0;">✅ Try refreshing when back online</li>
+      <li style="padding: 0.75rem 0; font-size: 1.1rem;">
+        <span style="color: #2e7d32; font-weight: bold;" aria-hidden="true">✅</span> 
+        <span style="margin-left: 0.5rem;">Browse cached pages you've visited</span>
+      </li>
+      <li style="padding: 0.75rem 0; font-size: 1.1rem;">
+        <span style="color: #2e7d32; font-weight: bold;" aria-hidden="true">✅</span> 
+        <span style="margin-left: 0.5rem;">Review previously loaded content</span>
+      </li>
+      <li style="padding: 0.75rem 0; font-size: 1.1rem;">
+        <span style="color: #2e7d32; font-weight: bold;" aria-hidden="true">✅</span> 
+        <span style="margin-left: 0.5rem;">Check your network connection</span>
+      </li>
+      <li style="padding: 0.75rem 0; font-size: 1.1rem;">
+        <span style="color: #2e7d32; font-weight: bold;" aria-hidden="true">✅</span> 
+        <span style="margin-left: 0.5rem;">Try refreshing when back online</span>
+      </li>
     </ul>
   </div>
 
   <div style="margin-top: 3rem;">
-    <button id="retry-button" style="background: #007bff; color: white; border: none; padding: 1rem 2rem; font-size: 1.1rem; border-radius: 8px; cursor: pointer;">
-      Try Again
+    <!-- AAA: 44x44px minimum touch target, enhanced focus indicator -->
+    <button 
+      id="retry-button" 
+      style="
+        background: linear-gradient(135deg, #0052A3 0%, #003d7a 100%); 
+        color: white; 
+        border: none; 
+        padding: 16px 32px; 
+        font-size: 1.1rem; 
+        font-weight: 600;
+        border-radius: 8px; 
+        cursor: pointer;
+        min-width: 160px;
+        min-height: 44px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      "
+      aria-label="Retry loading page"
+      onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0,82,163,0.3)'"
+      onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'"
+      onfocus="this.style.outline='3px solid #FFD54F'; this.style.outlineOffset='3px'"
+      onblur="this.style.outline='none'"
+    >
+      <span style="margin-right: 8px;" aria-hidden="true">🔄</span>Try Again
     </button>
   </div>
 
   <div style="margin-top: 2rem;">
-    <a href="/" style="color: #007bff; text-decoration: none;">← Go to Homepage</a>
+    <a 
+      href="/" 
+      style="
+        color: #0052A3; 
+        text-decoration: underline; 
+        font-size: 1.1rem;
+        text-underline-offset: 0.2em;
+      "
+      onfocus="this.style.outline='3px solid #FFD54F'; this.style.outlineOffset='3px'"
+      onblur="this.style.outline='none'"
+    >
+      ← Go to Homepage
+    </a>
   </div>
 </div>
+
+<style>
+  /* AAA: Visually hidden but screen reader accessible */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    button, a {
+      transition: none !important;
+    }
+  }
+</style>
 
 <script>
   // Manual retry button

@@ -10,7 +10,17 @@
     "deploy:blog": "node scripts/agent-blog-production.js",
     "status": "node scripts/agent-orchestrator.js status",
     "logs": "tail -f logs/agents/*",
-    "start": "npm run deploy:agents"
+    "start": "npm run deploy:agents",
+    "a11y:test": "npm run a11y:pa11y && npm run a11y:contrast && npm run a11y:keyboard && npm run a11y:axe && npm run a11y:analyze",
+    "a11y:pa11y": "pa11y-ci --config .pa11yci-aaa.json",
+    "a11y:contrast": "node scripts/test-contrast-aaa.js",
+    "a11y:keyboard": "node scripts/test-keyboard-navigation.js",
+    "a11y:axe": "node scripts/axe-check-aaa.js",
+    "a11y:analyze": "node scripts/analyze-aaa-results.js",
+    "a11y:ci": "npm run a11y:test",
+    "a11y:quick": "node scripts/axe-check-aaa.js && node scripts/test-contrast-aaa.js",
+    "test:accessibility": "npm run a11y:test",
+    "test:a11y": "npm run a11y:test"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.10.2",
@@ -29,9 +39,11 @@
     "cssnano": "^7.1.2",
     "eslint": "^8.56.0",
     "linkinator": "^7.3.0",
+    "pa11y-ci": "^3.1.0",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.1.1",
+    "puppeteer": "^23.11.1",
     "sharp": "^0.34.4",
     "terser": "^5.44.0"
   },
