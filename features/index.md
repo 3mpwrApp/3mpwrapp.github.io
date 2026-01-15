@@ -13,12 +13,13 @@ description: Explore 3mpwr App's comprehensive features designed to empower your
 
 📖 **12 minute read** | ⚡ **Feature highlights below**
 
-**Version:** 4.3 (January 2026 - Infrastructure & Fixes)  
-**Status:** 100% Production Ready • 721 Tests Passing • WCAG AAA Compliant • All Systems Operational 🎉  
-**Last Updated:** January 5, 2026
+**Version:** 4.4 (January 2026 - PowerTools Complete)  
+**Status:** 97% Complete • Week 3 PowerTools Active • 721 Tests Passing • WCAG AAA Compliant 🎉  
+**Last Updated:** January 15, 2026
 
-Welcome to 3mpwr App - your complete toolkit for disability advocacy, community connection, and system navigation. With **60+ core features** organized by Complexity Mode (Simple: 5, Standard: 20, Power User: 150+), every tool is designed to empower you while protecting your privacy.
+Welcome to 3mpwr App - your complete toolkit for disability advocacy, community connection, and system navigation. With **60+ core features** organized into PowerTools hubs and Complexity Mode (Simple: 5, Standard: 20, Power User: 150+), every tool is designed to empower you while protecting your privacy.
 
+**🎉 NEW: PowerTools Complete!** Wellness Hub with 6 categories, Document Management, Wellness Checks, Legal Action Hub, and Support Groups all live.  
 **🇺🇸 USA Lite now available!** American supporters can join with access to core features. [Learn more →](/roadmap/#-new-usa-lite---now-available)
 
 ---
@@ -80,12 +81,20 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 
 ---
 
-### 🆕 January 2026 Updates (Infrastructure & Fixes)
+### 🆕 January 15, 2026 - PowerTools Complete (Week 3)
+- ✅ **Wellness Hub:** 41 wellness tools organized into 6 intuitive categories (Mental Health, Energy & Pain, Daily Living, Physical Health, Communication, Specialty)
+- ✅ **Document Management System:** Upload PDFs, images, Word docs, spreadsheets with end-to-end encryption
+- ✅ **Wellness Check System:** Configurable inactivity alerts with emergency contacts
+- ✅ **Legal Action Hub:** 5-tab hub consolidating all legal tools (Accountability, Coach, Help, Automation, Policy)
+- ✅ **Support Groups:** 24 active groups with advanced filtering by disability type, meeting format, focus area
+- ✅ **52 Redirect Wrappers:** All old bookmarks and links continue working seamlessly
+- ✅ **Code Quality Perfected:** 0 TypeScript errors, 0 ESLint warnings, 721 tests passing
+- ✅ **Security Hardened:** Repository public-ready with zero exposed secrets
+
+### Earlier January 2026 Updates (Infrastructure & Fixes)
 - ✅ **Google Drive BYOC Fully Functional:** Works on all platforms (iOS, Android, Web, Expo Preview)
 - ✅ **API Endpoints Fixed:** Resources tab, Campaigns, and Podcasts load reliably with graceful fallback
-- ✅ **Code Quality Maintained:** 0 ESLint errors, 0 TypeScript errors, 721 tests still passing
 - ✅ **Visual Consistency Improved:** All inline colors converted to theme-based styling
-- ✅ **Production-Ready Verified:** All systems tested and operational across all platforms
 
 ### 🆕 December 2025 Updates (Production Release)
 - ✅ **First Demo Presentation Successful:** December 9, 2025 - positive reception from Canada & USA audiences
@@ -114,59 +123,66 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
   <summary><strong>⚡ Quick Overview (1 minute)</strong></summary>
   <div class="tldr-content">
     <div class="tldr-item">
-      <span class="tldr-icon">🚀</span>
+      <span class="tldr-icon">🌟</span>
       <div>
-        <strong>60+ core features</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Production-ready beta (Simple: 5, Standard: 20, Power User: 150+)</p>
+        <strong>PowerTools Hubs (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Consolidated interfaces: Wellness Hub (6 categories), Legal Action Hub (5 tabs), Evidence Command Center (4 tabs), Ally & Support Network</p>
       </div>
     </div>
     <div class="tldr-item">
-      <span class="tldr-icon">♿</span>
+      <span class="tldr-icon">🧘</span>
       <div>
-        <strong>90% Accessibility (NEW)</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Complexity Mode integration, Bad Day Mode, global SOS button, complete consolidation</p>
+        <strong>Wellness Hub (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">41 tools in 6 categories: Mental Health & Crisis, Energy & Pain, Daily Living, Physical Health, Communication & Growth, Specialty</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">📁</span>
+      <div>
+        <strong>Document Management (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Secure storage for PDFs, images, Word docs, spreadsheets with AES-256-GCM encryption</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">💚</span>
+      <div>
+        <strong>Wellness Checks (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">Inactivity alerts with emergency contacts - stay connected with your support network</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">⚖️</span>
+      <div>
+        <strong>Legal Action Hub (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">5 tabs: Accountability Tracker, Legal Coach, Legal Help, Automation, Policy Advocacy</p>
+      </div>
+    </div>
+    <div class="tldr-item">
+      <span class="tldr-icon">👥</span>
+      <div>
+        <strong>Support Groups (NEW)</strong>
+        <p style="margin: 0; font-size: 0.95rem;">24 groups with filtering by disability type, meeting format, focus area, language</p>
       </div>
     </div>
     <div class="tldr-item">
       <span class="tldr-icon">📊</span>
       <div>
-        <strong>Master Tracker Hub (NEW)</strong>
+        <strong>Master Tracker Hub</strong>
         <p style="margin: 0; font-size: 0.95rem;">All health tracking unified - symptoms, meds, rehab, appointments, AI patterns</p>
       </div>
     </div>
     <div class="tldr-item">
       <span class="tldr-icon">⚖️</span>
       <div>
-        <strong>Appeal Command Center (NEW)</strong>
+        <strong>Appeal Command Center</strong>
         <p style="margin: 0; font-size: 0.95rem;">Deadline warfare, denial decoder, evidence strength meter</p>
       </div>
     </div>
     <div class="tldr-item">
-      <span class="tldr-icon">📴</span>
+      <span class="tldr-icon">♿</span>
       <div>
-        <strong>Offline Queue (NEW)</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Upload evidence without internet - critical for rural areas and court dates</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">💪</span>
-      <div>
-        <strong>4 Wellness Hubs (NEW)</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Energy & Mood, Health Tracker, Mental Wellness, Movement & Rehab</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">🔍</span>
-      <div>
-        <strong>Resources vs Research</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Clear split - in-app tools vs 96 external resources with province filtering</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">🔐</span>
-      <div>
-        <strong>Evidence Locker</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Secure document storage with AES-256 encryption + offline queue</p>
+        <strong>90% Accessibility</strong>
+        <p style="margin: 0; font-size: 0.95rem;">WCAG AAA compliant with Complexity Mode, Bad Day Mode, global SOS button</p>
       </div>
     </div>
     <div class="tldr-item">
@@ -174,13 +190,6 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
       <div>
         <strong>Letter Wizard</strong>
         <p style="margin: 0; font-size: 0.95rem;">22 professional letter templates for appeals & advocacy</p>
-      </div>
-    </div>
-    <div class="tldr-item">
-      <span class="tldr-icon">👥</span>
-      <div>
-        <strong>Community</strong>
-        <p style="margin: 0; font-size: 0.95rem;">Connect with 8+ communities in safe, moderated spaces</p>
       </div>
     </div>
     <div class="tldr-item">
@@ -194,6 +203,59 @@ Welcome to 3mpwr App - your complete toolkit for disability advocacy, community 
 </details>
 
 > 📖 **Looking for detailed instructions?** Check our [User Guide](/user-guide) for step-by-step tutorials on how to use each feature effectively.
+
+---
+
+## 📋 Complete Feature List (Quick Links)
+
+All features below link to detailed step-by-step instructions in our [User Guide](/user-guide/).
+
+### PowerTools Hubs (NEW - January 2026)
+
+- **[Wellness Hub →](/user-guide/#wellness-hub)** - 41 tools in 6 categories (Mental Health & Crisis, Energy & Pain, Daily Living, Physical Health, Communication & Growth, Specialty)
+- **[Document Management →](/user-guide/#document-management)** - Secure storage for PDFs, images, Word docs, spreadsheets with AES-256-GCM encryption
+- **[Wellness Checks →](/user-guide/#wellness-checks)** - Inactivity alerts with emergency contacts
+- **[Legal Action Hub →](/user-guide/#legal-action-hub)** - 5 tabs: Accountability Tracker, Legal Coach, Legal Help, Automation, Policy Advocacy
+- **[Support Groups →](/user-guide/#support-groups)** - 24 groups with filtering by disability type, meeting format, focus area, language
+
+### Core Features
+
+- **[Evidence Command Center →](/user-guide/#evidence-command-center)** - Document upload, tagging, timeline, 4-tab interface
+- **[Appeal Command Center →](/user-guide/#appeal-command-center)** - Deadline tracking, denial decoder, evidence strength meter
+- **[Master Tracker Hub →](/user-guide/#master-tracker-hub)** - Unified health tracking (symptoms, meds, rehab, appointments, AI patterns)
+- **[Letter Wizard →](/user-guide/#letter-wizard)** - 22 professional letter templates for appeals & advocacy
+- **[AI Advocacy Suite →](/user-guide/#ai-advocacy-suite)** - 6 AI tools (Translator, Interpreter, Navigator, Policy Simplifier, Ask AI)
+- **[Community Hub →](/user-guide/#community-hub)** - 12+ discussion spaces, direct messaging, peer support matching
+- **[Accessibility Features →](/user-guide/#accessibility-features)** - Complexity Mode, Bad Day Mode, Global SOS, WCAG AAA compliance
+- **[Campaigns →](/user-guide/#campaigns)** - Create and participate in advocacy campaigns
+- **[External Resources →](/user-guide/#external-resources)** - 96 curated resources with province filtering
+
+### Wellness Features
+
+- **[Mood Tracker 2.0 →](/user-guide/#mood-tracker-20-with-ai)** - AI pattern detection, trigger identification, coping strategies
+- **[Pacing Partner →](/user-guide/#pacing-partner-with-ai-forecasting)** - Energy predictions, adaptive pacing, body-mind sync
+- **[CBT Coach →](/user-guide/#cbt-coach)** - Cognitive behavioral therapy techniques
+- **[Energy Coins →](/user-guide/#energy-coins)** - Spoon theory digitized with daily budgeting
+- **[Grounding Techniques →](/user-guide/#grounding-techniques)** - Quick anxiety relief
+- **[Exercise Hub →](/user-guide/#exercise-hub)** - Accessible fitness videos
+- **[Complete Wellness Calendar →](/user-guide/#complete-awareness-calendar)** - 30+ observances including Indigenous days
+
+### Legal & Advocacy Tools
+
+- **[Accountability Coach →](/user-guide/#accountability-coach)** - Track and resolve employer/provider issues
+- **[Legal Automation →](/user-guide/#legal-automation)** - Automated legal workflows
+- **[Claims Navigator →](/user-guide/#claims-navigator)** - Navigate claims process
+- **[Rights Checker →](/user-guide/#rights-checker)** - Know your legal rights
+- **[Policy Simulator →](/user-guide/#policy-simulator)** - Test policy scenarios
+
+### Security & Privacy
+
+- **[Air-Gapped Mode →](/user-guide/#air-gapped-mode)** - Zero cloud dependencies
+- **[BYOC (Bring Your Own Cloud) →](/user-guide/#byoc)** - Store data in your own Google Drive
+- **[Encryption →](/user-guide/#encryption)** - AES-256-GCM for all sensitive data
+- **[Data Ownership →](/user-guide/#data-ownership)** - You control your data 100%
+
+> 💡 **Tip:** Each feature name above links to detailed step-by-step instructions in our comprehensive [User Guide](/user-guide/). Beta testers can also reference the [Beta Testing Guide](/beta-guide/) for testing priorities and feedback procedures.
 
 ---
 
