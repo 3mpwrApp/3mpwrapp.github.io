@@ -59,7 +59,7 @@ secrets.json
 
 # Node modules (if using any Node.js tools)
 node_modules/
-package-lock.json
+# package-lock.json removed from ignore - needed for Cloudflare CI npm ci
 yarn.lock
 
 # OS-specific files
