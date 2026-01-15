@@ -14,6 +14,7 @@
   /* Dark mode colors (Default) */
   --bg-color: #0B1423;
   --text-color: #FFFFFF;
+  --text-secondary: #d1d5db;
   --header-bg: #0b2545;
   --header-text: #ffffff;
   --main-bg: #0B1423;
@@ -30,6 +31,7 @@
   :root {
     --bg-color: #FFFFFF;
     --text-color: #111111;
+    --text-secondary: #4b5563;
     --header-bg: #183c65;
     --main-bg: #ffffff;
     --link-color: #004A99;
@@ -688,6 +690,12 @@ html[data-reduce-motion="on"] * {
 
 /* High-contrast (user-controlled) */
 body[data-contrast="high"] {
+  --bg-color: #ffffff !important;
+  --text-color: #000000 !important;
+  --text-secondary: #000000 !important;
+  --link-color: #0000EE !important;
+  --link-hover: #0000CC !important;
+  --border-color: #000000 !important;
   background: #ffffff !important;
   color: #000000 !important;
 }
@@ -1383,6 +1391,8 @@ body[data-contrast="high"] .badge--new {
   box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
   text-align: center;
   border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 10;
 }
 
 .status-banner strong {

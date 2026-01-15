@@ -13,7 +13,7 @@ description: Free community-powered platform connecting injured workers, persons
 <section class="homepage-hero">
   <picture>
     <source type="image/webp" srcset="{{ '/assets/empwrapp-logo.webp' | relative_url }}">
-    <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="140" height="140" loading="eager" style="margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="80" height="80" loading="eager" style="margin-bottom: 1.5rem;">
   </picture>
   
   <h1>You're Not Alone. Your Voice Matters.</h1>

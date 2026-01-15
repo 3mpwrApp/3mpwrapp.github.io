@@ -57,6 +57,23 @@
     --homepage-badge-text: var(--text-color);
     --homepage-cta-bg: transparent;
   }
+  
+  /* Force high contrast on user-controlled mode too */
+  body[data-contrast="high"] {
+    --homepage-hero-bg: transparent;
+    --homepage-card-bg: #ffffff;
+    --homepage-card-text: #000000;
+    --homepage-card-secondary: #000000;
+    --homepage-primary-btn-bg: #000000;
+    --homepage-primary-btn-text: #ffffff;
+    --homepage-secondary-btn-bg: #ffffff;
+    --homepage-secondary-btn-text: #000000;
+    --homepage-secondary-btn-border: #000000;
+    --homepage-feature-border: #000000;
+    --homepage-badge-bg: #ffffff;
+    --homepage-badge-text: #000000;
+    --homepage-cta-bg: transparent;
+  }
 }
 
 /* Hero Section */
