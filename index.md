@@ -154,57 +154,60 @@ description: Free community-powered platform connecting injured workers, persons
 
 <!-- Core Features Highlights -->
 <section class="features-highlight" style="margin-bottom: 4rem;">
-  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2.5rem; color: var(--text-color);">
-    Most Popular Tools
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: var(--text-color);">
+    Revolutionary Tools Never Seen Before
   </h2>
+  <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 2.5rem; line-height: 1.6;">
+    Groundbreaking features designed BY disabled people FOR disabled people - innovations that change everything
+  </p>
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto;">
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🗂️</div>
-      <h3>Evidence Locker</h3>
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🧠</div>
+      <h3>Brain Fog Mode</h3>
       <p>
-        Secure document storage for WSIB claims, medical records, and legal files
+        <strong>WORLD FIRST:</strong> Simplifies interface in real-time when cognitive load is too high - never done before
       </p>
     </div>
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📊</div>
-      <h3>Pain Tracker</h3>
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⏸️</div>
+      <h3>Need a Break Button</h3>
       <p>
-        Track symptoms daily with visual charts for medical appointments
+        <strong>REVOLUTIONARY:</strong> One tap pauses everything, dims screen, starts breathing exercises - instant relief
       </p>
     </div>
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">💊</div>
-      <h3>Med Manager</h3>
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🔥</div>
+      <h3>Pain Flare Mode</h3>
       <p>
-        Never miss a dose with smart reminders and refill tracking
-      </p>
-    </div>
-    
-    <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🤝</div>
-      <h3>Community</h3>
-      <p>
-        Connect with peers who understand your journey
-      </p>
-    </div>
-    
-    <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📝</div>
-      <h3>Legal Hub</h3>
-      <p>
-        Know your rights with guides for WSIB, ODSP, and disability law
+        <strong>UNIQUE:</strong> Emergency mode with pain tracking, crisis contacts, and gentle UI during severe flare-ups
       </p>
     </div>
     
     <div class="homepage-feature-box">
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🥄</div>
-      <h3>Spoons Tracker</h3>
+      <h3>Spoon Theory Tracker</h3>
       <p>
-        Manage your energy with spoon theory tracking
+        <strong>INNOVATIVE:</strong> Daily energy budgeting with smart predictions - helps you plan without overdoing it
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎯</div>
+      <h3>Complexity Mode Toggle</h3>
+      <p>
+        <strong>BREAKTHROUGH:</strong> 3 reading levels (Simple/Standard/Detailed) for cognitive accessibility - industry first
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📸</div>
+      <h3>Collective Evidence Locker</h3>
+      <p>
+        <strong>GAME-CHANGER:</strong> Photo your documents, AI extracts text, community validates - crowdsourced justice
       </p>
     </div>
     
@@ -212,7 +215,7 @@ description: Free community-powered platform connecting injured workers, persons
   
   <div style="text-align: center; margin-top: 2.5rem;">
     <a href="/features/" style="display: inline-block; padding: 14px 32px; background: #3d4eaa; color: white; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(61, 78, 170, 0.2);">
-      See All 60+ Features →
+      See All 60+ Revolutionary Features →
     </a>
   </div>
 </section>
