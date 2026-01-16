@@ -553,22 +553,12 @@ function initCarousel() {
   let autoPlayInterval;
   let isPaused = false;
   
-  const setSlidePositions = () => {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    slides.forEach((slide, index) => {
-      slide.style.left = slideWidth * index + 'px';
-    });
-  };
-  
-  // Set positions on load and resize
-  setSlidePositions();
-  window.addEventListener('resize', setSlidePositions);
-  
   const moveToSlide = (currentIndex, targetIndex) => {
     const currentDot = dots[currentIndex];
     const targetDot = dots[targetIndex];
     
-    track.style.transform = `translateX(-${slides[targetIndex].style.left})`;
+    // Move based on slide index (100% per slide)
+    track.style.transform = `translateX(-${targetIndex * 100}%)`;
     currentDot.classList.remove('active');
     targetDot.classList.add('active');
     
