@@ -206,6 +206,13 @@
         ♿ Accessibility
       </a>
       
+      <!-- Complexity Mode Toggle -->
+      <button id="complexity-toggle" type="button" aria-live="polite">
+        <span class="complexity-icon" aria-hidden="true">📖</span>
+        <span class="complexity-label">Standard View</span>
+        <span class="complexity-hint">Click for Simple Language</span>
+      </button>
+      
       <button
         id="contrast-toggle"
         class="contrast-toggle"
@@ -227,6 +234,9 @@
       </button>
     </div>
   </header>
+  
+  <!-- Complexity Mode Announcer (moved from inline) -->
+  <div id="complexity-announcer" role="status" aria-live="polite" aria-atomic="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"></div>
 
   {%- comment -%}
     Accessible breadcrumbs. Shows Home > Section > Page when the URL depth >= 2.
