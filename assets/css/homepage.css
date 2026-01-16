@@ -410,19 +410,17 @@
   overflow: hidden;
   border-radius: 16px;
   width: 100%;
+  position: relative;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 1500%; /* 15 slides * 100% */
 }
 
 .carousel-slide {
-  min-width: calc(100% / 15);
-  width: calc(100% / 15);
-  flex: 0 0 calc(100% / 15);
-  flex-shrink: 0;
+  min-width: 100%;
+  flex: 0 0 100%;
 }
 
 .carousel-card {
