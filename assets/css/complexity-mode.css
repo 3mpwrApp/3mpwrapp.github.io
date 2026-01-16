@@ -255,10 +255,7 @@ body.complexity-simple h3 {
   font-size: 1.25rem;
 }
 
-/* Standard Mode: Default styling */
-body.complexity-standard {
-  /* Uses default site styles */
-}
+/* Standard Mode: Uses default site styles (no custom rules needed) */
 
 /* Detailed Mode: Compact, information-dense */
 body.complexity-detailed {
