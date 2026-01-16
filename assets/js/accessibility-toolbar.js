@@ -11,6 +11,11 @@
   let dyslexiaFont = false;
   let readingMask = false;
   let colorFilter = 'none';
+  let spoonCount = 5;
+  let emergencyMode = false;
+  let breakInterval = 0;
+  let breakTimer = null;
+  let lastBreakTime = Date.now();
   
   // Wait for DOM to be ready
   if (document.readyState === 'loading') {
@@ -61,6 +66,9 @@
     });
     
     // Setup all toolbar controls
+    setupSpoonCounter();
+    setupEmergencySimplify();
+    setupBreakReminders();
     setupTextSizeControls();
     setupLineSpacingControls();
     setupDyslexiaToggle();
@@ -82,6 +90,222 @@
       localStorage.setItem('toolbarExpanded', 'false');
       announceToScreenReader('Accessibility tools collapsed');
     }
+  }
+  
+  // ============================================================================
+  // INNOVATIVE FEATURES - Never Been Done Before
+  // ============================================================================
+  
+  // Spoon Counter (Chronic Illness Energy Management)
+  function setupSpoonCounter() {
+    const useBtn = document.getElementById('spoon-use');
+    const restBtn = document.getElementById('spoon-rest');
+    const resetBtn = document.getElementById('spoon-reset');
+    const display = document.querySelector('.spoon-display');
+    const countEl = document.getElementById('spoon-count');
+    
+    if (!useBtn || !restBtn || !resetBtn) return;
+    
+    useBtn.addEventListener('click', function() {
+      if (spoonCount > 0) {
+        spoonCount--;
+        updateSpoonDisplay();
+        announceToScreenReader(`Energy used. ${spoonCount} spoons remaining`);
+        
+        // Suggest break if low energy
+        if (spoonCount === 1) {
+          announceToScreenReader('Warning: Low energy. Consider taking a break.');
+        } else if (spoonCount === 0) {
+          announceToScreenReader('No energy remaining. Please rest.');
+        }
+      }
+    });
+    
+    restBtn.addEventListener('click', function() {
+      if (spoonCount < 10) {
+        spoonCount++;
+        updateSpoonDisplay();
+        announceToScreenReader(`Rested. ${spoonCount} spoons available`);
+      }
+    });
+    
+    resetBtn.addEventListener('click', function() {
+      spoonCount = 5;
+      updateSpoonDisplay();
+      announceToScreenReader('Spoon counter reset to 5');
+    });
+    
+    function updateSpoonDisplay() {
+      if (countEl) {
+        countEl.textContent = spoonCount;
+      }
+      
+      if (display) {
+        if (spoonCount <= 1) {
+          display.classList.add('low-energy');
+        } else {
+          display.classList.remove('low-energy');
+        }
+      }
+      
+      localStorage.setItem('spoonCount', spoonCount);
+    }
+    
+    // Load saved count
+    spoonCount = parseInt(localStorage.getItem('spoonCount')) || 5;
+    updateSpoonDisplay();
+  }
+  
+  // Emergency Simplify (Bad Day Mode)
+  function setupEmergencySimplify() {
+    const btn = document.getElementById('emergency-simplify');
+    if (!btn) return;
+    
+    btn.addEventListener('click', function() {
+      emergencyMode = !emergencyMode;
+      applyEmergencyMode();
+      btn.setAttribute('aria-pressed', emergencyMode);
+      
+      if (emergencyMode) {
+        announceToScreenReader('Emergency simplification activated. Page simplified for easier reading.', 'assertive');
+      } else {
+        announceToScreenReader('Emergency mode deactivated. Full page restored.');
+      }
+    });
+  }
+  
+  function applyEmergencyMode() {
+    if (emergencyMode) {
+      document.body.classList.add('emergency-mode');
+    } else {
+      document.body.classList.remove('emergency-mode');
+    }
+    localStorage.setItem('emergencyMode', emergencyMode);
+  }
+  
+  // Break Reminders
+  function setupBreakReminders() {
+    const select = document.getElementById('break-interval');
+    const statusEl = document.getElementById('break-status');
+    
+    if (!select) return;
+    
+    select.addEventListener('change', function() {
+      breakInterval = parseInt(this.value);
+      updateBreakReminder();
+      localStorage.setItem('breakInterval', breakInterval);
+      
+      if (breakInterval > 0) {
+        announceToScreenReader(`Break reminders set to every ${breakInterval} minutes`);
+      } else {
+        announceToScreenReader('Break reminders disabled');
+      }
+    });
+    
+    function updateBreakReminder() {
+      if (breakTimer) {
+        clearInterval(breakTimer);
+        breakTimer = null;
+      }
+      
+      if (breakInterval > 0) {
+        const ms = breakInterval * 60 * 1000;
+        lastBreakTime = Date.now();
+        
+        if (statusEl) {
+          updateBreakStatus();
+          setInterval(updateBreakStatus, 60000); // Update every minute
+        }
+        
+        breakTimer = setInterval(showBreakReminder, ms);
+      } else {
+        if (statusEl) {
+          statusEl.textContent = 'Break reminders off';
+        }
+      }
+    }
+    
+    function updateBreakStatus() {
+      if (!statusEl || breakInterval === 0) return;
+      
+      const elapsed = Math.floor((Date.now() - lastBreakTime) / 60000);
+      const remaining = breakInterval - elapsed;
+      
+      if (remaining > 0) {
+        statusEl.textContent = `Next break in ${remaining} min`;
+      } else {
+        statusEl.textContent = 'Break due now';
+      }
+    }
+    
+    function showBreakReminder() {
+      lastBreakTime = Date.now();
+      
+      // Create modal
+      const overlay = document.createElement('div');
+      overlay.className = 'break-reminder-overlay';
+      
+      const modal = document.createElement('div');
+      modal.className = 'break-reminder-modal';
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-labelledby', 'break-modal-title');
+      modal.setAttribute('aria-modal', 'true');
+      
+      modal.innerHTML = `
+        <h2 id="break-modal-title">🌿 Time for a Break</h2>
+        <p>You've been focused for ${breakInterval} minutes. Take a moment to rest, stretch, or hydrate.</p>
+        <div class="modal-actions">
+          <button type="button" id="break-taken" autofocus>I'll Take a Break</button>
+          <button type="button" id="break-snooze">Remind Me in 5 min</button>
+        </div>
+      `;
+      
+      document.body.appendChild(overlay);
+      document.body.appendChild(modal);
+      
+      // Focus modal
+      modal.querySelector('button').focus();
+      
+      // Announce to screen readers
+      announceToScreenReader('Break time reminder. You have been working for ${breakInterval} minutes.', 'assertive');
+      
+      // Handle buttons
+      document.getElementById('break-taken').addEventListener('click', function() {
+        overlay.remove();
+        modal.remove();
+        updateBreakStatus();
+        announceToScreenReader('Break acknowledged. Timer reset.');
+      });
+      
+      document.getElementById('break-snooze').addEventListener('click', function() {
+        overlay.remove();
+        modal.remove();
+        setTimeout(showBreakReminder, 5 * 60 * 1000);
+        announceToScreenReader('Snoozed for 5 minutes.');
+      });
+      
+      // Close on overlay click
+      overlay.addEventListener('click', function() {
+        overlay.remove();
+        modal.remove();
+      });
+      
+      // Close on Escape
+      document.addEventListener('keydown', function handleEscape(e) {
+        if (e.key === 'Escape') {
+          overlay.remove();
+          modal.remove();
+          document.removeEventListener('keydown', handleEscape);
+        }
+      });
+    }
+    
+    // Load saved preference
+    breakInterval = parseInt(localStorage.getItem('breakInterval')) || 0;
+    if (select && breakInterval > 0) {
+      select.value = breakInterval;
+    }
+    updateBreakReminder();
   }
   
   // Text Size Controls
@@ -294,12 +518,15 @@
     dyslexiaFont = localStorage.getItem('dyslexiaFont') === 'true';
     readingMask = localStorage.getItem('readingMask') === 'true';
     colorFilter = localStorage.getItem('colorFilter') || 'none';
+    spoonCount = parseInt(localStorage.getItem('spoonCount')) || 5;
+    emergencyMode = localStorage.getItem('emergencyMode') === 'true';
     
     applyTextSize();
     applyLineSpacing();
     applyDyslexiaFont();
     applyReadingMask();
     applyColorFilter();
+    applyEmergencyMode();
     
     // Update button states
     setTimeout(function() {
@@ -311,6 +538,14 @@
       
       const maskBtn = document.getElementById('reading-mask-toggle');
       if (maskBtn) maskBtn.setAttribute('aria-pressed', readingMask);
+      
+      const emergencyBtn = document.getElementById('emergency-simplify');
+      if (emergencyBtn) emergencyBtn.setAttribute('aria-pressed', emergencyMode);
+      
+      const spoonDisplay = document.querySelector('.spoon-display');
+      const spoonCountEl = document.getElementById('spoon-count');
+      if (spoonCountEl) spoonCountEl.textContent = spoonCount;
+      if (spoonDisplay && spoonCount <= 1) spoonDisplay.classList.add('low-energy');
     }, 100);
   }
   

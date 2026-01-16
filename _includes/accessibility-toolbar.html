@@ -12,6 +12,53 @@
   <div id="toolbar-content" class="toolbar-content">
     <h2 id="toolbar-heading" class="toolbar-heading">Quick Accessibility Options</h2>
     
+    <!-- INNOVATIVE: Spoon Counter (Energy Management for Chronic Illness) -->
+    <div class="toolbar-group">
+      <label for="toolbar-spoon-counter" class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">🥄</span>
+        Spoon Counter (Energy Tracker)
+      </label>
+      <div class="toolbar-controls spoon-tracker">
+        <div class="spoon-display" aria-live="polite">
+          <span id="spoon-count" class="spoon-count">5</span>
+          <span class="spoon-label">spoons remaining</span>
+        </div>
+        <div class="spoon-controls">
+          <button type="button" class="toolbar-btn" id="spoon-use" aria-label="Use a spoon (reduce energy)">Use -1</button>
+          <button type="button" class="toolbar-btn" id="spoon-rest" aria-label="Rest and gain energy">Rest +1</button>
+          <button type="button" class="toolbar-btn" id="spoon-reset" aria-label="Reset to 5 spoons">Reset</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- INNOVATIVE: Emergency Simplify Button (Bad Day Mode) -->
+    <div class="toolbar-group">
+      <button type="button" class="toolbar-btn toolbar-btn-full toolbar-btn-emergency" id="emergency-simplify" aria-pressed="false">
+        <span class="btn-icon" aria-hidden="true">🚨</span>
+        <span class="btn-text">
+          <strong>Emergency Simplify</strong><br>
+          <small>One-tap to reduce everything</small>
+        </span>
+      </button>
+    </div>
+    
+    <!-- INNOVATIVE: Break Reminder with Customizable Interval -->
+    <div class="toolbar-group">
+      <label class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">⏰</span>
+        Break Reminders
+      </label>
+      <div class="toolbar-controls">
+        <select id="break-interval" class="toolbar-select" aria-label="Break reminder interval">
+          <option value="0">Off</option>
+          <option value="15">Every 15 min</option>
+          <option value="30" selected>Every 30 min</option>
+          <option value="60">Every hour</option>
+        </select>
+      </div>
+      <div id="break-status" class="break-status" aria-live="polite"></div>
+    </div>
+    
     <!-- Text Size -->
     <div class="toolbar-group">
       <label for="toolbar-text-size" class="toolbar-label-inline">
