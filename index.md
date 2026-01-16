@@ -216,106 +216,94 @@ description: Free community-powered platform connecting injured workers, persons
 </section>
 
 <!-- App Tour with Real Screenshots -->
-<section class="app-tour-section" style="margin-bottom: 4rem; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 4rem 2rem; border-radius: 16px;">
-  <h2 style="text-align: center; font-size: 2.25rem; margin-bottom: 1rem; color: #1e293b;">
+<!-- App Tour with Real Screenshots -->
+<section class="app-tour-section">
+  <h2 class="app-tour-heading">
     See the App in Action
   </h2>
-  <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem; color: #475569;">
+  <p class="app-tour-intro">
     Real screenshots from the 3mpwr App. <strong>Available Q2 2026</strong> for iOS and Android.
   </p>
   
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+  <div class="app-tour-grid">
     
     <!-- Home Screen -->
-    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+    <div class="app-tour-card">
       <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/home13mpwrapp.png' | relative_url }}" 
            alt="3mpwr App Home Screen Dashboard" 
-           style="width: 100%; height: auto; display: block;"
            loading="lazy">
-      <div style="padding: 1.5rem; background: #ffffff;">
-        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; color: #0f172a; font-weight: 700;">Home Dashboard</h3>
-        <p style="margin: 0; color: #334155; font-size: 1rem; line-height: 1.5;">Quick access to all your essential tools and resources</p>
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Home Dashboard</h3>
+        <p class="app-tour-card-description">Quick access to all your essential tools and resources</p>
       </div>
     </div>
     
     <!-- Wellness Hub -->
-    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+    <div class="app-tour-card">
       <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstab13mpwrapp.png' | relative_url }}" 
            alt="3mpwr App Wellness Hub with pain tracking and symptom logging" 
-           style="width: 100%; height: auto; display: block;"
            loading="lazy">
-      <div style="padding: 1.5rem; background: #ffffff;">
-        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; color: #0f172a; font-weight: 700;">Wellness Hub</h3>
-        <p style="margin: 0; color: #334155; font-size: 1rem; line-height: 1.5;">Track symptoms, pain levels, and manage your health</p>
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Wellness Hub</h3>
+        <p class="app-tour-card-description">Track symptoms, pain levels, and manage your health</p>
       </div>
     </div>
     
     <!-- Community -->
-    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+    <div class="app-tour-card">
       <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/community/communityhubtab3mpwrapp.png' | relative_url }}" 
            alt="3mpwr App Community Hub for peer support" 
-           style="width: 100%; height: auto; display: block;"
            loading="lazy">
-      <div style="padding: 1.5rem; background: #ffffff;">
-        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; color: #0f172a; font-weight: 700;">Community Hub</h3>
-        <p style="margin: 0; color: #334155; font-size: 1rem; line-height: 1.5;">Connect with others who understand your journey</p>
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Community Hub</h3>
+        <p class="app-tour-card-description">Connect with others who understand your journey</p>
       </div>
     </div>
     
     <!-- Advocacy Tools -->
-    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+    <div class="app-tour-card">
       <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/advocacy/advocacy13mpwrapp.png' | relative_url }}" 
            alt="3mpwr App Advocacy Tools with evidence locker and case tracking" 
-           style="width: 100%; height: auto; display: block;"
            loading="lazy">
-      <div style="padding: 1.5rem; background: #ffffff;">
-        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; color: #0f172a; font-weight: 700;">Advocacy Tools</h3>
-        <p style="margin: 0; color: #334155; font-size: 1rem; line-height: 1.5;">Evidence locker, case tracking, and legal resources</p>
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Advocacy Tools</h3>
+        <p class="app-tour-card-description">Evidence locker, case tracking, and legal resources</p>
       </div>
     </div>
     
     <!-- Resources Library -->
-    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+    <div class="app-tour-card">
       <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestab13mpwrapp.png' | relative_url }}" 
            alt="3mpwr App Resources Library with guides and templates" 
-           style="width: 100%; height: auto; display: block;"
            loading="lazy">
-      <div style="padding: 1.5rem; background: #ffffff;">
-        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; color: #0f172a; font-weight: 700;">Resources Library</h3>
-        <p style="margin: 0; color: #334155; font-size: 1rem; line-height: 1.5;">Guides, templates, and expert knowledge at your fingertips</p>
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Resources Library</h3>
+        <p class="app-tour-card-description">Guides, templates, and expert knowledge at your fingertips</p>
       </div>
     </div>
     
     <!-- Settings & Accessibility -->
-    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+    <div class="app-tour-card">
       <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/settings/settings/settingsadvancedaccessibility13mpwrapp.png' | relative_url }}" 
            alt="3mpwr App Settings and Accessibility Features" 
-           style="width: 100%; height: auto; display: block;"
            loading="lazy">
-      <div style="padding: 1.5rem; background: #ffffff;">
-        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; color: #0f172a; font-weight: 700;">Settings & Accessibility</h3>
-        <p style="margin: 0; color: #334155; font-size: 1rem; line-height: 1.5;">Customize your experience with 13+ accessibility features</p>
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Settings & Accessibility</h3>
+        <p class="app-tour-card-description">Customize your experience with 13+ accessibility features</p>
       </div>
     </div>
     
   </div>
   
-  <div style="text-align: center; margin-top: 3rem;">
-    <a href="/app-waitlist/" style="display: inline-block; padding: 16px 36px; background: linear-gradient(135deg, #3d4eaa 0%, #7c3aed 100%); color: white; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.15rem; box-shadow: 0 4px 16px rgba(61, 78, 170, 0.3); transition: all 0.3s ease;">
+  <div class="app-tour-cta">
+    <a href="/app-waitlist/" class="app-tour-cta-button">
       🎯 Get Early Access — Launching Q2 2026
     </a>
-    <p style="margin-top: 1rem; color: #64748b; font-size: 0.95rem;">
+    <p class="app-tour-cta-text">
       <strong>Limited beta spots</strong> • Be among the first 1,000 users
     </p>
   </div>
 </section>
-
-<style>
-.app-tour-section > div > div:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-</style>
 
 <!-- CTA Section -->
 <section class="homepage-cta">

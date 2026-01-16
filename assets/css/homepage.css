@@ -21,6 +21,12 @@
   --homepage-campaigns-bg-end: #065f46;
   --homepage-feature-border: #e5e7eb;
   --homepage-cta-bg: rgba(61, 78, 170, 0.08);
+  --app-tour-bg: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  --app-tour-heading: #1e293b;
+  --app-tour-text: #475569;
+  --app-tour-card-bg: #ffffff;
+  --app-tour-card-heading: #0f172a;
+  --app-tour-card-text: #334155;
 }
 
 /* Dark Mode Overrides */
@@ -37,6 +43,12 @@
     --homepage-badge-text: #4ade80;
     --homepage-feature-border: #374151;
     --homepage-cta-bg: rgba(61, 78, 170, 0.2);
+    --app-tour-bg: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    --app-tour-heading: #f9fafb;
+    --app-tour-text: #d1d5db;
+    --app-tour-card-bg: #334155;
+    --app-tour-card-heading: #f9fafb;
+    --app-tour-card-text: #d1d5db;
   }
 }
 
@@ -56,6 +68,12 @@
     --homepage-badge-bg: var(--bg-color);
     --homepage-badge-text: var(--text-color);
     --homepage-cta-bg: transparent;
+    --app-tour-bg: transparent;
+    --app-tour-heading: var(--text-color);
+    --app-tour-text: var(--text-color);
+    --app-tour-card-bg: var(--bg-color);
+    --app-tour-card-heading: var(--text-color);
+    --app-tour-card-text: var(--text-color);
   }
   
   /* Force high contrast on user-controlled mode too */
@@ -73,6 +91,12 @@
     --homepage-badge-bg: #ffffff;
     --homepage-badge-text: #000000;
     --homepage-cta-bg: transparent;
+    --app-tour-bg: transparent;
+    --app-tour-heading: #000000;
+    --app-tour-text: #000000;
+    --app-tour-card-bg: #ffffff;
+    --app-tour-card-heading: #000000;
+    --app-tour-card-text: #000000;
   }
 }
 
@@ -392,13 +416,141 @@
 }
 
 /* ========================================================================
-   App Tour Section
+   App Tour Section - Theme-Aware Styling
    ======================================================================== */
 
-.app-tour-section img {
+.app-tour-section {
+  margin-bottom: 4rem;
+  background: var(--app-tour-bg);
+  padding: 4rem 2rem;
+  border-radius: 16px;
+}
+
+.app-tour-heading {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: var(--app-tour-heading);
+}
+
+.app-tour-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: var(--app-tour-text);
+}
+
+.app-tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-tour-card {
+  background: var(--app-tour-card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.app-tour-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.app-tour-card img {
+  width: 100%;
+  height: auto;
+  display: block;
   transition: transform 0.3s ease;
 }
 
-.app-tour-section img:hover {
+.app-tour-card img:hover {
   transform: scale(1.02);
 }
+
+.app-tour-card-content {
+  padding: 1.5rem;
+  background: var(--app-tour-card-bg);
+}
+
+.app-tour-card-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--app-tour-card-heading);
+  font-weight: 700;
+}
+
+.app-tour-card-description {
+  margin: 0;
+  color: var(--app-tour-card-text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.app-tour-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.app-tour-cta-button {
+  display: inline-block;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, #3d4eaa 0%, #7c3aed 100%);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 16px rgba(61, 78, 170, 0.3);
+  transition: all 0.3s ease;
+}
+
+.app-tour-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(61, 78, 170, 0.4);
+}
+
+.app-tour-cta-text {
+  margin-top: 1rem;
+  color: var(--app-tour-text);
+  font-size: 0.95rem;
+}
+
+/* Dark mode specific adjustments */
+body[data-theme="dark"] .app-tour-card {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+body[data-theme="dark"] .app-tour-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* High contrast mode borders */
+body[data-contrast="high"] .app-tour-card {
+  border: 3px solid #000000 !important;
+}
+
+body[data-theme="dark"][data-contrast="high"] .app-tour-card {
+  border: 3px solid #ffffff !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-tour-card,
+  .app-tour-card img,
+  .app-tour-cta-button {
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .app-tour-card:hover,
+  .app-tour-card img:hover,
+  .app-tour-cta-button:hover {
+    transform: none !important;
+  }
+}
+
