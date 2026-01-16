@@ -86,10 +86,10 @@
 }
 
 .homepage-hero img {
-  max-width: 50px !important;
-  max-height: 50px !important;
-  width: 50px !important;
-  height: 50px !important;
+  max-width: 80px !important;
+  max-height: 80px !important;
+  width: 80px !important;
+  height: 80px !important;
 }
 
 .homepage-hero h1 {
@@ -427,7 +427,8 @@
   border: 3px solid var(--homepage-feature-border);
   border-radius: 16px;
   padding: 2.5rem 2rem;
-  margin: 0 1rem;
+  margin: 0 auto;
+  max-width: calc(100% - 2rem);
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;

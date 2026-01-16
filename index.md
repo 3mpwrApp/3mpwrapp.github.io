@@ -13,10 +13,10 @@ description: Free community-powered platform connecting injured workers, persons
 <section class="homepage-hero">
   <picture>
     <source type="image/webp" srcset="{{ '/assets/empwrapp-logo.webp' | relative_url }}">
-    <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="50" height="50" loading="eager" style="margin-bottom: 1.5rem;">
+    <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="80" height="80" loading="eager" style="margin-bottom: 1.5rem;">
   </picture>
   
-  <h1>You're Not Alone. Your Voice Matters.</h1>
+  <h1>Empowering Canada's Disability & Injured Worker Community</h1>
   
   <p class="homepage-hero-subtitle">
     Free community-powered support for injured workers, persons with disabilities, and allies across Canada
@@ -35,10 +35,6 @@ description: Free community-powered platform connecting injured workers, persons
     <div>
       <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">AAA</div>
       <div style="font-size: 0.9rem; opacity: 0.8;">Accessibility</div>
-    </div>
-    <div>
-      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem;">🇨🇦</div>
-      <div style="font-size: 0.9rem; opacity: 0.8;">Canada-Wide</div>
     </div>
   </div>
   
