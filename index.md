@@ -8,7 +8,6 @@ description: Free community-powered platform connecting injured workers, persons
 <link rel="stylesheet" href="{{ '/assets/css/accessibility-toolbar.css' | relative_url }}">
 <script src="{{ '/assets/js/accessibility-toolbar.js' | relative_url }}" defer></script>
 
-{%- include complexity-toggle.html -%}
 {%- include accessibility-toolbar.html -%}
 {%- include status-banner.html -%}
 
