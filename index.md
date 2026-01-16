@@ -155,10 +155,10 @@ description: Free community-powered platform connecting injured workers, persons
 <!-- Core Features Highlights -->
 <section class="features-highlight" style="margin-bottom: 4rem;">
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: var(--text-color);">
-    Our Flywheel Features - Where Community Creates Power
+    Features That Grow Stronger Together
   </h2>
   <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 2.5rem; line-height: 1.6;">
-    The more people who join, the stronger these features become - network effects that create real change
+    The more people who join, the more powerful these features become - collective strength that creates real change
   </p>
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto;">
@@ -167,7 +167,7 @@ description: Free community-powered platform connecting injured workers, persons
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📸</div>
       <h3>Evidence Locker</h3>
       <p>
-        <strong>EVIDENCE FLYWHEEL:</strong> Photo your documents, AI extracts text, community validates - crowdsourced justice that gets stronger with every upload
+        <strong>COLLECTIVE POWER:</strong> Photo your documents, AI extracts text, community validates - crowdsourced justice that gets stronger with every upload
       </p>
     </div>
     
@@ -175,7 +175,7 @@ description: Free community-powered platform connecting injured workers, persons
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📢</div>
       <h3>Community & Campaigns</h3>
       <p>
-        <strong>COLLECTIVE ACTION FLYWHEEL:</strong> Together we organize, advocate, and win - more voices mean more power for real systemic change
+        <strong>NETWORK STRENGTH:</strong> Together we organize, advocate, and win - more voices mean more power for real systemic change
       </p>
     </div>
     
@@ -183,7 +183,7 @@ description: Free community-powered platform connecting injured workers, persons
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⚖️</div>
       <h3>Legal & Knowledge Sharing</h3>
       <p>
-        <strong>KNOWLEDGE NETWORK FLYWHEEL:</strong> Shared legal strategies, winning patterns, resources - every case we track helps everyone else win
+        <strong>SHARED WISDOM:</strong> Shared legal strategies, winning patterns, resources - every case we track helps everyone else win
       </p>
     </div>
     
