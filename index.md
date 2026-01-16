@@ -22,6 +22,26 @@ description: Free community-powered platform connecting injured workers, persons
     Free community-powered support for injured workers, persons with disabilities, and allies across Canada
   </p>
   
+  <!-- Impact Stats -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; max-width: 700px; margin: 0 auto 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 2px solid rgba(61, 78, 170, 0.2);">
+    <div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">60+</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Practical Tools</div>
+    </div>
+    <div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">100%</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Free Forever</div>
+    </div>
+    <div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">AAA</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Accessibility</div>
+    </div>
+    <div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem;">🇨🇦</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Canada-Wide</div>
+    </div>
+  </div>
+  
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="/app-waitlist/" class="homepage-btn-primary">
       <span>Join the Beta</span>
@@ -87,29 +107,6 @@ description: Free community-powered platform connecting injured workers, persons
       </a>
     </div>
     
-  </div>
-</section>
-
-<!-- Quick Stats -->
-<section class="homepage-stats">
-  <h2>Our Impact</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
-    <div>
-      <div style="font-size: 3rem; font-weight: bold; margin-bottom: 0.5rem;">60+</div>
-      <div style="font-size: 1.1rem; opacity: 0.9;">Practical Tools</div>
-    </div>
-    <div>
-      <div style="font-size: 3rem; font-weight: bold; margin-bottom: 0.5rem;">100%</div>
-      <div style="font-size: 1.1rem; opacity: 0.9;">Free Forever</div>
-    </div>
-    <div>
-      <div style="font-size: 3rem; font-weight: bold; margin-bottom: 0.5rem;">AAA</div>
-      <div style="font-size: 1.1rem; opacity: 0.9;">Accessibility</div>
-    </div>
-    <div>
-      <div style="font-size: 3rem; font-weight: bold; margin-bottom: 0.5rem;">🇨🇦</div>
-      <div style="font-size: 1.1rem; opacity: 0.9;">Canada-Wide</div>
-    </div>
   </div>
 </section>
 
