@@ -155,59 +155,59 @@ description: Free community-powered platform connecting injured workers, persons
 <!-- Core Features Highlights -->
 <section class="features-highlight" style="margin-bottom: 4rem;">
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: var(--text-color);">
-    Revolutionary Tools Never Seen Before
+    Our Flywheel Features - Where Community Creates Power
   </h2>
   <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 2.5rem; line-height: 1.6;">
-    Groundbreaking features designed BY disabled people FOR disabled people - innovations that change everything
+    The more people who join, the stronger these features become - network effects that create real change
   </p>
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto;">
     
     <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🧠</div>
-      <h3>Brain Fog Mode</h3>
-      <p>
-        <strong>WORLD FIRST:</strong> Simplifies interface in real-time when cognitive load is too high - never done before
-      </p>
-    </div>
-    
-    <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⏸️</div>
-      <h3>Need a Break Button</h3>
-      <p>
-        <strong>REVOLUTIONARY:</strong> One tap pauses everything, dims screen, starts breathing exercises - instant relief
-      </p>
-    </div>
-    
-    <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🔥</div>
-      <h3>Pain Flare Mode</h3>
-      <p>
-        <strong>UNIQUE:</strong> Emergency mode with pain tracking, crisis contacts, and gentle UI during severe flare-ups
-      </p>
-    </div>
-    
-    <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🥄</div>
-      <h3>Spoon Theory Tracker</h3>
-      <p>
-        <strong>INNOVATIVE:</strong> Daily energy budgeting with smart predictions - helps you plan without overdoing it
-      </p>
-    </div>
-    
-    <div class="homepage-feature-box">
-      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎯</div>
-      <h3>Complexity Mode Toggle</h3>
-      <p>
-        <strong>BREAKTHROUGH:</strong> 3 reading levels (Simple/Standard/Detailed) for cognitive accessibility - industry first
-      </p>
-    </div>
-    
-    <div class="homepage-feature-box">
       <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📸</div>
-      <h3>Collective Evidence Locker</h3>
+      <h3>Evidence Locker</h3>
       <p>
-        <strong>GAME-CHANGER:</strong> Photo your documents, AI extracts text, community validates - crowdsourced justice
+        <strong>EVIDENCE FLYWHEEL:</strong> Photo your documents, AI extracts text, community validates - crowdsourced justice that gets stronger with every upload
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📢</div>
+      <h3>Community & Campaigns</h3>
+      <p>
+        <strong>COLLECTIVE ACTION FLYWHEEL:</strong> Together we organize, advocate, and win - more voices mean more power for real systemic change
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⚖️</div>
+      <h3>Legal & Knowledge Sharing</h3>
+      <p>
+        <strong>KNOWLEDGE NETWORK FLYWHEEL:</strong> Shared legal strategies, winning patterns, resources - every case we track helps everyone else win
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📋</div>
+      <h3>Appeal Command Center</h3>
+      <p>
+        <strong>STRATEGIC POWER:</strong> Deadline tracking, document management, tribunal prep - everything you need to fight back and win your appeal
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">💰</div>
+      <h3>Financial Safety Net</h3>
+      <p>
+        <strong>SURVIVAL TOOLS:</strong> Budget tracking, benefit calculators, emergency resources - manage finances when every dollar counts
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🌿</div>
+      <h3>Wellness Hub</h3>
+      <p>
+        <strong>HOLISTIC CARE:</strong> Pain tracking, symptom journals, exercise routines, meditation - tools for managing your health day by day
       </p>
     </div>
     
