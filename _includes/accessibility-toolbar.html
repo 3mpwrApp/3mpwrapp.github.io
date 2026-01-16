@@ -1,0 +1,79 @@
+<!-- Accessibility Toolbar - Quick Access to All Accommodation Tools -->
+<aside class="accessibility-toolbar" role="complementary" aria-labelledby="toolbar-heading">
+  <button id="toolbarToggle" 
+          type="button" 
+          aria-expanded="true"
+          aria-controls="toolbar-content"
+          class="toolbar-toggle">
+    <span class="toolbar-icon" aria-hidden="true">♿</span>
+    <span class="toolbar-label">Accessibility Tools</span>
+  </button>
+  
+  <div id="toolbar-content" class="toolbar-content">
+    <h2 id="toolbar-heading" class="toolbar-heading">Quick Accessibility Options</h2>
+    
+    <!-- Text Size -->
+    <div class="toolbar-group">
+      <label for="toolbar-text-size" class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">🔤</span>
+        Text Size
+      </label>
+      <div class="toolbar-controls">
+        <button type="button" class="toolbar-btn" id="text-decrease" aria-label="Decrease text size">A-</button>
+        <button type="button" class="toolbar-btn" id="text-reset" aria-label="Reset text size">A</button>
+        <button type="button" class="toolbar-btn" id="text-increase" aria-label="Increase text size">A+</button>
+      </div>
+    </div>
+    
+    <!-- Line Spacing -->
+    <div class="toolbar-group">
+      <label for="toolbar-line-spacing" class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">📏</span>
+        Line Spacing
+      </label>
+      <div class="toolbar-controls">
+        <button type="button" class="toolbar-btn" id="spacing-normal" aria-label="Normal line spacing">Normal</button>
+        <button type="button" class="toolbar-btn" id="spacing-loose" aria-label="Loose line spacing">Loose</button>
+      </div>
+    </div>
+    
+    <!-- Dyslexia Font -->
+    <div class="toolbar-group">
+      <button type="button" class="toolbar-btn toolbar-btn-full" id="dyslexia-toggle" aria-pressed="false">
+        <span class="btn-icon" aria-hidden="true">👓</span>
+        Dyslexia-Friendly Font
+      </button>
+    </div>
+    
+    <!-- Reading Mask -->
+    <div class="toolbar-group">
+      <button type="button" class="toolbar-btn toolbar-btn-full" id="reading-mask-toggle" aria-pressed="false">
+        <span class="btn-icon" aria-hidden="true">📖</span>
+        Reading Mask (Highlight Line)
+      </button>
+    </div>
+    
+    <!-- Color Adjustments -->
+    <div class="toolbar-group">
+      <label class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">🎨</span>
+        Color Adjustments
+      </label>
+      <div class="toolbar-controls">
+        <button type="button" class="toolbar-btn" id="filter-none" aria-pressed="true" aria-label="No color filter">Normal</button>
+        <button type="button" class="toolbar-btn" id="filter-grayscale" aria-pressed="false" aria-label="Grayscale filter">Gray</button>
+        <button type="button" class="toolbar-btn" id="filter-invert" aria-pressed="false" aria-label="Invert colors">Invert</button>
+      </div>
+    </div>
+    
+    <!-- Link to Full Settings -->
+    <div class="toolbar-group">
+      <a href="{{ '/accessibility-settings/' | relative_url }}" class="toolbar-link">
+        <span class="link-icon" aria-hidden="true">⚙️</span>
+        More Accessibility Settings
+      </a>
+    </div>
+  </div>
+</aside>
+
+<div id="toolbar-announcer" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>

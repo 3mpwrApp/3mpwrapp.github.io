@@ -1,9 +1,16 @@
 /* ================================================
-   Accessibility Toolbar - Collapsible Functionality
+   Accessibility Toolbar - Full Functionality
    ================================================ */
 
 (function() {
   'use strict';
+  
+  // State
+  let textSize = 100;
+  let lineSpacing = 'normal';
+  let dyslexiaFont = false;
+  let readingMask = false;
+  let colorFilter = 'none';
   
   // Wait for DOM to be ready
   if (document.readyState === 'loading') {
@@ -21,8 +28,11 @@
       return; // Toolbar not present on this page
     }
     
-    // Check if user has a saved preference
-    const isExpanded = localStorage.getItem('toolbarExpanded') === 'true';
+    // Load saved preferences
+    loadPreferences();
+    
+    // Check if user wants toolbar expanded
+    const isExpanded = localStorage.getItem('toolbarExpanded') !== 'false'; // Default to expanded
     
     // Set initial state
     if (isExpanded) {
@@ -50,13 +60,18 @@
       }
     });
     
+    // Setup all toolbar controls
+    setupTextSizeControls();
+    setupLineSpacingControls();
+    setupDyslexiaToggle();
+    setupReadingMask();
+    setupColorFilters();
+    
     function expandToolbar() {
       toolbar.classList.remove('collapsed');
       toggleBtn.setAttribute('aria-expanded', 'true');
       toolbarContent.hidden = false;
       localStorage.setItem('toolbarExpanded', 'true');
-      
-      // Announce to screen readers
       announceToScreenReader('Accessibility tools expanded');
     }
     
@@ -65,13 +80,246 @@
       toggleBtn.setAttribute('aria-expanded', 'false');
       toolbarContent.hidden = true;
       localStorage.setItem('toolbarExpanded', 'false');
-      
-      // Announce to screen readers
       announceToScreenReader('Accessibility tools collapsed');
     }
+  }
+  
+  // Text Size Controls
+  function setupTextSizeControls() {
+    const decreaseBtn = document.getElementById('text-decrease');
+    const resetBtn = document.getElementById('text-reset');
+    const increaseBtn = document.getElementById('text-increase');
     
-    // Helper function to announce changes to screen readers
-    function announceToScreenReader(message) {
+    if (decreaseBtn) {
+      decreaseBtn.addEventListener('click', function() {
+        textSize = Math.max(80, textSize - 10);
+        applyTextSize();
+        announceToScreenReader(`Text size decreased to ${textSize}%`);
+      });
+    }
+    
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        textSize = 100;
+        applyTextSize();
+        announceToScreenReader('Text size reset to default');
+      });
+    }
+    
+    if (increaseBtn) {
+      increaseBtn.addEventListener('click', function() {
+        textSize = Math.min(150, textSize + 10);
+        applyTextSize();
+        announceToScreenReader(`Text size increased to ${textSize}%`);
+      });
+    }
+  }
+  
+  function applyTextSize() {
+    document.documentElement.style.fontSize = textSize + '%';
+    localStorage.setItem('textSize', textSize);
+  }
+  
+  // Line Spacing Controls
+  function setupLineSpacingControls() {
+    const normalBtn = document.getElementById('spacing-normal');
+    const looseBtn = document.getElementById('spacing-loose');
+    
+    if (normalBtn) {
+      normalBtn.addEventListener('click', function() {
+        lineSpacing = 'normal';
+        applyLineSpacing();
+        updateLineSpacingButtons();
+        announceToScreenReader('Line spacing set to normal');
+      });
+    }
+    
+    if (looseBtn) {
+      looseBtn.addEventListener('click', function() {
+        lineSpacing = 'loose';
+        applyLineSpacing();
+        updateLineSpacingButtons();
+        announceToScreenReader('Line spacing set to loose');
+      });
+    }
+  }
+  
+  function applyLineSpacing() {
+    if (lineSpacing === 'loose') {
+      document.body.style.lineHeight = '1.8';
+    } else {
+      document.body.style.lineHeight = '';
+    }
+    localStorage.setItem('lineSpacing', lineSpacing);
+  }
+  
+  function updateLineSpacingButtons() {
+    const normalBtn = document.getElementById('spacing-normal');
+    const looseBtn = document.getElementById('spacing-loose');
+    
+    if (normalBtn) normalBtn.setAttribute('aria-pressed', lineSpacing === 'normal');
+    if (looseBtn) looseBtn.setAttribute('aria-pressed', lineSpacing === 'loose');
+  }
+  
+  // Dyslexia Font Toggle
+  function setupDyslexiaToggle() {
+    const btn = document.getElementById('dyslexia-toggle');
+    if (!btn) return;
+    
+    btn.addEventListener('click', function() {
+      dyslexiaFont = !dyslexiaFont;
+      applyDyslexiaFont();
+      btn.setAttribute('aria-pressed', dyslexiaFont);
+      announceToScreenReader(dyslexiaFont ? 'Dyslexia-friendly font enabled' : 'Dyslexia-friendly font disabled');
+    });
+  }
+  
+  function applyDyslexiaFont() {
+    if (dyslexiaFont) {
+      document.body.classList.add('dyslexia-font-active');
+    } else {
+      document.body.classList.remove('dyslexia-font-active');
+    }
+    localStorage.setItem('dyslexiaFont', dyslexiaFont);
+  }
+  
+  // Reading Mask
+  function setupReadingMask() {
+    const btn = document.getElementById('reading-mask-toggle');
+    if (!btn) return;
+    
+    btn.addEventListener('click', function() {
+      readingMask = !readingMask;
+      applyReadingMask();
+      btn.setAttribute('aria-pressed', readingMask);
+      announceToScreenReader(readingMask ? 'Reading mask enabled' : 'Reading mask disabled');
+    });
+  }
+  
+  function applyReadingMask() {
+    let mask = document.querySelector('.reading-mask');
+    
+    if (readingMask && !mask) {
+      mask = document.createElement('div');
+      mask.className = 'reading-mask';
+      document.body.appendChild(mask);
+      document.body.classList.add('reading-mask-active');
+      
+      // Update mask position on mouse move
+      document.addEventListener('mousemove', updateMaskPosition);
+    } else if (!readingMask && mask) {
+      mask.remove();
+      document.body.classList.remove('reading-mask-active');
+      document.removeEventListener('mousemove', updateMaskPosition);
+    }
+    
+    localStorage.setItem('readingMask', readingMask);
+  }
+  
+  function updateMaskPosition(e) {
+    const mask = document.querySelector('.reading-mask');
+    if (mask) {
+      const y = e.clientY;
+      mask.style.background = `linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.6) calc(${y}px - 60px),
+        transparent calc(${y}px - 30px),
+        transparent calc(${y}px + 30px),
+        rgba(0, 0, 0, 0.6) calc(${y}px + 60px),
+        rgba(0, 0, 0, 0.6) 100%
+      )`;
+    }
+  }
+  
+  // Color Filters
+  function setupColorFilters() {
+    const noneBtn = document.getElementById('filter-none');
+    const grayscaleBtn = document.getElementById('filter-grayscale');
+    const invertBtn = document.getElementById('filter-invert');
+    
+    if (noneBtn) {
+      noneBtn.addEventListener('click', function() {
+        colorFilter = 'none';
+        applyColorFilter();
+        updateColorFilterButtons();
+        announceToScreenReader('Color filter removed');
+      });
+    }
+    
+    if (grayscaleBtn) {
+      grayscaleBtn.addEventListener('click', function() {
+        colorFilter = 'grayscale';
+        applyColorFilter();
+        updateColorFilterButtons();
+        announceToScreenReader('Grayscale filter applied');
+      });
+    }
+    
+    if (invertBtn) {
+      invertBtn.addEventListener('click', function() {
+        colorFilter = 'invert';
+        applyColorFilter();
+        updateColorFilterButtons();
+        announceToScreenReader('Colors inverted');
+      });
+    }
+  }
+  
+  function applyColorFilter() {
+    if (colorFilter === 'grayscale') {
+      document.documentElement.style.filter = 'grayscale(100%)';
+    } else if (colorFilter === 'invert') {
+      document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
+    } else {
+      document.documentElement.style.filter = '';
+    }
+    localStorage.setItem('colorFilter', colorFilter);
+  }
+  
+  function updateColorFilterButtons() {
+    const noneBtn = document.getElementById('filter-none');
+    const grayscaleBtn = document.getElementById('filter-grayscale');
+    const invertBtn = document.getElementById('filter-invert');
+    
+    if (noneBtn) noneBtn.setAttribute('aria-pressed', colorFilter === 'none');
+    if (grayscaleBtn) grayscaleBtn.setAttribute('aria-pressed', colorFilter === 'grayscale');
+    if (invertBtn) invertBtn.setAttribute('aria-pressed', colorFilter === 'invert');
+  }
+  
+  // Load saved preferences
+  function loadPreferences() {
+    textSize = parseInt(localStorage.getItem('textSize')) || 100;
+    lineSpacing = localStorage.getItem('lineSpacing') || 'normal';
+    dyslexiaFont = localStorage.getItem('dyslexiaFont') === 'true';
+    readingMask = localStorage.getItem('readingMask') === 'true';
+    colorFilter = localStorage.getItem('colorFilter') || 'none';
+    
+    applyTextSize();
+    applyLineSpacing();
+    applyDyslexiaFont();
+    applyReadingMask();
+    applyColorFilter();
+    
+    // Update button states
+    setTimeout(function() {
+      updateLineSpacingButtons();
+      updateColorFilterButtons();
+      
+      const dyslexiaBtn = document.getElementById('dyslexia-toggle');
+      if (dyslexiaBtn) dyslexiaBtn.setAttribute('aria-pressed', dyslexiaFont);
+      
+      const maskBtn = document.getElementById('reading-mask-toggle');
+      if (maskBtn) maskBtn.setAttribute('aria-pressed', readingMask);
+    }, 100);
+  }
+  
+  // Helper function to announce changes to screen readers
+  function announceToScreenReader(message) {
+    const announcer = document.getElementById('toolbar-announcer');
+    if (announcer) {
+      announcer.textContent = message;
+    } else {
       const announcement = document.createElement('div');
       announcement.setAttribute('role', 'status');
       announcement.setAttribute('aria-live', 'polite');
@@ -79,19 +327,12 @@
       announcement.textContent = message;
       document.body.appendChild(announcement);
       
-      // Remove after announcement
       setTimeout(function() {
-        document.body.removeChild(announcement);
+        if (announcement.parentNode) {
+          document.body.removeChild(announcement);
+        }
       }, 1000);
     }
-    
-    // Track which features are used most
-    const toolbarButtons = toolbarContent.querySelectorAll('.toolbar-btn');
-    toolbarButtons.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        trackFeatureUsage(btn.id);
-      });
-    });
     
     function trackFeatureUsage(featureId) {
       if (!featureId) return;
