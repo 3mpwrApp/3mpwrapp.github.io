@@ -205,8 +205,12 @@
       </ul>
     </nav>
 
-    <!-- High contrast + Dark mode toggles -->
-    <div class="header-controls" role="group" aria-label="Display settings">
+    <!-- High contrast + Dark mode toggles + Accessibility Tools -->
+    <div class="header-controls" role="group" aria-label="Display settings and accessibility">
+      <a href="{{ '/accessibility-settings' | relative_url }}" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
+        ♿ Accessibility
+      </a>
+      
       <button
         id="contrast-toggle"
         class="contrast-toggle"
