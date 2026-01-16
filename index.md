@@ -535,7 +535,11 @@ async function loadSimpleCampaigns() {
 // Carousel functionality
 function initCarousel() {
   const track = document.querySelector('.carousel-track');
+  if (!track) return; // Exit if carousel not found
+  
   const slides = Array.from(track.children);
+  if (slides.length === 0) return; // Exit if no slides
+  
   const nextButton = document.querySelector('.carousel-next');
   const prevButton = document.querySelector('.carousel-prev');
   const dotsNav = document.querySelector('.carousel-dots');
@@ -543,16 +547,22 @@ function initCarousel() {
   const pauseButton = document.getElementById('carousel-pause');
   const statusEl = document.querySelector('.carousel-status');
   
+  if (!nextButton || !prevButton || !dotsNav || !pauseButton || !statusEl) return;
+  
   let currentSlide = 0;
   let autoPlayInterval;
   let isPaused = false;
   
-  const slideWidth = slides[0].getBoundingClientRect().width;
+  const setSlidePositions = () => {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    slides.forEach((slide, index) => {
+      slide.style.left = slideWidth * index + 'px';
+    });
+  };
   
-  // Arrange slides next to each other
-  slides.forEach((slide, index) => {
-    slide.style.left = slideWidth * index + 'px';
-  });
+  // Set positions on load and resize
+  setSlidePositions();
+  window.addEventListener('resize', setSlidePositions);
   
   const moveToSlide = (currentIndex, targetIndex) => {
     const currentDot = dots[currentIndex];
