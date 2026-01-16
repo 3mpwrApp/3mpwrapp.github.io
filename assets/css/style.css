@@ -1391,8 +1391,8 @@ body[data-contrast="high"] .badge--new {
   box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
   text-align: center;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  position: static;
-  z-index: 1;
+  position: relative;
+  z-index: 10000;
   clear: both;
 }
 
