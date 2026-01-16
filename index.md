@@ -563,7 +563,6 @@ function initCarousel() {
     const containerWidth = document.querySelector('.carousel-track-container').offsetWidth;
     // Move by container width for each slide
     const moveAmount = targetIndex * containerWidth;
-    console.log(`Moving to slide ${targetIndex + 1}, container width: ${containerWidth}px, moving: -${moveAmount}px`);
     track.style.transform = `translateX(-${moveAmount}px)`;
     currentDot.classList.remove('active');
     targetDot.classList.add('active');
