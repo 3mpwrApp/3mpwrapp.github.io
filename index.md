@@ -217,6 +217,198 @@ description: Free community-powered platform connecting injured workers, persons
   </div>
 </section>
 
+<!-- Feature Carousel -->
+<section class="feature-carousel-section" style="margin-bottom: 4rem;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2.5rem; color: var(--text-color);">
+    Explore & Discover
+  </h2>
+  
+  <div class="carousel-container">
+    <button class="carousel-btn carousel-prev" aria-label="Previous slide">‹</button>
+    
+    <div class="carousel-track-container">
+      <div class="carousel-track">
+        
+        <!-- Slide 1: Disability Bulletin -->
+        <div class="carousel-slide" data-slide="1">
+          <div class="carousel-card">
+            <div class="carousel-icon">📰</div>
+            <h3>Disability Bulletin</h3>
+            <p>Stay informed with latest news, policy changes, and rights updates affecting the disability community</p>
+            <a href="/blog/" class="carousel-link">Read Latest →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 2: Paul & Richard YouTube -->
+        <div class="carousel-slide" data-slide="2">
+          <div class="carousel-card">
+            <div class="carousel-icon">🎥</div>
+            <h3>Paul & Richard Show</h3>
+            <p>Watch inspiring conversations with advocates, survivors, and changemakers in the disability rights movement</p>
+            <a href="https://www.youtube.com/@PaulAndRichardShow" target="_blank" rel="noopener" class="carousel-link">Watch Now →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 3: Community Spotlight -->
+        <div class="carousel-slide" data-slide="3">
+          <div class="carousel-card">
+            <div class="carousel-icon">⭐</div>
+            <h3>Community Spotlight</h3>
+            <p>Meet amazing members making a difference - their stories, struggles, and victories inspire us all</p>
+            <a href="/community-spotlight/" class="carousel-link">View Profiles →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 4: Evidence Locker -->
+        <div class="carousel-slide" data-slide="4">
+          <div class="carousel-card">
+            <div class="carousel-icon">🗂️</div>
+            <h3>Evidence Locker</h3>
+            <p>Secure cloud storage for WSIB claims, medical records, and legal documents - encrypted and always accessible</p>
+            <a href="/features/#evidence-locker" class="carousel-link">Learn More →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 5: Wellness Hub -->
+        <div class="carousel-slide" data-slide="5">
+          <div class="carousel-card">
+            <div class="carousel-icon">🧘</div>
+            <h3>Wellness Hub</h3>
+            <p>Guided meditations, breathing exercises, and pain management techniques designed for chronic conditions</p>
+            <a href="/wellness/" class="carousel-link">Start Healing →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 6: Legal Resources -->
+        <div class="carousel-slide" data-slide="6">
+          <div class="carousel-card">
+            <div class="carousel-icon">⚖️</div>
+            <h3>Know Your Rights</h3>
+            <p>Free legal guides for WSIB appeals, ODSP applications, and disability discrimination cases</p>
+            <a href="/legal/" class="carousel-link">Access Guides →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 7: Crisis Resources -->
+        <div class="carousel-slide" data-slide="7">
+          <div class="carousel-card">
+            <div class="carousel-icon">🆘</div>
+            <h3>Crisis Support</h3>
+            <p>Immediate help when you need it most - mental health hotlines, emergency contacts, and safety planning</p>
+            <a href="/crisis-resources/" class="carousel-link">Get Help Now →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 8: Accessibility Tools -->
+        <div class="carousel-slide" data-slide="8">
+          <div class="carousel-card">
+            <div class="carousel-icon">♿</div>
+            <h3>Accessibility Features</h3>
+            <p>Brain fog mode, complexity toggle, text-to-speech, and more - built for real accessibility needs</p>
+            <a href="/accessibility/" class="carousel-link">Explore Tools →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 9: Events Calendar -->
+        <div class="carousel-slide" data-slide="9">
+          <div class="carousel-card">
+            <div class="carousel-icon">📅</div>
+            <h3>Community Events</h3>
+            <p>Support groups, advocacy meetups, and educational workshops - connect with others who understand</p>
+            <a href="/events/" class="carousel-link">View Calendar →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 10: Advocacy Campaigns -->
+        <div class="carousel-slide" data-slide="10">
+          <div class="carousel-card">
+            <div class="carousel-icon">✊</div>
+            <h3>Active Campaigns</h3>
+            <p>Join movements for policy change, rate increases, and disability rights - your voice counts</p>
+            <a href="/campaigns/" class="carousel-link">Take Action →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 11: Pain Tracker -->
+        <div class="carousel-slide" data-slide="11">
+          <div class="carousel-card">
+            <div class="carousel-icon">📊</div>
+            <h3>Symptom Tracking</h3>
+            <p>Visual charts and reports to share with doctors - track pain, fatigue, mood, and medication effects</p>
+            <a href="/features/#pain-tracker" class="carousel-link">Start Tracking →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 12: Peer Support -->
+        <div class="carousel-slide" data-slide="12">
+          <div class="carousel-card">
+            <div class="carousel-icon">💬</div>
+            <h3>Peer Support Groups</h3>
+            <p>Safe spaces to share experiences, ask questions, and find understanding without judgment</p>
+            <a href="/community/" class="carousel-link">Join Groups →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 13: Success Stories -->
+        <div class="carousel-slide" data-slide="13">
+          <div class="carousel-card">
+            <div class="carousel-icon">🏆</div>
+            <h3>Victory Stories</h3>
+            <p>Read about successful WSIB appeals, ODSP wins, and workplace accommodations - hope is real</p>
+            <a href="/blog/category/success-stories/" class="carousel-link">Read Stories →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 14: Resource Library -->
+        <div class="carousel-slide" data-slide="14">
+          <div class="carousel-card">
+            <div class="carousel-icon">📚</div>
+            <h3>Resource Library</h3>
+            <p>Downloadable guides, templates, and checklists for benefits applications and appeals</p>
+            <a href="/resources/" class="carousel-link">Browse Library →</a>
+          </div>
+        </div>
+        
+        <!-- Slide 15: App Tour -->
+        <div class="carousel-slide" data-slide="15">
+          <div class="carousel-card">
+            <div class="carousel-icon">📱</div>
+            <h3>Take a Tour</h3>
+            <p>See how the app works - screenshots, walkthroughs, and feature demos to get you started</p>
+            <a href="/app-tour/" class="carousel-link">Start Tour →</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <button class="carousel-btn carousel-next" aria-label="Next slide">›</button>
+  </div>
+  
+  <div class="carousel-dots" role="tablist" aria-label="Carousel navigation">
+    <button class="carousel-dot active" data-slide="1" role="tab" aria-label="Slide 1"></button>
+    <button class="carousel-dot" data-slide="2" role="tab" aria-label="Slide 2"></button>
+    <button class="carousel-dot" data-slide="3" role="tab" aria-label="Slide 3"></button>
+    <button class="carousel-dot" data-slide="4" role="tab" aria-label="Slide 4"></button>
+    <button class="carousel-dot" data-slide="5" role="tab" aria-label="Slide 5"></button>
+    <button class="carousel-dot" data-slide="6" role="tab" aria-label="Slide 6"></button>
+    <button class="carousel-dot" data-slide="7" role="tab" aria-label="Slide 7"></button>
+    <button class="carousel-dot" data-slide="8" role="tab" aria-label="Slide 8"></button>
+    <button class="carousel-dot" data-slide="9" role="tab" aria-label="Slide 9"></button>
+    <button class="carousel-dot" data-slide="10" role="tab" aria-label="Slide 10"></button>
+    <button class="carousel-dot" data-slide="11" role="tab" aria-label="Slide 11"></button>
+    <button class="carousel-dot" data-slide="12" role="tab" aria-label="Slide 12"></button>
+    <button class="carousel-dot" data-slide="13" role="tab" aria-label="Slide 13"></button>
+    <button class="carousel-dot" data-slide="14" role="tab" aria-label="Slide 14"></button>
+    <button class="carousel-dot" data-slide="15" role="tab" aria-label="Slide 15"></button>
+  </div>
+  
+  <div class="carousel-controls" style="text-align: center; margin-top: 1.5rem;">
+    <button id="carousel-pause" class="carousel-control-btn" aria-label="Pause automatic slideshow">⏸️ Pause</button>
+    <span class="carousel-status" role="status" aria-live="polite" aria-atomic="true"></span>
+  </div>
+</section>
+
 <!-- CTA Section -->
 <section class="homepage-cta">
   <h2>
@@ -337,13 +529,151 @@ async function loadSimpleCampaigns() {
   container.innerHTML = '<p style="opacity: 0.9;">New campaigns launching soon. Check back!</p>';
 }
 
+// Carousel functionality
+function initCarousel() {
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel-next');
+  const prevButton = document.querySelector('.carousel-prev');
+  const dotsNav = document.querySelector('.carousel-dots');
+  const dots = Array.from(dotsNav.children);
+  const pauseButton = document.getElementById('carousel-pause');
+  const statusEl = document.querySelector('.carousel-status');
+  
+  let currentSlide = 0;
+  let autoPlayInterval;
+  let isPaused = false;
+  
+  const slideWidth = slides[0].getBoundingClientRect().width;
+  
+  // Arrange slides next to each other
+  slides.forEach((slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+  });
+  
+  const moveToSlide = (currentIndex, targetIndex) => {
+    const currentDot = dots[currentIndex];
+    const targetDot = dots[targetIndex];
+    
+    track.style.transform = `translateX(-${slides[targetIndex].style.left})`;
+    currentDot.classList.remove('active');
+    targetDot.classList.add('active');
+    
+    // Announce to screen readers
+    const slideCard = slides[targetIndex].querySelector('.carousel-card h3');
+    if (slideCard) {
+      statusEl.textContent = `Showing: ${slideCard.textContent}. Slide ${targetIndex + 1} of ${slides.length}`;
+    }
+  };
+  
+  const nextSlide = () => {
+    const nextIndex = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+    moveToSlide(currentSlide, nextIndex);
+    currentSlide = nextIndex;
+  };
+  
+  const prevSlide = () => {
+    const prevIndex = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+    moveToSlide(currentSlide, prevIndex);
+    currentSlide = prevIndex;
+  };
+  
+  // Auto-play
+  const startAutoPlay = () => {
+    if (!isPaused && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      autoPlayInterval = setInterval(nextSlide, 6000); // 6 seconds per slide
+    }
+  };
+  
+  const stopAutoPlay = () => {
+    clearInterval(autoPlayInterval);
+  };
+  
+  // Next button
+  nextButton.addEventListener('click', () => {
+    stopAutoPlay();
+    nextSlide();
+    if (!isPaused) startAutoPlay();
+  });
+  
+  // Previous button
+  prevButton.addEventListener('click', () => {
+    stopAutoPlay();
+    prevSlide();
+    if (!isPaused) startAutoPlay();
+  });
+  
+  // Dot navigation
+  dotsNav.addEventListener('click', (e) => {
+    const targetDot = e.target.closest('.carousel-dot');
+    if (!targetDot) return;
+    
+    stopAutoPlay();
+    const targetIndex = dots.indexOf(targetDot);
+    moveToSlide(currentSlide, targetIndex);
+    currentSlide = targetIndex;
+    if (!isPaused) startAutoPlay();
+  });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.target.closest('.carousel-container')) {
+      if (e.key === 'ArrowLeft') {
+        stopAutoPlay();
+        prevSlide();
+        if (!isPaused) startAutoPlay();
+      } else if (e.key === 'ArrowRight') {
+        stopAutoPlay();
+        nextSlide();
+        if (!isPaused) startAutoPlay();
+      }
+    }
+  });
+  
+  // Pause/Play toggle
+  pauseButton.addEventListener('click', () => {
+    isPaused = !isPaused;
+    if (isPaused) {
+      stopAutoPlay();
+      pauseButton.textContent = '▶️ Play';
+      pauseButton.setAttribute('aria-label', 'Resume automatic slideshow');
+      statusEl.textContent = 'Slideshow paused';
+    } else {
+      startAutoPlay();
+      pauseButton.textContent = '⏸️ Pause';
+      pauseButton.setAttribute('aria-label', 'Pause automatic slideshow');
+      statusEl.textContent = 'Slideshow playing';
+    }
+  });
+  
+  // Pause on hover/focus
+  const carouselContainer = document.querySelector('.carousel-container');
+  carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+  carouselContainer.addEventListener('mouseleave', () => {
+    if (!isPaused) startAutoPlay();
+  });
+  
+  carouselContainer.addEventListener('focusin', stopAutoPlay);
+  carouselContainer.addEventListener('focusout', () => {
+    if (!isPaused) startAutoPlay();
+  });
+  
+  // Start auto-play
+  startAutoPlay();
+  
+  // Set initial status
+  statusEl.textContent = `Showing: ${slides[0].querySelector('.carousel-card h3').textContent}. Slide 1 of ${slides.length}`;
+}
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     loadSimpleEvents();
     loadSimpleCampaigns();
+    initCarousel();
   });
 } else {
   loadSimpleEvents();
   loadSimpleCampaigns();
+  initCarousel();
 }
 </script>
