@@ -50,11 +50,11 @@ description: Free community-powered platform connecting injured workers, persons
   
   <div class="homepage-badge">
     <p>
-      <span aria-hidden="true">💚</span> 100% Free Forever
+      <span aria-hidden="true">�️</span> Privacy Focused
       <span style="margin: 0 1rem; opacity: 0.5;">|</span>
-      <span aria-hidden="true">🇨🇦</span> Built for Canada
+      <span aria-hidden="true">🤝</span> Community Powered
       <span style="margin: 0 1rem; opacity: 0.5;">|</span>
-      <span aria-hidden="true">♿</span> Accessibility First
+      <span aria-hidden="true">✊</span> No Corporate Control
     </p>
   </div>
 </section>
