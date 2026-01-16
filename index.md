@@ -16,10 +16,10 @@ description: Free community-powered platform connecting injured workers, persons
     <img src="{{ '/assets/empwrapp-logo.png' | relative_url }}" alt="3mpwrApp logo" width="80" height="80" loading="eager" style="margin-bottom: 1.5rem;">
   </picture>
   
-  <h1>Empowering Canada's Disability & Injured Worker Community</h1>
+  <h1>Tools, Support & Community — All in One Place</h1>
   
   <p class="homepage-hero-subtitle">
-    Free community-powered support for injured workers, persons with disabilities, and allies across Canada
+    Empowering injured workers, persons with disabilities, and allies across Canada with 100% free resources
   </p>
   
   <!-- Impact Stats -->
