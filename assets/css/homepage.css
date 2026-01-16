@@ -2,7 +2,7 @@
 
 /* CSS Variables for Homepage Components */
 :root {
-  --homepage-hero-bg: rgba(61, 78, 170, 0.05);
+  --homepage-hero-bg: transparent;
   --homepage-card-bg: #ffffff;
   --homepage-card-text: #1f2937;
   --homepage-card-secondary: #4b5563;
@@ -26,7 +26,7 @@
 /* Dark Mode Overrides */
 @media (prefers-color-scheme: dark) {
   :root {
-    --homepage-hero-bg: rgba(61, 78, 170, 0.15);
+    --homepage-hero-bg: transparent;
     --homepage-card-bg: #1f2937;
     --homepage-card-text: #f9fafb;
     --homepage-card-secondary: #d1d5db;
