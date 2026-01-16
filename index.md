@@ -553,7 +553,9 @@ function initCarousel() {
     // Get the container width
     const containerWidth = document.querySelector('.carousel-track-container').offsetWidth;
     // Move by container width for each slide
-    track.style.transform = `translateX(-${targetIndex * containerWidth}px)`;
+    const moveAmount = targetIndex * containerWidth;
+    console.log(`Moving to slide ${targetIndex + 1}, container width: ${containerWidth}px, moving: -${moveAmount}px`);
+    track.style.transform = `translateX(-${moveAmount}px)`;
     currentDot.classList.remove('active');
     targetDot.classList.add('active');
     
@@ -563,6 +565,13 @@ function initCarousel() {
       statusEl.textContent = `Showing: ${slideCard.textContent}. Slide ${targetIndex + 1} of ${slides.length}`;
     }
   };
+  
+  // Add resize handler to recalculate on window resize
+  window.addEventListener('resize', () => {
+    const containerWidth = document.querySelector('.carousel-track-container').offsetWidth;
+    const moveAmount = currentSlide * containerWidth;
+    track.style.transform = `translateX(-${moveAmount}px)`;
+  });
   
   const nextSlide = () => {
     const nextIndex = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
