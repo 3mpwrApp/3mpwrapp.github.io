@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-16T18:03:07.165Z",
+  "lastUpdated": "2026-01-17T00:06:41.492Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 8621,
+      "totalPosts": 8646,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-16T18:02:55.416Z"
+      "lastSeen": "2026-01-17T00:06:28.387Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 8536,
+      "totalPosts": 8561,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-16T18:02:58.153Z"
+      "lastSeen": "2026-01-17T00:06:31.684Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 8500,
+      "totalPosts": 8525,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-16T18:03:00.974Z"
+      "lastSeen": "2026-01-17T00:06:34.871Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 8643,
+      "totalPosts": 8668,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-16T18:03:03.639Z"
+      "lastSeen": "2026-01-17T00:06:37.769Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 8650,
+      "totalPosts": 8675,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-16T18:03:06.162Z"
+      "lastSeen": "2026-01-17T00:06:40.489Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Don’t stop recording, sharing, saving! \n\nA reckoning is coming.\n\n#humanrightsabuses #pinks #bluecrew #proudblue #DisabilityRights #momsky #feminist #FDT #fuckICE",
-      "author": "aliceknew.bsky.social",
-      "engagement": 96,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Organizers share where they find hope in the struggle for disability justice as we go into the second year of Trump 2.0.\n\ntruthout.org/articles/dis...\n\n#disabilitysky #disabilityjustice #indigisky #truthout",
-      "author": "johnniejae.bsky.social",
-      "engagement": 31,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "My wife is in hospital & waited for an hour & a half for someone to help her to the toilet. The staff are lovely but stretched to the hilt.  If you're mobile you are ok but to be a wheelchair user, without your wheel chair, you are stranded.  #Ireland #SpéirGhorm #Accessibility",
-      "author": "eils1.bsky.social",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "It's nearly here! Join us in two weeks' time to find out the winners of the 2025 GAConf Awards, 20 categories celebrating everything from best indie effort to best blind & low vision accessibility, from unsung hero to best accessibility journalism!\n🏆🏆🏆\n#gamedev #indiedev #accessibility",
-      "author": "gaconf.bsky.social",
-      "engagement": 28,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "just two weeks left until the 5th annual Games for Blind Gamers jam kicks off! Create the best accessible game for the visually impaired this February. Check out the link and consider joining us! itch.io/jam/games-fo... #GameDev #Accessibility",
-      "author": "ericbomb.bsky.social",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "🎉 Big milestone! Accessibility Checker hit 10,000+ active installs on WordPress dot org! We went from 9,000 to 10,000 in 47 days. \n\nwordpress.org/plugins/acce...\n\n#WordPress #accessibility #a11y",
-      "author": "amberhinds.bsky.social",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
     {
       "text": "No streams this week, I'm at snowcamp.io, the local web dev conference in my home town 🏔️🏂\n\nOn today's menu: workshops!\n\n🦀 Building real-time TUIs with @rust-lang.org\n🙈 Navigating websites blindfolded, using only the screen reader #a11y",
       "author": "francoisbest.com",
@@ -338,6 +302,42 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Don’t stop recording, sharing, saving! \n\nA reckoning is coming.\n\n#humanrightsabuses #pinks #bluecrew #proudblue #DisabilityRights #momsky #feminist #FDT #fuckICE",
+      "author": "aliceknew.bsky.social",
+      "engagement": 100,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Looking forward to this! Living with #LongCOVID sucks. It's exhausting, lonely, and confusing. Meeting tomorrow (virtual), Thursday January 15th, 5-8PM EST. Info: masktogetheramerica.org/blog/long-co... #disabilityjustice #invisibleillness #POTS #MECFS #Dysautonomia",
+      "author": "katieholten.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Organizers share where they find hope in the struggle for disability justice as we go into the second year of Trump 2.0.\n\ntruthout.org/articles/dis...\n\n#disabilitysky #disabilityjustice #indigisky #truthout",
+      "author": "johnniejae.bsky.social",
+      "engagement": 37,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 29,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 35
+      "count": 37
     },
     {
       "keyword": "a11y",
-      "count": 31
+      "count": 35
     },
     {
       "keyword": "cripthevote",
@@ -378,6 +378,10 @@
       "count": 14
     },
     {
+      "keyword": "disability",
+      "count": 11
+    },
+    {
       "keyword": "foxtakedown",
       "count": 11
     },
@@ -398,10 +402,6 @@
       "count": 11
     },
     {
-      "keyword": "disability",
-      "count": 9
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 9
     },
@@ -414,12 +414,12 @@
       "count": 9
     },
     {
-      "keyword": "wcag",
-      "count": 8
+      "keyword": "accessibility a11y",
+      "count": 6
     },
     {
       "keyword": "disabilityjustice nico",
-      "count": 6
+      "count": 5
     }
   ]
 }
