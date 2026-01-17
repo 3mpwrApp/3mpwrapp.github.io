@@ -60,7 +60,98 @@ description: Free community-powered platform connecting injured workers, persons
     </p>
   </div>
 </section>
-
+<!-- Theme Song Vote Section -->
+<section class="theme-song-vote" style="margin: 4rem auto; max-width: 800px; padding: 2.5rem; background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(61, 78, 170, 0.1) 100%); border-radius: 16px; border: 2px solid rgba(147, 51, 234, 0.3); box-shadow: 0 8px 32px rgba(147, 51, 234, 0.15);">
+  <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 1rem; color: var(--text-color);">
+    <span aria-hidden="true">🎶</span> COMMUNITY VOTE TIME!
+  </h2>
+  
+  <div style="text-align: center; font-size: 1.15rem; line-height: 1.7; color: var(--text-color); margin-bottom: 2rem;">
+    <p style="margin-bottom: 1rem;">
+      <strong>Help us choose the official 3mpwr App theme song / jingle!</strong>
+    </p>
+    <p style="margin-bottom: 1rem;">
+      We've created two versions, and your voice matters. This app is about empowerment, community, and collective action — so we want <strong>YOU</strong> to decide which one represents us best.
+    </p>
+  </div>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
+    <!-- Option 1 -->
+    <div style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 12px; border: 2px solid rgba(61, 78, 170, 0.3); text-align: center;">
+      <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-color);">
+        <span aria-hidden="true">🎧</span> Option 1
+      </h3>
+      <a href="https://suno.com/s/enuXDfFsc65WWAMr" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 0.75rem 1.5rem; background: #3d4eaa; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='#2d3e8a'" onmouseout="this.style.background='#3d4eaa'">
+        <span aria-hidden="true">▶️</span> Listen to Option 1
+      </a>
+    </div>
+    
+    <!-- Option 2 -->
+    <div style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 12px; border: 2px solid rgba(147, 51, 234, 0.3); text-align: center;">
+      <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-color);">
+        <span aria-hidden="true">🎧</span> Option 2
+      </h3>
+      <a href="https://suno.com/s/L8ODWoVmMMhEcl67" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 0.75rem 1.5rem; background: #9333ea; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='#7c22c7'" onmouseout="this.style.background='#9333ea'">
+        <span aria-hidden="true">▶️</span> Listen to Option 2
+      </a>
+    </div>
+  </div>
+  
+  <div style="text-align: center; padding: 2rem; background: rgba(255, 255, 255, 0.03); border-radius: 12px; margin-top: 2rem;">
+    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--text-color);">
+      <span aria-hidden="true">🗳️</span> How to vote:
+    </h3>
+    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-color);">
+      Comment <strong>Option 1</strong> or <strong>Option 2</strong> below <span aria-hidden="true">👇</span>
+    </p>
+    <p style="font-size: 1.05rem; font-style: italic; color: var(--text-secondary); margin-top: 1.5rem;">
+      This isn't just a song — it's our anthem.<br>
+      Let's build 3mpwr together. <span aria-hidden="true" style="color: #9333ea;">💜</span>
+    </p>
+  </div>
+  
+  <!-- Giscus Comments for Voting -->
+  <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
+    <script src="https://giscus.app/client.js"
+            data-repo="3mpwr-App/3mpwrapp.github.io"
+            data-repo-id="R_kgDONdT_qg"
+            data-category="Theme Song Vote"
+            data-category-id="DIC_kwDONdT_qs4CljhP"
+            data-mapping="specific"
+            data-term="theme-song-vote-jan-2026"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+  
+  <!-- Social Sharing -->
+  <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <p style="font-size: 1rem; margin-bottom: 1rem; color: var(--text-secondary);">
+      <span aria-hidden="true">📢</span> Share with your community:
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://twitter.com/intent/tweet?text=Help%20choose%20the%20official%203mpwr%20App%20theme%20song!%20%F0%9F%8E%B6%20Vote%20now%20at%20https://3mpwrapp.github.io/%23theme-song-vote" target="_blank" rel="noopener noreferrer" style="padding: 0.5rem 1rem; background: #1DA1F2; color: white; text-decoration: none; border-radius: 6px; font-size: 0.95rem;" aria-label="Share on Twitter">
+        <span aria-hidden="true">🐦</span> Twitter
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://3mpwrapp.github.io/%23theme-song-vote" target="_blank" rel="noopener noreferrer" style="padding: 0.5rem 1rem; background: #4267B2; color: white; text-decoration: none; border-radius: 6px; font-size: 0.95rem;" aria-label="Share on Facebook">
+        <span aria-hidden="true">📘</span> Facebook
+      </a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://3mpwrapp.github.io/%23theme-song-vote" target="_blank" rel="noopener noreferrer" style="padding: 0.5rem 1rem; background: #0077B5; color: white; text-decoration: none; border-radius: 6px; font-size: 0.95rem;" aria-label="Share on LinkedIn">
+        <span aria-hidden="true">💼</span> LinkedIn
+      </a>
+      <a href="https://reddit.com/submit?url=https://3mpwrapp.github.io/%23theme-song-vote&title=Help%20choose%20the%20official%203mpwr%20App%20theme%20song!" target="_blank" rel="noopener noreferrer" style="padding: 0.5rem 1rem; background: #FF4500; color: white; text-decoration: none; border-radius: 6px; font-size: 0.95rem;" aria-label="Share on Reddit">
+        <span aria-hidden="true">🤖</span> Reddit
+      </a>
+    </div>
+  </div>
+</section>
 <!-- Value Proposition Cards -->
 <section class="value-props" style="margin-bottom: 4rem;">
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2.5rem; color: var(--text-color);">
