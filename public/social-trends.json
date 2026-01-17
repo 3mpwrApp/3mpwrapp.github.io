@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-17T12:03:10.671Z",
+  "lastUpdated": "2026-01-17T18:03:02.869Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 8696,
+      "totalPosts": 8721,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-17T12:02:58.872Z"
+      "lastSeen": "2026-01-17T18:02:47.840Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 8611,
+      "totalPosts": 8636,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-17T12:03:01.746Z"
+      "lastSeen": "2026-01-17T18:02:50.920Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 8575,
+      "totalPosts": 8600,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-17T12:03:04.691Z"
+      "lastSeen": "2026-01-17T18:02:54.256Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 8718,
+      "totalPosts": 8743,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-17T12:03:07.220Z"
+      "lastSeen": "2026-01-17T18:02:57.737Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 8725,
+      "totalPosts": 8750,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-17T12:03:09.667Z"
+      "lastSeen": "2026-01-17T18:03:01.865Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Don’t stop recording, sharing, saving! \n\nA reckoning is coming.\n\n#humanrightsabuses #pinks #bluecrew #proudblue #DisabilityRights #momsky #feminist #FDT #fuckICE",
-      "author": "aliceknew.bsky.social",
-      "engagement": 99,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Looking forward to this! Living with #LongCOVID sucks. It's exhausting, lonely, and confusing. Meeting tomorrow (virtual), Thursday January 15th, 5-8PM EST. Info: masktogetheramerica.org/blog/long-co... #disabilityjustice #invisibleillness #POTS #MECFS #Dysautonomia",
-      "author": "katieholten.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Organizers share where they find hope in the struggle for disability justice as we go into the second year of Trump 2.0.\n\ntruthout.org/articles/dis...\n\n#disabilitysky #disabilityjustice #indigisky #truthout",
-      "author": "johnniejae.bsky.social",
-      "engagement": 37,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Sisyphus’s Door\n\nQuick sketch reacting to issue raised of #accessibility features that ‘fix’ a singular instance of a problem but you now encounter the next problem that you had never been able to get to and no one has ‘fixed’",
-      "author": "acuity.design",
-      "engagement": 16,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "You can't nest interactive controls on the web, but you can fake it 'till you make it. @piccalil.li let me ramble on about how to do exactly just that, because they're champs. #a11y piccalil.li/blog/accessi...",
-      "author": "ericwbailey.website",
-      "engagement": 45,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "“Live Region Support”\nadrianroselli.com/2026/01/live...\n\nJust about to publish, Chrome updated, I re-tested, and my results for dynamic descriptions went sideways. So, I dunno, QA that for me?\n\nWon’t it feel good to correct me? You know, to make up for… [waves arms]\n\n#HTML #ARIA #a11y #accessibility",
-      "author": "aardrian.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
       "author": "juliametraux.bsky.social",
@@ -338,27 +302,63 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Don’t stop recording, sharing, saving! \n\nA reckoning is coming.\n\n#humanrightsabuses #pinks #bluecrew #proudblue #DisabilityRights #momsky #feminist #FDT #fuckICE",
+      "author": "aliceknew.bsky.social",
+      "engagement": 101,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Looking forward to this! Living with #LongCOVID sucks. It's exhausting, lonely, and confusing. Meeting tomorrow (virtual), Thursday January 15th, 5-8PM EST. Info: masktogetheramerica.org/blog/long-co... #disabilityjustice #invisibleillness #POTS #MECFS #Dysautonomia",
+      "author": "katieholten.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Organizers share where they find hope in the struggle for disability justice as we go into the second year of Trump 2.0.\n\ntruthout.org/articles/dis...\n\n#disabilitysky #disabilityjustice #indigisky #truthout",
+      "author": "johnniejae.bsky.social",
+      "engagement": 37,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 43
+      "count": 44
     },
     {
       "keyword": "accessibility",
-      "count": 37
+      "count": 36
     },
     {
       "keyword": "a11y",
       "count": 32
     },
     {
-      "keyword": "cripthevote",
-      "count": 26
+      "keyword": "disabilityjustice",
+      "count": 27
     },
     {
-      "keyword": "disabilityjustice",
+      "keyword": "cripthevote",
       "count": 26
     },
     {
@@ -414,11 +414,11 @@
       "count": 9
     },
     {
-      "keyword": "independentliving",
-      "count": 4
+      "keyword": "digitalaccessibility",
+      "count": 6
     },
     {
-      "keyword": "digitalaccessibility",
+      "keyword": "independentliving",
       "count": 4
     }
   ]
