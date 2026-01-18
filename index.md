@@ -113,10 +113,10 @@ description: Free community-powered platform connecting injured workers, persons
   <!-- Giscus Comments for Voting -->
   <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
     <script src="https://giscus.app/client.js"
-            data-repo="3mpwr-App/3mpwrapp.github.io"
+            data-repo="3mpwrApp/3mpwrapp.github.io"
             data-repo-id="R_kgDONdT_qg"
-            data-category="Theme Song Vote"
-            data-category-id="DIC_kwDONdT_qs4CljhP"
+            data-category="Announcements"
+            data-category-id="DIC_kwDONdT_qs4CljrG"
             data-mapping="specific"
             data-term="theme-song-vote-jan-2026"
             data-strict="0"
