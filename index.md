@@ -97,39 +97,146 @@ description: Free community-powered platform connecting injured workers, persons
     </div>
   </div>
   
-  <div style="text-align: center; padding: 2rem; background: rgba(255, 255, 255, 0.03); border-radius: 12px; margin-top: 2rem;">
-    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--text-color);">
-      <span aria-hidden="true">🗳️</span> How to vote:
+  <!-- Vote Poll -->
+  <div id="theme-vote-container" style="text-align: center; padding: 2rem; background: rgba(255, 255, 255, 0.03); border-radius: 12px; margin-top: 2rem;">
+    <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-color);">
+      <span aria-hidden="true">🗳️</span> Cast Your Vote:
     </h3>
-    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-color);">
-      Comment <strong>Option 1</strong> or <strong>Option 2</strong> below <span aria-hidden="true">👇</span>
-    </p>
+    
+    <form id="theme-vote-form" style="max-width: 500px; margin: 0 auto;">
+      <div style="text-align: left; margin-bottom: 1.5rem;">
+        <label style="display: block; padding: 1rem; background: rgba(61, 78, 170, 0.1); border: 2px solid rgba(61, 78, 170, 0.3); border-radius: 8px; margin-bottom: 1rem; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(61, 78, 170, 0.2)'" onmouseout="this.style.background='rgba(61, 78, 170, 0.1)'">
+          <input type="radio" name="song-choice" value="option1" required style="margin-right: 0.75rem; transform: scale(1.3);">
+          <span style="font-size: 1.1rem; font-weight: 600;">🎧 Option 1</span>
+        </label>
+        
+        <label style="display: block; padding: 1rem; background: rgba(147, 51, 234, 0.1); border: 2px solid rgba(147, 51, 234, 0.3); border-radius: 8px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(147, 51, 234, 0.2)'" onmouseout="this.style.background='rgba(147, 51, 234, 0.1)'">
+          <input type="radio" name="song-choice" value="option2" required style="margin-right: 0.75rem; transform: scale(1.3);">
+          <span style="font-size: 1.1rem; font-weight: 600;">🎧 Option 2</span>
+        </label>
+      </div>
+      
+      <label style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.95rem;">
+        <input type="checkbox" id="not-robot" required style="transform: scale(1.2);">
+        <span>I'm not a robot</span>
+      </label>
+      
+      <input type="text" name="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+      
+      <button type="submit" style="padding: 0.75rem 2rem; background: linear-gradient(135deg, #3d4eaa 0%, #9333ea 100%); color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(147, 51, 234, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(147, 51, 234, 0.3)'">
+        <span aria-hidden="true">🎵</span> Submit Vote
+      </button>
+    </form>
+    
+    <div id="vote-results" style="display: none; margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px;">
+      <h4 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-color);">Current Results:</h4>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 400px; margin: 0 auto;">
+        <div>
+          <div style="font-size: 2rem; font-weight: bold; color: #3d4eaa;">
+            <span id="option1-votes">0</span>
+          </div>
+          <div style="font-size: 0.9rem; opacity: 0.8;">Option 1</div>
+        </div>
+        <div>
+          <div style="font-size: 2rem; font-weight: bold; color: #9333ea;">
+            <span id="option2-votes">0</span>
+          </div>
+          <div style="font-size: 0.9rem; opacity: 0.8;">Option 2</div>
+        </div>
+      </div>
+    </div>
+    
+    <p id="vote-message" style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-secondary);"></p>
+    
     <p style="font-size: 1.05rem; font-style: italic; color: var(--text-secondary); margin-top: 1.5rem;">
       This isn't just a song — it's our anthem.<br>
       Let's build 3mpwr together. <span aria-hidden="true" style="color: #9333ea;">💜</span>
     </p>
   </div>
   
-  <!-- Giscus Comments for Voting -->
-  <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border-radius: 12px;">
-    <script src="https://giscus.app/client.js"
-            data-repo="3mpwrApp/3mpwrapp.github.io"
-            data-repo-id="R_kgDONdT_qg"
-            data-category="Announcements"
-            data-category-id="DIC_kwDONdT_qs4CljrG"
-            data-mapping="specific"
-            data-term="theme-song-vote-jan-2026"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="top"
-            data-theme="preferred_color_scheme"
-            data-lang="en"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
-    </script>
-  </div>
+  <script>
+    (function() {
+      const form = document.getElementById('theme-vote-form');
+      const resultsDiv = document.getElementById('vote-results');
+      const messageEl = document.getElementById('vote-message');
+      const option1VotesEl = document.getElementById('option1-votes');
+      const option2VotesEl = document.getElementById('option2-votes');
+      
+      // Load results
+      function loadResults() {
+        fetch('https://api.github.com/repos/3mpwrApp/3mpwrapp.github.io/issues/1/reactions')
+          .then(r => r.json())
+          .then(data => {
+            const option1 = data.filter(r => r.content === '+1').length;
+            const option2 = data.filter(r => r.content === 'heart').length;
+            option1VotesEl.textContent = option1;
+            option2VotesEl.textContent = option2;
+          })
+          .catch(() => {});
+      }
+      
+      // Check if already voted
+      if (localStorage.getItem('theme-song-voted')) {
+        form.style.display = 'none';
+        resultsDiv.style.display = 'block';
+        messageEl.textContent = '✅ Thank you for voting!';
+        messageEl.style.color = '#10b981';
+        loadResults();
+      }
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Check honeypot
+        if (form.querySelector('[name="honeypot"]').value) {
+          messageEl.textContent = '❌ Bot detected';
+          messageEl.style.color = '#ef4444';
+          return;
+        }
+        
+        const choice = form.querySelector('[name="song-choice"]:checked').value;
+        const notRobot = document.getElementById('not-robot').checked;
+        
+        if (!notRobot) {
+          messageEl.textContent = '❌ Please confirm you\'re not a robot';
+          messageEl.style.color = '#ef4444';
+          return;
+        }
+        
+        // Record vote
+        const endpoint = 'https://api.github.com/repos/3mpwrApp/3mpwrapp.github.io/issues/1/reactions';
+        const reaction = choice === 'option1' ? '+1' : 'heart';
+        
+        fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ content: reaction })
+        })
+        .then(() => {
+          localStorage.setItem('theme-song-voted', choice);
+          form.style.display = 'none';
+          resultsDiv.style.display = 'block';
+          messageEl.textContent = '✅ Vote recorded! Thank you!';
+          messageEl.style.color = '#10b981';
+          loadResults();
+        })
+        .catch(err => {
+          // Fallback: just mark as voted locally
+          localStorage.setItem('theme-song-voted', choice);
+          form.style.display = 'none';
+          messageEl.textContent = '✅ Vote recorded! Thank you!';
+          messageEl.style.color = '#10b981';
+        });
+      });
+      
+      // Load initial results
+      loadResults();
+      setInterval(loadResults, 30000); // Refresh every 30s
+    })();
+  </script>
   
   <!-- Social Sharing -->
   <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
