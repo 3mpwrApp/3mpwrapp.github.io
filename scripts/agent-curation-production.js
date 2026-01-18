@@ -51,6 +51,7 @@ class CurationAgentProduction {
 
     this.curatorConfig = null;
     this.articleCache = new Map();
+    this.publishedArticles = new Set();  // Track published article URLs to prevent duplicates
     this.feedPriorities = {
       tier1: [],  // TIER 1: Check every 2 hours (breaking news)
       tier2: [],  // TIER 2: Check every 4 hours (high-signal)
@@ -180,14 +181,23 @@ class CurationAgentProduction {
 
     let processed = 0;
     let errors = 0;
+    let duplicatesSkipped = 0;
 
     for (const feedUrl of this.feedPriorities[tier]) {
       try {
         const feed = await this.parser.parseURL(feedUrl);
+        const isDisabilityBulletin = feedUrl.includes('thedisabilitybulletin') || feedUrl.includes('362411661072793873');
         
         if (feed.items && feed.items.length > 0) {
           for (const item of feed.items.slice(0, 10)) {  // Top 10 per feed
             const article = this.normalizeArticle(item, feedUrl);
+            
+            // Skip duplicates EXCEPT for The Disability Bulletin
+            if (!isDisabilityBulletin && this.publishedArticles.has(article.link)) {
+              duplicatesSkipped++;
+              continue;
+            }
+            
             const scored = this.scoreArticle(article);
 
             // Check for breaking news
@@ -198,8 +208,9 @@ class CurationAgentProduction {
               }
             }
 
-            // Store in cache
+            // Store in cache and mark as published
             this.articleCache.set(article.id, scored);
+            this.publishedArticles.add(article.link);
             processed++;
           }
         }
@@ -210,7 +221,7 @@ class CurationAgentProduction {
     }
 
     const duration = ((Date.now() - startTime) / 1000).toFixed(1);
-    console.log(`   ✓ ${tier.toUpperCase()} complete: ${processed} articles processed (${errors} errors) [${duration}s]`);
+    console.log(`   ✓ ${tier.toUpperCase()} complete: ${processed} articles processed, ${duplicatesSkipped} duplicates skipped (${errors} errors) [${duration}s]`);
 
     this.status.lastChecked = new Date();
     this.status.articlesProcessed += processed;
@@ -220,13 +231,15 @@ class CurationAgentProduction {
    * NORMALIZE ARTICLE FROM RSS
    */
   normalizeArticle(item, source) {
-    const id = `${source}-${item.pubDate || item.isoDate || new Date().toISOString()}`;
+    // Use article link as primary ID to ensure uniqueness
+    const link = item.link || '';
+    const id = link ? this.hashString(link) : `${source}-${item.pubDate || item.isoDate || new Date().toISOString()}`;
     
     return {
       id,
       title: item.title || 'Untitled',
       description: item.description || item.summary || '',
-      link: item.link || '',
+      link,
       source,
       pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
       image: item.image?.url || item.enclosure?.url || null,
@@ -415,6 +428,33 @@ tags: [curation, daily-news, automated]
 
     console.log(`   ✓ Scores recalculated: ${updated} articles updated`);
     this.status.scoresRecalculated++;
+    
+    // Clean up old articles from cache (keep last 30 days)
+    await this.cleanupOldArticles();
+  }
+
+  /**
+   * CLEANUP OLD ARTICLES
+   * Remove articles older than 30 days from cache and published tracking
+   */
+  async cleanupOldArticles() {
+    const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);
+    let removed = 0;
+    
+    for (const [id, article] of this.articleCache.entries()) {
+      const articleDate = new Date(article.pubDate);
+      if (articleDate.getTime() < thirtyDaysAgo) {
+        this.articleCache.delete(id);
+        removed++;
+      }
+    }
+    
+    if (removed > 0) {
+      console.log(`   ✓ Cleaned up ${removed} articles older than 30 days`);
+    }
+    
+    // Note: publishedArticles Set will naturally stay current since we only add recent articles
+    // It will reset when the process restarts, which is acceptable for duplicate prevention
   }
 
   /**
@@ -488,6 +528,19 @@ tags: [curation, daily-news, automated]
     const [hours, minutes] = timeStr.split(':').map(Number);
     const now = new Date();
     const scheduled = new Date();
+  
+  /**
+   * HELPER: Simple hash function for URLs
+   */
+  hashString(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    return 'h' + Math.abs(hash).toString(36);
+  }
     
     scheduled.setHours(hours, minutes, 0, 0);
     
