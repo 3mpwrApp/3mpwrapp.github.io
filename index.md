@@ -103,7 +103,7 @@ description: Free community-powered platform connecting injured workers, persons
       <span aria-hidden="true">🗳️</span> Cast Your Vote:
     </h3>
     
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerzXn2RpkzKIP9X7zrNYQWtVuBbl8gQhzpl93ymLKgKPgRlg/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" style="max-width: 640px; border-radius: 8px;">Loading…</iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerzXn2RpkzKIP9X7zrNYQWtVuBbl8gQhzpl93ymLKgKPgRlg/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="max-width: 800px; min-height: 800px; border-radius: 8px;">Loading…</iframe>
     
     <p style="font-size: 1.05rem; font-style: italic; color: var(--text-secondary); margin-top: 1.5rem;">
       This isn't just a song — it's our anthem.<br>
