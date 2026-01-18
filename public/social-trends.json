@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-18T00:07:47.903Z",
+  "lastUpdated": "2026-01-18T06:02:58.638Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 8746,
+      "totalPosts": 8771,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-18T00:07:39.140Z"
+      "lastSeen": "2026-01-18T06:02:49.566Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 8661,
+      "totalPosts": 8686,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-18T00:07:41.057Z"
+      "lastSeen": "2026-01-18T06:02:51.383Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 8625,
+      "totalPosts": 8650,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-18T00:07:42.982Z"
+      "lastSeen": "2026-01-18T06:02:53.363Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 8768,
+      "totalPosts": 8793,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-18T00:07:44.902Z"
+      "lastSeen": "2026-01-18T06:02:55.554Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 8775,
+      "totalPosts": 8800,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-18T00:07:46.900Z"
+      "lastSeen": "2026-01-18T06:02:57.634Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "You can't nest interactive controls on the web, but you can fake it 'till you make it. @piccalil.li let me ramble on about how to do exactly just that, because they're champs. #a11y piccalil.li/blog/accessi...",
-      "author": "ericwbailey.website",
-      "engagement": 47,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "“Live Region Support”\nadrianroselli.com/2026/01/live...\n\nJust about to publish, Chrome updated, I re-tested, and my results for dynamic descriptions went sideways. So, I dunno, QA that for me?\n\nWon’t it feel good to correct me? You know, to make up for… [waves arms]\n\n#HTML #ARIA #a11y #accessibility",
-      "author": "aardrian.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 28,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Don’t stop recording, sharing, saving! \n\nA reckoning is coming.\n\n#humanrightsabuses #pinks #bluecrew #proudblue #DisabilityRights #momsky #feminist #FDT #fuckICE",
-      "author": "aliceknew.bsky.social",
-      "engagement": 100,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Looking forward to this! Living with #LongCOVID sucks. It's exhausting, lonely, and confusing. Meeting tomorrow (virtual), Thursday January 15th, 5-8PM EST. Info: masktogetheramerica.org/blog/long-co... #disabilityjustice #invisibleillness #POTS #MECFS #Dysautonomia",
       "author": "katieholten.bsky.social",
@@ -277,6 +241,42 @@
       "text": "Looking forward to this! Living with #LongCOVID sucks. It's exhausting, lonely, and confusing. Meeting tomorrow (virtual), Thursday January 15th, 5-8PM EST. Info: masktogetheramerica.org/blog/long-co... #disabilityjustice #invisibleillness #POTS #MECFS #Dysautonomia",
       "author": "katieholten.bsky.social",
       "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Organizers share where they find hope in the struggle for disability justice as we go into the second year of Trump 2.0.\n\ntruthout.org/articles/dis...\n\n#disabilitysky #disabilityjustice #indigisky #truthout",
+      "author": "johnniejae.bsky.social",
+      "engagement": 37,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Don’t stop recording, sharing, saving! \n\nA reckoning is coming.\n\n#humanrightsabuses #pinks #bluecrew #proudblue #DisabilityRights #momsky #feminist #FDT #fuckICE",
+      "author": "aliceknew.bsky.social",
+      "engagement": 101,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Looking forward to this! Living with #LongCOVID sucks. It's exhausting, lonely, and confusing. Meeting tomorrow (virtual), Thursday January 15th, 5-8PM EST. Info: masktogetheramerica.org/blog/long-co... #disabilityjustice #invisibleillness #POTS #MECFS #Dysautonomia",
+      "author": "katieholten.bsky.social",
+      "engagement": 12,
       "hashtag": "DisabilityJustice"
     },
     {
