@@ -199,6 +199,12 @@ class CurationAgentProduction {
             }
             
             const scored = this.scoreArticle(article);
+            
+            // Filter: Only include articles scoring 2.0+ (disability/vulnerable community focus)
+            // Excludes mainstream general news not relevant to disability movement
+            if (scored.score < 2.0) {
+              continue;
+            }
 
             // Check for breaking news
             if (scored.score >= 4.8) {
@@ -251,6 +257,18 @@ class CurationAgentProduction {
    * SCORE ARTICLE: 6-TIER ALGORITHM
    */
   scoreArticle(article) {
+    // PRIORITY 1: The Disability Bulletin always gets maximum score
+    const isDisabilityBulletin = article.source.includes('thedisabilitybulletin') || article.source.includes('362411661072793873');
+    if (isDisabilityBulletin) {
+      return {
+        ...article,
+        score: 5.0,
+        category: 'disability_bulletin',
+        scoredAt: new Date().toISOString(),
+        reasoning: 'The Disability Bulletin - Community Publication'
+      };
+    }
+    
     const text = (article.title + ' ' + article.description).toLowerCase();
     let score = 1;  // Default
     let category = 'contextual';
@@ -351,6 +369,10 @@ class CurationAgentProduction {
   generateCurationMarkdown(articles, dateStr) {
     const dayOfWeek = new Date(dateStr).toLocaleDateString('en-US', { weekday: 'long' });
     
+    // Separate Disability Bulletin articles
+    const disabilityBulletin = articles.filter(a => a.category === 'disability_bulletin');
+    const otherArticles = articles.filter(a => a.category !== 'disability_bulletin');
+    
     let md = `---
 layout: post
 title: "Daily Curation - ${dateStr}"
@@ -367,11 +389,39 @@ tags: [curation, daily-news, automated]
 
 ---
 
-## 🔥 Critical & Urgent (Score 4.8-5.0)
+## 📰 THE DISABILITY BULLETIN - Community Publication
 
 `;
 
-    const critical = articles.filter(a => a.score >= 4.8);
+    // Feature Disability Bulletin FIRST and PROMINENTLY
+    if (disabilityBulletin.length > 0) {
+      disabilityBulletin.forEach((article, idx) => {
+        md += `
+### ${article.title}
+
+`;
+        md += `${article.description}
+
+`;
+        md += `**[📖 Read Full Article](${article.link})**
+
+`;
+        md += `---
+
+`;
+      });
+    } else {
+      md += `*No new posts from The Disability Bulletin today. [Follow @ODSPoor](https://x.com/ODSPoor) and [@emilypot_](https://x.com/emilypot_) on X for latest updates.*
+
+---
+
+`;
+    }
+
+    md += '\n## 🔥 Critical & Urgent (Score 4.8-5.0)\n\n';
+
+    const critical = otherArticles.filter(a => a.score >= 4.8);
+
     critical.forEach((article, idx) => {
       md += `\n### ${idx + 1}. ${article.title}\n`;
       md += `**Source**: ${article.source} | **Score**: ${article.score}\n\n`;
@@ -379,15 +429,27 @@ tags: [curation, daily-news, automated]
       md += `[Read Full Article](${article.link})\n\n`;
     });
 
+    if (critical.length === 0) {
+      md += '*No critical articles today.*\n\n';
+    }
+
     md += '\n---\n## 📌 High Priority (Score 4.0-4.8)\n';
-    const highPriority = articles.filter(a => a.score >= 4.0 && a.score < 4.8);
+    const highPriority = otherArticles.filter(a => a.score >= 4.0 && a.score < 4.8);
     highPriority.slice(0, 15).forEach((article, idx) => {
       md += `${idx + 1}. [${article.title}](${article.link}) - *Score: ${article.score}*\n`;
     });
 
+    if (highPriority.length === 0) {
+      md += '*No high priority articles today.*\n\n';
+    }
+
     md += '\n---\n## 📄 Medium Priority (Score 2.0-4.0)\n';
-    const medium = articles.filter(a => a.score >= 2.0 && a.score < 4.0);
-    md += `*${medium.length} additional articles at this priority level*\n`;
+    const medium = otherArticles.filter(a => a.score >= 2.0 && a.score < 4.0);
+    if (medium.length > 0) {
+      md += `*${medium.length} additional articles at this priority level*\n`;
+    } else {
+      md += '*No medium priority articles today.*\n';
+    }
 
     return md;
   }
