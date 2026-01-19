@@ -1,87 +1,45 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-19T12:03:30.447Z",
+  "lastUpdated": "2026-01-19T18:03:03.936Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 8896,
+      "totalPosts": 8921,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T12:03:21.062Z"
+      "lastSeen": "2026-01-19T18:02:52.599Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 8811,
+      "totalPosts": 8836,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T12:03:23.144Z"
+      "lastSeen": "2026-01-19T18:02:54.771Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 8775,
-      "recentPosts": 25,
+      "totalPosts": 8799,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T12:03:25.238Z"
+      "lastSeen": "2026-01-19T18:02:57.164Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 8918,
+      "totalPosts": 8943,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T12:03:27.275Z"
+      "lastSeen": "2026-01-19T18:02:59.970Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 8925,
+      "totalPosts": 8950,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T12:03:29.443Z"
+      "lastSeen": "2026-01-19T18:03:02.933Z"
     }
   },
   "viralPosts": [
     {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Don’t stop recording, sharing, saving! \n\nA reckoning is coming.\n\n#humanrightsabuses #pinks #bluecrew #proudblue #DisabilityRights #momsky #feminist #FDT #fuckICE",
-      "author": "aliceknew.bsky.social",
-      "engagement": 101,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Looking forward to this! Living with #LongCOVID sucks. It's exhausting, lonely, and confusing. Meeting tomorrow (virtual), Thursday January 15th, 5-8PM EST. Info: masktogetheramerica.org/blog/long-co... #disabilityjustice #invisibleillness #POTS #MECFS #Dysautonomia",
-      "author": "katieholten.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Organizers share where they find hope in the struggle for disability justice as we go into the second year of Trump 2.0.\n\ntruthout.org/articles/dis...\n\n#disabilitysky #disabilityjustice #indigisky #truthout",
-      "author": "johnniejae.bsky.social",
-      "engagement": 37,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
       "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
       "author": "juliametraux.bsky.social",
       "engagement": 342,
@@ -320,6 +278,48 @@
       "author": "johnniejae.bsky.social",
       "engagement": 37,
       "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Don’t stop recording, sharing, saving! \n\nA reckoning is coming.\n\n#humanrightsabuses #pinks #bluecrew #proudblue #DisabilityRights #momsky #feminist #FDT #fuckICE",
+      "author": "aliceknew.bsky.social",
+      "engagement": 101,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Looking forward to this! Living with #LongCOVID sucks. It's exhausting, lonely, and confusing. Meeting tomorrow (virtual), Thursday January 15th, 5-8PM EST. Info: masktogetheramerica.org/blog/long-co... #disabilityjustice #invisibleillness #POTS #MECFS #Dysautonomia",
+      "author": "katieholten.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Organizers share where they find hope in the struggle for disability justice as we go into the second year of Trump 2.0.\n\ntruthout.org/articles/dis...\n\n#disabilitysky #disabilityjustice #indigisky #truthout",
+      "author": "johnniejae.bsky.social",
+      "engagement": 37,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "AI captions do not conform to #WCAG they usually require a lot of work to make them usable\n\nThe highest-risk areas for real harm are: (1) named entities/numbers, (2) multi-speaker attribution, (3) timing/readability, and (4) hallucinated “corrections.”\n\n#deaf #multimedia #justsayin #a11y",
+      "author": "stevefaulkner.bsky.social",
+      "engagement": 20,
+      "hashtag": "A11y"
     },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
@@ -346,12 +346,12 @@
       "count": 43
     },
     {
-      "keyword": "accessibility",
+      "keyword": "a11y",
       "count": 36
     },
     {
-      "keyword": "a11y",
-      "count": 34
+      "keyword": "accessibility",
+      "count": 36
     },
     {
       "keyword": "disabilityjustice",
@@ -378,10 +378,6 @@
       "count": 14
     },
     {
-      "keyword": "disability",
-      "count": 11
-    },
-    {
       "keyword": "foxtakedown",
       "count": 11
     },
@@ -402,6 +398,10 @@
       "count": 11
     },
     {
+      "keyword": "disability",
+      "count": 9
+    },
+    {
       "keyword": "stoptheliesfox",
       "count": 9
     },
@@ -415,11 +415,11 @@
     },
     {
       "keyword": "digitalaccessibility",
-      "count": 8
+      "count": 9
     },
     {
-      "keyword": "ai",
-      "count": 5
+      "keyword": "bluemonday",
+      "count": 7
     }
   ]
 }
