@@ -1,41 +1,41 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-19T06:04:58.684Z",
+  "lastUpdated": "2026-01-19T12:03:30.447Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 8871,
+      "totalPosts": 8896,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T06:04:49.396Z"
+      "lastSeen": "2026-01-19T12:03:21.062Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 8786,
+      "totalPosts": 8811,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T06:04:51.428Z"
+      "lastSeen": "2026-01-19T12:03:23.144Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 8750,
+      "totalPosts": 8775,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T06:04:53.562Z"
+      "lastSeen": "2026-01-19T12:03:25.238Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 8893,
+      "totalPosts": 8918,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T06:04:55.577Z"
+      "lastSeen": "2026-01-19T12:03:27.275Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 8900,
+      "totalPosts": 8925,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-19T06:04:57.680Z"
+      "lastSeen": "2026-01-19T12:03:29.443Z"
     }
   },
   "viralPosts": [
@@ -96,7 +96,7 @@
     {
       "text": "Looking forward to this! Living with #LongCOVID sucks. It's exhausting, lonely, and confusing. Meeting tomorrow (virtual), Thursday January 15th, 5-8PM EST. Info: masktogetheramerica.org/blog/long-co... #disabilityjustice #invisibleillness #POTS #MECFS #Dysautonomia",
       "author": "katieholten.bsky.social",
-      "engagement": 11,
+      "engagement": 12,
       "hashtag": "DisabilityJustice"
     },
     {
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 35
+      "count": 36
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 34
     },
     {
       "keyword": "disabilityjustice",
@@ -379,7 +379,7 @@
     },
     {
       "keyword": "disability",
-      "count": 12
+      "count": 11
     },
     {
       "keyword": "foxtakedown",
@@ -415,7 +415,7 @@
     },
     {
       "keyword": "digitalaccessibility",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "ai",
