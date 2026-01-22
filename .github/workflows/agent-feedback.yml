@@ -1,0 +1,104 @@
+name: Agent Content Feedback
+
+on:
+  schedule:
+    # Run daily at 11 PM UTC (6 PM EST) - after content generation
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+    inputs:
+      min_quality_score:
+        description: 'Minimum quality score threshold'
+        required: false
+        default: '6'
+
+jobs:
+  analyze-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Agent Feedback Analysis
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MIN_QUALITY_SCORE: ${{ github.event.inputs.min_quality_score || '6' }}
+        run: |
+          echo "🤖 Running Agent Feedback System..."
+          echo "  Analyzing: Blog posts, articles, trending topics, hashtags"
+          echo "  Min quality threshold: $MIN_QUALITY_SCORE"
+          echo ""
+          
+          node scripts/agent-feedback-system.js
+
+      - name: Commit feedback reports
+        run: |
+          git config user.name "Agent Feedback Bot"
+          git config user.email "agents@3mpwrapp.com"
+          
+          if [ -n "$(git status --porcelain feedback/)" ]; then
+            git add feedback/
+            git commit -m "📊 Daily agent feedback report - $(date +'%Y-%m-%d')"
+            git push
+            echo "✅ Feedback reports committed"
+          else
+            echo "ℹ️ No new feedback to commit"
+          fi
+
+      - name: Check quality alerts
+        run: |
+          echo "🔍 Checking for quality issues..."
+          
+          # Parse latest feedback JSON for low-quality posts
+          LATEST_FEEDBACK=$(ls -t feedback/agent-feedback-*.json | head -1)
+          
+          if [ -f "$LATEST_FEEDBACK" ]; then
+            LOW_QUALITY=$(node -e "
+              const fs = require('fs');
+              const data = JSON.parse(fs.readFileSync('$LATEST_FEEDBACK', 'utf8'));
+              const lowQuality = data.results.posts.filter(p => p.qualityScore < ${MIN_QUALITY_SCORE});
+              console.log(lowQuality.length);
+            ")
+            
+            if [ "$LOW_QUALITY" -gt "0" ]; then
+              echo "⚠️ WARNING: $LOW_QUALITY posts have quality score below ${MIN_QUALITY_SCORE}"
+              echo "📄 Review feedback report: $LATEST_FEEDBACK"
+            else
+              echo "✅ All posts meet quality threshold"
+            fi
+          fi
+
+      - name: Generate summary
+        if: success()
+        run: |
+          echo ""
+          echo "📊 AGENT FEEDBACK SUMMARY"
+          echo "========================="
+          echo ""
+          echo "✅ Content analysis complete"
+          echo "📁 Reports saved to: feedback/"
+          echo "🔍 Review recommendations for improvements"
+          echo ""
+          echo "Next steps:"
+          echo "  1. Review feedback/agent-feedback-*.md"
+          echo "  2. Address priority issues"
+          echo "  3. Implement recommendations"
+          echo ""
+
+      - name: Upload feedback artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agent-feedback-reports
+          path: feedback/
+          retention-days: 30

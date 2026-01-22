@@ -1,0 +1,321 @@
+{
+  "generatedAt": "2026-01-22T00:43:07.274Z",
+  "summary": {
+    "postsAnalyzed": 10,
+    "articlesAnalyzed": 0,
+    "trendingTopicsIdentified": 10,
+    "hashtagsTracked": 17
+  },
+  "results": {
+    "posts": [
+      {
+        "filename": "2026-01-21-feature-spotlight-medication-tracker.md",
+        "timestamp": "2026-01-22T00:43:05.868Z",
+        "qualityScore": 9,
+        "engagementPotential": "medium",
+        "issues": [],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Good use of internal/external linking",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Expand content with more detail and examples"
+        ]
+      },
+      {
+        "filename": "2026-01-20-feature-spotlight-benefits-tracker.md",
+        "timestamp": "2026-01-22T00:43:05.963Z",
+        "qualityScore": 9,
+        "engagementPotential": "medium",
+        "issues": [],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Good use of internal/external linking",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Expand content with more detail and examples"
+        ]
+      },
+      {
+        "filename": "2026-01-19-weekly-update-week-4.md",
+        "timestamp": "2026-01-22T00:43:05.967Z",
+        "qualityScore": 8,
+        "engagementPotential": "medium",
+        "issues": [
+          "Sentences too long - may be hard to read"
+        ],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Break up long sentences for better readability"
+        ]
+      },
+      {
+        "filename": "2026-01-19-feature-spotlight-campaign-templates.md",
+        "timestamp": "2026-01-22T00:43:06.061Z",
+        "qualityScore": 9,
+        "engagementPotential": "medium",
+        "issues": [],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Good use of internal/external linking",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Expand content with more detail and examples"
+        ]
+      },
+      {
+        "filename": "2026-01-18-feature-spotlight-virtual-meetups.md",
+        "timestamp": "2026-01-22T00:43:06.065Z",
+        "qualityScore": 9,
+        "engagementPotential": "medium",
+        "issues": [],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Good use of internal/external linking",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Expand content with more detail and examples"
+        ]
+      },
+      {
+        "filename": "2026-01-17-feature-spotlight-discussion-forums.md",
+        "timestamp": "2026-01-22T00:43:06.123Z",
+        "qualityScore": 9,
+        "engagementPotential": "medium",
+        "issues": [],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Good use of internal/external linking",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Expand content with more detail and examples"
+        ]
+      },
+      {
+        "filename": "2026-01-16-feature-spotlight-peer-support-matching.md",
+        "timestamp": "2026-01-22T00:43:06.125Z",
+        "qualityScore": 9,
+        "engagementPotential": "medium",
+        "issues": [],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Good use of internal/external linking",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Expand content with more detail and examples"
+        ]
+      },
+      {
+        "filename": "2026-01-15-feature-spotlight-ai-translator-accessibility-terminology.md",
+        "timestamp": "2026-01-22T00:43:06.130Z",
+        "qualityScore": 9,
+        "engagementPotential": "medium",
+        "issues": [],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Good use of internal/external linking",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Expand content with more detail and examples"
+        ]
+      },
+      {
+        "filename": "2026-01-14-feature-spotlight-accountability-tracker.md",
+        "timestamp": "2026-01-22T00:43:06.133Z",
+        "qualityScore": 9,
+        "engagementPotential": "medium",
+        "issues": [],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Good use of internal/external linking",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Expand content with more detail and examples"
+        ]
+      },
+      {
+        "filename": "2026-01-13-feature-spotlight-ai-case-interpreter.md",
+        "timestamp": "2026-01-22T00:43:06.136Z",
+        "qualityScore": 9,
+        "engagementPotential": "medium",
+        "issues": [],
+        "strengths": [
+          "Well-structured with multiple sections",
+          "Good use of internal/external linking",
+          "Contains engagement call-to-action"
+        ],
+        "recommendations": [
+          "Expand content with more detail and examples"
+        ]
+      }
+    ],
+    "articles": [
+      {
+        "totalArticles": 0,
+        "uniqueSources": 0,
+        "topSources": [],
+        "topTopics": [],
+        "diversityScore": 6,
+        "issues": [
+          "Missing Disability Bulletin content"
+        ],
+        "strengths": [
+          "Good topic diversity"
+        ],
+        "recommendations": [
+          "Ensure Disability Bulletin appears in curations"
+        ]
+      }
+    ],
+    "trending": [
+      {
+        "timestamp": "2026-01-22T00:43:07.250Z",
+        "trendingTopics": [
+          {
+            "topic": "accessibility",
+            "mentions": 50
+          },
+          {
+            "topic": "advocacy",
+            "mentions": 41
+          },
+          {
+            "topic": "policy",
+            "mentions": 27
+          },
+          {
+            "topic": "accommodation",
+            "mentions": 7
+          },
+          {
+            "topic": "disability rights",
+            "mentions": 5
+          },
+          {
+            "topic": "housing",
+            "mentions": 4
+          },
+          {
+            "topic": "education",
+            "mentions": 3
+          },
+          {
+            "topic": "healthcare",
+            "mentions": 3
+          },
+          {
+            "topic": "employment",
+            "mentions": 2
+          },
+          {
+            "topic": "transportation",
+            "mentions": 1
+          }
+        ],
+        "emergingTopics": [
+          "healthcare",
+          "employment",
+          "transportation"
+        ],
+        "recommendations": [
+          "Consider covering underrepresented topics: inclusion, barrier, ableism, neurodivergent, chronic illness",
+          "Topic 'accessibility' is overrepresented. Diversify content focus."
+        ]
+      }
+    ],
+    "hashtags": [
+      {
+        "used": {},
+        "recommended": [
+          "#Disability",
+          "#DisabilityRights",
+          "#Accessibility",
+          "#A11y",
+          "#Inclusion",
+          "#DisabilityJustice",
+          "#ChronicIllness",
+          "#MentalHealth",
+          "#Neurodivergent",
+          "#UniversalDesign",
+          "#DisabilityPride",
+          "#AccessibilityMatters",
+          "#InclusionMatters",
+          "#DisabilityCommunity"
+        ],
+        "analysis": {
+          "strengths": [
+            "Using 17 unique hashtags"
+          ],
+          "issues": [],
+          "recommendations": [
+            "Adopt disability-focused hashtags: #Disability, #A11y, #DisabilityRights"
+          ]
+        },
+        "topHashtags": [
+          [
+            "#1",
+            3
+          ],
+          [
+            "#ai",
+            2
+          ],
+          [
+            "#dbt",
+            1
+          ],
+          [
+            "#pacing",
+            1
+          ],
+          [
+            "#resilience",
+            1
+          ],
+          [
+            "#grief",
+            1
+          ],
+          [
+            "#self",
+            1
+          ],
+          [
+            "#reflections",
+            1
+          ],
+          [
+            "#lawyer",
+            1
+          ],
+          [
+            "#policy",
+            1
+          ]
+        ]
+      }
+    ],
+    "overall": {
+      "timestamp": "2026-01-22T00:43:07.272Z",
+      "priority": [],
+      "quality": [],
+      "engagement": [
+        "Consider adding more call-to-action elements to posts",
+        "Use trending topics to guide content creation"
+      ],
+      "diversity": [],
+      "accessibility": []
+    }
+  }
+}
