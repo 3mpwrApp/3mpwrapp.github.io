@@ -209,8 +209,10 @@ class CuratorCore {
       }
 
       const items = this.parseRSS(data);
+      // Attach feedUrl to each item for later identification (e.g., Disability Bulletin)
+      const itemsWithFeedUrl = items.map(item => ({ ...item, feedUrl }));
       this.log(`✅ Got ${items.length} items from ${feedUrl}`);
-      return items;
+      return itemsWithFeedUrl;
     } catch (err) {
       this.log(`❌ Error fetching ${feedUrl}: ${err.message}`);
       return [];
@@ -236,6 +238,11 @@ class CuratorCore {
    * Calculate score for an item
    */
   calculateScore(item) {
+    // PRIORITY: The Disability Bulletin always gets maximum score
+    if (item.feedUrl && item.feedUrl.includes('feeds.blogger.com/feeds/362411661072793873')) {
+      return 5.0;
+    }
+
     let score = 0;
     const text = `${item.title} ${item.description}`.toLowerCase();
 
@@ -347,9 +354,16 @@ class CuratorCore {
       this.log(`📊 Found ${previousUrls.size} URLs in previous ${daysToCheck} days`);
 
       // Filter out items with URLs that were already posted
+      // EXCEPTION: Always allow The Disability Bulletin through
       const beforeCount = this.scoredItems.length;
       this.scoredItems = this.scoredItems.filter(item => {
         const url = item.link?.trim();
+        const isDisabilityBulletin = item.feedUrl && item.feedUrl.includes('feeds.blogger.com/feeds/362411661072793873');
+        
+        // Always keep Disability Bulletin, filter others if previously posted
+        if (isDisabilityBulletin) {
+          return true;
+        }
         return url && !previousUrls.has(url);
       });
 
@@ -438,17 +452,52 @@ class CuratorCore {
       ''
     ];
 
-    this.selectedItems.forEach((item, idx) => {
-      lines.push(`## ${idx + 1}. ${item.title}`);
-      if (item.description) {
-        lines.push(`${item.description}`);
+    // PRIORITY: Feature The Disability Bulletin prominently at the top
+    const disabilityBulletinItems = [];
+    const otherItems = [];
+    
+    this.selectedItems.forEach((item) => {
+      if (item.feedUrl && item.feedUrl.includes('feeds.blogger.com/feeds/362411661072793873')) {
+        disabilityBulletinItems.push(item);
+      } else {
+        otherItems.push(item);
       }
-      if (item.link) {
-        lines.push(`📍 [Source](${item.link})`);
-      }
-      lines.push(`**Score:** ${item.score.toFixed(2)}`);
-      lines.push('');
     });
+
+    // Display Disability Bulletin items first with special highlighting
+    if (disabilityBulletinItems.length > 0) {
+      lines.push('## 🌟 Featured: The Disability Bulletin');
+      lines.push('');
+      disabilityBulletinItems.forEach((item) => {
+        lines.push(`### ${item.title}`);
+        if (item.description) {
+          lines.push(`${item.description}`);
+        }
+        if (item.link) {
+          lines.push(`📍 [Read More](${item.link})`);
+        }
+        lines.push('');
+      });
+      lines.push('---');
+      lines.push('');
+    }
+
+    // Display other items
+    if (otherItems.length > 0) {
+      lines.push('## Additional Stories');
+      lines.push('');
+      otherItems.forEach((item, idx) => {
+        lines.push(`### ${idx + 1}. ${item.title}`);
+        if (item.description) {
+          lines.push(`${item.description}`);
+        }
+        if (item.link) {
+          lines.push(`📍 [Source](${item.link})`);
+        }
+        lines.push(`**Score:** ${item.score.toFixed(2)}`);
+        lines.push('');
+      });
+    }
 
     return lines.join('\n');
   }
