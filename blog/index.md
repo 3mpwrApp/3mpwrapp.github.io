@@ -61,7 +61,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 ## <span id="feature-articles">✨ Feature Spotlights</span>
 
-<p class="section-description">In-depth spotlights on 3mpwrApp tools and features. Learn how Evidence Locker, Letter Generator, Disability Wizard, Legal Workflow Automation, and more can help you advocate for your rights, navigate systems, and connect with your community.</p>
+<p class="section-description">Explore 3mpwrApp features, the app itself, and our website tools. From Evidence Locker and Letter Generator to community features and accessibility innovations—discover how our platform helps you advocate for your rights, navigate systems, and connect with your community.</p>
 
 {% assign feature_articles = site.posts | where_exp: 'p', "p.tags contains 'features' or p.tags contains 'spotlight'" %}
 {% if feature_articles and feature_articles.size > 0 %}
@@ -86,7 +86,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 ## <span id="weekly-recaps">� Weekly Recaps</span>
 
-<p class="section-description">Every Monday, we compile the week's most important updates, new features, improvements, and fixes into one easy-to-read recap. Perfect for staying up-to-date on what's changed!</p>
+<p class="section-description">Every Monday, we compile the week's most important updates, new features, improvements, and fixes into one easy-to-read recap. See detailed changelog on our <a href="{{ '/whats-new' | relative_url }}">What's New</a> page. Perfect for staying up-to-date on what's changed!</p>
 
 {% assign weekly_recaps = site.posts | where_exp: 'p', "p.tags contains 'weekly'" %}
 {% if weekly_recaps and weekly_recaps.size > 0 %}

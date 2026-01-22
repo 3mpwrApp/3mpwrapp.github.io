@@ -185,6 +185,11 @@ WRITING STYLE:
 - Use subheadings liberally
 - Include 2-3 relevant quotes from disabled users
 
+CONTENT MIX (rotate between):
+- App Features: Specific 3mpwrApp tools (Evidence Locker, Letter Generator, etc.)
+- The App Itself: Overall 3mpwrApp platform, vision, accessibility design
+- Website Features: Community tools, resources, guides available on the website
+
 REQUIREMENTS:
 - Title must be user-benefit focused (NOT feature-focused)
 - Must include at least one accessibility-specific section
