@@ -129,7 +129,7 @@
         "caregiver support"
       ]
     },
-    "provincial_specific": {
+    "provincial": {
       "score": 3.8,
       "description": "Provincial program updates (ODSP, AISH, provincial policies affecting readers)",
       "terms": [
