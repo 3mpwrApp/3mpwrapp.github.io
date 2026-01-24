@@ -53,7 +53,7 @@ jobs:
   daily_curation:
     name: Daily Content Curation
     runs-on: ubuntu-latest
-    timeout-minutes: 75  # Increased to accommodate 45-minute deployment wait
+    timeout-minutes: 25  # Reduced since deployment wait is now 10 minutes
     if: github.event.inputs.mode != 'weekly'
     permissions:
       contents: write

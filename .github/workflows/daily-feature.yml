@@ -27,7 +27,7 @@ jobs:
   daily_feature:
     name: Generate Daily Feature Article
     runs-on: ubuntu-latest
-    timeout-minutes: 60  # Increased to accommodate 45-minute deployment wait
+    timeout-minutes: 25  # Reduced since deployment wait is now 10 minutes
     permissions:
       contents: write
     
