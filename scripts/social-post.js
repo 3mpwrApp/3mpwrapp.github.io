@@ -34,7 +34,10 @@ class SocialPoster {
     this.results = {
       mastodon: { success: false, message: '' },
       bluesky: { success: false, message: '' },
-      x: { success: false, message: '' }
+      x: { success: false, message: '' },
+      discord: { success: false, message: '' },
+      facebook: { success: false, message: '' },
+      substack: { success: false, message: '' }
     };
     this.analytics = new CuratorAnalytics();
     this.currentFeature = null;
@@ -66,6 +69,20 @@ class SocialPoster {
         apiSecret: process.env.X_API_SECRET || process.env.X_CLIENT_SECRET || '',
         accessToken: process.env.X_ACCESS_TOKEN || '',
         accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET || ''
+      },
+      discord: {
+        enabled: !!process.env.DISCORD_WEBHOOK_URL,
+        webhookUrl: process.env.DISCORD_WEBHOOK_URL || ''
+      },
+      facebook: {
+        enabled: !!process.env.FACEBOOK_PAGE_ACCESS_TOKEN,
+        pageId: process.env.FACEBOOK_PAGE_ID || '',
+        accessToken: process.env.FACEBOOK_PAGE_ACCESS_TOKEN || ''
+      },
+      substack: {
+        enabled: !!process.env.SUBSTACK_API_KEY,
+        publicationId: process.env.SUBSTACK_PUBLICATION_ID || '',
+        apiKey: process.env.SUBSTACK_API_KEY || ''
       }
     };
   }
@@ -579,6 +596,191 @@ class SocialPoster {
   }
 
   /**
+   * Post to Discord via webhook
+   */
+  async postToDiscord(content) {
+    if (!this.config.discord.enabled) {
+      this.results.discord = { success: false, message: 'Discord: Not configured' };
+      return;
+    }
+
+    try {
+      const topItems = content.items.slice(0, 5);
+      
+      // Discord embed format
+      const embed = {
+        title: `📰 Daily News Curation - ${content.count} Stories`,
+        description: `Curated disability rights, accessibility & social policy news`,
+        url: BLOG_URL,
+        color: 5814783, // Blue color
+        fields: topItems.map((item, idx) => ({
+          name: `${idx + 1}. ${item.title.substring(0, 100)}${item.title.length > 100 ? '...' : ''}`,
+          value: `[Read more](${item.link}) • Score: ${item.score.toFixed(1)}`,
+          inline: false
+        })),
+        footer: {
+          text: '3mpwrApp • Disability Rights & Accessibility News'
+        },
+        timestamp: new Date().toISOString()
+      };
+
+      const payload = {
+        embeds: [embed]
+      };
+
+      const res = await this.httpRequest({
+        method: 'POST',
+        hostname: 'discord.com',
+        path: new URL(this.config.discord.webhookUrl).pathname,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }, JSON.stringify(payload));
+
+      if (res.status === 204 || res.status === 200) {
+        this.results.discord = {
+          success: true,
+          message: '✅ Discord: Posted successfully'
+        };
+        console.log(this.results.discord.message);
+        this.analytics.trackPostingResult('discord', true);
+      } else {
+        throw new Error(`HTTP ${res.status}`);
+      }
+    } catch (err) {
+      this.results.discord = {
+        success: false,
+        message: `❌ Discord: ${err.message}`
+      };
+      console.error(this.results.discord.message);
+      this.analytics.trackPostingResult('discord', false);
+    }
+  }
+
+  /**
+   * Post to Facebook Page
+   */
+  async postToFacebook(content) {
+    if (!this.config.facebook.enabled) {
+      this.results.facebook = { success: false, message: 'Facebook: Not configured' };
+      return;
+    }
+
+    try {
+      const topItems = content.items.slice(0, 3);
+      
+      let message = `📰 Today's Disability Rights & Accessibility News (${content.count} stories)\n\n`;
+      message += `🔥 Top Headlines:\n\n`;
+      topItems.forEach((item, idx) => {
+        message += `${idx + 1}. ${item.title}\n`;
+      });
+      message += `\nRead more: ${BLOG_URL}`;
+
+      const payload = new URLSearchParams({
+        message: message,
+        access_token: this.config.facebook.accessToken
+      });
+
+      const res = await this.httpRequest({
+        method: 'POST',
+        hostname: 'graph.facebook.com',
+        path: `/v18.0/${this.config.facebook.pageId}/feed`,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }, payload.toString());
+
+      const data = JSON.parse(res.body);
+      
+      if (res.status === 200 && data.id) {
+        this.results.facebook = {
+          success: true,
+          message: `✅ Facebook: Posted successfully (${data.id})`
+        };
+        console.log(this.results.facebook.message);
+        this.analytics.trackPostingResult('facebook', true);
+      } else {
+        throw new Error(data.error?.message || `HTTP ${res.status}`);
+      }
+    } catch (err) {
+      this.results.facebook = {
+        success: false,
+        message: `❌ Facebook: ${err.message}`
+      };
+      console.error(this.results.facebook.message);
+      this.analytics.trackPostingResult('facebook', false);
+    }
+  }
+
+  /**
+   * Post to Substack as a draft post
+   */
+  async postToSubstack(content) {
+    if (!this.config.substack.enabled) {
+      this.results.substack = { success: false, message: 'Substack: Not configured' };
+      return;
+    }
+
+    try {
+      const topItems = content.items.slice(0, 10);
+      
+      // Create HTML content for Substack
+      let html = `<h2>📰 Daily News Curation - ${content.date}</h2>`;
+      html += `<p><strong>${content.count} curated stories</strong> on disability rights, accessibility, and social policy.</p>`;
+      html += `<hr/>`;
+      
+      topItems.forEach((item, idx) => {
+        html += `<h3>${idx + 1}. ${item.title}</h3>`;
+        html += `<p>${item.description || ''}</p>`;
+        html += `<p><a href="${item.link}">Read full article →</a></p>`;
+        html += `<p><em>Score: ${item.score.toFixed(1)} • Published: ${item.pubDate || 'N/A'}</em></p>`;
+        html += `<hr/>`;
+      });
+      
+      html += `<p><a href="${BLOG_URL}">View all stories on 3mpwrApp →</a></p>`;
+
+      const payload = {
+        title: `Daily News Digest - ${content.date}`,
+        subtitle: `${content.count} disability rights & accessibility stories`,
+        body_html: html,
+        audience: 'everyone',
+        draft: true, // Create as draft for manual review
+        email_immediately: false
+      };
+
+      const res = await this.httpRequest({
+        method: 'POST',
+        hostname: `${this.config.substack.publicationId}.substack.com`,
+        path: '/api/v1/posts',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.config.substack.apiKey}`
+        }
+      }, JSON.stringify(payload));
+
+      const data = JSON.parse(res.body);
+      
+      if (res.status === 200 || res.status === 201) {
+        this.results.substack = {
+          success: true,
+          message: `✅ Substack: Draft created successfully`
+        };
+        console.log(this.results.substack.message);
+        this.analytics.trackPostingResult('substack', true);
+      } else {
+        throw new Error(data.error || `HTTP ${res.status}`);
+      }
+    } catch (err) {
+      this.results.substack = {
+        success: false,
+        message: `❌ Substack: ${err.message}`
+      };
+      console.error(this.results.substack.message);
+      this.analytics.trackPostingResult('substack', false);
+    }
+  }
+
+  /**
    * Post to all enabled platforms
    */
   async postAll() {
@@ -618,12 +820,18 @@ class SocialPoster {
       await this.postToMastodon(content);
       await this.postToBluesky(content);
       await this.postToX(content);
+      await this.postToDiscord(content);
+      await this.postToFacebook(content);
+      await this.postToSubstack(content);
 
       // Track analytics
       const platforms = [];
       if (this.results.mastodon.success) platforms.push('mastodon');
       if (this.results.bluesky.success) platforms.push('bluesky');
       if (this.results.x.success) platforms.push('x');
+      if (this.results.discord.success) platforms.push('discord');
+      if (this.results.facebook.success) platforms.push('facebook');
+      if (this.results.substack.success) platforms.push('substack');
 
       // Track feature highlight usage
       if (this.currentFeature && this.currentTimeSlot) {
