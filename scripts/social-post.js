@@ -60,10 +60,10 @@ class SocialPoster {
         threadFormat: process.env.BLUESKY_THREAD === '1'
       },
       x: {
-        enabled: !!process.env.X_BEARER_TOKEN,
+        enabled: !!(process.env.X_BEARER_TOKEN || (process.env.X_API_KEY && process.env.X_ACCESS_TOKEN)),
         bearerToken: process.env.X_BEARER_TOKEN || '',
-        apiKey: process.env.X_API_KEY || '',
-        apiSecret: process.env.X_API_SECRET || '',
+        apiKey: process.env.X_API_KEY || process.env.X_CLIENT_ID || '',
+        apiSecret: process.env.X_API_SECRET || process.env.X_CLIENT_SECRET || '',
         accessToken: process.env.X_ACCESS_TOKEN || '',
         accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET || ''
       }
