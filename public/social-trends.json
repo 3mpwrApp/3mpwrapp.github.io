@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-24T12:03:05.999Z",
+  "lastUpdated": "2026-01-24T18:03:04.526Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 9396,
+      "totalPosts": 9421,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T12:02:54.225Z"
+      "lastSeen": "2026-01-24T18:02:52.729Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 9311,
+      "totalPosts": 9336,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T12:02:56.890Z"
+      "lastSeen": "2026-01-24T18:02:55.646Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 9257,
-      "recentPosts": 24,
+      "totalPosts": 9282,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T12:02:59.394Z"
+      "lastSeen": "2026-01-24T18:02:58.257Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 9418,
+      "totalPosts": 9443,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T12:03:02.287Z"
+      "lastSeen": "2026-01-24T18:03:00.754Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 9425,
+      "totalPosts": 9450,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T12:03:04.996Z"
+      "lastSeen": "2026-01-24T18:03:03.524Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Adding an edit function would be a really nice accessibility measure @jay.bsky.team \n\n#a11y",
-      "author": "chromatowski.bsky.social",
-      "engagement": 22,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "\"By including diverse perspectives from the beginning, [accessible design creates] systems that work better for everyone.\" #a11y makeitfable.com/article/acce...",
-      "author": "ericwbailey.website",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Adding an edit function would be a really nice accessibility measure @jay.bsky.team \n\n#a11y",
       "author": "chromatowski.bsky.social",
@@ -338,6 +308,36 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
+      "author": "medusaswink.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Ever got into a situation where you're focusing on the combat so much, you only realise afterwards that you have no idea what anyone's been saying over comms?\n\nYeah, me too.\n\nWhich is why I'm adding a chat log to #NovaSquadron.\n#gamedev #indiedev #screenshotsaturday #accessibility",
+      "author": "claradoth.bsky.social",
+      "engagement": 87,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 28
+      "count": 27
     },
     {
       "keyword": "disabilityjustice",
@@ -399,7 +399,7 @@
     },
     {
       "keyword": "disability",
-      "count": 9
+      "count": 8
     },
     {
       "keyword": "stoptheliesfox",
