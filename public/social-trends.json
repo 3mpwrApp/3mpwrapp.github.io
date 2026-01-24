@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-24T06:03:00.749Z",
+  "lastUpdated": "2026-01-24T12:03:05.999Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 9371,
+      "totalPosts": 9396,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T06:02:50.902Z"
+      "lastSeen": "2026-01-24T12:02:54.225Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 9286,
+      "totalPosts": 9311,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T06:02:52.970Z"
+      "lastSeen": "2026-01-24T12:02:56.890Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 9233,
+      "totalPosts": 9257,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T06:02:55.303Z"
+      "lastSeen": "2026-01-24T12:02:59.394Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 9393,
+      "totalPosts": 9418,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T06:02:57.455Z"
+      "lastSeen": "2026-01-24T12:03:02.287Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 9400,
+      "totalPosts": 9425,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T06:02:59.745Z"
+      "lastSeen": "2026-01-24T12:03:04.996Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "\"By including diverse perspectives from the beginning, [accessible design creates] systems that work better for everyone.\" #a11y makeitfable.com/article/acce...",
-      "author": "ericwbailey.website",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Adding an edit function would be a really nice accessibility measure @jay.bsky.team \n\n#a11y",
       "author": "chromatowski.bsky.social",
@@ -338,6 +314,30 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
+      "author": "medusaswink.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 28
     },
     {
       "keyword": "disabilityjustice",
@@ -402,10 +402,6 @@
       "count": 9
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 8
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 8
     },
@@ -416,6 +412,10 @@
     {
       "keyword": "foxlies",
       "count": 8
+    },
+    {
+      "keyword": "disabilityjustice nico",
+      "count": 7
     },
     {
       "keyword": "citizenportal",
