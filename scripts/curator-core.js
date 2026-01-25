@@ -320,27 +320,36 @@ class CuratorCore {
   /**
    * Filter out items that were posted in the last N days
    */
-  filterPreviouslyPosted(daysToCheck = 7) {
+  filterPreviouslyPosted(daysToCheck = 30) {
     const postsDir = path.join(process.cwd(), '_posts');
     if (!fs.existsSync(postsDir)) {
       this.log(`⚠️ Posts directory not found: ${postsDir}`);
       return;
     }
 
-    // Get the last N days of daily-curation posts
+    // Calculate cutoff date (30 days ago)
     const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - daysToCheck);
+    const cutoffDateStr = cutoffDate.toISOString().split('T')[0]; // YYYY-MM-DD format
     
     const previousUrls = new Set();
     
     try {
+      // Get ALL daily-curation posts from the last 30 days
       const files = fs.readdirSync(postsDir)
-        .filter(f => f.includes('daily-curation') && f.endsWith('.md'))
-        .sort()
-        .reverse()
-        .slice(0, daysToCheck);
+        .filter(f => {
+          if (!f.includes('daily-curation') || !f.endsWith('.md')) return false;
+          
+          // Extract date from filename (YYYY-MM-DD format)
+          const dateMatch = f.match(/(\d{4}-\d{2}-\d{2})/);
+          if (!dateMatch) return false;
+          
+          const fileDate = dateMatch[1];
+          return fileDate >= cutoffDateStr; // Include files newer than cutoff
+        })
+        .sort();
 
-      this.log(`📚 Checking ${files.length} previous daily curation posts for duplicates...`);
+      this.log(`📚 Checking ${files.length} daily curation posts from last ${daysToCheck} days for duplicates...`);
 
       for (const file of files) {
         const content = fs.readFileSync(path.join(postsDir, file), 'utf8');
@@ -351,7 +360,7 @@ class CuratorCore {
         }
       }
 
-      this.log(`📊 Found ${previousUrls.size} URLs in previous ${daysToCheck} days`);
+      this.log(`📊 Found ${previousUrls.size} unique URLs in previous ${daysToCheck} days`);
 
       // Filter out items with URLs that were already posted
       // EXCEPTION: Always allow The Disability Bulletin through
@@ -368,7 +377,7 @@ class CuratorCore {
       });
 
       const filteredCount = beforeCount - this.scoredItems.length;
-      this.log(`✅ Filtered out ${filteredCount} previously posted items`);
+      this.log(`✅ Filtered out ${filteredCount} previously posted items (checked ${files.length} posts)`);
       
     } catch (err) {
       this.log(`⚠️ Error checking previous posts: ${err.message}`);
