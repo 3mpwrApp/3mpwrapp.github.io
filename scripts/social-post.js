@@ -40,7 +40,6 @@ class SocialPoster {
       substack: { success: false, message: '' }
     };
     this.analytics = new CuratorAnalytics();
-    this.currentFeature = null;
     this.currentTimeSlot = null;
   }
 
@@ -141,23 +140,7 @@ class SocialPoster {
     return context;
   }
 
-  /**
-   * Get random app feature to highlight
-   */
-  getFeatureHighlight() {
-    const features = [
-      'Benefits Navigator: Find & apply for disability benefits across Canada (User Guide: #benefits-navigator)',
-      'Resource Directory: Discover accessibility services in your area (User Guide: #resource-directory)',
-      'News Curation: Stay informed on disability rights & policy (User Guide: #daily-curator)',
-      'Accessibility Tools: Screen reader friendly, keyboard navigation (User Guide: #accessibility)',
-      'Provincial Guides: ODSP, AISH, PWD & more benefits explained (User Guide: #provincial-guides)',
-      'Community Resources: Connect with advocacy groups & support (User Guide: #community)',
-      'Multi-language Support: Content available in EN & FR (User Guide: #language-support)'
-    ];
-    const feature = features[Math.floor(Math.random() * features.length)];
-    this.currentFeature = feature;
-    return feature;
-  }
+
 
   /**
    * Verify URL is accessible
@@ -191,7 +174,6 @@ class SocialPoster {
    */
   formatMastodonPost(content) {
     const topItems = content.items.slice(0, 3);
-    const feature = this.getFeatureHighlight();
     const monthlyTheme = viralHooks.getMonthlyTheme();
     
     // Get viral hook for daily news
@@ -213,8 +195,7 @@ class SocialPoster {
       post += `${idx + 1}. ${item.title}\n`;
     });
 
-    post += `\n💡 Featured: ${feature}\n\n`;
-    post += `${randomCta}\n\n`;
+    post += `\n${randomCta}\n\n`;
     post += `#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #WorkersRights #Canada #${monthlyTheme.theme.replace(/\s+/g, '')}`;
 
     // Truncate to 500-character Mastodon limit (with 10 char buffer)
@@ -453,12 +434,11 @@ class SocialPoster {
    */
   async postBlueskyThread(session, content) {
     const timeCtx = this.getTimeContext();
-    const feature = this.getFeatureHighlight();
     
     // First post (intro)
     const introPost = `${timeCtx.greeting} 📰 ${content.date}\n\n` +
                      `3mpwrApp curated ${content.count} stories on disability, accessibility & benefits.\n\n` +
-                     `🌟 ${feature}\n\n` +
+                     `🌟 Spotlight: The Disability Bulletin\n\n` +
                      `Thread with top stories 🧵👇`;
 
     let previousPost = null;
@@ -815,9 +795,8 @@ class SocialPoster {
       
       console.log('✅ Blog URL verified accessible!\n');
 
-      // Get time context and feature (for analytics)
+      // Get time context (for analytics)
       const timeCtx = this.getTimeContext();
-      const feature = this.getFeatureHighlight();
 
       // Post in sequence
       await this.postToMastodon(content);
@@ -835,13 +814,6 @@ class SocialPoster {
       if (this.results.discord.success) platforms.push('discord');
       if (this.results.facebook.success) platforms.push('facebook');
       if (this.results.substack.success) platforms.push('substack');
-
-      // Track feature highlight usage
-      if (this.currentFeature && this.currentTimeSlot) {
-        platforms.forEach(platform => {
-          this.analytics.trackFeatureHighlight(this.currentFeature, this.currentTimeSlot, platform);
-        });
-      }
 
       // Track time slot performance
       if (this.currentTimeSlot) {
