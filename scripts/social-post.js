@@ -628,10 +628,13 @@ class SocialPoster {
         embeds: [embed]
       };
 
+      // Parse webhook URL properly
+      const webhookUrl = new URL(this.config.discord.webhookUrl);
+      
       const res = await this.httpRequest({
         method: 'POST',
-        hostname: 'discord.com',
-        path: new URL(this.config.discord.webhookUrl).pathname,
+        hostname: webhookUrl.hostname,
+        path: webhookUrl.pathname + webhookUrl.search,
         headers: {
           'Content-Type': 'application/json'
         }
@@ -676,19 +679,19 @@ class SocialPoster {
       });
       message += `\nRead more: ${BLOG_URL}`;
 
-      const payload = new URLSearchParams({
+      const payload = {
         message: message,
         access_token: this.config.facebook.accessToken
-      });
+      };
 
       const res = await this.httpRequest({
         method: 'POST',
         hostname: 'graph.facebook.com',
         path: `/v18.0/${this.config.facebook.pageId}/feed`,
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'Content-Type': 'application/json'
         }
-      }, payload.toString());
+      }, JSON.stringify(payload));
 
       const data = JSON.parse(res.body);
       
