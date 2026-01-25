@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-24T18:03:04.526Z",
+  "lastUpdated": "2026-01-25T00:07:53.412Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 9421,
+      "totalPosts": 9446,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T18:02:52.729Z"
+      "lastSeen": "2026-01-25T00:07:44.143Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 9336,
+      "totalPosts": 9361,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T18:02:55.646Z"
+      "lastSeen": "2026-01-25T00:07:46.261Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 9282,
+      "totalPosts": 9307,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T18:02:58.257Z"
+      "lastSeen": "2026-01-25T00:07:48.335Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 9443,
+      "totalPosts": 9468,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T18:03:00.754Z"
+      "lastSeen": "2026-01-25T00:07:50.336Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 9450,
+      "totalPosts": 9475,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-24T18:03:03.524Z"
+      "lastSeen": "2026-01-25T00:07:52.408Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Adding an edit function would be a really nice accessibility measure @jay.bsky.team \n\n#a11y",
-      "author": "chromatowski.bsky.social",
-      "engagement": 29,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "\"By including diverse perspectives from the beginning, [accessible design creates] systems that work better for everyone.\" #a11y makeitfable.com/article/acce...",
-      "author": "ericwbailey.website",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "\" #Standing for too long is one of the quickest ways to wipe out my energy. So I added #seating where I need it most..These simple changes let me keep moving, just at a pace and posture that respects my limits.\": buff.ly/ssZ8s6J\n\nby @thethrivingspoonie.com\n#disability #ChronicPain #accessibility",
-      "author": "achronicvoice.com",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Adding an edit function would be a really nice accessibility measure @jay.bsky.team \n\n#a11y",
       "author": "chromatowski.bsky.social",
@@ -338,12 +302,48 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "If chronic pain is a full-time job\nWHERE\nIS\nMY\nPAYCHECK 😤💸\n\nDrop a 💥 if your body betrays you daily\n\n#ChronicIllness #ChronicPainClub #DisabilityJustice #SpooniesOfBluesky #PainIsPolitical #CripLife #HealthcareNow 🦴🔥",
+      "author": "crabbyratwhisperer.bsky.social",
+      "engagement": 17,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
+      "author": "medusaswink.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Ever got into a situation where you're focusing on the combat so much, you only realise afterwards that you have no idea what anyone's been saying over comms?\n\nYeah, me too.\n\nWhich is why I'm adding a chat log to #NovaSquadron.\n#gamedev #indiedev #screenshotsaturday #accessibility",
+      "author": "claradoth.bsky.social",
+      "engagement": 99,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 44
+      "count": 43
     },
     {
       "keyword": "accessibility",
@@ -398,10 +398,6 @@
       "count": 10
     },
     {
-      "keyword": "disability",
-      "count": 8
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 8
     },
@@ -412,6 +408,10 @@
     {
       "keyword": "foxlies",
       "count": 8
+    },
+    {
+      "keyword": "disability",
+      "count": 7
     },
     {
       "keyword": "disabilityjustice nico",
