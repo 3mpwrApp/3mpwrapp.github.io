@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-25T00:07:53.412Z",
+  "lastUpdated": "2026-01-25T06:02:50.199Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 9446,
+      "totalPosts": 9471,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T00:07:44.143Z"
+      "lastSeen": "2026-01-25T06:02:42.196Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 9361,
+      "totalPosts": 9386,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T00:07:46.261Z"
+      "lastSeen": "2026-01-25T06:02:43.926Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 9307,
+      "totalPosts": 9332,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T00:07:48.335Z"
+      "lastSeen": "2026-01-25T06:02:45.682Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 9468,
+      "totalPosts": 9493,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T00:07:50.336Z"
+      "lastSeen": "2026-01-25T06:02:47.380Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 9475,
+      "totalPosts": 9500,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T00:07:52.408Z"
+      "lastSeen": "2026-01-25T06:02:49.196Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Adding an edit function would be a really nice accessibility measure @jay.bsky.team \n\n#a11y",
-      "author": "chromatowski.bsky.social",
-      "engagement": 31,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "\" #Standing for too long is one of the quickest ways to wipe out my energy. So I added #seating where I need it most..These simple changes let me keep moving, just at a pace and posture that respects my limits.\": buff.ly/ssZ8s6J\n\nby @thethrivingspoonie.com\n#disability #ChronicPain #accessibility",
-      "author": "achronicvoice.com",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Adding an edit function would be a really nice accessibility measure @jay.bsky.team \n\n#a11y",
-      "author": "chromatowski.bsky.social",
-      "engagement": 32,
-      "hashtag": "A11y"
-    },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
       "author": "juliametraux.bsky.social",
@@ -338,6 +302,42 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "If chronic pain is a full-time job\nWHERE\nIS\nMY\nPAYCHECK 😤💸\n\nDrop a 💥 if your body betrays you daily\n\n#ChronicIllness #ChronicPainClub #DisabilityJustice #SpooniesOfBluesky #PainIsPolitical #CripLife #HealthcareNow 🦴🔥",
+      "author": "crabbyratwhisperer.bsky.social",
+      "engagement": 19,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
+      "author": "medusaswink.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Ever got into a situation where you're focusing on the combat so much, you only realise afterwards that you have no idea what anyone's been saying over comms?\n\nYeah, me too.\n\nWhich is why I'm adding a chat log to #NovaSquadron.\n#gamedev #indiedev #screenshotsaturday #accessibility",
+      "author": "claradoth.bsky.social",
+      "engagement": 103,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -398,6 +398,10 @@
       "count": 10
     },
     {
+      "keyword": "disabilityjustice nico",
+      "count": 8
+    },
+    {
       "keyword": "stoptheliesfox",
       "count": 8
     },
@@ -411,10 +415,6 @@
     },
     {
       "keyword": "disability",
-      "count": 7
-    },
-    {
-      "keyword": "disabilityjustice nico",
       "count": 7
     },
     {
