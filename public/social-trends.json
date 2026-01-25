@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-25T12:03:15.772Z",
+  "lastUpdated": "2026-01-25T18:02:58.022Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 9496,
+      "totalPosts": 9521,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T12:03:06.410Z"
+      "lastSeen": "2026-01-25T18:02:47.819Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 9411,
+      "totalPosts": 9436,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T12:03:08.661Z"
+      "lastSeen": "2026-01-25T18:02:50.290Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 9354,
-      "recentPosts": 22,
+      "totalPosts": 9375,
+      "recentPosts": 21,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T12:03:10.790Z"
+      "lastSeen": "2026-01-25T18:02:52.553Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 9518,
+      "totalPosts": 9543,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T12:03:12.775Z"
+      "lastSeen": "2026-01-25T18:02:54.778Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 9525,
+      "totalPosts": 9550,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-25T12:03:14.768Z"
+      "lastSeen": "2026-01-25T18:02:57.018Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "It's nearly here! Join us in a week's time to find out the winners of the 2025 GAConf Awards, 20 categories celebrating everything from best indie effort to best blind & low vision accessibility, from unsung hero to best accessibility journalism!\n🏆🏆🏆\n#gamedev #indiedev #accessibility",
-      "author": "gaconf.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "#BrailleLiteracyMonth meets beauty in the #Braille Nails campaign from @cnibfoundation.bsky.social and The Ten Spot, which aims to spark conversation about #accessibility and #inclusion. 💅 #BlindNewWorld\n\n(Story via Cosmetics Design ⬇️)",
-      "author": "blindnewworld.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Hey all, we're interested to learn more about your Accessibility needs. What are the settings that you need the most to enjoy a game properly? What are little used features that make your experience better?\n\n#gamedev #accessibility #TheOrville",
-      "author": "orvillefangame.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "It's nearly here! Join us in a week's time to find out the winners of the 2025 GAConf Awards, 20 categories celebrating everything from best indie effort to best blind & low vision accessibility, from unsung hero to best accessibility journalism!\n🏆🏆🏆\n#gamedev #indiedev #accessibility",
       "author": "gaconf.bsky.social",
@@ -338,23 +302,59 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "If chronic pain is a full-time job\nWHERE\nIS\nMY\nPAYCHECK 😤💸\n\nDrop a 💥 if your body betrays you daily\n\n#ChronicIllness #ChronicPainClub #DisabilityJustice #SpooniesOfBluesky #PainIsPolitical #CripLife #HealthcareNow 🦴🔥",
+      "author": "crabbyratwhisperer.bsky.social",
+      "engagement": 22,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
+      "author": "medusaswink.bsky.social",
+      "engagement": 14,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Forza Horizon 6 looks stunning and I'm in love 😍! And the best part was when they talked about accessibility features 🙌. Thanks for remembering all of us who use them and including them in this presentation. #accessibility #ForzaHorizon6  @xbox.com @horizon.forza.net",
+      "author": "black1976.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 43
+      "count": 42
     },
     {
       "keyword": "accessibility",
-      "count": 29
-    },
-    {
-      "keyword": "disabilityjustice",
-      "count": 26
+      "count": 31
     },
     {
       "keyword": "a11y",
+      "count": 31
+    },
+    {
+      "keyword": "disabilityjustice",
       "count": 26
     },
     {
@@ -418,8 +418,8 @@
       "count": 8
     },
     {
-      "keyword": "citizenportal",
-      "count": 6
+      "keyword": "accessibility a11y",
+      "count": 7
     }
   ]
 }
