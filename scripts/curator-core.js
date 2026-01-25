@@ -446,7 +446,23 @@ class CuratorCore {
     // Limit to maxItems
     const max = this.config.maxItems || 25;
     this.selectedItems = this.selectedItems.slice(0, max);
-    this.log(`✅ Selected ${this.selectedItems.length} items above score ${minScore}`);
+    
+    // ALWAYS add The Disability Bulletin at the top (static entry)
+    // This ensures it appears even if the RSS feed fails
+    const disabilityBulletinEntry = {
+      title: 'The Disability Bulletin',
+      link: 'https://linktr.ee/thedisabilitybulletin',
+      description: 'Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.',
+      score: 10.0, // Highest score to ensure it's always first
+      pubDate: new Date().toISOString(),
+      feedUrl: 'static-entry',
+      isDisabilityBulletin: true
+    };
+    
+    // Add at the beginning of the array
+    this.selectedItems.unshift(disabilityBulletinEntry);
+    
+    this.log(`✅ Selected ${this.selectedItems.length} items (including Disability Bulletin) above score ${minScore}`);
   }
 
   /**
@@ -466,7 +482,8 @@ class CuratorCore {
     const otherItems = [];
     
     this.selectedItems.forEach((item) => {
-      if (item.feedUrl && item.feedUrl.includes('feeds.blogger.com/feeds/362411661072793873')) {
+      // Check for static entry OR RSS feed match
+      if (item.isDisabilityBulletin || (item.feedUrl && (item.feedUrl.includes('feeds.blogger.com/feeds/362411661072793873') || item.feedUrl === 'static-entry'))) {
         disabilityBulletinItems.push(item);
       } else {
         otherItems.push(item);
