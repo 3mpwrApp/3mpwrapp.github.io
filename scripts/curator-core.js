@@ -452,7 +452,7 @@ class CuratorCore {
     const disabilityBulletinEntry = {
       title: 'The Disability Bulletin',
       link: 'https://linktr.ee/thedisabilitybulletin',
-      description: 'Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.',
+      description: 'Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin',
       score: 10.0, // Highest score to ensure it's always first
       pubDate: new Date().toISOString(),
       feedUrl: 'static-entry',
