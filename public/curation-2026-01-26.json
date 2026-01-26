@@ -1,7 +1,7 @@
 {
   "date": "2026-01-26",
-  "timestamp": "2026-01-26T09:14:00.906Z",
-  "count": 4,
+  "timestamp": "2026-01-26T15:13:02.874Z",
+  "count": 1,
   "minScore": 3.5,
   "items": [
     {
@@ -9,28 +9,7 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.",
       "score": 10,
-      "pubDate": "2026-01-26T09:14:00.903Z"
-    },
-    {
-      "title": "Thousands of Federal Public Service Layoffs Are Beginning",
-      "link": "https://thetyee.ca/News/2026/01/26/Federal-Public-Service-Layoffs/",
-      "description": "Policy experts warn Canada could be losing vital resources as trade and geopolitics shift.",
-      "score": 24.9,
-      "pubDate": "Mon, 26 Jan 2026 08:10:00 +0000"
-    },
-    {
-      "title": "Trump’s America Comes for Alberta",
-      "link": "https://thetyee.ca/Opinion/2026/01/26/Trump-America-Comes-Alberta/",
-      "description": "The country must respond to this flagrant violation of Canadian sovereignty.",
-      "score": 9,
-      "pubDate": "Mon, 26 Jan 2026 08:20:00 +0000"
-    },
-    {
-      "title": "The Wild Claims of Jeff Rath, Separatist Firebrand",
-      "link": "https://thetyee.ca/News/2026/01/26/Wild-Claims-Jeff-Rath-Separatist-Firebrand/",
-      "description": "The free-swinging Alberta Prosperity Project leader is caught on video spouting conspiracy theories and profanities.",
-      "score": 4.5,
-      "pubDate": "Mon, 26 Jan 2026 08:40:00 +0000"
+      "pubDate": "2026-01-26T15:13:02.872Z"
     }
   ]
 }
