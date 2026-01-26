@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-26T06:04:24.729Z",
+  "lastUpdated": "2026-01-26T12:03:34.901Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 9569,
+      "totalPosts": 9593,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-26T06:04:15.516Z"
+      "lastSeen": "2026-01-26T12:03:25.549Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 9486,
+      "totalPosts": 9511,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-26T06:04:17.613Z"
+      "lastSeen": "2026-01-26T12:03:27.652Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 9420,
-      "recentPosts": 24,
+      "totalPosts": 9441,
+      "recentPosts": 21,
       "peakPosts": 25,
-      "lastSeen": "2026-01-26T06:04:19.582Z"
+      "lastSeen": "2026-01-26T12:03:29.799Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 9593,
+      "totalPosts": 9618,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-26T06:04:21.857Z"
+      "lastSeen": "2026-01-26T12:03:31.858Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 9600,
+      "totalPosts": 9625,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-26T06:04:23.725Z"
+      "lastSeen": "2026-01-26T12:03:33.898Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
-      "author": "medusaswink.bsky.social",
-      "engagement": 14,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
-      "author": "medusaswink.bsky.social",
-      "engagement": 14,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Ever got into a situation where you're focusing on the combat so much, you only realise afterwards that you have no idea what anyone's been saying over comms?\n\nYeah, me too.\n\nWhich is why I'm adding a chat log to #NovaSquadron.\n#gamedev #indiedev #screenshotsaturday #accessibility",
       "author": "claradoth.bsky.social",
@@ -338,6 +302,42 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "If chronic pain is a full-time job\nWHERE\nIS\nMY\nPAYCHECK 😤💸\n\nDrop a 💥 if your body betrays you daily\n\n#ChronicIllness #ChronicPainClub #DisabilityJustice #SpooniesOfBluesky #PainIsPolitical #CripLife #HealthcareNow 🦴🔥",
+      "author": "crabbyratwhisperer.bsky.social",
+      "engagement": 24,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
+      "author": "medusaswink.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "PSA, your mobile application has to work in portrait AND landscape. There are way to many users who use their phones in landscape mode (for various reasons) and by not allowing your app to support both you are not allowing all users to use your app. \n\n#Accessibility #A11y #iOS #Android",
+      "author": "steady5063.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,14 +347,14 @@
     },
     {
       "keyword": "accessibility",
-      "count": 33
-    },
-    {
-      "keyword": "a11y",
-      "count": 30
+      "count": 32
     },
     {
       "keyword": "disabilityjustice",
+      "count": 26
+    },
+    {
+      "keyword": "a11y",
       "count": 26
     },
     {
