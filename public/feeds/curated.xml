@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 27 Jan 2026 15:14:30 GMT</lastBuildDate>
-    <pubDate>Tue, 27 Jan 2026 15:14:30 GMT</pubDate>
+    <lastBuildDate>Tue, 27 Jan 2026 21:07:46 GMT</lastBuildDate>
+    <pubDate>Tue, 27 Jan 2026 21:07:46 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -27,7 +27,16 @@
 
 🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
 📍 Visit: https://linktr.ee/thedisabilitybulletin]]></description>
-      <pubDate>Tue, 27 Jan 2026 15:14:30 GMT</pubDate>
+      <pubDate>Tue, 27 Jan 2026 21:07:46 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>The forest from abroad: On Canada&apos;s Davos moment</title>
+      <link>https://rabble.ca/politics/canadian-politics/the-forest-from-abroad-on-canadas-davos-moment/</link>
+      <guid isPermaLink="true">https://rabble.ca/politics/canadian-politics/the-forest-from-abroad-on-canadas-davos-moment/</guid>
+      <pubDate>Tue, 27 Jan 2026 18:55:53 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>

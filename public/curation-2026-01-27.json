@@ -1,7 +1,7 @@
 {
   "date": "2026-01-27",
-  "timestamp": "2026-01-27T15:14:30.463Z",
-  "count": 1,
+  "timestamp": "2026-01-27T21:07:46.887Z",
+  "count": 2,
   "minScore": 3.5,
   "items": [
     {
@@ -9,7 +9,14 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-01-27T15:14:30.460Z"
+      "pubDate": "2026-01-27T21:07:46.885Z"
+    },
+    {
+      "title": "The forest from abroad: On Canada's Davos moment",
+      "link": "https://rabble.ca/politics/canadian-politics/the-forest-from-abroad-on-canadas-davos-moment/",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Tue, 27 Jan 2026 18:55:53 +0000"
     }
   ]
 }
