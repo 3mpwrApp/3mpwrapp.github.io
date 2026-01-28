@@ -1,7 +1,7 @@
 {
   "date": "2026-01-28",
-  "timestamp": "2026-01-28T15:14:48.552Z",
-  "count": 6,
+  "timestamp": "2026-01-28T21:13:40.619Z",
+  "count": 8,
   "minScore": 3.5,
   "items": [
     {
@@ -9,42 +9,56 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-01-28T15:14:48.549Z"
+      "pubDate": "2026-01-28T21:13:40.616Z"
     },
     {
-      "title": "Measles Update #71",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72497",
-      "description": "",
-      "score": 3.9000000000000004,
-      "pubDate": "Tue, 27 Jan 2026 14:41:00 CST"
+      "title": "‘Very Little Value’: Judge Frustrated by Health Canada at DULF Trial",
+      "link": "https://thetyee.ca/News/2026/01/28/Judge-Frustrated-Health-Canada-DULF-Trial/",
+      "description": "Justice Catherine Murray said witness Eric Costen appeared to be ‘guessing’ in his responses on the stand.",
+      "score": 25.900000000000002,
+      "pubDate": "Wed, 28 Jan 2026 08:40:00 +0000"
     },
     {
-      "title": "Measles Update #70",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72478",
-      "description": "",
-      "score": 3.9000000000000004,
-      "pubDate": "Mon, 26 Jan 2026 13:53:00 CST"
+      "title": "Carney’s Foreign Policy as a Framework for Our Domestic Future",
+      "link": "https://thetyee.ca/Opinion/2026/01/27/Carney-Foreign-Policy-Domestic-Future/",
+      "description": "It’s important to live truth at home. Indigenous self-determination is essential to Canada’s global credibility.",
+      "score": 13.1,
+      "pubDate": "Tue, 27 Jan 2026 08:30:00 +0000"
     },
     {
-      "title": "Measles Update #69",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72458",
-      "description": "",
-      "score": 3.9000000000000004,
-      "pubDate": "Thu, 22 Jan 2026 15:51:00 CST"
+      "title": "Nenshi Challenges UCP MLAs to Sign a Pro-Canada Pledge",
+      "link": "https://thetyee.ca/Opinion/2026/01/28/Nenshi-Challenges-UCP-Pro-Canada-Pledge/",
+      "description": "Danielle Smith has been flirting with separatists, Nenshi says. Will her party back Canada?",
+      "score": 10.5,
+      "pubDate": "Wed, 28 Jan 2026 08:10:00 +0000"
     },
     {
-      "title": "Measles Update #68",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72437",
-      "description": "",
-      "score": 3.9000000000000004,
-      "pubDate": "Wed, 21 Jan 2026 14:00:00 CST"
+      "title": "Indigenous Canadians Warned about Travel to the US",
+      "link": "https://thetyee.ca/News/2026/01/27/Indigenous-Canadians-Warned-Travel-US/",
+      "description": "The AFN says it ‘strongly condemns’ reports of First Nations people being questioned and detained by ICE.",
+      "score": 8.4,
+      "pubDate": "Tue, 27 Jan 2026 08:20:00 +0000"
     },
     {
-      "title": "Measles Update #67",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72341",
+      "title": "Manitoba Government Delivers Record Number of Hip and Knee Surgeries",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72518",
       "description": "",
-      "score": 3.9000000000000004,
-      "pubDate": "Thu, 15 Jan 2026 14:37:00 CST"
+      "score": 7.5,
+      "pubDate": "Wed, 28 Jan 2026 14:24:00 CST"
+    },
+    {
+      "title": "Alberta progressive economist Bob Ascah dead at 71",
+      "link": "https://rabble.ca/politics/canadian-politics/alberta-progressive-economist-bob-ascah-dead-at-71/",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 27 Jan 2026 21:42:39 +0000"
+    },
+    {
+      "title": "Measles Update #72",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72517",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Wed, 28 Jan 2026 14:26:00 CST"
     }
   ]
 }
