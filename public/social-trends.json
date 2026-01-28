@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-27T18:04:56.933Z",
+  "lastUpdated": "2026-01-28T00:07:04.020Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 9713,
+      "totalPosts": 9737,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-27T18:04:46.869Z"
+      "lastSeen": "2026-01-28T00:06:54.972Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 9636,
+      "totalPosts": 9661,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-27T18:04:49.262Z"
+      "lastSeen": "2026-01-28T00:06:56.987Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 9566,
+      "totalPosts": 9591,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-27T18:04:51.420Z"
+      "lastSeen": "2026-01-28T00:06:59.046Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 9743,
+      "totalPosts": 9768,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-27T18:04:53.660Z"
+      "lastSeen": "2026-01-28T00:07:01.100Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 9750,
+      "totalPosts": 9775,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-27T18:04:55.929Z"
+      "lastSeen": "2026-01-28T00:07:03.015Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "If chronic pain is a full-time job\nWHERE\nIS\nMY\nPAYCHECK 😤💸\n\nDrop a 💥 if your body betrays you daily\n\n#ChronicIllness #ChronicPainClub #DisabilityJustice #SpooniesOfBluesky #PainIsPolitical #CripLife #HealthcareNow 🦴🔥",
-      "author": "crabbyratwhisperer.bsky.social",
-      "engagement": 24,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
-      "author": "medusaswink.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "PSA, your mobile application has to work in portrait AND landscape. There are way to many users who use their phones in landscape mode (for various reasons) and by not allowing your app to support both you are not allowing all users to use your app. \n\n#Accessibility #A11y #iOS #Android",
-      "author": "steady5063.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Forza Horizon 6 looks stunning and I'm in love 😍! And the best part was when they talked about accessibility features 🙌. Thanks for remembering all of us who use them and including them in this presentation. #accessibility #ForzaHorizon6  @xbox.com @horizon.forza.net",
-      "author": "black1976.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "PSA, your mobile application has to work in portrait AND landscape. There are way to many users who use their phones in landscape mode (for various reasons) and by not allowing your app to support both you are not allowing all users to use your app. \n\n#Accessibility #A11y #iOS #Android",
       "author": "steady5063.bsky.social",
@@ -338,88 +308,118 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "If chronic pain is a full-time job\nWHERE\nIS\nMY\nPAYCHECK 😤💸\n\nDrop a 💥 if your body betrays you daily\n\n#ChronicIllness #ChronicPainClub #DisabilityJustice #SpooniesOfBluesky #PainIsPolitical #CripLife #HealthcareNow 🦴🔥",
+      "author": "crabbyratwhisperer.bsky.social",
+      "engagement": 24,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
+      "author": "medusaswink.bsky.social",
+      "engagement": 15,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 41
+      "count": 43
     },
     {
       "keyword": "accessibility",
-      "count": 37
+      "count": 36
+    },
+    {
+      "keyword": "disabilityjustice",
+      "count": 27
     },
     {
       "keyword": "a11y",
       "count": 27
     },
     {
-      "keyword": "disabilityjustice",
+      "keyword": "cripthevote",
       "count": 26
     },
     {
-      "keyword": "cripthevote",
-      "count": 25
-    },
-    {
       "keyword": "altcitizen",
-      "count": 15
+      "count": 17
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 15
+      "count": 17
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 15
+      "count": 17
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 13
+      "count": 15
     },
     {
       "keyword": "foxtakedown",
-      "count": 10
+      "count": 12
     },
     {
       "keyword": "stoptrump",
-      "count": 10
+      "count": 12
     },
     {
       "keyword": "wearetheflood",
-      "count": 10
+      "count": 12
     },
     {
       "keyword": "50501movement",
-      "count": 10
+      "count": 12
     },
     {
       "keyword": "disabilityrebellion stoptrump",
-      "count": 10
+      "count": 12
     },
     {
       "keyword": "stoptheliesfox",
-      "count": 8
+      "count": 10
     },
     {
       "keyword": "virtual",
-      "count": 8
+      "count": 10
     },
     {
       "keyword": "foxlies",
-      "count": 8
+      "count": 10
     },
     {
-      "keyword": "disabilityjustice nico",
+      "keyword": "disability rights",
       "count": 7
     },
     {
       "keyword": "a11y accessibility",
-      "count": 6
+      "count": 7
     },
     {
       "keyword": "disability",
-      "count": 5
+      "count": 6
     }
   ]
 }
