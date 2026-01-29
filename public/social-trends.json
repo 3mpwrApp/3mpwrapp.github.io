@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-01-29T12:06:01.099Z",
+  "lastUpdated": "2026-01-29T18:08:38.297Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 9880,
+      "totalPosts": 9904,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-01-29T12:05:51.401Z"
+      "lastSeen": "2026-01-29T18:08:25.666Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 9811,
+      "totalPosts": 9836,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-29T12:05:53.452Z"
+      "lastSeen": "2026-01-29T18:08:28.467Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 9740,
+      "totalPosts": 9765,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-29T12:05:55.540Z"
+      "lastSeen": "2026-01-29T18:08:31.321Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 9918,
+      "totalPosts": 9943,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-29T12:05:57.362Z"
+      "lastSeen": "2026-01-29T18:08:34.359Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 9925,
+      "totalPosts": 9950,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-01-29T12:06:00.096Z"
+      "lastSeen": "2026-01-29T18:08:37.293Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "If chronic pain is a full-time job\nWHERE\nIS\nMY\nPAYCHECK 😤💸\n\nDrop a 💥 if your body betrays you daily\n\n#ChronicIllness #ChronicPainClub #DisabilityJustice #SpooniesOfBluesky #PainIsPolitical #CripLife #HealthcareNow 🦴🔥",
-      "author": "crabbyratwhisperer.bsky.social",
-      "engagement": 24,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I will be attending Krystal’s #DisabilityJustice workshop. Please join us if you are free 👋",
-      "author": "medusaswink.bsky.social",
-      "engagement": 15,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "\"While an increasing number of #GreenSpaces are investing in improving #accessibility, #hiking in #nature poses #natural challenges. “The wood doesn’t care about ADA compliance,” said Peter Gagliardo, [an] #adaptive #sports coordinator.\": buff.ly/aoD8TqC\n\nvia @theguardian.com",
-      "author": "achronicvoice.com",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
       "author": "lisadiedrich.bsky.social",
@@ -338,6 +302,42 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "If chronic pain is a full-time job\nWHERE\nIS\nMY\nPAYCHECK 😤💸\n\nDrop a 💥 if your body betrays you daily\n\n#ChronicIllness #ChronicPainClub #DisabilityJustice #SpooniesOfBluesky #PainIsPolitical #CripLife #HealthcareNow 🦴🔥",
+      "author": "crabbyratwhisperer.bsky.social",
+      "engagement": 24,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Today is the day! The ceremony for the 2025 GAConf Awards airs 10am PST / 1pm EST / 6pm GMT, celebrating accessibility excellence across 20 categories.\n\nwww.youtube.com/watch?v=zqV_...\n\nAlso showing on IGN!\n\n#gamedev #indiedev #accessibility",
+      "author": "gaconf.bsky.social",
+      "engagement": 59,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Read this to learn about using outlines to create accessible keyboard focus indicators and why it's a big deal: www.sarasoueidan.com/blog/focus-i...\n\n#CSS #a11y",
+      "author": "sarasoueidan.com",
+      "engagement": 18,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,15 +347,15 @@
     },
     {
       "keyword": "accessibility",
-      "count": 35
+      "count": 34
+    },
+    {
+      "keyword": "a11y",
+      "count": 31
     },
     {
       "keyword": "disabilityjustice",
       "count": 28
-    },
-    {
-      "keyword": "a11y",
-      "count": 27
     },
     {
       "keyword": "cripthevote",
@@ -398,10 +398,6 @@
       "count": 12
     },
     {
-      "keyword": "disability",
-      "count": 11
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 10
     },
@@ -415,6 +411,10 @@
     },
     {
       "keyword": "disability rights",
+      "count": 7
+    },
+    {
+      "keyword": "disability",
       "count": 7
     },
     {
