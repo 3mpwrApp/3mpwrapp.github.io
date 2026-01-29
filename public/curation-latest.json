@@ -1,7 +1,7 @@
 {
   "date": "2026-01-29",
-  "timestamp": "2026-01-29T09:18:03.559Z",
-  "count": 10,
+  "timestamp": "2026-01-29T15:17:09.633Z",
+  "count": 1,
   "minScore": 3.5,
   "items": [
     {
@@ -9,70 +9,7 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-01-29T09:18:03.556Z"
-    },
-    {
-      "title": "How Big Tech Spearheads the US Threat to Canada",
-      "link": "https://thetyee.ca/Analysis/2026/01/29/Big-Tech-Spearheads-US-Threat-Canada/",
-      "description": "American digital giants are deeply entrenched here, making the building of Carney’s ‘sovereign cloud’ near impossible.",
-      "score": 11.5,
-      "pubDate": "Thu, 29 Jan 2026 08:10:00 +0000"
-    },
-    {
-      "title": "Manitoba Government Tables Regulatory Accountability Report",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72520",
-      "description": "",
-      "score": 12,
-      "pubDate": "Wed, 28 Jan 2026 16:30:00 CST"
-    },
-    {
-      "title": "Manitoba Government Takes Further Action to Strengthen School Safety",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72519",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Wed, 28 Jan 2026 15:17:00 CST"
-    },
-    {
-      "title": "Oxfam Inequality Report 2026: Resisting the rule of the rich and protecting freedom from billionaire power",
-      "link": "https://rabble.ca/podcast/oxfam-inequality-report-2026/",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 29 Jan 2026 00:19:21 +0000"
-    },
-    {
-      "title": "Measles Update #71",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72497",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Tue, 27 Jan 2026 14:41:00 CST"
-    },
-    {
-      "title": "Measles Update #70",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72478",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 26 Jan 2026 13:53:00 CST"
-    },
-    {
-      "title": "Measles Update #69",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72458",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 22 Jan 2026 15:51:00 CST"
-    },
-    {
-      "title": "Measles Update #68",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72437",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Wed, 21 Jan 2026 14:00:00 CST"
-    },
-    {
-      "title": "Measles Update #67",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72341",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 15 Jan 2026 14:37:00 CST"
+      "pubDate": "2026-01-29T15:17:09.630Z"
     }
   ]
 }
