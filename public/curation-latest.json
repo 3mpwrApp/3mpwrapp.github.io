@@ -1,7 +1,7 @@
 {
   "date": "2026-01-29",
-  "timestamp": "2026-01-29T15:17:09.633Z",
-  "count": 1,
+  "timestamp": "2026-01-29T21:12:18.066Z",
+  "count": 14,
   "minScore": 3.5,
   "items": [
     {
@@ -9,7 +9,98 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-01-29T15:17:09.630Z"
+      "pubDate": "2026-01-29T21:12:18.063Z"
+    },
+    {
+      "title": "How Big Tech Spearheads the US Threat to Canada",
+      "link": "https://thetyee.ca/Analysis/2026/01/29/Big-Tech-Spearheads-US-Threat-Canada/",
+      "description": "American digital giants are deeply entrenched here, making the building of Carney’s ‘sovereign cloud’ near impossible.",
+      "score": 11.5,
+      "pubDate": "Thu, 29 Jan 2026 08:10:00 +0000"
+    },
+    {
+      "title": "Unions share how public service cuts will affect Canadians",
+      "link": "https://rabble.ca/labour/unions-share-how-public-service-cuts-will-affect-canadians/",
+      "description": "",
+      "score": 12,
+      "pubDate": "Thu, 29 Jan 2026 20:45:46 +0000"
+    },
+    {
+      "title": "How can 2SLGBTQIA+ professionals overcome workplace barriers while advancing policy protections?",
+      "link": "https://rabble.ca/lgbtiq/how-can-2slgbtqia-professionals-overcome-workplace-barriers-while-advancing-policy-protections/",
+      "description": "",
+      "score": 8.6,
+      "pubDate": "Thu, 29 Jan 2026 19:22:42 +0000"
+    },
+    {
+      "title": "Manitoba Government Tables Regulatory Accountability Report",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72520",
+      "description": "",
+      "score": 12,
+      "pubDate": "Wed, 28 Jan 2026 16:30:00 CST"
+    },
+    {
+      "title": "Manitoba Government Donates Additional $4 Million From U.S. Liquor Sales to Children's Health and Nutrition",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72522",
+      "description": "",
+      "score": 11,
+      "pubDate": "Thu, 29 Jan 2026 13:18:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests $11.4 Million to Boost Municipal Fire Safety",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72521",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Thu, 29 Jan 2026 11:23:00 CST"
+    },
+    {
+      "title": "Manitoba Government Takes Further Action to Strengthen School Safety",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72519",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 28 Jan 2026 15:17:00 CST"
+    },
+    {
+      "title": "Oxfam Inequality Report 2026: Resisting the rule of the rich and protecting freedom from billionaire power",
+      "link": "https://rabble.ca/podcast/oxfam-inequality-report-2026/",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Thu, 29 Jan 2026 00:19:21 +0000"
+    },
+    {
+      "title": "Measles Update #73",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72523",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Thu, 29 Jan 2026 14:59:00 CST"
+    },
+    {
+      "title": "Measles Update #71",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72497",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 27 Jan 2026 14:41:00 CST"
+    },
+    {
+      "title": "Measles Update #70",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72478",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Mon, 26 Jan 2026 13:53:00 CST"
+    },
+    {
+      "title": "Measles Update #69",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72458",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Thu, 22 Jan 2026 15:51:00 CST"
+    },
+    {
+      "title": "Measles Update #68",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72437",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Wed, 21 Jan 2026 14:00:00 CST"
     }
   ]
 }
