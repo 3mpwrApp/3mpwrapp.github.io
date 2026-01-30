@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-01-30
 
-Curated 3 items from disability, accessibility, and social policy sources.
+Curated 2 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -24,12 +24,8 @@ Your source for disability rights news, advocacy updates, and community stories.
 
 ## Additional Stories
 
-### 1. Versions of ‘1984’ and ‘Book of Genesis’ Banned in Alberta Schools
-Graphic novels are the focus of the full list of prohibited books, revealed through FOI.
-📍 [Source](https://thetyee.ca/Opinion/2026/01/29/Graphic-Novels-1984-Genesis-Banned-Alberta-Schools/)
-**Score:** 4.50
-
-### 2. Labour leaders ask government to not sacrifice one sector of the economy for another as CUSMA review looms
-📍 [Source](https://rabble.ca/labour/labour-leaders-ask-government-to-not-sacrifice-one-sector-of-the-economy-for-another-as-cusma-review-looms/)
-**Score:** 3.60
+### 1. Smith Talked about Leading an Independent Alberta, Says Separatist Leader
+Dennis Modry of APP made the claim about the premier to a room full of petition signers.
+📍 [Source](https://thetyee.ca/News/2026/01/30/Separatist-Says-Premier-Smith-Talked-Leading-Independent-Alberta/)
+**Score:** 6.90
 
