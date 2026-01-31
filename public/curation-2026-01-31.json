@@ -1,7 +1,7 @@
 {
   "date": "2026-01-31",
-  "timestamp": "2026-01-31T15:09:55.519Z",
-  "count": 1,
+  "timestamp": "2026-01-31T21:09:25.240Z",
+  "count": 4,
   "minScore": 3.5,
   "items": [
     {
@@ -9,7 +9,28 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-01-31T15:09:55.516Z"
+      "pubDate": "2026-01-31T21:09:25.238Z"
+    },
+    {
+      "title": "A Startling Account of Migrant Workers in Canada",
+      "link": "https://thetyee.ca/Culture/2026/01/30/Startling-Account-Migrant-Workers-Canada/",
+      "description": "‘The portrait that it paints is extremely unflattering,’ says Calgary author Marcello Di Cintio of ‘Precarious,’ his new book.",
+      "score": 10.5,
+      "pubDate": "Sat, 31 Jan 2026 01:10:00 +0000"
+    },
+    {
+      "title": "Smith Talked about Heading an Independent Alberta, Says Separatist Leader",
+      "link": "https://thetyee.ca/News/2026/01/30/Separatist-Says-Premier-Smith-Talked-Leading-Independent-Alberta/",
+      "description": "Dennis Modry of APP made the claim about the premier to a room full of petition signers.",
+      "score": 7.1,
+      "pubDate": "Sat, 31 Jan 2026 00:07:00 +0000"
+    },
+    {
+      "title": "Comfort Me, Canadian TV",
+      "link": "https://thetyee.ca/Culture/2026/01/30/Comfort-Canadian-TV/",
+      "description": "As the world gets grim, CanCon sees me through.",
+      "score": 4.5,
+      "pubDate": "Sat, 31 Jan 2026 01:40:00 +0000"
     }
   ]
 }
