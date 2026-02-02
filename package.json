@@ -40,9 +40,10 @@
     "@axe-core/playwright": "^4.10.2",
     "clean-css": "^5.3.3",
     "cssnano": "^7.1.2",
-    "eslint": "^8.56.0",
+    "eslint": "^9.39.2",
+    "jsonpath-plus": "^10.3.0",
     "linkinator": "^7.3.0",
-    "pa11y-ci": "^3.1.0",
+    "pa11y-ci": "^4.0.1",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.1.1",
@@ -52,6 +53,9 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "overrides": {
+    "jsonpath": "npm:jsonpath-plus@^10.3.0"
   },
   "keywords": [
     "autonomous-agents",
