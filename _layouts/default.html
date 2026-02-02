@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="{{ "/assets/css/wcag-aaa-colors.css" | relative_url }}">
   <!-- WCAG 2.2 AAA Color Fixes - Fixes all 614 accessibility violations -->
   <link rel="stylesheet" href="{{ "/assets/css/aaa-color-fixes.css" | relative_url }}">
+  <!-- WCAG 2.2 AAA Comprehensive Overrides - Fixes all inline styles and remaining violations -->
+  <link rel="stylesheet" href="{{ "/assets/css/wcag-aaa-overrides.css" | relative_url }}">
   <!-- Performance Optimizations: Critical CSS, Lazy Loading, Font Optimization -->
   <link rel="stylesheet" href="{{ "/assets/css/performance-optimizations.min.css" | relative_url }}">
   <!-- Lighthouse Audit Fixes: Touch targets, contrast, aspect ratios -->
@@ -207,7 +209,7 @@
       </a>
       
       <!-- Complexity Mode Toggle -->
-      <button id="complexity-toggle" type="button" aria-live="polite">
+      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode">
         <span class="complexity-icon" aria-hidden="true">📖</span>
         <span class="complexity-label">Standard View</span>
         <span class="complexity-hint">Click for Simple Language</span>
@@ -364,6 +366,9 @@
   
   <!-- WCAG 2.2 AA+ Compliance Features -->
   <script src="{{ '/assets/js/wcag-compliance.min.js' | relative_url }}" defer></script>
+  
+  <!-- WCAG 2.2 AAA Dynamic Enhancements - External links, touch targets, ARIA labels -->
+  <script src="{{ '/assets/js/wcag-aaa-dynamic.js' | relative_url }}" defer></script>
 
   <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
     <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->

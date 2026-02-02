@@ -107,7 +107,7 @@ description: Free community-powered platform connecting injured workers, persons
       <span aria-hidden="true">🗳️</span> Cast Your Vote:
     </h3>
     
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerzXn2RpkzKIP9X7zrNYQWtVuBbl8gQhzpl93ymLKgKPgRlg/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="max-width: 800px; min-height: 800px; border-radius: 8px;">Loading…</iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerzXn2RpkzKIP9X7zrNYQWtVuBbl8gQhzpl93ymLKgKPgRlg/viewform?embedded=true" title="3mpwr App Theme Song Vote - Community Poll" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="max-width: 800px; min-height: 800px; border-radius: 8px;">Loading…</iframe>
     
     <p style="font-size: 1.05rem; font-style: italic; color: var(--text-secondary); margin-top: 1.5rem;">
       This isn't just a song — it's our anthem.<br>
@@ -157,8 +157,8 @@ description: Free community-powered platform connecting injured workers, persons
       <p>
         Created by someone who lived it. Every feature designed with real experiences from injured workers and disabled people.
       </p>
-      <a href="/about/" style="color: #3d4eaa; text-decoration: none; font-weight: 600;">
-        Our Story →
+      <a href="/about/" style="color: #003d7a; text-decoration: none; font-weight: 600;">
+        Learn More About 3mpwrApp →
       </a>
     </div>
     
@@ -169,8 +169,8 @@ description: Free community-powered platform connecting injured workers, persons
       <p>
         Evidence locker, pain tracker, medication manager, legal resources, and more. Everything you need in one place.
       </p>
-      <a href="/features/" style="color: #047857; text-decoration: none; font-weight: 600;">
-        Explore Features →
+      <a href="/features/" style="color: #005a00; text-decoration: none; font-weight: 600;">
+        Explore All Features →
       </a>
     </div>
     
@@ -181,7 +181,7 @@ description: Free community-powered platform connecting injured workers, persons
       <p>
         Built for brain fog, chronic pain, and fatigue. Complexity toggle, need-a-break button, and pain flare mode.
       </p>
-      <a href="/accessibility/" style="color: #9333ea; text-decoration: none; font-weight: 600;">
+      <a href="/accessibility/" style="color: #5a189a; text-decoration: none; font-weight: 600;">
         Accessibility Features →
       </a>
     </div>
@@ -205,7 +205,7 @@ description: Free community-powered platform connecting injured workers, persons
       </div>
       
       <a href="/events/" class="homepage-box-link">
-        View Full Calendar →
+        View Full Community Events Calendar →
       </a>
     </div>
     
@@ -221,7 +221,7 @@ description: Free community-powered platform connecting injured workers, persons
       </div>
       
       <a href="/campaigns/" class="homepage-box-link">
-        All Campaigns →
+        View All Advocacy Campaigns →
       </a>
     </div>
     

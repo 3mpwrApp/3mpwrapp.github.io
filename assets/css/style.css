@@ -18,11 +18,11 @@
   --header-bg: #0b2545;
   --header-text: #ffffff;
   --main-bg: #0B1423;
-  --link-color: #66B2FF; /* Dark mode blue */
-  --link-hover: #99D0FF; /* Dark mode hover */
+  --link-color: #80c1ff; /* Dark mode blue - AAA compliant */
+  --link-hover: #b3d9ff; /* Dark mode hover - AAA compliant */
   --nav-hover: #183c65;
   --border-color: #355c7d;
-  --focus-outline: #FFD54F; /* Yellow for dark mode */
+  --focus-outline: #FFC107; /* Amber for dark mode - 3:1+ contrast on dark backgrounds */
   --focus-ring-width: 3px;
 }
 
@@ -34,11 +34,11 @@
     --text-secondary: #4b5563;
     --header-bg: #183c65;
     --main-bg: #ffffff;
-    --link-color: #004A99;
-    --link-hover: #0066CC;
+    --link-color: #003d7a;
+    --link-hover: #002d5c;
     --nav-hover: #285e93;
     --border-color: #d1d5db;
-    --focus-outline: #FFB300;
+    --focus-outline: #0066CC; /* Blue focus for light mode - 3:1+ contrast */
   }
 }
 
@@ -89,8 +89,9 @@ a:focus {
 /* Focus Ring (visible for keyboard users) */
 a:focus-visible,
 :focus-visible {
-  outline: 3px solid #FFD54F;
+  outline: 3px solid #0066CC;
   outline-offset: 3px;
+  box-shadow: 0 0 0 1px #FFFFFF;
 }
 
 /* Buttons */
@@ -127,9 +128,10 @@ label:has(input:focus-visible),
 .menu-toggle:focus-visible,
 .theme-toggle:focus-visible,
 .contrast-toggle:focus-visible {
-  outline: 3px solid #FFD54F;
+  outline: 3px solid #0066CC;
   outline-offset: 3px;
   border-radius: 2px;
+  box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(0, 102, 204, 0.2);
 }
 
 /* Enhanced focus for primary interactive elements */
@@ -142,12 +144,12 @@ label:has(input:focus-visible),
 .feedback-btn:focus-visible,
 .cta-button:focus-visible,
 .store-link:focus-visible {
-  outline: 3px solid #FFD54F;
+  outline: 3px solid #0066CC;
   outline-offset: 3px;
-  box-shadow: 0 0 0 6px rgba(255, 213, 79, 0.2);
+  box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 6px rgba(0, 102, 204, 0.25);
 }
 
-/* Dark mode focus - use lighter color */
+/* Dark mode focus - use high-contrast dual-color system */
 @media (prefers-color-scheme: dark) {
   a:focus-visible,
   button:focus-visible,
@@ -158,14 +160,16 @@ label:has(input:focus-visible),
   [role="link"]:focus-visible,
   [tabindex]:not([tabindex="-1"]):focus-visible,
   .nav-list a:focus-visible {
-    outline-color: #FFD54F;
+    outline: 3px solid #FFC107;
+    box-shadow: 0 0 0 1px #000000, 0 0 0 5px rgba(255, 193, 7, 0.3);
   }
 }
 
-/* Ensure focus is never hidden */
+/* Ensure focus is never hidden - dual-color for AAA */
 *:focus-visible {
-  outline: 3px solid #FFD54F;
+  outline: 3px solid #0066CC;
   outline-offset: 2px;
+  box-shadow: 0 0 0 1px #FFFFFF;
 }
 
 /* ======================================== */
