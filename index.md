@@ -25,18 +25,22 @@ description: Free community-powered platform connecting injured workers, persons
   </p>
   
   <!-- Impact Stats -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; max-width: 700px; margin: 0 auto 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 2px solid rgba(61, 78, 170, 0.2);">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 2px solid rgba(61, 78, 170, 0.2);">
     <div>
-      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">60+</div>
-      <div style="font-size: 0.9rem; opacity: 0.8;">Practical Tools</div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">97%</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Complete</div>
     </div>
     <div>
-      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">100%</div>
-      <div style="font-size: 0.9rem; opacity: 0.8;">Free Forever</div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">67%</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Faster</div>
+    </div>
+    <div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">42%</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Smaller</div>
     </div>
     <div>
       <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">AAA</div>
-      <div style="font-size: 0.9rem; opacity: 0.8;">Accessibility</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Accessible</div>
     </div>
   </div>
   
