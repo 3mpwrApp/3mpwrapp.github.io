@@ -333,6 +333,107 @@ Former PSW (Personal Support Worker). Injured worker. Person with disabilities. 
 
 **Now I fight back.** As a meme & content creator, I use humor, truth, and technology to expose corruption and build solidarity.
 
+---
+
+### 📖 My Journey: Six Months, Endless Rebuilds, and Zero Half Measures
+
+<div style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 2rem; border-radius: 12px; margin: 1.5rem 0;">
+
+I am an injured worker who fell through the cracks. I now live with permanent disabilities.
+
+**I built this app for injured workers like me.**  
+For persons with disabilities.  
+For people who care about advocacy, accessibility, and social justice — not as buzzwords, but as lived realities.
+
+I built this app for people navigating complex medical systems.  
+For those drowning in paperwork, deadlines, denials, and silence.  
+For those trying to survive systems that were never designed for them — and often work against them.
+
+I built this app for people learning that frequency is everything we are.  
+That intention matters.  
+That community matters.  
+That belief — real belief — can be an engine.
+
+**I built this app because tangible action matters more than talk.**
+
+And yes — **I built this app for you.**
+
+</div>
+
+#### 🧭 Why This App Exists
+
+If you've ever felt lost in the maze of forms, appeals, medical jargon, inaccessible platforms, or endless "call back later" loops — you already understand the problem.
+
+Support systems are fragmented. Resources are scattered. Accessibility is treated as an afterthought. And people are expected to advocate for themselves while exhausted, sick, injured, or disabled.
+
+**That's not empowerment. That's abandonment.**
+
+This app was created with one core principle:
+
+> **Nothing about us without us. Accessibility first. Always.**
+
+This isn't charity tech. This isn't "disruption." **This is solidarity, translated into software.**
+
+#### 🛠️ The Reality of Building It
+
+Over six months, I learned — the hard way — what it actually takes to build something that works.
+
+**Tech Stack:** Expo Go, Firebase, Sentry, Android OS, App store applications, Google Play Console.
+
+**None of this was plug-and-play.**
+
+There were silent failures, deployment quirks, irreversible decisions, and builds that worked yesterday and broke today.
+
+I rebuilt more times than I can count. Clean builds. Upload files. Errors. Fixes. Re-uploads. **Repeat.**
+
+#### 🧪 Testing, Stress Testing, and Then Testing Again
+
+**I demanded perfection — not half measures — because the community this serves deserves reliability.**
+
+Hardcore testing. Stress testing. Edge-case testing. Accessibility testing. Rebuilding after tests failed. Testing again after fixes. Then testing again because **trust matters**.
+
+Finding testers was its own challenge. Convincing people to install, actually use it, keep it installed for weeks, and provide feedback — that's harder than it sounds. Especially when people are already exhausted.
+
+#### 📣 Telling People — and Being Ignored
+
+I promoted the app through social media, YouTube, outreach, marketing, making connections, talking about it again and again.
+
+And sometimes? **People didn't care.** No response. No engagement. No install.
+
+**That part hurts more than bugs.**
+
+But the work continued anyway. Because this was never about validation. **It was about building something that needed to exist.**
+
+#### 🔥 From Fear to Confidence
+
+At the start, I was scared. Scared of shipping. Scared of breaking things. Scared of failing publicly. Scared of not being "technical enough."
+
+**Now? I'm not scared anymore. I'm proud.**
+
+- Proud of what was accomplished in six months
+- Proud of pushing through exhaustion
+- Proud of learning systems that weren't built to welcome people like us
+- Proud of refusing to compromise on accessibility or quality
+
+**And this is only the beginning.**
+
+#### 🌱 The Grind Continues — Because It Has To
+
+The disability community and injured workers deserve **the best**. Not "good enough." Not "maybe later." Not "we'll fix it in version two."
+
+**The best. Nothing less.**
+
+This app exists because magic is real — when people decide to build instead of wait. Because frequency matters. Because belief turns into action. Because community is power.
+
+**I built this app for those who were told to figure it out alone. I built this app for those still trying. I built this app for you.**
+
+<div class="resource-links" style="margin-top: 1.5rem;">
+  <a href="/blog/2026/02/02/six-months-endless-rebuilds-zero-half-measures/" class="resource-link">Read Full Journey →</a>
+  <a href="/beta/" class="resource-link">Join Beta Testing →</a>
+</div>
+
+---
+
 **Roles:**
 - 🎓 Board Member — [Speakers School Canada](https://www.speakersschool.ca/)
 - ⚡ Board Member — [Thunder Bay & District Injured Workers Support Group](http://thunderbayinjuredworkers.com/)
