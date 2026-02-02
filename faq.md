@@ -37,6 +37,16 @@ lastUpdated: 2026-02-02
 
 ## General Questions
 
+### 📺 NEW: Video Tutorials Available!
+
+**Watch our Getting Started video:**  
+[Getting Started with 3mpwr App - Install, Permissions & Privacy Explained](https://www.youtube.com/watch?v=4i6xPpik_6M) (5 minutes)
+
+**Subscribe to our YouTube channel for more tutorials:**  
+[youtube.com/@3mpwrApp](https://www.youtube.com/@3mpwrApp)
+
+---
+
 ### What is Empowr?
 
 **Empowr is a mobile and web app designed to help you:**

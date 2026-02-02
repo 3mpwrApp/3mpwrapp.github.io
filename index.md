@@ -49,12 +49,20 @@ description: Free community-powered platform connecting injured workers, persons
       <span>Join the Beta</span>
       <span aria-hidden="true">→</span>
     </a>
+    <a href="https://www.youtube.com/watch?v=4i6xPpik_6M" class="homepage-btn-secondary" target="_blank" rel="noopener noreferrer">
+      <span>📺 Watch Tutorial</span>
+    </a>
     <a href="/about/" class="homepage-btn-secondary">
       <span>Learn More</span>
     </a>
   </div>
-  
-  <div class="homepage-badge">
+    <div style="margin: 1.5rem 0;">
+    <a href="https://www.youtube.com/@3mpwrApp" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #FF0000; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s;" onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FF0000'">
+      <span aria-hidden="true">📺</span>
+      <span>Subscribe on YouTube</span>
+    </a>
+  </div>
+    <div class="homepage-badge">
     <p>
       <span aria-hidden="true">�️</span> Privacy Focused
       <span style="margin: 0 1rem; opacity: 0.5;">|</span>

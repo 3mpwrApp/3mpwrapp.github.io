@@ -19,7 +19,9 @@ Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join 
 
 > 📖 **Resources for Testers:**  
 > [User Guide](/user-guide/) - Step-by-step tutorials for all features  
-> [Features List](/features/) - Browse all features with descriptions
+> [Features List](/features/) - Browse all features with descriptions  
+> 📺 [Getting Started Video](https://www.youtube.com/watch?v=4i6xPpik_6M) - Install, permissions & privacy explained  
+> 📺 [YouTube Channel](https://www.youtube.com/@3mpwrApp) - Subscribe for tutorials and updates
 
 ---
 

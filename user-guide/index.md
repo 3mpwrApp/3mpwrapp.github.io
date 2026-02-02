@@ -17,13 +17,19 @@ Step-by-step tutorials for using all app features. Each section includes clear i
 > 🆕 **What's New?** Comprehensive Personalization System! [See latest updates →](/whats-new/)  
 > 📋 **Feature List:** [Browse all features →](/features/)  
 > 🧪 **Beta Testing:** [Join our beta program →](/beta-guide/)  
-> ⚡ **Performance:** 67% faster, 42% smaller, fully personalized
+> ⚡ **Performance:** 67% faster, 42% smaller, fully personalized  
+> 📺 **Video Tutorial:** [Watch: Getting Started with 3mpwr App →](https://www.youtube.com/watch?v=4i6xPpik_6M)
 
 ---
 
 ## Quick Start
 
 ### First Time Using the App?
+
+**📺 NEW: [Watch our Getting Started video tutorial →](https://www.youtube.com/watch?v=4i6xPpik_6M)**  
+*Learn how to install, set up permissions, and understand privacy settings (5 minutes)*
+
+**Step-by-Step:**
 
 1. **Create Account** - Email, password, or continue as guest
 2. **Choose Complexity Mode** - Simple (5 features), Standard (20), or Power User (150+)

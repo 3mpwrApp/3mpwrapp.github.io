@@ -16,7 +16,8 @@ Your complete toolkit for disability advocacy, community connection, and system 
 
 > 🆕 **Latest Updates:** Comprehensive Personalization System live! [See What's New →](/whats-new/)  
 > 📖 **How to Use:** Each feature links to detailed instructions in our [User Guide →](/user-guide/)  
-> ⚡ **Performance:** 67% faster navigation, 42% smaller download
+> ⚡ **Performance:** 67% faster navigation, 42% smaller download  
+> 📺 **Video Tutorials:** [Watch Getting Started guide →](https://www.youtube.com/watch?v=4i6xPpik_6M) | [Subscribe to our channel →](https://www.youtube.com/@3mpwrApp)
 
 ---
 
