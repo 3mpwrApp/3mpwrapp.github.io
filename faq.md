@@ -3,8 +3,8 @@ layout: default
 title: FAQ - Frequently Asked Questions
 permalink: /faq/
 description: Answers to common questions about 3mpwr App features, PowerTools, privacy, accessibility, and more.
-version: 4.4
-lastUpdated: 2026-01-15
+version: 1.1.0
+lastUpdated: 2026-02-02
 ---
 
 {%- include faq-schema.html -%}
@@ -12,13 +12,14 @@ lastUpdated: 2026-01-15
 
 # ❓ FAQ - Frequently Asked Questions
 
-**Last Updated:** January 15, 2026
+**Last Updated:** February 2, 2026
 
 ---
 
 ## Quick Navigation
 
 - [General Questions](#general-questions)
+- [Personalization](#personalization) ⭐ NEW!
 - [PowerTools & Hubs](#powertools--hubs)
 - [Account & Login](#account--login)
 - [Legal Action Hub](#legal-action-hub)
@@ -51,21 +52,26 @@ It's built for survivors, activists, and anyone seeking justice, support, and co
 
 ### Is Empowr finished?
 
-**97% complete!** (145 of 150 features done as of January 15, 2026)
+**97% complete!** (145 of 150 features done as of February 2, 2026)
 
 **✅ What's Done:**
-- All 6 PowerTools hubs (Legal Action Hub, Wellness Hub, Document Management, Evidence Locker, Support Groups, Master Tracker Hub)
+- **Comprehensive Personalization System** (Feb 2026) - Profile-driven app customization
+- All 5 PowerTools hubs (Legal Action Hub, Wellness Hub, Document Management, Evidence Locker, Support Groups)
+- 60+ features organized into intuitive hubs
 - 41 wellness tools across 6 categories
-- Community chat & support groups
+- Community chat & support groups (24 groups, 150+ mentors)
 - Accessibility features (WCAG AAA compliant)
 - Complexity modes (Simple/Standard/Power User)
+- Beta ML infrastructure for future AI insights
 
 **🚧 What's Coming:**
 - 5 remaining features in final polish
-- Enhanced AI features
+- Enhanced AI recommendations (using beta data)
 - More languages
+- March 2026 production launch
 
 **Quality:** 721 tests passing, 0 errors, 0 warnings  
+**Performance:** 67% faster navigation, 42% smaller bundle  
 **[See What's New →](/whats-new/)**
 
 ---
@@ -136,6 +142,88 @@ Into 5 organized tabs instead of 5 separate screens.
 ### What languages does Empowr support?
 
 Currently: **English, Spanish, French, ASL**
+
+---
+
+## Personalization
+
+### How does personalization work?
+
+**The app learns your needs and customizes your experience based on your profile.**
+
+**What you set up:**
+- Your role (Person with Disability, Supporter, Ally, Family)
+- Disability categories (if applicable)
+- Symptoms you want to track
+- Wellness tools you prefer
+- Advocacy needs (legal help, benefits, housing, etc.)
+
+**What the app personalizes:**
+- **Home Screen** - Role-based greeting, top 3 recommendations
+- **Wellness Tab** - Your preferred tools appear first with ⭐
+- **Advocacy Tab** - Content prioritized to your needs
+
+**[Full setup guide →](/user-guide/#personalization-setup)**
+
+---
+
+### Is my personalization data private?
+
+**Yes! Your privacy is guaranteed:**
+
+✅ All data stays on your device by default  
+✅ Optional cloud sync (only if you connect Google Drive or sign in to Firebase)  
+✅ No third parties ever see your data  
+✅ You can view, edit, or delete anytime  
+✅ GDPR/PIPEDA compliant
+
+**Beta ML Tracking** (optional, off by default):
+- Opt-in only for pattern learning
+- Anonymized (no personally identifiable info)
+- Helps build future AI features
+- You control all data
+
+---
+
+### How do I set up personalization?
+
+**Step-by-step:**
+
+1. Go to **Settings** → **Profile** → **Edit Profile**
+2. Select your role (PWD, Supporter, Ally, Family)
+3. Choose your details:
+   - Disability categories (if PWD)
+   - Symptoms to track
+   - Wellness tools you want highlighted
+   - Advocacy needs
+4. Click **SAVE**
+
+Personalization happens immediately!
+
+**[Detailed guide →](/user-guide/#personalization-setup)**
+
+---
+
+### Can I change my personalization settings?
+
+**Yes! Update anytime:**
+
+Settings → Profile → Edit Profile → Make changes → SAVE
+
+All changes take effect immediately. Your experience will update to match your new selections.
+
+---
+
+### What if I don't set up personalization?
+
+**The app still works perfectly!**
+
+Without personalization:
+- You see all features (not just recommended ones)
+- No role-based greetings
+- Tools organized by category (not preference)
+
+It's completely optional, but highly recommended for the best experience.
 
 ---
 

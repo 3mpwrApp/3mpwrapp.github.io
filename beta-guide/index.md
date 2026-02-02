@@ -15,7 +15,7 @@ Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join 
 
 > 📱 **New to Beta Testing?** No worries! This guide is designed for testers of all experience levels. If you can use a smartphone, you can beta test!
 
-> 🎉 **January 2026 Update:** Week 3 PowerTools complete! Wellness Hub with 6 categories consolidating 41 tools, Document Management System, Wellness Check System, Legal Action Hub, and Ally & Support Network all live. 721 tests passing, 0 errors, 0 warnings. Project 97% complete. **NEW: All wellness tools organized into intuitive categories, support groups with advanced filtering, and seamless document management!**
+> 🎉 **February 2026 Update:** Comprehensive Personalization System live! App now tailors to your role, disabilities, and preferences. PowerTools complete with 5 hubs consolidating 60+ features. Performance gains: 67% faster navigation, 42% smaller bundle. 721 tests passing, 0 errors, 0 warnings. Project 97% complete. **NEW: Profile-driven personalization, recommended tools, prioritized content, and ML beta tracking!**
 
 > 📖 **Resources for Testers:**  
 > [User Guide](/user-guide/) - Step-by-step tutorials for all features  
@@ -69,7 +69,22 @@ Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join 
 
 ## 🧪 What to Test
 
-### 🆕 **PRIORITY: January 2026 PowerTools** (Test These First!)
+### 🆕 **PRIORITY: February 2026 Personalization** (Test This First!)
+
+**🌟 Personalization System (20 minutes)** → [User Guide: Personalization](/user-guide/#personalization-setup)
+- Go to Settings → Profile → Edit Profile
+- Select your role (Person with Disability, Supporter, Ally, or Family)
+- Choose disability categories (if PWD)
+- Select 3-5 wellness tools you want highlighted
+- Choose 3-5 advocacy needs
+- Click SAVE
+- Return to Home screen - verify personalized greeting appears
+- Go to Wellness tab - check if your tools appear first with ⭐
+- Go to Advocacy tab - verify your needs are shown
+- Close app completely, reopen - confirm personalization persists
+- **Report:** Does personalization work? Are recommendations helpful?
+
+### **January 2026 PowerTools** (Test These Next)
 
 **🌟 Wellness Hub (15 minutes)** → [User Guide: Wellness Hub](/user-guide/#wellness-hub)
 - Go to Wellness tab → Browse 6 categories

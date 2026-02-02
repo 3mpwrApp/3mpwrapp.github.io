@@ -10,12 +10,13 @@ description: Explore 3mpwr App's comprehensive features designed to empower your
 
 # 3mpwr App Features
 
-**Version:** 4.4 (PowerTools Complete) | **Status:** 97% Complete | **Last Updated:** January 15, 2026
+**Version:** 1.1.0 (Comprehensive Personalization) | **Status:** 97% Complete | **Last Updated:** February 2, 2026
 
-Your complete toolkit for disability advocacy, community connection, and system navigation. **60+ features** designed to empower you while protecting your privacy.
+Your complete toolkit for disability advocacy, community connection, and system navigation. **60+ features** organized into 5 PowerTools hubs, now **personalized to your needs**.
 
-> 🆕 **Latest Updates:** PowerTools complete! [See What's New →](/whats-new/)  
-> 📖 **How to Use:** Each feature links to detailed instructions in our [User Guide →](/user-guide/)
+> 🆕 **Latest Updates:** Comprehensive Personalization System live! [See What's New →](/whats-new/)  
+> 📖 **How to Use:** Each feature links to detailed instructions in our [User Guide →](/user-guide/)  
+> ⚡ **Performance:** 67% faster navigation, 42% smaller download
 
 ---
 
@@ -40,6 +41,29 @@ Choose the right feature set for your needs and energy level:
 **🚀 Power User Mode (150+ features)** - Everything unlocked
 
 **[Learn how to switch modes →](/user-guide/#complexity-mode)**
+
+---
+
+## 🌟 Personalization (NEW!)
+
+### Profile-Driven Experience
+The app now learns your needs and customizes your entire experience:
+
+- **Personalized Home Screen** - Role-based greetings ("Good morning! Welcome back" for PWDs)
+- **Recommended Tools** - Your preferred wellness tools appear first with ⭐ highlighting
+- **Prioritized Content** - Advocacy resources matched to your exact needs
+- **Smart Defaults** - Symptom tracking pre-populated with your conditions
+- **12 Personalization Fields** - Role, disabilities, preferences, symptoms, advocacy needs, energy patterns
+
+**How to Set Up:**
+1. Settings → Profile → Edit
+2. Select your role (PWD, Supporter, Ally, Family)
+3. Choose your details (disabilities, wellness preferences, advocacy needs)
+4. Save - personalization happens automatically!
+
+**Privacy First:** All data stays on your device. Optional cloud sync to Google Drive or Firebase.
+
+**[Learn more about personalization →](/user-guide/#personalization-setup)**
 
 ---
 

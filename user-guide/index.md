@@ -10,13 +10,14 @@ lastUpdated: 2026-01-15
 
 # 3mpwrApp — User Guide
 
-**Version 4.4 (PowerTools Complete)** | **Last Updated:** January 15, 2026
+**Version 1.1.0 (Comprehensive Personalization)** | **Last Updated:** February 2, 2026
 
 Step-by-step tutorials for using all app features. Each section includes clear instructions, tips, and troubleshooting help.
 
-> 🆕 **What's New?** PowerTools complete! [See latest updates →](/whats-new/)  
+> 🆕 **What's New?** Comprehensive Personalization System! [See latest updates →](/whats-new/)  
 > 📋 **Feature List:** [Browse all features →](/features/)  
-> 🧪 **Beta Testing:** [Join our beta program →](/beta-guide/)
+> 🧪 **Beta Testing:** [Join our beta program →](/beta-guide/)  
+> ⚡ **Performance:** 67% faster, 42% smaller, fully personalized
 
 ---
 
@@ -37,6 +38,9 @@ Step-by-step tutorials for using all app features. Each section includes clear i
 ---
 
 ## Table of Contents
+
+### Getting Started
+- [Personalization Setup](#personalization-setup) - ⭐ NEW! Customize your experience
 
 ### PowerTools Hubs
 - [Wellness Hub](#wellness-hub) - 41 tools in 6 categories
@@ -68,6 +72,86 @@ Step-by-step tutorials for using all app features. Each section includes clear i
 - [Air-Gapped Mode](#air-gapped-mode) - Offline-first
 - [BYOC](#byoc) - Bring Your Own Cloud
 - [Data Ownership](#data-ownership) - You control everything
+
+---
+
+## Getting Started
+
+<a id="personalization-setup"></a>
+### 🌟 Personalization Setup (NEW!)
+
+**What it does:** Tailors the entire app experience to your role, disabilities, wellness preferences, and advocacy needs.
+
+**How to access:** Settings → Profile → Edit Profile
+
+**Step-by-Step:**
+
+1. **Select Your Role**
+   - **Person with Disability** - You have a disability or chronic condition
+   - **Supporter** - You support someone with a disability
+   - **Ally** - You advocate for disability rights
+   - **Family** - Family member of someone with a disability
+
+2. **Choose Your Details** (varies by role)
+   
+   **For Persons with Disabilities:**
+   - **Disability Categories** - Select all that apply (Chronic Pain, Fatigue, Mental Health, Mobility, Vision, Hearing, etc.)
+   - **Symptoms to Track** - What you want to monitor (Pain, Energy, Mood, Sleep, etc.)
+   - **Wellness Tools** - Features you want highlighted (Pain Tracker, Energy Tracker, Mood Logger, etc.)
+   - **Advocacy Needs** - Help you need (Benefits appeals, Legal help, Housing, Employment, Healthcare)
+   
+   **For Supporters/Allies/Family:**
+   - **Relationship Context** - How you connect to disability community
+   - **Advocacy Focus** - Areas you want to support
+   - **Tools to Prioritize** - Features most relevant to you
+
+3. **Additional Settings** (Optional)
+   - **Energy Patterns** - When you have most/least energy
+   - **Jurisdiction** - Your province/state for relevant legal info
+   - **Preferred Language** - English, French, Spanish, etc.
+   - **Accommodations** - Accessibility preferences
+
+4. **Save Your Profile**
+   - Click **SAVE** at bottom
+   - Personalization activates immediately
+   - All selections persist across app restarts
+
+**What Gets Personalized:**
+
+- **Home Screen**
+  - Role-based greeting ("Good morning! Welcome back" for PWDs)
+  - Top 3 recommended features
+  - Profile completion prompt if incomplete
+
+- **Wellness Tab**
+  - "⭐ Recommended For You" section
+  - Your preferred tools appear first
+  - Star icons highlight selections
+  - Contextual explanations
+
+- **Advocacy Tab**
+  - "⭐ Your Advocacy Needs" section
+  - Top 5 needs from your profile
+  - Resources prioritized to match
+  - Legal/benefits/housing content filtered
+
+**Data Privacy:**
+- ✅ All data stays on your device by default
+- ✅ Optional cloud sync (Google Drive or Firebase)
+- ✅ Opt-in for ML pattern learning (helps build future AI features)
+- ✅ You control all data
+- ✅ GDPR/PIPEDA compliant
+
+**Tips:**
+- Update your profile anytime as needs change
+- More selections = better personalization
+- Try different roles to see different experiences
+- All your data is always accessible to you
+
+**Troubleshooting:**
+- **Personalization not working?** → Close and reopen app
+- **Selections not saving?** → Check you clicked SAVE at bottom
+- **Want to reset?** → Settings → Profile → Reset Profile
 
 ---
 
