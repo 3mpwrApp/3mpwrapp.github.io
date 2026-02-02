@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-02T00:09:10.697Z",
+  "lastUpdated": "2026-02-02T06:19:53.432Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 10225,
+      "totalPosts": 10250,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-02T00:09:01.323Z"
+      "lastSeen": "2026-02-02T06:19:44.474Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 10161,
+      "totalPosts": 10186,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-02T00:09:03.943Z"
+      "lastSeen": "2026-02-02T06:19:46.590Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 10084,
+      "totalPosts": 10108,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-02-02T00:09:06.003Z"
+      "lastSeen": "2026-02-02T06:19:48.589Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 10268,
+      "totalPosts": 10293,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-02T00:09:07.663Z"
+      "lastSeen": "2026-02-02T06:19:50.450Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 10275,
+      "totalPosts": 10300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-02T00:09:09.692Z"
+      "lastSeen": "2026-02-02T06:19:52.428Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "OMG!\n\nOf all things to reduce the #risk of #LongCovid I would never have placed money on metformin but...here we are!\n\nFreaking amazing and so useful for everyone #CovidConscious and informed on #DisabilityJustice to begin advocating for",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 19,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Like you, we have been watching horrors unfold especially in Minnesota. We have been checking on our #MEAction Minnesota community and sending all our love and support. This situation is heartbreaking and sickening.\n\nTake action: makesmesick.org\n\n#pwME #Disability #DisabilityJustice #pwLC",
-      "author": "meactnet.bsky.social",
-      "engagement": 37,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Nearly a week after Toronto was hit by a historic snowstorm, many residents have resumed their day-to-day routines. \n\nBut for some, the city’s slow snow removal has created an ongoing #accessibility crisis — one that has left disabled residents trapped in their homes.\n\nnowtoronto.com/lifestyle/ac...",
-      "author": "nowtoronto.bsky.social",
-      "engagement": 23,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
       "author": "juliametraux.bsky.social",
@@ -319,6 +283,42 @@
       "text": "It would be cool if alt text could be encoded with metadata so that it just follows an image automatically.... \n\nA thought. \n\n#accessibility",
       "author": "tessa.germnetwork.com",
       "engagement": 21,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "OMG!\n\nOf all things to reduce the #risk of #LongCovid I would never have placed money on metformin but...here we are!\n\nFreaking amazing and so useful for everyone #CovidConscious and informed on #DisabilityJustice to begin advocating for",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 23,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Like you, we have been watching horrors unfold especially in Minnesota. We have been checking on our #MEAction Minnesota community and sending all our love and support. This situation is heartbreaking and sickening.\n\nTake action: makesmesick.org\n\n#pwME #Disability #DisabilityJustice #pwLC",
+      "author": "meactnet.bsky.social",
+      "engagement": 38,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "R Coding for Ecology chapter on cblindplotR 🎨\nShows how to create colourblind-friendly maps and visualizations in R.\n\ndoi.org/10.1007/978-...\n\n#RStats #DataViz #Accessibility #OpenScience #RSpatial",
+      "author": "jakubnowosad.com",
+      "engagement": 12,
       "hashtag": "Accessibility"
     },
     {
