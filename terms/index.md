@@ -10,6 +10,8 @@ description: The terms and conditions for using the 3mpwr website and app.
 
 # 3mpwrApp — Terms of Service
 
+**📺 NEW: [Watch: Getting Started with 3mpwr App - Install, Permissions & Privacy Explained (5 min) →](https://www.youtube.com/watch?v=4i6xPpik_6M)**
+
 **Last Updated: January 5, 2026**  
 **Version: 4.3 (January 2026 - Infrastructure & Production Ready)**
 

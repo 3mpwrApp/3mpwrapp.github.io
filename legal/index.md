@@ -11,6 +11,8 @@ description: All legal documents, policies, and compliance information for 3mpwr
 
 **All legal documents, policies, and compliance information in one place.**
 
+**📺 NEW: [Watch: Getting Started with 3mpwr App - Install, Permissions & Privacy Explained (5 min) →](https://www.youtube.com/watch?v=4i6xPpik_6M)**
+
 ---
 
 ## 📋 Core Legal Documents

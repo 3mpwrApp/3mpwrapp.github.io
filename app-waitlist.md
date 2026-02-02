@@ -14,6 +14,8 @@ permalink: /app-waitlist/
 
 **Be among the first to experience revolutionary accessibility features built BY and FOR the disability community.**
 
+**📺 NEW: [Watch: Getting Started with 3mpwr App - Install, Permissions & Privacy Explained (5 min) →](https://www.youtube.com/watch?v=4i6xPpik_6M)**
+
 ---
 
 ## 📱 What You're Joining

@@ -15,6 +15,8 @@ description: Our commitment to your privacy and 100% user data ownership.
 
 📖 **10 minute read** | ⚡ **Quick summary below**
 
+**📺 NEW: [Watch: Getting Started with 3mpwr App - Install, Permissions & Privacy Explained (5 min) →](https://www.youtube.com/watch?v=4i6xPpik_6M)**
+
 **Last updated: January 5, 2026**  
 **Version: 3.3 (January 2026 - Infrastructure & Security Improvements)**
 
