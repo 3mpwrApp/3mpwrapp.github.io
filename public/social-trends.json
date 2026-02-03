@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-03T12:06:26.564Z",
+  "lastUpdated": "2026-02-03T18:15:41.520Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 10375,
+      "totalPosts": 10400,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T12:06:17.304Z"
+      "lastSeen": "2026-02-03T18:15:31.617Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 10311,
+      "totalPosts": 10336,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T12:06:19.385Z"
+      "lastSeen": "2026-02-03T18:15:33.764Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 10230,
+      "totalPosts": 10255,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T12:06:21.550Z"
+      "lastSeen": "2026-02-03T18:15:36.500Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 10418,
+      "totalPosts": 10443,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T12:06:23.591Z"
+      "lastSeen": "2026-02-03T18:15:38.524Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 10425,
+      "totalPosts": 10450,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T12:06:25.560Z"
+      "lastSeen": "2026-02-03T18:15:40.516Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Like you, we have been watching horrors unfold especially in Minnesota. We have been checking on our #MEAction Minnesota community and sending all our love and support. This situation is heartbreaking and sickening.\n\nTake action: makesmesick.org\n\n#pwME #Disability #DisabilityJustice #pwLC",
-      "author": "meactnet.bsky.social",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "R Coding for Ecology chapter on cblindplotR 🎨\nShows how to create colourblind-friendly maps and visualizations in R.\n\ndoi.org/10.1007/978-...\n\n#RStats #DataViz #Accessibility #OpenScience #RSpatial",
-      "author": "jakubnowosad.com",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "It would be cool if alt text could be encoded with metadata so that it just follows an image automatically.... \n\nA thought. \n\n#accessibility",
-      "author": "tessa.germnetwork.com",
-      "engagement": 21,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "OMG!\n\nOf all things to reduce the #risk of #LongCovid I would never have placed money on metformin but...here we are!\n\nFreaking amazing and so useful for everyone #CovidConscious and informed on #DisabilityJustice to begin advocating for",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 23,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Like you, we have been watching horrors unfold especially in Minnesota. We have been checking on our #MEAction Minnesota community and sending all our love and support. This situation is heartbreaking and sickening.\n\nTake action: makesmesick.org\n\n#pwME #Disability #DisabilityJustice #pwLC",
-      "author": "meactnet.bsky.social",
-      "engagement": 38,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "R Coding for Ecology chapter on cblindplotR 🎨\nShows how to create colourblind-friendly maps and visualizations in R.\n\ndoi.org/10.1007/978-...\n\n#RStats #DataViz #Accessibility #OpenScience #RSpatial",
       "author": "jakubnowosad.com",
@@ -338,6 +290,54 @@
       "author": "juliametraux.bsky.social",
       "engagement": 342,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "To those who care about #Covid19, #PublicHealth, #DisabilityJustice: if you haven't listened to this episode of @deathpanel.bsky.social, you need to.\n\nOur carceral system serves as a reservoir & incubator for pathogens. If you think this isn't about you, you're wrong.\n\nsoundcloud.com/deathpanel/c...",
+      "author": "quarantegan.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "OMG!\n\nOf all things to reduce the #risk of #LongCovid I would never have placed money on metformin but...here we are!\n\nFreaking amazing and so useful for everyone #CovidConscious and informed on #DisabilityJustice to begin advocating for",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 23,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Like you, we have been watching horrors unfold especially in Minnesota. We have been checking on our #MEAction Minnesota community and sending all our love and support. This situation is heartbreaking and sickening.\n\nTake action: makesmesick.org\n\n#pwME #Disability #DisabilityJustice #pwLC",
+      "author": "meactnet.bsky.social",
+      "engagement": 40,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "🎉 Happy 1st Birthday, Art of Fauna! 🎉\n\nCelebrating a year with a special gift: \"The Lost Puzzles\". Available now!\n\n✨ No AI-slop. Just beautiful historical images\n♿ Accessibility-first design \n🏆 App Store & Apple Design Award Winner\n\n#indiedev #ArtofFauna #puzzlegames #a11y",
+      "author": "strasser.bsky.social",
+      "engagement": 21,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Sara Joy breaks down the HTML <dialog> element to show how it simplifies modals + overlays with less code and stronger semantics. A must-read for front-end devs pushing cleaner accessible UI. \n\nbuff.ly/mAFsskC \n\n#WebDevelopment #HTML #UIDesign #Accessibility #A11y #WebDev",
+      "author": "deconspray.bsky.social",
+      "engagement": 13,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 38
+      "count": 36
     },
     {
       "keyword": "a11y",
-      "count": 31
+      "count": 28
     },
     {
       "keyword": "disabilityjustice",
@@ -418,8 +418,8 @@
       "count": 7
     },
     {
-      "keyword": "disability",
-      "count": 6
+      "keyword": "thebarriersyoudontsee",
+      "count": 5
     }
   ]
 }
