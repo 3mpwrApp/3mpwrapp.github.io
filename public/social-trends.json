@@ -1,99 +1,45 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-03T06:14:31.986Z",
+  "lastUpdated": "2026-02-03T12:06:26.564Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 10350,
+      "totalPosts": 10375,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T06:14:22.254Z"
+      "lastSeen": "2026-02-03T12:06:17.304Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 10286,
+      "totalPosts": 10311,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T06:14:24.267Z"
+      "lastSeen": "2026-02-03T12:06:19.385Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 10205,
+      "totalPosts": 10230,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T06:14:26.646Z"
+      "lastSeen": "2026-02-03T12:06:21.550Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 10393,
+      "totalPosts": 10418,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T06:14:28.739Z"
+      "lastSeen": "2026-02-03T12:06:23.591Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 10400,
+      "totalPosts": 10425,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-03T06:14:30.982Z"
+      "lastSeen": "2026-02-03T12:06:25.560Z"
     }
   },
   "viralPosts": [
     {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "OMG!\n\nOf all things to reduce the #risk of #LongCovid I would never have placed money on metformin but...here we are!\n\nFreaking amazing and so useful for everyone #CovidConscious and informed on #DisabilityJustice to begin advocating for",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 23,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Like you, we have been watching horrors unfold especially in Minnesota. We have been checking on our #MEAction Minnesota community and sending all our love and support. This situation is heartbreaking and sickening.\n\nTake action: makesmesick.org\n\n#pwME #Disability #DisabilityJustice #pwLC",
-      "author": "meactnet.bsky.social",
-      "engagement": 37,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "It would be cool if alt text could be encoded with metadata so that it just follows an image automatically.... \n\nA thought. \n\n#accessibility",
-      "author": "tessa.germnetwork.com",
-      "engagement": 21,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 342,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "OMG!\n\nOf all things to reduce the #risk of #LongCovid I would never have placed money on metformin but...here we are!\n\nFreaking amazing and so useful for everyone #CovidConscious and informed on #DisabilityJustice to begin advocating for",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 23,
-      "hashtag": "DisabilityJustice"
-    },
-    {
       "text": "Like you, we have been watching horrors unfold especially in Minnesota. We have been checking on our #MEAction Minnesota community and sending all our love and support. This situation is heartbreaking and sickening.\n\nTake action: makesmesick.org\n\n#pwME #Disability #DisabilityJustice #pwLC",
       "author": "meactnet.bsky.social",
       "engagement": 38,
@@ -319,6 +265,60 @@
       "text": "Time to pencil it into your busy social calendars ... #id24 will take place on the 24 September 2026. Call for presentations will open in April ... but if you have an idea, or you'd like to help out as a guest host, get in touch!\n\ninclusivedesign24.org/2026/ \n\n#a11y #accessibility #inclusiveDesign",
       "author": "inclusivedesign24.bsky.social",
       "engagement": 16,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 342,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "OMG!\n\nOf all things to reduce the #risk of #LongCovid I would never have placed money on metformin but...here we are!\n\nFreaking amazing and so useful for everyone #CovidConscious and informed on #DisabilityJustice to begin advocating for",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 23,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Like you, we have been watching horrors unfold especially in Minnesota. We have been checking on our #MEAction Minnesota community and sending all our love and support. This situation is heartbreaking and sickening.\n\nTake action: makesmesick.org\n\n#pwME #Disability #DisabilityJustice #pwLC",
+      "author": "meactnet.bsky.social",
+      "engagement": 40,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Sara Joy breaks down the HTML <dialog> element to show how it simplifies modals + overlays with less code and stronger semantics. A must-read for front-end devs pushing cleaner accessible UI. \n\nbuff.ly/mAFsskC \n\n#WebDevelopment #HTML #UIDesign #Accessibility #A11y #WebDev",
+      "author": "deconspray.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "🎉 Happy 1st Birthday, Art of Fauna! 🎉\n\nCelebrating a year with a special gift: \"The Lost Puzzles\". Available now!\n\n✨ No AI-slop. Just beautiful historical images\n♿ Accessibility-first design \n🏆 App Store & Apple Design Award Winner\n\n#indiedev #ArtofFauna #puzzlegames #a11y",
+      "author": "strasser.bsky.social",
+      "engagement": 13,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Sara Joy breaks down the HTML <dialog> element to show how it simplifies modals + overlays with less code and stronger semantics. A must-read for front-end devs pushing cleaner accessible UI. \n\nbuff.ly/mAFsskC \n\n#WebDevelopment #HTML #UIDesign #Accessibility #A11y #WebDev",
+      "author": "deconspray.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Accessibility is not optional, it is foundational. Declan Chidlow explains why you cannot opt out without excluding people and adding risk. Read and share. \n\nbuff.ly/iFGxopj \n\n#DigitalAccessibility #InclusiveDesign #UX #ProductLeadership #AccessibilityMatters #ThoughtLeadership #A11y",
+      "author": "deconspray.bsky.social",
+      "engagement": 11,
       "hashtag": "A11y"
     },
     {
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 31
     },
     {
       "keyword": "disabilityjustice",
@@ -398,10 +398,6 @@
       "count": 11
     },
     {
-      "keyword": "ux",
-      "count": 10
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 9
     },
@@ -415,6 +411,10 @@
     },
     {
       "keyword": "disabilityjustice nico",
+      "count": 7
+    },
+    {
+      "keyword": "accessibility a11y",
       "count": 7
     },
     {
