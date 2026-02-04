@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Daily News Curation - 2026-02-04"
+date: 2026-02-04
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-02-04
+
+Curated 3 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.
+
+🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
+📍 Visit: https://linktr.ee/thedisabilitybulletin
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. As BC’s Universities Struggle, Students Are Ready to Fight
+A deep drop in international students has led to a funding crisis. Cuts can’t be the answer.
+📍 [Source](https://thetyee.ca/Opinion/2026/02/04/BC-Universities-Struggle-Students-Ready-Fight/)
+**Score:** 7.00
+
+### 2. BC Must Overhaul the Province’s Forestry Industry, Report Says
+A council created as part of the Greens’ decision to back the NDP says the government can’t ‘keep kicking this can down the road.’
+📍 [Source](https://thetyee.ca/News/2026/02/04/BC-Must-Overhaul-Forestry-Industry/)
+**Score:** 6.00
+
