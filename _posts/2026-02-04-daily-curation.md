@@ -24,13 +24,11 @@ Your source for disability rights news, advocacy updates, and community stories.
 
 ## Additional Stories
 
-### 1. As BC’s Universities Struggle, Students Are Ready to Fight
-A deep drop in international students has led to a funding crisis. Cuts can’t be the answer.
-📍 [Source](https://thetyee.ca/Opinion/2026/02/04/BC-Universities-Struggle-Students-Ready-Fight/)
-**Score:** 7.00
+### 1. Alberta’s two-tier health care bill is designed to kill public health care
+📍 [Source](https://rabble.ca/politics/canadian-politics/albertas-two-tier-health-care-bill-is-designed-to-kill-public-health-care/)
+**Score:** 14.40
 
-### 2. BC Must Overhaul the Province’s Forestry Industry, Report Says
-A council created as part of the Greens’ decision to back the NDP says the government can’t ‘keep kicking this can down the road.’
-📍 [Source](https://thetyee.ca/News/2026/02/04/BC-Must-Overhaul-Forestry-Industry/)
-**Score:** 6.00
+### 2. Manitoba Government Meets with Indigenous Leaders in Thompson to Discuss Churchill Plus, Capping Off Trip to Manitoba's North
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72597)
+**Score:** 9.50
 
