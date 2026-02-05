@@ -1,7 +1,7 @@
 {
   "date": "2026-02-05",
-  "timestamp": "2026-02-05T09:20:33.064Z",
-  "count": 9,
+  "timestamp": "2026-02-05T15:20:14.378Z",
+  "count": 1,
   "minScore": 3.5,
   "items": [
     {
@@ -9,63 +9,7 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-02-05T09:20:33.060Z"
-    },
-    {
-      "title": "Press Restrictions During Vancouver Decampment Violated Human Rights: Report",
-      "link": "https://thetyee.ca/News/2026/02/05/Press-Restrictions-Vancouver-Decampment-Violated-Human-Rights/",
-      "description": "A BC human rights inquiry also found that the police board ‘abdicated its legal responsibility’ when investigating complaints.",
-      "score": 7,
-      "pubDate": "Thu, 05 Feb 2026 08:10:00 +0000"
-    },
-    {
-      "title": "As BC’s Universities Struggle, Students Are Ready to Fight",
-      "link": "https://thetyee.ca/Opinion/2026/02/04/BC-Universities-Struggle-Students-Ready-Fight/",
-      "description": "A deep drop in international students has led to a funding crisis. Cuts can’t be the answer.",
-      "score": 7,
-      "pubDate": "Wed, 04 Feb 2026 08:20:00 +0000"
-    },
-    {
-      "title": "BC Must Overhaul the Province’s Forestry Industry, Report Says",
-      "link": "https://thetyee.ca/News/2026/02/04/BC-Must-Overhaul-Forestry-Industry/",
-      "description": "A council created as part of the Greens’ decision to back the NDP says the government can’t ‘keep kicking this can down the road.’",
-      "score": 6,
-      "pubDate": "Wed, 04 Feb 2026 08:10:00 +0000"
-    },
-    {
-      "title": "Manitoba Government Delivers Record Number of Hip and Knee Surgeries",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72518",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Wed, 28 Jan 2026 14:24:00 CST"
-    },
-    {
-      "title": "Fighting Cancer, Facing Deportation and Denied Health Care",
-      "link": "https://thetyee.ca/News/2026/02/05/Fighting-Cancer-Facing-Deportation-Denied-Health-Care/",
-      "description": "Francisco Barahona is one of many people denied treatment when they can’t get MSP coverage.",
-      "score": 6.9,
-      "pubDate": "Thu, 05 Feb 2026 08:40:00 +0000"
-    },
-    {
-      "title": "UCP Warns of Bad-News Budget, but Denies Responsibility",
-      "link": "https://thetyee.ca/Opinion/2026/02/05/UCP-Warns-Bad-News-Budget/",
-      "description": "And Danielle Smith pushes for more control of judges.",
-      "score": 4.5,
-      "pubDate": "Thu, 05 Feb 2026 08:20:00 +0000"
-    },
-    {
-      "title": "BC Halts Plans to Make Polluters Pay for Cleanup Costs",
-      "link": "https://thetyee.ca/News/2026/02/03/BC-Halts-Plans-Make-Polluters-Pay-Cleanup/",
-      "description": "The province billed its Public Interest Bonding Strategy as a key step to protect the public from massive cleanup bills. Now it’s on hold.",
-      "score": 3.5999999999999996,
-      "pubDate": "Tue, 03 Feb 2026 08:10:00 +0000"
-    },
-    {
-      "title": "Measles Update #72",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72517",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Wed, 28 Jan 2026 14:26:00 CST"
+      "pubDate": "2026-02-05T15:20:14.376Z"
     }
   ]
 }
