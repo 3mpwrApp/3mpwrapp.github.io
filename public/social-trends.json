@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-06T06:14:44.488Z",
+  "lastUpdated": "2026-02-06T12:07:09.603Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
@@ -340,86 +340,5 @@
       "hashtag": "CripTheVote"
     }
   ],
-  "emergingTopics": [
-    {
-      "keyword": "disabilityrights",
-      "count": 46
-    },
-    {
-      "keyword": "accessibility",
-      "count": 34
-    },
-    {
-      "keyword": "a11y",
-      "count": 28
-    },
-    {
-      "keyword": "cripthevote",
-      "count": 26
-    },
-    {
-      "keyword": "disabilityjustice",
-      "count": 26
-    },
-    {
-      "keyword": "altcitizen",
-      "count": 18
-    },
-    {
-      "keyword": "disabilityrebellion",
-      "count": 18
-    },
-    {
-      "keyword": "disabilityrights disabilityrebellion",
-      "count": 18
-    },
-    {
-      "keyword": "cripthevote disabilityrights",
-      "count": 16
-    },
-    {
-      "keyword": "foxtakedown",
-      "count": 12
-    },
-    {
-      "keyword": "stoptheliesfox",
-      "count": 10
-    },
-    {
-      "keyword": "virtual",
-      "count": 10
-    },
-    {
-      "keyword": "foxlies",
-      "count": 10
-    },
-    {
-      "keyword": "stoptrump",
-      "count": 10
-    },
-    {
-      "keyword": "wearetheflood",
-      "count": 10
-    },
-    {
-      "keyword": "50501movement",
-      "count": 10
-    },
-    {
-      "keyword": "disabilityrebellion stoptrump",
-      "count": 10
-    },
-    {
-      "keyword": "disabilityjustice nico",
-      "count": 8
-    },
-    {
-      "keyword": "citizenportal",
-      "count": 4
-    },
-    {
-      "keyword": "autism",
-      "count": 4
-    }
-  ]
+  "emergingTopics": []
 }
