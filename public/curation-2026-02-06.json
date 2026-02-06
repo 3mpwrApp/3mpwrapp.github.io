@@ -1,7 +1,7 @@
 {
   "date": "2026-02-06",
-  "timestamp": "2026-02-06T15:21:03.043Z",
-  "count": 1,
+  "timestamp": "2026-02-06T21:13:34.630Z",
+  "count": 16,
   "minScore": 3.5,
   "items": [
     {
@@ -9,7 +9,112 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-02-06T15:21:03.041Z"
+      "pubDate": "2026-02-06T21:13:34.627Z"
+    },
+    {
+      "title": "After a Tyee Report, BC Cancer Will Treat Francisco Barahona",
+      "link": "https://thetyee.ca/News/2026/02/06/After-Tyee-Report-BC-Cancer-Will-Treat-Francisco-Barahona/",
+      "description": "He had been denied health care after 15 years in Canada. And still faces deportation Wednesday.",
+      "score": 22.1,
+      "pubDate": "Fri, 06 Feb 2026 19:47:00 +0000"
+    },
+    {
+      "title": "Even Full-Time Workers Struggle to Afford Food in Canada: Study",
+      "link": "https://thetyee.ca/News/2026/02/06/Even-Full-Time-Workers-Struggle-Afford-Food/",
+      "description": "Researcher Tim Li says it’s a sign that wages aren’t keeping up with inflation.",
+      "score": 15.6,
+      "pubDate": "Fri, 06 Feb 2026 08:30:00 +0000"
+    },
+    {
+      "title": "Controversial Kamloops Mayor Loses ‘Unbelievable’ Court Ruling",
+      "link": "https://thetyee.ca/News/2026/02/06/Kamloops-Mayor-Loses-Court-Ruling/",
+      "description": "Citing the need to protect political speech, a judge threw out Reid Hamer-Jackson’s defamation lawsuit against a council opponent.",
+      "score": 10,
+      "pubDate": "Fri, 06 Feb 2026 08:20:00 +0000"
+    },
+    {
+      "title": "‘Canada has a culture of silence. And we need to break that silence.’",
+      "link": "https://rabble.ca/podcast/canada-migrant-workers-2026/",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Fri, 06 Feb 2026 17:19:04 +0000"
+    },
+    {
+      "title": "Smashing Barriers to Health Care for Black Seniors",
+      "link": "https://thetyee.ca/News/2026/02/05/Smashing-Health-Care-Barriers-Black-Seniors/",
+      "description": "The system wasn’t designed with Black people in mind. Elvenia Gray-Sandiford has a plan to change that. A Tyee Q&A.",
+      "score": 11.1,
+      "pubDate": "Thu, 05 Feb 2026 21:14:00 +0000"
+    },
+    {
+      "title": "Manitoba Government Tables Regulatory Accountability Report",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72520",
+      "description": "",
+      "score": 12,
+      "pubDate": "Wed, 28 Jan 2026 16:30:00 CST"
+    },
+    {
+      "title": "Manitoba Government Donates Additional $4 Million From U.S. Liquor Sales to Children's Health and Nutrition",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72522",
+      "description": "",
+      "score": 12,
+      "pubDate": "Thu, 29 Jan 2026 13:18:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests $11.4 Million to Boost Municipal Fire Safety",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72521",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Thu, 29 Jan 2026 11:23:00 CST"
+    },
+    {
+      "title": "Manitoba Government Takes Further Action to Strengthen School Safety",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72519",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 28 Jan 2026 15:17:00 CST"
+    },
+    {
+      "title": "Ontario government told to pay compensation for illegal wage controls",
+      "link": "https://rabble.ca/podcast/ontario-government-told-to-pay-compensation-for-illegal-wage-controls/",
+      "description": "",
+      "score": 4,
+      "pubDate": "Fri, 06 Feb 2026 17:58:12 +0000"
+    },
+    {
+      "title": "Inside the Far-Right Push to Influence Canadian Political Parties",
+      "link": "https://thetyee.ca/News/2026/02/06/Far-Right-Push-Influence-Canadian-Political-Parties/",
+      "description": "A conference call shows a political operative with past Conservative connections advising several white nationalist groups.",
+      "score": 4.5,
+      "pubDate": "Fri, 06 Feb 2026 08:40:00 +0000"
+    },
+    {
+      "title": "Measles Update #73",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72523",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Thu, 29 Jan 2026 14:59:00 CST"
+    },
+    {
+      "title": "Measles Update #71",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72497",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 27 Jan 2026 14:41:00 CST"
+    },
+    {
+      "title": "Measles Update #70",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72478",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Mon, 26 Jan 2026 13:53:00 CST"
+    },
+    {
+      "title": "Measles Update #69",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72458",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Thu, 22 Jan 2026 15:51:00 CST"
     }
   ]
 }
