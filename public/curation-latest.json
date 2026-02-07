@@ -1,7 +1,7 @@
 {
   "date": "2026-02-07",
-  "timestamp": "2026-02-07T15:10:21.046Z",
-  "count": 1,
+  "timestamp": "2026-02-07T21:11:21.835Z",
+  "count": 9,
   "minScore": 3.5,
   "items": [
     {
@@ -9,7 +9,63 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-02-07T15:10:21.044Z"
+      "pubDate": "2026-02-07T21:11:21.832Z"
+    },
+    {
+      "title": "Intake for 2026-27 Manitoba Accessibility Fund Now Open",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72525",
+      "description": "",
+      "score": 12.75,
+      "pubDate": "Fri, 30 Jan 2026 10:30:00 CST"
+    },
+    {
+      "title": "Manitoba Government Streamlines Pathway to Bring More Pharmacists From U.S. and Other Jurisdictions",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72617",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Fri, 06 Feb 2026 15:49:00 CST"
+    },
+    {
+      "title": "Manitoba Government Pilots 24-7 Snow Clearing on Perimeter Highway",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72526",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Fri, 30 Jan 2026 12:40:00 CST"
+    },
+    {
+      "title": "If the Future Is AI, What Happens to the Humanities?",
+      "link": "https://thetyee.ca/Culture/2026/02/06/If-Future-AI-What-Happens-Humanities/",
+      "description": "A college instructor responds to a push to integrate the new tech in his workplace.",
+      "score": 4,
+      "pubDate": "Sat, 07 Feb 2026 01:20:00 +0000"
+    },
+    {
+      "title": "Stephen Harper should say more on Alberta separation issue",
+      "link": "https://rabble.ca/politics/canadian-politics/stephen-harper-should-say-more-on-alberta-separation-issue/",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Fri, 06 Feb 2026 21:28:38 +0000"
+    },
+    {
+      "title": "Join Us at Two Author Events This Week",
+      "link": "https://thetyee.ca/Culture/2026/02/06/Join-Us-Two-Author-Events/",
+      "description": "The Tyee’s Jackie Wong and Harrison Mooney are hosting back-to-back book talks at the Vancouver Public Library.",
+      "score": 3.9000000000000004,
+      "pubDate": "Sat, 07 Feb 2026 01:30:00 +0000"
+    },
+    {
+      "title": "Measles Update #76",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72618",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Fri, 06 Feb 2026 16:31:00 CST"
+    },
+    {
+      "title": "Measles Update  #74",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72527",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Fri, 30 Jan 2026 14:57:00 CST"
     }
   ]
 }
