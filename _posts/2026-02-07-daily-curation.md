@@ -1,0 +1,60 @@
+---
+layout: post
+title: "Daily News Curation - 2026-02-07"
+date: 2026-02-07
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-02-07
+
+Curated 9 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.
+
+🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
+📍 Visit: https://linktr.ee/thedisabilitybulletin
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Intake for 2026-27 Manitoba Accessibility Fund Now Open
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72525)
+**Score:** 12.75
+
+### 2. Manitoba Government Streamlines Pathway to Bring More Pharmacists From U.S. and Other Jurisdictions
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72617)
+**Score:** 7.50
+
+### 3. Manitoba Government Pilots 24-7 Snow Clearing on Perimeter Highway
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72526)
+**Score:** 7.50
+
+### 4. If the Future Is AI, What Happens to the Humanities?
+A college instructor responds to a push to integrate the new tech in his workplace.
+📍 [Source](https://thetyee.ca/Culture/2026/02/06/If-Future-AI-What-Happens-Humanities/)
+**Score:** 4.00
+
+### 5. Stephen Harper should say more on Alberta separation issue
+📍 [Source](https://rabble.ca/politics/canadian-politics/stephen-harper-should-say-more-on-alberta-separation-issue/)
+**Score:** 4.50
+
+### 6. Join Us at Two Author Events This Week
+The Tyee’s Jackie Wong and Harrison Mooney are hosting back-to-back book talks at the Vancouver Public Library.
+📍 [Source](https://thetyee.ca/Culture/2026/02/06/Join-Us-Two-Author-Events/)
+**Score:** 3.90
+
+### 7. Measles Update #76
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72618)
+**Score:** 4.50
+
+### 8. Measles Update  #74
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72527)
+**Score:** 4.50
+
