@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-08T06:14:50.704Z",
+  "lastUpdated": "2026-02-08T12:03:33.181Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 10800,
+      "totalPosts": 10825,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-08T06:14:41.612Z"
+      "lastSeen": "2026-02-08T12:03:23.404Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 10736,
+      "totalPosts": 10761,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-08T06:14:43.759Z"
+      "lastSeen": "2026-02-08T12:03:25.585Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 10655,
+      "totalPosts": 10680,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-08T06:14:45.828Z"
+      "lastSeen": "2026-02-08T12:03:27.752Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 10843,
+      "totalPosts": 10868,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-08T06:14:47.684Z"
+      "lastSeen": "2026-02-08T12:03:29.983Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 10850,
+      "totalPosts": 10875,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-08T06:14:49.699Z"
+      "lastSeen": "2026-02-08T12:03:32.177Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Great post by @stacykess.bsky.social @equalaccesspublicmedia.org on how to write #AltText in a journalism context 👇🏽\n\nFYI for those new to journalism terms (like me!): a \"cutline\" is a caption that accompanies photos and other visuals, often placed underneath the visual.\n\n#a11y",
-      "author": "silviacanelon.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "On the off chance you were busy yesterday. I will never forget her harrowing testimony. This is just a sliver. But the bodies reference is stunning. Harsh reality right here. #pinks #disabilityrights #ResistRebelRefuse #momsky #ViolatingCivilRights daily!",
-      "author": "aliceknew.bsky.social",
-      "engagement": 79,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "THIS: “Living in a city that you know has the resources, and still dealing with these issues, shows just how poorly cities are ready to deal with accessibility issues” - @seemiaroll.bsky.social  \n\nIt doesn’t have to be this way. #Ableism #DisabilityJustice\n\nwww.motherjones.com/politics/202...",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "To those who care about #Covid19, #PublicHealth, #DisabilityJustice: if you haven't listened to this episode of @deathpanel.bsky.social, you need to.\n\nOur carceral system serves as a reservoir & incubator for pathogens. If you think this isn't about you, you're wrong.\n\nsoundcloud.com/deathpanel/c...",
-      "author": "quarantegan.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "OMG!\n\nOf all things to reduce the #risk of #LongCovid I would never have placed money on metformin but...here we are!\n\nFreaking amazing and so useful for everyone #CovidConscious and informed on #DisabilityJustice to begin advocating for",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 24,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "\"It’s a vicious cycle; people attend unsafe events. They become #disabled with #LongCOVID. They’re too sick to attend events. They’re too sick to demand safety and #accessibility ..More people drop out of public life.\": buff.ly/OTGatVX\n\nby @juliadoubleday.bsky.social\n#LongHauler #disability",
       "author": "achronicvoice.com",
@@ -338,6 +290,54 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "On the off chance you were busy yesterday. I will never forget her harrowing testimony. This is just a sliver. But the bodies reference is stunning. Harsh reality right here. #pinks #disabilityrights #ResistRebelRefuse #momsky #ViolatingCivilRights daily!",
+      "author": "aliceknew.bsky.social",
+      "engagement": 79,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "THIS: “Living in a city that you know has the resources, and still dealing with these issues, shows just how poorly cities are ready to deal with accessibility issues” - @seemiaroll.bsky.social  \n\nIt doesn’t have to be this way. #Ableism #DisabilityJustice\n\nwww.motherjones.com/politics/202...",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 20,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "To those who care about #Covid19, #PublicHealth, #DisabilityJustice: if you haven't listened to this episode of @deathpanel.bsky.social, you need to.\n\nOur carceral system serves as a reservoir & incubator for pathogens. If you think this isn't about you, you're wrong.\n\nsoundcloud.com/deathpanel/c...",
+      "author": "quarantegan.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "OMG!\n\nOf all things to reduce the #risk of #LongCovid I would never have placed money on metformin but...here we are!\n\nFreaking amazing and so useful for everyone #CovidConscious and informed on #DisabilityJustice to begin advocating for",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 24,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Harrison Ford, age 83½ Spotted Biking in Los Angeles on January 31, 2026.\nHe'll be breaking the law here in New Jersey...\n\n#ebikes #bikesky #equity #accessibility #mobility",
+      "author": "alanehill.com",
+      "engagement": 18,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -355,7 +355,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "cripthevote",
