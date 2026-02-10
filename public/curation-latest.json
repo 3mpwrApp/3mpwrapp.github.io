@@ -1,7 +1,7 @@
 {
   "date": "2026-02-10",
-  "timestamp": "2026-02-10T15:40:11.740Z",
-  "count": 1,
+  "timestamp": "2026-02-10T21:21:59.410Z",
+  "count": 8,
   "minScore": 3.5,
   "items": [
     {
@@ -9,7 +9,56 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-02-10T15:40:11.738Z"
+      "pubDate": "2026-02-10T21:21:59.407Z"
+    },
+    {
+      "title": "‘First Nations Would Not Exist Without Canada,’ Rustad Tells Crowd",
+      "link": "https://thetyee.ca/News/2026/02/10/First-Nations-Would-Not-Exist-Without-Canada-Rustad/",
+      "description": "Conservative MLAs held a town hall to criticize DRIPA. Community members and Indigenous leaders pushed back.",
+      "score": 13.5,
+      "pubDate": "Tue, 10 Feb 2026 08:40:00 +0000"
+    },
+    {
+      "title": "Dark Money, US Think Tanks and a Canadian TV Network",
+      "link": "https://thetyee.ca/Analysis/2026/02/10/Dark-Money-US-Think-Tanks-Canadian-TV-Network/",
+      "description": "The News Forum grows while broadcasting a lot of talking heads tied to the libertarian billionaire-backed Atlas Network.",
+      "score": 13,
+      "pubDate": "Tue, 10 Feb 2026 08:10:00 +0000"
+    },
+    {
+      "title": "Please Advise! Can Two Yale Bros Repair Canada-US Ties?",
+      "link": "https://thetyee.ca/Opinion/2026/02/09/Please-Advise-Bros-Repair-Canada-US-Ties/",
+      "description": "MP Jamil Jivani may be pals with JD Vance, says Dr. Steve. Luckily, he can’t actually make a deal.",
+      "score": 10.5,
+      "pubDate": "Mon, 09 Feb 2026 20:50:00 +0000"
+    },
+    {
+      "title": "Manitoba Government Updates Fire Safety Framework to Protect Residents and Staff During Sprinkler Upgrades",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72657",
+      "description": "",
+      "score": 12,
+      "pubDate": "Tue, 10 Feb 2026 12:06:00 CST"
+    },
+    {
+      "title": "Governments of Nunavut and Manitoba Meet on Shared Priorities",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72639",
+      "description": "",
+      "score": 8.5,
+      "pubDate": "Mon, 09 Feb 2026 15:50:00 CST"
+    },
+    {
+      "title": "When Will the UCP Come Clean on Separatist Goals?",
+      "link": "https://thetyee.ca/Opinion/2026/02/10/When-Will-UCP-Come-Clean-Separatist-Goals/",
+      "description": "Revelations about secret plans and separatist MLAs should shake Albertans out of complacency.",
+      "score": 3.9000000000000004,
+      "pubDate": "Tue, 10 Feb 2026 08:30:00 +0000"
+    },
+    {
+      "title": "Measles Update #77",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72640",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Mon, 09 Feb 2026 16:00:00 CST"
     }
   ]
 }
