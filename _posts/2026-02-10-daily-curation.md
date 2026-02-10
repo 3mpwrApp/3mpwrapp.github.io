@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Daily News Curation - 2026-02-10"
+date: 2026-02-10
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-02-10
+
+Curated 7 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.
+
+🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
+📍 Visit: https://linktr.ee/thedisabilitybulletin
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. ‘First Nations Would Not Exist Without Canada,’ Rustad Tells Crowd
+Conservative MLAs held a town hall to criticize DRIPA. Community members and Indigenous leaders pushed back.
+📍 [Source](https://thetyee.ca/News/2026/02/10/First-Nations-Would-Not-Exist-Without-Canada-Rustad/)
+**Score:** 13.50
+
+### 2. Dark Money, US Think Tanks and a Canadian TV Network
+The News Forum grows while broadcasting a lot of talking heads tied to the libertarian billionaire-backed Atlas Network.
+📍 [Source](https://thetyee.ca/Analysis/2026/02/10/Dark-Money-US-Think-Tanks-Canadian-TV-Network/)
+**Score:** 12.40
+
+### 3. Please Advise! Can Two Yale Bros Repair Canada-US Ties?
+MP Jamil Jivani may be pals with JD Vance, says Dr. Steve. Luckily, he can’t actually make a deal.
+📍 [Source](https://thetyee.ca/Opinion/2026/02/09/Please-Advise-Bros-Repair-Canada-US-Ties/)
+**Score:** 10.50
+
+### 4. Governments of Nunavut and Manitoba Meet on Shared Priorities
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72639)
+**Score:** 8.50
+
+### 5. When Will the UCP Come Clean on Separatist Goals?
+Revelations about secret plans and separatist MLAs should shake Albertans out of complacency.
+📍 [Source](https://thetyee.ca/Opinion/2026/02/10/When-Will-UCP-Come-Clean-Separatist-Goals/)
+**Score:** 3.90
+
+### 6. Measles Update #77
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72640)
+**Score:** 4.50
+
