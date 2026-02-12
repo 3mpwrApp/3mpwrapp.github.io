@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-02-12
 
-Curated 11 items from disability, accessibility, and social policy sources.
+Curated 1 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -21,49 +21,4 @@ Your source for disability rights news, advocacy updates, and community stories.
 📍 [Read More](https://linktr.ee/thedisabilitybulletin)
 
 ---
-
-## Additional Stories
-
-### 1. Why Does Vancouver Want a Global Defence Bank?
-Local business leaders promote Vancouver’s connections to Asia, but critics warn Canada could end up boosting the ‘war economy.’
-📍 [Source](https://thetyee.ca/News/2026/02/12/Vancouver-Global-Defence-Bank/)
-**Score:** 10.50
-
-### 2. Manitoba Government Meets with Indigenous Leaders in Thompson to Discuss Churchill Plus, Capping Off Trip to Manitoba's North
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72597)
-**Score:** 9.50
-
-### 3. Manitoba Government and Oceans North Announce Funding to Explore Establishment of a National Marine Conservation Area in Hudson Bay
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72577)
-**Score:** 7.50
-
-### 4. Manitoba Government Intervenes to Save Seniors' Homes and Preserve Jobs at Golden Door Geriatric Centre
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72559)
-**Score:** 7.50
-
-### 5. Manitoba Government Invests $57,000 in Youth Camp in Churchill
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72557)
-**Score:** 7.50
-
-### 6. Planning for Disaster? Consider Haida Wisdom
-A BC climate risk report highlights the connectedness of all things and sounds an alarm.
-📍 [Source](https://thetyee.ca/Analysis/2026/02/11/Planning-Disaster-Consider-Haida-Wisdom/)
-**Score:** 3.60
-
-### 7. AI Is the Elephant in the Newsroom. How Are Journalists Reacting?
-Artificial intelligence can't be ignored. But along with opportunities, it brings risks. A Tyee explainer.
-📍 [Source](https://thetyee.ca/News/2026/02/11/AI-Elephant-Newsroom/)
-**Score:** 4.50
-
-### 8. Measles Update #78
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72677)
-**Score:** 4.50
-
-### 9. Measles Update #75
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72558)
-**Score:** 4.50
-
-### 10. Work Begins at Four New Schools Under the Manitoba Jobs Agreement
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72477)
-**Score:** 4.50
 
