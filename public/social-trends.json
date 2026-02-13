@@ -1,110 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-12T18:15:33.630Z",
+  "lastUpdated": "2026-02-13T00:10:57.296Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 11225,
+      "totalPosts": 11250,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-12T18:15:24.793Z"
+      "lastSeen": "2026-02-13T00:10:46.585Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 11161,
+      "totalPosts": 11186,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-12T18:15:26.784Z"
+      "lastSeen": "2026-02-13T00:10:48.989Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 11077,
-      "recentPosts": 22,
+      "totalPosts": 11100,
+      "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2026-02-12T18:15:28.615Z"
+      "lastSeen": "2026-02-13T00:10:51.376Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 11268,
+      "totalPosts": 11293,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-12T18:15:30.497Z"
+      "lastSeen": "2026-02-13T00:10:53.855Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 11275,
+      "totalPosts": 11300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-12T18:15:32.627Z"
+      "lastSeen": "2026-02-13T00:10:56.292Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Chrissy Marshall on why she enjoyed the Bad Bunny performance while pointing out why captions are important.\n\n#Accessibility #ASL",
-      "author": "xirclebox.com",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Officially started working on *new* content for my upcoming accessibility workshop @smashingconf.com 💃\n\nApril 13th, Amsterdam\n\nHigh-level description and tickets are available already so you can grab yours now 🎟️ smashingconf.com/amsterdam-20...\n\n#a11y",
-      "author": "sarasoueidan.com",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Imagine spending millions of dollars for a #SuperBowl ad, then not spending the extra $100 to add captions to it, so 15% of the audience can't hear your message. #DisabilityJustice",
-      "author": "wyrmworksdale.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Imagine spending millions of dollars for a #SuperBowl ad, then not spending the extra $100 to add captions to it, so 15% of the audience can't hear your message. #DisabilityJustice",
-      "author": "wyrmworksdale.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Do games need easy mode to be accessible?\n\nIt's a difficult question to answer, which is why we've created this deep dive\n\nPlease, take the time to read & share your thoughts too. Every voice matters & helps raise awareness\n\n#accessibility\n\nRead: www.deargamers.net/features/do-...",
-      "author": "deargamers.bsky.social",
-      "engagement": 75,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
       "author": "juliametraux.bsky.social",
@@ -338,6 +272,72 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "21 hours ago\n\n\"madisontevlin: On a mission to make sure that, no matter what our differences are, we all get the chance to shine! ❤️\n\n#disabilityadvocate #representationmatters #inclusionmatters #inclusiveworkplace #inclusivity\"\n\n#DisabilitySky #DEI #WorkForce #Employment #DisabilityRights #Inclusion",
+      "author": "authorstuartmiller.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Unlearning is probably NEVER entirely done, but it's also not something we can achieve quickly because we feel like it, or because we're not up to the long-haul required. \n\nVital discussions of #ableism and #disabilityjustice here",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Imagine spending millions of dollars for a #SuperBowl ad, then not spending the extra $100 to add captions to it, so 15% of the audience can't hear your message. #DisabilityJustice",
+      "author": "wyrmworksdale.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’ve launched a research-based website that provides information about color blindness and low vision. It wouldn’t be complete without mentioning the WCAG and best practices for designing inclusive products. Head over to www.colorblind.fyi to learn more.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "The irony of only 'Large UI' not honouring the 'Large UI' setting. Fixed now, of course\n\n#Accessibility",
+      "author": "archangelsoftworks.co.uk",
+      "engagement": 16,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I’ve launched a research-based website that provides information about color blindness and low vision. It wouldn’t be complete without mentioning the WCAG and best practices for designing inclusive products. Head over to www.colorblind.fyi to learn more.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Iv also started adding my text to speach plugin #Dislectek to  #MASUKU \nUsing it in a real project is realy helping with usable feature requests and will feed back into the main package when its done. \n#puzzlegame #A11y #accessibility #gamedev #tts",
+      "author": "alastairlow.bsky.social",
+      "engagement": 13,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Shared this at dundee playtest mettup and the instant feedback was needs a dark mode. and color blind support so i added them.\n\n#MASUKU #puzzlegame #A11y #accessibility #gamedev",
+      "author": "alastairlow.bsky.social",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 35
+      "count": 37
     },
     {
       "keyword": "cripthevote",
@@ -359,7 +359,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "altcitizen",
@@ -411,14 +411,14 @@
     },
     {
       "keyword": "citizenportal",
-      "count": 8
-    },
-    {
-      "keyword": "digitalaccessibility",
-      "count": 7
+      "count": 9
     },
     {
       "keyword": "accessibility a11y",
+      "count": 8
+    },
+    {
+      "keyword": "inclusion",
       "count": 7
     }
   ]
