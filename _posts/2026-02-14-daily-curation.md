@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-02-14
 
-Curated 2 items from disability, accessibility, and social policy sources.
+Curated 1 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -21,10 +21,4 @@ Your source for disability rights news, advocacy updates, and community stories.
 📍 [Read More](https://linktr.ee/thedisabilitybulletin)
 
 ---
-
-## Additional Stories
-
-### 1. Measles Update #80
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72747)
-**Score:** 4.50
 
