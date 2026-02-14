@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-13T18:09:42.048Z",
+  "lastUpdated": "2026-02-14T00:10:05.145Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 11325,
+      "totalPosts": 11350,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-13T18:09:31.672Z"
+      "lastSeen": "2026-02-14T00:09:56.150Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 11261,
+      "totalPosts": 11286,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-13T18:09:34.320Z"
+      "lastSeen": "2026-02-14T00:09:58.191Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 11174,
+      "totalPosts": 11199,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-13T18:09:36.306Z"
+      "lastSeen": "2026-02-14T00:10:00.224Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 11368,
+      "totalPosts": 11393,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-13T18:09:38.354Z"
+      "lastSeen": "2026-02-14T00:10:02.249Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 11375,
+      "totalPosts": 11400,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-13T18:09:41.044Z"
+      "lastSeen": "2026-02-14T00:10:04.141Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "21 hours ago\n\n\"madisontevlin: On a mission to make sure that, no matter what our differences are, we all get the chance to shine! ❤️\n\n#disabilityadvocate #representationmatters #inclusionmatters #inclusiveworkplace #inclusivity\"\n\n#DisabilitySky #DEI #WorkForce #Employment #DisabilityRights #Inclusion",
-      "author": "authorstuartmiller.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Unlearning is probably NEVER entirely done, but it's also not something we can achieve quickly because we feel like it, or because we're not up to the long-haul required. \n\nVital discussions of #ableism and #disabilityjustice here",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Imagine spending millions of dollars for a #SuperBowl ad, then not spending the extra $100 to add captions to it, so 15% of the audience can't hear your message. #DisabilityJustice",
-      "author": "wyrmworksdale.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I’ve launched a research-based website that provides information about color blindness and low vision. It wouldn’t be complete without mentioning the WCAG and best practices for designing inclusive products. Head over to www.colorblind.fyi to learn more.\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "I’ve launched a research-based website that provides information about color blindness and low vision. It wouldn’t be complete without mentioning the WCAG and best practices for designing inclusive products. Head over to www.colorblind.fyi to learn more.\n\n#Accessibility #A11y",
       "author": "xirclebox.com",
@@ -338,6 +296,48 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "21 hours ago\n\n\"madisontevlin: On a mission to make sure that, no matter what our differences are, we all get the chance to shine! ❤️\n\n#disabilityadvocate #representationmatters #inclusionmatters #inclusiveworkplace #inclusivity\"\n\n#DisabilitySky #DEI #WorkForce #Employment #DisabilityRights #Inclusion",
+      "author": "authorstuartmiller.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Unlearning is probably NEVER entirely done, but it's also not something we can achieve quickly because we feel like it, or because we're not up to the long-haul required. \n\nVital discussions of #ableism and #disabilityjustice here",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Imagine spending millions of dollars for a #SuperBowl ad, then not spending the extra $100 to add captions to it, so 15% of the audience can't hear your message. #DisabilityJustice",
+      "author": "wyrmworksdale.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’ve launched a research-based website that provides information about color blindness and low vision. It wouldn’t be complete without mentioning the WCAG and best practices for designing inclusive products. Head over to www.colorblind.fyi to learn more.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,54 +347,54 @@
     },
     {
       "keyword": "accessibility",
-      "count": 43
+      "count": 41
     },
     {
       "keyword": "a11y",
-      "count": 33
-    },
-    {
-      "keyword": "cripthevote",
-      "count": 26
+      "count": 30
     },
     {
       "keyword": "disabilityjustice",
       "count": 25
     },
     {
+      "keyword": "cripthevote",
+      "count": 25
+    },
+    {
       "keyword": "altcitizen",
-      "count": 19
+      "count": 18
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 19
+      "count": 18
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 19
+      "count": 18
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 17
+      "count": 16
     },
     {
       "keyword": "foxtakedown",
-      "count": 13
-    },
-    {
-      "keyword": "stoptheliesfox",
-      "count": 11
-    },
-    {
-      "keyword": "virtual",
-      "count": 11
-    },
-    {
-      "keyword": "foxlies",
-      "count": 11
+      "count": 12
     },
     {
       "keyword": "citizenportal",
+      "count": 11
+    },
+    {
+      "keyword": "stoptheliesfox",
+      "count": 10
+    },
+    {
+      "keyword": "virtual",
+      "count": 10
+    },
+    {
+      "keyword": "foxlies",
       "count": 10
     },
     {
@@ -414,12 +414,12 @@
       "count": 10
     },
     {
-      "keyword": "accessibility a11y",
+      "keyword": "inclusion",
       "count": 9
     },
     {
-      "keyword": "inclusivedesign",
-      "count": 8
+      "keyword": "accessibility a11y",
+      "count": 9
     }
   ]
 }
