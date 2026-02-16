@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-16T06:19:51.953Z",
+  "lastUpdated": "2026-02-16T18:09:04.692Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 11575,
+      "totalPosts": 11600,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T06:19:43.574Z"
+      "lastSeen": "2026-02-16T18:08:55.508Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 11511,
+      "totalPosts": 11536,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T06:19:45.471Z"
+      "lastSeen": "2026-02-16T18:08:57.501Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 11418,
+      "totalPosts": 11443,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T06:19:47.493Z"
+      "lastSeen": "2026-02-16T18:08:59.496Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 11618,
+      "totalPosts": 11643,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T06:19:49.055Z"
+      "lastSeen": "2026-02-16T18:09:01.571Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 11625,
+      "totalPosts": 11650,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T06:19:50.949Z"
+      "lastSeen": "2026-02-16T18:09:03.688Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Unlearning is probably NEVER entirely done, but it's also not something we can achieve quickly because we feel like it, or because we're not up to the long-haul required. \n\nVital discussions of #ableism and #disabilityjustice here",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Imagine spending millions of dollars for a #SuperBowl ad, then not spending the extra $100 to add captions to it, so 15% of the audience can't hear your message. #DisabilityJustice",
-      "author": "wyrmworksdale.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Safari > Settings > Advanced > Tick the checkbox to use the Tab key like it should fucking work by default, Apple \n\n#keyboard #accessibility",
-      "author": "racheled.bsky.social",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "21 hours ago\n\n\"madisontevlin: On a mission to make sure that, no matter what our differences are, we all get the chance to shine! ❤️\n\n#disabilityadvocate #representationmatters #inclusionmatters #inclusiveworkplace #inclusivity\"\n\n#DisabilitySky #DEI #WorkForce #Employment #DisabilityRights #Inclusion",
       "author": "authorstuartmiller.bsky.social",
@@ -338,87 +302,123 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Unlearning is probably NEVER entirely done, but it's also not something we can achieve quickly because we feel like it, or because we're not up to the long-haul required. \n\nVital discussions of #ableism and #disabilityjustice here",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Hey @bluesky, my friend @christmascoffee.bsky.social  and others with visual impairment still cannot post since you put the draft option live.   \n\nPlease , please can you fix this or communicate with them your plans about this? \n\n#blindsky #disability #accessibility #inclusion #help",
+      "author": "dogtorapproximate.bsky.social",
+      "engagement": 16,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "\"Nothing About Us, Without Us\" is subject to the bias of those who use it to gatekeep. I was once denied participation because I don't have a perceived disability. \nBecause I don't \"look disabled\" was the primary criteria for the rejection in spite of my experience.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 46
+      "count": 47
     },
     {
       "keyword": "accessibility",
-      "count": 38
+      "count": 37
     },
     {
       "keyword": "disabilityjustice",
-      "count": 31
+      "count": 34
     },
     {
       "keyword": "a11y",
-      "count": 28
+      "count": 31
     },
     {
       "keyword": "cripthevote",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "altcitizen",
-      "count": 18
+      "count": 19
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 18
+      "count": 19
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 18
+      "count": 19
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 16
+      "count": 17
     },
     {
       "keyword": "foxtakedown",
-      "count": 12
+      "count": 11
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 10
     },
     {
       "keyword": "stoptheliesfox",
-      "count": 10
-    },
-    {
-      "keyword": "virtual",
-      "count": 10
-    },
-    {
-      "keyword": "foxlies",
-      "count": 10
-    },
-    {
-      "keyword": "stoptrump",
-      "count": 10
-    },
-    {
-      "keyword": "wearetheflood",
-      "count": 10
-    },
-    {
-      "keyword": "50501movement",
-      "count": 10
-    },
-    {
-      "keyword": "disabilityrebellion stoptrump",
-      "count": 10
-    },
-    {
-      "keyword": "citizenportal",
       "count": 9
     },
     {
-      "keyword": "more disabilityrights",
-      "count": 6
+      "keyword": "virtual",
+      "count": 9
     },
     {
-      "keyword": "disabilityjustice nico",
+      "keyword": "foxlies",
+      "count": 9
+    },
+    {
+      "keyword": "stoptrump",
+      "count": 9
+    },
+    {
+      "keyword": "wearetheflood",
+      "count": 9
+    },
+    {
+      "keyword": "50501movement",
+      "count": 9
+    },
+    {
+      "keyword": "disabilityrebellion stoptrump",
+      "count": 9
+    },
+    {
+      "keyword": "inclusivedesign",
+      "count": 8
+    },
+    {
+      "keyword": "citizenportal",
       "count": 6
     }
   ]
