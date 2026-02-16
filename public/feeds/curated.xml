@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 15 Feb 2026 21:11:00 GMT</lastBuildDate>
-    <pubDate>Sun, 15 Feb 2026 21:11:00 GMT</pubDate>
+    <lastBuildDate>Mon, 16 Feb 2026 15:20:59 GMT</lastBuildDate>
+    <pubDate>Mon, 16 Feb 2026 15:20:59 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -27,7 +27,53 @@
 
 🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
 📍 Visit: https://linktr.ee/thedisabilitybulletin]]></description>
-      <pubDate>Sun, 15 Feb 2026 21:11:00 GMT</pubDate>
+      <pubDate>Mon, 16 Feb 2026 15:20:59 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Supports That Build Stronger Families</title>
+      <link>https://thetyee.ca/Presents/2026/02/16/Supports-Build-Stronger-Families/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Presents/2026/02/16/Supports-Build-Stronger-Families/</guid>
+      <description><![CDATA[This Family Day, join Family Services of Greater Vancouver in helping to shape the future of our communities.]]></description>
+      <pubDate>Mon, 16 Feb 2026 08:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Streamlines Pathway to Bring More Pharmacists From U.S. and Other Jurisdictions</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=72617</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=72617</guid>
+      <pubDate>Fri, 06 Feb 2026 21:49:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Pilots 24-7 Snow Clearing on Perimeter Highway</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=72526</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=72526</guid>
+      <pubDate>Fri, 30 Jan 2026 18:40:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Measles Update #76</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=72618</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=72618</guid>
+      <pubDate>Fri, 06 Feb 2026 22:31:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Measles Update  #74</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=72527</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=72527</guid>
+      <pubDate>Fri, 30 Jan 2026 20:57:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
