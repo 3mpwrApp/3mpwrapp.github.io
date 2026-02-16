@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-16T00:09:40.115Z",
+  "lastUpdated": "2026-02-16T06:19:51.953Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 11550,
+      "totalPosts": 11575,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T00:09:31.600Z"
+      "lastSeen": "2026-02-16T06:19:43.574Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 11486,
+      "totalPosts": 11511,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T00:09:33.499Z"
+      "lastSeen": "2026-02-16T06:19:45.471Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 11393,
+      "totalPosts": 11418,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T00:09:35.403Z"
+      "lastSeen": "2026-02-16T06:19:47.493Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 11593,
+      "totalPosts": 11618,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T00:09:37.280Z"
+      "lastSeen": "2026-02-16T06:19:49.055Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 11600,
+      "totalPosts": 11625,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-16T00:09:39.111Z"
+      "lastSeen": "2026-02-16T06:19:50.949Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Unlearning is probably NEVER entirely done, but it's also not something we can achieve quickly because we feel like it, or because we're not up to the long-haul required. \n\nVital discussions of #ableism and #disabilityjustice here",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Imagine spending millions of dollars for a #SuperBowl ad, then not spending the extra $100 to add captions to it, so 15% of the audience can't hear your message. #DisabilityJustice",
-      "author": "wyrmworksdale.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Safari > Settings > Advanced > Tick the checkbox to use the Tab key like it should fucking work by default, Apple \n\n#keyboard #accessibility",
-      "author": "racheled.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "I’ve launched a research-based website that provides information about color blindness and low vision. It wouldn’t be complete without mentioning the WCAG and best practices for designing inclusive products. Head over to www.colorblind.fyi to learn more.\n\n#Accessibility #A11y",
-      "author": "xirclebox.com",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "21 hours ago\n\n\"madisontevlin: On a mission to make sure that, no matter what our differences are, we all get the chance to shine! ❤️\n\n#disabilityadvocate #representationmatters #inclusionmatters #inclusiveworkplace #inclusivity\"\n\n#DisabilitySky #DEI #WorkForce #Employment #DisabilityRights #Inclusion",
-      "author": "authorstuartmiller.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Unlearning is probably NEVER entirely done, but it's also not something we can achieve quickly because we feel like it, or because we're not up to the long-haul required. \n\nVital discussions of #ableism and #disabilityjustice here",
       "author": "hoydenspark.bsky.social",
@@ -338,6 +290,54 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Unlearning is probably NEVER entirely done, but it's also not something we can achieve quickly because we feel like it, or because we're not up to the long-haul required. \n\nVital discussions of #ableism and #disabilityjustice here",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Hey @bluesky, my friend @christmascoffee.bsky.social  and others with visual impairment still cannot post since you put the draft option live.   \n\nPlease , please can you fix this or communicate with them your plans about this? \n\n#blindsky #disability #accessibility #inclusion #help",
+      "author": "dogtorapproximate.bsky.social",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Due to my autism I need longer to process stimuli, so seeing a game in early access with the accessibility feature \"playable without quick time events\" makes me so happy! Quick time events can easily overstimulate me, so adding this makes the game playable for me.\n#Disability #Accessibility #GameDev",
+      "author": "virvavalkea.bsky.social",
+      "engagement": 25,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "\"Nothing About Us, Without Us\" is subject to the bias of those who use it to gatekeep. I was once denied participation because I don't have a perceived disability. \nBecause I don't \"look disabled\" was the primary criteria for the rejection in spite of my experience.\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "If you can, please also identify known WCAG conformance errors.\n\nWe don’t want another toast escapade where research failed to identify barriers & risks. Encoding broken patterns into the web platform helps no one.\n\nRespond to Keith or post to: github.com/openui/open-...\n\n#accessibility #a11y #HTML",
+      "author": "aardrian.bsky.social",
+      "engagement": 13,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -382,10 +382,6 @@
       "count": 12
     },
     {
-      "keyword": "citizenportal",
-      "count": 10
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 10
     },
@@ -414,11 +410,15 @@
       "count": 10
     },
     {
+      "keyword": "citizenportal",
+      "count": 9
+    },
+    {
       "keyword": "more disabilityrights",
       "count": 6
     },
     {
-      "keyword": "disabilityrights citizenportal",
+      "keyword": "disabilityjustice nico",
       "count": 6
     }
   ]
