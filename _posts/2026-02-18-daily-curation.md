@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-02-18
 
-Curated 7 items from disability, accessibility, and social policy sources.
+Curated 2 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -24,29 +24,7 @@ Your source for disability rights news, advocacy updates, and community stories.
 
 ## Additional Stories
 
-### 1. Canada Is Failing the Foreign-Aid Test
-We and other wealthy nations are pulling back on our funding. With disastrous effects.
-📍 [Source](https://thetyee.ca/Opinion/2026/02/18/Canada-Failing-Foreign-Aid-Test/)
-**Score:** 10.50
-
-### 2. ‘We Don’t Think They’re Serious’: Amazon Union Wants Mediation
-Unifor Local 114 says the company has stalled bargaining for its only group of unionized workers in Canada.
-📍 [Source](https://thetyee.ca/News/2026/02/18/Amazon-Union-Wants-Mediation/)
-**Score:** 10.50
-
-### 3. Manitoba Government Updates Fire Safety Framework to Protect Residents and Staff During Sprinkler Upgrades
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72657)
-**Score:** 12.00
-
-### 4. Governments of Nunavut and Manitoba Meet on Shared Priorities
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72639)
-**Score:** 8.50
-
-### 5. What happened to Alberta's ‘triage liason' doctors?
-📍 [Source](https://rabble.ca/politics/canadian-politics/what-happened-to-albertas-triage-liason-doctors/)
-**Score:** 5.00
-
-### 6. Measles Update #77
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72640)
-**Score:** 4.50
+### 1. The new country Alberta’s separatist minority is dreaming of would never be a real democracy
+📍 [Source](https://rabble.ca/politics/canadian-politics/the-new-country-albertas-separatist-minority-is-dreaming-of-would-never-be-a-real-democracy/)
+**Score:** 3.60
 
