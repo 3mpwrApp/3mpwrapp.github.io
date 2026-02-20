@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-20T12:34:20.331Z",
+  "lastUpdated": "2026-02-20T18:32:26.454Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 11925,
+      "totalPosts": 11950,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T12:34:10.164Z"
+      "lastSeen": "2026-02-20T18:32:15.978Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 11861,
+      "totalPosts": 11886,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T12:34:12.352Z"
+      "lastSeen": "2026-02-20T18:32:18.054Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 11768,
+      "totalPosts": 11793,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T12:34:14.657Z"
+      "lastSeen": "2026-02-20T18:32:20.404Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 11968,
+      "totalPosts": 11993,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T12:34:17.165Z"
+      "lastSeen": "2026-02-20T18:32:22.994Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 11975,
+      "totalPosts": 12000,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T12:34:19.327Z"
+      "lastSeen": "2026-02-20T18:32:25.450Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
-      "author": "mailbykite.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "The 17th (😮) #GAConf will be the Europe edition on April 27th-28th! Fully online, free to attend.\n\nTwo days of talks & networking, the central hub for the professional game accessibility community to come together, learn, share, & make connections.\n\nRegister at www.gaconf.com\n#gamedev #accessibility",
-      "author": "gaconf.bsky.social",
-      "engagement": 40,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Das Lustigste an Anton Rainer ist ja,wie er wirklich glaubt keine Schwurbelscheisse von sich zu geben, wenn er Behinderten ihre Grundrechte abspricht. Just for fun. \n#disabilityrights\n#ableism \n#Medienkrise",
-      "author": "darlingultra.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
       "author": "mailbykite.bsky.social",
@@ -338,24 +302,60 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
+      "author": "mailbykite.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I wrote for @zeroheight.com about the types of things automated accessibility checks can't detect when auditing and evaluating your design systems for accessibility. #a11y zeroheight.com/blog/design-...",
+      "author": "ericwbailey.website",
+      "engagement": 77,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "When it comes to automated #Accessibility, a lot of teams will go the simple route, like Axe. \nDid you know that in #PlayWright you can take your #A11y testing further? Check it out! \n\n#DEVCommunity @dev.to \n\ndev.to/steady5063/a...",
+      "author": "steady5063.bsky.social",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 53
+      "count": 52
     },
     {
       "keyword": "accessibility",
-      "count": 38
+      "count": 37
     },
     {
       "keyword": "disabilityjustice",
-      "count": 31
+      "count": 30
     },
     {
       "keyword": "a11y",
-      "count": 28
+      "count": 29
     },
     {
       "keyword": "cripthevote",
@@ -382,6 +382,14 @@
       "count": 12
     },
     {
+      "keyword": "inclusion",
+      "count": 10
+    },
+    {
+      "keyword": "ux",
+      "count": 10
+    },
+    {
       "keyword": "stoptheliesfox",
       "count": 10
     },
@@ -392,10 +400,6 @@
     {
       "keyword": "foxlies",
       "count": 10
-    },
-    {
-      "keyword": "inclusion",
-      "count": 9
     },
     {
       "keyword": "stoptrump",
@@ -414,12 +418,8 @@
       "count": 9
     },
     {
-      "keyword": "disabilityjustice nico",
+      "keyword": "accessibility a11y",
       "count": 7
-    },
-    {
-      "keyword": "healthpolicy",
-      "count": 6
     }
   ]
 }
