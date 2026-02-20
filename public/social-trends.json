@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-20T01:08:13.797Z",
+  "lastUpdated": "2026-02-20T06:41:46.413Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 11875,
+      "totalPosts": 11900,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T01:08:03.347Z"
+      "lastSeen": "2026-02-20T06:41:39.194Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 11811,
+      "totalPosts": 11836,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T01:08:05.413Z"
+      "lastSeen": "2026-02-20T06:41:40.702Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 11718,
+      "totalPosts": 11743,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T01:08:07.914Z"
+      "lastSeen": "2026-02-20T06:41:42.324Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 11918,
+      "totalPosts": 11943,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T01:08:10.425Z"
+      "lastSeen": "2026-02-20T06:41:43.890Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 11925,
+      "totalPosts": 11950,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-20T01:08:12.793Z"
+      "lastSeen": "2026-02-20T06:41:45.408Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Unlearning is probably NEVER entirely done, but it's also not something we can achieve quickly because we feel like it, or because we're not up to the long-haul required. \n\nVital discussions of #ableism and #disabilityjustice here",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "🎉 A win for accessibility! 🎉\n\nA tricky city centre ramp was causing some kinds of bikes to tip, especially for disabled cyclists. Dedicated follow-up got it fixed.\n\nhttps://www.bikeauckland.org.nz/news/bike-auckland-audit-gets-quay-st-cycleway-danger-spot-fixed/\n\n#Auckland\n#accessibility\n#cycling",
-      "author": "bikeauckland.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "It low-key makes me thrilled to see these posts. I wasn't even involved, but Caves of Qud is a roguelike accustomed to PC keyboard control schemes. \n\nThis is why #gamedesign #accessibility is important - because controller compatibility and key remapping is ALSO a part of it.",
-      "author": "foxdesign.tech",
-      "engagement": 22,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
-      "author": "mailbykite.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "🎉 A win for accessibility! 🎉\n\nA tricky city centre ramp was causing some kinds of bikes to tip, especially for disabled cyclists. Dedicated follow-up got it fixed.\n\nhttps://www.bikeauckland.org.nz/news/bike-auckland-audit-gets-quay-st-cycleway-danger-spot-fixed/\n\n#Auckland\n#accessibility\n#cycling",
-      "author": "bikeauckland.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
       "author": "juliametraux.bsky.social",
@@ -338,24 +290,72 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
+      "author": "mailbykite.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "When it comes to automated #Accessibility, a lot of teams will go the simple route, like Axe. \nDid you know that in #PlayWright you can take your #A11y testing further? Check it out! \n\n#DEVCommunity @dev.to \n\ndev.to/steady5063/a...",
+      "author": "steady5063.bsky.social",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I wrote for @zeroheight.com about the types of things automated accessibility checks can't detect when auditing and evaluating your design systems for accessibility. #a11y zeroheight.com/blog/design-...",
+      "author": "ericwbailey.website",
+      "engagement": 61,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "When it comes to automated #Accessibility, a lot of teams will go the simple route, like Axe. \nDid you know that in #PlayWright you can take your #A11y testing further? Check it out! \n\n#DEVCommunity @dev.to \n\ndev.to/steady5063/a...",
+      "author": "steady5063.bsky.social",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "SKAPA is the most challenging but also rewarding FE project I have undertaken (details 🔗👇)! I published the first version a year ago now.\n\nTo celebrate the anniversary I've given it a fresh coat of paint, #a11y support and added some text for curious minds and crawlers alike.  More to come soon!",
+      "author": "nmattia.bsky.social",
+      "engagement": 31,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 48
+      "count": 52
     },
     {
       "keyword": "accessibility",
-      "count": 33
+      "count": 36
     },
     {
       "keyword": "disabilityjustice",
-      "count": 29
+      "count": 31
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 26
     },
     {
       "keyword": "cripthevote",
@@ -414,11 +414,11 @@
       "count": 7
     },
     {
-      "keyword": "medicaid",
-      "count": 5
+      "keyword": "inclusion",
+      "count": 6
     },
     {
-      "keyword": "idd",
+      "keyword": "accessibility inclusion",
       "count": 5
     }
   ]
