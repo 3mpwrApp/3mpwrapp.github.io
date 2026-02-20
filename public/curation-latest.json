@@ -1,7 +1,7 @@
 {
   "date": "2026-02-20",
-  "timestamp": "2026-02-20T15:43:30.574Z",
-  "count": 1,
+  "timestamp": "2026-02-20T21:33:09.668Z",
+  "count": 15,
   "minScore": 3.5,
   "items": [
     {
@@ -9,7 +9,105 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-02-20T15:43:30.571Z"
+      "pubDate": "2026-02-20T21:33:09.664Z"
+    },
+    {
+      "title": "Two More Alberta Safe Consumption Sites Will Close. Advocates Fear the Worst",
+      "link": "https://thetyee.ca/News/2026/02/20/Two-More-Alberta-Safe-Consumption-Sites-Close/",
+      "description": "Although no deaths have been reported at any of the sites in Canada, the Alberta government claims they enable drug use.",
+      "score": 21.9,
+      "pubDate": "Fri, 20 Feb 2026 08:30:00 +0000"
+    },
+    {
+      "title": "Taxing Canada's ultra-wealthy",
+      "link": "https://rabble.ca/podcast/taxing-canadas-ultra-wealthy/",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Fri, 20 Feb 2026 18:16:55 +0000"
+    },
+    {
+      "title": "Health-Care Workers ‘Snooped’ Records of Lapu-Lapu Victims",
+      "link": "https://thetyee.ca/News/2026/02/19/Health-Care-Workers-Snooped-Records-Lapu-Lapu-Victims/",
+      "description": "Despite dozens of breaches, health authorities balked at notifying victims whose privacy was violated, report reveals.",
+      "score": 9.8,
+      "pubDate": "Thu, 19 Feb 2026 08:40:00 +0000"
+    },
+    {
+      "title": "Premier Smith Is Right That Judge Choices Are Partisan. Her Way Is Worse",
+      "link": "https://thetyee.ca/News/2026/02/19/Premier-Smith-Right-Judge-Choices-Partisan/",
+      "description": "Breaking down the controversy with ethical government expert Duff Conacher.",
+      "score": 8,
+      "pubDate": "Thu, 19 Feb 2026 08:10:00 +0000"
+    },
+    {
+      "title": "Manitoba Government Provides More Than $1.2 Million to Support Festivals in 2025-26",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72797",
+      "description": "",
+      "score": 9.9,
+      "pubDate": "Fri, 20 Feb 2026 11:51:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests $2 Million to Support Manitoba Families",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72717",
+      "description": "",
+      "score": 9.9,
+      "pubDate": "Thu, 12 Feb 2026 10:00:00 CST"
+    },
+    {
+      "title": "Manitoba Government Launches Grocery Study, Targets Predatory Pricing",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72697",
+      "description": "",
+      "score": 8.5,
+      "pubDate": "Wed, 11 Feb 2026 09:20:00 CST"
+    },
+    {
+      "title": "Manitoba Government Holds Summit to Combat Extortion",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72798",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Fri, 20 Feb 2026 14:45:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests $1.49 Million in Deloraine-Winchester Airport Upgrades",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72718",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Thu, 12 Feb 2026 14:45:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests More Than $767,000 to Protect Women, Gender-Diverse Manitobans Overcoming Gender-Based Violence",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72698",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 11 Feb 2026 10:53:00 CST"
+    },
+    {
+      "title": "BC Halts Construction of Seven Long-Term Care Facilities",
+      "link": "https://thetyee.ca/News/2026/02/20/BC-Halts-Construction-Seven-Long-Term-Care-Facilities/",
+      "description": "The province has to find a way to build beds for less, Health Minister Josie Osborne says.",
+      "score": 5.9,
+      "pubDate": "Fri, 20 Feb 2026 08:20:00 +0000"
+    },
+    {
+      "title": "Alberta Conservatives fume as Edmonton MP Matt Jeneroux jumps ship for the Liberals",
+      "link": "https://rabble.ca/politics/canadian-politics/alberta-conservatives-fume-as-edmonton-mp-matt-jeneroux-jumps-ship-for-the-liberals/",
+      "description": "",
+      "score": 5.8500000000000005,
+      "pubDate": "Fri, 20 Feb 2026 18:40:33 +0000"
+    },
+    {
+      "title": "Measles Update #81",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72762",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Wed, 18 Feb 2026 16:31:00 CST"
+    },
+    {
+      "title": "Measles Update #78",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72677",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 10 Feb 2026 15:49:00 CST"
     }
   ]
 }
