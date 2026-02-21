@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-21T01:06:22.679Z",
+  "lastUpdated": "2026-02-21T06:29:47.695Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 11975,
+      "totalPosts": 12000,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-21T01:06:13.883Z"
+      "lastSeen": "2026-02-21T06:29:40.163Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 11911,
+      "totalPosts": 11936,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-21T01:06:15.711Z"
+      "lastSeen": "2026-02-21T06:29:41.708Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 11818,
+      "totalPosts": 11843,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-21T01:06:17.741Z"
+      "lastSeen": "2026-02-21T06:29:43.346Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 12018,
+      "totalPosts": 12043,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-21T01:06:19.668Z"
+      "lastSeen": "2026-02-21T06:29:45.109Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 12025,
+      "totalPosts": 12050,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-21T01:06:21.674Z"
+      "lastSeen": "2026-02-21T06:29:46.692Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Das Lustigste an Anton Rainer ist ja,wie er wirklich glaubt keine Schwurbelscheisse von sich zu geben, wenn er Behinderten ihre Grundrechte abspricht. Just for fun. \n#disabilityrights\n#ableism \n#Medienkrise",
-      "author": "darlingultra.bsky.social",
-      "engagement": 16,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
-      "author": "mailbykite.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Birdability’s Blind Birder Bird-a-thon is now open for registration! Blind and low vision birders are invited to take part as solo or team members during this event, May 2-3, 2026. \n#birds #birding #spring #migration #accessibility \n\nwww.birdability.org/blind-birdat...",
-      "author": "birderk.bsky.social",
-      "engagement": 28,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "SKAPA is the most challenging but also rewarding FE project I have undertaken (details 🔗👇)! I published the first version a year ago now.\n\nTo celebrate the anniversary I've given it a fresh coat of paint, #a11y support and added some text for curious minds and crawlers alike.  More to come soon!",
-      "author": "nmattia.bsky.social",
-      "engagement": 28,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Das Lustigste an Anton Rainer ist ja,wie er wirklich glaubt keine Schwurbelscheisse von sich zu geben, wenn er Behinderten ihre Grundrechte abspricht. Just for fun. \n#disabilityrights\n#ableism \n#Medienkrise",
-      "author": "darlingultra.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
       "author": "mailbykite.bsky.social",
@@ -338,16 +290,64 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
+      "author": "mailbykite.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "What if every project on GitHub had a ACCESSIBILITY.md\n\nWould this commitment at the root of a project change anything?\n\nThis is a rough draft of what it could look like:\nmgifford.github.io/ACCESSIBILIT...\n\n#Accessibility #OpenSource",
+      "author": "ox.ca",
+      "engagement": 16,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "An #accessibility fail?\nRemoving access for players to return to learn in a space with no stress/pressure. \n@hfrayling.com would not approve.\nwww.dexerto.com/gaming/skate...",
+      "author": "manycatsstudios.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I wrote for @zeroheight.com about the types of things automated accessibility checks can't detect when auditing and evaluating your design systems for accessibility. #a11y zeroheight.com/blog/design-...",
+      "author": "ericwbailey.website",
+      "engagement": 79,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "When it comes to automated #Accessibility, a lot of teams will go the simple route, like Axe. \nDid you know that in #PlayWright you can take your #A11y testing further? Check it out! \n\n#DEVCommunity @dev.to \n\ndev.to/steady5063/a...",
+      "author": "steady5063.bsky.social",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 49
+      "count": 48
     },
     {
       "keyword": "accessibility",
-      "count": 38
+      "count": 39
     },
     {
       "keyword": "disabilityjustice",
@@ -355,7 +355,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "cripthevote",
@@ -382,6 +382,10 @@
       "count": 12
     },
     {
+      "keyword": "ux",
+      "count": 10
+    },
+    {
       "keyword": "stoptheliesfox",
       "count": 10
     },
@@ -392,10 +396,6 @@
     {
       "keyword": "foxlies",
       "count": 10
-    },
-    {
-      "keyword": "ux",
-      "count": 9
     },
     {
       "keyword": "stoptrump",
@@ -415,10 +415,10 @@
     },
     {
       "keyword": "inclusion",
-      "count": 7
+      "count": 6
     },
     {
-      "keyword": "ada",
+      "keyword": "disabilityjustice nico",
       "count": 6
     }
   ]
