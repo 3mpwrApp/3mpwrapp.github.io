@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-22T12:26:12.486Z",
+  "lastUpdated": "2026-02-22T18:20:44.388Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 12125,
+      "totalPosts": 12150,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-22T12:26:03.320Z"
+      "lastSeen": "2026-02-22T18:20:33.441Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 12061,
+      "totalPosts": 12086,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-22T12:26:05.215Z"
+      "lastSeen": "2026-02-22T18:20:36.176Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 11968,
+      "totalPosts": 11993,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-22T12:26:07.409Z"
+      "lastSeen": "2026-02-22T18:20:38.605Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 12167,
+      "totalPosts": 12191,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-02-22T12:26:09.426Z"
+      "lastSeen": "2026-02-22T18:20:41.156Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 12175,
+      "totalPosts": 12200,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-22T12:26:11.482Z"
+      "lastSeen": "2026-02-22T18:20:43.383Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "When it comes to automated #Accessibility, a lot of teams will go the simple route, like Axe. \nDid you know that in #PlayWright you can take your #A11y testing further? Check it out! \n\n#DEVCommunity @dev.to \n\ndev.to/steady5063/a...",
-      "author": "steady5063.bsky.social",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
-      "author": "mailbykite.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I wrote for @zeroheight.com about the types of things automated accessibility checks can't detect when auditing and evaluating your design systems for accessibility. #a11y zeroheight.com/blog/design-...",
-      "author": "ericwbailey.website",
-      "engagement": 77,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "When it comes to automated #Accessibility, a lot of teams will go the simple route, like Axe. \nDid you know that in #PlayWright you can take your #A11y testing further? Check it out! \n\n#DEVCommunity @dev.to \n\ndev.to/steady5063/a...",
-      "author": "steady5063.bsky.social",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
       "author": "juliametraux.bsky.social",
@@ -338,6 +296,48 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
+      "author": "mailbykite.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’ve been working on accessibility for years on the web, and I’m applying the same mindset to The Runic Edda with Godot.\n\nExtended caption descriptions and persistent battle logs are now fully implemented and working.\n\n#TheRunicEdda #Accessibility #InclusiveDesign #Godot #GameDev #BuildInPublic",
+      "author": "manuelsanchezdev.com",
+      "engagement": 18,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "A little accessibility trick for posting with hashtags: use camel case!\n\nScreen readers will split the hashtags at their upper cases instead of a single blurb\n\nCamelCase : #GameDev\nNot that: #gamedev\n\nYou can read more here markwrites.io/hashtag-acce...\n\n#Accessibility #Indie",
+      "author": "qaqelol.bsky.social",
+      "engagement": 30,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "2.7k followers?! Thank you all so much!!🥳🎉🎉🎉\n\nI'm posting #indiegamedev progress here for our dark fantasy and #horror VN Catalyst: Blind Faith!🩸🔥\n\nYou can also expect a flood of branching #gamedesign, #art, #accessibility, #programming, #writing, memes & other things we love!❤️",
+      "author": "just-write-studios.itch.io",
+      "engagement": 31,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 41
+      "count": 40
     },
     {
       "keyword": "disabilityjustice",
@@ -355,7 +355,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 26
     },
     {
       "keyword": "cripthevote",
@@ -394,6 +394,10 @@
       "count": 10
     },
     {
+      "keyword": "inclusivedesign",
+      "count": 9
+    },
+    {
       "keyword": "stoptrump",
       "count": 9
     },
@@ -410,15 +414,11 @@
       "count": 9
     },
     {
-      "keyword": "inclusion",
+      "keyword": "ux",
       "count": 8
     },
     {
       "keyword": "disabilityjustice nico",
-      "count": 7
-    },
-    {
-      "keyword": "ux",
       "count": 7
     }
   ]
