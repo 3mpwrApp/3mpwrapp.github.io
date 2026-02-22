@@ -1,7 +1,7 @@
 {
   "date": "2026-02-22",
-  "timestamp": "2026-02-22T15:32:57.650Z",
-  "count": 3,
+  "timestamp": "2026-02-22T21:31:42.848Z",
+  "count": 1,
   "minScore": 3.5,
   "items": [
     {
@@ -9,21 +9,7 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-02-22T15:32:57.648Z"
-    },
-    {
-      "title": "Manitoba Government Announces New Recreational Trails Grants",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72745",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Sat, 14 Feb 2026 10:00:00 CST"
-    },
-    {
-      "title": "Measles Update #80",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72747",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Fri, 13 Feb 2026 16:34:00 CST"
+      "pubDate": "2026-02-22T21:31:42.846Z"
     }
   ]
 }
