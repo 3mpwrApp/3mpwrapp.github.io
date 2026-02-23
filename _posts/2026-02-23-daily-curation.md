@@ -1,0 +1,39 @@
+---
+layout: post
+title: "Daily News Curation - 2026-02-23"
+date: 2026-02-23
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-02-23
+
+Curated 4 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.
+
+🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
+📍 Visit: https://linktr.ee/thedisabilitybulletin
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Manitoba Government Announces New Recreational Trails Grants
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72745)
+**Score:** 7.50
+
+### 2. BC Premier’s Office Sued over Firing of Employee Under RCMP Investigation
+The staffer was being investigated over leaks when he was in a federal government job.
+📍 [Source](https://thetyee.ca/News/2026/02/23/BC-Premier-Office-Sued-Firing-Employee-RCMP-Investigation/)
+**Score:** 5.00
+
+### 3. Measles Update #80
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72747)
+**Score:** 4.50
+

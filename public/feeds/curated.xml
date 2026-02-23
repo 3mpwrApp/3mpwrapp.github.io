@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 22 Feb 2026 21:31:42 GMT</lastBuildDate>
-    <pubDate>Sun, 22 Feb 2026 21:31:42 GMT</pubDate>
+    <lastBuildDate>Mon, 23 Feb 2026 09:58:01 GMT</lastBuildDate>
+    <pubDate>Mon, 23 Feb 2026 09:58:01 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -27,7 +27,35 @@
 
 🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
 📍 Visit: https://linktr.ee/thedisabilitybulletin]]></description>
-      <pubDate>Sun, 22 Feb 2026 21:31:42 GMT</pubDate>
+      <pubDate>Mon, 23 Feb 2026 09:58:01 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Manitoba Government Announces New Recreational Trails Grants</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=72745</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=72745</guid>
+      <pubDate>Sat, 14 Feb 2026 16:00:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>BC Premier’s Office Sued over Firing of Employee Under RCMP Investigation</title>
+      <link>https://thetyee.ca/News/2026/02/23/BC-Premier-Office-Sued-Firing-Employee-RCMP-Investigation/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/02/23/BC-Premier-Office-Sued-Firing-Employee-RCMP-Investigation/</guid>
+      <description><![CDATA[The staffer was being investigated over leaks when he was in a federal government job.]]></description>
+      <pubDate>Mon, 23 Feb 2026 08:20:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Measles Update #80</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=72747</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=72747</guid>
+      <pubDate>Fri, 13 Feb 2026 22:34:00 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
