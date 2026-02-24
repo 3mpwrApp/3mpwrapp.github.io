@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-02-24
 
-Curated 3 items from disability, accessibility, and social policy sources.
+Curated 1 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -21,16 +21,4 @@ Your source for disability rights news, advocacy updates, and community stories.
 📍 [Read More](https://linktr.ee/thedisabilitybulletin)
 
 ---
-
-## Additional Stories
-
-### 1. We Can’t Wait for War to Mobilize the Public
-This anniversary of Ukraine’s rally to defend itself should inspire creative thinking in Canada. How can we better activate our citizens?
-📍 [Source](https://thetyee.ca/Analysis/2026/02/24/We-Cannot-Wait-War-Mobilize-Public/)
-**Score:** 13.50
-
-### 2. A Sober Look at Alberta’s Separatist Surge
-How did we get here? Is it treason? And five more key questions examined.
-📍 [Source](https://thetyee.ca/Analysis/2026/02/24/Sober-Look-Alberta-Separatist-Surge/)
-**Score:** 3.60
 
