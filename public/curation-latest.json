@@ -1,7 +1,7 @@
 {
   "date": "2026-02-25",
-  "timestamp": "2026-02-25T16:11:54.554Z",
-  "count": 1,
+  "timestamp": "2026-02-25T21:41:14.482Z",
+  "count": 10,
   "minScore": 3.5,
   "items": [
     {
@@ -9,7 +9,70 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-02-25T16:11:54.551Z"
+      "pubDate": "2026-02-25T21:41:14.479Z"
+    },
+    {
+      "title": "Canada’s human rights blackbox: Lives in limbo at office of Canadian Ombudsperson for Responsible Enterprise",
+      "link": "https://rabble.ca/politics/canadian-politics/canadas-human-rights-blackboxlives-in-limbo-at-office-of-canadian-ombudsperson-for-responsible-enterprise/",
+      "description": "",
+      "score": 22.75,
+      "pubDate": "Wed, 25 Feb 2026 19:25:24 +0000"
+    },
+    {
+      "title": "Canadian Federation of Independent Business Ranks Manitoba's Internal Trade Reforms Among Canada's Strongest",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72881",
+      "description": "",
+      "score": 23.400000000000002,
+      "pubDate": "Wed, 25 Feb 2026 14:40:00 CST"
+    },
+    {
+      "title": "Manitoba Delegation Joins Team Canada Trade Mission to Mexico",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72757",
+      "description": "",
+      "score": 19.5,
+      "pubDate": "Tue, 17 Feb 2026 11:44:00 CST"
+    },
+    {
+      "title": "The BC Merit Commissioner Gained Power After an Injustice. Now It's Gone",
+      "link": "https://thetyee.ca/News/2026/02/25/BC-Merit-Commissioner/",
+      "description": "Carole James said the office would help prevent future tragedies like the wrongful firing of health workers.",
+      "score": 12.8,
+      "pubDate": "Wed, 25 Feb 2026 08:20:00 +0000"
+    },
+    {
+      "title": "Manitoba Government Expands Newborn Screening to Include Congenital CMV, Improving Early Detection and Care for Infants",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72758",
+      "description": "",
+      "score": 9.5,
+      "pubDate": "Tue, 17 Feb 2026 14:00:00 CST"
+    },
+    {
+      "title": "A ‘Tiny Minority’ of Social Media Accounts Drive Canadian Conspiracy Content",
+      "link": "https://thetyee.ca/News/2026/02/25/Social-Media-Accounts-Canadian-Conspiracy-Content/",
+      "description": "Researchers found conspiracy claims spread widely, but only some people believe them.",
+      "score": 5,
+      "pubDate": "Wed, 25 Feb 2026 08:30:00 +0000"
+    },
+    {
+      "title": "Manitoba Government Announces New Drug Enforcement Task Force",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72880",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 25 Feb 2026 14:00:00 CST"
+    },
+    {
+      "title": "How Vancouver House Became a Tower of Empty Promises",
+      "link": "https://thetyee.ca/Opinion/2026/02/24/Vancouver-House-Tower-Empty-Promises/",
+      "description": "The city badly fumbled the huge real estate deal, concludes the auditor general. How the public lost out.",
+      "score": 3.9000000000000004,
+      "pubDate": "Tue, 24 Feb 2026 20:30:00 +0000"
+    },
+    {
+      "title": "Measles Update  #82",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72857",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Tue, 24 Feb 2026 16:15:00 CST"
     }
   ]
 }
