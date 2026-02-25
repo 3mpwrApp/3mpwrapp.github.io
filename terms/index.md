@@ -12,8 +12,12 @@ description: The terms and conditions for using the 3mpwr website and app.
 
 **📺 NEW: [Watch: Getting Started with 3mpwr App - Install, Permissions & Privacy Explained (5 min) →](https://www.youtube.com/watch?v=4i6xPpik_6M)**
 
-**Last Updated: January 5, 2026**  
-**Version: 4.3 (January 2026 - Infrastructure & Production Ready)**
+**Last Updated: February 24, 2026**  
+**Version: 4.5 (February 2026 - Documentation Sync)**
+
+**What's New Reference:** [Documentation Sync Complete → Legal & policy (English)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#legal-policy-en)
+
+*Editorial update for consistency across app + website legal pages. No material change to core disclaimers or liability intent.*
 
 ## 🆕 **JANUARY 2026 UPDATES (Version 4.3)**
 
@@ -457,12 +461,12 @@ By accessing or using 3mpwrApp's website, progressive web app, or services, you 
 ### 12. Governing Law and Disputes
 
 **Governing Law**:
-- These terms are governed by the laws of Canada
-- Disputes subject to jurisdiction of Canadian courts
+- These terms are governed by the laws of Ontario, Canada
+- Disputes subject to jurisdiction of Ontario courts
 
 **Dispute Resolution**:
 - Attempt to resolve disputes informally first
-- Formal disputes may require mediation or arbitration
+- Formal disputes may require mediation or arbitration in Ontario, Canada
 - Some claims may be brought in small claims court
 
 ### 13. Accessibility
@@ -545,12 +549,12 @@ See our **[Accessibility](/accessibility/)** page or email with "Accessibility" 
 
 **Language**: This agreement is available in English, French, Spanish, Arabic, Chinese, and Punjabi. In case of discrepancy, the English version prevails.
 
-**Version**: 4.2  
-**Effective**: December 14, 2025  
-**Current Phase**: Production Release + USA Lite Expansion
+**Version**: 4.5  
+**Effective**: February 24, 2026  
+**Current Phase**: Production release documentation sync
 
 ---
 
-**© 2025 3mpwrApp. All rights reserved.**
+**© 2026 3mpwrApp. All rights reserved.**
 
 {%- include page-feedback.html -%}

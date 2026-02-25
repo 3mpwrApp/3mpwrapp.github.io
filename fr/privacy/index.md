@@ -4,6 +4,8 @@ title: Politique de confidentialité
 permalink: /fr/privacy/
 description: Notre engagement envers votre vie privée et comment nous gérons vos données.
 lang: fr
+version: 4.5 (Synchronisation docs principales)
+lastUpdated: 2026-02-24
 ---
 
 
@@ -11,7 +13,11 @@ lang: fr
 
 # Politique de confidentialité
 
-Dernière mise à jour : {{ site.time | date: '%d %B %Y' }}
+Dernière mise à jour : 24 février 2026
+
+**Référence Quoi de neuf :** [Documentation Sync Complete → Legal & policy (French)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#legal-policy-fr)
+
+_Note éditoriale : cette page est synchronisée avec la version application et reflète les mêmes engagements de confidentialité au 24 février 2026._
 
 Nous respectons votre vie privée. Cette politique explique quelles données nous collectons, comment nous les utilisons et vos choix.
 

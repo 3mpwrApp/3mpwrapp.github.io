@@ -4,12 +4,17 @@ title: Paramètres d'accessibilité
 description: Personnalisez votre expérience de navigation avec les options d'accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.
 permalink: /fr/accessibility-settings/
 lang: fr
+version: 1.1 (Synchronisation docs principales)
+lastUpdated: 2026-02-24
 ---
 
 
 {%- include status-banner.html -%}
 
 # Paramètres d'accessibilité
+
+**Dernière mise à jour :** 24 février 2026  
+**Statut docs :** Paramètres d’accessibilité FR alignés avec la baseline documentaire février 2026.
 
 Utilisez ces contrôles pour personnaliser votre expérience de visualisation. Vos préférences sont enregistrées dans votre navigateur sur cet appareil.
 

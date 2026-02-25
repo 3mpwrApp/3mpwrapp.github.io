@@ -4,7 +4,7 @@ title: FAQ - Frequently Asked Questions
 permalink: /faq/
 description: Answers to common questions about 3mpwr App features, PowerTools, privacy, accessibility, and more.
 version: 1.1.0
-lastUpdated: 2026-02-02
+lastUpdated: 2026-02-24
 ---
 
 {%- include faq-schema.html -%}
@@ -12,7 +12,11 @@ lastUpdated: 2026-02-02
 
 # ❓ FAQ - Frequently Asked Questions
 
-**Last Updated:** February 2, 2026
+**Last Updated:** February 24, 2026
+
+**Status Snapshot (Feb 2026):** Core user features are live, with ongoing quality and documentation updates.
+
+**What's New Reference:** [Documentation Sync Complete → Core user docs (English)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#core-user-docs-en)
 
 ---
 
@@ -62,7 +66,7 @@ It's built for survivors, activists, and anyone seeking justice, support, and co
 
 ### Is Empowr finished?
 
-**97% complete!** (145 of 150 features done as of February 2, 2026)
+Core user feature set is complete, with active weekly improvements as of February 24, 2026.
 
 **✅ What's Done:**
 - **Comprehensive Personalization System** (Feb 2026) - Profile-driven app customization

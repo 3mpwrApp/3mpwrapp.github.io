@@ -4,12 +4,18 @@ title: Inscription au programme bêta
 description: Inscrivez-vous pour devenir testeur bêta et aider à améliorer l'application 3mpwrApp.
 lang: fr
 permalink: /fr/beta/
+version: 1.1 (Synchronisation docs principales - février 2026)
+lastUpdated: 2026-02-24
 ---
 
 
 {%- include status-banner.html -%}
 
 # Devenez testeur bêta 3mpwrApp !
+
+**Référence Quoi de neuf :** [Documentation Sync Complete → Core user docs (French)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#core-user-docs-fr)
+
+> 🎉 **Synchronisation du 24 février 2026 :** Cette page bêta est alignée avec la base documentaire de l'application (guide, FAQ, fonctionnalités, pages juridiques et nouveautés).
 
 Aidez-nous à façonner l'avenir de l'application 3mpwrApp en rejoignant notre programme de testeurs bêta.  
 **Les tests bêta nécessitent des personnes engagées qui peuvent tester l'application complète et fournir des commentaires détaillés, y compris signaler tout bogue.**

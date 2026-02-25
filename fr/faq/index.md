@@ -11,6 +11,11 @@ lang: fr
 
 # Foire aux questions (FAQ)
 
+**Dernière mise à jour :** 24 février 2026  
+**Statut docs :** FAQ synchronisée avec la base documentaire application + site (guide, fonctionnalités, bêta, juridique et nouveautés).
+
+**Référence Quoi de neuf :** [Documentation Sync Complete → Core user docs (French)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#core-user-docs-fr)
+
 Vous trouverez ci-dessous des réponses rapides aux questions courantes. Si vous ne trouvez pas ce dont vous avez besoin, veuillez nous contacter via notre page [Contact](/fr/contact/).
 
 ## FAQ du site Web
@@ -189,6 +194,6 @@ Pas pour le moment. Si vous êtes un développeur intéressé par l'intégration
 
 Merci d'utiliser 3mpwrApp ! 💚
 
-*Dernière mise à jour : {{ site.time | date: "%-d %B %Y" }}*
+*Dernière mise à jour : 24 février 2026*
 
 {%- include page-feedback.html -%}

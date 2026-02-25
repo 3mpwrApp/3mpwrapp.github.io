@@ -3,8 +3,8 @@ layout: default
 title: 3mpwr App - Beta Testers Guide & Feedback Program
 permalink: /beta-guide/
 description: Complete beta testing guide for 3mpwr App. Learn what to test, how to report bugs, and join the testing program for a privacy-first accessibility tool.
-version: 1.0 (Production Ready - January 2026)
-lastUpdated: 2026-01-15
+version: 1.1 (Core Docs Sync - February 2026)
+lastUpdated: 2026-02-24
 ---
 
 {%- include status-banner.html -%}
@@ -13,9 +13,11 @@ lastUpdated: 2026-01-15
 
 Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join the beta, test the app using Expo Go (free), and share your valuable feedback.
 
+**What's New Reference:** [Documentation Sync Complete → Core user docs (English)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#core-user-docs-en)
+
 > 📱 **New to Beta Testing?** No worries! This guide is designed for testers of all experience levels. If you can use a smartphone, you can beta test!
 
-> 🎉 **February 2026 Update:** Comprehensive Personalization System live! App now tailors to your role, disabilities, and preferences. PowerTools complete with 5 hubs consolidating 60+ features. Performance gains: 67% faster navigation, 42% smaller bundle. 721 tests passing, 0 errors, 0 warnings. Project 97% complete. **NEW: Profile-driven personalization, recommended tools, prioritized content, and ML beta tracking!**
+> 🎉 **February 24, 2026 Sync:** This beta guide is now aligned with the app-side user documentation baseline (user guide, FAQ, features, legal/policy pages, and What’s New sources).
 
 > 📖 **Resources for Testers:**  
 > [User Guide](/user-guide/) - Step-by-step tutorials for all features  

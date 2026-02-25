@@ -4,12 +4,17 @@ title: Blog
 description: Nouvelles, mises à jour et histoires de la communauté 3mpwrApp.
 lang: fr
 permalink: /fr/blog/
+version: 1.1 (Synchronisation docs principales)
+lastUpdated: 2026-02-24
 ---
 
 
 {%- include status-banner.html -%}
 
 # Blog 3mpwrApp
+
+**Dernière mise à jour :** 24 février 2026  
+**Statut docs :** Page blog FR synchronisée avec le cadre documentaire public.
 
 Bienvenue sur notre blog !  
 Restez à l'écoute pour des mises à jour, des histoires et des nouvelles.

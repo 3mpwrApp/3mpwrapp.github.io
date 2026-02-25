@@ -6,6 +6,8 @@ permalink: /fr/events/
 description: "Calendrier des événements communautaires pour les droits des personnes handicapées, les rassemblements pour la justice des travailleurs, les ateliers et les rencontres. Abonnez-vous via le flux ICS pour des mises à jour automatiques. Tous les événements sont entièrement accessibles."
 image: /assets/empwrapp-logo.png
 image_alt: "3mpwrApp Événements - Rassemblements et ateliers communautaires accessibles"
+version: 1.1 (Synchronisation docs principales)
+lastUpdated: 2026-02-24
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/page-enhancements.css' | relative_url }}">
@@ -14,6 +16,9 @@ image_alt: "3mpwrApp Événements - Rassemblements et ateliers communautaires ac
 {%- include status-banner.html -%}
 
 # 📅 Calendrier des événements
+
+**Dernière mise à jour :** 24 février 2026  
+**Statut docs :** Page événements FR alignée avec la baseline documentaire publique.
 
 📖 **2 minutes de lecture** | 🔋 **Énergie: Très légère**
 

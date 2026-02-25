@@ -4,12 +4,17 @@ title: Recherche
 description: Trouvez rapidement des informations avec des résultats sur la page et un repli DuckDuckGo, limité au site 3mpwrApp.
 lang: fr
 permalink: /fr/search/
+version: 1.1 (Synchronisation docs principales)
+lastUpdated: 2026-02-24
 ---
 
 
 {%- include status-banner.html -%}
 
 # Rechercher sur le site
+
+**Dernière mise à jour :** 24 février 2026  
+**Statut docs :** Page de recherche FR vérifiée et synchronisée avec la navigation publique.
 
 <form id="site-search" action="https://duckduckgo.com/" method="get" role="search" aria-describedby="search-help">
   <fieldset>

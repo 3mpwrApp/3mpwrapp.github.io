@@ -4,6 +4,8 @@ title: Politique relative aux témoins (Cookies)
 permalink: /fr/cookies/
 description: Comment nous utilisons les témoins (cookies) et comment vous pouvez les gérer.
 lang: fr
+version: 4.5 (Synchronisation docs principales)
+lastUpdated: 2026-02-24
 ---
 
 
@@ -11,7 +13,11 @@ lang: fr
 
 # Politique relative aux témoins (Cookies)
 
-Dernière mise à jour : {{ site.time | date: '%d %B %Y' }}
+Dernière mise à jour : 24 février 2026
+
+**Référence Quoi de neuf :** [Documentation Sync Complete → Legal & policy (French)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#legal-policy-fr)
+
+_Note éditoriale : page synchronisée avec les politiques FR/EN (confidentialité, conditions, FAQ) au 24 février 2026._
 
 Cette politique explique ce que sont les témoins (cookies), comment nous les utilisons et comment vous pouvez les contrôler.
 

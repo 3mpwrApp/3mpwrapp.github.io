@@ -4,6 +4,8 @@ title: Conditions d'utilisation
 permalink: /fr/terms/
 description: Conditions d'utilisation pour 3mpwrApp et notre site Web.
 lang: fr
+version: 4.5 (Synchronisation docs principales)
+lastUpdated: 2026-02-24
 ---
 
 
@@ -11,7 +13,11 @@ lang: fr
 
 # Conditions d'utilisation
 
-Dernière mise à jour : {{ site.time | date: '%d %B %Y' }}
+Dernière mise à jour : 24 février 2026
+
+**Référence Quoi de neuf :** [Documentation Sync Complete → Legal & policy (French)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#legal-policy-fr)
+
+_Note éditoriale : cette page est synchronisée avec la version application et ne modifie pas la portée juridique de fond._
 
 Bienvenue sur 3mpwrApp. En utilisant notre site Web et nos services, vous acceptez ces conditions.
 
@@ -113,15 +119,15 @@ Lors de la résiliation :
 
 ## 9. Loi applicable
 
-Ces conditions sont régies par les lois du Canada et de la province de [Votre province].
+Ces conditions sont régies par les lois du Canada et de la province de l'Ontario.
 
 ### Règlement des litiges
 En cas de litige :
 1. Essayez d'abord de le résoudre à l'amiable en nous contactant
-2. Si non résolu, le litige sera soumis aux tribunaux compétents de [Votre juridiction]
+2. Si non résolu, le litige sera soumis aux tribunaux compétents de l'Ontario, Canada
 
 ### Arbitrage
-Pour les litiges de moins de 5 000 $ CAD, les parties acceptent l'arbitrage contraignant conformément aux règles de [Organisme d'arbitrage].
+Pour les litiges de moins de 5 000 $ CAD, les parties acceptent l'arbitrage contraignant en Ontario, conformément aux règles d'arbitrage applicables en Ontario.
 
 ## 10. Dispositions générales
 

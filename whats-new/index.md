@@ -12,6 +12,11 @@ permalink: /whats-new/
 
 Track all updates to the site in one place. Entries from the last 30 days appear first; older items automatically move to the Archive below. We summarize meaningful changes in plain language without showing technical commit IDs.
 
+**Last Updated:** February 24, 2026  
+**Source Sync:** App documentation baseline (Jan-Feb 2026 comprehensive update + Feb docs refresh)
+
+**Master Rollup:** [Documentation Sync Complete (Feb 24, 2026)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/)
+
 Subscribe to updates: RSS · [What's New feed]({{ '/whats-new/feed.xml' | relative_url }})
 
 {% assign now = 'now' | date: '%s' | plus: 0 %}

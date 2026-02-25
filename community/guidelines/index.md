@@ -10,8 +10,12 @@ description: Our community standards for a safe, supportive space for people wit
 
 # 3mpwrApp — Community Guidelines
 
-**Last Updated: November 24, 2025**  
-**Version: 2.0 (November 2025 Update)**
+**Last Updated: February 24, 2026**  
+**Version: 2.1 (February 2026 - Documentation Sync)**
+
+**What's New Reference:** [Documentation Sync Complete → Legal & policy (English)](/whats-new/2026-02-24-documentation-sync-en-fr-legal/#legal-policy-en)
+
+*Editorial update for consistency across app + website policy pages.*
 
 ## 🆕 **November 2025 Updates**
 
@@ -244,7 +248,7 @@ We welcome your input on improving our community!
 - These guidelines may be updated as our community grows
 - We'll notify users of significant changes
 - Continued use of the app constitutes acceptance of updated guidelines
-- Last updated: October 25, 2025
+- Last updated: February 24, 2026
 
 ---
 
@@ -265,6 +269,6 @@ We're committed to maintaining a supportive, safe community where everyone feels
 
 ---
 
-**© 2025 3mpwrApp. All rights reserved.**
+**© 2026 3mpwrApp. All rights reserved.**
 
 {%- include page-feedback.html -%}

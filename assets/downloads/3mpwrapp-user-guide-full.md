@@ -2,8 +2,8 @@
 layout: default
 title: 3mpwrApp — Complete User Guide for Everyone
 description: Comprehensive guide to using 3mpwrApp's tools and community features. Written for the disability community, Indigenous peoples, injured workers, and their supporters.
-version: 4.2 (Production Release + USA Lite)
-date: 2025-12-14
+version: 4.5 (Core Docs Refresh)
+date: 2026-02-24
 author: 3mpwrApp Team
 accessibility: WCAG 2.1 AAA compliant, screen reader optimized
 format: PDF/Print Version
@@ -15,9 +15,9 @@ pages: Approximately 75 pages
 
 # 3mpwrApp — Complete User Guide for Everyone
 
-**Version 4.2 (Production Release + USA Lite) • December 14, 2025**
+**Version 4.5 (Core Docs Refresh) • February 24, 2026**
 
-> **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, Indigenous peoples, and their supporters. **Now 100% production ready with 721 tests passing, complete security verification, and USA Lite for American supporters!**
+> **What this app does:** Practical tools and community for People with Disabilities, Injured Workers, Indigenous peoples, and their supporters. **Core user feature set is complete, with active weekly improvements and synchronized app + website documentation.**
 
 **This is the complete, comprehensive user guide with all features, legal coverage, and detailed instructions.**
 
@@ -26,8 +26,9 @@ pages: Approximately 75 pages
 ## Document Information
 
 **Document Type:** Complete User Guide (PDF/Print Version)  
-**Version:** 4.2 (Production Release + USA Lite)  
-**Last Updated:** December 14, 2025  
+**Version:** 4.5 (Core Docs Refresh)  
+**Last Updated:** February 24, 2026  
+**Documentation Status:** Synced baseline with User Guide, FAQ, Features, Beta Guide, Legal pages, and What's New  
 **Accessibility:** WCAG 2.1 AAA Compliant  
 **Languages:** English (French version available separately)  
 **Estimated Reading Time:** 2-3 hours (or browse sections as needed)

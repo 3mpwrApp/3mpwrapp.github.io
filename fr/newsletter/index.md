@@ -4,12 +4,17 @@ title: Infolettre
 permalink: /fr/newsletter/
 description: Abonnez-vous pour recevoir des mises à jour hebdomadaires, des histoires de la communauté, des ressources en vedette et des nouvelles de plaidoyer de 3mpwrApp.
 lang: fr
+version: 1.1 (Synchronisation docs principales)
+lastUpdated: 2026-02-24
 ---
 
 
 {%- include status-banner.html -%}
 
 # Infolettre
+
+**Dernière mise à jour :** 24 février 2026  
+**Statut docs :** Parcours d’inscription FR validé dans la synchronisation documentaire de février 2026.
 
 Restez informé des mises à jour de produits, des accès anticipés et des invitations bêta. Nous vous enverrons uniquement des courriels concernant 3mpwrApp. Vous pouvez vous désabonner à tout moment.
 

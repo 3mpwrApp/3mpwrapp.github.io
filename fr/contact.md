@@ -4,12 +4,17 @@ title: Contactez-nous
 description: Contactez l'équipe 3mpwrApp pour des questions, des commentaires ou des opportunités de collaboration.
 lang: fr
 permalink: /fr/contact
+version: 1.1 (Synchronisation docs principales)
+lastUpdated: 2026-02-24
 ---
 
 
 {%- include status-banner.html -%}
 
 # Contactez-nous
+
+**Dernière mise à jour :** 24 février 2026  
+**Statut docs :** Coordonnées et parcours de contact vérifiés lors de la synchronisation documentaire de février 2026.
 
 Nous serions ravis d'avoir de vos nouvelles ! Que vous ayez des questions sur 3mpwrApp, des commentaires à partager ou des opportunités de collaboration, n'hésitez pas à nous contacter.
 
