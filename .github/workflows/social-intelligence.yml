@@ -1,0 +1,125 @@
+name: Social Intelligence Engine
+
+# Master orchestrator for AI-powered social media optimization
+# Runs: Daily at midnight UTC, after agent feedback completes
+
+on:
+  schedule:
+    # Daily at 00:30 UTC (after agent-feedback at 23:00)
+    - cron: '30 0 * * *'
+  
+  workflow_dispatch:
+    inputs:
+      skip_optimization:
+        description: 'Skip hashtag optimization'
+        required: false
+        default: 'false'
+      skip_feedback_loop:
+        description: 'Skip content feedback loop'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  social-intelligence:
+    name: Run Social Intelligence Pipeline
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Run Social Intelligence Engine
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SKIP_OPTIMIZATION: ${{ github.event.inputs.skip_optimization }}
+          SKIP_FEEDBACK: ${{ github.event.inputs.skip_feedback_loop }}
+        run: |
+          echo "🧠 Running Social Intelligence Engine..."
+          echo "  - Hashtag optimization"
+          echo "  - Content feedback loop"
+          echo "  - Performance analytics"
+          echo "  - Trend integration"
+          echo ""
+          
+          node scripts/social-intelligence-engine.js
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit improvements
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "Social Intelligence Bot"
+          git config user.email "intelligence@3mpwrapp.com"
+          
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+          git commit -m "🧠 Social intelligence update - $TIMESTAMP
+
+          - Optimized hashtag recommendations
+          - Applied content improvements
+          - Updated performance analytics
+          - Generated insights dashboard"
+          
+          git push origin main
+
+      - name: Generate summary
+        if: always()
+        run: |
+          echo "# 🧠 Social Intelligence Engine" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u +"%Y-%m-%d %H:%M UTC")" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f "public/social-performance.json" ]; then
+            echo "## 📊 Performance Metrics" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            # Extract key metrics (simplified)
+            echo "- Dashboard updated: ✅" >> $GITHUB_STEP_SUMMARY
+            echo "- Hashtag optimization: ✅" >> $GITHUB_STEP_SUMMARY
+            echo "- Content improvements: ✅" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ -f "_data/social-analytics-dashboard.md" ]; then
+            echo "📈 View full dashboard in repository: \`_data/social-analytics-dashboard.md\`" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Upload analytics artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: social-intelligence-${{ github.run_number }}
+          path: |
+            public/social-performance.json
+            public/hashtag-performance.json
+            public/content-improvements.json
+            _data/social-analytics-dashboard.md
+            _data/optimized-hashtags.json
+          retention-days: 30

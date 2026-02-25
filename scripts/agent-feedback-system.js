@@ -608,6 +608,9 @@ class AgentFeedbackSystem {
     const filename = `agent-feedback-${timestamp}.json`;
     const filepath = path.join(this.config.feedbackDir, filename);
 
+    // Generate actionable recommendations for automation
+    const actionableRecommendations = this.generateActionableRecommendations();
+
     const output = {
       generatedAt: new Date().toISOString(),
       summary: {
@@ -616,7 +619,9 @@ class AgentFeedbackSystem {
         trendingTopicsIdentified: this.analysisResults.trending.reduce((sum, t) => sum + t.trendingTopics.length, 0),
         hashtagsTracked: this.analysisResults.hashtags.reduce((sum, h) => sum + h.used.size, 0)
       },
-      results: this.analysisResults
+      results: this.analysisResults,
+      actionableRecommendations: actionableRecommendations,
+      recommendations: this.analysisResults.overall
     };
 
     fs.writeFileSync(filepath, JSON.stringify(output, null, 2));
@@ -624,6 +629,80 @@ class AgentFeedbackSystem {
 
     // Also save human-readable markdown report
     this.saveMarkdownReport(timestamp);
+  }
+
+  /**
+   * GENERATE ACTIONABLE RECOMMENDATIONS
+   * Structured format for automation (content-feedback-loop.js)
+   */
+  generateActionableRecommendations() {
+    const recommendations = {
+      highPriority: [],
+      mediumPriority: [],
+      lowPriority: []
+    };
+
+    // Analyze post-specific issues
+    this.analysisResults.posts.forEach(post => {
+      // High priority: Quality score < 6
+      if (post.qualityScore < 6) {
+        recommendations.highPriority.push({
+          type: 'quality',
+          action: 'improve-quality',
+          target: post.filename,
+          issue: 'Low quality score',
+          qualityScore: post.qualityScore,
+          suggestions: post.recommendations,
+          confidence: 0.9
+        });
+      }
+
+      // High priority: Missing hashtags
+      if (post.issues.some(i => /missing.*hashtag|no.*hashtag/i.test(i))) {
+        recommendations.highPriority.push({
+          type: 'hashtags',
+          action: 'add-hashtags',
+          target: post.filename,
+          issue: 'No hashtags present',
+          confidence: 0.95
+        });
+      }
+
+      // Medium priority: Missing CTAs
+      if (post.recommendations.some(r => /call.*to.*action|CTA/i.test(r))) {
+        recommendations.mediumPriority.push({
+          type: 'engagement',
+          action: 'add-cta',
+          target: post.filename,
+          issue: 'Missing call-to-action',
+          confidence: 0.85
+        });
+      }
+
+      // Medium priority: Images missing alt text
+      if (post.issues.some(i => /alt.*text/i.test(i))) {
+        recommendations.mediumPriority.push({
+          type: 'accessibility',
+          action: 'add-alt-text',
+          target: post.filename,
+          issue: 'Images missing alt text',
+          confidence: 0.9
+        });
+      }
+
+      // Low priority: Readability improvements
+      if (post.issues.some(i => /sentence.*length|readability/i.test(i))) {
+        recommendations.lowPriority.push({
+          type: 'readability',
+          action: 'improve-readability',
+          target: post.filename,
+          issue: 'Sentences too long',
+          confidence: 0.6
+        });
+      }
+    });
+
+    return recommendations;
   }
 
   /**

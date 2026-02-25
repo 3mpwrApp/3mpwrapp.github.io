@@ -123,7 +123,7 @@ class WeeklyUpdateGenerator {
   }
 
   /**
-   * Generate weekly update content
+   * Generate weekly update content with authentic founder storytelling
    */
   generateUpdateContent(weekNumber, year) {
     const commits = this.getRecentCommits();
@@ -131,29 +131,45 @@ class WeeklyUpdateGenerator {
 
     let content = '';
 
-    // New Features
+    // OPENING: Founder voice, transparency, real-time building
+    content += `## This Week's Journey\n\n`;
+    content += `I'm building 3mpwrApp in public—showing you every step, every decision, every improvement as they happen. `;
+    content += `This is Phase 1 of beta testing, where you're getting familiar with what I'm creating for our community.\n\n`;
+    
+    if (commits.length === 0) {
+      content += `This week I focused on behind-the-scenes work—planning, testing, and preparing for the next wave of features. `;
+      content += `Not every week has visible updates, but the foundation matters. I'm building this right, not fast.\n\n`;
+    } else {
+      content += `Here's what I shipped this week and why it matters to you:\n\n`;
+    }
+
+    // Features with founder storytelling
     if (categories.features.length > 0) {
       content += '## ✨ New Features\n\n';
       categories.features.forEach(commit => {
-        content += `- ${this.humanizeCommit(commit)}\n`;
+        const feature = this.humanizeCommit(commit);
+        content += `**${feature}**\n\n`;
+        content += `Why I built this: ${this.explainWhyItMatters(commit, 'feature')}\n\n`;
       });
-      content += '\n';
     }
 
-    // Improvements
+    // Improvements with context
     if (categories.improvements.length > 0) {
       content += '## 🚀 Improvements\n\n';
       categories.improvements.forEach(commit => {
-        content += `- ${this.humanizeCommit(commit)}\n`;
+        const improvement = this.humanizeCommit(commit);
+        content += `**${improvement}**\n\n`;
+        content += `${this.explainWhyItMatters(commit, 'improvement')}\n\n`;
       });
-      content += '\n';
     }
 
-    // Bug Fixes
+    // Bug Fixes with empathy
     if (categories.fixes.length > 0) {
-      content += '## 🐛 Bug Fixes\n\n';
+      content += '## 🐛 Fixes\n\n';
+      content += `I fixed these issues because they were getting in your way:\n\n`;
       categories.fixes.forEach(commit => {
-        content += `- ${this.humanizeCommit(commit)}\n`;
+        const fix = this.humanizeCommit(commit);
+        content += `- ${fix}\n`;
       });
       content += '\n';
     }
@@ -161,32 +177,77 @@ class WeeklyUpdateGenerator {
     // Documentation
     if (categories.documentation.length > 0) {
       content += '## 📚 Documentation\n\n';
+      content += `Making 3mpwrApp easier to understand:\n\n`;
       categories.documentation.forEach(commit => {
         content += `- ${this.humanizeCommit(commit)}\n`;
       });
       content += '\n';
     }
 
-    // Automation
+    // Behind the Scenes
     if (categories.automation.length > 0) {
       content += '## 🤖 Behind the Scenes\n\n';
+      content += `These automation improvements make development faster so I can ship features to you sooner:\n\n`;
       categories.automation.forEach(commit => {
         content += `- ${this.humanizeCommit(commit)}\n`;
       });
       content += '\n';
     }
 
-    // No changes
-    if (commits.length === 0) {
-      content = `No major changes were published this week. We're working behind the scenes on upcoming features!\n\n`;
-    }
-
-    // Footer
+    // CLOSING: Authentic CTA
     content += `---\n\n`;
-    content += `📬 Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)\n\n`;
-    content += `🔍 See all updates: [What's New](/whats-new/)\n`;
+    content += `## What's Next\n\n`;
+    content += `I'm listening. If you're testing 3mpwrApp and something doesn't work, tell me. `;
+    content += `If you have ideas, share them. This app exists because I fell through the cracks—I'm building it so you don't have to.\n\n`;
+    content += `📬 [Get updates in your inbox](/newsletter/)\n\n`;
+    content += `🔍 [See all weekly updates](/whats-new/)\n\n`;
+    content += `💬 [Join the beta testing community](https://3mpwrapp.pages.dev/beta/)\n`;
 
     return content;
+  }
+
+  /**
+   * Explain why a change matters to users (founder perspective)
+   */
+  explainWhyItMatters(commit, type) {
+    const msg = commit.message.toLowerCase();
+    
+    // Accessibility-related
+    if (msg.includes('a11y') || msg.includes('accessibility') || msg.includes('screen reader') || msg.includes('wcag')) {
+      return `Because disability tech should work for EVERYONE. If you're using a screen reader or need high contrast, this app should serve you as well as anyone else.`;
+    }
+    
+    // Performance/speed
+    if (msg.includes('performance') || msg.includes('speed') || msg.includes('optimize') || msg.includes('bundle')) {
+      return `You shouldn't have to wait. The faster this app loads, the faster you get the help you need.`;
+    }
+    
+    // Testing/quality
+    if (msg.includes('test') || msg.includes('coverage')) {
+      return `I'm building this to last. More tests mean fewer bugs, which means you can rely on this when it matters most.`;
+    }
+    
+    // UI/UX
+    if (msg.includes('ui') || msg.includes('ux') || msg.includes('design') || msg.includes('layout')) {
+      return `When you're dealing with disability paperwork and bureaucracy, the app itself shouldn't add to your stress. It should be intuitive.`;
+    }
+    
+    // Documentation
+    if (msg.includes('doc') || msg.includes('readme') || msg.includes('guide')) {
+      return `You deserve to know how everything works. Clear documentation means no guessing, no frustration.`;
+    }
+    
+    // Bug fixes
+    if (type === 'fix' || msg.includes('fix')) {
+      return `When something breaks, it breaks your trust. I fix things fast because reliability matters.`;
+    }
+    
+    // Default explanation
+    if (type === 'feature') {
+      return `This makes 3mpwrApp more powerful for disability advocates, injured workers, and their families.`;
+    }
+    
+    return `Every improvement makes this app more useful for our community.`;
   }
 
   /**
@@ -205,14 +266,16 @@ class WeeklyUpdateGenerator {
     // Create blog post
     const postContent = `---
 layout: post
-title: Weekly Update — Week ${weekNumber} (${year})
+title: Week ${weekNumber} — Building 3mpwrApp in the Open
 date: ${dateStr} 09:00:00 +0000
-tags: [weekly, updates]
+tags: [weekly, updates, transparency]
 categories: [updates]
-excerpt: This week's updates to 3mpwrApp features, content, and improvements.
+excerpt: This week's progress on 3mpwrApp. Real-time updates from a founder who fell through the cracks and built this app so you don't have to.
 ---
 
-Here's what changed this week, in simple terms:
+I'm an injured worker who built 3mpwrApp because I fell through the cracks. Every week, I share what I'm building and why it matters to you.
+
+This is **Week ${weekNumber} of ${year}**—here's what happened:
 
 ${content}
 `;

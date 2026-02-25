@@ -459,22 +459,45 @@ async function main(){
     if(!fs.existsSync(postsDir)) fs.mkdirSync(postsDir,{recursive:true});
     const file=path.join(postsDir,`${todayISO}-daily-curation.md`);
     if(!fs.existsSync(file)){
-      const out=['---','layout: post',`title: "Daily News Highlights - ${todayISO}"`,`date: ${todayISO} 09:00:00 +0000`,'tags: [highlights]','categories: [curation, news]',`excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."`,'---','',`# Daily News Highlights - ${todayISO}`,'',`Curated ${ranked.length} items from disability, accessibility, and social policy sources across Canada.`,''];
+      const out=['---','layout: post',`title: "Daily Disability Rights News — ${todayISO}"`,`date: ${todayISO} 09:00:00 +0000`,'tags: [highlights, disability-rights, canada]','categories: [curation, news]',`excerpt: "Today's critical disability rights news from across Canada. These stories need more awareness—there's not enough talk about disability and injured workers."`,'---','',`# Today's Essential Reading`,'',`I curate these stories because **disability rights and injured workers' issues don't get enough coverage in Canada.** These are the stories that matter to our community—stories that affect real lives, real families, and real futures.`,'',`Here's what you need to know today:`,''];
       
-      // Add top stories with better formatting
+      // Add top stories with "Why This Matters" analysis
       ranked.forEach((it,idx)=>{
         out.push(`## ${idx+1}. ${it.title||'Story'}`);
-        if(it.description) out.push(it.description);
-        out.push(`📍 [Read Full Story](${it.link})`);
-        out.push(`**Score:** ${it.score} | **Type:** ${it.contentType||'News'}`);
+        out.push('');
+        if(it.description) {
+          out.push(it.description);
+          out.push('');
+        }
+        out.push(`📍 **[Read Full Story](${it.link})**`);
+        out.push('');
+        
+        // WHY THIS MATTERS section - connect to 3mpwrApp pain points
+        out.push(`### 💡 Why This Matters to Our Community`);
+        out.push('');
+        out.push(generateWhyThisMatters(it, idx));
+        out.push('');
+        
+        // Metadata footer
+        out.push(`<small>**Score:** ${it.score} | **Type:** ${it.contentType||'News'} | **Source:** ${it.source}</small>`);
+        out.push('');
+        out.push('---');
         out.push('');
       });
       
+      out.push('## Your Voice Matters');
+      out.push('');
+      out.push('I built 3mpwrApp because I fell through the cracks as an injured worker. These stories show why our work matters—why we need better tools, better resources, and better support for disability and injured workers in Canada.');
+      out.push('');
+      out.push('**Are you in Phase 1 beta testing?** Share these stories with your community. Awareness is the first step to change.');
+      out.push('');
       out.push('---');
       out.push('');
-      out.push('📰 **Stay Informed**: [Subscribe to updates](https://3mpwrapp.pages.dev/newsletter/)');
+      out.push('📰 **Stay Informed**: [Subscribe to daily news highlights](/newsletter/)');
       out.push('');
-      out.push('🌐 **Explore More**: [Visit 3mpwrApp Blog](https://3mpwrapp.pages.dev/blog/)');
+      out.push('🌐 **Explore More**: [Visit 3mpwrApp Blog](/blog/)');
+      out.push('');
+      out.push('💬 **Join Beta Testing**: [Help build the future of disability advocacy tools](/beta/)');
       out.push('');
       fs.writeFileSync(file,out.join('\n'),'utf8');
       console.log('Wrote daily draft', file);
@@ -482,6 +505,64 @@ async function main(){
   } else if (cfg.postDaily && ranked.length===0){
     console.log('[curator] ✓ Skipping daily post - no items met minimum score threshold');
   }
+
+/**
+ * Generate "Why This Matters" analysis for curated news items
+ * Connects news to 3mpwrApp pain points and community impact
+ */
+function generateWhyThisMatters(item, index) {
+  const title = (item.title || '').toLowerCase();
+  const desc = (item.description || '').toLowerCase();
+  const text = `${title} ${desc}`;
+  
+  // Government policy/benefits
+  if (text.match(/benefit|policy|government|wsib|worksafe|cpp|disability tax|eligibility/i)) {
+    return `Navigating government benefits is one of the biggest challenges for disabled and injured workers. This policy directly impacts whether people get the support they need—or fall through the cracks like I did. **3mpwrApp's Government Navigator** helps you understand these systems and advocate for yourself.`;
+  }
+  
+  // Accessibility/WCAG/compliance
+  if (text.match(/accessibility|wcag|barrier|accommodation|inclusive|universal design/i)) {
+    return `Every barrier removed is a life improved. Accessibility isn't a feature—it's a fundamental right. This story shows why **3mpwrApp is built accessibility-first**, with screen reader support, high contrast modes, and keyboard navigation built in from day one.`;
+  }
+  
+  // Legal/rights/discrimination
+  if (text.match(/discrimin|legal|rights|charter|tribunal|complaint|lawsuit/i)) {
+    return `When your rights are violated, you need documentation and evidence. This is exactly why I built the **Evidence Locker**—to help you track everything, timestamp it, and have proof when you need to fight back.`;
+  }
+  
+  // Healthcare/medical
+  if (text.match(/healthcare|medical|doctor|hospital|treatment|diagnosis/i)) {
+    return `Medical documentation is critical for disability claims. Missing records, lost files, conflicting reports—these administrative nightmares cost people their benefits. The **Evidence Locker** keeps all your medical records organized and accessible when you need them most.`;
+  }
+  
+  // Employment/workplace injury
+  if (text.match(/workplace|injury|worker|employer|job|employment|fired|terminated/i)) {
+    return `Injured workers face impossible choices: keep working in pain or lose your income. I know this struggle personally. **3mpwrApp's resources** help you understand your rights, document incidents, and navigate the system that's supposed to protect you.`;
+  }
+  
+  // Mental health/stress
+  if (text.match(/mental health|stress|anxiety|depression|ptsd|burnout/i)) {
+    return `The bureaucracy of disability support creates massive mental health burdens. Paperwork, denials, appeals—it's exhausting. **3mpwrApp simplifies the process** so you can focus on healing instead of drowning in administrative nightmares.`;
+  }
+  
+  // Housing/homelessness
+  if (text.match(/housing|homeless|evict|rent|shelter|affordable/i)) {
+    return `Housing instability and disability are tragically linked. When benefits are delayed or denied, people lose their homes. This story shows why **fast, accurate benefit navigation** isn't just convenient—it's life-saving.`;
+  }
+  
+  // Appeals/denials
+  if (text.match(/appeal|denial|denied|reject|overturn|tribunal/i)) {
+    return `Most disability benefit denials are overturned on appeal—but only if you have the documentation and persistence to fight. The **Letter Generator** and **Evidence Locker** give you the tools to appeal effectively, with professional documentation and organized proof.`;
+  }
+  
+  // Advocacy/activism
+  if (text.match(/advocacy|activist|protest|campaign|movement|solidarity/i)) {
+    return `Change happens when communities organize and advocate together. This story shows the power of collective action—exactly what the **Community features** in 3mpwrApp are designed to support.`;
+  }
+  
+  // Default: General disability awareness
+  return `Stories like this don't get enough coverage in Canada. Disability rights and injured workers' issues often stay invisible until they affect you personally. I'm sharing this because awareness is the first step to change—and because tools like **3mpwrApp** exist to help when the system fails you.`;
+}
   if (ranked.length>0){
     const issuesDir=path.join(process.cwd(),'_curation');
     if(!fs.existsSync(issuesDir)) fs.mkdirSync(issuesDir,{recursive:true});
