@@ -1,0 +1,36 @@
+{
+  "date": "2026-02-19",
+  "timestamp": "2026-02-19T21:40:52.195Z",
+  "count": 4,
+  "minScore": 3.5,
+  "items": [
+    {
+      "title": "The Disability Bulletin",
+      "link": "https://linktr.ee/thedisabilitybulletin",
+      "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
+      "score": 10,
+      "pubDate": "2026-02-19T21:40:52.192Z"
+    },
+    {
+      "title": "Manitoba Government Rolls Out Provincewide Hospital Safety Upgrades to Protect Front-Line Health-Care Workers and Patients",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72777",
+      "description": "",
+      "score": 12.5,
+      "pubDate": "Thu, 19 Feb 2026 10:03:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests $76,000 in Community Renewal and Recreation in The Pas",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72778",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Thu, 19 Feb 2026 12:54:00 CST"
+    },
+    {
+      "title": "rabble takes home two silver medals from the Canadian Online Publishing Awards",
+      "link": "https://rabble.ca/general/rabble-takes-home-two-silver-medals-from-the-canadian-online-publishing-awards/",
+      "description": "",
+      "score": 4,
+      "pubDate": "Thu, 19 Feb 2026 19:07:35 +0000"
+    }
+  ]
+}
