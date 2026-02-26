@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-26T12:09:37.852Z",
+  "lastUpdated": "2026-02-26T18:12:46.449Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 12525,
+      "totalPosts": 12550,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T12:09:28.389Z"
+      "lastSeen": "2026-02-26T18:12:36.455Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 12461,
+      "totalPosts": 12486,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T12:09:30.355Z"
+      "lastSeen": "2026-02-26T18:12:38.646Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 12365,
-      "recentPosts": 25,
+      "totalPosts": 12388,
+      "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T12:09:32.510Z"
+      "lastSeen": "2026-02-26T18:12:40.992Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 12560,
+      "totalPosts": 12585,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T12:09:34.882Z"
+      "lastSeen": "2026-02-26T18:12:43.176Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 12575,
+      "totalPosts": 12600,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T12:09:36.847Z"
+      "lastSeen": "2026-02-26T18:12:45.445Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I’ve been working on accessibility for years on the web, and I’m applying the same mindset to The Runic Edda with Godot.\n\nExtended caption descriptions and persistent battle logs are now fully implemented and working.\n\n#TheRunicEdda #Accessibility #InclusiveDesign #Godot #GameDev #BuildInPublic",
-      "author": "manuelsanchezdev.com",
-      "engagement": 18,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "A little accessibility trick for posting with hashtags: use camel case!\n\nScreen readers will split the hashtags at their upper cases instead of a single blurb\n\nCamelCase : #GameDev\nNot that: #gamedev\n\nYou can read more here markwrites.io/hashtag-acce...\n\n#Accessibility #Indie",
-      "author": "qaqelol.bsky.social",
-      "engagement": 36,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
       "author": "lisadiedrich.bsky.social",
@@ -338,16 +320,34 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 45
+      "count": 46
     },
     {
       "keyword": "accessibility",
-      "count": 41
+      "count": 35
     },
     {
       "keyword": "disabilityjustice",
@@ -355,7 +355,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "cripthevote",
@@ -386,16 +386,16 @@
       "count": 12
     },
     {
+      "keyword": "ada",
+      "count": 11
+    },
+    {
       "keyword": "stoptheliesfox",
       "count": 11
     },
     {
       "keyword": "foxlies",
       "count": 11
-    },
-    {
-      "keyword": "ada",
-      "count": 10
     },
     {
       "keyword": "stoptrump",
@@ -415,10 +415,10 @@
     },
     {
       "keyword": "disabilityjustice nico",
-      "count": 8
+      "count": 7
     },
     {
-      "keyword": "inclusion",
+      "keyword": "refusefascism",
       "count": 6
     }
   ]
