@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-26T01:08:26.692Z",
+  "lastUpdated": "2026-02-26T06:18:03.864Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 12475,
+      "totalPosts": 12500,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T01:08:12.357Z"
+      "lastSeen": "2026-02-26T06:17:55.309Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 12411,
+      "totalPosts": 12436,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T01:08:19.584Z"
+      "lastSeen": "2026-02-26T06:17:57.173Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 12315,
+      "totalPosts": 12340,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T01:08:21.792Z"
+      "lastSeen": "2026-02-26T06:17:59.108Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 12510,
+      "totalPosts": 12535,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T01:08:23.675Z"
+      "lastSeen": "2026-02-26T06:18:01.172Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 12525,
+      "totalPosts": 12550,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-26T01:08:25.689Z"
+      "lastSeen": "2026-02-26T06:18:02.863Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "A little accessibility trick for posting with hashtags: use camel case!\n\nScreen readers will split the hashtags at their upper cases instead of a single blurb\n\nCamelCase : #GameDev\nNot that: #gamedev\n\nYou can read more here markwrites.io/hashtag-acce...\n\n#Accessibility #Indie",
-      "author": "qaqelol.bsky.social",
-      "engagement": 31,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
       "author": "juliametraux.bsky.social",
@@ -338,23 +320,41 @@
       "author": "juliametraux.bsky.social",
       "engagement": 341,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
+      "author": "lisadiedrich.bsky.social",
+      "engagement": 50,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "author": "juliametraux.bsky.social",
+      "engagement": 341,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 46
+      "count": 45
     },
     {
       "keyword": "accessibility",
       "count": 42
     },
     {
-      "keyword": "a11y",
-      "count": 28
+      "keyword": "disabilityjustice",
+      "count": 26
     },
     {
-      "keyword": "disabilityjustice",
+      "keyword": "a11y",
       "count": 26
     },
     {
@@ -386,10 +386,6 @@
       "count": 12
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 11
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 11
     },
@@ -400,6 +396,10 @@
     {
       "keyword": "ada",
       "count": 10
+    },
+    {
+      "keyword": "accessibility a11y",
+      "count": 9
     },
     {
       "keyword": "stoptrump",
