@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-02-26
 
-Curated 3 items from disability, accessibility, and social policy sources.
+Curated 8 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -24,11 +24,34 @@ Your source for disability rights news, advocacy updates, and community stories.
 
 ## Additional Stories
 
-### 1. Manitoba Government Increases Venture Capital Tax Credit to $30 Million
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72898)
+### 1. BC's Paternalistic Approach to Informing the Public Must Stop
+Health authorities decided Lapu Lapu victims couldn't handle being told they were snooped on. It's part of a disturbing trend.
+📍 [Source](https://thetyee.ca/Opinion/2026/02/26/Lapu-Lapu-Victims-Deserved-Know-Snooped-On/)
+**Score:** 9.40
+
+### 2. Manitoba Government Celebrates Northern Manitoba Trappers' Festival
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72761)
+**Score:** 9.50
+
+### 3. Ten years after Phoenix and public service capacity continues to erode
+📍 [Source](https://rabble.ca/labour/ten-years-after-phoenix-and-public-service-capacity-continues-to-erode/)
+**Score:** 6.90
+
+### 4. Manitoba Government Announces Budget Day
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72937)
 **Score:** 7.50
 
-### 2. Manitoba Government Invests $65,000 for Baseball Diamond Upgrades in The Pas
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72897)
+### 5. Manitoba Government Invests $3.8 Million in The Pas' Arena and Cultural Learning Centre
+📍 [Source](https://news.gov.mb.ca/news/index.html?item=72759)
 **Score:** 7.50
+
+### 6. A Burnaby Supportive Housing Project Goes Down
+Defeated by the BC budget and communication gaps, the project proposal was strongly opposed by local residents.
+📍 [Source](https://thetyee.ca/Analysis/2026/02/26/Burnaby-Supportive-Housing-Project-Goes-Down/)
+**Score:** 4.00
+
+### 7. As US-Cuba Tensions Rise, Carney Needs to Flex His ‘Middle Power’
+Cubans are facing fuel, food and hospital supply shortages. Canadians can help.
+📍 [Source](https://thetyee.ca/Opinion/2026/02/25/US-Cuba-Tensions-Carney-Needs-Flex-Middle-Power/)
+**Score:** 3.90
 

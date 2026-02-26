@@ -1,7 +1,7 @@
 {
   "date": "2026-02-26",
-  "timestamp": "2026-02-26T16:02:57.786Z",
-  "count": 3,
+  "timestamp": "2026-02-26T21:16:53.156Z",
+  "count": 8,
   "minScore": 3.5,
   "items": [
     {
@@ -9,21 +9,56 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-02-26T16:02:57.784Z"
+      "pubDate": "2026-02-26T21:16:53.153Z"
     },
     {
-      "title": "Manitoba Government Increases Venture Capital Tax Credit to $30 Million",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72898",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Thu, 26 Feb 2026 10:00:00 CST"
+      "title": "BC's Paternalistic Approach to Informing the Public Must Stop",
+      "link": "https://thetyee.ca/Opinion/2026/02/26/Lapu-Lapu-Victims-Deserved-Know-Snooped-On/",
+      "description": "Health authorities decided Lapu Lapu victims couldn't handle being told they were snooped on. It's part of a disturbing trend.",
+      "score": 9.4,
+      "pubDate": "Thu, 26 Feb 2026 08:10:00 +0000"
     },
     {
-      "title": "Manitoba Government Invests $65,000 for Baseball Diamond Upgrades in The Pas",
-      "link": "https://news.gov.mb.ca/news/index.html?item=72897",
+      "title": "Manitoba Government Celebrates Northern Manitoba Trappers' Festival",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72761",
+      "description": "",
+      "score": 9.5,
+      "pubDate": "Wed, 18 Feb 2026 13:41:00 CST"
+    },
+    {
+      "title": "Ten years after Phoenix and public service capacity continues to erode",
+      "link": "https://rabble.ca/labour/ten-years-after-phoenix-and-public-service-capacity-continues-to-erode/",
+      "description": "",
+      "score": 6.9,
+      "pubDate": "Thu, 26 Feb 2026 18:54:12 +0000"
+    },
+    {
+      "title": "Manitoba Government Announces Budget Day",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72937",
       "description": "",
       "score": 7.5,
-      "pubDate": "Thu, 26 Feb 2026 08:46:00 CST"
+      "pubDate": "Thu, 26 Feb 2026 14:51:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests $3.8 Million in The Pas' Arena and Cultural Learning Centre",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72759",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Wed, 18 Feb 2026 09:45:00 CST"
+    },
+    {
+      "title": "A Burnaby Supportive Housing Project Goes Down",
+      "link": "https://thetyee.ca/Analysis/2026/02/26/Burnaby-Supportive-Housing-Project-Goes-Down/",
+      "description": "Defeated by the BC budget and communication gaps, the project proposal was strongly opposed by local residents.",
+      "score": 4,
+      "pubDate": "Thu, 26 Feb 2026 08:30:00 +0000"
+    },
+    {
+      "title": "As US-Cuba Tensions Rise, Carney Needs to Flex His ‘Middle Power’",
+      "link": "https://thetyee.ca/Opinion/2026/02/25/US-Cuba-Tensions-Carney-Needs-Flex-Middle-Power/",
+      "description": "Cubans are facing fuel, food and hospital supply shortages. Canadians can help.",
+      "score": 3.9000000000000004,
+      "pubDate": "Wed, 25 Feb 2026 19:23:00 +0000"
     }
   ]
 }
