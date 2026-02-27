@@ -27,16 +27,11 @@ npm run deploy:agents
 ```
 
 **Done!** All agents now running 24/7 with zero human involvement.
-
 ---
 
 ## 📦 WHAT GETS INSTALLED
 
-```
-npm install
-├─ rss-parser (feed parsing)
 ├─ @anthropic-ai/sdk (Claude AI for content generation)
-├─ luxon (scheduling & time)
 └─ dotenv (environment variables)
 ```
 
@@ -48,21 +43,11 @@ npm install
 ## 🔧 DETAILED SETUP
 
 ### 1. Prerequisites Check
-```bash
-# Verify Node.js
-node --version   # Must be 18.0.0 or higher
 npm --version    # Must be 9.0.0 or higher
-
 # Clone if needed
 cd 3mpwrapp.github.io-main
 ```
 
-### 2. Install Dependencies
-```bash
-npm install
-```
-
-This installs:
 - RSS feed parser for Curation Agent
 - Anthropic SDK for Blog Post Agent
 - Scheduling tools for all agents
@@ -466,4 +451,18 @@ Your autonomous content system is now running 24/7 with:
 **ROI**: Enormous (months of writing → automated daily)
 
 Happy automating! 🚀
+ 
+## Orchestrator Directive
+
+- Role: You are the orchestrator; subagents execute.
+- Do not build, verify, or code inline. Your job is to plan, prioritize, and coordinate.
+- Pre-task requirement: Before starting any task, read the full project context and check what other agents have completed relevant to each subagent's prompt.
+
+Model / runtime notes (informational):
+
+- Install / use: `kimi k`
+- Install / use: `deepseek v3.2`
+- Install / use: `qwen3.5-397b`
+
+Add these notes to onboarding or deployment scripts so subagents know which models to request or expect.
 

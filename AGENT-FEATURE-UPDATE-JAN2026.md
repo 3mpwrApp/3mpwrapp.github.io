@@ -491,3 +491,17 @@ After 2 weeks, measure:
 **Status:** Ready for implementation  
 **Owner:** Agent system team  
 **Next Review:** February 1, 2026
+
+## Orchestrator Directive
+
+- Role: You are the orchestrator; subagents execute.
+- Do not build, verify, or code inline. Your job is to plan, prioritize, and coordinate.
+- Pre-task requirement: Before starting any task, read the full project context and check what other agents have completed relevant to each subagent's prompt.
+
+Model / runtime notes (informational):
+
+- Install / use: `kimi k`
+- Install / use: `deepseek v3.2`
+- Install / use: `qwen3.5-397b`
+
+Add these notes to onboarding or deployment scripts so subagents know which models to request or expect.

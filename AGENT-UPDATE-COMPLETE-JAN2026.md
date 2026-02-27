@@ -179,3 +179,17 @@ Updated all 4 autonomous agents (Curation, Blog Post, Recap, Email) with the lat
 **Verification:** All checks passed  
 **Current Week:** Week 5 - Wellness Checks spotlight  
 **Next Action:** Commit and sync, then monitor automated output
+
+## Orchestrator Directive
+
+- Role: You are the orchestrator; subagents execute.
+- Do not build, verify, or code inline. Your job is to plan, prioritize, and coordinate.
+- Pre-task requirement: Before starting any task, read the full project context and check what other agents have completed relevant to each subagent's prompt.
+
+Model / runtime notes (informational):
+
+- Install / use: `kimi k`
+- Install / use: `deepseek v3.2`
+- Install / use: `qwen3.5-397b`
+
+Add these notes to onboarding or deployment scripts so subagents know which models to request or expect.

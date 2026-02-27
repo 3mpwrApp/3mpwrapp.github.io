@@ -163,10 +163,6 @@ feedback/agent-feedback-2026-01-22.md
 ### 3️⃣ Trending Topics → Content Strategy
 
 **What Feedback Detects:**
-- Keyword frequency in last 30 posts
-- Emerging themes
-- Underrepresented topics
-- Topic concentration
 
 **What Agents Use:**
 ```javascript
@@ -198,7 +194,19 @@ curatorAgent.scoreArticle()
 3. Coverage balances out
 4. Next week shows improved diversity
 
----
+## Orchestrator Directive
+
+- Role: You are the orchestrator; subagents execute.
+- Do not build, verify, or code inline. Your job is to plan, prioritize, and coordinate.
+- Pre-task requirement: Before starting any task, read the full project context and check what other agents have completed relevant to each subagent's prompt.
+
+Model / runtime notes (informational):
+
+- Install / use: `kimi k`
+- Install / use: `deepseek v3.2`
+- Install / use: `qwen3.5-397b`
+
+Add these notes to onboarding or deployment scripts so subagents know which models to request or expect.
 
 ### 4️⃣ Hashtag Optimization → Social Strategy
 
