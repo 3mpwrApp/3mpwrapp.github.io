@@ -1,7 +1,7 @@
 {
   "date": "2026-02-27",
-  "timestamp": "2026-02-27T15:20:46.888Z",
-  "count": 1,
+  "timestamp": "2026-02-27T21:12:35.149Z",
+  "count": 12,
   "minScore": 3.5,
   "items": [
     {
@@ -9,7 +9,84 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin",
       "score": 10,
-      "pubDate": "2026-02-27T15:20:46.886Z"
+      "pubDate": "2026-02-27T21:12:35.146Z"
+    },
+    {
+      "title": "Canada’s government gets a failing grade on child poverty",
+      "link": "https://rabble.ca/economy/canadas-government-gets-a-failing-grade-on-child-poverty/",
+      "description": "",
+      "score": 16.2,
+      "pubDate": "Fri, 27 Feb 2026 17:02:13 +0000"
+    },
+    {
+      "title": "Manitoba Government Provides Update on Housing and Homelessness",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72960",
+      "description": "",
+      "score": 14,
+      "pubDate": "Fri, 27 Feb 2026 15:00:00 CST"
+    },
+    {
+      "title": "Manitoba Government Rolls Out Provincewide Hospital Safety Upgrades to Protect Front-Line Health-Care Workers and Patients",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72777",
+      "description": "",
+      "score": 14,
+      "pubDate": "Thu, 19 Feb 2026 10:03:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests $76,000 in Community Renewal and Recreation in The Pas",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72778",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Thu, 19 Feb 2026 12:54:00 CST"
+    },
+    {
+      "title": "A heartbreaking account of life and death in Gaza",
+      "link": "https://rabble.ca/books/a-heartbreaking-account-of-life-and-death-in-gaza/",
+      "description": "",
+      "score": 5,
+      "pubDate": "Fri, 27 Feb 2026 19:29:32 +0000"
+    },
+    {
+      "title": "Manitoba Government Invests $5 Million in West Lands Infrastructure Development",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72958",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Fri, 27 Feb 2026 13:30:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests $2.9 Million in New Critical Infrastructure in Flin Flon",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72957",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Fri, 27 Feb 2026 12:14:00 CST"
+    },
+    {
+      "title": "Manitoba Government Increases Venture Capital Tax Credit to $30 Million",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72898",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Thu, 26 Feb 2026 10:00:00 CST"
+    },
+    {
+      "title": "Manitoba Government Invests $65,000 for Baseball Diamond Upgrades in The Pas",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72897",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Thu, 26 Feb 2026 08:46:00 CST"
+    },
+    {
+      "title": "Steelworkers fighting Canadian, American and Mexican workers",
+      "link": "https://rabble.ca/podcast/steelworkers-fighting-canadian-american-and-mexican-workers/",
+      "description": "",
+      "score": 3.9000000000000004,
+      "pubDate": "Fri, 27 Feb 2026 18:01:27 +0000"
+    },
+    {
+      "title": "Measles Update  #83",
+      "link": "https://news.gov.mb.ca/news/index.html?item=72938",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Thu, 26 Feb 2026 15:55:00 CST"
     }
   ]
 }
