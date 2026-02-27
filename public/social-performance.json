@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-02-26T03:18:24.932Z",
+  "generated": "2026-02-27T00:55:13.628Z",
   "insights": {
-    "timestamp": "2026-02-26T03:18:24.901Z",
+    "timestamp": "2026-02-27T00:55:13.596Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-02-26T03:18:24.908Z",
+      "lastUpdated": "2026-02-27T00:55:13.603Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -44,7 +44,7 @@
         },
         {
           "tag": "accessibility",
-          "mentions": 42,
+          "mentions": 38,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-02-26T03:18:24.912Z",
+      "lastUpdated": "2026-02-27T00:55:13.607Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-02-26T03:18:24.908Z",
+    "lastUpdated": "2026-02-27T00:55:13.603Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -107,7 +107,7 @@
       },
       {
         "tag": "accessibility",
-        "mentions": 42,
+        "mentions": 38,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-02-26T03:18:24.912Z",
+    "lastUpdated": "2026-02-27T00:55:13.607Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
