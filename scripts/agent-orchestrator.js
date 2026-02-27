@@ -14,6 +14,7 @@
 
 const { CurationAgentProduction } = require('./agent-curation-production');
 const { BlogPostAgentProduction } = require('./agent-blog-production');
+const { AgentDocsLoader } = require('../agent-docs');
 const path = require('path');
 const fs = require('fs').promises;
 
@@ -33,12 +34,19 @@ class AgentOrchestrator {
     };
 
     this.startTime = new Date();
+    
+    // Load agent docs (SOUL, USER, HEARTBEAT, TOOLS, LEARNINGS, MEMORY)
+    this.docsLoader = new AgentDocsLoader(this.config.rootDir);
+    this.docsLoader.loadAll();
   }
 
   /**
    * DEPLOY ALL AGENTS
    */
   async deployAll() {
+    // Load and display agent docs
+    this.docsLoader.printStartupBanner();
+    
     console.log(`
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                                                                      ║
