@@ -53,6 +53,7 @@ test-output/
 # Credentials and secrets (CRITICAL - never commit)
 credentials.json
 secrets.json
+.secrets
 *.key
 *.pem
 *.pub

@@ -49,7 +49,7 @@ jobs:
 
       - name: Run Social Intelligence Engine
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           SKIP_OPTIMIZATION: ${{ github.event.inputs.skip_optimization }}
           SKIP_FEEDBACK: ${{ github.event.inputs.skip_feedback_loop }}
         run: |
