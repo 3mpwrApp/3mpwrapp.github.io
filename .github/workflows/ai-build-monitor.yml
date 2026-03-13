@@ -9,7 +9,7 @@ on:
 jobs:
   analyze-builds:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    if: github.event.workflow_run.conclusion == 'failure' || github.event_name == 'workflow_dispatch'
     
     steps:
       - name: Checkout code
@@ -28,7 +28,7 @@ jobs:
       
       - name: AI Build Analysis
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KIMI_API_KEY: ${{ secrets.KIMIAPIKEY }}
           WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
           WORKFLOW_ID: ${{ github.event.workflow_run.id }}
           RUN_URL: ${{ github.event.workflow_run.html_url }}
@@ -37,9 +37,14 @@ jobs:
           node << 'EOF'
           const https = require('https');
           
-          const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+          const KIMI_API_KEY = process.env.KIMI_API_KEY;
           const WORKFLOW_NAME = process.env.WORKFLOW_NAME;
           const RUN_URL = process.env.RUN_URL;
+          
+          if (!KIMI_API_KEY) {
+            console.log('ℹ️ KIMI_API_KEY not set — skipping AI build analysis');
+            process.exit(0);
+          }
           
           // Analyze the build failure
           const prompt = `You are a DevOps expert analyzing a failed GitHub Actions workflow.
@@ -60,7 +65,7 @@ Focus on practical, actionable advice. Be concise.`;
           async function getAnalysis() {
             return new Promise((resolve, reject) => {
               const data = JSON.stringify({
-                model: 'claude-3-5-sonnet-20241022',
+                model: 'moonshot-v1-8k',
                 max_tokens: 1500,
                 messages: [
                   { role: 'user', content: prompt }
@@ -68,14 +73,13 @@ Focus on practical, actionable advice. Be concise.`;
               });
               
               const options = {
-                hostname: 'api.anthropic.com',
-                path: '/v1/messages',
+                hostname: 'api.moonshot.cn',
+                path: '/v1/chat/completions',
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
-                  'x-api-key': ANTHROPIC_API_KEY,
-                  'anthropic-version': '2023-06-01',
-                  'Content-Length': data.length
+                  'Authorization': `Bearer ${KIMI_API_KEY}`,
+                  'Content-Length': Buffer.byteLength(data)
                 }
               };
               
@@ -85,7 +89,7 @@ Focus on practical, actionable advice. Be concise.`;
                 res.on('end', () => {
                   if (res.statusCode === 200) {
                     const response = JSON.parse(body);
-                    resolve(response.content[0].text);
+                    resolve(response.choices[0].message.content);
                   } else {
                     reject(new Error(`API error: ${res.statusCode}`));
                   }

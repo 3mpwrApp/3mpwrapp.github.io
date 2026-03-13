@@ -34,7 +34,7 @@ jobs:
 
       - name: Preflight availability check
         run: |
-          URL="https://3mpwrapp.github.io/?no-modal=1"
+          URL="https://3mpwrapp.pages.dev/?no-modal=1"
           for i in 1 2 3; do
             echo "Preflight attempt $i..."
             if curl -sSfL "$URL" -o /dev/null; then echo "Site reachable"; exit 0; fi

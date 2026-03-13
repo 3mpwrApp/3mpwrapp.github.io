@@ -447,22 +447,72 @@ class CuratorCore {
     const max = this.config.maxItems || 25;
     this.selectedItems = this.selectedItems.slice(0, max);
     
-    // ALWAYS add The Disability Bulletin at the top (static entry)
-    // This ensures it appears even if the RSS feed fails
-    const disabilityBulletinEntry = {
-      title: 'The Disability Bulletin',
-      link: 'https://linktr.ee/thedisabilitybulletin',
-      description: 'Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.\n\n🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s\n📍 Visit: https://linktr.ee/thedisabilitybulletin',
-      score: 10.0, // Highest score to ensure it's always first
+    // ALWAYS feature The Disability Bulletin at the top
+    // Use live RSS content if available, fallback to generic (no date-specific text)
+    const BULLETIN_RSS_ID = 'feeds.blogger.com/feeds/362411661072793873';
+    const rssItem = this.selectedItems.find(item =>
+      item.feedUrl && item.feedUrl.includes(BULLETIN_RSS_ID)
+    );
+
+    // Load fingerprint to prevent showing the same description every day
+    const fingerprintPath = path.join(process.cwd(), 'public', 'disability-bulletin-last.json');
+    let lastFingerprint = { lastDescriptionHash: '', lastFeaturedDate: '', lastTitle: '' };
+    try {
+      if (fs.existsSync(fingerprintPath)) {
+        lastFingerprint = JSON.parse(fs.readFileSync(fingerprintPath, 'utf8'));
+      }
+    } catch (err) { /* use defaults */ }
+
+    let bulletinTitle, bulletinLink, bulletinDescription;
+    if (rssItem) {
+      // Remove from current position so we can control placement
+      this.selectedItems = this.selectedItems.filter(item =>
+        !(item.feedUrl && item.feedUrl.includes(BULLETIN_RSS_ID))
+      );
+      bulletinTitle = rssItem.title || 'The Disability Bulletin';
+      bulletinDescription = rssItem.description || 'The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada.';
+      bulletinLink = rssItem.link || 'https://linktr.ee/thedisabilitybulletin';
+    } else {
+      bulletinTitle = 'The Disability Bulletin';
+      bulletinLink = 'https://linktr.ee/thedisabilitybulletin';
+      bulletinDescription = 'The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.';
+    }
+
+    // If the same description was shown within the last 7 days, show a condensed one-liner
+    const descHash = Buffer.from(bulletinDescription.substring(0, 100)).toString('base64');
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    const lastDate = lastFingerprint.lastFeaturedDate ? new Date(lastFingerprint.lastFeaturedDate) : null;
+    const isSameContent = lastFingerprint.lastDescriptionHash === descHash;
+    const isRecent = lastDate && lastDate > sevenDaysAgo;
+    const condensed = isSameContent && isRecent;
+
+    this.selectedItems.unshift({
+      title: bulletinTitle,
+      link: bulletinLink,
+      description: condensed
+        ? 'Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.'
+        : bulletinDescription,
+      score: 10.0,
       pubDate: new Date().toISOString(),
-      feedUrl: 'static-entry',
+      feedUrl: rssItem ? rssItem.feedUrl : 'static-entry',
       isDisabilityBulletin: true
-    };
-    
-    // Add at the beginning of the array
-    this.selectedItems.unshift(disabilityBulletinEntry);
-    
-    this.log(`✅ Selected ${this.selectedItems.length} items (including Disability Bulletin) above score ${minScore}`);
+    });
+
+    // Persist fingerprint so the next run knows what was shown
+    if (!isSameContent || !isRecent) {
+      try {
+        fs.writeFileSync(fingerprintPath, JSON.stringify({
+          lastDescriptionHash: descHash,
+          lastFeaturedDate: new Date().toISOString().split('T')[0],
+          lastTitle: bulletinTitle
+        }, null, 2));
+      } catch (err) {
+        this.log(`⚠️ Could not update bulletin fingerprint: ${err.message}`);
+      }
+    }
+
+    this.log(`✅ Selected ${this.selectedItems.length} items (Bulletin: ${condensed ? 'condensed' : 'full'}) above score ${minScore}`);
   }
 
   /**
@@ -514,11 +564,12 @@ class CuratorCore {
       lines.push('');
       otherItems.forEach((item, idx) => {
         lines.push(`### ${idx + 1}. ${item.title}`);
-        if (item.description) {
-          lines.push(`${item.description}`);
+        const displayDesc = item.description || this.getSourceLabel(item.link);
+        if (displayDesc) {
+          lines.push(`${displayDesc}`);
         }
         if (item.link) {
-          lines.push(`📍 [Source](${item.link})`);
+          lines.push(`[Source](${item.link})`);
         }
         lines.push(`**Score:** ${item.score.toFixed(2)}`);
         lines.push('');
@@ -597,6 +648,37 @@ ${markdown}
     this.log(`✅ Saved archive: ${archivePath}`);
 
     return { mdPath, blogPath, jsonPath, archivePath };
+  }
+
+  /**
+   * Get a readable source label for items with no description
+   */
+  getSourceLabel(url) {
+    if (!url) return '';
+    try {
+      const domain = new URL(url).hostname.replace('www.', '');
+      const labels = {
+        'news.gov.mb.ca': 'Government of Manitoba press release',
+        'gov.mb.ca': 'Government of Manitoba announcement',
+        'news.gov.bc.ca': 'Government of British Columbia press release',
+        'gov.bc.ca': 'Government of British Columbia announcement',
+        'canada.ca': 'Government of Canada announcement',
+        'ontario.ca': 'Government of Ontario announcement',
+        'alberta.ca': 'Government of Alberta announcement',
+        'rabble.ca': 'Rabble.ca — progressive Canadian news',
+        'cbc.ca': 'CBC News Canada',
+        'thestar.com': 'Toronto Star',
+        'theglobeandmail.com': 'The Globe and Mail',
+        'globalnews.ca': 'Global News Canada',
+        'disabilityscoop.com': 'Disability Scoop',
+        'disabilitywithoutpoverty.ca': 'Disability Without Poverty',
+        'ccd-online.ca': 'Council of Canadians with Disabilities',
+        'bccrpd.ca': 'BC Coalition of People with Disabilities',
+      };
+      return labels[domain] || `Source: ${domain}`;
+    } catch {
+      return '';
+    }
   }
 
   /**

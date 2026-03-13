@@ -50,6 +50,22 @@ class BlogPostAgentProduction {
     this.trendingTopics = this.loadTrendingTopics();
     this.optimizedHashtags = this.loadOptimizedHashtags();
 
+    // Content framework voice rules — injected into all AI prompts
+    this.VOICE_RULES = `
+VOICE RULES (enforce without exception):
+- Tone: direct, conversational, confident. Mentor energy, not corporate.
+- No emojis in body text unless a list genuinely needs them for clarity.
+- No hashtags inside blog post body text.
+- No generic advice: never "It's important to...", "Remember to always...", "One key thing..."
+- No fluff intros: never "In today's world...", "Many people face...", "As we know..."
+- No em dashes. Use commas or restructure the sentence.
+- No "As an AI..." ever. You are the founder speaking from lived experience.
+- No passive voice when active works.
+- Simple words only: "use" not "utilize", "do" not "implement", "help" not "facilitate".
+- Short paragraphs: 3 sentences max in body sections.
+- Every paragraph must answer "so what for someone navigating WSIB or ODSP?". If it does not, cut it.
+`;
+
     // Feature rotation
     this.features = [
       { name: 'Evidence Locker', type: 'Document organization & legal case building' },
@@ -69,7 +85,16 @@ class BlogPostAgentProduction {
       'Requesting Workplace Accommodations: Legal Guide',
       'Building Your Case: Document Organization for Appeals',
       'Medical Evidence That Wins WSIB Appeals',
-      'Accessible Job Interview Preparation Checklist'
+      'Accessible Job Interview Preparation Checklist',
+      'You Have a WSIB Denial. Here Is Exactly What to Do Next.',
+      'How to Apply for CPP Disability Benefits Without a Lawyer',
+      'Documenting Your Disability: What Doctors Forget to Write Down',
+      'Appealing a Benefits Denial: The 30-Day Deadline You Cannot Miss',
+      'How to Write a Workplace Accommodation Request That Gets Results',
+      'Understanding Your Disability Tax Credit Application',
+      'What to Do When Your Doctor Says You Are Ready to Return to Work',
+      'ODSP Asset Limits: What You Can and Cannot Keep',
+      'How to Organize Your Evidence Before an Appeal Hearing',
     ];
   }
 
@@ -178,7 +203,7 @@ class BlogPostAgentProduction {
     console.log(`\n[${new Date().toISOString()}] Generating feature spotlight: "${feature.name}"`);
 
     const prompt = `You are writing as the founder of 3mpwrApp—an injured worker who fell through the cracks and built this app so others don't have to.
-
+${this.VOICE_RULES}
 Write a 2,500-word blog post about the "${feature.name}" feature of 3mpwrApp in FIRST PERSON (use "I built this..." not "This feature...").
 Feature Type: ${feature.type}
 
@@ -306,7 +331,7 @@ Generate the COMPLETE blog post ready to publish.`;
     console.log(`\n[${new Date().toISOString()}] Generating educational guide: "${topic}"`);
 
     const prompt = `You are writing as the founder of 3mpwrApp—an injured worker who researched all of this while fighting for your own benefits.
-
+${this.VOICE_RULES}
 Write a comprehensive, 2,500-word educational guide in FIRST PERSON: "${topic}"
 
 CRITICAL VOICE:
@@ -416,7 +441,7 @@ Generate the COMPLETE blog post ready to publish.`;
     console.log(`\n[${new Date().toISOString()}] Generating case study...`);
 
     const prompt = `You are writing as the founder of 3mpwrApp, sharing a story from YOUR OWN lived experience.
-
+${this.VOICE_RULES}
 Write a 2,000-word case study in FIRST PERSON about YOUR transformational journey through the disability support system.
 
 CRITICAL CONTEXT:
