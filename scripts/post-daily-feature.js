@@ -327,9 +327,10 @@ class FeaturePoster {
       console.warn(`📎 Linking to blog page instead: ${fallbackUrl}\n`);
       // Replace URL in content so social posts use the blog page
       content.url = fallbackUrl;
-      // Also patch shortPost/longPost if they contain the original URL
-      if (content.shortPost) content.shortPost = content.shortPost.replace(/https?:\/\/3mpwrapp\.github\.io\/[^\s)>"']*/g, fallbackUrl);
-      if (content.longPost) content.longPost = content.longPost.replace(/https?:\/\/3mpwrapp\.github\.io\/[^\s)>"']*/g, fallbackUrl);
+      // Also patch shortPost/longPost if they contain the original URL (covers both github.io and pages.dev domains)
+      const anyArticleUrl = /https?:\/\/3mpwrapp\.(github\.io|pages\.dev)\/[^\s)>"']*/g;
+      if (content.shortPost) content.shortPost = content.shortPost.replace(anyArticleUrl, fallbackUrl);
+      if (content.longPost) content.longPost = content.longPost.replace(anyArticleUrl, fallbackUrl);
     } else {
       console.log('✅ Article URL verified accessible!\n');
     }
