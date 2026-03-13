@@ -44,7 +44,7 @@ jobs:
 
       - name: Preflight site availability check
         run: |
-          URL="https://3mpwrapp.github.io/?no-modal=1"
+          URL="https://3mpwrapp.pages.dev/?no-modal=1"
           echo "Checking site availability: $URL"
           for i in {1..5}; do
             if curl -sSfL "$URL" -o /dev/null --max-time 10; then

@@ -31,7 +31,7 @@ jobs:
       
       - name: Run AI Code Review
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
@@ -41,13 +41,18 @@ jobs:
           const fs = require('fs');
           const https = require('https');
           
-          const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+          const KIMI_API_KEY = process.env.KIMI_API_KEY;
           const PR_NUMBER = process.env.PR_NUMBER;
           const PR_TITLE = process.env.PR_TITLE;
           const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
           
           // Read the diff
           const diff = fs.readFileSync('pr_diff.txt', 'utf-8');
+          
+          if (!KIMI_API_KEY) {
+            console.log('ℹ️ KIMI_API_KEY not set — skipping AI review');
+            process.exit(0);
+          }
           
           if (!diff || diff.length < 10) {
             console.log('No significant changes to review');
@@ -74,11 +79,11 @@ ${diff.substring(0, 15000)}
 
 Provide a concise, actionable review in markdown format.`;
 
-          // Call Anthropic API
+          // Call Kimi API (OpenAI-compatible)
           async function getReview() {
             return new Promise((resolve, reject) => {
               const data = JSON.stringify({
-                model: 'claude-3-5-sonnet-20241022',
+                model: 'moonshot-v1-32k',
                 max_tokens: 2000,
                 messages: [
                   { role: 'user', content: prompt }
@@ -86,14 +91,13 @@ Provide a concise, actionable review in markdown format.`;
               });
               
               const options = {
-                hostname: 'api.anthropic.com',
-                path: '/v1/messages',
+                hostname: 'api.moonshot.cn',
+                path: '/v1/chat/completions',
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
-                  'x-api-key': ANTHROPIC_API_KEY,
-                  'anthropic-version': '2023-06-01',
-                  'Content-Length': data.length
+                  'Authorization': `Bearer ${KIMI_API_KEY}`,
+                  'Content-Length': Buffer.byteLength(data)
                 }
               };
               
@@ -103,7 +107,7 @@ Provide a concise, actionable review in markdown format.`;
                 res.on('end', () => {
                   if (res.statusCode === 200) {
                     const response = JSON.parse(body);
-                    resolve(response.content[0].text);
+                    resolve(response.choices[0].message.content);
                   } else {
                     reject(new Error(`API error: ${res.statusCode} - ${body}`));
                   }

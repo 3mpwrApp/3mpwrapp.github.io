@@ -27,7 +27,10 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          echo "📦 Installing dependencies..."
+          npm ci --ignore-scripts --no-audit --fund=false
+          echo "✅ Dependencies installed"
 
       - name: Run Agent Feedback Analysis
         env:
