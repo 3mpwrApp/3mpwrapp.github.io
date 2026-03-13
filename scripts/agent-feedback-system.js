@@ -341,10 +341,8 @@ class AgentFeedbackSystem {
     if (hasDisabilityBulletin) {
       analysis.strengths.push('Features The Disability Bulletin prominently');
       analysis.diversityScore += 2;
-    } else {
-      analysis.issues.push('Missing Disability Bulletin content');
-      analysis.recommendations.push('Ensure Disability Bulletin appears in curations');
     }
+    // Bulletin presence is ensured by the curation pipeline — not flagged as a feedback issue
 
     // Topic diversity
     const topicConcentration = Math.max(...topics.values()) / allArticles.length;

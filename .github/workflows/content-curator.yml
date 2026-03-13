@@ -3,14 +3,13 @@ name: Content Curator (Unified)
 # Unified content curation and posting workflow
 # Consolidates: curator.yml, weekly-curator.yml, weekly-blog.yml
 # 
-# Daily: Curates and posts content 3x/day (9 AM, 3 PM, 9 PM UTC)
+# Daily: Curates and posts content 2x/day (9 AM, 9 PM UTC)
 # Weekly: Generates summary post every Monday at 9 AM UTC
 
 on:
   schedule:
-    # Daily curation - 3 times per day
+    # Daily curation - 2 times per day
     - cron: '0 9 * * *'   # 9:00 AM UTC - Morning
-    - cron: '0 15 * * *'  # 3:00 PM UTC - Midday
     - cron: '0 21 * * *'  # 9:00 PM UTC - Evening
     
   workflow_dispatch:
