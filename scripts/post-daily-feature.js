@@ -322,18 +322,17 @@ class FeaturePoster {
     const isAccessible = await this.verifyUrl(content.url);
     
     if (!isAccessible) {
-      console.error('\n❌ ERROR: Article URL is not accessible!');
-      console.error(`Cannot post to social media with broken link: ${content.url}`);
-      console.error('This would result in 404 errors for users.\n');
-      
-      this.results.mastodon = { success: false, message: 'Article URL not accessible (404)' };
-      this.results.bluesky = { success: false, message: 'Article URL not accessible (404)' };
-      
-      this.saveResults(content);
-      process.exit(1);
+      const fallbackUrl = 'https://3mpwrapp.github.io/blog/';
+      console.warn(`\n⚠️  Article URL not yet live (${content.url})`);
+      console.warn(`📎 Linking to blog page instead: ${fallbackUrl}\n`);
+      // Replace URL in content so social posts use the blog page
+      content.url = fallbackUrl;
+      // Also patch shortPost/longPost if they contain the original URL
+      if (content.shortPost) content.shortPost = content.shortPost.replace(/https?:\/\/3mpwrapp\.github\.io\/[^\s)>"']*/g, fallbackUrl);
+      if (content.longPost) content.longPost = content.longPost.replace(/https?:\/\/3mpwrapp\.github\.io\/[^\s)>"']*/g, fallbackUrl);
+    } else {
+      console.log('✅ Article URL verified accessible!\n');
     }
-    
-    console.log('✅ Article URL verified accessible!\n');
 
     // Post to Mastodon
     this.results.mastodon = await this.postToMastodon(content);
