@@ -1217,23 +1217,24 @@ class DailyFeatureGenerator {
    * Select next feature to write about (rotating through all features)
    */
   selectFeature() {
-    // Reset if we've covered all features
-    if (this.usedFeatures.features.length >= this.features.length) {
+    // Find features not yet used (deduplicated by name)
+    let availableFeatures = this.features.filter(
+      f => !this.usedFeatures.features.includes(f.name)
+    );
+
+    // Reset if all features have been covered (handles duplicates in list gracefully)
+    if (availableFeatures.length === 0) {
       console.log('✨ All features covered! Starting new rotation.');
       this.usedFeatures = {
         features: [],
         lastReset: new Date().toISOString()
       };
+      availableFeatures = [...this.features];
     }
 
-    // Find features not yet used
-    const availableFeatures = this.features.filter(
-      f => !this.usedFeatures.features.includes(f.name)
-    );
-
-    // Select one (can be random or sequential)
+    // Select one (sequential)
     const selected = availableFeatures[0];
-    
+
     // Mark as used
     this.usedFeatures.features.push(selected.name);
     this.saveUsedFeatures();
