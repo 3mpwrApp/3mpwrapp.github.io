@@ -37,6 +37,7 @@ jobs:
         with:
           ref: main
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 25
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -56,22 +57,33 @@ jobs:
           node scripts/daily-feature-generator.js
 
       - name: Commit article
+        id: commit
+        continue-on-error: true
         run: |
           git config --local user.email "empowrapp08162025@gmail.com"
           git config --local user.name "3mpwrApp Content Bot"
-          
+
           git add _posts/ public/ || true
-          
+
           if git diff --staged --quiet; then
             echo "✅ No changes to commit"
+            echo "pushed=false" >> $GITHUB_OUTPUT
             exit 0
           fi
-          
+
           TODAY=$(date -u +%Y-%m-%d)
-          git commit -m "feat(blog): Daily feature article - $TODAY"
-          git push origin main
+          git commit -m "feat(blog): Daily content article - $TODAY"
+
+          if git push origin main 2>&1; then
+            echo "pushed=true" >> $GITHUB_OUTPUT
+            echo "✅ Article committed and pushed to main"
+          else
+            echo "pushed=false" >> $GITHUB_OUTPUT
+            echo "⚠️ Push to protected main branch failed — article text saved as workflow artifact"
+          fi
 
       - name: Wait for deployment
+        if: steps.commit.outputs.pushed == 'true'
         run: |
           echo "⏳ Waiting for Cloudflare Pages to build and deploy..."
           echo "Starting wait at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
