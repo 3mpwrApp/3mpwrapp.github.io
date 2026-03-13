@@ -147,11 +147,13 @@ class FeaturePoster {
 
       const webhookUrl = new URL(this.config.discord.webhookUrl);
 
+      const articleUrl = content.url || '';
       const embed = {
         title: content.feature || 'New Feature Spotlight',
         description: (content.shortPost || content.longPost || '').substring(0, 4096),
-        url: content.url || '',
+        url: articleUrl,
         color: 0x6366f1,
+        fields: articleUrl ? [{ name: '📖 Read Article', value: articleUrl, inline: false }] : [],
         footer: { text: '3mpwr App • app-announcements' },
         timestamp: new Date().toISOString()
       };
@@ -322,7 +324,7 @@ class FeaturePoster {
     const isAccessible = await this.verifyUrl(content.url);
     
     if (!isAccessible) {
-      const fallbackUrl = 'https://3mpwrapp.github.io/blog/';
+      const fallbackUrl = 'https://3mpwrapp.pages.dev/blog/';
       console.warn(`\n⚠️  Article URL not yet live (${content.url})`);
       console.warn(`📎 Linking to blog page instead: ${fallbackUrl}\n`);
       // Replace URL in content so social posts use the blog page
