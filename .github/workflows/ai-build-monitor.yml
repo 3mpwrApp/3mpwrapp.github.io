@@ -28,7 +28,7 @@ jobs:
       
       - name: AI Build Analysis
         env:
-          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          KIMI_API_KEY: ${{ secrets.KIMIAPIKEY }}
           WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
           WORKFLOW_ID: ${{ github.event.workflow_run.id }}
           RUN_URL: ${{ github.event.workflow_run.html_url }}
