@@ -30,12 +30,17 @@ class FeaturePoster {
         handle: process.env.BLUESKY_HANDLE || '',
         password: process.env.BLUESKY_PASSWORD || '',
         pds: process.env.BLUESKY_PDS || 'https://bsky.social',
+      },
+      discord: {
+        enabled: !!process.env.DISCORD_WEBHOOK_URL,
+        webhookUrl: process.env.DISCORD_WEBHOOK_URL || '',
       }
     };
 
     this.results = {
       mastodon: { success: false, message: '', url: '' },
-      bluesky: { success: false, message: '', url: '' }
+      bluesky: { success: false, message: '', url: '' },
+      discord: { success: false, message: '' }
     };
   }
 
@@ -125,6 +130,58 @@ class FeaturePoster {
       }
     } catch (err) {
       console.error(`❌ Mastodon error: ${err.message}`);
+      return { success: false, message: err.message };
+    }
+  }
+
+  /**
+   * Post to Discord #app-announcements via webhook
+   */
+  async postToDiscord(content) {
+    if (!this.config.discord.enabled) {
+      return { success: false, message: 'Discord not configured' };
+    }
+
+    try {
+      console.log('📤 Posting to Discord...');
+
+      const webhookUrl = new URL(this.config.discord.webhookUrl);
+
+      const embed = {
+        title: content.feature || 'New Feature Spotlight',
+        description: (content.shortPost || content.longPost || '').substring(0, 4096),
+        url: content.url || '',
+        color: 0x6366f1,
+        footer: { text: '3mpwr App • app-announcements' },
+        timestamp: new Date().toISOString()
+      };
+
+      const payload = JSON.stringify({
+        username: '3mpwr App',
+        embeds: [embed]
+      });
+
+      const options = {
+        method: 'POST',
+        hostname: webhookUrl.hostname,
+        path: webhookUrl.pathname + webhookUrl.search,
+        headers: {
+          'Content-Type': 'application/json',
+          'Content-Length': Buffer.byteLength(payload)
+        }
+      };
+
+      const response = await this.httpsRequest(options, payload);
+
+      if (response.statusCode === 200 || response.statusCode === 204) {
+        console.log('✅ Discord posted to #app-announcements');
+        return { success: true, message: 'Posted to Discord' };
+      } else {
+        console.error(`❌ Discord error: ${response.statusCode}`);
+        return { success: false, message: `HTTP ${response.statusCode}` };
+      }
+    } catch (err) {
+      console.error(`❌ Discord error: ${err.message}`);
       return { success: false, message: err.message };
     }
   }
@@ -284,6 +341,10 @@ class FeaturePoster {
 
     // Post to Bluesky
     this.results.bluesky = await this.postToBluesky(content);
+    await this.sleep(1000);
+
+    // Post to Discord #app-announcements
+    this.results.discord = await this.postToDiscord(content);
 
     // Save results
     this.saveResults(content);
@@ -295,6 +356,7 @@ class FeaturePoster {
     if (this.results.mastodon.url) console.log(`  ${this.results.mastodon.url}`);
     console.log(`Bluesky: ${this.results.bluesky.success ? '✅ Success' : '❌ Failed'}`);
     if (this.results.bluesky.url) console.log(`  ${this.results.bluesky.url}`);
+    console.log(`Discord: ${this.results.discord.success ? '✅ Success' : '❌ Failed'}`);
     console.log('\n═══════════════════════════════════════════════════════\n');
 
     return this.results;
