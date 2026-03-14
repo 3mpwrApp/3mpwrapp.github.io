@@ -2,9 +2,11 @@
   "features": [
     "3mpwrApp Production Release: 721 Tests Passing"
   ],
-  "tutorials": [],
+  "tutorials": [
+    "How to Use the Evidence Locker Effectively"
+  ],
   "devDiaries": [],
   "lore": [],
-  "rotationIndex": 1,
+  "rotationIndex": 2,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
