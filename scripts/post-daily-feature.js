@@ -106,10 +106,29 @@ class FeaturePoster {
         }
       };
 
-      // Truncate to 500-character Mastodon limit (with 10 char buffer)
-      let statusText = content.longPost;
-      if (statusText.length > 490) {
-        statusText = statusText.substring(0, 487) + '...';
+      // Build a smart Mastodon post — URL and hashtags are never cut off
+      const MASTO_LIMIT = 500;
+      const articleUrl = content.url || '';
+      const tags = '#3mpwrApp #DisabilityRights #Accessibility';
+      const featureName = (content.feature || '').substring(0, 80);
+      // Use the hook line (first line of shortPost) as the opening
+      const hookLine = (content.shortPost || content.longPost || '').split('\n')[0].substring(0, 120);
+      // Build full body — hook + feature + description excerpt + URL + tags
+      const descLine = (content.longPost || '').split('\n').slice(1).join(' ').replace(/\s+/g, ' ').trim();
+      let statusText = `${hookLine}\n\n✨ ${featureName}\n\n${descLine}\n\n${articleUrl}\n\n${tags}`;
+      if (statusText.length > MASTO_LIMIT) {
+        // Trim the description excerpt to fit
+        const fixedParts = `\n\n✨ ${featureName}\n\n`;
+        const suffix = `\n\n${articleUrl}\n\n${tags}`;
+        const budget = MASTO_LIMIT - hookLine.length - fixedParts.length - suffix.length - 3;
+        const trimmedDesc = budget > 20 ? descLine.substring(0, budget) + '...' : '';
+        statusText = `${hookLine}${fixedParts}${trimmedDesc}${suffix}`;
+      }
+      if (statusText.length > MASTO_LIMIT) {
+        // Last resort: shorten hook too
+        const suffix = `\n\n${articleUrl}\n\n${tags}`;
+        const maxHook = MASTO_LIMIT - suffix.length - featureName.length - 10;
+        statusText = `${hookLine.substring(0, Math.max(20, maxHook))}...\n\n✨ ${featureName}${suffix}`;
       }
 
       const postData = {

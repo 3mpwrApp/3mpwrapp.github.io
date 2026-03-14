@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Feature Spotlight: 3mpwrApp Production Release: 721 Tests Passing"
-date: 2026-03-14 09:00:00 +0000
+date: 2026-03-14 00:00:00 +0000
 tags: [features, spotlight, production-release]
 categories: [features]
 excerpt: 3mpwrApp is 100% production ready with comprehensive security, accessibility, and offline support verified
