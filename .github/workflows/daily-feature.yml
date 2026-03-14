@@ -27,7 +27,7 @@ jobs:
   daily_feature:
     name: Generate Daily Feature Article
     runs-on: ubuntu-latest
-    timeout-minutes: 25  # Reduced since deployment wait is now 10 minutes
+    timeout-minutes: 20
     permissions:
       contents: write
     
@@ -82,52 +82,55 @@ jobs:
             echo "⚠️ Push to protected main branch failed — article text saved as workflow artifact"
           fi
 
-      - name: Wait for deployment
+      - name: Setup Ruby and build Jekyll
+        if: steps.commit.outputs.pushed == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build Jekyll site
         if: steps.commit.outputs.pushed == 'true'
         run: |
-          echo "⏳ Waiting for Cloudflare Pages to build and deploy..."
-          echo "Starting wait at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-          
-          # Get the article URL from the generated JSON
-          if [ -f "public/daily-feature-social.json" ]; then
-            ARTICLE_URL=$(jq -r '.url' public/daily-feature-social.json)
-            echo "Target article URL: $ARTICLE_URL"
-          else
-            echo "❌ ERROR: No social JSON found, cannot verify deployment"
-            exit 1
-          fi
-          
-          # Wait for article to be accessible (up to 60 minutes)
-          MAX_WAIT_MINUTES=60
-          MAX_RETRIES=60  # Check every minute for 60 minutes
-          RETRY_COUNT=0
-          SUCCESS=false
-          
-          while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$SUCCESS" = "false" ]; do
-            # Try to fetch the actual article page
+          echo "🏗️ Building Jekyll site..."
+          bundle exec jekyll build
+          echo "✅ Jekyll build complete"
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.commit.outputs.pushed == 'true' && secrets.CLOUDFLARE_API_TOKEN != ''
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "🚀 Deploying to Cloudflare Pages..."
+          npm install -g wrangler@latest --silent
+          wrangler pages deploy _site --project-name=3mpwrapp --branch=main
+          echo "✅ Cloudflare Pages deploy complete"
+
+      - name: Verify article is live
+        if: steps.commit.outputs.pushed == 'true'
+        id: verify
+        continue-on-error: true
+        run: |
+          ARTICLE_URL=$(jq -r '.url' public/daily-feature-social.json)
+          echo "🔍 Verifying: $ARTICLE_URL"
+
+          # Check up to 10 times (30s each = 5 min max)
+          for i in $(seq 1 10); do
             HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$ARTICLE_URL")
-            
             if [ "$HTTP_CODE" = "200" ]; then
-              echo "✅ Article is live and accessible! (HTTP $HTTP_CODE)"
-              echo "Verified at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-              SUCCESS=true
-            else
-              RETRY_COUNT=$((RETRY_COUNT + 1))
-              ELAPSED_MINUTES=$((RETRY_COUNT))
-              echo "⏳ Article not ready yet (HTTP $HTTP_CODE) - waiting... ($ELAPSED_MINUTES/$MAX_WAIT_MINUTES minutes)"
-              
-              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-                sleep 60  # Wait 1 minute between checks
-              fi
+              echo "✅ Article is live! (HTTP 200 on attempt $i)"
+              echo "verified=true" >> $GITHUB_OUTPUT
+              exit 0
             fi
+            echo "  Attempt $i: HTTP $HTTP_CODE — waiting 30s..."
+            sleep 30
           done
-          
-          if [ "$SUCCESS" = "false" ]; then
-            echo "❌ ERROR: Article not accessible after $MAX_WAIT_MINUTES minutes!"
-            echo "Last HTTP code: $HTTP_CODE"
-            echo "Aborting social media posting to prevent 404 links."
-            exit 1
-          fi
+
+          echo "⚠️ Article URL still HTTP $HTTP_CODE after 5 min — posting will use blog fallback"
+          echo "verified=false" >> $GITHUB_OUTPUT
+          exit 0  # Don't fail the job — let the script handle fallback
 
       - name: Post to social media
         if: steps.commit.outputs.pushed == 'true'
