@@ -130,6 +130,7 @@ jobs:
           fi
 
       - name: Post to social media
+        if: steps.commit.outputs.pushed == 'true'
         continue-on-error: true
         env:
           MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
