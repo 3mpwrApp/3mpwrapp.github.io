@@ -150,11 +150,18 @@ class FeaturePoster {
       const webhookUrl = new URL(this.config.discord.webhookUrl);
 
       const BLOG_URL = 'https://3mpwrapp.pages.dev/blog/';
-      // Specific article URL (may not be deployed yet); falls back to blog if missing
       const readArticleUrl = articleUrl || content.url || BLOG_URL;
+
+      // Strip URLs from description — links are shown cleanly in the two fields below
+      const rawDescription = (content.shortPost || content.longPost || '');
+      const cleanDescription = rawDescription
+        .replace(/https?:\/\/\S+/g, '')        // remove all URLs
+        .replace(/\n{3,}/g, '\n\n')             // collapse excess blank lines
+        .trim();
+
       const embed = {
         title: content.feature || 'New Feature Spotlight',
-        description: (content.shortPost || content.longPost || '').substring(0, 4096),
+        description: cleanDescription.substring(0, 4096),
         url: readArticleUrl,
         color: 0x6366f1,
         fields: [
