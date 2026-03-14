@@ -1,1 +1,10 @@
-{"features":[],"lastReset":"2026-03-13T00:00:00.000Z"}
+{
+  "features": [
+    "3mpwrApp Production Release: 721 Tests Passing"
+  ],
+  "tutorials": [],
+  "devDiaries": [],
+  "lore": [],
+  "rotationIndex": 1,
+  "lastReset": "2026-03-13T00:00:00.000Z"
+}
