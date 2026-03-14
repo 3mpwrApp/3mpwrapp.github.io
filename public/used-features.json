@@ -1,12 +1,13 @@
 {
   "features": [
-    "3mpwrApp Production Release: 721 Tests Passing"
+    "3mpwrApp Production Release: 721 Tests Passing",
+    "Energy Forecast & Smart Scheduling"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively"
   ],
   "devDiaries": [],
   "lore": [],
-  "rotationIndex": 2,
+  "rotationIndex": 3,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
