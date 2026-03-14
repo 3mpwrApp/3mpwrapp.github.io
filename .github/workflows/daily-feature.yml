@@ -97,7 +97,7 @@ jobs:
           echo "✅ Jekyll build complete"
 
       - name: Deploy to Cloudflare Pages
-        if: steps.commit.outputs.pushed == 'true' && secrets.CLOUDFLARE_API_TOKEN != ''
+        if: steps.commit.outputs.pushed == 'true'
         continue-on-error: true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
