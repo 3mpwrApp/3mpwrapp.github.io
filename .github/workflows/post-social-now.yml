@@ -1,0 +1,87 @@
+name: Post to Social Media Now
+
+on:
+  workflow_dispatch:
+    inputs:
+      skip_url_check:
+        description: 'Skip article URL verification (post even if URL is 404)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+jobs:
+  post:
+    name: Post Current Article to Social Media
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.CONTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts --no-audit --fund=false
+
+      - name: Check social JSON
+        id: check
+        run: |
+          if [ ! -f "public/daily-feature-social.json" ]; then
+            echo "❌ No public/daily-feature-social.json found — nothing to post"
+            exit 1
+          fi
+          ARTICLE_URL=$(jq -r '.url' public/daily-feature-social.json)
+          FEATURE=$(jq -r '.feature' public/daily-feature-social.json)
+          DATE=$(jq -r '.date' public/daily-feature-social.json)
+          echo "📰 Article: $FEATURE"
+          echo "📅 Date: $DATE"
+          echo "🔗 URL: $ARTICLE_URL"
+
+          if [ "${{ github.event.inputs.skip_url_check }}" != "true" ]; then
+            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$ARTICLE_URL")
+            if [ "$HTTP_CODE" != "200" ]; then
+              echo "⚠️  Article URL returned HTTP $HTTP_CODE — retrying after 60s..."
+              sleep 60
+              HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$ARTICLE_URL")
+              if [ "$HTTP_CODE" != "200" ]; then
+                echo "❌ Article URL still HTTP $HTTP_CODE after retry. Run with skip_url_check=true to force posting."
+                exit 1
+              fi
+            fi
+            echo "✅ Article URL is live (HTTP $HTTP_CODE)"
+          else
+            echo "⚠️  Skipping URL check (skip_url_check=true)"
+          fi
+
+      - name: Post to social media
+        continue-on-error: true
+        env:
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_PDS: 'https://bsky.social'
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          echo "📣 Posting to social media..."
+          node scripts/post-daily-feature.js
+          echo "✅ Social posting complete"
+
+      - name: Show results
+        if: always()
+        run: |
+          if [ -f "public/feature-posting-results.json" ]; then
+            echo "📊 Posting results:"
+            cat public/feature-posting-results.json | jq '.'
+          fi
