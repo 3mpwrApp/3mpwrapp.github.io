@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * DAILY-FEATURE-GENERATOR.JS
  * Automatically generates daily feature spotlight articles
