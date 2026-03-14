@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
   "generated": "2026-03-14",
-  "totalDocuments": 405,
+  "totalDocuments": 406,
   "documents": [
     {
       "id": "blog/2026-03-14-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-03-14",
-      "excerpt": "Daily News Curation - 2026-03-14 Curated 36 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers",
-      "content": "Daily News Curation - 2026-03-14 Curated 36 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue. 📍 Read More --- Additional Stories 1. How a Veteran Firefighter Battled WorkSafeBC for Treatment First responders with job-related trauma face ‘impossibly high’ barriers when choosing mental health care. Source Score: 20.90 2. The Fallout from Reporting on White Nationalism in Canada Journalist Rachel Gilmore published an investigation in The Tyee. The men she unmasked showed up to intimidate her in person. Source Score: 13.50 3. Advocates Hope a Ruling Will Change RCMP Treatment of Indigenous Witnesses But critics say the Canadian rights tribunal didn’t go far enough after finding police discrimination. Source Score: 13.50 4. Manitoba Government Provides Update on Housing and Homelessness Government of Manitoba press release Source Score: 14.00 5. Manitoba Government and Manitoba M�tis Federation Expand Access to Safe, Supportive Transitional Housing in Interlake Region Government of Manitoba press release Source Score: 11.50 6. Manitoba Government Highlights Investments in Women's Health Care Making a Difference Across the Province Government of Manitoba press release Source Score: 14.40 7. Manitoba Government Returns to Session with Plan to Continue to Lower Costs and Improve Health Care Government of Manitoba press release Source Score: 14.40 8. Manitoba Government Launches Public Consultations on Using Artificial Intelligence Government of Manitoba press release Source Score: 12.40 9. Job cuts at Ottawa hospital show deepening crisis of underfunding across Ontario Rabble.ca — progressive Canadian news Source Score: 8.00 10. Manitoba Government Celebrates Opening of All-Canadian Bus Manufacturing Facility in Winnipeg Government of Manitoba press release Source Score: 12.00 11. Manitoba Government Supports Indigenous Mothering Centre to Keep Mothers and Babies Together Government of Manitoba press release Source Score: 9.50 12. Manitoba Government Invests $600,000 to Support Expansion of Gaynor Family Regional Library Government of Manitoba press release Source Score: 9.50 13. Manitoba Government Makes Menstrual Products Mandatory in Workplaces Government of Manitoba press release Source Score: 9.50 14. Manitoba Government Continues to Support Businesses Through $10 Million Business Security Rebate Government of Manitoba press release Source Score: 9.50 15. Manitoba Government Enacts Legislation to Protect Against Intimate Partner Violence Government of Manitoba press release Source Score: 9.50 16. What Are Universities For? They’ve reached a breaking point. Meet the educators charting their future. Source Score: 5.00 17. Vancouver Coun. Sean Orr Sues Mayor Ken Sim The defamation lawsuit follows Sim telling media Orr distributed illegal drugs. Source Score: 5.00 18. Manitoba Government Announces Open House on the Future of Lemay Forest Government of Manitoba press release Source Score: 7.50 19. Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital Government of Manitoba press release Source Score: 7.50 20. Manitoba Government Opens New Highway Traffic Inspection Station and Weigh Scale Near Headingley Government of Manitoba press release Source Score: 7.50 21. Manitoba Government Expands Surgical Capacity with New Grace Hospital Surgery Clinic Government of Manitoba press release Source Score: 7.50 22. Manitoba Government Breaks Ground on New Kindergarten to Grade 8 School in West St. Paul Government of Manitoba press release Source Score: 7.50 23. Manitoba Government Announces New Bail Unit Operational Government of Manitoba press release Source Score: 7.50 24. Manitoba Government Invests $3.4 Million in First Nation-Owned Minago Mine Government of Manitoba press release Source Score: 7.50 25. Manitoba Government Invests $950,000 In Waste Management and Diversion in Lynn Lake and Marcel Colomb First Nation Government of Manitoba press release Source Score: 7.50 26. Manitoba Government Invests $5 Million in West Lands Infrastructure Development Government of Manitoba press release Source Score: 7.50 27. Did a Government Press Conference Sway a First Nations Election? Observers say provincial and federal governments use deals to exert influence over band elections. Source Score: 5.00 28. Reviewing the news cycle with Nick Seebruch and Sarah Sahagian Rabble.ca — progressive Canadian news Source Score: 4.50 29. Tracking Hospital Overdoses Isn’t Easy as It Seems: Dr. Bonnie Henry BC’s top doctor explains why health authorities may not be collecting this data. A Tyee Q&A. Source Score: 5.50 30. BC Government Accused of a Stealth Attack on Freedom of Information The new bill includes ‘some really bad stuff,’ warn advocates and opposition. Source Score: 4.00 31. Province Reminds Manitobans About Free Prescription Birth Control Government of Manitoba press release Source Score: 4.50 32. Measles Update #86 Government of Manitoba press release Source Score: 4.50 33. Manitoba Leading the Country in Access to Family Doctors Government of Manitoba press release Source Score: 4.50 34. Measles Update #85 Government of Manitoba press release Source Score: 4.50 35. Measles Update #84 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-14 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-14 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More ---",
       "date": "2026-03-14",
       "tags": [
         "highlights"
@@ -18,7 +18,7 @@
         "news"
       ],
       "url": "/2026-03-14-daily-curation",
-      "filesize": 5453
+      "filesize": 290
     },
     {
       "id": "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
@@ -37,6 +37,24 @@
       ],
       "url": "/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing",
       "filesize": 2682
+    },
+    {
+      "id": "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "source": "blog",
+      "title": "Feature Spotlight: Energy Forecast & Smart Scheduling",
+      "excerpt": "Feature Spotlight: Energy Forecast & Smart Scheduling Category: Phase 6: ML-Powered 24-hour energy prediction that learns your patterns and schedules notifications for optimal times --- What Is Energy",
+      "content": "Feature Spotlight: Energy Forecast & Smart Scheduling Category: Phase 6: ML-Powered 24-hour energy prediction that learns your patterns and schedules notifications for optimal times --- What Is Energy Forecast & Smart Scheduling? Energy Forecast & Smart Scheduling is designed to 24-hour energy prediction that learns your patterns and schedules notifications for optimal times. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- Key Highlights - 24-hour energy prediction using your actual activity patterns - Personalized forecasting with advanced ML algorithms - Smart notifications scheduled when you have energy - Weekly wellness reports tracking energy trends - Privacy-first: all predictions happen on your device --- How It Works Here are real examples of how you can use Energy Forecast & Smart Scheduling: 1. See when you'll have the most energy throughout the day 2. Get notified about important tasks during high-energy windows 3. Track your energy patterns over time with weekly reports 4. Receive personalized recommendations based on your energy levels --- Why Energy Forecast & Smart Scheduling Matters - Better time management around your energy levels - Reduce burnout by working with your body's rhythms - Never miss important tasks due to low energy - Understand your patterns to make better decisions --- Getting Started Ready to try Energy Forecast & Smart Scheduling? Here's how to get started: 1. Download the app - Available on iOS and Android (coming soon) 2. Complete setup - Takes just 5 minutes 3. Find the feature - Look for \"Energy Forecast & Smart Scheduling\" in your app 4. Follow the guide - In-app tutorials walk you through each step --- Learn More For complete information about Energy Forecast & Smart Scheduling and all other features: - ðŸ“– Read the Complete User Guide - âœ¨ Explore All Features - ðŸ§ª Join Beta Testing - ðŸ“¬ Subscribe to Updates --- About 3mpwrApp 3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core. All features are: - âœ… Fully accessible (WCAG 2.2 AA+) - ðŸ”’ Privacy-first (local-first architecture) - ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories) - ðŸŒ Culturally inclusive (Indigenous languages supported)",
+      "date": "2026-03-14 00:00:00 +0000",
+      "tags": [
+        "features",
+        "spotlight",
+        "phase-6:-ml-powered"
+      ],
+      "categories": [
+        "features"
+      ],
+      "url": "/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling",
+      "filesize": 2504
     },
     {
       "id": "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
@@ -1525,13 +1543,13 @@
       "id": "curation/2026-03-14-curated.md",
       "source": "curation",
       "title": "2026-03-14-curated.md",
-      "excerpt": "Daily News Curation - 2026-03-14 Curated 36 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers",
-      "content": "Daily News Curation - 2026-03-14 Curated 36 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue. 📍 Read More --- Additional Stories 1. How a Veteran Firefighter Battled WorkSafeBC for Treatment First responders with job-related trauma face ‘impossibly high’ barriers when choosing mental health care. Source Score: 20.90 2. The Fallout from Reporting on White Nationalism in Canada Journalist Rachel Gilmore published an investigation in The Tyee. The men she unmasked showed up to intimidate her in person. Source Score: 13.50 3. Advocates Hope a Ruling Will Change RCMP Treatment of Indigenous Witnesses But critics say the Canadian rights tribunal didn’t go far enough after finding police discrimination. Source Score: 13.50 4. Manitoba Government Provides Update on Housing and Homelessness Government of Manitoba press release Source Score: 14.00 5. Manitoba Government and Manitoba M�tis Federation Expand Access to Safe, Supportive Transitional Housing in Interlake Region Government of Manitoba press release Source Score: 11.50 6. Manitoba Government Highlights Investments in Women's Health Care Making a Difference Across the Province Government of Manitoba press release Source Score: 14.40 7. Manitoba Government Returns to Session with Plan to Continue to Lower Costs and Improve Health Care Government of Manitoba press release Source Score: 14.40 8. Manitoba Government Launches Public Consultations on Using Artificial Intelligence Government of Manitoba press release Source Score: 12.40 9. Job cuts at Ottawa hospital show deepening crisis of underfunding across Ontario Rabble.ca — progressive Canadian news Source Score: 8.00 10. Manitoba Government Celebrates Opening of All-Canadian Bus Manufacturing Facility in Winnipeg Government of Manitoba press release Source Score: 12.00 11. Manitoba Government Supports Indigenous Mothering Centre to Keep Mothers and Babies Together Government of Manitoba press release Source Score: 9.50 12. Manitoba Government Invests $600,000 to Support Expansion of Gaynor Family Regional Library Government of Manitoba press release Source Score: 9.50 13. Manitoba Government Makes Menstrual Products Mandatory in Workplaces Government of Manitoba press release Source Score: 9.50 14. Manitoba Government Continues to Support Businesses Through $10 Million Business Security Rebate Government of Manitoba press release Source Score: 9.50 15. Manitoba Government Enacts Legislation to Protect Against Intimate Partner Violence Government of Manitoba press release Source Score: 9.50 16. What Are Universities For? They’ve reached a breaking point. Meet the educators charting their future. Source Score: 5.00 17. Vancouver Coun. Sean Orr Sues Mayor Ken Sim The defamation lawsuit follows Sim telling media Orr distributed illegal drugs. Source Score: 5.00 18. Manitoba Government Announces Open House on the Future of Lemay Forest Government of Manitoba press release Source Score: 7.50 19. Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital Government of Manitoba press release Source Score: 7.50 20. Manitoba Government Opens New Highway Traffic Inspection Station and Weigh Scale Near Headingley Government of Manitoba press release Source Score: 7.50 21. Manitoba Government Expands Surgical Capacity with New Grace Hospital Surgery Clinic Government of Manitoba press release Source Score: 7.50 22. Manitoba Government Breaks Ground on New Kindergarten to Grade 8 School in West St. Paul Government of Manitoba press release Source Score: 7.50 23. Manitoba Government Announces New Bail Unit Operational Government of Manitoba press release Source Score: 7.50 24. Manitoba Government Invests $3.4 Million in First Nation-Owned Minago Mine Government of Manitoba press release Source Score: 7.50 25. Manitoba Government Invests $950,000 In Waste Management and Diversion in Lynn Lake and Marcel Colomb First Nation Government of Manitoba press release Source Score: 7.50 26. Manitoba Government Invests $5 Million in West Lands Infrastructure Development Government of Manitoba press release Source Score: 7.50 27. Did a Government Press Conference Sway a First Nations Election? Observers say provincial and federal governments use deals to exert influence over band elections. Source Score: 5.00 28. Reviewing the news cycle with Nick Seebruch and Sarah Sahagian Rabble.ca — progressive Canadian news Source Score: 4.50 29. Tracking Hospital Overdoses Isn’t Easy as It Seems: Dr. Bonnie Henry BC’s top doctor explains why health authorities may not be collecting this data. A Tyee Q&A. Source Score: 5.50 30. BC Government Accused of a Stealth Attack on Freedom of Information The new bill includes ‘some really bad stuff,’ warn advocates and opposition. Source Score: 4.00 31. Province Reminds Manitobans About Free Prescription Birth Control Government of Manitoba press release Source Score: 4.50 32. Measles Update #86 Government of Manitoba press release Source Score: 4.50 33. Manitoba Leading the Country in Access to Family Doctors Government of Manitoba press release Source Score: 4.50 34. Measles Update #85 Government of Manitoba press release Source Score: 4.50 35. Measles Update #84 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-14 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-14 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More ---",
       "date": "2026-03-14",
       "tags": [],
       "categories": [],
       "url": "/2026-03-14-curated",
-      "filesize": 5453
+      "filesize": 290
     },
     {
       "id": "curation/README.md",
@@ -6790,6 +6808,7 @@
     ],
     "feature": [
       "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2026-01-23-feature-spotlight-government-navigator.md",
       "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
       "blog/2026-01-21-feature-spotlight-medication-tracker.md",
@@ -6888,6 +6907,7 @@
     ],
     "spotlight:": [
       "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2026-01-23-feature-spotlight-government-navigator.md",
       "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
       "blog/2026-01-21-feature-spotlight-medication-tracker.md",
@@ -7014,6 +7034,64 @@
       "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
       "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
       "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md"
+    ],
+    "energy": [
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-26-spoon-theory-meets-web-design.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "forecast": [
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
+    ],
+    "&": [
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
+      "whatsnew/2026-01-05-january-infrastructure-fixes.md",
+      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2026-01-02-feature-spotlight-symptom-pain-tracker.md",
+      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-12-29-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-12-12-demo-success-usa-lite-launch.md",
+      "whatsnew/2025-12-12-demo-presentation-usa-lite.md",
+      "blog/2025-12-11-feature-spotlight-deadlines-reminders.md",
+      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2025-11-20-feature-spotlight-symptom-pain-tracker.md",
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
+      "whatsnew/2025-10-27-major-performance-accessibility-upgrade.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md",
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "smart": [
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "scheduling": [
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
     ],
     "how": [
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
@@ -7795,32 +7873,6 @@
       "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
       "blog/2025-12-11-feature-spotlight-deadlines-reminders.md"
     ],
-    "&": [
-      "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
-      "whatsnew/2026-01-05-january-infrastructure-fixes.md",
-      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2026-01-02-feature-spotlight-symptom-pain-tracker.md",
-      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-12-29-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "whatsnew/2025-12-12-demo-presentation-usa-lite.md",
-      "blog/2025-12-11-feature-spotlight-deadlines-reminders.md",
-      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2025-11-20-feature-spotlight-symptom-pain-tracker.md",
-      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
-      "whatsnew/2025-10-27-major-performance-accessibility-upgrade.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md",
-      "blog/2025-10-17-weekly-recap.md"
-    ],
     "reminders": [
       "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
       "blog/2025-12-11-feature-spotlight-deadlines-reminders.md"
@@ -8064,17 +8116,6 @@
     "sleep": [
       "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
       "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md"
-    ],
-    "energy": [
-      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-26-spoon-theory-meets-web-design.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
     ],
     "symptom": [
       "blog/2026-01-02-feature-spotlight-symptom-pain-tracker.md",
@@ -8354,22 +8395,6 @@
     ],
     "2025-12-15": [
       "blog/2025-12-15-daily-curation.md"
-    ],
-    "forecast": [
-      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
-    ],
-    "smart": [
-      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "scheduling": [
-      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
     ],
     "2025-12-14": [
       "blog/2025-12-14-daily-curation.md"
@@ -9150,6 +9175,7 @@
     ],
     "features": [
       "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2026-01-23-feature-spotlight-government-navigator.md",
       "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
       "blog/2026-01-21-feature-spotlight-medication-tracker.md",
@@ -9245,6 +9271,7 @@
     ],
     "spotlight": [
       "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2026-01-23-feature-spotlight-government-navigator.md",
       "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
       "blog/2026-01-21-feature-spotlight-medication-tracker.md",
@@ -9342,6 +9369,11 @@
       "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
       "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
       "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md"
+    ],
+    "phase-6:-ml-powered": [
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md"
     ],
     "tutorial": [
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
@@ -9526,10 +9558,6 @@
     "phase-2:-personalization": [
       "blog/2025-12-15-feature-spotlight-disability-wizard.md",
       "blog/2025-11-01-feature-spotlight-disability-wizard.md"
-    ],
-    "phase-6:-ml-powered": [
-      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md"
     ],
     "demo": [
       "blog/2025-12-12-demo-success-usa-lite-launch.md",
@@ -9896,6 +9924,7 @@
     ],
     "features": [
       "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2026-01-23-feature-spotlight-government-navigator.md",
       "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
       "blog/2026-01-21-feature-spotlight-medication-tracker.md",
