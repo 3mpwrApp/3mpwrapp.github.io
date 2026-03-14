@@ -336,13 +336,11 @@ class FeaturePoster {
     if (!isAccessible) {
       const fallbackUrl = 'https://3mpwrapp.pages.dev/blog/';
       console.warn(`\n⚠️  Article URL not yet live (${content.url})`);
-      console.warn(`📎 Embed title will link to blog page. Read Article field keeps specific URL.\n`);
-      // Replace embed/post URLs with blog page so links in text are never 404
+      console.warn(`📎 Mastodon/Bluesky post text keeps specific article URL (link works once article is deployed).`);
+      console.warn(`📎 Discord embed title links to blog page as immediate fallback.\n`);
+      // Only replace the embed URL (Discord title link) — post text keeps the real article URL
+      // so Mastodon/Bluesky followers can click it once the article goes live
       content.url = fallbackUrl;
-      // Also patch shortPost/longPost if they contain the original URL (covers both github.io and pages.dev domains)
-      const anyArticleUrl = /https?:\/\/3mpwrapp\.(github\.io|pages\.dev)\/[^\s)>"']*/g;
-      if (content.shortPost) content.shortPost = content.shortPost.replace(anyArticleUrl, fallbackUrl);
-      if (content.longPost) content.longPost = content.longPost.replace(anyArticleUrl, fallbackUrl);
     } else {
       console.log('✅ Article URL verified accessible!\n');
     }
