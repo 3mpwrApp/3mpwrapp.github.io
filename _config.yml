@@ -16,6 +16,7 @@ plugins:
 # Permalinks and timezone
 permalink: pretty
 timezone: UTC
+future: true
 
 # Kramdown options (for Table of Contents)
 kramdown:
