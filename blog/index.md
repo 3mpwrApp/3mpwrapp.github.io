@@ -20,7 +20,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 <p style="margin-top: 1rem;"><strong>Subscribe:</strong> <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a> | <a href="{{ '/newsletter' | relative_url }}">Newsletter</a></p>
 
-<div style="background: var(--card-bg, #f0f8ff); border: 2px solid var(--link-color, #007bff); border-radius: 8px; padding: 1rem; margin: 1.5rem 0;">
+<div class="blog-social-box">
   <h3 style="margin-top: 0;">📱 Follow Us on Social Media</h3>
   <p>Get daily news and updates delivered to your feed!</p>
   <ul style="margin-bottom: 0;">
@@ -153,36 +153,62 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 ---
 
 <style>
+/* =============================================
+   BLOG PAGE — THEME-AWARE STYLES
+   Uses the site's canonical CSS variables:
+   --text-primary, --text-secondary, --text-link,
+   --bg-color, set by universal-text-legibility.css
+   ============================================= */
+
+/* ---- Base tokens bridged for blog page ---- */
+.blog-page-root,
+.blog-page-root *,
+body {
+  /* nothing here — rely on universal-text-legibility.css */
+}
+
+/* ---- Social box ---- */
+.blog-social-box {
+  background: color-mix(in srgb, var(--text-link, #003d7a) 8%, transparent);
+  border: 2px solid var(--text-link, #003d7a);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* ---- Navigation bar ---- */
 .blog-navigation {
-  background: var(--card-bg, #f5f5f5);
+  background: color-mix(in srgb, currentColor 5%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
   margin: 1rem 0;
-  border: 1px solid var(--border-color, #ddd);
 }
 
 .blog-navigation a {
-  color: var(--link-color, #007bff);
+  color: var(--text-link, #003d7a);
   text-decoration: none;
   font-weight: 600;
   padding: 0 0.5rem;
 }
 
-.blog-navigation a:hover {
+.blog-navigation a:hover,
+.blog-navigation a:focus {
   text-decoration: underline;
-  color: var(--link-hover, #0056b3);
 }
 
+/* ---- Section description ---- */
 .section-description {
-  background: var(--card-bg, #f9f9f9);
-  border-left: 4px solid var(--link-color, #007bff);
-  padding: 1rem;
+  border-left: 4px solid var(--text-link, #003d7a);
+  padding: 1rem 1rem 1rem 1.25rem;
   margin: 1rem 0 2rem;
   font-style: italic;
-  color: var(--text-secondary, #555);
+  color: var(--text-secondary, #404040);
+  /* background inherits page bg */
 }
 
+/* ---- Post grid ---- */
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -190,171 +216,142 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
   margin: 2rem 0;
 }
 
+/* ---- Post cards ---- */
 .post-card {
-  background: var(--main-bg, white);
-  border: 1px solid var(--border-color, #ddd);
+  /* Light mode */
+  background: var(--bg-color, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--text-primary, #111) 20%, transparent);
   border-radius: 12px;
   padding: 1.5rem;
   position: relative;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  color: var(--text-color, #333);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 
 .post-card:hover {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--text-primary, #111) 18%, transparent);
   transform: translateY(-2px);
-  border-color: var(--link-color, #007bff);
+  border-color: var(--text-link, #003d7a);
 }
 
 .post-card__badge {
   position: absolute;
   top: -10px;
   right: 15px;
-  background: var(--link-color, #007bff);
-  color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
+  /* default — overridden per type */
+  background: var(--text-link, #003d7a);
+  color: #ffffff;
 }
 
-.post-card--curated .post-card__badge {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
+.post-card--curated .post-card__badge  { background: #5046e5; }
+.post-card--feature .post-card__badge  { background: #b91c6d; }
+.post-card--weekly  .post-card__badge  { background: #0369a1; }
 
-.post-card--feature .post-card__badge {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.post-card--weekly .post-card__badge {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
+/* Headings/links inside cards — inherit from universal CSS */
 .post-card__title {
   margin: 0.5rem 0 0.75rem;
-  font-size: 1.25rem;
-}
-
-.post-card__title a {
-  color: var(--text-color, #333);
-  text-decoration: none;
-}
-
-.post-card__title a:hover {
-  color: var(--link-color, #007bff);
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .post-card__date {
-  color: var(--text-secondary, #666);
   font-size: 0.9rem;
   margin: 0.5rem 0;
+  color: var(--text-secondary, #404040);
 }
 
 .post-card__excerpt {
-  color: var(--text-color, #555);
   line-height: 1.6;
   margin: 1rem 0;
+  color: var(--text-secondary, #404040);
 }
 
 .post-card__link {
   display: inline-block;
-  color: var(--link-color, #007bff);
-  text-decoration: none;
   font-weight: 600;
   margin-top: 0.5rem;
+  color: var(--text-link, #003d7a);
+  text-decoration: none;
 }
 
-.post-card__link:hover {
+.post-card__link:hover,
+.post-card__link:focus {
   text-decoration: underline;
 }
 
-.posts-list {
-  margin: 2rem 0;
-}
+/* ---- Post list items ---- */
+.posts-list { margin: 2rem 0; }
 
 .post-item {
-  background: var(--main-bg, white);
-  border: 1px solid var(--border-color, #ddd);
+  background: var(--bg-color, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--text-primary, #111) 20%, transparent);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  transition: box-shadow 0.3s ease;
-  color: var(--text-color, #333);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .post-item:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  border-color: var(--link-color, #007bff);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--text-primary, #111) 15%, transparent);
+  border-color: var(--text-link, #003d7a);
 }
 
-.post-item__title {
-  margin: 0 0 0.5rem;
-}
-
-.post-item__title a {
-  color: var(--text-color, #333);
-  text-decoration: none;
-}
-
-.post-item__title a:hover {
-  color: var(--link-color, #007bff);
-}
+.post-item__title { margin: 0 0 0.5rem; font-weight: 700; }
 
 .post-item__date {
-  color: var(--text-secondary, #666);
   font-size: 0.9rem;
   margin: 0.5rem 0;
+  color: var(--text-secondary, #404040);
 }
 
-.post-item__excerpt {
-  color: var(--text-color, #555);
-  line-height: 1.6;
-  margin: 1rem 0;
-}
+.post-item__excerpt  { line-height: 1.6; margin: 1rem 0; color: var(--text-secondary, #404040); }
 
 .post-item__link {
   display: inline-block;
-  color: var(--link-color, #007bff);
-  text-decoration: none;
   font-weight: 600;
+  color: var(--text-link, #003d7a);
+  text-decoration: none;
 }
 
-.post-item__link:hover {
-  text-decoration: underline;
-}
+.post-item__link:hover,
+.post-item__link:focus { text-decoration: underline; }
 
+/* ---- Empty state ---- */
 .empty-state {
   text-align: center;
   padding: 3rem 1rem;
-  color: var(--text-secondary, #666);
   font-style: italic;
-  background: var(--card-bg, #f9f9f9);
-  border: 1px solid var(--border-color, #ddd);
+  border: 1px dashed color-mix(in srgb, var(--text-primary, #111) 30%, transparent);
   border-radius: 8px;
   margin: 2rem 0;
+  color: var(--text-secondary, #404040);
 }
 
+/* ---- Secondary button ---- */
 .btn-secondary {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: var(--main-bg, white);
-  border: 2px solid var(--link-color, #007bff);
-  color: var(--link-color, #007bff);
+  background: transparent;
+  border: 2px solid var(--text-link, #003d7a);
+  color: var(--text-link, #003d7a) !important;
   text-decoration: none;
   border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.btn-secondary:hover {
-  background: var(--link-color, #007bff);
-  color: white;
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: var(--text-link, #003d7a);
+  color: #ffffff !important;
 }
 
+/* ---- Archive ---- */
 .all-posts-archive {
-  background: var(--card-bg, #f9f9f9);
-  border: 1px solid var(--border-color, #ddd);
+  border: 1px solid color-mix(in srgb, var(--text-primary, #111) 20%, transparent);
   border-radius: 8px;
   padding: 1rem;
   margin: 2rem 0;
@@ -362,14 +359,12 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 .all-posts-archive summary {
   cursor: pointer;
-  font-weight: 600;
-  color: var(--link-color, #007bff);
+  font-weight: 700;
+  color: var(--text-link, #003d7a);
   padding: 0.5rem;
 }
 
-.all-posts-archive summary:hover {
-  text-decoration: underline;
-}
+.all-posts-archive summary:hover { text-decoration: underline; }
 
 .archive-list {
   margin-top: 1rem;
@@ -379,90 +374,156 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 .archive-item {
   padding: 0.75rem;
-  border-bottom: 1px solid var(--border-color, #eee);
+  border-bottom: 1px solid color-mix(in srgb, var(--text-primary, #111) 12%, transparent);
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-.archive-item:last-child {
-  border-bottom: none;
-}
+.archive-item:last-child { border-bottom: none; }
 
 .archive-date {
-  color: var(--text-secondary, #666);
   font-family: monospace;
   font-size: 0.9rem;
   min-width: 100px;
+  color: var(--text-secondary, #404040);
 }
 
-.archive-item a {
-  color: var(--text-color, #333);
-  text-decoration: none;
+/* =============================================
+   DARK MODE — card backgrounds
+   (text is already handled by universal CSS)
+   ============================================= */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .post-card,
+  :root:not([data-theme="light"]) .post-item,
+  :root:not([data-theme="light"]) .empty-state {
+    background: color-mix(in srgb, #ffffff 6%, #000000);
+  }
+  :root:not([data-theme="light"]) .blog-social-box {
+    background: color-mix(in srgb, var(--text-link, #80c1ff) 12%, transparent);
+    border-color: var(--text-link, #80c1ff);
+  }
 }
 
-.archive-item a:hover {
-  color: var(--link-color, #007bff);
-  text-decoration: underline;
+[data-theme="dark"] .post-card,
+[data-theme="dark"] .post-item,
+[data-theme="dark"] .empty-state {
+  background: color-mix(in srgb, #ffffff 6%, #000000);
 }
 
-/* Dark mode specific styles */
-body[data-theme="dark"] .post-card,
-body[data-theme="dark"] .post-item {
-  background: var(--main-bg, #111a2b);
-  border-color: var(--border-color, #355c7d);
+[data-theme="dark"] .blog-social-box {
+  background: color-mix(in srgb, var(--text-link, #80c1ff) 12%, transparent);
+  border-color: var(--text-link, #80c1ff);
 }
 
-body[data-theme="dark"] .empty-state {
-  background: var(--main-bg, #111a2b);
-  border-color: var(--border-color, #355c7d);
-  color: var(--text-color, #f2f5f9);
+/* =============================================
+   HIGH CONTRAST MODE
+   ============================================= */
+@media (prefers-contrast: more) {
+  .post-card,
+  .post-item {
+    border: 3px solid currentColor !important;
+    background: Canvas !important;
+  }
+
+  .post-card__badge {
+    background: CanvasText !important;
+    color: Canvas !important;
+    border: 2px solid Canvas !important;
+  }
+
+  .post-card--curated .post-card__badge,
+  .post-card--feature .post-card__badge,
+  .post-card--weekly  .post-card__badge {
+    background: CanvasText !important;
+    color: Canvas !important;
+  }
+
+  .btn-secondary {
+    border: 3px solid currentColor !important;
+    background: Canvas !important;
+    color: CanvasText !important;
+  }
+
+  .blog-social-box {
+    background: Canvas !important;
+    border: 3px solid CanvasText !important;
+  }
+
+  .section-description {
+    border-left: 4px solid CanvasText !important;
+    background: Canvas !important;
+  }
 }
 
-/* High contrast mode */
-body[data-contrast="high"] .post-card,
-body[data-contrast="high"] .post-item {
+/* data-contrast="high" attribute (site's own toggle) */
+[data-contrast="high"] .post-card,
+[data-contrast="high"] .post-item {
   border: 3px solid #000 !important;
+  background: #fff !important;
+  color: #000 !important;
 }
 
-body[data-contrast="high"] .post-card__badge {
+[data-contrast="high"] .post-card__title a,
+[data-contrast="high"] .post-item__title a { color: #000 !important; }
+
+[data-contrast="high"] .post-card__badge {
   background: #000 !important;
   color: #fff !important;
   border: 2px solid #fff !important;
 }
 
-body[data-contrast="high"] .btn-secondary {
+[data-contrast="high"] .post-card--curated .post-card__badge,
+[data-contrast="high"] .post-card--feature .post-card__badge,
+[data-contrast="high"] .post-card--weekly  .post-card__badge {
+  background: #000 !important;
+}
+
+[data-contrast="high"] .btn-secondary {
   border: 3px solid #000 !important;
+  background: #fff !important;
+  color: #000 !important;
 }
 
-@media (max-width: 768px) {
-  .posts-grid {
-    grid-template-columns: 1fr;
+/* =============================================
+   FORCED COLORS (Windows High Contrast)
+   ============================================= */
+@media (forced-colors: active) {
+  .post-card, .post-item {
+    border: 2px solid ButtonText !important;
+    background: Canvas !important;
+    color: CanvasText !important;
+    forced-color-adjust: auto;
   }
-  
-  .blog-navigation {
-    font-size: 0.9rem;
+  .post-card__badge {
+    background: ButtonFace !important;
+    color: ButtonText !important;
+    forced-color-adjust: auto;
   }
-  
-  .blog-navigation a {
-    display: inline-block;
-    margin: 0.25rem;
-  }
-}
-
-/* Accessibility: Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .post-card,
-  .post-item,
+  .post-card__link,
+  .post-item__link,
+  .blog-navigation a,
+  .archive-item a { color: LinkText !important; }
   .btn-secondary {
-    transition: none;
-  }
-  
-  .post-card:hover,
-  .post-item:hover {
-    transform: none;
+    background: ButtonFace !important;
+    color: ButtonText !important;
+    border: 2px solid ButtonText !important;
+    forced-color-adjust: auto;
   }
 }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 768px) {
+  .posts-grid { grid-template-columns: 1fr; }
+  .blog-navigation { font-size: 0.9rem; }
+  .blog-navigation a { display: inline-block; margin: 0.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .post-card, .post-item, .btn-secondary { transition: none; }
+  .post-card:hover, .post-item:hover { transform: none; }
 </style>
 
 <!-- To add a blog post, create a markdown file in the _posts/ directory with the format YYYY-MM-DD-title.md -->

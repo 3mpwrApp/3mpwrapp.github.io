@@ -136,8 +136,10 @@ class FeaturePoster {
 
   /**
    * Post to Discord #app-announcements via webhook
+   * @param {object} content - Post content (url may be fallback blog page)
+   * @param {string} [articleUrl] - The specific article URL (shown in Read Article field)
    */
-  async postToDiscord(content) {
+  async postToDiscord(content, articleUrl) {
     if (!this.config.discord.enabled) {
       return { success: false, message: 'Discord not configured' };
     }
@@ -147,13 +149,19 @@ class FeaturePoster {
 
       const webhookUrl = new URL(this.config.discord.webhookUrl);
 
-      const articleUrl = content.url || '';
+      // embedUrl = the clickable title link (could be blog page if article not live)
+      // specificUrl = the actual article page (shown in Read Article field)
+      const embedUrl = content.url || '';
+      const specificUrl = articleUrl || embedUrl;
       const embed = {
         title: content.feature || 'New Feature Spotlight',
         description: (content.shortPost || content.longPost || '').substring(0, 4096),
-        url: articleUrl,
+        url: embedUrl,
         color: 0x6366f1,
-        fields: articleUrl ? [{ name: '📖 Read Article', value: articleUrl, inline: false }] : [],
+        fields: [
+          { name: '📖 Read Article', value: specificUrl, inline: false },
+          ...(specificUrl !== embedUrl ? [{ name: '📚 Blog', value: embedUrl, inline: false }] : [])
+        ],
         footer: { text: '3mpwr App • app-announcements' },
         timestamp: new Date().toISOString()
       };
@@ -315,6 +323,8 @@ class FeaturePoster {
 
     // Load content
     const content = this.loadSocialContent();
+    // Preserve the specific article URL before any fallback replaces it
+    const specificArticleUrl = content.url;
     console.log(`🌟 Feature: ${content.feature}`);
     console.log(`📅 Date: ${content.date}`);
     console.log(`🔗 URL: ${content.url}\n`);
@@ -326,8 +336,8 @@ class FeaturePoster {
     if (!isAccessible) {
       const fallbackUrl = 'https://3mpwrapp.pages.dev/blog/';
       console.warn(`\n⚠️  Article URL not yet live (${content.url})`);
-      console.warn(`📎 Linking to blog page instead: ${fallbackUrl}\n`);
-      // Replace URL in content so social posts use the blog page
+      console.warn(`📎 Embed title will link to blog page. Read Article field keeps specific URL.\n`);
+      // Replace embed/post URLs with blog page so links in text are never 404
       content.url = fallbackUrl;
       // Also patch shortPost/longPost if they contain the original URL (covers both github.io and pages.dev domains)
       const anyArticleUrl = /https?:\/\/3mpwrapp\.(github\.io|pages\.dev)\/[^\s)>"']*/g;
@@ -345,8 +355,8 @@ class FeaturePoster {
     this.results.bluesky = await this.postToBluesky(content);
     await this.sleep(1000);
 
-    // Post to Discord #app-announcements
-    this.results.discord = await this.postToDiscord(content);
+    // Post to Discord #app-announcements (pass specific article URL for the Read Article field)
+    this.results.discord = await this.postToDiscord(content, specificArticleUrl);
 
     // Save results
     this.saveResults(content);
