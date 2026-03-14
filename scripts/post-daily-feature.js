@@ -149,18 +149,17 @@ class FeaturePoster {
 
       const webhookUrl = new URL(this.config.discord.webhookUrl);
 
-      // embedUrl = the clickable title link (could be blog page if article not live)
-      // specificUrl = the actual article page (shown in Read Article field)
-      const embedUrl = content.url || '';
-      const specificUrl = articleUrl || embedUrl;
+      const BLOG_URL = 'https://3mpwrapp.pages.dev/blog/';
+      // Specific article URL (may not be deployed yet); falls back to blog if missing
+      const readArticleUrl = articleUrl || content.url || BLOG_URL;
       const embed = {
         title: content.feature || 'New Feature Spotlight',
         description: (content.shortPost || content.longPost || '').substring(0, 4096),
-        url: embedUrl,
+        url: readArticleUrl,
         color: 0x6366f1,
         fields: [
-          { name: '📖 Read Article', value: specificUrl, inline: false },
-          ...(specificUrl !== embedUrl ? [{ name: '📚 Blog', value: embedUrl, inline: false }] : [])
+          { name: '📖 Read Article', value: readArticleUrl, inline: false },
+          { name: '📰 Blog', value: BLOG_URL, inline: false }
         ],
         footer: { text: '3mpwr App • app-announcements' },
         timestamp: new Date().toISOString()
