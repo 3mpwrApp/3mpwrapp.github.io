@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.CONTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
           fetch-depth: 25
 
       - name: Setup Node.js
