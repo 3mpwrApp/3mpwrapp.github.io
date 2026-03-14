@@ -250,11 +250,23 @@ class FeaturePoster {
       const session = await this.blueskyLogin();
       const url = new URL(`${this.config.bluesky.pds}/xrpc/com.atproto.repo.createRecord`);
 
-      // Bluesky has 300 character limit (grapheme count)
-      let postText = content.shortPost;
-      if (postText.length > 275) {
-        // Truncate and add ellipsis
-        postText = postText.substring(0, 272) + '...';
+      // Bluesky hard limit: 300 graphemes. Build a compact post that always fits.
+      const BSKY_LIMIT = 300;
+      const hookLine = (content.shortPost || '').split('\n')[0].substring(0, 80);
+      const featureName = (content.feature || '').substring(0, 60);
+      const tags = '#3mpwrApp #DisabilityRights';
+      const articleUrl = content.url;
+      // Base template: hook \n\n ✨ name \n\n url \n\n tags
+      let postText = `${hookLine}\n\n✨ ${featureName}\n\n${articleUrl}\n\n${tags}`;
+      if (postText.length > BSKY_LIMIT) {
+        // Trim hook further to make it fit
+        const excess = postText.length - BSKY_LIMIT;
+        const trimmedHook = hookLine.substring(0, Math.max(10, hookLine.length - excess - 3)) + '...';
+        postText = `${trimmedHook}\n\n✨ ${featureName}\n\n${articleUrl}\n\n${tags}`;
+      }
+      if (postText.length > BSKY_LIMIT) {
+        // Last resort: trim the whole thing
+        postText = postText.substring(0, BSKY_LIMIT - 3) + '...';
       }
 
       const options = {
@@ -329,24 +341,33 @@ class FeaturePoster {
 
     // Load content
     const content = this.loadSocialContent();
-    // Preserve the specific article URL before any fallback replaces it
-    const specificArticleUrl = content.url;
     console.log(`🌟 Feature: ${content.feature}`);
     console.log(`📅 Date: ${content.date}`);
     console.log(`🔗 URL: ${content.url}\n`);
 
-    // Verify URL is accessible before posting
+    // Verify URL is accessible — retry up to 3 times with 30s gaps before falling back
+    const BLOG_FALLBACK = 'https://3mpwrapp.pages.dev/blog/';
+    const originalArticleUrl = content.url;
     console.log('🔍 Verifying article URL is accessible...');
-    const isAccessible = await this.verifyUrl(content.url);
-    
+    let isAccessible = await this.verifyUrl(content.url);
+
     if (!isAccessible) {
-      const fallbackUrl = 'https://3mpwrapp.pages.dev/blog/';
-      console.warn(`\n⚠️  Article URL not yet live (${content.url})`);
-      console.warn(`📎 Mastodon/Bluesky post text keeps specific article URL (link works once article is deployed).`);
-      console.warn(`📎 Discord embed title links to blog page as immediate fallback.\n`);
-      // Only replace the embed URL (Discord title link) — post text keeps the real article URL
-      // so Mastodon/Bluesky followers can click it once the article goes live
-      content.url = fallbackUrl;
+      console.warn(`⚠️  Article URL not live yet: ${content.url}`);
+      for (let attempt = 1; attempt <= 3 && !isAccessible; attempt++) {
+        console.log(`⏳ Retry ${attempt}/3 — waiting 30s...`);
+        await this.sleep(30000);
+        isAccessible = await this.verifyUrl(content.url);
+        if (isAccessible) console.log(`✅ Article came live on retry ${attempt}!\n`);
+      }
+    }
+
+    if (!isAccessible) {
+      console.warn(`❌ Article URL still 404 after retries. Using blog fallback for all platforms.`);
+      console.warn(`   Original URL (for reference): ${originalArticleUrl}\n`);
+      // Replace URL everywhere so no platform posts a dead link
+      content.url = BLOG_FALLBACK;
+      if (content.shortPost) content.shortPost = content.shortPost.replace(/https?:\/\/\S+/g, BLOG_FALLBACK);
+      if (content.longPost) content.longPost = content.longPost.replace(/https?:\/\/\S+/g, BLOG_FALLBACK);
     } else {
       console.log('✅ Article URL verified accessible!\n');
     }
@@ -359,8 +380,8 @@ class FeaturePoster {
     this.results.bluesky = await this.postToBluesky(content);
     await this.sleep(1000);
 
-    // Post to Discord #app-announcements (pass specific article URL for the Read Article field)
-    this.results.discord = await this.postToDiscord(content, specificArticleUrl);
+    // Post to Discord #app-announcements — by this point content.url is the best live URL available
+    this.results.discord = await this.postToDiscord(content, content.url);
 
     // Save results
     this.saveResults(content);

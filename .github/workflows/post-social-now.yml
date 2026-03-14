@@ -51,15 +51,21 @@ jobs:
           if [ "${{ github.event.inputs.skip_url_check }}" != "true" ]; then
             HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$ARTICLE_URL")
             if [ "$HTTP_CODE" != "200" ]; then
-              echo "⚠️  Article URL returned HTTP $HTTP_CODE — retrying after 60s..."
-              sleep 60
-              HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$ARTICLE_URL")
+              echo "⚠️  Article URL returned HTTP $HTTP_CODE — retrying 3 times (30s gaps)..."
+              for i in 1 2 3; do
+                sleep 30
+                HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$ARTICLE_URL")
+                if [ "$HTTP_CODE" = "200" ]; then
+                  echo "✅ Article came live on retry $i"
+                  break
+                fi
+                echo "  Retry $i: still HTTP $HTTP_CODE"
+              done
               if [ "$HTTP_CODE" != "200" ]; then
-                echo "❌ Article URL still HTTP $HTTP_CODE after retry. Run with skip_url_check=true to force posting."
-                exit 1
+                echo "⚠️  Article URL still HTTP $HTTP_CODE — script will use blog fallback for all platforms"
               fi
             fi
-            echo "✅ Article URL is live (HTTP $HTTP_CODE)"
+            echo "ℹ️  Article URL final status: HTTP $HTTP_CODE"
           else
             echo "⚠️  Skipping URL check (skip_url_check=true)"
           fi

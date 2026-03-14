@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * DAILY-FEATURE-GENERATOR.JS
  * Automatically generates daily feature spotlight articles
@@ -932,9 +932,9 @@ class DailyFeatureGenerator {
           'Completely free translation tool'
         ],
         examples: [
-          'Medical: "Ambulatory dysfunction" → Plain: "Difficulty walking"',
-          'Legal: "Reasonable accommodation" → Plain: "Changes employer must make"',
-          'Plain: "I can\'t work full time" → Professional: "Reduced capacity requiring part-time arrangement"',
+          'Medical: "Ambulatory dysfunction" â†’ Plain: "Difficulty walking"',
+          'Legal: "Reasonable accommodation" â†’ Plain: "Changes employer must make"',
+          'Plain: "I can\'t work full time" â†’ Professional: "Reduced capacity requiring part-time arrangement"',
           'Context: Translates differently for doctor vs employer',
           'Learn: Build your advocacy vocabulary'
         ],
@@ -1193,7 +1193,7 @@ class DailyFeatureGenerator {
       }
     ];
 
-    // ─── TUTORIALS ───────────────────────────────────────────────────────────────
+    // â”€â”€â”€ TUTORIALS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     this.tutorials = [
       {
         name: 'How to Use the Evidence Locker Effectively',
@@ -1201,7 +1201,7 @@ class DailyFeatureGenerator {
         description: 'A step-by-step guide to documenting your disability journey with AES-256-GCM encrypted evidence storage',
         highlights: [
           'Organize medical records, photos, and documents in one encrypted place',
-          'Bank-level AES-256-GCM encryption — no one else can read your files',
+          'Bank-level AES-256-GCM encryption â€” no one else can read your files',
           'Offline upload queue works in areas without internet access',
           'Export a complete evidence package for legal appointments in one tap',
           'Timeline view shows your entire medical and legal journey at a glance'
@@ -1213,20 +1213,20 @@ class DailyFeatureGenerator {
           'Export a dated PDF bundle for your lawyer before their deadline'
         ],
         takeaways: [
-          'Documentation is your most powerful tool — start before you think you need it',
+          'Documentation is your most powerful tool â€” start before you think you need it',
           'The sooner you begin logging, the stronger your timeline becomes',
           'Encrypted local storage means your data never leaves your device without your permission'
         ],
         body: [
-          'If there is one habit that makes the difference between winning and losing a disability claim, it is documentation. The Evidence Locker in 3mpwrApp is built to make that habit as frictionless as possible — even on bad health days.',
-          'Many injured workers discover too late that they needed to keep records. A casual dismissal from HR, a worksite photograph taken before clean-up, a timestamped note about denied accommodation — these are the things that determine outcomes. 3mpwrApp\'s Evidence Locker is designed so you never lose any of them.',
-          'All evidence is encrypted on-device using AES-256-GCM — the same standard used in financial services. Even if your phone is lost or stolen, your files are protected. You control when and how anything is ever shared.'
+          'If there is one habit that makes the difference between winning and losing a disability claim, it is documentation. The Evidence Locker in 3mpwrApp is built to make that habit as frictionless as possible â€” even on bad health days.',
+          'Many injured workers discover too late that they needed to keep records. A casual dismissal from HR, a worksite photograph taken before clean-up, a timestamped note about denied accommodation â€” these are the things that determine outcomes. 3mpwrApp\'s Evidence Locker is designed so you never lose any of them.',
+          'All evidence is encrypted on-device using AES-256-GCM â€” the same standard used in financial services. Even if your phone is lost or stolen, your files are protected. You control when and how anything is ever shared.'
         ]
       },
       {
         name: 'Setting Up Accessibility for Your Needs',
         category: 'Tutorial',
-        description: 'A personalized walkthrough of 3mpwrApp\'s WCAG AAA accessibility settings — from dyslexia support to Simple Mode',
+        description: 'A personalized walkthrough of 3mpwrApp\'s WCAG AAA accessibility settings â€” from dyslexia support to Simple Mode',
         highlights: [
           'Dyslexia-friendly fonts reduce visual confusion for dense text',
           'High contrast mode supports low vision and photosensitivity',
@@ -1241,14 +1241,14 @@ class DailyFeatureGenerator {
           'Set font size to Maximum or increase button target sizes for motor accessibility'
         ],
         takeaways: [
-          'Accessibility is not a feature — it is the foundation everything else is built on',
+          'Accessibility is not a feature â€” it is the foundation everything else is built on',
           'No two disabilities are the same; your settings should reflect your actual situation',
-          'All accessibility preferences persist across sessions — you configure once'
+          'All accessibility preferences persist across sessions â€” you configure once'
         ],
         body: [
-          '3mpwrApp was built accessibility-first. Every feature was designed with the full range of disability experiences in mind — not retrofitted after launch.',
+          '3mpwrApp was built accessibility-first. Every feature was designed with the full range of disability experiences in mind â€” not retrofitted after launch.',
           'Our settings are deeply granular because "accessibility" is not one thing. Someone with ADHD has different needs than someone with low vision, who has different needs than someone with motor disabilities. You should be able to configure the app to match your actual situation.',
-          'Everything you configure saves automatically. Switch between Simple Mode and full mode as many times as you need — your settings always come back to where you left them.'
+          'Everything you configure saves automatically. Switch between Simple Mode and full mode as many times as you need â€” your settings always come back to where you left them.'
         ]
       },
       {
@@ -1287,7 +1287,7 @@ class DailyFeatureGenerator {
           '15+ templates for the most common disability and workers\' rights scenarios',
           'Guided completion asks targeted questions to fill in the right details',
           'Legal language validated against Canadian standards by disability advocates',
-          'Export to PDF, share directly, or print — your choice',
+          'Export to PDF, share directly, or print â€” your choice',
           'Every letter auto-saves to your Evidence Locker with a timestamp'
         ],
         examples: [
@@ -1302,9 +1302,9 @@ class DailyFeatureGenerator {
           'Every generated letter saved to Evidence Locker builds your documented timeline'
         ],
         body: [
-          'Letters are the paper trail that determines outcomes in disability claims. A vague letter gives the other side room to dismiss your concerns. A precise, well-cited letter signals you know your rights — and that you\'re keeping records.',
+          'Letters are the paper trail that determines outcomes in disability claims. A vague letter gives the other side room to dismiss your concerns. A precise, well-cited letter signals you know your rights â€” and that you\'re keeping records.',
           '3mpwrApp\'s Master Letter Generator was designed in partnership with disability advocates. The templates produce professional, legally sound documents that anyone can complete without legal training.',
-          'Every letter you generate is automatically saved with a timestamp to your Evidence Locker — creating a documented record of your communications that may be critical evidence later.'
+          'Every letter you generate is automatically saved with a timestamp to your Evidence Locker â€” creating a documented record of your communications that may be critical evidence later.'
         ]
       },
       {
@@ -1316,7 +1316,7 @@ class DailyFeatureGenerator {
           'Pain scale and symptom intensity tracked visually over time',
           'Export a formatted summary report for medical appointments',
           'Pattern recognition shows which symptoms cluster or correlate',
-          'Six-month view shows what memory cannot — the actual trend'
+          'Six-month view shows what memory cannot â€” the actual trend'
         ],
         examples: [
           'Log a fatigue episode with energy level, duration, and potential triggers',
@@ -1330,8 +1330,8 @@ class DailyFeatureGenerator {
           'Patterns in your data reveal things you would never notice day-to-day'
         ],
         body: [
-          '"I\'ve been having worse days lately." That\'s a statement that\'s easy to dismiss. "My six-month symptom log shows 14 days rated 8/10 or above in the last month, compared to 4 in the same period last year" — that is a statement that opens doors.',
-          '3mpwrApp\'s Symptom Tracker turns your subjective daily experience into objective data. Not because your experience isn\'t valid — it absolutely is — but because objective data is harder to argue with in a clinical or legal context.',
+          '"I\'ve been having worse days lately." That\'s a statement that\'s easy to dismiss. "My six-month symptom log shows 14 days rated 8/10 or above in the last month, compared to 4 in the same period last year" â€” that is a statement that opens doors.',
+          '3mpwrApp\'s Symptom Tracker turns your subjective daily experience into objective data. Not because your experience isn\'t valid â€” it absolutely is â€” but because objective data is harder to argue with in a clinical or legal context.',
           'The export function is specifically formatted for medical appointments. Hand your doctor a ready-to-read summary instead of trying to reconstruct the last three months while sitting in a waiting room in pain.'
         ]
       },
@@ -1355,12 +1355,12 @@ class DailyFeatureGenerator {
         takeaways: [
           'Planning spoon use in advance prevents the crashes that come from overcommitting',
           'Spoon theory gives a shared vocabulary for energy limits with people who don\'t experience them',
-          'The Pacing Partner is not nagging — it is self-advocacy in action'
+          'The Pacing Partner is not nagging â€” it is self-advocacy in action'
         ],
         body: [
           'Spoon Theory, coined by Christine Miserandino, gives people with chronic illness a way to describe limited energy. In 3mpwrApp, we built practical tools around this framework because it resonates so deeply with our community.',
-          'The goal is not just awareness — it is action. Knowing you have 8 spoons today is only useful if you can make decisions based on it before you\'ve already spent 12. Our pre-planning tools shift decisions to the morning, when you still have options.',
-          'The Energy Forecast learns your patterns over time. After a few weeks of tracking, it can predict your available energy 24 hours ahead — giving you even more lead time to make good decisions for your body.'
+          'The goal is not just awareness â€” it is action. Knowing you have 8 spoons today is only useful if you can make decisions based on it before you\'ve already spent 12. Our pre-planning tools shift decisions to the morning, when you still have options.',
+          'The Energy Forecast learns your patterns over time. After a few weeks of tracking, it can predict your available energy 24 hours ahead â€” giving you even more lead time to make good decisions for your body.'
         ]
       },
       {
@@ -1368,39 +1368,39 @@ class DailyFeatureGenerator {
         category: 'Tutorial',
         description: 'A plain-language explanation of how 3mpwrApp keeps your sensitive disability data private through local-first, encrypted storage',
         highlights: [
-          'Your data lives on your device — not on remote servers — by default',
+          'Your data lives on your device â€” not on remote servers â€” by default',
           'AES-256-GCM encryption protects all sensitive records at rest',
-          'No advertising, no data brokering, no selling your information — ever',
+          'No advertising, no data brokering, no selling your information â€” ever',
           'You choose exactly what (if anything) ever syncs to the cloud',
-          'You can export and delete everything at any time — you own your data'
+          'You can export and delete everything at any time â€” you own your data'
         ],
         examples: [
           'Your Evidence Locker never leaves your device unless you explicitly share it',
           'Symptom data and medical records are encrypted before being written to storage',
-          'Disable internet entirely — 3mpwrApp continues to work fully offline',
+          'Disable internet entirely â€” 3mpwrApp continues to work fully offline',
           'Export your complete data package at any time for portability or legal use'
         ],
         takeaways: [
-          'For people with disabilities in legal disputes, privacy is not a preference — it is self-protection',
+          'For people with disabilities in legal disputes, privacy is not a preference â€” it is self-protection',
           'Insurance companies and employers cannot demand data that doesn\'t exist on a server we control',
-          'Local-first means control stays with you — architecturally, not just as a policy promise'
+          'Local-first means control stays with you â€” architecturally, not just as a policy promise'
         ],
         body: [
           'People with disabilities are disproportionately targeted by discriminatory data use. Insurance companies, employers, and even government systems have used health data in ways that harm already-vulnerable people. 3mpwrApp was built with this documented history in mind.',
           'Local-first architecture means your data lives on your device by default. We do not have a server full of your symptom logs, evidence photos, or medical records. You cannot have a data breach of data that was never collected.',
-          'When you choose to back things up or sync across devices, you choose. The encryption travels with the data. You hold the keys — and so do we not.'
+          'When you choose to back things up or sync across devices, you choose. The encryption travels with the data. You hold the keys â€” and so do we not.'
         ]
       },
       {
         name: 'Getting Crisis Support Through 3mpwrApp',
         category: 'Tutorial',
-        description: 'How to access crisis lines, community safety check-ins, and immediate mental health support in 3mpwrApp — available offline and one tap away',
+        description: 'How to access crisis lines, community safety check-ins, and immediate mental health support in 3mpwrApp â€” available offline and one tap away',
         highlights: [
           'Province-specific crisis lines accessible in one tap from the home screen',
           'Text-based options for those who cannot or prefer not to call',
           'Breathing exercises and grounding tools available without any navigation',
           'Community safety check-ins connect you with a peer supporter',
-          'All crisis resources pre-loaded to device — available with no internet'
+          'All crisis resources pre-loaded to device â€” available with no internet'
         ],
         examples: [
           'Access your province\'s distress line without searching for a number',
@@ -1409,19 +1409,19 @@ class DailyFeatureGenerator {
           'Send a community safety check-in to receive a peer response'
         ],
         takeaways: [
-          'Crisis resources should never require navigation — one tap is the standard we set',
+          'Crisis resources should never require navigation â€” one tap is the standard we set',
           'Text-based options exist because calling is not always possible or safe',
           'Offline availability means help is there even when the network is not'
         ],
         body: [
-          'Nobody should have to navigate menus when they are in crisis. That is why 3mpwrApp\'s crisis resources are accessible from the home screen in one tap — no drilling through settings, no searching.',
-          'Text-based crisis options are included because calling is not always possible. For deaf and hard-of-hearing users, for people in situations where speaking aloud is unsafe, or for those who find speaking difficult during acute anxiety — texting is essential, not optional.',
+          'Nobody should have to navigate menus when they are in crisis. That is why 3mpwrApp\'s crisis resources are accessible from the home screen in one tap â€” no drilling through settings, no searching.',
+          'Text-based crisis options are included because calling is not always possible. For deaf and hard-of-hearing users, for people in situations where speaking aloud is unsafe, or for those who find speaking difficult during acute anxiety â€” texting is essential, not optional.',
           'Every crisis resource in the app is pre-loaded to device memory. Network failure should never be a barrier to accessing help. It is not, in 3mpwrApp.'
         ]
       }
     ];
 
-    // ─── DEV DIARIES ─────────────────────────────────────────────────────────────
+    // â”€â”€â”€ DEV DIARIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     this.devDiaries = [
       {
         name: 'Why We Chose React Native: Accessibility Over Everything',
@@ -1445,15 +1445,15 @@ class DailyFeatureGenerator {
           'The open-source React Native community\'s accessibility depth accelerated our work enormously'
         ],
         body: [
-          'When we started 3mpwrApp, we had a hard constraint: the framework had to support real, deep accessibility — VoiceOver, TalkBack, Switch Access, and the full spectrum of assistive technology — from day one, not as an afterthought.',
+          'When we started 3mpwrApp, we had a hard constraint: the framework had to support real, deep accessibility â€” VoiceOver, TalkBack, Switch Access, and the full spectrum of assistive technology â€” from day one, not as an afterthought.',
           'React Native was the answer because it exposes the native accessibility APIs of both iOS and Android directly. A web-based hybrid approach would have meant fighting the underlying layer. React Native meant working with it.',
-          'The Expo ecosystem accelerated this enormously. Expo Router\'s file-based navigation is inherently screen-reader-transparent. The community has deep accessibility expertise. We didn\'t have to build the foundations — we stood on good ones.'
+          'The Expo ecosystem accelerated this enormously. Expo Router\'s file-based navigation is inherently screen-reader-transparent. The community has deep accessibility expertise. We didn\'t have to build the foundations â€” we stood on good ones.'
         ]
       },
       {
         name: 'Building Offline-First: Network Access Should Never Be Required',
         category: 'Dev Diary',
-        description: 'How and why 3mpwrApp was built to work completely without internet — and what we learned along the way',
+        description: 'How and why 3mpwrApp was built to work completely without internet â€” and what we learned along the way',
         highlights: [
           'AsyncStorage provides local-first persistence across all platforms',
           'Evidence upload queue retries silently when connectivity returns',
@@ -1464,17 +1464,17 @@ class DailyFeatureGenerator {
         examples: [
           'A user in a rural area with no signal can access their full Evidence Locker',
           'Crisis resources load instantly because they are committed to local storage',
-          'Upload queues retry on their own — users never need to remember to re-upload'
+          'Upload queues retry on their own â€” users never need to remember to re-upload'
         ],
         takeaways: [
           'Many of the most vulnerable community members live in rural areas with unreliable connectivity',
-          'Offline-first is not a performance optimization — it is an equity decision',
+          'Offline-first is not a performance optimization â€” it is an equity decision',
           'Designing for offline means every feature had to work as a standalone, self-contained unit'
         ],
         body: [
           'A disability app that requires consistent internet access systematically excludes the people who need it most.',
           'Consider where chronic illness and disability intersect with geography. Rural and remote communities in Canada have both higher disability rates and significantly worse internet infrastructure. Optimizing for urban, connected users would have been a betrayal of our mission.',
-          'The offline-first mandate created real technical challenges — every feature had to be audited for what it looks like without a network call. The upload queue was particularly complex: we needed silent, automatic retry logic that never lost data and never frustrated users.'
+          'The offline-first mandate created real technical challenges â€” every feature had to be audited for what it looks like without a network call. The upload queue was particularly complex: we needed silent, automatic retry logic that never lost data and never frustrated users.'
         ]
       },
       {
@@ -1485,7 +1485,7 @@ class DailyFeatureGenerator {
           'AES-256-GCM is the same encryption standard used in financial services',
           'All Evidence Locker entries and sensitive data encrypted at rest on-device',
           '721 security tests verify encryption is correctly implemented throughout',
-          'Key management is on-device — we never hold your encryption keys',
+          'Key management is on-device â€” we never hold your encryption keys',
           'Zero-knowledge design: even we cannot read your data'
         ],
         examples: [
@@ -1494,12 +1494,12 @@ class DailyFeatureGenerator {
           'Security audit confirmed zero plaintext sensitive data anywhere in the storage layer'
         ],
         takeaways: [
-          'A disability data breach can cost someone their benefits claim — the stakes are not just personal',
+          'A disability data breach can cost someone their benefits claim â€” the stakes are not just personal',
           'Military-grade encryption was a baseline requirement, not an aspirational achievement',
           'Open, verifiable security claims are more trustworthy than marketing language'
         ],
         body: [
-          'We encrypt at the level we do because we understand what a data breach means for someone with a disability. It is not just personal embarrassment — it can mean an insurer accessing evidence that undermines an active claim. It can mean an employer learning about a condition the worker hasn\'t disclosed.',
+          'We encrypt at the level we do because we understand what a data breach means for someone with a disability. It is not just personal embarrassment â€” it can mean an insurer accessing evidence that undermines an active claim. It can mean an employer learning about a condition the worker hasn\'t disclosed.',
           'AES-256-GCM gives us both encryption (data cannot be read) and authentication (data has not been tampered with). It is the standard that people and organizations who genuinely need security use.',
           'Our 721 tests include a dedicated security suite that verifies not just "does the feature work" but "is this data actually encrypted." We verify what we claim, in code that can be inspected.'
         ]
@@ -1507,12 +1507,12 @@ class DailyFeatureGenerator {
       {
         name: 'Simple Mode: Designing for the Worst Day',
         category: 'Dev Diary',
-        description: 'The design thinking behind Simple Mode — how a single piece of community feedback became one of 3mpwrApp\'s most important features',
+        description: 'The design thinking behind Simple Mode â€” how a single piece of community feedback became one of 3mpwrApp\'s most important features',
         highlights: [
           'Simple Mode originated from a direct community request about cognitive load during flares',
-          'Five core features selected by community vote — not by the dev team alone',
+          'Five core features selected by community vote â€” not by the dev team alone',
           'One-tap switching from full interface to Simple Mode at any time',
-          'All features remain installed — Simple Mode hides, never deletes',
+          'All features remain installed â€” Simple Mode hides, never deletes',
           'Remembers your last Simple Mode state on reopen'
         ],
         examples: [
@@ -1527,16 +1527,16 @@ class DailyFeatureGenerator {
         ],
         body: [
           'The feature request that became Simple Mode came from a community member who told us: "I want to use your app but when I\'m actually sick, it\'s too much to navigate." That single sentence became a product brief.',
-          'We did not want to build a stripped-down "lite" version that patronized users with cognitive disabilities. We wanted a mode — something that respects that the same person can have vastly different capacity on different days without requiring them to reinstall anything.',
-          'The five features in Simple Mode — Evidence Locker quick-add, Crisis Resources, Symptom Log, Benefits Deadline Alerts, and Energy Check-in — were chosen by the community in a direct vote. That is the version of Simple Mode that shipped.'
+          'We did not want to build a stripped-down "lite" version that patronized users with cognitive disabilities. We wanted a mode â€” something that respects that the same person can have vastly different capacity on different days without requiring them to reinstall anything.',
+          'The five features in Simple Mode â€” Evidence Locker quick-add, Crisis Resources, Symptom Log, Benefits Deadline Alerts, and Energy Check-in â€” were chosen by the community in a direct vote. That is the version of Simple Mode that shipped.'
         ]
       },
       {
         name: 'From 0 to 721 Tests: Our TDD Story',
         category: 'Dev Diary',
-        description: 'How 3mpwrApp grew from a prototype to a production codebase with 721 tests across 121 suites — and why test count is a side-effect, not the goal',
+        description: 'How 3mpwrApp grew from a prototype to a production codebase with 721 tests across 121 suites â€” and why test count is a side-effect, not the goal',
         highlights: [
-          '721 tests across 121 suites — zero test debt intentionally accumulated',
+          '721 tests across 121 suites â€” zero test debt intentionally accumulated',
           'Test-driven development used for every critical path in the codebase',
           'Dedicated security test suite verifies encryption implementation is correct',
           'Accessibility tested both programmatically and by community testers',
@@ -1548,20 +1548,20 @@ class DailyFeatureGenerator {
           'Accessibility labels tested in CI to catch regressions before human testers see them'
         ],
         takeaways: [
-          'A regression in a feature a disabled person depends on can cause real harm — tests prevent that',
-          'High test count means nothing without test quality — our tests verify real behaviour',
+          'A regression in a feature a disabled person depends on can cause real harm â€” tests prevent that',
+          'High test count means nothing without test quality â€” our tests verify real behaviour',
           'TDD forces you to articulate exactly what you want code to do before you write it'
         ],
         body: [
-          'Test-driven development means writing the test before writing the code — articulating exactly what you want it to do, in a verifiable way, before a single implementation line exists.',
+          'Test-driven development means writing the test before writing the code â€” articulating exactly what you want it to do, in a verifiable way, before a single implementation line exists.',
           'We chose TDD because this app handles sensitive legal and medical data, crisis support, and accessibility requirements that non-disabled developers might not notice if they broke. We needed a way to verify that the things that matter most to our community kept working.',
-          '721 is not a number we targeted. It is the number you arrive at when you write a test for every meaningful behaviour in the codebase. Test coverage of critical paths was the commitment — the count followed from that.'
+          '721 is not a number we targeted. It is the number you arrive at when you write a test for every meaningful behaviour in the codebase. Test coverage of critical paths was the commitment â€” the count followed from that.'
         ]
       },
       {
         name: 'Building Indigenous Language Support: What We Learned',
         category: 'Dev Diary',
-        description: 'The challenges and lessons from building Indigenous language capability into 3mpwrApp — and why community partnership was non-negotiable',
+        description: 'The challenges and lessons from building Indigenous language capability into 3mpwrApp â€” and why community partnership was non-negotiable',
         highlights: [
           'Indigenous communities face disproportionate workplace injury and disability rates',
           'Colonial healthcare and legal systems create specific language-based barriers',
@@ -1575,14 +1575,14 @@ class DailyFeatureGenerator {
           'Ensuring letters and documents can reference specific Indigenous rights frameworks'
         ],
         takeaways: [
-          'Language is not just communication — it is identity, culture, and safety',
+          'Language is not just communication â€” it is identity, culture, and safety',
           'Technology that excludes Indigenous languages participates in their erasure',
           'Partnership rather than extraction: language support built with communities, not about them'
         ],
         body: [
           'When we first discussed Indigenous language support, our instinct was to use machine translation. We quickly learned why that was wrong. Indigenous languages are living, culturally rich, and complex. Machine translation into them is often inaccurate, sometimes offensive, and always insufficient.',
           'What we built instead was a framework for community-verified translations, with Indigenous language reviewers as genuine partners. The process was slower. The result was right.',
-          'The technical challenges were real — syllabic font rendering, right-to-left text handling, character encoding edge cases. Each one was worth solving, because the people who most need this app deserve to use it in their own language.'
+          'The technical challenges were real â€” syllabic font rendering, right-to-left text handling, character encoding edge cases. Each one was worth solving, because the people who most need this app deserve to use it in their own language.'
         ]
       },
       {
@@ -1590,21 +1590,21 @@ class DailyFeatureGenerator {
         category: 'Dev Diary',
         description: 'A frank discussion of the ethical responsibilities that come with building tools for injured workers and people with disabilities',
         highlights: [
-          'Users are often in adversarial systems — insurers, employers, government — while using this app',
-          'Data ethics go beyond PIPEDA compliance — they require genuine respect for user vulnerability',
+          'Users are often in adversarial systems â€” insurers, employers, government â€” while using this app',
+          'Data ethics go beyond PIPEDA compliance â€” they require genuine respect for user vulnerability',
           'Community co-design is mandatory, not a PR exercise',
-          'We are honest about what the app can and cannot do — we never oversell',
+          'We are honest about what the app can and cannot do â€” we never oversell',
           'The "always free" commitment is an ethical stance, not a startup strategy'
         ],
         examples: [
-          'We never imply that 3mpwrApp replaces legal advice — we direct users to human experts',
+          'We never imply that 3mpwrApp replaces legal advice â€” we direct users to human experts',
           'Community members sit on our informal advisory group and directly shape the roadmap',
           'We are public about feature limitations alongside feature capabilities'
         ],
         takeaways: [
           'Building for vulnerable communities amplifies the harm of getting things wrong',
           'Co-design is the difference between a tool built for a community and one built about them',
-          '"Free" as a business model can still extract value — our commitment is to never do that'
+          '"Free" as a business model can still extract value â€” our commitment is to never do that'
         ],
         body: [
           'Every design decision in 3mpwrApp happens in the context of a user who may be unwell, financially stressed, and in active conflict with systems that have more resources than they do. That context demands a different standard of care than building a productivity app for well-resourced professionals.',
@@ -1615,43 +1615,43 @@ class DailyFeatureGenerator {
       {
         name: 'Why 3mpwrApp Will Always Be Free',
         category: 'Dev Diary',
-        description: 'The thinking behind our permanent free commitment — an ethical stance, not a growth strategy',
+        description: 'The thinking behind our permanent free commitment â€” an ethical stance, not a growth strategy',
         highlights: [
           'Monetizing disability data would be a direct betrayal of the community we serve',
           'Paywalling critical features creates a two-tiered system of access to justice',
-          'Sustainable through grants and advocacy partnerships — not user fees or advertising',
-          'No advertising model — we will never sell exposure to our community\'s vulnerabilities',
+          'Sustainable through grants and advocacy partnerships â€” not user fees or advertising',
+          'No advertising model â€” we will never sell exposure to our community\'s vulnerabilities',
           'The "always free" commitment is structural, not just a policy promise'
         ],
         examples: [
           'Every feature including Evidence Locker, Letter Generator, and crisis resources is always free',
           'No "premium tier" that gates the most important tools behind a paywall',
-          'No advertising of any kind — no targeting, no impressions, no data sold'
+          'No advertising of any kind â€” no targeting, no impressions, no data sold'
         ],
         takeaways: [
-          'People with disabilities are disproportionately in financial precarity — a paid app systematically excludes them',
+          'People with disabilities are disproportionately in financial precarity â€” a paid app systematically excludes them',
           'If access to advocacy tools depends on money, justice is not equal',
-          'Almost every sector monetizes disability data through insurance, advertising, and research — we will not'
+          'Almost every sector monetizes disability data through insurance, advertising, and research â€” we will not'
         ],
         body: [
-          'You cannot build a disability justice app and charge for access. The people who need 3mpwrApp most are often the ones least able to pay for it — injured workers waiting on a claim, people with severe disability on fixed income, people in systems that have repeatedly failed them.',
-          'We had that conversation early and directly: no subscription, no premium tier, no advertising. The funding model for 3mpwrApp is grants, advocacy partnerships, and community contributions — not extracting value from users.',
+          'You cannot build a disability justice app and charge for access. The people who need 3mpwrApp most are often the ones least able to pay for it â€” injured workers waiting on a claim, people with severe disability on fixed income, people in systems that have repeatedly failed them.',
+          'We had that conversation early and directly: no subscription, no premium tier, no advertising. The funding model for 3mpwrApp is grants, advocacy partnerships, and community contributions â€” not extracting value from users.',
           'The "always free" commitment is structural. It is in our founding documents. It is not a marketing promise that changes with new leadership or investor pressure. It is a hard constraint on how we operate.'
         ]
       }
     ];
 
-    // ─── LORE & PHILOSOPHY ────────────────────────────────────────────────────────
+    // â”€â”€â”€ LORE & PHILOSOPHY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     this.loreTopics = [
       {
         name: 'The Origin Story: Why 3mpwrApp Was Built',
         category: 'Our Story',
-        description: 'The personal and political origins of 3mpwrApp — why it was built, by whom, and for whom',
+        description: 'The personal and political origins of 3mpwrApp â€” why it was built, by whom, and for whom',
         highlights: [
           'Born from direct experience with the failure of disability support systems in Canada',
           'Built in response to the systematic silencing of injured workers by insurers and employers',
           'Designed by community members who were themselves navigating the exact systems the app addresses',
-          'The name "3mpwr" reflects collective power — empowerment through tools, technology, and solidarity',
+          'The name "3mpwr" reflects collective power â€” empowerment through tools, technology, and solidarity',
           'Community advisory process shapes every major feature decision to this day'
         ],
         examples: [
@@ -1665,7 +1665,7 @@ class DailyFeatureGenerator {
           'Every feature is a response to a real, named barrier that real people told us they face'
         ],
         body: [
-          '3mpwrApp did not begin as a product idea. It began as a response to a crisis. A community member — navigating a workplace injury claim, fighting an insurer with more resources than she had — needed tools that did not exist. So we built them.',
+          '3mpwrApp did not begin as a product idea. It began as a response to a crisis. A community member â€” navigating a workplace injury claim, fighting an insurer with more resources than she had â€” needed tools that did not exist. So we built them.',
           'What she needed was a way to keep evidence organized and encrypted. A way to write letters that demonstrated she knew her rights. A way to find support resources at 2 AM when the anxiety was worst. She needed 3mpwrApp, so 3mpwrApp exists.',
           'The "3mpwr" in the name is intentional. Not the hollow empowerment that asks disabled people to simply try harder in an unjust system. Collective empowerment. Power through documentation, through community, through having tools that match the tools being used against you.'
         ]
@@ -1673,16 +1673,16 @@ class DailyFeatureGenerator {
       {
         name: 'Disability Justice vs Disability Charity: Our Operating Principle',
         category: 'Philosophy',
-        description: '3mpwrApp is built on disability justice principles — not disability charity. Here is what that means in practice.',
+        description: '3mpwrApp is built on disability justice principles â€” not disability charity. Here is what that means in practice.',
         highlights: [
           'Disability charity positions disabled people as passive recipients of help',
           'Disability justice positions disabled people as agents with rights, power, and expertise',
           'Nothing about us without us: co-design is structurally built into how we operate',
-          'Intersectionality is central — disability does not exist in isolation from race, class, or geography',
-          'Justice demands systemic change — not just better individual coping strategies'
+          'Intersectionality is central â€” disability does not exist in isolation from race, class, or geography',
+          'Justice demands systemic change â€” not just better individual coping strategies'
         ],
         examples: [
-          'The Advocacy tab helps people organize politically — not just manage their own condition',
+          'The Advocacy tab helps people organize politically â€” not just manage their own condition',
           'Campaign Coordination tools support collective action, not just individual petitioning',
           'Community spaces in 3mpwrApp facilitate mutual aid, not dependency on charity'
         ],
@@ -1692,21 +1692,21 @@ class DailyFeatureGenerator {
           'This distinction is why 3mpwrApp includes advocacy and organizing features alongside personal support tools'
         ],
         body: [
-          'There is a meaningful difference between disability charity and disability justice. Charity says: "You are suffering — let us help you cope." Justice says: "You are being harmed by unjust systems — let us organize to change them."',
-          '3mpwrApp is built on the second premise. Yes, we provide coping tools — symptom tracking, crisis support, wellness resources. People need those. But we designed them within a framework that treats disability as a political condition, not only a medical one.',
-          'This is why 3mpwrApp has an Advocacy tab. Why it has Campaign Coordination and community forums. Why it connects you to advocacy partners, not just symptom management features. The goal is not personal adjustment — the goal is collective change.'
+          'There is a meaningful difference between disability charity and disability justice. Charity says: "You are suffering â€” let us help you cope." Justice says: "You are being harmed by unjust systems â€” let us organize to change them."',
+          '3mpwrApp is built on the second premise. Yes, we provide coping tools â€” symptom tracking, crisis support, wellness resources. People need those. But we designed them within a framework that treats disability as a political condition, not only a medical one.',
+          'This is why 3mpwrApp has an Advocacy tab. Why it has Campaign Coordination and community forums. Why it connects you to advocacy partners, not just symptom management features. The goal is not personal adjustment â€” the goal is collective change.'
         ]
       },
       {
         name: 'What 3mpwr Means: The Philosophy Behind Our Name',
         category: 'Philosophy',
-        description: 'Unpacking the meaning behind "3mpwr" — the three pillars, the values, and the vision embedded in how we named this community',
+        description: 'Unpacking the meaning behind "3mpwr" â€” the three pillars, the values, and the vision embedded in how we named this community',
         highlights: [
-          '"3mpwr" = Empower — the 3 represents three pillars: Individual, Community, Systemic',
+          '"3mpwr" = Empower â€” the 3 represents three pillars: Individual, Community, Systemic',
           'Individual pillar: Evidence Locker, Letter Generator, Symptom Tracker, Benefits Navigator',
           'Community pillar: Forums, Peer Support, Virtual Meetups, Mutual Aid',
           'Systemic pillar: Campaign Coordination, Advocacy Resources, Policy Explainer',
-          'The name was chosen by the community — not by a brand consultant'
+          'The name was chosen by the community â€” not by a brand consultant'
         ],
         examples: [
           'Personal tools address immediate, individual needs in the disability system',
@@ -1714,12 +1714,12 @@ class DailyFeatureGenerator {
           'Systemic tools connect individual experiences to collective political action'
         ],
         takeaways: [
-          'Why the app has features that seem very different from each other — they serve three distinct pillars',
-          'Community naming is a form of ownership — this platform belongs to its users',
+          'Why the app has features that seem very different from each other â€” they serve three distinct pillars',
+          'Community naming is a form of ownership â€” this platform belongs to its users',
           'The three pillars ensure we never mistake individual coping for justice'
         ],
         body: [
-          'Names are statements of intent. When we named this platform, we did not hire a brand naming consultant. We asked the community what they wanted it to represent — and the conversation shaped everything.',
+          'Names are statements of intent. When we named this platform, we did not hire a brand naming consultant. We asked the community what they wanted it to represent â€” and the conversation shaped everything.',
           '"3mpwr" came from a community discussion about what kind of empowerment we were actually building toward. Not self-help empowerment. Not the kind that says "you have the power within you" and leaves you to navigate a hostile insurance system alone. Collective, structural empowerment.',
           'The three in "3mpwr" maps onto three pillars: tools for the individual, tools for community connection, and tools for systemic change. Everything in the app fits one of those three categories. The overlap between them is where the real power is.'
         ]
@@ -1727,10 +1727,10 @@ class DailyFeatureGenerator {
       {
         name: 'Privacy as a Human Right: Not a Feature We Added Later',
         category: 'Philosophy',
-        description: 'Why 3mpwrApp treats privacy as a foundational human right for people with disabilities — and what that demands of how we build',
+        description: 'Why 3mpwrApp treats privacy as a foundational human right for people with disabilities â€” and what that demands of how we build',
         highlights: [
           'Disability data is uniquely dangerous: it can affect employment, insurance, housing, and custody',
-          'Many disability apps monetize user data — 3mpwrApp never has and never will',
+          'Many disability apps monetize user data â€” 3mpwrApp never has and never will',
           'Local-first architecture is a political decision, not just a technical implementation',
           'Surveillance of disabled people has been systematically weaponized by insurance companies',
           'Privacy protection is an accessibility feature specifically for people in adversarial systems'
@@ -1738,16 +1738,16 @@ class DailyFeatureGenerator {
         examples: [
           'An insurer cannot demand data that does not exist on a server we control',
           'Encrypted local storage means your medical history is not exposed by a third-party data breach',
-          'You export and delete everything you\'ve ever stored — your data has no home here but your device'
+          'You export and delete everything you\'ve ever stored â€” your data has no home here but your device'
         ],
         takeaways: [
-          'For disabled people in active legal claims, privacy is not a preference — it is self-defense',
+          'For disabled people in active legal claims, privacy is not a preference â€” it is self-defense',
           'Building privacy-first is slower and more expensive; we chose it deliberately and structurally',
-          'When we say "your data never leaves without consent" we mean it architecturally — not as a policy'
+          'When we say "your data never leaves without consent" we mean it architecturally â€” not as a policy'
         ],
         body: [
           'Privacy for people with disabilities is a baseline safety requirement. An injured worker whose symptom logs are accessible to their employer. A person with HIV whose health data surfaces in an insurance database. A disabled employee whose accommodation requests are on company-controlled infrastructure. These are documented realities, not hypotheticals.',
-          '3mpwrApp was built knowing this history. Our privacy architecture — local-first, encrypted, no back door, explicit user control over sync — is not a technical accomplishment. It is a political commitment to the people we serve.',
+          '3mpwrApp was built knowing this history. Our privacy architecture â€” local-first, encrypted, no back door, explicit user control over sync â€” is not a technical accomplishment. It is a political commitment to the people we serve.',
           'We include this in our philosophy documentation because privacy decisions made at the architecture level cannot be undone by a future policy change. The commitment is structural to the codebase.'
         ]
       },
@@ -1769,13 +1769,13 @@ class DailyFeatureGenerator {
         ],
         takeaways: [
           'Designing for minimum viable energy means designing better for everyone',
-          'Spoon theory is not a metaphor to us — it is a concrete design requirement we apply to every feature',
+          'Spoon theory is not a metaphor to us â€” it is a concrete design requirement we apply to every feature',
           'The most important user journey in 3mpwrApp is the one that happens on the worst day'
         ],
         body: [
           'Christine Miserandino\'s Spoon Theory gave us a framework that is now embedded in how we evaluate every feature decision in 3mpwrApp. Before we ship anything, we ask: could someone with three spoons use this today? If the answer is no, we simplify it.',
-          'The spoon community — people with fibromyalgia, ME/CFS, lupus, EDS, multiple sclerosis, and the hundreds of other conditions involving chronic fatigue — were some of our earliest and most rigorous beta testers. They told us when we got it wrong. We listened.',
-          'The practical result is an app designed from the lowest-energy end of the spectrum outward. That produces a better product for everyone — and an essential one for people who have no margin.'
+          'The spoon community â€” people with fibromyalgia, ME/CFS, lupus, EDS, multiple sclerosis, and the hundreds of other conditions involving chronic fatigue â€” were some of our earliest and most rigorous beta testers. They told us when we got it wrong. We listened.',
+          'The practical result is an app designed from the lowest-energy end of the spectrum outward. That produces a better product for everyone â€” and an essential one for people who have no margin.'
         ]
       },
       {
@@ -1786,8 +1786,8 @@ class DailyFeatureGenerator {
           'The community we serve has been let down by opaque institutions too many times',
           'We publish our development process, design decisions, and setbacks openly',
           'Open source code means our security and privacy claims can be independently verified',
-          'Honest about limitations — we never oversell features or hide known issues',
-          'Community feedback shapes the roadmap directly — not through a "feedback portal"'
+          'Honest about limitations â€” we never oversell features or hide known issues',
+          'Community feedback shapes the roadmap directly â€” not through a "feedback portal"'
         ],
         examples: [
           'Dev Diary posts like this one document our actual decision-making, not just polished outcomes',
@@ -1795,25 +1795,25 @@ class DailyFeatureGenerator {
           'Roadmap updates shared with the community before work begins, not after'
         ],
         takeaways: [
-          'Transparency is the opposite of how most institutions treat disabled people — we want to be the opposite',
+          'Transparency is the opposite of how most institutions treat disabled people â€” we want to be the opposite',
           'An app that can be independently verified is more trustworthy than one that asks you to trust its marketing',
           'Building in public creates accountability that internal processes often cannot'
         ],
         body: [
           'The disability and injured worker communities we serve have been let down repeatedly by institutions that made promises, changed them, and explained nothing. Insurance companies that deny claims without clear reasoning. Government systems that lose paperwork and blame the applicant. Healthcare systems where decisions happen in rooms the patient never enters.',
-          'We want to be the opposite of that. Building in public — sharing our reasoning, our failures, our technical decisions — is part of how we demonstrate that 3mpwrApp is accountable to its users.',
+          'We want to be the opposite of that. Building in public â€” sharing our reasoning, our failures, our technical decisions â€” is part of how we demonstrate that 3mpwrApp is accountable to its users.',
           'This is not just about publishing a roadmap. It means being honest when something takes longer than expected. Explaining why we made a technical decision that seems counterintuitive. Publishing dev diaries that document the messy reality of building complex software for real people.'
         ]
       },
       {
         name: 'Collective Advocacy: Why Individual Coping Is Not Enough',
         category: 'Philosophy',
-        description: 'Why 3mpwrApp includes collective action tools alongside individual support — and how the two reinforce each other',
+        description: 'Why 3mpwrApp includes collective action tools alongside individual support â€” and how the two reinforce each other',
         highlights: [
           'Individual resilience without systemic change just makes injustice more sustainable',
           'Campaign Coordination tools connect personal documentation to collective advocacy',
           'Community forums create the social infrastructure that makes isolation survivable',
-          'The divide between "wellness app" and "advocacy tool" is false — 3mpwrApp bridges it',
+          'The divide between "wellness app" and "advocacy tool" is false â€” 3mpwrApp bridges it',
           'Individual evidence, when connected across users, reveals systemic patterns'
         ],
         examples: [
@@ -1824,12 +1824,12 @@ class DailyFeatureGenerator {
         takeaways: [
           'Your personal documentation tools and your political tools should live in the same place',
           'Individual experiences, when connected, reveal patterns that courts and regulators cannot ignore',
-          'Mutual aid is not charity — it is community infrastructure'
+          'Mutual aid is not charity â€” it is community infrastructure'
         ],
         body: [
           'One of the critiques we heard early was: "Is this a wellness app or an advocacy tool?" Our answer was and remains: yes.',
-          'The divide between individual wellness and collective advocacy is artificial. The same person who needs to track their symptoms also needs to know they are not alone — that their experience is shared, that they belong to something larger, and that there are things they can do beyond managing their own condition.',
-          'When a hundred 3mpwrApp users in the same province log the same employer in their Evidence Lockers, find each other in the community forum, and use Campaign Coordination to organize — that is the full vision of 3mpwrApp made visible. Not adapted for it. It was designed for exactly that.'
+          'The divide between individual wellness and collective advocacy is artificial. The same person who needs to track their symptoms also needs to know they are not alone â€” that their experience is shared, that they belong to something larger, and that there are things they can do beyond managing their own condition.',
+          'When a hundred 3mpwrApp users in the same province log the same employer in their Evidence Lockers, find each other in the community forum, and use Campaign Coordination to organize â€” that is the full vision of 3mpwrApp made visible. Not adapted for it. It was designed for exactly that.'
         ]
       },
       {
@@ -1841,7 +1841,7 @@ class DailyFeatureGenerator {
           'Indigenous communities face unique colonial barriers in healthcare and legal systems',
           'Newcomers and immigrants navigate language and cultural barriers in claim systems',
           'Low-income users face the highest stakes and the fewest institutional resources simultaneously',
-          '3mpwrApp is designed for those carrying the most — not for the most visible'
+          '3mpwrApp is designed for those carrying the most â€” not for the most visible'
         ],
         examples: [
           'Indigenous language support directly addresses colonial exclusion from legal and medical systems',
@@ -1850,13 +1850,13 @@ class DailyFeatureGenerator {
         ],
         takeaways: [
           'Building for the most marginalized users first produces a better product for everyone',
-          'Intersectionality is not an ideological complication — it is factual accuracy about who needs the product',
+          'Intersectionality is not an ideological complication â€” it is factual accuracy about who needs the product',
           'Universal design and intersectional design are the same practice done honestly'
         ],
         body: [
-          'Disability does not exist in a social vacuum. A white, urban, high-income person with a disability and an Indigenous person with a disability in a remote community are both disabled — and they face entirely different systems, with entirely different levels of access to support.',
-          '3mpwrApp was designed with the second person at least as much as the first. Indigenous language support, offline-first architecture, province-specific content, plain-language legal guides — each is a direct response to a specific barrier faced by a specific community within the broader disability community.',
-          'When we say intersectional design, we mean: we do not optimize for the easiest user. We start with the person carrying the most — medically, legally, financially, culturally — and build outward from there. The result serves everyone better than the alternative would.'
+          'Disability does not exist in a social vacuum. A white, urban, high-income person with a disability and an Indigenous person with a disability in a remote community are both disabled â€” and they face entirely different systems, with entirely different levels of access to support.',
+          '3mpwrApp was designed with the second person at least as much as the first. Indigenous language support, offline-first architecture, province-specific content, plain-language legal guides â€” each is a direct response to a specific barrier faced by a specific community within the broader disability community.',
+          'When we say intersectional design, we mean: we do not optimize for the easiest user. We start with the person carrying the most â€” medically, legally, financially, culturally â€” and build outward from there. The result serves everyone better than the alternative would.'
         ]
       }
     ];
@@ -1901,7 +1901,7 @@ class DailyFeatureGenerator {
 
     // Reset if all features have been covered (handles duplicates in list gracefully)
     if (availableFeatures.length === 0) {
-      console.log('✨ All features covered! Starting new rotation.');
+      console.log('âœ¨ All features covered! Starting new rotation.');
       this.usedFeatures = {
         features: [],
         lastReset: new Date().toISOString()
@@ -1936,7 +1936,7 @@ class DailyFeatureGenerator {
 
   /**
    * Select the next content item based on the rotation schedule.
-   * Rotation (8-step): feature × 4, tutorial, devDiary, lore, devUpdate
+   * Rotation (8-step): feature Ã— 4, tutorial, devDiary, lore, devUpdate
    * Features appear more frequently since there are 43 of them.
    */
   selectContent() {
@@ -1972,7 +1972,7 @@ class DailyFeatureGenerator {
     let content = `---
 layout: post
 title: "Feature Spotlight: ${feature.name}"
-date: ${dateStr} 09:00:00 +0000
+date: ${dateStr} 00:00:00 +0000
 tags: [features, spotlight, ${feature.category.toLowerCase().replace(/\s+/g, '-')}]
 categories: [features]
 excerpt: ${feature.description}
@@ -2022,18 +2022,18 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
 
     content += `---\n\n## Learn More\n\n`;
     content += `For complete information about ${feature.name} and all other features:\n\n`;
-    content += `- 📖 [Read the Complete User Guide](/user-guide/#${feature.userGuideSection})\n`;
-    content += `- ✨ [Explore All Features](/features/)\n`;
-    content += `- 🧪 [Join Beta Testing](/beta/)\n`;
-    content += `- 📬 [Subscribe to Updates](/newsletter/)\n\n`;
+    content += `- ðŸ“– [Read the Complete User Guide](/user-guide/#${feature.userGuideSection})\n`;
+    content += `- âœ¨ [Explore All Features](/features/)\n`;
+    content += `- ðŸ§ª [Join Beta Testing](/beta/)\n`;
+    content += `- ðŸ“¬ [Subscribe to Updates](/newsletter/)\n\n`;
 
     content += `---\n\n## About 3mpwrApp\n\n`;
-    content += `3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.\n\n`;
+    content += `3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.\n\n`;
     content += `**All features are:**\n`;
-    content += `- ✅ Fully accessible (WCAG 2.2 AA+)\n`;
-    content += `- 🔒 Privacy-first (local-first architecture)\n`;
-    content += `- 🇨🇦 Canadian-focused (all provinces/territories)\n`;
-    content += `- 🌍 Culturally inclusive (Indigenous languages supported)\n`;
+    content += `- âœ… Fully accessible (WCAG 2.2 AA+)\n`;
+    content += `- ðŸ”’ Privacy-first (local-first architecture)\n`;
+    content += `- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)\n`;
+    content += `- ðŸŒ Culturally inclusive (Indigenous languages supported)\n`;
 
     return content;
   }
@@ -2044,7 +2044,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
   generateTutorialContent(item) {
     const dateStr = new Date().toISOString().split('T')[0];
     const tagSlug = item.category.toLowerCase().replace(/\s+/g, '-');
-    let md = `---\nlayout: post\ntitle: "${item.name}"\ndate: ${dateStr} 09:00:00 +0000\ntags: [tutorial, how-to, accessibility, ${tagSlug}]\ncategories: [tutorials]\nexcerpt: "${item.description}"\n---\n\n# ${item.name}\n\n*A practical guide from the 3mpwrApp team.*\n\n---\n\n`;
+    let md = `---\nlayout: post\ntitle: "${item.name}"\ndate: ${dateStr} 00:00:00 +0000\ntags: [tutorial, how-to, accessibility, ${tagSlug}]\ncategories: [tutorials]\nexcerpt: "${item.description}"\n---\n\n# ${item.name}\n\n*A practical guide from the 3mpwrApp team.*\n\n---\n\n`;
     if (item.body) md += item.body.join('\n\n') + '\n\n';
     md += `---\n\n## What You\'ll Learn\n\n`;
     item.highlights.forEach(h => { md += `- ${h}\n`; });
@@ -2052,7 +2052,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     item.examples.forEach((ex, i) => { md += `**Step ${i + 1}:** ${ex}\n\n`; });
     md += `---\n\n## Key Takeaways\n\n`;
     (item.takeaways || item.benefits || []).forEach(t => { md += `- ${t}\n`; });
-    md += `\n---\n\n## Ready to Try It?\n\n1. **Download 3mpwrApp** — [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)\n2. **Sign up or explore as guest** — no commitment needed\n3. **Find this feature** — search or browse main navigation\n\n---\n\n## About 3mpwrApp\n\n3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.\n- 📖 [Full User Guide](/user-guide/)\n- 🧪 [Join the Beta](/app-waitlist/)\n- 💬 [Community Forums](/community/)\n`;
+    md += `\n---\n\n## Ready to Try It?\n\n1. **Download 3mpwrApp** â€” [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)\n2. **Sign up or explore as guest** â€” no commitment needed\n3. **Find this feature** â€” search or browse main navigation\n\n---\n\n## About 3mpwrApp\n\n3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.\n- ðŸ“– [Full User Guide](/user-guide/)\n- ðŸ§ª [Join the Beta](/app-waitlist/)\n- ðŸ’¬ [Community Forums](/community/)\n`;
     return md;
   }
 
@@ -2061,7 +2061,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
    */
   generateDevDiaryContent(item) {
     const dateStr = new Date().toISOString().split('T')[0];
-    let md = `---\nlayout: post\ntitle: "Dev Diary: ${item.name}"\ndate: ${dateStr} 09:00:00 +0000\ntags: [dev-diary, development, behind-the-scenes]\ncategories: [dev-diary]\nexcerpt: "${item.description}"\n---\n\n# Dev Diary: ${item.name}\n\n*A behind-the-scenes look at how we build 3mpwrApp.*\n\n---\n\n`;
+    let md = `---\nlayout: post\ntitle: "Dev Diary: ${item.name}"\ndate: ${dateStr} 00:00:00 +0000\ntags: [dev-diary, development, behind-the-scenes]\ncategories: [dev-diary]\nexcerpt: "${item.description}"\n---\n\n# Dev Diary: ${item.name}\n\n*A behind-the-scenes look at how we build 3mpwrApp.*\n\n---\n\n`;
     if (item.body) md += item.body.join('\n\n') + '\n\n';
     md += `---\n\n## Technical Details\n\n`;
     item.highlights.forEach(h => { md += `- ${h}\n`; });
@@ -2069,7 +2069,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     item.examples.forEach(ex => { md += `- ${ex}\n`; });
     md += `\n---\n\n## What We Learned\n\n`;
     (item.takeaways || item.benefits || []).forEach(t => { md += `- ${t}\n`; });
-    md += `\n---\n\n## Follow Our Development\n\nWe believe in building in public — the community we serve has been failed by opaque institutions too many times.\n\n- ⭐ [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)\n- 🧪 [Join Beta Testing](/app-waitlist/)\n- 💬 [Community Discussion](/community/)\n`;
+    md += `\n---\n\n## Follow Our Development\n\nWe believe in building in public â€” the community we serve has been failed by opaque institutions too many times.\n\n- â­ [GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)\n- ðŸ§ª [Join Beta Testing](/app-waitlist/)\n- ðŸ’¬ [Community Discussion](/community/)\n`;
     return md;
   }
 
@@ -2079,7 +2079,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
   generateLoreContent(item) {
     const dateStr = new Date().toISOString().split('T')[0];
     const tagSlug = item.category.toLowerCase().replace(/\s+/g, '-');
-    let md = `---\nlayout: post\ntitle: "${item.name}"\ndate: ${dateStr} 09:00:00 +0000\ntags: [community, ${tagSlug}, mission, philosophy]\ncategories: [community]\nexcerpt: "${item.description}"\n---\n\n# ${item.name}\n\n`;
+    let md = `---\nlayout: post\ntitle: "${item.name}"\ndate: ${dateStr} 00:00:00 +0000\ntags: [community, ${tagSlug}, mission, philosophy]\ncategories: [community]\nexcerpt: "${item.description}"\n---\n\n# ${item.name}\n\n`;
     if (item.body) md += item.body.join('\n\n') + '\n\n';
     md += `---\n\n## The Principles\n\n`;
     item.highlights.forEach(h => { md += `- ${h}\n`; });
@@ -2087,7 +2087,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     item.examples.forEach(ex => { md += `- ${ex}\n`; });
     md += `\n---\n\n## Why It Matters\n\n`;
     (item.takeaways || item.benefits || []).forEach(t => { md += `- ${t}\n`; });
-    md += `\n---\n\n## Join the Community\n\n3mpwrApp is built on these principles — and built for and with the people who need them most.\n\n- 💬 [Community Forums](/community/)\n- 🧪 [Become a Beta Tester](/app-waitlist/)\n- 📖 [Read Our Mission](/about/)\n`;
+    md += `\n---\n\n## Join the Community\n\n3mpwrApp is built on these principles â€” and built for and with the people who need them most.\n\n- ðŸ’¬ [Community Forums](/community/)\n- ðŸ§ª [Become a Beta Tester](/app-waitlist/)\n- ðŸ“– [Read Our Mission](/about/)\n`;
     return md;
   }
 
@@ -2114,12 +2114,12 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     const fixes = commits.filter(c => /^fix/i.test(c)).map(clean).slice(0, 5);
     const other = commits.filter(c => !/^feat|^fix/i.test(c)).map(clean).slice(0, 3);
 
-    const article = `---\nlayout: post\ntitle: "Dev Update: What\'s Been Happening in 3mpwrApp"\ndate: ${dateStr} 09:00:00 +0000\ntags: [dev-update, changelog, development, transparency]\ncategories: [updates]\nexcerpt: "A look at the latest improvements, fixes, and behind-the-scenes work happening in 3mpwrApp"\n---\n\n# Dev Update: What\'s Been Happening in 3mpwrApp\n\nWe believe in building in public. Here\'s a look at what our team has been working on recently, straight from our development history.\n\n---\n${features.length ? '\n## ✨ New & Improved\n\n' + features.map(c => `- ${c}`).join('\n') + '\n' : ''}${fixes.length ? '\n## 🔧 Fixes & Polish\n\n' + fixes.map(c => `- ${c}`).join('\n') + '\n' : ''}${other.length ? '\n## ⚙️ Under the Hood\n\n' + other.map(c => `- ${c}`).join('\n') + '\n' : ''}\n---\n\n## Why We Build in Public\n\nTransparency is a core operating principle at 3mpwrApp. The community we serve has been let down by opaque institutions — we want to be the structural opposite of that. This means sharing our development process openly, explaining what we\'re working on and why, and being honest when things take longer than expected.\n\n---\n\n## Stay Connected\n\n- ⭐ [Follow our development on GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)\n- 📬 [Subscribe to updates](/newsletter/)\n- 💬 [Join the community](/community/)\n- 🧪 [Join the beta program](/app-waitlist/)\n`;
+    const article = `---\nlayout: post\ntitle: "Dev Update: What\'s Been Happening in 3mpwrApp"\ndate: ${dateStr} 00:00:00 +0000\ntags: [dev-update, changelog, development, transparency]\ncategories: [updates]\nexcerpt: "A look at the latest improvements, fixes, and behind-the-scenes work happening in 3mpwrApp"\n---\n\n# Dev Update: What\'s Been Happening in 3mpwrApp\n\nWe believe in building in public. Here\'s a look at what our team has been working on recently, straight from our development history.\n\n---\n${features.length ? '\n## âœ¨ New & Improved\n\n' + features.map(c => `- ${c}`).join('\n') + '\n' : ''}${fixes.length ? '\n## ðŸ”§ Fixes & Polish\n\n' + fixes.map(c => `- ${c}`).join('\n') + '\n' : ''}${other.length ? '\n## âš™ï¸ Under the Hood\n\n' + other.map(c => `- ${c}`).join('\n') + '\n' : ''}\n---\n\n## Why We Build in Public\n\nTransparency is a core operating principle at 3mpwrApp. The community we serve has been let down by opaque institutions â€” we want to be the structural opposite of that. This means sharing our development process openly, explaining what we\'re working on and why, and being honest when things take longer than expected.\n\n---\n\n## Stay Connected\n\n- â­ [Follow our development on GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)\n- ðŸ“¬ [Subscribe to updates](/newsletter/)\n- ðŸ’¬ [Join the community](/community/)\n- ðŸ§ª [Join the beta program](/app-waitlist/)\n`;
 
     return {
       article,
       meta: {
-        name: `Dev Update — ${dateStr}`,
+        name: `Dev Update â€” ${dateStr}`,
         category: 'Dev Update',
         description: 'Latest development updates from the 3mpwrApp team',
         highlights: [...features.slice(0, 3), ...fixes.slice(0, 2)],
@@ -2136,12 +2136,12 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     const BLOG_URL = `${siteConfig.url}/blog`;
     const fullUrl = `${siteConfig.url}${articleUrl}`;
 
-    // Get viral hook — fall back gracefully if category not in hooks library
+    // Get viral hook â€” fall back gracefully if category not in hooks library
     let hookData;
     try {
       hookData = viralHooks.getRandomHook(contentItem.category);
     } catch {
-      hookData = { hook: '👇 This changes everything for disability rights:', cta: 'Read more' };
+      hookData = { hook: 'ðŸ‘‡ This changes everything for disability rights:', cta: 'Read more' };
     }
     const monthlyTheme = viralHooks.getMonthlyTheme();
 
@@ -2150,7 +2150,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
       .replace('{link}', fullUrl);
 
     // Type-specific emoji + label
-    const typeEmoji = { feature: '✨', tutorial: '📖', devDiary: '🔧', lore: '💡', devUpdate: '🚀' }[contentType] || '✨';
+    const typeEmoji = { feature: 'âœ¨', tutorial: 'ðŸ“–', devDiary: 'ðŸ”§', lore: 'ðŸ’¡', devUpdate: 'ðŸš€' }[contentType] || 'âœ¨';
     const typeLabel = { feature: 'Feature Spotlight', tutorial: 'Tutorial', devDiary: 'Dev Diary', lore: 'From Our Team', devUpdate: 'Dev Update' }[contentType] || 'Feature Spotlight';
 
     const desc = contentItem.description || '';
@@ -2172,12 +2172,12 @@ ${typeEmoji} ${typeLabel}: ${contentItem.name}
 
 ${desc}
 
-🔑 Key points:
-${highlights.slice(0, 3).map(h => `• ${h}`).join('\n')}
+ðŸ”‘ Key points:
+${highlights.slice(0, 3).map(h => `â€¢ ${h}`).join('\n')}
 
-${hookData.cta} → ${fullUrl}
+${hookData.cta} â†’ ${fullUrl}
 
-📰 More on the blog: ${BLOG_URL}
+ðŸ“° More on the blog: ${BLOG_URL}
 
 #3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #${monthlyTheme.theme.replace(/\s+/g, '')}`;
 
@@ -2193,13 +2193,13 @@ ${hookData.cta} → ${fullUrl}
   }
 
   /**
-   * Generate daily content — cycles through features, tutorials, dev diaries, lore, and dev updates.
+   * Generate daily content â€” cycles through features, tutorials, dev diaries, lore, and dev updates.
    */
   generateDailyFeature() {
     const selected = this.selectContent();
     const { type: contentType, item: contentItem } = selected;
 
-    console.log(`\n🌟 Generating Daily Content [${contentType}]: ${contentItem.name}\n`);
+    console.log(`\nðŸŒŸ Generating Daily Content [${contentType}]: ${contentItem.name}\n`);
     this.saveUsedFeatures();
 
     const dateStr = new Date().toISOString().split('T')[0];
@@ -2230,7 +2230,7 @@ ${hookData.cta} → ${fullUrl}
     }
 
     fs.writeFileSync(filepath, articleContent);
-    console.log(`✅ Created: ${filepath}`);
+    console.log(`âœ… Created: ${filepath}`);
 
     const articleUrl = `/${catPath}/${year}/${month}/${day}/${typePrefix}-${slug}/`;
     const social = this.generateSocialPost(contentItem, articleUrl, contentType);
@@ -2246,7 +2246,7 @@ ${hookData.cta} → ${fullUrl}
       articlePath: filepath
     }, null, 2));
 
-    console.log(`📱 Social post ready: ${socialPath}`);
+    console.log(`ðŸ“± Social post ready: ${socialPath}`);
 
     return { feature: contentItem.name, contentType, filepath, articleUrl, social };
   }
@@ -2257,13 +2257,14 @@ if (require.main === module) {
   const generator = new DailyFeatureGenerator();
   const result = generator.generateDailyFeature();
 
-  console.log('\n═══════════════════════════════════════════════════════\n');
-  console.log(`🌟 Daily feature article generated!`);
-  console.log(`📝 Feature: ${result.feature}`);
-  console.log(`📄 Article: ${result.filepath}`);
-  console.log(`🔗 URL: ${result.articleUrl}`);
-  console.log(`\n📱 Social post ready for auto-posting`);
-  console.log('\n═══════════════════════════════════════════════════════\n');
+  console.log('\nâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•\n');
+  console.log(`ðŸŒŸ Daily feature article generated!`);
+  console.log(`ðŸ“ Feature: ${result.feature}`);
+  console.log(`ðŸ“„ Article: ${result.filepath}`);
+  console.log(`ðŸ”— URL: ${result.articleUrl}`);
+  console.log(`\nðŸ“± Social post ready for auto-posting`);
+  console.log('\nâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•\n');
 }
 
 module.exports = DailyFeatureGenerator;
+
