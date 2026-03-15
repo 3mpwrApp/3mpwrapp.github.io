@@ -1,98 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-15T13:59:24.702Z",
+  "lastUpdated": "2026-03-15T19:19:04.763Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 12825,
+      "totalPosts": 12850,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-15T13:59:13.935Z"
+      "lastSeen": "2026-03-15T19:18:48.906Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 12761,
+      "totalPosts": 12786,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-15T13:59:16.176Z"
+      "lastSeen": "2026-03-15T19:18:51.759Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 12660,
-      "recentPosts": 25,
+      "totalPosts": 12681,
+      "recentPosts": 21,
       "peakPosts": 25,
-      "lastSeen": "2026-03-15T13:59:19.113Z"
+      "lastSeen": "2026-03-15T19:18:54.766Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 12860,
+      "totalPosts": 12885,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-15T13:59:21.373Z"
+      "lastSeen": "2026-03-15T19:18:57.658Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 12868,
+      "totalPosts": 12892,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-15T13:59:23.698Z"
+      "lastSeen": "2026-03-15T19:19:03.759Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Just submitted my color blind and low vision simulator browser extension to the Edge store. Once approved, it will be available on Chrome, Firefox, and Edge. \n\nTo give it a try, check out colorblind.fyi\n\n#Accessibility #A11y #DevTools",
-      "author": "xirclebox.com",
-      "engagement": 34,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Friday Bookmarklet Drop!\n\n👉 Structure Revealer - a tool to highlight important structural elements on a page\n\nGet the bookmarklet here: a11y-tools.com/bookmarklets... \n\nMore info here:\na11y-tools.com/blog/2026/03... \n\n#a11y #accessibility  #tools #webdev",
-      "author": "lloydi.com",
-      "engagement": 25,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
-      "author": "emilyrj.bsky.social",
-      "engagement": 22,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
-      "author": "riversofreflection.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
-      "author": "rainbowhyperfixate.bsky.social",
-      "engagement": 34,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Just submitted my color blind and low vision simulator browser extension to the Edge store. Once approved, it will be available on Chrome, Firefox, and Edge. \n\nTo give it a try, check out colorblind.fyi\n\n#Accessibility #A11y #DevTools",
-      "author": "xirclebox.com",
-      "engagement": 34,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Friday Bookmarklet Drop!\n\n👉 Structure Revealer - a tool to highlight important structural elements on a page\n\nGet the bookmarklet here: a11y-tools.com/bookmarklets... \n\nMore info here:\na11y-tools.com/blog/2026/03... \n\n#a11y #accessibility  #tools #webdev",
-      "author": "lloydi.com",
-      "engagement": 25,
-      "hashtag": "A11y"
-    },
     {
       "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
       "author": "caseydoherty.bsky.social",
@@ -338,6 +284,60 @@
       "author": "juliametraux.bsky.social",
       "engagement": 30,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
+      "author": "smithbrainz.bsky.social",
+      "engagement": 70,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
+      "author": "riversofreflection.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
+      "author": "rainbowhyperfixate.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "#BlackWellness #BlackSkyRelay\n#Neurodiversity #DEI #ActualyAutistic #Accessibility\n\nmedium.com/@Ms.AWashing...",
+      "author": "arwashington.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I built a cycling app that knows nothing about you.\n\nNo account. No cloud. No tracking. Your ride data never leaves your device. It’s called Sluip, Dutch for the quiet shortcut every local knows.\n\nCheck it out: joegullo.com/sluip\n\n#cycling #privacy #webdev #a11y #fietsen",
+      "author": "joegullo.com",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "AI can help with accessibility, but it cannot replace human expertise. Accessibility pros bring empathy, judgment, and context that machines cannot replicate. \n\nbuttondown.com/access-abili... \n\n#DigitalAccessibility #AI #InclusiveDesign #AccessibilityLeadership #A11y",
+      "author": "deconspray.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 35
+      "count": 30
     },
     {
       "keyword": "disabilityjustice",
@@ -355,7 +355,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 26
+      "count": 24
     },
     {
       "keyword": "cripthevote",
@@ -382,10 +382,6 @@
       "count": 9
     },
     {
-      "keyword": "disability rights",
-      "count": 9
-    },
-    {
       "keyword": "foxtakedown",
       "count": 9
     },
@@ -394,7 +390,11 @@
       "count": 9
     },
     {
-      "keyword": "mutualaid",
+      "keyword": "inclusion",
+      "count": 8
+    },
+    {
+      "keyword": "disability rights",
       "count": 8
     },
     {
@@ -406,20 +406,20 @@
       "count": 8
     },
     {
-      "keyword": "inclusion",
+      "keyword": "mutualaid",
+      "count": 7
+    },
+    {
+      "keyword": "digitalaccessibility",
       "count": 7
     },
     {
       "keyword": "cripminds",
-      "count": 7
+      "count": 6
     },
     {
       "keyword": "disabilityarts",
-      "count": 7
-    },
-    {
-      "keyword": "disabilityjustice cripminds",
-      "count": 7
+      "count": 6
     }
   ]
 }
