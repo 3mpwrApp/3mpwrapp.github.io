@@ -2,12 +2,12 @@
 title: Social Media Analytics Dashboard
 layout: page
 permalink: /analytics/social/
-generated: 2026-03-14T05:04:27.579Z
+generated: 2026-03-15T05:47:52.995Z
 ---
 
 # 🧠 Social Media Intelligence Dashboard
 
-**Last Updated:** 2026-03-14, 1:04:27 a.m.
+**Last Updated:** 2026-03-15, 1:47:52 a.m.
 
 ---
 
@@ -21,7 +21,7 @@ generated: 2026-03-14T05:04:27.579Z
 
 | Rank | Topic | Mentions | Source |
 |------|-------|----------|--------|
-| 1 | #disabilityrights | 43 | emerging |
+| 1 | #disabilityrights | 42 | emerging |
 | 2 | #accessibility | 34 | emerging |
 | 3 | #disabilityjustice | 26 | emerging |
 | 4 | #a11y | 26 | emerging |

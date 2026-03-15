@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-03-14T05:04:27.593Z",
+  "generated": "2026-03-15T05:47:53.009Z",
   "insights": {
-    "timestamp": "2026-03-14T05:04:27.562Z",
+    "timestamp": "2026-03-15T05:47:52.977Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-03-14T05:04:27.569Z",
+      "lastUpdated": "2026-03-15T05:47:52.984Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -39,7 +39,7 @@
       "currentTrending": [
         {
           "tag": "disabilityrights",
-          "mentions": 43,
+          "mentions": 42,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-03-14T05:04:27.572Z",
+      "lastUpdated": "2026-03-15T05:47:52.988Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-03-14T05:04:27.569Z",
+    "lastUpdated": "2026-03-15T05:47:52.984Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -102,7 +102,7 @@
     "currentTrending": [
       {
         "tag": "disabilityrights",
-        "mentions": 43,
+        "mentions": 42,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-03-14T05:04:27.572Z",
+    "lastUpdated": "2026-03-15T05:47:52.988Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
