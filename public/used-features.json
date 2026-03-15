@@ -6,8 +6,10 @@
   "tutorials": [
     "How to Use the Evidence Locker Effectively"
   ],
-  "devDiaries": [],
+  "devDiaries": [
+    "Why We Chose React Native: Accessibility Over Everything"
+  ],
   "lore": [],
-  "rotationIndex": 3,
+  "rotationIndex": 4,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }

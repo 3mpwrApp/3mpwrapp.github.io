@@ -1,9 +1,9 @@
 {
-  "feature": "Energy Forecast & Smart Scheduling",
-  "contentType": "feature",
-  "date": "2026-03-14",
-  "shortPost": "Spoon theory + AI = an app that finally understands your fluctuating energy 🥄✨\n\nâœ¨ Feature Spotlight: Energy Forecast & Smart Scheduling\n\n24-hour energy prediction that learns your patterns and schedules notifications for optimal times\n\n✨ Try it free: https://3mpwrapp.pages.dev/features/2026/03/14/feature-spotlight-energy-forecast-smart-scheduling/\n\n#3mpwrApp #DisabilityRights #Accessibility",
-  "longPost": "Spoon theory + AI = an app that finally understands your fluctuating energy 🥄✨\n\nâœ¨ Feature Spotlight: Energy Forecast & Smart Scheduling\n\n24-hour energy prediction that learns your patterns and schedules notifications for optimal times\n\nðŸ”‘ Key points:\nâ€¢ 24-hour energy prediction using your actual activity patterns\nâ€¢ Personalized forecasting with advanced ML algorithms\nâ€¢ Smart notifications scheduled when you have energy\n\nLearn how it works â†’ https://3mpwrapp.pages.dev/features/2026/03/14/feature-spotlight-energy-forecast-smart-scheduling/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #DisabilityPride",
-  "url": "https://3mpwrapp.pages.dev/features/2026/03/14/feature-spotlight-energy-forecast-smart-scheduling/",
-  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md"
+  "feature": "Why We Chose React Native: Accessibility Over Everything",
+  "contentType": "devDiary",
+  "date": "2026-03-15",
+  "shortPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: Why We Chose React Native: Accessibility Over Everything\n\nThe technical and ethical reasoning behind choosing React Native as the foundation for 3mpwrApp\n\n💡 Learn more: https://3mpwrapp.pages.dev/dev-diary/2026/03/15/dev-diary-why-we-chose-react-native-accessibility-over-everything/\n\n#3mpwrApp #DisabilityRights #Accessibility",
+  "longPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: Why We Chose React Native: Accessibility Over Everything\n\nThe technical and ethical reasoning behind choosing React Native as the foundation for 3mpwrApp\n\nðŸ”‘ Key points:\nâ€¢ React Native exposes native VoiceOver, TalkBack, and Switch Access APIs directly\nâ€¢ One codebase for iOS, Android, and web prevents accessibility quality divergence\nâ€¢ Expo Router's file-based navigation is transparent to screen readers by design\n\nCheck it out â†’ https://3mpwrapp.pages.dev/dev-diary/2026/03/15/dev-diary-why-we-chose-react-native-accessibility-over-everything/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #DisabilityPride",
+  "url": "https://3mpwrapp.pages.dev/dev-diary/2026/03/15/dev-diary-why-we-chose-react-native-accessibility-over-everything/",
+  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
 }
