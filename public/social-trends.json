@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-16T19:58:25.912Z",
+  "lastUpdated": "2026-03-17T05:13:48.890Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 12950,
+      "totalPosts": 12975,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-16T19:58:13.718Z"
+      "lastSeen": "2026-03-17T05:13:33.092Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 12886,
+      "totalPosts": 12911,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-16T19:58:16.898Z"
+      "lastSeen": "2026-03-17T05:13:36.393Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 12776,
+      "totalPosts": 12801,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-16T19:58:20.302Z"
+      "lastSeen": "2026-03-17T05:13:40.643Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 12985,
+      "totalPosts": 13010,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-16T19:58:22.708Z"
+      "lastSeen": "2026-03-17T05:13:44.374Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 12988,
+      "totalPosts": 13012,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-16T19:58:24.908Z"
+      "lastSeen": "2026-03-17T05:13:47.886Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
-      "author": "riversofreflection.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
-      "author": "rainbowhyperfixate.bsky.social",
-      "engagement": 34,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "#Autism #Autistic #ActuallyAutistic #Employment #Job #Jobs #Accessibility #Neurodivergent \n\nwww.thearticulateautistic.com/before-you-f...",
-      "author": "articulateautistic.bsky.social",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "AI can help with accessibility, but it cannot replace human expertise. Accessibility pros bring empathy, judgment, and context that machines cannot replicate. \n\nbuttondown.com/access-abili... \n\n#DigitalAccessibility #AI #InclusiveDesign #AccessibilityLeadership #A11y",
-      "author": "deconspray.bsky.social",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "That was fast! I submitted this extension late last night. \n\nMy Color Blind & Low Vision Simulator is now available for Microsoft Edge\n\nmicrosoftedge.microsoft.com/addons/detai...\n\n#Accessibility #A11y #DevTools",
-      "author": "xirclebox.com",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
       "author": "emilyrj.bsky.social",
@@ -338,6 +302,42 @@
       "author": "juliametraux.bsky.social",
       "engagement": 30,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
+      "author": "smithbrainz.bsky.social",
+      "engagement": 86,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
+      "author": "riversofreflection.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
+      "author": "rainbowhyperfixate.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -351,11 +351,11 @@
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 25
     },
     {
       "keyword": "disabilityjustice",
-      "count": 25
+      "count": 24
     },
     {
       "keyword": "cripthevote",
@@ -378,20 +378,20 @@
       "count": 14
     },
     {
-      "keyword": "inclusion",
-      "count": 10
-    },
-    {
-      "keyword": "ada",
-      "count": 9
-    },
-    {
       "keyword": "foxtakedown",
       "count": 9
     },
     {
       "keyword": "virtual",
       "count": 9
+    },
+    {
+      "keyword": "ada",
+      "count": 8
+    },
+    {
+      "keyword": "inclusion",
+      "count": 8
     },
     {
       "keyword": "stoptheliesfox",
@@ -402,19 +402,19 @@
       "count": 8
     },
     {
-      "keyword": "mutualaid",
-      "count": 7
-    },
-    {
-      "keyword": "wcag",
-      "count": 7
-    },
-    {
       "keyword": "digitalaccessibility",
       "count": 7
     },
     {
       "keyword": "disabled people",
+      "count": 6
+    },
+    {
+      "keyword": "mutualaid",
+      "count": 6
+    },
+    {
+      "keyword": "wcag",
       "count": 6
     },
     {
