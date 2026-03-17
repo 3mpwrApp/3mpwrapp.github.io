@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-17T05:13:48.890Z",
+  "lastUpdated": "2026-03-17T08:06:06.407Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 12975,
+      "totalPosts": 13000,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-17T05:13:33.092Z"
+      "lastSeen": "2026-03-17T08:05:57.522Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 12911,
+      "totalPosts": 12936,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-17T05:13:36.393Z"
+      "lastSeen": "2026-03-17T08:05:59.512Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 12801,
-      "recentPosts": 25,
+      "totalPosts": 12823,
+      "recentPosts": 22,
       "peakPosts": 25,
-      "lastSeen": "2026-03-17T05:13:40.643Z"
+      "lastSeen": "2026-03-17T08:06:01.465Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 13010,
+      "totalPosts": 13035,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-17T05:13:44.374Z"
+      "lastSeen": "2026-03-17T08:06:03.467Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 13012,
+      "totalPosts": 13036,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-17T05:13:47.886Z"
+      "lastSeen": "2026-03-17T08:06:05.403Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
-      "author": "emilyrj.bsky.social",
-      "engagement": 22,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
-      "author": "smithbrainz.bsky.social",
-      "engagement": 70,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
-      "author": "riversofreflection.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
-      "author": "rainbowhyperfixate.bsky.social",
-      "engagement": 34,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "#BlackWellness #BlackSkyRelay\n#Neurodiversity #DEI #ActualyAutistic #Accessibility\n\nmedium.com/@Ms.AWashing...",
-      "author": "arwashington.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "I built a cycling app that knows nothing about you.\n\nNo account. No cloud. No tracking. Your ride data never leaves your device. It’s called Sluip, Dutch for the quiet shortcut every local knows.\n\nCheck it out: joegullo.com/sluip\n\n#cycling #privacy #webdev #a11y #fietsen",
       "author": "joegullo.com",
@@ -338,6 +302,42 @@
       "author": "juliametraux.bsky.social",
       "engagement": 30,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
+      "author": "smithbrainz.bsky.social",
+      "engagement": 86,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
+      "author": "riversofreflection.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
+      "author": "rainbowhyperfixate.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,14 +347,14 @@
     },
     {
       "keyword": "accessibility",
-      "count": 34
-    },
-    {
-      "keyword": "a11y",
-      "count": 25
+      "count": 31
     },
     {
       "keyword": "disabilityjustice",
+      "count": 25
+    },
+    {
+      "keyword": "a11y",
       "count": 24
     },
     {
@@ -378,20 +378,16 @@
       "count": 14
     },
     {
+      "keyword": "ada",
+      "count": 9
+    },
+    {
       "keyword": "foxtakedown",
       "count": 9
     },
     {
       "keyword": "virtual",
       "count": 9
-    },
-    {
-      "keyword": "ada",
-      "count": 8
-    },
-    {
-      "keyword": "inclusion",
-      "count": 8
     },
     {
       "keyword": "stoptheliesfox",
@@ -406,7 +402,7 @@
       "count": 7
     },
     {
-      "keyword": "disabled people",
+      "keyword": "inclusion",
       "count": 6
     },
     {
@@ -414,11 +410,15 @@
       "count": 6
     },
     {
-      "keyword": "wcag",
+      "keyword": "cripminds",
       "count": 6
     },
     {
       "keyword": "refusefascism",
+      "count": 6
+    },
+    {
+      "keyword": "trumpmustgo",
       "count": 6
     }
   ]
