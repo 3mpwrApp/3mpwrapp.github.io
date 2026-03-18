@@ -77,15 +77,15 @@
 ### Image 1: AI Assistant - Personalized Recommendations
 **Filename**: `AIAssistantTab1-YouNext3Steps-RecommendedTools.png`  
 **Alt Text**: AI Assistant showing personalized next steps and recommended tools for disability advocacy - 3mpwrApp home dashboard  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#ai-advocacy-suite  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#priority-february-2026-personalization
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#priority-february-2026-personalization
 
 **Mastodon** (467 chars):
 Meet your AI Assistant 🤖 Personalized next steps, tailored recommendations, and zero guesswork. Built BY disabled people FOR disabled people.
 
 Your disability is unique. Your tools should be too.
 
-Join our closed beta → https://3mpwrapp.github.io/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_assistant_1
+Join our closed beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_assistant_1
 
 #3mpwrApp #DisabilityRights #BetaTesting #AIAccessibility #DisabilityTech
 
@@ -94,7 +94,7 @@ Your phone now knows what you need before you do 🤖
 
 AI Assistant that actually understands disability life. Personalized recs. Zero overwhelm.
 
-Closed beta open → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_1
+Closed beta open → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_1
 
 #3mpwrApp #DisabilityTech
 
@@ -103,7 +103,7 @@ Brain fog? No problem. The AI remembers what you forget 🧠
 
 Your personalized disability advocacy assistant is here. Free forever.
 
-Join beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_1
+Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_ai_1
 
 #3mpwrApp #DisabilityRights
 
@@ -112,8 +112,8 @@ Join beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medi
 ### Image 2: Home Dashboard Overview
 **Filename**: `HomeScreenTab1.png`  
 **Alt Text**: 3mpwrApp home dashboard with personalized widgets, quick actions, and AI assistant for disability rights advocacy  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#personalization-setup  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#priority-february-2026-personalization
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#personalization-setup  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#priority-february-2026-personalization
 
 **Mastodon** (476 chars):
 Your command center for disability advocacy ⚡
@@ -125,7 +125,7 @@ Your command center for disability advocacy ⚡
 
 All in one place. All accessible. All FREE.
 
-Test it now → https://3mpwrapp.github.io/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dashboard_1
+Test it now → https://3mpwrapp.pages.dev/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dashboard_1
 
 #3mpwrApp #DisabilityRights #BetaTesting #AccessibleTech
 
@@ -134,7 +134,7 @@ Stop switching between 12 apps 😅
 
 One dashboard. Your health. Your case. Your community. Everything disability advocacy in one place.
 
-Early access → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dash_1
+Early access → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dash_1
 
 #3mpwrApp #DisabilityAdvocacy
 
@@ -143,7 +143,7 @@ Your disability is unique. Why isn't your app?
 
 Personalized dashboard that adapts to YOU, not the other way around. Free beta open.
 
-Join → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dash_1
+Join → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_dash_1
 
 #3mpwrApp
 
@@ -152,8 +152,8 @@ Join → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=so
 ### Image 3: Home Features
 **Filename**: `HomeScreenTab2.png`  
 **Alt Text**: 3mpwrApp home screen showing wellness tracking, evidence management, and community support features  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#quick-start  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#quick-start  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
 
 **Mastodon** (453 chars):
 Three things disabled people need DAILY: 🧠💪💚
@@ -164,7 +164,7 @@ Three things disabled people need DAILY: 🧠💪💚
 
 All three. One app. Zero cost.
 
-See how it works → https://3mpwrapp.github.io/user-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_features_1
+See how it works → https://3mpwrapp.pages.dev/user-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_features_1
 
 #3mpwrApp #ChronicIllness #DisabilityAdvocacy #SpoonTheory
 
@@ -173,7 +173,7 @@ Wellness + Evidence + Community = 3mpwrApp 💚
 
 Track symptoms, protect documents, find your people. All accessible. All private. All yours.
 
-Join beta → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_feat_1
+Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_feat_1
 
 #3mpwrApp
 
@@ -182,7 +182,7 @@ Started with 12 spoons. Ended with 2. This app tracks what drained me →
 
 Wellness tracking + evidence storage + community support. Built BY disabled people.
 
-Beta open → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_feat_1
+Beta open → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_feat_1
 
 #SpoonTheory
 
@@ -191,8 +191,8 @@ Beta open → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medi
 ### Image 4: Community Hub Simple Mode
 **Filename**: `HomeCommunityHubSimpleMode.png`  
 **Alt Text**: Community Hub in simple complexity mode - accessible interface for disability community connection - 3mpwrApp  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#complexity-mode  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#complexity-mode  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
 
 **Mastodon** (489 chars):
 Bad day? Switch to Simple Mode. Seriously.
@@ -207,7 +207,7 @@ Complexity modes designed for:
 🌟 Neurodivergent comfort
 
 Disability tech that adapts to YOU →  
-https://3mpwrapp.github.io/user-guide/#complexity-mode?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple_mode
+https://3mpwrapp.pages.dev/user-guide/#complexity-mode?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple_mode
 
 #3mpwrApp #A11y #CognitiveAccessibility
 
@@ -219,7 +219,7 @@ Same app. YOUR choice. Switch anytime.
 
 Because disability isn't one-size-fits-all 💚
 
-Try it → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple
+Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple
 
 #3mpwrApp #AccessibleTech
 
@@ -230,7 +230,7 @@ One tap. Simple Mode. 5 features. No overwhelm.
 
 Disability tech that actually understands bad days.
 
-Join beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple
+Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_simple
 
 #3mpwrApp #Neurodivergent
 
@@ -239,8 +239,8 @@ Join beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medi
 ### Image 5: Evidence Vault Quick Access
 **Filename**: `HomeEvidenceVault-EvidenceCommandCenter.png`  
 **Alt Text**: Quick access to Evidence Command Center from home - encrypted document storage for workers compensation cases - 3mpwrApp  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#evidence-command-center  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#original-priority-features
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#evidence-command-center  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#original-priority-features
 
 **Mastodon** (472 chars):
 "I lost the denial letter" 📄❌
@@ -255,7 +255,7 @@ Never again. Evidence Command Center:
 
 Your evidence. Your privacy. Your control.
 
-Protect your case → https://3mpwrapp.github.io/user-guide/#evidence-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
+Protect your case → https://3mpwrapp.pages.dev/user-guide/#evidence-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
 
 #3mpwrApp #WorkersComp
 
@@ -266,7 +266,7 @@ Medical records. Denial letters. Photos. Voice memos. All encrypted. All organiz
 
 Benefits appeals? Covered. Workplace discrimination? Documented.
 
-Test it → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
+Test it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
 
 #3mpwrApp
 
@@ -277,15 +277,15 @@ Evidence Command Center = encrypted proof they can't deny.
 
 Workers comp. Disability claims. Workplace discrimination. Document EVERYTHING.
 
-Beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
+Beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_evidence
 
 ---
 
 ### Image 6: Wellness Command Access
 **Filename**: `HomeWellnessCommand.png`  
 **Alt Text**: Wellness Hub quick access with health tracking, mood logging, and energy management tools - 3mpwrApp  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#wellness-hub  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#january-2026-powertools
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#wellness-hub  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#january-2026-powertools
 
 **Mastodon** (481 chars):
 Wellness Hub: 41 tools. 6 categories. Zero judgment 💚
@@ -299,7 +299,7 @@ Wellness Hub: 41 tools. 6 categories. Zero judgment 💚
 
 Self-care that isn't just "take a bath"
 
-Explore tools → https://3mpwrapp.github.io/user-guide/#wellness-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
+Explore tools → https://3mpwrapp.pages.dev/user-guide/#wellness-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
 
 #ChronicIllness #SpoonTheory
 
@@ -310,7 +310,7 @@ Mood tracking. Energy forecasts. Pain logging. Crisis support. Exercise videos. 
 
 41 tools built for chronic illness life. Not "wellness influencer" nonsense.
 
-Try it → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
+Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
 
 #ChronicPain
 
@@ -319,7 +319,7 @@ Pain at 7/10? The app adjusts. That's Pain Flare Mode 🔥
 
 Wellness tools that don't require energy you don't have. Mood tracking. Spoon theory. Crisis support.
 
-Free forever → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
+Free forever → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=home_wellness
 
 #ChronicIllness
 
@@ -328,8 +328,8 @@ Free forever → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_m
 ### Image 7-9: Getting Started Tutorial (3 images)
 **Filenames**: `Step1-StartYourFirstCase.png`, `Step2-UploadDocumentsIntoEvidenceCommandCenter.png`, `Step3-FindYourPeople-CommunityHub.png`  
 **Alt Text**: Three-step guided onboarding tutorial for workers compensation cases and community connection - 3mpwrApp  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#quick-start  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#how-to-join-beta-testing
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#quick-start  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#how-to-join-beta-testing
 
 **Combined Thread Post (Mastodon)**:
 1/3 🚀 Getting started with 3mpwrApp = 3 simple steps
@@ -339,7 +339,7 @@ Whether it's workers comp, disability benefits, or workplace accommodations — 
 
 [Image: Step1-StartYourFirstCase.png]
 
-https://3mpwrapp.github.io/user-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial_thread
+https://3mpwrapp.pages.dev/user-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial_thread
 
 #3mpwrApp #WorkersComp
 
@@ -361,15 +361,15 @@ They can't deny what's documented 📸🔐
 
 You're not alone 💚
 
-Join beta → https://3mpwrapp.github.io/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial_complete
+Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=tutorial_complete
 
 ---
 
 ### Image 10-12: Background Themes (3 images)
 **Filenames**: `bg_emberforge.png`, `bg_LanternAscension.jpeg`, `bg_VerdantSanctuary.png`  
 **Alt Text**: Customizable accessibility themes - Ember Forge, Lantern Ascension, Verdant Sanctuary - 3mpwrApp personalization  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#accessibility-settings  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#accessibility-settings  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
 
 **Single Post (All Platforms)**:
 
@@ -386,7 +386,7 @@ Customize everything:
 
 Sensory-friendly design that doesn't sacrifice beauty.
 
-Make it yours → https://3mpwrapp.github.io/user-guide/#accessibility-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
+Make it yours → https://3mpwrapp.pages.dev/user-guide/#accessibility-settings?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
 
 #A11y #Neurodivergent #AccessibleDesign
 
@@ -397,7 +397,7 @@ Not just dark mode. Full visual customization. Reduce overwhelm. Increase comfor
 
 Because accessibility is also aesthetic.
 
-Preview themes → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
+Preview themes → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
 
 #AccessibleTech
 
@@ -406,7 +406,7 @@ Dyslexia? 5 fonts. 8 themes. Your screen, your rules.
 
 Customization that actually helps, not just "vibe" →
 
-Join beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
+Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=themes
 
 #Neurodivergent #A11y #3mpwrApp
 
@@ -415,8 +415,8 @@ Join beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medi
 ### Image 13: Home Dashboard with AI Assistant
 **Filename**: `AIAssistantTab2-HelpfulRessources-NeedMoreHelp.png`  
 **Alt Text**: AI Assistant providing helpful resources and additional support options - 3mpwrApp AI advocacy tools  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#ai-advocacy-suite  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
 
 **Mastodon** (474 chars):
 "I don't even know where to start" 😰
@@ -431,7 +431,7 @@ Meet your AI Assistant. It does.
 
 Not a chatbot. A guide. Built with input from 200+ disabled people.
 
-Get personalized help → https://3mpwrapp.github.io/user-guide/#ai-advocacy-suite?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_resources
+Get personalized help → https://3mpwrapp.pages.dev/user-guide/#ai-advocacy-suite?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_resources
 
 #AIAccessibility #DisabilityTech
 
@@ -442,7 +442,7 @@ Your situation → AI analysis → Personalized resources → Action plan
 
 No generic advice. Just relevant help.
 
-Try it → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_help
+Try it → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_help
 
 #3mpwrApp
 
@@ -451,7 +451,7 @@ Legal jargon → plain English. In seconds. For free.
 
 AI that translates, suggests, and guides. Built BY disabled people FOR disabled people.
 
-Free beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_help
+Free beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=ai_help
 
 #AIForGood #3mpwrApp
 
@@ -464,8 +464,8 @@ Free beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medi
 ### Image 14: Advocacy Hub Main Dashboard
 **Filename**: `AdvocacyHub1-WhatDoYouNeedHelpWithToday.png`  
 **Alt Text**: Advocacy Hub main dashboard asking "What do you need help with today?" - personalized legal support for injured workers - 3mpwrApp  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#legal-action-hub  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#legal-action-hub  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
 
 **Mastodon** (487 chars):
 "What do you need help with today?" ⚖️
@@ -481,7 +481,7 @@ Advocacy Hub adapts to YOUR situation:
 
 Personalized legal support without the $400/hr price tag.
 
-Start your case → https://3mpwrapp.github.io/user-guide/#legal-action-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
+Start your case → https://3mpwrapp.pages.dev/user-guide/#legal-action-hub?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
 
 #WorkersComp #DisabilityAdvocacy #LegalAid #3mpwrApp
 
@@ -494,7 +494,7 @@ Advocacy Hub guides you through:
 → Writing letters (AI templates)
 → Finding lawyers (Directory)
 
-Fight back → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
+Fight back → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
 
 #WorkersComp
 
@@ -505,7 +505,7 @@ DENIED. But then I sent THIS letter... [Full template inside]
 
 Your employer said no? Here's the tool that changes minds →
 
-Beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
+Beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=advocacy_main
 
 #WorkersComp
 
@@ -514,8 +514,8 @@ Beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=so
 ### Image 15: Jurisdiction & Appeal Calculator
 **Filename**: `AdvocacyHub2-Jusrisdiction-AppealDeadlineCalculator.png`  
 **Alt Text**: Jurisdiction selection and appeal deadline calculator - track critical legal deadlines for workers compensation - 3mpwrApp  
-**User Guide**: https://3mpwrapp.github.io/user-guide/#appeal-command-center  
-**Beta Guide**: https://3mpwrapp.github.io/beta-guide/#what-to-test
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/#appeal-command-center  
+**Beta Guide**: https://3mpwrapp.pages.dev/beta-guide/#what-to-test
 
 **Mastodon** (481 chars):
 Missing a deadline = losing your case 📅❌
@@ -530,7 +530,7 @@ Appeal Deadline Calculator:
 
 "I didn't know I only had 30 days" — We've heard it too many times. Not anymore.
 
-Never miss a deadline → https://3mpwrapp.github.io/user-guide/#appeal-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline_calc
+Never miss a deadline → https://3mpwrapp.pages.dev/user-guide/#appeal-command-center?utm_source=mastodon&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline_calc
 
 #WorkersComp #LegalDeadlines
 
@@ -543,7 +543,7 @@ Deadline calculator tracks:
 ✓ Extensions granted
 ✓ Submission confirmation
 
-No more panic → https://3mpwrapp.github.io/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline
+No more panic → https://3mpwrapp.pages.dev/beta-guide/?utm_source=bluesky&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline
 
 #WorkersComp #3mpwrApp
 
@@ -554,7 +554,7 @@ Every province. Every deadline. All tracked. All automated.
 
 Appeal calculator that could save your case →
 
-Join beta → https://3mpwrapp.github.io/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline
+Join beta → https://3mpwrapp.pages.dev/beta-guide/?utm_source=twitter&utm_medium=social&utm_campaign=visual_refresh_march2026&utm_content=deadline
 
 #WorkersComp #3mpwrApp
 
@@ -844,10 +844,10 @@ This framework can be adapted for:
 
 ## 📞 SUPPORT & RESOURCES
 
-**Beta Signup**: https://3mpwrapp.github.io/beta-guide/  
-**User Guide**: https://3mpwrapp.github.io/user-guide/  
-**Website**: https://3mpwrapp.github.io/  
-**App Tour**: https://3mpwrapp.github.io/app-tour/
+**Beta Signup**: https://3mpwrapp.pages.dev/beta-guide/  
+**User Guide**: https://3mpwrapp.pages.dev/user-guide/  
+**Website**: https://3mpwrapp.pages.dev/  
+**App Tour**: https://3mpwrapp.pages.dev/app-tour/
 
 **Feedback Channels**:
 - Mastodon: [@3mpwrapp@mas.to](https://mas.to/@3mpwrapp) (if exists)

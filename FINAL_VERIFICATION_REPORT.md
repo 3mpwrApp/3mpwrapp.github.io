@@ -264,7 +264,7 @@ All images link to one or more of these verified sections:
 
 **Example tracking URL**:
 ```
-https://3mpwrapp.github.io/beta-guide/
+https://3mpwrapp.pages.dev/beta-guide/
   ?utm_source=mastodon
   &utm_medium=social
   &utm_campaign=visual_refresh_march2026
@@ -656,7 +656,7 @@ git push origin main
 
 **Issue**: Images not loading on website  
 **Solution**: Verify file paths use forward slashes `/` not backslashes `\`  
-**Test**: https://3mpwrapp.github.io/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeScreenTab1.png
+**Test**: https://3mpwrapp.pages.dev/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeScreenTab1.png
 
 **Issue**: Deep links not working (404 errors)  
 **Solution**: Verify user guide anchors match exactly (case-sensitive)  
