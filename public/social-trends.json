@@ -1,61 +1,85 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-02-27T18:08:45.459Z",
+  "lastUpdated": "2026-03-17T15:43:27.858Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 12650,
+      "totalPosts": 13025,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-27T18:08:32.653Z"
+      "lastSeen": "2026-03-17T15:43:08.928Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 12586,
+      "totalPosts": 12961,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-27T18:08:35.576Z"
+      "lastSeen": "2026-03-17T15:43:13.359Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 12487,
+      "totalPosts": 12848,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-27T18:08:39.583Z"
+      "lastSeen": "2026-03-17T15:43:18.100Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 12685,
+      "totalPosts": 13060,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-02-27T18:08:41.911Z"
+      "lastSeen": "2026-03-17T15:43:21.777Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 12700,
-      "recentPosts": 25,
+      "totalPosts": 13060,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-02-27T18:08:44.455Z"
+      "lastSeen": "2026-03-17T15:43:26.856Z"
     }
   },
   "viralPosts": [
     {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
-      "author": "mailbykite.bsky.social",
-      "engagement": 12,
+      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
+      "author": "rainbowhyperfixate.bsky.social",
+      "engagement": 34,
       "hashtag": "DisabilityJustice"
     },
     {
-      "text": "❗Big news ❗\n\nLEIZA Journal of Archaeology, a new #journal of world #archaeology, launches soon, and will be #DiamondOpenAccess, promoting discipline-changing and agenda-setting work & advancing #equity, #accessibility and #impact in #research and #publishing. \n\nAll info: www.leiza.de/forschung/pu...",
-      "author": "divali.bsky.social",
-      "engagement": 16,
+      "text": "We have large-print copies and accessible ebooks as part of our Kickstarter to make sure that our play is as accessible to everyone as possible.\n\nThere's no difference in price cause we don't think #accessibility should be any more expensive. Help support our work at the link below!\n\n#lgbtreads",
+      "author": "kellywhyte.bsky.social",
+      "engagement": 24,
       "hashtag": "Accessibility"
+    },
+    {
+      "text": "#BlackWellness #BlackSkyRelay\n#Neurodiversity #DEI #ActualyAutistic #Accessibility\n\nmedium.com/@Ms.AWashing...",
+      "author": "arwashington.bsky.social",
+      "engagement": 13,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I built a cycling app that knows nothing about you.\n\nNo account. No cloud. No tracking. Your ride data never leaves your device. It’s called Sluip, Dutch for the quiet shortcut every local knows.\n\nCheck it out: joegullo.com/sluip\n\n#cycling #privacy #webdev #a11y #fietsen",
+      "author": "joegullo.com",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "AI can help with accessibility, but it cannot replace human expertise. Accessibility pros bring empathy, judgment, and context that machines cannot replicate. \n\nbuttondown.com/access-abili... \n\n#DigitalAccessibility #AI #InclusiveDesign #AccessibilityLeadership #A11y",
+      "author": "deconspray.bsky.social",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
     },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
@@ -64,184 +88,58 @@
       "hashtag": "CripTheVote"
     },
     {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Happy Ramadhan and Happy Lunar New Year ✨\n\nChronically ill Muslims who can’t fast must donate a months’ worth of meals (if they can) to those who need it. Food banks, mutual aid, people affected by state violence.\n\nThere is a beauty in #DisabilityJustice showing up in so many ways.",
-      "author": "mailbykite.bsky.social",
-      "engagement": 12,
+      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
+      "author": "smithbrainz.bsky.social",
+      "engagement": 85,
       "hashtag": "DisabilityJustice"
     },
     {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
+      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
+      "author": "riversofreflection.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
     },
     {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
+      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
+      "author": "rainbowhyperfixate.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityJustice"
     },
     {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "I won't have time to debunk the old \"yellow is not accessible\" myth in my axe-con talk. \nBut, you are lucky: I already wrote a whole article on how accessibility does NOT limit color choices.\nstephaniewalter.design/blog/yellow-... \n\n#Accessibility #AccessibleColors #YellowColor",
-      "author": "stephaniewalter.bsky.social",
-      "engagement": 21,
+      "text": "We have large-print copies and accessible ebooks as part of our Kickstarter to make sure that our play is as accessible to everyone as possible.\n\nThere's no difference in price cause we don't think #accessibility should be any more expensive. Help support our work at the link below!\n\n#lgbtreads",
+      "author": "kellywhyte.bsky.social",
+      "engagement": 25,
       "hashtag": "Accessibility"
     },
     {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Added some more customisable settings to Mayfly: V-Sync, windowed mode and a new #a11y feature to increase the crosshair size (suggested by @mustlovedon.bsky.social) \n\nThe UI throughout Mayfly also has full keyboard navigation support ⌨️\n\n#gamedev #accessibility #indiedev #horror #quiethorror #unity",
-      "author": "backyardzoo.bsky.social",
-      "engagement": 15,
+      "text": "#BlackWellness #BlackSkyRelay\n#Neurodiversity #DEI #ActualyAutistic #Accessibility\n\nmedium.com/@Ms.AWashing...",
+      "author": "arwashington.bsky.social",
+      "engagement": 13,
       "hashtag": "Accessibility"
     },
     {
-      "text": "Added some more customisable settings to Mayfly: V-Sync, windowed mode and a new #a11y feature to increase the crosshair size (suggested by @mustlovedon.bsky.social) \n\nThe UI throughout Mayfly also has full keyboard navigation support ⌨️\n\n#gamedev #accessibility #indiedev #horror #quiethorror #unity",
-      "author": "backyardzoo.bsky.social",
-      "engagement": 15,
+      "text": "I built a cycling app that knows nothing about you.\n\nNo account. No cloud. No tracking. Your ride data never leaves your device. It’s called Sluip, Dutch for the quiet shortcut every local knows.\n\nCheck it out: joegullo.com/sluip\n\n#cycling #privacy #webdev #a11y #fietsen",
+      "author": "joegullo.com",
+      "engagement": 17,
       "hashtag": "A11y"
+    },
+    {
+      "text": "AI can help with accessibility, but it cannot replace human expertise. Accessibility pros bring empathy, judgment, and context that machines cannot replicate. \n\nbuttondown.com/access-abili... \n\n#DigitalAccessibility #AI #InclusiveDesign #AccessibilityLeadership #A11y",
+      "author": "deconspray.bsky.social",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
     },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
@@ -250,28 +148,40 @@
       "hashtag": "CripTheVote"
     },
     {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
-      "hashtag": "CripTheVote"
+      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
+      "author": "smithbrainz.bsky.social",
+      "engagement": 85,
+      "hashtag": "DisabilityJustice"
     },
     {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
-      "hashtag": "CripTheVote"
+      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
+      "author": "riversofreflection.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
     },
     {
-      "text": "Added some more customisable settings to Mayfly: V-Sync, windowed mode and a new #a11y feature to increase the crosshair size (suggested by @mustlovedon.bsky.social) \n\nThe UI throughout Mayfly also has full keyboard navigation support ⌨️\n\n#gamedev #accessibility #indiedev #horror #quiethorror #unity",
-      "author": "backyardzoo.bsky.social",
-      "engagement": 15,
-      "hashtag": "Accessibility"
+      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
+      "author": "rainbowhyperfixate.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityJustice"
     },
     {
-      "text": "Added some more customisable settings to Mayfly: V-Sync, windowed mode and a new #a11y feature to increase the crosshair size (suggested by @mustlovedon.bsky.social) \n\nThe UI throughout Mayfly also has full keyboard navigation support ⌨️\n\n#gamedev #accessibility #indiedev #horror #quiethorror #unity",
-      "author": "backyardzoo.bsky.social",
-      "engagement": 15,
+      "text": "I built a cycling app that knows nothing about you.\n\nNo account. No cloud. No tracking. Your ride data never leaves your device. It’s called Sluip, Dutch for the quiet shortcut every local knows.\n\nCheck it out: joegullo.com/sluip\n\n#cycling #privacy #webdev #a11y #fietsen",
+      "author": "joegullo.com",
+      "engagement": 18,
       "hashtag": "A11y"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
     },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
@@ -280,22 +190,34 @@
       "hashtag": "CripTheVote"
     },
     {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
+      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
+      "author": "smithbrainz.bsky.social",
+      "engagement": 85,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
+      "author": "riversofreflection.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
+      "author": "rainbowhyperfixate.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
       "hashtag": "CripTheVote"
     },
     {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
       "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Added some more customisable settings to Mayfly: V-Sync, windowed mode and a new #a11y feature to increase the crosshair size (suggested by @mustlovedon.bsky.social) \n\nThe UI throughout Mayfly also has full keyboard navigation support ⌨️\n\n#gamedev #accessibility #indiedev #horror #quiethorror #unity",
-      "author": "backyardzoo.bsky.social",
-      "engagement": 15,
-      "hashtag": "A11y"
     },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
@@ -304,22 +226,34 @@
       "hashtag": "CripTheVote"
     },
     {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
+      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
+      "author": "smithbrainz.bsky.social",
+      "engagement": 86,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
+      "author": "riversofreflection.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
+      "author": "rainbowhyperfixate.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
       "hashtag": "CripTheVote"
     },
     {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
-      "author": "juliametraux.bsky.social",
-      "engagement": 341,
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
       "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Added some more customisable settings to Mayfly: V-Sync, windowed mode and a new #a11y feature to increase the crosshair size (suggested by @mustlovedon.bsky.social) \n\nThe UI throughout Mayfly also has full keyboard navigation support ⌨️\n\n#gamedev #accessibility #indiedev #horror #quiethorror #unity",
-      "author": "backyardzoo.bsky.social",
-      "engagement": 16,
-      "hashtag": "A11y"
     },
     {
       "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
@@ -328,98 +262,164 @@
       "hashtag": "CripTheVote"
     },
     {
-      "text": "Tuning in for this program honoring Alice Wong & continuing her work for disability justice. #CripTheVote",
-      "author": "lisadiedrich.bsky.social",
-      "engagement": 50,
+      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
+      "author": "smithbrainz.bsky.social",
+      "engagement": 86,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
+      "author": "riversofreflection.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
+      "author": "rainbowhyperfixate.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
       "hashtag": "CripTheVote"
     },
     {
-      "text": "For my hero of 2025 at @motherjones.com, I wrote about the late great disabled disability justice oracle Alice Wong, including her work with Disability Visibility Project, Crips for eSims for Gaza, and #CripTheVote. www.motherjones.com/politics/202...",
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
       "author": "juliametraux.bsky.social",
-      "engagement": 341,
+      "engagement": 30,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Rene schaar hat Stellungnahmen von NGOs auf seiner Homepage verlinkt und viele gute Infos zum #BGG #Behindertengleichstellungsgesetz dass eher ein Gesez ist, das uns behindert!!!\n#FightAbleism #DisabilityJustice now! #DisabilityRights",
+      "author": "fight-ableism.bsky.social",
+      "engagement": 20,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Rene schaar hat Stellungnahmen von NGOs auf seiner Homepage verlinkt und viele gute Infos zum #BGG #Behindertengleichstellungsgesetz dass eher ein Gesez ist, das uns behindert!!!\n#FightAbleism #DisabilityJustice now! #DisabilityRights",
+      "author": "fight-ableism.bsky.social",
+      "engagement": 20,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
+      "author": "smithbrainz.bsky.social",
+      "engagement": 86,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
+      "author": "riversofreflection.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
+      "author": "juliametraux.bsky.social",
+      "engagement": 30,
       "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 46
+      "count": 43
     },
     {
       "keyword": "accessibility",
-      "count": 41
-    },
-    {
-      "keyword": "a11y",
-      "count": 28
+      "count": 34
     },
     {
       "keyword": "disabilityjustice",
       "count": 26
     },
     {
+      "keyword": "a11y",
+      "count": 24
+    },
+    {
       "keyword": "cripthevote",
-      "count": 25
+      "count": 24
     },
     {
       "keyword": "altcitizen",
-      "count": 18
+      "count": 15
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 18
+      "count": 15
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 18
+      "count": 15
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 16
+      "count": 14
+    },
+    {
+      "keyword": "inclusion",
+      "count": 10
     },
     {
       "keyword": "foxtakedown",
-      "count": 13
+      "count": 9
     },
     {
       "keyword": "virtual",
-      "count": 12
+      "count": 9
     },
     {
       "keyword": "stoptheliesfox",
-      "count": 11
+      "count": 8
     },
     {
       "keyword": "foxlies",
-      "count": 11
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 9
-    },
-    {
-      "keyword": "stoptrump",
-      "count": 9
-    },
-    {
-      "keyword": "wearetheflood",
-      "count": 9
-    },
-    {
-      "keyword": "50501movement",
-      "count": 9
-    },
-    {
-      "keyword": "disabilityrebellion stoptrump",
-      "count": 9
-    },
-    {
-      "keyword": "ada",
       "count": 8
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 8
+      "keyword": "a11",
+      "count": 7
+    },
+    {
+      "keyword": "discoverability",
+      "count": 7
+    },
+    {
+      "keyword": "mutualaid",
+      "count": 6
+    },
+    {
+      "keyword": "cripminds",
+      "count": 6
+    },
+    {
+      "keyword": "refusefascism",
+      "count": 6
+    },
+    {
+      "keyword": "trumpmustgo",
+      "count": 6
     }
   ]
 }

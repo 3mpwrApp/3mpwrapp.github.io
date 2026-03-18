@@ -1,12 +1,18 @@
 {
   "features": [
-    "3mpwrApp Production Release: 721 Tests Passing"
+    "3mpwrApp Production Release: 721 Tests Passing",
+    "Energy Forecast & Smart Scheduling",
+    "Disability Wizard"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively"
   ],
-  "devDiaries": [],
-  "lore": [],
-  "rotationIndex": 2,
+  "devDiaries": [
+    "Why We Chose React Native: Accessibility Over Everything"
+  ],
+  "lore": [
+    "The Origin Story: Why 3mpwrApp Was Built"
+  ],
+  "rotationIndex": 6,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
