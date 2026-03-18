@@ -2,7 +2,8 @@
   "features": [
     "3mpwrApp Production Release: 721 Tests Passing",
     "Energy Forecast & Smart Scheduling",
-    "Disability Wizard"
+    "Disability Wizard",
+    "Master Letter Generator"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively"
@@ -13,6 +14,6 @@
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built"
   ],
-  "rotationIndex": 6,
+  "rotationIndex": 7,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
