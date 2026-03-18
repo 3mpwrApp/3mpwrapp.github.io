@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-03-17T05:38:07.734Z",
+  "generated": "2026-03-18T05:43:11.955Z",
   "insights": {
-    "timestamp": "2026-03-17T05:38:07.702Z",
+    "timestamp": "2026-03-18T05:43:11.925Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-03-17T05:38:07.709Z",
+      "lastUpdated": "2026-03-18T05:43:11.931Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -44,17 +44,17 @@
         },
         {
           "tag": "accessibility",
-          "mentions": 34,
+          "mentions": 30,
           "source": "emerging"
         },
         {
           "tag": "a11y",
-          "mentions": 25,
+          "mentions": 28,
           "source": "emerging"
         },
         {
           "tag": "disabilityjustice",
-          "mentions": 24,
+          "mentions": 25,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-03-17T05:38:07.712Z",
+      "lastUpdated": "2026-03-18T05:43:11.935Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-03-17T05:38:07.709Z",
+    "lastUpdated": "2026-03-18T05:43:11.931Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -107,17 +107,17 @@
       },
       {
         "tag": "accessibility",
-        "mentions": 34,
+        "mentions": 30,
         "source": "emerging"
       },
       {
         "tag": "a11y",
-        "mentions": 25,
+        "mentions": 28,
         "source": "emerging"
       },
       {
         "tag": "disabilityjustice",
-        "mentions": 24,
+        "mentions": 25,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-03-17T05:38:07.712Z",
+    "lastUpdated": "2026-03-18T05:43:11.935Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
