@@ -87,24 +87,16 @@ description: Free community-powered platform connecting injured workers, persons
     </p>
   </div>
   
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
-    <!-- Option 1 -->
-    <div style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 12px; border: 2px solid rgba(61, 78, 170, 0.3); text-align: center;">
-      <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-color);">
-        <span aria-hidden="true">🎧</span> Option 1
+  <div style="text-align: center; margin: 2rem 0;">
+    <!-- Winner: Option 1 -->
+    <div style="background: rgba(61, 78, 170, 0.15); padding: 2rem; border-radius: 12px; border: 3px solid rgba(61, 78, 170, 0.5); box-shadow: 0 4px 20px rgba(61, 78, 170, 0.3); max-width: 500px; margin: 0 auto;">
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏆</div>
+      <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #ffd700; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+        <span aria-hidden="true">👑</span> Community Winner!
       </h3>
-      <a href="https://suno.com/s/enuXDfFsc65WWAMr" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 0.75rem 1.5rem; background: #3d4eaa; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='#2d3e8a'" onmouseout="this.style.background='#3d4eaa'">
-        <span aria-hidden="true">▶️</span> Listen to Option 1
-      </a>
-    </div>
-    
-    <!-- Option 2 -->
-    <div style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 12px; border: 2px solid rgba(147, 51, 234, 0.3); text-align: center;">
-      <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-color);">
-        <span aria-hidden="true">🎧</span> Option 2
-      </h3>
-      <a href="https://suno.com/s/L8ODWoVmMMhEcl67" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 0.75rem 1.5rem; background: #9333ea; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='#7c22c7'" onmouseout="this.style.background='#9333ea'">
-        <span aria-hidden="true">▶️</span> Listen to Option 2
+      <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--text-color);">Your official 3mpwr App theme song</p>
+      <a href="https://suno.com/s/enuXDfFsc65WWAMr" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #3d4eaa 0%, #2d3e8a 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(61, 78, 170, 0.4);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <span aria-hidden="true">🎵</span> Listen to Our Anthem
       </a>
     </div>
   </div>
@@ -316,69 +308,68 @@ description: Free community-powered platform connecting injured workers, persons
   
   <div class="app-tour-grid">
     
-    <!-- Home Screen -->
+    <!-- Home Screen Tab 1 -->
     <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/home13mpwrapp.png' | relative_url }}" 
-           alt="3mpwr App Home Screen Dashboard" 
+      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeScreenTab1.png' | relative_url }}" 
+           alt="3mpwrApp home dashboard with personalized widgets, quick actions, and AI assistant for disability rights advocacy" 
            loading="lazy">
       <div class="app-tour-card-content">
         <h3 class="app-tour-card-title">Home Dashboard</h3>
-        <p class="app-tour-card-description">Quick access to all your essential tools and resources</p>
+        <p class="app-tour-card-description">Personalized widgets, quick actions, and AI assistant for your advocacy journey</p>
+      </div>
+    </div>
+    
+    <!-- AI Assistant -->    <div class="app-tour-card">
+      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/AIAssistantTab1-YouNext3Steps-RecommendedTools.png' | relative_url }}" 
+           alt="AI Assistant showing personalized next steps and recommended tools for disability advocacy - 3mpwrApp home dashboard" 
+           loading="lazy">
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">AI Assistant</h3>
+        <p class="app-tour-card-description">Personalized next steps and recommended tools for your advocacy needs</p>
+      </div>
+    </div>
+    
+    <!-- Evidence Command Center -->
+    <div class="app-tour-card">
+      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeEvidenceVault-EvidenceCommandCenter.png' | relative_url }}" 
+           alt="Quick access to Evidence Command Center from home - encrypted document storage for workers compensation cases - 3mpwrApp" 
+           loading="lazy">
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Evidence Command Center</h3>
+        <p class="app-tour-card-description">Encrypted document storage and timeline builder for your legal case</p>
       </div>
     </div>
     
     <!-- Wellness Hub -->
     <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/wellness/wellnesstab13mpwrapp.png' | relative_url }}" 
-           alt="3mpwr App Wellness Hub with pain tracking and symptom logging" 
+      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeWellnessCommand.png' | relative_url }}" 
+           alt="Wellness Hub quick access with health tracking, mood logging, and energy management tools - 3mpwrApp" 
            loading="lazy">
       <div class="app-tour-card-content">
         <h3 class="app-tour-card-title">Wellness Hub</h3>
-        <p class="app-tour-card-description">Track symptoms, pain levels, and manage your health</p>
+        <p class="app-tour-card-description">Health tracking, mood logging, and energy management tools</p>
       </div>
     </div>
     
-    <!-- Community -->
+    <!-- Getting Started Tutorial -->
     <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/community/communityhubtab3mpwrapp.png' | relative_url }}" 
-           alt="3mpwr App Community Hub for peer support" 
+      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/Step1-StartYourFirstCase.png' | relative_url }}" 
+           alt="Start your first workers compensation case - guided onboarding tutorial - 3mpwrApp beta" 
+           loading="lazy">
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Getting Started</h3>
+        <p class="app-tour-card-description">Guided walkthrough to start your first workers compensation case</p>
+      </div>
+    </div>
+    
+    <!-- Community Hub -->
+    <div class="app-tour-card">
+      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/Step3-FindYourPeople-CommunityHub.png' | relative_url }}" 
+           alt="Find your support community - join 24 disability support groups - 3mpwrApp community" 
            loading="lazy">
       <div class="app-tour-card-content">
         <h3 class="app-tour-card-title">Community Hub</h3>
-        <p class="app-tour-card-description">Connect with others who understand your journey</p>
-      </div>
-    </div>
-    
-    <!-- Advocacy Tools -->
-    <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/advocacy/advocacy13mpwrapp.png' | relative_url }}" 
-           alt="3mpwr App Advocacy Tools with evidence locker and case tracking" 
-           loading="lazy">
-      <div class="app-tour-card-content">
-        <h3 class="app-tour-card-title">Advocacy Tools</h3>
-        <p class="app-tour-card-description">Evidence locker, case tracking, and legal resources</p>
-      </div>
-    </div>
-    
-    <!-- Resources Library -->
-    <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/resources/resourcestab13mpwrapp.png' | relative_url }}" 
-           alt="3mpwr App Resources Library with guides and templates" 
-           loading="lazy">
-      <div class="app-tour-card-content">
-        <h3 class="app-tour-card-title">Resources Library</h3>
-        <p class="app-tour-card-description">Guides, templates, and expert knowledge at your fingertips</p>
-      </div>
-    </div>
-    
-    <!-- Settings & Accessibility -->
-    <div class="app-tour-card">
-      <img src="{{ '/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/settings/settings/settingsadvancedaccessibility13mpwrapp.png' | relative_url }}" 
-           alt="3mpwr App Settings and Accessibility Features" 
-           loading="lazy">
-      <div class="app-tour-card-content">
-        <h3 class="app-tour-card-title">Settings & Accessibility</h3>
-        <p class="app-tour-card-description">Customize your experience with 13+ accessibility features</p>
+        <p class="app-tour-card-description">Find your support community and join 24 disability support groups</p>
       </div>
     </div>
     
