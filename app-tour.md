@@ -395,24 +395,6 @@ permalink: /app-tour/
       </a>
       <div class="caption">Tutorial Step 3 | <a href="/user-guide/#support-groups">Community</a></div>
     </div>
-    <div class="preview-card">
-      <a href="/user-guide/#personalization-setup?utm_source=app_tour&utm_campaign=visual_refresh" title="Customize themes">
-        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/bg_emberforge.png" alt="Ember Forge theme background - customizable accessibility theme - 3mpwrApp personalization" loading="lazy">
-      </a>
-      <div class="caption">Theme: Ember Forge | <a href="/user-guide/#accessibility-settings">Themes</a></div>
-    </div>
-    <div class="preview-card">
-      <a href="/user-guide/#accessibility-settings?utm_source=app_tour&utm_campaign=visual_refresh" title="Visual accessibility">
-        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/bg_LanternAscension.jpeg" alt="Lantern Ascension theme background - visual accessibility options - 3mpwrApp settings" loading="lazy">
-      </a>
-      <div class="caption">Theme: Lantern Ascension | <a href="/user-guide/#accessibility-settings">Settings</a></div>
-    </div>
-    <div class="preview-card">
-      <a href="/user-guide/#accessibility-settings?utm_source=app_tour&utm_campaign=visual_refresh" title="Neurodivergent-friendly design">
-        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/bg_VerdantSanctuary.png" alt="Verdant Sanctuary theme background - calming visual design for neurodivergent users - 3mpwrApp accessibility" loading="lazy">
-      </a>
-      <div class="caption">Theme: Verdant Sanctuary | <a href="/user-guide/#accessibility-settings">Accessibility</a></div>
-    </div>
   </div>
 </section>
 
