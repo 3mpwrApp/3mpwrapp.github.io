@@ -167,12 +167,12 @@ loadWins();
 
 .wins-header .lead {
   font-size: 1.25rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 2rem;
 }
 
 .cta-box {
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   padding: 1.5rem;
   border-radius: 8px;
   margin: 2rem auto;
@@ -189,21 +189,21 @@ loadWins();
 
 .filter-btn {
   padding: 0.5rem 1rem;
-  border: 2px solid #ddd;
-  background: white;
+  border: 2px solid var(--border-medium);
+  background: var(--bg-primary);
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .filter-btn:hover {
-  border-color: #007bff;
+  border-color: var(--btn-primary-bg);
 }
 
 .filter-btn.active {
-  background: #007bff;
-  color: white;
-  border-color: #007bff;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: var(--btn-primary-bg);
 }
 
 .wins-list {
@@ -213,7 +213,7 @@ loadWins();
 }
 
 .win-card {
-  background: white;
+  background: var(--bg-elevated);
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -234,19 +234,19 @@ loadWins();
   margin-bottom: 1rem;
 }
 
-.win-badge.accommodation { background: #e3f2fd; color: #1976d2; }
-.win-badge.appeal_won { background: #e8f5e9; color: #388e3c; }
-.win-badge.settlement { background: #f3e5f5; color: #7b1fa2; }
-.win-badge.policy_change { background: #fff3e0; color: #f57c00; }
-.win-badge.benefit_approved { background: #e0f2f1; color: #00897b; }
-.win-badge.access_granted { background: #e0f7fa; color: #0097a7; }
-.win-badge.other { background: #fff8e1; color: #fbc02d; }
+.win-badge.accommodation { background: var(--info-bg); color: var(--info-text); }
+.win-badge.appeal_won { background: var(--success-bg); color: var(--success-text); }
+.win-badge.settlement { background: var(--highlight-bg); color: var(--highlight-text); }
+.win-badge.policy_change { background: var(--warning-bg); color: var(--warning-text); }
+.win-badge.benefit_approved { background: var(--success-bg); color: var(--success-text); }
+.win-badge.access_granted { background: var(--info-bg); color: var(--info-text); }
+.win-badge.other { background: var(--highlight-bg); color: var(--highlight-text); }
 
 .anonymous-badge {
   float: right;
   font-size: 0.75rem;
-  color: #999;
-  background: #f5f5f5;
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
   padding: 0.25rem 0.5rem;
   border-radius: 12px;
 }
@@ -257,23 +257,23 @@ loadWins();
 }
 
 .win-card h2 a {
-  color: #333;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
 .win-card h2 a:hover {
-  color: #007bff;
+  color: var(--link-hover);
 }
 
 .win-description {
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 1rem;
   line-height: 1.6;
 }
 
 .win-timeline {
   font-size: 0.875rem;
-  color: #888;
+  color: var(--text-tertiary);
   margin-bottom: 1rem;
 }
 
@@ -281,13 +281,13 @@ loadWins();
   display: flex;
   gap: 1rem;
   font-size: 0.875rem;
-  color: #999;
+  color: var(--text-muted);
   margin-bottom: 1rem;
 }
 
 .read-more {
   font-weight: 600;
-  color: #007bff;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -298,7 +298,7 @@ loadWins();
 .loading, .error, .empty {
   text-align: center;
   padding: 3rem;
-  color: #999;
+  color: var(--text-muted);
 }
 
 @media (max-width: 768px) {

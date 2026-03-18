@@ -46,7 +46,7 @@ permalink: /accessibility/
 </details>
 
 <div style="margin: 2rem 0;">
-  <a href="/accessibility-settings/" style="display: inline-block; padding: 12px 24px; background: #3d4eaa; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">
+  <a href="/accessibility-settings/" class="btn-primary">
     Customize Your Settings →
   </a>
 </div>

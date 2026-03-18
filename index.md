@@ -74,19 +74,19 @@ description: Free community-powered platform connecting injured workers, persons
 </section>
 
 <!-- Theme Song Winner Announcement -->
-<section style="margin: 3rem auto; max-width: 600px; text-align: center; padding: 2rem; background: linear-gradient(135deg, rgba(61, 78, 170, 0.15) 0%, rgba(147, 51, 234, 0.15) 100%); border-radius: 16px; border: 3px solid rgba(61, 78, 170, 0.5); box-shadow: 0 4px 20px rgba(61, 78, 170, 0.3);">
-  <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">🏆</div>
-  <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: #ffd700; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+<section class="theme-song-winner">
+  <div class="trophy">🏆</div>
+  <h2>
     <span aria-hidden="true">👑</span> Official 3mpwr Theme Song
   </h2>
-  <p style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-color); font-weight: 600;">
+  <p class="winner-text">
     Community Vote Winner: Option 1
   </p>
-  <a href="https://suno.com/s/enuXDfFsc65WWAMr" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, #3d4eaa 0%, #2d3e8a 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 1.2rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(61, 78, 170, 0.4);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <a href="https://suno.com/s/enuXDfFsc65WWAMr" target="_blank" rel="noopener noreferrer" class="btn-listen">
     <span aria-hidden="true">🎵</span> Listen to Our Anthem
   </a>
-  <p style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.9; font-style: italic; color: var(--text-color);">
-    This isn't just a song — it's our anthem. <span aria-hidden="true" style="color: #9333ea;">💜</span>
+  <p class="tagline">
+    This isn't just a song — it's our anthem. <span aria-hidden="true">💜</span>
   </p>
 </section>
 

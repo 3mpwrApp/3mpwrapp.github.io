@@ -72,7 +72,7 @@ permalink: /community-spotlight/
 </details>
 
 <div class="warning-box">
-  ⭐ <strong>Want to be featured?</strong> We celebrate all forms of activism - online posts, rally attendance, peer support, storytelling, and more. <a href="#submit-your-story" style="color: #0066cc;">Submit your story →</a>
+  ⭐ <strong>Want to be featured?</strong> We celebrate all forms of activism - online posts, rally attendance, peer support, storytelling, and more. <a href="#submit-your-story" >Submit your story →</a>
 </div>
 
 ---
@@ -83,198 +83,198 @@ permalink: /community-spotlight/
 
 ### 🌟 Mitchell Tremblay (@ODSPoverty)
 
-<div class="info-box-bordered" style="background: #f0f9ff !important; border: 2px solid #3b82f6; border-left: 4px solid #3b82f6; color: #1f2937 !important;">
-  <h4 style="margin-top: 0; color: #1e40af !important;">🇨🇦 Canadian Disability Advocate</h4>
+<div class="info-box">
+  <h4 style="margin-top: 0; ">🇨🇦 Canadian Disability Advocate</h4>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">Mitchell Tremblay</strong> is a passionate Canadian disability rights advocate fighting for economic justice and dignity for people living with disabilities.</p>
+  <p><strong>Mitchell Tremblay</strong> is a passionate Canadian disability rights advocate fighting for economic justice and dignity for people living with disabilities.</p>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🎯 Advocacy Focus:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">ODSP (Ontario Disability Support Program) reform and adequacy</li>
-    <li style="color: #1f2937 !important;">Disability rights and economic justice</li>
-    <li style="color: #1f2937 !important;">Raising awareness about poverty among disabled Canadians</li>
-    <li style="color: #1f2937 !important;">Community organizing and grassroots activism</li>
+  <p><strong>🎯 Advocacy Focus:</strong></p>
+  <ul>
+    <li>ODSP (Ontario Disability Support Program) reform and adequacy</li>
+    <li>Disability rights and economic justice</li>
+    <li>Raising awareness about poverty among disabled Canadians</li>
+    <li>Community organizing and grassroots activism</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💪 Impact:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">📱 Active social media advocate sharing lived experiences</li>
-    <li style="color: #1f2937 !important;">📣 Speaking out about the realities of living on disability benefits</li>
-    <li style="color: #1f2937 !important;">🤝 Connecting and supporting other disabled Canadians</li>
-    <li style="color: #1f2937 !important;">💬 Amplifying voices of those in poverty</li>
+  <p><strong>💪 Impact:</strong></p>
+  <ul>
+    <li>📱 Active social media advocate sharing lived experiences</li>
+    <li>📣 Speaking out about the realities of living on disability benefits</li>
+    <li>🤝 Connecting and supporting other disabled Canadians</li>
+    <li>💬 Amplifying voices of those in poverty</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💬 In Their Words:</strong></p>
-  <blockquote style="border-left: 3px solid #3b82f6; padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #1e40af !important; background: #dbeafe !important; padding: 1rem; border-radius: 4px;">
+  <p><strong>💬 In Their Words:</strong></p>
+  <blockquote style="border-left: 3px solid #3b82f6; padding-left: 1rem; margin: 1rem 0; font-style: italic; background: #dbeafe !important; padding: 1rem; border-radius: 4px;">
     "Fighting for disability rights and economic justice for all Canadians living with disabilities."
   </blockquote>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🔗 Connect with Mitchell:</strong></p>
-  <p style="color: #1f2937 !important;">
-    <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+  <p><strong>🔗 Connect with Mitchell:</strong></p>
+  <p>
+    <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline;">
       🌐 linktr.ee/odspoor
     </a><br/>
-    <a href="https://thepwdcast.wordpress.com/where-to-listen/" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+    <a href="https://thepwdcast.wordpress.com/where-to-listen/" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline;">
       🎙️ The PWD Cast Podcast
     </a>
   </p>
   
-  <p style="margin-top: 1.5rem; color: #1f2937 !important;"><em style="color: #1f2937 !important;">🌟 Thank you Mitchell for your tireless advocacy and for inspiring others to speak up for disability rights!</em></p>
+  <p style="margin-top: 1.5rem; "><em>🌟 Thank you Mitchell for your tireless advocacy and for inspiring others to speak up for disability rights!</em></p>
 </div>
 
 ---
 
 ### 🎤 Emily Pot (@emilypot_)
 
-<div class="info-box-bordered" style="background: #fff5f0 !important; border: 2px solid #f97316; border-left: 4px solid #f97316; color: #1f2937 !important;">
-  <h4 style="margin-top: 0; color: #c2410c !important;">📰 Independent Disability Journalist</h4>
+<div class="warning-box">
+  <h4 style="margin-top: 0; ">📰 Independent Disability Journalist</h4>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">Emily Pot</strong> is a disability journalist and co-founder of The Disability Bulletin, bringing authentic disabled voices and breaking news about policies that affect disabled Canadians.</p>
+  <p><strong>Emily Pot</strong> is a disability journalist and co-founder of The Disability Bulletin, bringing authentic disabled voices and breaking news about policies that affect disabled Canadians.</p>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🎯 Advocacy Focus:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">Independent disability journalism</li>
-    <li style="color: #1f2937 !important;">Breaking policy news (ODSP, WSIB, benefits)</li>
-    <li style="color: #1f2937 !important;">Amplifying disabled voices mainstream media ignores</li>
-    <li style="color: #1f2937 !important;">Community accountability journalism</li>
+  <p><strong>🎯 Advocacy Focus:</strong></p>
+  <ul>
+    <li>Independent disability journalism</li>
+    <li>Breaking policy news (ODSP, WSIB, benefits)</li>
+    <li>Amplifying disabled voices mainstream media ignores</li>
+    <li>Community accountability journalism</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💪 Impact:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">📰 Co-founder of The Disability Bulletin</li>
-    <li style="color: #1f2937 !important;">📱 Active on social media amplifying disabled voices</li>
-    <li style="color: #1f2937 !important;">🌟 Centering lived experience in policy coverage</li>
-    <li style="color: #1f2937 !important;">💬 Creating space for authentic disability conversations</li>
+  <p><strong>💪 Impact:</strong></p>
+  <ul>
+    <li>📰 Co-founder of The Disability Bulletin</li>
+    <li>📱 Active on social media amplifying disabled voices</li>
+    <li>🌟 Centering lived experience in policy coverage</li>
+    <li>💬 Creating space for authentic disability conversations</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🔗 Connect with Emily:</strong></p>
-  <p style="color: #1f2937 !important;">
-    <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+  <p><strong>🔗 Connect with Emily:</strong></p>
+  <p>
+    <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline;">
       🐦 @emilypot_ on X
     </a> | 
-    <a href="https://linktr.ee/thedisabilitybulletin" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+    <a href="https://linktr.ee/thedisabilitybulletin" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline;">
       🔗 The Disability Bulletin Links
     </a>
   </p>
   
-  <p style="margin-top: 1.5rem; color: #1f2937 !important;"><em style="color: #1f2937 !important;">🌟 Thank you Emily for centering disabled voices and holding power accountable!</em></p>
+  <p style="margin-top: 1.5rem; "><em>🌟 Thank you Emily for centering disabled voices and holding power accountable!</em></p>
 </div>
 
 ---
 
 ### ✊ Occupy WSIB (@occupywsib)
 
-<div class="info-box-bordered" style="background: #f0fdf4 !important; border: 2px solid #22c55e; border-left: 4px solid #22c55e; color: #1f2937 !important;">
-  <h4 style="margin-top: 0; color: #15803d !important;">🏗️ Injured Workers' Rights Organizers</h4>
+<div class="success-box">
+  <h4 style="margin-top: 0; ">🏗️ Injured Workers' Rights Organizers</h4>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">Occupy WSIB</strong> is a grassroots movement of injured workers fighting for justice, accountability, and systemic reform of Ontario's Workers' Compensation system.</p>
+  <p><strong>Occupy WSIB</strong> is a grassroots movement of injured workers fighting for justice, accountability, and systemic reform of Ontario's Workers' Compensation system.</p>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🎯 Advocacy Focus:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">WSIB (Workers' Compensation) reform and accountability</li>
-    <li style="color: #1f2937 !important;">Injured workers' rights and justice</li>
-    <li style="color: #1f2937 !important;">Exposing systemic barriers in workers' compensation</li>
-    <li style="color: #1f2937 !important;">Grassroots organizing and collective action</li>
+  <p><strong>🎯 Advocacy Focus:</strong></p>
+  <ul>
+    <li>WSIB (Workers' Compensation) reform and accountability</li>
+    <li>Injured workers' rights and justice</li>
+    <li>Exposing systemic barriers in workers' compensation</li>
+    <li>Grassroots organizing and collective action</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💪 Impact:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">🚀 Grassroots movement organizing injured workers</li>
-    <li style="color: #1f2937 !important;">📣 Bringing attention to WSIB injustices</li>
-    <li style="color: #1f2937 !important;">🤝 Building collective power among injured workers</li>
-    <li style="color: #1f2937 !important;">💬 Centering injured worker voices in policy conversations</li>
+  <p><strong>💪 Impact:</strong></p>
+  <ul>
+    <li>🚀 Grassroots movement organizing injured workers</li>
+    <li>📣 Bringing attention to WSIB injustices</li>
+    <li>🤝 Building collective power among injured workers</li>
+    <li>💬 Centering injured worker voices in policy conversations</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🔗 Connect with Occupy WSIB:</strong></p>
-  <p style="color: #1f2937 !important;">
-    <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+  <p><strong>🔗 Connect with Occupy WSIB:</strong></p>
+  <p>
+    <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline;">
       🐦 @occupywsib on X
     </a>
   </p>
   
-  <p style="margin-top: 1.5rem; color: #1f2937 !important;"><em style="color: #1f2937 !important;">🌟 Thank you Occupy WSIB for fighting for injured workers' rights and justice!</em></p>
+  <p style="margin-top: 1.5rem; "><em>🌟 Thank you Occupy WSIB for fighting for injured workers' rights and justice!</em></p>
 </div>
 
 ---
 
 ### 🎯 democracy4all (@CrAPwematter)
 
-<div class="info-box-bordered" style="background: #f3f4f6 !important; border: 2px solid #6366f1; border-left: 4px solid #6366f1; color: #1f2937 !important;">
-  <h4 style="margin-top: 0; color: #3730a3 !important;">♿ Chronic Illness & Disability Advocacy</h4>
+<div class="info-box">
+  <h4 style="margin-top: 0; ">♿ Chronic Illness & Disability Advocacy</h4>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">democracy4all</strong> (formerly CrAP We Matter - Chronic illness, Real, Authentic Perspectives) is a bold voice centering chronically ill and disabled perspectives in conversations about health, access, and disability justice.</p>
+  <p><strong>democracy4all</strong> (formerly CrAP We Matter - Chronic illness, Real, Authentic Perspectives) is a bold voice centering chronically ill and disabled perspectives in conversations about health, access, and disability justice.</p>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🎯 Advocacy Focus:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">Chronic illness and disability representation</li>
-    <li style="color: #1f2937 !important;">Access and accommodation in healthcare and society</li>
-    <li style="color: #1f2937 !important;">Challenging ableism and health-based discrimination</li>
-    <li style="color: #1f2937 !important;">Authentic disabled voices and lived experiences</li>
+  <p><strong>🎯 Advocacy Focus:</strong></p>
+  <ul>
+    <li>Chronic illness and disability representation</li>
+    <li>Access and accommodation in healthcare and society</li>
+    <li>Challenging ableism and health-based discrimination</li>
+    <li>Authentic disabled voices and lived experiences</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💪 Impact:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">📣 Bold activism centering chronic illness perspectives</li>
-    <li style="color: #1f2937 !important;">🗣️ Speaking truths about disability and access</li>
-    <li style="color: #1f2937 !important;">🤝 Building community with chronically ill folks</li>
-    <li style="color: #1f2937 !important;">💬 Challenging narratives that erase chronic illness</li>
+  <p><strong>💪 Impact:</strong></p>
+  <ul>
+    <li>📣 Bold activism centering chronic illness perspectives</li>
+    <li>🗣️ Speaking truths about disability and access</li>
+    <li>🤝 Building community with chronically ill folks</li>
+    <li>💬 Challenging narratives that erase chronic illness</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🔗 Connect with democracy4all:</strong></p>
-  <p style="color: #1f2937 !important;">
-    <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+  <p><strong>🔗 Connect with democracy4all:</strong></p>
+  <p>
+    <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline;">
       🐦 @CrAPwematter on X
     </a>
   </p>
   
-  <p style="margin-top: 1.5rem; color: #1f2937 !important;"><em style="color: #1f2937 !important;">🌟 Thank you democracy4all for bold, authentic advocacy for chronic illness and disability!</em></p>
+  <p style="margin-top: 1.5rem; "><em>🌟 Thank you democracy4all for bold, authentic advocacy for chronic illness and disability!</em></p>
 </div>
 
 ---
 
 ### 🔥 Lissa Beaulieu (@PhoenixRizin09 & Founder)
 
-<div class="info-box-bordered" style="background: #fef3c7 !important; border: 2px solid #f59e0b; border-left: 4px solid #f59e0b; color: #1f2937 !important;">
-  <h4 style="margin-top: 0; color: #92400e !important;">🔥 Founder & Disability Rights Activist</h4>
+<div class="highlight-box">
+  <h4 style="margin-top: 0; ">🔥 Founder & Disability Rights Activist</h4>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">Lissa Beaulieu</strong> (aka "The Phoenix") is the founder of 3mpwrApp and a fierce disability rights activist. A former PSW and injured worker, she channels her lived experience into building tools for collective liberation.</p>
+  <p><strong>Lissa Beaulieu</strong> (aka "The Phoenix") is the founder of 3mpwrApp and a fierce disability rights activist. A former PSW and injured worker, she channels her lived experience into building tools for collective liberation.</p>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🎯 Advocacy Focus:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">Building community-powered technology for disability justice</li>
-    <li style="color: #1f2937 !important;">Injured workers' rights and WSIB accountability</li>
-    <li style="color: #1f2937 !important;">Systemic change through grassroots organizing</li>
-    <li style="color: #1f2937 !important;">Creative activism and disability storytelling</li>
+  <p><strong>🎯 Advocacy Focus:</strong></p>
+  <ul>
+    <li>Building community-powered technology for disability justice</li>
+    <li>Injured workers' rights and WSIB accountability</li>
+    <li>Systemic change through grassroots organizing</li>
+    <li>Creative activism and disability storytelling</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💪 Impact:</strong></p>
-  <ul style="color: #1f2937 !important;">
-    <li style="color: #1f2937 !important;">🚀 Founder of 3mpwrApp — platform for disability community</li>
-    <li style="color: #1f2937 !important;">⚡ Board Member — Speakers School Canada</li>
-    <li style="color: #1f2937 !important;">✊ Board Member — Thunder Bay & District Injured Workers Support Group</li>
-    <li style="color: #1f2937 !important;">🎨 Creator of Injured Workers Unite (grassroots activist platform)</li>
-    <li style="color: #1f2937 !important;">😂 Using memes and humor to expose corruption and build solidarity</li>
+  <p><strong>💪 Impact:</strong></p>
+  <ul>
+    <li>🚀 Founder of 3mpwrApp — platform for disability community</li>
+    <li>⚡ Board Member — Speakers School Canada</li>
+    <li>✊ Board Member — Thunder Bay & District Injured Workers Support Group</li>
+    <li>🎨 Creator of Injured Workers Unite (grassroots activist platform)</li>
+    <li>😂 Using memes and humor to expose corruption and build solidarity</li>
   </ul>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">💬 In Her Words:</strong></p>
-  <blockquote style="border-left: 3px solid #f59e0b; padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #92400e !important; background: #fef08a !important; padding: 1rem; border-radius: 4px;">
+  <p><strong>💬 In Her Words:</strong></p>
+  <blockquote style="border-left: 3px solid #f59e0b; padding-left: 1rem; margin: 1rem 0; font-style: italic; background: #fef08a !important; padding: 1rem; border-radius: 4px;">
     "Now I fight back. As a meme & content creator, I use humor, truth, and technology to expose corruption and build solidarity. From the ashes, we rise. 🔥"
   </blockquote>
   
-  <p style="color: #1f2937 !important;"><strong style="color: #1f2937 !important;">🔗 Connect with Lissa:</strong></p>
-  <p style="color: #1f2937 !important;">
-    <a href="https://x.com/PhoenixRizin09" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+  <p><strong>🔗 Connect with Lissa:</strong></p>
+  <p>
+    <a href="https://x.com/PhoenixRizin09" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline;">
       🐦 @PhoenixRizin09 on X
     </a> | 
-    <a href="https://injuredworkersunite.pages.dev/" target="_blank" rel="noopener noreferrer" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+    <a href="https://injuredworkersunite.pages.dev/" target="_blank" rel="noopener noreferrer" style="font-weight: 600; text-decoration: underline;">
       🔥 Injured Workers Unite
     </a> | 
-    <a href="/about/" style="color: #0645ad !important; font-weight: 600; text-decoration: underline;">
+    <a href="/about/" style="font-weight: 600; text-decoration: underline;">
       📖 Learn More
     </a>
   </p>
   
-  <p style="margin-top: 1.5rem; color: #1f2937 !important;"><em style="color: #1f2937 !important;">🌟 Thank you Lissa for building tools of liberation and fighting fiercely for disabled people and injured workers!</em></p>
+  <p style="margin-top: 1.5rem; "><em>🌟 Thank you Lissa for building tools of liberation and fighting fiercely for disabled people and injured workers!</em></p>
 </div>
 
 ## 💪 More Community Profiles Coming Soon
@@ -300,7 +300,7 @@ permalink: /community-spotlight/
     <li>💬 Quotes and insights</li>
     <li>📊 Your contributions to the movement</li>
   </ul>
-  <p style="margin-top: 1.5rem;"><em>Real people, real stories, real impact. <a href="#submit-your-story" style="color: #0066cc;">Be the first to be featured!</a></em></p>
+  <p style="margin-top: 1.5rem;"><em>Real people, real stories, real impact. <a href="#submit-your-story" >Be the first to be featured!</a></em></p>
 </div>
 
 ---
@@ -359,39 +359,39 @@ permalink: /community-spotlight/
 
 ## 📝 Submit Your Story {#submit-your-story}
 
-<div class="info-box-bordered" style="background: #e0e7ff !important; border: 3px solid #3b82f6; color: #1f2937 !important; padding: 1.5rem;">
-  <h3 style="margin-top: 0; color: #1e40af !important; font-size: 1.4rem; font-weight: 700;">🌟 Want to Be Featured?</h3>
+<div class="info-box" style="padding: 1.5rem;">
+  <h3 style="margin-top: 0; font-size: 1.4rem; font-weight: 700;">🌟 Want to Be Featured?</h3>
   
-  <p style="color: #1f2937 !important; font-size: 1.05rem; font-weight: 600; margin: 1rem 0;"><strong style="color: #1f2937 !important;">We want to hear about YOUR activism!</strong></p>
+  <p style="font-size: 1.05rem; font-weight: 600; margin: 1rem 0;"><strong>We want to hear about YOUR activism!</strong></p>
   
-  <p style="color: #1f2937 !important; font-size: 1.05rem; font-weight: 600; margin: 1rem 0;"><strong style="color: #1f2937 !important;">Tell us about:</strong></p>
-  <ul style="color: #1f2937 !important; font-size: 1rem; margin: 0.5rem 0; line-height: 1.6;">
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📱 Your social media advocacy work</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📣 Rallies or events you've organized</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🤝 Peer support you've provided</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📝 Content you've created</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">💙 Behind-the-scenes contributions</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🎤 Public speaking or media work</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">💼 Workplace or union organizing</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🎓 Educational efforts</li>
+  <p style="font-size: 1.05rem; font-weight: 600; margin: 1rem 0;"><strong>Tell us about:</strong></p>
+  <ul style="font-size: 1rem; margin: 0.5rem 0; line-height: 1.6;">
+    <li style="margin: 0.5rem 0;">📱 Your social media advocacy work</li>
+    <li style="margin: 0.5rem 0;">📣 Rallies or events you've organized</li>
+    <li style="margin: 0.5rem 0;">🤝 Peer support you've provided</li>
+    <li style="margin: 0.5rem 0;">📝 Content you've created</li>
+    <li style="margin: 0.5rem 0;">💙 Behind-the-scenes contributions</li>
+    <li style="margin: 0.5rem 0;">🎤 Public speaking or media work</li>
+    <li style="margin: 0.5rem 0;">💼 Workplace or union organizing</li>
+    <li style="margin: 0.5rem 0;">🎓 Educational efforts</li>
   </ul>
   
-  <p style="color: #1f2937 !important; font-size: 1.05rem; font-weight: 600; margin: 1rem 0;"><strong style="color: #1f2937 !important;">What to include:</strong></p>
-  <ul style="color: #1f2937 !important; font-size: 1rem; margin: 0.5rem 0; line-height: 1.6;">
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📖 Your name and pronouns (if comfortable sharing)</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📍 Your location (city/province is fine)</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🎯 Your advocacy focus areas</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">💪 What you've accomplished or contributed</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">🔗 Links to your website, social media, or work</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">📸 Optional: Photo or image</li>
-    <li style="color: #1f2937 !important; margin: 0.5rem 0;">💬 A quote about why you do this work</li>
+  <p style="font-size: 1.05rem; font-weight: 600; margin: 1rem 0;"><strong>What to include:</strong></p>
+  <ul style="font-size: 1rem; margin: 0.5rem 0; line-height: 1.6;">
+    <li style="margin: 0.5rem 0;">📖 Your name and pronouns (if comfortable sharing)</li>
+    <li style="margin: 0.5rem 0;">📍 Your location (city/province is fine)</li>
+    <li style="margin: 0.5rem 0;">🎯 Your advocacy focus areas</li>
+    <li style="margin: 0.5rem 0;">💪 What you've accomplished or contributed</li>
+    <li style="margin: 0.5rem 0;">🔗 Links to your website, social media, or work</li>
+    <li style="margin: 0.5rem 0;">📸 Optional: Photo or image</li>
+    <li style="margin: 0.5rem 0;">💬 A quote about why you do this work</li>
   </ul>
   
-  <p style="color: #1f2937; font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 0.5rem;"><strong>Submit your story:</strong></p>
-  <p style="color: #1f2937; font-size: 1rem; margin: 0.5rem 0;">📧 Email: <a href="mailto:empowrapp08162025@gmail.com" style="color: #0645ad; text-decoration: underline; font-weight: 600;">empowrapp08162025@gmail.com</a></p>
-  <p style="color: #1f2937; font-size: 1rem; margin: 0.5rem 0 1rem;">📝 Subject line: <strong>"Community Spotlight Submission"</strong></p>
+  <p style="font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 0.5rem;"><strong>Submit your story:</strong></p>
+  <p style="font-size: 1rem; margin: 0.5rem 0;">📧 Email: <a href="mailto:empowrapp08162025@gmail.com" style="text-decoration: underline; font-weight: 600;">empowrapp08162025@gmail.com</a></p>
+  <p style="font-size: 1rem; margin: 0.5rem 0 1rem;">📝 Subject line: <strong>"Community Spotlight Submission"</strong></p>
   
-  <p style="color: #1f2937; font-size: 1rem; font-weight: 500; font-style: italic;">💡 We feature new advocates monthly. Your story inspires others!</p>
+  <p style="font-size: 1rem; font-weight: 500; font-style: italic;">💡 We feature new advocates monthly. Your story inspires others!</p>
 </div>
 
 ---

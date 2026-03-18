@@ -19,14 +19,14 @@ permalink: /app-tour/
 .gallery-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #1b5e20 !important;
+  
 }
 
 .gallery-hero p {
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
-  color: #1a1a1a !important;
+  
 }
 
 .category-nav {
@@ -36,14 +36,14 @@ permalink: /app-tour/
   justify-content: center;
   margin-bottom: 2rem;
   padding: 1rem;
-  background: #f5f5f5;
+  
   border-radius: 0.5rem;
 }
 
 .category-nav a {
   padding: 0.5rem 1rem;
-  background: #4caf50;
-  color: #ffffff !important;
+  
+  
   text-decoration: none;
   border-radius: 2rem;
   font-weight: 500;
@@ -52,14 +52,14 @@ permalink: /app-tour/
 
 .category-nav a:hover,
 .category-nav a:focus {
-  background: #1b5e20;
+  
   transform: translateY(-2px);
 }
 
 .category-section {
   margin-bottom: 3rem;
   padding: 1.5rem;
-  background: #fafafa !important;
+  
   border-radius: 1rem;
   border-left: 4px solid #4caf50;
 }
@@ -69,11 +69,11 @@ permalink: /app-tour/
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
-  color: #1b5e20 !important;
+  
 }
 
 .category-section .category-desc {
-  color: #1a1a1a !important;
+  
   margin-bottom: 1.5rem;
   font-style: italic;
 }
@@ -85,7 +85,7 @@ permalink: /app-tour/
 }
 
 .preview-card {
-  background: #ffffff !important;
+  
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -107,10 +107,10 @@ permalink: /app-tour/
 .preview-card .caption {
   padding: 0.75rem;
   font-size: 0.9rem;
-  color: #1a1a1a !important;
-  background: #e8e8e8 !important;
+  
+  
   text-align: center;
-  background: #f5f5f5;
+  
 }
 
 .stats-bar {
@@ -120,7 +120,7 @@ permalink: /app-tour/
   flex-wrap: wrap;
   margin: 1.5rem 0;
   padding: 1rem;
-  background: #4caf50;
+  
   border-radius: 0.5rem;
   color: #ffffff;
 }
@@ -206,42 +206,42 @@ permalink: /app-tour/
   }
   
   .gallery-hero h1 {
-    color: #81c784 !important;
+    
   }
   
   .gallery-hero p {
-    color: #e0e0e0 !important;
+    
   }
   
   .category-nav {
-    background: #2d2d2d !important;
+    
   }
   
   .category-section {
-    background: #2d2d2d !important;
+    
     border-left-color: #81c784;
   }
   
   .category-section h2 {
-    color: #81c784 !important;
+    
   }
   
   .category-section .category-desc {
-    color: #e0e0e0 !important;
+    
   }
   
   .preview-card {
-    background: #3d3d3d !important;
+    
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   }
   
   .preview-card .caption {
-    background: #4d4d4d !important;
-    color: #ffffff !important;
+    
+    
   }
   
   .lightbox-close {
-    background: #333333;
+    
     color: #ffffff;
   }
 }
@@ -254,43 +254,43 @@ permalink: /app-tour/
 
 [data-theme="dark"] .gallery-hero h1,
 .dark-mode .gallery-hero h1 {
-  color: #81c784 !important;
+  
 }
 
 [data-theme="dark"] .gallery-hero p,
 .dark-mode .gallery-hero p {
-  color: #e0e0e0 !important;
+  
 }
 
 [data-theme="dark"] .category-nav,
 .dark-mode .category-nav {
-  background: #2d2d2d !important;
+  
 }
 
 [data-theme="dark"] .category-section,
 .dark-mode .category-section {
-  background: #2d2d2d !important;
+  
 }
 
 [data-theme="dark"] .category-section h2,
 .dark-mode .category-section h2 {
-  color: #81c784 !important;
+  
 }
 
 [data-theme="dark"] .category-section .category-desc,
 .dark-mode .category-section .category-desc {
-  color: #e0e0e0 !important;
+  
 }
 
 [data-theme="dark"] .preview-card,
 .dark-mode .preview-card {
-  background: #3d3d3d !important;
+  
 }
 
 [data-theme="dark"] .preview-card .caption,
 .dark-mode .preview-card .caption {
-  background: #4d4d4d !important;
-  color: #ffffff !important;
+  
+  
 }
 </style>
 
@@ -358,12 +358,6 @@ permalink: /app-tour/
         <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeScreenTab2.png" alt="3mpwrApp home screen showing wellness tracking, evidence management, and community support features" loading="lazy">
       </a>
       <div class="caption">Home Features | <a href="/user-guide/#personalization-setup">Guide</a></div>
-    </div>
-    <div class="preview-card">
-      <a href="/user-guide/#complexity-mode?utm_source=app_tour&utm_campaign=visual_refresh" title="Simple Mode for accessibility">
-        <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeCommunityHubSimpleMode.png" alt="Community Hub in simple complexity mode - accessible interface for disability community connection - 3mpwrApp" loading="lazy">
-      </a>
-      <div class="caption">Community Hub - Simple Mode | <a href="/user-guide/#complexity-mode">Learn More</a></div>
     </div>
     <div class="preview-card">
       <a href="/user-guide/#evidence-command-center?utm_source=app_tour&utm_campaign=visual_refresh" title="Secure evidence storage">
