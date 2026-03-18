@@ -122,23 +122,23 @@ permalink: /app-tour/
   padding: 1rem;
   
   border-radius: 0.5rem;
-  color: #ffffff;
+  
 }
 
 .stat-item {
   text-align: center;
-  color: #ffffff;
+  
 }
 
 .stat-number {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #ffffff;
+  
 }
 
 .stat-label {
   font-size: 0.85rem;
-  color: #ffffff;
+  
 }
 
 /* Lightbox styles */
@@ -219,7 +219,7 @@ permalink: /app-tour/
   
   .category-section {
     
-    border-left-color: #81c784;
+    border-left-color: var(--success-border);
   }
   
   .category-section h2 {
@@ -242,7 +242,7 @@ permalink: /app-tour/
   
   .lightbox-close {
     
-    color: #ffffff;
+    
   }
 }
 

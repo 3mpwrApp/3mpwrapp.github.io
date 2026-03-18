@@ -41,21 +41,21 @@ description: Try our AI-powered assistant for advocacy support
   }
   
   .feature h3 {
-    color: #667eea;
+    color: var(--link-color);
     margin-bottom: 12px;
   }
   
   .cta {
     text-align: center;
     padding: 40px 20px;
-    background: #f9fafb;
+    background: var(--bg-secondary);
     border-radius: 12px;
   }
   
   .cta-button {
     display: inline-block;
     padding: 16px 32px;
-    background: #667eea;
+    background: var(--btn-primary-bg);
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -115,9 +115,9 @@ description: Try our AI-powered assistant for advocacy support
   </a>
 </div>
 
-<div style="margin-top: 60px; padding: 40px; background: #fff3cd; border-radius: 12px; border-left: 4px solid #ffc107;">
-  <h3 style="color: #856404; margin-top: 0;">Important Notes</h3>
-  <ul style="color: #856404; margin-bottom: 0;">
+<div style="margin-top: 60px; padding: 40px; background: var(--warning-bg); border-radius: 12px; border-left: 4px solid var(--warning-border);">
+  <h3 style="color: var(--warning-text); margin-top: 0;">Important Notes</h3>
+  <ul style="color: var(--warning-text); margin-bottom: 0;">
     <li>This AI assistant is a support tool, not a replacement for professional counseling or legal advice.</li>
     <li>In case of emergency, please call 911 or contact a crisis hotline immediately.</li>
     <li>Never share sensitive personal information like passwords, SSN, or financial details.</li>

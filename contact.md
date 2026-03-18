@@ -103,14 +103,14 @@ Please fill out the form below and we'll get back to you within 24 hours:
   }
 
   .form-messages.success {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: var(--success-bg);
+    color: var(--success-text);
     border: 1px solid #c3e6cb;
   }
 
   .form-messages.error {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: var(--error-bg);
+    color: var(--error-text);
     border: 1px solid #f5c6cb;
   }
 
@@ -127,7 +127,7 @@ Please fill out the form below and we'll get back to you within 24 hours:
   }
 
   .required-indicator {
-    color: #d32f2f;
+    color: var(--error-text);
     margin-left: 0.25rem;
   }
 
@@ -155,13 +155,13 @@ Please fill out the form below and we'll get back to you within 24 hours:
   .form-group input.field-error,
   .form-group select.field-error,
   .form-group textarea.field-error {
-    border-color: #d32f2f;
+    border-color: var(--error-text);
   }
 
   .form-group input.field-error:focus,
   .form-group select.field-error:focus,
   .form-group textarea.field-error:focus {
-    border-color: #d32f2f;
+    border-color: var(--error-text);
     box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2);
   }
 
@@ -179,7 +179,7 @@ Please fill out the form below and we'll get back to you within 24 hours:
   .error-message {
     margin-top: 0.5rem;
     font-size: 0.875rem;
-    color: #d32f2f;
+    color: var(--error-text);
     font-weight: 600;
   }
 
@@ -199,11 +199,11 @@ Please fill out the form below and we'll get back to you within 24 hours:
 
   .captcha-placeholder {
     padding: 1rem;
-    background-color: #f0f0f0;
+    background-color: var(--bg-tertiary);
     border: 2px dashed #ccc;
     border-radius: 4px;
     text-align: center;
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.9rem;
   }
 
@@ -290,21 +290,21 @@ Please fill out the form below and we'll get back to you within 24 hours:
 
   @media (prefers-color-scheme: dark) {
     .captcha-placeholder {
-      background-color: #2d2d2d;
-      border-color: #555;
-      color: #aaa;
+      background-color: var(--bg-primary);
+      border-color: var(--border-medium);
+      color: var(--text-secondary);
     }
 
     .form-messages.success {
-      background-color: #1b4332;
-      color: #d8f3dc;
-      border-color: #2d6a4f;
+      background-color: var(--success-bg);
+      color: var(--success-text);
+      border-color: var(--success-border);
     }
 
     .form-messages.error {
-      background-color: #4a1c1c;
-      color: #ffcdd2;
-      border-color: #721c24;
+      background-color: var(--error-bg);
+      color: var(--error-text);
+      border-color: var(--error-text);
     }
 
     .form-group input,
@@ -319,7 +319,7 @@ Please fill out the form below and we'll get back to you within 24 hours:
     .form-group select:focus,
     .form-group textarea:focus {
       background-color: var(--input-bg-focus-dark, #1a2a3a);
-      border-color: #4DB8FF;
+      border-color: var(--info-border);
       box-shadow: 0 0 0 3px rgba(77, 184, 255, 0.2);
     }
 
@@ -340,35 +340,35 @@ Please fill out the form below and we'll get back to you within 24 hours:
 
     /* CRITICAL: Button primary needs explicit colors in dark mode */
     .btn-primary {
-      background-color: #66b2ff !important;
-      color: #000000 !important;
+      background-color: var(--info-bg) !important;
+      color: var(--text-primary) !important;
     }
 
     .btn-primary .btn-text,
     .btn-primary .btn-spinner {
-      color: #000000 !important;
+      color: var(--text-primary) !important;
     }
 
     .btn-primary:hover:not(:disabled) {
-      background-color: #99ccff !important;
-      color: #000000 !important;
+      background-color: var(--info-bg) !important;
+      color: var(--text-primary) !important;
     }
   }
 
   /* CRITICAL: [data-theme="dark"] overrides MUST come after @media to take precedence */
   [data-theme="dark"] .btn-primary {
-    background-color: #66b2ff !important;
-    color: #000000 !important;
+    background-color: var(--info-bg) !important;
+    color: var(--text-primary) !important;
   }
 
   [data-theme="dark"] .btn-primary .btn-text,
   [data-theme="dark"] .btn-primary .btn-spinner {
-    color: #000000 !important;
+    color: var(--text-primary) !important;
   }
 
   [data-theme="dark"] .btn-primary:hover:not(:disabled) {
-    background-color: #99ccff !important;
-    color: #000000 !important;
+    background-color: var(--info-bg) !important;
+    color: var(--text-primary) !important;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -433,7 +433,7 @@ Please fill out the form below and we'll get back to you within 24 hours:
     };
     script.onerror = function() {
       if (placeholder) {
-        placeholder.innerHTML = '<p style="color: #d32f2f;">⚠️ Failed to load verification. Please refresh the page.</p>';
+        placeholder.innerHTML = '<p style="color: var(--error-text);">⚠️ Failed to load verification. Please refresh the page.</p>';
       }
     };
     document.head.appendChild(script);

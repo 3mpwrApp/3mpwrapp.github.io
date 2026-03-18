@@ -243,12 +243,12 @@ body {
   font-weight: 700;
   /* default — overridden per type */
   background: var(--text-link, #003d7a);
-  color: #ffffff;
+  color: var(--text-on-color);
 }
 
-.post-card--curated .post-card__badge  { background: #5046e5; }
-.post-card--feature .post-card__badge  { background: #b91c6d; }
-.post-card--weekly  .post-card__badge  { background: #0369a1; }
+.post-card--curated .post-card__badge  { background: var(--info-bg); }
+.post-card--feature .post-card__badge  { background: var(--error-bg); }
+.post-card--weekly  .post-card__badge  { background: var(--info-border); }
 
 /* Headings/links inside cards — inherit from universal CSS */
 .post-card__title {
@@ -346,7 +346,7 @@ body {
 .btn-secondary:hover,
 .btn-secondary:focus {
   background: var(--text-link, #003d7a);
-  color: #ffffff !important;
+  color: var(--text-on-color) !important;
 }
 
 /* ---- Archive ---- */
@@ -460,29 +460,29 @@ body {
 [data-contrast="high"] .post-card,
 [data-contrast="high"] .post-item {
   border: 3px solid #000 !important;
-  background: #fff !important;
-  color: #000 !important;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
 }
 
 [data-contrast="high"] .post-card__title a,
-[data-contrast="high"] .post-item__title a { color: #000 !important; }
+[data-contrast="high"] .post-item__title a { color: var(--text-primary) !important; }
 
 [data-contrast="high"] .post-card__badge {
-  background: #000 !important;
-  color: #fff !important;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
   border: 2px solid #fff !important;
 }
 
 [data-contrast="high"] .post-card--curated .post-card__badge,
 [data-contrast="high"] .post-card--feature .post-card__badge,
 [data-contrast="high"] .post-card--weekly  .post-card__badge {
-  background: #000 !important;
+  background: var(--bg-primary) !important;
 }
 
 [data-contrast="high"] .btn-secondary {
   border: 3px solid #000 !important;
-  background: #fff !important;
-  color: #000 !important;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
 }
 
 /* =============================================

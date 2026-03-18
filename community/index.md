@@ -73,19 +73,19 @@ permalink: /community/
 
 **Weekly Podcast with Richard and Paul - Expert WSIB Insights**
 
-<div class="info-box" style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; margin: 1.5rem 0;">
-  <p style="margin: 0 0 1rem; font-size: 1.1rem; font-weight: 600; color: #000000;">
+<div class="info-box" style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid var(--error-border); margin: 1.5rem 0;">
+  <p style="margin: 0 0 1rem; font-size: 1.1rem; font-weight: 600; color: var(--text-primary);">
     ⚖️ Real legal insights from experienced professionals helping injured workers across Ontario.
   </p>
-  <p style="margin: 0 0 1rem; color: #000000; line-height: 1.6;">
+  <p style="margin: 0 0 1rem; color: var(--text-primary); line-height: 1.6;">
     Join Richard Fink (Lawyer) and Paul Taylor (Paralegal) as they discuss various issues that many injured workers face when they are on WSIB. Weekly episodes covering your rights, navigating the system, and getting the support you deserve.
   </p>
   
   <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 6px; margin: 1rem 0; border-left: 4px solid #dc2626;">
-    <p style="margin: 0 0 0.5rem; font-weight: 600; color: #000000;">📞 Need WSIB assistance or want to participate?</p>
-    <p style="margin: 0; color: #000000;">
-      <strong style="color: #dc2626;">Richard Fink Law:</strong> <a href="https://www.finklegal.com/" target="_blank" rel="noopener noreferrer" style="color: #0052a3; text-decoration: underline; font-weight: 600;">finklegal.com</a><br>
-      <strong style="color: #dc2626;">Paul's Paralegal:</strong> <a href="https://paulsparalegal.ca/" target="_blank" rel="noopener noreferrer" style="color: #0052a3; text-decoration: underline; font-weight: 600;">paulsparalegal.ca</a>
+    <p style="margin: 0 0 0.5rem; font-weight: 600; color: var(--text-primary);">📞 Need WSIB assistance or want to participate?</p>
+    <p style="margin: 0; color: var(--text-primary);">
+      <strong style="color: var(--error-text);">Richard Fink Law:</strong> <a href="https://www.finklegal.com/" target="_blank" rel="noopener noreferrer" style="color: var(--link-color); text-decoration: underline; font-weight: 600;">finklegal.com</a><br>
+      <strong style="color: var(--error-text);">Paul's Paralegal:</strong> <a href="https://paulsparalegal.ca/" target="_blank" rel="noopener noreferrer" style="color: var(--link-color); text-decoration: underline; font-weight: 600;">paulsparalegal.ca</a>
     </p>
   </div>
   
@@ -94,20 +94,20 @@ permalink: /community/
        target="_blank" 
        rel="noopener noreferrer"
        class="btn btn-primary"
-       style="display: inline-block; margin: 0.5rem; padding: 12px 28px; background: #dc2626 !important; color: white !important; border: 3px solid #991b1b; font-weight: 700; text-decoration: none; border-radius: 8px;">
+       style="display: inline-block; margin: 0.5rem; padding: 12px 28px; background: var(--error-bg) !important; color: white !important; border: 3px solid var(--error-border); font-weight: 700; text-decoration: none; border-radius: 8px;">
       ▶️ Watch on YouTube
     </a>
     <a href="https://www.youtube.com/@finkbornsteinlawfirm1184?sub_confirmation=1" 
        target="_blank" 
        rel="noopener noreferrer"
        class="btn btn-secondary"
-       style="display: inline-block; margin: 0.5rem; padding: 12px 28px; background: #f3f4f6 !important; color: #dc2626 !important; border: 3px solid #dc2626; font-weight: 700; text-decoration: none; border-radius: 8px;">
+       style="display: inline-block; margin: 0.5rem; padding: 12px 28px; background: var(--bg-secondary) !important; color: var(--error-text) !important; border: 3px solid var(--error-border); font-weight: 700; text-decoration: none; border-radius: 8px;">
       🔔 Subscribe
     </a>
   </div>
   
-  <p style="margin: 1rem 0 0; font-size: 0.95rem; color: #000000; text-align: center; font-style: italic;">
-    💡 <strong style="color: #000000;">If you like the podcast videos, please like and subscribe!</strong> Help spread the word about this valuable resource for injured workers.
+  <p style="margin: 1rem 0 0; font-size: 0.95rem; color: var(--text-primary); text-align: center; font-style: italic;">
+    💡 <strong style="color: var(--text-primary);">If you like the podcast videos, please like and subscribe!</strong> Help spread the word about this valuable resource for injured workers.
   </p>
 </div>
 
@@ -199,10 +199,10 @@ The Disability Bulletin team is so proud to announce the launch of Issue #1 feat
       --text-secondary: #d1d5db;
     }
     .featured-members-container > div {
-      background-color: #1f2937 !important;
+      background-color: var(--bg-primary) !important;
     }
     .featured-members-container h4 {
-      color: #f0f9ff !important;
+      color: var(--text-primary) !important;
     }
     .featured-members-container p {
       color: var(--text-secondary) !important;
@@ -213,39 +213,39 @@ The Disability Bulletin team is so proud to announce the launch of Issue #1 feat
 **Follow these voices making a difference:**
 
 <div class="featured-members-container" style="display: grid; gap: 1.5rem; margin: 1.5rem 0;">
-  <div style="border: 2px solid #f97316; border-left: 4px solid #f97316; padding: 1rem; border-radius: 8px; background: #fff5f0;">
-    <h4 style="margin-top: 0; color: #c2410c; font-size: 1.1rem;">📰 Emily Pot (@emilypot_)</h4>
-    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Independent disability journalist & co-founder of The Disability Bulletin</p>
-    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Breaking disability news, centering lived experience, holding power accountable</p>
-    <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #f97316; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow Emily on X →</a>
+  <div style="border: 2px solid var(--warning-border); border-left: 4px solid var(--warning-border); padding: 1rem; border-radius: 8px; background: var(--warning-bg);">
+    <h4 style="margin-top: 0; color: var(--warning-text); font-size: 1.1rem;">📰 Emily Pot (@emilypot_)</h4>
+    <p style="margin: 0.5rem 0; color: var(--text-primary); font-weight: 600;">Independent disability journalist & co-founder of The Disability Bulletin</p>
+    <p style="margin: 0.5rem 0 1rem; color: var(--text-secondary); font-size: 0.95rem;">Breaking disability news, centering lived experience, holding power accountable</p>
+    <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--warning-border); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow Emily on X →</a>
   </div>
 
-  <div style="border: 2px solid #22c55e; border-left: 4px solid #22c55e; padding: 1rem; border-radius: 8px; background: #f0fdf4;">
-    <h4 style="margin-top: 0; color: #15803d; font-size: 1.1rem;">✊ Occupy WSIB (@occupywsib)</h4>
-    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Injured workers' rights activist organizing in London, Ontario</p>
-    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Conducting public pickets and demonstrations to expose WSIB to the community, keeping the focus on injured workers' rights and accountability</p>
-    <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #22c55e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow Occupy WSIB on X →</a>
+  <div style="border: 2px solid var(--success-border); border-left: 4px solid var(--success-border); padding: 1rem; border-radius: 8px; background: var(--success-bg);">
+    <h4 style="margin-top: 0; color: var(--success-text); font-size: 1.1rem;">✊ Occupy WSIB (@occupywsib)</h4>
+    <p style="margin: 0.5rem 0; color: var(--text-primary); font-weight: 600;">Injured workers' rights activist organizing in London, Ontario</p>
+    <p style="margin: 0.5rem 0 1rem; color: var(--text-secondary); font-size: 0.95rem;">Conducting public pickets and demonstrations to expose WSIB to the community, keeping the focus on injured workers' rights and accountability</p>
+    <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--success-border); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow Occupy WSIB on X →</a>
   </div>
 
-  <div style="border: 2px solid #6366f1; border-left: 4px solid #6366f1; padding: 1rem; border-radius: 8px; background: #f3f4f6;">
-    <h4 style="margin-top: 0; color: #3730a3; font-size: 1.1rem;">♿ democracy4all (@CrAPwematter)</h4>
-    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Chronic illness & disability advocates</p>
-    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Bold voices centering chronic illness perspectives and authentic disability truths</p>
-    <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #6366f1; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow democracy4all on X →</a>
+  <div style="border: 2px solid var(--info-border); border-left: 4px solid var(--info-border); padding: 1rem; border-radius: 8px; background: var(--bg-secondary);">
+    <h4 style="margin-top: 0; color: var(--info-text); font-size: 1.1rem;">♿ democracy4all (@CrAPwematter)</h4>
+    <p style="margin: 0.5rem 0; color: var(--text-primary); font-weight: 600;">Chronic illness & disability advocates</p>
+    <p style="margin: 0.5rem 0 1rem; color: var(--text-secondary); font-size: 0.95rem;">Bold voices centering chronic illness perspectives and authentic disability truths</p>
+    <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--info-border); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐦 Follow democracy4all on X →</a>
   </div>
 
-  <div style="border: 2px solid #f59e0b; border-left: 4px solid #f59e0b; padding: 1rem; border-radius: 8px; background: #fef3c7;">
-    <h4 style="margin-top: 0; color: #92400e; font-size: 1.1rem;">🔥 Lissa Beaulieu - Founder & Disability Rights Activist</h4>
-    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Founder of 3mpwrApp, Board Member - Thunder Bay & District Injured Workers Support Group</p>
-    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Building community tools for disability justice, fighting WSIB injustice, creative activism</p>
-    <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #f59e0b; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow Lissa on X →</a><a href="/about/" style="display: inline-block; background: #92400e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📖 Learn More →</a>
+  <div style="border: 2px solid var(--warning-border); border-left: 4px solid var(--warning-border); padding: 1rem; border-radius: 8px; background: var(--warning-bg);">
+    <h4 style="margin-top: 0; color: var(--warning-text); font-size: 1.1rem;">🔥 Lissa Beaulieu - Founder & Disability Rights Activist</h4>
+    <p style="margin: 0.5rem 0; color: var(--text-primary); font-weight: 600;">Founder of 3mpwrApp, Board Member - Thunder Bay & District Injured Workers Support Group</p>
+    <p style="margin: 0.5rem 0 1rem; color: var(--text-secondary); font-size: 0.95rem;">Building community tools for disability justice, fighting WSIB injustice, creative activism</p>
+    <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--warning-bg); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow Lissa on X →</a><a href="/about/" style="display: inline-block; background: var(--warning-text); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📖 Learn More →</a>
   </div>
 
-  <div style="border: 2px solid #3b82f6; border-left: 4px solid #3b82f6; padding: 1rem; border-radius: 8px; background: #eff6ff;">
-    <h4 style="margin-top: 0; color: #1e40af; font-size: 1.1rem;">🇨🇦 Mitchell Tremblay (@ODSPoverty)</h4>
-    <p style="margin: 0.5rem 0; color: #1f2937; font-weight: 600;">Disability Rights Advocate & Co-founder of The Disability Bulletin</p>
-    <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem;">Fighting for ODSP reform, disability rights, and economic justice for disabled Canadians</p>
-    <a href="https://x.com/ODSPoverty" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #3b82f6; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow on X →</a><a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #1e40af; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🔗 Linktree →</a>
+  <div style="border: 2px solid var(--info-border); border-left: 4px solid var(--info-border); padding: 1rem; border-radius: 8px; background: var(--info-bg);">
+    <h4 style="margin-top: 0; color: var(--info-text); font-size: 1.1rem;">🇨🇦 Mitchell Tremblay (@ODSPoverty)</h4>
+    <p style="margin: 0.5rem 0; color: var(--text-primary); font-weight: 600;">Disability Rights Advocate & Co-founder of The Disability Bulletin</p>
+    <p style="margin: 0.5rem 0 1rem; color: var(--text-secondary); font-size: 0.95rem;">Fighting for ODSP reform, disability rights, and economic justice for disabled Canadians</p>
+    <a href="https://x.com/ODSPoverty" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--info-border); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; font-size: 0.95rem;">🐦 Follow on X →</a><a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #1e40af; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🔗 Linktree →</a>
   </div>
 </div>
 

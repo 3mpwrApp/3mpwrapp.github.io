@@ -105,7 +105,7 @@ permalink: /community-spotlight/
   </ul>
   
   <p><strong>💬 In Their Words:</strong></p>
-  <blockquote style="border-left: 3px solid #3b82f6; padding-left: 1rem; margin: 1rem 0; font-style: italic; background: #dbeafe !important; padding: 1rem; border-radius: 4px;">
+  <blockquote class="info-box" style="font-style: italic;">
     "Fighting for disability rights and economic justice for all Canadians living with disabilities."
   </blockquote>
   
@@ -257,7 +257,7 @@ permalink: /community-spotlight/
   </ul>
   
   <p><strong>💬 In Her Words:</strong></p>
-  <blockquote style="border-left: 3px solid #f59e0b; padding-left: 1rem; margin: 1rem 0; font-style: italic; background: #fef08a !important; padding: 1rem; border-radius: 4px;">
+  <blockquote class="highlight-box" style="font-style: italic;">
     "Now I fight back. As a meme & content creator, I use humor, truth, and technology to expose corruption and build solidarity. From the ashes, we rise. 🔥"
   </blockquote>
   

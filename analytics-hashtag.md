@@ -59,25 +59,25 @@ permalink: /analytics/hashtag/
 
 ### Free Monitoring Tools
 
-<div style="background: #f3f4f6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+<div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
   <h4 style="margin-top: 0;">Social Mention</h4>
   <p>Real-time social media search and analysis</p>
-  <a href="http://socialmention.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 16px; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">Search "3mpwrApp" →</a>
-  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #6b7280;">Provides: Strength, sentiment, passion, reach metrics</p>
+  <a href="http://socialmention.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 16px; background: var(--btn-primary-bg); color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">Search "3mpwrApp" →</a>
+  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Provides: Strength, sentiment, passion, reach metrics</p>
 </div>
 
-<div style="background: #f3f4f6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+<div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
   <h4 style="margin-top: 0;">Google Alerts</h4>
   <p>Get email notifications when hashtag appears online</p>
-  <a href="https://www.google.com/alerts" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 16px; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">Set Up Alert →</a>
-  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #6b7280;">Create alert for: "3mpwrApp" OR "#3mpwrApp"</p>
+  <a href="https://www.google.com/alerts" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 16px; background: var(--btn-primary-bg); color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">Set Up Alert →</a>
+  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Create alert for: "3mpwrApp" OR "#3mpwrApp"</p>
 </div>
 
-<div style="background: #f3f4f6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+<div style="background: var(--bg-secondary); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
   <h4 style="margin-top: 0;">Hashtagify</h4>
   <p>Hashtag analytics and related hashtag discovery</p>
-  <a href="https://hashtagify.me/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 16px; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">Analyze Hashtag →</a>
-  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #6b7280;">Discover related hashtags and trending data</p>
+  <a href="https://hashtagify.me/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 16px; background: var(--btn-primary-bg); color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">Analyze Hashtag →</a>
+  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Discover related hashtags and trending data</p>
 </div>
 
 ---
@@ -86,28 +86,28 @@ permalink: /analytics/hashtag/
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
   
-  <div style="background: #ecfdf5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #10b981;">
-    <div style="font-size: 0.9rem; color: #065f46; font-weight: 600; margin-bottom: 0.5rem;">TOTAL MENTIONS</div>
-    <div style="font-size: 2rem; font-weight: bold; color: #047857;">Track Weekly</div>
-    <div style="font-size: 0.85rem; color: #059669; margin-top: 0.5rem;">Across all platforms</div>
+  <div style="background: var(--success-bg); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--success-border);">
+    <div style="font-size: 0.9rem; color: var(--success-text); font-weight: 600; margin-bottom: 0.5rem;">TOTAL MENTIONS</div>
+    <div style="font-size: 2rem; font-weight: bold; color: var(--success-text);">Track Weekly</div>
+    <div style="font-size: 0.85rem; color: var(--success-text); margin-top: 0.5rem;">Across all platforms</div>
   </div>
 
-  <div style="background: #eff6ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3b82f6;">
-    <div style="font-size: 0.9rem; color: #1e3a8a; font-weight: 600; margin-bottom: 0.5rem;">REACH</div>
-    <div style="font-size: 2rem; font-weight: bold; color: #1e40af;">Potential Views</div>
-    <div style="font-size: 0.85rem; color: #2563eb; margin-top: 0.5rem;">Total impressions</div>
+  <div style="background: var(--info-bg); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--info-border);">
+    <div style="font-size: 0.9rem; color: var(--info-text); font-weight: 600; margin-bottom: 0.5rem;">REACH</div>
+    <div style="font-size: 2rem; font-weight: bold; color: var(--info-text);">Potential Views</div>
+    <div style="font-size: 0.85rem; color: var(--info-text); margin-top: 0.5rem;">Total impressions</div>
   </div>
 
-  <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b;">
-    <div style="font-size: 0.9rem; color: #78350f; font-weight: 600; margin-bottom: 0.5rem;">ENGAGEMENT</div>
-    <div style="font-size: 2rem; font-weight: bold; color: #b45309;">Interaction Rate</div>
-    <div style="font-size: 0.85rem; color: #d97706; margin-top: 0.5rem;">Likes, shares, comments</div>
+  <div style="background: var(--warning-bg); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--warning-border);">
+    <div style="font-size: 0.9rem; color: var(--warning-text); font-weight: 600; margin-bottom: 0.5rem;">ENGAGEMENT</div>
+    <div style="font-size: 2rem; font-weight: bold; color: var(--warning-text);">Interaction Rate</div>
+    <div style="font-size: 0.85rem; color: var(--warning-text); margin-top: 0.5rem;">Likes, shares, comments</div>
   </div>
 
-  <div style="background: #fce7f3; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ec4899;">
-    <div style="font-size: 0.9rem; color: #831843; font-weight: 600; margin-bottom: 0.5rem;">SENTIMENT</div>
-    <div style="font-size: 2rem; font-weight: bold; color: #be185d;">Positive %</div>
-    <div style="font-size: 0.85rem; color: #db2777; margin-top: 0.5rem;">Community sentiment</div>
+  <div style="background: var(--error-bg); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--error-border);">
+    <div style="font-size: 0.9rem; color: var(--error-text); font-weight: 600; margin-bottom: 0.5rem;">SENTIMENT</div>
+    <div style="font-size: 2rem; font-weight: bold; color: var(--error-text);">Positive %</div>
+    <div style="font-size: 0.85rem; color: var(--error-text); margin-top: 0.5rem;">Community sentiment</div>
   </div>
 
 </div>
@@ -131,32 +131,32 @@ permalink: /analytics/hashtag/
 
 ## 💡 How You Can Help
 
-<div style="background: #f9fafb; padding: 2rem; border-radius: 8px; border: 2px solid #e5e7eb; margin: 2rem 0;">
+<div style="background: var(--bg-tertiary); padding: 2rem; border-radius: 8px; border: 2px solid var(--border-light); margin: 2rem 0;">
   <h3 style="margin-top: 0;">Use #3mpwrApp When You:</h3>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
     <div>
       <strong>📅 Share Events</strong>
-      <p style="margin: 0.5rem 0 0; color: #6b7280;">Post about disability rights or worker justice events</p>
+      <p style="margin: 0.5rem 0 0; color: var(--text-secondary);">Post about disability rights or worker justice events</p>
     </div>
     <div>
       <strong>💬 Join Conversations</strong>
-      <p style="margin: 0.5rem 0 0; color: #6b7280;">Discuss accessibility, advocacy, or community topics</p>
+      <p style="margin: 0.5rem 0 0; color: var(--text-secondary);">Discuss accessibility, advocacy, or community topics</p>
     </div>
     <div>
       <strong>📢 Spread Awareness</strong>
-      <p style="margin: 0.5rem 0 0; color: #6b7280;">Share the app or website with others</p>
+      <p style="margin: 0.5rem 0 0; color: var(--text-secondary);">Share the app or website with others</p>
     </div>
     <div>
       <strong>🎉 Celebrate Wins</strong>
-      <p style="margin: 0.5rem 0 0; color: #6b7280;">Share success stories or community victories</p>
+      <p style="margin: 0.5rem 0 0; color: var(--text-secondary);">Share success stories or community victories</p>
     </div>
     <div>
       <strong>❓ Ask Questions</strong>
-      <p style="margin: 0.5rem 0 0; color: #6b7280;">Seek help or information about the platform</p>
+      <p style="margin: 0.5rem 0 0; color: var(--text-secondary);">Seek help or information about the platform</p>
     </div>
     <div>
       <strong>🙏 Give Feedback</strong>
-      <p style="margin: 0.5rem 0 0; color: #6b7280;">Share suggestions or experiences using the app</p>
+      <p style="margin: 0.5rem 0 0; color: var(--text-secondary);">Share suggestions or experiences using the app</p>
     </div>
   </div>
 </div>
@@ -194,9 +194,9 @@ Need help with hashtag tracking or analytics?
 
 ---
 
-<div style="text-align: center; margin: 3rem 0 2rem; padding: 2rem; background: #f9fafb; border-radius: 12px;">
+<div style="text-align: center; margin: 3rem 0 2rem; padding: 2rem; background: var(--bg-tertiary); border-radius: 12px;">
   <p style="font-size: 1.2rem; margin: 0 0 1rem;"><strong>Together we're building something special! 💙</strong></p>
-  <p style="margin: 0; color: #6b7280;">Every use of <code style="background: #e5e7eb; padding: 2px 8px; border-radius: 4px;">#3mpwrApp</code> helps grow our community.</p>
+  <p style="margin: 0; color: var(--text-secondary);">Every use of <code style="background: var(--bg-tertiary); padding: 2px 8px; border-radius: 4px;">#3mpwrApp</code> helps grow our community.</p>
 </div>
 
 {%- include page-feedback.html -%}
