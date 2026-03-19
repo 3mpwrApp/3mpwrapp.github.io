@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-03-19
 
-Curated 7 items from disability, accessibility, and social policy sources.
+Curated 5 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -21,33 +21,23 @@ Visit for the latest disability rights news, advocacy updates, and community sto
 
 ## Additional Stories
 
-### 1. There is a lack of scrutiny on foreign ownership of Canada's natural resources
-Rabble.ca — progressive Canadian news
-[Source](https://rabble.ca/environment/there-is-a-lack-of-scrutiny-on-foreign-ownership-of-canadas-natural-resources/)
-**Score:** 11.50
+### 1. Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73138)
+**Score:** 16.50
 
-### 2. Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche
-The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres.
-[Source](https://thetyee.ca/News/2026/03/19/Accusations-Fly-Newly-Surfaced-Legal-Fight-Sam-Mraiche/)
-**Score:** 9.00
+### 2. Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73139)
+**Score:** 10.50
 
-### 3. BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes
-Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill.
-[Source](https://thetyee.ca/News/2026/03/19/BC-Watchdog-Freedom-Information-Changes/)
-**Score:** 7.00
-
-### 4. BC Has Revealed How It Hopes To Fast-track Some Mines
-Critics fear the changes would limit public and Indigenous input and increase environmental risks.
-[Source](https://thetyee.ca/News/2026/03/18/BC-Plan-Fast-Track-Environmental-Assessments/)
-**Score:** 4.50
-
-### 5. The Real Reason the UCP Is Expanding Private School Funding
-Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP.
-[Source](https://thetyee.ca/Opinion/2026/03/17/Real-Reason-UCP-Expanding-Private-School-Funding/)
+### 3. This Dockworker Uses AI to Hold Bosses Accountable
+Longshoreman Veetesh Rup struggled with complicated time cards for years. So he built a program to help.
+[Source](https://thetyee.ca/News/2026/03/13/Dockworker-Uses-AI-Hold-Bosses-Accountable/)
 **Score:** 3.60
 
-### 6. Measles Update #89
+### 4. Measles Update #90
 Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73137)
+[Source](https://news.gov.mb.ca/news/index.html?item=73140)
 **Score:** 4.50
 

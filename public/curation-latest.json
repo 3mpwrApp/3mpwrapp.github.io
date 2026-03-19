@@ -1,7 +1,7 @@
 {
   "date": "2026-03-19",
-  "timestamp": "2026-03-19T09:48:37.848Z",
-  "count": 7,
+  "timestamp": "2026-03-19T21:43:05.132Z",
+  "count": 5,
   "minScore": 3.5,
   "items": [
     {
@@ -9,49 +9,35 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-03-19T09:48:37.845Z"
+      "pubDate": "2026-03-19T21:43:05.129Z"
     },
     {
-      "title": "There is a lack of scrutiny on foreign ownership of Canada's natural resources",
-      "link": "https://rabble.ca/environment/there-is-a-lack-of-scrutiny-on-foreign-ownership-of-canadas-natural-resources/",
+      "title": "Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73138",
       "description": "",
-      "score": 11.5,
-      "pubDate": "Wed, 18 Mar 2026 20:39:09 +0000"
+      "score": 16.5,
+      "pubDate": "Thu, 19 Mar 2026 10:10:00 CDT"
     },
     {
-      "title": "Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche",
-      "link": "https://thetyee.ca/News/2026/03/19/Accusations-Fly-Newly-Surfaced-Legal-Fight-Sam-Mraiche/",
-      "description": "The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres.",
-      "score": 9,
-      "pubDate": "Thu, 19 Mar 2026 07:40:00 +0000"
+      "title": "Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73139",
+      "description": "",
+      "score": 10.5,
+      "pubDate": "Thu, 19 Mar 2026 12:00:00 CDT"
     },
     {
-      "title": "BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes",
-      "link": "https://thetyee.ca/News/2026/03/19/BC-Watchdog-Freedom-Information-Changes/",
-      "description": "Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill.",
-      "score": 7,
-      "pubDate": "Thu, 19 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "BC Has Revealed How It Hopes To Fast-track Some Mines",
-      "link": "https://thetyee.ca/News/2026/03/18/BC-Plan-Fast-Track-Environmental-Assessments/",
-      "description": "Critics fear the changes would limit public and Indigenous input and increase environmental risks.",
-      "score": 4.5,
-      "pubDate": "Wed, 18 Mar 2026 07:10:00 +0000"
-    },
-    {
-      "title": "The Real Reason the UCP Is Expanding Private School Funding",
-      "link": "https://thetyee.ca/Opinion/2026/03/17/Real-Reason-UCP-Expanding-Private-School-Funding/",
-      "description": "Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP.",
+      "title": "This Dockworker Uses AI to Hold Bosses Accountable",
+      "link": "https://thetyee.ca/News/2026/03/13/Dockworker-Uses-AI-Hold-Bosses-Accountable/",
+      "description": "Longshoreman Veetesh Rup struggled with complicated time cards for years. So he built a program to help.",
       "score": 3.5999999999999996,
-      "pubDate": "Tue, 17 Mar 2026 07:30:00 +0000"
+      "pubDate": "Fri, 13 Mar 2026 07:20:00 +0000"
     },
     {
-      "title": "Measles Update #89",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73137",
+      "title": "Measles Update #90",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73140",
       "description": "",
       "score": 4.5,
-      "pubDate": "Wed, 18 Mar 2026 14:45:00 CDT"
+      "pubDate": "Thu, 19 Mar 2026 14:38:00 CDT"
     }
   ]
 }

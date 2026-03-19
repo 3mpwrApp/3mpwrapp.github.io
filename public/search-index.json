@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
   "generated": "2026-03-19",
-  "totalDocuments": 420,
+  "totalDocuments": 421,
   "documents": [
     {
       "id": "blog/2026-03-19-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-03-19",
-      "excerpt": "Daily News Curation - 2026-03-19 Curated 7 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
-      "content": "Daily News Curation - 2026-03-19 Curated 7 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. There is a lack of scrutiny on foreign ownership of Canada's natural resources Rabble.ca — progressive Canadian news Source Score: 11.50 2. Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres. Source Score: 9.00 3. BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill. Source Score: 7.00 4. BC Has Revealed How It Hopes To Fast-track Some Mines Critics fear the changes would limit public and Indigenous input and increase environmental risks. Source Score: 4.50 5. The Real Reason the UCP Is Expanding Private School Funding Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP. Source Score: 3.60 6. Measles Update #89 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-19 Curated 5 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-19 Curated 5 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program Government of Manitoba press release Source Score: 16.50 2. Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood Government of Manitoba press release Source Score: 10.50 3. This Dockworker Uses AI to Hold Bosses Accountable Longshoreman Veetesh Rup struggled with complicated time cards for years. So he built a program to help. Source Score: 3.60 4. Measles Update #90 Government of Manitoba press release Source Score: 4.50",
       "date": "2026-03-19",
       "tags": [
         "highlights"
@@ -18,7 +18,26 @@
         "news"
       ],
       "url": "/2026-03-19-daily-curation",
-      "filesize": 1284
+      "filesize": 852
+    },
+    {
+      "id": "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "source": "blog",
+      "title": "Dev Update: What's Been Happening in 3mpwrApp",
+      "excerpt": "Dev Update: What's Been Happening in 3mpwrApp We believe in building in public. Here's a look at what our team has been working on recently, straight from our development history. --- âœ¨ New & Improv",
+      "content": "Dev Update: What's Been Happening in 3mpwrApp We believe in building in public. Here's a look at what our team has been working on recently, straight from our development history. --- âœ¨ New & Improved - Daily curation 2026-03-19 - automated content aggregation - Daily content article - 2026-03-18 - Daily curation 2026-03-18 - automated content aggregation - Add Option 1 as official theme song winner on homepage - Update homepage - show Option 1 as community vote winner, replace 'See the App in Action' screenshots with latest app tour images - Complete visual refresh with 172 new screenshots ðŸ”§ Fixes & Polish - Remove game background images (Ascendant Continuum) - Update URLs from backup domain (github.io) to primary domain (pages.dev) âš™ï¸ Under the Hood - Update trending keywords - 2026-03-19 06:44 UTC - 🧠 Social intelligence update - 2026-03-19 03:27 UTC - Update trending keywords - 2026-03-19 01:14 UTC --- Why We Build in Public Transparency is a core operating principle at 3mpwrApp. The community we serve has been let down by opaque institutions â€” we want to be the structural opposite of that. This means sharing our development process openly, explaining what we're working on and why, and being honest when things take longer than expected. --- Stay Connected - â­ Follow our development on GitHub - ðŸ“¬ Subscribe to updates - ðŸ’¬ Join the community - ðŸ§ª Join the beta program",
+      "date": "2026-03-19 00:00:00 +0000",
+      "tags": [
+        "dev-update",
+        "changelog",
+        "development",
+        "transparency"
+      ],
+      "categories": [
+        "updates"
+      ],
+      "url": "/2026-03-19-dev-update-dev-update-2026-03-19",
+      "filesize": 1413
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -1536,13 +1555,13 @@
       "id": "curation/2026-03-19-curated.md",
       "source": "curation",
       "title": "2026-03-19-curated.md",
-      "excerpt": "Daily News Curation - 2026-03-19 Curated 7 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
-      "content": "Daily News Curation - 2026-03-19 Curated 7 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. There is a lack of scrutiny on foreign ownership of Canada's natural resources Rabble.ca — progressive Canadian news Source Score: 11.50 2. Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres. Source Score: 9.00 3. BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill. Source Score: 7.00 4. BC Has Revealed How It Hopes To Fast-track Some Mines Critics fear the changes would limit public and Indigenous input and increase environmental risks. Source Score: 4.50 5. The Real Reason the UCP Is Expanding Private School Funding Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP. Source Score: 3.60 6. Measles Update #89 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-19 Curated 5 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-19 Curated 5 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program Government of Manitoba press release Source Score: 16.50 2. Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood Government of Manitoba press release Source Score: 10.50 3. This Dockworker Uses AI to Hold Bosses Accountable Longshoreman Veetesh Rup struggled with complicated time cards for years. So he built a program to help. Source Score: 3.60 4. Measles Update #90 Government of Manitoba press release Source Score: 4.50",
       "date": "2026-03-19",
       "tags": [],
       "categories": [],
       "url": "/2026-03-19-curated",
-      "filesize": 1284
+      "filesize": 852
     },
     {
       "id": "curation/README.md",
@@ -7045,6 +7064,38 @@
     "2026-03-19": [
       "blog/2026-03-19-daily-curation.md"
     ],
+    "dev": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "update:": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "what's": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "been": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "happening": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "in": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "3mpwrapp": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-12-demo-success-usa-lite-launch.md",
+      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-07-feature-spotlight-production-release.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
+    ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"
     ],
@@ -7668,16 +7719,6 @@
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md",
       "blog/2025-10-27-app-vs-website-comparison.md"
     ],
-    "3mpwrapp": [
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-07-feature-spotlight-production-release.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
-    ],
     "was": [
       "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
     ],
@@ -7764,10 +7805,6 @@
     "building": [
       "blog/2026-03-16-weekly-update-week-12.md"
     ],
-    "in": [
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "whatsnew/2025-10-14-curator-language-json-api.md"
-    ],
     "open": [
       "blog/2026-03-16-weekly-update-week-12.md"
     ],
@@ -7830,9 +7867,6 @@
     ],
     "2026-03-15": [
       "blog/2026-03-15-daily-curation.md"
-    ],
-    "dev": [
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "diary:": [
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
@@ -9498,6 +9532,20 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
     ],
+    "dev-update": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "changelog": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "development": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "transparency": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md"
+    ],
     "features": [
       "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
       "blog/2026-03-16-feature-spotlight-disability-wizard.md",
@@ -9760,18 +9808,12 @@
       "blog/2025-10-27-weekly-update-week-44.md",
       "blog/2025-10-21-weekly-update-week-43.md"
     ],
-    "transparency": [
-      "blog/2026-03-16-weekly-update-week-12.md"
-    ],
     "phase-2:-personalization": [
       "blog/2026-03-16-feature-spotlight-disability-wizard.md",
       "blog/2025-12-15-feature-spotlight-disability-wizard.md",
       "blog/2025-11-01-feature-spotlight-disability-wizard.md"
     ],
     "dev-diary": [
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "development": [
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "behind-the-scenes": [
@@ -10287,6 +10329,32 @@
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
+    "updates": [
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-12-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
     "features": [
       "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
       "blog/2026-03-16-feature-spotlight-disability-wizard.md",
@@ -10395,31 +10463,6 @@
     "community": [
       "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
       "blog/2025-10-17-weekly-recap.md"
-    ],
-    "updates": [
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md"
     ],
     "dev-diary": [
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
