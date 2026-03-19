@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-19T01:14:30.439Z",
+  "lastUpdated": "2026-03-19T06:44:19.613Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 13150,
+      "totalPosts": 13175,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T01:14:24.078Z"
+      "lastSeen": "2026-03-19T06:44:13.474Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 13086,
+      "totalPosts": 13111,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T01:14:25.447Z"
+      "lastSeen": "2026-03-19T06:44:14.814Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 12956,
+      "totalPosts": 12977,
       "recentPosts": 21,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T01:14:26.657Z"
+      "lastSeen": "2026-03-19T06:44:16.132Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 13185,
+      "totalPosts": 13210,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T01:14:28.084Z"
+      "lastSeen": "2026-03-19T06:44:17.430Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 13180,
+      "totalPosts": 13204,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T01:14:29.436Z"
+      "lastSeen": "2026-03-19T06:44:18.610Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
-      "author": "smithbrainz.bsky.social",
-      "engagement": 86,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
-      "author": "riversofreflection.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I’m definitely cozy in bed right now while it’s snowing outside ❄️ 🛌 \nAnd I was also cozy in bed yesterday when it was 80℉ 😅🙃\n\n#DisabilityJustice #GoodOmens #RainbowTextPosts\n#GoodOmemes",
-      "author": "rainbowhyperfixate.bsky.social",
-      "engagement": 34,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
       "author": "emilyrj.bsky.social",
@@ -283,6 +253,36 @@
       "text": "👀 Greyed out submit buttons (conditional upon successful form completion)\n\n#a11y #WCAG \n\ngithub.com/w3c/wcag/iss...",
       "author": "stevefaulkner.bsky.social",
       "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "The Accessibility Conformance Testing (ACT) Task Force has published its rules, letting you filter automated rules:\nwww.w3.org/WAI/standard...\n\nIt’s only partial coverage of 31% of SCs:\nadrianroselli.com/2025/04/auto...\n\nAutomation is good, but limited. Understand those limits.\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 22,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Please join the Democrats Abroad Disability/Seniors/Military Caucuses, for a look at the dynamics of voter engagement by people with disabilities in the 2024 elections.\nSeptember 8 at 12pm ET\nwww.democratsabroad.org/disability_v...\n#cripthevote #disabilityawareness",
+      "author": "demsabroadcanada.bsky.social",
+      "engagement": 14,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "There's a rally protesting this in Yeg in a few days. Historically, very few abled people show up to these, so if that's you and you can, PLEASE do.\nThe UCP still does respond to pressure so let's bring the outrage!\n#aish #abpoli #ableg #disability #canpoli #canada #turtleisland #yeg #cripthevote",
+      "author": "saltntights.bsky.social",
+      "engagement": 17,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "I have lived 8 years with MS and have no new lesions thanks to Dr. Bove and my health care team. #mswarrior #cripthevote",
+      "author": "marniemix.bsky.social",
+      "engagement": 12,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "👀 Greyed out submit buttons (conditional upon successful form completion)\n\n#a11y #WCAG \n\ngithub.com/w3c/wcag/iss...",
+      "author": "stevefaulkner.bsky.social",
+      "engagement": 12,
       "hashtag": "A11y"
     },
     {
