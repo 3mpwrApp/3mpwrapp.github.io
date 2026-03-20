@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-19T18:41:41.127Z",
+  "lastUpdated": "2026-03-20T01:10:08.288Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 13225,
+      "totalPosts": 13250,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T18:41:30.039Z"
+      "lastSeen": "2026-03-20T01:09:56.498Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 13161,
+      "totalPosts": 13186,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T18:41:32.623Z"
+      "lastSeen": "2026-03-20T01:09:59.111Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 13025,
+      "totalPosts": 13050,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T18:41:35.069Z"
+      "lastSeen": "2026-03-20T01:10:01.902Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 13260,
+      "totalPosts": 13285,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T18:41:37.711Z"
+      "lastSeen": "2026-03-20T01:10:04.855Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 13252,
+      "totalPosts": 13276,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-19T18:41:40.125Z"
+      "lastSeen": "2026-03-20T01:10:07.285Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
-      "author": "smithbrainz.bsky.social",
-      "engagement": 86,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
-      "author": "riversofreflection.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "The Accessibility Conformance Testing (ACT) Task Force has published its rules, letting you filter automated rules:\nwww.w3.org/WAI/standard...\n\nIt’s only partial coverage of 31% of SCs:\nadrianroselli.com/2025/04/auto...\n\nAutomation is good, but limited. Understand those limits.\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 17,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "The Accessibility Conformance Testing (ACT) Task Force has published its rules, letting you filter automated rules:\nwww.w3.org/WAI/standard...\n\nIt’s only partial coverage of 31% of SCs:\nadrianroselli.com/2025/04/auto...\n\nAutomation is good, but limited. Understand those limits.\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
     {
       "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
       "author": "caseydoherty.bsky.social",
@@ -338,28 +314,52 @@
       "author": "emilyrj.bsky.social",
       "engagement": 22,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Rene schaar hat Stellungnahmen von NGOs auf seiner Homepage verlinkt und viele gute Infos zum #BGG #Behindertengleichstellungsgesetz dass eher ein Gesez ist, das uns behindert!!!\n#FightAbleism #DisabilityJustice now! #DisabilityRights",
+      "author": "fight-ableism.bsky.social",
+      "engagement": 20,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 43
+      "count": 42
     },
     {
       "keyword": "accessibility",
-      "count": 39
+      "count": 40
     },
     {
       "keyword": "a11y",
       "count": 28
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 25
-    },
-    {
       "keyword": "cripthevote",
       "count": 24
+    },
+    {
+      "keyword": "disabilityjustice",
+      "count": 23
     },
     {
       "keyword": "altcitizen",
@@ -386,10 +386,6 @@
       "count": 9
     },
     {
-      "keyword": "cripminds",
-      "count": 8
-    },
-    {
       "keyword": "stoptheliesfox",
       "count": 8
     },
@@ -398,8 +394,8 @@
       "count": 8
     },
     {
-      "keyword": "a11y accessibility",
-      "count": 6
+      "keyword": "cripminds",
+      "count": 7
     },
     {
       "keyword": "refusefascism",
@@ -419,6 +415,10 @@
     },
     {
       "keyword": "ai",
+      "count": 5
+    },
+    {
+      "keyword": "inclusivedesign",
       "count": 5
     }
   ]
