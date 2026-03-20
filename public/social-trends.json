@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-20T06:41:10.604Z",
+  "lastUpdated": "2026-03-20T12:34:37.574Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 13275,
+      "totalPosts": 13300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T06:41:01.582Z"
+      "lastSeen": "2026-03-20T12:34:27.446Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 13211,
+      "totalPosts": 13236,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T06:41:03.525Z"
+      "lastSeen": "2026-03-20T12:34:29.703Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 13075,
+      "totalPosts": 13100,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T06:41:05.495Z"
+      "lastSeen": "2026-03-20T12:34:32.154Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 13310,
+      "totalPosts": 13335,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T06:41:07.500Z"
+      "lastSeen": "2026-03-20T12:34:34.193Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 13300,
+      "totalPosts": 13324,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T06:41:09.599Z"
+      "lastSeen": "2026-03-20T12:34:36.570Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "It’s neurodiversity awareness week so I thought I would publish a confession. \n\nMaybe it’s time we start retiring some of these?\n\n#LanguageMatters #DisabilityRights #Ableism #InclusiveLanguage #Neurodiversity",
-      "author": "nonbinarybarrister.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Rene schaar hat Stellungnahmen von NGOs auf seiner Homepage verlinkt und viele gute Infos zum #BGG #Behindertengleichstellungsgesetz dass eher ein Gesez ist, das uns behindert!!!\n#FightAbleism #DisabilityJustice now! #DisabilityRights",
-      "author": "fight-ableism.bsky.social",
-      "engagement": 20,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "It takes relatively little disability to make the rest of the world consider you “disposable.” They won’t say it out loud, but their actions are clear. #DisabilityJustice #LongCovid",
-      "author": "smithbrainz.bsky.social",
-      "engagement": 86,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Disabled people, autistic people, and outsiders have always been forced to see systems differently.\nThat perspective isn’t a weakness.\nIt’s a strategic advantage in a world being rebuilt by technology.\nYes, I’m betting on weird thinkers. 🌱\n#DisabilityJustice",
-      "author": "riversofreflection.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "The Accessibility Conformance Testing (ACT) Task Force has published its rules, letting you filter automated rules:\nwww.w3.org/WAI/standard...\n\nIt’s only partial coverage of 31% of SCs:\nadrianroselli.com/2025/04/auto...\n\nAutomation is good, but limited. Understand those limits.\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 17,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "The Accessibility Conformance Testing (ACT) Task Force has published its rules, letting you filter automated rules:\nwww.w3.org/WAI/standard...\n\nIt’s only partial coverage of 31% of SCs:\nadrianroselli.com/2025/04/auto...\n\nAutomation is good, but limited. Understand those limits.\n\n#accessibility #a11y",
       "author": "aardrian.bsky.social",
@@ -338,6 +308,36 @@
       "author": "emilyrj.bsky.social",
       "engagement": 22,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Rene schaar hat Stellungnahmen von NGOs auf seiner Homepage verlinkt und viele gute Infos zum #BGG #Behindertengleichstellungsgesetz dass eher ein Gesez ist, das uns behindert!!!\n#FightAbleism #DisabilityJustice now! #DisabilityRights",
+      "author": "fight-ableism.bsky.social",
+      "engagement": 20,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "As a migraine sufferer myself, I knew my game would need a photosensitivity mode setting. All the game's colorful / noisy / flickering effects are disabled when the mode is on. #godot #indiedev #accessibility #ux #indiegamedev #gamedev #feedbackfriday",
+      "author": "manabreak.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,19 +347,19 @@
     },
     {
       "keyword": "accessibility",
-      "count": 40
+      "count": 39
     },
     {
       "keyword": "a11y",
-      "count": 26
+      "count": 25
+    },
+    {
+      "keyword": "disabilityjustice",
+      "count": 24
     },
     {
       "keyword": "cripthevote",
       "count": 24
-    },
-    {
-      "keyword": "disabilityjustice",
-      "count": 23
     },
     {
       "keyword": "altcitizen",
@@ -378,6 +378,10 @@
       "count": 14
     },
     {
+      "keyword": "cripminds",
+      "count": 9
+    },
+    {
       "keyword": "foxtakedown",
       "count": 9
     },
@@ -392,10 +396,6 @@
     {
       "keyword": "foxlies",
       "count": 8
-    },
-    {
-      "keyword": "cripminds",
-      "count": 7
     },
     {
       "keyword": "refusefascism",
@@ -414,11 +414,11 @@
       "count": 6
     },
     {
-      "keyword": "inclusivedesign",
+      "keyword": "disabilitysky",
       "count": 5
     },
     {
-      "keyword": "disabilityrebellion refusefascism",
+      "keyword": "accessibility disabilitysky",
       "count": 5
     }
   ]
