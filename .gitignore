@@ -97,3 +97,5 @@ accessibility-audit-*.json
 accessibility-audit-*.html
 accessibility-reports-*/
 *.report.html
+
+accessibility-audit-*.json
