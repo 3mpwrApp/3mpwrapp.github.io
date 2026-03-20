@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-19T03:27:14.308Z",
+  "lastUpdated": "2026-03-20T03:16:53.425Z",
   "hashtags": {},
   "combinations": {},
   "abTests": [],
@@ -10,9 +10,9 @@
       "priority": "high",
       "action": "Test these trending hashtags in next posts",
       "hashtags": [
-        "a11y",
         "disabilityrights",
-        "accessibility"
+        "accessibility",
+        "a11y"
       ],
       "expectedImpact": "Increased reach"
     }
@@ -21,28 +21,28 @@
   "lowPerformers": [],
   "currentTrending": [
     {
-      "tag": "a11y",
-      "mentions": 39,
-      "source": "emerging"
-    },
-    {
       "tag": "disabilityrights",
-      "mentions": 26,
+      "mentions": 42,
       "source": "emerging"
     },
     {
       "tag": "accessibility",
-      "mentions": 26,
+      "mentions": 40,
       "source": "emerging"
     },
     {
-      "tag": "disabilityjustice",
-      "mentions": 25,
+      "tag": "a11y",
+      "mentions": 28,
       "source": "emerging"
     },
     {
       "tag": "cripthevote",
       "mentions": 24,
+      "source": "emerging"
+    },
+    {
+      "tag": "disabilityjustice",
+      "mentions": 23,
       "source": "emerging"
     }
   ],
