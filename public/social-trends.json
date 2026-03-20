@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-20T01:10:08.288Z",
+  "lastUpdated": "2026-03-20T06:41:10.604Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 13250,
+      "totalPosts": 13275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T01:09:56.498Z"
+      "lastSeen": "2026-03-20T06:41:01.582Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 13186,
+      "totalPosts": 13211,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T01:09:59.111Z"
+      "lastSeen": "2026-03-20T06:41:03.525Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 13050,
+      "totalPosts": 13075,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T01:10:01.902Z"
+      "lastSeen": "2026-03-20T06:41:05.495Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 13285,
+      "totalPosts": 13310,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T01:10:04.855Z"
+      "lastSeen": "2026-03-20T06:41:07.500Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 13276,
+      "totalPosts": 13300,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-20T01:10:07.285Z"
+      "lastSeen": "2026-03-20T06:41:09.599Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
-      "author": "emilyrj.bsky.social",
-      "engagement": 22,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Framing hashtags as the source of unqualified analysis frustrates me greatly when hashtags like #CripTheVote and #NEISVoid have been so essential at forming disability communities online. Anyways.",
-      "author": "juliametraux.bsky.social",
-      "engagement": 30,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Rene schaar hat Stellungnahmen von NGOs auf seiner Homepage verlinkt und viele gute Infos zum #BGG #Behindertengleichstellungsgesetz dass eher ein Gesez ist, das uns behindert!!!\n#FightAbleism #DisabilityJustice now! #DisabilityRights",
-      "author": "fight-ableism.bsky.social",
-      "engagement": 20,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "It’s neurodiversity awareness week so I thought I would publish a confession. \n\nMaybe it’s time we start retiring some of these?\n\n#LanguageMatters #DisabilityRights #Ableism #InclusiveLanguage #Neurodiversity",
       "author": "nonbinarybarrister.bsky.social",
@@ -338,6 +314,30 @@
       "author": "emilyrj.bsky.social",
       "engagement": 22,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Rene schaar hat Stellungnahmen von NGOs auf seiner Homepage verlinkt und viele gute Infos zum #BGG #Behindertengleichstellungsgesetz dass eher ein Gesez ist, das uns behindert!!!\n#FightAbleism #DisabilityJustice now! #DisabilityRights",
+      "author": "fight-ableism.bsky.social",
+      "engagement": 20,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 28
+      "count": 26
     },
     {
       "keyword": "cripthevote",
@@ -414,11 +414,11 @@
       "count": 6
     },
     {
-      "keyword": "ai",
+      "keyword": "inclusivedesign",
       "count": 5
     },
     {
-      "keyword": "inclusivedesign",
+      "keyword": "disabilityrebellion refusefascism",
       "count": 5
     }
   ]
