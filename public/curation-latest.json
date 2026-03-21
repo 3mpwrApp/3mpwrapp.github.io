@@ -1,78 +1,15 @@
 {
   "date": "2026-03-21",
-  "timestamp": "2026-03-21T09:35:08.356Z",
-  "count": 10,
+  "timestamp": "2026-03-21T21:32:28.331Z",
+  "count": 1,
   "minScore": 3.5,
   "items": [
     {
       "title": "The Disability Bulletin",
       "link": "https://linktr.ee/thedisabilitybulletin",
-      "description": "The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.",
+      "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-03-21T09:35:08.353Z"
-    },
-    {
-      "title": "There is a lack of scrutiny on foreign ownership of Canada's natural resources",
-      "link": "https://rabble.ca/environment/there-is-a-lack-of-scrutiny-on-foreign-ownership-of-canadas-natural-resources/",
-      "description": "",
-      "score": 11.5,
-      "pubDate": "Wed, 18 Mar 2026 20:39:09 +0000"
-    },
-    {
-      "title": "Australian Mining Billionaire Sues Canada for $2 Billion",
-      "link": "https://thetyee.ca/News/2026/03/20/Australian-Mining-Billionaire-Sues-Canada/",
-      "description": "Gina Rinehart’s Northback demands feds pay for finding the Grassy Mountain project too toxic to proceed.",
-      "score": 10.5,
-      "pubDate": "Fri, 20 Mar 2026 07:10:00 +0000"
-    },
-    {
-      "title": "Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche",
-      "link": "https://thetyee.ca/News/2026/03/19/Accusations-Fly-Newly-Surfaced-Legal-Fight-Sam-Mraiche/",
-      "description": "The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres.",
-      "score": 9.3,
-      "pubDate": "Thu, 19 Mar 2026 07:40:00 +0000"
-    },
-    {
-      "title": "BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes",
-      "link": "https://thetyee.ca/News/2026/03/19/BC-Watchdog-Freedom-Information-Changes/",
-      "description": "Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill.",
-      "score": 7,
-      "pubDate": "Thu, 19 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "Computers Came for Our Jobs Before. How Will AI?",
-      "link": "https://thetyee.ca/News/2026/03/20/Computers-Came-Jobs-Before-How-Will-AI/",
-      "description": "Sky News UK tech correspondent Rowland Manthorpe on what the last wave of automation can teach us about the next. A Tyee Q&A.",
-      "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 07:40:00 +0000"
-    },
-    {
-      "title": "Public Transit Expansion Plans Shelved Across BC",
-      "link": "https://thetyee.ca/News/2026/03/20/Public-Transit-Expansion-Plans-Shelved-BC/",
-      "description": "As BC tightens its belt, plans to boost bus routes in mid-sized cities and rural areas are taking a hit.",
-      "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "BC Has Revealed How It Hopes To Fast-track Some Mines",
-      "link": "https://thetyee.ca/News/2026/03/18/BC-Plan-Fast-Track-Environmental-Assessments/",
-      "description": "Critics fear the changes would limit public and Indigenous input and increase environmental risks.",
-      "score": 4.5,
-      "pubDate": "Wed, 18 Mar 2026 07:10:00 +0000"
-    },
-    {
-      "title": "The Real Reason the UCP Is Expanding Private School Funding",
-      "link": "https://thetyee.ca/Opinion/2026/03/17/Real-Reason-UCP-Expanding-Private-School-Funding/",
-      "description": "Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP.",
-      "score": 3.9000000000000004,
-      "pubDate": "Tue, 17 Mar 2026 07:30:00 +0000"
-    },
-    {
-      "title": "Measles Update #89",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73137",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Wed, 18 Mar 2026 14:45:00 CDT"
+      "pubDate": "2026-03-21T21:32:28.329Z"
     }
   ]
 }

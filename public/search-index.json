@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
   "generated": "2026-03-21",
-  "totalDocuments": 426,
+  "totalDocuments": 427,
   "documents": [
     {
       "id": "blog/2026-03-21-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-03-21",
-      "excerpt": "Daily News Curation - 2026-03-21 Curated 10 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers",
-      "content": "Daily News Curation - 2026-03-21 Curated 10 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue. 📍 Read More --- Additional Stories 1. There is a lack of scrutiny on foreign ownership of Canada's natural resources Rabble.ca — progressive Canadian news Source Score: 11.50 2. Australian Mining Billionaire Sues Canada for $2 Billion Gina Rinehart’s Northback demands feds pay for finding the Grassy Mountain project too toxic to proceed. Source Score: 10.50 3. Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres. Source Score: 9.30 4. BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill. Source Score: 7.00 5. Computers Came for Our Jobs Before. How Will AI? Sky News UK tech correspondent Rowland Manthorpe on what the last wave of automation can teach us about the next. A Tyee Q&A. Source Score: 4.50 6. Public Transit Expansion Plans Shelved Across BC As BC tightens its belt, plans to boost bus routes in mid-sized cities and rural areas are taking a hit. Source Score: 4.50 7. BC Has Revealed How It Hopes To Fast-track Some Mines Critics fear the changes would limit public and Indigenous input and increase environmental risks. Source Score: 4.50 8. The Real Reason the UCP Is Expanding Private School Funding Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP. Source Score: 3.90 9. Measles Update #89 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-21 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-21 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More ---",
       "date": "2026-03-21",
       "tags": [
         "highlights"
@@ -18,7 +18,26 @@
         "news"
       ],
       "url": "/2026-03-21-daily-curation",
-      "filesize": 1881
+      "filesize": 290
+    },
+    {
+      "id": "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "source": "blog",
+      "title": "Setting Up Accessibility for Your Needs",
+      "excerpt": "Setting Up Accessibility for Your Needs A practical guide from the 3mpwrApp team. --- 3mpwrApp was built accessibility-first. Every feature was designed with the full range of disability experiences i",
+      "content": "Setting Up Accessibility for Your Needs A practical guide from the 3mpwrApp team. --- 3mpwrApp was built accessibility-first. Every feature was designed with the full range of disability experiences in mind â€” not retrofitted after launch. Our settings are deeply granular because \"accessibility\" is not one thing. Someone with ADHD has different needs than someone with low vision, who has different needs than someone with motor disabilities. You should be able to configure the app to match your actual situation. Everything you configure saves automatically. Switch between Simple Mode and full mode as many times as you need â€” your settings always come back to where you left them. --- What You'll Learn - Dyslexia-friendly fonts reduce visual confusion for dense text - High contrast mode supports low vision and photosensitivity - Screen reader optimization works with VoiceOver and TalkBack natively - Simple Mode reduces the app to 5 core features on bad health days - Motor accessibility reduces required gesture precision across the whole app --- Step by Step Step 1: Enable Simple Mode during a flare to avoid cognitive overwhelm Step 2: Turn on Dyslexia Support to apply the accessible font throughout the entire app Step 3: Use Switch Access compatibility for single-button navigation on Android Step 4: Set font size to Maximum or increase button target sizes for motor accessibility --- Key Takeaways - Accessibility is not a feature â€” it is the foundation everything else is built on - No two disabilities are the same; your settings should reflect your actual situation - All accessibility preferences persist across sessions â€” you configure once --- Ready to Try It? 1. Download 3mpwrApp â€” 3mpwrapp.pages.dev 2. Sign up or explore as guest â€” no commitment needed 3. Find this feature â€” search or browse main navigation --- About 3mpwrApp 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada. - ðŸ“– Full User Guide - ðŸ§ª Join the Beta - ðŸ’¬ Community Forums",
+      "date": "2026-03-21 00:00:00 +0000",
+      "tags": [
+        "tutorial",
+        "how-to",
+        "accessibility",
+        "tutorial"
+      ],
+      "categories": [
+        "tutorials"
+      ],
+      "url": "/2026-03-21-tutorial-setting-up-accessibility-for-your-needs",
+      "filesize": 2050
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -1560,13 +1579,13 @@
       "id": "curation/2026-03-21-curated.md",
       "source": "curation",
       "title": "2026-03-21-curated.md",
-      "excerpt": "Daily News Curation - 2026-03-21 Curated 10 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers",
-      "content": "Daily News Curation - 2026-03-21 Curated 10 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue. 📍 Read More --- Additional Stories 1. There is a lack of scrutiny on foreign ownership of Canada's natural resources Rabble.ca — progressive Canadian news Source Score: 11.50 2. Australian Mining Billionaire Sues Canada for $2 Billion Gina Rinehart’s Northback demands feds pay for finding the Grassy Mountain project too toxic to proceed. Source Score: 10.50 3. Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres. Source Score: 9.30 4. BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill. Source Score: 7.00 5. Computers Came for Our Jobs Before. How Will AI? Sky News UK tech correspondent Rowland Manthorpe on what the last wave of automation can teach us about the next. A Tyee Q&A. Source Score: 4.50 6. Public Transit Expansion Plans Shelved Across BC As BC tightens its belt, plans to boost bus routes in mid-sized cities and rural areas are taking a hit. Source Score: 4.50 7. BC Has Revealed How It Hopes To Fast-track Some Mines Critics fear the changes would limit public and Indigenous input and increase environmental risks. Source Score: 4.50 8. The Real Reason the UCP Is Expanding Private School Funding Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP. Source Score: 3.90 9. Measles Update #89 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-21 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-21 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More ---",
       "date": "2026-03-21",
       "tags": [],
       "categories": [],
       "url": "/2026-03-21-curated",
-      "filesize": 1881
+      "filesize": 290
     },
     {
       "id": "curation/README.md",
@@ -7148,6 +7167,39 @@
     "2026-03-21": [
       "blog/2026-03-21-daily-curation.md"
     ],
+    "setting": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md"
+    ],
+    "up": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md"
+    ],
+    "accessibility": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "whatsnew/2025-10-27-major-performance-accessibility-upgrade.md",
+      "blog/2025-10-25-groundbreaking-website-accessibility-features.md",
+      "whatsnew/2025-10-05-languages-a11y-ga.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "for": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "your": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "needs": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
+    ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"
     ],
@@ -7995,17 +8047,6 @@
     "native:": [
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
-    "accessibility": [
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md",
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "whatsnew/2025-10-27-major-performance-accessibility-upgrade.md",
-      "blog/2025-10-25-groundbreaking-website-accessibility-features.md",
-      "whatsnew/2025-10-05-languages-a11y-ga.md",
-      "whatsnew/2025-10-03-accessibility-settings-consent.md"
-    ],
     "over": [
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
@@ -8307,11 +8348,6 @@
       "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
       "blog/2025-10-27-app-vs-website-comparison.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
-    ],
-    "for": [
-      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "whatsnew/2025-10-03-accessibility-settings-consent.md"
     ],
     "you": [
       "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
@@ -9221,10 +9257,6 @@
     "scrambling": [
       "blog/2025-10-24-feature-spotlight-evidence-locker.md"
     ],
-    "your": [
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
-    ],
     "medical": [
       "blog/2025-10-24-feature-spotlight-evidence-locker.md"
     ],
@@ -9267,9 +9299,6 @@
       "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
     ],
     "exactly": [
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
-    ],
-    "needs": [
       "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
     ],
     "be": [
@@ -9634,6 +9663,31 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
     ],
+    "tutorial": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
+    ],
+    "how-to": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
+    ],
+    "accessibility": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
+      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
+    ],
     "features": [
       "blog/2026-03-20-feature-spotlight-evidence-locker.md",
       "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
@@ -9944,27 +9998,6 @@
       "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md"
-    ],
-    "tutorial": [
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
-    ],
-    "how-to": [
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
-    ],
-    "accessibility": [
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
-      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
     ],
     "personalization": [
       "whatsnew/2026-02-02-personalization-complete.md"
@@ -10438,6 +10471,10 @@
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
+    "tutorials": [
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
+    ],
     "features": [
       "blog/2026-03-20-feature-spotlight-evidence-locker.md",
       "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
@@ -10576,9 +10613,6 @@
     ],
     "dev-diary": [
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "tutorials": [
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
     ],
     "founder-story": [
       "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md"
