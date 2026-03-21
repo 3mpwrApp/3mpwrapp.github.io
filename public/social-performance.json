@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-03-20T03:16:53.450Z",
+  "generated": "2026-03-21T03:08:31.781Z",
   "insights": {
-    "timestamp": "2026-03-20T03:16:53.419Z",
+    "timestamp": "2026-03-21T03:08:31.749Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-03-20T03:16:53.425Z",
+      "lastUpdated": "2026-03-21T03:08:31.756Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -44,17 +44,17 @@
         },
         {
           "tag": "accessibility",
-          "mentions": 40,
+          "mentions": 35,
           "source": "emerging"
         },
         {
           "tag": "a11y",
-          "mentions": 28,
+          "mentions": 26,
           "source": "emerging"
         },
         {
           "tag": "cripthevote",
-          "mentions": 24,
+          "mentions": 25,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-03-20T03:16:53.429Z",
+      "lastUpdated": "2026-03-21T03:08:31.759Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-03-20T03:16:53.425Z",
+    "lastUpdated": "2026-03-21T03:08:31.756Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -107,17 +107,17 @@
       },
       {
         "tag": "accessibility",
-        "mentions": 40,
+        "mentions": 35,
         "source": "emerging"
       },
       {
         "tag": "a11y",
-        "mentions": 28,
+        "mentions": 26,
         "source": "emerging"
       },
       {
         "tag": "cripthevote",
-        "mentions": 24,
+        "mentions": 25,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-03-20T03:16:53.429Z",
+    "lastUpdated": "2026-03-21T03:08:31.759Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
