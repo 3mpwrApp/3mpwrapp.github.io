@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-21T03:08:31.756Z",
+  "lastUpdated": "2026-03-22T03:26:25.640Z",
   "hashtags": {},
   "combinations": {},
   "abTests": [],
@@ -27,22 +27,22 @@
     },
     {
       "tag": "accessibility",
-      "mentions": 35,
+      "mentions": 36,
       "source": "emerging"
     },
     {
       "tag": "a11y",
-      "mentions": 26,
+      "mentions": 27,
       "source": "emerging"
     },
     {
       "tag": "cripthevote",
-      "mentions": 25,
+      "mentions": 26,
       "source": "emerging"
     },
     {
       "tag": "disabilityjustice",
-      "mentions": 23,
+      "mentions": 24,
       "source": "emerging"
     }
   ],
