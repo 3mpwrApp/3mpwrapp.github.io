@@ -1,14 +1,32 @@
 {
   "version": "1.0.0",
   "generated": "2026-03-23",
-  "totalDocuments": 432,
+  "totalDocuments": 435,
   "documents": [
+    {
+      "id": "blog/2026-03-23-weekly-update-week-13.md",
+      "source": "blog",
+      "title": "Week 13 — Building 3mpwrApp in the Open",
+      "excerpt": "I'm an injured worker who built 3mpwrApp because I fell through the cracks. Every week, I share what I'm building and why it matters to you. This is Week 13 of 2026—here's what happened: This Week's J",
+      "content": "I'm an injured worker who built 3mpwrApp because I fell through the cracks. Every week, I share what I'm building and why it matters to you. This is Week 13 of 2026—here's what happened: This Week's Journey I'm building 3mpwrApp in public—showing you every step, every decision, every improvement as they happen. This is Phase 1 of beta testing, where you're getting familiar with what I'm creating for our community. Here's what I shipped this week and why it matters to you: ✨ New Features 100% accessibility compliance - ALL pages legible in Light/Dark/High Contrast Why I built this: Because disability tech should work for EVERYONE. If you're using a screen reader or need high contrast, this app should serve you as well as anyone else. Accessibility-first color system - complete legibility in Light/Dark/High Contrast modes Why I built this: Because disability tech should work for EVERYONE. If you're using a screen reader or need high contrast, this app should serve you as well as anyone else. Add Option 1 as official theme song winner on homepage Why I built this: This makes 3mpwrApp more powerful for disability advocates, injured workers, and their families. Update homepage - show Option 1 as community vote winner, replace 'See the App in Action' screenshots with latest app tour images Why I built this: I'm building this to last. More tests mean fewer bugs, which means you can rely on this when it matters most. Complete visual refresh with 172 new screenshots Why I built this: This makes 3mpwrApp more powerful for disability advocates, injured workers, and their families. 🐛 Fixes I fixed these issues because they were getting in your way: - Remove game background images (Ascendant Continuum) - Update URLs from backup domain (github.io) to primary domain (pages.dev) 📚 Documentation Making 3mpwrApp easier to understand: - Complete accessibility mission report - 100% compliance achieved 🤖 Behind the Scenes These automation improvements make development faster so I can ship features to you sooner: - Trigger Cloudflare Pages rebuild --- What's Next I'm listening. If you're testing 3mpwrApp and something doesn't work, tell me. If you have ideas, share them. This app exists because I fell through the cracks—I'm building it so you don't have to. 📬 Get updates in your inbox 🔍 See all weekly updates 💬 Join the beta testing community",
+      "date": "2026-03-23 09:00:00 +0000",
+      "tags": [
+        "weekly",
+        "updates",
+        "transparency"
+      ],
+      "categories": [
+        "updates"
+      ],
+      "url": "/2026-03-23-weekly-update-week-13",
+      "filesize": 2368
+    },
     {
       "id": "blog/2026-03-23-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-03-23",
-      "excerpt": "Daily News Curation - 2026-03-23 Curated 12 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-03-23 Curated 12 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. There is a lack of scrutiny on foreign ownership of Canada's natural resources Rabble.ca — progressive Canadian news Source Score: 11.70 2. Carney’s ‘Defeatist’ Dismissal of International Law The PM’s doctrine stresses ‘taking the world as it is.’ Critics say it poses ‘reckless’ risk for Canada. Source Score: 10.50 3. Australian Mining Billionaire Sues Canada for $2 Billion Gina Rinehart’s Northback demands feds pay for finding the Grassy Mountain project too toxic to proceed. Source Score: 10.50 4. Mount Cashel’s Continuing Saga of Abuse and Conspiracy Efforts to hide orphanage horrors in Newfoundland resonate 50 years after in a $30-million BC lawsuit. Source Score: 6.00 5. Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres. Source Score: 9.90 6. BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill. Source Score: 7.20 7. Computers Came for Our Jobs Before. How Will AI? Sky News UK tech correspondent Rowland Manthorpe on what the last wave of automation can teach us about the next. A Tyee Q&A. Source Score: 4.50 8. Public Transit Expansion Plans Shelved Across BC As BC tightens its belt, plans to boost bus routes in mid-sized cities and rural areas are taking a hit. Source Score: 4.50 9. BC Has Revealed How It Hopes To Fast-track Some Mines Critics fear the changes would limit public and Indigenous input and increase environmental risks. Source Score: 4.50 10. The Real Reason the UCP Is Expanding Private School Funding Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP. Source Score: 4.50 11. Measles Update #89 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-23 Curated 3 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-23 Curated 3 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Mourns Passing of MLA Amanda Lathlin Government of Manitoba press release Source Score: 7.50 2. Measles Update #92 Government of Manitoba press release Source Score: 4.50",
       "date": "2026-03-23",
       "tags": [
         "highlights"
@@ -18,7 +36,25 @@
         "news"
       ],
       "url": "/2026-03-23-daily-curation",
-      "filesize": 2205
+      "filesize": 503
+    },
+    {
+      "id": "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
+      "source": "blog",
+      "title": "Dev Diary: Building Offline-First: Network Access Should Never Be Required",
+      "excerpt": "Dev Diary: Building Offline-First: Network Access Should Never Be Required A behind-the-scenes look at how we build 3mpwrApp. --- A disability app that requires consistent internet access systematical",
+      "content": "Dev Diary: Building Offline-First: Network Access Should Never Be Required A behind-the-scenes look at how we build 3mpwrApp. --- A disability app that requires consistent internet access systematically excludes the people who need it most. Consider where chronic illness and disability intersect with geography. Rural and remote communities in Canada have both higher disability rates and significantly worse internet infrastructure. Optimizing for urban, connected users would have been a betrayal of our mission. The offline-first mandate created real technical challenges â€” every feature had to be audited for what it looks like without a network call. The upload queue was particularly complex: we needed silent, automatic retry logic that never lost data and never frustrated users. --- Technical Details - AsyncStorage provides local-first persistence across all platforms - Evidence upload queue retries silently when connectivity returns - All crisis resources are pre-loaded to device memory at install - Firestore offline mode syncs transparently when connection resumes - The principle: if it requires internet, it isn't truly accessible --- In Practice - A user in a rural area with no signal can access their full Evidence Locker - Crisis resources load instantly because they are committed to local storage - Upload queues retry on their own â€” users never need to remember to re-upload --- What We Learned - Many of the most vulnerable community members live in rural areas with unreliable connectivity - Offline-first is not a performance optimization â€” it is an equity decision - Designing for offline means every feature had to work as a standalone, self-contained unit --- Follow Our Development We believe in building in public â€” the community we serve has been failed by opaque institutions too many times. - â­ GitHub - ðŸ§ª Join Beta Testing - ðŸ’¬ Community Discussion",
+      "date": "2026-03-23 00:00:00 +0000",
+      "tags": [
+        "dev-diary",
+        "development",
+        "behind-the-scenes"
+      ],
+      "categories": [
+        "dev-diary"
+      ],
+      "url": "/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required",
+      "filesize": 1901
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -1584,13 +1620,13 @@
       "id": "curation/2026-03-23-curated.md",
       "source": "curation",
       "title": "2026-03-23-curated.md",
-      "excerpt": "Daily News Curation - 2026-03-23 Curated 12 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-03-23 Curated 12 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. There is a lack of scrutiny on foreign ownership of Canada's natural resources Rabble.ca — progressive Canadian news Source Score: 11.70 2. Carney’s ‘Defeatist’ Dismissal of International Law The PM’s doctrine stresses ‘taking the world as it is.’ Critics say it poses ‘reckless’ risk for Canada. Source Score: 10.50 3. Australian Mining Billionaire Sues Canada for $2 Billion Gina Rinehart’s Northback demands feds pay for finding the Grassy Mountain project too toxic to proceed. Source Score: 10.50 4. Mount Cashel’s Continuing Saga of Abuse and Conspiracy Efforts to hide orphanage horrors in Newfoundland resonate 50 years after in a $30-million BC lawsuit. Source Score: 6.00 5. Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres. Source Score: 9.90 6. BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill. Source Score: 7.20 7. Computers Came for Our Jobs Before. How Will AI? Sky News UK tech correspondent Rowland Manthorpe on what the last wave of automation can teach us about the next. A Tyee Q&A. Source Score: 4.50 8. Public Transit Expansion Plans Shelved Across BC As BC tightens its belt, plans to boost bus routes in mid-sized cities and rural areas are taking a hit. Source Score: 4.50 9. BC Has Revealed How It Hopes To Fast-track Some Mines Critics fear the changes would limit public and Indigenous input and increase environmental risks. Source Score: 4.50 10. The Real Reason the UCP Is Expanding Private School Funding Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP. Source Score: 4.50 11. Measles Update #89 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-23 Curated 3 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-23 Curated 3 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Mourns Passing of MLA Amanda Lathlin Government of Manitoba press release Source Score: 7.50 2. Measles Update #92 Government of Manitoba press release Source Score: 4.50",
       "date": "2026-03-23",
       "tags": [],
       "categories": [],
       "url": "/2026-03-23-curated",
-      "filesize": 2205
+      "filesize": 503
     },
     {
       "id": "curation/README.md",
@@ -1603,6 +1639,18 @@
       "categories": [],
       "url": "/README",
       "filesize": 313
+    },
+    {
+      "id": "whatsnew/2026-03-23-week-13-updates.md",
+      "source": "whatsnew",
+      "title": "Week 13 Updates (2026)",
+      "excerpt": "This Week's Journey I'm building 3mpwrApp in public—showing you every step, every decision, every improvement as they happen. This is Phase 1 of beta testing, where you're getting familiar with what I",
+      "content": "This Week's Journey I'm building 3mpwrApp in public—showing you every step, every decision, every improvement as they happen. This is Phase 1 of beta testing, where you're getting familiar with what I'm creating for our community. Here's what I shipped this week and why it matters to you: ✨ New Features 100% accessibility compliance - ALL pages legible in Light/Dark/High Contrast Why I built this: Because disability tech should work for EVERYONE. If you're using a screen reader or need high contrast, this app should serve you as well as anyone else. Accessibility-first color system - complete legibility in Light/Dark/High Contrast modes Why I built this: Because disability tech should work for EVERYONE. If you're using a screen reader or need high contrast, this app should serve you as well as anyone else. Add Option 1 as official theme song winner on homepage Why I built this: This makes 3mpwrApp more powerful for disability advocates, injured workers, and their families. Update homepage - show Option 1 as community vote winner, replace 'See the App in Action' screenshots with latest app tour images Why I built this: I'm building this to last. More tests mean fewer bugs, which means you can rely on this when it matters most. Complete visual refresh with 172 new screenshots Why I built this: This makes 3mpwrApp more powerful for disability advocates, injured workers, and their families. 🐛 Fixes I fixed these issues because they were getting in your way: - Remove game background images (Ascendant Continuum) - Update URLs from backup domain (github.io) to primary domain (pages.dev) 📚 Documentation Making 3mpwrApp easier to understand: - Complete accessibility mission report - 100% compliance achieved 🤖 Behind the Scenes These automation improvements make development faster so I can ship features to you sooner: - Trigger Cloudflare Pages rebuild --- What's Next I'm listening. If you're testing 3mpwrApp and something doesn't work, tell me. If you have ideas, share them. This app exists because I fell through the cracks—I'm building it so you don't have to. 📬 Get updates in your inbox 🔍 See all weekly updates 💬 Join the beta testing community",
+      "date": "2026-03-23",
+      "tags": [],
+      "categories": [],
+      "url": "/2026-03-23-week-13-updates",
+      "filesize": 2181
     },
     {
       "id": "blog/2026-03-22-daily-curation.md",
@@ -6691,6 +6739,10 @@
       "blog/2026-03-16-weekly-update-week-12.md",
       "whatsnew/2026-03-16-week-12-updates.md"
     ],
+    "13": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "whatsnew/2026-03-23-week-13-updates.md"
+    ],
     "15": [
       "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
     ],
@@ -6750,6 +6802,117 @@
     ],
     "2026": [
       "whatsnew/2026-01-05-january-infrastructure-fixes.md"
+    ],
+    "week": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "whatsnew/2026-03-23-week-13-updates.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "whatsnew/2026-03-16-week-12-updates.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "whatsnew/2026-02-23-week-9-updates.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "whatsnew/2026-02-16-week-8-updates.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "whatsnew/2026-02-09-week-7-updates.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "whatsnew/2026-02-02-week-6-updates.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "whatsnew/2026-01-26-week-5-updates.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "whatsnew/2026-01-19-week-4-updates.md",
+      "whatsnew/2026-01-15-powertools-complete-week-3.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "whatsnew/2026-01-12-week-3-updates.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "whatsnew/2026-01-05-week-2-updates.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "whatsnew/2025-12-29-week-1-updates.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "whatsnew/2025-12-22-week-52-updates.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "whatsnew/2025-12-15-week-51-updates.md",
+      "blog/2025-12-12-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "whatsnew/2025-12-08-week-50-updates.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "whatsnew/2025-12-01-week-49-updates.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "whatsnew/2025-11-24-week-48-updates.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "whatsnew/2025-11-17-week-47-updates.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "whatsnew/2025-11-10-week-46-updates.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "whatsnew/2025-11-03-week-45-updates.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "whatsnew/2025-10-27-week-44-updates.md",
+      "blog/2025-10-21-weekly-update-week-43.md",
+      "whatsnew/2025-10-21-week-43-updates.md"
+    ],
+    "—": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-12-demo-success-usa-lite-launch.md",
+      "blog/2025-12-12-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-feature-spotlight-production-release.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
+    "building": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
+      "blog/2026-03-16-weekly-update-week-12.md"
+    ],
+    "3mpwrapp": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-12-demo-success-usa-lite-launch.md",
+      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-07-feature-spotlight-production-release.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
+    ],
+    "in": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "the": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md",
+      "blog/2025-10-03-welcome-to-3mpowr.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "open": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-16-weekly-update-week-12.md"
     ],
     "daily": [
       "blog/2026-03-23-daily-curation.md",
@@ -7251,6 +7414,37 @@
     "2026-03-23": [
       "blog/2026-03-23-daily-curation.md"
     ],
+    "dev": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "diary:": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "offline-first:": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
+    ],
+    "network": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
+    ],
+    "access": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
+    ],
+    "should": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
+    ],
+    "never": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
+    ],
+    "be": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
+    ],
+    "required": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
+    ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"
     ],
@@ -7647,6 +7841,52 @@
     "readme.md": [
       "curation/README.md"
     ],
+    "updates": [
+      "whatsnew/2026-03-23-week-13-updates.md",
+      "whatsnew/2026-03-16-week-12-updates.md",
+      "whatsnew/2026-02-23-week-9-updates.md",
+      "whatsnew/2026-02-16-week-8-updates.md",
+      "whatsnew/2026-02-09-week-7-updates.md",
+      "whatsnew/2026-02-02-week-6-updates.md",
+      "whatsnew/2026-01-26-week-5-updates.md",
+      "whatsnew/2026-01-19-week-4-updates.md",
+      "whatsnew/2026-01-12-week-3-updates.md",
+      "whatsnew/2026-01-05-week-2-updates.md",
+      "whatsnew/2025-12-29-week-1-updates.md",
+      "whatsnew/2025-12-22-week-52-updates.md",
+      "whatsnew/2025-12-15-week-51-updates.md",
+      "whatsnew/2025-12-08-week-50-updates.md",
+      "whatsnew/2025-12-01-week-49-updates.md",
+      "whatsnew/2025-11-24-week-48-updates.md",
+      "whatsnew/2025-11-17-week-47-updates.md",
+      "whatsnew/2025-11-10-week-46-updates.md",
+      "whatsnew/2025-11-03-week-45-updates.md",
+      "whatsnew/2025-10-27-week-44-updates.md",
+      "whatsnew/2025-10-21-week-43-updates.md",
+      "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
+      "whatsnew/2025-10-04-automation-gitlog.md"
+    ],
+    "(2026)": [
+      "whatsnew/2026-03-23-week-13-updates.md",
+      "whatsnew/2026-03-16-week-12-updates.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "whatsnew/2026-02-23-week-9-updates.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "whatsnew/2026-02-16-week-8-updates.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "whatsnew/2026-02-09-week-7-updates.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "whatsnew/2026-02-02-week-6-updates.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "whatsnew/2026-01-26-week-5-updates.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "whatsnew/2026-01-19-week-4-updates.md",
+      "whatsnew/2026-01-15-powertools-complete-week-3.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "whatsnew/2026-01-12-week-3-updates.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "whatsnew/2026-01-05-week-2-updates.md"
+    ],
     "2026-03-22": [
       "blog/2026-03-22-daily-curation.md"
     ],
@@ -7928,10 +8168,6 @@
     "2026-03-19": [
       "blog/2026-03-19-daily-curation.md"
     ],
-    "dev": [
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
     "update:": [
       "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
     ],
@@ -7943,22 +8179,6 @@
     ],
     "happening": [
       "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
-    ],
-    "in": [
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "whatsnew/2025-10-14-curator-language-json-api.md"
-    ],
-    "3mpwrapp": [
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-07-feature-spotlight-production-release.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
     ],
     "2026-03-18": [
       "blog/2026-03-18-daily-curation.md"
@@ -7978,14 +8198,6 @@
       "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
       "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
       "blog/2025-11-02-feature-spotlight-master-letter-generator.md"
-    ],
-    "the": [
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
-      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md",
-      "blog/2025-10-03-welcome-to-3mpowr.md",
-      "whatsnew/2025-10-03-accessibility-settings-consent.md"
     ],
     "origin": [
       "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
@@ -8009,84 +8221,6 @@
     "2026-03-17": [
       "blog/2026-03-17-daily-curation.md"
     ],
-    "week": [
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "whatsnew/2026-03-16-week-12-updates.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "whatsnew/2026-02-23-week-9-updates.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "whatsnew/2026-02-16-week-8-updates.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "whatsnew/2026-02-09-week-7-updates.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "whatsnew/2026-02-02-week-6-updates.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "whatsnew/2026-01-26-week-5-updates.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "whatsnew/2026-01-19-week-4-updates.md",
-      "whatsnew/2026-01-15-powertools-complete-week-3.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "whatsnew/2026-01-12-week-3-updates.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "whatsnew/2026-01-05-week-2-updates.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "whatsnew/2025-12-29-week-1-updates.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "whatsnew/2025-12-22-week-52-updates.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "whatsnew/2025-12-15-week-51-updates.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "whatsnew/2025-12-08-week-50-updates.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "whatsnew/2025-12-01-week-49-updates.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "whatsnew/2025-11-24-week-48-updates.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "whatsnew/2025-11-17-week-47-updates.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "whatsnew/2025-11-10-week-46-updates.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "whatsnew/2025-11-03-week-45-updates.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "whatsnew/2025-10-27-week-44-updates.md",
-      "blog/2025-10-21-weekly-update-week-43.md",
-      "whatsnew/2025-10-21-week-43-updates.md"
-    ],
-    "—": [
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-feature-spotlight-production-release.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md"
-    ],
-    "building": [
-      "blog/2026-03-16-weekly-update-week-12.md"
-    ],
-    "open": [
-      "blog/2026-03-16-weekly-update-week-12.md"
-    ],
     "disability": [
       "blog/2026-03-16-feature-spotlight-disability-wizard.md",
       "blog/2025-12-15-feature-spotlight-disability-wizard.md",
@@ -8100,55 +8234,8 @@
       "blog/2025-11-01-feature-spotlight-disability-wizard.md",
       "blog/2025-10-22-feature-spotlight-disability-wizard.md"
     ],
-    "updates": [
-      "whatsnew/2026-03-16-week-12-updates.md",
-      "whatsnew/2026-02-23-week-9-updates.md",
-      "whatsnew/2026-02-16-week-8-updates.md",
-      "whatsnew/2026-02-09-week-7-updates.md",
-      "whatsnew/2026-02-02-week-6-updates.md",
-      "whatsnew/2026-01-26-week-5-updates.md",
-      "whatsnew/2026-01-19-week-4-updates.md",
-      "whatsnew/2026-01-12-week-3-updates.md",
-      "whatsnew/2026-01-05-week-2-updates.md",
-      "whatsnew/2025-12-29-week-1-updates.md",
-      "whatsnew/2025-12-22-week-52-updates.md",
-      "whatsnew/2025-12-15-week-51-updates.md",
-      "whatsnew/2025-12-08-week-50-updates.md",
-      "whatsnew/2025-12-01-week-49-updates.md",
-      "whatsnew/2025-11-24-week-48-updates.md",
-      "whatsnew/2025-11-17-week-47-updates.md",
-      "whatsnew/2025-11-10-week-46-updates.md",
-      "whatsnew/2025-11-03-week-45-updates.md",
-      "whatsnew/2025-10-27-week-44-updates.md",
-      "whatsnew/2025-10-21-week-43-updates.md",
-      "whatsnew/2025-10-14-curator-improvements-and-env-overrides.md",
-      "whatsnew/2025-10-04-automation-gitlog.md"
-    ],
-    "(2026)": [
-      "whatsnew/2026-03-16-week-12-updates.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "whatsnew/2026-02-23-week-9-updates.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "whatsnew/2026-02-16-week-8-updates.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "whatsnew/2026-02-09-week-7-updates.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "whatsnew/2026-02-02-week-6-updates.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "whatsnew/2026-01-26-week-5-updates.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "whatsnew/2026-01-19-week-4-updates.md",
-      "whatsnew/2026-01-15-powertools-complete-week-3.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "whatsnew/2026-01-12-week-3-updates.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "whatsnew/2026-01-05-week-2-updates.md"
-    ],
     "2026-03-15": [
       "blog/2026-03-15-daily-curation.md"
-    ],
-    "diary:": [
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "we": [
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md",
@@ -9402,9 +9489,6 @@
     "exactly": [
       "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
     ],
-    "be": [
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
-    ],
     "said": [
       "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
     ],
@@ -9642,6 +9726,62 @@
     ]
   },
   "tagIndex": {
+    "weekly": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-12-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md",
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "updates": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-12-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
+    "transparency": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md"
+    ],
     "highlights": [
       "blog/2026-03-23-daily-curation.md",
       "blog/2026-03-22-daily-curation.md",
@@ -9765,6 +9905,19 @@
       "blog/2025-10-17-comprehensive-daily-digest.md",
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
+    ],
+    "dev-diary": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "development": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "behind-the-scenes": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "features": [
       "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
@@ -10014,14 +10167,6 @@
     "changelog": [
       "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
     ],
-    "development": [
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "transparency": [
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md"
-    ],
     "phase-2:-legal-tools": [
       "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
       "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
@@ -10039,65 +10184,10 @@
     "philosophy": [
       "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
     ],
-    "weekly": [
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md",
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "updates": [
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md"
-    ],
     "phase-2:-personalization": [
       "blog/2026-03-16-feature-spotlight-disability-wizard.md",
       "blog/2025-12-15-feature-spotlight-disability-wizard.md",
       "blog/2025-11-01-feature-spotlight-disability-wizard.md"
-    ],
-    "dev-diary": [
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "behind-the-scenes": [
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "production-release": [
       "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
@@ -10333,6 +10423,33 @@
     ]
   },
   "categoryIndex": {
+    "updates": [
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-12-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
     "curation": [
       "blog/2026-03-23-daily-curation.md",
       "blog/2026-03-22-daily-curation.md",
@@ -10581,6 +10698,10 @@
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
+    "dev-diary": [
+      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
     "features": [
       "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
       "blog/2026-03-20-feature-spotlight-evidence-locker.md",
@@ -10692,38 +10813,9 @@
       "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
     ],
-    "updates": [
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md"
-    ],
     "community": [
       "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
       "blog/2025-10-17-weekly-recap.md"
-    ],
-    "dev-diary": [
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "founder-story": [
       "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md"

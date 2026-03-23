@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-03-23
 
-Curated 12 items from disability, accessibility, and social policy sources.
+Curated 3 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -21,58 +21,13 @@ Visit for the latest disability rights news, advocacy updates, and community sto
 
 ## Additional Stories
 
-### 1. There is a lack of scrutiny on foreign ownership of Canada's natural resources
-Rabble.ca — progressive Canadian news
-[Source](https://rabble.ca/environment/there-is-a-lack-of-scrutiny-on-foreign-ownership-of-canadas-natural-resources/)
-**Score:** 11.70
-
-### 2. Carney’s ‘Defeatist’ Dismissal of International Law
-The PM’s doctrine stresses ‘taking the world as it is.’ Critics say it poses ‘reckless’ risk for Canada.
-[Source](https://thetyee.ca/Analysis/2026/03/23/Carney-Defeatist-Dismissal-International-Law/)
-**Score:** 10.50
-
-### 3. Australian Mining Billionaire Sues Canada for $2 Billion
-Gina Rinehart’s Northback demands feds pay for finding the Grassy Mountain project too toxic to proceed.
-[Source](https://thetyee.ca/News/2026/03/20/Australian-Mining-Billionaire-Sues-Canada/)
-**Score:** 10.50
-
-### 4. Mount Cashel’s Continuing Saga of Abuse and Conspiracy
-Efforts to hide orphanage horrors in Newfoundland resonate 50 years after in a $30-million BC lawsuit.
-[Source](https://thetyee.ca/News/2026/03/23/Mount-Cashel-Continuing-Saga-Abuse-Conspiracy/)
-**Score:** 6.00
-
-### 5. Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche
-The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres.
-[Source](https://thetyee.ca/News/2026/03/19/Accusations-Fly-Newly-Surfaced-Legal-Fight-Sam-Mraiche/)
-**Score:** 9.90
-
-### 6. BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes
-Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill.
-[Source](https://thetyee.ca/News/2026/03/19/BC-Watchdog-Freedom-Information-Changes/)
-**Score:** 7.20
-
-### 7. Computers Came for Our Jobs Before. How Will AI?
-Sky News UK tech correspondent Rowland Manthorpe on what the last wave of automation can teach us about the next. A Tyee Q&A.
-[Source](https://thetyee.ca/News/2026/03/20/Computers-Came-Jobs-Before-How-Will-AI/)
-**Score:** 4.50
-
-### 8. Public Transit Expansion Plans Shelved Across BC
-As BC tightens its belt, plans to boost bus routes in mid-sized cities and rural areas are taking a hit.
-[Source](https://thetyee.ca/News/2026/03/20/Public-Transit-Expansion-Plans-Shelved-BC/)
-**Score:** 4.50
-
-### 9. BC Has Revealed How It Hopes To Fast-track Some Mines
-Critics fear the changes would limit public and Indigenous input and increase environmental risks.
-[Source](https://thetyee.ca/News/2026/03/18/BC-Plan-Fast-Track-Environmental-Assessments/)
-**Score:** 4.50
-
-### 10. The Real Reason the UCP Is Expanding Private School Funding
-Alberta’s private school lobby is vocal, well organized and aggressive. And devoted to the UCP.
-[Source](https://thetyee.ca/Opinion/2026/03/17/Real-Reason-UCP-Expanding-Private-School-Funding/)
-**Score:** 4.50
-
-### 11. Measles Update #89
+### 1. Manitoba Government Mourns Passing of MLA Amanda Lathlin
 Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73137)
+[Source](https://news.gov.mb.ca/news/index.html?item=73157)
+**Score:** 7.50
+
+### 2. Measles Update #92
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73177)
 **Score:** 4.50
 
