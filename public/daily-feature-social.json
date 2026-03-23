@@ -1,9 +1,9 @@
 {
-  "feature": "Legal Workflow Automation",
-  "contentType": "feature",
-  "date": "2026-03-22",
-  "shortPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nâœ¨ Feature Spotlight: Legal Workflow Automation\n\nStep-by-step guided processes for benefits applications, appeals, and workplace accommodations\n\n💡 Learn more: https://3mpwrapp.pages.dev/features/2026/03/22/feature-spotlight-legal-workflow-automation/\n\n#3mpwrApp #DisabilityRights #Accessibility",
-  "longPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nâœ¨ Feature Spotlight: Legal Workflow Automation\n\nStep-by-step guided processes for benefits applications, appeals, and workplace accommodations\n\nðŸ”‘ Key points:\nâ€¢ Guided workflows for common legal processes\nâ€¢ Step-by-step checklist with progress tracking\nâ€¢ Deadline reminders and timeline management\n\nCheck it out â†’ https://3mpwrapp.pages.dev/features/2026/03/22/feature-spotlight-legal-workflow-automation/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #DisabilityPride",
-  "url": "https://3mpwrapp.pages.dev/features/2026/03/22/feature-spotlight-legal-workflow-automation/",
-  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-03-22-feature-spotlight-legal-workflow-automation.md"
+  "feature": "Building Offline-First: Network Access Should Never Be Required",
+  "contentType": "devDiary",
+  "date": "2026-03-23",
+  "shortPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: Building Offline-First: Network Access Should Never Be Required\n\nHow and why 3mpwrApp was built to work completely without internet â€” and what we learned along the way\n\n✨ Try it free: https://3mpwrapp.pages.dev/dev-diary/2026/03/23/dev-diary-building-offline-first-network-access-should-never-be-required/\n\n#3mpwrApp #DisabilityRights #Accessibility",
+  "longPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: Building Offline-First: Network Access Should Never Be Required\n\nHow and why 3mpwrApp was built to work completely without internet â€” and what we learned along the way\n\nðŸ”‘ Key points:\nâ€¢ AsyncStorage provides local-first persistence across all platforms\nâ€¢ Evidence upload queue retries silently when connectivity returns\nâ€¢ All crisis resources are pre-loaded to device memory at install\n\nCheck it out â†’ https://3mpwrapp.pages.dev/dev-diary/2026/03/23/dev-diary-building-offline-first-network-access-should-never-be-required/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #DisabilityPride",
+  "url": "https://3mpwrapp.pages.dev/dev-diary/2026/03/23/dev-diary-building-offline-first-network-access-should-never-be-required/",
+  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
 }
