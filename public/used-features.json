@@ -5,7 +5,8 @@
     "Disability Wizard",
     "Master Letter Generator",
     "Evidence Locker",
-    "Legal Workflow Automation"
+    "Legal Workflow Automation",
+    "Indigenous Language Support"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -18,6 +19,6 @@
   "lore": [
     "The Origin Story: Why 3mpwrApp Was Built"
   ],
-  "rotationIndex": 4,
+  "rotationIndex": 5,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
