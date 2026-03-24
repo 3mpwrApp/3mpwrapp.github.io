@@ -1,7 +1,7 @@
 {
   "date": "2026-03-24",
-  "timestamp": "2026-03-24T09:58:05.317Z",
-  "count": 12,
+  "timestamp": "2026-03-24T21:45:45.365Z",
+  "count": 4,
   "minScore": 3.5,
   "items": [
     {
@@ -9,84 +9,28 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-03-24T09:58:05.314Z"
+      "pubDate": "2026-03-24T21:45:45.362Z"
     },
     {
-      "title": "There is a lack of scrutiny on foreign ownership of Canada's natural resources",
-      "link": "https://rabble.ca/environment/there-is-a-lack-of-scrutiny-on-foreign-ownership-of-canadas-natural-resources/",
+      "title": "Good Jobs, Lower Costs, Better Health Care: Manitoba Budget 2026",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73198",
       "description": "",
-      "score": 11.7,
-      "pubDate": "Wed, 18 Mar 2026 20:39:09 +0000"
+      "score": 9.5,
+      "pubDate": "Tue, 24 Mar 2026 15:02:00 CDT"
     },
     {
-      "title": "Carney’s ‘Defeatist’ Dismissal of International Law",
-      "link": "https://thetyee.ca/Analysis/2026/03/23/Carney-Defeatist-Dismissal-International-Law/",
-      "description": "The PM’s doctrine stresses ‘taking the world as it is.’ Critics say it poses ‘reckless’ risk for Canada.",
-      "score": 10.5,
-      "pubDate": "Mon, 23 Mar 2026 07:30:00 +0000"
+      "title": "Manitoba Government Announces Budget 2026",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73197",
+      "description": "",
+      "score": 7.5,
+      "pubDate": "Tue, 24 Mar 2026 14:51:00 CDT"
     },
     {
-      "title": "Australian Mining Billionaire Sues Canada for $2 Billion",
-      "link": "https://thetyee.ca/News/2026/03/20/Australian-Mining-Billionaire-Sues-Canada/",
-      "description": "Gina Rinehart’s Northback demands feds pay for finding the Grassy Mountain project too toxic to proceed.",
-      "score": 10.5,
-      "pubDate": "Fri, 20 Mar 2026 07:10:00 +0000"
-    },
-    {
-      "title": "Half of BC’s Community Paramedic Positions Are Unfilled",
-      "link": "https://thetyee.ca/News/2026/03/24/Half-BC-Community-Paramedic-Positions-Unfilled/",
-      "description": "They offer vital preventive medicine to patients in rural and remote communities. But the program is struggling to scale up.",
-      "score": 7,
-      "pubDate": "Tue, 24 Mar 2026 07:40:00 +0000"
-    },
-    {
-      "title": "Mount Cashel’s Continuing Saga of Abuse and Conspiracy",
-      "link": "https://thetyee.ca/News/2026/03/23/Mount-Cashel-Continuing-Saga-Abuse-Conspiracy/",
-      "description": "Efforts to hide orphanage horrors in Newfoundland resonate 50 years after in a $30-million BC lawsuit.",
-      "score": 6,
-      "pubDate": "Mon, 23 Mar 2026 07:40:00 +0000"
-    },
-    {
-      "title": "Accusations Fly in Newly Surfaced Legal Fight Involving Sam Mraiche",
-      "link": "https://thetyee.ca/News/2026/03/19/Accusations-Fly-Newly-Surfaced-Legal-Fight-Sam-Mraiche/",
-      "description": "The controversial Alberta businessman denies allegations he strong-armed a firm building publicly funded treatment centres.",
-      "score": 9.9,
-      "pubDate": "Thu, 19 Mar 2026 07:40:00 +0000"
-    },
-    {
-      "title": "BC’s Watchdog on Why He Supports Widely Criticized Freedom of Information Changes",
-      "link": "https://thetyee.ca/News/2026/03/19/BC-Watchdog-Freedom-Information-Changes/",
-      "description": "Critics have claimed government has launched a ‘stealth attack’ on FOI with new bill.",
-      "score": 7.2,
-      "pubDate": "Thu, 19 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "Computers Came for Our Jobs Before. How Will AI?",
-      "link": "https://thetyee.ca/News/2026/03/20/Computers-Came-Jobs-Before-How-Will-AI/",
-      "description": "Sky News UK tech correspondent Rowland Manthorpe on what the last wave of automation can teach us about the next. A Tyee Q&A.",
-      "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 07:40:00 +0000"
-    },
-    {
-      "title": "Public Transit Expansion Plans Shelved Across BC",
-      "link": "https://thetyee.ca/News/2026/03/20/Public-Transit-Expansion-Plans-Shelved-BC/",
-      "description": "As BC tightens its belt, plans to boost bus routes in mid-sized cities and rural areas are taking a hit.",
-      "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "BC Has Revealed How It Hopes To Fast-track Some Mines",
-      "link": "https://thetyee.ca/News/2026/03/18/BC-Plan-Fast-Track-Environmental-Assessments/",
-      "description": "Critics fear the changes would limit public and Indigenous input and increase environmental risks.",
-      "score": 4.5,
-      "pubDate": "Wed, 18 Mar 2026 07:10:00 +0000"
-    },
-    {
-      "title": "Measles Update #89",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73137",
+      "title": "Measles Update #93",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73199",
       "description": "",
       "score": 4.5,
-      "pubDate": "Wed, 18 Mar 2026 14:45:00 CDT"
+      "pubDate": "Tue, 24 Mar 2026 15:25:00 CDT"
     }
   ]
 }
