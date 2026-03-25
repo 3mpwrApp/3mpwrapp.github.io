@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-25T12:42:06.797Z",
+  "lastUpdated": "2026-03-25T18:42:13.151Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 13700,
+      "totalPosts": 13725,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-25T12:41:56.301Z"
+      "lastSeen": "2026-03-25T18:41:59.071Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 13636,
+      "totalPosts": 13661,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-25T12:41:58.751Z"
+      "lastSeen": "2026-03-25T18:42:02.863Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 13498,
+      "totalPosts": 13523,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-25T12:42:01.050Z"
+      "lastSeen": "2026-03-25T18:42:06.204Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 13730,
+      "totalPosts": 13755,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-25T12:42:03.309Z"
+      "lastSeen": "2026-03-25T18:42:09.280Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 13708,
+      "totalPosts": 13732,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-25T12:42:05.792Z"
+      "lastSeen": "2026-03-25T18:42:12.147Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Yes! Assume she can. Stop putting limitations on her! #disabilityrights! #pinks",
-      "author": "aliceknew.bsky.social",
-      "engagement": 24,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "In my house it's #FreePalestine #LandBack #QueerRights #TransRights #NoHumanlsillegalOnStolenLand and #DisabilityRights. If you don't agree, there's the door. Living in Canada is a blessing, but it doesn't make us immune or not responsible for speaking out against white supremacy and christofascism!",
-      "author": "eddiemacken.bsky.social",
-      "engagement": 16,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
-      "author": "emilyrj.bsky.social",
-      "engagement": 22,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Yes! Assume she can. Stop putting limitations on her! #disabilityrights! #pinks",
-      "author": "aliceknew.bsky.social",
-      "engagement": 24,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "In my house it's #FreePalestine #LandBack #QueerRights #TransRights #NoHumanlsillegalOnStolenLand and #DisabilityRights. If you don't agree, there's the door. Living in Canada is a blessing, but it doesn't make us immune or not responsible for speaking out against white supremacy and christofascism!",
-      "author": "eddiemacken.bsky.social",
-      "engagement": 16,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Same pattern, every team. \n\nDesigner annotates everything. \n\nDesign system specifies focus states, heading structure, the lot. \n\nEngineering ships something broken anyway.\n\nNot an awareness problem. A skills gap the industry built deliberately.\n\nRant here - gbbns.co/journal/acce...\n\n#Accessibility",
       "author": "gbbns.co",
@@ -338,28 +296,70 @@
       "author": "emilyrj.bsky.social",
       "engagement": 22,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Yes! Assume she can. Stop putting limitations on her! #disabilityrights! #pinks",
+      "author": "aliceknew.bsky.social",
+      "engagement": 24,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "In my house it's #FreePalestine #LandBack #QueerRights #TransRights #NoHumanlsillegalOnStolenLand and #DisabilityRights. If you don't agree, there's the door. Living in Canada is a blessing, but it doesn't make us immune or not responsible for speaking out against white supremacy and christofascism!",
+      "author": "eddiemacken.bsky.social",
+      "engagement": 18,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "THIS SATURDAY: BIGGEST PROTEST IN AMERICAN HISTORY‼️\n\nJoin your local rally, find it here: www.nokings.org\n\nCan’t make it out to the streets? \n\nVIRTUAL RALLY with @standupforscience.net accessible and inclusive, for everyone, everywhere \n\n#NoKings #DisabilityJustice #VirtualRally @indivisible.org",
+      "author": "katieholten.bsky.social",
+      "engagement": 50,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Fandom really shows up 💙 Huge thanks to Fandom Trumps Hate for choosing DLU as an auction recipient! Their community comes together to support great causes through fanworks—and they’ve raised thousands for disability justice 🙌\n\nCheck out: buff.ly/SvGBbhS\n#FandomTrumpsHate #DisabilityJustice",
+      "author": "dlunited.bsky.social",
+      "engagement": 37,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 40
+      "count": 41
     },
     {
       "keyword": "accessibility",
-      "count": 40
+      "count": 38
+    },
+    {
+      "keyword": "a11y",
+      "count": 28
     },
     {
       "keyword": "cripthevote",
       "count": 27
     },
     {
-      "keyword": "a11y",
-      "count": 27
-    },
-    {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 27
     },
     {
       "keyword": "altcitizen",
@@ -371,19 +371,19 @@
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 13
+      "count": 12
     },
     {
       "keyword": "refusefascism",
       "count": 10
     },
     {
-      "keyword": "virtual",
-      "count": 9
+      "keyword": "digitalaccessibility",
+      "count": 10
     },
     {
       "keyword": "resist",
@@ -398,28 +398,28 @@
       "count": 8
     },
     {
-      "keyword": "disabilitysky",
+      "keyword": "virtual",
       "count": 8
+    },
+    {
+      "keyword": "wcag",
+      "count": 6
+    },
+    {
+      "keyword": "disabilitysky",
+      "count": 6
     },
     {
       "keyword": "cripminds",
-      "count": 8
+      "count": 6
     },
     {
       "keyword": "accessibility disabilitysky",
-      "count": 8
+      "count": 6
     },
     {
       "keyword": "disabilitysky cripminds",
-      "count": 8
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
-      "count": 8
-    },
-    {
-      "keyword": "disabilityjustice nico",
-      "count": 7
+      "count": 6
     }
   ]
 }
