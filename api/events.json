@@ -1,1 +1,2361 @@
-{"events":[{"id":"nF2ufSwSB78HOBN12ZO7","title":"New Year's Day","description":"Federal holiday - Canada","date":"2025-01-01T00:00:00.000Z","endDate":"2025-01-01T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","federal"],"status":"published"},{"id":"C6pf6823eHWc8zCrgpCS","title":"World Braille Day","description":"Awareness of Braille and accessibility","date":"2025-01-04T00:00:00.000Z","endDate":"2025-01-04T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["disability","awareness"],"status":"published"},{"id":"J3x25vvZjj7RhWiedREb","title":"World Braille Day","description":"Awareness of Braille and accessibility for blind and visually impaired","date":"2025-01-04T00:00:00.000Z","endDate":"2025-01-04T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["disability","accessibility","blindness","vision"],"status":"published"},{"id":"OVgwKohcDzNpXgO4SYtt","title":"Family Day","description":"Observed in most Canadian provinces (3rd Monday in February)","date":"2025-02-17T00:00:00.000Z","endDate":"2025-02-17T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","family"],"status":"published"},{"id":"Ef6uxs3BTHDrFxnSeGMt","title":"International Wheelchair Day","description":"Celebration of wheelchair users and support","date":"2025-03-01T00:00:00.000Z","endDate":"2025-03-01T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["disability","mobility"],"status":"published"},{"id":"cciqcfgrhbP3vq6nOQMt","title":"Brain Injury Awareness Month","description":"Traumatic brain injury awareness, prevention, and recovery","date":"2025-03-01T00:00:00.000Z","endDate":"2025-03-31T00:00:00.000Z","location":"Canada","category":"health","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["brain injury","TBI","concussion","neurological"],"status":"published"},{"id":"vY4YG09MxKEhl32TQdBl","title":"Multiple Sclerosis Awareness Month","description":"MS awareness, support, and treatment information","date":"2025-03-01T00:00:00.000Z","endDate":"2025-03-31T00:00:00.000Z","location":"Canada","category":"health","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["MS","neurological","chronic illness"],"status":"published"},{"id":"pdsESR3nELIuD6hiU9Ul","title":"International Wheelchair Day","description":"Celebration of wheelchair users and mobility support","date":"2025-03-04T00:00:00.000Z","endDate":"2025-03-04T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["disability","mobility","wheelchairs"],"status":"published"},{"id":"FOFgH8gIkrcgoX6RP33P","title":"Parkinson's Awareness Month","description":"Parkinson's disease awareness, research, and support","date":"2025-04-01T00:00:00.000Z","endDate":"2025-04-30T00:00:00.000Z","location":"Canada","category":"health","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["Parkinson's","neurological","movement"],"status":"published"},{"id":"RPx6DlhMFsem8N6Dqfde","title":"Autism Acceptance Month","description":"April 2025: Month-long autism acceptance awareness","date":"2025-04-01T00:00:00.000Z","endDate":"2025-04-30T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["autism","neurodiversity","acceptance"],"status":"published"},{"id":"COlxz0K5iJVX0C3u6zcC","title":"World Autism Awareness Day","description":"Autism awareness, acceptance, and neurodiversity celebration","date":"2025-04-02T00:00:00.000Z","endDate":"2025-04-02T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["autism","neurodiversity","developmental"],"status":"published"},{"id":"bIxvdlzySPIUUcdyAfvG","title":"World Autism Awareness Day","description":"Awareness and acceptance of autism","date":"2025-04-02T00:00:00.000Z","endDate":"2025-04-02T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["autism","neurodiversity"],"status":"published"},{"id":"9yJ9t3yDbklIPLqzzCS6","title":"Good Friday","description":"Federal holiday","date":"2025-04-18T00:00:00.000Z","endDate":"2025-04-18T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","religious"],"status":"published"},{"id":"Tm5rlN691XzwSqHdehiM","title":"National Day of Mourning","description":"Remembering workers killed, injured or made ill at work","date":"2025-04-28T00:00:00.000Z","endDate":"2025-04-28T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["workers","memorial"],"status":"published"},{"id":"hCfPCjZK5qX1z8uJIHrQ","title":"National Day of Mourning","description":"Remembering workers killed, injured, or made ill at work - April 28","date":"2025-04-28T00:00:00.000Z","endDate":"2025-04-28T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["workers","memorial","workplace safety","labour"],"status":"published"},{"id":"2CDu055sjmdczWMZPS5f","title":"Celiac Disease Awareness Month","description":"Celiac disease, gluten sensitivity, and digestive health","date":"2025-05-01T00:00:00.000Z","endDate":"2025-05-31T00:00:00.000Z","location":"Canada","category":"health","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["celiac","autoimmune","digestive"],"status":"published"},{"id":"PiuxdlrLhyP1sVr4jbhE","title":"Mental Health Awareness Month","description":"Mental health awareness, wellness, and stigma reduction","date":"2025-05-01T00:00:00.000Z","endDate":"2025-05-31T00:00:00.000Z","location":"Canada","category":"health","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["mental health","wellness","depression","anxiety"],"status":"published"},{"id":"UwliscB7WM3gyg0uxvK3","title":"Arthritis Awareness Month","description":"Arthritis awareness, chronic pain support, and joint health","date":"2025-05-01T00:00:00.000Z","endDate":"2025-05-31T00:00:00.000Z","location":"Canada","category":"health","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["arthritis","chronic pain","joint health"],"status":"published"},{"id":"dUndXTQoXEZqOM1UHBPR","title":"Ehlers-Danlos Syndrome Awareness","description":"EDS and hypermobility disorders awareness and support","date":"2025-05-01T00:00:00.000Z","endDate":"2025-05-31T00:00:00.000Z","location":"Canada","category":"health","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["EDS","connective tissue","rare disease"],"status":"published"},{"id":"vV1gntUdz5o1oSc9eai2","title":"Lupus Awareness Month","description":"Systemic lupus awareness and autoimmune disease support","date":"2025-05-01T00:00:00.000Z","endDate":"2025-05-31T00:00:00.000Z","location":"Canada","category":"health","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["lupus","autoimmune","chronic illness"],"status":"published"},{"id":"KeZv4vuIZ2cRgh38QjIo","title":"Global Accessibility Awareness Day","description":"Digital accessibility, inclusion, and technology awareness","date":"2025-05-15T00:00:00.000Z","endDate":"2025-05-15T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":true,"url":"https://www.globalaccessibilityawarenessday.org","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["digital accessibility","inclusion","technology"],"status":"published"},{"id":"ynDLUsIZK1r0Pb5yM6fA","title":"Global Accessibility Awareness Day","description":"Digital accessibility and inclusion awareness","date":"2025-05-15T00:00:00.000Z","endDate":"2025-05-15T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":true,"url":"https://www.globalaccessibilityawarenessday.org","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["digital","accessibility"],"status":"published"},{"id":"hUpK3BfDx873Bn3eRvk3","title":"Victoria Day","description":"Federal holiday - Monday preceding May 25","date":"2025-05-19T00:00:00.000Z","endDate":"2025-05-19T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","federal"],"status":"published"},{"id":"3GGLYnGQMqhVXql2YaOe","title":"Injured Workers Day","description":"Solidarity with injured and ill workers - June 1","date":"2025-06-01T00:00:00.000Z","endDate":"2025-06-01T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["workers","workplace safety","solidarity"],"status":"published"},{"id":"F08t2Xqoee3WYRklES27","title":"Deafblind Awareness Month","description":"June: Deafblind awareness and support in Canada","date":"2025-06-01T00:00:00.000Z","endDate":"2025-06-30T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["deafblind","deaf","accessibility"],"status":"published"},{"id":"g9lnq206MjulBYYgSJfp","title":"Injured Workers Day","description":"Solidarity with injured and ill workers","date":"2025-06-01T00:00:00.000Z","endDate":"2025-06-01T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["workers","solidarity"],"status":"published"},{"id":"gcVoyPkJq2EH6ZwpFPmi","title":"Canada Day","description":"National Day - Federal holiday","date":"2025-07-01T00:00:00.000Z","endDate":"2025-07-01T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","national"],"status":"published"},{"id":"O1YUl2zIMVn45UN5SxZx","title":"Labour Day","description":"Federal holiday - First Monday in September","date":"2025-09-01T00:00:00.000Z","endDate":"2025-09-01T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","labour","workers"],"status":"published"},{"id":"u0xp1XHkOdjbNMXDGzSr","title":"Spinal Cord Injury Awareness Month","description":"September: Spinal cord injury prevention, research, and support","date":"2025-09-01T00:00:00.000Z","endDate":"2025-09-30T00:00:00.000Z","location":"Canada","category":"health","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["spinal cord injury","mobility","disability"],"status":"published"},{"id":"B5KEah3frZ5frvnkcWdU","title":"International Day of Sign Languages","description":"Linguistic identity of deaf people","date":"2025-09-23T00:00:00.000Z","endDate":"2025-09-23T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["deaf","language"],"status":"published"},{"id":"jljz6zB7jJUjFXYL6icv","title":"International Day of Sign Languages","description":"Recognition of deaf culture and sign language","date":"2025-09-23T00:00:00.000Z","endDate":"2025-09-23T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["deaf","sign language","culture"],"status":"published"},{"id":"AlsQT4eBNTpi1VB3GAdw","title":"Disability Employment Awareness Month","description":"October: Employment and workplace inclusion for people with disabilities","date":"2025-10-01T00:00:00.000Z","endDate":"2025-10-31T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["employment","disability","inclusion"],"status":"published"},{"id":"Ql6oaqI84aOe96wvkvNs","title":"Disability Employment Awareness Month","description":"NDEAM in Canada (October)","date":"2025-10-01T00:00:00.000Z","endDate":"2025-10-31T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":true,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["employment","disability"],"status":"published"},{"id":"zo2z3WGy01ThBil9krPu","title":"Thanksgiving","description":"Federal holiday - Second Monday in October","date":"2025-10-13T00:00:00.000Z","endDate":"2025-10-13T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","thanksgiving"],"status":"published"},{"id":"pvOuoDWXwMuQMAfuHxDy","title":"Remembrance Day","description":"Federal holiday - November 11","date":"2025-11-11T00:00:00.000Z","endDate":"2025-11-11T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","memorial"],"status":"published"},{"id":"tbdiwsg-nov11-2025","title":"TBDIWSG Tuesday Information Session ZOOM","description":"Thunder Bay & District Injured Workers Support Group\nNovember 11 – IWC – The WSIB \"Surplus\": A Political Slush Fund\nGuest Speakers: Chris Grawey & Bonnie Heath\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/\n\n📍 Virtual Event\n🗓️ 2025-11-11 10-12\n✨ Powered by 3mpwr App\n🔗 https://3mpwrapp.pages.dev/events/","date":"2025-11-11T15:00:00.000Z","endDate":"2025-11-11T17:00:00.000Z","location":"Virtual","category":"community","isVirtual":true,"url":"https://thunderbayinjuredworkers.com/tuesday-events/","organizer":"Thunder Bay & District Injured Workers Support Group","imageUrl":"","attendeeCount":0,"tags":["workers-rights","zoom","wsib","information-session","iwc"],"status":"published"},{"id":"tbdiwsg-nov20-2025","title":"TBDIWSG Community Meeting In Person & ZOOM","description":"Join the Thunder Bay & District Injured Workers Support Group for a community meeting at 7:00 PM (doors open at 6:30) on Thursday November 20th at the OPSEU Office at 326 Memorial Ave. (beside the Merla Mae) Thunder Bay ON\n\n• Share your experiences with WSIB\n• Get updates on local actions including the Dryden RB4 exposures and the annual December Rally\n\nEveryone Welcome\nthunderbayinjuredworkers.com/\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/events/","date":"2025-11-20T23:30:00.000Z","endDate":"2025-11-21T01:00:00.000Z","location":"OPSEU Office, 326 Memorial Ave, Thunder Bay ON (beside the Merla Mae)","category":"community","isVirtual":false,"url":"https://thunderbayinjuredworkers.com/","organizer":"Thunder Bay & District Injured Workers Support Group","imageUrl":"","attendeeCount":0,"tags":["workers-rights","hybrid-meeting","wsib","community-meeting"],"status":"published"},{"id":"cG1MyVCIZbZfMBxZE8rv","title":"International Day of Persons with Disabilities","description":"December 3: Promoting rights and well-being of persons with disabilities","date":"2025-12-03T00:00:00.000Z","endDate":"2025-12-03T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["disability","rights","inclusion"],"status":"published"},{"id":"cReI7aTnDsBmFgiPiK69","title":"International Day of Persons with Disabilities","description":"Promoting rights and well-being of persons with disabilities","date":"2025-12-03T00:00:00.000Z","endDate":"2025-12-03T00:00:00.000Z","location":"Canada","category":"awareness","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["disability","rights"],"status":"published"},{"id":"Yk1p4IJ66gGxkI0F8mCc","title":"Community Accessibility Workshop","description":"Workshop on accessibility rights and resources. ASL interpretation and closed captions provided.","date":"2025-12-15T23:00:00.000Z","endDate":"2025-12-16T00:30:00.000Z","location":"Community Centre - 123 Main St, Toronto, ON","category":"community","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["accessibility","workshop","community","education"],"status":"published"},{"id":"bYfSpZdmLv2o5Pfijv4V","title":"Community Accessibility Workshop","description":"Join us for a workshop on accessibility rights and resources. ASL interpretation and closed captions provided.","date":"2025-12-15T23:00:00.000Z","endDate":"2025-12-16T00:30:00.000Z","location":"Community Centre - 123 Main St, Toronto, ON","category":"community","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["accessibility","workshop","community"],"status":"published"},{"id":"tbdiwsg-dec16-2025","title":"TBDIWSG Tuesday Information Session ZOOM","description":"Thunder Bay & District Injured Workers Support Group \nDec 16 – Guest Kevon Stewart, District 6 Director, USW\n\nKevon will discuss in the presentation:\n• The criminal liability and prosecution of organizations who do not follow the Westray law.\n• Why enforcement of the Westray law is not currently happening.\n• The actions USW District 6 is taking for more dedicated investigators, prosecutors, and training for legal and police officials.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/\n\n🔗 Powered by 3mpwr App\n🌐 https://3mpwrapp.pages.dev/events/","date":"2025-12-16T15:00:00.000Z","endDate":"2025-12-16T17:00:00.000Z","location":"Virtual","category":"community","isVirtual":true,"url":"https://thunderbayinjuredworkers.com/tuesday-events/","organizer":"Thunder Bay & District Injured Workers Support Group","imageUrl":"","attendeeCount":0,"tags":["workers-rights","zoom","information-session","westray-law","usw"],"status":"published"},{"id":"bDbvEWLRpzLKJkMpiNmt","title":"Christmas Day","description":"Federal holiday","date":"2025-12-25T00:00:00.000Z","endDate":"2025-12-25T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","christmas"],"status":"published"},{"id":"kPOHC2BuQFoH6NTntwFz","title":"Boxing Day","description":"Federal holiday - December 26","date":"2025-12-26T00:00:00.000Z","endDate":"2025-12-26T00:00:00.000Z","location":"Canada","category":"holiday","isVirtual":false,"url":"","organizer":"3mpwrApp","imageUrl":"","attendeeCount":0,"tags":["holiday","boxing day"],"status":"published"},{"id":"ecc-spaces-jan7-2026","title":"X Spaces: EveryCanadianCounts Petition Education","description":"Join 3mpwrApp and EveryCanadianCounts for an X Spaces conversation about the EveryCanadianCounts petition (e-6746). Learn about Canada's commitment to accessible, inclusive democracy. Petition ends January 9th!\n\n🗣️ Hosts: @3mpwrApp & @EveryCdnCounts\n👤 Guest: @HubertVan\n🔗 X Spaces: https://x.com/i/spaces/1mnGeNlkXzAJX?s=20\n🔗 Facebook Event: https://www.facebook.com/share/1aqvdEuATC/\n🔗 Petition: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746","date":"2026-01-07T00:00:00.000Z","endDate":"2026-01-07T04:00:00.000Z","location":"X Spaces (Online)","category":"community","isVirtual":true,"url":"https://x.com/i/spaces/1mnGeNlkXzAJX?s=20","organizer":"3mpwrApp & EveryCanadianCounts","imageUrl":"","attendeeCount":0,"tags":["advocacy","petition","accessibility","inclusive-democracy","canada","x-spaces","facebook"],"status":"published"},{"id":"ecc-spaces-jan8-2026","title":"X Spaces: EveryCanadianCounts Petition Education (Day 2)","description":"Day 2 of our X Spaces conversation with EveryCanadianCounts about the EveryCanadianCounts petition (e-6746). Continued discussion on Canada's accessibility and inclusive democracy commitments. Petition ends January 9th!\n\n🗣️ Hosts: @3mpwrApp & @EveryCdnCounts\n👤 Guest: @HubertVan\n🔗 X Spaces: https://x.com/i/spaces/1kvKpMepaqOGE?s=20\n🔗 Facebook Event: https://www.facebook.com/share/1aTbEERmm1/\n🔗 Petition: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746","date":"2026-01-08T21:00:00.000Z","endDate":"2026-01-09T01:00:00.000Z","location":"X Spaces (Online)","category":"community","isVirtual":true,"url":"https://x.com/i/spaces/1kvKpMepaqOGE?s=20","organizer":"3mpwrApp & EveryCanadianCounts","imageUrl":"","attendeeCount":0,"tags":["advocacy","petition","accessibility","inclusive-democracy","canada","x-spaces","facebook"],"status":"published"}],"pagination":{"page":1,"limit":50,"total":46,"pages":1},"metadata":{"generatedAt":"2025-11-08T19:29:03.951Z","source":"Firestore REST API","environment":"production"}}
+[
+  {
+    "id": "evt-hdiwg-iwh-persistent-pain-presentation",
+    "title": "HDIWG - Institute for Work & Health: Persistent Pain Research Presentation",
+    "description": "Hamilton & District Injured Workers Group (HDIWG) is hosting the Institute for Work and Health for a presentation about their research on Persistent Pain following a work-related injury or illness.\n\nA Q & A session will follow the presentation.\n\nIn-Person: 709 Barton Street E, Hamilton\n• Please arrive at least 15 minutes early to settle in\n\nNot feeling well? Can't make it in-person?\n• Register to receive the Zoom link: https://us06web.zoom.us/meeting/register/OD1_phD8QtmdjE0M97KsHg#/registration\n\nWe are looking forward to this educational opportunity!\n\nMore info: hdiwg.net",
+    "date": "2025-12-01T13:00:00-05:00",
+    "location": "709 Barton Street E, Hamilton, ON",
+    "isVirtual": true,
+    "virtualLink": "https://us06web.zoom.us/meeting/register/OD1_phD8QtmdjE0M97KsHg#/registration",
+    "category": "educational",
+    "tags": [
+      "injured-workers",
+      "hamilton",
+      "persistent-pain",
+      "research",
+      "health",
+      "iwh",
+      "hdiwg"
+    ],
+    "organizer": "Hamilton & District Injured Workers Group (HDIWG)",
+    "organizerContact": "hdiwg.net",
+    "status": "published",
+    "registrationRequired": true,
+    "registrationLink": "https://us06web.zoom.us/meeting/register/OD1_phD8QtmdjE0M97KsHg#/registration",
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Hybrid event with both in-person and virtual attendance options. Please arrive 15 minutes early if attending in-person."
+  },
+  {
+    "id": "evt-oniwg-rally-dec8-2025",
+    "title": "ONIWG - Support Injured Workers Rally",
+    "description": "Join the Ontario Network of Injured Workers Groups (ONIWG) as we rally to support injured workers and demand justice for those who have been harmed on the job.\n\nStand with injured workers as we advocate for:\n• Fair treatment and adequate support for injured workers\n• Proper workplace safety enforcement\n• Access to necessary medical care and rehabilitation\n• Dignity and respect for all injured workers\n\nYour presence matters. Together we can make a difference for injured workers across Ontario.",
+    "date": "2025-12-08T11:00:00-05:00",
+    "location": "Ministry of Labour, 400 University Ave, Toronto, ON",
+    "isVirtual": false,
+    "category": "rally",
+    "tags": [
+      "injured-workers",
+      "ontario",
+      "advocacy",
+      "oniwg",
+      "workers-rights"
+    ],
+    "organizer": "Ontario Network of Injured Workers Groups (ONIWG)",
+    "status": "published",
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "medium"
+  },
+  {
+    "id": "evt-tmu-surviving-to-thriving-dec3-2025",
+    "title": "From Surviving to Thriving - Every Canadian Counts",
+    "description": "Join Hubert Van Niekerk Sr., alongside researchers Dr. Christine Sheppard and Dr. Nadia Carvalho at this free hybrid event.\n\nHosted by Toronto Metropolitan University's Centre for Excellence in Research on Community (CERC), this event explores pathways from surviving to thriving for people with disabilities.\n\nHybrid Event:\n• In-Person: Toronto Metropolitan University\n• Virtual: Zoom (link provided upon registration)\n\nRegister: https://buff.ly/OTYRZg0r\n\nLearn more: everycanadiancounts.com",
+    "date": "2025-12-03T14:30:00-05:00",
+    "location": "Toronto Metropolitan University, Toronto, ON",
+    "isVirtual": true,
+    "virtualLink": "https://buff.ly/OTYRZg0r",
+    "category": "educational",
+    "tags": [
+      "disability-rights",
+      "research",
+      "toronto",
+      "tmu",
+      "cerc",
+      "every-canadian-counts",
+      "hybrid-event"
+    ],
+    "organizer": "Toronto Metropolitan University - CERC & Every Canadian Counts",
+    "organizerContact": "everycanadiancounts.com",
+    "status": "published",
+    "registrationRequired": true,
+    "registrationLink": "https://buff.ly/OTYRZg0r",
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Free hybrid event with both in-person and virtual attendance options."
+  },
+  {
+    "id": "evt-disability-poverty-canada-dec3-2025",
+    "title": "Disability Poverty in Canada: Learning from Today to Make Tomorrow Better",
+    "description": "Join us for the launch of the 3rd Annual Disability Poverty Report Card!\n\nHear from lived experts, advocates, and researchers as people with disabilities, service providers, and policy researchers come together to share knowledge and lived experiences on equal footing.\n\nDiscover where we can partner to effect systemic change and work toward ending disability poverty in Canada.\n\nTwo Streams Available:\n• Stream A: https://plan-9.hubspotpagebuilder.com/dec-3-research-symposium-stream-a\n• Stream B: https://plan-9.hubspotpagebuilder.com/2025-dec-3-research-symposium-stream-b\n\nFor more information: https://www.disabilitywithoutpoverty.ca\n\n#IDPD2025 #DisabilityWithoutPoverty #EndDisabilityPoverty",
+    "date": "2025-12-03T10:00:00-05:00",
+    "location": "Virtual Event",
+    "isVirtual": true,
+    "virtualLink": "https://www.disabilitywithoutpoverty.ca",
+    "category": "advocacy",
+    "tags": [
+      "disability-poverty",
+      "advocacy",
+      "research",
+      "idpd2025",
+      "disability-without-poverty",
+      "report-card",
+      "symposium"
+    ],
+    "organizer": "Disability Without Poverty",
+    "organizerContact": "https://www.disabilitywithoutpoverty.ca",
+    "status": "published",
+    "registrationRequired": true,
+    "registrationLink": "https://plan-9.hubspotpagebuilder.com/dec-3-research-symposium-stream-a",
+    "captions": true,
+    "asl": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Two streams available for registration. Virtual event with captions and ASL interpretation."
+  },
+  {
+    "id": "evt-intl-migrants-day-vigil-dec18-2025",
+    "title": "International Migrants Day - Vigil and Community Action",
+    "description": "Vigil and Community Action at the Chinese Railroad Workers Memorial in Toronto for International Migrants Day.\n\nInjured Workers and Migrant Workers United Call for:\n• Fair Compensation\n• Health Care Access\n• Elimination of Age Discrimination\n• End to Racist Policies and Practices\n\nOpen Letter from Injured Workers and Injured Migrant Workers:\nhttps://docs.google.com/document/d/15sTqqSsqLiqkj/edit\n\nWe call on the Federal Government, the Government of Ontario, and the WSIB to uphold the rights of injured workers and migrant workers in Canada without delay. Every worker deserves the right to live and work in safe and fair conditions. No worker should face discrimination or barriers to essential healthcare, fair compensation, or equal treatment.\n\nWe demand justice for injured workers and migrant workers!\nAn injury to one is an injury to all!\n\nIn Solidarity,\nMembers of the Injured Workers Action for Justice & Justice for Migrant Workers\n\nMore info: https://www.facebook.com/justiceforinjuredworkers",
+    "date": "2025-12-18T18:00:00-05:00",
+    "location": "Chinese Railroad Workers Memorial, 9 Blue Jays Way, Toronto, ON M5V 3S2 (near Spadina Ave & Front St W)",
+    "isVirtual": false,
+    "category": "vigil",
+    "tags": [
+      "injured-workers",
+      "migrant-workers",
+      "international-migrants-day",
+      "toronto",
+      "wsib",
+      "advocacy",
+      "workers-rights",
+      "vigil",
+      "community-action"
+    ],
+    "organizer": "Injured Workers Action for Justice & Justice for Migrant Workers",
+    "organizerContact": "https://www.facebook.com/justiceforinjuredworkers",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "medium",
+    "accessibilityNotes": "Outdoor vigil at the Chinese Railroad Workers Memorial. Near Spadina Ave & Front St W. Map: https://maps.app.goo.gl/VcC5Ggxvc1Sn2kAXA"
+  },
+  {
+    "id": "evt-tbdiwsg-dec16-2025",
+    "title": "TBDIWSG Tuesday Information Session ZOOM",
+    "description": "Thunder Bay & District Injured Workers Support Group\nDec 16 – Guest Kevon Stewart, District 6 Director, USW\n\nKevon will discuss in the presentation:\n• The criminal liability and prosecution of organizations who do not follow the Westray law.\n• Why enforcement of the Westray law is not currently happening.\n• The actions USW District 6 is taking for more dedicated investigators, prosecutors, and training for legal and police officials.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2025-12-16T10:00:00-05:00",
+    "endDate": "2025-12-16T12:00:00-05:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "community",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "zoom",
+      "information-session",
+      "westray-law",
+      "usw",
+      "workers-rights"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "registrationLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "captions": false,
+    "asl": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link."
+  },
+  {
+    "id": "evt-ecc-x-spaces-jan7-2026",
+    "title": "X Spaces: EveryCanadianCounts Petition Education",
+    "description": "Join 3mpwr App & Every Canadian Counts for an educational X Spaces discussion on petition e-6746 about Canada's commitment to accessible, inclusive democracy.\n\nGuest: @HubertVan\n\nTopic: Education on petition e-6746 about Canada's commitment to accessible, inclusive democracy\n\nDeadline Alert: Petition ends January 9th!\n\nPetition Details: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746\n\nAlso available on Facebook: https://www.facebook.com/share/1aqvdEuATC/",
+    "date": "2026-01-07T19:00:00-05:00",
+    "location": "Virtual - X Spaces",
+    "isVirtual": true,
+    "virtualLink": "https://x.com/i/spaces/1mnGeNlkXzAJX?s=20",
+    "category": "community",
+    "tags": [
+      "every-canadian-counts",
+      "3mpwr-app",
+      "petition-e-6746",
+      "accessible-democracy",
+      "civic-engagement",
+      "x-spaces",
+      "community"
+    ],
+    "organizer": "3mpwr App & Every Canadian Counts",
+    "organizerContact": "everycanadiancounts.com",
+    "status": "published",
+    "registrationRequired": false,
+    "captions": false,
+    "asl": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual X Spaces event. Also available on Facebook: https://www.facebook.com/share/1aqvdEuATC/"
+  },
+  {
+    "id": "evt-ecc-x-spaces-jan8-2026",
+    "title": "X Spaces: EveryCanadianCounts Petition Education (Day 2)",
+    "description": "Join 3mpwr App & Every Canadian Counts for Day 2 of the educational X Spaces discussion on petition e-6746 about Canada's commitment to accessible, inclusive democracy.\n\nGuest: @HubertVan\n\nTopic: Continued discussion on petition e-6746\n\n⚠️ Deadline Alert: Petition ends January 9th!\n\nPetition Details: https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-6746\n\nAlso available on Facebook: https://www.facebook.com/share/1aTbEERmm1/",
+    "date": "2026-01-08T16:00:00-05:00",
+    "location": "Virtual - X Spaces",
+    "isVirtual": true,
+    "virtualLink": "https://x.com/i/spaces/1kvKpMepaqOGE?s=20",
+    "category": "community",
+    "tags": [
+      "every-canadian-counts",
+      "3mpwr-app",
+      "petition-e-6746",
+      "accessible-democracy",
+      "civic-engagement",
+      "x-spaces",
+      "community"
+    ],
+    "organizer": "3mpwr App & Every Canadian Counts",
+    "organizerContact": "everycanadiancounts.com",
+    "status": "published",
+    "registrationRequired": false,
+    "captions": false,
+    "asl": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual X Spaces event. Day 2 of petition education series. Also available on Facebook: https://www.facebook.com/share/1aTbEERmm1/"
+  },
+  {
+    "id": "evt-tbiwsg-jim-stanford-jan13-2026",
+    "title": "TBDIWSG: Jim Stanford on Trump Trade War & Canada's Response",
+    "description": "Thunder Bay & District Injured Workers Support Group presents Jim Stanford, Economist and Director of the Centre for Future Work.\n\nTopic: The current state of the Trump trade war and what Canada needs to do to respond.\n\nJim Stanford is one of Canada's best-known economic commentators. He served for over 20 years as Economist and Director of Policy with Unifor, Canada's largest private-sector trade union (formerly the Canadian Auto Workers). He is quoted frequently in the print and broadcast media, and writes a regular column for the Toronto Star.\n\nJim is also the Harold Innis Industry Professor in Economics at McMaster University in Hamilton, Canada, and an Honorary Professor in the Department of Political Economy at the University of Sydney. He has also served for many years as a Research Associate and volunteer with the Canadian Centre for Policy Alternatives.\n\nFrom 2016 through 2024, Jim also served as founding Director of the Australian Centre for Future Work.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-01-13T10:00:00-05:00",
+    "endDate": "2026-01-13T12:00:00-05:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://fb.me/e/aLBFf5ifh",
+    "category": "educational",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "economics",
+      "trade-policy",
+      "tbiwsg",
+      "zoom",
+      "labour-economics"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "completed",
+    "registrationRequired": false,
+    "captions": false,
+    "asl": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link."
+  },
+  {
+    "id": "evt-tbiwsg-family-focus-group-jan15-2026",
+    "title": "TBDIWSG: Family Members Focus Group - Workplace Injury Impact",
+    "description": "Have you supported a loved one who has been off work for 3 months or longer due to a workplace injury or illness?\n\nLakehead University, the Thunder Bay & District Injured Workers Support Group, and EPID@Work invite family members of injured workers to participate in an in-person focus group to share their experiences and perspectives.\n\nThis research aims to better understand the emotional, financial, and day-to-day impacts workplace injuries and illnesses have on families — impacts that are too often overlooked.\n\n**Who can participate?**\nFamily members (partners, spouses, parents, adult children, or close relatives) of workers who:\n• Have had a workplace injury or illness, and\n• Are currently off work or have been off work for 3+ months\n\n**What's involved:**\n• A 2-hour, guided group discussion\n• Confidential and respectful environment\n• Participants receive a $50 gift card\n• Light dinner provided\n\n📌 Future dates (including online options) are available if you cannot attend this session.\n\n👉 To participate: Complete the survey linked on the flyer or scan the QR code\n\nFor more information, contact Steve at (807) 767-9633\n\nYour voice matters. Families deserve to be heard.\n\nhttps://thunderbayinjuredworkers.com/\nhttps://www.facebook.com/share/1DTUGncJpm/",
+    "date": "2026-01-15T18:00:00-05:00",
+    "endDate": "2026-01-15T20:00:00-05:00",
+    "location": "OPSEU Member Centre, Thunder Bay (beside Merla Mae)",
+    "isVirtual": false,
+    "category": "community",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "research",
+      "family-support",
+      "focus-group",
+      "lakehead-university",
+      "tbiwsg"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group, Lakehead University & EPID@Work",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "registrationLink": "https://www.facebook.com/share/1DTUGncJpm/",
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "medium",
+    "accessibilityNotes": "In-person focus group at OPSEU Member Centre. Light dinner provided. $50 gift card honorarium for participants. Contact Steve at (807) 767-9633 for more information."
+  },
+  {
+    "id": "evt-teddy-peer-support-jan14",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-01-14T10:00:00-05:00",
+    "endDate": "2026-01-14T12:00:00-05:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121. Check website if meeting is cancelled or moved."
+  },
+  {
+    "id": "evt-teddy-peer-support-jan21",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-01-21T10:00:00-05:00",
+    "endDate": "2026-01-21T12:00:00-05:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-jan28",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-01-28T10:00:00-05:00",
+    "endDate": "2026-01-28T12:00:00-05:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-feb04",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-02-04T10:00:00-05:00",
+    "endDate": "2026-02-04T12:00:00-05:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-feb11",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-02-11T10:00:00-05:00",
+    "endDate": "2026-02-11T12:00:00-05:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-feb18",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-02-18T10:00:00-05:00",
+    "endDate": "2026-02-18T12:00:00-05:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-feb25",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-02-25T10:00:00-05:00",
+    "endDate": "2026-02-25T12:00:00-05:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-mar04",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-03-04T10:00:00-05:00",
+    "endDate": "2026-03-04T12:00:00-05:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-mar11",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-03-11T10:00:00-05:00",
+    "endDate": "2026-03-11T12:00:00-05:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-mar18",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-03-18T10:00:00-04:00",
+    "endDate": "2026-03-18T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-mar25",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-03-25T10:00:00-04:00",
+    "endDate": "2026-03-25T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-apr01",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-04-01T10:00:00-04:00",
+    "endDate": "2026-04-01T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-apr08",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-04-08T10:00:00-04:00",
+    "endDate": "2026-04-08T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-apr15",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-04-15T10:00:00-04:00",
+    "endDate": "2026-04-15T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-apr22",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-04-22T10:00:00-04:00",
+    "endDate": "2026-04-22T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-apr29",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-04-29T10:00:00-04:00",
+    "endDate": "2026-04-29T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-may06",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-05-06T10:00:00-04:00",
+    "endDate": "2026-05-06T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-may13",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-05-13T10:00:00-04:00",
+    "endDate": "2026-05-13T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-may20",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-05-20T10:00:00-04:00",
+    "endDate": "2026-05-20T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-teddy-peer-support-may27",
+    "title": "Teddy Peer Support - Weekly Breakfast Meetup",
+    "description": "Join us every Wednesday for Teddy Peer Support at OPSEU OR Casino Restaurant.\n\n📍 326 Memorial Ave, Thunder Bay\n🍳 Breakfast provided\n\n**Important:**\nIf the meeting is cancelled or moved, please check website or call Teddy before attending.\n\nPlease call ahead to confirm the location: 1-807-631-3121\n\nVisit Website: https://thunderbayinjuredworkers.com/\nFacebook: https://www.facebook.com/share/1CFJSmob5m/",
+    "date": "2026-05-27T10:00:00-04:00",
+    "endDate": "2026-05-27T12:00:00-04:00",
+    "location": "OPSEU OR Casino Restaurant, 326 Memorial Ave, Thunder Bay",
+    "isVirtual": false,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "peer-support",
+      "weekly",
+      "breakfast",
+      "tbiwsg",
+      "community"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "1-807-631-3121",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Weekly Wednesday meetup. Breakfast provided. Call ahead to confirm location: 1-807-631-3121."
+  },
+  {
+    "id": "evt-tbiwsg-glenn-shore-jan20-2026",
+    "title": "TBDIWSG: Glenn Shore - US National Commission on State Workmen's Compensation Laws",
+    "description": "Thunder Bay & District Injured Workers Support Group presents Glenn Shore discussing the US National Commission on State Workmen's Compensation Laws (1972).\n\n**Topic:**\nIn 1970, with the passage of the first federal Occupational Safety and Health Act (OSHA), there was an acknowledgement that state workers compensation systems were ineffective at injury prevention and that there was need for a federal OSH regulatory system to serve that purpose. The OSHA act included a section establishing a National Commission on State Workmen's Compensation Laws to \"determine if such laws provide an adequate, prompt, and equitable system of compensation\" for work related injury, illness and fatalities.\n\nThe Commission, appointed by then president Richard Nixon and comprised of representatives from business, labor, insurance, state WC programs, claimant and defense attorneys defined a purpose and role for the state programs, and evaluated whether the states were meeting that goal. The Commission concluded unanimously that primary responsibility for the program at the state level should be \"conserved\" but noting that if the states could not make significant improvement in their programs, that there may be a place for federal minimum standards, in the manner that the OSHA act allowed for state control only if the states were \"least as effective as\" the national program.\n\nThis presentation will discuss the Commission's work and what happened after the Report was finalized in 1972.\n\n**About Glenn Shore:**\nGlenn Shore is a Continuing Lecturer at UC Berkeley School of Public Health with teaching experience at Cal State Hayward, San Francisco State University, and Sacramento State University. He is a retired public policy and research analyst with the California State Department of Industrial Relations, Cal/OSHA, and Division of Workers' Compensation with more than 30 years of experience.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-01-20T10:00:00-05:00",
+    "endDate": "2026-01-20T12:00:00-05:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "educational",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "workers-compensation",
+      "history",
+      "tbiwsg",
+      "zoom",
+      "osha",
+      "labour-policy"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": false,
+    "captions": false,
+    "asl": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link. More info: https://thunderbayinjuredworkers.com/tuesday-events/"
+  },
+  {
+    "id": "evt-tbiwsg-ndp-bill-meredith-act-jan22-2026",
+    "title": "TBDIWSG: Community Meeting - NDP Bill Restoring Meredith Act Principles",
+    "description": "Workers in Thunder Bay have been clear: the current WSIB system isn't working. Instead of protecting injured workers, it's funneling money back to corporations, leaving people and families to bear the costs of workplace injuries.\n\nThat's why the Thunder Bay & District Injured Workers Support Group is hosting a community meeting to discuss the new NDP bill restoring the principles of the Meredith Act and to hear directly from workers affected by these changes.\n\n**When:** Thursday, Jan. 22, 2026\n**Where:** OPSEU: 326 Memorial Ave., Thunder Bay OR online\n**Time:** Doors Open: 6:00 P.M. | Presentation: 7:00 P.M.\n**Light meal provided**\n\n**RSVP:** https://forms.gle/dT7vhyzd7L91P2uV8\n\nThis is your chance to learn, ask questions, and show your support for a system that puts injured workers first. Everyone's voice matters—please join us.\n\nLet's make sure workers in Thunder Bay and across Ontario get the protection they deserve.\n\nhttps://thunderbayinjuredworkers.com/",
+    "date": "2026-01-22T18:00:00-05:00",
+    "endDate": "2026-01-22T20:00:00-05:00",
+    "location": "OPSEU: 326 Memorial Ave., Thunder Bay",
+    "isVirtual": true,
+    "category": "community",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "wsib",
+      "advocacy",
+      "ndp",
+      "meredith-act",
+      "tbiwsg",
+      "hybrid-event",
+      "workers-rights"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "registrationLink": "https://forms.gle/dT7vhyzd7L91P2uV8",
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "medium",
+    "accessibilityNotes": "Hybrid event - both in-person and online options available. Light meal provided for in-person attendees. Doors open 6:00 PM, presentation starts 7:00 PM. RSVP required."
+  },
+  {
+    "id": "evt-tbiwsg-iwc-rights-dont-retire-jan27-2026",
+    "title": "TBDIWSG: Rights Don't Retire Campaign Review with IWC",
+    "description": "Thunder Bay & District Injured Workers Support Group presents our friends at Injured Workers Community Legal Clinic (IWC).\n\nJohn McKinnon will review the Rights Don't Retire campaign to date, discuss the next steps in the campaign, and discuss why people with an age 65 cut off recently or in the near future might want to get into the appeal system and how to do this.\n\n**Key Topics:**\n• Review of the Rights Don't Retire campaign progress\n• Next steps for the campaign\n• Age 65 cut-off appeals: Why it matters\n• How to navigate the appeal system\n• Your rights and options\n\nThis session is essential for anyone affected by the age 65 cut-off or supporting someone who is.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-01-27T10:00:00-05:00",
+    "endDate": "2026-01-27T12:00:00-05:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "educational",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "rights-dont-retire",
+      "iwc",
+      "legal-clinic",
+      "age-65-cutoff",
+      "appeals",
+      "tbiwsg",
+      "zoom",
+      "wsib"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group & Injured Workers Community Legal Clinic",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": false,
+    "captions": false,
+    "asl": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link. More info: https://thunderbayinjuredworkers.com/tuesday-events/"
+  },
+  {
+    "id": "evt-j4mw-ei-class-action-hearing-jan2026",
+    "title": "Justice for Migrant Workers: EI Class Action Certification Hearing",
+    "description": "Justice for Migrant Workers is showing solidarity with migrant workers demanding an end to Canada's theft of EI payments.\n\n**Background:**\nSince 1966, migrant workers from the Caribbean and Mexico have contributed billions into Canada's Employment Insurance coffers. Since 2008 it is estimated that migrant farm workers have contributed half a billion dollars with unequal access.\n\nIn times of crisis such as the recent Hurricane Melissa that ravaged the island of Jamaica, migrant workers were not able to apply for benefits despite their significant need to rebuild their lives after the total devastation that many migrant workers returned home to.\n\n**The Hearing:**\nClass action certification hearing to demand an end to Canada's theft of EI benefits and equal access for all (Palmer v. Attorney General of Canada).\n\n**How to Participate:**\n• In person at Osgoode Hall\n• By Zoom (message Justice for Migrant Workers for details)\n\n**Show Your Support:**\n• Attend in person or by Zoom\n• Share and sign the petition to demand fair access to EI for all\n• Stay connected with J4MW for follow-ups\n\nMigrant workers are organizing to fight back against Canada's unjust enrichment at their expense. It's time to demand an EI system where all workers who contributed receive equal access.\n\nZoom link: https://ca01web.zoom.us/j/69438728776?pwd=tR8HBfbbFMQMWAzBbAHHNUbbGWSyg\n\nMore info: https://www.facebook.com/groups/2258183409/",
+    "date": "2026-01-20T10:00:00-05:00",
+    "endDate": "2026-01-22T17:00:00-05:00",
+    "location": "Osgoode Hall - 130 Queen St West at University Ave (Northeast corner), Toronto, ON",
+    "isVirtual": true,
+    "virtualLink": "https://ca01web.zoom.us/j/69438728776?pwd=tR8HBfbbFMQMWAzBbAHHNUbbGWSyg",
+    "category": "advocacy",
+    "tags": [
+      "migrant-workers",
+      "ei-benefits",
+      "class-action",
+      "justice-for-migrant-workers",
+      "j4mw",
+      "employment-insurance",
+      "workers-rights",
+      "toronto",
+      "osgoode-hall"
+    ],
+    "organizer": "Justice for Migrant Workers (J4MW)",
+    "organizerContact": "https://www.facebook.com/groups/2258183409/",
+    "status": "published",
+    "registrationRequired": false,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "energyCost": "medium",
+    "accessibilityNotes": "Hybrid event with both in-person and virtual attendance options. Message Justice for Migrant Workers for Zoom details. In-person location is Osgoode Hall, a historic courthouse with wheelchair accessibility."
+  },
+  {
+    "id": "evt-tbiwsg-harry-glasbeek-feb3-2026",
+    "title": "TBDIWSG: Professor Harry Glasbeek - Corporate Crime & Worker Rights",
+    "description": "Thunder Bay & District Injured Workers Support Group presents Professor Harry Glasbeek.\n\n**About the Speaker:**\nHarry Glasbeek is professor emeritus and Senior Scholar of Osgoode Hall Law School, York University. He has taught in both Australia and Canada and has written 140 articles and 12 books, including Between the Lines titles:\n• Wealth by Stealth: Corporate Crime, Corporate Law, and the Perversion of Democracy\n• Class Privilege: How Law Shelters Shareholders and Coddles Capitalism\n• Capitalism: A Crime Story\n\nProfessor Glasbeek brings decades of expertise on corporate accountability, worker rights, and the legal structures that shape workplace safety and compensation systems.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-02-03T10:00:00-05:00",
+    "endDate": "2026-02-03T12:00:00-05:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "educational",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "corporate-crime",
+      "worker-rights",
+      "legal",
+      "harry-glasbeek",
+      "tbiwsg",
+      "zoom",
+      "corporate-accountability"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link. More info: https://thunderbayinjuredworkers.com/tuesday-events/"
+  },
+  {
+    "id": "evt-tbiwsg-iwc-feb10-2026",
+    "title": "TBDIWSG: IWC - Ideas & Inspiration Session",
+    "description": "Thunder Bay & District Injured Workers Support Group presents Injured Workers Community Legal Clinic (IWC).\n\n**Session Topic:**\n\"Ideas, people, songs, poems etc. that give us inspiration in difficult times\"\n\nJoin us for an uplifting session exploring sources of inspiration and hope while navigating the challenges of workplace injury and WSIB.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-02-10T10:00:00-05:00",
+    "endDate": "2026-02-10T12:00:00-05:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "iwc",
+      "inspiration",
+      "mental-health",
+      "support",
+      "tbiwsg",
+      "zoom"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link. More info: https://thunderbayinjuredworkers.com/tuesday-events/"
+  },
+  {
+    "id": "evt-tbiwsg-charlie-angus-feb17-2026",
+    "title": "TBDIWSG: Charlie Angus - Workers' Rights & Advocacy",
+    "description": "Thunder Bay & District Injured Workers Support Group presents Charlie Angus.\n\n**About the Speaker:**\nCharlie Angus is a Canadian New Democratic Party (NDP) Member of Parliament, representing Timmins—James Bay. He has been a strong advocate for workers' rights, Indigenous rights, and social justice throughout his political career.\n\nJoin us for an engaging discussion on workers' rights, advocacy, and the challenges facing injured workers in Ontario and across Canada.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-02-17T10:00:00-05:00",
+    "endDate": "2026-02-17T12:00:00-05:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "advocacy",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "charlie-angus",
+      "ndp",
+      "workers-rights",
+      "advocacy",
+      "tbiwsg",
+      "zoom"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link. More info: https://thunderbayinjuredworkers.com/tuesday-events/"
+  },
+  {
+    "id": "evt-tbiwsg-sarah-rhodes-feb24-2026",
+    "title": "TBDIWSG: Sarah Rhodes - Occupational Disease Recognition",
+    "description": "Thunder Bay & District Injured Workers Support Group presents Sarah Rhodes on Occupational Disease and the challenges of getting recognition.\n\n**Topic:**\nUnderstanding occupational diseases and navigating the complex process of getting proper recognition and compensation through the workers' compensation system.\n\n**Key Areas:**\n• What constitutes occupational disease\n• Challenges in proving work-relatedness\n• Medical evidence and documentation requirements\n• Appeals and advocacy strategies\n• Support resources available\n\nThis session is crucial for workers dealing with occupational diseases or supporting those who are.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-02-24T10:00:00-05:00",
+    "endDate": "2026-02-24T12:00:00-05:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "educational",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "occupational-disease",
+      "sarah-rhodes",
+      "wsib",
+      "compensation",
+      "tbiwsg",
+      "zoom"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link. More info: https://thunderbayinjuredworkers.com/tuesday-events/"
+  },
+  {
+    "id": "evt-tbiwsg-iwc-march10-2026",
+    "title": "TBDIWSG: IWC Legal Clinic Session",
+    "description": "Thunder Bay & District Injured Workers Support Group presents Injured Workers Community Legal Clinic (IWC).\n\nJoin us for essential information about your rights as an injured worker, legal resources, and navigating the workers' compensation system.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-03-10T10:00:00-05:00",
+    "endDate": "2026-03-10T12:00:00-05:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "support",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "iwc",
+      "legal-clinic",
+      "worker-rights",
+      "tbiwsg",
+      "zoom"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link. More info: https://thunderbayinjuredworkers.com/tuesday-events/"
+  },
+  {
+    "id": "evt-tbiwsg-lakehead-probono-march31-2026",
+    "title": "TBDIWSG: Lakehead University Law School Pro Bono Students",
+    "description": "Thunder Bay & District Injured Workers Support Group presents Lakehead University Law School Pro Bono students.\n\nLaw students from Lakehead University's Pro Bono program will share information about legal resources, advocacy support, and assistance available for injured workers.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-03-31T10:00:00-04:00",
+    "endDate": "2026-03-31T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "educational",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "lakehead-university",
+      "law-school",
+      "pro-bono",
+      "legal-support",
+      "tbiwsg",
+      "zoom"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link. More info: https://thunderbayinjuredworkers.com/tuesday-events/"
+  },
+  {
+    "id": "evt-tbiwsg-mobile-labour-june16-2026",
+    "title": "TBDIWSG: Occupational Safety & Health - Mobile Labour Force",
+    "description": "Thunder Bay & District Injured Workers Support Group presents a session on Occupational Safety and Health and Canada's mobile labour force: Obstacles to regulatory effectiveness.\n\n**Topic:**\nExploring the unique challenges and regulatory gaps affecting mobile workers, including:\n• Safety challenges for workers who move between job sites\n• Jurisdictional issues in regulation enforcement\n• Barriers to effective health and safety oversight\n• Rights and protections for mobile workers\n• Advocacy and reform opportunities\n\nThis session examines the critical intersection of worker mobility, safety regulation, and effective enforcement.\n\nContact us at tbiwsg@gmail.com if you want to join us for these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-06-16T10:00:00-04:00",
+    "endDate": "2026-06-16T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "category": "educational",
+    "tags": [
+      "injured-workers",
+      "thunder-bay",
+      "occupational-safety",
+      "mobile-workers",
+      "regulatory-effectiveness",
+      "worker-safety",
+      "tbiwsg",
+      "zoom"
+    ],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": false,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event. Contact tbiwsg@gmail.com to receive the Zoom link. More info: https://thunderbayinjuredworkers.com/tuesday-events/"
+  },
+  {
+    "id": "holiday-2026-01-01",
+    "title": "New Year's Day",
+    "description": "Federal holiday",
+    "date": "2026-01-01",
+    "location": "Canada"
+  },
+  {
+    "id": "holiday-2026-02-16-family",
+    "title": "Family Day (Most Provinces)",
+    "description": "Observed in many provinces",
+    "date": "2026-02-16",
+    "location": "Canada"
+  },
+  {
+    "id": "holiday-2026-04-03-goodfriday",
+    "title": "Good Friday",
+    "description": "Federal holiday",
+    "date": "2026-04-03",
+    "location": "Canada"
+  },
+  {
+    "id": "holiday-2026-05-18-victoria",
+    "title": "Victoria Day",
+    "description": "Federal holiday",
+    "date": "2026-05-18",
+    "location": "Canada"
+  },
+  {
+    "id": "holiday-2026-07-01",
+    "title": "Canada Day",
+    "description": "Federal holiday",
+    "date": "2026-07-01",
+    "location": "Canada"
+  },
+  {
+    "id": "holiday-2026-09-07-labour",
+    "title": "Labour Day",
+    "description": "Federal holiday",
+    "date": "2026-09-07",
+    "location": "Canada"
+  },
+  {
+    "id": "holiday-2026-10-12-thanks",
+    "title": "Thanksgiving",
+    "description": "Federal holiday",
+    "date": "2026-10-12",
+    "location": "Canada"
+  },
+  {
+    "id": "holiday-2026-11-11",
+    "title": "Remembrance Day",
+    "description": "Federal holiday",
+    "date": "2026-11-11",
+    "location": "Canada"
+  },
+  {
+    "id": "holiday-2026-12-25",
+    "title": "Christmas Day",
+    "description": "Federal holiday",
+    "date": "2026-12-25",
+    "location": "Canada"
+  },
+  {
+    "id": "holiday-2026-12-26",
+    "title": "Boxing Day",
+    "description": "Federal holiday",
+    "date": "2026-12-26",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-01-04-braille",
+    "title": "World Braille Day",
+    "description": "Awareness of Braille and accessibility",
+    "date": "2026-01-04",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-03-01-wheelchair",
+    "title": "International Wheelchair Day",
+    "description": "Celebration of wheelchair users and support",
+    "date": "2026-03-01",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-04-02-autism",
+    "title": "World Autism Awareness Day",
+    "description": "Awareness and acceptance of autism",
+    "date": "2026-04-02",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-04-28-mourning",
+    "title": "National Day of Mourning",
+    "description": "Remembering workers killed, injured or made ill at work",
+    "date": "2026-04-28",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-06-01-injured-workers",
+    "title": "Injured Workers Day",
+    "description": "Solidarity with injured and ill workers",
+    "date": "2026-06-01",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-06-01-deafblind-month",
+    "title": "Deafblind Awareness Month begins",
+    "description": "Month-long observance in Canada",
+    "date": "2026-06-01",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-09-23-sign-lang",
+    "title": "International Day of Sign Languages",
+    "description": "Linguistic identity of deaf people",
+    "date": "2026-09-23",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-10-01-ndeam",
+    "title": "Disability Employment Awareness Month begins",
+    "description": "NDEAM in Canada (October)",
+    "date": "2026-10-01",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-12-03-idpd",
+    "title": "International Day of Persons with Disabilities",
+    "description": "Promoting rights and well-being",
+    "date": "2026-12-03",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-05-05-mmiwg",
+    "title": "National Day of Awareness for Missing and Murdered Indigenous Women and Girls",
+    "description": "Honoring and remembering MMIWG and 2SLGBTQQIA+ people",
+    "date": "2026-05-05",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-06-21-indigenous-peoples",
+    "title": "National Indigenous Peoples Day",
+    "description": "Celebrating Indigenous cultures and contributions",
+    "date": "2026-06-21",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-09-30-orange-shirt",
+    "title": "Orange Shirt Day (National Day for Truth and Reconciliation)",
+    "description": "Honoring residential school survivors and remembering children who never returned home",
+    "date": "2026-09-30",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-11-01-indigenous-disability",
+    "title": "Indigenous Disability Awareness Month begins",
+    "description": "Month-long observance recognizing Indigenous peoples with disabilities",
+    "date": "2026-11-01",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-02-04-world-cancer",
+    "title": "World Cancer Day",
+    "description": "Raising awareness about cancer and its prevention",
+    "date": "2026-02-04",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-02-28-rare-disease",
+    "title": "Rare Disease Day",
+    "description": "Raising awareness for rare diseases (last day of February)",
+    "date": "2026-02-28",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-03-21-down-syndrome",
+    "title": "World Down Syndrome Day",
+    "description": "Advocating for rights and inclusion of people with Down syndrome",
+    "date": "2026-03-21",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-04-07-world-health",
+    "title": "World Health Day",
+    "description": "Global health awareness",
+    "date": "2026-04-07",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-05-12-fibromyalgia",
+    "title": "Fibromyalgia Awareness Day",
+    "description": "Raising awareness about fibromyalgia",
+    "date": "2026-05-12",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-06-27-ptsd",
+    "title": "PTSD Awareness Day",
+    "description": "Raising awareness about post-traumatic stress disorder",
+    "date": "2026-06-27",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-07-11-world-population",
+    "title": "World Population Day",
+    "description": "Focus on population issues including health and rights",
+    "date": "2026-07-11",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-08-19-humanitarian",
+    "title": "World Humanitarian Day",
+    "description": "Honoring humanitarian workers and those they help",
+    "date": "2026-08-19",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-09-10-suicide-prevention",
+    "title": "World Suicide Prevention Day",
+    "description": "Raising awareness and prevention of suicide",
+    "date": "2026-09-10",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-10-10-mental-health",
+    "title": "World Mental Health Day",
+    "description": "Promoting mental health awareness and support",
+    "date": "2026-10-10",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-10-15-white-cane",
+    "title": "White Cane Safety Day",
+    "description": "Celebrating achievements of people who are blind or visually impaired",
+    "date": "2026-10-15",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-11-14-diabetes",
+    "title": "World Diabetes Day",
+    "description": "Raising awareness about diabetes",
+    "date": "2026-11-14",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-12-01-world-aids",
+    "title": "World AIDS Day",
+    "description": "Raising awareness about HIV/AIDS",
+    "date": "2026-12-01",
+    "location": "Global"
+  },
+  {
+    "id": "obs-2026-05-21-gaad",
+    "title": "Global Accessibility Awareness Day",
+    "description": "Digital accessibility and inclusion awareness",
+    "date": "2026-05-21",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-05-31-naaw",
+    "title": "National AccessAbility Week (begins)",
+    "description": "Week-long observance in Canada",
+    "date": "2026-05-31",
+    "location": "Canada"
+  },
+  {
+    "id": "obs-2026-06-03-redshirt",
+    "title": "Red Shirt Day",
+    "description": "Show support for persons with disabilities",
+    "date": "2026-06-03",
+    "location": "Canada"
+  },
+  {
+    "id": "health-2026-01-national-birth-defects-prevention-month",
+    "title": "National Birth Defects Prevention Month",
+    "description": "Awareness of birth defects prevention and healthy pregnancy",
+    "date": "2026-01-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "pregnancy",
+      "birth defects",
+      "prenatal health"
+    ]
+  },
+  {
+    "id": "health-2026-01-national-glaucoma-awareness-month",
+    "title": "National Glaucoma Awareness Month",
+    "description": "Early detection and treatment of glaucoma",
+    "date": "2026-01-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "eye health",
+      "glaucoma",
+      "vision"
+    ]
+  },
+  {
+    "id": "health-2026-01-thyroid-awareness-month",
+    "title": "Thyroid Awareness Month",
+    "description": "Thyroid disease awareness and screening",
+    "date": "2026-01-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "thyroid",
+      "endocrine",
+      "autoimmune"
+    ]
+  },
+  {
+    "id": "health-2026-01-cervical-cancer-awareness-month",
+    "title": "Cervical Cancer Awareness Month",
+    "description": "Prevention and early detection of cervical cancer",
+    "date": "2026-01-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "cancer",
+      "women's health",
+      "HPV"
+    ]
+  },
+  {
+    "id": "health-2026-02-american-heart-month",
+    "title": "American Heart Month",
+    "description": "Heart disease awareness and cardiovascular health",
+    "date": "2026-02-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "heart disease",
+      "cardiovascular",
+      "stroke prevention"
+    ]
+  },
+  {
+    "id": "health-2026-02-national-cancer-prevention-month",
+    "title": "National Cancer Prevention Month",
+    "description": "Cancer prevention strategies and healthy living",
+    "date": "2026-02-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "cancer",
+      "prevention",
+      "screening"
+    ]
+  },
+  {
+    "id": "health-2026-02-eating-disorders-awareness-month",
+    "title": "Eating Disorders Awareness Month",
+    "description": "Awareness of eating disorders and treatment",
+    "date": "2026-02-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "eating disorders",
+      "mental health",
+      "anorexia",
+      "bulimia"
+    ]
+  },
+  {
+    "id": "health-2026-02-low-vision-awareness-month",
+    "title": "Low Vision Awareness Month",
+    "description": "Support for people with low vision",
+    "date": "2026-02-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "vision",
+      "accessibility",
+      "blindness"
+    ]
+  },
+  {
+    "id": "health-2026-03-national-kidney-month",
+    "title": "National Kidney Month",
+    "description": "Kidney disease awareness and prevention",
+    "date": "2026-03-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "kidney disease",
+      "dialysis",
+      "chronic kidney disease"
+    ]
+  },
+  {
+    "id": "health-2026-03-colorectal-cancer-awareness-month",
+    "title": "Colorectal Cancer Awareness Month",
+    "description": "Colon and rectal cancer screening and prevention",
+    "date": "2026-03-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "cancer",
+      "colorectal",
+      "screening"
+    ]
+  },
+  {
+    "id": "health-2026-03-endometriosis-awareness-month",
+    "title": "Endometriosis Awareness Month",
+    "description": "Awareness of endometriosis and women's health",
+    "date": "2026-03-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "endometriosis",
+      "women's health",
+      "chronic pain"
+    ]
+  },
+  {
+    "id": "health-2026-03-brain-injury-awareness-month",
+    "title": "Brain Injury Awareness Month",
+    "description": "Traumatic brain injury awareness and prevention",
+    "date": "2026-03-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "brain injury",
+      "TBI",
+      "concussion"
+    ]
+  },
+  {
+    "id": "health-2026-03-multiple-sclerosis-awareness-month",
+    "title": "Multiple Sclerosis Awareness Month",
+    "description": "MS awareness and support",
+    "date": "2026-03-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "MS",
+      "autoimmune",
+      "neurological"
+    ]
+  },
+  {
+    "id": "health-2026-04-autism-acceptance-month",
+    "title": "Autism Acceptance Month",
+    "description": "Autism awareness and acceptance",
+    "date": "2026-04-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "autism",
+      "neurodiversity",
+      "developmental"
+    ]
+  },
+  {
+    "id": "health-2026-04-parkinson-s-awareness-month",
+    "title": "Parkinson's Awareness Month",
+    "description": "Parkinson's disease awareness",
+    "date": "2026-04-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "Parkinson's",
+      "neurological",
+      "movement disorders"
+    ]
+  },
+  {
+    "id": "health-2026-04-national-donate-life-month",
+    "title": "National Donate Life Month",
+    "description": "Organ and tissue donation awareness",
+    "date": "2026-04-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "organ donation",
+      "transplant",
+      "life saving"
+    ]
+  },
+  {
+    "id": "health-2026-04-testicular-cancer-awareness-month",
+    "title": "Testicular Cancer Awareness Month",
+    "description": "Early detection of testicular cancer",
+    "date": "2026-04-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "cancer",
+      "men's health",
+      "testicular"
+    ]
+  },
+  {
+    "id": "health-2026-04-ibs-awareness-month",
+    "title": "IBS Awareness Month",
+    "description": "Irritable bowel syndrome awareness",
+    "date": "2026-04-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "IBS",
+      "digestive",
+      "chronic illness"
+    ]
+  },
+  {
+    "id": "health-2026-05-mental-health-awareness-month",
+    "title": "Mental Health Awareness Month",
+    "description": "Mental health awareness and stigma reduction",
+    "date": "2026-05-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "mental health",
+      "depression",
+      "anxiety",
+      "wellness"
+    ]
+  },
+  {
+    "id": "health-2026-05-arthritis-awareness-month",
+    "title": "Arthritis Awareness Month",
+    "description": "Arthritis awareness and treatment",
+    "date": "2026-05-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "arthritis",
+      "chronic pain",
+      "joint health"
+    ]
+  },
+  {
+    "id": "health-2026-05-lupus-awareness-month",
+    "title": "Lupus Awareness Month",
+    "description": "Systemic lupus awareness",
+    "date": "2026-05-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "lupus",
+      "autoimmune",
+      "chronic illness"
+    ]
+  },
+  {
+    "id": "health-2026-05-skin-cancer-awareness-month",
+    "title": "Skin Cancer Awareness Month",
+    "description": "Skin cancer prevention and detection",
+    "date": "2026-05-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "skin cancer",
+      "melanoma",
+      "sun safety"
+    ]
+  },
+  {
+    "id": "health-2026-05-ehlers-danlos-syndrome-awareness-month",
+    "title": "Ehlers-Danlos Syndrome Awareness Month",
+    "description": "EDS and hypermobility disorders awareness",
+    "date": "2026-05-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "EDS",
+      "connective tissue",
+      "rare disease"
+    ]
+  },
+  {
+    "id": "health-2026-05-celiac-disease-awareness-month",
+    "title": "Celiac Disease Awareness Month",
+    "description": "Celiac disease and gluten sensitivity",
+    "date": "2026-05-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "celiac",
+      "autoimmune",
+      "digestive"
+    ]
+  },
+  {
+    "id": "health-2026-06-ptsd-awareness-month",
+    "title": "PTSD Awareness Month",
+    "description": "Post-traumatic stress disorder awareness",
+    "date": "2026-06-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "PTSD",
+      "trauma",
+      "mental health"
+    ]
+  },
+  {
+    "id": "health-2026-06-alzheimer-s-brain-awareness-month",
+    "title": "Alzheimer's & Brain Awareness Month",
+    "description": "Alzheimer's disease and dementia awareness",
+    "date": "2026-06-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "Alzheimer's",
+      "dementia",
+      "brain health"
+    ]
+  },
+  {
+    "id": "health-2026-06-scleroderma-awareness-month",
+    "title": "Scleroderma Awareness Month",
+    "description": "Scleroderma and autoimmune disease awareness",
+    "date": "2026-06-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "scleroderma",
+      "autoimmune",
+      "rare disease"
+    ]
+  },
+  {
+    "id": "health-2026-06-myasthenia-gravis-awareness-month",
+    "title": "Myasthenia Gravis Awareness Month",
+    "description": "MG awareness and support",
+    "date": "2026-06-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "myasthenia gravis",
+      "autoimmune",
+      "neurological"
+    ]
+  },
+  {
+    "id": "health-2026-07-disability-pride-month",
+    "title": "Disability Pride Month",
+    "description": "Celebrating disability identity and rights",
+    "date": "2026-07-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "disability",
+      "accessibility",
+      "rights",
+      "pride"
+    ]
+  },
+  {
+    "id": "health-2026-07-juvenile-arthritis-awareness-month",
+    "title": "Juvenile Arthritis Awareness Month",
+    "description": "Arthritis in children and youth",
+    "date": "2026-07-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "juvenile arthritis",
+      "pediatric",
+      "autoimmune"
+    ]
+  },
+  {
+    "id": "health-2026-08-national-immunization-awareness-month",
+    "title": "National Immunization Awareness Month",
+    "description": "Vaccination and disease prevention",
+    "date": "2026-08-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "vaccines",
+      "immunization",
+      "prevention"
+    ]
+  },
+  {
+    "id": "health-2026-08-psoriasis-awareness-month",
+    "title": "Psoriasis Awareness Month",
+    "description": "Psoriasis and psoriatic arthritis awareness",
+    "date": "2026-08-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "psoriasis",
+      "autoimmune",
+      "skin health"
+    ]
+  },
+  {
+    "id": "health-2026-09-pain-awareness-month",
+    "title": "Pain Awareness Month",
+    "description": "Chronic pain awareness and management",
+    "date": "2026-09-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "chronic pain",
+      "pain management",
+      "quality of life"
+    ]
+  },
+  {
+    "id": "health-2026-09-blood-cancer-awareness-month",
+    "title": "Blood Cancer Awareness Month",
+    "description": "Leukemia, lymphoma, and myeloma awareness",
+    "date": "2026-09-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "blood cancer",
+      "leukemia",
+      "lymphoma"
+    ]
+  },
+  {
+    "id": "health-2026-09-childhood-cancer-awareness-month",
+    "title": "Childhood Cancer Awareness Month",
+    "description": "Pediatric cancer awareness and research",
+    "date": "2026-09-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "pediatric cancer",
+      "childhood cancer",
+      "gold ribbon"
+    ]
+  },
+  {
+    "id": "health-2026-09-ovarian-cancer-awareness-month",
+    "title": "Ovarian Cancer Awareness Month",
+    "description": "Ovarian cancer detection and treatment",
+    "date": "2026-09-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "ovarian cancer",
+      "women's health",
+      "gynecologic cancer"
+    ]
+  },
+  {
+    "id": "health-2026-09-polycystic-ovary-syndrome-awareness-month",
+    "title": "Polycystic Ovary Syndrome Awareness Month",
+    "description": "PCOS awareness and women's health",
+    "date": "2026-09-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "PCOS",
+      "women's health",
+      "endocrine"
+    ]
+  },
+  {
+    "id": "health-2026-09-suicide-prevention-month",
+    "title": "Suicide Prevention Month",
+    "description": "Suicide prevention and mental health support",
+    "date": "2026-09-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "suicide prevention",
+      "mental health",
+      "crisis support"
+    ]
+  },
+  {
+    "id": "health-2026-10-breast-cancer-awareness-month",
+    "title": "Breast Cancer Awareness Month",
+    "description": "Breast cancer awareness and early detection",
+    "date": "2026-10-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "breast cancer",
+      "women's health",
+      "screening"
+    ]
+  },
+  {
+    "id": "health-2026-10-national-depression-screening-month",
+    "title": "National Depression Screening Month",
+    "description": "Depression awareness and screening",
+    "date": "2026-10-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "depression",
+      "mental health",
+      "screening"
+    ]
+  },
+  {
+    "id": "health-2026-10-down-syndrome-awareness-month",
+    "title": "Down Syndrome Awareness Month",
+    "description": "Down syndrome awareness and inclusion",
+    "date": "2026-10-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "Down syndrome",
+      "intellectual disability",
+      "inclusion"
+    ]
+  },
+  {
+    "id": "health-2026-10-adhd-awareness-month",
+    "title": "ADHD Awareness Month",
+    "description": "Attention deficit hyperactivity disorder awareness",
+    "date": "2026-10-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "ADHD",
+      "neurodevelopmental",
+      "executive function"
+    ]
+  },
+  {
+    "id": "health-2026-10-domestic-violence-awareness-month",
+    "title": "Domestic Violence Awareness Month",
+    "description": "Domestic violence awareness and prevention",
+    "date": "2026-10-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "domestic violence",
+      "abuse",
+      "safety"
+    ]
+  },
+  {
+    "id": "health-2026-10-sudden-infant-death-syndrome-awareness-month",
+    "title": "Sudden Infant Death Syndrome Awareness Month",
+    "description": "SIDS prevention and safe sleep",
+    "date": "2026-10-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "SIDS",
+      "infant health",
+      "safe sleep"
+    ]
+  },
+  {
+    "id": "health-2026-11-american-diabetes-month",
+    "title": "American Diabetes Month",
+    "description": "Diabetes awareness and prevention",
+    "date": "2026-11-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "diabetes",
+      "type 1",
+      "type 2",
+      "blood sugar"
+    ]
+  },
+  {
+    "id": "health-2026-11-lung-cancer-awareness-month",
+    "title": "Lung Cancer Awareness Month",
+    "description": "Lung cancer awareness and screening",
+    "date": "2026-11-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "lung cancer",
+      "respiratory",
+      "screening"
+    ]
+  },
+  {
+    "id": "health-2026-11-national-pancreatic-cancer-awareness-month",
+    "title": "National Pancreatic Cancer Awareness Month",
+    "description": "Pancreatic cancer awareness and research",
+    "date": "2026-11-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "pancreatic cancer",
+      "cancer research",
+      "early detection"
+    ]
+  },
+  {
+    "id": "health-2026-11-chronic-obstructive-pulmonary-disease-month",
+    "title": "Chronic Obstructive Pulmonary Disease Month",
+    "description": "COPD awareness and lung health",
+    "date": "2026-11-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "COPD",
+      "respiratory",
+      "lung disease"
+    ]
+  },
+  {
+    "id": "health-2026-11-epilepsy-awareness-month",
+    "title": "Epilepsy Awareness Month",
+    "description": "Epilepsy awareness and seizure disorders",
+    "date": "2026-11-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "epilepsy",
+      "seizures",
+      "neurological"
+    ]
+  },
+  {
+    "id": "health-2026-12-world-aids-day-december-1-",
+    "title": "World AIDS Day (December 1)",
+    "description": "HIV/AIDS awareness and prevention",
+    "date": "2026-12-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "HIV",
+      "AIDS",
+      "prevention",
+      "treatment"
+    ]
+  },
+  {
+    "id": "health-2026-12-safe-toys-and-gifts-month",
+    "title": "Safe Toys and Gifts Month",
+    "description": "Child safety and injury prevention",
+    "date": "2026-12-01",
+    "location": "North America",
+    "category": "health-awareness",
+    "tags": [
+      "child safety",
+      "injury prevention",
+      "toys"
+    ]
+  },
+  {
+    "id": "health-2026-12-01-world-aids-day",
+    "title": "World AIDS Day",
+    "description": "HIV/AIDS awareness, prevention, and support",
+    "date": "2026-12-01",
+    "location": "Global",
+    "category": "health-awareness",
+    "tags": [
+      "HIV",
+      "AIDS",
+      "prevention"
+    ]
+  },
+  {
+    "id": "evt-3mpwr-tbdiwsg-mar31-2026",
+    "title": "Double Feature: 3mpwrApp Tech Demo + Workers' Rights with Jaribu Hill",
+    "description": "Pleased to invite you to an amazing double feature on March 31 at 10 AM ET on Zoom!\n\n**PART 1: Tech for Collective Power (1 hour)**\nLissa Beaulieu, creator of 3mpwrApp, hosts an interactive presentation exploring how tech can transform isolated struggles into collective power. We'll dive deep into the 3 mechanism flywheels of change built into 3mpwrApp:\n- Evidence Flywheel: Win your case while sharing knowledge\n- Collective Action Flywheel: 50+ users = systemic change campaigns\n- Knowledge Network Flywheel: AI and peer mentoring accelerate success\n\nLive demo, current app status, and Q&A. Visit: https://3mpwrapp.pages.dev/\n\n**PART 2: Civil and Human Rights Advocacy (1 hour)**\nJaribu Hill - Civil and Human Rights Attorney, Founder and Executive Director of the Mississippi Workers' Center for Human Rights. International spokesperson on Civil and Human Rights topics with experience across Asia, Africa, Europe, and the Caribbean. Attorney Hill has provided legal representation for hundreds of workers, led adoption of \"Zero Tolerance Against Hate\" policies, won judgment against the Ku Klux Klan in South Carolina, and assisted Mississippi Delta parents in their fight for school equity.\n\nContact us at tbiwsg@gmail.com to join this Zoom Session!\nMore info: https://thunderbayinjuredworkers.com/",
+    "date": "2026-03-31T10:00:00-04:00",
+    "endDate": "2026-03-31T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "3mpwr-app", "information-session", "thunder-bay", "advocacy", "technology", "zoom", "disability-rights", "systems-change"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group & 3mpwr App",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions enabled. ASL interpretation available upon request with 48 hours advance notice. Contact tbiwsg@gmail.com for accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-04-01",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-04-07T10:00:00-04:00",
+    "endDate": "2026-04-07T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-04-08",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-04-14T10:00:00-04:00",
+    "endDate": "2026-04-14T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-04-15",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-04-21T10:00:00-04:00",
+    "endDate": "2026-04-21T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-04-22",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-04-28T10:00:00-04:00",
+    "endDate": "2026-04-28T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-04-29",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-05-05T10:00:00-04:00",
+    "endDate": "2026-05-05T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-05-06",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-05-12T10:00:00-04:00",
+    "endDate": "2026-05-12T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-05-13",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-05-19T10:00:00-04:00",
+    "endDate": "2026-05-19T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-05-20",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-05-26T10:00:00-04:00",
+    "endDate": "2026-05-26T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-05-27",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-06-02T10:00:00-04:00",
+    "endDate": "2026-06-02T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-06-03",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-06-09T10:00:00-04:00",
+    "endDate": "2026-06-09T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-06-10",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-06-16T10:00:00-04:00",
+    "endDate": "2026-06-16T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-06-17",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our weekly Tuesday Information Session via Zoom. Connect with other injured workers, share experiences, get support navigating WSIB/CPP-D/ODSP, learn about advocacy tools like 3mpwr App, and build community. All injured workers, disabled people, and allies welcome. Recurring every Tuesday 10am-12pm EST through June 2026.\n\nContact us at tbiwsg@gmail.com to join these Zoom Sessions!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-06-23T10:00:00-04:00",
+    "endDate": "2026-06-23T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  },
+  {
+    "id": "evt-tbdiwsg-weekly-2026-06-24",
+    "title": "TBDIWSG Tuesday Information Session - Weekly Support (Final Session)",
+    "description": "Join Thunder Bay & District Injured Workers Support Group for our FINAL Tuesday Information Session of this series! Celebrate 3 months of connection, strategy sharing, and community building. We'll discuss next steps: monthly check-ins, quarterly gatherings, or ongoing campaign coordination. Your voice shapes what comes after. All injured workers, disabled people, and allies welcome.\n\nContact us at tbiwsg@gmail.com to join this Zoom Session!\nhttps://thunderbayinjuredworkers.com/tuesday-events/",
+    "date": "2026-06-30T10:00:00-04:00",
+    "endDate": "2026-06-30T12:00:00-04:00",
+    "location": "Virtual - Zoom",
+    "isVirtual": true,
+    "virtualLink": "https://thunderbayinjuredworkers.com/tuesday-events/",
+    "category": "community",
+    "tags": ["injured-workers", "information-session", "thunder-bay", "TBDIWSG", "weekly", "zoom", "peer-support", "advocacy", "final-session"],
+    "organizer": "Thunder Bay & District Injured Workers Support Group",
+    "organizerContact": "tbiwsg@gmail.com",
+    "status": "published",
+    "registrationRequired": true,
+    "wheelchairAccessible": true,
+    "stepFree": true,
+    "captions": true,
+    "energyCost": "low",
+    "accessibilityNotes": "Virtual Zoom event with live captions. Email 48 hours in advance for ASL interpretation or other accommodations."
+  }
+]
