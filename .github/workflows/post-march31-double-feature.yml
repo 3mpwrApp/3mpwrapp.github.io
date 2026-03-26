@@ -1,0 +1,52 @@
+name: Post March 31st Double Feature
+
+# Manual workflow to post March 31st Double Feature event
+on:
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  post_event:
+    name: Post March 31st Double Feature
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Post to social media
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          echo "📤 Posting March 31st Double Feature event..."
+          node scripts/post-march31-double-feature.js
+          
+          if [ $? -eq 0 ]; then
+            echo "✅ Successfully posted to social media"
+          else
+            echo "⚠️ Posting failed"
+            exit 1
+          fi
+
+      - name: Summary
+        run: |
+          echo "### 📣 March 31st Double Feature Posted" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Event**: Tuesday, March 31st, 10am EST" >> $GITHUB_STEP_SUMMARY
+          echo "**Posted at**: $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Posted to Mastodon, Bluesky, Discord" >> $GITHUB_STEP_SUMMARY
