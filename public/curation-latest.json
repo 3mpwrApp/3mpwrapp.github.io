@@ -1,7 +1,7 @@
 {
   "date": "2026-03-26",
-  "timestamp": "2026-03-26T10:02:43.761Z",
-  "count": 9,
+  "timestamp": "2026-03-26T21:38:34.272Z",
+  "count": 6,
   "minScore": 3.5,
   "items": [
     {
@@ -9,63 +9,42 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-03-26T10:02:43.757Z"
+      "pubDate": "2026-03-26T21:38:34.269Z"
     },
     {
-      "title": "Manitoba Government Grows Nursing Workforce as Record 45 Nurses Set to Graduate Intensive Care Unit Training",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73117",
+      "title": "Manitoba Government Invests $5 Million to Improve Food Quality for Seniors in Personal Care Homes",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73203",
       "description": "",
       "score": 9.9,
-      "pubDate": "Mon, 16 Mar 2026 14:01:00 CDT"
+      "pubDate": "Thu, 26 Mar 2026 10:34:00 CDT"
     },
     {
-      "title": "Manitoba Government Supports Indigenous Mothering Centre to Keep Mothers and Babies Together",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73098",
-      "description": "",
-      "score": 10.1,
-      "pubDate": "Thu, 12 Mar 2026 11:00:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Invests $600,000 to Support Expansion of Gaynor Family Regional Library",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73078",
-      "description": "",
-      "score": 10.1,
-      "pubDate": "Tue, 10 Mar 2026 13:30:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Announces Open House on the Future of Lemay Forest",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73103",
+      "title": "Manitoba Justice Reports In-Custody Death",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73204",
       "description": "",
       "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 13:15:00 CDT"
+      "pubDate": "Thu, 26 Mar 2026 14:50:00 CDT"
     },
     {
-      "title": "Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73102",
-      "description": "",
+      "title": "Alberta First Nations and Farmers Want Review of Massive Carbon Capture Project",
+      "link": "https://thetyee.ca/Opinion/2026/03/26/Alberta-First-Nations-Farmers-Want-Review-Carbon-Capture-Project/",
+      "description": "The groups fear governments will skip an environmental assessment as part of a plan to fast-track a pipeline to the West Coast.",
       "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 11:18:00 CDT"
+      "pubDate": "Thu, 26 Mar 2026 19:27:00 +0000"
     },
     {
-      "title": "Manitoba Government Opens New Highway Traffic Inspection Station and Weigh Scale Near Headingley",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73101",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 10:54:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Expands Surgical Capacity with New Grace Hospital Surgery Clinic",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73097",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Wed, 11 Mar 2026 13:53:00 CDT"
-    },
-    {
-      "title": "Measles Update #87",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73118",
+      "title": "Manitobans Encouraged to Enjoy Free Fishing and Free Provincial Park Entry During Spring Break",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73206",
       "description": "",
       "score": 4.5,
-      "pubDate": "Mon, 16 Mar 2026 16:01:00 CDT"
+      "pubDate": "Thu, 26 Mar 2026 16:20:00 CDT"
+    },
+    {
+      "title": "Measles Update  #94",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73205",
+      "description": "",
+      "score": 4.5,
+      "pubDate": "Thu, 26 Mar 2026 15:30:00 CDT"
     }
   ]
 }
