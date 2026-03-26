@@ -1,7 +1,7 @@
 {
   "monday_index": 0,
-  "thursday_index": 0,
+  "thursday_index": 1,
   "last_monday_post": null,
-  "last_thursday_post": null,
-  "total_posts": 2
+  "last_thursday_post": "2026-03-26T14:27:21.355Z",
+  "total_posts": 3
 }
