@@ -1,0 +1,63 @@
+---
+layout: post
+title: "Daily News Curation - 2026-03-26"
+date: 2026-03-26
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-03-26
+
+Curated 9 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Manitoba Government Grows Nursing Workforce as Record 45 Nurses Set to Graduate Intensive Care Unit Training
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73117)
+**Score:** 9.90
+
+### 2. Manitoba Government Supports Indigenous Mothering Centre to Keep Mothers and Babies Together
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73098)
+**Score:** 10.10
+
+### 3. Manitoba Government Invests $600,000 to Support Expansion of Gaynor Family Regional Library
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73078)
+**Score:** 10.10
+
+### 4. Manitoba Government Announces Open House on the Future of Lemay Forest
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73103)
+**Score:** 7.50
+
+### 5. Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73102)
+**Score:** 7.50
+
+### 6. Manitoba Government Opens New Highway Traffic Inspection Station and Weigh Scale Near Headingley
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73101)
+**Score:** 7.50
+
+### 7. Manitoba Government Expands Surgical Capacity with New Grace Hospital Surgery Clinic
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73097)
+**Score:** 7.50
+
+### 8. Measles Update #87
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73118)
+**Score:** 4.50
+
