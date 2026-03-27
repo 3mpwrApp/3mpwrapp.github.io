@@ -1,0 +1,56 @@
+[
+  {
+    "id": "rights-dont-retire",
+    "title": "Rights Don't Retire",
+    "slug": "rights-dont-retire",
+    "description": "Join the grassroots campaign demanding justice for injured workers over 65. Take 1 minute to write the Minister of Labour and your MPP about this urgent issue using our easy advocacy tool.",
+    "category": "workers-rights",
+    "status": "active",
+    "startDate": "2024-11-01",
+    "endDate": null,
+    "goalType": "signatures",
+    "goalTarget": 10000,
+    "currentProgress": 0,
+    "actionUrl": "https://win.newmode.net/rightsdontretire",
+    "hashtags": ["#RightsDontRetire", "#WorkersRights", "#DisabilityJustice"],
+    "links": {
+      "campaign": "https://linktr.ee/RightsDontRetire",
+      "action": "https://win.newmode.net/rightsdontretire"
+    },
+    "organizers": [
+      {
+        "name": "3mpwrApp Community",
+        "type": "grassroots"
+      }
+    ],
+    "visibility": "public",
+    "featured": true
+  },
+  {
+    "id": "pass-bill-86",
+    "title": "Pass Bill 86",
+    "slug": "pass-bill-86",
+    "description": "Support Bill 86 to strengthen workers' rights and protections in Ontario. Join the campaign demanding legislative action for injured workers and workplace safety.",
+    "category": "legislation",
+    "status": "active",
+    "startDate": "2026-03-27",
+    "endDate": null,
+    "goalType": "signatures",
+    "goalTarget": 5000,
+    "currentProgress": 0,
+    "actionUrl": "https://passbill86.ca/",
+    "hashtags": ["#PassBill86", "#WorkersRights", "#Ontario"],
+    "links": {
+      "campaign": "https://passbill86.ca/",
+      "action": "https://passbill86.ca/"
+    },
+    "organizers": [
+      {
+        "name": "Bill 86 Coalition",
+        "type": "coalition"
+      }
+    ],
+    "visibility": "public",
+    "featured": true
+  }
+]

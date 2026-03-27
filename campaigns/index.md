@@ -122,6 +122,23 @@ permalink: /campaigns/
   </div>
 </section>
 
+---
+
+## 📜 Past Campaigns (Archive)
+
+<section id="past-campaigns" style="display: none; background: transparent !important; color: #000000 !important;">
+  <div class="info-box" style="background: #f3f4f6 !important; border-left: 4px solid #6b7280; color: #000000 !important; margin-bottom: 1.5rem;">
+    <p style="margin: 0; color: #000000 !important;">
+      <strong style="color: #000000 !important;">📚 Historical Campaigns:</strong> 
+      <span style="color: #000000 !important;">Completed campaigns are archived here for reference.</span>
+    </p>
+  </div>
+
+  <div id="past-campaigns-list" style="margin: 2rem 0; color: #000000 !important;">
+    <!-- Past campaigns will be loaded here -->
+  </div>
+</section>
+
 <script>
   /**
    * ========================================
@@ -198,56 +215,80 @@ permalink: /campaigns/
 
   /**
    * Display campaigns on the page
-   * @param {Array} campaigns - Array of campaign objects from Firestore
+   * @param {Array} campaigns - Array of campaign objects
+   * @param {string} containerId - ID of container to render campaigns in
+   * @param {boolean} isPast - Whether these are past/completed campaigns
    */
-  function displayCampaigns(campaigns) {
-    const container = document.getElementById('campaigns-list');
+  function displayCampaigns(campaigns, containerId, isPast = false) {
+    const container = document.getElementById(containerId);
     
     if (!campaigns || campaigns.length === 0) {
-      container.innerHTML = `
-        <div class="warning-box" style="color: #000000 !important;">
-          <h3 style="margin-top: 0; color: #000000 !important;">🚀 Campaigns Coming Soon!</h3>
-          <p style="font-size: 1.1rem; color: #000000 !important;"><strong style="color: #000000 !important;">No active campaigns yet - but when our app launches, this space will come alive with community-created campaigns!</strong></p>
-          <p style="color: #000000 !important;">Community members will be able to:</p>
-          <ul style="text-align: left; max-width: 600px; margin: 1rem auto; color: #000000 !important;">
-            <li style="color: #000000 !important;">🎯 Create campaigns directly in the app</li>
-            <li style="color: #000000 !important;">📱 Set campaigns as public to appear here automatically</li>
-            <li style="color: #000000 !important;">📊 Track petition signatures and participation</li>
-            <li style="color: #000000 !important;">📣 Organize rallies and events</li>
-            <li style="color: #000000 !important;">🤝 Connect with other advocates</li>
-            <li style="color: #000000 !important;">💪 Amplify grassroots movements</li>
-          </ul>
-          <p style="margin-top: 1.5rem; color: #000000 !important;"><em style="color: #000000 !important;">Stay tuned - powerful organizing tools are on the way!</em></p>
-        </div>
-      `;
+      if (!isPast) {
+        container.innerHTML = `
+          <div class="warning-box" style="color: #000000 !important;">
+            <h3 style="margin-top: 0; color: #000000 !important;">🚀 Campaigns Coming Soon!</h3>
+            <p style="font-size: 1.1rem; color: #000000 !important;"><strong style="color: #000000 !important;">No active campaigns yet - but when our app launches, this space will come alive with community-created campaigns!</strong></p>
+            <p style="color: #000000 !important;">Community members will be able to:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 1rem auto; color: #000000 !important;">
+              <li style="color: #000000 !important;">🎯 Create campaigns directly in the app</li>
+              <li style="color: #000000 !important;">📱 Set campaigns as public to appear here automatically</li>
+              <li style="color: #000000 !important;">📊 Track petition signatures and participation</li>
+              <li style="color: #000000 !important;">📣 Organize rallies and events</li>
+              <li style="color: #000000 !important;">🤝 Connect with other advocates</li>
+              <li style="color: #000000 !important;">💪 Amplify grassroots movements</li>
+            </ul>
+            <p style="margin-top: 1.5rem; color: #000000 !important;"><em style="color: #000000 !important;">Stay tuned - powerful organizing tools are on the way!</em></p>
+          </div>
+        `;
+      }
       return;
     }
     
     // Display campaigns
     container.innerHTML = campaigns.map(campaign => `
-        <article class="campaign-card" style="border: 3px solid #0066cc; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: #f8f9fa !important; box-shadow: 0 2px 8px rgba(0,0,0,0.15); color: #000000 !important;">
-          ${campaign.status === 'completed' ? `
+        <article class="campaign-card" style="border: 3px solid ${isPast ? '#6b7280' : '#0066cc'}; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: #f8f9fa !important; box-shadow: 0 2px 8px rgba(0,0,0,0.15); color: #000000 !important; ${isPast ? 'opacity: 0.85;' : ''}">
+          ${isPast ? `
             <div style="display: inline-block; padding: 8px 16px; background: #6b7280 !important; color: #ffffff !important; border: 2px solid #000000; border-radius: 6px; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem;">
-              ✓ Completed
+              ✅ Completed
             </div>
           ` : ''}
           <h3 style="margin-top: 0; color: #003d7a !important; font-size: 1.5rem; font-weight: 700;">
-            ${campaign.icon || '📣'} ${campaign.title}
+            ${campaign.title}
           </h3>
           
-          ${campaign.summary ? `<p style="color: #000000 !important; margin: 1rem 0; font-size: 1.05rem; line-height: 1.6; font-weight: 500;">${campaign.summary}</p>` : ''}
+          ${campaign.description ? `<p style="color: #000000 !important; margin: 1rem 0; font-size: 1.05rem; line-height: 1.6; font-weight: 500;">${campaign.description}</p>` : ''}
           
-          ${campaign.goal ? `
+          ${campaign.goalTarget ? `
             <div style="margin: 1rem 0;">
               <p style="margin: 0.5rem 0; color: #000000 !important; font-weight: 700;">
-                🎯 <strong style="color: #000000 !important;">Goal:</strong> ${campaign.goal}
+                🎯 <strong style="color: #000000 !important;">Goal:</strong> ${campaign.goalTarget.toLocaleString()} ${campaign.goalType || 'signatures'}
               </p>
-              ${campaign.progress ? `
+              ${campaign.currentProgress ? `
                 <div style="background: #d1d5db; border-radius: 8px; height: 28px; overflow: hidden; margin: 0.5rem 0; border: 2px solid #000000;">
-                  <div style="background: #047857; height: 100%; width: ${campaign.progress}%; display: flex; align-items: center; justify-content: center; color: #ffffff !important; font-weight: bold; font-size: 0.9rem;">
-                    ${campaign.progress}%
+                  <div style="background: #047857; height: 100%; width: ${Math.min(100, (campaign.currentProgress / campaign.goalTarget) * 100)}%; display: flex; align-items: center; justify-content: center; color: #ffffff !important; font-weight: bold; font-size: 0.9rem;">
+                    ${campaign.currentProgress.toLocaleString()} / ${campaign.goalTarget.toLocaleString()}
                   </div>
                 </div>
+              ` : ''}
+            </div>
+          ` : ''}
+          
+          ${campaign.actionUrl && !isPast ? `
+            <div style="margin: 1.5rem 0;">
+              <a href="${campaign.actionUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #0066cc; color: #ffffff !important; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem; box-shadow: 0 2px 6px rgba(0,0,0,0.2); transition: transform 0.2s, background 0.2s;" onmouseover="this.style.background='#0052a3'; this.style.transform='scale(1.05)';" onmouseout="this.style.background='#0066cc'; this.style.transform='scale(1)';">
+                ✊ Take Action Now
+              </a>
+            </div>
+          ` : ''}
+          
+          ${campaign.hashtags && campaign.hashtags.length > 0 ? `
+            <div style="margin: 1rem 0;">
+              ${campaign.hashtags.map(tag => `<span style="display: inline-block; background: #e0f2fe; color: #0369a1 !important; padding: 6px 12px; border-radius: 6px; margin: 0.25rem; font-size: 0.95rem; font-weight: 600;">${tag}</span>`).join('')}
+            </div>
+          ` : ''}
+        </article>
+      `).join('');
+  }
               ` : ''}
             </div>
           ` : ''}
@@ -327,52 +368,49 @@ permalink: /campaigns/
   }
 
   /**
-   * Fetch and display campaigns from Cloudflare Worker API
+   * Fetch and display campaigns from API
    * Updates automatically every 30 seconds
    */
   async function loadCampaigns() {
     try {
-      console.log('🔄 Fetching campaigns from Cloudflare Worker...');
+      console.log('🔄 Fetching campaigns from API...');
       
       // Update sync status
       const syncStatus = document.getElementById('sync-status');
       if (syncStatus) syncStatus.textContent = '🔄 Syncing...';
       
-      // Fetch from Cloudflare Worker API (proxies Firestore with proper auth)
-      const workerUrl = 'https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns';
-      const response = await fetch(workerUrl);
+      // Fetch from campaigns.json API
+      const apiUrl = 'https://3mpwrapp.pages.dev/api/campaigns.json?ts=' + Date.now();
+      const response = await fetch(apiUrl, { cache: 'no-store' });
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       
-      const data = await response.json();
+      const campaigns = await response.json();
       
-      // Worker returns campaigns in simplified format
-      let campaigns = [];
-      if (data.success && data.campaigns && Array.isArray(data.campaigns)) {
-        // Filter out test campaigns (keep only real campaigns)
-        campaigns = data.campaigns.filter(campaign => {
-          const id = campaign.id || '';
-          const title = campaign.title || '';
-          
-          // Exclude test campaigns by ID pattern or title
-          if (id.startsWith('test-') || id.includes('verify')) return false;
-          if (title.toLowerCase().includes('test') && title.toLowerCase().includes('sync')) return false;
-          if (title.toLowerCase().includes('verification test')) return false;
-          
-          return true;
-        });
+      // Separate active and past campaigns
+      const activeCampaigns = campaigns.filter(c => c.status === 'active');
+      const pastCampaigns = campaigns.filter(c => c.status === 'completed');
+      
+      console.log(`✅ Loaded ${activeCampaigns.length} active campaigns, ${pastCampaigns.length} past campaigns`);
+      
+      // Display active campaigns
+      displayCampaigns(activeCampaigns, 'campaigns-list');
+      
+      // Display past campaigns
+      const pastSection = document.getElementById('past-campaigns');
+      if (pastCampaigns.length > 0) {
+        pastSection.style.display = 'block';
+        displayCampaigns(pastCampaigns, 'past-campaigns-list', true);
+      } else {
+        pastSection.style.display = 'none';
       }
-      
-      console.log(`✅ Loaded ${campaigns.length} real campaigns (test campaigns filtered out)`);
-      
-      displayCampaigns(campaigns);
       
       // Update sync status - success
       if (syncStatus) {
-        syncStatus.textContent = campaigns.length > 0 
-          ? `✅ ${campaigns.length} active campaign${campaigns.length !== 1 ? 's' : ''}`
+        syncStatus.textContent = activeCampaigns.length > 0 
+          ? `✅ ${activeCampaigns.length} active campaign${activeCampaigns.length !== 1 ? 's' : ''}`
           : '📭 No active campaigns yet';
       }
       

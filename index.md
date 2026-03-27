@@ -411,27 +411,31 @@ description: Free community-powered platform connecting injured workers, persons
 </style>
 
 <script>
-// Simple event loading (reuse existing logic)
+// Simple event loading - shows events in next 7 days
 async function loadSimpleEvents() {
   try {
-    const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production&ts=' + Date.now(), { cache: 'no-store' });
-    const data = await response.json();
-    let events = (data.events || []).filter(e => e.category === 'community' || e.category === 'support');
+    const response = await fetch('https://3mpwrapp.pages.dev/api/events.json?ts=' + Date.now(), { cache: 'no-store' });
+    const events = await response.json();
     
     const now = new Date();
-    const next7Days = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
-    events = events.filter(e => {
-      const d = new Date(e.date);
-      return d >= now && d <= next7Days;
-    }).slice(0, 3);
+    const sevenDaysFromNow = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000));
+    
+    // Get events in next 7 days, filter for community events only
+    const upcomingEvents = events
+      .filter(e => {
+        const eventDate = new Date(e.date);
+        return eventDate >= now && eventDate <= sevenDaysFromNow;
+      })
+      .sort((a, b) => new Date(a.date) - new Date(b.date))
+      .slice(0, 5);
     
     const container = document.getElementById('events-simple-container');
-    if (events.length === 0) {
-      container.innerHTML = '<p style="opacity: 0.9;">No events scheduled this week. Check back soon!</p>';
+    if (upcomingEvents.length === 0) {
+      container.innerHTML = '<p style="opacity: 0.9;">No events this week. Check the <a href="/events/">full calendar</a>!</p>';
       return;
     }
     
-    container.innerHTML = events.map(e => {
+    container.innerHTML = upcomingEvents.map(e => {
       const date = new Date(e.date);
       const dateStr = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
       const timeStr = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
@@ -443,14 +447,37 @@ async function loadSimpleEvents() {
       `;
     }).join('');
   } catch (err) {
+    console.error('Events load error:', err);
     document.getElementById('events-simple-container').innerHTML = '<p style="opacity: 0.8;">Unable to load events</p>';
   }
 }
 
 // Simple campaigns loading
 async function loadSimpleCampaigns() {
-  const container = document.getElementById('campaigns-simple-container');
-  container.innerHTML = '<p style="opacity: 0.9;">New campaigns launching soon. Check back!</p>';
+  try {
+    const response = await fetch('https://3mpwrapp.pages.dev/api/campaigns.json?ts=' + Date.now(), { cache: 'no-store' });
+    const campaigns = await response.json();
+    
+    // Get active campaigns (not completed)
+    const activeCampaigns = campaigns.filter(c => c.status === 'active').slice(0, 3);
+    
+    const container = document.getElementById('campaigns-simple-container');
+    if (activeCampaigns.length === 0) {
+      container.innerHTML = '<p style="opacity: 0.9;">No active campaigns. Check the <a href="/campaigns/">campaigns page</a>!</p>';
+      return;
+    }
+    
+    container.innerHTML = activeCampaigns.map(c => `
+      <div class="homepage-campaign-item">
+        <div class="campaign-title">${c.title}</div>
+        <div class="campaign-summary">${(c.description || '').substring(0, 100)}...</div>
+        ${c.actionUrl ? `<a href="${c.actionUrl}" target="_blank" rel="noopener" style="font-size: 0.9rem; color: #5a189a;">Take Action →</a>` : ''}
+      </div>
+    `).join('');
+  } catch (err) {
+    console.error('Campaigns load error:', err);
+    document.getElementById('campaigns-simple-container').innerHTML = '<p style="opacity: 0.8;">Unable to load campaigns</p>';
+  }
 }
 
 if (document.readyState === 'loading') {
