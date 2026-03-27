@@ -16,6 +16,14 @@ on:
         required: false
         default: false
         type: boolean
+      force_campaign:
+        description: 'Force specific campaign (rights-dont-retire or pass-bill-86)'
+        required: false
+        type: choice
+        options:
+          - ''
+          - rights-dont-retire
+          - pass-bill-86
 
 env:
   NODE_VERSION: '20'
@@ -61,6 +69,7 @@ jobs:
           BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           TEST_MODE: ${{ github.event.inputs.test_mode }}
+          FORCE_CAMPAIGN: ${{ github.event.inputs.force_campaign }}
         run: |
           echo "📤 Posting campaign promotion..."
           node scripts/post-campaign-promo.js

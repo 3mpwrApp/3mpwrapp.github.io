@@ -853,6 +853,12 @@ function saveState(state) {
 
 // Determine which campaign to promote based on day of week
 function getCampaignForToday() {
+  // Allow forcing a specific campaign via environment variable
+  const forceCampaign = process.env.FORCE_CAMPAIGN;
+  if (forceCampaign === 'rights-dont-retire' || forceCampaign === 'pass-bill-86') {
+    return forceCampaign;
+  }
+  
   const day = new Date().getDay();
   // 2 = Tuesday → Rights Don't Retire
   // 5 = Friday → Pass Bill 86
