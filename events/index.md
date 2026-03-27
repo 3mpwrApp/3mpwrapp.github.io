@@ -358,50 +358,19 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       
       // Fetch from Cloudflare Worker API endpoint (production environment)
   const ts = Date.now();
-  const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production&ts=' + ts, { cache: 'no-store' });
+  const response = await fetch('https://3mpwrapp.pages.dev/api/events.json?ts=' + ts, { cache: 'no-store' });
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       
-      const data = await response.json();
+      const events = await response.json();
       const t1 = (window.performance && performance.now) ? performance.now() : Date.now();
       const durationMs = Math.round(t1 - t0);
       console.log(`⏱️ Events fetch completed in ${durationMs} ms`);
-      let events = data.events || [];
       
-      console.log(`✅ Loaded ${events.length} total events from API`);
-      
-      // Filter out test/sample events (Community Accessibility Workshop)
-      events = events.filter(event => {
-        // Remove the sample workshop events
-        if (event.id === 'Yk1p4IJ66gGxkI0F8mCc' || event.id === 'bYfSpZdmLv2o5Pfijv4V') {
-          return false;
-        }
-        return true;
-      });
-      
-      // Deduplicate events by ID (in case API returns duplicates)
-      // Only deduplicate if events have IDs
-      const seenIds = new Set();
-      events = events.filter(event => {
-        // If no ID, keep the event (can't deduplicate without ID)
-        if (!event.id) {
-          console.log(`⚠️ Event without ID: ${event.title}`);
-          return true;
-        }
-        
-        // Check for duplicate ID
-        if (seenIds.has(event.id)) {
-          console.log(`⚠️ Skipping duplicate event: ${event.title} (${event.id})`);
-          return false;
-        }
-        seenIds.add(event.id);
-        return true;
-      });
-      
-      console.log(`📅 ${events.length} events after filtering (duplicates and samples removed)`);
-      console.log('📊 Events data:', events.slice(0, 5)); // Log first 5 for debugging
+      console.log(`✅ Loaded ${events.length} total events from JSON API`);
+      console.log('📊 Sample events data:', events.slice(0, 3)); // Log first 3 for debugging
       
       const upcomingContainer = document.getElementById('upcoming-events-list');
       const pastContainer = document.getElementById('past-events-list');
@@ -450,12 +419,13 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
       }
       
       // Filter out ONLY holiday/health awareness events with incorrect dates
-      // Keep ALL community events regardless of timestamp
+      // Keep ALL community, support, educational, advocacy, and rally events
       const now = new Date();
       
       const communityEvents = events.filter(event => {
-        // ALWAYS keep community events (these are user-created events)
-        if (event.category === 'community') {
+        // ALWAYS keep these event types (user-created and recurring community events)
+        const keepCategories = ['community', 'support', 'educational', 'advocacy', 'rally'];
+        if (keepCategories.includes(event.category)) {
           return true;
         }
         
@@ -478,7 +448,7 @@ image_alt: "3mpwrApp Events - Accessible community gatherings and workshops"
         return true;
       });
       
-      console.log(`🎯 Filtered to ${communityEvents.length} community/properly-dated events (${events.filter(e => e.category === 'community').length} community events included)`);
+      console.log(`🎯 Filtered to ${communityEvents.length} displayable events (community=${events.filter(e => e.category === 'community').length}, support=${events.filter(e => e.category === 'support').length}, educational=${events.filter(e => e.category === 'educational').length})`);
       
       // Sort events by date
       communityEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
