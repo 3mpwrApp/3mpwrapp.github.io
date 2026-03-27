@@ -1,7 +1,7 @@
 {
   "date": "2026-03-27",
-  "timestamp": "2026-03-27T09:56:42.313Z",
-  "count": 11,
+  "timestamp": "2026-03-27T21:44:04.272Z",
+  "count": 1,
   "minScore": 3.5,
   "items": [
     {
@@ -9,77 +9,7 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-03-27T09:56:42.309Z"
-    },
-    {
-      "title": "Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73138",
-      "description": "",
-      "score": 16.7,
-      "pubDate": "Thu, 19 Mar 2026 10:10:00 CDT"
-    },
-    {
-      "title": "Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73139",
-      "description": "",
-      "score": 10.1,
-      "pubDate": "Thu, 19 Mar 2026 12:00:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Grows Nursing Workforce as Record 45 Nurses Set to Graduate Intensive Care Unit Training",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73117",
-      "description": "",
-      "score": 10.1,
-      "pubDate": "Mon, 16 Mar 2026 14:01:00 CDT"
-    },
-    {
-      "title": "Declaring Gender-Based Violence an Epidemic Was Not Enough",
-      "link": "https://thetyee.ca/Opinion/2026/03/27/Declaring-Gender-Based-Violence-Epidemic-Not-Enough/",
-      "description": "The needs of survivors seeking services are skyrocketing in BC. New research shows frontline workers need better support.",
-      "score": 7,
-      "pubDate": "Fri, 27 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "Manitoba Government Announces Open House on the Future of Lemay Forest",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73103",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 13:15:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73102",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 11:18:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Opens New Highway Traffic Inspection Station and Weigh Scale Near Headingley",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73101",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 10:54:00 CDT"
-    },
-    {
-      "title": "The Human Cost of Failing to Name COVID ‘Airborne’",
-      "link": "https://thetyee.ca/Analysis/2026/03/27/Human-Cost-Failing-Name-COVID-Airborne/",
-      "description": "Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price.",
-      "score": 4.6,
-      "pubDate": "Fri, 27 Mar 2026 07:30:00 +0000"
-    },
-    {
-      "title": "Measles Update #90",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73140",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 19 Mar 2026 14:38:00 CDT"
-    },
-    {
-      "title": "Measles Update #87",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73118",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 16 Mar 2026 16:01:00 CDT"
+      "pubDate": "2026-03-27T21:44:04.269Z"
     }
   ]
 }
