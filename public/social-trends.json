@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-28T12:31:24.469Z",
+  "lastUpdated": "2026-03-28T18:26:08.752Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14000,
+      "totalPosts": 14025,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-28T12:31:14.760Z"
+      "lastSeen": "2026-03-28T18:25:58.846Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 13936,
+      "totalPosts": 13961,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-28T12:31:17.085Z"
+      "lastSeen": "2026-03-28T18:26:01.161Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 13798,
+      "totalPosts": 13823,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-28T12:31:19.232Z"
+      "lastSeen": "2026-03-28T18:26:03.385Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14030,
+      "totalPosts": 14055,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-28T12:31:21.319Z"
+      "lastSeen": "2026-03-28T18:26:05.463Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 13996,
+      "totalPosts": 14020,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-28T12:31:23.465Z"
+      "lastSeen": "2026-03-28T18:26:07.748Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Apple celebrated its fiftieth anniversary yesterday, and I was honored to serve as a speaker. The first phone designed to empower Deafblind people like myself to stay connected on the go was the iPhone. 1/3\n\n#Apple50 #A11y #Accessibility",
-      "author": "habengirma.bsky.social",
-      "engagement": 12,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "While I think the title is a clear “well, yeah”, I appreciate Sheri gives reasons regardless:\n\n“Why you shouldn’t trust the people who built your inaccessible site to fix it”\nbuttondown.com/access-abili...\n\nIf WCAG guarantees aren’t built into the contract, find another vendor.\n\n#a11y #accessibility",
-      "author": "aardrian.bsky.social",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
-      "author": "emilyrj.bsky.social",
-      "engagement": 22,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "THIS SATURDAY: BIGGEST PROTEST IN AMERICAN HISTORY‼️\n\nJoin your local rally, find it here: www.nokings.org\n\nCan’t make it out to the streets? \n\nVIRTUAL RALLY with @standupforscience.net accessible and inclusive, for everyone, everywhere \n\n#NoKings #DisabilityJustice #VirtualRally @indivisible.org",
       "author": "katieholten.bsky.social",
@@ -338,20 +308,50 @@
       "author": "emilyrj.bsky.social",
       "engagement": 22,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
+      "author": "randompammit.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "THIS SATURDAY: BIGGEST PROTEST IN AMERICAN HISTORY‼️\n\nJoin your local rally, find it here: www.nokings.org\n\nCan’t make it out to the streets? \n\nVIRTUAL RALLY with @standupforscience.net accessible and inclusive, for everyone, everywhere \n\n#NoKings #DisabilityJustice #VirtualRally @indivisible.org",
+      "author": "katieholten.bsky.social",
+      "engagement": 52,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
+      "author": "emilyrj.bsky.social",
+      "engagement": 22,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 40
+      "count": 41
     },
     {
       "keyword": "accessibility",
-      "count": 39
+      "count": 36
     },
     {
       "keyword": "cripthevote",
-      "count": 27
+      "count": 29
     },
     {
       "keyword": "disabilityjustice",
@@ -359,67 +359,67 @@
     },
     {
       "keyword": "a11y",
-      "count": 26
+      "count": 27
     },
     {
       "keyword": "altcitizen",
-      "count": 19
+      "count": 21
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 18
-    },
-    {
-      "keyword": "disabilityrebellion",
-      "count": 13
-    },
-    {
-      "keyword": "disabilityrights disabilityrebellion",
-      "count": 13
+      "count": 20
     },
     {
       "keyword": "resist",
-      "count": 12
+      "count": 16
     },
     {
       "keyword": "refusefascism",
-      "count": 11
+      "count": 15
     },
     {
-      "keyword": "virtual",
-      "count": 10
+      "keyword": "disabilityrebellion",
+      "count": 15
+    },
+    {
+      "keyword": "disabilityrights disabilityrebellion",
+      "count": 15
     },
     {
       "keyword": "trumpmustgo",
-      "count": 9
+      "count": 13
     },
     {
       "keyword": "ratr",
+      "count": 13
+    },
+    {
+      "keyword": "virtual",
+      "count": 12
+    },
+    {
+      "keyword": "nokings",
+      "count": 10
+    },
+    {
+      "keyword": "nokings3",
+      "count": 9
+    },
+    {
+      "keyword": "nokings2026",
       "count": 9
     },
     {
       "keyword": "digitalaccessibility",
+      "count": 9
+    },
+    {
+      "keyword": "disabilityrebellion nokings3",
       "count": 8
     },
     {
-      "keyword": "disabilitysky",
-      "count": 8
-    },
-    {
-      "keyword": "cripminds",
-      "count": 8
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 8
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 8
-    },
-    {
-      "keyword": "nokings",
-      "count": 7
+      "keyword": "ada",
+      "count": 6
     }
   ]
 }
