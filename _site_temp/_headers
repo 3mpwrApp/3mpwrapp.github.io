@@ -1,0 +1,138 @@
+# Security Headers for Netlify/Cloudflare Pages
+# If using GitHub Pages, add these as meta tags in default.html
+
+/*
+  # Content Security Policy - Allow inline scripts/styles for dynamic content + Turnstile + Analytics
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://gc.zgo.at https://challenges.cloudflare.com https://static.cloudflareinsights.com https://3mpwrapp-calendar.empowrapp08162025.workers.dev; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://challenges.cloudflare.com https://cloudflareinsights.com https://3mpwrapp-calendar.empowrapp08162025.workers.dev; frame-src https://docs.google.com https://challenges.cloudflare.com; base-uri 'self'; form-action 'self' https://duckduckgo.com https://docs.google.com https://formspree.io; frame-ancestors 'none'; object-src 'none'; media-src 'self'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests
+  
+  # Prevent clickjacking
+  X-Frame-Options: DENY
+  
+  # Prevent MIME type sniffing
+  X-Content-Type-Options: nosniff
+  
+  # Enable XSS protection
+  X-XSS-Protection: 1; mode=block
+  
+  # Referrer policy
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Permissions policy (restrict dangerous features)
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), ambient-light-sensor=(), interest-cohort=()
+  
+  # HSTS (2 years with preload)
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  
+  # Cross-Origin Policies for enhanced security
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  
+  # Cache control for static assets (1 year)
+  Cache-Control: public, max-age=31536000, immutable
+
+# Google Drive OAuth callback - needs unsafe-none COOP to communicate with popup opener
+# Must match all variations: /gdrive-callback, /gdrive-callback/, /gdrive-callback.html
+/gdrive-callback
+  Cross-Origin-Opener-Policy: unsafe-none
+  Cross-Origin-Embedder-Policy: unsafe-none
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/gdrive-callback/
+  Cross-Origin-Opener-Policy: unsafe-none
+  Cross-Origin-Embedder-Policy: unsafe-none
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/gdrive-callback/*
+  Cross-Origin-Opener-Policy: unsafe-none
+  Cross-Origin-Embedder-Policy: unsafe-none
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/gdrive-callback.html
+  Cross-Origin-Opener-Policy: unsafe-none
+  Cross-Origin-Embedder-Policy: unsafe-none
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Service Worker - must be fresh
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+  Service-Worker-Allowed: /
+
+# PWA Manifest - cache for 1 week
+/manifest.json
+  Cache-Control: public, max-age=604800, must-revalidate
+
+# HTML pages - prefer fresh to avoid UI getting stuck
+# IMPORTANT: Do NOT force Content-Type here, or CSS/JS will be served as text/html and blocked by browsers (nosniff).
+/*
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# Explicit rule for .html as well (some hosts require extension match)
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Ensure quick iteration for header overrides CSS (override generic CSS caching)
+/assets/css/header-overrides.css
+  Cache-Control: public, max-age=300, must-revalidate
+
+# CSS - cache for 1 year (versioned via filename)
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript - cache for 1 year (versioned via filename)
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - cache for 1 month with stale-while-revalidate
+/*.jpg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.png
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.webp
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.svg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+/*.gif
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, immutable
+
+# Fonts - cache for 1 year
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.eot
+  Cache-Control: public, max-age=31536000, immutable
+
+# JSON data - cache for 5 minutes
+/public/*.json
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Android App Links - assetlinks.json must be JSON and publicly accessible
+/.well-known/assetlinks.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+
+# Updates database - cache for 10 minutes
+/_data/updates.yml
+  Cache-Control: public, max-age=600, must-revalidate
+
+# No cache for dynamic search results
+/search.json
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0

@@ -1,0 +1,2735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog | 3mpwr App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="News, updates, and stories from the 3mpwr community.">
+  
+  <!-- 
+    Security Headers: These should be set via server-side headers file (_headers for Netlify/Vercel, .htaccess for Apache, etc.)
+    CSP meta tag is included above as the only valid http-equiv for security headers.
+    X-Content-Type-Options, X-Frame-Options, and Referrer-Policy must be set as HTTP response headers, not meta tags.
+  -->
+  
+  <!-- Resource Hints for Performance (limit to 3 most critical) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json"><!-- Open Graph Meta Tags -->
+<meta property="og:site_name" content="3mpwr App">
+<meta property="og:title" content="Blog">
+<meta property="og:description" content="News, updates, and stories from the 3mpwr community.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/blog/">
+<meta property="og:locale" content="en_CA">
+
+<meta property="og:locale:alternate" content="fr_CA">
+
+
+<!-- Open Graph Image -->
+
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:secure_url" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:alt" content="Blog">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Article-specific Open Graph -->
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpowrapp0816">
+<meta name="twitter:creator" content="@3mpowrapp0816">
+<meta name="twitter:title" content="Blog">
+<meta name="twitter:description" content="News, updates, and stories from the 3mpwr community.">
+
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta name="twitter:image:alt" content="Blog">
+
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="3mpwrApp">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+
+<meta name="language" content="English">
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://3mpwrapp.pages.dev/blog/">
+
+<!-- Alternate Language Links (hreflang) -->
+
+
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.pages.dev/blog/">
+
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/blog/">
+
+
+<!-- PWA and Mobile Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="3mpwrApp">
+<meta name="application-name" content="3mpwrApp">
+<meta name="theme-color" content="#2A9D8F">
+<meta name="msapplication-TileColor" content="#2A9D8F">
+<meta name="msapplication-navbutton-color" content="#2A9D8F">
+
+<!-- Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Favicons and Touch Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/icon-192.png">
+<!-- Schema.org Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://3mpwrapp.pages.dev#organization",
+      "name": "3mpwrApp",
+      "alternateName": "EmpowrApp",
+      "url": "https://3mpwrapp.pages.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev#logo",
+  "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "3mpwrApp Logo"
+      },
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "foundingDate": "2024",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "empowrapp08162025@gmail.com",
+        "contactType": "Customer Support",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/3mpowrapp/",
+        "https://x.com/3mpowrapp0816",
+        "https://www.instagram.com/3mpwrapp/",
+        "https://www.youtube.com/3mpwrApp",
+        "https://www.tiktok.com/@3mpwrapp",
+        "https://mastodon.social/@3mpwrApp",
+        "https://bsky.app/profile/3mpwrapp.bsky.social",
+        "https://github.com/3mpwrApp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://3mpwrapp.pages.dev#website",
+      "url": "https://3mpwrapp.pages.dev",
+      "name": "3mpwrApp",
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "publisher": {
+        "@id": "https://3mpwrapp.pages.dev#organization"
+      },
+      "inLanguage": "en-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://3mpwrapp.pages.dev/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://3mpwrapp.pages.dev/blog/#webpage",
+      "url": "https://3mpwrapp.pages.dev/blog/",
+      "name": "Blog",
+      "headline": "Blog",
+      "description": "News, updates, and stories from the 3mpwr community.",
+      "isPartOf": {
+        "@id": "https://3mpwrapp.pages.dev#website"
+      },
+      "inLanguage": "en-CA",
+      
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev/blog/#primaryimage",
+        "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Blog"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://3mpwrapp.pages.dev/blog/#primaryimage"
+      },
+      
+      
+      "breadcrumb": {
+        "@id": "https://3mpwrapp.pages.dev/blog/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://3mpwrapp.pages.dev/blog/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://3mpwrapp.pages.dev"
+        }
+        
+        
+        
+        
+        
+          
+          
+          
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://3mpwrapp.pages.dev/blog"
+        }
+          
+        
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
+<!-- Additional Schema for Accessibility Features -->
+
+
+<!-- Software Application Schema for App Pages -->
+
+<link rel="canonical" href="https://3mpwrapp.pages.dev/blog/"><!-- hreflang tags for international SEO -->
+<!-- English Canada (primary) -->
+<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.pages.dev/blog/" />
+
+<!-- French Canada -->
+
+
+<link rel="alternate" hreflang="fr-CA" href="https://3mpwrapp.pages.dev/fr/blog/" />
+
+
+<!-- USA (when available) -->
+
+
+<!-- Default fallback (English Canada) -->
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/blog/" />
+
+<!-- Future language expansions (add as they go live) -->
+<!-- 
+<link rel="alternate" hreflang="es" href="https://3mpwrapp.pages.dev/blog/" />
+<link rel="alternate" hreflang="ar" href="https://3mpwrapp.pages.dev/blog/" />
+<link rel="alternate" hreflang="zh-CN" href="https://3mpwrapp.pages.dev/blog/" />
+-->
+<link rel="stylesheet" href="/assets/css/complexity-mode.css">
+<script src="/assets/js/complexity-mode.js" defer></script><link rel="stylesheet" href="/assets/css/connection-status.css">
+<script src="/assets/js/connection-status.js" defer></script><!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3mpwrApp">
+<meta property="og:title" content="Blog">
+<meta property="og:description" content="News, updates, and stories from the 3mpwr community.">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/blog/">
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-default.png">
+<meta property="og:image:alt" content="3mpwrApp - Community-powered support for injured workers and persons with disabilities">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA"><meta property="og:locale:alternate" content="fr_CA"><!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpwrApp">
+<meta name="twitter:creator" content="@ODSPoor">
+<meta name="twitter:title" content="Blog">
+<meta name="twitter:description" content="News, updates, and stories from the 3mpwr community.">
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-default.png">
+<meta name="twitter:image:alt" content="3mpwrApp - Community-powered support for injured workers and persons with disabilities">
+
+<!-- Additional Meta for Rich Previews -->
+<meta property="article:publisher" content="https://www.facebook.com/3mpwrApp"><!-- Facebook App ID (if available) --><link rel="dns-prefetch" href="//www.clarity.ms">
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin><link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><link rel="preload" href="/assets/css/style.css" as="style"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/assets/site.webmanifest"><meta name="theme-color" content="#111111">
+<meta name="color-scheme" content="light dark">
+<meta name="fediverse:creator" content="@3mpwrApp@mastodon.social">
+
+<!-- What's New RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — What's New" href="/whats-new/feed.xml">
+
+<!-- Main site RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — Site Feed" href="/feed.xml"><script>
+(function(){
+  var KEY = 'cookie-consent';
+  function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function onConsent(cb){
+    if (get(KEY) === 'accepted') { cb(); return; }
+    window.addEventListener('cookie-consent', function(e){ if (e && e.detail === 'accepted') cb(); });
+  }
+
+  // Google Analytics 4
+  var useGA = ("" !== "") && ("" === "");
+  if (useGA) {
+    onConsent(function(){
+      if (window.__gaLoaded) return; window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('Google Analytics script blocked or failed to load. Ad blockers or privacy extensions may be active.');
+        window.__gaLoadError = true;
+      };
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ 
+        if (!window.__gaLoadError) {
+          dataLayer.push(arguments); 
+        }
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=Strict;Secure',
+        'cookie_expires': 63072000,
+        'cookie_update': false,
+        'allow_ad_personalization_signals': false,
+        'allow_google_signals': false
+      });
+    });
+  }
+
+  // GoatCounter (privacy-friendly, free)
+  var useGoat = ("" === "goatcounter") && ("" !== "");
+  if (useGoat) {
+    onConsent(function(){
+      if (window.__goatLoaded) return; window.__goatLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter', 'https://.goatcounter.com/count');
+      s.src = 'https://gc.zgo.at/count.js';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('GoatCounter analytics unavailable. Connection may be blocked.');
+      };
+      document.head.appendChild(s);
+    });
+  }
+})();
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "3mpwr App",
+  "url": "https://3mpwrapp.pages.dev",
+  "logo": "https://3mpwrapp.pages.dev/assets/favicon.svg",
+  "sameAs": ["https://github.com/3mpwrApp", "https://www.facebook.com/3mpowrapp/", "https://x.com/3mpowrapp0816", "https://www.instagram.com/3mpwrapp/", "https://www.youtube.com/3mpwrApp", "https://www.tiktok.com/@3mpwrapp"]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://3mpwrapp.pages.dev/"
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://3mpwrapp.pages.dev/blog"
+      }]
+}
+</script><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Blog | 3mpwr App</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Blog" />
+<meta name="author" content="3mpwr App" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="News, updates, and stories from the 3mpwr community." />
+<meta property="og:description" content="News, updates, and stories from the 3mpwr community." />
+<link rel="canonical" href="https://3mpwrapp.pages.dev/blog/" />
+<meta property="og:url" content="https://3mpwrapp.pages.dev/blog/" />
+<meta property="og:site_name" content="3mpwr App" />
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="twitter:title" content="Blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"3mpwr App"},"description":"News, updates, and stories from the 3mpwr community.","headline":"Blog","image":"https://3mpwrapp.pages.dev/assets/empwrapp-logo.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://3mpwrapp.pages.dev/assets/favicon.svg"},"name":"3mpwr App"},"url":"https://3mpwrapp.pages.dev/blog/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.min.css">
+  <!-- WCAG AAA Compliant Color System -->
+  <link rel="stylesheet" href="/assets/css/accessibility-tokens.min.css">
+  <!-- WCAG 2.2 AA and Beyond Accessibility Enhancements -->
+  <link rel="stylesheet" href="/assets/css/accessibility-enhancements.min.css">
+  <!-- WCAG 2.2 AAA Color Palette - 7:1 Contrast Ratios -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-colors.css">
+  <!-- WCAG 2.2 AAA Color Fixes - Fixes all 614 accessibility violations -->
+  <link rel="stylesheet" href="/assets/css/aaa-color-fixes.css">
+  <!-- WCAG 2.2 AAA Comprehensive Overrides - Fixes all inline styles and remaining violations -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-overrides.css">
+  <!-- Universal Text Legibility - Ensures ALL text is readable in light/dark/high-contrast modes -->
+  <link rel="stylesheet" href="/assets/css/universal-text-legibility.css">
+  <!-- ACCESSIBILITY-FIRST COLOR SYSTEM - The #1 Standard for Light/Dark/High Contrast Modes (March 2026) -->
+  <link rel="stylesheet" href="/assets/css/accessibility-first-colors.css">
+  <!-- Performance Optimizations: Critical CSS, Lazy Loading, Font Optimization -->
+  <link rel="stylesheet" href="/assets/css/performance-optimizations.min.css">
+  <!-- Lighthouse Audit Fixes: Touch targets, contrast, aspect ratios -->
+  <link rel="stylesheet" href="/assets/css/lighthouse-fixes.min.css">
+  <!-- Cookie Consent Banner (GDPR Compliance) -->
+  <link rel="stylesheet" href="/assets/css/cookie-consent.css">
+
+  <!-- Header/nav footprint overrides moved to external CSS (CSP-safe) -->
+  <link rel="stylesheet" href="/assets/css/header-overrides.css">
+  <!-- Professional polish & design system (UX/UI audit improvements) -->
+  <link rel="stylesheet" href="/assets/css/professional-polish.css">
+  <!-- CLS (Cumulative Layout Shift) Fix - Cloudflare RUM reported 0.351-0.588 CLS -->
+  <link rel="stylesheet" href="/assets/css/cls-fix.css">
+  <!-- Alignment Consistency Fix - Professional, clean, organized layout -->
+  <link rel="stylesheet" href="/assets/css/alignment-consistency.css">
+  <!-- Global UX/UI Consistency - Ensures professional, clean, organized look across all pages -->
+  <link rel="stylesheet" href="/assets/css/global-consistency.css">
+  <!-- Enhanced Focus Indicators - WCAG 2.2 AAA compliant (3:1 contrast, 2px minimum) -->
+  <link rel="stylesheet" href="/assets/css/enhanced-focus-indicators.css">
+  <!-- Social Share Component Styles -->
+  <link rel="stylesheet" href="/assets/css/social-share.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#primary-nav">Skip to navigation</a>
+  <a class="skip-link" href="#site-footer">Skip to footer</a>
+  <header>
+    <!-- Brand: clicking this takes you home -->
+    <div class="brand header-bar">
+      <a class="site-brand" href="/" aria-label="3mpwr App home">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="" width="28" height="28" aria-hidden="true" loading="eager">
+        </picture>
+        <span>3mpwr App</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button><a class="lang-switch" href="/fr/">Français</a>
+    </div>
+
+  <nav id="primary-nav" aria-label="Primary">
+      
+  <ul class="nav-list">
+        <li>
+          <a href="/" >
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/about" >
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/features" >
+            Features
+          </a>
+        </li>
+        <li>
+          <a href="/app-tour" >
+            App Tour
+          </a>
+        </li>
+        <li>
+          <a href="/user-guide" >
+            User Guide
+          </a>
+        </li>
+        <li>
+          <a href="/roadmap" >
+            Roadmap
+          </a>
+        </li>
+        <li>
+          <a href="/blog" aria-current="page">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="/faq" >
+            FAQ
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility" >
+            Accessibility
+          </a>
+        </li>
+        <li>
+          <a href="/app-waitlist" >
+            App Waitlist
+          </a>
+        </li>
+        <li>
+          <a href="/crisis-resources" >
+            Crisis Help
+          </a>
+        </li>
+        <li>
+          <a href="/contact" >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="/newsletter" >
+            Newsletter
+          </a>
+        </li>
+        <li>
+          <a href="/whats-new" >
+            What's New
+          </a>
+        </li>
+        <li>
+          <a href="/beta-guide" >
+            Beta Testers Guide
+          </a>
+        </li>
+        <li>
+          <a href="/search" >
+            Search
+          </a>
+        </li>
+        <li>
+          <a href="/events" >
+            Events
+          </a>
+        </li>
+        <li>
+          <a href="/site-map" >
+            Site Map
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility-settings" >
+            Accessibility Settings
+          </a>
+        </li>
+        <li>
+          <a href="/campaigns" >
+            Campaigns
+          </a>
+        </li>
+        <li>
+          <a href="/community" >
+            Community
+          </a>
+        </li>
+        <li>
+          <a href="/connect" >
+            Connect
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- High contrast + Dark mode toggles + Accessibility Tools -->
+    <div class="header-controls" role="group" aria-label="Display settings and accessibility">
+      <a href="/accessibility-settings" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
+        ♿ Accessibility
+      </a>
+      
+      <!-- Complexity Mode Toggle -->
+      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode">
+        <span class="complexity-icon" aria-hidden="true">📖</span>
+        <span class="complexity-label">Standard View</span>
+        <span class="complexity-hint">Click for Simple Language</span>
+      </button>
+      
+      <button
+        id="contrast-toggle"
+        class="contrast-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle high contrast mode"
+      >
+        High contrast
+      </button>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle dark mode"
+      >
+        Dark mode
+      </button>
+    </div>
+  </header>
+  
+  <!-- Complexity Mode Announcer (moved from inline) -->
+  <div id="complexity-announcer" role="status" aria-live="polite" aria-atomic="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"></div><nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li><li aria-current="page">Blog</li></ol>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <!-- Status Banner - Consistent across all pages -->
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator" aria-hidden="true">🚀</span>
+  <strong>App Status:</strong> Production Ready - 721 Tests Passing | <strong>Phase 1:</strong> Closed Internal Testing NOW ACTIVE (Slow Release) | <strong>NEW:</strong> Available Canada-wide (Coast to Coast to Coast) + USA Lite 🇨🇦🇺🇸
+</div>
+<h1 id="3mpwr-app-blog">3mpwr App Blog</h1>
+
+<p>Welcome to our blog! Stay informed with daily news highlights, feature spotlights, weekly recaps, and community updates.</p>
+
+<div class="blog-navigation">
+  <a href="#curated-daily">📰 Daily News Highlights</a> |
+  <a href="#feature-articles">✨ Feature Spotlights</a> |
+  <a href="#weekly-recaps">📅 Weekly Recaps</a> |
+  <a href="#blog-posts">💬 Community Updates</a>
+</div>
+
+<p style="margin-top: 1rem;"><strong>Subscribe:</strong> <a href="/feed.xml">RSS feed</a> | <a href="/newsletter">Newsletter</a></p>
+
+<div class="blog-social-box">
+  <h3 style="margin-top: 0;">📱 Follow Us on Social Media</h3>
+  <p>Get daily news and updates delivered to your feed!</p>
+  <ul style="margin-bottom: 0;">
+    <li><strong>Mastodon:</strong> <a href="https://mastodon.social/@3mpwrapp" target="_blank" rel="noopener">@3mpwrapp@mastodon.social</a> - Daily posts at 9 AM UTC</li>
+    <li><strong>Bluesky:</strong> <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener">@3mpwrapp.bsky.social</a> - Daily posts at 9 AM UTC</li>
+  </ul>
+</div>
+
+<hr />
+
+<h2 id="-daily-news-highlights"><span id="curated-daily">📰 Daily News Highlights</span></h2>
+
+<p class="section-description">Fresh news carefully curated from 50+ trusted sources across Canada. Updated every morning at 9 AM UTC with the most relevant stories on disability rights, accessibility, workers' compensation, and social policy changes that affect you.</p>
+
+<div class="posts-grid">
+  
+  <article class="post-card post-card--curated">
+    <div class="post-card__badge">🌟 Curated</div>
+    <h3 class="post-card__title"><a href="/curation/news/2026/03/27/daily-curation/">Daily News Curation - 2026-03-27</a></h3>
+    <p class="post-card__date">📅 March 27, 2026</p>
+    
+    <p class="post-card__excerpt">Today's curated disability rights, accessibility, and social policy news from across Canada.</p>
+    
+    <a href="/curation/news/2026/03/27/daily-curation/" class="post-card__link">Read more →</a>
+  </article>
+  
+  <article class="post-card post-card--curated">
+    <div class="post-card__badge">🌟 Curated</div>
+    <h3 class="post-card__title"><a href="/curation/news/2026/03/26/daily-curation/">Daily News Curation - 2026-03-26</a></h3>
+    <p class="post-card__date">📅 March 26, 2026</p>
+    
+    <p class="post-card__excerpt">Today's curated disability rights, accessibility, and social policy news from across Canada.</p>
+    
+    <a href="/curation/news/2026/03/26/daily-curation/" class="post-card__link">Read more →</a>
+  </article>
+  
+  <article class="post-card post-card--curated">
+    <div class="post-card__badge">🌟 Curated</div>
+    <h3 class="post-card__title"><a href="/curation/news/2026/03/25/daily-curation/">Daily News Curation - 2026-03-25</a></h3>
+    <p class="post-card__date">📅 March 25, 2026</p>
+    
+    <p class="post-card__excerpt">Today's curated disability rights, accessibility, and social policy news from across Canada.</p>
+    
+    <a href="/curation/news/2026/03/25/daily-curation/" class="post-card__link">Read more →</a>
+  </article>
+  
+  <article class="post-card post-card--curated">
+    <div class="post-card__badge">🌟 Curated</div>
+    <h3 class="post-card__title"><a href="/curation/news/2026/03/24/daily-curation/">Daily News Curation - 2026-03-24</a></h3>
+    <p class="post-card__date">📅 March 24, 2026</p>
+    
+    <p class="post-card__excerpt">Today's curated disability rights, accessibility, and social policy news from across Canada.</p>
+    
+    <a href="/curation/news/2026/03/24/daily-curation/" class="post-card__link">Read more →</a>
+  </article>
+  
+  <article class="post-card post-card--curated">
+    <div class="post-card__badge">🌟 Curated</div>
+    <h3 class="post-card__title"><a href="/curation/news/2026/03/23/daily-curation/">Daily News Curation - 2026-03-23</a></h3>
+    <p class="post-card__date">📅 March 23, 2026</p>
+    
+    <p class="post-card__excerpt">Today's curated disability rights, accessibility, and social policy news from across Canada.</p>
+    
+    <a href="/curation/news/2026/03/23/daily-curation/" class="post-card__link">Read more →</a>
+  </article>
+  
+  <article class="post-card post-card--curated">
+    <div class="post-card__badge">🌟 Curated</div>
+    <h3 class="post-card__title"><a href="/curation/news/2026/03/22/daily-curation/">Daily News Curation - 2026-03-22</a></h3>
+    <p class="post-card__date">📅 March 22, 2026</p>
+    
+    <p class="post-card__excerpt">Today's curated disability rights, accessibility, and social policy news from across Canada.</p>
+    
+    <a href="/curation/news/2026/03/22/daily-curation/" class="post-card__link">Read more →</a>
+  </article>
+  
+  <article class="post-card post-card--curated">
+    <div class="post-card__badge">🌟 Curated</div>
+    <h3 class="post-card__title"><a href="/curation/news/2026/03/21/daily-curation/">Daily News Curation - 2026-03-21</a></h3>
+    <p class="post-card__date">📅 March 21, 2026</p>
+    
+    <p class="post-card__excerpt">Today's curated disability rights, accessibility, and social policy news from across Canada.</p>
+    
+    <a href="/curation/news/2026/03/21/daily-curation/" class="post-card__link">Read more →</a>
+  </article>
+  
+</div>
+<p style="text-align: center; margin-top: 1.5rem;">
+  <a href="#all-curated" class="btn-secondary">View All Daily Highlights →</a>
+</p>
+
+<hr />
+
+<h2 id="-feature-spotlights"><span id="feature-articles">✨ Feature Spotlights</span></h2>
+
+<p class="section-description">Explore 3mpwrApp features, the app itself, and our website tools. From Evidence Locker and Letter Generator to community features and accessibility innovations—discover how our platform helps you advocate for your rights, navigate systems, and connect with your community.</p>
+
+<div class="posts-grid">
+  
+  <article class="post-card post-card--feature">
+    <div class="post-card__badge">✨ Feature</div>
+    <h3 class="post-card__title"><a href="/features/2026/03/26/feature-spotlight-campaign-coordination/">Feature Spotlight: Campaign Coordination</a></h3>
+    <p class="post-card__date">📅 March 26, 2026</p>
+    
+    <p class="post-card__excerpt">Organize advocacy campaigns with task management, collaboration tools, and campaign rooms</p>
+    
+    <a href="/features/2026/03/26/feature-spotlight-campaign-coordination/" class="post-card__link">Read article →</a>
+  </article>
+  
+  <article class="post-card post-card--feature">
+    <div class="post-card__badge">✨ Feature</div>
+    <h3 class="post-card__title"><a href="/features/2026/03/24/feature-spotlight-indigenous-language-support/">Feature Spotlight: Indigenous Language Support</a></h3>
+    <p class="post-card__date">📅 March 24, 2026</p>
+    
+    <p class="post-card__excerpt">Support for 6+ Indigenous languages with cultural protocols and sacred knowledge protection</p>
+    
+    <a href="/features/2026/03/24/feature-spotlight-indigenous-language-support/" class="post-card__link">Read article →</a>
+  </article>
+  
+  <article class="post-card post-card--feature">
+    <div class="post-card__badge">✨ Feature</div>
+    <h3 class="post-card__title"><a href="/features/2026/03/22/feature-spotlight-legal-workflow-automation/">Feature Spotlight: Legal Workflow Automation</a></h3>
+    <p class="post-card__date">📅 March 22, 2026</p>
+    
+    <p class="post-card__excerpt">Step-by-step guided processes for benefits applications, appeals, and workplace accommodations</p>
+    
+    <a href="/features/2026/03/22/feature-spotlight-legal-workflow-automation/" class="post-card__link">Read article →</a>
+  </article>
+  
+  <article class="post-card post-card--feature">
+    <div class="post-card__badge">✨ Feature</div>
+    <h3 class="post-card__title"><a href="/features/2026/03/20/feature-spotlight-evidence-locker/">Feature Spotlight: Evidence Locker</a></h3>
+    <p class="post-card__date">📅 March 20, 2026</p>
+    
+    <p class="post-card__excerpt">Securely store important documents with AES-256 encryption and organized categories</p>
+    
+    <a href="/features/2026/03/20/feature-spotlight-evidence-locker/" class="post-card__link">Read article →</a>
+  </article>
+  
+  <article class="post-card post-card--feature">
+    <div class="post-card__badge">✨ Feature</div>
+    <h3 class="post-card__title"><a href="/features/2026/03/18/feature-spotlight-master-letter-generator/">Feature Spotlight: Master Letter Generator</a></h3>
+    <p class="post-card__date">📅 March 18, 2026</p>
+    
+    <p class="post-card__excerpt">22 professional letter templates for workplace accommodations, benefits applications, and appeals - completely free</p>
+    
+    <a href="/features/2026/03/18/feature-spotlight-master-letter-generator/" class="post-card__link">Read article →</a>
+  </article>
+  
+  <article class="post-card post-card--feature">
+    <div class="post-card__badge">✨ Feature</div>
+    <h3 class="post-card__title"><a href="/features/2026/03/16/feature-spotlight-disability-wizard/">Feature Spotlight: Disability Wizard</a></h3>
+    <p class="post-card__date">📅 March 16, 2026</p>
+    
+    <p class="post-card__excerpt">Your personal guide that recommends the right tools at the right time based on your specific needs</p>
+    
+    <a href="/features/2026/03/16/feature-spotlight-disability-wizard/" class="post-card__link">Read article →</a>
+  </article>
+  
+</div>
+
+<hr />
+
+<h2 id="-weekly-recaps"><span id="weekly-recaps">� Weekly Recaps</span></h2>
+
+<p class="section-description">Every Monday, we compile the week's most important updates, new features, improvements, and fixes into one easy-to-read recap. See detailed changelog on our <a href="/whats-new">What's New</a> page. Perfect for staying up-to-date on what's changed!</p>
+
+<div class="posts-grid">
+  
+  <article class="post-card post-card--weekly">
+    <div class="post-card__badge">📊 Weekly Recap</div>
+    <h3 class="post-card__title"><a href="/updates/2026/03/23/weekly-update-week-13/">Week 13 — Building 3mpwrApp in the Open</a></h3>
+    <p class="post-card__date">📅 March 23, 2026</p>
+    
+    <p class="post-card__excerpt">This week's progress on 3mpwrApp. Real-time updates from a founder who fell through the cracks and built this app so...</p>
+    
+    <a href="/updates/2026/03/23/weekly-update-week-13/" class="post-card__link">Read recap →</a>
+  </article>
+  
+  <article class="post-card post-card--weekly">
+    <div class="post-card__badge">📊 Weekly Recap</div>
+    <h3 class="post-card__title"><a href="/updates/2026/03/16/weekly-update-week-12/">Week 12 — Building 3mpwrApp in the Open</a></h3>
+    <p class="post-card__date">📅 March 16, 2026</p>
+    
+    <p class="post-card__excerpt">This week's progress on 3mpwrApp. Real-time updates from a founder who fell through the cracks and built this app so...</p>
+    
+    <a href="/updates/2026/03/16/weekly-update-week-12/" class="post-card__link">Read recap →</a>
+  </article>
+  
+  <article class="post-card post-card--weekly">
+    <div class="post-card__badge">📊 Weekly Recap</div>
+    <h3 class="post-card__title"><a href="/scripts/updates/2026/02/25/weekly-update-week-9/">Week 9 — Building 3mpwrApp in the Open</a></h3>
+    <p class="post-card__date">📅 February 25, 2026</p>
+    
+    <p class="post-card__excerpt">This week's progress on 3mpwrApp. Real-time updates from a founder who fell through the cracks and built this app so...</p>
+    
+    <a href="/scripts/updates/2026/02/25/weekly-update-week-9/" class="post-card__link">Read recap →</a>
+  </article>
+  
+  <article class="post-card post-card--weekly">
+    <div class="post-card__badge">📊 Weekly Recap</div>
+    <h3 class="post-card__title"><a href="/updates/2026/02/23/weekly-update-week-9/">Weekly Update — Week 9 (2026)</a></h3>
+    <p class="post-card__date">📅 February 23, 2026</p>
+    
+    <p class="post-card__excerpt">This week's updates to 3mpwrApp features, content, and improvements.</p>
+    
+    <a href="/updates/2026/02/23/weekly-update-week-9/" class="post-card__link">Read recap →</a>
+  </article>
+  
+</div>
+
+<hr />
+
+<h2 id="-community-updates"><span id="blog-posts">💬 Community Updates</span></h2>
+
+<p class="section-description">Announcements, stories, and updates from the 3mpwr community. Learn about new features, community achievements, and important information directly from our team.</p>
+
+<div class="posts-list">
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/updates/2026/03/27/dev-update-dev-update-2026-03-27/">Dev Update: What's Been Happening in 3mpwrApp</a></h3>
+      <p class="post-item__date">📅 March 27, 2026</p>
+      
+      <p class="post-item__excerpt">A look at the latest improvements, fixes, and behind-the-scenes work happening in 3mpwrApp</p>
+      
+      <a href="/updates/2026/03/27/dev-update-dev-update-2026-03-27/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/community/2026/03/25/community-disability-justice-vs-disability-charity-our-operating-principle/">Disability Justice vs Disability Charity: Our Operating Principle</a></h3>
+      <p class="post-item__date">📅 March 25, 2026</p>
+      
+      <p class="post-item__excerpt">3mpwrApp is built on disability justice principles â€” not disability charity. Here is what that means in practice.</p>
+      
+      <a href="/community/2026/03/25/community-disability-justice-vs-disability-charity-our-operating-principle/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/dev-diary/2026/03/23/dev-diary-building-offline-first-network-access-should-never-be-required/">Dev Diary: Building Offline-First: Network Access Should Never Be Required</a></h3>
+      <p class="post-item__date">📅 March 23, 2026</p>
+      
+      <p class="post-item__excerpt">How and why 3mpwrApp was built to work completely without internet â€” and what we learned along the way</p>
+      
+      <a href="/dev-diary/2026/03/23/dev-diary-building-offline-first-network-access-should-never-be-required/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/tutorials/2026/03/21/tutorial-setting-up-accessibility-for-your-needs/">Setting Up Accessibility for Your Needs</a></h3>
+      <p class="post-item__date">📅 March 21, 2026</p>
+      
+      <p class="post-item__excerpt">A personalized walkthrough of 3mpwrApp's WCAG AAA accessibility settings â€” from dyslexia support to Simple Mode</p>
+      
+      <a href="/tutorials/2026/03/21/tutorial-setting-up-accessibility-for-your-needs/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/updates/2026/03/19/dev-update-dev-update-2026-03-19/">Dev Update: What's Been Happening in 3mpwrApp</a></h3>
+      <p class="post-item__date">📅 March 19, 2026</p>
+      
+      <p class="post-item__excerpt">A look at the latest improvements, fixes, and behind-the-scenes work happening in 3mpwrApp</p>
+      
+      <a href="/updates/2026/03/19/dev-update-dev-update-2026-03-19/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/community/2026/03/17/community-the-origin-story-why-3mpwrapp-was-built/">The Origin Story: Why 3mpwrApp Was Built</a></h3>
+      <p class="post-item__date">📅 March 17, 2026</p>
+      
+      <p class="post-item__excerpt">The personal and political origins of 3mpwrApp â€” why it was built, by whom, and for whom</p>
+      
+      <a href="/community/2026/03/17/community-the-origin-story-why-3mpwrapp-was-built/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/dev-diary/2026/03/15/dev-diary-why-we-chose-react-native-accessibility-over-everything/">Dev Diary: Why We Chose React Native: Accessibility Over Everything</a></h3>
+      <p class="post-item__date">📅 March 15, 2026</p>
+      
+      <p class="post-item__excerpt">The technical and ethical reasoning behind choosing React Native as the foundation for 3mpwrApp</p>
+      
+      <a href="/dev-diary/2026/03/15/dev-diary-why-we-chose-react-native-accessibility-over-everything/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/tutorials/2026/03/14/tutorial-how-to-use-the-evidence-locker-effectively/">How to Use the Evidence Locker Effectively</a></h3>
+      <p class="post-item__date">📅 March 14, 2026</p>
+      
+      <p class="post-item__excerpt">A step-by-step guide to documenting your disability journey with AES-256-GCM encrypted evidence storage</p>
+      
+      <a href="/tutorials/2026/03/14/tutorial-how-to-use-the-evidence-locker-effectively/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/founder-story/development/journey/2026/02/02/six-months-endless-rebuilds-zero-half-measures/">Six Months, Endless Rebuilds, and Zero Half Measures — I Built This App for You</a></h3>
+      <p class="post-item__date">📅 February 2, 2026</p>
+      
+      <p class="post-item__excerpt">Six Months, Endless Rebuilds, and Zero Half Measures
+I Built This App for You
+</p>
+      
+      <a href="/founder-story/development/journey/2026/02/02/six-months-endless-rebuilds-zero-half-measures/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/feature-deep-dive/accessibility/chronic-pain/2025/10/28/pain-flare-mode-deep-dive/">🔥 Pain Flare Mode: When Everything Hurts But You Still Need Information</a></h3>
+      <p class="post-item__date">📅 October 28, 2025</p>
+      
+      <p class="post-item__excerpt">Bad pain days shouldn't mean you can't access information. Our Pain Flare Mode transforms the entire website into a minimal-interaction experience designed for when every click, scroll, and decision hurts....</p>
+      
+      <a href="/feature-deep-dive/accessibility/chronic-pain/2025/10/28/pain-flare-mode-deep-dive/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/platform-comparison/features/2025/10/27/app-vs-website-comparison/">App vs Website: Why We Built Both (And When to Use Each)</a></h3>
+      <p class="post-item__date">📅 October 27, 2025</p>
+      
+      <p class="post-item__excerpt">3mpwrApp has a mobile app AND a website. Why both? Which should you use? This complete comparison breaks down the features, benefits, and best use cases for each platform.</p>
+      
+      <a href="/platform-comparison/features/2025/10/27/app-vs-website-comparison/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/feature-spotlight/accessibility/energy-management/2025/10/26/spoon-theory-meets-web-design/">🥄 Spoon Theory Meets Web Design: Energy Tracking While You Browse</a></h3>
+      <p class="post-item__date">📅 October 26, 2025</p>
+      
+      <p class="post-item__excerpt">Ever wondered how much energy browsing a website actually costs? Our revolutionary Spoon Counter tracks your cognitive and physical energy use in real-time. A deep dive into the world's first...</p>
+      
+      <a href="/feature-spotlight/accessibility/energy-management/2025/10/26/spoon-theory-meets-web-design/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/features/2025/10/25/feature-spotlight-legal-workflow-automation/">Feature Spotlight: Legal Workflow Automation</a></h3>
+      <p class="post-item__date">📅 October 25, 2025</p>
+      
+      <p class="post-item__excerpt">Step-by-step guided processes for benefits applications, appeals, and workplace accommodations</p>
+      
+      <a href="/features/2025/10/25/feature-spotlight-legal-workflow-automation/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/accessibility/innovation/website-features/2025/10/25/groundbreaking-website-accessibility-features/">🚀 World-First: 15 Groundbreaking Website Accessibility Features</a></h3>
+      <p class="post-item__date">📅 October 25, 2025</p>
+      
+      <p class="post-item__excerpt">We just launched 15 accessibility features that have NEVER been done on any website before. From energy tracking to pain flare modes, this changes everything for the disability community.</p>
+      
+      <a href="/accessibility/innovation/website-features/2025/10/25/groundbreaking-website-accessibility-features/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/features/accessibility/2025/10/24/feature-spotlight-evidence-locker/">Stop Scrambling for Your Medical Records—Evidence Locker Keeps Everything Organized When You Need It Most</a></h3>
+      <p class="post-item__date">📅 October 24, 2025</p>
+      
+      <p class="post-item__excerpt">When your disability benefits depend on proving medical history, having critical documents at your fingertips isn't convenience—it's power. Evidence Locker makes that possible.</p>
+      
+      <a href="/features/accessibility/2025/10/24/feature-spotlight-evidence-locker/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/features/accessibility/advocacy/2025/10/23/feature-spotlight-master-letter-generator/">Stop Guessing What to Write—22 Professional Letter Templates That Say Exactly What Needs to Be Said</a></h3>
+      <p class="post-item__date">📅 October 23, 2025</p>
+      
+      <p class="post-item__excerpt">Writing the right letter to fight for your rights shouldn't require a lawyer. Master Letter Generator gives you the exact words for accommodations, benefits, and appeals.</p>
+      
+      <a href="/features/accessibility/advocacy/2025/10/23/feature-spotlight-master-letter-generator/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/features/2025/10/22/feature-spotlight-disability-wizard/">Feature Spotlight: Disability Wizard</a></h3>
+      <p class="post-item__date">📅 October 22, 2025</p>
+      
+      <p class="post-item__excerpt">Your personal guide that recommends the right tools at the right time based on your specific needs</p>
+      
+      <a href="/features/2025/10/22/feature-spotlight-disability-wizard/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/features/2025/10/21/feature-spotlight-energy-forecast-smart-scheduling/">Feature Spotlight: Energy Forecast &amp; Smart Scheduling</a></h3>
+      <p class="post-item__date">📅 October 21, 2025</p>
+      
+      <p class="post-item__excerpt">24-hour energy prediction that learns your patterns and schedules notifications for optimal times</p>
+      
+      <a href="/features/2025/10/21/feature-spotlight-energy-forecast-smart-scheduling/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/features/2025/10/20/3mpwrapp-feature/">Feature Highlight: ML-Powered Energy Forecasting &amp; Smart Notifications</a></h3>
+      <p class="post-item__date">📅 October 20, 2025</p>
+      
+      <p class="post-item__excerpt">Discover how 3mpwrApp's AI-powered energy prediction helps you plan your day and manage your capacity with personalized smart notifications.</p>
+      
+      <a href="/features/2025/10/20/3mpwrapp-feature/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <article class="post-item">
+      <h3 class="post-item__title"><a href="/news/2025/10/03/welcome-to-3mpowr/">Welcome to the 3mpowr App site</a></h3>
+      <p class="post-item__date">📅 October 3, 2025</p>
+      
+      <p class="post-item__excerpt">A first update about our mission, what's live today, and how to get involved.</p>
+      
+      <a href="/news/2025/10/03/welcome-to-3mpowr/" class="post-item__link">Read more →</a>
+    </article>
+    
+  
+</div>
+
+<hr />
+
+<h2 id="-all-curated-daily-highlights"><span id="all-curated">📚 All Curated Daily Highlights</span></h2>
+
+<details class="all-posts-archive">
+  <summary>View complete archive of daily highlights (126 posts)</summary>
+  <div class="archive-list">
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-27</span>
+      <a href="/curation/news/2026/03/27/daily-curation/">Daily News Curation - 2026-03-27</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-26</span>
+      <a href="/curation/news/2026/03/26/daily-curation/">Daily News Curation - 2026-03-26</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-25</span>
+      <a href="/curation/news/2026/03/25/daily-curation/">Daily News Curation - 2026-03-25</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-24</span>
+      <a href="/curation/news/2026/03/24/daily-curation/">Daily News Curation - 2026-03-24</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-23</span>
+      <a href="/curation/news/2026/03/23/daily-curation/">Daily News Curation - 2026-03-23</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-22</span>
+      <a href="/curation/news/2026/03/22/daily-curation/">Daily News Curation - 2026-03-22</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-21</span>
+      <a href="/curation/news/2026/03/21/daily-curation/">Daily News Curation - 2026-03-21</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-20</span>
+      <a href="/curation/news/2026/03/20/daily-curation/">Daily News Curation - 2026-03-20</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-19</span>
+      <a href="/curation/news/2026/03/19/daily-curation/">Daily News Curation - 2026-03-19</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-18</span>
+      <a href="/curation/news/2026/03/18/daily-curation/">Daily News Curation - 2026-03-18</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-17</span>
+      <a href="/curation/news/2026/03/17/daily-curation/">Daily News Curation - 2026-03-17</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-15</span>
+      <a href="/curation/news/2026/03/15/daily-curation/">Daily News Curation - 2026-03-15</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-03-14</span>
+      <a href="/curation/news/2026/03/14/daily-curation/">Daily News Curation - 2026-03-14</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-27</span>
+      <a href="/curation/news/2026/02/27/daily-curation/">Daily News Curation - 2026-02-27</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-26</span>
+      <a href="/curation/news/2026/02/26/daily-curation/">Daily News Curation - 2026-02-26</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-25</span>
+      <a href="/curation/news/2026/02/25/daily-curation/">Daily News Curation - 2026-02-25</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-24</span>
+      <a href="/curation/news/2026/02/24/daily-curation/">Daily News Curation - 2026-02-24</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-23</span>
+      <a href="/curation/news/2026/02/23/daily-curation/">Daily News Curation - 2026-02-23</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-22</span>
+      <a href="/curation/news/2026/02/22/daily-curation/">Daily News Curation - 2026-02-22</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-21</span>
+      <a href="/curation/news/2026/02/21/daily-curation/">Daily News Curation - 2026-02-21</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-20</span>
+      <a href="/curation/news/2026/02/20/daily-curation/">Daily News Curation - 2026-02-20</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-19</span>
+      <a href="/curation/news/2026/02/19/daily-curation/">Daily News Curation - 2026-02-19</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-18</span>
+      <a href="/curation/news/2026/02/18/daily-curation/">Daily News Curation - 2026-02-18</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-17</span>
+      <a href="/curation/news/2026/02/17/daily-curation/">Daily News Curation - 2026-02-17</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-16</span>
+      <a href="/curation/news/2026/02/16/daily-curation/">Daily News Curation - 2026-02-16</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-15</span>
+      <a href="/curation/news/2026/02/15/daily-curation/">Daily News Curation - 2026-02-15</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-14</span>
+      <a href="/curation/news/2026/02/14/daily-curation/">Daily News Curation - 2026-02-14</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-13</span>
+      <a href="/curation/news/2026/02/13/daily-curation/">Daily News Curation - 2026-02-13</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-12</span>
+      <a href="/curation/news/2026/02/12/daily-curation/">Daily News Curation - 2026-02-12</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-11</span>
+      <a href="/curation/news/2026/02/11/daily-curation/">Daily News Curation - 2026-02-11</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-10</span>
+      <a href="/curation/news/2026/02/10/daily-curation/">Daily News Curation - 2026-02-10</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-09</span>
+      <a href="/curation/news/2026/02/09/daily-curation/">Daily News Curation - 2026-02-09</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-08</span>
+      <a href="/curation/news/2026/02/08/daily-curation/">Daily News Curation - 2026-02-08</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-07</span>
+      <a href="/curation/news/2026/02/07/daily-curation/">Daily News Curation - 2026-02-07</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-06</span>
+      <a href="/curation/news/2026/02/06/daily-curation/">Daily News Curation - 2026-02-06</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-05</span>
+      <a href="/curation/news/2026/02/05/daily-curation/">Daily News Curation - 2026-02-05</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-04</span>
+      <a href="/curation/news/2026/02/04/daily-curation/">Daily News Curation - 2026-02-04</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-03</span>
+      <a href="/curation/news/2026/02/03/daily-curation/">Daily News Curation - 2026-02-03</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-02</span>
+      <a href="/curation/news/2026/02/02/daily-curation/">Daily News Curation - 2026-02-02</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-02-01</span>
+      <a href="/curation/news/2026/02/01/daily-curation/">Daily News Curation - 2026-02-01</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-31</span>
+      <a href="/curation/news/2026/01/31/daily-curation/">Daily News Curation - 2026-01-31</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-30</span>
+      <a href="/curation/news/2026/01/30/daily-curation/">Daily News Curation - 2026-01-30</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-29</span>
+      <a href="/curation/news/2026/01/29/daily-curation/">Daily News Curation - 2026-01-29</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-28</span>
+      <a href="/curation/news/2026/01/28/daily-curation/">Daily News Curation - 2026-01-28</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-27</span>
+      <a href="/curation/news/2026/01/27/daily-curation/">Daily News Curation - 2026-01-27</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-26</span>
+      <a href="/curation/news/2026/01/26/daily-curation/">Daily News Curation - 2026-01-26</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-25</span>
+      <a href="/curation/news/2026/01/25/daily-curation/">Daily News Curation - 2026-01-25</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-24</span>
+      <a href="/curation/news/2026/01/24/daily-curation/">Daily News Curation - 2026-01-24</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-02</span>
+      <a href="/curation/news/2026/01/02/daily-curation/">Daily News Curation - 2026-01-02</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2026-01-01</span>
+      <a href="/curation/news/2026/01/01/daily-curation/">Daily News Curation - 2026-01-01</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-31</span>
+      <a href="/curation/news/2025/12/31/daily-curation/">Daily News Curation - 2025-12-31</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-30</span>
+      <a href="/curation/news/2025/12/30/daily-curation/">Daily News Curation - 2025-12-30</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-29</span>
+      <a href="/curation/news/2025/12/29/daily-curation/">Daily News Curation - 2025-12-29</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-28</span>
+      <a href="/curation/news/2025/12/28/daily-curation/">Daily News Curation - 2025-12-28</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-27</span>
+      <a href="/curation/news/2025/12/27/daily-curation/">Daily News Curation - 2025-12-27</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-26</span>
+      <a href="/curation/news/2025/12/26/daily-curation/">Daily News Curation - 2025-12-26</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-25</span>
+      <a href="/curation/news/2025/12/25/daily-curation/">Daily News Curation - 2025-12-25</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-24</span>
+      <a href="/curation/news/2025/12/24/daily-curation/">Daily News Curation - 2025-12-24</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-23</span>
+      <a href="/curation/news/2025/12/23/daily-curation/">Daily News Curation - 2025-12-23</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-22</span>
+      <a href="/curation/news/2025/12/22/daily-curation/">Daily News Curation - 2025-12-22</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-21</span>
+      <a href="/curation/news/2025/12/21/daily-curation/">Daily News Curation - 2025-12-21</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-20</span>
+      <a href="/curation/news/2025/12/20/daily-curation/">Daily News Curation - 2025-12-20</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-19</span>
+      <a href="/curation/news/2025/12/19/daily-curation/">Daily News Curation - 2025-12-19</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-18</span>
+      <a href="/curation/news/2025/12/18/daily-curation/">Daily News Curation - 2025-12-18</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-17</span>
+      <a href="/curation/news/2025/12/17/daily-curation/">Daily News Curation - 2025-12-17</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-16</span>
+      <a href="/curation/news/2025/12/16/daily-curation/">Daily News Curation - 2025-12-16</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-15</span>
+      <a href="/curation/news/2025/12/15/daily-curation/">Daily News Curation - 2025-12-15</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-14</span>
+      <a href="/curation/news/2025/12/14/daily-curation/">Daily News Curation - 2025-12-14</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-13</span>
+      <a href="/curation/news/2025/12/13/daily-curation/">Daily News Curation - 2025-12-13</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-12</span>
+      <a href="/curation/news/2025/12/12/daily-curation/">Daily News Curation - 2025-12-12</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-11</span>
+      <a href="/curation/news/2025/12/11/daily-curation/">Daily News Curation - 2025-12-11</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-10</span>
+      <a href="/curation/news/2025/12/10/daily-curation/">Daily News Curation - 2025-12-10</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-09</span>
+      <a href="/curation/news/2025/12/09/daily-curation/">Daily News Curation - 2025-12-09</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-08</span>
+      <a href="/curation/news/2025/12/08/daily-curation/">Daily News Curation - 2025-12-08</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-07</span>
+      <a href="/curation/news/2025/12/07/daily-curation/">Daily News Curation - 2025-12-07</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-06</span>
+      <a href="/curation/news/2025/12/06/daily-curation/">Daily News Curation - 2025-12-06</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-05</span>
+      <a href="/curation/news/2025/12/05/daily-curation/">Daily News Curation - 2025-12-05</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-04</span>
+      <a href="/curation/news/2025/12/04/daily-curation/">Daily News Curation - 2025-12-04</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-03</span>
+      <a href="/curation/news/2025/12/03/daily-curation/">Daily News Curation - 2025-12-03</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-02</span>
+      <a href="/curation/news/2025/12/02/daily-curation/">Daily News Curation - 2025-12-02</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-12-01</span>
+      <a href="/curation/news/2025/12/01/daily-curation/">Daily News Curation - 2025-12-01</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-30</span>
+      <a href="/curation/news/2025/11/30/daily-curation/">Daily News Curation - 2025-11-30</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-29</span>
+      <a href="/curation/news/2025/11/29/daily-curation/">Daily News Curation - 2025-11-29</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-28</span>
+      <a href="/curation/news/2025/11/28/daily-curation/">Daily News Curation - 2025-11-28</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-27</span>
+      <a href="/curation/news/2025/11/27/daily-curation/">Daily News Curation - 2025-11-27</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-26</span>
+      <a href="/curation/news/2025/11/26/daily-curation/">Daily News Curation - 2025-11-26</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-25</span>
+      <a href="/curation/news/2025/11/25/daily-curation/">Daily News Curation - 2025-11-25</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-24</span>
+      <a href="/curation/news/2025/11/24/daily-curation/">Daily News Curation - 2025-11-24</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-23</span>
+      <a href="/curation/news/2025/11/23/daily-curation/">Daily News Curation - 2025-11-23</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-22</span>
+      <a href="/curation/news/2025/11/22/daily-curation/">Daily News Curation - 2025-11-22</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-21</span>
+      <a href="/curation/news/2025/11/21/daily-curation/">Daily News Curation - 2025-11-21</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-20</span>
+      <a href="/curation/news/2025/11/20/daily-curation/">Daily News Curation - 2025-11-20</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-19</span>
+      <a href="/curation/news/2025/11/19/daily-curation/">Daily News Curation - 2025-11-19</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-18</span>
+      <a href="/curation/news/2025/11/18/daily-curation/">Daily News Curation - 2025-11-18</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-17</span>
+      <a href="/curation/news/2025/11/17/daily-curation/">Daily News Curation - 2025-11-17</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-16</span>
+      <a href="/curation/news/2025/11/16/daily-curation/">Daily News Curation - 2025-11-16</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-15</span>
+      <a href="/curation/news/2025/11/15/daily-curation/">Daily News Curation - 2025-11-15</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-14</span>
+      <a href="/curation/news/2025/11/14/daily-curation/">Daily News Curation - 2025-11-14</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-13</span>
+      <a href="/curation/news/2025/11/13/daily-curation/">Daily News Curation - 2025-11-13</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-12</span>
+      <a href="/curation/news/2025/11/12/daily-curation/">Daily News Curation - 2025-11-12</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-11</span>
+      <a href="/curation/news/2025/11/11/daily-curation/">Daily News Curation - 2025-11-11</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-10</span>
+      <a href="/curation/news/2025/11/10/daily-curation/">Daily News Curation - 2025-11-10</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-09</span>
+      <a href="/curation/news/2025/11/09/daily-curation/">Daily News Curation - 2025-11-09</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-08</span>
+      <a href="/curation/news/2025/11/08/daily-curation/">Daily News Curation - 2025-11-08</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-07</span>
+      <a href="/curation/news/2025/11/07/daily-curation/">Daily News Curation - 2025-11-07</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-06</span>
+      <a href="/curation/news/2025/11/06/daily-curation/">Daily News Curation - 2025-11-06</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-05</span>
+      <a href="/curation/news/2025/11/05/daily-curation/">Daily News Curation - 2025-11-05</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-04</span>
+      <a href="/curation/news/2025/11/04/daily-curation/">Daily News Curation - 2025-11-04</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-03</span>
+      <a href="/curation/news/2025/11/03/daily-curation/">Daily News Curation - 2025-11-03</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-02</span>
+      <a href="/curation/news/2025/11/02/daily-curation/">Daily News Curation - 2025-11-02</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-11-01</span>
+      <a href="/curation/news/2025/11/01/daily-curation/">Daily News Curation - 2025-11-01</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-31</span>
+      <a href="/curation/news/2025/10/31/daily-curation/">Daily News Curation - 2025-10-31</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-30</span>
+      <a href="/curation/news/2025/10/30/daily-curation/">Daily News Curation - 2025-10-30</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-29</span>
+      <a href="/curation/news/2025/10/29/daily-curation/">Daily News Curation - 2025-10-29</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-28</span>
+      <a href="/curation/news/2025/10/28/daily-curation/">Daily News Curation - 2025-10-28</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-27</span>
+      <a href="/curation/news/2025/10/27/daily-curation/">Daily News Curation - 2025-10-27</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-26</span>
+      <a href="/curation/news/2025/10/26/daily-curation/">Daily News Curation - 2025-10-26</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-25</span>
+      <a href="/curation/news/2025/10/25/daily-curation/">Daily News Curation - 2025-10-25</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-24</span>
+      <a href="/curation/news/2025/10/24/daily-curation/">Daily News Curation - 2025-10-24</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-23</span>
+      <a href="/curation/news/2025/10/23/daily-curation/">Daily News Curation - 2025-10-23</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-22</span>
+      <a href="/curation/news/2025/10/22/daily-curation/">Daily News Curation - 2025-10-22</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-21</span>
+      <a href="/curation/news/2025/10/21/daily-curation/">Daily News Curation - 2025-10-21</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-18</span>
+      <a href="/curation/news/2025/10/18/daily-curation/">Daily Highlights - October 18, 2025</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-17</span>
+      <a href="/community/news/2025/10/17/weekly-recap/">Weekly Recap - 2025-10-17: Disability Rights &amp; Worker Protections</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-17</span>
+      <a href="/curation/news/2025/10/17/comprehensive-daily-digest/">Comprehensive Daily Digest - October 17, 2025</a>
+    </div>
+    
+    <div class="archive-item">
+      <span class="archive-date">2025-10-17</span>
+      <a href="/curation/news/2025/10/17/daily-curation/">Daily News Curation - 2025-10-17</a>
+    </div>
+    
+  </div>
+</details>
+
+<hr />
+
+<style>
+/* =============================================
+   BLOG PAGE — THEME-AWARE STYLES
+   Uses the site's canonical CSS variables:
+   --text-primary, --text-secondary, --text-link,
+   --bg-color, set by universal-text-legibility.css
+   ============================================= */
+
+/* ---- Base tokens bridged for blog page ---- */
+.blog-page-root,
+.blog-page-root *,
+body {
+  /* nothing here — rely on universal-text-legibility.css */
+}
+
+/* ---- Social box ---- */
+.blog-social-box {
+  background: color-mix(in srgb, var(--text-link, #003d7a) 8%, transparent);
+  border: 2px solid var(--text-link, #003d7a);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* ---- Navigation bar ---- */
+.blog-navigation {
+  background: color-mix(in srgb, currentColor 5%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.blog-navigation a {
+  color: var(--text-link, #003d7a);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 0.5rem;
+}
+
+.blog-navigation a:hover,
+.blog-navigation a:focus {
+  text-decoration: underline;
+}
+
+/* ---- Section description ---- */
+.section-description {
+  border-left: 4px solid var(--text-link, #003d7a);
+  padding: 1rem 1rem 1rem 1.25rem;
+  margin: 1rem 0 2rem;
+  font-style: italic;
+  color: var(--text-secondary, #404040);
+  /* background inherits page bg */
+}
+
+/* ---- Post grid ---- */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* ---- Post cards ---- */
+.post-card {
+  /* Light mode */
+  background: var(--bg-color, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--text-primary, #111) 20%, transparent);
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--text-primary, #111) 18%, transparent);
+  transform: translateY(-2px);
+  border-color: var(--text-link, #003d7a);
+}
+
+.post-card__badge {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  /* default — overridden per type */
+  background: var(--text-link, #003d7a);
+  color: var(--text-on-color);
+}
+
+.post-card--curated .post-card__badge  { background: var(--info-bg); }
+.post-card--feature .post-card__badge  { background: var(--error-bg); }
+.post-card--weekly  .post-card__badge  { background: var(--info-border); }
+
+/* Headings/links inside cards — inherit from universal CSS */
+.post-card__title {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.post-card__date {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  color: var(--text-secondary, #404040);
+}
+
+.post-card__excerpt {
+  line-height: 1.6;
+  margin: 1rem 0;
+  color: var(--text-secondary, #404040);
+}
+
+.post-card__link {
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: var(--text-link, #003d7a);
+  text-decoration: none;
+}
+
+.post-card__link:hover,
+.post-card__link:focus {
+  text-decoration: underline;
+}
+
+/* ---- Post list items ---- */
+.posts-list { margin: 2rem 0; }
+
+.post-item {
+  background: var(--bg-color, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--text-primary, #111) 20%, transparent);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.post-item:hover {
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--text-primary, #111) 15%, transparent);
+  border-color: var(--text-link, #003d7a);
+}
+
+.post-item__title { margin: 0 0 0.5rem; font-weight: 700; }
+
+.post-item__date {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  color: var(--text-secondary, #404040);
+}
+
+.post-item__excerpt  { line-height: 1.6; margin: 1rem 0; color: var(--text-secondary, #404040); }
+
+.post-item__link {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--text-link, #003d7a);
+  text-decoration: none;
+}
+
+.post-item__link:hover,
+.post-item__link:focus { text-decoration: underline; }
+
+/* ---- Empty state ---- */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-style: italic;
+  border: 1px dashed color-mix(in srgb, var(--text-primary, #111) 30%, transparent);
+  border-radius: 8px;
+  margin: 2rem 0;
+  color: var(--text-secondary, #404040);
+}
+
+/* ---- Secondary button ---- */
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  border: 2px solid var(--text-link, #003d7a);
+  color: var(--text-link, #003d7a) !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: var(--text-link, #003d7a);
+  color: var(--text-on-color) !important;
+}
+
+/* ---- Archive ---- */
+.all-posts-archive {
+  border: 1px solid color-mix(in srgb, var(--text-primary, #111) 20%, transparent);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.all-posts-archive summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--text-link, #003d7a);
+  padding: 0.5rem;
+}
+
+.all-posts-archive summary:hover { text-decoration: underline; }
+
+.archive-list {
+  margin-top: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.archive-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--text-primary, #111) 12%, transparent);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.archive-item:last-child { border-bottom: none; }
+
+.archive-date {
+  font-family: monospace;
+  font-size: 0.9rem;
+  min-width: 100px;
+  color: var(--text-secondary, #404040);
+}
+
+/* =============================================
+   DARK MODE — card backgrounds
+   (text is already handled by universal CSS)
+   ============================================= */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .post-card,
+  :root:not([data-theme="light"]) .post-item,
+  :root:not([data-theme="light"]) .empty-state {
+    background: color-mix(in srgb, #ffffff 6%, #000000);
+  }
+  :root:not([data-theme="light"]) .blog-social-box {
+    background: color-mix(in srgb, var(--text-link, #80c1ff) 12%, transparent);
+    border-color: var(--text-link, #80c1ff);
+  }
+}
+
+[data-theme="dark"] .post-card,
+[data-theme="dark"] .post-item,
+[data-theme="dark"] .empty-state {
+  background: color-mix(in srgb, #ffffff 6%, #000000);
+}
+
+[data-theme="dark"] .blog-social-box {
+  background: color-mix(in srgb, var(--text-link, #80c1ff) 12%, transparent);
+  border-color: var(--text-link, #80c1ff);
+}
+
+/* =============================================
+   HIGH CONTRAST MODE
+   ============================================= */
+@media (prefers-contrast: more) {
+  .post-card,
+  .post-item {
+    border: 3px solid currentColor !important;
+    background: Canvas !important;
+  }
+
+  .post-card__badge {
+    background: CanvasText !important;
+    color: Canvas !important;
+    border: 2px solid Canvas !important;
+  }
+
+  .post-card--curated .post-card__badge,
+  .post-card--feature .post-card__badge,
+  .post-card--weekly  .post-card__badge {
+    background: CanvasText !important;
+    color: Canvas !important;
+  }
+
+  .btn-secondary {
+    border: 3px solid currentColor !important;
+    background: Canvas !important;
+    color: CanvasText !important;
+  }
+
+  .blog-social-box {
+    background: Canvas !important;
+    border: 3px solid CanvasText !important;
+  }
+
+  .section-description {
+    border-left: 4px solid CanvasText !important;
+    background: Canvas !important;
+  }
+}
+
+/* data-contrast="high" attribute (site's own toggle) */
+[data-contrast="high"] .post-card,
+[data-contrast="high"] .post-item {
+  border: 3px solid #000 !important;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-contrast="high"] .post-card__title a,
+[data-contrast="high"] .post-item__title a { color: var(--text-primary) !important; }
+
+[data-contrast="high"] .post-card__badge {
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid #fff !important;
+}
+
+[data-contrast="high"] .post-card--curated .post-card__badge,
+[data-contrast="high"] .post-card--feature .post-card__badge,
+[data-contrast="high"] .post-card--weekly  .post-card__badge {
+  background: var(--bg-primary) !important;
+}
+
+[data-contrast="high"] .btn-secondary {
+  border: 3px solid #000 !important;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* =============================================
+   FORCED COLORS (Windows High Contrast)
+   ============================================= */
+@media (forced-colors: active) {
+  .post-card, .post-item {
+    border: 2px solid ButtonText !important;
+    background: Canvas !important;
+    color: CanvasText !important;
+    forced-color-adjust: auto;
+  }
+  .post-card__badge {
+    background: ButtonFace !important;
+    color: ButtonText !important;
+    forced-color-adjust: auto;
+  }
+  .post-card__link,
+  .post-item__link,
+  .blog-navigation a,
+  .archive-item a { color: LinkText !important; }
+  .btn-secondary {
+    background: ButtonFace !important;
+    color: ButtonText !important;
+    border: 2px solid ButtonText !important;
+    forced-color-adjust: auto;
+  }
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 768px) {
+  .posts-grid { grid-template-columns: 1fr; }
+  .blog-navigation { font-size: 0.9rem; }
+  .blog-navigation a { display: inline-block; margin: 0.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .post-card, .post-item, .btn-secondary { transition: none; }
+  .post-card:hover, .post-item:hover { transform: none; }
+</style>
+
+<!-- To add a blog post, create a markdown file in the _posts/ directory with the format YYYY-MM-DD-title.md -->
+<!-- Use tags: 'highlights' for daily curation, 'weekly' for recaps, 'feature' for articles -->
+
+<p>```<!-- Page Feedback Section - Consistent across all pages --></p>
+<div class="page-feedback" role="complementary">
+  <p><strong>💬 Was this page helpful?</strong></p>
+  <p>
+    <a href="/feedback?page=/blog/&amp;helpful=yes" class="feedback-btn feedback-yes" aria-label="Yes, this page was helpful">👍 Yes</a>
+    <a href="/feedback?page=/blog/&amp;helpful=no" class="feedback-btn feedback-no" aria-label="No, this page needs improvement">👎 No</a>
+    <a href="/feedback?page=/blog/" class="feedback-btn feedback-suggest" aria-label="Suggest improvements for this page">📝 Suggest improvements</a>
+  </p>
+  <p class="page-meta"><small>Last updated: October 29, 2025 | Next review: December 2025</small></p>
+</div>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <!-- Logo and Branding -->
+      <div class="footer-column footer-branding">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="3mpwrApp logo" width="64" height="64" loading="lazy" style="margin-bottom: 1rem;">
+        </picture>
+        <h3 style="margin-top: 0;">3mpwrApp</h3>
+        <p style="font-size: 0.9rem; line-height: 1.5;">Community-powered support for injured workers and persons with disabilities across Canada.</p>
+      </div>
+      
+      <!-- About Column -->
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="/about">Our Mission</a></li>
+          <li><a href="/user-guide">User Guide</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Started Column -->
+      <div class="footer-column">
+        <h3>Get Started</h3>
+        <ul>
+          <li><a href="/beta">Beta Testing</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/accessibility-walkthrough">Accessibility Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3>Legal & Privacy</h3>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/data-ownership">Data Ownership</a></li>
+          <li><a href="/community/guidelines">Community Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Column -->
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://paypal.me/3mpwrApp" target="_blank" rel="noopener noreferrer" style="color: #0070ba; font-weight: 600;">💙 Donate via PayPal</a></li>
+          <li><a href="/accessibility">Accessibility Statement</a></li>
+          <li><a href="/accessibility-settings">Accessibility Settings</a></li>
+          <li><a href="/site-map">Site Map</a></li>
+          <li><a href="/delete-data">Delete My Data</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect Column -->
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">Facebook</span></a>
+          <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" aria-label="3mpwr App Hub Facebook Group">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">FB Group</span></a>
+          <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
+<span class="social-label">X/Twitter</span></a>
+          <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Instagram</title>
+	<rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+</svg>
+<span class="social-label">Instagram</span></a>
+          <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="me noopener noreferrer" aria-label="Mastodon">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Mastodon</title>
+	<path d="M20.94 14c-.28 1.41-2.54 2.96-5.14 3.26-1.36.15-2.7.29-4.13.23-2.32-.1-4.15-.5-4.15-.5 0 .2.01.4.03.58.22 2.03 1.67 2.15 3.04 2.21 1.39.06 2.62-.34 2.62-.34l.06 1.3s-.97.52-2.69.62c-.95.05-2.13-.02-3.5-.37-2.98-.77-3.49-3.88-3.57-7.04-.02-.8-.01-1.55-.01-2.18 0-5.48 3.6-7.09 3.6-7.09C8.84 3.37 10.7 3 12.62 3h.04c1.92 0 3.78.37 5.45 1.09 0 0 3.6 1.61 3.6 7.09 0 0 .05 4.05-.77 6.82z" fill="currentColor"/>
+	<path d="M17.23 8.24v4.67h-1.86V8.5c0-.96-.4-1.45-1.2-1.45-.89 0-1.33.57-1.33 1.71v2.47H11V8.76c0-1.14-.44-1.71-1.33-1.71-.8 0-1.2.49-1.2 1.45v4.41H6.62V8.24c0-.96.25-1.72.74-2.28.51-.56 1.17-.85 2-.85.95 0 1.67.36 2.14 1.09l.46.77.46-.77c.47-.73 1.19-1.09 2.14-1.09.83 0 1.49.29 2 .85.49.56.74 1.32.74 2.28z" fill="#fff"/>
+</svg>
+<span class="social-label">Mastodon</span></a>
+          <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Bluesky</title>
+	<path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.415-.054-2.36.308-3.916 1.379-3.916 2.827 0 1.548 1.898 2.997 8.494 2.997s8.494-1.449 8.494-2.997c0-1.448-1.556-2.519-3.916-2.827.14.016.279.034.415.054 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.478 0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.622-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" fill="currentColor"/>
+</svg>
+<span class="social-label">Bluesky</span></a>
+        </div>
+        <ul style="margin-top: 1rem;">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/whats-new/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3mpwrApp — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
+      <p class="footer-mission">💚 Grassroots & Community-Funded • 100% Free Forever • Mission-Driven, Not Profit-Driven</p>
+    </div>
+  </footer>
+
+  <!-- Skip link and mobile menu functionality -->
+  <script src="/assets/js/skip-links.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
+
+  <!-- Utilities and controls -->
+  <script src="/assets/js/a11y.min.js" defer></script>
+  <script src="/assets/js/contrast.min.js" defer></script>
+  <script src="/assets/js/theme.min.js" defer></script>
+  <script src="/assets/js/back-to-top.min.js" defer></script>
+  <script src="/assets/js/settings.min.js" defer></script>
+  
+  <!-- Innovative Accessibility Features - Low Priority -->
+  <script src="/assets/js/accessibility-innovations.min.js" defer async></script>
+  
+  <!-- WCAG 2.2 AA+ Compliance Features -->
+  <script src="/assets/js/wcag-compliance.min.js" defer></script>
+  
+  <!-- WCAG 2.2 AAA Dynamic Enhancements - External links, touch targets, ARIA labels -->
+  <script src="/assets/js/wcag-aaa-dynamic.js" defer></script>
+
+  <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
+    <!-- Cookie Consent (GDPR Compliance) - Load early to show banner --><!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fef378cf7f9742c582f28f566e204a85"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

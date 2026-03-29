@@ -1,0 +1,346 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>3mpwr App — What's New</title>
+    <link>https://3mpwrapp.pages.dev/whats-new/</link>
+    <description>Latest updates and improvements</description>
+    
+    <item>
+      <title>Week 13 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-03-23-week-13-updates/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-03-23-week-13-updates/</guid>
+      <description>This Week’s Journey</description>
+    </item>
+    
+    <item>
+      <title>Week 12 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-03-16-week-12-updates/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-03-16-week-12-updates/</guid>
+      <description>This Week’s Journey</description>
+    </item>
+    
+    <item>
+      <title>Documentation Sync Complete (EN + FR + Legal)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-02-24-documentation-sync-en-fr-legal/</link>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-02-24-documentation-sync-en-fr-legal/</guid>
+      <description>We completed a full documentation synchronization across app and website, including English and French user-facing pages, legal/policy consistency, beta guides, and downloadable user guides.</description>
+    </item>
+    
+    <item>
+      <title>Week 9 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-02-23-week-9-updates/</link>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-02-23-week-9-updates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Week 8 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-02-16-week-8-updates/</link>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-02-16-week-8-updates/</guid>
+      <description>🐛 Bug Fixes</description>
+    </item>
+    
+    <item>
+      <title>Week 7 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-02-09-week-7-updates/</link>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-02-09-week-7-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Comprehensive Personalization System Live!</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-02-02-personalization-complete/</link>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-02-02-personalization-complete/</guid>
+      <description>🎉 Comprehensive Personalization System - Now Live!</description>
+    </item>
+    
+    <item>
+      <title>Week 6 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-02-02-week-6-updates/</link>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-02-02-week-6-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Week 5 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-01-26-week-5-updates/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-01-26-week-5-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Week 4 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-01-19-week-4-updates/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-01-19-week-4-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>PowerTools Complete - Week 3 Milestones (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-01-15-powertools-complete-week-3/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-01-15-powertools-complete-week-3/</guid>
+      <description>🎉 Major Milestones</description>
+    </item>
+    
+    <item>
+      <title>Week 3 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-01-12-week-3-updates/</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-01-12-week-3-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>January 2026 Infrastructure &amp; Fixes - Google Drive BYOC, API Endpoints, Code Quality</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-01-05-january-infrastructure-fixes/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-01-05-january-infrastructure-fixes/</guid>
+      <description>🎯 January 2026 - Critical Infrastructure Fixes</description>
+    </item>
+    
+    <item>
+      <title>Week 2 Updates (2026)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2026-01-05-week-2-updates/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2026-01-05-week-2-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Week 1 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-12-29-week-1-updates/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-12-29-week-1-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Week 52 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-12-22-week-52-updates/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-12-22-week-52-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Week 51 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-12-15-week-51-updates/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-12-15-week-51-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>🎉 First Demo Presentation Success &amp; USA Lite Launch!</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-12-12-demo-presentation-usa-lite/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-12-12-demo-presentation-usa-lite/</guid>
+      <description>🎤 First Demo Presentation Complete!</description>
+    </item>
+    
+    <item>
+      <title>Week 50 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-12-08-week-50-updates/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-12-08-week-50-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>🚀 December 2025 Production Release - 721 Tests Passing!</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-12-07-production-release/</link>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-12-07-production-release/</guid>
+      <description>🎉 3mpwr App is 100% Production Ready!</description>
+    </item>
+    
+    <item>
+      <title>Week 49 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-12-01-week-49-updates/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-12-01-week-49-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Week 48 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-11-24-week-48-updates/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-11-24-week-48-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Week 47 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-11-17-week-47-updates/</link>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-11-17-week-47-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Week 46 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-11-10-week-46-updates/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-11-10-week-46-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Dyslexia support, motor accessibility features, and enterprise security</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-11-06-app-updates-accessibility-security/</link>
+      <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-11-06-app-updates-accessibility-security/</guid>
+      <description>What’s new in the 3mpwrApp:</description>
+    </item>
+    
+    <item>
+      <title>Week 45 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-11-03-week-45-updates/</link>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-11-03-week-45-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Security &amp; Privacy Upgrade: A+ Rating Achieved! 🛡️</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-27-security-privacy-upgrade-a-plus-rating/</link>
+      <pubDate>Mon, 27 Oct 2025 22:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-27-security-privacy-upgrade-a-plus-rating/</guid>
+      <description>Security &amp;amp; Privacy Upgrade: A+ Rating Achieved! 🛡️</description>
+    </item>
+    
+    <item>
+      <title>Major Performance &amp; Accessibility Upgrade - 1.7 MB Saved!</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-27-major-performance-accessibility-upgrade/</link>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-27-major-performance-accessibility-upgrade/</guid>
+      <description>🚀 Major Performance &amp;amp; Accessibility Upgrade!</description>
+    </item>
+    
+    <item>
+      <title>Week 44 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-27-week-44-updates/</link>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-27-week-44-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Week 43 Updates (2025)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-21-week-43-updates/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-21-week-43-updates/</guid>
+      <description>✨ New Features</description>
+    </item>
+    
+    <item>
+      <title>Daily Content now Available in Multiple Languages and Easy Formats</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-14-curator-language-json-api/</link>
+      <pubDate>Tue, 14 Oct 2025 18:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-14-curator-language-json-api/</guid>
+      <description>What’s new:</description>
+    </item>
+    
+    <item>
+      <title>Better Daily Content Selection – More Reliable Updates</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-14-curator-improvements-and-env-overrides/</link>
+      <pubDate>Tue, 14 Oct 2025 13:05:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-14-curator-improvements-and-env-overrides/</guid>
+      <description>What we improved:</description>
+    </item>
+    
+    <item>
+      <title>Curated Daily Highlights now stands out on the homepage</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-06-curated-banner-and-curator-expansion/</link>
+      <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-06-curated-banner-and-curator-expansion/</guid>
+      <description>What’s new today:</description>
+    </item>
+    
+    <item>
+      <title>More languages, accessibility tools, and better tracking</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-05-languages-a11y-ga/</link>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-05-languages-a11y-ga/</guid>
+      <description>What’s new today:</description>
+    </item>
+    
+    <item>
+      <title>Automatic Daily Updates – New content every day</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-04-automation-gitlog/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-04-automation-gitlog/</guid>
+      <description>What’s happening now:</description>
+    </item>
+    
+    <item>
+      <title>New &quot;What&#39;s New&quot; section and better quality checks</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-04-initialize-whats-new/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-04-initialize-whats-new/</guid>
+      <description>What we launched:</description>
+    </item>
+    
+    <item>
+      <title>New Accessibility Settings – Make the site work for you</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-03-accessibility-settings-consent/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-03-accessibility-settings-consent/</guid>
+      <description>New settings you can control:</description>
+    </item>
+    
+    <item>
+      <title>Better search visibility and new language pages</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-02-seo-schema-i18n/</link>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-02-seo-schema-i18n/</guid>
+      <description>What’s new today:</description>
+    </item>
+    
+    <item>
+      <title>New search with live results – Find what you need instantly</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-10-01-search-ux-live-results/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-10-01-search-ux-live-results/</guid>
+      <description>What’s new:</description>
+    </item>
+    
+    <item>
+      <title>Automated quality checks (accessibility, links, and performance)</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-09-30-quality-checks-ci/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-09-30-quality-checks-ci/</guid>
+      <description>What’s running now:</description>
+    </item>
+    
+    <item>
+      <title>Better newsletter sign-up and easier keyboard navigation</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-09-29-accessible-newsletter-and-a11y/</link>
+      <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-09-29-accessible-newsletter-and-a11y/</guid>
+      <description>What’s better now:</description>
+    </item>
+    
+    <item>
+      <title>Easier to find your way around – Better site navigation and design</title>
+      <link>https://3mpwrapp.pages.dev/whats-new/2025-09-28-foundation-navigation-a11y/</link>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://3mpwrapp.pages.dev/whats-new/2025-09-28-foundation-navigation-a11y/</guid>
+      <description>We worked on making the website easier to use for everyone.</description>
+    </item>
+    
+  </channel>
+</rss>

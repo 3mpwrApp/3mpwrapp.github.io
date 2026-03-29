@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3mpwrApp - Community Support for Injured Workers & Persons with Disabilities | 3mpwr App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy.">
+  
+  <!-- 
+    Security Headers: These should be set via server-side headers file (_headers for Netlify/Vercel, .htaccess for Apache, etc.)
+    CSP meta tag is included above as the only valid http-equiv for security headers.
+    X-Content-Type-Options, X-Frame-Options, and Referrer-Policy must be set as HTTP response headers, not meta tags.
+  -->
+  
+  <!-- Resource Hints for Performance (limit to 3 most critical) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json"><!-- Open Graph Meta Tags -->
+<meta property="og:site_name" content="3mpwr App">
+<meta property="og:title" content="3mpwrApp - Community Support for Injured Workers & Persons with Disabilities">
+<meta property="og:description" content="Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/">
+<meta property="og:locale" content="en_CA">
+
+<meta property="og:locale:alternate" content="fr_CA">
+
+
+<!-- Open Graph Image -->
+
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:secure_url" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:alt" content="3mpwrApp - Community Support for Injured Workers & Persons with Disabilities">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Article-specific Open Graph -->
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpowrapp0816">
+<meta name="twitter:creator" content="@3mpowrapp0816">
+<meta name="twitter:title" content="3mpwrApp - Community Support for Injured Workers & Persons with Disabilities">
+<meta name="twitter:description" content="Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy.">
+
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta name="twitter:image:alt" content="3mpwrApp - Community Support for Injured Workers & Persons with Disabilities">
+
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="3mpwrApp">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+
+<meta name="language" content="English">
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://3mpwrapp.pages.dev/">
+
+<!-- Alternate Language Links (hreflang) -->
+
+
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.pages.dev/">
+
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/">
+
+
+<!-- PWA and Mobile Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="3mpwrApp">
+<meta name="application-name" content="3mpwrApp">
+<meta name="theme-color" content="#2A9D8F">
+<meta name="msapplication-TileColor" content="#2A9D8F">
+<meta name="msapplication-navbutton-color" content="#2A9D8F">
+
+<!-- Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Favicons and Touch Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/icon-192.png">
+<!-- Schema.org Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://3mpwrapp.pages.dev#organization",
+      "name": "3mpwrApp",
+      "alternateName": "EmpowrApp",
+      "url": "https://3mpwrapp.pages.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev#logo",
+  "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "3mpwrApp Logo"
+      },
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "foundingDate": "2024",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "empowrapp08162025@gmail.com",
+        "contactType": "Customer Support",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/3mpowrapp/",
+        "https://x.com/3mpowrapp0816",
+        "https://www.instagram.com/3mpwrapp/",
+        "https://www.youtube.com/3mpwrApp",
+        "https://www.tiktok.com/@3mpwrapp",
+        "https://mastodon.social/@3mpwrApp",
+        "https://bsky.app/profile/3mpwrapp.bsky.social",
+        "https://github.com/3mpwrApp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://3mpwrapp.pages.dev#website",
+      "url": "https://3mpwrapp.pages.dev",
+      "name": "3mpwrApp",
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "publisher": {
+        "@id": "https://3mpwrapp.pages.dev#organization"
+      },
+      "inLanguage": "en-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://3mpwrapp.pages.dev/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://3mpwrapp.pages.dev/#webpage",
+      "url": "https://3mpwrapp.pages.dev/",
+      "name": "3mpwrApp - Community Support for Injured Workers &amp; Persons with Disabilities",
+      "headline": "3mpwrApp - Community Support for Injured Workers &amp; Persons with Disabilities",
+      "description": "Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy.",
+      "isPartOf": {
+        "@id": "https://3mpwrapp.pages.dev#website"
+      },
+      "inLanguage": "en-CA",
+      
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev/#primaryimage",
+        "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "3mpwrApp - Community Support for Injured Workers &amp; Persons with Disabilities"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://3mpwrapp.pages.dev/#primaryimage"
+      },
+      
+      
+      "breadcrumb": {
+        "@id": "https://3mpwrapp.pages.dev/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://3mpwrapp.pages.dev/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://3mpwrapp.pages.dev"
+        }
+        
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
+<!-- Additional Schema for Accessibility Features -->
+
+
+<!-- Software Application Schema for App Pages -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "3mpwrApp",
+  "alternateName": "EmpowrApp",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "iOS, Android",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "description": "Practical tools and community for injured workers and persons with disabilities.",
+  "url": "https://3mpwrapp.pages.dev",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "ratingCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "Peer support communities",
+    "Mental health resources",
+    "Crisis support tools",
+    "Privacy-first design",
+    "Accessibility features",
+    "Multi-language support"
+  ],
+  "screenshot": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+  "softwareVersion": "Beta",
+  "releaseNotes": "https://3mpwrapp.pages.dev/whats-new",
+  "author": {
+    "@id": "https://3mpwrapp.pages.dev#organization"
+  }
+}
+</script>
+
+<link rel="canonical" href="https://3mpwrapp.pages.dev/"><!-- hreflang tags for international SEO -->
+<!-- English Canada (primary) -->
+<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.pages.dev/" />
+
+<!-- French Canada -->
+
+
+<link rel="alternate" hreflang="fr-CA" href="https://3mpwrapp.pages.dev/fr/" />
+
+
+<!-- USA (when available) -->
+
+
+<!-- Default fallback (English Canada) -->
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/" />
+
+<!-- Future language expansions (add as they go live) -->
+<!-- 
+<link rel="alternate" hreflang="es" href="https://3mpwrapp.pages.dev/" />
+<link rel="alternate" hreflang="ar" href="https://3mpwrapp.pages.dev/" />
+<link rel="alternate" hreflang="zh-CN" href="https://3mpwrapp.pages.dev/" />
+-->
+<link rel="stylesheet" href="/assets/css/complexity-mode.css">
+<script src="/assets/js/complexity-mode.js" defer></script><link rel="stylesheet" href="/assets/css/connection-status.css">
+<script src="/assets/js/connection-status.js" defer></script><!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3mpwrApp">
+<meta property="og:title" content="3mpwrApp - Community-Powered Disability Support">
+<meta property="og:description" content="Free platform connecting injured workers & persons with disabilities across Canada. 60+ tools, revolutionary accessibility, 100% community-built. Join thousands in beta.">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/">
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-home.png">
+<meta property="og:image:alt" content="3mpwrApp homepage showing community members connecting, accessibility tools, and disability advocacy resources">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA"><meta property="og:locale:alternate" content="fr_CA"><!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpwrApp">
+<meta name="twitter:creator" content="@ODSPoor">
+<meta name="twitter:title" content="3mpwrApp - Community-Powered Disability Support">
+<meta name="twitter:description" content="Free platform connecting injured workers & persons with disabilities across Canada. 60+ tools, revolutionary accessibility, 100% community-built. Join thousands in beta.">
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-home.png">
+<meta name="twitter:image:alt" content="3mpwrApp homepage showing community members connecting, accessibility tools, and disability advocacy resources">
+
+<!-- Additional Meta for Rich Previews -->
+<meta property="article:publisher" content="https://www.facebook.com/3mpwrApp"><!-- Facebook App ID (if available) --><link rel="dns-prefetch" href="//www.clarity.ms">
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin><link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><link rel="preload" href="/assets/css/style.css" as="style"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/assets/site.webmanifest"><meta name="theme-color" content="#111111">
+<meta name="color-scheme" content="light dark">
+<meta name="fediverse:creator" content="@3mpwrApp@mastodon.social">
+
+<!-- What's New RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — What's New" href="/whats-new/feed.xml">
+
+<!-- Main site RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — Site Feed" href="/feed.xml"><script>
+(function(){
+  var KEY = 'cookie-consent';
+  function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function onConsent(cb){
+    if (get(KEY) === 'accepted') { cb(); return; }
+    window.addEventListener('cookie-consent', function(e){ if (e && e.detail === 'accepted') cb(); });
+  }
+
+  // Google Analytics 4
+  var useGA = ("" !== "") && ("" === "");
+  if (useGA) {
+    onConsent(function(){
+      if (window.__gaLoaded) return; window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('Google Analytics script blocked or failed to load. Ad blockers or privacy extensions may be active.');
+        window.__gaLoadError = true;
+      };
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ 
+        if (!window.__gaLoadError) {
+          dataLayer.push(arguments); 
+        }
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=Strict;Secure',
+        'cookie_expires': 63072000,
+        'cookie_update': false,
+        'allow_ad_personalization_signals': false,
+        'allow_google_signals': false
+      });
+    });
+  }
+
+  // GoatCounter (privacy-friendly, free)
+  var useGoat = ("" === "goatcounter") && ("" !== "");
+  if (useGoat) {
+    onConsent(function(){
+      if (window.__goatLoaded) return; window.__goatLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter', 'https://.goatcounter.com/count');
+      s.src = 'https://gc.zgo.at/count.js';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('GoatCounter analytics unavailable. Connection may be blocked.');
+      };
+      document.head.appendChild(s);
+    });
+  }
+})();
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "3mpwr App",
+  "url": "https://3mpwrapp.pages.dev",
+  "logo": "https://3mpwrapp.pages.dev/assets/favicon.svg",
+  "sameAs": ["https://github.com/3mpwrApp", "https://www.facebook.com/3mpowrapp/", "https://x.com/3mpowrapp0816", "https://www.instagram.com/3mpwrapp/", "https://www.youtube.com/3mpwrApp", "https://www.tiktok.com/@3mpwrapp"]
+}
+</script><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>3mpwrApp - Community Support for Injured Workers &amp; Persons with Disabilities | 3mpwr App</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="3mpwrApp - Community Support for Injured Workers &amp; Persons with Disabilities" />
+<meta name="author" content="3mpwr App" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy." />
+<meta property="og:description" content="Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy." />
+<link rel="canonical" href="https://3mpwrapp.pages.dev/" />
+<meta property="og:url" content="https://3mpwrapp.pages.dev/" />
+<meta property="og:site_name" content="3mpwr App" />
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="twitter:title" content="3mpwrApp - Community Support for Injured Workers &amp; Persons with Disabilities" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"3mpwr App"},"description":"Free community-powered platform connecting injured workers, persons with disabilities, and allies. Tools, resources, and support for disability rights and advocacy.","headline":"3mpwrApp - Community Support for Injured Workers &amp; Persons with Disabilities","image":"https://3mpwrapp.pages.dev/assets/empwrapp-logo.png","name":"3mpwr App","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://3mpwrapp.pages.dev/assets/favicon.svg"},"name":"3mpwr App"},"sameAs":["https://github.com/3mpwrApp","https://www.facebook.com/3mpowrapp/","https://x.com/3mpowrapp0816","https://www.instagram.com/3mpwrapp/","https://www.youtube.com/3mpwrApp","https://www.tiktok.com/@3mpwrapp"],"url":"https://3mpwrapp.pages.dev/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.min.css">
+  <!-- WCAG AAA Compliant Color System -->
+  <link rel="stylesheet" href="/assets/css/accessibility-tokens.min.css">
+  <!-- WCAG 2.2 AA and Beyond Accessibility Enhancements -->
+  <link rel="stylesheet" href="/assets/css/accessibility-enhancements.min.css">
+  <!-- WCAG 2.2 AAA Color Palette - 7:1 Contrast Ratios -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-colors.css">
+  <!-- WCAG 2.2 AAA Color Fixes - Fixes all 614 accessibility violations -->
+  <link rel="stylesheet" href="/assets/css/aaa-color-fixes.css">
+  <!-- WCAG 2.2 AAA Comprehensive Overrides - Fixes all inline styles and remaining violations -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-overrides.css">
+  <!-- Universal Text Legibility - Ensures ALL text is readable in light/dark/high-contrast modes -->
+  <link rel="stylesheet" href="/assets/css/universal-text-legibility.css">
+  <!-- ACCESSIBILITY-FIRST COLOR SYSTEM - The #1 Standard for Light/Dark/High Contrast Modes (March 2026) -->
+  <link rel="stylesheet" href="/assets/css/accessibility-first-colors.css">
+  <!-- Performance Optimizations: Critical CSS, Lazy Loading, Font Optimization -->
+  <link rel="stylesheet" href="/assets/css/performance-optimizations.min.css">
+  <!-- Lighthouse Audit Fixes: Touch targets, contrast, aspect ratios -->
+  <link rel="stylesheet" href="/assets/css/lighthouse-fixes.min.css">
+  <!-- Cookie Consent Banner (GDPR Compliance) -->
+  <link rel="stylesheet" href="/assets/css/cookie-consent.css">
+
+  <!-- Header/nav footprint overrides moved to external CSS (CSP-safe) -->
+  <link rel="stylesheet" href="/assets/css/header-overrides.css">
+  <!-- Professional polish & design system (UX/UI audit improvements) -->
+  <link rel="stylesheet" href="/assets/css/professional-polish.css">
+  <!-- CLS (Cumulative Layout Shift) Fix - Cloudflare RUM reported 0.351-0.588 CLS -->
+  <link rel="stylesheet" href="/assets/css/cls-fix.css">
+  <!-- Alignment Consistency Fix - Professional, clean, organized layout -->
+  <link rel="stylesheet" href="/assets/css/alignment-consistency.css">
+  <!-- Global UX/UI Consistency - Ensures professional, clean, organized look across all pages -->
+  <link rel="stylesheet" href="/assets/css/global-consistency.css">
+  <!-- Enhanced Focus Indicators - WCAG 2.2 AAA compliant (3:1 contrast, 2px minimum) -->
+  <link rel="stylesheet" href="/assets/css/enhanced-focus-indicators.css">
+  <!-- Social Share Component Styles -->
+  <link rel="stylesheet" href="/assets/css/social-share.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#primary-nav">Skip to navigation</a>
+  <a class="skip-link" href="#site-footer">Skip to footer</a>
+  <header>
+    <!-- Brand: clicking this takes you home -->
+    <div class="brand header-bar">
+      <a class="site-brand" href="/" aria-label="3mpwr App home">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="" width="28" height="28" aria-hidden="true" loading="eager">
+        </picture>
+        <span>3mpwr App</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button><a class="lang-switch" href="/fr/">Français</a>
+    </div>
+
+  <nav id="primary-nav" aria-label="Primary">
+      
+  <ul class="nav-list">
+        <li>
+          <a href="/" aria-current="page">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/about" >
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/features" >
+            Features
+          </a>
+        </li>
+        <li>
+          <a href="/app-tour" >
+            App Tour
+          </a>
+        </li>
+        <li>
+          <a href="/user-guide" >
+            User Guide
+          </a>
+        </li>
+        <li>
+          <a href="/roadmap" >
+            Roadmap
+          </a>
+        </li>
+        <li>
+          <a href="/blog" >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="/faq" >
+            FAQ
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility" >
+            Accessibility
+          </a>
+        </li>
+        <li>
+          <a href="/app-waitlist" >
+            App Waitlist
+          </a>
+        </li>
+        <li>
+          <a href="/crisis-resources" >
+            Crisis Help
+          </a>
+        </li>
+        <li>
+          <a href="/contact" >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="/newsletter" >
+            Newsletter
+          </a>
+        </li>
+        <li>
+          <a href="/whats-new" >
+            What's New
+          </a>
+        </li>
+        <li>
+          <a href="/beta-guide" >
+            Beta Testers Guide
+          </a>
+        </li>
+        <li>
+          <a href="/search" >
+            Search
+          </a>
+        </li>
+        <li>
+          <a href="/events" >
+            Events
+          </a>
+        </li>
+        <li>
+          <a href="/site-map" >
+            Site Map
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility-settings" >
+            Accessibility Settings
+          </a>
+        </li>
+        <li>
+          <a href="/campaigns" >
+            Campaigns
+          </a>
+        </li>
+        <li>
+          <a href="/community" >
+            Community
+          </a>
+        </li>
+        <li>
+          <a href="/connect" >
+            Connect
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- High contrast + Dark mode toggles + Accessibility Tools -->
+    <div class="header-controls" role="group" aria-label="Display settings and accessibility">
+      <a href="/accessibility-settings" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
+        ♿ Accessibility
+      </a>
+      
+      <!-- Complexity Mode Toggle -->
+      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode">
+        <span class="complexity-icon" aria-hidden="true">📖</span>
+        <span class="complexity-label">Standard View</span>
+        <span class="complexity-hint">Click for Simple Language</span>
+      </button>
+      
+      <button
+        id="contrast-toggle"
+        class="contrast-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle high contrast mode"
+      >
+        High contrast
+      </button>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle dark mode"
+      >
+        Dark mode
+      </button>
+    </div>
+  </header>
+  
+  <!-- Complexity Mode Announcer (moved from inline) -->
+  <div id="complexity-announcer" role="status" aria-live="polite" aria-atomic="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"></div><nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li></ol>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <link rel="stylesheet" href="/assets/css/homepage.css" />
+
+<link rel="stylesheet" href="/assets/css/accessibility-toolbar.css" />
+
+<script src="/assets/js/accessibility-toolbar.js" defer=""></script>
+<!-- Accessibility Toolbar - Quick Access to All Accommodation Tools -->
+<aside class="accessibility-toolbar" role="complementary" aria-labelledby="toolbar-heading">
+  <button id="toolbarToggle" type="button" aria-expanded="true" aria-controls="toolbar-content" class="toolbar-toggle">
+    <span class="toolbar-icon" aria-hidden="true">♿</span>
+    <span class="toolbar-label">Accessibility Tools</span>
+  </button>
+  
+  <div id="toolbar-content" class="toolbar-content">
+    <h2 id="toolbar-heading" class="toolbar-heading">Quick Accessibility Options</h2>
+    
+    <!-- INNOVATIVE: Spoon Counter (Energy Management for Chronic Illness) -->
+    <div class="toolbar-group">
+      <label for="toolbar-spoon-counter" class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">🥄</span>
+        Spoon Counter (Energy Tracker)
+      </label>
+      <div class="toolbar-controls spoon-tracker">
+        <div class="spoon-display" aria-live="polite">
+          <span id="spoon-count" class="spoon-count">5</span>
+          <span class="spoon-label">spoons remaining</span>
+        </div>
+        <div class="spoon-controls">
+          <button type="button" class="toolbar-btn" id="spoon-use" aria-label="Use a spoon (reduce energy)">Use -1</button>
+          <button type="button" class="toolbar-btn" id="spoon-rest" aria-label="Rest and gain energy">Rest +1</button>
+          <button type="button" class="toolbar-btn" id="spoon-reset" aria-label="Reset to 5 spoons">Reset</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- INNOVATIVE: Emergency Simplify Button (Bad Day Mode) -->
+    <div class="toolbar-group">
+      <button type="button" class="toolbar-btn toolbar-btn-full toolbar-btn-emergency" id="emergency-simplify" aria-pressed="false">
+        <span class="btn-icon" aria-hidden="true">🚨</span>
+        <span class="btn-text">
+          <strong>Emergency Simplify</strong><br />
+          <small>One-tap to reduce everything</small>
+        </span>
+      </button>
+    </div>
+    
+    <!-- INNOVATIVE: Break Reminder with Customizable Interval -->
+    <div class="toolbar-group">
+      <label class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">⏰</span>
+        Break Reminders
+      </label>
+      <div class="toolbar-controls">
+        <select id="break-interval" class="toolbar-select" aria-label="Break reminder interval">
+          <option value="0">Off</option>
+          <option value="15">Every 15 min</option>
+          <option value="30" selected="">Every 30 min</option>
+          <option value="60">Every hour</option>
+        </select>
+      </div>
+      <div id="break-status" class="break-status" aria-live="polite"></div>
+    </div>
+    
+    <!-- Text Size -->
+    <div class="toolbar-group">
+      <label for="toolbar-text-size" class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">🔤</span>
+        Text Size
+      </label>
+      <div class="toolbar-controls">
+        <button type="button" class="toolbar-btn" id="text-decrease" aria-label="Decrease text size">A-</button>
+        <button type="button" class="toolbar-btn" id="text-reset" aria-label="Reset text size">A</button>
+        <button type="button" class="toolbar-btn" id="text-increase" aria-label="Increase text size">A+</button>
+      </div>
+    </div>
+    
+    <!-- Line Spacing -->
+    <div class="toolbar-group">
+      <label for="toolbar-line-spacing" class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">📏</span>
+        Line Spacing
+      </label>
+      <div class="toolbar-controls">
+        <button type="button" class="toolbar-btn" id="spacing-normal" aria-label="Normal line spacing">Normal</button>
+        <button type="button" class="toolbar-btn" id="spacing-loose" aria-label="Loose line spacing">Loose</button>
+      </div>
+    </div>
+    
+    <!-- Dyslexia Font -->
+    <div class="toolbar-group">
+      <button type="button" class="toolbar-btn toolbar-btn-full" id="dyslexia-toggle" aria-pressed="false">
+        <span class="btn-icon" aria-hidden="true">👓</span>
+        Dyslexia-Friendly Font
+      </button>
+    </div>
+    
+    <!-- Reading Mask -->
+    <div class="toolbar-group">
+      <button type="button" class="toolbar-btn toolbar-btn-full" id="reading-mask-toggle" aria-pressed="false">
+        <span class="btn-icon" aria-hidden="true">📖</span>
+        Reading Mask (Highlight Line)
+      </button>
+    </div>
+    
+    <!-- Color Adjustments -->
+    <div class="toolbar-group">
+      <label class="toolbar-label-inline">
+        <span class="label-icon" aria-hidden="true">🎨</span>
+        Color Adjustments
+      </label>
+      <div class="toolbar-controls">
+        <button type="button" class="toolbar-btn" id="filter-none" aria-pressed="true" aria-label="No color filter">Normal</button>
+        <button type="button" class="toolbar-btn" id="filter-grayscale" aria-pressed="false" aria-label="Grayscale filter">Gray</button>
+        <button type="button" class="toolbar-btn" id="filter-invert" aria-pressed="false" aria-label="Invert colors">Invert</button>
+      </div>
+    </div>
+    
+    <!-- Link to Full Settings -->
+    <div class="toolbar-group">
+      <a href="/accessibility-settings/" class="toolbar-link">
+        <span class="link-icon" aria-hidden="true">⚙️</span>
+        More Accessibility Settings
+      </a>
+    </div>
+  </div>
+</aside>
+
+<div id="toolbar-announcer" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+<!-- Status Banner - Consistent across all pages -->
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator" aria-hidden="true">🚀</span>
+  <strong>App Status:</strong> Production Ready - 721 Tests Passing | <strong>Phase 1:</strong> Closed Internal Testing NOW ACTIVE (Slow Release) | <strong>NEW:</strong> Available Canada-wide (Coast to Coast to Coast) + USA Lite 🇨🇦🇺🇸
+</div>
+<!-- Hero Section -->
+<section class="homepage-hero">
+  <picture>
+    <source type="image/webp" srcset="/assets/empwrapp-logo.webp" />
+    <img src="/assets/empwrapp-logo.png" alt="3mpwrApp logo" width="80" height="80" loading="eager" style="margin-bottom: 1.5rem;" />
+  </picture>
+  
+  <h1>Tools, Support &amp; Community — All in One Place</h1>
+  
+  <p class="homepage-hero-subtitle">
+    Empowering injured workers, persons with disabilities, and allies across Canada with 100% free resources
+  </p>
+  
+  <!-- Impact Stats -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 2px solid rgba(61, 78, 170, 0.2);">
+    <div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">97%</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Complete</div>
+    </div>
+    <div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">67%</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Faster</div>
+    </div>
+    <div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">42%</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Smaller</div>
+    </div>
+    <div>
+      <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text-color);">AAA</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Accessible</div>
+    </div>
+  </div>
+  
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <a href="/app-waitlist/" class="homepage-btn-primary">
+      <span>Join the Beta</span>
+      <span aria-hidden="true">→</span>
+    </a>
+    <a href="https://www.youtube.com/watch?v=4i6xPpik_6M" class="homepage-btn-secondary" target="_blank" rel="noopener noreferrer">
+      <span>📺 Watch Tutorial</span>
+    </a>
+    <a href="/about/" class="homepage-btn-secondary">
+      <span>Learn More</span>
+    </a>
+  </div>
+    <div style="margin: 1.5rem 0;">
+    <a href="https://www.youtube.com/@3mpwrApp" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #FF0000; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s;" onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FF0000'">
+      <span aria-hidden="true">📺</span>
+      <span>Subscribe on YouTube</span>
+    </a>
+  </div>
+    <div class="homepage-badge">
+    <p>
+      <span aria-hidden="true">�️</span> Privacy Focused
+      <span style="margin: 0 1rem; opacity: 0.5;">|</span>
+      <span aria-hidden="true">🤝</span> Community Powered
+      <span style="margin: 0 1rem; opacity: 0.5;">|</span>
+      <span aria-hidden="true">✊</span> No Corporate Control
+    </p>
+  </div>
+</section>
+
+<!-- Theme Song Winner Announcement -->
+<section class="theme-song-winner">
+  <div class="trophy">🏆</div>
+  <h2>
+    <span aria-hidden="true">👑</span> Official 3mpwr Theme Song
+  </h2>
+  <p class="winner-text">
+    Community Vote Winner: Option 1
+  </p>
+  <a href="https://suno.com/s/enuXDfFsc65WWAMr" target="_blank" rel="noopener noreferrer" class="btn-listen">
+    <span aria-hidden="true">🎵</span> Listen to Our Anthem
+  </a>
+  <p class="tagline">
+    This isn't just a song — it's our anthem. <span aria-hidden="true">💜</span>
+  </p>
+</section>
+
+<!-- Value Proposition Cards -->
+<section class="value-props" style="margin-bottom: 4rem;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2.5rem; color: var(--text-color);">
+    Why 3mpwrApp?
+  </h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+    
+    <!-- Card 1: Community -->
+    <div class="homepage-value-card">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
+      <h3>Built BY Community, FOR Community</h3>
+      <p>
+        Created by someone who lived it. Every feature designed with real experiences from injured workers and disabled people.
+      </p>
+      <a href="/about/" style="color: #003d7a; text-decoration: none; font-weight: 600;">
+        Learn More About 3mpwrApp →
+      </a>
+    </div>
+    
+    <!-- Card 2: Tools -->
+    <div class="homepage-value-card">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">🛠️</div>
+      <h3>60+ Practical Tools</h3>
+      <p>
+        Evidence locker, pain tracker, medication manager, legal resources, and more. Everything you need in one place.
+      </p>
+      <a href="/features/" style="color: #005a00; text-decoration: none; font-weight: 600;">
+        Explore All Features →
+      </a>
+    </div>
+    
+    <!-- Card 3: Accessibility -->
+    <div class="homepage-value-card">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">♿</div>
+      <h3>Revolutionary Accessibility</h3>
+      <p>
+        Built for brain fog, chronic pain, and fatigue. Complexity toggle, need-a-break button, and pain flare mode.
+      </p>
+      <a href="/accessibility/" style="color: #5a189a; text-decoration: none; font-weight: 600;">
+        Accessibility Features →
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Events & Campaigns Grid -->
+<section class="content-grid" style="margin-bottom: 4rem;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
+    
+    <!-- Events Column -->
+    <div class="homepage-events-box">
+      <h2>
+        <span aria-hidden="true">📅</span> This Week's Events
+      </h2>
+      <p style="opacity: 0.9; margin-bottom: 1.5rem;">Community meetups, support groups, and advocacy gatherings</p>
+      
+      <div id="events-simple-container" style="min-height: 150px;">
+        <p>Loading upcoming events...</p>
+      </div>
+      
+      <a href="/events/" class="homepage-box-link">
+        View Full Community Events Calendar →
+      </a>
+    </div>
+    
+    <!-- Campaigns Column -->
+    <div class="homepage-campaigns-box">
+      <h2>
+        <span aria-hidden="true">✊</span> Active Campaigns
+      </h2>
+      <p style="opacity: 0.9; margin-bottom: 1.5rem;">Join us in advocating for disability rights and policy change</p>
+      
+      <div id="campaigns-simple-container" style="min-height: 150px;">
+        <p>Loading advocacy campaigns...</p>
+      </div>
+      
+      <a href="/campaigns/" class="homepage-box-link">
+        View All Advocacy Campaigns →
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Core Features Highlights -->
+<section class="features-highlight" style="margin-bottom: 4rem;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: var(--text-color);">
+    Features That Grow Stronger Together
+  </h2>
+  <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 2.5rem; line-height: 1.6;">
+    The more people who join, the more powerful these features become - collective strength that creates real change
+  </p>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto;">
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📸</div>
+      <h3>Evidence Locker</h3>
+      <p>
+        <strong>COLLECTIVE POWER:</strong> Photo your documents, AI extracts text, community validates - crowdsourced justice that gets stronger with every upload
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📢</div>
+      <h3>Community &amp; Campaigns</h3>
+      <p>
+        <strong>NETWORK STRENGTH:</strong> Together we organize, advocate, and win - more voices mean more power for real systemic change
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⚖️</div>
+      <h3>Legal &amp; Knowledge Sharing</h3>
+      <p>
+        <strong>SHARED WISDOM:</strong> Shared legal strategies, winning patterns, resources - every case we track helps everyone else win
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📋</div>
+      <h3>Appeal Command Center</h3>
+      <p>
+        <strong>STRATEGIC POWER:</strong> Deadline tracking, document management, tribunal prep - everything you need to fight back and win your appeal
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">💰</div>
+      <h3>Financial Safety Net</h3>
+      <p>
+        <strong>SURVIVAL TOOLS:</strong> Budget tracking, benefit calculators, emergency resources - manage finances when every dollar counts
+      </p>
+    </div>
+    
+    <div class="homepage-feature-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🌿</div>
+      <h3>Wellness Hub</h3>
+      <p>
+        <strong>HOLISTIC CARE:</strong> Pain tracking, symptom journals, exercise routines, meditation - tools for managing your health day by day
+      </p>
+    </div>
+    
+  </div>
+  
+  <div style="text-align: center; margin-top: 2.5rem;">
+    <a href="/features/" style="display: inline-block; padding: 14px 32px; background: #3d4eaa; color: white; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(61, 78, 170, 0.2);">
+      See All 60+ Revolutionary Features →
+    </a>
+  </div>
+</section>
+
+<!-- App Tour with Real Screenshots -->
+<!-- App Tour with Real Screenshots -->
+<section class="app-tour-section">
+  <h2 class="app-tour-heading">
+    See the App in Action
+  </h2>
+  <p class="app-tour-intro">
+    Real screenshots from the 3mpwr App. <strong>Available Q2 2026</strong> for iOS and Android.
+  </p>
+  
+  <div class="app-tour-grid">
+    
+    <!-- Home Screen Tab 1 -->
+    <div class="app-tour-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeScreenTab1.png" alt="3mpwrApp home dashboard with personalized widgets, quick actions, and AI assistant for disability rights advocacy" loading="lazy" />
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Home Dashboard</h3>
+        <p class="app-tour-card-description">Personalized widgets, quick actions, and AI assistant for your advocacy journey</p>
+      </div>
+    </div>
+    
+    <!-- AI Assistant -->    <div class="app-tour-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/AIAssistantTab1-YouNext3Steps-RecommendedTools.png" alt="AI Assistant showing personalized next steps and recommended tools for disability advocacy - 3mpwrApp home dashboard" loading="lazy" />
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">AI Assistant</h3>
+        <p class="app-tour-card-description">Personalized next steps and recommended tools for your advocacy needs</p>
+      </div>
+    </div>
+    
+    <!-- Evidence Command Center -->
+    <div class="app-tour-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeEvidenceVault-EvidenceCommandCenter.png" alt="Quick access to Evidence Command Center from home - encrypted document storage for workers compensation cases - 3mpwrApp" loading="lazy" />
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Evidence Command Center</h3>
+        <p class="app-tour-card-description">Encrypted document storage and timeline builder for your legal case</p>
+      </div>
+    </div>
+    
+    <!-- Wellness Hub -->
+    <div class="app-tour-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/HomeWellnessCommand.png" alt="Wellness Hub quick access with health tracking, mood logging, and energy management tools - 3mpwrApp" loading="lazy" />
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Wellness Hub</h3>
+        <p class="app-tour-card-description">Health tracking, mood logging, and energy management tools</p>
+      </div>
+    </div>
+    
+    <!-- Getting Started Tutorial -->
+    <div class="app-tour-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/Step1-StartYourFirstCase.png" alt="Start your first workers compensation case - guided onboarding tutorial - 3mpwrApp beta" loading="lazy" />
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Getting Started</h3>
+        <p class="app-tour-card-description">Guided walkthrough to start your first workers compensation case</p>
+      </div>
+    </div>
+    
+    <!-- Community Hub -->
+    <div class="app-tour-card">
+      <img src="/assets/images/screenshots/1-Official3mpwrAppScreenshots/laptop/home/Step3-FindYourPeople-CommunityHub.png" alt="Find your support community - join 24 disability support groups - 3mpwrApp community" loading="lazy" />
+      <div class="app-tour-card-content">
+        <h3 class="app-tour-card-title">Community Hub</h3>
+        <p class="app-tour-card-description">Find your support community and join 24 disability support groups</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="app-tour-cta">
+    <a href="/app-waitlist/" class="app-tour-cta-button">
+      🎯 Get Early Access — Launching Q2 2026
+    </a>
+    <p class="app-tour-cta-text">
+      <strong>Limited beta spots</strong> • Be among the first 1,000 users
+    </p>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="homepage-cta">
+  <h2>
+    Ready to Join Our Community?
+  </h2>
+  <p>
+    Be part of building something meaningful. Your voice matters, your experience counts, and you belong here.
+  </p>
+  <a href="/app-waitlist/" class="homepage-btn-primary" style="display: inline-block; padding: 18px 40px; font-size: 1.2rem;">
+    Join the Beta Waitlist →
+  </a>
+  <p style="margin-top: 1.5rem; opacity: 0.9; font-size: 0.95rem;">
+    No credit card required • 100% free forever • Cancel anytime (but there's nothing to cancel!)
+  </p>
+</section>
+
+<!-- Newsletter Signup -->
+<section class="newsletter" style="margin-bottom: 4rem;"><!-- Newsletter Signup Form - WCAG 2.2 AAA Compliant -->
+<div class="newsletter-container">
+  <form action="https://formspree.io/f/xdkoorbd" method="POST" class="newsletter-form" aria-labelledby="newsletter-heading">
+    <h3 id="newsletter-heading">Stay Updated</h3>
+    <p class="newsletter-description">Get monthly updates on advocacy campaigns, new features, and accessibility improvements.</p>
+    
+    <div class="form-group">
+      <label for="newsletter-email" class="form-label">
+        Email Address <span class="required-indicator" aria-label="required">*</span>
+      </label>
+      <div class="input-with-help">
+        <input type="email" id="newsletter-email" name="email" required="" aria-required="true" aria-describedby="email-help-desc email-format-hint" autocomplete="email" class="form-input" placeholder="your.email@example.com" />
+        <button type="button" class="help-button" aria-label="Help: Why we need your email" onclick="toggleHelp('email-help')">
+          <span class="help-icon" aria-hidden="true">?</span>
+        </button>
+      </div>
+      <div id="email-format-hint" class="form-hint">Format: name@example.com</div>
+      <div id="email-help" class="help-text" hidden="">
+        <div id="email-help-desc">
+          <strong>Why we need this:</strong> We'll send you monthly newsletters with campaign updates, new features, and accessibility improvements. We never share your email with third parties.
+          <br /><br />
+          <strong>Privacy:</strong> You can unsubscribe anytime using the link in every email. See our <a href="/privacy-policy/">Privacy Policy</a> for details.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="newsletter-frequency" class="form-label">
+        Frequency Preference
+      </label>
+      <div class="input-with-help">
+        <select id="newsletter-frequency" name="frequency" aria-describedby="frequency-help-desc" class="form-select">
+          <option value="monthly" selected="">Monthly Digest (Recommended)</option>
+          <option value="weekly">Weekly Updates</option>
+          <option value="announcements">Major Announcements Only</option>
+        </select>
+        <button type="button" class="help-button" aria-label="Help: Choose email frequency" onclick="toggleHelp('frequency-help')">
+          <span class="help-icon" aria-hidden="true">?</span>
+        </button>
+      </div>
+      <div id="frequency-help" class="help-text" hidden="">
+        <div id="frequency-help-desc">
+          <strong>Monthly Digest:</strong> One email per month with highlights (recommended for most users)
+          <br />
+          <strong>Weekly Updates:</strong> More frequent updates on campaigns and features
+          <br />
+          <strong>Announcements Only:</strong> Critical updates only (app launches, major policy changes)
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required="" aria-required="true" aria-describedby="consent-text" />
+        <span id="consent-text">
+          I agree to receive emails from 3mpwrApp. I can unsubscribe anytime.
+        </span>
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-primary">
+        <span class="btn-text">Subscribe</span>
+        <span class="btn-icon" aria-hidden="true">📬</span>
+      </button>
+    </div>
+
+    <!-- Hidden honeypot field for spam protection -->
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+  </form>
+</div>
+
+<script>
+function toggleHelp(id) {
+  const helpElement = document.getElementById(id);
+  const isHidden = helpElement.hidden;
+  
+  // Hide all other help texts first
+  document.querySelectorAll('.help-text').forEach(el => {
+    if (el.id !== id) el.hidden = true;
+  });
+  
+  // Toggle the clicked help text
+  helpElement.hidden = !isHidden;
+  
+  // Update button state
+  const button = event.target.closest('.help-button');
+  button.setAttribute('aria-expanded', !isHidden);
+}
+</script>
+
+<style>
+.newsletter-container {
+  background: var(--bg-secondary, #f8f9fa);
+  border: 2px solid var(--border-color, #dee2e6);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.newsletter-form {
+  max-width: 500px;
+}
+
+#newsletter-heading {
+  margin-top: 0;
+  color: var(--text-primary, #212529);
+}
+
+.newsletter-description {
+  color: var(--text-secondary, #6c757d);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary, #212529);
+}
+
+.required-indicator {
+  color: #dc3545;
+}
+
+.input-with-help {
+  display: flex;
+  gap: 8px;
+  align-items: start;
+}
+
+.form-input,
+.form-select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid var(--border-color, #ced4da);
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary-color, #3d4eaa);
+  box-shadow: 0 0 0 3px rgba(61, 78, 170, 0.1);
+}
+
+.help-button {
+  background: var(--primary-color, #3d4eaa);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.help-button:hover,
+.help-button:focus {
+  background: var(--primary-dark, #2d3a7a);
+  transform: scale(1.1);
+}
+
+.help-button:focus {
+  outline: 2px solid #ffd54f;
+  outline-offset: 2px;
+}
+
+.help-icon {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-hint {
+  font-size: 14px;
+  color: var(--text-secondary, #6c757d);
+  margin-top: 4px;
+}
+
+.help-text {
+  background: #e7f3ff;
+  border-left: 4px solid var(--primary-color, #3d4eaa);
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.help-text[hidden] {
+  display: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3d4eaa 0%, #2d3a7a 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(61, 78, 170, 0.3);
+}
+
+.btn-primary:focus {
+  outline: 3px solid #ffd54f;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary:hover,
+  .help-button:hover {
+    transform: none;
+  }
+}
+</style></section>
+
+<style>
+/* Hover effects */
+.value-props > div > div:hover,
+.features-highlight > div > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(61, 78, 170, 0.4);
+}
+
+.btn-secondary:hover {
+  background: #3d4eaa;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem !important;
+  }
+  
+  .hero p {
+    font-size: 1.1rem !important;
+  }
+  
+  .value-props h2,
+  .features-highlight h2,
+  .stats h2,
+  .cta h2 {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .value-props > div > div,
+  .features-highlight > div > div,
+  .btn-primary,
+  .btn-secondary {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+  .value-props > div > div,
+  .features-highlight > div > div {
+    border: 3px solid currentColor;
+  }
+}
+</style>
+
+<script>
+// Simple event loading - shows events in next 7 days
+async function loadSimpleEvents() {
+  try {
+    const response = await fetch('https://3mpwrapp.pages.dev/api/events.json?ts=' + Date.now(), { cache: 'no-store' });
+    const events = await response.json();
+    
+    const now = new Date();
+    const sevenDaysFromNow = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000));
+    
+    // Get events in next 7 days, filter for community events only
+    const upcomingEvents = events
+      .filter(e => {
+        const eventDate = new Date(e.date);
+        return eventDate >= now && eventDate <= sevenDaysFromNow;
+      })
+      .sort((a, b) => new Date(a.date) - new Date(b.date))
+      .slice(0, 5);
+    
+    const container = document.getElementById('events-simple-container');
+    if (upcomingEvents.length === 0) {
+      container.innerHTML = '<p style="opacity: 0.9;">No events this week. Check the <a href="/events/">full calendar</a>!</p>';
+      return;
+    }
+    
+    container.innerHTML = upcomingEvents.map(e => {
+      const date = new Date(e.date);
+      const dateStr = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+      const timeStr = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+      return `
+        <div class="homepage-event-item">
+          <div class="event-title">${e.title}</div>
+          <div class="event-meta">📅 ${dateStr} at ${timeStr}</div>
+        </div>
+      `;
+    }).join('');
+  } catch (err) {
+    console.error('Events load error:', err);
+    document.getElementById('events-simple-container').innerHTML = '<p style="opacity: 0.8;">Unable to load events</p>';
+  }
+}
+
+// Simple campaigns loading
+async function loadSimpleCampaigns() {
+  try {
+    const response = await fetch('https://3mpwrapp.pages.dev/api/campaigns.json?ts=' + Date.now(), { cache: 'no-store' });
+    const campaigns = await response.json();
+    
+    // Get active campaigns (not completed)
+    const activeCampaigns = campaigns.filter(c => c.status === 'active').slice(0, 3);
+    
+    const container = document.getElementById('campaigns-simple-container');
+    if (activeCampaigns.length === 0) {
+      container.innerHTML = '<p style="opacity: 0.9;">No active campaigns. Check the <a href="/campaigns/">campaigns page</a>!</p>';
+      return;
+    }
+    
+    container.innerHTML = activeCampaigns.map(c => `
+      <div class="homepage-campaign-item">
+        <div class="campaign-title">${c.title}</div>
+        <div class="campaign-summary">${(c.description || '').substring(0, 100)}...</div>
+        ${c.actionUrl ? `<a href="${c.actionUrl}" target="_blank" rel="noopener" style="font-size: 0.9rem; color: #5a189a;">Take Action →</a>` : ''}
+      </div>
+    `).join('');
+  } catch (err) {
+    console.error('Campaigns load error:', err);
+    document.getElementById('campaigns-simple-container').innerHTML = '<p style="opacity: 0.8;">Unable to load campaigns</p>';
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    loadSimpleEvents();
+    loadSimpleCampaigns();
+  });
+} else {
+  loadSimpleEvents();
+  loadSimpleCampaigns();
+}
+</script>
+
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <!-- Logo and Branding -->
+      <div class="footer-column footer-branding">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="3mpwrApp logo" width="64" height="64" loading="lazy" style="margin-bottom: 1rem;">
+        </picture>
+        <h3 style="margin-top: 0;">3mpwrApp</h3>
+        <p style="font-size: 0.9rem; line-height: 1.5;">Community-powered support for injured workers and persons with disabilities across Canada.</p>
+      </div>
+      
+      <!-- About Column -->
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="/about">Our Mission</a></li>
+          <li><a href="/user-guide">User Guide</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Started Column -->
+      <div class="footer-column">
+        <h3>Get Started</h3>
+        <ul>
+          <li><a href="/beta">Beta Testing</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/accessibility-walkthrough">Accessibility Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3>Legal & Privacy</h3>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/data-ownership">Data Ownership</a></li>
+          <li><a href="/community/guidelines">Community Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Column -->
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://paypal.me/3mpwrApp" target="_blank" rel="noopener noreferrer" style="color: #0070ba; font-weight: 600;">💙 Donate via PayPal</a></li>
+          <li><a href="/accessibility">Accessibility Statement</a></li>
+          <li><a href="/accessibility-settings">Accessibility Settings</a></li>
+          <li><a href="/site-map">Site Map</a></li>
+          <li><a href="/delete-data">Delete My Data</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect Column -->
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">Facebook</span></a>
+          <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" aria-label="3mpwr App Hub Facebook Group">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">FB Group</span></a>
+          <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
+<span class="social-label">X/Twitter</span></a>
+          <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Instagram</title>
+	<rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+</svg>
+<span class="social-label">Instagram</span></a>
+          <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="me noopener noreferrer" aria-label="Mastodon">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Mastodon</title>
+	<path d="M20.94 14c-.28 1.41-2.54 2.96-5.14 3.26-1.36.15-2.7.29-4.13.23-2.32-.1-4.15-.5-4.15-.5 0 .2.01.4.03.58.22 2.03 1.67 2.15 3.04 2.21 1.39.06 2.62-.34 2.62-.34l.06 1.3s-.97.52-2.69.62c-.95.05-2.13-.02-3.5-.37-2.98-.77-3.49-3.88-3.57-7.04-.02-.8-.01-1.55-.01-2.18 0-5.48 3.6-7.09 3.6-7.09C8.84 3.37 10.7 3 12.62 3h.04c1.92 0 3.78.37 5.45 1.09 0 0 3.6 1.61 3.6 7.09 0 0 .05 4.05-.77 6.82z" fill="currentColor"/>
+	<path d="M17.23 8.24v4.67h-1.86V8.5c0-.96-.4-1.45-1.2-1.45-.89 0-1.33.57-1.33 1.71v2.47H11V8.76c0-1.14-.44-1.71-1.33-1.71-.8 0-1.2.49-1.2 1.45v4.41H6.62V8.24c0-.96.25-1.72.74-2.28.51-.56 1.17-.85 2-.85.95 0 1.67.36 2.14 1.09l.46.77.46-.77c.47-.73 1.19-1.09 2.14-1.09.83 0 1.49.29 2 .85.49.56.74 1.32.74 2.28z" fill="#fff"/>
+</svg>
+<span class="social-label">Mastodon</span></a>
+          <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Bluesky</title>
+	<path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.415-.054-2.36.308-3.916 1.379-3.916 2.827 0 1.548 1.898 2.997 8.494 2.997s8.494-1.449 8.494-2.997c0-1.448-1.556-2.519-3.916-2.827.14.016.279.034.415.054 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.478 0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.622-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" fill="currentColor"/>
+</svg>
+<span class="social-label">Bluesky</span></a>
+        </div>
+        <ul style="margin-top: 1rem;">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/whats-new/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3mpwrApp — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
+      <p class="footer-mission">💚 Grassroots & Community-Funded • 100% Free Forever • Mission-Driven, Not Profit-Driven</p>
+    </div>
+  </footer>
+
+  <!-- Skip link and mobile menu functionality -->
+  <script src="/assets/js/skip-links.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
+
+  <!-- Utilities and controls -->
+  <script src="/assets/js/a11y.min.js" defer></script>
+  <script src="/assets/js/contrast.min.js" defer></script>
+  <script src="/assets/js/theme.min.js" defer></script>
+  <script src="/assets/js/back-to-top.min.js" defer></script>
+  <script src="/assets/js/settings.min.js" defer></script>
+  
+  <!-- Innovative Accessibility Features - Low Priority -->
+  <script src="/assets/js/accessibility-innovations.min.js" defer async></script>
+  
+  <!-- WCAG 2.2 AA+ Compliance Features -->
+  <script src="/assets/js/wcag-compliance.min.js" defer></script>
+  
+  <!-- WCAG 2.2 AAA Dynamic Enhancements - External links, touch targets, ARIA labels -->
+  <script src="/assets/js/wcag-aaa-dynamic.js" defer></script>
+
+  <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
+    <!-- Cookie Consent (GDPR Compliance) - Load early to show banner --><!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fef378cf7f9742c582f28f566e204a85"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

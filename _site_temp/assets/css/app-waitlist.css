@@ -1,0 +1,363 @@
+/* App Waitlist Page Styles */
+
+/* Beta CTA Sections */
+.beta-cta {
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.3);
+  border: 3px solid #6d28d9;
+}
+
+.beta-cta h2,
+.beta-cta h3 {
+  color: white;
+  margin: 0 0 1rem;
+}
+
+.beta-cta p {
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 1.5rem;
+  font-size: 1.1rem;
+}
+
+.beta-cta .cta-footer {
+  margin: 1.5rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.final-cta {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin: 3rem 0;
+  box-shadow: 0 8px 24px rgba(240, 147, 251, 0.4);
+  border: 3px solid #ec4899;
+}
+
+.final-cta h2 {
+  color: white;
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+.final-cta p {
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.final-cta .cta-footer {
+  margin: 2rem 0 0;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Benefit Cards with Color Coding */
+.benefit-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.benefit-card.founding {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+}
+
+.benefit-card.founding:hover {
+  border-color: #f59e0b;
+}
+
+.benefit-card.early-access {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1e40af;
+}
+
+.benefit-card.early-access:hover {
+  border-color: #3b82f6;
+}
+
+.benefit-card.input {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  color: #3730a3;
+}
+
+.benefit-card.input:hover {
+  border-color: #6366f1;
+}
+
+.benefit-card.community {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  color: #6b21a8;
+}
+
+.benefit-card.community:hover {
+  border-color: #a855f7;
+}
+
+.benefit-card.resources {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  color: #166534;
+}
+
+.benefit-card.resources:hover {
+  border-color: #22c55e;
+}
+
+.benefit-card.perks {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  color: #991b1b;
+}
+
+.benefit-card.perks:hover {
+  border-color: #ef4444;
+}
+
+.benefit-card strong {
+  display: block;
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.benefit-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Waitlist Stats Display */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  border: 2px solid #e5e7eb;
+}
+
+.stat-item {
+  padding: 1rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value.primary {
+  color: #5b21b6;
+}
+
+.stat-value.info {
+  color: #0891b2;
+}
+
+.stat-value.success {
+  color: #059669;
+}
+
+.stat-value.danger {
+  color: #dc2626;
+}
+
+.stat-label {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.stats-footer {
+  text-align: center;
+  margin: 1.5rem 0 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Onboarding Steps */
+.onboarding-steps {
+  counter-reset: step-counter;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.onboarding-steps li {
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 4rem;
+  margin-bottom: 2rem;
+}
+
+.onboarding-steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #0066CC 0%, #4DB8FF 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.onboarding-steps li h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.onboarding-steps li ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+/* Role Checkmarks */
+.role-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.role-list li {
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+}
+
+.role-list li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+  .benefit-card.founding {
+    background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+    color: #fef3c7;
+  }
+
+  .benefit-card.early-access {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: #dbeafe;
+  }
+
+  .benefit-card.input {
+    background: linear-gradient(135deg, #312e81 0%, #3730a3 100%);
+    color: #e0e7ff;
+  }
+
+  .benefit-card.community {
+    background: linear-gradient(135deg, #581c87 0%, #6b21a8 100%);
+    color: #f3e8ff;
+  }
+
+  .benefit-card.resources {
+    background: linear-gradient(135deg, #14532d 0%, #166534 100%);
+    color: #f0fdf4;
+  }
+
+  .benefit-card.perks {
+    background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+    color: #fef2f2;
+  }
+
+  .stats-grid {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .stat-value.primary {
+    color: #a78bfa;
+  }
+
+  .stat-value.info {
+    color: #22d3ee;
+  }
+
+  .stat-value.success {
+    color: #34d399;
+  }
+
+  .stat-value.danger {
+    color: #f87171;
+  }
+
+  .stat-label {
+    color: #9ca3af;
+  }
+
+  .stats-footer {
+    color: #9ca3af;
+  }
+
+  .onboarding-steps li h3 {
+    color: #e0e0e0;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .beta-cta,
+  .final-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .final-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .onboarding-steps li {
+    padding-left: 3.5rem;
+  }
+
+  .onboarding-steps li::before {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .beta-cta,
+  .final-cta {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black;
+  }
+
+  .btn-primary {
+    display: none;
+  }
+
+  .benefit-card {
+    break-inside: avoid;
+    border: 1px solid black;
+  }
+}

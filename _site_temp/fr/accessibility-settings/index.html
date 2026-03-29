@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paramètres d'accessibilité | 3mpwr App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="Personnalisez votre expérience de navigation avec les options d'accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.">
+  
+  <!-- 
+    Security Headers: These should be set via server-side headers file (_headers for Netlify/Vercel, .htaccess for Apache, etc.)
+    CSP meta tag is included above as the only valid http-equiv for security headers.
+    X-Content-Type-Options, X-Frame-Options, and Referrer-Policy must be set as HTTP response headers, not meta tags.
+  -->
+  
+  <!-- Resource Hints for Performance (limit to 3 most critical) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json"><!-- Open Graph Meta Tags -->
+<meta property="og:site_name" content="3mpwr App">
+<meta property="og:title" content="Paramètres d'accessibilité">
+<meta property="og:description" content="Personnalisez votre expérience de navigation avec les options d'accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/fr/accessibility-settings/">
+<meta property="og:locale" content="fr_CA">
+
+<meta property="og:locale:alternate" content="en_CA">
+
+
+<!-- Open Graph Image -->
+
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:secure_url" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:alt" content="Paramètres d'accessibilité">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Article-specific Open Graph -->
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpowrapp0816">
+<meta name="twitter:creator" content="@3mpowrapp0816">
+<meta name="twitter:title" content="Paramètres d'accessibilité">
+<meta name="twitter:description" content="Personnalisez votre expérience de navigation avec les options d'accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.">
+
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta name="twitter:image:alt" content="Paramètres d'accessibilité">
+
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="3mpwrApp">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+
+<meta name="language" content="French">
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://3mpwrapp.pages.dev/fr/accessibility-settings/">
+
+<!-- Alternate Language Links (hreflang) -->
+
+
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.pages.dev/accessibility-settings/">
+<link rel="alternate" hreflang="fr" href="https://3mpwrapp.pages.dev/fr/accessibility-settings/">
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/accessibility-settings/">
+
+
+<!-- PWA and Mobile Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="3mpwrApp">
+<meta name="application-name" content="3mpwrApp">
+<meta name="theme-color" content="#2A9D8F">
+<meta name="msapplication-TileColor" content="#2A9D8F">
+<meta name="msapplication-navbutton-color" content="#2A9D8F">
+
+<!-- Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Favicons and Touch Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/icon-192.png">
+<!-- Schema.org Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://3mpwrapp.pages.dev#organization",
+      "name": "3mpwrApp",
+      "alternateName": "EmpowrApp",
+      "url": "https://3mpwrapp.pages.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev#logo",
+  "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "3mpwrApp Logo"
+      },
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "foundingDate": "2024",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "empowrapp08162025@gmail.com",
+        "contactType": "Customer Support",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/3mpowrapp/",
+        "https://x.com/3mpowrapp0816",
+        "https://www.instagram.com/3mpwrapp/",
+        "https://www.youtube.com/3mpwrApp",
+        "https://www.tiktok.com/@3mpwrapp",
+        "https://mastodon.social/@3mpwrApp",
+        "https://bsky.app/profile/3mpwrapp.bsky.social",
+        "https://github.com/3mpwrApp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://3mpwrapp.pages.dev#website",
+      "url": "https://3mpwrapp.pages.dev",
+      "name": "3mpwrApp",
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "publisher": {
+        "@id": "https://3mpwrapp.pages.dev#organization"
+      },
+      "inLanguage": "fr-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://3mpwrapp.pages.dev/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://3mpwrapp.pages.dev/fr/accessibility-settings/#webpage",
+      "url": "https://3mpwrapp.pages.dev/fr/accessibility-settings/",
+      "name": "Paramètres d&#39;accessibilité",
+      "headline": "Paramètres d&#39;accessibilité",
+      "description": "Personnalisez votre expérience de navigation avec les options d&#39;accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.",
+      "isPartOf": {
+        "@id": "https://3mpwrapp.pages.dev#website"
+      },
+      "inLanguage": "fr-CA",
+      
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev/fr/accessibility-settings/#primaryimage",
+        "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Paramètres d&#39;accessibilité"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://3mpwrapp.pages.dev/fr/accessibility-settings/#primaryimage"
+      },
+      
+      
+      "breadcrumb": {
+        "@id": "https://3mpwrapp.pages.dev/fr/accessibility-settings/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://3mpwrapp.pages.dev/fr/accessibility-settings/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://3mpwrapp.pages.dev"
+        }
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Fr",
+          "item": "https://3mpwrapp.pages.dev/fr"
+        }
+          
+          
+        
+          
+          
+          
+        ,{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Paramètres d&#39;accessibilité",
+          "item": "https://3mpwrapp.pages.dev/fr/accessibility-settings"
+        }
+          
+        
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
+<!-- Additional Schema for Accessibility Features -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Paramètres d&#39;accessibilité",
+  "description": "Personnalisez votre expérience de navigation avec les options d&#39;accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.",
+  "accessibilityFeature": [
+    "alternativeText",
+    "audioDescription",
+    "captions",
+    "highContrastDisplay",
+    "largePrint",
+    "keyboardNavigation",
+    "readingOrder",
+    "screenReaderSupport",
+    "synchronizedAudioText",
+    "tableOfContents",
+    "timingControl",
+    "unlocked"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl",
+    "fullTouchControl"
+  ],
+  "accessibilityHazard": "noFlashingHazard"
+}
+</script>
+
+
+<!-- Software Application Schema for App Pages -->
+
+<link rel="canonical" href="https://3mpwrapp.pages.dev/fr/accessibility-settings/"><!-- hreflang tags for international SEO -->
+<!-- English Canada (primary) -->
+<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.pages.dev/fr/accessibility-settings/" />
+
+<!-- French Canada -->
+
+
+<link rel="alternate" hreflang="fr-CA" href="https://3mpwrapp.pages.dev/fr/accessibility-settings/" />
+<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.pages.dev/accessibility-settings/" />
+
+
+<!-- USA (when available) -->
+
+
+<!-- Default fallback (English Canada) -->
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/accessibility-settings/" />
+
+<!-- Future language expansions (add as they go live) -->
+<!-- 
+<link rel="alternate" hreflang="es" href="https://3mpwrapp.pages.dev/fr/accessibility-settings/" />
+<link rel="alternate" hreflang="ar" href="https://3mpwrapp.pages.dev/fr/accessibility-settings/" />
+<link rel="alternate" hreflang="zh-CN" href="https://3mpwrapp.pages.dev/fr/accessibility-settings/" />
+-->
+<link rel="stylesheet" href="/assets/css/complexity-mode.css">
+<script src="/assets/js/complexity-mode.js" defer></script><link rel="stylesheet" href="/assets/css/connection-status.css">
+<script src="/assets/js/connection-status.js" defer></script><!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3mpwrApp">
+<meta property="og:title" content="Revolutionary Accessibility - 3mpwrApp">
+<meta property="og:description" content="WCAG AAA 82% compliant. Brain Fog Helper, Pain Flare Mode, Spoons Tracker, Need a Break Button. Accessibility features you won't find anywhere else.">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/fr/accessibility-settings/">
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-accessibility.png">
+<meta property="og:image:alt" content="3mpwrApp accessibility badge showing WCAG AAA 82% compliance with innovative disability features">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA"><meta property="og:locale:alternate" content="fr_CA"><!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpwrApp">
+<meta name="twitter:creator" content="@ODSPoor">
+<meta name="twitter:title" content="Revolutionary Accessibility - 3mpwrApp">
+<meta name="twitter:description" content="WCAG AAA 82% compliant. Brain Fog Helper, Pain Flare Mode, Spoons Tracker, Need a Break Button. Accessibility features you won't find anywhere else.">
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-accessibility.png">
+<meta name="twitter:image:alt" content="3mpwrApp accessibility badge showing WCAG AAA 82% compliance with innovative disability features">
+
+<!-- Additional Meta for Rich Previews -->
+<meta property="article:publisher" content="https://www.facebook.com/3mpwrApp"><!-- Facebook App ID (if available) --><link rel="dns-prefetch" href="//www.clarity.ms">
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin><link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><link rel="preload" href="/assets/css/style.css" as="style"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/assets/site.webmanifest"><meta name="theme-color" content="#111111">
+<meta name="color-scheme" content="light dark">
+<meta name="fediverse:creator" content="@3mpwrApp@mastodon.social">
+
+<!-- What's New RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — What's New" href="/whats-new/feed.xml">
+
+<!-- Main site RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — Site Feed" href="/feed.xml"><script>
+(function(){
+  var KEY = 'cookie-consent';
+  function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function onConsent(cb){
+    if (get(KEY) === 'accepted') { cb(); return; }
+    window.addEventListener('cookie-consent', function(e){ if (e && e.detail === 'accepted') cb(); });
+  }
+
+  // Google Analytics 4
+  var useGA = ("" !== "") && ("" === "");
+  if (useGA) {
+    onConsent(function(){
+      if (window.__gaLoaded) return; window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('Google Analytics script blocked or failed to load. Ad blockers or privacy extensions may be active.');
+        window.__gaLoadError = true;
+      };
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ 
+        if (!window.__gaLoadError) {
+          dataLayer.push(arguments); 
+        }
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=Strict;Secure',
+        'cookie_expires': 63072000,
+        'cookie_update': false,
+        'allow_ad_personalization_signals': false,
+        'allow_google_signals': false
+      });
+    });
+  }
+
+  // GoatCounter (privacy-friendly, free)
+  var useGoat = ("" === "goatcounter") && ("" !== "");
+  if (useGoat) {
+    onConsent(function(){
+      if (window.__goatLoaded) return; window.__goatLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter', 'https://.goatcounter.com/count');
+      s.src = 'https://gc.zgo.at/count.js';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('GoatCounter analytics unavailable. Connection may be blocked.');
+      };
+      document.head.appendChild(s);
+    });
+  }
+})();
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "3mpwr App",
+  "url": "https://3mpwrapp.pages.dev",
+  "logo": "https://3mpwrapp.pages.dev/assets/favicon.svg",
+  "sameAs": ["https://github.com/3mpwrApp", "https://www.facebook.com/3mpowrapp/", "https://x.com/3mpowrapp0816", "https://www.instagram.com/3mpwrapp/", "https://www.youtube.com/3mpwrApp", "https://www.tiktok.com/@3mpwrapp"]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://3mpwrapp.pages.dev/"
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Fr",
+        "item": "https://3mpwrapp.pages.dev/fr"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Accessibility settings",
+        "item": "https://3mpwrapp.pages.dev/fr/accessibility-settings"
+      }]
+}
+</script><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Paramètres d’accessibilité | 3mpwr App</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Paramètres d’accessibilité" />
+<meta name="author" content="3mpwr App" />
+<meta property="og:locale" content="fr" />
+<meta name="description" content="Personnalisez votre expérience de navigation avec les options d’accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture." />
+<meta property="og:description" content="Personnalisez votre expérience de navigation avec les options d’accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture." />
+<link rel="canonical" href="https://3mpwrapp.pages.dev/fr/accessibility-settings/" />
+<meta property="og:url" content="https://3mpwrapp.pages.dev/fr/accessibility-settings/" />
+<meta property="og:site_name" content="3mpwr App" />
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="twitter:title" content="Paramètres d’accessibilité" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"3mpwr App"},"description":"Personnalisez votre expérience de navigation avec les options d’accessibilité incluant la taille du texte, le contraste, le mode sombre et les préférences de lecture.","headline":"Paramètres d’accessibilité","image":"https://3mpwrapp.pages.dev/assets/empwrapp-logo.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://3mpwrapp.pages.dev/assets/favicon.svg"},"name":"3mpwr App"},"url":"https://3mpwrapp.pages.dev/fr/accessibility-settings/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.min.css">
+  <!-- WCAG AAA Compliant Color System -->
+  <link rel="stylesheet" href="/assets/css/accessibility-tokens.min.css">
+  <!-- WCAG 2.2 AA and Beyond Accessibility Enhancements -->
+  <link rel="stylesheet" href="/assets/css/accessibility-enhancements.min.css">
+  <!-- WCAG 2.2 AAA Color Palette - 7:1 Contrast Ratios -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-colors.css">
+  <!-- WCAG 2.2 AAA Color Fixes - Fixes all 614 accessibility violations -->
+  <link rel="stylesheet" href="/assets/css/aaa-color-fixes.css">
+  <!-- WCAG 2.2 AAA Comprehensive Overrides - Fixes all inline styles and remaining violations -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-overrides.css">
+  <!-- Universal Text Legibility - Ensures ALL text is readable in light/dark/high-contrast modes -->
+  <link rel="stylesheet" href="/assets/css/universal-text-legibility.css">
+  <!-- ACCESSIBILITY-FIRST COLOR SYSTEM - The #1 Standard for Light/Dark/High Contrast Modes (March 2026) -->
+  <link rel="stylesheet" href="/assets/css/accessibility-first-colors.css">
+  <!-- Performance Optimizations: Critical CSS, Lazy Loading, Font Optimization -->
+  <link rel="stylesheet" href="/assets/css/performance-optimizations.min.css">
+  <!-- Lighthouse Audit Fixes: Touch targets, contrast, aspect ratios -->
+  <link rel="stylesheet" href="/assets/css/lighthouse-fixes.min.css">
+  <!-- Cookie Consent Banner (GDPR Compliance) -->
+  <link rel="stylesheet" href="/assets/css/cookie-consent.css">
+
+  <!-- Header/nav footprint overrides moved to external CSS (CSP-safe) -->
+  <link rel="stylesheet" href="/assets/css/header-overrides.css">
+  <!-- Professional polish & design system (UX/UI audit improvements) -->
+  <link rel="stylesheet" href="/assets/css/professional-polish.css">
+  <!-- CLS (Cumulative Layout Shift) Fix - Cloudflare RUM reported 0.351-0.588 CLS -->
+  <link rel="stylesheet" href="/assets/css/cls-fix.css">
+  <!-- Alignment Consistency Fix - Professional, clean, organized layout -->
+  <link rel="stylesheet" href="/assets/css/alignment-consistency.css">
+  <!-- Global UX/UI Consistency - Ensures professional, clean, organized look across all pages -->
+  <link rel="stylesheet" href="/assets/css/global-consistency.css">
+  <!-- Enhanced Focus Indicators - WCAG 2.2 AAA compliant (3:1 contrast, 2px minimum) -->
+  <link rel="stylesheet" href="/assets/css/enhanced-focus-indicators.css">
+  <!-- Social Share Component Styles -->
+  <link rel="stylesheet" href="/assets/css/social-share.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#primary-nav">Skip to navigation</a>
+  <a class="skip-link" href="#site-footer">Skip to footer</a>
+  <header>
+    <!-- Brand: clicking this takes you home -->
+    <div class="brand header-bar">
+      <a class="site-brand" href="/" aria-label="3mpwr App home">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="" width="28" height="28" aria-hidden="true" loading="eager">
+        </picture>
+        <span>3mpwr App</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button><a class="lang-switch" href="/">English</a>
+    </div>
+
+  <nav id="primary-nav" aria-label="Primary">
+      
+  <ul class="nav-list">
+        <li>
+          <a href="/fr/" >
+            Accueil
+          </a>
+        </li>
+        <li>
+          <a href="/fr/about" >
+            À propos
+          </a>
+        </li>
+        <li>
+          <a href="/fr/features" >
+            Fonctionnalités
+          </a>
+        </li>
+        <li>
+          <a href="/fr/app-tour" >
+            Visite de l'appli
+          </a>
+        </li>
+        <li>
+          <a href="/fr/user-guide" >
+            Guide d'utilisation
+          </a>
+        </li>
+        <li>
+          <a href="/roadmap" >
+            Feuille de route
+          </a>
+        </li>
+        <li>
+          <a href="/fr/blog" >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="/fr/faq" >
+            FAQ
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility" aria-current="page">
+            Accessibilité
+          </a>
+        </li>
+        <li>
+          <a href="/app-waitlist" >
+            Liste d'attente
+          </a>
+        </li>
+        <li>
+          <a href="/crisis-resources" >
+            Ressources de crise
+          </a>
+        </li>
+        <li>
+          <a href="/fr/contact" >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="/fr/newsletter" >
+            Infolettre
+          </a>
+        </li>
+        <li>
+          <a href="/fr/whats-new" >
+            Quoi de neuf
+          </a>
+        </li>
+        <li>
+          <a href="/beta-guide" >
+            Guide des testeurs bêta
+          </a>
+        </li>
+        <li>
+          <a href="/fr/search" >
+            Recherche
+          </a>
+        </li>
+        <li>
+          <a href="/events" >
+            Événements
+          </a>
+        </li>
+        <li>
+          <a href="/site-map" >
+            Plan du site
+          </a>
+        </li>
+        <li>
+          <a href="/fr/accessibility-settings" aria-current="page">
+            Paramètres d'accessibilité
+          </a>
+        </li>
+        <li>
+          <a href="/fr/campaigns" >
+            Campagnes
+          </a>
+        </li>
+        <li>
+          <a href="/fr/community" >
+            Communauté
+          </a>
+        </li>
+        <li>
+          <a href="/fr/connect" >
+            Connecter
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- High contrast + Dark mode toggles + Accessibility Tools -->
+    <div class="header-controls" role="group" aria-label="Display settings and accessibility">
+      <a href="/accessibility-settings" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
+        ♿ Accessibility
+      </a>
+      
+      <!-- Complexity Mode Toggle -->
+      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode">
+        <span class="complexity-icon" aria-hidden="true">📖</span>
+        <span class="complexity-label">Standard View</span>
+        <span class="complexity-hint">Click for Simple Language</span>
+      </button>
+      
+      <button
+        id="contrast-toggle"
+        class="contrast-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle high contrast mode"
+      >
+        High contrast
+      </button>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle dark mode"
+      >
+        Dark mode
+      </button>
+    </div>
+  </header>
+  
+  <!-- Complexity Mode Announcer (moved from inline) -->
+  <div id="complexity-announcer" role="status" aria-live="polite" aria-atomic="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"></div><nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li><li><a href="/fr">Fr</a></li><li aria-current="page">Paramètres d'accessibilité</li></ol>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <!-- Status Banner - Consistent across all pages -->
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator" aria-hidden="true">🚀</span>
+  <strong>App Status:</strong> Production Ready - 721 Tests Passing | <strong>Phase 1:</strong> Closed Internal Testing NOW ACTIVE (Slow Release) | <strong>NEW:</strong> Available Canada-wide (Coast to Coast to Coast) + USA Lite 🇨🇦🇺🇸
+</div>
+<h1 id="paramètres-daccessibilité">Paramètres d’accessibilité</h1>
+
+<p><strong>Dernière mise à jour :</strong> 24 février 2026<br />
+<strong>Statut docs :</strong> Paramètres d’accessibilité FR alignés avec la baseline documentaire février 2026.</p>
+
+<p>Utilisez ces contrôles pour personnaliser votre expérience de visualisation. Vos préférences sont enregistrées dans votre navigateur sur cet appareil.</p>
+
+<h2 id="options-daffichage">Options d’affichage</h2>
+
+<ul>
+  <li>Mode contraste élevé : utilisez le bouton “High contrast” dans l’en-tête du site. Cela augmente le contraste des couleurs et la visibilité du focus.</li>
+  <li>Mode sombre : utilisez le bouton “Dark mode” dans l’en-tête du site. Cela passe à un jeu de couleurs sombres.</li>
+</ul>
+
+<h3 id="affinez-vos-préférences-de-lecture">Affinez vos préférences de lecture</h3>
+
+<form data-a11y-form="" aria-labelledby="a11y-form-title">
+	<h2 id="a11y-form-title">Préférences de lecture</h2>
+	<div>
+		<label for="font-scale">Taille du texte</label><br />
+		<input id="font-scale" name="font-scale" type="range" min="90" max="150" step="5" value="100" aria-describedby="font-scale-hint" />
+		<p id="font-scale-hint">Ajuste la taille globale du texte sur le site.</p>
+	</div>
+	<div>
+		<label for="line-height">Espacement des lignes</label><br />
+		<select id="line-height" name="line-height">
+			<option value="normal">Normal</option>
+			<option value="loose">Large</option>
+		</select>
+	</div>
+	<div>
+		<label for="letter-spacing">Espacement des lettres</label><br />
+		<select id="letter-spacing" name="letter-spacing">
+			<option value="normal">Normal</option>
+			<option value="wide">Large</option>
+		</select>
+	</div>
+	<div>
+		<label for="underline-links">Souligner les liens</label><br />
+		<select id="underline-links" name="underline-links">
+			<option value="auto">Auto</option>
+			<option value="always">Toujours souligner</option>
+		</select>
+	</div>
+	<div>
+		<label for="readable-font">Famille de police</label><br />
+		<select id="readable-font" name="readable-font">
+			<option value="default">Par défaut</option>
+			<option value="readable">Sans-serif lisible</option>
+			<option value="dyslexia">Adapté à la dyslexie</option>
+		</select>
+	</div>
+	<div>
+		<label for="reduce-motion">Mouvement</label><br />
+		<select id="reduce-motion" name="reduce-motion">
+			<option value="auto">Suivre le paramètre système</option>
+			<option value="on">Réduire le mouvement</option>
+		</select>
+	</div>
+	<div>
+		<label for="color-filter">Filtre de couleur</label><br />
+		<select id="color-filter" name="color-filter">
+			<option value="none">Aucun</option>
+			<option value="grayscale">Niveaux de gris</option>
+			<option value="hue">Décalage de teinte</option>
+		</select>
+	</div>
+	<div>
+		<label for="focus-ring">Anneau de focus</label><br />
+		<select id="focus-ring" name="focus-ring">
+			<option value="default">Par défaut</option>
+			<option value="thick">Épais</option>
+			<option value="color">Couleur haute visibilité</option>
+		</select>
+	</div>
+	<p>
+		<button type="button" data-reset="" class="button">Réinitialiser aux valeurs par défaut</button>
+	</p>
+</form>
+
+<h2 id="mouvement">Mouvement</h2>
+
+<p>Ce site respecte la préférence “Réduire le mouvement” de votre système et évite automatiquement les animations inutiles. Si vous avez besoin d’ajustements supplémentaires, faites-le nous savoir.</p>
+
+<h2 id="navigation-au-clavier">Navigation au clavier</h2>
+
+<ul>
+  <li>Utilisez les liens “Skip to content” et “Skip to footer” en haut de la page.</li>
+  <li>Appuyez sur “Tab” pour vous déplacer entre les liens et les contrôles ; “Maj + Tab” recule.</li>
+  <li>La fenêtre modale de l’infolettre peut être fermée avec la touche “Échap”, en cliquant à l’extérieur de la boîte de dialogue ou en utilisant les boutons “Fermer”/”Pas maintenant”. Le focus est maintenu dans la boîte de dialogue tant qu’elle est ouverte.</li>
+</ul>
+
+<h2 id="réinitialiser-les-préférences">Réinitialiser les préférences</h2>
+
+<p>Si vous souhaitez réinitialiser vos préférences enregistrées, utilisez le bouton “Réinitialiser aux valeurs par défaut” ci-dessus ou effacez les données du site de votre navigateur pour ce domaine.</p>
+
+<h2 id="commentaires">Commentaires</h2>
+
+<p>Si un paramètre ne fonctionne pas comme prévu, contactez-nous à <a href="mailto:empowrapp08162025@gmail.com">empowrapp08162025@gmail.com</a> avec les informations de votre navigateur et de votre appareil.</p>
+
+<script src="/assets/js/settings.js" defer=""></script>
+
+<hr />
+
+<h2 id="guide-des-paramètres">Guide des paramètres</h2>
+
+<h3 id="taille-du-texte">Taille du texte</h3>
+<p>Augmentez ou diminuez la taille de la police de <strong>90% à 150%</strong> de la taille par défaut. Idéal pour les utilisateurs malvoyants ou ceux qui préfèrent un texte plus grand.</p>
+
+<p><strong>Recommandations</strong> :</p>
+<ul>
+  <li><strong>90-100%</strong> : Taille standard</li>
+  <li><strong>110-120%</strong> : Légèrement plus grand, plus confortable</li>
+  <li><strong>130-150%</strong> : Beaucoup plus grand, pour une meilleure lisibilité</li>
+</ul>
+
+<h3 id="espacement-des-lignes">Espacement des lignes</h3>
+<ul>
+  <li><strong>Normal</strong> : Espacement standard entre les lignes (1.5 unités)</li>
+  <li><strong>Large</strong> : Espacement accru (2.0 unités) pour réduire le fouillis visuel</li>
+</ul>
+
+<p><strong>Bon pour</strong> : Dyslexie, fatigue visuelle, difficultés de concentration</p>
+
+<h3 id="espacement-des-lettres">Espacement des lettres</h3>
+<ul>
+  <li><strong>Normal</strong> : Espacement standard entre les caractères</li>
+  <li><strong>Large</strong> : Lettres espacées pour une meilleure distinction</li>
+</ul>
+
+<p><strong>Bon pour</strong> : Dyslexie, malvoyance, apprentissage du français langue seconde</p>
+
+<h3 id="souligner-les-liens">Souligner les liens</h3>
+<ul>
+  <li><strong>Auto</strong> : Les liens sont soulignés uniquement au survol/focus</li>
+  <li><strong>Toujours souligner</strong> : Tous les liens sont soulignés en permanence</li>
+</ul>
+
+<p><strong>Bon pour</strong> : Distinguer clairement les liens du texte ordinaire</p>
+
+<h3 id="famille-de-police">Famille de police</h3>
+<ul>
+  <li><strong>Par défaut</strong> : Police système standard</li>
+  <li><strong>Sans-serif lisible</strong> : Police sans-serif claire et ouverte</li>
+  <li><strong>Adapté à la dyslexie</strong> : Police spécialement conçue avec des lettres distinctes</li>
+</ul>
+
+<p><strong>Polices utilisées</strong> :</p>
+<ul>
+  <li><strong>Lisible</strong> : “Verdana”, “Helvetica”, “Arial”</li>
+  <li><strong>Dyslexie</strong> : “OpenDyslexic”, “Comic Sans MS” (repli)</li>
+</ul>
+
+<h3 id="mouvement-1">Mouvement</h3>
+<ul>
+  <li><strong>Suivre le paramètre système</strong> : Utilise votre préférence OS</li>
+  <li><strong>Réduire le mouvement</strong> : Désactive toutes les animations et transitions</li>
+</ul>
+
+<p><strong>Bon pour</strong> : Troubles vestibulaires, sensibilité au mouvement, épilepsie photosensible</p>
+
+<h3 id="filtre-de-couleur">Filtre de couleur</h3>
+<ul>
+  <li><strong>Aucun</strong> : Couleurs normales</li>
+  <li><strong>Niveaux de gris</strong> : Convertit tout en noir et blanc</li>
+  <li><strong>Décalage de teinte</strong> : Ajuste les couleurs pour un meilleur contraste</li>
+</ul>
+
+<p><strong>Bon pour</strong> : Daltonisme, sensibilité à la lumière, préférence personnelle</p>
+
+<h3 id="anneau-de-focus">Anneau de focus</h3>
+<ul>
+  <li><strong>Par défaut</strong> : Indicateur de focus standard du navigateur</li>
+  <li><strong>Épais</strong> : Anneau plus large et plus visible</li>
+  <li><strong>Couleur haute visibilité</strong> : Couleur contrastée brillante (cyan)</li>
+</ul>
+
+<p><strong>Bon pour</strong> : Navigation au clavier, malvoyance, contraste élevé</p>
+
+<hr />
+
+<h2 id="combinaisons-suggérées">Combinaisons suggérées</h2>
+
+<h3 id="pour-la-dyslexie">Pour la dyslexie</h3>
+<ul>
+  <li>Taille du texte : <strong>120%</strong></li>
+  <li>Espacement des lignes : <strong>Large</strong></li>
+  <li>Espacement des lettres : <strong>Large</strong></li>
+  <li>Police : <strong>Adapté à la dyslexie</strong></li>
+</ul>
+
+<h3 id="pour-la-malvoyance">Pour la malvoyance</h3>
+<ul>
+  <li>Taille du texte : <strong>140-150%</strong></li>
+  <li>Mode : <strong>Contraste élevé</strong> (bouton d’en-tête)</li>
+  <li>Liens : <strong>Toujours souligner</strong></li>
+  <li>Anneau de focus : <strong>Épais</strong> ou <strong>Couleur haute visibilité</strong></li>
+</ul>
+
+<h3 id="pour-la-sensibilité-au-mouvement">Pour la sensibilité au mouvement</h3>
+<ul>
+  <li>Mouvement : <strong>Réduire le mouvement</strong></li>
+  <li>(Activer aussi dans les paramètres de votre OS pour un effet complet)</li>
+</ul>
+
+<h3 id="pour-la-fatigue-visuelle">Pour la fatigue visuelle</h3>
+<ul>
+  <li>Mode : <strong>Sombre</strong> (bouton d’en-tête)</li>
+  <li>Espacement des lignes : <strong>Large</strong></li>
+  <li>Taille du texte : <strong>110-120%</strong></li>
+</ul>
+
+<h3 id="pour-la-photosensibilité">Pour la photosensibilité</h3>
+<ul>
+  <li>Mouvement : <strong>Réduire le mouvement</strong></li>
+  <li>Filtre : <strong>Niveaux de gris</strong> ou <strong>Décalage de teinte</strong></li>
+  <li>Mode : <strong>Sombre</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="persistance-des-paramètres">Persistance des paramètres</h2>
+
+<p>Vos préférences sont enregistrées dans le <strong>localStorage</strong> de votre navigateur et persistent :</p>
+<ul>
+  <li>✅ Entre les visites</li>
+  <li>✅ Sur toutes les pages du site</li>
+  <li>✅ Jusqu’à ce que vous les effaciez</li>
+</ul>
+
+<p><strong>Note</strong> : Les paramètres sont spécifiques à :</p>
+<ul>
+  <li>Ce navigateur (pas synchronisés entre appareils)</li>
+  <li>Ce domaine (pas partagés avec d’autres sites)</li>
+</ul>
+
+<h2 id="effacer-les-paramètres">Effacer les paramètres</h2>
+
+<h3 id="option-1--bouton-de-réinitialisation">Option 1 : Bouton de réinitialisation</h3>
+<p>Cliquez sur “Réinitialiser aux valeurs par défaut” ci-dessus.</p>
+
+<h3 id="option-2--paramètres-du-navigateur">Option 2 : Paramètres du navigateur</h3>
+<p><strong>Chrome/Edge</strong> :</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">chrome://settings/cookies</code> → “Tous les cookies et données des sites”</li>
+  <li>Recherchez “3mpwrapp.github.io”</li>
+  <li>Cliquez sur l’icône de corbeille</li>
+</ol>
+
+<p><strong>Firefox</strong> :</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">about:preferences#privacy</code> → “Cookies et données de sites”</li>
+  <li>“Gérer les données…”</li>
+  <li>Recherchez “3mpwrapp.github.io” → “Supprimer sélection”</li>
+</ol>
+
+<p><strong>Safari</strong> :</p>
+<ol>
+  <li>Préférences → Confidentialité → Gérer les données de sites web</li>
+  <li>Recherchez “3mpwrapp.github.io” → Supprimer</li>
+</ol>
+
+<h3 id="option-3--mode-navigation-privée">Option 3 : Mode navigation privée</h3>
+<p>En mode incognito/privé, les paramètres ne sont PAS enregistrés (ils se réinitialisent à chaque session).</p>
+
+<hr />
+
+<h2 id="compatibilité">Compatibilité</h2>
+
+<p>Ces paramètres sont testés et fonctionnent sur :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Navigateur</th>
+      <th>Version</th>
+      <th>Support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chrome</td>
+      <td>90+</td>
+      <td>✅ Complet</td>
+    </tr>
+    <tr>
+      <td>Firefox</td>
+      <td>88+</td>
+      <td>✅ Complet</td>
+    </tr>
+    <tr>
+      <td>Safari</td>
+      <td>14+</td>
+      <td>✅ Complet</td>
+    </tr>
+    <tr>
+      <td>Edge</td>
+      <td>90+</td>
+      <td>✅ Complet</td>
+    </tr>
+    <tr>
+      <td>Brave</td>
+      <td>Toutes</td>
+      <td>✅ Complet</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Navigateurs mobiles</strong> :</p>
+<ul>
+  <li>Chrome Mobile, Safari iOS, Firefox Mobile, Samsung Internet : ✅ Tous supportés</li>
+</ul>
+
+<p><strong>Anciennes versions</strong> :
+Les paramètres peuvent ne pas fonctionner sur des navigateurs très anciens (IE11, Chrome &lt;80). Nous recommandons de mettre à jour vers la dernière version.</p>
+
+<hr />
+
+<h2 id="dépannage">Dépannage</h2>
+
+<h3 id="les-paramètres-ne-sont-pas-enregistrés">Les paramètres ne sont pas enregistrés</h3>
+<ol>
+  <li>Vérifiez que les cookies/localStorage ne sont pas bloqués</li>
+  <li>Désactivez temporairement les extensions de blocage (uBlock, Privacy Badger)</li>
+  <li>Assurez-vous de ne pas être en mode navigation privée</li>
+</ol>
+
+<h3 id="les-paramètres-ne-sappliquent-pas">Les paramètres ne s’appliquent pas</h3>
+<ol>
+  <li>Actualisez la page (Ctrl+F5 ou Cmd+Shift+R)</li>
+  <li>Videz le cache du navigateur</li>
+  <li>Essayez de réinitialiser les paramètres</li>
+</ol>
+
+<h3 id="police-de-dyslexie-ne-fonctionne-pas">Police de dyslexie ne fonctionne pas</h3>
+<p>La police OpenDyslexic peut ne pas être installée sur votre système. Le site utilise Comic Sans MS comme repli.</p>
+
+<p>Pour installer OpenDyslexic :</p>
+<ul>
+  <li><a href="https://opendyslexic.org/">Téléchargez-la gratuitement</a></li>
+  <li>Installez-la sur votre système</li>
+  <li>Actualisez la page</li>
+</ul>
+
+<h3 id="conflit-avec-le-mode-sombrecontraste">Conflit avec le mode sombre/contraste</h3>
+<p>Si vous utilisez une extension de thème sombre (Dark Reader), elle peut entrer en conflit avec nos paramètres. Désactivez-la pour ce site pour de meilleurs résultats.</p>
+
+<hr />
+
+<h2 id="suggestions-daccessibilité">Suggestions d’accessibilité</h2>
+
+<p>Avez-vous besoin d’un paramètre qui n’est pas répertorié ? Nous aimerions avoir de vos nouvelles !</p>
+
+<p><strong>Demandes fréquentes que nous étudions</strong> :</p>
+<ul>
+  <li>Sélecteur de jeu de couleurs personnalisé</li>
+  <li>Contrôle de l’opacité de l’arrière-plan</li>
+  <li>Mode de lecture (contenu uniquement)</li>
+  <li>Curseur personnalisé (taille/couleur)</li>
+</ul>
+
+<p>Envoyez vos suggestions à <a href="mailto:empowrapp08162025@gmail.com">empowrapp08162025@gmail.com</a> avec le sujet “Suggestion accessibilité”.</p>
+
+<hr />
+
+<h2 id="ressources-supplémentaires">Ressources supplémentaires</h2>
+
+<h3 id="notre-engagement">Notre engagement</h3>
+<ul>
+  <li><a href="/accessibility/">Politique d’accessibilité</a> - Notre engagement WCAG 2.2 AA</li>
+  <li><a href="/accessibility-walkthrough/">Guide d’accessibilité</a> - Visite guidée des fonctionnalités</li>
+</ul>
+
+<h3 id="outils-externes">Outils externes</h3>
+<ul>
+  <li><strong>Lecteurs d’écran</strong> : NVDA (Windows), JAWS, VoiceOver (Mac/iOS), TalkBack (Android)</li>
+  <li><strong>Zoom</strong> : ZoomText, extensions de navigateur</li>
+  <li><strong>Contraste</strong> : Vérificateur de contraste WebAIM</li>
+</ul>
+
+<h3 id="support-os">Support OS</h3>
+<ul>
+  <li><strong>Windows</strong> : Paramètres → Accessibilité</li>
+  <li><strong>macOS</strong> : Préférences Système → Accessibilité</li>
+  <li><strong>iOS</strong> : Réglages → Accessibilité</li>
+  <li><strong>Android</strong> : Paramètres → Accessibilité</li>
+</ul>
+
+<hr />
+
+<p>Merci d’utiliser nos paramètres d’accessibilité ! 💚</p>
+
+<p>Ensemble, nous construisons un Web plus accessible pour tous.<!-- Page Feedback Section - Consistent across all pages --></p>
+<div class="page-feedback" role="complementary">
+  <p><strong>💬 Was this page helpful?</strong></p>
+  <p>
+    <a href="/feedback?page=/fr/accessibility-settings/&amp;helpful=yes" class="feedback-btn feedback-yes" aria-label="Yes, this page was helpful">👍 Yes</a>
+    <a href="/feedback?page=/fr/accessibility-settings/&amp;helpful=no" class="feedback-btn feedback-no" aria-label="No, this page needs improvement">👎 No</a>
+    <a href="/feedback?page=/fr/accessibility-settings/" class="feedback-btn feedback-suggest" aria-label="Suggest improvements for this page">📝 Suggest improvements</a>
+  </p>
+  <p class="page-meta"><small>Last updated: October 29, 2025 | Next review: December 2025</small></p>
+</div>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <!-- Logo and Branding -->
+      <div class="footer-column footer-branding">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="3mpwrApp logo" width="64" height="64" loading="lazy" style="margin-bottom: 1rem;">
+        </picture>
+        <h3 style="margin-top: 0;">3mpwrApp</h3>
+        <p style="font-size: 0.9rem; line-height: 1.5;">Community-powered support for injured workers and persons with disabilities across Canada.</p>
+      </div>
+      
+      <!-- About Column -->
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="/about">Our Mission</a></li>
+          <li><a href="/user-guide">User Guide</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Started Column -->
+      <div class="footer-column">
+        <h3>Get Started</h3>
+        <ul>
+          <li><a href="/beta">Beta Testing</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/accessibility-walkthrough">Accessibility Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3>Legal & Privacy</h3>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/data-ownership">Data Ownership</a></li>
+          <li><a href="/community/guidelines">Community Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Column -->
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://paypal.me/3mpwrApp" target="_blank" rel="noopener noreferrer" style="color: #0070ba; font-weight: 600;">💙 Donate via PayPal</a></li>
+          <li><a href="/accessibility">Accessibility Statement</a></li>
+          <li><a href="/accessibility-settings">Accessibility Settings</a></li>
+          <li><a href="/site-map">Site Map</a></li>
+          <li><a href="/delete-data">Delete My Data</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect Column -->
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">Facebook</span></a>
+          <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" aria-label="3mpwr App Hub Facebook Group">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">FB Group</span></a>
+          <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
+<span class="social-label">X/Twitter</span></a>
+          <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Instagram</title>
+	<rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+</svg>
+<span class="social-label">Instagram</span></a>
+          <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="me noopener noreferrer" aria-label="Mastodon">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Mastodon</title>
+	<path d="M20.94 14c-.28 1.41-2.54 2.96-5.14 3.26-1.36.15-2.7.29-4.13.23-2.32-.1-4.15-.5-4.15-.5 0 .2.01.4.03.58.22 2.03 1.67 2.15 3.04 2.21 1.39.06 2.62-.34 2.62-.34l.06 1.3s-.97.52-2.69.62c-.95.05-2.13-.02-3.5-.37-2.98-.77-3.49-3.88-3.57-7.04-.02-.8-.01-1.55-.01-2.18 0-5.48 3.6-7.09 3.6-7.09C8.84 3.37 10.7 3 12.62 3h.04c1.92 0 3.78.37 5.45 1.09 0 0 3.6 1.61 3.6 7.09 0 0 .05 4.05-.77 6.82z" fill="currentColor"/>
+	<path d="M17.23 8.24v4.67h-1.86V8.5c0-.96-.4-1.45-1.2-1.45-.89 0-1.33.57-1.33 1.71v2.47H11V8.76c0-1.14-.44-1.71-1.33-1.71-.8 0-1.2.49-1.2 1.45v4.41H6.62V8.24c0-.96.25-1.72.74-2.28.51-.56 1.17-.85 2-.85.95 0 1.67.36 2.14 1.09l.46.77.46-.77c.47-.73 1.19-1.09 2.14-1.09.83 0 1.49.29 2 .85.49.56.74 1.32.74 2.28z" fill="#fff"/>
+</svg>
+<span class="social-label">Mastodon</span></a>
+          <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Bluesky</title>
+	<path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.415-.054-2.36.308-3.916 1.379-3.916 2.827 0 1.548 1.898 2.997 8.494 2.997s8.494-1.449 8.494-2.997c0-1.448-1.556-2.519-3.916-2.827.14.016.279.034.415.054 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.478 0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.622-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" fill="currentColor"/>
+</svg>
+<span class="social-label">Bluesky</span></a>
+        </div>
+        <ul style="margin-top: 1rem;">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/whats-new/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3mpwrApp — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
+      <p class="footer-mission">💚 Grassroots & Community-Funded • 100% Free Forever • Mission-Driven, Not Profit-Driven</p>
+    </div>
+  </footer>
+
+  <!-- Skip link and mobile menu functionality -->
+  <script src="/assets/js/skip-links.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
+
+  <!-- Utilities and controls -->
+  <script src="/assets/js/a11y.min.js" defer></script>
+  <script src="/assets/js/contrast.min.js" defer></script>
+  <script src="/assets/js/theme.min.js" defer></script>
+  <script src="/assets/js/back-to-top.min.js" defer></script>
+  <script src="/assets/js/settings.min.js" defer></script>
+  
+  <!-- Innovative Accessibility Features - Low Priority -->
+  <script src="/assets/js/accessibility-innovations.min.js" defer async></script>
+  
+  <!-- WCAG 2.2 AA+ Compliance Features -->
+  <script src="/assets/js/wcag-compliance.min.js" defer></script>
+  
+  <!-- WCAG 2.2 AAA Dynamic Enhancements - External links, touch targets, ARIA labels -->
+  <script src="/assets/js/wcag-aaa-dynamic.js" defer></script>
+
+  <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
+    <!-- Cookie Consent (GDPR Compliance) - Load early to show banner --><!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fef378cf7f9742c582f28f566e204a85"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3mpwr App - Beta Testers Guide & Feedback Program | 3mpwr App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="Complete beta testing guide for 3mpwr App. Learn what to test, how to report bugs, and join the testing program for a privacy-first accessibility tool.">
+  
+  <!-- 
+    Security Headers: These should be set via server-side headers file (_headers for Netlify/Vercel, .htaccess for Apache, etc.)
+    CSP meta tag is included above as the only valid http-equiv for security headers.
+    X-Content-Type-Options, X-Frame-Options, and Referrer-Policy must be set as HTTP response headers, not meta tags.
+  -->
+  
+  <!-- Resource Hints for Performance (limit to 3 most critical) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json"><!-- Open Graph Meta Tags -->
+<meta property="og:site_name" content="3mpwr App">
+<meta property="og:title" content="3mpwr App - Beta Testers Guide & Feedback Program">
+<meta property="og:description" content="Complete beta testing guide for 3mpwr App. Learn what to test, how to report bugs, and join the testing program for a privacy-first accessibility tool.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/beta-guide/">
+<meta property="og:locale" content="en_CA">
+
+<meta property="og:locale:alternate" content="fr_CA">
+
+
+<!-- Open Graph Image -->
+
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:secure_url" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:alt" content="3mpwr App - Beta Testers Guide & Feedback Program">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Article-specific Open Graph -->
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpowrapp0816">
+<meta name="twitter:creator" content="@3mpowrapp0816">
+<meta name="twitter:title" content="3mpwr App - Beta Testers Guide & Feedback Program">
+<meta name="twitter:description" content="Complete beta testing guide for 3mpwr App. Learn what to test, how to report bugs, and join the testing program for a privacy-first accessibility tool.">
+
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta name="twitter:image:alt" content="3mpwr App - Beta Testers Guide & Feedback Program">
+
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="3mpwrApp">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+
+<meta name="language" content="English">
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://3mpwrapp.pages.dev/beta-guide/">
+
+<!-- Alternate Language Links (hreflang) -->
+
+
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.pages.dev/beta-guide/">
+
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/beta-guide/">
+
+
+<!-- PWA and Mobile Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="3mpwrApp">
+<meta name="application-name" content="3mpwrApp">
+<meta name="theme-color" content="#2A9D8F">
+<meta name="msapplication-TileColor" content="#2A9D8F">
+<meta name="msapplication-navbutton-color" content="#2A9D8F">
+
+<!-- Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Favicons and Touch Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/icon-192.png">
+<!-- Schema.org Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://3mpwrapp.pages.dev#organization",
+      "name": "3mpwrApp",
+      "alternateName": "EmpowrApp",
+      "url": "https://3mpwrapp.pages.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev#logo",
+  "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "3mpwrApp Logo"
+      },
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "foundingDate": "2024",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "empowrapp08162025@gmail.com",
+        "contactType": "Customer Support",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/3mpowrapp/",
+        "https://x.com/3mpowrapp0816",
+        "https://www.instagram.com/3mpwrapp/",
+        "https://www.youtube.com/3mpwrApp",
+        "https://www.tiktok.com/@3mpwrapp",
+        "https://mastodon.social/@3mpwrApp",
+        "https://bsky.app/profile/3mpwrapp.bsky.social",
+        "https://github.com/3mpwrApp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://3mpwrapp.pages.dev#website",
+      "url": "https://3mpwrapp.pages.dev",
+      "name": "3mpwrApp",
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "publisher": {
+        "@id": "https://3mpwrapp.pages.dev#organization"
+      },
+      "inLanguage": "en-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://3mpwrapp.pages.dev/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://3mpwrapp.pages.dev/beta-guide/#webpage",
+      "url": "https://3mpwrapp.pages.dev/beta-guide/",
+      "name": "3mpwr App - Beta Testers Guide &amp; Feedback Program",
+      "headline": "3mpwr App - Beta Testers Guide &amp; Feedback Program",
+      "description": "Complete beta testing guide for 3mpwr App. Learn what to test, how to report bugs, and join the testing program for a privacy-first accessibility tool.",
+      "isPartOf": {
+        "@id": "https://3mpwrapp.pages.dev#website"
+      },
+      "inLanguage": "en-CA",
+      
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev/beta-guide/#primaryimage",
+        "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "3mpwr App - Beta Testers Guide &amp; Feedback Program"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://3mpwrapp.pages.dev/beta-guide/#primaryimage"
+      },
+      
+      
+      "breadcrumb": {
+        "@id": "https://3mpwrapp.pages.dev/beta-guide/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://3mpwrapp.pages.dev/beta-guide/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://3mpwrapp.pages.dev"
+        }
+        
+        
+        
+        
+        
+          
+          
+          
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "3mpwr app   beta testers guide &amp; feedback program",
+          "item": "https://3mpwrapp.pages.dev/beta-guide"
+        }
+          
+        
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
+<!-- Additional Schema for Accessibility Features -->
+
+
+<!-- Software Application Schema for App Pages -->
+
+<link rel="canonical" href="https://3mpwrapp.pages.dev/beta-guide/"><!-- hreflang tags for international SEO -->
+<!-- English Canada (primary) -->
+<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.pages.dev/beta-guide/" />
+
+<!-- French Canada -->
+
+
+<link rel="alternate" hreflang="fr-CA" href="https://3mpwrapp.pages.dev/fr/beta-guide/" />
+
+
+<!-- USA (when available) -->
+
+
+<!-- Default fallback (English Canada) -->
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/beta-guide/" />
+
+<!-- Future language expansions (add as they go live) -->
+<!-- 
+<link rel="alternate" hreflang="es" href="https://3mpwrapp.pages.dev/beta-guide/" />
+<link rel="alternate" hreflang="ar" href="https://3mpwrapp.pages.dev/beta-guide/" />
+<link rel="alternate" hreflang="zh-CN" href="https://3mpwrapp.pages.dev/beta-guide/" />
+-->
+<link rel="stylesheet" href="/assets/css/complexity-mode.css">
+<script src="/assets/js/complexity-mode.js" defer></script><link rel="stylesheet" href="/assets/css/connection-status.css">
+<script src="/assets/js/connection-status.js" defer></script><!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3mpwrApp">
+<meta property="og:title" content="Join the Beta - 3mpwrApp">
+<meta property="og:description" content="Be among the first to access 3mpwrApp's revolutionary disability support platform. Public beta now open. 100% free forever. Your voice shapes the future.">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/beta-guide/">
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-beta.png">
+<meta property="og:image:alt" content="Join 3mpwrApp Beta - Limited spots available for injured workers and persons with disabilities">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA"><meta property="og:locale:alternate" content="fr_CA"><!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpwrApp">
+<meta name="twitter:creator" content="@ODSPoor">
+<meta name="twitter:title" content="Join the Beta - 3mpwrApp">
+<meta name="twitter:description" content="Be among the first to access 3mpwrApp's revolutionary disability support platform. Public beta now open. 100% free forever. Your voice shapes the future.">
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-beta.png">
+<meta name="twitter:image:alt" content="Join 3mpwrApp Beta - Limited spots available for injured workers and persons with disabilities">
+
+<!-- Additional Meta for Rich Previews -->
+<meta property="article:publisher" content="https://www.facebook.com/3mpwrApp"><!-- Facebook App ID (if available) --><link rel="dns-prefetch" href="//www.clarity.ms">
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin><link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><link rel="preload" href="/assets/css/style.css" as="style"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/assets/site.webmanifest"><meta name="theme-color" content="#111111">
+<meta name="color-scheme" content="light dark">
+<meta name="fediverse:creator" content="@3mpwrApp@mastodon.social">
+
+<!-- What's New RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — What's New" href="/whats-new/feed.xml">
+
+<!-- Main site RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — Site Feed" href="/feed.xml"><script>
+(function(){
+  var KEY = 'cookie-consent';
+  function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function onConsent(cb){
+    if (get(KEY) === 'accepted') { cb(); return; }
+    window.addEventListener('cookie-consent', function(e){ if (e && e.detail === 'accepted') cb(); });
+  }
+
+  // Google Analytics 4
+  var useGA = ("" !== "") && ("" === "");
+  if (useGA) {
+    onConsent(function(){
+      if (window.__gaLoaded) return; window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('Google Analytics script blocked or failed to load. Ad blockers or privacy extensions may be active.');
+        window.__gaLoadError = true;
+      };
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ 
+        if (!window.__gaLoadError) {
+          dataLayer.push(arguments); 
+        }
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=Strict;Secure',
+        'cookie_expires': 63072000,
+        'cookie_update': false,
+        'allow_ad_personalization_signals': false,
+        'allow_google_signals': false
+      });
+    });
+  }
+
+  // GoatCounter (privacy-friendly, free)
+  var useGoat = ("" === "goatcounter") && ("" !== "");
+  if (useGoat) {
+    onConsent(function(){
+      if (window.__goatLoaded) return; window.__goatLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter', 'https://.goatcounter.com/count');
+      s.src = 'https://gc.zgo.at/count.js';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('GoatCounter analytics unavailable. Connection may be blocked.');
+      };
+      document.head.appendChild(s);
+    });
+  }
+})();
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "3mpwr App",
+  "url": "https://3mpwrapp.pages.dev",
+  "logo": "https://3mpwrapp.pages.dev/assets/favicon.svg",
+  "sameAs": ["https://github.com/3mpwrApp", "https://www.facebook.com/3mpowrapp/", "https://x.com/3mpowrapp0816", "https://www.instagram.com/3mpwrapp/", "https://www.youtube.com/3mpwrApp", "https://www.tiktok.com/@3mpwrapp"]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://3mpwrapp.pages.dev/"
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Beta guide",
+        "item": "https://3mpwrapp.pages.dev/beta-guide"
+      }]
+}
+</script><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>3mpwr App - Beta Testers Guide &amp; Feedback Program | 3mpwr App</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="3mpwr App - Beta Testers Guide &amp; Feedback Program" />
+<meta name="author" content="3mpwr App" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Complete beta testing guide for 3mpwr App. Learn what to test, how to report bugs, and join the testing program for a privacy-first accessibility tool." />
+<meta property="og:description" content="Complete beta testing guide for 3mpwr App. Learn what to test, how to report bugs, and join the testing program for a privacy-first accessibility tool." />
+<link rel="canonical" href="https://3mpwrapp.pages.dev/beta-guide/" />
+<meta property="og:url" content="https://3mpwrapp.pages.dev/beta-guide/" />
+<meta property="og:site_name" content="3mpwr App" />
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="twitter:title" content="3mpwr App - Beta Testers Guide &amp; Feedback Program" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"3mpwr App"},"description":"Complete beta testing guide for 3mpwr App. Learn what to test, how to report bugs, and join the testing program for a privacy-first accessibility tool.","headline":"3mpwr App - Beta Testers Guide &amp; Feedback Program","image":"https://3mpwrapp.pages.dev/assets/empwrapp-logo.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://3mpwrapp.pages.dev/assets/favicon.svg"},"name":"3mpwr App"},"url":"https://3mpwrapp.pages.dev/beta-guide/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.min.css">
+  <!-- WCAG AAA Compliant Color System -->
+  <link rel="stylesheet" href="/assets/css/accessibility-tokens.min.css">
+  <!-- WCAG 2.2 AA and Beyond Accessibility Enhancements -->
+  <link rel="stylesheet" href="/assets/css/accessibility-enhancements.min.css">
+  <!-- WCAG 2.2 AAA Color Palette - 7:1 Contrast Ratios -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-colors.css">
+  <!-- WCAG 2.2 AAA Color Fixes - Fixes all 614 accessibility violations -->
+  <link rel="stylesheet" href="/assets/css/aaa-color-fixes.css">
+  <!-- WCAG 2.2 AAA Comprehensive Overrides - Fixes all inline styles and remaining violations -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-overrides.css">
+  <!-- Universal Text Legibility - Ensures ALL text is readable in light/dark/high-contrast modes -->
+  <link rel="stylesheet" href="/assets/css/universal-text-legibility.css">
+  <!-- ACCESSIBILITY-FIRST COLOR SYSTEM - The #1 Standard for Light/Dark/High Contrast Modes (March 2026) -->
+  <link rel="stylesheet" href="/assets/css/accessibility-first-colors.css">
+  <!-- Performance Optimizations: Critical CSS, Lazy Loading, Font Optimization -->
+  <link rel="stylesheet" href="/assets/css/performance-optimizations.min.css">
+  <!-- Lighthouse Audit Fixes: Touch targets, contrast, aspect ratios -->
+  <link rel="stylesheet" href="/assets/css/lighthouse-fixes.min.css">
+  <!-- Cookie Consent Banner (GDPR Compliance) -->
+  <link rel="stylesheet" href="/assets/css/cookie-consent.css">
+
+  <!-- Header/nav footprint overrides moved to external CSS (CSP-safe) -->
+  <link rel="stylesheet" href="/assets/css/header-overrides.css">
+  <!-- Professional polish & design system (UX/UI audit improvements) -->
+  <link rel="stylesheet" href="/assets/css/professional-polish.css">
+  <!-- CLS (Cumulative Layout Shift) Fix - Cloudflare RUM reported 0.351-0.588 CLS -->
+  <link rel="stylesheet" href="/assets/css/cls-fix.css">
+  <!-- Alignment Consistency Fix - Professional, clean, organized layout -->
+  <link rel="stylesheet" href="/assets/css/alignment-consistency.css">
+  <!-- Global UX/UI Consistency - Ensures professional, clean, organized look across all pages -->
+  <link rel="stylesheet" href="/assets/css/global-consistency.css">
+  <!-- Enhanced Focus Indicators - WCAG 2.2 AAA compliant (3:1 contrast, 2px minimum) -->
+  <link rel="stylesheet" href="/assets/css/enhanced-focus-indicators.css">
+  <!-- Social Share Component Styles -->
+  <link rel="stylesheet" href="/assets/css/social-share.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#primary-nav">Skip to navigation</a>
+  <a class="skip-link" href="#site-footer">Skip to footer</a>
+  <header>
+    <!-- Brand: clicking this takes you home -->
+    <div class="brand header-bar">
+      <a class="site-brand" href="/" aria-label="3mpwr App home">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="" width="28" height="28" aria-hidden="true" loading="eager">
+        </picture>
+        <span>3mpwr App</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button><a class="lang-switch" href="/fr/">Français</a>
+    </div>
+
+  <nav id="primary-nav" aria-label="Primary">
+      
+  <ul class="nav-list">
+        <li>
+          <a href="/" >
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/about" >
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/features" >
+            Features
+          </a>
+        </li>
+        <li>
+          <a href="/app-tour" >
+            App Tour
+          </a>
+        </li>
+        <li>
+          <a href="/user-guide" >
+            User Guide
+          </a>
+        </li>
+        <li>
+          <a href="/roadmap" >
+            Roadmap
+          </a>
+        </li>
+        <li>
+          <a href="/blog" >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="/faq" >
+            FAQ
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility" >
+            Accessibility
+          </a>
+        </li>
+        <li>
+          <a href="/app-waitlist" >
+            App Waitlist
+          </a>
+        </li>
+        <li>
+          <a href="/crisis-resources" >
+            Crisis Help
+          </a>
+        </li>
+        <li>
+          <a href="/contact" >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="/newsletter" >
+            Newsletter
+          </a>
+        </li>
+        <li>
+          <a href="/whats-new" >
+            What's New
+          </a>
+        </li>
+        <li>
+          <a href="/beta-guide" aria-current="page">
+            Beta Testers Guide
+          </a>
+        </li>
+        <li>
+          <a href="/search" >
+            Search
+          </a>
+        </li>
+        <li>
+          <a href="/events" >
+            Events
+          </a>
+        </li>
+        <li>
+          <a href="/site-map" >
+            Site Map
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility-settings" >
+            Accessibility Settings
+          </a>
+        </li>
+        <li>
+          <a href="/campaigns" >
+            Campaigns
+          </a>
+        </li>
+        <li>
+          <a href="/community" >
+            Community
+          </a>
+        </li>
+        <li>
+          <a href="/connect" >
+            Connect
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- High contrast + Dark mode toggles + Accessibility Tools -->
+    <div class="header-controls" role="group" aria-label="Display settings and accessibility">
+      <a href="/accessibility-settings" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
+        ♿ Accessibility
+      </a>
+      
+      <!-- Complexity Mode Toggle -->
+      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode">
+        <span class="complexity-icon" aria-hidden="true">📖</span>
+        <span class="complexity-label">Standard View</span>
+        <span class="complexity-hint">Click for Simple Language</span>
+      </button>
+      
+      <button
+        id="contrast-toggle"
+        class="contrast-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle high contrast mode"
+      >
+        High contrast
+      </button>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle dark mode"
+      >
+        Dark mode
+      </button>
+    </div>
+  </header>
+  
+  <!-- Complexity Mode Announcer (moved from inline) -->
+  <div id="complexity-announcer" role="status" aria-live="polite" aria-atomic="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"></div><nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li><li aria-current="page">3mpwr app   beta testers guide & feedback program</li></ol>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <!-- Status Banner - Consistent across all pages -->
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator" aria-hidden="true">🚀</span>
+  <strong>App Status:</strong> Production Ready - 721 Tests Passing | <strong>Phase 1:</strong> Closed Internal Testing NOW ACTIVE (Slow Release) | <strong>NEW:</strong> Available Canada-wide (Coast to Coast to Coast) + USA Lite 🇨🇦🇺🇸
+</div>
+<h1 id="3mpwr-app--closed-beta-tester-guide">3mpwr App – Closed Beta Tester Guide</h1>
+
+<p>Welcome to the 3mpwr App Beta Testing Program! This guide shows you how to join the beta, test the app using Expo Go (free), and share your valuable feedback.</p>
+
+<p><strong>What’s New Reference:</strong> <a href="/whats-new/2026-02-24-documentation-sync-en-fr-legal/#core-user-docs-en">Documentation Sync Complete → Core user docs (English)</a></p>
+
+<blockquote>
+  <p>📱 <strong>New to Beta Testing?</strong> No worries! This guide is designed for testers of all experience levels. If you can use a smartphone, you can beta test!</p>
+</blockquote>
+
+<blockquote>
+  <p>🎉 <strong>February 24, 2026 Sync:</strong> This beta guide is now aligned with the app-side user documentation baseline (user guide, FAQ, features, legal/policy pages, and What’s New sources).</p>
+</blockquote>
+
+<blockquote>
+  <p>📖 <strong>Resources for Testers:</strong><br />
+<a href="/user-guide/">User Guide</a> - Step-by-step tutorials for all features<br />
+<a href="/features/">Features List</a> - Browse all features with descriptions<br />
+📺 <a href="https://www.youtube.com/watch?v=4i6xPpik_6M">Getting Started Video</a> - Install, permissions &amp; privacy explained<br />
+📺 <a href="https://www.youtube.com/@3mpwrApp">YouTube Channel</a> - Subscribe for tutorials and updates</p>
+</blockquote>
+
+<hr />
+
+<h2 id="-how-to-join-beta-testing">📧 How to Join Beta Testing</h2>
+
+<h3 id="phase-1-closed-beta-current">Phase 1: Closed Beta (Current)</h3>
+
+<p><strong>Status:</strong> Invitations being sent to selected testers</p>
+
+<p><strong>To join:</strong></p>
+<ol>
+  <li><strong>Wait for your invitation email</strong> from empowrapp08162025@gmail.com</li>
+  <li>Your email will include:
+    <ul>
+      <li>Installation instructions specific to your device</li>
+      <li>Beta access link or QR code</li>
+      <li>Beta tester welcome information</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Not invited yet?</strong></p>
+<ul>
+  <li>Phase 1 is limited to 20-50 testers</li>
+  <li><strong>Sign up for Phase 2</strong> (Open Beta): Email empowrapp08162025@gmail.com with subject “Phase 2 Beta Interest”</li>
+  <li>Phase 2 will begin approximately 2 weeks after Phase 1 starts</li>
+</ul>
+
+<blockquote>
+  <p>� <strong>Installation instructions will be provided in your invitation email.</strong> This guide focuses on what to test and how to provide feedback once you have the app installed.</p>
+</blockquote>
+
+<hr />
+
+<hr />
+
+<h2 id="️-known-limitations-in-expo-go">⚠️ Known Limitations in Expo Go</h2>
+
+<p><strong>Push Notifications:</strong></p>
+<ul>
+  <li><strong>Android</strong>: Remote push notifications not available in Expo Go</li>
+  <li><strong>iOS</strong>: Remote push requires special setup (not available in beta)</li>
+  <li><strong>Workaround</strong>: We’ll use in-app notices and local reminders during closed beta</li>
+  <li>Full push notifications will be available in production app</li>
+</ul>
+
+<p><strong>Native Features:</strong></p>
+<ul>
+  <li>Some advanced native modules require custom builds</li>
+  <li>We’ve designed the beta to work within Expo Go’s supported APIs</li>
+  <li>All core features (Letter Wizard, Evidence Locker, Wellness tools) work perfectly!</li>
+</ul>
+
+<p><strong>Performance:</strong></p>
+<ul>
+  <li>Expo Go may be slightly slower than production app</li>
+  <li>First launch might take 1-2 minutes to cache assets</li>
+  <li>This is normal and won’t affect production version</li>
+</ul>
+
+<hr />
+
+<h2 id="-what-to-test">🧪 What to Test</h2>
+
+<h3 id="-priority-february-2026-personalization-test-this-first">🆕 <strong>PRIORITY: February 2026 Personalization</strong> (Test This First!)</h3>
+
+<p><strong>🌟 Personalization System (20 minutes)</strong> → <a href="/user-guide/#personalization-setup">User Guide: Personalization</a></p>
+<ul>
+  <li>Go to Settings → Profile → Edit Profile</li>
+  <li>Select your role (Person with Disability, Supporter, Ally, or Family)</li>
+  <li>Choose disability categories (if PWD)</li>
+  <li>Select 3-5 wellness tools you want highlighted</li>
+  <li>Choose 3-5 advocacy needs</li>
+  <li>Click SAVE</li>
+  <li>Return to Home screen - verify personalized greeting appears</li>
+  <li>Go to Wellness tab - check if your tools appear first with ⭐</li>
+  <li>Go to Advocacy tab - verify your needs are shown</li>
+  <li>Close app completely, reopen - confirm personalization persists</li>
+  <li><strong>Report:</strong> Does personalization work? Are recommendations helpful?</li>
+</ul>
+
+<h3 id="january-2026-powertools-test-these-next"><strong>January 2026 PowerTools</strong> (Test These Next)</h3>
+
+<p><strong>🌟 Wellness Hub (15 minutes)</strong> → <a href="/user-guide/#wellness-hub">User Guide: Wellness Hub</a></p>
+<ul>
+  <li>Go to Wellness tab → Browse 6 categories</li>
+  <li><strong>Mental Health &amp; Crisis</strong> - Try AI Companion, Emotional First Aid, Grief Support</li>
+  <li><strong>Energy &amp; Pain</strong> - Test Energy Coins, <a href="/user-guide/#pacing-partner">Pacing Partner</a>, Pain Forecast</li>
+  <li><strong>Daily Living</strong> - Try Daily Planner, Work-Life Balance</li>
+  <li><strong>Physical Health</strong> - Test <a href="/user-guide/#exercise-hub">Exercise Hub</a>, Symptom Tracker, Meds Tracker</li>
+  <li><strong>Communication &amp; Growth</strong> - Explore DBT Skills, <a href="/user-guide/#cbt-coach">CBT Tools</a></li>
+  <li><strong>Specialty</strong> - Try Rehab Games, Ambience Sync</li>
+  <li>Check if search finds tools across all categories</li>
+  <li>Verify old wellness tool links redirect correctly</li>
+</ul>
+
+<p><strong>📁 Document Management (10 minutes)</strong> → <a href="/user-guide/#document-management">User Guide: Document Management</a></p>
+<ul>
+  <li>Go to Resources → Document Manager</li>
+  <li>Upload a test PDF or image</li>
+  <li>Try categorizing it (medical, legal, evidence)</li>
+  <li>Upload a Word doc or spreadsheet</li>
+  <li>Test retrieval and organization</li>
+  <li>Verify encryption notice appears</li>
+</ul>
+
+<p><strong>💚 Wellness Check System (10 minutes)</strong> → <a href="/user-guide/#wellness-checks">User Guide: Wellness Checks</a></p>
+<ul>
+  <li>Go to Settings → Wellness Checks</li>
+  <li>Set up an inactivity alert (e.g., 7 days)</li>
+  <li>Add a test emergency contact</li>
+  <li>Review privacy controls</li>
+  <li>Test notification preferences</li>
+</ul>
+
+<p><strong>⚖️ Legal Action Hub (15 minutes)</strong> → <a href="/user-guide/#legal-action-hub">User Guide: Legal Action Hub</a></p>
+<ul>
+  <li>Go to Advocacy → Legal Action Hub</li>
+  <li><strong>Accountability Tracker</strong> - Create a test case</li>
+  <li><strong>Legal Coach</strong> - Browse communication scripts</li>
+  <li><strong>Legal Help</strong> - Search for lawyers or legal aid</li>
+  <li><strong>Automation</strong> - Try letter generator</li>
+  <li><strong>Policy Advocacy</strong> - View active campaigns</li>
+  <li>Check if old legal screen links redirect correctly</li>
+</ul>
+
+<p><strong>👥 Support Groups (15 minutes)</strong></p>
+<ul>
+  <li>Go to Community → Support Groups</li>
+  <li>Browse available groups (24 total)</li>
+  <li>Test filters: Disability Type, Meeting Type, Focus Area, Language</li>
+  <li>View a group’s details and members</li>
+  <li>Try joining a group</li>
+  <li>Leave the group to test functionality</li>
+  <li>Verify real-time member counts update</li>
+</ul>
+
+<p><strong>⚙️ Complexity Mode System (10 minutes)</strong></p>
+<ul>
+  <li>Go to Settings → Complexity Mode</li>
+  <li>Try switching between Simple Mode (5 features), Standard Mode (20 features), and Power User Mode (150+ features)</li>
+  <li>Notice how tabs change based on your mode</li>
+  <li>Test “Bad Day Mode” button - should instantly switch to Simple Mode</li>
+  <li>Check if SimpleModeWelcome banners appear in tabs</li>
+  <li>Verify feature counts match mode selection</li>
+</ul>
+
+<p><strong>📚 Resources vs Research Split (10 minutes)</strong></p>
+<ul>
+  <li><strong>Resources Tab</strong> - Should contain ONLY in-app tools:
+    <ul>
+      <li>Master Tracker Hub (Beta)</li>
+      <li>Letter Wizard</li>
+      <li>Appeal Command Center (Beta)</li>
+      <li>Evidence Manager</li>
+      <li>NO external links here</li>
+    </ul>
+  </li>
+  <li><strong>Research Tab</strong> - Should contain external resources:
+    <ul>
+      <li>External Resources card</li>
+      <li>Click it → Should see 96 external links organized by category</li>
+      <li>Test province filter (select your province)</li>
+      <li>Test category filter (Employment, Benefits, Human Rights, etc.)</li>
+      <li>Click a resource → Should open browser with “opens in browser” warning</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>🗂️ Master Tracker Hub (15 minutes)</strong></p>
+<ul>
+  <li>Resources → Master Tracker Hub</li>
+  <li>Check dashboard with quick stats</li>
+  <li>Try quick log buttons for symptoms, meds, appointments</li>
+  <li>Test each tab: Symptoms, Medications, Rehab, Appointments, Timeline, Accessibility</li>
+  <li>Log sample data in 2-3 trackers</li>
+  <li>Check if AI pattern detection works (requires 7+ days of data)</li>
+  <li>Test export to PDF/CSV/JSON</li>
+  <li>Verify all data saves and reloads correctly</li>
+</ul>
+
+<p><strong>⚖️ Appeal Command Center (15 minutes)</strong></p>
+<ul>
+  <li>Resources → Appeal Command Center</li>
+  <li>Check quick stats card (active appeals, deadlines, evidence count)</li>
+  <li>Test deadline warfare section - add a test deadline</li>
+  <li>Check color coding: Red (7 days), Orange (30 days), Blue (additional)</li>
+  <li>Try denial decoder - paste sample insurance jargon</li>
+  <li>Test evidence strength meter - rate your evidence</li>
+  <li>Browse appeal prep guide</li>
+  <li>Check if tips and privacy notice appear</li>
+</ul>
+
+<p><strong>📦 Offline Queue (10 minutes - CRITICAL)</strong></p>
+<ul>
+  <li>Evidence Locker → Upload a test file</li>
+  <li>Turn on airplane mode (or disable WiFi)</li>
+  <li>Try uploading another file</li>
+  <li>Should see “offline” status and queued message</li>
+  <li>Check pending count badge appears</li>
+  <li>Turn WiFi back on</li>
+  <li>Verify auto-sync works</li>
+  <li>Check if retry button appears for failed uploads</li>
+  <li>Test manual retry functionality</li>
+</ul>
+
+<p><strong>🆘 SOS/Crisis Button (5 minutes)</strong></p>
+<ul>
+  <li>Look for red SOS button (bottom-right on main screens)</li>
+  <li>Single tap → Should open crisis menu with:
+    <ul>
+      <li>Call 988 option</li>
+      <li>Text Crisis Line</li>
+      <li>Safe Landing Page</li>
+      <li>Emotional First Aid</li>
+      <li>Quick Exit</li>
+    </ul>
+  </li>
+  <li>Triple tap → Should trigger emergency contact dialog (don’t actually send!)</li>
+  <li>Check if button is visible on: Home, Resources, Wellness, Advocacy, Community</li>
+</ul>
+
+<p><strong>💪 Wellness Hubs (20 minutes)</strong></p>
+<ul>
+  <li><strong>Energy &amp; Mood Hub</strong> (Wellness tab):
+    <ul>
+      <li>Dashboard view with stats</li>
+      <li>Track energy, mood, sleep</li>
+      <li>Check if forecasting works (requires data)</li>
+      <li>Test pacing partner integration</li>
+      <li>Try quantum energy mechanics (Power User mode)</li>
+    </ul>
+  </li>
+  <li><strong>Unified Health Tracker</strong>:
+    <ul>
+      <li>Navigate between tabs (Symptoms, Pain, Chronic, Rehab, Pacing)</li>
+      <li>Log sample data in 2+ tabs</li>
+      <li>Check if data persists</li>
+      <li>Test export functionality</li>
+    </ul>
+  </li>
+  <li><strong>Mental Wellness Toolkit</strong>:
+    <ul>
+      <li>Browse CBT Coach, DBT Skills, Grounding Games</li>
+      <li>Try at least one exercise</li>
+      <li>Check if progress saves</li>
+    </ul>
+  </li>
+  <li><strong>Movement &amp; Rehab Hub</strong>:
+    <ul>
+      <li>Browse exercises, micro-movements</li>
+      <li>Check video demonstrations (if available)</li>
+      <li>Test nutrition guides</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>🌐 Campaigns &amp; Events (10 minutes)</strong></p>
+<ul>
+  <li>Campaigns tab → Join “Every Canadian Counts” campaign</li>
+  <li>Check if signature count updates (460+)</li>
+  <li>Events tab → Browse upcoming events</li>
+  <li>Look for TBDIWSG information sessions</li>
+  <li>Test calendar subscription feature</li>
+  <li>Try creating a user campaign</li>
+  <li>Check if “Submit to 3mpwr” button appears</li>
+  <li>DON’T actually submit (or use test data only)</li>
+</ul>
+
+<p><strong>👤 Profile Editor (10 minutes)</strong></p>
+<ul>
+  <li>Settings → Profile Editor</li>
+  <li>Fill out 5 sections:
+    <ul>
+      <li>Disability Types (select multiple)</li>
+      <li>Symptoms to Track</li>
+      <li>Wellness Tools Preferences</li>
+      <li>Advocacy Needs</li>
+      <li>Family Role</li>
+    </ul>
+  </li>
+  <li>Save profile</li>
+  <li>Close app and reopen</li>
+  <li>Verify profile data persisted</li>
+  <li>Check if tool recommendations change based on profile</li>
+</ul>
+
+<hr />
+
+<h3 id="original-priority-features-still-important">Original Priority Features (Still Important!)</h3>
+
+<p><strong>🏠 Core Navigation (5 minutes)</strong></p>
+<ul>
+  <li>Tap through all tabs: Home, Campaigns, Community, Resources, Wellness, Advocacy, Research, Settings, What’s New</li>
+  <li>Check if everything loads without errors</li>
+  <li>Test back button functionality</li>
+  <li>Try rotating your device (portrait ↔ landscape)</li>
+  <li>Notice how Complexity Mode affects visible features</li>
+</ul>
+
+<p><strong>✍️ Letter Wizard (10 minutes)</strong></p>
+<ul>
+  <li>Go to Resources → Letter Wizard</li>
+  <li>Pick any template (e.g., “Accommodation Request”)</li>
+  <li>Fill in your information</li>
+  <li>Save as draft</li>
+  <li>Edit the draft</li>
+  <li>Export or share the letter</li>
+  <li>Check formatting looks professional</li>
+</ul>
+
+<p><strong>📁 Evidence Locker (10 minutes)</strong></p>
+<ul>
+  <li>Go to Advocacy → Evidence Locker</li>
+  <li>Upload a test file (screenshot, photo, or PDF)</li>
+  <li>View the uploaded file</li>
+  <li>Add notes or tags</li>
+  <li>Try uploading multiple files</li>
+  <li>Delete a test file</li>
+  <li>Check storage indicator</li>
+</ul>
+
+<p><strong>💪 Wellness Tools (15 minutes)</strong></p>
+<ul>
+  <li><strong>Mood Tracker</strong>: Log your current mood, add notes, view history</li>
+  <li><strong>Sleep Tracker</strong>: Log last night’s sleep, see patterns</li>
+  <li><strong>Energy Coins</strong>: Track today’s energy level, visualize data</li>
+  <li><strong>Reflections</strong>: Complete a guided reflection</li>
+  <li>Check if all data saves when you close and reopen app</li>
+</ul>
+
+<p><strong>👥 Community (10 minutes)</strong></p>
+<ul>
+  <li>Browse available channels</li>
+  <li>Read posts and comments</li>
+  <li>Join “Beta Testers Chat”</li>
+  <li>Post a friendly test message</li>
+  <li>Check if posts load quickly</li>
+  <li>Try searching for a topic</li>
+</ul>
+
+<p><strong>📢 Campaigns (5 minutes)</strong></p>
+<ul>
+  <li>Browse active campaigns</li>
+  <li>Join one campaign</li>
+  <li>Complete a campaign action</li>
+  <li>Track your progress</li>
+  <li>Check if updates appear</li>
+</ul>
+
+<p><strong>⚙️ Settings &amp; Accessibility (15 minutes)</strong></p>
+<ul>
+  <li>Change language (English, French, Spanish)</li>
+  <li>Enable dark mode / high contrast mode</li>
+  <li>Increase text size</li>
+  <li>Enable screen reader (VoiceOver/TalkBack)</li>
+  <li>Test if all buttons are announced correctly</li>
+  <li>Enable “Step-by-Step Mode” (cognitive accessibility)</li>
+  <li>Try dyslexia-friendly fonts</li>
+</ul>
+
+<p><strong>🌐 Offline Mode (5 minutes)</strong></p>
+<ul>
+  <li>Turn on airplane mode</li>
+  <li>Check if app shows “offline” banner</li>
+  <li>Try browsing previously loaded content</li>
+  <li>Turn WiFi back on</li>
+  <li>Check if app syncs data</li>
+</ul>
+
+<hr />
+
+<h2 id="-how-to-report-feedback">💬 How to Report Feedback</h2>
+
+<h3 id="what-we-want-to-hear">What We Want to Hear</h3>
+
+<p><strong>✅ Positive Feedback:</strong></p>
+<ul>
+  <li>What do you love?</li>
+  <li>Which features are most helpful?</li>
+  <li>Any “wow” moments?</li>
+</ul>
+
+<p><strong>🤔 Constructive Feedback:</strong></p>
+<ul>
+  <li>What’s confusing?</li>
+  <li>What’s frustrating or slow?</li>
+  <li>What would you improve?</li>
+</ul>
+
+<p><strong>🐛 Bugs:</strong></p>
+<ul>
+  <li>What were you doing when it crashed?</li>
+  <li>What error messages appeared?</li>
+  <li>Can you reproduce the problem?</li>
+</ul>
+
+<p><strong>💡 Feature Requests:</strong></p>
+<ul>
+  <li>What’s missing that you need?</li>
+  <li>What would save you time?</li>
+  <li>What would make the app more accessible?</li>
+</ul>
+
+<hr />
+
+<h3 id="where-to-send-feedback">Where to Send Feedback</h3>
+
+<p><strong>Method 1: In-App Feedback</strong> (Easiest! ⭐)</p>
+<ol>
+  <li>Open app</li>
+  <li>Go to Settings → About &amp; Feedback</li>
+  <li>Tap “Send Feedback”</li>
+  <li>Type your feedback</li>
+  <li>App automatically includes device info and version</li>
+</ol>
+
+<p><strong>Method 2: Beta Testers Chat</strong></p>
+<ul>
+  <li>Community → Beta Testers Chat</li>
+  <li>Quick questions and discussions</li>
+  <li>Other testers can help too!</li>
+  <li>Team monitors regularly</li>
+</ul>
+
+<p><strong>Method 3: Email</strong></p>
+<ul>
+  <li><strong>To:</strong> empowrapp08162025@gmail.com</li>
+  <li><strong>Subject:</strong> “Beta Feedback: [topic]”</li>
+  <li><strong>Include:</strong>
+    <ul>
+      <li>What you were testing</li>
+      <li>What happened</li>
+      <li>Screenshots (if helpful)</li>
+      <li>Device info: Settings → About</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Method 4: GitHub Issues</strong> (If invited)</p>
+<ul>
+  <li>For technical users</li>
+  <li>Include steps to reproduce</li>
+  <li>Mention phone model and OS version</li>
+</ul>
+
+<hr />
+
+<h3 id="bug-report-template">Bug Report Template</h3>
+
+<p>Copy this template for detailed bug reports:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>🐛 BUG REPORT
+
+Device: [e.g., iPhone 14 Pro, Samsung Galaxy S24]
+OS: [e.g., iOS 17.5, Android 14]
+App Version: [Settings → About → Version]
+
+What I was doing:
+1. Opened Evidence Locker
+2. Tapped "+ Upload"
+3. Selected a photo
+4. [etc.]
+
+What went wrong:
+[e.g., App froze and crashed]
+
+What should have happened:
+[e.g., Photo should upload to my locker]
+
+Happens: [Every time / Sometimes / Just once]
+
+Screenshot: [Attached / No screenshot]
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-privacy--safety">🔐 Privacy &amp; Safety</h2>
+
+<p><strong>Protect Your Personal Data:</strong></p>
+<ul>
+  <li>❌ Don’t share real personal documents in screenshots</li>
+  <li>❌ Don’t include confidential data in bug reports</li>
+  <li>❌ Don’t post sensitive information in Beta Chat</li>
+  <li>✅ Use dummy/test data when testing upload features</li>
+  <li>✅ Redact (black out) personal info before screenshotting</li>
+</ul>
+
+<p><strong>AI &amp; Legal Disclaimers:</strong></p>
+<ul>
+  <li>All AI outputs are educational only, not legal advice</li>
+  <li>App provides information, not professional legal counsel</li>
+  <li>Always consult with qualified professionals for legal matters</li>
+  <li>AI may make mistakes - verify important information</li>
+</ul>
+
+<p><strong>Your Data Control:</strong></p>
+<ul>
+  <li>Clear local data anytime: Settings → Privacy → Clear Data</li>
+  <li>Delete account: Settings → Account → Delete Account</li>
+  <li>Export your data: Settings → Privacy → Export Data</li>
+  <li>Manage permissions: Device Settings → 3mpwr App</li>
+</ul>
+
+<p><strong>Beta Testing Confidentiality:</strong></p>
+<ul>
+  <li>Don’t share beta builds publicly or on social media</li>
+  <li>Don’t post beta screenshots to public forums (Beta Chat is OK!)</li>
+  <li>Don’t distribute your Expo Go link to non-testers</li>
+  <li>You can talk about the app, just don’t share install links</li>
+</ul>
+
+<hr />
+
+<h2 id="-frequently-asked-questions">🙋 Frequently Asked Questions</h2>
+
+<p><strong>Q: How long will beta testing last?</strong>
+A: Approximately 2-4 weeks. We’ll announce when moving to production.</p>
+
+<p><strong>Q: Will my data transfer to the production app?</strong>
+A: Yes, if you have an account. Guest mode data may not transfer.</p>
+
+<p><strong>Q: Can I use the beta as my daily app?</strong>
+A: Yes, but back up important documents externally (beta may have bugs).</p>
+
+<p><strong>Q: I’m not technical. Can I still help?</strong>
+A: Absolutely! We need testers of all skill levels. Your perspective is valuable!</p>
+
+<p><strong>Q: What if I find a security issue?</strong>
+A: Email empowrapp08162025@gmail.com immediately with subject “SECURITY ISSUE”. Don’t post publicly.</p>
+
+<p><strong>Q: Can I test on multiple devices?</strong>
+A: Yes! Testing on phone + tablet is super helpful.</p>
+
+<p><strong>Q: The app crashed. What do I do?</strong>
+A: Restart the app and report the bug. Include what you were doing when it crashed.</p>
+
+<p><strong>Q: Is the app safe to use?</strong>
+A: Yes. We use encryption and follow security best practices. However, always back up critical documents.</p>
+
+<hr />
+
+<h2 id="-need-help">📞 Need Help?</h2>
+
+<p><strong>In-App Support:</strong></p>
+<ul>
+  <li>Settings → About &amp; Feedback → “Help &amp; Support”</li>
+  <li>Searchable FAQ built-in</li>
+</ul>
+
+<p><strong>Beta Testers Chat:</strong></p>
+<ul>
+  <li>Community → Beta Testers Chat</li>
+  <li>Ask questions, share tips, help others</li>
+  <li>Team members monitor daily</li>
+</ul>
+
+<p><strong>Email Support:</strong></p>
+<ul>
+  <li>empowrapp08162025@gmail.com</li>
+  <li>Include “BETA” in subject line</li>
+  <li>We respond within 24-48 hours</li>
+</ul>
+
+<p><strong>Emergency Contact</strong> (Critical bugs only):</p>
+<ul>
+  <li>empowrapp08162025@gmail.com</li>
+  <li>Subject: “<strong>URGENT:</strong>”</li>
+  <li>For crashes, data loss, security issues</li>
+</ul>
+
+<hr />
+
+<h2 id="-quick-testing-checklist">🎯 Quick Testing Checklist</h2>
+
+<p>Use this for a fast 20-minute test of December 2025 features:</p>
+
+<h3 id="critical-december-features-priority">Critical December Features (Priority)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test Complexity Mode switching (Simple/Standard/Power)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify Resources vs Research split (in-app vs external)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Try Master Tracker Hub (log sample data)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test Appeal Command Center (add test deadline)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify offline queue (airplane mode upload)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Find and test SOS button (single tap only!)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Browse at least 2 of 4 Wellness Hubs</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test province filter in Research → External Resources</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Try Bad Day Mode emergency simplification</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check profile editor saves correctly</li>
+</ul>
+
+<h3 id="original-features-secondary">Original Features (Secondary)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Launch app successfully</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Navigate to all tabs</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create a test letter</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Log your mood</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Join Beta Testers Chat</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test dark mode / high contrast</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Report at least 1 piece of feedback (bug or praise!)</li>
+</ul>
+
+<hr />
+
+<h2 id="-thank-you">🙏 Thank You!</h2>
+
+<p>Your participation helps us create an app that truly empowers Canadians living with disabilities. Every bug you find, every piece of feedback you share - it all matters!</p>
+
+<p><strong>Special Focus for December 2025 Beta:</strong></p>
+<ul>
+  <li>How well does Complexity Mode work? Does it reduce overwhelm?</li>
+  <li>Is the Resources vs Research split clear? Any confusion?</li>
+  <li>Does offline queue work reliably? Does auto-sync work?</li>
+  <li>Are the hubs (Master Tracker, Appeal Command Center, Wellness) organized intuitively?</li>
+  <li>Is the SOS button discoverable and helpful?</li>
+  <li>Does Bad Day Mode simplification help during tough moments?</li>
+</ul>
+
+<p><strong>Questions? Feedback? Found a bug?</strong></p>
+<ul>
+  <li>📧 empowrapp08162025@gmail.com</li>
+  <li>💬 Beta Testers Chat (in app)</li>
+  <li>🌐 <a href="https://3mpwrapp.pages.dev/beta-guide">Sign up for website beta</a></li>
+</ul>
+
+<p><strong>Happy Testing! 🎉</strong></p>
+
+<p>— The 3mpwr Team</p>
+
+<hr />
+
+<p><em>Last Updated: <strong>December 14, 2025</strong></em><br />
+<em>Guide Version: <strong>4.1</strong> (December 2025 Production Ready + USA Lite)</em><br />
+<em>For questions about this guide: empowrapp08162025@gmail.com</em></p>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <!-- Logo and Branding -->
+      <div class="footer-column footer-branding">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="3mpwrApp logo" width="64" height="64" loading="lazy" style="margin-bottom: 1rem;">
+        </picture>
+        <h3 style="margin-top: 0;">3mpwrApp</h3>
+        <p style="font-size: 0.9rem; line-height: 1.5;">Community-powered support for injured workers and persons with disabilities across Canada.</p>
+      </div>
+      
+      <!-- About Column -->
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="/about">Our Mission</a></li>
+          <li><a href="/user-guide">User Guide</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Started Column -->
+      <div class="footer-column">
+        <h3>Get Started</h3>
+        <ul>
+          <li><a href="/beta">Beta Testing</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/accessibility-walkthrough">Accessibility Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3>Legal & Privacy</h3>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/data-ownership">Data Ownership</a></li>
+          <li><a href="/community/guidelines">Community Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Column -->
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://paypal.me/3mpwrApp" target="_blank" rel="noopener noreferrer" style="color: #0070ba; font-weight: 600;">💙 Donate via PayPal</a></li>
+          <li><a href="/accessibility">Accessibility Statement</a></li>
+          <li><a href="/accessibility-settings">Accessibility Settings</a></li>
+          <li><a href="/site-map">Site Map</a></li>
+          <li><a href="/delete-data">Delete My Data</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect Column -->
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">Facebook</span></a>
+          <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" aria-label="3mpwr App Hub Facebook Group">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">FB Group</span></a>
+          <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
+<span class="social-label">X/Twitter</span></a>
+          <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Instagram</title>
+	<rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+</svg>
+<span class="social-label">Instagram</span></a>
+          <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="me noopener noreferrer" aria-label="Mastodon">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Mastodon</title>
+	<path d="M20.94 14c-.28 1.41-2.54 2.96-5.14 3.26-1.36.15-2.7.29-4.13.23-2.32-.1-4.15-.5-4.15-.5 0 .2.01.4.03.58.22 2.03 1.67 2.15 3.04 2.21 1.39.06 2.62-.34 2.62-.34l.06 1.3s-.97.52-2.69.62c-.95.05-2.13-.02-3.5-.37-2.98-.77-3.49-3.88-3.57-7.04-.02-.8-.01-1.55-.01-2.18 0-5.48 3.6-7.09 3.6-7.09C8.84 3.37 10.7 3 12.62 3h.04c1.92 0 3.78.37 5.45 1.09 0 0 3.6 1.61 3.6 7.09 0 0 .05 4.05-.77 6.82z" fill="currentColor"/>
+	<path d="M17.23 8.24v4.67h-1.86V8.5c0-.96-.4-1.45-1.2-1.45-.89 0-1.33.57-1.33 1.71v2.47H11V8.76c0-1.14-.44-1.71-1.33-1.71-.8 0-1.2.49-1.2 1.45v4.41H6.62V8.24c0-.96.25-1.72.74-2.28.51-.56 1.17-.85 2-.85.95 0 1.67.36 2.14 1.09l.46.77.46-.77c.47-.73 1.19-1.09 2.14-1.09.83 0 1.49.29 2 .85.49.56.74 1.32.74 2.28z" fill="#fff"/>
+</svg>
+<span class="social-label">Mastodon</span></a>
+          <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Bluesky</title>
+	<path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.415-.054-2.36.308-3.916 1.379-3.916 2.827 0 1.548 1.898 2.997 8.494 2.997s8.494-1.449 8.494-2.997c0-1.448-1.556-2.519-3.916-2.827.14.016.279.034.415.054 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.478 0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.622-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" fill="currentColor"/>
+</svg>
+<span class="social-label">Bluesky</span></a>
+        </div>
+        <ul style="margin-top: 1rem;">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/whats-new/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3mpwrApp — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
+      <p class="footer-mission">💚 Grassroots & Community-Funded • 100% Free Forever • Mission-Driven, Not Profit-Driven</p>
+    </div>
+  </footer>
+
+  <!-- Skip link and mobile menu functionality -->
+  <script src="/assets/js/skip-links.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
+
+  <!-- Utilities and controls -->
+  <script src="/assets/js/a11y.min.js" defer></script>
+  <script src="/assets/js/contrast.min.js" defer></script>
+  <script src="/assets/js/theme.min.js" defer></script>
+  <script src="/assets/js/back-to-top.min.js" defer></script>
+  <script src="/assets/js/settings.min.js" defer></script>
+  
+  <!-- Innovative Accessibility Features - Low Priority -->
+  <script src="/assets/js/accessibility-innovations.min.js" defer async></script>
+  
+  <!-- WCAG 2.2 AA+ Compliance Features -->
+  <script src="/assets/js/wcag-compliance.min.js" defer></script>
+  
+  <!-- WCAG 2.2 AAA Dynamic Enhancements - External links, touch targets, ARIA labels -->
+  <script src="/assets/js/wcag-aaa-dynamic.js" defer></script>
+
+  <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
+    <!-- Cookie Consent (GDPR Compliance) - Load early to show banner --><!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fef378cf7f9742c582f28f566e204a85"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.app3mpwr.app3mpwr",
+      "sha256_cert_fingerprints": [
+        "37:36:DB:A7:31:14:30:A1:50:6A:3E:FC:05:7A:F1:9F:3E:33:52:5A:C3:E1:AB:4B:D9:B2:D9:67:DE:C8:A8:46"
+      ]
+    }
+  }
+]

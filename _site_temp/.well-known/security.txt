@@ -1,0 +1,33 @@
+# Security Policy for 3mpwrApp
+# This file complies with RFC 9116 (security.txt standard)
+# For responsible disclosure of security vulnerabilities
+
+Contact: mailto:empowrapp08162025@gmail.com
+Expires: 2026-10-27T00:00:00.000Z
+Preferred-Languages: en, fr
+Canonical: https://3mpwrapp.pages.dev/.well-known/security.txt
+
+# Security Policy and Guidelines
+Policy: https://3mpwrapp.pages.dev/privacy/
+
+# Acknowledgments
+# We appreciate responsible disclosure and will acknowledge security researchers
+# who report valid vulnerabilities through the proper channels.
+
+# Scope
+# In-scope: 3mpwrapp.pages.dev, 3mpwrapp.github.io
+# Please report issues responsibly and allow us time to respond before public disclosure.
+
+# Encryption
+# PGP key available upon request at the contact email above.
+
+# Our Commitment
+# - We will respond to security reports within 48 hours
+# - We will provide regular updates on the resolution progress
+# - We will credit researchers who report valid vulnerabilities (with permission)
+# - We maintain a secure development lifecycle
+# - We follow OWASP Top 10 security best practices
+
+# Hiring
+# We appreciate security researchers and may consider hiring opportunities.
+# Contact us at the email above if interested.

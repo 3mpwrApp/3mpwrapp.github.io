@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roadmap | 3mpwr App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!">
+  
+  <!-- 
+    Security Headers: These should be set via server-side headers file (_headers for Netlify/Vercel, .htaccess for Apache, etc.)
+    CSP meta tag is included above as the only valid http-equiv for security headers.
+    X-Content-Type-Options, X-Frame-Options, and Referrer-Policy must be set as HTTP response headers, not meta tags.
+  -->
+  
+  <!-- Resource Hints for Performance (limit to 3 most critical) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json"><!-- Open Graph Meta Tags -->
+<meta property="og:site_name" content="3mpwr App">
+<meta property="og:title" content="Roadmap">
+<meta property="og:description" content="Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/roadmap/">
+<meta property="og:locale" content="en_CA">
+
+<meta property="og:locale:alternate" content="fr_CA">
+
+
+<!-- Open Graph Image -->
+
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:secure_url" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:alt" content="Roadmap">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Article-specific Open Graph -->
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpowrapp0816">
+<meta name="twitter:creator" content="@3mpowrapp0816">
+<meta name="twitter:title" content="Roadmap">
+<meta name="twitter:description" content="Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!">
+
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta name="twitter:image:alt" content="Roadmap">
+
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="3mpwrApp">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+
+<meta name="language" content="English">
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://3mpwrapp.pages.dev/roadmap/">
+
+<!-- Alternate Language Links (hreflang) -->
+
+
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.pages.dev/roadmap/">
+
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/roadmap/">
+
+
+<!-- PWA and Mobile Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="3mpwrApp">
+<meta name="application-name" content="3mpwrApp">
+<meta name="theme-color" content="#2A9D8F">
+<meta name="msapplication-TileColor" content="#2A9D8F">
+<meta name="msapplication-navbutton-color" content="#2A9D8F">
+
+<!-- Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Favicons and Touch Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/icon-192.png">
+<!-- Schema.org Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://3mpwrapp.pages.dev#organization",
+      "name": "3mpwrApp",
+      "alternateName": "EmpowrApp",
+      "url": "https://3mpwrapp.pages.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev#logo",
+  "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "3mpwrApp Logo"
+      },
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "foundingDate": "2024",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "empowrapp08162025@gmail.com",
+        "contactType": "Customer Support",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/3mpowrapp/",
+        "https://x.com/3mpowrapp0816",
+        "https://www.instagram.com/3mpwrapp/",
+        "https://www.youtube.com/3mpwrApp",
+        "https://www.tiktok.com/@3mpwrapp",
+        "https://mastodon.social/@3mpwrApp",
+        "https://bsky.app/profile/3mpwrapp.bsky.social",
+        "https://github.com/3mpwrApp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://3mpwrapp.pages.dev#website",
+      "url": "https://3mpwrapp.pages.dev",
+      "name": "3mpwrApp",
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "publisher": {
+        "@id": "https://3mpwrapp.pages.dev#organization"
+      },
+      "inLanguage": "en-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://3mpwrapp.pages.dev/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://3mpwrapp.pages.dev/roadmap/#webpage",
+      "url": "https://3mpwrapp.pages.dev/roadmap/",
+      "name": "Roadmap",
+      "headline": "Roadmap",
+      "description": "Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!",
+      "isPartOf": {
+        "@id": "https://3mpwrapp.pages.dev#website"
+      },
+      "inLanguage": "en-CA",
+      
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev/roadmap/#primaryimage",
+        "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Roadmap"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://3mpwrapp.pages.dev/roadmap/#primaryimage"
+      },
+      
+      
+      "breadcrumb": {
+        "@id": "https://3mpwrapp.pages.dev/roadmap/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://3mpwrapp.pages.dev/roadmap/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://3mpwrapp.pages.dev"
+        }
+        
+        
+        
+        
+        
+          
+          
+          
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Roadmap",
+          "item": "https://3mpwrapp.pages.dev/roadmap"
+        }
+          
+        
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
+<!-- Additional Schema for Accessibility Features -->
+
+
+<!-- Software Application Schema for App Pages -->
+
+<link rel="canonical" href="https://3mpwrapp.pages.dev/roadmap/"><!-- hreflang tags for international SEO -->
+<!-- English Canada (primary) -->
+<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.pages.dev/roadmap/" />
+
+<!-- French Canada -->
+
+
+<link rel="alternate" hreflang="fr-CA" href="https://3mpwrapp.pages.dev/fr/roadmap/" />
+
+
+<!-- USA (when available) -->
+
+
+<!-- Default fallback (English Canada) -->
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/roadmap/" />
+
+<!-- Future language expansions (add as they go live) -->
+<!-- 
+<link rel="alternate" hreflang="es" href="https://3mpwrapp.pages.dev/roadmap/" />
+<link rel="alternate" hreflang="ar" href="https://3mpwrapp.pages.dev/roadmap/" />
+<link rel="alternate" hreflang="zh-CN" href="https://3mpwrapp.pages.dev/roadmap/" />
+-->
+<link rel="stylesheet" href="/assets/css/complexity-mode.css">
+<script src="/assets/js/complexity-mode.js" defer></script><link rel="stylesheet" href="/assets/css/connection-status.css">
+<script src="/assets/js/connection-status.js" defer></script><!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3mpwrApp">
+<meta property="og:title" content="Roadmap">
+<meta property="og:description" content="Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/roadmap/">
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-default.png">
+<meta property="og:image:alt" content="3mpwrApp - Community-powered support for injured workers and persons with disabilities">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA"><meta property="og:locale:alternate" content="fr_CA"><!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpwrApp">
+<meta name="twitter:creator" content="@ODSPoor">
+<meta name="twitter:title" content="Roadmap">
+<meta name="twitter:description" content="Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!">
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-default.png">
+<meta name="twitter:image:alt" content="3mpwrApp - Community-powered support for injured workers and persons with disabilities">
+
+<!-- Additional Meta for Rich Previews -->
+<meta property="article:publisher" content="https://www.facebook.com/3mpwrApp"><!-- Facebook App ID (if available) --><link rel="dns-prefetch" href="//www.clarity.ms">
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin><link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><link rel="preload" href="/assets/css/style.css" as="style"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/assets/site.webmanifest"><meta name="theme-color" content="#111111">
+<meta name="color-scheme" content="light dark">
+<meta name="fediverse:creator" content="@3mpwrApp@mastodon.social">
+
+<!-- What's New RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — What's New" href="/whats-new/feed.xml">
+
+<!-- Main site RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — Site Feed" href="/feed.xml"><script>
+(function(){
+  var KEY = 'cookie-consent';
+  function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function onConsent(cb){
+    if (get(KEY) === 'accepted') { cb(); return; }
+    window.addEventListener('cookie-consent', function(e){ if (e && e.detail === 'accepted') cb(); });
+  }
+
+  // Google Analytics 4
+  var useGA = ("" !== "") && ("" === "");
+  if (useGA) {
+    onConsent(function(){
+      if (window.__gaLoaded) return; window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('Google Analytics script blocked or failed to load. Ad blockers or privacy extensions may be active.');
+        window.__gaLoadError = true;
+      };
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ 
+        if (!window.__gaLoadError) {
+          dataLayer.push(arguments); 
+        }
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=Strict;Secure',
+        'cookie_expires': 63072000,
+        'cookie_update': false,
+        'allow_ad_personalization_signals': false,
+        'allow_google_signals': false
+      });
+    });
+  }
+
+  // GoatCounter (privacy-friendly, free)
+  var useGoat = ("" === "goatcounter") && ("" !== "");
+  if (useGoat) {
+    onConsent(function(){
+      if (window.__goatLoaded) return; window.__goatLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter', 'https://.goatcounter.com/count');
+      s.src = 'https://gc.zgo.at/count.js';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('GoatCounter analytics unavailable. Connection may be blocked.');
+      };
+      document.head.appendChild(s);
+    });
+  }
+})();
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "3mpwr App",
+  "url": "https://3mpwrapp.pages.dev",
+  "logo": "https://3mpwrapp.pages.dev/assets/favicon.svg",
+  "sameAs": ["https://github.com/3mpwrApp", "https://www.facebook.com/3mpowrapp/", "https://x.com/3mpowrapp0816", "https://www.instagram.com/3mpwrapp/", "https://www.youtube.com/3mpwrApp", "https://www.tiktok.com/@3mpwrapp"]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://3mpwrapp.pages.dev/"
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Roadmap",
+        "item": "https://3mpwrapp.pages.dev/roadmap"
+      }]
+}
+</script><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Roadmap | 3mpwr App</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Roadmap" />
+<meta name="author" content="3mpwr App" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!" />
+<meta property="og:description" content="Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!" />
+<link rel="canonical" href="https://3mpwrapp.pages.dev/roadmap/" />
+<meta property="og:url" content="https://3mpwrapp.pages.dev/roadmap/" />
+<meta property="og:site_name" content="3mpwr App" />
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="twitter:title" content="Roadmap" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"3mpwr App"},"description":"Our development roadmap for 3mpwrApp - upcoming features, improvements, and innovations. First demo complete, USA Lite launched!","headline":"Roadmap","image":"https://3mpwrapp.pages.dev/assets/empwrapp-logo.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://3mpwrapp.pages.dev/assets/favicon.svg"},"name":"3mpwr App"},"url":"https://3mpwrapp.pages.dev/roadmap/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.min.css">
+  <!-- WCAG AAA Compliant Color System -->
+  <link rel="stylesheet" href="/assets/css/accessibility-tokens.min.css">
+  <!-- WCAG 2.2 AA and Beyond Accessibility Enhancements -->
+  <link rel="stylesheet" href="/assets/css/accessibility-enhancements.min.css">
+  <!-- WCAG 2.2 AAA Color Palette - 7:1 Contrast Ratios -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-colors.css">
+  <!-- WCAG 2.2 AAA Color Fixes - Fixes all 614 accessibility violations -->
+  <link rel="stylesheet" href="/assets/css/aaa-color-fixes.css">
+  <!-- WCAG 2.2 AAA Comprehensive Overrides - Fixes all inline styles and remaining violations -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-overrides.css">
+  <!-- Universal Text Legibility - Ensures ALL text is readable in light/dark/high-contrast modes -->
+  <link rel="stylesheet" href="/assets/css/universal-text-legibility.css">
+  <!-- ACCESSIBILITY-FIRST COLOR SYSTEM - The #1 Standard for Light/Dark/High Contrast Modes (March 2026) -->
+  <link rel="stylesheet" href="/assets/css/accessibility-first-colors.css">
+  <!-- Performance Optimizations: Critical CSS, Lazy Loading, Font Optimization -->
+  <link rel="stylesheet" href="/assets/css/performance-optimizations.min.css">
+  <!-- Lighthouse Audit Fixes: Touch targets, contrast, aspect ratios -->
+  <link rel="stylesheet" href="/assets/css/lighthouse-fixes.min.css">
+  <!-- Cookie Consent Banner (GDPR Compliance) -->
+  <link rel="stylesheet" href="/assets/css/cookie-consent.css">
+
+  <!-- Header/nav footprint overrides moved to external CSS (CSP-safe) -->
+  <link rel="stylesheet" href="/assets/css/header-overrides.css">
+  <!-- Professional polish & design system (UX/UI audit improvements) -->
+  <link rel="stylesheet" href="/assets/css/professional-polish.css">
+  <!-- CLS (Cumulative Layout Shift) Fix - Cloudflare RUM reported 0.351-0.588 CLS -->
+  <link rel="stylesheet" href="/assets/css/cls-fix.css">
+  <!-- Alignment Consistency Fix - Professional, clean, organized layout -->
+  <link rel="stylesheet" href="/assets/css/alignment-consistency.css">
+  <!-- Global UX/UI Consistency - Ensures professional, clean, organized look across all pages -->
+  <link rel="stylesheet" href="/assets/css/global-consistency.css">
+  <!-- Enhanced Focus Indicators - WCAG 2.2 AAA compliant (3:1 contrast, 2px minimum) -->
+  <link rel="stylesheet" href="/assets/css/enhanced-focus-indicators.css">
+  <!-- Social Share Component Styles -->
+  <link rel="stylesheet" href="/assets/css/social-share.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#primary-nav">Skip to navigation</a>
+  <a class="skip-link" href="#site-footer">Skip to footer</a>
+  <header>
+    <!-- Brand: clicking this takes you home -->
+    <div class="brand header-bar">
+      <a class="site-brand" href="/" aria-label="3mpwr App home">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="" width="28" height="28" aria-hidden="true" loading="eager">
+        </picture>
+        <span>3mpwr App</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button><a class="lang-switch" href="/fr/">Français</a>
+    </div>
+
+  <nav id="primary-nav" aria-label="Primary">
+      
+  <ul class="nav-list">
+        <li>
+          <a href="/" >
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/about" >
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/features" >
+            Features
+          </a>
+        </li>
+        <li>
+          <a href="/app-tour" >
+            App Tour
+          </a>
+        </li>
+        <li>
+          <a href="/user-guide" >
+            User Guide
+          </a>
+        </li>
+        <li>
+          <a href="/roadmap" aria-current="page">
+            Roadmap
+          </a>
+        </li>
+        <li>
+          <a href="/blog" >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="/faq" >
+            FAQ
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility" >
+            Accessibility
+          </a>
+        </li>
+        <li>
+          <a href="/app-waitlist" >
+            App Waitlist
+          </a>
+        </li>
+        <li>
+          <a href="/crisis-resources" >
+            Crisis Help
+          </a>
+        </li>
+        <li>
+          <a href="/contact" >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="/newsletter" >
+            Newsletter
+          </a>
+        </li>
+        <li>
+          <a href="/whats-new" >
+            What's New
+          </a>
+        </li>
+        <li>
+          <a href="/beta-guide" >
+            Beta Testers Guide
+          </a>
+        </li>
+        <li>
+          <a href="/search" >
+            Search
+          </a>
+        </li>
+        <li>
+          <a href="/events" >
+            Events
+          </a>
+        </li>
+        <li>
+          <a href="/site-map" >
+            Site Map
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility-settings" >
+            Accessibility Settings
+          </a>
+        </li>
+        <li>
+          <a href="/campaigns" >
+            Campaigns
+          </a>
+        </li>
+        <li>
+          <a href="/community" >
+            Community
+          </a>
+        </li>
+        <li>
+          <a href="/connect" >
+            Connect
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- High contrast + Dark mode toggles + Accessibility Tools -->
+    <div class="header-controls" role="group" aria-label="Display settings and accessibility">
+      <a href="/accessibility-settings" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
+        ♿ Accessibility
+      </a>
+      
+      <!-- Complexity Mode Toggle -->
+      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode">
+        <span class="complexity-icon" aria-hidden="true">📖</span>
+        <span class="complexity-label">Standard View</span>
+        <span class="complexity-hint">Click for Simple Language</span>
+      </button>
+      
+      <button
+        id="contrast-toggle"
+        class="contrast-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle high contrast mode"
+      >
+        High contrast
+      </button>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle dark mode"
+      >
+        Dark mode
+      </button>
+    </div>
+  </header>
+  
+  <!-- Complexity Mode Announcer (moved from inline) -->
+  <div id="complexity-announcer" role="status" aria-live="polite" aria-atomic="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"></div><nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li><li aria-current="page">Roadmap</li></ol>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <!-- Status Banner - Consistent across all pages -->
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator" aria-hidden="true">🚀</span>
+  <strong>App Status:</strong> Production Ready - 721 Tests Passing | <strong>Phase 1:</strong> Closed Internal Testing NOW ACTIVE (Slow Release) | <strong>NEW:</strong> Available Canada-wide (Coast to Coast to Coast) + USA Lite 🇨🇦🇺🇸
+</div>
+<h1 id="️-3mpwrapp-roadmap">🗺️ 3mpwrApp Roadmap</h1>
+
+<p><strong>Current Status: Production Ready - 721 Tests Passing - Preparing for Open Beta</strong></p>
+
+<p>🎉 <strong>December 9, 2025 Milestone:</strong> First demo/intro presentation with Thunder Bay &amp; District Injured Workers Support Group was a success! USA Lite now available for American supporters and allies.</p>
+
+<p>We’re constantly improving 3mpwrApp based on your feedback and the community’s needs. Here’s what we’re working on and what’s coming next.</p>
+
+<!-- Interactive Timeline -->
+<div class="roadmap-timeline">
+  <h2 class="timeline-title">📅 Development Timeline</h2>
+  <p class="timeline-subtitle">Track our progress from closed beta to global expansion</p>
+  
+  <div class="timeline">
+    <!-- Phase 1 - STARTING SOON -->
+    <div class="timeline-item current" data-phase="1">
+      <div class="timeline-marker">
+        <span class="marker-dot"></span>
+        <span class="marker-line"></span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-badge current-badge">🚀 Starting Soon</div>
+        <h3 class="timeline-heading">Phase 1: Closed Internal Testing</h3>
+        <p class="timeline-date">December 2025</p>
+        <div class="timeline-details">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%"></div>
+          </div>
+          <p class="progress-label">About to Begin! First Demo Complete 🎉</p>
+          <ul class="timeline-features">
+            <li>🚀 Core feature testing (Evidence Locker, Letter Wizard, Wellness)</li>
+            <li>🚀 Accessibility validation with screen readers</li>
+            <li>✅ Security audits - AES-256-GCM encryption verified</li>
+            <li>🚀 Bug fixes and performance optimization</li>
+            <li>🚀 Community guidelines enforcement testing</li>
+            <li>✅ First demo/intro presentation with Thunder Bay &amp; District Injured Workers Support Group - SUCCESS!</li>
+            <li>✅ USA Lite launched for American supporters</li>
+          </ul>
+          <button class="timeline-expand" aria-expanded="false">
+            <span class="expand-text">Show Details</span>
+            <span class="expand-icon">▼</span>
+          </button>
+          <div class="timeline-extra" hidden="">
+            <h4>What We're Testing:</h4>
+            <ul>
+              <li><strong>Authentication:</strong> 9-step onboarding acceptance</li>
+              <li><strong>Evidence Locker:</strong> Document security and organization</li>
+              <li><strong>Letter Generation:</strong> Template accuracy and PDF export</li>
+              <li><strong>Wellness Tracking:</strong> ML prediction accuracy</li>
+              <li><strong>Community Features:</strong> Safety and moderation</li>
+            </ul>
+            <p><strong>Beta Testers:</strong> Selected users across all Canadian provinces</p>
+            <a href="/beta" class="timeline-cta">Join Beta Testing →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 2 - UPCOMING -->
+    <div class="timeline-item future" data-phase="2">
+      <div class="timeline-marker">
+        <span class="marker-dot"></span>
+        <span class="marker-line"></span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-badge future-badge">⏳ Coming Next</div>
+        <h3 class="timeline-heading">Phase 2: Open Beta</h3>
+        <p class="timeline-date">Q1 2026 (After Phase 1)</p>
+        <div class="timeline-details">
+          <ul class="timeline-features">
+            <li>📋 Expand to more Canadian users</li>
+            <li>📋 Public sign-ups accepted</li>
+            <li>✅ USA Lite available for American supporters</li>
+            <li>📋 Additional features based on demo feedback</li>
+            <li>📋 Continued refinement and optimization</li>
+            <li>📋 Community growth and engagement</li>
+          </ul>
+          <button class="timeline-expand" aria-expanded="false">
+            <span class="expand-text">Show Details</span>
+            <span class="expand-icon">▼</span>
+          </button>
+          <div class="timeline-extra" hidden="">
+            <h4>New Features Planned:</h4>
+            <ul>
+              <li>Motor disability enhancements (dwell-click, voice commands)</li>
+              <li>Stronger community safety features</li>
+              <li>Enhanced moderation tools</li>
+              <li>Content warnings and trauma-informed design</li>
+              <li>Campaign creation tools</li>
+            </ul>
+            <p><strong>Goal:</strong> Open to all Canadians who want to join</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3 - Public Launch -->
+    <div class="timeline-item future" data-phase="3">
+      <div class="timeline-marker">
+        <span class="marker-dot"></span>
+        <span class="marker-line"></span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-badge future-badge">🎯 Planned</div>
+        <h3 class="timeline-heading">Phase 3: Public Launch</h3>
+        <p class="timeline-date">February 2026</p>
+        <div class="timeline-details">
+          <ul class="timeline-features">
+            <li>📋 General availability via app stores</li>
+            <li>📋 Full marketing campaign</li>
+            <li>📋 Media outreach</li>
+            <li>📋 Partnership announcements</li>
+            <li>📋 Version 1.0 release</li>
+          </ul>
+          <button class="timeline-expand" aria-expanded="false">
+            <span class="expand-text">Show Details</span>
+            <span class="expand-icon">▼</span>
+          </button>
+          <div class="timeline-extra" hidden="">
+            <h4>Launch Goals:</h4>
+            <ul>
+              <li>Available on iOS App Store and Google Play</li>
+              <li>Web version for desktop users</li>
+              <li>Partnership with disability organizations</li>
+              <li>Media coverage and awareness campaign</li>
+              <li>Community of 1,000+ active users</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 4 - Expansion -->
+    <div class="timeline-item future" data-phase="4">
+      <div class="timeline-marker">
+        <span class="marker-dot"></span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-badge future-badge">🚀 Future</div>
+        <h3 class="timeline-heading">Phase 4: Feature Expansion</h3>
+        <p class="timeline-date">March 2026+</p>
+        <div class="timeline-details">
+          <ul class="timeline-features">
+            <li>📋 New features based on community feedback</li>
+            <li>📋 Additional language support</li>
+            <li>📋 Enhanced ML personalization</li>
+            <li>📋 Advanced legal automation</li>
+            <li>📋 Global expansion planning</li>
+          </ul>
+          <button class="timeline-expand" aria-expanded="false">
+            <span class="expand-text">Show Details</span>
+            <span class="expand-icon">▼</span>
+          </button>
+          <div class="timeline-extra" hidden="">
+            <h4>Long-term Vision:</h4>
+            <ul>
+              <li>Photo-to-form technology</li>
+              <li>Smarter disability wizard with ML</li>
+              <li>Indigenous cultural protections</li>
+              <li>Traditional calendar integration</li>
+              <li>Expansion to other countries</li>
+              <li>Partnership with healthcare systems</li>
+            </ul>
+            <p><strong>Mission:</strong> Become the leading disability rights platform globally</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<h2 id="-current-phase-closed-beta-october-2025">🚀 <strong>Current Phase: Closed Beta (October 2025)</strong></h2>
+
+<h3 id="whats-happening-now"><strong>What’s Happening Now:</strong></h3>
+
+<p><strong>3mpwrApp is in Phase 1 - Closed Beta Testing</strong> with selected beta testers across Canada. We’re focusing on:</p>
+
+<p>✅ <strong>Core Functionality Testing:</strong></p>
+<ul>
+  <li>Evidence Locker (document storage &amp; encryption)</li>
+  <li>Letter Wizard (22 professional templates)</li>
+  <li>Wellness trackers (mood, energy, symptoms)</li>
+  <li>ML energy predictions &amp; smart notifications</li>
+  <li>Community features (forums, DMs, peer support)</li>
+  <li>Legal workflow automation</li>
+</ul>
+
+<p>✅ <strong>Accessibility Validation:</strong></p>
+<ul>
+  <li>Screen reader compatibility (VoiceOver, TalkBack)</li>
+  <li>High contrast mode (WCAG AAA)</li>
+  <li>Text scaling and cognitive accessibility</li>
+  <li>Motor accessibility features</li>
+  <li>Dyslexia support</li>
+</ul>
+
+<p>✅ <strong>Security &amp; Privacy:</strong></p>
+<ul>
+  <li>AES-256 encryption</li>
+  <li>Biometric authentication</li>
+  <li>Local-first architecture</li>
+  <li>BYOC (Bring Your Own Cloud) sync</li>
+</ul>
+
+<p><strong>Beta Tester Focus Areas:</strong></p>
+<ol>
+  <li>Authentication &amp; onboarding (9-step acceptance)</li>
+  <li>Evidence Locker functionality</li>
+  <li>Letter generation and PDF export</li>
+  <li>Wellness tracking accuracy</li>
+  <li>ML personalization features</li>
+</ol>
+
+<p><strong>Not a beta tester yet?</strong> <a href="/beta">Sign up to join the closed beta</a></p>
+
+<hr />
+
+<p><strong>3mpwrApp is currently focused on serving the Canadian disability community</strong>, including:</p>
+<ul>
+  <li>Persons with Disabilities across all provinces and territories</li>
+  <li>Injured Workers navigating WSIB, WCB, and provincial systems</li>
+  <li>Supporters, Allies, and Advocates</li>
+  <li>Labour movement representing injured workers, Persons with Disabilities, and all workers fighting for accessibility and inclusion</li>
+  <li>Indigenous communities with disabilities, respecting sovereignty and traditional knowledge</li>
+  <li>Allies in the broader social justice movement working toward systemic change</li>
+</ul>
+
+<hr />
+
+<h2 id="-current-scope-canada-wide--usa-lite">🇨🇦 <strong>Current Scope: Canada-Wide + USA Lite</strong></h2>
+
+<p><strong>3mpwrApp is currently focused on serving the Canadian disability community</strong>, including:</p>
+<ul>
+  <li>Persons with Disabilities across all provinces and territories</li>
+  <li>Injured Workers navigating WSIB, WCB, and provincial systems</li>
+  <li>Supporters, Allies, and Advocates</li>
+  <li>Labour movement representing injured workers, Persons with Disabilities, and all workers fighting for accessibility and inclusion</li>
+  <li>Indigenous communities with disabilities, respecting sovereignty and traditional knowledge</li>
+  <li>Allies in the broader social justice movement working toward systemic change</li>
+</ul>
+
+<p><strong>Our immediate mission</strong>: Build the strongest, most accessible disability rights platform in Canada, then expand globally with lessons learned and proven features.</p>
+
+<hr />
+
+<h2 id="-new-usa-lite---now-available">🇺🇸 <strong>NEW: USA Lite - Now Available!</strong></h2>
+
+<p>Following strong interest from American supporters during our first demo presentation (December 9, 2025), we’ve streamlined our roadmap to offer <strong>USA Lite</strong> for our allies south of the border!</p>
+
+<h3 id="whats-in-usa-lite">What’s in USA Lite?</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Availability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Wellness Tools</strong></td>
+      <td>✅ Full access - Energy tracking, mood, pacing AI</td>
+    </tr>
+    <tr>
+      <td><strong>Community</strong></td>
+      <td>✅ Full access - Connect with disability movement</td>
+    </tr>
+    <tr>
+      <td><strong>Letter Wizard</strong></td>
+      <td>✅ Templates (general advocacy)</td>
+    </tr>
+    <tr>
+      <td><strong>Evidence Locker</strong></td>
+      <td>✅ Full access - AES-256 encrypted storage</td>
+    </tr>
+    <tr>
+      <td><strong>Crisis Resources</strong></td>
+      <td>✅ US hotlines (988, Crisis Text Line)</td>
+    </tr>
+    <tr>
+      <td><strong>Accessibility</strong></td>
+      <td>✅ Full WCAG AAA, Complexity Mode, voice</td>
+    </tr>
+    <tr>
+      <td><strong>Offline Support</strong></td>
+      <td>✅ Full offline-first functionality</td>
+    </tr>
+    <tr>
+      <td><strong>Workers’ Comp</strong></td>
+      <td>⚠️ General templates (not state-specific)</td>
+    </tr>
+    <tr>
+      <td><strong>Benefit Programs</strong></td>
+      <td>⚠️ General resources (not SSDI/SSI-specific)</td>
+    </tr>
+    <tr>
+      <td><strong>Legal Workflows</strong></td>
+      <td>⚠️ Advocacy tools only (not US tribunal-specific)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="why-usa-lite">Why USA Lite?</h3>
+
+<ul>
+  <li><strong>Immediate need:</strong> US supporters asked to join during our demo</li>
+  <li><strong>Shared mission:</strong> Disability rights transcend borders</li>
+  <li><strong>Stepping stone:</strong> Full US launch planned for Q1-Q2 2026</li>
+</ul>
+
+<h3 id="-initial-focus-states">🎯 Initial Focus States</h3>
+
+<p>We’re starting with <strong>10 priority states</strong> for USA Lite development:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>States</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>West Coast</strong></td>
+      <td>California, Washington</td>
+    </tr>
+    <tr>
+      <td><strong>Southwest</strong></td>
+      <td>Texas</td>
+    </tr>
+    <tr>
+      <td><strong>Midwest</strong></td>
+      <td>Michigan, Ohio</td>
+    </tr>
+    <tr>
+      <td><strong>Northeast</strong></td>
+      <td>New York, Pennsylvania</td>
+    </tr>
+    <tr>
+      <td><strong>South</strong></td>
+      <td>Tennessee, Georgia, Mississippi</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>These states were selected based on community interest, workers’ compensation complexity, and disability advocacy needs.</em></p>
+
+<h3 id="️-full-us-expansion-2026">🗺️ Full US Expansion (2026)</h3>
+
+<p>The remaining 40 states will be added during the 2026 expansion:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>States</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>New England</strong></td>
+      <td>Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, Vermont</td>
+    </tr>
+    <tr>
+      <td><strong>Mid-Atlantic</strong></td>
+      <td>Delaware, Maryland, New Jersey, Washington D.C.</td>
+    </tr>
+    <tr>
+      <td><strong>Southeast</strong></td>
+      <td>Alabama, Arkansas, Florida, Kentucky, Louisiana, North Carolina, South Carolina, Virginia, West Virginia</td>
+    </tr>
+    <tr>
+      <td><strong>Midwest</strong></td>
+      <td>Illinois, Indiana, Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota, Wisconsin</td>
+    </tr>
+    <tr>
+      <td><strong>Mountain West</strong></td>
+      <td>Arizona, Colorado, Idaho, Montana, Nevada, New Mexico, Utah, Wyoming</td>
+    </tr>
+    <tr>
+      <td><strong>Pacific</strong></td>
+      <td>Alaska, Hawaii, Oregon</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="coming-in-full-us-launch-2026">Coming in Full US Launch (2026)</h3>
+
+<ul>
+  <li>50-state workers’ compensation compliance</li>
+  <li>SSDI/SSI application workflows</li>
+  <li>ADA accommodation templates</li>
+  <li>US-specific legal tribunal support</li>
+  <li>State-by-state disability resources</li>
+</ul>
+
+<p><strong>USA supporters:</strong> <a href="/beta/">Join beta testing now →</a></p>
+
+<hr />
+
+<h2 id="-launch-timeline">📅 <strong>Launch Timeline</strong></h2>
+
+<h3 id="phase-1-closed-beta-testing-october---december-2025--complete"><strong>Phase 1: Closed Beta Testing</strong> (October - December 2025) ✅ <em>COMPLETE!</em></h3>
+<ul>
+  <li>✅ Selected beta testers across Canada</li>
+  <li>✅ Core feature testing and validation - 721 tests passing</li>
+  <li>✅ Bug fixes and performance optimization - 0 errors</li>
+  <li>✅ Accessibility validation with real users - WCAG AAA compliant</li>
+  <li>✅ Security audits - AES-256-GCM encryption verified</li>
+  <li>✅ Community guidelines enforcement testing</li>
+  <li>✅ <strong>First demo/intro presentation - SUCCESS!</strong> (Dec 12, 2025)</li>
+  <li>✅ <strong>USA Lite launched</strong> for American supporters</li>
+</ul>
+
+<h3 id="phase-2-open-beta-december-2025---january-2026--current-phase"><strong>Phase 2: Open Beta</strong> (December 2025 - January 2026) 🔄 <em>Current Phase</em></h3>
+<ul>
+  <li>🔄 Expand to more Canadian users</li>
+  <li>🔄 Public sign-ups accepted</li>
+  <li>✅ USA Lite available for American supporters</li>
+  <li>🔄 Additional features based on demo feedback</li>
+  <li>🔄 Continued refinement and optimization</li>
+  <li>🔄 Community growth and engagement</li>
+</ul>
+
+<h3 id="phase-3-public-launch-february-2026"><strong>Phase 3: Public Launch</strong> (February 2026)</h3>
+<ul>
+  <li>General availability via app stores</li>
+  <li>Full marketing campaign</li>
+  <li>Media outreach</li>
+  <li>Partnership announcements</li>
+  <li>Version 1.0 release</li>
+  <li><strong>Full USA launch</strong> with state-specific features</li>
+</ul>
+
+<h3 id="phase-4-feature-expansion-march-2026"><strong>Phase 4: Feature Expansion</strong> (March 2026+)</h3>
+<ul>
+  <li>New features based on community feedback</li>
+  <li>Additional language support</li>
+  <li>Enhanced ML personalization</li>
+  <li>Advanced legal automation</li>
+  <li>Global expansion planning</li>
+</ul>
+
+<hr />
+
+<h2 id="-coming-very-soon-next-3-6-months">🎯 Coming Very Soon (Next 3-6 Months)</h2>
+
+<h3 id="-enhanced-cognitive-accessibility-in-beta-testing">✅ <strong>Enhanced Cognitive Accessibility</strong> (In Beta Testing)</h3>
+<p><strong>Who it helps:</strong> People with ADHD, autism, learning disabilities, memory challenges<br />
+<strong>Status:</strong> Available in closed beta for testing</p>
+
+<p><strong>What’s available NOW in beta:</strong></p>
+<ul>
+  <li>✅ 3 cognitive modes: Standard, Simplified (max 5 items), Minimal (max 3 items)</li>
+  <li>✅ Enhanced auto-save with configurable intervals (5min/30s/15s based on mode)</li>
+  <li>✅ “Back to where I was” button to restore your place</li>
+  <li>✅ Visual progress indicators and breadcrumb navigation</li>
+  <li>✅ Step-by-step guidance components</li>
+  <li>✅ Task complexity badges showing time and difficulty</li>
+  <li>✅ SimplifiedView integrated into Letter Wizard</li>
+  <li>✅ Full settings screen with configuration options</li>
+</ul>
+
+<p><strong>Being tested:</strong></p>
+<ul>
+  <li>⏳ User experience across all app sections</li>
+  <li>⏳ Effectiveness with ADHD/autism community members</li>
+  <li>⏳ Performance impact and optimization</li>
+</ul>
+
+<p><strong>To try it in beta:</strong> Settings → Cognitive Accessibility → Enable Simplified Mode</p>
+
+<hr />
+
+<h3 id="-dyslexia-support-features-in-beta-testing">✅ <strong>Dyslexia Support Features</strong> (In Beta Testing)</h3>
+<p><strong>Who it helps:</strong> People with dyslexia and reading challenges<br />
+<strong>Status:</strong> Core features available in closed beta</p>
+
+<p><strong>What’s available NOW in beta:</strong></p>
+<ul>
+  <li>✅ 5 dyslexia-friendly fonts: OpenDyslexic, Lexend, Arial, System default</li>
+  <li>✅ Adjustable letter spacing (0 to 0.2em extra spacing)</li>
+  <li>✅ Line height control (1.2x to 2.0x normal)</li>
+  <li>✅ 8 colored overlay options (Cream, Peach, Mint, Sky, Rose, Lavender, etc.)</li>
+  <li>✅ Text contrast presets (Normal to Maximum)</li>
+  <li>✅ 4 quick presets: Standard, Recommended, High Contrast, Dark Mode</li>
+  <li>✅ DyslexiaText component across major screens</li>
+</ul>
+
+<p><strong>Being refined:</strong></p>
+<ul>
+  <li>⏳ Font rendering optimization</li>
+  <li>⏳ Settings UI improvements</li>
+  <li>⏳ User feedback integration</li>
+</ul>
+
+<hr />
+
+<h3 id="-motor-disability-enhancements">� <strong>Motor Disability Enhancements</strong></h3>
+<p><strong>Who it helps:</strong> People with limited fine motor control, tremors, mobility challenges<br />
+<strong>Status:</strong> Planning complete, development starting after beta</p>
+
+<p><strong>What’s planned:</strong></p>
+<ul>
+  <li>Dwell-click: Hover over buttons to activate them (no clicking needed)</li>
+  <li>Sticky keys for one-finger typing</li>
+  <li>Voice commands for 30+ common actions</li>
+  <li>One-handed mode with reachable UI</li>
+  <li>Increased touch targets (48-64px minimum)</li>
+  <li>Gesture simplification</li>
+  <li>Tremor compensation with motion filtering</li>
+</ul>
+
+<p><strong>Timeline:</strong> Development starts post-beta, estimated 2-3 months</p>
+
+<hr />
+
+<h3 id="-stronger-community-safety">� <strong>Stronger Community Safety</strong></h3>
+<p><strong>Who it helps:</strong> Everyone, especially vulnerable community members<br />
+<strong>Status:</strong> Planning complete, development during open beta</p>
+
+<p><strong>What’s planned:</strong></p>
+<ul>
+  <li>Content warnings for potentially triggering topics</li>
+  <li>Safe word protocol for emergency stops</li>
+  <li>Enhanced moderation tools and mod dashboard</li>
+  <li>Improved reporting system with faster response</li>
+  <li>Trauma-informed design patterns</li>
+  <li>Community moderator training</li>
+</ul>
+
+<p><strong>Expected impact:</strong> 50% of users feel safer, 20% reduction in harmful incidents</p>
+
+<p><strong>Timeline:</strong> Implementation during open beta phase</p>
+
+<hr />
+
+<h3 id="-indigenous-cultural-protections">� <strong>Indigenous Cultural Protections</strong></h3>
+<p><strong>Who it helps:</strong> Indigenous peoples and communities<br />
+<strong>Status:</strong> Planning complete, requires Indigenous elder consultation</p>
+
+<p><strong>What’s planned:</strong></p>
+<ul>
+  <li>Sacred data encryption with enhanced AES-256</li>
+  <li>Ceremony time-locks (auto-lock during sacred times)</li>
+  <li>Elder permission workflow for ceremonial content</li>
+  <li>OCAP compliance dashboard (Ownership, Control, Access, Possession)</li>
+  <li>Data residency controls (keep Canadian Indigenous data in Canada)</li>
+  <li>Seasonal restrictions and traditional protocols</li>
+</ul>
+
+<p><strong>Timeline:</strong> Elder consultation phase starting Q1 2026, estimated 2-3 months after approval</p>
+
+<hr />
+
+<h2 id="-coming-later-this-year-6-12-months">🌟 Coming Later This Year (6-12 Months)</h2>
+
+<h3 id="smarter-disability-wizard">Smarter Disability Wizard</h3>
+<ul>
+  <li>Learns your patterns over time (all on your device, totally private)</li>
+  <li>Adapts to your changing needs</li>
+  <li>Integrates with your mood and energy tracking</li>
+  <li>Suggests tools to help you reach your goals</li>
+  <li>Voice-activated “What should I do today?”</li>
+</ul>
+
+<hr />
+
+<h3 id="photo-to-form-technology">Photo-to-Form Technology</h3>
+<ul>
+  <li>Take a photo of a paper form</li>
+  <li>App auto-fills it from your profile</li>
+  <li>Review and correct before submitting</li>
+  <li>Save time and reduce errors</li>
+  <li>Generate filled PDF instantly</li>
+</ul>
+
+<hr />
+
+<h3 id="-traditional-calendar-planned">📋 Traditional Calendar (PLANNED)</h3>
+<p><strong>Who it helps:</strong> Indigenous users and those learning traditional ways<br />
+<strong>Status:</strong> Planning complete, development after cultural features</p>
+
+<p><strong>What’s planned:</strong></p>
+<ul>
+  <li>🔜 Traditional seasons (6 seasons, not 4) with nation-specific names</li>
+  <li>🔜 Moon phase calendar with ceremonial moons</li>
+  <li>🔜 Ceremony date reminders (solstice, equinox, powwows)</li>
+  <li>🔜 Dual calendar view (Gregorian + Traditional side-by-side)</li>
+  <li>🔜 Integration with accessibility features</li>
+</ul>
+
+<p><strong>Expected impact:</strong></p>
+<ul>
+  <li>25% adoption (Indigenous users)</li>
+  <li>High cultural significance</li>
+</ul>
+
+<p><strong>Estimated completion:</strong> 1.5 weeks of development after consultation</p>
+
+<hr />
+
+<h3 id="-performance-monitoring-planned">📋 Performance Monitoring (PLANNED)</h3>
+<p><strong>Status:</strong> Planning complete, development estimated 1 week</p>
+
+<p><strong>What’s planned:</strong></p>
+<ul>
+  <li>🔜 Screen load time tracking (alert if &gt;3 seconds)</li>
+  <li>🔜 Slow render detection (alert if &gt;16ms for 60fps)</li>
+  <li>🔜 Memory monitoring and leak detection</li>
+  <li>🔜 Network performance tracking with retry logic</li>
+  <li>🔜 Performance dashboard with historical trends</li>
+</ul>
+
+<p><strong>Expected impact:</strong></p>
+<ul>
+  <li>20% faster app</li>
+  <li>99.9% crash-free sessions</li>
+</ul>
+
+<p><strong>Estimated completion:</strong> 1 month</p>
+
+<hr />
+
+<h2 id="-future-innovations-2026-and-beyond">🚀 Future Innovations (2026 and Beyond)</h2>
+
+<h3 id="-global-expansion-from-canada-to-the-world">🌍 Global Expansion: From Canada to the World</h3>
+<p><strong>Who it helps:</strong> Disability rights movements worldwide<br />
+<strong>Status:</strong> Strategic planning phase, launching after Canadian success</p>
+
+<p><strong>Vision:</strong> Take 3mpwrApp’s proven Canadian model global, adapting to regional laws, cultures, and disability systems worldwide.</p>
+
+<p><strong>Phase 1: International English Markets (2026 Q1-Q2)</strong></p>
+<ul>
+  <li>🌐 <strong>United Kingdom</strong>: Adapt for DWP, PIP, ESA, tribunals</li>
+  <li>🌐 <strong>Australia</strong>: Support NDIS, Centrelink, Fair Work Commission</li>
+  <li>🌐 <strong>New Zealand</strong>: ACC injury claims, disability support</li>
+  <li>🌐 <strong>Ireland</strong>: Adapt for Irish disability systems</li>
+  <li>🌐 <strong>United States</strong>: 50-state compliance (ADA, SSDI, state workers’ comp)</li>
+</ul>
+
+<p><strong>Phase 2: Multilingual Expansion (2026 Q3-Q4)</strong></p>
+<ul>
+  <li>🌐 <strong>European Union</strong>: GDPR compliance, 24 official languages
+    <ul>
+      <li>Priority: French, German, Spanish, Dutch, Italian</li>
+    </ul>
+  </li>
+  <li>🌐 <strong>Latin America</strong>: Spanish/Portuguese adaptation
+    <ul>
+      <li>Focus: Mexico, Brazil, Argentina, Colombia</li>
+    </ul>
+  </li>
+  <li>🌐 <strong>Asia-Pacific</strong>: Key markets with strong disability movements
+    <ul>
+      <li>Priority: Japan, South Korea, India, Philippines</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Phase 3: Global South &amp; Underserved Regions (2027+)</strong></p>
+<ul>
+  <li>🌐 <strong>Africa</strong>: Mobile-first design for limited connectivity</li>
+  <li>🌐 <strong>Middle East</strong>: Arabic localization, cultural adaptation</li>
+  <li>🌐 <strong>Southeast Asia</strong>: Low-bandwidth optimization</li>
+  <li>🌐 <strong>Indigenous Global Network</strong>: Connect First Nations worldwide</li>
+</ul>
+
+<p><strong>Technical Requirements for Global Launch:</strong></p>
+<ul>
+  <li>Multi-jurisdiction legal framework engine</li>
+  <li>200+ language support with community translations</li>
+  <li>Offline-first architecture for low-connectivity regions</li>
+  <li>Currency and date/time localization</li>
+  <li>Regional data residency (EU, China, Russia compliance)</li>
+  <li>Cultural accessibility adaptations per region</li>
+  <li>Partnership with international disability organizations</li>
+</ul>
+
+<p><strong>Expected Impact:</strong></p>
+<ul>
+  <li>100+ countries served by 2028</li>
+  <li>50 million+ users globally</li>
+  <li>United global disability rights movement</li>
+  <li>Cross-border solidarity and advocacy</li>
+</ul>
+
+<hr />
+
+<h3 id="-revolutionary-movement-building-features">🏆 Revolutionary Movement-Building Features</h3>
+
+<p>These are <strong>never-before-seen innovations</strong> designed specifically to advance disability rights:</p>
+
+<h4 id="1-collective-bargaining-intelligence-network-">1. <strong>Collective Bargaining Intelligence Network</strong> 🤝</h4>
+<p><strong>WORLD FIRST:</strong> AI-powered collective action coordinator for disability rights</p>
+
+<ul>
+  <li><strong>Pattern Recognition</strong>: Anonymously aggregate denial patterns across thousands of cases
+    <ul>
+      <li>“347 people with fibromyalgia denied by the same adjudicator in 6 months”</li>
+      <li>“This employer has 89% denial rate for mental health claims”</li>
+    </ul>
+  </li>
+  <li><strong>Strategic Action Alerts</strong>: Notify unions and advocates when systemic discrimination detected</li>
+  <li><strong>Class Action Builder</strong>: Auto-identify cases suitable for group legal action</li>
+  <li><strong>Union Power Dashboard</strong>: Real-time data for labor negotiations
+    <ul>
+      <li>“12 workers injured at this workplace in 3 months - negotiate safety changes”</li>
+    </ul>
+  </li>
+  <li><strong>Solidarity Matching</strong>: Connect workers facing same employer/insurer</li>
+  <li><strong>Legislative Pressure Maps</strong>: Show politicians how many constituents affected</li>
+  <li><strong>Media Kit Generator</strong>: Auto-create press releases when patterns reach threshold</li>
+</ul>
+
+<p><strong>Impact:</strong> Transform individual struggles into collective power. Expose systemic discrimination. Force policy change through data.</p>
+
+<hr />
+
+<h4 id="2-accessibility-innovation-lab-">2. <strong>Accessibility Innovation Lab</strong> 🔬</h4>
+<p><strong>WORLD FIRST:</strong> Crowdsourced accessibility R&amp;D platform</p>
+
+<ul>
+  <li><strong>Community-Invented Solutions</strong>: Users submit custom accessibility hacks
+    <ul>
+      <li>“I taped a stylus to my head brace for phone use”</li>
+      <li>“I use voice commands + eye-tracking combo”</li>
+    </ul>
+  </li>
+  <li><strong>Solution Marketplace</strong>: Share adaptations with community (free + open source)</li>
+  <li><strong>DIY Assistive Tech Library</strong>: 3D-printable designs, code snippets, hardware mods</li>
+  <li><strong>Corporate Challenge Program</strong>: Companies compete to solve user-submitted barriers</li>
+  <li><strong>Patent-Free Zone</strong>: All innovations shared as creative commons</li>
+  <li><strong>Maker Space Connector</strong>: Link users to local hackerspaces for builds</li>
+  <li><strong>Medical Professional Portal</strong>: Occupational therapists can browse solutions for patients</li>
+</ul>
+
+<p><strong>Impact:</strong> Democratize assistive technology. Break corporate monopolies. Foster innovation from lived experience.</p>
+
+<hr />
+
+<h4 id="3-trauma-informed-ai-companion-">3. <strong>Trauma-Informed AI Companion</strong> 🧠</h4>
+<p><strong>WORLD FIRST:</strong> Mental health-aware advocacy assistant</p>
+
+<ul>
+  <li><strong>Emotional Check-ins</strong>: “How are you feeling about your case today?”</li>
+  <li><strong>Trigger Detection</strong>: Recognizes when tasks might be overwhelming
+    <ul>
+      <li>“This involves your accident. Would you like to take a break first?”</li>
+    </ul>
+  </li>
+  <li><strong>Pacing Suggestions</strong>: “You’ve been working for 45 min. Time for a reset?”</li>
+  <li><strong>Victory Celebration</strong>: Marks milestones with encouragement</li>
+  <li><strong>Crisis Detection</strong>: Recognizes distress signals, offers resources
+    <ul>
+      <li>“It sounds like today is really hard. Here’s the crisis line: 988”</li>
+    </ul>
+  </li>
+  <li><strong>Gentle Reminders</strong>: Uses supportive language, never punitive
+    <ul>
+      <li>“When you’re ready” instead of “You must”</li>
+    </ul>
+  </li>
+  <li><strong>Energy Banking</strong>: Tracks your capacity, suggests lighter tasks on low days</li>
+  <li><strong>Peer Support Matching</strong>: “3 people in similar situations want to connect”</li>
+</ul>
+
+<p><strong>Impact:</strong> Reduce re-traumatization. Support mental health during advocacy. Recognize that legal battles take emotional toll.</p>
+
+<hr />
+
+<h4 id="4-evidence-blockchain-️">4. <strong>Evidence Blockchain</strong> ⛓️</h4>
+<p><strong>WORLD FIRST:</strong> Tamper-proof disability evidence preservation</p>
+
+<ul>
+  <li><strong>Immutable Timeline</strong>: Every document timestamped on blockchain</li>
+  <li><strong>Cannot Be Altered</strong>: Employers/insurers can’t claim “we never received that”</li>
+  <li><strong>Third-Party Verification</strong>: Independent proof of submission</li>
+  <li><strong>Audit Trail</strong>: Show exactly when evidence was collected, submitted, accessed</li>
+  <li><strong>Medical Record Protection</strong>: Hash medical files to prove authenticity</li>
+  <li><strong>Photo/Video Authentication</strong>: Prove surveillance footage wasn’t edited</li>
+  <li><strong>Legal Admissibility</strong>: Blockchain evidence accepted in tribunals</li>
+  <li><strong>Decentralized Storage</strong>: Your evidence survives even if app shuts down</li>
+  <li><strong>Smart Contracts</strong>: Auto-trigger actions when conditions met
+    <ul>
+      <li>“If insurer doesn’t respond in 30 days, auto-escalate to ombudsman”</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Impact:</strong> End “lost paperwork” excuses. Provide irrefutable proof. Level playing field against institutional power.</p>
+
+<hr />
+
+<h4 id="5-union-solidarity-network-">5. <strong>Union Solidarity Network</strong> 🪧</h4>
+<p><strong>WORLD FIRST:</strong> Cross-union disabled worker advocacy platform</p>
+
+<ul>
+  <li><strong>Inter-Union Communication</strong>: Connect CUPE, Unifor, OPSEU, provincial unions</li>
+  <li><strong>Strike Support for Disabled Workers</strong>: Accessible picket lines, virtual solidarity</li>
+  <li><strong>Collective Agreement Database</strong>: Search 10,000+ CBAs for disability clauses</li>
+  <li><strong>Best Practice Sharing</strong>: “This local won 100% pay during recovery”</li>
+  <li><strong>Bargaining Support</strong>: AI suggests contract language based on wins elsewhere</li>
+  <li><strong>Workplace Accommodation Tracker</strong>: Anonymous database of successful accommodations
+    <ul>
+      <li>“Employer XYZ approved home office for chronic pain”</li>
+    </ul>
+  </li>
+  <li><strong>Shop Steward Training</strong>: Built-in disability rights education for union reps</li>
+  <li><strong>Political Action Coordinator</strong>: Mobilize members for disability legislation</li>
+  <li><strong>Injured Worker Mentor Program</strong>: Connect new injuries with experienced advocates</li>
+</ul>
+
+<p><strong>Impact:</strong> Amplify union power. Share knowledge across locals. Protect disabled workers’ rights. Build labor-disability solidarity.</p>
+
+<hr />
+
+<h4 id="6-accessibility-compliance-scoreboard-">6. <strong>Accessibility Compliance Scoreboard</strong> 📊</h4>
+<p><strong>WORLD FIRST:</strong> Public accountability for employers and insurers</p>
+
+<ul>
+  <li><strong>Public Ratings</strong>: Every employer/insurer gets accessibility score (1-100)
+    <ul>
+      <li>Based on: Accommodation success rate, claim approval rate, response time, accessibility barriers</li>
+    </ul>
+  </li>
+  <li><strong>Searchable Database</strong>: “Don’t work for Company X - 23% accessibility score”</li>
+  <li><strong>Employer Leaderboard</strong>: Rank companies by disability-friendliness</li>
+  <li><strong>Union Negotiation Tool</strong>: “Your score is 31%. We need changes.”</li>
+  <li><strong>Consumer Boycott Power</strong>: “This insurer denies 87% of mental health claims”</li>
+  <li><strong>Investor Pressure</strong>: ESG investors see disability discrimination data</li>
+  <li><strong>Award Program</strong>: “Top 100 Disability-Friendly Employers”</li>
+  <li><strong>Improvement Tracking</strong>: Show if company getting better or worse over time</li>
+  <li><strong>Verified Reviews</strong>: Only actual employees/claimants can rate</li>
+</ul>
+
+<p><strong>Impact:</strong> Force corporate accountability. Empower consumer choice. Reward good actors. Shame bad actors. Drive systemic change.</p>
+
+<hr />
+
+<h4 id="7-peer-to-peer-evidence-sharing-">7. <strong>Peer-to-Peer Evidence Sharing</strong> 🔄</h4>
+<p><strong>WORLD FIRST:</strong> Crowdsourced legal strategy library</p>
+
+<ul>
+  <li><strong>Winning Templates</strong>: “This exact letter got me approved - use it!”</li>
+  <li><strong>Medical Evidence Library</strong>: “These test results convinced my doctor”</li>
+  <li><strong>Appeal Success Stories</strong>: Full case files (anonymized) with outcomes</li>
+  <li><strong>Adjudicator Intelligence</strong>: “This person approves 73% of appeals - good odds”</li>
+  <li><strong>Lawyer Ratings</strong>: Community reviews of disability lawyers</li>
+  <li><strong>Question Banks</strong>: “Ask your doctor these 15 questions for your IME”</li>
+  <li><strong>Strategy Guides</strong>: Step-by-step wins from similar cases</li>
+  <li><strong>Red Flag Database</strong>: “Watch out for this trick insurers use”</li>
+  <li><strong>Expert Witness Directory</strong>: Find doctors who understand your condition</li>
+  <li><strong>Translation Help</strong>: Medical jargon → plain language</li>
+</ul>
+
+<p><strong>Impact:</strong> Democratize legal knowledge. Share winning strategies. Build on each other’s victories. Reduce reliance on expensive lawyers.</p>
+
+<hr />
+
+<h4 id="8-intersectional-justice-framework-">8. <strong>Intersectional Justice Framework</strong> 🌈</h4>
+<p><strong>WORLD FIRST:</strong> Recognize overlapping oppressions in disability advocacy</p>
+
+<ul>
+  <li><strong>Identity Mapping</strong>: Track how race, gender, sexuality, class affect outcomes
+    <ul>
+      <li>“Black disabled women approved 40% less often than white disabled men”</li>
+    </ul>
+  </li>
+  <li><strong>Bias Detection</strong>: Flag discriminatory patterns in decisions</li>
+  <li><strong>Culturally-Specific Resources</strong>: Legal help for 2SLGBTQIA+ disabled folks, BIPOC communities</li>
+  <li><strong>Language Justice</strong>: 100+ languages including Indigenous languages, ASL, LSQ</li>
+  <li><strong>Religious Accommodation</strong>: Track faith-based discrimination in disability claims</li>
+  <li><strong>Immigration Status Protection</strong>: Resources for disabled migrants, refugees</li>
+  <li><strong>Anti-Oppression Training</strong>: Educate employers on intersectionality</li>
+  <li><strong>Coalition Building Tools</strong>: Connect disability rights with racial justice, LGBTQ+ rights, climate justice</li>
+  <li><strong>Privilege Awareness</strong>: “Your demographic has 2.3x approval rate - here’s why”</li>
+</ul>
+
+<p><strong>Impact:</strong> Center most marginalized. Expose compounded discrimination. Build broader social justice coalitions. Achieve true equity.</p>
+
+<hr />
+
+<h4 id="9-legislative-change-engine-️">9. <strong>Legislative Change Engine</strong> ⚖️</h4>
+<p><strong>WORLD FIRST:</strong> Transform cases into policy advocacy</p>
+
+<ul>
+  <li><strong>Auto-Generate Policy Briefs</strong>: Your case becomes data for law reform
+    <ul>
+      <li>“5,000 people denied due to outdated medical criteria - here’s the bill to fix it”</li>
+    </ul>
+  </li>
+  <li><strong>Politician Targeting</strong>: “Your MP voted against disability rights 8 times”</li>
+  <li><strong>Constituent Pressure Campaigns</strong>: One-click emails to elected officials</li>
+  <li><strong>Public Hearing Prep</strong>: AI drafts your testimony for legislative committees</li>
+  <li><strong>Ballot Initiative Builder</strong>: Launch referendums for disability rights</li>
+  <li><strong>Media Amplification</strong>: Connect your story with journalists</li>
+  <li><strong>Coalition Coordination</strong>: Unite advocacy groups for major campaigns</li>
+  <li><strong>International Solidarity</strong>: Connect with global disability movements</li>
+  <li><strong>Victory Tracker</strong>: Celebrate when your advocacy changes the law</li>
+</ul>
+
+<p><strong>Impact:</strong> Turn pain into policy. Make your struggle count for systemic change. Hold politicians accountable. Win for everyone.</p>
+
+<hr />
+
+<h4 id="10-mutual-aid-network-">10. <strong>Mutual Aid Network</strong> 💚</h4>
+<p><strong>WORLD FIRST:</strong> Disability community economic solidarity</p>
+
+<ul>
+  <li><strong>Skills Exchange</strong>: “I’ll edit your appeal if you help me shop”</li>
+  <li><strong>Resource Sharing</strong>: “I have a spare wheelchair - who needs it?”</li>
+  <li><strong>Crowdfunding Integration</strong>: Community fundraising for legal fees, medical costs</li>
+  <li><strong>Time Banking</strong>: Earn credits for helping others, spend when you need help</li>
+  <li><strong>Emergency Response</strong>: “I need a ride to tribunal tomorrow - who can help?”</li>
+  <li><strong>Housing Network</strong>: Find accessible, affordable housing through community</li>
+  <li><strong>Food Security</strong>: Connect surplus food with disabled folks in need</li>
+  <li><strong>Ride Sharing</strong>: Accessible transportation organized by community</li>
+  <li><strong>Equipment Library</strong>: Borrow assistive devices instead of buying</li>
+  <li><strong>Community Care Circles</strong>: Organize support pods for high-needs times</li>
+</ul>
+
+<p><strong>Impact:</strong> Build disability economic justice. Reduce dependence on broken systems. Foster community resilience. Mutual aid &gt; charity.</p>
+
+<hr />
+
+<h3 id="ai-assistant-on-your-device">AI Assistant (On Your Device)</h3>
+<ul>
+  <li>Conversational AI that runs on your phone (no internet needed)</li>
+  <li>Answers legal questions in plain language</li>
+  <li>Explains complex documents</li>
+  <li>Guides you through the app</li>
+  <li>Emotional support and encouragement</li>
+  <li>Voice-first design for accessibility</li>
+</ul>
+
+<hr />
+
+<h3 id="wellness-integration">Wellness Integration</h3>
+<ul>
+  <li>Connect your advocacy journey with wellness</li>
+  <li>Track how legal stress affects your health</li>
+  <li>Energy management for advocacy work</li>
+  <li>Celebrate your wins and progress</li>
+  <li>Community wellness challenges</li>
+  <li>Integration with health apps</li>
+</ul>
+
+<hr />
+
+<h3 id="family-coordinator-features">Family Coordinator Features</h3>
+<ul>
+  <li>Support role for family members and caregivers</li>
+  <li>Shared evidence locker with your consent</li>
+  <li>Task assignment and coordination</li>
+  <li>Communication hub for family</li>
+  <li>Caregiver resources and respite reminders</li>
+</ul>
+
+<hr />
+
+<h3 id="virtual-disability-rights-clinic">Virtual Disability Rights Clinic</h3>
+<ul>
+  <li>AI pre-screens your case</li>
+  <li>Connects you to real lawyers (pro bono network)</li>
+  <li>Document review service</li>
+  <li>Practice for hearings</li>
+  <li>Legal knowledge base</li>
+</ul>
+
+<hr />
+
+<h3 id="accessibility-hardware-support">Accessibility Hardware Support</h3>
+<ul>
+  <li>Switch control support</li>
+  <li>Eye-tracking integration</li>
+  <li>Custom controller mapping</li>
+  <li>Support for brain-computer interfaces (future)</li>
+  <li>Directory of assistive technology</li>
+</ul>
+
+<hr />
+
+<h2 id="-how-we-decide-what-to-build">💡 How We Decide What to Build</h2>
+
+<p><strong>We listen to you!</strong> Here’s how we prioritize:</p>
+
+<ol>
+  <li><strong>Safety First</strong> - Features that protect vulnerable users</li>
+  <li><strong>Accessibility Gaps</strong> - Barriers that exclude people</li>
+  <li><strong>Canadian Priority</strong> - Build and perfect features for Canada first, then adapt globally</li>
+  <li><strong>Most Requested</strong> - What the community asks for most</li>
+  <li><strong>Cultural Respect</strong> - Indigenous protocols and sovereignty</li>
+  <li><strong>Legal Impact</strong> - Tools that help you win your case</li>
+  <li><strong>Movement Building</strong> - Features that advance collective disability rights</li>
+  <li><strong>Union &amp; Worker Power</strong> - Tools that strengthen organized labor</li>
+  <li><strong>Community Input</strong> - Advisory groups guide decisions</li>
+  <li><strong>Global Readiness</strong> - Design for future international expansion</li>
+</ol>
+
+<p><strong>Our Philosophy:</strong></p>
+<ul>
+  <li>🇨🇦 <strong>Perfect it in Canada</strong> - Get it right for Canadian disability rights community</li>
+  <li>🌍 <strong>Then go global</strong> - Adapt proven features to international contexts</li>
+  <li>🤝 <strong>Community-led</strong> - Disabled people design for disabled people</li>
+  <li>⚖️ <strong>Justice-oriented</strong> - Every feature should shift power toward users</li>
+  <li>🔓 <strong>Open &amp; Transparent</strong> - Our roadmap is public, our code will be too (future)</li>
+</ul>
+
+<hr />
+
+<h2 id="-building-a-movement-not-just-an-app">� Building a Movement, Not Just an App</h2>
+
+<p><strong>3mpwrApp isn’t just technology - it’s a tool for collective liberation.</strong></p>
+
+<h3 id="our-vision-for-disability-rights">Our Vision for Disability Rights</h3>
+
+<p>Traditional disability apps treat advocacy as an <strong>individual problem</strong>. 3mpwrApp recognizes it as a <strong>systemic justice issue</strong> that requires <strong>collective action</strong>.</p>
+
+<p><strong>What makes us different:</strong></p>
+
+<ul>
+  <li><strong>Power Analysis</strong> - We know employers and insurers have structural advantages. Our features are designed to shift power back to workers and disabled people.</li>
+  <li><strong>Collective Action</strong> - Individual cases become data. Data becomes evidence. Evidence becomes policy change.</li>
+  <li><strong>Solidarity Focus</strong> - Connect disabled workers with unions, allies, and each other. Isolation is a tactic of oppression.</li>
+  <li><strong>Justice Framework</strong> - We center the most marginalized: BIPOC disabled folks, 2SLGBTQIA+ community, Indigenous peoples, low-income workers.</li>
+  <li><strong>Abolitionist Approach</strong> - Question why disabled people must constantly prove their worth. Advocate for systemic change, not just individual accommodations.</li>
+</ul>
+
+<h3 id="why-this-matters">Why This Matters</h3>
+
+<p><strong>Disabled people and injured workers face:</strong></p>
+<ul>
+  <li>Adversarial systems designed to deny claims</li>
+  <li>Employers who view accommodation as burden</li>
+  <li>Medical “experts” who dismiss lived experience</li>
+  <li>Legal processes that re-traumatize</li>
+  <li>Isolation from others in similar situations</li>
+  <li>Lack of resources to fight well-funded institutions</li>
+</ul>
+
+<p><strong>3mpwrApp fights back by:</strong></p>
+<ul>
+  <li>Aggregating individual struggles into collective power</li>
+  <li>Exposing patterns of discrimination through data</li>
+  <li>Connecting people to build solidarity</li>
+  <li>Democratizing legal knowledge and winning strategies</li>
+  <li>Providing tools to organize and mobilize</li>
+  <li>Amplifying voices for legislative change</li>
+  <li>Building economic alternatives through mutual aid</li>
+</ul>
+
+<h3 id="the-long-game">The Long Game</h3>
+
+<p><strong>2025-2026:</strong> Build the strongest disability rights platform in Canada<br />
+<strong>2027-2028:</strong> Expand globally, connecting movements worldwide<br />
+<strong>2029-2030:</strong> 50 million users. Undeniable political force. Real power.</p>
+
+<p><strong>Ultimate Goal:</strong> Make ourselves obsolete by winning the fights that make our app unnecessary - universal basic income, guaranteed housing, free healthcare, accessible everything, disability justice.</p>
+
+<p>Until then, we build tools for the revolution. 🔥</p>
+
+<hr />
+
+<h2 id="-have-ideas-we-want-to-hear">�📣 Have Ideas? We Want to Hear!</h2>
+
+<p><strong>Tell us what you need:</strong></p>
+
+<ul>
+  <li>Use the feedback form in Settings → About</li>
+  <li>Join community discussions</li>
+  <li>Participate in user testing</li>
+  <li>Attend our virtual town halls</li>
+  <li>Email us at <a href="mailto:empowrapp08162025@gmail.com">empowrapp08162025@gmail.com</a></li>
+</ul>
+
+<p><strong>What happens to your feedback:</strong></p>
+
+<ul>
+  <li>✅ We read every single message</li>
+  <li>✅ Common requests go on the roadmap</li>
+  <li>✅ We prioritize based on community needs</li>
+  <li>✅ We test with real users before launching</li>
+  <li>✅ We iterate based on your experience</li>
+</ul>
+
+<hr />
+
+<h2 id="️-why-some-features-take-time">⏱️ Why Some Features Take Time</h2>
+
+<p><strong>We’re thorough because you deserve the best:</strong></p>
+
+<ul>
+  <li><strong>Accessibility Review</strong> - Every feature tested with assistive tech</li>
+  <li><strong>Security Audit</strong> - Your privacy and safety are non-negotiable</li>
+  <li><strong>Cultural Consultation</strong> - Indigenous features require elder approval</li>
+  <li><strong>Community Testing</strong> - Real users test before we launch</li>
+  <li><strong>Iterative Improvement</strong> - We refine based on feedback</li>
+</ul>
+
+<hr />
+
+<h2 id="-roadmap-updates">📊 Roadmap Updates</h2>
+
+<p>This roadmap is updated regularly based on:</p>
+<ul>
+  <li>User feedback and requests</li>
+  <li>Technical discoveries</li>
+  <li>Community priorities</li>
+  <li>Accessibility audits</li>
+  <li>Security requirements</li>
+</ul>
+
+<p><strong>Last updated:</strong> December 12, 2025<br />
+<strong>Current Phase:</strong> Phase 1 Closed Internal Testing Starting Soon 🚀<br />
+<strong>Recent Milestone:</strong> First demo presentation successful! 🎉</p>
+
+<hr />
+
+<h2 id="-related-resources">🔗 Related Resources</h2>
+
+<ul>
+  <li><strong><a href="/user-guide/">User Guide</a></strong> - Learn how to use 3mpwrApp</li>
+  <li><strong><a href="/features/">Features</a></strong> - See what’s available now</li>
+  <li><strong><a href="/whats-new/">What’s New</a></strong> - Recent updates and changes</li>
+  <li><strong><a href="/accessibility/">Accessibility</a></strong> - Our commitment to inclusive design</li>
+  <li><strong><a href="/contact/">Contact</a></strong> - Get in touch with us</li>
+</ul>
+
+<h3 id="legal--privacy">Legal &amp; Privacy</h3>
+<ul>
+  <li><strong><a href="/privacy/">Privacy Policy</a></strong> - How we protect your data (100% user ownership)</li>
+  <li><strong><a href="/terms/">Terms of Service</a></strong> - Terms and comprehensive disclaimers</li>
+  <li><strong><a href="/data-ownership/">Data Ownership</a></strong> - Your data sovereignty guarantee</li>
+  <li><strong><a href="/community/guidelines/">Community Guidelines</a></strong> - Community standards</li>
+  <li><strong><a href="/legal/disclaimers/">Legal Disclaimers</a></strong> - Medical, legal, financial disclaimers</li>
+</ul>
+
+<hr />
+
+<p><strong>Building the future together</strong> 💚</p>
+
+<p><em>Your feedback shapes our roadmap. Let us know what matters most to you!</em></p>
+
+<link rel="stylesheet" href="/assets/css/roadmap.css" />
+
+<script src="/assets/js/roadmap.js" defer=""></script>
+<!-- Page Feedback Section - Consistent across all pages -->
+<div class="page-feedback" role="complementary">
+  <p><strong>💬 Was this page helpful?</strong></p>
+  <p>
+    <a href="/feedback?page=/roadmap/&amp;helpful=yes" class="feedback-btn feedback-yes" aria-label="Yes, this page was helpful">👍 Yes</a>
+    <a href="/feedback?page=/roadmap/&amp;helpful=no" class="feedback-btn feedback-no" aria-label="No, this page needs improvement">👎 No</a>
+    <a href="/feedback?page=/roadmap/" class="feedback-btn feedback-suggest" aria-label="Suggest improvements for this page">📝 Suggest improvements</a>
+  </p>
+  <p class="page-meta"><small>Last updated: October 29, 2025 | Next review: December 2025</small></p>
+</div>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <!-- Logo and Branding -->
+      <div class="footer-column footer-branding">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="3mpwrApp logo" width="64" height="64" loading="lazy" style="margin-bottom: 1rem;">
+        </picture>
+        <h3 style="margin-top: 0;">3mpwrApp</h3>
+        <p style="font-size: 0.9rem; line-height: 1.5;">Community-powered support for injured workers and persons with disabilities across Canada.</p>
+      </div>
+      
+      <!-- About Column -->
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="/about">Our Mission</a></li>
+          <li><a href="/user-guide">User Guide</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Started Column -->
+      <div class="footer-column">
+        <h3>Get Started</h3>
+        <ul>
+          <li><a href="/beta">Beta Testing</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/accessibility-walkthrough">Accessibility Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3>Legal & Privacy</h3>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/data-ownership">Data Ownership</a></li>
+          <li><a href="/community/guidelines">Community Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Column -->
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://paypal.me/3mpwrApp" target="_blank" rel="noopener noreferrer" style="color: #0070ba; font-weight: 600;">💙 Donate via PayPal</a></li>
+          <li><a href="/accessibility">Accessibility Statement</a></li>
+          <li><a href="/accessibility-settings">Accessibility Settings</a></li>
+          <li><a href="/site-map">Site Map</a></li>
+          <li><a href="/delete-data">Delete My Data</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect Column -->
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">Facebook</span></a>
+          <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" aria-label="3mpwr App Hub Facebook Group">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">FB Group</span></a>
+          <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
+<span class="social-label">X/Twitter</span></a>
+          <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Instagram</title>
+	<rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+</svg>
+<span class="social-label">Instagram</span></a>
+          <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="me noopener noreferrer" aria-label="Mastodon">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Mastodon</title>
+	<path d="M20.94 14c-.28 1.41-2.54 2.96-5.14 3.26-1.36.15-2.7.29-4.13.23-2.32-.1-4.15-.5-4.15-.5 0 .2.01.4.03.58.22 2.03 1.67 2.15 3.04 2.21 1.39.06 2.62-.34 2.62-.34l.06 1.3s-.97.52-2.69.62c-.95.05-2.13-.02-3.5-.37-2.98-.77-3.49-3.88-3.57-7.04-.02-.8-.01-1.55-.01-2.18 0-5.48 3.6-7.09 3.6-7.09C8.84 3.37 10.7 3 12.62 3h.04c1.92 0 3.78.37 5.45 1.09 0 0 3.6 1.61 3.6 7.09 0 0 .05 4.05-.77 6.82z" fill="currentColor"/>
+	<path d="M17.23 8.24v4.67h-1.86V8.5c0-.96-.4-1.45-1.2-1.45-.89 0-1.33.57-1.33 1.71v2.47H11V8.76c0-1.14-.44-1.71-1.33-1.71-.8 0-1.2.49-1.2 1.45v4.41H6.62V8.24c0-.96.25-1.72.74-2.28.51-.56 1.17-.85 2-.85.95 0 1.67.36 2.14 1.09l.46.77.46-.77c.47-.73 1.19-1.09 2.14-1.09.83 0 1.49.29 2 .85.49.56.74 1.32.74 2.28z" fill="#fff"/>
+</svg>
+<span class="social-label">Mastodon</span></a>
+          <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Bluesky</title>
+	<path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.415-.054-2.36.308-3.916 1.379-3.916 2.827 0 1.548 1.898 2.997 8.494 2.997s8.494-1.449 8.494-2.997c0-1.448-1.556-2.519-3.916-2.827.14.016.279.034.415.054 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.478 0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.622-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" fill="currentColor"/>
+</svg>
+<span class="social-label">Bluesky</span></a>
+        </div>
+        <ul style="margin-top: 1rem;">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/whats-new/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3mpwrApp — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
+      <p class="footer-mission">💚 Grassroots & Community-Funded • 100% Free Forever • Mission-Driven, Not Profit-Driven</p>
+    </div>
+  </footer>
+
+  <!-- Skip link and mobile menu functionality -->
+  <script src="/assets/js/skip-links.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
+
+  <!-- Utilities and controls -->
+  <script src="/assets/js/a11y.min.js" defer></script>
+  <script src="/assets/js/contrast.min.js" defer></script>
+  <script src="/assets/js/theme.min.js" defer></script>
+  <script src="/assets/js/back-to-top.min.js" defer></script>
+  <script src="/assets/js/settings.min.js" defer></script>
+  
+  <!-- Innovative Accessibility Features - Low Priority -->
+  <script src="/assets/js/accessibility-innovations.min.js" defer async></script>
+  
+  <!-- WCAG 2.2 AA+ Compliance Features -->
+  <script src="/assets/js/wcag-compliance.min.js" defer></script>
+  
+  <!-- WCAG 2.2 AAA Dynamic Enhancements - External links, touch targets, ARIA labels -->
+  <script src="/assets/js/wcag-aaa-dynamic.js" defer></script>
+
+  <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
+    <!-- Cookie Consent (GDPR Compliance) - Load early to show banner --><!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fef378cf7f9742c582f28f566e204a85"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

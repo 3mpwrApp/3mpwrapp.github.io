@@ -1,0 +1,187 @@
+/* Header/Nav compact layout overrides (CSP-safe external stylesheet)
+   Date: 2025-10-28
+   Purpose: Make the header slim, non-sticky, and keep the menu collapsed by default.
+*/
+
+/* Keep header compact and non-sticky on all pages */
+header { 
+  position: static !important; 
+  top: auto !important; 
+  padding: .45rem 0 !important; 
+}
+
+.header-bar { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: .75rem; 
+  padding: 0 .75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Collapse navigation by default on all viewports; open via Menu toggle */
+#primary-nav { 
+  min-height: 0 !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#primary-nav .nav-list { 
+  display: none !important; 
+}
+
+#primary-nav.is-open .nav-list { 
+  display: flex !important; 
+  flex-wrap: wrap !important; 
+  gap: .5rem !important;
+  padding: 0.5rem 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-toggle { 
+  display: inline-block !important; 
+}
+
+/* Keep contrast/dark-mode buttons and accessibility link always visible */
+.header-controls { 
+  display: flex !important; 
+  justify-content: center; 
+  align-items: center;
+  gap: .5rem; 
+  padding: .25rem .75rem; 
+}
+
+.accessibility-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: #4338ca;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.accessibility-link:hover,
+.accessibility-link:focus {
+  background: #3730a3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.4);
+  border-color: #ffffff;
+}
+
+[data-contrast="high"] .accessibility-link {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+}
+
+[data-theme="dark"] .accessibility-link {
+  background: #5b21b6;
+  border-color: #7c3aed;
+}
+
+[data-theme="dark"] .accessibility-link:hover {
+  background: #6d28d9;
+  border-color: #ffffff;
+}
+
+/* Mobile refinements: ensure controls wrap nicely */
+@media (max-width: 768px) {
+  .header-controls {
+    flex-wrap: wrap;
+    margin: .25rem 0;
+  }
+  
+  .header-bar {
+    padding: 0 var(--space-md, 0.5rem);
+  }
+}
+
+/* --- axe-core color-contrast fixes (WCAG 2.1 AA, 1.4.3) --- */
+/* Make skip links always high contrast and consistent */
+.skip-link {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+/* Ensure brand text contrasts against dark header */
+header .site-brand,
+header .site-brand span {
+  color: #ffffff !important;
+}
+
+/* Hide duplicate status banner logo when immediately following header (adjacent logos) */
+header + .status-banner .status-logo { display: none !important; }
+/* But if status banner is not directly under header (e.g., inserted deeper in content), show it */
+main .status-banner .status-logo { display: inline-block !important; }
+
+/* High contrast / dark mode resilience */
+[data-contrast="high"] header + .status-banner .status-logo,
+[data-theme="dark"] header + .status-banner .status-logo { display: none !important; }
+
+/* Accessibility toolbar toggle label on dark backgrounds */
+.toggle-text,
+.toolbar-label {
+  color: #ffffff !important;
+}
+
+/* Badges: use dark text on light blue backgrounds */
+.badge {
+  color: #0b2545 !important;
+}
+
+/* Night mode suggestion buttons: make background slightly darker for contrast */
+#acceptNightMode,
+#dismissNightSuggestion {
+  background-color: #4f46e5 !important; /* darker than #6366f1 */
+  color: #ffffff !important;
+}
+
+/* Feedback buttons: ensure white text on colored backgrounds */
+.feedback-yes,
+.feedback-no,
+.feedback-suggest {
+  color: #ffffff !important;
+}
+
+/* Ensure feedback backgrounds are dark enough for white text */
+.feedback-yes { background-color: #047857 !important; }
+.feedback-no { background-color: #dc2626 !important; }
+.feedback-suggest { background-color: #2563eb !important; }
+
+/* Community stats/info boxes on light theme: use dark text on very light backgrounds */
+body:not([data-theme=dark]) .community-stats-box,
+body:not([data-theme=dark]) .community-stats-box p,
+body:not([data-theme=dark]) .community-stats-box strong,
+body:not([data-theme=dark]) .community-stats-box a,
+body:not([data-theme=dark]) .info-box-light,
+body:not([data-theme=dark]) .info-box-light p,
+body:not([data-theme=dark]) .info-box-light strong,
+body:not([data-theme=dark]) .info-box-light a {
+  color: #0b2545 !important;
+}
+
+/* Feature filter count on medium blue: use dark text */
+.filter-btn .count,
+.active > .count {
+  color: #000000 !important;
+}
+
+/* Feature card links on medium blue tiles: white text for contrast */
+.card-link {
+  color: #ffffff !important;
+}

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://3mpwrapp.pages.dev/feed/whats_new.xml" rel="self" type="application/atom+xml" /><link href="https://3mpwrapp.pages.dev/" rel="alternate" type="text/html" /><updated>2026-03-29T20:39:18+00:00</updated><id>https://3mpwrapp.pages.dev/feed/whats_new.xml</id><title type="html">3mpwr App | Whats_new</title><subtitle>Practical tools and community for injured workers and persons with disabilities.</subtitle><author><name>3mpwr App</name></author><entry xml:lang="en"><title type="html">Week 13 Updates (2026)</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-03-23-week-13-updates/" rel="alternate" type="text/html" title="Week 13 Updates (2026)" /><published>2026-03-23T00:00:00+00:00</published><updated>2026-03-23T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/week-13-updates</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-03-23-week-13-updates/"><![CDATA[<h2 id="this-weeks-journey">This Week’s Journey</h2>
+
+<p>I’m building 3mpwrApp in public—showing you every step, every decision, every improvement as they happen. This is Phase 1 of beta testing, where you’re getting familiar with what I’m creating for our community.</p>
+
+<p>Here’s what I shipped this week and why it matters to you:</p>
+
+<h2 id="-new-features">✨ New Features</h2>
+
+<p><strong>100% accessibility compliance - ALL pages legible in Light/Dark/High Contrast</strong></p>
+
+<p>Why I built this: Because disability tech should work for EVERYONE. If you’re using a screen reader or need high contrast, this app should serve you as well as anyone else.</p>
+
+<p><strong>Accessibility-first color system - complete legibility in Light/Dark/High Contrast modes</strong></p>
+
+<p>Why I built this: Because disability tech should work for EVERYONE. If you’re using a screen reader or need high contrast, this app should serve you as well as anyone else.</p>
+
+<p><strong>Add Option 1 as official theme song winner on homepage</strong></p>
+
+<p>Why I built this: This makes 3mpwrApp more powerful for disability advocates, injured workers, and their families.</p>
+
+<p><strong>Update homepage - show Option 1 as community vote winner, replace ‘See the App in Action’ screenshots with latest app tour images</strong></p>
+
+<p>Why I built this: I’m building this to last. More tests mean fewer bugs, which means you can rely on this when it matters most.</p>
+
+<p><strong>Complete visual refresh with 172 new screenshots</strong></p>
+
+<p>Why I built this: This makes 3mpwrApp more powerful for disability advocates, injured workers, and their families.</p>
+
+<h2 id="-fixes">🐛 Fixes</h2>
+
+<p>I fixed these issues because they were getting in your way:</p>
+
+<ul>
+  <li>Remove game background images (Ascendant Continuum)</li>
+  <li>Update URLs from backup domain (github.io) to primary domain (pages.dev)</li>
+</ul>
+
+<h2 id="-documentation">📚 Documentation</h2>
+
+<p>Making 3mpwrApp easier to understand:</p>
+
+<ul>
+  <li>Complete accessibility mission report - 100% compliance achieved</li>
+</ul>
+
+<h2 id="-behind-the-scenes">🤖 Behind the Scenes</h2>
+
+<p>These automation improvements make development faster so I can ship features to you sooner:</p>
+
+<ul>
+  <li>Trigger Cloudflare Pages rebuild</li>
+</ul>
+
+<hr />
+
+<h2 id="whats-next">What’s Next</h2>
+
+<p>I’m listening. If you’re testing 3mpwrApp and something doesn’t work, tell me. If you have ideas, share them. This app exists because I fell through the cracks—I’m building it so you don’t have to.</p>
+
+<p>📬 <a href="/newsletter/">Get updates in your inbox</a></p>
+
+<p>🔍 <a href="/whats-new/">See all weekly updates</a></p>
+
+<p>💬 <a href="https://3mpwrapp.pages.dev/beta/">Join the beta testing community</a></p>]]></content><author><name>3mpwr App</name></author><summary type="html"><![CDATA[This Week’s Journey]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Week 12 Updates (2026)</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-03-16-week-12-updates/" rel="alternate" type="text/html" title="Week 12 Updates (2026)" /><published>2026-03-16T00:00:00+00:00</published><updated>2026-03-16T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/week-12-updates</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-03-16-week-12-updates/"><![CDATA[<h2 id="this-weeks-journey">This Week’s Journey</h2>
+
+<p>I’m building 3mpwrApp in public—showing you every step, every decision, every improvement as they happen. This is Phase 1 of beta testing, where you’re getting familiar with what I’m creating for our community.</p>
+
+<p>Here’s what I shipped this week and why it matters to you:</p>
+
+<h2 id="-new-features">✨ New Features</h2>
+
+<p><strong>Merge pull request #29 from S0vryn9-C011ect1ve/fix/feature-rotation-exhausted</strong></p>
+
+<p>Why I built this: When something breaks, it breaks your trust. I fix things fast because reliability matters.</p>
+
+<p><strong>Reset feature rotation when pool exhausted + clear stale used-features</strong></p>
+
+<p>Why I built this: When something breaks, it breaks your trust. I fix things fast because reliability matters.</p>
+
+<p><strong>Add Discord #app-announcements to daily feature posts</strong></p>
+
+<p>Why I built this: This makes 3mpwrApp more powerful for disability advocates, injured workers, and their families.</p>
+
+<h2 id="-fixes">🐛 Fixes</h2>
+
+<p>I fixed these issues because they were getting in your way:</p>
+
+<ul>
+  <li>Mastodon smart post builder + production article date + social JSON for 721-tests spotlight</li>
+</ul>
+
+<hr />
+
+<h2 id="whats-next">What’s Next</h2>
+
+<p>I’m listening. If you’re testing 3mpwrApp and something doesn’t work, tell me. If you have ideas, share them. This app exists because I fell through the cracks—I’m building it so you don’t have to.</p>
+
+<p>📬 <a href="/newsletter/">Get updates in your inbox</a></p>
+
+<p>🔍 <a href="/whats-new/">See all weekly updates</a></p>
+
+<p>💬 <a href="https://3mpwrapp.pages.dev/beta/">Join the beta testing community</a></p>]]></content><author><name>3mpwr App</name></author><summary type="html"><![CDATA[This Week’s Journey]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Documentation Sync Complete (EN + FR + Legal)</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-02-24-documentation-sync-en-fr-legal/" rel="alternate" type="text/html" title="Documentation Sync Complete (EN + FR + Legal)" /><published>2026-02-24T00:00:00+00:00</published><updated>2026-02-24T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/documentation-sync-en-fr-legal</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-02-24-documentation-sync-en-fr-legal/"><![CDATA[<p>We completed a full documentation synchronization across app and website, including English and French user-facing pages, legal/policy consistency, beta guides, and downloadable user guides.</p>
+
+<h2 id="-what-was-updated">✅ What Was Updated</h2>
+
+<h3 id="core-user-docs-en">Core user docs (English)</h3>
+<ul>
+  <li><a href="/user-guide/">User Guide</a></li>
+  <li><a href="/features/">Features</a></li>
+  <li><a href="/faq/">FAQ</a></li>
+  <li><a href="/whats-new/">What’s New index</a></li>
+  <li><a href="/beta-guide/">Beta Guide</a></li>
+  <li><a href="/beta/">Beta redirect page</a></li>
+</ul>
+
+<h3 id="legal-policy-en">Legal &amp; policy (English)</h3>
+<ul>
+  <li><a href="/terms/">Terms of Service</a></li>
+  <li><a href="/privacy/">Privacy Policy</a></li>
+  <li><a href="/community/guidelines/">Community Guidelines</a></li>
+</ul>
+
+<h3 id="core-user-docs-fr">Core user docs (French)</h3>
+<ul>
+  <li><a href="/fr/user-guide/">Guide d’utilisation</a></li>
+  <li><a href="/fr/features/">Fonctionnalités</a></li>
+  <li><a href="/fr/faq/">FAQ</a></li>
+  <li><a href="/fr/whats-new/">Quoi de neuf</a></li>
+  <li><a href="/fr/beta/">Programme bêta</a></li>
+</ul>
+
+<h3 id="legal-policy-fr">Legal &amp; policy (French)</h3>
+<ul>
+  <li><a href="/fr/terms/">Conditions d’utilisation</a></li>
+  <li><a href="/fr/privacy/">Politique de confidentialité</a></li>
+  <li><a href="/fr/cookies/">Politique relative aux témoins</a></li>
+</ul>
+
+<h3 id="additional-fr-pages">Additional French public pages aligned</h3>
+<ul>
+  <li><a href="/fr/">Accueil</a></li>
+  <li><a href="/fr/about/">À propos</a></li>
+  <li><a href="/fr/contact/">Contact</a></li>
+  <li><a href="/fr/accessibility-settings/">Paramètres d’accessibilité</a></li>
+  <li><a href="/fr/search/">Recherche</a></li>
+  <li><a href="/fr/newsletter/">Infolettre</a></li>
+  <li><a href="/fr/events/">Événements</a></li>
+  <li><a href="/fr/connect/">Connectez avec nous</a></li>
+  <li><a href="/fr/blog/">Blog</a></li>
+  <li><a href="/fr/campaigns/">Campagnes et événements</a></li>
+  <li><a href="/fr/community-spotlight/">Projecteur communautaire</a></li>
+</ul>
+
+<h3 id="downloadable-docs">Downloadable docs</h3>
+<ul>
+  <li><a href="/assets/downloads/3mpwrapp-user-guide-full.md">Complete User Guide (Download)</a></li>
+</ul>
+
+<h2 id="-organization-update">📌 Organization Update</h2>
+
+<ul>
+  <li>What’s New remains the canonical changelog page for public documentation updates.</li>
+  <li>This entry acts as the Feb 24, 2026 master rollout index so all linked updates are discoverable from one place.</li>
+</ul>
+
+<hr />
+
+<p>📬 Want updates in your inbox? <a href="/newsletter/">Subscribe to our newsletter</a></p>
+
+<p>🔍 See all updates: <a href="/whats-new/">What’s New</a></p>]]></content><author><name>3mpwr App</name></author><summary type="html"><![CDATA[We completed a full documentation synchronization across app and website, including English and French user-facing pages, legal/policy consistency, beta guides, and downloadable user guides.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Week 9 Updates (2026)</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-02-23-week-9-updates/" rel="alternate" type="text/html" title="Week 9 Updates (2026)" /><published>2026-02-23T00:00:00+00:00</published><updated>2026-02-23T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/week-9-updates</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-02-23-week-9-updates/"><![CDATA[<hr />
+
+<p>📬 Want updates in your inbox? <a href="/newsletter/">Subscribe to our newsletter</a></p>
+
+<p>🔍 See all updates: <a href="/whats-new/">What’s New</a></p>]]></content><author><name>3mpwr App</name></author><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Week 8 Updates (2026)</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-02-16-week-8-updates/" rel="alternate" type="text/html" title="Week 8 Updates (2026)" /><published>2026-02-16T00:00:00+00:00</published><updated>2026-02-16T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/week-8-updates</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-02-16-week-8-updates/"><![CDATA[<h2 id="-bug-fixes">🐛 Bug Fixes</h2>
+
+<ul>
+  <li>Add native app deep-link redirect to gdrive OAuth callback</li>
+</ul>
+
+<hr />
+
+<p>📬 Want updates in your inbox? <a href="/newsletter/">Subscribe to our newsletter</a></p>
+
+<p>🔍 See all updates: <a href="/whats-new/">What’s New</a></p>]]></content><author><name>3mpwr App</name></author><summary type="html"><![CDATA[🐛 Bug Fixes]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Week 7 Updates (2026)</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-02-09-week-7-updates/" rel="alternate" type="text/html" title="Week 7 Updates (2026)" /><published>2026-02-09T00:00:00+00:00</published><updated>2026-02-09T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/week-7-updates</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-02-09-week-7-updates/"><![CDATA[<h2 id="-new-features">✨ New Features</h2>
+
+<ul>
+  <li>Implement universal text legibility across all viewing modes</li>
+  <li>Add founder journey story - Six Months, Endless Rebuilds, Zero Half Measures</li>
+  <li>WCAG 2.2 AAA Compliance - Complete Implementation</li>
+  <li>Update Features, User Guide, Beta Guide, and FAQ with Feb 2026 personalization</li>
+  <li>Update homepage and add Feb 2026 personalization announcement</li>
+</ul>
+
+<h2 id="-bug-fixes">🐛 Bug Fixes</h2>
+
+<ul>
+  <li>Clean up about page structure and organization</li>
+  <li>Resolve all npm security vulnerabilities</li>
+</ul>
+
+<hr />
+
+<p>📬 Want updates in your inbox? <a href="/newsletter/">Subscribe to our newsletter</a></p>
+
+<p>🔍 See all updates: <a href="/whats-new/">What’s New</a></p>]]></content><author><name>3mpwr App</name></author><summary type="html"><![CDATA[✨ New Features]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Comprehensive Personalization System Live!</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-02-02-personalization-complete/" rel="alternate" type="text/html" title="Comprehensive Personalization System Live!" /><published>2026-02-02T00:00:00+00:00</published><updated>2026-02-02T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/personalization-complete</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-02-02-personalization-complete/"><![CDATA[<h2 id="-comprehensive-personalization-system---now-live">🎉 Comprehensive Personalization System - Now Live!</h2>
+
+<p>The 3mpwr App now learns your needs and tailors your entire experience. Set up your profile once, and watch the app customize itself to you.</p>
+
+<h3 id="whats-personalized">What’s Personalized?</h3>
+
+<h4 id="home-screen">Home Screen</h4>
+<ul>
+  <li><strong>Role-based greetings</strong> - “Good morning! Welcome back” for PWDs, “Thanks for supporting” for allies</li>
+  <li><strong>Top 3 recommendations</strong> - Features you need most, shown first</li>
+  <li><strong>Profile completion prompt</strong> - Direct link to finish setup if incomplete</li>
+</ul>
+
+<h4 id="wellness-hub">Wellness Hub</h4>
+<ul>
+  <li><strong>⭐ Recommended For You</strong> - Your selected wellness tools appear first</li>
+  <li><strong>Smart highlighting</strong> - Preferred tools shown with star icons and special borders</li>
+  <li><strong>Contextual help</strong> - Understand why each tool is recommended</li>
+</ul>
+
+<h4 id="advocacy-hub">Advocacy Hub</h4>
+<ul>
+  <li><strong>⭐ Your Advocacy Needs</strong> - Top 5 needs from your profile</li>
+  <li><strong>Prioritized content</strong> - Legal, benefits, housing resources matched to you</li>
+  <li><strong>Personalized guidance</strong> - Clear explanations of why content is shown</li>
+</ul>
+
+<h3 id="how-it-works">How It Works</h3>
+
+<ol>
+  <li><strong>Open Profile Editor</strong> (Settings → Profile)</li>
+  <li><strong>Select your role</strong> - PWD, Supporter, Ally, or Family</li>
+  <li><strong>Pick your details</strong>:
+    <ul>
+      <li>Disability categories</li>
+      <li>Symptoms to track</li>
+      <li>Wellness tools you want</li>
+      <li>Advocacy needs</li>
+    </ul>
+  </li>
+  <li><strong>Click SAVE</strong> - That’s it!</li>
+</ol>
+
+<p>Your selections persist across app restarts and sync to your cloud storage (if connected).</p>
+
+<h3 id="privacy-first">Privacy First</h3>
+
+<ul>
+  <li>✅ All data stays on your device by default</li>
+  <li>✅ Optional cloud sync (Google Drive or Firebase)</li>
+  <li>✅ Opt-in for ML pattern learning</li>
+  <li>✅ You control all data</li>
+  <li>✅ GDPR/PIPEDA compliant</li>
+</ul>
+
+<h3 id="technical-details">Technical Details</h3>
+
+<ul>
+  <li><strong>12 personalization fields</strong> saved and synced</li>
+  <li><strong>New <code class="language-plaintext highlighter-rouge">usePersonalization()</code> hook</strong> for developers</li>
+  <li><strong>Zero performance impact</strong> - Fast and efficient</li>
+  <li><strong>Full WCAG AAA accessibility</strong></li>
+</ul>
+
+<p><a href="/user-guide/#personalization-setup">Learn more about personalization →</a></p>
+
+<hr />
+
+<h2 id="also-in-this-update">Also in This Update</h2>
+
+<h3 id="beta-ml-infrastructure-jan-28">Beta ML Infrastructure (Jan 28)</h3>
+<ul>
+  <li>Privacy-preserving pattern tracking (opt-in only)</li>
+  <li>Foundation for future AI insights</li>
+  <li>Anonymized training data</li>
+  <li>User-owned data in Firestore</li>
+</ul>
+
+<h3 id="evidence-locker-migration-jan-28">Evidence Locker Migration (Jan 28)</h3>
+<ul>
+  <li>41 redirect wrappers ensure backward compatibility</li>
+  <li>All legacy paths work seamlessly</li>
+  <li>Zero broken links</li>
+</ul>
+
+<h3 id="oauth-security-fixes-jan-24-31">OAuth Security Fixes (Jan 24-31)</h3>
+<ul>
+  <li>Fixed Error 400: redirect_uri_mismatch</li>
+  <li>Reliable Google Drive connection</li>
+  <li>Google Sign-In no longer crashes</li>
+  <li>“Clear OAuth Cache” button in Settings</li>
+</ul>
+
+<h3 id="powertools-complete-jan-15">PowerTools Complete (Jan 15)</h3>
+<ul>
+  <li><strong>Wellness Hub</strong> - 41 tools in 6 categories</li>
+  <li><strong>Document Management</strong> - Secure file storage</li>
+  <li><strong>Wellness Check</strong> - Safety net during crises</li>
+  <li><strong>Performance gains</strong> - 67% faster, 42% smaller</li>
+</ul>
+
+<p><a href="https://github.com/3mpwr-App/empowrapp-main/blob/main/docs/JAN_FEB_2026_COMPREHENSIVE_UPDATE.md">Read full January-February update →</a></p>
+
+<hr />
+
+<h2 id="impact">Impact</h2>
+
+<p><strong>For Persons with Disabilities:</strong></p>
+<ul>
+  <li>Wellness tools matched to your specific conditions</li>
+  <li>Advocacy resources for your exact needs</li>
+  <li>Symptom tracking pre-populated</li>
+</ul>
+
+<p><strong>For Supporters &amp; Allies:</strong></p>
+<ul>
+  <li>Role-specific features highlighted</li>
+  <li>Caregiver and advocacy tools prioritized</li>
+</ul>
+
+<p><strong>For Everyone:</strong></p>
+<ul>
+  <li>Faster app (67% improvement)</li>
+  <li>Smaller download (42% reduction)</li>
+  <li>Better organized (5 PowerTools hubs)</li>
+</ul>
+
+<hr />
+
+<p><strong>Version</strong>: 1.1.0<br />
+<strong>Released</strong>: February 2, 2026<br />
+<strong>Status</strong>: ✅ Live in Preview Branch</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="/app-waitlist/">Download 3mpwr App</a></td>
+      <td><a href="https://github.com/3mpwr-App/empowrapp-main">View on GitHub</a></td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>3mpwr App</name></author><category term="major-feature" /><category term="personalization" /><category term="ml" /><category term="user-experience" /><category term="profiles" /><summary type="html"><![CDATA[🎉 Comprehensive Personalization System - Now Live!]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Week 6 Updates (2026)</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-02-02-week-6-updates/" rel="alternate" type="text/html" title="Week 6 Updates (2026)" /><published>2026-02-02T00:00:00+00:00</published><updated>2026-02-02T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/week-6-updates</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-02-02-week-6-updates/"><![CDATA[<h2 id="-new-features">✨ New Features</h2>
+
+<ul>
+  <li>Add D1 database schema for submissions</li>
+  <li>Add submissions API endpoint for events and campaigns</li>
+  <li>Add Winter 2026 issue highlight to Disability Bulletin</li>
+</ul>
+
+<h2 id="-documentation">📚 Documentation</h2>
+
+<ul>
+  <li>Add KV and D1 setup guide for submissions API</li>
+</ul>
+
+<h2 id="-behind-the-scenes">🤖 Behind the Scenes</h2>
+
+<ul>
+  <li>Trigger deployment with KV and D1 bindings</li>
+</ul>
+
+<hr />
+
+<p>📬 Want updates in your inbox? <a href="/newsletter/">Subscribe to our newsletter</a></p>
+
+<p>🔍 See all updates: <a href="/whats-new/">What’s New</a></p>]]></content><author><name>3mpwr App</name></author><summary type="html"><![CDATA[✨ New Features]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Week 5 Updates (2026)</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-01-26-week-5-updates/" rel="alternate" type="text/html" title="Week 5 Updates (2026)" /><published>2026-01-26T00:00:00+00:00</published><updated>2026-01-26T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/week-5-updates</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-01-26-week-5-updates/"><![CDATA[<h2 id="-new-features">✨ New Features</h2>
+
+<ul>
+  <li>Remove app feature highlights from curation social posts</li>
+  <li>Add PayPal donation link to footer (paypal.me/3mpwrApp)</li>
+  <li>Add Discord, Facebook, and Substack auto-posting support</li>
+  <li>Daily feature article - 2026-01-23</li>
+  <li>Daily feature article - 2026-01-22</li>
+  <li>Expand feature spotlights to cover app/website/features, link weekly recaps to What’s New</li>
+  <li>Add comprehensive Agent Feedback System for content analysis</li>
+  <li>Daily feature article - 2026-01-21</li>
+  <li>Daily feature article - 2026-01-20</li>
+  <li>Daily feature article - 2026-01-19</li>
+</ul>
+
+<h2 id="-bug-fixes">🐛 Bug Fixes</h2>
+
+<ul>
+  <li>Always include Disability Bulletin at top of curation posts (linktr.ee/thedisabilitybulletin)</li>
+  <li>Discord webhook URL parsing and Facebook JSON payload</li>
+  <li>Check ALL posts from last 30 days for duplicates, not just last 7 files</li>
+  <li>Enable X (Twitter) posting with OAuth credentials from X_CLIENT_ID/SECRET</li>
+  <li>Rename provincial_specific to provincial to match content curator-core.js</li>
+  <li>Raise minimum score to 3.5 to filter out general news - only disability-focused content</li>
+  <li>CRITICAL FIX: Apply duplicate detection and DB priority to PRODUCTION curation engine</li>
+</ul>
+
+<h2 id="-documentation">📚 Documentation</h2>
+
+<ul>
+  <li>Add agent feedback integration architecture map</li>
+  <li>Add agent feedback deployment summary</li>
+</ul>
+
+<hr />
+
+<p>📬 Want updates in your inbox? <a href="/newsletter/">Subscribe to our newsletter</a></p>
+
+<p>🔍 See all updates: <a href="/whats-new/">What’s New</a></p>]]></content><author><name>3mpwr App</name></author><summary type="html"><![CDATA[✨ New Features]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Week 4 Updates (2026)</title><link href="https://3mpwrapp.pages.dev/whats-new/2026-01-19-week-4-updates/" rel="alternate" type="text/html" title="Week 4 Updates (2026)" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>https://3mpwrapp.pages.dev/whats-new/week-4-updates</id><content type="html" xml:base="https://3mpwrapp.pages.dev/whats-new/2026-01-19-week-4-updates/"><![CDATA[<h2 id="-new-features">✨ New Features</h2>
+
+<ul>
+  <li>Agent feature update Jan 2026: integrated user guide v4.4, 60+ features, 8-week spotlight rotation, segment personalization</li>
+  <li>Make Disability Bulletin the top highlight and focus curation on disability/vulnerable communities</li>
+  <li>Daily feature article - 2026-01-18</li>
+  <li>Replace Giscus comments with simple poll form</li>
+  <li>Add theme song community vote section to home page</li>
+  <li>Daily feature article - 2026-01-17</li>
+  <li>Daily feature article - 2026-01-16</li>
+  <li>Move complexity toggle button to header for better access</li>
+  <li>Replace 15-slide carousel with app tour showing 6 real screenshots</li>
+  <li>Add groundbreaking accessibility features - Spoon Counter, Emergency Simplify, Break Reminders, fix z-index</li>
+  <li>Add comprehensive accessibility toolbar with text size, spacing, dyslexia font, reading mask, and color filters</li>
+  <li>Reduce logo to 50x50px and add Accessibility link to header</li>
+  <li>Showcase actual flywheel features - Evidence, Community, Knowledge + Appeal, Financial, Wellness</li>
+  <li>Showcase revolutionary never-before-seen tools - the real flywheels</li>
+  <li>Add 15-slide feature carousel to homepage</li>
+  <li>Status banner z-index 10000 - now visible above accessibility features</li>
+  <li>Complete homepage redesign - clean, organized, professional</li>
+  <li>Implement complete WCAG 2.2 AAA compliance system</li>
+  <li>Implement Complexity Mode, Social Share, and Contact Form AAA enhancements</li>
+  <li>Update Features page organization and FAQ with Week 3 completion status</li>
+  <li>Add complete cross-linking between Features, User Guide, and Beta Testing Guide</li>
+  <li>Cleanup: Remove all duplicate content from features page, keep complexity modes</li>
+  <li>Completely restructure features page for clarity and professionalism</li>
+  <li>Fix page layouts, update FAQ, simplify features page organization</li>
+  <li>Add Android App Links assetlinks.json for deep link verification</li>
+  <li>Daily feature article - 2026-01-15</li>
+  <li>Daily feature article - 2026-01-14</li>
+  <li>Add The Injured Worker’s Legal Side podcast by Richard &amp; Paul to home and community pages</li>
+  <li>Home page now dynamically loads 3 completed campaigns and auto-shows 1 week upcoming events</li>
+  <li>Display completed campaign status and ‘Follow for Updates’ button on website</li>
+  <li>Daily feature article - 2026-01-13</li>
+  <li>Daily feature article - 2026-01-12</li>
+</ul>
+
+<h2 id="-improvements">🚀 Improvements</h2>
+
+<ul>
+  <li>Implement Complexity Mode &amp; AAA compliance enhancements</li>
+  <li>Fix GDrive OAuth: Add COOP headers, fix redirects, improve callback page</li>
+</ul>
+
+<h2 id="-bug-fixes">🐛 Bug Fixes</h2>
+
+<ul>
+  <li>Add duplicate article detection to curation system</li>
+  <li>Update Google Form ID for theme song poll</li>
+  <li>Update Giscus category to Announcements for theme song vote</li>
+  <li>Add complexity toggle to header (missing from previous commit)</li>
+  <li>App tour section theme support for dark mode and high contrast</li>
+  <li>CSS syntax errors - add missing brace and remove empty ruleset</li>
+  <li>Remove purple background behind green status banner</li>
+  <li>Resolve screenshot 404 errors and improve text readability</li>
+  <li>Remove debug console.log from carousel</li>
+  <li>Set carousel slide widths via JavaScript using container dimensions</li>
+  <li>Set explicit carousel track width (1500%) and slide width (calc 100/15)</li>
+  <li>Carousel layout - padding on slide instead of margin on card</li>
+  <li>Debug: Add console logging and resize handler to carousel</li>
+  <li>Carousel movement using pixel-based transform with container width calculation</li>
+  <li>Carousel track width set to 1500% (15 slides) with proper slide calculations</li>
+  <li>Replace duplicate badge messaging with unique values (Privacy, Community, No Corporate)</li>
+  <li>Distinct hero title and enforce carousel slide 100% width with flex properties</li>
+  <li>Logo 80px, mission-aligned title, remove duplicate stat, fix carousel width</li>
+  <li>Merge impact into hero, force logo 50x50px, fix carousel slide width</li>
+  <li>Carousel slide width - move padding from slide to card, add flex-shrink</li>
+  <li>Carousel navigation - use percentage-based transform instead of pixel positioning</li>
+  <li>Add carousel initialization guards and resize handler to fix display issues</li>
+  <li>Status banner no longer overlaps content - use static positioning</li>
+  <li>Logo size 80px, status banner z-index, global CSS variables for all modes</li>
+  <li>Full color mode support - regular, dark, high contrast</li>
+  <li>Remove placeholder campaigns - not real data</li>
+  <li>Add package-lock.json for Cloudflare npm ci</li>
+  <li>Remove missing accessibility-toolbar.html include</li>
+  <li>Update Campaigns description to match user guide</li>
+  <li>Include .well-known folder in Jekyll build for assetlinks.json</li>
+  <li>Use query string instead of hash for Android deep links in intent:// URL</li>
+  <li>Add native app deep link redirect to static gdrive-callback.html</li>
+  <li>Use intent:// and multiple redirect methods for Android deep link</li>
+  <li>Correct Paul’s last name to Taylor in podcast sections</li>
+  <li>Show support category events (Teddy, etc) on home page upcoming events</li>
+  <li>Restore polling mechanism in Google Drive OAuth callback for implicit flow</li>
+  <li>Ensure _routes.json is deployed to exclude gdrive-callback from cloudflare functions</li>
+</ul>
+
+<h2 id="-documentation">📚 Documentation</h2>
+
+<ul>
+  <li>Add comprehensive session summary for Jan 15, 2026 work</li>
+  <li>Update website with January 15 Week 3 PowerTools content</li>
+</ul>
+
+<h2 id="-behind-the-scenes">🤖 Behind the Scenes</h2>
+
+<ul>
+  <li>Remove carousel CSS (250+ lines) and add app tour styles</li>
+</ul>
+
+<hr />
+
+<p>📬 Want updates in your inbox? <a href="/newsletter/">Subscribe to our newsletter</a></p>
+
+<p>🔍 See all updates: <a href="/whats-new/">What’s New</a></p>]]></content><author><name>3mpwr App</name></author><summary type="html"><![CDATA[✨ New Features]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" /><media:content medium="image" url="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

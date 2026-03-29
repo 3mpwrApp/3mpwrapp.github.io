@@ -1,0 +1,770 @@
+/* CLS (Cumulative Layout Shift) Fix
+   Date: 2025-10-28
+   Purpose: Prevent layout shifts in header and header-controls
+   Issue: Cloudflare reports CLS scores of 0.351-0.588 (poor)
+   Target: .header-controls element shifting position
+*/
+
+/* ===== CRITICAL: PREVENT HEADER LAYOUT SHIFTS ===== */
+
+/* Reserve explicit dimensions for header-controls to prevent CLS */
+.header-controls {
+  /* Fixed height to prevent vertical shifts */
+  min-height: 50px !important;
+  height: 50px !important;
+  
+  /* Prevent margin collapse that causes shifts */
+  margin: 0.5rem 0 0.25rem !important;
+  padding: 0.25rem 0.75rem !important;
+  
+  /* Use flexbox with explicit alignment to prevent reflow */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  
+  /* Prevent content from causing height changes */
+  overflow: visible !important;
+  
+  /* Use transform for positioning instead of top/bottom changes */
+  will-change: auto !important;
+  contain: layout !important; /* CSS containment to prevent reflow */
+}
+
+/* Ensure buttons inside header-controls have fixed dimensions */
+.header-controls button,
+.header-controls .contrast-toggle,
+.header-controls .theme-toggle {
+  /* WCAG 2.2 minimum touch target: 44x44 */
+  min-width: 44px !important;
+  min-height: 44px !important;
+  
+  /* Prevent button content from causing size changes */
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  
+  /* Padding that doesn't cause reflow */
+  padding: 0.5rem 1rem !important;
+  
+  /* Prevent text wrapping that causes height changes */
+  white-space: nowrap !important;
+  
+  /* Use transform for hover effects instead of layout changes */
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+/* Prevent hover/focus from causing layout shifts */
+.header-controls button:hover,
+.header-controls button:focus {
+  transform: scale(1.02) !important;
+  /* Do NOT change padding, margin, or border-width on hover */
+}
+
+/* ===== FIX HEADER STRUCTURE TO PREVENT SHIFTS ===== */
+
+/* Ensure header has stable dimensions */
+header {
+  /* Use padding instead of margin to prevent collapse */
+  padding: 0.45rem 0 !important;
+  
+  /* Prevent children from causing height changes */
+  contain: layout style !important;
+}
+
+.header-bar {
+  /* Fixed height to prevent vertical shifts */
+  min-height: 48px !important;
+  
+  /* Prevent margin collapse */
+  padding: 0 0.75rem !important;
+  margin: 0 !important;
+}
+
+/* ===== FIX PAIN-FLARE-MODE SHIFTS ===== */
+
+/* Instead of display:none (which causes reflow), use visibility:hidden + height:0 */
+body.pain-flare-mode .accessibility-toolbar {
+  /* Preserve layout space while hiding */
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  
+  /* Prevent from taking up space */
+  position: absolute !important;
+  pointer-events: none !important;
+}
+
+/* Keep header-controls visible in pain-flare-mode */
+body.pain-flare-mode .header-controls {
+  /* Override any display:none rules */
+  display: flex !important;
+  visibility: visible !important;
+}
+
+/* ===== PREVENT NAVIGATION TOGGLE FROM CAUSING SHIFTS ===== */
+
+#primary-nav {
+  /* Reserve space even when collapsed */
+  min-height: 0 !important;
+  
+  /* Prevent from affecting header layout */
+  contain: layout !important;
+}
+
+#primary-nav .nav-list {
+  /* When hidden, don't affect layout */
+  transition: none !important; /* Remove transitions that can cause shifts */
+}
+
+/* When nav opens, use absolute positioning to avoid pushing content */
+#primary-nav.is-open {
+  /* Position relative to header, not affecting flow */
+  position: relative !important;
+}
+
+#primary-nav.is-open .nav-list {
+  /* Prevent from pushing content below */
+  display: flex !important;
+}
+
+/* ===== PREVENT FONT LOADING SHIFTS ===== */
+
+/* Reserve space for web fonts before they load */
+body {
+  /* Fallback font with similar metrics */
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif !important;
+  
+  /* Use font-display: swap to prevent FOIT (Flash of Invisible Text) */
+  /* This is typically defined in @font-face rules in the main stylesheet */
+}
+
+/* Force immediate font rendering to prevent layout shifts */
+* {
+  /* Use system fonts initially */
+  font-synthesis: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  
+  /* Prevent text size adjust that can cause shifts */
+  text-size-adjust: 100% !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+/* Ensure all text has consistent rendering */
+p, h1, h2, h3, h4, h5, h6, span, div, li, a {
+  /* Prevent subpixel rendering differences */
+  transform: translateZ(0) !important;
+  
+  /* Force consistent font rendering */
+  font-feature-settings: normal !important;
+  font-variant-ligatures: none !important;
+  
+  /* Prevent text from causing layout shifts */
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  hyphens: none !important;
+}
+
+/* ===== PREVENT IMAGE LOADING SHIFTS ===== */
+
+/* Ensure all images have explicit dimensions */
+img {
+  /* Prevent layout shift during image load */
+  max-width: 100% !important;
+  height: auto !important;
+  
+  /* Reserve space with aspect-ratio if available */
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* For images without dimensions, use min-height */
+img:not([width]):not([height]) {
+  min-height: 150px !important;
+  background: var(--bg-secondary, #f0f0f0) !important;
+}
+
+/* ===== MOBILE-SPECIFIC CLS FIXES ===== */
+
+@media (max-width: 768px) {
+  .header-controls {
+    /* Prevent wrapping that causes shifts */
+    flex-wrap: nowrap !important;
+    
+    /* Keep consistent height on mobile */
+    min-height: 50px !important;
+    height: 50px !important;
+    
+    /* Reduce gap to prevent overflow */
+    gap: 0.35rem !important;
+    
+    /* Center alignment */
+    justify-content: center !important;
+  }
+  
+  .header-controls button {
+    /* Smaller padding on mobile but consistent */
+    padding: 0.35rem 0.75rem !important;
+    
+    /* Prevent shrinking */
+    flex-shrink: 0 !important;
+    
+    /* Consistent font size */
+    font-size: 0.875rem !important;
+  }
+  
+  .header-bar {
+    /* Fixed height on mobile */
+    min-height: 56px !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+
+/* ===== PREVENT DYNAMIC CONTENT SHIFTS ===== */
+
+/* Reserve space for elements that load dynamically */
+.accessibility-toolbar {
+  /* Fixed height to prevent shifts when it appears */
+  min-height: 48px !important;
+  
+  /* Prevent from affecting layout */
+  contain: layout !important;
+  
+  /* When collapsed, don't take up space */
+  transition: none !important; /* Remove transitions that cause shifts */
+}
+
+.accessibility-toolbar.collapsed {
+  /* Reserve minimal space when collapsed */
+  min-height: 48px !important;
+  height: 48px !important;
+  overflow: hidden !important;
+}
+
+.accessibility-toolbar:not(.collapsed) {
+  /* When expanded, use absolute positioning to avoid pushing content */
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+/* ===== TOOLBAR TOGGLE BUTTON FIX (CLS Issue #3) ===== */
+
+/* Fix toolbar toggle button to prevent massive horizontal shifts */
+.toolbar-toggle,
+#toolbarToggle {
+  /* Fixed dimensions */
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 44px !important;
+  
+  /* Prevent flexbox from causing shifts */
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  
+  /* Consistent padding */
+  padding: 1rem 1.5rem !important;
+  
+  /* Prevent from affecting layout */
+  contain: layout !important;
+  
+  /* No transitions that cause shifts */
+  transition: background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+/* Toolbar badge fix - prevent horizontal shifts */
+.toolbar-toggle .badge,
+#toolbarToggle .badge,
+#toolbarToggle > span.badge {
+  /* Fixed dimensions to prevent width changes (91px → 83px) */
+  min-width: 90px !important;
+  width: auto !important;
+  max-width: 100px !important;
+  
+  /* Fixed height */
+  height: 24px !important;
+  min-height: 24px !important;
+  
+  /* Consistent padding */
+  padding: 0.25rem 0.5rem !important;
+  
+  /* Prevent from growing/shrinking */
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  
+  /* Center text */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Prevent text wrapping */
+  white-space: nowrap !important;
+  
+  /* Consistent font */
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  
+  /* Prevent layout shifts */
+  contain: layout !important;
+  
+  /* Position explicitly */
+  position: relative !important;
+  
+  /* No margin that could cause shifts */
+  margin: 0 !important;
+}
+
+/* Toggle text - prevent from causing shifts */
+.toolbar-toggle .toggle-text,
+#toolbarToggle .toggle-text {
+  /* Allow to flex but don't shrink */
+  flex: 1 1 auto !important;
+  flex-shrink: 0 !important;
+  
+  /* Consistent sizing */
+  font-size: 1.125rem !important;
+  line-height: 1.2 !important;
+  
+  /* Prevent wrapping */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  
+  /* Left align */
+  text-align: left !important;
+}
+
+/* Toggle icon - fixed size */
+.toolbar-toggle .toggle-icon,
+#toolbarToggle .toggle-icon {
+  /* Fixed dimensions */
+  width: 32px !important;
+  min-width: 32px !important;
+  height: 32px !important;
+  
+  /* Prevent from growing/shrinking */
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  
+  /* Center the icon */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Consistent font size */
+  font-size: 2rem !important;
+  line-height: 1 !important;
+}
+
+/* Toggle arrow - fixed size */
+.toolbar-toggle .toggle-arrow,
+#toolbarToggle .toggle-arrow {
+  /* Fixed dimensions */
+  width: 20px !important;
+  min-width: 20px !important;
+  height: 20px !important;
+  
+  /* Prevent from growing/shrinking */
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  
+  /* Center */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Consistent font size */
+  font-size: 0.875rem !important;
+  line-height: 1 !important;
+  
+  /* Use transform for rotation (GPU accelerated) */
+  transition: transform 0.2s ease !important;
+}
+
+/* When expanded, only rotate the arrow (no layout change) */
+.toolbar-toggle[aria-expanded="true"] .toggle-arrow,
+#toolbarToggle[aria-expanded="true"] .toggle-arrow {
+  transform: rotate(180deg) !important;
+}
+
+/* Hover/focus - only change colors, not layout */
+.toolbar-toggle:hover,
+.toolbar-toggle:focus,
+#toolbarToggle:hover,
+#toolbarToggle:focus {
+  /* Do NOT change padding, margin, or dimensions */
+  transform: none !important;
+}
+
+/* Status banner - prevent from causing shifts */
+.status-banner {
+  /* Fixed height */
+  min-height: 44px !important;
+  height: auto !important;
+  
+  /* Prevent from affecting layout */
+  contain: layout !important;
+  
+  /* Consistent padding */
+  padding: 0.75rem 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Page progress bar - prevent shifts */
+.page-progress-container {
+  /* Fixed position to not affect layout */
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 99 !important;
+  
+  /* Don't affect document flow */
+  height: 4px !important;
+  min-height: 4px !important;
+  
+  /* Prevent from causing shifts */
+  contain: strict !important;
+}
+
+/* Gradient banners that appear dynamically */
+.gradient-banner,
+.gradient-banner-pink {
+  /* Reserve minimum space */
+  min-height: 100px !important;
+  
+  /* Prevent from affecting siblings */
+  contain: layout !important;
+  
+  /* Consistent margins */
+  margin: 2rem 0 !important;
+}
+
+/* Community stats box */
+.community-stats-box {
+  /* Fixed dimensions */
+  min-height: 80px !important;
+  
+  /* Prevent layout shifts */
+  contain: layout !important;
+  
+  /* Consistent spacing */
+  padding: 1.25rem !important;
+  margin: 2rem 0 !important;
+}
+
+/* ===== FAQ SEARCH CONTAINER FIX (CLS Issue #5) ===== */
+
+/* Fix FAQ search container layout shifts on /faq/ page
+   Issue: Height 105px → 161px (56px growth) when search results/clear button appear
+   CLS: 0.143 (needs improvement) */
+.faq-search-container {
+  /* Reserve space for dynamic elements (search results count, clear button) */
+  min-height: 165px !important;
+  
+  /* Prevent from affecting siblings */
+  contain: layout !important;
+  
+  /* Fixed width to prevent horizontal shifts */
+  width: 100% !important;
+  max-width: 100% !important;
+  
+  /* Consistent padding that doesn't change */
+  padding: 1.5rem !important;
+  
+  /* Consistent margins */
+  margin: 2rem 0 !important;
+  
+  /* Box sizing for predictable dimensions */
+  box-sizing: border-box !important;
+}
+
+/* Search input - fixed dimensions */
+.faq-search-input {
+  /* Prevent from changing size */
+  width: 100% !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  
+  /* Consistent padding */
+  padding: 0.875rem 3rem 0.875rem 1rem !important;
+  
+  /* Box sizing */
+  box-sizing: border-box !important;
+  
+  /* Prevent font changes from affecting layout */
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Search label - fixed dimensions */
+.search-label {
+  /* Fixed height */
+  min-height: 32px !important;
+  height: 32px !important;
+  
+  /* Prevent from changing */
+  margin-bottom: 0.75rem !important;
+  
+  /* No flex grow/shrink */
+  flex-shrink: 0 !important;
+}
+
+/* Search help text - reserve space even when hidden */
+.search-help {
+  /* Fixed height to prevent shifts */
+  min-height: 20px !important;
+  height: 20px !important;
+  
+  /* Display block to reserve space */
+  display: block !important;
+  
+  /* Consistent margin */
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Search results count - reserve space even when hidden */
+.search-results-count {
+  /* Reserve space even when display: none */
+  min-height: 32px !important;
+  
+  /* When hidden, still take up space (use visibility instead of display) */
+  visibility: visible !important;
+  
+  /* Consistent margin */
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.search-results-count[style*="display: none"] {
+  /* Override display: none with visibility to preserve space */
+  display: block !important;
+  visibility: hidden !important;
+  height: 32px !important;
+}
+
+/* Clear search button - reserve space */
+.clear-search-btn {
+  /* Reserve space even when hidden */
+  min-height: 36px !important;
+  height: 36px !important;
+  
+  /* Position absolutely to not affect layout */
+  position: absolute !important;
+  right: 1.5rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  
+  /* When hidden, use visibility instead of display */
+  visibility: visible !important;
+}
+
+.clear-search-btn[style*="display: none"] {
+  /* Override display: none */
+  display: block !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Mobile FAQ search fixes */
+@media (max-width: 600px) {
+  .faq-search-container {
+    /* Adjust min-height for mobile */
+    min-height: 180px !important;
+    padding: 1rem !important;
+  }
+  
+  .clear-search-btn {
+    /* On mobile, button is below input, not absolute */
+    position: static !important;
+    width: 100% !important;
+    margin-top: 0.75rem !important;
+    transform: none !important;
+  }
+}
+
+/* ===== MOBILE TOOLBAR FIX ===== */
+
+@media (max-width: 768px) {
+  .toolbar-toggle,
+  #toolbarToggle {
+    /* Reduce padding on mobile but keep consistent */
+    padding: 0.75rem 1rem !important;
+    
+    /* Ensure badge doesn't wrap */
+    flex-wrap: nowrap !important;
+  }
+  
+  .toolbar-toggle .badge,
+  #toolbarToggle .badge,
+  #toolbarToggle > span.badge {
+    /* Smaller on mobile but consistent */
+    min-width: 70px !important;
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+  
+  .toolbar-toggle .toggle-text,
+  #toolbarToggle .toggle-text {
+    /* Allow more flexibility on mobile */
+    font-size: 1rem !important;
+  }
+}
+
+/* ===== BREADCRUMBS FIX ===== */
+
+.breadcrumbs {
+  /* Fixed height to prevent shifts */
+  min-height: 32px !important;
+  height: 32px !important;
+  
+  /* Prevent from affecting header */
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  
+  /* Prevent layout containment */
+  contain: layout !important;
+  
+  /* Consistent padding */
+  padding: 0.5rem 0 !important;
+}
+
+/* ===== MAIN CONTENT FIRST PARAGRAPH FIX ===== */
+
+/* The first paragraph is causing CLS: y:633→659 (26px shift), height:77→80 (3px) */
+#main-content {
+  /* Reserve consistent space for content */
+  min-height: 200px !important;
+  
+  /* REMOVED: contain: layout causes main content to collapse to 0 height!
+     This was causing CLS P50: 0.368 with height: 715px → 0px collapse
+     Instead, use contain: style paint for less aggressive containment */
+  contain: style paint !important;
+  
+  /* Ensure content can grow naturally */
+  height: auto !important;
+}
+
+#main-content > p:first-of-type,
+#main-content > h1 + p,
+main#main-content > p:first-child {
+  /* Fixed line-height to prevent font loading shifts */
+  line-height: 1.7 !important;
+  
+  /* Reserve explicit minimum height */
+  min-height: 80px !important;
+  
+  /* Prevent margin collapse */
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+  padding-top: 0.25rem !important;
+  
+  /* Prevent font size changes from affecting layout */
+  font-size: 1rem !important;
+  
+  /* Use system font initially to prevent FOIT */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+  
+  /* Prevent text wrapping changes */
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+
+/* Ensure heading before first paragraph is stable */
+#main-content > h1:first-child,
+main#main-content > h1 {
+  /* Fixed dimensions */
+  line-height: 1.2 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+  
+  /* REMOVED: contain: layout can cause collapse
+     Use less aggressive containment */
+  contain: style !important;
+}
+
+/* ===== CRITICAL: USE CSS CONTAINMENT ===== */
+
+/* Apply layout containment to prevent cross-contamination
+   WARNING: Only apply to elements with FIXED dimensions
+   DO NOT apply to main content areas that need to grow dynamically */
+header,
+.header-bar,
+.header-controls,
+nav,
+#primary-nav {
+  /* Isolate layout changes */
+  contain: layout style !important;
+}
+
+/* DO NOT apply contain: layout to #main-content - it will collapse to 0 height! */
+
+/* ===== PRELOAD CRITICAL STYLES ===== */
+
+/* Ensure header styles are applied immediately */
+header {
+  /* Prevent FOUC (Flash of Unstyled Content) */
+  opacity: 1 !important;
+}
+
+/* ===== FIX THEME TOGGLE SHIFTS ===== */
+
+/* Ensure theme/contrast toggles don't cause layout shifts */
+.theme-toggle,
+.contrast-toggle {
+  /* Fixed width to prevent text change shifts */
+  min-width: 120px !important;
+  
+  /* Center text */
+  text-align: center !important;
+  
+  /* Prevent font size changes from affecting layout */
+  font-size: 0.875rem !important;
+  line-height: 1.2 !important;
+}
+
+/* ===== PRINT MODE: DISABLE CONTAINMENT ===== */
+
+@media print {
+  header,
+  .header-bar,
+  .header-controls {
+    contain: none !important;
+  }
+}
+
+/* ===== HIGH PRIORITY: LOAD FIRST ===== */
+
+/* Use layer to ensure these styles load before others */
+@layer reset {
+  .header-controls {
+    min-height: 50px !important;
+    height: 50px !important;
+  }
+}
+
+/* ===== PERFORMANCE: USE GPU ACCELERATION ===== */
+
+.header-controls,
+.header-bar,
+header {
+  /* Force GPU acceleration for smoother rendering */
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
+}
+
+/* ===== DEBUG: VISUALIZE LAYOUT BOUNDARIES (Remove in production) ===== */
+
+/*
+.header-controls {
+  outline: 2px solid red !important;
+  outline-offset: -2px !important;
+}
+
+.header-bar {
+  outline: 2px solid blue !important;
+  outline-offset: -2px !important;
+}
+*/

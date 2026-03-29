@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | 3mpwr App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.">
+  
+  <!-- 
+    Security Headers: These should be set via server-side headers file (_headers for Netlify/Vercel, .htaccess for Apache, etc.)
+    CSP meta tag is included above as the only valid http-equiv for security headers.
+    X-Content-Type-Options, X-Frame-Options, and Referrer-Policy must be set as HTTP response headers, not meta tags.
+  -->
+  
+  <!-- Resource Hints for Performance (limit to 3 most critical) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json"><!-- Open Graph Meta Tags -->
+<meta property="og:site_name" content="3mpwr App">
+<meta property="og:title" content="Home">
+<meta property="og:description" content="A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/index-old-backup/">
+<meta property="og:locale" content="en_CA">
+
+<meta property="og:locale:alternate" content="fr_CA">
+
+
+<!-- Open Graph Image -->
+
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:secure_url" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:alt" content="Home">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Article-specific Open Graph -->
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpowrapp0816">
+<meta name="twitter:creator" content="@3mpowrapp0816">
+<meta name="twitter:title" content="Home">
+<meta name="twitter:description" content="A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.">
+
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta name="twitter:image:alt" content="Home">
+
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="3mpwrApp">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+
+<meta name="language" content="English">
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://3mpwrapp.pages.dev/index-old-backup/">
+
+<!-- Alternate Language Links (hreflang) -->
+
+
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.pages.dev/index-old-backup/">
+
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/index-old-backup/">
+
+
+<!-- PWA and Mobile Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="3mpwrApp">
+<meta name="application-name" content="3mpwrApp">
+<meta name="theme-color" content="#2A9D8F">
+<meta name="msapplication-TileColor" content="#2A9D8F">
+<meta name="msapplication-navbutton-color" content="#2A9D8F">
+
+<!-- Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Favicons and Touch Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/icon-192.png">
+<!-- Schema.org Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://3mpwrapp.pages.dev#organization",
+      "name": "3mpwrApp",
+      "alternateName": "EmpowrApp",
+      "url": "https://3mpwrapp.pages.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev#logo",
+  "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "3mpwrApp Logo"
+      },
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "foundingDate": "2024",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "empowrapp08162025@gmail.com",
+        "contactType": "Customer Support",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/3mpowrapp/",
+        "https://x.com/3mpowrapp0816",
+        "https://www.instagram.com/3mpwrapp/",
+        "https://www.youtube.com/3mpwrApp",
+        "https://www.tiktok.com/@3mpwrapp",
+        "https://mastodon.social/@3mpwrApp",
+        "https://bsky.app/profile/3mpwrapp.bsky.social",
+        "https://github.com/3mpwrApp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://3mpwrapp.pages.dev#website",
+      "url": "https://3mpwrapp.pages.dev",
+      "name": "3mpwrApp",
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "publisher": {
+        "@id": "https://3mpwrapp.pages.dev#organization"
+      },
+      "inLanguage": "en-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://3mpwrapp.pages.dev/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://3mpwrapp.pages.dev/index-old-backup/#webpage",
+      "url": "https://3mpwrapp.pages.dev/index-old-backup/",
+      "name": "Home",
+      "headline": "Home",
+      "description": "A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.",
+      "isPartOf": {
+        "@id": "https://3mpwrapp.pages.dev#website"
+      },
+      "inLanguage": "en-CA",
+      
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev/index-old-backup/#primaryimage",
+        "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Home"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://3mpwrapp.pages.dev/index-old-backup/#primaryimage"
+      },
+      
+      
+      "breadcrumb": {
+        "@id": "https://3mpwrapp.pages.dev/index-old-backup/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://3mpwrapp.pages.dev/index-old-backup/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://3mpwrapp.pages.dev"
+        }
+        
+        
+        
+        
+        
+          
+          
+          
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Home",
+          "item": "https://3mpwrapp.pages.dev/index-old-backup"
+        }
+          
+        
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
+<!-- Additional Schema for Accessibility Features -->
+
+
+<!-- Software Application Schema for App Pages -->
+
+<link rel="canonical" href="https://3mpwrapp.pages.dev/index-old-backup/"><!-- hreflang tags for international SEO -->
+<!-- English Canada (primary) -->
+<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.pages.dev/index-old-backup/" />
+
+<!-- French Canada -->
+
+
+<link rel="alternate" hreflang="fr-CA" href="https://3mpwrapp.pages.dev/fr/index-old-backup/" />
+
+
+<!-- USA (when available) -->
+
+
+<!-- Default fallback (English Canada) -->
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/index-old-backup/" />
+
+<!-- Future language expansions (add as they go live) -->
+<!-- 
+<link rel="alternate" hreflang="es" href="https://3mpwrapp.pages.dev/index-old-backup/" />
+<link rel="alternate" hreflang="ar" href="https://3mpwrapp.pages.dev/index-old-backup/" />
+<link rel="alternate" hreflang="zh-CN" href="https://3mpwrapp.pages.dev/index-old-backup/" />
+-->
+<link rel="stylesheet" href="/assets/css/complexity-mode.css">
+<script src="/assets/js/complexity-mode.js" defer></script><link rel="stylesheet" href="/assets/css/connection-status.css">
+<script src="/assets/js/connection-status.js" defer></script><!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3mpwrApp">
+<meta property="og:title" content="Home">
+<meta property="og:description" content="A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/index-old-backup/">
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-default.png">
+<meta property="og:image:alt" content="3mpwrApp - Community-powered support for injured workers and persons with disabilities">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA"><meta property="og:locale:alternate" content="fr_CA"><!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpwrApp">
+<meta name="twitter:creator" content="@ODSPoor">
+<meta name="twitter:title" content="Home">
+<meta name="twitter:description" content="A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.">
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-default.png">
+<meta name="twitter:image:alt" content="3mpwrApp - Community-powered support for injured workers and persons with disabilities">
+
+<!-- Additional Meta for Rich Previews -->
+<meta property="article:publisher" content="https://www.facebook.com/3mpwrApp"><!-- Facebook App ID (if available) --><link rel="dns-prefetch" href="//www.clarity.ms">
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin><link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><link rel="preload" href="/assets/css/style.css" as="style"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/assets/site.webmanifest"><meta name="theme-color" content="#111111">
+<meta name="color-scheme" content="light dark">
+<meta name="fediverse:creator" content="@3mpwrApp@mastodon.social">
+
+<!-- What's New RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — What's New" href="/whats-new/feed.xml">
+
+<!-- Main site RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — Site Feed" href="/feed.xml"><script>
+(function(){
+  var KEY = 'cookie-consent';
+  function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function onConsent(cb){
+    if (get(KEY) === 'accepted') { cb(); return; }
+    window.addEventListener('cookie-consent', function(e){ if (e && e.detail === 'accepted') cb(); });
+  }
+
+  // Google Analytics 4
+  var useGA = ("" !== "") && ("" === "");
+  if (useGA) {
+    onConsent(function(){
+      if (window.__gaLoaded) return; window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('Google Analytics script blocked or failed to load. Ad blockers or privacy extensions may be active.');
+        window.__gaLoadError = true;
+      };
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ 
+        if (!window.__gaLoadError) {
+          dataLayer.push(arguments); 
+        }
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=Strict;Secure',
+        'cookie_expires': 63072000,
+        'cookie_update': false,
+        'allow_ad_personalization_signals': false,
+        'allow_google_signals': false
+      });
+    });
+  }
+
+  // GoatCounter (privacy-friendly, free)
+  var useGoat = ("" === "goatcounter") && ("" !== "");
+  if (useGoat) {
+    onConsent(function(){
+      if (window.__goatLoaded) return; window.__goatLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter', 'https://.goatcounter.com/count');
+      s.src = 'https://gc.zgo.at/count.js';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('GoatCounter analytics unavailable. Connection may be blocked.');
+      };
+      document.head.appendChild(s);
+    });
+  }
+})();
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "3mpwr App",
+  "url": "https://3mpwrapp.pages.dev",
+  "logo": "https://3mpwrapp.pages.dev/assets/favicon.svg",
+  "sameAs": ["https://github.com/3mpwrApp", "https://www.facebook.com/3mpowrapp/", "https://x.com/3mpowrapp0816", "https://www.instagram.com/3mpwrapp/", "https://www.youtube.com/3mpwrApp", "https://www.tiktok.com/@3mpwrapp"]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://3mpwrapp.pages.dev/"
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Index old backup",
+        "item": "https://3mpwrapp.pages.dev/index-old-backup"
+      }]
+}
+</script><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | 3mpwr App</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="3mpwr App" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support." />
+<meta property="og:description" content="A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support." />
+<link rel="canonical" href="https://3mpwrapp.pages.dev/index-old-backup/" />
+<meta property="og:url" content="https://3mpwrapp.pages.dev/index-old-backup/" />
+<meta property="og:site_name" content="3mpwr App" />
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"3mpwr App"},"description":"A community-powered hub for injured workers and persons with disabilities in Canada—connect, learn, and advocate with practical tools and support.","headline":"Home","image":"https://3mpwrapp.pages.dev/assets/empwrapp-logo.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://3mpwrapp.pages.dev/assets/favicon.svg"},"name":"3mpwr App"},"url":"https://3mpwrapp.pages.dev/index-old-backup/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.min.css">
+  <!-- WCAG AAA Compliant Color System -->
+  <link rel="stylesheet" href="/assets/css/accessibility-tokens.min.css">
+  <!-- WCAG 2.2 AA and Beyond Accessibility Enhancements -->
+  <link rel="stylesheet" href="/assets/css/accessibility-enhancements.min.css">
+  <!-- WCAG 2.2 AAA Color Palette - 7:1 Contrast Ratios -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-colors.css">
+  <!-- WCAG 2.2 AAA Color Fixes - Fixes all 614 accessibility violations -->
+  <link rel="stylesheet" href="/assets/css/aaa-color-fixes.css">
+  <!-- WCAG 2.2 AAA Comprehensive Overrides - Fixes all inline styles and remaining violations -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-overrides.css">
+  <!-- Universal Text Legibility - Ensures ALL text is readable in light/dark/high-contrast modes -->
+  <link rel="stylesheet" href="/assets/css/universal-text-legibility.css">
+  <!-- ACCESSIBILITY-FIRST COLOR SYSTEM - The #1 Standard for Light/Dark/High Contrast Modes (March 2026) -->
+  <link rel="stylesheet" href="/assets/css/accessibility-first-colors.css">
+  <!-- Performance Optimizations: Critical CSS, Lazy Loading, Font Optimization -->
+  <link rel="stylesheet" href="/assets/css/performance-optimizations.min.css">
+  <!-- Lighthouse Audit Fixes: Touch targets, contrast, aspect ratios -->
+  <link rel="stylesheet" href="/assets/css/lighthouse-fixes.min.css">
+  <!-- Cookie Consent Banner (GDPR Compliance) -->
+  <link rel="stylesheet" href="/assets/css/cookie-consent.css">
+
+  <!-- Header/nav footprint overrides moved to external CSS (CSP-safe) -->
+  <link rel="stylesheet" href="/assets/css/header-overrides.css">
+  <!-- Professional polish & design system (UX/UI audit improvements) -->
+  <link rel="stylesheet" href="/assets/css/professional-polish.css">
+  <!-- CLS (Cumulative Layout Shift) Fix - Cloudflare RUM reported 0.351-0.588 CLS -->
+  <link rel="stylesheet" href="/assets/css/cls-fix.css">
+  <!-- Alignment Consistency Fix - Professional, clean, organized layout -->
+  <link rel="stylesheet" href="/assets/css/alignment-consistency.css">
+  <!-- Global UX/UI Consistency - Ensures professional, clean, organized look across all pages -->
+  <link rel="stylesheet" href="/assets/css/global-consistency.css">
+  <!-- Enhanced Focus Indicators - WCAG 2.2 AAA compliant (3:1 contrast, 2px minimum) -->
+  <link rel="stylesheet" href="/assets/css/enhanced-focus-indicators.css">
+  <!-- Social Share Component Styles -->
+  <link rel="stylesheet" href="/assets/css/social-share.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#primary-nav">Skip to navigation</a>
+  <a class="skip-link" href="#site-footer">Skip to footer</a>
+  <header>
+    <!-- Brand: clicking this takes you home -->
+    <div class="brand header-bar">
+      <a class="site-brand" href="/" aria-label="3mpwr App home">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="" width="28" height="28" aria-hidden="true" loading="eager">
+        </picture>
+        <span>3mpwr App</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button><a class="lang-switch" href="/fr/">Français</a>
+    </div>
+
+  <nav id="primary-nav" aria-label="Primary">
+      
+  <ul class="nav-list">
+        <li>
+          <a href="/" >
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/about" >
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/features" >
+            Features
+          </a>
+        </li>
+        <li>
+          <a href="/app-tour" >
+            App Tour
+          </a>
+        </li>
+        <li>
+          <a href="/user-guide" >
+            User Guide
+          </a>
+        </li>
+        <li>
+          <a href="/roadmap" >
+            Roadmap
+          </a>
+        </li>
+        <li>
+          <a href="/blog" >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="/faq" >
+            FAQ
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility" >
+            Accessibility
+          </a>
+        </li>
+        <li>
+          <a href="/app-waitlist" >
+            App Waitlist
+          </a>
+        </li>
+        <li>
+          <a href="/crisis-resources" >
+            Crisis Help
+          </a>
+        </li>
+        <li>
+          <a href="/contact" >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="/newsletter" >
+            Newsletter
+          </a>
+        </li>
+        <li>
+          <a href="/whats-new" >
+            What's New
+          </a>
+        </li>
+        <li>
+          <a href="/beta-guide" >
+            Beta Testers Guide
+          </a>
+        </li>
+        <li>
+          <a href="/search" >
+            Search
+          </a>
+        </li>
+        <li>
+          <a href="/events" >
+            Events
+          </a>
+        </li>
+        <li>
+          <a href="/site-map" >
+            Site Map
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility-settings" >
+            Accessibility Settings
+          </a>
+        </li>
+        <li>
+          <a href="/campaigns" >
+            Campaigns
+          </a>
+        </li>
+        <li>
+          <a href="/community" >
+            Community
+          </a>
+        </li>
+        <li>
+          <a href="/connect" >
+            Connect
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- High contrast + Dark mode toggles + Accessibility Tools -->
+    <div class="header-controls" role="group" aria-label="Display settings and accessibility">
+      <a href="/accessibility-settings" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
+        ♿ Accessibility
+      </a>
+      
+      <!-- Complexity Mode Toggle -->
+      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode">
+        <span class="complexity-icon" aria-hidden="true">📖</span>
+        <span class="complexity-label">Standard View</span>
+        <span class="complexity-hint">Click for Simple Language</span>
+      </button>
+      
+      <button
+        id="contrast-toggle"
+        class="contrast-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle high contrast mode"
+      >
+        High contrast
+      </button>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle dark mode"
+      >
+        Dark mode
+      </button>
+    </div>
+  </header>
+  
+  <!-- Complexity Mode Announcer (moved from inline) -->
+  <div id="complexity-announcer" role="status" aria-live="polite" aria-atomic="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"></div><nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li><li aria-current="page">Home</li></ol>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <!-- Status Banner -->
+<!-- Status Banner - Consistent across all pages -->
+<div class="status-banner" role="status" aria-live="polite">
+  <span class="status-indicator" aria-hidden="true">🚀</span>
+  <strong>App Status:</strong> Production Ready - 721 Tests Passing | <strong>Phase 1:</strong> Closed Internal Testing NOW ACTIVE (Slow Release) | <strong>NEW:</strong> Available Canada-wide (Coast to Coast to Coast) + USA Lite 🇨🇦🇺🇸
+</div>
+<!-- Innovative Accessibility Controls -->
+<div class="accessibility-toolbar collapsed" role="toolbar" aria-label="Page accessibility controls">
+  <!-- Toggle Button -->
+  <button class="toolbar-toggle" aria-expanded="false" aria-controls="toolbar-content" id="toolbarToggle">
+    <span class="toggle-icon" aria-hidden="true">♿</span>
+    <span class="toggle-text">Accessibility Tools</span>
+    <span class="badge" aria-label="13 accessibility features available">13 features</span>
+    <span class="toggle-arrow" aria-hidden="true">▼</span>
+  </button>
+  
+  <!-- Collapsible Content -->
+  <div id="toolbar-content" class="toolbar-content" hidden="">
+    <!-- Quick Relief Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Quick Relief</h3>
+      <div class="toolbar-buttons">
+        <button id="needBreakBtn" class="toolbar-btn" aria-label="Take a break - dims screen for 5 minutes">
+          <span aria-hidden="true">💙</span> Need a break?
+        </button>
+        <button id="painFlareBtn" class="toolbar-btn" aria-label="Switch to minimal interaction mode">
+          <span aria-hidden="true">🔥</span> Pain flare mode
+        </button>
+        <button id="overwhelmedBtn" class="toolbar-btn" aria-label="Switch to simplified version">
+          <span aria-hidden="true">😰</span> I'm overwhelmed
+        </button>
+        <button id="freezeFrameBtn" class="toolbar-btn" aria-label="Freeze all animations and movement">
+          <span aria-hidden="true">❄️</span> Freeze animations
+        </button>
+      </div>
+    </div>
+    
+    <!-- Reading Aids Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Reading Aids</h3>
+      <div class="toolbar-buttons">
+        <button id="tooMuchTextBtn" class="toolbar-btn" aria-label="Show bullet points only">
+          <span aria-hidden="true">📝</span> Too much text?
+        </button>
+        <button id="brainFogBtn" class="toolbar-btn" aria-label="Show quick summary">
+          <span aria-hidden="true">🧠</span> Brain fog helper
+        </button>
+        <button id="resumeReadingBtn" class="toolbar-btn" style="display:none;" aria-label="Resume where you left off">
+          <span aria-hidden="true">📖</span> Resume reading
+        </button>
+        <button id="spatialMemoryBtn" class="toolbar-btn" aria-label="Show where you've been on this page">
+          <span aria-hidden="true">🔍</span> I saw it somewhere...
+        </button>
+      </div>
+    </div>
+    
+    <!-- Content Tools Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Content Tools</h3>
+      <div class="toolbar-buttons">
+        <button id="chunkingBtn" class="toolbar-btn" aria-label="Break content into smaller chunks">
+          <span aria-hidden="true">🧩</span> Chunk content
+        </button>
+        <button id="decisionHelperBtn" class="toolbar-btn" aria-label="Help me decide what to do">
+          <span aria-hidden="true">🎯</span> Decision helper
+        </button>
+        <button id="groundingBtn" class="toolbar-btn" aria-label="Quick grounding exercise for anxiety">
+          <span aria-hidden="true">🧘</span> Grounding exercise
+        </button>
+      </div>
+    </div>
+    
+    <!-- Settings Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Display Settings</h3>
+      <div class="toolbar-settings">
+        <div class="toolbar-setting">
+          <label for="sensoryToggle" class="toolbar-label"><span aria-hidden="true">✨</span> Sensory:</label>
+          <select id="sensoryToggle" class="toolbar-select" aria-label="Adjust sensory preferences">
+            <option value="default">Default</option>
+            <option value="reduced-motion">Reduced motion</option>
+            <option value="high-contrast">High contrast</option>
+            <option value="minimal">Minimal (text only)</option>
+          </select>
+        </div>
+        <div class="toolbar-setting">
+          <label for="readingLevel" class="toolbar-label"><span aria-hidden="true">📚</span> Reading:</label>
+          <select id="readingLevel" class="toolbar-select" aria-label="Adjust reading complexity">
+            <option value="detailed">Detailed</option>
+            <option value="simple">Simple language</option>
+          </select>
+        </div>
+        <div class="toolbar-setting">
+          <label for="dyslexiaMode" class="toolbar-label"><span aria-hidden="true">📖</span> Dyslexia:</label>
+          <select id="dyslexiaMode" class="toolbar-select" aria-label="Dyslexia-friendly formatting">
+            <option value="off">Off</option>
+            <option value="font">Font only</option>
+            <option value="spacing">Extra spacing</option>
+            <option value="full">Full mode</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tracking Group -->
+    <div class="toolbar-group">
+      <h3 class="toolbar-group-title">Energy &amp; Time Tracking</h3>
+      <div class="toolbar-tracking">
+        <div class="spoon-counter">
+          <span class="spoon-label"><span aria-hidden="true">🥄</span> Energy used:</span>
+          <span id="spoonCount" class="spoon-count" aria-live="polite">0</span>
+          <button id="resetSpoons" class="toolbar-btn-small" aria-label="Reset energy counter">Reset</button>
+        </div>
+        <div class="toolbar-indicators">
+          <button id="cognitiveLoadBtn" class="toolbar-btn-indicator" aria-label="Cognitive load indicator" aria-live="polite">
+            <span aria-hidden="true">🌡️</span> <span id="cognitiveStatus">Ready</span>
+          </button>
+          <button id="timeBlindnessBtn" class="toolbar-btn-small" aria-label="Time tracking helper">
+            <span aria-hidden="true">⏰</span> <span id="timeSpent">0m</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Progress indicator -->
+<div class="page-progress-container" role="progressbar" aria-label="Page reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+  <div class="page-progress-bar" id="pageProgressBar"></div>
+  <span class="page-progress-text" id="pageProgressText">0% through page</span>
+</div>
+
+<!-- Hero Section with Logo -->
+<div style="text-align: center; margin: 2rem 0;">
+  <picture>
+    <source type="image/webp" srcset="/assets/empwrapp-logo.webp" />
+    <img src="/assets/empwrapp-logo.png" alt="3mpwrApp - Community-powered support" width="120" height="120" loading="eager" style="margin-bottom: 1rem;" />
+  </picture>
+</div>
+
+<h1 id="youre-not-alone-your-voice-matters">You’re Not Alone. Your Voice Matters.</h1>
+
+<p><span aria-hidden="true">📖</span> <strong>3 minute read</strong> <span aria-hidden="true">🔋🔋</span> <strong>Energy: Light</strong></p>
+
+<p><strong>Be part of building something meaningful.</strong></p>
+
+<p>3mpwr App is a <strong>free, community-powered platform</strong> where injured workers, persons with disabilities, supporters, and allies come together. Whether you identify as disabled or are still figuring things out—<strong>you belong here.</strong></p>
+
+<p>We’re building a safe space to connect, share experiences, and advocate for real change.</p>
+
+<p><strong><span aria-hidden="true">💚</span> 100% Free Forever</strong> – No subscriptions. No hidden costs. Built BY the community, FOR the community.</p>
+
+<hr />
+
+<!-- Daily Events Banner - Auto-Updates with Happening Now/Soon Events -->
+<div id="daily-events-banner" class="gradient-banner" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <h2 style="margin: 0 0 1rem; color: white; font-size: 1.8rem;">
+    <span aria-hidden="true">🔥</span> This Week's Events
+    <span class="badge badge--new" style="background: rgba(255,255,255,0.3); color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Automatically updated">Auto-updated</span>
+  </h2>
+  <p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Events in the next 7 days – automatically synced from 3mpwr App</p>
+  <div id="events-banner-content" style="min-height: 100px;">
+    <div id="home-events-skeleton" aria-hidden="true" style="display: grid; gap: 0.75rem;">
+      <div style="background: rgba(255,255,255,0.25); border-radius: 8px; padding: 1rem;">
+        <div style="width: 45%; height: 18px; background: rgba(255,255,255,0.5); border-radius: 6px;"></div>
+        <div style="margin-top: 8px; width: 80%; height: 12px; background: rgba(255,255,255,0.35); border-radius: 6px;"></div>
+      </div>
+      <div style="background: rgba(255,255,255,0.25); border-radius: 8px; padding: 1rem;">
+        <div style="width: 55%; height: 18px; background: rgba(255,255,255,0.5); border-radius: 6px;"></div>
+        <div style="margin-top: 8px; width: 70%; height: 12px; background: rgba(255,255,255,0.35); border-radius: 6px;"></div>
+      </div>
+      <p class="sr-only">Loading events…</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/**
+ * ========================================
+ * DAILY EVENTS BANNER - HOMEPAGE
+ * ========================================
+ * Shows events happening in the next 7 days
+ * Updates automatically from events calendar API
+ * Syncs every 5 minutes with app events
+ * ========================================
+ */
+
+async function loadDailyEvents() {
+  try {
+    const t0 = (window.performance && performance.now) ? performance.now() : Date.now();
+    const ts = Date.now();
+    const response = await fetch('https://3mpwrapp-calendar.empowrapp08162025.workers.dev/api/events?env=production&ts=' + ts, { cache: 'no-store' });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    
+    const data = await response.json();
+    const t1 = (window.performance && performance.now) ? performance.now() : Date.now();
+    const durationMs = Math.round(t1 - t0);
+    console.log(`⏱️ Daily events fetch completed in ${durationMs} ms`);
+    let events = data.events || [];
+    
+    // Filter out test events
+    events = events.filter(event => {
+      if (event.id === 'Yk1p4IJ66gGxkI0F8mCc' || event.id === 'bYfSpZdmLv2o5Pfijv4V') {
+        return false;
+      }
+      return true;
+    });
+    
+    // Filter to show community and support events on homepage
+    // Exclude holiday and health awareness events
+    const now = new Date();
+    const communityEvents = events.filter(event => {
+      // Keep community and support events (user-created events and support groups)
+      return event.category === 'community' || event.category === 'support';
+    });
+    
+    console.log(`🏠 Homepage: Filtered to ${communityEvents.length} community/support events`);
+    
+    // Get today's date and next 7 days
+    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
+    const sevenDaysFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+    
+    // Filter events for the next 7 days (including today)
+    let upcomingEvents = communityEvents.filter(event => {
+      const eventDate = new Date(event.date);
+      return eventDate >= todayStart && eventDate <= sevenDaysFromNow;
+    });
+    
+    const updatedAt = new Date();
+    // If no events in next 7 days, show "no events"
+    if (upcomingEvents.length === 0) {
+      displayNoEvents({ updatedAt, durationMs });
+      return;
+    }
+    
+    // Sort by date (earliest first)
+    upcomingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    displayEvents(upcomingEvents, { updatedAt, durationMs });
+    
+  } catch (error) {
+    console.error('❌ Failed to load daily events:', error);
+    displayError();
+  }
+}
+
+function displayEvents(events, meta) {
+  const container = document.getElementById('events-banner-content');
+  
+  const eventCount = events.length;
+  const countText = eventCount === 1 ? '1 Event' : `${eventCount} Events`;
+  
+  // Determine the timeframe text
+  const now = new Date();
+  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
+  const todayEnd = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+  
+  const firstEventDate = new Date(events[0].date);
+  const isToday = firstEventDate >= todayStart && firstEventDate <= todayEnd;
+  
+  const timeframeText = isToday ? 'THIS WEEK' : 'UPCOMING WEEK';
+  
+  let html = `
+    <h2 style="margin: 0 0 1rem; font-size: 2rem; color: white;">
+      🔥 ${timeframeText}: ${countText}
+    </h2>
+  `;
+  
+  // Display all events (grouped by day)
+  let currentDay = null;
+  
+  events.forEach(event => {
+    const eventDate = new Date(event.date);
+    const dayKey = eventDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    
+    // Add day header if this is a new day
+    if (dayKey !== currentDay) {
+      currentDay = dayKey;
+      const isEventToday = eventDate >= todayStart && eventDate <= todayEnd;
+      html += `
+        <h3 style="margin: 1.5rem 0 0.5rem; font-size: 1.3rem; color: white; opacity: 0.95;">
+          ${isEventToday ? '📅 TODAY' : `📅 ${dayKey}`}
+        </h3>
+      `;
+    }
+    
+    const eventTime = eventDate.toLocaleTimeString('en-US', { 
+      hour: 'numeric', 
+      minute: '2-digit',
+      hour12: true 
+    });
+    
+    // Determine energy cost
+    let energyIndicator = '';
+    if (event.isVirtual) {
+      energyIndicator = '🔋🔋'; // Virtual = Light
+    } else if (event.energyCost) {
+      // Use actual energy cost if provided
+      const costMap = {
+        'Very Light': '🔋',
+        'Light': '🔋🔋',
+        'Medium': '🔋🔋🔋',
+        'High': '🔋🔋🔋🔋',
+        'Very High': '🔋🔋🔋🔋🔋'
+      };
+      energyIndicator = costMap[event.energyCost] || '🔋🔋🔋';
+    } else {
+      energyIndicator = '🔋🔋🔋'; // Default to Medium for in-person
+    }
+    
+    // Build accessibility badges
+    let badges = [];
+    if (event.isVirtual) badges.push('🌐 Virtual');
+    if (event.location && !event.isVirtual) badges.push(`📍 ${event.location}`);
+    if (event.asl) badges.push('🤟 ASL');
+    if (event.captions) badges.push('📝 Captions');
+    if (event.stepFree) badges.push('♿ Accessible');
+    
+    const badgeStr = badges.slice(0, 3).join(' • '); // Show first 3 badges
+    
+    html += `
+      <a href="/events/" style="text-decoration: none; color: inherit; display: block;">
+        <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; backdrop-filter: blur(10px); text-align: left; cursor: pointer; transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.2)'">
+          <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 1rem;">
+            <div style="flex: 1; min-width: 200px;">
+              <p style="margin: 0 0 0.5rem; font-size: 1.3rem; font-weight: bold;">
+                ${eventTime} - ${event.title}
+              </p>
+              <p style="margin: 0 0 0.5rem; font-size: 0.95rem; opacity: 0.95;">
+                ${event.description.substring(0, 120)}${event.description.length > 120 ? '...' : ''}
+              </p>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">
+                ${badgeStr}
+              </p>
+            </div>
+            <div style="text-align: right;">
+              <p style="margin: 0 0 0.5rem; font-size: 1.2rem;" title="Energy Cost">
+                ${energyIndicator}
+              </p>
+              ${event.rsvpLink ? `<span onclick="event.preventDefault(); event.stopPropagation(); window.open('${event.rsvpLink}', '_blank');" style="display: inline-block; margin-top: 0.5rem; padding: 8px 16px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem; cursor: pointer;">📝 RSVP</span>` : ''}
+            </div>
+          </div>
+        </div>
+      </a>
+    `;
+  });
+  
+  html += `
+    <div style="margin-top: 1.5rem;">
+      <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+        📅 View Full Calendar
+      </a>
+      <p style="margin: 0.75rem 0 0; font-size: 0.85rem; opacity: 0.85;">
+        Last updated: <span id="home-events-last-update">Just now</span> • ⏱️ ${meta?.durationMs ?? '-'} ms
+      </p>
+    </div>
+  `;
+  
+  container.innerHTML = html;
+  if (meta && meta.updatedAt) startHomeLastUpdateTicker(meta.updatedAt);
+}
+
+function displayNoEvents(meta) {
+  const container = document.getElementById('events-banner-content');
+  container.innerHTML = `
+    <h2 style="margin: 0 0 1rem; font-size: 2rem; color: white;">
+      📅 No Events This Week
+    </h2>
+    <p style="margin: 0 0 1.5rem; font-size: 1.1rem; opacity: 0.95;">
+      No events in the next 7 days. Check back soon!
+    </p>
+    <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+      📅 Go to Events Calendar
+    </a>
+    <p style="margin: 0.75rem 0 0; font-size: 0.85rem; opacity: 0.85;">
+      Last checked: <span id="home-events-last-update">Just now</span>${meta && typeof meta.durationMs === 'number' ? ` • ⏱️ ${meta.durationMs} ms` : ''}
+    </p>
+  `;
+  if (meta && meta.updatedAt) startHomeLastUpdateTicker(meta.updatedAt);
+}
+
+function displayError() {
+  const container = document.getElementById('events-banner-content');
+  container.innerHTML = `
+    <h2 style="margin: 0 0 1rem; font-size: 1.5rem; color: white;">
+      ⚠️ Unable to Load Events
+    </h2>
+    <p style="margin: 0 0 1.5rem; font-size: 1rem; opacity: 0.95;">
+      Connection issue. Please visit the events page directly.
+    </p>
+    <a href="/events/" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+      📅 View Events Calendar
+    </a>
+    <p style="margin: 0.75rem 0 0; font-size: 0.85rem; opacity: 0.85;">
+      Status: ${navigator.onLine ? 'Connection issue' : 'Offline'}
+    </p>
+  `;
+}
+
+// Load on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadDailyEvents);
+} else {
+  loadDailyEvents();
+}
+
+// Ticker to show relative "last updated" time on homepage banner
+function startHomeLastUpdateTicker(updatedAt) {
+  const el = document.getElementById('home-events-last-update');
+  if (!el) return;
+  function updateAgo() {
+    const now = new Date();
+    const diff = Math.max(0, Math.floor((now - updatedAt) / 1000));
+    let label;
+    if (diff < 5) label = 'Just now';
+    else if (diff < 60) label = `${diff}s ago`;
+    else {
+      const m = Math.floor(diff / 60);
+      label = `${m}m ago`;
+    }
+    el.setAttribute('title', updatedAt.toLocaleString());
+    const timeText = updatedAt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+    el.textContent = `${timeText} (${label})`;
+  }
+  updateAgo();
+  let ticks = 0;
+  const interval = setInterval(() => {
+    ticks++;
+    updateAgo();
+    if (ticks > 60) clearInterval(interval);
+  }, 1000);
+}
+</script>
+
+<hr />
+
+<!-- Featured Campaigns Banner -->
+<div id="campaigns-banner-container" class="gradient-banner" style="background: linear-gradient(135deg, #047857 0%, #065f46 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <h2 style="margin: 0 0 1rem; color: white; font-size: 1.8rem;">
+    <span aria-hidden="true">📣</span> Recent Campaigns
+  </h2>
+  
+  <div id="campaigns-banner-content" style="padding: 1rem;">
+    <p style="color: white; margin: 0;">Loading campaigns...</p>
+  </div>
+  
+  <div style="margin-top: 1rem;">
+    <a href="/campaigns/" style="display: inline-block; background: rgba(0,0,0,0.3); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(0,0,0,0.3)'">
+      📣 View All Campaigns
+    </a>
+  </div>
+</div>
+
+<script>
+async function loadHomeCampaigns() {
+  try {
+    const response = await fetch('https://empowrapp-campaigns.empowrapp08162025.workers.dev/api/campaigns');
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    
+    const data = await response.json();
+    let campaigns = [];
+    if (data.success && data.campaigns && Array.isArray(data.campaigns)) {
+      // Show only completed campaigns on homepage
+      campaigns = data.campaigns
+        .filter(c => c.status === 'completed')
+        .slice(0, 3); // Show max 3
+    }
+    
+    const container = document.getElementById('campaigns-banner-content');
+    
+    if (campaigns.length === 0) {
+      container.innerHTML = `
+        <div style="background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 8px; color: white; text-align: center;">
+          <p style="margin: 0; font-size: 1.1rem; color: white;">No recent campaigns yet. Check back soon!</p>
+        </div>
+      `;
+      return;
+    }
+    
+    container.innerHTML = campaigns.map(campaign => `
+      <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; text-align: left; color: white;">
+        <div style="display: inline-block; padding: 6px 12px; background: rgba(255,255,255,0.2); color: white; border-radius: 6px; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.75rem;">
+          ✓ Completed
+        </div>
+        <h3 style="margin: 0 0 1rem; color: white; font-size: 1.4rem; font-weight: bold;">
+          ${campaign.icon || '📣'} ${campaign.title}
+        </h3>
+        <p style="margin: 0 0 1rem; font-size: 1rem; line-height: 1.6; color: white;">
+          ${campaign.summary || ''}
+        </p>
+        ${campaign.organizer ? `
+          <p style="margin: 0 0 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.9);">
+            👤 <strong style="color: white;">Organized by:</strong> ${campaign.organizer}
+          </p>
+        ` : ''}
+        ${campaign.nextStepsUrl ? `
+          <a href="${campaign.nextStepsUrl}" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             style="display: inline-block; background: white; color: #065f46; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); margin-top: 0.5rem;">
+            👉 Follow for Updates
+          </a>
+        ` : ''}
+      </div>
+    `).join('');
+    
+  } catch (error) {
+    console.error('Failed to load campaigns:', error);
+    document.getElementById('campaigns-banner-content').innerHTML = `
+      <div style="background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 8px; color: white; text-align: center;">
+        <p style="margin: 0; color: white;">Unable to load campaigns. Please try again later.</p>
+      </div>
+    `;
+  }
+}
+
+// Load on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadHomeCampaigns);
+} else {
+  loadHomeCampaigns();
+}
+</script>
+
+<hr />
+
+<!-- Injured Worker's Legal Side Podcast -->
+<div class="gradient-banner" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <h2 style="margin: 0 0 0.5rem; color: white; font-size: 1.8rem;">
+    <span aria-hidden="true">🎙️</span> Featured Podcast
+    <span class="badge badge--new" style="background: rgba(0,0,0,0.3); color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Weekly episodes">Weekly</span>
+  </h2>
+  
+  <div style="background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 8px; margin: 1rem 0; text-align: left; color: white;">
+    <h3 style="margin: 0 0 1rem; color: white; font-size: 1.6rem; font-weight: bold;">
+      ⚖️ The Injured Worker's Legal Side with Richard and Paul
+    </h3>
+    
+    <p style="margin: 0 0 1rem; font-size: 1.1rem; line-height: 1.6; color: white;">
+      A weekly podcast discussing various issues that many injured workers face when they are on WSIB. 
+      <strong style="color: white;">Real legal insights from experienced professionals helping injured workers across Ontario.</strong>
+    </p>
+    
+    <p style="margin: 0 0 1.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.9);">
+      👤 <strong style="color: white;">Hosted by:</strong> Richard Fink (Lawyer) &amp; Paul Taylor (Paralegal)
+    </p>
+    
+    <div style="background: rgba(0,0,0,0.25); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border: 2px solid rgba(255,255,255,0.2);">
+      <p style="margin: 0 0 1rem; font-size: 1.05rem; color: white; font-weight: 600;">
+        🔗 Need WSIB assistance or want to participate in the podcast?
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <div>
+          <p style="margin: 0; font-size: 0.9rem; color: #fecaca; font-weight: 600;">Richard Fink Law</p>
+          <a href="https://www.finklegal.com/" target="_blank" rel="noopener noreferrer" style="color: #fef2f2; text-decoration: underline; font-size: 0.95rem; font-weight: 500;">finklegal.com</a>
+        </div>
+        <div>
+          <p style="margin: 0; font-size: 0.9rem; color: #fecaca; font-weight: 600;">Paul's Paralegal</p>
+          <a href="https://paulsparalegal.ca/" target="_blank" rel="noopener noreferrer" style="color: #fef2f2; text-decoration: underline; font-size: 0.95rem; font-weight: 500;">paulsparalegal.ca</a>
+        </div>
+      </div>
+    </div>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; justify-content: center;">
+      <a href="https://www.youtube.com/@finkbornsteinlawfirm1184" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #991b1b; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.3)'">
+        ▶️ Watch on YouTube
+      </a>
+      
+      <a href="https://www.youtube.com/@finkbornsteinlawfirm1184?sub_confirmation=1" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: rgba(0,0,0,0.3); color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(0,0,0,0.3)'">
+        🔔 Subscribe
+      </a>
+    </div>
+    
+    <p style="margin: 1.5rem 0 0; font-size: 0.9rem; color: rgba(255,255,255,0.85); text-align: center; font-style: italic;">
+      💡 <strong style="color: white;">Help spread the word!</strong> If you like the podcast videos, please like and subscribe to support Richard and Paul's work helping injured workers.
+    </p>
+  </div>
+</div>
+
+<hr />
+
+<!-- The Disability Bulletin - Community Spotlight Banner -->
+<div class="gradient-banner" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  <h2 style="margin: 0 0 0.5rem; color: white; font-size: 1.8rem;">
+    <span aria-hidden="true">📰</span> Community Spotlight
+    <span class="badge badge--trending" style="background: #ec4899; color: white; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;" aria-label="Trending">Trending</span>
+  </h2>
+  
+  <div style="background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 8px; margin: 1rem 0; text-align: left;">
+    <h3 style="margin: 0 0 1rem; color: white; font-size: 1.6rem; font-weight: bold;">
+      📰 The Disability Bulletin
+    </h3>
+    
+    <p style="margin: 0 0 1rem; font-size: 1.05rem; line-height: 1.6; color: white;">
+      Independent disability journalism by <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="color: #a7f3d0; text-decoration: underline; font-weight: 600;">@ODSPoor</a> and <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="color: #a7f3d0; text-decoration: underline; font-weight: 600;">@emilypot_</a>. Real stories about ODSP, WSIB, and disability policy—<strong>written by disabled people, for disabled people.</strong>
+    </p>
+    
+    <p style="margin: 0 0 1.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.9); padding: 1rem; background: rgba(0,0,0,0.25); border-left: 3px solid #a7f3d0; border-radius: 4px;">
+      <span aria-hidden="true">✨</span> <strong>Why we love it:</strong> Authentic disabled voices. Breaking policy news. No corporate speak. Community-focused, independent journalism.
+    </p>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+      <a href="https://linktr.ee/thedisabilitybulletin" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #6d28d9; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.3)'">
+        🔗 All Links (Linktree)
+      </a>
+      <a href="https://thedisabilitybulletin.blogspot.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: white; color: #6d28d9; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.3)'">
+        📰 Read Latest Posts
+      </a>
+      <a href="/community/disability-bulletin/" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; border: 2px solid white; transition: transform 0.2s, background 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.2)'">
+        👥 More Community Spotlights
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<!-- Featured Community Members Carousel -->
+<div style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); padding: 2.5rem; border-radius: 12px; margin: 2rem 0; color: #1f2937;">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .carousel-container {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%) !important;
+        color: #f3f4f6 !important;
+      }
+      .carousel-container h2 {
+        color: #f0f9ff !important;
+      }
+      .carousel-container > p {
+        color: #e5e7eb !important;
+      }
+      .carousel-card {
+        background: #374151 !important;
+        border-color: inherit !important;
+      }
+      .carousel-card p {
+        color: #e5e7eb !important;
+      }
+      .carousel-secondary-btn {
+        background: #4b5563 !important;
+        color: inherit !important;
+      }
+      .carousel-secondary-btn:hover {
+        background: #6b7280 !important;
+      }
+    }
+  </style>
+  <div class="carousel-container" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); padding: 2.5rem; border-radius: 12px; color: #1f2937;">
+    <h2 style="margin: 0 0 0.5rem; font-size: 1.8rem; color: #1f2937;">
+      <span aria-hidden="true">👥</span> Follow These Voices
+    </h2>
+    <p style="margin: 0 0 2rem; font-size: 1.05rem; color: #4b5563;">
+      Real disability advocates and community leaders making a difference. <strong>Like and follow them on X to amplify their work!</strong>
+    </p>
+
+    <!-- Carousel Container -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+      
+      <!-- Card 1: Emily Pot -->
+      <div class="carousel-card" style="background: white; border: 2px solid #f97316; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+        <div style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+          <h3 style="margin: 0; font-size: 1.3rem;">📰 Emily Pot</h3>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Disability Journalist</p>
+        </div>
+        <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
+          Independent disability journalist &amp; co-founder of The Disability Bulletin. Breaking disability news, centering lived experience, holding power accountable.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+          <a href="https://x.com/emilypot_" target="_blank" rel="noopener noreferrer" style="display: block; background: #f97316; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#ea580c'" onmouseout="this.style.background='#f97316'">
+            🐦 Follow on X
+          </a>
+          <a href="https://linktr.ee/thedisabilitybulletin" target="_blank" rel="noopener noreferrer" class="carousel-secondary-btn" style="display: block; background: #f3f4f6; color: #f97316; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #f97316; transition: background 0.2s;" onmouseover="this.style.background='#fee2e2'" onmouseout="this.style.background='#f3f4f6'">
+            🔗 The Bulletin
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Occupy WSIB -->
+      <div class="carousel-card" style="background: white; border: 2px solid #22c55e; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+        <div style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+          <h3 style="margin: 0; font-size: 1.3rem;">✊ Occupy WSIB</h3>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Workers' Rights Activist</p>
+        </div>
+        <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
+          Injured workers' rights activist organizing in London, Ontario. Conducting public pickets and demonstrations to expose WSIB and keep focus on injured workers' rights.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+          <a href="https://x.com/occupywsib" target="_blank" rel="noopener noreferrer" style="display: block; background: #22c55e; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#16a34a'" onmouseout="this.style.background='#22c55e'">
+            🐦 Follow on X
+          </a>
+          <a href="/community/" class="carousel-secondary-btn" style="display: block; background: #f3f4f6; color: #22c55e; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #22c55e; transition: background 0.2s;" onmouseover="this.style.background='#dcfce7'" onmouseout="this.style.background='#f3f4f6'">
+            👥 Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: CrAP We Matter -->
+      <div class="carousel-card" style="background: white; border: 2px solid #6366f1; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+        <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+          <h3 style="margin: 0; font-size: 1.3rem;">♿ democracy4all</h3>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Chronic Illness Advocates</p>
+        </div>
+        <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
+          Bold voices centering chronic illness perspectives and authentic disability truths.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+          <a href="https://x.com/CrAPwematter" target="_blank" rel="noopener noreferrer" style="display: block; background: #6366f1; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
+            🐦 Follow on X
+          </a>
+          <a href="/community/" class="carousel-secondary-btn" style="display: block; background: #f3f4f6; color: #6366f1; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #6366f1; transition: background 0.2s;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f3f4f6'">
+            👥 Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4: Lissa Beaulieu -->
+      <div class="carousel-card" style="background: white; border: 2px solid #f59e0b; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+        <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+          <h3 style="margin: 0; font-size: 1.3rem;">🔥 Lissa Beaulieu</h3>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Founder &amp; Disability Rights Activist</p>
+        </div>
+        <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
+          Founder of 3mpwrApp, Board Member - Thunder Bay &amp; District Injured Workers Support Group. Building community tools for disability justice, fighting WSIB injustice, creative activism.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+          <a href="https://x.com/ODSPoor" target="_blank" rel="noopener noreferrer" style="display: block; background: #f59e0b; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#d97706'" onmouseout="this.style.background='#f59e0b'">
+            🐦 Follow on X
+          </a>
+          <a href="/about/" class="carousel-secondary-btn" style="display: block; background: #f3f4f6; color: #f59e0b; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #f59e0b; transition: background 0.2s;" onmouseover="this.style.background='#fef3c7'" onmouseout="this.style.background='#f3f4f6'">
+            📖 About
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 5: Mitchell Tremblay -->
+      <div class="carousel-card" style="background: white; border: 2px solid #3b82f6; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+        <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+          <h3 style="margin: 0; font-size: 1.3rem;">🇨🇦 Mitchell Tremblay</h3>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.9;">Disability Advocate</p>
+        </div>
+        <p class="carousel-card" style="margin: 0 0 1rem; color: #1f2937; font-size: 1rem; font-weight: 500;">
+          Disability Rights Advocate &amp; Co-founder of The Disability Bulletin. Fighting for ODSP reform, disability rights, and economic justice for disabled Canadians.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-direction: column;">
+          <a href="https://x.com/ODSPoverty" target="_blank" rel="noopener noreferrer" style="display: block; background: #3b82f6; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s;" onmouseover="this.style.background='#2563eb'" onmouseout="this.style.background='#3b82f6'">
+            🐦 Follow on X
+          </a>
+          <a href="https://linktr.ee/odspoor" target="_blank" rel="noopener noreferrer" class="carousel-secondary-btn" style="display: block; background: #f3f4f6; color: #3b82f6; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; text-align: center; border: 2px solid #3b82f6; transition: background 0.2s;" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='#f3f4f6'">
+            🔗 Linktree
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #d1d5db;">
+      <p style="margin: 0 0 1rem; color: #4b5563; font-size: 1rem;">
+        <strong>👉 Your likes, follows, and shares help amplify these voices and the disability community.</strong>
+      </p>
+      <a href="/community-spotlight/" style="display: inline-block; background: #1f2937; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s;" onmouseover="this.style.background='#111827'" onmouseout="this.style.background='#1f2937'">
+        🌟 View All Community Members
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<h2 id="-built-differentby-design"><span aria-hidden="true">✨</span> Built Different—By Design</h2>
+
+<div class="gradient-banner-pink" style="color: white !important;">
+  <h3 style="margin: 0 0 1rem; font-size: 1.3rem; color: white !important;"><span aria-hidden="true">🎯</span> Thoughtfully Designed for Real Lives</h3>
+  <p style="margin: 0 0 1rem; font-size: 1.05rem; color: white !important;">
+    3mpwrApp isn't just accessible—it's **thoughtfully built** with features you won't find anywhere else:
+  </p>
+  
+  <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; color: white !important;">
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
+      <span style="position: absolute; left: 0;" aria-hidden="true">🧠</span>
+      <strong style="color: white !important;">Adaptive cognitive support</strong> that responds to how you're feeling right now
+    </li>
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
+      <span style="position: absolute; left: 0;" aria-hidden="true">💙</span>
+      <strong style="color: white !important;">Wellness-first features</strong> designed with your wellbeing in mind
+    </li>
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
+      <span style="position: absolute; left: 0;" aria-hidden="true">⏰</span>
+      <strong style="color: white !important;">Smart check-ins</strong> that respect your time and energy
+    </li>
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
+      <span style="position: absolute; left: 0;" aria-hidden="true">🎯</span>
+      <strong style="color: white !important;">Hidden helpers</strong> that appear when you need support most
+    </li>
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
+      <span style="position: absolute; left: 0;" aria-hidden="true">🌟</span>
+      <strong style="color: white !important;">Progress celebrations</strong> for every step forward, big or small
+    </li>
+    <li style="padding-left: 1.5rem; position: relative; color: white !important;">
+      <span style="position: absolute; left: 0;" aria-hidden="true">🎮</span>
+      <strong style="color: white !important;">Thoughtful surprises</strong> that make using the app a positive experience
+    </li>
+  </ul>
+  
+  <p style="margin: 1rem 0 0; font-size: 0.95rem; font-style: italic; color: white !important;">
+    <span aria-hidden="true">💡</span> <strong style="color: white !important;">Note:</strong> The more you use 3mpwrApp, the more helpful features you'll discover—all designed to support you.
+  </p>
+</div>
+
+<hr />
+
+<h2 id="why-3mpwr">Why 3mpwr?</h2>
+
+<p><span class="energy-cost" data-energy="2" aria-label="Energy cost: light">🔋🔋 Energy: Light</span>
+<button class="email-section-btn" data-section="why-3mpwr" aria-label="Email this section to yourself">📧 Email this section</button></p>
+
+<p><strong>A Health &amp; Fitness, Medical, and Social Support Platform</strong></p>
+
+<p>3mpwr provides practical tools and a vibrant community to help you:</p>
+<ul>
+  <li><strong>Connect</strong> with others who understand your journey (Social)</li>
+  <li><strong>Advocate</strong> for your rights and meaningful change (Self-help)</li>
+  <li><strong>Track</strong> your wellness, medications, and health data (Health &amp; Fitness, Medical)</li>
+  <li><strong>Personalize</strong> your experience with customizable accessibility features (Personalization)</li>
+  <li><strong>Learn</strong> about resources, rights, and support available to you</li>
+  <li><strong>Grow</strong> through peer support and shared experiences</li>
+</ul>
+
+<div class="social-share" role="region" aria-label="Share this content on social media">
+  <div class="social-share__header">
+    <span class="social-share__label">
+      <span aria-hidden="true">📢</span> Share with #3mpwrApp
+    </span>
+  </div>
+  
+  <div class="social-share__buttons">
+    
+    <button class="social-share__btn social-share__btn--native" data-share-native="" data-title="3mpwrApp - Community-Powered Support Platform" data-text="3mpwrApp - Community-Powered Support Platform - 3mpwrApp | https://3mpwrapp.pages.dev #3mpwrApp" data-url="https://3mpwrapp.pages.dev/index-old-backup/" aria-label="Share via device sharing options" title="Share">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z" />
+      </svg>
+      <span class="social-share__text">Share</span>
+    </button>
+
+    
+    <a class="social-share__btn social-share__btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F&amp;hashtag=%233mpwrApp" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook with #3mpwrApp" title="Share on Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor" />
+</svg>
+<span class="social-share__text">Facebook</span>
+    </a>
+
+    
+    <a class="social-share__btn social-share__btn--twitter" href="https://twitter.com/intent/tweet?text=3mpwrApp+-+Community-Powered+Support+Platform+-+3mpwrApp+%7C+https%3A%2F%2F3mpwrapp.pages.dev+%233mpwrApp&amp;url=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter) with #3mpwrApp" title="Share on X">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+</svg>
+<span class="social-share__text">X</span>
+    </a>
+
+    
+    <a class="social-share__btn social-share__btn--linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+      <span class="social-share__text">LinkedIn</span>
+    </a>
+
+    
+    <button class="social-share__btn social-share__btn--copy" data-share-copy="" data-url="https://3mpwrapp.pages.dev/index-old-backup/" data-text="3mpwrApp - Community-Powered Support Platform - 3mpwrApp | https://3mpwrapp.pages.dev #3mpwrApp" aria-label="Copy link to clipboard with #3mpwrApp" title="Copy link">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+      </svg>
+      <span class="social-share__text">Copy</span>
+    </button>
+  </div>
+
+  
+  <div class="social-share__footer">
+    <small class="social-share__hashtag">
+      Help spread the word about 3mpwrApp! Use <strong>#3mpwrApp</strong> when sharing.
+    </small>
+  </div>
+  
+</div>
+<hr />
+
+<h2 id="features">Features</h2>
+
+<p><span class="energy-cost" data-energy="3" aria-label="Energy cost: medium">🔋🔋🔋 Energy: Medium</span>
+<button class="email-section-btn" data-section="features" aria-label="Email this section to yourself">📧 Email this section</button></p>
+
+<ul class="features-grid" aria-label="Key features">
+  <li>
+    <h3>Community Support</h3>
+    <p>Connect with others, share stories, and build solidarity in province-specific spaces.</p>
+    <p><small><a href="/user-guide#community">📖 Learn more in User Guide →</a></small></p>
+  </li>
+  <li>
+    <h3>Advocacy &amp; Campaigns</h3>
+    <p>Access campaign resources and tools to help drive change in policies and workplaces.</p>
+    <p><small><a href="/user-guide#advocacy-tools">📖 Learn more in User Guide →</a></small></p>
+  </li>
+  <li>
+    <h3>Educational Resources</h3>
+    <p>Learn your rights, access guides and templates, and stay informed about important issues.</p>
+    <p><small><a href="/user-guide#resources">📖 Learn more in User Guide →</a></small></p>
+  </li>
+  <li>
+    <h3>Podcasts &amp; Updates</h3>
+    <p>Listen to stories, insights, and conversations from the community.</p>
+    <p><small><a href="/user-guide#podcasts">📖 Learn more in User Guide →</a></small></p>
+  </li>
+</ul>
+
+<div class="social-share social-share--compact" role="region" aria-label="Share this content on social media">
+  <div class="social-share__header">
+    <span class="social-share__label">
+      <span aria-hidden="true">📢</span> Share
+    </span>
+  </div>
+  
+  <div class="social-share__buttons">
+    
+    <button class="social-share__btn social-share__btn--native" data-share-native="" data-title="3mpwrApp Features - Community, Advocacy &amp; More" data-text="3mpwrApp Features - Community, Advocacy &amp; More - 3mpwrApp | https://3mpwrapp.pages.dev #3mpwrApp" data-url="https://3mpwrapp.pages.dev/index-old-backup/" aria-label="Share via device sharing options" title="Share">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z" />
+      </svg>
+      <span class="social-share__text">Share</span>
+    </button>
+
+    
+    <a class="social-share__btn social-share__btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F&amp;hashtag=%233mpwrApp" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook with #3mpwrApp" title="Share on Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor" />
+</svg>
+<span class="social-share__text">Facebook</span>
+    </a>
+
+    
+    <a class="social-share__btn social-share__btn--twitter" href="https://twitter.com/intent/tweet?text=3mpwrApp+Features+-+Community%2C+Advocacy+%26+More+-+3mpwrApp+%7C+https%3A%2F%2F3mpwrapp.pages.dev+%233mpwrApp&amp;url=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter) with #3mpwrApp" title="Share on X">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+</svg>
+<span class="social-share__text">X</span>
+    </a>
+
+    
+    <a class="social-share__btn social-share__btn--linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+      <span class="social-share__text">LinkedIn</span>
+    </a>
+
+    
+    <button class="social-share__btn social-share__btn--copy" data-share-copy="" data-url="https://3mpwrapp.pages.dev/index-old-backup/" data-text="3mpwrApp Features - Community, Advocacy &amp; More - 3mpwrApp | https://3mpwrapp.pages.dev #3mpwrApp" aria-label="Copy link to clipboard with #3mpwrApp" title="Copy link">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+      </svg>
+      <span class="social-share__text">Copy</span>
+    </button>
+  </div>
+
+  
+</div>
+<hr />
+
+<h2 id="get-the-app">Get the app</h2>
+
+<p>Mobile apps are in progress. Store availability is coming soon.</p>
+
+<ul class="store-badges" aria-label="App store availability">
+  <li>
+    <figure class="store-badge">
+      <img src="/assets/images/app-store-coming-soon.svg" alt="" loading="lazy" decoding="async" />
+      <figcaption class="sr-only">App Store — coming soon</figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure class="store-badge">
+      <img src="/assets/images/google-play-coming-soon.svg" alt="" loading="lazy" decoding="async" />
+      <figcaption class="sr-only">Google Play — coming soon</figcaption>
+    </figure>
+  </li>
+</ul>
+
+<!-- When live, replace the figures above with anchors like:
+<a class="store-link" href="https://apps.apple.com/app/idYOUR_ID">
+  <img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" loading="lazy" decoding="async">
+</a>
+-->
+
+<hr />
+
+<h2 id="get-involved">Get Involved</h2>
+
+<p>Ready to join the movement? Here’s how you can get started:</p>
+
+<div class="gradient-banner" style="color: white !important;">
+  <h3 style="margin: 0 0 0.5rem; color: white !important;"><span aria-hidden="true">🚀</span> Phase 1: Closed Internal Testing NOW ACTIVE (Slow Release)</h3>
+  <p style="margin: 0 0 0.5rem; font-size: 0.95rem; color: white !important; font-weight: 600;">✅ Production Ready: 721 Tests Passing | 🌍 Available Canada-wide (Coast to Coast to Coast) + USA Lite 🇨🇦🇺🇸</p>
+  <p style="margin: 0 0 1rem; font-size: 1rem; color: white !important;">Be among the first testers to shape the future of disability advocacy technology for injured workers and persons with disabilities across North America.</p>
+  <a href="https://forms.gle/46yVp37vfitfitLT9" target="_blank" rel="noopener noreferrer" class="cta-button" style="display: inline-block; background: #ffffff !important; color: #5568d3 !important; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Sign Up for Beta Testing →</a>
+  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: white !important;"><a href="/app-waitlist" style="color: white !important; text-decoration: underline; font-weight: 500;">Learn more about the app waitlist</a> | <a href="/beta-guide" style="color: white !important; text-decoration: underline; font-weight: 500;">Beta testing guide</a></p>
+</div>
+
+<ul>
+  <li><a href="/user-guide"><strong><span aria-hidden="true">📖</span> Read Our Complete User Guide</strong></a> – <strong>NEW Phase 2!</strong> Comprehensive guide with Disability Wizard, Legal Workflow Automation, Indigenous Languages, and more (<a href="/assets/downloads/3mpwrapp-user-guide-full.pdf">Download PDF</a>)</li>
+  <li><a href="/features">Explore All Features</a> – Detailed step-by-step guides for every feature</li>
+  <li><a href="/newsletter">Subscribe to Our Newsletter</a> – Stay updated with the latest news and resources</li>
+  <li><a href="/blog">Explore Our Blog</a> – Read stories, updates, and important information</li>
+</ul>
+
+<div class="social-share" role="region" aria-label="Share this content on social media">
+  <div class="social-share__header">
+    <span class="social-share__label">
+      <span aria-hidden="true">📢</span> Share with #3mpwrApp
+    </span>
+  </div>
+  
+  <div class="social-share__buttons">
+    
+    <button class="social-share__btn social-share__btn--native" data-share-native="" data-title="Join 3mpwrApp Beta Testing - Shape the Future" data-text="Join 3mpwrApp Beta Testing - Shape the Future - 3mpwrApp | https://3mpwrapp.pages.dev #3mpwrApp" data-url="https://3mpwrapp.pages.dev/index-old-backup/" aria-label="Share via device sharing options" title="Share">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z" />
+      </svg>
+      <span class="social-share__text">Share</span>
+    </button>
+
+    
+    <a class="social-share__btn social-share__btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F&amp;hashtag=%233mpwrApp" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook with #3mpwrApp" title="Share on Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor" />
+</svg>
+<span class="social-share__text">Facebook</span>
+    </a>
+
+    
+    <a class="social-share__btn social-share__btn--twitter" href="https://twitter.com/intent/tweet?text=Join+3mpwrApp+Beta+Testing+-+Shape+the+Future+-+3mpwrApp+%7C+https%3A%2F%2F3mpwrapp.pages.dev+%233mpwrApp&amp;url=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter) with #3mpwrApp" title="Share on X">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+</svg>
+<span class="social-share__text">X</span>
+    </a>
+
+    
+    <a class="social-share__btn social-share__btn--linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+      <span class="social-share__text">LinkedIn</span>
+    </a>
+
+    
+    <button class="social-share__btn social-share__btn--copy" data-share-copy="" data-url="https://3mpwrapp.pages.dev/index-old-backup/" data-text="Join 3mpwrApp Beta Testing - Shape the Future - 3mpwrApp | https://3mpwrapp.pages.dev #3mpwrApp" aria-label="Copy link to clipboard with #3mpwrApp" title="Copy link">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+      </svg>
+      <span class="social-share__text">Copy</span>
+    </button>
+  </div>
+
+  
+  <div class="social-share__footer">
+    <small class="social-share__hashtag">
+      Help spread the word about 3mpwrApp! Use <strong>#3mpwrApp</strong> when sharing.
+    </small>
+  </div>
+  
+</div>
+<hr />
+
+<h2 id="curated-daily-highlights">Curated Daily Highlights</h2>
+
+<section class="highlight-banner daily-curation-highlights" role="region" aria-labelledby="latest-curated">
+  
+  
+  
+  
+  
+  
+  <h3 id="latest-curated">
+    <span aria-hidden="true">🎯</span> Daily highlights from across Canada
+    
+  </h3>
+  <p class="highlight-banner__desc">A quick, accessible round-up of community stories, resources, and calls-to-action <strong>updated automatically every day</strong>.</p>
+  <div class="highlight-banner__actions">
+  <a class="highlight-banner__button" href="/blog/#curated-daily" aria-describedby="curated-daily-desc">
+      Check out today's curated feed →
+    </a>
+    <span id="curated-daily-desc" class="sr-only">This link takes you to the curated daily feed section on our blog.</span>
+  </div>
+
+  
+    <p class="highlight-banner__desc" style="margin:0;"><strong>📅 Today is March 29, 2026</strong> – No highlights yet today. Check back soon - new content posted daily at 9 AM UTC!</p>
+  
+</section>
+<hr />
+
+<h2 id="-legal--privacy"><span aria-hidden="true">📄</span> Legal &amp; Privacy</h2>
+
+<p>We’re committed to transparency and protecting your rights:</p>
+
+<ul>
+  <li><strong><a href="/terms/">Terms of Service</a></strong> - Our terms and comprehensive disclaimers</li>
+  <li><strong><a href="/privacy/">Privacy Policy</a></strong> - How we handle your data</li>
+  <li><strong><a href="/data-ownership/">Data Ownership</a></strong> - Your 100% data sovereignty guarantee</li>
+  <li><strong><a href="/privacy-controls/">Privacy Controls</a></strong> - Manage your privacy settings</li>
+  <li><strong><a href="/community/guidelines/">Community Guidelines</a></strong> - Community standards</li>
+  <li><strong><a href="/legal/disclaimers/">Legal Disclaimers</a></strong> - All disclaimers in one place</li>
+</ul>
+
+<hr />
+
+<section aria-labelledby="latest-posts">
+  <h2 id="latest-posts"><span aria-hidden="true">📰</span> Latest from the blog <span class="badge badge--new" aria-label="Automatically updated">Auto-updated</span></h2>
+  <p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Showing the 3 most recent blog posts (excluding daily highlights) – automatically stays current</p>
+  <ul class="post-list">
+    
+    
+      
+        <li>
+          <h3 style="margin-bottom: 0.25rem;">
+            <a href="/updates/2026/03/27/dev-update-dev-update-2026-03-27/">Dev Update: What's Been Happening in 3mpwrApp</a>
+          </h3>
+          <p><small>March 27, 2026</small></p>
+          
+          <p>A look at the latest improvements, fixes, and behind-the-scenes work happening in 3mpwrApp</p>
+          
+        </li>
+        
+      
+      
+    
+      
+      
+    
+      
+        <li>
+          <h3 style="margin-bottom: 0.25rem;">
+            <a href="/features/2026/03/26/feature-spotlight-campaign-coordination/">Feature Spotlight: Campaign Coordination</a>
+          </h3>
+          <p><small>March 26, 2026</small></p>
+          
+          <p>Organize advocacy campaigns with task management, collaboration tools, and campaign rooms</p>
+          
+        </li>
+        
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+        <li>
+          <h3 style="margin-bottom: 0.25rem;">
+            <a href="/community/2026/03/25/community-disability-justice-vs-disability-charity-our-operating-principle/">Disability Justice vs Disability Charity: Our Operating Principle</a>
+          </h3>
+          <p><small>March 25, 2026</small></p>
+          
+          <p>3mpwrApp is built on disability justice principles â€” not disability charity. Here is what that means in practice.</p>
+          
+        </li>
+        
+      
+      
+  </ul>
+  <p><a href="/blog">See all posts →</a></p>
+</section>
+<hr />
+
+<h2 id="-weekly-updates-auto-updated"><span aria-hidden="true">📅</span> Weekly updates <span class="badge badge--new" aria-label="Automatically updated">Auto-updated</span></h2>
+
+<p style="margin: 0 0 1rem; font-size: 0.95rem; opacity: 0.9;">Showing weekly updates from the past 7 days – automatically filtered to current week</p>
+<div class="weekly-swiper" role="region" aria-labelledby="weekly-title">
+  <h3 id="weekly-title" class="sr-only">Weekly update posts</h3>
+  <div class="weekly-track" data-weekly-track="">
+    
+    <article class="weekly-card">
+      <h3 class="weekly-card__title"><a href="/updates/2026/03/23/weekly-update-week-13/">Week 13 — Building 3mpwrApp in the Open</a></h3>
+      <p class="weekly-card__meta">March 23, 2026</p>
+      <p class="weekly-card__excerpt">This week's progress on 3mpwrApp. Real-time updates from a founder who fell through the cracks and built this app so you don't have to.</p>
+    </article>
+    
+  </div>
+  <div class="weekly-controls" role="group" aria-label="Weekly navigation">
+    <button class="weekly-btn" data-dir="-1" aria-label="Previous">‹</button>
+    <button class="weekly-btn" data-dir="1" aria-label="Next">›</button>
+    <a class="weekly-all" href="/blog">All posts →</a>
+  </div>
+</div>
+<!-- Note: CSS styles moved to external stylesheets per W3C HTML5 spec - style elements must be in head, not in main content area -->
+<!-- The .weekly-* and related styles are now in assets/css/homepage-animations.css -->
+<p>.weekly-all:hover {
+  text-decoration: underline;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .weekly-track { scroll-behavior: smooth; }
+}
+&lt;/style&gt;</p>
+
+<script>
+(function(){
+  var track = document.querySelector('[data-weekly-track]');
+  if (!track) return;
+  var step = 300;
+  function byDir(dir){ try { track.scrollBy({ left: step*dir, top: 0, behavior: (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth') }); } catch(e){ track.scrollLeft += step*dir; } }
+  document.querySelectorAll('.weekly-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ var dir = parseInt(btn.getAttribute('data-dir')||'1',10); byDir(dir); });
+  });
+})();
+</script>
+
+<hr />
+
+<h2 id="-meet-the-creator">🔥 Meet the Creator</h2>
+
+<p><strong>Lissa Beaulieu — “The Phoenix”</strong></p>
+
+<p>Former PSW. Injured worker. Person with disabilities. Now building the tools I wish I had.</p>
+
+<p><em>“The system isn’t broken—it’s working exactly as designed. But when we organize and expose the truth, we become unstoppable.”</em></p>
+
+<p><strong>From the ashes, we rise. 🔥</strong></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>🔗 <a href="/about/#meet-the-founder">Read My Full Story →</a></td>
+      <td>🌐 <a href="https://injuredworkersunite.pages.dev/">Injured Workers Unite</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="connect-with-us">Connect With Us</h2>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 3px solid #ffd700;">
+  <h3 style="color: #fff; margin-top: 0; font-size: 1.4em; text-align: center;">🌟 Join Our Community! 🌟</h3>
+  <p style="color: #fff; text-align: center; font-size: 1.1em; margin: 10px 0;">
+    <strong>New!</strong> Connect with fellow 3mpwr users, share experiences, and get support in the <strong>3mpwr App Hub</strong>
+  </p>
+  <div style="text-align: center; margin: 15px 0;">
+    <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #ffd700; color: #333; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 3px 10px rgba(0,0,0,0.3); transition: transform 0.2s;">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor" />
+</svg>
+Join 3mpwr App Hub on Facebook →
+    </a>
+  </div>
+</div>
+
+<p>Follow 3mpwr on social media to stay connected and be part of the community:</p>
+
+<p style="margin: 0.5rem 0 1rem; font-size: 1.05rem; color: #4b5563;">
+  <strong>Use <span style="background: #f3f4f6; padding: 3px 8px; border-radius: 4px; font-family: monospace; color: #1f2937;">#3mpwrApp</span> to join the conversation!</strong>
+</p>
+
+<ul aria-label="Social links" class="socials-list">
+  <li><a href="https://www.facebook.com/3mpowrapp" target="_blank" rel="noopener noreferrer">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor" />
+</svg>
+Facebook</a> – Follow us for updates and community news</li>
+  <li><a href="https://x.com/3mpowrApp0816" target="_blank" rel="noopener noreferrer">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+</svg>
+X (Twitter)</a> – Join the conversation</li>
+  <li><a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Instagram</title>
+	<rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2" />
+	<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+	<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+</svg>
+Instagram</a> – See our latest posts and stories</li>
+  <li><a href="https://www.youtube.com/3mpwrApp" target="_blank" rel="noopener noreferrer">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>YouTube</title>
+	<path d="M3 9a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9z" fill="currentColor" />
+	<path d="M10 9.5l5.5 2.5L10 14.5V9.5z" fill="#fff" />
+</svg>
+YouTube</a> – Watch videos and live sessions</li>
+  <li><a href="https://www.tiktok.com/@3mpwrapp" target="_blank" rel="noopener noreferrer">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>TikTok</title>
+	<path d="M14 4v5.2c1.2.9 2.6 1.4 4 1.5v2a7.1 7.1 0 0 1-4-1.3V16a4 4 0 1 1-4-4h1.5v2H10a2 2 0 1 0 2 2V4h2z" fill="currentColor" />
+</svg>
+TikTok</a> – Short clips and updates</li>
+  <li><a href="https://discord.gg/fJB2DJ7Yn" target="_blank" rel="noopener noreferrer">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Link</title>
+	<circle cx="12" cy="12" r="10" fill="currentColor" />
+</svg>
+Discord</a> – Chat with the community in real-time</li>
+</ul>
+
+<div class="social-share social-share--compact" role="region" aria-label="Share this content on social media">
+  <div class="social-share__header">
+    <span class="social-share__label">
+      <span aria-hidden="true">📢</span> Share
+    </span>
+  </div>
+  
+  <div class="social-share__buttons">
+    
+    <button class="social-share__btn social-share__btn--native" data-share-native="" data-title="Connect with 3mpwrApp Community" data-text="Connect with 3mpwrApp Community - 3mpwrApp | https://3mpwrapp.pages.dev #3mpwrApp" data-url="https://3mpwrapp.pages.dev/index-old-backup/" aria-label="Share via device sharing options" title="Share">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z" />
+      </svg>
+      <span class="social-share__text">Share</span>
+    </button>
+
+    
+    <a class="social-share__btn social-share__btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F&amp;hashtag=%233mpwrApp" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook with #3mpwrApp" title="Share on Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor" />
+</svg>
+<span class="social-share__text">Facebook</span>
+    </a>
+
+    
+    <a class="social-share__btn social-share__btn--twitter" href="https://twitter.com/intent/tweet?text=Connect+with+3mpwrApp+Community+-+3mpwrApp+%7C+https%3A%2F%2F3mpwrapp.pages.dev+%233mpwrApp&amp;url=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter) with #3mpwrApp" title="Share on X">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+</svg>
+<span class="social-share__text">X</span>
+    </a>
+
+    
+    <a class="social-share__btn social-share__btn--linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3mpwrapp.pages.dev%2Findex-old-backup%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+      <span class="social-share__text">LinkedIn</span>
+    </a>
+
+    
+    <button class="social-share__btn social-share__btn--copy" data-share-copy="" data-url="https://3mpwrapp.pages.dev/index-old-backup/" data-text="Connect with 3mpwrApp Community - 3mpwrApp | https://3mpwrapp.pages.dev #3mpwrApp" aria-label="Copy link to clipboard with #3mpwrApp" title="Copy link">
+      <svg class="social-share__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+      </svg>
+      <span class="social-share__text">Copy</span>
+    </button>
+  </div>
+
+  
+</div>
+<hr />
+
+<p><strong>Stay informed, empowered, and connected!</strong></p>
+
+<p>Questions? <a href="/contact">Contact us</a> — we’re here to help.</p>
+
+<hr />
+
+<!-- Community Counter -->
+<div class="community-stats-box" style="color: #1f2937 !important;">
+  <p style="margin: 0; font-size: 1.1rem; color: #1f2937 !important;"><strong style="color: #1f2937 !important;"><span aria-hidden="true">💚</span> Join Our Growing Community</strong></p>
+  <p style="margin: 0.5rem 0 0; color: #1f2937 !important;">
+    Currently launching Phase 1 closed beta - <a href="/beta" style="color: #0645ad !important;">sign up to be among the first testers</a>
+  </p>
+</div>
+
+<!-- Page Feedback -->
+<!-- Page Feedback Section - Consistent across all pages -->
+<div class="page-feedback" role="complementary">
+  <p><strong>💬 Was this page helpful?</strong></p>
+  <p>
+    <a href="/feedback?page=/index-old-backup/&amp;helpful=yes" class="feedback-btn feedback-yes" aria-label="Yes, this page was helpful">👍 Yes</a>
+    <a href="/feedback?page=/index-old-backup/&amp;helpful=no" class="feedback-btn feedback-no" aria-label="No, this page needs improvement">👎 No</a>
+    <a href="/feedback?page=/index-old-backup/" class="feedback-btn feedback-suggest" aria-label="Suggest improvements for this page">📝 Suggest improvements</a>
+  </p>
+  <p class="page-meta"><small>Last updated: October 29, 2025 | Next review: December 2025</small></p>
+</div>
+<!-- Homepage Styles & Scripts (external for performance) -->
+<link rel="stylesheet" href="/assets/css/design-system.css" />
+
+<link rel="stylesheet" href="/assets/css/homepage-animations.css" />
+
+<script src="/assets/js/accessibility-toolbar.js" defer=""></script>
+
+<script src="/assets/js/homepage-features.js" defer=""></script>
+
+<!-- REMOVED: 700+ lines of inline JavaScript moved to external file -->
+<!-- This improves: page load speed, caching, parsing performance -->
+
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <!-- Logo and Branding -->
+      <div class="footer-column footer-branding">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="3mpwrApp logo" width="64" height="64" loading="lazy" style="margin-bottom: 1rem;">
+        </picture>
+        <h3 style="margin-top: 0;">3mpwrApp</h3>
+        <p style="font-size: 0.9rem; line-height: 1.5;">Community-powered support for injured workers and persons with disabilities across Canada.</p>
+      </div>
+      
+      <!-- About Column -->
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="/about">Our Mission</a></li>
+          <li><a href="/user-guide">User Guide</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Started Column -->
+      <div class="footer-column">
+        <h3>Get Started</h3>
+        <ul>
+          <li><a href="/beta">Beta Testing</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/accessibility-walkthrough">Accessibility Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3>Legal & Privacy</h3>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/data-ownership">Data Ownership</a></li>
+          <li><a href="/community/guidelines">Community Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Column -->
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://paypal.me/3mpwrApp" target="_blank" rel="noopener noreferrer" style="color: #0070ba; font-weight: 600;">💙 Donate via PayPal</a></li>
+          <li><a href="/accessibility">Accessibility Statement</a></li>
+          <li><a href="/accessibility-settings">Accessibility Settings</a></li>
+          <li><a href="/site-map">Site Map</a></li>
+          <li><a href="/delete-data">Delete My Data</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect Column -->
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">Facebook</span></a>
+          <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" aria-label="3mpwr App Hub Facebook Group">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">FB Group</span></a>
+          <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
+<span class="social-label">X/Twitter</span></a>
+          <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Instagram</title>
+	<rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+</svg>
+<span class="social-label">Instagram</span></a>
+          <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="me noopener noreferrer" aria-label="Mastodon">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Mastodon</title>
+	<path d="M20.94 14c-.28 1.41-2.54 2.96-5.14 3.26-1.36.15-2.7.29-4.13.23-2.32-.1-4.15-.5-4.15-.5 0 .2.01.4.03.58.22 2.03 1.67 2.15 3.04 2.21 1.39.06 2.62-.34 2.62-.34l.06 1.3s-.97.52-2.69.62c-.95.05-2.13-.02-3.5-.37-2.98-.77-3.49-3.88-3.57-7.04-.02-.8-.01-1.55-.01-2.18 0-5.48 3.6-7.09 3.6-7.09C8.84 3.37 10.7 3 12.62 3h.04c1.92 0 3.78.37 5.45 1.09 0 0 3.6 1.61 3.6 7.09 0 0 .05 4.05-.77 6.82z" fill="currentColor"/>
+	<path d="M17.23 8.24v4.67h-1.86V8.5c0-.96-.4-1.45-1.2-1.45-.89 0-1.33.57-1.33 1.71v2.47H11V8.76c0-1.14-.44-1.71-1.33-1.71-.8 0-1.2.49-1.2 1.45v4.41H6.62V8.24c0-.96.25-1.72.74-2.28.51-.56 1.17-.85 2-.85.95 0 1.67.36 2.14 1.09l.46.77.46-.77c.47-.73 1.19-1.09 2.14-1.09.83 0 1.49.29 2 .85.49.56.74 1.32.74 2.28z" fill="#fff"/>
+</svg>
+<span class="social-label">Mastodon</span></a>
+          <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Bluesky</title>
+	<path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.415-.054-2.36.308-3.916 1.379-3.916 2.827 0 1.548 1.898 2.997 8.494 2.997s8.494-1.449 8.494-2.997c0-1.448-1.556-2.519-3.916-2.827.14.016.279.034.415.054 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.478 0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.622-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" fill="currentColor"/>
+</svg>
+<span class="social-label">Bluesky</span></a>
+        </div>
+        <ul style="margin-top: 1rem;">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/whats-new/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3mpwrApp — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
+      <p class="footer-mission">💚 Grassroots & Community-Funded • 100% Free Forever • Mission-Driven, Not Profit-Driven</p>
+    </div>
+  </footer>
+
+  <!-- Skip link and mobile menu functionality -->
+  <script src="/assets/js/skip-links.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
+
+  <!-- Utilities and controls -->
+  <script src="/assets/js/a11y.min.js" defer></script>
+  <script src="/assets/js/contrast.min.js" defer></script>
+  <script src="/assets/js/theme.min.js" defer></script>
+  <script src="/assets/js/back-to-top.min.js" defer></script>
+  <script src="/assets/js/settings.min.js" defer></script>
+  
+  <!-- Innovative Accessibility Features - Low Priority -->
+  <script src="/assets/js/accessibility-innovations.min.js" defer async></script>
+  
+  <!-- WCAG 2.2 AA+ Compliance Features -->
+  <script src="/assets/js/wcag-compliance.min.js" defer></script>
+  
+  <!-- WCAG 2.2 AAA Dynamic Enhancements - External links, touch targets, ARIA labels -->
+  <script src="/assets/js/wcag-aaa-dynamic.js" defer></script>
+
+  <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
+    <!-- Cookie Consent (GDPR Compliance) - Load early to show banner --><!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fef378cf7f9742c582f28f566e204a85"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

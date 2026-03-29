@@ -289,11 +289,8 @@ permalink: /campaigns/
         </article>
       `).join('');
   }
-              ` : ''}
-            </div>
-          ` : ''}
-          
-          ${campaign.organizer ? `
+
+  /**
             <p style="color: #000000 !important; font-size: 0.95rem; margin: 0.5rem 0; font-weight: 600;">
               👤 <strong style="color: #000000 !important;">Organized by:</strong> 
               <span style="color: #000000 !important;">${campaign.organizer}</span>

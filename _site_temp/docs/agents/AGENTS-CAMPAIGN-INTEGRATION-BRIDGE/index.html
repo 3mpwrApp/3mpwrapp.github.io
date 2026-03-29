@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agent Integration Bridge - Campaign System | 3mpwr App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="How the 4 autonomous agents integrate with the new campaign system">
+  
+  <!-- 
+    Security Headers: These should be set via server-side headers file (_headers for Netlify/Vercel, .htaccess for Apache, etc.)
+    CSP meta tag is included above as the only valid http-equiv for security headers.
+    X-Content-Type-Options, X-Frame-Options, and Referrer-Policy must be set as HTTP response headers, not meta tags.
+  -->
+  
+  <!-- Resource Hints for Performance (limit to 3 most critical) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json"><!-- Open Graph Meta Tags -->
+<meta property="og:site_name" content="3mpwr App">
+<meta property="og:title" content="Agent Integration Bridge - Campaign System">
+<meta property="og:description" content="How the 4 autonomous agents integrate with the new campaign system">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/">
+<meta property="og:locale" content="en_CA">
+
+<meta property="og:locale:alternate" content="fr_CA">
+
+
+<!-- Open Graph Image -->
+
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:secure_url" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta property="og:image:alt" content="Agent Integration Bridge - Campaign System">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Article-specific Open Graph -->
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpowrapp0816">
+<meta name="twitter:creator" content="@3mpowrapp0816">
+<meta name="twitter:title" content="Agent Integration Bridge - Campaign System">
+<meta name="twitter:description" content="How the 4 autonomous agents integrate with the new campaign system">
+
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png">
+<meta name="twitter:image:alt" content="Agent Integration Bridge - Campaign System">
+
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="3mpwrApp">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+
+<meta name="language" content="English">
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/">
+
+<!-- Alternate Language Links (hreflang) -->
+
+
+<link rel="alternate" hreflang="en" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/">
+
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/">
+
+
+<!-- PWA and Mobile Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="3mpwrApp">
+<meta name="application-name" content="3mpwrApp">
+<meta name="theme-color" content="#2A9D8F">
+<meta name="msapplication-TileColor" content="#2A9D8F">
+<meta name="msapplication-navbutton-color" content="#2A9D8F">
+
+<!-- Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Favicons and Touch Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/icon-192.png">
+<!-- Schema.org Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://3mpwrapp.pages.dev#organization",
+      "name": "3mpwrApp",
+      "alternateName": "EmpowrApp",
+      "url": "https://3mpwrapp.pages.dev",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev#logo",
+  "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "3mpwrApp Logo"
+      },
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "foundingDate": "2024",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CA"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "empowrapp08162025@gmail.com",
+        "contactType": "Customer Support",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/3mpowrapp/",
+        "https://x.com/3mpowrapp0816",
+        "https://www.instagram.com/3mpwrapp/",
+        "https://www.youtube.com/3mpwrApp",
+        "https://www.tiktok.com/@3mpwrapp",
+        "https://mastodon.social/@3mpwrApp",
+        "https://bsky.app/profile/3mpwrapp.bsky.social",
+        "https://github.com/3mpwrApp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://3mpwrapp.pages.dev#website",
+      "url": "https://3mpwrapp.pages.dev",
+      "name": "3mpwrApp",
+      "description": "Practical tools and community for injured workers and persons with disabilities.",
+      "publisher": {
+        "@id": "https://3mpwrapp.pages.dev#organization"
+      },
+      "inLanguage": "en-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://3mpwrapp.pages.dev/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/#webpage",
+      "url": "https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/",
+      "name": "Agent Integration Bridge - Campaign System",
+      "headline": "Agent Integration Bridge - Campaign System",
+      "description": "How the 4 autonomous agents integrate with the new campaign system",
+      "isPartOf": {
+        "@id": "https://3mpwrapp.pages.dev#website"
+      },
+      "inLanguage": "en-CA",
+      
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/#primaryimage",
+        "url": "https://3mpwrapp.pages.dev/assets/empwrapp-logo.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Agent Integration Bridge - Campaign System"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/#primaryimage"
+      },
+      
+      
+      "breadcrumb": {
+        "@id": "https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://3mpwrapp.pages.dev"
+        }
+        
+        
+        
+        
+        
+          
+          
+          
+          
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Docs",
+          "item": "https://3mpwrapp.pages.dev/docs"
+        }
+          
+          
+        
+          
+          
+          
+          
+        ,{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Agents",
+          "item": "https://3mpwrapp.pages.dev/docs/agents"
+        }
+          
+          
+        
+          
+          
+          
+        ,{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Agent integration bridge   campaign system",
+          "item": "https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE"
+        }
+          
+        
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
+<!-- Additional Schema for Accessibility Features -->
+
+
+<!-- Software Application Schema for App Pages -->
+
+<link rel="canonical" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/"><!-- hreflang tags for international SEO -->
+<!-- English Canada (primary) -->
+<link rel="alternate" hreflang="en-CA" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/" />
+
+<!-- French Canada -->
+
+
+<link rel="alternate" hreflang="fr-CA" href="https://3mpwrapp.pages.dev/fr/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/" />
+
+
+<!-- USA (when available) -->
+
+
+<!-- Default fallback (English Canada) -->
+<link rel="alternate" hreflang="x-default" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/" />
+
+<!-- Future language expansions (add as they go live) -->
+<!-- 
+<link rel="alternate" hreflang="es" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/" />
+<link rel="alternate" hreflang="ar" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/" />
+<link rel="alternate" hreflang="zh-CN" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/" />
+-->
+<link rel="stylesheet" href="/assets/css/complexity-mode.css">
+<script src="/assets/js/complexity-mode.js" defer></script><link rel="stylesheet" href="/assets/css/connection-status.css">
+<script src="/assets/js/connection-status.js" defer></script><!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3mpwrApp">
+<meta property="og:title" content="Agent Integration Bridge - Campaign System">
+<meta property="og:description" content="How the 4 autonomous agents integrate with the new campaign system">
+<meta property="og:url" content="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/">
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-default.png">
+<meta property="og:image:alt" content="3mpwrApp - Community-powered support for injured workers and persons with disabilities">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA"><meta property="og:locale:alternate" content="fr_CA"><!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@3mpwrApp">
+<meta name="twitter:creator" content="@ODSPoor">
+<meta name="twitter:title" content="Agent Integration Bridge - Campaign System">
+<meta name="twitter:description" content="How the 4 autonomous agents integrate with the new campaign system">
+<meta name="twitter:image" content="https://3mpwrapp.pages.dev/assets/images/social-share-default.png">
+<meta name="twitter:image:alt" content="3mpwrApp - Community-powered support for injured workers and persons with disabilities">
+
+<!-- Additional Meta for Rich Previews -->
+<meta property="article:publisher" content="https://www.facebook.com/3mpwrApp"><!-- Facebook App ID (if available) --><link rel="dns-prefetch" href="//www.clarity.ms">
+<link rel="preconnect" href="https://www.clarity.ms" crossorigin><link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><link rel="preload" href="/assets/css/style.css" as="style"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/assets/site.webmanifest"><meta name="theme-color" content="#111111">
+<meta name="color-scheme" content="light dark">
+<meta name="fediverse:creator" content="@3mpwrApp@mastodon.social">
+
+<!-- What's New RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — What's New" href="/whats-new/feed.xml">
+
+<!-- Main site RSS feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="3mpwr App — Site Feed" href="/feed.xml"><script>
+(function(){
+  var KEY = 'cookie-consent';
+  function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function onConsent(cb){
+    if (get(KEY) === 'accepted') { cb(); return; }
+    window.addEventListener('cookie-consent', function(e){ if (e && e.detail === 'accepted') cb(); });
+  }
+
+  // Google Analytics 4
+  var useGA = ("" !== "") && ("" === "");
+  if (useGA) {
+    onConsent(function(){
+      if (window.__gaLoaded) return; window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('Google Analytics script blocked or failed to load. Ad blockers or privacy extensions may be active.');
+        window.__gaLoadError = true;
+      };
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ 
+        if (!window.__gaLoadError) {
+          dataLayer.push(arguments); 
+        }
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=Strict;Secure',
+        'cookie_expires': 63072000,
+        'cookie_update': false,
+        'allow_ad_personalization_signals': false,
+        'allow_google_signals': false
+      });
+    });
+  }
+
+  // GoatCounter (privacy-friendly, free)
+  var useGoat = ("" === "goatcounter") && ("" !== "");
+  if (useGoat) {
+    onConsent(function(){
+      if (window.__goatLoaded) return; window.__goatLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.setAttribute('data-goatcounter', 'https://.goatcounter.com/count');
+      s.src = 'https://gc.zgo.at/count.js';
+      s.crossOrigin = 'anonymous';
+      s.onerror = function(){
+        console.warn('GoatCounter analytics unavailable. Connection may be blocked.');
+      };
+      document.head.appendChild(s);
+    });
+  }
+})();
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "3mpwr App",
+  "url": "https://3mpwrapp.pages.dev",
+  "logo": "https://3mpwrapp.pages.dev/assets/favicon.svg",
+  "sameAs": ["https://github.com/3mpwrApp", "https://www.facebook.com/3mpowrapp/", "https://x.com/3mpowrapp0816", "https://www.instagram.com/3mpwrapp/", "https://www.youtube.com/3mpwrApp", "https://www.tiktok.com/@3mpwrapp"]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://3mpwrapp.pages.dev/"
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Docs",
+        "item": "https://3mpwrapp.pages.dev/docs"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Agents",
+        "item": "https://3mpwrapp.pages.dev/docs/agents"
+      },{
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Agents campaign integration bridge",
+        "item": "https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE"
+      }]
+}
+</script><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Agent Integration Bridge - Campaign System | 3mpwr App</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Agent Integration Bridge - Campaign System" />
+<meta name="author" content="3mpwr App" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="How the 4 autonomous agents integrate with the new campaign system" />
+<meta property="og:description" content="How the 4 autonomous agents integrate with the new campaign system" />
+<link rel="canonical" href="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/" />
+<meta property="og:url" content="https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/" />
+<meta property="og:site_name" content="3mpwr App" />
+<meta property="og:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://3mpwrapp.pages.dev/assets/empwrapp-logo.png" />
+<meta property="twitter:title" content="Agent Integration Bridge - Campaign System" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"3mpwr App"},"description":"How the 4 autonomous agents integrate with the new campaign system","headline":"Agent Integration Bridge - Campaign System","image":"https://3mpwrapp.pages.dev/assets/empwrapp-logo.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://3mpwrapp.pages.dev/assets/favicon.svg"},"name":"3mpwr App"},"url":"https://3mpwrapp.pages.dev/docs/agents/AGENTS-CAMPAIGN-INTEGRATION-BRIDGE/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.min.css">
+  <!-- WCAG AAA Compliant Color System -->
+  <link rel="stylesheet" href="/assets/css/accessibility-tokens.min.css">
+  <!-- WCAG 2.2 AA and Beyond Accessibility Enhancements -->
+  <link rel="stylesheet" href="/assets/css/accessibility-enhancements.min.css">
+  <!-- WCAG 2.2 AAA Color Palette - 7:1 Contrast Ratios -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-colors.css">
+  <!-- WCAG 2.2 AAA Color Fixes - Fixes all 614 accessibility violations -->
+  <link rel="stylesheet" href="/assets/css/aaa-color-fixes.css">
+  <!-- WCAG 2.2 AAA Comprehensive Overrides - Fixes all inline styles and remaining violations -->
+  <link rel="stylesheet" href="/assets/css/wcag-aaa-overrides.css">
+  <!-- Universal Text Legibility - Ensures ALL text is readable in light/dark/high-contrast modes -->
+  <link rel="stylesheet" href="/assets/css/universal-text-legibility.css">
+  <!-- ACCESSIBILITY-FIRST COLOR SYSTEM - The #1 Standard for Light/Dark/High Contrast Modes (March 2026) -->
+  <link rel="stylesheet" href="/assets/css/accessibility-first-colors.css">
+  <!-- Performance Optimizations: Critical CSS, Lazy Loading, Font Optimization -->
+  <link rel="stylesheet" href="/assets/css/performance-optimizations.min.css">
+  <!-- Lighthouse Audit Fixes: Touch targets, contrast, aspect ratios -->
+  <link rel="stylesheet" href="/assets/css/lighthouse-fixes.min.css">
+  <!-- Cookie Consent Banner (GDPR Compliance) -->
+  <link rel="stylesheet" href="/assets/css/cookie-consent.css">
+
+  <!-- Header/nav footprint overrides moved to external CSS (CSP-safe) -->
+  <link rel="stylesheet" href="/assets/css/header-overrides.css">
+  <!-- Professional polish & design system (UX/UI audit improvements) -->
+  <link rel="stylesheet" href="/assets/css/professional-polish.css">
+  <!-- CLS (Cumulative Layout Shift) Fix - Cloudflare RUM reported 0.351-0.588 CLS -->
+  <link rel="stylesheet" href="/assets/css/cls-fix.css">
+  <!-- Alignment Consistency Fix - Professional, clean, organized layout -->
+  <link rel="stylesheet" href="/assets/css/alignment-consistency.css">
+  <!-- Global UX/UI Consistency - Ensures professional, clean, organized look across all pages -->
+  <link rel="stylesheet" href="/assets/css/global-consistency.css">
+  <!-- Enhanced Focus Indicators - WCAG 2.2 AAA compliant (3:1 contrast, 2px minimum) -->
+  <link rel="stylesheet" href="/assets/css/enhanced-focus-indicators.css">
+  <!-- Social Share Component Styles -->
+  <link rel="stylesheet" href="/assets/css/social-share.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#primary-nav">Skip to navigation</a>
+  <a class="skip-link" href="#site-footer">Skip to footer</a>
+  <header>
+    <!-- Brand: clicking this takes you home -->
+    <div class="brand header-bar">
+      <a class="site-brand" href="/" aria-label="3mpwr App home">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="" width="28" height="28" aria-hidden="true" loading="eager">
+        </picture>
+        <span>3mpwr App</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button><a class="lang-switch" href="/fr/">Français</a>
+    </div>
+
+  <nav id="primary-nav" aria-label="Primary">
+      
+  <ul class="nav-list">
+        <li>
+          <a href="/" >
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/about" >
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/features" >
+            Features
+          </a>
+        </li>
+        <li>
+          <a href="/app-tour" >
+            App Tour
+          </a>
+        </li>
+        <li>
+          <a href="/user-guide" >
+            User Guide
+          </a>
+        </li>
+        <li>
+          <a href="/roadmap" >
+            Roadmap
+          </a>
+        </li>
+        <li>
+          <a href="/blog" >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="/faq" >
+            FAQ
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility" >
+            Accessibility
+          </a>
+        </li>
+        <li>
+          <a href="/app-waitlist" >
+            App Waitlist
+          </a>
+        </li>
+        <li>
+          <a href="/crisis-resources" >
+            Crisis Help
+          </a>
+        </li>
+        <li>
+          <a href="/contact" >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="/newsletter" >
+            Newsletter
+          </a>
+        </li>
+        <li>
+          <a href="/whats-new" >
+            What's New
+          </a>
+        </li>
+        <li>
+          <a href="/beta-guide" >
+            Beta Testers Guide
+          </a>
+        </li>
+        <li>
+          <a href="/search" >
+            Search
+          </a>
+        </li>
+        <li>
+          <a href="/events" >
+            Events
+          </a>
+        </li>
+        <li>
+          <a href="/site-map" >
+            Site Map
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility-settings" >
+            Accessibility Settings
+          </a>
+        </li>
+        <li>
+          <a href="/campaigns" >
+            Campaigns
+          </a>
+        </li>
+        <li>
+          <a href="/community" >
+            Community
+          </a>
+        </li>
+        <li>
+          <a href="/connect" >
+            Connect
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- High contrast + Dark mode toggles + Accessibility Tools -->
+    <div class="header-controls" role="group" aria-label="Display settings and accessibility">
+      <a href="/accessibility-settings" class="accessibility-link" aria-label="Accessibility features (13 tools available)">
+        ♿ Accessibility
+      </a>
+      
+      <!-- Complexity Mode Toggle -->
+      <button id="complexity-toggle" type="button" aria-live="polite" aria-pressed="false" aria-label="Toggle simplified language mode">
+        <span class="complexity-icon" aria-hidden="true">📖</span>
+        <span class="complexity-label">Standard View</span>
+        <span class="complexity-hint">Click for Simple Language</span>
+      </button>
+      
+      <button
+        id="contrast-toggle"
+        class="contrast-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle high contrast mode"
+      >
+        High contrast
+      </button>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle dark mode"
+      >
+        Dark mode
+      </button>
+    </div>
+  </header>
+  
+  <!-- Complexity Mode Announcer (moved from inline) -->
+  <div id="complexity-announcer" role="status" aria-live="polite" aria-atomic="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"></div><nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol>
+      <li><a href="/">Home</a></li><li><a href="/docs">Docs</a></li><li><a href="/docs/agents">Agents</a></li><li aria-current="page">Agent integration bridge   campaign system</li></ol>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Agent Integration Bridge - Campaign System</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="-agent-integration-bridge">🌉 AGENT INTEGRATION BRIDGE</h1>
+
+<p><strong>Date:</strong> January 6, 2026<br />
+<strong>Status:</strong> Integration Ready<br />
+<strong>Scope:</strong> 4 Autonomous Agents + Campaign System</p>
+
+<hr />
+
+<h2 id="part-1-clarification---curation-news-on-blog">PART 1: CLARIFICATION - CURATION NEWS ON BLOG</h2>
+
+<h3 id="current-structure-">Current Structure ✅</h3>
+<p>The blog page already has a <strong>designated area for Daily News Highlights</strong>:</p>
+
+<p><strong>Location:</strong> <code class="language-plaintext highlighter-rouge">blog/index.md</code> - Section: “📰 Daily News Highlights”</p>
+
+<p><strong>What It Shows:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Posts tagged with: 'highlights'
+Display: Latest 7 curated posts
+Archive: All daily highlights expandable view
+Update: Every morning at 9 AM UTC
+</code></pre></div></div>
+
+<p><strong>Current Implementation:</strong></p>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+  &lt;!-- Display curated post --&gt;
+
+  &lt;!-- Display curated post --&gt;
+
+  &lt;!-- Display curated post --&gt;
+
+  &lt;!-- Display curated post --&gt;
+
+  &lt;!-- Display curated post --&gt;
+
+  &lt;!-- Display curated post --&gt;
+
+  &lt;!-- Display curated post --&gt;
+
+</code></pre></div></div>
+
+<h3 id="enhanced-for-campaign-">Enhanced for Campaign ✅</h3>
+<p>The <strong>Curation Agent</strong> feeds directly into this section:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CURATION AGENT (Monitors 26 RSS feeds)
+        ↓
+    Scores articles
+        ↓
+    Generates daily posts (tagged: 'highlights')
+        ↓
+    Posts published to: /blog/ folder
+        ↓
+    Blog index.md automatically displays them
+    in "📰 Daily News Highlights" section
+        ↓
+    Also distributed via:
+    - RSS feed
+    - Mastodon (9 AM UTC)
+    - Bluesky (9 AM UTC)
+    - Newsletter email
+</code></pre></div></div>
+
+<p><strong>Designated Areas on Blog Page:</strong>
+| Section | Agent | Tag | Limit | Update |
+|———|——-|—–|——-|——–|
+| 📰 Daily News | Curation | <code class="language-plaintext highlighter-rouge">highlights</code> | 7 posts | 9 AM UTC |
+| ✨ Features | Blog Post | <code class="language-plaintext highlighter-rouge">features, spotlight</code> | 6 posts | Real-time |
+| 📅 Weekly Recap | Recap | <code class="language-plaintext highlighter-rouge">weekly</code> | 4 posts | Monday |
+| 💬 Community | Blog Post | Other | All | Real-time |</p>
+
+<hr />
+
+<h2 id="part-2-the-4-autonomous-agents-current-configuration">PART 2: THE 4 AUTONOMOUS AGENTS (Current Configuration)</h2>
+
+<h3 id="agent-1-curation-agent-️"><strong>Agent 1: CURATION AGENT</strong> 🗂️</h3>
+
+<p><strong>Purpose:</strong> Monitor RSS feeds → Score → Publish daily news</p>
+
+<p><strong>Current Configuration:</strong></p>
+<ul>
+  <li><strong>RSS Feeds Monitored:</strong> 26+ sources</li>
+  <li><strong>Feed Tiers:</strong>
+    <ul>
+      <li>Tier 1 (Breaking news): Check every 2 hours
+        <ul>
+          <li>CBC News</li>
+          <li>Global News</li>
+          <li>Ontario.ca announcements</li>
+          <li>Canada.ca benefits</li>
+        </ul>
+      </li>
+      <li>Tier 2 (High-signal): Check every 4 hours
+        <ul>
+          <li>Inclusion Canada</li>
+          <li>Policy Options</li>
+          <li>Maclean’s</li>
+          <li>The Tyee</li>
+        </ul>
+      </li>
+      <li>Tier 3 (Regular): Check daily at 9 AM
+        <ul>
+          <li>Disability Alliance BC</li>
+          <li>CNIB</li>
+          <li>CACL</li>
+          <li>ARCH</li>
+          <li>CHRC</li>
+          <li>CCDO</li>
+          <li>Provincial news feeds</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Scoring Algorithm:</strong></p>
+<ul>
+  <li>Relevance to disability, accessibility, workers’ comp</li>
+  <li>Timeliness (newer = higher score)</li>
+  <li>Source authority</li>
+  <li>Community engagement signals</li>
+  <li>Topic diversity</li>
+  <li>Breaking news detection</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Daily posts tagged: <code class="language-plaintext highlighter-rouge">highlights</code></li>
+  <li>Published to: <code class="language-plaintext highlighter-rouge">/blog/</code> folder</li>
+  <li>Displayed on: Blog index “Daily News Highlights” section</li>
+  <li>Distributed via: RSS, Mastodon, Bluesky, email</li>
+</ul>
+
+<p><strong>Status:</strong> ✅ <strong>ACTIVE - Running 24/7</strong></p>
+
+<hr />
+
+<h3 id="agent-2-blog-post-agent-"><strong>Agent 2: BLOG POST AGENT</strong> 📝</h3>
+
+<p><strong>Purpose:</strong> Generate 3-5 blog posts daily (features, education, reactions)</p>
+
+<p><strong>Current Configuration:</strong></p>
+<ul>
+  <li><strong>Content Types Generated:</strong>
+    <ul>
+      <li>Feature Spotlights (Evidence Locker, Letter Generator, etc.)</li>
+      <li>Educational Deep-Dives (How-to guides)</li>
+      <li>Case Studies (From community stories)</li>
+      <li>Policy Reactions (When changes announced)</li>
+      <li>Topic Deep-Dives (Emerging issues)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Monitoring:</strong></p>
+<ul>
+  <li>Trending topics (real-time)</li>
+  <li>Community questions/needs</li>
+  <li>Policy announcements</li>
+  <li>Accessibility news</li>
+  <li>Success stories from community</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>3-5 posts per day</li>
+  <li>Tagged: <code class="language-plaintext highlighter-rouge">features</code>, <code class="language-plaintext highlighter-rouge">spotlight</code>, or <code class="language-plaintext highlighter-rouge">blog</code></li>
+  <li>Published to: <code class="language-plaintext highlighter-rouge">/blog/</code> folder</li>
+  <li>Displayed on: Blog index multiple sections</li>
+  <li>Distributed via: RSS, email, social</li>
+</ul>
+
+<p><strong>Status:</strong> ✅ <strong>ACTIVE - Running 24/7</strong></p>
+
+<hr />
+
+<h3 id="agent-3-recap-agent-"><strong>Agent 3: RECAP AGENT</strong> 📊</h3>
+
+<p><strong>Purpose:</strong> Synthesize weekly summaries and trends</p>
+
+<p><strong>Current Configuration:</strong></p>
+<ul>
+  <li><strong>Frequency:</strong> 4 times per week (Mon, Wed, Fri, Sun)</li>
+  <li><strong>Analyzes:</strong>
+    <ul>
+      <li>Week’s top engagement</li>
+      <li>Reader votes/reactions</li>
+      <li>Trending topics</li>
+      <li>Feature usage patterns</li>
+      <li>Community feedback</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>4 different recap formats</li>
+  <li>Tagged: <code class="language-plaintext highlighter-rouge">weekly</code></li>
+  <li>Published to: <code class="language-plaintext highlighter-rouge">/blog/</code> folder</li>
+  <li>Displayed on: Blog index “Weekly Recaps” section</li>
+  <li>Distributed via: RSS, email, social</li>
+</ul>
+
+<p><strong>Status:</strong> ✅ <strong>ACTIVE - Weekly</strong></p>
+
+<hr />
+
+<h3 id="agent-4-email-agent-"><strong>Agent 4: EMAIL AGENT</strong> 📧</h3>
+
+<p><strong>Purpose:</strong> Generate segment-specific newsletters</p>
+
+<p><strong>Current Configuration:</strong></p>
+<ul>
+  <li><strong>Segments:</strong>
+    <ul>
+      <li>Disability community</li>
+      <li>Injured workers</li>
+      <li>Policy makers / Advocates</li>
+      <li>Builders / Technologists</li>
+      <li>General subscribers</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Personalization:</strong></p>
+<ul>
+  <li>Content tailored to segment</li>
+  <li>Relevant feature highlights</li>
+  <li>Targeted calls-to-action</li>
+  <li>Recommended next steps</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>4 segment-specific emails</li>
+  <li>Scheduled: Weekly</li>
+  <li>Drawn from: Blog posts, curated news, recaps</li>
+  <li>Includes: Feature spotlights, top stories, CTAs</li>
+</ul>
+
+<p><strong>Status:</strong> ✅ <strong>ACTIVE - Weekly</strong></p>
+
+<hr />
+
+<h2 id="part-3-new-campaign-system-integration-points">PART 3: NEW CAMPAIGN SYSTEM (Integration Points)</h2>
+
+<h3 id="how-campaign-integrates"><strong>How Campaign Integrates:</strong></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AUTONOMOUS AGENTS (Existing - 24/7)
+│
+├─ CURATION AGENT → Daily news posts → Blog "Daily News" section
+│
+├─ BLOG POST AGENT → Feature/education posts → Blog "Feature Spotlights"
+│
+├─ RECAP AGENT → Weekly summaries → Blog "Weekly Recaps"
+│
+└─ EMAIL AGENT → Newsletters → Email subscribers
+                                    │
+                                    ↓
+                    CAMPAIGN SYSTEM (New - Enhanced)
+                    │
+                    ├─ SCHEDULER: Coordinates posts
+                    │   └─ Works around agent schedule
+                    │
+                    ├─ PERFORMANCE TRACKER: Monitors all
+                    │   └─ Measures agent + campaign impact
+                    │
+                    ├─ FEEDBACK LOOP: Listens to responses
+                    │   └─ Feeds insights back to agents
+                    │
+                    └─ INTELLIGENCE ENGINE: Learns &amp; evolves
+                        └─ Improves all agent outputs over time
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="part-4-integration-map-agent--campaign">PART 4: INTEGRATION MAP (Agent × Campaign)</h2>
+
+<h3 id="agent-1-curation-agent"><strong>Agent 1: Curation Agent</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Integration Point</th>
+      <th>How It Works</th>
+      <th>Data Flow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Scheduling</strong></td>
+      <td>Campaign scheduler respects curation timing (9 AM UTC posts don’t conflict)</td>
+      <td>Scheduler reads agent schedule</td>
+    </tr>
+    <tr>
+      <td><strong>Performance</strong></td>
+      <td>Campaign tracker monitors curation post reach/engagement</td>
+      <td>Metrics feed to dashboard</td>
+    </tr>
+    <tr>
+      <td><strong>Feedback</strong></td>
+      <td>Reader responses to curated posts tracked</td>
+      <td>Sentiment analysis improves scoring</td>
+    </tr>
+    <tr>
+      <td><strong>Evolution</strong></td>
+      <td>Top-performing news topics identified</td>
+      <td>Guides future curation weights</td>
+    </tr>
+    <tr>
+      <td><strong>Output</strong></td>
+      <td>Daily posts automatically tagged &amp; published</td>
+      <td>Blog displays via existing structure</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Integration Status:</strong> ✅ <strong>No conflicts - fully compatible</strong></p>
+
+<hr />
+
+<h3 id="agent-2-blog-post-agent"><strong>Agent 2: Blog Post Agent</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Integration Point</th>
+      <th>How It Works</th>
+      <th>Data Flow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Campaign Post</strong></td>
+      <td>Blog post “Why Disability Apps Fail” treated as regular blog post</td>
+      <td>Tagged, indexed, promoted via agent</td>
+    </tr>
+    <tr>
+      <td><strong>Scheduling</strong></td>
+      <td>Campaign posts don’t interfere with agent schedule</td>
+      <td>Campaign uses 3+ hour spacing</td>
+    </tr>
+    <tr>
+      <td><strong>Cross-linking</strong></td>
+      <td>Campaign blog links to agent feature posts</td>
+      <td>Natural internal linking</td>
+    </tr>
+    <tr>
+      <td><strong>Feedback</strong></td>
+      <td>Campaign feedback informs blog post topics</td>
+      <td>Agent learns what resonates</td>
+    </tr>
+    <tr>
+      <td><strong>Evolution</strong></td>
+      <td>Agent improves topics based on campaign learnings</td>
+      <td>Playbook feeds agent rules</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Integration Status:</strong> ✅ <strong>Complementary - enhances each other</strong></p>
+
+<hr />
+
+<h3 id="agent-3-recap-agent"><strong>Agent 3: Recap Agent</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Integration Point</th>
+      <th>How It Works</th>
+      <th>Data Flow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Feature</strong></td>
+      <td>Campaign can be featured in weekly recap</td>
+      <td>High-engagement content included</td>
+    </tr>
+    <tr>
+      <td><strong>Analysis</strong></td>
+      <td>Recap analyzes campaign performance</td>
+      <td>Adds to trend analysis</td>
+    </tr>
+    <tr>
+      <td><strong>Timing</strong></td>
+      <td>Campaign feedback influences recap focus</td>
+      <td>Responsive to community</td>
+    </tr>
+    <tr>
+      <td><strong>Distribution</strong></td>
+      <td>Campaign metrics included in weekly summaries</td>
+      <td>Email subscribers see results</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Integration Status:</strong> ✅ <strong>Coordinated - campaign enhances recaps</strong></p>
+
+<hr />
+
+<h3 id="agent-4-email-agent"><strong>Agent 4: Email Agent</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Integration Point</th>
+      <th>How It Works</th>
+      <th>Data Flow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Segment Content</strong></td>
+      <td>Campaign post included in relevant email segments</td>
+      <td>Personalized by audience</td>
+    </tr>
+    <tr>
+      <td><strong>Disability Segment</strong></td>
+      <td>“Why Apps Fail” = perfect for disability community</td>
+      <td>Direct relevance</td>
+    </tr>
+    <tr>
+      <td><strong>Policymakers</strong></td>
+      <td>Campaign positions app as solution for policy</td>
+      <td>Policy-focused angle</td>
+    </tr>
+    <tr>
+      <td><strong>Builders</strong></td>
+      <td>Campaign teaches design approach</td>
+      <td>Relevant to builders</td>
+    </tr>
+    <tr>
+      <td><strong>Personalization</strong></td>
+      <td>Email agent uses campaign feedback for future emails</td>
+      <td>Learns from engagement</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Integration Status:</strong> ✅ <strong>Beneficial - campaign drives email engagement</strong></p>
+
+<hr />
+
+<h2 id="part-5-data-flow-architecture">PART 5: DATA FLOW ARCHITECTURE</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────────┐
+│                  AUTONOMOUS AGENTS LAYER                         │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  Curation Agent      Blog Post Agent    Recap Agent  Email Agent│
+│       ↓                    ↓                 ↓            ↓      │
+│   Posts to          Posts to           Posts to      Sends to   │
+│   /blog/            /blog/             /blog/        Subscribers│
+│                                                                  │
+└─────────────┬────────────────┬────────────────┬─────────────────┘
+              │                │                │
+              ↓                ↓                ↓
+    ┌────────────────────────────────────────────────┐
+    │  BLOG INDEX (blog/index.md)                    │
+    │  ┌──────────────┐  ┌──────────────┐          │
+    │  │ Daily News   │  │ Feature      │ Displays │
+    │  │ (7 latest)   │  │ Spotlights   │ 4        │
+    │  │              │  │ (6 latest)   │ sections │
+    │  ├──────────────┤  ├──────────────┤          │
+    │  │ Weekly       │  │ Community    │          │
+    │  │ Recaps       │  │ Updates      │          │
+    │  │ (4 latest)   │  │ (all others) │          │
+    │  └──────────────┘  └──────────────┘          │
+    └────────────────────────────────────────────────┘
+              ↑                ↑                ↑
+              │ RSS Feed       │ Social Media   │ Email
+              │                │                │
+    ┌─────────┴────────────────┴────────────────┴──────────┐
+    │  CAMPAIGN SYSTEM LAYER (New)                         │
+    ├──────────────────────────────────────────────────────┤
+    │                                                       │
+    │  Campaign Scheduler ──→ Posts blog post             │
+    │  Performance Tracker ──→ Monitors all engagement    │
+    │  Feedback Loop ────────→ Collects responses         │
+    │  Intelligence Engine ──→ Analyzes patterns          │
+    │                                                       │
+    │  Output: Daily &amp; weekly reports, adaptations        │
+    │  Feeds back: Insights to improve all agents         │
+    │                                                       │
+    └──────────────────────────────────────────────────────┘
+              ↑                ↑                ↑
+              │ Sentiment      │ Engagement     │ Topics
+              │ Analysis       │ Metrics        │ Learned
+              │
+    ┌────────┴──────────────────────────────────────┐
+    │  COMMUNITY FEEDBACK (All Platforms)            │
+    │  - Blog comments                              │
+    │  - Social media replies                        │
+    │  - Email responses                            │
+    │  - Engagement metrics                         │
+    └───────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="part-6-synchronization-rules">PART 6: SYNCHRONIZATION RULES</h2>
+
+<h3 id="posting-schedule-no-conflicts"><strong>Posting Schedule (No Conflicts)</strong></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Time    Agent 1           Agent 2         Agent 3      Campaign
+────    ──────────        ──────────      ──────────   ──────────
+09:00   Curation posts
+        (7 new posts)
+09:30                                                   Blog post
+                                                        published
+10:00                     Blog post
+                          (feature spot)
+11:00                     Blog post
+                          (education)
+14:00                     Blog post                     Campaign
+                          (case study)                  thread X
+16:00                     Blog post
+                          (reaction)
+18:00   Curation
+        (if breaking)
+</code></pre></div></div>
+
+<p><strong>Rules:</strong></p>
+<ul>
+  <li>✅ Curation Agent: 9 AM always (breaking news anytime)</li>
+  <li>✅ Blog Post Agent: Throughout day (3+ hour spacing)</li>
+  <li>✅ Campaign System: Uses designated times</li>
+  <li>✅ No two agents post simultaneously</li>
+  <li>✅ Blog index displays latest from each automatically</li>
+</ul>
+
+<hr />
+
+<h2 id="part-7-feedback-loop-agents--campaign--community">PART 7: FEEDBACK LOOP (Agents ← Campaign ← Community)</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Community Feedback
+        │
+        ├─ Blog comments
+        ├─ Social replies
+        ├─ Email opens/clicks
+        └─ Engagement metrics
+        │
+        ↓
+Campaign Feedback Loop (Analyzes)
+        │
+        ├─ Sentiment analysis
+        ├─ Topic clustering
+        ├─ Question detection
+        ├─ Misconception ID
+        └─ Pattern detection
+        │
+        ↓
+Intelligence Engine (Learns)
+        │
+        ├─ "Disability community engages most with X topic"
+        ├─ "Policy angle resonates better than inspiration"
+        ├─ "Common question: How is 3mpwrApp different?"
+        ├─ "Best time to post: 8-9 AM EST"
+        └─ "Misconception: Think it requires internet"
+        │
+        ↓
+Playbook Generation (For Next Campaign)
+        │
+        └─ Share insights with all agents
+           ├─ Curation Agent: Improve scoring weights
+           ├─ Blog Post Agent: Topic ideas that work
+           ├─ Recap Agent: Emphasis for weekly summaries
+           └─ Email Agent: Segment-specific angles
+
+RESULT: All agents improve based on campaign learnings
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="part-8-cross-integration-benefits">PART 8: CROSS-INTEGRATION BENEFITS</h2>
+
+<h3 id="what-campaign-gets-from-agents"><strong>What Campaign Gets From Agents:</strong></h3>
+<p>✅ Distributed through all agent channels automatically<br />
+✅ Included in weekly recaps (if high engagement)<br />
+✅ Featured in segment-specific emails<br />
+✅ Shared on social media (via agent posting)<br />
+✅ Gets link-backs from agent-generated content</p>
+
+<h3 id="what-agents-get-from-campaign"><strong>What Agents Get From Campaign:</strong></h3>
+<p>✅ Performance data (what resonates with each segment)<br />
+✅ Topic learnings (what community cares about)<br />
+✅ Feedback insights (misconceptions to address)<br />
+✅ Audience patterns (best times, formats, angles)<br />
+✅ Playbook updates (for next campaign)</p>
+
+<h3 id="what-community-gets"><strong>What Community Gets:</strong></h3>
+<p>✅ Coordinated messaging (all channels aligned)<br />
+✅ Real engagement (not just broadcasts)<br />
+✅ Responsive content (feedback creates follow-ups)<br />
+✅ Better curation (agents improve from data)<br />
+✅ Personalized emails (based on segment)</p>
+
+<hr />
+
+<h2 id="part-9-configuration-verification-">PART 9: CONFIGURATION VERIFICATION ✅</h2>
+
+<h3 id="curation-agent-configuration"><strong>Curation Agent Configuration</strong></h3>
+<p>✅ 26+ RSS feeds monitored<br />
+✅ Tier 1: Breaking news (2-hour check)<br />
+✅ Tier 2: High-signal (4-hour check)<br />
+✅ Tier 3: Regular (daily 9 AM)<br />
+✅ Scoring algorithm: 6-tier relevance<br />
+✅ Output: Tagged <code class="language-plaintext highlighter-rouge">highlights</code> posts<br />
+✅ Status: ACTIVE 24/7</p>
+
+<h3 id="blog-post-agent-configuration"><strong>Blog Post Agent Configuration</strong></h3>
+<p>✅ Monitors trending topics<br />
+✅ Generates 3-5 posts daily<br />
+✅ Types: Features, education, cases, reactions<br />
+✅ Output: Tagged <code class="language-plaintext highlighter-rouge">features</code>, <code class="language-plaintext highlighter-rouge">spotlight</code><br />
+✅ Status: ACTIVE 24/7</p>
+
+<h3 id="recap-agent-configuration"><strong>Recap Agent Configuration</strong></h3>
+<p>✅ Analyzes weekly engagement<br />
+✅ Creates 4 recap versions<br />
+✅ Frequency: Mon, Wed, Fri, Sun<br />
+✅ Output: Tagged <code class="language-plaintext highlighter-rouge">weekly</code> posts<br />
+✅ Status: ACTIVE weekly</p>
+
+<h3 id="email-agent-configuration"><strong>Email Agent Configuration</strong></h3>
+<p>✅ 5 audience segments<br />
+✅ Personalizes by segment<br />
+✅ Sources: Blog posts + curated news<br />
+✅ Frequency: Weekly<br />
+✅ Status: ACTIVE weekly</p>
+
+<h3 id="campaign-system-configuration"><strong>Campaign System Configuration</strong></h3>
+<p>✅ Scheduler: 4-phase intelligent schedule<br />
+✅ Tracker: Real-time performance metrics<br />
+✅ Feedback: 7-stage analysis system<br />
+✅ Intelligence: Auto-learning, auto-adapting<br />
+✅ Status: READY TO LAUNCH</p>
+
+<hr />
+
+<h2 id="part-10-launch-checklist">PART 10: LAUNCH CHECKLIST</h2>
+
+<h3 id="before-campaign-launches"><strong>Before Campaign Launches:</strong></h3>
+<ul>
+  <li>✅ Verify agents are running</li>
+  <li>✅ Check RSS feeds are updating</li>
+  <li>✅ Confirm blog index displays all sections</li>
+  <li>✅ Test blog post publishing pipeline</li>
+  <li>✅ Verify social media posting works</li>
+  <li>✅ Confirm email delivery configured</li>
+</ul>
+
+<h3 id="campaign-launch-day"><strong>Campaign Launch Day:</strong></h3>
+<ul>
+  <li>✅ Blog post published (tagged correctly)</li>
+  <li>✅ Campaign scheduler starts</li>
+  <li>✅ Performance tracker begins monitoring</li>
+  <li>✅ Feedback collection begins</li>
+  <li>✅ All platforms posting on schedule</li>
+  <li>✅ Reports generating</li>
+</ul>
+
+<h3 id="ongoing"><strong>Ongoing:</strong></h3>
+<ul>
+  <li>✅ Agents continue normal operation</li>
+  <li>✅ Campaign data feeds to agent reports</li>
+  <li>✅ Weekly recaps mention campaign highlights</li>
+  <li>✅ Campaign feedback improves agent weights</li>
+  <li>✅ Monthly playbook updates agents</li>
+</ul>
+
+<hr />
+
+<h2 id="summary">SUMMARY</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>STATUS: ✅ ALL SYSTEMS INTEGRATED &amp; READY
+
+AGENTS:      4/4 Operating
+CAMPAIGN:    Ready to launch
+INTEGRATION: Seamless (no conflicts)
+DATA FLOW:   Bi-directional (agents ← → campaign)
+FEEDBACK:    Continuous (community → agents → improvement)
+
+RESULT: Coordinated, intelligent content ecosystem
+        that learns and improves over time
+</code></pre></div></div>
+
+<hr />
+
+<p><strong>Next Step:</strong> Launch campaign with <code class="language-plaintext highlighter-rouge">node scripts/automation/campaign-orchestrator.js start</code></p>
+
+<p>Everything else happens automatically.</p>
+
+  </div>
+
+</article>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <!-- Logo and Branding -->
+      <div class="footer-column footer-branding">
+        <picture>
+          <source type="image/webp" srcset="/assets/empwrapp-logo.webp">
+          <img src="/assets/empwrapp-logo.png" alt="3mpwrApp logo" width="64" height="64" loading="lazy" style="margin-bottom: 1rem;">
+        </picture>
+        <h3 style="margin-top: 0;">3mpwrApp</h3>
+        <p style="font-size: 0.9rem; line-height: 1.5;">Community-powered support for injured workers and persons with disabilities across Canada.</p>
+      </div>
+      
+      <!-- About Column -->
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="/about">Our Mission</a></li>
+          <li><a href="/user-guide">User Guide</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- Get Started Column -->
+      <div class="footer-column">
+        <h3>Get Started</h3>
+        <ul>
+          <li><a href="/beta">Beta Testing</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/accessibility-walkthrough">Accessibility Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3>Legal & Privacy</h3>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/data-ownership">Data Ownership</a></li>
+          <li><a href="/community/guidelines">Community Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Column -->
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://paypal.me/3mpwrApp" target="_blank" rel="noopener noreferrer" style="color: #0070ba; font-weight: 600;">💙 Donate via PayPal</a></li>
+          <li><a href="/accessibility">Accessibility Statement</a></li>
+          <li><a href="/accessibility-settings">Accessibility Settings</a></li>
+          <li><a href="/site-map">Site Map</a></li>
+          <li><a href="/delete-data">Delete My Data</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect Column -->
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">Facebook</span></a>
+          <a href="https://www.facebook.com/groups/1848263672453552" target="_blank" rel="noopener noreferrer" aria-label="3mpwr App Hub Facebook Group">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Facebook</title>
+	<path d="M13.5 9H16V6h-2.5C11.6 6 11 7.1 11 8.8V10H9v3h2v5h3v-5h2.3l.5-3H14v-1c0-.6.2-1 .5-1z" fill="currentColor"/>
+</svg>
+<span class="social-label">FB Group</span></a>
+          <a href="https://x.com/3mpowrapp0816" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>X</title>
+	<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
+<span class="social-label">X/Twitter</span></a>
+          <a href="https://www.instagram.com/3mpowrapp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Instagram</title>
+	<rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+	<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+</svg>
+<span class="social-label">Instagram</span></a>
+          <a href="https://mastodon.social/@3mpwrApp" target="_blank" rel="me noopener noreferrer" aria-label="Mastodon">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Mastodon</title>
+	<path d="M20.94 14c-.28 1.41-2.54 2.96-5.14 3.26-1.36.15-2.7.29-4.13.23-2.32-.1-4.15-.5-4.15-.5 0 .2.01.4.03.58.22 2.03 1.67 2.15 3.04 2.21 1.39.06 2.62-.34 2.62-.34l.06 1.3s-.97.52-2.69.62c-.95.05-2.13-.02-3.5-.37-2.98-.77-3.49-3.88-3.57-7.04-.02-.8-.01-1.55-.01-2.18 0-5.48 3.6-7.09 3.6-7.09C8.84 3.37 10.7 3 12.62 3h.04c1.92 0 3.78.37 5.45 1.09 0 0 3.6 1.61 3.6 7.09 0 0 .05 4.05-.77 6.82z" fill="currentColor"/>
+	<path d="M17.23 8.24v4.67h-1.86V8.5c0-.96-.4-1.45-1.2-1.45-.89 0-1.33.57-1.33 1.71v2.47H11V8.76c0-1.14-.44-1.71-1.33-1.71-.8 0-1.2.49-1.2 1.45v4.41H6.62V8.24c0-.96.25-1.72.74-2.28.51-.56 1.17-.85 2-.85.95 0 1.67.36 2.14 1.09l.46.77.46-.77c.47-.73 1.19-1.09 2.14-1.09.83 0 1.49.29 2 .85.49.56.74 1.32.74 2.28z" fill="#fff"/>
+</svg>
+<span class="social-label">Mastodon</span></a>
+          <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+
+<svg class="social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+	<title>Bluesky</title>
+	<path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.415-.054-2.36.308-3.916 1.379-3.916 2.827 0 1.548 1.898 2.997 8.494 2.997s8.494-1.449 8.494-2.997c0-1.448-1.556-2.519-3.916-2.827.14.016.279.034.415.054 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.478 0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.622-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" fill="currentColor"/>
+</svg>
+<span class="social-label">Bluesky</span></a>
+        </div>
+        <ul style="margin-top: 1rem;">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/whats-new/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 3mpwrApp — Canada • <a href="mailto:empowrapp08162025@gmail.com">Contact Us</a></p>
+      <p class="footer-mission">💚 Grassroots & Community-Funded • 100% Free Forever • Mission-Driven, Not Profit-Driven</p>
+    </div>
+  </footer>
+
+  <!-- Skip link and mobile menu functionality -->
+  <script src="/assets/js/skip-links.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
+
+  <!-- Utilities and controls -->
+  <script src="/assets/js/a11y.min.js" defer></script>
+  <script src="/assets/js/contrast.min.js" defer></script>
+  <script src="/assets/js/theme.min.js" defer></script>
+  <script src="/assets/js/back-to-top.min.js" defer></script>
+  <script src="/assets/js/settings.min.js" defer></script>
+  
+  <!-- Innovative Accessibility Features - Low Priority -->
+  <script src="/assets/js/accessibility-innovations.min.js" defer async></script>
+  
+  <!-- WCAG 2.2 AA+ Compliance Features -->
+  <script src="/assets/js/wcag-compliance.min.js" defer></script>
+  
+  <!-- WCAG 2.2 AAA Dynamic Enhancements - External links, touch targets, ARIA labels -->
+  <script src="/assets/js/wcag-aaa-dynamic.js" defer></script>
+
+  <!-- Cookie Consent (GDPR Compliance) - Load early to show banner -->
+    <!-- Cookie Consent (GDPR Compliance) - Load early to show banner --><!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fef378cf7f9742c582f28f566e204a85"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,450 @@
+/* ============================================
+   WHAT'S NEW PAGE STYLES
+   Enhanced UX/UI for the updates and announcements page
+   ============================================ */
+
+/* Intro Banner */
+.intro-banner {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+  border: 2px solid #0ea5e9;
+}
+
+.intro-banner p {
+  font-size: 1.2rem;
+  color: #0c4a6e;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.beta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #78350f;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.badge-icon {
+  font-size: 1.25rem;
+}
+
+.badge-text {
+  font-weight: 700;
+}
+
+/* Archives Section */
+.archives-section {
+  margin: 2rem 0;
+}
+
+.archives-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin: 0 0 2rem 0;
+}
+
+.archive-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e5e7eb;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.archive-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.archive-icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+}
+
+.archive-content {
+  flex: 1;
+}
+
+.archive-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.archive-content p {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.archive-cta {
+  display: inline-block;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.2s ease;
+}
+
+.archive-card:hover .archive-cta {
+  color: #5568d3;
+  transform: translateX(5px);
+}
+
+/* Update Subscription Section */
+.update-subscription {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  text-align: center;
+}
+
+.subscription-header {
+  margin-bottom: 2rem;
+}
+
+.subscription-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: ring 3s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0%, 90%, 100% {
+    transform: rotate(0deg);
+  }
+  92%, 96% {
+    transform: rotate(15deg);
+  }
+  94%, 98% {
+    transform: rotate(-15deg);
+  }
+}
+
+.subscription-header h3 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.subscription-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.subscription-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.subscription-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.subscription-btn.primary {
+  background: white;
+  color: #667eea;
+}
+
+.subscription-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.subscription-btn.secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.subscription-btn.secondary:hover {
+  background: white;
+  color: #667eea;
+  border-color: white;
+}
+
+.subscription-btn .btn-icon {
+  font-size: 1.25rem;
+}
+
+/* Feature Suggestion Section */
+.feature-suggestion {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+  border: 2px solid #f59e0b;
+}
+
+.suggestion-icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.suggestion-content {
+  flex: 1;
+}
+
+.suggestion-content h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #78350f;
+}
+
+.suggestion-content p {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.05rem;
+  color: #92400e;
+  line-height: 1.6;
+}
+
+.suggestion-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.suggestion-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+}
+
+.suggestion-btn .btn-icon {
+  font-size: 1.25rem;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .intro-banner {
+    background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+    border-color: #0ea5e9;
+  }
+  
+  .intro-banner p {
+    color: #bae6fd;
+  }
+  
+  .beta-badge {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #fef3c7;
+  }
+  
+  .archives-description {
+    color: #d1d5db;
+  }
+  
+  .archive-card {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    border-color: #4b5563;
+  }
+  
+  .archive-content h3 {
+    color: #f9fafb;
+  }
+  
+  .archive-content p {
+    color: #d1d5db;
+  }
+  
+  .archive-cta {
+    color: #818cf8;
+  }
+  
+  .archive-card:hover {
+    border-color: #818cf8;
+  }
+  
+  .archive-card:hover .archive-cta {
+    color: #a5b4fc;
+  }
+  
+  .feature-suggestion {
+    background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+    border-color: #f59e0b;
+  }
+  
+  .suggestion-content h3 {
+    color: #fef3c7;
+  }
+  
+  .suggestion-content p {
+    color: #fde68a;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .beta-badge,
+  .subscription-icon,
+  .suggestion-icon {
+    animation: none;
+  }
+  
+  .archive-card,
+  .subscription-btn,
+  .suggestion-btn {
+    transition: none;
+  }
+  
+  .archive-card:hover,
+  .subscription-btn:hover,
+  .suggestion-btn:hover {
+    transform: none;
+  }
+  
+  .archive-card:hover .archive-cta {
+    transform: none;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .intro-banner {
+    padding: 1.5rem;
+  }
+  
+  .intro-banner p {
+    font-size: 1.05rem;
+  }
+  
+  .beta-badge {
+    font-size: 0.9rem;
+    padding: 0.625rem 1.25rem;
+  }
+  
+  .archive-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .archive-icon {
+    font-size: 3rem;
+  }
+  
+  .subscription-options {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .subscription-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .feature-suggestion {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .suggestion-icon {
+    font-size: 3rem;
+  }
+  
+  .suggestion-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .suggestion-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-banner p {
+    font-size: 1rem;
+  }
+  
+  .subscription-header h3 {
+    font-size: 1.5rem;
+  }
+  
+  .subscription-icon {
+    font-size: 3rem;
+  }
+  
+  .archive-content h3 {
+    font-size: 1.25rem;
+  }
+  
+  .suggestion-content h3 {
+    font-size: 1.35rem;
+  }
+}
