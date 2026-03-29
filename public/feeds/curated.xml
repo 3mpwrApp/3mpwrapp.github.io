@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 29 Mar 2026 09:39:38 GMT</lastBuildDate>
-    <pubDate>Sun, 29 Mar 2026 09:39:38 GMT</pubDate>
+    <lastBuildDate>Sun, 29 Mar 2026 21:40:02 GMT</lastBuildDate>
+    <pubDate>Sun, 29 Mar 2026 21:40:02 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,136 +24,18 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Sun, 29 Mar 2026 09:39:38 GMT</pubDate>
+      <pubDate>Sun, 29 Mar 2026 21:40:02 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Manitoba Government Supports Harvest Manitoba&apos;s First Steps Infant Care Program</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73138</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73138</guid>
-      <pubDate>Thu, 19 Mar 2026 15:10:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Launches Ste. Anne Hospital Working Group to Strengthen Care in Southern Health Region</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73143</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73143</guid>
-      <pubDate>Fri, 20 Mar 2026 18:42:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government to Build Personal Care Home in Winnipeg&apos;s Bridgwater Neighbourhood</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73139</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73139</guid>
-      <pubDate>Thu, 19 Mar 2026 17:00:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Grows Nursing Workforce as Record 45 Nurses Set to Graduate Intensive Care Unit Training</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73117</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73117</guid>
-      <pubDate>Mon, 16 Mar 2026 19:01:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Declaring Gender-Based Violence an Epidemic Was Not Enough</title>
-      <link>https://thetyee.ca/Opinion/2026/03/27/Declaring-Gender-Based-Violence-Epidemic-Not-Enough/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/03/27/Declaring-Gender-Based-Violence-Epidemic-Not-Enough/</guid>
-      <description><![CDATA[The needs of survivors seeking services are skyrocketing in BC. New research shows frontline workers need better support.]]></description>
-      <pubDate>Fri, 27 Mar 2026 07:20:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Celebrates International Day of the Francophonie and Announces Next Steps Toward a Truly Bilingual Province</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73142</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73142</guid>
-      <pubDate>Fri, 20 Mar 2026 16:48:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Announces Open House on the Future of Lemay Forest</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73103</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73103</guid>
-      <pubDate>Fri, 13 Mar 2026 18:15:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73102</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73102</guid>
-      <pubDate>Fri, 13 Mar 2026 16:18:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitoba Government Opens New Highway Traffic Inspection Station and Weigh Scale Near Headingley</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73101</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73101</guid>
-      <pubDate>Fri, 13 Mar 2026 15:54:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>The Human Cost of Failing to Name COVID ‘Airborne’</title>
-      <link>https://thetyee.ca/Analysis/2026/03/27/Human-Cost-Failing-Name-COVID-Airborne/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Analysis/2026/03/27/Human-Cost-Failing-Name-COVID-Airborne/</guid>
-      <description><![CDATA[Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price.]]></description>
-      <pubDate>Fri, 27 Mar 2026 07:30:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Measles Update #91</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73145</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73145</guid>
-      <pubDate>Fri, 20 Mar 2026 20:14:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Manitobans Encouraged to Start Planning for Camping Season</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73141</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73141</guid>
-      <pubDate>Fri, 20 Mar 2026 14:54:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Measles Update #90</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73140</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73140</guid>
-      <pubDate>Thu, 19 Mar 2026 19:38:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>Measles Update #87</title>
-      <link>https://news.gov.mb.ca/news/index.html?item=73118</link>
-      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73118</guid>
-      <pubDate>Mon, 16 Mar 2026 21:01:00 GMT</pubDate>
-      <category>Critical</category>
+      <title>New Leader Avi Lewis Vows to Rebuild the NDP</title>
+      <link>https://thetyee.ca/News/2026/03/29/New-Leader-Avi-Lewis-Vows-Rebuild-NDP/</link>
+      <guid isPermaLink="true">https://thetyee.ca/News/2026/03/29/New-Leader-Avi-Lewis-Vows-Rebuild-NDP/</guid>
+      <description><![CDATA[He won pledging climate policies, taxing the rich and creating publicly owned corporations.]]></description>
+      <pubDate>Sun, 29 Mar 2026 19:35:00 GMT</pubDate>
+      <category>High Priority</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 

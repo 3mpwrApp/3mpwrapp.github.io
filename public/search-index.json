@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
   "generated": "2026-03-29",
-  "totalDocuments": 452,
+  "totalDocuments": 453,
   "documents": [
     {
       "id": "blog/2026-03-29-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-03-29",
-      "excerpt": "Daily News Curation - 2026-03-29 Curated 15 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-03-29 Curated 15 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program Government of Manitoba press release Source Score: 17.40 2. Manitoba Government Launches Ste. Anne Hospital Working Group to Strengthen Care in Southern Health Region Government of Manitoba press release Source Score: 14.00 3. Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood Government of Manitoba press release Source Score: 10.50 4. Manitoba Government Grows Nursing Workforce as Record 45 Nurses Set to Graduate Intensive Care Unit Training Government of Manitoba press release Source Score: 10.50 5. Declaring Gender-Based Violence an Epidemic Was Not Enough The needs of survivors seeking services are skyrocketing in BC. New research shows frontline workers need better support. Source Score: 7.60 6. Manitoba Government Celebrates International Day of the Francophonie and Announces Next Steps Toward a Truly Bilingual Province Government of Manitoba press release Source Score: 7.50 7. Manitoba Government Announces Open House on the Future of Lemay Forest Government of Manitoba press release Source Score: 7.50 8. Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital Government of Manitoba press release Source Score: 7.50 9. Manitoba Government Opens New Highway Traffic Inspection Station and Weigh Scale Near Headingley Government of Manitoba press release Source Score: 7.50 10. The Human Cost of Failing to Name COVID ‘Airborne’ Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price. Source Score: 6.50 11. Measles Update #91 Government of Manitoba press release Source Score: 4.50 12. Manitobans Encouraged to Start Planning for Camping Season Government of Manitoba press release Source Score: 4.50 13. Measles Update #90 Government of Manitoba press release Source Score: 4.50 14. Measles Update #87 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-29 Curated 2 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-29 Curated 2 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. New Leader Avi Lewis Vows to Rebuild the NDP He won pledging climate policies, taxing the rich and creating publicly owned corporations. Source Score: 3.90",
       "date": "2026-03-29",
       "tags": [
         "highlights"
@@ -18,7 +18,26 @@
         "news"
       ],
       "url": "/2026-03-29-daily-curation",
-      "filesize": 2274
+      "filesize": 468
+    },
+    {
+      "id": "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "source": "blog",
+      "title": "Your First Benefits Application: A Complete Walkthrough",
+      "excerpt": "Your First Benefits Application: A Complete Walkthrough A practical guide from the 3mpwrApp team. --- The Canadian benefits system is genuinely complex. Between federal programs like CPP Disability, p",
+      "content": "Your First Benefits Application: A Complete Walkthrough A practical guide from the 3mpwrApp team. --- The Canadian benefits system is genuinely complex. Between federal programs like CPP Disability, provincial programs like ODSP or AISH, and workplace insurance like WSIB, most injured workers simply don't know everything they're entitled to. The Benefits Navigator exists to fix that. We built plain-language summaries because official government websites are written for administrators, not for people who are sick, in pain, and trying to figure out how to survive financially. You deserve clear, direct information. Deadlines are the hidden killer of disability claims. A reconsideration request filed one day late can cost years of benefits. 3mpwrApp's deadline reminders are designed to prevent exactly that. --- What You'll Learn - Province-specific listings for CPP Disability, WSIB, ODSP, AISH, and more - Plain-language summaries strip out government jargon completely - Eligibility checker narrows your real options down in minutes - Application deadline reminders prevent the most common preventable losses - Document checklists for every major benefit type --- Step by Step Step 1: Run the eligibility checker with your province and diagnosis to see what applies Step 2: Read the plain-language summary of CPP Disability before you call the 1-800 number Step 3: Set a reminder for your WSIB objection deadline the moment you receive a decision Step 4: Download the document checklist for ODSP before your first appointment --- Key Takeaways - Most people qualify for more benefits than they know about - Missing deadlines is the most preventable way to lose a legitimate claim - Plain-language summaries save hours of navigating government websites in pain --- Ready to Try It? 1. Download 3mpwrApp â€” 3mpwrapp.pages.dev 2. Sign up or explore as guest â€” no commitment needed 3. Find this feature â€” search or browse main navigation --- About 3mpwrApp 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada. - ðŸ“– Full User Guide - ðŸ§ª Join the Beta - ðŸ’¬ Community Forums",
+      "date": "2026-03-29 00:00:00 +0000",
+      "tags": [
+        "tutorial",
+        "how-to",
+        "accessibility",
+        "tutorial"
+      ],
+      "categories": [
+        "tutorials"
+      ],
+      "url": "/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough",
+      "filesize": 2148
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -1656,13 +1675,13 @@
       "id": "curation/2026-03-29-curated.md",
       "source": "curation",
       "title": "2026-03-29-curated.md",
-      "excerpt": "Daily News Curation - 2026-03-29 Curated 15 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-03-29 Curated 15 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program Government of Manitoba press release Source Score: 17.40 2. Manitoba Government Launches Ste. Anne Hospital Working Group to Strengthen Care in Southern Health Region Government of Manitoba press release Source Score: 14.00 3. Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood Government of Manitoba press release Source Score: 10.50 4. Manitoba Government Grows Nursing Workforce as Record 45 Nurses Set to Graduate Intensive Care Unit Training Government of Manitoba press release Source Score: 10.50 5. Declaring Gender-Based Violence an Epidemic Was Not Enough The needs of survivors seeking services are skyrocketing in BC. New research shows frontline workers need better support. Source Score: 7.60 6. Manitoba Government Celebrates International Day of the Francophonie and Announces Next Steps Toward a Truly Bilingual Province Government of Manitoba press release Source Score: 7.50 7. Manitoba Government Announces Open House on the Future of Lemay Forest Government of Manitoba press release Source Score: 7.50 8. Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital Government of Manitoba press release Source Score: 7.50 9. Manitoba Government Opens New Highway Traffic Inspection Station and Weigh Scale Near Headingley Government of Manitoba press release Source Score: 7.50 10. The Human Cost of Failing to Name COVID ‘Airborne’ Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price. Source Score: 6.50 11. Measles Update #91 Government of Manitoba press release Source Score: 4.50 12. Manitobans Encouraged to Start Planning for Camping Season Government of Manitoba press release Source Score: 4.50 13. Measles Update #90 Government of Manitoba press release Source Score: 4.50 14. Measles Update #87 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-03-29 Curated 2 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-03-29 Curated 2 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. New Leader Avi Lewis Vows to Rebuild the NDP He won pledging climate policies, taxing the rich and creating publicly owned corporations. Source Score: 3.90",
       "date": "2026-03-29",
       "tags": [],
       "categories": [],
       "url": "/2026-03-29-curated",
-      "filesize": 2274
+      "filesize": 468
     },
     {
       "id": "curation/README.md",
@@ -7593,6 +7612,38 @@
     "2026-03-29": [
       "blog/2026-03-29-daily-curation.md"
     ],
+    "your": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "first": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2025-12-12-demo-success-usa-lite-launch.md",
+      "whatsnew/2025-12-12-demo-presentation-usa-lite.md"
+    ],
+    "benefits": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-01-20-feature-spotlight-benefits-tracker.md",
+      "blog/2025-12-24-feature-spotlight-benefits-navigator.md",
+      "blog/2025-12-09-feature-spotlight-benefits-tracker.md",
+      "blog/2025-11-11-feature-spotlight-benefits-navigator.md"
+    ],
+    "application:": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md"
+    ],
+    "a": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md"
+    ],
+    "complete": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "whatsnew/2026-02-24-documentation-sync-en-fr-legal.md",
+      "whatsnew/2026-01-15-powertools-complete-week-3.md"
+    ],
+    "walkthrough": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md"
+    ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"
     ],
@@ -8575,11 +8626,6 @@
       "blog/2025-10-24-feature-spotlight-evidence-locker.md",
       "whatsnew/2025-10-03-accessibility-settings-consent.md"
     ],
-    "your": [
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
-    ],
     "needs": [
       "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
       "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
@@ -8794,10 +8840,6 @@
     ],
     "sync": [
       "whatsnew/2026-02-24-documentation-sync-en-fr-legal.md"
-    ],
-    "complete": [
-      "whatsnew/2026-02-24-documentation-sync-en-fr-legal.md",
-      "whatsnew/2026-01-15-powertools-complete-week-3.md"
     ],
     "(en": [
       "whatsnew/2026-02-24-documentation-sync-en-fr-legal.md"
@@ -9051,12 +9093,6 @@
       "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
       "blog/2025-11-20-feature-spotlight-symptom-pain-tracker.md",
       "blog/2025-11-19-feature-spotlight-mood-tracker.md"
-    ],
-    "benefits": [
-      "blog/2026-01-20-feature-spotlight-benefits-tracker.md",
-      "blog/2025-12-24-feature-spotlight-benefits-navigator.md",
-      "blog/2025-12-09-feature-spotlight-benefits-tracker.md",
-      "blog/2025-11-11-feature-spotlight-benefits-navigator.md"
     ],
     "templates": [
       "blog/2026-01-19-feature-spotlight-campaign-templates.md",
@@ -9465,10 +9501,6 @@
       "blog/2025-12-12-demo-success-usa-lite-launch.md",
       "whatsnew/2025-12-12-demo-presentation-usa-lite.md",
       "blog/2025-12-07-feature-spotlight-production-release.md"
-    ],
-    "first": [
-      "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "whatsnew/2025-12-12-demo-presentation-usa-lite.md"
     ],
     "demo": [
       "blog/2025-12-12-demo-success-usa-lite-launch.md",
@@ -10220,6 +10252,35 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
     ],
+    "tutorial": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
+    ],
+    "how-to": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
+    ],
+    "accessibility": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
+      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
+    ],
     "features": [
       "blog/2026-03-28-feature-spotlight-wellness-hub.md",
       "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
@@ -10547,31 +10608,6 @@
       "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
       "blog/2025-12-18-feature-spotlight-legal-workflow-automation.md",
       "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md"
-    ],
-    "tutorial": [
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
-    ],
-    "how-to": [
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
-    ],
-    "accessibility": [
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
-      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
     ],
     "phase-2:-legal-tools": [
       "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
@@ -11070,6 +11106,11 @@
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
+    "tutorials": [
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
+    ],
     "features": [
       "blog/2026-03-28-feature-spotlight-wellness-hub.md",
       "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
@@ -11216,10 +11257,6 @@
     "dev-diary": [
       "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "tutorials": [
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
     ],
     "founder-story": [
       "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md"
