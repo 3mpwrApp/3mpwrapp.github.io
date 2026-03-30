@@ -8,7 +8,8 @@
     "Legal Workflow Automation",
     "Indigenous Language Support",
     "Campaign Coordination",
-    "Wellness Hub"
+    "Wellness Hub",
+    "Dyslexia Support Mode"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -23,6 +24,6 @@
     "The Origin Story: Why 3mpwrApp Was Built",
     "Disability Justice vs Disability Charity: Our Operating Principle"
   ],
-  "rotationIndex": 2,
+  "rotationIndex": 3,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
