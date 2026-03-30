@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-03-29T03:45:22.050Z",
+  "generated": "2026-03-30T03:48:45.012Z",
   "insights": {
-    "timestamp": "2026-03-29T03:45:22.019Z",
+    "timestamp": "2026-03-30T03:48:44.983Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-03-29T03:45:22.025Z",
+      "lastUpdated": "2026-03-30T03:48:44.989Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -39,27 +39,27 @@
       "currentTrending": [
         {
           "tag": "disabilityrights",
-          "mentions": 41,
+          "mentions": 42,
           "source": "emerging"
         },
         {
           "tag": "accessibility",
-          "mentions": 36,
+          "mentions": 42,
           "source": "emerging"
         },
         {
           "tag": "cripthevote",
-          "mentions": 29,
-          "source": "emerging"
-        },
-        {
-          "tag": "disabilityjustice",
-          "mentions": 27,
+          "mentions": 35,
           "source": "emerging"
         },
         {
           "tag": "a11y",
-          "mentions": 27,
+          "mentions": 31,
+          "source": "emerging"
+        },
+        {
+          "tag": "altcitizen",
+          "mentions": 28,
           "source": "emerging"
         }
       ],
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-03-29T03:45:22.029Z",
+      "lastUpdated": "2026-03-30T03:48:44.992Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-03-29T03:45:22.025Z",
+    "lastUpdated": "2026-03-30T03:48:44.989Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -102,27 +102,27 @@
     "currentTrending": [
       {
         "tag": "disabilityrights",
-        "mentions": 41,
+        "mentions": 42,
         "source": "emerging"
       },
       {
         "tag": "accessibility",
-        "mentions": 36,
+        "mentions": 42,
         "source": "emerging"
       },
       {
         "tag": "cripthevote",
-        "mentions": 29,
-        "source": "emerging"
-      },
-      {
-        "tag": "disabilityjustice",
-        "mentions": 27,
+        "mentions": 35,
         "source": "emerging"
       },
       {
         "tag": "a11y",
-        "mentions": 27,
+        "mentions": 31,
+        "source": "emerging"
+      },
+      {
+        "tag": "altcitizen",
+        "mentions": 28,
         "source": "emerging"
       }
     ],
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-03-29T03:45:22.029Z",
+    "lastUpdated": "2026-03-30T03:48:44.992Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
