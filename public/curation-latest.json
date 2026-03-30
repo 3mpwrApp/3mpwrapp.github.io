@@ -1,7 +1,7 @@
 {
   "date": "2026-03-30",
-  "timestamp": "2026-03-30T10:19:09.120Z",
-  "count": 16,
+  "timestamp": "2026-03-30T21:51:06.136Z",
+  "count": 6,
   "minScore": 3.5,
   "items": [
     {
@@ -9,112 +9,42 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-03-30T10:19:09.117Z"
+      "pubDate": "2026-03-30T21:51:06.133Z"
     },
     {
-      "title": "Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73138",
+      "title": "Alberta and Saskatchewan NDP Leaders Freak Out After Lewis Win",
+      "link": "https://thetyee.ca/Opinion/2026/03/30/NDP-Leaders-Freak-After-Lewis-Win/",
+      "description": "Why the surprise that a social democratic party would elect a leader with those values?",
+      "score": 5.6,
+      "pubDate": "Mon, 30 Mar 2026 18:18:00 +0000"
+    },
+    {
+      "title": "Alberta and Saskatchewan NDP leaders foolishly freak out over Avi Lewis victory",
+      "link": "https://rabble.ca/politics/canadian-politics/alberta-and-saskatchewan-ndp-leaders-foolishly-freak-out-over-avi-lewis-victory/",
       "description": "",
-      "score": 17.4,
-      "pubDate": "Thu, 19 Mar 2026 10:10:00 CDT"
+      "score": 4.6,
+      "pubDate": "Mon, 30 Mar 2026 21:33:56 +0000"
     },
     {
-      "title": "Manitoba Government Launches Ste. Anne Hospital Working Group to Strengthen Care in Southern Health Region",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73143",
+      "title": "Company abandons Alberta oilsands nuclear project",
+      "link": "https://rabble.ca/politics/canadian-politics/company-abandons-alberta-oilsands-nuclear-project/",
       "description": "",
-      "score": 14,
-      "pubDate": "Fri, 20 Mar 2026 13:42:00 CDT"
+      "score": 3.5999999999999996,
+      "pubDate": "Mon, 30 Mar 2026 21:08:04 +0000"
     },
     {
-      "title": "Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73139",
-      "description": "",
-      "score": 10.5,
-      "pubDate": "Thu, 19 Mar 2026 12:00:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Grows Nursing Workforce as Record 45 Nurses Set to Graduate Intensive Care Unit Training",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73117",
-      "description": "",
-      "score": 10.5,
-      "pubDate": "Mon, 16 Mar 2026 14:01:00 CDT"
-    },
-    {
-      "title": "Declaring Gender-Based Violence an Epidemic Was Not Enough",
-      "link": "https://thetyee.ca/Opinion/2026/03/27/Declaring-Gender-Based-Violence-Epidemic-Not-Enough/",
-      "description": "The needs of survivors seeking services are skyrocketing in BC. New research shows frontline workers need better support.",
-      "score": 7.6,
-      "pubDate": "Fri, 27 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "Manitoba Government Celebrates International Day of the Francophonie and Announces Next Steps Toward a Truly Bilingual Province",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73142",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 20 Mar 2026 11:48:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Announces Open House on the Future of Lemay Forest",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73103",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 13:15:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73102",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 11:18:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Opens New Highway Traffic Inspection Station and Weigh Scale Near Headingley",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73101",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 10:54:00 CDT"
-    },
-    {
-      "title": "Union Pressures Thomson Reuters to Rethink Selling Tools to ICE",
-      "link": "https://thetyee.ca/News/2026/03/30/Union-Pressures-Thomson-Reuters-Tools-ICE/",
-      "description": "BCGEU owns shares in the Canadian media firm that contracts with the US deportations agency.",
-      "score": 4,
-      "pubDate": "Mon, 30 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "The Human Cost of Failing to Name COVID ‘Airborne’",
-      "link": "https://thetyee.ca/Analysis/2026/03/27/Human-Cost-Failing-Name-COVID-Airborne/",
-      "description": "Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price.",
-      "score": 6.5,
-      "pubDate": "Fri, 27 Mar 2026 07:30:00 +0000"
-    },
-    {
-      "title": "Measles Update #91",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73145",
+      "title": "Measles Update #95",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73237",
       "description": "",
       "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 15:14:00 CDT"
+      "pubDate": "Mon, 30 Mar 2026 16:19:00 CDT"
     },
     {
-      "title": "Manitobans Encouraged to Start Planning for Camping Season",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73141",
+      "title": "Spring Thaw Begins in Southern Manitoba Basins",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73217",
       "description": "",
       "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 09:54:00 CDT"
-    },
-    {
-      "title": "Measles Update #90",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73140",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 19 Mar 2026 14:38:00 CDT"
-    },
-    {
-      "title": "Measles Update #87",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73118",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 16 Mar 2026 16:01:00 CDT"
+      "pubDate": "Mon, 30 Mar 2026 08:54:00 CDT"
     }
   ]
 }
