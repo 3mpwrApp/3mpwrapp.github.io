@@ -97,7 +97,7 @@ exclude:
   - public
   - vendor
   - .bundle
-  - docs/deployment
+  - docs
   - docs/setup
   - docs/development
   - docs/performance
