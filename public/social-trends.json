@@ -1,41 +1,41 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-31T01:20:01.282Z",
+  "lastUpdated": "2026-03-31T07:01:22.884Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14250,
+      "totalPosts": 14275,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T01:19:52.369Z"
+      "lastSeen": "2026-03-31T07:01:15.422Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14186,
+      "totalPosts": 14211,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T01:19:54.249Z"
+      "lastSeen": "2026-03-31T07:01:17.025Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14048,
+      "totalPosts": 14073,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T01:19:56.257Z"
+      "lastSeen": "2026-03-31T07:01:18.651Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14280,
+      "totalPosts": 14305,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T01:19:58.303Z"
+      "lastSeen": "2026-03-31T07:01:20.294Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14236,
+      "totalPosts": 14260,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T01:20:00.278Z"
+      "lastSeen": "2026-03-31T07:01:21.880Z"
     }
   },
   "viralPosts": [
@@ -94,42 +94,6 @@
       "hashtag": "DisabilityJustice"
     },
     {
-      "text": "THIS SATURDAY: BIGGEST PROTEST IN AMERICAN HISTORY‼️\n\nJoin your local rally, find it here: www.nokings.org\n\nCan’t make it out to the streets? \n\nVIRTUAL RALLY with @standupforscience.net accessible and inclusive, for everyone, everywhere \n\n#NoKings #DisabilityJustice #VirtualRally @indivisible.org",
-      "author": "katieholten.bsky.social",
-      "engagement": 52,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Join us at the 2026 Abilities Expo in Long Beach! 🎉\n\n📍 Long Beach Convention Center\n📅 March 28-29\n⏰ Sat 11–5 | Sun 11–4 (10–11am early access)\n\nAdaptive sports, cutting-edge tech, fashion, gaming & more—FREE!\n\n#AbilitiesExpo #Accessibility #Inclusion #LongBeach #AdaptiveSports #FreeEvent",
-      "author": "fionamacpa.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
-      "author": "emilyrj.bsky.social",
-      "engagement": 22,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
-      "author": "randompammit.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
       "text": "Join us at the 2026 Abilities Expo in Long Beach! 🎉\n\n📍 Long Beach Convention Center\n📅 March 28-29\n⏰ Sat 11–5 | Sun 11–4 (10–11am early access)\n\nAdaptive sports, cutting-edge tech, fashion, gaming & more—FREE!\n\n#AbilitiesExpo #Accessibility #Inclusion #LongBeach #AdaptiveSports #FreeEvent",
       "author": "fionamacpa.bsky.social",
       "engagement": 12,
@@ -319,6 +283,42 @@
       "text": "This is the #overlay company that fabricated clients, testimonials, and ratings:\nadrianroselli.com/2025/07/acce...\n\nIts failure to do alt text correctly for this Bluesky post should tell you all you need to know. \n\n#a11y #accessibility #WCAG",
       "author": "aardrian.bsky.social",
       "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "If you like horror games, go play the winner of the community votes in Games for Blind Gamers 5, Impulse Response! I can not describe just how unbelievable the quality of this game is. So please, give this audio horror game a try!\n\ndedly13.itch.io/impulse-resp...\n\n#IndieDev #GameDev #A11y",
+      "author": "ericbomb.bsky.social",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
+      "author": "randompammit.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "This is the #overlay company that fabricated clients, testimonials, and ratings:\nadrianroselli.com/2025/07/acce...\n\nIts failure to do alt text correctly for this Bluesky post should tell you all you need to know. \n\n#a11y #accessibility #WCAG",
+      "author": "aardrian.bsky.social",
+      "engagement": 16,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "This is the #overlay company that fabricated clients, testimonials, and ratings:\nadrianroselli.com/2025/07/acce...\n\nIts failure to do alt text correctly for this Bluesky post should tell you all you need to know. \n\n#a11y #accessibility #WCAG",
+      "author": "aardrian.bsky.social",
+      "engagement": 16,
       "hashtag": "A11y"
     },
     {
@@ -354,10 +354,6 @@
       "count": 35
     },
     {
-      "keyword": "a11y",
-      "count": 29
-    },
-    {
       "keyword": "altcitizen",
       "count": 28
     },
@@ -370,8 +366,12 @@
       "count": 27
     },
     {
-      "keyword": "disabilityjustice",
+      "keyword": "a11y",
       "count": 27
+    },
+    {
+      "keyword": "disabilityjustice",
+      "count": 26
     },
     {
       "keyword": "nokings3",
@@ -398,10 +398,6 @@
       "count": 10
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 10
-    },
-    {
       "keyword": "trumpmustgo",
       "count": 9
     },
@@ -414,12 +410,16 @@
       "count": 8
     },
     {
-      "keyword": "wcag",
+      "keyword": "accessibility a11y",
       "count": 8
     },
     {
       "keyword": "handsoff",
       "count": 7
+    },
+    {
+      "keyword": "zoom",
+      "count": 6
     }
   ]
 }
