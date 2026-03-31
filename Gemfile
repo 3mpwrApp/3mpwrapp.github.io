@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
+# Use github-pages gem for GitHub Pages/Cloudflare Pages compatibility
+gem "github-pages", "~> 232", group: :jekyll_plugins
 gem "minima", "~> 2.5"
 
 # Pin sass-embedded to working version to avoid build failures
