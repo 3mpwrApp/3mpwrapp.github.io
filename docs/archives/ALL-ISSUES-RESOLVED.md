@@ -30,11 +30,13 @@ Liquid error (line 14): comparison of String with 1758247495 failed
 
 **Changed lines 14-19:**
 ```liquid
+{% raw %}
 {% assign current_time = site.time | date: '%s' | plus: 0 %}
 {% assign thirty_days_ago = current_time | minus: 2592000 %}
 {% for update in site.data.updates %}
   {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}
   {% if update_timestamp >= thirty_days_ago %}
+{% endraw %}
 ```
 
 ### The Result:
