@@ -161,7 +161,7 @@ We refuse to run `npm install` while compromised packages are marked as "latest"
 We believe in full transparency with our beta community. Here's everything we know:
 
 ### Full Technical Analysis:
-https://3mpwrapp.pages.dev/blog/axios-attack
+https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 ### Emergency Response Runbook:
 https://github.com/3mpwrApp/empowrapp-new/blob/main/docs/SECURITY_INCIDENT_RESPONSE.md
@@ -262,7 +262,7 @@ Keep testing, keep reporting issues, and keep helping us build something amazing
 
 **RESOURCES AT A GLANCE:**
 
-📄 **Full Analysis:** 3mpwrapp.pages.dev/blog/axios-attack  
+📄 **Full Analysis:** 3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack  
 🛡️ **Emergency Runbook:** github.com/3mpwrApp/empowrapp-new/blob/main/docs/SECURITY_INCIDENT_RESPONSE.md  
 📧 **Security Contact:** empowrapp08162025@gmail.com  
 🔍 **Verification Script:** Available in codebase for developers  
