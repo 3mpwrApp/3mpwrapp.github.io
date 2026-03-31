@@ -13,13 +13,13 @@ excerpt: Connect with others who share similar disabilities, experiences, and ch
 
 Connect with others who share similar disabilities, experiences, and challenges
 
----
+* * *
 
 ## What Is Peer Support Matching?
 
 Peer Support Matching is designed to connect with others who share similar disabilities, experiences, and challenges. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Peer Support Matching is designed to connect with others who share similar disab
 - **Block and report features for safety**
 - **Free peer support connections**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Peer Support Matching:
 4. Privacy: "Share only what you're comfortable with"
 5. Safety: "Report concerning behavior instantly"
 
----
+* * *
 
 ## Why Peer Support Matching Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Peer Support Matching:
 - Practical advice from people who understand
 - Build long-term support relationships
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Peer Support Matching? Here's how to get started:
 3. **Find the feature** - Look for "Peer Support Matching" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Peer Support Matching and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#peer-support-matching)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#peer-support-matching)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

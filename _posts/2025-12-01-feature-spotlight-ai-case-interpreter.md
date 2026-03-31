@@ -13,13 +13,13 @@ excerpt: Upload legal documents and get plain-language summaries and next-step g
 
 Upload legal documents and get plain-language summaries and next-step guidance
 
----
+* * *
 
 ## What Is AI Case Interpreter?
 
 AI Case Interpreter is designed to upload legal documents and get plain-language summaries and next-step guidance. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ AI Case Interpreter is designed to upload legal documents and get plain-language
 - **Highlights concerning language or issues**
 - **Free document analysis for everyone**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use AI Case Interpreter:
 4. Next: "Gather updated medical reports, draft appeal letter"
 5. Warning: "Language suggests they didn't review all evidence"
 
----
+* * *
 
 ## Why AI Case Interpreter Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use AI Case Interpreter:
 - Know exactly what to do next
 - Spot issues to raise with lawyer
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try AI Case Interpreter? Here's how to get started:
 3. **Find the feature** - Look for "AI Case Interpreter" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about AI Case Interpreter and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#ai-case-interpreter)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#ai-case-interpreter)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

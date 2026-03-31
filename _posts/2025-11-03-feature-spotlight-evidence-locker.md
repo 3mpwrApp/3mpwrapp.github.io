@@ -13,13 +13,13 @@ excerpt: Securely store important documents with AES-256 encryption and organize
 
 Securely store important documents with AES-256 encryption and organized categories
 
----
+* * *
 
 ## What Is Evidence Locker?
 
 Evidence Locker is designed to securely store important documents with aes-256 encryption and organized categories. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Evidence Locker is designed to securely store important documents with aes-256 e
 - **Offline access to all stored documents**
 - **Export options for sharing with lawyers or representatives**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Evidence Locker:
 4. Organize employment records and accommodation requests
 5. Save correspondence with government agencies
 
----
+* * *
 
 ## Why Evidence Locker Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Evidence Locker:
 - Organize documents for legal processes
 - Access your documents offline anytime
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Evidence Locker? Here's how to get started:
 3. **Find the feature** - Look for "Evidence Locker" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Evidence Locker and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#evidence-locker)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#evidence-locker)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

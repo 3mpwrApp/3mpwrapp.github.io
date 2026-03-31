@@ -13,13 +13,13 @@ excerpt: Accessible meditation sessions adjusted for energy levels and physical 
 
 Accessible meditation sessions adjusted for energy levels and physical limitations
 
----
+* * *
 
 ## What Is Adaptive Meditation?
 
 Adaptive Meditation is designed to accessible meditation sessions adjusted for energy levels and physical limitations. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Adaptive Meditation is designed to accessible meditation sessions adjusted for e
 - **Customizable soundscapes or silence**
 - **Free mindfulness for everyone**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Adaptive Meditation:
 4. Silent meditation with visual timer
 5. Nature sounds to reduce anxiety
 
----
+* * *
 
 ## Why Adaptive Meditation Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Adaptive Meditation:
 - Fits into busy or low-energy days
 - Improve sleep and emotional regulation
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Adaptive Meditation? Here's how to get started:
 3. **Find the feature** - Look for "Adaptive Meditation" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Adaptive Meditation and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#adaptive-meditation)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#adaptive-meditation)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

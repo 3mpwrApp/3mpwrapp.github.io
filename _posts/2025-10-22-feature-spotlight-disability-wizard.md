@@ -13,13 +13,13 @@ excerpt: Your personal guide that recommends the right tools at the right time b
 
 Your personal guide that recommends the right tools at the right time based on your specific needs
 
----
+* * *
 
 ## What Is Disability Wizard?
 
 Disability Wizard is designed to your personal guide that recommends the right tools at the right time based on your specific needs. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -29,7 +29,7 @@ Disability Wizard is designed to your personal guide that recommends the right t
 - **Clear explanations for why each tool is recommended**
 - **Natural flows suggesting next steps after tasks**
 
----
+* * *
 
 ## How It Works
 
@@ -40,7 +40,7 @@ Here are real examples of how you can use Disability Wizard:
 3. High energy detected: "Great time to work on your appeal"
 4. Low energy day: "Focus on self-care activities today"
 
----
+* * *
 
 ## Why Disability Wizard Matters
 
@@ -49,7 +49,7 @@ Here are real examples of how you can use Disability Wizard:
 - Reduce cognitive load of deciding what to do
 - Maximize effectiveness with personalized guidance
 
----
+* * *
 
 ## Getting Started
 
@@ -60,25 +60,25 @@ Ready to try Disability Wizard? Here's how to get started:
 3. **Find the feature** - Look for "Disability Wizard" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Disability Wizard and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#disability-wizard)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#disability-wizard)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

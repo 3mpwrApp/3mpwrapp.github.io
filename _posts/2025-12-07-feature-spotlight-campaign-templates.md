@@ -13,13 +13,13 @@ excerpt: Pre-built templates for common advocacy campaigns and organizing effort
 
 Pre-built templates for common advocacy campaigns and organizing efforts
 
----
+* * *
 
 ## What Is Campaign Templates?
 
 Campaign Templates is designed to pre-built templates for common advocacy campaigns and organizing efforts. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Campaign Templates is designed to pre-built templates for common advocacy campai
 - **Step-by-step guides included**
 - **Always free organizing templates**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Campaign Templates:
 4. Follow: "6-week timeline from planning to action"
 5. Learn: "What worked for similar campaigns"
 
----
+* * *
 
 ## Why Campaign Templates Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Campaign Templates:
 - Save time with pre-written materials
 - Increase likelihood of campaign success
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Campaign Templates? Here's how to get started:
 3. **Find the feature** - Look for "Campaign Templates" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Campaign Templates and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#campaign-templates)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#campaign-templates)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

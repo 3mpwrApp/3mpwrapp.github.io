@@ -11,7 +11,7 @@ excerpt: "How to use the Benefits Navigator to identify, apply for, and track di
 
 *A practical guide from the 3mpwrApp team.*
 
----
+* * *
 
 The Canadian benefits system is genuinely complex. Between federal programs like CPP Disability, provincial programs like ODSP or AISH, and workplace insurance like WSIB, most injured workers simply don't know everything they're entitled to. The Benefits Navigator exists to fix that.
 
@@ -19,7 +19,7 @@ We built plain-language summaries because official government websites are writt
 
 Deadlines are the hidden killer of disability claims. A reconsideration request filed one day late can cost years of benefits. 3mpwrApp's deadline reminders are designed to prevent exactly that.
 
----
+* * *
 
 ## What You'll Learn
 
@@ -29,7 +29,7 @@ Deadlines are the hidden killer of disability claims. A reconsideration request 
 - Application deadline reminders prevent the most common preventable losses
 - Document checklists for every major benefit type
 
----
+* * *
 
 ## Step by Step
 
@@ -41,7 +41,7 @@ Deadlines are the hidden killer of disability claims. A reconsideration request 
 
 **Step 4:** Download the document checklist for ODSP before your first appointment
 
----
+* * *
 
 ## Key Takeaways
 
@@ -49,19 +49,19 @@ Deadlines are the hidden killer of disability claims. A reconsideration request 
 - Missing deadlines is the most preventable way to lose a legitimate claim
 - Plain-language summaries save hours of navigating government websites in pain
 
----
+* * *
 
 ## Ready to Try It?
 
-1. **Download 3mpwrApp** â€” [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)
-2. **Sign up or explore as guest** â€” no commitment needed
-3. **Find this feature** â€” search or browse main navigation
+1. **Download 3mpwrApp** Ã¢â‚¬â€ [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)
+2. **Sign up or explore as guest** Ã¢â‚¬â€ no commitment needed
+3. **Find this feature** Ã¢â‚¬â€ search or browse main navigation
 
----
+* * *
 
 ## About 3mpwrApp
 
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
-- ðŸ“– [Full User Guide](/user-guide/)
-- ðŸ§ª [Join the Beta](/app-waitlist/)
-- ðŸ’¬ [Community Forums](/community/)
+- Ã°Å¸â€œâ€“ [Full User Guide](/user-guide/)
+- Ã°Å¸Â§Âª [Join the Beta](/app-waitlist/)
+- Ã°Å¸â€™Â¬ [Community Forums](/community/)

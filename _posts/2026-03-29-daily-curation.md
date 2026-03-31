@@ -11,13 +11,13 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 Curated 2 items from disability, accessibility, and social policy sources.
 
-## 🌟 Featured: The Disability Bulletin
+## ðŸŒŸ Featured: The Disability Bulletin
 
 ### The Disability Bulletin
 Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
-📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+ðŸ“ [Read More](https://linktr.ee/thedisabilitybulletin)
 
----
+* * *
 
 ## Additional Stories
 
@@ -25,4 +25,3 @@ Visit for the latest disability rights news, advocacy updates, and community sto
 He won pledging climate policies, taxing the rich and creating publicly owned corporations.
 [Source](https://thetyee.ca/News/2026/03/29/New-Leader-Avi-Lewis-Vows-Rebuild-NDP/)
 **Score:** 3.90
-

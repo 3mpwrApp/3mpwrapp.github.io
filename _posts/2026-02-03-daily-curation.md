@@ -11,101 +11,100 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 Curated 21 items from disability, accessibility, and social policy sources.
 
-## 🌟 Featured: The Disability Bulletin
+## ðŸŒŸ Featured: The Disability Bulletin
 
 ### The Disability Bulletin
 Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.
 
-🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
-📍 Visit: https://linktr.ee/thedisabilitybulletin
-📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+ðŸŽ‰ NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
+ðŸ“ Visit: https://linktr.ee/thedisabilitybulletin
+ðŸ“ [Read More](https://linktr.ee/thedisabilitybulletin)
 
----
+* * *
 
 ## Additional Stories
 
 ### 1. Governments of Canada and Manitoba Invest in Mental Health and Wellness for Agriculture Producers
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72439)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72439)
 **Score:** 30.20
 
 ### 2. How Alberta Plans to Kill Public Health Care Across Canada
 A new low opens the door for two-tier that would destroy medicare.
-📍 [Source](https://thetyee.ca/Opinion/2026/02/03/Albertas-Plan-To-Kill-Health-Care/)
+ðŸ“ [Source](https://thetyee.ca/Opinion/2026/02/03/Albertas-Plan-To-Kill-Health-Care/)
 **Score:** 23.50
 
 ### 3. Manitoba Government Convenes U.S. Trade Council Ahead of Canada-United States-Mexico Agreement Negotiations
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72464)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72464)
 **Score:** 18.00
 
 ### 4. Manitoba Government Invests $350,000  In Dauphin Community Development Projects
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72465)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72465)
 **Score:** 10.50
 
 ### 5. Manitoba Government Recruits 13 U.S.-Trained Physicians to Improve Access to Care
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72460)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72460)
 **Score:** 9.50
 
 ### 6. Manitoba Government Invests $16.8 Million Toward University of Manitoba Research Facilities
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72462)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72462)
 **Score:** 8.50
 
-### 7. Danielle Smith’s $30-Million AHS Firing Spree
-That’s the hit to Albertans for severance payments to top health officials since 2019, finds a Tyee analysis.
-📍 [Source](https://thetyee.ca/News/2026/02/03/Danielle-Smith-AHS-Firing-Spree/)
+### 7. Danielle Smithâ€™s $30-Million AHS Firing Spree
+Thatâ€™s the hit to Albertans for severance payments to top health officials since 2019, finds a Tyee analysis.
+ðŸ“ [Source](https://thetyee.ca/News/2026/02/03/Danielle-Smith-AHS-Firing-Spree/)
 **Score:** 8.00
 
 ### 8. When I Saw Scam Ads on Pinterest, I Clicked
-Canadians have lost millions to these fake campaigns on various social platforms. Here’s how they work.
-📍 [Source](https://thetyee.ca/Analysis/2026/02/02/Scam-Ads-Pinterest/)
+Canadians have lost millions to these fake campaigns on various social platforms. Hereâ€™s how they work.
+ðŸ“ [Source](https://thetyee.ca/Analysis/2026/02/02/Scam-Ads-Pinterest/)
 **Score:** 6.50
 
 ### 9. Manitoba Government and Oceans North Announce Funding to Explore Establishment of a National Marine Conservation Area in Hudson Bay
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72577)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72577)
 **Score:** 7.50
 
 ### 10. Manitoba Government Intervenes to Save Seniors' Homes and Preserve Jobs at Golden Door Geriatric Centre
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72559)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72559)
 **Score:** 7.50
 
 ### 11. Manitoba Government Invests $57,000 in Youth Camp in Churchill
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72557)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72557)
 **Score:** 7.50
 
 ### 12. Manitoba Government Opens Swan Valley Regional Secondary School's Cultural Arts Centre
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72466)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72466)
 **Score:** 7.50
 
 ### 13. Manitoba Government Invests $1.2 Million in Portage la Prairie's Future
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72463)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72463)
 **Score:** 7.50
 
 ### 14. Manitoba Government Invests $5 Million Toward Portage La Prairie Field House
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72461)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72461)
 **Score:** 7.50
 
 ### 15. Audit Confirms Previous Government's Lack of Provincewide Planning as Manitoba Advances Dialysis Reforms
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72459)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72459)
 **Score:** 7.50
 
 ### 16. Manitoba Government Strengthens Farm Technology for Producers
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72457)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72457)
 **Score:** 7.50
 
-### 17. ‘House of Folk’ Puts Canadian Folk Music Centre Stage
-Coming to the Firehall this February, Tracey Power’s show captures the spirit of the Canadian folk revival of the ’60s.
-📍 [Source](https://thetyee.ca/Presents/2026/02/03/House-of-Folk-Firehall/)
+### 17. â€˜House of Folkâ€™ Puts Canadian Folk Music Centre Stage
+Coming to the Firehall this February, Tracey Powerâ€™s show captures the spirit of the Canadian folk revival of the â€™60s.
+ðŸ“ [Source](https://thetyee.ca/Presents/2026/02/03/House-of-Folk-Firehall/)
 **Score:** 4.50
 
 ### 18. Canadian Companies Must Cut Ties with ICE, Say Protesters
 One BC firm backed down when faced with a consumer boycott. Advocates call for more action.
-📍 [Source](https://thetyee.ca/News/2026/02/02/Canadian-Companies-Must-Cut-Ties-ICE-Protesters/)
+ðŸ“ [Source](https://thetyee.ca/News/2026/02/02/Canadian-Companies-Must-Cut-Ties-ICE-Protesters/)
 **Score:** 4.50
 
 ### 19. Measles Update #75
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72558)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72558)
 **Score:** 4.50
 
 ### 20. Work Begins at Four New Schools Under the Manitoba Jobs Agreement
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72477)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72477)
 **Score:** 4.50
-

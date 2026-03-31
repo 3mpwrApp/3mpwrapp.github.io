@@ -15,10 +15,10 @@ Managing a disability often means managing limited energy. Phase 6 of 3mpwrApp i
 
 Think of your energy like a battery. Some days you wake up charged. Other days you're running on fumes. 3mpwrApp learns YOUR pattern and predicts:
 
-- ⚡ **When you'll have the most energy** (best for big tasks)
-- 🔋 **When you'll have the least energy** (time to rest)
-- 📊 **24-hour energy predictions** (plan your entire day)
-- 🎯 **Optimal times for activities** (when you're strongest)
+- âš¡ **When you'll have the most energy** (best for big tasks)
+- ðŸ”‹ **When you'll have the least energy** (time to rest)
+- ðŸ“Š **24-hour energy predictions** (plan your entire day)
+- ðŸŽ¯ **Optimal times for activities** (when you're strongest)
 
 ### How Machine Learning Helps
 
@@ -35,19 +35,19 @@ Then it uses AI algorithms to predict: **"Based on your patterns, you'll have pe
 
 Instead of bothering you randomly, smart notifications:
 
-✅ **Schedule for YOUR peak times** - Messages arrive when you have energy to read and act  
-✅ **Learn what works** - App tests different times to find your optimal window  
-✅ **Respect your capacity** - Fewer notifications during low-energy periods  
-✅ **Adapt over time** - Gets smarter as it learns more about you
+âœ… **Schedule for YOUR peak times** - Messages arrive when you have energy to read and act  
+âœ… **Learn what works** - App tests different times to find your optimal window  
+âœ… **Respect your capacity** - Fewer notifications during low-energy periods  
+âœ… **Adapt over time** - Gets smarter as it learns more about you
 
 ### Weekly Wellness Reports
 
 Every week, you get a comprehensive summary:
-- 📈 Energy trends (are you improving or declining?)
-- 😊 Mood patterns (what affects your mental health?)
-- 🛠️ Tool usage insights (what helps most?)
-- 🏆 Achievements (celebrate your wins!)
-- ⭐ Wellness score (overall wellbeing snapshot)
+- ðŸ“ˆ Energy trends (are you improving or declining?)
+- ðŸ˜Š Mood patterns (what affects your mental health?)
+- ðŸ› ï¸ Tool usage insights (what helps most?)
+- ðŸ† Achievements (celebrate your wins!)
+- â­ Wellness score (overall wellbeing snapshot)
 
 ### Privacy First
 
@@ -59,7 +59,7 @@ All energy prediction happens **on your device**:
 
 ### Getting Started with Energy Forecasting
 
-1. Enable in Settings → Wellness → Energy Forecasting
+1. Enable in Settings â†’ Wellness â†’ Energy Forecasting
 2. Start with the Energy Coins tool (tracks your daily capacity)
 3. Use mood tracking for a few days
 4. Watch as the app learns your patterns
@@ -67,10 +67,10 @@ All energy prediction happens **on your device**:
 
 ### Learn More
 
-[View All App Features →](/features#-wellness-tab)  
-[Explore Wellness Tools →](/wellness)  
-[Read the Complete User Guide →](/user-guide)
+[View All App Features â†’](/features#-wellness-tab)  
+[Explore Wellness Tools â†’](/wellness)  
+[Read the Complete User Guide â†’](/user-guide)
 
----
+* * *
 
-**3mpwrApp learns how you work—so the app adapts to your life, not the other way around.**
+**3mpwrApp learns how you workâ€”so the app adapts to your life, not the other way around.**

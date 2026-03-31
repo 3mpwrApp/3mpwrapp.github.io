@@ -11,13 +11,13 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 Curated 17 items from disability, accessibility, and social policy sources.
 
-## 🌟 Featured: The Disability Bulletin
+## ðŸŒŸ Featured: The Disability Bulletin
 
 ### The Disability Bulletin
 Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
-📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+ðŸ“ [Read More](https://linktr.ee/thedisabilitybulletin)
 
----
+* * *
 
 ## Additional Stories
 
@@ -71,8 +71,8 @@ BCGEU owns shares in the Canadian media firm that contracts with the US deportat
 [Source](https://thetyee.ca/News/2026/03/30/Union-Pressures-Thomson-Reuters-Tools-ICE/)
 **Score:** 4.00
 
-### 11. The Human Cost of Failing to Name COVID ‘Airborne’
-Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price.
+### 11. The Human Cost of Failing to Name COVID â€˜Airborneâ€™
+Safety laws are being sidestepped. One doctorâ€™s nightmare shows how health-care workers pay the price.
 [Source](https://thetyee.ca/Analysis/2026/03/27/Human-Cost-Failing-Name-COVID-Airborne/)
 **Score:** 8.20
 
@@ -100,4 +100,3 @@ Government of Manitoba press release
 Government of Manitoba press release
 [Source](https://news.gov.mb.ca/news/index.html?item=73118)
 **Score:** 4.50
-

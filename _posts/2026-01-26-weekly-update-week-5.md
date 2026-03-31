@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Update — Week 5 (2026)
+title: Weekly Update â€” Week 5 (2026)
 date: 2026-01-26 09:00:00 +0000
 tags: [weekly, updates]
 categories: [updates]
@@ -9,7 +9,7 @@ excerpt: This week's updates to 3mpwrApp features, content, and improvements.
 
 Here's what changed this week, in simple terms:
 
-## ✨ New Features
+## âœ¨ New Features
 
 - Remove app feature highlights from curation social posts
 - Add PayPal donation link to footer (paypal.me/3mpwrApp)
@@ -22,7 +22,7 @@ Here's what changed this week, in simple terms:
 - Daily feature article - 2026-01-20
 - Daily feature article - 2026-01-19
 
-## 🐛 Bug Fixes
+## ðŸ› Bug Fixes
 
 - Always include Disability Bulletin at top of curation posts (linktr.ee/thedisabilitybulletin)
 - Discord webhook URL parsing and Facebook JSON payload
@@ -32,14 +32,13 @@ Here's what changed this week, in simple terms:
 - Raise minimum score to 3.5 to filter out general news - only disability-focused content
 - CRITICAL FIX: Apply duplicate detection and DB priority to PRODUCTION curation engine
 
-## 📚 Documentation
+## ðŸ“š Documentation
 
 - Add agent feedback integration architecture map
 - Add agent feedback deployment summary
 
----
+* * *
 
-📬 Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
+ðŸ“¬ Want updates in your inbox? [Subscribe to our newsletter](/newsletter/)
 
-🔍 See all updates: [What's New](/whats-new/)
-
+ðŸ” See all updates: [What's New](/whats-new/)

@@ -13,13 +13,13 @@ excerpt: Full bilingual support for English and French with professional transla
 
 Full bilingual support for English and French with professional translations
 
----
+* * *
 
 ## What Is Multilingual Support (English & French)?
 
 Multilingual Support (English & French) is designed to full bilingual support for english and french with professional translations. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Multilingual Support (English & French) is designed to full bilingual support fo
 - **Switch languages instantly from settings**
 - **Bilingual documentation and support**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Multilingual Support (English & French
 4. Switch between languages as needed
 5. Communicate with services in official language of choice
 
----
+* * *
 
 ## Why Multilingual Support (English & French) Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Multilingual Support (English & French
 - Reduce language barriers to advocacy
 - Exercise your language rights confidently
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Multilingual Support (English & French)? Here's how to get started:
 3. **Find the feature** - Look for "Multilingual Support (English & French)" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Multilingual Support (English & French) and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#language-support)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#language-support)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

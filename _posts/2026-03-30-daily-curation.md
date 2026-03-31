@@ -11,13 +11,13 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 Curated 6 items from disability, accessibility, and social policy sources.
 
-## 🌟 Featured: The Disability Bulletin
+## ðŸŒŸ Featured: The Disability Bulletin
 
 ### The Disability Bulletin
 Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
-📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+ðŸ“ [Read More](https://linktr.ee/thedisabilitybulletin)
 
----
+* * *
 
 ## Additional Stories
 
@@ -27,12 +27,12 @@ Why the surprise that a social democratic party would elect a leader with those 
 **Score:** 5.60
 
 ### 2. Alberta and Saskatchewan NDP leaders foolishly freak out over Avi Lewis victory
-Rabble.ca — progressive Canadian news
+Rabble.ca â€” progressive Canadian news
 [Source](https://rabble.ca/politics/canadian-politics/alberta-and-saskatchewan-ndp-leaders-foolishly-freak-out-over-avi-lewis-victory/)
 **Score:** 4.60
 
 ### 3. Company abandons Alberta oilsands nuclear project
-Rabble.ca — progressive Canadian news
+Rabble.ca â€” progressive Canadian news
 [Source](https://rabble.ca/politics/canadian-politics/company-abandons-alberta-oilsands-nuclear-project/)
 **Score:** 3.60
 
@@ -45,4 +45,3 @@ Government of Manitoba press release
 Government of Manitoba press release
 [Source](https://news.gov.mb.ca/news/index.html?item=73217)
 **Score:** 4.50
-

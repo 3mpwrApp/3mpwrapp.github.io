@@ -11,18 +11,18 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 Curated 36 items from disability, accessibility, and social policy sources.
 
-## 🌟 Featured: The Disability Bulletin
+## ðŸŒŸ Featured: The Disability Bulletin
 
 ### The Disability Bulletin
 Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
-📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+ðŸ“ [Read More](https://linktr.ee/thedisabilitybulletin)
 
----
+* * *
 
 ## Additional Stories
 
 ### 1. How a Veteran Firefighter Battled WorkSafeBC for Treatment
-First responders with job-related trauma face ‘impossibly high’ barriers when choosing mental health care.
+First responders with job-related trauma face â€˜impossibly highâ€™ barriers when choosing mental health care.
 [Source](https://thetyee.ca/News/2026/03/13/Vancouver-Firefighter-Battled-WorkSafeBC-Treatment/)
 **Score:** 24.40
 
@@ -31,17 +31,17 @@ Journalist Rachel Gilmore published an investigation in The Tyee. The men she un
 [Source](https://thetyee.ca/Opinion/2026/03/12/Fallout-Reporting-White-Nationalism-Canada/)
 **Score:** 14.10
 
-### 3. Refusal to condemn US-Israeli illegal war on Iran shows the hypocrisy of Canada’s ‘rules-based' PM
-Rabble.ca — progressive Canadian news
+### 3. Refusal to condemn US-Israeli illegal war on Iran shows the hypocrisy of Canadaâ€™s â€˜rules-based' PM
+Rabble.ca â€” progressive Canadian news
 [Source](https://rabble.ca/politics/canadian-politics/refusal-to-condemn-us-israeli-illegal-war-on-iran-shows-the-hypocrisy-of-canadas-rules-based-pm/)
 **Score:** 10.50
 
-### 4. How the Top One Per Cent Threaten Canada’s Future
+### 4. How the Top One Per Cent Threaten Canadaâ€™s Future
 Wealth is increasingly concentrated in the hands of a few. To preserve democracy, we must act.
 [Source](https://thetyee.ca/Opinion/2026/03/16/Top-One-Per-Cent-Threaten-Canada/)
 **Score:** 10.50
 
-### 5. Manitoba Government and Manitoba M�tis Federation Expand Access to Safe, Supportive Transitional Housing in Interlake Region
+### 5. Manitoba Government and Manitoba Mï¿½tis Federation Expand Access to Safe, Supportive Transitional Housing in Interlake Region
 Government of Manitoba press release
 [Source](https://news.gov.mb.ca/news/index.html?item=73077)
 **Score:** 12.50
@@ -62,12 +62,12 @@ Government of Manitoba press release
 **Score:** 12.40
 
 ### 9. $90M for private schools is terrible public policy, but it makes political sense for Alberta's Conservatives
-Rabble.ca — progressive Canadian news
+Rabble.ca â€” progressive Canadian news
 [Source](https://rabble.ca/politics/canadian-politics/90m-for-private-schools-is-terrible-public-policy-but-it-makes-political-sense-for-albertas-conservatives/)
 **Score:** 8.90
 
 ### 10. Job cuts at Ottawa hospital show deepening crisis of underfunding across Ontario
-Rabble.ca — progressive Canadian news
+Rabble.ca â€” progressive Canadian news
 [Source](https://rabble.ca/labour/job-cuts-at-ottawa-hospital-show-deepening-crisis-of-underfunding-across-ontario/)
 **Score:** 9.40
 
@@ -107,7 +107,7 @@ Government of Manitoba press release
 **Score:** 9.50
 
 ### 18. What Are Universities For?
-They’ve reached a breaking point. Meet the educators charting their future.
+Theyâ€™ve reached a breaking point. Meet the educators charting their future.
 [Source](https://thetyee.ca/Culture/2026/03/13/What-Are-Universities-For/)
 **Score:** 5.00
 
@@ -146,7 +146,7 @@ Government of Manitoba press release
 [Source](https://news.gov.mb.ca/news/index.html?item=72979)
 **Score:** 7.50
 
-### 26. Why Is Vancouver’s World Cup Human Rights Plan So Weak?
+### 26. Why Is Vancouverâ€™s World Cup Human Rights Plan So Weak?
 Other cities hosting FIFA matches have far stronger measures, says a non-profit coalition. A Tyee deep dive.
 [Source](https://thetyee.ca/News/2026/03/16/Vancouver-World-Cup-Human-Rights-Plan/)
 **Score:** 4.00
@@ -157,11 +157,11 @@ The Vancouver and Coquitlam locals say members voted to stay on local health pla
 **Score:** 7.10
 
 ### 28. Reviewing the news cycle with Nick Seebruch and Sarah Sahagian
-Rabble.ca — progressive Canadian news
+Rabble.ca â€” progressive Canadian news
 [Source](https://rabble.ca/podcast/news-cycle-with-nick-seebruch-and-sarah-sahagian/)
 **Score:** 4.50
 
-### 29. BC’s Auditor General Offers Reasons for the Lack of Rebuilding in Lytton
+### 29. BCâ€™s Auditor General Offers Reasons for the Lack of Rebuilding in Lytton
 Five years after a catastrophic fire, a long-awaited report cites administrative hurdles and financial reporting gaps.
 [Source](https://thetyee.ca/News/2026/03/18/BC-Auditor-General-Reasons-Lack-Rebuilding-Lytton/)
 **Score:** 3.60
@@ -195,4 +195,3 @@ Government of Manitoba press release
 Government of Manitoba press release
 [Source](https://news.gov.mb.ca/news/index.html?item=72999)
 **Score:** 4.50
-

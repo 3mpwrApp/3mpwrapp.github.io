@@ -11,60 +11,59 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 Curated 12 items from disability, accessibility, and social policy sources.
 
-## 🌟 Featured: The Disability Bulletin
+## ðŸŒŸ Featured: The Disability Bulletin
 
 ### The Disability Bulletin
 Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.
 
-🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
-📍 Visit: https://linktr.ee/thedisabilitybulletin
-📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+ðŸŽ‰ NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
+ðŸ“ Visit: https://linktr.ee/thedisabilitybulletin
+ðŸ“ [Read More](https://linktr.ee/thedisabilitybulletin)
 
----
+* * *
 
 ## Additional Stories
 
-### 1. Canada’s government gets a failing grade on child poverty
-📍 [Source](https://rabble.ca/economy/canadas-government-gets-a-failing-grade-on-child-poverty/)
+### 1. Canadaâ€™s government gets a failing grade on child poverty
+ðŸ“ [Source](https://rabble.ca/economy/canadas-government-gets-a-failing-grade-on-child-poverty/)
 **Score:** 16.20
 
 ### 2. Manitoba Government Provides Update on Housing and Homelessness
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72960)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72960)
 **Score:** 14.00
 
 ### 3. Manitoba Government Rolls Out Provincewide Hospital Safety Upgrades to Protect Front-Line Health-Care Workers and Patients
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72777)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72777)
 **Score:** 14.00
 
 ### 4. Manitoba Government Invests $76,000 in Community Renewal and Recreation in The Pas
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72778)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72778)
 **Score:** 10.50
 
 ### 5. A heartbreaking account of life and death in Gaza
-📍 [Source](https://rabble.ca/books/a-heartbreaking-account-of-life-and-death-in-gaza/)
+ðŸ“ [Source](https://rabble.ca/books/a-heartbreaking-account-of-life-and-death-in-gaza/)
 **Score:** 5.00
 
 ### 6. Manitoba Government Invests $5 Million in West Lands Infrastructure Development
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72958)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72958)
 **Score:** 7.50
 
 ### 7. Manitoba Government Invests $2.9 Million in New Critical Infrastructure in Flin Flon
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72957)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72957)
 **Score:** 7.50
 
 ### 8. Manitoba Government Increases Venture Capital Tax Credit to $30 Million
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72898)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72898)
 **Score:** 7.50
 
 ### 9. Manitoba Government Invests $65,000 for Baseball Diamond Upgrades in The Pas
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72897)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72897)
 **Score:** 7.50
 
 ### 10. Steelworkers fighting Canadian, American and Mexican workers
-📍 [Source](https://rabble.ca/podcast/steelworkers-fighting-canadian-american-and-mexican-workers/)
+ðŸ“ [Source](https://rabble.ca/podcast/steelworkers-fighting-canadian-american-and-mexican-workers/)
 **Score:** 3.90
 
 ### 11. Measles Update  #83
-📍 [Source](https://news.gov.mb.ca/news/index.html?item=72938)
+ðŸ“ [Source](https://news.gov.mb.ca/news/index.html?item=72938)
 **Score:** 4.50
-

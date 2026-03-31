@@ -13,13 +13,13 @@ excerpt: Curated collection of self-care activities organized by energy level an
 
 Curated collection of self-care activities organized by energy level and time
 
----
+* * *
 
 ## What Is Self-Care Library?
 
 Self-Care Library is designed to curated collection of self-care activities organized by energy level and time. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Self-Care Library is designed to curated collection of self-care activities orga
 - **Daily self-care reminders**
 - **Completely free self-care resources**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Self-Care Library:
 4. Quick: "5-minute breathing exercise"
 5. Extended: "Take relaxing bath with music"
 
----
+* * *
 
 ## Why Self-Care Library Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Self-Care Library:
 - Build consistent self-care practice
 - Remember activities that help you feel better
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Self-Care Library? Here's how to get started:
 3. **Find the feature** - Look for "Self-Care Library" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Self-Care Library and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#self-care-library)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#self-care-library)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

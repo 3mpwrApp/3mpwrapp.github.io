@@ -13,13 +13,13 @@ excerpt: Comprehensive wellness tracking with mood journal, symptom tracking, an
 
 Comprehensive wellness tracking with mood journal, symptom tracking, and self-care resources
 
----
+* * *
 
 ## What Is Wellness Hub?
 
 Wellness Hub is designed to comprehensive wellness tracking with mood journal, symptom tracking, and self-care resources. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Wellness Hub is designed to comprehensive wellness tracking with mood journal, s
 - **Sleep tracking and quality assessment**
 - **Weekly wellness reports with insights**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Wellness Hub:
 4. Discover self-care activities that work for you
 5. Set medication reminders so you never miss a dose
 
----
+* * *
 
 ## Why Wellness Hub Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Wellness Hub:
 - Identify triggers and warning signs
 - Take proactive approach to wellness
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Wellness Hub? Here's how to get started:
 3. **Find the feature** - Look for "Wellness Hub" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Wellness Hub and all other features:
 
-- ðŸ“– [Read the Complete User Guide](/user-guide/#wellness-support)
-- âœ¨ [Explore All Features](/features/)
-- ðŸ§ª [Join Beta Testing](/beta/)
-- ðŸ“¬ [Subscribe to Updates](/newsletter/)
+- Ã°Å¸â€œâ€“ [Read the Complete User Guide](/user-guide/#wellness-support)
+- Ã¢Å“Â¨ [Explore All Features](/features/)
+- Ã°Å¸Â§Âª [Join Beta Testing](/beta/)
+- Ã°Å¸â€œÂ¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesÃ¢â‚¬â€all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- âœ… Fully accessible (WCAG 2.2 AA+)
-- ðŸ”’ Privacy-first (local-first architecture)
-- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
-- ðŸŒ Culturally inclusive (Indigenous languages supported)
+- Ã¢Å“â€¦ Fully accessible (WCAG 2.2 AA+)
+- Ã°Å¸â€â€™ Privacy-first (local-first architecture)
+- Ã°Å¸â€¡Â¨Ã°Å¸â€¡Â¦ Canadian-focused (all provinces/territories)
+- Ã°Å¸Å’Â Culturally inclusive (Indigenous languages supported)

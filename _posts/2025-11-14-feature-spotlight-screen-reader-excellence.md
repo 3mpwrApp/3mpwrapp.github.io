@@ -13,13 +13,13 @@ excerpt: Full screen reader support with ARIA labels, semantic HTML, and optimiz
 
 Full screen reader support with ARIA labels, semantic HTML, and optimized navigation
 
----
+* * *
 
 ## What Is Screen Reader Excellence?
 
 Screen Reader Excellence is designed to full screen reader support with aria labels, semantic html, and optimized navigation. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Screen Reader Excellence is designed to full screen reader support with aria lab
 - **Skip links for faster navigation**
 - **Audio feedback options**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Screen Reader Excellence:
 4. Hear confirmation for important actions
 5. Use with any assistive technology
 
----
+* * *
 
 ## Why Screen Reader Excellence Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Screen Reader Excellence:
 - Clear announcements reduce confusion
 - Works with technology you already use
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Screen Reader Excellence? Here's how to get started:
 3. **Find the feature** - Look for "Screen Reader Excellence" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Screen Reader Excellence and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#settings-and-accessibility)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#settings-and-accessibility)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

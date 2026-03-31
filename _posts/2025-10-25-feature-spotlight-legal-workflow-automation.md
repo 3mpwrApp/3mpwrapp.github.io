@@ -13,13 +13,13 @@ excerpt: Step-by-step guided processes for benefits applications, appeals, and w
 
 Step-by-step guided processes for benefits applications, appeals, and workplace accommodations
 
----
+* * *
 
 ## What Is Legal Workflow Automation?
 
 Legal Workflow Automation is designed to step-by-step guided processes for benefits applications, appeals, and workplace accommodations. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Legal Workflow Automation is designed to step-by-step guided processes for benef
 - **Province-specific guidance for all jurisdictions**
 - **Integration with Evidence Locker and Letter Generator**
 
----
+* * *
 
 ## How It Works
 
@@ -41,7 +41,7 @@ Here are real examples of how you can use Legal Workflow Automation:
 3. Benefits appeal: Organize evidence and write effective appeal letters
 4. Human rights complaint: Understand process and gather documentation
 
----
+* * *
 
 ## Why Legal Workflow Automation Matters
 
@@ -50,7 +50,7 @@ Here are real examples of how you can use Legal Workflow Automation:
 - Ensure you don't miss critical steps
 - Meet all deadlines with automated reminders
 
----
+* * *
 
 ## Getting Started
 
@@ -61,25 +61,25 @@ Ready to try Legal Workflow Automation? Here's how to get started:
 3. **Find the feature** - Look for "Legal Workflow Automation" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Legal Workflow Automation and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#legal-workflow-automation)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#legal-workflow-automation)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

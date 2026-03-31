@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🥄 Spoon Theory Meets Web Design: Energy Tracking While You Browse"
+title: "ðŸ¥„ Spoon Theory Meets Web Design: Energy Tracking While You Browse"
 date: 2025-10-26
 categories: [feature-spotlight, accessibility, energy-management]
 tags: [spoon-theory, chronic-illness, energy-tracking, website-features, cognitive-load]
@@ -9,11 +9,11 @@ excerpt: "Ever wondered how much energy browsing a website actually costs? Our r
 featured: true
 ---
 
-# 🥄 Spoon Theory Meets Web Design: Energy Tracking While You Browse
+# ðŸ¥„ Spoon Theory Meets Web Design: Energy Tracking While You Browse
 
-**Reading Time: 5 minutes** | 🔋🔋 **Energy Cost: Light**
+**Reading Time: 5 minutes** | ðŸ”‹ðŸ”‹ **Energy Cost: Light**
 
----
+* * *
 
 ## What if websites told you how much energy they'd cost?
 
@@ -32,7 +32,7 @@ Most websites have no idea they're draining your energy. They pile on informatio
 
 You might start browsing with 5 spoons left for the day. After 10 minutes on a typical website, you're down to 2 spoons and still haven't found what you need.
 
----
+* * *
 
 ## Our Solution: The World's First Spoon Counter
 
@@ -40,17 +40,17 @@ We built something that's never existed before: **A live counter that tracks how
 
 ### How It Works
 
-**1. Energy Cost Indicators (🔋)**
+**1. Energy Cost Indicators (ðŸ”‹)**
 Every section of our website shows battery icons indicating energy cost:
-- 🔋 = Very Light (1 spoon)
-- 🔋🔋 = Light (2 spoons)
-- 🔋🔋🔋 = Medium (3 spoons)
-- 🔋🔋🔋🔋 = Heavy (4 spoons)
+- ðŸ”‹ = Very Light (1 spoon)
+- ðŸ”‹ðŸ”‹ = Light (2 spoons)
+- ðŸ”‹ðŸ”‹ðŸ”‹ = Medium (3 spoons)
+- ðŸ”‹ðŸ”‹ðŸ”‹ðŸ”‹ = Heavy (4 spoons)
 
 **Before you even start reading**, you know: "This section costs 3 spoons. Do I have that today?"
 
 **2. Live Spoon Counter**
-In the top toolbar, you see: **🥄 Energy used: 5**
+In the top toolbar, you see: **ðŸ¥„ Energy used: 5**
 
 This number updates in real-time as you:
 - Scroll through content (+0.5 spoons every 10 seconds)
@@ -63,19 +63,19 @@ At any point, click "Reset" to start fresh. This is especially helpful if you:
 - Want to track different browsing sessions
 - Share a device with someone else
 
----
+* * *
 
 ## Why This Is Revolutionary
 
 ### 1. Honors Spoon Theory
-Created by Christine Miserandino, spoon theory helps people explain energy limitations to others. We're the first website to operationalize it—making it a functional part of web design, not just a metaphor.
+Created by Christine Miserandino, spoon theory helps people explain energy limitations to others. We're the first website to operationalize itâ€”making it a functional part of web design, not just a metaphor.
 
 ### 2. Informed Decision-Making
 Instead of discovering halfway through a page that you don't have the energy to finish it, you can make informed choices:
 
-❌ **Before:** "I'll try to read this... oh no, it's too much, I'm exhausted."
+âŒ **Before:** "I'll try to read this... oh no, it's too much, I'm exhausted."
 
-✅ **After:** "This costs 4 spoons and I only have 3. I'll save it for tomorrow."
+âœ… **After:** "This costs 4 spoons and I only have 3. I'll save it for tomorrow."
 
 ### 3. Validates Your Experience
 Seeing the counter go up validates what you've always known: **Yes, this IS hard work. Yes, you ARE using energy. It's not just you.**
@@ -83,7 +83,7 @@ Seeing the counter go up validates what you've always known: **Yes, this IS hard
 ### 4. Promotes Self-Care
 When you see "Energy used: 8" and realize you've used more spoons than you intended, it's a clear signal: **Time to rest.**
 
----
+* * *
 
 ## Real-World Use Cases
 
@@ -99,14 +99,14 @@ When you see "Energy used: 8" and realize you've used more spoons than you inten
 - Pushes through, crashes later
 
 **With Spoon Counter:**
-- Sees homepage costs 2 spoons (🔋🔋)
+- Sees homepage costs 2 spoons (ðŸ”‹ðŸ”‹)
 - Checks counter: "I've used 3 spoons"
-- Decides to read one more section (🔋🔋 = 2 more spoons)
+- Decides to read one more section (ðŸ”‹ðŸ”‹ = 2 more spoons)
 - Stops at 5 spoons, saves 5 for the rest of her day
 - No crash, better day overall
 
 ### Case Study 2: Pain Flare Day
-**Marcus has chronic back pain from a workplace injury. Today is a bad pain day—he has maybe 5 spoons total.**
+**Marcus has chronic back pain from a workplace injury. Today is a bad pain dayâ€”he has maybe 5 spoons total.**
 
 **Without Spoon Counter:**
 - Tries to research legal rights
@@ -133,7 +133,7 @@ When you see "Energy used: 8" and realize you've used more spoons than you inten
 - Realizes: "Wow, this DOES cost energy!"
 - Gains empathy and understanding
 
----
+* * *
 
 ## The Technical Innovation
 
@@ -147,7 +147,7 @@ When you see "Energy used: 8" and realize you've used more spoons than you inten
 **Section-Based Tracking:**
 Each section has a `data-energy` attribute:
 ```html
-<span class="energy-cost" data-energy="3">🔋🔋🔋 Energy: Medium</span>
+<span class="energy-cost" data-energy="3">ðŸ”‹ðŸ”‹ðŸ”‹ Energy: Medium</span>
 ```
 
 When you view a section (50% visible), it adds that energy cost once.
@@ -160,7 +160,7 @@ localStorage.setItem('spoonCount', spoonCount);
 
 Come back tomorrow? Your count is still there (until you reset it).
 
----
+* * *
 
 ## Customization Options
 
@@ -174,9 +174,9 @@ The counter will show percentage used: **"3/10 spoons used (30%)"**
 
 ### Energy Alerts (Coming Soon - Phase 2)
 Set alerts:
-- ⚠️ At 50% spoons used: "You're halfway through your energy"
-- 🚨 At 80% spoons used: "Consider taking a break soon"
-- 🛑 At 100% spoons used: "You've reached your energy limit for today"
+- âš ï¸ At 50% spoons used: "You're halfway through your energy"
+- ðŸš¨ At 80% spoons used: "Consider taking a break soon"
+- ðŸ›‘ At 100% spoons used: "You've reached your energy limit for today"
 
 ### Daily Energy Reports (Coming Soon - Phase 3)
 Track your patterns:
@@ -185,7 +185,7 @@ Track your patterns:
 - Best browsing time: 10am-12pm (lowest cost)
 - Highest cost pages: Legal documents (avg 6 spoons)
 
----
+* * *
 
 ## Beyond Browsing: The Bigger Picture
 
@@ -198,14 +198,14 @@ Imagine if:
 
 **We're building the prototype. Others can follow.**
 
----
+* * *
 
 ## Try It Yourself
 
 **Right now, you can:**
 
 1. **Look at the top toolbar** - See your current spoon count
-2. **Check section headers** - Note the 🔋 energy cost indicators
+2. **Check section headers** - Note the ðŸ”‹ energy cost indicators
 3. **Browse normally** - Watch the counter increase
 4. **Click "Reset"** - Start fresh anytime
 5. **Use keyboard shortcut** - Alt+S to reset quickly
@@ -215,28 +215,28 @@ Imagine if:
 - Which sections are most energy-intensive?
 - What's your browsing limit before you need a break?
 
----
+* * *
 
 ## The Future of Energy-Aware Web Design
 
 This is just the beginning. We envision:
 
-**🌐 Industry Standard**
+**ðŸŒ Industry Standard**
 Energy cost indicators as common as accessibility labels
 
-**🤝 Cross-Platform**
+**ðŸ¤ Cross-Platform**
 Your spoon count syncs across devices: phone, tablet, desktop
 
-**🧠 AI-Powered**
+**ðŸ§  AI-Powered**
 Machine learning adjusts energy costs based on your actual usage patterns
 
-**♿ Universal Design**
-Not just for chronic illness—benefits anyone managing cognitive load (students, stressed workers, new parents, etc.)
+**â™¿ Universal Design**
+Not just for chronic illnessâ€”benefits anyone managing cognitive load (students, stressed workers, new parents, etc.)
 
-**📊 Advocacy Tool**
+**ðŸ“Š Advocacy Tool**
 Show employers, doctors, family: "This is what daily energy management looks like"
 
----
+* * *
 
 ## Join the Movement
 
@@ -247,12 +247,12 @@ Show employers, doctors, family: "This is what daily energy management looks lik
 - What features would make this more useful?
 
 **Contact us:**
-📧 [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
+ðŸ“§ [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
 
 **Beta testing:**
 [Sign up to test the app](https://docs.google.com/forms/d/e/1FAIpQLScY599ZYJtpRakd421ADGZumejk2WjmbVvpUknw2uHAzTNx9A/viewform?usp=header)
 
----
+* * *
 
 ## Related Reading
 
@@ -260,10 +260,10 @@ Show employers, doctors, family: "This is what daily energy management looks lik
 - [Energy Forecast & Smart Scheduling](/blog/2025/10/21/feature-spotlight-energy-forecast-smart-scheduling.html)
 - [Complete User Guide](/user-guide)
 
----
+* * *
 
-**💚 Because managing your energy shouldn't cost extra energy.**
+**ðŸ’š Because managing your energy shouldn't cost extra energy.**
 
----
+* * *
 
 *Last updated: October 26, 2025*

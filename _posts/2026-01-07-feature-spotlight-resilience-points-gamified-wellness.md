@@ -13,13 +13,13 @@ excerpt: Earn points for small wins and track therapy goals with gamification
 
 Earn points for small wins and track therapy goals with gamification
 
----
+* * *
 
 ## What Is Resilience Points (Gamified Wellness)?
 
 Resilience Points (Gamified Wellness) is designed to earn points for small wins and track therapy goals with gamification. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Resilience Points (Gamified Wellness) is designed to earn points for small wins 
 - **No competition - just personal growth**
 - **Always free motivation and tracking**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Resilience Points (Gamified Wellness):
 4. Weekly: "You earned 150 points this week!"
 5. Goal: "Practice DBT skills 3x this week" (achieved!)
 
----
+* * *
 
 ## Why Resilience Points (Gamified Wellness) Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Resilience Points (Gamified Wellness):
 - Motivation to stick with wellness practices
 - Celebrate victories often invisible to others
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Resilience Points (Gamified Wellness)? Here's how to get started:
 3. **Find the feature** - Look for "Resilience Points (Gamified Wellness)" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Resilience Points (Gamified Wellness) and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#resilience-points)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#resilience-points)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

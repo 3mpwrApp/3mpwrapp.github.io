@@ -13,13 +13,13 @@ excerpt: Searchable directory of disability services, organizations, and support
 
 Searchable directory of disability services, organizations, and support across Canada
 
----
+* * *
 
 ## What Is Resource Directory?
 
 Resource Directory is designed to searchable directory of disability services, organizations, and support across canada. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Resource Directory is designed to searchable directory of disability services, o
 - **Community support groups and peer networks**
 - **Updated regularly with new resources**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Resource Directory:
 4. Discover advocacy organizations working on your issues
 5. Access crisis resources and immediate support
 
----
+* * *
 
 ## Why Resource Directory Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Resource Directory:
 - Discover new resources and support networks
 - Save time searching for assistance
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Resource Directory? Here's how to get started:
 3. **Find the feature** - Look for "Resource Directory" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Resource Directory and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#resource-directory)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#resource-directory)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

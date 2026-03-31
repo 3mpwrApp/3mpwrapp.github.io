@@ -13,13 +13,13 @@ excerpt: Find disability law specialists, legal aid services, and advocacy lawye
 
 Find disability law specialists, legal aid services, and advocacy lawyers in your area
 
----
+* * *
 
 ## What Is Lawyer Finder?
 
 Lawyer Finder is designed to find disability law specialists, legal aid services, and advocacy lawyers in your area. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Lawyer Finder is designed to find disability law specialists, legal aid services
 - **Contact information and consultation details**
 - **No endorsement - research all lawyers yourself**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Lawyer Finder:
 4. Review: Read experiences from other clients
 5. Contact: Phone, email, accessibility info provided
 
----
+* * *
 
 ## Why Lawyer Finder Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Lawyer Finder:
 - Learn from others' experiences
 - Access lawyers familiar with disability issues
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Lawyer Finder? Here's how to get started:
 3. **Find the feature** - Look for "Lawyer Finder" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Lawyer Finder and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#lawyer-finder)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#lawyer-finder)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

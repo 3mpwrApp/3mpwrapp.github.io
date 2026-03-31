@@ -11,14 +11,13 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 Curated 1 items from disability, accessibility, and social policy sources.
 
-## 🌟 Featured: The Disability Bulletin
+## ðŸŒŸ Featured: The Disability Bulletin
 
 ### The Disability Bulletin
 Your source for disability rights news, advocacy updates, and community stories. Updated regularly with the latest developments affecting the disability community across Canada and beyond.
 
-🎉 NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
-📍 Visit: https://linktr.ee/thedisabilitybulletin
-📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+ðŸŽ‰ NEW: Winter 2026 Issue Now Available! Download: https://tr.ee/Zk7TaA2c1s
+ðŸ“ Visit: https://linktr.ee/thedisabilitybulletin
+ðŸ“ [Read More](https://linktr.ee/thedisabilitybulletin)
 
----
-
+* * *

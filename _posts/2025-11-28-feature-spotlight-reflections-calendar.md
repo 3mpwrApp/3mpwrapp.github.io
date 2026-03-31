@@ -13,13 +13,13 @@ excerpt: Visual calendar for tracking mood, achievements, and personal reflectio
 
 Visual calendar for tracking mood, achievements, and personal reflections
 
----
+* * *
 
 ## What Is Reflections Calendar?
 
 Reflections Calendar is designed to visual calendar for tracking mood, achievements, and personal reflections. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -30,7 +30,7 @@ Reflections Calendar is designed to visual calendar for tracking mood, achieveme
 - **Export calendar view as image or PDF**
 - **Free personal reflection tool**
 
----
+* * *
 
 ## How It Works
 
@@ -42,7 +42,7 @@ Here are real examples of how you can use Reflections Calendar:
 4. Achievement: "3 weeks of consistent tracking!"
 5. Share calendar view with therapist
 
----
+* * *
 
 ## Why Reflections Calendar Matters
 
@@ -51,7 +51,7 @@ Here are real examples of how you can use Reflections Calendar:
 - Evidence of improvement over time
 - Celebrate good days and learn from hard ones
 
----
+* * *
 
 ## Getting Started
 
@@ -62,25 +62,25 @@ Ready to try Reflections Calendar? Here's how to get started:
 3. **Find the feature** - Look for "Reflections Calendar" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about Reflections Calendar and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#reflections-calendar)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#reflections-calendar)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)

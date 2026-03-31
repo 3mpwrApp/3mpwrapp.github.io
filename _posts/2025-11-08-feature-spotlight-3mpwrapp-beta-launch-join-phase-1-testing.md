@@ -13,13 +13,13 @@ excerpt: 3mpwrApp is now live in Phase 1 closed beta testing - completely free f
 
 3mpwrApp is now live in Phase 1 closed beta testing - completely free forever for all users
 
----
+* * *
 
 ## What Is 3mpwrApp Beta Launch: Join Phase 1 Testing?
 
 3mpwrApp Beta Launch: Join Phase 1 Testing is designed to 3mpwrapp is now live in phase 1 closed beta testing - completely free forever for all users. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada.
 
----
+* * *
 
 ## Key Highlights
 
@@ -31,7 +31,7 @@ excerpt: 3mpwrApp is now live in Phase 1 closed beta testing - completely free f
 - **Installation instructions sent via email**
 - **Join waitlist at https://3mpwrapp.pages.dev/app-waitlist**
 
----
+* * *
 
 ## How It Works
 
@@ -43,7 +43,7 @@ Here are real examples of how you can use 3mpwrApp Beta Launch: Join Phase 1 Tes
 4. Provide feedback on accessibility features
 5. Report bugs and suggest improvements
 
----
+* * *
 
 ## Why 3mpwrApp Beta Launch: Join Phase 1 Testing Matters
 
@@ -52,7 +52,7 @@ Here are real examples of how you can use 3mpwrApp Beta Launch: Join Phase 1 Tes
 - Be part of a community-driven development process
 - Always free - this is our commitment to the community
 
----
+* * *
 
 ## Getting Started
 
@@ -63,25 +63,25 @@ Ready to try 3mpwrApp Beta Launch: Join Phase 1 Testing? Here's how to get start
 3. **Find the feature** - Look for "3mpwrApp Beta Launch: Join Phase 1 Testing" in your app
 4. **Follow the guide** - In-app tutorials walk you through each step
 
----
+* * *
 
 ## Learn More
 
 For complete information about 3mpwrApp Beta Launch: Join Phase 1 Testing and all other features:
 
-- 📖 [Read the Complete User Guide](/user-guide/#beta-testing-access)
-- ✨ [Explore All Features](/features/)
-- 🧪 [Join Beta Testing](/beta/)
-- 📬 [Subscribe to Updates](/newsletter/)
+- ðŸ“– [Read the Complete User Guide](/user-guide/#beta-testing-access)
+- âœ¨ [Explore All Features](/features/)
+- ðŸ§ª [Join Beta Testing](/beta/)
+- ðŸ“¬ [Subscribe to Updates](/newsletter/)
 
----
+* * *
 
 ## About 3mpwrApp
 
-3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resources—all designed with accessibility, privacy, and cultural respect at the core.
+3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core.
 
 **All features are:**
-- ✅ Fully accessible (WCAG 2.2 AA+)
-- 🔒 Privacy-first (local-first architecture)
-- 🇨🇦 Canadian-focused (all provinces/territories)
-- 🌍 Culturally inclusive (Indigenous languages supported)
+- âœ… Fully accessible (WCAG 2.2 AA+)
+- ðŸ”’ Privacy-first (local-first architecture)
+- ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
+- ðŸŒ Culturally inclusive (Indigenous languages supported)
