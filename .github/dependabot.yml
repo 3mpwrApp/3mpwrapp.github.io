@@ -1,0 +1,6 @@
+# Dependabot disabled during axios supply chain attack (March 31, 2026)
+# DO NOT re-enable until npm all-clear (estimated April 3-5, 2026)
+# Reason: Automated PRs during active supply chain attacks are dangerous
+
+version: 2
+updates: []
