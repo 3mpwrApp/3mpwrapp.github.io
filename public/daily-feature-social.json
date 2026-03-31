@@ -1,9 +1,9 @@
 {
-  "feature": "Dyslexia Support Mode",
-  "contentType": "feature",
-  "date": "2026-03-30",
-  "shortPost": "Motor accessibility features that actually work (finally)\n\nâœ¨ Feature Spotlight: Dyslexia Support Mode\n\nComprehensive dyslexia support with 5 specialized fonts, 8 color overlays, and spacing controls\n\n✨ Try it free: https://3mpwrapp.pages.dev/features/2026/03/30/feature-spotlight-dyslexia-support-mode/\n\n#3mpwrApp #DisabilityRights #Accessibility",
-  "longPost": "Motor accessibility features that actually work (finally)\n\nâœ¨ Feature Spotlight: Dyslexia Support Mode\n\nComprehensive dyslexia support with 5 specialized fonts, 8 color overlays, and spacing controls\n\nðŸ”‘ Key points:\nâ€¢ 5 dyslexia-friendly fonts (OpenDyslexic, Lexend, etc.)\nâ€¢ 8 color overlay options to reduce visual stress\nâ€¢ Adjustable letter spacing, line height, and word spacing\n\nSee accessibility features â†’ https://3mpwrapp.pages.dev/features/2026/03/30/feature-spotlight-dyslexia-support-mode/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #DisabilityPride",
-  "url": "https://3mpwrapp.pages.dev/features/2026/03/30/feature-spotlight-dyslexia-support-mode/",
-  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-03-30-feature-spotlight-dyslexia-support-mode.md"
+  "feature": "Bank-Level Encryption for a Disability App: The Why",
+  "contentType": "devDiary",
+  "date": "2026-03-31",
+  "shortPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: Bank-Level Encryption for a Disability App: The Why\n\nThe reasoning behind implementing AES-256-GCM encryption in 3mpwrApp and what it took to verify it works correctly\n\n💡 Learn more: https://3mpwrapp.pages.dev/dev-diary/2026/03/31/dev-diary-bank-level-encryption-for-a-disability-app-the-why/\n\n#3mpwrApp #DisabilityRights #Accessibility",
+  "longPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: Bank-Level Encryption for a Disability App: The Why\n\nThe reasoning behind implementing AES-256-GCM encryption in 3mpwrApp and what it took to verify it works correctly\n\nðŸ”‘ Key points:\nâ€¢ AES-256-GCM is the same encryption standard used in financial services\nâ€¢ All Evidence Locker entries and sensitive data encrypted at rest on-device\nâ€¢ 721 security tests verify encryption is correctly implemented throughout\n\nCheck it out â†’ https://3mpwrapp.pages.dev/dev-diary/2026/03/31/dev-diary-bank-level-encryption-for-a-disability-app-the-why/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #DisabilityPride",
+  "url": "https://3mpwrapp.pages.dev/dev-diary/2026/03/31/dev-diary-bank-level-encryption-for-a-disability-app-the-why/",
+  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md"
 }
