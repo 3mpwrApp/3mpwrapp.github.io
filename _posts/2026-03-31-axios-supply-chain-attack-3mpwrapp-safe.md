@@ -55,12 +55,27 @@ npm view axios@latest version
 
 Your data is safe. The app is not affected. Continue using 3mpwrApp normally.
 
-## For Developers: Temporary Workflow
+## For Developers: ALL WORK HALTED
 
-- ⚠️ Do NOT run `npm install` until all-clear
+- ❌ **ALL development operations paused** until all-clear
+- ❌ Do NOT run `npm install` or `npm update`
+- ⚠️ **Stress testing delayed** - May shift by up to 2 weeks
 - ✅ Use existing node_modules (verified safe)
 - ✅ Run: `powershell -File scripts/safe-package-verify.ps1`
 - ✅ Review: `docs/SECURITY_INCIDENT_RESPONSE.md`
+
+**We refuse to touch the npm ecosystem while compromised packages are marked as "latest". Your security > our timeline.**
+
+### Known Issue: Firebase Crash Notification
+
+We received a crash report from Firebase Crashlytics on March 31, 2026:
+```
+Fatal Exception: Property 'trackEvent' doesn't exist
+```
+
+This analytics tracking error **will be resolved once axios is resolved** and we can safely update dependencies. The crash does not affect core app functionality or data security—it's a non-critical analytics issue that requires npm package updates to fix.
+
+**Impact:** Analytics tracking may fail in some edge cases until we can deploy the fix (estimated April 3-5).
 
 ## Long-term Protection
 
