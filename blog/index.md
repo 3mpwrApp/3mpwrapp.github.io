@@ -63,7 +63,9 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 <p class="section-description">Explore 3mpwrApp features, the app itself, and our website tools. From Evidence Locker and Letter Generator to community features and accessibility innovations—discover how our platform helps you advocate for your rights, navigate systems, and connect with your community.</p>
 
-{% assign feature_articles = site.posts | where_exp: 'p', "p.tags contains 'features' or p.tags contains 'spotlight'" %}
+{% assign features_posts = site.posts | where_exp: 'p', "p.tags contains 'features'" %}
+{% assign spotlight_posts = site.posts | where_exp: 'p', "p.tags contains 'spotlight'" %}
+{% assign feature_articles = features_posts | concat: spotlight_posts %}
 {% if feature_articles and feature_articles.size > 0 %}
 <div class="posts-grid">
   {% for post in feature_articles limit:6 %}
@@ -113,7 +115,12 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 <p class="section-description">Announcements, stories, and updates from the 3mpwr community. Learn about new features, community achievements, and important information directly from our team.</p>
 
-{% assign regular_posts = site.posts | where_exp: 'p', "p.tags contains 'highlights' or p.tags contains 'weekly' or p.tags contains 'features' or p.tags contains 'spotlight'" | size %}
+{% assign highlights_posts = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
+{% assign weekly_posts = site.posts | where_exp: 'p', "p.tags contains 'weekly'" %}
+{% assign features_posts = site.posts | where_exp: 'p', "p.tags contains 'features'" %}
+{% assign spotlight_posts = site.posts | where_exp: 'p', "p.tags contains 'spotlight'" %}
+{% assign special_posts = highlights_posts | concat: weekly_posts | concat: features_posts | concat: spotlight_posts %}
+{% assign regular_posts = special_posts | size %}
 {% assign all_posts_count = site.posts | size %}
 {% if all_posts_count > regular_posts %}
 <div class="posts-list">
