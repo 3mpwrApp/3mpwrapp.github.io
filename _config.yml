@@ -98,6 +98,7 @@ exclude:
   - vendor
   - .bundle
   - docs
+  - assets/images/screenshots
   - docs/setup
   - docs/development
   - docs/performance
