@@ -98,4 +98,7 @@ exclude:
   - vendor
   - .bundle
   - docs/deployment
+  - docs/setup
+  - docs/development
+  - docs/performance
   - assets/downloads/3mpwrapp-user-guide-full.md  # Exclude .md, keep .html version
