@@ -1,7 +1,7 @@
 {
   "date": "2026-03-31",
-  "timestamp": "2026-03-31T10:07:18.334Z",
-  "count": 17,
+  "timestamp": "2026-03-31T21:49:16.312Z",
+  "count": 6,
   "minScore": 3.5,
   "items": [
     {
@@ -9,119 +9,42 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-03-31T10:07:18.330Z"
+      "pubDate": "2026-03-31T21:49:16.309Z"
     },
     {
-      "title": "Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73138",
-      "description": "",
-      "score": 17.4,
-      "pubDate": "Thu, 19 Mar 2026 10:10:00 CDT"
+      "title": "Facing Cancer and Threat of Deportation, He Fights to Live",
+      "link": "https://thetyee.ca/News/2026/03/31/Fight-Not-Over-Francisco-Barahona/",
+      "description": "Update on Francisco Barahona's case, first reported here. BC finally offers treatment. But only if he pays high bills.",
+      "score": 7.5,
+      "pubDate": "Tue, 31 Mar 2026 07:40:00 +0000"
     },
     {
-      "title": "Manitoba Government Launches Ste. Anne Hospital Working Group to Strengthen Care in Southern Health Region",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73143",
-      "description": "",
-      "score": 15,
-      "pubDate": "Fri, 20 Mar 2026 13:42:00 CDT"
-    },
-    {
-      "title": "Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73139",
-      "description": "",
-      "score": 10.5,
-      "pubDate": "Thu, 19 Mar 2026 12:00:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Grows Nursing Workforce as Record 45 Nurses Set to Graduate Intensive Care Unit Training",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73117",
-      "description": "",
-      "score": 10.5,
-      "pubDate": "Mon, 16 Mar 2026 14:01:00 CDT"
-    },
-    {
-      "title": "Declaring Gender-Based Violence an Epidemic Was Not Enough",
-      "link": "https://thetyee.ca/Opinion/2026/03/27/Declaring-Gender-Based-Violence-Epidemic-Not-Enough/",
-      "description": "The needs of survivors seeking services are skyrocketing in BC. New research shows frontline workers need better support.",
-      "score": 8.1,
-      "pubDate": "Fri, 27 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "Manitoba Government Mourns Passing of MLA Amanda Lathlin",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73157",
+      "title": "Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73241",
       "description": "",
       "score": 7.5,
-      "pubDate": "Mon, 23 Mar 2026 12:55:00 CDT"
+      "pubDate": "Tue, 31 Mar 2026 16:04:00 CDT"
     },
     {
-      "title": "Manitoba Government Celebrates International Day of the Francophonie and Announces Next Steps Toward a Truly Bilingual Province",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73142",
+      "title": "Manitoba Government Expands Access to Measles Vaccine Through Pharmacies",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73240",
       "description": "",
       "score": 7.5,
-      "pubDate": "Fri, 20 Mar 2026 11:48:00 CDT"
+      "pubDate": "Tue, 31 Mar 2026 15:13:00 CDT"
     },
     {
-      "title": "Manitoba Government Announces Open House on the Future of Lemay Forest",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73103",
+      "title": "Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73238",
       "description": "",
       "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 13:15:00 CDT"
+      "pubDate": "Tue, 31 Mar 2026 11:48:00 CDT"
     },
     {
-      "title": "Manitoba Government Expands Advanced Spine Surgery at Concordia Hospital",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73102",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 13 Mar 2026 11:18:00 CDT"
-    },
-    {
-      "title": "Union Pressures Thomson Reuters to Rethink Selling Tools to ICE",
-      "link": "https://thetyee.ca/News/2026/03/30/Union-Pressures-Thomson-Reuters-Tools-ICE/",
-      "description": "BCGEU owns shares in the Canadian media firm that contracts with the US deportations agency.",
-      "score": 4,
-      "pubDate": "Mon, 30 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "The Human Cost of Failing to Name COVID ‘Airborne’",
-      "link": "https://thetyee.ca/Analysis/2026/03/27/Human-Cost-Failing-Name-COVID-Airborne/",
-      "description": "Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price.",
-      "score": 8.2,
-      "pubDate": "Fri, 27 Mar 2026 07:30:00 +0000"
-    },
-    {
-      "title": "Measles Update #92",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73177",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 23 Mar 2026 15:37:00 CDT"
-    },
-    {
-      "title": "Measles Update #91",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73145",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 15:14:00 CDT"
-    },
-    {
-      "title": "Manitobans Encouraged to Start Planning for Camping Season",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73141",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 09:54:00 CDT"
-    },
-    {
-      "title": "Measles Update #90",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73140",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 19 Mar 2026 14:38:00 CDT"
-    },
-    {
-      "title": "Measles Update #87",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73118",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 16 Mar 2026 16:01:00 CDT"
+      "title": "Alberta’s Panicked Media Warn the Communists Are at the Gate",
+      "link": "https://thetyee.ca/Opinion/2026/03/31/Albertas-Panicked-Media-Warn/",
+      "description": "The victory of Avi Lewis sparks a wild bout of red-baiting.",
+      "score": 3.9000000000000004,
+      "pubDate": "Tue, 31 Mar 2026 19:15:00 +0000"
     }
   ]
 }
