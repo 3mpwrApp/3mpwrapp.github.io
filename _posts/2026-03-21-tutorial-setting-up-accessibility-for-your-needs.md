@@ -4,7 +4,7 @@ title: "Setting Up Accessibility for Your Needs"
 date: 2026-03-21 00:00:00 +0000
 tags: [tutorial, how-to, accessibility, tutorial]
 categories: [tutorials]
-excerpt: "A personalized walkthrough of 3mpwrApp's WCAG AAA accessibility settings Ã¢â‚¬â€ from dyslexia support to Simple Mode"
+excerpt: "A personalized walkthrough of 3mpwrApp's WCAG AAA accessibility settings ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â from dyslexia support to Simple Mode"
 ---
 
 # Setting Up Accessibility for Your Needs
@@ -13,11 +13,11 @@ excerpt: "A personalized walkthrough of 3mpwrApp's WCAG AAA accessibility settin
 
 * * *
 
-3mpwrApp was built accessibility-first. Every feature was designed with the full range of disability experiences in mind Ã¢â‚¬â€ not retrofitted after launch.
+3mpwrApp was built accessibility-first. Every feature was designed with the full range of disability experiences in mind ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â not retrofitted after launch.
 
 Our settings are deeply granular because "accessibility" is not one thing. Someone with ADHD has different needs than someone with low vision, who has different needs than someone with motor disabilities. You should be able to configure the app to match your actual situation.
 
-Everything you configure saves automatically. Switch between Simple Mode and full mode as many times as you need Ã¢â‚¬â€ your settings always come back to where you left them.
+Everything you configure saves automatically. Switch between Simple Mode and full mode as many times as you need ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â your settings always come back to where you left them.
 
 * * *
 
@@ -45,23 +45,23 @@ Everything you configure saves automatically. Switch between Simple Mode and ful
 
 ## Key Takeaways
 
-- Accessibility is not a feature Ã¢â‚¬â€ it is the foundation everything else is built on
+- Accessibility is not a feature ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â it is the foundation everything else is built on
 - No two disabilities are the same; your settings should reflect your actual situation
-- All accessibility preferences persist across sessions Ã¢â‚¬â€ you configure once
+- All accessibility preferences persist across sessions ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â you configure once
 
 * * *
 
 ## Ready to Try It?
 
-1. **Download 3mpwrApp** Ã¢â‚¬â€ [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)
-2. **Sign up or explore as guest** Ã¢â‚¬â€ no commitment needed
-3. **Find this feature** Ã¢â‚¬â€ search or browse main navigation
+1. **Download 3mpwrApp** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â [3mpwrapp.pages.dev](https://3mpwrapp.pages.dev/)
+2. **Sign up or explore as guest** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no commitment needed
+3. **Find this feature** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â search or browse main navigation
 
 * * *
 
 ## About 3mpwrApp
 
 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada.
-- Ã°Å¸â€œâ€“ [Full User Guide](/user-guide/)
-- Ã°Å¸Â§Âª [Join the Beta](/app-waitlist/)
-- Ã°Å¸â€™Â¬ [Community Forums](/community/)
+- ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬â€œ [Full User Guide](/user-guide/)
+- ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª [Join the Beta](/app-waitlist/)
+- ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¬ [Community Forums](/community/)

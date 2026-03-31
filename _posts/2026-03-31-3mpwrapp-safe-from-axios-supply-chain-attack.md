@@ -58,7 +58,7 @@ powershell
  plain-crypto-js: NOT INSTALLED
  crypto-js 4.2.0 (legitimate package, not the typosquat)
  No compromised versions in dependency tree
-� npm install operations PAUSED until all-clear
+ï¿½ npm install operations PAUSED until all-clear
 
 ### Why We're Safe
 
@@ -87,7 +87,7 @@ powershell -File scripts/safe-package-verify.ps1
 ### Immediate Response (March 31, 2026)
 
 1. **Verified dependencies** - Confirmed no compromised versions present
-2. � **Paused npm install** - All installations frozen until all-clear
+2. ï¿½ **Paused npm install** - All installations frozen until all-clear
 3. **Created emergency runbook** - [docs/SECURITY_INCIDENT_RESPONSE.md](../docs/SECURITY_INCIDENT_RESPONSE.md)
 4. **Built verification tooling** - Safe package checking without npm install
 5. **Updated security documentation** - Comprehensive threat intelligence
@@ -124,11 +124,11 @@ powershell -File scripts/safe-package-verify.ps1
 
 ### Waiting For:
 
-1. � **npm/axios team unpublishes compromised versions**
+1. ï¿½ **npm/axios team unpublishes compromised versions**
  - Currently: axios@latest = 1.14.0 (COMPROMISED)
  - Need: axios@latest < 1.14.0 or >= 1.15.0 (safe)
 
-2. � **jasonsaayman account access revoked or secured**
+2. ï¿½ **jasonsaayman account access revoked or secured**
  - Maintainer account was compromised
  - Need confirmation account is secured/removed
 
@@ -175,7 +175,7 @@ Based on similar incidents (event-stream 2018, ua-parser-js 2021), major npm com
 
 **Until all-clear (estimated April 3-5, 2026):**
 
-- � **ALL development operations PAUSED**
+- ï¿½ **ALL development operations PAUSED**
  - No npm install, no npm update, no package changes
  - No new code requiring new dependencies
  - No deployments that touch package.json
@@ -297,7 +297,7 @@ Once safe to install, Socket.dev will provide continuous protection against futu
 ### What We're Improving
 
 1. **Socket.dev deployment** - Activating as soon as safe to install
-2. � **Automated alerts** - GitHub issues + email for critical findings
+2. ï¿½ **Automated alerts** - GitHub issues + email for critical findings
 3. **Developer education** - Typosquatting awareness, publisher verification
 4. **Incident drills** - Quarterly security incident response practice
 

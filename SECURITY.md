@@ -212,7 +212,7 @@ We will:
 
 ### For Developers
 - **GitHub Repository**: [github.com/empowrapp](https://github.com/empowrapp)
-- **Security Documentation**: [Full SECURITY.md](https://github.com/empowrapp/empowrapp-new/blob/main/SECURITY.md)
+- **Security Documentation**: Contact empowrapp08162025@gmail.com
 - **Incident Response Runbook**: Emergency procedures documented
 - **Socket.dev Dashboard**: Real-time dependency monitoring
 

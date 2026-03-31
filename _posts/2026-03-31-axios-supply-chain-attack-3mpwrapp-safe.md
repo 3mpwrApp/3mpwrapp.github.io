@@ -87,9 +87,9 @@ This will activate as soon as it's safe to run npm install.
 
 ## Resources
 
-- **Full Analysis:** [3mpwrApp Safe from axios Attack](https://3mpwrapp.pages.dev/blog/2026-03-31-axios-attack-analysis)
-- **Emergency Runbook:** [docs/SECURITY_INCIDENT_RESPONSE.md](https://github.com/3mpwrApp/empowrapp-new/blob/main/docs/SECURITY_INCIDENT_RESPONSE.md)
+- **Full Analysis:** [3mpwrApp Safe from axios Attack](https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack)
 - **Socket.dev Article:** [axios npm package compromised](https://socket.dev/blog/axios-npm-package-compromised)
+- **Developer Documentation:** Contact empowrapp08162025@gmail.com
 
 ## Report Security Issues
 

@@ -163,9 +163,6 @@ We believe in full transparency with our beta community. Here's everything we kn
 ### Full Technical Analysis:
 https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
-### Emergency Response Runbook:
-https://github.com/3mpwrApp/empowrapp-new/blob/main/docs/SECURITY_INCIDENT_RESPONSE.md
-
 ### Real-time Status:
 - **Verified safe:** Run powershell -File scripts/safe-package-verify.ps1
 - **Monitor axios status:** npm view axios@latest version
@@ -263,10 +260,8 @@ Keep testing, keep reporting issues, and keep helping us build something amazing
 **RESOURCES AT A GLANCE:**
 
  **Full Analysis:** 3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack 
- **Emergency Runbook:** github.com/3mpwrApp/empowrapp-new/blob/main/docs/SECURITY_INCIDENT_RESPONSE.md 
  **Security Contact:** empowrapp08162025@gmail.com 
- **Verification Script:** Available in codebase for developers 
- **When Safe Guide:** docs/WHEN_SAFE_TO_INSTALL.md 
+ **Developer Documentation:** Contact empowrapp08162025@gmail.com for security runbooks and verification scripts 
 
 ---
 

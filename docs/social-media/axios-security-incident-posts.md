@@ -271,9 +271,9 @@ We also caught the plain-crypto-js typosquatting attempt (not installed).
 
 Built Socket.dev integration (ready to deploy when safe to run npm install) to catch future attacks automatically.
 
-Full incident response runbook: https://github.com/3mpwrApp/empowrapp-new/blob/main/docs/SECURITY_INCIDENT_RESPONSE.md
-
 Questions about our verification process or supply chain security practices welcome.
+
+Full details: https://3mpwrapp.pages.dev/2026/03/31/3mpwrapp-safe-from-axios-supply-chain-attack
 
 ---
 
