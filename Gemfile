@@ -1,18 +1,9 @@
 source "https://rubygems.org"
 
 # github-pages gem includes Jekyll, minima theme, and all standard plugins
-# Do not specify individual plugins - they're already included
 gem "github-pages", "~> 232"
 
-# Required for Ruby 3.4+ compatibility
-gem "bigdecimal"
-gem "logger"
-gem "csv"
-gem "base64"
-end
-
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
