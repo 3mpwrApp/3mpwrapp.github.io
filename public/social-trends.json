@@ -1,75 +1,45 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-31T07:01:22.884Z",
+  "lastUpdated": "2026-03-31T12:52:22.362Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14275,
+      "totalPosts": 14300,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T07:01:15.422Z"
+      "lastSeen": "2026-03-31T12:52:08.467Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14211,
+      "totalPosts": 14236,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T07:01:17.025Z"
+      "lastSeen": "2026-03-31T12:52:11.403Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14073,
-      "recentPosts": 25,
+      "totalPosts": 14096,
+      "recentPosts": 23,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T07:01:18.651Z"
+      "lastSeen": "2026-03-31T12:52:14.789Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14305,
+      "totalPosts": 14330,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T07:01:20.294Z"
+      "lastSeen": "2026-03-31T12:52:18.358Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14260,
+      "totalPosts": 14284,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T07:01:21.880Z"
+      "lastSeen": "2026-03-31T12:52:21.359Z"
     }
   },
   "viralPosts": [
     {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
-      "author": "emilyrj.bsky.social",
-      "engagement": 22,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
-      "author": "randompammit.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "THIS SATURDAY: BIGGEST PROTEST IN AMERICAN HISTORY‼️\n\nJoin your local rally, find it here: www.nokings.org\n\nCan’t make it out to the streets? \n\nVIRTUAL RALLY with @standupforscience.net accessible and inclusive, for everyone, everywhere \n\n#NoKings #DisabilityJustice #VirtualRally @indivisible.org",
-      "author": "katieholten.bsky.social",
-      "engagement": 52,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Join us at the 2026 Abilities Expo in Long Beach! 🎉\n\n📍 Long Beach Convention Center\n📅 March 28-29\n⏰ Sat 11–5 | Sun 11–4 (10–11am early access)\n\nAdaptive sports, cutting-edge tech, fashion, gaming & more—FREE!\n\n#AbilitiesExpo #Accessibility #Inclusion #LongBeach #AdaptiveSports #FreeEvent",
-      "author": "fionamacpa.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
       "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
       "author": "domesticemployers.bsky.social",
       "engagement": 11,
@@ -325,6 +295,36 @@
       "text": "If you like horror games, go play the winner of the community votes in Games for Blind Gamers 5, Impulse Response! I can not describe just how unbelievable the quality of this game is. So please, give this audio horror game a try!\n\ndedly13.itch.io/impulse-resp...\n\n#IndieDev #GameDev #A11y",
       "author": "ericbomb.bsky.social",
       "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
+      "author": "randompammit.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Excellent read. Sad having to smuggle accessibility in through stealthy means but aligning to a business goal makes it easier to get permission:\npiccalil.li/blog/applyin... #a11y",
+      "author": "gerireid.com",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "This is the #overlay company that fabricated clients, testimonials, and ratings:\nadrianroselli.com/2025/07/acce...\n\nIts failure to do alt text correctly for this Bluesky post should tell you all you need to know. \n\n#a11y #accessibility #WCAG",
+      "author": "aardrian.bsky.social",
+      "engagement": 19,
       "hashtag": "A11y"
     },
     {
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 42
+      "count": 41
     },
     {
       "keyword": "cripthevote",
@@ -366,12 +366,12 @@
       "count": 27
     },
     {
-      "keyword": "a11y",
+      "keyword": "disabilityjustice",
       "count": 27
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 26
+      "keyword": "a11y",
+      "count": 27
     },
     {
       "keyword": "nokings3",
@@ -410,16 +410,16 @@
       "count": 8
     },
     {
-      "keyword": "accessibility a11y",
+      "keyword": "disabilitysky",
       "count": 8
     },
     {
-      "keyword": "handsoff",
-      "count": 7
+      "keyword": "cripminds",
+      "count": 8
     },
     {
-      "keyword": "zoom",
-      "count": 6
+      "keyword": "accessibility disabilitysky",
+      "count": 8
     }
   ]
 }
