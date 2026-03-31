@@ -180,6 +180,7 @@ description: News, updates, and stories from the 3mpowr community.
 
 # 3mpowr App Blog
 
+{% raw %}
 {% for post in site.posts %}
 <article>
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
@@ -187,6 +188,7 @@ description: News, updates, and stories from the 3mpowr community.
   {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %}
 </article>
 {% endfor %}
+{% endraw %}
 ```
 
 ---

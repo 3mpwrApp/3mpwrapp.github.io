@@ -33,7 +33,7 @@ Liquid error (line 14): comparison of String with 1758247495 failed
 **Root Cause**:
 - Liquid's `date: '%s'` filter returns a **STRING**, not a number
 - Trying to compare string timestamp with number causes `ArgumentError`
-- Code was: `{% if update_timestamp >= thirty_days_ago %}`
+- Code was: `{% raw %}{% if update_timestamp >= thirty_days_ago %}{% endraw %}`
 - Left side: string, Right side: number → FAIL
 
 ### The Fix
@@ -42,19 +42,23 @@ Liquid error (line 14): comparison of String with 1758247495 failed
 
 **BEFORE (Broken):**
 ```liquid
+{% raw %}
 {% assign thirty_days_ago = site.time | date: '%s' | minus: 2592000 %}
 {% for update in site.data.updates %}
   {% assign update_timestamp = update.date | date: '%s' %}
   {% if update_timestamp >= thirty_days_ago %}
+{% endraw %}
 ```
 
 **AFTER (Fixed):**
 ```liquid
+{% raw %}
 {% assign current_time = site.time | date: '%s' | plus: 0 %}
 {% assign thirty_days_ago = current_time | minus: 2592000 %}
 {% for update in site.data.updates %}
   {% assign update_timestamp = update.date | date: '%s' | plus: 0 %}
   {% if update_timestamp >= thirty_days_ago %}
+{% endraw %}
 ```
 
 **Key Change**: Added `| plus: 0` to convert strings to integers
