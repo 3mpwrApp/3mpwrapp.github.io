@@ -7,6 +7,15 @@ url: "https://3mpwrapp.pages.dev"  # Cloudflare Pages URL (also works for GitHub
 markdown: kramdown
 theme: minima
 
+# Header pages (navigation in specific order)
+header_pages:
+  - about.md
+  - accessibility.md
+  - security.md
+  - privacy.md
+  - contact.md
+  - faq.md
+
 # Plugins
 plugins:
   - jekyll-feed
