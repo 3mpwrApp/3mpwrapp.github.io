@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-31T12:52:22.362Z",
+  "lastUpdated": "2026-03-31T18:46:00.595Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14300,
+      "totalPosts": 14325,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T12:52:08.467Z"
+      "lastSeen": "2026-03-31T18:45:48.133Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14236,
+      "totalPosts": 14261,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T12:52:11.403Z"
+      "lastSeen": "2026-03-31T18:45:51.030Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14096,
-      "recentPosts": 23,
+      "totalPosts": 14121,
+      "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T12:52:14.789Z"
+      "lastSeen": "2026-03-31T18:45:53.704Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14330,
+      "totalPosts": 14355,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T12:52:18.358Z"
+      "lastSeen": "2026-03-31T18:45:56.768Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14284,
+      "totalPosts": 14308,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-03-31T12:52:21.359Z"
+      "lastSeen": "2026-03-31T18:45:59.591Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Iowa isn’t perfect (far from it) but allowing mail voting after caucuses is an obvious move other states should embrace to make voting accessible to disabled voters\n\n#CripTheVote",
-      "author": "emilyrj.bsky.social",
-      "engagement": 22,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
-      "author": "randompammit.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Join us at the 2026 Abilities Expo in Long Beach! 🎉\n\n📍 Long Beach Convention Center\n📅 March 28-29\n⏰ Sat 11–5 | Sun 11–4 (10–11am early access)\n\nAdaptive sports, cutting-edge tech, fashion, gaming & more—FREE!\n\n#AbilitiesExpo #Accessibility #Inclusion #LongBeach #AdaptiveSports #FreeEvent",
-      "author": "fionamacpa.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "It took a long while, but Games for Blind Gamers 5 is wrapped up! Games rated, prizes given (Thanks to amazing donators we had fun small prizes for every gamer!) and I am so proud of all the contestants! \nShow support!\n\nitch.io/jam/games-fo...\n\n#GameDev #A11y #Gaming",
-      "author": "ericbomb.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
     {
       "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
       "author": "domesticemployers.bsky.social",
@@ -338,88 +302,124 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
+      "author": "randompammit.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I built a Quarto extension that adds accessibility features to Reveal.js presentations: keyboard nav, screen reader support, dyslexia-friendly fonts, high contrast, slide change visual/audio cue and more.\n\nFeedback more than welcome.\n\ngithub.com/mcanouil/qua...\n\n#Quarto #RevealJS #Accessibility",
+      "author": "mickael.canouil.fr",
+      "engagement": 15,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Excellent read. Sad having to smuggle accessibility in through stealthy means but aligning to a business goal makes it easier to get permission:\npiccalil.li/blog/applyin... #a11y",
+      "author": "gerireid.com",
+      "engagement": 19,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "This is the #overlay company that fabricated clients, testimonials, and ratings:\nadrianroselli.com/2025/07/acce...\n\nIts failure to do alt text correctly for this Bluesky post should tell you all you need to know. \n\n#a11y #accessibility #WCAG",
+      "author": "aardrian.bsky.social",
+      "engagement": 19,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 42
+      "count": 43
     },
     {
       "keyword": "accessibility",
-      "count": 41
+      "count": 42
     },
     {
       "keyword": "cripthevote",
-      "count": 35
+      "count": 33
     },
     {
-      "keyword": "altcitizen",
+      "keyword": "a11y",
       "count": 28
     },
     {
-      "keyword": "nokings",
+      "keyword": "altcitizen",
       "count": 27
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 27
+      "count": 26
     },
     {
       "keyword": "disabilityjustice",
-      "count": 27
+      "count": 25
     },
     {
-      "keyword": "a11y",
-      "count": 27
+      "keyword": "nokings",
+      "count": 24
     },
     {
       "keyword": "nokings3",
-      "count": 25
+      "count": 23
     },
     {
       "keyword": "nokings2026",
-      "count": 25
+      "count": 23
     },
     {
       "keyword": "virtual",
-      "count": 24
+      "count": 22
     },
     {
       "keyword": "disabilityrights nokings3",
       "count": 18
     },
     {
-      "keyword": "resist",
-      "count": 10
-    },
-    {
-      "keyword": "refusefascism",
-      "count": 10
-    },
-    {
-      "keyword": "trumpmustgo",
-      "count": 9
-    },
-    {
-      "keyword": "ratr",
-      "count": 9
-    },
-    {
       "keyword": "virtualnokings",
       "count": 8
     },
     {
-      "keyword": "disabilitysky",
+      "keyword": "refusefascism",
       "count": 8
     },
     {
-      "keyword": "cripminds",
+      "keyword": "wcag",
       "count": 8
     },
     {
-      "keyword": "accessibility disabilitysky",
-      "count": 8
+      "keyword": "resist",
+      "count": 7
+    },
+    {
+      "keyword": "trumpmustgo",
+      "count": 7
+    },
+    {
+      "keyword": "ratr",
+      "count": 7
+    },
+    {
+      "keyword": "zoom",
+      "count": 6
+    },
+    {
+      "keyword": "nokingsvirtual",
+      "count": 6
     }
   ]
 }
