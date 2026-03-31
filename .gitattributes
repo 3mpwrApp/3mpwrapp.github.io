@@ -1,0 +1,22 @@
+# Force LF line endings for all text files (Jekyll on Linux requires LF)
+# Windows CRLF causes "control characters not allowed" errors
+
+* text=auto eol=lf
+
+# Explicitly specify LF for common text file types
+*.md text eol=lf
+*.html text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
