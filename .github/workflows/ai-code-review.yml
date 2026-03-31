@@ -73,9 +73,7 @@ Review this pull request and provide:
 Pull Request: "${PR_TITLE}"
 
 Diff:
-\`\`\`
-${diff.substring(0, 15000)}
-\`\`\`
+''' + diff.substring(0, 15000) + '''
 
 Provide a concise, actionable review in markdown format.`;
 
