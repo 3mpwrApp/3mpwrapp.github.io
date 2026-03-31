@@ -13,7 +13,7 @@
 
 {% assign image_path = include.src %}
 {% assign image_ext = image_path | split: "." | last %}
-{% assign image_base = image_path | replace: "." | append: image_ext, "" %}
+{% assign image_base = image_path | replace: image_ext, "" | replace: ".", "" %}
 {% assign webp_path = image_base | append: ".webp" %}
 
 {% assign img_width = include.width | default: "auto" %}
