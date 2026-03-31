@@ -1,9 +1,10 @@
 ---
 layout: post
-title: " 3mpwrApp Safe from axios npm Supply Chain Attack"
+title: "3mpwrApp Safe from axios npm Supply Chain Attack"
 date: 2026-03-31
 categories: [security, announcement]
 author: 3mpwrApp Security Team
+permalink: /2026/03/31/axios-supply-chain-attack-3mpwrapp-safe/
 excerpt: "3mpwrApp verified safe from the March 2026 axios compromise affecting versions 1.14.0, 1.14.1, and 0.30.4. Our workspace uses axios 1.13.6 (safe version) and has zero compromised packages."
 ---
 
