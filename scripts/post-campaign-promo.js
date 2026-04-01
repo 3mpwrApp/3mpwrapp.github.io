@@ -29,6 +29,12 @@ const CAMPAIGNS = {
     url: 'https://passbill86.ca/',
     hashtags: ['#PassBill86', '#WorkersRights', '#WSIB', '#OntarioLabour'],
     description: 'Support Bill 86 to create fairer workplace injury compensation in Ontario. Make your voice heard.',
+  },
+  'flywheels': {
+    title: '3 Flywheels of Change',
+    url: 'https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/',
+    hashtags: ['#3Flywheels', '#CollectivePower', '#PatternDetection', '#WorkersRights'],
+    description: 'Turning isolated struggles into collective power through Evidence, Collective Action, and Knowledge Network flywheels.',
   }
 };
 
@@ -825,6 +831,203 @@ Support workplace injury compensation reform.
 
 **Your advocacy matters**: https://passbill86.ca/`
     }
+  ],
+  'flywheels': [
+    // Flywheels post 1 - Evidence Flywheel
+    {
+      mastodon: `🔄 The Evidence Flywheel
+
+Worker #1 spent 40 hours researching their fibromyalgia WSIB appeal. They won.
+
+Worker #2 found Worker #1's evidence in 3mpwrApp. They copied the strategy. Won in 10 hours.
+
+Worker #156 gets instant templates from all previous wins. Wins in 1 hour.
+
+THIS is the power of the Evidence Flywheel: Each win makes the next win easier → faster → more likely.
+
+From isolated struggles to collective power.
+
+Learn more: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+
+#3Flywheels #CollectivePower #WorkersRights`,
+      bluesky: `🔄 The Evidence Flywheel in action:
+
+Worker #1: 40 hours to win
+Worker #2: 10 hours (copied Worker #1's strategy)
+Worker #156: 1 hour (instant templates from all wins)
+
+Each win makes the next win easier.
+
+From isolated struggles to collective power.
+
+#3Flywheels #WorkersRights`,
+      discord: `**🔄 The Evidence Flywheel**
+
+How 3mpwrApp turns isolated struggles into collective power:
+
+• Worker #1: 40 hours to research and win
+• Worker #2: Finds Worker #1's evidence, wins in 10 hours
+• Worker #156: Gets templates from 156 wins, succeeds in 1 hour
+
+**The flywheel spins faster with each win.**
+
+Learn more: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
+    },
+    // Flywheels post 2 - Pattern Detection
+    {
+      mastodon: `📊 Pattern Detection in Action
+
+Real example from our Thunder Bay pilot:
+
+73 fibromyalgia WSIAT appeals analyzed:
+✅ 78% success rate (57 wins / 16 denials)
+
+Success factors in 92% of wins:
+• RFC form from treating physician
+• Timeline showing symptom progression
+
+Without flywheels: Worker researches alone for 40 hours
+With flywheels: Search "fibromyalgia WSIAT" → Instant strategy
+
+15 years of tribunal decisions → Searchable in seconds.
+
+https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+
+#3Flywheels #PatternDetection`,
+      bluesky: `📊 Pattern Detection: 73 fibromyalgia WSIAT cases
+
+78% success rate
+92% of wins had: RFC form + timeline
+
+Without data: 40 hours researching
+With patterns: 30 seconds to find winning strategy
+
+This is what 15 years of tribunal decisions can do.
+
+#3Flywheels #WorkersRights`,
+      discord: `**📊 Pattern Detection Example**
+
+We analyzed 73 fibromyalgia WSIAT appeals from the past decade:
+
+**Success rate**: 78% (57 allowed, 16 denied)
+
+**What winners did**:
+✅ RFC form (92% of wins)
+✅ Timeline (78% of wins)
+
+**The difference**:
+❌ Traditional: 40 hours researching alone
+✅ With patterns: 30 seconds to find proven strategy
+
+Learn about the Thunder Bay pilot: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
+    },
+    // Flywheels post 3 - Collective Action
+    {
+      mastodon: `💪 The Collective Action Flywheel
+
+156 workers fighting the same WSIB denial. Zero coordination.
+
+System denies them one by one. No media coverage. No policy pressure.
+
+BUT when the app detects the pattern:
+
+"156 workers denied for same reason. 73% win at WSIAT with RFC form."
+
+→ Campaign auto-suggested
+→ 62 workers join
+→ Joint submission to WSIB
+→ Media picks it up
+→ Ministry of Labour takes notice
+→ Policy change
+
+From invisible pattern to collective power.
+
+#3Flywheels #CollectiveAction #WorkersRights
+
+https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`,
+      bluesky: `💪 Collective Action Flywheel:
+
+156 workers denied for same reason → No one knows → Denied one by one
+
+WITH pattern detection:
+→ Campaign launched
+→ 62 join
+→ Joint submission
+→ Media coverage
+→ Policy change
+
+From invisible to unstoppable.
+
+#3Flywheels #WorkersRights`,
+      discord: `**💪 The Collective Action Flywheel**
+
+**Without coordination:**
+156 workers fight the same denial individually. Denied one by one. No media coverage. No policy change.
+
+**With pattern detection:**
+• App detects: "156 workers denied for same reason"
+• Campaign auto-suggested
+• 62 workers join
+• Joint submission to WSIB
+• Media covers it
+• Ministry takes notice
+• POLICY CHANGE
+
+From isolated struggles to collective power.
+
+https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
+    },
+    // Flywheels post 4 - Thunder Bay Pilot
+    {
+      mastodon: `🌲 Thunder Bay Pilot: Flywheels in Action
+
+We're scraping 500+ tribunal decisions (WSIAT, SST, HRTO) relevant to Thunder Bay workers.
+
+Focus: Mining, healthcare, manufacturing, forestry
+
+The goal: Pre-load the flywheels so User #1 starts with 15 years of institutional knowledge.
+
+Traditional: Worker #1 needs 40 hours to research
+With pilot: Worker #1 gets 30 minutes (patterns already detected)
+
+12-week pilot. $0 cost. Real injured workers testing.
+
+If successful, we scale to orgs across Canada.
+
+https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+
+#ThunderBay #3Flywheels #WorkersRights`,
+      bluesky: `🌲 Thunder Bay Pilot launching:
+
+500+ tribunal decisions
+Thunder Bay industries focus
+Pattern detection ready Day 1
+
+User #1: 40 hours → 30 minutes
+
+12 weeks. $0 cost. Real testing.
+
+Then we scale across Canada.
+
+#ThunderBay #3Flywheels #WorkersRights`,
+      discord: `**🌲 Thunder Bay Pilot - Flywheels in Action**
+
+We're partnering with Thunder Bay & District Injured Workers Support Group to prove the flywheels work.
+
+**The Plan:**
+• Scrape 500+ tribunal decisions (WSIAT, SST, HRTO)
+• Focus: Thunder Bay industries (mining, healthcare, manufacturing)
+• Pre-load pattern detection
+• Test with 5-10 real clients
+
+**The Impact:**
+Traditional: User #1 spends 40 hours researching
+With pilot: User #1 gets 30 minutes (15 years of data pre-loaded)
+
+**Timeline:** 12 weeks | **Cost:** $0
+
+Read the full proposal: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
+    }
   ]
 };
 
@@ -855,18 +1058,36 @@ function saveState(state) {
 function getCampaignForToday() {
   // Allow forcing a specific campaign via environment variable
   const forceCampaign = process.env.FORCE_CAMPAIGN;
-  if (forceCampaign === 'rights-dont-retire' || forceCampaign === 'pass-bill-86') {
+  if (forceCampaign === 'rights-dont-retire' || forceCampaign === 'pass-bill-86' || forceCampaign === 'flywheels') {
     return forceCampaign;
   }
   
   const day = new Date().getDay();
+  const state = loadState();
+  
+  // Initialize flywheels state if not exists
+  if (!state.flywheels) {
+    state.flywheels = { currentIndex: 0, lastPosted: null, postCount: 0 };
+  }
+  
+  // Count total posts across all campaigns
+  const totalPosts = (state['rights-dont-retire'].postCount || 0) + 
+                     (state['pass-bill-86'].postCount || 0) + 
+                     (state.flywheels.postCount || 0);
+  
+  // Every 3rd post should be a flywheel (33% of posts mention flywheels)
+  const shouldPostFlywheels = totalPosts % 3 === 0;
+  
+  if (shouldPostFlywheels) {
+    return 'flywheels';
+  }
+  
   // 2 = Tuesday → Rights Don't Retire
   // 5 = Friday → Pass Bill 86
   if (day === 2) return 'rights-dont-retire';
   if (day === 5) return 'pass-bill-86';
   
   // Fallback for manual runs - alternate based on state
-  const state = loadState();
   const lastRights = state['rights-dont-retire'].lastPosted;
   const lastBill = state['pass-bill-86'].lastPosted;
   
@@ -885,6 +1106,7 @@ function getNextPost(campaignId, state) {
   // Update state for next time
   state[campaignId].currentIndex = (currentIndex + 1) % posts.length;
   state[campaignId].lastPosted = new Date().toISOString();
+  state[campaignId].postCount = (state[campaignId].postCount || 0) + 1;
   
   return post;
 }

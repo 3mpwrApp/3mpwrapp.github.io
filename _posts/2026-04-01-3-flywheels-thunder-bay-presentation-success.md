@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "3 Flywheels Framework Resonates with Thunder Bay Injured Workers"
-date: 2026-04-01 14:00:00 -0400
+date: 2026-04-01 09:00:00 -0400
 categories: [partnerships, innovation, collective-action]
 tags: [TBDIWSG, flywheels, Thunder-Bay, pattern-detection, advocacy]
 author: 3mpwrApp Team
 excerpt: "On March 31st, we presented the '3 Flywheels of Change' to Thunder Bay injured workers. Their brilliant questions revealed how to solve the cold start problem - and we're launching a pilot to prove it."
-image: /assets/images/flywheels-presentation-2026.png
 ---
 
 ## The Presentation That Changed Everything
