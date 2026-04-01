@@ -9,6 +9,14 @@ excerpt: "Why do injured workers and people with disabilities fight the same bat
 permalink: /2026/03/31/3-flywheels-thunder-bay-presentation-success/
 ---
 
+<div style="background: linear-gradient(135deg, #003d7a 0%, #0056a3 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 6px solid #FFD700;">
+  <h3 style="margin-top: 0; color: white; font-size: 1.4rem;">🌟 3mpwrApp = Empowering Injured Workers, and Persons with Disabilities through Data, Collective Knowledge, and Action</h3>
+  <p style="margin: 1rem 0; font-size: 1.1rem; line-height: 1.6;"><strong>A parallel knowledge system that challenges institutional power using data and collective experience</strong> - building infrastructure that could actually shift how injured workers, and persons with disabilities navigate systems in Canada.</p>
+  <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+    <p style="margin: 0; font-size: 0.95rem;">🔒 <strong>Privacy First:</strong> ALL shared data is ANONYMIZED, consent-based, and designed to protect privacy while exposing systemic patterns.</p>
+  </div>
+</div>
+
 ## The Problem: Reinventing the Wheel 156 Times
 
 Right now, if you're fighting a WSIB denial for fibromyalgia, you start from zero.
@@ -24,6 +32,21 @@ You spend **40+ hours** researching:
 **One worker's 40-hour struggle becomes 156 × 40 hours = 6,240 hours of collective suffering.**
 
 And most don't have $5,000-$15,000 for a lawyer to shortcut this.
+
+<div style="background: #f8f9fa; border-left: 6px solid #dc3545; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+  <p style="margin: 0; font-style: italic; font-size: 1.1rem; color: #333;">"No one should lose their home, their health, and their future - just because they didn't have access to the right information."</p>
+  <p style="margin: 0.75rem 0 0; font-size: 0.9rem; color: #666;">— <strong>Lissa Beaulieu</strong>, Creator & Founder, 3mpwrApp<br/>Former home care PSW, Injured worker with permanent workplace injuries</p>
+</div>
+
+---
+
+## We're Turning Lived Experience Into Data - and Data Into Power
+
+**The fundamental shift:** What if every worker's struggle, every denial, every victory, every strategy - wasn't lost? What if it became **data** that exposes patterns, **evidence** that challenges systems, and **power** that changes outcomes?
+
+That's exactly what 3mpwrApp does.
+
+We're not just digitizing forms. We're **building a parallel knowledge system** - one that workers own, that learns from collective experience, and that grows stronger with every case.
 
 ---
 
@@ -79,6 +102,8 @@ Right now, if you're denied CPP Disability for PTSD, you have no idea:
 - What's the #1 mistake that leads to denial?
 
 **You're flying blind.** Spending 40 hours on Google, legal forums, outdated guides.
+
+**3mpwrApp changes this:** AI-assisted insights help estimate likely outcomes based on similar cases, giving you the knowledge that used to cost thousands in legal fees.
 
 ### How Patterns Compound
 
