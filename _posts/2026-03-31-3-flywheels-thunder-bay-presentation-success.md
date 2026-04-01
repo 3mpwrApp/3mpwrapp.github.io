@@ -118,7 +118,7 @@ You get: _"92% of workers who submitted an RFC form from their treating physicia
 ### The Isolation Problem
 
 **Right now:**
-- 156 workers get denied for the same bullshit reason
+- 156 workers get denied for the same unjust reason
 - They don't know about each other
 - System picks them off one by one
 - No media coverage, no advocacy, no policy change
