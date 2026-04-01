@@ -1,0 +1,128 @@
+name: Flywheels Pilot Updates
+
+# Post Thunder Bay Pilot progress updates and flywheels education
+# Tuesday mornings: Thunder Bay Tuesday pilot updates (alternating with campaign)
+# Friday afternoons: Pattern of the Week / Educational content
+
+on:
+  schedule:
+    - cron: '30 13 * * 2'  # Tuesday 1:30 PM UTC (8:30 AM EST) - after campaign posts
+    - cron: '0 16 * * 5'   # Friday 4:00 PM UTC (11:00 AM EST) - afternoon educational slot
+    
+  workflow_dispatch:
+    inputs:
+      test_mode:
+        description: 'Test mode (skip posting, just show what would be posted)'
+        required: false
+        default: false
+        type: boolean
+      content_type:
+        description: 'Content type to post'
+        required: false
+        type: choice
+        options:
+          - ''
+          - pilot-update
+          - pattern-of-week
+          - success-story
+          - educational
+
+env:
+  NODE_VERSION: '20'
+
+# Prevent overlapping runs
+concurrency:
+  group: flywheels-posts
+  cancel-in-progress: false
+
+jobs:
+  post_flywheels:
+    name: Post Flywheels Content
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.CONTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          fetch-depth: 5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          echo "📦 Installing dependencies..."
+          npm ci --ignore-scripts --no-audit --fund=false
+          echo "✅ Dependencies installed"
+
+      - name: Post to social media
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TEST_MODE: ${{ github.event.inputs.test_mode }}
+          CONTENT_TYPE: ${{ github.event.inputs.content_type }}
+        run: |
+          echo "🔄 Posting flywheels content..."
+          node scripts/post-flywheels-update.js
+          
+          if [ $? -eq 0 ]; then
+            echo "✅ Successfully posted to social media"
+          else
+            echo "⚠️ Posting completed with warnings"
+          fi
+
+      - name: Commit state file
+        id: commit
+        continue-on-error: true
+        run: |
+          git config --local user.email "empowrapp08162025@gmail.com"
+          git config --local user.name "3mpwrApp Content Bot"
+
+          git add public/flywheels-state.json || true
+
+          if git diff --staged --quiet; then
+            echo "✅ No state changes to commit"
+            exit 0
+          fi
+
+          git commit -m "chore: Update flywheels content state - automated post"
+
+          if git push origin main 2>&1; then
+            echo "✅ State file committed and pushed"
+          else
+            echo "⚠️ Failed to push state file (non-critical)"
+          fi
+
+      - name: Post completion summary
+        if: always()
+        run: |
+          echo ""
+          echo "════════════════════════════════════════"
+          echo "  FLYWHEELS POST COMPLETE"
+          echo "════════════════════════════════════════"
+          echo ""
+          echo "📊 Status: ${{ job.status }}"
+          echo "📅 Date: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          echo ""
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "🤖 Triggered: Scheduled ($(echo ${{ github.event.schedule }} | cut -d' ' -f1-5))"
+          else
+            echo "👤 Triggered: Manual workflow dispatch"
+          fi
+          echo ""
+          echo "Next scheduled runs:"
+          echo "  • Tuesday 8:30 AM EST (Thunder Bay Tuesday)"
+          echo "  • Friday 11:00 AM EST (Pattern of the Week)"
+          echo ""
+          echo "════════════════════════════════════════"
