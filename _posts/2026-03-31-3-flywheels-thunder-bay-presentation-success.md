@@ -6,6 +6,7 @@ categories: [innovation, collective-action, core-features]
 tags: [flywheels, pattern-detection, evidence-sharing, disabled-workers, mutual-aid]
 author: 3mpwrApp Team
 excerpt: "Why do injured workers and people with disabilities fight the same battles over and over? The 3 Flywheels framework shows how individual victories compound into collective power - saving time, money, and providing the representation that most can't afford."
+permalink: /2026/03/31/3-flywheels-thunder-bay-presentation-success/
 ---
 
 ## The Problem: Reinventing the Wheel 156 Times
