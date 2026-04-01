@@ -32,7 +32,7 @@ const CAMPAIGNS = {
   },
   'flywheels': {
     title: '3 Flywheels of Change',
-    url: 'https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/',
+    url: 'https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/',
     hashtags: ['#3Flywheels', '#CollectivePower', '#PatternDetection', '#WorkersRights'],
     description: 'Turning isolated struggles into collective power through Evidence, Collective Action, and Knowledge Network flywheels.',
   }
