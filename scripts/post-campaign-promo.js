@@ -833,200 +833,150 @@ Support workplace injury compensation reform.
     }
   ],
   'flywheels': [
-    // Flywheels post 1 - Evidence Flywheel
+    // Flywheels post 1 - Evidence Flywheel (CONCEPT)
     {
-      mastodon: `🔄 The Evidence Flywheel
+      mastodon: `🔄 What if every worker's victory made the next one easier?
 
-Worker #1 spent 40 hours researching their fibromyalgia WSIB appeal. They won.
+Imagine: When someone wins their WSIB appeal, their evidence becomes a template for others fighting the same battle.
 
-Worker #2 found Worker #1's evidence in 3mpwrApp. They copied the strategy. Won in 10 hours.
+Instead of starting from zero every time, workers build on each other's wins.
 
-Worker #156 gets instant templates from all previous wins. Wins in 1 hour.
+That's the Evidence Flywheel - a core part of the 3 Flywheels framework we're developing.
 
-THIS is the power of the Evidence Flywheel: Each win makes the next win easier → faster → more likely.
+From isolated struggles to collective knowledge.
 
-From isolated struggles to collective power.
-
-Learn more: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+Learn more about the concept: https://3mpwrapp.pages.dev/blog/
 
 #3Flywheels #CollectivePower #WorkersRights`,
-      bluesky: `🔄 The Evidence Flywheel in action:
+      bluesky: `🔄 The Evidence Flywheel concept:
 
-Worker #1: 40 hours to win
-Worker #2: 10 hours (copied Worker #1's strategy)
-Worker #156: 1 hour (instant templates from all wins)
+What if every worker's win became a template for the next?
 
-Each win makes the next win easier.
+Instead of reinventing the wheel 156 times, build on each other's victories.
 
-From isolated struggles to collective power.
+That's what we're working on.
 
 #3Flywheels #WorkersRights`,
-      discord: `**🔄 The Evidence Flywheel**
+      discord: `**🔄 Introducing: The Evidence Flywheel**
 
-How 3mpwrApp turns isolated struggles into collective power:
+A concept we're developing for collective worker support:
 
-• Worker #1: 40 hours to research and win
-• Worker #2: Finds Worker #1's evidence, wins in 10 hours
-• Worker #156: Gets templates from 156 wins, succeeds in 1 hour
+**The idea**: When one worker wins their case, their evidence and strategy get shared with everyone facing similar challenges.
 
-**The flywheel spins faster with each win.**
+**Why it matters**: Right now, 156 workers fight the same battle in isolation. Each starts from zero.
 
-Learn more: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
+**The vision**: Build on each other's wins. Accelerate justice.
+
+Stay tuned as we develop this with injured worker communities.`
     },
-    // Flywheels post 2 - Pattern Detection
+    // Flywheels post 2 - Pattern Detection (CONCEPT)
     {
-      mastodon: `📊 Pattern Detection in Action
+      mastodon: `📊 What patterns hide in tribunal decisions?
 
-Real example from our Thunder Bay pilot:
+15 years of WSIAT appeals sit in public databases. Thousands of cases. Some win, some lose.
 
-73 fibromyalgia WSIAT appeals analyzed:
-✅ 78% success rate (57 wins / 16 denials)
+What if we could analyze them to find:
+• What evidence leads to success?
+• Which conditions get denied most?
+• What strategies work?
 
-Success factors in 92% of wins:
-• RFC form from treating physician
-• Timeline showing symptom progression
+That's the Pattern Detection Flywheel - turning scattered decisions into actionable insights.
 
-Without flywheels: Worker researches alone for 40 hours
-With flywheels: Search "fibromyalgia WSIAT" → Instant strategy
+We're exploring this with Thunder Bay's injured worker community.
 
-15 years of tribunal decisions → Searchable in seconds.
+#3Flywheels #PatternDetection #WorkersRights`,
+      bluesky: `📊 Pattern Detection concept:
 
-https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+15 years of tribunal decisions exist publicly. What patterns hide in that data?
 
-#3Flywheels #PatternDetection`,
-      bluesky: `📊 Pattern Detection: 73 fibromyalgia WSIAT cases
-
-78% success rate
-92% of wins had: RFC form + timeline
-
-Without data: 40 hours researching
-With patterns: 30 seconds to find winning strategy
-
-This is what 15 years of tribunal decisions can do.
+What if we could find proven strategies automatically?
 
 #3Flywheels #WorkersRights`,
-      discord: `**📊 Pattern Detection Example**
+      discord: `**📊 The Pattern Detection Flywheel (In Development)**
 
-We analyzed 73 fibromyalgia WSIAT appeals from the past decade:
+**The challenge**: Thousands of tribunal decisions exist publicly, but workers have no way to analyze them for patterns.
 
-**Success rate**: 78% (57 allowed, 16 denied)
+**The vision**: Automatically detect what evidence leads to wins, which conditions face barriers, what strategies work.
 
-**What winners did**:
-✅ RFC form (92% of wins)
-✅ Timeline (78% of wins)
+**Example use case**: Instead of researching alone for 40 hours, search "fibromyalgia WSIAT" and instantly find patterns from past cases.
 
-**The difference**:
-❌ Traditional: 40 hours researching alone
-✅ With patterns: 30 seconds to find proven strategy
-
-Learn about the Thunder Bay pilot: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
+**Status**: We're exploring this concept with Thunder Bay's injured worker community.`
     },
-    // Flywheels post 3 - Collective Action
+    // Flywheels post 3 - Collective Action (CONCEPT)
     {
-      mastodon: `💪 The Collective Action Flywheel
+      mastodon: `💪 What if workers could organize automatically?
 
-156 workers fighting the same WSIB denial. Zero coordination.
+Right now: Hundreds face the same denial. No one knows. System picks them off one by one.
 
-System denies them one by one. No media coverage. No policy pressure.
+The vision: When patterns emerge (many workers facing same barrier), suggest collective action:
+• Joint submissions
+• Coordinated advocacy
+• Media campaigns
 
-BUT when the app detects the pattern:
+From invisible struggles to visible movements.
 
-"156 workers denied for same reason. 73% win at WSIAT with RFC form."
+That's the Collective Action Flywheel - a framework we're developing.
 
-→ Campaign auto-suggested
-→ 62 workers join
-→ Joint submission to WSIB
-→ Media picks it up
-→ Ministry of Labour takes notice
-→ Policy change
+#3Flywheels #CollectiveAction #WorkersRights`,
+      bluesky: `💪 Collective Action Flywheel concept:
 
-From invisible pattern to collective power.
+When many workers face the same barrier but don't know it, they lose alone.
 
-#3Flywheels #CollectiveAction #WorkersRights
-
-https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`,
-      bluesky: `💪 Collective Action Flywheel:
-
-156 workers denied for same reason → No one knows → Denied one by one
-
-WITH pattern detection:
-→ Campaign launched
-→ 62 join
-→ Joint submission
-→ Media coverage
-→ Policy change
-
-From invisible to unstoppable.
+What if the system detected patterns and suggested collective organizing?
 
 #3Flywheels #WorkersRights`,
-      discord: `**💪 The Collective Action Flywheel**
+      discord: `**💪 The Collective Action Flywheel (Concept)**
 
-**Without coordination:**
-156 workers fight the same denial individually. Denied one by one. No media coverage. No policy change.
+**The problem**: Workers fighting the same battle don't know about each other. They lose in isolation.
 
-**With pattern detection:**
-• App detects: "156 workers denied for same reason"
+**The vision**: When the system detects a pattern (many facing same barrier), it suggests collective organizing.
+
+**How it could work**:
+• Pattern detected: Many workers denied for same reason
 • Campaign auto-suggested
-• 62 workers join
-• Joint submission to WSIB
-• Media covers it
-• Ministry takes notice
-• POLICY CHANGE
+• Workers connect
+• Joint advocacy
+• Policy pressure
 
-From isolated struggles to collective power.
-
-https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
+From isolated to organized. That's the goal we're working toward.`
     },
-    // Flywheels post 4 - Thunder Bay Pilot
+    // Flywheels post 4 - Thunder Bay Partnership (CONCEPT)
     {
-      mastodon: `🌲 Thunder Bay Pilot: Flywheels in Action
+      mastodon: `🌲 Excited to partner with Thunder Bay's injured worker community!
 
-We're scraping 500+ tribunal decisions (WSIAT, SST, HRTO) relevant to Thunder Bay workers.
+We're exploring the 3 Flywheels framework together:
+• Evidence sharing between workers
+• Pattern detection from tribunal decisions
+• Collective organizing when barriers emerge
 
-Focus: Mining, healthcare, manufacturing, forestry
+The vision: Turn 15 years of public tribunal data into actionable insights for workers.
 
-The goal: Pre-load the flywheels so User #1 starts with 15 years of institutional knowledge.
+From concept to community-tested reality.
 
-Traditional: Worker #1 needs 40 hours to research
-With pilot: Worker #1 gets 30 minutes (patterns already detected)
-
-12-week pilot. $0 cost. Real injured workers testing.
-
-If successful, we scale to orgs across Canada.
-
-https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/
+Learn about the framework: https://3mpwrapp.pages.dev/blog/
 
 #ThunderBay #3Flywheels #WorkersRights`,
-      bluesky: `🌲 Thunder Bay Pilot launching:
+      bluesky: `🌲 Thunder Bay partnership:
 
-500+ tribunal decisions
-Thunder Bay industries focus
-Pattern detection ready Day 1
+Testing the 3 Flywheels concept with injured workers:
 
-User #1: 40 hours → 30 minutes
+Turn tribunal data → patterns → collective action
 
-12 weeks. $0 cost. Real testing.
-
-Then we scale across Canada.
+Community-driven development.
 
 #ThunderBay #3Flywheels #WorkersRights`,
-      discord: `**🌲 Thunder Bay Pilot - Flywheels in Action**
+      discord: `**🌲 Thunder Bay Partnership: Testing the Flywheels**
 
-We're partnering with Thunder Bay & District Injured Workers Support Group to prove the flywheels work.
+We're partnering with Thunder Bay's injured worker community to develop and test the 3 Flywheels framework.
 
-**The Plan:**
-• Scrape 500+ tribunal decisions (WSIAT, SST, HRTO)
-• Focus: Thunder Bay industries (mining, healthcare, manufacturing)
-• Pre-load pattern detection
-• Test with 5-10 real clients
+**What we're exploring**:
+• Analyzing public tribunal decisions for patterns
+• Evidence sharing between workers
+• Collective organizing strategies
 
-**The Impact:**
-Traditional: User #1 spends 40 hours researching
-With pilot: User #1 gets 30 minutes (15 years of data pre-loaded)
+**Status**: Early concept development with community input.
 
-**Timeline:** 12 weeks | **Cost:** $0
-
-Read the full proposal: https://3mpwrapp.pages.dev/2026/04/01/3-flywheels-thunder-bay-presentation-success/`
+Follow along as we build this together.`
     }
   ]
 };
