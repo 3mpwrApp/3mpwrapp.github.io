@@ -11,6 +11,13 @@ description: Free community-powered platform connecting injured workers, persons
 {%- include accessibility-toolbar.html -%}
 {%- include status-banner.html -%}
 
+<!-- Flywheels Diagram -->
+<section class="flywheels-diagram-hero" style="text-align: center; margin: 2rem auto 3rem; max-width: 1200px;">
+  <img src="{{ '/assets/images/flywheels-diagram.png' | relative_url }}" 
+       alt="Diagram showing the 3mpwr Flywheels of Change: three interconnected circular arrows representing Evidence Flywheel (blue) with winning cases shared, proven templates, and legal resources leading to hours saved; Pattern Detection Flywheel (orange) analyzing decisions, finding key trends, and predicting outcomes; and Collective Action Flywheel (green) organizing campaigns, advocating for change, and driving policy reform leading to potential for systemic change. Center shows the transformation flow: Lived Experience to Data, Data to Insight, Insight to Action. Logo shows 3mpwrApp with stylized hands and power icon. Tagline: Turning Lived Experience Into Power."
+       style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
+</section>
+
 <!-- Hero Section -->
 <section class="homepage-hero">
   <picture>
@@ -71,23 +78,6 @@ description: Free community-powered platform connecting injured workers, persons
       <span aria-hidden="true">✊</span> No Corporate Control
     </p>
   </div>
-</section>
-
-<!-- Theme Song Winner Announcement -->
-<section class="theme-song-winner">
-  <div class="trophy">🏆</div>
-  <h2>
-    <span aria-hidden="true">👑</span> Official 3mpwr Theme Song
-  </h2>
-  <p class="winner-text">
-    Community Vote Winner: Option 1
-  </p>
-  <a href="https://suno.com/s/enuXDfFsc65WWAMr" target="_blank" rel="noopener noreferrer" class="btn-listen">
-    <span aria-hidden="true">🎵</span> Listen to Our Anthem
-  </a>
-  <p class="tagline">
-    This isn't just a song — it's our anthem. <span aria-hidden="true">💜</span>
-  </p>
 </section>
 
 <!-- Value Proposition Cards -->
@@ -331,6 +321,23 @@ description: Free community-powered platform connecting injured workers, persons
       <strong>Limited beta spots</strong> • Be among the first 1,000 users
     </p>
   </div>
+</section>
+
+<!-- Theme Song Winner Announcement -->
+<section class="theme-song-winner">
+  <div class="trophy">🏆</div>
+  <h2>
+    <span aria-hidden="true">👑</span> Official 3mpwr Theme Song
+  </h2>
+  <p class="winner-text">
+    Community Vote Winner: Option 1
+  </p>
+  <a href="https://suno.com/s/enuXDfFsc65WWAMr" target="_blank" rel="noopener noreferrer" class="btn-listen">
+    <span aria-hidden="true">🎵</span> Listen to Our Anthem
+  </a>
+  <p class="tagline">
+    This isn't just a song — it's our anthem. <span aria-hidden="true">💜</span>
+  </p>
 </section>
 
 <!-- CTA Section -->
