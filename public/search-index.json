@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "generated": "2026-04-01",
-  "totalDocuments": 466,
+  "totalDocuments": 463,
   "documents": [
     {
       "id": "blog/2026-03-31-security-runbook-how-we-protect-you.md",
@@ -22,8 +22,8 @@
       "id": "blog/2026-04-01-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-04-01",
-      "excerpt": "Daily News Curation - 2026-04-01 Curated 19 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-04-01 Curated 19 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program Government of Manitoba press release Source Score: 17.40 2. Manitoba Government Launches Ste. Anne Hospital Working Group to Strengthen Care in Southern Health Region Government of Manitoba press release Source Score: 15.00 3. Good Jobs, Lower Costs, Better Health Care: Manitoba Budget 2026 Government of Manitoba press release Source Score: 12.70 4. Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood Government of Manitoba press release Source Score: 10.50 5. Declaring Gender-Based Violence an Epidemic Was Not Enough The needs of survivors seeking services are skyrocketing in BC. New research shows frontline workers need better support. Source Score: 8.10 6. Manitoba Government Announces Budget 2026 Government of Manitoba press release Source Score: 7.50 7. Manitoba Government Mourns Passing of MLA Amanda Lathlin Government of Manitoba press release Source Score: 7.50 8. Manitoba Government Celebrates International Day of the Francophonie and Announces Next Steps Toward a Truly Bilingual Province Government of Manitoba press release Source Score: 7.50 9. Union Pressures Thomson Reuters to Rethink Selling Tools to ICE BCGEU owns shares in the Canadian media firm that contracts with the US deportations agency. Source Score: 4.60 10. The Human Cost of Failing to Name COVID ‘Airborne’ Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price. Source Score: 8.20 11. Among the Separatists I wanted to learn the true target of their angry dreams. What I heard made me tremble for the Alberta I love. Source Score: 3.90 12. BC’s Free Contraceptives Program Has Been Hugely Successful More people are using IUDs and hormonal implants now that cost isn’t an issue. Source Score: 4.60 13. Measles Update #93 Government of Manitoba press release Source Score: 4.50 14. Measles Update #92 Government of Manitoba press release Source Score: 4.50 15. Measles Update #91 Government of Manitoba press release Source Score: 4.50 16. Manitobans Encouraged to Start Planning for Camping Season Government of Manitoba press release Source Score: 4.50 17. Measles Update #90 Government of Manitoba press release Source Score: 4.50 18. Measles Update #87 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-01 Curated 4 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-01 Curated 4 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring Government of Manitoba press release Source Score: 10.50 2. Manitoba Anglers' Guide 2026 Now Available Government of Manitoba press release Source Score: 5.50 3. Measles Update #96 Government of Manitoba press release Source Score: 4.50",
       "date": "2026-04-01",
       "tags": [
         "highlights"
@@ -33,7 +33,25 @@
         "news"
       ],
       "url": "/2026-04-01-daily-curation",
-      "filesize": 2683
+      "filesize": 628
+    },
+    {
+      "id": "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
+      "source": "blog",
+      "title": "Feature Spotlight: Motor Accessibility Features",
+      "excerpt": "Feature Spotlight: Motor Accessibility Features Category: Accessibility Dwell-click, large touch targets, tremor compensation, and switch navigation support --- What Is Motor Accessibility Features? M",
+      "content": "Feature Spotlight: Motor Accessibility Features Category: Accessibility Dwell-click, large touch targets, tremor compensation, and switch navigation support --- What Is Motor Accessibility Features? Motor Accessibility Features is designed to dwell-click, large touch targets, tremor compensation, and switch navigation support. This feature is part of 3mpwrApp's commitment to providing comprehensive tools for people with disabilities, injured workers, and their supporters across Canada. --- Key Highlights - Dwell-click: activate buttons by hovering - Adjustable dwell time (0.5-3.0 seconds) - Extra-large touch targets for easier tapping - Tremor compensation smoothing unintended movements - Switch navigation for single-switch users - Voice control compatibility --- How It Works Here are real examples of how you can use Motor Accessibility Features: 1. Use dwell-click to navigate without tapping 2. Increase touch target size for easier use with tremors 3. Enable tremor compensation for precise selections 4. Navigate entire app with single switch 5. Control app with voice commands --- Why Motor Accessibility Features Matters - Full app access regardless of motor ability - Reduce frustration from missed taps - Use app independently without assistance - Customize controls to match your abilities --- Getting Started Ready to try Motor Accessibility Features? Here's how to get started: 1. Download the app - Available on iOS and Android (coming soon) 2. Complete setup - Takes just 5 minutes 3. Find the feature - Look for \"Motor Accessibility Features\" in your app 4. Follow the guide - In-app tutorials walk you through each step --- Learn More For complete information about Motor Accessibility Features and all other features: - ðŸ“– Read the Complete User Guide - âœ¨ Explore All Features - ðŸ§ª Join Beta Testing - ðŸ“¬ Subscribe to Updates --- About 3mpwrApp 3mpwrApp is a community-driven platform built for injured workers and persons with disabilities across Canada. We provide practical tools, community support, and advocacy resourcesâ€”all designed with accessibility, privacy, and cultural respect at the core. All features are: - âœ… Fully accessible (WCAG 2.2 AA+) - ðŸ”’ Privacy-first (local-first architecture) - ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories) - ðŸŒ Culturally inclusive (Indigenous languages supported)",
+      "date": "2026-04-01 00:00:00 +0000",
+      "tags": [
+        "features",
+        "spotlight",
+        "accessibility"
+      ],
+      "categories": [
+        "features"
+      ],
+      "url": "/2026-04-01-feature-spotlight-motor-accessibility-features",
+      "filesize": 2360
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -1707,13 +1725,13 @@
       "id": "curation/2026-04-01-curated.md",
       "source": "curation",
       "title": "2026-04-01-curated.md",
-      "excerpt": "Daily News Curation - 2026-04-01 Curated 19 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-04-01 Curated 19 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program Government of Manitoba press release Source Score: 17.40 2. Manitoba Government Launches Ste. Anne Hospital Working Group to Strengthen Care in Southern Health Region Government of Manitoba press release Source Score: 15.00 3. Good Jobs, Lower Costs, Better Health Care: Manitoba Budget 2026 Government of Manitoba press release Source Score: 12.70 4. Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood Government of Manitoba press release Source Score: 10.50 5. Declaring Gender-Based Violence an Epidemic Was Not Enough The needs of survivors seeking services are skyrocketing in BC. New research shows frontline workers need better support. Source Score: 8.10 6. Manitoba Government Announces Budget 2026 Government of Manitoba press release Source Score: 7.50 7. Manitoba Government Mourns Passing of MLA Amanda Lathlin Government of Manitoba press release Source Score: 7.50 8. Manitoba Government Celebrates International Day of the Francophonie and Announces Next Steps Toward a Truly Bilingual Province Government of Manitoba press release Source Score: 7.50 9. Union Pressures Thomson Reuters to Rethink Selling Tools to ICE BCGEU owns shares in the Canadian media firm that contracts with the US deportations agency. Source Score: 4.60 10. The Human Cost of Failing to Name COVID ‘Airborne’ Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price. Source Score: 8.20 11. Among the Separatists I wanted to learn the true target of their angry dreams. What I heard made me tremble for the Alberta I love. Source Score: 3.90 12. BC’s Free Contraceptives Program Has Been Hugely Successful More people are using IUDs and hormonal implants now that cost isn’t an issue. Source Score: 4.60 13. Measles Update #93 Government of Manitoba press release Source Score: 4.50 14. Measles Update #92 Government of Manitoba press release Source Score: 4.50 15. Measles Update #91 Government of Manitoba press release Source Score: 4.50 16. Manitobans Encouraged to Start Planning for Camping Season Government of Manitoba press release Source Score: 4.50 17. Measles Update #90 Government of Manitoba press release Source Score: 4.50 18. Measles Update #87 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-01 Curated 4 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-01 Curated 4 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring Government of Manitoba press release Source Score: 10.50 2. Manitoba Anglers' Guide 2026 Now Available Government of Manitoba press release Source Score: 5.50 3. Measles Update #96 Government of Manitoba press release Source Score: 4.50",
       "date": "2026-04-01",
       "tags": [],
       "categories": [],
       "url": "/2026-04-01-curated",
-      "filesize": 2683
+      "filesize": 628
     },
     {
       "id": "curation/README.md",
@@ -1726,6 +1744,28 @@
       "categories": [],
       "url": "/README",
       "filesize": 313
+    },
+    {
+      "id": "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md",
+      "source": "blog",
+      "title": "The 3 Flywheels of Change: How Collective Action Compounds Over Time",
+      "excerpt": "🌟 3mpwrApp = Empowering Injured Workers, and Persons with Disabilities through Data, Collective Knowledge, and Action A parallel knowledge system that challenges institutional power using data and co",
+      "content": "🌟 3mpwrApp = Empowering Injured Workers, and Persons with Disabilities through Data, Collective Knowledge, and Action A parallel knowledge system that challenges institutional power using data and collective experience - building infrastructure that could actually shift how injured workers, and persons with disabilities navigate systems in Canada. 🔒 Privacy First: ALL shared data is ANONYMIZED, consent-based, and designed to protect privacy while exposing systemic patterns. The Problem: Hundreds of Thousands Reinventing the Wheel Right now, across Canada, injured workers and persons with disabilities are fighting the same battles in isolation. Whether you're: - Fighting a WSIB denial for fibromyalgia, chronic pain, or PTSD - Appealing a CPP Disability rejection for mental health, MS, or long COVID - Navigating workplace accommodation for vision loss, mobility impairments, or chronic fatigue - Challenging insurance denials for treatment, assistive devices, or home modifications - Seeking tribunal decisions on accessibility, discrimination, or benefits eligibility You start from zero. You spend 40+ hours researching: - What evidence tribunals actually accept - Which medical forms matter for YOUR condition - What strategies have worked for cases like yours - What mistakes lead to denial - How to navigate complex legal systems without a lawyer Here's the tragedy across thousands of conditions and systems: 156 workers fighting fibromyalgia WSIB denials. 89 people appealing CPP-D for PTSD. 203 employees seeking workplace accommodations for chronic pain. 412 parents fighting for children's disability supports. All starting from zero. All making the same mistakes. All discovering the same solutions - separately. One worker's 40-hour struggle becomes 156 × 40 hours = 6,240 hours of collective suffering. Multiply that across thousands of conditions, hundreds of thousands of people, dozens of systems. And most don't have $5,000-$15,000 for a lawyer to shortcut this - so they fight alone, lose battles that others have already won, and give up. \"No one should lose their home, their health, and their future - just because they didn't have access to the right information.\" — Lissa Beaulieu, Creator & Founder, 3mpwrAppFormer home care PSW, Injured worker with permanent workplace injuries --- We're Turning Lived Experience Into Data - and Data Into Power The fundamental shift: What if every worker's struggle, every denial, every victory, every strategy - wasn't lost? What if it became data that exposes patterns, evidence that challenges systems, and power that changes outcomes? That's exactly what 3mpwrApp does. We're not just digitizing forms. We're building a parallel knowledge system - one that workers own, that learns from collective experience, and that grows stronger with every case. --- The Solution: Systems That Compound Over Time What if every victory made the next one easier? Not just a little easier. Exponentially easier. That's the core idea behind 3mpwrApp's 3 Flywheels of Change - the highest-leverage tools we're building for injured workers and people with disabilities. --- Flywheel #1: The Evidence Flywheel How it works: When one worker wins their case, their evidence becomes a template for everyone fighting the same battle. The Compounding Effect This works for ANY condition, ANY system: Worker #1: 40 hours researching their case (fibromyalgia WSIB, PTSD CPP-D, MS accommodation, chronic pain settlement, etc.) → Wins → Shares evidence Worker #2: Finds Worker #1's strategy → Copies proven approach → Wins in 10 hours Worker #10: Has 9 successful templates → Picks best match → Wins in 5 hours Worker #156: Instant access to 155 winning strategies for their specific condition → 1 hour to results The math (for just ONE condition out of thousands): - Traditional: 156 workers × 40 hours = 6,240 hours of collective struggle - With Evidence Flywheel: ~500 hours total (Worker #1: 40hrs, others: decreasing time) - Time saved: 5,740 hours (92% reduction) - Money saved: 5,740 hours × $25/hr = $143,500 in avoided legal fees Now multiply this across fibromyalgia, PTSD, MS, chronic pain, vision loss, mobility impairments, long COVID, mental health conditions, and thousands more. What Gets Shared ✅ Successful appeal letters ✅ Medical evidence that worked (RFC forms, FCE reports, specialist referrals) ✅ Timeline formats tribunals prefer ✅ Argument structures that win ✅ Common mistakes to avoid This is already built into 3mpwrApp's Evidence Locker - with worker consent, wins get shared anonymously. --- Flywheel #2: The Pattern Detection Flywheel How it works: Automatically analyze thousands of tribunal decisions to find what actually works. The Problem With Starting From Zero Right now, if you're denied CPP Disability for PTSD, you have no idea: - Do most PTSD appeals succeed or fail? - What evidence is in 90% of successful appeals? - Are there regional differences? (Does Alberta deny more than Ontario?) - What's the #1 mistake that leads to denial? You're flying blind. Spending 40 hours on Google, legal forums, outdated guides. 3mpwrApp changes this: AI-assisted insights help estimate likely outcomes based on similar cases, giving you the knowledge that used to cost thousands in legal fees. How Patterns Compound 3mpwrApp scrapes 50,000+ public tribunal decisions from CanLII. We analyze patterns across all conditions and systems. Example 1: Fibromyalgia WSIAT Appeals (2015-2025) ✅ 73 cases analyzed → 78% success rate ✅ RFC form present in 92% of wins (critical factor) ✅ Timeline showing symptom progression in 78% of wins ✅ Functional Capacity Evaluation in 64% of wins Example 2: PTSD CPP Disability (2015-2025) ✅ 142 cases analyzed → 65% success rate ✅ Psychiatrist assessment in 89% of wins ✅ Detailed medication history in 76% of wins Example 3: MS Workplace Accommodation (2018-2025) ✅ 58 cases analyzed → 81% success rate ✅ Ergonomic assessment report in 94% of wins ✅ Phased return-to-work plan in 72% of wins What this means for YOU (whatever your condition): Instead of: \"I don't know what evidence I need\" You get: \"Here are 50+ cases like yours. 92% of people with [your condition] who submitted [specific evidence] won. Here's the template.\" Time saved: 35 hours (straight to proven strategies for YOUR condition) Money saved: $875 (no lawyer needed to figure this out) The Compounding Effect Across ALL CONDITIONS Year 1: 73 fibromyalgia + 142 PTSD + 58 MS cases = 273 patterns identified Year 2: 500+ cases across 20 conditions → More precise patterns, regional differences emerge Year 5: 5,000+ cases across 100+ conditions → Cross-condition insights (what works for chronic pain also works for long COVID) Year 10: 50,000+ cases → AI predicts win probability with 85% accuracy for ANY condition based on your evidence upload The flywheel spins across the entire disability/injury landscape: More data → Better patterns → Higher win rates → More data → Everyone benefits --- Flywheel #3: The Collective Action Flywheel How it works: When patterns reveal systemic barriers, workers can organize automatically. The Isolation Problem Right now across ALL systems: - 156 workers with fibromyalgia get denied for \"insufficient evidence\" - 89 people with PTSD get rejected from CPP-D for \"not severe enough\" - 203 employees with chronic conditions face workplace discrimination - 412 parents fight for children's disability supports alone They don't know about each other. System picks them off one by one. No organizing. No media coverage. No policy change. How Collective Action Compounds - Across ALL Conditions 3mpwrApp detects patterns automatically: Campaign Example 1: Fibromyalgia WSIB Denials \"Alert: 156 fibromyalgia claims denied in 6 months for 'insufficient objective evidence' - yet WSIAT accepts RFC forms in 92% of appeals.\" - Campaign auto-suggested: \"WSIB Must Accept RFC Forms for Fibromyalgia\" - Members matched: 156 workers, same denial reason - Evidence: 57 WSIAT wins using same evidence WSIB rejected - Result: 62 join → Joint submission → Media coverage → Ministry pressure → WSIB updates guidelines → 78% fewer denials Campaign Example 2: Long COVID CPP-D Rejections \"Alert: 203 long COVID applicants denied CPP-D for 'insufficient duration' - yet similar cases meet 'severe and prolonged' test.\" - Campaign: \"Long COVID is a Recognized Disability\" - Members: 203 applicants, documented 18+ months symptoms - Result: Parliamentary testimony → Federal policy clarification → Approval rate jumps from 23% to 67% Campaign Example 3: Workplace Accessibility Barriers \"Alert: 89 workers with vision loss denied remote work despite doing same job during COVID-19.\" - Campaign: \"Remote Work IS Reasonable Accommodation\" - Members: 89 workers, proven track record - Result: Human rights complaint → Precedent set → Employers now required to prove hardship This works for EVERY systemic pattern we detect. The Compounding Effect Campaign #1: 62 members → Media coverage → Policy change → 78% fewer denials Campaign #2: 89 members (easier to organize now) → Joint legal action → Precedent set Campaign #5: 200+ members → Parliamentary committee testimony → Federal policy reform The flywheel spins: Patterns detected → Workers organized → Policy changed → Systemic barriers removed --- Why This Is the Highest-Leverage Solution The Representation Gap The problem most injured workers and people with disabilities face: - Can't afford $5,000-$15,000 for a lawyer - Don't have 40+ hours to research alone - Don't know which strategies work - Don't know others are fighting the same battle - System is designed to exhaust and isolate you What the flywheels provide: ✅ Evidence Flywheel = Free legal strategy (crowd-sourced from wins) ✅ Pattern Detection = Free research (automated analysis of 50,000+ cases) ✅ Collective Action = Free organizing (automatic pattern-to-campaign pipeline) You get the representation you can't afford - because 500 workers before you already figured it out, and you get to stand on their shoulders. The Compounding Effect Over Time This is why flywheels are highest-leverage: Year 1: - Evidence Flywheel: Worker #1 saves 0 hours (pioneer) → Worker #50 saves 30 hours - Pattern Detection: 500 cases analyzed → Basic insights - Collective Action: First campaign launched (62 members) Year 3: - Evidence Flywheel: Worker #500 saves 37 hours (instant access to 500 templates) - Pattern Detection: 5,000 cases → Regional patterns, predictive AI - Collective Action: 10 campaigns launched, 3 policy changes Year 5: - Evidence Flywheel: Worker #2,000 saves 39 hours (99% of searches return instant match) - Pattern Detection: 20,000 cases → Cross-province comparisons, systemic barrier identification - Collective Action: 50+ campaigns, national advocacy network Every improvement helps everyone who comes after. The system gets smarter. Faster. More powerful. That's compounding. --- Real-World Validation On March 31, 2026, we presented this framework to Thunder Bay's injured worker community (40+ years serving workers). Three brilliant questions from the audience validated the approach: 1. \"Can flywheels be deployed at high-volume intake points?\" → YES (community organizations are perfect) 2. \"Can we jumpstart with historical data?\" → YES (50,000+ tribunal decisions publicly available) 3. \"Can flywheels be standalone for specific regions?\" → YES (Thunder Bay → Ontario → Canada) Their feedback: \"This is exactly what we need. When can we start?\" We're beginning with Thunder Bay, expanding to Ontario via ONIWG (Ontario Network of Injured Workers Groups), then scaling Canada-wide. But the goal isn't just Thunder Bay. The goal is every injured worker and person with disabilities in Canada has access to these tools. --- How This Is Already Built Into 3mpwrApp These aren't theoretical concepts. The flywheels are core features of 3mpwrApp right now: Evidence Flywheel → Evidence Locker - Upload your successful appeal documents - Search 500+ winning strategies (growing daily) - Download templates others used to win - With your consent, your win helps the next worker Pattern Detection → AI Case Interpreter - Enter your case details - Get AI analysis: \"73 similar cases found, 78% success rate\" - See what evidence worked in wins - Avoid mistakes that led to denials Collective Action → Campaign Coordination - Join campaigns when patterns emerge - Connect with workers fighting the same battle - Organize joint submissions - Track wins together These aren't add-ons. These are the foundation of how 3mpwrApp works. --- Why Flywheels Are Different From Traditional Support Traditional Legal/Advocacy Support: ❌ One-to-one: Lawyer helps one client at a time ❌ Expensive: $5,000-$15,000 per case ❌ Knowledge dies: What worked for Client #1 doesn't help Client #156 ❌ No pattern detection: Every case treated as unique ❌ No organizing: Workers isolated from each other Flywheels Approach: ✅ One-to-many: Worker #1's win helps all 156 workers ✅ Free: Knowledge shared, not sold ✅ Knowledge compounds: Every win makes the system smarter ✅ Automatic pattern detection: 50,000+ cases analyzed ✅ Automatic organizing: Workers matched by shared struggles This is why flywheels are the highest-leverage intervention: One worker's 40-hour struggle becomes 500 workers getting instant answers. --- The Math of Mutual Aid at Scale - Across ALL Conditions Traditional Model (Every Worker Alone) Scenario: 500 workers fight various denials over 5 years (fibromyalgia WSIB, PTSD CPP-D, MS accommodations, chronic pain settlements, etc.) - Time: 500 × 40 hours = 20,000 hours of collective suffering - Cost: 500 × $10,000 (legal fees) = $5 million - Success rate: ~60% (flying blind, inconsistent strategies) - Policy change: Never happens (no coordination, isolated struggles) Flywheels Model (Collective Knowledge Across ALL Conditions) Scenario: Same 500 workers with different conditions, same 5 years, using 3mpwrApp flywheels - Time: ~2,000 hours total (Worker #1: 40hrs, Worker #500: 1hr) - Savings: 18,000 hours = $450,000 in avoided time costs - Legal fees: $0 for 450 workers (followed templates) + $50,000 for 50 who needed lawyers = $50,000 total - Savings: $4.95 million in legal fees - Success rate: ~92% (following proven strategies) - Policy change: 2-3 campaigns successful → Systemic barriers removed Total value created: $5.4 million + 450 families not bankrupted + systemic change That's the power of compounding. --- What You Can Do Right Now If You're an Injured Worker or Person with Disabilities: 1. Download 3mpwrApp → Start using the Evidence Locker 2. Search for your case type → See what strategies worked 3. Share when you win → Help the next worker (optional, anonymous) 4. Join campaigns → Fix systemic barriers, not just your individual case If You're an Advocacy Organization: 1. Contact us → Let's discuss how flywheels can amplify your impact 2. Partner with us → Deploy these tools for your clients 3. Share your knowledge → 40+ years of wins = instant database If You're a Developer/Researcher: 1. Contribute to our open data → Help us scrape more tribunal decisions 2. Improve our algorithms → Pattern detection needs refinement 3. Validate our findings → Are our success rates accurate? --- The Vision: Canada-Wide by 2027 Current state: 500 tribunal decisions analyzed, Thunder Bay pilot launching Goal: 50,000+ decisions, every province, every injured worker network Phase 1: Thunder Bay (proving the concept) Phase 2: Ontario via ONIWG (establishing provincial model) Phase 3: Every province, every injured worker in Canada By 2027: - Worker in Vancouver gets denied CPP-D → Searches \"PTSD CPP-D\" → Finds 2,000 cases → Downloads winning template → Submits appeal in 1 hour - 200 workers see pattern: \"Nova Scotia denying back injuries at 2x national rate\" → Campaign launches → Joint submission → Policy change - Injured worker in Thunder Bay mentors worker in Halifax who's fighting same battle That's the future we're building. --- Join the Movement The 3 Flywheels are only as powerful as the community using them. Every win shared = 10 workers saved 30 hours Every pattern detected = 100 workers avoid mistakes Every campaign launched = 1,000 workers benefit from policy change This isn't charity. This isn't a service. This is mutual aid at scale. You're not a customer. You're a contributor. Your struggle, your win, your knowledge - it all makes the flywheels spin faster. Together, we compound. --- Want to learn more or get involved? 📧 Contact: empowrapp08162025@gmail.com 🌐 Website: https://3mpwrapp.pages.dev 📱 Download: Available on iOS, Android, and web Building this at $0 budget because every injured worker and person with disabilities deserves representation - even if they can't afford it.",
+      "date": "2026-03-31 18:00:00 -0400",
+      "tags": [
+        "flywheels",
+        "pattern-detection",
+        "evidence-sharing",
+        "disabled-workers",
+        "mutual-aid"
+      ],
+      "categories": [
+        "innovation",
+        "collective-action",
+        "core-features"
+      ],
+      "url": "/2026-03-31-3-flywheels-thunder-bay-presentation-success",
+      "filesize": 16781
     },
     {
       "id": "blog/2026-03-31-3mpwrapp-safe-from-axios-supply-chain-attack.md",
@@ -2000,25 +2040,6 @@
       "filesize": 2347
     },
     {
-      "id": "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md",
-      "source": "blog",
-      "title": "Disability Justice vs Disability Charity: Our Operating Principle",
-      "excerpt": "Disability Justice vs Disability Charity: Our Operating Principle There is a meaningful difference between disability charity and disability justice. Charity says: \"You are suffering ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â",
-      "content": "Disability Justice vs Disability Charity: Our Operating Principle There is a meaningful difference between disability charity and disability justice. Charity says: \"You are suffering ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â let us help you cope.\" Justice says: \"You are being harmed by unjust systems ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â let us organize to change them.\" 3mpwrApp is built on the second premise. Yes, we provide coping tools ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â symptom tracking, crisis support, wellness resources. People need those. But we designed them within a framework that treats disability as a political condition, not only a medical one. This is why 3mpwrApp has an Advocacy tab. Why it has Campaign Coordination and community forums. Why it connects you to advocacy partners, not just symptom management features. The goal is not personal adjustment ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the goal is collective change. The Principles - Disability charity positions disabled people as passive recipients of help - Disability justice positions disabled people as agents with rights, power, and expertise - Nothing about us without us: co-design is structurally built into how we operate - Intersectionality is central ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â disability does not exist in isolation from race, class, or geography - Justice demands systemic change ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â not just better individual coping strategies In Action - The Advocacy tab helps people organize politically ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â not just manage their own condition - Campaign Coordination tools support collective action, not just individual petitioning - Community spaces in 3mpwrApp facilitate mutual aid, not dependency on charity Why It Matters - The framing of disability determines the tools you build - A charity model app helps you manage your situation; a justice model app helps you change it - This distinction is why 3mpwrApp includes advocacy and organizing features alongside personal support tools Join the Community 3mpwrApp is built on these principles ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â and built for and with the people who need them most. - ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¬ Community Forums - ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª Become a Beta Tester - ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬â€œ Read Our Mission",
-      "date": "2026-03-25 00:00:00 +0000",
-      "tags": [
-        "community",
-        "philosophy",
-        "mission",
-        "philosophy"
-      ],
-      "categories": [
-        "community"
-      ],
-      "url": "/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle",
-      "filesize": 2171
-    },
-    {
       "id": "blog/2026-03-25-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-03-25",
@@ -2106,24 +2127,6 @@
       "filesize": 505
     },
     {
-      "id": "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
-      "source": "blog",
-      "title": "Dev Diary: Building Offline-First: Network Access Should Never Be Required",
-      "excerpt": "Dev Diary: Building Offline-First: Network Access Should Never Be Required A behind-the-scenes look at how we build 3mpwrApp. A disability app that requires consistent internet access systematically e",
-      "content": "Dev Diary: Building Offline-First: Network Access Should Never Be Required A behind-the-scenes look at how we build 3mpwrApp. A disability app that requires consistent internet access systematically excludes the people who need it most. Consider where chronic illness and disability intersect with geography. Rural and remote communities in Canada have both higher disability rates and significantly worse internet infrastructure. Optimizing for urban, connected users would have been a betrayal of our mission. The offline-first mandate created real technical challenges ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â every feature had to be audited for what it looks like without a network call. The upload queue was particularly complex: we needed silent, automatic retry logic that never lost data and never frustrated users. Technical Details - AsyncStorage provides local-first persistence across all platforms - Evidence upload queue retries silently when connectivity returns - All crisis resources are pre-loaded to device memory at install - Firestore offline mode syncs transparently when connection resumes - The principle: if it requires internet, it isn't truly accessible In Practice - A user in a rural area with no signal can access their full Evidence Locker - Crisis resources load instantly because they are committed to local storage - Upload queues retry on their own ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â users never need to remember to re-upload What We Learned - Many of the most vulnerable community members live in rural areas with unreliable connectivity - Offline-first is not a performance optimization ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â it is an equity decision - Designing for offline means every feature had to work as a standalone, self-contained unit * Follow Our Development We believe in building in public ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the community we serve has been failed by opaque institutions too many times. - ÃƒÂ¢Ã‚Â­Ã‚Â GitHub - ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª Join Beta Testing - ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¬ Community Discussion",
-      "date": "2026-03-23 00:00:00 +0000",
-      "tags": [
-        "dev-diary",
-        "development",
-        "behind-the-scenes"
-      ],
-      "categories": [
-        "dev-diary"
-      ],
-      "url": "/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required",
-      "filesize": 1980
-    },
-    {
       "id": "whatsnew/2026-03-23-week-13-updates.md",
       "source": "whatsnew",
       "title": "Week 13 Updates (2026)",
@@ -2186,25 +2189,6 @@
       ],
       "url": "/2026-03-21-daily-curation",
       "filesize": 292
-    },
-    {
-      "id": "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "source": "blog",
-      "title": "Setting Up Accessibility for Your Needs",
-      "excerpt": "Setting Up Accessibility for Your Needs A practical guide from the 3mpwrApp team. 3mpwrApp was built accessibility-first. Every feature was designed with the full range of disability experiences in mi",
-      "content": "Setting Up Accessibility for Your Needs A practical guide from the 3mpwrApp team. 3mpwrApp was built accessibility-first. Every feature was designed with the full range of disability experiences in mind ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â not retrofitted after launch. Our settings are deeply granular because \"accessibility\" is not one thing. Someone with ADHD has different needs than someone with low vision, who has different needs than someone with motor disabilities. You should be able to configure the app to match your actual situation. Everything you configure saves automatically. Switch between Simple Mode and full mode as many times as you need ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â your settings always come back to where you left them. What You'll Learn - Dyslexia-friendly fonts reduce visual confusion for dense text - High contrast mode supports low vision and photosensitivity - Screen reader optimization works with VoiceOver and TalkBack natively - Simple Mode reduces the app to 5 core features on bad health days - Motor accessibility reduces required gesture precision across the whole app Step by Step Step 1: Enable Simple Mode during a flare to avoid cognitive overwhelm Step 2: Turn on Dyslexia Support to apply the accessible font throughout the entire app Step 3: Use Switch Access compatibility for single-button navigation on Android Step 4: Set font size to Maximum or increase button target sizes for motor accessibility Key Takeaways - Accessibility is not a feature ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â it is the foundation everything else is built on - No two disabilities are the same; your settings should reflect your actual situation - All accessibility preferences persist across sessions ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â you configure once Ready to Try It? 1. Download 3mpwrApp ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 3mpwrapp.pages.dev 2. Sign up or explore as guest ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no commitment needed 3. Find this feature ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â search or browse main navigation About 3mpwrApp 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada. - ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬â€œ Full User Guide - ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª Join the Beta - ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¬ Community Forums",
-      "date": "2026-03-21 00:00:00 +0000",
-      "tags": [
-        "tutorial",
-        "how-to",
-        "accessibility",
-        "tutorial"
-      ],
-      "categories": [
-        "tutorials"
-      ],
-      "url": "/2026-03-21-tutorial-setting-up-accessibility-for-your-needs",
-      "filesize": 2178
     },
     {
       "id": "blog/2026-03-20-daily-curation.md",
@@ -2311,25 +2295,6 @@
       ],
       "url": "/2026-03-18-feature-spotlight-master-letter-generator",
       "filesize": 2651
-    },
-    {
-      "id": "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
-      "source": "blog",
-      "title": "The Origin Story: Why 3mpwrApp Was Built",
-      "excerpt": "The Origin Story: Why 3mpwrApp Was Built 3mpwrApp did not begin as a product idea. It began as a response to a crisis. A community member ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â navigating a workplace injury claim, fighti",
-      "content": "The Origin Story: Why 3mpwrApp Was Built 3mpwrApp did not begin as a product idea. It began as a response to a crisis. A community member ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â navigating a workplace injury claim, fighting an insurer with more resources than she had ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â needed tools that did not exist. So we built them. What she needed was a way to keep evidence organized and encrypted. A way to write letters that demonstrated she knew her rights. A way to find support resources at 2 AM when the anxiety was worst. She needed 3mpwrApp, so 3mpwrApp exists. The \"3mpwr\" in the name is intentional. Not the hollow empowerment that asks disabled people to simply try harder in an unjust system. Collective empowerment. Power through documentation, through community, through having tools that match the tools being used against you. The Principles - Born from direct experience with the failure of disability support systems in Canada - Built in response to the systematic silencing of injured workers by insurers and employers - Designed by community members who were themselves navigating the exact systems the app addresses - The name \"3mpwr\" reflects collective power ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â empowerment through tools, technology, and solidarity - Community advisory process shapes every major feature decision to this day In Action - The Evidence Locker exists because documentation is the primary tool injured workers lack - The Letter Generator exists because legal language is used as a deliberate barrier - Simple Mode exists because the community said directly: \"I'm too sick to navigate this app on hard days\" Why It Matters - Tools built by the community look fundamentally different from tools built about it - Our origin story is a statement of accountability to the people we serve - Every feature is a response to a real, named barrier that real people told us they face Join the Community 3mpwrApp is built on these principles ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â and built for and with the people who need them most. - ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¬ Community Forums - ÃƒÂ°Ã…Â¸Ã‚Â§Ã‚Âª Become a Beta Tester - ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬â€œ Read Our Mission",
-      "date": "2026-03-17 00:00:00 +0000",
-      "tags": [
-        "community",
-        "our-story",
-        "mission",
-        "philosophy"
-      ],
-      "categories": [
-        "community"
-      ],
-      "url": "/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built",
-      "filesize": 2130
     },
     {
       "id": "blog/2026-03-17-daily-curation.md",
@@ -4638,26 +4603,6 @@
       ],
       "url": "/2025-12-12-feature-spotlight-government-navigator",
       "filesize": 2302
-    },
-    {
-      "id": "blog/2025-12-12-weekly-update-week-51.md",
-      "source": "blog",
-      "title": "Weekly Update Ã¢â‚¬â€ Week 51 (2025)",
-      "excerpt": "Ã°Å¸Å½Â¤ Week 51: First Demo Success & USA Lite Launch! Here's what changed this week, in simple terms: Ã°Å¸Å½â€° Major Milestone: First Demo Presentation December 9, 2025 Ã¢â‚¬â€ Our first demo and ",
-      "content": "Ã°Å¸Å½Â¤ Week 51: First Demo Success & USA Lite Launch! Here's what changed this week, in simple terms: Ã°Å¸Å½â€° Major Milestone: First Demo Presentation December 9, 2025 Ã¢â‚¬â€ Our first demo and introduction presentation was a success! We presented 3mpwrApp to the Thunder Bay & District Injured Workers Support Group. What Happened - Showcased 3mpwrApp's core features to interested community members - Demonstrated accessibility features and disability-first design - Received positive feedback on wellness,resources, and advocacy tools - USA listeners expressed interest in beta testing! Key Outcomes - Ã¢Å“â€¦ Positive reception from attendees - Ã¢Å“â€¦ Validation of our disability-first approach - Ã¢Å“â€¦ Phase 1 Closed Internal Testing about to start - Ã¢Å“â€¦ International interest Ã¢â‚¬â€ requests from USA supporters Ã°Å¸â€¡ÂºÃ°Å¸â€¡Â¸ USA Lite Launched! In response to interest from American supporters during the demo, we've launched USA Lite! What is USA Lite? A version of 3mpwrApp for US-based users who want to: - Join beta testing and provide feedback - Use core wellness and advocacy features - Experience disability-first design - Help shape future US-specific features Feature Availability | Feature Category | USA Lite Status | |-----------------|-----------------| | Wellness Hub | Ã¢Å“â€¦ Full Access | | Evidence Locker | Ã¢Å“â€¦ Full Access | | Energy Management | Ã¢Å“â€¦ Full Access | | Community Features | Ã¢Å“â€¦ Full Access | | Privacy & Security | Ã¢Å“â€¦ Full Access | | Offline-First | Ã¢Å“â€¦ Full Access | | Letter Templates | Ã°Å¸â€œÂ Generic Templates | | Benefits Navigator | Ã°Å¸â€â€ž US Adaptation Planned | | Indigenous Languages | Ã¢ÂÅ’ Canada Only | Why the Difference? 3mpwrApp was built for Canadian disability benefits (ODSP, CPP-D, AISH, etc.). USA Lite offers universal features while we work on US-specific adaptations. Ã°Å¸Å½Â¯ Focus States for USA Lite We're prioritizing development for these 10 states first: - Ã°Å¸â€¡ÂºÃ°Å¸â€¡Â¸ California, New York, Michigan, Texas, Washington - Ã°Å¸â€¡ÂºÃ°Å¸â€¡Â¸ Ohio, Pennsylvania, Tennessee, Georgia, Mississippi More states coming as we expand! Ã°Å¸â€œÅ Current Status Update | Metric | This Week | |--------|-----------| | Phase | Phase 1 Ã¢â‚¬â€ Starting Soon! | | Tests | 721 passing | | WCAG Level | AAA Compliant | | Canada Full | Ã¢Å“â€¦ Available | | USA Lite | Ã¢Å“â€¦ Now Available | Ã°Å¸â€œâ€ž Documentation Updates All documents updated to December 12, 2025: - Terms of Service v4.2 Ã¢â‚¬â€ USA Lite terms added - Privacy Policy v3.2 Ã¢â‚¬â€ USA Lite privacy information - Data Ownership v2.2 Ã¢â‚¬â€ USA Lite data handling - User Guide v4.1 Ã¢â‚¬â€ Demo success & USA Lite sections - Beta Guide v4.0 Ã¢â‚¬â€ Phase 1 & USA Lite information - Roadmap Ã¢â‚¬â€ Updated phases, USA Lite section added - FAQ Ã¢â‚¬â€ New December 2025 section, USA Lite FAQs Ã°Å¸Å¡â‚¬ What's Coming in Phase 1 1. Expand beta testing to more users 2. Gather USA Lite feedback on universal features 3. Refine accessibility based on user reports 4. Plan US-specific adaptations for future releases 5. Continue community building and advocacy support Ã°Å¸â„¢Â Thank You! Thank you to everyone who attended the demo and expressed interest in joining our community. Whether you're in Canada or the USA, we're building this app with the disability community, for the disability community. Welcome to 3mpwrApp! Next weekly update: Week 52 (December 2025)",
-      "date": "2025-12-12 09:00:00 +0000",
-      "tags": [
-        "weekly",
-        "updates",
-        "demo",
-        "usa-lite",
-        "milestone"
-      ],
-      "categories": [
-        "updates"
-      ],
-      "url": "/2025-12-12-weekly-update-week-51",
-      "filesize": 3449
     },
     {
       "id": "blog/2025-12-12-daily-curation.md",
@@ -7190,6 +7135,7 @@
       "whatsnew/2026-01-05-week-2-updates.md"
     ],
     "3": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md",
       "whatsnew/2026-01-15-powertools-complete-week-3.md",
       "blog/2026-01-12-weekly-update-week-3.md",
       "whatsnew/2026-01-12-week-3-updates.md"
@@ -7268,8 +7214,7 @@
     ],
     "51": [
       "blog/2025-12-15-weekly-update-week-51.md",
-      "whatsnew/2025-12-15-week-51-updates.md",
-      "blog/2025-12-12-weekly-update-week-51.md"
+      "whatsnew/2025-12-15-week-51-updates.md"
     ],
     "52": [
       "blog/2025-12-22-weekly-update-week-52.md",
@@ -7291,8 +7236,7 @@
       "whatsnew/2026-01-05-january-infrastructure-fixes.md"
     ],
     "our": [
-      "blog/2026-03-31-security-runbook-how-we-protect-you.md",
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md"
+      "blog/2026-03-31-security-runbook-how-we-protect-you.md"
     ],
     "security": [
       "blog/2026-03-31-security-runbook-how-we-protect-you.md",
@@ -7306,6 +7250,7 @@
     ],
     "how": [
       "blog/2026-03-31-security-runbook-how-we-protect-you.md",
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md",
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
     ],
     "we": [
@@ -7867,6 +7812,247 @@
     "2026-04-01": [
       "blog/2026-04-01-daily-curation.md"
     ],
+    "feature": [
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
+      "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2026-03-28-feature-spotlight-wellness-hub.md",
+      "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
+      "blog/2026-03-24-feature-spotlight-indigenous-language-support.md",
+      "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
+      "blog/2026-03-20-feature-spotlight-evidence-locker.md",
+      "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
+      "blog/2026-03-16-feature-spotlight-disability-wizard.md",
+      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2026-01-23-feature-spotlight-government-navigator.md",
+      "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
+      "blog/2026-01-21-feature-spotlight-medication-tracker.md",
+      "blog/2026-01-20-feature-spotlight-benefits-tracker.md",
+      "blog/2026-01-19-feature-spotlight-campaign-templates.md",
+      "blog/2026-01-18-feature-spotlight-virtual-meetups.md",
+      "blog/2026-01-17-feature-spotlight-discussion-forums.md",
+      "blog/2026-01-16-feature-spotlight-peer-support-matching.md",
+      "blog/2026-01-15-feature-spotlight-ai-translator-accessibility-terminology.md",
+      "blog/2026-01-14-feature-spotlight-accountability-tracker.md",
+      "blog/2026-01-13-feature-spotlight-ai-case-interpreter.md",
+      "blog/2026-01-12-feature-spotlight-policy-explainer-policy-made-simple.md",
+      "blog/2026-01-11-feature-spotlight-lawyer-finder.md",
+      "blog/2026-01-10-feature-spotlight-reflections-calendar.md",
+      "blog/2026-01-09-feature-spotlight-self-care-library.md",
+      "blog/2026-01-08-feature-spotlight-grief-support.md",
+      "blog/2026-01-07-feature-spotlight-resilience-points-gamified-wellness.md",
+      "blog/2026-01-06-feature-spotlight-pacing-partner.md",
+      "blog/2026-01-05-feature-spotlight-dbt-skill-matcher.md",
+      "blog/2026-01-04-feature-spotlight-adaptive-meditation.md",
+      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2026-01-02-feature-spotlight-symptom-pain-tracker.md",
+      "blog/2026-01-01-feature-spotlight-mood-tracker.md",
+      "blog/2025-12-31-feature-spotlight-accessible-document-generation.md",
+      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-12-29-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-12-25-feature-spotlight-resource-directory.md",
+      "blog/2025-12-24-feature-spotlight-benefits-navigator.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-12-21-feature-spotlight-wellness-hub.md",
+      "blog/2025-12-20-feature-spotlight-campaign-coordination.md",
+      "blog/2025-12-19-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-12-18-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-12-17-feature-spotlight-evidence-locker.md",
+      "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
+      "blog/2025-12-15-feature-spotlight-disability-wizard.md",
+      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-12-feature-spotlight-government-navigator.md",
+      "blog/2025-12-11-feature-spotlight-deadlines-reminders.md",
+      "blog/2025-12-10-feature-spotlight-medication-tracker.md",
+      "blog/2025-12-09-feature-spotlight-benefits-tracker.md",
+      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-07-feature-spotlight-production-release.md",
+      "blog/2025-12-07-feature-spotlight-campaign-templates.md",
+      "blog/2025-12-06-feature-spotlight-virtual-meetups.md",
+      "blog/2025-12-05-feature-spotlight-discussion-forums.md",
+      "blog/2025-12-04-feature-spotlight-peer-support-matching.md",
+      "blog/2025-12-03-feature-spotlight-ai-translator-accessibility-terminology.md",
+      "blog/2025-12-02-feature-spotlight-accountability-tracker.md",
+      "blog/2025-12-01-feature-spotlight-ai-case-interpreter.md",
+      "blog/2025-11-30-feature-spotlight-policy-explainer-policy-made-simple.md",
+      "blog/2025-11-29-feature-spotlight-lawyer-finder.md",
+      "blog/2025-11-28-feature-spotlight-reflections-calendar.md",
+      "blog/2025-11-27-feature-spotlight-self-care-library.md",
+      "blog/2025-11-26-feature-spotlight-grief-support.md",
+      "blog/2025-11-25-feature-spotlight-resilience-points-gamified-wellness.md",
+      "blog/2025-11-24-feature-spotlight-pacing-partner.md",
+      "blog/2025-11-23-feature-spotlight-dbt-skill-matcher.md",
+      "blog/2025-11-22-feature-spotlight-adaptive-meditation.md",
+      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2025-11-20-feature-spotlight-symptom-pain-tracker.md",
+      "blog/2025-11-19-feature-spotlight-mood-tracker.md",
+      "blog/2025-11-18-feature-spotlight-accessible-document-generation.md",
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-11-12-feature-spotlight-resource-directory.md",
+      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "spotlight:": [
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
+      "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2026-03-28-feature-spotlight-wellness-hub.md",
+      "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
+      "blog/2026-03-24-feature-spotlight-indigenous-language-support.md",
+      "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
+      "blog/2026-03-20-feature-spotlight-evidence-locker.md",
+      "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
+      "blog/2026-03-16-feature-spotlight-disability-wizard.md",
+      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2026-01-23-feature-spotlight-government-navigator.md",
+      "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
+      "blog/2026-01-21-feature-spotlight-medication-tracker.md",
+      "blog/2026-01-20-feature-spotlight-benefits-tracker.md",
+      "blog/2026-01-19-feature-spotlight-campaign-templates.md",
+      "blog/2026-01-18-feature-spotlight-virtual-meetups.md",
+      "blog/2026-01-17-feature-spotlight-discussion-forums.md",
+      "blog/2026-01-16-feature-spotlight-peer-support-matching.md",
+      "blog/2026-01-15-feature-spotlight-ai-translator-accessibility-terminology.md",
+      "blog/2026-01-14-feature-spotlight-accountability-tracker.md",
+      "blog/2026-01-13-feature-spotlight-ai-case-interpreter.md",
+      "blog/2026-01-12-feature-spotlight-policy-explainer-policy-made-simple.md",
+      "blog/2026-01-11-feature-spotlight-lawyer-finder.md",
+      "blog/2026-01-10-feature-spotlight-reflections-calendar.md",
+      "blog/2026-01-09-feature-spotlight-self-care-library.md",
+      "blog/2026-01-08-feature-spotlight-grief-support.md",
+      "blog/2026-01-07-feature-spotlight-resilience-points-gamified-wellness.md",
+      "blog/2026-01-06-feature-spotlight-pacing-partner.md",
+      "blog/2026-01-05-feature-spotlight-dbt-skill-matcher.md",
+      "blog/2026-01-04-feature-spotlight-adaptive-meditation.md",
+      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2026-01-02-feature-spotlight-symptom-pain-tracker.md",
+      "blog/2026-01-01-feature-spotlight-mood-tracker.md",
+      "blog/2025-12-31-feature-spotlight-accessible-document-generation.md",
+      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-12-29-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-12-25-feature-spotlight-resource-directory.md",
+      "blog/2025-12-24-feature-spotlight-benefits-navigator.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-12-21-feature-spotlight-wellness-hub.md",
+      "blog/2025-12-20-feature-spotlight-campaign-coordination.md",
+      "blog/2025-12-19-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-12-18-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-12-17-feature-spotlight-evidence-locker.md",
+      "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
+      "blog/2025-12-15-feature-spotlight-disability-wizard.md",
+      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-12-feature-spotlight-government-navigator.md",
+      "blog/2025-12-11-feature-spotlight-deadlines-reminders.md",
+      "blog/2025-12-10-feature-spotlight-medication-tracker.md",
+      "blog/2025-12-09-feature-spotlight-benefits-tracker.md",
+      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-07-feature-spotlight-production-release.md",
+      "blog/2025-12-07-feature-spotlight-campaign-templates.md",
+      "blog/2025-12-06-feature-spotlight-virtual-meetups.md",
+      "blog/2025-12-05-feature-spotlight-discussion-forums.md",
+      "blog/2025-12-04-feature-spotlight-peer-support-matching.md",
+      "blog/2025-12-03-feature-spotlight-ai-translator-accessibility-terminology.md",
+      "blog/2025-12-02-feature-spotlight-accountability-tracker.md",
+      "blog/2025-12-01-feature-spotlight-ai-case-interpreter.md",
+      "blog/2025-11-30-feature-spotlight-policy-explainer-policy-made-simple.md",
+      "blog/2025-11-29-feature-spotlight-lawyer-finder.md",
+      "blog/2025-11-28-feature-spotlight-reflections-calendar.md",
+      "blog/2025-11-27-feature-spotlight-self-care-library.md",
+      "blog/2025-11-26-feature-spotlight-grief-support.md",
+      "blog/2025-11-25-feature-spotlight-resilience-points-gamified-wellness.md",
+      "blog/2025-11-24-feature-spotlight-pacing-partner.md",
+      "blog/2025-11-23-feature-spotlight-dbt-skill-matcher.md",
+      "blog/2025-11-22-feature-spotlight-adaptive-meditation.md",
+      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2025-11-20-feature-spotlight-symptom-pain-tracker.md",
+      "blog/2025-11-19-feature-spotlight-mood-tracker.md",
+      "blog/2025-11-18-feature-spotlight-accessible-document-generation.md",
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-11-12-feature-spotlight-resource-directory.md",
+      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
+    ],
+    "motor": [
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md"
+    ],
+    "accessibility": [
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "whatsnew/2025-10-27-major-performance-accessibility-upgrade.md",
+      "blog/2025-10-25-groundbreaking-website-accessibility-features.md",
+      "whatsnew/2025-10-05-languages-a11y-ga.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "features": [
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
+    ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"
     ],
@@ -8290,6 +8476,42 @@
     "readme.md": [
       "curation/README.md"
     ],
+    "the": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md",
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
+      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md",
+      "blog/2025-10-03-welcome-to-3mpowr.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "flywheels": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "of": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "change:": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "collective": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "action": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "compounds": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "over": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "time": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
     "3mpwrapp": [
       "blog/2026-03-31-3mpwrapp-safe-from-axios-supply-chain-attack.md",
       "blog/2026-03-31-axios-supply-chain-attack-3mpwrapp-safe.md",
@@ -8297,7 +8519,6 @@
       "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
       "blog/2026-03-23-weekly-update-week-13.md",
       "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
       "blog/2026-03-16-weekly-update-week-12.md",
       "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
       "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
@@ -8340,13 +8561,11 @@
     "dev": [
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
       "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
       "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "diary:": [
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "bank-level": [
@@ -8357,7 +8576,6 @@
     ],
     "for": [
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
       "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
       "blog/2025-10-24-feature-spotlight-evidence-locker.md",
       "whatsnew/2025-10-03-accessibility-settings-consent.md"
@@ -8368,8 +8586,6 @@
     ],
     "disability": [
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md",
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md",
       "blog/2026-03-16-feature-spotlight-disability-wizard.md",
       "blog/2025-12-15-feature-spotlight-disability-wizard.md",
       "blog/2025-11-01-feature-spotlight-disability-wizard.md",
@@ -8379,20 +8595,8 @@
     "app:": [
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md"
     ],
-    "the": [
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
-      "whatsnew/2025-10-06-curated-banner-and-curator-expansion.md",
-      "blog/2025-10-03-welcome-to-3mpowr.md",
-      "whatsnew/2025-10-03-accessibility-settings-consent.md"
-    ],
     "why": [
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md",
       "blog/2025-10-27-app-vs-website-comparison.md"
     ],
@@ -8426,7 +8630,6 @@
       "whatsnew/2025-12-22-week-52-updates.md",
       "blog/2025-12-15-weekly-update-week-51.md",
       "whatsnew/2025-12-15-week-51-updates.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
       "blog/2025-12-08-weekly-update-week-50.md",
       "whatsnew/2025-12-08-week-50-updates.md",
       "blog/2025-12-07-weekly-update-week-50.md",
@@ -8476,7 +8679,6 @@
     "building": [
       "blog/2026-03-30-weekly-update-week-14.md",
       "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
       "blog/2026-03-16-weekly-update-week-12.md"
     ],
     "in": [
@@ -8494,219 +8696,6 @@
     ],
     "2026-03-30": [
       "blog/2026-03-30-daily-curation.md"
-    ],
-    "feature": [
-      "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2026-03-28-feature-spotlight-wellness-hub.md",
-      "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
-      "blog/2026-03-24-feature-spotlight-indigenous-language-support.md",
-      "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
-      "blog/2026-03-20-feature-spotlight-evidence-locker.md",
-      "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
-      "blog/2026-03-16-feature-spotlight-disability-wizard.md",
-      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2026-01-23-feature-spotlight-government-navigator.md",
-      "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
-      "blog/2026-01-21-feature-spotlight-medication-tracker.md",
-      "blog/2026-01-20-feature-spotlight-benefits-tracker.md",
-      "blog/2026-01-19-feature-spotlight-campaign-templates.md",
-      "blog/2026-01-18-feature-spotlight-virtual-meetups.md",
-      "blog/2026-01-17-feature-spotlight-discussion-forums.md",
-      "blog/2026-01-16-feature-spotlight-peer-support-matching.md",
-      "blog/2026-01-15-feature-spotlight-ai-translator-accessibility-terminology.md",
-      "blog/2026-01-14-feature-spotlight-accountability-tracker.md",
-      "blog/2026-01-13-feature-spotlight-ai-case-interpreter.md",
-      "blog/2026-01-12-feature-spotlight-policy-explainer-policy-made-simple.md",
-      "blog/2026-01-11-feature-spotlight-lawyer-finder.md",
-      "blog/2026-01-10-feature-spotlight-reflections-calendar.md",
-      "blog/2026-01-09-feature-spotlight-self-care-library.md",
-      "blog/2026-01-08-feature-spotlight-grief-support.md",
-      "blog/2026-01-07-feature-spotlight-resilience-points-gamified-wellness.md",
-      "blog/2026-01-06-feature-spotlight-pacing-partner.md",
-      "blog/2026-01-05-feature-spotlight-dbt-skill-matcher.md",
-      "blog/2026-01-04-feature-spotlight-adaptive-meditation.md",
-      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2026-01-02-feature-spotlight-symptom-pain-tracker.md",
-      "blog/2026-01-01-feature-spotlight-mood-tracker.md",
-      "blog/2025-12-31-feature-spotlight-accessible-document-generation.md",
-      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-12-29-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-12-25-feature-spotlight-resource-directory.md",
-      "blog/2025-12-24-feature-spotlight-benefits-navigator.md",
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-12-21-feature-spotlight-wellness-hub.md",
-      "blog/2025-12-20-feature-spotlight-campaign-coordination.md",
-      "blog/2025-12-19-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-12-18-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-12-17-feature-spotlight-evidence-locker.md",
-      "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
-      "blog/2025-12-15-feature-spotlight-disability-wizard.md",
-      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-12-feature-spotlight-government-navigator.md",
-      "blog/2025-12-11-feature-spotlight-deadlines-reminders.md",
-      "blog/2025-12-10-feature-spotlight-medication-tracker.md",
-      "blog/2025-12-09-feature-spotlight-benefits-tracker.md",
-      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-07-feature-spotlight-production-release.md",
-      "blog/2025-12-07-feature-spotlight-campaign-templates.md",
-      "blog/2025-12-06-feature-spotlight-virtual-meetups.md",
-      "blog/2025-12-05-feature-spotlight-discussion-forums.md",
-      "blog/2025-12-04-feature-spotlight-peer-support-matching.md",
-      "blog/2025-12-03-feature-spotlight-ai-translator-accessibility-terminology.md",
-      "blog/2025-12-02-feature-spotlight-accountability-tracker.md",
-      "blog/2025-12-01-feature-spotlight-ai-case-interpreter.md",
-      "blog/2025-11-30-feature-spotlight-policy-explainer-policy-made-simple.md",
-      "blog/2025-11-29-feature-spotlight-lawyer-finder.md",
-      "blog/2025-11-28-feature-spotlight-reflections-calendar.md",
-      "blog/2025-11-27-feature-spotlight-self-care-library.md",
-      "blog/2025-11-26-feature-spotlight-grief-support.md",
-      "blog/2025-11-25-feature-spotlight-resilience-points-gamified-wellness.md",
-      "blog/2025-11-24-feature-spotlight-pacing-partner.md",
-      "blog/2025-11-23-feature-spotlight-dbt-skill-matcher.md",
-      "blog/2025-11-22-feature-spotlight-adaptive-meditation.md",
-      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2025-11-20-feature-spotlight-symptom-pain-tracker.md",
-      "blog/2025-11-19-feature-spotlight-mood-tracker.md",
-      "blog/2025-11-18-feature-spotlight-accessible-document-generation.md",
-      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-11-12-feature-spotlight-resource-directory.md",
-      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "spotlight:": [
-      "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2026-03-28-feature-spotlight-wellness-hub.md",
-      "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
-      "blog/2026-03-24-feature-spotlight-indigenous-language-support.md",
-      "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
-      "blog/2026-03-20-feature-spotlight-evidence-locker.md",
-      "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
-      "blog/2026-03-16-feature-spotlight-disability-wizard.md",
-      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2026-01-23-feature-spotlight-government-navigator.md",
-      "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
-      "blog/2026-01-21-feature-spotlight-medication-tracker.md",
-      "blog/2026-01-20-feature-spotlight-benefits-tracker.md",
-      "blog/2026-01-19-feature-spotlight-campaign-templates.md",
-      "blog/2026-01-18-feature-spotlight-virtual-meetups.md",
-      "blog/2026-01-17-feature-spotlight-discussion-forums.md",
-      "blog/2026-01-16-feature-spotlight-peer-support-matching.md",
-      "blog/2026-01-15-feature-spotlight-ai-translator-accessibility-terminology.md",
-      "blog/2026-01-14-feature-spotlight-accountability-tracker.md",
-      "blog/2026-01-13-feature-spotlight-ai-case-interpreter.md",
-      "blog/2026-01-12-feature-spotlight-policy-explainer-policy-made-simple.md",
-      "blog/2026-01-11-feature-spotlight-lawyer-finder.md",
-      "blog/2026-01-10-feature-spotlight-reflections-calendar.md",
-      "blog/2026-01-09-feature-spotlight-self-care-library.md",
-      "blog/2026-01-08-feature-spotlight-grief-support.md",
-      "blog/2026-01-07-feature-spotlight-resilience-points-gamified-wellness.md",
-      "blog/2026-01-06-feature-spotlight-pacing-partner.md",
-      "blog/2026-01-05-feature-spotlight-dbt-skill-matcher.md",
-      "blog/2026-01-04-feature-spotlight-adaptive-meditation.md",
-      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2026-01-02-feature-spotlight-symptom-pain-tracker.md",
-      "blog/2026-01-01-feature-spotlight-mood-tracker.md",
-      "blog/2025-12-31-feature-spotlight-accessible-document-generation.md",
-      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-12-29-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-12-25-feature-spotlight-resource-directory.md",
-      "blog/2025-12-24-feature-spotlight-benefits-navigator.md",
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-12-21-feature-spotlight-wellness-hub.md",
-      "blog/2025-12-20-feature-spotlight-campaign-coordination.md",
-      "blog/2025-12-19-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-12-18-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-12-17-feature-spotlight-evidence-locker.md",
-      "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
-      "blog/2025-12-15-feature-spotlight-disability-wizard.md",
-      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-12-feature-spotlight-government-navigator.md",
-      "blog/2025-12-11-feature-spotlight-deadlines-reminders.md",
-      "blog/2025-12-10-feature-spotlight-medication-tracker.md",
-      "blog/2025-12-09-feature-spotlight-benefits-tracker.md",
-      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-07-feature-spotlight-production-release.md",
-      "blog/2025-12-07-feature-spotlight-campaign-templates.md",
-      "blog/2025-12-06-feature-spotlight-virtual-meetups.md",
-      "blog/2025-12-05-feature-spotlight-discussion-forums.md",
-      "blog/2025-12-04-feature-spotlight-peer-support-matching.md",
-      "blog/2025-12-03-feature-spotlight-ai-translator-accessibility-terminology.md",
-      "blog/2025-12-02-feature-spotlight-accountability-tracker.md",
-      "blog/2025-12-01-feature-spotlight-ai-case-interpreter.md",
-      "blog/2025-11-30-feature-spotlight-policy-explainer-policy-made-simple.md",
-      "blog/2025-11-29-feature-spotlight-lawyer-finder.md",
-      "blog/2025-11-28-feature-spotlight-reflections-calendar.md",
-      "blog/2025-11-27-feature-spotlight-self-care-library.md",
-      "blog/2025-11-26-feature-spotlight-grief-support.md",
-      "blog/2025-11-25-feature-spotlight-resilience-points-gamified-wellness.md",
-      "blog/2025-11-24-feature-spotlight-pacing-partner.md",
-      "blog/2025-11-23-feature-spotlight-dbt-skill-matcher.md",
-      "blog/2025-11-22-feature-spotlight-adaptive-meditation.md",
-      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2025-11-20-feature-spotlight-symptom-pain-tracker.md",
-      "blog/2025-11-19-feature-spotlight-mood-tracker.md",
-      "blog/2025-11-18-feature-spotlight-accessible-document-generation.md",
-      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-11-12-feature-spotlight-resource-directory.md",
-      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md"
     ],
     "dyslexia": [
       "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
@@ -8792,7 +8781,6 @@
     ],
     "your": [
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
       "blog/2025-10-24-feature-spotlight-evidence-locker.md",
       "whatsnew/2025-09-28-foundation-navigation-a11y.md"
     ],
@@ -8870,22 +8858,6 @@
       "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
       "blog/2025-10-27-feature-spotlight-campaign-coordination.md"
     ],
-    "justice": [
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md"
-    ],
-    "vs": [
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md",
-      "blog/2025-10-27-app-vs-website-comparison.md"
-    ],
-    "charity:": [
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md"
-    ],
-    "operating": [
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md"
-    ],
-    "principle": [
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md"
-    ],
     "2026-03-25": [
       "blog/2026-03-25-daily-curation.md"
     ],
@@ -8907,28 +8879,6 @@
     ],
     "2026-03-23": [
       "blog/2026-03-23-daily-curation.md"
-    ],
-    "offline-first:": [
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
-    ],
-    "network": [
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
-    ],
-    "access": [
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
-    ],
-    "should": [
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
-    ],
-    "never": [
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
-    ],
-    "be": [
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
-    ],
-    "required": [
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md"
     ],
     "2026-03-22": [
       "blog/2026-03-22-daily-curation.md"
@@ -8953,28 +8903,6 @@
     ],
     "2026-03-21": [
       "blog/2026-03-21-daily-curation.md"
-    ],
-    "setting": [
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md"
-    ],
-    "up": [
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md"
-    ],
-    "accessibility": [
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md",
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "whatsnew/2025-10-27-major-performance-accessibility-upgrade.md",
-      "blog/2025-10-25-groundbreaking-website-accessibility-features.md",
-      "whatsnew/2025-10-05-languages-a11y-ga.md",
-      "whatsnew/2025-10-03-accessibility-settings-consent.md"
-    ],
-    "needs": [
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
     ],
     "2026-03-20": [
       "blog/2026-03-20-daily-curation.md"
@@ -9014,20 +8942,6 @@
       "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
       "blog/2025-11-02-feature-spotlight-master-letter-generator.md"
     ],
-    "origin": [
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
-    ],
-    "story:": [
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
-    ],
-    "was": [
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
-    ],
-    "built": [
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
-      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
-      "blog/2025-10-27-app-vs-website-comparison.md"
-    ],
     "2026-03-17": [
       "blog/2026-03-17-daily-curation.md"
     ],
@@ -9047,9 +8961,6 @@
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "native:": [
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "over": [
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "everything": [
@@ -9200,7 +9111,6 @@
       "blog/2025-12-29-weekly-update-week-1.md",
       "blog/2025-12-22-weekly-update-week-52.md",
       "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
       "blog/2025-12-08-weekly-update-week-50.md",
       "blog/2025-12-07-weekly-update-week-50.md",
       "blog/2025-12-01-weekly-update-week-49.md",
@@ -9224,7 +9134,6 @@
       "blog/2025-12-29-weekly-update-week-1.md",
       "blog/2025-12-22-weekly-update-week-52.md",
       "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
       "blog/2025-12-08-weekly-update-week-50.md",
       "blog/2025-12-07-weekly-update-week-50.md",
       "blog/2025-12-01-weekly-update-week-49.md",
@@ -9335,6 +9244,10 @@
     ],
     "i": [
       "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md"
+    ],
+    "built": [
+      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
+      "blog/2025-10-27-app-vs-website-comparison.md"
     ],
     "this": [
       "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md"
@@ -9683,7 +9596,6 @@
       "whatsnew/2025-12-22-week-52-updates.md",
       "blog/2025-12-15-weekly-update-week-51.md",
       "whatsnew/2025-12-15-week-51-updates.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
       "blog/2025-12-08-weekly-update-week-50.md",
       "whatsnew/2025-12-08-week-50-updates.md",
       "blog/2025-12-07-weekly-update-week-50.md",
@@ -9761,18 +9673,6 @@
     "2025-12-24": [
       "blog/2025-12-24-daily-curation.md"
     ],
-    "motor": [
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md"
-    ],
-    "features": [
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
-    ],
     "2025-12-23": [
       "blog/2025-12-23-daily-curation.md"
     ],
@@ -9842,9 +9742,6 @@
     ],
     "milestone!": [
       "blog/2025-12-12-demo-success-usa-lite-launch.md"
-    ],
-    "ã¢â‚¬â€": [
-      "blog/2025-12-12-weekly-update-week-51.md"
     ],
     "2025-12-12": [
       "blog/2025-12-12-daily-curation.md"
@@ -10077,6 +9974,9 @@
     "🛡️": [
       "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md"
     ],
+    "vs": [
+      "blog/2025-10-27-app-vs-website-comparison.md"
+    ],
     "website:": [
       "blog/2025-10-27-app-vs-website-comparison.md"
     ],
@@ -10199,6 +10099,12 @@
       "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
     ],
     "exactly": [
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
+    ],
+    "needs": [
+      "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
+    ],
+    "be": [
       "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
     ],
     "said": [
@@ -10571,84 +10477,8 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
     ],
-    "dev-diary": [
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "development": [
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "behind-the-scenes": [
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "weekly": [
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md",
-      "blog/2025-10-17-weekly-recap.md"
-    ],
-    "updates": [
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md"
-    ],
-    "transparency": [
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md"
-    ],
     "features": [
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
       "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
       "blog/2026-03-28-feature-spotlight-wellness-hub.md",
       "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
@@ -10753,6 +10583,7 @@
       "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
     ],
     "spotlight": [
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
       "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
       "blog/2026-03-28-feature-spotlight-wellness-hub.md",
       "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
@@ -10857,9 +10688,9 @@
       "blog/2025-10-26-feature-spotlight-indigenous-language-support.md"
     ],
     "accessibility": [
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
       "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
       "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
       "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
@@ -10873,17 +10704,101 @@
       "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
       "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
     ],
+    "flywheels": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "pattern-detection": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "evidence-sharing": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "disabled-workers": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "mutual-aid": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "dev-diary": [
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "development": [
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "behind-the-scenes": [
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "weekly": [
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md",
+      "blog/2025-10-17-weekly-recap.md"
+    ],
+    "updates": [
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
+    "transparency": [
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md"
+    ],
     "tutorial": [
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
     ],
     "how-to": [
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
     ],
     "core-feature": [
@@ -10913,19 +10828,6 @@
       "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
       "blog/2025-10-27-feature-spotlight-campaign-coordination.md"
     ],
-    "community": [
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md",
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
-    ],
-    "philosophy": [
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md",
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md",
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
-    ],
-    "mission": [
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md",
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
-    ],
     "phase-2:-cultural": [
       "blog/2026-03-24-feature-spotlight-indigenous-language-support.md",
       "blog/2025-12-19-feature-spotlight-indigenous-language-support.md",
@@ -10941,9 +10843,6 @@
       "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
       "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
       "blog/2025-11-02-feature-spotlight-master-letter-generator.md"
-    ],
-    "our-story": [
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md"
     ],
     "phase-2:-personalization": [
       "blog/2026-03-16-feature-spotlight-disability-wizard.md",
@@ -11044,16 +10943,13 @@
       "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md"
     ],
     "demo": [
-      "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "blog/2025-12-12-weekly-update-week-51.md"
+      "blog/2025-12-12-demo-success-usa-lite-launch.md"
     ],
     "usa-lite": [
-      "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "blog/2025-12-12-weekly-update-week-51.md"
+      "blog/2025-12-12-demo-success-usa-lite-launch.md"
     ],
     "milestone": [
       "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
       "blog/2025-12-07-feature-spotlight-production-release.md",
       "blog/2025-12-07-weekly-update-week-50.md"
     ],
@@ -11449,48 +11345,8 @@
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
-    "development": [
-      "blog/2026-03-31-3mpwrapp-safe-from-axios-supply-chain-attack.md",
-      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md"
-    ],
-    "announcement": [
-      "blog/2026-03-31-axios-supply-chain-attack-3mpwrapp-safe.md"
-    ],
-    "dev-diary": [
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-23-dev-diary-building-offline-first-network-access-should-never-be-required.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "updates": [
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-12-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md"
-    ],
     "features": [
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
       "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
       "blog/2026-03-28-feature-spotlight-wellness-hub.md",
       "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
@@ -11601,15 +11457,58 @@
       "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2025-10-20-3mpwrapp-feature.md"
     ],
+    "innovation": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md",
+      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
+    ],
+    "collective-action": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "core-features": [
+      "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
+    ],
+    "development": [
+      "blog/2026-03-31-3mpwrapp-safe-from-axios-supply-chain-attack.md",
+      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md"
+    ],
+    "announcement": [
+      "blog/2026-03-31-axios-supply-chain-attack-3mpwrapp-safe.md"
+    ],
+    "dev-diary": [
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "updates": [
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
     "tutorials": [
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-21-tutorial-setting-up-accessibility-for-your-needs.md",
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
-    ],
-    "community": [
-      "blog/2026-03-25-community-disability-justice-vs-disability-charity-our-operating-principle.md",
-      "blog/2026-03-17-community-the-origin-story-why-3mpwrapp-was-built.md",
-      "blog/2025-10-17-weekly-recap.md"
     ],
     "founder-story": [
       "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md"
@@ -11653,14 +11552,14 @@
     "energy-management": [
       "blog/2025-10-26-spoon-theory-meets-web-design.md"
     ],
-    "innovation": [
-      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
-    ],
     "website-features": [
       "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
     ],
     "advocacy": [
       "blog/2025-10-23-feature-spotlight-master-letter-generator.md"
+    ],
+    "community": [
+      "blog/2025-10-17-weekly-recap.md"
     ]
   }
 }

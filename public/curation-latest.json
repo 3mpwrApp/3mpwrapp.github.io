@@ -1,7 +1,7 @@
 {
   "date": "2026-04-01",
-  "timestamp": "2026-04-01T10:07:39.680Z",
-  "count": 19,
+  "timestamp": "2026-04-01T21:51:42.774Z",
+  "count": 4,
   "minScore": 3.5,
   "items": [
     {
@@ -9,133 +9,28 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-04-01T10:07:39.676Z"
+      "pubDate": "2026-04-01T21:51:42.772Z"
     },
     {
-      "title": "Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73138",
-      "description": "",
-      "score": 17.4,
-      "pubDate": "Thu, 19 Mar 2026 10:10:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Launches Ste. Anne Hospital Working Group to Strengthen Care in Southern Health Region",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73143",
-      "description": "",
-      "score": 15,
-      "pubDate": "Fri, 20 Mar 2026 13:42:00 CDT"
-    },
-    {
-      "title": "Good Jobs, Lower Costs, Better Health Care: Manitoba Budget 2026",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73198",
-      "description": "",
-      "score": 12.7,
-      "pubDate": "Tue, 24 Mar 2026 15:02:00 CDT"
-    },
-    {
-      "title": "Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73139",
+      "title": "Manitoba Government Announces Brandon Critical Care Centre to Open this Spring",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73244",
       "description": "",
       "score": 10.5,
-      "pubDate": "Thu, 19 Mar 2026 12:00:00 CDT"
+      "pubDate": "Wed, 01 Apr 2026 13:00:00 CDT"
     },
     {
-      "title": "Declaring Gender-Based Violence an Epidemic Was Not Enough",
-      "link": "https://thetyee.ca/Opinion/2026/03/27/Declaring-Gender-Based-Violence-Epidemic-Not-Enough/",
-      "description": "The needs of survivors seeking services are skyrocketing in BC. New research shows frontline workers need better support.",
-      "score": 8.1,
-      "pubDate": "Fri, 27 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "Manitoba Government Announces Budget 2026",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73197",
+      "title": "Manitoba Anglers' Guide 2026 Now Available",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73239",
       "description": "",
-      "score": 7.5,
-      "pubDate": "Tue, 24 Mar 2026 14:51:00 CDT"
+      "score": 5.5,
+      "pubDate": "Wed, 01 Apr 2026 09:00:00 CDT"
     },
     {
-      "title": "Manitoba Government Mourns Passing of MLA Amanda Lathlin",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73157",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Mon, 23 Mar 2026 12:55:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Celebrates International Day of the Francophonie and Announces Next Steps Toward a Truly Bilingual Province",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73142",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Fri, 20 Mar 2026 11:48:00 CDT"
-    },
-    {
-      "title": "Union Pressures Thomson Reuters to Rethink Selling Tools to ICE",
-      "link": "https://thetyee.ca/News/2026/03/30/Union-Pressures-Thomson-Reuters-Tools-ICE/",
-      "description": "BCGEU owns shares in the Canadian media firm that contracts with the US deportations agency.",
-      "score": 4.6,
-      "pubDate": "Mon, 30 Mar 2026 07:20:00 +0000"
-    },
-    {
-      "title": "The Human Cost of Failing to Name COVID ‘Airborne’",
-      "link": "https://thetyee.ca/Analysis/2026/03/27/Human-Cost-Failing-Name-COVID-Airborne/",
-      "description": "Safety laws are being sidestepped. One doctor’s nightmare shows how health-care workers pay the price.",
-      "score": 8.2,
-      "pubDate": "Fri, 27 Mar 2026 07:30:00 +0000"
-    },
-    {
-      "title": "Among the Separatists",
-      "link": "https://thetyee.ca/Analysis/2026/04/01/Among_Separatists/",
-      "description": "I wanted to learn the true target of their angry dreams. What I heard made me tremble for the Alberta I love.",
-      "score": 3.9000000000000004,
-      "pubDate": "Wed, 01 Apr 2026 07:40:00 +0000"
-    },
-    {
-      "title": "BC’s Free Contraceptives Program Has Been Hugely Successful",
-      "link": "https://thetyee.ca/News/2026/04/01/BC-Free-Contraceptives-Program-Successful/",
-      "description": "More people are using IUDs and hormonal implants now that cost isn’t an issue.",
-      "score": 4.6,
-      "pubDate": "Wed, 01 Apr 2026 07:20:00 +0000"
-    },
-    {
-      "title": "Measles Update #93",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73199",
+      "title": "Measles Update #96",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73245",
       "description": "",
       "score": 4.5,
-      "pubDate": "Tue, 24 Mar 2026 15:25:00 CDT"
-    },
-    {
-      "title": "Measles Update #92",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73177",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 23 Mar 2026 15:37:00 CDT"
-    },
-    {
-      "title": "Measles Update #91",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73145",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 15:14:00 CDT"
-    },
-    {
-      "title": "Manitobans Encouraged to Start Planning for Camping Season",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73141",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Fri, 20 Mar 2026 09:54:00 CDT"
-    },
-    {
-      "title": "Measles Update #90",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73140",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 19 Mar 2026 14:38:00 CDT"
-    },
-    {
-      "title": "Measles Update #87",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73118",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 16 Mar 2026 16:01:00 CDT"
+      "pubDate": "Wed, 01 Apr 2026 14:18:00 CDT"
     }
   ]
 }
