@@ -1,9 +1,9 @@
 {
-  "feature": "Bank-Level Encryption for a Disability App: The Why",
-  "contentType": "devDiary",
-  "date": "2026-03-31",
-  "shortPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: Bank-Level Encryption for a Disability App: The Why\n\nThe reasoning behind implementing AES-256-GCM encryption in 3mpwrApp and what it took to verify it works correctly\n\n💡 Learn more: https://3mpwrapp.pages.dev/dev-diary/2026/03/31/dev-diary-bank-level-encryption-for-a-disability-app-the-why/\n\n#3mpwrApp #DisabilityRights #Accessibility",
-  "longPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: Bank-Level Encryption for a Disability App: The Why\n\nThe reasoning behind implementing AES-256-GCM encryption in 3mpwrApp and what it took to verify it works correctly\n\nðŸ”‘ Key points:\nâ€¢ AES-256-GCM is the same encryption standard used in financial services\nâ€¢ All Evidence Locker entries and sensitive data encrypted at rest on-device\nâ€¢ 721 security tests verify encryption is correctly implemented throughout\n\nCheck it out â†’ https://3mpwrapp.pages.dev/dev-diary/2026/03/31/dev-diary-bank-level-encryption-for-a-disability-app-the-why/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #DisabilityPride",
-  "url": "https://3mpwrapp.pages.dev/dev-diary/2026/03/31/dev-diary-bank-level-encryption-for-a-disability-app-the-why/",
-  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md"
+  "feature": "Motor Accessibility Features",
+  "contentType": "feature",
+  "date": "2026-04-01",
+  "shortPost": "Screen readers love this app. Here's why →\n\nâœ¨ Feature Spotlight: Motor Accessibility Features\n\nDwell-click, large touch targets, tremor compensation, and switch navigation support\n\n🔗 Available now: https://3mpwrapp.pages.dev/features/2026/04/01/feature-spotlight-motor-accessibility-features/\n\n#3mpwrApp #DisabilityRights #Accessibility",
+  "longPost": "Screen readers love this app. Here's why →\n\nâœ¨ Feature Spotlight: Motor Accessibility Features\n\nDwell-click, large touch targets, tremor compensation, and switch navigation support\n\nðŸ”‘ Key points:\nâ€¢ Dwell-click: activate buttons by hovering\nâ€¢ Adjustable dwell time (0.5-3.0 seconds)\nâ€¢ Extra-large touch targets for easier tapping\n\nCustomize your experience â†’ https://3mpwrapp.pages.dev/features/2026/04/01/feature-spotlight-motor-accessibility-features/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #NeurodiversityCelebration",
+  "url": "https://3mpwrapp.pages.dev/features/2026/04/01/feature-spotlight-motor-accessibility-features/",
+  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-04-01-feature-spotlight-motor-accessibility-features.md"
 }
