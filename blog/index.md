@@ -115,31 +115,32 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 <p class="section-description">Announcements, stories, and updates from the 3mpwr community. Learn about new features, community achievements, and important information directly from our team.</p>
 
-{% assign highlights_posts = site.posts | where_exp: 'p', "p.tags contains 'highlights'" %}
-{% assign weekly_posts = site.posts | where_exp: 'p', "p.tags contains 'weekly'" %}
-{% assign features_posts = site.posts | where_exp: 'p', "p.tags contains 'features'" %}
-{% assign spotlight_posts = site.posts | where_exp: 'p', "p.tags contains 'spotlight'" %}
-{% assign special_posts = highlights_posts | concat: weekly_posts | concat: features_posts | concat: spotlight_posts %}
-{% assign regular_posts = special_posts | size %}
-{% assign all_posts_count = site.posts | size %}
-{% if all_posts_count > regular_posts %}
 <div class="posts-list">
-  {% for post in site.posts %}
+  {% assign community_post_count = 0 %}
+  {% for post in site.posts limit:50 %}
     {% unless post.tags contains 'highlights' or post.tags contains 'weekly' or post.tags contains 'features' or post.tags contains 'spotlight' %}
-    <article class="post-item">
-      <h3 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p class="post-item__date">📅 {{ post.date | date: "%B %-d, %Y" }}</p>
-      {% if post.excerpt %}
-      <p class="post-item__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      {% endif %}
-      <a href="{{ post.url | relative_url }}" class="post-item__link">Read more →</a>
-    </article>
+      {% assign community_post_count = community_post_count | plus: 1 %}
+      <article class="post-item">
+        <h3 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-item__date">📅 {{ post.date | date: "%B %-d, %Y" }}</p>
+        {% if post.excerpt %}
+        <p class="post-item__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+        {% if post.categories and post.categories.size > 0 %}
+        <p class="post-item__categories">
+          {% for category in post.categories limit:3 %}
+            <span class="category-badge">{{ category }}</span>
+          {% endfor %}
+        </p>
+        {% endif %}
+        <a href="{{ post.url | relative_url }}" class="post-item__link">Read more →</a>
+      </article>
     {% endunless %}
   {% endfor %}
+  {% if community_post_count == 0 %}
+  <p class="empty-state">Community blog posts coming soon!</p>
+  {% endif %}
 </div>
-{% else %}
-<p class="empty-state">Community blog posts coming soon!</p>
-{% endif %}
 
 ---
 
@@ -315,6 +316,25 @@ body {
 }
 
 .post-item__excerpt  { line-height: 1.6; margin: 1rem 0; color: var(--text-secondary, #404040); }
+
+.post-item__categories {
+  margin: 0.75rem 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: color-mix(in srgb, var(--text-link, #003d7a) 15%, transparent);
+  color: var(--text-link, #003d7a);
+  border: 1px solid var(--text-link, #003d7a);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
 
 .post-item__link {
   display: inline-block;
