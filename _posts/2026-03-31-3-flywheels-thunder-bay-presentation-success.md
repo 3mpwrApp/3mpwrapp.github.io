@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "3 Flywheels Framework Resonates with Thunder Bay Injured Workers"
-date: 2026-04-01 09:00:00 -0400
+date: 2026-03-31 18:00:00 -0400
 categories: [partnerships, innovation, collective-action]
 tags: [TBDIWSG, flywheels, Thunder-Bay, pattern-detection, advocacy]
 author: 3mpwrApp Team
