@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-02T12:46:58.116Z",
+  "lastUpdated": "2026-04-02T18:41:29.840Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14500,
+      "totalPosts": 14525,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T12:46:34.678Z"
+      "lastSeen": "2026-04-02T18:41:18.943Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14436,
+      "totalPosts": 14461,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T12:46:49.387Z"
+      "lastSeen": "2026-04-02T18:41:21.311Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14296,
+      "totalPosts": 14321,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T12:46:52.303Z"
+      "lastSeen": "2026-04-02T18:41:23.424Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14530,
+      "totalPosts": 14555,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T12:46:54.632Z"
+      "lastSeen": "2026-04-02T18:41:26.094Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14476,
+      "totalPosts": 14500,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T12:46:57.113Z"
+      "lastSeen": "2026-04-02T18:41:28.836Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "This is the #overlay company that fabricated clients, testimonials, and ratings:\nadrianroselli.com/2025/07/acce...\n\nIts failure to do alt text correctly for this Bluesky post should tell you all you need to know. \n\n#a11y #accessibility #WCAG",
-      "author": "aardrian.bsky.social",
-      "engagement": 19,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
-      "author": "randompammit.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "I built a Quarto extension that adds accessibility features to Reveal.js presentations: keyboard nav, screen reader support, dyslexia-friendly fonts, high contrast, slide change visual/audio cue and more.\n\nFeedback more than welcome.\n\ngithub.com/mcanouil/qua...\n\n#Quarto #RevealJS #Accessibility",
       "author": "mickael.canouil.fr",
@@ -338,6 +314,30 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 65,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Happy #KidLitArtPostcard Day for April! I’m Lindsay Hornsby, a cartoonist and #a11y dev who loves making #KidLit comics and silly illustrations! I’m currently available for upcoming projects!\n\nPortfolio: www.lindsayhornsby.com \nCurrently #SeekingRepresentation, let’s chat! 🎉",
+      "author": "fizzlebit.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 37
+      "count": 38
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 32
     },
     {
       "keyword": "disabilityjustice",
@@ -371,7 +371,7 @@
     },
     {
       "keyword": "nokings",
-      "count": 15
+      "count": 14
     },
     {
       "keyword": "nokings3",
@@ -410,11 +410,11 @@
       "count": 8
     },
     {
-      "keyword": "disability",
+      "keyword": "world autism",
       "count": 7
     },
     {
-      "keyword": "accessibility a11y",
+      "keyword": "ada",
       "count": 7
     },
     {
