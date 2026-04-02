@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-04-02
 
-Curated 23 items from disability, accessibility, and social policy sources.
+Curated 5 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -21,113 +21,23 @@ Visit for the latest disability rights news, advocacy updates, and community sto
 
 ## Additional Stories
 
-### 1. Manitoba Government Supports Harvest Manitoba's First Steps Infant Care Program
+### 1. Refugees Deserve Health Care. They Shouldn’t Have to Pay
+New co-payments under the Interim Federal Health Program is poor health policy, doctors say.
+[Source](https://thetyee.ca/Opinion/2026/04/02/Refugees-Deserve-Health-Care-Interim-Federal-Health-Program/)
+**Score:** 16.00
+
+### 2. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba
 Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73138)
-**Score:** 18.00
+[Source](https://news.gov.mb.ca/news/index.html?item=73243)
+**Score:** 10.70
 
-### 2. Manitoba Government Launches Ste. Anne Hospital Working Group to Strengthen Care in Southern Health Region
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73143)
-**Score:** 15.00
+### 3. Want to Save Journalism? Change Who Owns It
+Here are proven ways to restore trust in news providers. Billionaires need not apply.
+[Source](https://thetyee.ca/Analysis/2026/04/02/Save-News-Change-Who-Owns-Journalism/)
+**Score:** 6.50
 
-### 3. Manitoba Government Makes Groceries More Affordable
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73202)
-**Score:** 9.50
-
-### 4. Manitoba Government Supporting Interprovincial Trade Missions
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73200)
-**Score:** 10.50
-
-### 5. Good Jobs, Lower Costs, Better Health Care: Manitoba Budget 2026
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73198)
-**Score:** 13.05
-
-### 6. Manitoba Government to Build Personal Care Home in Winnipeg's Bridgwater Neighbourhood
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73139)
-**Score:** 10.50
-
-### 7. Time to Kill the Speculation and Vacancy Tax, Say BC Conservatives
-A Tyee report revealed the government is failing to collect much of the money it claims to be owed.
-[Source](https://thetyee.ca/News/2026/04/02/Time-Kill-Speculation-Vacancy-Tax-BC-Conservatives/)
-**Score:** 6.00
-
-### 8. Manitoba Government Hosts Mino'Ayaawag Ikwewag Indigenous Parenting Gathering to Share and Celebrate Parenting Practices
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73201)
-**Score:** 7.50
-
-### 9. Manitoba Government Announces Budget 2026
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73197)
-**Score:** 7.50
-
-### 10. Manitoba Government Mourns Passing of MLA Amanda Lathlin
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73157)
-**Score:** 7.50
-
-### 11. Manitoba Government Celebrates International Day of the Francophonie and Announces Next Steps Toward a Truly Bilingual Province
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73142)
-**Score:** 7.50
-
-### 12. Autism Is No Tragedy
-When autistic people are understood and supported, we have tremendous potential. Here are reasons to be hopeful for the next generation.
-[Source](https://thetyee.ca/Opinion/2026/04/02/Autism-Is-No-Tragedy/)
-**Score:** 5.00
-
-### 13. Vancouver Keeps New Supportive Housing on Pause
-A motion from Coun. Rebecca Bligh was finally heard in council, after the mayor’s false allegations delayed it.
-[Source](https://thetyee.ca/News/2026/04/02/Vancouver-Keeps-New-Supportive-Housing-Pause/)
-**Score:** 5.00
-
-### 14. Union Pressures Thomson Reuters to Rethink Selling Tools to ICE
-BCGEU owns shares in the Canadian media firm that contracts with the US deportations agency.
-[Source](https://thetyee.ca/News/2026/03/30/Union-Pressures-Thomson-Reuters-Tools-ICE/)
-**Score:** 4.60
-
-### 15. Among the Separatists
-I wanted to learn the true target of their angry dreams. What I heard made me tremble for the Alberta I love.
-[Source](https://thetyee.ca/Analysis/2026/04/01/Among_Separatists/)
-**Score:** 4.50
-
-### 16. BC’s Free Contraceptives Program Has Been Hugely Successful
-More people are using IUDs and hormonal implants now that cost isn’t an issue.
-[Source](https://thetyee.ca/News/2026/04/01/BC-Free-Contraceptives-Program-Successful/)
-**Score:** 5.55
-
-### 17. Measles Update #93
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73199)
-**Score:** 4.50
-
-### 18. Measles Update #92
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73177)
-**Score:** 4.50
-
-### 19. Measles Update #91
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73145)
-**Score:** 4.50
-
-### 20. Manitobans Encouraged to Start Planning for Camping Season
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73141)
-**Score:** 4.50
-
-### 21. Measles Update #90
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73140)
-**Score:** 4.50
-
-### 22. Measles Update #89
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73137)
+### 4. The goal of Alberta's Bill 25 is entrenching the UCP’s ideology in classrooms
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/politics/canadian-politics/the-goal-of-albertas-bill-25-is-entrenching-the-ucps-ideology-in-classrooms/)
 **Score:** 4.50
 
