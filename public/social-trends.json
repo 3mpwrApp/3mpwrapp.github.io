@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-02T06:59:49.131Z",
+  "lastUpdated": "2026-04-02T12:46:58.116Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14475,
+      "totalPosts": 14500,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T06:59:39.026Z"
+      "lastSeen": "2026-04-02T12:46:34.678Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14411,
+      "totalPosts": 14436,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T06:59:41.024Z"
+      "lastSeen": "2026-04-02T12:46:49.387Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14271,
+      "totalPosts": 14296,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T06:59:43.498Z"
+      "lastSeen": "2026-04-02T12:46:52.303Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14505,
+      "totalPosts": 14530,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T06:59:45.944Z"
+      "lastSeen": "2026-04-02T12:46:54.632Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14452,
+      "totalPosts": 14476,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-02T06:59:48.127Z"
+      "lastSeen": "2026-04-02T12:46:57.113Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
-      "author": "randompammit.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Excellent read. Sad having to smuggle accessibility in through stealthy means but aligning to a business goal makes it easier to get permission:\npiccalil.li/blog/applyin... #a11y",
-      "author": "gerireid.com",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
     {
       "text": "This is the #overlay company that fabricated clients, testimonials, and ratings:\nadrianroselli.com/2025/07/acce...\n\nIts failure to do alt text correctly for this Bluesky post should tell you all you need to know. \n\n#a11y #accessibility #WCAG",
       "author": "aardrian.bsky.social",
@@ -338,40 +314,64 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 29,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
+      "author": "randompammit.bsky.social",
+      "engagement": 13,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 43
+      "count": 42
     },
     {
       "keyword": "accessibility",
       "count": 37
     },
     {
+      "keyword": "a11y",
+      "count": 27
+    },
+    {
       "keyword": "disabilityjustice",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "cripthevote",
       "count": 24
     },
     {
-      "keyword": "a11y",
-      "count": 23
-    },
-    {
       "keyword": "altcitizen",
-      "count": 18
-    },
-    {
-      "keyword": "cripthevote disabilityrights",
       "count": 17
     },
     {
-      "keyword": "nokings",
+      "keyword": "cripthevote disabilityrights",
       "count": 16
+    },
+    {
+      "keyword": "nokings",
+      "count": 15
     },
     {
       "keyword": "nokings3",
@@ -391,35 +391,35 @@
     },
     {
       "keyword": "disabilitysky",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "cripminds",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "accessibility disabilitysky",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "disabilitysky cripminds",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "cripminds disabilityjustice",
+      "count": 8
+    },
+    {
+      "keyword": "disability",
+      "count": 7
+    },
+    {
+      "keyword": "accessibility a11y",
       "count": 7
     },
     {
       "keyword": "refusefascism",
       "count": 7
-    },
-    {
-      "keyword": "auspol",
-      "count": 6
-    },
-    {
-      "keyword": "thrivingkids",
-      "count": 6
     }
   ]
 }
