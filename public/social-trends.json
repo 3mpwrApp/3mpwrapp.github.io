@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-03T06:57:02.860Z",
+  "lastUpdated": "2026-04-03T12:39:11.621Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14575,
+      "totalPosts": 14600,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T06:56:53.933Z"
+      "lastSeen": "2026-04-03T12:39:00.772Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14511,
+      "totalPosts": 14536,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T06:56:56.027Z"
+      "lastSeen": "2026-04-03T12:39:03.393Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14371,
+      "totalPosts": 14396,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T06:56:58.022Z"
+      "lastSeen": "2026-04-03T12:39:06.015Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14605,
+      "totalPosts": 14630,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T06:56:59.950Z"
+      "lastSeen": "2026-04-03T12:39:08.457Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14548,
+      "totalPosts": 14572,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T06:57:01.856Z"
+      "lastSeen": "2026-04-03T12:39:10.617Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Please please please play out winner of the Blind Judges pick from Games for blind gamers 5! They made the most intuitive navigation system ever for an audio game and I want everyone to steal it! I am so proud of the community making it! \n\npipejakob.itch.io/valencia\n\n#A11y #GameDev",
-      "author": "ericbomb.bsky.social",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Excellent read. Sad having to smuggle accessibility in through stealthy means but aligning to a business goal makes it easier to get permission:\npiccalil.li/blog/applyin... #a11y",
-      "author": "gerireid.com",
-      "engagement": 22,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "This is the #overlay company that fabricated clients, testimonials, and ratings:\nadrianroselli.com/2025/07/acce...\n\nIts failure to do alt text correctly for this Bluesky post should tell you all you need to know. \n\n#a11y #accessibility #WCAG",
-      "author": "aardrian.bsky.social",
-      "engagement": 19,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
-      "author": "randompammit.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I'm incredibly happy to announce that something me and my (former) team worked on for the past two years is now available: An archive of Open Educational Resources focusing on games and #accessibility!\n\nwww.twillo.de/edu-sharing/... \n\nwww.youtube.com/@InclusiveGa...\n\n#GameDevelopment #OER",
-      "author": "beurkeek.bsky.social",
-      "engagement": 32,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "We're making sure everyone is comfy playing our game 😊 \nWhat do you think, did we miss some use cases? 🎮\n\n✨ Wishlist Knick Knack Stack on Steam! ✨\nstore.steampowered.com/app/4456070/... \n\n#cozy #cozygames #indiegame #wholesome #gamedev #steam #steamgame #puzzlegame #knickknackstack #accessibility",
-      "author": "softreveriestudio.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "@support.bsky.team \n\nTyping ALT text for users who need large text settings is still impossible. The screen won’t scroll down. The people who need ALT text and encourage others to use it should have access to it.\n\n#accessibility",
       "author": "kentparkskeet.bsky.social",
@@ -338,6 +290,54 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 99,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Many people with far greater knowledge than I possess have discussed accessibility overlays, but I think the more voices and inputs in the public corpus the better.\n\nAccessibility overlays are harmful and make things worse, not better. Avoid them.\n\nvale.rocks/posts/access...\n\n#Accessibility #a11y",
+      "author": "vale.rocks",
+      "engagement": 13,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Thank you so much @arevya.bsky.social for all the kind words and videos about our little event! \n\nCheck out their awesome video all about Games for Blind gamers jam! \n\nwww.tiktok.com/@arevyagamin...\n\n#A11y #Gamedev #Gaming #Accessibility #Gamejam",
+      "author": "ericbomb.bsky.social",
+      "engagement": 15,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Many people with far greater knowledge than I possess have discussed accessibility overlays, but I think the more voices and inputs in the public corpus the better.\n\nAccessibility overlays are harmful and make things worse, not better. Avoid them.\n\nvale.rocks/posts/access...\n\n#Accessibility #a11y",
+      "author": "vale.rocks",
+      "engagement": 13,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Thank you so much @arevya.bsky.social for all the kind words and videos about our little event! \n\nCheck out their awesome video all about Games for Blind gamers jam! \n\nwww.tiktok.com/@arevyagamin...\n\n#A11y #Gamedev #Gaming #Accessibility #Gamejam",
+      "author": "ericbomb.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Happy #KidLitArtPostcard Day for April! I’m Lindsay Hornsby, a cartoonist and #a11y dev who loves making #KidLit comics and silly illustrations! I’m currently available for upcoming projects!\n\nPortfolio: www.lindsayhornsby.com \nCurrently #SeekingRepresentation, let’s chat! 🎉",
+      "author": "fizzlebit.bsky.social",
+      "engagement": 16,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,15 +347,15 @@
     },
     {
       "keyword": "accessibility",
-      "count": 39
+      "count": 38
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 27
     },
     {
       "keyword": "disabilityjustice",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "cripthevote",
@@ -370,10 +370,6 @@
       "count": 16
     },
     {
-      "keyword": "nokings",
-      "count": 14
-    },
-    {
       "keyword": "nokings3",
       "count": 14
     },
@@ -382,44 +378,48 @@
       "count": 14
     },
     {
+      "keyword": "nokings",
+      "count": 13
+    },
+    {
       "keyword": "virtual",
       "count": 13
+    },
+    {
+      "keyword": "downsyndrome",
+      "count": 10
+    },
+    {
+      "keyword": "disabilitysky",
+      "count": 9
+    },
+    {
+      "keyword": "speechrecognition",
+      "count": 9
+    },
+    {
+      "keyword": "fine",
+      "count": 9
+    },
+    {
+      "keyword": "worderrorrate",
+      "count": 9
+    },
+    {
+      "keyword": "worderrorrate accessibility",
+      "count": 9
     },
     {
       "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
-      "keyword": "ada",
-      "count": 7
+      "keyword": "cripminds",
+      "count": 8
     },
     {
-      "keyword": "disabilitysky",
-      "count": 7
-    },
-    {
-      "keyword": "refusefascism",
-      "count": 7
-    },
-    {
-      "keyword": "auspol",
-      "count": 6
-    },
-    {
-      "keyword": "thrivingkids",
-      "count": 6
-    },
-    {
-      "keyword": "world autism",
-      "count": 6
-    },
-    {
-      "keyword": "disability",
-      "count": 6
-    },
-    {
-      "keyword": "disabilityjustice nico",
-      "count": 6
+      "keyword": "accessibility disabilitysky",
+      "count": 8
     }
   ]
 }
