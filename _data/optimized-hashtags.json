@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-04-02T03:33:27.260Z",
+  "generated": "2026-04-03T03:35:08.230Z",
   "recommended": [
     "3mpwrApp",
     "DisabilityRights",
@@ -11,8 +11,8 @@
   "trending": [
     "disabilityrights",
     "accessibility",
-    "disabilityjustice",
     "a11y",
+    "disabilityjustice",
     "cripthevote"
   ],
   "proven": []
