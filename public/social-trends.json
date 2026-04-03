@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-03T01:19:11.396Z",
+  "lastUpdated": "2026-04-03T06:57:02.860Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14550,
+      "totalPosts": 14575,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T01:19:01.924Z"
+      "lastSeen": "2026-04-03T06:56:53.933Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14486,
+      "totalPosts": 14511,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T01:19:04.068Z"
+      "lastSeen": "2026-04-03T06:56:56.027Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14346,
+      "totalPosts": 14371,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T01:19:06.122Z"
+      "lastSeen": "2026-04-03T06:56:58.022Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14580,
+      "totalPosts": 14605,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T01:19:08.363Z"
+      "lastSeen": "2026-04-03T06:56:59.950Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14524,
+      "totalPosts": 14548,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T01:19:10.392Z"
+      "lastSeen": "2026-04-03T06:57:01.856Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
-      "author": "randompammit.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "I built a Quarto extension that adds accessibility features to Reveal.js presentations: keyboard nav, screen reader support, dyslexia-friendly fonts, high contrast, slide change visual/audio cue and more.\n\nFeedback more than welcome.\n\ngithub.com/mcanouil/qua...\n\n#Quarto #RevealJS #Accessibility",
-      "author": "mickael.canouil.fr",
-      "engagement": 33,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Excellent read. Sad having to smuggle accessibility in through stealthy means but aligning to a business goal makes it easier to get permission:\npiccalil.li/blog/applyin... #a11y",
-      "author": "gerireid.com",
-      "engagement": 20,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "This is the #overlay company that fabricated clients, testimonials, and ratings:\nadrianroselli.com/2025/07/acce...\n\nIts failure to do alt text correctly for this Bluesky post should tell you all you need to know. \n\n#a11y #accessibility #WCAG",
-      "author": "aardrian.bsky.social",
-      "engagement": 19,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
-      "author": "randompammit.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "@support.bsky.team \n\nTyping ALT text for users who need large text settings is still impossible. The screen won’t scroll down. The people who need ALT text and encourage others to use it should have access to it.\n\n#accessibility",
-      "author": "kentparkskeet.bsky.social",
-      "engagement": 33,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Please please please play out winner of the Blind Judges pick from Games for blind gamers 5! They made the most intuitive navigation system ever for an audio game and I want everyone to steal it! I am so proud of the community making it! \n\npipejakob.itch.io/valencia\n\n#A11y #GameDev",
       "author": "ericbomb.bsky.social",
@@ -338,6 +290,54 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 95,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Thank you so much @arevya.bsky.social for all the kind words and videos about our little event! \n\nCheck out their awesome video all about Games for Blind gamers jam! \n\nwww.tiktok.com/@arevyagamin...\n\n#A11y #Gamedev #Gaming #Accessibility #Gamejam",
+      "author": "ericbomb.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "My dad is partially sighted with poor motor control. He likes audiobooks but every player I tried had tiny buttons and too many screens.\n\nI’ve now made this one. Two screens, big controls, high contrast.\n\nWhen I want to send him a new book, I just text him a link […] \n\n[Original post on mstdn.games]",
+      "author": "gary-bbgames.mstdn.games.ap.brid.gy",
+      "engagement": 20,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "#accessibility question for everyone using a conventional controller. Do have an easier time clicking the shoulder buttons or using the triggers?\n\n#indiegame #gamers #gamedev\n",
+      "author": "turbohermit.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Thank you so much @arevya.bsky.social for all the kind words and videos about our little event! \n\nCheck out their awesome video all about Games for Blind gamers jam! \n\nwww.tiktok.com/@arevyagamin...\n\n#A11y #Gamedev #Gaming #Accessibility #Gamejam",
+      "author": "ericbomb.bsky.social",
+      "engagement": 11,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Happy #KidLitArtPostcard Day for April! I’m Lindsay Hornsby, a cartoonist and #a11y dev who loves making #KidLit comics and silly illustrations! I’m currently available for upcoming projects!\n\nPortfolio: www.lindsayhornsby.com \nCurrently #SeekingRepresentation, let’s chat! 🎉",
+      "author": "fizzlebit.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 38
+      "count": 39
     },
     {
       "keyword": "a11y",
@@ -390,7 +390,7 @@
       "count": 9
     },
     {
-      "keyword": "disability",
+      "keyword": "ada",
       "count": 7
     },
     {
@@ -414,7 +414,7 @@
       "count": 6
     },
     {
-      "keyword": "ada",
+      "keyword": "disability",
       "count": 6
     },
     {
