@@ -10,7 +10,8 @@
     "Campaign Coordination",
     "Wellness Hub",
     "Dyslexia Support Mode",
-    "Motor Accessibility Features"
+    "Motor Accessibility Features",
+    "Benefits Navigator"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -27,6 +28,6 @@
     "Disability Justice vs Disability Charity: Our Operating Principle",
     "What 3mpwr Means: The Philosophy Behind Our Name"
   ],
-  "rotationIndex": 6,
+  "rotationIndex": 7,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
