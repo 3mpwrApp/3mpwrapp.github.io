@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-04T12:31:52.782Z",
+  "lastUpdated": "2026-04-04T18:26:52.482Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14700,
+      "totalPosts": 14725,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T12:31:42.700Z"
+      "lastSeen": "2026-04-04T18:26:42.056Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14636,
+      "totalPosts": 14661,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T12:31:45.379Z"
+      "lastSeen": "2026-04-04T18:26:44.599Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14496,
+      "totalPosts": 14521,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T12:31:47.710Z"
+      "lastSeen": "2026-04-04T18:26:47.122Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14730,
+      "totalPosts": 14755,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T12:31:49.664Z"
+      "lastSeen": "2026-04-04T18:26:49.423Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14668,
+      "totalPosts": 14692,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T12:31:51.779Z"
+      "lastSeen": "2026-04-04T18:26:51.478Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "#accessibility question for everyone using a conventional controller. Do have an easier time clicking the shoulder buttons or using the triggers?\n\n#indiegame #gamers #gamedev\n",
-      "author": "turbohermit.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Happy #KidLitArtPostcard Day for April! I’m Lindsay Hornsby, a cartoonist and #a11y dev who loves making #KidLit comics and silly illustrations! I’m currently available for upcoming projects!\n\nPortfolio: www.lindsayhornsby.com \nCurrently #SeekingRepresentation, let’s chat! 🎉",
-      "author": "fizzlebit.bsky.social",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
-      "author": "bschillace.brandyschillace.com",
-      "engagement": 95,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Thank you so much @arevya.bsky.social for all the kind words and videos about our little event! \n\nCheck out their awesome video all about Games for Blind gamers jam! \n\nwww.tiktok.com/@arevyagamin...\n\n#A11y #Gamedev #Gaming #Accessibility #Gamejam",
-      "author": "ericbomb.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "My dad is partially sighted with poor motor control. He likes audiobooks but every player I tried had tiny buttons and too many screens.\n\nI’ve now made this one. Two screens, big controls, high contrast.\n\nWhen I want to send him a new book, I just text him a link […] \n\n[Original post on mstdn.games]",
-      "author": "gary-bbgames.mstdn.games.ap.brid.gy",
-      "engagement": 20,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "#accessibility question for everyone using a conventional controller. Do have an easier time clicking the shoulder buttons or using the triggers?\n\n#indiegame #gamers #gamedev\n",
       "author": "turbohermit.bsky.social",
@@ -338,20 +296,62 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Da mir das Thema sehr am Herzen liegt: Bitte erwäge diese Petition zu unterzeichnen um die Gleichberechtigung und Inklusion von Menschen mit Behinderung zu schützen. Dankeee 🧡 \n\nwww.change.org/p/stoppt-die...\n\n#inklusion #disability #DisabilityRights #furry\n\n📷 Ceferix Folf\n🧵 @whitewingcreations.de",
+      "author": "toasterthefox.bsky.social",
+      "engagement": 18,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 99,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Games shouldn't be gated by what your body can/can't do. Accessibility is important! Here are some things we did to make Duality as accessible as possible:\n* Limited/low math system\n* \"Mental theatre\" gameplay\n* Screen reader friendly supplements\n* & we're working on even more!\nCome play!\n -MO🐈",
+      "author": "mimicsnmisfits.com",
+      "engagement": 15,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 24,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
+      "author": "rob-w.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "accessibility",
-      "count": 43
+      "count": 44
     },
     {
       "keyword": "disabilityrights",
-      "count": 42
+      "count": 41
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 31
     },
     {
       "keyword": "disabilityjustice",
@@ -370,10 +370,6 @@
       "count": 16
     },
     {
-      "keyword": "disabilitysky",
-      "count": 14
-    },
-    {
       "keyword": "nokings3",
       "count": 14
     },
@@ -382,19 +378,7 @@
       "count": 14
     },
     {
-      "keyword": "cripminds",
-      "count": 13
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 13
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 13
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
+      "keyword": "disabilitysky",
       "count": 13
     },
     {
@@ -406,20 +390,36 @@
       "count": 13
     },
     {
+      "keyword": "cripminds",
+      "count": 12
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 12
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 12
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 12
+    },
+    {
+      "keyword": "digitalaccessibility",
+      "count": 9
+    },
+    {
+      "keyword": "inclusivedesign",
+      "count": 9
+    },
+    {
       "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
-      "keyword": "refusefascism",
-      "count": 7
-    },
-    {
-      "keyword": "disability justice",
-      "count": 6
-    },
-    {
       "keyword": "accessibility a11y",
-      "count": 6
+      "count": 8
     }
   ]
 }
