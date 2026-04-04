@@ -1,86 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-04T06:47:05.250Z",
+  "lastUpdated": "2026-04-04T12:31:52.782Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14675,
+      "totalPosts": 14700,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T06:46:55.809Z"
+      "lastSeen": "2026-04-04T12:31:42.700Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14611,
+      "totalPosts": 14636,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T06:46:57.951Z"
+      "lastSeen": "2026-04-04T12:31:45.379Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14471,
+      "totalPosts": 14496,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T06:47:00.140Z"
+      "lastSeen": "2026-04-04T12:31:47.710Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14705,
+      "totalPosts": 14730,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T06:47:02.193Z"
+      "lastSeen": "2026-04-04T12:31:49.664Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14644,
+      "totalPosts": 14668,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-04T06:47:04.245Z"
+      "lastSeen": "2026-04-04T12:31:51.779Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
-      "author": "bschillace.brandyschillace.com",
-      "engagement": 65,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Happy #KidLitArtPostcard Day for April! I’m Lindsay Hornsby, a cartoonist and #a11y dev who loves making #KidLit comics and silly illustrations! I’m currently available for upcoming projects!\n\nPortfolio: www.lindsayhornsby.com \nCurrently #SeekingRepresentation, let’s chat! 🎉",
-      "author": "fizzlebit.bsky.social",
-      "engagement": 15,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
-      "author": "bschillace.brandyschillace.com",
-      "engagement": 90,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "#accessibility question for everyone using a conventional controller. Do have an easier time clicking the shoulder buttons or using the triggers?\n\n#indiegame #gamers #gamedev\n",
       "author": "turbohermit.bsky.social",
@@ -338,24 +296,66 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 99,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 21,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 21,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
+      "author": "rob-w.bsky.social",
+      "engagement": 14,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Many people with far greater knowledge than I possess have discussed accessibility overlays, but I think the more voices and inputs in the public corpus the better.\n\nAccessibility overlays are harmful and make things worse, not better. Avoid them.\n\nvale.rocks/posts/access...\n\n#Accessibility #a11y",
+      "author": "vale.rocks",
+      "engagement": 27,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
+    {
+      "keyword": "accessibility",
+      "count": 43
+    },
     {
       "keyword": "disabilityrights",
       "count": 42
     },
     {
-      "keyword": "accessibility",
-      "count": 40
-    },
-    {
       "keyword": "a11y",
-      "count": 31
+      "count": 30
     },
     {
       "keyword": "disabilityjustice",
-      "count": 25
+      "count": 29
     },
     {
       "keyword": "cripthevote",
@@ -370,12 +370,32 @@
       "count": 16
     },
     {
+      "keyword": "disabilitysky",
+      "count": 14
+    },
+    {
       "keyword": "nokings3",
       "count": 14
     },
     {
       "keyword": "nokings2026",
       "count": 14
+    },
+    {
+      "keyword": "cripminds",
+      "count": 13
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 13
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 13
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 13
     },
     {
       "keyword": "nokings",
@@ -390,35 +410,15 @@
       "count": 9
     },
     {
-      "keyword": "disabilitysky",
-      "count": 8
-    },
-    {
-      "keyword": "cripminds",
-      "count": 7
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 7
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 7
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
-      "count": 7
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 7
-    },
-    {
       "keyword": "refusefascism",
       "count": 7
     },
     {
-      "keyword": "disability",
+      "keyword": "disability justice",
+      "count": 6
+    },
+    {
+      "keyword": "accessibility a11y",
       "count": 6
     }
   ]
