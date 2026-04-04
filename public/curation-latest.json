@@ -1,29 +1,15 @@
 {
   "date": "2026-04-04",
-  "timestamp": "2026-04-04T09:40:35.041Z",
-  "count": 3,
+  "timestamp": "2026-04-04T21:38:35.494Z",
+  "count": 1,
   "minScore": 3.5,
   "items": [
     {
       "title": "The Disability Bulletin",
       "link": "https://linktr.ee/thedisabilitybulletin",
-      "description": "The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue.",
+      "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-04-04T09:40:35.039Z"
-    },
-    {
-      "title": "‘Namesake’ Tackles a Colonial Legacy. And a Nation’s Resistance",
-      "link": "https://thetyee.ca/Culture/2026/04/03/Namesake-Tackles-Colonial-Legacy-Nation-Resistance/",
-      "description": "The film previewed to full houses in Powell River, and is now headed to Canada’s biggest documentary festivals.",
-      "score": 10.5,
-      "pubDate": "Sat, 04 Apr 2026 00:10:00 +0000"
-    },
-    {
-      "title": "A Calgary Museum Reinvents Itself",
-      "link": "https://thetyee.ca/Culture/2026/04/03/Calgary-Museum-Reinvents-Itself/",
-      "description": "The Glenbow reopens as the JR Centre for Arts & Culture next year. Its updates extend past physical renovations.",
-      "score": 4.5,
-      "pubDate": "Sat, 04 Apr 2026 00:30:00 +0000"
+      "pubDate": "2026-04-04T21:38:35.492Z"
     }
   ]
 }

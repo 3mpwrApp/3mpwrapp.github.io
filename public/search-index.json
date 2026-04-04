@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
   "generated": "2026-04-04",
-  "totalDocuments": 471,
+  "totalDocuments": 472,
   "documents": [
     {
       "id": "blog/2026-04-04-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-04-04",
-      "excerpt": "Daily News Curation - 2026-04-04 Curated 3 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers ",
-      "content": "Daily News Curation - 2026-04-04 Curated 3 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue. 📍 Read More --- Additional Stories 1. ‘Namesake’ Tackles a Colonial Legacy. And a Nation’s Resistance The film previewed to full houses in Powell River, and is now headed to Canada’s biggest documentary festivals. Source Score: 10.50 2. A Calgary Museum Reinvents Itself The Glenbow reopens as the JR Centre for Arts & Culture next year. Its updates extend past physical renovations. Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-04 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-04 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More ---",
       "date": "2026-04-04",
       "tags": [
         "highlights"
@@ -18,7 +18,26 @@
         "news"
       ],
       "url": "/2026-04-04-daily-curation",
-      "filesize": 715
+      "filesize": 290
+    },
+    {
+      "id": "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "source": "blog",
+      "title": "Dev Update: What's Been Happening in 3mpwrApp",
+      "excerpt": "Dev Update: What's Been Happening in 3mpwrApp We believe in building in public. Here's a look at what our team has been working on recently, straight from our development history. --- âœ¨ New & Improv",
+      "content": "Dev Update: What's Been Happening in 3mpwrApp We believe in building in public. Here's a look at what our team has been working on recently, straight from our development history. --- âœ¨ New & Improved - Daily curation 2026-04-04 - automated content aggregation - Daily content article - 2026-04-03 - Daily curation 2026-04-03 - automated content aggregation - Daily curation 2026-04-02 - automated content aggregation - Daily content article - 2026-04-02 - Daily curation 2026-04-02 + auto-learned keywords âš™ï¸ Under the Hood - Update trending keywords - 2026-04-04 06:47 UTC - 🧠 Social intelligence update - 2026-04-04 03:22 UTC - Update trending keywords - 2026-04-04 01:13 UTC --- Why We Build in Public Transparency is a core operating principle at 3mpwrApp. The community we serve has been let down by opaque institutions â€” we want to be the structural opposite of that. This means sharing our development process openly, explaining what we're working on and why, and being honest when things take longer than expected. --- Stay Connected - â­ Follow our development on GitHub - ðŸ“¬ Subscribe to updates - ðŸ’¬ Join the community - ðŸ§ª Join the beta program",
+      "date": "2026-04-04 00:00:00 +0000",
+      "tags": [
+        "dev-update",
+        "changelog",
+        "development",
+        "transparency"
+      ],
+      "categories": [
+        "updates"
+      ],
+      "url": "/2026-04-04-dev-update-dev-update-2026-04-04",
+      "filesize": 1173
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -1728,13 +1747,13 @@
       "id": "curation/2026-04-04-curated.md",
       "source": "curation",
       "title": "2026-04-04-curated.md",
-      "excerpt": "Daily News Curation - 2026-04-04 Curated 3 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers ",
-      "content": "Daily News Curation - 2026-04-04 Curated 3 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin The Disability Bulletin covers disability rights news, advocacy updates, and community stories from across Canada. Visit for the latest issue. 📍 Read More --- Additional Stories 1. ‘Namesake’ Tackles a Colonial Legacy. And a Nation’s Resistance The film previewed to full houses in Powell River, and is now headed to Canada’s biggest documentary festivals. Source Score: 10.50 2. A Calgary Museum Reinvents Itself The Glenbow reopens as the JR Centre for Arts & Culture next year. Its updates extend past physical renovations. Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-04 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-04 Curated 1 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More ---",
       "date": "2026-04-04",
       "tags": [],
       "categories": [],
       "url": "/2026-04-04-curated",
-      "filesize": 715
+      "filesize": 290
     },
     {
       "id": "curation/README.md",
@@ -7907,6 +7926,58 @@
     "2026-04-04": [
       "blog/2026-04-04-daily-curation.md"
     ],
+    "dev": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "update:": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "what's": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "been": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "happening": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "in": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "3mpwrapp": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-31-3mpwrapp-safe-from-axios-supply-chain-attack.md",
+      "blog/2026-03-31-axios-supply-chain-attack-3mpwrapp-safe.md",
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-12-demo-success-usa-lite-launch.md",
+      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-07-feature-spotlight-production-release.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
+    ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"
     ],
@@ -8706,21 +8777,6 @@
     "time": [
       "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
     ],
-    "3mpwrapp": [
-      "blog/2026-03-31-3mpwrapp-safe-from-axios-supply-chain-attack.md",
-      "blog/2026-03-31-axios-supply-chain-attack-3mpwrapp-safe.md",
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-07-feature-spotlight-production-release.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
-    ],
     "safe": [
       "blog/2026-03-31-3mpwrapp-safe-from-axios-supply-chain-attack.md",
       "blog/2026-03-31-axios-supply-chain-attack-3mpwrapp-safe.md"
@@ -8751,12 +8807,6 @@
     ],
     "2026-03-31": [
       "blog/2026-03-31-daily-curation.md"
-    ],
-    "dev": [
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
     "diary:": [
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
@@ -8874,14 +8924,6 @@
       "blog/2026-03-30-weekly-update-week-14.md",
       "blog/2026-03-23-weekly-update-week-13.md",
       "blog/2026-03-16-weekly-update-week-12.md"
-    ],
-    "in": [
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "whatsnew/2025-10-14-curator-language-json-api.md"
     ],
     "open": [
       "blog/2026-03-30-weekly-update-week-14.md",
@@ -9011,22 +9053,6 @@
     ],
     "2026-03-27": [
       "blog/2026-03-27-daily-curation.md"
-    ],
-    "update:": [
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
-    ],
-    "what's": [
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
-    ],
-    "been": [
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
-    ],
-    "happening": [
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
     ],
     "2026-03-26": [
       "blog/2026-03-26-daily-curation.md"
@@ -10656,6 +10682,31 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
     ],
+    "dev-update": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "changelog": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "development": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "transparency": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md"
+    ],
     "features": [
       "blog/2026-04-03-feature-spotlight-benefits-navigator.md",
       "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
@@ -10928,12 +10979,6 @@
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
-    "development": [
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
     "behind-the-scenes": [
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
@@ -10989,13 +11034,6 @@
       "blog/2025-10-27-weekly-update-week-44.md",
       "blog/2025-10-21-weekly-update-week-43.md"
     ],
-    "transparency": [
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md"
-    ],
     "tutorial": [
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
@@ -11005,14 +11043,6 @@
     "how-to": [
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
-    ],
-    "dev-update": [
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
-    ],
-    "changelog": [
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
     ],
     "phase-3:-community": [
       "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
@@ -11534,6 +11564,35 @@
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
+    "updates": [
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
     "features": [
       "blog/2026-04-03-feature-spotlight-benefits-navigator.md",
       "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
@@ -11680,34 +11739,6 @@
     "dev-diary": [
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "updates": [
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md"
     ],
     "tutorials": [
       "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
