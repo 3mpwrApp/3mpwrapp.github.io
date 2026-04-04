@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-03T18:33:24.778Z",
+  "lastUpdated": "2026-04-04T01:13:30.499Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14625,
+      "totalPosts": 14650,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T18:33:15.114Z"
+      "lastSeen": "2026-04-04T01:13:21.814Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14561,
+      "totalPosts": 14586,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T18:33:17.129Z"
+      "lastSeen": "2026-04-04T01:13:23.587Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14421,
+      "totalPosts": 14446,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T18:33:19.233Z"
+      "lastSeen": "2026-04-04T01:13:25.229Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14655,
+      "totalPosts": 14680,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T18:33:21.485Z"
+      "lastSeen": "2026-04-04T01:13:27.313Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14596,
+      "totalPosts": 14620,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-03T18:33:23.775Z"
+      "lastSeen": "2026-04-04T01:13:29.496Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "#ausGründen und weil es gerade von nicht betroffenen #Allies nicht oft genug laut gesagt werden muss: #Inklusion um die man bitten muss, ist keine Inklusion! Und unsere Bequemlichkeit sollte nie ein Grund sein, sich nicht um #accessibility zu bemühen. rant over",
-      "author": "cgpublichistory.bsky.social",
-      "engagement": 13,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Please please please play out winner of the Blind Judges pick from Games for blind gamers 5! They made the most intuitive navigation system ever for an audio game and I want everyone to steal it! I am so proud of the community making it! \n\npipejakob.itch.io/valencia\n\n#A11y #GameDev",
-      "author": "ericbomb.bsky.social",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "There is room for all of us to get involved!\nJoin @standupforscience.net and www.revupnc.org for a virtual Accessible No Kings Event \nNothing about us without us!\n\nwww.standupforscience.net/sufs-nk3\n#disabilityjustice #nokings",
-      "author": "randompammit.bsky.social",
-      "engagement": 13,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "#ausGründen und weil es gerade von nicht betroffenen #Allies nicht oft genug laut gesagt werden muss: #Inklusion um die man bitten muss, ist keine Inklusion! Und unsere Bequemlichkeit sollte nie ein Grund sein, sich nicht um #accessibility zu bemühen. rant over",
-      "author": "cgpublichistory.bsky.social",
-      "engagement": 15,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Please please please play out winner of the Blind Judges pick from Games for blind gamers 5! They made the most intuitive navigation system ever for an audio game and I want everyone to steal it! I am so proud of the community making it! \n\npipejakob.itch.io/valencia\n\n#A11y #GameDev",
-      "author": "ericbomb.bsky.social",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
       "author": "caseydoherty.bsky.social",
@@ -338,6 +290,54 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 99,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 21,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
+      "author": "rob-w.bsky.social",
+      "engagement": 12,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 21,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
+      "author": "rob-w.bsky.social",
+      "engagement": 12,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Many people with far greater knowledge than I possess have discussed accessibility overlays, but I think the more voices and inputs in the public corpus the better.\n\nAccessibility overlays are harmful and make things worse, not better. Avoid them.\n\nvale.rocks/posts/access...\n\n#Accessibility #a11y",
+      "author": "vale.rocks",
+      "engagement": 22,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -347,15 +347,15 @@
     },
     {
       "keyword": "accessibility",
-      "count": 39
+      "count": 40
     },
     {
       "keyword": "a11y",
-      "count": 29
+      "count": 31
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "cripthevote",
@@ -386,40 +386,40 @@
       "count": 13
     },
     {
-      "keyword": "disabilitysky",
-      "count": 9
-    },
-    {
-      "keyword": "speechrecognition",
-      "count": 9
-    },
-    {
-      "keyword": "fine",
-      "count": 9
-    },
-    {
-      "keyword": "downsyndrome",
-      "count": 9
-    },
-    {
-      "keyword": "worderrorrate",
-      "count": 9
-    },
-    {
-      "keyword": "worderrorrate accessibility",
-      "count": 9
-    },
-    {
       "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
-      "keyword": "cripminds",
+      "keyword": "disabilitysky",
       "count": 8
     },
     {
+      "keyword": "cripminds",
+      "count": 7
+    },
+    {
       "keyword": "accessibility disabilitysky",
-      "count": 8
+      "count": 7
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 7
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 7
+    },
+    {
+      "keyword": "accessibility a11y",
+      "count": 7
+    },
+    {
+      "keyword": "refusefascism",
+      "count": 7
+    },
+    {
+      "keyword": "disabilityjustice nico",
+      "count": 6
     }
   ]
 }
