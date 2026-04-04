@@ -1,0 +1,127 @@
+# Daily CanLII Scraping Workflow
+# Scrapes one province per day to avoid API quota limits
+# Runs at 3 AM UTC (11 PM ET / 8 PM PT) daily
+
+name: Daily CanLII Scraper
+
+on:
+  schedule:
+    # Run at 3:00 AM UTC daily
+    - cron: '0 3 * * *'
+  
+  workflow_dispatch:
+    inputs:
+      province_group:
+        description: 'Province group to scrape (day1-ontario, day2-bc, etc.)'
+        required: false
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - day1-ontario
+          - day2-bc
+          - day3-prairies
+          - day4-quebec
+          - day5-atlantic
+          - day6-territories-federal
+
+jobs:
+  scrape-canlii:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Determine which province to scrape
+        id: determine-day
+        run: |
+          # Auto-rotate through days (day 1-6 cycle)
+          DAY_OF_YEAR=$(date +%j)
+          DAY_MOD=$((DAY_OF_YEAR % 6 + 1))
+          
+          case $DAY_MOD in
+            1) PROVINCE="day1-ontario" ;;
+            2) PROVINCE="day2-bc" ;;
+            3) PROVINCE="day3-prairies" ;;
+            4) PROVINCE="day4-quebec" ;;
+            5) PROVINCE="day5-atlantic" ;;
+            6) PROVINCE="day6-territories-federal" ;;
+          esac
+          
+          # Override if manual input provided
+          if [ "${{ github.event.inputs.province_group }}" != "auto" ] && [ -n "${{ github.event.inputs.province_group }}" ]; then
+            PROVINCE="${{ github.event.inputs.province_group }}"
+          fi
+          
+          echo "province=$PROVINCE" >> $GITHUB_OUTPUT
+          echo "📍 Scraping: $PROVINCE"
+      
+      - name: Run CanLII scraper
+        env:
+          CANLII_API_KEY: ${{ secrets.CANLII_API_KEY }}
+        run: |
+          cd scripts
+          node scrape-by-province.js ${{ steps.determine-day.outputs.province }}
+      
+      - name: Commit and push results
+        run: |
+          git config --global user.name "3mpwrApp Bot"
+          git config --global user.email "bot@3mpwrapp.org"
+          
+          git add data/tribunal-decisions/*.json
+          
+          if git diff --staged --quiet; then
+            echo "No new data collected"
+          else
+            PROVINCE="${{ steps.determine-day.outputs.province }}"
+            git commit -m "data: Daily CanLII scrape - $PROVINCE ($(date +%Y-%m-%d))"
+            git push origin main
+          fi
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tribunal-decisions-${{ steps.determine-day.outputs.province }}
+          path: data/tribunal-decisions/*.json
+          retention-days: 30
+
+  analyze-patterns:
+    needs: scrape-canlii
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main  # Get latest after scraping committed
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Run pattern analysis
+        run: |
+          cd scripts
+          node analyze-patterns.js
+      
+      - name: Commit analysis results
+        run: |
+          git config --global user.name "3mpwrApp Bot"
+          git config --global user.email "bot@3mpwrapp.org"
+          
+          git add data/pattern-analysis/*.json
+          
+          if git diff --staged --quiet; then
+            echo "No analysis updates"
+          else
+            git commit -m "analysis: Pattern detection update ($(date +%Y-%m-%d))"
+            git push origin main
+          fi

@@ -1,0 +1,26 @@
+{
+  "total_decisions": 300,
+  "by_tribunal": {
+    "onwsiat": 100,
+    "onhrt": 100,
+    "onca": 100
+  },
+  "by_outcome": {
+    "Unknown": 229,
+    "Dismissed": 54,
+    "Denied": 8,
+    "Allowed": 9
+  },
+  "by_condition": {
+    "Unknown": 245,
+    "chronic pain": 2,
+    "MS": 45,
+    "depression": 1,
+    "back injury": 1,
+    "chronic pain, depression": 1,
+    "carpal tunnel": 1,
+    "post-traumatic stress": 1,
+    "anxiety": 3
+  },
+  "generated_at": "2026-04-04T18:23:31.046Z"
+}

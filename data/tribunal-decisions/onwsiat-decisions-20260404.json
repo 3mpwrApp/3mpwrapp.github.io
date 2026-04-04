@@ -1,0 +1,1972 @@
+[
+  {
+    "case_id": "2026onwsiat88",
+    "title": "Decision No. 1067/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "disc",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat88\", \"url\": \"https://canlii.ca/t/kk30q\", \"title\": \"Decision No. 1067/25\", \"citation\": \"2026 ONWSIAT 88 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1067/25\", \"decisionDate\": \"2026-01-22\", \"keywords\": \"non-economic loss redetermination — pre-existing degenerative conditions — worker — entitled to a non-economic loss — deterioration\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat88\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat87",
+    "title": "Decision No. 926/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat87\", \"url\": \"https://canlii.ca/t/kk31d\", \"title\": \"Decision No. 926/25\", \"citation\": \"2026 ONWSIAT 87 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"926/25\", \"decisionDate\": \"2026-01-22\", \"keywords\": \"worker — modified duties — work — benefits — employer\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat87\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat86",
+    "title": "Decision No. 1092/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat86\", \"url\": \"https://canlii.ca/t/kk30s\", \"title\": \"Decision No. 1092/25\", \"citation\": \"2026 ONWSIAT 86 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1092/25\", \"decisionDate\": \"2026-01-22\", \"keywords\": \"worker — cardiac arrest — unusual physical exertion — estate — hauler\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat86\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat85",
+    "title": "Decision No. 1197/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "IME"
+    ],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat85\", \"url\": \"https://canlii.ca/t/kk30x\", \"title\": \"Decision No. 1197/25\", \"citation\": \"2026 ONWSIAT 85 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1197/25\", \"decisionDate\": \"2026-01-22\", \"keywords\": \"worker — antalgic gait — return to work — benefits — full time hours\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat85\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat84",
+    "title": "Decision No. 1088/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "IME"
+    ],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat84\", \"url\": \"https://canlii.ca/t/kk30r\", \"title\": \"Decision No. 1088/25\", \"citation\": \"2026 ONWSIAT 84 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1088/25\", \"decisionDate\": \"2026-01-22\", \"keywords\": \"worker — independent operator — self-employment as an actor — part-time employment as a bartender — concurrent\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat84\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat83",
+    "title": "Decision No. 1245/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic pain, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat83\", \"url\": \"https://canlii.ca/t/kk311\", \"title\": \"Decision No. 1245/25\", \"citation\": \"2026 ONWSIAT 83 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1245/25\", \"decisionDate\": \"2026-01-21\", \"keywords\": \"worker — ex-wife — duties — accident employer — chronic pain disability\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat83\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2026onwsiat82",
+    "title": "Decision No. 984/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic pain, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat82\", \"url\": \"https://canlii.ca/t/kk31h\", \"title\": \"Decision No. 984/25\", \"citation\": \"2026 ONWSIAT 82 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"984/25\", \"decisionDate\": \"2026-01-21\", \"keywords\": \"chronic pain disability — worker — offset — disability benefits — umbrella\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat82\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat81",
+    "title": "Decision No. 993/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat81\", \"url\": \"https://canlii.ca/t/kk31m\", \"title\": \"Decision No. 993/25\", \"citation\": \"2026 ONWSIAT 81 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"993/25\", \"decisionDate\": \"2026-01-21\", \"keywords\": \"co-operation obligations — non-co-operation — benefits — training — find that the worker\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat81\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat80",
+    "title": "Decision No. 992/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "mental health, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "IME"
+    ],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat80\", \"url\": \"https://canlii.ca/t/kk31l\", \"title\": \"Decision No. 992/25\", \"citation\": \"2026 ONWSIAT 80 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"992/25\", \"decisionDate\": \"2026-01-21\", \"keywords\": \"full-time hours — benefits — suitable direct-entry employment — psychological — earning the minimum wage\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat80\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat79",
+    "title": "Decision No. 34/26",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue, impairment",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat79\", \"url\": \"https://canlii.ca/t/kk316\", \"title\": \"Decision No. 34/26\", \"citation\": \"2026 ONWSIAT 79 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"34/26\", \"decisionDate\": \"2026-01-21\", \"keywords\": \"impairment — emotional — worker has entitlement — moderate — mild\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat79\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat38",
+    "title": "Decision No. 14/26",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "neck, nerve damage, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat38\", \"url\": \"https://canlii.ca/t/kjxjj\", \"title\": \"Decision No. 14/26\", \"citation\": \"2026 ONWSIAT 38 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"14/26\", \"decisionDate\": \"2026-01-14\", \"keywords\": \"entitlement to partial benefits — cervical nerve root compression — entry-level wages — earnings — based upon his determined ability\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat38\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat36",
+    "title": "Decision No. 1210/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "shoulder, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat36\", \"url\": \"https://canlii.ca/t/kjs9s\", \"title\": \"Decision No. 1210/25\", \"citation\": \"2026 ONWSIAT 36 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1210/25\", \"decisionDate\": \"2026-01-13\", \"keywords\": \"worker — shoulder — disablement — accident — duties\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat36\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2026onwsiat35",
+    "title": "Decision No. 1166/25I",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat35\", \"url\": \"https://canlii.ca/t/kjs9q\", \"title\": \"Decision No. 1166/25I\", \"citation\": \"2026 ONWSIAT 35 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1166/25I\", \"decisionDate\": \"2026-01-13\", \"keywords\": \"worker — employer — information — access — injury\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat35\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2026onwsiat33",
+    "title": "Decision No. 936/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat33\", \"url\": \"https://canlii.ca/t/kjsbb\", \"title\": \"Decision No. 936/25\", \"citation\": \"2026 ONWSIAT 33 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"936/25\", \"decisionDate\": \"2026-01-13\", \"keywords\": \"worker — non-economic loss assessment — soft tissue injuries — myofascial pain syndrome — psychotraumatic disability non-economic loss\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat33\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat32",
+    "title": "Decision No. 3/26",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "IME"
+    ],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat32\", \"url\": \"https://canlii.ca/t/kjsb3\", \"title\": \"Decision No. 3/26\", \"citation\": \"2026 ONWSIAT 32 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"3/26\", \"decisionDate\": \"2026-01-13\", \"keywords\": \"worker — part-time work — part-time basis — skills — full-time basis\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat32\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat31",
+    "title": "Decision No. 1300/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat31\", \"url\": \"https://canlii.ca/t/kjsb1\", \"title\": \"Decision No. 1300/25\", \"citation\": \"2026 ONWSIAT 31 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1300/25\", \"decisionDate\": \"2026-01-12\", \"keywords\": \"worker — dysesthesia — hypersensitivity — bilateral upper extremity — return to work\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat31\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat30",
+    "title": "Decision No. 1559/13R",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat30\", \"url\": \"https://canlii.ca/t/kjsb2\", \"title\": \"Decision No. 1559/13R\", \"citation\": \"2026 ONWSIAT 30 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1559/13R\", \"decisionDate\": \"2026-01-12\", \"keywords\": \"worker — evidence — reconsideration — original — benefits entitlement\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat30\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2026onwsiat29",
+    "title": "Decision No. 1018/24",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat29\", \"url\": \"https://canlii.ca/t/kjs9l\", \"title\": \"Decision No. 1018/24\", \"citation\": \"2026 ONWSIAT 29 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1018/24\", \"decisionDate\": \"2026-01-12\", \"keywords\": \"worker — benefits — entitlement — pandemic — work-related injury\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat29\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2026onwsiat28",
+    "title": "Decision No. 1261/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2026onwsiat28\", \"url\": \"https://canlii.ca/t/kjs9w\", \"title\": \"Decision No. 1261/25\", \"citation\": \"2026 ONWSIAT 28 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1261/25\", \"decisionDate\": \"2026-01-09\", \"keywords\": \"worker — responder — symptoms — binder — diagnosis\", \"topics\": \"\", \"concatenatedId\": \"2026onwsiat28\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1549",
+    "title": "Decision No. 1198/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1549\", \"url\": \"https://canlii.ca/t/kjm44\", \"title\": \"Decision No. 1198/25\", \"citation\": \"2025 ONWSIAT 1549 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1198/25\", \"decisionDate\": \"2025-12-29\", \"keywords\": \"worker — pandemic — objectively traumatic — workplace — conflicts\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1549\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1548",
+    "title": "Decision No. 1332/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "knee",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1548\", \"url\": \"https://canlii.ca/t/kjm4l\", \"title\": \"Decision No. 1332/25\", \"citation\": \"2025 ONWSIAT 1548 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1332/25\", \"decisionDate\": \"2025-12-29\", \"keywords\": \"work — pain — noted — sedentary — knee\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1548\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1547",
+    "title": "Decision No. 1334/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "labral tear, tear, chronic fatigue, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1547\", \"url\": \"https://canlii.ca/t/kjm4m\", \"title\": \"Decision No. 1334/25\", \"citation\": \"2025 ONWSIAT 1547 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1334/25\", \"decisionDate\": \"2025-12-29\", \"keywords\": \"labral tear — worker — workplace accident — work-related injury — combined femoral acetabular impingement\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1547\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1546",
+    "title": "Decision No. 1181/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "shoulder, chronic fatigue, impairment, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1546\", \"url\": \"https://canlii.ca/t/kjm42\", \"title\": \"Decision No. 1181/25\", \"citation\": \"2025 ONWSIAT 1546 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1181/25\", \"decisionDate\": \"2025-12-29\", \"keywords\": \"worker — pain — impairment — shoulder — psychotraumatic disability\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1546\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1545",
+    "title": "Decision No. 1310/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "hip",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1545\", \"url\": \"https://canlii.ca/t/kjm4h\", \"title\": \"Decision No. 1310/25\", \"citation\": \"2025 ONWSIAT 1545 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1310/25\", \"decisionDate\": \"2025-12-29\", \"keywords\": \"worker was an apprentice — roofer — dependent contractor — apprenticeship — average earnings\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1545\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1544",
+    "title": "Decision No. 1325/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "back injury, disc, strain, chronic fatigue, disability, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1544\", \"url\": \"https://canlii.ca/t/kjm4j\", \"title\": \"Decision No. 1325/25\", \"citation\": \"2025 ONWSIAT 1544 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1325/25\", \"decisionDate\": \"2025-12-29\", \"keywords\": \"worker — low back strain injury — disc herniation — entitlement — psychotraumatic disability\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1544\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1543",
+    "title": "Decision No. 1250/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "shoulder, depression, chronic fatigue, impairment, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1543\", \"url\": \"https://canlii.ca/t/kjm47\", \"title\": \"Decision No. 1250/25\", \"citation\": \"2025 ONWSIAT 1543 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1250/25\", \"decisionDate\": \"2025-12-24\", \"keywords\": \"worker — impairment — depression — psychotraumatic disability — shoulder pain\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1543\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1542",
+    "title": "Decision No. 1027/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1542\", \"url\": \"https://canlii.ca/t/kjgtd\", \"title\": \"Decision No. 1027/25\", \"citation\": \"2025 ONWSIAT 1542 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1027/25\", \"decisionDate\": \"2025-12-23\", \"keywords\": \"worker — representative — date — dispatcher — employer\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1542\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1541",
+    "title": "Decision No. 871/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "hip, ankle, chronic fatigue, impairment, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1541\", \"url\": \"https://canlii.ca/t/kjgvb\", \"title\": \"Decision No. 871/25\", \"citation\": \"2025 ONWSIAT 1541 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"871/25\", \"decisionDate\": \"2025-12-23\", \"keywords\": \"worker — hip injury — work-related injury disease — ankles — permanent impairment\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1541\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1540",
+    "title": "Decision No. 1215/23R",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "back injury, chronic fatigue, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1540\", \"url\": \"https://canlii.ca/t/kjgtn\", \"title\": \"Decision No. 1215/23R\", \"citation\": \"2025 ONWSIAT 1540 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1215/23R\", \"decisionDate\": \"2025-12-23\", \"keywords\": \"reconsideration request — fundamental error — low back injury — worker submits — hot coal incident\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1540\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1499",
+    "title": "Decision No. 1149/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "IME"
+    ],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1499\", \"url\": \"https://canlii.ca/t/kjblp\", \"title\": \"Decision No. 1149/25\", \"citation\": \"2025 ONWSIAT 1499 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1149/25\", \"decisionDate\": \"2025-12-16\", \"keywords\": \"worker — work — accident employer — minimum wage — part-time hours\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1499\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1497",
+    "title": "Decision No. 1312/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1497\", \"url\": \"https://canlii.ca/t/kjbm3\", \"title\": \"Decision No. 1312/25\", \"citation\": \"2025 ONWSIAT 1497 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1312/25\", \"decisionDate\": \"2025-12-16\", \"keywords\": \"entry-level wages — worker — partial benefits — lbs on an occasional basis — ability to work\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1497\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1496",
+    "title": "Decision No. 1309/25I",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "Medical records"
+    ],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1496\", \"url\": \"https://canlii.ca/t/kjbm2\", \"title\": \"Decision No. 1309/25I\", \"citation\": \"2025 ONWSIAT 1496 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1309/25I\", \"decisionDate\": \"2025-12-16\", \"keywords\": \"released to the employer — clinical notes — information — medical reports contained — access\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1496\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1495",
+    "title": "Decision No. 507/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "shoulder, tear, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1495\", \"url\": \"https://canlii.ca/t/kjbm4\", \"title\": \"Decision No. 507/25\", \"citation\": \"2025 ONWSIAT 1495 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"507/25\", \"decisionDate\": \"2025-12-16\", \"keywords\": \"full-thickness tear — worker — shoulder — entitlement — work-related\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1495\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1494",
+    "title": "Decision No. 1091/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "hip, foot, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1494\", \"url\": \"https://canlii.ca/t/kjblm\", \"title\": \"Decision No. 1091/25\", \"citation\": \"2025 ONWSIAT 1494 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1091/25\", \"decisionDate\": \"2025-12-16\", \"keywords\": \"worker — hip replacement — foot — work disruption — full benefits\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1494\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1493",
+    "title": "Decision No. 946/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "arm",
+    "outcome": "Allowed",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1493\", \"url\": \"https://canlii.ca/t/kjbmh\", \"title\": \"Decision No. 946/25\", \"citation\": \"2025 ONWSIAT 1493 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"946/25\", \"decisionDate\": \"2025-12-16\", \"keywords\": \"work — benefits — worker is entitled to full — deadlines — arm\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1493\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 85,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1492",
+    "title": "Decision No. 932/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "knee, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1492\", \"url\": \"https://canlii.ca/t/kjbmg\", \"title\": \"Decision No. 932/25\", \"citation\": \"2025 ONWSIAT 1492 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"932/25\", \"decisionDate\": \"2025-12-16\", \"keywords\": \"surgery — knee injury — work — period under review — swelling\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1492\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1491",
+    "title": "Decision No. 886/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic pain, depression, chronic fatigue, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1491\", \"url\": \"https://canlii.ca/t/kjbmc\", \"title\": \"Decision No. 886/25\", \"citation\": \"2025 ONWSIAT 1491 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"886/25\", \"decisionDate\": \"2025-12-16\", \"keywords\": \"worker — depression — work-related injury — chronic pain — entitlement to benefits\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1491\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1490",
+    "title": "Decision No. 1265/25I",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "ankle, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1490\", \"url\": \"https://canlii.ca/t/kjblw\", \"title\": \"Decision No. 1265/25I\", \"citation\": \"2025 ONWSIAT 1490 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1265/25I\", \"decisionDate\": \"2025-12-15\", \"keywords\": \"worker — access — ankle injury sustained — released to the employer — sensitive\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1490\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1489",
+    "title": "Decision No. 1202/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1489\", \"url\": \"https://canlii.ca/t/kjblr\", \"title\": \"Decision No. 1202/25\", \"citation\": \"2025 ONWSIAT 1489 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1202/25\", \"decisionDate\": \"2025-12-15\", \"keywords\": \"worker — pain — pre-existing conditions — labour market re-entry — earnings\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1489\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1448",
+    "title": "Decision No. 856/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "rotator cuff, labral tear, strain, tear, chronic fatigue, impairment",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1448\", \"url\": \"https://canlii.ca/t/kj5h9\", \"title\": \"Decision No. 856/25\", \"citation\": \"2025 ONWSIAT 1448 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"856/25\", \"decisionDate\": \"2025-12-05\", \"keywords\": \"rotator cuff impingement tendinopathy — worker — labral tear — strain with rotator cuff impingement — ongoing work-related impairment\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1448\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1447",
+    "title": "Decision No. 1594/24R",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1447\", \"url\": \"https://canlii.ca/t/kj5gz\", \"title\": \"Decision No. 1594/24R\", \"citation\": \"2025 ONWSIAT 1447 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1594/24R\", \"decisionDate\": \"2025-12-04\", \"keywords\": \"internally coherent — worker representative — entitlement to benefits — contemporaneous evidence — threshold test\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1447\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1446",
+    "title": "Decision No. 818/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue, impairment, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1446\", \"url\": \"https://canlii.ca/t/kj5h5\", \"title\": \"Decision No. 818/25\", \"citation\": \"2025 ONWSIAT 1446 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"818/25\", \"decisionDate\": \"2025-12-04\", \"keywords\": \"worker — psychotraumatic disability — impairment — compatible with most useful function — work accident\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1446\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1445",
+    "title": "Decision No. 828/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1445\", \"url\": \"https://canlii.ca/t/kj5h7\", \"title\": \"Decision No. 828/25\", \"citation\": \"2025 ONWSIAT 1445 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"828/25\", \"decisionDate\": \"2025-12-04\", \"keywords\": \"worker — pre-injury duties — yard assignments — significant deterioration — recurrence\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1445\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1444",
+    "title": "Decision No. 1106/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "knee, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1444\", \"url\": \"https://canlii.ca/t/kj5gf\", \"title\": \"Decision No. 1106/25\", \"citation\": \"2025 ONWSIAT 1444 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1106/25\", \"decisionDate\": \"2025-12-04\", \"keywords\": \"worker — knee — arising from the above-referenced — pre-injury hours — work\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1444\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1443",
+    "title": "Decision No. 842/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1443\", \"url\": \"https://canlii.ca/t/kj5h8\", \"title\": \"Decision No. 842/25\", \"citation\": \"2025 ONWSIAT 1443 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"842/25\", \"decisionDate\": \"2025-12-04\", \"keywords\": \"work-related complex regional pain syndrome — fall — worker is entitled — sequential — ongoing maintenance treatment\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1443\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1442",
+    "title": "Decision No. 1160/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "disc, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1442\", \"url\": \"https://canlii.ca/t/kj5gk\", \"title\": \"Decision No. 1160/25\", \"citation\": \"2025 ONWSIAT 1442 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1160/25\", \"decisionDate\": \"2025-12-04\", \"keywords\": \"pre-existing condition — worker — severity than a normal person — degenerative — liable to develop a disability\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1442\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1441",
+    "title": "Decision No. 1109/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1441\", \"url\": \"https://canlii.ca/t/kj5gg\", \"title\": \"Decision No. 1109/25\", \"citation\": \"2025 ONWSIAT 1441 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1109/25\", \"decisionDate\": \"2025-12-04\", \"keywords\": \"co-worker — worker — fight — confrontation — assault\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1441\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1440",
+    "title": "Decision No. 708/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1440\", \"url\": \"https://canlii.ca/t/kj5h3\", \"title\": \"Decision No. 708/25\", \"citation\": \"2025 ONWSIAT 1440 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"708/25\", \"decisionDate\": \"2025-12-04\", \"keywords\": \"worker — disability benefits — average earnings — accident — estate representative\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1440\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1439",
+    "title": "Decision No. 986/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue, impairment, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1439\", \"url\": \"https://canlii.ca/t/kj18r\", \"title\": \"Decision No. 986/25\", \"citation\": \"2025 ONWSIAT 1439 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"986/25\", \"decisionDate\": \"2025-12-03\", \"keywords\": \"worker — impairment — benefit for psychotraumatic disability — rating — complex integrated cerebral functions\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1439\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1397",
+    "title": "Decision No. 1101/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1397\", \"url\": \"https://canlii.ca/t/khvv1\", \"title\": \"Decision No. 1101/25\", \"citation\": \"2025 ONWSIAT 1397 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1101/25\", \"decisionDate\": \"2025-11-24\", \"keywords\": \"worker — modified work — duties — noted — proposed resolution\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1397\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1396",
+    "title": "Decision No. 1292/20R",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1396\", \"url\": \"https://canlii.ca/t/khvvl\", \"title\": \"Decision No. 1292/20R\", \"citation\": \"2025 ONWSIAT 1396 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1292/20R\", \"decisionDate\": \"2025-11-24\", \"keywords\": \"pre-injury hours — worker — non-permanent employment — clarification — partial benefits\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1396\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1395",
+    "title": "Decision No. 1195/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1395\", \"url\": \"https://canlii.ca/t/khvvg\", \"title\": \"Decision No. 1195/25\", \"citation\": \"2025 ONWSIAT 1395 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1195/25\", \"decisionDate\": \"2025-11-24\", \"keywords\": \"worker — entry-level wages — earnings — median level — technical banking transactions\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1395\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1394",
+    "title": "Decision No. 1157/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1394\", \"url\": \"https://canlii.ca/t/khvv9\", \"title\": \"Decision No. 1157/25\", \"citation\": \"2025 ONWSIAT 1394 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1157/25\", \"decisionDate\": \"2025-11-24\", \"keywords\": \"worker — age-related changes — worsening — reassessment — permanent disability\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1394\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1393",
+    "title": "Decision No. 104/25ER",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "IME"
+    ],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1393\", \"url\": \"https://canlii.ca/t/khvv0\", \"title\": \"Decision No. 104/25ER\", \"citation\": \"2025 ONWSIAT 1393 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"104/25ER\", \"decisionDate\": \"2025-11-24\", \"keywords\": \"worker — staleness — merits — time extension application — reconsideration\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1393\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1392",
+    "title": "Decision No. 1142/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "neck, back injury, sprain, strain, chronic fatigue, impairment, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1392\", \"url\": \"https://canlii.ca/t/khvv7\", \"title\": \"Decision No. 1142/25\", \"citation\": \"2025 ONWSIAT 1392 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1142/25\", \"decisionDate\": \"2025-11-21\", \"keywords\": \"worker — work-related injury — cervical spine stenosis — sprain strain injuries — ongoing work-related impairment\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1392\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1391",
+    "title": "Decision No. 1116/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "stress, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1391\", \"url\": \"https://canlii.ca/t/khvv4\", \"title\": \"Decision No. 1116/25\", \"citation\": \"2025 ONWSIAT 1391 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1116/25\", \"decisionDate\": \"2025-11-21\", \"keywords\": \"worker — substantial work-related stressor — sexual harassment — subordinate co-worker — screensaver\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1391\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1390",
+    "title": "Decision No. 1117/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1390\", \"url\": \"https://canlii.ca/t/khvv5\", \"title\": \"Decision No. 1117/25\", \"citation\": \"2025 ONWSIAT 1390 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1117/25\", \"decisionDate\": \"2025-11-21\", \"keywords\": \"worker — third-party investigator — sexual harassment — earnings — subordinate co-worker\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1390\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1389",
+    "title": "Decision No. 1205/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "hand, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1389\", \"url\": \"https://canlii.ca/t/khvvk\", \"title\": \"Decision No. 1205/25\", \"citation\": \"2025 ONWSIAT 1389 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1205/25\", \"decisionDate\": \"2025-11-21\", \"keywords\": \"modified duties — work — entitlement to full benefits — suitable — thumb\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1389\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1388",
+    "title": "Decision No. 1199/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1388\", \"url\": \"https://canlii.ca/t/khvvh\", \"title\": \"Decision No. 1199/25\", \"citation\": \"2025 ONWSIAT 1388 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1199/25\", \"decisionDate\": \"2025-11-21\", \"keywords\": \"surgery — entitlement to full benefits — earnings — recently completed a return-to-work plan — advised that the worker\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1388\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1348",
+    "title": "Decision No. 741/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "IME"
+    ],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1348\", \"url\": \"https://canlii.ca/t/khlkx\", \"title\": \"Decision No. 741/25\", \"citation\": \"2025 ONWSIAT 1348 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"741/25\", \"decisionDate\": \"2025-11-13\", \"keywords\": \"worker — graduated — modified job — full-time hours — floor walking\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1348\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1347",
+    "title": "Decision No. 1749/23R",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1347\", \"url\": \"https://canlii.ca/t/khlkv\", \"title\": \"Decision No. 1749/23R\", \"citation\": \"2025 ONWSIAT 1347 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1749/23R\", \"decisionDate\": \"2025-11-13\", \"keywords\": \"worker — reconsideration — earnings — income — threshold test\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1347\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1346",
+    "title": "Decision No. 709/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue, impairment, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1346\", \"url\": \"https://canlii.ca/t/khlkw\", \"title\": \"Decision No. 709/25\", \"citation\": \"2025 ONWSIAT 1346 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"709/25\", \"decisionDate\": \"2025-11-13\", \"keywords\": \"worker — modified duties — return to work — impairment — injury\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1346\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1345",
+    "title": "Decision No. 1229/24I",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1345\", \"url\": \"https://canlii.ca/t/khlks\", \"title\": \"Decision No. 1229/24I\", \"citation\": \"2025 ONWSIAT 1345 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1229/24I\", \"decisionDate\": \"2025-11-13\", \"keywords\": \"worker — large cell lymphoma — benzene — exposure to uranium ore dust — chlorinated solvents\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1345\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1344",
+    "title": "Decision No. 1082/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1344\", \"url\": \"https://canlii.ca/t/khlkm\", \"title\": \"Decision No. 1082/25\", \"citation\": \"2025 ONWSIAT 1344 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1082/25\", \"decisionDate\": \"2025-11-13\", \"keywords\": \"worker — manager — motor vehicle accident — stated — employer\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1344\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1343",
+    "title": "Decision No. 1084/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1343\", \"url\": \"https://canlii.ca/t/khlkn\", \"title\": \"Decision No. 1084/25\", \"citation\": \"2025 ONWSIAT 1343 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1084/25\", \"decisionDate\": \"2025-11-13\", \"keywords\": \"entitled to survivor benefits — dependants — deceased worker — dependent child — net average earnings\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1343\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1342",
+    "title": "Decision No. 1102/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1342\", \"url\": \"https://canlii.ca/t/khlkp\", \"title\": \"Decision No. 1102/25\", \"citation\": \"2025 ONWSIAT 1342 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1102/25\", \"decisionDate\": \"2025-11-13\", \"keywords\": \"worker — work — proposed resolution — noted — lock-in date\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1342\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1341",
+    "title": "Decision No. 1226/18R4",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1341\", \"url\": \"https://canlii.ca/t/khlkr\", \"title\": \"Decision No. 1226/18R4\", \"citation\": \"2025 ONWSIAT 1341 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1226/18R4\", \"decisionDate\": \"2025-11-13\", \"keywords\": \"post-injury earnings — worker — employer — mid-range wages — bias\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1341\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1340",
+    "title": "Decision No. 167/24",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1340\", \"url\": \"https://canlii.ca/t/khlkt\", \"title\": \"Decision No. 167/24\", \"citation\": \"2025 ONWSIAT 1340 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"167/24\", \"decisionDate\": \"2025-11-13\", \"keywords\": \"worker — symptoms — paramedic — significant deterioration — recurrence\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1340\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1339",
+    "title": "Decision No. 786/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "carpal tunnel, chronic fatigue, impairment",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1339\", \"url\": \"https://canlii.ca/t/khll0\", \"title\": \"Decision No. 786/25\", \"citation\": \"2025 ONWSIAT 1339 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"786/25\", \"decisionDate\": \"2025-11-12\", \"keywords\": \"cubital tunnel syndrome — worker — pre-existing right carpal tunnel syndrome — rating — impairment\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1339\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1298",
+    "title": "Decision No. 976/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "knee",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1298\", \"url\": \"https://canlii.ca/t/khb0w\", \"title\": \"Decision No. 976/25\", \"citation\": \"2025 ONWSIAT 1298 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"976/25\", \"decisionDate\": \"2025-10-31\", \"keywords\": \"worker — private investigator — return to work plan — knee — pre-existing conditions\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1298\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1297",
+    "title": "Decision No. 1148/24R",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "knee",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1297\", \"url\": \"https://canlii.ca/t/khb03\", \"title\": \"Decision No. 1148/24R\", \"citation\": \"2025 ONWSIAT 1297 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1148/24R\", \"decisionDate\": \"2025-10-31\", \"keywords\": \"worker — knee — reconsideration — evidence — threshold test\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1297\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1296",
+    "title": "Decision No. 742/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1296\", \"url\": \"https://canlii.ca/t/khb0l\", \"title\": \"Decision No. 742/25\", \"citation\": \"2025 ONWSIAT 1296 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"742/25\", \"decisionDate\": \"2025-10-31\", \"keywords\": \"accident employer — work — storage trailer — benefits — suitable\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1296\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1295",
+    "title": "Decision No. 1406/24R",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "concussion, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1295\", \"url\": \"https://canlii.ca/t/khb04\", \"title\": \"Decision No. 1406/24R\", \"citation\": \"2025 ONWSIAT 1295 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1406/24R\", \"decisionDate\": \"2025-10-31\", \"keywords\": \"worker — concussion — reconsideration — injury — threshold test\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1295\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1294",
+    "title": "Decision No. 920/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "ankle, foot, chronic fatigue, impairment",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1294\", \"url\": \"https://canlii.ca/t/khb0t\", \"title\": \"Decision No. 920/25\", \"citation\": \"2025 ONWSIAT 1294 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"920/25\", \"decisionDate\": \"2025-10-31\", \"keywords\": \"worker — modified work duties — foot ankle — employer — permanent impairment\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1294\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1293",
+    "title": "Decision No. 1746/22R",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "back injury, disc, strain, nerve damage",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1293\", \"url\": \"https://canlii.ca/t/khb06\", \"title\": \"Decision No. 1746/22R\", \"citation\": \"2025 ONWSIAT 1293 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1746/22R\", \"decisionDate\": \"2025-10-31\", \"keywords\": \"worker — neural foraminal stenosis — low back strain — reconsideration — pre-existing degenerative\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1293\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1292",
+    "title": "Decision No. 1086/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "back injury, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "IME"
+    ],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1292\", \"url\": \"https://canlii.ca/t/khb02\", \"title\": \"Decision No. 1086/25\", \"citation\": \"2025 ONWSIAT 1292 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1086/25\", \"decisionDate\": \"2025-10-31\", \"keywords\": \"worker — time limit — pre-existing condition — avascular necrosis — spinal stenosis\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1292\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1291",
+    "title": "Decision No. 949/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "PTSD, stress",
+    "outcome": "Dismissed",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1291\", \"url\": \"https://canlii.ca/t/khb0v\", \"title\": \"Decision No. 949/25\", \"citation\": \"2025 ONWSIAT 1291 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"949/25\", \"decisionDate\": \"2025-10-30\", \"keywords\": \"worker — non-compensable motor vehicle accident — post-traumatic stress disorder — workplace accident — reporting\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1291\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 80,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1290",
+    "title": "Decision No. 1049/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1290\", \"url\": \"https://canlii.ca/t/khb01\", \"title\": \"Decision No. 1049/25\", \"citation\": \"2025 ONWSIAT 1290 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1049/25\", \"decisionDate\": \"2025-10-30\", \"keywords\": \"worker — physiotherapy — surgery — weight loss — treatment\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1290\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1289",
+    "title": "Decision No. 554/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1289\", \"url\": \"https://canlii.ca/t/khb09\", \"title\": \"Decision No. 554/25\", \"citation\": \"2025 ONWSIAT 1289 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"554/25\", \"decisionDate\": \"2025-10-30\", \"keywords\": \"worker — labour market re-entry — employer — modified work — suitable\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1289\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1248",
+    "title": "Decision No. 1045/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "nerve damage, chronic fatigue, hearing loss",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1248\", \"url\": \"https://canlii.ca/t/kh8zc\", \"title\": \"Decision No. 1045/25\", \"citation\": \"2025 ONWSIAT 1248 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1045/25\", \"decisionDate\": \"2025-10-20\", \"keywords\": \"ear — tinnitus — sensorineural hearing loss — worker — asymmetrical hearing loss\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1248\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1247",
+    "title": "Decision No. 680/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "knee, chronic fatigue, impairment",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1247\", \"url\": \"https://canlii.ca/t/kh8zx\", \"title\": \"Decision No. 680/25\", \"citation\": \"2025 ONWSIAT 1247 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"680/25\", \"decisionDate\": \"2025-10-17\", \"keywords\": \"worker — pre-existing condition — knee — impairment — meniscus\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1247\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1246",
+    "title": "Decision No. 1050/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1246\", \"url\": \"https://canlii.ca/t/kh8zf\", \"title\": \"Decision No. 1050/25\", \"citation\": \"2025 ONWSIAT 1246 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1050/25\", \"decisionDate\": \"2025-10-17\", \"keywords\": \"redetermination — worker — low — deterioration — work-related injury disease\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1246\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1245",
+    "title": "Decision No. 679/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1245\", \"url\": \"https://canlii.ca/t/kh8zw\", \"title\": \"Decision No. 679/25\", \"citation\": \"2025 ONWSIAT 1245 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"679/25\", \"decisionDate\": \"2025-10-17\", \"keywords\": \"downside risk — cost relief — employer — entitlement — pre-existing condition\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1245\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1244",
+    "title": "Decision No. 200/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "knee, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1244\", \"url\": \"https://canlii.ca/t/kh8zn\", \"title\": \"Decision No. 200/25\", \"citation\": \"2025 ONWSIAT 1244 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"200/25\", \"decisionDate\": \"2025-10-17\", \"keywords\": \"worker — knee injury — tibial plateau — overuse — symptomatic\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1244\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1243",
+    "title": "Decision No. 890/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1243\", \"url\": \"https://canlii.ca/t/kh908\", \"title\": \"Decision No. 890/25\", \"citation\": \"2025 ONWSIAT 1243 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"890/25\", \"decisionDate\": \"2025-10-17\", \"keywords\": \"worker — ability to work entry-level wages — noted — typical workday no prolonged — proposed resolution\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1243\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1242",
+    "title": "Decision No. 1030/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1242\", \"url\": \"https://canlii.ca/t/kh8z9\", \"title\": \"Decision No. 1030/25\", \"citation\": \"2025 ONWSIAT 1242 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1030/25\", \"decisionDate\": \"2025-10-17\", \"keywords\": \"worker — audiogram — occupational noise exposure — loss — ear\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1242\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1241",
+    "title": "Decision No. 1046/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "rotator cuff, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1241\", \"url\": \"https://canlii.ca/t/kh8zd\", \"title\": \"Decision No. 1046/25\", \"citation\": \"2025 ONWSIAT 1241 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1046/25\", \"decisionDate\": \"2025-10-17\", \"keywords\": \"pre-existing condition — acromion — rotator cuff — bone spur — impingement syndrome\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1241\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1240",
+    "title": "Decision No. 1508/24",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "elbow, wrist, strain",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1240\", \"url\": \"https://canlii.ca/t/kh8zk\", \"title\": \"Decision No. 1508/24\", \"citation\": \"2025 ONWSIAT 1240 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1508/24\", \"decisionDate\": \"2025-10-17\", \"keywords\": \"worker — shoveling — repetitive strain — wrist extensors — elbow\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1240\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1239",
+    "title": "Decision No. 835/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "rotator cuff, tear",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1239\", \"url\": \"https://canlii.ca/t/kh905\", \"title\": \"Decision No. 835/25\", \"citation\": \"2025 ONWSIAT 1239 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"835/25\", \"decisionDate\": \"2025-10-17\", \"keywords\": \"pre-existing condition — worker — relevant non-occupational diagnoses — rotator cuff tear — refd\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1239\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1198",
+    "title": "Decision No. 1009/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "anxiety, chronic fatigue, impairment, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1198\", \"url\": \"https://canlii.ca/t/kh12v\", \"title\": \"Decision No. 1009/25\", \"citation\": \"2025 ONWSIAT 1198 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1009/25\", \"decisionDate\": \"2025-10-09\", \"keywords\": \"psychotraumatic disability — anxiety — complex integrated cerebral functions — impairment — mild to moderate emotional disturbance\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1198\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1197",
+    "title": "Decision No. 1006/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "anxiety, chronic fatigue, impairment, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1197\", \"url\": \"https://canlii.ca/t/kh12t\", \"title\": \"Decision No. 1006/25\", \"citation\": \"2025 ONWSIAT 1197 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1006/25\", \"decisionDate\": \"2025-10-09\", \"keywords\": \"psychotraumatic disability — impairment — anxiety — moderate — worker has difficulty\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1197\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1196",
+    "title": "Decision No. 1631/22I3",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "mental health, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1196\", \"url\": \"https://canlii.ca/t/kh12z\", \"title\": \"Decision No. 1631/22I3\", \"citation\": \"2025 ONWSIAT 1196 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1631/22I3\", \"decisionDate\": \"2025-10-09\", \"keywords\": \"worker — non-agency attendants — work-related psychological condition — entitlement — health care\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1196\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1195",
+    "title": "Decision No. 940/25E",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [
+      "IME"
+    ],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1195\", \"url\": \"https://canlii.ca/t/kh13r\", \"title\": \"Decision No. 940/25E\", \"citation\": \"2025 ONWSIAT 1195 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"940/25E\", \"decisionDate\": \"2025-10-09\", \"keywords\": \"worker — psychotraumatic — duties offered by the employer — time extension — representative\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1195\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1194",
+    "title": "Decision No. 921/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "back injury, disc, sprain, strain, tear, chronic fatigue, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1194\", \"url\": \"https://canlii.ca/t/kh13p\", \"title\": \"Decision No. 921/25\", \"citation\": \"2025 ONWSIAT 1194 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"921/25\", \"decisionDate\": \"2025-10-09\", \"keywords\": \"low back sprain strain injury — worker — work-related low back sprain strain — disc tear — entitlement\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1194\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1193",
+    "title": "Decision No. 1202/21",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "Unknown",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1193\", \"url\": \"https://canlii.ca/t/kh12x\", \"title\": \"Decision No. 1202/21\", \"citation\": \"2025 ONWSIAT 1193 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1202/21\", \"decisionDate\": \"2025-10-09\", \"keywords\": \"worker — noted — pain — work — low\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1193\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1192",
+    "title": "Decision No. 829/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "shoulder",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1192\", \"url\": \"https://canlii.ca/t/kh13k\", \"title\": \"Decision No. 829/25\", \"citation\": \"2025 ONWSIAT 1192 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"829/25\", \"decisionDate\": \"2025-10-09\", \"keywords\": \"worker — shoulder — electrician — work-related accident — permanent restrictions\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1192\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": true,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1191",
+    "title": "Decision No. 792/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "shoulder, rotator cuff, chronic fatigue",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1191\", \"url\": \"https://canlii.ca/t/kh13h\", \"title\": \"Decision No. 792/25\", \"citation\": \"2025 ONWSIAT 1191 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"792/25\", \"decisionDate\": \"2025-10-08\", \"keywords\": \"pre-existing condition — rotator cuff — impingement — subacromial space — shoulder\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1191\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1190",
+    "title": "Decision No. 616/25",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "mental health, chronic fatigue, disability",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1190\", \"url\": \"https://canlii.ca/t/kh136\", \"title\": \"Decision No. 616/25\", \"citation\": \"2025 ONWSIAT 1190 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"616/25\", \"decisionDate\": \"2025-10-08\", \"keywords\": \"worker — long-term disability benefits — father — mental health crisis — work\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1190\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": false
+    }
+  },
+  {
+    "case_id": "2025onwsiat1189",
+    "title": "Decision No. 937/25I",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "back injury, knee, injury",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1189\", \"url\": \"https://canlii.ca/t/kh13q\", \"title\": \"Decision No. 937/25I\", \"citation\": \"2025 ONWSIAT 1189 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"937/25I\", \"decisionDate\": \"2025-10-08\", \"keywords\": \"worker — employer — low back pain — access — knee injury\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1189\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": false,
+      "work_related": false,
+      "injury": true
+    }
+  },
+  {
+    "case_id": "2025onwsiat1117",
+    "title": "Decision No. 1376/24",
+    "date": "Unknown",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "url": "",
+    "condition": "knee",
+    "outcome": "Unknown",
+    "evidence_cited": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition noted",
+        "success_indicator": false
+      }
+    ],
+    "snippet": "{ \"databaseId\": \"onwsiat\", \"caseId\": \"2025onwsiat1117\", \"url\": \"https://canlii.ca/t/kglsg\", \"title\": \"Decision No. 1376/24\", \"citation\": \"2025 ONWSIAT 1117 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"1376/24\", \"decisionDate\": \"2025-09-18\", \"keywords\": \"pre-existing condition — worker — rating — knee — refd\", \"topics\": \"\", \"concatenatedId\": \"2025onwsiat1117\" }...",
+    "extraction_version": "v3.0-keywords",
+    "extraction_confidence": 0,
+    "context_flags": {
+      "pre_existing_condition": true,
+      "work_related": false,
+      "injury": false
+    }
+  }
+]
