@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-05T06:54:39.423Z",
+  "lastUpdated": "2026-04-05T12:34:03.706Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14775,
+      "totalPosts": 14800,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T06:54:31.774Z"
+      "lastSeen": "2026-04-05T12:33:54.298Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14711,
+      "totalPosts": 14736,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T06:54:33.433Z"
+      "lastSeen": "2026-04-05T12:33:56.507Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14571,
+      "totalPosts": 14596,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T06:54:35.138Z"
+      "lastSeen": "2026-04-05T12:33:58.613Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14805,
+      "totalPosts": 14830,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T06:54:36.655Z"
+      "lastSeen": "2026-04-05T12:34:00.572Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14740,
+      "totalPosts": 14764,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T06:54:38.420Z"
+      "lastSeen": "2026-04-05T12:34:02.702Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
-      "author": "rob-w.bsky.social",
-      "engagement": 11,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
-      "author": "rob-w.bsky.social",
-      "engagement": 11,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Many people with far greater knowledge than I possess have discussed accessibility overlays, but I think the more voices and inputs in the public corpus the better.\n\nAccessibility overlays are harmful and make things worse, not better. Avoid them.\n\nvale.rocks/posts/access...\n\n#Accessibility #a11y",
-      "author": "vale.rocks",
-      "engagement": 22,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "Thank you so much @arevya.bsky.social for all the kind words and videos about our little event! \n\nCheck out their awesome video all about Games for Blind gamers jam! \n\nwww.tiktok.com/@arevyagamin...\n\n#A11y #Gamedev #Gaming #Accessibility #Gamejam",
-      "author": "ericbomb.bsky.social",
-      "engagement": 16,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
       "author": "bschillace.brandyschillace.com",
@@ -338,24 +302,60 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Da mir das Thema sehr am Herzen liegt: Bitte erwäge diese Petition zu unterzeichnen um die Gleichberechtigung und Inklusion von Menschen mit Behinderung zu schützen. Dankeee 🧡 \n\nwww.change.org/p/stoppt-die...\n\n#inklusion #disability #DisabilityRights #furry\n\n📷 Ceferix Folf\n🧵 @whitewingcreations.de",
+      "author": "toasterthefox.bsky.social",
+      "engagement": 23,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 99,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 24,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
+      "author": "rob-w.bsky.social",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "accessibility",
-      "count": 43
+      "count": 45
     },
     {
       "keyword": "disabilityrights",
       "count": 41
     },
     {
-      "keyword": "a11y",
-      "count": 30
+      "keyword": "disabilityjustice",
+      "count": 28
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 27
+      "keyword": "a11y",
+      "count": 25
     },
     {
       "keyword": "cripthevote",
@@ -370,12 +370,32 @@
       "count": 16
     },
     {
+      "keyword": "disabilitysky",
+      "count": 14
+    },
+    {
       "keyword": "nokings3",
       "count": 14
     },
     {
       "keyword": "nokings2026",
       "count": 14
+    },
+    {
+      "keyword": "cripminds",
+      "count": 13
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 13
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 13
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 13
     },
     {
       "keyword": "nokings",
@@ -386,40 +406,20 @@
       "count": 13
     },
     {
-      "keyword": "disabilitysky",
-      "count": 11
-    },
-    {
-      "keyword": "cripminds",
+      "keyword": "userexperience",
       "count": 10
     },
     {
-      "keyword": "accessibility disabilitysky",
-      "count": 10
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 10
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
-      "count": 10
-    },
-    {
-      "keyword": "digitalaccessibility",
+      "keyword": "honesty",
       "count": 9
     },
     {
-      "keyword": "inclusivedesign",
+      "keyword": "demodesign",
       "count": 9
     },
     {
-      "keyword": "disabilityrights nokings3",
+      "keyword": "trust",
       "count": 9
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 7
     }
   ]
 }
