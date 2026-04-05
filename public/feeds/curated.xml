@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 05 Apr 2026 09:40:53 GMT</lastBuildDate>
-    <pubDate>Sun, 05 Apr 2026 09:40:53 GMT</pubDate>
+    <lastBuildDate>Sun, 05 Apr 2026 21:39:50 GMT</lastBuildDate>
+    <pubDate>Sun, 05 Apr 2026 21:39:50 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,27 +24,7 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Sun, 05 Apr 2026 09:40:53 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>‘Namesake’ Tackles a Colonial Legacy. And a Nation’s Resistance</title>
-      <link>https://thetyee.ca/Culture/2026/04/03/Namesake-Tackles-Colonial-Legacy-Nation-Resistance/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Culture/2026/04/03/Namesake-Tackles-Colonial-Legacy-Nation-Resistance/</guid>
-      <description><![CDATA[The film previewed to full houses in Powell River, and is now headed to Canada’s biggest documentary festivals.]]></description>
-      <pubDate>Sat, 04 Apr 2026 00:10:00 GMT</pubDate>
-      <category>Critical</category>
-      <dc:creator>3mpwr App Curator</dc:creator>
-    </item>
-
-    <item>
-      <title>A Calgary Museum Reinvents Itself</title>
-      <link>https://thetyee.ca/Culture/2026/04/03/Calgary-Museum-Reinvents-Itself/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Culture/2026/04/03/Calgary-Museum-Reinvents-Itself/</guid>
-      <description><![CDATA[The Glenbow reopens as the JR Centre for Arts & Culture next year. Its updates extend past physical renovations.]]></description>
-      <pubDate>Sat, 04 Apr 2026 00:30:00 GMT</pubDate>
+      <pubDate>Sun, 05 Apr 2026 21:39:50 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
