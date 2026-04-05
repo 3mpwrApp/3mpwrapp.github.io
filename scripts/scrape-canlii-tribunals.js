@@ -294,7 +294,9 @@ async function fetchDecisionHTML(caseId, database) {
   
   try {
     const data = await httpsGet(url);
-    return data;
+    // Parse JSON response and extract the HTML field
+    const jsonResponse = JSON.parse(data);
+    return jsonResponse.html || data; // Return HTML field, or raw data as fallback
   } catch (error) {
     console.error(`  ❌ Error fetching decision: ${error.message}`);
     return null;
@@ -314,7 +316,9 @@ function parseDecision(caseData, html, tribunalName) {
     outcome: extractOutcome(text),
     evidence_cited: extractEvidence(text),
     key_factors: extractKeyFactors(text),
-    snippet: text.substring(0, 500).trim() + "..."
+    snippet: text.substring(0, 500).trim() + "...",
+    extraction_version: "v4.0-fulltext",  // Track which scraper version collected this
+    raw_html: html.substring(0, 2000)  // Save more context for validation/debugging
   };
 }
 
