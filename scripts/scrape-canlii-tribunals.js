@@ -24,25 +24,10 @@ const BATCH_SIZE = 50;
 const CHANGED_SINCE = "1900-01-01"; // Some tribunals have decisions dating back to early 1900s
 
 const TRIBUNALS = {
-  // === ONTARIO ===
-  "onwsiat": {
-    "name": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
-    "database": "onwsiat",
-    "jurisdiction": "ON",
-    "search_terms": ["fibromyalgia", "chronic pain", "PTSD", "back injury", "disability"]
-  },
-  "onhrt": {
-    "name": "Human Rights Tribunal of Ontario",
-    "database": "onhrt",
-    "jurisdiction": "ON",
-    "search_terms": ["accommodation", "disability"]
-  },
-  "onca": {
-    "name": "Ontario Court of Appeal",
-    "database": "onca",
-    "jurisdiction": "ON",
-    "search_terms": ["disability", "WSIB", "accommodation"]
-  },
+  // === ONTARIO === (ALREADY COLLECTED - SKIPPING)
+  // "onwsiat": { ... },
+  // "onhrt": { ... },
+  // "onca": { ... },
   
   // === BRITISH COLUMBIA ===
   "bchrt": {
@@ -415,12 +400,15 @@ function generateSummary(allResults) {
 
 async function main() {
   console.log("=".repeat(60));
-  console.log("🔄 CanLII Tribunal Decision Scraper (Node.js)");
+  console.log("🇨🇦 CanLII Remaining Provinces Scraper");
   console.log("=".repeat(60));
   console.log(`Output directory: ${OUTPUT_DIR}`);
   console.log(`Max results per tribunal: UNLIMITED (up to 100,000)`);
   console.log(`Date range: ${CHANGED_SINCE} to today`);
-  console.log(`Tribunals/Courts: ${Object.keys(TRIBUNALS).length} across Canada`);
+  console.log(`Tribunals/Courts: ${Object.keys(TRIBUNALS).length} (Ontario already collected)`);
+  console.log();
+  console.log("⏭️  SKIPPING: Ontario (onwsiat, onhrt, onca) - Already have 4,632 decisions");
+  console.log("🆕 COLLECTING: BC, AB, SK, MB, QC, Atlantic, Territories, Federal");
   console.log();
   
   if (CANLII_API_KEY === "YOUR_FREE_API_KEY_HERE") {
