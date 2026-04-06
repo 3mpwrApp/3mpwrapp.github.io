@@ -1,0 +1,555 @@
+[
+  {
+    "template_id": "TBD-2023onwsiat1294",
+    "source_case_id": "2023onwsiat1294",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, impairment, disability",
+    "outcome": "Allowed",
+    "date": "2023-08-23",
+    "quality_score": 66,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [
+        "Vocational assessment"
+      ],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k0pgf",
+    "citation": "2023 ONWSIAT 1294 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, impairment, disability cases.",
+      "Medical evidence included: Vocational assessment."
+    ],
+    "applicability_score": 63
+  },
+  {
+    "template_id": "TBD-2023onwsiat1424",
+    "source_case_id": "2023onwsiat1424",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, hip",
+    "outcome": "Allowed",
+    "date": "2023-09-15",
+    "quality_score": 67,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      },
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k1637",
+    "citation": "2023 ONWSIAT 1424 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, hip cases.",
+      "Key issues addressed: Work-related determination, Permanent impairment"
+    ],
+    "applicability_score": 59
+  },
+  {
+    "template_id": "TBD-2025onwsiat1467",
+    "source_case_id": "2025onwsiat1467",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, impairment, injury",
+    "outcome": "Allowed",
+    "date": "2025-12-11",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kj5gd",
+    "citation": "2025 ONWSIAT 1467 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, impairment, injury cases.",
+      "Key issues addressed: Work-related determination"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat245",
+    "source_case_id": "2025onwsiat245",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, impairment",
+    "outcome": "Allowed",
+    "date": "2025-03-04",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kbwjx",
+    "citation": "2025 ONWSIAT 245 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, impairment cases.",
+      "Key issues addressed: Work-related determination"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat186",
+    "source_case_id": "2025onwsiat186",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "knee injury, impairment, knee",
+    "outcome": "Allowed",
+    "date": "2025-02-18",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kbmqw",
+    "citation": "2025 ONWSIAT 186 (CanLII)",
+    "usage_notes": [
+      "This template is for knee injury, impairment, knee cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2024onwsiat1429",
+    "source_case_id": "2024onwsiat1429",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, headache, PTSD, chronic fatigue, disability",
+    "outcome": "Allowed",
+    "date": "2024-09-16",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k8150",
+    "citation": "2024 ONWSIAT 1429 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, headache, PTSD, chronic fatigue, disability cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2024onwsiat1400",
+    "source_case_id": "2024onwsiat1400",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, arthritis, osteoarthritis, shoulder, wrist, strain, sprain",
+    "outcome": "Allowed",
+    "date": "2024-09-09",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k815d",
+    "citation": "2024 ONWSIAT 1400 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, arthritis, osteoarthritis, shoulder, wrist, strain, sprain cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2024onwsiat1267",
+    "source_case_id": "2024onwsiat1267",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, knee",
+    "outcome": "Allowed",
+    "date": "2024-08-12",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k7gqx",
+    "citation": "2024 ONWSIAT 1267 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, knee cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2024onwsiat836",
+    "source_case_id": "2024onwsiat836",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, neck, wrist",
+    "outcome": "Allowed",
+    "date": "2024-05-29",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k63rz",
+    "citation": "2024 ONWSIAT 836 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, neck, wrist cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2024onwsiat619",
+    "source_case_id": "2024onwsiat619",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, impairment, injury",
+    "outcome": "Allowed",
+    "date": "2024-04-17",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k5cqr",
+    "citation": "2024 ONWSIAT 619 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, impairment, injury cases.",
+      "Key issues addressed: Work-related determination"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2024onwsiat530",
+    "source_case_id": "2024onwsiat530",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, impairment",
+    "outcome": "Allowed",
+    "date": "2024-04-05",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Recurrence claimed",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k52fr",
+    "citation": "2024 ONWSIAT 530 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, impairment cases.",
+      "Key issues addressed: Recurrence claimed"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2023onwsiat1881",
+    "source_case_id": "2023onwsiat1881",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, chronic fatigue, injury",
+    "outcome": "Allowed",
+    "date": "2023-12-12",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k2l9d",
+    "citation": "2023 ONWSIAT 1881 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, chronic fatigue, injury cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat555",
+    "source_case_id": "2025onwsiat555",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, impairment",
+    "outcome": "Allowed",
+    "date": "2025-05-20",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kd5wn",
+    "citation": "2025 ONWSIAT 555 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, impairment cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat456",
+    "source_case_id": "2025onwsiat456",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "mental health, chronic fatigue, impairment",
+    "outcome": "Allowed",
+    "date": "2025-04-24",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcs5x",
+    "citation": "2025 ONWSIAT 456 (CanLII)",
+    "usage_notes": [
+      "This template is for mental health, chronic fatigue, impairment cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1073",
+    "source_case_id": "2024onwsiat1073",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, impairment",
+    "outcome": "Allowed",
+    "date": "2024-07-05",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k6wr1",
+    "citation": "2024 ONWSIAT 1073 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, impairment cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2023onwsiat1945",
+    "source_case_id": "2023onwsiat1945",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, impairment, disability",
+    "outcome": "Allowed",
+    "date": "2023-12-21",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k2t9f",
+    "citation": "2023 ONWSIAT 1945 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, impairment, disability cases."
+    ],
+    "applicability_score": 56
+  }
+]

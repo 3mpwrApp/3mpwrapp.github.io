@@ -1,0 +1,158 @@
+[
+  {
+    "template_id": "TBD-2024onwsiat1400",
+    "source_case_id": "2024onwsiat1400",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, arthritis, osteoarthritis, shoulder, wrist, strain, sprain",
+    "outcome": "Allowed",
+    "date": "2024-09-09",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k815d",
+    "citation": "2024 ONWSIAT 1400 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, arthritis, osteoarthritis, shoulder, wrist, strain, sprain cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat1096",
+    "source_case_id": "2025onwsiat1096",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "arthritis, osteoarthritis, shoulder, knee, tear",
+    "outcome": "Allowed",
+    "date": "2025-09-16",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kglt0",
+    "citation": "2025 ONWSIAT 1096 (CanLII)",
+    "usage_notes": [
+      "This template is for arthritis, osteoarthritis, shoulder, knee, tear cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1792",
+    "source_case_id": "2024onwsiat1792",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "arthritis, osteoarthritis, knee",
+    "outcome": "Allowed",
+    "date": "2024-11-20",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k97d4",
+    "citation": "2024 ONWSIAT 1792 (CanLII)",
+    "usage_notes": [
+      "This template is for arthritis, osteoarthritis, knee cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1087",
+    "source_case_id": "2024onwsiat1087",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "arthritis, osteoarthritis, knee, meniscus, ankle, tear",
+    "outcome": "Allowed",
+    "date": "2024-07-08",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k6wr5",
+    "citation": "2024 ONWSIAT 1087 (CanLII)",
+    "usage_notes": [
+      "This template is for arthritis, osteoarthritis, knee, meniscus, ankle, tear cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2023canlii101051",
+    "source_case_id": "2023canlii101051",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "lumbar, arthritis, osteoarthritis, hip",
+    "outcome": "Allowed",
+    "date": "2023-09-01",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k0x8z",
+    "citation": "2023 ONWSIAT 1352 (CanLII)",
+    "usage_notes": [
+      "This template is for lumbar, arthritis, osteoarthritis, hip cases."
+    ],
+    "applicability_score": 56
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "template_id": "TBD-2024onwsiat836",
+    "source_case_id": "2024onwsiat836",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, neck, wrist",
+    "outcome": "Allowed",
+    "date": "2024-05-29",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k63rz",
+    "citation": "2024 ONWSIAT 836 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, neck, wrist cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat501",
+    "source_case_id": "2025onwsiat501",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "neck",
+    "outcome": "Allowed",
+    "date": "2025-05-05",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcwl9",
+    "citation": "2025 ONWSIAT 501 (CanLII)",
+    "usage_notes": [
+      "This template is for neck cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat889",
+    "source_case_id": "2024onwsiat889",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "shoulder, neck",
+    "outcome": "Allowed",
+    "date": "2024-06-06",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k6cdq",
+    "citation": "2024 ONWSIAT 889 (CanLII)",
+    "usage_notes": [
+      "This template is for shoulder, neck cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat875",
+    "source_case_id": "2024onwsiat875",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "shoulder, neck",
+    "outcome": "Allowed",
+    "date": "2024-06-05",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k6761",
+    "citation": "2024 ONWSIAT 875 (CanLII)",
+    "usage_notes": [
+      "This template is for shoulder, neck cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat825",
+    "source_case_id": "2024onwsiat825",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "neck",
+    "outcome": "Allowed",
+    "date": "2024-05-27",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k63sq",
+    "citation": "2024 ONWSIAT 825 (CanLII)",
+    "usage_notes": [
+      "This template is for neck cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat299",
+    "source_case_id": "2024onwsiat299",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "neck, strain",
+    "outcome": "Allowed",
+    "date": "2024-02-22",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k48d3",
+    "citation": "2024 ONWSIAT 299 (CanLII)",
+    "usage_notes": [
+      "This template is for neck, strain cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2023onwsiat1897",
+    "source_case_id": "2023onwsiat1897",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "neck",
+    "outcome": "Allowed",
+    "date": "2023-12-15",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k2qgb",
+    "citation": "2023 ONWSIAT 1897 (CanLII)",
+    "usage_notes": [
+      "This template is for neck cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2023onwsiat1757",
+    "source_case_id": "2023onwsiat1757",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic pain, neck",
+    "outcome": "Allowed",
+    "date": "2023-11-17",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k2674",
+    "citation": "2023 ONWSIAT 1757 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic pain, neck cases."
+    ],
+    "applicability_score": 56
+  }
+]

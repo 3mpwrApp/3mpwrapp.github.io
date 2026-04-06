@@ -1,0 +1,98 @@
+[
+  {
+    "template_id": "TBD-2025onwsiat1228",
+    "source_case_id": "2025onwsiat1228",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "rotator cuff, tear",
+    "outcome": "Allowed",
+    "date": "2025-10-16",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition",
+        "type": "challenge"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kh58d",
+    "citation": "2025 ONWSIAT 1228 (CanLII)",
+    "usage_notes": [
+      "This template is for rotator cuff, tear cases.",
+      "Key issues addressed: Pre-existing condition"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat421",
+    "source_case_id": "2025onwsiat421",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "rotator cuff, tear",
+    "outcome": "Allowed",
+    "date": "2025-04-15",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcmsb",
+    "citation": "2025 ONWSIAT 421 (CanLII)",
+    "usage_notes": [
+      "This template is for rotator cuff, tear cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat393",
+    "source_case_id": "2024onwsiat393",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "rotator cuff, shoulder",
+    "outcome": "Allowed",
+    "date": "2024-03-08",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k4j93",
+    "citation": "2024 ONWSIAT 393 (CanLII)",
+    "usage_notes": [
+      "This template is for rotator cuff, shoulder cases."
+    ],
+    "applicability_score": 56
+  }
+]

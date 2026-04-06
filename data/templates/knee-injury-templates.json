@@ -1,0 +1,128 @@
+[
+  {
+    "template_id": "TBD-2025onwsiat186",
+    "source_case_id": "2025onwsiat186",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "knee injury, impairment, knee",
+    "outcome": "Allowed",
+    "date": "2025-02-18",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kbmqw",
+    "citation": "2025 ONWSIAT 186 (CanLII)",
+    "usage_notes": [
+      "This template is for knee injury, impairment, knee cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat945",
+    "source_case_id": "2025onwsiat945",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "knee injury, knee, injury",
+    "outcome": "Allowed",
+    "date": "2025-08-13",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kfpnl",
+    "citation": "2025 ONWSIAT 945 (CanLII)",
+    "usage_notes": [
+      "This template is for knee injury, knee, injury cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat718",
+    "source_case_id": "2025onwsiat718",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "knee injury, knee, tear",
+    "outcome": "Allowed",
+    "date": "2025-06-24",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kdt6k",
+    "citation": "2025 ONWSIAT 718 (CanLII)",
+    "usage_notes": [
+      "This template is for knee injury, knee, tear cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat281",
+    "source_case_id": "2025onwsiat281",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "knee injury, knee",
+    "outcome": "Allowed",
+    "date": "2025-03-17",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kc5lp",
+    "citation": "2025 ONWSIAT 281 (CanLII)",
+    "usage_notes": [
+      "This template is for knee injury, knee cases."
+    ],
+    "applicability_score": 56
+  }
+]

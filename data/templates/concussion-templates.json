@@ -1,0 +1,158 @@
+[
+  {
+    "template_id": "TBD-2025onwsiat534",
+    "source_case_id": "2025onwsiat534",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "ms, shoulder, concussion",
+    "outcome": "Allowed",
+    "date": "2025-05-12",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kd00p",
+    "citation": "2025 ONWSIAT 534 (CanLII)",
+    "usage_notes": [
+      "This template is for ms, shoulder, concussion cases.",
+      "Key issues addressed: Work-related determination"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat1038",
+    "source_case_id": "2025onwsiat1038",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "concussion",
+    "outcome": "Allowed",
+    "date": "2025-09-03",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kgcb3",
+    "citation": "2025 ONWSIAT 1038 (CanLII)",
+    "usage_notes": [
+      "This template is for concussion cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat626",
+    "source_case_id": "2025onwsiat626",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "concussion",
+    "outcome": "Allowed",
+    "date": "2025-05-30",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kdfm4",
+    "citation": "2025 ONWSIAT 626 (CanLII)",
+    "usage_notes": [
+      "This template is for concussion cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat417",
+    "source_case_id": "2025onwsiat417",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "ms, concussion",
+    "outcome": "Allowed",
+    "date": "2025-04-14",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcmrz",
+    "citation": "2025 ONWSIAT 417 (CanLII)",
+    "usage_notes": [
+      "This template is for ms, concussion cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat965",
+    "source_case_id": "2024onwsiat965",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "depression, concussion",
+    "outcome": "Allowed",
+    "date": "2024-06-17",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k6jbt",
+    "citation": "2024 ONWSIAT 965 (CanLII)",
+    "usage_notes": [
+      "This template is for depression, concussion cases."
+    ],
+    "applicability_score": 56
+  }
+]

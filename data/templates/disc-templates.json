@@ -1,0 +1,122 @@
+[
+  {
+    "template_id": "TBD-2026onwsiat88",
+    "source_case_id": "2026onwsiat88",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "disc",
+    "outcome": "Allowed",
+    "date": "2026-01-22",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kk30q",
+    "citation": "2026 ONWSIAT 88 (CanLII)",
+    "usage_notes": [
+      "This template is for disc cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat441",
+    "source_case_id": "2025onwsiat441",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "carpal tunnel, disc herniation, disc",
+    "outcome": "Allowed",
+    "date": "2025-04-17",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcmt1",
+    "citation": "2025 ONWSIAT 441 (CanLII)",
+    "usage_notes": [
+      "This template is for carpal tunnel, disc herniation, disc cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1151",
+    "source_case_id": "2024onwsiat1151",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "herniated disc, disc",
+    "outcome": "Allowed",
+    "date": "2024-07-18",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k74tt",
+    "citation": "2024 ONWSIAT 1151 (CanLII)",
+    "usage_notes": [
+      "This template is for herniated disc, disc cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat170",
+    "source_case_id": "2024onwsiat170",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "disc",
+    "outcome": "Allowed",
+    "date": "2024-01-29",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k3lt7",
+    "citation": "2024 ONWSIAT 170 (CanLII)",
+    "usage_notes": [
+      "This template is for disc cases."
+    ],
+    "applicability_score": 56
+  }
+]

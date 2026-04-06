@@ -1,0 +1,221 @@
+[
+  {
+    "template_id": "TBD-2023onwsiat1979",
+    "source_case_id": "2023onwsiat1979",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "back injury, low back",
+    "outcome": "Allowed",
+    "date": "2023-12-28",
+    "quality_score": 69,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [
+        "IME"
+      ],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Recurrence claimed",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k309r",
+    "citation": "2023 ONWSIAT 1979 (CanLII)",
+    "usage_notes": [
+      "This template is for back injury, low back cases.",
+      "Medical evidence included: IME.",
+      "Key issues addressed: Recurrence claimed"
+    ],
+    "applicability_score": 65
+  },
+  {
+    "template_id": "TBD-2025onwsiat1186",
+    "source_case_id": "2025onwsiat1186",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "back injury, injury",
+    "outcome": "Allowed",
+    "date": "2025-10-07",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kh134",
+    "citation": "2025 ONWSIAT 1186 (CanLII)",
+    "usage_notes": [
+      "This template is for back injury, injury cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat849",
+    "source_case_id": "2024onwsiat849",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "back injury, injury",
+    "outcome": "Allowed",
+    "date": "2024-05-30",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k675m",
+    "citation": "2024 ONWSIAT 849 (CanLII)",
+    "usage_notes": [
+      "This template is for back injury, injury cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat229",
+    "source_case_id": "2024onwsiat229",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "back injury",
+    "outcome": "Allowed",
+    "date": "2024-02-08",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k40gf",
+    "citation": "2024 ONWSIAT 229 (CanLII)",
+    "usage_notes": [
+      "This template is for back injury cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat56",
+    "source_case_id": "2024onwsiat56",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "back injury",
+    "outcome": "Allowed",
+    "date": "2024-01-11",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k39hn",
+    "citation": "2024 ONWSIAT 56 (CanLII)",
+    "usage_notes": [
+      "This template is for back injury cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2023onwsiat1830",
+    "source_case_id": "2023onwsiat1830",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "back injury",
+    "outcome": "Allowed",
+    "date": "2023-12-01",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k2fjj",
+    "citation": "2023 ONWSIAT 1830 (CanLII)",
+    "usage_notes": [
+      "This template is for back injury cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2023canlii98361",
+    "source_case_id": "2023canlii98361",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "back injury, low back",
+    "outcome": "Allowed",
+    "date": "2023-08-28",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k0srw",
+    "citation": "2023 ONWSIAT 1322 (CanLII)",
+    "usage_notes": [
+      "This template is for back injury, low back cases."
+    ],
+    "applicability_score": 56
+  }
+]

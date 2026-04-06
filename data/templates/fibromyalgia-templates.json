@@ -1,0 +1,92 @@
+[
+  {
+    "template_id": "TBD-2024onwsiat1130",
+    "source_case_id": "2024onwsiat1130",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "fibromyalgia",
+    "outcome": "Allowed",
+    "date": "2024-07-17",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k74v1",
+    "citation": "2024 ONWSIAT 1130 (CanLII)",
+    "usage_notes": [
+      "This template is for fibromyalgia cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1038",
+    "source_case_id": "2024onwsiat1038",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "fibromyalgia",
+    "outcome": "Allowed",
+    "date": "2024-06-27",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k6rkh",
+    "citation": "2024 ONWSIAT 1038 (CanLII)",
+    "usage_notes": [
+      "This template is for fibromyalgia cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat369",
+    "source_case_id": "2024onwsiat369",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "fibromyalgia",
+    "outcome": "Allowed",
+    "date": "2024-03-06",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k4j91",
+    "citation": "2024 ONWSIAT 369 (CanLII)",
+    "usage_notes": [
+      "This template is for fibromyalgia cases."
+    ],
+    "applicability_score": 56
+  }
+]

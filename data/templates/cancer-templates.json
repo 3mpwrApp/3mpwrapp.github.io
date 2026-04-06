@@ -1,0 +1,95 @@
+[
+  {
+    "template_id": "TBD-2024onwsiat1188",
+    "source_case_id": "2024onwsiat1188",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, cancer",
+    "outcome": "Allowed",
+    "date": "2024-07-25",
+    "quality_score": 66,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [
+        "IME"
+      ],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k792l",
+    "citation": "2024 ONWSIAT 1188 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, cancer cases.",
+      "Medical evidence included: IME."
+    ],
+    "applicability_score": 63
+  },
+  {
+    "template_id": "TBD-2025onwsiat491",
+    "source_case_id": "2025onwsiat491",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, respiratory, cancer",
+    "outcome": "Allowed",
+    "date": "2025-05-01",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcwks",
+    "citation": "2025 ONWSIAT 491 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, respiratory, cancer cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat28",
+    "source_case_id": "2024onwsiat28",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, cancer",
+    "outcome": "Allowed",
+    "date": "2024-01-05",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k35gk",
+    "citation": "2024 ONWSIAT 28 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, cancer cases."
+    ],
+    "applicability_score": 56
+  }
+]

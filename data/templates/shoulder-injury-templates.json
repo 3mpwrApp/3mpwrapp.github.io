@@ -1,0 +1,77 @@
+[
+  {
+    "template_id": "TBD-2023onwsiat1612",
+    "source_case_id": "2023onwsiat1612",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "shoulder injury, shoulder",
+    "outcome": "Allowed",
+    "date": "2023-10-20",
+    "quality_score": 69,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [
+        "Medical records"
+      ],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k1x4t",
+    "citation": "2023 ONWSIAT 1612 (CanLII)",
+    "usage_notes": [
+      "This template is for shoulder injury, shoulder cases.",
+      "Medical evidence included: Medical records.",
+      "Key issues addressed: Work-related determination"
+    ],
+    "applicability_score": 65
+  },
+  {
+    "template_id": "TBD-2024onwsiat976",
+    "source_case_id": "2024onwsiat976",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "shoulder injury, shoulder",
+    "outcome": "Allowed",
+    "date": "2024-06-19",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Recurrence claimed",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k6ms5",
+    "citation": "2024 ONWSIAT 976 (CanLII)",
+    "usage_notes": [
+      "This template is for shoulder injury, shoulder cases.",
+      "Key issues addressed: Recurrence claimed"
+    ],
+    "applicability_score": 57
+  }
+]

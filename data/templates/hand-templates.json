@@ -1,0 +1,32 @@
+[
+  {
+    "template_id": "TBD-2024onwsiat333",
+    "source_case_id": "2024onwsiat333",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "hand",
+    "outcome": "Allowed",
+    "date": "2024-02-28",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k4f25",
+    "citation": "2024 ONWSIAT 333 (CanLII)",
+    "usage_notes": [
+      "This template is for hand cases."
+    ],
+    "applicability_score": 56
+  }
+]

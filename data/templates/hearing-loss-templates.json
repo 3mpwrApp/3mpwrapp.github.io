@@ -1,0 +1,125 @@
+[
+  {
+    "template_id": "TBD-2025onwsiat452",
+    "source_case_id": "2025onwsiat452",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, hearing loss",
+    "outcome": "Allowed",
+    "date": "2025-04-23",
+    "quality_score": 66,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [
+        "IME"
+      ],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcs5h",
+    "citation": "2025 ONWSIAT 452 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, hearing loss cases.",
+      "Medical evidence included: IME."
+    ],
+    "applicability_score": 63
+  },
+  {
+    "template_id": "TBD-2025onwsiat1520",
+    "source_case_id": "2025onwsiat1520",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, hearing loss",
+    "outcome": "Allowed",
+    "date": "2025-12-18",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kjgtr",
+    "citation": "2025 ONWSIAT 1520 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, hearing loss cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat844",
+    "source_case_id": "2025onwsiat844",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, hearing loss",
+    "outcome": "Allowed",
+    "date": "2025-07-21",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kfcnb",
+    "citation": "2025 ONWSIAT 844 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, hearing loss cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1981",
+    "source_case_id": "2024onwsiat1981",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "hearing loss, chronic fatigue",
+    "outcome": "Allowed",
+    "date": "2024-12-31",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k9w8l",
+    "citation": "2024 ONWSIAT 1981 (CanLII)",
+    "usage_notes": [
+      "This template is for hearing loss, chronic fatigue cases."
+    ],
+    "applicability_score": 56
+  }
+]

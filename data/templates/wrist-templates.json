@@ -1,0 +1,254 @@
+[
+  {
+    "template_id": "TBD-2024onwsiat1400",
+    "source_case_id": "2024onwsiat1400",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, arthritis, osteoarthritis, shoulder, wrist, strain, sprain",
+    "outcome": "Allowed",
+    "date": "2024-09-09",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k815d",
+    "citation": "2024 ONWSIAT 1400 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, arthritis, osteoarthritis, shoulder, wrist, strain, sprain cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2024onwsiat836",
+    "source_case_id": "2024onwsiat836",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, neck, wrist",
+    "outcome": "Allowed",
+    "date": "2024-05-29",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k63rz",
+    "citation": "2024 ONWSIAT 836 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, neck, wrist cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat458",
+    "source_case_id": "2025onwsiat458",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "shoulder, wrist",
+    "outcome": "Allowed",
+    "date": "2025-04-24",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcs5d",
+    "citation": "2025 ONWSIAT 458 (CanLII)",
+    "usage_notes": [
+      "This template is for shoulder, wrist cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1543",
+    "source_case_id": "2024onwsiat1543",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "wrist, strain",
+    "outcome": "Allowed",
+    "date": "2024-10-07",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k8bqk",
+    "citation": "2024 ONWSIAT 1543 (CanLII)",
+    "usage_notes": [
+      "This template is for wrist, strain cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1388",
+    "source_case_id": "2024onwsiat1388",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "shoulder, wrist, nerve damage",
+    "outcome": "Allowed",
+    "date": "2024-09-04",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k7wj7",
+    "citation": "2024 ONWSIAT 1388 (CanLII)",
+    "usage_notes": [
+      "This template is for shoulder, wrist, nerve damage cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1131",
+    "source_case_id": "2024onwsiat1131",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "wrist",
+    "outcome": "Allowed",
+    "date": "2024-07-17",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k74v5",
+    "citation": "2024 ONWSIAT 1131 (CanLII)",
+    "usage_notes": [
+      "This template is for wrist cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat921",
+    "source_case_id": "2024onwsiat921",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "wrist",
+    "outcome": "Allowed",
+    "date": "2024-06-11",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k6fsc",
+    "citation": "2024 ONWSIAT 921 (CanLII)",
+    "usage_notes": [
+      "This template is for wrist cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2023onwsiat1635",
+    "source_case_id": "2023onwsiat1635",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "wrist",
+    "outcome": "Allowed",
+    "date": "2023-10-26",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k1xvj",
+    "citation": "2023 ONWSIAT 1635 (CanLII)",
+    "usage_notes": [
+      "This template is for wrist cases."
+    ],
+    "applicability_score": 56
+  }
+]

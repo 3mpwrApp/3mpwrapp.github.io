@@ -1,0 +1,32 @@
+[
+  {
+    "template_id": "TBD-2025onwsiat460",
+    "source_case_id": "2025onwsiat460",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "chronic fatigue, dermatitis",
+    "outcome": "Allowed",
+    "date": "2025-04-25",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcs5j",
+    "citation": "2025 ONWSIAT 460 (CanLII)",
+    "usage_notes": [
+      "This template is for chronic fatigue, dermatitis cases."
+    ],
+    "applicability_score": 56
+  }
+]

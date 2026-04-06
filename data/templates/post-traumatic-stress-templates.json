@@ -1,0 +1,32 @@
+[
+  {
+    "template_id": "TBD-2023canlii98374",
+    "source_case_id": "2023canlii98374",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "PTSD, post-traumatic stress",
+    "outcome": "Allowed",
+    "date": "2023-08-28",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k0srx",
+    "citation": "2023 ONWSIAT 1314 (CanLII)",
+    "usage_notes": [
+      "This template is for PTSD, post-traumatic stress cases."
+    ],
+    "applicability_score": 56
+  }
+]

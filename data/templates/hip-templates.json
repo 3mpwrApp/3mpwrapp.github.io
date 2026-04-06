@@ -1,0 +1,72 @@
+[
+  {
+    "template_id": "TBD-2023onwsiat1424",
+    "source_case_id": "2023onwsiat1424",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, hip",
+    "outcome": "Allowed",
+    "date": "2023-09-15",
+    "quality_score": 67,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      },
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k1637",
+    "citation": "2023 ONWSIAT 1424 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, hip cases.",
+      "Key issues addressed: Work-related determination, Permanent impairment"
+    ],
+    "applicability_score": 59
+  },
+  {
+    "template_id": "TBD-2023canlii101051",
+    "source_case_id": "2023canlii101051",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "lumbar, arthritis, osteoarthritis, hip",
+    "outcome": "Allowed",
+    "date": "2023-09-01",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k0x8z",
+    "citation": "2023 ONWSIAT 1352 (CanLII)",
+    "usage_notes": [
+      "This template is for lumbar, arthritis, osteoarthritis, hip cases."
+    ],
+    "applicability_score": 56
+  }
+]

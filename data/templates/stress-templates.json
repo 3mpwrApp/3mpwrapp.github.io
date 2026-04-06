@@ -1,0 +1,62 @@
+[
+  {
+    "template_id": "TBD-2025onwsiat116",
+    "source_case_id": "2025onwsiat116",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "stress, chronic fatigue",
+    "outcome": "Allowed",
+    "date": "2025-01-30",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kbd8p",
+    "citation": "2025 ONWSIAT 116 (CanLII)",
+    "usage_notes": [
+      "This template is for stress, chronic fatigue cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat44",
+    "source_case_id": "2024onwsiat44",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "foot, fracture, stress, chronic fatigue",
+    "outcome": "Allowed",
+    "date": "2024-01-09",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k35g0",
+    "citation": "2024 ONWSIAT 44 (CanLII)",
+    "usage_notes": [
+      "This template is for foot, fracture, stress, chronic fatigue cases."
+    ],
+    "applicability_score": 56
+  }
+]

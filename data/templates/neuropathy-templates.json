@@ -1,0 +1,38 @@
+[
+  {
+    "template_id": "TBD-2024onwsiat1603",
+    "source_case_id": "2024onwsiat1603",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "neuropathy",
+    "outcome": "Allowed",
+    "date": "2024-10-17",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k8hk6",
+    "citation": "2024 ONWSIAT 1603 (CanLII)",
+    "usage_notes": [
+      "This template is for neuropathy cases.",
+      "Key issues addressed: Work-related determination"
+    ],
+    "applicability_score": 57
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "template_id": "TBD-2025onwsiat1493",
+    "source_case_id": "2025onwsiat1493",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "arm",
+    "outcome": "Allowed",
+    "date": "2025-12-16",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kjbmh",
+    "citation": "2025 ONWSIAT 1493 (CanLII)",
+    "usage_notes": [
+      "This template is for arm cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat1493",
+    "source_case_id": "2025onwsiat1493",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "arm",
+    "outcome": "Allowed",
+    "date": "2025-12-16",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kjbmh",
+    "citation": "2025 ONWSIAT 1493 (CanLII)",
+    "usage_notes": [
+      "This template is for arm cases."
+    ],
+    "applicability_score": 56
+  }
+]

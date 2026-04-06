@@ -1,0 +1,68 @@
+[
+  {
+    "template_id": "TBD-2024onwsiat1429",
+    "source_case_id": "2024onwsiat1429",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "impairment, headache, PTSD, chronic fatigue, disability",
+    "outcome": "Allowed",
+    "date": "2024-09-16",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Permanent impairment",
+        "type": "benefit"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k8150",
+    "citation": "2024 ONWSIAT 1429 (CanLII)",
+    "usage_notes": [
+      "This template is for impairment, headache, PTSD, chronic fatigue, disability cases.",
+      "Key issues addressed: Permanent impairment"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2023canlii98374",
+    "source_case_id": "2023canlii98374",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "PTSD, post-traumatic stress",
+    "outcome": "Allowed",
+    "date": "2023-08-28",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k0srx",
+    "citation": "2023 ONWSIAT 1314 (CanLII)",
+    "usage_notes": [
+      "This template is for PTSD, post-traumatic stress cases."
+    ],
+    "applicability_score": 56
+  }
+]

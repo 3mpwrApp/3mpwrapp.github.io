@@ -1,0 +1,218 @@
+[
+  {
+    "template_id": "TBD-2025onwsiat1228",
+    "source_case_id": "2025onwsiat1228",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "rotator cuff, tear",
+    "outcome": "Allowed",
+    "date": "2025-10-16",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Pre-existing condition",
+        "type": "challenge"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kh58d",
+    "citation": "2025 ONWSIAT 1228 (CanLII)",
+    "usage_notes": [
+      "This template is for rotator cuff, tear cases.",
+      "Key issues addressed: Pre-existing condition"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat1096",
+    "source_case_id": "2025onwsiat1096",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "arthritis, osteoarthritis, shoulder, knee, tear",
+    "outcome": "Allowed",
+    "date": "2025-09-16",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kglt0",
+    "citation": "2025 ONWSIAT 1096 (CanLII)",
+    "usage_notes": [
+      "This template is for arthritis, osteoarthritis, shoulder, knee, tear cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat968",
+    "source_case_id": "2025onwsiat968",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "knee, tear, chronic fatigue, injury",
+    "outcome": "Allowed",
+    "date": "2025-08-18",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kfsxw",
+    "citation": "2025 ONWSIAT 968 (CanLII)",
+    "usage_notes": [
+      "This template is for knee, tear, chronic fatigue, injury cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat718",
+    "source_case_id": "2025onwsiat718",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "knee injury, knee, tear",
+    "outcome": "Allowed",
+    "date": "2025-06-24",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kdt6k",
+    "citation": "2025 ONWSIAT 718 (CanLII)",
+    "usage_notes": [
+      "This template is for knee injury, knee, tear cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat421",
+    "source_case_id": "2025onwsiat421",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "rotator cuff, tear",
+    "outcome": "Allowed",
+    "date": "2025-04-15",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcmsb",
+    "citation": "2025 ONWSIAT 421 (CanLII)",
+    "usage_notes": [
+      "This template is for rotator cuff, tear cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat147",
+    "source_case_id": "2025onwsiat147",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "shoulder, tear",
+    "outcome": "Allowed",
+    "date": "2025-02-07",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kbhwk",
+    "citation": "2025 ONWSIAT 147 (CanLII)",
+    "usage_notes": [
+      "This template is for shoulder, tear cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1087",
+    "source_case_id": "2024onwsiat1087",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "arthritis, osteoarthritis, knee, meniscus, ankle, tear",
+    "outcome": "Allowed",
+    "date": "2024-07-08",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k6wr5",
+    "citation": "2024 ONWSIAT 1087 (CanLII)",
+    "usage_notes": [
+      "This template is for arthritis, osteoarthritis, knee, meniscus, ankle, tear cases."
+    ],
+    "applicability_score": 56
+  }
+]

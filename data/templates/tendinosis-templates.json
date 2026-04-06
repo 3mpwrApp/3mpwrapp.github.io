@@ -1,0 +1,38 @@
+[
+  {
+    "template_id": "TBD-2024onwsiat266",
+    "source_case_id": "2024onwsiat266",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "tendinosis, shoulder",
+    "outcome": "Allowed",
+    "date": "2024-02-16",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k449r",
+    "citation": "2024 ONWSIAT 266 (CanLII)",
+    "usage_notes": [
+      "This template is for tendinosis, shoulder cases.",
+      "Key issues addressed: Work-related determination"
+    ],
+    "applicability_score": 57
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "template_id": "TBD-2025onwsiat1016",
+    "source_case_id": "2025onwsiat1016",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "mental health, chronic fatigue, disability",
+    "outcome": "Allowed",
+    "date": "2025-08-27",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kg7t6",
+    "citation": "2025 ONWSIAT 1016 (CanLII)",
+    "usage_notes": [
+      "This template is for mental health, chronic fatigue, disability cases.",
+      "Key issues addressed: Work-related determination"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2024onwsiat1650",
+    "source_case_id": "2024onwsiat1650",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "mental health, chronic fatigue, disability",
+    "outcome": "Allowed",
+    "date": "2024-10-23",
+    "quality_score": 64,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [
+      {
+        "factor": "Work-related determination",
+        "type": "key_issue"
+      }
+    ],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k8krj",
+    "citation": "2024 ONWSIAT 1650 (CanLII)",
+    "usage_notes": [
+      "This template is for mental health, chronic fatigue, disability cases.",
+      "Key issues addressed: Work-related determination"
+    ],
+    "applicability_score": 57
+  },
+  {
+    "template_id": "TBD-2025onwsiat456",
+    "source_case_id": "2025onwsiat456",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "mental health, chronic fatigue, impairment",
+    "outcome": "Allowed",
+    "date": "2025-04-24",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kcs5x",
+    "citation": "2025 ONWSIAT 456 (CanLII)",
+    "usage_notes": [
+      "This template is for mental health, chronic fatigue, impairment cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2025onwsiat200",
+    "source_case_id": "2025onwsiat200",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "mental health, chronic fatigue, disability, injury",
+    "outcome": "Allowed",
+    "date": "2025-02-20",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/kbmrd",
+    "citation": "2025 ONWSIAT 200 (CanLII)",
+    "usage_notes": [
+      "This template is for mental health, chronic fatigue, disability, injury cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1862",
+    "source_case_id": "2024onwsiat1862",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "mental health, chronic fatigue, injury",
+    "outcome": "Allowed",
+    "date": "2024-12-04",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k9gsm",
+    "citation": "2024 ONWSIAT 1862 (CanLII)",
+    "usage_notes": [
+      "This template is for mental health, chronic fatigue, injury cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1591",
+    "source_case_id": "2024onwsiat1591",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "mental health",
+    "outcome": "Allowed",
+    "date": "2024-10-16",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k8g32",
+    "citation": "2024 ONWSIAT 1591 (CanLII)",
+    "usage_notes": [
+      "This template is for mental health cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2024onwsiat1242",
+    "source_case_id": "2024onwsiat1242",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "mental health, chronic fatigue, disability",
+    "outcome": "Allowed",
+    "date": "2024-08-07",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k7gqb",
+    "citation": "2024 ONWSIAT 1242 (CanLII)",
+    "usage_notes": [
+      "This template is for mental health, chronic fatigue, disability cases."
+    ],
+    "applicability_score": 56
+  },
+  {
+    "template_id": "TBD-2023onwsiat1415",
+    "source_case_id": "2023onwsiat1415",
+    "tribunal": "Workplace Safety & Insurance Appeals Tribunal (Ontario)",
+    "condition": "depression, mental health",
+    "outcome": "Allowed",
+    "date": "2023-09-14",
+    "quality_score": 61,
+    "winning_arguments": [],
+    "medical_evidence_used": {
+      "reports": [],
+      "tests": [],
+      "specialists": [],
+      "has_ime": false
+    },
+    "cited_case_law": [],
+    "judge_reasoning": [],
+    "key_factors": [],
+    "geographic_info": {
+      "province_territory": "ON",
+      "cities": [],
+      "regions": []
+    },
+    "url": "https://canlii.ca/t/k1646",
+    "citation": "2023 ONWSIAT 1415 (CanLII)",
+    "usage_notes": [
+      "This template is for depression, mental health cases."
+    ],
+    "applicability_score": 56
+  }
+]
