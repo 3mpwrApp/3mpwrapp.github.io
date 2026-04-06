@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-06T12:45:58.350Z",
+  "lastUpdated": "2026-04-06T18:41:48.274Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14900,
-      "recentPosts": 25,
+      "totalPosts": 14924,
+      "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-06T12:45:37.843Z"
+      "lastSeen": "2026-04-06T18:41:39.314Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14836,
+      "totalPosts": 14861,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-06T12:45:43.057Z"
+      "lastSeen": "2026-04-06T18:41:41.504Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14696,
+      "totalPosts": 14721,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-06T12:45:47.374Z"
+      "lastSeen": "2026-04-06T18:41:43.374Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14930,
+      "totalPosts": 14955,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-06T12:45:52.736Z"
+      "lastSeen": "2026-04-06T18:41:45.375Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14860,
+      "totalPosts": 14884,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-06T12:45:57.347Z"
+      "lastSeen": "2026-04-06T18:41:47.272Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Da mir das Thema sehr am Herzen liegt: Bitte erwäge diese Petition zu unterzeichnen um die Gleichberechtigung und Inklusion von Menschen mit Behinderung zu schützen. Dankeee 🧡 \n\nwww.change.org/p/stoppt-die...\n\n#inklusion #disability #DisabilityRights #furry\n\n📷 Ceferix Folf\n🧵 @whitewingcreations.de",
-      "author": "toasterthefox.bsky.social",
-      "engagement": 18,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
-      "author": "bschillace.brandyschillace.com",
-      "engagement": 99,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Games shouldn't be gated by what your body can/can't do. Accessibility is important! Here are some things we did to make Duality as accessible as possible:\n* Limited/low math system\n* \"Mental theatre\" gameplay\n* Screen reader friendly supplements\n* & we're working on even more!\nCome play!\n -MO🐈",
-      "author": "mimicsnmisfits.com",
-      "engagement": 15,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 24,
-      "hashtag": "A11y"
-    },
     {
       "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
       "author": "rob-w.bsky.social",
@@ -338,24 +314,48 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Da mir das Thema sehr am Herzen liegt: Bitte erwäge diese Petition zu unterzeichnen um die Gleichberechtigung und Inklusion von Menschen mit Behinderung zu schützen. Dankeee 🧡 \n\nwww.change.org/p/stoppt-die...\n\n#inklusion #disability #DisabilityRights #furry\n\n📷 Ceferix Folf\n🧵 @whitewingcreations.de",
+      "author": "toasterthefox.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 99,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "accessibility",
-      "count": 49
+      "count": 48
     },
     {
       "keyword": "disabilityrights",
-      "count": 42
+      "count": 40
     },
     {
       "keyword": "a11y",
-      "count": 27
+      "count": 29
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "cripthevote",
@@ -378,47 +378,47 @@
       "count": 14
     },
     {
-      "keyword": "disabilitysky",
-      "count": 13
-    },
-    {
-      "keyword": "nokings",
-      "count": 13
-    },
-    {
       "keyword": "virtual",
       "count": 13
     },
     {
-      "keyword": "cripminds",
-      "count": 12
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 12
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 12
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
-      "count": 12
-    },
-    {
-      "keyword": "inclusivedesign",
+      "keyword": "disabilitysky",
       "count": 12
     },
     {
       "keyword": "digitalaccessibility",
+      "count": 12
+    },
+    {
+      "keyword": "nokings",
+      "count": 12
+    },
+    {
+      "keyword": "inclusivedesign",
+      "count": 11
+    },
+    {
+      "keyword": "cripminds",
       "count": 10
     },
     {
-      "keyword": "language",
+      "keyword": "accessibility disabilitysky",
+      "count": 10
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 10
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 10
+    },
+    {
+      "keyword": "accessibility a11y",
       "count": 9
     },
     {
-      "keyword": "uxcopy",
+      "keyword": "disabilityrights nokings3",
       "count": 9
     }
   ]
