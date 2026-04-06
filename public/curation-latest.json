@@ -1,7 +1,7 @@
 {
   "date": "2026-04-06",
-  "timestamp": "2026-04-06T10:11:10.407Z",
-  "count": 5,
+  "timestamp": "2026-04-06T21:44:50.386Z",
+  "count": 1,
   "minScore": 3.5,
   "items": [
     {
@@ -9,35 +9,7 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-04-06T10:11:10.404Z"
-    },
-    {
-      "title": "How Does Canada’s Level of Democracy Stack Up Globally?",
-      "link": "https://thetyee.ca/Analysis/2026/04/06/How-Canada-Democracy-Stacks-Up-Globally/",
-      "description": "Swedish governance experts offer a road map to stronger civic engagement, if we want it.",
-      "score": 10.5,
-      "pubDate": "Mon, 06 Apr 2026 07:10:00 +0000"
-    },
-    {
-      "title": "‘Namesake’ Tackles a Colonial Legacy. And a Nation’s Resistance",
-      "link": "https://thetyee.ca/Culture/2026/04/03/Namesake-Tackles-Colonial-Legacy-Nation-Resistance/",
-      "description": "The film previewed to full houses in Powell River, and is now headed to Canada’s biggest documentary festivals.",
-      "score": 10.5,
-      "pubDate": "Sat, 04 Apr 2026 00:10:00 +0000"
-    },
-    {
-      "title": "Alberta’s Premier Claims Immigrants Are a Burden. Where’s the Proof?",
-      "link": "https://thetyee.ca/Analysis/2026/04/06/Alberta-Premier-Claims-Immigrants-Burden/",
-      "description": "Danielle Smith’s referendum pitch ignores tax revenues and reliance on temporary foreign workers.",
-      "score": 3.9000000000000004,
-      "pubDate": "Mon, 06 Apr 2026 07:20:00 +0000"
-    },
-    {
-      "title": "A Calgary Museum Reinvents Itself",
-      "link": "https://thetyee.ca/Culture/2026/04/03/Calgary-Museum-Reinvents-Itself/",
-      "description": "The Glenbow reopens as the JR Centre for Arts & Culture next year. Its updates extend past physical renovations.",
-      "score": 4.5,
-      "pubDate": "Sat, 04 Apr 2026 00:30:00 +0000"
+      "pubDate": "2026-04-06T21:44:50.384Z"
     }
   ]
 }
