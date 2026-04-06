@@ -34,14 +34,13 @@
     ],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2026onca247\", \"url\": \"https://canlii.ca/t/kk727\", \"title\": \"Royal Bank of Canada v. Suretrust Systems Inc.\", \"citation\": \"2026 ONCA 247 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"M56622; COA-25-OM-0422\", \"decisionDate\": \"2026-04-01\", \"keywords\": \"Appeal — Extension of time to appeal\", \"topics\": \"Appeal — Practice and procedure\", \"concatenatedId\": \"2026onca247\" }...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2026onca246",
@@ -152,14 +151,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2026onca237\", \"url\": \"https://canlii.ca/t/kk5hk\", \"title\": \"Condoman Developments Inc. v. Cannect International Mortgage Corporation\", \"citation\": \"2026 ONCA 237 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"COA-25-CV-0999\", \"decisionDate\": \"2026-03-31\", \"keywords\": \"Civil procedure — Motion to strike pleadings — No reasonable cause of action — Costs — Condoman Developments Inc. v. Cannect International Mortgage Corporation\", \"topics\": \"Practice and procedure\",...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2026onca231",
@@ -400,14 +398,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2026onca141\", \"url\": \"https://canlii.ca/t/kjdxt\", \"title\": \"R. v. Rana\", \"citation\": \"2026 ONCA 141 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"COA-24-CR-1000\", \"decisionDate\": \"2026-02-24\", \"keywords\": \"Criminal law — Sexual assault — Evidence — Criminal Code, R.S.C. 1985, c. C-46, s. 486.4\", \"topics\": \"Criminal or statutory infractions — Evidence — Sentencing\", \"concatenatedId\": \"2026onca141\" }...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2026onca139",
@@ -439,14 +436,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2026onca134\", \"url\": \"https://canlii.ca/t/kjdz0\", \"title\": \"R. v. Zadi\", \"citation\": \"2026 ONCA 134 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"COA-25-CR-0938\", \"decisionDate\": \"2026-02-24\", \"keywords\": \"Criminal law — Appeals — Jurisdiction — Bail — Criminal Code, R.S.C. 1985, c. C-46, s. 520 — Courts of Justice Act, R.S.O. 1990, c. C.43, s. 6(1)(b)\", \"topics\": \"Appeal — Criminal or statutory infractions — Practice and procedure\", \"concatenatedId\": \"2026onca...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2026onca130",
@@ -542,14 +538,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2026onca129\", \"url\": \"https://canlii.ca/t/kjc6l\", \"title\": \"McDonald\\u0027s Restaurants of Canada Limited v. North Elgin Centre Inc.\", \"citation\": \"2026 ONCA 129 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"COA-25-CV-0615\", \"decisionDate\": \"2026-02-20\", \"keywords\": \"Real property — Commercial leases — Extension — Planning Act — R.S.O. 1990, c. P.13\", \"topics\": \"Residential tenancies\", \"concatenatedId\": \"2026onca129\" }...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2026onca88",
@@ -854,14 +849,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2026onca30\", \"url\": \"https://canlii.ca/t/khn17\", \"title\": \"Talpade v. AMJ Campbell Company Toronto East\", \"citation\": \"2026 ONCA 30 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"M56305; COA-24-CV-0563; M56302\", \"decisionDate\": \"2026-01-19\", \"keywords\": \"Practice and procedure — R.R.O. 1990, Reg. 194, r. 2.1.01 — Rules of Civil Procedure, R.R.O. 1990, Reg. 194, Rule 2.1.\", \"topics\": \"Practice and procedure\", \"concatenatedId\": \"2026onca30\", \"aiContentId\": \"2026on...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2026onca21",
@@ -1018,14 +1012,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2025onca885\", \"url\": \"https://canlii.ca/t/kh563\", \"title\": \"R. v. Watts\", \"citation\": \"2025 ONCA 885 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"COA-25-CR-0243\", \"decisionDate\": \"2025-12-18\", \"keywords\": \"Criminal law — Sentencing — Considerations\", \"topics\": \"Contracts — Criminal or statutory infractions — Sentencing\", \"concatenatedId\": \"2025onca885\", \"aiContentId\": \"2025onca885\" }...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2025onca884",
@@ -1038,14 +1031,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2025onca884\", \"url\": \"https://canlii.ca/t/kh45b\", \"title\": \"1255717 Ontario Ltd. v. Glenrio Financing Limited\", \"citation\": \"2025 ONCA 884 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"COA-25-CV-0401\", \"decisionDate\": \"2025-12-17\", \"keywords\": \"Abuse of process — Motion to adduce fresh evidence\", \"topics\": \"Practice and procedure\", \"concatenatedId\": \"2025onca884\" }...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2025onca883",
@@ -1072,19 +1064,18 @@
     "date": "Unknown",
     "tribunal": "Ontario Court of Appeal",
     "url": "",
-    "condition": "ms",
+    "condition": "Unknown",
     "outcome": "Unknown",
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2025onca882\", \"url\": \"https://canlii.ca/t/kh456\", \"title\": \"R. v. Abdalla\", \"citation\": \"2025 ONCA 882 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"COA-24-CR-0862\", \"decisionDate\": \"2025-12-17\", \"keywords\": \"Constitutional law — Charter of Rights — Detention — Search incident to detention — Canadian Charter of Rights and Freedoms, s. 8, 9, 10(b), 24(2).\", \"topics\": \"Constitution — Criminal or statutory infractions — Evidence — Rights and freedoms — Young offen...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2025onca877",
@@ -1496,14 +1487,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2025onca774\", \"url\": \"https://canlii.ca/t/kgj7t\", \"title\": \"R. v. Sazal\", \"citation\": \"2025 ONCA 774 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"C68918\", \"decisionDate\": \"2025-11-17\", \"keywords\": \"Criminal law — Misapprehension of evidence — credibility\", \"topics\": \"Criminal or statutory infractions — Evidence\", \"concatenatedId\": \"2025onca774\" }...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2025onca772",
@@ -1689,14 +1679,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2025onca734\", \"url\": \"https://canlii.ca/t/kg2t3\", \"title\": \"R. v. Laroche\", \"citation\": \"2025 ONCA 734 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"COA-24-CR-0897\", \"decisionDate\": \"2025-10-23\", \"keywords\": \"Charter of Rights — Criminal law — Unreasonable delay — Sentencing — Conditional sentence\", \"topics\": \"Criminal or statutory infractions — Sentencing\", \"concatenatedId\": \"2025onca734\", \"aiContentId\": \"2025onca734\" }...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2025onca733",
@@ -1709,14 +1698,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2025onca733\", \"url\": \"https://canlii.ca/t/kg2sx\", \"title\": \"R. v. Bayly\", \"citation\": \"2025 ONCA 733 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"COA-22-CR-0096\", \"decisionDate\": \"2025-10-23\", \"keywords\": \"Criminal law — Sexual assault — Conviction — Publication ban — Criminal Code, s. 486.4\", \"topics\": \"Criminal or statutory infractions — Evidence — Sentencing\", \"concatenatedId\": \"2025onca733\", \"aiContentId\": \"2025onca733\" }...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2025onca731",
@@ -1866,14 +1854,13 @@
     "evidence_cited": [],
     "key_factors": [],
     "snippet": "{ \"databaseId\": \"onca\", \"caseId\": \"2025onca683\", \"url\": \"https://canlii.ca/t/kfpjv\", \"title\": \"R. v. O\\u0027Neill\", \"citation\": \"2025 ONCA 683 (CanLII)\", \"language\": \"en\", \"docketNumber\": \"M56333; COA-25-CR-1188\", \"decisionDate\": \"2025-10-01\", \"keywords\": \"Criminal procedure — Release pending appeal — Conditional sentence as custody — Appellant sought release pending appeal under section 679(1) of the Criminal Code — Whether a conditional sentence qualifies as \\\"custody\\\" for the purposes of rel...",
-    "extraction_version": "v4.0-metadata",
+    "extraction_version": "v3.0-keywords",
     "extraction_confidence": 0,
     "context_flags": {
       "pre_existing_condition": false,
       "work_related": false,
       "injury": false
-    },
-    "extraction_date": "2026-04-05"
+    }
   },
   {
     "case_id": "2025onca681",
