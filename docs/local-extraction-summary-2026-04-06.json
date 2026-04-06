@@ -1,0 +1,17 @@
+{
+  "total_cases": 4532,
+  "with_outcomes": 228,
+  "high_quality": 0,
+  "excellent_quality": 0,
+  "avg_quality": 34,
+  "by_outcome": {
+    "allowed": 174,
+    "dismissed": 54,
+    "unknown": 4304
+  },
+  "with_medical_evidence": 422,
+  "with_ime": 0,
+  "ready_for_templates": 149,
+  "ready_for_evidence_analysis": 422,
+  "timestamp": "2026-04-06T02:10:04.439Z"
+}
