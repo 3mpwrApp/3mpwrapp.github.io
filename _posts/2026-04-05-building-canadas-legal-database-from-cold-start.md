@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "Building Canada's Legal Database for Injured Workers and Persons with Disabilities: The Journey from Cold Start to 1,500+ Templates"
-date: 2026-04-05
+date: 2026-04-05 00:00:00 +0000
 author: 3mpwr Team
-category: Development Update
+categories: [community, development]
 tags: [injured workers, disabilities, legal aid, WSIAT, CanLII, Thunder Bay, TBDIWSG, Ontario, Canada]
 excerpt: "How we're building a comprehensive Canada-wide legal decision database to help injured workers and persons with disabilities navigate workplace injury appeals - starting from zero templates to 1,500+ detailed winning case strategies."
 ---
