@@ -1,80 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-05T18:28:46.974Z",
+  "lastUpdated": "2026-04-06T01:22:47.196Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14825,
+      "totalPosts": 14850,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T18:28:36.003Z"
+      "lastSeen": "2026-04-06T01:22:37.944Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14761,
+      "totalPosts": 14786,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T18:28:38.350Z"
+      "lastSeen": "2026-04-06T01:22:39.850Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14621,
+      "totalPosts": 14646,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T18:28:40.907Z"
+      "lastSeen": "2026-04-06T01:22:41.943Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14855,
+      "totalPosts": 14880,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T18:28:43.533Z"
+      "lastSeen": "2026-04-06T01:22:44.046Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14788,
+      "totalPosts": 14812,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-05T18:28:45.972Z"
+      "lastSeen": "2026-04-06T01:22:46.192Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
-      "author": "bschillace.brandyschillace.com",
-      "engagement": 99,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 21,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
-      "author": "rob-w.bsky.social",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 21,
-      "hashtag": "A11y"
-    },
     {
       "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
       "author": "rob-w.bsky.social",
@@ -338,12 +302,48 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Da mir das Thema sehr am Herzen liegt: Bitte erwäge diese Petition zu unterzeichnen um die Gleichberechtigung und Inklusion von Menschen mit Behinderung zu schützen. Dankeee 🧡 \n\nwww.change.org/p/stoppt-die...\n\n#inklusion #disability #DisabilityRights #furry\n\n📷 Ceferix Folf\n🧵 @whitewingcreations.de",
+      "author": "toasterthefox.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 99,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
+      "author": "aardrian.bsky.social",
+      "engagement": 24,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
+      "author": "rob-w.bsky.social",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "accessibility",
-      "count": 45
+      "count": 46
     },
     {
       "keyword": "disabilityrights",
