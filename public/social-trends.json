@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-07T12:56:36.453Z",
+  "lastUpdated": "2026-04-07T18:46:42.676Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14996,
+      "totalPosts": 15020,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T12:56:22.711Z"
+      "lastSeen": "2026-04-07T18:46:22.397Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14936,
+      "totalPosts": 14961,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T12:56:25.686Z"
+      "lastSeen": "2026-04-07T18:46:27.577Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14796,
+      "totalPosts": 14821,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T12:56:29.946Z"
+      "lastSeen": "2026-04-07T18:46:32.297Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 15029,
+      "totalPosts": 15053,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T12:56:32.626Z"
+      "lastSeen": "2026-04-07T18:46:38.182Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14956,
+      "totalPosts": 14980,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T12:56:35.450Z"
+      "lastSeen": "2026-04-07T18:46:41.673Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 24,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
-      "author": "rob-w.bsky.social",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
     {
       "text": "Da mir das Thema sehr am Herzen liegt: Bitte erwäge diese Petition zu unterzeichnen um die Gleichberechtigung und Inklusion von Menschen mit Behinderung zu schützen. Dankeee 🧡 \n\nwww.change.org/p/stoppt-die...\n\n#inklusion #disability #DisabilityRights #furry\n\n📷 Ceferix Folf\n🧵 @whitewingcreations.de",
       "author": "toasterthefox.bsky.social",
@@ -338,12 +314,36 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Disabled Folks Are Being Pushed Into Poverty🧵\n\nTwo tier support for disabled people is now a reality in the UK and it should upset anyone who believes in fairness and equality.\n\nI receive LCWRA because I cannot work. That hasn’t changed. It won’t. 1/9\n\n#DisabilityRights #LCWRA #CostOfLiving",
+      "author": "bearofscots.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Da mir das Thema sehr am Herzen liegt: Bitte erwäge diese Petition zu unterzeichnen um die Gleichberechtigung und Inklusion von Menschen mit Behinderung zu schützen. Dankeee 🧡 \n\nwww.change.org/p/stoppt-die...\n\n#inklusion #disability #DisabilityRights #furry\n\n📷 Ceferix Folf\n🧵 @whitewingcreations.de",
+      "author": "toasterthefox.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "accessibility",
-      "count": 46
+      "count": 43
     },
     {
       "keyword": "disabilityrights",
@@ -406,20 +406,20 @@
       "count": 12
     },
     {
-      "keyword": "digitalaccessibility",
-      "count": 9
-    },
-    {
-      "keyword": "inclusivedesign",
-      "count": 9
-    },
-    {
       "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
-      "keyword": "ux",
+      "keyword": "disability",
       "count": 8
+    },
+    {
+      "keyword": "refusefascism",
+      "count": 7
+    },
+    {
+      "keyword": "neurodivergent",
+      "count": 6
     }
   ]
 }
