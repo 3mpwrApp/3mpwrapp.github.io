@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-04-07
 
-Curated 10 items from disability, accessibility, and social policy sources.
+Curated 2 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -21,48 +21,8 @@ Visit for the latest disability rights news, advocacy updates, and community sto
 
 ## Additional Stories
 
-### 1. Please Advise! Will Testicle-Tanning Tucker Carlson Invade Canada?
-Dr. Steve would have said unhinged rants don’t lead to war. But things have changed.
-[Source](https://thetyee.ca/Opinion/2026/04/07/Please-Advise-Tucker-Carlson-Invade-Canada/)
-**Score:** 20.30
-
-### 2. How Does Canada’s Level of Democracy Stack Up Globally?
-Swedish governance experts offer a road map to stronger civic engagement, if we want it.
-[Source](https://thetyee.ca/Analysis/2026/04/06/How-Canada-Democracy-Stacks-Up-Globally/)
-**Score:** 10.50
-
-### 3. ‘Namesake’ Tackles a Colonial Legacy. And a Nation’s Resistance
-The film previewed to full houses in Powell River, and is now headed to Canada’s biggest documentary festivals.
-[Source](https://thetyee.ca/Culture/2026/04/03/Namesake-Tackles-Colonial-Legacy-Nation-Resistance/)
-**Score:** 10.50
-
-### 4. Alberta and Saskatchewan NDP leaders foolishly freak out over Avi Lewis victory
-Rabble.ca — progressive Canadian news
-[Source](https://rabble.ca/politics/canadian-politics/alberta-and-saskatchewan-ndp-leaders-foolishly-freak-out-over-avi-lewis-victory/)
-**Score:** 4.90
-
-### 5. Company abandons Alberta oilsands nuclear project
-Rabble.ca — progressive Canadian news
-[Source](https://rabble.ca/politics/canadian-politics/company-abandons-alberta-oilsands-nuclear-project/)
-**Score:** 3.90
-
-### 6. Alberta’s Premier Claims Immigrants Are a Burden. Where’s the Proof?
-Danielle Smith’s referendum pitch ignores tax revenues and reliance on temporary foreign workers.
-[Source](https://thetyee.ca/Analysis/2026/04/06/Alberta-Premier-Claims-Immigrants-Burden/)
-**Score:** 3.90
-
-### 7. A Calgary Museum Reinvents Itself
-The Glenbow reopens as the JR Centre for Arts & Culture next year. Its updates extend past physical renovations.
-[Source](https://thetyee.ca/Culture/2026/04/03/Calgary-Museum-Reinvents-Itself/)
-**Score:** 4.50
-
-### 8. Measles Update #95
+### 1. Measles Update #97
 Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73237)
-**Score:** 4.50
-
-### 9. Spring Thaw Begins in Southern Manitoba Basins
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73217)
+[Source](https://news.gov.mb.ca/news/index.html?item=73257)
 **Score:** 4.50
 
