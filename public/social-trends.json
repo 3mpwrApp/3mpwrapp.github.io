@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-07T01:20:32.790Z",
+  "lastUpdated": "2026-04-07T07:04:00.500Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 14948,
+      "totalPosts": 14972,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T01:20:23.566Z"
+      "lastSeen": "2026-04-07T07:03:50.941Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 14886,
+      "totalPosts": 14911,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T01:20:25.451Z"
+      "lastSeen": "2026-04-07T07:03:53.112Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 14746,
+      "totalPosts": 14771,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T01:20:27.563Z"
+      "lastSeen": "2026-04-07T07:03:55.121Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 14980,
+      "totalPosts": 15005,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T01:20:29.575Z"
+      "lastSeen": "2026-04-07T07:03:57.348Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 14908,
+      "totalPosts": 14932,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-07T01:20:31.783Z"
+      "lastSeen": "2026-04-07T07:03:59.497Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
-      "author": "bschillace.brandyschillace.com",
-      "engagement": 99,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Games shouldn't be gated by what your body can/can't do. Accessibility is important! Here are some things we did to make Duality as accessible as possible:\n* Limited/low math system\n* \"Mental theatre\" gameplay\n* Screen reader friendly supplements\n* & we're working on even more!\nCome play!\n -MO🐈",
-      "author": "mimicsnmisfits.com",
-      "engagement": 25,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Links need more than just a color change to distinguish them.\n\nIf your solution is `font-weight: 500`, don’t be surprised when you get dinged for 1.4.1 Use of Color.\n\n`500` often renders no differently than the default (`400`). It’s adversarial conformance.\n\nUse an underline.\n\n#accessibility #a11y",
-      "author": "aardrian.bsky.social",
-      "engagement": 24,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "\"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. I've heard it in conference talks, accessibility reports, and job interviews.\n\nFirst post on Mobile A11y in 4 years.\n\nmobilea11y.com/blog/swiftui...\n\n#Accessibility #a11y #MobileA11y #SwiftUI #iosdev",
-      "author": "rob-w.bsky.social",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
     {
       "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
       "author": "domesticemployers.bsky.social",
@@ -338,6 +314,30 @@
       "author": "caseydoherty.bsky.social",
       "engagement": 108,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Da mir das Thema sehr am Herzen liegt: Bitte erwäge diese Petition zu unterzeichnen um die Gleichberechtigung und Inklusion von Menschen mit Behinderung zu schützen. Dankeee 🧡 \n\nwww.change.org/p/stoppt-die...\n\n#inklusion #disability #DisabilityRights #furry\n\n📷 Ceferix Folf\n🧵 @whitewingcreations.de",
+      "author": "toasterthefox.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "And! On this World Autism Awareness Day, please support #autistic creatives and authors! Hearing FROM autistic people rather than ABOUT them from others is a powerful way to shift the conversation and increase representation. #books #disabilityrights",
+      "author": "bschillace.brandyschillace.com",
+      "engagement": 99,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -351,7 +351,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 30
+      "count": 29
     },
     {
       "keyword": "disabilityjustice",
