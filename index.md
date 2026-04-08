@@ -361,6 +361,20 @@ description: Free community-powered platform connecting injured workers, persons
   {%- include newsletter-signup.html -%}
 </section>
 
+<!-- Social Media Links -->
+<section style="text-align: center; margin-bottom: 4rem; padding: 2rem; background: rgba(61, 78, 170, 0.05); border-radius: 12px;">
+  <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--text-color);">Stay Connected</h2>
+  <p style="margin-bottom: 1.5rem; opacity: 0.9;">Follow us on social media for daily updates, community stories, and transparency reports</p>
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
+    <a href="https://discord.gg/P2qQyjxV" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #5865F2; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">💬 Discord</a>
+    <a href="https://x.com/3mpwrApp0816" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #000000; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">🐦 X/Twitter</a>
+    <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #1877F2; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">📘 Facebook</a>
+    <a href="https://mastodon.social/@3mpwrapp" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #6364FF; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">🐘 Mastodon</a>
+    <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener" style="padding: 0.75rem 1.5rem; background: #1285FE; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">🦋 Bluesky</a>
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Email: <a href="mailto:empowrapp08162025@gmail.com" style="color: #003d7a;">empowrapp08162025@gmail.com</a></p>
+</section>
+
 <style>
 /* Hover effects */
 .value-props > div > div:hover,

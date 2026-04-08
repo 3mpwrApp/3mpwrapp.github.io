@@ -1,0 +1,90 @@
+{
+  "generatedDate": "2026-04-08T18:22:05.494Z",
+  "sourceData": {
+    "analysisFile": "pattern-analysis-2026-04-08.json",
+    "totalCases": 1334,
+    "dateRange": "2025-2026"
+  },
+  "articles": [
+    {
+      "id": "low-back-pain-claims",
+      "title": "Understanding Low Back Pain Claims at WSIB",
+      "category": "Medical Conditions",
+      "keywords": [
+        "low back pain",
+        "lumbar spine",
+        "back injury"
+      ],
+      "summary": "Comprehensive guide to workplace low back pain claims based on 194+ WSIAT decisions",
+      "file": "low-back-pain-claims.md"
+    },
+    {
+      "id": "chronic-pain-claims",
+      "title": "Chronic Pain: Building Your Case",
+      "category": "Medical Conditions",
+      "keywords": [
+        "chronic pain",
+        "pain management",
+        "disability"
+      ],
+      "summary": "How to prove chronic pain disability in WSIB appeals (186 cases analyzed)",
+      "file": "chronic-pain-claims.md"
+    },
+    {
+      "id": "pre-existing-conditions",
+      "title": "Pre-Existing Conditions: What You Need to Know",
+      "category": "Legal Issues",
+      "keywords": [
+        "pre-existing condition",
+        "aggravation",
+        "work-related"
+      ],
+      "summary": "How pre-existing conditions affect your WSIB claim (96 cases analyzed)",
+      "file": "pre-existing-conditions.md"
+    },
+    {
+      "id": "psychotraumatic-disability",
+      "title": "Psychotraumatic Disability: Understanding Your Rights",
+      "category": "Medical Conditions",
+      "keywords": [
+        "psychotraumatic disability",
+        "PTSD",
+        "mental injury",
+        "workplace trauma"
+      ],
+      "summary": "Guide to workplace mental injury claims (92 psychotraumatic + 74 PTSD cases)",
+      "file": "psychotraumatic-disability.md"
+    },
+    {
+      "id": "permanent-impairment-rating",
+      "title": "Understanding Permanent Impairment Ratings",
+      "category": "Benefits & Compensation",
+      "keywords": [
+        "permanent impairment",
+        "NEL",
+        "impairment rating",
+        "lump sum"
+      ],
+      "summary": "How permanent impairment awards work in WSIB claims (74 cases analyzed)",
+      "file": "permanent-impairment-rating.md"
+    },
+    {
+      "id": "fibromyalgia-claims",
+      "title": "Fibromyalgia and WSIB: Your Complete Guide",
+      "category": "Medical Conditions",
+      "keywords": [
+        "fibromyalgia",
+        "chronic pain",
+        "widespread pain"
+      ],
+      "summary": "How to win WSIB claims for fibromyalgia (68 cases analyzed)",
+      "file": "fibromyalgia-claims.md"
+    }
+  ],
+  "categories": [
+    "Medical Conditions",
+    "Legal Issues",
+    "Benefits & Compensation"
+  ],
+  "totalArticles": 6
+}

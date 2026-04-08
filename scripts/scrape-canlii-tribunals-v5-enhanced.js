@@ -38,8 +38,13 @@ const BATCH_PAUSE_MIN = 5 * 60 * 1000;  // 5 minutes
 const BATCH_PAUSE_MAX = 10 * 60 * 1000; // 10 minutes
 const SEARCH_BATCH_SIZE = 50; // API search results per page
 
-// Maximum collection: All of Canada from 1900 onward
-const CHANGED_SINCE = "1900-01-01";
+// ===== HYBRID APPROACH: Recent cases first =====
+const RECENT_ONLY = true;   // Enable date filtering for Phase 1 (pilot launch)
+const MIN_YEAR = 2020;      // Only collect 2020-2026 (7 years back)
+// Set RECENT_ONLY = false later to backfill historical cases (Phase 2)
+
+// API date filter - changes based on RECENT_ONLY setting
+const CHANGED_SINCE = RECENT_ONLY ? "2020-01-01" : "1900-01-01";
 
 // Global error tracking
 global.sessionErrors = [];
@@ -953,6 +958,7 @@ async function scrapeTribunalBatched(tribunalId, config) {
           break;
         }
         
+        // Add case IDs (API already filtered by date via changedSince parameter)
         for (const caseData of results.results) {
           const caseId = caseData.caseId?.en || caseData.caseId;
           if (caseId) allCaseIds.add(caseId);

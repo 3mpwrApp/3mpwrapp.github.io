@@ -11,23 +11,93 @@ description: News, updates, and stories from the 3mpwr community.
 
 Welcome to our blog! Stay informed with daily news highlights, feature spotlights, weekly recaps, and community updates.
 
-<div class="blog-navigation">
-  <a href="#curated-daily">📰 Daily News Highlights</a> |
-  <a href="#feature-articles">✨ Feature Spotlights</a> |
-  <a href="#weekly-recaps">📅 Weekly Recaps</a> |
-  <a href="#blog-posts">💬 Community Updates</a>
-</div>
+---
 
-<p style="margin-top: 1rem;"><strong>Subscribe:</strong> <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a> | <a href="{{ '/newsletter' | relative_url }}">Newsletter</a></p>
+## 📑 Quick Navigation (Table of Contents)
+
+**Browse by Section:**
+- [📖 Knowledge Base](#knowledge-base) - WSIB appeal guides built from 1,200+ real tribunal decisions
+- [📰 Daily News Highlights](#curated-daily) - Curated news from 50+ trusted sources
+- [✨ Feature Spotlights](#feature-articles) - App features and tools explained
+- [📅 Weekly Recaps](#weekly-recaps) - Weekly development updates
+- [💬 Community Updates](#blog-posts) - Announcements and stories
+
+**Other Resources:**
+- [Subscribe via RSS]({{ '/feed.xml' | relative_url }}) | [Newsletter]({{ '/newsletter' | relative_url }})
+- [What's New]({{ '/whats-new' | relative_url }}) - Detailed changelog
+- [App Tour]({{ '/app-tour' | relative_url }}) - Complete feature walkthrough
+
+---
 
 <div class="blog-social-box">
   <h3 style="margin-top: 0;">📱 Follow Us on Social Media</h3>
   <p>Get daily news and updates delivered to your feed!</p>
   <ul style="margin-bottom: 0;">
+    <li><strong>Discord:</strong> <a href="https://discord.gg/P2qQyjxV" target="_blank" rel="noopener">Join Our Community</a> - Live chat, support, beta testing</li>
+    <li><strong>X/Twitter:</strong> <a href="https://x.com/3mpwrApp0816" target="_blank" rel="noopener">@3mpwrApp0816</a> - Daily updates</li>
+    <li><strong>Facebook:</strong> <a href="https://www.facebook.com/3mpowrapp/" target="_blank" rel="noopener">3mpowrapp</a> - Community groups</li>
     <li><strong>Mastodon:</strong> <a href="https://mastodon.social/@3mpwrapp" target="_blank" rel="noopener">@3mpwrapp@mastodon.social</a> - Daily posts at 9 AM UTC</li>
     <li><strong>Bluesky:</strong> <a href="https://bsky.app/profile/3mpwrapp.bsky.social" target="_blank" rel="noopener">@3mpwrapp.bsky.social</a> - Daily posts at 9 AM UTC</li>
   </ul>
 </div>
+
+---
+
+## <span id="knowledge-base">📖 Knowledge Base: WSIB Appeal Guides</span>
+
+<p class="section-description"><strong>NEW!</strong> Evidence-based guides for injured workers built from 1,204 real Ontario tribunal decisions (2025-2026). These guides show what medical evidence actually wins appeals—based on data, not guesswork. <a href="{{ '/knowledge-base/' | relative_url }}">View all guides →</a></p>
+
+<div class="posts-grid">
+  <article class="post-card post-card--kb">
+    <div class="post-card__badge">📖 Guide</div>
+    <h3 class="post-card__title"><a href="{{ '/knowledge-base/low-back-pain-claims' | relative_url }}">Low Back Pain Claims</a></h3>
+    <p class="post-card__excerpt"><strong>194 cases analyzed.</strong> Low back pain is the #1 workplace injury. Learn how to prove work-relatedness and beat pre-existing condition denials.</p>
+    <a href="{{ '/knowledge-base/low-back-pain-claims' | relative_url }}" class="post-card__link">Read guide →</a>
+  </article>
+  
+  <article class="post-card post-card--kb">
+    <div class="post-card__badge">📖 Guide</div>
+    <h3 class="post-card__title"><a href="{{ '/knowledge-base/chronic-pain-claims' | relative_url }}">Chronic Pain Claims</a></h3>
+    <p class="post-card__excerpt"><strong>186 cases analyzed.</strong> Defeat "pain is subjective" denials. Document functional limitations. Build your medical evidence strategy.</p>
+    <a href="{{ '/knowledge-base/chronic-pain-claims' | relative_url }}" class="post-card__link">Read guide →</a>
+  </article>
+  
+  <article class="post-card post-card--kb">
+    <div class="post-card__badge">📖 Guide</div>
+    <h3 class="post-card__title"><a href="{{ '/knowledge-base/pre-existing-conditions' | relative_url }}">Pre-Existing Conditions</a></h3>
+    <p class="post-card__excerpt"><strong>96 cases analyzed.</strong> WSIB's #1 denial reason. Learn the "thin skull rule" and how to prove work made it worse.</p>
+    <a href="{{ '/knowledge-base/pre-existing-conditions' | relative_url }}" class="post-card__link">Read guide →</a>
+  </article>
+  
+  <article class="post-card post-card--kb">
+    <div class="post-card__badge">📖 Guide</div>
+    <h3 class="post-card__title"><a href="{{ '/knowledge-base/psychotraumatic-disability' | relative_url }}">PTSD & Mental Injuries</a></h3>
+    <p class="post-card__excerpt"><strong>166 cases analyzed.</strong> Traumatic event vs. workplace stress. What WSIB covers and what evidence you need.</p>
+    <a href="{{ '/knowledge-base/psychotraumatic-disability' | relative_url }}" class="post-card__link">Read guide →</a>
+  </article>
+  
+  <article class="post-card post-card--kb">
+    <div class="post-card__badge">📖 Guide</div>
+    <h3 class="post-card__title"><a href="{{ '/knowledge-base/permanent-impairment-rating' | relative_url }}">Permanent Impairment Ratings</a></h3>
+    <p class="post-card__excerpt"><strong>74 cases analyzed.</strong> How ratings work. How to appeal a low rating. What financial benefits you're entitled to.</p>
+    <a href="{{ '/knowledge-base/permanent-impairment-rating' | relative_url }}" class="post-card__link">Read guide →</a>
+  </article>
+  
+  <article class="post-card post-card--kb">
+    <div class="post-card__badge">📖 Guide</div>
+    <h3 class="post-card__title"><a href="{{ '/knowledge-base/fibromyalgia-claims' | relative_url }}">Fibromyalgia Claims</a></h3>
+    <p class="post-card__excerpt"><strong>68 cases analyzed.</strong> One of the hardest conditions to win. Post-traumatic fibromyalgia. Diagnostic criteria. Evidence strategy.</p>
+    <a href="{{ '/knowledge-base/fibromyalgia-claims' | relative_url }}" class="post-card__link">Read guide →</a>
+  </article>
+</div>
+
+<p style="text-align: center; margin-top: 1.5rem;">
+  <a href="{{ '/knowledge-base/' | relative_url }}" class="btn-primary">View All Guides + Templates →</a>
+</p>
+
+<p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
+  <strong>Behind the scenes:</strong> Read <a href="{{ '/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions' | relative_url }}">Building a Knowledge Base From Tribunal Decisions</a> to see how we built this (including the failures and pivots).
+</p>
 
 ---
 

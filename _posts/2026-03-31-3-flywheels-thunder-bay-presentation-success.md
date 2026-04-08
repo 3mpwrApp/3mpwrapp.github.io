@@ -403,6 +403,20 @@ One worker's 40-hour struggle becomes 500 workers getting instant answers.
 
 ---
 
+## Related Reading
+
+This article is part of a connected series documenting how we're building 3mpwrApp:
+
+📖 **[Building a Knowledge Base From Tribunal Decisions](https://3mpwrapp.com/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions.html)** - Proof the flywheels work: 1,204 cases analyzed, 6 knowledge base articles created, pattern analysis completed
+
+📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The execution: collecting 14,000+ tribunal decisions across Canada (Ontario complete, expanding to all provinces)
+
+📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.com/blog/2026-04-02-community-what-3mpwr-means.html)** - The philosophy behind the flywheels: Individual, Community, and Systemic change working together
+
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.com/blog/2026-01-06-why-disability-apps-fail.html)** - The technical foundation: how the 3 flywheels create compounding community knowledge
+
+---
+
 ## Join the Movement
 
 The 3 Flywheels are only as powerful as the community using them.

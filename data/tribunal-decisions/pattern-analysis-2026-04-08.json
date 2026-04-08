@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "analysisDate": "2026-04-08T18:11:35.472Z",
+    "inputFile": "filtered-disability-cases-2026-04-08.json",
+    "totalCases": 1334
+  },
+  "outcomes": {
+    "allowed": 4,
+    "dismissed": 0,
+    "varied": 48,
+    "unknown": 1282
+  },
+  "conditionSuccessRates": [
+    {
+      "name": "Repetitive Strain",
+      "total": 30,
+      "successRate": 13,
+      "allowed": 4,
+      "dismissed": 0
+    },
+    {
+      "name": "Chronic Pain",
+      "total": 254,
+      "successRate": 0,
+      "allowed": 0,
+      "dismissed": 0
+    },
+    {
+      "name": "PTSD",
+      "total": 74,
+      "successRate": 0,
+      "allowed": 0,
+      "dismissed": 0
+    },
+    {
+      "name": "Back Injury",
+      "total": 830,
+      "successRate": 0,
+      "allowed": 0,
+      "dismissed": 0
+    },
+    {
+      "name": "Permanent Disability",
+      "total": 78,
+      "successRate": 0,
+      "allowed": 0,
+      "dismissed": 0
+    },
+    {
+      "name": "Mental Health",
+      "total": 26,
+      "successRate": 0,
+      "allowed": 0,
+      "dismissed": 0
+    },
+    {
+      "name": "Fibromyalgia",
+      "total": 88,
+      "successRate": 0,
+      "allowed": 0,
+      "dismissed": 0
+    },
+    {
+      "name": "Occupational Disease",
+      "total": 6,
+      "successRate": 0,
+      "allowed": 0,
+      "dismissed": 0
+    }
+  ],
+  "successFactors": [],
+  "denialReasons": [],
+  "topKeywords": [
+    {
+      "keyword": "worker",
+      "count": 1071
+    },
+    {
+      "keyword": "work",
+      "count": 362
+    },
+    {
+      "keyword": "low back pain",
+      "count": 194
+    },
+    {
+      "keyword": "chronic pain",
+      "count": 186
+    },
+    {
+      "keyword": "pain",
+      "count": 170
+    },
+    {
+      "keyword": "related injury",
+      "count": 157
+    },
+    {
+      "keyword": "low back injury",
+      "count": 122
+    },
+    {
+      "keyword": "injury",
+      "count": 111
+    },
+    {
+      "keyword": "accident",
+      "count": 100
+    },
+    {
+      "keyword": "existing condition",
+      "count": 96
+    },
+    {
+      "keyword": "psychotraumatic disability",
+      "count": 92
+    },
+    {
+      "keyword": "entitlement",
+      "count": 75
+    },
+    {
+      "keyword": "permanent impairment",
+      "count": 74
+    },
+    {
+      "keyword": "benefits",
+      "count": 72
+    },
+    {
+      "keyword": "fibromyalgia",
+      "count": 68
+    },
+    {
+      "keyword": "impairment",
+      "count": 66
+    },
+    {
+      "keyword": "post",
+      "count": 62
+    },
+    {
+      "keyword": "permanent disability",
+      "count": 62
+    },
+    {
+      "keyword": "workplace accident",
+      "count": 59
+    },
+    {
+      "keyword": "lumbar spine",
+      "count": 58
+    }
+  ]
+}

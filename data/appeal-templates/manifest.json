@@ -1,0 +1,37 @@
+{
+  "generatedDate": "2026-04-08T18:26:08.564Z",
+  "sourceData": {
+    "totalCases": 1334,
+    "dateRange": "2025-2026",
+    "database": "Ontario WSIAT (onwsiat)"
+  },
+  "templates": [
+    {
+      "id": "back-injury-appeal",
+      "title": "Back Injury Appeal Letter Template",
+      "category": "Medical Appeals",
+      "condition": "Low Back Pain / Back Injury",
+      "file": "back-injury-appeal.md"
+    },
+    {
+      "id": "chronic-pain-appeal",
+      "title": "Chronic Pain Appeal Letter Template",
+      "category": "Medical Appeals",
+      "condition": "Chronic Pain",
+      "file": "chronic-pain-appeal.md"
+    },
+    {
+      "id": "pre-existing-appeal",
+      "title": "Pre-Existing Condition Appeal Template",
+      "category": "Legal Arguments",
+      "condition": "Any (with pre-existing condition)",
+      "file": "pre-existing-appeal.md"
+    }
+  ],
+  "categories": [
+    "Medical Appeals",
+    "Legal Arguments"
+  ],
+  "totalTemplates": 3,
+  "usage": "Fill-in-the-blank templates for injured workers filing WSIB appeals"
+}

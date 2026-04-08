@@ -13,9 +13,11 @@ description: Get in touch with 3mpwrApp and follow us on social media.
 
 Stay connected with 3mpwrApp on social media:
 
-- **[Facebook](https://www.facebook.com/3mpowrapp)** - Follow us for updates and community news
-- **[X (Twitter)](https://x.com/3mpowrApp0816)** - Join the conversation and get real-time updates
-- **[Instagram](https://www.instagram.com/3mpowrapp/)** - See our latest posts and stories
+- **[Discord](https://discord.gg/P2qQyjxV)** - Join our community, get live support, participate in beta testing
+- **[X (Twitter)](https://x.com/3mpwrApp0816)** - Daily updates and real-time news
+- **[Facebook](https://www.facebook.com/3mpowrapp)** - Community news and local groups
+- **[Mastodon](https://mastodon.social/@3mpwrapp)** - Tech community and transparency updates
+- **[Bluesky](https://bsky.app/profile/3mpwrapp.bsky.social)** - Progressive advocacy and social justice updates
 
 ## Join Our Beta Program
 
