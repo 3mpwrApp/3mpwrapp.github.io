@@ -53,6 +53,12 @@ collections:
   whats_new:
     output: true
     permalink: /whats-new/:name/
+  knowledge_base:
+    output: true
+    permalink: /knowledge-base/:name/
+  templates:
+    output: true
+    permalink: /templates/:name/
 
 # Feeds: generate a dedicated feed for What's New collection
 feed:

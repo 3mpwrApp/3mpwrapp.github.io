@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Understanding Low Back Pain Claims at WSIB"
+permalink: /knowledge-base/low-back-pain-claims/
+---
+
 # Understanding Low Back Pain Claims at WSIB
 
 *Based on analysis of 194+ WSIAT decisions*

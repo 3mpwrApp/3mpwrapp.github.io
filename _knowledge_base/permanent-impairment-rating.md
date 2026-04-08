@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Understanding Permanent Impairment Ratings"
+permalink: /knowledge-base/permanent-impairment-rating/
+---
+
 # Understanding Permanent Impairment Ratings
 
 *Based on 74 WSIAT cases mentioning permanent impairment*

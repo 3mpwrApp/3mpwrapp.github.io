@@ -87,7 +87,7 @@ In the recent presentation, we showed you the app's features. But behind those f
 
 If you want the full transparency version—including the API failures, the pivots, and the "oh crap that doesn't work" moments—read these:
 
-📖 **[Building a Knowledge Base From Tribunal Decisions](https://3mpwrapp.com/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions.html)** (~8,000 words)
+📖 **[Building a Knowledge Base From Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions.html)** (~8,000 words)
 - How we collected 1,204 cases from CanLII
 - Why the API search parameter doesn't actually exist (honest failure report)
 - Pattern analysis and knowledge base generation process
@@ -105,13 +105,13 @@ If you want the full transparency version—including the API failures, the pivo
 - The math: How 500 workers using flywheels save 18,000 hours and $4.95 million in legal fees
 - Why this is the highest-leverage solution for injured workers and persons with disabilities
 
-📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.com/blog/2026-04-02-community-what-3mpwr-means.html)**
+📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026-04-02-community-what-3mpwr-means.html)**
 - Why the "3" represents three pillars: Individual, Community, Systemic
 - The inspiration came from seeing how complex systems affect injured workers and persons with disabilities
 - How astrology and numerology shaped the name
 - Why we never mistake individual coping for justice
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.com/blog/2026-01-06-why-disability-apps-fail.html)**
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-why-disability-apps-fail.html)**
 - The 3 flywheels that power 3mpwrApp (Evidence, Pattern Detection, Knowledge Network)
 - How we're building a platform that actually serves injured workers and persons with disabilities
 - The data-driven approach to systemic change
@@ -119,22 +119,22 @@ If you want the full transparency version—including the API failures, the pivo
 
 ### Check Out the Knowledge Base
 
-📚 **[Browse All Guides](https://3mpwrapp.com/knowledge-base/)** - Complete knowledge base with all 6 articles + templates
+📚 **[Browse All Guides](https://3mpwrapp.pages.dev/knowledge-base/)** - Complete knowledge base with all 6 articles + templates
 
 **Start here if you're dealing with:**
-- Back injury: [Low Back Pain Claims Guide](https://3mpwrapp.com/knowledge-base/low-back-pain-claims.html) **(194 cases analyzed)**
-- Chronic pain: [Chronic Pain Claims Guide](https://3mpwrapp.com/knowledge-base/chronic-pain-claims.html) **(186 cases analyzed)**
-- WSIB denied you because of old injury: [Pre-Existing Conditions Guide](https://3mpwrapp.com/knowledge-base/pre-existing-conditions.html) **(96 cases analyzed)**
-- PTSD/mental health: [Psychotraumatic Disability Guide](https://3mpwrapp.com/knowledge-base/psychotraumatic-disability.html) **(166 cases analyzed)**
-- Need to calculate benefits: [Permanent Impairment Rating Guide](https://3mpwrapp.com/knowledge-base/permanent-impairment-rating.html) **(74 cases analyzed)**
-- Fibromyalgia: [Fibromyalgia Claims Guide](https://3mpwrapp.com/knowledge-base/fibromyalgia-claims.html) **(68 cases analyzed)**
+- Back injury: [Low Back Pain Claims Guide](https://3mpwrapp.pages.dev/knowledge-base/low-back-pain-claims.html) **(194 cases analyzed)**
+- Chronic pain: [Chronic Pain Claims Guide](https://3mpwrapp.pages.dev/knowledge-base/chronic-pain-claims.html) **(186 cases analyzed)**
+- WSIB denied you because of old injury: [Pre-Existing Conditions Guide](https://3mpwrapp.pages.dev/knowledge-base/pre-existing-conditions.html) **(96 cases analyzed)**
+- PTSD/mental health: [Psychotraumatic Disability Guide](https://3mpwrapp.pages.dev/knowledge-base/psychotraumatic-disability.html) **(166 cases analyzed)**
+- Need to calculate benefits: [Permanent Impairment Rating Guide](https://3mpwrapp.pages.dev/knowledge-base/permanent-impairment-rating.html) **(74 cases analyzed)**
+- Fibromyalgia: [Fibromyalgia Claims Guide](https://3mpwrapp.pages.dev/knowledge-base/fibromyalgia-claims.html) **(68 cases analyzed)**
 
 ### Get the Appeal Templates
 
 These are fill-in-the-blank letters you can customize **(save $500+ in paralegal fees)**:
-- [Back Injury Appeal Template](https://3mpwrapp.com/templates/back-injury-appeal.html) - 8 pages, 30-45 min to complete
-- [Chronic Pain Appeal Template](https://3mpwrapp.com/templates/chronic-pain-appeal.html) - 7 pages, 30-45 min to complete
-- [Pre-Existing Condition Appeal Template](https://3mpwrapp.com/templates/pre-existing-appeal.html) - 9 pages, 45-60 min to complete
+- [Back Injury Appeal Template](https://3mpwrapp.pages.dev/templates/back-injury-appeal.html) - 8 pages, 30-45 min to complete
+- [Chronic Pain Appeal Template](https://3mpwrapp.pages.dev/templates/chronic-pain-appeal.html) - 7 pages, 30-45 min to complete
+- [Pre-Existing Condition Appeal Template](https://3mpwrapp.pages.dev/templates/pre-existing-appeal.html) - 9 pages, 45-60 min to complete
 
 ### What We Need From You
 
@@ -239,8 +239,8 @@ Quick update: We just built **6 new guides** to help you win WSIB appeals.
 - Real examples from cases that actually won
 
 **Check them out:**
-→ [Knowledge Base](https://3mpwrapp.com/knowledge-base/)  
-→ [Appeal Templates](https://3mpwrapp.com/templates/)
+→ [Knowledge Base](https://3mpwrapp.pages.dev/knowledge-base/)  
+→ [Appeal Templates](https://3mpwrapp.pages.dev/templates/)
 
 **What's next:**
 - We're gathering more data before the Thunder Bay pilot
@@ -282,13 +282,13 @@ What's live right now:
 - Pattern analysis showing what medical evidence wins
 
 We need your help:
-1. Read one guide: https://3mpwrapp.com/knowledge-base/
-2. Try one template: https://3mpwrapp.com/templates/
+1. Read one guide: https://3mpwrapp.pages.dev/knowledge-base/
+2. Try one template: https://3mpwrapp.pages.dev/templates/
 3. Tell us what's confusing or missing
 
 Before we launch the Thunder Bay pilot, we're gathering more data. This means Thunder Bay workers will get even better tools when we're ready.
 
-Transparency matters: We wrote a full blog post showing exactly how we built this—including the failures and pivots. Read it here: https://3mpwrapp.com/blog/
+Transparency matters: We wrote a full blog post showing exactly how we built this—including the failures and pivots. Read it here: https://3mpwrapp.pages.dev/blog/
 
 Questions? Reply to this email or join Discord: https://discord.gg/P2qQyjxV
 

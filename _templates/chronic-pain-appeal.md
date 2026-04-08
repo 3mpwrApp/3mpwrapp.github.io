@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Chronic Pain Appeal Letter Template"
+permalink: /templates/chronic-pain-appeal/
+---
+
 # Chronic Pain Appeal Letter Template
 
 *Based on 186 chronic pain cases from WSIAT decisions*

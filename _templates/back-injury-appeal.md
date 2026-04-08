@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Back Injury Appeal Letter Template"
+permalink: /templates/back-injury-appeal/
+---
+
 # Back Injury Appeal Letter Template
 
 *Based on 830 back injury cases from WSIAT decisions*

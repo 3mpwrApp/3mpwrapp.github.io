@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Chronic Pain: Building Your Case"
+permalink: /knowledge-base/chronic-pain-claims/
+---
+
 # Chronic Pain: Building Your Case
 
 *Based on 186 WSIAT decisions involving chronic pain*

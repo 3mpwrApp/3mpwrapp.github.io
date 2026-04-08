@@ -3,7 +3,7 @@ layout: post
 title: "Building a Free WSIB Appeal Knowledge Base: 1,204 Tribunal Decisions Analyzed"
 date: 2026-04-08
 author: 3mpwrApp, Lissa Beaulieu
-categories: [transparency, data, knowledge-base, thunder-bay]
+categories: [community, transparency, data, knowledge-base, thunder-bay]
 image: /assets/images/blog/knowledge-base-launch.jpg
 excerpt: "Today we transformed 1,204 Ontario WSIAT decisions into actionable tools for injured workers and persons with disabilities. Here's our transparent journey from API struggles to launching 6 comprehensive guides and 3 fill-in-the-blank appeal templates."
 ---

@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Pre-Existing Condition Appeal Template"
+permalink: /templates/pre-existing-appeal/
+---
+
 # Pre-Existing Condition Appeal Template
 
 *Based on 96 WSIAT cases where pre-existing condition was successfully argued*

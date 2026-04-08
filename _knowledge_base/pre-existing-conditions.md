@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Pre-Existing Conditions: What You Need to Know"
+permalink: /knowledge-base/pre-existing-conditions/
+---
+
 # Pre-Existing Conditions: What You Need to Know
 
 *Based on 96 WSIAT decisions mentioning pre-existing conditions*

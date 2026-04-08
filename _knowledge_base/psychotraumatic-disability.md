@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Psychotraumatic Disability: Understanding Your Rights"
+permalink: /knowledge-base/psychotraumatic-disability/
+---
+
 # Psychotraumatic Disability: Understanding Your Rights
 
 *Based on 92 psychotraumatic disability + 74 PTSD cases from WSIAT*

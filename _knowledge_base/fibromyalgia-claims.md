@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Fibromyalgia and WSIB: Your Complete Guide"
+permalink: /knowledge-base/fibromyalgia-claims/
+---
+
 # Fibromyalgia and WSIB: Your Complete Guide
 
 *Based on 68 cases mentioning fibromyalgia from WSIAT decisions*
