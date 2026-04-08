@@ -3,6 +3,7 @@ layout: post
 title: "What 3mpwr Means: The Philosophy Behind Our Name"
 date: 2026-04-02
 categories: community
+permalink: /blog/2026-04-02-community-what-3mpwr-means/
 author: 3mpwrApp, Lissa Beaulieu
 excerpt: "Names are statements of intent. The inspiration for this platform came from the community—seeing and hearing firsthand how complex systems affect injured workers and persons with disabilities. But the name '3mpwr' came from personal reflection on empowerment, astrology, and numerology."
 ---
@@ -117,7 +118,7 @@ This article is part of a connected series documenting how we're building 3mpwrA
 
 📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - How the three pillars become three flywheels: Evidence, Pattern Detection, and Collective Action working together
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-why-disability-apps-fail.html)** - The technical implementation: why compounding community knowledge is our superpower
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-the-power-of-3mpwrapp-how-were-building-different/)** - The technical implementation: why compounding community knowledge is our superpower
 
 ---
 

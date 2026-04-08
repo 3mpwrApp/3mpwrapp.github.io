@@ -1,14 +1,15 @@
 ---
 layout: post
-title: "Why Everything You Know About Disability Tech Is Backwards"
-subtitle: "How 3mpwrApp is changing the game by designing WITH disabled people, not FOR them"
+title: "The Power of 3mpwrApp: How We're Building Different"
+subtitle: "Why compounding community knowledge is our superpower and how the flywheel approach drives systemic change"
 date: 2026-01-06
 updated: 2026-01-06
 categories: [Disability, Technology, Community, Leadership]
+permalink: /blog/2026-01-06-the-power-of-3mpwrapp-how-were-building-different/
 tags: [3mpwrApp, accessibility, disability rights, technology, closed beta, innovation]
-author: 3mpwrApp Community Team
+author: 3mpwrApp, Lissa Beaulieu
 image: /assets/blog/disability-tech-backwards.png
-excerpt: "Most disability apps follow the same broken pattern. 3mpwrApp proves there's a better way."
+excerpt: "Most disability apps follow the same broken pattern. 3mpwrApp proves there's a better way - by designing WITH disabled people and building collective power."
 featured: true
 reading-time: 8
 ---
@@ -169,10 +170,10 @@ Everyone from disability advocates to policy makers to product teams should be w
 This conversation matters. If you work in disability policy, healthcare, tech, or accessibility—or if you're part of the disability community—share this with people who need to hear it.
 
 **Share on:**
-- [Post on X](https://x.com/intent/tweet?text=Why%20Everything%20You%20Know%20About%20Disability%20Tech%20Is%20Backwards%20-%203mpwrApp%20is%20proving%20there%27s%20a%20better%20way.%20Built%20BY%20disabled%20people%2C%20not%20FOR%20them.&url=https%3A%2F%2F3mpwrapp.pages.dev%2Fblog%2F2026-01-06-why-disability-apps-fail&hashtags=disability,accessibility,technology)
-- [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3mpwrapp.pages.dev%2Fblog%2F2026-01-06-why-disability-apps-fail)
-- [Post on Bluesky](https://bsky.app/intent/compose?text=Why%20Everything%20You%20Know%20About%20Disability%20Tech%20Is%20Backwards%20-%203mpwrApp%20is%20proving%20there%27s%20a%20better%20way.%20Built%20BY%20disabled%20people%2C%20not%20FOR%20them.%20https%3A%2F%2F3mpwrapp.pages.dev%2Fblog%2F2026-01-06-why-disability-apps-fail)
-- [Toot on Mastodon](https://mastodon.social/share?text=Why%20Everything%20You%20Know%20About%20Disability%20Tech%20Is%20Backwards%20-%203mpwrApp%20is%20proving%20there%27s%20a%20better%20way.%20Built%20BY%20disabled%20people%2C%20not%20FOR%20them.%20https%3A%2F%2F3mpwrapp.pages.dev%2Fblog%2F2026-01-06-why-disability-apps-fail)
+- [Post on X](https://x.com/intent/tweet?text=The%20Power%20of%203mpwrApp%3A%20How%20We're%20Building%20Different%20-%20compounding%20community%20knowledge%20and%20the%20flywheel%20approach%20to%20systemic%20change&url=https%3A%2F%2F3mpwrapp.pages.dev%2Fblog%2F2026-01-06-the-power-of-3mpwrapp-how-were-building-different&hashtags=disability,accessibility,technology)
+- [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3mpwrapp.pages.dev%2Fblog%2F2026-01-06-the-power-of-3mpwrapp-how-were-building-different)
+- [Post on Bluesky](https://bsky.app/intent/compose?text=The%20Power%20of%203mpwrApp%3A%20How%20We're%20Building%20Different%20-%20compounding%20community%20knowledge%20and%20the%20flywheel%20approach%20to%20systemic%20change.%20https%3A%2F%2F3mpwrapp.pages.dev%2Fblog%2F2026-01-06-the-power-of-3mpwrapp-how-were-building-different)
+- [Toot on Mastodon](https://mastodon.social/share?text=The%20Power%20of%203mpwrApp%3A%20How%20We're%20Building%20Different%20-%20compounding%20community%20knowledge%20and%20the%20flywheel%20approach%20to%20systemic%20change.%20https%3A%2F%2F3mpwrapp.pages.dev%2Fblog%2F2026-01-06-the-power-of-3mpwrapp-how-were-building-different)
 
 ---
 

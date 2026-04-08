@@ -87,6 +87,10 @@ Based on current WSIAT patterns:
 3. **Understand your rights** - You can appeal multiple times
 4. **Seek representation** - Legal aid or worker advocates
 
+## Ready to Appeal?
+
+**[📝 Back Injury Appeal Template](https://3mpwrapp.pages.dev/templates/back-injury-appeal/)** - Fill-in-the-blank WSIAT appeal letter based on 194 successful cases. Takes 30-45 minutes to complete. Save $500+ in legal fees.
+
 ## Related Articles
 - [Chronic Pain: Building Your Case](#chronic-pain)
 - [Pre-Existing Conditions: What You Need to Know](#pre-existing)

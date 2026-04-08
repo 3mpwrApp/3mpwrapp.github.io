@@ -176,6 +176,10 @@ From case analysis:
 - Consider private physiatry assessment if WSIB IME unfavorable
 - Thunder Bay Regional HSC has specialists familiar with WSIB cases
 
+## Ready to Appeal?
+
+**[📝 Pre-Existing Condition Appeal Template](https://3mpwrapp.pages.dev/templates/pre-existing-appeal/)** - Fill-in-the-blank WSIAT appeal letter specifically for pre-existing condition denials (96 decisions analyzed). Takes 45-60 minutes to complete. Addresses the "take your victim as you find them" principle.
+
 ## Bottom Line
 
 **Having a pre-existing condition does NOT disqualify you from WSIB benefits.**

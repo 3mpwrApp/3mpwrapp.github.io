@@ -98,6 +98,10 @@ Common reasons chronic pain claims are denied:
 - **Physiatrist** (rehabilitation medicine doctor)
 - **Chronic pain specialist**
 - **Psychologist** (for pain psychology assessment)
+
+## Ready to Appeal?
+
+**[📝 Chronic Pain Appeal Template](https://3mpwrapp.pages.dev/templates/chronic-pain-appeal/)** - Fill-in-the-blank WSIAT appeal letter designed for chronic pain cases (186 decisions analyzed). Takes 30-45 minutes to complete. Addresses common "disproportionate pain" denials.
 - **Rheumatologist** (for fibromyalgia)
 
 ## Appeal Strategy

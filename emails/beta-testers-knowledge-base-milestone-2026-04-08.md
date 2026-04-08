@@ -111,7 +111,7 @@ If you want the full transparency version—including the API failures, the pivo
 - How astrology and numerology shaped the name
 - Why we never mistake individual coping for justice
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-why-disability-apps-fail.html)**
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-the-power-of-3mpwrapp-how-were-building-different/)**
 - The 3 flywheels that power 3mpwrApp (Evidence, Pattern Detection, Knowledge Network)
 - How we're building a platform that actually serves injured workers and persons with disabilities
 - The data-driven approach to systemic change

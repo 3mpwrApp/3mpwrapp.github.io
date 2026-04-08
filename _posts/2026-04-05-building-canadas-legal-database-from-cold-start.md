@@ -4,6 +4,7 @@ title: "Building Canada's Legal Database for Injured Workers and Persons with Di
 date: 2026-04-05 00:00:00 +0000
 author: 3mpwr Team
 categories: [community, development]
+permalink: /blog/2026-04-05-building-canadas-legal-database-from-cold-start/
 tags: [injured workers, disabilities, legal aid, WSIAT, CanLII, Thunder Bay, TBDIWSG, Ontario, Canada]
 excerpt: "How we're building a comprehensive Canada-wide legal decision database to help injured workers and persons with disabilities navigate workplace injury appeals - starting from zero templates to 1,500+ detailed winning case strategies."
 ---
@@ -490,7 +491,7 @@ This article is part of a connected series documenting how we're building 3mpwrA
 
 📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026-04-02-community-what-3mpwr-means.html)** - Why we're building this: the three pillars of Individual, Community, and Systemic change
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-why-disability-apps-fail.html)** - The technical deep dive on how the 3 flywheels work and why community knowledge compounds
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-the-power-of-3mpwrapp-how-were-building-different/)** - The technical deep dive on how the 3 flywheels work and why community knowledge compounds
 
 ---
 

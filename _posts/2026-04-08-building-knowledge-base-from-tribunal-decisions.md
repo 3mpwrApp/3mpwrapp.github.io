@@ -4,6 +4,7 @@ title: "Building a Free WSIB Appeal Knowledge Base: 1,204 Tribunal Decisions Ana
 date: 2026-04-08
 author: 3mpwrApp, Lissa Beaulieu
 categories: [community, transparency, data, knowledge-base, thunder-bay]
+permalink: /blog/2026-04-08-building-knowledge-base-from-tribunal-decisions/
 image: /assets/images/blog/knowledge-base-launch.jpg
 excerpt: "Today we transformed 1,204 Ontario WSIAT decisions into actionable tools for injured workers and persons with disabilities. Here's our transparent journey from API struggles to launching 6 comprehensive guides and 3 fill-in-the-blank appeal templates."
 ---
@@ -536,7 +537,7 @@ This article is part of a connected series documenting how we're building 3mpwrA
 
 📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026-04-02-community-what-3mpwr-means.html)** - The three pillars (Individual, Community, Systemic) that guide everything we build
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-why-disability-apps-fail.html)** - Why compounding community knowledge is our superpower and how the flywheel approach drives systemic change
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-the-power-of-3mpwrapp-how-were-building-different/)** - Why compounding community knowledge is our superpower and how the flywheel approach drives systemic change
 
 ---
 

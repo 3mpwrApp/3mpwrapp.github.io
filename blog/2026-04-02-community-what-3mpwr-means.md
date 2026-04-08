@@ -117,7 +117,7 @@ This article is part of a connected series documenting how we're building 3mpwrA
 
 📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - How the three pillars become three flywheels: Evidence, Pattern Detection, and Collective Action working together
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-why-disability-apps-fail.html)** - The technical implementation: why compounding community knowledge is our superpower
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-the-power-of-3mpwrapp-how-were-building-different/)** - The technical implementation: why compounding community knowledge is our superpower
 
 ---
 
