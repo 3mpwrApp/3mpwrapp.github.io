@@ -2,6 +2,7 @@
 layout: default
 title: Knowledge Base - WSIB Appeal Guides
 description: Evidence-based guides for injured workers built from 1,200+ real Ontario tribunal decisions. Free appeal templates and strategies that work.
+permalink: /knowledge-base/
 ---
 
 # Knowledge Base: WSIB Appeal Guides
