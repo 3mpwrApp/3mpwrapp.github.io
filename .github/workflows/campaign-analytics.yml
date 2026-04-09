@@ -1,0 +1,90 @@
+name: Campaign Analytics & Optimization
+on:
+  schedule:
+    # Run daily at 9 PM UTC (4 PM EST) - after all campaigns have posted
+    - cron: '0 21 * * *'
+    # Run optimizer weekly on Sundays at 9 PM UTC
+    - cron: '0 21 * * 0'
+  workflow_dispatch: # Manual trigger
+
+concurrency:
+  group: campaign-analytics
+  cancel-in-progress: false
+
+jobs:
+  analyze-and-optimize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Run Campaign Analytics
+        run: |
+          echo "📊 Running campaign analytics tracker..."
+          node scripts/campaign-analytics-tracker.js
+      
+      - name: Run Campaign Optimizer (Weekly)
+        if: github.event.schedule == '0 21 * * 0' || github.event_name == 'workflow_dispatch'
+        run: |
+          echo "🔍 Running optimization analysis..."
+          node scripts/campaign-optimizer.js
+      
+      - name: Check for Recommendations
+        id: check_recommendations
+        run: |
+          if [ -f public/campaign-analytics.json ]; then
+            echo "✅ Analytics file generated"
+            echo "has_data=true" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️ No analytics data yet"
+            echo "has_data=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit Analytics Data
+        if: steps.check_recommendations.outputs.has_data == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add public/campaign-analytics.json || true
+          git add docs/campaign-optimization-report.md || true
+          
+          if git diff --staged --quiet; then
+            echo "📊 No changes to commit"
+          else
+            git commit -m "analytics: update campaign performance data
+
+- Daily snapshot: $(date +%Y-%m-%d)
+- Tracked campaigns: Day of Mourning, Bill 86, Migrant Worker, Disability Bulletin
+- Platform metrics: Mastodon, Bluesky, Discord
+- Optimization report: $([ -f docs/campaign-optimization-report.md ] && echo 'Updated' || echo 'N/A')"
+            git push
+            echo "✅ Analytics data committed"
+          fi
+      
+      - name: Summary
+        run: |
+          echo "## 📊 Campaign Analytics Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Date:** $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f public/campaign-analytics.json ]; then
+            echo "✅ Analytics tracking active" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Campaigns monitored:** 4" >> $GITHUB_STEP_SUMMARY
+            echo "- Day of Mourning (event)" >> $GITHUB_STEP_SUMMARY
+            echo "- Bill 86 Debate (event)" >> $GITHUB_STEP_SUMMARY
+            echo "- Migrant Worker Campaign (ongoing)" >> $GITHUB_STEP_SUMMARY
+            echo "- Disability Bulletin (ongoing)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ First run - collecting baseline data" >> $GITHUB_STEP_SUMMARY
+          fi
