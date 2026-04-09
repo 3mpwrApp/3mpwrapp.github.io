@@ -196,7 +196,7 @@ Professional appeal letters that normally cost **$500-1,000 in paralegal fees**,
 
 ### 3. Pattern Analysis Database
 
-[Pattern Analysis JSON](https://3mpwrapp.pages.dev/data/pattern-analysis-2026-04-08.json) - Top keywords and success factors
+[Pattern Analysis JSON](https://3mpwrapp.pages.dev/data/tribunal-decisions/pattern-analysis-2026-04-08.json) - Top keywords and success factors
 
 **Top 20 Keywords for Search:**
 1. worker (1,071 cases)
@@ -517,8 +517,8 @@ All source data, scripts, and analysis files are available:
 **GitHub Repository:** [github.com/3mpwrapp/knowledge-base](https://github.com/3mpwrapp/knowledge-base)
 
 **Data Files:**
-- [Pattern Analysis (JSON)](https://3mpwrapp.pages.dev/data/pattern-analysis-2026-04-08.json)
-- [Filtered Cases (JSON)](https://3mpwrapp.pages.dev/data/filtered-disability-cases-2026-04-08.json)
+- [Pattern Analysis (JSON)](https://3mpwrapp.pages.dev/data/tribunal-decisions/pattern-analysis-2026-04-08.json)
+- [Filtered Cases (JSON)](https://3mpwrapp.pages.dev/data/tribunal-decisions/filtered-disability-cases-2026-04-08.json)
 - [Collection Scripts](https://github.com/3mpwrapp/knowledge-base/tree/main/scripts)
 
 **License:** Creative Commons Attribution 4.0 (CC BY 4.0)  
