@@ -1,0 +1,93 @@
+---
+layout: post
+title: "Daily News Curation - 2026-04-09"
+date: 2026-04-09
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-04-09
+
+Curated 15 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Please Advise! Will Testicle-Tanning Tucker Carlson Invade Canada?
+Dr. Steve would have said unhinged rants don’t lead to war. But things have changed.
+[Source](https://thetyee.ca/Opinion/2026/04/07/Please-Advise-Tucker-Carlson-Invade-Canada/)
+**Score:** 20.30
+
+### 2. How Does Canada’s Level of Democracy Stack Up Globally?
+Swedish governance experts offer a road map to stronger civic engagement, if we want it.
+[Source](https://thetyee.ca/Analysis/2026/04/06/How-Canada-Democracy-Stacks-Up-Globally/)
+**Score:** 10.50
+
+### 3. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73244)
+**Score:** 9.10
+
+### 4. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73241)
+**Score:** 7.10
+
+### 5. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73240)
+**Score:** 7.10
+
+### 6. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73238)
+**Score:** 7.10
+
+### 7. That Time When 42 Random Canadians Tried to Fix the Internet
+Inside the citizens’ assembly that tackled online hate and lies. From the new book ‘Democracy’s Second Act.’
+[Source](https://thetyee.ca/Analysis/2026/04/08/Random-Canadians-Tried-Fix-Internet/)
+**Score:** 4.00
+
+### 8. Manitoba Anglers' Guide 2026 Now Available
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73239)
+**Score:** 5.50
+
+### 9. Alberta’s Premier Claims Immigrants Are a Burden. Where’s the Proof?
+Danielle Smith’s referendum pitch ignores tax revenues and reliance on temporary foreign workers.
+[Source](https://thetyee.ca/Analysis/2026/04/06/Alberta-Premier-Claims-Immigrants-Burden/)
+**Score:** 4.50
+
+### 10. A Calgary Museum Reinvents Itself
+The Glenbow reopens as the JR Centre for Arts & Culture next year. Its updates extend past physical renovations.
+[Source](https://thetyee.ca/Culture/2026/04/03/Calgary-Museum-Reinvents-Itself/)
+**Score:** 4.50
+
+### 11. Province Updates 2026 Spring Flood Outlook
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73277)
+**Score:** 4.50
+
+### 12. Measles Update #96
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73245)
+**Score:** 4.50
+
+### 13. Measles Update #95
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73237)
+**Score:** 4.50
+
+### 14. Spring Thaw Begins in Southern Manitoba Basins
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73217)
+**Score:** 4.50
+
