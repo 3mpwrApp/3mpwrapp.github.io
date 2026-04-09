@@ -1,0 +1,109 @@
+name: Bill 86 Debate Promotion
+
+# Post Bill 86 Debate promotions 3x per week
+# Monday, Wednesday, Friday at 2 PM UTC (9 AM EST)
+# Runs until April 14, 2026
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'  # Monday 2 PM UTC (9 AM EST)
+    - cron: '0 14 * * 3'  # Wednesday 2 PM UTC (9 AM EST)
+    - cron: '0 14 * * 5'  # Friday 2 PM UTC (9 AM EST)
+    
+  workflow_dispatch:
+    inputs:
+      test_mode:
+        description: 'Test mode (skip posting, just show what would be posted)'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  NODE_VERSION: '20'
+
+# Prevent overlapping runs
+concurrency:
+  group: bill86-promo
+  cancel-in-progress: false
+
+jobs:
+  post_promotion:
+    name: Post Bill 86 Promotion
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.CONTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          fetch-depth: 5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          echo "📦 Installing dependencies..."
+          npm ci --ignore-scripts --no-audit --fund=false
+          echo "✅ Dependencies installed"
+
+      - name: Post to social media
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TEST_MODE: ${{ github.event.inputs.test_mode }}
+        run: |
+          echo "📤 Posting Bill 86 debate promotion..."
+          node scripts/post-bill86-promo.js
+          
+          if [ $? -eq 0 ]; then
+            echo "✅ Successfully posted to social media"
+          else
+            echo "⚠️ Posting completed with warnings"
+          fi
+
+      - name: Commit state file
+        id: commit
+        continue-on-error: true
+        run: |
+          git config --local user.email "empowrapp08162025@gmail.com"
+          git config --local user.name "3mpwrApp Content Bot"
+          
+          if [ -f ".github/state/bill86-state.json" ]; then
+            git add .github/state/bill86-state.json
+            
+            if git diff --staged --quiet; then
+              echo "No state changes to commit"
+            else
+              git commit -m "chore: update Bill 86 promotion state [skip ci]"
+              git push
+              echo "✅ State file updated"
+            fi
+          fi
+
+      - name: Summary
+        run: |
+          echo "## ⚖️ Bill 86 Debate Promotion" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Promotion posted successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Event Date:** April 14, 2026" >> $GITHUB_STEP_SUMMARY
+          echo "**Schedule:**" >> $GITHUB_STEP_SUMMARY
+          echo "- 9am EST: Press Conference" >> $GITHUB_STEP_SUMMARY
+          echo "- 10:15am EST: Question Period" >> $GITHUB_STEP_SUMMARY
+          echo "- 6pm EST: Debate" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Location:** Queen's Park, Toronto (+ online at ola.org)" >> $GITHUB_STEP_SUMMARY
+          echo "**Frequency:** 3x per week (Mon, Wed, Fri)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Posted to: Mastodon, Bluesky, Discord" >> $GITHUB_STEP_SUMMARY

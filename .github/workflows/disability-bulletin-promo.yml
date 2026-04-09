@@ -1,0 +1,106 @@
+name: Disability Bulletin Promotion
+
+# Post Disability Bulletin promotions 2x per week
+# Tuesday and Friday at 4 PM UTC (11 AM EST)
+# Ongoing campaign (no end date)
+
+on:
+  schedule:
+    - cron: '0 16 * * 2'  # Tuesday 4 PM UTC (11 AM EST)
+    - cron: '0 16 * * 5'  # Friday 4 PM UTC (11 AM EST)
+    
+  workflow_dispatch:
+    inputs:
+      test_mode:
+        description: 'Test mode (skip posting, just show what would be posted)'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  NODE_VERSION: '20'
+
+# Prevent overlapping runs
+concurrency:
+  group: disability-bulletin-promo
+  cancel-in-progress: false
+
+jobs:
+  post_promotion:
+    name: Post Disability Bulletin Promotion
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.CONTENT_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          fetch-depth: 5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          echo "📦 Installing dependencies..."
+          npm ci --ignore-scripts --no-audit --fund=false
+          echo "✅ Dependencies installed"
+
+      - name: Post to social media
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TEST_MODE: ${{ github.event.inputs.test_mode }}
+        run: |
+          echo "📤 Posting Disability Bulletin promotion..."
+          node scripts/post-disability-bulletin-promo.js
+          
+          if [ $? -eq 0 ]; then
+            echo "✅ Successfully posted to social media"
+          else
+            echo "⚠️ Posting completed with warnings"
+          fi
+
+      - name: Commit state file
+        id: commit
+        continue-on-error: true
+        run: |
+          git config --local user.email "empowrapp08162025@gmail.com"
+          git config --local user.name "3mpwrApp Content Bot"
+          
+          if [ -f ".github/state/disability-bulletin-state.json" ]; then
+            git add .github/state/disability-bulletin-state.json
+            
+            if git diff --staged --quiet; then
+              echo "No state changes to commit"
+            else
+              git commit -m "chore: update Disability Bulletin promotion state [skip ci]"
+              git push
+              echo "✅ State file updated"
+            fi
+          fi
+
+      - name: Summary
+        run: |
+          echo "## 📰 Disability Bulletin Promotion" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Promotion posted successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Publication:** Disability Bulletin" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** Issue 1 of 2 published - Issue 2 coming soon" >> $GITHUB_STEP_SUMMARY
+          echo "**Content:** Disability rights updates, policy changes, resources, advocacy news" >> $GITHUB_STEP_SUMMARY
+          echo "**Frequency:** 2x per week (Tue, Fri)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Link:** https://t.co/7vtI7QecTg" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Posted to: Mastodon, Bluesky, Discord" >> $GITHUB_STEP_SUMMARY
