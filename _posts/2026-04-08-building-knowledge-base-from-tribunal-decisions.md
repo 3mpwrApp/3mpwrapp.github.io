@@ -134,32 +134,32 @@ Each article is:
 
 **Articles:**
 
-#### [Understanding Low Back Pain Claims at WSIB](https://3mpwrapp.pages.dev/kb/low-back-pain-claims)
+#### [Understanding Low Back Pain Claims at WSIB](https://3mpwrapp.pages.dev/knowledge-base/low-back-pain-claims/)
 - **Data:** 194 low back pain cases (most common condition - 62% of all cases)
 - **Covers:** Work-relatedness, pre-existing conditions, medical evidence, appeal timeline
 - **Key insight:** "Low back pain is the #1 workplace injury in WSIB appeals"
 
-#### [Chronic Pain: Building Your Case](https://3mpwrapp.pages.dev/kb/chronic-pain-claims)
+#### [Chronic Pain: Building Your Case](https://3mpwrapp.pages.dev/knowledge-base/chronic-pain-claims/)
 - **Data:** 186 chronic pain cases (hardest to prove)
 - **Covers:** Medical explanations needed, "disproportionate pain" defense, functional evidence
 - **Key insight:** "Pain is subjective, but medical mechanisms are objective"
 
-#### [Pre-Existing Conditions: What You Need to Know](https://3mpwrapp.pages.dev/kb/pre-existing-conditions)
+#### [Pre-Existing Conditions: What You Need to Know](https://3mpwrapp.pages.dev/knowledge-base/pre-existing-conditions/)
 - **Data:** 96 pre-existing condition cases (defeats #1 WSIB denial reason)
 - **Covers:** Aggravation, acceleration, thin skull rule, legal framework
 - **Key insight:** "You don't need a perfect body to have a valid claim"
 
-#### [Psychotraumatic Disability: Understanding Your Rights](https://3mpwrapp.pages.dev/kb/psychotraumatic-disability)
+#### [Psychotraumatic Disability: Understanding Your Rights](https://3mpwrapp.pages.dev/knowledge-base/psychotraumatic-disability/)
 - **Data:** 92 psychotraumatic + 74 PTSD cases (growing category)
 - **Covers:** Mental injury vs. stress, workplace trauma, causation requirements
 - **Key insight:** "WSIB won't cover 'stress from work decisions', but WILL cover traumatic events"
 
-#### [Understanding Permanent Impairment Ratings](https://3mpwrapp.pages.dev/kb/permanent-impairment-rating)
+#### [Understanding Permanent Impairment Ratings](https://3mpwrapp.pages.dev/knowledge-base/permanent-impairment-rating/)
 - **Data:** 74 permanent impairment cases (financial benefits explained)
 - **Covers:** AMA Guides, rating system, NEL awards, appeal process
 - **Key insight:** "Permanent impairment (medical) ≠ Permanent disability (economic)"
 
-#### [Fibromyalgia and WSIB: Your Complete Guide](https://3mpwrapp.pages.dev/kb/fibromyalgia-claims)
+#### [Fibromyalgia and WSIB: Your Complete Guide](https://3mpwrapp.pages.dev/knowledge-base/fibromyalgia-claims/)
 - **Data:** 68 fibromyalgia cases (one of hardest conditions to win)
 - **Covers:** Diagnostic criteria, work-triggered fibromyalgia, medical evidence strategy
 - **Key insight:** "Post-traumatic fibromyalgia is a recognized medical phenomenon"
@@ -170,19 +170,19 @@ Each article is:
 
 Professional appeal letters that normally cost **$500-1,000 in paralegal fees**, now **free and ready in 30 minutes**.
 
-#### [Back Injury Appeal Letter Template](https://3mpwrapp.pages.dev/templates/back-injury-appeal)
+#### [Back Injury Appeal Letter Template](https://3mpwrapp.pages.dev/templates/back-injury-appeal/)
 - **Length:** 8 pages, ~4,000 words
 - **Use case:** Low back pain claim denials
 - **Features:** Pre-written legal arguments, evidence checklists, "why WSIB is wrong" section
 - **Completion time:** 30-45 minutes
 
-#### [Chronic Pain Appeal Letter Template](https://3mpwrapp.pages.dev/templates/chronic-pain-appeal)
+#### [Chronic Pain Appeal Letter Template](https://3mpwrapp.pages.dev/templates/chronic-pain-appeal/)
 - **Length:** 7 pages, ~3,500 words
 - **Use case:** "Pain is subjective" or "disproportionate to injury" denials
 - **Features:** Medical causation arguments, functional evidence guide, treatment compliance section
 - **Completion time:** 30-45 minutes
 
-#### [Pre-Existing Condition Appeal Template](https://3mpwrapp.pages.dev/templates/pre-existing-appeal)
+#### [Pre-Existing Condition Appeal Template](https://3mpwrapp.pages.dev/templates/pre-existing-appeal/)
 - **Length:** 9 pages, ~4,500 words
 - **Use case:** "This is pre-existing, not work-related" denials
 - **Features:** Legal framework, aggravation/acceleration arguments, apportionment defense, case law citations
