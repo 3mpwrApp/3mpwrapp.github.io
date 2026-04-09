@@ -320,7 +320,7 @@ async function postToMastodon(text) {
     headers: {
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json',
-      'Content-Length': data.length
+      'Content-Length': Buffer.byteLength(data)
     }
   };
 
@@ -366,7 +366,7 @@ async function postToBluesky(text) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Content-Length': authData.length
+        'Content-Length': Buffer.byteLength(authData)
       }
     };
 
@@ -405,7 +405,7 @@ async function postToBluesky(text) {
       headers: {
         'Authorization': `Bearer ${session.accessJwt}`,
         'Content-Type': 'application/json',
-        'Content-Length': postData.length
+        'Content-Length': Buffer.byteLength(postData)
       }
     };
 
@@ -454,7 +454,7 @@ async function postToDiscord(text) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Content-Length': data.length
+      'Content-Length': Buffer.byteLength(data)
     }
   };
 
