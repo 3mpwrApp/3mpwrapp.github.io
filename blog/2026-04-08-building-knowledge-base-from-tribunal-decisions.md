@@ -534,7 +534,7 @@ This article is part of a connected series documenting how we're building 3mpwrA
 
 📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - How the Evidence, Pattern Detection, and Collective Action flywheels work together (validated by 40+ years of injured worker advocacy)
 
-📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026-04-02-community-what-3mpwr-means.html)** - The three pillars (Individual, Community, Systemic) that guide everything we build
+📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026-04-02-community-what-3mpwr-means/)** - The three pillars (Individual, Community, Systemic) that guide everything we build
 
 📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-the-power-of-3mpwrapp-how-were-building-different/)** - Why compounding community knowledge is our superpower and how the flywheel approach drives systemic change
 
