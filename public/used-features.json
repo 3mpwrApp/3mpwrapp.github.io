@@ -13,7 +13,8 @@
     "Motor Accessibility Features",
     "Benefits Navigator",
     "Resource Directory",
-    "Privacy & Security Architecture"
+    "Privacy & Security Architecture",
+    "Screen Reader Excellence"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -32,6 +33,6 @@
     "Disability Justice vs Disability Charity: Our Operating Principle",
     "What 3mpwr Means: The Philosophy Behind Our Name"
   ],
-  "rotationIndex": 4,
+  "rotationIndex": 5,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
