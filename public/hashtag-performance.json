@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-08T03:41:04.022Z",
+  "lastUpdated": "2026-04-09T03:35:57.531Z",
   "hashtags": {},
   "combinations": {},
   "abTests": [],
@@ -22,7 +22,7 @@
   "currentTrending": [
     {
       "tag": "accessibility",
-      "mentions": 41,
+      "mentions": 45,
       "source": "emerging"
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "tag": "a11y",
-      "mentions": 28,
+      "mentions": 30,
       "source": "emerging"
     },
     {
