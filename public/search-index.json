@@ -1,14 +1,33 @@
 {
   "version": "1.0.0",
   "generated": "2026-04-10",
-  "totalDocuments": 496,
+  "totalDocuments": 497,
   "documents": [
+    {
+      "id": "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "source": "blog",
+      "title": "Privacy as a Human Right: Not a Feature We Added Later",
+      "excerpt": "Privacy as a Human Right: Not a Feature We Added Later Privacy for people with disabilities is a baseline safety requirement. An injured worker whose symptom logs are accessible to their employer. A p",
+      "content": "Privacy as a Human Right: Not a Feature We Added Later Privacy for people with disabilities is a baseline safety requirement. An injured worker whose symptom logs are accessible to their employer. A person with HIV whose health data surfaces in an insurance database. A disabled employee whose accommodation requests are on company-controlled infrastructure. These are documented realities, not hypotheticals. 3mpwrApp was built knowing this history. Our privacy architecture â€” local-first, encrypted, no back door, explicit user control over sync â€” is not a technical accomplishment. It is a political commitment to the people we serve. We include this in our philosophy documentation because privacy decisions made at the architecture level cannot be undone by a future policy change. The commitment is structural to the codebase. --- The Principles - Disability data is uniquely dangerous: it can affect employment, insurance, housing, and custody - Many disability apps monetize user data â€” 3mpwrApp never has and never will - Local-first architecture is a political decision, not just a technical implementation - Surveillance of disabled people has been systematically weaponized by insurance companies - Privacy protection is an accessibility feature specifically for people in adversarial systems --- In Action - An insurer cannot demand data that does not exist on a server we control - Encrypted local storage means your medical history is not exposed by a third-party data breach - You export and delete everything you've ever stored â€” your data has no home here but your device --- Why It Matters - For disabled people in active legal claims, privacy is not a preference â€” it is self-defense - Building privacy-first is slower and more expensive; we chose it deliberately and structurally - When we say \"your data never leaves without consent\" we mean it architecturally â€” not as a policy --- Join the Community 3mpwrApp is built on these principles â€” and built for and with the people who need them most. - ðŸ’¬ Community Forums - ðŸ§ª Become a Beta Tester - ðŸ“– Read Our Mission",
+      "date": "2026-04-10 00:00:00 +0000",
+      "tags": [
+        "community",
+        "philosophy",
+        "mission",
+        "philosophy"
+      ],
+      "categories": [
+        "community"
+      ],
+      "url": "/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later",
+      "filesize": 2107
+    },
     {
       "id": "blog/2026-04-10-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-04-10",
-      "excerpt": "Daily News Curation - 2026-04-10 Curated 15 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-04-10 Curated 15 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Please Advise! Will Testicle-Tanning Tucker Carlson Invade Canada? Dr. Steve would have said unhinged rants don’t lead to war. But things have changed. Source Score: 20.30 2. RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform. Source Score: 15.00 3. Eight New Canadian Poetry Collections to Celebrate National Poetry Month New and seasoned poets explore identity, memory, disability and more. Source Score: 12.60 4. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba Government of Manitoba press release Source Score: 10.10 5. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring Government of Manitoba press release Source Score: 9.10 6. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages Government of Manitoba press release Source Score: 7.10 7. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies Government of Manitoba press release Source Score: 7.10 8. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce Government of Manitoba press release Source Score: 7.10 9. That Time When 42 Random Canadians Tried to Fix the Internet Inside the citizens’ assembly that tackled online hate and lies. From the new book ‘Democracy’s Second Act.’ Source Score: 4.60 10. Manitoba Anglers' Guide 2026 Now Available Government of Manitoba press release Source Score: 5.50 11. Province Updates 2026 Spring Flood Outlook Government of Manitoba press release Source Score: 4.50 12. Measles Update #96 Government of Manitoba press release Source Score: 4.50 13. Measles Update #95 Government of Manitoba press release Source Score: 4.50 14. Spring Thaw Begins in Southern Manitoba Basins Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-10 Curated 9 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-10 Curated 9 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Supports Upgrades to Dr. Raj Pandey Hindu Centre Government of Manitoba press release Source Score: 9.50 2. Manitoba Government Invests $2.5 Million to Advance New Mining and Critical Mineral Opportunities Government of Manitoba press release Source Score: 7.50 3. Manitoba Government Re-Establishes Cardiac Centre of Excellence at St. Boniface Hospital Government of Manitoba press release Source Score: 7.50 4. Support for steel is positive, but a holistic approach is needed Rabble.ca — progressive Canadian news Source Score: 4.00 5. Carney is slashing federal health spending (but who notices?) Rabble.ca — progressive Canadian news Source Score: 4.00 6. The Ontario government plans to put police in schools Rabble.ca — progressive Canadian news Source Score: 4.00 7. Measles Update #99 Government of Manitoba press release Source Score: 4.50 8. Manitoba Adds Nearly 11,000 New Jobs in March Government of Manitoba press release Source Score: 4.50",
       "date": "2026-04-10",
       "tags": [
         "highlights"
@@ -18,7 +37,7 @@
         "news"
       ],
       "url": "/2026-04-10-daily-curation",
-      "filesize": 2275
+      "filesize": 1286
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -1800,13 +1819,13 @@
       "id": "curation/2026-04-10-curated.md",
       "source": "curation",
       "title": "2026-04-10-curated.md",
-      "excerpt": "Daily News Curation - 2026-04-10 Curated 15 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-04-10 Curated 15 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Please Advise! Will Testicle-Tanning Tucker Carlson Invade Canada? Dr. Steve would have said unhinged rants don’t lead to war. But things have changed. Source Score: 20.30 2. RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform. Source Score: 15.00 3. Eight New Canadian Poetry Collections to Celebrate National Poetry Month New and seasoned poets explore identity, memory, disability and more. Source Score: 12.60 4. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba Government of Manitoba press release Source Score: 10.10 5. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring Government of Manitoba press release Source Score: 9.10 6. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages Government of Manitoba press release Source Score: 7.10 7. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies Government of Manitoba press release Source Score: 7.10 8. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce Government of Manitoba press release Source Score: 7.10 9. That Time When 42 Random Canadians Tried to Fix the Internet Inside the citizens’ assembly that tackled online hate and lies. From the new book ‘Democracy’s Second Act.’ Source Score: 4.60 10. Manitoba Anglers' Guide 2026 Now Available Government of Manitoba press release Source Score: 5.50 11. Province Updates 2026 Spring Flood Outlook Government of Manitoba press release Source Score: 4.50 12. Measles Update #96 Government of Manitoba press release Source Score: 4.50 13. Measles Update #95 Government of Manitoba press release Source Score: 4.50 14. Spring Thaw Begins in Southern Manitoba Basins Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-10 Curated 9 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-10 Curated 9 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Supports Upgrades to Dr. Raj Pandey Hindu Centre Government of Manitoba press release Source Score: 9.50 2. Manitoba Government Invests $2.5 Million to Advance New Mining and Critical Mineral Opportunities Government of Manitoba press release Source Score: 7.50 3. Manitoba Government Re-Establishes Cardiac Centre of Excellence at St. Boniface Hospital Government of Manitoba press release Source Score: 7.50 4. Support for steel is positive, but a holistic approach is needed Rabble.ca — progressive Canadian news Source Score: 4.00 5. Carney is slashing federal health spending (but who notices?) Rabble.ca — progressive Canadian news Source Score: 4.00 6. The Ontario government plans to put police in schools Rabble.ca — progressive Canadian news Source Score: 4.00 7. Measles Update #99 Government of Manitoba press release Source Score: 4.50 8. Manitoba Adds Nearly 11,000 New Jobs in March Government of Manitoba press release Source Score: 4.50",
       "date": "2026-04-10",
       "tags": [],
       "categories": [],
       "url": "/2026-04-10-curated",
-      "filesize": 2275
+      "filesize": 1286
     },
     {
       "id": "curation/README.md",
@@ -7771,6 +7790,158 @@
     "2026": [
       "whatsnew/2026-01-05-january-infrastructure-fixes.md"
     ],
+    "privacy": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-07-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md"
+    ],
+    "as": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md"
+    ],
+    "a": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-08-building-knowledge-base-from-tribunal-decisions.md",
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md"
+    ],
+    "human": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md"
+    ],
+    "right:": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md"
+    ],
+    "not": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md"
+    ],
+    "feature": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-09-feature-spotlight-screen-reader-excellence.md",
+      "blog/2026-04-07-feature-spotlight-privacy-security-architecture.md",
+      "blog/2026-04-05-feature-spotlight-resource-directory.md",
+      "blog/2026-04-03-feature-spotlight-benefits-navigator.md",
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
+      "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2026-03-28-feature-spotlight-wellness-hub.md",
+      "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
+      "blog/2026-03-24-feature-spotlight-indigenous-language-support.md",
+      "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
+      "blog/2026-03-20-feature-spotlight-evidence-locker.md",
+      "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
+      "blog/2026-03-16-feature-spotlight-disability-wizard.md",
+      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2026-01-23-feature-spotlight-government-navigator.md",
+      "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
+      "blog/2026-01-21-feature-spotlight-medication-tracker.md",
+      "blog/2026-01-20-feature-spotlight-benefits-tracker.md",
+      "blog/2026-01-19-feature-spotlight-campaign-templates.md",
+      "blog/2026-01-18-feature-spotlight-virtual-meetups.md",
+      "blog/2026-01-17-feature-spotlight-discussion-forums.md",
+      "blog/2026-01-16-feature-spotlight-peer-support-matching.md",
+      "blog/2026-01-15-feature-spotlight-ai-translator-accessibility-terminology.md",
+      "blog/2026-01-14-feature-spotlight-accountability-tracker.md",
+      "blog/2026-01-13-feature-spotlight-ai-case-interpreter.md",
+      "blog/2026-01-12-feature-spotlight-policy-explainer-policy-made-simple.md",
+      "blog/2026-01-11-feature-spotlight-lawyer-finder.md",
+      "blog/2026-01-10-feature-spotlight-reflections-calendar.md",
+      "blog/2026-01-09-feature-spotlight-self-care-library.md",
+      "blog/2026-01-08-feature-spotlight-grief-support.md",
+      "blog/2026-01-07-feature-spotlight-resilience-points-gamified-wellness.md",
+      "blog/2026-01-06-feature-spotlight-pacing-partner.md",
+      "blog/2026-01-05-feature-spotlight-dbt-skill-matcher.md",
+      "blog/2026-01-04-feature-spotlight-adaptive-meditation.md",
+      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2026-01-02-feature-spotlight-symptom-pain-tracker.md",
+      "blog/2026-01-01-feature-spotlight-mood-tracker.md",
+      "blog/2025-12-31-feature-spotlight-accessible-document-generation.md",
+      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-12-29-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-12-25-feature-spotlight-resource-directory.md",
+      "blog/2025-12-24-feature-spotlight-benefits-navigator.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-12-21-feature-spotlight-wellness-hub.md",
+      "blog/2025-12-20-feature-spotlight-campaign-coordination.md",
+      "blog/2025-12-19-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-12-18-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-12-17-feature-spotlight-evidence-locker.md",
+      "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
+      "blog/2025-12-15-feature-spotlight-disability-wizard.md",
+      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-12-feature-spotlight-government-navigator.md",
+      "blog/2025-12-11-feature-spotlight-deadlines-reminders.md",
+      "blog/2025-12-10-feature-spotlight-medication-tracker.md",
+      "blog/2025-12-09-feature-spotlight-benefits-tracker.md",
+      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-07-feature-spotlight-production-release.md",
+      "blog/2025-12-07-feature-spotlight-campaign-templates.md",
+      "blog/2025-12-06-feature-spotlight-virtual-meetups.md",
+      "blog/2025-12-05-feature-spotlight-discussion-forums.md",
+      "blog/2025-12-04-feature-spotlight-peer-support-matching.md",
+      "blog/2025-12-03-feature-spotlight-ai-translator-accessibility-terminology.md",
+      "blog/2025-12-02-feature-spotlight-accountability-tracker.md",
+      "blog/2025-12-01-feature-spotlight-ai-case-interpreter.md",
+      "blog/2025-11-30-feature-spotlight-policy-explainer-policy-made-simple.md",
+      "blog/2025-11-29-feature-spotlight-lawyer-finder.md",
+      "blog/2025-11-28-feature-spotlight-reflections-calendar.md",
+      "blog/2025-11-27-feature-spotlight-self-care-library.md",
+      "blog/2025-11-26-feature-spotlight-grief-support.md",
+      "blog/2025-11-25-feature-spotlight-resilience-points-gamified-wellness.md",
+      "blog/2025-11-24-feature-spotlight-pacing-partner.md",
+      "blog/2025-11-23-feature-spotlight-dbt-skill-matcher.md",
+      "blog/2025-11-22-feature-spotlight-adaptive-meditation.md",
+      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
+      "blog/2025-11-20-feature-spotlight-symptom-pain-tracker.md",
+      "blog/2025-11-19-feature-spotlight-mood-tracker.md",
+      "blog/2025-11-18-feature-spotlight-accessible-document-generation.md",
+      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
+      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
+      "blog/2025-11-12-feature-spotlight-resource-directory.md",
+      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
+      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
+      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
+      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
+      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
+      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
+      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
+      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
+      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
+      "blog/2025-10-20-3mpwrapp-feature.md"
+    ],
+    "we": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-03-31-security-runbook-how-we-protect-you.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md",
+      "blog/2025-10-27-app-vs-website-comparison.md"
+    ],
+    "added": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-01-npm-supply-chain-protection-npmrc-hardening.md"
+    ],
+    "later": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md"
+    ],
     "daily": [
       "blog/2026-04-10-daily-curation.md",
       "blog/2026-04-09-daily-curation.md",
@@ -8796,118 +8967,6 @@
     "2026-04-09": [
       "blog/2026-04-09-daily-curation.md"
     ],
-    "feature": [
-      "blog/2026-04-09-feature-spotlight-screen-reader-excellence.md",
-      "blog/2026-04-07-feature-spotlight-privacy-security-architecture.md",
-      "blog/2026-04-05-feature-spotlight-resource-directory.md",
-      "blog/2026-04-03-feature-spotlight-benefits-navigator.md",
-      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
-      "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2026-03-28-feature-spotlight-wellness-hub.md",
-      "blog/2026-03-26-feature-spotlight-campaign-coordination.md",
-      "blog/2026-03-24-feature-spotlight-indigenous-language-support.md",
-      "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
-      "blog/2026-03-20-feature-spotlight-evidence-locker.md",
-      "blog/2026-03-18-feature-spotlight-master-letter-generator.md",
-      "blog/2026-03-16-feature-spotlight-disability-wizard.md",
-      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2026-03-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2026-01-23-feature-spotlight-government-navigator.md",
-      "blog/2026-01-22-feature-spotlight-deadlines-reminders.md",
-      "blog/2026-01-21-feature-spotlight-medication-tracker.md",
-      "blog/2026-01-20-feature-spotlight-benefits-tracker.md",
-      "blog/2026-01-19-feature-spotlight-campaign-templates.md",
-      "blog/2026-01-18-feature-spotlight-virtual-meetups.md",
-      "blog/2026-01-17-feature-spotlight-discussion-forums.md",
-      "blog/2026-01-16-feature-spotlight-peer-support-matching.md",
-      "blog/2026-01-15-feature-spotlight-ai-translator-accessibility-terminology.md",
-      "blog/2026-01-14-feature-spotlight-accountability-tracker.md",
-      "blog/2026-01-13-feature-spotlight-ai-case-interpreter.md",
-      "blog/2026-01-12-feature-spotlight-policy-explainer-policy-made-simple.md",
-      "blog/2026-01-11-feature-spotlight-lawyer-finder.md",
-      "blog/2026-01-10-feature-spotlight-reflections-calendar.md",
-      "blog/2026-01-09-feature-spotlight-self-care-library.md",
-      "blog/2026-01-08-feature-spotlight-grief-support.md",
-      "blog/2026-01-07-feature-spotlight-resilience-points-gamified-wellness.md",
-      "blog/2026-01-06-feature-spotlight-pacing-partner.md",
-      "blog/2026-01-05-feature-spotlight-dbt-skill-matcher.md",
-      "blog/2026-01-04-feature-spotlight-adaptive-meditation.md",
-      "blog/2026-01-03-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2026-01-02-feature-spotlight-symptom-pain-tracker.md",
-      "blog/2026-01-01-feature-spotlight-mood-tracker.md",
-      "blog/2025-12-31-feature-spotlight-accessible-document-generation.md",
-      "blog/2025-12-30-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-12-29-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-12-25-feature-spotlight-resource-directory.md",
-      "blog/2025-12-24-feature-spotlight-benefits-navigator.md",
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-12-21-feature-spotlight-wellness-hub.md",
-      "blog/2025-12-20-feature-spotlight-campaign-coordination.md",
-      "blog/2025-12-19-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-12-18-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-12-17-feature-spotlight-evidence-locker.md",
-      "blog/2025-12-16-feature-spotlight-master-letter-generator.md",
-      "blog/2025-12-15-feature-spotlight-disability-wizard.md",
-      "blog/2025-12-14-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-12-feature-spotlight-government-navigator.md",
-      "blog/2025-12-11-feature-spotlight-deadlines-reminders.md",
-      "blog/2025-12-10-feature-spotlight-medication-tracker.md",
-      "blog/2025-12-09-feature-spotlight-benefits-tracker.md",
-      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-07-feature-spotlight-production-release.md",
-      "blog/2025-12-07-feature-spotlight-campaign-templates.md",
-      "blog/2025-12-06-feature-spotlight-virtual-meetups.md",
-      "blog/2025-12-05-feature-spotlight-discussion-forums.md",
-      "blog/2025-12-04-feature-spotlight-peer-support-matching.md",
-      "blog/2025-12-03-feature-spotlight-ai-translator-accessibility-terminology.md",
-      "blog/2025-12-02-feature-spotlight-accountability-tracker.md",
-      "blog/2025-12-01-feature-spotlight-ai-case-interpreter.md",
-      "blog/2025-11-30-feature-spotlight-policy-explainer-policy-made-simple.md",
-      "blog/2025-11-29-feature-spotlight-lawyer-finder.md",
-      "blog/2025-11-28-feature-spotlight-reflections-calendar.md",
-      "blog/2025-11-27-feature-spotlight-self-care-library.md",
-      "blog/2025-11-26-feature-spotlight-grief-support.md",
-      "blog/2025-11-25-feature-spotlight-resilience-points-gamified-wellness.md",
-      "blog/2025-11-24-feature-spotlight-pacing-partner.md",
-      "blog/2025-11-23-feature-spotlight-dbt-skill-matcher.md",
-      "blog/2025-11-22-feature-spotlight-adaptive-meditation.md",
-      "blog/2025-11-21-feature-spotlight-sleep-energy-tracker.md",
-      "blog/2025-11-20-feature-spotlight-symptom-pain-tracker.md",
-      "blog/2025-11-19-feature-spotlight-mood-tracker.md",
-      "blog/2025-11-18-feature-spotlight-accessible-document-generation.md",
-      "blog/2025-11-17-feature-spotlight-spoon-theory-energy-management.md",
-      "blog/2025-11-16-feature-spotlight-crisis-resources-immediate-support.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-11-12-feature-spotlight-resource-directory.md",
-      "blog/2025-11-11-feature-spotlight-benefits-navigator.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md",
-      "blog/2025-11-08-feature-spotlight-campaign-coordination.md",
-      "blog/2025-11-08-feature-spotlight-wellness-hub.md",
-      "blog/2025-11-05-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-03-feature-spotlight-evidence-locker.md",
-      "blog/2025-11-02-feature-spotlight-master-letter-generator.md",
-      "blog/2025-11-01-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-31-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-28-feature-spotlight-wellness-hub.md",
-      "blog/2025-10-27-feature-spotlight-campaign-coordination.md",
-      "blog/2025-10-26-feature-spotlight-indigenous-language-support.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-22-feature-spotlight-disability-wizard.md",
-      "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
-      "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
     "spotlight:": [
       "blog/2026-04-09-feature-spotlight-screen-reader-excellence.md",
       "blog/2026-04-07-feature-spotlight-privacy-security-architecture.md",
@@ -9043,11 +9102,6 @@
       "blog/2026-03-16-weekly-update-week-12.md",
       "blog/2026-01-06-why-disability-apps-fail.md"
     ],
-    "a": [
-      "blog/2026-04-08-building-knowledge-base-from-tribunal-decisions.md",
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md"
-    ],
     "free": [
       "blog/2026-04-08-building-knowledge-base-from-tribunal-decisions.md"
     ],
@@ -9135,12 +9189,6 @@
     ],
     "2026-04-07": [
       "blog/2026-04-07-daily-curation.md"
-    ],
-    "privacy": [
-      "blog/2026-04-07-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-12-26-feature-spotlight-privacy-security-architecture.md",
-      "blog/2025-11-13-feature-spotlight-privacy-security-architecture.md",
-      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md"
     ],
     "&": [
       "blog/2026-04-07-feature-spotlight-privacy-security-architecture.md",
@@ -9514,11 +9562,6 @@
       "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
       "blog/2026-01-06-why-disability-apps-fail.md"
     ],
-    "we": [
-      "blog/2026-03-31-security-runbook-how-we-protect-you.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md",
-      "blog/2025-10-27-app-vs-website-comparison.md"
-    ],
     "protect": [
       "blog/2026-03-31-security-runbook-how-we-protect-you.md"
     ],
@@ -9588,9 +9631,6 @@
       "blog/2026-03-31-axios-supply-chain-attack-3mpwrapp-safe.md"
     ],
     "protection": [
-      "blog/2026-04-01-npm-supply-chain-protection-npmrc-hardening.md"
-    ],
-    "added": [
       "blog/2026-04-01-npm-supply-chain-protection-npmrc-hardening.md"
     ],
     "flywheels": [
@@ -11163,6 +11203,20 @@
     ]
   },
   "tagIndex": {
+    "community": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md"
+    ],
+    "philosophy": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md",
+      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md"
+    ],
+    "mission": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md"
+    ],
     "highlights": [
       "blog/2026-04-10-daily-curation.md",
       "blog/2026-04-09-daily-curation.md",
@@ -11693,16 +11747,6 @@
       "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
       "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
     ],
-    "community": [
-      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md"
-    ],
-    "philosophy": [
-      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md",
-      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md"
-    ],
-    "mission": [
-      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md"
-    ],
     "flywheels": [
       "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
     ],
@@ -11977,6 +12021,15 @@
     ]
   },
   "categoryIndex": {
+    "community": [
+      "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
+      "blog/2026-04-08-building-knowledge-base-from-tribunal-decisions.md",
+      "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md",
+      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md",
+      "blog/2026-04-02-community-what-3mpwr-means.md",
+      "blog/2026-01-06-why-disability-apps-fail.md",
+      "blog/2025-10-17-weekly-recap.md"
+    ],
     "curation": [
       "blog/2026-04-10-daily-curation.md",
       "blog/2026-04-09-daily-curation.md",
@@ -12376,14 +12429,6 @@
       "blog/2025-10-22-feature-spotlight-disability-wizard.md",
       "blog/2025-10-21-feature-spotlight-energy-forecast-smart-scheduling.md",
       "blog/2025-10-20-3mpwrapp-feature.md"
-    ],
-    "community": [
-      "blog/2026-04-08-building-knowledge-base-from-tribunal-decisions.md",
-      "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md",
-      "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md",
-      "blog/2026-04-02-community-what-3mpwr-means.md",
-      "blog/2026-01-06-why-disability-apps-fail.md",
-      "blog/2025-10-17-weekly-recap.md"
     ],
     "transparency": [
       "blog/2026-04-08-building-knowledge-base-from-tribunal-decisions.md",

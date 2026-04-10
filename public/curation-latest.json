@@ -1,7 +1,7 @@
 {
   "date": "2026-04-10",
-  "timestamp": "2026-04-10T10:08:45.150Z",
-  "count": 15,
+  "timestamp": "2026-04-10T21:48:49.531Z",
+  "count": 9,
   "minScore": 3.5,
   "items": [
     {
@@ -9,105 +9,63 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-04-10T10:08:45.146Z"
+      "pubDate": "2026-04-10T21:48:49.528Z"
     },
     {
-      "title": "Please Advise! Will Testicle-Tanning Tucker Carlson Invade Canada?",
-      "link": "https://thetyee.ca/Opinion/2026/04/07/Please-Advise-Tucker-Carlson-Invade-Canada/",
-      "description": "Dr. Steve would have said unhinged rants don’t lead to war. But things have changed.",
-      "score": 20.3,
-      "pubDate": "Tue, 07 Apr 2026 07:40:00 +0000"
-    },
-    {
-      "title": "RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal",
-      "link": "https://thetyee.ca/News/2026/04/10/RCMP-Seeks-Quash-Discrimination-Ruling/",
-      "description": "The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform.",
-      "score": 15,
-      "pubDate": "Fri, 10 Apr 2026 07:10:00 +0000"
-    },
-    {
-      "title": "Eight New Canadian Poetry Collections to Celebrate National Poetry Month",
-      "link": "https://thetyee.ca/Presents/2026/04/10/Eight-New-Canadian-Poetry-Collections/",
-      "description": "New and seasoned poets explore identity, memory, disability and more.",
-      "score": 12.6,
-      "pubDate": "Fri, 10 Apr 2026 07:30:00 +0000"
-    },
-    {
-      "title": "Manitoba Government Announces New Chair and Board Appointments to Research Manitoba",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73243",
+      "title": "Manitoba Government Supports Upgrades to Dr. Raj Pandey Hindu Centre",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73339",
       "description": "",
-      "score": 10.1,
-      "pubDate": "Thu, 02 Apr 2026 09:00:00 CDT"
+      "score": 9.5,
+      "pubDate": "Fri, 10 Apr 2026 15:05:00 CDT"
     },
     {
-      "title": "Manitoba Government Announces Brandon Critical Care Centre to Open this Spring",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73244",
+      "title": "Manitoba Government Invests $2.5 Million to Advance New Mining and Critical Mineral Opportunities",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73357",
       "description": "",
-      "score": 9.1,
-      "pubDate": "Wed, 01 Apr 2026 13:00:00 CDT"
+      "score": 7.5,
+      "pubDate": "Fri, 10 Apr 2026 15:48:00 CDT"
     },
     {
-      "title": "Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73241",
+      "title": "Manitoba Government Re-Establishes Cardiac Centre of Excellence at St. Boniface Hospital",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73317",
       "description": "",
-      "score": 7.1,
-      "pubDate": "Tue, 31 Mar 2026 16:04:00 CDT"
+      "score": 7.5,
+      "pubDate": "Fri, 10 Apr 2026 11:30:00 CDT"
     },
     {
-      "title": "Manitoba Government Expands Access to Measles Vaccine Through Pharmacies",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73240",
+      "title": "Support for steel is positive, but a holistic approach is needed",
+      "link": "https://rabble.ca/labour/support-for-steel-is-positive-but-a-holistic-approach-is-needed/",
       "description": "",
-      "score": 7.1,
-      "pubDate": "Tue, 31 Mar 2026 15:13:00 CDT"
+      "score": 4,
+      "pubDate": "Fri, 10 Apr 2026 15:42:20 +0000"
     },
     {
-      "title": "Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73238",
+      "title": "Carney is slashing federal health spending (but who notices?)",
+      "link": "https://rabble.ca/politics/canadian-politics/carney-is-slashing-federal-health-spending-but-who-notices/",
       "description": "",
-      "score": 7.1,
-      "pubDate": "Tue, 31 Mar 2026 11:48:00 CDT"
+      "score": 4,
+      "pubDate": "Fri, 10 Apr 2026 15:25:09 +0000"
     },
     {
-      "title": "That Time When 42 Random Canadians Tried to Fix the Internet",
-      "link": "https://thetyee.ca/Analysis/2026/04/08/Random-Canadians-Tried-Fix-Internet/",
-      "description": "Inside the citizens’ assembly that tackled online hate and lies. From the new book ‘Democracy’s Second Act.’",
-      "score": 4.6,
-      "pubDate": "Wed, 08 Apr 2026 07:10:00 +0000"
-    },
-    {
-      "title": "Manitoba Anglers' Guide 2026 Now Available",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73239",
+      "title": "The Ontario government plans to put police in schools",
+      "link": "https://rabble.ca/podcast/the-ontario-government-plans-to-put-police-in-schools/",
       "description": "",
-      "score": 5.5,
-      "pubDate": "Wed, 01 Apr 2026 09:00:00 CDT"
+      "score": 4,
+      "pubDate": "Fri, 10 Apr 2026 16:06:50 +0000"
     },
     {
-      "title": "Province Updates 2026 Spring Flood Outlook",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73277",
+      "title": "Measles Update  #99",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73338",
       "description": "",
       "score": 4.5,
-      "pubDate": "Tue, 07 Apr 2026 16:59:00 CDT"
+      "pubDate": "Fri, 10 Apr 2026 14:39:00 CDT"
     },
     {
-      "title": "Measles Update #96",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73245",
+      "title": "Manitoba Adds Nearly 11,000 New Jobs in March",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73337",
       "description": "",
       "score": 4.5,
-      "pubDate": "Wed, 01 Apr 2026 14:18:00 CDT"
-    },
-    {
-      "title": "Measles Update #95",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73237",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 30 Mar 2026 16:19:00 CDT"
-    },
-    {
-      "title": "Spring Thaw Begins in Southern Manitoba Basins",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73217",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 30 Mar 2026 08:54:00 CDT"
+      "pubDate": "Fri, 10 Apr 2026 14:27:00 CDT"
     }
   ]
 }

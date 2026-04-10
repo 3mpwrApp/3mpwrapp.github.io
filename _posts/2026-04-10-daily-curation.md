@@ -9,7 +9,7 @@ excerpt: "Today's curated disability rights, accessibility, and social policy ne
 
 # Daily News Curation - 2026-04-10
 
-Curated 15 items from disability, accessibility, and social policy sources.
+Curated 9 items from disability, accessibility, and social policy sources.
 
 ## 🌟 Featured: The Disability Bulletin
 
@@ -21,73 +21,43 @@ Visit for the latest disability rights news, advocacy updates, and community sto
 
 ## Additional Stories
 
-### 1. Please Advise! Will Testicle-Tanning Tucker Carlson Invade Canada?
-Dr. Steve would have said unhinged rants don’t lead to war. But things have changed.
-[Source](https://thetyee.ca/Opinion/2026/04/07/Please-Advise-Tucker-Carlson-Invade-Canada/)
-**Score:** 20.30
-
-### 2. RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal
-The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform.
-[Source](https://thetyee.ca/News/2026/04/10/RCMP-Seeks-Quash-Discrimination-Ruling/)
-**Score:** 15.00
-
-### 3. Eight New Canadian Poetry Collections to Celebrate National Poetry Month
-New and seasoned poets explore identity, memory, disability and more.
-[Source](https://thetyee.ca/Presents/2026/04/10/Eight-New-Canadian-Poetry-Collections/)
-**Score:** 12.60
-
-### 4. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba
+### 1. Manitoba Government Supports Upgrades to Dr. Raj Pandey Hindu Centre
 Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73243)
-**Score:** 10.10
+[Source](https://news.gov.mb.ca/news/index.html?item=73339)
+**Score:** 9.50
 
-### 5. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring
+### 2. Manitoba Government Invests $2.5 Million to Advance New Mining and Critical Mineral Opportunities
 Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73244)
-**Score:** 9.10
+[Source](https://news.gov.mb.ca/news/index.html?item=73357)
+**Score:** 7.50
 
-### 6. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages
+### 3. Manitoba Government Re-Establishes Cardiac Centre of Excellence at St. Boniface Hospital
 Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73241)
-**Score:** 7.10
+[Source](https://news.gov.mb.ca/news/index.html?item=73317)
+**Score:** 7.50
 
-### 7. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies
+### 4. Support for steel is positive, but a holistic approach is needed
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/labour/support-for-steel-is-positive-but-a-holistic-approach-is-needed/)
+**Score:** 4.00
+
+### 5. Carney is slashing federal health spending (but who notices?)
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/politics/canadian-politics/carney-is-slashing-federal-health-spending-but-who-notices/)
+**Score:** 4.00
+
+### 6. The Ontario government plans to put police in schools
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/podcast/the-ontario-government-plans-to-put-police-in-schools/)
+**Score:** 4.00
+
+### 7. Measles Update  #99
 Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73240)
-**Score:** 7.10
-
-### 8. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73238)
-**Score:** 7.10
-
-### 9. That Time When 42 Random Canadians Tried to Fix the Internet
-Inside the citizens’ assembly that tackled online hate and lies. From the new book ‘Democracy’s Second Act.’
-[Source](https://thetyee.ca/Analysis/2026/04/08/Random-Canadians-Tried-Fix-Internet/)
-**Score:** 4.60
-
-### 10. Manitoba Anglers' Guide 2026 Now Available
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73239)
-**Score:** 5.50
-
-### 11. Province Updates 2026 Spring Flood Outlook
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73277)
+[Source](https://news.gov.mb.ca/news/index.html?item=73338)
 **Score:** 4.50
 
-### 12. Measles Update #96
+### 8. Manitoba Adds Nearly 11,000 New Jobs in March
 Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73245)
-**Score:** 4.50
-
-### 13. Measles Update #95
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73237)
-**Score:** 4.50
-
-### 14. Spring Thaw Begins in Southern Manitoba Basins
-Government of Manitoba press release
-[Source](https://news.gov.mb.ca/news/index.html?item=73217)
+[Source](https://news.gov.mb.ca/news/index.html?item=73337)
 **Score:** 4.50
 
