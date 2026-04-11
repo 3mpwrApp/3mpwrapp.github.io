@@ -14,7 +14,8 @@
     "Benefits Navigator",
     "Resource Directory",
     "Privacy & Security Architecture",
-    "Screen Reader Excellence"
+    "Screen Reader Excellence",
+    "Multilingual Support (English & French)"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -34,6 +35,6 @@
     "What 3mpwr Means: The Philosophy Behind Our Name",
     "Privacy as a Human Right: Not a Feature We Added Later"
   ],
-  "rotationIndex": 6,
+  "rotationIndex": 7,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
