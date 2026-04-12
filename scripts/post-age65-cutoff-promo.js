@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * POST-AGE65-CUTOFF-PROMO.JS
  * Posts Age 65 Cut-Off campaign promotions to social media
@@ -30,16 +30,16 @@ const STATE_FILE = path.join(__dirname, '../.github/state/age65-cutoff-state.jso
 // Post templates - optimized for character limits (Mastodon ~450, Bluesky 300, Discord 2000)
 const POSTS = [
   {
-    mastodon: `≡ƒÜ¿ Take Action: End the Age 65 Cut-Off
+    mastodon: `🚨 Take Action: End the Age 65 Cut-Off
 
-Injured workers in Ontario are being cut off benefits at 65ΓÇöor sooner if injured at 63+. It's outdated and unfair.
+Injured workers in Ontario are being cut off benefits at 65—or sooner if injured at 63+. It's outdated and unfair.
 
-≡ƒôó We've created a letter you can copy, sign, and send to your MPP (any party, anywhere in Ontario).
+📢 We've created a letter you can copy, sign, and send to your MPP (any party, anywhere in Ontario).
 
 Make your voice heard: ${CAMPAIGN_URL}
 
 #InjuredWorkers #WorkersRights #WSIB #Ontario`,
-    bluesky: `≡ƒÜ¿ Take Action: End the Age 65 Cut-Off
+    bluesky: `🚨 Take Action: End the Age 65 Cut-Off
 
 Injured workers cut off at 65. Outdated. Unfair.
 
@@ -48,22 +48,22 @@ Copy our letter. Email your MPP.
 ${CAMPAIGN_URL}
 
 #InjuredWorkers #WSIB`,
-    discord: `**≡ƒÜ¿ Take Action: End the Age 65 Cut-Off for Injured Workers**
+    discord: `**🚨 Take Action: End the Age 65 Cut-Off for Injured Workers**
 
-Injured workers in Ontario are being cut off benefits at age 65ΓÇöor sooner if injured at 63 or older. **It's outdated and unfair.**
+Injured workers in Ontario are being cut off benefits at age 65—or sooner if injured at 63 or older. **It's outdated and unfair.**
 
 Many people work well past 65. Why should injured workers be penalized for wanting the same?
 
-≡ƒôó **We've created a letter you can copy, sign, and send to your MPP** (any party, anywhere in Ontario).
+📢 **We've created a letter you can copy, sign, and send to your MPP** (any party, anywhere in Ontario).
 
 Thunder Bay residents: Email directly to Kevin Holland (${MPP_EMAIL_THUNDER_BAY})
 
-≡ƒöù **Copy the letter and make your voice heard:** ${CAMPAIGN_URL}
+🔗 **Copy the letter and make your voice heard:** ${CAMPAIGN_URL}
 
-**One email can be ignored. Hundreds can't!** ≡ƒôó`
+**One email can be ignored. Hundreds can't!** 📢`
   },
   {
-    mastodon: `≡ƒÆö Benefits cut at 65? That's not retirementΓÇöthat's discrimination.
+    mastodon: `💔 Benefits cut at 65? That's not retirement—that's discrimination.
 
 Injured workers deserve fair compensation regardless of age.
 
@@ -74,42 +74,42 @@ ${CAMPAIGN_URL}
 421,000+ Ontarians over 65 are still working. The law needs to catch up.
 
 #RightsDontRetire #WorkersCompensation #Ontario`,
-    bluesky: `≡ƒÆö Benefits cut at 65 = age discrimination
+    bluesky: `💔 Benefits cut at 65 = age discrimination
 
 421,000+ Ontarians over 65 still work. Injured workers deserve the same right.
 
 Email your MPP: ${CAMPAIGN_URL}
 
 #RightsDontRetire`,
-    discord: `**≡ƒÆö Injured at 64? You might only get ONE YEAR of compensation.**
+    discord: `**💔 Injured at 64? You might only get ONE YEAR of compensation.**
 
-Ontario's WSIB rules cut off Loss of Earnings benefits at age 65ΓÇöno matter if you planned to keep working.
+Ontario's WSIB rules cut off Loss of Earnings benefits at age 65—no matter if you planned to keep working.
 
 **Workers injured at 63 or older? As little as 2 years of compensation.**
 
 This is **age discrimination**, plain and simple.
 
-≡ƒôè **Statistics Canada (2024):** More than 421,000 Ontarians over 65 are employed. Nearly 164,000 are over 70.
+📊 **Statistics Canada (2024):** More than 421,000 Ontarians over 65 are employed. Nearly 164,000 are over 70.
 
 The workforce has changed. The law hasn't.
 
-≡ƒôº **Copy our letter. Send it to your MPP:** ${CAMPAIGN_URL}
+📧 **Copy our letter. Send it to your MPP:** ${CAMPAIGN_URL}
 
-**Collective action works. Let's flood their inboxes.** ≡ƒôó`
+**Collective action works. Let's flood their inboxes.** 📢`
   },
   {
-    mastodon: `≡ƒôó Injured at work? Your age shouldn't determine your compensation.
+    mastodon: `📢 Injured at work? Your age shouldn't determine your compensation.
 
 Ontario's age 65 cut-off for WSIB benefits is unfair and outdated.
 
-Γ£à Email your MPP demanding change
-Γ£à Use our template letter
-Γ£à Takes 2 minutes
+✅ Email your MPP demanding change
+✅ Use our template letter
+✅ Takes 2 minutes
 
 ${CAMPAIGN_URL}
 
 #WSIB #WorkersRights #InjuredWorkers #Ontario`,
-    bluesky: `≡ƒôó Age shouldn't determine compensation.
+    bluesky: `📢 Age shouldn't determine compensation.
 
 WSIB cuts benefits at 65. It's unfair.
 
@@ -117,7 +117,7 @@ Email your MPP (2 mins):
 ${CAMPAIGN_URL}
 
 #WorkersRights #WSIB`,
-    discord: `**≡ƒôó Take 2 Minutes to Fight Age Discrimination in Workers' Compensation**
+    discord: `**📢 Take 2 Minutes to Fight Age Discrimination in Workers' Compensation**
 
 **The Problem:**
 - Injured workers' LOE benefits cut at age 65
@@ -125,24 +125,24 @@ ${CAMPAIGN_URL}
 - Doesn't reflect today's workforce (many work past 65)
 
 **The Solution:**
-Email your MPP demanding reform. We've written the letterΓÇöyou just need to add your name.
+Email your MPP demanding reform. We've written the letter—you just need to add your name.
 
 **What We're Asking For:**
-Γ£à Compensation until age 70 (if injured before 65)
-Γ£à 5 years minimum (if injured at 65+)
-Γ£à Extended coverage where evidence shows worker would've continued
+✅ Compensation until age 70 (if injured before 65)
+✅ 5 years minimum (if injured at 65+)
+✅ Extended coverage where evidence shows worker would've continued
 
 **Thunder Bay:** Email Kevin Holland (${MPP_EMAIL_THUNDER_BAY})
 **Other MPPs:** Find yours and use our template
 
-≡ƒöù **Get the letter:** ${CAMPAIGN_URL}
+🔗 **Get the letter:** ${CAMPAIGN_URL}
 
-**This is how change happensΓÇöcollective action!**`
+**This is how change happens—collective action!**`
   },
   {
-    mastodon: `≡ƒöÑ Rights Don't Retire at 65
+    mastodon: `🔥 Rights Don't Retire at 65
 
-But WSIB benefits doΓÇöeven if you never planned to stop working.
+But WSIB benefits do—even if you never planned to stop working.
 
 Watch real stories from injured workers, then take action:
 ${CAMPAIGN_URL}
@@ -150,7 +150,7 @@ ${CAMPAIGN_URL}
 Copy the letter. Email your MPP. Demand fairness.
 
 #RightsDontRetire #InjuredWorkers #WSIB`,
-    bluesky: `≡ƒöÑ Rights Don't Retire
+    bluesky: `🔥 Rights Don't Retire
 
 But WSIB cuts you off at 65.
 
@@ -158,7 +158,7 @@ Watch stories. Take action:
 ${CAMPAIGN_URL}
 
 #RightsDontRetire #WSIB`,
-    discord: `**≡ƒöÑ Rights Don't Retire at 65ΓÇöBut Your Benefits Might**
+    discord: `**🔥 Rights Don't Retire at 65—But Your Benefits Might**
 
 WSIB's age 65 cut-off doesn't care if you:
 - Planned to work into your 70s
@@ -170,17 +170,17 @@ https://www.youtube.com/watch?v=K9pMk1wSubs&list=PLlv0PVEs2gRs41iWHD0SvVuzY8-KpW
 
 **Then take action:** Copy our letter template and email your MPP
 
-≡ƒöù ${CAMPAIGN_URL}
+🔗 ${CAMPAIGN_URL}
 
 **We're calling for:**
 - Compensation until age 70 (for those injured before 65)
 - 5-year minimum (for those injured at 65+)
 - Retroactive application to 2006 (when mandatory retirement ended)
 
-**Your email matters. Send it today.** ≡ƒôº`
+**Your email matters. Send it today.** 📧`
   },
   {
-    mastodon: `ΓÜû∩╕Å Mandatory retirement ended in 2006.
+    mastodon: `⚖️ Mandatory retirement ended in 2006.
 Workers' comp rules? Still stuck in the past.
 
 Injured workers over 65 deserve fair treatment.
@@ -189,16 +189,16 @@ Email your MPP. Use our template. Demand reform:
 ${CAMPAIGN_URL}
 
 #WorkersCompensation #Ontario #Justice #InjuredWorkers`,
-    bluesky: `ΓÜû∩╕Å Mandatory retirement: gone in 2006
+    bluesky: `⚖️ Mandatory retirement: gone in 2006
 WSIB age rules: still stuck in the past
 
 Demand reform:
 ${CAMPAIGN_URL}
 
 #WorkersComp #Ontario`,
-    discord: `**ΓÜû∩╕Å Ontario Abolished Mandatory Retirement in 2006. WSIB Didn't Get the Memo.**
+    discord: `**⚖️ Ontario Abolished Mandatory Retirement in 2006. WSIB Didn't Get the Memo.**
 
-We're asking for retroactive reforms to at least 2006ΓÇöwhen mandatory retirement was eliminated in Ontario.
+We're asking for retroactive reforms to at least 2006—when mandatory retirement was eliminated in Ontario.
 
 **Workers injured since then have been unfairly denied compensation based on outdated assumptions.**
 
@@ -211,25 +211,25 @@ We're asking for retroactive reforms to at least 2006ΓÇöwhen mandatory retire
 - Benefits cut at 65 no matter what
 - Assumed everyone retires at 65 (not true since 2006!)
 
-≡ƒôº **Email your MPP demanding fairness:** ${CAMPAIGN_URL}
+📧 **Email your MPP demanding fairness:** ${CAMPAIGN_URL}
 
 **Thunder Bay:** Send directly to kevin.holland@pc.ola.org
 
-**The template letter is ready. Just add your name and hit send.** Γ£è`
+**The template letter is ready. Just add your name and hit send.** ✊`
   },
   {
-    mastodon: `≡ƒôè 164,000 Ontarians over 70 are still working.
+    mastodon: `📊 164,000 Ontarians over 70 are still working.
 
 But if they're injured on the job? WSIB cuts them off at 65.
 
-That's not just unfairΓÇöit's discriminatory.
+That's not just unfair—it's discriminatory.
 
 Take action: ${CAMPAIGN_URL}
 
 Copy our letter. Email your MPP. Demand change.
 
 #InjuredWorkers #WSIB #Ontario #WorkersRights`,
-    bluesky: `≡ƒôè 164,000 Ontarians 70+ still work
+    bluesky: `📊 164,000 Ontarians 70+ still work
 
 Injured? Cut off at 65.
 
@@ -239,7 +239,7 @@ Email your MPP:
 ${CAMPAIGN_URL}
 
 #WSIB #WorkersRights`,
-    discord: `**≡ƒôè By the Numbers: Why the Age 65 Cut-Off is Discriminatory**
+    discord: `**📊 By the Numbers: Why the Age 65 Cut-Off is Discriminatory**
 
 **Statistics Canada (2024):**
 - 421,000 Ontarians over 65 employed
@@ -247,21 +247,21 @@ ${CAMPAIGN_URL}
 - Labour force participation for older workers has INCREASED significantly
 
 **WSIB's Response:**
-Γ¥î Still cuts benefits at 65
-Γ¥î Assumes everyone retires (they don't)
-Γ¥î Ignores economic reality
+❌ Still cuts benefits at 65
+❌ Assumes everyone retires (they don't)
+❌ Ignores economic reality
 
 **What Injured Workers Are Asking For:**
-Γ£à Compensation until age 70 (if injured before 65)
-Γ£à 5 years minimum (if injured at 65+)
-Γ£à Extended coverage with evidence of continued work intent
-Γ£à Retroactive to 2006
+✅ Compensation until age 70 (if injured before 65)
+✅ 5 years minimum (if injured at 65+)
+✅ Extended coverage with evidence of continued work intent
+✅ Retroactive to 2006
 
-≡ƒôº **Send the letter to your MPP:** ${CAMPAIGN_URL}
+📧 **Send the letter to your MPP:** ${CAMPAIGN_URL}
 
 **Evidence-based policy. Fair treatment. Justice for injured workers.**
 
-**Your email adds to the collective voice. Send it now.** ≡ƒôó`
+**Your email adds to the collective voice. Send it now.** 📢`
   }
 ];
 
@@ -302,7 +302,7 @@ async function postToMastodon(text) {
   const instance = process.env.MASTO_INSTANCE || 'mastodon.social';
   
   if (!token) {
-    console.log('ΓÜá∩╕Å  No Mastodon token, skipping Mastodon post');
+    console.log('⚠️  No Mastodon token, skipping Mastodon post');
     return false;
   }
 
@@ -328,16 +328,16 @@ async function postToMastodon(text) {
       res.on('data', (chunk) => body += chunk);
       res.on('end', () => {
         if (res.statusCode === 200) {
-          console.log('Γ£à Posted to Mastodon');
+          console.log('✅ Posted to Mastodon');
           resolve(true);
         } else {
-          console.error('Γ¥î Mastodon error:', res.statusCode, body);
+          console.error('❌ Mastodon error:', res.statusCode, body);
           resolve(false);
         }
       });
     });
     req.on('error', (err) => {
-      console.error('Γ¥î Mastodon connection error:', err.message);
+      console.error('❌ Mastodon connection error:', err.message);
       resolve(false);
     });
     req.write(data);
@@ -351,7 +351,7 @@ async function postToBluesky(text) {
   const password = process.env.BLUESKY_PASSWORD;
   
   if (!handle || !password) {
-    console.log('ΓÜá∩╕Å  No Bluesky credentials, skipping Bluesky post');
+    console.log('⚠️  No Bluesky credentials, skipping Bluesky post');
     return false;
   }
 
@@ -413,23 +413,23 @@ async function postToBluesky(text) {
         res.on('data', (chunk) => body += chunk);
         res.on('end', () => {
           if (res.statusCode === 200) {
-            console.log('Γ£à Posted to Bluesky');
+            console.log('✅ Posted to Bluesky');
             resolve(true);
           } else {
-            console.error('Γ¥î Bluesky post error:', res.statusCode, body);
+            console.error('❌ Bluesky post error:', res.statusCode, body);
             resolve(false);
           }
         });
       });
       req.on('error', (err) => {
-        console.error('Γ¥î Bluesky connection error:', err.message);
+        console.error('❌ Bluesky connection error:', err.message);
         resolve(false);
       });
       req.write(postData);
       req.end();
     });
   } catch (err) {
-    console.error('Γ¥î Bluesky error:', err.message);
+    console.error('❌ Bluesky error:', err.message);
     return false;
   }
 }
@@ -439,7 +439,7 @@ async function postToDiscord(text) {
   const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
   
   if (!webhookUrl) {
-    console.log('ΓÜá∩╕Å  No Discord webhook, skipping Discord post');
+    console.log('⚠️  No Discord webhook, skipping Discord post');
     return false;
   }
 
@@ -462,16 +462,16 @@ async function postToDiscord(text) {
       res.on('data', (chunk) => body += chunk);
       res.on('end', () => {
         if (res.statusCode === 204) {
-          console.log('Γ£à Posted to Discord');
+          console.log('✅ Posted to Discord');
           resolve(true);
         } else {
-          console.error('Γ¥î Discord error:', res.statusCode, body);
+          console.error('❌ Discord error:', res.statusCode, body);
           resolve(false);
         }
       });
     });
     req.on('error', (err) => {
-      console.error('Γ¥î Discord connection error:', err.message);
+      console.error('❌ Discord connection error:', err.message);
       resolve(false);
     });
     req.write(data);
@@ -481,19 +481,19 @@ async function postToDiscord(text) {
 
 // Main function
 async function main() {
-  console.log('≡ƒÜ¿ Age 65 Cut-Off Campaign - End Discriminatory Benefits Cut-Off');
+  console.log('🚨 Age 65 Cut-Off Campaign - End Discriminatory Benefits Cut-Off');
   console.log('');
 
   // Get next post
   const state = loadState();
   const { post, index } = getNextPost(state);
 
-  console.log(`≡ƒô¥ Using post variant ${index + 1}/${POSTS.length}`);
+  console.log(`📝 Using post variant ${index + 1}/${POSTS.length}`);
   console.log('');
 
   // Test mode
   if (process.env.TEST_MODE === 'true') {
-    console.log('≡ƒº¬ TEST MODE - Would post:');
+    console.log('🧪 TEST MODE - Would post:');
     console.log('');
     console.log('Mastodon:');
     console.log(post.mastodon);
@@ -521,7 +521,7 @@ async function main() {
 
   const successCount = results.filter(Boolean).length;
   console.log('');
-  console.log(`Γ£à Posted to ${successCount}/3 platforms`);
+  console.log(`✅ Posted to ${successCount}/3 platforms`);
 }
 
 main().catch(console.error);

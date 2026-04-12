@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * POST-WSIB-MEETING-PROMO.JS
  * Posts WSIB Community Meeting event promotions to social media
@@ -37,14 +37,14 @@ const STATE_FILE = path.join(__dirname, '../.github/state/wsib-meeting-state.jso
 // Post templates - optimized for character limits
 const POSTS = [
   {
-    mastodon: `≡ƒÜ¿ WSIB Proposals Community Meeting - April 16
+    mastodon: `🚨 WSIB Proposals Community Meeting - April 16
 
 New WSIB proposals are on the table. Injured workers need to be informed, involved, and heard.
 
-≡ƒôà Thursday, April 16
-≡ƒì╜∩╕Å Dinner: 6PM | ≡ƒùú∩╕Å Meeting: 7PM
-≡ƒôì OPSEU Office, Thunder Bay
-≡ƒÆ╗ Zoom option available
+📅 Thursday, April 16
+🍽️ Dinner: 6PM | 🗣️ Meeting: 7PM
+📍 OPSEU Office, Thunder Bay
+💻 Zoom option available
 
 Register: ${REGISTRATION_PHONE}
 Email: ${REGISTRATION_EMAIL}
@@ -52,7 +52,7 @@ Email: ${REGISTRATION_EMAIL}
 Details: ${EVENT_URL}
 
 #WSIB #InjuredWorkers #ThunderBay`,
-    bluesky: `≡ƒÜ¿ WSIB Proposals Meeting - April 16
+    bluesky: `🚨 WSIB Proposals Meeting - April 16
 
 6PM dinner, 7PM meeting
 OPSEU Office, Thunder Bay or Zoom
@@ -62,23 +62,23 @@ Register: ${REGISTRATION_PHONE}
 ${EVENT_URL}
 
 #WSIB #ThunderBay`,
-    discord: `**≡ƒÜ¿ URGENT: Community Meeting on New WSIB Proposals - April 16**
+    discord: `**🚨 URGENT: Community Meeting on New WSIB Proposals - April 16**
 
-New proposals for the WSIB are on the tableΓÇöand injured workers need to be informed, involved, and heard.
+New proposals for the WSIB are on the table—and injured workers need to be informed, involved, and heard.
 
 **Thunder Bay & District Injured Workers Support Group** is hosting a special community meeting where we will listen, learn, discuss, and take action.
 
-**≡ƒôà Event Details:**
+**📅 Event Details:**
 - **Date:** Thursday, April 16, 2026
 - **Dinner:** 6:00 PM
 - **Meeting:** 7:00 PM
 
-**≡ƒôì In Person:**
+**📍 In Person:**
 OPSEU Office
 326 Memorial Ave (beside the Merla Mae)
 Thunder Bay, ON
 
-**≡ƒÆ╗ Attend by Zoom:**
+**💻 Attend by Zoom:**
 Register by phone: ${REGISTRATION_PHONE}
 Or email: ${REGISTRATION_EMAIL}
 
@@ -86,14 +86,14 @@ Or email: ${REGISTRATION_EMAIL}
 
 This is your chance to understand what's being proposed and be part of the conversation.
 
-≡ƒöù **Full details:** ${EVENT_URL}
+🔗 **Full details:** ${EVENT_URL}
 
-**This is about more than policyΓÇöit's about real people, real impacts, and making sure injured workers are not left behind.**
+**This is about more than policy—it's about real people, real impacts, and making sure injured workers are not left behind.**
 
-**Everyone is welcome. Bring a friend. Be part of the change.** Γ£è`
+**Everyone is welcome. Bring a friend. Be part of the change.** ✊`
   },
   {
-    mastodon: `≡ƒôó April 16: WSIB Community Meeting, Thunder Bay
+    mastodon: `📢 April 16: WSIB Community Meeting, Thunder Bay
 
 Learn about new WSIB proposals that could affect injured workers across Ontario.
 
@@ -106,7 +106,7 @@ Register: ${REGISTRATION_PHONE}
 Info: ${EVENT_URL}
 
 #WorkersRights #WSIB #ThunderBay`,
-    bluesky: `≡ƒôó April 16: WSIB Meeting
+    bluesky: `📢 April 16: WSIB Meeting
 
 New proposals affecting injured workers.
 
@@ -118,23 +118,23 @@ ${REGISTRATION_PHONE}
 ${EVENT_URL}
 
 #WSIB`,
-    discord: `**≡ƒôó Don't Miss This: WSIB Community Meeting - April 16**
+    discord: `**📢 Don't Miss This: WSIB Community Meeting - April 16**
 
 **What's happening?**
-New proposals for the WSIB are being discussedΓÇöproposals that could significantly impact injured workers across Ontario.
+New proposals for the WSIB are being discussed—proposals that could significantly impact injured workers across Ontario.
 
 **Why should you attend?**
 This is your opportunity to:
-Γ£à Learn what changes are being proposed
-Γ£à Understand how they might affect you
-Γ£à Ask questions and voice your concerns
-Γ£à Connect with other injured workers and advocates
-Γ£à Be part of the solution
+✅ Learn what changes are being proposed
+✅ Understand how they might affect you
+✅ Ask questions and voice your concerns
+✅ Connect with other injured workers and advocates
+✅ Be part of the solution
 
 **Event Details:**
-≡ƒôà **Thursday, April 16, 2026**
-≡ƒì╜∩╕Å **6:00 PM** - Dinner (free!)
-≡ƒùú∩╕Å **7:00 PM** - Meeting
+📅 **Thursday, April 16, 2026**
+🍽️ **6:00 PM** - Dinner (free!)
+🗣️ **7:00 PM** - Meeting
 
 **In-Person:**
 OPSEU Office, 326 Memorial Ave, Thunder Bay (beside the Merla Mae)
@@ -142,16 +142,16 @@ OPSEU Office, 326 Memorial Ave, Thunder Bay (beside the Merla Mae)
 **Online:**
 Zoom option available - register by phone or email
 
-**≡ƒô₧ Register:**
+**📞 Register:**
 Phone: ${REGISTRATION_PHONE}
 Email: ${REGISTRATION_EMAIL}
 
 **Full details:** ${EVENT_URL}
 
-**Knowledge is power. Your voice matters. See you there!** ≡ƒÆ¬`
+**Knowledge is power. Your voice matters. See you there!** 💪`
   },
   {
-    mastodon: `ΓÜû∩╕Å New WSIB proposals could change everything for injured workers.
+    mastodon: `⚖️ New WSIB proposals could change everything for injured workers.
 
 Join us April 16 to learn, discuss, and take action.
 
@@ -164,7 +164,7 @@ Register: ${REGISTRATION_PHONE}
 ${EVENT_URL}
 
 #InjuredWorkers #WSIB #CommunityAction`,
-    bluesky: `ΓÜû∩╕Å WSIB proposals = big changes ahead
+    bluesky: `⚖️ WSIB proposals = big changes ahead
 
 April 16, 7PM
 Thunder Bay or Zoom
@@ -174,11 +174,11 @@ Learn. Discuss. Act.
 ${REGISTRATION_PHONE}
 
 ${EVENT_URL}`,
-    discord: `**ΓÜû∩╕Å The Future of WSIB is Being Decided. Be Part of the Conversation.**
+    discord: `**⚖️ The Future of WSIB is Being Decided. Be Part of the Conversation.**
 
 **Thursday, April 16 | 6PM Dinner | 7PM Meeting**
 
-New WSIB proposals are on the table. These aren't minor tweaksΓÇöthey could fundamentally change how injured workers are treated in Ontario.
+New WSIB proposals are on the table. These aren't minor tweaks—they could fundamentally change how injured workers are treated in Ontario.
 
 **Will you be at the table when these proposals are discussed?**
 
@@ -189,29 +189,29 @@ New WSIB proposals are on the table. These aren't minor tweaksΓÇöthey could f
 - How we can respond collectively
 
 **Location Options:**
-≡ƒÅó **In-Person:** OPSEU Office, 326 Memorial Ave, Thunder Bay
-≡ƒÆ╗ **Online:** Zoom (register to get link)
+🏢 **In-Person:** OPSEU Office, 326 Memorial Ave, Thunder Bay
+💻 **Online:** Zoom (register to get link)
 
 **Who should attend:**
-Γ£à Injured workers
-Γ£à Family members of injured workers
-Γ£à Advocates and allies
-Γ£à Anyone concerned about workers' rights
+✅ Injured workers
+✅ Family members of injured workers
+✅ Advocates and allies
+✅ Anyone concerned about workers' rights
 
 **Free dinner at 6PM. Meeting starts at 7PM.**
 
 **Register:**
-≡ƒô₧ ${REGISTRATION_PHONE}
-≡ƒôº ${REGISTRATION_EMAIL}
+📞 ${REGISTRATION_PHONE}
+📧 ${REGISTRATION_EMAIL}
 
-≡ƒöù ${EVENT_URL}
+🔗 ${EVENT_URL}
 
 **This is about more than policy. It's about real people and real impacts.**
 
-**Don't get left behind. Register today.** ≡ƒôó`
+**Don't get left behind. Register today.** 📢`
   },
   {
-    mastodon: `≡ƒùô∩╕Å THIS THURSDAY: WSIB Community Meeting
+    mastodon: `🗓️ THIS THURSDAY: WSIB Community Meeting
 
 April 16, 7PM (dinner at 6PM)
 Thunder Bay (in person or Zoom)
@@ -223,7 +223,7 @@ Register: ${REGISTRATION_PHONE}
 Details: ${EVENT_URL}
 
 #WSIB #ThunderBay #InjuredWorkers`,
-    bluesky: `≡ƒùô∩╕Å THIS THURSDAY - WSIB Meeting
+    bluesky: `🗓️ THIS THURSDAY - WSIB Meeting
 
 April 16, 7PM
 Thunder Bay or Zoom
@@ -233,7 +233,7 @@ New proposals. Big impacts.
 ${REGISTRATION_PHONE}
 
 ${EVENT_URL}`,
-    discord: `**≡ƒùô∩╕Å REMINDER: WSIB Community Meeting THIS THURSDAY**
+    discord: `**🗓️ REMINDER: WSIB Community Meeting THIS THURSDAY**
 
 **April 16, 2026**
 **Dinner: 6PM | Meeting: 7PM**
@@ -241,15 +241,15 @@ ${EVENT_URL}`,
 Have you registered yet?
 
 **Why this matters:**
-The WSIB is considering new proposals. These proposals will affect injured workers across OntarioΓÇöincluding YOU.
+The WSIB is considering new proposals. These proposals will affect injured workers across Ontario—including YOU.
 
 If you don't understand what's being proposed, you can't advocate for yourself or others.
 
 **What you'll get:**
-≡ƒôÜ Clear explanations of the proposals
-Γ¥ô Opportunity to ask questions
-≡ƒùú∩╕Å Platform to voice your concerns
-≡ƒñ¥ Solidarity with other injured workers
+📚 Clear explanations of the proposals
+❓ Opportunity to ask questions
+🗣️ Platform to voice your concerns
+🤝 Solidarity with other injured workers
 
 **Attend in Thunder Bay:**
 OPSEU Office, 326 Memorial Ave (beside the Merla Mae)
@@ -259,14 +259,14 @@ Register for link: ${REGISTRATION_PHONE} or ${REGISTRATION_EMAIL}
 
 **Dinner provided at 6PM. Meeting starts at 7PM.**
 
-≡ƒöù **Full info:** ${EVENT_URL}
+🔗 **Full info:** ${EVENT_URL}
 
 **Your presence = your voice. Your voice = change.**
 
-**See you Thursday!** Γ£è`
+**See you Thursday!** ✊`
   },
   {
-    mastodon: `≡ƒÆí Knowledge is power.
+    mastodon: `💡 Knowledge is power.
 
 Understand new WSIB proposals before they're implemented.
 
@@ -279,7 +279,7 @@ Register: ${REGISTRATION_PHONE}
 ${EVENT_URL}
 
 #WSIB #InjuredWorkers #ThunderBay`,
-    bluesky: `≡ƒÆí Understand WSIB proposals before they're implemented.
+    bluesky: `💡 Understand WSIB proposals before they're implemented.
 
 April 16, 7PM
 Thunder Bay or Zoom
@@ -287,11 +287,11 @@ Thunder Bay or Zoom
 ${REGISTRATION_PHONE}
 
 ${EVENT_URL}`,
-    discord: `**≡ƒÆí Knowledge is Power: WSIB Proposals Community Meeting**
+    discord: `**💡 Knowledge is Power: WSIB Proposals Community Meeting**
 
 **Thursday, April 16 | 6PM Dinner | 7PM Meeting**
 
-Changes to the WSIB don't happen in a vacuum. They're proposed, debated, and implementedΓÇöoften without meaningful input from the people most affected: **injured workers**.
+Changes to the WSIB don't happen in a vacuum. They're proposed, debated, and implemented—often without meaningful input from the people most affected: **injured workers**.
 
 **This meeting changes that.**
 
@@ -305,8 +305,8 @@ Changes to the WSIB don't happen in a vacuum. They're proposed, debated, and imp
 Thunder Bay & District Injured Workers Support Group
 
 **Location:**
-≡ƒÅó In-person: OPSEU Office, 326 Memorial Ave, Thunder Bay
-≡ƒÆ╗ Online: Zoom (register for link)
+🏢 In-person: OPSEU Office, 326 Memorial Ave, Thunder Bay
+💻 Online: Zoom (register for link)
 
 **When:**
 Thursday, April 16
@@ -314,17 +314,17 @@ Thursday, April 16
 7:00 PM - Meeting
 
 **Register:**
-≡ƒô₧ ${REGISTRATION_PHONE}
-≡ƒôº ${REGISTRATION_EMAIL}
+📞 ${REGISTRATION_PHONE}
+📧 ${REGISTRATION_EMAIL}
 
-≡ƒöù **Details:** ${EVENT_URL}
+🔗 **Details:** ${EVENT_URL}
 
 **Don't let policy happen TO you. Be part of shaping it.**
 
-**Register today. Attend Thursday. Make your voice heard.** ≡ƒôú`
+**Register today. Attend Thursday. Make your voice heard.** 📣`
   },
   {
-    mastodon: `≡ƒöö FINAL CALL: WSIB Meeting - April 16
+    mastodon: `🔔 FINAL CALL: WSIB Meeting - April 16
 
 New proposals. Real impacts. Your voice.
 
@@ -337,7 +337,7 @@ Register: ${REGISTRATION_PHONE}
 ${EVENT_URL}
 
 #WSIB #InjuredWorkers #TakeAction`,
-    bluesky: `≡ƒöö FINAL CALL: April 16
+    bluesky: `🔔 FINAL CALL: April 16
 
 WSIB proposals meeting
 7PM, Thunder Bay or Zoom
@@ -347,7 +347,7 @@ ${REGISTRATION_PHONE}
 ${EVENT_URL}
 
 #WSIB`,
-    discord: `**≡ƒöö LAST CHANCE TO REGISTER: WSIB Community Meeting - April 16**
+    discord: `**🔔 LAST CHANCE TO REGISTER: WSIB Community Meeting - April 16**
 
 **This is it. Thursday, April 16.**
 
@@ -360,19 +360,19 @@ New WSIB proposals are on the table. These could affect:
 **If you're not informed, you can't fight back.**
 
 **Event:**
-≡ƒôà Thursday, April 16, 2026
-≡ƒì╜∩╕Å 6:00 PM - Free dinner
-≡ƒùú∩╕Å 7:00 PM - Community meeting
+📅 Thursday, April 16, 2026
+🍽️ 6:00 PM - Free dinner
+🗣️ 7:00 PM - Community meeting
 
 **Where:**
-≡ƒôì OPSEU Office, 326 Memorial Ave, Thunder Bay (beside the Merla Mae)
-≡ƒÆ╗ Or attend by Zoom
+📍 OPSEU Office, 326 Memorial Ave, Thunder Bay (beside the Merla Mae)
+💻 Or attend by Zoom
 
 **Who's invited?**
-Γ£à Injured workers
-Γ£à Family members
-Γ£à Advocates
-Γ£à Anyone who cares about workers' rights
+✅ Injured workers
+✅ Family members
+✅ Advocates
+✅ Anyone who cares about workers' rights
 
 **This is about more than policy. It's about:**
 - Real people
@@ -381,14 +381,14 @@ New WSIB proposals are on the table. These could affect:
 - Real justice
 
 **Register NOW:**
-≡ƒô₧ ${REGISTRATION_PHONE}
-≡ƒôº ${REGISTRATION_EMAIL}
+📞 ${REGISTRATION_PHONE}
+📧 ${REGISTRATION_EMAIL}
 
-≡ƒöù ${EVENT_URL}
+🔗 ${EVENT_URL}
 
 **Be part of the conversation. Be part of the change.**
 
-**See you Thursday!** ≡ƒÆ¬`
+**See you Thursday!** 💪`
   }
 ];
 
@@ -429,7 +429,7 @@ async function postToMastodon(text) {
   const instance = process.env.MASTO_INSTANCE || 'mastodon.social';
   
   if (!token) {
-    console.log('ΓÜá∩╕Å  No Mastodon token, skipping Mastodon post');
+    console.log('⚠️  No Mastodon token, skipping Mastodon post');
     return false;
   }
 
@@ -455,16 +455,16 @@ async function postToMastodon(text) {
       res.on('data', (chunk) => body += chunk);
       res.on('end', () => {
         if (res.statusCode === 200) {
-          console.log('Γ£à Posted to Mastodon');
+          console.log('✅ Posted to Mastodon');
           resolve(true);
         } else {
-          console.error('Γ¥î Mastodon error:', res.statusCode, body);
+          console.error('❌ Mastodon error:', res.statusCode, body);
           resolve(false);
         }
       });
     });
     req.on('error', (err) => {
-      console.error('Γ¥î Mastodon connection error:', err.message);
+      console.error('❌ Mastodon connection error:', err.message);
       resolve(false);
     });
     req.write(data);
@@ -478,7 +478,7 @@ async function postToBluesky(text) {
   const password = process.env.BLUESKY_PASSWORD;
   
   if (!handle || !password) {
-    console.log('ΓÜá∩╕Å  No Bluesky credentials, skipping Bluesky post');
+    console.log('⚠️  No Bluesky credentials, skipping Bluesky post');
     return false;
   }
 
@@ -540,23 +540,23 @@ async function postToBluesky(text) {
         res.on('data', (chunk) => body += chunk);
         res.on('end', () => {
           if (res.statusCode === 200) {
-            console.log('Γ£à Posted to Bluesky');
+            console.log('✅ Posted to Bluesky');
             resolve(true);
           } else {
-            console.error('Γ¥î Bluesky post error:', res.statusCode, body);
+            console.error('❌ Bluesky post error:', res.statusCode, body);
             resolve(false);
           }
         });
       });
       req.on('error', (err) => {
-        console.error('Γ¥î Bluesky connection error:', err.message);
+        console.error('❌ Bluesky connection error:', err.message);
         resolve(false);
       });
       req.write(postData);
       req.end();
     });
   } catch (err) {
-    console.error('Γ¥î Bluesky error:', err.message);
+    console.error('❌ Bluesky error:', err.message);
     return false;
   }
 }
@@ -566,7 +566,7 @@ async function postToDiscord(text) {
   const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
   
   if (!webhookUrl) {
-    console.log('ΓÜá∩╕Å  No Discord webhook, skipping Discord post');
+    console.log('⚠️  No Discord webhook, skipping Discord post');
     return false;
   }
 
@@ -589,16 +589,16 @@ async function postToDiscord(text) {
       res.on('data', (chunk) => body += chunk);
       res.on('end', () => {
         if (res.statusCode === 204) {
-          console.log('Γ£à Posted to Discord');
+          console.log('✅ Posted to Discord');
           resolve(true);
         } else {
-          console.error('Γ¥î Discord error:', res.statusCode, body);
+          console.error('❌ Discord error:', res.statusCode, body);
           resolve(false);
         }
       });
     });
     req.on('error', (err) => {
-      console.error('Γ¥î Discord connection error:', err.message);
+      console.error('❌ Discord connection error:', err.message);
       resolve(false);
     });
     req.write(data);
@@ -608,31 +608,31 @@ async function postToDiscord(text) {
 
 // Main function
 async function main() {
-  console.log('≡ƒÜ¿ WSIB Community Meeting Promotion - April 16, 2026');
+  console.log('🚨 WSIB Community Meeting Promotion - April 16, 2026');
   console.log('');
 
   // Check if event has passed
   const now = new Date();
   if (now > EVENT_DATE) {
-    console.log('Γ£à Event has passed, no more promotions needed');
+    console.log('✅ Event has passed, no more promotions needed');
     return;
   }
 
   // Calculate days until event
   const daysUntil = Math.ceil((EVENT_DATE - now) / (1000 * 60 * 60 * 24));
-  console.log(`ΓÅ░ ${daysUntil} days until WSIB Community Meeting`);
+  console.log(`⏰ ${daysUntil} days until WSIB Community Meeting`);
   console.log('');
 
   // Get next post
   const state = loadState();
   const { post, index } = getNextPost(state);
 
-  console.log(`≡ƒô¥ Using post variant ${index + 1}/${POSTS.length}`);
+  console.log(`📝 Using post variant ${index + 1}/${POSTS.length}`);
   console.log('');
 
   // Test mode
   if (process.env.TEST_MODE === 'true') {
-    console.log('≡ƒº¬ TEST MODE - Would post:');
+    console.log('🧪 TEST MODE - Would post:');
     console.log('');
     console.log('Mastodon:');
     console.log(post.mastodon);
@@ -661,7 +661,7 @@ async function main() {
 
   const successCount = results.filter(Boolean).length;
   console.log('');
-  console.log(`Γ£à Posted to ${successCount}/3 platforms`);
+  console.log(`✅ Posted to ${successCount}/3 platforms`);
 }
 
 main().catch(console.error);

@@ -1,11 +1,10 @@
-﻿name: WSIB Meeting Promotion
-
+name: WSIB Meeting Promotion
 on:
   schedule:
     # Run 2x per DAY: 10AM EST (3PM UTC) and 7PM EST (12AM UTC next day)
     - cron: '0 15 * * *'  # 10AM EST
     - cron: '0 0 * * *'   # 7PM EST previous day (midnight UTC)
-  workflow_dispatch:
+  workflow_dispatch: # Manual trigger
 
 concurrency:
   group: wsib-meeting-promo
@@ -31,10 +30,10 @@ jobs:
         run: |
           if [ $(date +%s) -gt $(date -d '2026-04-16 23:59:59' +%s) ]; then
             echo "event_passed=true" >> $GITHUB_OUTPUT
-            echo "Γ£à Event has passed, workflow will stop"
+            echo "✅ Event has passed, workflow will stop"
           else
             echo "event_passed=false" >> $GITHUB_OUTPUT
-            echo "ΓÅ░ Event upcoming, proceeding with post"
+            echo "⏰ Event upcoming, proceeding with post"
           fi
       
       - name: Post to social media
@@ -47,13 +46,13 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           TEST_MODE: false
         run: |
-          echo "≡ƒÜ¿ Posting WSIB Community Meeting promotion..."
+          echo "🚨 Posting WSIB Community Meeting promotion..."
           node scripts/post-wsib-meeting-promo.js
           
           if [ $? -eq 0 ]; then
-            echo "Γ£à Successfully posted to social media"
+            echo "✅ Successfully posted to social media"
           else
-            echo "ΓÜá∩╕Å Posting completed with warnings"
+            echo "⚠️ Posting completed with warnings"
           fi
       
       - name: Commit state file
@@ -65,24 +64,24 @@ jobs:
           git add .github/state/wsib-meeting-state.json || true
           
           if git diff --staged --quiet; then
-            echo "≡ƒôè No state changes to commit"
+            echo "📊 No state changes to commit"
           else
             git commit -m "chore: update WSIB meeting state
 
 - Post rotated to next variant
 - Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
             git push
-            echo "Γ£à State file committed"
+            echo "✅ State file committed"
           fi
       
       - name: Summary
         run: |
-          echo "## ≡ƒÜ¿ WSIB Community Meeting Promotion" >> $GITHUB_STEP_SUMMARY
+          echo "## 🚨 WSIB Community Meeting Promotion" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.check_date.outputs.event_passed }}" = "true" ]; then
-            echo "Γ£à Event has passed - promotion complete" >> $GITHUB_STEP_SUMMARY
+            echo "✅ Event has passed - promotion complete" >> $GITHUB_STEP_SUMMARY
           else
-            echo "Γ£à Promotion posted successfully" >> $GITHUB_STEP_SUMMARY
+            echo "✅ Promotion posted successfully" >> $GITHUB_STEP_SUMMARY
             echo "Posted to: Mastodon, Bluesky, Discord" >> $GITHUB_STEP_SUMMARY
           fi
           echo "" >> $GITHUB_STEP_SUMMARY

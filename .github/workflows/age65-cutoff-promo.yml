@@ -1,10 +1,9 @@
-﻿name: Age 65 Cut-Off Campaign
-
+name: Age 65 Cut-Off Campaign
 on:
   schedule:
     # Run 2x per week: Tuesday at 9AM EST (2PM UTC), Friday at 9AM EST (2PM UTC)
     - cron: '0 14 * * 2,5'
-  workflow_dispatch:
+  workflow_dispatch: # Manual trigger
 
 concurrency:
   group: age65-cutoff-promo
@@ -34,13 +33,13 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           TEST_MODE: false
         run: |
-          echo "≡ƒÜ¿ Posting Age 65 Cut-Off campaign..."
+          echo "🚨 Posting Age 65 Cut-Off campaign..."
           node scripts/post-age65-cutoff-promo.js
           
           if [ $? -eq 0 ]; then
-            echo "Γ£à Successfully posted to social media"
+            echo "✅ Successfully posted to social media"
           else
-            echo "ΓÜá∩╕Å Posting completed with warnings"
+            echo "⚠️ Posting completed with warnings"
           fi
       
       - name: Commit state file
@@ -51,21 +50,21 @@ jobs:
           git add .github/state/age65-cutoff-state.json || true
           
           if git diff --staged --quiet; then
-            echo "≡ƒôè No state changes to commit"
+            echo "📊 No state changes to commit"
           else
             git commit -m "chore: update age65-cutoff campaign state
 
 - Post rotated to next variant
 - Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
             git push
-            echo "Γ£à State file committed"
+            echo "✅ State file committed"
           fi
       
       - name: Summary
         run: |
-          echo "## ≡ƒÜ¿ Age 65 Cut-Off Campaign" >> $GITHUB_STEP_SUMMARY
+          echo "## 🚨 Age 65 Cut-Off Campaign" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Γ£à Promotion posted successfully" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Promotion posted successfully" >> $GITHUB_STEP_SUMMARY
           echo "Posted to: Mastodon, Bluesky, Discord" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Campaign:** End the Age 65 Cut-Off for Injured Workers" >> $GITHUB_STEP_SUMMARY

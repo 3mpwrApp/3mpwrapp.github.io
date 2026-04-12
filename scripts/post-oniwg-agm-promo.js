@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * POST-ONIWG-AGM-PROMO.JS
  * Posts ONIWG AGM event promotions to social media
@@ -32,28 +32,28 @@ const STATE_FILE = path.join(__dirname, '../.github/state/oniwg-agm-state.json')
 // Post templates - optimized for character limits
 const POSTS = [
   {
-    mastodon: `≡ƒôà ONIWG AGM - May 7-8 in Toronto
+    mastodon: `📅 ONIWG AGM - May 7-8 in Toronto
 
 Injured workers can attend FREE! Limited sponsorship available.
 
 This is your chance to:
-Γ£à Connect with injured worker advocates
-Γ£à Learn about ONIWG's work
-Γ£à Have your voice heard
+✅ Connect with injured worker advocates
+✅ Learn about ONIWG's work
+✅ Have your voice heard
 
 Register: ${EVENT_URL}
 
-Act fastΓÇöspots are limited!
+Act fast—spots are limited!
 
 #InjuredWorkers #ONIWG #Ontario`,
-    bluesky: `≡ƒôà ONIWG AGM - May 7-8, Toronto
+    bluesky: `📅 ONIWG AGM - May 7-8, Toronto
 
 FREE for injured workers (limited sponsorship)
 
 Register now: ${EVENT_URL}
 
 #InjuredWorkers #ONIWG`,
-    discord: `**≡ƒôà ONIWG Annual General Meeting - May 7-8, 2026**
+    discord: `**📅 ONIWG Annual General Meeting - May 7-8, 2026**
 
 **Location:** Toronto, Ontario
 
@@ -62,21 +62,21 @@ Register now: ${EVENT_URL}
 ONIWG (Ontario Network of Injured Workers Groups) is holding their AGM and offering limited sponsorship for injured workers to attend.
 
 **Why attend?**
-Γ£à Network with injured worker advocates from across Ontario
-Γ£à Learn about ONIWG's advocacy work
-Γ£à Participate in important discussions about workers' compensation
-Γ£à Have your voice heard in the movement
+✅ Network with injured worker advocates from across Ontario
+✅ Learn about ONIWG's advocacy work
+✅ Participate in important discussions about workers' compensation
+✅ Have your voice heard in the movement
 
-**Sponsorship is limitedΓÇöregister ASAP!**
+**Sponsorship is limited—register ASAP!**
 
-≡ƒô¥ **Register here:** ${EVENT_URL}
+📝 **Register here:** ${EVENT_URL}
 
 Not an injured worker? Please share this with anyone who might benefit!
 
-**Together we're stronger.** ≡ƒÆ¬`
+**Together we're stronger.** 💪`
   },
   {
-    mastodon: `≡ƒñ¥ ONIWG AGM: May 7-8, Toronto
+    mastodon: `🤝 ONIWG AGM: May 7-8, Toronto
 
 Free attendance for injured workers! Sponsorship available.
 
@@ -85,7 +85,7 @@ Join injured worker advocates from across Ontario. Network, learn, and make your
 Limited spots! Register today: ${EVENT_URL}
 
 #WorkersRights #InjuredWorkers #ONIWG #Solidarity`,
-    bluesky: `≡ƒñ¥ ONIWG AGM: May 7-8
+    bluesky: `🤝 ONIWG AGM: May 7-8
 
 Free for injured workers!
 Toronto. Limited spots.
@@ -93,9 +93,9 @@ Toronto. Limited spots.
 Register: ${EVENT_URL}
 
 #WorkersRights #ONIWG`,
-    discord: `**≡ƒñ¥ Join Us: ONIWG Annual General Meeting**
+    discord: `**🤝 Join Us: ONIWG Annual General Meeting**
 
-**≡ƒôà May 7-8, 2026 | ≡ƒôì Toronto**
+**📅 May 7-8, 2026 | 📍 Toronto**
 
 The Ontario Network of Injured Workers Groups invites injured workers to attend their AGM **free of charge**.
 
@@ -109,16 +109,16 @@ ONIWG is a provincial network of injured worker groups advocating for fair treat
 - Opportunity to get involved in the movement
 
 **Who can attend?**
-Γ£à Injured workers (FREE with limited sponsorship)
-Γ£à Advocates and allies
-Γ£à Anyone passionate about workers' rights
+✅ Injured workers (FREE with limited sponsorship)
+✅ Advocates and allies
+✅ Anyone passionate about workers' rights
 
 **Register now:** ${EVENT_URL}
 
-**Spots are limited. Don't miss out!** ≡ƒôó`
+**Spots are limited. Don't miss out!** 📢`
   },
   {
-    mastodon: `≡ƒÆ¬ Your chance to be part of the movement!
+    mastodon: `💪 Your chance to be part of the movement!
 
 ONIWG AGM: May 7-8 in Toronto
 Free for injured workers (sponsorship available)
@@ -130,7 +130,7 @@ Register before spots fill up: ${EVENT_URL}
 Share with injured workers in your network!
 
 #InjuredWorkers #ONIWG #WorkersCompensation`,
-    bluesky: `≡ƒÆ¬ ONIWG AGM: May 7-8, Toronto
+    bluesky: `💪 ONIWG AGM: May 7-8, Toronto
 
 Free for injured workers!
 
@@ -139,18 +139,18 @@ Connect. Learn. Advocate.
 ${EVENT_URL}
 
 #InjuredWorkers`,
-    discord: `**≡ƒÆ¬ Be Part of the Movement: ONIWG AGM May 7-8**
+    discord: `**💪 Be Part of the Movement: ONIWG AGM May 7-8**
 
 **FREE attendance for injured workers** (limited sponsorship available)
 
 **When:** May 7-8, 2026  
 **Where:** Toronto, Ontario
 
-This is more than just a meetingΓÇöit's a chance to:
-Γ£à **Connect** with injured workers from across the province
-Γ£à **Learn** about ongoing advocacy campaigns
-Γ£à **Participate** in shaping ONIWG's priorities
-Γ£à **Build solidarity** with the movement for workers' rights
+This is more than just a meeting—it's a chance to:
+✅ **Connect** with injured workers from across the province
+✅ **Learn** about ongoing advocacy campaigns
+✅ **Participate** in shaping ONIWG's priorities
+✅ **Build solidarity** with the movement for workers' rights
 
 ONIWG has been at the forefront of fighting for:
 - Fair workers' compensation
@@ -160,12 +160,12 @@ ONIWG has been at the forefront of fighting for:
 
 **Your voice matters. Your presence makes a difference.**
 
-≡ƒô¥ **Register:** ${EVENT_URL}
+📝 **Register:** ${EVENT_URL}
 
-**Act fastΓÇösponsorship is limited!**`
+**Act fast—sponsorship is limited!**`
   },
   {
-    mastodon: `≡ƒùô∩╕Å Mark your calendar: ONIWG AGM, May 7-8
+    mastodon: `🗓️ Mark your calendar: ONIWG AGM, May 7-8
 
 Toronto. Free for injured workers. Limited sponsorship.
 
@@ -174,7 +174,7 @@ This is where advocacy happens. Where connections are made. Where change begins.
 Don't miss it: ${EVENT_URL}
 
 #ONIWG #InjuredWorkers #Ontario #WorkersRights`,
-    bluesky: `≡ƒùô∩╕Å ONIWG AGM: May 7-8, Toronto
+    bluesky: `🗓️ ONIWG AGM: May 7-8, Toronto
 
 Free for injured workers!
 
@@ -183,7 +183,7 @@ Where advocacy happens.
 ${EVENT_URL}
 
 #ONIWG #WorkersRights`,
-    discord: `**≡ƒùô∩╕Å Save the Date: ONIWG AGM - May 7-8, 2026**
+    discord: `**🗓️ Save the Date: ONIWG AGM - May 7-8, 2026**
 
 **Location:** Toronto  
 **Cost:** FREE for injured workers (limited sponsorship available)
@@ -205,14 +205,14 @@ ONIWG is a coalition of injured worker support groups from across Ontario, unite
 
 **This is grassroots organizing in action.**
 
-≡ƒô¥ **Register now:** ${EVENT_URL}
+📝 **Register now:** ${EVENT_URL}
 
 **Injured workers: attendance is FREE. Sponsorship is LIMITED. Apply soon!**
 
-Not an injured worker? Share this with your networks! ≡ƒôú`
+Not an injured worker? Share this with your networks! 📣`
   },
   {
-    mastodon: `≡ƒÜÇ ONIWG AGM: May 7-8, Toronto
+    mastodon: `🚀 ONIWG AGM: May 7-8, Toronto
 
 Free attendance for injured workers!
 
@@ -223,23 +223,23 @@ Limited spots available. Register: ${EVENT_URL}
 Share with injured workers in your community!
 
 #InjuredWorkers #ONIWG #Advocacy #Toronto`,
-    bluesky: `≡ƒÜÇ ONIWG AGM: May 7-8
+    bluesky: `🚀 ONIWG AGM: May 7-8
 
 Free for injured workers. Limited spots.
 
 Register: ${EVENT_URL}
 
 #InjuredWorkers #ONIWG`,
-    discord: `**≡ƒÜÇ ONIWG AGM: Join the Fight for Fair Workers' Compensation**
+    discord: `**🚀 ONIWG AGM: Join the Fight for Fair Workers' Compensation**
 
-**≡ƒôà May 7-8, 2026 | ≡ƒôì Toronto**
+**📅 May 7-8, 2026 | 📍 Toronto**
 
 **FREE for injured workers** - limited sponsorship available!
 
 **Who should attend?**
-Γ£à Injured workers who want to connect with the broader movement
-Γ£à Anyone interested in workers' compensation advocacy
-Γ£à People who want to learn about ONIWG's campaigns
+✅ Injured workers who want to connect with the broader movement
+✅ Anyone interested in workers' compensation advocacy
+✅ People who want to learn about ONIWG's campaigns
 
 **What you'll experience:**
 - **Solidarity:** Meet injured workers from across Ontario
@@ -254,12 +254,12 @@ Register: ${EVENT_URL}
 
 **Be part of the next chapter.**
 
-≡ƒô¥ **Register:** ${EVENT_URL}
+📝 **Register:** ${EVENT_URL}
 
-**Spots filling fastΓÇöregister today!** ΓÅ░`
+**Spots filling fast—register today!** ⏰`
   },
   {
-    mastodon: `Γ£è Injured workers unite! ONIWG AGM - May 7-8, Toronto
+    mastodon: `✊ Injured workers unite! ONIWG AGM - May 7-8, Toronto
 
 Attend for FREE (sponsorship available, limited spots)
 
@@ -270,7 +270,7 @@ Register now: ${EVENT_URL}
 Together we fight for fair workers' compensation.
 
 #Solidarity #InjuredWorkers #ONIWG #WorkersRights`,
-    bluesky: `Γ£è ONIWG AGM: May 7-8, Toronto
+    bluesky: `✊ ONIWG AGM: May 7-8, Toronto
 
 FREE for injured workers!
 
@@ -279,7 +279,7 @@ Your voice. Your movement.
 ${EVENT_URL}
 
 #Solidarity #ONIWG`,
-    discord: `**Γ£è Injured Workers Unite: ONIWG AGM - May 7-8**
+    discord: `**✊ Injured Workers Unite: ONIWG AGM - May 7-8**
 
 **Location:** Toronto  
 **Cost:** FREE for injured workers  
@@ -288,9 +288,9 @@ ${EVENT_URL}
 **This is YOUR network. YOUR voice. YOUR movement.**
 
 ONIWG brings together injured worker groups from across Ontario to fight for:
-Γ£à Fair compensation
-Γ£à Policy reform
-Γ£à Dignity and respect for injured workers
+✅ Fair compensation
+✅ Policy reform
+✅ Dignity and respect for injured workers
 
 **At the AGM, you'll:**
 - Hear from injured worker leaders
@@ -308,9 +308,9 @@ When injured workers come together, we:
 
 **This is grassroots power in action.**
 
-≡ƒô¥ **Register before spots are gone:** ${EVENT_URL}
+📝 **Register before spots are gone:** ${EVENT_URL}
 
-**See you in Toronto!** ≡ƒñ¥`
+**See you in Toronto!** 🤝`
   }
 ];
 
@@ -351,7 +351,7 @@ async function postToMastodon(text) {
   const instance = process.env.MASTO_INSTANCE || 'mastodon.social';
   
   if (!token) {
-    console.log('ΓÜá∩╕Å  No Mastodon token, skipping Mastodon post');
+    console.log('⚠️  No Mastodon token, skipping Mastodon post');
     return false;
   }
 
@@ -377,16 +377,16 @@ async function postToMastodon(text) {
       res.on('data', (chunk) => body += chunk);
       res.on('end', () => {
         if (res.statusCode === 200) {
-          console.log('Γ£à Posted to Mastodon');
+          console.log('✅ Posted to Mastodon');
           resolve(true);
         } else {
-          console.error('Γ¥î Mastodon error:', res.statusCode, body);
+          console.error('❌ Mastodon error:', res.statusCode, body);
           resolve(false);
         }
       });
     });
     req.on('error', (err) => {
-      console.error('Γ¥î Mastodon connection error:', err.message);
+      console.error('❌ Mastodon connection error:', err.message);
       resolve(false);
     });
     req.write(data);
@@ -400,7 +400,7 @@ async function postToBluesky(text) {
   const password = process.env.BLUESKY_PASSWORD;
   
   if (!handle || !password) {
-    console.log('ΓÜá∩╕Å  No Bluesky credentials, skipping Bluesky post');
+    console.log('⚠️  No Bluesky credentials, skipping Bluesky post');
     return false;
   }
 
@@ -462,23 +462,23 @@ async function postToBluesky(text) {
         res.on('data', (chunk) => body += chunk);
         res.on('end', () => {
           if (res.statusCode === 200) {
-            console.log('Γ£à Posted to Bluesky');
+            console.log('✅ Posted to Bluesky');
             resolve(true);
           } else {
-            console.error('Γ¥î Bluesky post error:', res.statusCode, body);
+            console.error('❌ Bluesky post error:', res.statusCode, body);
             resolve(false);
           }
         });
       });
       req.on('error', (err) => {
-        console.error('Γ¥î Bluesky connection error:', err.message);
+        console.error('❌ Bluesky connection error:', err.message);
         resolve(false);
       });
       req.write(postData);
       req.end();
     });
   } catch (err) {
-    console.error('Γ¥î Bluesky error:', err.message);
+    console.error('❌ Bluesky error:', err.message);
     return false;
   }
 }
@@ -488,7 +488,7 @@ async function postToDiscord(text) {
   const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
   
   if (!webhookUrl) {
-    console.log('ΓÜá∩╕Å  No Discord webhook, skipping Discord post');
+    console.log('⚠️  No Discord webhook, skipping Discord post');
     return false;
   }
 
@@ -511,16 +511,16 @@ async function postToDiscord(text) {
       res.on('data', (chunk) => body += chunk);
       res.on('end', () => {
         if (res.statusCode === 204) {
-          console.log('Γ£à Posted to Discord');
+          console.log('✅ Posted to Discord');
           resolve(true);
         } else {
-          console.error('Γ¥î Discord error:', res.statusCode, body);
+          console.error('❌ Discord error:', res.statusCode, body);
           resolve(false);
         }
       });
     });
     req.on('error', (err) => {
-      console.error('Γ¥î Discord connection error:', err.message);
+      console.error('❌ Discord connection error:', err.message);
       resolve(false);
     });
     req.write(data);
@@ -530,31 +530,31 @@ async function postToDiscord(text) {
 
 // Main function
 async function main() {
-  console.log('≡ƒôà ONIWG AGM Promotion - May 7-8, 2026');
+  console.log('📅 ONIWG AGM Promotion - May 7-8, 2026');
   console.log('');
 
   // Check if event has passed
   const now = new Date();
   if (now > EVENT_DATE) {
-    console.log('Γ£à Event has passed, no more promotions needed');
+    console.log('✅ Event has passed, no more promotions needed');
     return;
   }
 
   // Calculate days until event
   const daysUntil = Math.ceil((EVENT_DATE - now) / (1000 * 60 * 60 * 24));
-  console.log(`≡ƒôà ${daysUntil} days until ONIWG AGM`);
+  console.log(`📅 ${daysUntil} days until ONIWG AGM`);
   console.log('');
 
   // Get next post
   const state = loadState();
   const { post, index } = getNextPost(state);
 
-  console.log(`≡ƒô¥ Using post variant ${index + 1}/${POSTS.length}`);
+  console.log(`📝 Using post variant ${index + 1}/${POSTS.length}`);
   console.log('');
 
   // Test mode
   if (process.env.TEST_MODE === 'true') {
-    console.log('≡ƒº¬ TEST MODE - Would post:');
+    console.log('🧪 TEST MODE - Would post:');
     console.log('');
     console.log('Mastodon:');
     console.log(post.mastodon);
@@ -583,7 +583,7 @@ async function main() {
 
   const successCount = results.filter(Boolean).length;
   console.log('');
-  console.log(`Γ£à Posted to ${successCount}/3 platforms`);
+  console.log(`✅ Posted to ${successCount}/3 platforms`);
 }
 
 main().catch(console.error);
