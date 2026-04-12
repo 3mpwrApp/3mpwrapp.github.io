@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-12T01:26:30.108Z",
+  "lastUpdated": "2026-04-12T07:02:57.898Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 15428,
+      "totalPosts": 15452,
       "recentPosts": 24,
       "peakPosts": 25,
-      "lastSeen": "2026-04-12T01:26:20.387Z"
+      "lastSeen": "2026-04-12T07:02:49.973Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 15386,
+      "totalPosts": 15411,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-12T01:26:22.411Z"
+      "lastSeen": "2026-04-12T07:02:51.575Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 15246,
+      "totalPosts": 15271,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-12T01:26:24.613Z"
+      "lastSeen": "2026-04-12T07:02:53.349Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 15475,
+      "totalPosts": 15500,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-12T01:26:26.797Z"
+      "lastSeen": "2026-04-12T07:02:55.155Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 15398,
+      "totalPosts": 15423,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-12T01:26:29.104Z"
+      "lastSeen": "2026-04-12T07:02:56.895Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "(2/2) Read more about how the Paralympic Village was proof that accessible cities can exist here: www.teenvogue.com/story/the-pa... #Paralympic #Accessibility #Disability",
-      "author": "adata.org",
-      "engagement": 29,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "La saison des conférences reprend… N'oubliez pas les personnes handicapées dans le public !\n\nPour rendre vos présentations accessibles, notre collègue @thedaisymoon.me vous propose une liste de choses à faire avant, pendant et après votre intervention :\n\na42.fr/conference-a...\n\n#a11y #handicap",
-      "author": "access42.net",
-      "engagement": 13,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Disabled Folks Are Being Pushed Into Poverty🧵\n\nTwo tier support for disabled people is now a reality in the UK and it should upset anyone who believes in fairness and equality.\n\nI receive LCWRA because I cannot work. That hasn’t changed. It won’t. 1/9\n\n#DisabilityRights #LCWRA #CostOfLiving",
-      "author": "bearofscots.bsky.social",
-      "engagement": 26,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Da mir das Thema sehr am Herzen liegt: Bitte erwäge diese Petition zu unterzeichnen um die Gleichberechtigung und Inklusion von Menschen mit Behinderung zu schützen. Dankeee 🧡 \n\nwww.change.org/p/stoppt-die...\n\n#inklusion #disability #DisabilityRights #furry\n\n📷 Ceferix Folf\n🧵 @whitewingcreations.de",
       "author": "toasterthefox.bsky.social",
@@ -235,6 +205,36 @@
       "text": "This was a really great read. Highly recommended! gbbns.co/journal/acce...\n\nThe EAA has made it difficult to ignore #a11y issues. But the fix hasn't been what it needs to be. The solution is treating frontend as a speciality again. AI still can't replace human knowledge, and can break things faster.",
       "author": "sarasoueidan.com",
       "engagement": 27,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
+      "author": "caseydoherty.bsky.social",
+      "engagement": 108,
+      "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Any bus or train service which is inaccessible to wheelchair users, and disabled people generally, is the equivalent of having no public transport services . \n#DisabilityRights",
+      "author": "anonymoussewerrat.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Disabled Folks Are Being Pushed Into Poverty🧵\n\nTwo tier support for disabled people is now a reality in the UK and it should upset anyone who believes in fairness and equality.\n\nI receive LCWRA because I cannot work. That hasn’t changed. It won’t. 1/9\n\n#DisabilityRights #LCWRA #CostOfLiving",
+      "author": "bearofscots.bsky.social",
+      "engagement": 26,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "This was a really great read. Highly recommended! gbbns.co/journal/acce...\n\nThe EAA has made it difficult to ignore #a11y issues. But the fix hasn't been what it needs to be. The solution is treating frontend as a speciality again. AI still can't replace human knowledge, and can break things faster.",
+      "author": "sarasoueidan.com",
+      "engagement": 29,
       "hashtag": "A11y"
     },
     {
