@@ -1,0 +1,92 @@
+﻿name: WSIB Meeting Promotion
+on:
+  schedule:
+    # Run 2x per DAY: 10AM EST (3PM UTC) and 7PM EST (12AM UTC next day)
+    - cron: '0 15 * * *'  # 10AM EST
+    - cron: '0 0 * * *'   # 7PM EST previous day (midnight UTC)
+  workflow_dispatch: # Manual trigger
+
+concurrency:
+  group: wsib-meeting-promo
+  cancel-in-progress: false
+
+jobs:
+  post-wsib-meeting:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Check if event has passed
+        id: check_date
+        run: |
+          if [ $(date +%s) -gt $(date -d '2026-04-16 23:59:59' +%s) ]; then
+            echo "event_passed=true" >> $GITHUB_OUTPUT
+            echo "Γ£à Event has passed, workflow will stop"
+          else
+            echo "event_passed=false" >> $GITHUB_OUTPUT
+            echo "ΓÅ░ Event upcoming, proceeding with post"
+          fi
+      
+      - name: Post to social media
+        if: steps.check_date.outputs.event_passed == 'false'
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TEST_MODE: false
+        run: |
+          echo "≡ƒÜ¿ Posting WSIB Community Meeting promotion..."
+          node scripts/post-wsib-meeting-promo.js
+          
+          if [ $? -eq 0 ]; then
+            echo "Γ£à Successfully posted to social media"
+          else
+            echo "ΓÜá∩╕Å Posting completed with warnings"
+          fi
+      
+      - name: Commit state file
+        if: steps.check_date.outputs.event_passed == 'false'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add .github/state/wsib-meeting-state.json || true
+          
+          if git diff --staged --quiet; then
+            echo "≡ƒôè No state changes to commit"
+          else
+            git commit -m "chore: update WSIB meeting state
+
+- Post rotated to next variant
+- Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+            echo "Γ£à State file committed"
+          fi
+      
+      - name: Summary
+        run: |
+          echo "## ≡ƒÜ¿ WSIB Community Meeting Promotion" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check_date.outputs.event_passed }}" = "true" ]; then
+            echo "Γ£à Event has passed - promotion complete" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "Γ£à Promotion posted successfully" >> $GITHUB_STEP_SUMMARY
+            echo "Posted to: Mastodon, Bluesky, Discord" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Event:** WSIB Community Meeting" >> $GITHUB_STEP_SUMMARY
+          echo "**Date:** Thursday, April 16, 2026" >> $GITHUB_STEP_SUMMARY
+          echo "**Time:** 6PM Dinner, 7PM Meeting" >> $GITHUB_STEP_SUMMARY
+          echo "**Location:** OPSEU Office, Thunder Bay + Zoom" >> $GITHUB_STEP_SUMMARY
+          echo "**Frequency:** 2x per DAY (until April 16)" >> $GITHUB_STEP_SUMMARY
