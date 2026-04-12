@@ -1,9 +1,10 @@
 ﻿name: ONIWG AGM Promotion
+
 on:
   schedule:
     # Run 3x per week: Monday, Wednesday, Friday at 10AM EST (3PM UTC)
     - cron: '0 15 * * 1,3,5'
-  workflow_dispatch: # Manual trigger
+  workflow_dispatch:
 
 concurrency:
   group: oniwg-agm-promo
