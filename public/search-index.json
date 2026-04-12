@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
   "generated": "2026-04-12",
-  "totalDocuments": 502,
+  "totalDocuments": 503,
   "documents": [
     {
       "id": "blog/2026-04-12-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-04-12",
-      "excerpt": "Daily News Curation - 2026-04-12 Curated 25 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-04-12 Curated 25 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Please Advise! Will Testicle-Tanning Tucker Carlson Invade Canada? Dr. Steve would have said unhinged rants don’t lead to war. But things have changed. Source Score: 20.30 2. RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform. Source Score: 18.72 3. Eight New Canadian Poetry Collections to Celebrate National Poetry Month New and seasoned poets explore identity, memory, disability and more. Source Score: 12.90 4. Good Jobs, Lower Costs, Better Health Care: Manitoba Budget 2026 Government of Manitoba press release Source Score: 11.90 5. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba Government of Manitoba press release Source Score: 11.10 6. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring Government of Manitoba press release Source Score: 9.90 7. Manitoba Government Invests $5 Million to Improve Food Quality for Seniors in Personal Care Homes Government of Manitoba press release Source Score: 9.90 8. Manitoba Government Makes Groceries More Affordable Government of Manitoba press release Source Score: 9.50 9. Manitoba Government Supporting Interprovincial Trade Missions Government of Manitoba press release Source Score: 9.50 10. Manitoba Justice Reports In-Custody Death Government of Manitoba press release Source Score: 7.50 11. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages Government of Manitoba press release Source Score: 7.50 12. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies Government of Manitoba press release Source Score: 7.50 13. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce Government of Manitoba press release Source Score: 7.50 14. Manitoba Government Hosts Mino'Ayaawag Ikwewag Indigenous Parenting Gathering to Share and Celebrate Parenting Practices Government of Manitoba press release Source Score: 7.50 15. Manitoba Government Announces Budget 2026 Government of Manitoba press release Source Score: 7.50 16. That Time When 42 Random Canadians Tried to Fix the Internet Inside the citizens’ assembly that tackled online hate and lies. From the new book ‘Democracy’s Second Act.’ Source Score: 5.10 17. Manitoba Anglers' Guide 2026 Now Available Government of Manitoba press release Source Score: 5.50 18. Province Updates 2026 Spring Flood Outlook Government of Manitoba press release Source Score: 4.50 19. Measles Update #96 Government of Manitoba press release Source Score: 4.50 20. Measles Update #95 Government of Manitoba press release Source Score: 4.50 21. Spring Thaw Begins in Southern Manitoba Basins Government of Manitoba press release Source Score: 4.50 22. Manitobans Encouraged to Enjoy Free Fishing and Free Provincial Park Entry During Spring Break Government of Manitoba press release Source Score: 4.50 23. Measles Update #94 Government of Manitoba press release Source Score: 4.50 24. Measles Update #93 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-12 Curated 2 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-12 Curated 2 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Sarah Cox Joins The Tyee as Our New Biodiversity Reporter She brings decades of experience and will be the lead reporter on a new beat. A Tyee Q&A. Source Score: 3.60",
       "date": "2026-04-12",
       "tags": [
         "highlights"
@@ -18,7 +18,26 @@
         "news"
       ],
       "url": "/2026-04-12-daily-curation",
-      "filesize": 3491
+      "filesize": 479
+    },
+    {
+      "id": "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "source": "blog",
+      "title": "Dev Update: What's Been Happening in 3mpwrApp",
+      "excerpt": "Dev Update: What's Been Happening in 3mpwrApp We believe in building in public. Here's a look at what our team has been working on recently, straight from our development history. --- âœ¨ New & Improv",
+      "content": "Dev Update: What's Been Happening in 3mpwrApp We believe in building in public. Here's a look at what our team has been working on recently, straight from our development history. --- âœ¨ New & Improved - Daily curation 2026-04-12 - automated content aggregation - Daily curation 2026-04-11 - automated content aggregation - Daily content article - 2026-04-11 - Daily curation 2026-04-11 - automated content aggregation - Daily curation 2026-04-10 - automated content aggregation - Daily content article - 2026-04-10 âš™ï¸ Under the Hood - Update trending keywords - 2026-04-12 07:02 UTC - 🧠 Social intelligence update - 2026-04-12 03:52 UTC - Update trending keywords - 2026-04-12 01:26 UTC --- Why We Build in Public Transparency is a core operating principle at 3mpwrApp. The community we serve has been let down by opaque institutions â€” we want to be the structural opposite of that. This means sharing our development process openly, explaining what we're working on and why, and being honest when things take longer than expected. --- Stay Connected - â­ Follow our development on GitHub - ðŸ“¬ Subscribe to updates - ðŸ’¬ Join the community - ðŸ§ª Join the beta program",
+      "date": "2026-04-12 00:00:00 +0000",
+      "tags": [
+        "dev-update",
+        "changelog",
+        "development",
+        "transparency"
+      ],
+      "categories": [
+        "updates"
+      ],
+      "url": "/2026-04-12-dev-update-dev-update-2026-04-12",
+      "filesize": 1181
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -1824,13 +1843,13 @@
       "id": "curation/2026-04-12-curated.md",
       "source": "curation",
       "title": "2026-04-12-curated.md",
-      "excerpt": "Daily News Curation - 2026-04-12 Curated 25 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-04-12 Curated 25 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Please Advise! Will Testicle-Tanning Tucker Carlson Invade Canada? Dr. Steve would have said unhinged rants don’t lead to war. But things have changed. Source Score: 20.30 2. RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform. Source Score: 18.72 3. Eight New Canadian Poetry Collections to Celebrate National Poetry Month New and seasoned poets explore identity, memory, disability and more. Source Score: 12.90 4. Good Jobs, Lower Costs, Better Health Care: Manitoba Budget 2026 Government of Manitoba press release Source Score: 11.90 5. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba Government of Manitoba press release Source Score: 11.10 6. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring Government of Manitoba press release Source Score: 9.90 7. Manitoba Government Invests $5 Million to Improve Food Quality for Seniors in Personal Care Homes Government of Manitoba press release Source Score: 9.90 8. Manitoba Government Makes Groceries More Affordable Government of Manitoba press release Source Score: 9.50 9. Manitoba Government Supporting Interprovincial Trade Missions Government of Manitoba press release Source Score: 9.50 10. Manitoba Justice Reports In-Custody Death Government of Manitoba press release Source Score: 7.50 11. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages Government of Manitoba press release Source Score: 7.50 12. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies Government of Manitoba press release Source Score: 7.50 13. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce Government of Manitoba press release Source Score: 7.50 14. Manitoba Government Hosts Mino'Ayaawag Ikwewag Indigenous Parenting Gathering to Share and Celebrate Parenting Practices Government of Manitoba press release Source Score: 7.50 15. Manitoba Government Announces Budget 2026 Government of Manitoba press release Source Score: 7.50 16. That Time When 42 Random Canadians Tried to Fix the Internet Inside the citizens’ assembly that tackled online hate and lies. From the new book ‘Democracy’s Second Act.’ Source Score: 5.10 17. Manitoba Anglers' Guide 2026 Now Available Government of Manitoba press release Source Score: 5.50 18. Province Updates 2026 Spring Flood Outlook Government of Manitoba press release Source Score: 4.50 19. Measles Update #96 Government of Manitoba press release Source Score: 4.50 20. Measles Update #95 Government of Manitoba press release Source Score: 4.50 21. Spring Thaw Begins in Southern Manitoba Basins Government of Manitoba press release Source Score: 4.50 22. Manitobans Encouraged to Enjoy Free Fishing and Free Provincial Park Entry During Spring Break Government of Manitoba press release Source Score: 4.50 23. Measles Update #94 Government of Manitoba press release Source Score: 4.50 24. Measles Update #93 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-12 Curated 2 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-12 Curated 2 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Sarah Cox Joins The Tyee as Our New Biodiversity Reporter She brings decades of experience and will be the lead reporter on a new beat. A Tyee Q&A. Source Score: 3.60",
       "date": "2026-04-12",
       "tags": [],
       "categories": [],
       "url": "/2026-04-12-curated",
-      "filesize": 3491
+      "filesize": 479
     },
     {
       "id": "curation/README.md",
@@ -8446,6 +8465,69 @@
     "2026-04-12": [
       "blog/2026-04-12-daily-curation.md"
     ],
+    "dev": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "update:": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "what's": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "been": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "happening": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "in": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-06-weekly-update-week-15.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "whatsnew/2025-10-14-curator-language-json-api.md"
+    ],
+    "3mpwrapp": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-06-weekly-update-week-15.md",
+      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-31-3mpwrapp-safe-from-axios-supply-chain-attack.md",
+      "blog/2026-03-31-axios-supply-chain-attack-3mpwrapp-safe.md",
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-12-demo-success-usa-lite-launch.md",
+      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
+      "blog/2025-12-07-feature-spotlight-production-release.md",
+      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
+    ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"
     ],
@@ -9293,14 +9375,6 @@
     "2026-04-08": [
       "blog/2026-04-08-daily-curation.md"
     ],
-    "dev": [
-      "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
     "diary:": [
       "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
@@ -9416,34 +9490,6 @@
     ],
     "—": [
       "blog/2026-04-06-weekly-update-week-15.md"
-    ],
-    "3mpwrapp": [
-      "blog/2026-04-06-weekly-update-week-15.md",
-      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-31-3mpwrapp-safe-from-axios-supply-chain-attack.md",
-      "blog/2026-03-31-axios-supply-chain-attack-3mpwrapp-safe.md",
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-03-14-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-13-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-12-demo-success-usa-lite-launch.md",
-      "blog/2025-12-08-feature-spotlight-3mpwrapp-production-release-721-tests-passing.md",
-      "blog/2025-12-07-feature-spotlight-production-release.md",
-      "blog/2025-11-08-feature-spotlight-3mpwrapp-beta-launch-join-phase-1-testing.md"
-    ],
-    "in": [
-      "blog/2026-04-06-weekly-update-week-15.md",
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "whatsnew/2025-10-14-curator-language-json-api.md"
     ],
     "open": [
       "blog/2026-04-06-weekly-update-week-15.md",
@@ -9612,26 +9658,6 @@
     ],
     "2026-04-04": [
       "blog/2026-04-04-daily-curation.md"
-    ],
-    "update:": [
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
-    ],
-    "what's": [
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
-    ],
-    "been": [
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
-    ],
-    "happening": [
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
     ],
     "2026-04-03": [
       "blog/2026-04-03-daily-curation.md"
@@ -11450,6 +11476,37 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
     ],
+    "dev-update": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "changelog": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
+    ],
+    "development": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
+    ],
+    "transparency": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-06-weekly-update-week-15.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md"
+    ],
     "features": [
       "blog/2026-04-11-feature-spotlight-multilingual-support-english-french.md",
       "blog/2026-04-09-feature-spotlight-screen-reader-excellence.md",
@@ -11710,14 +11767,6 @@
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
     ],
-    "development": [
-      "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
     "behind-the-scenes": [
       "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
@@ -11781,15 +11830,6 @@
       "blog/2025-10-27-weekly-update-week-44.md",
       "blog/2025-10-21-weekly-update-week-43.md"
     ],
-    "transparency": [
-      "blog/2026-04-06-weekly-update-week-15.md",
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md"
-    ],
     "tutorial": [
       "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
       "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
@@ -11844,16 +11884,6 @@
       "blog/2025-11-08-feature-spotlight-wellness-hub.md",
       "blog/2025-11-03-feature-spotlight-evidence-locker.md",
       "blog/2025-10-28-feature-spotlight-wellness-hub.md"
-    ],
-    "dev-update": [
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
-    ],
-    "changelog": [
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md"
     ],
     "flywheels": [
       "blog/2026-03-31-3-flywheels-thunder-bay-presentation-success.md"
@@ -12417,6 +12447,37 @@
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
+    "updates": [
+      "blog/2026-04-12-dev-update-dev-update-2026-04-12.md",
+      "blog/2026-04-06-weekly-update-week-15.md",
+      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
+      "blog/2026-03-30-weekly-update-week-14.md",
+      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
+      "blog/2026-03-23-weekly-update-week-13.md",
+      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
+      "blog/2026-03-16-weekly-update-week-12.md",
+      "blog/2026-02-23-weekly-update-week-9.md",
+      "blog/2026-02-16-weekly-update-week-8.md",
+      "blog/2026-02-09-weekly-update-week-7.md",
+      "blog/2026-02-02-weekly-update-week-6.md",
+      "blog/2026-01-26-weekly-update-week-5.md",
+      "blog/2026-01-19-weekly-update-week-4.md",
+      "blog/2026-01-12-weekly-update-week-3.md",
+      "blog/2026-01-05-weekly-update-week-2.md",
+      "blog/2025-12-29-weekly-update-week-1.md",
+      "blog/2025-12-22-weekly-update-week-52.md",
+      "blog/2025-12-15-weekly-update-week-51.md",
+      "blog/2025-12-08-weekly-update-week-50.md",
+      "blog/2025-12-07-weekly-update-week-50.md",
+      "blog/2025-12-01-weekly-update-week-49.md",
+      "blog/2025-11-24-weekly-update-week-48.md",
+      "blog/2025-11-17-weekly-update-week-47.md",
+      "blog/2025-11-10-weekly-update-week-46.md",
+      "blog/2025-11-03-weekly-update-week-45.md",
+      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
+      "blog/2025-10-27-weekly-update-week-44.md",
+      "blog/2025-10-21-weekly-update-week-43.md"
+    ],
     "features": [
       "blog/2026-04-11-feature-spotlight-multilingual-support-english-french.md",
       "blog/2026-04-09-feature-spotlight-screen-reader-excellence.md",
@@ -12560,36 +12621,6 @@
       "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "updates": [
-      "blog/2026-04-06-weekly-update-week-15.md",
-      "blog/2026-04-04-dev-update-dev-update-2026-04-04.md",
-      "blog/2026-03-30-weekly-update-week-14.md",
-      "blog/2026-03-27-dev-update-dev-update-2026-03-27.md",
-      "blog/2026-03-23-weekly-update-week-13.md",
-      "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
-      "blog/2026-03-16-weekly-update-week-12.md",
-      "blog/2026-02-23-weekly-update-week-9.md",
-      "blog/2026-02-16-weekly-update-week-8.md",
-      "blog/2026-02-09-weekly-update-week-7.md",
-      "blog/2026-02-02-weekly-update-week-6.md",
-      "blog/2026-01-26-weekly-update-week-5.md",
-      "blog/2026-01-19-weekly-update-week-4.md",
-      "blog/2026-01-12-weekly-update-week-3.md",
-      "blog/2026-01-05-weekly-update-week-2.md",
-      "blog/2025-12-29-weekly-update-week-1.md",
-      "blog/2025-12-22-weekly-update-week-52.md",
-      "blog/2025-12-15-weekly-update-week-51.md",
-      "blog/2025-12-08-weekly-update-week-50.md",
-      "blog/2025-12-07-weekly-update-week-50.md",
-      "blog/2025-12-01-weekly-update-week-49.md",
-      "blog/2025-11-24-weekly-update-week-48.md",
-      "blog/2025-11-17-weekly-update-week-47.md",
-      "blog/2025-11-10-weekly-update-week-46.md",
-      "blog/2025-11-03-weekly-update-week-45.md",
-      "whatsnew/2025-10-27-security-privacy-upgrade-a-plus-rating.md",
-      "blog/2025-10-27-weekly-update-week-44.md",
-      "blog/2025-10-21-weekly-update-week-43.md"
     ],
     "tutorials": [
       "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
