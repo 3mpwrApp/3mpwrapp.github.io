@@ -3,11 +3,11 @@ name: WSIB Meeting Promotion
 # Urgent: Posts 2x daily until April 16, 2026
 
 on:
+  workflow_dispatch:
   schedule:
     # Run 2x per DAY: 10AM EST (3PM UTC) and 7PM EST (12AM UTC next day)
     - cron: '0 15 * * *'  # 10AM EST
     - cron: '0 0 * * *'   # 7PM EST previous day (midnight UTC)
-  workflow_dispatch:
 
 concurrency:
   group: wsib-meeting-promo
