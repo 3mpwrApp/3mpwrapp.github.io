@@ -5,6 +5,7 @@
   "main": "scripts/agent-orchestrator.js",
   "scripts": {
     "deploy": "node deploy.js",
+    "deploy:cloudflare": "bundle exec jekyll build && wrangler pages deploy _site --project-name=3mpwrapp --branch=main",
     "deploy:agents": "node scripts/agent-orchestrator.js deploy",
     "deploy:curation": "node scripts/agent-curation-production.js",
     "deploy:blog": "node scripts/agent-blog-production.js",
