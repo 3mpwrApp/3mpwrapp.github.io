@@ -15,7 +15,8 @@
     "Resource Directory",
     "Privacy & Security Architecture",
     "Screen Reader Excellence",
-    "Multilingual Support (English & French)"
+    "Multilingual Support (English & French)",
+    "Crisis Resources & Immediate Support"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -35,6 +36,6 @@
     "What 3mpwr Means: The Philosophy Behind Our Name",
     "Privacy as a Human Right: Not a Feature We Added Later"
   ],
-  "rotationIndex": 8,
+  "rotationIndex": 1,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
