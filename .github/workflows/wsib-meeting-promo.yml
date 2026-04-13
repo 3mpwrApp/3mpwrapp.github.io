@@ -1,6 +1,7 @@
 name: WSIB Meeting Promotion
 
 # Urgent: Posts 2x daily until April 16, 2026
+# Manual trigger available
 
 on:
   workflow_dispatch:

@@ -1,6 +1,7 @@
 name: Age 65 Cut-Off Campaign
 
 # Ongoing campaign: 2x weekly posts
+# Manual trigger available
 
 on:
   workflow_dispatch:

@@ -1,6 +1,7 @@
 name: ONIWG AGM Promotion
 
 # Event: May 7-8, 2026 in Toronto
+# Manual trigger available
 
 on:
   workflow_dispatch:
