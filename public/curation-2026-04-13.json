@@ -1,7 +1,7 @@
 {
   "date": "2026-04-13",
-  "timestamp": "2026-04-13T10:48:01.404Z",
-  "count": 25,
+  "timestamp": "2026-04-13T21:55:29.173Z",
+  "count": 4,
   "minScore": 3.5,
   "items": [
     {
@@ -9,175 +9,28 @@
       "link": "https://linktr.ee/thedisabilitybulletin",
       "description": "Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.",
       "score": 10,
-      "pubDate": "2026-04-13T10:48:01.400Z"
+      "pubDate": "2026-04-13T21:55:29.170Z"
     },
     {
-      "title": "Reflecting on 10 Long Years of BC’s Toxic Drug Crisis",
-      "link": "https://thetyee.ca/Opinion/2026/04/13/Reflecting-BC-Toxic-Drug-Crisis/",
-      "description": "I’ve spent my career working in the public health emergency. It’s time for a full embrace of evidence-based drug policies.",
-      "score": 23.1,
-      "pubDate": "Mon, 13 Apr 2026 07:10:00 +0000"
+      "title": "David Eby’s Abandonment of Human Rights Betrays His Own Government",
+      "link": "https://thetyee.ca/Opinion/2026/04/13/Eby-Abandonment-Human-Rights-Betrays-Government/",
+      "description": "Dropping DRIPA is a political calculation that will leave the province worse off.",
+      "score": 7.8,
+      "pubDate": "Mon, 13 Apr 2026 17:24:00 +0000"
     },
     {
-      "title": "RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal",
-      "link": "https://thetyee.ca/News/2026/04/10/RCMP-Seeks-Quash-Discrimination-Ruling/",
-      "description": "The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform.",
-      "score": 15.6,
-      "pubDate": "Fri, 10 Apr 2026 07:10:00 +0000"
-    },
-    {
-      "title": "Eight New Canadian Poetry Collections to Celebrate National Poetry Month",
-      "link": "https://thetyee.ca/Presents/2026/04/10/Eight-New-Canadian-Poetry-Collections/",
-      "description": "New and seasoned poets explore identity, memory, disability and more.",
-      "score": 13.5,
-      "pubDate": "Fri, 10 Apr 2026 07:30:00 +0000"
-    },
-    {
-      "title": "Good Jobs, Lower Costs, Better Health Care: Manitoba Budget 2026",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73198",
-      "description": "",
-      "score": 13.7,
-      "pubDate": "Tue, 24 Mar 2026 15:02:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Announces New Chair and Board Appointments to Research Manitoba",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73243",
-      "description": "",
-      "score": 11.1,
-      "pubDate": "Thu, 02 Apr 2026 09:00:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Announces Brandon Critical Care Centre to Open this Spring",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73244",
-      "description": "",
-      "score": 10.1,
-      "pubDate": "Wed, 01 Apr 2026 13:00:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Invests $5 Million to Improve Food Quality for Seniors in Personal Care Homes",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73203",
-      "description": "",
-      "score": 10.1,
-      "pubDate": "Thu, 26 Mar 2026 10:34:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Makes Groceries More Affordable",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73202",
-      "description": "",
-      "score": 10.6,
-      "pubDate": "Wed, 25 Mar 2026 12:54:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Supporting Interprovincial Trade Missions",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73200",
-      "description": "",
-      "score": 9.9,
-      "pubDate": "Wed, 25 Mar 2026 11:25:00 CDT"
-    },
-    {
-      "title": "Manitoba Justice Reports In-Custody Death",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73204",
-      "description": "",
-      "score": 8.4,
-      "pubDate": "Thu, 26 Mar 2026 14:50:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73241",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Tue, 31 Mar 2026 16:04:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Expands Access to Measles Vaccine Through Pharmacies",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73240",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Tue, 31 Mar 2026 15:13:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73238",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Tue, 31 Mar 2026 11:48:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Hosts Mino'Ayaawag Ikwewag Indigenous Parenting Gathering to Share and Celebrate Parenting Practices",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73201",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Wed, 25 Mar 2026 11:56:00 CDT"
-    },
-    {
-      "title": "Manitoba Government Announces Budget 2026",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73197",
-      "description": "",
-      "score": 7.5,
-      "pubDate": "Tue, 24 Mar 2026 14:51:00 CDT"
-    },
-    {
-      "title": "That Time When 42 Random Canadians Tried to Fix the Internet",
-      "link": "https://thetyee.ca/Analysis/2026/04/08/Random-Canadians-Tried-Fix-Internet/",
-      "description": "Inside the citizens’ assembly that tackled online hate and lies. From the new book ‘Democracy’s Second Act.’",
-      "score": 5.7,
-      "pubDate": "Wed, 08 Apr 2026 07:10:00 +0000"
-    },
-    {
-      "title": "Manitoba Anglers' Guide 2026 Now Available",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73239",
-      "description": "",
-      "score": 5.7,
-      "pubDate": "Wed, 01 Apr 2026 09:00:00 CDT"
-    },
-    {
-      "title": "Province Updates 2026 Spring Flood Outlook",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73277",
+      "title": "Premier Welcomes Nobel Laureate Geoffrey Hinton to Manitoba",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73417",
       "description": "",
       "score": 4.5,
-      "pubDate": "Tue, 07 Apr 2026 16:59:00 CDT"
+      "pubDate": "Mon, 13 Apr 2026 15:30:00 CDT"
     },
     {
-      "title": "Measles Update #96",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73245",
+      "title": "Measles Update #100",
+      "link": "https://news.gov.mb.ca/news/index.html?item=73418",
       "description": "",
       "score": 4.5,
-      "pubDate": "Wed, 01 Apr 2026 14:18:00 CDT"
-    },
-    {
-      "title": "Measles Update #95",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73237",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 30 Mar 2026 16:19:00 CDT"
-    },
-    {
-      "title": "Spring Thaw Begins in Southern Manitoba Basins",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73217",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Mon, 30 Mar 2026 08:54:00 CDT"
-    },
-    {
-      "title": "Manitobans Encouraged to Enjoy Free Fishing and Free Provincial Park Entry During Spring Break",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73206",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 26 Mar 2026 16:20:00 CDT"
-    },
-    {
-      "title": "Measles Update  #94",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73205",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Thu, 26 Mar 2026 15:30:00 CDT"
-    },
-    {
-      "title": "Measles Update #93",
-      "link": "https://news.gov.mb.ca/news/index.html?item=73199",
-      "description": "",
-      "score": 4.5,
-      "pubDate": "Tue, 24 Mar 2026 15:25:00 CDT"
+      "pubDate": "Mon, 13 Apr 2026 15:09:00 CDT"
     }
   ]
 }
