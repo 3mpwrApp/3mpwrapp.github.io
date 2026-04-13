@@ -18,6 +18,9 @@
  * Runs until April 16, 2026
  */
 
+// Load environment variables from .env.local for local development
+require('dotenv').config({ path: '.env.local' });
+
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
