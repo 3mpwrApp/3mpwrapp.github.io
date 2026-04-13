@@ -1,0 +1,166 @@
+<!-- Sticky Building in Public Banner -->
+<div id="sticky-transparency-banner" class="sticky-transparency-banner" role="banner" aria-label="Building in public notification">
+  <div class="sticky-transparency-content">
+    <span class="sticky-emoji">🚧</span>
+    <span class="sticky-text">
+      <strong>We're building in public!</strong>
+      <span id="sticky-update-count">Loading...</span> updates this week
+    </span>
+    <a href="{{ '/whats-new/' | relative_url }}" class="sticky-link">What's New →</a>
+    <button type="button" class="sticky-dismiss" aria-label="Dismiss banner" onclick="dismissStickyBanner()">×</button>
+  </div>
+</div>
+
+<style>
+/* Sticky Transparency Banner */
+.sticky-transparency-banner {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10000;
+  animation: slideDown 0.3s ease-out;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.sticky-transparency-banner.dismissed {
+  display: none;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sticky-transparency-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sticky-emoji {
+  font-size: 18px;
+}
+
+.sticky-text {
+  font-size: 14px;
+}
+
+.sticky-link {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  font-weight: 600;
+  transition: border-color 0.2s;
+  padding: 0 2px;
+}
+
+.sticky-link:hover {
+  border-bottom-color: white;
+}
+
+.sticky-dismiss {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 8px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  margin-left: auto;
+}
+
+.sticky-dismiss:hover {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .sticky-transparency-banner {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .sticky-transparency-content {
+    gap: 6px;
+  }
+  
+  .sticky-emoji {
+    font-size: 16px;
+  }
+  
+  .sticky-text {
+    font-size: 13px;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .sticky-transparency-banner {
+    background: #000;
+    border-bottom: 2px solid #fff;
+  }
+}
+
+/* Print: Hide banner */
+@media print {
+  .sticky-transparency-banner {
+    display: none;
+  }
+}
+</style>
+
+<script>
+// Load update count from What's New data
+(async function loadStickyBannerData() {
+  try {
+    const currentYear = new Date().getFullYear();
+    // Fetch current year's data from GitHub
+    const response = await fetch(`https://raw.githubusercontent.com/3mpwrApp/empowrapp-new/main/public/whatsnew-${currentYear}.json`);
+    
+    if (response.ok) {
+      const data = await response.json();
+      const sevenDaysAgo = new Date(Date.now() - (7 * 24 * 60 * 60 * 1000));
+      const weeklyCount = data.entries.filter(e => new Date(e.date) >= sevenDaysAgo).length;
+      
+      document.getElementById('sticky-update-count').textContent = `${weeklyCount}`;
+    } else {
+      document.getElementById('sticky-update-count').textContent = 'several';
+    }
+  } catch (err) {
+    document.getElementById('sticky-update-count').textContent = 'several';
+  }
+  
+  // Check if banner was previously dismissed (within 7 days)
+  const dismissedTime = localStorage.getItem('transparencyBannerDismissed');
+  if (dismissedTime) {
+    const sevenDaysAgo = Date.now() - (7 * 24 * 60 * 60 * 1000);
+    if (parseInt(dismissedTime) > sevenDaysAgo) {
+      document.getElementById('sticky-transparency-banner').classList.add('dismissed');
+    }
+  }
+})();
+
+// Dismiss banner
+function dismissStickyBanner() {
+  document.getElementById('sticky-transparency-banner').classList.add('dismissed');
+  localStorage.setItem('transparencyBannerDismissed', Date.now().toString());
+}
+</script>

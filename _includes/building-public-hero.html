@@ -1,0 +1,202 @@
+<!-- Building in Public Hero Banner -->
+<section class="building-public-hero" role="banner" aria-label="Building in public transparency banner">
+  <div class="building-public-content">
+    <div class="building-public-icon">🚧</div>
+    <div class="building-public-text">
+      <h2 class="building-public-title"> Building in Public - See Every Change</h2>
+      <p class="building-public-subtitle">
+        <strong id="hero-total-updates">Loading...</strong> updates since October 2025. 
+        <strong id="hero-weekly-updates">Loading...</strong> improvements this week.
+        Every commit, every fix, every feature—shared openly with our community.
+      </p>
+    </div>
+    <div class="building-public-actions">
+      <a href="{{ '/whats-new/' | relative_url }}" class="building-public-btn-primary">
+        <span>View All Updates</span>
+        <span aria-hidden="true">→</span>
+      </a>
+      <a href="{{ '/whats-new/feed.xml' | relative_url }}" class="building-public-btn-secondary">
+        <span aria-hidden="true">📡</span>
+        <span>RSS Feed</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Building in Public Hero Banner */
+.building-public-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  margin: -20px -20px 3rem -20px;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.building-public-content {
+  max-width: 1200px;
+  margin: 0 auto; display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.building-public-icon {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.building-public-text {
+  flex: 1;
+}
+
+.building-public-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.building-public-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.building-public-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.building-public-btn-primary,
+.building-public-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+.building-public-btn-primary {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.building-public-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.building-public-btn-secondary {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.building-public-btn-secondary:hover {
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .building-public-hero {
+    padding: 2rem 1.5rem;
+  }
+  
+  .building-public-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .building-public-icon {
+    font-size: 48px;
+  }
+  
+  .building-public-title {
+    font-size: 1.5rem;
+  }
+  
+  .building-public-subtitle {
+    font-size: 1rem;
+  }
+  
+  .building-public-actions {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .building-public-hero {
+    background: #000;
+    border: 3px solid #fff;
+  }
+  
+  .building-public-btn-primary {
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+  }
+  
+  .building-public-btn-secondary {
+    background: transparent;
+    border: 2px solid #fff;
+  }
+}
+
+/* Print: Hide banner */
+@media print {
+  .building-public-hero {
+    display: none;
+  }
+}
+</style>
+
+<script>
+// Load data for hero banner
+(async function loadHeroData() {
+  try {
+    const currentYear = new Date().getFullYear();
+    const response = await fetch(`https://raw.githubusercontent.com/3mpwrApp/empowrapp-new/main/public/whatsnew-${currentYear}.json`);
+    
+    if (response.ok) {
+      const data = await response.json();
+      const sevenDaysAgo = new Date(Date.now() - (7 * 24 * 60 * 60 * 1000));
+      const weeklyCount = data.entries.filter(e => new Date(e.date) >= sevenDaysAgo).length;
+      
+      // Try to get last year's data for total count
+      const lastYear = currentYear - 1;
+      const lastYearResponse = await fetch(`https://raw.githubusercontent.com/3mpwrApp/empowrapp-new/main/public/whatsnew-${lastYear}.json`);
+      let totalCount = data.entries.length;
+      
+      if (lastYearResponse.ok) {
+        const lastYearData = await lastYearResponse.json();
+        totalCount += lastYearData.entries.length;
+      }
+      
+      document.getElementById('hero-total-updates').textContent = `${totalCount.toLocaleString()}`;
+      document.getElementById('hero-weekly-updates').textContent = `${weeklyCount}`;
+    } else {
+      document.getElementById('hero-total-updates').textContent = '4,600+';
+      document.getElementById('hero-weekly-updates').textContent = 'Many';
+    }
+  } catch (err) {
+    console.error('Error loading hero data:', err);
+    document.getElementById('hero-total-updates').textContent = '4,600+';
+    document.getElementById('hero-weekly-updates').textContent = 'Many';
+  }
+})();
+</script>

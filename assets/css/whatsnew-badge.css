@@ -1,0 +1,66 @@
+/* What's New Navigation Badge */
+.whatsnew-nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.whatsnew-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background: #dc3545;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 10px;
+  line-height: 1;
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .whatsnew-badge {
+    background: #ff0000;
+    border: 2px solid #fff;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .whatsnew-badge {
+    background: #ff4757;
+  }
+}
+
+/* Pulse animation for attention */
+@keyframes badge-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .whatsnew-badge {
+    animation: none;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .whatsnew-badge {
+    min-width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+}

@@ -62,8 +62,11 @@
   <link rel="stylesheet" href="{{ "/assets/css/enhanced-focus-indicators.css" | relative_url }}">
   <!-- Social Share Component Styles -->
   <link rel="stylesheet" href="{{ "/assets/css/social-share.css" | relative_url }}">
+  <!-- What's New Badge Styles -->
+  <link rel="stylesheet" href="{{ "/assets/css/whatsnew-badge.css" | relative_url }}">
 </head>
 <body>
+  {%- include sticky-transparency-banner.html -%}
   <a class="skip-link" href="#main-content">Skip to content</a>
   <a class="skip-link" href="#primary-nav">Skip to navigation</a>
   <a class="skip-link" href="#site-footer">Skip to footer</a>
@@ -159,8 +162,9 @@
           </a>
         </li>
         <li>
-          <a href="{{ lang_prefix | append: '/whats-new' | relative_url }}" {% if page.url contains '/whats-new' %}aria-current="page"{% endif %}>
+          <a href="{{ lang_prefix | append: '/whats-new' | relative_url }}" {% if page.url contains '/whats-new' %}aria-current="page"{% endif %} class="whatsnew-nav-link">
             {% if page.lang == 'fr' %}Quoi de neuf{% else %}What's New{% endif %}
+            <span id="whatsnew-badge" class="whatsnew-badge" style="display:none;" aria-label="unread updates"></span>
           </a>
         </li>
         <li>
@@ -760,6 +764,9 @@
 
   <!-- Performance Monitoring (development only - disable in production if needed) -->
   <script src="{{ "/assets/js/performance-monitor.min.js" | relative_url }}" defer></script>
+
+  <!-- What's New Badge -->
+  <script src="{{ "/assets/js/whatsnew-badge.js" | relative_url }}" defer></script>
 
   {%- endif -%}
 

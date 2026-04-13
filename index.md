@@ -10,6 +10,7 @@ description: Free community-powered platform connecting injured workers, persons
 
 {%- include accessibility-toolbar.html -%}
 {%- include status-banner.html -%}
+{%- include building-public-hero.html -%}
 
 <!-- Flywheels Diagram -->
 <section class="flywheels-diagram-hero" style="text-align: center; margin: 2rem auto 3rem; max-width: 1200px;">

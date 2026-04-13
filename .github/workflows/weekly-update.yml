@@ -51,7 +51,7 @@ jobs:
       - name: Generate weekly update
         run: |
           echo "📝 Generating weekly update post..."
-          node scripts/weekly-update-generator.js
+          node scripts/weekly-update-generator-v2.js
 
       - name: Commit update
         run: |
