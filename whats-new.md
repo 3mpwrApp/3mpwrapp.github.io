@@ -68,6 +68,15 @@ published: true
   <div id="recent-updates" class="updates-container"></div>
 </section>
 
+<!-- Table of Contents -->
+<section id="toc-section" style="display: none;">
+  <h2>📑 Jump to Month</h2>
+  <div id="month-toc" class="month-toc"></div>
+</section>
+
+<!-- Recent Updates (animated scroll target) -->
+<div id="recent-anchor"></div>
+
 <!-- Archive (> 30 days) -->
 <section id="archive-section" style="display: none;">
   <h2>📚 Archive (Older Updates)</h2>
@@ -81,6 +90,10 @@ published: true
 
 <!-- Styles -->
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 .gradient-banner {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -254,7 +267,38 @@ published: true
   color: #667eea;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
+  padding-top: 1rem;
   border-bottom: 2px solid #667eea;
+  scroll-margin-top: 100px;
+}
+
+.month-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.month-toc a {
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 2px solid #667eea;
+  color: #667eea;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.month-toc a:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
 }
 
 .archive-note {
@@ -375,7 +419,7 @@ published: true
     return `
       <div class="update-entry ${entry.category}" data-category="${entry.category}">
         <div class="update-header">
-          <div class="update-title">${entry.emoji} ${entry.summary}</div>
+          <div class="update-title">${entry.summary}</div>
           <div class="update-date">${formattedDate}</div>
         </div>
         <div class="update-category category-${entry.category}">
@@ -419,16 +463,31 @@ published: true
       const monthGroups = groupByMonth(archiveEntries);
       const sortedMonths = Object.keys(monthGroups).sort().reverse();
       
+      // Generate table of contents
+      const tocContainer = document.getElementById('month-toc');
+      tocContainer.innerHTML = sortedMonths.map(monthKey => {
+        const [year, month] = monthKey.split('-');
+        const monthName = new Date(year, parseInt(month) - 1, 1).toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long' 
+        });
+        const monthId = `month-${monthKey}`;
+        
+        return `<a href="#${monthId}" class="month-toc-link">${monthName}</a>`;
+      }).join('');
+      document.getElementById('toc-section').style.display = 'block';
+      
       archiveContainer.innerHTML = sortedMonths.map(monthKey => {
         const [year, month] = monthKey.split('-');
         const monthName = new Date(year, parseInt(month) - 1, 1).toLocaleDateString('en-US', { 
           year: 'numeric', 
           month: 'long' 
         });
+        const monthId = `month-${monthKey}`;
         
         return `
           <div class="month-group">
-            <h3 class="month-header">${monthName}</h3>
+            <h3 id="${monthId}" class="month-header">${monthName}</h3>
             ${monthGroups[monthKey].map(renderEntry).join('')}
           </div>
         `;
