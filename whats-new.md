@@ -309,12 +309,12 @@ published: true
   // Load data from unified JSON files
   async function loadData() {
     try {
-      // Try loading from local public folder first
+      // Load from assets/data folder
       const years = [2025, 2026];
       
       for (const year of years) {
         try {
-          const response = await fetch(`/public/whatsnew-${year}.json`);
+          const response = await fetch(`/assets/data/whatsnew-${year}.json`);
           if (response.ok) {
             const data = await response.json();
             if (data.entries && Array.isArray(data.entries)) {

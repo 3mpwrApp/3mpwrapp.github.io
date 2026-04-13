@@ -132,8 +132,8 @@
 (async function loadStickyBannerData() {
   try {
     const currentYear = new Date().getFullYear();
-    // Fetch current year's data from local public folder
-    const response = await fetch(`/public/whatsnew-${currentYear}.json`);
+    // Fetch current year's data from assets/data folder
+    const response = await fetch(`/assets/data/whatsnew-${currentYear}.json`);
     
     if (response.ok) {
       const data = await response.json();

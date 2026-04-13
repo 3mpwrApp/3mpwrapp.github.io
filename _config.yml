@@ -98,6 +98,9 @@ include:
   - google92c2c14246b0aaae.html
   - _headers
   - .well-known
+  - public/whatsnew-2025.json
+  - public/whatsnew-2026.json
+  - public/whatsnew-unified.json
 
 # Do not publish repository maintenance docs on the website
 exclude:
