@@ -32,12 +32,19 @@ jobs:
       contents: write
     
     steps:
-      - name: Checkout repository
+      - name: Checkout site repository
         uses: actions/checkout@v4
         with:
           ref: main
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0  # Need full history for git log
+      
+      - name: Checkout app repo for What's New data
+        uses: actions/checkout@v4
+        with:
+          repository: 'S0vryn9-C011ect1ve/empowrapp-main'
+          path: 'empowrapp-app'
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

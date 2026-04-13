@@ -16,7 +16,12 @@ const path = require('path');
 class WeeklyUpdateGeneratorV2 {
   constructor() {
     this.postsDir = path.join(process.cwd(), '_posts');
-    this.publicDir = path.join(__dirname, '../public');
+    // Look for app repo data in empowrapp-app/public (when running in CI)
+    // or ../empowrapp-new/public (when running locally)
+    const ciDataDir = path.join(process.cwd(), 'empowrapp-app', 'public');
+    const localDataDir = path.join(__dirname, '..', '..', 'empowrapp-new', 'empowrapp-new', 'public');
+    
+    this.publicDir = fs.existsSync(ciDataDir) ? ciDataDir : localDataDir;
     
     // Ensure directories exist
     [this.postsDir].forEach(dir => {
