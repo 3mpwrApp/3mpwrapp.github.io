@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-12T03:52:37.989Z",
+  "lastUpdated": "2026-04-13T04:00:08.988Z",
   "hashtags": {},
   "combinations": {},
   "abTests": [],
@@ -27,7 +27,7 @@
     },
     {
       "tag": "accessibility",
-      "mentions": 35,
+      "mentions": 37,
       "source": "emerging"
     },
     {
@@ -37,12 +37,12 @@
     },
     {
       "tag": "disabilityjustice",
-      "mentions": 26,
+      "mentions": 27,
       "source": "emerging"
     },
     {
       "tag": "a11y",
-      "mentions": 24,
+      "mentions": 27,
       "source": "emerging"
     }
   ],
