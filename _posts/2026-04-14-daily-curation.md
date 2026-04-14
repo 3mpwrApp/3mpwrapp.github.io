@@ -1,0 +1,128 @@
+---
+layout: post
+title: "Daily News Curation - 2026-04-14"
+date: 2026-04-14
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-04-14
+
+Curated 22 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Reflecting on 10 Long Years of BC’s Toxic Drug Crisis
+I’ve spent my career working in the public health emergency. It’s time for a full embrace of evidence-based drug policies.
+[Source](https://thetyee.ca/Opinion/2026/04/13/Reflecting-BC-Toxic-Drug-Crisis/)
+**Score:** 23.10
+
+### 2. RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal
+The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform.
+[Source](https://thetyee.ca/News/2026/04/10/RCMP-Seeks-Quash-Discrimination-Ruling/)
+**Score:** 18.20
+
+### 3. Eight New Canadian Poetry Collections to Celebrate National Poetry Month
+New and seasoned poets explore identity, memory, disability and more.
+[Source](https://thetyee.ca/Presents/2026/04/10/Eight-New-Canadian-Poetry-Collections/)
+**Score:** 13.50
+
+### 4. BC’s Toxic Drug Crisis Hits a Grim 10-Year Anniversary
+More than 18,000 British Columbians have been killed and there’s no end in sight.
+[Source](https://thetyee.ca/News/2026/04/14/BC-Toxic-Drug-Crisis-10-Year-Anniversary/)
+**Score:** 8.00
+
+### 5. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73243)
+**Score:** 11.30
+
+### 6. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73244)
+**Score:** 10.10
+
+### 7. Manitoba Government Invests $5 Million to Improve Food Quality for Seniors in Personal Care Homes
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73203)
+**Score:** 10.10
+
+### 8. Manitoba Government Makes Groceries More Affordable
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73202)
+**Score:** 10.60
+
+### 9. Manitoba Justice Reports In-Custody Death
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73204)
+**Score:** 8.40
+
+### 10. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73241)
+**Score:** 7.50
+
+### 11. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73240)
+**Score:** 7.50
+
+### 12. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73238)
+**Score:** 7.50
+
+### 13. Manitoba Government Hosts Mino'Ayaawag Ikwewag Indigenous Parenting Gathering to Share and Celebrate Parenting Practices
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73201)
+**Score:** 7.50
+
+### 14. Manitoba Anglers' Guide 2026 Now Available
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73239)
+**Score:** 5.70
+
+### 15. Premier Leads Manitoba Business Delegation to Ottawa
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73419)
+**Score:** 4.50
+
+### 16. Province Updates 2026 Spring Flood Outlook
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73277)
+**Score:** 4.50
+
+### 17. Measles Update #96
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73245)
+**Score:** 4.50
+
+### 18. Measles Update #95
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73237)
+**Score:** 4.50
+
+### 19. Spring Thaw Begins in Southern Manitoba Basins
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73217)
+**Score:** 4.50
+
+### 20. Manitobans Encouraged to Enjoy Free Fishing and Free Provincial Park Entry During Spring Break
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73206)
+**Score:** 4.50
+
+### 21. Measles Update  #94
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73205)
+**Score:** 4.50
+
