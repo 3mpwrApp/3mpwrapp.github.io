@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
   "generated": "2026-04-14",
-  "totalDocuments": 508,
+  "totalDocuments": 509,
   "documents": [
     {
       "id": "blog/2026-04-14-daily-curation.md",
       "source": "blog",
       "title": "Daily News Curation - 2026-04-14",
-      "excerpt": "Daily News Curation - 2026-04-14 Curated 22 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-04-14 Curated 22 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Reflecting on 10 Long Years of BC’s Toxic Drug Crisis I’ve spent my career working in the public health emergency. It’s time for a full embrace of evidence-based drug policies. Source Score: 23.10 2. RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform. Source Score: 18.20 3. Eight New Canadian Poetry Collections to Celebrate National Poetry Month New and seasoned poets explore identity, memory, disability and more. Source Score: 13.50 4. BC’s Toxic Drug Crisis Hits a Grim 10-Year Anniversary More than 18,000 British Columbians have been killed and there’s no end in sight. Source Score: 8.00 5. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba Government of Manitoba press release Source Score: 11.30 6. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring Government of Manitoba press release Source Score: 10.10 7. Manitoba Government Invests $5 Million to Improve Food Quality for Seniors in Personal Care Homes Government of Manitoba press release Source Score: 10.10 8. Manitoba Government Makes Groceries More Affordable Government of Manitoba press release Source Score: 10.60 9. Manitoba Justice Reports In-Custody Death Government of Manitoba press release Source Score: 8.40 10. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages Government of Manitoba press release Source Score: 7.50 11. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies Government of Manitoba press release Source Score: 7.50 12. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce Government of Manitoba press release Source Score: 7.50 13. Manitoba Government Hosts Mino'Ayaawag Ikwewag Indigenous Parenting Gathering to Share and Celebrate Parenting Practices Government of Manitoba press release Source Score: 7.50 14. Manitoba Anglers' Guide 2026 Now Available Government of Manitoba press release Source Score: 5.70 15. Premier Leads Manitoba Business Delegation to Ottawa Government of Manitoba press release Source Score: 4.50 16. Province Updates 2026 Spring Flood Outlook Government of Manitoba press release Source Score: 4.50 17. Measles Update #96 Government of Manitoba press release Source Score: 4.50 18. Measles Update #95 Government of Manitoba press release Source Score: 4.50 19. Spring Thaw Begins in Southern Manitoba Basins Government of Manitoba press release Source Score: 4.50 20. Manitobans Encouraged to Enjoy Free Fishing and Free Provincial Park Entry During Spring Break Government of Manitoba press release Source Score: 4.50 21. Measles Update #94 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-14 Curated 5 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-14 Curated 5 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Invests Additional $29.2 Million to Protect Children and Support Child Welfare Services Government of Manitoba press release Source Score: 12.90 2. Why Logging Isn’t the Solution to B.C.’s Wildfire Crisis Older trees aren’t to blame for B.C.’s increasingly fiery summers, the science shows. Source Score: 9.10 3. Premier Meets With Prime Minister to Advance Churchill Plus, Health Care and Agriculture Government of Manitoba press release Source Score: 6.50 4. Ontario Health Coalition calls for investigation into for-profit plasma centres Rabble.ca — progressive Canadian news Source Score: 4.50",
       "date": "2026-04-14",
       "tags": [
         "highlights"
@@ -18,7 +18,26 @@
         "news"
       ],
       "url": "/2026-04-14-daily-curation",
-      "filesize": 3170
+      "filesize": 930
+    },
+    {
+      "id": "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "source": "blog",
+      "title": "Tracking Symptoms for Doctors and Legal Appointments",
+      "excerpt": "Tracking Symptoms for Doctors and Legal Appointments A practical guide from the 3mpwrApp team. --- \"I've been having worse days lately.\" That's a statement that's easy to dismiss. \"My six-month sympto",
+      "content": "Tracking Symptoms for Doctors and Legal Appointments A practical guide from the 3mpwrApp team. --- \"I've been having worse days lately.\" That's a statement that's easy to dismiss. \"My six-month symptom log shows 14 days rated 8/10 or above in the last month, compared to 4 in the same period last year\" â€” that is a statement that opens doors. 3mpwrApp's Symptom Tracker turns your subjective daily experience into objective data. Not because your experience isn't valid â€” it absolutely is â€” but because objective data is harder to argue with in a clinical or legal context. The export function is specifically formatted for medical appointments. Hand your doctor a ready-to-read summary instead of trying to reconstruct the last three months while sitting in a waiting room in pain. --- What You'll Learn - Timestamped entries create a legally defensible health timeline - Pain scale and symptom intensity tracked visually over time - Export a formatted summary report for medical appointments - Pattern recognition shows which symptoms cluster or correlate - Six-month view shows what memory cannot â€” the actual trend --- Step by Step Step 1: Log a fatigue episode with energy level, duration, and potential triggers Step 2: Export a 30-day symptom summary to bring to your specialist Step 3: Show your insurer six months of objective pain data in a single document Step 4: Identify that your worst days correlate with specific environmental factors --- Key Takeaways - Objective timestamped records are far more persuasive than memory alone - Symptom tracking helps your doctors make better treatment decisions - Patterns in your data reveal things you would never notice day-to-day --- Ready to Try It? 1. Download 3mpwrApp â€” 3mpwrapp.pages.dev 2. Sign up or explore as guest â€” no commitment needed 3. Find this feature â€” search or browse main navigation --- About 3mpwrApp 3mpwrApp is a free, accessibility-first platform for injured workers and people with disabilities across Canada. - ðŸ“– Full User Guide - ðŸ§ª Join the Beta - ðŸ’¬ Community Forums",
+      "date": "2026-04-14 00:00:00 +0000",
+      "tags": [
+        "tutorial",
+        "how-to",
+        "accessibility",
+        "tutorial"
+      ],
+      "categories": [
+        "tutorials"
+      ],
+      "url": "/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments",
+      "filesize": 2071
     },
     {
       "id": "curation/2025-10-06-curation.md",
@@ -1848,13 +1867,13 @@
       "id": "curation/2026-04-14-curated.md",
       "source": "curation",
       "title": "2026-04-14-curated.md",
-      "excerpt": "Daily News Curation - 2026-04-14 Curated 22 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disabilit",
-      "content": "Daily News Curation - 2026-04-14 Curated 22 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Reflecting on 10 Long Years of BC’s Toxic Drug Crisis I’ve spent my career working in the public health emergency. It’s time for a full embrace of evidence-based drug policies. Source Score: 23.10 2. RCMP Seeks to Quash Discrimination Ruling by Human Rights Tribunal The force is arguing the tribunal shouldn’t provide police oversight. But an expert says the appeal reflects resistance to reform. Source Score: 18.20 3. Eight New Canadian Poetry Collections to Celebrate National Poetry Month New and seasoned poets explore identity, memory, disability and more. Source Score: 13.50 4. BC’s Toxic Drug Crisis Hits a Grim 10-Year Anniversary More than 18,000 British Columbians have been killed and there’s no end in sight. Source Score: 8.00 5. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba Government of Manitoba press release Source Score: 11.30 6. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring Government of Manitoba press release Source Score: 10.10 7. Manitoba Government Invests $5 Million to Improve Food Quality for Seniors in Personal Care Homes Government of Manitoba press release Source Score: 10.10 8. Manitoba Government Makes Groceries More Affordable Government of Manitoba press release Source Score: 10.60 9. Manitoba Justice Reports In-Custody Death Government of Manitoba press release Source Score: 8.40 10. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages Government of Manitoba press release Source Score: 7.50 11. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies Government of Manitoba press release Source Score: 7.50 12. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce Government of Manitoba press release Source Score: 7.50 13. Manitoba Government Hosts Mino'Ayaawag Ikwewag Indigenous Parenting Gathering to Share and Celebrate Parenting Practices Government of Manitoba press release Source Score: 7.50 14. Manitoba Anglers' Guide 2026 Now Available Government of Manitoba press release Source Score: 5.70 15. Premier Leads Manitoba Business Delegation to Ottawa Government of Manitoba press release Source Score: 4.50 16. Province Updates 2026 Spring Flood Outlook Government of Manitoba press release Source Score: 4.50 17. Measles Update #96 Government of Manitoba press release Source Score: 4.50 18. Measles Update #95 Government of Manitoba press release Source Score: 4.50 19. Spring Thaw Begins in Southern Manitoba Basins Government of Manitoba press release Source Score: 4.50 20. Manitobans Encouraged to Enjoy Free Fishing and Free Provincial Park Entry During Spring Break Government of Manitoba press release Source Score: 4.50 21. Measles Update #94 Government of Manitoba press release Source Score: 4.50",
+      "excerpt": "Daily News Curation - 2026-04-14 Curated 5 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability",
+      "content": "Daily News Curation - 2026-04-14 Curated 5 items from disability, accessibility, and social policy sources. 🌟 Featured: The Disability Bulletin The Disability Bulletin Visit for the latest disability rights news, advocacy updates, and community stories from across Canada. 📍 Read More --- Additional Stories 1. Manitoba Government Invests Additional $29.2 Million to Protect Children and Support Child Welfare Services Government of Manitoba press release Source Score: 12.90 2. Why Logging Isn’t the Solution to B.C.’s Wildfire Crisis Older trees aren’t to blame for B.C.’s increasingly fiery summers, the science shows. Source Score: 9.10 3. Premier Meets With Prime Minister to Advance Churchill Plus, Health Care and Agriculture Government of Manitoba press release Source Score: 6.50 4. Ontario Health Coalition calls for investigation into for-profit plasma centres Rabble.ca — progressive Canadian news Source Score: 4.50",
       "date": "2026-04-14",
       "tags": [],
       "categories": [],
       "url": "/2026-04-14-curated",
-      "filesize": 3170
+      "filesize": 930
     },
     {
       "id": "curation/README.md",
@@ -8549,6 +8568,50 @@
     "2026-04-14": [
       "blog/2026-04-14-daily-curation.md"
     ],
+    "tracking": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "blog/2025-10-26-spoon-theory-meets-web-design.md",
+      "whatsnew/2025-10-05-languages-a11y-ga.md"
+    ],
+    "symptoms": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md"
+    ],
+    "for": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
+      "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md",
+      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
+      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
+      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
+      "whatsnew/2025-10-03-accessibility-settings-consent.md"
+    ],
+    "doctors": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md"
+    ],
+    "and": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md",
+      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
+      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
+      "whatsnew/2025-10-14-curator-language-json-api.md",
+      "whatsnew/2025-10-05-languages-a11y-ga.md",
+      "whatsnew/2025-10-04-initialize-whats-new.md",
+      "whatsnew/2025-10-02-seo-schema-i18n.md",
+      "whatsnew/2025-09-30-quality-checks-ci.md",
+      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md",
+      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
+    ],
+    "legal": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md",
+      "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-12-18-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
+      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md"
+    ],
+    "appointments": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md"
+    ],
     "2025-10-06-curation.md": [
       "curation/2025-10-06-curation.md"
     ],
@@ -9505,14 +9568,6 @@
     "designing": [
       "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md"
     ],
-    "for": [
-      "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
-      "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md",
-      "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
-      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
-      "blog/2025-10-24-feature-spotlight-evidence-locker.md",
-      "whatsnew/2025-10-03-accessibility-settings-consent.md"
-    ],
     "the": [
       "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
       "blog/2026-04-06-weekly-update-week-15.md",
@@ -9692,13 +9747,6 @@
     "canada's": [
       "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md"
     ],
-    "legal": [
-      "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md",
-      "blog/2026-03-22-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-12-18-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-11-04-feature-spotlight-legal-workflow-automation.md",
-      "blog/2025-10-25-feature-spotlight-legal-workflow-automation.md"
-    ],
     "database": [
       "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md"
     ],
@@ -9707,18 +9755,6 @@
     ],
     "workers": [
       "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md"
-    ],
-    "and": [
-      "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md",
-      "blog/2026-02-02-six-months-endless-rebuilds-zero-half-measures.md",
-      "whatsnew/2025-11-06-app-updates-accessibility-security.md",
-      "whatsnew/2025-10-14-curator-language-json-api.md",
-      "whatsnew/2025-10-05-languages-a11y-ga.md",
-      "whatsnew/2025-10-04-initialize-whats-new.md",
-      "whatsnew/2025-10-02-seo-schema-i18n.md",
-      "whatsnew/2025-09-30-quality-checks-ci.md",
-      "whatsnew/2025-09-29-accessible-newsletter-and-a11y.md",
-      "whatsnew/2025-09-28-foundation-navigation-a11y.md"
     ],
     "persons": [
       "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md"
@@ -11127,10 +11163,6 @@
     "design:": [
       "blog/2025-10-26-spoon-theory-meets-web-design.md"
     ],
-    "tracking": [
-      "blog/2025-10-26-spoon-theory-meets-web-design.md",
-      "whatsnew/2025-10-05-languages-a11y-ga.md"
-    ],
     "while": [
       "blog/2025-10-26-spoon-theory-meets-web-design.md"
     ],
@@ -11581,6 +11613,44 @@
       "blog/2025-10-17-weekly-recap.md",
       "blog/2025-10-17-daily-curation.md"
     ],
+    "tutorial": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
+      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
+    ],
+    "how-to": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
+    ],
+    "accessibility": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "blog/2026-04-11-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2026-04-09-feature-spotlight-screen-reader-excellence.md",
+      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
+      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
+      "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
+      "blog/2026-01-06-why-disability-apps-fail.md",
+      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
+      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
+      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
+      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
+      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
+    ],
     "features": [
       "blog/2026-04-13-feature-spotlight-crisis-resources-immediate-support.md",
       "blog/2026-04-11-feature-spotlight-multilingual-support-english-french.md",
@@ -11839,27 +11909,6 @@
       "blog/2026-03-19-dev-update-dev-update-2026-03-19.md",
       "blog/2026-03-16-weekly-update-week-12.md"
     ],
-    "accessibility": [
-      "blog/2026-04-11-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2026-04-09-feature-spotlight-screen-reader-excellence.md",
-      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
-      "blog/2026-04-01-feature-spotlight-motor-accessibility-features.md",
-      "blog/2026-03-30-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
-      "blog/2026-01-06-why-disability-apps-fail.md",
-      "blog/2025-12-28-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-12-27-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-12-23-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-12-22-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-11-15-feature-spotlight-multilingual-support-english-french.md",
-      "blog/2025-11-14-feature-spotlight-screen-reader-excellence.md",
-      "blog/2025-11-10-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-11-09-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-30-feature-spotlight-motor-accessibility-features.md",
-      "blog/2025-10-29-feature-spotlight-dyslexia-support-mode.md",
-      "blog/2025-10-25-groundbreaking-website-accessibility-features.md"
-    ],
     "community": [
       "blog/2026-04-10-community-privacy-as-a-human-right-not-a-feature-we-added-later.md",
       "blog/2026-04-02-community-what-3mpwr-means-the-philosophy-behind-our-name.md"
@@ -11941,19 +11990,6 @@
       "blog/2025-11-03-weekly-update-week-45.md",
       "blog/2025-10-27-weekly-update-week-44.md",
       "blog/2025-10-21-weekly-update-week-43.md"
-    ],
-    "tutorial": [
-      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
-      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
-      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
-    ],
-    "how-to": [
-      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
-      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
     ],
     "injured workers": [
       "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md"
@@ -12559,6 +12595,12 @@
       "blog/2025-10-17-daily-curation.md",
       "blog/2025-10-03-welcome-to-3mpowr.md"
     ],
+    "tutorials": [
+      "blog/2026-04-14-tutorial-tracking-symptoms-for-doctors-and-legal-appointments.md",
+      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
+      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
+      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
+    ],
     "features": [
       "blog/2026-04-13-feature-spotlight-crisis-resources-immediate-support.md",
       "blog/2026-04-11-feature-spotlight-multilingual-support-english-french.md",
@@ -12734,11 +12776,6 @@
       "blog/2026-04-08-dev-diary-simple-mode-designing-for-the-worst-day.md",
       "blog/2026-03-31-dev-diary-bank-level-encryption-for-a-disability-app-the-why.md",
       "blog/2026-03-15-dev-diary-why-we-chose-react-native-accessibility-over-everything.md"
-    ],
-    "tutorials": [
-      "blog/2026-04-06-tutorial-writing-an-effective-demand-letter-with-3mpwrapp.md",
-      "blog/2026-03-29-tutorial-your-first-benefits-application-a-complete-walkthrough.md",
-      "blog/2026-03-14-tutorial-how-to-use-the-evidence-locker-effectively.md"
     ],
     "development": [
       "blog/2026-04-05-building-canadas-legal-database-from-cold-start.md",
