@@ -1,0 +1,164 @@
+{
+  "trackingStartDate": "2026-04-14",
+  "currentStatus": "Beta testers just onboarding - no user stories yet. Testing UTF-8 encoding fixes + smart truncation.",
+  "weeklySnapshots": [
+    {
+      "week": "2026-W16",
+      "startDate": "2026-04-14",
+      "endDate": "2026-04-20",
+      "mastodon": {
+        "account": "https://mastodon.social/@3mpwrapp",
+        "followers": 25,
+        "followersChange": 0,
+        "postsPublished": 0,
+        "avgLikesPerPost": 0,
+        "avgRepliesPerPost": 0,
+        "avgBoostsPerPost": 0,
+        "engagementRate": 0,
+        "topPost": {
+          "url": "",
+          "publishedDate": "",
+          "likes": 0,
+          "boosts": 0,
+          "replies": 0,
+          "content": "",
+          "hashtags": []
+        },
+        "notes": "Baseline week - testing UTF-8 encoding fixes"
+      },
+      "bluesky": {
+        "account": "https://bsky.app/profile/3mpwrapp.bsky.social",
+        "followers": 25,
+        "followersChange": 0,
+        "postsPublished": 0,
+        "avgLikesPerPost": 0,
+        "avgRepliesPerPost": 0,
+        "avgRepostsPerPost": 0,
+        "engagementRate": 0,
+        "topPost": {
+          "url": "",
+          "publishedDate": "",
+          "likes": 0,
+          "reposts": 0,
+          "replies": 0,
+          "content": "",
+          "hashtags": []
+        },
+        "notes": "Baseline week - testing smart truncation features"
+      },
+      "combined": {
+        "totalFollowers": 50,
+        "totalFollowerGrowth": 0,
+        "totalPostsPublished": 0,
+        "avgEngagementRate": 0,
+        "manualEngagementSessions": 0,
+        "genuineConversations": 0,
+        "influencerDMsSent": 0,
+        "userStoriesReceived": 0,
+        "betaTestersOnboarded": 0
+      },
+      "contentPerformance": {
+        "bestPerformingType": "TBD",
+        "bestPerformingHashtags": [],
+        "bestPostingTime": "TBD",
+        "worstPerformingType": "TBD"
+      },
+      "weeklyGoals": {
+        "set": [
+          "Test UTF-8 encoding fixes (emojis render correctly)",
+          "Test smart truncation (no character limit errors)",
+          "Create target advocate list (20 people)",
+          "Write first 'Wins Wednesday' post",
+          "Complete 10 genuine engagement sessions (5 min each)",
+          "Set up calendar reminders for daily routine"
+        ],
+        "achieved": []
+      }
+    }
+  ],
+  "goals": {
+    "30day": {
+      "targetDate": "2026-05-14",
+      "totalFollowers": 200,
+      "followerGrowthRate": 300,
+      "avgEngagementRate": 0.05,
+      "postsPublishedPerWeek": 12,
+      "genuineConversationsPerWeek": 10,
+      "userStoriesReceived": 3,
+      "influencerPartnerships": 2,
+      "betaTestersActive": 20
+    },
+    "60day": {
+      "targetDate": "2026-06-14",
+      "totalFollowers": 500,
+      "followerGrowthRate": 900,
+      "avgEngagementRate": 0.08,
+      "postsPublishedPerWeek": 15,
+      "genuineConversationsPerWeek": 20,
+      "userStoriesReceived": 10,
+      "influencerPartnerships": 5,
+      "betaTestersActive": 50
+    },
+    "90day": {
+      "targetDate": "2026-07-14",
+      "totalFollowers": 1000,
+      "followerGrowthRate": 1900,
+      "avgEngagementRate": 0.10,
+      "postsPublishedPerWeek": 15,
+      "genuineConversationsPerWeek": 30,
+      "userStoriesReceived": 25,
+      "influencerPartnerships": 10,
+      "betaTestersActive": 100
+    }
+  },
+  "platformPrioritization": {
+    "status": "Testing all platforms equally for 60 days, then prioritize based on data",
+    "evaluationCriteria": [
+      "Engagement rate (likes + replies + shares / followers)",
+      "Follower growth rate",
+      "Quality of conversations (depth of replies)",
+      "Conversion to beta testers",
+      "Time investment required per platform"
+    ],
+    "currentLeader": "TBD - need 60 days of data",
+    "notes": ""
+  },
+  "learnings": {
+    "whatWorked": [],
+    "whatDidntWork": [],
+    "surprises": [],
+    "hypothesesToTest": [
+      "Founder vulnerability posts (Template 5) will outperform feature spotlights",
+      "Pro Tip posts (Template 6) will get highest saves/shares",
+      "Posting between 8-11 AM EST will outperform evening posts",
+      "#DisabilityRights hashtag will outperform #WSIB specificity",
+      "Posts with questions/polls will get 2x replies vs. statements"
+    ]
+  },
+  "viralHookPerformance": {
+    "lastAnalyzed": "2026-04-14",
+    "topPerformers": [],
+    "underperformers": [],
+    "rotationSchedule": "Monthly (first Sunday)",
+    "notes": "Need 30 days of data before first hook rotation analysis"
+  },
+  "influencerOutreach": {
+    "totalDMsSent": 0,
+    "repliesReceived": 0,
+    "conversationsStarted": 0,
+    "betaTestersFromOutreach": 0,
+    "partnershipsFormed": 0,
+    "templateUsed": "See COMMUNITY_ENGAGEMENT_STRATEGY.md - Influencer DM Template"
+  },
+  "instructions": {
+    "howToUpdate": "Every Sunday 10 AM - see ENGAGEMENT_TRACKING_WORKFLOW.md for step-by-step process",
+    "dataCollectionSources": {
+      "mastodon": "Profile page → Stats tab (manual count from last 7 posts)",
+      "bluesky": "Profile page → Manual count from last 7 posts",
+      "posting-results.json": "Automated posting outcomes (check for errors)",
+      "viral-hooks-analytics.json": "Hook performance data (populated manually)"
+    },
+    "calculatingEngagementRate": "(Total likes + replies + shares on all posts) / (Total followers × Posts published)",
+    "whenToAdjustStrategy": "If engagement rate < 0.02 after 30 days, or follower growth < 50% of target"
+  }
+}

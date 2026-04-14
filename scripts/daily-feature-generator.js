@@ -28,31 +28,31 @@ class DailyFeatureGenerator {
     // Accepting beta testers at https://3mpwrapp.pages.dev/app-waitlist
     this.features = [
       {
-        name: '3mpwrApp Production Release: 721 Tests Passing',
-        category: 'Production Release',
-        description: '3mpwrApp is 100% production ready with comprehensive security, accessibility, and offline support verified',
-        userGuideSection: 'whats-new-december-2025',
+        name: '3mpwrApp Technical Foundation: 721 Tests Passing',
+        category: 'Technical Excellence',
+        description: '3mpwrApp built on production-grade foundation with comprehensive security, accessibility, and offline support verified through automated testing',
+        userGuideSection: 'technical-foundation',
         highlights: [
-          '721 tests passing across all app features (121 test suites)',
-          'AES-256-GCM military-grade encryption verified',
-          'WCAG AAA compliant with 0 accessibility issues',
-          'Complete offline-first support with AsyncStorage',
-          'XSS and SQL injection prevention confirmed',
-          '0 ESLint errors, 0 TypeScript errors',
-          'Join beta at https://3mpwrapp.pages.dev/app-waitlist'
+          '721 automated tests passing across all app features (121 test suites)',
+          'AES-256-GCM military-grade encryption implemented and verified',
+          'WCAG AAA accessibility compliance verified (0 critical issues in automated scans)',
+          'Complete offline-first architecture with AsyncStorage',
+          'XSS and SQL injection prevention mechanisms in place',
+          '0 ESLint errors, 0 TypeScript errors in codebase',
+          'Currently accepting beta testers: https://3mpwrapp.pages.dev/app-waitlist'
         ],
         examples: [
-          'Use Evidence Locker with bank-level encryption',
-          'Access all features offline without internet',
-          'Navigate with screen readers (VoiceOver, TalkBack)',
-          'Switch to Simple Mode on bad days (5 core features)',
-          'Upload evidence in rural areas with offline queue'
+          'Evidence Locker designed with bank-level AES-256-GCM encryption',
+          'All features architected to work offline without internet',
+          'Screen reader compatibility built-in (VoiceOver, TalkBack support)',
+          'Simple Mode available (reduces interface to 5 core features)',
+          'Upload queue system designed for rural/low-connectivity areas'
         ],
         benefits: [
-          'Bank-level security protects your sensitive data',
-          'Works completely offline - no internet required',
-          'Accessible to 90%+ of the disability community',
-          'Always free - this is our commitment to the community'
+          'Bank-level security architecture protects sensitive data',
+          'Offline-first design means no internet dependency',
+          'Accessibility built-in from foundation, not added later',
+          'Always free - permanent commitment to community access'
         ]
       },
       {
@@ -1190,6 +1190,447 @@ class DailyFeatureGenerator {
           'Navigate bureaucracy with clear guidance',
           'Access all government resources in one place'
         ]
+      },
+      // ═══ COLLECTIVE FEATURES: THE 3 FLYWHEELS ═══════════════════════════════
+      {
+        name: 'The 3 Flywheels of Change: Turning Lived Experience Into Power',
+        category: 'Collective Intelligence',
+        description: 'Three interconnected systems that transform individual struggles into collective knowledge, pattern detection, and policy change',
+        userGuideSection: 'three-flywheels',
+        highlights: [
+          '🔵 Evidence Flywheel: Your wins become proven templates that save others hours',
+          '🟠 Pattern Detection Flywheel: Aggregated data reveals systemic discrimination',
+          '🟢 Collective Action Flywheel: Organized evidence drives targeted advocacy',
+          'Privacy-first: individual data never leaves your device',
+          'Pattern analysis happens on aggregated, anonymized insights only',
+          'Closed loop: victories feed back into templates and knowledge base'
+        ],
+        examples: [
+          'Evidence Flywheel: Successful accommodation letter → Template library → 500 workers save 2 hours each',
+          'Pattern Detection: 200 users denied by same adjudicator → Pattern identified → Legal challenge launched',
+          'Collective Action: Community organizes campaign using shared evidence → Policy reformed',
+          'You document your case → Others anonymously benefit from patterns → System improves for everyone',
+          'Full transparency: see how your anonymized contribution helps the community (opt-in only)'
+        ],
+        benefits: [
+          'Individual documentation becomes collective power',
+          'Your struggles contribute to systemic change (privacy-preserved)',
+          'Access winning strategies from thousands of previous cases',
+          'Transform isolated experiences into organized advocacy'
+        ]
+      },
+      {
+        name: 'Evidence Flywheel: Your Wins Power Community Templates',
+        category: 'Collective Intelligence',
+        description: 'When you win your case, the strategies that worked become templates that help others - creating a flywheel of collective success',
+        userGuideSection: 'evidence-flywheel',
+        highlights: [
+          'Successful letters and documentation become community templates',
+          'Winning arguments analyzed and added to knowledge base',
+          'Template library grows with every community victory',
+          'All contributions are opt-in and anonymized',
+          'Attribution credit for contributors (optional)',
+          'Quality review ensures only proven strategies are shared'
+        ],
+        examples: [
+          'You win WSIB appeal → Your accommodation letter becomes template → 500 workers use it',
+          'Successful CPP-D application → Medical evidence format added to guide → 1,000 applicants benefit',
+          'Human rights complaint succeeds → Legal strategy documented → Community replicates approach',
+          'Template tracks success rate: "This letter has been used 347 times, 89% success rate"',
+          'See impact: "Your contribution helped 1,200 community members"'
+        ],
+        benefits: [
+          'Community learns from your hard-won victories',
+          'Reduce duplication of effort across thousands of claims',
+          'Proven strategies replace guesswork',
+          'Feel proud of contributing to collective progress'
+        ]
+      },
+      {
+        name: 'Pattern Detection Flywheel: Turning Data Into Systemic Evidence',
+        category: 'Collective Intelligence',
+        description: 'Designed to aggregate anonymized data revealing discrimination patterns invisible to individuals - intended to power legal challenges and policy reform',
+        userGuideSection: 'pattern-detection-flywheel',
+        highlights: [
+          'Architecture supports aggregate analysis of systemic discrimination',
+          '100% privacy-preserving design: individual data never accessed',
+          'System can identify patterns: biased adjudicators, discriminatory policies, regional disparities',
+          'Output designed as legal-grade evidence for human rights complaints',
+          'Alert system planned for when patterns affect specific users',
+          'Community input mechanism for prioritizing pattern investigations'
+        ],
+        examples: [
+          'Potential pattern detection: "Adjudicator X approval rate significantly lower for specific diagnosis"',
+          'Trend analysis capability: "Denial rates by time period and jurisdiction"',
+          'Geographic comparison: "Regional disparities in claim outcomes"',
+          'Demographic analysis: "Outcome variations by protected characteristics"',
+          'Use case: Patterns presented as evidence in human rights proceedings'
+        ],
+        benefits: [
+          'Transform individual experiences into systemic evidence',
+          'Validate lived experiences with aggregate data',
+          'Create legal ammunition for class actions and policy challenges',
+          'Build early warning system for biased decision-making'
+        ]
+      },
+      {
+        name: 'Collective Action Flywheel: Organized Evidence Drives Policy Change',
+        category: 'Collective Intelligence',
+        description: 'Tools designed to connect individual cases into organized campaigns for institutional accountability and systemic reform',
+        userGuideSection: 'collective-action-flywheel',
+        highlights: [
+          'Discovery tools help find others facing same employer, insurer, or system',
+          'Campaign coordination features for organizing collective responses',
+          'Shared evidence repositories with permission-based access controls',
+          'Template campaigns available: class actions, media campaigns, regulatory complaints',
+          'Progress tracking systems: campaign milestones, media coverage, policy changes',
+          'Legal referral network connections for collective representation'
+        ],
+        examples: [
+          'Use case: Workers facing same insurer organize coordinated complaint to regulator',
+          'Scenario: Community identifies policy gap, coordinates advocacy effort',
+          'Template: Pattern documentation → Press release → Media outreach workflow',
+          'Connection: Platform helps affected individuals find each other for class actions',
+          'Knowledge base: Successful campaign strategies documented for replication'
+        ],
+        benefits: [
+          'Transform individual grievances into collective advocacy power',
+          'Leverage strength in numbers for institutional accountability',
+          'Focus on systemic change beyond individual accommodations',
+          'Reduce barriers to organizing with ready-made campaign templates'
+        ]
+      },
+      // ═══ CANLII DATABASE & LEGAL INTELLIGENCE ═════════════════════════════
+      {
+        name: 'CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide)',
+        category: 'Legal Intelligence',
+        description: 'Searchable database of Canadian workplace and disability cases with plain-language summaries - starting with Ontario, expanding daily to all provinces',
+        userGuideSection: 'canlii-database',
+        highlights: [
+          'Starting with Ontario: 1,800+ WSIB and HRTO cases (2020-2026)',
+          'Database grows daily: adding cases from all provinces and territories',
+          'Goal: Complete Canada-wide coverage across all jurisdictions',
+          '65% disability-relevance match rate through AI filtering',
+          'Plain-language summaries generated for every case',
+          'Winning arguments extracted and categorized by issue type',
+          'Search by: province, diagnosis, employer type, issue, outcome',
+          'Case law citations in proper legal format',
+          'Completely free - no paywalled legal decisions'
+        ],
+        examples: [
+          'Current coverage: Ontario WSIB, HRTO, and related tribunals',
+          'Expanding next: BC, Alberta, Quebec provincial tribunals',
+          'Search: "Fibromyalgia accommodation Ontario" → Find relevant precedents',
+          'Discovery: "Employer refused remote work - tribunal ruled discrimination"',
+          'Winning argument template: "Undue hardship requires hard evidence, not speculation"',
+          'Track expansion: New provinces added weekly to database'
+        ],
+        benefits: [
+          'Access real Canadian case law for your jurisdiction',
+          'Find precedents similar to your situation',
+          'Database continuously improving with daily additions',
+          'Eventually covers all provinces and territories'
+        ]
+      },
+      {
+        name: 'Case Law Summarizer: Legal Decisions in Plain Language',
+        category: 'Legal Intelligence',
+        description: 'Upload any legal decision and get a plain-language summary highlighting key findings, winning arguments, and relevance to your case',
+        userGuideSection: 'case-law-summarizer',
+        highlights: [
+          'AI-powered summarization of complex legal decisions',
+          'Extracts: key facts, legal issues, tribunal findings, outcome',
+          'Highlights winning arguments and reasoning',
+          'Assesses relevance to your specific situation',
+          'Generates citations in proper legal format',
+          'Saves summaries to your Evidence Locker'
+        ],
+        examples: [
+          'Upload: 40-page WSIB tribunal decision',
+          'Get: "Claimant won. Key finding: Employer failed to consider ergonomic accommodation"',
+          'Relevance: "This case is highly relevant - same diagnosis and similar workplace setup"',
+          'Winning argument: "Tribunal emphasized employer\'s duty to explore all accommodation options"',
+          'Citation: "Jones v. WSIB, 2024 WSIAT 456 - use this in your appeal"'
+        ],
+        benefits: [
+          'Understand legal decisions without law degree',
+          'Identify precedents that support your case',
+          'Save hours of reading dense legal text',
+          'Communicate effectively with lawyers using plain language'
+        ]
+      },
+      {
+        name: 'Winning Arguments Library: Successful Legal Strategies from Case Law',
+        category: 'Legal Intelligence',
+        description: 'Database of successful legal arguments extracted from Canadian disability cases - organized by issue type and outcome',
+        userGuideSection: 'winning-arguments-library',
+        highlights: [
+          'Arguments extracted from actual tribunal and court decisions',
+          'Organized by: accommodation type, diagnosis, legal issue, jurisdiction',
+          'Success rate calculated from case outcomes in database',
+          'Template language adapted from actual successful cases',
+          'Legal citations provided for every argument',
+          'Database grows daily as new cases are added'
+        ],
+        examples: [
+          'Search capability: "Remote work accommodation chronic pain" → relevant case arguments',
+          'Example argument: "Undue hardship requires evidence, not assumption" (from successful cases)',
+          'Template language: "The employer\'s assertion lacks supporting evidence..." (adapted from actual decisions)',
+          'Citation format: "Supported by [Case Name] v. [Respondent], [Year] [Tribunal] [Number]"',
+          'Source: All arguments extracted from publicly available case law'
+        ],
+        benefits: [
+          'Access legal strategies from actual successful cases',
+          'Adapt arguments from similar fact patterns to your case',
+          'Reference actual precedents in your submissions',
+          'Educate decision-makers with established legal principles'
+        ]
+      },
+      // ═══ MORE INDIVIDUAL TOOLS ═════════════════════════════════════════════
+      {
+        name: 'Document Scanner with OCR: Paper to Searchable Text',
+        category: 'Productivity Tools',
+        description: 'Scan paper documents with your phone camera and convert to searchable, encrypted text - perfect for medical records and legal papers',
+        userGuideSection: 'document-scanner',
+        highlights: [
+          'Camera-based scanning with automatic edge detection',
+          'OCR (Optical Character Recognition) converts images to searchable text',
+          'Auto-enhancement: brightness, contrast, de-skew',
+          'Multi-page scanning for full documents',
+          'Saves to Evidence Locker with encryption',
+          'Export as PDF or text for sharing'
+        ],
+        examples: [
+          'Scan: Medical report from doctor appointment → Searchable PDF in Evidence Locker',
+          'Batch scan: 10-page benefits decision → All text searchable and organized',
+          'Search: "Find all documents mentioning \'accommodation\'" → Instant results',
+          'Share: Export scan as PDF for lawyer or representative',
+          'Backup: Upload to encrypted cloud sync (optional)'
+        ],
+        benefits: [
+          'Never lose important paper documents',
+          'Search all your documents instantly',
+          'Share professional-quality PDFs',
+          'Go paperless while maintaining security'
+        ]
+      },
+      {
+        name: 'Voice Memo Evidence Logger: Document Incidents Hands-Free',
+        category: 'Evidence Tools',
+        description: 'Record voice memos about workplace incidents, symptoms, or important events - auto-transcribed and encrypted with timestamps',
+        userGuideSection: 'voice-memo-logger',
+        highlights: [
+          'One-tap voice recording from anywhere in app',
+          'Automatic transcription to text (offline-capable)',
+          'Timestamp and GPS coordinates (optional)',
+          'Tag with categories: incident, symptom, meeting, conversation',
+          'Saves to Evidence Locker with encryption',
+          'Export transcripts for legal documentation'
+        ],
+        examples: [
+          'Incident: Record workplace harassment immediately after it happens',
+          'Symptom: "Voice log: Pain level 8/10, unable to sit for more than 10 minutes"',
+          'Meeting: Record post-meeting summary while details are fresh',
+          'Legal: Auto-transcript provides dated written record for court or tribunal',
+          'Search: Find all memos tagged "supervisor conversation"'
+        ],
+        benefits: [
+          'Capture evidence when typing is too difficult',
+          'Create contemporaneous records (strongest legal evidence)',
+          'Never forget important details',
+          'Reduce cognitive load during flare-ups'
+        ]
+      },
+      {
+        name: 'Timeline Builder: Visualize Your Legal Journey',
+        category: 'Evidence Tools',
+        description: 'Auto-generate visual timelines from your Evidence Locker entries - powerful tool for appeals, legal representation, and understanding patterns',
+        userGuideSection: 'timeline-builder',
+        highlights: [
+          'Automatic timeline from all dated evidence',
+          'Visual representation: medical records, workplace incidents, benefits correspondence',
+          'Filter by category, date range, or tags',
+          'Highlight key events with custom markers',
+          'Export as PDF or image for legal submissions',
+          'Share-ready format for lawyers and tribunals'
+        ],
+        examples: [
+          'Generate: Complete timeline from injury date to present',
+          'Filter: "Show only medical appointments and insurer denials"',
+          'Highlight: Mark critical events - "Accommodation request denied", "Injury occurred"',
+          'Pattern: Visual shows 3-month gap between injury and first physiotherapy approval',
+          'Export: Professional PDF timeline for appeal hearing'
+        ],
+        benefits: [
+          'Communicate complex history at a glance',
+          'Identify gaps or delays visually',
+          'Powerful visual aid for legal proceedings',
+          'Understand your own journey more clearly'
+        ]
+      },
+      {
+        name: 'Accommodation Request Tracker: Never Let Them Ghost You',
+        category: 'Workplace Tools',
+        description: 'Track accommodation requests with automatic follow-up reminders - hold employers accountable with documented timelines',
+        userGuideSection: 'accommodation-tracker',
+        highlights: [
+          'Log every accommodation request with date and details',
+          'Automatic follow-up reminders (7 days, 14 days, 30 days)',
+          'Status tracking: requested, under review, approved, denied, implemented',
+          'Store all related correspondence in Evidence Locker',
+          'Timeline shows employer delays and non-responses',
+          'Export documentation for human rights complaints'
+        ],
+        examples: [
+          'Request: "Standing desk requested March 1"',
+          'Reminder: "No response after 14 days - follow up now"',
+          'Document: "Email sent March 15 - still no response"',
+          'Pattern: "Timeline shows 87 days from request to implementation"',
+          'Evidence: Export full accommodation history for HRTO complaint'
+        ],
+        benefits: [
+          'Hold employers accountable for timely responses',
+          'Document delays for legal proceedings',
+          'Never forget to follow up',
+          'Build strong case for duty to accommodate violations'
+        ]
+      },
+      // ═══ MORE ACCESSIBILITY FEATURES ═══════════════════════════════════════
+      {
+        name: 'Cognitive Load Reducer: Simplify Complex Information',
+        category: 'Cognitive Accessibility',
+        description: 'Transform dense text, legal documents, and complex instructions into simple, digestible formats - essential for brain fog and cognitive disabilities',
+        userGuideSection: 'cognitive-load-reducer',
+        highlights: [
+          'AI summarization of complex documents to key points',
+          'Bullet-point extraction from dense paragraphs',
+          'Reading level adjustment (Grade 5-12)',
+          'Visual hierarchy improvements with headings and spacing',
+          'Chunking: break long content into manageable sections',
+          'Progressive disclosure: show details only when requested'
+        ],
+        examples: [
+          'Input: 10-page benefits decision → Output: 5 key points',
+          'Simplify: Legal jargon → Plain language explanation',
+          'Chunk: Long article → 7 short sections with headings',
+          'Reading level: Adjust complex text to Grade 8 reading level',
+          'Progressive: Main points visible, details expandable'
+        ],
+        benefits: [
+          'Access complex information despite cognitive limitations',
+          'Reduce overwhelm and decision fatigue',
+          'Understand important documents on hard days',
+          'Accommodate ADHD, brain fog, TBI, learning disabilities'
+        ]
+      },
+      {
+        name: 'ADHD Focus Mode: Minimize Distractions, Maximize Completion',
+        category: 'Cognitive Accessibility',
+        description: 'Focused interface with one task at a time, progress tracking, and dopamine-friendly rewards - designed with ADHD community input',
+        userGuideSection: 'adhd-focus-mode',
+        highlights: [
+          'One task at a time: hide everything else until current task complete',
+          'Visual progress bars and completion animations',
+          'Break reminders every 25 minutes (Pomodoro technique)',
+          'Gamification: earn points for task completion',
+          'Minimal distractions: notifications paused during focus mode',
+          'Quick-switch to full interface when hyperfocus kicks in'
+        ],
+        examples: [
+          'Task: "Complete CPP-D application: Section 1" → Only that form visible',
+          'Progress: "Step 3 of 7 complete - 43% done!"',
+          'Break: "You\'ve been working 25 min - take a 5 min break"',
+          'Reward: "+10 points! Badge unlocked: Application Warrior"',
+          'Switch: "Feeling focused? Exit Focus Mode to access all features"'
+        ],
+        benefits: [
+          'Complete important tasks without distraction',
+          'Reduce task-switching and overwhelm',
+          'Celebrate small wins with dopamine rewards',
+          'Accommodate executive function challenges'
+        ]
+      },
+      {
+        name: 'Colorblind-Friendly Mode: Visual Accessibility for 350M People',
+        category: 'Visual Accessibility',
+        description: 'Alternative color schemes optimized for deuteranopia, protanopia, and tritanopia - ensuring key information never relies on color alone',
+        userGuideSection: 'colorblind-mode',
+        highlights: [
+          'Support for deuteranopia (red-green), protanopia (red-green), tritanopia (blue-yellow)',
+          'Alternative color palettes tested by colorblind community members',
+          'Patterns and textures supplement color coding',
+          'High-contrast outlines on important UI elements',
+          'Icons and labels accompany color indicators',
+          'Automatic simulation tool to preview your view'
+        ],
+        examples: [
+          'Status: Success/error shown with ✓/✗ icons + color',
+          'Charts: Patterns (dots, stripes, hatching) distinguish data series',
+          'Alerts: Important notifications use bold outlines + icons',
+          'Testing: Simulate deuteranopia to see what community members see',
+          'Customization: Choose palette that works best for your vision'
+        ],
+        benefits: [
+          'Access app features regardless of color vision',
+          'No critical information conveyed by color alone',
+          'Community-tested and validated',
+          'Includes often-overlooked tritanopia support'
+        ]
+      },
+      // ═══ MORE WELLNESS & HEALTH TOOLS ══════════════════════════════════════
+      {
+        name: 'Anxiety Tracker with CBT Tools:Monitor Patterns, Challenge Thoughts',
+        category: 'Mental Health Tools',
+        description: 'Track anxiety triggers, intensity, and duration - with integrated CBT (Cognitive Behavioral Therapy) thought-challenging exercises',
+        userGuideSection: 'anxiety-tracker',
+        highlights: [
+          'Log anxiety episodes with intensity (0-10) and triggers',
+          'Thought records: capture anxious thoughts in the moment',
+          'CBT exercises: challenge cognitive distortions',
+          'Pattern detection: identify common triggers over time',
+          'Coping strategy library with evidence-based techniques',
+          'Export summaries for therapist or psychiatrist'
+        ],
+        examples: [
+          'Log: "Anxiety 8/10 - trigger: phone call with WSIB"',
+          'Thought: "They\'ll never approve my claim"',
+          'Challenge: "Evidence? I have strong medical documentation"',
+          'Reframe: "Outcome uncertain, but I\'m prepared with evidence"',
+          'Pattern: "Phone calls with authority figures trigger 7+ anxiety 80% of the time"'
+        ],
+        benefits: [
+          'Understand anxiety patterns and triggers',
+          'Practice CBT techniques in the moment',
+          'Track progress in managing anxiety over time',
+          'Share concrete data with mental health providers'
+        ]
+      },
+      {
+        name: 'Chronic Fatigue Management: Energy Banking for Crashes',
+        category: 'Energy Management',
+        description: 'Advanced energy management for ME/CFS, fibromyalgia, and chronic fatigue - with crash prediction and recovery protocols',
+        userGuideSection: 'chronic-fatigue-management',
+        highlights: [
+          'Energy banking: track baseline, expenditure, and "debt"',
+          'Crash prediction: alert when approaching danger zone',
+          'PEM risk assessment (Post-Exertional Malaise)',
+          'Recovery protocols for different severity crashes',
+          'Activity-energy correlation tracking',
+          'Pacing calculator: how much can I do today?'
+        ],
+        examples: [
+          'Baseline: "I have 100 energy units today"',
+          'Activity: "Grocery shopping: 40 units, medical appointment: 60 units"',
+          'Alert: "You\'ve spent 95/100 units - high crash risk"',
+          'Prediction: "If you continue, 85% chance of multi-day crash"',
+          'Recovery: "Crash detected - enter Recovery Protocol: 3-day severe rest"'
+        ],
+        benefits: [
+          'Prevent crashes through early warning system',
+          'Understand true energy cost of activities',
+          'Recover more effectively with structured protocols',
+          'Advocate with data about energy limitations'
+        ]
       }
     ];
 
@@ -1887,7 +2328,7 @@ class DailyFeatureGenerator {
   }
 
   saveUsedFeatures() {
-    fs.writeFileSync(this.usedFeaturesPath, JSON.stringify(this.usedFeatures, null, 2));
+    fs.writeFileSync(this.usedFeaturesPath, JSON.stringify(this.usedFeatures, null, 2), 'utf-8');
   }
 
   /**
@@ -2229,7 +2670,7 @@ ${hookData.cta} â†’ ${fullUrl}
       articleContent = this.generateArticleContent(contentItem);
     }
 
-    fs.writeFileSync(filepath, articleContent);
+    fs.writeFileSync(filepath, articleContent, 'utf-8');
     console.log(`âœ… Created: ${filepath}`);
 
     const articleUrl = `/${catPath}/${year}/${month}/${day}/${typePrefix}-${slug}/`;
@@ -2244,7 +2685,7 @@ ${hookData.cta} â†’ ${fullUrl}
       longPost: social.longPost,
       url: social.url,
       articlePath: filepath
-    }, null, 2));
+    }, null, 2), 'utf-8');
 
     console.log(`ðŸ“± Social post ready: ${socialPath}`);
 

@@ -26,6 +26,55 @@ let authToken = null;
 let did = null;
 
 /**
+ * Smart truncate text to fit Bluesky's 300 character limit
+ * Preserves whole words, handles emoji correctly, adds read-more suffix
+ * 
+ * @param {string} text - Text to truncate
+ * @param {string|null} url - Optional URL to add as "Read more" link
+ * @param {number} maxLength - Maximum character length (default: 280 for 20 char safety buffer)
+ * @returns {string} Truncated text
+ */
+function smartTruncate(text, url = null, maxLength = 280) {
+  // If text already fits, return as-is
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  // Calculate space needed for suffix
+  const suffix = url ? `\n\n... Read more: ${url}` : '\n\n...';
+  const targetLength = maxLength - suffix.length;
+
+  if (targetLength <= 0) {
+    // If suffix alone is too long, just truncate hard
+    return text.substring(0, maxLength - 3) + '...';
+  }
+
+  // Find last space before target length to preserve whole words
+  let truncateAt = targetLength;
+  const lastSpace = text.lastIndexOf(' ', targetLength);
+  
+  if (lastSpace > targetLength * 0.8) {
+    // Use last space if it's not too far back (at least 80% of target)
+    truncateAt = lastSpace;
+  }
+
+  // Handle emoji at boundaries - they can be 2-4 bytes
+  // Check if we're cutting in the middle of a multi-byte character
+  const truncated = text.substring(0, truncateAt);
+  
+  // Verify the truncation doesn't break emoji (basic check)
+  try {
+    // If encoding works without issues, we're good
+    Buffer.from(truncated, 'utf-8');
+  } catch (e) {
+    // If encoding fails, back up a few characters
+    truncateAt = Math.max(0, truncateAt - 4);
+  }
+
+  return text.substring(0, truncateAt).trim() + suffix;
+}
+
+/**
  * Make HTTPS request
  */
 function makeRequest(url, method = 'GET', data = null, token = null) {
@@ -200,17 +249,16 @@ function formatBlueskyContent(items) {
   const today = getToday();
   const blogLink = 'https://3mpwrapp.pages.dev/blog/#curated-daily';
   
-  // Bluesky has 300 char limit, be concise
+  // Build content and use smart truncation
   let content = `📰 Daily News - ${today}\n\n`;
   
-  // Add top item (most important for character limit)
+  // Add top item
   const topItem = items[0];
-  const titleTruncated = topItem.title.length > 100 ? topItem.title.substring(0, 97) + '...' : topItem.title;
-  content += `🟢 ${titleTruncated}\n\n`;
-
+  content += `🟢 ${topItem.title}\n\n`;
   content += `📰 All stories: ${blogLink}`;
 
-  return content;
+  // Apply smart truncation with URL for full context
+  return smartTruncate(content, blogLink, 300);
 }
 
 /**

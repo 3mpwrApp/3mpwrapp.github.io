@@ -357,7 +357,7 @@ class CurationAgentProduction {
 
     // Write to file
     const filename = path.join(this.config.curationDir, `${dateStr}-daily-curation.md`);
-    await fs.writeFile(filename, markdown);
+    await fs.writeFile(filename, markdown, 'utf-8');
 
     console.log(`   ✓ Curation published: ${ranked.length} articles ranked`);
     console.log(`   ✓ Saved to: ${filename}`);
@@ -642,7 +642,7 @@ tags: [curation, daily-news, automated]
       }
       
       logs.push(logEntry);
-      await fs.writeFile(logFile, JSON.stringify(logs, null, 2));
+      await fs.writeFile(logFile, JSON.stringify(logs, null, 2), 'utf-8');
     } catch (error) {
       console.error(`Warning: Could not log event: ${error.message}`);
     }

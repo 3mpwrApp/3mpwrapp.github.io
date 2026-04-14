@@ -1,0 +1,74 @@
+name: Social Queue Poster
+
+on:
+  schedule:
+    # Run once daily at 10:00 AM UTC (1 post per day)
+    - cron: '0 10 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+concurrency:
+  group: social-queue-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  post-from-queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Process social queue
+        run: node scripts/social-queue-processor.js
+        continue-on-error: true
+
+      - name: Post to platforms (if post ready)
+        if: hashFiles('public/daily-feature-social.json') != ''
+        run: node scripts/post-daily-feature.js
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE || 'https://mastodon.social' }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        continue-on-error: true
+
+      - name: Commit updated queue
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Social Queue Bot"
+          
+          if git status --porcelain | grep -q .; then
+            git add public/social-queue.json public/queue-posting-results.json public/feature-posting-results.json
+            git commit -m "chore: social queue auto-post $(date -u +%Y-%m-%d\ %H:%M\ UTC)" || echo "No changes to commit"
+            git push || echo "Push failed - no changes or conflict"
+          else
+            echo "✅ No changes to commit"
+          fi
+
+      - name: Summary
+        run: |
+          echo "### Social Queue Status" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f public/queue-posting-results.json ]; then
+            echo "✅ Queue processed successfully" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Last result:" >> $GITHUB_STEP_SUMMARY
+            echo '```json' >> $GITHUB_STEP_SUMMARY
+            cat public/queue-posting-results.json | tail -20 >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ No results file found" >> $GITHUB_STEP_SUMMARY
+          fi

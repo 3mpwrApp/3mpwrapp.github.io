@@ -590,7 +590,7 @@ Generate the COMPLETE blog post ready to publish.`;
     const filename = path.join(this.config.postsDir, `${date}-${slug}.md`);
 
     try {
-      await fs.writeFile(filename, content);
+      await fs.writeFile(filename, content, 'utf-8');
       console.log(`   ✓ Saved to: ${filename}`);
       console.log(`   ✓ Applied optimized hashtags: ${this.optimizedHashtags.slice(0, 5).join(', ')}`);
     } catch (error) {

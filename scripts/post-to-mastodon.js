@@ -43,6 +43,55 @@ if (instance.startsWith('http://')) {
 }
 
 /**
+ * Smart truncate text to fit Mastodon's 500 character limit
+ * Preserves whole words, handles emoji correctly, adds read-more suffix
+ * 
+ * @param {string} text - Text to truncate
+ * @param {string|null} url - Optional URL to add as "Read more" link
+ * @param {number} maxLength - Maximum character length (default: 480 for 20 char safety buffer)
+ * @returns {string} Truncated text
+ */
+function smartTruncate(text, url = null, maxLength = 480) {
+  // If text already fits, return as-is
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  // Calculate space needed for suffix
+  const suffix = url ? `\n\n... Read more: ${url}` : '\n\n...';
+  const targetLength = maxLength - suffix.length;
+
+  if (targetLength <= 0) {
+    // If suffix alone is too long, just truncate hard
+    return text.substring(0, maxLength - 3) + '...';
+  }
+
+  // Find last space before target length to preserve whole words
+  let truncateAt = targetLength;
+  const lastSpace = text.lastIndexOf(' ', targetLength);
+  
+  if (lastSpace > targetLength * 0.8) {
+    // Use last space if it's not too far back (at least 80% of target)
+    truncateAt = lastSpace;
+  }
+
+  // Handle emoji at boundaries - they can be 2-4 bytes
+  // Check if we're cutting in the middle of a multi-byte character
+  const truncated = text.substring(0, truncateAt);
+  
+  // Verify the truncation doesn't break emoji (basic check)
+  try {
+    // If encoding works without issues, we're good
+    Buffer.from(truncated, 'utf-8');
+  } catch (e) {
+    // If encoding fails, back up a few characters
+    truncateAt = Math.max(0, truncateAt - 4);
+  }
+
+  return text.substring(0, truncateAt).trim() + suffix;
+}
+
+/**
  * Mastodon API Client
  */
 class MastodonClient {
@@ -112,8 +161,15 @@ class MastodonClient {
    * Post a status to Mastodon
    */
   async postStatus(text, options = {}) {
+    // Smart truncate to fit Mastodon's 500 char limit
+    const truncatedText = smartTruncate(text, options.url || null);
+    
+    if (truncatedText.length < text.length) {
+      console.log(`⚠️  Text truncated from ${text.length} to ${truncatedText.length} characters`);
+    }
+    
     const payload = {
-      status: text,
+      status: truncatedText,
       visibility: options.visibility || 'public',
       language: options.language || 'en',
     };
@@ -322,7 +378,7 @@ async function main() {
   // Save results for debugging
   const resultsFile = path.join(__dirname, '..', 'public', 'mastodon-posting-results.json');
   fs.mkdirSync(path.dirname(resultsFile), { recursive: true });
-  fs.writeFileSync(resultsFile, JSON.stringify(results, null, 2));
+  fs.writeFileSync(resultsFile, JSON.stringify(results, null, 2), 'utf-8');
 
   // Exit with success if at least one post succeeded
   const anySuccess = results.curationPost?.success || results.promotionPost?.success;

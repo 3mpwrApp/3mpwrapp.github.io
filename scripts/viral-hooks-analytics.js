@@ -59,7 +59,7 @@ class ViralHooksAnalytics {
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-    fs.writeFileSync(ANALYTICS_FILE, JSON.stringify(this.data, null, 2));
+    fs.writeFileSync(ANALYTICS_FILE, JSON.stringify(this.data, null, 2), 'utf-8');
     console.log(`✅ Analytics saved: ${ANALYTICS_FILE}`);
   }
 

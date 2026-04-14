@@ -283,7 +283,7 @@ ${content}
     const postFilename = `${dateStr}-weekly-update-week-${weekNumber}.md`;
     const postPath = path.join(this.postsDir, postFilename);
 
-    fs.writeFileSync(postPath, postContent);
+    fs.writeFileSync(postPath, postContent, 'utf-8');
     console.log(`✅ Created blog post: ${postPath}`);
 
     // Create What's New entry
@@ -299,7 +299,7 @@ ${content}
     const whatsNewFilename = `${dateStr}-week-${weekNumber}-updates.md`;
     const whatsNewPath = path.join(this.whatsNewDir, whatsNewFilename);
 
-    fs.writeFileSync(whatsNewPath, whatsNewContent);
+    fs.writeFileSync(whatsNewPath, whatsNewContent, 'utf-8');
     console.log(`✅ Created What's New entry: ${whatsNewPath}`);
 
     // Jekyll permalink: pretty with categories: [updates] converts to /updates/YYYY/MM/DD/title/
@@ -323,7 +323,7 @@ ${content}
       longPost: socialPosts.longPost,
       url: fullUrl,
       hookUsed: socialPosts.hookUsed
-    }, null, 2));
+    }, null, 2), 'utf-8');
     
     console.log(`📱 Created social post content: ${socialPath}`);
     

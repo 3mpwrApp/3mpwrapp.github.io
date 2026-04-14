@@ -430,7 +430,7 @@ class FeaturePoster {
       results: this.results
     };
 
-    fs.writeFileSync(this.resultsPath, JSON.stringify(results, null, 2));
+    fs.writeFileSync(this.resultsPath, JSON.stringify(results, null, 2), 'utf-8');
     console.log(`\n💾 Results saved: ${this.resultsPath}`);
   }
 
