@@ -19,13 +19,15 @@ const path = require('path');
 const API_KEY = process.env.CANLII_API_KEY;
 const BASE_URL = "https://api.canlii.org/v1";
 const OUTPUT_DIR = path.join(__dirname, '../data/tribunal-decisions');
-const PROGRESS_FILE = path.join(OUTPUT_DIR, '.ultra-slow-progress.json');
 
 // Parse args
 const args = process.argv.slice(2);
 const database = args.find(a => a.startsWith('--database='))?.split('=')[1] || 'onwsiat';
 const year = parseInt(args.find(a => a.startsWith('--year='))?.split('=')[1]) || 2026;
 const maxCalls = parseInt(args.find(a => a.startsWith('--max='))?.split('=')[1]) || 2;
+
+// FIX: Make progress file year/database-specific to prevent conflicts between collection runs
+const PROGRESS_FILE = path.join(OUTPUT_DIR, `.ultra-slow-progress-${database}-${year}.json`);
 
 console.log('═══════════════════════════════════════════════════════');
 console.log('  CanLII Ultra-Slow Collection');
@@ -63,7 +65,7 @@ async function fetchCase(caseId) {
 async function collect() {
   let apiCalls = 0;
   let consecutive404s = 0;
-  const MAX_404_STREAK = 50;
+  const MAX_404_STREAK = 1500; // Increased for large gaps in case numbering
   
   for (let caseNum = progress.lastCaseNum + 1; caseNum <= 9999; caseNum++) {
     if (apiCalls >= maxCalls) {
