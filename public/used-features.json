@@ -22,7 +22,8 @@
     "How to Use the Evidence Locker Effectively",
     "Setting Up Accessibility for Your Needs",
     "Your First Benefits Application: A Complete Walkthrough",
-    "Writing an Effective Demand Letter with 3mpwrApp"
+    "Writing an Effective Demand Letter with 3mpwrApp",
+    "Tracking Symptoms for Doctors and Legal Appointments"
   ],
   "devDiaries": [
     "Why We Chose React Native: Accessibility Over Everything",
@@ -36,6 +37,6 @@
     "What 3mpwr Means: The Philosophy Behind Our Name",
     "Privacy as a Human Right: Not a Feature We Added Later"
   ],
-  "rotationIndex": 1,
+  "rotationIndex": 2,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
