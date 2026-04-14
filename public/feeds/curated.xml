@@ -6,8 +6,8 @@
     <atom:link href="https://3mpwrapp.pages.dev/feeds/curated.xml" rel="self" type="application/rss+xml" />
     <description>Daily curated news on disability rights, accessibility, and benefits across Canada</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 12 Apr 2026 21:42:01 GMT</lastBuildDate>
-    <pubDate>Sun, 12 Apr 2026 21:42:01 GMT</pubDate>
+    <lastBuildDate>Mon, 13 Apr 2026 21:55:29 GMT</lastBuildDate>
+    <pubDate>Mon, 13 Apr 2026 21:55:29 GMT</pubDate>
     <generator>3mpwr App Curator v2.0</generator>
     <image>
       <url>https://3mpwrapp.pages.dev/assets/images/logo.png</url>
@@ -24,18 +24,36 @@
       <link>https://linktr.ee/thedisabilitybulletin</link>
       <guid isPermaLink="true">https://linktr.ee/thedisabilitybulletin</guid>
       <description><![CDATA[Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.]]></description>
-      <pubDate>Sun, 12 Apr 2026 21:42:01 GMT</pubDate>
+      <pubDate>Mon, 13 Apr 2026 21:55:29 GMT</pubDate>
       <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
     <item>
-      <title>Sarah Cox Joins The Tyee as Our New Biodiversity Reporter</title>
-      <link>https://thetyee.ca/Tyeenews/2026/04/08/Sarah-Cox-Joins-Tyee-Biodiversity-Reporter/</link>
-      <guid isPermaLink="true">https://thetyee.ca/Tyeenews/2026/04/08/Sarah-Cox-Joins-Tyee-Biodiversity-Reporter/</guid>
-      <description><![CDATA[She brings decades of experience and will be the lead reporter on a new beat. A Tyee Q&A.]]></description>
-      <pubDate>Wed, 08 Apr 2026 07:30:00 GMT</pubDate>
-      <category>High Priority</category>
+      <title>David Eby’s Abandonment of Human Rights Betrays His Own Government</title>
+      <link>https://thetyee.ca/Opinion/2026/04/13/Eby-Abandonment-Human-Rights-Betrays-Government/</link>
+      <guid isPermaLink="true">https://thetyee.ca/Opinion/2026/04/13/Eby-Abandonment-Human-Rights-Betrays-Government/</guid>
+      <description><![CDATA[Dropping DRIPA is a political calculation that will leave the province worse off.]]></description>
+      <pubDate>Mon, 13 Apr 2026 17:24:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Premier Welcomes Nobel Laureate Geoffrey Hinton to Manitoba</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=73417</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73417</guid>
+      <pubDate>Mon, 13 Apr 2026 20:30:00 GMT</pubDate>
+      <category>Critical</category>
+      <dc:creator>3mpwr App Curator</dc:creator>
+    </item>
+
+    <item>
+      <title>Measles Update #100</title>
+      <link>https://news.gov.mb.ca/news/index.html?item=73418</link>
+      <guid isPermaLink="true">https://news.gov.mb.ca/news/index.html?item=73418</guid>
+      <pubDate>Mon, 13 Apr 2026 20:09:00 GMT</pubDate>
+      <category>Critical</category>
       <dc:creator>3mpwr App Curator</dc:creator>
     </item>
 
