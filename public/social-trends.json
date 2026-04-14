@@ -1,74 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-14T07:17:01.067Z",
+  "lastUpdated": "2026-04-14T13:00:47.333Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 15624,
+      "totalPosts": 15649,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T07:16:52.095Z"
+      "lastSeen": "2026-04-14T13:00:24.770Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 15586,
+      "totalPosts": 15611,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T07:16:53.991Z"
+      "lastSeen": "2026-04-14T13:00:29.672Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 15446,
+      "totalPosts": 15471,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T07:16:55.978Z"
+      "lastSeen": "2026-04-14T13:00:34.512Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 15675,
+      "totalPosts": 15700,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T07:16:57.960Z"
+      "lastSeen": "2026-04-14T13:00:39.980Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 15598,
+      "totalPosts": 15623,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T07:17:00.064Z"
+      "lastSeen": "2026-04-14T13:00:46.330Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "We at @americanprogress.bsky.social are gathering stories from disabled voters about voting accessibility (particularly looking for folks from IN, MO, MN, RI, TX, UT, & WY). Please complete this Google form if you're interested in sharing your story:\n\n#CripTheVote",
-      "author": "caseydoherty.bsky.social",
-      "engagement": 108,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Any bus or train service which is inaccessible to wheelchair users, and disabled people generally, is the equivalent of having no public transport services . \n#DisabilityRights",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Disabled Folks Are Being Pushed Into Poverty🧵\n\nTwo tier support for disabled people is now a reality in the UK and it should upset anyone who believes in fairness and equality.\n\nI receive LCWRA because I cannot work. That hasn’t changed. It won’t. 1/9\n\n#DisabilityRights #LCWRA #CostOfLiving",
-      "author": "bearofscots.bsky.social",
-      "engagement": 26,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "This was a really great read. Highly recommended! gbbns.co/journal/acce...\n\nThe EAA has made it difficult to ignore #a11y issues. But the fix hasn't been what it needs to be. The solution is treating frontend as a speciality again. AI still can't replace human knowledge, and can break things faster.",
-      "author": "sarasoueidan.com",
-      "engagement": 29,
-      "hashtag": "A11y"
-    },
     {
       "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
       "author": "domesticemployers.bsky.social",
@@ -338,12 +308,42 @@
       "author": "domesticemployers.bsky.social",
       "engagement": 11,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Any bus or train service which is inaccessible to wheelchair users, and disabled people generally, is the equivalent of having no public transport services . \n#DisabilityRights",
+      "author": "anonymoussewerrat.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "👉 #wordsmatter #disabilityjustice #callitout #ableism",
+      "author": "danasinspired.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Sea Of Thieves #accessibility win - our new Bilge Rats Weekender Challenge parchment hooks into our flexible Text-To-Speech and Custom-Text-Overlay system on launch day, April 16th! ✨\n\nWhat part of gameplay would you like us to bring it to next?",
+      "author": "topher.io",
+      "engagement": 19,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "Au départ, on s’est posé une question simple avec @eaboaf.bsky.social :\n\ncomment parler d’accessibilité en conférence… sans faire une énième présentation, mais plutôt en mode craft ?\n\nAlors on a fait un pas de côté. Plutôt que de “parler” accessibilité :\n\n#devoxx2026 #a11y #playwright #tdd",
+      "author": "manoncarbonnel.bsky.social",
+      "engagement": 17,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 44
+      "count": 43
     },
     {
       "keyword": "accessibility",
@@ -354,11 +354,11 @@
       "count": 28
     },
     {
-      "keyword": "a11y",
-      "count": 28
+      "keyword": "disabilityjustice",
+      "count": 27
     },
     {
-      "keyword": "disabilityjustice",
+      "keyword": "a11y",
       "count": 27
     },
     {
@@ -386,6 +386,10 @@
       "count": 12
     },
     {
+      "keyword": "ada",
+      "count": 9
+    },
+    {
       "keyword": "disabilityrebellion",
       "count": 9
     },
@@ -394,16 +398,12 @@
       "count": 9
     },
     {
-      "keyword": "disabilityrights nokings3",
+      "keyword": "disabled people",
       "count": 9
     },
     {
-      "keyword": "disabled people",
-      "count": 8
-    },
-    {
-      "keyword": "ada",
-      "count": 8
+      "keyword": "disabilityrights nokings3",
+      "count": 9
     },
     {
       "keyword": "disabilitysky",
