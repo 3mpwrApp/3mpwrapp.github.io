@@ -1,62 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-14T01:26:21.649Z",
+  "lastUpdated": "2026-04-14T07:17:01.067Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 15599,
+      "totalPosts": 15624,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T01:26:11.835Z"
+      "lastSeen": "2026-04-14T07:16:52.095Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 15561,
+      "totalPosts": 15586,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T01:26:13.894Z"
+      "lastSeen": "2026-04-14T07:16:53.991Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 15421,
+      "totalPosts": 15446,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T01:26:15.907Z"
+      "lastSeen": "2026-04-14T07:16:55.978Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 15650,
+      "totalPosts": 15675,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T01:26:17.956Z"
+      "lastSeen": "2026-04-14T07:16:57.960Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 15573,
+      "totalPosts": 15598,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-14T01:26:20.645Z"
+      "lastSeen": "2026-04-14T07:17:00.064Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Any bus or train service which is inaccessible to wheelchair users, and disabled people generally, is the equivalent of having no public transport services . \n#DisabilityRights",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Disabled Folks Are Being Pushed Into Poverty🧵\n\nTwo tier support for disabled people is now a reality in the UK and it should upset anyone who believes in fairness and equality.\n\nI receive LCWRA because I cannot work. That hasn’t changed. It won’t. 1/9\n\n#DisabilityRights #LCWRA #CostOfLiving",
-      "author": "bearofscots.bsky.social",
-      "engagement": 26,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "This was a really great read. Highly recommended! gbbns.co/journal/acce...\n\nThe EAA has made it difficult to ignore #a11y issues. But the fix hasn't been what it needs to be. The solution is treating frontend as a speciality again. AI still can't replace human knowledge, and can break things faster.",
-      "author": "sarasoueidan.com",
-      "engagement": 27,
-      "hashtag": "A11y"
-    },
     {
       "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
       "author": "domesticemployers.bsky.social",
@@ -338,6 +320,24 @@
       "author": "domesticemployers.bsky.social",
       "engagement": 11,
       "hashtag": "CripTheVote"
+    },
+    {
+      "text": "Any bus or train service which is inaccessible to wheelchair users, and disabled people generally, is the equivalent of having no public transport services . \n#DisabilityRights",
+      "author": "anonymoussewerrat.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Disabled Folks Are Being Pushed Into Poverty🧵\n\nTwo tier support for disabled people is now a reality in the UK and it should upset anyone who believes in fairness and equality.\n\nI receive LCWRA because I cannot work. That hasn’t changed. It won’t. 1/9\n\n#DisabilityRights #LCWRA #CostOfLiving",
+      "author": "bearofscots.bsky.social",
+      "engagement": 26,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
+      "author": "domesticemployers.bsky.social",
+      "engagement": 11,
+      "hashtag": "CripTheVote"
     }
   ],
   "emergingTopics": [
@@ -350,16 +350,16 @@
       "count": 42
     },
     {
-      "keyword": "a11y",
-      "count": 29
-    },
-    {
       "keyword": "cripthevote",
       "count": 28
     },
     {
+      "keyword": "a11y",
+      "count": 28
+    },
+    {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 27
     },
     {
       "keyword": "altcitizen",
@@ -394,10 +394,6 @@
       "count": 9
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 9
-    },
-    {
       "keyword": "disabilityrights nokings3",
       "count": 9
     },
@@ -406,20 +402,24 @@
       "count": 8
     },
     {
-      "keyword": "resist",
-      "count": 7
+      "keyword": "ada",
+      "count": 8
     },
     {
       "keyword": "disabilitysky",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "cripminds",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "accessibility disabilitysky",
-      "count": 7
+      "count": 8
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 8
     }
   ]
 }
