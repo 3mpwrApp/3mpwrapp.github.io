@@ -1,0 +1,98 @@
+{
+  "queue": [
+    {
+      "id": 1,
+      "scheduledDate": "2026-04-14",
+      "scheduledTime": "14:00",
+      "platforms": [
+        "mastodon",
+        "bluesky",
+        "discord"
+      ],
+      "feature": "3 Flywheels of Change",
+      "content": "🔄 The 3 Flywheels of Change\n\nMost apps collect data and sell it.\n3mpwrApp turns lived experience into POWER.\n\n1️⃣ Evidence Flywheel: Your wins → Proven templates → Hours saved\n2️⃣ Pattern Detection: Decisions analyzed → Trends found → Outcomes predicted\n3️⃣ Collective Action: Cases organized → Advocacy targeted → Policy reformed\n\nLived Experience → Data → Insight → Action\n\nFull diagram: https://3mpwrapp.pages.dev/#flywheels\n\nWhat do you think? Does this resonate?",
+      "hashtags": [
+        "DisabilityJustice",
+        "DataForGood",
+        "CollectiveAction",
+        "BuildInPublic"
+      ],
+      "url": "https://3mpwrapp.pages.dev/#flywheels",
+      "visualAsset": "assets/images/flywheels-diagram.png",
+      "type": "educational",
+      "posted": false
+    },
+    {
+      "id": 2,
+      "scheduledDate": "2026-04-14",
+      "scheduledTime": "19:00",
+      "platforms": [
+        "mastodon",
+        "bluesky",
+        "discord"
+      ],
+      "feature": "Free Resources Hub",
+      "content": "📚 Everything You Need (100% Free)\n\nCrisis hotlines → https://3mpwrapp.pages.dev/crisis-resources\nLegal guides → https://3mpwrapp.pages.dev/resources\nCommunity events → https://3mpwrapp.pages.dev/events\nAccommodation templates → https://3mpwrapp.pages.dev/features/letter-generator\n\nNo login required. No paywalls. No BS.\n\nBookmark this. Share it. Use it.",
+      "hashtags": [
+        "DisabilityRights",
+        "FreeResources",
+        "MutualAid",
+        "Accessibility"
+      ],
+      "url": "https://3mpwrapp.pages.dev/resources",
+      "visualAsset": null,
+      "type": "website",
+      "posted": false
+    },
+    {
+      "id": 3,
+      "scheduledDate": "2026-04-15",
+      "scheduledTime": "10:00",
+      "platforms": [
+        "mastodon",
+        "bluesky",
+        "discord"
+      ],
+      "feature": "Why I Built 3mpwrApp",
+      "content": "In 2023, I was navigating WSIB with chronic pain and brain fog.\n\nI missed a critical deadline because I couldn't organize my evidence. My claim was denied.\n\nThat's when I realized: the system requires cognitive capacity that disabled people often don't have.\n\nSo I built 3mpwrApp—tools designed for hard days, not just good ones.\n\nFree forever: https://3mpwrapp.pages.dev",
+      "hashtags": [
+        "WSIB",
+        "ODSP",
+        "CPPDisability",
+        "InjuredWorker",
+        "DisabilityJustice"
+      ],
+      "url": "https://3mpwrapp.pages.dev/about",
+      "visualAsset": null,
+      "type": "founder-story",
+      "posted": false
+    },
+    {
+      "id": 4,
+      "scheduledDate": "2026-04-15",
+      "scheduledTime": "15:00",
+      "platforms": [
+        "mastodon",
+        "bluesky",
+        "discord"
+      ],
+      "feature": "Evidence Locker",
+      "content": "\"I'm too disorganized to fight my denial.\"\n\nNo. The system is designed to overwhelm you.\n\n✨ Evidence Locker:\n• AES-256-GCM encryption\n• Auto-timestamping every upload\n• Works 100% offline\n• Zero login required for crisis access\n\nYou're not disorganized. The system is hostile.\n\nAlways free: https://3mpwrapp.pages.dev/features/evidence-locker",
+      "hashtags": [
+        "DisabilityRights",
+        "WSIB",
+        "ODSP",
+        "LegalTools",
+        "EvidenceManagement"
+      ],
+      "url": "https://3mpwrapp.pages.dev/features/evidence-locker",
+      "visualAsset": null,
+      "type": "feature",
+      "posted": false
+    }
+  ],
+  "meta": {
+    "generated": "2026-04-14T18:50:21.329Z",
+    "totalPosts": 4
+  }
+}
