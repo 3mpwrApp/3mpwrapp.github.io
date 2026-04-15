@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-04-14T03:50:41.188Z",
+  "generated": "2026-04-15T03:49:38.223Z",
   "insights": {
-    "timestamp": "2026-04-14T03:50:41.156Z",
+    "timestamp": "2026-04-15T03:49:38.190Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-04-14T03:50:41.163Z",
+      "lastUpdated": "2026-04-15T03:49:38.197Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -39,12 +39,12 @@
       "currentTrending": [
         {
           "tag": "disabilityrights",
-          "mentions": 44,
+          "mentions": 43,
           "source": "emerging"
         },
         {
           "tag": "accessibility",
-          "mentions": 42,
+          "mentions": 43,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-04-14T03:50:41.166Z",
+      "lastUpdated": "2026-04-15T03:49:38.200Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-04-14T03:50:41.163Z",
+    "lastUpdated": "2026-04-15T03:49:38.197Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -102,12 +102,12 @@
     "currentTrending": [
       {
         "tag": "disabilityrights",
-        "mentions": 44,
+        "mentions": 43,
         "source": "emerging"
       },
       {
         "tag": "accessibility",
-        "mentions": 42,
+        "mentions": 43,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-04-14T03:50:41.166Z",
+    "lastUpdated": "2026-04-15T03:49:38.200Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
