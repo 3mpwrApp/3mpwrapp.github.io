@@ -4,7 +4,7 @@ title: "WSIB Exposed: Statistical Evidence Proves Systematic Manipulation of 11,
 date: 2026-04-15
 categories: [advocacy, research, transparency, wsib]
 tags: [wsib, advocacy, data-analysis, injured-workers, research, transparency]
-author: 3mpwrApp Research Team & Thunder Bay & District Injured Workers Support Group
+author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/
 excerpt: "We analyzed 11,430 WSIB tribunal decisions from 2020-2026 using advanced statistical methods. What we found isn't just concerning—it's evidence of systematic, measurable, coordinated manipulation. 43.9% of 2024 decisions are missing from public record. Reconsideration adds 1.5 years of weaponized delay. 1 in 5 knee injuries denied as 'pre-existing.' This isn't bad luck. This is systematic."
 image: /assets/images/wsib-detective-analysis-2026-04-15.png
