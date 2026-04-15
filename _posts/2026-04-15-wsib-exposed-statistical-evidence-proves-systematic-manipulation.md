@@ -425,12 +425,13 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 **Data Source:** 11,430 tribunal decisions from CanLII (Canada's free legal database)
 
 **Analysis Scripts (Open Source):**
-- [analyze-onwsiat-ultra-deep.js](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/scripts/analyze-onwsiat-ultra-deep.js) - Comprehensive extraction
-- [analyze-onwsiat-detective-mode.js](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/scripts/analyze-onwsiat-detective-mode.js) - Statistical anomaly detection
+- [analyze-onwsiat-ultra-deep.js](https://github.com/S0vryn9-C011ect1ve/3mpwrapp/blob/main/scripts/analyze-onwsiat-ultra-deep.js) - Comprehensive extraction
+- [analyze-onwsiat-detective-mode.js](https://github.com/S0vryn9-C011ect1ve/3mpwrapp/blob/main/scripts/analyze-onwsiat-detective-mode.js) - Statistical anomaly detection
 
 **Data Exports:**
-- [ONWSIAT-DETECTIVE-FINDINGS.json](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Raw anomaly results
-- [ONWSIAT-CO-OCCURRENCE.csv](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Network analysis data
+- [ONWSIAT-DETECTIVE-FINDINGS.json](https://github.com/S0vryn9-C011ect1ve/3mpwrapp/tree/main/data/tribunal-decisions/detective-analysis) - Raw anomaly results
+- [ONWSIAT-CO-OCCURRENCE.csv](https://github.com/S0vryn9-C011ect1ve/3mpwrapp/tree/main/data/tribunal-decisions/detective-analysis) - Network analysis data
+- [Interactive Network Visualization](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore co-occurrence patterns visually
 
 **If you're technical:** Run the scripts yourself. Audit our methodology. Find more patterns. **Pull requests welcome.**
 
@@ -469,12 +470,88 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 
 ---
 
+## Related Reading
+
+**Previous 3mpwrApp Research:**
+- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026-04-05-building-canadas-legal-database-from-cold-start/) - How we built the tribunal decision database
+- [Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions/) - Creating worker-friendly guides from legal data
+- [3 Flywheels: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/) - Community impact and grassroots advocacy
+
+**Full Documentation:**
+- [WSIB System Analysis Complete 2020-2026](/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026) - 45,000-word master document with all findings, legal context, historical analysis, and advocacy strategies
+
+---
+
+## References & Legal Citations
+
+### Legal Cases & Precedents
+
+**Pre-Existing Condition Law:**
+- ***Kriz v. Huneault*** - Establishes "greater severity than normal" legal test for pre-existing conditions. WSIB weaponizes this test in 177 cases to systematically deny claims.
+
+### WSIB Policies & Governance
+
+**Meredith Principles (1913):**
+- [WSCC Northwest Territories: Meredith Principles](https://wscc.nt.ca/about-wscc/meredith-principles) - Original five principles establishing workers' compensation grand bargain
+- [Association of Workers' Compensation Boards of Canada: History](https://awcbc.org/about-us/history) - Historical context
+- [Who Killed Sir William Meredith?](https://injuredworkersonline.org/who-killed-sir-william/) - InjuredWorkersOnline book documenting system corruption
+
+**KPMG Audit (2022):**
+- [UFCW: Tell the WSIB to Reject the KPMG Report](https://www.ufcw.ca/index.php?option=com_content&view=article&id=2588:tell-the-wsib-to-reject-the-kpmg-report&Itemid=6&lang=en)
+- [Injured Worker Advocates Deliver Joint Message on KPMG Recommendations](https://iwclc.org/injured-worker-advocates-deliver-joint-message-on-kpmg-recommendations/)
+- [InjuredWorkersOnline: KPMG Report Analysis](https://injuredworkersonline.org/16131-2/)
+
+**Employer Rebates:**
+- [WSIB $1.2B Rebate Announcement (2021)](https://www.cbc.ca/news/canada/toronto/wsib-rebate-ontario-businesses-1.5851234) - $2.7B returned to employers while denying worker claims
+
+**Appeal Process Consultation:**
+- [ONIWG Asks WSIB for More Time on Appeal Consultation Process](https://www.thesafetymag.com/ca/topics/government-and-public-sector/oniwg-asks-wsib-for-more-time-on-appeal-consultation-process/453888) - Pattern of performative consultation
+
+### Research & Evidence
+
+**Claim Suppression:**
+- [Suppression of Workplace Injury and Illness Claims: Summary of Evidence in Canada](https://www.iwh.on.ca/plain-language-summaries/suppression-of-workplace-injury-and-illness-claims-summary-of-evidence-in-canada) - Institute for Work & Health research: 15-50% of eligible injuries never reported
+
+### Data Sources
+
+**Primary Data:**
+- [CanLII ONWSIAT Database](https://www.canlii.org/en/on/onwsiat/) - 11,430 tribunal decisions (2020-2026)
+- All decisions scraped, extracted, and analyzed using open-source scripts (see above)
+
+**Community Organizations:**
+- [Ontario Network of Injured Workers Groups (ONIWG)](https://oniwg.ca) - Province-wide advocacy coalition
+- [Legal Aid Ontario](https://www.legalaid.on.ca) - Free legal help for low-income workers via Community Legal Clinics
+- Thunder Bay & District Injured Workers Support Group - Grassroots advocacy, insider intelligence
+
+### Methodology & Transparency
+
+**Our Analysis:**
+- Detective-mode statistical analysis using anomaly detection, co-occurrence networks, timing analysis, body-part bias testing
+- All code open-source (see GitHub links above)
+- All data public (CanLII database)
+- Reproducible: Run scripts yourself, verify findings, report errors
+
+**Statistical Significance:**
+- Standard deviation (σ) thresholds: 
+  - 1.96σ = 95% confidence (2.5% random chance)
+  - 2.58σ = 99% confidence (0.5% random chance)
+- July 2023 collapse: **-2.94σ** (99.7% certain NOT random)
+- 43.9% missing decisions: Statistical impossibility if random
+
+**Peer Review Invitation:**
+- Academic researchers: Audit our methodology at [GitHub Repository](https://github.com/S0vryn9-C011ect1ve/3mpwrapp)
+- Injured workers: Share your case outcomes to fill 84.6% transparency gap
+- Legal community: Use findings in tribunal appeals, class actions, legislative advocacy
+
+---
+
 **Questions? Want to help?**
 
 - **Email:** empowrapp08162025@gmail.com
 - **Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)
 - **Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)
 - **Full Master Document:** [WSIB System Analysis Complete 2020-2026](/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026)
+- **Interactive Visualization:** [WSIB Denial Network](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html)
 
 ---
 
