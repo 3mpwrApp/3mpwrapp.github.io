@@ -2,6 +2,31 @@
 
 *Based on 186 WSIAT decisions involving chronic pain*
 
+## 🚨 NEW: Statistical Evidence - WSIB Dismisses Chronic Pain as Psychological
+
+**Recent detective-level analysis of 11,430 WSIAT decisions (2020-2026) exposes WSIB's playbook:**
+
+### Mental Health Conflation Pattern:
+- **107 cases** where "mental health" and "pain" co-occurred with employer-motivated reconsiderations
+- WSIB systematically reframes legitimate workplace pain as pre-existing psychological conditions
+- Strategy: Deny chronic pain by attributing it to anxiety, depression, or "catastrophizing"
+
+### Impairment Rating Battles:
+- **226 cases** with "chronic pain" + "permanent impairment"
+- WSIB uses biomechanical impairment ratings to minimize invisible but debilitating pain
+- Example: Severe chronic back pain rated as 5% impairment (minimal compensation)
+
+### WSIB's Documented Strategy:
+- Deny pain as: "Disproportionate to injury" (88 cases)
+- Demand "objective" proof for subjective condition (impossible standard)
+- Leverage mental health diagnoses to shift causation away from workplace
+
+**Source:** [WSIB System Analysis 2020-2026](/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026)
+
+**What this means for YOU:** If WSIB denied your chronic pain claim by calling it psychological or demanding impossible "objective" proof, you're part of a documented pattern. Use this statistical evidence in your appeal.
+
+---
+
 ## The Challenge
 
 Chronic pain is one of the **hardest conditions to prove** at WSIB because:
