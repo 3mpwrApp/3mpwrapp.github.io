@@ -23,43 +23,17 @@ console.log('══════════════════════�
 const allCases = [];
 const yearlyData = {};
 
-// Load historical data (contains whatever years are in file)
-console.log('Loading historical data...');
-const historicalFile = path.join(DATA_DIR, 'onwsiat-historical-20260404.json');
-const historicalYears = new Set(); // Track which years are in historical file
-if (fs.existsSync(historicalFile)) {
-  const historical = JSON.parse(fs.readFileSync(historicalFile, 'utf8'));
-  console.log(`✅ Loaded ${historical.length} historical cases`);
-  allCases.push(...historical);
-  
-  // Group by year - FIX: Don't filter by year range, take what's available
-  historical.forEach(c => {
-    // Historical data uses case_id field
-    const caseId = c.case_id || c.caseId || c.id || c.data?.caseId;
-    if (caseId) {
-      const year = caseId.toString().match(/^(\d{4})/)?.[1];
-      if (year) {
-        historicalYears.add(parseInt(year)); // Track this year
-        if (!yearlyData[year]) yearlyData[year] = [];
-        yearlyData[year].push(c);
-      }
-    }
-  });
-}
-
-// Load recent years (2024-2026) - FIX: Skip if already loaded from historical file
-console.log('Loading recent data (2024-2026)...');
-for (const year of [2024, 2025, 2026]) {
-  if (historicalYears.has(year)) {
-    console.log(`⏭️  Skipping ${year} (already in historical file)`);
-    continue;
-  }
+// Load complete dataset from individual year files (2020-2026)
+console.log('Loading complete ONWSIAT dataset (2020-2026)...');
+for (const year of [2020, 2021, 2022, 2023, 2024, 2025, 2026]) {
   const file = path.join(DATA_DIR, `onwsiat-${year}-ultra-slow.json`);
   if (fs.existsSync(file)) {
     const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-    console.log(`✅ Loaded ${data.length} cases from ${year}`);
+    console.log(`✅ ${year}: ${data.length} cases`);
     allCases.push(...data);
     yearlyData[year] = data;
+  } else {
+    console.log(`⚠️  ${year}: File not found`);
   }
 }
 
@@ -242,9 +216,11 @@ console.log(`Missing keywords: ${missingData.keywords} (${(missingData.keywords 
 console.log(`Missing titles: ${missingData.title} (${(missingData.title / allCases.length * 100).toFixed(1)}%)`);
 console.log(`Missing URLs: ${missingData.url} (${(missingData.url / allCases.length * 100).toFixed(1)}%)`);
 
-console.log(`\nData Breakdown:`);
-console.log(`  2020-2023 (Historical): ${Object.values(yearlyData).filter((v, i) => Object.keys(yearlyData)[i] < '2024').reduce((a, b) => a + b.length, 0)} cases`);
-console.log(`  2024-2026 (Recent): ${Object.values(yearlyData).filter((v, i) => Object.keys(yearlyData)[i] >= '2024').reduce((a, b) => a + b.length, 0)} cases`);
+console.log(`\nYear-by-Year Breakdown:`);
+years.forEach(year => {
+  console.log(`  ${year}: ${yearlyData[year].length} cases`);
+});
+
 // Save summary report
 const report = {
   generatedAt: new Date().toISOString(),
