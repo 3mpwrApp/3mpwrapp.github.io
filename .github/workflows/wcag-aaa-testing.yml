@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: ["main"]
   schedule:
-    - cron: '0 8 * * 1' # Weekly Monday at 08:00 UTC
+    - cron: '0 7 * * 3' # Weekly Wednesday at 07:00 UTC (spread Monday load)
   workflow_dispatch:
 
 permissions:
@@ -22,7 +22,7 @@ jobs:
   wcag-aaa-validation:
     name: WCAG 2.2 AAA Compliance Testing
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20  # Reduced from 30 (typical run ~10-15 min)
     
     steps:
       - name: Checkout repository
@@ -34,9 +34,15 @@ jobs:
           node-version: '24'
           cache: 'npm'
 
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
       - name: Install dependencies
         run: |
-          npm ci
+          npm ci --ignore-scripts --no-audit --fund=false
           npx playwright install --with-deps chromium
 
       - name: Ensure reports directory

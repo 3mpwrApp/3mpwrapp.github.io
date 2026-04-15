@@ -1,12 +1,12 @@
 name: Trending Keywords Update
 
 # Update trending keywords and social trends between curation runs
-# Runs every 6 hours to stay current with disability movement
+# Runs twice daily (midnight, noon UTC) to stay current with disability movement
 
 on:
   schedule:
-    # Every 6 hours - offset from main curator
-    - cron: '0 0,6,12,18 * * *'
+    # Twice daily - sufficient for trend tracking
+    - cron: '0 0,12 * * *'
     
   workflow_dispatch:
     inputs:
@@ -46,7 +46,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts --no-audit --fund=false
 
       - name: Track social media trends
         if: github.event.inputs.track_social != 'false'

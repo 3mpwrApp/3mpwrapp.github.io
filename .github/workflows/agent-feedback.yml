@@ -11,6 +11,10 @@ on:
         required: false
         default: '6'
 
+concurrency:
+  group: agent-feedback
+  cancel-in-progress: false  # Allow daily analysis to complete
+
 jobs:
   analyze-content:
     runs-on: ubuntu-latest
@@ -25,6 +29,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: 'npm'
 
       - name: Install dependencies
         run: |

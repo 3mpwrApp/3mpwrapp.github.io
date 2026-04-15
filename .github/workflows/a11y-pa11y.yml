@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '30 6 * * 1,4' # Mon & Thu @ 06:30 UTC
+    - cron: '30 6 * * 2,4' # Tue & Thu @ 06:30 UTC (spread Monday load)
   workflow_dispatch:
 
 permissions:
@@ -27,6 +27,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: 'npm'
 
       - name: Ensure jq
         run: |
