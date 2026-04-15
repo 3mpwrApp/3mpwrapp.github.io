@@ -1,0 +1,101 @@
+Source,Target,Weight,Type
+"pre-existing condition","knee",112,preexisting
+"pre-existing condition","worker",1305,preexisting
+"pre-existing condition","work-related injury disease",64,preexisting
+"pre-existing condition","work",30,preexisting
+"pre-existing condition","employer",233,preexisting
+"pre-existing condition","retroactive adjustment",39,preexisting
+"pre-existing condition","greater severity than a normal",177,preexisting
+"pre-existing condition","ganglion",2,preexisting
+"pre-existing condition","severity",188,preexisting
+"pre-existing condition","disability",23,preexisting
+"pre-existing condition","severity of the accident",1,preexisting
+"pre-existing condition","moderate",28,preexisting
+"pre-existing condition","tray",1,preexisting
+"pre-existing condition","liable to develop a disability",99,preexisting
+"pre-existing condition","shoulder",173,preexisting
+"pre-existing condition","compensable",5,preexisting
+"pre-existing condition","duties",11,preexisting
+"pre-existing condition","fibromyalgia",4,preexisting
+"pre-existing condition","cooler",1,preexisting
+"pre-existing condition","tear",31,preexisting
+"pre-existing condition","degenerative changes",29,preexisting
+"pre-existing condition","tears",8,preexisting
+"pre-existing condition","meniscal",4,preexisting
+"pre-existing condition","ankle",15,preexisting
+"pre-existing condition","osteopenia",4,preexisting
+"pre-existing condition","elbow",20,preexisting
+"pre-existing condition","injury",117,preexisting
+"pre-existing condition","diagnosed septic olecranon bursitis",1,preexisting
+"pre-existing condition","foot",8,preexisting
+"pre-existing condition","cavus",1,preexisting
+"pre-existing condition","crush injury",2,preexisting
+"pre-existing condition","subacromial",1,preexisting
+"pre-existing condition","rotator cuff",66,preexisting
+"pre-existing condition","irritant contact dermatitis",1,preexisting
+"pre-existing condition","lymphedema",1,preexisting
+"pre-existing condition","degenerative",17,preexisting
+"pre-existing condition","inclusive should be deleted",1,preexisting
+"pre-existing condition","relevant",1,preexisting
+"pre-existing condition","medial collateral ligament",1,preexisting
+"pre-existing condition","accident",289,preexisting
+"pre-existing condition","hand",4,preexisting
+"pre-existing condition","sprain",1,preexisting
+"pre-existing condition","pre-accident disability",65,preexisting
+"pre-existing condition","disc herniation",26,preexisting
+"pre-existing condition","hips",1,preexisting
+"pre-existing condition","rotator cuff tear",21,preexisting
+"pre-existing condition","tendinosis",13,preexisting
+"pre-existing condition","acromion",12,preexisting
+"pre-existing condition","policy",10,preexisting
+"pre-existing condition","workplace accident",19,preexisting
+"mental health","worker",807,mentalhealth
+"mental health","pain",107,mentalhealth
+"mental health","work-related injury",93,mentalhealth
+"mental health","low back strain",2,mentalhealth
+"mental health","earnings",23,mentalhealth
+"mental health","worker s benefit",1,mentalhealth
+"mental health","capable of full-time",1,mentalhealth
+"mental health","review",2,mentalhealth
+"mental health","anxiety",47,mentalhealth
+"mental health","benefits",75,mentalhealth
+"mental health","impairment",226,mentalhealth
+"mental health","prorogation",1,mentalhealth
+"mental health","travailleur",8,mentalhealth
+"mental health","program",5,mentalhealth
+"mental health","work",63,mentalhealth
+"mental health","shoulder",43,mentalhealth
+"mental health","rating",37,mentalhealth
+"mental health","degenerative",1,mentalhealth
+"mental health","injury",66,mentalhealth
+"mental health","redetermination",17,mentalhealth
+"mental health","reports",2,mentalhealth
+"mental health","labour market re-entry",19,mentalhealth
+"mental health","entry level wages",4,mentalhealth
+"mental health","worker from returning to pre-injury",5,mentalhealth
+"mental health","cashier",5,mentalhealth
+"mental health","parking lot attendant",2,mentalhealth
+"mental health","loss of earnings",13,mentalhealth
+"mental health","surgery",2,mentalhealth
+"mental health","employer",35,mentalhealth
+"mental health","accident",30,mentalhealth
+"mental health","upper extremity",2,mentalhealth
+"mental health","depression",40,mentalhealth
+"mental health","knee",31,mentalhealth
+"mental health","compensable",12,mentalhealth
+"mental health","customer service representative",1,mentalhealth
+"mental health","ankle",17,mentalhealth
+"mental health","permanent impairment",35,mentalhealth
+"mental health","truck driving",1,mentalhealth
+"mental health","symptoms",38,mentalhealth
+"mental health","atrophy",1,mentalhealth
+"mental health","quadriceps",1,mentalhealth
+"mental health","vision loss",1,mentalhealth
+"mental health","optic neuropathy",1,mentalhealth
+"mental health","headaches",8,mentalhealth
+"mental health","reconsideration",29,mentalhealth
+"mental health","entitlement",82,mentalhealth
+"mental health","proposed resolution",16,mentalhealth
+"mental health","organic",13,mentalhealth
+"mental health","neck",15,mentalhealth
+"mental health","work accident",2,mentalhealth

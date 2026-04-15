@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "analysisDate": "2026-04-15T21:28:36.254Z",
+    "totalCases": 11430,
+    "investigationMode": "DETECTIVE"
+  },
+  "anomalies": {
+    "monthly": [
+      {
+        "month": "2020-01",
+        "count": 262,
+        "avg": 154.45945945945945,
+        "deviation": "2.74",
+        "type": "SPIKE"
+      },
+      {
+        "month": "2020-03",
+        "count": 243,
+        "avg": 154.45945945945945,
+        "deviation": "2.25",
+        "type": "SPIKE"
+      },
+      {
+        "month": "2023-06",
+        "count": 59,
+        "avg": 154.45945945945945,
+        "deviation": "-2.43",
+        "type": "DROP"
+      },
+      {
+        "month": "2023-07",
+        "count": 39,
+        "avg": 154.45945945945945,
+        "deviation": "-2.94",
+        "type": "DROP"
+      },
+      {
+        "month": "2023-08",
+        "count": 58,
+        "avg": 154.45945945945945,
+        "deviation": "-2.45",
+        "type": "DROP"
+      },
+      {
+        "month": "2026-02",
+        "count": 29,
+        "avg": 154.45945945945945,
+        "deviation": "-3.19",
+        "type": "DROP"
+      }
+    ],
+    "fiscalYearEnd": [
+      {
+        "month": "2020-03",
+        "count": 243
+      },
+      {
+        "month": "2021-03",
+        "count": 194
+      },
+      {
+        "month": "2022-03",
+        "count": 181
+      },
+      {
+        "month": "2023-03",
+        "count": 188
+      },
+      {
+        "month": "2024-03",
+        "count": 165
+      },
+      {
+        "month": "2025-03",
+        "count": 121
+      }
+    ]
+  },
+  "coOccurrence": {
+    "preExisting": {
+      "worker": 1305,
+      "accident": 289,
+      "employer": 233,
+      "severity": 188,
+      "greater severity than a normal": 177,
+      "shoulder": 173,
+      "injury": 117,
+      "knee": 112,
+      "liable to develop a disability": 99,
+      "cost relief": 97,
+      "pain": 71,
+      "rotator cuff": 66,
+      "pre-accident disability": 65,
+      "recovery": 65,
+      "work-related injury disease": 64,
+      "enhanced": 58,
+      "work-related injury": 55,
+      "impairment": 50,
+      "retroactive adjustment": 39,
+      "wrist": 39,
+      "relief": 37,
+      "tear": 31,
+      "work": 30,
+      "degenerative changes": 29,
+      "moderate": 28,
+      "disc herniation": 26,
+      "entitlement": 25,
+      "disability": 23,
+      "benefits": 23,
+      "minor": 22
+    },
+    "mentalHealth": {
+      "worker": 807,
+      "impairment": 226,
+      "pain": 107,
+      "work-related injury": 93,
+      "entitlement": 82,
+      "benefits": 75,
+      "injury": 66,
+      "work": 63,
+      "anxiety": 47,
+      "shoulder": 43,
+      "depression": 40,
+      "symptoms": 38,
+      "rating": 37,
+      "employer": 35,
+      "permanent impairment": 35,
+      "knee": 31,
+      "substantial work-related stressor": 31,
+      "accident": 30,
+      "reconsideration": 29,
+      "earnings": 23,
+      "return to work": 20,
+      "labour market re-entry": 19,
+      "traumatic": 19,
+      "workers’ compensation": 19,
+      "harassment": 18,
+      "redetermination": 17,
+      "ankle": 17,
+      "complex integrated cerebral functions": 17,
+      "time limit": 17,
+      "chronic pain": 17
+    }
+  },
+  "timing": {
+    "average": 0.5471466198419667,
+    "median": 0,
+    "distribution": {
+      "0": 7630,
+      "1": 2595,
+      "2": 594,
+      "3": 260,
+      "4": 130,
+      "5": 76,
+      "6": 34,
+      "7": 32,
+      "8": 17,
+      "9": 15,
+      "10": 7
+    },
+    "reconsiderationImpact": 1.4607741722372412
+  },
+  "preExistingByBodyPart": {
+    "shoulder": {
+      "total": 1391,
+      "preExisting": 222,
+      "rate": "16.0"
+    },
+    "knee": {
+      "total": 845,
+      "preExisting": 169,
+      "rate": "20.0"
+    },
+    "back": {
+      "total": 390,
+      "preExisting": 74,
+      "rate": "19.0"
+    },
+    "neck": {
+      "total": 485,
+      "preExisting": 49,
+      "rate": "10.1"
+    },
+    "wrist": {
+      "total": 376,
+      "preExisting": 46,
+      "rate": "12.2"
+    },
+    "hip": {
+      "total": 275,
+      "preExisting": 30,
+      "rate": "10.9"
+    },
+    "elbow": {
+      "total": 219,
+      "preExisting": 25,
+      "rate": "11.4"
+    },
+    "ankle": {
+      "total": 272,
+      "preExisting": 21,
+      "rate": "7.7"
+    },
+    "hand": {
+      "total": 143,
+      "preExisting": 10,
+      "rate": "7.0"
+    },
+    "foot": {
+      "total": 128,
+      "preExisting": 13,
+      "rate": "10.2"
+    }
+  },
+  "languageManipulation": {
+    "not established": 5,
+    "insufficient": 4,
+    "not satisfied": 0,
+    "fails to meet": 0,
+    "does not support": 0,
+    "lacks": 0,
+    "unable to conclude": 0,
+    "not persuaded": 0,
+    "does not demonstrate": 0,
+    "threshold not met": 0,
+    "lifestyle": 0,
+    "obesity": 27,
+    "smoking": 62,
+    "personal": 76,
+    "non-work": 60,
+    "domestic": 0,
+    "requires further": 1,
+    "additional information": 0,
+    "clarification needed": 0,
+    "pending": 4,
+    "await": 0,
+    "minor": 44,
+    "trivial": 0,
+    "temporary": 65,
+    "resolved": 7,
+    "recovered": 4
+  },
+  "seasonalPatterns": {
+    "volume": {
+      "Q1": 3251,
+      "Q2": 2889,
+      "Q3": 2478,
+      "Q4": 2812
+    },
+    "denials": {
+      "Q1": 32,
+      "Q2": 0,
+      "Q3": 0,
+      "Q4": 6
+    }
+  }
+}
