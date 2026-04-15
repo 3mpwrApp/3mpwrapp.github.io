@@ -1,0 +1,113 @@
+---
+layout: post
+title: "Daily News Curation - 2026-04-15"
+date: 2026-04-15
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-04-15
+
+Curated 19 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Reflecting on 10 Long Years of BC’s Toxic Drug Crisis
+I’ve spent my career working in the public health emergency. It’s time for a full embrace of evidence-based drug policies.
+[Source](https://thetyee.ca/Opinion/2026/04/13/Reflecting-BC-Toxic-Drug-Crisis/)
+**Score:** 28.60
+
+### 2. Eight New Canadian Poetry Collections to Celebrate National Poetry Month
+New and seasoned poets explore identity, memory, disability and more.
+[Source](https://thetyee.ca/Presents/2026/04/10/Eight-New-Canadian-Poetry-Collections/)
+**Score:** 13.50
+
+### 3. BC’s Toxic Drug Crisis Hits a Grim 10-Year Anniversary
+More than 18,000 British Columbians have been killed and there’s no end in sight.
+[Source](https://thetyee.ca/News/2026/04/14/BC-Toxic-Drug-Crisis-10-Year-Anniversary/)
+**Score:** 10.10
+
+### 4. Manitoba Government Announces New Chair and Board Appointments to Research Manitoba
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73243)
+**Score:** 11.30
+
+### 5. Manitoba Government Announces Brandon Critical Care Centre to Open this Spring
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73244)
+**Score:** 10.50
+
+### 6. Manitoba Justice Reports In-Custody Death
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73204)
+**Score:** 8.40
+
+### 7. Manitoba Government Marks National Indigenous Languages Day Highlighting Investments to Strengthen Indigenous Languages
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73241)
+**Score:** 7.50
+
+### 8. Manitoba Government Expands Access to Measles Vaccine Through Pharmacies
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73240)
+**Score:** 7.50
+
+### 9. Manitoba Government Hosts Provincewide Hiring Forum to Help More Nurses Enter Workforce
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73238)
+**Score:** 7.50
+
+### 10. Manitoba Anglers' Guide 2026 Now Available
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73239)
+**Score:** 5.70
+
+### 11. Premier Leads Manitoba Business Delegation to Ottawa
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73419)
+**Score:** 4.50
+
+### 12. Province Updates 2026 Spring Flood Outlook
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73277)
+**Score:** 4.50
+
+### 13. Measles Update #97
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73257)
+**Score:** 4.50
+
+### 14. Measles Update #96
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73245)
+**Score:** 4.50
+
+### 15. Measles Update #95
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73237)
+**Score:** 4.50
+
+### 16. Spring Thaw Begins in Southern Manitoba Basins
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73217)
+**Score:** 4.50
+
+### 17. Manitobans Encouraged to Enjoy Free Fishing and Free Provincial Park Entry During Spring Break
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73206)
+**Score:** 4.50
+
+### 18. Measles Update  #94
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73205)
+**Score:** 4.50
+
