@@ -18,6 +18,11 @@ on:
         required: false
         default: 'false'
 
+# Prevent multiple hashtag tracker runs from overlapping
+concurrency:
+  group: hashtag-tracker
+  cancel-in-progress: false
+
 permissions:
   contents: write
 

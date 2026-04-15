@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: "0 8 * * 1" # Weekly Monday 08:00 UTC
+    - cron: "0 7 * * 2" # Weekly Tuesday 07:00 UTC (spread Monday load)
   workflow_dispatch:
 
 # Cancel previous Link Checker runs for the same ref to avoid overlap
@@ -18,7 +18,7 @@ jobs:
   lychee:
     runs-on: ubuntu-latest
     continue-on-error: ${{ github.event_name != 'pull_request' }}
-    timeout-minutes: 25
+    timeout-minutes: 15  # Reduced from 25 (typical run: ~5-8 min)
     steps:
       - uses: actions/checkout@v4
 

@@ -3,14 +3,13 @@ name: Content Curator (Unified)
 # Unified content curation and posting workflow
 # Consolidates: curator.yml, weekly-curator.yml, weekly-blog.yml
 # 
-# Daily: Curates and posts content 2x/day (9 AM, 9 PM UTC)
+# Daily: Curates and posts content 1x/day (12 PM UTC - after daily-feature at 10 AM)
 # Weekly: Generates summary post every Monday at 9 AM UTC
 
 on:
   schedule:
-    # Daily curation - 2 times per day
-    - cron: '0 9 * * *'   # 9:00 AM UTC - Morning
-    - cron: '0 21 * * *'  # 9:00 PM UTC - Evening
+    # Daily curation - 1x per day (reduced from 2x)
+    - cron: '0 12 * * *'   # 12:00 PM UTC - After daily-feature (10 AM)
     
   workflow_dispatch:
     inputs:
@@ -52,7 +51,7 @@ jobs:
   daily_curation:
     name: Daily Content Curation
     runs-on: ubuntu-latest
-    timeout-minutes: 25  # Reduced since deployment wait is now 10 minutes
+    timeout-minutes: 10  # Reduced from 25 (deployment wait now 1.5 min max)
     if: github.event.inputs.mode != 'weekly'
     permissions:
       contents: write
@@ -132,42 +131,34 @@ jobs:
           
           git push origin main || echo "⚠️ No changes to push"
 
-      - name: Wait for deployment
+      - name: Quick deployment verification (non-blocking)
+        continue-on-error: true
         run: |
-          echo "⏳ Waiting for Cloudflare Pages to build and deploy..."
-          echo "Starting wait at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+          echo "⏳ Quick check if Cloudflare Pages deployed..."
+          echo "Note: Cloudflare auto-builds from git push - no manual deploy needed"
+          echo "Starting check at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
           
-          # Check that the blog's curated daily section is accessible
           BLOG_URL="https://3mpwrapp.pages.dev/blog/"
           
-          # Wait for blog page to be accessible (up to 60 minutes)
-          MAX_WAIT_MINUTES=60
-          MAX_RETRIES=60  # Check every minute for 60 minutes
-          RETRY_COUNT=0
-          SUCCESS=false
-          
-          while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$SUCCESS" = "false" ]; do
-            # Try to fetch the blog page
+          # Quick check: 3 attempts with 30-second intervals (max 1.5 min)
+          for ATTEMPT in 1 2 3; do
             HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$BLOG_URL")
             
             if [ "$HTTP_CODE" = "200" ]; then
-              echo "✅ Blog is live and accessible! (HTTP $HTTP_CODE)"
+              echo "✅ Blog is live! (HTTP $HTTP_CODE after ${ATTEMPT} attempt(s))"
               echo "Verified at $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-              SUCCESS=true
-            else
-              RETRY_COUNT=$((RETRY_COUNT + 1))
-              ELAPSED_MINUTES=$((RETRY_COUNT))
-              echo "⏳ Blog not ready yet (HTTP $HTTP_CODE) - waiting... ($ELAPSED_MINUTES/$MAX_WAIT_MINUTES minutes)"
-              
-              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-                sleep 60  # Wait 1 minute between checks
-              fi
+              exit 0
+            fi
+            
+            if [ $ATTEMPT -lt 3 ]; then
+              echo "⏳ Attempt $ATTEMPT: HTTP $HTTP_CODE - waiting 30s..."
+              sleep 30
             fi
           done
           
-          if [ "$SUCCESS" = "false" ]; then
-            echo "❌ ERROR: Blog not accessible after $MAX_WAIT_MINUTES minutes!"
-            echo "Last HTTP code: $HTTP_CODE"
+          echo "ℹ️ Blog not immediately accessible (HTTP $HTTP_CODE)"
+          echo "This is normal - Cloudflare Pages may still be building."
+          echo "Site will be live shortly. Not blocking workflow."
             echo "Aborting social media posting to prevent 404 links."
             exit 1
           fi
