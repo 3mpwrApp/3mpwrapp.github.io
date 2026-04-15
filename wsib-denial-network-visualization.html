@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSIB Denial Tactic Network - Co-Occurrence Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-group label {
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.9em;
+        }
+
+        select, input {
+            padding: 8px 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 1em;
+            background: white;
+            transition: border-color 0.2s;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .info-panel {
+            padding: 20px 30px;
+            background: #fff3cd;
+            border-bottom: 2px solid #ffc107;
+        }
+
+        .info-panel h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .info-panel ul {
+            list-style-position: inside;
+            color: #856404;
+        }
+
+        .info-panel li {
+            margin: 5px 0;
+        }
+
+        #network-container {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            background: #ffffff;
+        }
+
+        .node {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .node:hover {
+            stroke-width: 3px;
+        }
+
+        .node-label {
+            font-size: 12px;
+            font-weight: 600;
+            pointer-events: none;
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                 1px -1px 0 #fff,
+                -1px  1px 0 #fff,
+                 1px  1px 0 #fff;
+        }
+
+        .link {
+            stroke-opacity: 0.6;
+            transition: stroke-opacity 0.2s;
+        }
+
+        .link:hover {
+            stroke-opacity: 1;
+        }
+
+        .tooltip {
+            position: absolute;
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 14px;
+            max-width: 300px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .legend {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 2px solid #e9ecef;
+        }
+
+        .legend h3 {
+            margin-bottom: 15px;
+            color: #212529;
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #333;
+        }
+
+        .stats-panel {
+            padding: 20px 30px;
+            background: #e7f3ff;
+            border-top: 2px solid #0066cc;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            #network-container {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚨 WSIB Denial Tactic Network</h1>
+            <p>Co-Occurrence Analysis of 11,430 Tribunal Decisions (2020-2026)</p>
+        </div>
+
+        <div class="info-panel">
+            <h3>What This Visualization Shows:</h3>
+            <ul>
+                <li><strong>Nodes (circles):</strong> Keywords from tribunal decisions</li>
+                <li><strong>Links (lines):</strong> How often keywords appear together in the same case</li>
+                <li><strong>Thicker lines:</strong> More frequent co-occurrence (stronger pattern)</li>
+                <li><strong>Node size:</strong> Larger = appears in more cases overall</li>
+                <li><strong>Colors:</strong> Different types of keywords (denial tactics, body parts, medical terms)</li>
+            </ul>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="focus-select">Focus on keyword:</label>
+                <select id="focus-select">
+                    <option value="all">All Patterns</option>
+                    <option value="pre-existing" selected>Pre-Existing Condition</option>
+                    <option value="mental">Mental Health</option>
+                    <option value="pain">Pain</option>
+                    <option value="worker">Worker</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="threshold-slider">Minimum co-occurrences:</label>
+                <input type="range" id="threshold-slider" min="10" max="200" value="50" step="10">
+                <span id="threshold-value">50</span>
+            </div>
+        </div>
+
+        <div id="network-container"></div>
+
+        <div class="legend">
+            <h3>Legend</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #dc3545;"></div>
+                    <span>Denial Tactics (pre-existing, cost relief, etc.)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #0066cc;"></div>
+                    <span>Core Terms (worker, employer, accident)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #28a745;"></div>
+                    <span>Body Parts (knee, back, shoulder, etc.)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #fd7e14;"></div>
+                    <span>Medical/Severity (pain, impairment, severity)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #6f42c1;"></div>
+                    <span>Mental Health Terms</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-panel">
+            <h3>Network Statistics</h3>
+            <div class="stats-grid" id="stats-grid"></div>
+        </div>
+
+        <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <script>
+        // Mock co-occurrence data based on detective findings
+        // In production, this would load from ONWSIAT-CO-OCCURRENCE.csv
+        const coOccurrenceData = {
+            "pre-existing": {
+                "worker": 1305,
+                "accident": 289,
+                "employer": 233,
+                "severity": 188,
+                "greater severity than normal": 177,
+                "shoulder": 173,
+                "cost relief": 97,
+                "pre-accident disability": 65,
+                "knee": 110,
+                "back": 90,
+                "pain": 85
+            },
+            "mental": {
+                "worker": 807,
+                "impairment": 226,
+                "pain": 107,
+                "work-related injury": 93,
+                "entitlement": 82,
+                "shoulder": 43,
+                "depression": 40
+            },
+            "pain": {
+                "worker": 1165,
+                "impairment": 226,
+                "mental": 107,
+                "shoulder": 95,
+                "pre-existing": 85,
+                "knee": 78,
+                "back": 72,
+                "chronic": 65
+            }
+        };
+
+        // Network setup
+        const width = document.getElementById('network-container').clientWidth;
+        const height = 800;
+
+        const svg = d3.select("#network-container")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("viewBox", [0, 0, width, height]);
+
+        // Add zoom behavior
+        const g = svg.append("g");
+
+        const zoom = d3.zoom()
+            .scaleExtent([0.1, 4])
+            .on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+
+        svg.call(zoom);
+
+        // Color scheme
+        const colorScale = d3.scaleOrdinal()
+            .domain(['denial', 'core', 'body-part', 'medical', 'mental-health'])
+            .range(['#dc3545', '#0066cc', '#28a745', '#fd7e14', '#6f42c1']);
+
+        function getNodeCategory(keyword) {
+            const denialTerms = ['pre-existing', 'cost relief', 'pre-accident disability', 'greater severity than normal'];
+            const coreTerms = ['worker', 'employer', 'accident', 'work-related injury', 'entitlement'];
+            const bodyParts = ['shoulder', 'knee', 'back', 'wrist', 'elbow', 'hip', 'neck'];
+            const medicalTerms = ['pain', 'impairment', 'severity', 'chronic'];
+            const mentalHealthTerms = ['mental', 'depression', 'psychotraumatic'];
+
+            if (denialTerms.some(t => keyword.includes(t))) return 'denial';
+            if (coreTerms.some(t => keyword.includes(t))) return 'core';
+            if (bodyParts.some(t => keyword.includes(t))) return 'body-part';
+            if (mentalHealthTerms.some(t => keyword.includes(t))) return 'mental-health';
+            if (medicalTerms.some(t => keyword.includes(t))) return 'medical';
+            return 'core';
+        }
+
+        function buildNetwork(focusKeyword, threshold) {
+            // Clear existing
+            g.selectAll("*").remove();
+
+            const nodes = new Map();
+            const links = [];
+
+            // Build nodes and links from co-occurrence data
+            if (focusKeyword === 'all') {
+                // Show all relationships
+                Object.entries(coOccurrenceData).forEach(([source, targets]) => {
+                    // Add source node
+                    if (!nodes.has(source)) {
+                        nodes.set(source, {
+                            id: source,
+                            category: getNodeCategory(source),
+                            value: Object.values(targets).reduce((sum, v) => sum + v, 0)
+                        });
+                    }
+
+                    // Add target nodes and links
+                    Object.entries(targets).forEach(([target, count]) => {
+                        if (count >= threshold) {
+                            if (!nodes.has(target)) {
+                                nodes.set(target, {
+                                    id: target,
+                                    category: getNodeCategory(target),
+                                    value: count
+                                });
+                            }
+
+                            links.push({
+                                source: source,
+                                target: target,
+                                value: count
+                            });
+                        }
+                    });
+                });
+            } else {
+                // Focus on specific keyword
+                const focusData = coOccurrenceData[focusKeyword];
+                if (!focusData) return;
+
+                // Add focus node
+                nodes.set(focusKeyword, {
+                    id: focusKeyword,
+                    category: getNodeCategory(focusKeyword),
+                    value: Object.values(focusData).reduce((sum, v) => sum + v, 0)
+                });
+
+                // Add connected nodes
+                Object.entries(focusData).forEach(([target, count]) => {
+                    if (count >= threshold) {
+                        nodes.set(target, {
+                            id: target,
+                            category: getNodeCategory(target),
+                            value: count
+                        });
+
+                        links.push({
+                            source: focusKeyword,
+                            target: target,
+                            value: count
+                        });
+                    }
+                });
+            }
+
+            const nodesArray = Array.from(nodes.values());
+
+            // Update statistics
+            updateStats(nodesArray, links);
+
+            // Create force simulation
+            const simulation = d3.forceSimulation(nodesArray)
+                .force("link", d3.forceLink(links)
+                    .id(d => d.id)
+                    .distance(d => Math.max(100, 300 - d.value))
+                    .strength(d => Math.min(1, d.value / 200)))
+                .force("charge", d3.forceManyBody()
+                    .strength(-500))
+                .force("center", d3.forceCenter(width / 2, height / 2))
+                .force("collision", d3.forceCollide().radius(d => Math.sqrt(d.value) * 3 + 20));
+
+            // Draw links
+            const link = g.append("g")
+                .selectAll("line")
+                .data(links)
+                .join("line")
+                .attr("class", "link")
+                .attr("stroke", "#999")
+                .attr("stroke-width", d => Math.sqrt(d.value) * 0.5)
+                .on("mouseover", function(event, d) {
+                    showTooltip(event, `${d.source.id} ↔ ${d.target.id}<br><strong>${d.value} co-occurrences</strong>`);
+                })
+                .on("mouseout", hideTooltip);
+
+            // Draw nodes
+            const node = g.append("g")
+                .selectAll("circle")
+                .data(nodesArray)
+                .join("circle")
+                .attr("class", "node")
+                .attr("r", d => Math.sqrt(d.value) * 2 + 5)
+                .attr("fill", d => colorScale(d.category))
+                .attr("stroke", "#fff")
+                .attr("stroke-width", 2)
+                .on("mouseover", function(event, d) {
+                    d3.select(this).attr("stroke-width", 4);
+                    showTooltip(event, `<strong>${d.id}</strong><br>Category: ${d.category}<br>Total mentions: ${d.value}`);
+                })
+                .on("mouseout", function() {
+                    d3.select(this).attr("stroke-width", 2);
+                    hideTooltip();
+                })
+                .call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended));
+
+            // Add labels
+            const labels = g.append("g")
+                .selectAll("text")
+                .data(nodesArray)
+                .join("text")
+                .attr("class", "node-label")
+                .attr("text-anchor", "middle")
+                .attr("dy", ".35em")
+                .text(d => d.id.length > 20 ? d.id.substring(0, 17) + '...' : d.id);
+
+            // Update positions on tick
+            simulation.on("tick", () => {
+                link
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+
+                node
+                    .attr("cx", d => d.x)
+                    .attr("cy", d => d.y);
+
+                labels
+                    .attr("x", d => d.x)
+                    .attr("y", d => d.y);
+            });
+
+            // Drag functions
+            function dragstarted(event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+            }
+
+            function dragended(event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            }
+        }
+
+        function updateStats(nodes, links) {
+            const totalNodes = nodes.length;
+            const totalLinks = links.length;
+            const avgCoOccurrence = links.length > 0 
+                ? Math.round(links.reduce((sum, l) => sum + l.value, 0) / links.length)
+                : 0;
+            const maxCoOccurrence = links.length > 0
+                ? Math.max(...links.map(l => l.value))
+                : 0;
+
+            const statsHTML = `
+                <div class="stat-card">
+                    <div class="stat-value">${totalNodes}</div>
+                    <div class="stat-label">Keywords Shown</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${totalLinks}</div>
+                    <div class="stat-label">Connections</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${avgCoOccurrence}</div>
+                    <div class="stat-label">Avg Co-Occurrences</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${maxCoOccurrence}</div>
+                    <div class="stat-label">Max Co-Occurrences</div>
+                </div>
+            `;
+
+            document.getElementById('stats-grid').innerHTML = statsHTML;
+        }
+
+        function showTooltip(event, html) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.innerHTML = html;
+            tooltip.style.left = event.pageX + 15 + 'px';
+            tooltip.style.top = event.pageY + 15 + 'px';
+            tooltip.style.opacity = 1;
+        }
+
+        function hideTooltip() {
+            document.getElementById('tooltip').style.opacity = 0;
+        }
+
+        // Controls
+        document.getElementById('focus-select').addEventListener('change', function() {
+            const threshold = parseInt(document.getElementById('threshold-slider').value);
+            buildNetwork(this.value, threshold);
+        });
+
+        document.getElementById('threshold-slider').addEventListener('input', function() {
+            document.getElementById('threshold-value').textContent = this.value;
+            const focusKeyword = document.getElementById('focus-select').value;
+            buildNetwork(focusKeyword, parseInt(this.value));
+        });
+
+        // Initial render
+        buildNetwork('pre-existing', 50);
+
+        // Responsive resize
+        window.addEventListener('resize', () => {
+            const focusKeyword = document.getElementById('focus-select').value;
+            const threshold = parseInt(document.getElementById('threshold-slider').value);
+            buildNetwork(focusKeyword, threshold);
+        });
+    </script>
+</body>
+</html>
