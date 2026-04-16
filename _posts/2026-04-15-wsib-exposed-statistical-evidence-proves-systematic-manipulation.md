@@ -431,6 +431,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 **Data Exports:**
 - [ONWSIAT-DETECTIVE-FINDINGS.json](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Raw anomaly results
 - [ONWSIAT-CO-OCCURRENCE.csv](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Network analysis data
+- [Research Hub](https://3mpwrapp.pages.dev/research/) - Visualization + 16 injury guides + 50+ appeal templates
 - [Interactive Network Visualization](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore co-occurrence patterns visually
 
 **If you're technical:** Run the scripts yourself. Audit our methodology. Find more patterns. **Pull requests welcome.**
@@ -551,6 +552,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 - **Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)
 - **Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)
 - **Full Master Document:** [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
+- **Research Hub:** [All Research Tools](https://3mpwrapp.pages.dev/research/) (visualization, guides, templates)
 - **Interactive Visualization:** [WSIB Denial Network](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html)
 
 ---

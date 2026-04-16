@@ -538,6 +538,7 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 - [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document with all findings
 
 **Interactive Tools:**
+- [Research Hub](https://3mpwrapp.pages.dev/research/) - Visualization, knowledge base, and appeal templates
 - [WSIB Denial Network Visualization](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore keyword co-occurrence patterns
 
 ---
