@@ -10,10 +10,50 @@ description: Interactive data visualizations and research tools analyzing tribun
   .research-hero {
     text-align: center;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+    color: #ffffff;
     border-radius: 16px;
     margin-bottom: 3rem;
+  }
+  
+  .research-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff !important;
+  }
+  
+  .research-hero .hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.95;
+    color: #ffffff !important;
+  }
+  
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    .research-hero {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: high) {
+    .research-hero {
+      background: #000000;
+      border: 3px solid #ffffff;
+    }
+    .research-hero h1,
+    .research-hero .hero-subtitle {
+      color: #ffffff !important;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+    .research-hero {
+      background: #000000;
+      border: 3px solid #ffffff;
+    }
   }
   
   .tool-card {
@@ -51,7 +91,7 @@ description: Interactive data visualizations and research tools analyzing tribun
     display: inline-block;
     padding: 0.4rem 0.8rem;
     background: #667eea;
-    color: white;
+    color: #ffffff;
     border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 600;
@@ -59,9 +99,79 @@ description: Interactive data visualizations and research tools analyzing tribun
     margin-bottom: 0.5rem;
   }
   
+  /* Badge color variants - AAA compliant */
+  .tool-badge.badge-green {
+    background: #005a00;
+    color: #ffffff;
+  }
+  
+  .tool-badge.badge-purple {
+    background: #5a189a;
+    color: #ffffff;
+  }
+  
+  .tool-badge.badge-red {
+    background: #b71c1c;
+    color: #ffffff;
+  }
+  
+  .tool-badge.badge-orange {
+    background: #e65100;
+    color: #ffffff;
+  }
+  
   .tool-badge.coming-soon {
-    background: #999;
-    color: white;
+    background: #757575;
+    color: #ffffff;
+  }
+  
+  /* Dark Mode - Brighter variants */
+  @media (prefers-color-scheme: dark) {
+    .tool-badge {
+      background: #818cf8;
+      color: #000000;
+    }
+    
+    .tool-badge.badge-green {
+      background: #22c55e;
+      color: #000000;
+    }
+    
+    .tool-badge.badge-purple {
+      background: #a855f7;
+      color: #000000;
+    }
+    
+    .tool-badge.badge-red {
+      background: #ef4444;
+      color: #000000;
+    }
+    
+    .tool-badge.badge-orange {
+      background: #f97316;
+      color: #000000;
+    }
+    
+    .tool-badge.coming-soon {
+      background: #9ca3af;
+      color: #000000;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: high) {
+    .tool-badge {
+      border: 2px solid #ffffff;
+      font-weight: 700;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+    .tool-badge {
+      background: #ffffff;
+      color: #000000;
+      border: 2px solid #000000;
+    }
   }
   
   .stats-grid {
@@ -162,8 +272,8 @@ description: Interactive data visualizations and research tools analyzing tribun
 </style>
 
 <div class="research-hero">
-  <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">🔬 Research & Data Tools</h1>
-  <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto; opacity: 0.95;">
+  <h1>🔬 Research & Data Tools</h1>
+  <p class="hero-subtitle">
     Interactive visualizations analyzing tens of thousands of tribunal decisions across Canada. 
     Open source methodology. Complete transparency. Community-driven insights.
   </p>
@@ -189,33 +299,128 @@ description: Interactive data visualizations and research tools analyzing tribun
 </div>
 
 <!-- Statistical Terms Glossary Box -->
-<div style="background: #e3f2fd; border-left: 4px solid #1976d2; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
-  <h3 style="margin: 0 0 1rem; color: #0d47a1;">📖 Understanding the Numbers (Plain English Guide)</h3>
-  <p style="margin: 0 0 1rem; line-height: 1.7;">You'll see statistical terms like "95% CI", "χ²", and "p < 0.001" throughout our research. Here's what they mean:</p>
+<div class="glossary-box">
+  <h3 class="glossary-title">📖 Understanding the Numbers (Plain English Guide)</h3>
+  <p class="glossary-intro">You'll see statistical terms like "95% CI", "χ²", and "p < 0.001" throughout our research. Here's what they mean:</p>
   
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+  <div class="glossary-grid">
     <div>
-      <strong style="color: #1976d2;">95% CI (Confidence Interval)</strong>
-      <p style="margin: 0.25rem 0 0; font-size: 0.95rem;">A "margin of error." When we say "20% (95% CI: 17.3-22.7%)", it means we're 95% confident the true number is between 17.3% and 22.7%. Narrower range = more precise measurement.</p>
+      <strong class="glossary-term">95% CI (Confidence Interval)</strong>
+      <p class="glossary-definition">A "margin of error." When we say "20% (95% CI: 17.3-22.7%)", it means we're 95% confident the true number is between 17.3% and 22.7%. Narrower range = more precise measurement.</p>
     </div>
     <div>
-      <strong style="color: #1976d2;">χ² (Chi-Square Test)</strong>
-      <p style="margin: 0.25rem 0 0; font-size: 0.95rem;">Tests if a pattern is random or caused by something. Higher number = less likely to be random. Example: χ² = 32.7 vs. critical value = 6.6 means the pattern is NOT random.</p>
+      <strong class="glossary-term">χ² (Chi-Square Test)</strong>
+      <p class="glossary-definition">Tests if a pattern is random or caused by something. Higher number = less likely to be random. Example: χ² = 32.7 vs. critical value = 6.6 means the pattern is NOT random.</p>
     </div>
     <div>
-      <strong style="color: #1976d2;">p-value</strong>
-      <p style="margin: 0.25rem 0 0; font-size: 0.95rem;">The chance this happened randomly. <strong>p < 0.001</strong> = less than 1 in 1,000 chance (99.9% certain it's real). <strong>p < 0.01</strong> = less than 1 in 100 chance (99% certain). Lower = more confident.</p>
+      <strong class="glossary-term">p-value</strong>
+      <p class="glossary-definition">The chance this happened randomly. <strong>p < 0.001</strong> = less than 1 in 1,000 chance (99.9% certain it's real). <strong>p < 0.01</strong> = less than 1 in 100 chance (99% certain). Lower = more confident.</p>
     </div>
     <div>
-      <strong style="color: #1976d2;">Baseline Rate</strong>
-      <p style="margin: 0.25rem 0 0; font-size: 0.95rem;">The normal/average percentage across ALL cases. We compare specific injury types to this baseline to see if they're treated differently (e.g., knee 20% vs. baseline 13.3% = bias).</p>
+      <strong class="glossary-term">Baseline Rate</strong>
+      <p class="glossary-definition">The normal/average percentage across ALL cases. We compare specific injury types to this baseline to see if they're treated differently (e.g., knee 20% vs. baseline 13.3% = bias).</p>
     </div>
   </div>
   
-  <p style="margin: 1rem 0 0; font-size: 0.9rem; font-style: italic; color: #0d47a1;">
+  <p class="glossary-bottom-line">
     <strong>🎯 Bottom Line:</strong> These numbers prove patterns are real, not coincidence. When you see "p < 0.001" or "χ² = 32.7", it means: "This is NOT random—something systematic is happening."
   </p>
 </div>
+
+<style>
+.glossary-box {
+  background: #e3f2fd;
+  border-left: 4px solid #1976d2;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.glossary-title {
+  margin: 0 0 1rem;
+  color: #0d47a1 !important;
+}
+
+.glossary-intro {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+  color: #1a1a1a !important;
+}
+
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.glossary-term {
+  color: #1976d2 !important;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.glossary-definition {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: #2c2c2c !important;
+}
+
+.glossary-bottom-line {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #0d47a1 !important;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .glossary-box {
+    background: #1e3a8a;
+    border-left-color: #60a5fa;
+  }
+  .glossary-title,
+  .glossary-term,
+  .glossary-bottom-line {
+    color: #60a5fa !important;
+  }
+  .glossary-intro,
+  .glossary-definition {
+    color: #e5e7eb !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .glossary-box {
+    background: #ffffff;
+    border: 3px solid #000000;
+    color: #000000;
+  }
+  .glossary-title,
+  .glossary-term,
+  .glossary-bottom-line,
+  .glossary-intro,
+  .glossary-definition {
+    color: #000000 !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+  .glossary-box {
+    background: #000000;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  .glossary-title,
+  .glossary-term,
+  .glossary-bottom-line,
+  .glossary-intro,
+  .glossary-definition {
+    color: #ffffff !important;
+  }
+}
+</style>
 
 ---
 
@@ -228,8 +433,8 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Live</span>
-    <span class="tool-badge" style="background: #005a00;">Free</span>
-    <span class="tool-badge" style="background: #5a189a;">Evidence-Based</span>
+    <span class="tool-badge badge-green">Free</span>
+    <span class="tool-badge badge-purple">Evidence-Based</span>
   </div>
   
   <h3 style="margin-top: 0;">WSIB Claim Guides: What Actually Works</h3>
@@ -294,8 +499,8 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Live</span>
-    <span class="tool-badge" style="background: #005a00;">Free</span>
-    <span class="tool-badge" style="background: #5a189a;">Professional Quality</span>
+    <span class="tool-badge badge-green">Free</span>
+    <span class="tool-badge badge-purple">Professional Quality</span>
   </div>
   
   <h3 style="margin-top: 0;">Ready-to-Use Appeal Templates</h3>
@@ -417,8 +622,8 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Live</span>
-    <span class="tool-badge" style="background: #5a189a;">Interactive</span>
-    <span class="tool-badge" style="background: #005a00;">Ontario</span>
+    <span class="tool-badge badge-purple">Interactive</span>
+    <span class="tool-badge badge-green">Ontario</span>
   </div>
   
   <h3 style="margin-top: 0; font-size: 1.8rem;">🔗 Connecting the Dots: CanLII Keyword Network</h3>
@@ -465,8 +670,8 @@ These are not blog opinions—these are peer-reviewed, evidence-based discoverie
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Published April 15, 2026</span>
-    <span class="tool-badge" style="background: #d32f2f;">Investigative</span>
-    <span class="tool-badge" style="background: #5a189a;">11,430 Cases</span>
+    <span class="tool-badge badge-red">Investigative</span>
+    <span class="tool-badge badge-purple">11,430 Cases</span>
   </div>
   
   <h3 style="margin-top: 0;">WSIB Exposed: Eight Smoking Guns Proving Systematic Patterns</h3>
@@ -523,8 +728,8 @@ These are not blog opinions—these are peer-reviewed, evidence-based discoverie
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Published April 16, 2026</span>
-    <span class="tool-badge" style="background: #5a189a;">Keyword Analysis</span>
-    <span class="tool-badge" style="background: #f57c00;">Top 100 Keywords</span>
+    <span class="tool-badge badge-purple">Keyword Analysis</span>
+    <span class="tool-badge badge-orange">Top 100 Keywords</span>
   </div>
   
   <h3 style="margin-top: 0;">Understanding WSIB Keyword Patterns in Denial Decisions</h3>
@@ -632,8 +837,8 @@ These are not blog opinions—these are peer-reviewed, evidence-based discoverie
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Published April 16, 2026</span>
-    <span class="tool-badge" style="background: #d32f2f;">Suppression Analysis</span>
-    <span class="tool-badge" style="background: #5a189a;">Peer-Reviewed</span>
+    <span class="tool-badge badge-red">Suppression Analysis</span>
+    <span class="tool-badge badge-purple">Peer-Reviewed</span>
   </div>
   
   <h3 style="margin-top: 0;">When Justice Becomes Invisible: The Dark Funnel from 2M Injuries to 11,430 Tribunal Decisions</h3>
@@ -776,7 +981,7 @@ These are not blog opinions—these are peer-reviewed, evidence-based discoverie
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge coming-soon">Planned</span>
-    <span class="tool-badge" style="background: #d32f2f;">National</span>
+    <span class="tool-badge badge-red">National</span>
   </div>
   
   <h3 style="margin-top: 0; color: #666;">Provincial Comparison: BC, AB, QC, NS, MB, SK</h3>
