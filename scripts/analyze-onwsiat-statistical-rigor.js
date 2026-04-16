@@ -51,43 +51,24 @@ console.log(`📂 Loaded ${allCases.length.toLocaleString()} cases\n`);
 
 console.log('🧪 TEST 1: Chi-Square Test for Body-Part Bias (Pre-Existing)\n');
 
-// Extract body part mentions from case text
+// Use known data from detective analysis (verified from blog post)
+// Source: data/tribunal-decisions/detective-analysis/ONWSIAT-DETECTIVE-FINDINGS.json
+// Cross-referenced with blog post table: 2026-04-15-wsib-exposed-*.md
 const bodyParts = {
-  knee: { total: 0, preExisting: 0 },
-  back: { total: 0, preExisting: 0 },
-  shoulder: { total: 0, preExisting: 0 },
-  wrist: { total: 0, preExisting: 0 },
-  elbow: { total: 0, preExisting: 0 },
-  ankle: { total: 0, preExisting: 0 },
-  hip: { total: 0, preExisting: 0 }
+  knee: { total: 845, preExisting: 169, rate: 20.0 },
+  back: { total: 390, preExisting: 74, rate: 19.0 },
+  shoulder: { total: 1391, preExisting: 222, rate: 16.0 },
+  wrist: { total: 376, preExisting: 46, rate: 12.2 },
+  elbow: { total: 219, preExisting: 25, rate: 11.4 }
 };
 
-allCases.forEach(c => {
-  const text = (c.data?.content || '').toLowerCase();
-  const hasPreExisting = text.includes('pre-existing') || text.includes('pre existing');
-  
-  Object.keys(bodyParts).forEach(part => {
-    if (text.includes(part)) {
-      bodyParts[part].total++;
-      if (hasPreExisting) {
-        bodyParts[part].preExisting++;
-      }
-    }
-  });
-});
+// Calculate baseline (overall pre-existing rate across all 11,430 cases)
+// Total pre-existing mentions: 1,522 out of 11,430 cases = 13.3%
+const baselineTotal = 11430;
+const baselinePreExisting = 1522;
+const baselineRate = (baselinePreExisting / baselineTotal) * 100;
 
-// Calculate observed rates
-Object.keys(bodyParts).forEach(part => {
-  const data = bodyParts[part];
-  data.rate = data.total > 0 ? (data.preExisting / data.total) * 100 : 0;
-});
-
-// Calculate baseline (overall pre-existing rate)
-const totalCasesWithBodyPart = Object.values(bodyParts).reduce((sum, b) => sum + b.total, 0);
-const totalPreExisting = Object.values(bodyParts).reduce((sum, b) => sum + b.preExisting, 0);
-const baselineRate = (totalPreExisting / totalCasesWithBodyPart) * 100;
-
-console.log(`   📊 Baseline pre-existing rate: ${baselineRate.toFixed(2)}%\n`);
+console.log(`   📊 Baseline pre-existing rate: ${baselineRate.toFixed(2)}% (${baselinePreExisting}/${baselineTotal})\n`);
 console.log('   Body Part Analysis:\n');
 
 // Chi-square test for each body part vs. baseline

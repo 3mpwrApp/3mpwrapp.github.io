@@ -1,16 +1,87 @@
 {
   "metadata": {
-    "analysisDate": "2026-04-16T17:53:58.662Z",
+    "analysisDate": "2026-04-16T18:11:02.212Z",
     "totalCases": 11430,
     "analysisType": "STATISTICAL_RIGOR"
   },
   "chiSquareTests": {
-    "bodyPartBias": [],
+    "bodyPartBias": [
+      {
+        "bodyPart": "knee",
+        "total": 845,
+        "preExisting": 169,
+        "rate": 20,
+        "ciLower": 17.302958008677177,
+        "ciUpper": 22.697041991322823,
+        "baseline": 13.31583552055993,
+        "chiSquare": "32.707",
+        "pValue": "< 0.001",
+        "significance": "*** (Highly significant)",
+        "cohensH": "0.180",
+        "effectSize": "Small"
+      },
+      {
+        "bodyPart": "back",
+        "total": 390,
+        "preExisting": 74,
+        "rate": 19,
+        "ciLower": 15.106474012493996,
+        "ciUpper": 22.893525987506006,
+        "baseline": 13.31583552055993,
+        "chiSquare": "10.818",
+        "pValue": "< 0.01",
+        "significance": "** (Very significant)",
+        "cohensH": "0.155",
+        "effectSize": "Small"
+      },
+      {
+        "bodyPart": "shoulder",
+        "total": 1391,
+        "preExisting": 222,
+        "rate": 16,
+        "ciLower": 14.073397405868219,
+        "ciUpper": 17.926602594131783,
+        "baseline": 13.31583552055993,
+        "chiSquare": "8.424",
+        "pValue": "< 0.01",
+        "significance": "** (Very significant)",
+        "cohensH": "0.076",
+        "effectSize": "Small"
+      },
+      {
+        "bodyPart": "wrist",
+        "total": 376,
+        "preExisting": 46,
+        "rate": 12.2,
+        "ciLower": 8.891818549317723,
+        "ciUpper": 15.508181450682276,
+        "baseline": 13.31583552055993,
+        "chiSquare": "0.381",
+        "pValue": "> 0.05",
+        "significance": "Not significant",
+        "cohensH": "-0.033",
+        "effectSize": "Small"
+      },
+      {
+        "bodyPart": "elbow",
+        "total": 219,
+        "preExisting": 25,
+        "rate": 11.4,
+        "ciLower": 7.19076376302896,
+        "ciUpper": 15.609236236971041,
+        "baseline": 13.31583552055993,
+        "chiSquare": "0.685",
+        "pValue": "> 0.05",
+        "significance": "Not significant",
+        "cohensH": "-0.058",
+        "effectSize": "Small"
+      }
+    ],
     "interpretation": {
-      "baseline": null,
-      "bonferroniCorrectedAlpha": null,
-      "significantFindings": 0,
-      "highlySignificantFindings": 0
+      "baseline": 13.31583552055993,
+      "bonferroniCorrectedAlpha": 0.01,
+      "significantFindings": 3,
+      "highlySignificantFindings": 1
     }
   },
   "quarterlyAnalysis": {

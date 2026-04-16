@@ -289,3 +289,14 @@ Sincerely,
 ---
 
 *Based on 96 successful pre-existing condition cases from WSIAT*
+
+## Important Disclaimers
+
+**Success Rate Unknown:** These templates reflect successful legal arguments from past WSIAT decisions, but we don't yet track how often users following these templates win their appeals. Outcome tracking is planned for future app updates.
+
+**Not Legal Advice:** This is an educational resource based on publicly available tribunal decisions. Always consult a lawyer or paralegal for advice specific to your case.
+
+**Free legal resources in Thunder Bay:**
+- Community Legal Assistance (807-622-7022)
+- Legal Aid Ontario (1-800-668-8258)
+- Ontario Injured Workers Advocates (807-344-2104)

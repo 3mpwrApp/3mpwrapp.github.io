@@ -66,9 +66,11 @@ permalink: /templates/
 
 ---
 
-## Not Legal Advice
+## Important Disclaimers
 
-These are educational resources based on publicly available tribunal decisions. Always consult a lawyer or paralegal for advice specific to your case.
+**Success Rate Unknown:** These templates reflect successful legal arguments from past WSIAT decisions, but we don't yet track how often users following these templates win their appeals. Outcome tracking is planned for future app updates.
+
+**Not Legal Advice:** These are educational resources based on publicly available tribunal decisions. Always consult a lawyer or paralegal for advice specific to your case.
 
 **Free legal resources in Thunder Bay:**
 - Community Legal Assistance (807-622-7022)

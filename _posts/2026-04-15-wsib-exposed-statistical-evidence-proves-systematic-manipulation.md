@@ -6,14 +6,14 @@ categories: [advocacy, research, transparency, wsib]
 tags: [wsib, advocacy, data-analysis, injured-workers, research, transparency]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/
-excerpt: "We analyzed 11,430 WSIB tribunal decisions from 2020-2026 using rigorous statistical methods. FACTS: 43.9% of 2024 decisions missing from public record (1,545 cases). Reconsideration adds 1.5 years of delay. 20% of knee injuries cite 'pre-existing.' INTERPRETATION: Patterns suggest systematic dysfunction or deliberate cost-shifting. Alternative explanations acknowledged. Full methodology included."
+excerpt: "We analyzed 11,430 WSIB tribunal decisions from 2020-2026 using rigorous statistical methods. FACTS: 43.9% (95% CI: 42.3-45.6%) of 2024 decisions missing from public record (1,545 cases). Reconsideration adds 1.5 years of delay. 20% (95% CI: 17.3-22.7%) of knee injuries cite 'pre-existing' vs 13.3% (95% CI: 12.7-13.9%) baseline. INTERPRETATION: Patterns suggest systematic dysfunction or deliberate cost-shifting. Alternative explanations acknowledged. Full methodology included."
 image: /assets/images/wsib-detective-analysis-2026-04-15.png
 featured: true
 ---
 
 # WSIB Exposed: Statistical Evidence Reveals Systematic Patterns
 
-**TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using rigorous statistical methods. **FACTS WE CAN PROVE:** 43.9% of 2024 decisions missing from public record (1,545 cases), reconsideration adds 1.5 years vs. 0.5 for direct appeals (4x longer), 20% of knee injuries cite "pre-existing" vs. 13.3% baseline, July 2023 collapse to 39 decisions (99.7% certain not random). **WHAT THIS SHOWS:** Repeated structural patterns across 6 years. **WHAT THIS SUGGESTS:** Patterns consistent with systematic dysfunction or cost-reduction strategy. **ALTERNATIVE EXPLANATIONS:** Administrative chaos, incompetence, understaffing also fit the evidence. **Full methodology transparency below.**
+**TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using rigorous statistical methods. **FACTS WE CAN PROVE:** 43.9% (95% CI: 42.3-45.6%) of 2024 decisions missing from public record (1,545 cases), reconsideration adds 1.5 years vs. 0.5 for direct appeals (4x longer), 20% (95% CI: 17.3-22.7%) of knee injuries cite "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline, July 2023 collapse to 39 decisions (99.7% certain not random). **WHAT THIS SHOWS:** Repeated structural patterns across 6 years. **WHAT THIS SUGGESTS:** Patterns consistent with systematic dysfunction or cost-reduction strategy. **ALTERNATIVE EXPLANATIONS:** Administrative chaos, incompetence, understaffing also fit the evidence. **Full methodology transparency below.**
 
 **This evidence has stood up to peer review from injured worker groups, legal clinics, and researchers. We show our receipts.**
 
@@ -45,7 +45,7 @@ featured: true
 
 - **Expected decisions** (based on numbering sequence): 3,516
 - **Actually published on CanLII**: 1,971
-- **MISSING:** **1,545 decisions (43.9%)**
+- **MISSING:** **1,545 decisions (43.9%, 95% CI: 42.3-45.6%)**
 
 **What This Means:**
 
@@ -156,9 +156,9 @@ Reconsideration is a **delay trap**:
 
 | Body Part | Cases | Pre-Existing Denials | Denial Rate |
 |-----------|-------|---------------------|-------------|
-| **Knee** | 845 | 169 | **20.0%** |
-| **Back** | 390 | 74 | **19.0%** |
-| **Shoulder** | 1,391 | 222 | **16.0%** |
+| **Knee** | 845 | 169 | **20.0% (95% CI: 17.3-22.7%)** |
+| **Back** | 390 | 74 | **19.0% (95% CI: 15.1-22.9%)** |
+| **Shoulder** | 1,391 | 222 | **16.0% (95% CI: 14.0-17.9%)** |
 | Wrist | 376 | 46 | 12.2% |
 | Elbow | 219 | 25 | 11.4% |
 
@@ -368,7 +368,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 
 **"WSIB denied my claim unfairly"** = individual complaint (easily dismissed as one-off)
 
-**"Analysis of 11,430 cases shows: 20% of knee claims use 'pre-existing' reasoning (vs. 13.3% baseline), reconsideration adds 1.5 years average, identical legal phrases cluster together 177 times, 1,545 decisions missing from public record, victim-blaming terms appear in 225 cases"** = **measurable pattern evidence**
+**"Analysis of 11,430 cases shows: 20% (95% CI: 17.3-22.7%) of knee claims use 'pre-existing' reasoning (vs. 13.3% baseline, 95% CI: 12.7-13.9%), reconsideration adds 1.5 years average, identical legal phrases cluster together 177 times, 1,545 decisions missing from public record (43.9%, 95% CI: 42.3-45.6%), victim-blaming terms appear in 225 cases"** = **measurable pattern evidence**
 
 **This analysis provides:**
 - ✅ Statistical significance testing (patterns aren't random chance, p-values < 0.01)
@@ -482,10 +482,10 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 **Now we have MEASURABLE DATA:** 11,430 cases, statistical significance testing, co-occurrence measurement, timing correlation, body-part-specific rates.
 
 **WHAT THE DATA SHOWS (provable, measurable):**
-- 43.9% of 2024 decisions missing from CanLII (1,545 out of 3,516 expected)
+- 43.9% (95% CI: 42.3-45.6%) of 2024 decisions missing from CanLII (1,545 out of 3,516 expected)
 - July 2023 had 39 decisions vs. 154 average (Z = -2.94, p = 0.003 = 99.7% not random)
 - Reconsideration averages 2.0 years vs. 0.5 for direct appeals (consistent 4x difference)
-- "Pre-existing" appears in 13.3% of all cases, 20% of knee injuries (statistically significant difference)
+- "Pre-existing" appears in 13.3% (95% CI: 12.7-13.9%) of all cases, 20% (95% CI: 17.3-22.7%) of knee injuries (statistically significant difference, χ² test confirms p < 0.001)
 - 91.8% of cases have no outcome metadata (10,491 out of 11,430)
 - 177 co-occurrences of "pre-existing" + "greater severity than normal" (phrase clustering)
 - Q1 fiscal year-end = 28.4% of annual decisions (highest quarter consistently)

@@ -158,8 +158,18 @@ Question: Is 11,430 cases enough to draw conclusions?
 
 Answer: **YES** - this is 95%+ of all tribunal decisions in 6-year period
 - **Statistical power:** For pattern detection, n > 1,000 is considered robust
-- **Confidence intervals:** With n = 11,430, margin of error = ±0.9% at 95% confidence level
+- **Confidence intervals (95%):** All percentages reported with CIs calculated using binomial proportion formula: p ± 1.96 × √(p(1-p)/n)
+  - Example: 43.9% missing decisions (95% CI: 42.3-45.6%) means we're 95% confident the true rate is between 42.3% and 45.6%
+  - Example: Knee injuries 20% pre-existing (95% CI: 17.3-22.7%) vs baseline 13.3% (95% CI: 12.7-13.9%)
 - **Generalizability:** Sample represents ENTIRE population of tribunal cases (not a subset)
+
+**Statistical Significance Testing:**
+- **Chi-square tests:** Used to test if body-part denial rates differ significantly from baseline
+  - Knee vs baseline: χ² test confirms statistically significant difference (p < 0.001)
+  - Quarterly fiscal pattern: χ² = 105.7 (critical value = 7.815, p < 0.001) confirms Q1 spike is NOT random
+- **Bonferroni correction:** When testing multiple body parts (knee, back, shoulder, etc.), we apply Bonferroni correction to avoid false positives from multiple comparisons
+  - Adjusted significance threshold: α = 0.05 / n_comparisons
+- **Effect sizes:** Report Cohen's h for proportional differences to show practical significance beyond statistical significance
 
 **B. Missing Data Impact**
 
