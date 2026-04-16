@@ -1,3 +1,12 @@
+---
+layout: default
+title: Shoulder Injury Appeal Template - Free WSIB Appeal Letter
+description: Fill-in-the-blank appeal template for WSIB shoulder injury denials. Addresses gradual onset, pre-existing degeneration, and occupational disease arguments. Based on 1,391 shoulder cases.
+permalink: /templates/shoulder-injury-appeal/
+categories: [templates, wsib, appeals]
+tags: [shoulder, rotator-cuff, appeal-template, wsib-denial]
+---
+
 # Shoulder Injury Appeal Template
 
 **USE THIS TEMPLATE TO APPEAL WSIB DENIAL OF SHOULDER INJURY CLAIM**

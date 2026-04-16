@@ -183,14 +183,14 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
     <div>
-      <h4 style="margin: 0 0 0.5rem; color: #667eea;">📄 Featured Templates (Coming to Site Soon)</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #667eea;">📄 Featured Templates (Live Now!)</h4>
       <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem;">
-        <li><a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/templates/shoulder-injury-appeal.md">Shoulder Injury Appeal</a></li>
-        <li><a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/templates/knee-injury-appeal.md">Knee Injury Appeal</a></li>
-        <li><a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/templates/mental-health-ptsd-appeal.md">Mental Health / PTSD Appeal</a></li>
+        <li><a href="/templates/shoulder-injury-appeal/">Shoulder Injury Appeal</a></li>
+        <li><a href="/templates/knee-injury-appeal/">Knee Injury Appeal</a></li>
+        <li><a href="/templates/mental-health-ptsd-appeal/">Mental Health / PTSD Appeal</a></li>
       </ul>
       <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #666;">
-        <em>View on GitHub · Download as markdown · Customize for your case</em>
+        <em>Professional-grade fill-in-the-blank templates · Addresses all common denials · Free to use</em>
       </p>
     </div>
     <div>

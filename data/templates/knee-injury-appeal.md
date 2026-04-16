@@ -1,3 +1,12 @@
+---
+layout: default
+title: Knee Injury Appeal Template - Free WSIB Appeal Letter
+description: Fill-in-the-blank appeal template for WSIB knee injury denials. Addresses pre-existing osteoarthritis, degenerative meniscus, and Kriz framework. Professional legal arguments.
+permalink: /templates/knee-injury-appeal/
+categories: [templates, wsib, appeals]
+tags: [knee, meniscus, osteoarthritis, appeal-template, wsib-denial]
+---
+
 # Knee Injury Appeal Template
 
 **USE THIS TEMPLATE TO APPEAL WSIB DENIAL OF KNEE INJURY CLAIM**
