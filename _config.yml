@@ -10,6 +10,7 @@ theme: minima
 # Header pages (navigation in specific order)
 header_pages:
   - about.md
+  - research.md
   - accessibility.md
   - security.md
   - privacy.md
