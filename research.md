@@ -215,31 +215,31 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #667eea;">
       <strong style="color: #667eea;">🦴 Musculoskeletal</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
-        <li><a href="/knowledge-base/shoulder-rotator-cuff-claims/">Shoulder & Rotator Cuff</a></li>
-        <li><a href="/knowledge-base/knee-injury-claims/">Knee Injuries</a></li>
         <li><a href="/knowledge-base/low-back-pain-claims/">Low Back Pain</a></li>
-        <li><a href="/knowledge-base/neck-whiplash-claims/">Neck & Whiplash</a></li>
-        <li><a href="/knowledge-base/hip-injury-claims/">Hip Injuries</a></li>
-        <li><a href="/knowledge-base/ankle-injury-claims/">Ankle Injuries</a></li>
+        <li><span style="color: #999;">Shoulder & Rotator Cuff (Coming Soon)</span></li>
+        <li><span style="color: #999;">Knee Injuries (Coming Soon)</span></li>
+        <li><span style="color: #999;">Neck & Whiplash (Coming Soon)</span></li>
+        <li><span style="color: #999;">Hip Injuries (Coming Soon)</span></li>
+        <li><span style="color: #999;">Ankle Injuries (Coming Soon)</span></li>
       </ul>
     </div>
     
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #764ba2;">
       <strong style="color: #764ba2;">✋ Upper Extremity</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
-        <li><a href="/knowledge-base/wrist-carpal-tunnel-claims/">Wrist & Carpal Tunnel</a></li>
-        <li><a href="/knowledge-base/elbow-epicondylitis-claims/">Elbow & Epicondylitis</a></li>
-        <li><a href="/knowledge-base/hand-finger-claims/">Hand & Finger Injuries</a></li>
+        <li><span style="color: #999;">Wrist & Carpal Tunnel (Coming Soon)</span></li>
+        <li><span style="color: #999;">Elbow & Epicondylitis (Coming Soon)</span></li>
+        <li><span style="color: #999;">Hand & Finger Injuries (Coming Soon)</span></li>
       </ul>
     </div>
     
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #d32f2f;">
       <strong style="color: #d32f2f;">🧠 Neurological & Mental Health</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
-        <li><a href="/knowledge-base/concussion-tbi-claims/">Concussion & TBI</a></li>
         <li><a href="/knowledge-base/psychotraumatic-disability/">PTSD & Psychotraumatic Disability</a></li>
         <li><a href="/knowledge-base/chronic-pain-claims/">Chronic Pain</a></li>
         <li><a href="/knowledge-base/fibromyalgia-claims/">Fibromyalgia</a></li>
+        <li><span style="color: #999;">Concussion & TBI (Coming Soon)</span></li>
       </ul>
     </div>
     
@@ -248,7 +248,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/knowledge-base/pre-existing-conditions/">Countering Pre-Existing Denials</a></li>
         <li><a href="/knowledge-base/permanent-impairment-rating/">Maximizing NEL Benefits</a></li>
-        <li><a href="/knowledge-base/hearing-loss-claims/">Hearing Loss & Occupational Disease</a></li>
+        <li><span style="color: #999;">Hearing Loss & Occupational Disease (Coming Soon)</span></li>
       </ul>
     </div>
     
@@ -286,19 +286,19 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
     <div>
       <h4 style="margin: 0 0 0.5rem; color: #667eea;">📄 Featured Templates (Live Now!)</h4>
       <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem;">
-        <li><a href="/templates/shoulder-injury-appeal/">Shoulder Injury Appeal</a></li>
-        <li><a href="/templates/knee-injury-appeal/">Knee Injury Appeal</a></li>
-        <li><a href="/templates/mental-health-ptsd-appeal/">Mental Health / PTSD Appeal</a></li>
+        <li><a href="/templates/back-injury-appeal/">Back Injury Appeal</a></li>
+        <li><a href="/templates/chronic-pain-appeal/">Chronic Pain Appeal</a></li>
+        <li><a href="/templates/pre-existing-appeal/">Pre-Existing Condition Appeal</a></li>
       </ul>
       <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #666;">
         <em>Professional-grade fill-in-the-blank templates · Addresses all common denials · Free to use</em>
       </p>
     </div>
     <div>
-      <h4 style="margin: 0 0 0.5rem; color: #764ba2;">🔜 50+ More Templates</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #764ba2;">🔜 50+ More Templates Coming Soon</h4>
       <p style="margin: 0; font-size: 0.9rem; color: #666;">
-        Back pain, carpal tunnel, chronic pain, concussion, fibromyalgia, hearing loss, 
-        herniated disc, impairment rating, neck injury, PTSD, respiratory, rotator cuff, 
+        Shoulder, knee, mental health/PTSD, carpal tunnel, concussion, fibromyalgia, hearing loss, 
+        herniated disc, impairment rating, neck injury, respiratory, rotator cuff, 
         strain/sprain, tendinitis, and more...
       </p>
       <p style="margin: 0.5rem 0 0; font-size: 0.85rem;">
@@ -392,21 +392,21 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
     <span class="tool-badge" style="background: #005a00;">Ontario</span>
   </div>
   
-  <h3 style="margin-top: 0; font-size: 1.8rem;">Interactive Network Graph: WSIB Denial Tactics</h3>
+  <h3 style="margin-top: 0; font-size: 1.8rem;">🔗 Connecting the Dots: CanLII Keyword Network</h3>
   
   <p style="font-size: 1.1rem; color: #555;">
-    Explore 11,430+ tribunal decisions from Ontario's WSIAT (2020-2026). Interactive D3.js network visualization 
-    revealing systematic denial patterns, keyword co-occurrence, and the hidden language WSIB uses to reject injured workers.
+    Explore 11,430+ tribunal decisions from CanLII's ONWSIAT database (2020-2026). Interactive D3.js network visualization 
+    showing keyword co-occurrence patterns, repeated reasoning phrases, and statistical clustering across thousands of cases.
   </p>
   
   <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
     <strong>Features:</strong>
     <ul style="margin: 0.5rem 0 0 1.5rem;">
-      <li>Interactive force-directed graph with 300+ keywords</li>
-      <li>Co-occurrence analysis (which denial tactics appear together)</li>
-      <li>Filtering by keyword frequency and connection strength</li>
-      <li>Case citation links for every keyword pattern</li>
-      <li>Export-ready visualizations</li>
+      <li>Interactive force-directed graph with 300+ keywords from CanLII data</li>
+      <li>Co-occurrence analysis (which keywords appear together in tribunal decisions)</li>
+      <li>Filtering by keyword frequency and statistical connection strength</li>
+      <li>Case citation links for every keyword cluster</li>
+      <li>Export-ready visualizations for research use</li>
     </ul>
   </div>
   
@@ -498,16 +498,16 @@ These are not blog opinions—these are peer-reviewed, evidence-based discoverie
     <span class="tool-badge" style="background: #f57c00;">Top 100 Keywords</span>
   </div>
   
-  <h3 style="margin-top: 0;">Decoding WSIB's Playbook: What Your Denial Letter REALLY Means</h3>
+  <h3 style="margin-top: 0;">Understanding WSIB Keyword Patterns in Denial Decisions</h3>
   
   <p style="font-size: 1.05rem; line-height: 1.7;">
-    WSIB doesn't say "we're rejecting you to save money." They use <strong>coded language</strong>: "pre-existing degenerative condition," 
+    WSIB denial letters use technical legal phrases: "pre-existing degenerative condition," 
     "no greater severity than normal," "psychotraumatic disability not established." We extracted <strong>every keyword from 11,430 cases</strong> 
-    to decode what they're REALLY saying.
+    to identify patterns in this language.
   </p>
   
   <div style="background: #fce4ec; border-left: 4px solid #c2185b; padding: 1.5rem; margin: 1.5rem 0; border-radius: 4px;">
-    <h4 style="margin: 0 0 1rem; color: #880e4f;">TOP DENIAL TACTIC KEYWORDS:</h4>
+    <h4 style="margin: 0 0 1rem; color: #880e4f;">MOST FREQUENT DENIAL REASONING KEYWORDS:</h4>
     <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem;">
       <thead>
         <tr style="background: #f8bbd0; color: #880e4f;">
@@ -522,7 +522,7 @@ These are not blog opinions—these are peer-reviewed, evidence-based discoverie
           <td style="padding: 0.75rem; border: 1px solid #f8bbd0;"><strong>"Pre-existing condition"</strong></td>
           <td style="padding: 0.75rem; text-align: right; border: 1px solid #f8bbd0;">1,522</td>
           <td style="padding: 0.75rem; text-align: right; border: 1px solid #f8bbd0;">13.3%</td>
-          <td style="padding: 0.75rem; border: 1px solid #f8bbd0;"><strong>#1 DENIAL TACTIC</strong> - Blame your body, not workplace</td>
+          <td style="padding: 0.75rem; border: 1px solid #f8bbd0;">Common denial reasoning pattern - questions workplace causation when prior medical history exists</td>
         </tr>
         <tr style="background: #fce4ec;">
           <td style="padding: 0.75rem; border: 1px solid #f8bbd0;"><strong>"Impairment"</strong></td>
@@ -540,19 +540,38 @@ These are not blog opinions—these are peer-reviewed, evidence-based discoverie
           <td style="padding: 0.75rem; border: 1px solid #f8bbd0;"><strong>"Obesity"</strong></td>
           <td style="padding: 0.75rem; text-align: right; border: 1px solid #f8bbd0;">27</td>
           <td style="padding: 0.75rem; text-align: right; border: 1px solid #f8bbd0;">0.24%</td>
-          <td style="padding: 0.75rem; border: 1px solid #f8bbd0;">Victim-blaming: joint injuries blamed on weight, not job</td>
+          <td style="padding: 0.75rem; border: 1px solid #f8bbd0;">Pre-existing condition argument - appears in 27 cases where weight cited as contributing factor for musculoskeletal injuries</td>
         </tr>
         <tr style="background: white;">
           <td style="padding: 0.75rem; border: 1px solid #f8bbd0;"><strong>"Smoking"</strong></td>
           <td style="padding: 0.75rem; text-align: right; border: 1px solid #f8bbd0;">62</td>
           <td style="padding: 0.75rem; text-align: right; border: 1px solid #f8bbd0;">0.54%</td>
-          <td style="padding: 0.75rem; border: 1px solid #f8bbd0;">Victim-blaming: lung disease blamed on personal choice, not asbestos</td>
+          <td style="padding: 0.75rem; border: 1px solid #f8bbd0;">Historical exposure cited - appears in respiratory disease claims where smoking history used to question workplace causation</td>
         </tr>
       </tbody>
     </table>
   </div>
   
   <div style="background: #e3f2fd; border-left: 4px solid #1976d2; padding: 1.5rem; margin: 1.5rem 0; border-radius: 4px;">
+    <h4 style="margin: 0 0 1rem; color: #0d47a1;">📊 WHAT YOU'RE SEEING:</h4>
+    <p style="margin: 0 0 0.75rem; line-height: 1.7;">
+      Keyword frequency analysis across 11,430 tribunal decisions shows certain terms appear repeatedly. "Pre-existing" appears in 13.3% of all cases (1,522 decisions), "impairment" in 7.2% (818 cases), "psychotraumatic disability" in 5.3% (611 cases).
+    </p>
+    
+    <h4 style="margin: 1.5rem 0 0.5rem; color: #0d47a1;">💡 WHY IT MATTERS FOR WORKERS:</h4>
+    <p style="margin: 0 0 0.75rem; line-height: 1.7;">
+      Recognizing these patterns helps you: (1) Identify which reasoning patterns your denial uses, (2) Find counter-strategies from successful appeals, (3) Use statistical evidence ("1 in 7 cases face pre-existing reasoning"), (4) Search knowledge base for specific responses.
+    </p>
+    
+    <h4 style="margin: 1.5rem 0 0.5rem; color: #0d47a1;">🔍 WHAT THIS SUGGESTS (NOT PROVES):</h4>
+    <p style="margin: 0; line-height: 1.7;">
+      <strong>Shows:</strong> Repeated language patterns across thousands of decisions.<br>
+      <strong>Suggests:</strong> May indicate standardized legal reasoning, common training materials, or widespread application of legal precedents.<br>
+      <strong>Cannot prove:</strong> Coordinated strategy between adjudicators (repetition could result from independent similar reasoning).
+    </p>
+  </div>
+  
+  <div style="background: #e8f5e9; border-left: 4px solid #388e3c; padding: 1.5rem; margin: 1.5rem 0; border-radius: 4px;">
     <h4 style="margin: 0 0 1rem; color: #0d47a1;">HOW TO USE THIS DECODER:</h4>
     <ol style="margin: 0 0 0 1.5rem; line-height: 1.8;">
       <li><strong>Read your denial letter:</strong> Identify which keywords appear (pre-existing? impairment? smoking?)</li>
