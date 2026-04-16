@@ -19,6 +19,31 @@ featured: true
 
 ---
 
+## 📖 Statistical Terms Explained (No Math Degree Required)
+
+You'll see these terms throughout this investigation. Here's what they mean in plain English:
+
+**95% CI (Confidence Interval):** Think of this as a "margin of error." When we say "43.9% (95% CI: 42.3-45.6%)", it means: "We're 95% confident the true number is somewhere between 42.3% and 45.6%." Narrower ranges = more precise.
+
+**χ² (Chi-Square Test):** A math test that answers: "Is this pattern random, or is something causing it?" Higher χ² numbers = less likely to be random. We compare our number to a "critical value" (like a passing grade). If χ² is bigger than the critical value, the pattern is NOT random.
+- **Example:** Knee bias χ² = 32.7 vs. critical value = 6.6 → Pattern is NOT random (knee injuries ARE being treated differently)
+
+**p-value (Probability Value):** The chance this happened randomly. Lower = more certain it's NOT random.
+- **p < 0.001** = Less than 1 in 1,000 chance it's random (99.9% certain it's a real pattern)
+- **p < 0.01** = Less than 1 in 100 chance (99% certain)
+- **p < 0.05** = Less than 1 in 20 chance (95% certain) ← Scientists' usual threshold
+
+**Z-score / Standard Deviation (σ):** How "weird" a number is compared to normal.
+- **Z = -2.0** means "2 standard deviations below average" = Very unusual (only happens 2.3% of the time)
+- **Z = -3.0** means "3 standard deviations below average" = Extremely unusual (only happens 0.3% of the time)
+- **Example:** July 2023 had 39 decisions vs. 154 average (Z = -2.94) → 99.7% certain NOT normal
+
+**Baseline Rate:** The normal/average percentage across ALL cases. We compare specific groups (like knee injuries) to this baseline to see if they're treated differently.
+
+**🎯 Bottom Line:** These numbers prove patterns are real, not coincidence. When you see "p < 0.001" or "χ² = 32.7", it means: "This is NOT random chance—something systematic is happening."
+
+---
+
 ## What We Did (Plain English)
 
 **Challenge:** WSIB denies thousands of claims, but how do you prove it's a pattern (not just bad luck)?

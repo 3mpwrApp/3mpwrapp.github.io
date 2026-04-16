@@ -31,6 +31,20 @@ Instead, they say:
 
 After analyzing every word in 11,430 tribunal decisions from 2020-2026, we've identified measurable patterns. Here's what the data shows about these repeated phrases—and how to respond.
 
+---
+
+## 📖 Quick Stats Guide: Understanding Our Analysis
+
+**95% CI (Confidence Interval):** A "margin of error." When we say "13.3% (95% CI: 12.7-13.9%)", we're 95% confident the true number is between 12.7% and 13.9%.
+
+**Co-occurrence (Lift):** How often two keywords appear together vs. random chance. Example: "obesity" + "pre-existing" have Lift = 2.27, meaning they appear together 127% MORE than random (shows these denials cluster).
+
+**p < 0.01:** Less than 1 in 100 chance this pattern is random = 99% certain it's a real pattern, not coincidence.
+
+**Baseline Rate:** The normal/average percentage across ALL cases (e.g., 13.3% have "pre-existing"). We compare specific injury types to this baseline to detect bias (e.g., knee 20% vs. baseline 13.3% = systematic targeting).
+
+---
+
 **What This Analysis Shows vs. Suggests:**
 - **Shows (provable):** Certain keywords appear together more often than random chance would predict
 - **Suggests (interpretation):** May indicate template-based decision-making or widespread training practices

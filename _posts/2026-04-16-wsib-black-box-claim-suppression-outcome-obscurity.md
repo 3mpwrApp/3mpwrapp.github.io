@@ -19,6 +19,18 @@ featured: true
 
 ---
 
+## 📊 Quick Stats Guide: Understanding the Numbers
+
+**95% CI (Confidence Interval):** A "margin of error." When we say "13.3% (95% CI: 12.7-13.9%)", it means we're 95% confident the true number is between 12.7% and 13.9%. Narrower ranges = more precise.
+
+**📊 = MEASURED:** We counted this directly from the data (e.g., 11,430 tribunal decisions, 91.8% missing outcomes).
+
+**🧮 = ESTIMATED:** We calculated this using peer-reviewed research rates applied to Ontario's population (e.g., 1.14-2.29M suppressed workers based on IWH research).
+
+**Why ranges?** The 1.14-2.29 million range shows uncertainty (15-50% suppression rates from research). **BUT:** Even the low end (1.14M) is a humanitarian crisis.
+
+---
+
 ## The Dark Funnel: From 2 Million Injuries to 11,430 Tribunal Decisions
 
 ### The Suppression Pyramid

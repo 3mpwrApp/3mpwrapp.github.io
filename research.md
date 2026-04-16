@@ -188,6 +188,35 @@ description: Interactive data visualizations and research tools analyzing tribun
   </div>
 </div>
 
+<!-- Statistical Terms Glossary Box -->
+<div style="background: #e3f2fd; border-left: 4px solid #1976d2; padding: 1.5rem; margin: 2rem 0; border-radius: 8px;">
+  <h3 style="margin: 0 0 1rem; color: #0d47a1;">📖 Understanding the Numbers (Plain English Guide)</h3>
+  <p style="margin: 0 0 1rem; line-height: 1.7;">You'll see statistical terms like "95% CI", "χ²", and "p < 0.001" throughout our research. Here's what they mean:</p>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+    <div>
+      <strong style="color: #1976d2;">95% CI (Confidence Interval)</strong>
+      <p style="margin: 0.25rem 0 0; font-size: 0.95rem;">A "margin of error." When we say "20% (95% CI: 17.3-22.7%)", it means we're 95% confident the true number is between 17.3% and 22.7%. Narrower range = more precise measurement.</p>
+    </div>
+    <div>
+      <strong style="color: #1976d2;">χ² (Chi-Square Test)</strong>
+      <p style="margin: 0.25rem 0 0; font-size: 0.95rem;">Tests if a pattern is random or caused by something. Higher number = less likely to be random. Example: χ² = 32.7 vs. critical value = 6.6 means the pattern is NOT random.</p>
+    </div>
+    <div>
+      <strong style="color: #1976d2;">p-value</strong>
+      <p style="margin: 0.25rem 0 0; font-size: 0.95rem;">The chance this happened randomly. <strong>p < 0.001</strong> = less than 1 in 1,000 chance (99.9% certain it's real). <strong>p < 0.01</strong> = less than 1 in 100 chance (99% certain). Lower = more confident.</p>
+    </div>
+    <div>
+      <strong style="color: #1976d2;">Baseline Rate</strong>
+      <p style="margin: 0.25rem 0 0; font-size: 0.95rem;">The normal/average percentage across ALL cases. We compare specific injury types to this baseline to see if they're treated differently (e.g., knee 20% vs. baseline 13.3% = bias).</p>
+    </div>
+  </div>
+  
+  <p style="margin: 1rem 0 0; font-size: 0.9rem; font-style: italic; color: #0d47a1;">
+    <strong>🎯 Bottom Line:</strong> These numbers prove patterns are real, not coincidence. When you see "p < 0.001" or "χ² = 32.7", it means: "This is NOT random—something systematic is happening."
+  </p>
+</div>
+
 ---
 
 ## 📚 Knowledge Base & Resources
