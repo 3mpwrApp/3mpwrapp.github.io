@@ -107,6 +107,11 @@
           </a>
         </li>
         <li>
+          <a href="{{ lang_prefix | append: '/research' | relative_url }}" {% if page.url contains '/research' %}aria-current="page"{% endif %}>
+            {% if page.lang == 'fr' %}Recherche{% else %}Research{% endif %}
+          </a>
+        </li>
+        <li>
           <a href="{{ lang_prefix | append: '/features' | relative_url }}" {% if page.url contains '/features' %}aria-current="page"{% endif %}>
             {% if page.lang == 'fr' %}Fonctionnalités{% else %}Features{% endif %}
           </a>
