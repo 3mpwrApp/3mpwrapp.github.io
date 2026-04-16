@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Research & Data Tools - 3mpwrApp
+title: Research & Data Tools
+nav_title: Research
 description: Interactive data visualizations and research tools analyzing tribunal decisions, denial patterns, and workers' rights across Canada. Open source, transparent methodology.
 permalink: /research/
 ---
