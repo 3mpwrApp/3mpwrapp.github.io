@@ -1,10 +1,12 @@
 # Understanding Low Back Pain Claims at WSIB
 
-*Based on analysis of 194+ WSIAT decisions*
+> **⚠️ STATISTICAL ALERT:** Low back pain represents **390 cases (3.4%)** of all WSIB tribunal decisions (2020-2026). Analysis of 11,430 cases reveals systematic denial patterns, pre-existing condition abuse, and chronic pain dismissals.
+
+*Updated April 15, 2026 - Based on analysis of 11,430 ONWSIAT decisions (2020-2026)*
 
 ## Overview
 
-Low back pain is the **most common workplace injury** in Ontario WSIB claims, appearing in over 60% of disability appeals. This guide helps you understand how WSIAT evaluates these claims.
+Low back pain is one of the **most common workplace injuries** in Ontario WSIB claims. Our analysis of 390 tribunal cases shows how WSIB systematically denies these claims using "pre-existing degeneration," "chronic pain," and "insufficient objective evidence" arguments.
 
 ## Key Terminology from Decisions
 
