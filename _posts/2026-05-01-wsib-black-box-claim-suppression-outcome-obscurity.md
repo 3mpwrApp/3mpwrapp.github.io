@@ -591,8 +591,8 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
 **Previous 3mpwrApp Research:**
 - [WSIB Exposed: Statistical Evidence Proves Systematic Manipulation](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 8 smoking guns from 11,430 cases
 - [The Hidden Language of Denial: WSIB Keyword Decoder](https://3mpwrapp.pages.dev/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode your denial letter
-- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026-04-05-building-canadas-legal-database-from-cold-start/) - How we built this database
--[Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions/) - Worker education from data
+- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built this database
+- [Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/) - Worker education from data
 
 **Full Documentation:**
 - [WSIB System Analysis Complete 2020-2026](https://3mpwrapp.pages.dev/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026) - 45,000-word master document

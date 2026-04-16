@@ -485,13 +485,13 @@ That's what we're building. That's the mission.
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Building a Knowledge Base From Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions/)** - The results: 1,204 cases analyzed, 6 knowledge base articles, 3 appeal templates (complete transparency on process, failures, and pivots)
+📖 **[Building a Knowledge Base From Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/)** - The results: 1,204 cases analyzed, 6 knowledge base articles, 3 appeal templates (complete transparency on process, failures, and pivots)
 
 📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - The presentation that validated this approach with Thunder Bay's injured worker community
 
-📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026-04-02-community-what-3mpwr-means/)** - Why we're building this: the three pillars of Individual, Community, and Systemic change
+📖 **[What 3mpwr Means: The Philosophy Behind Our Name](https://3mpwrapp.pages.dev/blog/2026/04/02/community-what-3mpwr-means/)** - Why we're building this: the three pillars of Individual, Community, and Systemic change
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-the-power-of-3mpwrapp-how-were-building-different/)** - The technical deep dive on how the 3 flywheels work and why community knowledge compounds
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026/01/06/the-power-of-3mpwrapp-how-were-building-different/)** - The technical deep dive on how the 3 flywheels work and why community knowledge compounds
 
 ---
 

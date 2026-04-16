@@ -112,13 +112,13 @@ Every feature in 3mpwrApp maps to one (or more) of these pillars:
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Building a Knowledge Base From Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions/)** - See the philosophy in action: how we turned 1,204 tribunal cases into practical tools for injured workers
+📖 **[Building a Knowledge Base From Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/)** - See the philosophy in action: how we turned 1,204 tribunal cases into practical tools for injured workers
 
 📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The journey from zero to 1,500+ Ontario cases (transparency on successes and failures)
 
 📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/)** - How the three pillars become three flywheels: Evidence, Pattern Detection, and Collective Action working together
 
-📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026-01-06-the-power-of-3mpwrapp-how-were-building-different/)** - The technical implementation: why compounding community knowledge is our superpower
+📖 **[The Power of 3mpwrApp: How We're Building Different](https://3mpwrapp.pages.dev/blog/2026/01/06/the-power-of-3mpwrapp-how-were-building-different/)** - The technical implementation: why compounding community knowledge is our superpower
 
 ---
 

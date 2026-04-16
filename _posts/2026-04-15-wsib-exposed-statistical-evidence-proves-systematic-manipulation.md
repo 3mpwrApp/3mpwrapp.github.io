@@ -473,8 +473,8 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 ## Related Reading
 
 **Previous 3mpwrApp Research:**
-- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026-04-05-building-canadas-legal-database-from-cold-start/) - How we built the tribunal decision database
-- [Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions/) - Creating worker-friendly guides from legal data
+- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built the tribunal decision database
+- [Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/) - Creating worker-friendly guides from legal data
 - [3 Flywheels: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/) - Community impact and grassroots advocacy
 
 **Full Documentation:**

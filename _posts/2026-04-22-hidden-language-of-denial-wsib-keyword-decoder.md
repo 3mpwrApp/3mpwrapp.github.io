@@ -531,8 +531,8 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 
 **Previous 3mpwrApp Research:**
 - [WSIB Exposed: Statistical Evidence Proves Systematic Manipulation](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Full investigative report with 8 smoking guns
-- [Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026-04-08-building-knowledge-base-from-tribunal-decisions/) - How we built this database
-- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026-04-05-building-canadas-legal-database-from-cold-start/) - Our data collection methodology
+- [Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/) - How we built this database
+- [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Our data collection methodology
 
 **Full Documentation:**
 - [WSIB System Analysis Complete 2020-2026](https://3mpwrapp.pages.dev/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026) - 45,000-word master document with all findings
