@@ -33,7 +33,7 @@ featured: true
 
 **Result:** Eight smoking guns proving WSIB's dysfunction is **systematic manipulation**, not isolated mistakes.
 
-**Read the full 45,000-word master document:** [WSIB System Analysis Complete 2020-2026](/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026)
+**Read the full 45,000-word master document:** [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
 
 ---
 
@@ -393,7 +393,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 ### For Advocates & Lawyers:
 
 **1. Cite This Analysis:**
-- Full master document: [WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md](/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026)
+- Full master document: [WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
 - Use in legal briefs, tribunal appeals, class actions
 
 **2. FOIA Requests:**
@@ -425,12 +425,12 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 **Data Source:** 11,430 tribunal decisions from CanLII (Canada's free legal database)
 
 **Analysis Scripts (Open Source):**
-- [analyze-onwsiat-ultra-deep.js](https://github.com/S0vryn9-C011ect1ve/3mpwrapp/blob/main/scripts/analyze-onwsiat-ultra-deep.js) - Comprehensive extraction
-- [analyze-onwsiat-detective-mode.js](https://github.com/S0vryn9-C011ect1ve/3mpwrapp/blob/main/scripts/analyze-onwsiat-detective-mode.js) - Statistical anomaly detection
+- [analyze-onwsiat-ultra-deep.js](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/scripts/analyze-onwsiat-ultra-deep.js) - Comprehensive extraction
+- [analyze-onwsiat-detective-mode.js](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/scripts/analyze-onwsiat-detective-mode.js) - Statistical anomaly detection
 
 **Data Exports:**
-- [ONWSIAT-DETECTIVE-FINDINGS.json](https://github.com/S0vryn9-C011ect1ve/3mpwrapp/tree/main/data/tribunal-decisions/detective-analysis) - Raw anomaly results
-- [ONWSIAT-CO-OCCURRENCE.csv](https://github.com/S0vryn9-C011ect1ve/3mpwrapp/tree/main/data/tribunal-decisions/detective-analysis) - Network analysis data
+- [ONWSIAT-DETECTIVE-FINDINGS.json](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Raw anomaly results
+- [ONWSIAT-CO-OCCURRENCE.csv](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions/detective-analysis) - Network analysis data
 - [Interactive Network Visualization](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore co-occurrence patterns visually
 
 **If you're technical:** Run the scripts yourself. Audit our methodology. Find more patterns. **Pull requests welcome.**
@@ -478,7 +478,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 - [3 Flywheels: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/) - Community impact and grassroots advocacy
 
 **Full Documentation:**
-- [WSIB System Analysis Complete 2020-2026](/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026) - 45,000-word master document with all findings, legal context, historical analysis, and advocacy strategies
+- [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document with all findings, legal context, historical analysis, and advocacy strategies
 
 ---
 
@@ -550,7 +550,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 - **Email:** empowrapp08162025@gmail.com
 - **Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)
 - **Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)
-- **Full Master Document:** [WSIB System Analysis Complete 2020-2026](/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026)
+- **Full Master Document:** [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
 - **Interactive Visualization:** [WSIB Denial Network](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html)
 
 ---
