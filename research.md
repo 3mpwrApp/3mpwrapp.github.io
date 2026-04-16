@@ -6,6 +6,8 @@ permalink: /research/
 ---
 
 <style>
+  /* Research Page - Accessible Design for Light, Dark, and High Contrast Modes */
+  
   .research-hero {
     text-align: center;
     padding: 3rem 2rem;
@@ -14,19 +16,38 @@ permalink: /research/
     border-radius: 16px;
     margin-bottom: 3rem;
   }
+  
   .tool-card {
-    background: white;
+    background: #ffffff;
+    color: #111111;
     border: 2px solid #e0e0e0;
     border-radius: 12px;
     padding: 2rem;
     margin-bottom: 2rem;
     transition: all 0.3s;
   }
+  
+  .tool-card h3,
+  .tool-card h4 {
+    color: #111111;
+  }
+  
+  .tool-card p,
+  .tool-card li {
+    color: #333333;
+  }
+  
+  .tool-card a {
+    color: #0066CC;
+    text-decoration: underline;
+  }
+  
   .tool-card:hover {
     border-color: #667eea;
     box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
     transform: translateY(-2px);
   }
+  
   .tool-badge {
     display: inline-block;
     padding: 0.4rem 0.8rem;
@@ -38,25 +59,106 @@ permalink: /research/
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
   }
+  
   .tool-badge.coming-soon {
     background: #999;
+    color: white;
   }
+  
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
   }
+  
   .stat-box {
     text-align: center;
     padding: 1.5rem;
     background: rgba(255,255,255,0.1);
     border-radius: 8px;
+    color: white;
   }
+  
   .stat-number {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .category-box {
+    background: #f0f4f8;
+    color: #111111;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .category-box strong {
+    color: inherit;
+  }
+  
+  .category-box a {
+    color: #0066CC;
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .tool-card {
+      background: #1a1a1a;
+      color: #e0e0e0;
+      border-color: #444;
+    }
+    
+    .tool-card h3,
+    .tool-card h4 {
+      color: #ffffff;
+    }
+    
+    .tool-card p,
+    .tool-card li {
+      color: #d0d0d0;
+    }
+    
+    .tool-card a {
+      color: #4DB8FF;
+    }
+    
+    .tool-card:hover {
+      border-color: #667eea;
+      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+    }
+    
+    .category-box {
+      background: #2a2a2a;
+      color: #e0e0e0;
+    }
+    
+    .category-box a {
+      color: #4DB8FF;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: high) {
+    .tool-card {
+      border: 3px solid currentColor;
+    }
+    
+    .tool-badge {
+      border: 2px solid white;
+    }
+  }
+  
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .tool-card {
+      transition: none;
+    }
+    
+    .tool-card:hover {
+      transform: none;
+    }
   }
 </style>
 
@@ -111,7 +213,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
     
-    <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; border-left: 4px solid #667eea;">
+    <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #667eea;">
       <strong style="color: #667eea;">🦴 Musculoskeletal</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/knowledge-base/shoulder-rotator-cuff-claims/">Shoulder & Rotator Cuff</a></li>
@@ -123,7 +225,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
       </ul>
     </div>
     
-    <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; border-left: 4px solid #764ba2;">
+    <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #764ba2;">
       <strong style="color: #764ba2;">✋ Upper Extremity</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/knowledge-base/wrist-carpal-tunnel-claims/">Wrist & Carpal Tunnel</a></li>
@@ -132,7 +234,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
       </ul>
     </div>
     
-    <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; border-left: 4px solid #d32f2f;">
+    <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #d32f2f;">
       <strong style="color: #d32f2f;">🧠 Neurological & Mental Health</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/knowledge-base/concussion-tbi-claims/">Concussion & TBI</a></li>
@@ -142,7 +244,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
       </ul>
     </div>
     
-    <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; border-left: 4px solid #f57c00;">
+    <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #f57c00;">
       <strong style="color: #f57c00;">⚖️ Legal Strategies</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
         <li><a href="/knowledge-base/pre-existing-conditions/">Countering Pre-Existing Denials</a></li>
