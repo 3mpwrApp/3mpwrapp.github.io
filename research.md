@@ -87,6 +87,128 @@ permalink: /research/
   </div>
 </div>
 
+---
+
+## 📚 Knowledge Base & Resources
+
+All guides and templates below are **derived from analyzing 11,430+ tribunal decisions**. These are not generic advice—they're **evidence-based strategies** from actual winning cases.
+
+### Injury-Specific Guides (16 Comprehensive Articles)
+
+<div class="tool-card">
+  <div style="margin-bottom: 1rem;">
+    <span class="tool-badge">Live</span>
+    <span class="tool-badge" style="background: #005a00;">Free</span>
+    <span class="tool-badge" style="background: #5a189a;">Evidence-Based</span>
+  </div>
+  
+  <h3 style="margin-top: 0;">WSIB Claim Guides: What Actually Works</h3>
+  
+  <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">
+    Each guide analyzes hundreds of tribunal decisions to show you <strong>exactly what evidence wins claims</strong> 
+    for your specific injury type. No generic advice—these are patterns from real cases.
+  </p>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+    
+    <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; border-left: 4px solid #667eea;">
+      <strong style="color: #667eea;">🦴 Musculoskeletal</strong>
+      <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
+        <li><a href="/knowledge-base/shoulder-rotator-cuff-claims/">Shoulder & Rotator Cuff</a></li>
+        <li><a href="/knowledge-base/knee-injury-claims/">Knee Injuries</a></li>
+        <li><a href="/knowledge-base/low-back-pain-claims/">Low Back Pain</a></li>
+        <li><a href="/knowledge-base/neck-whiplash-claims/">Neck & Whiplash</a></li>
+        <li><a href="/knowledge-base/hip-injury-claims/">Hip Injuries</a></li>
+        <li><a href="/knowledge-base/ankle-injury-claims/">Ankle Injuries</a></li>
+      </ul>
+    </div>
+    
+    <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; border-left: 4px solid #764ba2;">
+      <strong style="color: #764ba2;">✋ Upper Extremity</strong>
+      <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
+        <li><a href="/knowledge-base/wrist-carpal-tunnel-claims/">Wrist & Carpal Tunnel</a></li>
+        <li><a href="/knowledge-base/elbow-epicondylitis-claims/">Elbow & Epicondylitis</a></li>
+        <li><a href="/knowledge-base/hand-finger-claims/">Hand & Finger Injuries</a></li>
+      </ul>
+    </div>
+    
+    <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; border-left: 4px solid #d32f2f;">
+      <strong style="color: #d32f2f;">🧠 Neurological & Mental Health</strong>
+      <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
+        <li><a href="/knowledge-base/concussion-tbi-claims/">Concussion & TBI</a></li>
+        <li><a href="/knowledge-base/psychotraumatic-disability/">PTSD & Psychotraumatic Disability</a></li>
+        <li><a href="/knowledge-base/chronic-pain-claims/">Chronic Pain</a></li>
+        <li><a href="/knowledge-base/fibromyalgia-claims/">Fibromyalgia</a></li>
+      </ul>
+    </div>
+    
+    <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; border-left: 4px solid #f57c00;">
+      <strong style="color: #f57c00;">⚖️ Legal Strategies</strong>
+      <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
+        <li><a href="/knowledge-base/pre-existing-conditions/">Countering Pre-Existing Denials</a></li>
+        <li><a href="/knowledge-base/permanent-impairment-rating/">Maximizing NEL Benefits</a></li>
+        <li><a href="/knowledge-base/hearing-loss-claims/">Hearing Loss & Occupational Disease</a></li>
+      </ul>
+    </div>
+    
+  </div>
+  
+  <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #666;">
+    <strong>Based on:</strong> 1,204 initial cases + 10,226 additional decisions = 11,430 total analyzed. 
+    <a href="/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/" style="color: #667eea;">Read how we built this →</a>
+  </p>
+</div>
+
+### Appeal Letter Templates (50+ Fill-in-the-Blank Letters)
+
+<div class="tool-card">
+  <div style="margin-bottom: 1rem;">
+    <span class="tool-badge">Live</span>
+    <span class="tool-badge" style="background: #005a00;">Free</span>
+    <span class="tool-badge" style="background: #5a189a;">Professional Quality</span>
+  </div>
+  
+  <h3 style="margin-top: 0;">Ready-to-Use Appeal Templates</h3>
+  
+  <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">
+    Professional appeal letters you can customize in 30 minutes. Each template includes:
+  </p>
+  
+  <ul style="margin: 0 0 1.5rem 1.5rem;">
+    <li><strong>Legal arguments from winning cases</strong> (exact language that worked)</li>
+    <li><strong>Medical evidence checklist</strong> (what documents to attach)</li>
+    <li><strong>Employer evidence pushback</strong> (how to counter their claims)</li>
+    <li><strong>Timeline walkthrough</strong> (step-by-step what happens next)</li>
+  </ul>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+    <div>
+      <h4 style="margin: 0 0 0.5rem; color: #667eea;">📄 Featured Templates (Coming to Site Soon)</h4>
+      <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem;">
+        <li><a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/templates/shoulder-injury-appeal.md">Shoulder Injury Appeal</a></li>
+        <li><a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/templates/knee-injury-appeal.md">Knee Injury Appeal</a></li>
+        <li><a href="https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/data/templates/mental-health-ptsd-appeal.md">Mental Health / PTSD Appeal</a></li>
+      </ul>
+      <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #666;">
+        <em>View on GitHub · Download as markdown · Customize for your case</em>
+      </p>
+    </div>
+    <div>
+      <h4 style="margin: 0 0 0.5rem; color: #764ba2;">🔜 50+ More Templates</h4>
+      <p style="margin: 0; font-size: 0.9rem; color: #666;">
+        Back pain, carpal tunnel, chronic pain, concussion, fibromyalgia, hearing loss, 
+        herniated disc, impairment rating, neck injury, PTSD, respiratory, rotator cuff, 
+        strain/sprain, tendinitis, and more...
+      </p>
+      <p style="margin: 0.5rem 0 0; font-size: 0.85rem;">
+        <em>Currently stored as structured JSON data. Being converted to user-friendly markdown templates.</em>
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
 ## 🚀 Live Tools
 
 ### WSIB Denial Network Visualization
