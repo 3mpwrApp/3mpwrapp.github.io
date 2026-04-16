@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The WSIB Black Box: Estimated 1.14-2.29 Million Injured Workers Suppressed (2020-2026) + 91.8% of Outcomes Hidden"
-date: 2026-05-01
+date: 2026-04-16
 categories: [advocacy, research, transparency, wsib, systemic-analysis]
 tags: [wsib, claim-suppression, outcome-obscurity, transparency, data-analysis, workers-rights]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance

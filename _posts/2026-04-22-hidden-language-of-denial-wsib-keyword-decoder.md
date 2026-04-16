@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Hidden Language of Denial: WSIB Keyword Patterns Revealed in 11,430 Cases"
-date: 2026-04-22
+date: 2026-04-16
 categories: [advocacy, research, transparency, wsib, workers-rights]
 tags: [wsib, denial-tactics, keyword-analysis, appeal-strategy, worker-empowerment]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
