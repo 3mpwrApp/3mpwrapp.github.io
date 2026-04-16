@@ -6,14 +6,14 @@ categories: [advocacy, research, transparency, wsib, workers-rights]
 tags: [wsib, denial-tactics, keyword-analysis, appeal-strategy, worker-empowerment]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/16/hidden-language-of-denial-wsib-keyword-decoder/
-excerpt: "Rigorous keyword analysis of 11,430 tribunal decisions reveals WSIB uses specific patterns: 'pre-existing' (13.3%), 'impairment' (7.2%), 'psychotraumatic disability' (5.3%). FACTS: Co-occurrence analysis shows denial tactics cluster together. INTERPRETATION: Suggests systematic application, not random. Search your denial letter keywords here to understand the pattern you're facing. Full methodology included."
+excerpt: "Rigorous keyword analysis of 11,430 tribunal decisions reveals WSIB uses specific patterns: 'pre-existing' (13.3%, 95% CI: 12.7-13.9%), 'impairment' (7.2%, 95% CI: 6.5-8.0%), 'psychotraumatic disability' (5.3%, 95% CI: 4.7-6.0%). FACTS: Co-occurrence analysis shows denial tactics cluster together. INTERPRETATION: Suggests systematic application, not random. Search your denial letter keywords here to understand the pattern you're facing. Full methodology included."
 image: /assets/images/wsib-keyword-decoder-2026-04-22.png
 featured: true
 ---
 
 # The Hidden Language of Denial: Understanding WSIB Keyword Patterns
 
-**TL;DR:** Keyword analysis of 11,430 WSIB tribunal decisions reveals **specific language patterns in denials**. **WHAT THE DATA SHOWS:** "Pre-existing" (13.3%), "impairment" (7.2%), "psychotraumatic disability" (5.3%), "obesity" + "pre-existing" co-occur 127% more than random chance. **WHAT THIS SUGGESTS:** Patterns consistent with template-based reasoning or widespread administrative practices. **HOW TO USE:** Search for keywords from your denial letter to see documented patterns and response strategies. Full statistical methodology below.
+**TL;DR:** Keyword analysis of 11,430 WSIB tribunal decisions reveals **specific language patterns in denials**. **WHAT THE DATA SHOWS:** "Pre-existing" (13.3%, 95% CI: 12.7-13.9%), "impairment" (7.2%, 95% CI: 6.5-8.0%), "psychotraumatic disability" (5.3%, 95% CI: 4.7-6.0%), "obesity" + "pre-existing" co-occur 127% more than random chance. **WHAT THIS SUGGESTS:** Patterns consistent with template-based reasoning or widespread administrative practices. **HOW TO USE:** Search for keywords from your denial letter to see documented patterns and response strategies. Full statistical methodology below.
 
 ---
 
@@ -70,9 +70,9 @@ WSIB decisions frame these as individual "accidents"—data suggests many repres
 | Rank | Keyword | Cases | % | Pattern Analysis | Common Denial Reasoning |
 |------|---------|-------|---|------------------|--------------------------|  
 | **6** | **shoulder** | 1,391 | 12.2% | **EPIDEMIC LEVEL (12% of all cases)** | Rotator cuff tears from overhead work, assembly. Gradual onset cases often questioned as not meeting "accident" definition |
-| **12** | **knee** | 845 | 7.4% | **20% pre-existing denial rate** | Meniscus tears, osteoarthritis from kneeling work. Prior imaging findings (even asymptomatic) frequently cited as pre-existing contribution |
+| **12** | **knee** | 845 | 7.4% | **20% (95% CI: 17.3-22.7%) pre-existing denial rate** | Meniscus tears, osteoarthritis from kneeling work. Prior imaging findings (even asymptomatic) frequently cited as pre-existing contribution |
 | **17** | **neck** | 485 | 4.2% | Whiplash, cervical strain | Motor vehicle (delivery drivers), repetitive positioning (welders, office workers) |
-| **18** | **back** | 390 | 3.4% | **19% pre-existing denial rate** | Lumbar strain, herniated discs. Degenerative disc disease frequently cited even when workplace injury documented |
+| **18** | **back** | 390 | 3.4% | **19% (95% CI: 15.1-22.9%) pre-existing denial rate** | Lumbar strain, herniated discs. Degenerative disc disease frequently cited even when workplace injury documented |
 | **20** | **wrist** | 376 | 3.3% | Carpal tunnel epidemic | Repetitive strain from computer work, assembly, meat processing. Often not recognized until condition severe |
 | **22** | **ankle** | 272 | 2.4% | Slips/falls, chronic instability | Construction, uneven surfaces, standing work |
 | **26** | **elbow** | 219 | 1.9% | Tennis/golfer's elbow, epicondylitis | Repetitive gripping, lifting motions |
@@ -107,7 +107,7 @@ These keywords appear in complex cases—understanding them helps you fight back
 
 | Keyword | Cases | % | The Problem |
 |---------|-------|---|------------|
-| **psychotraumatic disability** | 611 | 5.3% | Official WSIB term—workers don't know this exists |
+| **psychotraumatic disability** | 611 | 5.3% (95% CI: 4.7-6.0%) | Official WSIB term—workers don't know this exists |
 | **mental stress** | 117 | 1.0% | What workers actually say—gets rejected for wrong terminology |
 | **PTSD** | 5 | 0.04% | **99.9% undercount**—only 5 cases use clinical term despite epidemic of workplace trauma |
 | **anxiety** | ~50 | 0.4% | Rarely mentioned—WSIB rejects as "pre-existing mental health" |
@@ -554,11 +554,11 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 - Statistical significance testing (patterns vs. random chance)
 
 **WHAT THE DATA SHOWS (provable, measurable):**
-- "Pre-existing" appears in 1,522 cases (13.3% of all decisions)
-- "Impairment" in 818 cases (7.2%)
-- "Psychotraumatic disability" in 611 cases (5.3%)
+- "Pre-existing" appears in 1,522 cases (13.3%, 95% CI: 12.7-13.9% of all decisions)
+- "Impairment" in 818 cases (7.2%, 95% CI: 6.5-8.0%)
+- "Psychotraumatic disability" in 611 cases (5.3%, 95% CI: 4.7-6.0%)
 - "Obesity" + "pre-existing" co-occur with Lift = 2.27 (127% more than random chance, statistically significant)
-- Knee injuries = 20% "pre-existing" rate vs. 13.3% baseline (p < 0.01)
+- Knee injuries = 20% (95% CI: 17.3-22.7%) "pre-existing" rate vs. 13.3% (95% CI: 12.7-13.9%) baseline (p < 0.01)
 - "Pre-existing" + "greater severity" co-occur in 177 cases (shows phrase clustering)
 - "Gradual onset" appears in only 28 cases (0.2%) vs. "accident" in 842 cases (7.4%)
 

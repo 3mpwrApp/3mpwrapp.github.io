@@ -178,7 +178,7 @@ Of 11,430 tribunal decisions analyzed:
    - Frequent requests for "more information" (exhaustion tactic)
 
 5. **Denial Tactics:**
-   - Blame pre-existing conditions (13.3% of cases—see previous blog)
+   - Blame pre-existing conditions (13.3%, 95% CI: 12.7-13.9% of cases—see previous blog)
    - Demand "objective" proof of subjective conditions (chronic pain, mental health)
    - Weaponize legal thresholds (*Kriz*  "greater severity" test)
    - "Maximum medical recovery" claims (premature cutoffs)
@@ -614,7 +614,7 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
 ✅ 91.8% of tribunal cases (10,491) have NO outcome metadata in CanLII
 ✅ Only 1,905 tribunal decisions/year average (2020-2026)
 ✅ Reconsideration adds 1.5-2.0 years of delay (505 cases measured)
-✅ "Pre-existing" denial tactic in 13.3% of cases (1,522)
+✅ "Pre-existing" denial tactic in 13.3% (95% CI: 12.7-13.9%) of cases (1,522)
 
 **WHAT WE EXTRAPOLATE (from peer-reviewed research):**
 📊 **Institute for Work & Health (IWH) Research:**

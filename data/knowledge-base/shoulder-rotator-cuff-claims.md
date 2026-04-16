@@ -14,7 +14,7 @@ From our analysis of 11,430 ONWSIAT (Ontario Workplace Safety & Insurance Appeal
 - **#1 most litigated body part** (more than back, knee, or any other injury)
 - **Epidemic-level occupational disease:** Rotator cuff tears, impingement, tendinitis
 - **Primary denial pattern:** "Gradual onset, not a workplace accident" (ignoring occupational disease framework)
-- **Secondary denial pattern:** "Pre-existing degeneration due to aging" (13.3% of all cases use pre-existing arguments—shoulder cases overrepresented)
+- **Secondary denial pattern:** "Pre-existing degeneration due to aging" (13.3%, 95% CI: 12.7-13.9% of all cases use pre-existing arguments—shoulder cases overrepresented at 16%, 95% CI: 14.0-17.9%)
 
 **What This Means:**
 - For every 10 injured workers who reach tribunal, **1-2 have shoulder injuries**
@@ -611,7 +611,7 @@ A: **Limited options:**
 ## Related Resources
 
 **3mpwrApp Knowledge Base:**
-- [Pre-Existing Conditions: Countering WSIB's Favorite Denial](pre-existing-conditions.md) - 13.3% of cases use pre-existing arguments
+- [Pre-Existing Conditions: Countering WSIB's Favorite Denial](pre-existing-conditions.md) - 13.3% (95% CI: 12.7-13.9%) of cases use pre-existing arguments
 - [Chronic Pain Claims: Proving Subjective Conditions](chronic-pain-claims.md) - If shoulder injury leads to chronic pain
 - [Permanent Impairment Ratings: Maximizing NEL Benefits](permanent-impairment-rating.md) - If left with permanent disability
 - [Low Back Pain Claims](low-back-pain-claims.md) - Similar occupational disease strategies

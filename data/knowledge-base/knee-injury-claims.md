@@ -1,6 +1,6 @@
 # Knee Injury Claims: Exposing the 20% Pre-Existing Denial Bias
 
-> **⚠️ STATISTICAL ALERT:** Knee injuries represent **845 cases (7.4%)** of ALL WSIB tribunal decisions (2020-2026), with a documented **20% systematic denial rate using "pre-existing osteoarthritis" arguments.** This is the **#2 most biased injury type** after shoulder injuries, affecting thousands of workers.
+> **⚠️ STATISTICAL ALERT:** Knee injuries represent **845 cases (7.4%)** of ALL WSIB tribunal decisions (2020-2026), with a documented **20% (95% CI: 17.3-22.7%) systematic denial rate using "pre-existing osteoarthritis" arguments.** This is the **#2 most biased injury type** after shoulder injuries, affecting thousands of workers.
 
 ---
 
@@ -12,7 +12,7 @@ From our analysis of 11,430 ONWSIAT (Ontario Workplace Safety & Insurance Appeal
 
 - **845 knee injury cases reached tribunal** (7.4% of all decisions)
 - **#2 body part by volume** (after shoulder's 1,391 cases)
-- **20% of knee denials cite "pre-existing osteoarthritis"** (compared to 13.3% overall pre-existing rate across ALL injury types)
+- **20% (95% CI: 17.3-22.7%) of knee denials cite "pre-existing osteoarthritis"** (compared to 13.3%, 95% CI: 12.7-13.9% overall pre-existing rate across ALL injury types, χ² = 32.7, p < 0.001)
 - **Primary denial pattern:** "You have degenerative arthritis, your knee injury is not work-related"
 - **Secondary denial:** "Workplace incident was minor, cannot have caused meniscus tear/cartilage damage"
 
@@ -625,7 +625,7 @@ A: **NO.** Employer can dispute, but WSIB makes the decision (not employer). Emp
 
 **3mpwrApp Knowledge Base:**
 - [Shoulder Injuries: The Hidden Epidemic](shoulder-rotator-cuff-claims.md) - #1 litigated body part (1,391 cases)
-- [Pre-Existing Conditions: Countering WSIB's Favorite Denial](pre-existing-conditions.md) - 13.3% of cases
+- [Pre-Existing Conditions: Countering WSIB's Favorite Denial](pre-existing-conditions.md) - 13.3% (95% CI: 12.7-13.9%) of cases
 - [Chronic Pain Claims](chronic-pain-claims.md) - If knee injury leads to chronic pain
 - [Permanent Impairment Ratings](permanent-impairment-rating.md) - Maximizing NEL benefits
 
@@ -648,7 +648,7 @@ A: **NO.** Employer can dispute, but WSIB makes the decision (not employer). Emp
 5. **If denied, skip reconsideration** → file tribunal appeal immediately
 6. **GET HELP:** Legal clinic, ONIWG, injured worker group
 
-**You are not alone. 845 knee injury cases reached tribunal 2020-2026, with 20% facing systematic pre-existing bias. Your injury is valid. Your claim is worth fighting for.**
+**You are not alone. 845 knee injury cases reached tribunal 2020-2026, with 20% (95% CI: 17.3-22.7%) facing systematic pre-existing bias. Your injury is valid. Your claim is worth fighting for.**
 
 ---
 

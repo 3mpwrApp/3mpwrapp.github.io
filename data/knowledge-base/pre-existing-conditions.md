@@ -7,7 +7,7 @@
 **Recent analysis of 11,430 WSIAT tribunal decisions (2020-2026) reveals shocking patterns:**
 
 ### WSIB's #1 Denial Tactic:
-- **Pre-existing condition appears in 1,522 cases (13.3%)** - the 2nd most common keyword after "worker"
+- **Pre-existing condition appears in 1,522 cases (13.3%, 95% CI: 12.7-13.9%)** - the 2nd most common keyword after "worker"
 - More frequent than "benefits" (7.8%), "accident" (7.4%), or "entitlement" (4.4%)
 
 ### Body-Part-Specific Bias Rates:
