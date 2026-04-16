@@ -373,17 +373,17 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 
 **Pattern 1: "Acute + Accident + Witness"**
 - Keywords: "accident," "witnessed," "ER treatment," "objective findings"
-- Example: Construction fall, broken bones, immediate medical care
+- **Example:** Construction fall, broken bones, immediate medical care
 - **Why workers win:** Undeniable causation, discrete event, objective injury
 
 **Pattern 2: "Employer Safety Violation + Inspector Report"**
 - Keywords: "employer," "Ministry of Labour," "safety violation," "inspection"
-- Example: Machine injury with documented safety failures
+- **Example:** Machine injury with documented safety failures
 - **Why workers win:** Employer negligence proven, WSIB can't blame worker
 
 **Pattern 3: "Independent Medical Expert + Functional Evidence"**
 - Keywords: "independent medical," "functional capacity evaluation," "work restrictions"
-- Example: Chronic pain with expert supporting causation
+- **Example:** Chronic pain with expert supporting causation
 - **Why workers win:** Credible medical counters WSIB's biased doctors
 
 ---
@@ -392,22 +392,22 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 
 **Pattern 1: "Pre-existing + Degenerative + Aging"**
 - Keywords: "pre-existing," "degenerative," "osteoarthritis," "normal aging"
-- Example: Back injury with prior X-ray showing disc degeneration
+- **Example:** Back injury with prior X-ray showing disc degeneration
 - **Why workers lose:** WSIB successfully shifts causation to body, not workplace
 
 **Pattern 2: "Gradual Onset + No Discrete Event"**
 - Keywords: "gradual," "repetitive," "cumulative"
-- Example: Carpal tunnel from years of assembly work
+- **Example:** Carpal tunnel from years of assembly work
 - **Why workers lose:** WSIB demands "accident" narrative, rejects occupational disease concept
 
 **Pattern 3: "Mental Health + Pre-existing Anxiety"**
 - Keywords: "psychotraumatic disability," "anxiety," "pre-existing mental health"
-- Example: PTSD from workplace violence with prior therapy history
+- **Example:** PTSD from workplace violence with prior therapy history
 - **Why workers lose:** WSIB weaponizes ANY mental health history to deny new trauma claim
 
 **Pattern 4: "Chronic Pain + Normal Imaging"**
 - Keywords: "chronic pain," "MRI normal," "subjective," "disproportionate"
-- Example: Severe pain after injury but "healed" on imaging
+- **Example:** Severe pain after injury but "healed" on imaging
 - **Why workers lose:** WSIB demands objective proof of subjective condition (impossible)
 
 ---

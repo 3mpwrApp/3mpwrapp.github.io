@@ -209,7 +209,79 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
 
 ---
 
-## 🚀 Live Tools
+## � How DATA FEEDS the 3mpwr FLYWHEELS
+
+**Every piece of research on this page is connected to our three flywheels. Here's how YOUR engagement accelerates them:**
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+  <h3 style="margin: 0 0 1rem; color: white;">The 3mpwr Flywheel System</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+    
+    <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px;">
+      <h4 style="margin: 0 0 0.5rem; color: white;">🔄 Flywheel 1: Knowledge Base</h4>
+      <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
+        <strong>Data → Patterns → Guides</strong><br>
+        11,430 cases analyzed → Patterns detected (pre-existing = 13.3%, knee bias = 20%) → 
+        16 injury guides created → YOU learn what to expect
+      </p>
+      <p style="margin: 0.5rem 0 0; font-size: 0.85rem; opacity: 0.9;">
+        <em>Example: <a href="/knowledge-base/fibromyalgia-claims/" style="color: white; text-decoration: underline;">Fibromyalgia Guide</a> built from 68 cases showing medical gatekeeping tactics</em>
+      </p>
+    </div>
+    
+    <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px;">
+      <h4 style="margin: 0 0 0.5rem; color: white;">🔄 Flywheel 2: Appeal Templates</h4>
+      <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
+        <strong>Patterns → Arguments → Templates</strong><br>
+        Winning arguments extracted → Legal citations from 96 pre-existing wins → 
+        Templates pre-filled with stats → YOU fight back with professional quality
+      </p>
+      <p style="margin: 0.5rem 0 0; font-size: 0.85rem; opacity: 0.9;">
+        <em>Example: <a href="/templates/pre-existing-appeal/" style="color: white; text-decoration: underline;">Pre-Existing Template</a> cites 1,522 cases (13.3%) proving systematic denial tactic</em>
+      </p>
+    </div>
+    
+    <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px;">
+      <h4 style="margin: 0 0 0.5rem; color: white;">🔄 Flywheel 3: Community Intelligence</h4>
+      <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
+        <strong>Templates → Outcomes → Better Data</strong><br>
+        YOU use template → Share outcome (win or lose) → We analyze results → 
+        Database improves → Next worker gets better strategy
+      </p>
+      <p style="margin: 0.5rem 0 0; font-size: 0.85rem; opacity: 0.9;">
+        <em>Goal: Fill WSIB's 91.8% missing outcome gap with worker-submitted data (crowdsource transparency)</em>
+      </p>
+    </div>
+    
+  </div>
+  
+  <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.3);">
+    <p style="margin: 0 0 1rem; font-size: 1.1rem; font-weight: bold;">🚀 The Flywheel Effect in Action:</p>
+    <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem;">
+      More Cases Analyzed → Better Pattern Detection → Stronger Knowledge Base →<br>
+      More Effective Templates → More Workers Win → More Outcomes Shared →<br>
+      Richer Data → More Cases Analyzed... <strong>(CYCLE ACCELERATES)</strong>
+    </div>
+  </div>
+  
+  <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255,255,255,0.2); border-radius: 8px;">
+    <h4 style="margin: 0 0 0.5rem; color: white;">YOUR Contribution Powers All 3 Flywheels:</h4>
+    <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.8;">
+      <li><strong>Read guides</strong> → Learn patterns (Flywheel 1)</li>
+      <li><strong>Use templates</strong> → Fight your case (Flywheel 2)</li>
+      <li><strong>Share outcome</strong> → Help next worker (Flywheel 3)</li>
+      <li><strong>Report new tactics</strong> → Improve detection (All flywheels)</li>
+    </ul>
+    <p style="margin: 1rem 0 0; font-size: 0.95rem;">
+      <strong>🔗 Join the flywheel:</strong> Use <a href="/app/" style="color: white; text-decoration: underline;">3mpwrApp Evidence Locker</a> to upload your denial letter or tribunal decision → 
+      We analyze it → You get personalized strategy → Community gets stronger data
+    </p>
+  </div>
+</div>
+
+---
+
+## �🚀 Live Tools
 
 ### WSIB Denial Network Visualization
 <div class="tool-card">

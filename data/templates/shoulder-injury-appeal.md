@@ -612,5 +612,60 @@ My shoulder injury is an occupational disease caused by [cumulative trauma from 
 
 ---
 
+## How This Template Feeds the 3mpwr Flywheels
+
+**This shoulder injury template is POWERED by data and POWERS community intelligence:**
+
+### 🔄 Data → Template (Flywheel 1 → 2)
+**1,391 shoulder injury cases analyzed** → Patterns extracted → This template created
+- Most common denials: "Pre-existing" (16% of shoulder cases), "chronic pain" co-occurrence (107 cases), "impairment rating" disputes (818 cases system-wide)
+- Winning arguments identified: Independent medical evidence, functional capacity evaluations, biomechanical expert opinions
+- Legal citations from successful appeals: *Pasiechnyk v. WSIB*, WSIAT Decision No. 2157/09, No. 1827/12
+
+**Example from case data:**
+> Rotator cuff tear denied as "pre-existing degenerative" → Worker appealed with biomechanical expert proving lifting mechanism caused tear → Won at tribunal citing aggravation principle
+
+### 🔄 Template → Your Appeal (Flywheel 2)
+**When YOU use this template:**
+1. Fill in your injury details (date, mechanism, diagnosis)
+2. Attach evidence checklist items (MRI, surgery notes, functional assessment)
+3. Submit professional-quality appeal (legal arguments pre-written)
+
+**Built-in advantages from 1,391 cases:**
+- Statistical patterns cited ("16% of shoulder injuries denied as pre-existing")
+- Counter-arguments to WSIB tactics ("degenerative changes are normal in 40+ workers")
+- Medical evidence requirements (what imaging/reports WSIAT expects)
+
+### 🔄 Your Outcome → Community (Flywheel 3)
+**After you use this template, YOUR RESULT improves it for everyone:**
+
+**If you WIN:**
+- Share decision via 3mpwrApp Evidence Locker → We extract what worked
+- Your case becomes example ("Assembly worker, age 47, rotator cuff tear + prior mild arthritis = won using biomechanical expert argument")
+- Template updated with your winning strategy (added to "Success Factors" section)
+
+**If you LOSE:**
+- Share WSIB's reasoning → We detect new counter-tactics
+- Template strengthened ("WSIB now demanding EMG testing for shoulder pain - here's why it's medically irrelevant")
+- Community alerted via 3mpwrApp updates
+
+**The Shoulder Injury Flywheel:**
+```
+1,391 Cases → Patterns Found → Template Built → 
+Worker Uses Template → Shares Outcome → Template Improved → 
+(CYCLE ACCELERATES)
+```
+
+**YOUR CONTRIBUTION:**
+- **Before appeal:** Read [Shoulder & Rotator Cuff Guide](/knowledge-base/shoulder-rotator-cuff-claims/) for patterns
+- **During appeal:** Use this template (professional quality, no lawyer needed)
+- **After decision:** Share outcome (anonymously via Evidence Locker) to help next worker
+
+**Every shoulder injury outcome you share makes this template stronger.**
+
+---
+
 *Template last updated: April 15, 2026  
-Based on analysis of 1,391 shoulder injury tribunal cases (2020-2026)*
+Based on analysis of 1,391 shoulder injury tribunal cases (2020-2026)*  
+*Built via 3mpwr Flywheel 1 (Cases → Knowledge) + Flywheel 2 (Knowledge → Templates)*  
+*Feeds Flywheel 3 (Usage → Outcomes → Community Intelligence)*

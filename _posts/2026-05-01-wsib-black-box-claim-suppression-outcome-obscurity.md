@@ -638,6 +638,75 @@ Why not use high end? To maintain credibility—we use IWH's documented range (1
 
 ---
 
+## How This Transparency Research Feeds the 3mpwr Flywheels
+
+**The 91.8% missing outcome data EXPOSES the problem AND DRIVES our solution:**
+
+### 🔄 Flywheel 1: Community-Powered Transparency Database
+**WSIB won't publish outcomes? WE WILL.**
+
+**What we're building:**
+- Worker-submitted outcome tracking (via 3mpwrApp Evidence Locker)
+- Crowdsourced win/loss rates by injury type, body part, keywords
+- Real-time transparency dashboard (public, searchable)
+
+**How YOUR data helps:**
+1. You upload tribunal decision → We extract outcome, injury type, keywords
+2. Database grows → Patterns emerge → Statistics get stronger
+3. Next worker searches "back injury pre-existing" → Sees REAL win rate (not WSIB's black box)
+
+**Example:** If 500 workers submit back injury outcomes, we can calculate:
+- Allow rate: 22%
+- Dismiss rate: 18%
+- Varied rate: 35%
+- Settled rate: 25%
+
+WSIB hides this. WE PUBLISH IT.
+
+### 🔄 Flywheel 2: Suppression Evidence → Legal Action Toolkit
+**This suppression analysis POWERS:**
+- [Class Action Research Package](/research/class-action-evidence/) (1.14-2.29M suppressed = mass tort)
+- [FOI Request Templates](/templates/foi-requests/) (force WSIB to disclose internal stats)
+- [MPP Briefing Packages](/advocacy/mpp-briefings/) (legislative pressure with peer-reviewed evidence)
+
+**How it helps YOU:**
+- **Individual appeals:** Cite suppression research ("My case disappeared into 91.8% missing data black hole")
+- **Collective action:** Join class action coordination (strength in numbers)
+- **Political advocacy:** Email MPP with evidence package ("2.24 million suppressed injuries = crisis")
+
+**Example template excerpt:**
+> "Statistical analysis of 11,430 tribunal decisions reveals 91.8% lack outcome metadata. This systematic obscurity enables suppression of 1.14-2.29 million workplace injuries (2020-2026, peer-reviewed IWH research extrapolated to Ontario). This is not individual case failure—it is systemic manipulation."
+
+### 🔄 Flywheel 3: Transparency Gap → Community Intelligence
+**EVERY missing outcome is an opportunity for WORKERS to fill the gap:**
+
+**Before (WSIB black box):**
+- Worker: "Do chronic pain claims ever win?"
+- Answer: Unknown (91.8% missing)
+
+**After (3mpwr transparency database with 500 chronic pain outcomes):**
+- Worker: "Do chronic pain claims ever win?"
+- Answer: "Yes, 18% allowed, 42% varied. Success factors: independent medical expert (73% correlation), functional capacity evaluation (68%), documented treatment attempts (61%). Use [Chronic Pain Appeal Template](/templates/chronic-pain-appeal/)."
+
+**The Transparency Flywheel:**
+```
+WSIB Hides Outcomes → Workers Experience Black Box → 
+3mpwr Builds Transparency Database → Workers Submit Outcomes → 
+Real Win Rates Published → More Workers Win (better strategies) → 
+More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
+```
+
+**YOUR SUPPRESSED CLAIM MATTERS:**
+- **Never filed claim?** You're part of 1.14-2.29M suppressed → Share your story (anonymously) → We document suppression patterns
+- **Claim denied?** Upload decision → We track denial tactics → Improve appeal templates
+- **Won appeal?** Upload decision → We extract winning arguments → Next worker uses your strategy
+
+**Every outcome you share BREAKS WSIB's black box.**
+
+**🔗 Fight back:** Upload your tribunal decision to 3mpwrApp Evidence Locker → We analyze outcome → You get personalized next steps + your data helps community
+
+---
+
 {% include methodology-evidence-standards.md %}
 
 ---

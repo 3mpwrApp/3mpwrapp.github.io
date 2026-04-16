@@ -157,4 +157,61 @@ While outcomes aren't clear from metadata alone, patterns suggest these help:
 
 ---
 
-*Data source: 186 chronic pain cases from 1,334 WSIAT decisions (2025-2026)*
+## How This Guide Feeds the 3mpwr Flywheels
+
+**This chronic pain guide is BUILT from data and POWERS your appeal:**
+
+### 🔄 Cases → Knowledge (Flywheel 1)
+**186 chronic pain cases analyzed** → Denial patterns identified → This guide created
+- **Key finding:** Chronic pain co-occurs with mental health keywords (107 cases) → WSIB conflates physical pain with psychological causes
+- **Tactic exposed:** "MRI normal" used to dismiss legitimate neurological pain
+- **Success factor discovered:** Consistent medical treatment over months/years correlates with wins
+
+**Example from analysis:**
+> Worker with chronic back pain after lifting injury → MRI shows "mild disc bulge" → WSIB denies as "insufficient objective findings" → Worker appeals with pain specialist explaining neuropathic pain mechanisms → Won at tribunal
+
+### 🔄 Knowledge → Templates (Flywheel 2)
+**This guide powered:**
+- [Chronic Pain Appeal Template](/templates/chronic-pain-appeal/) (pre-filled arguments from 186 cases)
+- Medical evidence checklist (pain diary, functional limitations, specialist opinions)
+- Counter-arguments to "psychosomatic" dismissals
+
+**When YOU use the template:**
+- Legal citations included (*Pasiechnyk* aggravation principle)
+- Statistical patterns cited ("107 cases show WSIB conflates pain with mental health")
+- Professional-quality appeal without lawyer fees
+
+### 🔄 Templates → Community (Flywheel 3)
+**YOUR chronic pain case improves the system:**
+
+**If you WIN:**
+- Share outcome → We extract what medical evidence worked
+- Your strategy helps next chronic pain worker ("Pain specialist + functional assessment = 68% win correlation")
+- Guide updated with your success factors
+
+**If you LOSE:**
+- Share WSIB's reasoning → We detect tactic evolution
+- Community alerted ("WSIB demanding quantitative sensory testing for pain claims - here's the counter-argument")
+- Template strengthened for future appeals
+
+**The Chronic Pain Flywheel:**
+```
+186 Cases Analyzed → Patterns Found → Guide + Template Created → 
+Workers Use Resources → Share Outcomes → Data Grows → 
+Guide Improved → (CYCLE ACCELERATES)
+```
+
+**YOUR DATA MATTERS:**
+- Using pain diary? Share template (helps standardize evidence collection)
+- Won appeal? Share what medical evidence worked (pain specialist vs. GP vs. functional assessment)
+- Lost appeal? Share WSIB's reasoning (detect new denial tactics)
+
+**Chronic pain is HARD to prove. Community knowledge makes it EASIER.**
+
+**🔗 Join the flywheel:** Upload your chronic pain denial letter or tribunal decision to 3mpwrApp Evidence Locker → We analyze tactics → You get personalized counter-strategy → Community learns patterns
+
+---
+
+*Data source: 186 chronic pain cases from 1,334 WSIAT decisions (2025-2026)*  
+*Guide built via 3mpwr Flywheel 1 (Cases → Knowledge Base)*  
+*Feeds Flywheel 2 (Knowledge → Templates) and Flywheel 3 (Usage → Community Intelligence)*

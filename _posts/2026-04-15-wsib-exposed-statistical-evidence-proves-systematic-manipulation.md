@@ -170,7 +170,7 @@ Reconsideration is a **delay trap**:
 2. **Osteoarthritis weaponization:** Any prior x-ray showing mild arthritis (common in 40+ workers) → WSIB denies as "aggravation of pre-existing"
 3. **Aging workforce bias:** Physically demanding jobs with older workers → systematically denied as "you'd have knee problems anyway"
 
-**Real-World Example:**
+**Example:**
 
 **Warehouse worker, age 52:**
 - **Injury:** Fell from loading dock, shattered kneecap (patella fracture)
@@ -241,7 +241,7 @@ Legal precedent (*Kriz v. Huneault*) says: When worker has pre-existing conditio
 3. WSIB psychologist: "Depression present, pain is psychosomatic"
 4. **WSIB decision: "Pain is psychological, not work-injury → deny"**
 
-**Real-World Example:**
+**Example:**
 
 **Nurse with chronic shoulder pain:**
 - Injured lifting patient (rotator cuff tear)
@@ -483,6 +483,63 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 
 ---
 
+## How This Research Feeds the 3mpwr Flywheels
+
+**EVERY data point in this analysis feeds our three interconnected flywheels:**
+
+### 🔄 Flywheel 1: Knowledge Base
+**This research created:**
+- 16 injury-specific guides (knee, shoulder, chronic pain, fibromyalgia, etc.)
+- Pattern detection checklists ("Is my denial using the pre-existing tactic?")
+- Body part bias statistics (knee = 20% pre-existing rate, shoulder = 16%)
+
+**How it helps workers:**
+- Search your injury type → See documented denial patterns
+- Understand you're not alone (169 knee workers faced same tactic)
+- Learn what evidence counters each pattern
+
+**Example:** [Fibromyalgia Guide](/knowledge-base/fibromyalgia-claims/) built from 68 cases showing medical gatekeeping patterns
+
+### 🔄 Flywheel 2: Appeal Templates
+**This research powered:**
+- 50+ fill-in-the-blank appeal letters
+- Statistical evidence sections ("My case fits documented pattern...")
+- Counter-arguments to WSIB tactics (pre-existing, chronic pain, mental health)
+
+**How it helps workers:**
+- Copy winning legal arguments from 11,430 cases
+- Cite statistical patterns in your appeal ("20% of knee injuries denied as pre-existing")
+- Professional-quality appeals without lawyer fees
+
+**Example:** [Pre-Existing Appeal Template](/templates/pre-existing-appeal/) includes stats from 1,522 pre-existing cases
+
+### 🔄 Flywheel 3: Community Intelligence
+**This research enables:**
+- Outcome tracking (share your result → improve pattern detection)
+- Real-time denial alerts ("WSIB using July 2023 suppression tactic again")
+- Collective action coordination (1,545 missing decisions = class action evidence)
+
+**How it helps workers:**
+- YOUR outcome data improves future analysis (fill the 91.8% missing outcome gap)
+- Community learns from your case (successful arguments shared)
+- Strength in numbers (collective evidence of systemic manipulation)
+
+**The Flywheel Effect:**
+```
+More Cases Analyzed → Better Pattern Detection → Stronger Knowledge Base → 
+More Effective Templates → More Workers Win → More Outcome Data Shared → 
+More Cases Analyzed... (CYCLE ACCELERATES)
+```
+
+**YOUR CONTRIBUTION MATTERS:**
+- Used a template? Share if it worked (via 3mpwrApp Evidence Locker)
+- Win your appeal? Upload decision (fills transparency gaps)
+- Spot a new tactic? Report it (improves pattern library)
+
+**Every worker who engages makes the flywheels spin faster for the next person.**
+
+---
+
 {% include methodology-evidence-standards.md %}
 
 ---
@@ -575,7 +632,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 
 **Special Thanks:**
 
-Thunder Bay & District Injured Workers Support Group board members for insider intelligence, lived experience, and verification of patterns. Your courage in speaking truth makes this work possible.
+Thunder Bay & District Injured Workers Support Group board members for knowledge, lived experience, and verification of patterns. Your courage in speaking truth makes this work possible.
 
 ---
 
