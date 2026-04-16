@@ -11,11 +11,11 @@ theme: minima
 header_pages:
   - about.md
   - research.md
+  - faq.md
   - accessibility.md
   - security.md
   - privacy.md
   - contact.md
-  - faq.md
 
 # Plugins
 plugins:
