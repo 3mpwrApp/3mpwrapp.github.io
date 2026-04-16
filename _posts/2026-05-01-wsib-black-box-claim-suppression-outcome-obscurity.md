@@ -595,7 +595,7 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
 - [Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/) - Worker education from data
 
 **Full Documentation:**
-- [WSIB System Analysis Complete 2020-2026](https://3mpwrapp.pages.dev/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026) - 45,000-word master document
+- [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document
 
 **Interactive Tools:**
 - [WSIB Denial Network Visualization](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore co-occurrence patterns

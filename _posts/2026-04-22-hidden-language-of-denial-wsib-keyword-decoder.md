@@ -502,7 +502,7 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 > - Co-occurrence analysis proves coordination between denial language patterns
 > - This is measurable, documented, systematic bias—not individual case assessment
 >
-> Full analysis: [WSIB System Analysis Complete 2020-2026](https://3mpwrapp.pages.dev/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026)"
+> Full analysis: [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)"
 
 **Tribunals LOVE data.** You're not claiming bias—you're PROVING patterns with statistical evidence.
 
@@ -535,7 +535,7 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 - [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Our data collection methodology
 
 **Full Documentation:**
-- [WSIB System Analysis Complete 2020-2026](https://3mpwrapp.pages.dev/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026) - 45,000-word master document with all findings
+- [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document with all findings
 
 **Interactive Tools:**
 - [WSIB Denial Network Visualization](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore keyword co-occurrence patterns
