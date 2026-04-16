@@ -1,0 +1,151 @@
+/* Blog Post Table Responsive Styling
+   Ensures all tables in blog posts fit within viewport and are accessible
+*/
+
+/* Table container wrapper for overflow handling */
+.post-content table,
+.post table,
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Table cells */
+.post-content table th,
+.post-content table td,
+.post table th,
+.post table td,
+article table th,
+article table td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+  min-width: 100px; /* Prevent cells from becoming too narrow */
+}
+
+/* Table headers */
+.post-content table th,
+.post table th,
+article table th {
+  background-color: #f5f7fa;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Zebra striping for readability */
+.post-content table tbody tr:nth-child(even),
+.post table tbody tr:nth-child(even),
+article table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Hover effect for rows */
+.post-content table tbody tr:hover,
+.post table tbody tr:hover,
+article table tbody tr:hover {
+  background-color: #e5f3ff;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .post-content table,
+  .post table,
+  article table {
+    font-size: 0.8rem;
+  }
+  
+  .post-content table th,
+  .post-content table td,
+  .post table th,
+  .post table td,
+  article table th,
+  article table td {
+    padding: 0.5rem;
+    min-width: 80px;
+  }
+  
+  /* Add scroll hint for narrow screens */
+  .post-content table::after,
+  .post table::after,
+  article table::after {
+    content: "← Swipe to see more →";
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .post-content table th,
+  .post table th,
+  article table th {
+    background-color: #2d3748;
+    color: #e0e0e0;
+    border-color: #4a5568;
+  }
+  
+  .post-content table td,
+  .post table td,
+  article table td {
+    border-color: #4a5568;
+    color: #e0e0e0;
+  }
+  
+  .post-content table tbody tr:nth-child(even),
+  .post table tbody tr:nth-child(even),
+  article table tbody tr:nth-child(even) {
+    background-color: #1a202c;
+  }
+  
+  .post-content table tbody tr:hover,
+  .post table tbody tr:hover,
+  article table tbody tr:hover {
+    background-color: #2d3748;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .post-content table,
+  .post table,
+  article table {
+    border: 2px solid currentColor;
+  }
+  
+  .post-content table th,
+  .post-content table td,
+  .post table th,
+  .post table td,
+  article table th,
+  article table td {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Print styling */
+@media print {
+  .post-content table,
+  .post table,
+  article table {
+    page-break-inside: avoid;
+    font-size: 10pt;
+  }
+  
+  .post-content table::after,
+  .post table::after,
+  article table::after {
+    display: none;
+  }
+}

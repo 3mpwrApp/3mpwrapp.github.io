@@ -5,7 +5,7 @@ date: 2026-04-16
 categories: [advocacy, research, transparency, wsib, systemic-analysis]
 tags: [wsib, claim-suppression, outcome-obscurity, transparency, data-analysis, workers-rights]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
-permalink: /blog/2026/05/01/wsib-black-box-claim-suppression-outcome-obscurity/
+permalink: /blog/2026/04/16/wsib-black-box-claim-suppression-outcome-obscurity/
 excerpt: "FACTS: 11,430 tribunal decisions analyzed, 91.8% have no outcome metadata, only 1,905/year reach tribunal. EXTRAPOLATION: Institute for Work & Health research (15-50% injuries unreported) + Public Health Ontario rates (1 in 20 workers injured) = estimated 1.14-2.29M workers suppressed. CONFIDENCE: Ranges show uncertainty. This is epidemic-scale under-compensation, whether lower or upper bound. Full methodology + alternative estimates included."
 image: /assets/images/wsib-suppression-pyramid-2026-05-01.png
 featured: true

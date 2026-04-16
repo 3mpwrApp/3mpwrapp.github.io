@@ -5,7 +5,7 @@ date: 2026-04-16
 categories: [advocacy, research, transparency, wsib, workers-rights]
 tags: [wsib, denial-tactics, keyword-analysis, appeal-strategy, worker-empowerment]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
-permalink: /blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/
+permalink: /blog/2026/04/16/hidden-language-of-denial-wsib-keyword-decoder/
 excerpt: "Rigorous keyword analysis of 11,430 tribunal decisions reveals WSIB uses specific patterns: 'pre-existing' (13.3%), 'impairment' (7.2%), 'psychotraumatic disability' (5.3%). FACTS: Co-occurrence analysis shows denial tactics cluster together. INTERPRETATION: Suggests systematic application, not random. Search your denial letter keywords here to understand the pattern you're facing. Full methodology included."
 image: /assets/images/wsib-keyword-decoder-2026-04-22.png
 featured: true
