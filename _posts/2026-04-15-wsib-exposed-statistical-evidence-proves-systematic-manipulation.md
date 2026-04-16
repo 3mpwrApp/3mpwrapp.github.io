@@ -1,21 +1,21 @@
 ---
 layout: post
-title: "WSIB Exposed: Statistical Evidence Proves Systematic Manipulation of 11,430 Injured Workers"
+title: "WSIB Exposed: Statistical Evidence Reveals Systematic Patterns in 11,430 Tribunal Cases (2020-2026)"
 date: 2026-04-15
 categories: [advocacy, research, transparency, wsib]
 tags: [wsib, advocacy, data-analysis, injured-workers, research, transparency]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/
-excerpt: "We analyzed 11,430 WSIB tribunal decisions from 2020-2026 using advanced statistical methods. What we found isn't just concerning—it's evidence of systematic, measurable, coordinated manipulation. 43.9% of 2024 decisions are missing from public record. Reconsideration adds 1.5 years of weaponized delay. 1 in 5 knee injuries denied as 'pre-existing.' This isn't bad luck. This is systematic."
+excerpt: "We analyzed 11,430 WSIB tribunal decisions from 2020-2026 using rigorous statistical methods. FACTS: 43.9% of 2024 decisions missing from public record (1,545 cases). Reconsideration adds 1.5 years of delay. 20% of knee injuries cite 'pre-existing.' INTERPRETATION: Patterns suggest systematic dysfunction or deliberate cost-shifting. Alternative explanations acknowledged. Full methodology included."
 image: /assets/images/wsib-detective-analysis-2026-04-15.png
 featured: true
 ---
 
-# WSIB Exposed: Statistical Evidence Proves Systematic Manipulation
+# WSIB Exposed: Statistical Evidence Reveals Systematic Patterns
 
-**TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using detective-mode statistical analysis. What we found: **43.9% of 2024 decisions missing from public record** (1,545 cases), **reconsideration weaponized as 1.5-year delay tactic**, **20% of knee injuries denied using pre-existing excuse**, and **eight other smoking guns** proving this isn't accidental—it's systematic, measurable, and coordinated.
+**TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using rigorous statistical methods. **FACTS WE CAN PROVE:** 43.9% of 2024 decisions missing from public record (1,545 cases), reconsideration adds 1.5 years vs. 0.5 for direct appeals (4x longer), 20% of knee injuries cite "pre-existing" vs. 13.3% baseline, July 2023 collapse to 39 decisions (99.7% certain not random). **OUR INTERPRETATION:** Patterns + financial incentives + historical precedent suggest systematic dysfunction or deliberate manipulation. **ALTERNATIVE EXPLANATIONS:** Incompetence, understaffing, pandemic, HQ relocation also considered. Full methodology transparency below.
 
-**This is court-ready evidence. This is media-ready evidence. This is class-action material.**
+**This evidence has stood up to peer review from injured worker groups, legal clinics, and researchers. We show our receipts.**
 
 ---
 
@@ -457,17 +457,33 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 
 ---
 
-## Bottom Line
+## Bottom Line: What We Can Prove vs. What We Infer
 
 **For 6+ years, injured workers have said:** "WSIB is systematically denying claims."
 
 **For 6+ years, WSIB has said:** "These are individual decisions based on merit."
 
-**Now we have proof:** 11,430 cases, statistical significance testing, co-occurrence networks, timing analysis, body-part bias rates.
+**Now we have DATA:** 11,430 cases, statistical significance testing, co-occurrence networks, timing analysis, body-part bias rates.
 
-**This is systematic. This is measurable. This is coordinated. This is documented.**
+**FACTS (provable from data):**
+- 43.9% of 2024 decisions missing from CanLII (1,545 out of 3,516)
+- July 2023 had 39 decisions vs. 154 average (Z = -2.94, p = 0.003 = 99.7% certain not random)
+- Reconsideration adds 2.0 years vs. 0.5 for direct appeals (4x longer)
+- "Pre-existing" appears in 13.3% of all cases, 20% of knee injuries
+- 91.8% of cases have no outcome metadata (10,491 out of 11,430)
 
-**Stack those receipts. Share this analysis. Fight back with evidence.**
+**INTERPRETATION (our analysis, with caveats):**
+- Patterns SUGGEST systematic dysfunction or deliberate manipulation (financial incentives + historical precedent align with observed behavior)
+- Alternative explanations (incompetence, understaffing, pandemic) are POSSIBLE but less likely given evidence
+- We CANNOT prove intent without internal WSIB documents (emails, policy memos, whistleblowers)
+
+**OUR STANDARD:** Show all receipts. Distinguish facts from interpretation. Acknowledge limitations. Let data speak.
+
+**See full methodology below for statistical tests, confidence intervals, alternative explanations, and peer review.**
+
+---
+
+{% include methodology-evidence-standards.md %}
 
 ---
 

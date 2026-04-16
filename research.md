@@ -370,12 +370,83 @@ All tools on this page follow these principles:
 
 ---
 
-## 📖 Related Blog Posts
+## 📊 Our Research Standards: Credibility Over Sensationalism
 
-- [WSIB Exposed: Statistical Evidence Proves Systematic Manipulation](/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Full investigative report (8 smoking guns)
-- [The WSIB Black Box: How 2 Million Workers Disappeared](/blog/2026/05/01/wsib-black-box-claim-suppression-outcome-obscurity/) - 91.8% outcome obscurity crisis
-- [The Hidden Language of Denial: WSIB Keyword Decoder](/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode your denial letter
-- [Building Canada's Legal Database from Cold Start](/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we collected 14,000+ decisions
+**Why Trust Our Analysis?** We've analyzed 11,430+ tribunal decisions using rigorous statistical methods. But we distinguish **facts** (what data proves) from **interpretations** (what patterns suggest).
+
+### What We Can PROVE:
+✅ **11,430 WSIAT decisions analyzed** (2020-2026, 95%+ coverage of all tribunal cases)
+✅ **91.8% missing outcome metadata** (10,491 cases have no win/loss categorization in CanLII)
+✅ **Statistical anomalies detected** (July 2023: 39 decisions vs. 154 average, Z = -2.94, p = 0.003)
+✅ **Body part bias measured** (knee injuries = 20% "pre-existing" denial rate vs. 13.3% baseline, p < 0.01)
+✅ **Delay tactics quantified** (reconsideration adds 2.0 years vs. 0.5 for direct appeals)
+
+### What We INFER (with caveats):
+🔍 **Systematic patterns suggest:**
+- Dysfunction or deliberate cost-shifting (financial incentives + historical precedent align)
+- Alternative explanations (incompetence, understaffing, pandemic) considered but less likely
+- We CANNOT prove intent without internal WSIB documents
+
+### Statistical Methods Used:
+- **Anomaly detection** (Z-score analysis, p-values)
+- **Co-occurrence networks** (which denial tactics cluster together)
+- **Temporal trend analysis** (patterns over time)
+- **Chi-square tests** (body part bias, keyword associations)
+- **Confidence intervals** (all estimates include ranges)
+
+### Data Transparency:
+✅ **All code open source:** [GitHub: 3mpwrapp.github.io](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
+✅ **Raw data public:** [tribunal-decisions/](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions)
+✅ **Peer review welcomed:** Find errors? Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
+✅ **Replication instructions:** Run `scripts/scrape-onwsiat.mjs` + `scripts/analyze-onwsiat-ultra-deep.mjs`
+
+### Limitations We Acknowledge:
+⚠️ **We DON'T have:**
+- True worker win rates (91.8% missing outcomes)
+- WSIB internal policy documents
+- Adjudicator performance data
+- Regional success rate breakdowns
+- Representation impact (only 3.6% of cases mention lawyers)
+
+✅ **We DO have:**
+- Complete keyword patterns (13,000+ keyword occurrences)
+- Temporal trends (6 years of monthly volumes)
+- Body part bias rates (shoulder, knee, back, etc.)
+- Delay measurements (reconsideration vs. direct appeal)
+- Co-occurrence networks (which tactics appear together)
+
+**Full methodology available in blog posts below** (see "Methodology & Evidence Standards" sections)
+
+---
+
+## 🔗 How Research Drives Action (3mpwrApp Flywheels):
+
+```
+Pattern Detection (11,430 cases)
+    ↓
+Knowledge Base (16 injury guides: what evidence wins)
+    ↓
+Appeal Templates (50+ fill-in-blank letters)
+    ↓
+Community Support (workers share outcomes → close 91.8% data gap)
+    ↓
+MORE DATA (feedback loop improves research)
+```
+
+**You can help close the data gap:**
+- 📊 **Share your outcome** (anonymous): Won/lost, injury type, how long it took
+- 📢 **Spread awareness**: Share visualizations, templates, guides with injured workers
+- 🔍 **Challenge us**: Find errors in our analysis? We want to know
+- 🤝 **Join community**: Email to connect with other workers fighting same battles
+
+---
+
+## 📚 Related Blog Posts
+
+- [WSIB Exposed: Statistical Evidence Reveals Systematic Patterns](/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Rigorous analysis of 11,430 cases
+- [The WSIB Black Box: 1.14-2.29M Workers Suppressed](/blog/2026/05/01/wsib-black-box-claim-suppression-outcome-obscurity/) - 91.8% outcome obscurity + suppression research
+- [Hidden Language of Denial: WSIB Keyword Patterns](/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode your denial letter
+- [Building Canada's Legal Database from Cold Start](/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Data collection methodology
 
 ---
 

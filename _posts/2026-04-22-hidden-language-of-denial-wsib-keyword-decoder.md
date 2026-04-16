@@ -1,21 +1,19 @@
 ---
 layout: post
-title: "The Hidden Language of Denial: What 11,430 WSIB Cases Reveal About How They Reject You"
+title: "The Hidden Language of Denial: WSIB Keyword Patterns Revealed in 11,430 Cases"
 date: 2026-04-22
 categories: [advocacy, research, transparency, wsib, workers-rights]
 tags: [wsib, denial-tactics, keyword-analysis, appeal-strategy, worker-empowerment]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/
-excerpt: "WSIB doesn't deny your claim randomly—they use specific coded language that reveals systematic patterns. We analyzed every word in 11,430 tribunal decisions to decode their playbook. If you see 'pre-existing' (10.2% of cases), 'impairment' (7.2%), or 'psychotraumatic disability' (5.3%), here's what it REALLY means for your case—and how to fight back."
+excerpt: "Rigorous keyword analysis of 11,430 tribunal decisions reveals WSIB uses specific patterns: 'pre-existing' (13.3%), 'impairment' (7.2%), 'psychotraumatic disability' (5.3%). FACTS: Co-occurrence analysis shows denial tactics cluster together. INTERPRETATION: Suggests systematic application, not random. Search your denial letter keywords here to understand the pattern you're facing. Full methodology included."
 image: /assets/images/wsib-keyword-decoder-2026-04-22.png
 featured: true
 ---
 
 # The Hidden Language of Denial: Decoding WSIB's Playbook
 
-**TL;DR:** After analyzing 11,430 WSIB tribunal decisions, we discovered **WSIB uses specific coded language to systematically deny claims**. If your denial letter contains certain keywords, you're part of a documented pattern. This article is your **decoder ring**—search for keywords in your denial, understand what they really mean, and learn proven strategies to fight back.
-
-**🔍 Quick Search:** Press `Ctrl+F` and search for keywords from your denial letter in this article to see if you're in a documented denial pattern.
+**TL;DR:** Keyword analysis of 11,430 WSIB tribunal decisions reveals **specific language patterns in denials**. **FACTS:** "Pre-existing" (13.3%), "impairment" (7.2%), "psychotraumatic disability" (5.3%), "obesity" + "pre-existing" co-occur 127% more than random. **INTERPRETATION:** Patterns suggest systematic application of denial tactics. **HOW TO USE:** Search for keywords from your denial letter in this article to see documented patterns and response strategies. Full statistical methodology below.
 
 ---
 
@@ -524,6 +522,47 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 - What documents you need for each denial type
 - How to request records from doctors/employers
 - Template letters for independent medical assessments
+
+---
+
+## Bottom Line: Pattern Recognition Helps You Fight Back
+
+**WHAT WE ANALYZED:**
+- 11,430 tribunal decisions (2020-2026)
+- Full keyword extraction from CanLII metadata
+- Co-occurrence analysis (which terms appear together)
+- Statistical significance testing (patterns vs. random chance)
+
+**FACTS WE CAN PROVE:**
+- "Pre-existing" appears in 1,522 cases (13.3%)
+- "Impairment" in 818 cases (7.2%)
+- "Psychotraumatic disability" in 611 cases (5.3%)
+- "Obesity" + "pre-existing" co-occur with Lift = 2.27 (127% more than random)
+- Knee injuries = 20% "pre-existing" rate vs. 13.3% baseline (statistically significant, p < 0.01)
+
+**OUR INTERPRETATION:**
+- Patterns SUGGEST systematic application of denial tactics (not random variation)
+- Co-occurrence suggests coordinated use of multiple tactics together
+- Body part bias suggests certain injuries face higher scrutiny
+
+**ALTERNATIVE EXPLANATIONS:**
+- Medical reality: Some workers DO have pre-existing conditions, some injuries ARE complex
+- Legal compliance: WSIB may be correctly applying legal tests (*Kriz* "greater severity")
+- Random variation: With 11,430 cases, some patterns expected by chance
+
+**OUR ASSESSMENT:** Given financial incentives (employer premiums tied to claims), historical precedent (KPMG audit, *Kriz* abuse), and pattern strength, systematic application is MORE LIKELY than innocent explanations. But we acknowledge we cannot prove intent without internal WSIB documents.
+
+**HOW TO USE THIS:**
+1. Search your denial letter keywords in this article
+2. See if you match a documented pattern
+3. Use our appeal templates (adapted from winning arguments in these 11,430 cases)
+4. Cite statistics in your appeal ("20% of knee injuries cite pre-existing—I'm part of documented pattern")
+
+**See full methodology below for statistical methods, sample sizes, confidence intervals, and limitations.**
+
+---
+
+{% include methodology-evidence-standards.md %}
 
 ---
 
