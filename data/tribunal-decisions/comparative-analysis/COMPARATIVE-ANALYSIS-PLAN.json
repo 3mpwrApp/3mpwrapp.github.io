@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "analysisDate": "2026-04-16T17:54:00.313Z",
+    "onwsiatBaseline": 11430,
+    "analysisType": "COMPARATIVE_ANALYSIS",
+    "status": "Framework created - data collection needed"
+  },
+  "comparisons": {
+    "transparency": {
+      "onwsiat": {
+        "missing2024": 43.9419795221843,
+        "score": 56.0580204778157
+      },
+      "benchmarks": [
+        {
+          "name": "HRTO (Human Rights Tribunal Ontario)",
+          "description": "Discrimination, harassment cases",
+          "estimatedMissingPct": 5,
+          "transparencyScore": 95,
+          "note": "Generally high publication rate for high-profile cases"
+        },
+        {
+          "name": "LTB (Landlord & Tenant Board)",
+          "description": "Evictions, rent disputes",
+          "estimatedMissingPct": 30,
+          "transparencyScore": 70,
+          "note": "Many decisions not published (privacy concerns)"
+        },
+        {
+          "name": "WCAT BC (Workers Compensation Appeals BC)",
+          "description": "Workers compensation appeals (BC)",
+          "estimatedMissingPct": 15,
+          "transparencyScore": 85,
+          "note": "Better publication rate than ONWSIAT"
+        },
+        {
+          "name": "Federal Court (Immigration)",
+          "description": "Immigration/refugee appeals",
+          "estimatedMissingPct": 10,
+          "transparencyScore": 90,
+          "note": "Federal transparency requirements stricter"
+        }
+      ]
+    },
+    "keywordRepetition": {
+      "onwsiat": {
+        "preExistingPct": 0
+      },
+      "hypothesis": "Pre-existing rate may be inherent to WC jurisdiction"
+    },
+    "timingPatterns": {
+      "onwsiat": {
+        "fiscalYearEndSpike": "Q1 = 28.4%"
+      },
+      "hypothesis": "Fiscal spike common in budget-driven tribunals"
+    },
+    "reconsideration": {
+      "onwsiat": {
+        "reconUsagePct": 0
+      },
+      "needsComparison": true
+    },
+    "outcomeTransparency": {
+      "onwsiat": {
+        "gapPct": 91.8
+      },
+      "hypothesis": "WSIB outcome gap is extreme outlier"
+    }
+  },
+  "dataCollectionPlan": [
+    {
+      "tribunal": "HRTO",
+      "canlii": "https://www.canlii.org/en/on/onhrt/",
+      "sampleSize": "500 recent cases",
+      "metrics": [
+        "Publication rate (numbering gaps)",
+        "Keyword repetition (\"pre-existing\")",
+        "Quarterly distribution",
+        "Outcome clarity (allowed/dismissed)"
+      ],
+      "effort": "2-3 days scraping"
+    },
+    {
+      "tribunal": "LTB",
+      "canlii": "https://www.canlii.org/en/on/onltb/",
+      "sampleSize": "500 recent cases",
+      "metrics": [
+        "Publication rate",
+        "Seasonal patterns (winter evictions)",
+        "Review/reconsideration usage",
+        "Outcome clarity"
+      ],
+      "effort": "2-3 days scraping"
+    },
+    {
+      "tribunal": "WCAT BC",
+      "canlii": "https://www.canlii.org/en/bc/bcwcat/",
+      "sampleSize": "500 recent cases (2020-2026)",
+      "metrics": [
+        "Pre-existing condition mentions (compare to WSIB 13.3%)",
+        "Quarterly patterns (fiscal year-end)",
+        "Outcome transparency",
+        "Average time-to-decision"
+      ],
+      "effort": "3-4 days scraping (most important comparison)"
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesis": "H1: WSIB transparency is below average",
+      "test": "Compare 43.9% missing rate to HRTO/LTB/WCAT",
+      "prediction": "WSIB will be in bottom quartile",
+      "impact": "If TRUE: Strengthens suppression claim"
+    },
+    {
+      "hypothesis": "H2: Pre-existing reasoning is WC-specific",
+      "test": "Compare 13.3% rate to HRTO (non-WC) vs WCAT (WC)",
+      "prediction": "WSIB = WCAT > HRTO",
+      "impact": "If TRUE: Pattern is inherent to WC jurisdiction (weakens manipulation claim)"
+    },
+    {
+      "hypothesis": "H3: Fiscal year-end spike is budget-driven",
+      "test": "Compare Q1 spike to HRTO (non-budget) vs WCAT (budget)",
+      "prediction": "WSIB = WCAT > HRTO",
+      "impact": "If TRUE: Confirms budget priorities over justice"
+    },
+    {
+      "hypothesis": "H4: WSIB outcome opacity is unique",
+      "test": "Compare 91.8% missing outcomes to all tribunals",
+      "prediction": "WSIB will be extreme outlier",
+      "impact": "If TRUE: Major transparency violation"
+    }
+  ],
+  "nextSteps": [
+    "Scrape HRTO (500 cases, 2-3 days) for non-WC baseline",
+    "Scrape WCAT BC (500 cases, 3-4 days) for WC comparison [PRIORITY]",
+    "Scrape LTB (500 cases, 2-3 days) for timing/transparency",
+    "Run statistical tests on comparative data (chi-square, t-tests)",
+    "Publish comparative report showing WSIB vs peers"
+  ],
+  "recommendations": [
+    "Comparative analysis is CRITICAL to prove WSIB patterns are unusual",
+    "If WCAT BC shows similar pre-existing rate, claim must be adjusted",
+    "Focus on outcome transparency gap - likely to be extreme outlier",
+    "Fiscal year-end spike may be common (weakens that specific claim)",
+    "Budget for 7-10 days scraping + analysis effort"
+  ]
+}

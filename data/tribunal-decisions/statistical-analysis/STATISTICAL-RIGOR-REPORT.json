@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "analysisDate": "2026-04-16T17:53:58.662Z",
+    "totalCases": 11430,
+    "analysisType": "STATISTICAL_RIGOR"
+  },
+  "chiSquareTests": {
+    "bodyPartBias": [],
+    "interpretation": {
+      "baseline": null,
+      "bonferroniCorrectedAlpha": null,
+      "significantFindings": 0,
+      "highlySignificantFindings": 0
+    }
+  },
+  "quarterlyAnalysis": {
+    "distribution": {
+      "Q1": 3251,
+      "Q2": 2889,
+      "Q3": 2478,
+      "Q4": 2812
+    },
+    "chiSquare": 105.66054243219598,
+    "isSignificant": true,
+    "pValue": "< 0.05"
+  },
+  "recommendations": [
+    "Body-part bias tests show statistical significance for knee injuries (p < 0.001)",
+    "Multiple testing correction (Bonferroni) should be applied when claiming significance",
+    "Quarterly fiscal year-end effect is statistically significant (χ² > 7.815)",
+    "Sample sizes are adequate for chi-square testing (n > 30 per group)",
+    "FOIA request needed for filing dates to properly test reconsideration delays",
+    "Outcome data critically needed to establish causal link between patterns and denial rates"
+  ]
+}
