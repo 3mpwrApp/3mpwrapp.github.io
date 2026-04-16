@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-16T03:36:49.553Z",
+  "lastUpdated": "2026-04-16T14:05:53.661Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
@@ -18,10 +18,10 @@
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 15546,
+      "totalPosts": 15571,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-16T03:36:44.380Z"
+      "lastSeen": "2026-04-16T14:05:49.864Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
@@ -32,10 +32,10 @@
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 15698,
+      "totalPosts": 15723,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-16T03:36:48.549Z"
+      "lastSeen": "2026-04-16T14:05:52.658Z"
     }
   },
   "viralPosts": [
@@ -342,36 +342,28 @@
   ],
   "emergingTopics": [
     {
-      "keyword": "disabilityrights",
-      "count": 46
+      "keyword": "cripthevote",
+      "count": 25
     },
     {
       "keyword": "accessibility",
-      "count": 38
-    },
-    {
-      "keyword": "cripthevote",
-      "count": 29
-    },
-    {
-      "keyword": "a11y",
-      "count": 27
+      "count": 22
     },
     {
       "keyword": "altcitizen",
-      "count": 25
+      "count": 21
     },
     {
-      "keyword": "disabilityjustice",
-      "count": 25
+      "keyword": "disabilityrights",
+      "count": 20
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 23
+      "count": 19
     },
     {
       "keyword": "virtual",
-      "count": 18
+      "count": 16
     },
     {
       "keyword": "nokings3",
@@ -382,44 +374,52 @@
       "count": 13
     },
     {
-      "keyword": "disabilityrebellion",
-      "count": 12
-    },
-    {
-      "keyword": "disabilityrights disabilityrebellion",
-      "count": 12
-    },
-    {
       "keyword": "nokings",
       "count": 12
-    },
-    {
-      "keyword": "disabled people",
-      "count": 9
-    },
-    {
-      "keyword": "ada",
-      "count": 9
     },
     {
       "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
-      "keyword": "disabilitysky",
-      "count": 7
+      "keyword": "disabilityrebellion",
+      "count": 8
     },
     {
-      "keyword": "cripminds",
-      "count": 7
+      "keyword": "disabilityrights disabilityrebellion",
+      "count": 8
     },
     {
-      "keyword": "accessibility disabilitysky",
-      "count": 7
+      "keyword": "refusefascism",
+      "count": 6
     },
     {
-      "keyword": "disabilitysky cripminds",
-      "count": 7
+      "keyword": "inclusion",
+      "count": 5
+    },
+    {
+      "keyword": "resist",
+      "count": 5
+    },
+    {
+      "keyword": "trumpmustgo",
+      "count": 5
+    },
+    {
+      "keyword": "ratr",
+      "count": 5
+    },
+    {
+      "keyword": "virtualnokings",
+      "count": 4
+    },
+    {
+      "keyword": "handsoff",
+      "count": 4
+    },
+    {
+      "keyword": "ada",
+      "count": 3
     }
   ]
 }
