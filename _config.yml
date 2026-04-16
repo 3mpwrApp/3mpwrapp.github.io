@@ -115,9 +115,9 @@ exclude:
   - public
   - vendor
   - .bundle
-  - docs
   - assets/images/screenshots
   - docs/setup
   - docs/development
   - docs/performance
   - assets/downloads/3mpwrapp-user-guide-full.md  # Exclude .md, keep .html version
+  # Note: docs/ folder IS published (removed from exclude) so WSIB research is accessible
