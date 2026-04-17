@@ -85,8 +85,8 @@ async function fetchYearCaseList(year) {
       api_key: CANLII_API_KEY,
       offset: offset.toString(),
       resultCount: resultCount.toString(),
-      changedSince: `${year}-01-01`,
-      changedBefore: year === 2026 ? '2026-12-31' : `${year + 1}-01-01`
+      decisionDateAfter: `${year}-01-01`,
+      decisionDateBefore: year === 2026 ? '2026-12-31' : `${year + 1}-01-01`
     });
     
     const url = `${CANLII_BASE}/caseBrowse/en/onhrt/?${params}`;
