@@ -1,0 +1,53 @@
+---
+layout: post
+title: "Daily News Curation - 2026-04-17"
+date: 2026-04-17
+tags: [highlights]
+categories: [curation, news]
+excerpt: "Today's curated disability rights, accessibility, and social policy news from across Canada."
+---
+
+# Daily News Curation - 2026-04-17
+
+Curated 7 items from disability, accessibility, and social policy sources.
+
+## 🌟 Featured: The Disability Bulletin
+
+### The Disability Bulletin
+Visit for the latest disability rights news, advocacy updates, and community stories from across Canada.
+📍 [Read More](https://linktr.ee/thedisabilitybulletin)
+
+---
+
+## Additional Stories
+
+### 1. Manitoba Government Invests in Public Safety in Brandon and Portage la Prairie
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73458)
+**Score:** 11.10
+
+### 2. The Case of the Experimental Farm Built for 19th-Century Tourists
+In the 1880s, the federal government opened a new science-focused farm to foster research — and colonialism.
+[Source](https://thetyee.ca/Culture/2026/04/17/Experimental-Farm-19th-Century-Tourists/)
+**Score:** 6.20
+
+### 3. Manitoba Government Creates Nearly 1,900 Jobs for Young Manitobans
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73459)
+**Score:** 7.50
+
+### 4. Teachers want the federal government to address violence in schools
+Rabble.ca — progressive Canadian news
+[Source](https://rabble.ca/labour/teachers-want-the-federal-government-to-address-violence-in-schools/)
+**Score:** 5.00
+
+### 5. Measles Update #101
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73461)
+**Score:** 4.50
+
+### 6. Measles Update #98
+Government of Manitoba press release
+[Source](https://news.gov.mb.ca/news/index.html?item=73297)
+**Score:** 4.50
+
