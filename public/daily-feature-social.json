@@ -1,9 +1,9 @@
 {
-  "feature": "From 0 to 721 Tests: Our TDD Story",
-  "contentType": "devDiary",
-  "date": "2026-04-16",
-  "shortPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: From 0 to 721 Tests: Our TDD Story\n\nHow 3mpwrApp grew from a prototype to a production codebase with 721 tests across 121 suites â€” and why test count is a...\n\n💡 Learn more: https://3mpwrapp.pages.dev/dev-diary/2026/04/16/dev-diary-from-0-to-721-tests-our-tdd-story/\n\n#3mpwrApp #DisabilityRights #Accessibility",
-  "longPost": "🚀 New feature just dropped. Free forever. Built for YOU.\n\nðŸ”§ Dev Diary: From 0 to 721 Tests: Our TDD Story\n\nHow 3mpwrApp grew from a prototype to a production codebase with 721 tests across 121 suites â€” and why test count is a side-effect, not the goal\n\nðŸ”‘ Key points:\nâ€¢ 721 tests across 121 suites â€” zero test debt intentionally accumulated\nâ€¢ Test-driven development used for every critical path in the codebase\nâ€¢ Dedicated security test suite verifies encryption implementation is correct\n\nCheck it out â†’ https://3mpwrapp.pages.dev/dev-diary/2026/04/16/dev-diary-from-0-to-721-tests-our-tdd-story/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #NeurodiversityCelebration",
-  "url": "https://3mpwrapp.pages.dev/dev-diary/2026/04/16/dev-diary-from-0-to-721-tests-our-tdd-story/",
-  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-04-16-dev-diary-from-0-to-721-tests-our-tdd-story.md"
+  "feature": "Spoon Theory & Energy Management",
+  "contentType": "feature",
+  "date": "2026-04-17",
+  "shortPost": "Pain at 7/10? The app adjusts. That's Pain Flare Mode. 🔥\n\nâœ¨ Feature Spotlight: Spoon Theory & Energy Management\n\nTrack your daily \"spoons\" (energy units) and plan activities around available capacity\n\n✨ Try it free: https://3mpwrapp.pages.dev/features/2026/04/17/feature-spotlight-spoon-theory-energy-management/\n\n#3mpwrApp #DisabilityRights #Accessibility",
+  "longPost": "Pain at 7/10? The app adjusts. That's Pain Flare Mode. 🔥\n\nâœ¨ Feature Spotlight: Spoon Theory & Energy Management\n\nTrack your daily \"spoons\" (energy units) and plan activities around available capacity\n\nðŸ”‘ Key points:\nâ€¢ Visual spoon tracker with customizable daily capacity\nâ€¢ Activity cost estimates help plan your day\nâ€¢ Energy history shows patterns over time\n\nTrack your spoons â†’ https://3mpwrapp.pages.dev/features/2026/04/17/feature-spotlight-spoon-theory-energy-management/\n\nðŸ“° More on the blog: https://3mpwrapp.pages.dev/blog\n\n#3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #NeurodiversityCelebration",
+  "url": "https://3mpwrapp.pages.dev/features/2026/04/17/feature-spotlight-spoon-theory-energy-management/",
+  "articlePath": "/home/runner/work/3mpwrapp.github.io/3mpwrapp.github.io/_posts/2026-04-17-feature-spotlight-spoon-theory-energy-management.md"
 }
