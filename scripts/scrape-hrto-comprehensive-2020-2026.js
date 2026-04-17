@@ -24,7 +24,7 @@ const CANLII_BASE = "https://api.canlii.org/v1";
 const CANLII_API_KEY = process.env.CANLII_API_KEY || "YOUR_FREE_API_KEY_HERE";
 const OUTPUT_DIR = path.join(__dirname, '../data/tribunal-decisions');
 const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
-const DELAY_MS = 5000; // 5 seconds between requests (avoid quota limits)
+const DELAY_MS = 15000; // 15 seconds between requests (avoid CanLII throttling)
 const MAX_RETRIES = 3;
 
 // Ensure output directory exists

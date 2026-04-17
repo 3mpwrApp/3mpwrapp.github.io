@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "The Meredith Act (Bill 86)
+title: "The Meredith Act (Bill 86)"
 date: 2026-04-17
 categories: [research, advocacy, legislation]
 featured: true
-excerpt: "The Meredith Act (Bill 86) would have fixed documented systemic failures. Our analysis of 11,430 WSIAT decisions (2020-2026) found at least 71 documented terminations after filing claims (0.62%, conservative estimate), 723 mental stress cases, and zero pain & suffering compensation. Why did Ontario's legislature shut it down?"
+excerpt: "The Meredith Act (Bill 86) would have fixed documented systemic failures. Our analysis of 11,430 WSIAT decisions (2020-2026) found at least 71 documented terminations after filing claims (0.62%, conservative estimate), 723 mental stress cases, and zero pain & suffering compensation. Ontario's legislature shut it down at 2nd Reading."
 author: 3mpwrApp
 ---
 
