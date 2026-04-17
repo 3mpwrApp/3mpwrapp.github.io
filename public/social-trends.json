@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-17T03:33:13.823Z",
+  "lastUpdated": "2026-04-17T13:49:02.282Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
@@ -11,40 +11,34 @@
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 15711,
+      "totalPosts": 15736,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-17T03:33:04.629Z"
+      "lastSeen": "2026-04-17T13:48:46.540Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 15596,
+      "totalPosts": 15621,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-17T03:33:07.259Z"
+      "lastSeen": "2026-04-17T13:48:50.205Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 15800,
-      "recentPosts": 25,
+      "totalPosts": 15812,
+      "recentPosts": 12,
       "peakPosts": 25,
-      "lastSeen": "2026-04-17T03:33:09.892Z"
+      "lastSeen": "2026-04-17T13:48:55.646Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 15748,
+      "totalPosts": 15773,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-17T03:33:12.821Z"
+      "lastSeen": "2026-04-17T13:49:01.278Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "This was a really great read. Highly recommended! gbbns.co/journal/acce...\n\nThe EAA has made it difficult to ignore #a11y issues. But the fix hasn't been what it needs to be. The solution is treating frontend as a speciality again. AI still can't replace human knowledge, and can break things faster.",
-      "author": "sarasoueidan.com",
-      "engagement": 30,
-      "hashtag": "A11y"
-    },
     {
       "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
       "author": "domesticemployers.bsky.social",
@@ -338,40 +332,46 @@
       "author": "foxdesign.tech",
       "engagement": 13,
       "hashtag": "Accessibility"
+    },
+    {
+      "text": "👉 #wordsmatter #disabilityjustice #callitout #ableism",
+      "author": "danasinspired.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
     }
   ],
   "emergingTopics": [
     {
-      "keyword": "disabilityrights",
-      "count": 47
-    },
-    {
       "keyword": "accessibility",
-      "count": 44
-    },
-    {
-      "keyword": "a11y",
-      "count": 29
-    },
-    {
-      "keyword": "cripthevote",
-      "count": 28
+      "count": 38
     },
     {
       "keyword": "disabilityjustice",
       "count": 25
     },
     {
+      "keyword": "cripthevote",
+      "count": 25
+    },
+    {
       "keyword": "altcitizen",
-      "count": 24
+      "count": 21
+    },
+    {
+      "keyword": "disabilityrights",
+      "count": 19
     },
     {
       "keyword": "cripthevote disabilityrights",
-      "count": 22
+      "count": 19
+    },
+    {
+      "keyword": "a11y",
+      "count": 17
     },
     {
       "keyword": "virtual",
-      "count": 18
+      "count": 15
     },
     {
       "keyword": "nokings3",
@@ -383,42 +383,42 @@
     },
     {
       "keyword": "nokings",
-      "count": 12
+      "count": 11
     },
     {
       "keyword": "disabilityrebellion",
-      "count": 11
+      "count": 9
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
-      "count": 11
-    },
-    {
-      "keyword": "disabled people",
-      "count": 9
-    },
-    {
-      "keyword": "ada",
-      "count": 9
-    },
-    {
-      "keyword": "accessibility a11y",
-      "count": 9
-    },
-    {
-      "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
       "keyword": "disabilitysky",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "cripminds",
-      "count": 7
+      "count": 8
     },
     {
       "keyword": "accessibility disabilitysky",
+      "count": 8
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 8
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 8
+    },
+    {
+      "keyword": "disabilityrights nokings3",
+      "count": 8
+    },
+    {
+      "keyword": "refusefascism",
       "count": 7
     }
   ]
