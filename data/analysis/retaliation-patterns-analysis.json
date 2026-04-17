@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "generated_at": "2026-04-16T21:23:05.342Z",
+    "total_cases": 11430,
+    "analysis_period": "2020-2026",
+    "jurisdiction": "Ontario (WSIAT)"
+  },
+  "statistics": {
+    "total_cases": 11430,
+    "termination": {
+      "count": 71,
+      "percentage": "0.62",
+      "ci_lower": "0.48",
+      "ci_upper": "0.77"
+    },
+    "discipline": {
+      "count": 4,
+      "percentage": "0.03",
+      "ci_lower": "0.00",
+      "ci_upper": "0.07"
+    },
+    "retaliation": {
+      "count": 0,
+      "percentage": "0.00",
+      "ci_lower": "0.00",
+      "ci_upper": "0.00"
+    },
+    "coercion": {
+      "count": 8,
+      "percentage": "0.07",
+      "ci_lower": "0.02",
+      "ci_upper": "0.12"
+    },
+    "privacy_violation": {
+      "count": 3,
+      "percentage": "0.03",
+      "ci_lower": "-0.00",
+      "ci_upper": "0.06"
+    },
+    "exclusion": {
+      "count": 0,
+      "percentage": "0.00",
+      "ci_lower": "0.00",
+      "ci_upper": "0.00"
+    },
+    "mental_stress": {
+      "count": 723,
+      "percentage": "6.33",
+      "ci_lower": "5.88",
+      "ci_upper": "6.77"
+    },
+    "timeline": {
+      "cases_with_dates": 0,
+      "percentage_with_timeline": 0,
+      "termination_7day": {
+        "count": 0,
+        "percentage": 0,
+        "expected_baseline": 0.06,
+        "ratio": 0,
+        "chi_square": 0
+      },
+      "termination_30day": {
+        "count": 0,
+        "percentage": 0,
+        "expected_baseline": 0.27,
+        "ratio": 0,
+        "chi_square": 0
+      },
+      "termination_90day": {
+        "count": 0,
+        "percentage": 0,
+        "expected_baseline": 0.81,
+        "ratio": 0,
+        "chi_square": 0
+      }
+    },
+    "co_occurrence": {
+      "termination_and_exclusion": 0,
+      "termination_and_privacy": 0,
+      "coercion_and_termination": 0,
+      "exclusion_and_mental_stress": 0,
+      "termination_and_exclusion_pct": "0.0",
+      "termination_and_privacy_pct": "0.0",
+      "coercion_and_termination_pct": "0.0"
+    }
+  },
+  "top_retaliation_cases": []
+}

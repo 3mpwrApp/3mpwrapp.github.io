@@ -1,0 +1,2248 @@
+{
+  "metadata": {
+    "generated_at": "2026-04-17T04:16:16.653Z",
+    "total_cases": 11430,
+    "analysis_period": "2020-2026",
+    "jurisdiction": "Ontario (WSIAT)",
+    "data_source": "CanLII keywords field only",
+    "limitation": "Keywords field contains brief summary phrases, not full decision text. Actual frequencies in full text would be higher."
+  },
+  "top_50_keywords": [
+    {
+      "phrase": "worker",
+      "count": 9617,
+      "percentage": "84.14",
+      "ci_lower": "83.46",
+      "ci_upper": "84.80",
+      "cases_containing": 9592
+    },
+    {
+      "phrase": "pre",
+      "count": 2076,
+      "percentage": "18.16",
+      "ci_lower": "17.47",
+      "ci_upper": "18.88",
+      "cases_containing": 1710
+    },
+    {
+      "phrase": "work",
+      "count": 1976,
+      "percentage": "17.29",
+      "ci_lower": "16.61",
+      "ci_upper": "17.99",
+      "cases_containing": 1849
+    },
+    {
+      "phrase": "existing condition",
+      "count": 1231,
+      "percentage": "10.77",
+      "ci_lower": "10.21",
+      "ci_upper": "11.35",
+      "cases_containing": 1226
+    },
+    {
+      "phrase": "injury",
+      "count": 1214,
+      "percentage": "10.62",
+      "ci_lower": "10.07",
+      "ci_upper": "11.20",
+      "cases_containing": 1209
+    },
+    {
+      "phrase": "pain",
+      "count": 1165,
+      "percentage": "10.19",
+      "ci_lower": "9.65",
+      "ci_upper": "10.76",
+      "cases_containing": 1165
+    },
+    {
+      "phrase": "employer",
+      "count": 1160,
+      "percentage": "10.15",
+      "ci_lower": "9.61",
+      "ci_upper": "10.72",
+      "cases_containing": 1160
+    },
+    {
+      "phrase": "shoulder",
+      "count": 1059,
+      "percentage": "9.27",
+      "ci_lower": "8.75",
+      "ci_upper": "9.81",
+      "cases_containing": 1059
+    },
+    {
+      "phrase": "benefits",
+      "count": 889,
+      "percentage": "7.78",
+      "ci_lower": "7.30",
+      "ci_upper": "8.28",
+      "cases_containing": 889
+    },
+    {
+      "phrase": "accident",
+      "count": 862,
+      "percentage": "7.54",
+      "ci_lower": "7.07",
+      "ci_upper": "8.04",
+      "cases_containing": 860
+    },
+    {
+      "phrase": "impairment",
+      "count": 818,
+      "percentage": "7.16",
+      "ci_lower": "6.70",
+      "ci_upper": "7.64",
+      "cases_containing": 818
+    },
+    {
+      "phrase": "psychotraumatic disability",
+      "count": 611,
+      "percentage": "5.35",
+      "ci_lower": "4.95",
+      "ci_upper": "5.77",
+      "cases_containing": 611
+    },
+    {
+      "phrase": "knee",
+      "count": 592,
+      "percentage": "5.18",
+      "ci_lower": "4.79",
+      "ci_upper": "5.60",
+      "cases_containing": 592
+    },
+    {
+      "phrase": "related injury",
+      "count": 505,
+      "percentage": "4.42",
+      "ci_lower": "4.06",
+      "ci_upper": "4.81",
+      "cases_containing": 505
+    },
+    {
+      "phrase": "entitlement",
+      "count": 504,
+      "percentage": "4.41",
+      "ci_lower": "4.05",
+      "ci_upper": "4.80",
+      "cases_containing": 504
+    },
+    {
+      "phrase": "earnings",
+      "count": 393,
+      "percentage": "3.44",
+      "ci_lower": "3.12",
+      "ci_upper": "3.79",
+      "cases_containing": 393
+    },
+    {
+      "phrase": "reconsideration",
+      "count": 389,
+      "percentage": "3.40",
+      "ci_lower": "3.09",
+      "ci_upper": "3.75",
+      "cases_containing": 389
+    },
+    {
+      "phrase": "neck",
+      "count": 388,
+      "percentage": "3.39",
+      "ci_lower": "3.08",
+      "ci_upper": "3.74",
+      "cases_containing": 388
+    },
+    {
+      "phrase": "entry",
+      "count": 381,
+      "percentage": "3.33",
+      "ci_lower": "3.02",
+      "ci_upper": "3.68",
+      "cases_containing": 374
+    },
+    {
+      "phrase": "return to work",
+      "count": 329,
+      "percentage": "2.88",
+      "ci_lower": "2.59",
+      "ci_upper": "3.20",
+      "cases_containing": 329
+    },
+    {
+      "phrase": "labour market re",
+      "count": 317,
+      "percentage": "2.77",
+      "ci_lower": "2.49",
+      "ci_upper": "3.09",
+      "cases_containing": 316
+    },
+    {
+      "phrase": "low",
+      "count": 314,
+      "percentage": "2.75",
+      "ci_lower": "2.46",
+      "ci_upper": "3.06",
+      "cases_containing": 314
+    },
+    {
+      "phrase": "non",
+      "count": 304,
+      "percentage": "2.66",
+      "ci_lower": "2.38",
+      "ci_upper": "2.97",
+      "cases_containing": 293
+    },
+    {
+      "phrase": "wrist",
+      "count": 292,
+      "percentage": "2.55",
+      "ci_lower": "2.28",
+      "ci_upper": "2.86",
+      "cases_containing": 292
+    },
+    {
+      "phrase": "rating",
+      "count": 285,
+      "percentage": "2.49",
+      "ci_lower": "2.22",
+      "ci_upper": "2.80",
+      "cases_containing": 285
+    },
+    {
+      "phrase": "suitable",
+      "count": 283,
+      "percentage": "2.48",
+      "ci_lower": "2.21",
+      "ci_upper": "2.78",
+      "cases_containing": 283
+    },
+    {
+      "phrase": "permanent impairment",
+      "count": 272,
+      "percentage": "2.38",
+      "ci_lower": "2.12",
+      "ci_upper": "2.68",
+      "cases_containing": 271
+    },
+    {
+      "phrase": "symptoms",
+      "count": 264,
+      "percentage": "2.31",
+      "ci_lower": "2.05",
+      "ci_upper": "2.60",
+      "cases_containing": 264
+    },
+    {
+      "phrase": "time limit",
+      "count": 256,
+      "percentage": "2.24",
+      "ci_lower": "1.98",
+      "ci_upper": "2.53",
+      "cases_containing": 256
+    },
+    {
+      "phrase": "psychological",
+      "count": 240,
+      "percentage": "2.10",
+      "ci_lower": "1.85",
+      "ci_upper": "2.38",
+      "cases_containing": 240
+    },
+    {
+      "phrase": "delay",
+      "count": 226,
+      "percentage": "1.98",
+      "ci_lower": "1.74",
+      "ci_upper": "2.25",
+      "cases_containing": 226
+    },
+    {
+      "phrase": "modified duties",
+      "count": 226,
+      "percentage": "1.98",
+      "ci_lower": "1.74",
+      "ci_upper": "2.25",
+      "cases_containing": 226
+    },
+    {
+      "phrase": "representative",
+      "count": 220,
+      "percentage": "1.92",
+      "ci_lower": "1.69",
+      "ci_upper": "2.19",
+      "cases_containing": 220
+    },
+    {
+      "phrase": "ankle",
+      "count": 208,
+      "percentage": "1.82",
+      "ci_lower": "1.59",
+      "ci_upper": "2.08",
+      "cases_containing": 208
+    },
+    {
+      "phrase": "severity",
+      "count": 194,
+      "percentage": "1.70",
+      "ci_lower": "1.48",
+      "ci_upper": "1.95",
+      "cases_containing": 194
+    },
+    {
+      "phrase": "rotator cuff",
+      "count": 193,
+      "percentage": "1.69",
+      "ci_lower": "1.47",
+      "ci_upper": "1.94",
+      "cases_containing": 193
+    },
+    {
+      "phrase": "access",
+      "count": 183,
+      "percentage": "1.60",
+      "ci_lower": "1.39",
+      "ci_upper": "1.85",
+      "cases_containing": 183
+    },
+    {
+      "phrase": "greater severity than a normal",
+      "count": 178,
+      "percentage": "1.56",
+      "ci_lower": "1.35",
+      "ci_upper": "1.80",
+      "cases_containing": 178
+    },
+    {
+      "phrase": "existing conditions",
+      "count": 177,
+      "percentage": "1.55",
+      "ci_lower": "1.34",
+      "ci_upper": "1.79",
+      "cases_containing": 177
+    },
+    {
+      "phrase": "hip",
+      "count": 174,
+      "percentage": "1.52",
+      "ci_lower": "1.31",
+      "ci_upper": "1.76",
+      "cases_containing": 174
+    },
+    {
+      "phrase": "threshold test",
+      "count": 171,
+      "percentage": "1.50",
+      "ci_lower": "1.29",
+      "ci_upper": "1.74",
+      "cases_containing": 171
+    },
+    {
+      "phrase": "surgery",
+      "count": 171,
+      "percentage": "1.50",
+      "ci_lower": "1.29",
+      "ci_upper": "1.74",
+      "cases_containing": 171
+    },
+    {
+      "phrase": "duties",
+      "count": 167,
+      "percentage": "1.46",
+      "ci_lower": "1.26",
+      "ci_upper": "1.70",
+      "cases_containing": 167
+    },
+    {
+      "phrase": "elbow",
+      "count": 167,
+      "percentage": "1.46",
+      "ci_lower": "1.26",
+      "ci_upper": "1.70",
+      "cases_containing": 167
+    },
+    {
+      "phrase": "recurrence",
+      "count": 164,
+      "percentage": "1.43",
+      "ci_lower": "1.23",
+      "ci_upper": "1.67",
+      "cases_containing": 164
+    },
+    {
+      "phrase": "modified work",
+      "count": 155,
+      "percentage": "1.36",
+      "ci_lower": "1.16",
+      "ci_upper": "1.59",
+      "cases_containing": 155
+    },
+    {
+      "phrase": "post",
+      "count": 150,
+      "percentage": "1.31",
+      "ci_lower": "1.12",
+      "ci_upper": "1.54",
+      "cases_containing": 148
+    },
+    {
+      "phrase": "information",
+      "count": 147,
+      "percentage": "1.29",
+      "ci_lower": "1.10",
+      "ci_upper": "1.51",
+      "cases_containing": 147
+    },
+    {
+      "phrase": "related injury disease",
+      "count": 146,
+      "percentage": "1.28",
+      "ci_lower": "1.09",
+      "ci_upper": "1.50",
+      "cases_containing": 146
+    },
+    {
+      "phrase": "time",
+      "count": 146,
+      "percentage": "1.28",
+      "ci_lower": "1.09",
+      "ci_upper": "1.50",
+      "cases_containing": 141
+    }
+  ],
+  "specific_terms": [
+    {
+      "term": "work",
+      "count": 10951,
+      "percentage": "95.81",
+      "ci_lower": "95.43",
+      "ci_upper": "96.16"
+    },
+    {
+      "term": "worker",
+      "count": 10805,
+      "percentage": "94.53",
+      "ci_lower": "94.10",
+      "ci_upper": "94.93"
+    },
+    {
+      "term": "injury",
+      "count": 2565,
+      "percentage": "22.44",
+      "ci_lower": "21.69",
+      "ci_upper": "23.21"
+    },
+    {
+      "term": "pain",
+      "count": 1664,
+      "percentage": "14.56",
+      "ci_lower": "13.92",
+      "ci_upper": "15.22"
+    },
+    {
+      "term": "pre-existing",
+      "count": 1521,
+      "percentage": "13.31",
+      "ci_lower": "12.70",
+      "ci_upper": "13.94"
+    },
+    {
+      "term": "benefits",
+      "count": 1508,
+      "percentage": "13.19",
+      "ci_lower": "12.59",
+      "ci_upper": "13.83"
+    },
+    {
+      "term": "accident",
+      "count": 1474,
+      "percentage": "12.90",
+      "ci_lower": "12.29",
+      "ci_upper": "13.52"
+    },
+    {
+      "term": "employer",
+      "count": 1398,
+      "percentage": "12.23",
+      "ci_lower": "11.64",
+      "ci_upper": "12.84"
+    },
+    {
+      "term": "shoulder",
+      "count": 1391,
+      "percentage": "12.17",
+      "ci_lower": "11.58",
+      "ci_upper": "12.78"
+    },
+    {
+      "term": "impairment",
+      "count": 1355,
+      "percentage": "11.85",
+      "ci_lower": "11.27",
+      "ci_upper": "12.46"
+    },
+    {
+      "term": "entitlement",
+      "count": 1055,
+      "percentage": "9.23",
+      "ci_lower": "8.71",
+      "ci_upper": "9.77"
+    },
+    {
+      "term": "work-related",
+      "count": 1026,
+      "percentage": "8.98",
+      "ci_lower": "8.47",
+      "ci_upper": "9.51"
+    },
+    {
+      "term": "knee",
+      "count": 845,
+      "percentage": "7.39",
+      "ci_lower": "6.93",
+      "ci_upper": "7.89"
+    },
+    {
+      "term": "psychotraumatic",
+      "count": 757,
+      "percentage": "6.62",
+      "ci_lower": "6.18",
+      "ci_upper": "7.09"
+    },
+    {
+      "term": "reconsideration",
+      "count": 522,
+      "percentage": "4.57",
+      "ci_lower": "4.20",
+      "ci_upper": "4.97"
+    },
+    {
+      "term": "neck",
+      "count": 485,
+      "percentage": "4.24",
+      "ci_lower": "3.89",
+      "ci_upper": "4.63"
+    },
+    {
+      "term": "back",
+      "count": 390,
+      "percentage": "3.41",
+      "ci_lower": "3.09",
+      "ci_upper": "3.76"
+    },
+    {
+      "term": "termination",
+      "count": 206,
+      "percentage": "1.80",
+      "ci_lower": "1.57",
+      "ci_upper": "2.06"
+    },
+    {
+      "term": "mental stress",
+      "count": 117,
+      "percentage": "1.02",
+      "ci_lower": "0.85",
+      "ci_upper": "1.23"
+    },
+    {
+      "term": "dismissal",
+      "count": 21,
+      "percentage": "0.18",
+      "ci_lower": "0.12",
+      "ci_upper": "0.28"
+    },
+    {
+      "term": "fired",
+      "count": 2,
+      "percentage": "0.02",
+      "ci_lower": "0.00",
+      "ci_upper": "0.06"
+    },
+    {
+      "term": "threat",
+      "count": 2,
+      "percentage": "0.02",
+      "ci_lower": "0.00",
+      "ci_upper": "0.06"
+    },
+    {
+      "term": "terminated",
+      "count": 0,
+      "percentage": "0.00",
+      "ci_lower": "0.00",
+      "ci_upper": "0.02"
+    },
+    {
+      "term": "coercion",
+      "count": 0,
+      "percentage": "0.00",
+      "ci_lower": "0.00",
+      "ci_upper": "0.02"
+    },
+    {
+      "term": "decision of employer",
+      "count": 0,
+      "percentage": "0.00",
+      "ci_lower": "0.00",
+      "ci_upper": "0.02"
+    },
+    {
+      "term": "labour relations",
+      "count": 0,
+      "percentage": "0.00",
+      "ci_lower": "0.00",
+      "ci_upper": "0.02"
+    }
+  ],
+  "co_occurrence": {
+    "pre-existing + greater severity": {
+      "count": 177,
+      "percentage": "1.55",
+      "lift": "7.47",
+      "chi_square": "1162.72",
+      "term1_count": 1521,
+      "term2_count": 178
+    },
+    "pre-existing + knee": {
+      "count": 155,
+      "percentage": "1.36",
+      "lift": "1.38",
+      "chi_square": "20.06",
+      "term1_count": 1521,
+      "term2_count": 845
+    },
+    "pre-existing + back": {
+      "count": 55,
+      "percentage": "0.48",
+      "lift": "1.06",
+      "chi_square": "0.22",
+      "term1_count": 1521,
+      "term2_count": 390
+    },
+    "mental stress + labour relations": {
+      "count": 0,
+      "percentage": "0.00",
+      "lift": "0.00",
+      "chi_square": "0.00",
+      "term1_count": 117,
+      "term2_count": 0
+    },
+    "termination + mental stress": {
+      "count": 1,
+      "percentage": "0.01",
+      "lift": "0.47",
+      "chi_square": "0.60",
+      "term1_count": 206,
+      "term2_count": 117
+    },
+    "worker + pain": {
+      "count": 1617,
+      "percentage": "14.15",
+      "lift": "1.03",
+      "chi_square": "26.33",
+      "term1_count": 10805,
+      "term2_count": 1664
+    }
+  },
+  "all_keywords": [
+    {
+      "phrase": "worker",
+      "count": 9617,
+      "percentage": "84.14",
+      "ci_lower": "83.46",
+      "ci_upper": "84.80",
+      "cases_containing": 9592
+    },
+    {
+      "phrase": "pre",
+      "count": 2076,
+      "percentage": "18.16",
+      "ci_lower": "17.47",
+      "ci_upper": "18.88",
+      "cases_containing": 1710
+    },
+    {
+      "phrase": "work",
+      "count": 1976,
+      "percentage": "17.29",
+      "ci_lower": "16.61",
+      "ci_upper": "17.99",
+      "cases_containing": 1849
+    },
+    {
+      "phrase": "existing condition",
+      "count": 1231,
+      "percentage": "10.77",
+      "ci_lower": "10.21",
+      "ci_upper": "11.35",
+      "cases_containing": 1226
+    },
+    {
+      "phrase": "injury",
+      "count": 1214,
+      "percentage": "10.62",
+      "ci_lower": "10.07",
+      "ci_upper": "11.20",
+      "cases_containing": 1209
+    },
+    {
+      "phrase": "pain",
+      "count": 1165,
+      "percentage": "10.19",
+      "ci_lower": "9.65",
+      "ci_upper": "10.76",
+      "cases_containing": 1165
+    },
+    {
+      "phrase": "employer",
+      "count": 1160,
+      "percentage": "10.15",
+      "ci_lower": "9.61",
+      "ci_upper": "10.72",
+      "cases_containing": 1160
+    },
+    {
+      "phrase": "shoulder",
+      "count": 1059,
+      "percentage": "9.27",
+      "ci_lower": "8.75",
+      "ci_upper": "9.81",
+      "cases_containing": 1059
+    },
+    {
+      "phrase": "benefits",
+      "count": 889,
+      "percentage": "7.78",
+      "ci_lower": "7.30",
+      "ci_upper": "8.28",
+      "cases_containing": 889
+    },
+    {
+      "phrase": "accident",
+      "count": 862,
+      "percentage": "7.54",
+      "ci_lower": "7.07",
+      "ci_upper": "8.04",
+      "cases_containing": 860
+    },
+    {
+      "phrase": "impairment",
+      "count": 818,
+      "percentage": "7.16",
+      "ci_lower": "6.70",
+      "ci_upper": "7.64",
+      "cases_containing": 818
+    },
+    {
+      "phrase": "psychotraumatic disability",
+      "count": 611,
+      "percentage": "5.35",
+      "ci_lower": "4.95",
+      "ci_upper": "5.77",
+      "cases_containing": 611
+    },
+    {
+      "phrase": "knee",
+      "count": 592,
+      "percentage": "5.18",
+      "ci_lower": "4.79",
+      "ci_upper": "5.60",
+      "cases_containing": 592
+    },
+    {
+      "phrase": "related injury",
+      "count": 505,
+      "percentage": "4.42",
+      "ci_lower": "4.06",
+      "ci_upper": "4.81",
+      "cases_containing": 505
+    },
+    {
+      "phrase": "entitlement",
+      "count": 504,
+      "percentage": "4.41",
+      "ci_lower": "4.05",
+      "ci_upper": "4.80",
+      "cases_containing": 504
+    },
+    {
+      "phrase": "earnings",
+      "count": 393,
+      "percentage": "3.44",
+      "ci_lower": "3.12",
+      "ci_upper": "3.79",
+      "cases_containing": 393
+    },
+    {
+      "phrase": "reconsideration",
+      "count": 389,
+      "percentage": "3.40",
+      "ci_lower": "3.09",
+      "ci_upper": "3.75",
+      "cases_containing": 389
+    },
+    {
+      "phrase": "neck",
+      "count": 388,
+      "percentage": "3.39",
+      "ci_lower": "3.08",
+      "ci_upper": "3.74",
+      "cases_containing": 388
+    },
+    {
+      "phrase": "entry",
+      "count": 381,
+      "percentage": "3.33",
+      "ci_lower": "3.02",
+      "ci_upper": "3.68",
+      "cases_containing": 374
+    },
+    {
+      "phrase": "return to work",
+      "count": 329,
+      "percentage": "2.88",
+      "ci_lower": "2.59",
+      "ci_upper": "3.20",
+      "cases_containing": 329
+    },
+    {
+      "phrase": "labour market re",
+      "count": 317,
+      "percentage": "2.77",
+      "ci_lower": "2.49",
+      "ci_upper": "3.09",
+      "cases_containing": 316
+    },
+    {
+      "phrase": "low",
+      "count": 314,
+      "percentage": "2.75",
+      "ci_lower": "2.46",
+      "ci_upper": "3.06",
+      "cases_containing": 314
+    },
+    {
+      "phrase": "non",
+      "count": 304,
+      "percentage": "2.66",
+      "ci_lower": "2.38",
+      "ci_upper": "2.97",
+      "cases_containing": 293
+    },
+    {
+      "phrase": "wrist",
+      "count": 292,
+      "percentage": "2.55",
+      "ci_lower": "2.28",
+      "ci_upper": "2.86",
+      "cases_containing": 292
+    },
+    {
+      "phrase": "rating",
+      "count": 285,
+      "percentage": "2.49",
+      "ci_lower": "2.22",
+      "ci_upper": "2.80",
+      "cases_containing": 285
+    },
+    {
+      "phrase": "suitable",
+      "count": 283,
+      "percentage": "2.48",
+      "ci_lower": "2.21",
+      "ci_upper": "2.78",
+      "cases_containing": 283
+    },
+    {
+      "phrase": "permanent impairment",
+      "count": 272,
+      "percentage": "2.38",
+      "ci_lower": "2.12",
+      "ci_upper": "2.68",
+      "cases_containing": 271
+    },
+    {
+      "phrase": "symptoms",
+      "count": 264,
+      "percentage": "2.31",
+      "ci_lower": "2.05",
+      "ci_upper": "2.60",
+      "cases_containing": 264
+    },
+    {
+      "phrase": "time limit",
+      "count": 256,
+      "percentage": "2.24",
+      "ci_lower": "1.98",
+      "ci_upper": "2.53",
+      "cases_containing": 256
+    },
+    {
+      "phrase": "psychological",
+      "count": 240,
+      "percentage": "2.10",
+      "ci_lower": "1.85",
+      "ci_upper": "2.38",
+      "cases_containing": 240
+    },
+    {
+      "phrase": "delay",
+      "count": 226,
+      "percentage": "1.98",
+      "ci_lower": "1.74",
+      "ci_upper": "2.25",
+      "cases_containing": 226
+    },
+    {
+      "phrase": "modified duties",
+      "count": 226,
+      "percentage": "1.98",
+      "ci_lower": "1.74",
+      "ci_upper": "2.25",
+      "cases_containing": 226
+    },
+    {
+      "phrase": "representative",
+      "count": 220,
+      "percentage": "1.92",
+      "ci_lower": "1.69",
+      "ci_upper": "2.19",
+      "cases_containing": 220
+    },
+    {
+      "phrase": "ankle",
+      "count": 208,
+      "percentage": "1.82",
+      "ci_lower": "1.59",
+      "ci_upper": "2.08",
+      "cases_containing": 208
+    },
+    {
+      "phrase": "severity",
+      "count": 194,
+      "percentage": "1.70",
+      "ci_lower": "1.48",
+      "ci_upper": "1.95",
+      "cases_containing": 194
+    },
+    {
+      "phrase": "rotator cuff",
+      "count": 193,
+      "percentage": "1.69",
+      "ci_lower": "1.47",
+      "ci_upper": "1.94",
+      "cases_containing": 193
+    },
+    {
+      "phrase": "access",
+      "count": 183,
+      "percentage": "1.60",
+      "ci_lower": "1.39",
+      "ci_upper": "1.85",
+      "cases_containing": 183
+    },
+    {
+      "phrase": "greater severity than a normal",
+      "count": 178,
+      "percentage": "1.56",
+      "ci_lower": "1.35",
+      "ci_upper": "1.80",
+      "cases_containing": 178
+    },
+    {
+      "phrase": "existing conditions",
+      "count": 177,
+      "percentage": "1.55",
+      "ci_lower": "1.34",
+      "ci_upper": "1.79",
+      "cases_containing": 177
+    },
+    {
+      "phrase": "hip",
+      "count": 174,
+      "percentage": "1.52",
+      "ci_lower": "1.31",
+      "ci_upper": "1.76",
+      "cases_containing": 174
+    },
+    {
+      "phrase": "threshold test",
+      "count": 171,
+      "percentage": "1.50",
+      "ci_lower": "1.29",
+      "ci_upper": "1.74",
+      "cases_containing": 171
+    },
+    {
+      "phrase": "surgery",
+      "count": 171,
+      "percentage": "1.50",
+      "ci_lower": "1.29",
+      "ci_upper": "1.74",
+      "cases_containing": 171
+    },
+    {
+      "phrase": "duties",
+      "count": 167,
+      "percentage": "1.46",
+      "ci_lower": "1.26",
+      "ci_upper": "1.70",
+      "cases_containing": 167
+    },
+    {
+      "phrase": "elbow",
+      "count": 167,
+      "percentage": "1.46",
+      "ci_lower": "1.26",
+      "ci_upper": "1.70",
+      "cases_containing": 167
+    },
+    {
+      "phrase": "recurrence",
+      "count": 164,
+      "percentage": "1.43",
+      "ci_lower": "1.23",
+      "ci_upper": "1.67",
+      "cases_containing": 164
+    },
+    {
+      "phrase": "modified work",
+      "count": 155,
+      "percentage": "1.36",
+      "ci_lower": "1.16",
+      "ci_upper": "1.59",
+      "cases_containing": 155
+    },
+    {
+      "phrase": "post",
+      "count": 150,
+      "percentage": "1.31",
+      "ci_lower": "1.12",
+      "ci_upper": "1.54",
+      "cases_containing": 148
+    },
+    {
+      "phrase": "information",
+      "count": 147,
+      "percentage": "1.29",
+      "ci_lower": "1.10",
+      "ci_upper": "1.51",
+      "cases_containing": 147
+    },
+    {
+      "phrase": "related injury disease",
+      "count": 146,
+      "percentage": "1.28",
+      "ci_lower": "1.09",
+      "ci_upper": "1.50",
+      "cases_containing": 146
+    },
+    {
+      "phrase": "time",
+      "count": 146,
+      "percentage": "1.28",
+      "ci_lower": "1.09",
+      "ci_upper": "1.50",
+      "cases_containing": 141
+    },
+    {
+      "phrase": "six",
+      "count": 137,
+      "percentage": "1.20",
+      "ci_lower": "1.01",
+      "ci_upper": "1.42",
+      "cases_containing": 132
+    },
+    {
+      "phrase": "noted",
+      "count": 136,
+      "percentage": "1.19",
+      "ci_lower": "1.01",
+      "ci_upper": "1.41",
+      "cases_containing": 136
+    },
+    {
+      "phrase": "evidence",
+      "count": 133,
+      "percentage": "1.16",
+      "ci_lower": "0.98",
+      "ci_upper": "1.38",
+      "cases_containing": 133
+    },
+    {
+      "phrase": "proposed resolution",
+      "count": 132,
+      "percentage": "1.15",
+      "ci_lower": "0.97",
+      "ci_upper": "1.37",
+      "cases_containing": 132
+    },
+    {
+      "phrase": "file",
+      "count": 130,
+      "percentage": "1.14",
+      "ci_lower": "0.96",
+      "ci_upper": "1.35",
+      "cases_containing": 130
+    },
+    {
+      "phrase": "cost relief",
+      "count": 130,
+      "percentage": "1.14",
+      "ci_lower": "0.96",
+      "ci_upper": "1.35",
+      "cases_containing": 130
+    },
+    {
+      "phrase": "chronic pain",
+      "count": 130,
+      "percentage": "1.14",
+      "ci_lower": "0.96",
+      "ci_upper": "1.35",
+      "cases_containing": 130
+    },
+    {
+      "phrase": "time extension",
+      "count": 129,
+      "percentage": "1.13",
+      "ci_lower": "0.95",
+      "ci_upper": "1.34",
+      "cases_containing": 129
+    },
+    {
+      "phrase": "redetermination",
+      "count": 126,
+      "percentage": "1.10",
+      "ci_lower": "0.93",
+      "ci_upper": "1.31",
+      "cases_containing": 126
+    },
+    {
+      "phrase": "entitlement to benefits",
+      "count": 126,
+      "percentage": "1.10",
+      "ci_lower": "0.93",
+      "ci_upper": "1.31",
+      "cases_containing": 126
+    },
+    {
+      "phrase": "significant deterioration",
+      "count": 125,
+      "percentage": "1.09",
+      "ci_lower": "0.92",
+      "ci_upper": "1.30",
+      "cases_containing": 125
+    },
+    {
+      "phrase": "extension",
+      "count": 122,
+      "percentage": "1.07",
+      "ci_lower": "0.89",
+      "ci_upper": "1.27",
+      "cases_containing": 122
+    },
+    {
+      "phrase": "hours",
+      "count": 121,
+      "percentage": "1.06",
+      "ci_lower": "0.89",
+      "ci_upper": "1.26",
+      "cases_containing": 121
+    },
+    {
+      "phrase": "low back pain",
+      "count": 120,
+      "percentage": "1.05",
+      "ci_lower": "0.88",
+      "ci_upper": "1.25",
+      "cases_containing": 120
+    },
+    {
+      "phrase": "anxiety",
+      "count": 118,
+      "percentage": "1.03",
+      "ci_lower": "0.86",
+      "ci_upper": "1.23",
+      "cases_containing": 118
+    },
+    {
+      "phrase": "concussion",
+      "count": 113,
+      "percentage": "0.99",
+      "ci_lower": "0.82",
+      "ci_upper": "1.19",
+      "cases_containing": 112
+    },
+    {
+      "phrase": "workplace accident",
+      "count": 113,
+      "percentage": "0.99",
+      "ci_lower": "0.82",
+      "ci_upper": "1.19",
+      "cases_containing": 113
+    },
+    {
+      "phrase": "disc herniation",
+      "count": 109,
+      "percentage": "0.95",
+      "ci_lower": "0.79",
+      "ci_upper": "1.15",
+      "cases_containing": 109
+    },
+    {
+      "phrase": "medical",
+      "count": 107,
+      "percentage": "0.94",
+      "ci_lower": "0.78",
+      "ci_upper": "1.13",
+      "cases_containing": 107
+    },
+    {
+      "phrase": "indicated that the worker",
+      "count": 106,
+      "percentage": "0.93",
+      "ci_lower": "0.77",
+      "ci_upper": "1.12",
+      "cases_containing": 106
+    },
+    {
+      "phrase": "loss",
+      "count": 104,
+      "percentage": "0.91",
+      "ci_lower": "0.75",
+      "ci_upper": "1.10",
+      "cases_containing": 104
+    },
+    {
+      "phrase": "liable to develop a disability",
+      "count": 102,
+      "percentage": "0.89",
+      "ci_lower": "0.74",
+      "ci_upper": "1.08",
+      "cases_containing": 102
+    },
+    {
+      "phrase": "exposure",
+      "count": 102,
+      "percentage": "0.89",
+      "ci_lower": "0.74",
+      "ci_upper": "1.08",
+      "cases_containing": 102
+    },
+    {
+      "phrase": "long",
+      "count": 101,
+      "percentage": "0.88",
+      "ci_lower": "0.73",
+      "ci_upper": "1.07",
+      "cases_containing": 93
+    },
+    {
+      "phrase": "accident employer",
+      "count": 98,
+      "percentage": "0.86",
+      "ci_lower": "0.70",
+      "ci_upper": "1.04",
+      "cases_containing": 98
+    },
+    {
+      "phrase": "compensable",
+      "count": 97,
+      "percentage": "0.85",
+      "ci_lower": "0.70",
+      "ci_upper": "1.03",
+      "cases_containing": 97
+    },
+    {
+      "phrase": "tear",
+      "count": 95,
+      "percentage": "0.83",
+      "ci_lower": "0.68",
+      "ci_upper": "1.01",
+      "cases_containing": 95
+    },
+    {
+      "phrase": "depression",
+      "count": 93,
+      "percentage": "0.81",
+      "ci_lower": "0.66",
+      "ci_upper": "1.00",
+      "cases_containing": 93
+    },
+    {
+      "phrase": "report",
+      "count": 92,
+      "percentage": "0.80",
+      "ci_lower": "0.66",
+      "ci_upper": "0.99",
+      "cases_containing": 92
+    },
+    {
+      "phrase": "bilateral",
+      "count": 89,
+      "percentage": "0.78",
+      "ci_lower": "0.63",
+      "ci_upper": "0.96",
+      "cases_containing": 89
+    },
+    {
+      "phrase": "request for a time extension",
+      "count": 89,
+      "percentage": "0.78",
+      "ci_lower": "0.63",
+      "ci_upper": "0.96",
+      "cases_containing": 89
+    },
+    {
+      "phrase": "offset",
+      "count": 88,
+      "percentage": "0.77",
+      "ci_lower": "0.63",
+      "ci_upper": "0.95",
+      "cases_containing": 88
+    },
+    {
+      "phrase": "employment",
+      "count": 86,
+      "percentage": "0.75",
+      "ci_lower": "0.61",
+      "ci_upper": "0.93",
+      "cases_containing": 86
+    },
+    {
+      "phrase": "rotator cuff tear",
+      "count": 84,
+      "percentage": "0.73",
+      "ci_lower": "0.59",
+      "ci_upper": "0.91",
+      "cases_containing": 84
+    },
+    {
+      "phrase": "deterioration",
+      "count": 84,
+      "percentage": "0.73",
+      "ci_lower": "0.59",
+      "ci_upper": "0.91",
+      "cases_containing": 84
+    },
+    {
+      "phrase": "injury earnings",
+      "count": 83,
+      "percentage": "0.73",
+      "ci_lower": "0.59",
+      "ci_upper": "0.90",
+      "cases_containing": 81
+    },
+    {
+      "phrase": "foot",
+      "count": 82,
+      "percentage": "0.72",
+      "ci_lower": "0.58",
+      "ci_upper": "0.89",
+      "cases_containing": 82
+    },
+    {
+      "phrase": "term average earnings",
+      "count": 79,
+      "percentage": "0.69",
+      "ci_lower": "0.55",
+      "ci_upper": "0.86",
+      "cases_containing": 61
+    },
+    {
+      "phrase": "find",
+      "count": 78,
+      "percentage": "0.68",
+      "ci_lower": "0.55",
+      "ci_upper": "0.85",
+      "cases_containing": 78
+    },
+    {
+      "phrase": "headaches",
+      "count": 77,
+      "percentage": "0.67",
+      "ci_lower": "0.54",
+      "ci_upper": "0.84",
+      "cases_containing": 77
+    },
+    {
+      "phrase": "hand",
+      "count": 77,
+      "percentage": "0.67",
+      "ci_lower": "0.54",
+      "ci_upper": "0.84",
+      "cases_containing": 77
+    },
+    {
+      "phrase": "reconsideration request",
+      "count": 76,
+      "percentage": "0.66",
+      "ci_lower": "0.53",
+      "ci_upper": "0.83",
+      "cases_containing": 76
+    },
+    {
+      "phrase": "osteoarthritis",
+      "count": 76,
+      "percentage": "0.66",
+      "ci_lower": "0.53",
+      "ci_upper": "0.83",
+      "cases_containing": 76
+    },
+    {
+      "phrase": "related accident",
+      "count": 76,
+      "percentage": "0.66",
+      "ci_lower": "0.53",
+      "ci_upper": "0.83",
+      "cases_containing": 76
+    },
+    {
+      "phrase": "adjournment",
+      "count": 76,
+      "percentage": "0.66",
+      "ci_lower": "0.53",
+      "ci_upper": "0.83",
+      "cases_containing": 76
+    },
+    {
+      "phrase": "travailleur",
+      "count": 75,
+      "percentage": "0.66",
+      "ci_lower": "0.52",
+      "ci_upper": "0.82",
+      "cases_containing": 75
+    },
+    {
+      "phrase": "full",
+      "count": 75,
+      "percentage": "0.66",
+      "ci_lower": "0.52",
+      "ci_upper": "0.82",
+      "cases_containing": 75
+    },
+    {
+      "phrase": "policy",
+      "count": 75,
+      "percentage": "0.66",
+      "ci_lower": "0.52",
+      "ci_upper": "0.82",
+      "cases_containing": 75
+    },
+    {
+      "phrase": "health care",
+      "count": 74,
+      "percentage": "0.65",
+      "ci_lower": "0.52",
+      "ci_upper": "0.81",
+      "cases_containing": 74
+    },
+    {
+      "phrase": "organic",
+      "count": 74,
+      "percentage": "0.65",
+      "ci_lower": "0.52",
+      "ci_upper": "0.81",
+      "cases_containing": 71
+    },
+    {
+      "phrase": "ear",
+      "count": 73,
+      "percentage": "0.64",
+      "ci_lower": "0.51",
+      "ci_upper": "0.80",
+      "cases_containing": 73
+    },
+    {
+      "phrase": "related stressor",
+      "count": 73,
+      "percentage": "0.64",
+      "ci_lower": "0.51",
+      "ci_upper": "0.80",
+      "cases_containing": 73
+    },
+    {
+      "phrase": "process",
+      "count": 72,
+      "percentage": "0.63",
+      "ci_lower": "0.50",
+      "ci_upper": "0.79",
+      "cases_containing": 72
+    },
+    {
+      "phrase": "accident disability",
+      "count": 72,
+      "percentage": "0.63",
+      "ci_lower": "0.50",
+      "ci_upper": "0.79",
+      "cases_containing": 72
+    },
+    {
+      "phrase": "worker representative",
+      "count": 72,
+      "percentage": "0.63",
+      "ci_lower": "0.50",
+      "ci_upper": "0.79",
+      "cases_containing": 72
+    },
+    {
+      "phrase": "recovery",
+      "count": 72,
+      "percentage": "0.63",
+      "ci_lower": "0.50",
+      "ci_upper": "0.79",
+      "cases_containing": 72
+    },
+    {
+      "phrase": "leg",
+      "count": 70,
+      "percentage": "0.61",
+      "ci_lower": "0.49",
+      "ci_upper": "0.77",
+      "cases_containing": 70
+    },
+    {
+      "phrase": "shoulder injury",
+      "count": 70,
+      "percentage": "0.61",
+      "ci_lower": "0.49",
+      "ci_upper": "0.77",
+      "cases_containing": 70
+    },
+    {
+      "phrase": "exposures",
+      "count": 69,
+      "percentage": "0.60",
+      "ci_lower": "0.48",
+      "ci_upper": "0.76",
+      "cases_containing": 69
+    },
+    {
+      "phrase": "disablement",
+      "count": 67,
+      "percentage": "0.59",
+      "ci_lower": "0.46",
+      "ci_upper": "0.74",
+      "cases_containing": 67
+    },
+    {
+      "phrase": "disability benefits",
+      "count": 67,
+      "percentage": "0.59",
+      "ci_lower": "0.46",
+      "ci_upper": "0.74",
+      "cases_containing": 67
+    },
+    {
+      "phrase": "modified",
+      "count": 66,
+      "percentage": "0.58",
+      "ci_lower": "0.45",
+      "ci_upper": "0.73",
+      "cases_containing": 66
+    },
+    {
+      "phrase": "arm",
+      "count": 66,
+      "percentage": "0.58",
+      "ci_lower": "0.45",
+      "ci_upper": "0.73",
+      "cases_containing": 66
+    },
+    {
+      "phrase": "level wages",
+      "count": 65,
+      "percentage": "0.57",
+      "ci_lower": "0.45",
+      "ci_upper": "0.72",
+      "cases_containing": 64
+    },
+    {
+      "phrase": "part",
+      "count": 65,
+      "percentage": "0.57",
+      "ci_lower": "0.45",
+      "ci_upper": "0.72",
+      "cases_containing": 63
+    },
+    {
+      "phrase": "low back injury",
+      "count": 64,
+      "percentage": "0.56",
+      "ci_lower": "0.44",
+      "ci_upper": "0.71",
+      "cases_containing": 64
+    },
+    {
+      "phrase": "find that the worker",
+      "count": 64,
+      "percentage": "0.56",
+      "ci_lower": "0.44",
+      "ci_upper": "0.71",
+      "cases_containing": 64
+    },
+    {
+      "phrase": "substantial work",
+      "count": 62,
+      "percentage": "0.54",
+      "ci_lower": "0.42",
+      "ci_upper": "0.69",
+      "cases_containing": 62
+    },
+    {
+      "phrase": "restrictions",
+      "count": 61,
+      "percentage": "0.53",
+      "ci_lower": "0.42",
+      "ci_upper": "0.68",
+      "cases_containing": 61
+    },
+    {
+      "phrase": "limit",
+      "count": 60,
+      "percentage": "0.52",
+      "ci_lower": "0.41",
+      "ci_upper": "0.68",
+      "cases_containing": 60
+    },
+    {
+      "phrase": "skills",
+      "count": 60,
+      "percentage": "0.52",
+      "ci_lower": "0.41",
+      "ci_upper": "0.68",
+      "cases_containing": 60
+    },
+    {
+      "phrase": "pandemic",
+      "count": 60,
+      "percentage": "0.52",
+      "ci_lower": "0.41",
+      "ci_upper": "0.68",
+      "cases_containing": 60
+    },
+    {
+      "phrase": "degenerative changes",
+      "count": 59,
+      "percentage": "0.52",
+      "ci_lower": "0.40",
+      "ci_upper": "0.67",
+      "cases_containing": 59
+    },
+    {
+      "phrase": "thumb",
+      "count": 59,
+      "percentage": "0.52",
+      "ci_lower": "0.40",
+      "ci_upper": "0.67",
+      "cases_containing": 59
+    },
+    {
+      "phrase": "noise",
+      "count": 59,
+      "percentage": "0.52",
+      "ci_lower": "0.40",
+      "ci_upper": "0.67",
+      "cases_containing": 59
+    },
+    {
+      "phrase": "workers’ compensation",
+      "count": 59,
+      "percentage": "0.52",
+      "ci_lower": "0.40",
+      "ci_upper": "0.67",
+      "cases_containing": 38
+    },
+    {
+      "phrase": "enhanced",
+      "count": 58,
+      "percentage": "0.51",
+      "ci_lower": "0.39",
+      "ci_upper": "0.66",
+      "cases_containing": 58
+    },
+    {
+      "phrase": "carpal tunnel syndrome",
+      "count": 57,
+      "percentage": "0.50",
+      "ci_lower": "0.39",
+      "ci_upper": "0.65",
+      "cases_containing": 57
+    },
+    {
+      "phrase": "existing",
+      "count": 57,
+      "percentage": "0.50",
+      "ci_lower": "0.39",
+      "ci_upper": "0.65",
+      "cases_containing": 57
+    },
+    {
+      "phrase": "mental stress",
+      "count": 57,
+      "percentage": "0.50",
+      "ci_lower": "0.39",
+      "ci_upper": "0.65",
+      "cases_containing": 57
+    },
+    {
+      "phrase": "degrees",
+      "count": 56,
+      "percentage": "0.49",
+      "ci_lower": "0.38",
+      "ci_upper": "0.64",
+      "cases_containing": 56
+    },
+    {
+      "phrase": "job",
+      "count": 55,
+      "percentage": "0.48",
+      "ci_lower": "0.37",
+      "ci_upper": "0.63",
+      "cases_containing": 55
+    },
+    {
+      "phrase": "lumbar spine",
+      "count": 55,
+      "percentage": "0.48",
+      "ci_lower": "0.37",
+      "ci_upper": "0.63",
+      "cases_containing": 55
+    },
+    {
+      "phrase": "fibromyalgia",
+      "count": 54,
+      "percentage": "0.47",
+      "ci_lower": "0.36",
+      "ci_upper": "0.62",
+      "cases_containing": 54
+    },
+    {
+      "phrase": "treatment",
+      "count": 54,
+      "percentage": "0.47",
+      "ci_lower": "0.36",
+      "ci_upper": "0.62",
+      "cases_containing": 54
+    },
+    {
+      "phrase": "knee injury",
+      "count": 53,
+      "percentage": "0.46",
+      "ci_lower": "0.35",
+      "ci_upper": "0.61",
+      "cases_containing": 53
+    },
+    {
+      "phrase": "lung cancer",
+      "count": 53,
+      "percentage": "0.46",
+      "ci_lower": "0.35",
+      "ci_upper": "0.61",
+      "cases_containing": 53
+    },
+    {
+      "phrase": "access to the worker",
+      "count": 53,
+      "percentage": "0.46",
+      "ci_lower": "0.35",
+      "ci_upper": "0.61",
+      "cases_containing": 53
+    },
+    {
+      "phrase": "worker s representative",
+      "count": 51,
+      "percentage": "0.45",
+      "ci_lower": "0.34",
+      "ci_upper": "0.59",
+      "cases_containing": 51
+    },
+    {
+      "phrase": "disc",
+      "count": 51,
+      "percentage": "0.45",
+      "ci_lower": "0.34",
+      "ci_upper": "0.59",
+      "cases_containing": 51
+    },
+    {
+      "phrase": "time basis",
+      "count": 51,
+      "percentage": "0.45",
+      "ci_lower": "0.34",
+      "ci_upper": "0.59",
+      "cases_containing": 50
+    },
+    {
+      "phrase": "released to the employer",
+      "count": 51,
+      "percentage": "0.45",
+      "ci_lower": "0.34",
+      "ci_upper": "0.59",
+      "cases_containing": 51
+    },
+    {
+      "phrase": "worker s pre",
+      "count": 50,
+      "percentage": "0.44",
+      "ci_lower": "0.33",
+      "ci_upper": "0.58",
+      "cases_containing": 48
+    },
+    {
+      "phrase": "audiogram",
+      "count": 49,
+      "percentage": "0.43",
+      "ci_lower": "0.32",
+      "ci_upper": "0.57",
+      "cases_containing": 49
+    },
+    {
+      "phrase": "competitively unemployable",
+      "count": 49,
+      "percentage": "0.43",
+      "ci_lower": "0.32",
+      "ci_upper": "0.57",
+      "cases_containing": 49
+    },
+    {
+      "phrase": "moderate",
+      "count": 48,
+      "percentage": "0.42",
+      "ci_lower": "0.32",
+      "ci_upper": "0.56",
+      "cases_containing": 48
+    },
+    {
+      "phrase": "refd",
+      "count": 48,
+      "percentage": "0.42",
+      "ci_lower": "0.32",
+      "ci_upper": "0.56",
+      "cases_containing": 48
+    },
+    {
+      "phrase": "workplace health and safety",
+      "count": 48,
+      "percentage": "0.42",
+      "ci_lower": "0.32",
+      "ci_upper": "0.56",
+      "cases_containing": 48
+    },
+    {
+      "phrase": "retroactive adjustment",
+      "count": 47,
+      "percentage": "0.41",
+      "ci_lower": "0.31",
+      "ci_upper": "0.55",
+      "cases_containing": 47
+    },
+    {
+      "phrase": "smoking",
+      "count": 47,
+      "percentage": "0.41",
+      "ci_lower": "0.31",
+      "ci_upper": "0.55",
+      "cases_containing": 47
+    },
+    {
+      "phrase": "lock",
+      "count": 47,
+      "percentage": "0.41",
+      "ci_lower": "0.31",
+      "ci_upper": "0.55",
+      "cases_containing": 46
+    },
+    {
+      "phrase": "ongoing",
+      "count": 47,
+      "percentage": "0.41",
+      "ci_lower": "0.31",
+      "ci_upper": "0.55",
+      "cases_containing": 47
+    },
+    {
+      "phrase": "travailleuse",
+      "count": 46,
+      "percentage": "0.40",
+      "ci_lower": "0.30",
+      "ci_upper": "0.54",
+      "cases_containing": 46
+    },
+    {
+      "phrase": "degenerative",
+      "count": 46,
+      "percentage": "0.40",
+      "ci_lower": "0.30",
+      "ci_upper": "0.54",
+      "cases_containing": 46
+    },
+    {
+      "phrase": "month statutory time limit",
+      "count": 46,
+      "percentage": "0.40",
+      "ci_lower": "0.30",
+      "ci_upper": "0.54",
+      "cases_containing": 46
+    },
+    {
+      "phrase": "permanent disability",
+      "count": 46,
+      "percentage": "0.40",
+      "ci_lower": "0.30",
+      "ci_upper": "0.54",
+      "cases_containing": 46
+    },
+    {
+      "phrase": "minimum wage",
+      "count": 46,
+      "percentage": "0.40",
+      "ci_lower": "0.30",
+      "ci_upper": "0.54",
+      "cases_containing": 46
+    },
+    {
+      "phrase": "traumatic",
+      "count": 46,
+      "percentage": "0.40",
+      "ci_lower": "0.30",
+      "ci_upper": "0.54",
+      "cases_containing": 46
+    },
+    {
+      "phrase": "statutory time",
+      "count": 46,
+      "percentage": "0.40",
+      "ci_lower": "0.30",
+      "ci_upper": "0.54",
+      "cases_containing": 46
+    },
+    {
+      "phrase": "meniscal tear",
+      "count": 45,
+      "percentage": "0.39",
+      "ci_lower": "0.29",
+      "ci_upper": "0.53",
+      "cases_containing": 45
+    },
+    {
+      "phrase": "compensable accident",
+      "count": 45,
+      "percentage": "0.39",
+      "ci_lower": "0.29",
+      "ci_upper": "0.53",
+      "cases_containing": 45
+    },
+    {
+      "phrase": "truck",
+      "count": 45,
+      "percentage": "0.39",
+      "ci_lower": "0.29",
+      "ci_upper": "0.53",
+      "cases_containing": 45
+    },
+    {
+      "phrase": "cervical spine",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "compensable conditions",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "noise exposure",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "time hours",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "entitled to full benefits",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "entitlement for psychotraumatic disability",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "relief",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "cervical",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "reassessment",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "accident earnings",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 43
+    },
+    {
+      "phrase": "degenerative disc disease",
+      "count": 44,
+      "percentage": "0.38",
+      "ci_lower": "0.29",
+      "ci_upper": "0.52",
+      "cases_containing": 44
+    },
+    {
+      "phrase": "disability",
+      "count": 43,
+      "percentage": "0.38",
+      "ci_lower": "0.28",
+      "ci_upper": "0.51",
+      "cases_containing": 43
+    },
+    {
+      "phrase": "objection",
+      "count": 43,
+      "percentage": "0.38",
+      "ci_lower": "0.28",
+      "ci_upper": "0.51",
+      "cases_containing": 43
+    },
+    {
+      "phrase": "tendinosis",
+      "count": 43,
+      "percentage": "0.38",
+      "ci_lower": "0.28",
+      "ci_upper": "0.51",
+      "cases_containing": 43
+    },
+    {
+      "phrase": "stated",
+      "count": 43,
+      "percentage": "0.38",
+      "ci_lower": "0.28",
+      "ci_upper": "0.51",
+      "cases_containing": 43
+    },
+    {
+      "phrase": "accident impairment",
+      "count": 43,
+      "percentage": "0.38",
+      "ci_lower": "0.28",
+      "ci_upper": "0.51",
+      "cases_containing": 43
+    },
+    {
+      "phrase": "clarification",
+      "count": 42,
+      "percentage": "0.37",
+      "ci_lower": "0.27",
+      "ci_upper": "0.50",
+      "cases_containing": 42
+    },
+    {
+      "phrase": "initial entitlement",
+      "count": 42,
+      "percentage": "0.37",
+      "ci_lower": "0.27",
+      "ci_upper": "0.50",
+      "cases_containing": 42
+    },
+    {
+      "phrase": "self",
+      "count": 42,
+      "percentage": "0.37",
+      "ci_lower": "0.27",
+      "ci_upper": "0.50",
+      "cases_containing": 42
+    },
+    {
+      "phrase": "original",
+      "count": 42,
+      "percentage": "0.37",
+      "ci_lower": "0.27",
+      "ci_upper": "0.50",
+      "cases_containing": 42
+    },
+    {
+      "phrase": "low back strain",
+      "count": 41,
+      "percentage": "0.36",
+      "ci_lower": "0.26",
+      "ci_upper": "0.49",
+      "cases_containing": 41
+    },
+    {
+      "phrase": "short",
+      "count": 41,
+      "percentage": "0.36",
+      "ci_lower": "0.26",
+      "ci_upper": "0.49",
+      "cases_containing": 40
+    },
+    {
+      "phrase": "tinnitus",
+      "count": 41,
+      "percentage": "0.36",
+      "ci_lower": "0.26",
+      "ci_upper": "0.49",
+      "cases_containing": 41
+    },
+    {
+      "phrase": "injury job",
+      "count": 40,
+      "percentage": "0.35",
+      "ci_lower": "0.26",
+      "ci_upper": "0.48",
+      "cases_containing": 40
+    },
+    {
+      "phrase": "upper",
+      "count": 40,
+      "percentage": "0.35",
+      "ci_lower": "0.26",
+      "ci_upper": "0.48",
+      "cases_containing": 40
+    },
+    {
+      "phrase": "harassment",
+      "count": 40,
+      "percentage": "0.35",
+      "ci_lower": "0.26",
+      "ci_upper": "0.48",
+      "cases_containing": 40
+    },
+    {
+      "phrase": "in date",
+      "count": 39,
+      "percentage": "0.34",
+      "ci_lower": "0.25",
+      "ci_upper": "0.47",
+      "cases_containing": 39
+    },
+    {
+      "phrase": "appealing",
+      "count": 39,
+      "percentage": "0.34",
+      "ci_lower": "0.25",
+      "ci_upper": "0.47",
+      "cases_containing": 39
+    },
+    {
+      "phrase": "knees",
+      "count": 39,
+      "percentage": "0.34",
+      "ci_lower": "0.25",
+      "ci_upper": "0.47",
+      "cases_containing": 39
+    },
+    {
+      "phrase": "benefits under the insurance plan",
+      "count": 38,
+      "percentage": "0.33",
+      "ci_lower": "0.24",
+      "ci_upper": "0.46",
+      "cases_containing": 38
+    },
+    {
+      "phrase": "clinical",
+      "count": 38,
+      "percentage": "0.33",
+      "ci_lower": "0.24",
+      "ci_upper": "0.46",
+      "cases_containing": 38
+    },
+    {
+      "phrase": "advised that the worker",
+      "count": 38,
+      "percentage": "0.33",
+      "ci_lower": "0.24",
+      "ci_upper": "0.46",
+      "cases_containing": 38
+    },
+    {
+      "phrase": "incident",
+      "count": 37,
+      "percentage": "0.32",
+      "ci_lower": "0.23",
+      "ci_upper": "0.45",
+      "cases_containing": 37
+    },
+    {
+      "phrase": "worker from returning to pre",
+      "count": 37,
+      "percentage": "0.32",
+      "ci_lower": "0.23",
+      "ci_upper": "0.45",
+      "cases_containing": 37
+    },
+    {
+      "phrase": "termination",
+      "count": 37,
+      "percentage": "0.32",
+      "ci_lower": "0.23",
+      "ci_upper": "0.45",
+      "cases_containing": 37
+    },
+    {
+      "phrase": "related",
+      "count": 37,
+      "percentage": "0.32",
+      "ci_lower": "0.23",
+      "ci_upper": "0.45",
+      "cases_containing": 37
+    },
+    {
+      "phrase": "upper extremity",
+      "count": 36,
+      "percentage": "0.31",
+      "ci_lower": "0.23",
+      "ci_upper": "0.44",
+      "cases_containing": 36
+    },
+    {
+      "phrase": "complex integrated cerebral functions",
+      "count": 36,
+      "percentage": "0.31",
+      "ci_lower": "0.23",
+      "ci_upper": "0.44",
+      "cases_containing": 36
+    }
+  ]
+}

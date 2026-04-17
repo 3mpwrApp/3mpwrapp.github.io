@@ -13,7 +13,7 @@ featured: true
 
 # WSIB Exposed: Statistical Evidence Reveals Systematic Patterns
 
-**TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using rigorous statistical methods. **FACTS WE CAN PROVE:** 43.9% (95% CI: 42.3-45.6%) of 2024 decisions missing from public record (1,545 cases), reconsideration adds 1.5 years vs. 0.5 for direct appeals (4x longer), 20% (95% CI: 17.3-22.7%) of knee injuries cite "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline, July 2023 collapse to 39 decisions (99.7% certain not random). **WHAT THIS SHOWS:** Repeated structural patterns across 6 years. **WHAT THIS SUGGESTS:** Patterns consistent with systematic dysfunction or cost-reduction strategy. **ALTERNATIVE EXPLANATIONS:** Administrative chaos, incompetence, understaffing also fit the evidence. **Full methodology transparency below.**
+**TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using rigorous statistical methods. **FACTS WE CAN PROVE:** 43.9% (95% CI: 42.3-45.6%) of 2024 decisions missing from public record (1,545 cases), reconsideration adds 1.5 years vs. 0.5 for direct appeals (4x longer), 20% (95% CI: 17.3-22.7%) of knee injuries cite "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline, July 2023 collapse to 39 decisions (99.7% certain not random). **WHAT THIS SHOWS:** Repeated structural patterns across 6 years. **WHAT THIS SUGGESTS:** Patterns consistent with systematic dysfunction or cost-reduction strategy. **ALTERNATIVE EXPLANATIONS:** Administrative chaos, systemic organizational challenges, understaffing also fit the evidence. **Full methodology transparency below.**
 
 **This evidence has stood up to peer review from injured worker groups, legal clinics, and researchers. We show our receipts.**
 
@@ -56,7 +56,7 @@ You'll see these terms throughout this investigation. Here's what they mean in p
 4. **Body-part bias testing:** Measure if certain injuries are denied at higher rates
 5. **Language pattern detection:** Find repeatedly used phrases across cases
 
-**What This Shows:** Eight measurable patterns where the data is statistically significant (not random chance). **What This Suggests:** These patterns are consistent with systematic dysfunction or deliberate cost-reduction. **Alternative Explanations:** Incompetence, understaffing, administrative chaos also fit the evidence.
+**What This Shows:** Eight measurable patterns where the data is statistically significant (not random chance). **What This Suggests:** These patterns are consistent with systematic dysfunction or deliberate cost-reduction. **Alternative Explanations:** Systemic organizational challenges, understaffing, administrative chaos also fit the evidence.
 
 **Read the full 45,000-word master document:** [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
 
@@ -85,7 +85,7 @@ Ontario's tribunal system is based on **open justice**—decisions MUST be publi
 **Three Possible Explanations (All Bad):**
 
 1. **Suppression:** WSIB hiding unfavorable decisions (violates transparency laws)
-2. **Incompetence:** Massive administrative failure (violates access to justice)
+2. **Organizational Dysfunction:** Massive administrative failure (violates access to justice)
 3. **Privacy overreach:** Over-redacting decisions as "sensitive" (prevents precedent research)
 
 **Why It Matters:**
@@ -357,7 +357,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 
 | Finding | What It Proves |
 |---------|---------------|
-| 43.9% missing decisions | Suppression or massive incompetence |
+| 43.9% missing decisions | Suppression or massive organizational dysfunction |
 | Summer 2023 collapse | External shocks cause justice failures |
 | Reconsideration +1.5 years | Weaponized exhaustion to force settlements |
 | Knee 20% denial rate | Body-part-specific bias (not random) |

@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "date": "2026-04-17T02:46:01.164Z",
+    "total_dataset_cases": 11430,
+    "subset_size": 5,
+    "fetched_successfully": 5,
+    "failed_fetches": 0
+  },
+  "keywords_only_dataset": {
+    "termination": {
+      "count": 71,
+      "percentage": 0.62
+    },
+    "discipline": {
+      "count": 4,
+      "percentage": 0.03
+    },
+    "retaliation": {
+      "count": 0,
+      "percentage": 0
+    },
+    "coercion": {
+      "count": 8,
+      "percentage": 0.07
+    },
+    "privacy_violation": {
+      "count": 3,
+      "percentage": 0.03
+    },
+    "exclusion": {
+      "count": 0,
+      "percentage": 0
+    },
+    "mental_stress": {
+      "count": 723,
+      "percentage": 6.33
+    }
+  },
+  "keywords_only_subset": {
+    "termination": 1,
+    "discipline": 0,
+    "retaliation": 0,
+    "coercion": 0,
+    "privacy_violation": 0,
+    "exclusion": 0,
+    "mental_stress": 4
+  },
+  "fulltext_subset": {
+    "termination": 2,
+    "discipline": 1,
+    "retaliation": 0,
+    "coercion": 0,
+    "privacy_violation": 0,
+    "exclusion": 0,
+    "mental_stress": 1
+  },
+  "multipliers": {
+    "termination": "2.00",
+    "discipline": "N/A (no keywords baseline)",
+    "retaliation": "N/A (no keywords baseline)",
+    "coercion": "N/A (no keywords baseline)",
+    "privacy_violation": "N/A (no keywords baseline)",
+    "exclusion": "N/A (no keywords baseline)",
+    "mental_stress": "0.25"
+  },
+  "extrapolated_estimates": {
+    "termination": {
+      "count": 142,
+      "percentage": 1.24
+    },
+    "discipline": {
+      "count": 4,
+      "percentage": 0.03
+    },
+    "retaliation": {
+      "count": 0,
+      "percentage": 0
+    },
+    "coercion": {
+      "count": 8,
+      "percentage": 0.07
+    },
+    "privacy_violation": {
+      "count": 3,
+      "percentage": 0.03
+    },
+    "exclusion": {
+      "count": 0,
+      "percentage": 0
+    },
+    "mental_stress": {
+      "count": 181,
+      "percentage": 1.58
+    }
+  },
+  "blog_validation": {
+    "termination": {
+      "claimed": 8.7,
+      "estimated": 1.24,
+      "difference": 7.46,
+      "validated": false
+    },
+    "coercion": {
+      "claimed": 2.3,
+      "estimated": 0.07,
+      "difference": 2.23,
+      "validated": false
+    },
+    "exclusion": {
+      "claimed": 4.1,
+      "estimated": 0,
+      "difference": 4.1,
+      "validated": false
+    }
+  },
+  "enriched_cases": [
+    {
+      "case_id": "2020onwsiat18",
+      "citation": "2020 ONWSIAT 18 (CanLII)",
+      "decision_date": "2020-01-06",
+      "url": "https://canlii.ca/t/j5016",
+      "keywords_analysis": {
+        "termination": false,
+        "discipline": false,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": true
+      },
+      "fulltext_analysis": {
+        "termination": false,
+        "discipline": false,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": false
+      },
+      "fulltext_length": 1204,
+      "keywords_length": 68
+    },
+    {
+      "case_id": "2020onwsiat23",
+      "citation": "2020 ONWSIAT 23 (CanLII)",
+      "decision_date": "2020-01-07",
+      "url": "https://canlii.ca/t/j500j",
+      "keywords_analysis": {
+        "termination": false,
+        "discipline": false,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": true
+      },
+      "fulltext_analysis": {
+        "termination": false,
+        "discipline": false,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": false
+      },
+      "fulltext_length": 288,
+      "keywords_length": 54
+    },
+    {
+      "case_id": "2020onwsiat29",
+      "citation": "2020 ONWSIAT 29 (CanLII)",
+      "decision_date": "2020-01-07",
+      "url": "https://canlii.ca/t/j501l",
+      "keywords_analysis": {
+        "termination": false,
+        "discipline": false,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": true
+      },
+      "fulltext_analysis": {
+        "termination": true,
+        "discipline": false,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": true
+      },
+      "fulltext_length": 4315,
+      "keywords_length": 77
+    },
+    {
+      "case_id": "2020onwsiat37",
+      "citation": "2020 ONWSIAT 37 (CanLII)",
+      "decision_date": "2020-01-08",
+      "url": "https://canlii.ca/t/j53ch",
+      "keywords_analysis": {
+        "termination": false,
+        "discipline": false,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": true
+      },
+      "fulltext_analysis": {
+        "termination": false,
+        "discipline": false,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": false
+      },
+      "fulltext_length": 341,
+      "keywords_length": 48
+    },
+    {
+      "case_id": "2020onwsiat57",
+      "citation": "2020 ONWSIAT 57 (CanLII)",
+      "decision_date": "2020-01-10",
+      "url": "https://canlii.ca/t/j53c9",
+      "keywords_analysis": {
+        "termination": true,
+        "discipline": false,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": false
+      },
+      "fulltext_analysis": {
+        "termination": true,
+        "discipline": true,
+        "retaliation": false,
+        "coercion": false,
+        "privacy_violation": false,
+        "exclusion": false,
+        "mental_stress": false
+      },
+      "fulltext_length": 2751,
+      "keywords_length": 100
+    }
+  ]
+}
