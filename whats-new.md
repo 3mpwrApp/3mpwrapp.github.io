@@ -62,6 +62,15 @@ published: true
   Unable to load updates. Please try again later.
 </div>
 
+<!-- Daily Highlights (Today's Progress) -->
+<section id="daily-highlights" style="display: none;">
+  <div class="daily-progress">
+    <h2>🌟 Today's Progress</h2>
+    <p class="progress-summary" id="progress-summary">Latest improvements to make 3mpwrApp work better for you.</p>
+    <div class="highlights-list" id="highlights-list"></div>
+  </div>
+</section>
+
 <!-- Recent Updates (< 30 days) -->
 <section id="recent-section" style="display: none;">
   <h2>🔥 Recent Updates (Last 30 Days)</h2>
@@ -207,6 +216,41 @@ html {
   border-left-color: #f59e0b;
 }
 
+.daily-progress {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.daily-progress h2 {
+  margin: 0 0 0.5rem;
+  color: white;
+}
+
+.progress-summary {
+  margin: 0 0 1.5rem;
+  opacity: 0.95;
+  font-size: 1.125rem;
+}
+
+.highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.highlight-item {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border-left: 3px solid rgba(255, 255, 255, 0.5);
+  font-size: 1.05rem;
+}
+
 .update-header {
   display: flex;
   justify-content: space-between;
@@ -215,9 +259,72 @@ html {
   gap: 1rem;
 }
 
+.update-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.toggle-details {
+  padding: 0.4rem 0.75rem;
+  background: var(--card-bg, #f5f5f5);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.toggle-details:hover {
+  background: #e5e7eb;
+  border-color: #667eea;
+}
+
+.commit-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--card-bg, #f9fafb);
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.commit-summary {
+  margin: 0 0 0.75rem;
+  font-family: 'Courier New', monospace;
+  color: #374151;
+}
+
+.commit-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.commit-repo {
+  padding: 0.25rem 0.5rem;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.commit-sha a {
+  color: #667eea;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+}
+
+.commit-sha a:hover {
+  text-decoration: underline;
+}
+
 .update-title {
   font-weight: bold;
   font-size: 1.125rem;
+  line-height: 1.5;
   flex: 1;
 }
 
@@ -406,7 +513,7 @@ html {
     return groups;
   }
   
-  // Render a single entry
+  // Render a single entry with 2-tier system
   function renderEntry(entry) {
     const days = daysAgo(entry.date);
     const date = new Date(entry.date);
@@ -416,17 +523,76 @@ html {
       day: 'numeric' 
     });
     
+    // Generate human-readable impact summary (fallback to commit summary)
+    const humanSummary = entry.humanSummary || generateHumanSummary(entry);
+    
     return `
       <div class="update-entry ${entry.category}" data-category="${entry.category}">
         <div class="update-header">
-          <div class="update-title">${entry.summary}</div>
+          <div class="update-title">${humanSummary}</div>
           <div class="update-date">${formattedDate}</div>
         </div>
-        <div class="update-category category-${entry.category}">
-          ${entry.category}
+        <div class="update-meta">
+          <span class="update-category category-${entry.category}">
+            ${entry.category}
+          </span>
+          <button class="toggle-details" onclick="toggleDetails(this)" aria-label="Show technical details">
+            📋 Technical Details
+          </button>
+        </div>
+        <div class="commit-details" style="display: none;">
+          <p class="commit-summary">${entry.summary}</p>
+          <div class="commit-meta">
+            <span class="commit-repo">${entry.repo}</span>
+            <span class="commit-sha">
+              <a href="https://github.com/S0vryn9-C011ect1ve/${entry.repo === 'app' ? 'empowrapp-main' : '3mpwrapp.github.io'}/commit/${entry.commitSha}" 
+                 target="_blank" rel="noopener">
+                ${entry.commitSha.substring(0, 7)}
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     `;
+  }
+  
+  // Generate human-readable summary from commit message
+  function generateHumanSummary(entry) {
+    const summary = entry.summary;
+    
+    // Simple transformations for common patterns
+    const humanized = summary
+      .replace(/^(feat|fix|chore|docs|improvement):\s*/i, '')
+      .replace(/\b(i18n|a11y|perf|auth|OAuth|API|UI|UX)\b/gi, match => {
+        const map = {
+          'i18n': 'translations',
+          'a11y': 'accessibility',
+          'perf': 'performance',
+          'auth': 'login',
+          'OAuth': 'sign-in',
+          'API': 'service',
+          'UI': 'interface',
+          'UX': 'experience'
+        };
+        return map[match] || match;
+      });
+    
+    // Add impact-focused prefixes
+    if (entry.category === 'feature') return `✨ You can now: ${humanized}`;
+    if (entry.category === 'fix') return `🔧 Fixed: ${humanized}`;
+    if (entry.category === 'improvement') return `⚡ Improved: ${humanized}`;
+    return humanized;
+  }
+  
+  // Toggle technical details visibility
+  window.toggleDetails = function(btn) {
+    const entry = btn.closest('.update-entry');
+    const details = entry.querySelector('.commit-details');
+    const isVisible = details.style.display !== 'none';
+    
+    details.style.display = isVisible ? 'none' : 'block';
+    btn.textContent = isVisible ? '📋 Technical Details' : '🔼 Hide Details';
+    btn.setAttribute('aria-expanded', !isVisible);
   }
   
   // Display entries
@@ -449,6 +615,9 @@ html {
     document.getElementById('total-improvements').textContent = stats.improvement;
     document.getElementById('total-docs').textContent = stats.docs;
     document.getElementById('stats-cards').style.display = 'grid';
+    
+    // Generate and display daily highlights
+    generateDailyHighlights(entries);
     
     // Display recent
     const recentContainer = document.getElementById('recent-updates');
@@ -497,6 +666,65 @@ html {
     }
     
     document.getElementById('loading-message').style.display = 'none';
+  }
+  
+  // Generate daily highlights - summarize recent activity
+  function generateDailyHighlights(entries) {
+    // Get entries from last 7 days
+    const recentDays = entries
+      .filter(e => daysAgo(e.date) <= 7)
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    if (recentDays.length === 0) return;
+    
+    // Group by date
+    const byDate = {};
+    recentDays.forEach(entry => {
+      const dateKey = entry.date.split('T')[0];
+      if (!byDate[dateKey]) byDate[dateKey] = [];
+      byDate[dateKey].push(entry);
+    });
+    
+    // Get most recent date
+    const latestDate = Object.keys(byDate).sort().reverse()[0];
+    const todaysEntries = byDate[latestDate];
+    
+    if (todaysEntries.length === 0) return;
+    
+    // Generate summary based on categories
+    const categories = {
+      feature: todaysEntries.filter(e => e.category === 'feature').length,
+      fix: todaysEntries.filter(e => e.category === 'fix').length,
+      improvement: todaysEntries.filter(e => e.category === 'improvement').length,
+      docs: todaysEntries.filter(e => e.category === 'docs').length,
+    };
+    
+    // Create progress summary
+    const parts = [];
+    if (categories.feature > 0) parts.push(`${categories.feature} new feature${categories.feature > 1 ? 's' : ''}`);
+    if (categories.fix > 0) parts.push(`${categories.fix} bug fix${categories.fix > 1 ? 'es' : ''}`);
+    if (categories.improvement > 0) parts.push(`${categories.improvement} improvement${categories.improvement > 1 ? 's' : ''}`);
+    if (categories.docs > 0) parts.push(`${categories.docs} documentation update${categories.docs > 1 ? 's' : ''}`);
+    
+    const dateFmt = new Date(latestDate).toLocaleDateString('en-US', { 
+      month: 'long', 
+      day: 'numeric',
+      year: 'numeric'
+    });
+    
+    const summary = parts.length > 0 
+      ? `Latest update from ${dateFmt}: ${parts.join(', ')}`
+      : `Working hard to make 3mpwrApp better - ${dateFmt}`;
+    
+    // Show up to 6 highlights
+    const highlights = todaysEntries.slice(0, 6).map(entry => {
+      return `<div class="highlight-item">${generateHumanSummary(entry)}</div>`;
+    }).join('');
+    
+    // Display highlights
+    document.getElementById('progress-summary').textContent = summary;
+    document.getElementById('highlights-list').innerHTML = highlights;
+    document.getElementById('daily-highlights').style.display = 'block';
   }
   
   // Search and filter
