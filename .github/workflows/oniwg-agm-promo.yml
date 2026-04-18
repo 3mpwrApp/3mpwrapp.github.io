@@ -69,10 +69,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "📊 No state changes to commit"
           else
-            git commit -m "chore: update ONIWG AGM state
-
-- Post rotated to next variant
-- Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git commit -m "chore: update ONIWG AGM state [skip ci]"
             git push
             echo "✅ State file committed"
           fi

@@ -69,12 +69,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "📊 No changes to commit"
           else
-            git commit -m "analytics: update campaign performance data
-
-- Daily snapshot: $(date +%Y-%m-%d)
-- Tracked campaigns: Day of Mourning, Bill 86, Migrant Worker, Disability Bulletin
-- Platform metrics: Mastodon, Bluesky, Discord
-- Optimization report: $([ -f docs/campaign-optimization-report.md ] && echo 'Updated' || echo 'N/A')"
+            git commit -m "analytics: update campaign performance data [skip ci]"
             git push
             echo "✅ Analytics data committed"
           fi
