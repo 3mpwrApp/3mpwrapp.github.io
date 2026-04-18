@@ -13,6 +13,24 @@ featured: true
 
 # The WSIB Black Box: When Justice Becomes Invisible
 
+<div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: #1a1a1a; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(250, 112, 154, 0.3);">
+<h2 style="color: #1a1a1a; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
+
+<div style="font-size: 18px; line-height: 1.8; color: #1a1a1a;">
+
+**📊 91.8% of tribunal decisions have NO outcome metadata** - workers can't learn from precedents
+
+**🔢 Only 1,905 cases reach tribunal per year** out of estimated 100,000-200,000 workplace injuries
+
+**📉 Estimated 1.14-2.29 MILLION workers suppressed (2020-2026)** - based on IWH peer-reviewed research
+
+**🚨 For every 1 tribunal case, ~52-100 workers estimated suppressed** at earlier stages (unreported injuries, fear of retaliation, denied claims)
+
+**💡 What This Means:** The public tribunal system represents <2% of actual workplace injuries - the rest disappear into a black box
+
+</div>
+</div>
+
 **TL;DR:** **PROVABLE FACTS:** 11,430 tribunal decisions (2020-2026) represent only 1,905/year. 91.8% lack outcome metadata. **EXTRAPOLATION FROM PEER-REVIEWED RESEARCH:** Institute for Work & Health (15-50% injuries unreported) + Public Health Ontario (1 in 20 workers injured annually) + Ontario workforce (7.5M) = **estimated 1.14-2.29 MILLION workers** suppressed before reaching tribunal. **CONFIDENCE INTERVALS:** Range shows uncertainty but BOTH ends represent humanitarian crisis. **WHAT'S PROVABLE:** Outcome obscurity (91.8%), suppression research (IWH peer-reviewed), tribunal volumes (CanLII). **WHAT'S EXTRAPOLATED:** Total suppression count (based on IWH research applied to Ontario). Full methodology + alternative estimates below.
 
 **Read previous investigation:**  [WSIB Exposed: Statistical Evidence Proves Systematic Manipulation](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
@@ -752,7 +770,7 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 - [WSIB Exposed: Statistical Evidence Proves Systematic Manipulation](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 8 smoking guns from 11,430 cases
 - [The Hidden Language of Denial: WSIB Keyword Decoder](https://3mpwrapp.pages.dev/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode your denial letter
 - [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built this database
-- [Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/) - Worker education from data
+- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
 
 **Full Documentation:**
 - [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md) - 45,000-word master document

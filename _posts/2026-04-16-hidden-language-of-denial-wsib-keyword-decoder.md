@@ -13,6 +13,24 @@ featured: true
 
 # The Hidden Language of Denial: Understanding WSIB Keyword Patterns
 
+<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(240, 147, 251, 0.3);">
+<h2 style="color: white; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
+
+<div style="font-size: 18px; line-height: 1.8;">
+
+**📝 "Pre-existing" appears in 13.31% of all decisions** (1,522 cases) - most common denial keyword
+
+**🔍 "Impairment" + "non-economic loss" co-occur 3.4x more than random** - template-based denials
+
+**🦵 Knee injuries: 20% flagged "pre-existing"** vs. 13.3% baseline - systematic targeting
+
+**🧠 "Psychotraumatic disability" in 6.62% of cases** - but appears with "objective medical evidence" (showing bias against mental health claims)
+
+**💡 What This Means:** Knowing these patterns helps you prepare counter-arguments BEFORE your hearing
+
+</div>
+</div>
+
 ✅ **DATA VERIFIED:** April 17, 2026 - All keyword frequency statistics verified via analysis of CanLII keywords field across 11,430 WSIAT decisions (2020-2026). Analysis script: `analyze-keyword-frequency.mjs` | Output: `keyword-frequency-analysis.json`
 
 **TL;DR:** WSIB denials use specific technical language patterns revealed through statistical analysis: "pre-existing" (13.31%), "impairment" (11.85%), "psychotraumatic disability" (6.62%), "shoulder" (12.17%), "knee" (7.39%). Understanding these patterns and knowing how to respond gives you strategic advantage in appeals. All statistics include 95% confidence intervals.
@@ -634,7 +652,7 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 
 **Previous 3mpwrApp Research:**
 - [WSIB Exposed: Statistical Evidence Proves Systematic Manipulation](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Full investigative report with 8 smoking guns
-- [Building Knowledge Base from Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/) - How we built this database
+- [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
 - [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Our data collection methodology
 
 **Full Documentation:**

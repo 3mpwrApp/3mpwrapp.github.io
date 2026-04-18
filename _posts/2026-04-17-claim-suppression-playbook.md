@@ -10,6 +10,24 @@ excerpt: "BC investigation uncovered 'second-tier compensation systems' bypassin
 
 # The Claim Suppression Playbook: How Employers Keep Injuries Off the Books
 
+<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: #1a1a1a; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(79, 172, 254, 0.3);">
+<h2 style="color: #1a1a1a; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
+
+<div style="font-size: 18px; line-height: 1.8; color: #1a1a1a;">
+
+**🏗️ BC megaprojects operated "second-tier compensation systems"** bypassing WorkSafeBC (Site C Dam, LNG Canada, pipelines)
+
+**🏥 All shared same medical provider: International SOS Canada Inc.** - coordinated claim suppression strategy
+
+**📋 Ontario shows same patterns in 11,430 tribunal cases** - employer retaliation, privacy violations, "decision of employer" denials
+
+**⚖️ Legal victory: *Pickering v WCB* (2025)** - ruled retaliation claims CANNOT be excluded as "labour relations"
+
+**💡 What This Means:** Systematic claim suppression isn't isolated to BC - it's happening across Canada
+
+</div>
+</div>
+
 **Date:** April 17, 2026  
 **Research Period:** 2020-2026 WSIAT Decisions  
 **Dataset:** 11,430 tribunal cases  

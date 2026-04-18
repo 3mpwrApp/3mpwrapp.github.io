@@ -8,6 +8,24 @@ excerpt: "When a BC beta tester shared six legal cases and an investigation repo
 author: 3mpwrApp
 ---
 
+<div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #1a1a1a; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(255, 236, 210, 0.3);">
+<h2 style="color: #1a1a1a; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
+
+<div style="font-size: 18px; line-height: 1.8; color: #1a1a1a;">
+
+**📧 One beta tester's email changed everything** - asked about pre-loading legal arguments into AI "flywheels"
+
+**💡 Sparked CanLII strategy:** Realized 11,430+ WSIAT decisions were already available for analysis
+
+**📦 They shared 6 legal cases + BC investigation** (including *Pickering v WCB* 2025 ruling)
+
+**⚡ 72 hours later: 34,000+ words of resources shipped** - knowledge base, appeal template, investigative blog
+
+**💡 What This Means:** Community-driven research works - one question can unlock massive value for thousands of workers
+
+</div>
+</div>
+
 ## The Email That Changed Everything
 
 We've been building "flywheels" into 3mpwr—AI-powered systems that pre-load legal arguments and case law to help workers navigate tribunals.

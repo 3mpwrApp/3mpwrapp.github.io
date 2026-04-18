@@ -11,6 +11,24 @@ image: /assets/images/blog/claim-suppression-social.png
 
 # The Claim Suppression Playbook: How Employers Hide Workplace Injuries
 
+<div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #1a1a1a; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(168, 237, 234, 0.3);">
+<h2 style="color: #1a1a1a; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
+
+<div style="font-size: 18px; line-height: 1.8; color: #1a1a1a;">
+
+**📰 The Tyee exposé (Sept 2025):** WorkSafeBC found "second-tier compensation system" on 4 megaprojects
+
+**🏥 Common tactic: Employer-controlled medical clinics** treat injuries without reporting to WCB
+
+**💼 Result: Lower premiums for employers** (fewer reported injuries = lower risk class)
+
+**⚖️ *Pickering v WCB* (2025): Narrow interpretation of "labour relations exclusion"** - retaliation NOT protected
+
+**💡 What This Means:** Billion-dollar projects systematically bypass workers' compensation - and you have legal recourse
+
+</div>
+</div>
+
 **Date:** April 16, 2026  
 **Reading time:** 18 minutes  
 **Research basis:** BC WorkSafeBC investigation (2025), 6 legal cases (2018-2025), NSRLP data

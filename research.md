@@ -449,48 +449,50 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #667eea;">
       <strong style="color: #667eea;">🦴 Musculoskeletal</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
-        <li><a href="/knowledge-base/low-back-pain-claims/">Low Back Pain</a></li>
-        <li><span style="color: #999;">Shoulder & Rotator Cuff (Coming Soon)</span></li>
-        <li><span style="color: #999;">Knee Injuries (Coming Soon)</span></li>
-        <li><span style="color: #999;">Neck & Whiplash (Coming Soon)</span></li>
-        <li><span style="color: #999;">Hip Injuries (Coming Soon)</span></li>
-        <li><span style="color: #999;">Ankle Injuries (Coming Soon)</span></li>
+        <li><a href="/data/knowledge-base/low-back-pain-claims.html">Low Back Pain</a></li>
+        <li><a href="/data/knowledge-base/shoulder-rotator-cuff-claims.html">Shoulder & Rotator Cuff</a></li>
+        <li><a href="/data/knowledge-base/knee-injury-claims.html">Knee Injuries</a></li>
+        <li><a href="/data/knowledge-base/neck-whiplash-claims.html">Neck & Whiplash</a></li>
+        <li><a href="/data/knowledge-base/hip-injury-claims.html">Hip Injuries</a></li>
+        <li><a href="/data/knowledge-base/ankle-injury-claims.html">Ankle Injuries</a></li>
       </ul>
     </div>
     
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #764ba2;">
       <strong style="color: #764ba2;">✋ Upper Extremity</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
-        <li><span style="color: #999;">Wrist & Carpal Tunnel (Coming Soon)</span></li>
-        <li><span style="color: #999;">Elbow & Epicondylitis (Coming Soon)</span></li>
-        <li><span style="color: #999;">Hand & Finger Injuries (Coming Soon)</span></li>
+        <li><a href="/data/knowledge-base/wrist-carpal-tunnel-claims.html">Wrist & Carpal Tunnel</a></li>
+        <li><a href="/data/knowledge-base/elbow-epicondylitis-claims.html">Elbow & Epicondylitis</a></li>
+        <li><a href="/data/knowledge-base/hand-finger-claims.html">Hand & Finger Injuries</a></li>
       </ul>
     </div>
     
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #d32f2f;">
       <strong style="color: #d32f2f;">🧠 Neurological & Mental Health</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
-        <li><a href="/knowledge-base/psychotraumatic-disability/">PTSD & Psychotraumatic Disability</a></li>
-        <li><a href="/knowledge-base/chronic-pain-claims/">Chronic Pain</a></li>
-        <li><a href="/knowledge-base/fibromyalgia-claims/">Fibromyalgia</a></li>
-        <li><span style="color: #999;">Concussion & TBI (Coming Soon)</span></li>
+        <li><a href="/data/knowledge-base/psychotraumatic-disability.html">PTSD & Psychotraumatic Disability</a></li>
+        <li><a href="/data/knowledge-base/chronic-pain-claims.html">Chronic Pain</a></li>
+        <li><a href="/data/knowledge-base/fibromyalgia-claims.html">Fibromyalgia</a></li>
+        <li><a href="/data/knowledge-base/concussion-tbi-claims.html">Concussion & TBI</a></li>
       </ul>
     </div>
     
     <div class="category-box" style="padding: 1rem; border-radius: 8px; border-left: 4px solid #f57c00;">
       <strong style="color: #f57c00;">⚖️ Legal Strategies</strong>
       <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.95rem;">
-        <li><a href="/knowledge-base/pre-existing-conditions/">Countering Pre-Existing Denials</a></li>
-        <li><a href="/knowledge-base/permanent-impairment-rating/">Maximizing NEL Benefits</a></li>
-        <li><span style="color: #999;">Hearing Loss & Occupational Disease (Coming Soon)</span></li>
+        <li><a href="/data/knowledge-base/pre-existing-conditions.html">Countering Pre-Existing Denials</a></li>
+        <li><a href="/data/knowledge-base/permanent-impairment-rating.html">Maximizing NEL Benefits</a></li>
+        <li><a href="/data/knowledge-base/hearing-loss-claims.html">Hearing Loss & Occupational Disease</a></li>
+        <li><a href="/data/knowledge-base/claim-suppression-retaliation.html">Claim Suppression & Employer Retaliation</a></li>
+        <li><a href="/data/knowledge-base/bill-86-meredith-act.html">Bill 86 & Meredith Act Rights</a></li>
       </ul>
     </div>
     
   </div>
   
   <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #666;">
-    <strong>Based on:</strong> 1,204 initial cases + 10,226 additional decisions = 11,430 total analyzed. 
-    <a href="/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/" style="color: #667eea;">Read how we built this →</a>
+    <strong>Based on:</strong> 11,430 total analyzed cases (2020-2026 WSIAT decisions). 
+    <strong>All guides live now:</strong> 19 comprehensive injury-specific guides + 5 legal strategy guides available above.
   </p>
 </div>
 
@@ -520,23 +522,23 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
     <div>
       <h4 style="margin: 0 0 0.5rem; color: #667eea;">📄 Featured Templates (Live Now!)</h4>
       <ul style="margin: 0 0 0 1.2rem; font-size: 0.95rem;">
-        <li><a href="/templates/back-injury-appeal/">Back Injury Appeal</a></li>
-        <li><a href="/templates/chronic-pain-appeal/">Chronic Pain Appeal</a></li>
-        <li><a href="/templates/pre-existing-appeal/">Pre-Existing Condition Appeal</a></li>
+        <li><a href="/data/appeal-templates/back-injury-appeal.html">Back Injury Appeal</a></li>
+        <li><a href="/data/appeal-templates/chronic-pain-appeal.html">Chronic Pain Appeal</a></li>
+        <li><a href="/data/appeal-templates/pre-existing-appeal.html">Pre-Existing Condition Appeal</a></li>
       </ul>
       <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #666;">
         <em>Professional-grade fill-in-the-blank templates · Addresses all common denials · Free to use</em>
       </p>
     </div>
     <div>
-      <h4 style="margin: 0 0 0.5rem; color: #764ba2;">🔜 50+ More Templates Coming Soon</h4>
+      <h4 style="margin: 0 0 0.5rem; color: #764ba2;">🔜 More Templates Being Added</h4>
       <p style="margin: 0; font-size: 0.9rem; color: #666;">
-        Shoulder, knee, mental health/PTSD, carpal tunnel, concussion, fibromyalgia, hearing loss, 
+        Additional templates for shoulder, knee, mental health/PTSD, carpal tunnel, concussion, fibromyalgia, hearing loss, 
         herniated disc, impairment rating, neck injury, respiratory, rotator cuff, 
-        strain/sprain, tendinitis, and more...
+        strain/sprain, tendinitis, and more are currently being converted from JSON data to user-friendly markdown templates.
       </p>
       <p style="margin: 0.5rem 0 0; font-size: 0.85rem;">
-        <em>Currently stored as structured JSON data. Being converted to user-friendly markdown templates.</em>
+        <em>Currently stored as structured JSON data format. Watch this space for updates.</em>
       </p>
     </div>
   </div>
@@ -557,10 +559,10 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
       <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
         <strong>Data → Patterns → Guides</strong><br>
         11,430 cases analyzed → Patterns detected (pre-existing = 13.3%, 95% CI: 12.7-13.9%; knee bias = 20%, 95% CI: 17.3-22.7%) → 
-        16 injury guides created → YOU learn what to expect
+        19 injury guides + 5 legal strategy guides created → YOU learn what to expect
       </p>
       <p style="margin: 0.5rem 0 0; font-size: 0.85rem; opacity: 0.9;">
-        <em>Example: <a href="/knowledge-base/fibromyalgia-claims/" style="color: white; text-decoration: underline;">Fibromyalgia Guide</a> built from 68 cases showing medical gatekeeping tactics</em>
+        <em>Example: <a href="/data/knowledge-base/fibromyalgia-claims.html" style="color: white; text-decoration: underline;">Fibromyalgia Guide</a> built from 68 cases showing medical gatekeeping tactics</em>
       </p>
     </div>
     

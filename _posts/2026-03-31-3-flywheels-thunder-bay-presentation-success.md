@@ -407,7 +407,7 @@ One worker's 40-hour struggle becomes 500 workers getting instant answers.
 
 This article is part of a connected series documenting how we're building 3mpwrApp:
 
-📖 **[Building a Knowledge Base From Tribunal Decisions](https://3mpwrapp.pages.dev/blog/2026/04/08/building-knowledge-base-from-tribunal-decisions/)** - Proof the flywheels work: 1,204 cases analyzed, 6 knowledge base articles created, pattern analysis completed
+📖 **[Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/)** - Proof the flywheels work: 11,430 cases analyzed, knowledge base articles, appeal templates, and comprehensive guides
 
 📖 **[Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/community/development/2026/04/05/building-canadas-legal-database-from-cold-start/)** - The execution: collecting 14,000+ tribunal decisions across Canada (Ontario complete, expanding to all provinces)
 
