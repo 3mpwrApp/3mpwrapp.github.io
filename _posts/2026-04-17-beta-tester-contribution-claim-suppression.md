@@ -417,6 +417,17 @@ If you're willing, we'd love to:
 
 ---
 
+## 7. Research Status & Transparency
+
+**Current validation status:**
+
+- **Thunder Bay & District Injured Workers Support Group:** Shared preliminary findings for community feedback (pitch in progress)
+- **Ontario Network of Injured Workers Groups (ONIWG):** Planning to share research (future outreach)
+- **Full methodology:** All code, data, and analysis methods publicly available on GitHub
+- **Open to review:** Community feedback welcome at empowrapp08162025@gmail.com
+
+---
+
 ## Resources Created from This Contribution
 
 📚 **Knowledge Base:** [Claim Suppression & Employer Retaliation](https://3mpwrapp.ca/knowledge-base/claim-suppression-retaliation/)  

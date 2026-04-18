@@ -674,7 +674,16 @@ We attempted to analyze which employer tactics appear together in the same decis
 
 **Data access:** CanLII API (public)
 
-**Research status:** Shared with Thunder Bay & District Injured Workers Support Group for community feedback (pitch in progress). Planning ONIWG outreach.
+---
+
+## 7. Research Status & Transparency
+
+**Current validation status:**
+
+- **Thunder Bay & District Injured Workers Support Group:** Shared preliminary findings for community feedback (pitch in progress)
+- **Ontario Network of Injured Workers Groups (ONIWG):** Planning to share research (future outreach)
+- **Full methodology:** All code, data, and analysis methods publicly available on GitHub
+- **Open to review:** Community feedback welcome at empowrapp08162025@gmail.com
 
 ---
 
@@ -729,9 +738,6 @@ Email: <research@3mpwrapp.ca>
 
 **Want to share your claim suppression experience?**  
 Your story helps us document the scope of the problem. Contact us confidentially at empowrapp08162025@gmail.com.
-
-**Research Status:**  
-Shared with Thunder Bay & District Injured Workers Support Group for community feedback (pitch in progress). Planning to share with Ontario Network of Injured Workers Groups (ONIWG).
 
 ---
 

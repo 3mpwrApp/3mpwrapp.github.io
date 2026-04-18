@@ -614,7 +614,7 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 
 ---
 
-## Research Status & Transparency
+## 7. Research Status & Transparency
 
 **Current validation status:**
 

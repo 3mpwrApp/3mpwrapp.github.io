@@ -730,7 +730,7 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 
 ---
 
-## Research Status & Transparency
+## 7. Research Status & Transparency
 
 **Current validation status:**
 
