@@ -236,17 +236,17 @@ Answer: **YES, and we acknowledge them:**
 
 ---
 
-### 7. Peer Review & Verification
+### 7. Research Status & Transparency
 
-**Who's checked our work?**
+**Current validation status:**
 
-- **Injured worker groups:** Ontario Network of Injured Workers Groups (ONIWG), Thunder Bay & District Injured Workers Support Group
-- **Community legal clinics:** Legal Aid Ontario clinics have used our data for case research
-- **Academic researchers:** Institute for Work & Health researchers cited our claim suppression estimates
-- **Journalists:** Investigated our methodology for news stories (TBD - pitching in progress)
+- **Thunder Bay & District Injured Workers Support Group:** Shared preliminary findings for community feedback (pitch in progress)
+- **Ontario Network of Injured Workers Groups (ONIWG):** Planning to share research (future outreach)
+- **Full methodology:** All code, data, and analysis methods publicly available on GitHub
+- **Open to review:** Community feedback welcome at empowrapp08162025@gmail.com
 
-**Errors we've corrected:**
-- **Initial estimate of 3 million suppressed workers** → revised to 1.14-2.29M after feedback on IWH research ranges
+**What we've updated based on feedback:**
+- **Initial estimate of 3 million suppressed workers** → revised to 1.14-2.29M after reviewing IWH research ranges
 - **"Obesity appears in only 27 cases"** → clarified this is KEYWORD occurrences, not all cases mentioning weight
 - **Reconsideration time calculation** → added note that 2.0 years is MEDIAN (some take 3-5 years)
 

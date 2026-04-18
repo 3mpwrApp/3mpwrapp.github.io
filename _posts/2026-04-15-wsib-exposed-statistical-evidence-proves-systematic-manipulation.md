@@ -475,7 +475,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 - [Research Hub](https://3mpwrapp.pages.dev/research/) - Visualization + 16 injury guides + 50+ appeal templates
 - [Interactive Keyword Network](https://3mpwrapp.pages.dev/wsib-denial-network-visualization.html) - Explore keyword co-occurrence patterns from CanLII data (ONWSIAT 2020-2026)
 
-**If you're technical:** Run the scripts yourself. Audit our methodology. Find more patterns. **Pull requests welcome.**
+**Code transparency:** All scripts open-source on GitHub. Run them yourself to verify findings.
 
 ---
 

@@ -266,7 +266,6 @@ So we built tools.
 - Data sharing (anonymized case patterns, SRL outcome disparities)
 - Co-development of tribunal navigation guides
 - Training workshops on using statistical evidence in appeals
-- Academic collaboration ("Self-Represented Litigants in Workers' Compensation Appeals")
 
 **Who it helps:** The 354+ self-represented litigants NSRLP served in 2023-2025—many facing workers' compensation tribunals without legal representation.
 
