@@ -238,7 +238,7 @@ So we built tools.
 **Ontario-BC comparison:** Similarities, differences, industry patterns
 **Policy recommendations:** For WSIB/WorkSafeBC, tribunals, legislators
 
-**Who it helps:** Advocates, journalists, researchers, policy makers—anyone needing evidence-based documentation of systemic claim suppression.
+**Who it helps:** Injured workers, advocates, and policy makers needing evidence-based documentation of systemic claim suppression.
 
 ---
 
@@ -253,7 +253,7 @@ So we built tools.
 - Calculates statistics (frequencies, percentages, 95% CIs, chi-square tests, co-occurrence patterns)
 - Outputs: JSON (full analysis) + CSV (visualization-ready)
 
-**Who it helps:** Researchers, data journalists, academics wanting to verify our findings or run their own analyses.
+**Who it helps:** Injured worker advocates and community groups wanting transparent access to our methodology and data.
 
 ---
 
@@ -355,11 +355,6 @@ Our BC beta tester showed us what's possible when people share knowledge. **You 
 - Share recent case law we might have missed
 - Point us to tribunal decisions with novel arguments
 - Suggest legal tests we should be tracking
-
-### **If you're a researcher or data journalist:**
-- Run our scripts on your own datasets
-- Cross-reference with other provinces' data
-- Collaborate on academic publications
 
 ### **If you're a peer supporter or community organizer:**
 - Tell us what resources your members need most

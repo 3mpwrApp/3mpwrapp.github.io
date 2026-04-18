@@ -643,7 +643,7 @@ More Cases Analyzed... (CYCLE ACCELERATES)
 **Community Organizations:**
 - [Ontario Network of Injured Workers Groups (ONIWG)](https://oniwg.ca) - Province-wide advocacy coalition
 - [Legal Aid Ontario](https://www.legalaid.on.ca) - Free legal help for low-income workers via Community Legal Clinics
-- Thunder Bay & District Injured Workers Support Group - Grassroots advocacy, insider intelligence
+- Thunder Bay & District Injured Workers Support Group - Community feedback on research (pitch in progress)
 
 ### Methodology & Transparency
 
@@ -660,10 +660,11 @@ More Cases Analyzed... (CYCLE ACCELERATES)
 - July 2023 collapse: **-2.94σ** (99.7% certain NOT random)
 - 43.9% missing decisions: Statistical impossibility if random
 
-**Community Review & Feedback Welcome:**
-- Academic researchers: Audit our methodology at [GitHub Repository](https://github.com/S0vryn9-C011ect1ve/3mpwrapp)
+**Research Status:**
+- Shared with Thunder Bay & District Injured Workers Support Group for community feedback (pitch in progress)
+- Planning to share with Ontario Network of Injured Workers Groups (ONIWG)
+- Full methodology transparent and available at [GitHub Repository](https://github.com/S0vryn9-C011ect1ve/3mpwrapp)
 - Injured workers: Share your case outcomes to fill 84.6% transparency gap
-- Legal community: Use findings in tribunal appeals, class actions, legislative advocacy
 
 ---
 

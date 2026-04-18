@@ -557,22 +557,9 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
 
 ---
 
-### If You're a Journalist:
+### Research Status:
 
-**Story Angles:**
-
-1. **"The 2 Million: Ontario's Silenced Injured Workers"**
-   - Human interest: Profile 5-10 workers whose claims were suppressed at different stages
-   - Data angle: Suppression pyramid, 100-to-1 ratio
-   - Systemic: How WSIB's opacity enables crisis
-
-2. **"Invisible Outcomes: Why We Don't Know Who Wins at Ontario's Workers' Tribunal"**
-   - Compare WSIAT's 91.8% missing outcomes to transparent tribunals (Landlord-Tenant, Human Rights)
-   - FOIA request: Demand WSIB provide outcome statistics they refuse to publish
-   - Legal analysis: Is outcome suppression violating open justice principles?
-
-3. **"The $33 Billion Cost: How WSIB Denials Burden Healthcare and Taxpayers"**
-   - Economic investigation: Cost transfers from employer-funded WSIB to public healthcare
+This analysis has been shared with Thunder Bay & District Injured Workers Support Group for community feedback (pitch in progress). Planning to share with Ontario Network of Injured Workers Groups (ONIWG).
    - Interview OHIP doctors treating workplace injuries as "personal health"
    - Follow workers from WSIB denial → ODSP poverty → homelessness
 
