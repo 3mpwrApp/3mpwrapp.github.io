@@ -614,7 +614,19 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 
 ---
 
-{% include methodology-evidence-standards.md %}
+## Research Status & Transparency
+
+**Current validation status:**
+
+- **Thunder Bay & District Injured Workers Support Group:** Shared preliminary findings for community feedback (pitch in progress)
+- **Ontario Network of Injured Workers Groups (ONIWG):** Planning to share research (future outreach)
+- **Full methodology:** All code, data, and analysis methods publicly available on GitHub
+- **Open to review:** Community feedback welcome at empowrapp08162025@gmail.com
+
+**Data transparency:**
+- **Raw data:** [GitHub: tribunal-decisions/](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions)
+- **Analysis scripts:** [GitHub: scripts/](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/scripts)
+- **Full methodology:** [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
 
 ---
 
