@@ -26,6 +26,9 @@ jobs:
         with:
           node-version: '24'
       
+      - name: Install dependencies
+        run: npm install
+      
       - name: Run Campaign Analytics
         run: |
           echo "📊 Running campaign analytics tracker..."
