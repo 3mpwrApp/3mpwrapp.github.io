@@ -47,10 +47,10 @@ Our WSIB research and analysis is based on comprehensive analysis of 11,430 Onta
 - **Data Gap:** 1,545 decisions (43.9% of 2024) missing from CanLII (known issue)
 
 **Spot-Check Methodology:**
-To ensure accuracy, we manually verified a random sample of findings:
-1. **Sample Selection:** 30 decisions randomly selected using JavaScript `Math.random()` seeded with case ID
-2. **Verification Process:** Each finding cross-checked against original CanLII decision text
-3. **Accuracy Rate:** 96.7% accuracy (29/30 correct, 1 false positive due to keyword ambiguity)
+To ensure accuracy, we cross-referenced findings with Thunder Bay & District Injured Workers Support Group feedback:
+1. **Pattern Verification:** Shared preliminary findings with TBDIWSG board members (40+ years experience)
+2. **Lived Experience Validation:** Reconsideration delays, pre-existing denials confirmed by real cases
+3. **Community Review:** Ongoing feedback invited from injured worker groups across Ontario
 4. **Known Limitations:** Keyword-based detection may miss nuanced legal language; conservative approach taken (prefer false negatives to false positives)
 
 **Statistical Rigor:**

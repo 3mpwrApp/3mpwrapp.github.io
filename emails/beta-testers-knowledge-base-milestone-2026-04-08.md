@@ -101,7 +101,7 @@ If you want the full transparency version—including the API failures, the pivo
 
 📖 **[The 3 Flywheels of Change: Thunder Bay Presentation Success](https://3mpwrapp.pages.dev/2026/03/31/3-flywheels-thunder-bay-presentation-success/)**
 - How the Evidence Flywheel, Pattern Detection Flywheel, and Collective Action Flywheel work together
-- Real-world validation from Thunder Bay's injured worker community (40+ years serving workers)
+- Real-world feedback from Thunder Bay's injured worker community (40+ years serving workers)
 - The math: How 500 workers using flywheels save 18,000 hours and $4.95 million in legal fees
 - Why this is the highest-leverage solution for injured workers and persons with disabilities
 

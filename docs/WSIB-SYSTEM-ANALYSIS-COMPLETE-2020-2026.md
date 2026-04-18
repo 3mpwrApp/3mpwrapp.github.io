@@ -10,7 +10,7 @@
 
 ## 🚨 EXECUTIVE SUMMARY: The Crisis Revealed
 
-This report represents the most comprehensive analysis of Ontario's workplace safety and insurance system ever conducted by injured workers advocates. Drawing from **11,430 tribunal decisions**, **insider intelligence from WSIB governance**, and **independent investigative journalism**, we expose a system in catastrophic failure.
+This report represents the most comprehensive analysis of Ontario's workplace safety and insurance system ever conducted by injured workers advocates. Drawing from **11,430 tribunal decisions**, **insider intelligence from WSIB governance**, and **community feedback from Thunder Bay & District Injured Workers Support Group**, we expose a system in catastrophic failure.
 
 ### Critical Findings at a Glance
 

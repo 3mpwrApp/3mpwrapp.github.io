@@ -674,7 +674,7 @@ We attempted to analyze which employer tactics appear together in the same decis
 
 **Data access:** CanLII API (public)
 
-**Peer review:** Welcome. Contact <research@3mpwrapp.ca> for replication datasets
+**Community review:** Welcome. Contact empowrapp08162025@gmail.com for replication datasets
 
 ---
 
@@ -730,7 +730,7 @@ Email: <research@3mpwrapp.ca>
 **Want to share your claim suppression experience?**  
 Your story helps us document the scope of the problem. Contact us confidentially.
 
-**Peer review or replication requests?**  
+**Feedback or replication requests?**  
 We welcome academic collaboration and independent verification of our findings.
 
 **Media inquiries?**  

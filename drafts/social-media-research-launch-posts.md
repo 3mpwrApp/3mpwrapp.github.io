@@ -332,7 +332,7 @@ We didn't just document what's broken. We built FREE TOOLS to help you fight bac
 
 Everything is 100% free. No paywalls, no premium tiers, no catch.
 
-All research scripts and data sources are open-source on GitHub—fully peer-reviewable and transparent.
+All research scripts and data sources are open-source on GitHub—fully transparent and reproducible.
 
 ---
 
@@ -513,7 +513,7 @@ I'm pleased to share comprehensive research analyzing 11,430 Workplace Safety an
 🔬 METHODOLOGY:
 - Quantitative content analysis using Python (pandas, spaCy, NetworkX)
 - Statistical testing: 95% confidence intervals, chi-square tests, effect sizes
-- All scripts and data sources open-sourced for peer review
+- All scripts and data sources open-sourced for community review
 - Methodology documented per academic standards
 
 📊 KEY FINDINGS:
@@ -681,7 +681,7 @@ I'm an injured worker who got tired of hearing "WSIB is broken" without hard evi
 **Open Source:**
 - All scripts: github.com/3mpwrapp (coming soon - finalizing licensing)
 - Data: CanLII public records
-- Peer review: methodology-evidence-standards.md
+- Community review: methodology-evidence-standards.md
 
 ---
 
@@ -864,7 +864,7 @@ While I can't provide legal advice, our knowledge base + templates may help: 3mp
 
 ### **Critique/Skepticism:**
 ```
-Fair concern. All data sources + methodology are documented for peer review. If you spot errors, please let me know—this research improves when challenged. Transparency is the goal.
+Fair concern. All data sources + methodology are documented for transparency. If you spot errors, please let me know—this research improves when challenged. Transparency is the goal.
 ```
 
 ---

@@ -24,7 +24,7 @@ Your ONWSIAT 2020-2026 research (11,430 cases) is **statistically sound, methodo
 - ✅ **All code open source:** analyze-onwsiat-*.js scripts on GitHub
 - ✅ **Reproducible:** "Run scripts yourself" instructions
 - ✅ **Limitations acknowledged:** 91.8% outcome gap documented prominently
-- ✅ **Peer review invited:** Blog posts explicitly welcome auditing
+- ✅ **Community feedback invited:** Blog posts explicitly welcome community review and auditing
 
 ### Legal Defensibility (A-)
 - ✅ **Language precision overhaul:*Code: "shows patterns / suggests dysfunction / cannot prove coordination"
@@ -155,7 +155,7 @@ Your ONWSIAT 2020-2026 research (11,430 cases) is **statistically sound, methodo
 ### LOW (Long-term)
 **Time needed:** 3-6 months
 
-12. ⏳ **Academic peer review partnership**
+12. ⏳ **Seeking academic partnerships** (for formal peer review process)
 13. ⏳ **Crowdsource outcome data** (fill 91.8% gap via Evidence Locker)
 
 ---
@@ -174,7 +174,7 @@ Your ONWSIAT 2020-2026 research (11,430 cases) is **statistically sound, methodo
 - **FOIA requests:** READY NOW (1,545 missing decisions = provable transparency gap)
 
 ### ❌ NOT READY FOR:
-- **Academic journal submission:** Needs comparative analysis + formal peer review (3-6 months)
+- **Academic journal submission:** Needs comparative analysis + formal peer review process (3-6 months)
 - **Class action lawsuit:** Needs outcome data (91.8% gap) + legal representation
 - **Proving coordination/intent:** Cannot prove without internal WSIB documents
 
@@ -230,7 +230,7 @@ Your ONWSIAT 2020-2026 research (11,430 cases) is **statistically sound, methodo
 ### For Academic Credibility:
 1. Scrape WCAT BC + HRTO (7-10 days)
 2. Publish comparative analysis (is WSIB worse than peers?)
-3. Partner with law/sociology researchers for peer review
+3. Partner with law/sociology researchers to pursue formal peer review
 4. Formal statistical paper with all tests documented
 
 ### For Workers/Advocacy:

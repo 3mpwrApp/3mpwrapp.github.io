@@ -22,7 +22,7 @@ Over the past months, our research team analyzed **11,430 WSIAT tribunal decisio
 
 ### 🔬 What We Found: Three Key Investigations
 
-Our research is open-source, peer-reviewable, and designed for injured workers (all statistics explained in plain English—no math degree required).
+Our research is open-source, transparent, and designed for injured workers (all statistics explained in plain English—no math degree required).
 
 #### **1. WSIB Exposed: Statistical Evidence of Systematic Patterns**
 **Key Finding:** 43.9% (95% CI: 42.3-45.6%) of all tribunal cases involve "medical evidence" disputes—WSIB's #1 weapon against injured workers.
@@ -140,7 +140,7 @@ The research provides evidence-based ammunition for:
 
 **Transparent:** All scripts, data sources, and methodologies are open-source. Anyone can verify our findings.
 
-**Rigorous:** We use the same statistical tests academics use (95% confidence intervals, chi-square tests, effect sizes)—peer-reviewable and court-admissible.
+**Rigorous:** We use the same statistical tests academics use (95% confidence intervals, chi-square tests, effect sizes)—transparent methodology, court-admissible evidence.
 
 **Accessible:** Every technical term explained in plain English. Designed for injured workers with brain fog, chronic pain, or limited education.
 

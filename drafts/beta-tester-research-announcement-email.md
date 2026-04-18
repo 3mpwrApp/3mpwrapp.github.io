@@ -23,7 +23,7 @@ But here's the important part: **we've built free tools to help you fight back.*
 
 ### 🔬 New Research Published: Three Investigative Reports
 
-We've published comprehensive analysis based on rigorous statistical testing (95% confidence intervals, chi-square tests, p-values). All research is open-source and peer-reviewable:
+We've published comprehensive analysis based on rigorous statistical testing (95% confidence intervals, chi-square tests, p-values). All research is open-source and transparent:
 
 #### **1. WSIB Exposed: Statistical Evidence Reveals Systematic Patterns**
 📊 **Key Finding:** 43.9% (95% CI: 42.3-45.6%) of all tribunal cases mention "medical evidence" disputes—WSIB's #1 weapon.
@@ -117,7 +117,7 @@ We've built a central research page where all of this lives:
 - Template library (22 downloadable tools)
 - Interactive visualization
 - Statistical methods documentation
-- Data sources and peer-review transparency
+- Data sources and methodology transparency
 
 **All statistics explained in plain English**—no math degree required. We added glossaries for every technical term (95% CI, chi-square tests, p-values, etc.).
 
@@ -130,7 +130,7 @@ We've built a central research page where all of this lives:
 1. **Find your denial pattern** in the keyword decoder blog
 2. **Read the injury-specific guide** in the Knowledge Base
 3. **Download the relevant template** with statistical citations pre-written
-4. **Reference our research** in your appeal (all data is public, peer-reviewable, and court-admissible)
+4. **Reference our research** in your appeal (all data is public, transparent, and court-admissible)
 
 **Example citation:**
 > "Statistical analysis of 11,430 WSIAT decisions (2020-2026) reveals that 'pre-existing condition' appears in 13.3% (95% CI: 12.7-13.9%) of cases, with knee injuries disproportionately denied at 20.0% rate (χ² = 32.7, p < 0.001). This demonstrates systematic application of pre-existing bias beyond case-by-case medical merits. Source: 3mpwrapp.ca/research"

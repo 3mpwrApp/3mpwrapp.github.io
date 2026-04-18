@@ -549,7 +549,7 @@ Plus a challenge: *"What can you do with all of this? Do everything you can."*
 **The Model**
 
 **Traditional Research:**
-Researcher → Data Collection → Analysis → Journal Submission → Peer Review → Paywall Publication → [Workers never see it]
+Researcher → Data Collection → Analysis → Journal Submission → Publication → Paywall → [Workers never see it]
 
 **3mpwr Model:**
 Beta Tester → Knowledge Sharing → Data Connection → Resource Building → Open-Source Publication → [Immediate worker access] → Beta Feedback Loop

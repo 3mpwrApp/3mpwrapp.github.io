@@ -15,7 +15,7 @@ featured: true
 
 **TL;DR:** We analyzed 11,430 WSIB tribunal decisions (2020-2026) using rigorous statistical methods. **FACTS WE CAN PROVE:** 43.9% (95% CI: 42.3-45.6%) of 2024 decisions missing from public record (1,545 cases), reconsideration adds 1.5 years vs. 0.5 for direct appeals (4x longer), 20% (95% CI: 17.3-22.7%) of knee injuries cite "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline, July 2023 collapse to 39 decisions (99.7% certain not random). **WHAT THIS SHOWS:** Repeated structural patterns across 6 years. **WHAT THIS SUGGESTS:** Patterns consistent with systematic dysfunction or cost-reduction strategy. **ALTERNATIVE EXPLANATIONS:** Administrative chaos, systemic organizational challenges, understaffing also fit the evidence. **Full methodology transparency below.**
 
-**This evidence has stood up to peer review from injured worker groups, legal clinics, and researchers. We show our receipts.**
+**This analysis has been shared with Thunder Bay & District Injured Workers Support Group for community feedback. All methodology is transparent and open for review.**
 
 ---
 
@@ -484,7 +484,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 **This Week:**
 - Submit FOIA requests for missing decisions
 - Contact Ombudsman re: suppression concerns
-- Share with injured worker networks (ONIWG, Thunder Bay group, IWC)
+- Continue gathering community feedback (shared with TBDIWSG, planning ONIWG pitch)
 
 **This Month:**
 - Media outreach (CBC, Globe & Mail, TVO)
@@ -527,7 +527,7 @@ Tribunal volume is driven by **administrative calendar, not medical need**:
 
 **OUR STANDARD:** Distinguish measurable facts from interpretations. Show all data. Acknowledge alternative explanations. Let readers judge.
 
-**See full methodology below for statistical tests, confidence intervals, alternative explanations, and peer review.**
+**See full methodology below for statistical tests, confidence intervals, alternative explanations, and community feedback invitation.**
 
 ---
 
@@ -660,7 +660,7 @@ More Cases Analyzed... (CYCLE ACCELERATES)
 - July 2023 collapse: **-2.94σ** (99.7% certain NOT random)
 - 43.9% missing decisions: Statistical impossibility if random
 
-**Peer Review Invitation:**
+**Community Review & Feedback Welcome:**
 - Academic researchers: Audit our methodology at [GitHub Repository](https://github.com/S0vryn9-C011ect1ve/3mpwrapp)
 - Injured workers: Share your case outcomes to fill 84.6% transparency gap
 - Legal community: Use findings in tribunal appeals, class actions, legislative advocacy
@@ -680,7 +680,7 @@ More Cases Analyzed... (CYCLE ACCELERATES)
 
 **Special Thanks:**
 
-Thunder Bay & District Injured Workers Support Group board members for knowledge, lived experience, and verification of patterns. Your courage in speaking truth makes this work possible.
+Thunder Bay & District Injured Workers Support Group board members for reviewing early findings and providing knowledge and lived experience. This work is stronger because of your feedback and courage in speaking truth.
 
 ---
 

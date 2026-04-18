@@ -661,7 +661,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
 ## � IN-DEPTH RESEARCH FINDINGS
 
 **All findings below are derived from analyzing 11,430 CanLII tribunal decisions (WSIAT 2020-2026) using rigorous statistical methods.**  
-These are not blog opinions—these are peer-reviewed, evidence-based discoveries with full methodology transparency.
+These are not blog opinions—these are evidence-based statistical findings with full methodology transparency. Community review and feedback welcome.
 
 ---
 
@@ -838,7 +838,7 @@ These are not blog opinions—these are peer-reviewed, evidence-based discoverie
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Published April 16, 2026</span>
     <span class="tool-badge badge-red">Suppression Analysis</span>
-    <span class="tool-badge badge-purple">Peer-Reviewed</span>
+    <span class="tool-badge badge-purple">Statistically Rigorous</span>
   </div>
   
   <h3 style="margin-top: 0;">When Justice Becomes Invisible: The Dark Funnel from 2M Injuries to 11,430 Tribunal Decisions</h3>
@@ -1073,7 +1073,7 @@ All tools on this page follow these principles:
 ### Data Transparency:
 ✅ **All code open source:** [GitHub: 3mpwrapp.github.io](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)
 ✅ **Raw data public:** [tribunal-decisions/](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/tree/main/data/tribunal-decisions)
-✅ **Peer review welcomed:** Find errors? Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
+✅ **Community review welcomed:** Find errors? Email [empowrapp08162025@gmail.com](mailto:empowrapp08162025@gmail.com)
 ✅ **Replication instructions:** Run `scripts/scrape-onwsiat.mjs` + `scripts/analyze-onwsiat-ultra-deep.mjs`
 
 ### Limitations We Acknowledge:

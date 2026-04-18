@@ -248,7 +248,7 @@ If you're willing, we'd love to credit you by name in future publications (or ke
 ### **This Year:** Academic Publication
 - "Disability Discrimination Patterns Across Ontario Tribunals: WSIAT vs HRTO (2020-2026)"
 - Co-author opportunities for beta testers who contribute data/analysis
-- Peer-reviewed journal submission
+- Academic journal submission (seeking formal peer review)
 
 ---
 

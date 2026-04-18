@@ -204,7 +204,7 @@ for (const caseObj of cases) {
 ### **Long-term (Next Month):**
 1. Complete full-text dataset (all 11,430 cases)
 2. Re-run comprehensive analysis with accurate statistics
-3. Publish updated research paper with peer-reviewable data
+3. Publish updated research paper with transparent methodology open for community review
 
 ---
 

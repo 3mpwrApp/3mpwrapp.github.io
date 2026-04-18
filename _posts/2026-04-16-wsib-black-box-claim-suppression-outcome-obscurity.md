@@ -232,7 +232,7 @@ Of 11,430 tribunal decisions analyzed:
 
 **⚠️ METHODOLOGY NOTE:** 
 - Tribunal volume (1,900/year) is directly measured from our CanLII dataset
-- All earlier stages are estimated by applying published IWH suppression rates
+- All earlier stages are estimated by applying peer-reviewed IWH suppression rates
 - If IWH rates are off by even 25%, we're still showing 74% suppression minimum
 
 **🧮 ESTIMATED TOTAL SUPPRESSION: 99.5% of injured workers never reach tribunal**
@@ -703,7 +703,7 @@ WSIB hides this. WE PUBLISH IT.
 **This suppression analysis POWERS:**
 - [Class Action Research Package](/research/class-action-evidence/) (1.14-2.29M suppressed = mass tort)
 - [FOI Request Templates](/templates/foi-requests/) (force WSIB to disclose internal stats)
-- [MPP Briefing Packages](/advocacy/mpp-briefings/) (legislative pressure with peer-reviewed evidence)
+- [MPP Briefing Packages](/advocacy/mpp-briefings/) (legislative pressure with statistical evidence)
 
 **How it helps YOU:**
 - **Individual appeals:** Cite suppression research ("My case disappeared into 91.8% missing data black hole")
