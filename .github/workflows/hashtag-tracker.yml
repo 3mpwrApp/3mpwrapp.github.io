@@ -56,8 +56,17 @@ jobs:
           echo "🔍 Tracking #3mpwrApp mentions..."
           node scripts/hashtag-tracker.js
           
+      - name: Detect if Sunday
+        id: check_day
+        run: |
+          if [ $(date +%u) -eq 7 ]; then
+            echo "is_sunday=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_sunday=false" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Generate weekly report (if Sunday or requested)
-        if: github.event.schedule == '0 7 * * 0' || github.event.inputs.generate_report == 'true'
+        if: steps.check_day.outputs.is_sunday == 'true' || github.event.inputs.generate_report == 'true'
         run: |
           echo "📊 Generating weekly hashtag report..."
           node -e "

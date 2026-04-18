@@ -31,8 +31,17 @@ jobs:
           echo "📊 Running campaign analytics tracker..."
           node scripts/campaign-analytics-tracker.js
       
+      - name: Detect if Sunday
+        id: check_day
+        run: |
+          if [ $(date +%u) -eq 7 ]; then
+            echo "is_sunday=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_sunday=false" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Run Campaign Optimizer (Weekly)
-        if: github.event.schedule == '0 21 * * 0' || github.event_name == 'workflow_dispatch'
+        if: steps.check_day.outputs.is_sunday == 'true' || github.event_name == 'workflow_dispatch'
         run: |
           echo "🔍 Running optimization analysis..."
           node scripts/campaign-optimizer.js

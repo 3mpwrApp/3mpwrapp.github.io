@@ -10,6 +10,8 @@ on:
   schedule:
     # Daily curation - 1x per day (reduced from 2x)
     - cron: '0 12 * * *'   # 12:00 PM UTC - After daily-feature (10 AM)
+    # Weekly summary - Every Monday at 9 AM UTC
+    - cron: '0 9 * * 1'    # Monday 9:00 AM UTC
     
   workflow_dispatch:
     inputs:
@@ -215,11 +217,26 @@ jobs:
     name: Weekly Summary Post
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    if: (github.event.schedule == '0 9 * * 1' || github.event.inputs.mode == 'weekly')
     permissions:
       contents: write
     
     steps:
+      - name: Check if Monday 9 AM UTC (weekly time)
+        id: check_time
+        run: |
+          hour=$(date -u +%H)
+          day=$(date -u +%u)
+          if [ "$day" -eq 1 ] && [ "$hour" -ge 9 ] && [ "$hour" -lt 10 ]; then
+            echo "is_weekly_time=true" >> $GITHUB_OUTPUT
+            echo "✅ It's Monday 9 AM UTC - running weekly summary"
+          elif [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ "${{ github.event.inputs.mode }}" == "weekly" ]; then
+            echo "is_weekly_time=true" >> $GITHUB_OUTPUT
+            echo "✅ Manual weekly mode triggered"
+          else
+            echo "is_weekly_time=false" >> $GITHUB_OUTPUT
+            echo "⏭️ Not weekly time - skipping"
+            exit 0
+          fi
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
