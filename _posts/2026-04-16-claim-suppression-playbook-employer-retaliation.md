@@ -221,7 +221,7 @@ While BC investigated megaprojects, Ontario has its own claim suppression patter
 - Insist employer receives info first, then forwards (maintaining accountability)
 - Document any pressure to violate this right
 
-### Tactic 5: "Labour Relations Exclusion" Weaponization
+### Tactic 5: Labour Relations Exclusion Application Pattern
 
 **The tactic (especially for mental stress claims):**
 
@@ -688,6 +688,61 @@ Sign up: https://3mpwrapp.ca/app-waitlist
 
 **Research hub:**  
 https://3mpwrapp.ca/research/
+
+---
+
+## 🎯 What This Means for Workers: Counter Retaliation & Suppression
+
+**This Tyee exposé reveals tactics—here's how to fight back:**
+
+### 📌 Watch For These Documented Patterns
+
+**Employer-controlled medical clinics** (Tyee investigation finding):
+- 🔍 **Observed:** On-site clinics minimize injury documentation
+- 📊 **Pattern:** "Minor strain" recorded when actual rotator cuff tear
+- ⚠️ **Implication:** Medical staff prioritize employer costs over worker care
+- ✅ **Action:** Get independent assessment (your doctor/ER), not just employer clinic
+
+**Financial incentives against reporting**:
+- 🔍 **Observed:** Safety bonuses tied to low incident rates
+- 📊 **Pattern:** Peer pressure ("you're costing team bonuses")
+- ⚠️ **Implication:** Creates suppression culture through coworker pressure
+- ✅ **Action:** Document pressure, file reprisal complaint if threatened
+
+**Retaliation timeline** (60-90 days pattern):
+- 🔍 **Observed:** Claim filed → "performance issues" documented → termination
+- 📊 **Pattern:** Timing suggests causal connection
+- ⚠️ **Implication:** Termination may be reprisal, not legitimate cause
+- ✅ **Action:** File WSIB/OLRB reprisal complaint + wrongful dismissal claim
+
+### Legal Protections
+
+- **WSIA s.42:** Prohibits reprisal for filing → Complaint if terminated/demoted/harassed
+- **Accommodation duty:** Must provide modified work → Human Rights complaint if denied
+- **Whistleblower:** Reporting suppression = protected activity
+
+### Red Flags Requiring Immediate Documentation
+
+1. ❌ Supervisor discourages filing → Save email/text, witness names
+2. ❌ Employer clinic minimizes injury → Get second medical opinion
+3. ❌ Performance reviews suddenly negative after claim → Document timeline
+4. ❌ Termination within 90 days of claim → File reprisal complaint immediately
+5. ❌ Cash settlement offer → DECLINE, file claim, report to WSIB Compliance
+
+### Practical Actions
+
+- **File Form 6 yourself** (don't trust employer) - 1-800-387-0750
+- **Document everything** - Emails, dates, witnesses
+- **Community Legal Clinic** - Free help ([Legal Aid Ontario](https://www.legalaid.on.ca))
+- **[Claim Suppression Guide](/research/)** - Templates, checklists
+- **WSIB Compliance** - Report suppression: 1-800-387-0750
+
+### For General Public
+
+**Why this matters:**
+- 1.14-2.29M estimated suppressed claims (ON, 2016-2025)
+- Costs shifted to healthcare (OHIP), social assistance (OW/ODSP)
+- Experience-rating incentivizes suppression over actual safety improvements
 
 ---
 

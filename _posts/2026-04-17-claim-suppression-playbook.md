@@ -705,6 +705,68 @@ We attempted to analyze which employer tactics appear together in the same decis
 
 ---
 
+## 🎯 What This Means for Workers: Fighting Employer Suppression
+
+**This exposé of the BC megaproject playbook equips you to recognize and counter suppression tactics:**
+
+### 📌 Recognize the Tactics (From Documented BC Cases)
+
+1. **Medical coordinator/safety officer says "Don't file WSIB"**
+   - 📊 **Data:** 23-48% suppression rate documented on BC megaprojects
+   - 🚨 **Red flag:** International SOS-type services discourage filing
+   - ✅ **Your right:** File Form 6 directly with WSIB (1-800-387-0750)
+   - ⚖️ **Legal basis:** WSIA requires employer report within 3 days
+
+2. **Employer-controlled medical clinic minimizes injury**
+   - 📊 **Pattern:** On-site clinics record "minor strain" when actual rotator cuff tear
+   - 🚨 **Red flag:** Doctor employed by company says injury "not serious"
+   - ✅ **Your action:** Get independent medical assessment (your doctor/ER)
+   - 💡 **Why crucial:** WSIB relies on medical evidence—employer clinic biased
+
+3. **Union doesn't support your claim filing**
+   - 📊 **2014 BC ruling:** Unions participated in suppression (project completion bonuses)
+   - 🚨 **Red flag:** Union rep says "don't rock the boat" or "team gets safety bonus"
+   - ✅ **Your right:** File individually even without union support
+   - ⚖️ **Legal protection:** Union breach of duty creates grievance + liability
+
+4. **Cash offer to "avoid paperwork hassle"**
+   - 📊 **Pattern:** Common in construction, restaurants (cash transactions)
+   - 🚨 **Red flag:** Amount far less than benefits + cannot sign away WSIB rights
+   - ✅ **Your action:** DECLINE, file claim, report to WSIB Compliance
+   - ⚖️ **Legal issue:** Violates WSIA—employer cannot contract out of insurance
+
+### 💪 Document Everything
+
+**Create evidence trail for potential reprisal complaint:**
+
+- ✅ Save emails/texts saying "don't file"
+- ✅ Record names of witnesses (coworkers who heard supervisor discourage filing)
+- ✅ Document injury details immediately (date, time, how it happened)
+- ✅ Get independent medical records (not just employer clinic)
+- ✅ File Form 6 within 6 months (strict deadline)
+
+### ⚠️ Legal Protections
+
+- **Reprisal (WSIA s.42):** Cannot terminate/harass for filing → File WSIB + OLRB complaint
+- **Accommodation duty:** Must provide modified work → Human Rights complaint if denied
+- **Whistleblower:** Reporting suppression to WSIB Compliance = protected activity
+
+### 🔧 Practical Actions
+
+1. **File Form 6 yourself** - Don't trust employer to file Form 7
+2. **Call WSIB** - Confirm received (get claim number)
+3. **Community Legal Clinic** - Free legal help ([Legal Aid Ontario](https://www.legalaid.on.ca))
+4. **WSIB Compliance** - Report suppression anonymously: 1-800-387-0750
+5. **[Claim Suppression Guide](/research/)** - Documentation checklists, complaint templates
+
+### 📊 For General Public
+
+- **1.14-2.29M estimated suppressed (ON, 2016-2025)** = billions in costs shifted to health care, social assistance
+- Financial incentives (experience-rating) reward suppression over safety
+- BC *Pickering* ruling (2025): Labour relations exclusion should be "read down" (trend towards accountability)
+
+---
+
 ## Case Law Citations
 
 **Main Authorities:**
@@ -740,7 +802,7 @@ We attempted to analyze which employer tactics appear together in the same decis
 - [Reconsideration Request](https://3mpwrapp.ca/research/#templates) - Request decision review
 
 **3mpwr Research:**
-- [WSIB Exposed: Statistical Evidence of Systematic Manipulation](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 43.9% medical evidence disputes
+- [WSIB Exposed: Statistical Pattern Analysis](https://3mpwrapp.ca/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 43.9% medical evidence disputes
 - [WSIB Black Box: Claim Suppression & Outcome Obscurity](https://3mpwrapp.ca/blog/2026/04/16/wsib-black-box-claim-suppression-outcome-obscurity/) - 1.14-2.29M suppressed workers
 
 **External Resources:**
