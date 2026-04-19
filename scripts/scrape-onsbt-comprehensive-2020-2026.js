@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 /**
- * 🔬 COMPREHENSIVE HRTO SCRAPER (2020-2026)
- * Ontario Human Rights Tribunal - Full Dataset Collection
+ * 🔬 COMPREHENSIVE ONSBT SCRAPER (2020-2026)
+ * Ontario Social Benefits Tribunal - Full Dataset Collection
  * 
- * Parallel to ONWSIAT analysis - collecting ALL HRTO decisions for comparative research
- * Focus: Disability discrimination patterns in employment, housing, services
+ * CRITICAL DATASET: ODSP disability benefits appeals
+ * Focus: Why people get denied ODSP, medical evidence standards, disability definition
  * 
- * Output: Year-by-year JSON files with full decision text
- * onhrt-2020-complete.json
- * onhrt-2021-complete.json
+ * Output: Year-by-year JSON files with enhanced metadata
+ * onsbt-2020-complete.json
+ * onsbt-2021-complete.json
  * ... through 2026
  * 
  * Author: 3mpwrApp Research Team
- * Date: April 16, 2026
+ * Date: April 18, 2026
  */
 
 const https = require('https');
@@ -101,7 +101,7 @@ async function fetchYearCaseList(year) {
       decisionDateBefore: year === 2026 ? '2026-12-31' : `${year + 1}-01-01`
     });
     
-    const url = `${CANLII_BASE}/caseBrowse/en/onhrt/?${params}`;
+    const url = `${CANLII_BASE}/caseBrowse/en/onsbt/?${params}`;
     
     console.log(`  🔍 Fetching offset ${offset} (batch size: ${resultCount})`);
     
@@ -141,7 +141,7 @@ async function fetchYearCaseList(year) {
 
 async function fetchFullDecision(caseId) {
   const params = new URLSearchParams({ api_key: CANLII_API_KEY });
-  const url = `${CANLII_BASE}/caseBrowse/en/onhrt/${caseId}/?${params}`;
+  const url = `${CANLII_BASE}/caseBrowse/en/onsbt/${caseId}/?${params}`;
   
   try {
     const response = await fetchWithRetry(url);
@@ -305,13 +305,13 @@ function extractLegislationFromKeywords(keywords) {
   
   // Pattern: "Human Rights Code, s. 5" or "Code, s. 34(1)" etc.
   const patterns = [
-    /Human Rights Code,\s*s\.\s*[\d]+(?:\([\d]+\))?/gi,
-    /Code,\s*s\.\s*[\d]+(?:\([\d]+\))?/gi,
-    /Employment Standards Act,\s*[\d]{4},\s*s\.\s*[\d]+/gi,
-    /Workplace Safety and Insurance Act,\s*[\d]{4},\s*s\.\s*[\d]+/gi,
     /Ontario Disability Support Program Act,\s*[\d]{4},\s*s\.\s*[\d]+/gi,
-    /WSIA,\s*s\.\s*[\d]+/gi,
-    /ODSPA,\s*s\.\s*[\d]+/gi
+    /ODSPA,\s*[\d]{4},\s*s\.\s*[\d]+/gi,
+    /ODSPA,\s*s\.\s*[\d]+/gi,
+    /Ontario Works Act,\s*[\d]{4},\s*s\.\s*[\d]+/gi,
+    /OWA,\s*s\.\s*[\d]+/gi,
+    /Social Assistance Act,\s*s\.\s*[\d]+/gi,
+    /Regulation [\d]+\/[\d]+,\s*s\.\s*[\d]+/gi
   ];
   
   patterns.forEach(pattern => {
@@ -377,8 +377,8 @@ function parseDecision(caseData, fullData) {
     full_text_length: html.length,
     
     // Metadata
-    tribunal: "Human Rights Tribunal of Ontario",
-    database: "onhrt",
+    tribunal: "Ontario Social Benefits Tribunal",
+    database: "onsbt",
     scraped_at: new Date().toISOString(),
     
     // Data quality
@@ -395,11 +395,11 @@ function parseDecision(caseData, fullData) {
 
 async function scrapeYear(year) {
   console.log('\n' + '='.repeat(70));
-  console.log(`📊 SCRAPING HRTO DECISIONS FOR ${year}`);
+  console.log(`📊 SCRAPING ONSBT DECISIONS FOR ${year}`);
   console.log('='.repeat(70));
   
-  const outputFile = path.join(OUTPUT_DIR, `onhrt-${year}-complete.json`);
-  const progressFile = path.join(OUTPUT_DIR, `.progress-onhrt-${year}.json`);
+  const outputFile = path.join(OUTPUT_DIR, `onsbt-${year}-complete.json`);
+  const progressFile = path.join(OUTPUT_DIR, `.progress-onsbt-${year}.json`);
   
   // Check if already completed
   if (fs.existsSync(outputFile)) {
@@ -497,8 +497,8 @@ async function scrapeYear(year) {
         console.log('  2. Run the same command tomorrow to resume:');
         console.log(`     node ${path.basename(__filename)}`);
         console.log('  3. Collection will automatically resume at case ${i + 1}');
-        console.log('\n💡 Alternative: Start a different tribunal (ONSBT/ONWSIB)');
-        console.log('   (uses same quota, but may have fewer cases per year)');
+        console.log('\n💡 Alternative: Start a different tribunal (ONWSIB/HRTO)');
+        console.log('   (uses same quota, but different dataset)');
         console.log('\n');
         
         // Save what we have so far
@@ -533,8 +533,8 @@ async function scrapeYear(year) {
 
 async function main() {
   console.log('╔════════════════════════════════════════════════════════════════════╗');
-  console.log('║  🔬 COMPREHENSIVE HRTO SCRAPER (2020-2026)                        ║');
-  console.log('║  Ontario Human Rights Tribunal - Full Dataset Collection          ║');
+  console.log('║  🔬 COMPREHENSIVE ONSBT SCRAPER (2020-2026)                       ║');
+  console.log('║  Ontario Social Benefits Tribunal - ODSP Appeals                   ║');
   console.log('╚════════════════════════════════════════════════════════════════════╝');
   console.log();
   console.log(`📅 Years to scrape: ${YEARS.join(', ')}`);

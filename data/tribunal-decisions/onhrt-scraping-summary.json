@@ -1,0 +1,104 @@
+{
+  "scrape_date": "2026-04-19T13:56:15.765Z",
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "stats": [
+    {
+      "year": 2020,
+      "total": 37,
+      "disability_cases": 0,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 37
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2021,
+      "total": 792,
+      "disability_cases": 9,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 791,
+        "Interim Decision": 1
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2022,
+      "total": 1473,
+      "disability_cases": 15,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 1473
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2023,
+      "total": 1821,
+      "disability_cases": 18,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 1821
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2024,
+      "total": 1916,
+      "disability_cases": 20,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 1916
+      },
+      "duration_minutes": "0.0"
+    },
+    {
+      "year": 2025,
+      "total": 2686,
+      "disability_cases": 23,
+      "with_full_text": 0,
+      "outcomes": {
+        "Abandoned": 859,
+        "Unknown": 1141,
+        "Dismissed - No Violation": 389,
+        "Reconsideration": 228,
+        "Interim Decision": 8,
+        "Costs Decision": 1,
+        "Withdrawn": 6,
+        "Deferred": 51,
+        "Settled": 2,
+        "Allowed - Violation Found": 1
+      },
+      "duration_minutes": "681.1"
+    },
+    {
+      "year": 2026,
+      "total": 544,
+      "disability_cases": 2,
+      "with_full_text": 0,
+      "outcomes": {
+        "Unknown": 291,
+        "Deferred": 21,
+        "Reconsideration": 82,
+        "Abandoned": 93,
+        "Dismissed - No Violation": 49,
+        "Settled": 3,
+        "Interim Decision": 3,
+        "No Jurisdiction": 1,
+        "Withdrawn": 1
+      },
+      "duration_minutes": "138.2"
+    }
+  ],
+  "total_cases": 9269,
+  "total_disability_cases": 87
+}
