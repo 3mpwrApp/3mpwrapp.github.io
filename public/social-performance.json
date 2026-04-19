@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-04-18T03:37:34.627Z",
+  "generated": "2026-04-19T03:55:58.107Z",
   "insights": {
-    "timestamp": "2026-04-18T03:37:34.596Z",
+    "timestamp": "2026-04-19T03:55:58.075Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-04-18T03:37:34.602Z",
+      "lastUpdated": "2026-04-19T03:55:58.081Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -39,7 +39,7 @@
       "currentTrending": [
         {
           "tag": "accessibility",
-          "mentions": 47,
+          "mentions": 46,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-04-18T03:37:34.605Z",
+      "lastUpdated": "2026-04-19T03:55:58.085Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-04-18T03:37:34.602Z",
+    "lastUpdated": "2026-04-19T03:55:58.081Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -102,7 +102,7 @@
     "currentTrending": [
       {
         "tag": "accessibility",
-        "mentions": 47,
+        "mentions": 46,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-04-18T03:37:34.605Z",
+    "lastUpdated": "2026-04-19T03:55:58.085Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
