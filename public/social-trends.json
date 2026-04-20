@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-19T13:19:25.645Z",
+  "lastUpdated": "2026-04-20T03:41:26.238Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 15849,
+      "totalPosts": 15874,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-19T13:19:16.224Z"
+      "lastSeen": "2026-04-20T03:41:17.664Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 15836,
+      "totalPosts": 15861,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-19T13:19:18.387Z"
+      "lastSeen": "2026-04-20T03:41:19.709Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 15721,
+      "totalPosts": 15746,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-19T13:19:20.599Z"
+      "lastSeen": "2026-04-20T03:41:21.671Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 15912,
+      "totalPosts": 15937,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-19T13:19:22.647Z"
+      "lastSeen": "2026-04-20T03:41:23.591Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 15873,
+      "totalPosts": 15898,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-19T13:19:24.640Z"
+      "lastSeen": "2026-04-20T03:41:25.234Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Any bus or train service which is inaccessible to wheelchair users, and disabled people generally, is the equivalent of having no public transport services . \n#DisabilityRights",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "👉 #wordsmatter #disabilityjustice #callitout #ableism",
-      "author": "danasinspired.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Sea Of Thieves #accessibility win - our new Bilge Rats Weekender Challenge parchment hooks into our flexible Text-To-Speech and Custom-Text-Overlay system on launch day, April 16th! ✨\n\nWhat part of gameplay would you like us to bring it to next?",
-      "author": "topher.io",
-      "engagement": 19,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Au départ, on s’est posé une question simple avec @eaboaf.bsky.social :\n\ncomment parler d’accessibilité en conférence… sans faire une énième présentation, mais plutôt en mode craft ?\n\nAlors on a fait un pas de côté. Plutôt que de “parler” accessibilité :\n\n#devoxx2026 #a11y #playwright #tdd",
-      "author": "manoncarbonnel.bsky.social",
-      "engagement": 17,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "🚨 All hands on deck! 🚨\n\nThe Senate has been in a marathon debate over the Save Act since yesterday. Call your Senators TODAY! Demand they VOTE NO on disenfranchising millions of disabled voters, women and so many others!\n\nCapitol switchboard: 202-224-3121 ☎️\n\n#CripTheVote #ICareIVote",
-      "author": "domesticemployers.bsky.social",
-      "engagement": 11,
-      "hashtag": "CripTheVote"
-    },
-    {
-      "text": "Any bus or train service which is inaccessible to wheelchair users, and disabled people generally, is the equivalent of having no public transport services . \n#DisabilityRights",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "👉 #wordsmatter #disabilityjustice #callitout #ableism",
-      "author": "danasinspired.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Keyboard navigation not only acts as a guardrail when going between PCs and Mac style mice, but it's helped me with forms, spreadsheets, profile forms... but keyboard #accessibility is still rare. #UXdesign \n\nTry NOT USING your mouse and see what barriers you find.",
-      "author": "foxdesign.tech",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Au départ, on s’est posé une question simple avec @eaboaf.bsky.social :\n\ncomment parler d’accessibilité en conférence… sans faire une énième présentation, mais plutôt en mode craft ?\n\nAlors on a fait un pas de côté. Plutôt que de “parler” accessibilité :\n\n#devoxx2026 #a11y #playwright #tdd",
       "author": "manoncarbonnel.bsky.social",
@@ -338,6 +290,54 @@
       "author": "runwaygirl.com",
       "engagement": 12,
       "hashtag": "A11y"
+    },
+    {
+      "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
+      "author": "anonymoussewerrat.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
+      "author": "zacharyweeks.bsky.social",
+      "engagement": 47,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Received my postal vote so sharing my Substack, originally commissioned by @bylinetimes.bsky.social Please share too, know that the right-wing are never friends of disabled people.\n#DisabledPeopleAgainstFascism\n#StandUpToRacism\n#DisabilityRights\n#Writerlife\n\npennypepper.substack.com/p/the-tainte...",
+      "author": "penpep.bsky.social",
+      "engagement": 31,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 27,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "👉 #wordsmatter #disabilityjustice #callitout #ableism",
+      "author": "danasinspired.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "We’re building something beautiful in the Bronx.\nA sensory garden where children with disabilities can feel safe, seen, and free to explore.\n\nVolunteers needed.\nCome grow something that will last.\n\n#Bronx #Accessibility #Community",
+      "author": "urbanmodernism.bsky.social",
+      "engagement": 201,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I didnt find any good game or practice tool to practice/learn the red little nub on my thinkpad and so..\n\nalso, my hands are weak (due to, well..treatment) anyway, so-gemini helping me make a html game !\n\n#gemini #notebooklm #accessibility #hospital-stay\n#gamedev #game #html #web #webdev\n#thinkpad",
+      "author": "loneicewolf.bsky.social",
+      "engagement": 14,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "It's 4/19. We're at 400/1300 first goal. Can we get to 690? Only $290 - and you'd be helping me renew an #accessibility certification to keep freelancing! #HelpSky #MutualAidRequest #InclusiveDesign #crowdfund",
+      "author": "foxdesign.tech",
+      "engagement": 16,
+      "hashtag": "Accessibility"
     }
   ],
   "emergingTopics": [
@@ -347,18 +347,18 @@
     },
     {
       "keyword": "accessibility",
-      "count": 45
+      "count": 43
     },
     {
       "keyword": "cripthevote",
       "count": 28
     },
     {
-      "keyword": "a11y",
-      "count": 27
+      "keyword": "disabilityjustice",
+      "count": 26
     },
     {
-      "keyword": "disabilityjustice",
+      "keyword": "a11y",
       "count": 26
     },
     {
@@ -394,8 +394,8 @@
       "count": 11
     },
     {
-      "keyword": "a11y accessibility",
-      "count": 9
+      "keyword": "ada",
+      "count": 11
     },
     {
       "keyword": "disabilityrights nokings3",
@@ -403,11 +403,7 @@
     },
     {
       "keyword": "disabled people",
-      "count": 8
-    },
-    {
-      "keyword": "ada",
-      "count": 8
+      "count": 7
     },
     {
       "keyword": "disabilityjustice nico",
@@ -418,8 +414,12 @@
       "count": 6
     },
     {
-      "keyword": "disabilitysky",
+      "keyword": "refusefascism",
       "count": 6
+    },
+    {
+      "keyword": "abolishice",
+      "count": 5
     }
   ]
 }
