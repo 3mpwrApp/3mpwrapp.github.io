@@ -1,68 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-21T03:34:07.241Z",
+  "lastUpdated": "2026-04-21T14:02:12.610Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 15924,
+      "totalPosts": 15949,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-21T03:33:57.667Z"
+      "lastSeen": "2026-04-21T14:01:52.015Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 15911,
+      "totalPosts": 15936,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-21T03:33:59.840Z"
+      "lastSeen": "2026-04-21T14:01:56.937Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 15796,
+      "totalPosts": 15821,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-21T03:34:02.025Z"
+      "lastSeen": "2026-04-21T14:02:02.732Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 15987,
+      "totalPosts": 16012,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-21T03:34:04.071Z"
+      "lastSeen": "2026-04-21T14:02:07.832Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 15948,
+      "totalPosts": 15973,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-21T03:34:06.237Z"
+      "lastSeen": "2026-04-21T14:02:11.606Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "👉 #wordsmatter #disabilityjustice #callitout #ableism",
-      "author": "danasinspired.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Strong (likely unpopular among #a11y practitioners) opinion:\n\nIn accessibility discussions, stating just the number of a WCAG success criterion (SC) without stating the title (at least once) is as annoying as abbreviations without expanded forms are. Sure, it's not exactly the same; but assuming 1/2",
-      "author": "sarasoueidan.com",
-      "engagement": 62,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "We must get police out of our schools. It is a direct conveyor belt or conduit from schools to prison. They violate IEPs and civil rights DAILY! If you are a civil rights attorney please reach out to her. #pinks #ACLU #civilrights #legalaidrequest #Texas #ADA #IDEA #Disabilityrights #momsky #edusky",
-      "author": "aliceknew.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Antispe Ability 2026 / 2 > Herrschaftskritik\nfarangis.de/antispe_abil... ; \nd-nb.info/1396149902/34\n\n#DisabilityRights ♻️\n#Tierrechte ♻️\n#Punk ♻️\n#Ableismus ♻️\n#Tierrechtspunk ♻️\n#DIY ♻️\n\n@tierrechtsarchiv.bsky.social",
-      "author": "antispe-ability.bsky.social",
-      "engagement": 11,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "👉 #wordsmatter #disabilityjustice #callitout #ableism",
       "author": "danasinspired.bsky.social",
@@ -338,16 +314,40 @@
       "author": "hoydenspark.bsky.social",
       "engagement": 27,
       "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
+      "author": "anonymoussewerrat.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
+      "author": "zacharyweeks.bsky.social",
+      "engagement": 47,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Received my postal vote so sharing my Substack, originally commissioned by @bylinetimes.bsky.social Please share too, know that the right-wing are never friends of disabled people.\n#DisabledPeopleAgainstFascism\n#StandUpToRacism\n#DisabilityRights\n#Writerlife\n\npennypepper.substack.com/p/the-tainte...",
+      "author": "penpep.bsky.social",
+      "engagement": 34,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 27,
+      "hashtag": "DisabilityJustice"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 46
+      "count": 45
     },
     {
       "keyword": "accessibility",
-      "count": 41
+      "count": 38
     },
     {
       "keyword": "a11y",
@@ -386,10 +386,6 @@
       "count": 12
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 11
-    },
-    {
       "keyword": "disabilityrebellion",
       "count": 9
     },
@@ -402,6 +398,10 @@
       "count": 9
     },
     {
+      "keyword": "accessibility a11y",
+      "count": 8
+    },
+    {
       "keyword": "disabilityjustice nico",
       "count": 7
     },
@@ -410,15 +410,15 @@
       "count": 6
     },
     {
+      "keyword": "ndis",
+      "count": 5
+    },
+    {
       "keyword": "citizenportal",
       "count": 5
     },
     {
       "keyword": "disabled people",
-      "count": 5
-    },
-    {
-      "keyword": "ada",
       "count": 5
     }
   ]
