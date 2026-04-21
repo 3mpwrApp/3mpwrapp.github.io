@@ -1,0 +1,23 @@
+{
+  "total_abandoned": 952,
+  "category_breakdown": {
+    "Email/Service Failure": 865,
+    "Deadline/Time": 410,
+    "Mediation/Hearing": 58,
+    "Non-Compliance": 45,
+    "Case Assessment/Notice": 123,
+    "Unspecified": 32,
+    "Non-Response": 7,
+    "Other Proceedings": 13,
+    "Inactive/Lost Contact": 3
+  },
+  "timing_distribution": {
+    "0-6 months": 25,
+    "6-12 months": 118,
+    "12-24 months": 401,
+    "24-36 months": 149,
+    "36-48 months": 71,
+    "48+ months": 186
+  },
+  "analysis_date": "2026-04-19T17:37:20.625Z"
+}

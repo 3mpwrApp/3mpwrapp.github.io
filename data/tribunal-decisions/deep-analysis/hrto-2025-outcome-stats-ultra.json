@@ -1,0 +1,33 @@
+{
+  "dataset": "HRTO 2025 All",
+  "total_cases": 2686,
+  "with_outcomes": 1814,
+  "by_outcome": {
+    "abandoned": 1172,
+    "settled": 12,
+    "dismissed": 308,
+    "reconsideration": 223,
+    "deferred": 82,
+    "allowed": 17
+  },
+  "by_category": {
+    "procedural": 1477,
+    "negotiated": 12,
+    "loss": 308,
+    "victory": 17
+  },
+  "by_method": {
+    "high-confidence": 1512,
+    "pattern-match": 302,
+    "none": 872
+  },
+  "by_confidence": {
+    "very-high (80-100%)": 969,
+    "high (60-79%)": 31,
+    "medium (40-59%)": 517,
+    "low (20-39%)": 297,
+    "very-low (1-19%)": 0,
+    "none (0%)": 872
+  },
+  "average_confidence": 74
+}

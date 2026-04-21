@@ -4,7 +4,7 @@ title: "The Meredith Act (Bill 86)"
 date: 2026-04-17
 categories: [research, advocacy, legislation]
 featured: true
-excerpt: "The Meredith Act (Bill 86) would have fixed documented systemic failures. Our analysis of 11,430 WSIAT decisions (2020-2026) found at least 71 documented terminations after filing claims (0.62%, conservative estimate), 723 mental stress cases, and zero pain & suffering compensation. Ontario's legislature shut it down at 2nd Reading."
+excerpt: "The Meredith Act (Bill 86) proposed major workers' compensation reforms. Our analysis of 11,430 WSIAT decisions (2020-2026) found at least 71 documented terminations after filing claims (0.62%, conservative estimate), 723 mental stress cases, and zero pain & suffering compensation. The bill did not proceed past 2nd Reading."
 author: 3mpwrApp
 ---
 
@@ -21,19 +21,19 @@ It would have:
 - ✅ Reformed the labour relations exclusion for mental stress
 - ✅ Increased wage replacement to 90%
 
-**Status:** ❌ **Shut down at 2nd Reading**
+**Status:** ❌ **Did not proceed past 2nd Reading**
 
-But here's what the legislature didn't see: **We have the data that proves every single provision was necessary.**
+Our dataset provides measurable context that is broadly consistent with the reforms proposed in Bill 86.
 
 ---
 
-## Our CanLII Analysis: The Evidence They Ignored
+## Our CanLII Analysis: What the Data Shows
 
 Between **January 2020 and March 2026**, the Workplace Safety and Insurance Appeals Tribunal (WSIAT) published **11,430 decisions** on CanLII.
 
 We analyzed every single one.
 
-**What we found matches Bill 86's proposed reforms almost exactly.**
+**What we found is broadly consistent with Bill 86's proposed reforms.**
 
 ---
 
@@ -50,10 +50,12 @@ We analyzed every single one.
 
 **Important:** This represents a conservative minimum estimate. Many terminations likely go unmentioned in tribunal decisions, as workers may not appeal if terminated, or decisions may use euphemistic language.
 
-**Real examples from case titles:**
+**Illustrative examples based on recurring case-title patterns (not actual cases):**
 - "Worker terminated 23 days after filing claim"
 - "Dismissal following WSIB application"
 - "Employment ended shortly after workplace accident"
+
+**Note:** These are pattern-based illustrations, not quotations from one identifiable case record.
 
 ### **Why Bill 86 Was Needed:**
 
@@ -102,7 +104,7 @@ Bill 86 would have fixed this by:
 
 Bill 86 would have codified *Pickering* for Ontario.
 
-**Legislature shut it down instead.**
+**Legislative status:** Bill 86 did not proceed past 2nd Reading.
 
 ---
 
@@ -194,7 +196,7 @@ Bill 86 would have codified *Pickering* for Ontario.
 
 **Why it matters:** Life expectancy increasing, retirement age rising, pensions inadequate → Workers NEED to work past 65
 
-Bill 86 recognized this. Legislature didn't.
+Bill 86 addressed this issue, but the bill did not proceed.
 
 ---
 
@@ -228,7 +230,7 @@ Bill 86 would have fixed this:
 
 ---
 
-## Why Bill 86 Failed: Follow the Money
+## Why Bill 86 Did Not Proceed: Cost and Policy Debate
 
 ### **Employer Lobby Opposition:**
 
@@ -248,13 +250,13 @@ Our data shows **current system creates massive hidden costs**:
 
 **Who pays those costs?** Taxpayers. Public health system. Families.
 
-**Bill 86 would have shifted costs back to employers** (who cause injuries) **and away from workers/taxpayers** (who suffer them).
+**Bill 86 may have shifted more costs toward employer-funded compensation systems and away from public systems and household-level impacts.**
 
 ### **Government Position:**
 
 > "System sustainability concerns. Need to review actuarial impact." — Labour Minister spokesperson
 
-**Translation:** Don't want to anger employer lobby before next election.
+This reflects a stated policy concern about fiscal impact and implementation trade-offs.
 
 ---
 
@@ -281,9 +283,9 @@ Even though Bill 86 didn't pass, its provisions demonstrate **legislative awaren
 > - 723 mental stress cases (6.33%) → Labour relations exclusion reform needed (s. 1(3))
 > - Zero ongoing pain compensation → Section 13 addresses documented gap
 >
-> These aren't hypotheticals. These are real workers. Real denials. Real suffering.
+> These are documented patterns from publicly available decisions and should be considered in future reform discussions.
 >
-> Why did you/your party shut down Bill 86 at 2nd Reading?
+> What is your/your party's position on reintroducing similar reforms?
 >
 > I urge you to support reintroduction.
 >
@@ -301,7 +303,7 @@ Organizations fighting for Bill 86's return:
 ### **4. Share This Research**
 
 **Tweet:**
-> 🚨 Why was Bill 86 shut down?
+> Bill 86 status update and evidence review
 >
 > Our analysis of 11,430 WSIAT cases:
 > ✅ At least 71 workers fired after filing claims (0.62% documented, likely higher)
@@ -315,28 +317,28 @@ Organizations fighting for Bill 86's return:
 > #Bill86 #ONpoli #WorkerRights
 
 **Facebook/LinkedIn:**
-> Ontario's legislature shut down Bill 86 (Meredith Act) at 2nd Reading in December 2025. But analysis of 11,430 WSIAT decisions proves every provision was necessary:
+> Ontario's legislature did not advance Bill 86 (Meredith Act) past 2nd Reading in December 2025. Analysis of 11,430 WSIAT decisions shows patterns broadly consistent with many of its proposed reforms:
 >
 > 📊 At least 71 documented terminations after filing claims (0.62%, likely severe undercount)
 > 📊 723 mental stress cases denied via "labour relations exclusion"
 > 📊 Privacy violations in 83 cases
 > 📊 Age 65 cutoff affecting hundreds
 >
-> Bill 86 wasn't "too ambitious." It was evidence-based reform.
+> Bill 86 presented reforms that can be assessed against publicly available evidence and policy trade-offs.
 >
-> Why did MPPs vote it down? And will they reconsider?
+> Will MPPs reconsider related reforms in a future session?
 >
 > Full analysis: [link]
 
 ---
 
-## The Data Doesn't Lie
+## Data Summary
 
 **11,430 tribunal decisions.**
 
 **6 years of patterns.**
 
-**Clear evidence** of:
+**Documented patterns** include:
 - Post-claim terminations
 - Mental stress denials
 - Privacy violations
@@ -344,23 +346,27 @@ Organizations fighting for Bill 86's return:
 - Incomplete medical evidence
 - Zero pain compensation
 
-**Bill 86 addressed every single problem.**
+**Bill 86 addressed many of these issues through proposed statutory changes.**
 
-**Legislature shut it down anyway.**
+**Legislative outcome:** The bill did not proceed past 2nd Reading.
 
 ---
 
-## What You Can Do Right Now
+## Community Accessibility and Accountability Priorities
 
-1. **Read Bill 86:** [Full text on Ontario Legislature website](https://www.ola.org/en/legislative-business/bills/parliament-44/session-1/bill-86)
+This section highlights community participation pathways and transparency-focused engagement, not directives to tribunals or agencies.
 
-2. **Read our knowledge base guide:** [Bill 86: Meredith Act - Full Breakdown](https://3mpwrapp.ca/knowledge-base/bill-86-meredith-act)
+1. **Start with accessibility in every process:** Request plain-language communication, alternate formats, interpretation, support-person access, and dual-channel notice (email + mail) for all critical deadlines.
 
-3. **Email your MPP:** Demand they explain why they opposed/didn't support Bill 86
+2. **Read Bill 86:** [Full text on Ontario Legislature website](https://www.ola.org/en/legislative-business/bills/parliament-44/session-1/bill-86)
 
-4. **Support advocacy groups:** Thunder Bay Injured Workers, ODSP/WSIB Denied, Workers' Clinics
+3. **Read our knowledge base guide:** [Bill 86: Meredith Act - Full Breakdown](https://3mpwrapp.ca/knowledge-base/bill-86-meredith-act)
 
-5. **Share this analysis:** Workers need to know what they lost when Bill 86 wanst passed
+4. **Email your MPP:** Ask for their position on reintroducing similar reforms
+
+5. **Support advocacy groups:** Thunder Bay Injured Workers, ODSP/WSIB Denied, Workers' Clinics
+
+6. **Share this analysis:** Workers can use this evidence in ongoing policy discussions
 
 ---
 
@@ -414,7 +420,7 @@ Organizations fighting for Bill 86's return:
 **Private Members' Bill**
 
 - 1st Reading: December 8, 2025
-- 2nd Reading: ❌ **Shut down**
+- 2nd Reading: ❌ **Did not proceed**
 - 3rd Reading: —
 - Royal Assent: —
 
@@ -1589,4 +1595,4 @@ The short title of this Act is the **Meredith Act (Fair Compensation for Injured
 
 ---
 
-*This is the complete text of Bill 86 as introduced for First Reading on December 8, 2025. The bill was shut down at Second Reading and did not proceed further.*
+*This is the complete text of Bill 86 as introduced for First Reading on December 8, 2025. The bill did not proceed past Second Reading.*

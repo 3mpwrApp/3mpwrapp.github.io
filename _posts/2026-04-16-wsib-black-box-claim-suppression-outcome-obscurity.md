@@ -1,39 +1,39 @@
 ---
 layout: post
-title: "The WSIB Black Box: Estimated 1.14-2.29 Million Injured Workers Suppressed (2020-2026) + 91.8% of Outcomes Hidden"
+title: "WSIB/WSIAT Transparency Gap: Estimated 1.14-2.29 Million Injured Workers Not Reaching Tribunal (2020-2026) + 91.8% of Outcomes Unclassified"
 date: 2026-04-16
 categories: [advocacy, research, transparency, wsib, systemic-analysis]
-tags: [wsib, claim-suppression, outcome-obscurity, transparency, data-analysis, workers-rights]
+tags: [wsib, claim-reporting-gap, outcome-obscurity, transparency, data-analysis, workers-rights]
 author: Lissa Beaulieu (Founder/Creator 3mpwrApp) with GitHub Copilot assistance
 permalink: /blog/2026/04/16/wsib-black-box-claim-suppression-outcome-obscurity/
-excerpt: "FACTS: 11,430 tribunal decisions analyzed, 91.8% have no outcome metadata, only 1,905/year reach tribunal. EXTRAPOLATION: Institute for Work & Health research (15-50% injuries unreported) + Public Health Ontario rates (1 in 20 workers injured) = estimated 1.14-2.29M workers suppressed. CONFIDENCE: Ranges show uncertainty. This is epidemic-scale under-compensation, whether lower or upper bound. Full methodology + alternative estimates included."
+excerpt: "FACTS: 11,430 tribunal decisions analyzed, and in CanLII keyword/API data 91.8% do not include explicit outcome-labeled keywords; about 1,905/year reach tribunal. EXTRAPOLATION: Institute for Work & Health research (15-50% injuries unreported) + Public Health Ontario rates (1 in 20 workers injured) = estimated 1.14-2.29M workers not reaching tribunal-level adjudication. CONFIDENCE: Ranges show uncertainty. Full methodology + alternative estimates included."
 image: /assets/images/wsib-suppression-pyramid-2026-05-01.png
 featured: true
 ---
 
-# The WSIB Black Box: When Justice Becomes Invisible
+# WSIB/WSIAT Transparency Gap: What the Public Data Shows
 
 <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: #1a1a1a; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(250, 112, 154, 0.3);">
 <h2 style="color: #1a1a1a; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
 
 <div style="font-size: 18px; line-height: 1.8; color: #1a1a1a;">
 
-**📊 91.8% of tribunal decisions have NO outcome metadata** - workers can't learn from precedents
+**📊 In CanLII keyword/API data, 91.8% of tribunal decisions have no explicit outcome label** - this limits outcome-rate analysis from metadata alone
 
 **🔢 Only 1,905 cases reach tribunal per year** out of estimated 100,000-200,000 workplace injuries
 
-**📉 Estimated 1.14-2.29 MILLION workers suppressed (2020-2026)** - based on IWH peer-reviewed research
+**📉 Estimated 1.14-2.29 MILLION workers not reaching tribunal-level adjudication (2020-2026)** - based on IWH peer-reviewed research
 
-**🚨 For every 1 tribunal case, ~52-100 workers estimated suppressed** at earlier stages (unreported injuries, fear of retaliation, denied claims)
+**🚨 For every 1 tribunal case, ~52-100 workers are estimated not to reach tribunal** after earlier-stage attrition (unreported injuries, unclaimed cases, and non-appealed denials)
 
-**💡 What This Means:** The public tribunal system represents <2% of actual workplace injuries - the rest disappear into a black box
+**💡 What This Means:** The public tribunal system represents <2% of estimated workplace injuries; most cases do not appear in tribunal decision datasets.
 
 </div>
 </div>
 
-**TL;DR:** **PROVABLE FACTS:** 11,430 tribunal decisions (2020-2026) represent only 1,905/year. 91.8% lack outcome metadata. **EXTRAPOLATION FROM PEER-REVIEWED RESEARCH:** Institute for Work & Health (15-50% injuries unreported) + Public Health Ontario (1 in 20 workers injured annually) + Ontario workforce (7.5M) = **estimated 1.14-2.29 MILLION workers** suppressed before reaching tribunal. **CONFIDENCE INTERVALS:** Range shows uncertainty but BOTH ends represent humanitarian crisis. **WHAT'S PROVABLE:** Outcome obscurity (91.8%), suppression research (IWH peer-reviewed), tribunal volumes (CanLII). **WHAT'S EXTRAPOLATED:** Total suppression count (based on IWH research applied to Ontario). Full methodology + alternative estimates below.
+**TL;DR:** **PROVABLE FACTS:** 11,430 tribunal decisions (2020-2026) represent about 1,905/year, and in CanLII keyword/API data 91.8% do not include explicit outcome labels. **EXTRAPOLATION FROM PEER-REVIEWED RESEARCH:** Institute for Work & Health (15-50% injuries unreported) + Public Health Ontario (1 in 20 workers injured annually) + Ontario workforce (7.5M) = **estimated 1.14-2.29 MILLION workers** not reaching tribunal-level adjudication. **CONFIDENCE INTERVALS:** Range shows uncertainty. **WHAT'S PROVABLE:** keyword-label limitations (91.8%), published under-reporting research (IWH), tribunal volumes (CanLII). **WHAT'S EXTRAPOLATED:** Estimated count of cases not reaching tribunal. Full methodology + alternative estimates below.
 
-**Read previous investigation:**  [WSIB Exposed: Statistical Pattern Analysis](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+**Read previous investigation:**  [WSIB Statistical Pattern Analysis (2026-04-15)](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
 
 ---
 
@@ -41,17 +41,17 @@ featured: true
 
 **95% CI (Confidence Interval):** A "margin of error." When we say "13.3% (95% CI: 12.7-13.9%)", it means we're 95% confident the true number is between 12.7% and 13.9%. Narrower ranges = more precise.
 
-**📊 = MEASURED:** We counted this directly from the data (e.g., 11,430 tribunal decisions, 91.8% missing outcomes).
+**📊 = MEASURED:** We counted this directly from CanLII keyword/API data (e.g., 11,430 tribunal decisions, 91.8% without explicit outcome labels in keywords).
 
 **🧮 = ESTIMATED:** We calculated this using peer-reviewed research rates applied to Ontario's population (e.g., 1.14-2.29M suppressed workers based on IWH research).
 
-**Why ranges?** The 1.14-2.29 million range shows uncertainty (15-50% suppression rates from research). **BUT:** Even the low end (1.14M) is a humanitarian crisis.
+**Why ranges?** The 1.14-2.29 million range reflects uncertainty in published rates (15-50% in research).
 
 ---
 
-## The Dark Funnel: From 2 Million Injuries to 11,430 Tribunal Decisions
+## Observed Pathway: From Injury Estimates to Tribunal Decisions
 
-### The Suppression Pyramid
+### The Case Attrition Pyramid
 
 Imagine a massive funnel. At the top: **every workplace injury in Ontario (2020-2026)**. At the bottom: the 11,430 tribunal decisions we analyzed.
 
@@ -76,21 +76,21 @@ Here's what the evidence shows:
     🧮 3,500-7,000 internal appeals (reconsideration filed)
            ↓ (🧮 Estimated: 67% resolved/abandoned before tribunal - settlement/delay/exhaustion)
     
-    📊 1,900 WSIAT TRIBUNAL DECISIONS ANNUALLY (MEASURED from our CanLII analysis)
-           ↓ (📊 MEASURED: 91.8% of outcomes uncategorized in public database)
+       📊 ~1,867–1,984 WSIAT TRIBUNAL DECISIONS ANNUALLY (2022–2023 per official annual reports)
+          ↓ (📊 MEASURED: 91.8% of CanLII keyword records have no explicit outcome label)
     
-    📊 156 CASES WITH CLEAR PUBLIC OUTCOMES (MEASURED - what workers can learn from)
+   📊 156 CASES WITH CLEAR PUBLIC OUTCOMES (MEASURED)
 ```
 
 **The Math:**
 - **🧮 ESTIMATED starting point:** 100,000-200,000 injuries/year × 6 years = **600,000-1,200,000 total injuries** (range shows uncertainty)
-- **🧮 ESTIMATED suppression cascade:** Applying IWH suppression rates (15-50% unreported + 30% unclaimed + 75% don't appeal) = **~95% suppressed before tribunal**
+- **🧮 ESTIMATED attrition cascade:** Applying IWH rates (15-50% unreported + 30% unclaimed + 75% don't appeal) = **~95% not reaching tribunal**
 - **📊 MEASURED tribunal volume:** 11,430 cases over 6 years = **1,905/year average (provable)**
-- **🧮 ESTIMATED suppression ratio:** For every 1 tribunal case, **52-100 workers estimated suppressed at earlier stages**
+- **🧮 ESTIMATED attrition ratio:** For every 1 tribunal case, **52-100 workers estimated not reaching tribunal at earlier stages**
 
-**What This Suggests: Between 1.14-2.29 MILLION Ontario workers were estimated to have been injured at work (2020-2026) but never reached tribunal.**
+**What This Suggests: Between 1.14-2.29 MILLION Ontario workers are estimated to have been injured at work (2020-2026) without reaching tribunal.**
 
-**⚠️ CRITICAL CAVEAT:** The 1.14-2.29M estimate is extrapolated from peer-reviewed IWH research applied to Ontario's workforce. The tribunal volume (11,430) is directly measured. Even if our extrapolation is off by 50%, we're still talking about 570,000-1,145,000 workers - a humanitarian crisis at any scale.
+**⚠️ CRITICAL CAVEAT:** The 1.14-2.29M estimate is extrapolated from peer-reviewed IWH research applied to Ontario's workforce. The tribunal volume (11,430) is directly measured. If the extrapolation is materially off, the estimate range would shift accordingly.
 
 ---
 
@@ -99,8 +99,8 @@ Here's what the evidence shows:
 ### What We Found
 
 Of 11,430 tribunal decisions analyzed:
-- **939 cases (8.2%)** have clear outcome metadata in CanLII legal database
-- **10,491 cases (91.8%)** have NO outcome categorization
+- **939 cases (8.2%)** have explicit outcome-labeled keywords in CanLII metadata
+- **10,491 cases (91.8%)** do not include explicit outcome-labeled keywords
 
 **This means: We don't know if workers won or lost 91.8% of the time.**
 
@@ -120,9 +120,9 @@ Of 11,430 tribunal decisions analyzed:
 
 **⚠️ WHAT THIS DOESN'T MEAN:** Workers only win 0.8% of the time.
 
-**✅ WHAT THIS SHOWS:** Outcome data is systematically absent from public legal database. We cannot determine actual success rates because WSIB/WSIAT do not standardize outcome reporting to CanLII.
+**✅ WHAT THIS SHOWS:** CanLII keyword/API metadata is often not outcome-labeled for these records. We cannot determine full success rates from metadata alone without additional full-text parsing or official outcome tables.
 
-### Why This Is NOT Accidental
+### Comparison With Other Tribunal Datasets
 
 **CanLII (Canada's free legal database) has comprehensive outcome metadata for other tribunals:**
 
@@ -130,13 +130,13 @@ Of 11,430 tribunal decisions analyzed:
 - **Human Rights Tribunal:** Outcomes recorded (violation found, no violation, settled)
 - **Employment Standards:** Results specified (employee favor, employer favor, partial)
 
-**But WSIAT (workers' compensation tribunal)?** 91.8% missing outcomes.
+**In this WSIAT CanLII keyword dataset:** 91.8% of records have no explicit outcome-labeled keyword.
 
-**This opacity serves WSIB's interests:**
-1. **No accountability:** Can't prove systematic bias without outcome statistics
-2. **No precedent research:** Workers can't find winning strategies (don't know which arguments work)
-3. **No pattern detection:** Advocacy groups can't identify regional/industry disparities
-4. **No legislative pressure:** Politicians can't demand reforms without success rate data
+**Current data limitations create public-interest gaps:**
+1. **Limited accountability analysis:** Outcome-based comparisons are difficult without outcome statistics
+2. **Limited precedent research:** Workers and representatives have less outcome context for similar cases
+3. **Limited pattern detection:** Regional and industry comparisons are harder to evaluate
+4. **Limited policy evaluation:** Legislators have less standardized evidence for reform proposals
 
 ---
 
@@ -207,13 +207,13 @@ Of 11,430 tribunal decisions analyzed:
    - Long wait times (6-12 months for decisions)
    - Frequent requests for "more information" (exhaustion tactic)
 
-5. **Denial Tactics:**
-   - Blame pre-existing conditions (13.3%, 95% CI: 12.7-13.9% of cases—see previous blog)
-   - Demand "objective" proof of subjective conditions (chronic pain, mental health)
-   - Weaponize legal thresholds (*Kriz*  "greater severity" test)
+5. **Denial Patterns:**
+   - Cite pre-existing conditions (13.3%, 95% CI: 12.7-13.9% of cases—see previous blog)
+   - Frequent requests for "objective" proof of subjective conditions (chronic pain, mental health)
+   - Apply legal thresholds (*Kriz* "greater severity" test)
    - "Maximum medical recovery" claims (premature cutoffs)
 
-6. **Delay Traps:**
+6. **Delay Risks:**
    - Reconsideration adds 1.5 years (505 cases, 4.4%)
    - Multiple rounds of "independent" medical exams (WSIB-selected doctors)
    - Strategic scheduling delays (summer 2023 collapse—39 decisions vs. 154 average)
@@ -275,18 +275,18 @@ Of 11,430 tribunal decisions analyzed:
 - **Midpoint (realistic):** 1.7 million suppressed (average of conservative and high estimates)
 - **Upper bound (high sectors):** 2.29 million suppressed (assumes 350K injuries/year + IWH's high-sector suppression rates)
 
-**What This Shows:** Even at the most conservative estimate (1.14M), we're documenting a massive access-to-justice crisis. Whether the true number is 1 million or 2 million, BOTH represent epidemic-scale under-compensation.
+**What This Shows:** Even at the most conservative estimate (1.14M), the analysis indicates a large access-to-justice gap. Whether the true number is 1 million or 2 million, both estimates indicate substantial under-compensation.
 
 **What We Measured vs. Estimated:**
 - 📊 **MEASURED:** 11,430 tribunal cases (provable from CanLII)
-- 🧮 **ESTIMATED:** 1.14-2.29M suppressed (extrapolated from IWH + Public Health Ontario research)
+- 🧮 **ESTIMATED:** 1.14-2.29M not reaching tribunal-level adjudication (extrapolated from IWH + Public Health Ontario research)
 - **❌ CANNOT PROVE:** Exact suppression count (would require tracking every injury that never gets reported)
 
 ---
 
-## Vulnerability Patterns: Who Gets Suppressed Most? (ESTIMATED FROM RESEARCH)
+## Vulnerability Patterns: Who Is Less Likely to Reach Tribunal? (ESTIMATED FROM RESEARCH)
 
-Canadian research identifies **systematic patterns** in who gets silenced:
+Canadian research identifies patterns in who is less likely to report, claim, or appeal.
 
 ### By Employment Type
 
@@ -296,14 +296,14 @@ Canadian research identifies **systematic patterns** in who gets silenced:
 | Standard full-time (non-union) | 30-40% | Some stability, but still vulnerable to retaliation |
 | Unionized workers | **15-20%** | Shop steward guidance, collective protection, lower fear |
 
-**Impact:** Precarious workers are 3-4x more likely to be suppressed than union workers.
+**Impact:** Precarious workers are estimated to be 3-4x less likely to progress through the claims pipeline than union workers.
 
 ### By Injury Type
 
 | Injury Category | Suppression Rate | Why? |
 |-----------------|------------------|------|
 | **Mental health** (PTSD, anxiety, depression) | **75%+** | Stigma, don't know it's compensable, WSIB requires "psychotraumatic disability" terminology |
-| **Chronic pain** (fibromyalgia, CRPS) | **60-70%** | WSIB demands "objective" proof, dismisses as psychosomatic |
+| **Chronic pain** (fibromyalgia, CRPS) | **60-70%** | Decisions often reference "objective" proof requirements and psychosomatic framing |
 | **Gradual onset** (carpal tunnel, rotator cuff, repetitive strain) | **50-60%** | Workers think WSIB only covers "accidents," not cumulative trauma |
 | **Occupational disease** (cancer, respiratory, hearing loss) | **80%+** | Long latency (20-40 years), impossible to prove workplace causation |
 | **Acute traumatic** (fractures, lacerations, burns) | **10-20%** | Undeniable injury, immediate medical care, harder to suppress |
@@ -334,7 +334,7 @@ Canadian research identifies **systematic patterns** in who gets silenced:
 
 ---
 
-## Economic Impact Analysis: The Cost of Suppression (ESTIMATED)
+## Accessibility and Public-System Impact of Under-Claiming and Non-Progression (ESTIMATED)
 
 ### Healthcare System Burden
 
@@ -371,15 +371,15 @@ Canadian research identifies **systematic patterns** in who gets silenced:
 
 **This doesn't include:**
 - Family caregiver burden (spouses, children caring for disabled workers)
-- Mental health crisis (depression, suicide from financial ruin + untreated injuries)
+- Mental health harms (including depression and other severe outcomes linked to financial strain and untreated injuries)
 - Homelessness (injured workers losing housing)
 - Crime (desperate workers turning to illegal income)
 
 ---
 
-## SMOKING GUN #6: The Transparency Gap (What We CAN'T Know)
+## Transparency Gap: What We Still Cannot Measure Reliably
 
-Beyond the 91.8% missing outcomes, here's what else WSIB hides:
+Beyond the 91.8% keyword-label gap in this CanLII dataset, these are additional areas where public data is limited:
 
 ### 1. Success Rates by Injury Type
 
@@ -394,7 +394,7 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
 **Why it matters:**
 - Workers can't make informed decisions about whether to appeal
 - Lawyers can't assess case strength
-- Advocates can't identify systematic bias patterns
+- Advocates have limited ability to evaluate potential decision-pattern differences
 
 ---
 
@@ -409,7 +409,7 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
 - Nothing. No geographic breakdowns.
 
 **Why it matters:**
-- Regional differences suggest systematic bias or inconsistent application of law
+- Regional differences could reflect inconsistent application, case mix differences, or resource variation
 - Some offices may be "tougher" on workers → workers strategically delay until case can be heard elsewhere
 - Advocacy groups need to know where to focus resources
 
@@ -427,7 +427,7 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
 
 **Why it matters:**
 - Inconsistent adjudication violates principles of justice (like cases should have like outcomes)
-- Systematic leniency or harshness by specific adjudicators = bias
+- Large inter-adjudicator variation could indicate calibration differences that warrant review
 - Workers deserve to know if their case outcome depends on luck of adjudicator assignment
 
 ---
@@ -444,8 +444,8 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
 - No systematic tracking of represented vs. unrepresented outcomes
 
 **Why it matters:**
-- Proves whether access to justice depends on ability to afford lawyer
-- If represented workers win significantly more → system is biased against poor workers
+- Helps evaluate whether representation access affects outcomes
+- If represented workers win significantly more, this may indicate access disparities tied to representation
 - Justifies public funding for legal aid / community clinics
 
 ---
@@ -463,25 +463,25 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
 
 **Why it matters:**
 - Long delays = justice denied (workers lose homes, go bankrupt, relationships end)
-- Systematic delays suggest administrative failure or strategic obstruction
+- Persistent delays may indicate process constraints that require operational review
 - Trends over time show if system is improving or deteriorating
 
 ---
 
-## The Fix: What Transparency Would Look Like
+## Community Transparency Benchmarks
 
 ### Mandatory Public Reporting
 
-**WSIAT should be required to publish annual reports with:**
+**Community accountability benchmarks for annual public reporting include:**
 
 1. **Outcome Statistics by Category**
    ```
-   2025 WSIAT Outcomes:
-   - Total decisions: 2,000
-   - Allowed (full worker victory): 450 (22.5%)
-   - Dismissed (full WSIB victory): 300 (15%)
-   - Varied (partial changes): 800 (40%)
-   - Withdrawn/Settled: 450 (22.5%)
+   2025 WSIAT Outcomes (hypothetical transparency example — actual 2024 decisions issued: 1,848; actual 120-day rate: 89%):
+   - Total decisions: 1,848
+   - Allowed (full worker victory): estimated (not publicly broken down by outcome)
+   - Dismissed (full WSIB victory): estimated (not publicly broken down by outcome)
+   - Varied (partial changes): estimated
+   - Withdrawn/Settled: 618 (26% of 2,412 closed appeals in 2024)
    ```
 
 2. **Success Rates by Injury Type**
@@ -517,60 +517,70 @@ Beyond the 91.8% missing outcomes, here's what else WSIB hides:
    Adjudicator C  | 200       | 45      | 70        | 22.5%
    ```
 
-**This is the standard for other tribunals. Why not WSIB?**
+**Several other tribunals publish this level of detail, which could be a useful reporting benchmark here.**
 
 ---
 
-## What You Can Do Right Now
+## Community Accessibility and Accountability Actions
 
-### If You're an Injured Worker:
+These are community-centered participation and transparency actions, not directives to WSIAT or WSIB.
 
-1. **REPORT YOUR INJURY** (don't let employer suppress)
+### Community Members (Injured Worker Pathways):
+
+1. **PRIORITIZE ACCESSIBILITY FIRST**
+   - Request plain-language communication, alternate formats, interpretation, support-person access, and dual-channel notice (email + mail) for critical deadlines.
+   - If disability affects communication or document handling, request accommodation in writing immediately.
+
+2. **REPORT YOUR INJURY** (don't let employer suppress)
    - Even if employer pressures you not to file
    - Even if you think it's "not serious enough"
-   - Even if you're afraid (retaliation is illegal, document everything)
+   - Fear of retaliation is common; retaliation is illegal, and documentation helps preserve evidence
 
-2. **FILE A WSIB CLAIM** (don't assume you're not covered)
+3. **FILE A WSIB CLAIM** (don't assume you're not covered)
    - Gradual onset injuries ARE covered (carpal tunnel, rotator cuff, repetitive strain)
    - Mental health injuries CAN be compensable (use term "psychotraumatic disability")
    - Occupational diseases ARE covered (cancer, respiratory, hearing loss)
 
-3. **SKIP RECONSIDERATION** (go straight to tribunal)
-   - Don't waste 1.5 years on internal WSIB review (they uphold 95% of denials)
-   - File tribunal appeal immediately (you have 6 months from denial)
+4. **ASSESS RECONSIDERATION VS. DIRECT APPEAL**
+   - Reconsideration can add substantial time in many files; review options promptly
+   - File within statutory timelines (typically 6 months from denial for many matters)
 
-4. **GET HELP** (you're 2-3x more likely to win with representation)
+5. **GET HELP** (you're 2-3x more likely to win with representation)
    - [Community Legal Clinics (free, income-qualified)](https://www.legalaid.on.ca)
    - [Ontario Network of Injured Workers Groups (ONIWG)](https://oniwg.ca)
    - Thunder Bay & District Injured Workers Support Group (if Northwestern Ontario)
 
-5. **SHARE YOUR OUTCOME** (help fill the 91.8% data gap)
+6. **SHARE YOUR OUTCOME** (help fill the 91.8% data gap)
    - Email us: empowrapp08162025@gmail.com
    - Tell us: injury type, whether you won/lost, how long it took
    - We'll aggregate anonymously to build public outcome database
 
 ---
 
-### If You're a Legislator:
+### Public Policy and Oversight Priorities:
 
-1. **Demand Transparency Legislation**
-   - Require WSIAT publish annual outcome statistics (by injury type, region, representation)
-   - Mandate standardized outcome metadata in CanLII
-   - Penalize WSIB for suppression (employer fines for discouraging claims)
+1. **Make accessibility the first policy requirement**
+   - Community benchmark: multi-channel tribunal communication (mail + email + phone/SMS options for critical deadlines).
+   - Community benchmark: plain-language notices, interpretation pathways, and accommodation workflows.
 
-2. **Fund Legal Aid**
+2. **Transparency benchmark priorities**
+   - Annual outcome statistics by injury type, region, and representation status.
+   - Standardized outcome metadata in CanLII records.
+   - Anti-reprisal safeguards where employers discourage claim filing.
+
+3. **Fund Legal Aid**
    - Self-represented workers have HALF the success rate of represented workers
    - Community legal clinics are underfunded, overworked
    - Either fund public lawyers OR make tribunal truly accessible to laypeople
 
-3. **Close Suppression Loopholes**
+4. **Reduce Reporting and Appeal Barriers**
    - Make employer retaliation a criminal offense (not just policy violation)
    - Presumptive coverage for occupational diseases (reverse onus—WSIB proves it's NOT work-related)
-   - Eliminate reconsideration trap (or mandate 60-day decisions, not 1.5 years)
+   - Set service standards for reconsideration timelines (for example, 60-day targets)
 
-4. **Independent Audit**
+5. **Independent Audit**
    - Commission external review of WSIB claim processing (not KPMG—actual workers' advocates)
-   - Investigate suppression patterns, regional disparities, adjudicator bias
+   - Investigate reporting barriers, regional disparities, and adjudicator consistency
    - Public report with recommendations
 
 ---
@@ -581,7 +591,7 @@ This analysis has been shared with Thunder Bay & District Injured Workers Suppor
    - Interview OHIP doctors treating workplace injuries as "personal health"
    - Follow workers from WSIB denial → ODSP poverty → homelessness
 
-4. **"Northern Ontario's Suppression Crisis: Why Distance = Denial"**
+4. **"Northern Ontario Access Gaps: Distance and Representation Constraints"**
    - Regional disparity: 40-50% suppression in North vs. 20-30% in Toronto
    - Focus on Thunder Bay, Sudbury, Timmins, Kenora
    - Interview local injury worker groups, legal clinics
@@ -593,7 +603,7 @@ This analysis has been shared with Thunder Bay & District Injured Workers Suppor
 
 ---
 
-### If You're a Researcher:
+### Research Community Priorities:
 
 **Studies Needed:**
 
@@ -615,7 +625,7 @@ This analysis has been shared with Thunder Bay & District Injured Workers Suppor
 4. **Regional Disparity Study**
    - Compare tribunal outcomes across Ontario regions
    - Control for injury type, representation, case complexity
-   - Identify systematic geographic bias patterns
+   - Identify statistically significant geographic outcome differences
 
 5. **Adjudicator Consistency Analysis**
    - Analyze all 11,430 decisions by adjudicator name
@@ -625,15 +635,15 @@ This analysis has been shared with Thunder Bay & District Injured Workers Suppor
 
 ---
 
-## Bottom Line: Suppression Scale + Evidence Quality
+## Bottom Line: Scale Estimates and Evidence Quality
 
 **WHAT WE CAN PROVE DIRECTLY (from our 11,430-case analysis):**
-✅ 91.8% of tribunal cases (10,491) have NO outcome metadata in CanLII
+✅ In CanLII keyword/API data, 91.8% of tribunal cases (10,491) do not include explicit outcome-labeled keywords
 ✅ Only 1,905 tribunal decisions/year average (2020-2026)
 ✅ Reconsideration adds 1.5-2.0 years of delay (505 cases measured)
 ✅ "Pre-existing" denial tactic in 13.3% (95% CI: 12.7-13.9%) of cases (1,522)
 
-**WHAT WE EXTRAPOLATE (from peer-reviewed research):**
+**WHAT WE ESTIMATE (from peer-reviewed research):**
 📊 **Institute for Work & Health (IWH) Research:**
    - 15-50% of eligible workplace injuries NOT reported to workers' comp (Canada-wide)
    - Source: [IWH Plain Language Summary](https://www.iwh.on.ca/plain-language-summaries/suppression-of-workplace-injury-and-illness-claims-summary-of-evidence-in-canada)
@@ -661,7 +671,7 @@ Why not use high end? To maintain credibility—we use IWH's documented range (1
 - **Higher tribunal rates:** Maybe more than 1,905/year reach tribunal (but our CanLII data shows this is 95%+ of cases)
 - **Acceptable suppression:** Maybe some injuries SHOULD be suppressed (minor, healed quickly, worker choice not to claim)
 
-**OUR ASSESSMENT:** Even the CONSERVATIVE estimate (1.14M suppressed) represents a humanitarian crisis. Whether it's 1 million or 3 million, the scale is devastating.
+**ASSESSMENT:** Even conservative estimates suggest a large gap between estimated injuries and tribunal-level adjudication.
 
 **STATISTICAL CONFIDENCE:**
 - IWH research: Peer-reviewed, multiple studies, Canada-specific ✅
@@ -681,10 +691,10 @@ Why not use high end? To maintain credibility—we use IWH's documented range (1
 
 ## How This Transparency Research Feeds the 3mpwr Flywheels
 
-**The 91.8% missing outcome data EXPOSES the problem AND DRIVES our solution:**
+**The 91.8% missing outcome data defines a measurable problem and informs the proposed solution:**
 
 ### 🔄 Flywheel 1: Community-Powered Transparency Database
-**WSIB won't publish outcomes? WE WILL.**
+**Where official outcome publication is incomplete, community aggregation can help fill gaps.**
 
 **What we're building:**
 - Worker-submitted outcome tracking (via 3mpwrApp Evidence Locker)
@@ -694,7 +704,7 @@ Why not use high end? To maintain credibility—we use IWH's documented range (1
 **How YOUR data helps:**
 1. You upload tribunal decision → We extract outcome, injury type, keywords
 2. Database grows → Patterns emerge → Statistics get stronger
-3. Next worker searches "back injury pre-existing" → Sees REAL win rate (not WSIB's black box)
+3. Next worker searches "back injury pre-existing" → Sees observed community-reported outcome rates
 
 **Example:** If 500 workers submit back injury outcomes, we can calculate:
 - Allow rate: 22%
@@ -702,7 +712,7 @@ Why not use high end? To maintain credibility—we use IWH's documented range (1
 - Varied rate: 35%
 - Settled rate: 25%
 
-WSIB hides this. WE PUBLISH IT.
+This can supplement official reporting and improve public visibility.
 
 ### 🔄 Flywheel 2: Suppression Evidence → Legal Action Toolkit
 **This suppression analysis POWERS:**
@@ -711,38 +721,38 @@ WSIB hides this. WE PUBLISH IT.
 - [MPP Briefing Packages](/advocacy/mpp-briefings/) (legislative pressure with statistical evidence)
 
 **How it helps YOU:**
-- **Individual appeals:** Cite suppression research ("My case disappeared into 91.8% missing data black hole")
+- **Individual appeals:** Cite transparency-gap research and measured metadata limitations
 - **Collective action:** Join class action coordination (strength in numbers)
-- **Political advocacy:** Email MPP with evidence package ("2.24 million suppressed injuries = crisis")
+- **Political advocacy:** Email MPP with evidence package ("2.24 million estimated injuries not reaching tribunal-level adjudication")
 
 **Example template excerpt:**
-> "Statistical analysis of 11,430 tribunal decisions reveals 91.8% lack outcome metadata. This systematic obscurity enables estimated suppression of 1.14-2.29 million workplace injuries (2020-2026, peer-reviewed IWH research extrapolated to Ontario). This represents systemic transparency gap requiring policy reform."
+> "Statistical analysis of 11,430 tribunal decisions shows that in CanLII keyword/API data, 91.8% do not include explicit outcome-labeled keywords. Published research-based extrapolation suggests 1.14-2.29 million workplace injuries may not reach tribunal-level adjudication (2020-2026). This indicates a data-visibility gap that may warrant policy reform."
 
 ### 🔄 Flywheel 3: Transparency Gap → Community Intelligence
 **EVERY missing outcome is an opportunity for WORKERS to fill the gap:**
 
-**Before (WSIB black box):**
+**Before (limited public outcome metadata):**
 - Worker: "Do chronic pain claims ever win?"
-- Answer: Unknown (91.8% missing)
+- Answer: Unknown from keyword metadata alone (most records do not have explicit outcome-labeled keywords)
 
 **After (3mpwr transparency database with 500 chronic pain outcomes):**
 - Worker: "Do chronic pain claims ever win?"
-- Answer: "Yes, 18% allowed, 42% varied. Success factors: independent medical expert (73% correlation), functional capacity evaluation (68%), documented treatment attempts (61%). Use [Chronic Pain Appeal Template](/templates/chronic-pain-appeal/)."
+- Answer: "Observed rates can be estimated from submitted outcomes and documented case features."
 
 **The Transparency Flywheel:**
 ```
-WSIB Hides Outcomes → Workers Experience Black Box → 
+Outcome Metadata Incomplete → Workers Have Limited Visibility → 
 3mpwr Builds Transparency Database → Workers Submit Outcomes → 
 Real Win Rates Published → More Workers Win (better strategies) → 
 More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 ```
 
-**YOUR SUPPRESSED CLAIM MATTERS:**
-- **Never filed claim?** You're part of 1.14-2.29M suppressed → Share your story (anonymously) → We document suppression patterns
+**Your case data can improve public visibility:**
+- **Never filed claim?** Your experience can help document barriers to reporting and appeals
 - **Claim denied?** Upload decision → We track denial tactics → Improve appeal templates
 - **Won appeal?** Upload decision → We extract winning arguments → Next worker uses your strategy
 
-**Every outcome you share BREAKS WSIB's black box.**
+**Every shared outcome improves public transparency.**
 
 **🔗 Fight back:** Upload your tribunal decision to 3mpwrApp Evidence Locker → We analyze outcome → You get personalized next steps + your data helps community
 
@@ -767,7 +777,7 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 ## Related Reading
 
 **Previous 3mpwrApp Research:**
-- [WSIB Exposed: Statistical Pattern Analysis](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - 8 smoking guns from 11,430 cases
+- [WSIB Statistical Pattern Analysis](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Pattern findings from 11,430 cases
 - [The Hidden Language of Denial: WSIB Keyword Decoder](https://3mpwrapp.pages.dev/blog/2026/04/22/hidden-language-of-denial-wsib-keyword-decoder/) - Decode your denial letter
 - [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - How we built this database
 - [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
@@ -815,13 +825,13 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 
 ## 🎯 What This Means for Workers: Fighting Outcome Obscurity
 
-**This research exposes the transparency gap—here's how to use it to strengthen your position:**
+**This research highlights the transparency gap—here's how to use it to strengthen your position:**
 
 ### 📌 What to Watch For
 
 1. **Your decision missing from CanLII after 6+ months**
-   - ➡️ **Data shows:** 91.8% of decisions have no outcome metadata (10,491 of 11,430 decisions)
-   - ➡️ **Pattern identified:** Decisions with unfavorable outcomes may be less likely to appear publicly
+   - ➡️ **Data shows:** In CanLII keyword/API data, 91.8% of decisions have no explicit outcome-labeled keyword (10,491 of 11,430 decisions)
+   - ➡️ **Pattern identified:** Metadata-only analysis cannot determine complete outcome rates
    - ➡️ **Your action:** Request your decision be published to CanLII (FOI request)  - ➡️ **Why it matters:** Creates public record, prevents suppression
 
 2. **Employer cost-relief application after claim filed**
@@ -842,7 +852,7 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
    - ✅ **Document suppression attempts:** Save emails, texts, witness statements
    - ✅ **File reprisal complaint:** WSIB Compliance (1-800-387-0750) + Ontario Labour Relations Board
    - ✅ **Cite legal protections:** WSIA s.42 mandates no reprisal for filing claims
-   - **Why crucial:** Each documented suppression attempt strengthens reprisal case + exposes employer tactics
+   - **Why crucial:** Each documented incident can strengthen a reprisal case and improve evidentiary clarity
 
 2. **Request transparency through FOI**
    - ✅ **Submit Freedom of Information request:** Your decision text + outcome classification
@@ -853,7 +863,7 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 3. **Contribute to collective outcome database (help fill 91.8% gap)**
    - ✅ **Share your outcome anonymously:** Injury type, won/lost, timeline, key denial reasoning
    - ✅ **Help fill transparency crisis:** Community data aggregation builds real outcome statistics
-   - ✅ **Benefit future workers:** They see real rates, not WSIB's PR claims
+   - ✅ **Benefit future workers:** They see community-reported rates alongside official sources
    - **Contact:** empowrapp08162025@gmail.com (fully anonymous contribution accepted)
 
 ### ⚠️ Red Flags of Active Claim Suppression
@@ -861,19 +871,19 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 **If you experience these, document immediately and file complaint:**
 
 1. **❌ Employer says "Don't file WSIB, we'll cover it privately"**
-   - **The trap:** Medical bills accumulate, employer stops paying, claim deadline passes (6 months)
+   - **Risk:** Medical bills accumulate, employer support may stop, and claim deadlines can pass (often 6 months)
    - **Data shows:** Common suppression tactic documented in BC megaprojects investigation
    - **Your protection:** File claim IMMEDIATELY with WSIB even if employer promises payment
    - **Legal basis:** WSIA requires employer report within 3 days—refusal violates law
 
 2. **❌ "Fill out accident report but we won't submit to WSIB"**
-   - **The trap:** Employer creates internal record, never files with WSIB
+   - **Risk:** Employer creates an internal record but does not submit a WSIB filing
    - **Pattern:** Worker assumes claim filed, discovers months later no WSIB record exists
    - **Your action:** Call WSIB directly (1-800-387-0750), file worker report (Form 6) yourself
    - **Document:** Get written confirmation WSIB received your claim (claim number assigned)
 
 3. **❌ Employer pressures you to sign "return to work" before medically cleared**
-   - **The trap:** Accommodation is fabrication, you're terminated for "poor performance"
+   - **Risk:** Accommodation may not be sustained and performance-based termination may be asserted
    - **Data shows:** "Termination" keyword appears in 206 decisions (retaliation pattern)
    - **Your protection:** Get medical clearance in writing BEFORE returning (from treating physician, not employer's doctor)
    - **If terminated:** File reprisal complaint (WSIB) + wrongful dismissal claim (Employment Standards or lawyer)
@@ -885,7 +895,7 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
    - **Your response:** "I respect your business, but I have legal right to file. WSIB is insurance you pay into."
 
 5. **❌ Employer offers cash settlement to "avoid WSIB paperwork hassle"**
-   - **The trap:** Settlement amount far less than lifetime benefit entitlement (LOE, NEL, healthcare)
+   - **Risk:** Settlement amount may be lower than potential long-term benefit entitlement (LOE, NEL, healthcare)
    - **Legal issue:** Violates WSIA—worker cannot legally sign away WSIB rights
    - **Pattern:** Construction, restaurant, trucking industries (high cash transactions)
    - **If offered:** DECLINE, file claim immediately, report to WSIB Compliance (potential fraud)
@@ -922,7 +932,7 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
    - Pattern shows focus on preventing claims from being filed (distinct from preventing injuries)
    - Outcome obscurity limits ability to verify whether premium reductions reflect safety improvements or claim suppression
 
-**Bottom line:** This isn't administrative oversight—it's transparency crisis that prevents oversight of massive public system affecting millions of Ontario workers.
+**Bottom line:** This is a transparency gap that limits oversight of a major public system affecting many Ontario workers.
 
 ---
 
@@ -960,10 +970,10 @@ More Outcomes Shared → Database Grows Stronger → (CYCLE ACCELERATES)
 
 **Special Thanks:**
 
-Thunder Bay & District Injured Workers Support Group for documenting suppression patterns through lived experience. Institute for Work & Health for rigorous Canadian research on claim suppression. Every worker who shared their silenced story—you make this work possible.
+Thunder Bay & District Injured Workers Support Group for documenting lived-experience reporting barriers. Institute for Work & Health for rigorous Canadian research on claim under-reporting and non-claiming. Every worker who shared their experience contributed to this analysis.
 
 ---
 
-*This analysis required months of data collection, statistical modeling, and research synthesis. We're publishing it because 2 million silenced workers deserve to know the truth. If you find errors, tell us. If you know suppressed workers, share their stories. This is community-driven transparency.*
+*This analysis required months of data collection, statistical modeling, and research synthesis. If you find errors, send corrections. If you have relevant case experiences, you can share them anonymously. This is community-driven transparency work.*
 
-**#SilencedNoMore #WSIBTransparency #2MillionWorkers #OutcomeObscurity #ClaimSuppression**
+**#WSIBTransparency #OutcomeObscurity #WorkersRights #DataTransparency**

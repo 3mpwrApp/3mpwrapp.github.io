@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "How One Beta Tester Helped Expose Claim Suppression Across Canada"
+title: "How One Beta Tester Helped Surface Claim Reporting Barriers Across Canada"
 date: 2026-04-17
 categories: [research, community, transparency]
 featured: true
-excerpt: "When a BC beta tester shared six legal cases and an investigation report, we didn't just file them away. We built 34,000+ words of resources that connect BC's 'second-tier systems' to Ontario's patterns. This is how community-driven research works."
+excerpt: "When a BC beta tester shared six legal cases and an investigation report, we converted that input into 34,000+ words of resources connecting BC's 'second-tier systems' to Ontario pattern analysis."
 author: 3mpwrApp
 ---
 
@@ -117,7 +117,7 @@ A BC labour arbitrator held that employers **cannot** require employees to submi
 
 **The tactic:** Employer tells worker "You must authorize Dr. [IME] to receive your full medical history directly from your family doctor."
 
-**The violation:** This bypasses employer accountability. What if the IME shares your records with insurance companies? What if they're leaked? The employer washes their hands: "We never had the records."
+**The concern:** This can weaken employer accountability pathways. If IME records are shared or exposed, governance and consent controls become critical.
 
 **The defense:** Cite *Rehn*. "I will provide medical information to my employer, who may then share it with third parties as appropriate. I will not authorize direct third-party access, per *Rehn Enterprises* (2018 CanLII 116968)."
 
@@ -242,7 +242,7 @@ So we built tools.
 **What it documents:**
 - BC WorkSafeBC investigation (Site C, LNG Canada, Coastal GasLink, International SOS)
 - How second-tier systems work (6-step process)
-- Ontario's black box (3 layers of invisibility: unreported injuries, denied claims, 91.8% no outcomes)
+- Ontario transparency gap (3 layers of visibility limits: unreported injuries, denied claims, 91.8% no outcomes)
 - **5 statistical findings from 11,430 WSIAT cases (keyword-based analysis):**
   1. Post-claim terminations documented: 71 cases (0.62%, conservative estimate)
   2. Mental stress keywords: 723 cases (6.33%)
@@ -309,7 +309,7 @@ Our beta tester asked: *"Does Ontario show the same patterns BC documented?"*
 
 ### **Pattern #2: "Second-Tier Systems" (Alternative Medical Providers)**
 
-**BC:** International SOS provided on-site medical care, bypassing WorkSafeBC.
+**BC:** International SOS provided on-site medical care through pathways outside normal WorkSafeBC intake.
 
 **Ontario:** 10.9% of tribunal decisions (1,247 cases) mention third-party medical assessments. Workers report employer-hired doctors, "independent" medical exams that aren't independent, and pressure to see specific providers.
 
@@ -411,7 +411,7 @@ If you're willing, we'd love to:
 
 **Your contributions matter.** Whether it's finding a typo, suggesting a better explanation, sharing a legal case, or connecting us with a community organization—**every piece of knowledge you share becomes a resource someone else will use.**
 
-**That's how we beat the black box.** One contribution at a time.
+**That's how we improve transparency.** One contribution at a time.
 
 ---
 

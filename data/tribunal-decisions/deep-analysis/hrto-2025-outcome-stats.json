@@ -1,0 +1,149 @@
+{
+  "dataset": "HRTO 2025 (All Cases)",
+  "total_cases": 2686,
+  "with_outcomes": 1774,
+  "by_outcome": {
+    "abandoned": 1154,
+    "settled": 14,
+    "dismissed": 321,
+    "reconsideration": 223,
+    "allowed": 12,
+    "deferred": 46,
+    "jurisdiction_declined": 4
+  },
+  "by_category": {
+    "procedural": 1423,
+    "negotiated": 14,
+    "respondent_victory": 325,
+    "applicant_victory": 12
+  },
+  "by_confidence": {
+    "high (80-100%)": 478,
+    "medium (50-79%)": 447,
+    "low (1-49%)": 849,
+    "none (0%)": 912
+  },
+  "average_confidence": 57,
+  "sample_matches": [
+    {
+      "case_id": "2025hrto2687",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "email — abandoned — undeliverable — highlighted — deadline"
+    },
+    {
+      "case_id": "2025hrto2686",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "email — abandoned — undeliverable — highlighted — deadline"
+    },
+    {
+      "case_id": "2025hrto2685",
+      "outcome": "settled",
+      "confidence": 33,
+      "sample_text": "mediation — binding settlement exists — email correspondence — criterial — abuse"
+    },
+    {
+      "case_id": "2025hrto2684",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "email — undeliverable — deadline — abandoned — deferral"
+    },
+    {
+      "case_id": "2025hrto2681",
+      "outcome": "abandoned",
+      "confidence": 33,
+      "sample_text": "sent — abandoned — reschedule the mediation — deadline — correspondence"
+    },
+    {
+      "case_id": "2025hrto2679",
+      "outcome": "dismissed",
+      "confidence": 23,
+      "sample_text": "Limitation periods — Human Rights Code, s. 34 — Statutory limitation — Whether the Application was filed more than one year after the last incident — One act with continuing effects not a continuing contravention (Visic) — Mandatory time bar unless s. 34(2) met (Miller) — Tribunal lacks jurisdiction"
+    },
+    {
+      "case_id": "2025hrto2677",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "email — abandoned — undeliverable — deadline — mediation"
+    },
+    {
+      "case_id": "2025hrto2676",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "email — undeliverable — communicated — abandoned — address"
+    },
+    {
+      "case_id": "2025hrto2675",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "email — mediation — undeliverable — deadline — abandoned"
+    },
+    {
+      "case_id": "2025hrto2674",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "email — mediation — undeliverable — deadline — abandoned"
+    },
+    {
+      "case_id": "2025hrto2673",
+      "outcome": "abandoned",
+      "confidence": 67,
+      "sample_text": "email — narrative — undeliverable — origin — discrimination"
+    },
+    {
+      "case_id": "2025hrto2672",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "Procedure — Abandonment — Whether the Application is abandoned for failure to respond — Delivery of Response and Notice of Request to Defer issued — Tribunal directed Reply and submissions by a deadline — No further correspondence received — Failure to provide required submissions as directed — Find"
+    },
+    {
+      "case_id": "2025hrto2671",
+      "outcome": "reconsideration",
+      "confidence": 23,
+      "sample_text": "reconsideration — adjudicators — bias — table — statistical"
+    },
+    {
+      "case_id": "2025hrto2670",
+      "outcome": "reconsideration",
+      "confidence": 23,
+      "sample_text": "disability — jurisdictional stage — reconsideration — anxiety — link"
+    },
+    {
+      "case_id": "2025hrto2669",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "email — undeliverable — deadline — abandoned — correspondence"
+    },
+    {
+      "case_id": "2025hrto2668",
+      "outcome": "dismissed",
+      "confidence": 33,
+      "sample_text": "Rights and freedoms — Human rights — Services — Whether the narrative provides a factual basis linking the respondents’ conduct to Code grounds — General allegations of unfairness unrelated to the Code outside jurisdiction — Misidentification as Middle Eastern not shown to factor in decisions — Huma"
+    },
+    {
+      "case_id": "2025hrto2663",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "Procedure — Tribunal case management — Abandonment — Whether the applicant is deemed to have abandoned the Application — Failure to provide required written submissions by specified dates — Case Assessment Direction warned of dismissal without further notice — Time for doing so has passed — Applican"
+    },
+    {
+      "case_id": "2025hrto2661",
+      "outcome": "reconsideration",
+      "confidence": 23,
+      "sample_text": "reconsideration — limitation period — accommodation — good faith — discrimination"
+    },
+    {
+      "case_id": "2025hrto2658",
+      "outcome": "reconsideration",
+      "confidence": 23,
+      "sample_text": "reconsideration — sexual harassment — finality — sexual solicitation — remarks"
+    },
+    {
+      "case_id": "2025hrto2655",
+      "outcome": "dismissed",
+      "confidence": 33,
+      "sample_text": "Administrative law — Tribunal jurisdiction — Human rights application — Whether bald assertion of discrimination engages the Code — Need for facts linking adverse treatment to a prohibited ground — General allegations of unfairness outside jurisdiction — Authorities cited, Groblicki v. Watts Water, "
+    }
+  ]
+}

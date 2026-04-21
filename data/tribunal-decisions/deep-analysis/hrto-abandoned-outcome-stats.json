@@ -1,0 +1,140 @@
+{
+  "dataset": "HRTO Abandoned (Top 500)",
+  "total_cases": 500,
+  "with_outcomes": 500,
+  "by_outcome": {
+    "abandoned": 500
+  },
+  "by_category": {
+    "procedural": 500
+  },
+  "by_confidence": {
+    "high (80-100%)": 230,
+    "medium (50-79%)": 159,
+    "low (1-49%)": 111,
+    "none (0%)": 0
+  },
+  "average_confidence": 74,
+  "sample_matches": [
+    {
+      "case_id": "2026hrto550",
+      "outcome": "abandoned",
+      "confidence": 23,
+      "sample_text": "Procedure — Reconsideration — Abandonment dismissal — Human Rights Code, s. 45.7, Rules of Procedure, Rule 26.5(d) — Should reconsideration be granted where a missed email led to non-response? — Contextual analysis of abandonment applied, citing Ramirez v. Rockwell Automation Canada Ltd. — No intent"
+    },
+    {
+      "case_id": "2026hrto508",
+      "outcome": "abandoned",
+      "confidence": 67,
+      "sample_text": "Administrative law — Reconsideration — Extension of time — Does Rule 26.5.1 permit accepting a late Form 20? — Good faith and no substantial prejudice test applied — Discretion under Rule 1.7(a) to lengthen time — Reference to Pereira v. Hamilton Police Services Board, 2022 ONSC 4150 — Delay incurre"
+    },
+    {
+      "case_id": "2026hrto454",
+      "outcome": "abandoned",
+      "confidence": 23,
+      "sample_text": "abandoned — email — updating — reconsideration — mediation"
+    },
+    {
+      "case_id": "2026hrto443",
+      "outcome": "abandoned",
+      "confidence": 33,
+      "sample_text": "abandoned — outweigh the public interest — finality — reactivation — response"
+    },
+    {
+      "case_id": "2026hrto442",
+      "outcome": "abandoned",
+      "confidence": 33,
+      "sample_text": "representative — correspondences — email — abandoned — mailed"
+    },
+    {
+      "case_id": "2026hrto430",
+      "outcome": "abandoned",
+      "confidence": 67,
+      "sample_text": "reprisal — deadline — abandoned — undeliverable — directed the applicant to file"
+    },
+    {
+      "case_id": "2026hrto428",
+      "outcome": "abandoned",
+      "confidence": 67,
+      "sample_text": "deadline — abandoned — undeliverable — directed the applicant to file — letter"
+    },
+    {
+      "case_id": "2026hrto426",
+      "outcome": "abandoned",
+      "confidence": 23,
+      "sample_text": "deadline — documents — issued — abandoned — reconsideration"
+    },
+    {
+      "case_id": "2026hrto420",
+      "outcome": "abandoned",
+      "confidence": 33,
+      "sample_text": "abandoned — letter — deadline — response — informed"
+    },
+    {
+      "case_id": "2026hrto413",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "abandoned — email address set — undeliverable — letter — received"
+    },
+    {
+      "case_id": "2026hrto405",
+      "outcome": "abandoned",
+      "confidence": 67,
+      "sample_text": "email address — grievances — sent — undeliverable — abandoned"
+    },
+    {
+      "case_id": "2026hrto400",
+      "outcome": "abandoned",
+      "confidence": 23,
+      "sample_text": "reconsideration — reasonably have been obtained earlier — real estate agent — abandoned — facts"
+    },
+    {
+      "case_id": "2026hrto395",
+      "outcome": "abandoned",
+      "confidence": 23,
+      "sample_text": "reconsideration — abandoned — lawyer — email — sins"
+    },
+    {
+      "case_id": "2026hrto392",
+      "outcome": "abandoned",
+      "confidence": 67,
+      "sample_text": "e-mail correspondence — e-mail address — abandoned — undeliverable — deadline"
+    },
+    {
+      "case_id": "2026hrto381",
+      "outcome": "abandoned",
+      "confidence": 67,
+      "sample_text": "deadline — directions — undeliverable — emailed — abandoned"
+    },
+    {
+      "case_id": "2026hrto375",
+      "outcome": "abandoned",
+      "confidence": 33,
+      "sample_text": "deadline — documents — abandoned — email — warned"
+    },
+    {
+      "case_id": "2026hrto374",
+      "outcome": "abandoned",
+      "confidence": 67,
+      "sample_text": "abandoned — undeliverable — endorsement — email — sent"
+    },
+    {
+      "case_id": "2026hrto368",
+      "outcome": "abandoned",
+      "confidence": 100,
+      "sample_text": "returned to the as undeliverable — email to the email address — letter — abandoned — address that the applicant provided"
+    },
+    {
+      "case_id": "2026hrto361",
+      "outcome": "abandoned",
+      "confidence": 33,
+      "sample_text": "attend the mediation — videoconference — voicemail — abandoned — attempts"
+    },
+    {
+      "case_id": "2026hrto350",
+      "outcome": "abandoned",
+      "confidence": 33,
+      "sample_text": "attend the mediation — videoconference — abandoned — mail — attempts"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "analysis_date": "2026-04-19T17:18:36.899Z",
+  "total_cases": 9269,
+  "years_covered": "2020-2026",
+  "key_findings": {
+    "abandonment_rate": "10.27%",
+    "success_rate": "0.43%",
+    "disability_cases": 87,
+    "top_keywords": [
+      "email — undeliverable — abandoned — warned — deadline",
+      "undeliverable — email address — abandoned — warned — communicate",
+      "email — abandoned — undeliverable — deadline — violated",
+      "undeliverable — email address — abandoned — warned — deadline",
+      "undeliverable — respond — abandonment — email — reason",
+      "email — abandoned — undeliverable — highlighted — deadline",
+      "email — abandoned — undeliverable — deadline — jurisdictional",
+      "email — undeliverable — discrimination — abandoned — narrative",
+      "email — undeliverable — deadline — abandoned — correspondence",
+      "reconsideration — finality — issued — extraordinary — compelling"
+    ]
+  },
+  "outcomes": {
+    "Unknown": 7470,
+    "Interim Decision": 12,
+    "Abandoned": 952,
+    "Dismissed - No Violation": 438,
+    "Reconsideration": 310,
+    "Costs Decision": 1,
+    "Withdrawn": 7,
+    "Deferred": 72,
+    "Settled": 5,
+    "Allowed - Violation Found": 1,
+    "No Jurisdiction": 1
+  },
+  "recommendations": [
+    "Extract full text for all cases to identify additional disability cases",
+    "Analyze procedural barriers causing high abandonment rate",
+    "Compare self-represented vs lawyer-represented success rates",
+    "Investigate email service issues (undeliverable notices pattern)",
+    "Study settlements: why only 5 cases settled out of 9269 total?"
+  ]
+}

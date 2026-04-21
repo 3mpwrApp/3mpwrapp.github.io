@@ -1,0 +1,149 @@
+{
+  "total_cases": 2000,
+  "with_outcomes": 651,
+  "by_outcome": {
+    "deferred": 15,
+    "allowed": 411,
+    "dismissed": 202,
+    "varied": 17,
+    "settled": 2,
+    "abandoned": 3,
+    "jurisdiction_declined": 1
+  },
+  "by_category": {
+    "procedural": 18,
+    "worker_victory": 411,
+    "board_victory": 203,
+    "partial_victory": 17,
+    "negotiated": 2
+  },
+  "by_confidence": {
+    "high (80-100%)": 36,
+    "medium (50-79%)": 79,
+    "low (1-49%)": 536,
+    "none (0%)": 1349
+  },
+  "average_confidence": 40,
+  "sample_matches": [
+    {
+      "case_id": "2026onwsiat99",
+      "outcome": "deferred",
+      "confidence": 53,
+      "sample_text": "Procedure — Jurisdiction — WSIA s. 123 — Whether the Tribunal can decide re-employment and LOE issues not finally decided by the Board — Scope of ARO decision examined — Overlap with s. 41 re-employment and employer co-operation identified — Only employer’s co-operation currently within jurisdiction"
+    },
+    {
+      "case_id": "2026onwsiat98",
+      "outcome": "allowed",
+      "confidence": 100,
+      "sample_text": "Workplace health and safety — Loss of earnings — Actual earnings basis — Whether LOE from October 5, 2015 to April 2, 2016 should be based on actual earnings — WSIA, s. 43(3), and Policy No. 18-03-02 applied — Earnings reasonably close to direct-entry SO — Wage loss causally linked to compensable im"
+    },
+    {
+      "case_id": "2026onwsiat97",
+      "outcome": "allowed",
+      "confidence": 67,
+      "sample_text": "Workplace health and safety — Workers’ compensation — Chronic mental stress (CMS) entitlement — Whether the worker has entitlement to benefits for CMS — Application of WSIB Operational Policy Manual, Document No. 15-03-14 — Employer decisions about employment versus workplace harassment or abuse — P"
+    },
+    {
+      "case_id": "2026onwsiat96",
+      "outcome": "allowed",
+      "confidence": 67,
+      "sample_text": "Workplace health and safety — Workers’ compensation — Ongoing entitlement — Whether ongoing entitlement for lumbar strain exists beyond August 2, 2021 — Recognition of permanent impairment and NEL determination sought — WSIA s. 124(2) benefit of the doubt considered — Medical Discussion Paper Low Ba"
+    },
+    {
+      "case_id": "2026onwsiat95",
+      "outcome": "dismissed",
+      "confidence": 67,
+      "sample_text": "Workplace health and safety — Workers’ compensation — Non-economic loss — Chronic Pain Disability — Whether impairment falls within Class 4 marked impairment or Class 3 moderate impairment — Application of WSIB Policy 18-05-11 rating scale — Activities of daily living, social functioning, concentrat"
+    },
+    {
+      "case_id": "2026onwsiat94",
+      "outcome": "allowed",
+      "confidence": 100,
+      "sample_text": "Workplace health and safety — Workers’ compensation — Impairment level — Whether the worker is totally or only partially impaired since May 22, 2018 — Functional abilities evaluation indicating sedentary PDC considered — De Quervain’s tenosynovitis significantly contributing to limitations — Non-com"
+    },
+    {
+      "case_id": "2026onwsiat93",
+      "outcome": "dismissed",
+      "confidence": 33,
+      "sample_text": "Workplace health and safety — Workers’ compensation — Causation — Significant contribution test under WSIA — Whether August 2017 accident significantly contributed to tendonitis, tendinosis and a rotator cuff tear — Pre-existing conditions and aggravation basis assessed using OPM 15-02-03 and 15-02-"
+    },
+    {
+      "case_id": "2026onwsiat92",
+      "outcome": "allowed",
+      "confidence": 100,
+      "sample_text": "Workplace health and safety — Loss of earnings benefits — Temporary work disruptions — Whether the worker is entitled to full LOE benefits from December 23, 2018 to January 6, 2019 — WSIA, s. 43(1) and s. 43(2) applied — Policy 15-06-02 and Policy 18-03-02 considered — Suitable modified duties unava"
+    },
+    {
+      "case_id": "2026onwsiat91",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "Workplace health and safety — Workers’ compensation — Disablement — Initial entitlement under s. 13 WSIA — Did repetitive overhead throwing of cables significantly contribute to right shoulder impingement and tendinopathy? — Significant contribution test applied with WSIB policies 11-01-01 and 15-02"
+    },
+    {
+      "case_id": "2026onwsiat90",
+      "outcome": "allowed",
+      "confidence": 67,
+      "sample_text": "Workplace health and safety — Workers’ compensation — Complex Regional Pain Syndrome — Whether entitlement is in order for CRPS under WSIA s. 13(1) — Diagnosis not confirmed by treating physicians — Objective findings for CRPS not met per medical consultant — Symptomatic reports without confirmed di"
+    },
+    {
+      "case_id": "2026onwsiat89",
+      "outcome": "allowed",
+      "confidence": 23,
+      "sample_text": "Workplace health and safety — Workers’ compensation — Chronic Pain Disability — Policy No. 15-04-03 criteria for CPD — Does the worker meet all five conditions? — Continuous, consistent and genuine pain beyond usual healing time — Marked life disruption with impaired earning capacity — Medical opini"
+    },
+    {
+      "case_id": "2026onwsiat88",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "non-economic loss redetermination — pre-existing degenerative conditions — worker — entitled to a non-economic loss — deterioration"
+    },
+    {
+      "case_id": "2026onwsiat76",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "shoulder — worker — work-related injuries — rib fractures — rotator cuff"
+    },
+    {
+      "case_id": "2026onwsiat75",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "worker — right-hand tremors — work-related injury — pain — psychotraumatic disability"
+    },
+    {
+      "case_id": "2026onwsiat72",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "work — non-compensable factors — employer — restrictions — physical"
+    },
+    {
+      "case_id": "2026onwsiat66",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "worker — work-related post-traumatic stress disorder — work-related injury — passenger — bus"
+    },
+    {
+      "case_id": "2026onwsiat6",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "worker — work-related accident — headaches — work — work-related injury"
+    },
+    {
+      "case_id": "2026onwsiat59",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "lock — typographical error — worker — entitled to full benefits — lock-in date"
+    },
+    {
+      "case_id": "2026onwsiat51",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "entitlement — recognized that the worker — work-related psychological impairment — return to work — additional psychological treatment"
+    },
+    {
+      "case_id": "2026onwsiat5",
+      "outcome": "allowed",
+      "confidence": 33,
+      "sample_text": "worker — non-compensable conditions — benefits — knee impairment — work"
+    }
+  ]
+}

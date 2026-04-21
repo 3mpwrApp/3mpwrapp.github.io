@@ -22,9 +22,9 @@ featured: true
 
 **🔍 "Impairment" + "non-economic loss" co-occur 3.4x more than random** - template-based denials
 
-**🦵 Knee injuries: 20% flagged "pre-existing"** vs. 13.3% baseline - systematic targeting
+**🦵 Knee injuries: 20% flagged "pre-existing"** vs. 13.3% baseline - elevated relative to baseline
 
-**🧠 "Psychotraumatic disability" in 6.62% of cases** - but appears with "objective medical evidence" (showing bias against mental health claims)
+**🧠 "Psychotraumatic disability" in 6.62% of cases** - often appears with "objective medical evidence" language in decisions
 
 **💡 What This Means:** Knowing these patterns helps you prepare counter-arguments BEFORE your hearing
 
@@ -70,7 +70,7 @@ After analyzing every word in 11,430 tribunal decisions from 2020-2026, we've id
 - **Suggests (interpretation):** May indicate template-based decision-making or widespread training practices
 - **Cannot prove:** Deliberate coordination between decision-makers (would require internal communications)
 
-**Read the full investigative report:** [WSIB Exposed: Statistical Pattern Analysis](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
+**Read the full investigative report:** [WSIB Statistical Pattern Analysis (2026-04-15)](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
 
 ---
 
@@ -150,7 +150,7 @@ These keywords appear in complex cases—understanding them helps you fight back
 
 ---
 
-### 🔵 MENTAL HEALTH KEYWORDS (The 5x Undercount Crisis)
+### 🔵 MENTAL HEALTH KEYWORDS (Potential 5x Undercount)
 
 | Keyword | Cases | % (95% CI) | The Problem |
 |---------|-------|------------|------------|
@@ -160,7 +160,7 @@ These keywords appear in complex cases—understanding them helps you fight back
 | **anxiety** | *[not separately tracked]* | <0.5% | Rarely mentioned—WSIB rejects as "pre-existing mental health" |
 | **depression** | *[not separately tracked]* | <0.5% | Systematically blamed on personal life, not workplace harassment/trauma |
 
-**🚨 THE MENTAL HEALTH TRAP:**
+**🚨 MENTAL HEALTH CLAIM LANGUAGE CHALLENGE:**
 
 **If you file claiming:** "Work stress causing depression/anxiety/PTSD"  
 **WSIB denies because:** "We don't cover 'stress'—only 'psychotraumatic disability' from traumatic events"
@@ -227,7 +227,7 @@ When "pre-existing" appears with body parts, "greater severity" threshold from *
 **How to Fight Back:**
 1. **Document functional baseline:** Prove you worked full-time in physically demanding job BEFORE injury → counters "pre-existing disability" argument
 2. **Cite *Kriz* case properly:** Legal test is "did workplace CONTRIBUTE to disability?" (not "was it sole cause?")
-3. **Challenge "cost relief" applications:** Demand employer prove they had zero control over workplace hazard
+3. **Cost-relief scrutiny benchmark:** Ask for a clear record of employer hazard-control measures and why cost relief was granted
 4. **Get independent medical:** WSIB-selected doctors may write reports minimizing workplace causation (literature shows assessor bias patterns)
 
 ---
@@ -300,11 +300,11 @@ Carpal tunnel from repetitive work motions often questioned as lacking "discrete
 - **Mental health:** PTSD diagnosed 3 months later (nightmares, flashbacks, panic attacks at work)
 - **WSIB decision:** "Physical injuries from assault compensable. Psychotraumatic disability claim denied—anxiety pre-dates workplace incident per medical records."
 - **Translation:** WSIB pays for broken nose, refuses mental health treatment costs. Claims worker had "pre-existing anxiety" (from medical records showing worker saw doctor for stress 2 years prior).
-- **Reality:** **PTSD is distinct from generalized anxiety.** Assault caused new traumatic disorder. WSIB weaponizes ANY mental health history to deny.
+- **Reality:** **PTSD is distinct from generalized anxiety.** Assault can create a new traumatic disorder. Prior mental-health history may be cited during adjudication.
 
 **How to Fight Back:**
 1. **Cite WSIA section 2(1):** "Injury includes disablement arising out of and in the course of employment"—NO accident requirement
-2. **Demand recognition of occupational diseases:** Repetitive strain, hearing loss, mental health injuries ARE covered
+2. **Occupational disease recognition benchmark:** Repetitive strain, hearing loss, and mental health injuries are part of compensable-injury analysis
 3. **Challenge narrow causation:** Even if worker has vulnerabilities, workplace must only CONTRIBUTE (not be sole cause)
 4. **Get independent vocational assessment:** Prove "suitable employment" doesn't exist for your restrictions
 
@@ -337,7 +337,7 @@ Reconsideration appears in 389 cases (3.4%). Average time from injury to tribuna
   - **Month 36:** Tribunal decision (partially allows)
   - **TOTAL: 3 years from injury to benefits**
 - **Translation:** Reconsideration added 1.5 years to worker's fight. During this time: lost home to foreclosure, marriage ended, condition worsened from delayed treatment.
-- **Reality:** **Reconsideration is a trap.** WSIB upholds 95% of initial denials. It's designed to exhaust workers into settling or abandoning claims.
+- **Reality:** **Reconsideration is often low-yield and time-consuming.** WSIB upholds many initial denials, and this step can increase time to resolution.
 
 **Case 8: Cleaner, Age 47, Forced Return to Unsuitable Work**
 - **Injury:** Chronic shoulder pain from repetitive overhead mopping/dusting (rotator cuff tendinitis)
@@ -391,7 +391,7 @@ Lung cancer appears rarely despite documented firefighter/industrial worker carc
 **How to Fight Back:**
 1. **Cite presumptive coverage lists:** Firefighters, industrial workers have documented carcinogen exposures
 2. **Get occupational medicine assessment:** Specialists can attribute disease to workplace even with other risk factors
-3. **Demand reverse onus:** WSIB should prove workplace DIDN'T contribute (instead of you proving it DID)
+3. **Causation fairness benchmark:** The evidentiary burden should not require workers to prove impossibilities when workplace exposure is documented
 4. **Legislative advocacy:** Support bills like Bill 86 (presumptive cancer coverage for industrial workers)
 
 ---
@@ -421,12 +421,12 @@ Use this searchable table to see if your claim denial language matches documente
 | Anxiety from workplace harassment | "Psychotraumatic disability" | ~50 | "Stress not compensable," "Inappropriate claim" | Document specific bullying incidents, hostile work environment |
 | Burnout | **NOT COVERED** | 0 | "Stress from work demands not compensable" | Cannot win this—WSIB requires discrete traumatic event |
 
-### Procedural Traps
+### Procedural Risk Points
 
 | WSIB Tactic | Cases | Average Delay | Success Rate for Worker | What To Do Instead |
 |-------------|-------|--------------|----------------------|------------------|
 | Reconsideration | 389 (3.4%) | +1.5 years | ~5% (WSIB upholds 95% of denials) | **Skip it**—go straight to tribunal |
-| Modified duties offer | ~500 | N/A | ~30% (workers forced into poverty-wage jobs) | Demand comparable wages + accommodation of ALL restrictions |
+| Modified duties offer | ~500 | N/A | ~30% (workers forced into poverty-wage jobs) | Accessibility benchmark: comparable wages + accommodation of all restrictions |
 | "Non-cooperation" threat | ~200 | Benefit termination | ~20% (most workers cave to pressure) | Document EVERY compliance effort, keep records |
 | Delayed medical reports | ~300 | +6-12 months | N/A | Get independent assessment (don't wait for WSIB doctor) |
 
@@ -470,7 +470,7 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 **Pattern 3: "Mental Health + Pre-existing Anxiety"**
 - Keywords: "psychotraumatic disability," "anxiety," "pre-existing mental health"
 - **Example:** PTSD from workplace violence with prior therapy history
-- **Why workers lose:** WSIB weaponizes ANY mental health history to deny new trauma claim
+- **Why workers lose:** Prior mental-health history may be interpreted as limiting causal linkage to new trauma claim
 
 **Pattern 4: "Chronic Pain + Normal Imaging"**
 - Keywords: "chronic pain," "MRI normal," "subjective," "disproportionate"
@@ -524,7 +524,7 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 - [ ] Cite WSIA section 2(1) (no "accident" requirement for coverage)
 - [ ] Get occupational medicine assessment (prove job duties caused gradual injury)
 - [ ] Document workplace exposures/biomechanics (video, job analysis)
-- [ ] Demand recognition of occupational disease (if applicable)
+- [ ] Document whether occupational disease recognition criteria were applied (if applicable)
 
 **For Bureaucratic Maze Denials:**
 - [ ] **SKIP RECONSIDERATION** (file tribunal appeal immediately)
@@ -536,7 +536,7 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 - [ ] Get occupational medicine expert (attribute disease to workplace)
 - [ ] Document lifetime workplace exposures (chemicals, noise, carcinogens)
 - [ ] Cite presumptive coverage lists (if applicable—firefighters, industrial workers)
-- [ ] Demand reverse onus (WSIB proves workplace DIDN'T contribute)
+- [ ] Document burden-of-proof barriers when workplace exposure is established
 
 ### Step 3: File Your Appeal (Tribunal, not Reconsideration)
 
@@ -564,12 +564,12 @@ We analyzed 100 tribunal decisions with clear outcomes to see which keyword comb
 > "Statistical analysis of 11,430 WSIAT decisions (2020-2026) reveals systematic patterns of denial for [your injury type]. Specifically:
 > - Pre-existing denials occur in [X]% of [body part] cases
 > - WSIB systematically applies 'greater severity than normal' threshold from *Kriz* case as blanket denial tactic
-> - Co-occurrence analysis proves coordination between denial language patterns
-> - This is measurable, documented, systematic bias—not individual case assessment
+> - Co-occurrence analysis shows repeated denial-language pattern clustering
+> - This is measurable and documented pattern concentration in keyword usage
 >
 > Full analysis: [WSIB System Analysis Complete 2020-2026](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io/blob/main/docs/WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)"
 
-**Tribunals LOVE data.** You're not claiming bias—you're PROVING patterns with statistical evidence.
+**Tribunals value data.** Statistical evidence can support pattern-based arguments.
 
 ---
 
@@ -662,7 +662,7 @@ Given financial incentives (employer premiums tied to claims costs), historical 
    - ➡️ **Data shows:** Average 1.5-year delay (vs. 0.5 years for direct WSIAT appeal)
    - ➡️ **Watch for:** WSIB suggesting you file reconsideration "first"
    - ➡️ **Pattern identified:** Internal appeals upheld in ~95% of cases without outcome change
-   - ➡️ **Your strategic choice:** Consider direct WSIAT appeal to avoid delay trap (consult Community Legal Clinic)
+   - ➡️ **Your strategic choice:** Consider direct WSIAT appeal to reduce potential delay (consult Community Legal Clinic)
 
 5. **Body part keywords appear with "pre-existing"**
    - **Knee** (7.39% of cases): 20% flagged pre-existing vs. 13.3% baseline
@@ -706,28 +706,28 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 **These patterns suggest adjudicator used template, not individualized review:**
 
 1. **❌ "Pre-existing" cited despite no prior symptoms**
-   - **The trap:** Any prior imaging (e.g., X-ray showing "mild arthritis") cited even if asymptomatic
+   - **Risk point:** Prior imaging (e.g., X-ray showing "mild arthritis") may be cited even if previously asymptomatic
    - **The pattern:** 1,522 cases cite pre-existing (13.31%)—knee 20%, back 19%, shoulder 16%
    - **Your counter:** Medical opinion: "Prior condition asymptomatic. Workplace injury caused NEW disability."
 
 2. **❌ "Impairment" rated at low % despite severe functional limits**
-   - **The trap:** "5% whole person impairment" assigned despite inability to work
+   - **Risk point:** "5% whole person impairment" may be assigned despite substantial functional limits
    - **The pattern:** Co-occurs with "non-economic loss" 3.4x more than random (template calculation)
    - **Your counter:** Functional Capacity Evaluation showing actual work restrictions
 
 3. **❌ "Psychotraumatic disability" denied due to terminology mismatch**
-   - **The trap:** Worker says "stress from harassment," WSIB expects "psychotraumatic disability from workplace stressor"
+   - **Risk point:** Worker language may not match WSIB terminology expectations (e.g., "psychotraumatic disability")
    - **The pattern:** Appears in 6.62% of cases (757 decisions)
    - **Your counter:** Get psychiatrist to re-word report using exact WSIB terminology
 
 4. **❌ "Objective medical evidence" required for pain/mental health**
-   - **The trap:** WSIB demands imaging/lab tests for conditions that don't show on tests
+   - **Risk point:** Objective testing expectations may not align with conditions that are primarily clinical
    - **The pattern:** Chronic pain + mental health claims systematically dismissed as "subjective"
    - **Reality:** Chronic pain is neurological (nerve sensitization)—MRI won't show it
    - **Your counter:** Pain specialist explaining nerve sensitization + functional impact
 
 5. **❌ "Greater severity than normal" phrase appears**
-   - **The trap:** Legal test from *Kriz* case misapplied to deny any claim with prior medical history
+   - **Risk point:** Legal test from *Kriz* may be applied broadly when prior medical history is present
    - **The pattern:** Appears in 177 "pre-existing" denials (co-occurrence lift: 7.47x)
    - **Your counter:** Show workplace injury caused disability BEYOND what pre-existing would have
 
@@ -783,7 +783,7 @@ Given financial incentives (employer premiums tied to claims costs), historical 
 ## Related Reading
 
 **Previous 3mpwrApp Research:**
-- [WSIB Exposed: Statistical Pattern Analysis](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Full investigative report with 8 smoking guns
+- [WSIB Statistical Pattern Analysis](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/) - Full report with key statistical signals
 - [Research Hub: Guides, Templates & Analysis](https://3mpwrapp.pages.dev/research/) - Knowledge base, appeal templates, and comprehensive guides from 11,430 cases
 - [Building Canada's Legal Database from Cold Start](https://3mpwrapp.pages.dev/blog/2026/04/05/building-canadas-legal-database-from-cold-start/) - Our data collection methodology
 
@@ -814,6 +814,6 @@ Thunder Bay & District Injured Workers Support Group for verifying denial patter
 
 ---
 
-*This analysis is based on publicly available tribunal decisions. We encourage workers to use this research in appeals, lawyers to cite it in legal briefs, and legislators to demand accountability. The data belongs to everyone.*
+*This analysis is based on publicly available tribunal decisions. We encourage communities, workers, and advocates to use this research for accessibility-focused accountability grounded in human rights and rule-of-law principles. The data belongs to everyone.*
 
 **#DecodeTheDenial #WSIBKeywords #WorkerEmpowerment #StackThoseReceipts**
