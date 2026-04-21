@@ -1,9 +1,119 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-16T23:24:09.270Z",
-  "totalEntries": 926,
-  "recentEntries": 28,
+  "lastUpdated": "2026-04-16T23:25:04.219Z",
+  "totalEntries": 952,
+  "recentEntries": 54,
   "entries": [
+    {
+      "id": "wn-2026-04-16-710c33",
+      "title": "✨ Add dark mode and high contrast support to research page.",
+      "summary": "Add dark mode and high contrast support to research page.",
+      "date": "2026-04-16T19:36:03.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "710c33fb5a4812dc1de26edfff7bec890299298d",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-f0f946",
+      "title": "✨ Add plain-language statistical glossaries to all blogs and research page.",
+      "summary": "Add plain-language statistical glossaries to all blogs and research page.",
+      "date": "2026-04-16T18:27:14.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "f0f9462d7eecea6ea0fb4ea5dc984b1b39c96bf3",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-9c82fa",
+      "title": "✨ Add 95% confidence intervals to all blogs, research page, and knowledge base - c...",
+      "summary": "Add 95% confidence intervals to all blogs, research page, and knowledge base - complete statistical rigor across entire website.",
+      "date": "2026-04-16T18:19:14.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "9c82fa7e45d4d7c791ac5ead74f8291f612300cc",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-739b7b",
+      "title": "✨ Add comprehensive research validation suite - statistical rigor, sensitivity ana...",
+      "summary": "Add comprehensive research validation suite - statistical rigor, sensitivity analysis, comparative framework, audit checklist.",
+      "date": "2026-04-16T17:59:57.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "739b7b4162e7db01862eb1232c56c61e19f530c5",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-5f63b3",
+      "title": "✨ Add Research to navigation + consolidate all CanLII knowledge base into research...",
+      "summary": "Add Research to navigation + consolidate all CanLII knowledge base into research page.",
+      "date": "2026-04-16T17:09:21.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "5f63b3c042c6fd3b39a41b1be55a446d060f1a29",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-9a08e7",
+      "title": "⚡ Update trending keywords - 2026-04-16 14:05 UTC.",
+      "summary": "Update trending keywords - 2026-04-16 14:05 UTC.",
+      "date": "2026-04-16T14:05:53.000Z",
+      "category": "improvement",
+      "repo": "site",
+      "commitSha": "9a08e76064f1db4c0b9c6e141e6fc6cf8bded6ab",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-6c4165",
+      "title": "🐛 Remove permalink from research.md to fix navigation display.",
+      "summary": "Remove permalink from research.md to fix navigation display.",
+      "date": "2026-04-16T05:31:37.000Z",
+      "category": "fix",
+      "repo": "site",
+      "commitSha": "6c4165a3730d2135ff920f8f58a450454a904c59",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-feb8a8",
+      "title": "✨ Improve Research page readability - add dark mode support for all content boxes ...",
+      "summary": "Improve Research page readability - add dark mode support for all content boxes and text.",
+      "date": "2026-04-16T05:21:43.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "feb8a8142e4d0208b11a8cf0520ecf862c2a4c7e",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-b8805e",
+      "title": "✨ Add responsive table CSS for blog posts + simplify Research page title for navig...",
+      "summary": "Add responsive table CSS for blog posts + simplify Research page title for navigation.",
+      "date": "2026-04-16T05:12:46.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "b8805e1c9f38bebc82ce4e85275d48072d617e48",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-060b84",
+      "title": "✨ Add nav_title to research page for cleaner navigation menu.",
+      "summary": "Add nav_title to research page for cleaner navigation menu.",
+      "date": "2026-04-16T04:54:09.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "060b84e10221a72042c90dcfb2f0f177501c3b13",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-ad5027",
+      "title": "🐛 Rename blog files to April 16 for immediate Jekyll publication.",
+      "summary": "Rename blog files to April 16 for immediate Jekyll publication.",
+      "date": "2026-04-16T04:17:30.000Z",
+      "category": "fix",
+      "repo": "site",
+      "commitSha": "ad5027830f65a73f33d7111f91a5f69eaa7d0990",
+      "archived": false
+    },
     {
       "id": "wn-2026-04-16-b369d9",
       "title": "✨ Add flywheel tie-ins to KB and templates - show how data flows through 3mpwr sys...",
@@ -12,6 +122,156 @@
       "category": "feature",
       "repo": "app",
       "commitSha": "b369d955f81b821fb6194a5ec60aab1dce45210b",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-345ece",
+      "title": "✨ Simplify examples + add comprehensive flywheel tie-ins across all content.",
+      "summary": "Simplify examples + add comprehensive flywheel tie-ins across all content.",
+      "date": "2026-04-16T03:59:04.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "345ece24a767b2d2c376216414ac2a1d0c083053",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-ef67ac",
+      "title": "✨ Strengthen evidence rigor across all WSIB research.",
+      "summary": "Strengthen evidence rigor across all WSIB research.",
+      "date": "2026-04-16T03:37:44.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "ef67ac013dbd8fa8acfa31cc70a06c8467f327d5",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-aec977",
+      "title": "⚡ Update trending keywords - 2026-04-16 03:36 UTC.",
+      "summary": "Update trending keywords - 2026-04-16 03:36 UTC.",
+      "date": "2026-04-16T03:36:49.000Z",
+      "category": "improvement",
+      "repo": "site",
+      "commitSha": "aec97725e8ac7f47f2e2a44e0a5db4fe825087d1",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-bc80dd",
+      "title": "✨ Add research hub links to all blog posts.",
+      "summary": "Add research hub links to all blog posts.",
+      "date": "2026-04-16T02:16:58.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "bc80dd85d84e12f83fb69ba8f2093d4f449f7cd7",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-b44cc4",
+      "title": "✨ Add Research Tools hub with WSIB visualization and scalable structure.",
+      "summary": "Add Research Tools hub with WSIB visualization and scalable structure.",
+      "date": "2026-04-16T02:04:18.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "b44cc489ebe2f0bca8a0a37d25e52d35c80dd809",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-83056f",
+      "title": "🐛 Update WSIB master document links in May and April 22 blog posts.",
+      "summary": "Update WSIB master document links in May and April 22 blog posts.",
+      "date": "2026-04-16T01:57:53.000Z",
+      "category": "fix",
+      "repo": "site",
+      "commitSha": "83056fc4fce2c0e3cfc1bb58186f846e1ba3c1c8",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-220350",
+      "title": "🐛 Update WSIB Exposed blog links to point to correct GitHub repo.",
+      "summary": "Update WSIB Exposed blog links to point to correct GitHub repo.",
+      "date": "2026-04-16T01:53:56.000Z",
+      "category": "fix",
+      "repo": "site",
+      "commitSha": "22035016bffa7bf9e5e07076181bce7e4852c427",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-b1c1bc",
+      "title": "🐛 Correct blog post link formats from /blog/YYYY-MM-DD-slug/ to /blog/YYYY/MM/DD/s...",
+      "summary": "Correct blog post link formats from /blog/YYYY-MM-DD-slug/ to /blog/YYYY/MM/DD/slug/.",
+      "date": "2026-04-16T01:50:11.000Z",
+      "category": "fix",
+      "repo": "site",
+      "commitSha": "b1c1bcd93ea824d5ac2db3dcbc1b17720c914200",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-3222e3",
+      "title": "✨ Add mental health/PTSD appeal template (11,700 words, 611 cases).",
+      "summary": "Add mental health/PTSD appeal template (11,700 words, 611 cases).",
+      "date": "2026-04-16T01:37:23.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "3222e3afc8c0d2f63947aca7d6929d69efbe3865",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-9f2fff",
+      "title": "✨ Add comprehensive KB coverage audit document.",
+      "summary": "Add comprehensive KB coverage audit document.",
+      "date": "2026-04-16T01:34:27.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "9f2fff8ed7dbcf4fe32ad7bf37174ad62b869b9b",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-767c07",
+      "title": "✨ Add 8 KB articles - neck, wrist, ankle, elbow, hand, concussion, hip, hearing (1...",
+      "summary": "Add 8 KB articles - neck, wrist, ankle, elbow, hand, concussion, hip, hearing (1,883 cases, 16.5%).",
+      "date": "2026-04-16T01:34:12.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "767c0739e3e4f599e857be1ca12a6511d7031351",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-258df0",
+      "title": "✨ Update 4 existing KB articles with new 11,430-case statistics (low-back 390 case...",
+      "summary": "Update 4 existing KB articles with new 11,430-case statistics (low-back 390 cases, fibro 88, mental health 611, impairment 818).",
+      "date": "2026-04-16T01:09:08.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "258df064b74f048253cca446eb29fe67f56c18fb",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-a33ebf",
+      "title": "✨ Add shoulder & knee KB articles + appeal templates (addresses 20% of all cases -...",
+      "summary": "Add shoulder & knee KB articles + appeal templates (addresses 20% of all cases - 2,236 cases, critical coverage gap filled).",
+      "date": "2026-04-16T01:07:53.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "a33ebf8da00ad21297488ffaceca329eba8d9039",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-d0d0dd",
+      "title": "🐛 Remove docs/ from Jekyll exclude to publish WSIB research master document.",
+      "summary": "Remove docs/ from Jekyll exclude to publish WSIB research master document.",
+      "date": "2026-04-16T00:34:54.000Z",
+      "category": "fix",
+      "repo": "site",
+      "commitSha": "d0d0ddc7cbc10aab7ba317f19e2b3488f194b68e",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-16-2074fa",
+      "title": "✨ Add keyword decoder blog post - WSIB denial language analysis for workers.",
+      "summary": "Add keyword decoder blog post - WSIB denial language analysis for workers.",
+      "date": "2026-04-16T00:18:23.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "2074fa2868e46f763c67d91fae310ac840ab54de",
       "archived": false
     },
     {
