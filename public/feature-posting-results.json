@@ -1,18 +1,20 @@
 {
-  "feature": "Motor Accessibility Features",
-  "date": "2025-10-30",
-  "articleUrl": "https://3mpwrapp.pages.dev/2025/10/30/feature-spotlight-motor-accessibility-features/",
-  "timestamp": "2025-10-30T10:20:27.580Z",
+  "feature": "Dev Update â€” 2026-04-20",
+  "date": "2026-04-20",
+  "articleUrl": "https://3mpwrapp.pages.dev/updates/2026/04/20/dev-update-dev-update-2026-04-20/",
+  "timestamp": "2026-04-21T21:36:22.721Z",
   "results": {
     "mastodon": {
-      "success": true,
-      "message": "Posted successfully",
-      "url": "https://mastodon.social/@3mpwrApp/115462610931195159"
+      "success": false,
+      "message": "Mastodon not configured"
     },
     "bluesky": {
-      "success": true,
-      "message": "Posted successfully",
-      "url": "https://bsky.app/profile/3mpwrapp.bsky.social/post/3m4fqgkxt642c"
+      "success": false,
+      "message": "Bluesky not configured"
+    },
+    "discord": {
+      "success": false,
+      "message": "Discord not configured"
     }
   }
 }

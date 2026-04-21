@@ -1,0 +1,68 @@
+name: WSIB Changes April 29 Promotion
+
+# IWC Community Meeting on proposed WSIB legislation changes
+# Posts daily until April 29, 2026
+# Manual trigger available
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run once daily at 10AM EST (3PM UTC)
+    - cron: '0 15 * * *'
+
+concurrency:
+  group: wsib-changes-april29-promo
+  cancel-in-progress: false
+
+jobs:
+  post-wsib-changes:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Check if event has passed
+        id: check_date
+        run: |
+          if [ $(date +%s) -gt $(date -d '2026-04-29 13:00:00' +%s) ]; then
+            echo "event_passed=true" >> $GITHUB_OUTPUT
+            echo "✅ Event has passed, workflow will stop"
+          else
+            echo "event_passed=false" >> $GITHUB_OUTPUT
+            echo "⏰ Event upcoming, proceeding with post"
+          fi
+      
+      - name: Post to social media
+        if: steps.check_date.outputs.event_passed == 'false'
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          node scripts/post-wsib-changes-april29.js
+      
+      - name: Commit state file
+        if: steps.check_date.outputs.event_passed == 'false'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .github/state/wsib-changes-april29-state.json || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update WSIB Changes posting state [skip ci]"
+            git push
+          fi

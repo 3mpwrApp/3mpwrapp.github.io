@@ -1,0 +1,68 @@
+name: Day of Mourning 2026 Promotion
+
+# National Day of Mourning - April 28
+# Posts daily until event day
+# Manual trigger available
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run once daily at 9AM EST (2PM UTC)
+    - cron: '0 14 * * *'
+
+concurrency:
+  group: day-of-mourning-2026-promo
+  cancel-in-progress: false
+
+jobs:
+  post-day-of-mourning:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Check if event has passed
+        id: check_date
+        run: |
+          if [ $(date +%s) -gt $(date -d '2026-04-28 23:59:59' +%s) ]; then
+            echo "event_passed=true" >> $GITHUB_OUTPUT
+            echo "✅ Event has passed, workflow will stop"
+          else
+            echo "event_passed=false" >> $GITHUB_OUTPUT
+            echo "⏰ Event upcoming, proceeding with post"
+          fi
+      
+      - name: Post to social media
+        if: steps.check_date.outputs.event_passed == 'false'
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          node scripts/post-day-of-mourning-2026.js
+      
+      - name: Commit state file
+        if: steps.check_date.outputs.event_passed == 'false'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .github/state/day-of-mourning-2026-state.json || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update Day of Mourning posting state [skip ci]"
+            git push
+          fi

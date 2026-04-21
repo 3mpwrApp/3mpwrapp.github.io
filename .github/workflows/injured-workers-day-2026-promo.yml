@@ -1,0 +1,69 @@
+name: Injured Workers Day 2026 Promotion
+
+# Strategic awareness campaign for Injured Workers Day - June 1
+# Posts 2x per week (Tuesday & Friday) from late April through June 1
+# Manual trigger available
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run 2x per WEEK: Tuesday 10AM EST and Friday 2PM EST
+    - cron: '0 15 * * 2'  # Tuesday 10AM EST (3PM UTC)
+    - cron: '0 19 * * 5'  # Friday 2PM EST (7PM UTC)
+
+concurrency:
+  group: injured-workers-day-2026-promo
+  cancel-in-progress: false
+
+jobs:
+  post-injured-workers-day:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Check if event has passed
+        id: check_date
+        run: |
+          if [ $(date +%s) -gt $(date -d '2026-06-01 23:59:59' +%s) ]; then
+            echo "event_passed=true" >> $GITHUB_OUTPUT
+            echo "✅ Event has passed, workflow will stop"
+          else
+            echo "event_passed=false" >> $GITHUB_OUTPUT
+            echo "⏰ Event upcoming, proceeding with post"
+          fi
+      
+      - name: Post to social media
+        if: steps.check_date.outputs.event_passed == 'false'
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          node scripts/post-injured-workers-day-2026.js
+      
+      - name: Commit state file
+        if: steps.check_date.outputs.event_passed == 'false'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .github/state/injured-workers-day-2026-state.json || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update Injured Workers Day posting state [skip ci]"
+            git push
+          fi
