@@ -1,8 +1,8 @@
 ---
-Subject: Beta Testing Resumes: Security Fixes Complete + Production Prep This Week
-Date: April 14, 2026
-To: 3mpwrApp Beta Testers
-From: Lissa Beaulieu, 3mpwrApp
+Subject: "Beta Testing Resumes: Security Fixes Complete + Production Prep This Week"
+Date: "April 14, 2026"
+To: "3mpwrApp Beta Testers"
+From: "Lissa Beaulieu, 3mpwrApp"
 ---
 
 # Beta Testing Resumes: Security Complete, Firebase Next
