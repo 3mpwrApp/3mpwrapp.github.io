@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-04-21T03:53:09.796Z",
+  "generated": "2026-04-22T03:48:39.262Z",
   "insights": {
-    "timestamp": "2026-04-21T03:53:09.763Z",
+    "timestamp": "2026-04-22T03:48:39.204Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-04-21T03:53:09.769Z",
+      "lastUpdated": "2026-04-22T03:48:39.210Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -39,12 +39,12 @@
       "currentTrending": [
         {
           "tag": "disabilityrights",
-          "mentions": 46,
+          "mentions": 45,
           "source": "emerging"
         },
         {
           "tag": "accessibility",
-          "mentions": 41,
+          "mentions": 38,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-04-21T03:53:09.773Z",
+      "lastUpdated": "2026-04-22T03:48:39.214Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-04-21T03:53:09.769Z",
+    "lastUpdated": "2026-04-22T03:48:39.210Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -102,12 +102,12 @@
     "currentTrending": [
       {
         "tag": "disabilityrights",
-        "mentions": 46,
+        "mentions": 45,
         "source": "emerging"
       },
       {
         "tag": "accessibility",
-        "mentions": 41,
+        "mentions": 38,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-04-21T03:53:09.773Z",
+    "lastUpdated": "2026-04-22T03:48:39.214Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
