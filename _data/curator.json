@@ -79,7 +79,7 @@
     },
     "high_priority": {
       "score": 4,
-      "description": "Core disability/accessibility content (benefits, rights, accommodations, WSIB)",
+      "description": "Core disability/accessibility content (benefits, rights, accommodations, WSIB), social justice, injured workers, vulnerable communities",
       "terms": [
         "accessibility",
         "disability",
@@ -126,12 +126,41 @@
         "mental health",
         "chronic illness",
         "pain management",
-        "caregiver support"
+        "caregiver support",
+        "disability justice",
+        "intersectionality",
+        "systemic barriers",
+        "lived experience",
+        "community-led",
+        "grassroots",
+        "solidarity",
+        "collective action",
+        "worker organizing",
+        "workplace organizing",
+        "union solidarity",
+        "mutual aid",
+        "worker rights",
+        "labor rights",
+        "workers' rights",
+        "housing crisis",
+        "homelessness",
+        "food insecurity",
+        "poverty line",
+        "marginalized",
+        "underserved",
+        "overlooked",
+        "forgotten",
+        "MAiD",
+        "medical assistance in dying",
+        "MAID",
+        "end of life",
+        "euthanasia",
+        "assisted dying"
       ]
     },
     "provincial": {
       "score": 3.8,
-      "description": "Provincial program updates (ODSP, AISH, provincial policies affecting readers)",
+      "description": "Provincial program updates - ALL Canadian provinces and territories (ODSP, AISH, PWD, etc.)",
       "terms": [
         "ODSP",
         "Ontario Disability Support Program",
@@ -155,12 +184,39 @@
         "transportation subsidy",
         "provincial program",
         "provincial policy",
-        "provincial legislation"
+        "provincial legislation",
+        "Programme de solidarité sociale",
+        "Solidarity Program",
+        "MESS Quebec",
+        "social assistance Quebec",
+        "aide sociale Quebec",
+        "Income Assistance NS",
+        "Income Assistance Nova Scotia",
+        "disability support Nova Scotia",
+        "Community Services NS",
+        "Disability Support Program NB",
+        "Social Development NB",
+        "disability support New Brunswick",
+        "Social Assistance PEI",
+        "disability support PEI",
+        "Prince Edward Island disability",
+        "Income Support NL",
+        "disability support Newfoundland",
+        "Newfoundland disability",
+        "Labrador disability",
+        "Yukon disability",
+        "disability support Yukon",
+        "NWT disability",
+        "Northwest Territories disability",
+        "Nunavut disability",
+        "disability support Nunavut",
+        "territorial social assistance",
+        "northern disability programs"
       ]
     },
     "economic_impact": {
       "score": 3.5,
-      "description": "Financial/economic news affecting disabled people (costs, wages, taxes, income)",
+      "description": "Financial/economic news affecting disabled people (costs, wages, taxes, income, privatization)",
       "terms": [
         "cost of living",
         "inflation",
@@ -180,7 +236,18 @@
         "minimum wage",
         "workplace accommodation",
         "workplace rights",
-        "pay equity"
+        "pay equity",
+        "privatization",
+        "private healthcare",
+        "two-tier system",
+        "two-tier healthcare",
+        "privatized care",
+        "for-profit healthcare",
+        "basic income",
+        "guaranteed income",
+        "universal basic income",
+        "UBI",
+        "social safety net"
       ]
     },
     "health_wellness": {
@@ -207,6 +274,28 @@
         "exercise",
         "sleep",
         "stress management"
+      ]
+    },
+    "advocacy_culture": {
+      "score": 3.2,
+      "description": "Disability advocacy, media representation, community organizing",
+      "terms": [
+        "representation",
+        "media portrayal",
+        "disability in media",
+        "disability representation",
+        "authentic portrayal",
+        "disabled actors",
+        "community organizing",
+        "self-advocacy",
+        "peer support",
+        "disability-led",
+        "nothing about us without us",
+        "crip the vote",
+        "disability pride",
+        "ableist language",
+        "inspiration porn",
+        "disability culture"
       ]
     },
     "medium_priority": {
