@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-04-22T03:48:39.262Z",
+  "generated": "2026-04-23T03:55:28.209Z",
   "insights": {
-    "timestamp": "2026-04-22T03:48:39.204Z",
+    "timestamp": "2026-04-23T03:55:28.176Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-04-22T03:48:39.210Z",
+      "lastUpdated": "2026-04-23T03:55:28.183Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -44,12 +44,12 @@
         },
         {
           "tag": "accessibility",
-          "mentions": 38,
+          "mentions": 40,
           "source": "emerging"
         },
         {
           "tag": "a11y",
-          "mentions": 28,
+          "mentions": 30,
           "source": "emerging"
         },
         {
@@ -59,7 +59,7 @@
         },
         {
           "tag": "disabilityjustice",
-          "mentions": 26,
+          "mentions": 25,
           "source": "emerging"
         }
       ],
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-04-22T03:48:39.214Z",
+      "lastUpdated": "2026-04-23T03:55:28.186Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-04-22T03:48:39.210Z",
+    "lastUpdated": "2026-04-23T03:55:28.183Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -107,12 +107,12 @@
       },
       {
         "tag": "accessibility",
-        "mentions": 38,
+        "mentions": 40,
         "source": "emerging"
       },
       {
         "tag": "a11y",
-        "mentions": 28,
+        "mentions": 30,
         "source": "emerging"
       },
       {
@@ -122,7 +122,7 @@
       },
       {
         "tag": "disabilityjustice",
-        "mentions": 26,
+        "mentions": 25,
         "source": "emerging"
       }
     ],
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-04-22T03:48:39.214Z",
+    "lastUpdated": "2026-04-23T03:55:28.186Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
