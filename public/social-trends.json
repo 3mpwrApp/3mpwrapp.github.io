@@ -1,92 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-24T03:37:28.234Z",
+  "lastUpdated": "2026-04-24T13:58:01.811Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16074,
+      "totalPosts": 16099,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-24T03:37:20.282Z"
+      "lastSeen": "2026-04-24T13:57:42.032Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16061,
+      "totalPosts": 16086,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-24T03:37:21.938Z"
+      "lastSeen": "2026-04-24T13:57:46.013Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 15946,
+      "totalPosts": 15971,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-24T03:37:23.592Z"
+      "lastSeen": "2026-04-24T13:57:50.648Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16137,
+      "totalPosts": 16162,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-24T03:37:25.273Z"
+      "lastSeen": "2026-04-24T13:57:56.977Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16098,
+      "totalPosts": 16123,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-24T03:37:27.231Z"
+      "lastSeen": "2026-04-24T13:58:00.807Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "I didnt find any good game or practice tool to practice/learn the red little nub on my thinkpad and so..\n\nalso, my hands are weak (due to, well..treatment) anyway, so-gemini helping me make a html game !\n\n#gemini #notebooklm #accessibility #hospital-stay\n#gamedev #game #html #web #webdev\n#thinkpad",
-      "author": "loneicewolf.bsky.social",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "It's 4/19. We're at 400/1300 first goal. Can we get to 690? Only $290 - and you'd be helping me renew an #accessibility certification to keep freelancing! #HelpSky #MutualAidRequest #InclusiveDesign #crowdfund",
-      "author": "foxdesign.tech",
-      "engagement": 16,
-      "hashtag": "Accessibility"
-    },
-    {
-      "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
-      "author": "zacharyweeks.bsky.social",
-      "engagement": 47,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Received my postal vote so sharing my Substack, originally commissioned by @bylinetimes.bsky.social Please share too, know that the right-wing are never friends of disabled people.\n#DisabledPeopleAgainstFascism\n#StandUpToRacism\n#DisabilityRights\n#Writerlife\n\npennypepper.substack.com/p/the-tainte...",
-      "author": "penpep.bsky.social",
-      "engagement": 34,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 27,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "👉 #wordsmatter #disabilityjustice #callitout #ableism",
-      "author": "danasinspired.bsky.social",
-      "engagement": 12,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Representation is currently low, and we want to change that. If you identify as blind or visually impaired, we need your voice to help build a better pathway for future creators.\n\nGet involved: bit.ly/WIGcats\n\n#WomenInGames #Accessibility #GameDev",
-      "author": "womeningames.bsky.social",
-      "engagement": 12,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
       "author": "anonymoussewerrat.bsky.social",
@@ -338,6 +290,54 @@
       "author": "xirclebox.com",
       "engagement": 11,
       "hashtag": "A11y"
+    },
+    {
+      "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
+      "author": "anonymoussewerrat.bsky.social",
+      "engagement": 25,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
+      "author": "zacharyweeks.bsky.social",
+      "engagement": 47,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
+      "author": "hoydenspark.bsky.social",
+      "engagement": 27,
+      "hashtag": "DisabilityJustice"
+    },
+    {
+      "text": "I'm pretty sick of hearing people say they don't provide alt text and exclude people with disabilities so they can mildly inconvenience AI companies.\n\nvale.rocks/micros/20260...\n\n#a11y #Accessibility #AltText",
+      "author": "vale.rocks",
+      "engagement": 13,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "If you would like to listen to \"Laser Eyes Ain't Everything,\" a YouTube recording of Effie reading her work is here: \n\nwww.youtube.com/watch?v=5T5W...\n\nCongrats, Effie! I'm so proud of you. My hero!\n\n#HugoAwards #ShortStory #Fiction #Disability #NEISVoid #Accessibility \n\n3/3",
+      "author": "rubyslippahs.bsky.social",
+      "engagement": 11,
+      "hashtag": "Accessibility"
+    },
+    {
+      "text": "I'm pretty sick of hearing people say they don't provide alt text and exclude people with disabilities so they can mildly inconvenience AI companies.\n\nvale.rocks/micros/20260...\n\n#a11y #Accessibility #AltText",
+      "author": "vale.rocks",
+      "engagement": 13,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "Today's big task: adding screen reader support to the tutorial. This involved writing an entire parallel set of tutorial texts, which not only tell the player what to do, but give them the context to understand what's going on.\n#a11y #indiedev #indiegame",
+      "author": "byobattleship.bsky.social",
+      "engagement": 15,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I'm often asked after my talks, \"How do I get started with accessibility?\" because there's so much information that some just don't know where to start. I've put together a list of role-based resources to serve as a starting point. \n\nrightbadcode.com/accessibilit...\n\n#Accessibility #A11y",
+      "author": "xirclebox.com",
+      "engagement": 11,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
@@ -355,7 +355,7 @@
     },
     {
       "keyword": "disabilityjustice",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "cripthevote",
@@ -386,10 +386,6 @@
       "count": 12
     },
     {
-      "keyword": "accessibility a11y",
-      "count": 9
-    },
-    {
       "keyword": "disabilityrights nokings3",
       "count": 9
     },
@@ -406,20 +402,24 @@
       "count": 8
     },
     {
-      "keyword": "refusefascism",
+      "keyword": "a11y accessibility",
+      "count": 7
+    },
+    {
+      "keyword": "ndis",
       "count": 6
     },
     {
       "keyword": "disabilitysky",
-      "count": 5
+      "count": 6
     },
     {
       "keyword": "cripminds",
-      "count": 5
+      "count": 6
     },
     {
       "keyword": "accessibility disabilitysky",
-      "count": 5
+      "count": 6
     }
   ]
 }
