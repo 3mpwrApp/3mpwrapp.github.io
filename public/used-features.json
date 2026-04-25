@@ -21,7 +21,8 @@
     "Spoon Theory & Energy Management",
     "Accessible Document Generation",
     "Mood Tracker",
-    "ADHD Focus Mode: Minimize Distractions, Maximize Completion"
+    "ADHD Focus Mode: Minimize Distractions, Maximize Completion",
+    "CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide)"
   ],
   "tutorials": [
     "How to Use the Evidence Locker Effectively",
@@ -46,6 +47,6 @@
     "Privacy as a Human Right: Not a Feature We Added Later",
     "Spoon Theory and the Design Language We Built Around It"
   ],
-  "rotationIndex": 4,
+  "rotationIndex": 5,
   "lastReset": "2026-03-13T00:00:00.000Z"
 }
