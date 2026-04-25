@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-24T03:59:12.947Z",
+  "lastUpdated": "2026-04-25T03:41:12.721Z",
   "hashtags": {},
   "combinations": {},
   "abTests": [],
@@ -12,7 +12,7 @@
       "hashtags": [
         "disabilityrights",
         "accessibility",
-        "a11y"
+        "disabilityjustice"
       ],
       "expectedImpact": "Increased reach"
     }
@@ -31,12 +31,12 @@
       "source": "emerging"
     },
     {
-      "tag": "a11y",
-      "mentions": 31,
+      "tag": "disabilityjustice",
+      "mentions": 25,
       "source": "emerging"
     },
     {
-      "tag": "disabilityjustice",
+      "tag": "a11y",
       "mentions": 25,
       "source": "emerging"
     },
