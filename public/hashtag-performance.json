@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-25T03:41:12.721Z",
+  "lastUpdated": "2026-04-26T04:03:52.742Z",
   "hashtags": {},
   "combinations": {},
   "abTests": [],
@@ -22,17 +22,17 @@
   "currentTrending": [
     {
       "tag": "disabilityrights",
-      "mentions": 44,
+      "mentions": 42,
       "source": "emerging"
     },
     {
       "tag": "accessibility",
-      "mentions": 38,
+      "mentions": 37,
       "source": "emerging"
     },
     {
       "tag": "disabilityjustice",
-      "mentions": 25,
+      "mentions": 27,
       "source": "emerging"
     },
     {
