@@ -1,0 +1,5416 @@
+[
+  {
+    "database": "onwsib",
+    "case_id": "2021canlii97498",
+    "citation": "2021 CanLII 97498 (ON WSIB)",
+    "decision_date": "2021-08-06",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain disability — pre-injury earnings — permanent work disruption — work-related injury"
+    ],
+    "url": "https://canlii.ca/t/jjkd8"
+  },
+  {
+    "database": "onwsib",
+    "case_id": "2022canlii74711",
+    "citation": "2022 CanLII 74711 (ON WSIB)",
+    "decision_date": "2022-06-30",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — elbow fracture — neck — injury"
+    ],
+    "url": "https://canlii.ca/t/jrj4d"
+  },
+  {
+    "database": "onwsib",
+    "case_id": "2022canlii68187",
+    "citation": "2022 CanLII 68187 (ON WSIB)",
+    "decision_date": "2022-06-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "low back pain — injury — chronic pain — worker reported — disruption"
+    ],
+    "url": "https://canlii.ca/t/jr422"
+  },
+  {
+    "database": "onwsib",
+    "case_id": "2023canlii24814",
+    "citation": "2023 CanLII 24814 (ON WSIB)",
+    "decision_date": "2023-02-02",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fall — work-related impairment disability — work-related injury — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jwg68"
+  },
+  {
+    "database": "onhrt",
+    "case_id": "2026hrto308",
+    "citation": "2026 HRTO 308 (CanLII)",
+    "decision_date": "2026-02-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "disability — injury to dignity — discrimination — removal from the program — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/kjf2x"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat19",
+    "citation": "2020 ONWSIAT 19 (CanLII)",
+    "decision_date": "2020-01-07",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — duties — fibromyalgia — cooler — pre-existing conditions"
+    ],
+    "url": "https://canlii.ca/t/j501s"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat136",
+    "citation": "2020 ONWSIAT 136 (CanLII)",
+    "decision_date": "2020-01-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "medical marijuana — worker — pain — fibromyalgia — entitlement to reimbursement"
+    ],
+    "url": "https://canlii.ca/t/j5d3c"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat550",
+    "citation": "2020 ONWSIAT 550 (CanLII)",
+    "decision_date": "2020-03-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — pain — shoulder — fibromyalgia — injections"
+    ],
+    "url": "https://canlii.ca/t/j6cz4"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat632",
+    "citation": "2020 ONWSIAT 632 (CanLII)",
+    "decision_date": "2020-03-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — injury — chronic pain — disruption"
+    ],
+    "url": "https://canlii.ca/t/j6wck"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat649",
+    "citation": "2020 ONWSIAT 649 (CanLII)",
+    "decision_date": "2020-03-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — injury — organic — disruption"
+    ],
+    "url": "https://canlii.ca/t/j6wcn"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat923",
+    "citation": "2020 ONWSIAT 923 (CanLII)",
+    "decision_date": "2020-04-30",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fentanyl — chronic pain — supplementary benefits — stopped working"
+    ],
+    "url": "https://canlii.ca/t/j829h"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1118",
+    "citation": "2020 ONWSIAT 1118 (CanLII)",
+    "decision_date": "2020-06-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker s pre-accident — psychological — chronic pain — reconsideration — evidence"
+    ],
+    "url": "https://canlii.ca/t/j8t49"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1150",
+    "citation": "2020 ONWSIAT 1150 (CanLII)",
+    "decision_date": "2020-06-15",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — work accident — neck — shoulder"
+    ],
+    "url": "https://canlii.ca/t/j8xcd"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1182",
+    "citation": "2020 ONWSIAT 1182 (CanLII)",
+    "decision_date": "2020-06-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — workplace accident — organic — disruption"
+    ],
+    "url": "https://canlii.ca/t/j8xc8"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1213",
+    "citation": "2020 ONWSIAT 1213 (CanLII)",
+    "decision_date": "2020-06-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — wrist — injury — chronic pain — repetitive strain"
+    ],
+    "url": "https://canlii.ca/t/j95nv"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1326",
+    "citation": "2020 ONWSIAT 1326 (CanLII)",
+    "decision_date": "2020-07-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain disability — rating — legs — permanent disability"
+    ],
+    "url": "https://canlii.ca/t/j9j8x"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1389",
+    "citation": "2020 ONWSIAT 1389 (CanLII)",
+    "decision_date": "2020-07-31",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — entitlement to benefits — abuse — doctrine — chronic pain disability"
+    ],
+    "url": "https://canlii.ca/t/j9shm"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1394",
+    "citation": "2020 ONWSIAT 1394 (CanLII)",
+    "decision_date": "2020-08-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker s request for reconsideration — chronic pain — accident — benefits for psychotraumatic disability — significant contribution to the worker"
+    ],
+    "url": "https://canlii.ca/t/j9shc"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1396",
+    "citation": "2020 ONWSIAT 1396 (CanLII)",
+    "decision_date": "2020-08-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "traumatic brain injury — including frontal lobe dysfunction — worker — organic — chronic pain disability"
+    ],
+    "url": "https://canlii.ca/t/j9sh0"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1415",
+    "citation": "2020 ONWSIAT 1415 (CanLII)",
+    "decision_date": "2020-08-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — psychotraumatic disability — injury — chronic pain — organic"
+    ],
+    "url": "https://canlii.ca/t/j9w1t"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1417",
+    "citation": "2020 ONWSIAT 1417 (CanLII)",
+    "decision_date": "2020-08-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — knee — injury — chronic pain — organic"
+    ],
+    "url": "https://canlii.ca/t/j9w23"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1433",
+    "citation": "2020 ONWSIAT 1433 (CanLII)",
+    "decision_date": "2020-08-11",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — disruption — wrist pain — benefits for chronic pain disability — evidence"
+    ],
+    "url": "https://canlii.ca/t/jb9v3"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1483",
+    "citation": "2020 ONWSIAT 1483 (CanLII)",
+    "decision_date": "2020-08-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain disability — benefits — impairment — lock-in date"
+    ],
+    "url": "https://canlii.ca/t/jb37c"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1634",
+    "citation": "2020 ONWSIAT 1634 (CanLII)",
+    "decision_date": "2020-09-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — disruption — wrist — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jbtgd"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1711",
+    "citation": "2020 ONWSIAT 1711 (CanLII)",
+    "decision_date": "2020-10-15",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — medical — injury — treatment"
+    ],
+    "url": "https://canlii.ca/t/jc6w8"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1720",
+    "citation": "2020 ONWSIAT 1720 (CanLII)",
+    "decision_date": "2020-10-16",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — chronic pain — shoulder — cervical"
+    ],
+    "url": "https://canlii.ca/t/jc6w6"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1725",
+    "citation": "2020 ONWSIAT 1725 (CanLII)",
+    "decision_date": "2020-10-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — impairment — chronic pain — significant deterioration — rating"
+    ],
+    "url": "https://canlii.ca/t/jcbpp"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1801",
+    "citation": "2020 ONWSIAT 1801 (CanLII)",
+    "decision_date": "2020-11-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — impairment — psychological — assessment"
+    ],
+    "url": "https://canlii.ca/t/jcgfr"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1907",
+    "citation": "2020 ONWSIAT 1907 (CanLII)",
+    "decision_date": "2020-11-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — reconsideration — work — chronic pain — low"
+    ],
+    "url": "https://canlii.ca/t/jctrh"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1920",
+    "citation": "2020 ONWSIAT 1920 (CanLII)",
+    "decision_date": "2020-12-01",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "medical cannabis — worker — work-related pain — fibromyalgia — health care"
+    ],
+    "url": "https://canlii.ca/t/jctq2"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1952",
+    "citation": "2020 ONWSIAT 1952 (CanLII)",
+    "decision_date": "2020-12-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — entitlement — somatoform pain disorder — organic — impairment"
+    ],
+    "url": "https://canlii.ca/t/jctq4"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat1984",
+    "citation": "2020 ONWSIAT 1984 (CanLII)",
+    "decision_date": "2020-12-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — wrist fracture — psychotraumatic disability — medical"
+    ],
+    "url": "https://canlii.ca/t/jd1d0"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat2039",
+    "citation": "2020 ONWSIAT 2039 (CanLII)",
+    "decision_date": "2020-12-18",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — organic — chronic pain — disorder — psychotraumatic disability"
+    ],
+    "url": "https://canlii.ca/t/jd890"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat2053",
+    "citation": "2020 ONWSIAT 2053 (CanLII)",
+    "decision_date": "2020-12-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — part-time basis — modified work — chronic pain disability — employer"
+    ],
+    "url": "https://canlii.ca/t/jdfgw"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2020onwsiat2056",
+    "citation": "2020 ONWSIAT 2056 (CanLII)",
+    "decision_date": "2020-12-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain syndrome — work — suitable — pre-accident job"
+    ],
+    "url": "https://canlii.ca/t/jdfh8"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat20",
+    "citation": "2021 ONWSIAT 20 (CanLII)",
+    "decision_date": "2021-01-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — injury — disruption — psychotraumatic disability"
+    ],
+    "url": "https://canlii.ca/t/jd88k"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat140",
+    "citation": "2021 ONWSIAT 140 (CanLII)",
+    "decision_date": "2021-01-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — impairment — benefits — chronic pain — knee"
+    ],
+    "url": "https://canlii.ca/t/jdp9b"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat216",
+    "citation": "2021 ONWSIAT 216 (CanLII)",
+    "decision_date": "2021-02-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — injury — psychotraumatic disability — chronic pain — organic"
+    ],
+    "url": "https://canlii.ca/t/jdz5c"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat242",
+    "citation": "2021 ONWSIAT 242 (CanLII)",
+    "decision_date": "2021-02-17",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — entitlement to benefits — chronic pain disability — injury — organic"
+    ],
+    "url": "https://canlii.ca/t/jf211"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat283",
+    "citation": "2021 ONWSIAT 283 (CanLII)",
+    "decision_date": "2021-02-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — pain — fibromyalgia — entitlement — neck"
+    ],
+    "url": "https://canlii.ca/t/jf5zk"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat298",
+    "citation": "2021 ONWSIAT 298 (CanLII)",
+    "decision_date": "2021-02-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "chronic pain — disability benefits — offset — determined that the worker — disruption"
+    ],
+    "url": "https://canlii.ca/t/jf5zm"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat347",
+    "citation": "2021 ONWSIAT 347 (CanLII)",
+    "decision_date": "2021-03-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — adjournment — chronic pain — shoulder — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jfjdm"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat371",
+    "citation": "2021 ONWSIAT 371 (CanLII)",
+    "decision_date": "2021-03-12",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "entitlement for fibromyalgia — worker — clarification — pain — policy"
+    ],
+    "url": "https://canlii.ca/t/jfnbb"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat387",
+    "citation": "2021 ONWSIAT 387 (CanLII)",
+    "decision_date": "2021-03-15",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain disability — reconsideration — low back injury — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jfnbj"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat461",
+    "citation": "2021 ONWSIAT 461 (CanLII)",
+    "decision_date": "2021-03-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — psychotraumatic disability — reconsideration — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jg1kj"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat476",
+    "citation": "2021 ONWSIAT 476 (CanLII)",
+    "decision_date": "2021-03-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — life disruption — entitlement — injury"
+    ],
+    "url": "https://canlii.ca/t/jg42q"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat559",
+    "citation": "2021 ONWSIAT 559 (CanLII)",
+    "decision_date": "2021-04-14",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — pain — shoulders — neck"
+    ],
+    "url": "https://canlii.ca/t/jgc4k"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat574",
+    "citation": "2021 ONWSIAT 574 (CanLII)",
+    "decision_date": "2021-04-16",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — upper extremity — fatigue — work"
+    ],
+    "url": "https://canlii.ca/t/jg7h2"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat603",
+    "citation": "2021 ONWSIAT 603 (CanLII)",
+    "decision_date": "2021-04-22",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "myofascial pain — hip — advised that the worker — chronic pain — low back strain"
+    ],
+    "url": "https://canlii.ca/t/jghwv"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat606",
+    "citation": "2021 ONWSIAT 606 (CanLII)",
+    "decision_date": "2021-04-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — injury — chronic pain — organic — wrist"
+    ],
+    "url": "https://canlii.ca/t/jghwj"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat608",
+    "citation": "2021 ONWSIAT 608 (CanLII)",
+    "decision_date": "2021-04-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — seizures — epilepsy — injury"
+    ],
+    "url": "https://canlii.ca/t/jghwn"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat630",
+    "citation": "2021 ONWSIAT 630 (CanLII)",
+    "decision_date": "2021-04-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "chronic pain — impairment — worker from returning to pre-injury — disruption — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jgl7f"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat704",
+    "citation": "2021 ONWSIAT 704 (CanLII)",
+    "decision_date": "2021-05-07",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 58,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "keywords_api": [
+      "worker — chronic pain — work-related injury — return to work — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jgrgb"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat711",
+    "citation": "2021 ONWSIAT 711 (CanLII)",
+    "decision_date": "2021-05-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — benefits — offset by two-thirds — chronic pain disability — shoulder"
+    ],
+    "url": "https://canlii.ca/t/jgtxb"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat800",
+    "citation": "2021 ONWSIAT 800 (CanLII)",
+    "decision_date": "2021-05-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "advised that the worker — unable to perform any work — impairment — chronic pain — psychomotor retardation"
+    ],
+    "url": "https://canlii.ca/t/jh44r"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat807",
+    "citation": "2021 ONWSIAT 807 (CanLII)",
+    "decision_date": "2021-05-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — fibromyalgia — soft tissue injuries — hip"
+    ],
+    "url": "https://canlii.ca/t/jh45f"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat841",
+    "citation": "2021 ONWSIAT 841 (CanLII)",
+    "decision_date": "2021-05-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "indicated that the worker — disruption — injury — chronic pain — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jh8dm"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat861",
+    "citation": "2021 ONWSIAT 861 (CanLII)",
+    "decision_date": "2021-05-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — fibromyalgia — injury — benefits"
+    ],
+    "url": "https://canlii.ca/t/jh8fr"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat924",
+    "citation": "2021 ONWSIAT 924 (CanLII)",
+    "decision_date": "2021-06-11",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — pain — fibromyalgia — modified duties — disruption"
+    ],
+    "url": "https://canlii.ca/t/jhgd6"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1069",
+    "citation": "2021 ONWSIAT 1069 (CanLII)",
+    "decision_date": "2021-07-06",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — indicated that the worker — knees — fibromyalgia — knee"
+    ],
+    "url": "https://canlii.ca/t/jhwtz"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1099",
+    "citation": "2021 ONWSIAT 1099 (CanLII)",
+    "decision_date": "2021-07-12",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — entitlement for fibromyalgia — work part-time — benefits based on part-time hours — placement"
+    ],
+    "url": "https://canlii.ca/t/jhwv7"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1107",
+    "citation": "2021 ONWSIAT 1107 (CanLII)",
+    "decision_date": "2021-07-13",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "disruption — injury — chronic pain — finds that the worker — benefits"
+    ],
+    "url": "https://canlii.ca/t/jj0hx"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1141",
+    "citation": "2021 ONWSIAT 1141 (CanLII)",
+    "decision_date": "2021-07-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — impairments — work transition — benefits — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jj420"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1151",
+    "citation": "2021 ONWSIAT 1151 (CanLII)",
+    "decision_date": "2021-07-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — pain — work — work-related low back injury"
+    ],
+    "url": "https://canlii.ca/t/jj42b"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1158",
+    "citation": "2021 ONWSIAT 1158 (CanLII)",
+    "decision_date": "2021-07-21",
+    "inferred_outcome": "Denied",
+    "tier": "B",
+    "confidence": 59,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "keywords_api": [
+      "worker — fibromyalgia was non-compensable — request for reconsideration — psychotraumatic disability — prior"
+    ],
+    "url": "https://canlii.ca/t/jj421"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1159",
+    "citation": "2021 ONWSIAT 1159 (CanLII)",
+    "decision_date": "2021-07-21",
+    "inferred_outcome": "Denied",
+    "tier": "B",
+    "confidence": 59,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "keywords_api": [
+      "worker — fibromyalgia was non-compensable — request for reconsideration — psychotraumatic disability — prior"
+    ],
+    "url": "https://canlii.ca/t/jj42g"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1216",
+    "citation": "2021 ONWSIAT 1216 (CanLII)",
+    "decision_date": "2021-08-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — organic — injuries — reporting"
+    ],
+    "url": "https://canlii.ca/t/jjc7h"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1294",
+    "citation": "2021 ONWSIAT 1294 (CanLII)",
+    "decision_date": "2021-08-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — work-related injury — proposed resolution — bilateral"
+    ],
+    "url": "https://canlii.ca/t/jjmvp"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1458",
+    "citation": "2021 ONWSIAT 1458 (CanLII)",
+    "decision_date": "2021-09-14",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — impairment — fibromyalgia — range — pain"
+    ],
+    "url": "https://canlii.ca/t/jkdf0"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1493",
+    "citation": "2021 ONWSIAT 1493 (CanLII)",
+    "decision_date": "2021-09-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — entitlement — injury — low"
+    ],
+    "url": "https://canlii.ca/t/jkhxh"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1525",
+    "citation": "2021 ONWSIAT 1525 (CanLII)",
+    "decision_date": "2021-09-22",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — neuropathic pain — medical cannabis — medical marijuana — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/jktk2"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1526",
+    "citation": "2021 ONWSIAT 1526 (CanLII)",
+    "decision_date": "2021-09-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — organic — shoulder — chronic pain — disruption"
+    ],
+    "url": "https://canlii.ca/t/jktks"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1686",
+    "citation": "2021 ONWSIAT 1686 (CanLII)",
+    "decision_date": "2021-10-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain syndrome — compensable right wrist injury — tenosynovitis — radiculopathy"
+    ],
+    "url": "https://canlii.ca/t/jljz5"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1699",
+    "citation": "2021 ONWSIAT 1699 (CanLII)",
+    "decision_date": "2021-10-22",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — life disruption — injury — chronic pain — shrapnel"
+    ],
+    "url": "https://canlii.ca/t/jlcbr"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1701",
+    "citation": "2021 ONWSIAT 1701 (CanLII)",
+    "decision_date": "2021-10-25",
+    "inferred_outcome": "Denied",
+    "tier": "B",
+    "confidence": 59,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "keywords_api": [
+      "worker — fibromyalgia — benefits — overuse syndrome — non-compensable conditions"
+    ],
+    "url": "https://canlii.ca/t/jlcbd"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1772",
+    "citation": "2021 ONWSIAT 1772 (CanLII)",
+    "decision_date": "2021-11-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — disruption — injury — chronic pain — benefits"
+    ],
+    "url": "https://canlii.ca/t/jlk20"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1825",
+    "citation": "2021 ONWSIAT 1825 (CanLII)",
+    "decision_date": "2021-11-16",
+    "inferred_outcome": "Denied",
+    "tier": "B",
+    "confidence": 60,
+    "rule_id": "B_HEUR_WSIAT_ENTITLEMENT_NEGATIVE",
+    "reasons": [
+      "entitlement_negative_phrase"
+    ],
+    "keywords_api": [
+      "chronic pain disorder — worker — reconsideration — denied entitlement for psychotraumatic disability — depression"
+    ],
+    "url": "https://canlii.ca/t/jlqbc"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2021onwsiat1954",
+    "citation": "2021 ONWSIAT 1954 (CanLII)",
+    "decision_date": "2021-12-13",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — ankle fracture — marked life disruption — injury"
+    ],
+    "url": "https://canlii.ca/t/jmhzv"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat20",
+    "citation": "2022 ONWSIAT 20 (CanLII)",
+    "decision_date": "2022-01-05",
+    "inferred_outcome": "Denied",
+    "tier": "B",
+    "confidence": 59,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "keywords_api": [
+      "worker — non-compensable aneurysm — pain — fibromyalgia — permanent disability"
+    ],
+    "url": "https://canlii.ca/t/jn1b3"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat51",
+    "citation": "2022 ONWSIAT 51 (CanLII)",
+    "decision_date": "2022-01-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — pain — fibromyalgia — low — disruption"
+    ],
+    "url": "https://canlii.ca/t/jn62n"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat84",
+    "citation": "2022 ONWSIAT 84 (CanLII)",
+    "decision_date": "2022-01-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "psychological impairment — determined that the worker — chronic pain disorder — report — shoulder"
+    ],
+    "url": "https://canlii.ca/t/jnb4r"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat85",
+    "citation": "2022 ONWSIAT 85 (CanLII)",
+    "decision_date": "2022-01-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — leg — marked life disruption — injury"
+    ],
+    "url": "https://canlii.ca/t/jnb4p"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat94",
+    "citation": "2022 ONWSIAT 94 (CanLII)",
+    "decision_date": "2022-01-18",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — anxiety — depression — chronic pain disability — emotional"
+    ],
+    "url": "https://canlii.ca/t/jnb4s"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat116",
+    "citation": "2022 ONWSIAT 116 (CanLII)",
+    "decision_date": "2022-01-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — pain — bilateral knee — sewing"
+    ],
+    "url": "https://canlii.ca/t/jng1k"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat153",
+    "citation": "2022 ONWSIAT 153 (CanLII)",
+    "decision_date": "2022-01-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — delay — time limit — withdrew — chronic pain disability"
+    ],
+    "url": "https://canlii.ca/t/jng1g"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat244",
+    "citation": "2022 ONWSIAT 244 (CanLII)",
+    "decision_date": "2022-02-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "reconsideration — evidence — entitlement for fibromyalgia — emails from the worker — original"
+    ],
+    "url": "https://canlii.ca/t/jp8jb"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat368",
+    "citation": "2022 ONWSIAT 368 (CanLII)",
+    "decision_date": "2022-03-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "fibromyalgia — notes that the worker — worsening — workshop — impairment"
+    ],
+    "url": "https://canlii.ca/t/jpb97"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat478",
+    "citation": "2022 ONWSIAT 478 (CanLII)",
+    "decision_date": "2022-03-22",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — work hardening — fibromyalgia — redetermination — benefits"
+    ],
+    "url": "https://canlii.ca/t/jpqn2"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat490",
+    "citation": "2022 ONWSIAT 490 (CanLII)",
+    "decision_date": "2022-03-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — feeling — chronic pain — impairment — range"
+    ],
+    "url": "https://canlii.ca/t/jpqnh"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat525",
+    "citation": "2022 ONWSIAT 525 (CanLII)",
+    "decision_date": "2022-03-31",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — organic — chronic pain — entitlement to benefits — injury"
+    ],
+    "url": "https://canlii.ca/t/jptqr"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat545",
+    "citation": "2022 ONWSIAT 545 (CanLII)",
+    "decision_date": "2022-04-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — knee injury — pre-existing fibromyalgia — pre-existing lupus — impairment"
+    ],
+    "url": "https://canlii.ca/t/jpz2x"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat637",
+    "citation": "2022 ONWSIAT 637 (CanLII)",
+    "decision_date": "2022-04-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — myofascial pain — injury — pre-existing condition"
+    ],
+    "url": "https://canlii.ca/t/jqbs0"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat681",
+    "citation": "2022 ONWSIAT 681 (CanLII)",
+    "decision_date": "2022-04-27",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — shoulder — injury — chronic pain — significant deterioration"
+    ],
+    "url": "https://canlii.ca/t/jqgxl"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat682",
+    "citation": "2022 ONWSIAT 682 (CanLII)",
+    "decision_date": "2022-04-27",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — time extension — delay — entitlement for chronic pain disability — representative"
+    ],
+    "url": "https://canlii.ca/t/jqgx9"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat722",
+    "citation": "2022 ONWSIAT 722 (CanLII)",
+    "decision_date": "2022-05-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — fibromyalgia — marked life disruption — injury"
+    ],
+    "url": "https://canlii.ca/t/jr3b5"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat745",
+    "citation": "2022 ONWSIAT 745 (CanLII)",
+    "decision_date": "2022-05-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "indicated that the worker — chronic pain — work — modified — hours"
+    ],
+    "url": "https://canlii.ca/t/jr3bz"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat768",
+    "citation": "2022 ONWSIAT 768 (CanLII)",
+    "decision_date": "2022-05-12",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain disability — organic — disruption — impairment"
+    ],
+    "url": "https://canlii.ca/t/jr459"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat895",
+    "citation": "2022 ONWSIAT 895 (CanLII)",
+    "decision_date": "2022-06-06",
+    "inferred_outcome": "Denied",
+    "tier": "B",
+    "confidence": 59,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "keywords_api": [
+      "worker — shoulder — non-compensable conditions — chronic pain — labour market re-entry"
+    ],
+    "url": "https://canlii.ca/t/jrf1g"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat905",
+    "citation": "2022 ONWSIAT 905 (CanLII)",
+    "decision_date": "2022-06-08",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "work-related injury — worker stated — disruption — chronic pain — spine"
+    ],
+    "url": "https://canlii.ca/t/jrf0w"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat912",
+    "citation": "2022 ONWSIAT 912 (CanLII)",
+    "decision_date": "2022-06-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "work — earnings — benefits — find that the worker — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/jrf0p"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat962",
+    "citation": "2022 ONWSIAT 962 (CanLII)",
+    "decision_date": "2022-06-16",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — shoulder pain — shoulder injury — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jrj3b"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat975",
+    "citation": "2022 ONWSIAT 975 (CanLII)",
+    "decision_date": "2022-06-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — symptoms — entitlement — repetitive strain injuries"
+    ],
+    "url": "https://canlii.ca/t/jrlxc"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat999",
+    "citation": "2022 ONWSIAT 999 (CanLII)",
+    "decision_date": "2022-06-22",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — headaches — symptoms — chronic pain disability — reports"
+    ],
+    "url": "https://canlii.ca/t/jrlwc"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1083",
+    "citation": "2022 ONWSIAT 1083 (CanLII)",
+    "decision_date": "2022-07-13",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — shoulder — life disruption — chronic pain — work"
+    ],
+    "url": "https://canlii.ca/t/jrt3l"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1141",
+    "citation": "2022 ONWSIAT 1141 (CanLII)",
+    "decision_date": "2022-07-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — toluene exposure — fibromyalgia — psycho-organic brain syndrome — headaches"
+    ],
+    "url": "https://canlii.ca/t/jrxsn"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1158",
+    "citation": "2022 ONWSIAT 1158 (CanLII)",
+    "decision_date": "2022-07-22",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — post-surgical neuropathic pain — injury — entitlement — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/jrxrk"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1159",
+    "citation": "2022 ONWSIAT 1159 (CanLII)",
+    "decision_date": "2022-07-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — injury — exaggeration — malingering"
+    ],
+    "url": "https://canlii.ca/t/jrxsf"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1163",
+    "citation": "2022 ONWSIAT 1163 (CanLII)",
+    "decision_date": "2022-07-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — worker — fibromyalgia — accident — neck"
+    ],
+    "url": "https://canlii.ca/t/jrxs6"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1195",
+    "citation": "2022 ONWSIAT 1195 (CanLII)",
+    "decision_date": "2022-08-02",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — shoulder — chronic pain disability — upper — injury"
+    ],
+    "url": "https://canlii.ca/t/js1b0"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1215",
+    "citation": "2022 ONWSIAT 1215 (CanLII)",
+    "decision_date": "2022-08-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — low back injury — entitlement — skid training"
+    ],
+    "url": "https://canlii.ca/t/js1b6"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1305",
+    "citation": "2022 ONWSIAT 1305 (CanLII)",
+    "decision_date": "2022-08-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pre-existing fibromyalgia — worker had a pre-existing condition — cost relief — employer — recovery"
+    ],
+    "url": "https://canlii.ca/t/js8pj"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1441",
+    "citation": "2022 ONWSIAT 1441 (CanLII)",
+    "decision_date": "2022-09-14",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — lrazuzta — shoulder — chronic pain — work"
+    ],
+    "url": "https://canlii.ca/t/jsng8"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1541",
+    "citation": "2022 ONWSIAT 1541 (CanLII)",
+    "decision_date": "2022-10-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — entitlement — chronic pain — organic — disruption"
+    ],
+    "url": "https://canlii.ca/t/jsx5m"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1608",
+    "citation": "2022 ONWSIAT 1608 (CanLII)",
+    "decision_date": "2022-10-14",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — benefits — work — impairment"
+    ],
+    "url": "https://canlii.ca/t/jt5nk"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1611",
+    "citation": "2022 ONWSIAT 1611 (CanLII)",
+    "decision_date": "2022-10-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "foot — indicated that the worker — chronic pain — ankle — clinical notes"
+    ],
+    "url": "https://canlii.ca/t/jt5nn"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1617",
+    "citation": "2022 ONWSIAT 1617 (CanLII)",
+    "decision_date": "2022-10-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — degenerative disc disease — chart notes — injuries"
+    ],
+    "url": "https://canlii.ca/t/jt5mj"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1661",
+    "citation": "2022 ONWSIAT 1661 (CanLII)",
+    "decision_date": "2022-10-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — psychotraumatic disability — impairment — chronic pain — earnings"
+    ],
+    "url": "https://canlii.ca/t/jt96d"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1666",
+    "citation": "2022 ONWSIAT 1666 (CanLII)",
+    "decision_date": "2022-10-20",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — work-related accident — fibromyalgia — pain — entitlement to benefits"
+    ],
+    "url": "https://canlii.ca/t/jt96c"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1759",
+    "citation": "2022 ONWSIAT 1759 (CanLII)",
+    "decision_date": "2022-11-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — wrist — fibromyalgia — carpi ulnaris tenosynovitis — work"
+    ],
+    "url": "https://canlii.ca/t/jtnfb"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1830",
+    "citation": "2022 ONWSIAT 1830 (CanLII)",
+    "decision_date": "2022-11-15",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation benefits — Loss of earnings — Medical authorization to be off work between specified dates — Functional Abilities Form indicating full duties as of December 4 — Whether worker entitled to LOE from November 23 to December 4 — WSIA framework applied — Medical evidence accepted — LOE benefits awarded | Workplace health and safety — Psychotraumatic disability — Permanent impairment — Whether worker had psychotraumatic disability PI at MMR — Adjustment disorder with worry and flashbacks found — Reliance on WSIB Community Mental Health Program report — Comparator to Decision No. 700/20 discussed — NEL quantum assessed — 10% NEL awarded | Workplace health and safety — Chronic pain disability — Entitlement precluded by policy — Whether CPD benefits available where psychotraumatic disability PI granted — Board policy barring dual entitlement applied — CPD issue rendered moot by psychotraumatic disability finding — Claim for CPD considered and rejected — CPD benefits denied"
+    ],
+    "url": "https://canlii.ca/t/jts23"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1875",
+    "citation": "2022 ONWSIAT 1875 (CanLII)",
+    "decision_date": "2022-11-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — work-related injury — work-related accident — chronic pain — psychotraumatic disability"
+    ],
+    "url": "https://canlii.ca/t/jts4b"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat2000",
+    "citation": "2022 ONWSIAT 2000 (CanLII)",
+    "decision_date": "2022-12-13",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — pre-existing condition — fibromyalgia — impairment — rating"
+    ],
+    "url": "https://canlii.ca/t/jv8kk"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat2031",
+    "citation": "2022 ONWSIAT 2031 (CanLII)",
+    "decision_date": "2022-12-16",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — entitlement for psychotraumatic disability — chronic pain — earnings — shoulder"
+    ],
+    "url": "https://canlii.ca/t/jvf41"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat2049",
+    "citation": "2022 ONWSIAT 2049 (CanLII)",
+    "decision_date": "2022-12-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — permanent worsening date — deterioration — pain"
+    ],
+    "url": "https://canlii.ca/t/jvf4c"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat2086",
+    "citation": "2022 ONWSIAT 2086 (CanLII)",
+    "decision_date": "2022-12-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — shoulder — breast reduction surgery — pain"
+    ],
+    "url": "https://canlii.ca/t/jvkjv"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat2087",
+    "citation": "2022 ONWSIAT 2087 (CanLII)",
+    "decision_date": "2022-12-28",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 58,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "keywords_api": [
+      "worker — chronic pain — entitlement — work-related injury — non-organic condition"
+    ],
+    "url": "https://canlii.ca/t/jvkj4"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat14",
+    "citation": "2023 ONWSIAT 14 (CanLII)",
+    "decision_date": "2023-01-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — harassment — employer — chronic pain — work-related stressor"
+    ],
+    "url": "https://canlii.ca/t/jvr6z"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat36",
+    "citation": "2023 ONWSIAT 36 (CanLII)",
+    "decision_date": "2023-01-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "therapeutic hot tub — worker — severely impaired — health care — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/jvr63"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat104",
+    "citation": "2023 ONWSIAT 104 (CanLII)",
+    "decision_date": "2023-01-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — pain — disability benefits — offset"
+    ],
+    "url": "https://canlii.ca/t/jw1kx"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat196",
+    "citation": "2023 ONWSIAT 196 (CanLII)",
+    "decision_date": "2023-02-07",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — receptionist — depression — gainful employment"
+    ],
+    "url": "https://canlii.ca/t/jwgs0"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat226",
+    "citation": "2023 ONWSIAT 226 (CanLII)",
+    "decision_date": "2023-02-13",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — bilateral shoulder — organic — noted"
+    ],
+    "url": "https://canlii.ca/t/jwgt4"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat232",
+    "citation": "2023 ONWSIAT 232 (CanLII)",
+    "decision_date": "2023-02-13",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — hips — injuries — noted"
+    ],
+    "url": "https://canlii.ca/t/jwgt1"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat291",
+    "citation": "2023 ONWSIAT 291 (CanLII)",
+    "decision_date": "2023-02-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "workplace accident — chronic pain — submitted that the worker — work-related injury — worsening"
+    ],
+    "url": "https://canlii.ca/t/jwn0z"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat312",
+    "citation": "2023 ONWSIAT 312 (CanLII)",
+    "decision_date": "2023-02-27",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — work-related injury — shoulder — chronic pain — reported"
+    ],
+    "url": "https://canlii.ca/t/jwn1j"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat343",
+    "citation": "2023 ONWSIAT 343 (CanLII)",
+    "decision_date": "2023-03-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — entitlement for psychotraumatic disability — injury — anxiety — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/jwrt4"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat492",
+    "citation": "2023 ONWSIAT 492 (CanLII)",
+    "decision_date": "2023-03-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pre-existing condition — worker — pre-existing fibromyalgia — greater severity than a normal — recovery"
+    ],
+    "url": "https://canlii.ca/t/jx8nb"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat555",
+    "citation": "2023 ONWSIAT 555 (CanLII)",
+    "decision_date": "2023-04-11",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — work-related injury — chronic pain disability — test for granting a reconsideration — impairment"
+    ],
+    "url": "https://canlii.ca/t/jxbvd"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat585",
+    "citation": "2023 ONWSIAT 585 (CanLII)",
+    "decision_date": "2023-04-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "injury — return to work — chronic pain disability — shows that the worker — medical"
+    ],
+    "url": "https://canlii.ca/t/jxgzl"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat601",
+    "citation": "2023 ONWSIAT 601 (CanLII)",
+    "decision_date": "2023-04-19",
+    "inferred_outcome": "Denied",
+    "tier": "B",
+    "confidence": 59,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "keywords_api": [
+      "worker — work-related injury — chronic pain — non-compensable condition — low"
+    ],
+    "url": "https://canlii.ca/t/jxl5c"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat630",
+    "citation": "2023 ONWSIAT 630 (CanLII)",
+    "decision_date": "2023-04-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — pain — chemical exposure — impairment"
+    ],
+    "url": "https://canlii.ca/t/jxl56"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat671",
+    "citation": "2023 ONWSIAT 671 (CanLII)",
+    "decision_date": "2023-05-02",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — impairment — chronic pain — somatic symptom disorder — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jxtkf"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat689",
+    "citation": "2023 ONWSIAT 689 (CanLII)",
+    "decision_date": "2023-05-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "entitlement for fibromyalgia — worker — non-organic pain — policy — non-organic condition"
+    ],
+    "url": "https://canlii.ca/t/jxtlm"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat697",
+    "citation": "2023 ONWSIAT 697 (CanLII)",
+    "decision_date": "2023-05-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — fibromyalgia — elbow — injury"
+    ],
+    "url": "https://canlii.ca/t/jxtkp"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat747",
+    "citation": "2023 ONWSIAT 747 (CanLII)",
+    "decision_date": "2023-05-16",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — disc bulge — workplace accident — chronic pain — entitlement to benefits"
+    ],
+    "url": "https://canlii.ca/t/jz1sc"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat759",
+    "citation": "2023 ONWSIAT 759 (CanLII)",
+    "decision_date": "2023-05-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — employer — chronic pain — report — full-time basis"
+    ],
+    "url": "https://canlii.ca/t/jz1s3"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat773",
+    "citation": "2023 ONWSIAT 773 (CanLII)",
+    "decision_date": "2023-05-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — workplace accident — strain — lacerated liver"
+    ],
+    "url": "https://canlii.ca/t/jz1s7"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat776",
+    "citation": "2023 ONWSIAT 776 (CanLII)",
+    "decision_date": "2023-05-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — shoulder — injury — disruption"
+    ],
+    "url": "https://canlii.ca/t/jz1s6"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat786",
+    "citation": "2023 ONWSIAT 786 (CanLII)",
+    "decision_date": "2023-05-19",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 58,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "keywords_api": [
+      "worker — chronic pain — work-related injury — permanent impairment — entitlement"
+    ],
+    "url": "https://canlii.ca/t/jz4hq"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1103",
+    "citation": "2023 ONWSIAT 1103 (CanLII)",
+    "decision_date": "2023-07-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — work-related injury — chronic pain — disruption — organic"
+    ],
+    "url": "https://canlii.ca/t/k048t"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1162",
+    "citation": "2023 ONWSIAT 1162 (CanLII)",
+    "decision_date": "2023-08-01",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — organic findings — life disruption — injury — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/k0dbh"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1175",
+    "citation": "2023 ONWSIAT 1175 (CanLII)",
+    "decision_date": "2023-08-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — injury — marked life disruption — beyond the usual healing time"
+    ],
+    "url": "https://canlii.ca/t/k0dc1"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1482",
+    "citation": "2023 ONWSIAT 1482 (CanLII)",
+    "decision_date": "2023-09-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — benefits for fibromyalgia — sequential — rating — pain"
+    ],
+    "url": "https://canlii.ca/t/k1frc"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1495",
+    "citation": "2023 ONWSIAT 1495 (CanLII)",
+    "decision_date": "2023-09-27",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — work-related injury — chronic pain — temporary non-structural soft tissue exacerbation — medical"
+    ],
+    "url": "https://canlii.ca/t/k1frf"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1500",
+    "citation": "2023 ONWSIAT 1500 (CanLII)",
+    "decision_date": "2023-09-28",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 58,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "keywords_api": [
+      "worker — work-related injury — low — chronic pain — entitlement to benefits"
+    ],
+    "url": "https://canlii.ca/t/k1kbp"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1508",
+    "citation": "2023 ONWSIAT 1508 (CanLII)",
+    "decision_date": "2023-09-29",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "work-related injury — chronic pain — full-time hours — psychotraumatic disability — work"
+    ],
+    "url": "https://canlii.ca/t/k1k9z"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1536",
+    "citation": "2023 ONWSIAT 1536 (CanLII)",
+    "decision_date": "2023-10-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — low back strain — injury — pre-existing degenerative disc disease"
+    ],
+    "url": "https://canlii.ca/t/k5c2b"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1543",
+    "citation": "2023 ONWSIAT 1543 (CanLII)",
+    "decision_date": "2023-10-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "time limit — request for a time extension — representative — need for on-time appeals — benefits for chronic pain disability"
+    ],
+    "url": "https://canlii.ca/t/k5c2f"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1558",
+    "citation": "2023 ONWSIAT 1558 (CanLII)",
+    "decision_date": "2023-10-11",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — psychotraumatic disability — abdominal — medical"
+    ],
+    "url": "https://canlii.ca/t/k5c2p"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1586",
+    "citation": "2023 ONWSIAT 1586 (CanLII)",
+    "decision_date": "2023-10-17",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — entitlement to benefits — permanent impairment — psychotraumatic disability — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/k1x52"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1682",
+    "citation": "2023 ONWSIAT 1682 (CanLII)",
+    "decision_date": "2023-11-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "chondromalacia patella — compensable accident — knee medial meniscus tear — disc extrusion — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/k22br"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1757",
+    "citation": "2023 ONWSIAT 1757 (CanLII)",
+    "decision_date": "2023-11-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — life disruption — entitlement for a neck injury — psychotraumatic disability"
+    ],
+    "url": "https://canlii.ca/t/k2674"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1761",
+    "citation": "2023 ONWSIAT 1761 (CanLII)",
+    "decision_date": "2023-11-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — permanent impairment — pain — exacerbation"
+    ],
+    "url": "https://canlii.ca/t/k266w"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1802",
+    "citation": "2023 ONWSIAT 1802 (CanLII)",
+    "decision_date": "2023-11-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — motor vehicle accident — chronic pain — accident-related driving restrictions — concussion"
+    ],
+    "url": "https://canlii.ca/t/k2fkh"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1823",
+    "citation": "2023 ONWSIAT 1823 (CanLII)",
+    "decision_date": "2023-11-30",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — offset — disability benefits — chronic pain disability — review"
+    ],
+    "url": "https://canlii.ca/t/k2fjf"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1828",
+    "citation": "2023 ONWSIAT 1828 (CanLII)",
+    "decision_date": "2023-12-01",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — psychotraumatic disability — chronic pain — nerve roots — entitlement"
+    ],
+    "url": "https://canlii.ca/t/k2fkl"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1864",
+    "citation": "2023 ONWSIAT 1864 (CanLII)",
+    "decision_date": "2023-12-07",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "work-related injury — fibromyalgia — chronic pain — life disruption — organic"
+    ],
+    "url": "https://canlii.ca/t/k2l9n"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1949",
+    "citation": "2023 ONWSIAT 1949 (CanLII)",
+    "decision_date": "2023-12-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "knee — chronic pain — worsening — permanent — indicated that the worker"
+    ],
+    "url": "https://canlii.ca/t/k2t9k"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2023onwsiat1978",
+    "citation": "2023 ONWSIAT 1978 (CanLII)",
+    "decision_date": "2023-12-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "chronic pain — elbow — submitted that the worker — injury — workplace accident"
+    ],
+    "url": "https://canlii.ca/t/k309t"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat123",
+    "citation": "2024 ONWSIAT 123 (CanLII)",
+    "decision_date": "2024-01-22",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — permanent impairment — chronic pain disability — clarification — entitlement"
+    ],
+    "url": "https://canlii.ca/t/k3grw"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat195",
+    "citation": "2024 ONWSIAT 195 (CanLII)",
+    "decision_date": "2024-02-01",
+    "inferred_outcome": "Deferred",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A10",
+    "reasons": [
+      "A10"
+    ],
+    "keywords_api": [
+      "worker — inactive status — memo — abandoned — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/k3w48"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat216",
+    "citation": "2024 ONWSIAT 216 (CanLII)",
+    "decision_date": "2024-02-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "sequential — report — leg — chronic pain — worker is competitively unemployable"
+    ],
+    "url": "https://canlii.ca/t/k40g7"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat238",
+    "citation": "2024 ONWSIAT 238 (CanLII)",
+    "decision_date": "2024-02-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — disorder with concurrent mood dysfunction — injury — organic — pain disorder with concurrent mood"
+    ],
+    "url": "https://canlii.ca/t/k40g9"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat287",
+    "citation": "2024 ONWSIAT 287 (CanLII)",
+    "decision_date": "2024-02-20",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — chronic pain — entitlement — benefits — work"
+    ],
+    "url": "https://canlii.ca/t/k48dk"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat319",
+    "citation": "2024 ONWSIAT 319 (CanLII)",
+    "decision_date": "2024-02-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "low back injury — elbow — redetermination — chronic pain — accident"
+    ],
+    "url": "https://canlii.ca/t/k48d2"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat359",
+    "citation": "2024 ONWSIAT 359 (CanLII)",
+    "decision_date": "2024-03-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — injury — reported — impairment"
+    ],
+    "url": "https://canlii.ca/t/k4j92"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat369",
+    "citation": "2024 ONWSIAT 369 (CanLII)",
+    "decision_date": "2024-03-06",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — pain — labour market re-entry services — entitled to partial benefits"
+    ],
+    "url": "https://canlii.ca/t/k4j91"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat380",
+    "citation": "2024 ONWSIAT 380 (CanLII)",
+    "decision_date": "2024-03-07",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — work — neck — depression"
+    ],
+    "url": "https://canlii.ca/t/k4j8q"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat438",
+    "citation": "2024 ONWSIAT 438 (CanLII)",
+    "decision_date": "2024-03-18",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — knee — noted — chronic pain — accident"
+    ],
+    "url": "https://canlii.ca/t/k4svt"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat497",
+    "citation": "2024 ONWSIAT 497 (CanLII)",
+    "decision_date": "2024-03-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — shoulder impairment — neck — pain disorder — bilateral trigger thumbs"
+    ],
+    "url": "https://canlii.ca/t/k4xh5"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat570",
+    "citation": "2024 ONWSIAT 570 (CanLII)",
+    "decision_date": "2024-04-11",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — significant deterioration — recurrence — entitlement to benefits — chronic pain disability"
+    ],
+    "url": "https://canlii.ca/t/k57nq"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat593",
+    "citation": "2024 ONWSIAT 593 (CanLII)",
+    "decision_date": "2024-04-15",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — central sensitization — chronic pain — left-sided symptoms — work-related injury"
+    ],
+    "url": "https://canlii.ca/t/k5cqq"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat659",
+    "citation": "2024 ONWSIAT 659 (CanLII)",
+    "decision_date": "2024-04-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — pain — impairment — illegible — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/k5hq9"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat681",
+    "citation": "2024 ONWSIAT 681 (CanLII)",
+    "decision_date": "2024-04-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — pain — work-related injury — fibromyalgia syndrome — wrists"
+    ],
+    "url": "https://canlii.ca/t/k5mb2"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat733",
+    "citation": "2024 ONWSIAT 733 (CanLII)",
+    "decision_date": "2024-05-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — impairment — pain — sustainability"
+    ],
+    "url": "https://canlii.ca/t/k5rb8"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat751",
+    "citation": "2024 ONWSIAT 751 (CanLII)",
+    "decision_date": "2024-05-13",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — injury — organic — neck"
+    ],
+    "url": "https://canlii.ca/t/k5vkx"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat780",
+    "citation": "2024 ONWSIAT 780 (CanLII)",
+    "decision_date": "2024-05-16",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — return to work — chronic pain — injury — life disruption"
+    ],
+    "url": "https://canlii.ca/t/k60wq"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat841",
+    "citation": "2024 ONWSIAT 841 (CanLII)",
+    "decision_date": "2024-05-29",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — chronic pain — entitlement to benefits — workplace accident — foot crush injury"
+    ],
+    "url": "https://canlii.ca/t/k63rq"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat856",
+    "citation": "2024 ONWSIAT 856 (CanLII)",
+    "decision_date": "2024-05-31",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — injury — fibromyalgia — disruption — labour market re-entry"
+    ],
+    "url": "https://canlii.ca/t/k675x"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat963",
+    "citation": "2024 ONWSIAT 963 (CanLII)",
+    "decision_date": "2024-06-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — earnings — delivery driver — entry level wages — entitlement for chronic pain disability"
+    ],
+    "url": "https://canlii.ca/t/k6jb1"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1038",
+    "citation": "2024 ONWSIAT 1038 (CanLII)",
+    "decision_date": "2024-06-27",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — offset — benefits — entitlement for psychotraumatic disability — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/k6rkh"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1130",
+    "citation": "2024 ONWSIAT 1130 (CanLII)",
+    "decision_date": "2024-07-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — injury — find that the worker — entitlement for fibromyalgia — condition"
+    ],
+    "url": "https://canlii.ca/t/k74v1"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1182",
+    "citation": "2024 ONWSIAT 1182 (CanLII)",
+    "decision_date": "2024-07-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — pain — work-related injury — work-related accident"
+    ],
+    "url": "https://canlii.ca/t/k793d"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1226",
+    "citation": "2024 ONWSIAT 1226 (CanLII)",
+    "decision_date": "2024-07-31",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — workplace accident — medical — work-related non-organic chronic pain disability — contributed to a work-related non-organic"
+    ],
+    "url": "https://canlii.ca/t/k7c51"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1385",
+    "citation": "2024 ONWSIAT 1385 (CanLII)",
+    "decision_date": "2024-09-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — work-related injury — psychotraumatic disability — somatic — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/k7wjc"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1427",
+    "citation": "2024 ONWSIAT 1427 (CanLII)",
+    "decision_date": "2024-09-16",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "fibromyalgia — work — worker representative — pain — benefits"
+    ],
+    "url": "https://canlii.ca/t/k814g"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1506",
+    "citation": "2024 ONWSIAT 1506 (CanLII)",
+    "decision_date": "2024-10-01",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — impairment — work — pharmacy assistant — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/k87x8"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1561",
+    "citation": "2024 ONWSIAT 1561 (CanLII)",
+    "decision_date": "2024-10-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "chronic pain — workplace accident — modified duties — mental health conditions — worker doesn t have entitlement"
+    ],
+    "url": "https://canlii.ca/t/k8g36"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1617",
+    "citation": "2024 ONWSIAT 1617 (CanLII)",
+    "decision_date": "2024-10-18",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — adhesive capsulitis — shoulder — reconsideration — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/k8hkj"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1625",
+    "citation": "2024 ONWSIAT 1625 (CanLII)",
+    "decision_date": "2024-10-18",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — impairment — complex integrated cerebral functions — fibromyalgia — pain"
+    ],
+    "url": "https://canlii.ca/t/k8hl4"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1629",
+    "citation": "2024 ONWSIAT 1629 (CanLII)",
+    "decision_date": "2024-10-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — test for granting a reconsideration — work-related injury — threshold test for granting"
+    ],
+    "url": "https://canlii.ca/t/k8hkd"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1668",
+    "citation": "2024 ONWSIAT 1668 (CanLII)",
+    "decision_date": "2024-10-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — deterioration — chronic pain — impairment — psycho-traumatic disability"
+    ],
+    "url": "https://canlii.ca/t/k8krw"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1684",
+    "citation": "2024 ONWSIAT 1684 (CanLII)",
+    "decision_date": "2024-10-29",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — work-related injury — symptoms — low"
+    ],
+    "url": "https://canlii.ca/t/k8krr"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1710",
+    "citation": "2024 ONWSIAT 1710 (CanLII)",
+    "decision_date": "2024-11-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — coccyx — workplace accident — chronic pain — degenerative disc disease"
+    ],
+    "url": "https://canlii.ca/t/k8wtx"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1769",
+    "citation": "2024 ONWSIAT 1769 (CanLII)",
+    "decision_date": "2024-11-18",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — upper extremity — chronic pain — organic — work-related injury"
+    ],
+    "url": "https://canlii.ca/t/k97c8"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1835",
+    "citation": "2024 ONWSIAT 1835 (CanLII)",
+    "decision_date": "2024-11-28",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 58,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "keywords_api": [
+      "work-related injury — permanent impairment — worker has entitlement — chronic pain disability — work"
+    ],
+    "url": "https://canlii.ca/t/k9c86"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1839",
+    "citation": "2024 ONWSIAT 1839 (CanLII)",
+    "decision_date": "2024-11-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "satisfied that the worker — chronic pain disability — competitively unemployable — specialty reporting — employability"
+    ],
+    "url": "https://canlii.ca/t/k9c8k"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1867",
+    "citation": "2024 ONWSIAT 1867 (CanLII)",
+    "decision_date": "2024-12-05",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 57,
+    "rule_id": "B_HEUR_WSIAT_CONTEXTUAL_ENTITLEMENT",
+    "reasons": [
+      "entitlement_with_injury_context"
+    ],
+    "keywords_api": [
+      "worker — chronic pain — workplace accident — entitlement to benefits — organic injury"
+    ],
+    "url": "https://canlii.ca/t/k9gtn"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1885",
+    "citation": "2024 ONWSIAT 1885 (CanLII)",
+    "decision_date": "2024-12-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — shoulder — work-related injury — chronic pain — neck"
+    ],
+    "url": "https://canlii.ca/t/k9lpx"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1932",
+    "citation": "2024 ONWSIAT 1932 (CanLII)",
+    "decision_date": "2024-12-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — rotator cuff tear — modified duties — chronic pain — work-related injury"
+    ],
+    "url": "https://canlii.ca/t/k9rlq"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2024onwsiat1944",
+    "citation": "2024 ONWSIAT 1944 (CanLII)",
+    "decision_date": "2024-12-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — shoulder — bilateral elbow — chronic pain — entitlement"
+    ],
+    "url": "https://canlii.ca/t/k9rlg"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat3",
+    "citation": "2025 ONWSIAT 3 (CanLII)",
+    "decision_date": "2025-01-02",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — work-related injury — chronic pain — knee — marked life disruption"
+    ],
+    "url": "https://canlii.ca/t/k9w8x"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat214",
+    "citation": "2025 ONWSIAT 214 (CanLII)",
+    "decision_date": "2025-02-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — permanent impairment — complex integrated cerebral functions — benefits — chronic pain disability"
+    ],
+    "url": "https://canlii.ca/t/kbr6j"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat232",
+    "citation": "2025 ONWSIAT 232 (CanLII)",
+    "decision_date": "2025-02-28",
+    "inferred_outcome": "Denied",
+    "tier": "B",
+    "confidence": 59,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "keywords_api": [
+      "worker — chronic pain disability — non-compensable left knee — worsened — permanent disability"
+    ],
+    "url": "https://canlii.ca/t/kbr6w"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat279",
+    "citation": "2025 ONWSIAT 279 (CanLII)",
+    "decision_date": "2025-03-14",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — modified duties — conveyor belt — chronic pain — breast"
+    ],
+    "url": "https://canlii.ca/t/kc1gj"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat299",
+    "citation": "2025 ONWSIAT 299 (CanLII)",
+    "decision_date": "2025-03-19",
+    "inferred_outcome": "Denied",
+    "tier": "B",
+    "confidence": 59,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "keywords_api": [
+      "worker — fibromyalgia — non-compensable intervening — redetermination — worsening"
+    ],
+    "url": "https://canlii.ca/t/kc5l9"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat320",
+    "citation": "2025 ONWSIAT 320 (CanLII)",
+    "decision_date": "2025-03-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — occupational asthma — work-related injury — beyond the usual healing time — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/kc845"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat379",
+    "citation": "2025 ONWSIAT 379 (CanLII)",
+    "decision_date": "2025-04-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — soft tissue injuries — entitlement — wrist — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/kcbzp"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat382",
+    "citation": "2025 ONWSIAT 382 (CanLII)",
+    "decision_date": "2025-04-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — fibromyalgia — injury — workplace accident — entitlement"
+    ],
+    "url": "https://canlii.ca/t/kcbzq"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat386",
+    "citation": "2025 ONWSIAT 386 (CanLII)",
+    "decision_date": "2025-04-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "modified duties — worker reached maximum medical recovery — compensable sprain strain injury — work — suspected fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/kch7s"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat529",
+    "citation": "2025 ONWSIAT 529 (CanLII)",
+    "decision_date": "2025-05-12",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — beyond the usual healing time — work-related injury — marked life disruption"
+    ],
+    "url": "https://canlii.ca/t/kd011"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat578",
+    "citation": "2025 ONWSIAT 578 (CanLII)",
+    "decision_date": "2025-05-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — orthopaedic surgeon — complex regional pain syndrome — peripheral nerve injury — opined"
+    ],
+    "url": "https://canlii.ca/t/kd9hv"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat716",
+    "citation": "2025 ONWSIAT 716 (CanLII)",
+    "decision_date": "2025-06-24",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 58,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "keywords_api": [
+      "work-related injury — chronic pain — entitlement — find that the worker — benefits"
+    ],
+    "url": "https://canlii.ca/t/kdt6x"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat727",
+    "citation": "2025 ONWSIAT 727 (CanLII)",
+    "decision_date": "2025-06-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — chronic pain — work-related injury — accident — beyond the usual healing time"
+    ],
+    "url": "https://canlii.ca/t/kdt76"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat751",
+    "citation": "2025 ONWSIAT 751 (CanLII)",
+    "decision_date": "2025-06-27",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — reasonable self-directed efforts — benefits — chronic pain — lab technician contract ended"
+    ],
+    "url": "https://canlii.ca/t/kdzh0"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat857",
+    "citation": "2025 ONWSIAT 857 (CanLII)",
+    "decision_date": "2025-07-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — self-represented persons — reconsideration — mental health — chronic pain disability"
+    ],
+    "url": "https://canlii.ca/t/kfgwf"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat959",
+    "citation": "2025 ONWSIAT 959 (CanLII)",
+    "decision_date": "2025-08-15",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 58,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "keywords_api": [
+      "hand index finger tendonitis — work-related injury — psychotraumatic disability — pre-existing fibromyalgia — entitlement"
+    ],
+    "url": "https://canlii.ca/t/kfsz0"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat1050",
+    "citation": "2025 ONWSIAT 1050 (CanLII)",
+    "decision_date": "2025-09-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pre-existing condition — worker — pre-existing conditions — fibromyalgia — severity"
+    ],
+    "url": "https://canlii.ca/t/kgcb5"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat1179",
+    "citation": "2025 ONWSIAT 1179 (CanLII)",
+    "decision_date": "2025-10-06",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 59,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "initial_entitlement"
+    ],
+    "keywords_api": [
+      "knees — knee — fibromyalgia — pain — doesn t have initial entitlement"
+    ],
+    "url": "https://canlii.ca/t/kh130"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat1199",
+    "citation": "2025 ONWSIAT 1199 (CanLII)",
+    "decision_date": "2025-10-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "suitable — chronic pain — psycho-vocational assessment — review — pre-injury earnings"
+    ],
+    "url": "https://canlii.ca/t/kh13d"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat1208",
+    "citation": "2025 ONWSIAT 1208 (CanLII)",
+    "decision_date": "2025-10-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "maintenance treatment — psychological — chronic pain — report states that the worker — permanent impairment"
+    ],
+    "url": "https://canlii.ca/t/kh583"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat1265",
+    "citation": "2025 ONWSIAT 1265 (CanLII)",
+    "decision_date": "2025-10-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "work-related injury — chronic pain symptoms — confirms that the worker — medical — workplace injury"
+    ],
+    "url": "https://canlii.ca/t/kh90b"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat1427",
+    "citation": "2025 ONWSIAT 1427 (CanLII)",
+    "decision_date": "2025-12-01",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — benefits — offset — chronic pain due to trauma — non-work-related injuries"
+    ],
+    "url": "https://canlii.ca/t/kj18n"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat1443",
+    "citation": "2025 ONWSIAT 1443 (CanLII)",
+    "decision_date": "2025-12-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "work-related complex regional pain syndrome — fall — worker is entitled — sequential — ongoing maintenance treatment"
+    ],
+    "url": "https://canlii.ca/t/kj5h8"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat1491",
+    "citation": "2025 ONWSIAT 1491 (CanLII)",
+    "decision_date": "2025-12-16",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 58,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "keywords_api": [
+      "worker — depression — work-related injury — chronic pain — entitlement to benefits"
+    ],
+    "url": "https://canlii.ca/t/kjbmc"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat1537",
+    "citation": "2025 ONWSIAT 1537 (CanLII)",
+    "decision_date": "2025-12-22",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — impairment — chronic pain disability — return to work — psychological"
+    ],
+    "url": "https://canlii.ca/t/kjgth"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat14",
+    "citation": "2026 ONWSIAT 14 (CanLII)",
+    "decision_date": "2026-01-07",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — suitable — occupation — kg — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/kjs9p"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat82",
+    "citation": "2026 ONWSIAT 82 (CanLII)",
+    "decision_date": "2026-01-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "chronic pain disability — worker — offset — disability benefits — umbrella"
+    ],
+    "url": "https://canlii.ca/t/kk31h"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat83",
+    "citation": "2026 ONWSIAT 83 (CanLII)",
+    "decision_date": "2026-01-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "worker — ex-wife — duties — accident employer — chronic pain disability"
+    ],
+    "url": "https://canlii.ca/t/kk311"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat89",
+    "citation": "2026 ONWSIAT 89 (CanLII)",
+    "decision_date": "2026-01-23",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A1",
+    "reasons": [
+      "A1"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Chronic Pain Disability — Policy No. 15-04-03 criteria for CPD — Does the worker meet all five conditions? — Continuous, consistent and genuine pain beyond usual healing time — Marked life disruption with impaired earning capacity — Medical opinions of diffuse chronic myofascial pain considered — Entitlement for CPD under the accident claim — Appeal allowed in part | Workplace health and safety — Causation — Significant contribution — Whether pre-existing pain negates causation — Test of significant contribution applied to CPD — Benefit of the doubt under WSIA s.124(2) considered — ARO findings contrasted with Second Injury and Enhancement Fund decision — Preponderance supports accident significantly contributed to CPD — Entitlement for CPD confirmed | Procedure — Remittal — Loss of Earnings benefits — Should LOE entitlement beyond December 4, 2020 be remitted? — Early Intervention Program proposed resolution approved — Nature and duration of benefits returned to the WSIB for further adjudication — Worker withdrew NEL issue — Appeal allowed in part and LOE issue remitted"
+    ],
+    "url": "https://canlii.ca/t/kk7qf"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat90",
+    "citation": "2026 ONWSIAT 90 (CanLII)",
+    "decision_date": "2026-01-23",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Complex Regional Pain Syndrome — Whether entitlement is in order for CRPS under WSIA s. 13(1) — Diagnosis not confirmed by treating physicians — Objective findings for CRPS not met per medical consultant — Symptomatic reports without confirmed diagnosis insufficient — Compatibility of diagnosis to disablement history not established — Entitlement denied | Workplace health and safety — Workers’ compensation — Thoracic Outlet Syndrome — Whether entitlement is in order for TOS under WSIA s. 13(1) — Vascular studies did not support vascular TOS — No work-up confirming neurogenic TOS — Treating specialist and WSIB medical consultant did not confirm diagnosis — Physiotherapy suggestions given less weight — Compatibility with accident history not established — Entitlement denied | Workplace health and safety — Permanent impairment — Repetitive strain injuries — Whether ongoing entitlement extends beyond September 11, 2018 — MMR reached with permanent impairment established — Ongoing symptoms and treatment documented post‑2018 — New medical evidence from 2025 corroborative — WSIA s. 46 non‑economic loss entitlement engaged — Recognition of permanent impairment and NEL determination ordered | Workplace health and safety — Causation — Significant contributing factor — Whether compensable RSIs significantly contributed to ongoing disability at MMR — Tribunal applies significant contribution test from WSIAT jurisprudence — Balance of probabilities with benefit of the doubt under WSIA s. 124(2) — Medical reports and credible testimony establish persistent RSI limitations — Ongoing entitlement confirmed, appeal allowed in part"
+    ],
+    "url": "https://canlii.ca/t/kk7qg"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat95",
+    "citation": "2026 ONWSIAT 95 (CanLII)",
+    "decision_date": "2026-01-23",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Non-economic loss — Chronic Pain Disability — Whether impairment falls within Class 4 marked impairment or Class 3 moderate impairment — Application of WSIB Policy 18-05-11 rating scale — Activities of daily living, social functioning, concentration, adaptation assessed — Overall presentation most closely resembles middle to high end of Class 3 — Appeal denied | Evidence — Expert evidence — Weighing medical opinions — Whether the Tribunal could reject a psychologist’s uncontroverted Class 4 opinion — Ferreira v. WSIAT considered with Decision No. 1193/21 factors for weighing medical evidence — NEL Clinical Specialist summary accepted, psychologist’s knowledge of circumstances incomplete — Adjudication on merits and justice, no substitution of medical theory — Appeal dismissed | Workplace health and safety — Permanent impairment — NEL redetermination — Whether July 16, 2024 permanent worsening established deterioration warranting rating above 40 percent — Comparison with 2019 MMR findings and Decision No. 404/23 — Evidence of travel, short drives, hobbies, family assistance showed functioning beyond Class 4 — Quantum consistent with Class 3 at 40 percent — NEL award confirmed"
+    ],
+    "url": "https://canlii.ca/t/kk7q4"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat111",
+    "citation": "2026 ONWSIAT 111 (CanLII)",
+    "decision_date": "2026-01-29",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A6",
+    "reasons": [
+      "A6"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Psychotraumatic disability — Whether the worker has initial entitlement to benefits for psychotraumatic disability — Policy 15-04-02 applied to organic and reactive conditions — Need for causal link to accident or permanent impairment and continuity before physical recovery — Non-compensable pain and social stressors identified — Entitlement denied, appeal dismissed | Workplace health and safety — Standard of proof — Benefit of the doubt — Application of the balance of probabilities as modified by WSIA s.124(2) — Significant contribution causation test referenced — Whether evidence for and against is approximately equal in weight — Evidence not in equipoise, significant contribution not established — Appeal dismissed | Evidence — Medical reports — Causation — Whether medical evidence establishes a causal relationship between workplace injury or right hand impairment and psychotraumatic disability — Psychologist’s report dated long after recovery, onset not identified — Consultation note not probative of causal link — Clinical notes omit right hand or wrist impairment — Causal connection not proven, appeal dismissed | Procedure — Res judicata — Prior decisions — Whether res judicata prevents revisiting findings made in prior Tribunal decisions — Prior determinations on recovery and chronic pain applied — Tribunal has no jurisdiction to overturn a prior final decision concerning the same issue — Argument rejected, appeal dismissed"
+    ],
+    "url": "https://canlii.ca/t/kk7pv"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat118",
+    "citation": "2026 ONWSIAT 118 (CanLII)",
+    "decision_date": "2026-01-30",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Appeals — Workers’ compensation — WSIA framework and WSIB policy suite — Whether appeal from multiple ARO decisions should be allowed — Return to work, suitability, CPD and LOE considered together — Tribunal applies WSIB Policies 15-04-03 and 15-04-04 and s. 43 WSIA — Global assessment of impairment and earning capacity — Appeal allowed | Workplace health and safety — Chronic pain — WSIB Policy 15-04-03 — Did the worker meet all five CPD criteria? — Diagnosis supported by Multidisciplinary Assessment and ongoing treatment — Pain persistence beyond usual healing, inconsistency with organic findings established — Marked life disruption and impaired earning capacity found — CPD entitlement granted | Workplace health and safety — Return to work — Suitable employment — Was the Quality Control position suitable in October 2018? — Restrictions from Dr. Yee and Functional Abilities Evaluation — Lack of accommodations, micro-breaks and assistance found — Duties exceeded restrictions and mirrored pre-accident tasks — Modified work unsuitable | Workplace health and safety — Loss of earnings — WSIA, s. 43 — Is the worker entitled to LOE from October 16, 2018? — Causation and cooperation analysed, refusal of suitable work rejected — Mitigation through part-time sales and paralegal licensing considered — Full LOE to licensing, partial LOE thereafter, final review remitted — Full LOE then partial LOE, final review remitted"
+    ],
+    "url": "https://canlii.ca/t/kk7q8"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat142",
+    "citation": "2026 ONWSIAT 142 (CanLII)",
+    "decision_date": "2026-02-06",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Non‑Economic Loss (NEL) — Correctness of 10% whole person impairment — AMA Guides, 3rd ed. revised applied — Whether range of motion and Table 53 ratings properly combined — No separate Table 49 rating where no nerve root impairment — 10% NEL confirmed | Workplace health and safety — Workers’ compensation — Chronic Pain Disability — WSIB Policy 15-04-03 criteria — Whether pain degree is inconsistent with organic findings — Evidence of L5-S1 and non‑compensable L4-L5 conditions considered — “No stacking” principle under Policy 15-04-04 noted — CPD entitlement denied | Workplace health and safety — Return to work — Suitable employment — Suitability of COVID‑19 screener position — WSIA s. 40 duties and accommodations assessed — Consistent with functional abilities, sedentary with sit‑stand options, graduated hours offered — Refusal of suitable work examined against medical evidence — Position found suitable | Workplace health and safety — Benefits — Loss of Earnings (LOE) — WSIA s. 43 entitlement and quantum — Whether wage loss caused by injury or refusal of suitable work — Partial LOE from August 25, 2020 to April 9, 2021, and June 28 to September 27, 2021 — No LOE after September 27, 2021 — Partial LOE confirmed to set dates, post‑September 27, 2021 denied"
+    ],
+    "url": "https://canlii.ca/t/kkb88"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt1799",
+    "citation": "2020 ONSBT 1799 (CanLII)",
+    "decision_date": "2020-08-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — pain — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/j9w5w"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt1576",
+    "citation": "2020 ONSBT 1576 (CanLII)",
+    "decision_date": "2020-07-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — fibromyalgia — impairments — substantial — daily living"
+    ],
+    "url": "https://canlii.ca/t/j939x"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt1520",
+    "citation": "2020 ONSBT 1520 (CanLII)",
+    "decision_date": "2020-07-14",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — family doctor — fibromyalgia — person with a disability — impairments"
+    ],
+    "url": "https://canlii.ca/t/j9392"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt1077",
+    "citation": "2020 ONSBT 1077 (CanLII)",
+    "decision_date": "2020-05-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — pain — fibromyalgia — rheumatologist"
+    ],
+    "url": "https://canlii.ca/t/j90zz"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt1069",
+    "citation": "2020 ONSBT 1069 (CanLII)",
+    "decision_date": "2020-05-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairments — complex regional pain syndrome-right shoulder — substantial — medical"
+    ],
+    "url": "https://canlii.ca/t/j912l"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt839",
+    "citation": "2020 ONSBT 839 (CanLII)",
+    "decision_date": "2020-03-31",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "nurse practitioner — person with a disability — verified impairments — chronic pain ankylosing spondylitis — consciousness"
+    ],
+    "url": "https://canlii.ca/t/j90t7"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt794",
+    "citation": "2020 ONSBT 794 (CanLII)",
+    "decision_date": "2020-03-30",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — family physician — impairments — chronic pain — substantial"
+    ],
+    "url": "https://canlii.ca/t/j90pt"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt719",
+    "citation": "2020 ONSBT 719 (CanLII)",
+    "decision_date": "2020-03-17",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — chronic pain — weakness"
+    ],
+    "url": "https://canlii.ca/t/j90jg"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt594",
+    "citation": "2020 ONSBT 594 (CanLII)",
+    "decision_date": "2020-02-27",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — person with a disability — impairments — fibromyalgia — anxiety"
+    ],
+    "url": "https://canlii.ca/t/j90d8"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt520",
+    "citation": "2020 ONSBT 520 (CanLII)",
+    "decision_date": "2020-02-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — headaches — chronic pain — substantial"
+    ],
+    "url": "https://canlii.ca/t/j90bd"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt394",
+    "citation": "2020 ONSBT 394 (CanLII)",
+    "decision_date": "2020-02-06",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — chronic pain — person with a disability — psychiatrist — hip"
+    ],
+    "url": "https://canlii.ca/t/j8zmm"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt315",
+    "citation": "2020 ONSBT 315 (CanLII)",
+    "decision_date": "2020-01-28",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — substantial — fibromyalgia — verified"
+    ],
+    "url": "https://canlii.ca/t/j8znw"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt245",
+    "citation": "2020 ONSBT 245 (CanLII)",
+    "decision_date": "2020-01-21",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — verified — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/j8kr3"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt172",
+    "citation": "2020 ONSBT 172 (CanLII)",
+    "decision_date": "2020-01-15",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — fibromyalgia — verified"
+    ],
+    "url": "https://canlii.ca/t/j8kjv"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt56",
+    "citation": "2020 ONSBT 56 (CanLII)",
+    "decision_date": "2020-01-07",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — chikungunya — substantiality — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/j8kfw"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2020onsbt6",
+    "citation": "2020 ONSBT 6 (CanLII)",
+    "decision_date": "2020-01-02",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — family physician — pain — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/j8kgp"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1819",
+    "citation": "2021 ONSBT 1819 (CanLII)",
+    "decision_date": "2021-08-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairments — fibromyalgia — intellectual ability — substantial"
+    ],
+    "url": "https://canlii.ca/t/jjxt6"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1785",
+    "citation": "2021 ONSBT 1785 (CanLII)",
+    "decision_date": "2021-07-28",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 66,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairments — chronic pain — daily — verified"
+    ],
+    "url": "https://canlii.ca/t/jj893"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1774",
+    "citation": "2021 ONSBT 1774 (CanLII)",
+    "decision_date": "2021-07-27",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — fibromyalgia related impairments were cumulatively — daily living — verified — anxiety"
+    ],
+    "url": "https://canlii.ca/t/jj8b1"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1367",
+    "citation": "2021 ONSBT 1367 (CanLII)",
+    "decision_date": "2021-06-16",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairments — chronic pain — knee — substantial"
+    ],
+    "url": "https://canlii.ca/t/jh5nf"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1335",
+    "citation": "2021 ONSBT 1335 (CanLII)",
+    "decision_date": "2021-06-14",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — substantial — person with a disability — fibromyalgia — anxiety"
+    ],
+    "url": "https://canlii.ca/t/jh5mj"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1333",
+    "citation": "2021 ONSBT 1333 (CanLII)",
+    "decision_date": "2021-06-11",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairment — substantial — fibromyalgia — pain"
+    ],
+    "url": "https://canlii.ca/t/jh5n1"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1321",
+    "citation": "2021 ONSBT 1321 (CanLII)",
+    "decision_date": "2021-06-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — pain — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jh5mt"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1313",
+    "citation": "2021 ONSBT 1313 (CanLII)",
+    "decision_date": "2021-06-08",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — pain — fibromyalgia — incontinence"
+    ],
+    "url": "https://canlii.ca/t/jh5mn"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1109",
+    "citation": "2021 ONSBT 1109 (CanLII)",
+    "decision_date": "2021-05-18",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — fibromyalgia — impairment — substantial — pharmacotherapy"
+    ],
+    "url": "https://canlii.ca/t/jgt3k"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt995",
+    "citation": "2021 ONSBT 995 (CanLII)",
+    "decision_date": "2021-05-07",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "substantiality — impairments — person with a disability — fibromyalgia — imaging"
+    ],
+    "url": "https://canlii.ca/t/jgr4l"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt967",
+    "citation": "2021 ONSBT 967 (CanLII)",
+    "decision_date": "2021-05-04",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 64,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "substantial impairments — person with a disability — fibromyalgia — daily living — cumulatively substantial"
+    ],
+    "url": "https://canlii.ca/t/jgr75"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt931",
+    "citation": "2021 ONSBT 931 (CanLII)",
+    "decision_date": "2021-05-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — daily living — restriction — fibromyalgia — cumulatively substantial"
+    ],
+    "url": "https://canlii.ca/t/jgr62"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt849",
+    "citation": "2021 ONSBT 849 (CanLII)",
+    "decision_date": "2021-04-23",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — impairments — person with a disability — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jgndd"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt718",
+    "citation": "2021 ONSBT 718 (CanLII)",
+    "decision_date": "2021-04-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairments — medications — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jghb3"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt558",
+    "citation": "2021 ONSBT 558 (CanLII)",
+    "decision_date": "2021-03-22",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "chronic pain — person with a disability — mood — impairments — substantial"
+    ],
+    "url": "https://canlii.ca/t/jg7jf"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt131",
+    "citation": "2021 ONSBT 131 (CanLII)",
+    "decision_date": "2021-01-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — substantial — fibromyalgia related impairments — daily living — pain"
+    ],
+    "url": "https://canlii.ca/t/jfhcw"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt1544",
+    "citation": "2022 ONSBT 1544 (CanLII)",
+    "decision_date": "2022-05-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — chronic pain — substantial — opioid"
+    ],
+    "url": "https://canlii.ca/t/jr1hq"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt1538",
+    "citation": "2022 ONSBT 1538 (CanLII)",
+    "decision_date": "2022-05-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — impairments — fibromyalgia — verified — restrictions"
+    ],
+    "url": "https://canlii.ca/t/jr1lb"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt1455",
+    "citation": "2022 ONSBT 1455 (CanLII)",
+    "decision_date": "2022-05-20",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — fibromyalgia — pain"
+    ],
+    "url": "https://canlii.ca/t/jr1c3"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt1348",
+    "citation": "2022 ONSBT 1348 (CanLII)",
+    "decision_date": "2022-05-13",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — fibromyalgia — pain"
+    ],
+    "url": "https://canlii.ca/t/jr0qx"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt1127",
+    "citation": "2022 ONSBT 1127 (CanLII)",
+    "decision_date": "2022-04-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairments — pain — fibromyalgia — substantial"
+    ],
+    "url": "https://canlii.ca/t/jqxs2"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt1106",
+    "citation": "2022 ONSBT 1106 (CanLII)",
+    "decision_date": "2022-04-26",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — chronic pain — substantial — daily living"
+    ],
+    "url": "https://canlii.ca/t/jqxs7"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt1047",
+    "citation": "2022 ONSBT 1047 (CanLII)",
+    "decision_date": "2022-04-21",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial — nurse practitioner — verified impairments — chronic pain joint swelling"
+    ],
+    "url": "https://canlii.ca/t/jqfsn"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt1006",
+    "citation": "2022 ONSBT 1006 (CanLII)",
+    "decision_date": "2022-04-19",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — verified — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jqfql"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt852",
+    "citation": "2022 ONSBT 852 (CanLII)",
+    "decision_date": "2022-04-06",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — substantial — person with a disability — fibromyalgia myofascial pain — daily living"
+    ],
+    "url": "https://canlii.ca/t/jpms5"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt705",
+    "citation": "2022 ONSBT 705 (CanLII)",
+    "decision_date": "2022-03-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — daily living — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jpktl"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt572",
+    "citation": "2022 ONSBT 572 (CanLII)",
+    "decision_date": "2022-03-10",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — chronic pain — substantial — verified"
+    ],
+    "url": "https://canlii.ca/t/jpkc1"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt553",
+    "citation": "2022 ONSBT 553 (CanLII)",
+    "decision_date": "2022-03-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — impairments — person with a disability — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jpkcw"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt481",
+    "citation": "2022 ONSBT 481 (CanLII)",
+    "decision_date": "2022-02-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairments — chronic pain — substantial — family physician"
+    ],
+    "url": "https://canlii.ca/t/jphxq"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt410",
+    "citation": "2022 ONSBT 410 (CanLII)",
+    "decision_date": "2022-02-17",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 64,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairments — daily living — pain — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jpj06"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt385",
+    "citation": "2022 ONSBT 385 (CanLII)",
+    "decision_date": "2022-02-15",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — impairments — person with a disability — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jpht2"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt347",
+    "citation": "2022 ONSBT 347 (CanLII)",
+    "decision_date": "2022-02-10",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — substantial — impairments — person with a disability — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jphsm"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt329",
+    "citation": "2022 ONSBT 329 (CanLII)",
+    "decision_date": "2022-02-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — fibromyalgia — daily living"
+    ],
+    "url": "https://canlii.ca/t/jphrl"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt320",
+    "citation": "2022 ONSBT 320 (CanLII)",
+    "decision_date": "2022-02-08",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — fibromyalgia — pain"
+    ],
+    "url": "https://canlii.ca/t/jphrp"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt312",
+    "citation": "2022 ONSBT 312 (CanLII)",
+    "decision_date": "2022-02-07",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairments — substantial — heel — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jphvj"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt247",
+    "citation": "2022 ONSBT 247 (CanLII)",
+    "decision_date": "2022-01-31",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — chronic pain — substantial — restrictions"
+    ],
+    "url": "https://canlii.ca/t/jpfbt"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt225",
+    "citation": "2022 ONSBT 225 (CanLII)",
+    "decision_date": "2022-01-27",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — anxiety — substantial — fibromyalgia — person with a disability"
+    ],
+    "url": "https://canlii.ca/t/jpfbq"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2022onsbt19",
+    "citation": "2022 ONSBT 19 (CanLII)",
+    "decision_date": "2022-01-05",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "family doctor — impairments — person with a disability — fibromyalgia — substantial"
+    ],
+    "url": "https://canlii.ca/t/jpd7m"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt1981",
+    "citation": "2023 ONSBT 1981 (CanLII)",
+    "decision_date": "2023-05-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — pain — fibromyalgia — around the date — knees"
+    ],
+    "url": "https://canlii.ca/t/jz41x"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt1910",
+    "citation": "2023 ONSBT 1910 (CanLII)",
+    "decision_date": "2023-05-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — person with a disability — impairments — fibromyalgia — substantial"
+    ],
+    "url": "https://canlii.ca/t/jz42d"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt1639",
+    "citation": "2023 ONSBT 1639 (CanLII)",
+    "decision_date": "2023-05-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — fibromyalgia related impairments — astigmatism — cumulatively — daily living"
+    ],
+    "url": "https://canlii.ca/t/jz13s"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt1611",
+    "citation": "2023 ONSBT 1611 (CanLII)",
+    "decision_date": "2023-05-03",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 64,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairment — daily living — fibromyalgia — lifting"
+    ],
+    "url": "https://canlii.ca/t/jz13r"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt1082",
+    "citation": "2023 ONSBT 1082 (CanLII)",
+    "decision_date": "2023-03-27",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — pain disorder — substantial — neck"
+    ],
+    "url": "https://canlii.ca/t/jxh04"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt1078",
+    "citation": "2023 ONSBT 1078 (CanLII)",
+    "decision_date": "2023-03-24",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 64,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairments — fibromyalgia — daily living — restriction"
+    ],
+    "url": "https://canlii.ca/t/jxh03"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt1064",
+    "citation": "2023 ONSBT 1064 (CanLII)",
+    "decision_date": "2023-03-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — fibromyalgia — daily living — substantial"
+    ],
+    "url": "https://canlii.ca/t/jxh15"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt1040",
+    "citation": "2023 ONSBT 1040 (CanLII)",
+    "decision_date": "2023-03-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — fibromyalgia — practitioner — fatigue — outpatient emergency record noted"
+    ],
+    "url": "https://canlii.ca/t/jxh2t"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt958",
+    "citation": "2023 ONSBT 958 (CanLII)",
+    "decision_date": "2023-03-14",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — substantial — person with a disability — subsequent chronic pain — ratings"
+    ],
+    "url": "https://canlii.ca/t/jxg5t"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt3676",
+    "citation": "2023 ONSBT 3676 (CanLII)",
+    "decision_date": "2023-03-09",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — nurse practitioner — fibromyalgia — substantial"
+    ],
+    "url": "https://canlii.ca/t/k1gw6"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt821",
+    "citation": "2023 ONSBT 821 (CanLII)",
+    "decision_date": "2023-03-06",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — substantial — person with a disability — fibromyalgia — ratings"
+    ],
+    "url": "https://canlii.ca/t/jxg10"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt4860",
+    "citation": "2023 ONSBT 4860 (CanLII)",
+    "decision_date": "2023-03-06",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — chronic pain — daily living — ratings"
+    ],
+    "url": "https://canlii.ca/t/k2wcc"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt407",
+    "citation": "2023 ONSBT 407 (CanLII)",
+    "decision_date": "2023-02-06",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — anxiety — impairments — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/jwlgm"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt271",
+    "citation": "2023 ONSBT 271 (CanLII)",
+    "decision_date": "2023-01-19",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — prostatitis — chronic pain — substantial"
+    ],
+    "url": "https://canlii.ca/t/jwcwc"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2023onsbt10",
+    "citation": "2023 ONSBT 10 (CanLII)",
+    "decision_date": "2023-01-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "noted — person with a disability — chronic pain — practitioner — daily"
+    ],
+    "url": "https://canlii.ca/t/jw6g6"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2024onsbt893",
+    "citation": "2024 ONSBT 893 (CanLII)",
+    "decision_date": "2024-02-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — pain — substantial — fibromyalgia — person with a disability"
+    ],
+    "url": "https://canlii.ca/t/k3s88"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2024onsbt682",
+    "citation": "2024 ONSBT 682 (CanLII)",
+    "decision_date": "2024-02-08",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairments — daily living — pain — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/k3sjx"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2024onsbt467",
+    "citation": "2024 ONSBT 467 (CanLII)",
+    "decision_date": "2024-01-25",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — chronic pain — substantial — hip — person with a disability"
+    ],
+    "url": "https://canlii.ca/t/k3qwm"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2024onsbt463",
+    "citation": "2024 ONSBT 463 (CanLII)",
+    "decision_date": "2024-01-24",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — pain — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/k3qt9"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2024onsbt442",
+    "citation": "2024 ONSBT 442 (CanLII)",
+    "decision_date": "2024-01-24",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "pain — person with a disability — fibromyalgia — verified impairments — substantial"
+    ],
+    "url": "https://canlii.ca/t/k3qv7"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2024onsbt205",
+    "citation": "2024 ONSBT 205 (CanLII)",
+    "decision_date": "2024-01-15",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "pain — impairments — person with a disability — function — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/k3qss"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt2822",
+    "citation": "2025 ONSBT 2822 (CanLII)",
+    "decision_date": "2025-09-08",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "fibromyalgia — mental health — assessing the substantiality — verified impairments — physician"
+    ],
+    "url": "https://canlii.ca/t/kg31t"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt2618",
+    "citation": "2025 ONSBT 2618 (CanLII)",
+    "decision_date": "2025-08-21",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "physician — impairments — medication — chronic pain — person with a disability"
+    ],
+    "url": "https://canlii.ca/t/kfkmf"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt2549",
+    "citation": "2025 ONSBT 2549 (CanLII)",
+    "decision_date": "2025-08-15",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — person with a disability — daily living — ability to function — chronic pain"
+    ],
+    "url": "https://canlii.ca/t/kf931"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt1243",
+    "citation": "2025 ONSBT 1243 (CanLII)",
+    "decision_date": "2025-04-25",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 61,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — fibromyalgia — verified"
+    ],
+    "url": "https://canlii.ca/t/kc1px"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt1220",
+    "citation": "2025 ONSBT 1220 (CanLII)",
+    "decision_date": "2025-04-22",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "migraines — endometriosis — person with a disability — fibromyalgia — pain"
+    ],
+    "url": "https://canlii.ca/t/kc1m1"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt910",
+    "citation": "2025 ONSBT 910 (CanLII)",
+    "decision_date": "2025-03-28",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "impairments — chronic pain — person with a disability — surgery — shoulder"
+    ],
+    "url": "https://canlii.ca/t/kbs5t"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt712",
+    "citation": "2025 ONSBT 712 (CanLII)",
+    "decision_date": "2025-03-12",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — impairment — substantial — pain — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/kbs05"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt545",
+    "citation": "2025 ONSBT 545 (CanLII)",
+    "decision_date": "2025-02-24",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 64,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — chronic pain — evidence — substantial impairment — medical"
+    ],
+    "url": "https://canlii.ca/t/kb018"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt465",
+    "citation": "2025 ONSBT 465 (CanLII)",
+    "decision_date": "2025-02-18",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "person with a disability — cancer — impairments — substantial — fibromyalgia"
+    ],
+    "url": "https://canlii.ca/t/k9x32"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2025onsbt310",
+    "citation": "2025 ONSBT 310 (CanLII)",
+    "decision_date": "2025-02-03",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "chronic pain — sleep — person with a disability — anxiety — substantial"
+    ],
+    "url": "https://canlii.ca/t/k9wd5"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt1081",
+    "citation": "2026 ONSBT 1081 (CanLII)",
+    "decision_date": "2026-03-30",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Person with a disability — ODSPA, s. 4(1) — Onus under s. 23(10) — Did the Appellant meet the definition at the date of the Director’s decision? — Verification by prescribed professional satisfied — Director’s decision found wrong — Income support payable under O. Reg. 222/98, s. 17 — Appeal granted | Pensions and social benefits — Ontario Disability Support Program — Substantial impairment — ODSPA, s. 4(1)(a) — Gray v. Director and Crane v. Director applied — Is substantiality established on the totality and cumulative effect of impairments? — Chronic pain, depression, fatigue and sleep dysfunction accepted — Treatment efforts commensurate — Substantial impairment found | Pensions and social benefits — Ontario Disability Support Program — Activities of daily living — ODSPA, s. 4(1)(b) — Director v. Gallier considered — Do impairments cause substantial restriction in workplace functioning? — ADL and IEWS ratings support limitations — Personal circumstances, age and work history weighed — Substantial restriction in workplace functioning found | Pensions and social benefits — Ontario Disability Support Program — Review date — O. Reg. 222/98, s. 5(1) — Should a review date be set where impairment not likely to improve? — Age and longstanding impairments considered — Evidence of persistent limitations accepted — Determination not to be reviewed — No review date set"
+    ],
+    "url": "https://canlii.ca/t/kkkb9"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt991",
+    "citation": "2026 ONSBT 991 (CanLII)",
+    "decision_date": "2026-03-24",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Person with a disability — Whether the Appellant met s. 4(1) at the time of the Director’s decision — Guidance from Gray, Crane applied — Medical verification, duration and restrictions assessed — Tribunal satisfied criteria in s. 4(1)(a) to (c) met — Director’s decision rescinded — Appeal granted | Pensions and social benefits — Ontario Disability Support Program — Substantial impairment — Were the Appellant’s impairments cumulatively substantial under s. 4(1)(a) — Gray v. ODSP and Crane considered — Evidence of depressive and anxiety disorders and fibromyalgia — Treatment including hospitalization and medications weighed — Totality of evidence accepted — Substantial impairments found | Pensions and social benefits — Ontario Disability Support Program — Substantial restriction — Did impairments substantially restrict function in a workplace under s. 4(1)(b) — Gallier principle applied to Appellant’s situation — Remote flexible work contrasted with full‑time set hours — Past dysfunction and medical leaves noted — Substantial workplace restriction established | Pensions and social benefits — Ontario Disability Support Program — Verification — Verification by person with prescribed qualifications under s. 4(1)(c) — Health Status Report and medical chart by family physician accepted — Impairments, likely duration and restrictions properly verified — Overlap of evidence for paras. (a) and (b) acknowledged per Crane — Verification requirement satisfied | Pensions and social benefits — Ontario Disability Support Program — Review date — Should a review date be set under O. Reg. 222/98, s. 5(1) — Younger Appellant and ongoing treatment efforts considered — Impairments not fixed as non‑improving — Review date appropriate — Income support ordered if otherwise eligible — Review scheduled for two years — Appeal granted"
+    ],
+    "url": "https://canlii.ca/t/kk67t"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt1023",
+    "citation": "2026 ONSBT 1023 (CanLII)",
+    "decision_date": "2026-03-19",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 64,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "Procedure — Appeals — Extension of time — Appeal filed outside 30 days in subs. 61(2) of O. Reg. 222/98 — Tribunal may extend time where reasonable grounds under s. 23(2) of the Ontario Disability Support Program Act, 1997 — Filed within one year — Reasons for delay accepted — Respondent did not raise timeliness — Time for filing extended | Pensions and social benefits — Disability determination — Substantial impairment — s. 4(1)(a) of the Ontario Disability Support Program Act, 1997 — Meaning of substantial guided by Gray and Crane — Whether fibromyalgia and chronic back and neck pain cumulatively substantial — Totality of testimony, HSR, DDP and treatment efforts considered — Overactive bladder not substantial — Person with a disability found | Pensions and social benefits — Activities of daily living — Workplace function — s. 4(1)(b) of the Ontario Disability Support Program Act, 1997 — Whether substantial restriction in ability to function in a workplace — Gallier applied to assess Appellant in own situation — ADLI moderate and severe limitations consistent with testimony — Pain exacerbated by activity — Substantial restriction established | Pensions and social benefits — Review — O. Reg. 222/98, s. 5(1) — Whether to set a review date where impairment may improve — Evidence of new treatments leading to improvement in pain and functionality — Ongoing nature of impairments acknowledged — One year review date appropriate — Review date set"
+    ],
+    "url": "https://canlii.ca/t/kkkd6"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt909",
+    "citation": "2026 ONSBT 909 (CanLII)",
+    "decision_date": "2026-03-16",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A1",
+    "reasons": [
+      "A1"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Eligibility — Is the Appellant a person with a disability under ODSPA s. 4(1)? — Onus on Appellant under s. 23(10) met — Medical verification by physician accepted — Director’s decision wrong — Income support payable if otherwise eligible — Appeal granted | Pensions and social benefits — Disability determination — Substantial impairment — Whether substantial impairments proven on a balance of probabilities — Gray and Crane interpreted on flexible meaning of “substantial” — Alcohol use disorder and chronic pain cumulatively substantial — Medical records and testimony credited — Other impairments not decided — Finding of substantial impairments | Pensions and social benefits — Activities of daily living — Workplace function — Do impairments cause substantial restriction in a workplace? — Gallier applied to consider individual context — Chronic pain and alcohol use with narcotic analgesic undermine safety and reliability — Physician evidence supports moderate limitations — Construction work not feasible — Substantial restriction in workplace found | Pensions and social benefits — Ontario Disability Support Program — Review date — Should a review date be set under O. Reg. 222/98, s. 5(1)? — Potential for improvement given age, employment history, recent treatment — Decision maker satisfied a review is appropriate — Future reassessment ordered — Review date set | Pensions and social benefits — Remedies — Tribunal order — Whether to rescind Director’s decision and order income support — Decision of Respondent rescinded — ODSPA applied with O. Reg. 222/98 s. 17 for payment — Benefit entitlement subject to other eligibility — Appeal allowed and order issued"
+    ],
+    "url": "https://canlii.ca/t/kk675"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt836",
+    "citation": "2026 ONSBT 836 (CanLII)",
+    "decision_date": "2026-03-11",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 66,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — ODSP — Medical review — Definition of “person with a disability” — Whether the Appellant remains a person with a disability under s. 4(1) — Comparative test under O. Reg. 222/98, s. 5(2) applied — Gray and Crane considered — Onus under ODSPA, s. 23(10) not met — Not a person with a disability | Pensions and social benefits — ODSP — Medical review — Improvement — Whether previously verified epilepsy impairments and restrictions persisted — Medical Review Form indicated no current epilepsy information — Previously verified impairments not present at review — Comparative analysis supports change for the better — Prior eligibility not re‑litigated — Improvement found | Pensions and social benefits — ODSP — Substantial impairment — Fibromyalgia — Whether fibromyalgia impairments were substantial at the date of decision — Limited treatment and investigation weighed under Jemiolo — ADL ratings unsupported and inconsistent with activities — Neurologist report largely unremarkable and remote — Totality of evidence insufficient — Substantial impairment not established | Procedure — Tribunal practice — Adjournment — Whether adjournment warranted due to inconsistencies and prejudice — No prejudice shown and ample time to prepare — Clarifications from DAU not necessary — Authority to compel amended submissions questioned — Financial eligibility issues not determinative of medical review — Adjournment refused"
+    ],
+    "url": "https://canlii.ca/t/kk626"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt835",
+    "citation": "2026 ONSBT 835 (CanLII)",
+    "decision_date": "2026-03-11",
+    "inferred_outcome": "Granted",
+    "tier": "B",
+    "confidence": 66,
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Disability determination — Person with a disability under ODSPA s. 4(1) — Whether impairments and restrictions were substantial at the date of the Director’s decision — Neck and back pain, fibromyalgia, depression and anxiety considered cumulatively — Gray and Crane framework applied — Director’s decision affirmed — Appeal denied | Procedure — Onus — Tribunal appeals — ODSPA s. 23(10) — Whether the Appellant satisfied the Tribunal that the Director’s decision was wrong — Balance of probabilities applied to verified impairments and restrictions — Date of decision rule emphasised — Failure to meet onus results in denial — Appeal denied | Statutory interpretation — ODSPA s. 4(1) — Meaning of “substantial” — Interpretation of substantial impairment and substantial restriction — Gray v. Director, ODSP and Crane v. Ontario considered — Flexible meaning tied to individual context and purposes of the Act — Three separate tests requiring separate analysis — Director’s decision affirmed | Evidence — Medical evidence — Appellate tribunals — Weight of physician HSR, hospital notes, rheumatology report — Credible but unreliable testimony due to timelines — IEWS and ADLI severe ratings given less weight absent supporting records — Limited investigation and treatment at decision date — Substantial impairment not established — Appeal denied"
+    ],
+    "url": "https://canlii.ca/t/kk62d"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt834",
+    "citation": "2026 ONSBT 834 (CanLII)",
+    "decision_date": "2026-03-11",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Person with a disability — ODSPA, s. 4(1) — Whether Appellant is a person with a disability — Guidance from Gray v. Director, ODSP and Crane v. Ontario applied — Cumulative assessment of medical and testimonial evidence — Director’s decision rescinded and income support ordered under O. Reg. 222/98, s. 17 — Appeal granted | Pensions and social benefits — Definition — Verification — ODSPA, s. 4(1)(c) — Were the impairments, duration and restrictions verified by a prescribed professional? — Nurse practitioner completed HSR and ADLI with prescribed qualifications — Psychiatric consultation noted adjustment disorder with significant mood and anxiety component — Verification found sufficient on balance of probabilities — Verification accepted | Pensions and social benefits — Definition — Substantial impairment — ODSPA, s. 4(1)(a) — Did the Appellant have a substantial physical or mental impairment? — Chronic pain syndrome and adjustment disorder with mixed anxiety and depression — IEWS moderate ratings and treatment efforts considered with Jemiolo — Flexible, cumulative assessment per Gray and Crane — Substantial impairment found | Pensions and social benefits — Activities of daily living — Substantial restriction — ODSPA, s. 4(1)(b) — Did impairments cause substantial restriction, particularly workplace functioning, at date of decision? — ADLI ratings with narrative qualifiers, social anxiety, pain limiting standing, walking, lifting — Workplace functioning substantially restricted in any workplace, sedentary or physical — Substantial restriction found | Pensions and social benefits — Review — ODSPA Regulation — O. Reg. 222/98, s. 5(1) — Should a review date be set? — Ongoing treatment efforts and age considered — Post‑decision counselling noted though given little weight for impairment finding — Decision maker not satisfied impairments are not likely to improve — Review date set for one year — Review date set"
+    ],
+    "url": "https://canlii.ca/t/kk62c"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt832",
+    "citation": "2026 ONSBT 832 (CanLII)",
+    "decision_date": "2026-03-10",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Eligibility — Definition of “person with a disability,” s. 4(1), Ontario Disability Support Program Act, 1997 — Whether Appellant met s. 4(1) at the time of the Director’s decision — Substantial impairment assessed using totality of evidence and cumulative lens — Guidance from Gray and Crane applied — Onus under s. 23(10) met — Appeal granted | Evidence — New medical evidence — Post‑decision reports relating back — Whether new evidence relates to condition at time of Director’s decision — Subsection 64(1) of the Ontario Disability Support Program Act, 1997 considered — Omar and Jemiolo applied — Presumption about timing of reports addressed — Tribunal satisfied reports explicitly relate to effective date — New evidence considered | Pensions and social benefits — Restrictions — Activities of daily living, workplace function — Whether substantial restriction in the workplace established — Gallier considered on contextual assessment — Verified fibromyalgia impairments causing unpredictable flares and mobility limits — Updated ADLI and HSR narratives consistent — Sedentary employment and retraining unreasonable on evidence — Substantial restriction in workplace established | Pensions and social benefits — Review mechanisms — Review date under O. Reg. 222/98, s. 5(1) — Whether impairments likely to improve such that a review should be set — Tribunal not satisfied impairments are unlikely to improve — Monitoring of functional status warranted — Review date set for one year — Review date set"
+    ],
+    "url": "https://canlii.ca/t/kk62b"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt761",
+    "citation": "2026 ONSBT 761 (CanLII)",
+    "decision_date": "2026-03-06",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A1",
+    "reasons": [
+      "A1"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Disability determination — Whether Appellant meets s. 4(1) ODSPA definition — Verification by prescribed professional under s. 4(1)(c) — Substantial impairments and substantial restrictions assessed on totality of evidence — Director’s decision rescinded — Review date considered under O. Reg. 222/98 — Income support ordered if otherwise eligible — Appeal granted | Pensions and social benefits — Disability definition — Substantial impairment — Whether impairments under s. 4(1)(a) are substantial — Guidance from Gray and Crane on flexible, contextual assessment — IEWS severe ratings, chronic pain, multiple surgeries, medication and therapy considered — Onus met under s. 23(10) — Substantial impairment established | Pensions and social benefits — Disability definition — Activities of daily living — Whether substantial restrictions under s. 4(1)(b) proven — ADLI severe bladder control, moderate sitting, physical limitations corroborated — Gallier contextual approach applied to workplace functioning — Evidence of pain, concentration deficits, difficulty with tasks persuasive — Substantial restriction found | Pensions and social benefits — Proof and onus — Person with a disability — Whether the Appellant satisfied the Tribunal that the Director’s decision was wrong under s. 23(10) — Verified impairments, duration and restrictions accepted — Medical evidence and credible testimony aligned — Separate s. 4(1) tests analysed and met — Appeal allowed | Pensions and social benefits — Reviews — Medical review date — Whether to set review date under s. 5(1) of O. Reg. 222/98 — Likelihood of improvement considered in light of age and recent therapy — Continuing impairments acknowledged with potential for change — Review date of 2 years set — Review date set"
+    ],
+    "url": "https://canlii.ca/t/kk5z6"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt748",
+    "citation": "2026 ONSBT 748 (CanLII)",
+    "decision_date": "2026-03-06",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Disability determination — Ontario Disability Support Program Act, 1997, s. 4(1) — Is the Appellant a person with a disability under subsection 4(1)? — Guidance from Gray and Crane applied to substantial impairment analysis — Medical evidence and testimony accepted — Director’s decision found wrong under s. 23(10) — Appeal granted | Pensions and social benefits — Verification — ODSPA, s. 4(1)(c) — Were impairments, likely duration, and restrictions verified by prescribed professionals? — Health Status Report and physician’s medical report accepted — Prescribed qualifications established — Verification of Mental Health conditions and chronic pain confirmed at the decision date — Appeal granted | Pensions and social benefits — Activities of daily living — Substantial restriction — Do substantial impairments result in substantial restrictions in community, workplace, or personal care under s. 4(1)(b)? — Gallier considered on person‑centred assessment — ADLI and testimony show severe workplace and self‑care limitations — Substantial restriction in workplace found — Appeal granted | Pensions and social benefits — Review mechanisms — O. Reg. 222/98, s. 5(1) — Should a review date be set for disability determination? — Decision maker may set review unless satisfied impairment not likely to improve — Age and ongoing treatment support future review — Two‑year review date fixed — Review date set"
+    ],
+    "url": "https://canlii.ca/t/kk5xr"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt791",
+    "citation": "2026 ONSBT 791 (CanLII)",
+    "decision_date": "2026-03-04",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Definition of disability — Person with a disability under s. 4(1) ODSPA — Whether Director’s decision was wrong under s. 23(10) — Application of Gray v. Director and Crane — Medical verification and testimony considered — Appeal granted and decision rescinded — Person with a disability confirmed | Pensions and social benefits — Substantial impairment — ODSPA s. 4(1)(a) — Whether impairments were substantial at the date of the Director’s decision — Flexible meaning of “substantial” per Gray — Overlap with functional evidence per Crane — Physician’s IEWS ratings and narrative accepted — Medications and treatment reviewed — Substantial impairments found | Pensions and social benefits — Substantial restriction — Workplace functioning — ODSPA s. 4(1)(b) — Whether impairments caused a substantial restriction in workplace activities — Individualised assessment endorsed in Gallier — ADLI ratings and narrative support — Anxiety, chronic pain, headaches affecting mobility and concentration — Substantial restriction in workplace functioning found | Pensions and social benefits — Review of eligibility — Review date — O. Reg. 222/98, s. 5(1) — Whether a review date should be set — Consideration of age and possibility impairments may lessen with treatment — Determination to reassess status — Review date set for two years from Order date"
+    ],
+    "url": "https://canlii.ca/t/kk60n"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt771",
+    "citation": "2026 ONSBT 771 (CanLII)",
+    "decision_date": "2026-03-03",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A1",
+    "reasons": [
+      "A1"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Eligibility — Person with a disability — ODSPA, s. 4(1) — Whether chronic pain impairment is substantial — Flexible meaning of substantial applied (Gray, Crane) — Evidence of persistent multi‑site pain, medications, assistive devices accepted — Substantial restriction in workplace functioning found, ADL Index supports — Director’s decision rescinded, person with a disability determined — Appeal allowed | Pensions and social benefits — Verification and onus — ODSPA, ss. 4(1)(c), 23(10) — Were impairment, duration and restrictions properly verified by a person with prescribed qualifications? — Health Status Report by physician accepted — Pharmacy and imaging records considered contextually — Appellant bears onus to show Director wrong — Onus met — Verification accepted | Pensions and social benefits — Review — Review date — O. Reg. 222/98, s. 5(1) — Should a review date be set where impairment may improve? — Potential knee surgery and ongoing care plan may reduce pain and mobility impairments — Not satisfied that impairment is not likely to improve — Review date set in two years — Review date ordered"
+    ],
+    "url": "https://canlii.ca/t/kk5zq"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt738",
+    "citation": "2026 ONSBT 738 (CanLII)",
+    "decision_date": "2026-03-03",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Disability determination — Ontario Disability Support Program Act, 1997, s. 4(1) — Whether the Appellant is a “person with a disability” at the time of the Director’s decision — Guidance from Gray v. Director, ODSP and Crane v. Ontario applied — Cumulative impairments from fibromyalgia and obstructive sleep apnea — Substantial restriction in the workplace established — Appeal granted | Procedure — Extension of time — Ontario Disability Support Program Act, 1997, s. 23(2) — Whether to extend the 30‑day deadline to appeal under O. Reg. 222/98, s. 61(1) — Intention to appeal and efforts to proceed established — Reasonable grounds for extension and apparent grounds for appeal found — Extension to file the appeal granted | Pensions and social benefits — Review — O. Reg. 222/98, s. 5(1) — Whether to set a review date for a determination that a person is a person with a disability — Impairments may improve to allow return to full‑time employment — Review mechanism engaged to reassess disability status — Review date set for one year from the order date"
+    ],
+    "url": "https://canlii.ca/t/kk5xd"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt754",
+    "citation": "2026 ONSBT 754 (CanLII)",
+    "decision_date": "2026-03-02",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Evidence — Administrative tribunals — Admissibility and weight of new medical evidence — Are documents created after the Director’s decision admissible and what weight do they carry? — Omar and Jemiolo applied to s. 47(7) and s. 64(1)(a) of O. Reg. 222/98 — Evidence tied to the decision date considered — Post‑decision material afforded no weight — Partial admission and limited weight | Pensions and social benefits — Ontario Disability Support Program — Substantial impairment under ODSPA s. 4(1)(a) — Did the appellant have a continuous or recurrent impairment expected to last a year or more? — Gray and Crane interpreted — Chronic pain syndrome verified by prescribed professional — Medical and sworn testimony credited — Person with a disability status recognized — Appeal granted | Pensions and social benefits — Ontario Disability Support Program — Substantial restriction in activities of daily living — Did the impairments substantially restrict the ability to function in a workplace under s. 4(1)(b)? — Gallier applied to individual circumstances — IEWS and ADLI findings relied upon — Strength, stamina, sitting, standing, mobility limitations established — Substantial workplace restriction found | Pensions and social benefits — Ontario Disability Support Program — Review date under O. Reg. 222/98, s. 5(1) — Should a review date be set where impairment may improve with ongoing treatment? — Continuing clinical management and pending pain clinic referral noted — Decision maker satisfied a review is appropriate — Review date set at one year from order date"
+    ],
+    "url": "https://canlii.ca/t/kk5xz"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt698",
+    "citation": "2026 ONSBT 698 (CanLII)",
+    "decision_date": "2026-02-26",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Disability determination — Substantial impairment and restriction — ODSPA, s. 4(1) applied to concussion post motor vehicle accident — Do the Appellant’s impairments and restrictions meet the “substantial” thresholds? — Guidance from Gray and Crane considered — ADLI and IEWS ratings weighed with testimony and medical records — Director’s decision rescinded — Appeal granted | Pensions and social benefits — Verification requirements — Prescribed qualifications — Can conditions be considered without verification under ODSPA, s. 4(1)(c)? — Absence of qualified confirmation in HSR for fibromyalgia and chronic pain syndrome — Evidence concerning unverified impairments disregarded — Verification by physician for other impairments accepted — Statutory verification threshold enforced — Evidence disregarded | Pensions and social benefits — Review mechanism — Prognosis and improvement — Whether a review date should be set under O. Reg. 222/98, s. 5(1) — Not satisfied impairment unlikely to improve — Age and continued treatment efforts support reassessment — Focus on recovery and potential pharmacological optimisation noted — Timed review appropriate in circumstances — Review date set"
+    ],
+    "url": "https://canlii.ca/t/kk5wh"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt687",
+    "citation": "2026 ONSBT 687 (CanLII)",
+    "decision_date": "2026-02-25",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Eligibility — Definition of “person with a disability” — ODSPA, s. 4(1) — Whether the Appellant meets the statutory definition at the time of the Director’s decision — Guidance from Gray v. Director ODSP and Crane v. Ontario applied — Medical verification by nurse practitioner accepted — Tribunal satisfied impairments and restrictions meet statutory thresholds — Person with a disability found | Pensions and social benefits — Disability assessment — Substantial impairments and substantial restrictions — Do chronic pain, chronic insomnia and major depressive disorder constitute substantial impairments causing substantial restrictions in activities of daily living? — IEWS and ADLI ratings persuasive — Gallier contextual analysis applied — Limited treatment not determinative per Jemiolo — Cumulative effect established on balance of probabilities — Substantial restriction in workplace function found | Pensions and social benefits — Review mechanisms — Review date — O. Reg. 222/98, s. 5(1) — Should a review date be set for the disability determination? — Impairments not likely to improve — Age and prognosis considered — Nurse practitioner indicated expected deterioration — Tribunal satisfied no review required — No review date set | Pensions and social benefits — Appeals — Onus of proof — ODSPA, s. 23(10) — Did the Appellant satisfy the Tribunal that the Director’s decision was wrong? — Evidence from Disability Determination Package and testimony accepted — Standard of more likely than not met — Director’s assessment of substantiality overturned — Decision rescinded and entitlement confirmed — Appeal granted"
+    ],
+    "url": "https://canlii.ca/t/kk5w3"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt674",
+    "citation": "2026 ONSBT 674 (CanLII)",
+    "decision_date": "2026-02-25",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Statutory interpretation — Ontario Disability Support Program Act, 1997, s. 4(1) — Meaning of “substantial” — Guidance from Gray v. Director, ODSP and Crane v. Ontario — Should “substantial” be interpreted flexibly and contextually to the individual? — Three separate tests requiring separate analysis — Onus on appellant under s. 23(10) — Interpretation applied — Appeal granted | Pensions and social benefits — ODSPA eligibility — Workplace functioning — Whether substantial restriction in a realistic workplace established — Verified impairments from fibromyalgia and Graves disease — IEWS and ADLI ratings considered in context — Gallier approach applied to individual situation — Low education, limited English, fatigue, pain, poor exertional capacity — Director’s decision rescinded — Income support payable if otherwise eligible | Pensions and social benefits — Review of disability status — O. Reg. 222/98, s. 5(1) — Should a review date be set where impairments are under early treatment? — Graves disease remission prospects with anti‑thyroidal drugs noted — Further modalities for fibromyalgia outstanding — Improvement not excluded — Review date set for one year — Appeal granted"
+    ],
+    "url": "https://canlii.ca/t/kk5vj"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt611",
+    "citation": "2026 ONSBT 611 (CanLII)",
+    "decision_date": "2026-02-20",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Definition of person with a disability — Whether the appellant met s. 4(1) definition at the time of the Director’s decision — Application of Gray v. Director of the ODSP and Crane — Decision of the Director wrong under s. 23(10) — Tribunal satisfied appellant is a person with a disability — Appeal granted | Pensions and social benefits — Disability determination — Substantial impairment — Whether impairments were substantial within s. 4(1)(a) — Flexible meaning of “substantial” applied to totality of evidence — Degenerative disc disease with chronic pain and limited range of motion — MRIs showing spinal canal stenosis and cord compression — Medical records and testimony persuasive — Substantial impairment found | Pensions and social benefits — Activities of daily living — Workplace function — Do impairments result in a substantial restriction in ability to function in a workplace under s. 4(1)(b) — Gallier considered, applicant assessed in own situation — ADLI ratings and clinical notes consistent with severe physical limitations — Inability to perform manual labour roles established — Workplace function substantially restricted — Person with a disability determination confirmed | Pensions and social benefits — Review of eligibility — Review date — Whether to set a review date under s. 5(1) of O. Reg. 222/98 — Pending referrals to pain clinic and neurosurgeon noted — Possibility of improvement with new treatment avenues — Review date appropriate — Review set for two years — Order for income support if otherwise eligible maintained — Review date set"
+    ],
+    "url": "https://canlii.ca/t/kk5vs"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt616",
+    "citation": "2026 ONSBT 616 (CanLII)",
+    "decision_date": "2026-02-19",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A2",
+    "reasons": [
+      "A2"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — ODSPA eligibility — Person with a disability — Whether the Appellant meets subsection 4(1) of the ODSPA — Meaning of substantial impairment and substantial restriction considered with Gray v. Director, ODSP and Crane v. Ontario — Totality of evidence assessed, including HSR, IEWS and ADLI — Director’s decision found wrong — Appeal granted | Pensions and social benefits — Disability verification — Health Status Report — Were impairments, likely duration, and restrictions verified by a person with prescribed qualifications under s. 4(1)(c)? — Physician with long treatment history completed HSR and provided IEWS and ADLI ratings — Documentary record preferred for particulars over inconsistent testimony — Verification accepted | Pensions and social benefits — Activities of daily living — Workplace functioning — Do substantial impairments result in a substantial restriction in the ability to function in a workplace under subsection 4(1)(b)? — Evidence of chronic pain, anxiety and depression, mobility limits, assistive device use — ADLI ratings aligned with testimony — Substantial workplace restriction established | Pensions and social benefits — Review mechanisms — O. Reg. 222/98 — Should a review date be set under s. 5(1)? — Tribunal satisfied impairment may improve with treatment — Review date appropriate notwithstanding disability determination — Income support ordered if otherwise eligible under s. 17 of O. Reg. 222/98 — Review date set for two years"
+    ],
+    "url": "https://canlii.ca/t/kk5tl"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt310",
+    "citation": "2026 ONSBT 310 (CanLII)",
+    "decision_date": "2026-02-04",
+    "inferred_outcome": "Unknown",
+    "tier": "C",
+    "confidence": 0,
+    "rule_id": "C_UNRESOLVED",
+    "reasons": [],
+    "keywords_api": [
+      "family physician — impairments — fibromyalgia — treatment — symptoms"
+    ],
+    "url": "https://canlii.ca/t/kjvf0"
+  }
+]

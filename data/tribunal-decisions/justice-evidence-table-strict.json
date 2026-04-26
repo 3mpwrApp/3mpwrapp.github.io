@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-04-26T21:51:23.212Z",
+  "method": {
+    "confirmed_definition": "Tier A only (explicit disposition phrases or existing known outcomes)",
+    "probable_definition": "Tier B only (weighted lexical or tribunal heuristic inference)",
+    "unresolved_definition": "Tier C only (no reliable inference from available metadata)",
+    "caution": "Tier B is inferred, not confirmed adjudicative disposition."
+  },
+  "tribunals": [
+    {
+      "database": "onwsib",
+      "total_cases": 431,
+      "confirmed_tier_a": {
+        "count": 1,
+        "rate_percent": 0.2,
+        "outcomes": {
+          "Granted": 0,
+          "Denied": 0,
+          "Deferred": 0,
+          "Other": 1,
+          "Unknown": 0
+        }
+      },
+      "probable_tier_b": {
+        "count": 19,
+        "rate_percent": 4.4,
+        "outcomes": {
+          "Granted": 17,
+          "Denied": 2,
+          "Deferred": 0,
+          "Other": 0,
+          "Unknown": 0
+        }
+      },
+      "unresolved_tier_c": {
+        "count": 411,
+        "rate_percent": 95.4
+      }
+    },
+    {
+      "database": "onhrt",
+      "total_cases": 9269,
+      "confirmed_tier_a": {
+        "count": 4618,
+        "rate_percent": 49.8,
+        "outcomes": {
+          "Granted": 33,
+          "Denied": 1146,
+          "Deferred": 3128,
+          "Other": 311,
+          "Unknown": 0
+        }
+      },
+      "probable_tier_b": {
+        "count": 1,
+        "rate_percent": 0,
+        "outcomes": {
+          "Granted": 0,
+          "Denied": 1,
+          "Deferred": 0,
+          "Other": 0,
+          "Unknown": 0
+        }
+      },
+      "unresolved_tier_c": {
+        "count": 4650,
+        "rate_percent": 50.2
+      }
+    },
+    {
+      "database": "onwsiat",
+      "total_cases": 11430,
+      "confirmed_tier_a": {
+        "count": 74,
+        "rate_percent": 0.6,
+        "outcomes": {
+          "Granted": 14,
+          "Denied": 7,
+          "Deferred": 30,
+          "Other": 23,
+          "Unknown": 0
+        }
+      },
+      "probable_tier_b": {
+        "count": 575,
+        "rate_percent": 5,
+        "outcomes": {
+          "Granted": 424,
+          "Denied": 151,
+          "Deferred": 0,
+          "Other": 0,
+          "Unknown": 0
+        }
+      },
+      "unresolved_tier_c": {
+        "count": 10781,
+        "rate_percent": 94.3
+      }
+    },
+    {
+      "database": "onsbt",
+      "total_cases": 13798,
+      "confirmed_tier_a": {
+        "count": 494,
+        "rate_percent": 3.6,
+        "outcomes": {
+          "Granted": 384,
+          "Denied": 92,
+          "Deferred": 18,
+          "Other": 0,
+          "Unknown": 0
+        }
+      },
+      "probable_tier_b": {
+        "count": 3251,
+        "rate_percent": 23.6,
+        "outcomes": {
+          "Granted": 2140,
+          "Denied": 1111,
+          "Deferred": 0,
+          "Other": 0,
+          "Unknown": 0
+        }
+      },
+      "unresolved_tier_c": {
+        "count": 10053,
+        "rate_percent": 72.9
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-04-26T21:57:30.116Z",
+  "method": "automated_proxy_audit_from_sample_packs",
+  "caveat": "Use as screening estimate; replace with human-reviewed gold-label audit for definitive error rates.",
+  "tribunals": [
+    {
+      "database": "onwsib",
+      "tier_b_proxy_error": {
+        "sample_n": 19,
+        "flagged_errors": 0,
+        "error_rate_percent": 0,
+        "ci95_percent": [
+          0,
+          16.8
+        ],
+        "definition": "Contradiction between inferred Tier B outcome and explicit keyword polarity"
+      },
+      "tier_c_proxy_missed_rate": {
+        "sample_n": 120,
+        "flagged_missed": 0,
+        "missed_rate_percent": 0,
+        "ci95_percent": [
+          0,
+          3.1
+        ],
+        "definition": "Unresolved Tier C cases containing explicit disposition phrases"
+      }
+    },
+    {
+      "database": "onhrt",
+      "tier_b_proxy_error": {
+        "sample_n": 1,
+        "flagged_errors": 0,
+        "error_rate_percent": 0,
+        "ci95_percent": [
+          0,
+          79.3
+        ],
+        "definition": "Contradiction between inferred Tier B outcome and explicit keyword polarity"
+      },
+      "tier_c_proxy_missed_rate": {
+        "sample_n": 120,
+        "flagged_missed": 1,
+        "missed_rate_percent": 0.8,
+        "ci95_percent": [
+          0.1,
+          4.6
+        ],
+        "definition": "Unresolved Tier C cases containing explicit disposition phrases"
+      }
+    },
+    {
+      "database": "onwsiat",
+      "tier_b_proxy_error": {
+        "sample_n": 120,
+        "flagged_errors": 0,
+        "error_rate_percent": 0,
+        "ci95_percent": [
+          0,
+          3.1
+        ],
+        "definition": "Contradiction between inferred Tier B outcome and explicit keyword polarity"
+      },
+      "tier_c_proxy_missed_rate": {
+        "sample_n": 120,
+        "flagged_missed": 0,
+        "missed_rate_percent": 0,
+        "ci95_percent": [
+          0,
+          3.1
+        ],
+        "definition": "Unresolved Tier C cases containing explicit disposition phrases"
+      }
+    },
+    {
+      "database": "onsbt",
+      "tier_b_proxy_error": {
+        "sample_n": 120,
+        "flagged_errors": 0,
+        "error_rate_percent": 0,
+        "ci95_percent": [
+          0,
+          3.1
+        ],
+        "definition": "Contradiction between inferred Tier B outcome and explicit keyword polarity"
+      },
+      "tier_c_proxy_missed_rate": {
+        "sample_n": 120,
+        "flagged_missed": 0,
+        "missed_rate_percent": 0,
+        "ci95_percent": [
+          0,
+          3.1
+        ],
+        "definition": "Unresolved Tier C cases containing explicit disposition phrases"
+      }
+    }
+  ]
+}

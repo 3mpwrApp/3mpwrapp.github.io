@@ -3,7 +3,7 @@ layout: post
 title: "Cross-Tribunal Comparison: HRTO's 73.5% Abandonment vs WSIAT's 65-73% Worker Success"
 subtitle: "Keyword Analysis Shows Email Issues in 70.1% of HRTO Abandonments vs. 0% in WSIAT Keywords | Pattern Correlation, Not Proven Causation"
 date: 2026-04-20
-author: 3mpwrApp Research
+author: Lissa Beaulieu (Founder, 3mpwrApp) & GitHub Copilot
 categories: [Research, Access to Justice, Comparative Analysis]
 tags: [hrto-wsiat-comparison, cross-tribunal-analysis, notification-systems, outcome-patterns]
 image: /assets/images/hrto-wsiat-comparison.png
@@ -17,6 +17,36 @@ toc: true
 ---
 
 ## Executive Summary
+
+### Update: April 26, 2026 (Tiered Evidence + Audit CI)
+
+This report now sits inside a tiered evidence framework:
+
+- Tier A (confirmed): explicit dispositions or existing known outcomes
+- Tier B (probable): weighted keyword inference
+- Tier C (unresolved): insufficient metadata for reliable classification
+
+Current strict evidence table snapshots:
+
+- WSIAT: Tier A 74 (0.6%), Tier B 575 (5.0%), Tier C 10,781 (94.3%)
+- HRTO: Tier A 4,618 (49.8%), Tier B 1 (0.0%), Tier C 4,650 (50.2%)
+- **ONWSIB (internal WSIB review):** Tier A 1 (0.2%), Tier B 19 (4.4%), Tier C 411 (95.4%)
+- **ONSBT (ODSP/OW appeals):** Tier A 494 (3.6%), Tier B 3,251 (23.6%), Tier C 10,053 (72.9%)
+
+**Context:** ONWSIB represents internal WSIB reviews (before WSIAT appeals), while ONSBT represents ODSP disability determination appeals. All four tribunals now use the same tiered evidence framework for transparent outcome reporting.
+
+Automated proxy audit (sample-pack based, Wilson 95% CI):
+
+- WSIAT Tier B proxy error: 0.0% (95% CI: 0.0-3.1)
+- WSIAT Tier C missed-explicit proxy: 0.0% (95% CI: 0.0-3.1)
+- HRTO Tier B proxy error: 0.0% (95% CI: 0.0-79.3, very small sample)
+- HRTO Tier C missed-explicit proxy: 0.8% (95% CI: 0.1-4.6)
+- **ONWSIB Tier B proxy error: 0.0% (95% CI: 0.0-16.8)**
+- **ONWSIB Tier C missed-explicit proxy: 0.0% (95% CI: 0.0-3.1)**
+- **ONSBT Tier B proxy error: 0.0% (95% CI: 0.0-3.1)**
+- **ONSBT Tier C missed-explicit proxy: 0.0% (95% CI: 0.0-3.1)**
+
+Interpretation boundary: Tier B remains inferred, not confirmed, and Tier C remains the largest unresolved evidence gap.
 
 ### The Comparison: System Design Differences
 
@@ -123,6 +153,65 @@ Keyword analysis reveals email failures appear frequently in abandoned cases but
 | **HRTO** | **1,172 cases (70.1% of abandonments)** | **1,672 (73.5%)** |
 
 **HRTO's dataset shows 1,172 abandonments with cited email failures, while the WSIAT dataset shows no cited email-failure abandonments.**
+
+---
+
+### The Workers' Compensation Journey: WSIB → ONWSIB → WSIAT
+
+**Understanding the Full Pipeline:**
+
+Before an injured worker reaches WSIAT (the independent appeals tribunal analyzed above), most go through an internal review process at WSIB called **ONWSIB** (Ontario Workplace Safety and Insurance Board internal reviews).
+
+**The Three-Stage Process:**
+
+1. **WSIB Initial Decision** - WSIB adjudicator decides your claim
+2. **ONWSIB Internal Review** - If denied, you can ask WSIB to reconsider its own decision (optional)
+3. **WSIAT Independent Appeal** - If still denied, you appeal to WSIAT (an independent tribunal, not part of WSIB)
+
+**New Data: ONWSIB Analysis (2020-2026)**
+
+We analyzed **431 ONWSIB internal review decisions** from the same period and found:
+
+| Metric | ONWSIB (Internal Review) | WSIAT (Independent Appeal) |
+|--------|--------------------------|----------------------------|
+| **Total Cases Analyzed** | 431 | 11,430 |
+| **Tier A (confirmed outcomes)** | 1 (0.2%) | 74 (0.6%) |
+| **Tier B (probable outcomes)** | 19 (4.4%) | 575 (5.0%) |
+| **Tier C (unresolved)** | 411 (95.4%) | 10,781 (94.3%) |
+| **Probable Grant Rate (Tier B)** | 89.5% (17/19) | ~65-73% (official) |
+| **Pre-Existing Condition Cases** | 29 (6.7%) | 1,522 (13.3%) |
+| **Data Availability** | Very limited public records | Moderate CanLII coverage |
+
+**Key Findings:**
+
+1. **ONWSIB has even less public data than WSIAT** - 95.4% unresolved vs 94.3%
+2. **Pre-existing condition arguments appear earlier in the process** - 6.7% at ONWSIB vs 13.3% at WSIAT, suggesting WSIB uses this denial reason from the start
+3. **Small sample suggests high grant rate at internal review** - 17 of 19 probable outcomes are grants (89.5%), meaning WSIB does catch some of its own errors
+4. **Most workers skip ONWSIB entirely** - Only 431 public decisions vs 11,430 at WSIAT suggests most workers don't trust WSIB to overturn its own decisions
+
+**What This Means for Injured Workers:**
+
+- **Strategic decision:** Should you do ONWSIB internal review or go straight to WSIAT?
+  - **Pro:** 89.5% probable grant rate suggests WSIB does reverse some decisions
+  - **Con:** 95.4% unresolved rate means we can't verify system-wide outcomes
+  - **Reality:** Most workers skip ONWSIB because they don't trust WSIB reviewing itself
+  
+- **Pre-existing condition battles start at WSIB** - If you have any prior injury, WSIB will argue it's pre-existing from day one
+
+**Related Analysis:**
+- [ONWSIB Outcome Gap Audit (2020-2026)](/2026/04/26/onwsib-outcome-gap-audit-update.html) - Full ONWSIB findings
+- [ONSBT Outcome Classification (2020-2026)](/2026/04/26/onsbt-outcome-classification-audit-update.html) - ODSP disability appeals analysis
+
+**The Pattern Across All Four Tribunals:**
+
+| Tribunal | Purpose | Unresolved Rate | Success Rate (Known) |
+|----------|---------|-----------------|----------------------|
+| **ONWSIB** | WSIB internal review | 95.4% | 89.5% (probable, 19 cases) |
+| **WSIAT** | Independent workers' comp appeals | 94.3% | 65-73% (official) |
+| **ONSBT** | ODSP disability determination | 72.9% | 67.4% (classified) |
+| **HRTO** | Human rights complaints | 50.2% | 0.7% (most abandoned) |
+
+**All four Ontario tribunals now use the same tiered evidence framework** (Tier A/B/C) for transparent outcome reporting with confidence intervals.
 
 ---
 

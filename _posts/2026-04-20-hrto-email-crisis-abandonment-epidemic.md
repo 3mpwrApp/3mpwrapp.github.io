@@ -3,7 +3,7 @@ layout: post
 title: "HRTO Abandonment Analysis: Email Issues Cited in 70.1% of Abandoned Cases"
 subtitle: "Keyword Analysis of 3,186 Human Rights Decisions (2020-2026) Shows Correlation Between Email Delivery Issues and Case Abandonments | Data Limitations Acknowledged"
 date: 2026-04-20
-author: 3mpwrApp Research
+author: Lissa Beaulieu (Founder, 3mpwrApp) & GitHub Copilot
 categories: [Human Rights, Research, Access to Justice]
 tags: [hrto-analysis, email-notifications, abandonment-patterns, digital-divide]
 image: /assets/images/hrto-email-crisis.png
@@ -17,6 +17,21 @@ toc: true
 ---
 
 ## Key Findings
+
+### Update: April 26, 2026 (Tiered Evidence + Audit CI)
+
+HRTO analysis is now aligned to a tiered evidence model used across tribunals:
+
+- Tier A (confirmed): 4,618 cases (49.8%)
+- Tier B (probable): 1 case (0.0%)
+- Tier C (unresolved): 4,650 cases (50.2%)
+
+Automated proxy audit (sample-pack based, Wilson 95% CI):
+
+- Tier B proxy error: 0.0% (95% CI: 0.0-79.3)
+- Tier C missed-explicit proxy: 0.8% (95% CI: 0.1-4.6)
+
+Interpretation note: the Tier B CI is wide due to very small sample size. This post should be interpreted as a pattern report with explicit uncertainty boundaries, not a definitive merits-outcome census.
 
 ### Email-Related Abandonment Patterns
 
@@ -454,35 +469,35 @@ Case continues OR applicant given 30 days to update contact info
 
 ---
 
-## Part 10: Community Accessibility and Accountability Actions
+## Part 10: Understanding Abandonment Patterns
 
-### Community Members with Pending HRTO Cases
+### What The Data Shows About HRTO Cases
 
-**1. Accessibility-first communications:**
-- ✅ Request accommodations before first deadlines (plain-language notices, alternate formats, interpretation, support person, and dual-channel delivery)
-- ✅ Ask for critical deadlines by both email and physical mail
+**Pattern analysis from 3,186 decisions (2020-2026):**
 
-**2. Reduce email-related communication risk:**
-- ✅ Use reliable email (Gmail, Outlook, not defunct services)
-- ✅ Check spam/junk folders DAILY for HRTO emails
-- ✅ Add noreply@hrto.ca to your contacts (prevents spam filtering)
-- ✅ Update your email address IMMEDIATELY if it changes
-- ✅ Call HRTO every 2 weeks to confirm case status: 416-326-1312
+**Notification challenges correlate with abandonments:**
+- 73.5% of detected outcomes are abandonments (1,672 of 2,274 classified cases)
+- 70.1% of abandoned cases cite email delivery issues in keywords
+- 36.6% of all HRTO cases mention email undeliverable, inbox full, or similar delivery problems
 
-**3. Keep backup contact methods documented:**
-- Provide phone number (home + cell if you have one)
-- Provide mailing address (even if you prefer email)
-- List support person's contact info (family, friend, advocate)
+**Accessibility support usage patterns:**
+- Applicants who request accommodations (plain-language notices, alternate formats, interpretation, support persons) may have different outcome patterns, but this data is not captured in CanLII keywords
+- Dual-channel delivery (both email and physical mail) is available as an accommodation option under HRTO Rules
 
-**4. Use available representation supports where possible:**
-- Community legal clinics (free, income-qualified): [Legal Aid Ontario](https://www.legalaid.on.ca)
-- Human Rights Legal Support Centre: 1-866-625-5179
-- Private lawyer (costly but may improve outcome from 0.7% to higher)
+**Communication reliability factors:**
+- Email delivery issues appear in keywords far more frequently than other notification methods
+- Spam filtering, defunct email addresses, and inbox capacity issues are cited in decision language
+- Phone number and mailing address backup methods exist but adoption rates unknown from this data
 
-**5. Keep clear records:**
-- Screenshot every HRTO email (documents whether you received key notices)
-- Save copies of all emails you send HRTO
-- Keep written log of all phone calls (date, time, who you spoke to)
+**Representation correlation:**
+- Community legal clinics provide free representation to income-qualified applicants: [Legal Aid Ontario](https://www.legalaid.on.ca)
+- Human Rights Legal Support Centre offers assistance: 1-866-625-5179
+- Outcome patterns by representation status not available in CanLII keyword data
+
+**Record-keeping importance:**
+- Cases with documented communication trails may have different abandonment rates
+- Email screenshots, phone call logs, and sent message copies provide evidence of notification attempts
+- This pattern data cannot confirm causation but suggests documentation practices matter
 
 ### Community Members Facing Email-Related Abandonment
 

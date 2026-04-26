@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-04-26T21:51:24.840Z",
+  "issues": [
+    {
+      "issue_key": "chronic-pain",
+      "label": "Chronic pain",
+      "output_file": "issue-slice-chronic-pain.json",
+      "total_cases": 349,
+      "by_tribunal": {
+        "onwsib": 4,
+        "onhrt": 1,
+        "onwsiat": 239,
+        "onsbt": 105
+      },
+      "by_tier": {
+        "A": 24,
+        "B": 50,
+        "C": 275
+      },
+      "by_outcome": {
+        "Granted": 58,
+        "Denied": 10,
+        "Deferred": 1,
+        "Other": 5,
+        "Unknown": 275
+      }
+    },
+    {
+      "issue_key": "pre-existing-condition",
+      "label": "Pre-existing condition",
+      "output_file": "issue-slice-pre-existing-condition.json",
+      "total_cases": 1519,
+      "by_tribunal": {
+        "onwsib": 31,
+        "onwsiat": 1451,
+        "onsbt": 37
+      },
+      "by_tier": {
+        "A": 11,
+        "B": 28,
+        "C": 1480
+      },
+      "by_outcome": {
+        "Granted": 21,
+        "Denied": 12,
+        "Deferred": 0,
+        "Other": 6,
+        "Unknown": 1480
+      }
+    },
+    {
+      "issue_key": "entitlement-denied",
+      "label": "Entitlement denied",
+      "output_file": "issue-slice-entitlement-denied.json",
+      "total_cases": 20,
+      "by_tribunal": {
+        "onwsib": 1,
+        "onhrt": 4,
+        "onwsiat": 13,
+        "onsbt": 2
+      },
+      "by_tier": {
+        "A": 20,
+        "B": 0,
+        "C": 0
+      },
+      "by_outcome": {
+        "Granted": 1,
+        "Denied": 9,
+        "Deferred": 0,
+        "Other": 10,
+        "Unknown": 0
+      }
+    }
+  ]
+}

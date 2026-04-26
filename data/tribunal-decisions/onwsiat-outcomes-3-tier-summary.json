@@ -1,0 +1,22 @@
+{
+  "database": "onwsiat",
+  "created_at": "2026-04-26T21:47:18.128Z",
+  "total_cases": 11430,
+  "tiers": {
+    "A": 74,
+    "B": 575,
+    "C": 10781
+  },
+  "outcomes": {
+    "Granted": 438,
+    "Denied": 158,
+    "Deferred": 30,
+    "Other": 23,
+    "Unknown": 10781
+  },
+  "coverage": {
+    "classified_A_or_B": 649,
+    "classified_rate": "5.7",
+    "unresolved_rate": "94.3"
+  }
+}

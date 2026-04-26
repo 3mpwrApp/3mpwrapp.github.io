@@ -280,12 +280,12 @@ description: Interactive data visualizations and research tools analyzing tribun
   
   <div class="stats-grid">
     <div class="stat-box">
-      <div class="stat-number">11,430+</div>
-      <div>WSIAT Decisions Analyzed</div>
+      <div class="stat-number">35,928</div>
+      <div>Total Tribunal Decisions Analyzed</div>
     </div>
     <div class="stat-box">
-      <div class="stat-number">300+</div>
-      <div>Keyword Patterns</div>
+      <div class="stat-number">4</div>
+      <div>Ontario Tribunals (WSIAT, HRTO, ONSBT, ONWSIB)</div>
     </div>
     <div class="stat-box">
       <div class="stat-number">6 Years</div>
@@ -293,12 +293,93 @@ description: Interactive data visualizations and research tools analyzing tribun
     </div>
     <div class="stat-box">
       <div class="stat-number">100%</div>
-      <div>Open Source</div>
+      <div>Open Source Data</div>
     </div>
   </div>
 </div>
 
 <!-- Statistical Terms Glossary Box -->
+<div class="tool-card">
+  <div style="margin-bottom: 1rem;">
+    <span class="tool-badge">New</span>
+    <span class="tool-badge badge-green">Transparency</span>
+    <span class="tool-badge badge-purple">CI Reporting</span>
+  </div>
+
+  <h3 style="margin-top: 0;">Tribunal Evidence Center (April 2026)</h3>
+  <p style="font-size: 1.05rem;">
+    We now publish tribunal findings using a strict evidence model:
+    <strong>Tier A (confirmed)</strong>, <strong>Tier B (probable)</strong>, and
+    <strong>Tier C (unresolved)</strong>, with audit confidence intervals.
+  </p>
+
+  <h4 style="margin: 1.5rem 0 1rem;">Four Ontario Tribunals Analyzed (2020-2026)</h4>
+  
+  <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+    <thead>
+      <tr style="background: #f5f5f5; border-bottom: 2px solid #ddd;">
+        <th style="padding: 0.75rem; text-align: left;">Tribunal</th>
+        <th style="padding: 0.75rem; text-align: right;">Total Cases</th>
+        <th style="padding: 0.75rem; text-align: right;">Tier A</th>
+        <th style="padding: 0.75rem; text-align: right;">Tier B</th>
+        <th style="padding: 0.75rem; text-align: right;">Tier C</th>
+        <th style="padding: 0.75rem; text-align: left;">Key Finding</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 0.75rem;"><strong>WSIAT</strong><br><small>Workers' comp appeals</small></td>
+        <td style="padding: 0.75rem; text-align: right;">11,430</td>
+        <td style="padding: 0.75rem; text-align: right;">74 (0.6%)</td>
+        <td style="padding: 0.75rem; text-align: right;">575 (5.0%)</td>
+        <td style="padding: 0.75rem; text-align: right;">10,781 (94.3%)</td>
+        <td style="padding: 0.75rem;"><small>65-73% worker success rate (official)</small></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 0.75rem;"><strong>HRTO</strong><br><small>Human rights complaints</small></td>
+        <td style="padding: 0.75rem; text-align: right;">9,269</td>
+        <td style="padding: 0.75rem; text-align: right;">4,618 (49.8%)</td>
+        <td style="padding: 0.75rem; text-align: right;">1 (0.0%)</td>
+        <td style="padding: 0.75rem; text-align: right;">4,650 (50.2%)</td>
+        <td style="padding: 0.75rem;"><small>73.5% abandonment rate, 70.1% cite email issues</small></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 0.75rem;"><strong>ONSBT</strong><br><small>ODSP/OW appeals</small></td>
+        <td style="padding: 0.75rem; text-align: right;">13,798</td>
+        <td style="padding: 0.75rem; text-align: right;">494 (3.6%)</td>
+        <td style="padding: 0.75rem; text-align: right;">3,251 (23.6%)</td>
+        <td style="padding: 0.75rem; text-align: right;">10,053 (72.9%)</td>
+        <td style="padding: 0.75rem;"><small>67.4% grant rate in classified cases</small></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 0.75rem;"><strong>ONWSIB</strong><br><small>WSIB internal reviews</small></td>
+        <td style="padding: 0.75rem; text-align: right;">431</td>
+        <td style="padding: 0.75rem; text-align: right;">1 (0.2%)</td>
+        <td style="padding: 0.75rem; text-align: right;">19 (4.4%)</td>
+        <td style="padding: 0.75rem; text-align: right;">411 (95.4%)</td>
+        <td style="padding: 0.75rem;"><small>89.5% probable grant rate, very limited data</small></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin: 1rem 0; font-size: 0.95rem; color: #666;">
+    <strong>Total: 35,928 decisions analyzed.</strong> All four tribunals use the same tiered evidence framework for transparent outcome reporting.
+  </p>
+
+  <h4 style="margin: 1.5rem 0 1rem;">Open Data Access:</h4>
+  
+  <ul style="margin-left: 1.2rem;">
+    <li><a href="/data/tribunal-decisions/justice-evidence-table-strict.json">Strict Evidence Table (JSON)</a> - All four tribunals, A/B/C breakdown</li>
+    <li><a href="/data/tribunal-decisions/tribunal-audit-error-rate-estimates.json">Tribunal Audit Error-Rate Estimates (95% CI)</a> - Confidence intervals for each tribunal</li>
+    <li><a href="/data/tribunal-decisions/issue-slices-summary.json">Issue Slices Summary</a> - Chronic pain, pre-existing conditions, entitlement denial cross-tribunal analysis</li>
+    <li><a href="/connecting-the-dots-canlii-keyword-visualization-network.html">Connecting the Dots CanLII Keyword Visualization Network</a> - Interactive keyword relationship mapping</li>
+  </ul>
+
+  <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+    <strong>Research standard:</strong> Tier B is always labeled inferred, and unresolved volume is always disclosed.
+  </p>
+</div>
+
 <div class="glossary-box">
   <h3 class="glossary-title">📖 Understanding the Numbers (Plain English Guide)</h3>
   <p class="glossary-intro">You'll see statistical terms like "95% CI", "χ²", and "p < 0.001" throughout our research. Here's what they mean:</p>

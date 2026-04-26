@@ -16,6 +16,9 @@
 6. [Infographic / Visual](#infographic--visual-posts)
 7. [Video Content Ideas](#video-content-ideas-30-60-sec)
 8. [Weekly Themes](#weekly-content-themes)
+9. [Tribunal Evidence Updates](#tribunal-evidence-updates)
+10. [ONSBT & ODSP Content](#onsbt-odsp-poverty-crisis-content)
+11. [ONWSIB & Workers' Comp Journey](#onwsib-workers-comp-journey-content)
 
 ---
 
@@ -258,6 +261,50 @@ Why 3mpwrApp will NEVER have a premium tier:
 People with disabilities are disproportionately in financial precarity. If access to advocacy tools depends on money, justice is not equal.
 
 We're funded through grants and advocacy partnerships—not user fees.
+
+---
+
+## Tribunal Evidence Updates
+
+### Template 10: Confirmed vs Probable Snapshot
+
+Format: Tier A confirmed count -> Tier B probable count -> Tier C unresolved count -> CI note
+
+Example:
+
+```
+Tribunal update: ONWSIAT (2020-2026)
+
+Confirmed (Tier A): 74 cases
+Probable (Tier B): 575 cases
+Unresolved (Tier C): 10,781 cases
+
+Audit proxy (95% CI):
+- Tier B error estimate: 0.0% (0.0-3.1)
+- Tier C missed-explicit estimate: 0.0% (0.0-3.1)
+
+What this means: we can report patterns, but unresolved volume remains high.
+```
+
+Use when: posting research transparency updates, monthly tribunal status reports, accountability updates.
+
+### Template 11: Community Issue Slice Update
+
+Format: issue name -> total cases -> by tribunal -> by tier -> caution
+
+Example:
+
+```
+Issue slice: Pre-existing condition
+
+Total cases: 1,519
+By tribunal: ONWSIB 31, ONWSIAT 1,451, ONSBT 37
+By tier: A=11, B=28, C=1,480
+
+Interpretation: this issue is high-volume but still mostly unresolved in current metadata.
+```
+
+Use when: connecting legal patterns to real-world barriers for injured worker and disability communities.
 
 Every feature—Evidence Locker, Letter Generator, Crisis Resources—is free forever.
 
@@ -613,3 +660,214 @@ Every morning:
 ---
 
 **Remember:** Templates are starting points, not straitjackets. The best content is authentic to your voice + responsive to your community's needs.
+
+---
+
+## ONSBT & ODSP Poverty Crisis Content
+
+### Template 17: The Math Doesn't Work Post
+**Format:** Visual table showing ODSP rates vs cost of living ? Survival impossible ? CTA for advocacy
+
+**Example:**
+```
+?? Ontario Disability Math (2025)
+
+ODSP single person: $1,368/month
+Average 1-BR rent: $2,200+/month
+
+After rent: -$832/month
+
+Now buy food. Pay utilities. Get medication. Buy phone. Pay transit. Buy clothes.
+
+Spoiler: You can't.
+
+67.4% of ODSP appeal winners had to fight for these poverty wages.
+
+The system is designed to keep people desperate.
+
+Research: https://3mpwrapp.ca/research/onsbt
+
+#ODSPPoverty #DisabilityJustice #HousingCrisis
+```
+
+**When to use:** Advocacy posts, reality-check content, calling out systemic poverty
+
+---
+
+### Template 18: ONSBT Success Rate Reality Check
+**Format:** Myth vs fact ? Data reveal ? Hope message
+
+**Example:**
+```
+MYTH: "Most ODSP appeals get denied"
+
+FACT: Of classified ONSBT appeals (2020-2026):
+
+? 67.4% GRANTED (2,524 cases)
+? 32.1% DENIED (1,203 cases)
+
+2 out of 3 people who fight win their disability status.
+
+The system wants you to believe it's hopeless.
+The data says: DON'T GIVE UP.
+
+ONSBT appeal guide: https://3mpwrapp.ca/knowledge-base/onsbt
+
+#ODSP #ONSBT #DisabilityRights #AppealYourDenial
+```
+
+**When to use:** Empowerment posts, debunking myths, motivating appellants
+
+---
+
+## ONWSIB & Workers' Comp Journey Content
+
+### Template 21: The Three-Stage System Explainer
+**Format:** Visual pathway ? Decision point guide ? Strategic advice
+
+**Example:**
+```
+??? Workers' Comp Appeal Journey (Ontario)
+
+STAGE 1: WSIB Initial Decision
+? Claim denied
+
+STAGE 2: ONWSIB Internal Review (optional)
+?? WSIB reviews its own decision
+?? 89.5% probable grant rate (small sample)
+?? Limited public data (95.4% unresolved)
+
+STAGE 3: WSIAT Independent Appeal
+?? 65-73% worker success rate (official)
+? Independent tribunal (not WSIB)
+?? 11,430 decisions analyzed
+
+STRATEGY: Most workers skip ONWSIB and go straight to WSIAT.
+
+Full analysis: https://3mpwrapp.ca/research/onwsib-wsiat-pathway
+
+#WSIB #WorkersComp #WSIAT #ONWSIB
+```
+
+**When to use:** Educational posts, strategic guidance, system transparency
+
+---
+
+## ONSBT & ODSP Poverty Crisis Content
+
+### Template 17: The Math Doesn't Work Post
+**Format:** Visual table showing ODSP rates vs cost of living → Survival impossible → CTA for advocacy
+
+**Example:**
+```
+📊 Ontario Disability Math (2025)
+
+ODSP single person: $1,368/month
+Average 1-BR rent: $2,200+/month
+
+After rent: -$832/month
+
+Now buy food. Pay utilities. Get medication. Buy phone. Pay transit. Buy clothes.
+
+Spoiler: You can't.
+
+67.4% of ODSP appeal winners had to fight for these poverty wages.
+
+The system is designed to keep people desperate.
+
+Research: https://3mpwrapp.ca/research/onsbt
+
+#ODSPPoverty #DisabilityJustice #HousingCrisis
+```
+
+**When to use:** Advocacy posts, reality-check content, calling out systemic poverty
+
+---
+
+### Template 18: ONSBT Success Rate Reality Check
+**Format:** Myth vs fact → Data reveal → Hope message
+
+**Example:**
+```
+MYTH: "Most ODSP appeals get denied"
+
+FACT: Of classified ONSBT appeals (2020-2026):
+
+✅ 67.4% GRANTED (2,524 cases)
+❌ 32.1% DENIED (1,203 cases)
+
+2 out of 3 people who fight win their disability status.
+
+The system wants you to believe it's hopeless.
+The data says: DON'T GIVE UP.
+
+ONSBT appeal guide: https://3mpwrapp.ca/knowledge-base/onsbt
+
+#ODSP #ONSBT #DisabilityRights #AppealYourDenial
+```
+
+**When to use:** Empowerment posts, debunking myths, motivating appellants
+
+---
+
+## ONWSIB & Workers' Comp Journey Content
+
+### Template 21: The Three-Stage System Explainer
+**Format:** Visual pathway → Decision point guide → Strategic advice
+
+**Example:**
+```
+🛤️ Workers' Comp Appeal Journey (Ontario)
+
+STAGE 1: WSIB Initial Decision
+❌ Claim denied
+
+STAGE 2: ONWSIB Internal Review (optional)
+↪️ WSIB reviews its own decision
+📊 89.5% probable grant rate (small sample)
+⚠️ Limited public data (95.4% unresolved)
+
+STAGE 3: WSIAT Independent Appeal
+📊 65-73% worker success rate (official)
+✅ Independent tribunal (not WSIB)
+📝 11,430 decisions analyzed
+
+STRATEGY: Most workers skip ONWSIB and go straight to WSIAT.
+
+Full analysis: https://3mpwrapp.ca/research/onwsib-wsiat-pathway
+
+#WSIB #WorkersComp #WSIAT #ONWSIB
+```
+
+**When to use:** Educational posts, strategic guidance, system transparency
+
+---
+
+### Template 22: Pre-Existing Condition Early Warning
+**Format:** Pattern reveal → Timeline analysis → Defense strategy
+
+**Example:**
+```
+🚩 PRE-EXISTING CONDITION DENIAL PATTERN
+
+📊 Our analysis of 1,551 cases:
+
+ONWSIB (internal review): 6.7% cite pre-existing
+WSIAT (appeals): 13.3% cite pre-existing
+
+PATTERN: If WSIB denies you for "pre-existing condition," they'll keep using that argument all the way through appeals.
+
+DEFENSE STRATEGY:
+✅ Get "aggravation/acceleration" medical opinion EARLY
+✅ Document clear workplace incident
+✅ Timeline: injury symptoms before vs after incident
+✅ Distinguish: "existed before" ≠ "caused by"
+
+The earlier you build your defense, the better.
+
+Guide: https://3mpwrapp.ca/knowledge-base/pre-existing-conditions
+
+#WSIB #PreExisting #WorkInjury
+```
+
+**When to use:** Strategic warning posts, pattern analysis sharing, early defense education

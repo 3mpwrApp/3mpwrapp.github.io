@@ -87,7 +87,7 @@ async function fetchWithRetry(url, retries = MAX_RETRIES) {
 // ===== CASE LIST FETCHING =====
 
 async function fetchYearCaseList(year) {
-  console.log(`\n📅 Fetching HRTO case list for ${year}...`);
+  console.log(`\n📅 Fetching ONWSIB case list for ${year}...`);
   
   const allCases = [];
   let offset = 0;
@@ -600,7 +600,7 @@ async function main() {
   console.log('='.repeat(70));
   
   // Save summary
-  const summaryFile = path.join(OUTPUT_DIR, 'onhrt-scraping-summary.json');
+  const summaryFile = path.join(OUTPUT_DIR, 'onwsib-scraping-summary.json');
   fs.writeFileSync(summaryFile, JSON.stringify({
     scrape_date: new Date().toISOString(),
     years: YEARS,

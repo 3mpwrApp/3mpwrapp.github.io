@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-04-26T21:40:06.087Z",
+  "total_cases": 13798,
+  "tiers": {
+    "A": 494,
+    "B": 3251,
+    "C": 10053
+  },
+  "outcomes": {
+    "Granted": 2524,
+    "Denied": 1203,
+    "Deferred": 18,
+    "Other": 0,
+    "Unknown": 10053
+  },
+  "coverage": {
+    "classified_A_or_B": 3745,
+    "classified_rate": "27.1",
+    "unresolved_rate": "72.9"
+  }
+}

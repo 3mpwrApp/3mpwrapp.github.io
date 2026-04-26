@@ -1,0 +1,23 @@
+{
+  "slices": [
+    {
+      "issue": "Chronic Pain",
+      "totalCases": 349,
+      "byTribunal": {},
+      "description": "Cases involving chronic pain conditions and their classification challenges"
+    },
+    {
+      "issue": "Pre-Existing Condition",
+      "totalCases": 1519,
+      "byTribunal": {},
+      "description": "Denial pattern escalation: 6.7% at ONWSIB → 13.3% at WSIAT"
+    },
+    {
+      "issue": "Entitlement Denied",
+      "totalCases": 20,
+      "byTribunal": {},
+      "description": "Cases where initial entitlement to benefits was denied"
+    }
+  ],
+  "methodology": "Cross-tribunal keyword matching and outcome classification"
+}

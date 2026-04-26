@@ -1,0 +1,1886 @@
+[
+  {
+    "case_id": "2023onsbt119",
+    "citation": "2023 ONSBT 119 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — documentation — time — substantial impairment"
+    ],
+    "url": "https://canlii.ca/t/jw70h"
+  },
+  {
+    "case_id": "2021onsbt1256",
+    "citation": "2021 ONSBT 1256 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — ratings — verified — substantiality"
+    ],
+    "url": "https://canlii.ca/t/jh0xj"
+  },
+  {
+    "case_id": "2025onsbt4062",
+    "citation": "2025 ONSBT 4062 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — request an internal review — jurisdiction to hear the present — invitation to request an internal — letter"
+    ],
+    "url": "https://canlii.ca/t/khjkh"
+  },
+  {
+    "case_id": "2025onsbt371",
+    "citation": "2025 ONSBT 371 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — rises entirely from administrative error — unrecoverable — income support — issued"
+    ],
+    "url": "https://canlii.ca/t/k9wdm"
+  },
+  {
+    "case_id": "2023onsbt1070",
+    "citation": "2023 ONSBT 1070 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — cumulatively substantial impairments — full-time employment — ability — daily living"
+    ],
+    "url": "https://canlii.ca/t/jxh1k"
+  },
+  {
+    "case_id": "2022onsbt1751",
+    "citation": "2022 ONSBT 1751 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — pain — daily living — substantial impairment — ability"
+    ],
+    "url": "https://canlii.ca/t/jr2hr"
+  },
+  {
+    "case_id": "2020onsbt858",
+    "citation": "2020 ONSBT 858 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairments — psychologist — daily living — struggles"
+    ],
+    "url": "https://canlii.ca/t/j90v8"
+  },
+  {
+    "case_id": "2024onsbt950",
+    "citation": "2024 ONSBT 950 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "recovery — benefit unit — recover an overpayment — income — financial hardship"
+    ],
+    "url": "https://canlii.ca/t/k3snb"
+  },
+  {
+    "case_id": "2025onsbt1928",
+    "citation": "2025 ONSBT 1928 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — daily living — waitlist — verified — restriction"
+    ],
+    "url": "https://canlii.ca/t/kd49s"
+  },
+  {
+    "case_id": "2022onsbt1720",
+    "citation": "2022 ONSBT 1720 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "pain — person with a disability — impairments — verified — substantial"
+    ],
+    "url": "https://canlii.ca/t/jr2kh"
+  },
+  {
+    "case_id": "2023onsbt85",
+    "citation": "2023 ONSBT 85 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — daily living — verified"
+    ],
+    "url": "https://canlii.ca/t/jw6f7"
+  },
+  {
+    "case_id": "2023onsbt18",
+    "citation": "2023 ONSBT 18 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "outstanding overpayment balance — paystub — amount — benefits — arrears"
+    ],
+    "url": "https://canlii.ca/t/jw6fm"
+  },
+  {
+    "case_id": "2022onsbt1091",
+    "citation": "2022 ONSBT 1091 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "income — assign an overpayment — amount — recovery — support"
+    ],
+    "url": "https://canlii.ca/t/jqfq6"
+  },
+  {
+    "case_id": "2025onsbt152",
+    "citation": "2025 ONSBT 152 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — spouse — income — worker — earnings"
+    ],
+    "url": "https://canlii.ca/t/k9j4d"
+  },
+  {
+    "case_id": "2022onsbt1839",
+    "citation": "2022 ONSBT 1839 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "assessed overpayment — income — recipients — recovery — circumstances"
+    ],
+    "url": "https://canlii.ca/t/jrmxc"
+  },
+  {
+    "case_id": "2020onsbt844",
+    "citation": "2020 ONSBT 844 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — anxiety — impairments — substantial — verified"
+    ],
+    "url": "https://canlii.ca/t/j90tj"
+  },
+  {
+    "case_id": "2025onsbt4128",
+    "citation": "2025 ONSBT 4128 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — verified impairments — substantial — neuropathy — daily living"
+    ],
+    "url": "https://canlii.ca/t/khq30"
+  },
+  {
+    "case_id": "2021onsbt694",
+    "citation": "2021 ONSBT 694 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairment — consistent with a finding — conservative — ratings"
+    ],
+    "url": "https://canlii.ca/t/jg7tz"
+  },
+  {
+    "case_id": "2020onsbt234",
+    "citation": "2020 ONSBT 234 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — verified — family physician — impairment — substantial"
+    ],
+    "url": "https://canlii.ca/t/j8kp1"
+  },
+  {
+    "case_id": "2022onsbt882",
+    "citation": "2022 ONSBT 882 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "ratings — person with a disability — substantial impairment — tired — daily living"
+    ],
+    "url": "https://canlii.ca/t/jpms7"
+  },
+  {
+    "case_id": "2021onsbt342",
+    "citation": "2021 ONSBT 342 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial — pain — impairments — verified"
+    ],
+    "url": "https://canlii.ca/t/jfjv2"
+  },
+  {
+    "case_id": "2026onsbt704",
+    "citation": "2026 ONSBT 704 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 66,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Definition of “person with a disability,” s. 4(1) ODSPA — Whether the Appellant had substantial impairments and substantial restrictions at the date of decision — Guidance from Gray and Crane applied — Individual and cumulative analyses conducted — Substantial thresholds not met — Director’s determination under s. 4(1) upheld — Appeal denied | Pensions and social benefits — Appeals — Onus, s. 23(10) ODSPA — Whether the Appellant satisfied the Tribunal that the Director’s decision was wrong — Balance of probabilities standard applied to verified impairments and restrictions — Inconsistent testimony and limited treatment weigh against Appellant — Totality of evidence assessed — Director’s decision affirmed | Evidence — Medical and testimonial evidence — Health Status Report, IEWS and ADLI — What weight to give physician letter and ratings absent supporting documentation — Inconsistencies between testimony, self-report and treatment — Lack of specialist assessments or encounter notes — Medications reported helpful, diabetes levels normal — Substantial impairment not proven — Appeal denied | Pensions and social benefits — Statutory test under s. 4(1) ODSPA — Whether restrictions need assessment after finding no substantial impairment — Separate tests per Crane considered — Tribunal declined to consider activities of daily living given failure on impairment threshold — Application of staged analysis confirmed — Director’s decision affirmed"
+    ],
+    "url": "https://canlii.ca/t/kk5zf"
+  },
+  {
+    "case_id": "2022onsbt283",
+    "citation": "2022 ONSBT 283 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — leg pain — daily living — substantial impairment"
+    ],
+    "url": "https://canlii.ca/t/jpff6"
+  },
+  {
+    "case_id": "2020onsbt1530",
+    "citation": "2020 ONSBT 1530 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — repay — evidence — lump — recoveries"
+    ],
+    "url": "https://canlii.ca/t/j934c"
+  },
+  {
+    "case_id": "2020onsbt365",
+    "citation": "2020 ONSBT 365 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — pain — substantial — verified"
+    ],
+    "url": "https://canlii.ca/t/j8zkr"
+  },
+  {
+    "case_id": "2023onsbt1850",
+    "citation": "2023 ONSBT 1850 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — verified — substantial — evidence"
+    ],
+    "url": "https://canlii.ca/t/jz394"
+  },
+  {
+    "case_id": "2020onsbt1751",
+    "citation": "2020 ONSBT 1751 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — income — collectable — recovery — hardship"
+    ],
+    "url": "https://canlii.ca/t/j9w4l"
+  },
+  {
+    "case_id": "2023onsbt1438",
+    "citation": "2023 ONSBT 1438 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "net business income — overpayments — overpayment — consequent — recalculate"
+    ],
+    "url": "https://canlii.ca/t/jxtm4"
+  },
+  {
+    "case_id": "2021onsbt25",
+    "citation": "2021 ONSBT 25 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairment — verified — substantial — daily living"
+    ],
+    "url": "https://canlii.ca/t/jfh71"
+  },
+  {
+    "case_id": "2020onsbt1839",
+    "citation": "2020 ONSBT 1839 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — letter — financial hardship — request for an internal review — recovery"
+    ],
+    "url": "https://canlii.ca/t/j9w8l"
+  },
+  {
+    "case_id": "2025onsbt3605",
+    "citation": "2025 ONSBT 3605 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "business — email — orders the overpayment uncollectable — upfront — technically correct"
+    ],
+    "url": "https://canlii.ca/t/kj5cm"
+  },
+  {
+    "case_id": "2025onsbt3664",
+    "citation": "2025 ONSBT 3664 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairment — persuasive — pain — ratings"
+    ],
+    "url": "https://canlii.ca/t/kh7fz"
+  },
+  {
+    "case_id": "2025onsbt2346",
+    "citation": "2025 ONSBT 2346 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — neurologist — ratings — persuasive — substantial impairment"
+    ],
+    "url": "https://canlii.ca/t/kf0gx"
+  },
+  {
+    "case_id": "2020onsbt963",
+    "citation": "2020 ONSBT 963 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 66,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — daily living — verified — function — commensurate with substantial impairment"
+    ],
+    "url": "https://canlii.ca/t/j90s6"
+  },
+  {
+    "case_id": "2022onsbt1194",
+    "citation": "2022 ONSBT 1194 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — caseworker — income — refinances — retroactive"
+    ],
+    "url": "https://canlii.ca/t/jqxvn"
+  },
+  {
+    "case_id": "2024onsbt710",
+    "citation": "2024 ONSBT 710 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "impairments — topical ointment — hand — person with a disability — substantial impairment"
+    ],
+    "url": "https://canlii.ca/t/k3shj"
+  },
+  {
+    "case_id": "2020onsbt601",
+    "citation": "2020 ONSBT 601 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — pain — verified — restrictions"
+    ],
+    "url": "https://canlii.ca/t/j90lp"
+  },
+  {
+    "case_id": "2021onsbt599",
+    "citation": "2021 ONSBT 599 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "assess an overpayment for undeclared — income — recovery — benefits — received"
+    ],
+    "url": "https://canlii.ca/t/jg7mj"
+  },
+  {
+    "case_id": "2020onsbt189",
+    "citation": "2020 ONSBT 189 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — verified — substantial — pain"
+    ],
+    "url": "https://canlii.ca/t/j8kl7"
+  },
+  {
+    "case_id": "2022onsbt1677",
+    "citation": "2022 ONSBT 1677 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — children — eligibility — pandemic — recipient"
+    ],
+    "url": "https://canlii.ca/t/jr2gc"
+  },
+  {
+    "case_id": "2020onsbt1655",
+    "citation": "2020 ONSBT 1655 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — anemia — impairments — verified — evidence"
+    ],
+    "url": "https://canlii.ca/t/j944m"
+  },
+  {
+    "case_id": "2025onsbt2360",
+    "citation": "2025 ONSBT 2360 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — arrears — spousal support — debt — recovery"
+    ],
+    "url": "https://canlii.ca/t/kf0jn"
+  },
+  {
+    "case_id": "2021onsbt109",
+    "citation": "2021 ONSBT 109 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — verified — ratings — substantiality"
+    ],
+    "url": "https://canlii.ca/t/jfh9t"
+  },
+  {
+    "case_id": "2020onsbt291",
+    "citation": "2020 ONSBT 291 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — pain — substantial — impairment — verified"
+    ],
+    "url": "https://canlii.ca/t/j8kq8"
+  },
+  {
+    "case_id": "2026onsbt246",
+    "citation": "2026 ONSBT 246 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "assess an overpayment — factors giving rise — income — calendar — retroactive"
+    ],
+    "url": "https://canlii.ca/t/kjvbr"
+  },
+  {
+    "case_id": "2025onsbt66",
+    "citation": "2025 ONSBT 66 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — verified — substantial — pain"
+    ],
+    "url": "https://canlii.ca/t/k92l6"
+  },
+  {
+    "case_id": "2021onsbt470",
+    "citation": "2021 ONSBT 470 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — verified — substantial — impulsivity lacks insight"
+    ],
+    "url": "https://canlii.ca/t/jfk02"
+  },
+  {
+    "case_id": "2023onsbt333",
+    "citation": "2023 ONSBT 333 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — pro-rated — received — income support — assessed"
+    ],
+    "url": "https://canlii.ca/t/jwjwb"
+  },
+  {
+    "case_id": "2020onsbt729",
+    "citation": "2020 ONSBT 729 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — ratings — daily living — verified — level"
+    ],
+    "url": "https://canlii.ca/t/j90n1"
+  },
+  {
+    "case_id": "2024onsbt932",
+    "citation": "2024 ONSBT 932 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — time — person with a disability — verified — condition"
+    ],
+    "url": "https://canlii.ca/t/k3sn0"
+  },
+  {
+    "case_id": "2022onsbt841",
+    "citation": "2022 ONSBT 841 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairment — short-term memory — migraines — medical"
+    ],
+    "url": "https://canlii.ca/t/jpmq9"
+  },
+  {
+    "case_id": "2022onsbt1552",
+    "citation": "2022 ONSBT 1552 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial — verified impairments — physician — daily living"
+    ],
+    "url": "https://canlii.ca/t/jr1k2"
+  },
+  {
+    "case_id": "2020onsbt237",
+    "citation": "2020 ONSBT 237 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — pain — substantial impairment — daily living — function"
+    ],
+    "url": "https://canlii.ca/t/j8kp4"
+  },
+  {
+    "case_id": "2021onsbt72",
+    "citation": "2021 ONSBT 72 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — pain — person with a disability — verified — syncopal episodes"
+    ],
+    "url": "https://canlii.ca/t/jfh65"
+  },
+  {
+    "case_id": "2023onsbt334",
+    "citation": "2023 ONSBT 334 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "uncle — overpayment is correct — residential — grandfather — shares"
+    ],
+    "url": "https://canlii.ca/t/jwjwd"
+  },
+  {
+    "case_id": "2026onsbt525",
+    "citation": "2026 ONSBT 525 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 66,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Disability Support Program — Eligibility — Whether the Appellant is a person with a disability under s. 4(1) of the Ontario Disability Support Program Act, 1997 — Definition applied to verified conditions and activities of daily living — Director’s decision affirmed — Evidence after the decision date given little weight — Appeal denied | Pensions and social benefits — Ontario Disability Support Program — Substantial impairment — Whether the Appellant established a substantial physical or mental impairment under s. 4(1)(a) — Gray and Crane considered on flexible meaning of “substantial” — Imaging showing very mild changes and minimal stenosis — Limited treatment and specialist follow up — Substantial impairment not proven — Appeal denied | Pensions and social benefits — Ontario Disability Support Program — Activities of daily living — Whether the evidence showed substantial restriction in personal care, community or workplace under s. 4(1)(b) — ADLI ratings assessed against testimony and clinical records — Mixed mild and moderate ratings not persuasive — No hospitalisations or intensive treatment — Substantial restriction not established — Appeal denied | Pensions and social benefits — Ontario Disability Support Program — Onus of proof — Whether the Appellant met the onus under s. 23(10) to show the Director was wrong — Verification under s. 4(1)(c) accepted but thresholds of “substantial” not met — Medical and testimonial evidence weighed on totality — Director’s decision upheld — Appeal denied"
+    ],
+    "url": "https://canlii.ca/t/kk35n"
+  },
+  {
+    "case_id": "2021onsbt1241",
+    "citation": "2021 ONSBT 1241 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — spouse — overpayments — income — aggregate"
+    ],
+    "url": "https://canlii.ca/t/jh0x1"
+  },
+  {
+    "case_id": "2021onsbt1390",
+    "citation": "2021 ONSBT 1390 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — psychologist — substantial — verified"
+    ],
+    "url": "https://canlii.ca/t/jh5lt"
+  },
+  {
+    "case_id": "2025onsbt720",
+    "citation": "2025 ONSBT 720 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — shoulder — daily living — substantial impairments — time"
+    ],
+    "url": "https://canlii.ca/t/kbs1d"
+  },
+  {
+    "case_id": "2021onsbt1135",
+    "citation": "2021 ONSBT 1135 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — substantial — daily living — verified"
+    ],
+    "url": "https://canlii.ca/t/jgt36"
+  },
+  {
+    "case_id": "2023onsbt856",
+    "citation": "2023 ONSBT 856 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "substantiality — physician — verified impairments — psychiatrist — person with a disability"
+    ],
+    "url": "https://canlii.ca/t/jxg1s"
+  },
+  {
+    "case_id": "2026onsbt295",
+    "citation": "2026 ONSBT 295 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — financial hardship — income — payments — recovery"
+    ],
+    "url": "https://canlii.ca/t/kjvdh"
+  },
+  {
+    "case_id": "2021onsbt1566",
+    "citation": "2021 ONSBT 1566 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 66,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — substantial impairment — testimony — verified"
+    ],
+    "url": "https://canlii.ca/t/jhn5g"
+  },
+  {
+    "case_id": "2021onsbt820",
+    "citation": "2021 ONSBT 820 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairment — ratings — daily living — treatment"
+    ],
+    "url": "https://canlii.ca/t/jgnfd"
+  },
+  {
+    "case_id": "2026onsbt951",
+    "citation": "2026 ONSBT 951 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Disability benefits — Eligibility — Ontario Disability Support Program Act, 1997, s. 4(1) — Is the Appellant a person with a disability at the date of decision? — Substantial impairment and substantial restriction both required — Depression and post traumatic stress disorder assessed — Travel and daily activities considered — Director’s decision affirmed — Appeal denied | Evidence — Proof — Onus and weight — Onus on Appellant under s. 23(10) of the Act — Did the medical and testimonial evidence establish substantial impairment on a balance of probabilities? — IEWS and ADLI ratings afforded less weight — Treatment level and medication history considered, Jemiolo cited — Clinical notes proximate to decision limited — Appeal denied | Statutory interpretation — Definition — Person with a disability — Meaning of “substantial” in s. 4(1) of the Ontario Disability Support Program Act, 1997 — Flexible, whole person analysis applied per Gray and Crane — Overlap of impairment and restriction evidence considered — Application to Appellant’s circumstances did not meet threshold — Director’s decision not shown to be wrong — Appeal denied"
+    ],
+    "url": "https://canlii.ca/t/kk662"
+  },
+  {
+    "case_id": "2025onsbt1543",
+    "citation": "2025 ONSBT 1543 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "assess an overpayment — benefits — husband — financial hardship — recovery"
+    ],
+    "url": "https://canlii.ca/t/kcqn1"
+  },
+  {
+    "case_id": "2022onsbt309",
+    "citation": "2022 ONSBT 309 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "income support — principal residence — proceeds — asset — overpayment"
+    ],
+    "url": "https://canlii.ca/t/jphsc"
+  },
+  {
+    "case_id": "2025onsbt3378",
+    "citation": "2025 ONSBT 3378 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — substantial — person with a disability — treatment — verified"
+    ],
+    "url": "https://canlii.ca/t/kh4b0"
+  },
+  {
+    "case_id": "2023onsbt1305",
+    "citation": "2023 ONSBT 1305 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — ratings — stroke — verified"
+    ],
+    "url": "https://canlii.ca/t/jxsf5"
+  },
+  {
+    "case_id": "2020onsbt962",
+    "citation": "2020 ONSBT 962 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — chest pain — verified"
+    ],
+    "url": "https://canlii.ca/t/j90x9"
+  },
+  {
+    "case_id": "2022onsbt15",
+    "citation": "2022 ONSBT 15 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairment — consistent with a finding — daily living — depression"
+    ],
+    "url": "https://canlii.ca/t/jpd8b"
+  },
+  {
+    "case_id": "2025onsbt670",
+    "citation": "2025 ONSBT 670 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — clinical — verified"
+    ],
+    "url": "https://canlii.ca/t/kblp6"
+  },
+  {
+    "case_id": "2022onsbt1591",
+    "citation": "2022 ONSBT 1591 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — daily living — substantial impairment — medical — function"
+    ],
+    "url": "https://canlii.ca/t/jr1lg"
+  },
+  {
+    "case_id": "2020onsbt724",
+    "citation": "2020 ONSBT 724 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — verified — substantial — daily living"
+    ],
+    "url": "https://canlii.ca/t/j90mp"
+  },
+  {
+    "case_id": "2025onsbt2157",
+    "citation": "2025 ONSBT 2157 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "psychotherapist — family doctor — impairments — verified — person with a disability"
+    ],
+    "url": "https://canlii.ca/t/kdks0"
+  },
+  {
+    "case_id": "2025onsbt1981",
+    "citation": "2025 ONSBT 1981 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — verified — medical — substantiality"
+    ],
+    "url": "https://canlii.ca/t/kd49w"
+  },
+  {
+    "case_id": "2025onsbt549",
+    "citation": "2025 ONSBT 549 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — seizure — epilepsy — daily living — verified"
+    ],
+    "url": "https://canlii.ca/t/kb02c"
+  },
+  {
+    "case_id": "2022onsbt759",
+    "citation": "2022 ONSBT 759 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairment — substantial — verified — daily living"
+    ],
+    "url": "https://canlii.ca/t/jpkxh"
+  },
+  {
+    "case_id": "2023onsbt1250",
+    "citation": "2023 ONSBT 1250 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "substantial impairment — person with a disability — supportive — daily living — treatment"
+    ],
+    "url": "https://canlii.ca/t/jxrrl"
+  },
+  {
+    "case_id": "2022onsbt1392",
+    "citation": "2022 ONSBT 1392 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — anxiety — verified — substantial"
+    ],
+    "url": "https://canlii.ca/t/jr0q9"
+  },
+  {
+    "case_id": "2020onsbt964",
+    "citation": "2020 ONSBT 964 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — substantial — verified — daily living"
+    ],
+    "url": "https://canlii.ca/t/j90xj"
+  },
+  {
+    "case_id": "2025onsbt3919",
+    "citation": "2025 ONSBT 3919 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — verified — testimony — person with a disability — pain"
+    ],
+    "url": "https://canlii.ca/t/khjcf"
+  },
+  {
+    "case_id": "2023onsbt768",
+    "citation": "2023 ONSBT 768 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — seniors benefits — income — office — transition"
+    ],
+    "url": "https://canlii.ca/t/jwx9p"
+  },
+  {
+    "case_id": "2020onsbt1270",
+    "citation": "2020 ONSBT 1270 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "re-mortgage — income support — recover the overpayment — amount — mold"
+    ],
+    "url": "https://canlii.ca/t/j91p7"
+  },
+  {
+    "case_id": "2023onsbt1677",
+    "citation": "2023 ONSBT 1677 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial — impairment — anxiety — verified"
+    ],
+    "url": "https://canlii.ca/t/jz15c"
+  },
+  {
+    "case_id": "2025onsbt4053",
+    "citation": "2025 ONSBT 4053 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — anxiety — verified — person with a disability — substantial"
+    ],
+    "url": "https://canlii.ca/t/khjk2"
+  },
+  {
+    "case_id": "2025onsbt3680",
+    "citation": "2025 ONSBT 3680 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "country — overseas — assess an overpayment — origin — financial hardship"
+    ],
+    "url": "https://canlii.ca/t/kh7g9"
+  },
+  {
+    "case_id": "2022onsbt1670",
+    "citation": "2022 ONSBT 1670 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — caseworker — benefit unit — settlement — income"
+    ],
+    "url": "https://canlii.ca/t/jr2cb"
+  },
+  {
+    "case_id": "2025onsbt2100",
+    "citation": "2025 ONSBT 2100 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — substantial — daily living — verified"
+    ],
+    "url": "https://canlii.ca/t/kd9pw"
+  },
+  {
+    "case_id": "2026onsbt338",
+    "citation": "2026 ONSBT 338 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — spouse — pandemic — income — timeframe"
+    ],
+    "url": "https://canlii.ca/t/kjvfx"
+  },
+  {
+    "case_id": "2025onsbt2505",
+    "citation": "2025 ONSBT 2505 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — substantial — verified — daily living"
+    ],
+    "url": "https://canlii.ca/t/kf937"
+  },
+  {
+    "case_id": "2020onsbt1186",
+    "citation": "2020 ONSBT 1186 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — substantial — experiences — verified"
+    ],
+    "url": "https://canlii.ca/t/j912d"
+  },
+  {
+    "case_id": "2020onsbt661",
+    "citation": "2020 ONSBT 661 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — verified — cumulatively"
+    ],
+    "url": "https://canlii.ca/t/j90ph"
+  },
+  {
+    "case_id": "2020onsbt294",
+    "citation": "2020 ONSBT 294 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — verified — panic attacks — substantial"
+    ],
+    "url": "https://canlii.ca/t/j8kr5"
+  },
+  {
+    "case_id": "2023onsbt984",
+    "citation": "2023 ONSBT 984 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — benefit unit — spouse — calculations — income"
+    ],
+    "url": "https://canlii.ca/t/jxg6w"
+  },
+  {
+    "case_id": "2026onsbt446",
+    "citation": "2026 ONSBT 446 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — employment income — finds — disabled — daughter"
+    ],
+    "url": "https://canlii.ca/t/kk334"
+  },
+  {
+    "case_id": "2025onsbt3873",
+    "citation": "2025 ONSBT 3873 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "self-employment income — excess — allowable — overpayment calculations — asset level"
+    ],
+    "url": "https://canlii.ca/t/kh990"
+  },
+  {
+    "case_id": "2020onsbt1721",
+    "citation": "2020 ONSBT 1721 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — verified — documentary evidence — health care provider"
+    ],
+    "url": "https://canlii.ca/t/j9w4g"
+  },
+  {
+    "case_id": "2020onsbt423",
+    "citation": "2020 ONSBT 423 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — daily living — verified"
+    ],
+    "url": "https://canlii.ca/t/j90bm"
+  },
+  {
+    "case_id": "2025onsbt2555",
+    "citation": "2025 ONSBT 2555 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "pain — person with a disability — substantial impairments — finds — struggled"
+    ],
+    "url": "https://canlii.ca/t/kf943"
+  },
+  {
+    "case_id": "2020onsbt434",
+    "citation": "2020 ONSBT 434 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairment — substantial — hand — verified"
+    ],
+    "url": "https://canlii.ca/t/j90fg"
+  },
+  {
+    "case_id": "2023onsbt330",
+    "citation": "2023 ONSBT 330 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — income — pension — hardship it poses — recovery"
+    ],
+    "url": "https://canlii.ca/t/jwjs6"
+  },
+  {
+    "case_id": "2020onsbt559",
+    "citation": "2020 ONSBT 559 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — pain — substantial — verified"
+    ],
+    "url": "https://canlii.ca/t/j90gg"
+  },
+  {
+    "case_id": "2020onsbt1733",
+    "citation": "2020 ONSBT 1733 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — daily living — verified — function"
+    ],
+    "url": "https://canlii.ca/t/j9w5m"
+  },
+  {
+    "case_id": "2023onsbt1292",
+    "citation": "2023 ONSBT 1292 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — substantial impairment — testimony — flare-ups — time"
+    ],
+    "url": "https://canlii.ca/t/jxrtb"
+  },
+  {
+    "case_id": "2020onsbt104",
+    "citation": "2020 ONSBT 104 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — substantial — daily living — verified"
+    ],
+    "url": "https://canlii.ca/t/j8kjs"
+  },
+  {
+    "case_id": "2021onsbt613",
+    "citation": "2021 ONSBT 613 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — compelling evidence — financial hardship — recoverable — repay"
+    ],
+    "url": "https://canlii.ca/t/jg7wm"
+  },
+  {
+    "case_id": "2020onsbt1715",
+    "citation": "2020 ONSBT 1715 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — verified — substantial — ability to function"
+    ],
+    "url": "https://canlii.ca/t/j9w3m"
+  },
+  {
+    "case_id": "2021onsbt266",
+    "citation": "2021 ONSBT 266 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 64,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "substantial_impairment"
+    ],
+    "keywords_api": [
+      "person with a disability — pain — substantial impairments — daily living — cumulatively"
+    ],
+    "url": "https://canlii.ca/t/jfhhd"
+  },
+  {
+    "case_id": "2025onsbt3825",
+    "citation": "2025 ONSBT 3825 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — daily living — scoliosis — verified — activities"
+    ],
+    "url": "https://canlii.ca/t/kh9bg"
+  },
+  {
+    "case_id": "2026onsbt518",
+    "citation": "2026 ONSBT 518 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — income — financial hardship — administrative error — recovery"
+    ],
+    "url": "https://canlii.ca/t/kk38s"
+  },
+  {
+    "case_id": "2021onsbt198",
+    "citation": "2021 ONSBT 198 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — glitch — assistance — recoverable — business expenses"
+    ],
+    "url": "https://canlii.ca/t/jfh9z"
+  },
+  {
+    "case_id": "2020onsbt1320",
+    "citation": "2020 ONSBT 1320 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — verified — substantial — cumulatively"
+    ],
+    "url": "https://canlii.ca/t/j91qd"
+  },
+  {
+    "case_id": "2020onsbt1711",
+    "citation": "2020 ONSBT 1711 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "special diet allowance — unintended weight loss — overpayment — arrears — allergy to milk dairy"
+    ],
+    "url": "https://canlii.ca/t/j9w34"
+  },
+  {
+    "case_id": "2025onsbt2799",
+    "citation": "2025 ONSBT 2799 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "income — correct overpayment is collectable — spends — deducted — lumpsum"
+    ],
+    "url": "https://canlii.ca/t/kflkd"
+  },
+  {
+    "case_id": "2020onsbt1749",
+    "citation": "2020 ONSBT 1749 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — caseworker — shelter — recovery — amount"
+    ],
+    "url": "https://canlii.ca/t/j9w4h"
+  },
+  {
+    "case_id": "2020onsbt1190",
+    "citation": "2020 ONSBT 1190 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "impairments — person with a disability — substantial — verified — daily living"
+    ],
+    "url": "https://canlii.ca/t/j915r"
+  },
+  {
+    "case_id": "2025onsbt154",
+    "citation": "2025 ONSBT 154 (CanLII)",
+    "inferred_outcome": "Granted",
+    "confidence": 61,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "pwd_phrase",
+      "verified_language"
+    ],
+    "keywords_api": [
+      "person with a disability — impairments — substantial — function — verified"
+    ],
+    "url": "https://canlii.ca/t/k9j7h"
+  },
+  {
+    "case_id": "2025onsbt3447",
+    "citation": "2025 ONSBT 3447 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "overpayment — pandemic benefits — caseworker — requested — banking"
+    ],
+    "url": "https://canlii.ca/t/kh4hs"
+  },
+  {
+    "case_id": "2025onsbt3684",
+    "citation": "2025 ONSBT 3684 (CanLII)",
+    "inferred_outcome": "Denied",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "overpayment"
+    ],
+    "keywords_api": [
+      "existing overpayment — internal review — eligible to receive — recovery — calculation"
+    ],
+    "url": "https://canlii.ca/t/kh7gm"
+  }
+]

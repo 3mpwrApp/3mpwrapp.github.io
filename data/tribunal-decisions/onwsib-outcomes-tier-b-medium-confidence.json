@@ -1,0 +1,460 @@
+[
+  {
+    "case_id": "2021canlii76828",
+    "citation": "2021 CanLII 76828 (ON WSIB)",
+    "decision_date": "2021-06-21",
+    "docket_number": "20210006",
+    "url": "https://canlii.ca/t/jhn22",
+    "inferred_outcome": "Granted",
+    "confidence": 59,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 16,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 16
+    },
+    "keywords_api": [
+      "worker — tested positive — representative — kitchen — initial entitlement"
+    ]
+  },
+  {
+    "case_id": "2021canlii133937",
+    "citation": "2021 CanLII 133937 (ON WSIB)",
+    "decision_date": "2021-04-23",
+    "docket_number": "20210022",
+    "url": "https://canlii.ca/t/jlh81",
+    "inferred_outcome": "Granted",
+    "confidence": 58,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "score_breakdown": {
+      "granted": 14,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 14
+    },
+    "keywords_api": [
+      "worker — re-employment obligation — employer — work-related injury — entitlement"
+    ]
+  },
+  {
+    "case_id": "2022canlii132548",
+    "citation": "2022 CanLII 132548 (ON WSIB)",
+    "decision_date": "2022-12-23",
+    "docket_number": "20230021",
+    "url": "https://canlii.ca/t/jvt56",
+    "inferred_outcome": "Granted",
+    "confidence": 59,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 16,
+      "denied": 6,
+      "deferred": 0,
+      "margin": 10
+    },
+    "keywords_api": [
+      "pre-existing condition — worker — annular tear — satchel — initial entitlement"
+    ]
+  },
+  {
+    "case_id": "2022canlii132539",
+    "citation": "2022 CanLII 132539 (ON WSIB)",
+    "decision_date": "2022-12-16",
+    "docket_number": "20230018",
+    "url": "https://canlii.ca/t/jvt53",
+    "inferred_outcome": "Granted",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 22,
+      "denied": 6,
+      "deferred": 0,
+      "margin": 16
+    },
+    "keywords_api": [
+      "worker — pre-existing condition — work-related injury — sciatica — initial entitlement to benefits"
+    ]
+  },
+  {
+    "case_id": "2022canlii99431",
+    "citation": "2022 CanLII 99431 (ON WSIB)",
+    "decision_date": "2022-09-27",
+    "docket_number": "20220114",
+    "url": "https://canlii.ca/t/jsnrc",
+    "inferred_outcome": "Granted",
+    "confidence": 59,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 16,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 16
+    },
+    "keywords_api": [
+      "worker — employer — forklift — accident — initial entitlement"
+    ]
+  },
+  {
+    "case_id": "2022canlii68182",
+    "citation": "2022 CanLII 68182 (ON WSIB)",
+    "decision_date": "2022-05-10",
+    "docket_number": "20220070",
+    "url": "https://canlii.ca/t/jr41s",
+    "inferred_outcome": "Granted",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 22,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 22
+    },
+    "keywords_api": [
+      "worker — work-related injury — duties — lower back injury — initial entitlement to benefits"
+    ]
+  },
+  {
+    "case_id": "2022canlii68189",
+    "citation": "2022 CanLII 68189 (ON WSIB)",
+    "decision_date": "2022-05-01",
+    "docket_number": "20220074",
+    "url": "https://canlii.ca/t/jr41x",
+    "inferred_outcome": "Granted",
+    "confidence": 59,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 16,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 16
+    },
+    "keywords_api": [
+      "worker — knee injury — initial entitlement — accident — employer"
+    ]
+  },
+  {
+    "case_id": "2023canlii138775",
+    "citation": "2023 CanLII 138775 (ON WSIB)",
+    "decision_date": "2023-11-01",
+    "docket_number": "20240002",
+    "url": "https://canlii.ca/t/k3zj1",
+    "inferred_outcome": "Granted",
+    "confidence": 59,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 16,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 16
+    },
+    "keywords_api": [
+      "worker — initial entitlement for lung cancer — knockdown — peak concentrations for short durations — daily average exposure"
+    ]
+  },
+  {
+    "case_id": "2023canlii100126",
+    "citation": "2023 CanLII 100126 (ON WSIB)",
+    "decision_date": "2023-08-04",
+    "docket_number": "20230110",
+    "url": "https://canlii.ca/t/k0vww",
+    "inferred_outcome": "Denied",
+    "confidence": 59,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "score_breakdown": {
+      "granted": 6,
+      "denied": 16,
+      "deferred": 0,
+      "margin": 10
+    },
+    "keywords_api": [
+      "due to non-compensable — benefits for a psychotraumatic disability — employer — work-related injury — compensable low back injury"
+    ]
+  },
+  {
+    "case_id": "2023canlii57738",
+    "citation": "2023 CanLII 57738 (ON WSIB)",
+    "decision_date": "2023-04-30",
+    "docket_number": "20230061",
+    "url": "https://canlii.ca/t/jxxq4",
+    "inferred_outcome": "Granted",
+    "confidence": 59,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 16,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 16
+    },
+    "keywords_api": [
+      "worker — accident — personal errand — residence — initial entitlement to benefits"
+    ]
+  },
+  {
+    "case_id": "2024canlii140991",
+    "citation": "2024 CanLII 140991 (ON WSIB)",
+    "decision_date": "2024-12-12",
+    "docket_number": "20250020",
+    "url": "https://canlii.ca/t/kb7mp",
+    "inferred_outcome": "Granted",
+    "confidence": 58,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "score_breakdown": {
+      "granted": 14,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 14
+    },
+    "keywords_api": [
+      "worker — ankle — transferable skills — work-related injury — entitlement to a right hip"
+    ]
+  },
+  {
+    "case_id": "2024canlii140463",
+    "citation": "2024 CanLII 140463 (ON WSIB)",
+    "decision_date": "2024-11-28",
+    "docket_number": "32636873",
+    "url": "https://canlii.ca/t/kb0kp",
+    "inferred_outcome": "Granted",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 22,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 22
+    },
+    "keywords_api": [
+      "worker — initial entitlement to benefits — personal work-related injury — scaffold — neck"
+    ]
+  },
+  {
+    "case_id": "2024canlii64305",
+    "citation": "2024 CanLII 64305 (ON WSIB)",
+    "decision_date": "2024-05-31",
+    "docket_number": "20240050",
+    "url": "https://canlii.ca/t/k5qq5",
+    "inferred_outcome": "Granted",
+    "confidence": 58,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "score_breakdown": {
+      "granted": 14,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 14
+    },
+    "keywords_api": [
+      "worker — extended disablement — work-related injury — entitlement — psychotraumatic disability"
+    ]
+  },
+  {
+    "case_id": "2024canlii64302",
+    "citation": "2024 CanLII 64302 (ON WSIB)",
+    "decision_date": "2024-05-09",
+    "docket_number": "20240047",
+    "url": "https://canlii.ca/t/k5qq2",
+    "inferred_outcome": "Denied",
+    "confidence": 59,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "non_compensable"
+    ],
+    "score_breakdown": {
+      "granted": 0,
+      "denied": 16,
+      "deferred": 0,
+      "margin": 16
+    },
+    "keywords_api": [
+      "worker — sign-in process — work — non-compensable motor-vehicle accident — symptoms"
+    ]
+  },
+  {
+    "case_id": "2024canlii44876",
+    "citation": "2024 CanLII 44876 (ON WSIB)",
+    "decision_date": "2024-04-10",
+    "docket_number": "20240031",
+    "url": "https://canlii.ca/t/k4q1w",
+    "inferred_outcome": "Granted",
+    "confidence": 58,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "score_breakdown": {
+      "granted": 14,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 14
+    },
+    "keywords_api": [
+      "osteomyelitis — work-related injury — dirty boxes — entitlement — fingertip amputation"
+    ]
+  },
+  {
+    "case_id": "2024canlii34668",
+    "citation": "2024 CanLII 34668 (ON WSIB)",
+    "decision_date": "2024-03-12",
+    "docket_number": "20240026",
+    "url": "https://canlii.ca/t/k46hr",
+    "inferred_outcome": "Granted",
+    "confidence": 60,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury",
+      "initial_entitlement"
+    ],
+    "score_breakdown": {
+      "granted": 22,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 22
+    },
+    "keywords_api": [
+      "employer — record — parking lot — personal work-related injury — initial entitlement"
+    ]
+  },
+  {
+    "case_id": "2024canlii44863",
+    "citation": "2024 CanLII 44863 (ON WSIB)",
+    "decision_date": "2024-03-08",
+    "docket_number": "20240032",
+    "url": "https://canlii.ca/t/k4q1x",
+    "inferred_outcome": "Granted",
+    "confidence": 58,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "score_breakdown": {
+      "granted": 14,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 14
+    },
+    "keywords_api": [
+      "chemical concussion — indicated the worker — entitlement to benefits — overexposure — personal work-related injury"
+    ]
+  },
+  {
+    "case_id": "2024canlii30589",
+    "citation": "2024 CanLII 30589 (ON WSIB)",
+    "decision_date": "2024-01-29",
+    "docket_number": "20240018",
+    "url": "https://canlii.ca/t/k40bb",
+    "inferred_outcome": "Granted",
+    "confidence": 58,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "score_breakdown": {
+      "granted": 14,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 14
+    },
+    "keywords_api": [
+      "worker — knee — hours — work-related injury — entitlement to a redetermination"
+    ]
+  },
+  {
+    "case_id": "2025canlii144156",
+    "citation": "2025 CanLII 144156 (ON WSIB)",
+    "decision_date": "2025-07-14",
+    "docket_number": "20260003",
+    "url": "https://canlii.ca/t/kj0c1",
+    "inferred_outcome": "Granted",
+    "confidence": 58,
+    "tier": "B",
+    "rule_id": "B_WEIGHTED",
+    "reasons": [
+      "entitlement_term",
+      "work_related_injury"
+    ],
+    "score_breakdown": {
+      "granted": 14,
+      "denied": 0,
+      "deferred": 0,
+      "margin": 14
+    },
+    "keywords_api": [
+      "work-related injury — elbow — work-related left shoulder — entitlement — degenerative changes"
+    ]
+  }
+]

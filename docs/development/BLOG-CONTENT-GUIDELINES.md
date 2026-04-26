@@ -74,6 +74,27 @@
 
 ## 📝 Content Creation Rules
 
+### Tribunal Evidence Reporting Standard (Required)
+
+For all tribunal research posts, include a tiered evidence block:
+
+- Tier A (confirmed): explicit disposition phrases or existing known outcomes
+- Tier B (probable): weighted lexical inference
+- Tier C (unresolved): insufficient metadata for reliable inference
+
+Also include confidence interval context where available:
+
+- Report 95% CI for audit error estimates
+- Do not present Tier B as confirmed fact
+- Do not merge Tier A and Tier B without labeling
+
+Mandatory wording pattern:
+
+1. Confirmed findings (Tier A)
+2. Probable findings (Tier B)
+3. Unresolved volume (Tier C)
+4. Uncertainty statement (95% CI, sample limits)
+
 ### When Writing Posts:
 
 **DO:**

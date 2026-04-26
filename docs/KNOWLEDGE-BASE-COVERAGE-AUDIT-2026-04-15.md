@@ -4,6 +4,59 @@
 **Audit Date:** April 15, 2026  
 **Data Source:** [WSIB System Analysis Complete 2020-2026](./WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
 
+## April 26, 2026 Addendum - Cross-Tribunal Evidence Status
+
+Strict evidence table (confirmed/probable/unresolved):
+
+- **WSIAT (Workers' Comp Appeals):** Tier A 74 (0.6%), Tier B 575 (5.0%), Tier C 10,781 (94.3%)
+  - 65-73% worker success rate (official statistics)
+  - Pre-existing condition cases: 1,522 (13.3% of dataset)
+  - Chronic pain cases: 239
+  
+- **HRTO (Human Rights):** Tier A 4,618 (49.8%), Tier B 1 (0.0%), Tier C 4,650 (50.2%)
+  - 73.5% abandonment rate
+  - 70.1% of abandonments cite email delivery issues
+  - Only 0.7% applicant victory rate among detected outcomes
+
+- **ONSBT (ODSP/OW Appeals):** Tier A 494 (3.6%), Tier B 3,251 (23.6%), Tier C 10,053 (72.9%)
+  - 67.4% grant rate in classified cases (2,524 granted vs 1,203 denied)
+  - Person with disability determination: 10,477 cases (75.9% of dataset)
+  - Pain-related cases: 3,542 (25.7%)
+  - Overpayment allegations: 739 (5.4%)
+  - Substantial impairment test: 6,813 cases (49.4%)
+
+- **ONWSIB (WSIB Internal Reviews):** Tier A 1 (0.2%), Tier B 19 (4.4%), Tier C 411 (95.4%)
+  - 89.5% probable grant rate (17 of 19 Tier B outcomes)
+  - Work-related injury: 52 cases (12.1%)
+  - Pre-existing condition: 29 cases (6.7%)
+  - Knee/shoulder injuries most common (4.9% and 4.2%)
+  - Very limited public data availability
+
+**Total Dataset:** 35,928 tribunal decisions across four Ontario tribunals (2020-2026)
+
+Proxy audit CI summary (Wilson 95%, sample-pack screening):
+
+- ONWSIB Tier B error: 0.0% (0.0-16.8), Tier C missed-explicit: 0.0% (0.0-3.1)
+- HRTO Tier B error: 0.0% (0.0-79.3), Tier C missed-explicit: 0.8% (0.1-4.6)
+- ONWSIAT Tier B error: 0.0% (0.0-3.1), Tier C missed-explicit: 0.0% (0.0-3.1)
+- ONSBT Tier B error: 0.0% (0.0-3.1), Tier C missed-explicit: 0.0% (0.0-3.1)
+
+**Interpretation:** Keep Tier A and Tier B clearly separated in all knowledge base and template claims. Tier C volume remains the dominant data quality constraint across all tribunals except HRTO.
+
+**New Knowledge Base Priorities:**
+
+Based on ONSBT findings:
+1. **ODSP Disability Definition Guide** (urgent - 75.9% of ONSBT cases)
+2. **Substantial Impairment Test Explainer** (urgent - 49.4% of cases reference this standard)
+3. **Pain Documentation for ODSP Appeals** (high - 25.7% of cases)
+4. **Overpayment Defense Strategies** (medium - 5.4% of cases)
+5. **Medical Verification Best Practices** (medium - 11.8% of cases)
+
+Based on ONWSIB findings:
+1. **WSIB Internal Review Strategy Guide** (medium - helps workers decide ONWSIB vs direct WSIAT)
+2. **Pre-Existing Condition Early Defense** (medium - appears in 6.7% of ONWSIB, escalates to 13.3% at WSIAT)
+3. **WSIB → ONWSIB → WSIAT Pathway Explainer** (high - workers need clarity on the full system)
+
 ---
 
 ## Executive Summary

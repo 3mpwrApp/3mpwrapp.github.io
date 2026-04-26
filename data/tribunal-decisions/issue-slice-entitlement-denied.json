@@ -1,0 +1,342 @@
+[
+  {
+    "database": "onwsib",
+    "case_id": "2021canlii97485",
+    "citation": "2021 CanLII 97485 (ON WSIB)",
+    "decision_date": "2021-07-24",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Occupational disease — COVID‑19 entitlement — Workplace Safety and Insurance Act, s. 2(1), s. 15 — Policy 11‑01‑01, Schedules 3 and 4 — Whether employment in a long‑term care home significantly contributed to COVID‑19 — Multiple positive tests and identified resident exposure — Adjudicative Approach Document considered — Balance of probabilities met — Initial entitlement allowed | Workplace health and safety — Benefits — Loss of earnings (LOE) — Policy 18‑03‑02 — Whether worker entitled to ongoing LOE benefits as of July 20, 2020 — Partial impairment found and suitable modified duties available at own pace — Medical evidence showed improving symptoms and capacity for walking with rests — Compatibility with modified work established — Ongoing LOE benefits denied"
+    ],
+    "url": "https://canlii.ca/t/jjkd9"
+  },
+  {
+    "database": "onhrt",
+    "case_id": "2022hrto1068",
+    "citation": "2022 HRTO 1068 (CanLII)",
+    "decision_date": "2022-08-31",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 92,
+    "rule_id": "A7",
+    "reasons": [
+      "A7"
+    ],
+    "keywords_api": [
+      "Rights and freedoms — Disability — Services, goods and facilities — Is “heat intolerance” a disability under the Human Rights Code? — Code, s. 10(1) definition considered — Temporary, commonplace or transitory conditions not disabilities — Heat-related reactions and dehydration characterised as temporary — No link to a protected ground established — Application dismissed | Procedure — Summary hearing — No reasonable prospect of success — Rule 19A of the Tribunal’s Rules applied — Test from Dabic v. Windsor Police Service referenced — Assuming facts true, no evidence capable of proving Code breach — Lack of evidence reasonably available to support discrimination — Summary dismissal standard met — Application dismissed | Rights and freedoms — Duty to accommodate — Accommodation process — Whether applicant engaged in good faith in the accommodation dialogue — Applicant not entitled to preferred accommodation, only reasonable accommodation up to undue hardship — Authorities cited, Chappell, Daykin, Fagan, Saxon — Offer of chair refused and applicant walked away — No impediment by respondent shown — Application dismissed"
+    ],
+    "url": "https://canlii.ca/t/jrw91"
+  },
+  {
+    "database": "onhrt",
+    "case_id": "2022hrto934",
+    "citation": "2022 HRTO 934 (CanLII)",
+    "decision_date": "2022-07-27",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A9",
+    "reasons": [
+      "A9"
+    ],
+    "keywords_api": [
+      "Procedure — Tribunal default — Rule 5.5 — Whether the respondent may be deemed to have accepted all of the allegations and waived rights after failing to file a Response — Application of Kearns v. 1327827 Ontario — Clear notice provided, no Response filed — Human Rights Code context — Orders deeming acceptance of allegations and waiver of participation — Orders made deeming acceptance and waiver | Procedure — Proceeding in absence — Notice — Whether the Tribunal will proceed to determine the Application without further notice to the respondent — Rule 5.5 applied following failure to respond — Respondent refuses or chooses not to participate — Determination based only on the material before the Tribunal contemplated — Respondent not entitled to further notice | Procedure — Case management — CMCC — Whether to schedule a Case Management Teleconference Call to discuss hearing format, documents, remedies, and timetable — One hour CMCC to be scheduled with the applicant — No materials or legal submissions required before CMCC — Procedural issues only — CMCC to be scheduled"
+    ],
+    "url": "https://canlii.ca/t/jr56t"
+  },
+  {
+    "database": "onhrt",
+    "case_id": "2025hrto1393",
+    "citation": "2025 HRTO 1393 (CanLII)",
+    "decision_date": "2025-06-03",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A9",
+    "reasons": [
+      "A9"
+    ],
+    "keywords_api": [
+      "Procedure — Default — Tribunal powers under Rules — Whether the Tribunal may deem non-responsive respondents to have accepted all allegations under Rule 5.5 — Failure to file a Response and failure to update contact information under Rule 1.13 — Supporting documents show awareness of proceedings — Allegations in the Application deemed accepted — Proceeding to be dealt with on the material before the Tribunal — Respondents deemed to have accepted all allegations | Procedure — Notice — Waiver — Whether the Tribunal may proceed without further notice and deem respondents to have waived participation under Rule 5.5 — Respondents not entitled to further notice with respect to the Application — Waiver of rights to notice and participation ordered — Merits hearing to proceed via video conference — Witness statements adopted under oath in lieu of oral evidence-in-chief — Further notice dispensed with | Procedure — Case management — Variation of Rules — Whether the Tribunal may vary or waive its Rules and Practice Directions under Rules A4.2 and 1.7 — Case Assessment Direction governs deadlines and hearing conduct — Limits on witnesses and documents filed per CAD — Briefs of authorities to be filed before hearing — Any inconsistency resolved in favour of CAD — Directions issued and Rules varied or waived"
+    ],
+    "url": "https://canlii.ca/t/kcjrw"
+  },
+  {
+    "database": "onhrt",
+    "case_id": "2025hrto1193",
+    "citation": "2025 HRTO 1193 (CanLII)",
+    "decision_date": "2025-05-13",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 100,
+    "rule_id": "A_EXISTING_OUTCOME",
+    "reasons": [
+      "existing_outcome"
+    ],
+    "keywords_api": [
+      "Rights and freedoms — Human rights — Employment — Whether the Application links enumerated grounds to adverse treatment — Bald assertions without a factual basis — No nexus between race, colour, ancestry, creed, age and actions — General allegations of unfairness outside the Tribunal’s jurisdiction — Human Rights Code process engaged only where prima facie case shown — Application dismissed | Limitation periods — Human rights — Timeliness — Whether incidents form a series under s. 34(2) of the Human Rights Code — Gap of more than one year interrupts the series — Delay not incurred in good faith despite health claims — Untimely allegations pre‑dating March 15, 2022 outside jurisdiction — No need to address substantial prejudice — Allegations dismissed as untimely | Rights and freedoms — Human rights — Reprisal — Noble v. York University test applied — Whether actions were related to claiming or enforcing a Code right — Events before filing do not meet part (b) of the test — No intention to retaliate established — Return to work interactions unrelated to Application — Reprisal allegations dismissed | Rights and freedoms — Human rights — Disability — Whether accommodation process amounted to discrimination — Duties of both parties to participate in accommodation considered — Not entitled to perfect accommodation, only reasonable in the circumstances — Manufacturing environment and changing restrictions assessed — No discrimination on the basis of disability established — Disability allegations dismissed"
+    ],
+    "url": "https://canlii.ca/t/kc6cd"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2022onwsiat1830",
+    "citation": "2022 ONWSIAT 1830 (CanLII)",
+    "decision_date": "2022-11-15",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation benefits — Loss of earnings — Medical authorization to be off work between specified dates — Functional Abilities Form indicating full duties as of December 4 — Whether worker entitled to LOE from November 23 to December 4 — WSIA framework applied — Medical evidence accepted — LOE benefits awarded | Workplace health and safety — Psychotraumatic disability — Permanent impairment — Whether worker had psychotraumatic disability PI at MMR — Adjustment disorder with worry and flashbacks found — Reliance on WSIB Community Mental Health Program report — Comparator to Decision No. 700/20 discussed — NEL quantum assessed — 10% NEL awarded | Workplace health and safety — Chronic pain disability — Entitlement precluded by policy — Whether CPD benefits available where psychotraumatic disability PI granted — Board policy barring dual entitlement applied — CPD issue rendered moot by psychotraumatic disability finding — Claim for CPD considered and rejected — CPD benefits denied"
+    ],
+    "url": "https://canlii.ca/t/jts23"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2025onwsiat351",
+    "citation": "2025 ONWSIAT 351 (CanLII)",
+    "decision_date": "2025-03-31",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 94,
+    "rule_id": "A13",
+    "reasons": [
+      "A13"
+    ],
+    "keywords_api": [
+      "pain — benefits — denied the worker entitlement — work — suitable"
+    ],
+    "url": "https://canlii.ca/t/kcbzh"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat90",
+    "citation": "2026 ONWSIAT 90 (CanLII)",
+    "decision_date": "2026-01-23",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Complex Regional Pain Syndrome — Whether entitlement is in order for CRPS under WSIA s. 13(1) — Diagnosis not confirmed by treating physicians — Objective findings for CRPS not met per medical consultant — Symptomatic reports without confirmed diagnosis insufficient — Compatibility of diagnosis to disablement history not established — Entitlement denied | Workplace health and safety — Workers’ compensation — Thoracic Outlet Syndrome — Whether entitlement is in order for TOS under WSIA s. 13(1) — Vascular studies did not support vascular TOS — No work-up confirming neurogenic TOS — Treating specialist and WSIB medical consultant did not confirm diagnosis — Physiotherapy suggestions given less weight — Compatibility with accident history not established — Entitlement denied | Workplace health and safety — Permanent impairment — Repetitive strain injuries — Whether ongoing entitlement extends beyond September 11, 2018 — MMR reached with permanent impairment established — Ongoing symptoms and treatment documented post‑2018 — New medical evidence from 2025 corroborative — WSIA s. 46 non‑economic loss entitlement engaged — Recognition of permanent impairment and NEL determination ordered | Workplace health and safety — Causation — Significant contributing factor — Whether compensable RSIs significantly contributed to ongoing disability at MMR — Tribunal applies significant contribution test from WSIAT jurisprudence — Balance of probabilities with benefit of the doubt under WSIA s. 124(2) — Medical reports and credible testimony establish persistent RSI limitations — Ongoing entitlement confirmed, appeal allowed in part"
+    ],
+    "url": "https://canlii.ca/t/kk7qg"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat91",
+    "citation": "2026 ONWSIAT 91 (CanLII)",
+    "decision_date": "2026-01-23",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Disablement — Initial entitlement under s. 13 WSIA — Did repetitive overhead throwing of cables significantly contribute to right shoulder impingement and tendinopathy? — Significant contribution test applied with WSIB policies 11-01-01 and 15-02-01 — Modified duties with employer knowledge accepted — Initial entitlement granted | Workplace health and safety — Workers’ compensation — Delay — Whether delay in medical attention and formal reporting bars entitlement — COVID-19 restrictions and lack of family physician accepted as reasonable explanation — Benefit of the doubt under s. 124(2) WSIA considered — Conversation with supervisor found, inadvertent reporting delay — Delay not a bar to entitlement | Workplace health and safety — Workers’ compensation — Proof of injury — Entitlement for left shoulder — Is entitlement available where there is soreness but no diagnosis or treatment? — Clinical assessments recorded no left shoulder diagnosis — Absence of treatment corroborated — Preponderance of evidence fails to establish personal work-related injury — Entitlement denied"
+    ],
+    "url": "https://canlii.ca/t/kk7px"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat96",
+    "citation": "2026 ONWSIAT 96 (CanLII)",
+    "decision_date": "2026-01-26",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Ongoing entitlement — Whether ongoing entitlement for lumbar strain exists beyond August 2, 2021 — Recognition of permanent impairment and NEL determination sought — WSIA s. 124(2) benefit of the doubt considered — Medical Discussion Paper Low Back referenced on expected resolution of acute strains — Preexisting permanent impairment found to overwhelm acute strain — Ongoing entitlement denied | Workplace health and safety — Return to work — Suitable employment — Was the modified work offered on June 11, 2021 suitable under Policy 19-02-07? — Functional abilities and need for breaks every 90 minutes assessed — Evidence on truck vibrations weighed, FWCA findings below health risk — Alternative decompression by standing or walking available — Modified work consistent with capabilities and earnings restoration — Work found suitable | Workplace health and safety — Loss of earnings — Quantum and duration — Are additional LOE benefits payable beyond June 21, 2021, including beyond August 2, 2021? — Partial LOE during graduated return confirmed — Suitability of work post June 21, 2021 upheld — No entitlement after August 2, 2021 where compensable injury resolved — Loss post August 2 attributed to declining suitable work — Additional LOE denied"
+    ],
+    "url": "https://canlii.ca/t/kk7qj"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat102",
+    "citation": "2026 ONWSIAT 102 (CanLII)",
+    "decision_date": "2026-01-27",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Loss of earnings — Suitable work — Whether split-shift and cold environment duties were suitable under WSIA ss. 40, 43 — Causal link between injury and wage loss required — Refusal of unsuitable Information Officer and split-shift Crash Gate duties justified — Graduated return to work assessed — LOE periods specified and partial LOE confirmed — LOE benefits partly allowed | Workplace health and safety — Ongoing entitlement — Permanent impairment and NEL — Did accidents significantly contribute beyond recovery dates under WSIA ss. 33, 46, 124(2)? — Low back, neck and wrist strains assessed — No aggravation of L5-S1 disc herniation established — Minor MVAs and degenerative changes found — Surgery and nerve blocks not related — NEL and ongoing entitlement denied | Procedure — Issue estoppel — Grievance findings — Does Danyluk v. Ainsworth and Angle preclude WSIAT adjudication? — Same question not decided and parties’ statutory rights distinct — Arbitration addressed termination, not WSIA entitlement — De novo hearing and broader issues before Tribunal — Issue estoppel rejected | Evidence — Documentary and video — Security video and surveillance — Admission of on‑bus security video relevant to severity and function — Weight of surveillance contrasted with self‑reports — Credibility assessed using Faryna v. Chorney and R. v. Morrissey — Video showed minor impact and functional abilities — Security video admitted"
+    ],
+    "url": "https://canlii.ca/t/kk7q3"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat111",
+    "citation": "2026 ONWSIAT 111 (CanLII)",
+    "decision_date": "2026-01-29",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 95,
+    "rule_id": "A6",
+    "reasons": [
+      "A6"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Psychotraumatic disability — Whether the worker has initial entitlement to benefits for psychotraumatic disability — Policy 15-04-02 applied to organic and reactive conditions — Need for causal link to accident or permanent impairment and continuity before physical recovery — Non-compensable pain and social stressors identified — Entitlement denied, appeal dismissed | Workplace health and safety — Standard of proof — Benefit of the doubt — Application of the balance of probabilities as modified by WSIA s.124(2) — Significant contribution causation test referenced — Whether evidence for and against is approximately equal in weight — Evidence not in equipoise, significant contribution not established — Appeal dismissed | Evidence — Medical reports — Causation — Whether medical evidence establishes a causal relationship between workplace injury or right hand impairment and psychotraumatic disability — Psychologist’s report dated long after recovery, onset not identified — Consultation note not probative of causal link — Clinical notes omit right hand or wrist impairment — Causal connection not proven, appeal dismissed | Procedure — Res judicata — Prior decisions — Whether res judicata prevents revisiting findings made in prior Tribunal decisions — Prior determinations on recovery and chronic pain applied — Tribunal has no jurisdiction to overturn a prior final decision concerning the same issue — Argument rejected, appeal dismissed"
+    ],
+    "url": "https://canlii.ca/t/kk7pv"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat117",
+    "citation": "2026 ONWSIAT 117 (CanLII)",
+    "decision_date": "2026-01-30",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Appeals — WSIA framework — Whether ARO decision on LOE and psychotraumatic disability should be varied — Application of WSIB Operational Policy Manual and policy packages — Standard of proof and benefit of the doubt under WSIA, s. 124(2) — Significant contribution test applied to causation — Appeal allowed in part | Workplace health and safety — Loss of earnings — Early post-accident period — Whether the worker is entitled to LOE from September 13, 2016 to March 29, 2017 — Medical and functional assessments weighed — Graduated return to work beginning December 2016 found appropriate — Full LOE to mid‑December 2016, partial LOE to mid‑February 2017, then ended — Full and partial LOE awarded for specified periods | Workplace health and safety — Loss of earnings — Employability — Quantum of LOE from October 28, 2021 to December 30, 2023 — Modified work not suitable or available — Competitive employability in general labour market assessed — Restrictions, age, and prior permanent impairment considered — Worker not competitively employable — Full LOE awarded | Workplace health and safety — Psychotraumatic disability — Initial entitlement — Whether psychotraumatic disability is a compensable consequence of the 2016 accident — WSIB Policy No. 15-04-02 considered — Evidence showed pre‑existing psychological condition and no causal link to head injury — No increased treatment or specialist referral post‑accident — Psychotraumatic disability benefits denied"
+    ],
+    "url": "https://canlii.ca/t/kk7pt"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat119",
+    "citation": "2026 ONWSIAT 119 (CanLII)",
+    "decision_date": "2026-01-30",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Recurrences — WSIB policy application — Whether the worker sustained a significant deterioration on the claimed date — Policy 15-02-05 considered, measurable change in clinical findings required — FAF and Occupational Health Assessment compared, no significant change shown — Back and Neck Specialty Program reporting reviewed — Entitlement to recurrence benefits denied | Workplace health and safety — Return to work — Suitable employment — Was the modified work within the worker’s functional restrictions? — RTW plan implemented with accommodations and graduated hours — Duties limited to lighter products, assistance available, breaks permitted — WSIB memos confirm no concerns raised — Modified work found suitable — Appeal on suitability denied | Workplace health and safety — Loss of earnings — Statutory entitlement — Is post-September 24, 2020 wage loss causally related to the injury? — WSIA s. 43 interpreted, refusal of suitable employment severs causation — Distinction from non‑co‑operation under s. 43(7) noted — Suitable work available at no wage loss — LOE benefits from September 24, 2020 denied | Workplace health and safety — Permanent impairment — Pre-existing conditions — Does the injury cause a permanent aggravation of asymptomatic degenerative changes? — WSIA s. 2 definitions and Policy 11-01-05 considered — Neurosurgeon’s opinion accepted, ongoing symptoms beyond MMR date — Medical Discussion Paper on Low Back referenced — Ongoing entitlement and NEL assessment granted"
+    ],
+    "url": "https://canlii.ca/t/kk7pp"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat129",
+    "citation": "2026 ONWSIAT 129 (CanLII)",
+    "decision_date": "2026-02-03",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Initial entitlement — Whether the worker has initial entitlement for MTBI or concussion arising out of a workplace accident — WSIA applied with Board policy on “Accident in the Course of Employment” and “Adjudicative Process” — Consistent early reporting and emergency records accepted — Employer’s appeal to rescind initial entitlement denied — Initial entitlement confirmed | Workplace health and safety — Causation — Pre-existing conditions — Whether the workplace accident was a significant contributing factor to MTBI or concussion given pre-existing migraines and psychological conditions — Significant contribution test applied, balance of probabilities and WSIA s. 124(2) noted — Medical discussion papers on concussion considered — Symptoms superimposed on prior history accepted — Causation established | Workplace health and safety — Benefits — Loss of earnings — Whether the worker is entitled to LOE benefits following the workplace accident — Medical advice to remain off work accepted — WSIB recognition of LOE related to accident maintained — No contrary medical opinion from employer — Entitlement to LOE benefits following accident upheld — Benefits maintained"
+    ],
+    "url": "https://canlii.ca/t/kkb85"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat142",
+    "citation": "2026 ONWSIAT 142 (CanLII)",
+    "decision_date": "2026-02-06",
+    "inferred_outcome": "Other",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A_MIXED_DISPOSITION",
+    "reasons": [
+      "mixed_disposition_keywords"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Non‑Economic Loss (NEL) — Correctness of 10% whole person impairment — AMA Guides, 3rd ed. revised applied — Whether range of motion and Table 53 ratings properly combined — No separate Table 49 rating where no nerve root impairment — 10% NEL confirmed | Workplace health and safety — Workers’ compensation — Chronic Pain Disability — WSIB Policy 15-04-03 criteria — Whether pain degree is inconsistent with organic findings — Evidence of L5-S1 and non‑compensable L4-L5 conditions considered — “No stacking” principle under Policy 15-04-04 noted — CPD entitlement denied | Workplace health and safety — Return to work — Suitable employment — Suitability of COVID‑19 screener position — WSIA s. 40 duties and accommodations assessed — Consistent with functional abilities, sedentary with sit‑stand options, graduated hours offered — Refusal of suitable work examined against medical evidence — Position found suitable | Workplace health and safety — Benefits — Loss of Earnings (LOE) — WSIA s. 43 entitlement and quantum — Whether wage loss caused by injury or refusal of suitable work — Partial LOE from August 25, 2020 to April 9, 2021, and June 28 to September 27, 2021 — No LOE after September 27, 2021 — Partial LOE confirmed to set dates, post‑September 27, 2021 denied"
+    ],
+    "url": "https://canlii.ca/t/kkb88"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat147",
+    "citation": "2026 ONWSIAT 147 (CanLII)",
+    "decision_date": "2026-02-09",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 94,
+    "rule_id": "A13",
+    "reasons": [
+      "A13"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Entitlement — WSIA, s. 13 — Whether bilateral hearing loss is caused by the workplace head injury — Compatibility of diagnosis with accident history under Policy 11-01-01 — Audiology evidence shows stable mild to moderate bilateral loss pre and post accident — Otolaryngology opinions attribute loss to occupational noise and presbycusis — Entitlement denied | Workplace health and safety — Workers’ compensation — Non‑Economic Loss (NEL) — Whether 15% whole person impairment rating for head injury was appropriate — AMA Guides criteria applied at MMR — Largest brain disorder impairment value governs — Complex cerebral and emotional disturbances rated at 30% each — Language 5%, episodic neurological 5%, sleep and arousal 10% — NEL increased to 30%"
+    ],
+    "url": "https://canlii.ca/t/kkb7j"
+  },
+  {
+    "database": "onwsiat",
+    "case_id": "2026onwsiat148",
+    "citation": "2026 ONWSIAT 148 (CanLII)",
+    "decision_date": "2026-02-09",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 94,
+    "rule_id": "A13",
+    "reasons": [
+      "A13"
+    ],
+    "keywords_api": [
+      "Workplace health and safety — Workers’ compensation — Entitlement — WSIA, significant contribution test applied to intramedullary lesion — Whether MRI reference alone establishes causal connection to workplace accident — Specialists’ reports focus on contusion and exacerbation of pre‑existing arthritis — Lack of corroborating medical documentation for lesion — Workplace injury not a significant contributing factor — Entitlement denied | Workplace health and safety — Return to work — Suitable work — Definition of suitable work under Board policy, safe and consistent with functional abilities — Was the accommodated pre‑injury production line job suitable and safe at layoff? — Sedentary‑level restrictions and need for micro‑breaks — Clinical reporting notes safety concerns and mismatch with job demands — Modified work found unsuitable | Workplace health and safety — Decision making — Benefit of the doubt — Policy 11‑01‑03 Merits and Justice considered — Does the benefit of the doubt apply where evidence is not approximately equal? — Medical evidence not in equipoise regarding intramedullary lesion — MRI the only reference, no supporting specialist diagnosis — Principle not engaged — Benefit of doubt not applied"
+    ],
+    "url": "https://canlii.ca/t/kkb7d"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2021onsbt1564",
+    "citation": "2021 ONSBT 1564 (CanLII)",
+    "decision_date": "2021-07-06",
+    "inferred_outcome": "Granted",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A5",
+    "reasons": [
+      "A5"
+    ],
+    "keywords_api": [
+      "Statutory interpretation — Social assistance legislation — O. Reg 222/98, s. 22 — Whether the Appellant’s November 2019 purchases were a transfer for inadequate consideration — Adequate consideration where goods and services purchased using a bank card — No intentional transfer for the purpose of qualifying for income support — Director’s characterisation of spending as inadequate consideration rejected — Decision rescinded | Pensions and social benefits — Sanctions — Deemed income charge — Whether the Director could impose a 20 percent deemed income charge until age 65 for a violation of s. 22 — Spending beyond the allowable asset limit not a breach of s. 22 where adequate consideration obtained — Any income deduction ceases as of November 2019 — Monies collected by way of the deemed income charge refunded — Decision rescinded | Pensions and social benefits — Eligibility — Assets — Allowable asset limit set by s. 27(1) of O. Reg 222/98 — Appellant was asset over the allowable limit in the month of November 2019 — Whether asset exceedance affected ODSP entitlement and remedial approach — Director did not determine ineligibility until later and instead imposed a sanction — Not entitled for November 2019"
+    ],
+    "url": "https://canlii.ca/t/jhn8b"
+  },
+  {
+    "database": "onsbt",
+    "case_id": "2026onsbt902",
+    "citation": "2026 ONSBT 902 (CanLII)",
+    "decision_date": "2026-03-12",
+    "inferred_outcome": "Denied",
+    "tier": "A",
+    "confidence": 90,
+    "rule_id": "A9",
+    "reasons": [
+      "A9"
+    ],
+    "keywords_api": [
+      "Pensions and social benefits — Ontario Works — Shelter benefits — Whether Administrator correctly assessed overpayment for September and October 2024 — Sublet agreement in municipal subsidized housing — Appellant not a permitted tenant, no rent requirement — Shelter funding issued when not entitled — Overpayment calculation of $780 upheld — Decisions not incorrect as of October 7, 2024 — Appeal denied | Pensions and social benefits — Ontario Works — Eligibility — Whether denial of ongoing shelter benefits effective November 2024 was correct — No recognized shelter expenses where Appellant not a tenant — Information provided in Appellant’s primary language — Difficulties securing accommodation and insufficiency of assistance not determinative — Decision to withhold shelter benefits confirmed — Appeal denied | Pensions and social benefits — Overpayments — Relief from recovery — Whether overpayment should be reduced or deemed not collectible — Discretion to vary recovery considered in Surdivall v. Ontario (Disability Support Program), 2014 ONCA 240 — Limited income alone insufficient — No exceptional circumstances shown — Remaining balance minimal — Recovery not varied — Appeal denied | Administrative law — Procedural fairness — Late submissions — Whether late filing of Administrator’s submissions compromised fairness — Rule 4.5 reply window exceeded but contents known to Appellant — Oral presentation of position, Appellant elected to proceed — No material impact on outcome or fairness — Hearing fairness maintained — Appeal denied"
+    ],
+    "url": "https://canlii.ca/t/kk66t"
+  }
+]

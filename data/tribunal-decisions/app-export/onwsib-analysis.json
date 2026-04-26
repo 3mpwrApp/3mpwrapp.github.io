@@ -1,0 +1,77 @@
+{
+  "tribunal": "ONWSIB",
+  "fullName": "WSIB Internal Review",
+  "totalCases": 431,
+  "yearRange": "2020-2026",
+  "probableGrantRate": 89.5,
+  "topIssues": [
+    {
+      "issue": "Worker designation",
+      "percentage": 80,
+      "count": 345
+    },
+    {
+      "issue": "Work-related injury determination",
+      "percentage": 12.1,
+      "count": 52
+    },
+    {
+      "issue": "Pre-existing condition defense",
+      "percentage": 6.7,
+      "count": 29
+    },
+    {
+      "issue": "Knee injuries",
+      "percentage": 4.9,
+      "count": 21
+    },
+    {
+      "issue": "Shoulder injuries",
+      "percentage": 4.2,
+      "count": 18
+    },
+    {
+      "issue": "Benefits eligibility",
+      "percentage": 6.3,
+      "count": 27
+    }
+  ],
+  "threeStageSystem": {
+    "stage1": {
+      "name": "WSIB Initial Decision",
+      "description": "Workplace Safety and Insurance Board decides on your claim",
+      "outcome": "If denied, you have 2 appeal options"
+    },
+    "stage2": {
+      "name": "ONWSIB Internal Review (optional)",
+      "description": "WSIB reviews its own decision",
+      "probableGrantRate": 89.5,
+      "dataQuality": "Very limited (95.4% unresolved in public records)",
+      "recommendation": "Most workers skip this and go straight to WSIAT"
+    },
+    "stage3": {
+      "name": "WSIAT Independent Appeal",
+      "description": "Independent tribunal (not WSIB)",
+      "successRate": "65-73%",
+      "casesAnalyzed": 11430,
+      "recommendation": "Primary appeal venue for most workers"
+    }
+  },
+  "tiers": {
+    "tierA": {
+      "count": 1,
+      "percentage": 0.2,
+      "description": "Confirmed explicit dispositions"
+    },
+    "tierB": {
+      "count": 19,
+      "percentage": 4.4,
+      "description": "Probable keyword inference"
+    },
+    "tierC": {
+      "count": 411,
+      "percentage": 95.4,
+      "description": "Unresolved metadata gap"
+    }
+  }
+}

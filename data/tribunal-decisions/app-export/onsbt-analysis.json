@@ -1,0 +1,87 @@
+{
+  "tribunal": "ONSBT",
+  "fullName": "Ontario Social Benefits Tribunal",
+  "totalCases": 13798,
+  "yearRange": "2020-2026",
+  "grantRate": 67.4,
+  "denialRate": 32.1,
+  "topIssues": [
+    {
+      "issue": "Person with disability determination",
+      "percentage": 75.9,
+      "count": 10477
+    },
+    {
+      "issue": "Impairments/functional limitations",
+      "percentage": 64.8,
+      "count": 8941
+    },
+    {
+      "issue": "Substantial impairment test",
+      "percentage": 49.4,
+      "count": 6813
+    },
+    {
+      "issue": "Pain-related cases",
+      "percentage": 25.7,
+      "count": 3542
+    },
+    {
+      "issue": "Medical verification required",
+      "percentage": 11.8,
+      "count": 1628
+    },
+    {
+      "issue": "Overpayment allegations",
+      "percentage": 5.4,
+      "count": 739
+    }
+  ],
+  "context": {
+    "odspRates": {
+      "singlePerson": 1368,
+      "averageRent": 2200,
+      "deficit": -832,
+      "description": "ODSP single person rate ($1,368/month) cannot cover average 1-BR rent ($2,200+/month) leaving -$832/month deficit before food, utilities, medication, or transit."
+    },
+    "resources": [
+      {
+        "title": "ODSP Rates (official)",
+        "url": "https://www.ontario.ca/page/social-assistance-rates"
+      },
+      {
+        "title": "Income Security Tracker",
+        "url": "https://incomesecurity.org/policy/income-support-tracker/"
+      },
+      {
+        "title": "ACORN ODSP Campaign",
+        "url": "https://acorncanada.org/campaigns/odsp"
+      },
+      {
+        "title": "CBC Homelessness Crisis",
+        "url": "https://www.cbc.ca/news/canada/toronto/ontario-disability-homelessness-housing-1.7083951"
+      },
+      {
+        "title": "StatCan Material Deprivation",
+        "url": "https://www150.statcan.gc.ca/n1/pub/75-006-x/2023001/article/00002-eng.htm"
+      }
+    ]
+  },
+  "tiers": {
+    "tierA": {
+      "count": 494,
+      "percentage": 3.6,
+      "description": "Confirmed explicit dispositions"
+    },
+    "tierB": {
+      "count": 3251,
+      "percentage": 23.6,
+      "description": "Probable keyword inference"
+    },
+    "tierC": {
+      "count": 10053,
+      "percentage": 72.9,
+      "description": "Unresolved metadata gap"
+    }
+  }
+}
