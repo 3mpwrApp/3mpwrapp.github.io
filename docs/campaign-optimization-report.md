@@ -1,8 +1,8 @@
 # Campaign Optimization Report
 
-**Generated:** 2026-04-26T21:27:08.626Z
+**Generated:** 2026-04-26T21:32:37.440Z
 
-**Data Period:** Last 10 days
+**Data Period:** Last 11 days
 
 ---
 
@@ -44,22 +44,22 @@
 - Change: 0.00
 
 ### day-of-mourning-2026
-- Posts: +12 this week
+- Posts: +15 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### family-matters-april25
-- Posts: +12 this week
+- Posts: +15 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### injured-workers-day-2026
-- Posts: +12 this week
+- Posts: +15 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### wsib-changes-april29
-- Posts: +12 this week
+- Posts: +15 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
