@@ -1,45 +1,65 @@
 # Campaign Optimization Report
 
-**Generated:** 2026-04-19T21:29:44.675Z
+**Generated:** 2026-04-26T21:32:37.440Z
 
-**Data Period:** Last 3 days
+**Data Period:** Last 11 days
 
 ---
 
 ## 📊 7-Day Performance Trends
 
 ### age65-cutoff
-- Posts: +6 this week
+- Posts: +18 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### bill86
-- Posts: +6 this week
+- Posts: +18 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### day-of-mourning
-- Posts: +6 this week
+- Posts: +18 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### disability-bulletin
-- Posts: +6 this week
+- Posts: +18 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### migrant-worker
-- Posts: +6 this week
+- Posts: +18 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### oniwg-agm
-- Posts: +6 this week
+- Posts: +18 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 
 ### wsib-meeting
-- Posts: +6 this week
+- Posts: +18 this week
+- Engagement: ➡️ Stable
+- Change: 0.00
+
+### day-of-mourning-2026
+- Posts: +15 this week
+- Engagement: ➡️ Stable
+- Change: 0.00
+
+### family-matters-april25
+- Posts: +15 this week
+- Engagement: ➡️ Stable
+- Change: 0.00
+
+### injured-workers-day-2026
+- Posts: +15 this week
+- Engagement: ➡️ Stable
+- Change: 0.00
+
+### wsib-changes-april29
+- Posts: +15 this week
 - Engagement: ➡️ Stable
 - Change: 0.00
 

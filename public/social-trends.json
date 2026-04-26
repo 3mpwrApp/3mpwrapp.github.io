@@ -1,56 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-26T03:45:23.015Z",
+  "lastUpdated": "2026-04-26T13:23:33.595Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16174,
+      "totalPosts": 16199,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T03:45:14.577Z"
+      "lastSeen": "2026-04-26T13:23:23.042Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16161,
+      "totalPosts": 16186,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T03:45:16.560Z"
+      "lastSeen": "2026-04-26T13:23:25.860Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16046,
+      "totalPosts": 16071,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T03:45:18.242Z"
+      "lastSeen": "2026-04-26T13:23:28.105Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16237,
+      "totalPosts": 16262,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T03:45:20.126Z"
+      "lastSeen": "2026-04-26T13:23:30.354Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16198,
+      "totalPosts": 16223,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T03:45:22.012Z"
+      "lastSeen": "2026-04-26T13:23:32.591Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 27,
-      "hashtag": "DisabilityJustice"
-    },
-    {
-      "text": "Speaking of alt text & not being able to see images, here's one of my fave short guides to image description.\n\nIt's written by someone with vision impairment who uses screen readers on the daily. #accessibility #altText #a11y",
-      "author": "ryanpatrickrandall.com",
-      "engagement": 14,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "The issue with image uploads is a great test of everyone’s ALT text! #accessibility",
       "author": "saskajanet.bsky.social",
@@ -338,6 +326,18 @@
       "author": "vale.rocks",
       "engagement": 16,
       "hashtag": "A11y"
+    },
+    {
+      "text": "Unfortunately, #Saros is part of a repeating cycle of inaccessible sci-fi experiences from Housemarque. Read my initial impressions thanks to a free review code below:\n\nwww.sightlesskombat.com/the-cycle-co...\n#A11Y #Ad #Accessibility #PlayStation #PS5",
+      "author": "sightlesskombat.com",
+      "engagement": 16,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I'm pretty sick of hearing people say they don't provide alt text and exclude people with disabilities so they can mildly inconvenience AI companies.\n\nvale.rocks/micros/20260...\n\n#a11y #Accessibility #AltText",
+      "author": "vale.rocks",
+      "engagement": 16,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 37
+      "count": 36
     },
     {
       "keyword": "disabilityjustice",
-      "count": 27
+      "count": 28
     },
     {
       "keyword": "a11y",
@@ -386,12 +386,12 @@
       "count": 12
     },
     {
-      "keyword": "disabilityjustice nico",
+      "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
-      "keyword": "disabilityrights nokings3",
-      "count": 9
+      "keyword": "disabilityjustice nico",
+      "count": 8
     },
     {
       "keyword": "disabilityrebellion",
@@ -403,23 +403,23 @@
     },
     {
       "keyword": "ada",
-      "count": 6
-    },
-    {
-      "keyword": "refusefascism",
-      "count": 6
-    },
-    {
-      "keyword": "ndis",
-      "count": 5
-    },
-    {
-      "keyword": "inclusion",
-      "count": 5
+      "count": 7
     },
     {
       "keyword": "disabilitysky",
-      "count": 5
+      "count": 7
+    },
+    {
+      "keyword": "cripminds",
+      "count": 7
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 7
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 7
     }
   ]
 }
