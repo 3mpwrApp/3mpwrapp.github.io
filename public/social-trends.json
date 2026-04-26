@@ -1,56 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-25T13:22:24.939Z",
+  "lastUpdated": "2026-04-26T03:45:23.015Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16149,
+      "totalPosts": 16174,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-25T13:22:13.559Z"
+      "lastSeen": "2026-04-26T03:45:14.577Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16136,
+      "totalPosts": 16161,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-25T13:22:15.992Z"
+      "lastSeen": "2026-04-26T03:45:16.560Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16021,
+      "totalPosts": 16046,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-25T13:22:18.657Z"
+      "lastSeen": "2026-04-26T03:45:18.242Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16212,
+      "totalPosts": 16237,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-25T13:22:20.996Z"
+      "lastSeen": "2026-04-26T03:45:20.126Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16173,
+      "totalPosts": 16198,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-25T13:22:23.936Z"
+      "lastSeen": "2026-04-26T03:45:22.012Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
-      "author": "zacharyweeks.bsky.social",
-      "engagement": 47,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Received my postal vote so sharing my Substack, originally commissioned by @bylinetimes.bsky.social Please share too, know that the right-wing are never friends of disabled people.\n#DisabledPeopleAgainstFascism\n#StandUpToRacism\n#DisabilityRights\n#Writerlife\n\npennypepper.substack.com/p/the-tainte...",
-      "author": "penpep.bsky.social",
-      "engagement": 34,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
       "author": "hoydenspark.bsky.social",
@@ -338,28 +326,40 @@
       "author": "byobattleship.bsky.social",
       "engagement": 16,
       "hashtag": "A11y"
+    },
+    {
+      "text": "Unfortunately, #Saros is part of a repeating cycle of inaccessible sci-fi experiences from Housemarque. Read my initial impressions thanks to a free review code below:\n\nwww.sightlesskombat.com/the-cycle-co...\n#A11Y #Ad #Accessibility #PlayStation #PS5",
+      "author": "sightlesskombat.com",
+      "engagement": 16,
+      "hashtag": "A11y"
+    },
+    {
+      "text": "I'm pretty sick of hearing people say they don't provide alt text and exclude people with disabilities so they can mildly inconvenience AI companies.\n\nvale.rocks/micros/20260...\n\n#a11y #Accessibility #AltText",
+      "author": "vale.rocks",
+      "engagement": 16,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "disabilityrights",
-      "count": 43
+      "count": 42
     },
     {
       "keyword": "accessibility",
-      "count": 38
+      "count": 37
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 27
+    },
+    {
+      "keyword": "a11y",
+      "count": 25
     },
     {
       "keyword": "cripthevote",
       "count": 25
-    },
-    {
-      "keyword": "a11y",
-      "count": 24
     },
     {
       "keyword": "altcitizen",
@@ -386,12 +386,12 @@
       "count": 12
     },
     {
-      "keyword": "disabilityrights nokings3",
+      "keyword": "disabilityjustice nico",
       "count": 9
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 8
+      "keyword": "disabilityrights nokings3",
+      "count": 9
     },
     {
       "keyword": "disabilityrebellion",
@@ -406,20 +406,20 @@
       "count": 6
     },
     {
+      "keyword": "refusefascism",
+      "count": 6
+    },
+    {
+      "keyword": "ndis",
+      "count": 5
+    },
+    {
+      "keyword": "inclusion",
+      "count": 5
+    },
+    {
       "keyword": "disabilitysky",
-      "count": 6
-    },
-    {
-      "keyword": "cripminds",
-      "count": 6
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 6
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 6
+      "count": 5
     }
   ]
 }
