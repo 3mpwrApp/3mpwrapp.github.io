@@ -2,7 +2,7 @@
 layout: post
 title: "Hidden Barriers in ONSBT: Accessibility & Vulnerable Communities in Disability Appeals 2020–2026"
 date: 2026-04-26
-categories: community-updates
+categories: [community-updates, research, accessibility, tribunal-analysis]
 tags: [ONSBT, accessibility-barriers, disability-justice, vulnerable-communities, systemic-exclusion, research, accessibility, tribunal-analysis]
 excerpt: "Seven years of ONSBT decisions reveal structural barriers to disability benefits that disproportionately affect people with cognitive disabilities, mental health conditions, precarious housing, and racialized communities—barriers embedded not in case law, but in the appellate process itself."
 ---

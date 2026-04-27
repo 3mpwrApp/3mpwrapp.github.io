@@ -4,7 +4,7 @@ title: "ONWSIB 2020-2026: Outcome Gap Audit and Evidence Limits"
 subtitle: "431 decisions collected quickly, but full-text and disposition fields remain mostly unresolved"
 date: 2026-04-26
 author: Lissa Beaulieu (Founder, 3mpwrApp) & GitHub Copilot
-categories: community-updates
+categories: [community-updates, research, workers-compensation]
 tags: [onwsib, data-quality, outcome-gap, audit-ci, research, workers-compensation]
 toc: true
 ---

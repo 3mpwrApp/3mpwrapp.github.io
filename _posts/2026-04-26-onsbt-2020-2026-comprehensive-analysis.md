@@ -2,7 +2,7 @@
 layout: post
 title: "Ontario Social Benefits Tribunal 2020–2026: Seven Years of Disability Eligibility Decisions"
 date: 2026-04-26
-categories: community-updates
+categories: [community-updates, research, tribunal-analysis]
 tags: [ONSBT, disability-rights, access-to-justice, ODSP, vulnerable-communities, research, tribunal-analysis]
 excerpt: "Comprehensive analysis of 13,798 ONSBT tribunal decisions over seven years reveals systemic patterns in disability eligibility determination, data accessibility gaps, and structural barriers to justice for marginalized populations."
 ---
