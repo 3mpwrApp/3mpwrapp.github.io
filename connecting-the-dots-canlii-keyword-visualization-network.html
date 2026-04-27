@@ -273,6 +273,224 @@
                 height: 600px;
             }
         }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            }
+
+            .site-nav {
+                background: #1a1a2e;
+                border-bottom: 3px solid #667eea;
+            }
+
+            .site-nav-logo {
+                color: #667eea;
+            }
+
+            .site-nav-links a {
+                color: #e0e0e0;
+            }
+
+            .site-nav-links a:hover {
+                color: #667eea;
+                background: #2a2a3e;
+            }
+
+            .container {
+                background: #1a1a2e;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+            }
+
+            .controls {
+                background: #2a2a3e;
+                border-bottom: 2px solid #3a3a4e;
+            }
+
+            .control-group label {
+                color: #e0e0e0;
+            }
+
+            select, input {
+                background: #1a1a2e;
+                color: #e0e0e0;
+                border: 2px solid #3a3a4e;
+            }
+
+            select:focus, input:focus {
+                border-color: #667eea;
+            }
+
+            .info-panel {
+                background: #2a2a3e;
+                border-bottom: 2px solid #667eea;
+            }
+
+            .info-panel h3 {
+                color: #ffc107;
+            }
+
+            .info-panel ul, .info-panel li, .info-panel p {
+                color: #d0d0d0;
+            }
+
+            .legend {
+                background: #2a2a3e;
+                border-top: 2px solid #3a3a4e;
+            }
+
+            .legend h3 {
+                color: #e0e0e0;
+            }
+
+            .legend-item span {
+                color: #d0d0d0;
+            }
+
+            .legend-color {
+                border: 2px solid #e0e0e0;
+            }
+
+            .stats-panel {
+                background: #2a2a3e;
+                border-top: 2px solid #667eea;
+            }
+
+            .stats-panel h3 {
+                color: #e0e0e0;
+            }
+
+            .stat-card {
+                background: #1a1a2e;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+
+            .stat-value {
+                color: #667eea;
+            }
+
+            .stat-label {
+                color: #b0b0b0;
+            }
+
+            #tooltip {
+                background: #1a1a2e;
+                color: #e0e0e0;
+                border: 2px solid #667eea;
+            }
+        }
+
+        /* High Contrast Mode Support */
+        @media (prefers-contrast: high) {
+            body {
+                background: #000000;
+            }
+
+            .site-nav {
+                background: #000000;
+                border-bottom: 3px solid #ffffff;
+            }
+
+            .site-nav-logo {
+                color: #ffff00;
+            }
+
+            .site-nav-links a {
+                color: #ffffff;
+                border: 2px solid transparent;
+            }
+
+            .site-nav-links a:hover {
+                color: #ffff00;
+                background: #000000;
+                border: 2px solid #ffff00;
+            }
+
+            .container {
+                background: #000000;
+                border: 3px solid #ffffff;
+            }
+
+            .header {
+                background: #000000;
+                border-bottom: 3px solid #ffffff;
+            }
+
+            .header h1, .header p {
+                color: #ffffff;
+                text-shadow: none;
+            }
+
+            .controls {
+                background: #000000;
+                border-bottom: 3px solid #ffffff;
+            }
+
+            .control-group label {
+                color: #ffffff;
+            }
+
+            select, input {
+                background: #000000;
+                color: #ffffff;
+                border: 3px solid #ffffff;
+            }
+
+            select:focus, input:focus {
+                border-color: #ffff00;
+            }
+
+            .info-panel {
+                background: #000000;
+                border-bottom: 3px solid #ffff00;
+            }
+
+            .info-panel h3, .info-panel ul, .info-panel li, .info-panel p {
+                color: #ffffff;
+            }
+
+            .legend {
+                background: #000000;
+                border-top: 3px solid #ffffff;
+            }
+
+            .legend h3, .legend-item span {
+                color: #ffffff;
+            }
+
+            .legend-color {
+                border: 3px solid #ffffff;
+            }
+
+            .stats-panel {
+                background: #000000;
+                border-top: 3px solid #ffffff;
+            }
+
+            .stats-panel h3 {
+                color: #ffffff;
+            }
+
+            .stat-card {
+                background: #000000;
+                border: 3px solid #ffffff;
+            }
+
+            .stat-value {
+                color: #ffff00;
+            }
+
+            .stat-label {
+                color: #ffffff;
+            }
+
+            #tooltip {
+                background: #000000;
+                color: #ffffff;
+                border: 3px solid #ffff00;
+            }
+        }
     </style>
 </head>
 <body>
@@ -762,14 +980,42 @@
                 ? Math.max(...links.map(l => l.value))
                 : 0;
 
-            const statsHTML = `
+            // Factual tribunal data from complete 2020-2026 analysis
+            const tribunalStats = `
+                <div class="stat-card">
+                    <div class="stat-value">34,928</div>
+                    <div class="stat-label">Total Ontario Decisions (2020-2026)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Ontario Tribunals (WSIAT, HRTO, ONSBT, ONWSIB)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">11,430</div>
+                    <div class="stat-label">WSIAT Cases (Workplace Injury Appeals)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">9,269</div>
+                    <div class="stat-label">HRTO Cases (Human Rights)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">13,798</div>
+                    <div class="stat-label">ONSBT Cases (Disability Benefits)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">431</div>
+                    <div class="stat-label">ONWSIB Cases (WSIB Internal Review)</div>
+                </div>
+            `;
+
+            const visualizationStats = `
                 <div class="stat-card">
                     <div class="stat-value">${totalNodes}</div>
-                    <div class="stat-label">Keywords Shown</div>
+                    <div class="stat-label">Keywords Shown (Current View)</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value">${totalLinks}</div>
-                    <div class="stat-label">Connections</div>
+                    <div class="stat-label">Connections (Current View)</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value">${avgCoOccurrence}</div>
@@ -781,7 +1027,8 @@
                 </div>
             `;
 
-            document.getElementById('stats-grid').innerHTML = statsHTML;
+            // Always show tribunal stats + current visualization stats
+            document.getElementById('stats-grid').innerHTML = tribunalStats + visualizationStats;
         }
 
         function showTooltip(event, html) {
