@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-04-26T04:03:52.769Z",
+  "generated": "2026-04-27T04:08:51.951Z",
   "insights": {
-    "timestamp": "2026-04-26T04:03:52.735Z",
+    "timestamp": "2026-04-27T04:08:51.790Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-04-26T04:03:52.742Z",
+      "lastUpdated": "2026-04-27T04:08:51.796Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -44,12 +44,12 @@
         },
         {
           "tag": "accessibility",
-          "mentions": 37,
+          "mentions": 32,
           "source": "emerging"
         },
         {
           "tag": "disabilityjustice",
-          "mentions": 27,
+          "mentions": 26,
           "source": "emerging"
         },
         {
@@ -67,7 +67,7 @@
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-04-26T04:03:52.746Z",
+      "lastUpdated": "2026-04-27T04:08:51.799Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-04-26T04:03:52.742Z",
+    "lastUpdated": "2026-04-27T04:08:51.796Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -107,12 +107,12 @@
       },
       {
         "tag": "accessibility",
-        "mentions": 37,
+        "mentions": 32,
         "source": "emerging"
       },
       {
         "tag": "disabilityjustice",
-        "mentions": 27,
+        "mentions": 26,
         "source": "emerging"
       },
       {
@@ -130,7 +130,7 @@
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-04-26T04:03:52.746Z",
+    "lastUpdated": "2026-04-27T04:08:51.799Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
