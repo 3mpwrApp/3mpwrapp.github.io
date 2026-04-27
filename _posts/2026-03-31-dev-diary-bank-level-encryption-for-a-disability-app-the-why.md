@@ -2,8 +2,8 @@
 layout: post
 title: "Dev Diary: Bank-Level Encryption for a Disability App: The Why"
 date: 2026-03-31 00:00:00 +0000
-tags: [dev-diary, development, behind-the-scenes]
-categories: [dev-diary]
+tags: [dev-diary-updates, development, behind-the-scenes]
+categories: [dev-diary-updates]
 excerpt: "The reasoning behind implementing AES-256-GCM encryption in 3mpwrApp and what it took to verify it works correctly"
 ---
 

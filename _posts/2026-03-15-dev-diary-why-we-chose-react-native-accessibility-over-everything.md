@@ -2,8 +2,8 @@
 layout: post
 title: "Dev Diary: Why We Chose React Native: Accessibility Over Everything"
 date: 2026-03-15 00:00:00 +0000
-tags: [dev-diary, development, behind-the-scenes]
-categories: [dev-diary]
+tags: [dev-diary-updates, development, behind-the-scenes]
+categories: [dev-diary-updates]
 excerpt: "The technical and ethical reasoning behind choosing React Native as the foundation for 3mpwrApp"
 ---
 

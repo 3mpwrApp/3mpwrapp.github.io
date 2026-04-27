@@ -2,8 +2,8 @@
 layout: post
 title: "Dev Diary: From 0 to 721 Tests: Our TDD Story"
 date: 2026-04-16 00:00:00 +0000
-tags: [dev-diary, development, behind-the-scenes]
-categories: [dev-diary]
+tags: [dev-diary-updates, development, behind-the-scenes]
+categories: [dev-diary-updates]
 excerpt: "How 3mpwrApp grew from a prototype to a production codebase with 721 tests across 121 suites â€” and why test count is a side-effect, not the goal"
 ---
 

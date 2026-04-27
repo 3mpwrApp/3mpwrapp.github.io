@@ -2,8 +2,8 @@
 layout: post
 title: "Dev Diary: Building Indigenous Language Support: What We Learned"
 date: 2026-04-24 00:00:00 +0000
-tags: [dev-diary, development, behind-the-scenes]
-categories: [dev-diary]
+tags: [dev-diary-updates, development, behind-the-scenes]
+categories: [dev-diary-updates]
 excerpt: "The challenges and lessons from building Indigenous language capability into 3mpwrApp â€” and why community partnership was non-negotiable"
 ---
 

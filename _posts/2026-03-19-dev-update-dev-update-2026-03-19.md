@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Dev Update: What's Been Happening in 3mpwrApp"
+title: "Dev Diary Update: What's Been Happening in 3mpwrApp"
 date: 2026-03-19 00:00:00 +0000
-tags: [dev-update, changelog, development, transparency]
-categories: [updates]
+tags: [dev-diary-updates, changelog, development, transparency]
+categories: [dev-diary-updates]
 excerpt: "A look at the latest improvements, fixes, and behind-the-scenes work happening in 3mpwrApp"
 ---
 

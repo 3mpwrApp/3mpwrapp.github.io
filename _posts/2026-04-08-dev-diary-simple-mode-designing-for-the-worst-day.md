@@ -2,8 +2,8 @@
 layout: post
 title: "Dev Diary: Simple Mode: Designing for the Worst Day"
 date: 2026-04-08 00:00:00 +0000
-tags: [dev-diary, development, behind-the-scenes]
-categories: [dev-diary]
+tags: [dev-diary-updates, development, behind-the-scenes]
+categories: [dev-diary-updates]
 excerpt: "The design thinking behind Simple Mode â€” how a single piece of community feedback became one of 3mpwrApp's most important features"
 ---
 

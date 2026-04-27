@@ -2,8 +2,8 @@
 layout: post
 title: "Feature Spotlight: CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide)"
 date: 2026-04-25 00:00:00 +0000
-tags: [features, spotlight, legal-intelligence, canlii, tribunal-research]
-categories: [community-updates, features]
+tags: [legal-intelligence, canlii, tribunal-research]
+categories: [community-updates, research]
 excerpt: Searchable database of Canadian workplace and disability cases with plain-language summaries - starting with Ontario, expanding daily to all provinces
 ---
 

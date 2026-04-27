@@ -265,8 +265,8 @@ class WeeklyUpdateGeneratorV2 {
 layout: post
 title: Week ${weekNumber} — Building 3mpwrApp in the Open
 date: ${dateStr} 09:00:00 +0000
-tags: [weekly, updates, transparency]
-categories: [updates]
+tags: [dev-diary-updates, weekly, transparency]
+categories: [dev-diary-updates]
 excerpt: This week's progress on 3mpwrApp. Real-time updates from a founder who fell through the cracks and built this app so you don't have to.
 ---
 

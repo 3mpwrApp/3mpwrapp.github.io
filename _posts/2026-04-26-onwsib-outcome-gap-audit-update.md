@@ -17,7 +17,7 @@ This report documents what was collected, what can be classified, and what remai
 
 The **Ontario Workplace Safety and Insurance Board (WSIB)** is the agency that decides initial workers' compensation claims. ONWSIB is their internal review/reconsideration process before cases go to WSIAT (the independent appeal tribunal).
 
-**Key Difference:** ONWSIB is not an independent tribunal—it's WSIB reviewing its own decisions. This is often where workers first challenge benefit denials or coverage gaps.
+**Key Difference:** ONWSIB is not an independent tribunal—**it's WSIB reviewing its own decisions.** This is a core structural issue: the same agency that denied your claim is the one reconsidering whether that denial was correct. WSIAT provides an independent alternative, but many workers must go through this internal WSIB review process first.
 
 ## Dataset Overview
 
@@ -53,7 +53,7 @@ ONWSIB records collected by year:
 | Worker-related | 345 | 80.0% |
 | Work-related injury | 52 | 12.1% |
 | Employer obligations/disputes | 50 | 11.6% |
-| Pre-existing condition arguments | 29 | 6.7% |
+| Pre-existing condition arguments | 31 | 7.2% |
 | Pain-related cases | 24 | 5.6% |
 | **Specific Injuries:** | | |
 | → Knee | 21 | 4.9% |
@@ -72,7 +72,7 @@ ONWSIB records collected by year:
 | → Modified duties | 8 | 1.9% |
 
 **Key Findings:**
-- **Pre-existing condition arguments appear in 6.7% of ONWSIB cases** (29 cases)—much lower than WSIAT's 13.3%, but still significant for a small dataset.
+- **Pre-existing condition arguments appear in 7.2% of ONWSIB cases** (31 cases)—much lower than WSIAT's 13.3%, but still significant for a small dataset.
 - **Knee and shoulder injuries dominate** musculoskeletal cases (4.9% and 4.2%).
 - **Mental health injuries appear in ~6% of cases** combined (psychological, psychotraumatic, mental stress).
 - **Re-employment obligation disputes** show up in 1.6% of cases—these are battles over whether employers followed the law in bringing injured workers back.
@@ -100,8 +100,8 @@ From 431 ONWSIB records:
 - Other: 1 (5.0%)
 
 **What This Means:**
-- Of the tiny 4.6% of ONWSIB cases we can classify, **17 out of 19 with merits outcomes are probable grants**.
-- This suggests workers who successfully get WSIB to reconsider often win at this stage.
+- Of the tiny 4.6% of ONWSIB cases we can classify, **17 out of 19 with merits outcomes are probable grants** (**directional only—sample size of 19 is far too small to generalize**).
+- With such a small classified sample constrained by data availability, we cannot draw system-wide conclusions about ONWSIB grant rates.
 - **HOWEVER:** The 95.4% unresolved rate means we have **no idea** what happens in the overwhelming majority of ONWSIB reconsiderations.
 
 ## The Evidence Gap Crisis
@@ -153,20 +153,41 @@ This dataset is useful for:
 - Monitoring outcome-field completeness over time
 - Injury type prevalence tracking (knee, shoulder, mental health trends)
 
-This dataset is not yet sufficient for:
-- Robust merits win-rate claims (only 20 classified cases)
-- High-confidence causal explanations of denial dynamics
-- System-wide success rate estimates
+**Public ONWSIB data is insufficient to evaluate outcomes at scale:**
+- Only 20 cases (4.6%) have classifiable outcomes—far too few for robust win-rate claims
+- 95.4% unresolved means no system-wide success rate estimates are possible
+- High-confidence causal explanations of denial dynamics cannot be drawn from this limited evidence
+
+## Why This Matters to Injured Workers
+
+**What This Means for You:**
+
+If WSIB denies your claim, ONWSIB is often your first formal chance to challenge that decision—but it's not an independent review. **The same agency that said "no" is the one reconsidering whether they were right to say "no."** This structural reality shapes the entire reconsideration process.
+
+We analyzed 431 ONWSIB decisions and found:
+- **95.4% of outcomes are missing from public records**—we can't tell you what happened in the vast majority of cases
+- Of the tiny 4.6% we could classify, 17 out of 19 appeared to be grants—but that sample is too small to promise you'll win
+- **Pre-existing condition arguments appear in 7.2% of ONWSIB cases**—if WSIB denied you because they blamed your injury on a pre-existing condition, you're not alone
+
+The transparency gap means injured workers go into ONWSIB reconsiderations blind, with no public data on what arguments succeed, which body parts get denied most often, or whether employers' obligations are enforced.
+
+**What You Can Do:**
+- Track your own case patterns using 3mpwrApp's Evidence Locker
+- Request full written reasons for any ONWSIB decision
+- Know that WSIAT (the independent tribunal) is an option if ONWSIB denies you
+- Share your experience (anonymously if preferred) to help build community knowledge
+
+---
 
 ## What The Data Shows About ONWSIB
 
 **Patterns in ONWSIB Internal Review Cases:**
 
-1. **ONWSIB is WSIB reviewing itself—not an independent tribunal.** The agency structure means the same organization that made the initial decision is evaluating whether that decision was correct. WSIAT provides an independent alternative route.
+1. **ONWSIB is WSIB reviewing itself—not an independent tribunal.** This is a core structural issue that injured workers need to understand: the same organization that made the initial decision is evaluating whether that decision was correct. This is an internal review process, not independent oversight. WSIAT provides an independent alternative route, but most workers must navigate ONWSIB first.
 
-2. **Limited but directional outcome data:** Of the 19 probable outcomes classified, 17 are grants (89.5%). With such a small sample, this cannot be generalized to all ONWSIB cases, but it suggests some reversals occur at this stage.
+2. **Limited but directional outcome data:** Of the 19 probable outcomes classified, 17 are grants (89.5%). **Directional only—sample size constraint:** With only 19 classified cases out of 431 total, this cannot be generalized to all ONWSIB cases. This tiny sample suggests some reversals occur at this stage, but we cannot extrapolate system-wide grant rates from such limited data.
 
-3. **Pre-existing condition arguments appear early:** 6.7% of ONWSIB cases cite pre-existing condition disputes. This is lower than WSIAT's 13.3% prevalence, suggesting some of these cases may be resolved at ONWSIB or escalate to WSIAT later.
+3. **Pre-existing condition arguments appear early:** 7.2% of ONWSIB cases (31 cases) cite pre-existing condition disputes. This is lower than WSIAT's 13.3% prevalence, suggesting some of these cases may be resolved at ONWSIB or escalate to WSIAT later.
 
 4. **Knee and shoulder injuries dominate:** Musculoskeletal injuries account for the largest share of body-part-specific cases (knee: 4.9%, shoulder: 4.2%).
 
