@@ -1,0 +1,69 @@
+name: IAVGO Day of Mourning Promotion
+
+# IAVGO Day of Action - April 28, 2026, 2 PM EST
+# Posts 2x daily until event
+# Manual trigger available
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run 2x daily: 11 AM EST and 5 PM EST
+    - cron: '0 16 * * *'  # 11 AM EST (4 PM UTC)
+    - cron: '0 22 * * *'  # 5 PM EST (10 PM UTC)
+
+concurrency:
+  group: iavgo-day-of-mourning-promo
+  cancel-in-progress: false
+
+jobs:
+  post-iavgo-event:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Check if event has passed
+        id: check_date
+        run: |
+          if [ $(date +%s) -gt $(date -d '2026-04-28 14:00:00' +%s) ]; then
+            echo "event_passed=true" >> $GITHUB_OUTPUT
+            echo "✅ Event has passed, workflow will stop"
+          else
+            echo "event_passed=false" >> $GITHUB_OUTPUT
+            echo "⏰ Event upcoming, proceeding with post"
+          fi
+      
+      - name: Post to social media
+        if: steps.check_date.outputs.event_passed == 'false'
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          node scripts/post-iavgo-day-of-mourning-april28.js
+      
+      - name: Commit state file
+        if: steps.check_date.outputs.event_passed == 'false'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .github/state/iavgo-day-of-mourning-state.json || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update IAVGO Day of Mourning state [skip ci]"
+            git push
+          fi

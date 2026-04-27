@@ -1,0 +1,69 @@
+name: Bill 105 Campaign - Protect 72-Month Lock-In
+
+# URGENT: Campaign to stop Bill 105 Schedule 9
+# Posts 2x daily through May 15, 2026
+# Manual trigger available
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run 2x daily: 9 AM EST and 3 PM EST
+    - cron: '0 14 * * *'  # 9 AM EST (2 PM UTC)
+    - cron: '0 20 * * *'  # 3 PM EST (8 PM UTC)
+
+concurrency:
+  group: bill105-campaign-promo
+  cancel-in-progress: false
+
+jobs:
+  post-bill105-campaign:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Check if campaign has ended
+        id: check_date
+        run: |
+          if [ $(date +%s) -gt $(date -d '2026-05-15 23:59:59' +%s) ]; then
+            echo "campaign_ended=true" >> $GITHUB_OUTPUT
+            echo "✅ Campaign has ended, workflow will stop"
+          else
+            echo "campaign_ended=false" >> $GITHUB_OUTPUT
+            echo "🚨 Campaign active, proceeding with post"
+          fi
+      
+      - name: Post to social media
+        if: steps.check_date.outputs.campaign_ended == 'false'
+        env:
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          MASTO_INSTANCE: ${{ secrets.MASTO_INSTANCE }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          node scripts/post-bill105-campaign.js
+      
+      - name: Commit state file
+        if: steps.check_date.outputs.campaign_ended == 'false'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .github/state/bill105-campaign-state.json || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update Bill 105 campaign state [skip ci]"
+            git push
+          fi

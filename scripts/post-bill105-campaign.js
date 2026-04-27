@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /**
- * POST-WSIB-CHANGES-APRIL29.JS
- * Posts for IWC Community Meeting on Proposed WSIB Changes
- * April 29, 2026, 1:00 PM (Hybrid: 815 Danforth + Online)
- * Rotates through 5 post variants
+ * POST-BILL105-CAMPAIGN.JS
+ * URGENT: Stop Bill 105 Schedule 9 - Protect the 72-month lock-in
+ * 
+ * Campaign runs through May 15, 2026
+ * Multiple variants emphasizing different angles
  */
 
 require('dotenv').config({ path: '.env.local' });
@@ -12,125 +13,108 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const STATE_FILE = path.join(__dirname, '../.github/state/wsib-changes-april29-state.json');
-const EVENT_DATE = new Date('2026-04-29T13:00:00-04:00'); //1 PM EST
+const STATE_FILE = path.join(__dirname, '../.github/state/bill105-campaign-state.json');
+const CAMPAIGN_END = new Date('2026-05-15T23:59:59-04:00');
 
-if (new Date() > EVENT_DATE) {
-  console.log('ℹ️  WSIB Changes meeting has passed, stopping promotion');
+// Check if campaign has ended
+if (new Date() > CAMPAIGN_END) {
+  console.log('ℹ️  Campaign has ended');
   process.exit(0);
 }
 
 const POSTS = [
   {
     variant: 1,
-    text: `🎉 HISTORIC CHANGES Coming to WSIB!
+    text: `🚨 URGENT: Injured Workers Under Attack! 🚨
 
-Ontario is proposing significant reforms:
-✅ Benefits increased from 85% to 90% of pre-injury earnings
-✅ END the Age 65 cut-off (finally!)
-✅ Extended coverage for retirement/group home workers
+Bill 105, Schedule 9 is a POISON PILL that will remove the 72-month lock-in for permanently injured workers, putting us on perpetual probation.
 
-Join us to discuss:
-📅 Wednesday, April 29
-⏰ 1:00 PM
-📍 Hybrid: 815 Danforth Suite 411 + Online
+This threatens income security and will re-traumatize injured workers with constant surveillance and reassessment.
 
-Register: https://us02web.zoom.us/meeting/register/tZEtde6rrT0jGdDGbPz8tF4m8JhKf5cdvnw2
+📞 CALL NOW:
+• Minister Piccini: 416-326-7600
+• Premier Ford: 416-325-1941
+• WSIB CEO Lang: 416-344-1000
 
-Injured Workers Consultants
-#WSIBReform #InjuredWorkers #Ontario`
+#StopBill105 #InjuredWorkers #72MonthLockIn`
   },
   {
     variant: 2,
-    text: `🔔 Community Meeting: Proposed WSIB Changes
+    text: `⚠️ Hidden Poison Pill in Bill 105
 
-The changes injured workers have demanded for YEARS are finally on the table!
+Schedule 9 removes the 72-month lock-in for injured workers with permanent injuries. This lock-in provides crucial income security.
 
-What we know so far:
-• 90% loss of earnings (up from 85%)
-• No more Age 65 benefit cut-off
-• New coverage for healthcare workers
+Removal = Perpetual insecurity, surveillance, reassessment
+Disproportionate impact on refugees & undocumented workers
 
-April 29, 1 PM - In-person & Online
+DEMAND: Withdraw Schedule 9!
 
-Let's discuss how to ensure these changes benefit ALL injured workers.
+📞 416-326-7600 (Minister Piccini)
+📞 416-325-1941 (Premier Ford)
 
-Register: tinyurl.com/IWApril29
-
-#WorkersRights #WSIB #Advocacy`
+#Bill105 #InjuredWorkers #Ontario`
   },
   {
     variant: 3,
-    text: `💪 Your Voice Matters: WSIB Changes Community Conversation
+    text: `💔 Bill 105 Will Re-Traumatize Injured Workers
 
-Wednesday, April 29 at 1 PM
+The 72-month lock-in provides income security for permanently injured workers who can't return to work.
 
-Ontario government has proposed long-awaited reforms to workers' compensation. This is OUR chance to shape how they're implemented fairly.
+Removing it = ongoing threat of benefit cuts, surveillance, mental health crisis
 
-Topics:
-- What the proposals mean for YOU
-- How to advocate for proper implementation
-- What we still need to fight for
+This is an ATTACK on the most vulnerable workers.
 
-Hybrid event (limited in-person spots at 815 Danforth, Toronto + Zoom)
+CALL YOUR MPP + these numbers:
+📞 Piccini: 416-326-7600
+📞 Ford: 416-325-1941
+📞 WSIB: 416-344-1000
 
-Register: https://iwclc.org/community-meeting-apr-29-on-proposed-changes/
-
-Injured Workers Consultants`
+#StopBill105`
   },
   {
     variant: 4,
-    text: `🚨 URGENT: WSIB Reform Discussion - April 29
+    text: `🔥 Take Action NOW: Stop Bill 105 Schedule 9
 
-After decades of advocacy, Ontario is proposing to:
-✅ Raise benefits to 90%
-✅ Eliminate Age 65 cut-off
-✅ Expand coverage
+Injured workers with permanent injuries need the 72-month lock-in for income security. Bill 105 wants to remove it.
 
-But the details matter. Join us to learn:
-- How these changes affect current & future claims
-- What's still missing from the reforms
-- How to ensure proper implementation
+Result? Perpetual probation. Constant reassessment. Financial insecurity. Mental breakdown.
 
-📅 April 29, 1 PM (Hybrid)
-📍 815 Danforth #411, Toronto + Online
+This affects ALL permanently injured workers.
 
-Sign up: tinyurl.com/IWApril29
+📞 Make calls today:
+Minister of Labour: 416-326-7600
+Premier: 416-325-1941
 
-#InjuredWorkersOntario #WSIBChanges`
+#InjuredWorkers #ProtectTheLockIn`
   },
   {
     variant: 5,
-    text: `THIS WEDNESDAY: Understanding Proposed WSIB Legislation
+    text: `⚖️ Bill 105: Income INsecurity for Injured Workers
 
-The government says they're ending the Age 65 cut-off and raising benefits. But:
-- When do changes take effect?
-- Who qualifies?
-- What about retroactive claims?
+Schedule 9 removes the 72-month lock-in = puts permanently injured workers on perpetual probation with ongoing surveillance and reassessment threats.
 
-Get answers at our community meeting:
-April 29 @ 1 PM
-Hybrid: 815 Danforth Suite 411 + Zoom
+Huge impact on refugees and undocumented workers.
 
-Limited in-person spots—register now!
+WE DEMAND: Withdraw Schedule 9 immediately!
 
-📝 https://us02web.zoom.us/meeting/register/tZEtde6rrT0jGdDGbPz8tF4m8JhKf5cdvnw2
+Call NOW:
+📞 416-326-7600 (Piccini)
+📞 416-325-1941 (Ford)
+📞 Call your local MPP
 
-Organized by Injured Workers Consultants
-
-#WSIB #Ontario #InjuredWorkers`
+#Bill105 #72MonthLockIn`
   }
 ];
 
-console.log('💼 WSIB Changes Community Meeting - April 29, 2026');
-console.log(`📅 ${Math.ceil((EVENT_DATE - new Date()) / (1000 * 60 * 60 * 24))} days until meeting`);
+console.log('🚨 URGENT: Bill 105 Campaign - Protect the 72-Month Lock-In');
+console.log(`📅 ${Math.ceil((CAMPAIGN_END - new Date()) / (1000 * 60 * 60 * 24))} days remaining in campaign`);
 console.log('');
 
 function loadState() {
   try {
     if (fs.existsSync(STATE_FILE)) return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
   } catch (err) {}
-  return { lastVariant: 0, lastPosted: null };
+  return { lastVariant: 0, lastPosted: null, totalPosts: 0 };
 }
 
 function saveState(state) {
@@ -138,12 +122,14 @@ function saveState(state) {
     const dir = path.dirname(STATE_FILE);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
-  } catch (err) {}
+  } catch (err) {
+    console.log('⚠️  Could not save state:', err.message);
+  }
 }
 
 function getNextPost(state) {
   const nextVariant = (state.lastVariant % POSTS.length) + 1;
-  console.log(`📝 Using post variant ${nextVariant}/${POSTS.length}`);
+  console.log(`📝 Using post variant ${nextVariant}/${POSTS.length} (Total posts: ${state.totalPosts || 0})`);
   return { post: POSTS.find(p => p.variant === nextVariant), variant: nextVariant };
 }
 
@@ -227,7 +213,7 @@ async function main() {
   const successCount = Object.values(results).filter(Boolean).length;
   console.log(`\n✅ Posted to ${successCount}/3 platforms`);
 
-  saveState({ lastVariant: variant, lastPosted: new Date().toISOString() });
+  saveState({ lastVariant: variant, lastPosted: new Date().toISOString(), totalPosts: (state.totalPosts || 0) + 1 });
   process.exit(successCount > 0 ? 0 : 1);
 }
 

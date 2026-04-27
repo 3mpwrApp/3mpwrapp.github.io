@@ -2797,7 +2797,7 @@
     "category": "advocacy",
     "organizer": "Injured Workers Consultants (IWC)",
     "registrationRequired": true,
-    "registrationUrl": "https://us02web.zoom.us/meeting/register/tZEtde6rrT0jGdDGbPz8tF4m8JhKf5cdvnw2",
+    "registrationUrl": "https://iwclc.org/community-meeting-apr-29-on-proposed-changes/",
     "tags": [
       "wsib-reform",
       "legislation",
@@ -2808,7 +2808,8 @@
     ],
     "isVirtual": true,
     "promotionEndDate": "2026-04-29",
-    "notes": "Hybrid event: Limited in-person spots at 815 Danforth, Suite 411. Register for either in-person or online attendance at tinyurl.com/IWApril29"
+    "notes": "Hybrid event: Limited in-person spots at 815 Danforth, Suite 411. Register at iwclc.org/community-meeting-apr-29-on-proposed-changes/",
+    "organizerWebsite": "https://iwclc.org"
   },
   {
     "id": "evt-injured-workers-day-2026",
@@ -2859,5 +2860,66 @@
         "url": "https://www.justice4workers.org/2025-06-01_injured_workers_day"
       }
     ]
+  },
+  {
+    "id": "evt-iavgo-day-of-mourning-april28-2026",
+    "title": "IAVGO Day of Mourning - Day of Action",
+    "date": "2026-04-28",
+    "startTime": "14:00",
+    "location": "WSIB, 200 Front Street West, Toronto, ON",
+    "address": "200 Front Street West, Toronto, ON",
+    "description": "Join IAVGO Community Legal Clinic for a Day of Action on the National Day of Mourning. We mourn for the dead and fight for the living. This action brings together injured workers, advocates, and community members to honor those lost to workplace injuries and illness, and to demand justice and fair treatment for injured workers.",
+    "category": "advocacy",
+    "organizer": "IAVGO Community Legal Clinic",
+    "contactEmail": "iwaction4j@gmail.com",
+    "contactPhone": "647-832-1514",
+    "registrationRequired": false,
+    "tags": [
+      "day-of-mourning",
+      "april-28",
+      "advocacy",
+      "direct-action",
+      "wsib",
+      "toronto",
+      "iavgo"
+    ],
+    "isVirtual": false,
+    "promotionEndDate": "2026-04-28",
+    "notes": "Mourn for the dead, fight for the living. Contact: iwaction4j@gmail.com or 647-832-1514"
+  },
+  {
+    "id": "evt-bill105-72month-lockin-campaign-2026",
+    "title": "URGENT: Stop Bill 105 - Protect the 72-Month Lock-In",
+    "date": "2026-04-28",
+    "startTime": "09:00",
+    "endTime": "17:00",
+    "location": "Ontario-wide / Phone Campaign",
+    "description": "🚨 INJURED WORKERS ARE UNDER ATTACK 🚨\n\nA poison pill is hidden in Ontario Bill 105, Schedule 9. The Ontario government is trying to remove the 72-month lock-in for injured workers who have permanent injuries and can't return to work, putting us on perpetual probation.\n\nWHY THIS MATTERS:\n• The 72-month lock-in provides crucial income security for permanently injured workers\n• Removal will re-traumatize injured workers with ongoing insecurity\n• Perpetual threat of surveillance and reassessment\n• Risks mental breakdown and financial ruin\n• Disproportionate impact on injured workers, refugees, and undocumented workers\n\nCALL TO ACTION - MAKE CALLS NOW:\n📞 Minister of Labour David Piccini: 416-326-7600\n📞 Premier Doug Ford: 416-325-1941\n📞 WSIB CEO & President Jeffrey Lang: 416-344-1000\n📞 Call your Local MPP\n\nDEMAND: Withdraw Schedule 9 from Bill 105 and protect the 72-month lock-in!",
+    "category": "advocacy",
+    "organizer": "Injured Workers Community",
+    "registrationRequired": false,
+    "tags": [
+      "bill-105",
+      "72-month-lockin",
+      "urgent",
+      "advocacy",
+      "phone-campaign",
+      "income-security",
+      "permanent-injury"
+    ],
+    "isVirtual": true,
+    "isFeatured": true,
+    "importance": "critical",
+    "promotionEndDate": "2026-05-15",
+    "notes": "URGENT advocacy campaign. Call daily until Schedule 9 is withdrawn. This affects all permanently injured workers in Ontario.",
+    "callToAction": {
+      "primary": "Call Minister Piccini: 416-326-7600",
+      "secondary": [
+        "Call Premier Ford: 416-325-1941",
+        "Call WSIB CEO Lang: 416-344-1000",
+        "Call your Local MPP"
+      ],
+      "message": "Demand withdrawal of Schedule 9 from Bill 105. Protect the 72-month lock-in for injured workers!"
+    }
   }
 ]

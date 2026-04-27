@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 /**
- * POST-WSIB-CHANGES-APRIL29.JS
- * Posts for IWC Community Meeting on Proposed WSIB Changes
- * April 29, 2026, 1:00 PM (Hybrid: 815 Danforth + Online)
- * Rotates through 5 post variants
+ * POST-IAVGO-DAY-OF-MOURNING-APRIL28.JS
+ * Posts for IAVGO Day of Action on April 28, 2026
+ * 
+ * Event: Day of Mourning - Day of Action at WSIB Toronto
+ * Time: April 28, 2 PM EST
+ * Location: 200 Front Street West, Toronto
  */
 
 require('dotenv').config({ path: '.env.local' });
@@ -12,118 +14,65 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const STATE_FILE = path.join(__dirname, '../.github/state/wsib-changes-april29-state.json');
-const EVENT_DATE = new Date('2026-04-29T13:00:00-04:00'); //1 PM EST
+const STATE_FILE = path.join(__dirname, '../.github/state/iavgo-day-of-mourning-state.json');
+const EVENT_DATE = new Date('2026-04-28T14:00:00-04:00');
 
+// Check if event has passed
 if (new Date() > EVENT_DATE) {
-  console.log('ℹ️  WSIB Changes meeting has passed, stopping promotion');
+  console.log('ℹ️  Event has passed');
   process.exit(0);
 }
 
 const POSTS = [
   {
     variant: 1,
-    text: `🎉 HISTORIC CHANGES Coming to WSIB!
+    text: `🕯️ TOMORROW: Day of Mourning - Day of Action
 
-Ontario is proposing significant reforms:
-✅ Benefits increased from 85% to 90% of pre-injury earnings
-✅ END the Age 65 cut-off (finally!)
-✅ Extended coverage for retirement/group home workers
+📍 WSIB, 200 Front Street West, Toronto
+⏰ 2:00 PM EST, April 28th
 
-Join us to discuss:
-📅 Wednesday, April 29
-⏰ 1:00 PM
-📍 Hybrid: 815 Danforth Suite 411 + Online
+Join IAVGO Community Legal Clinic as we mourn for the dead and fight for the living.
 
-Register: https://us02web.zoom.us/meeting/register/tZEtde6rrT0jGdDGbPz8tF4m8JhKf5cdvnw2
+This Day of Action brings together injured workers, advocates, and community to honor those lost to workplace injuries and demand justice.
 
-Injured Workers Consultants
-#WSIBReform #InjuredWorkers #Ontario`
+Contact: iwaction4j@gmail.com | 647-832-1514
+
+#DayOfMourning #April28 #InjuredWorkers #Toronto`
   },
   {
     variant: 2,
-    text: `🔔 Community Meeting: Proposed WSIB Changes
+    text: `📢 Day of Action - April 28, 2 PM
 
-The changes injured workers have demanded for YEARS are finally on the table!
+Mourn for the dead. Fight for the living.
 
-What we know so far:
-• 90% loss of earnings (up from 85%)
-• No more Age 65 benefit cut-off
-• New coverage for healthcare workers
+IAVGO Community Legal Clinic invites you to join us at WSIB headquarters (200 Front St W, Toronto) for a Day of Mourning action.
 
-April 29, 1 PM - In-person & Online
+We remember those lost. We demand justice for injured workers.
 
-Let's discuss how to ensure these changes benefit ALL injured workers.
+Info: iwaction4j@gmail.com | 647-832-1514
 
-Register: tinyurl.com/IWApril29
-
-#WorkersRights #WSIB #Advocacy`
+#DayOfMourning #InjuredWorkers #IAVGO #Toronto`
   },
   {
     variant: 3,
-    text: `💪 Your Voice Matters: WSIB Changes Community Conversation
+    text: `🔥 URGENT: Day of Mourning - Day of Action
 
-Wednesday, April 29 at 1 PM
+Tuesday, April 28 at 2 PM
+WSIB, 200 Front Street West, Toronto
 
-Ontario government has proposed long-awaited reforms to workers' compensation. This is OUR chance to shape how they're implemented fairly.
+We mourn for the dead.
+We fight for the living.
 
-Topics:
-- What the proposals mean for YOU
-- How to advocate for proper implementation
-- What we still need to fight for
+Join IAVGO Community Legal Clinic and fellow injured workers demanding fair treatment and accountability.
 
-Hybrid event (limited in-person spots at 815 Danforth, Toronto + Zoom)
+647-832-1514 | iwaction4j@gmail.com
 
-Register: https://iwclc.org/community-meeting-apr-29-on-proposed-changes/
-
-Injured Workers Consultants`
-  },
-  {
-    variant: 4,
-    text: `🚨 URGENT: WSIB Reform Discussion - April 29
-
-After decades of advocacy, Ontario is proposing to:
-✅ Raise benefits to 90%
-✅ Eliminate Age 65 cut-off
-✅ Expand coverage
-
-But the details matter. Join us to learn:
-- How these changes affect current & future claims
-- What's still missing from the reforms
-- How to ensure proper implementation
-
-📅 April 29, 1 PM (Hybrid)
-📍 815 Danforth #411, Toronto + Online
-
-Sign up: tinyurl.com/IWApril29
-
-#InjuredWorkersOntario #WSIBChanges`
-  },
-  {
-    variant: 5,
-    text: `THIS WEDNESDAY: Understanding Proposed WSIB Legislation
-
-The government says they're ending the Age 65 cut-off and raising benefits. But:
-- When do changes take effect?
-- Who qualifies?
-- What about retroactive claims?
-
-Get answers at our community meeting:
-April 29 @ 1 PM
-Hybrid: 815 Danforth Suite 411 + Zoom
-
-Limited in-person spots—register now!
-
-📝 https://us02web.zoom.us/meeting/register/tZEtde6rrT0jGdDGbPz8tF4m8JhKf5cdvnw2
-
-Organized by Injured Workers Consultants
-
-#WSIB #Ontario #InjuredWorkers`
+#April28 #InjuredWorkers #DayOfAction`
   }
 ];
 
-console.log('💼 WSIB Changes Community Meeting - April 29, 2026');
-console.log(`📅 ${Math.ceil((EVENT_DATE - new Date()) / (1000 * 60 * 60 * 24))} days until meeting`);
+console.log('🕯️ IAVGO Day of Mourning - Day of Action');
+console.log(`⏰ ${Math.ceil((EVENT_DATE - new Date()) / (1000 * 60 * 60 * 24))} days until event`);
 console.log('');
 
 function loadState() {
@@ -138,7 +87,9 @@ function saveState(state) {
     const dir = path.dirname(STATE_FILE);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
-  } catch (err) {}
+  } catch (err) {
+    console.log('⚠️  Could not save state:', err.message);
+  }
 }
 
 function getNextPost(state) {
