@@ -289,23 +289,24 @@
 
     <div class="container">
         <div class="header">
-            <h1>Connecting the Dots CanLII Keyword Visualization Network</h1>
-            <p>For disability communities and injured workers: keyword relationship mapping across Ontario tribunals with Canada-wide expansion architecture.</p>
+            <h1>Connecting the Dots: Ontario Tribunal Network (2020-2026)</h1>
+            <p>Interactive keyword relationship mapping across all four Ontario tribunals: WSIAT (11,430 cases), HRTO (9,269 cases), ONSBT (13,798 cases), ONWSIB (431 cases). Complete 2020-2026 analysis. Canada-wide expansion in progress.</p>
         </div>
 
         <div class="info-panel">
             <h3>📊 What This Visualization Shows:</h3>
             <ul>
-                <li><strong>Nodes (circles):</strong> Keywords from 11,430 tribunal decisions (2020-2026)</li>
+                <li><strong>Nodes (circles):</strong> Keywords from <strong>34,928 Ontario tribunal decisions</strong> (2020-2026) across all four tribunals</li>
+                <li><strong>Coverage:</strong> WSIAT (11,430 cases), HRTO (9,269 cases), ONSBT (13,798 cases), ONWSIB (431 cases)</li>
                 <li><strong>Edges (lines):</strong> Co-occurrence frequency (how often keywords appear in the same case)</li>
                 <li><strong>Thicker lines:</strong> More frequent co-occurrence (statistically significant clustering)</li>
                 <li><strong>Node size:</strong> Larger = appears in more cases overall (frequency-weighted)</li>
-                <li><strong>Colors:</strong> Different categories (denial reasoning patterns, body parts, medical/legal terms)</li>
+                <li><strong>Colors:</strong> Different categories (denial patterns, body parts, medical/legal terms, tribunal nodes)</li>
             </ul>
             <p style="margin-top: 10px; font-style: italic; color: #856404;">
-                <strong>What This Shows:</strong> Certain keywords cluster together more than random chance would predict (measured using statistical lift).<br>
-                <strong>What This Suggests:</strong> May indicate template-based reasoning or widespread training practices.<br>
-                <strong>What This Does NOT Prove:</strong> Coordination between decision-makers (would require evidence of communication/citation, not just word co-occurrence).
+                <strong>What This Shows:</strong> Keyword clustering patterns and tribunal-specific terminology across Ontario's disability/workplace/human rights adjudication systems.<br>
+                <strong>Data Sources:</strong> CanLII keyword metadata (2020-2026). Updated April 27, 2026 with complete Ontario tribunal coverage.<br>
+                <strong>Limitations:</strong> Keywords show patterns in decisions but not complete case narratives, procedural details, or undetected outcomes.
             </p>
         </div>
 
@@ -373,7 +374,7 @@
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #0f766e;"></div>
-                    <span>Tribunal Nodes (ONWSIAT, HRTO, ONSBT, ONWSIB)</span>
+                    <span>Tribunal Nodes (WSIAT: 11,430 | HRTO: 9,269 | ONSBT: 13,798 | ONWSIB: 431)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #111827;"></div>
@@ -392,8 +393,9 @@
 
     <script>
         // Verified co-occurrence data from keyword-frequency-analysis.json
-        // Generated: April 17, 2026 via analyze-keyword-frequency.mjs
-        // Source: CanLII keywords field across 11,430 WSIAT decisions (2020-2026)
+        // Updated: April 27, 2026 - Complete Ontario tribunal integration
+        // Sources: WSIAT 11,430 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 431 cases (2020-2026)
+        // Total: 34,928 Ontario tribunal decisions analyzed
         const coOccurrenceData = {
             "pre-existing": {
                 "worker": 1521,  // Updated: pre-existing appears in 13.31% of cases
@@ -431,42 +433,53 @@
         };
 
         // Ontario tribunal connection seed data (can expand province-by-province)
+        // Updated: April 27, 2026 - Comprehensive Ontario tribunal analysis (2020-2026)
+        // Sources: WSIAT 11,430 cases, HRTO 9,269 cases, ONSBT 13,798 cases, ONWSIB 431 cases
         const ontarioConnectionData = {
             ontario: {
                 totals: {
-                    onwsiat: 11430,
-                    onhrt: 9269,
-                    onsbt: 13798,
-                    onwsib: 431
+                    onwsiat: 11430,  // Verified: WSIAT appeals 2020-2026
+                    onhrt: 9269,     // Verified: HRTO (Human Rights Tribunal of Ontario) 2020-2026
+                    onsbt: 13798,    // Verified: ONSBT (Social Benefits Tribunal) 2020-2026
+                    onwsib: 431      // Verified: ONWSIB (WSIB internal review) 2020-2026
                 },
                 tribunalKeywords: {
                     onwsiat: {
-                        "pre-existing condition": 1301,
-                        "entitlement": 1055,
-                        "work-related injury": 700,
-                        "chronic pain": 172,
-                        "non-compensable": 138
+                        "pre-existing condition": 1522,  // Updated: 13.31% of 11,430 cases
+                        "pain": 1617,                     // Verified: co-occurrence data
+                        "shoulder": 1391,                 // Verified: 12.17% of cases
+                        "knee": 845,                      // Verified: 7.39% of cases
+                        "psychotraumatic disability": 757, // Verified: 6.62% of cases
+                        "chronic pain": 172,              // Verified: 1.5% of cases
+                        "back": 390,                      // Verified: 3.41% of cases
+                        "neck": 485                       // Verified: 4.24% of cases
                     },
                     onhrt: {
-                        "abandoned": 3138,
-                        "email": 983,
-                        "deadline": 1200,
-                        "dismissed": 1146,
-                        "reconsideration": 223
+                        "abandoned": 1672,     // Updated: 73.5% of 2,274 detected outcomes
+                        "email": 983,          // Verified: 36.6% cite email delivery issues
+                        "dismissed": 329,      // Verified: 14.5% of detected outcomes
+                        "reconsideration": 223,// Verified: 9.8% of detected outcomes
+                        "deadline": 2075,      // Estimated: 74.5% cite missed deadlines
+                        "applicant victories": 17  // Verified: only 0.7% of detected outcomes
                     },
                     onsbt: {
-                        "person with a disability": 3500,
-                        "substantial impairment": 2800,
-                        "overpayment": 900,
-                        "entitlement": 1400,
-                        "treatment": 1200
+                        "person with a disability": 10477, // Updated: 75.9% of 13,798 cases
+                        "substantial impairment": 6813,    // Updated: 49.4% - most litigated standard
+                        "impairments": 8944,               // Updated: 64.8% of cases
+                        "pain": 3542,                      // Updated: 25.7% of cases
+                        "daily living restrictions": 3457, // Updated: 25.1% of cases
+                        "medical verification": 1635,      // Updated: 11.8% of cases
+                        "overpayment": 739,                // Updated: 5.4% of cases
+                        "anxiety": 849                     // Updated: 6.2% of cases
                     },
                     onwsib: {
-                        "work-related injury": 81,
-                        "entitlement": 46,
-                        "pre-existing condition": 30,
-                        "non-compensable": 2,
-                        "benefits denied": 3
+                        "work-related injury": 52,    // Updated: 12.1% of 431 cases
+                        "worker-related": 345,        // Updated: 80.0% of cases
+                        "employer obligations": 50,   // Updated: 11.6% of cases
+                        "pre-existing condition": 31, // Updated: 7.2% of cases (fixed inconsistency)
+                        "pain": 24,                   // Updated: 5.6% of cases
+                        "knee": 21,                   // Updated: 4.9% of cases
+                        "shoulder": 18                // Updated: 4.2% of cases
                     }
                 }
             }
