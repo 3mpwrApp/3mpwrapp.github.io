@@ -658,8 +658,8 @@
 
             <div class="control-group">
                 <label for="threshold-slider">Minimum co-occurrences:</label>
-                <input type="range" id="threshold-slider" min="10" max="200" value="50" step="10">
-                <span id="threshold-value">50</span>
+                <input type="range" id="threshold-slider" min="10" max="200" value="10" step="10">
+                <span id="threshold-value">10</span>
                 <small style="display: block; margin-top: 5px; color: #6c757d; font-style: italic;">Lower = more keywords shown (may be cluttered). Higher = fewer, stronger connections only.</small>
             </div>
         </div>
@@ -888,6 +888,9 @@
                 const tribunalKey = tribunalMap[scope];
                 const tribunalData = ontarioConnectionData.ontario;
                 const keywordMap = tribunalData.tribunalKeywords[tribunalKey] || {};
+                
+                // For individual tribunal views, use a lower effective threshold to ensure visibility
+                const effectiveThreshold = Math.min(threshold, 10);
 
                 // Add tribunal node
                 nodes.set(tribunalKey, {
@@ -898,7 +901,7 @@
 
                 // Add keyword nodes connected to tribunal
                 Object.entries(keywordMap).forEach(([keyword, count]) => {
-                    if (count < threshold) return;
+                    if (count < effectiveThreshold) return;
 
                     nodes.set(keyword, {
                         id: keyword,
@@ -914,7 +917,7 @@
                 });
 
                 // Add keyword-to-keyword connections within tribunal
-                const keywords = Object.keys(keywordMap).filter(k => keywordMap[k] >= threshold);
+                const keywords = Object.keys(keywordMap).filter(k => keywordMap[k] >= effectiveThreshold);
                 keywords.forEach(k1 => {
                     keywords.forEach(k2 => {
                         if (k1 < k2 && coOccurrenceData[k1] && coOccurrenceData[k1][k2]) {
