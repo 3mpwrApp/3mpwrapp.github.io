@@ -778,12 +778,12 @@ Read through sections in order. Each builds on previous information.
 
 **Need help?**
 - **In the app:** Settings → Contact Support
-- **Email:** support@3mpwrapp.ca
-- **Website:** 3mpwrapp.github.io
+- **Email:** empowrapp08162025@gmail.com
+- **Website:** 3mpwrapp.pages.dev
 - **Community:** Join our community channels for peer support
 
 **Report accessibility issues:**
-- Email: accessibility@3mpwrapp.ca
+- Email: empowrapp08162025@gmail.com
 - We respond within 24 hours
 - We prioritize accessibility fixes
 

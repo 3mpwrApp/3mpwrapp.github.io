@@ -4,8 +4,8 @@ title: "ONSBT 2020-2026: Tiered Outcome Classification and Audit Confidence Upda
 subtitle: "13,798 decisions reviewed with confirmed/probable/unresolved tiers and tribunal-level confidence intervals"
 date: 2026-04-26
 author: Lissa Beaulieu (Founder, 3mpwrApp) & GitHub Copilot
-categories: [Research, ONSBT, Access to Justice]
-tags: [onsbt, outcome-classification, confidence-intervals, data-transparency]
+categories: community-updates
+tags: [onsbt, outcome-classification, confidence-intervals, data-transparency, research, access-to-justice]
 toc: true
 ---
 

@@ -109,9 +109,8 @@ You are free to share and adapt this guide with attribution.
 ## Contact
 
 Questions about the user guide?
-- **Email:** support@3mpwrapp.ca
-- **Accessibility issues:** accessibility@3mpwrapp.ca
-- **Website:** https://3mpwrapp.github.io
+- **Email:** empowrapp08162025@gmail.com
+- **Website:** https://3mpwrapp.pages.dev
 
 ---
 
