@@ -701,7 +701,7 @@ All guides and templates below are **derived from analyzing 11,430+ tribunal dec
 
 ## �🚀 Live Tools
 
-### WSIB Denial Network Visualization
+### Live Interactive Connecting the Dots: CanLII Keyword Network
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
     <span class="tool-badge">Live</span>
