@@ -314,8 +314,8 @@
             <div class="control-group">
                 <label for="scope-select">Network scope:</label>
                 <select id="scope-select">
-                    <option value="keyword" selected>ONWSIAT Keyword Co-Occurrence</option>
-                    <option value="ontario">Ontario Tribunal Connections</option>
+                    <option value="keyword" selected>All Ontario Tribunals: Keyword Co-Occurrence (WSIAT, HRTO, ONSBT, ONWSIB)</option>
+                    <option value="ontario">Ontario Tribunal Network Map (4 tribunals connected)</option>
                 </select>
             </div>
 
@@ -332,18 +332,23 @@
             <div class="control-group">
                 <label for="focus-select">Focus on keyword:</label>
                 <select id="focus-select">
-                    <option value="all">All Patterns</option>
-                    <option value="pre-existing" selected>Pre-Existing Condition</option>
-                    <option value="mental">Mental Health</option>
-                    <option value="pain">Pain</option>
-                    <option value="worker">Worker</option>
+                    <option value="all">All Patterns (All Tribunals)</option>
+                    <option value="pre-existing" selected>Pre-Existing Condition (WSIAT/ONWSIB)</option>
+                    <option value="mental">Mental Health (WSIAT)</option>
+                    <option value="pain">Pain (WSIAT/ONSBT/ONWSIB)</option>
+                    <option value="worker">Worker (WSIAT/ONWSIB)</option>
+                    <option value="abandoned">Abandoned (HRTO)</option>
+                    <option value="person with a disability">Person with a Disability (ONSBT)</option>
+                    <option value="substantial impairment">Substantial Impairment (ONSBT)</option>
                 </select>
+                <small style="display: block; margin-top: 5px; color: #6c757d; font-style: italic;">Disabled when viewing Ontario Tribunal Network Map</small>
             </div>
 
             <div class="control-group">
                 <label for="threshold-slider">Minimum co-occurrences:</label>
                 <input type="range" id="threshold-slider" min="10" max="200" value="50" step="10">
                 <span id="threshold-value">50</span>
+                <small style="display: block; margin-top: 5px; color: #6c757d; font-style: italic;">Lower = more keywords shown (may be cluttered). Higher = fewer, stronger connections only.</small>
             </div>
         </div>
 
@@ -354,33 +359,37 @@
             <div class="legend-items">
                 <div class="legend-item">
                     <div class="legend-color" style="background: #dc3545;"></div>
-                    <span>Denial Reasoning Patterns (pre-existing, cost relief, legal thresholds)</span>
+                    <span>Denial/Barriers - WSIAT: pre-existing, cost relief | HRTO: abandoned, email issues | ONWSIB: pre-existing</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #0066cc;"></div>
-                    <span>Core Terms (worker, employer, accident, injury)</span>
+                    <span>Core Terms (worker, employer, accident, injury, work-related)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #28a745;"></div>
-                    <span>Body Parts (knee, back, shoulder, etc.)</span>
+                    <span>Body Parts (knee, back, shoulder, neck - WSIAT/ONWSIB specific)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #fd7e14;"></div>
-                    <span>Medical/Severity (pain, impairment, severity)</span>
+                    <span>Medical/Severity (pain, impairment, severity, substantial impairment)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #6f42c1;"></div>
-                    <span>Mental Health Terms</span>
+                    <span>Mental Health/Disability - WSIAT: psychotraumatic | ONSBT: person with a disability, anxiety, substantial impairment</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #0f766e;"></div>
-                    <span>Tribunal Nodes (WSIAT: 11,430 | HRTO: 9,269 | ONSBT: 13,798 | ONWSIB: 431)</span>
+                    <span><strong>Tribunal Nodes:</strong> WSIAT (11,430 workplace injury) | HRTO (9,269 human rights) | ONSBT (13,798 disability benefits) | ONWSIB (431 internal review)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #111827;"></div>
-                    <span>Province Node (Ontario now, Canada-wide roadmap)</span>
+                    <span><strong>Province Node:</strong> Ontario (34,928 total decisions) - Canada-wide expansion in progress</span>
                 </div>
             </div>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #6c757d; font-style: italic;">
+                <strong>Viewing Mode:</strong> <span id="legend-mode-indicator">WSIAT Keyword Co-Occurrence</span><br>
+                <strong>Tip:</strong> Switch to "Ontario Tribunal Connections" to see all 4 tribunals with tribunal-specific keywords.
+            </p>
         </div>
 
         <div class="stats-panel">
@@ -514,11 +523,11 @@
         function getNodeCategory(keyword) {
             const provinceTerms = ['ontario'];
             const tribunalTerms = ['onwsiat', 'onhrt', 'onsbt', 'onwsib'];
-            const denialTerms = ['pre-existing', 'cost relief', 'pre-accident disability', 'greater severity than normal'];
-            const coreTerms = ['worker', 'employer', 'accident', 'work-related injury', 'entitlement'];
+            const denialTerms = ['pre-existing', 'cost relief', 'pre-accident disability', 'greater severity than normal', 'abandoned', 'email', 'dismissed'];
+            const coreTerms = ['worker', 'employer', 'accident', 'work-related injury', 'entitlement', 'worker-related', 'employer obligations'];
             const bodyParts = ['shoulder', 'knee', 'back', 'wrist', 'elbow', 'hip', 'neck'];
-            const medicalTerms = ['pain', 'impairment', 'severity', 'chronic'];
-            const mentalHealthTerms = ['mental', 'depression', 'psychotraumatic'];
+            const medicalTerms = ['pain', 'impairment', 'severity', 'chronic', 'substantial impairment', 'impairments', 'medical verification', 'daily living restrictions'];
+            const mentalHealthTerms = ['mental', 'depression', 'psychotraumatic', 'anxiety', 'person with a disability', 'disability'];
 
             if (provinceTerms.some(t => keyword === t)) return 'province';
             if (tribunalTerms.some(t => keyword === t)) return 'tribunal';
@@ -795,13 +804,21 @@
 
             const focusSelect = document.getElementById('focus-select');
             const provinceSelect = document.getElementById('province-select');
+            const modeIndicator = document.getElementById('legend-mode-indicator');
 
             if (scope === 'ontario') {
                 focusSelect.disabled = true;
                 provinceSelect.disabled = false;
+                if (modeIndicator) {
+                    modeIndicator.textContent = 'Ontario Tribunal Network (All 4 Tribunals + Province-Wide Keywords)';
+                }
             } else {
                 focusSelect.disabled = false;
                 provinceSelect.disabled = true;
+                if (modeIndicator) {
+                    const focusText = focusKeyword === 'all' ? 'All WSIAT Patterns' : `WSIAT Focus: ${focusKeyword}`;
+                    modeIndicator.textContent = `WSIAT Keyword Co-Occurrence (${focusText})`;
+                }
             }
 
             buildNetwork(scope, province, focusKeyword, threshold);
