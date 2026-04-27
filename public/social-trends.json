@@ -1,56 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-27T03:50:16.205Z",
+  "lastUpdated": "2026-04-27T14:18:25.940Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16224,
+      "totalPosts": 16249,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T03:50:06.329Z"
+      "lastSeen": "2026-04-27T14:18:17.445Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16211,
+      "totalPosts": 16236,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T03:50:08.395Z"
+      "lastSeen": "2026-04-27T14:18:19.273Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16096,
+      "totalPosts": 16121,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T03:50:10.859Z"
+      "lastSeen": "2026-04-27T14:18:20.910Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16287,
+      "totalPosts": 16312,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T03:50:13.048Z"
+      "lastSeen": "2026-04-27T14:18:22.601Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16248,
+      "totalPosts": 16273,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T03:50:15.201Z"
+      "lastSeen": "2026-04-27T14:18:24.937Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Speaking of alt text & not being able to see images, here's one of my fave short guides to image description.\n\nIt's written by someone with vision impairment who uses screen readers on the daily. #accessibility #altText #a11y",
-      "author": "ryanpatrickrandall.com",
-      "engagement": 14,
-      "hashtag": "A11y"
-    },
-    {
-      "text": "ARIA is inevitable when you work on web accessibility. Here's everything I wish someone told me when I first got started, presented at @webexpo.bsky.social in Prague on May 28th. #a11y webexpo.net/prague2026/s...",
-      "author": "ericwbailey.website",
-      "engagement": 44,
-      "hashtag": "A11y"
-    },
     {
       "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
       "author": "anonymoussewerrat.bsky.social",
@@ -338,6 +326,18 @@
       "author": "beatlenumber9.bsky.social",
       "engagement": 11,
       "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "RFK: “What’s wrong with you people? Don’t you know how you’re supposed to treat loved ones? They’re like cars, you just get a new one, if the old one gets broken!” #DisabilityRights",
+      "author": "beatlenumber9.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "LLMs hallucinate WCAG criteria, invent issues, and can't touch a live DOM. An AI accessibility audit isn't cutting corners; it's counterfeit expertise. Human testers still own this work.\n\nafixt.com/beware-of-...\n\n#DigitalAccessibility #A11y #WCAG #DigitalInclusion #ResponsibleAI #AI",
+      "author": "deconspray.bsky.social",
+      "engagement": 30,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
@@ -347,7 +347,7 @@
     },
     {
       "keyword": "accessibility",
-      "count": 32
+      "count": 36
     },
     {
       "keyword": "disabilityjustice",
@@ -355,7 +355,7 @@
     },
     {
       "keyword": "a11y",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "cripthevote",
@@ -402,24 +402,24 @@
       "count": 8
     },
     {
-      "keyword": "ada",
-      "count": 7
-    },
-    {
-      "keyword": "ai",
-      "count": 7
-    },
-    {
-      "keyword": "disability",
-      "count": 6
-    },
-    {
       "keyword": "disabilitysky",
-      "count": 6
+      "count": 7
     },
     {
       "keyword": "cripminds",
-      "count": 6
+      "count": 7
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 7
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 7
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 7
     }
   ]
 }
