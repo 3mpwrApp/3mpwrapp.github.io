@@ -1,8 +1,68 @@
 {
   "year": 2026,
   "version": "1.0",
-  "lastUpdated": "2026-04-21T23:09:28.096Z",
+  "lastUpdated": "2026-04-27T01:16:45.605Z",
   "entries": [
+    {
+      "id": "wn-2026-04-27-582935",
+      "title": "🐛 Bill 105 campaign - change to 1x daily until April 28.",
+      "summary": "Bill 105 campaign - change to 1x daily until April 28.",
+      "date": "2026-04-27T00:59:52.000Z",
+      "category": "fix",
+      "repo": "site",
+      "commitSha": "582935567d0a242541469dd4dbc209afc17668eb",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-27-2a9ba5",
+      "title": "✨ April 26 urgent updates - Bill 105 campaign + IAVGO Day of Mourning.",
+      "summary": "April 26 urgent updates - Bill 105 campaign + IAVGO Day of Mourning.",
+      "date": "2026-04-27T00:57:28.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "2a9ba5bf77cb3679a38f452f73d2b039c4b4c571",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-26-88a6f5",
+      "title": "✨ Add comprehensive CanLII tribunal data integration.",
+      "summary": "Add comprehensive CanLII tribunal data integration.",
+      "date": "2026-04-26T23:17:40.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "88a6f5dfdd980212106707e80c2d40f230bf204a",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-26-a794fb",
+      "title": "⚡ Update trending keywords - 2026-04-26 13:23 UTC.",
+      "summary": "Update trending keywords - 2026-04-26 13:23 UTC.",
+      "date": "2026-04-26T13:23:34.000Z",
+      "category": "improvement",
+      "repo": "site",
+      "commitSha": "a794fbb99f35cef63f1b0c7ff29b061898dad400",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-26-0e4ab5",
+      "title": "⚡ Weekly summary post - automated update.",
+      "summary": "Weekly summary post - automated update.",
+      "date": "2026-04-26T13:13:01.000Z",
+      "category": "improvement",
+      "repo": "site",
+      "commitSha": "0e4ab5aa240a7afa25c11d638b97bbcee67847cd",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-26-060564",
+      "title": "⚡ Update trending keywords - 2026-04-26 03:45 UTC.",
+      "summary": "Update trending keywords - 2026-04-26 03:45 UTC.",
+      "date": "2026-04-26T03:45:23.000Z",
+      "category": "improvement",
+      "repo": "site",
+      "commitSha": "060564412912c899c4f77d0f946193332f7a1fdc",
+      "archived": false
+    },
     {
       "id": "wn-2026-04-21-f2b0ac",
       "title": "✨ WIP on main: 46287f13 feat: add 6 critical April/June 2026 events.",
@@ -571,7 +631,7 @@
       "category": "feature",
       "repo": "app",
       "commitSha": "66b5f030068532d08cd5ff835fa89985e2902acb",
-      "archived": false
+      "archived": true
     },
     {
       "id": "wn-2026-03-26-304787",
@@ -581,7 +641,7 @@
       "category": "improvement",
       "repo": "app",
       "commitSha": "304787de13cab48ce67a08d1c0e195e6f58ddd34",
-      "archived": false
+      "archived": true
     },
     {
       "id": "wn-2026-03-26-aa8627",
@@ -591,7 +651,7 @@
       "category": "feature",
       "repo": "app",
       "commitSha": "aa8627d9789b505ea51193c7ddf4e6d6ad785d44",
-      "archived": false
+      "archived": true
     },
     {
       "id": "wn-2026-03-18-9e613d",

@@ -1,9 +1,69 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-16T23:25:04.219Z",
-  "totalEntries": 952,
-  "recentEntries": 54,
+  "lastUpdated": "2026-04-21T23:09:32.180Z",
+  "totalEntries": 958,
+  "recentEntries": 59,
   "entries": [
+    {
+      "id": "wn-2026-04-21-f2b0ac",
+      "title": "✨ WIP on main: 46287f13 feat: add 6 critical April/June 2026 events.",
+      "summary": "WIP on main: 46287f13 feat: add 6 critical April/June 2026 events.",
+      "date": "2026-04-21T21:18:51.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "f2b0ac83d3f23fc32b19a0af9fa1a40e2913b5e3",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-21-87db76",
+      "title": "✨ Index on main: 46287f13 feat: add 6 critical April/June 2026 events.",
+      "summary": "Index on main: 46287f13 feat: add 6 critical April/June 2026 events.",
+      "date": "2026-04-21T21:18:51.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "87db762c25ae8933f2fc4e8ff2ff141f028632b2",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-21-46287f",
+      "title": "✨ Add 6 critical April/June 2026 events.",
+      "summary": "Add 6 critical April/June 2026 events.",
+      "date": "2026-04-21T21:16:29.000Z",
+      "category": "feature",
+      "repo": "site",
+      "commitSha": "46287f13372834b28de43346b5f4c50fcbd51e19",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-21-6984e5",
+      "title": "⚡ Update trending keywords - 2026-04-21 14:02 UTC.",
+      "summary": "Update trending keywords - 2026-04-21 14:02 UTC.",
+      "date": "2026-04-21T14:02:13.000Z",
+      "category": "improvement",
+      "repo": "site",
+      "commitSha": "6984e5959be22bc128b6189bb95f1f14cbc5e278",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-21-dfd583",
+      "title": "⚡ Weekly summary post - automated update.",
+      "summary": "Weekly summary post - automated update.",
+      "date": "2026-04-21T13:47:47.000Z",
+      "category": "improvement",
+      "repo": "site",
+      "commitSha": "dfd583fe261e13b6c42054e538cf5d784179acb0",
+      "archived": false
+    },
+    {
+      "id": "wn-2026-04-21-66024e",
+      "title": "⚡ Update trending keywords - 2026-04-21 03:34 UTC.",
+      "summary": "Update trending keywords - 2026-04-21 03:34 UTC.",
+      "date": "2026-04-21T03:34:07.000Z",
+      "category": "improvement",
+      "repo": "site",
+      "commitSha": "66024ec7ac40d7686e5782acc3e799562eb56a86",
+      "archived": false
+    },
     {
       "id": "wn-2026-04-16-710c33",
       "title": "✨ Add dark mode and high contrast support to research page.",
@@ -542,7 +602,7 @@
       "category": "feature",
       "repo": "app",
       "commitSha": "9e613decdb1148570fa0b2c503e432ca3bd22887",
-      "archived": false
+      "archived": true
     },
     {
       "id": "wn-2026-03-07-73f547",
