@@ -1,50 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-26T13:23:33.595Z",
+  "lastUpdated": "2026-04-27T03:50:16.205Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16199,
+      "totalPosts": 16224,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T13:23:23.042Z"
+      "lastSeen": "2026-04-27T03:50:06.329Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16186,
+      "totalPosts": 16211,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T13:23:25.860Z"
+      "lastSeen": "2026-04-27T03:50:08.395Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16071,
+      "totalPosts": 16096,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T13:23:28.105Z"
+      "lastSeen": "2026-04-27T03:50:10.859Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16262,
+      "totalPosts": 16287,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T13:23:30.354Z"
+      "lastSeen": "2026-04-27T03:50:13.048Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16223,
+      "totalPosts": 16248,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-26T13:23:32.591Z"
+      "lastSeen": "2026-04-27T03:50:15.201Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "The issue with image uploads is a great test of everyone’s ALT text! #accessibility",
-      "author": "saskajanet.bsky.social",
-      "engagement": 81,
-      "hashtag": "Accessibility"
-    },
     {
       "text": "Speaking of alt text & not being able to see images, here's one of my fave short guides to image description.\n\nIt's written by someone with vision impairment who uses screen readers on the daily. #accessibility #altText #a11y",
       "author": "ryanpatrickrandall.com",
@@ -338,6 +332,12 @@
       "author": "vale.rocks",
       "engagement": 16,
       "hashtag": "A11y"
+    },
+    {
+      "text": "RFK: “What’s wrong with you people? Don’t you know how you’re supposed to treat loved ones? They’re like cars, you just get a new one, if the old one gets broken!” #DisabilityRights",
+      "author": "beatlenumber9.bsky.social",
+      "engagement": 11,
+      "hashtag": "DisabilityRights"
     }
   ],
   "emergingTopics": [
@@ -347,11 +347,11 @@
     },
     {
       "keyword": "accessibility",
-      "count": 36
+      "count": 32
     },
     {
       "keyword": "disabilityjustice",
-      "count": 28
+      "count": 26
     },
     {
       "keyword": "a11y",
@@ -406,20 +406,20 @@
       "count": 7
     },
     {
-      "keyword": "disabilitysky",
+      "keyword": "ai",
       "count": 7
+    },
+    {
+      "keyword": "disability",
+      "count": 6
+    },
+    {
+      "keyword": "disabilitysky",
+      "count": 6
     },
     {
       "keyword": "cripminds",
-      "count": 7
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 7
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 7
+      "count": 6
     }
   ]
 }
