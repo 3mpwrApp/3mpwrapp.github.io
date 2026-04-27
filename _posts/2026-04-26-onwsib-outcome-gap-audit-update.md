@@ -213,3 +213,11 @@ Full datasets available for community analysis:
 **Authors:** Lissa Beaulieu (Founder, 3mpwrApp) & GitHub Copilot  
 **Data Source:** CanLII ONWSIB decisions (2020-2026)  
 **Last Updated:** April 26, 2026
+
+---
+
+## Questions or Feedback?
+
+**📧 Email:** empowrapp08162025@gmail.com  
+**🐘 Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)  
+**🦋 Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)

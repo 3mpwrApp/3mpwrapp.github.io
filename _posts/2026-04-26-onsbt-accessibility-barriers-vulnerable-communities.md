@@ -402,3 +402,11 @@ Until ONSBT explicitly addresses:
 **Limitations**: No quantitative outcome data available; analysis based on reconstructed patterns from decision summaries; no direct appellant interviews or accessibility audit conducted
 
 **Next Steps**: Empirical research needed to quantify barrier impact on actual appellant outcomes and demographics.
+
+---
+
+## Questions or Feedback?
+
+**📧 Email:** empowrapp08162025@gmail.com  
+**🐘 Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)  
+**🦋 Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)

@@ -88,3 +88,11 @@ For complete information about CanLII Database: Ontario WSIB & HRTO Cases (Expan
 - ðŸ”’ Privacy-first (local-first architecture)
 - ðŸ‡¨ðŸ‡¦ Canadian-focused (all provinces/territories)
 - ðŸŒ Culturally inclusive (Indigenous languages supported)
+
+---
+
+## Questions or Feedback?
+
+**?? Email:** empowrapp08162025@gmail.com  
+**?? Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)  
+**?? Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)

@@ -333,3 +333,11 @@ The legal framework (Gray/Crane substantiality standard, Gallier contextualizati
 - 2025 spike anomalous (methodology unclear)
 
 **Confidence Level**: Moderate (structure and process transparent; outcomes and impacts unknown)
+
+---
+
+## Questions or Feedback?
+
+**📧 Email:** empowrapp08162025@gmail.com  
+**🐘 Mastodon:** [@3mpwrApp@mastodon.social](https://mastodon.social/@3mpwrApp)  
+**🦋 Bluesky:** [@3mpwrapp.bsky.social](https://bsky.app/profile/3mpwrapp.bsky.social)
