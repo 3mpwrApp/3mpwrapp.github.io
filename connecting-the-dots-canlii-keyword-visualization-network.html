@@ -259,6 +259,40 @@
             margin-top: 5px;
         }
 
+        /* Zoom Controls */
+        .zoom-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .zoom-btn {
+            width: 40px;
+            height: 40px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: all 0.2s;
+        }
+
+        .zoom-btn:hover {
+            background: #764ba2;
+            transform: scale(1.1);
+        }
+
+        .zoom-btn:active {
+            transform: scale(0.95);
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8em;
@@ -379,6 +413,16 @@
                 color: #e0e0e0;
                 border: 2px solid #667eea;
             }
+
+            .zoom-btn {
+                background: #667eea;
+                border: 2px solid #667eea;
+            }
+
+            .zoom-btn:hover {
+                background: #764ba2;
+                border: 2px solid #764ba2;
+            }
         }
 
         /* High Contrast Mode Support */
@@ -490,6 +534,18 @@
                 color: #ffffff;
                 border: 3px solid #ffff00;
             }
+
+            .zoom-btn {
+                background: #000000;
+                color: #ffff00;
+                border: 3px solid #ffff00;
+            }
+
+            .zoom-btn:hover {
+                background: #ffff00;
+                color: #000000;
+                border: 3px solid #000000;
+            }
         }
     </style>
 </head>
@@ -534,6 +590,10 @@
                 <select id="scope-select">
                     <option value="keyword" selected>All Ontario Tribunals: Keyword Co-Occurrence (WSIAT, HRTO, ONSBT, ONWSIB)</option>
                     <option value="ontario">Ontario Tribunal Network Map (4 tribunals connected)</option>
+                    <option value="wsiat">WSIAT Only (Workplace Safety & Insurance Appeals - 11,430 cases)</option>
+                    <option value="hrto">HRTO Only (Human Rights Tribunal of Ontario - 9,269 cases)</option>
+                    <option value="onsbt">ONSBT Only (Social Benefits Tribunal - 13,798 cases)</option>
+                    <option value="onwsib">ONWSIB Only (WSIB Internal Review - 431 cases)</option>
                 </select>
             </div>
 
@@ -543,7 +603,16 @@
                     <option value="ontario" selected>Ontario</option>
                     <option value="coming-soon" disabled>British Columbia (coming soon)</option>
                     <option value="coming-soon" disabled>Alberta (coming soon)</option>
+                    <option value="coming-soon" disabled>Saskatchewan (coming soon)</option>
+                    <option value="coming-soon" disabled>Manitoba (coming soon)</option>
                     <option value="coming-soon" disabled>Quebec (coming soon)</option>
+                    <option value="coming-soon" disabled>New Brunswick (coming soon)</option>
+                    <option value="coming-soon" disabled>Nova Scotia (coming soon)</option>
+                    <option value="coming-soon" disabled>Prince Edward Island (coming soon)</option>
+                    <option value="coming-soon" disabled>Newfoundland and Labrador (coming soon)</option>
+                    <option value="coming-soon" disabled>Yukon (coming soon)</option>
+                    <option value="coming-soon" disabled>Northwest Territories (coming soon)</option>
+                    <option value="coming-soon" disabled>Nunavut (coming soon)</option>
                 </select>
             </div>
 
@@ -551,15 +620,40 @@
                 <label for="focus-select">Focus on keyword:</label>
                 <select id="focus-select">
                     <option value="all">All Patterns (All Tribunals)</option>
-                    <option value="pre-existing" selected>Pre-Existing Condition (WSIAT/ONWSIB)</option>
-                    <option value="mental">Mental Health (WSIAT)</option>
-                    <option value="pain">Pain (WSIAT/ONSBT/ONWSIB)</option>
-                    <option value="worker">Worker (WSIAT/ONWSIB)</option>
-                    <option value="abandoned">Abandoned (HRTO)</option>
-                    <option value="person with a disability">Person with a Disability (ONSBT)</option>
-                    <option value="substantial impairment">Substantial Impairment (ONSBT)</option>
+                    <optgroup label="WSIAT Keywords (Workplace Injury)">
+                        <option value="pre-existing condition">Pre-Existing Condition (1,522 cases)</option>
+                        <option value="pain">Pain (1,617 cases)</option>
+                        <option value="shoulder">Shoulder (1,391 cases)</option>
+                        <option value="knee">Knee (845 cases)</option>
+                        <option value="psychotraumatic disability">Psychotraumatic Disability (757 cases)</option>
+                        <option value="back">Back (390 cases)</option>
+                        <option value="neck">Neck (485 cases)</option>
+                        <option value="chronic pain">Chronic Pain (172 cases)</option>
+                    </optgroup>
+                    <optgroup label="HRTO Keywords (Human Rights)">
+                        <option value="abandoned">Abandoned (1,672 cases)</option>
+                        <option value="email">Email (983 cases)</option>
+                        <option value="dismissed">Dismissed (329 cases)</option>
+                        <option value="reconsideration">Reconsideration (223 cases)</option>
+                        <option value="deadline">Deadline (2,075 cases)</option>
+                        <option value="applicant victories">Applicant Victories (17 cases)</option>
+                    </optgroup>
+                    <optgroup label="ONSBT Keywords (Disability Benefits)">
+                        <option value="person with a disability">Person with a Disability (10,477 cases)</option>
+                        <option value="substantial impairment">Substantial Impairment (6,813 cases)</option>
+                        <option value="impairments">Impairments (8,944 cases)</option>
+                        <option value="daily living restrictions">Daily Living Restrictions (3,457 cases)</option>
+                        <option value="medical verification">Medical Verification (1,635 cases)</option>
+                        <option value="anxiety">Anxiety (849 cases)</option>
+                        <option value="overpayment">Overpayment (739 cases)</option>
+                    </optgroup>
+                    <optgroup label="ONWSIB Keywords (WSIB Internal Review)">
+                        <option value="worker-related">Worker-Related (345 cases)</option>
+                        <option value="work-related injury">Work-Related Injury (52 cases)</option>
+                        <option value="employer obligations">Employer Obligations (50 cases)</option>
+                    </optgroup>
                 </select>
-                <small style="display: block; margin-top: 5px; color: #6c757d; font-style: italic;">Disabled when viewing Ontario Tribunal Network Map</small>
+                <small style="display: block; margin-top: 5px; color: #6c757d; font-style: italic;">Disabled when viewing tribunal-level network maps</small>
             </div>
 
             <div class="control-group">
@@ -570,7 +664,13 @@
             </div>
         </div>
 
-        <div id="network-container"></div>
+        <div id="network-container">
+            <div class="zoom-controls">
+                <button class="zoom-btn" id="zoom-in" title="Zoom In">+</button>
+                <button class="zoom-btn" id="zoom-reset" title="Reset Zoom">⟲</button>
+                <button class="zoom-btn" id="zoom-out" title="Zoom Out">−</button>
+            </div>
+        </div>
 
         <div class="legend">
             <h3>Legend</h3>
@@ -733,6 +833,19 @@
 
         svg.call(zoom);
 
+        // Zoom control buttons
+        document.getElementById('zoom-in').addEventListener('click', () => {
+            svg.transition().duration(300).call(zoom.scaleBy, 1.3);
+        });
+
+        document.getElementById('zoom-out').addEventListener('click', () => {
+            svg.transition().duration(300).call(zoom.scaleBy, 0.7);
+        });
+
+        document.getElementById('zoom-reset').addEventListener('click', () => {
+            svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+        });
+
         // Color scheme
         const colorScale = d3.scaleOrdinal()
             .domain(['denial', 'core', 'body-part', 'medical', 'mental-health'])
@@ -764,7 +877,59 @@
             const nodes = new Map();
             const links = [];
 
-            if (scope === 'ontario') {
+            // Individual tribunal views
+            if (['wsiat', 'hrto', 'onsbt', 'onwsib'].includes(scope)) {
+                const tribunalMap = {
+                    'wsiat': 'onwsiat',
+                    'hrto': 'onhrt',
+                    'onsbt': 'onsbt',
+                    'onwsib': 'onwsib'
+                };
+                const tribunalKey = tribunalMap[scope];
+                const tribunalData = ontarioConnectionData.ontario;
+                const keywordMap = tribunalData.tribunalKeywords[tribunalKey] || {};
+
+                // Add tribunal node
+                nodes.set(tribunalKey, {
+                    id: tribunalKey.toUpperCase(),
+                    category: 'tribunal',
+                    value: tribunalData.totals[tribunalKey]
+                });
+
+                // Add keyword nodes connected to tribunal
+                Object.entries(keywordMap).forEach(([keyword, count]) => {
+                    if (count < threshold) return;
+
+                    nodes.set(keyword, {
+                        id: keyword,
+                        category: getNodeCategory(keyword),
+                        value: count
+                    });
+
+                    links.push({
+                        source: tribunalKey,
+                        target: keyword,
+                        value: count
+                    });
+                });
+
+                // Add keyword-to-keyword connections within tribunal
+                const keywords = Object.keys(keywordMap).filter(k => keywordMap[k] >= threshold);
+                keywords.forEach(k1 => {
+                    keywords.forEach(k2 => {
+                        if (k1 < k2 && coOccurrenceData[k1] && coOccurrenceData[k1][k2]) {
+                            const coOccurCount = coOccurrenceData[k1][k2];
+                            if (coOccurCount >= threshold) {
+                                links.push({
+                                    source: k1,
+                                    target: k2,
+                                    value: coOccurCount
+                                });
+                            }
+                        }
+                    });
+                });
+            } else if (scope === 'ontario') {
                 const provinceData = ontarioConnectionData[province];
                 if (!provinceData) return;
 
@@ -1059,12 +1224,24 @@
                 if (modeIndicator) {
                     modeIndicator.textContent = 'Ontario Tribunal Network (All 4 Tribunals + Province-Wide Keywords)';
                 }
+            } else if (['wsiat', 'hrto', 'onsbt', 'onwsib'].includes(scope)) {
+                focusSelect.disabled = true;
+                provinceSelect.disabled = true;
+                if (modeIndicator) {
+                    const tribunalNames = {
+                        'wsiat': 'WSIAT (Workplace Injury Appeals - 11,430 cases)',
+                        'hrto': 'HRTO (Human Rights - 9,269 cases)',
+                        'onsbt': 'ONSBT (Disability Benefits - 13,798 cases)',
+                        'onwsib': 'ONWSIB (WSIB Internal Review - 431 cases)'
+                    };
+                    modeIndicator.textContent = `${tribunalNames[scope]} Keyword Network`;
+                }
             } else {
                 focusSelect.disabled = false;
                 provinceSelect.disabled = true;
                 if (modeIndicator) {
-                    const focusText = focusKeyword === 'all' ? 'All WSIAT Patterns' : `WSIAT Focus: ${focusKeyword}`;
-                    modeIndicator.textContent = `WSIAT Keyword Co-Occurrence (${focusText})`;
+                    const focusText = focusKeyword === 'all' ? 'All Patterns' : `Focus: ${focusKeyword}`;
+                    modeIndicator.textContent = `All Ontario Tribunals - Keyword Co-Occurrence (${focusText})`;
                 }
             }
 
