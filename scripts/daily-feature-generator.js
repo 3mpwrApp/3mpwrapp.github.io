@@ -2500,7 +2500,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     content += `---\n\n## Learn More\n\n`;
     content += `For complete information about ${feature.name} and all other features:\n\n`;
     content += `- ðŸ“– [Read the Complete User Guide](/user-guide/#${feature.userGuideSection})\n`;
-    content += `- âœ¨ [Explore All Features](/features/)\n`;
+    content += `- ✨ [Explore All Features](/features/)\n`;
     content += `- ðŸ§ª [Join Beta Testing](/beta/)\n`;
     content += `- ðŸ“¬ [Subscribe to Updates](/newsletter/)\n\n`;
 
@@ -2591,7 +2591,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
     const fixes = commits.filter(c => /^fix/i.test(c)).map(clean).slice(0, 5);
     const other = commits.filter(c => !/^feat|^fix/i.test(c)).map(clean).slice(0, 3);
 
-    const article = `---\nlayout: post\ntitle: "Dev Update: What\'s Been Happening in 3mpwrApp"\ndate: ${dateStr} 00:00:00 +0000\ntags: [dev-update, changelog, development, transparency]\ncategories: [updates]\nexcerpt: "A look at the latest improvements, fixes, and behind-the-scenes work happening in 3mpwrApp"\n---\n\n# Dev Update: What\'s Been Happening in 3mpwrApp\n\nWe believe in building in public. Here\'s a look at what our team has been working on recently, straight from our development history.\n\n---\n${features.length ? '\n## âœ¨ New & Improved\n\n' + features.map(c => `- ${c}`).join('\n') + '\n' : ''}${fixes.length ? '\n## ðŸ”§ Fixes & Polish\n\n' + fixes.map(c => `- ${c}`).join('\n') + '\n' : ''}${other.length ? '\n## âš™ï¸ Under the Hood\n\n' + other.map(c => `- ${c}`).join('\n') + '\n' : ''}\n---\n\n## Why We Build in Public\n\nTransparency is a core operating principle at 3mpwrApp. The community we serve has been let down by opaque institutions â€” we want to be the structural opposite of that. This means sharing our development process openly, explaining what we\'re working on and why, and being honest when things take longer than expected.\n\n---\n\n## Stay Connected\n\n- â­ [Follow our development on GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)\n- ðŸ“¬ [Subscribe to updates](/newsletter/)\n- ðŸ’¬ [Join the community](/community/)\n- ðŸ§ª [Join the beta program](/app-waitlist/)\n`;
+    const article = `---\nlayout: post\ntitle: "Dev Update: What\'s Been Happening in 3mpwrApp"\ndate: ${dateStr} 00:00:00 +0000\ntags: [dev-update, changelog, development, transparency]\ncategories: [updates]\nexcerpt: "A look at the latest improvements, fixes, and behind-the-scenes work happening in 3mpwrApp"\n---\n\n# Dev Update: What\'s Been Happening in 3mpwrApp\n\nWe believe in building in public. Here\'s a look at what our team has been working on recently, straight from our development history.\n\n---\n${features.length ? '\n## ✨ New & Improved\n\n' + features.map(c => `- ${c}`).join('\n') + '\n' : ''}${fixes.length ? '\n## ðŸ”§ Fixes & Polish\n\n' + fixes.map(c => `- ${c}`).join('\n') + '\n' : ''}${other.length ? '\n## âš™ï¸ Under the Hood\n\n' + other.map(c => `- ${c}`).join('\n') + '\n' : ''}\n---\n\n## Why We Build in Public\n\nTransparency is a core operating principle at 3mpwrApp. The community we serve has been let down by opaque institutions â€” we want to be the structural opposite of that. This means sharing our development process openly, explaining what we\'re working on and why, and being honest when things take longer than expected.\n\n---\n\n## Stay Connected\n\n- â­ [Follow our development on GitHub](https://github.com/S0vryn9-C011ect1ve/3mpwrapp.github.io)\n- ðŸ“¬ [Subscribe to updates](/newsletter/)\n- ðŸ’¬ [Join the community](/community/)\n- ðŸ§ª [Join the beta program](/app-waitlist/)\n`;
 
     return {
       article,
@@ -2627,7 +2627,7 @@ ${feature.name} is designed to ${feature.description.toLowerCase()}. This featur
       .replace('{link}', fullUrl);
 
     // Type-specific emoji + label
-    const typeEmoji = { feature: 'âœ¨', tutorial: 'ðŸ“–', devDiary: 'ðŸ”§', lore: 'ðŸ’¡', devUpdate: 'ðŸš€' }[contentType] || 'âœ¨';
+    const typeEmoji = { feature: '✨', tutorial: 'ðŸ“–', devDiary: 'ðŸ”§', lore: 'ðŸ’¡', devUpdate: '🚀' }[contentType] || '✨';
     const typeLabel = { feature: 'Feature Spotlight', tutorial: 'Tutorial', devDiary: 'Dev Diary', lore: 'From Our Team', devUpdate: 'Dev Update' }[contentType] || 'Feature Spotlight';
 
     const desc = contentItem.description || '';
@@ -2650,7 +2650,7 @@ ${typeEmoji} ${typeLabel}: ${contentItem.name}
 ${desc}
 
 ðŸ”‘ Key points:
-${highlights.slice(0, 3).map(h => `â€¢ ${h}`).join('\n')}
+${highlights.slice(0, 3).map(h => `• ${h}`).join('\n')}
 
 ${hookData.cta} â†’ ${fullUrl}
 
@@ -2658,9 +2658,43 @@ ${hookData.cta} â†’ ${fullUrl}
 
 #3mpwrApp #DisabilityRights #Accessibility #ChronicIllness #DisabilityJustice #SpoonTheory #${monthlyTheme.theme.replace(/\s+/g, '')}`;
 
+    // Helper function to truncate to character limit while preserving hashtags
+    const truncatePost = (text, limit) => {
+      if (text.length <= limit) return text;
+      
+      // Find hashtags at the end
+      const hashtagMatch = text.match(/(#[^\s#]+(?:\s+#[^\s#]+)*)\s*$/);
+      const hashtags = hashtagMatch ? hashtagMatch[0] : '';
+      const mainContent = hashtagMatch ? text.substring(0, text.length - hashtags.length).trim() : text;
+      
+      // Calculate available space for content
+      const availableSpace = limit - hashtags.length - 5; // 5 chars for "..." + spacing
+      
+      if (mainContent.length <= availableSpace) {
+        return mainContent + '\n\n' + hashtags;
+      }
+      
+      // Truncate at word boundary
+      let truncated = mainContent.substring(0, availableSpace);
+      const lastSpace = truncated.lastIndexOf(' ');
+      if (lastSpace > availableSpace * 0.8) { // Only truncate at space if it's not too far back
+        truncated = truncated.substring(0, lastSpace);
+      }
+      
+      return truncated.trim() + '...\n\n' + hashtags;
+    };
+
+    // Platform-specific versions with character limits
+    const mastodonPost = truncatePost(longPost, 500); // Mastodon: 500 chars
+    const blueskyPost = truncatePost(shortPost, 300); // Bluesky: 300 chars
+    const xPost = truncatePost(shortPost, 280); // X/Twitter: 280 chars
+
     return {
       shortPost,
       longPost,
+      mastodonPost,
+      blueskyPost,
+      xPost,
       url: fullUrl,
       blogUrl: BLOG_URL,
       hookUsed: hookData.hook,

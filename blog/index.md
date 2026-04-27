@@ -16,7 +16,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 ## 📑 Quick Navigation (Table of Contents)
 
 **Browse by Section:**
-- [� Daily News Highlights](#curated-daily) - Curated news from 50+ trusted sources
+- [📰 Daily News Highlights](#curated-daily) - Curated news from 50+ trusted sources
 - [✨ Feature Spotlights](#feature-articles) - App features and tools explained
 - [📅 Weekly Recaps](#weekly-recaps) - Weekly development updates
 - [💬 Community Updates](#blog-posts) - Announcements and stories
@@ -80,7 +80,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 {% assign feature_articles = features_posts | concat: spotlight_posts %}
 {% if feature_articles and feature_articles.size > 0 %}
 <div class="posts-grid">
-  {% for post in feature_articles limit:6 %}
+  {% for post in feature_articles %}
   <article class="post-card post-card--feature">
     <div class="post-card__badge">✨ Feature</div>
     <h3 class="post-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -98,7 +98,7 @@ Welcome to our blog! Stay informed with daily news highlights, feature spotlight
 
 ---
 
-## <span id="weekly-recaps">� Weekly Recaps</span>
+## <span id="weekly-recaps">📅 Weekly Recaps</span>
 
 <p class="section-description">Every Monday, we compile the week's most important updates, new features, improvements, and fixes into one easy-to-read recap. See detailed changelog on our <a href="{{ '/whats-new' | relative_url }}">What's New</a> page. Perfect for staying up-to-date on what's changed!</p>
 
