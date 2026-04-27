@@ -3,7 +3,7 @@
  * POST-BILL105-CAMPAIGN.JS
  * URGENT: Stop Bill 105 Schedule 9 - Protect the 72-month lock-in
  * 
- * Campaign runs through May 15, 2026
+ * Campaign runs through April 28, 2026 (Day of Mourning)
  * Multiple variants emphasizing different angles
  */
 
@@ -14,7 +14,7 @@ const path = require('path');
 const https = require('https');
 
 const STATE_FILE = path.join(__dirname, '../.github/state/bill105-campaign-state.json');
-const CAMPAIGN_END = new Date('2026-05-15T23:59:59-04:00');
+const CAMPAIGN_END = new Date('2026-04-28T23:59:59-04:00');
 
 // Check if campaign has ended
 if (new Date() > CAMPAIGN_END) {

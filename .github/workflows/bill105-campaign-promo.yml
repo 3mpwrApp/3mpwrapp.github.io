@@ -1,15 +1,14 @@
 name: Bill 105 Campaign - Protect 72-Month Lock-In
 
 # URGENT: Campaign to stop Bill 105 Schedule 9
-# Posts 2x daily through May 15, 2026
+# Posts 1x daily through April 28, 2026
 # Manual trigger available
 
 on:
   workflow_dispatch:
   schedule:
-    # Run 2x daily: 9 AM EST and 3 PM EST
-    - cron: '0 14 * * *'  # 9 AM EST (2 PM UTC)
-    - cron: '0 20 * * *'  # 3 PM EST (8 PM UTC)
+    # Run 1x daily: 10 AM EST
+    - cron: '0 15 * * *'  # 10 AM EST (3 PM UTC)
 
 concurrency:
   group: bill105-campaign-promo
@@ -36,7 +35,7 @@ jobs:
       - name: Check if campaign has ended
         id: check_date
         run: |
-          if [ $(date +%s) -gt $(date -d '2026-05-15 23:59:59' +%s) ]; then
+          if [ $(date +%s) -gt $(date -d '2026-04-28 23:59:59' +%s) ]; then
             echo "campaign_ended=true" >> $GITHUB_OUTPUT
             echo "✅ Campaign has ended, workflow will stop"
           else
