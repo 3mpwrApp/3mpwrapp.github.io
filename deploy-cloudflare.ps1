@@ -38,6 +38,6 @@ try {
 }
 
 Write-Host ""
-Write-Host "🎉 Website deployed successfully!" -ForegroundColor Cyan
-Write-Host "🌐 Check deployment status: https://dash.cloudflare.com/" -ForegroundColor Gray
+Write-Host "Website deployed successfully!" -ForegroundColor Cyan
+Write-Host "Check deployment status: https://dash.cloudflare.com/" -ForegroundColor Gray
 Write-Host ""

@@ -2921,5 +2921,50 @@
       ],
       "message": "Demand withdrawal of Schedule 9 from Bill 105. Protect the 72-month lock-in for injured workers!"
     }
+  },
+  {
+    "id": "evt-windsor-day-of-mourning-april28-2026",
+    "title": "National Day of Mourning - Windsor",
+    "date": "2026-04-28",
+    "time": "17:00",
+    "endTime": "18:00",
+    "timezone": "America/Toronto",
+    "location": "Reaume Park at The Injured Workers Monument, Windsor, ON",
+    "address": "Reaume Park, Windsor, Ontario",
+    "city": "Windsor",
+    "province": "ON",
+    "country": "Canada",
+    "isVirtual": false,
+    "organizerName": "Windsor & District Labour Council",
+    "organizerEmail": "",
+    "organizerPhone": "",
+    "organizerWebsite": "",
+    "registrationRequired": false,
+    "registrationUrl": "",
+    "description": "Join us at Reaume Park's Injured Workers Monument for the National Day of Mourning. We will lay flowers at the riverfront to remember those killed or injured in the workplace and renew our commitment to worker health, safety, and well-being.\n\nRefreshments will follow at 6 PM at Hook and Ladder (3690 Seminole Street, Windsor).",
+    "eventType": "commemoration",
+    "tags": [
+      "day-of-mourning",
+      "workers-rights",
+      "workplace-safety",
+      "windsor",
+      "injured-workers",
+      "memorial"
+    ],
+    "accessibilityNotes": "Outdoor event at riverfront monument",
+    "cost": "Free",
+    "capacity": null,
+    "language": [
+      "en"
+    ],
+    "targetAudience": [
+      "injured-workers",
+      "labour-advocates",
+      "community"
+    ],
+    "status": "confirmed",
+    "createdAt": "2026-04-27T21:13:51.975Z",
+    "updatedAt": "2026-04-27T21:13:52.108Z",
+    "notes": "Ceremony at monument 5 PM, refreshments at Hook and Ladder 6 PM (3690 Seminole Street)"
   }
 ]
