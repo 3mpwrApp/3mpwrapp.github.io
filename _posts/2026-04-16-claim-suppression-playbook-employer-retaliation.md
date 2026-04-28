@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claim Reporting Barriers Playbook: How Workplace Injuries Can Stay Unreported"
+title: "Employer Tactics to Suppress Workers' Comp Claims: A Defense Playbook"
 date: 2026-04-16 14:00:00 -0400
 categories: [research, employer-retaliation, claim-suppression, workers-rights]
 tags: [WSIB, WorkSafeBC, claim-suppression, employer-retaliation, megaprojects, legal-precedent]
@@ -9,7 +9,7 @@ excerpt: "A BC megaprojects investigation reported a 'second-tier compensation s
 image: /assets/images/blog/claim-suppression-social.png
 ---
 
-# Claim Reporting Barriers Playbook: How Workplace Injuries Can Stay Unreported
+# Employer Tactics to Suppress Workers' Comp Claims: A Defense Playbook
 
 <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #1a1a1a; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(168, 237, 234, 0.3);">
 <h2 style="color: #1a1a1a; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
@@ -795,13 +795,27 @@ You must:
 
 ---
 
+---
+
+## 📊 Read the Data-Driven Analysis
+
+This post provides a **tactical defense playbook** for workers. For the **statistical research analysis** comparing BC WCAT patterns to Ontario WSIAT data (11,430 decisions), see:
+
+**[BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns](/blog/2026/04/17/claim-suppression-playbook/)**
+
+That post includes:
+- Ontario WSIAT pattern analysis (11,430 decisions, 2020-2026)
+- Pickering v WCB (2025) legal precedent breakdown
+- Cross-provincial comparison methodology
+- Statistical evidence of claim suppression indicators
+
+---
+
 **Everything we build is free, forever.** No paywalls. No premium tiers. Just injured workers helping injured workers.
 
 **With solidarity,**  
 The 3mpwr Research Team
 
 ---
-
-*Next up: Statistical analysis of employer retaliation patterns in WSIAT cases (11,430 decisions, 2020-2026). Estimated publication: May 2026.*
 
 *HRTO disability discrimination database (100,000+ cases, 2020-2026) launching after API quota reset tonight at 8 PM EST.*

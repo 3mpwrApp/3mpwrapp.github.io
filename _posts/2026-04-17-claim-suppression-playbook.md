@@ -1,14 +1,15 @@
 ---
 layout: post
-title: "Claim Reporting Barriers Playbook: How Injuries Can Stay Out of Official Records"
+title: "BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns"
 date: 2026-04-17
 categories: [research, wsib, claim-suppression]
-tags: [employer-retaliation, claim-suppression, statistical-analysis, workers-rights]
+tags: [employer-retaliation, claim-suppression, statistical-analysis, workers-rights, cross-provincial, pickering-precedent]
 author: 3mpwrApp
 excerpt: "A BC investigation reported 'second-tier compensation systems' operating outside standard WorkSafeBC channels on megaprojects. We analyzed 11,430 WSIAT decisions to assess whether comparable reporting barriers may be present in Ontario."
+permalink: /blog/2026/04/17/claim-suppression-playbook/
 ---
 
-# Claim Reporting Barriers Playbook: How Injuries Can Stay Out of Official Records
+# BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns
 
 <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: #1a1a1a; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(79, 172, 254, 0.3);">
 <h2 style="color: #1a1a1a; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
@@ -800,6 +801,21 @@ This section is framed as community-centered pathways for documentation, access,
 ---
 
 ## Related Resources
+
+**📖 Companion Post: Worker Defense Playbook**
+
+This post provides **statistical research and cross-provincial analysis**. For a **tactical defense guide** with employer tactics and worker response strategies, see:
+
+**[Employer Tactics to Suppress Workers' Comp Claims: A Defense Playbook](/blog/2026/04/16/claim-suppression-playbook-employer-retaliation/)**
+
+That post includes:
+- Step-by-step breakdown of employer suppression tactics
+- How "second-tier compensation systems" operate
+- Legal protections and worker rights
+- Response strategies for each tactic
+- Downloadable templates and checklists
+
+---
 
 **3mpwr Knowledge Base:**
 - [Claim Suppression & Employer Retaliation Guide](https://3mpwrapp.ca/research/#knowledge-base) - Legal protections, documentation strategies
