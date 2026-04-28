@@ -29,7 +29,7 @@ Our dataset provides measurable context that is broadly consistent with the refo
 
 ## Our CanLII Analysis: What the Data Shows
 
-Between **January 2020 and March 2026**, the Workplace Safety and Insurance Appeals Tribunal (WSIAT) published **11,430 decisions** on CanLII.
+Between **January 2020 and March 2026**, we analyzed **11,430 WSIAT decisions** available on CanLII (decisions already published by the tribunal—we went through the data).
 
 We analyzed every single one.
 
