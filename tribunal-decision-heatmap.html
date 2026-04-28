@@ -399,6 +399,12 @@
         <div class="header">
             <h1>📊 Tribunal Decision Heatmap</h1>
             <p>Temporal patterns of tribunal decisions (2020-2026) — See volume spikes, COVID impacts, and seasonal trends</p>
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.9;">
+                <strong>⚠️ Data Note:</strong> Outcomes inferred from CanLII keywords and NLP predictions (79% accuracy). 
+                CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. 
+                We tried: API calls (no outcome field), keyword extraction, web scraping (CAPTCHA/rate limits), and bulk requests (throttled/capped). 
+                To get 100% accurate outcomes, we'd need to manually read each case.
+            </p>
         </div>
 
         <div class="controls">

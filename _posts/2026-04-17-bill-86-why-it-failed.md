@@ -35,6 +35,8 @@ We analyzed every single one.
 
 **What we found is broadly consistent with Bill 86's proposed reforms.**
 
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each case. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
+
 ---
 
 ## Finding #1: Post-Claim Terminations (Section 16)

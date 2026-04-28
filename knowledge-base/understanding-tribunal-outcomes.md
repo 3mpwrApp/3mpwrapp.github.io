@@ -11,6 +11,8 @@ last_updated: 2026-04-28
 
 When you read a tribunal decision, the outcome tells you **who won**. But tribunal language can be confusing. Here's what each outcome means in plain English.
 
+**📊 About Our Data:** In the 3mpwrApp database, many outcomes are AI-predicted (79% accuracy) because CanLII API doesn't label outcomes explicitly. We infer outcomes from keywords and decision text. When you see an outcome badge in the app, check the confidence level (HIGH/MEDIUM/LOW) to assess reliability. [Learn more about prediction accuracy →](/knowledge-base/outcome-prediction-accuracy/)
+
 ---
 
 ## ✅ You Won (Worker/Claimant Wins)

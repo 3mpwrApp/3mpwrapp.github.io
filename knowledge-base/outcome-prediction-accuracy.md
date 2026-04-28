@@ -59,18 +59,30 @@ last_updated: 2026-04-28
 - **Result:** AI is terrible at predicting settlements (too few examples)
 - **Your risk:** Higher for rare outcomes like "Partial Win" or "No Jurisdiction"
 
-### 2. Missing Context in Keywords
+### 2. CanLII API Limitations & Unknown Outcomes
+- **Problem:** Many decisions have "Unknown" outcomes because CanLII API doesn't label outcomes in metadata
+- **What we tried to fix this:**
+  - **CanLII API calls:** API returns case metadata but no explicit "outcome" field
+  - **Keyword extraction:** We infer outcomes from keywords like "appeal allowed," "dismissed," "granted"—but many decisions use non-standard phrasing
+  - **Web scraping attempts:** CanLII has CAPTCHA protection and rate limiting to prevent automated access
+  - **API restrictions:** Request throttling, daily caps, IP blocking after excessive requests
+- **Why this happens:** CanLII is designed for human researchers browsing cases, not bulk data extraction—this is NOT a CanLII issue, it's intentional API access restrictions to protect their servers
+- **The only way to get 100% accurate outcomes:** Manually read each individual case text and extract the outcome by hand (not scalable for 137,252 decisions)
+- **Result:** Many outcomes remain "Unknown" in our dataset—we use NLP to predict these based on keywords and case characteristics
+- **Your risk:** Higher for cases with sparse keywords or non-standard outcome language
+
+### 3. Missing Context in Keywords
 - **Problem:** CanLII API returns only brief keywords, not full decision text
 - **Example:** Decision says "chronic pain," but doesn't say if medical evidence was strong
 - **Result:** AI can't distinguish between well-documented vs. poorly-documented chronic pain claims
 - **Your risk:** Higher for recent WSIAT cases (2020-2026) with sparse keywords
 
-### 3. Tribunal Policy Changes
+### 4. Tribunal Policy Changes
 - **Problem:** AI learns from historical decisions (2020-2023), but tribunals change policies
 - **Example:** If WSIAT started favoring chronic pain claims more in 2025, AI trained on 2020-2023 data won't know
 - **Your risk:** Higher for very recent decisions (2025-2026)
 
-### 4. Case-Specific Nuances
+### 5. Case-Specific Nuances
 - **Problem:** Two "low back pain" cases can have completely different evidence quality
 - **Example:** Case A has 5 specialist reports + employer incident report; Case B has only family doctor note
 - **Result:** AI sees both as "low back pain" but can't distinguish evidence strength

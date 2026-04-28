@@ -950,6 +950,13 @@ description: Interactive data visualizations and research tools analyzing tribun
     Treat them as <strong>indicative patterns</strong>, not guarantees. Individual case outcomes depend on evidence quality, 
     legal representation, and specific circumstances.
   </p>
+
+  <p style="margin-top: 1rem; font-size: 0.95rem; color: #64748b;">
+    <strong>🔧 API Limitations:</strong> Many outcomes remain "Unknown" due to CanLII API restrictions (not a CanLII issue—intentional access limits). 
+    We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), 
+    and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 137,252 cases individually. 
+    Our NLP model predicts these unknown outcomes with 79% accuracy based on case keywords and patterns.
+  </p>
 </div>
 
 ### How We Built This (Methodology & Transparency)

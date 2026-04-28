@@ -92,6 +92,8 @@ Here are real examples of how you can use CanLII Database: Ontario WSIB & HRTO C
 - **Confidence filtering:** Only high-confidence predictions (≥80%) shown in app search results
 - **Open source:** All methodology, data, and code publicly available on [our research page](/research/)
 
+**⚠️ CanLII API Limitations:** Many outcomes are "Unknown" in CanLII metadata—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each case. Our NLP model predicts these with 79% accuracy.
+
 ### Using Outcome Predictions in the App
 
 When you search tribunal decisions in 3mpwrApp, every case now shows:
