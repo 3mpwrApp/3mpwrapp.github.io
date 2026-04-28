@@ -187,6 +187,7 @@ description: Interactive data visualizations and research tools analyzing tribun
     background: rgba(255,255,255,0.1);
     border-radius: 8px;
     color: white;
+    border: 2px solid rgba(255,255,255,0.2);
   }
   
   .stat-number {
@@ -194,6 +195,89 @@ description: Interactive data visualizations and research tools analyzing tribun
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: white;
+  }
+  
+  .stat-box small {
+    opacity: 1;
+    color: rgba(255,255,255,0.95);
+  }
+  
+  /* Colored stat boxes - Light mode */
+  .stat-box-green {
+    background: #16a34a;
+    color: #ffffff;
+    border-color: #15803d;
+  }
+  
+  .stat-box-blue {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #1d4ed8;
+  }
+  
+  .stat-box-purple {
+    background: #9333ea;
+    color: #ffffff;
+    border-color: #7c3aed;
+  }
+  
+  .stat-box-orange {
+    background: #ea580c;
+    color: #ffffff;
+    border-color: #c2410c;
+  }
+  
+  /* Dark Mode - Stat boxes */
+  @media (prefers-color-scheme: dark) {
+    .stat-box-green {
+      background: #166534;
+      border-color: #14532d;
+    }
+    
+    .stat-box-blue {
+      background: #1e40af;
+      border-color: #1e3a8a;
+    }
+    
+    .stat-box-purple {
+      background: #7e22ce;
+      border-color: #6b21a8;
+    }
+    
+    .stat-box-orange {
+      background: #c2410c;
+      border-color: #9a3412;
+    }
+  }
+  
+  /* High Contrast Mode - Stat boxes */
+  @media (prefers-contrast: high) {
+    .stat-box {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .stat-box-green,
+    .stat-box-blue,
+    .stat-box-purple,
+    .stat-box-orange {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+    .stat-box,
+    .stat-box-green,
+    .stat-box-blue,
+    .stat-box-purple,
+    .stat-box-orange {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
   }
   
   .category-box {
@@ -269,6 +353,225 @@ description: Interactive data visualizations and research tools analyzing tribun
       transform: none;
     }
   }
+  
+  /* ============================================================================
+     TABLES - Accessible styling for all color modes
+     ============================================================================ */
+  
+  .research-table {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #cccccc;
+  }
+  
+  .research-table thead tr {
+    background: #f0f0f0;
+    border-bottom: 3px solid #999999;
+  }
+  
+  .research-table th {
+    color: #000000;
+    font-weight: 700;
+  }
+  
+  .research-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .research-table tbody tr:hover {
+    background: #f9f9f9;
+  }
+  
+  .research-table td,
+  .research-table th {
+    color: #000000;
+  }
+  
+  .research-table small {
+    color: #333333;
+  }
+  
+  .table-caption {
+    color: #333333;
+  }
+  
+  /* Win rate color classes */
+  .win-rate-high {
+    color: #006600;
+    font-weight: bold;
+  }
+  
+  .win-rate-medium {
+    color: #0066cc;
+    font-weight: bold;
+  }
+  
+  .win-rate-varies {
+    color: #cc6600;
+    font-weight: bold;
+  }
+  
+  /* Dark Mode - Tables */
+  @media (prefers-color-scheme: dark) {
+    .research-table {
+      background: #1a1a1a;
+      color: #e0e0e0;
+      border-color: #444444;
+    }
+    
+    .research-table thead tr {
+      background: #2a2a2a;
+      border-bottom-color: #555555;
+    }
+    
+    .research-table th {
+      color: #ffffff;
+    }
+    
+    .research-table tbody tr {
+      border-bottom-color: #333333;
+    }
+    
+    .research-table tbody tr:hover {
+      background: #252525;
+    }
+    
+    .research-table td,
+    .research-table th {
+      color: #e0e0e0;
+    }
+    
+    .research-table small {
+      color: #cccccc;
+    }
+    
+    .table-caption {
+      color: #cccccc;
+    }
+    
+    .win-rate-high {
+      color: #4ade80;
+    }
+    
+    .win-rate-medium {
+      color: #60a5fa;
+    }
+    
+    .win-rate-varies {
+      color: #fb923c;
+    }
+  }
+  
+  /* High Contrast Mode - Tables */
+  @media (prefers-contrast: high) {
+    .research-table {
+      background: #ffffff;
+      color: #000000;
+      border: 3px solid #000000;
+    }
+    
+    .research-table thead tr {
+      background: #ffffff;
+      border-bottom: 4px solid #000000;
+    }
+    
+    .research-table tbody tr {
+      border-bottom: 2px solid #000000;
+    }
+    
+    .research-table th,
+    .research-table td,
+    .research-table small,
+    .table-caption {
+      color: #000000;
+    }
+    
+    .win-rate-high,
+    .win-rate-medium,
+    .win-rate-varies {
+      color: #000000;
+      background: #ffff00;
+      padding: 2px 6px;
+      border: 2px solid #000000;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+    .research-table {
+      background: #000000;
+      color: #ffffff;
+      border: 3px solid #ffffff;
+    }
+    
+    .research-table thead tr {
+      background: #000000;
+      border-bottom: 4px solid #ffffff;
+    }
+    
+    .research-table tbody tr {
+      border-bottom: 2px solid #ffffff;
+    }
+    
+    .research-table th,
+    .research-table td,
+    .research-table small,
+    .table-caption {
+      color: #ffffff;
+    }
+    
+    .win-rate-high {
+      color: #000000;
+      background: #00ff00;
+    }
+    
+    .win-rate-medium {
+      color: #000000;
+      background: #00ffff;
+    }
+    
+    .win-rate-varies {
+      color: #000000;
+      background: #ffff00;
+    }
+  }
+  
+  /* ============================================================================
+     AI PREDICTIONS SECTION - Hero card styling
+     ============================================================================ */
+  
+  .ai-predictions-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+  
+  .ai-predictions-hero h3,
+  .ai-predictions-hero p,
+  .ai-predictions-hero strong {
+    color: #ffffff !important;
+  }
+  
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    .ai-predictions-hero {
+      background: linear-gradient(135deg, #4338ca 0%, #5b21b6 100%);
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: high) {
+    .ai-predictions-hero {
+      background: #000000;
+      border: 3px solid #ffffff;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) and (prefers-contrast: high) {
+    .ai-predictions-hero {
+      background: #000000;
+      border: 3px solid #ffffff;
+    }
+  }
 </style>
 
 <div class="research-hero">
@@ -315,9 +618,9 @@ description: Interactive data visualizations and research tools analyzing tribun
 
   <h4 style="margin: 1.5rem 0 1rem;">Four Ontario Tribunals Analyzed (2020-2026)</h4>
   
-  <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+  <table class="research-table" style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
     <thead>
-      <tr style="background: #f5f5f5; border-bottom: 2px solid #ddd;">
+      <tr>
         <th style="padding: 0.75rem; text-align: left;">Tribunal</th>
         <th style="padding: 0.75rem; text-align: right;">Total Cases</th>
         <th style="padding: 0.75rem; text-align: right;">Tier A</th>
@@ -327,7 +630,7 @@ description: Interactive data visualizations and research tools analyzing tribun
       </tr>
     </thead>
     <tbody>
-      <tr style="border-bottom: 1px solid #eee;">
+      <tr>
         <td style="padding: 0.75rem;"><strong>WSIAT</strong><br><small>Workers' comp appeals</small></td>
         <td style="padding: 0.75rem; text-align: right;">11,430</td>
         <td style="padding: 0.75rem; text-align: right;">74 (0.6%)</td>
@@ -335,7 +638,7 @@ description: Interactive data visualizations and research tools analyzing tribun
         <td style="padding: 0.75rem; text-align: right;">10,781 (94.3%)</td>
         <td style="padding: 0.75rem;"><small>65-73% worker success rate (official)</small></td>
       </tr>
-      <tr style="border-bottom: 1px solid #eee;">
+      <tr>
         <td style="padding: 0.75rem;"><strong>HRTO</strong><br><small>Human rights complaints</small></td>
         <td style="padding: 0.75rem; text-align: right;">9,269</td>
         <td style="padding: 0.75rem; text-align: right;">4,618 (49.8%)</td>
@@ -343,7 +646,7 @@ description: Interactive data visualizations and research tools analyzing tribun
         <td style="padding: 0.75rem; text-align: right;">4,650 (50.2%)</td>
         <td style="padding: 0.75rem;"><small>73.5% abandonment rate, 70.1% cite email issues</small></td>
       </tr>
-      <tr style="border-bottom: 1px solid #eee;">
+      <tr>
         <td style="padding: 0.75rem;"><strong>ONSBT</strong><br><small>ODSP/OW appeals</small></td>
         <td style="padding: 0.75rem; text-align: right;">13,798</td>
         <td style="padding: 0.75rem; text-align: right;">494 (3.6%)</td>
@@ -351,7 +654,7 @@ description: Interactive data visualizations and research tools analyzing tribun
         <td style="padding: 0.75rem; text-align: right;">10,053 (72.9%)</td>
         <td style="padding: 0.75rem;"><small>67.4% grant rate in classified cases</small></td>
       </tr>
-      <tr style="border-bottom: 1px solid #eee;">
+      <tr>
         <td style="padding: 0.75rem;"><strong>ONWSIB</strong><br><small>WSIB internal reviews</small></td>
         <td style="padding: 0.75rem; text-align: right;">431</td>
         <td style="padding: 0.75rem; text-align: right;">1 (0.2%)</td>
@@ -362,7 +665,7 @@ description: Interactive data visualizations and research tools analyzing tribun
     </tbody>
   </table>
 
-  <p style="margin: 1rem 0; font-size: 0.95rem; color: #666;">
+  <p class="table-caption" style="margin: 1rem 0; font-size: 0.95rem;">
     <strong>Total: 35,928 decisions analyzed.</strong> All four tribunals use the same tiered evidence framework for transparent outcome reporting.
   </p>
 
@@ -505,17 +808,17 @@ description: Interactive data visualizations and research tools analyzing tribun
 
 ---
 
-## � AI-Powered Outcome Predictions: 137,252 Decisions Analyzed
+## 🤖 AI-Powered Outcome Predictions: 137,252 Decisions Analyzed
 
-<div class="tool-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; margin-bottom: 2rem;">
+<div class="tool-card ai-predictions-hero">
   <div style="margin-bottom: 1rem;">
-    <span class="tool-badge" style="background: rgba(255,255,255,0.3);">NEW April 2026</span>
+    <span class="tool-badge" style="background: rgba(255,255,255,0.3); color: #000000; font-weight: 700;">NEW April 2026</span>
     <span class="tool-badge badge-green">79% Accuracy</span>
-    <span class="tool-badge" style="background: rgba(255,255,255,0.3);">100% Coverage</span>
+    <span class="tool-badge" style="background: rgba(255,255,255,0.3); color: #000000; font-weight: 700;">100% Coverage</span>
   </div>
 
-  <h3 style="margin-top: 0; color: white;">Can You Win? We Analyzed 137,252 Cases to Find Out</h3>
-  <p style="font-size: 1.15rem; color: white;">
+  <h3 style="margin-top: 0;">Can You Win? We Analyzed 137,252 Cases to Find Out</h3>
+  <p style="font-size: 1.15rem;">
     Using natural language processing trained on 256,734 decision documents, we've predicted outcomes for 
     <strong>every single tribunal decision</strong> in our database—not just Ontario, but also BC and beyond. 
     This is the first Canada-wide AI outcome prediction system for workplace and disability tribunals.
@@ -525,33 +828,33 @@ description: Interactive data visualizations and research tools analyzing tribun
 ### Overall Win Rates (All Tribunals Combined)
 
 <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-  <div class="stat-box" style="background: #22c55e; color: white;">
+  <div class="stat-box stat-box-green">
     <div class="stat-number">90.4%</div>
     <div>Overall Win Rate</div>
-    <small style="opacity: 0.9;">(67,032 wins / 74,117 decisive outcomes)</small>
+    <small>(67,032 wins / 74,117 decisive outcomes)</small>
   </div>
-  <div class="stat-box" style="background: #3b82f6; color: white;">
+  <div class="stat-box stat-box-blue">
     <div class="stat-number">137,252</div>
     <div>Total Decisions Analyzed</div>
-    <small style="opacity: 0.9;">(2020-2026, all tribunals)</small>
+    <small>(2020-2026, all tribunals)</small>
   </div>
-  <div class="stat-box" style="background: #a855f7; color: white;">
+  <div class="stat-box stat-box-purple">
     <div class="stat-number">100%</div>
     <div>Coverage</div>
-    <small style="opacity: 0.9;">(Every decision has a prediction)</small>
+    <small>(Every decision has a prediction)</small>
   </div>
-  <div class="stat-box" style="background: #f59e0b; color: white;">
+  <div class="stat-box stat-box-orange">
     <div class="stat-number">79%</div>
     <div>AI Accuracy</div>
-    <small style="opacity: 0.9;">(Tested on 3,756 held-out examples)</small>
+    <small>(Tested on 3,756 held-out examples)</small>
   </div>
 </div>
 
 ### Win Rates by Tribunal
 
-<table style="width: 100%; border-collapse: collapse; margin: 2rem 0; background: white;">
+<table class="research-table" style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
   <thead>
-    <tr style="background: #f5f5f5; border-bottom: 2px solid #ddd;">
+    <tr>
       <th style="padding: 0.75rem; text-align: left;">Tribunal</th>
       <th style="padding: 0.75rem; text-align: left;">Jurisdiction</th>
       <th style="padding: 0.75rem; text-align: right;">Total Cases</th>
@@ -560,39 +863,39 @@ description: Interactive data visualizations and research tools analyzing tribun
     </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom: 1px solid #eee;">
+    <tr>
       <td style="padding: 0.75rem;"><strong>WSIAT</strong></td>
       <td style="padding: 0.75rem;">Ontario Workers' Compensation Appeals</td>
       <td style="padding: 0.75rem; text-align: right;">28,551</td>
-      <td style="padding: 0.75rem; text-align: right;"><span style="color: #22c55e; font-weight: bold;">100%</span></td>
+      <td style="padding: 0.75rem; text-align: right;"><span class="win-rate-high">100%</span></td>
       <td style="padding: 0.75rem;"><small>28,551 Granted (100%)</small></td>
     </tr>
-    <tr style="border-bottom: 1px solid #eee;">
+    <tr>
       <td style="padding: 0.75rem;"><strong>BCWCAT</strong></td>
       <td style="padding: 0.75rem;">BC Workers' Compensation Appeals</td>
       <td style="padding: 0.75rem; text-align: right;">7,916</td>
-      <td style="padding: 0.75rem; text-align: right;"><span style="color: #22c55e; font-weight: bold;">86.4%</span></td>
+      <td style="padding: 0.75rem; text-align: right;"><span class="win-rate-high">86.4%</span></td>
       <td style="padding: 0.75rem;"><small>5,772 Granted, 908 Dismissed</small></td>
     </tr>
-    <tr style="border-bottom: 1px solid #eee;">
+    <tr>
       <td style="padding: 0.75rem;"><strong>HRTO</strong></td>
       <td style="padding: 0.75rem;">Ontario Human Rights Tribunal</td>
       <td style="padding: 0.75rem; text-align: right;">9,269</td>
-      <td style="padding: 0.75rem; text-align: right;"><span style="color: #f59e0b; font-weight: bold;">~varies</span></td>
+      <td style="padding: 0.75rem; text-align: right;"><span class="win-rate-varies">~varies</span></td>
       <td style="padding: 0.75rem;"><small>19,228 Abandoned, 1,518 Dismissed - No Violation</small></td>
     </tr>
-    <tr style="border-bottom: 1px solid #eee;">
+    <tr>
       <td style="padding: 0.75rem;"><strong>ONSBT</strong></td>
       <td style="padding: 0.75rem;">Ontario ODSP/OW Benefits Appeals</td>
       <td style="padding: 0.75rem; text-align: right;">13,798</td>
-      <td style="padding: 0.75rem; text-align: right;"><span style="color: #3b82f6; font-weight: bold;">Varies</span></td>
+      <td style="padding: 0.75rem; text-align: right;"><span class="win-rate-medium">Varies</span></td>
       <td style="padding: 0.75rem;"><small>41,354 Costs Decisions</small></td>
     </tr>
-    <tr style="border-bottom: 1px solid #eee;">
+    <tr>
       <td style="padding: 0.75rem;"><strong>Other</strong></td>
       <td style="padding: 0.75rem;">Mixed Provincial & Local Tribunals</td>
       <td style="padding: 0.75rem; text-align: right;">77,718</td>
-      <td style="padding: 0.75rem; text-align: right;"><span style="color: #22c55e; font-weight: bold;">84.1%</span></td>
+      <td style="padding: 0.75rem; text-align: right;"><span class="win-rate-high">84.1%</span></td>
       <td style="padding: 0.75rem;"><small>32,709 Allowed, 6,177 Dismissed</small></td>
     </tr>
   </tbody>

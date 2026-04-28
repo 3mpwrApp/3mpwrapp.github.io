@@ -81,24 +81,24 @@ description: Free community-powered platform connecting injured workers, persons
   </div>
 </section>
 
-<!-- WSIB Research Banner -->
-<section style="max-width: 1200px; margin: 3rem auto; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); color: white;">
+<!-- CanLII Research Banner -->
+<section style="max-width: 1200px; margin: 3rem auto; padding: 2rem; background: linear-gradient(135deg, #0066cc 0%, #004d99 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); color: white;">
   <div style="text-align: center;">
     <h2 style="font-size: 2rem; margin-bottom: 1rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
-      <span aria-hidden="true">🔬</span> NEW: WSIB Denial Network Visualization
+      <span aria-hidden="true">🔬</span> NEW: Connecting the Dots — CanLII Keyword Network
     </h2>
     <p style="font-size: 1.2rem; margin-bottom: 1rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto;">
-      Explore 11,430+ tribunal decisions: Interactive network graph revealing systematic denial patterns, keyword co-occurrence, and the hidden language WSIB uses to reject injured workers.
+      Explore 137,252+ tribunal decisions: Live interactive network graph revealing keyword relationships, denial patterns, and the hidden language used in Canadian tribunal decisions.
     </p>
     <div style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; display: inline-block;">
       <p style="margin: 0; font-weight: 600; font-size: 1.1rem;">
-        <span aria-hidden="true">📊</span> 11,430 cases analyzed &nbsp;|&nbsp; <span aria-hidden="true">🔍</span> 300+ keyword patterns &nbsp;|&nbsp; <span aria-hidden="true">🕸️</span> Interactive D3.js network
+        <span aria-hidden="true">📊</span> 137,252 cases analyzed &nbsp;|&nbsp; <span aria-hidden="true">🔍</span> 500+ keyword patterns &nbsp;|&nbsp; <span aria-hidden="true">🕸️</span> Live interactive D3.js network
       </p>
     </div>
     <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="/wsib-denial-network-visualization.html" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: white; color: #667eea; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.2)'">
+      <a href="/connecting-the-dots-canlii-keyword-visualization-network.html" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: white; color: #0066cc; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.2)'">
         <span aria-hidden="true">🚀</span>
-        <span>Launch Visualization</span>
+        <span>Launch Interactive Visualization</span>
         <span aria-hidden="true">→</span>
       </a>
       <a href="/research/" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
@@ -107,7 +107,7 @@ description: Free community-powered platform connecting injured workers, persons
       </a>
     </div>
     <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.85;">
-      Based on research analyzing Ontario WSIAT decisions 2020-2026. Open source, fully transparent methodology.
+      Analyzing decisions from Ontario (WSIAT, HRTO, ONSBT), BC (BCWCAT), and more. Open source, fully transparent methodology.
     </p>
   </div>
 </section>
