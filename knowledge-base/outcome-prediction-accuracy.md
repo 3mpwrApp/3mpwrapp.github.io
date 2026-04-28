@@ -1,5 +1,5 @@
 ---
-layout: knowledge-base
+layout: post
 title: "How Accurate Are Outcome Predictions? (79% AI Accuracy Explained)"
 category: Legal Basics
 tags: [ai-predictions, accuracy, tribunal-outcomes, methodology]

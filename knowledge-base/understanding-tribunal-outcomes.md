@@ -1,5 +1,5 @@
 ---
-layout: knowledge-base
+layout: post
 title: "Understanding Tribunal Outcomes: What Do They Mean?"
 category: Legal Basics
 tags: [tribunal-outcomes, legal-terms, appeals, WSIB, HRTO]
