@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-04-27T04:08:51.951Z",
+  "generated": "2026-04-28T04:23:17.397Z",
   "insights": {
-    "timestamp": "2026-04-27T04:08:51.790Z",
+    "timestamp": "2026-04-28T04:23:17.366Z",
     "performance": {},
     "recommendations": [
       {
@@ -17,7 +17,7 @@
     "alerts": [],
     "hashtags": {
       "version": "1.0",
-      "lastUpdated": "2026-04-27T04:08:51.796Z",
+      "lastUpdated": "2026-04-28T04:23:17.372Z",
       "hashtags": {},
       "combinations": {},
       "abTests": [],
@@ -44,16 +44,11 @@
         },
         {
           "tag": "accessibility",
-          "mentions": 32,
+          "mentions": 39,
           "source": "emerging"
         },
         {
           "tag": "disabilityjustice",
-          "mentions": 26,
-          "source": "emerging"
-        },
-        {
-          "tag": "a11y",
           "mentions": 25,
           "source": "emerging"
         },
@@ -61,13 +56,18 @@
           "tag": "cripthevote",
           "mentions": 25,
           "source": "emerging"
+        },
+        {
+          "tag": "a11y",
+          "mentions": 24,
+          "source": "emerging"
         }
       ],
       "bestCombination": null
     },
     "improvements": {
       "version": "1.0",
-      "lastUpdated": "2026-04-27T04:08:51.799Z",
+      "lastUpdated": "2026-04-28T04:23:17.375Z",
       "totalImprovements": 0,
       "appliedImprovements": [],
       "deferredImprovements": [],
@@ -80,7 +80,7 @@
   },
   "hashtags": {
     "version": "1.0",
-    "lastUpdated": "2026-04-27T04:08:51.796Z",
+    "lastUpdated": "2026-04-28T04:23:17.372Z",
     "hashtags": {},
     "combinations": {},
     "abTests": [],
@@ -107,16 +107,11 @@
       },
       {
         "tag": "accessibility",
-        "mentions": 32,
+        "mentions": 39,
         "source": "emerging"
       },
       {
         "tag": "disabilityjustice",
-        "mentions": 26,
-        "source": "emerging"
-      },
-      {
-        "tag": "a11y",
         "mentions": 25,
         "source": "emerging"
       },
@@ -124,13 +119,18 @@
         "tag": "cripthevote",
         "mentions": 25,
         "source": "emerging"
+      },
+      {
+        "tag": "a11y",
+        "mentions": 24,
+        "source": "emerging"
       }
     ],
     "bestCombination": null
   },
   "improvements": {
     "version": "1.0",
-    "lastUpdated": "2026-04-27T04:08:51.799Z",
+    "lastUpdated": "2026-04-28T04:23:17.375Z",
     "totalImprovements": 0,
     "appliedImprovements": [],
     "deferredImprovements": [],
