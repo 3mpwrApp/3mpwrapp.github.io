@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ontario Data Catalogue</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+
+        .ontario-lead-statement {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-top: 0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ontario Data Catalogue</h1>
+        <p class="ontario-lead-statement">
+            This activity has been identified as suspicious. Please refresh your browser session in one minute. If the
+            issue persists, please contact us at <a href="mailto:opendata@ontario.ca">opendata@ontario.ca</a>.
+        </p>
+        <h1>Catalogue de données ouvertes de l’Ontario</h1>
+        <p class="ontario-lead-statement">
+            Cette activité a été identifiée comme étant suspecte. Actualisez votre session de navigation dans une
+            minute. Si le problème persiste, veuillez nous contacter à l’adresse <a
+                href="mailto:opendata@ontario.ca">opendata@ontario.ca</a>.
+        </p>
+    </div>
+</body>
+
+</html>

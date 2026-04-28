@@ -1,0 +1,13 @@
+{
+  "totalInjuries": 71781,
+  "longTermCases": 10896,
+  "longTermPercent": "15.18",
+  "wsiatAppeals": 5000,
+  "appealRateOfTotal": "7.0",
+  "appealRateOfLongTerm": "45.9",
+  "successfulAppeals": 2850,
+  "deniedAppeals": 2150,
+  "transitionToSocialAssistance": 645,
+  "totalBenefitCosts": 1878500000,
+  "appealSystemCosts": 131495000
+}

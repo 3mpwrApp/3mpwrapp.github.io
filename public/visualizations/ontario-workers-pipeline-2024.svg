@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="28" font-weight="bold" fill="#2c3e50">
+    Ontario Workers' Rights: Claim-to-Dispute Pipeline (2024)
+  </text>
+  <text x="600" y="65" text-anchor="middle" font-size="14" fill="#7f8c8d">
+    From Workplace Injury to Tribunal Appeal
+  </text>
+  
+  <!-- Stage 1: Initial Injuries -->
+  <rect x="100" y="100" width="1000" height="100" rx="10" fill="#3498db" opacity="0.9"/>
+  <text x="600" y="140" text-anchor="middle" font-size="20" font-weight="bold" fill="white">
+    71,781 Lost-Time Workplace Injuries
+  </text>
+  <text x="600" y="165" text-anchor="middle" font-size="14" fill="white">
+    Workers' Compensation Claims Filed
+  </text>
+  
+  <!-- Arrow 1 -->
+  <path d="M 600 200 L 600 320" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="640" y="260" font-size="12" fill="#2c3e50">
+    84.82% resolve
+  </text>
+  <text x="640" y="275" font-size="12" fill="#2c3e50">
+    within 90 days
+  </text>
+  
+  <!-- Stage 2: Long-Term Cases -->
+  <rect x="150" y="320" width="900" height="100" rx="10" fill="#e67e22" opacity="0.9"/>
+  <text x="600" y="360" text-anchor="middle" font-size="20" font-weight="bold" fill="white">
+    10,896 Long-Term Cases
+  </text>
+  <text x="600" y="385" text-anchor="middle" font-size="14" fill="white">
+    15.18% require extended compensation
+  </text>
+  
+  <!-- Arrow 2 -->
+  <path d="M 600 420 L 600 540" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="640" y="480" font-size="12" fill="#2c3e50">
+    ~45.9% appeal
+  </text>
+  <text x="640" y="495" font-size="12" fill="#2c3e50">
+    to WSIAT
+  </text>
+  
+  <!-- Stage 3: WSIAT Appeals -->
+  <rect x="200" y="540" width="800" height="100" rx="10" fill="#9b59b6" opacity="0.9"/>
+  <text x="600" y="580" text-anchor="middle" font-size="20" font-weight="bold" fill="white">
+    5,000 WSIAT Appeals/Year
+  </text>
+  <text x="600" y="605" text-anchor="middle" font-size="14" fill="white">
+    7.0% of all workplace injuries reach tribunal
+  </text>
+  
+  <!-- Split Arrow -->
+  <path d="M 600 640 L 600 700 L 400 760" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#arrowhead-success)"/>
+  <text x="420" y="730" font-size="12" fill="#27ae60">
+    57% allowed
+  </text>
+  
+  <path d="M 600 700 L 800 760" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrowhead-denied)"/>
+  <text x="700" y="730" font-size="12" fill="#e74c3c">
+    43% dismissed
+  </text>
+  
+  <!-- Stage 4a: Successful Appeals -->
+  <rect x="150" y="760" width="400" height="100" rx="10" fill="#27ae60" opacity="0.9"/>
+  <text x="350" y="800" text-anchor="middle" font-size="20" font-weight="bold" fill="white">
+    2,850 Workers Win
+  </text>
+  <text x="350" y="825" text-anchor="middle" font-size="14" fill="white">
+    Benefits Reinstated or Increased
+  </text>
+  
+  <!-- Stage 4b: Denied Appeals -->
+  <rect x="650" y="760" width="400" height="100" rx="10" fill="#e74c3c" opacity="0.9"/>
+  <text x="850" y="800" text-anchor="middle" font-size="20" font-weight="bold" fill="white">
+    2,150 Appeals Denied
+  </text>
+  <text x="850" y="825" text-anchor="middle" font-size="14" fill="white">
+    May transition to social assistance
+  </text>
+  
+  <!-- Stage 5: Social Assistance Transition -->
+  <path d="M 850 860 L 850 920" stroke="#95a5a6" stroke-width="2" fill="none" marker-end="url(#arrowhead-social)"/>
+  <text x="870" y="890" font-size="11" fill="#95a5a6">
+    ~30% transition
+  </text>
+  
+  <rect x="700" y="920" width="300" height="70" rx="10" fill="#95a5a6" opacity="0.9"/>
+  <text x="850" y="945" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+    ~645 to ODSP/OW
+  </text>
+  <text x="850" y="965" text-anchor="middle" font-size="12" fill="white">
+    → ONSBT Appeals (13,798 in CanLII)
+  </text>
+  
+  <!-- Financial Context Box -->
+  <rect x="50" y="670" width="1100" height="110" rx="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="600" y="695" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">
+    💰 Financial Impact
+  </text>
+  <text x="300" y="720" text-anchor="middle" font-size="14" fill="#34495e">
+    Total Benefit Costs: <tspan font-weight="bold">$1.88B</tspan>
+  </text>
+  <text x="600" y="720" text-anchor="middle" font-size="14" fill="#34495e">
+    Appeal System Costs: <tspan font-weight="bold">$131M/year</tspan>
+  </text>
+  <text x="900" y="720" text-anchor="middle" font-size="14" fill="#34495e">
+    Individual Appeal Cost: <tspan font-weight="bold">$107k-$120k</tspan>
+  </text>
+  <text x="600" y="745" text-anchor="middle" font-size="12" fill="#7f8c8d">
+    Data sources: AWCBC 2024, CanLII tribunal databases, industry estimates | 3mpwrApp.ca
+  </text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrowhead-success" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+    </marker>
+    <marker id="arrowhead-denied" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowhead-social" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#95a5a6"/>
+    </marker>
+  </defs>
+</svg>
