@@ -65,7 +65,7 @@ Interpretation boundary: Tier B remains inferred, not confirmed, and Tier C rema
 ✅ **HRTO applicants win only 0.7%** (17 of 2,274 detected outcomes)  
 ✅ **WSIAT keywords: 0% cite email delivery failures**  
 ✅ **HRTO keywords: 36.6% cite email delivery issues** (983 of 2,686 cases)  
-✅ **WSIAT abandonment: 0.5%** (3 of 2,000 cases)  
+✅ **WSIAT abandonment: 0.5% of detected outcomes** (3 of 651 cases)  
 ✅ **HRTO abandonment: 73.5%** (1,672 of 2,274 detected outcomes)
 
 **Pattern correlation observations:**
@@ -115,7 +115,7 @@ Our analysis shows email delivery failures are cited frequently in HRTO keywords
 
 **Key trend:** Median closure time fell from 15.4 months (2020) → 12.7 months (2024) → **10.3 months (Q4 2025)** — a 33% reduction in 5 years. First-offered hearing fell from 7.8 months (2020) → 3.8 months (Q4 2025) — **51% faster**.
 
-**What this supports:** WSIAT's official materials consistently describe a tribunal focused on moving appeals through the system and reducing delay. The 2024 annual report and Q4 2025 KPI dashboard together show measurable operational improvement, while our dataset separately shows a low abandonment rate of 0.5% (3 of 2,000 cases). The annual reports themselves do not provide a detailed notification-method breakdown.
+**What this supports:** WSIAT's official materials consistently describe a tribunal focused on moving appeals through the system and reducing delay. The 2024 annual report and Q4 2025 KPI dashboard together show measurable operational improvement, while our dataset separately shows a low abandonment rate of 0.5% of detected outcomes (3 of 651 cases). The annual reports themselves do not provide a detailed notification-method breakdown.
 
 ---
 
@@ -140,8 +140,8 @@ Keyword analysis reveals email failures appear frequently in abandoned cases but
 
 ### The 147x Abandonment Gap
 
-**WSIAT abandonment rate:** 0.5% (3 of 2,000)  
-**HRTO abandonment rate:** 73.5% (1,672 of 2,274)
+**WSIAT abandonment rate:** 0.5% of detected outcomes (3 of 651 cases)  
+**HRTO abandonment rate:** 73.5% (1,672 of 2,274 detected outcomes)
 
 **HRTO's abandonment rate is 147x higher than WSIAT's.**
 

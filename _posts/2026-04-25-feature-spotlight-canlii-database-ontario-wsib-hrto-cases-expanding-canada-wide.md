@@ -23,7 +23,7 @@ CanLII Database: Ontario WSIB & HRTO Cases (Expanding Canada-Wide) is designed t
 
 ## Key Highlights
 
-- **Starting with Ontario: 1,800+ WSIB and HRTO cases (2020-2026)**
+- **Starting with Ontario: 34,928 tribunal decisions across 4 tribunals (WSIAT, HRTO, ONSBT, ONWSIB) from 2020-2026**
 - **Database grows daily: adding cases from all provinces and territories**
 - **Goal: Complete Canada-wide coverage across all jurisdictions**
 - **65% disability-relevance match rate through AI filtering**
