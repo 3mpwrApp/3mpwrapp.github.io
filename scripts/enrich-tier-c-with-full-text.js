@@ -35,9 +35,20 @@ const path = require('path');
 // ===== CONFIGURATION =====
 
 const DATA_DIR = path.join(__dirname, "../data/tribunal-decisions");
-const DELAY_MS = 2000; // 2 seconds between requests
+const MIN_DELAY_MS = 3000; // 3 seconds minimum
+const MAX_DELAY_MS = 6000; // 6 seconds maximum (random range)
 const BATCH_SIZE = 50; // Process in batches, save progress every 50 cases
 const PROGRESS_FILE = path.join(DATA_DIR, '.tier-c-enrichment-progress.json');
+
+// Rotating User-Agents to avoid detection
+const USER_AGENTS = [
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15'
+];
+
+let userAgentIndex = 0;
 
 // Tribunals to process
 const TRIBUNALS = [
@@ -77,6 +88,18 @@ function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function randomDelay() {
+  const ms = MIN_DELAY_MS + Math.random() * (MAX_DELAY_MS - MIN_DELAY_MS);
+  return delay(Math.floor(ms));
+}
+
+function getRandomUserAgent() {
+  // Rotate through user agents
+  const ua = USER_AGENTS[userAgentIndex];
+  userAgentIndex = (userAgentIndex + 1) % USER_AGENTS.length;
+  return ua;
+}
+
 function saveProgress(progress) {
   fs.writeFileSync(PROGRESS_FILE, JSON.stringify(progress, null, 2));
   console.log(`✅ Progress saved: ${progress.completed}/${progress.total} cases processed`);
@@ -100,9 +123,17 @@ function fetchHTML(url) {
       path: urlObj.pathname,
       method: 'GET',
       headers: {
-        'User-Agent': '3mpwrApp Research Bot (+https://3mpwrapp.ca) - Public Access to Justice Project',
-        'Accept': 'text/html,application/xhtml+xml',
-        'Accept-Language': 'en-US,en;q=0.9'
+        'User-Agent': getRandomUserAgent(),
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Cache-Control': 'max-age=0',
+        'Referer': 'https://www.canlii.org/en/'
       }
     };
 
@@ -371,13 +402,21 @@ async function processTribunal(tribunalConfig) {
         console.log(`💾 Batch saved: ${improved} improvements so far`);
       }
 
-      // Rate limiting
-      await delay(DELAY_MS);
+      // Rate limiting with random delay (3-6 seconds)
+      await randomDelay();
 
     } catch (error) {
       if (error.message === 'RATE_LIMIT') {
         console.log(`⚠️ Rate limit hit! Waiting 60 seconds...`);
         await delay(60000);
+        i--; // Retry this case
+        continue;
+      }
+
+      if (error.message === 'HTTP 403') {
+        console.log(`⚠️ HTTP 403 Forbidden - Bot detection triggered`);
+        console.log(`   Waiting 120 seconds and changing User-Agent...`);
+        await delay(120000); // 2-minute cooldown
         i--; // Retry this case
         continue;
       }
@@ -439,12 +478,12 @@ function updateSummary(tribunalConfig, tierACount, tierBCount, tierCCount) {
 // ===== CLI EXECUTION =====
 
 async function main() {
-  console.log('🚀 Tier C Text Enrichment Pipeline v1.0');
+  console.log('🚀 Tier C Text Enrichment Pipeline v1.1 (Anti-Bot)');
   console.log('==========================================');
   console.log('');
   console.log('Target: 25,895 Tier C cases across 4 tribunals');
   console.log('Strategy: Fetch full text + enhanced NLP');
-  console.log('Rate limit: 2-second delay between requests');
+  console.log('Anti-detection: Rotating User-Agents + random delays (3-6 sec)');
   console.log('');
 
   const totalStats = { processed: 0, improved: 0, errors: 0 };
