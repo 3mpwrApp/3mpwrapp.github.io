@@ -1,50 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-28T03:54:59.560Z",
+  "lastUpdated": "2026-04-28T14:33:50.972Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16274,
+      "totalPosts": 16299,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T03:54:50.068Z"
+      "lastSeen": "2026-04-28T14:33:41.220Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16261,
+      "totalPosts": 16286,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T03:54:52.301Z"
+      "lastSeen": "2026-04-28T14:33:43.476Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16146,
+      "totalPosts": 16171,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T03:54:54.297Z"
+      "lastSeen": "2026-04-28T14:33:45.427Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16337,
+      "totalPosts": 16362,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T03:54:56.380Z"
+      "lastSeen": "2026-04-28T14:33:47.705Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16298,
+      "totalPosts": 16323,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T03:54:58.556Z"
+      "lastSeen": "2026-04-28T14:33:49.969Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Received my postal vote so sharing my Substack, originally commissioned by @bylinetimes.bsky.social Please share too, know that the right-wing are never friends of disabled people.\n#DisabledPeopleAgainstFascism\n#StandUpToRacism\n#DisabilityRights\n#Writerlife\n\npennypepper.substack.com/p/the-tainte...",
-      "author": "penpep.bsky.social",
-      "engagement": 34,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
       "author": "hoydenspark.bsky.social",
@@ -338,28 +332,34 @@
       "author": "deconspray.bsky.social",
       "engagement": 33,
       "hashtag": "A11y"
+    },
+    {
+      "text": "RFK: “What’s wrong with you people? Don’t you know how you’re supposed to treat loved ones? They’re like cars, you just get a new one, if the old one gets broken!” #DisabilityRights",
+      "author": "beatlenumber9.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
     }
   ],
   "emergingTopics": [
     {
-      "keyword": "disabilityrights",
-      "count": 42
+      "keyword": "accessibility",
+      "count": 45
     },
     {
-      "keyword": "accessibility",
-      "count": 39
+      "keyword": "disabilityrights",
+      "count": 43
+    },
+    {
+      "keyword": "a11y",
+      "count": 28
     },
     {
       "keyword": "disabilityjustice",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "cripthevote",
       "count": 25
-    },
-    {
-      "keyword": "a11y",
-      "count": 24
     },
     {
       "keyword": "altcitizen",
@@ -386,12 +386,32 @@
       "count": 12
     },
     {
-      "keyword": "disabilityjustice nico",
+      "keyword": "disabilityrights nokings3",
       "count": 9
     },
     {
-      "keyword": "disabilityrights nokings3",
-      "count": 9
+      "keyword": "disabilityjustice nico",
+      "count": 8
+    },
+    {
+      "keyword": "disabilitysky",
+      "count": 8
+    },
+    {
+      "keyword": "cripminds",
+      "count": 8
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 8
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 8
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 8
     },
     {
       "keyword": "disabilityrebellion",
@@ -400,26 +420,6 @@
     {
       "keyword": "disabilityrights disabilityrebellion",
       "count": 8
-    },
-    {
-      "keyword": "ada",
-      "count": 6
-    },
-    {
-      "keyword": "disabilitysky",
-      "count": 6
-    },
-    {
-      "keyword": "cripminds",
-      "count": 6
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 6
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 6
     }
   ]
 }
