@@ -1,56 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-27T14:18:25.940Z",
+  "lastUpdated": "2026-04-28T03:54:59.560Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16249,
+      "totalPosts": 16274,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T14:18:17.445Z"
+      "lastSeen": "2026-04-28T03:54:50.068Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16236,
+      "totalPosts": 16261,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T14:18:19.273Z"
+      "lastSeen": "2026-04-28T03:54:52.301Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16121,
+      "totalPosts": 16146,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T14:18:20.910Z"
+      "lastSeen": "2026-04-28T03:54:54.297Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16312,
+      "totalPosts": 16337,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T14:18:22.601Z"
+      "lastSeen": "2026-04-28T03:54:56.380Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16273,
+      "totalPosts": 16298,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-27T14:18:24.937Z"
+      "lastSeen": "2026-04-28T03:54:58.556Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Looking to cut disability supports instead of cutting Aukus \nDisabled people will be worse off under these conditions. \nShowering and eating are not luxuries.  Getting out of bed into your wheelchair is not a luxury. \n#DisabilityRights  #NDIS  \n\nwww.abc.net.au/news/2026-04...",
-      "author": "anonymoussewerrat.bsky.social",
-      "engagement": 25,
-      "hashtag": "DisabilityRights"
-    },
-    {
-      "text": "Thank you to Alberta Medical Association for using your voice to speak up on the current harmful and reckless direction of disability supports in Alberta💚 #AbLeg #DisabilityRights #yeg #yyc #Alberta\n\ncalgaryherald.com/opinion/colu...",
-      "author": "zacharyweeks.bsky.social",
-      "engagement": 47,
-      "hashtag": "DisabilityRights"
-    },
     {
       "text": "Received my postal vote so sharing my Substack, originally commissioned by @bylinetimes.bsky.social Please share too, know that the right-wing are never friends of disabled people.\n#DisabledPeopleAgainstFascism\n#StandUpToRacism\n#DisabilityRights\n#Writerlife\n\npennypepper.substack.com/p/the-tainte...",
       "author": "penpep.bsky.social",
@@ -338,6 +326,18 @@
       "author": "deconspray.bsky.social",
       "engagement": 30,
       "hashtag": "A11y"
+    },
+    {
+      "text": "RFK: “What’s wrong with you people? Don’t you know how you’re supposed to treat loved ones? They’re like cars, you just get a new one, if the old one gets broken!” #DisabilityRights",
+      "author": "beatlenumber9.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "LLMs hallucinate WCAG criteria, invent issues, and can't touch a live DOM. An AI accessibility audit isn't cutting corners; it's counterfeit expertise. Human testers still own this work.\n\nafixt.com/beware-of-...\n\n#DigitalAccessibility #A11y #WCAG #DigitalInclusion #ResponsibleAI #AI",
+      "author": "deconspray.bsky.social",
+      "engagement": 33,
+      "hashtag": "A11y"
     }
   ],
   "emergingTopics": [
@@ -347,19 +347,19 @@
     },
     {
       "keyword": "accessibility",
-      "count": 36
+      "count": 39
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
-    },
-    {
-      "keyword": "a11y",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "cripthevote",
       "count": 25
+    },
+    {
+      "keyword": "a11y",
+      "count": 24
     },
     {
       "keyword": "altcitizen",
@@ -386,12 +386,12 @@
       "count": 12
     },
     {
-      "keyword": "disabilityrights nokings3",
+      "keyword": "disabilityjustice nico",
       "count": 9
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 8
+      "keyword": "disabilityrights nokings3",
+      "count": 9
     },
     {
       "keyword": "disabilityrebellion",
@@ -402,24 +402,24 @@
       "count": 8
     },
     {
+      "keyword": "ada",
+      "count": 6
+    },
+    {
       "keyword": "disabilitysky",
-      "count": 7
+      "count": 6
     },
     {
       "keyword": "cripminds",
-      "count": 7
+      "count": 6
     },
     {
       "keyword": "accessibility disabilitysky",
-      "count": 7
+      "count": 6
     },
     {
       "keyword": "disabilitysky cripminds",
-      "count": 7
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
-      "count": 7
+      "count": 6
     }
   ]
 }
