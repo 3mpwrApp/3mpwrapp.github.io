@@ -23,6 +23,8 @@ The **Ontario Workplace Safety and Insurance Board (WSIB)** is the agency that d
 
 **431 ONWSIB decisions (2020-2026)** collected from CanLII public records.
 
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each case individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
+
 **Important Context:** ONWSIB has far fewer public decisions than WSIAT (431 vs 11,430) because:
 1. Most internal WSIB reviews don't get published to CanLII
 2. Many workers skip ONWSIB and go directly to WSIAT appeals

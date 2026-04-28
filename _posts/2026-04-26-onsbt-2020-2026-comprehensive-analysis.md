@@ -11,6 +11,8 @@ excerpt: "Comprehensive analysis of 13,798 ONSBT tribunal decisions over seven y
 
 From 2020 through 2026, the Ontario Social Benefits Tribunal (ONSBT) recorded **13,798 published decisions** across disability eligibility appeals, overpayment disputes, and regulatory compliance matters. This analysis examines what that dataset reveals—and, critically, what it obscures—about access to justice for people with disabilities navigating Ontario's social benefits system.
 
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 13,798 cases individually. Our analysis uses keyword patterns and NLP predictions where official outcomes aren't available.
+
 ### Case Volume by Year
 
 | Year | Cases | Notes |

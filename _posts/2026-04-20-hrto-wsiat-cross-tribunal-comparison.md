@@ -14,6 +14,8 @@ toc: true
 
 **Comparative analysis of 5,186 tribunal decisions reveals significant disparities: WSIAT workers win 65-73% of appeals (official statistics) with 0.5% abandonment rate, while HRTO shows 73.5% abandonment rate with email delivery issues cited in 70.1% of abandoned cases. Same province, same vulnerable populations, measurably different outcomes.**
 
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each case individually. Our analysis uses keyword patterns where official outcomes aren't available.
+
 ---
 
 ## Executive Summary

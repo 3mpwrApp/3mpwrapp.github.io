@@ -2,6 +2,8 @@
 **Date:** April 8, 2026  
 **Goal:** Collect all tribunal decisions for injured workers & persons with disabilities
 
+**⚠️ API Limitations Notice:** CanLII API is designed for human researchers browsing cases, not bulk data extraction. Intentional restrictions include: no explicit outcome fields in metadata, CAPTCHA protection for web scraping, request throttling, daily caps, and IP blocking after excessive requests. **This is NOT a CanLII issue—it's intentional API access restrictions to protect their servers.** The limitations documented below reflect these design choices.
+
 ---
 
 ## 🚨 **CRITICAL DISCOVERY: The "Search" Parameter Doesn't Exist!**

@@ -1,5 +1,7 @@
 # CanLII Collection - Quick Start Guide
 
+**⚠️ API Limitations Notice:** CanLII API is designed for human researchers browsing cases, not bulk data extraction. Intentional restrictions include: no explicit outcome fields in metadata, CAPTCHA protection for web scraping, request throttling, daily caps, and IP blocking after excessive requests. **This is NOT a CanLII issue—it's intentional API access restrictions to protect their servers.** To get 100% accurate outcomes, we'd need to manually read each case individually. Our scripts collect metadata and infer outcomes from keywords where possible.
+
 ## 🚀 Tonight's Collection (After 8 PM ET)
 
 ```powershell
