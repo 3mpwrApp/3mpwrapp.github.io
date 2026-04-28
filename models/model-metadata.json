@@ -1,0 +1,22 @@
+{
+  "trainedDate": "2026-04-28T02:42:01.654Z",
+  "trainingExamples": 124824,
+  "testExamples": 31206,
+  "accuracy": 94.54912516823688,
+  "classes": [
+    "Abandoned",
+    "Allowed",
+    "Dismissed",
+    "Granted",
+    "Dismissed - No Violation",
+    "Reconsideration",
+    "Deferred",
+    "Costs Decision",
+    "Settled",
+    "Allowed - Violation Found",
+    "Interim Decision",
+    "Denied",
+    "No Jurisdiction",
+    "Withdrawn"
+  ]
+}

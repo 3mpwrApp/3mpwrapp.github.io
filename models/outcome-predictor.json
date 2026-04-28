@@ -1,0 +1,126 @@
+{
+  "classCounts": {
+    "Abandoned": 17849,
+    "Allowed": 16037,
+    "Dismissed": 3443,
+    "Granted": 46613,
+    "Dismissed - No Violation": 2291,
+    "Reconsideration": 1599,
+    "Deferred": 422,
+    "Costs Decision": 33362,
+    "Settled": 42,
+    "Allowed - Violation Found": 988,
+    "Interim Decision": 53,
+    "Denied": 2056,
+    "No Jurisdiction": 27,
+    "Withdrawn": 42
+  },
+  "featureCounts": {
+    "Abandoned": {
+      "year": 17849,
+      "tribunal_hrto": 17842,
+      "has_nel": 113,
+      "has_psychological": 127,
+      "has_back_injury": 10,
+      "tribunal_onsbt": 5
+    },
+    "Allowed": {
+      "year": 16037,
+      "snippet_length": 15946,
+      "has_entitled": 614,
+      "has_nel": 172,
+      "has_chronic_pain": 437,
+      "has_psychological": 1021,
+      "has_preexisting": 39,
+      "has_back_injury": 1211,
+      "keyword_length": 91,
+      "has_insufficient": 5,
+      "has_allowed": 55,
+      "has_credibility": 18,
+      "has_dismissed": 25,
+      "has_partial": 3,
+      "has_remitted": 3
+    },
+    "Dismissed": {
+      "has_preexisting": 3103,
+      "year": 3443,
+      "snippet_length": 2809,
+      "has_back_injury": 316,
+      "keyword_length": 634,
+      "has_psychological": 162,
+      "has_nel": 40,
+      "has_chronic_pain": 18
+    },
+    "Granted": {
+      "year": 46613,
+      "keyword_length": 4576
+    },
+    "Dismissed - No Violation": {
+      "year": 2291,
+      "tribunal_hrto": 2291,
+      "has_nel": 6,
+      "snippet_length": 152,
+      "has_partial": 2,
+      "has_psychological": 24,
+      "has_loe": 2
+    },
+    "Reconsideration": {
+      "year": 1599,
+      "tribunal_hrto": 1542,
+      "has_psychological": 14,
+      "tribunal_onsbt": 41
+    },
+    "Deferred": {
+      "year": 422,
+      "tribunal_hrto": 355,
+      "has_psychological": 11,
+      "has_nel": 6,
+      "tribunal_onsbt": 36
+    },
+    "Costs Decision": {
+      "year": 33362,
+      "tribunal_onsbt": 33300,
+      "tribunal_hrto": 4
+    },
+    "Settled": {
+      "year": 42,
+      "tribunal_hrto": 24,
+      "tribunal_onsbt": 13
+    },
+    "Allowed - Violation Found": {
+      "has_psychological": 438,
+      "year": 988,
+      "keyword_length": 967,
+      "has_back_injury": 304,
+      "has_chronic_pain": 154,
+      "has_preexisting": 151,
+      "has_nel": 88,
+      "has_allowed": 9,
+      "has_insufficient": 4,
+      "snippet_length": 16,
+      "has_partial": 6,
+      "has_dismissed": 11,
+      "tribunal_hrto": 17,
+      "has_entitled": 4
+    },
+    "Interim Decision": {
+      "year": 53,
+      "tribunal_hrto": 53,
+      "has_back_injury": 4
+    },
+    "Denied": {
+      "year": 2056
+    },
+    "No Jurisdiction": {
+      "year": 27,
+      "tribunal_onsbt": 17,
+      "tribunal_hrto": 4
+    },
+    "Withdrawn": {
+      "year": 42,
+      "tribunal_hrto": 35,
+      "tribunal_onsbt": 5
+    }
+  },
+  "totalDocs": 124824
+}

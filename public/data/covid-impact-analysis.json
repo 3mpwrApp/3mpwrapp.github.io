@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-04-28T03:40:39.171Z",
+  "analysis_period": "2020-01-01 to 2026-12-31",
+  "periods": {
+    "PRE_COVID": {
+      "label": "Pre-COVID (Jan-Mar 2020)",
+      "total": 2138,
+      "by_outcome": {
+        "Granted": 1864,
+        "Allowed - Violation Found": 138,
+        "Dismissed": 136
+      },
+      "by_tribunal": {
+        "onwsiat": 1164,
+        "bcwcat": 974
+      },
+      "abandoned": 0,
+      "wins": 2002,
+      "losses": 136
+    },
+    "EARLY_COVID": {
+      "label": "Early COVID (Mar-Dec 2020)",
+      "total": 6034,
+      "by_outcome": {
+        "Granted": 5192,
+        "Allowed - Violation Found": 474,
+        "Dismissed": 368
+      },
+      "by_tribunal": {
+        "onwsiat": 2990,
+        "bcwcat": 3044
+      },
+      "abandoned": 0,
+      "wins": 5666,
+      "losses": 368
+    },
+    "COVID_PEAK": {
+      "label": "COVID Peak (2021)",
+      "total": 10054,
+      "by_outcome": {
+        "Granted": 9026,
+        "Dismissed": 404,
+        "Allowed - Violation Found": 624
+      },
+      "by_tribunal": {
+        "onwsiat": 6156,
+        "bcwcat": 3898
+      },
+      "abandoned": 0,
+      "wins": 9650,
+      "losses": 404
+    },
+    "COVID_TRANSITION": {
+      "label": "Transition (2022)",
+      "total": 4182,
+      "by_outcome": {
+        "Granted": 4182
+      },
+      "by_tribunal": {
+        "onwsiat": 4182
+      },
+      "abandoned": 0,
+      "wins": 4182,
+      "losses": 0
+    },
+    "POST_COVID": {
+      "label": "Post-COVID (2023-2026)",
+      "total": 14059,
+      "by_outcome": {
+        "Granted": 14059
+      },
+      "by_tribunal": {
+        "onwsiat": 14059
+      },
+      "abandoned": 0,
+      "wins": 14059,
+      "losses": 0
+    }
+  },
+  "changes": {
+    "EARLY_COVID": {
+      "from": "Pre-COVID (Jan-Mar 2020)",
+      "to": "Early COVID (Mar-Dec 2020)",
+      "volume_change_percent": 182.23,
+      "win_rate_change_percent": 0.26,
+      "abandonment_change_percent": 0
+    },
+    "COVID_PEAK": {
+      "from": "Early COVID (Mar-Dec 2020)",
+      "to": "COVID Peak (2021)",
+      "volume_change_percent": 66.62,
+      "win_rate_change_percent": 2.08,
+      "abandonment_change_percent": 0
+    },
+    "COVID_TRANSITION": {
+      "from": "COVID Peak (2021)",
+      "to": "Transition (2022)",
+      "volume_change_percent": -58.4,
+      "win_rate_change_percent": 4.02,
+      "abandonment_change_percent": 0
+    },
+    "POST_COVID": {
+      "from": "Transition (2022)",
+      "to": "Post-COVID (2023-2026)",
+      "volume_change_percent": 236.18,
+      "win_rate_change_percent": 0,
+      "abandonment_change_percent": 0
+    }
+  },
+  "insights": [
+    {
+      "type": "volume_peak",
+      "finding": "Highest decision volume during Post-COVID (2023-2026) with 14,059 decisions"
+    },
+    {
+      "type": "win_rate_stability",
+      "finding": "Win rates remained stable across all COVID periods (avg 96.7%, max deviation 3.3%)"
+    }
+  ]
+}

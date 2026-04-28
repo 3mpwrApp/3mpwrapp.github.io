@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-04-28T03:27:02.796Z",
+  "tribunals": [
+    {
+      "id": "onwsiat",
+      "total": 28551,
+      "with_outcomes": 28551,
+      "coverage_percent": 100,
+      "win_rate": 100,
+      "wins": 28551,
+      "losses": 0,
+      "by_outcome": {
+        "Granted": 28551
+      }
+    },
+    {
+      "id": "unknown",
+      "total": 100785,
+      "with_outcomes": 100785,
+      "coverage_percent": 100,
+      "win_rate": 84.12,
+      "wins": 32709,
+      "losses": 6177,
+      "by_outcome": {
+        "Allowed": 19834,
+        "Dismissed": 3360,
+        "Abandoned": 19228,
+        "Dismissed - No Violation": 1518,
+        "Interim Decision": 35,
+        "Reconsideration": 966,
+        "Costs Decision": 41354,
+        "Withdrawn": 25,
+        "Deferred": 261,
+        "Settled": 27,
+        "Allowed - Violation Found": 3,
+        "No Jurisdiction": 19,
+        "Granted": 12875,
+        "Denied": 1280
+      }
+    },
+    {
+      "id": "bcwcat",
+      "total": 7916,
+      "with_outcomes": 7916,
+      "coverage_percent": 100,
+      "win_rate": 86.41,
+      "wins": 5772,
+      "losses": 908,
+      "by_outcome": {
+        "Granted": 5772,
+        "Allowed - Violation Found": 1236,
+        "Dismissed": 908
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-04-28T03:27:02.798Z",
+  "years": [
+    {
+      "year": "2026",
+      "total": 438,
+      "with_outcomes": 438,
+      "coverage_percent": 100,
+      "win_rate": 100,
+      "wins": 438,
+      "losses": 0,
+      "by_outcome": {
+        "Granted": 438
+      }
+    },
+    {
+      "year": "2025",
+      "total": 4566,
+      "with_outcomes": 4566,
+      "coverage_percent": 100,
+      "win_rate": 100,
+      "wins": 4566,
+      "losses": 0,
+      "by_outcome": {
+        "Granted": 4566
+      }
+    },
+    {
+      "year": "2024",
+      "total": 5913,
+      "with_outcomes": 5913,
+      "coverage_percent": 100,
+      "win_rate": 100,
+      "wins": 5913,
+      "losses": 0,
+      "by_outcome": {
+        "Granted": 5913
+      }
+    },
+    {
+      "year": "2023",
+      "total": 3142,
+      "with_outcomes": 3142,
+      "coverage_percent": 100,
+      "win_rate": 100,
+      "wins": 3142,
+      "losses": 0,
+      "by_outcome": {
+        "Granted": 3142
+      }
+    },
+    {
+      "year": "2022",
+      "total": 4182,
+      "with_outcomes": 4182,
+      "coverage_percent": 100,
+      "win_rate": 100,
+      "wins": 4182,
+      "losses": 0,
+      "by_outcome": {
+        "Granted": 4182
+      }
+    },
+    {
+      "year": "2021",
+      "total": 10054,
+      "with_outcomes": 10054,
+      "coverage_percent": 100,
+      "win_rate": 95.72,
+      "wins": 9026,
+      "losses": 404,
+      "by_outcome": {
+        "Granted": 9026,
+        "Dismissed": 404,
+        "Allowed - Violation Found": 624
+      }
+    },
+    {
+      "year": "2020",
+      "total": 8172,
+      "with_outcomes": 8172,
+      "coverage_percent": 100,
+      "win_rate": 93.33,
+      "wins": 7056,
+      "losses": 504,
+      "by_outcome": {
+        "Granted": 7056,
+        "Allowed - Violation Found": 612,
+        "Dismissed": 504
+      }
+    }
+  ]
+}

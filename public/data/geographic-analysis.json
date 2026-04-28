@@ -1,0 +1,131 @@
+{
+  "generated_at": "2026-04-28T03:41:00.503Z",
+  "by_province": {
+    "Ontario": {
+      "total": 28551,
+      "by_tribunal": {
+        "onwsiat": 28551
+      },
+      "by_outcome": {
+        "Granted": 28551
+      },
+      "wins": 28551,
+      "losses": 0,
+      "win_rate": 100,
+      "coverage_percent": 100
+    },
+    "Unknown": {
+      "total": 100785,
+      "by_tribunal": {
+        "unknown": 100785
+      },
+      "by_outcome": {
+        "Allowed": 19834,
+        "Dismissed": 3360,
+        "Abandoned": 19228,
+        "Dismissed - No Violation": 1518,
+        "Interim Decision": 35,
+        "Reconsideration": 966,
+        "Costs Decision": 41354,
+        "Withdrawn": 25,
+        "Deferred": 261,
+        "Settled": 27,
+        "Allowed - Violation Found": 3,
+        "No Jurisdiction": 19,
+        "Granted": 12875,
+        "Denied": 1280
+      },
+      "wins": 32712,
+      "losses": 6177,
+      "win_rate": 84.12,
+      "coverage_percent": 100
+    },
+    "British Columbia": {
+      "total": 7916,
+      "by_tribunal": {
+        "bcwcat": 7916
+      },
+      "by_outcome": {
+        "Granted": 5772,
+        "Allowed - Violation Found": 1236,
+        "Dismissed": 908
+      },
+      "wins": 7008,
+      "losses": 908,
+      "win_rate": 88.53,
+      "coverage_percent": 100
+    }
+  },
+  "ontario_regions": {
+    "Unknown": {
+      "total": 28532,
+      "by_tribunal": {
+        "onwsiat": 28532
+      },
+      "by_outcome": {
+        "Granted": 28532
+      },
+      "wins": 28532,
+      "losses": 0,
+      "win_rate": 100,
+      "coverage_percent": 100
+    },
+    "Central Ontario": {
+      "total": 19,
+      "by_tribunal": {
+        "onwsiat": 19
+      },
+      "by_outcome": {
+        "Granted": 19
+      },
+      "wins": 19,
+      "losses": 0,
+      "win_rate": 100,
+      "coverage_percent": 100
+    }
+  },
+  "insights": [
+    {
+      "type": "volume_concentration",
+      "finding": "Unknown accounts for 73.4% of all analyzed decisions (100,785 cases)"
+    },
+    {
+      "type": "regional_concentration",
+      "finding": "Within Ontario, Central Ontario has the highest case volume (0.1% of identified regional cases)"
+    },
+    {
+      "type": "geographic_consistency",
+      "finding": "Win rates are consistent across provinces (avg 90.9%, max deviation 9.1%)"
+    }
+  ],
+  "province_mapping": {
+    "onwsiat": {
+      "province": "Ontario",
+      "name": "Workplace Safety and Insurance Appeals Tribunal"
+    },
+    "onhrt": {
+      "province": "Ontario",
+      "name": "Human Rights Tribunal of Ontario"
+    },
+    "onsbt": {
+      "province": "Ontario",
+      "name": "Social Benefits Tribunal"
+    },
+    "onwsib": {
+      "province": "Ontario",
+      "name": "Workplace Safety and Insurance Board"
+    },
+    "onca": {
+      "province": "Ontario",
+      "name": "Court of Appeal for Ontario"
+    },
+    "bcwcat": {
+      "province": "British Columbia",
+      "name": "Workers' Compensation Appeal Tribunal"
+    },
+    "bchrt": {
+      "province": "British Columbia",
+      "name": "Human Rights Tribunal"
+    }
+  }
+}
