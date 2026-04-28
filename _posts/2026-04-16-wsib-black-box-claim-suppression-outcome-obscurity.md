@@ -33,6 +33,8 @@ featured: true
 
 **TL;DR:** **PROVABLE FACTS:** 11,430 tribunal decisions (2020-2026) represent about 1,905/year, and in CanLII keyword/API data 91.8% do not include explicit outcome labels. **EXTRAPOLATION FROM PEER-REVIEWED RESEARCH:** Institute for Work & Health (15-50% injuries unreported) + Public Health Ontario (1 in 20 workers injured annually) + Ontario workforce (7.5M) = **estimated 1.14-2.29 MILLION workers** not reaching tribunal-level adjudication. **CONFIDENCE INTERVALS:** Range shows uncertainty. **WHAT'S PROVABLE:** keyword-label limitations (91.8%), published under-reporting research (IWH), tribunal volumes (CanLII). **WHAT'S EXTRAPOLATED:** Estimated count of cases not reaching tribunal. Full methodology + alternative estimates below.
 
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our analysis uses keyword patterns where official outcomes aren't available.
+
 **Read previous investigation:**  [WSIB Statistical Pattern Analysis (2026-04-15)](https://3mpwrapp.pages.dev/blog/2026/04/15/wsib-exposed-statistical-evidence-proves-systematic-manipulation/)
 
 ---

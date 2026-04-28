@@ -33,6 +33,8 @@ featured: true
 
 ✅ **DATA VERIFIED:** April 17, 2026 - All keyword frequency statistics verified via analysis of CanLII keywords field across 11,430 WSIAT decisions (2020-2026). Analysis script: `analyze-keyword-frequency.mjs` | Output: `keyword-frequency-analysis.json`
 
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our keyword pattern analysis focuses on CanLII metadata where available.
+
 **TL;DR:** WSIB denials use specific technical language patterns revealed through statistical analysis: "pre-existing" (13.31%), "impairment" (11.85%), "psychotraumatic disability" (6.62%), "shoulder" (12.17%), "knee" (7.39%). Understanding these patterns and knowing how to respond gives you strategic advantage in appeals. All statistics include 95% confidence intervals.
 
 ---

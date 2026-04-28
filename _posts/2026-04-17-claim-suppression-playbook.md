@@ -53,6 +53,8 @@ We asked: **Is this happening in Ontario too?**
 
 **What we found:** Multiple pattern indicators suggest claim-reporting barriers may not be isolated to BC, but **CanLII keyword/API limits in Ontario records** (91.8% without explicit outcome-labeled keywords) make full-scope quantification difficult.
 
+**⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each of 11,430 cases individually. Our pattern analysis uses keyword co-occurrence and temporal detection where official outcomes aren't available.
+
 ---
 
 ## What Is Claim Suppression?
