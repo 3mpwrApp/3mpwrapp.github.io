@@ -1,0 +1,2066 @@
+[
+  {
+    "case_id": "2022bchrt129",
+    "title": "Martinez Johnson v. Whitewater Concrete Ltd. and others (No. 2)",
+    "citation": "2022 BCHRT 129 (CanLII)",
+    "decision_date": "2022-12-23",
+    "url": "https://canlii.ca/t/jtvpt",
+    "keywords_api": "ape — racial slurs — called a monkey — panocha — harassment",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt128",
+    "title": "Barton v. Do It Right Properties Inc and another",
+    "citation": "2022 BCHRT 128 (CanLII)",
+    "decision_date": "2022-12-22",
+    "url": "https://canlii.ca/t/jtvps",
+    "keywords_api": "shortage — layoff — complaint — work — injury",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt127",
+    "title": "O’Reilly v. Duncan Products Inc",
+    "citation": "2022 BCHRT 127 (CanLII)",
+    "decision_date": "2022-12-21",
+    "url": "https://canlii.ca/t/jtvpr",
+    "keywords_api": "non-discriminatory explanation — adverse impact — manager — complaint — reasonable prospect",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt126",
+    "title": "DCS Employee v. Employer Company and others",
+    "citation": "2022 BCHRT 126 (CanLII)",
+    "decision_date": "2022-12-20",
+    "url": "https://canlii.ca/t/jtvpq",
+    "keywords_api": "complaint — settlement agreement — texted — dinner — names",
+    "keywords_extracted": [],
+    "outcome": "Settled",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "high"
+    }
+  },
+  {
+    "case_id": "2022bchrt125",
+    "title": "Complainant v. College of Dental Surgeons of BC and another",
+    "citation": "2022 BCHRT 125 (CanLII)",
+    "decision_date": "2022-12-20",
+    "url": "https://canlii.ca/t/jtvpp",
+    "keywords_api": "fentanyl — addiction — relapse — recommendations — hair",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt124",
+    "title": "Sun v. Paper Excellence (No. 2)",
+    "citation": "2022 BCHRT 124 (CanLII)",
+    "decision_date": "2022-12-15",
+    "url": "https://canlii.ca/t/jtvpm",
+    "keywords_api": "information — dismiss the complaint — deadline — respond — application",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt123",
+    "title": "Evers v. The Bloom Group and another",
+    "citation": "2022 BCHRT 123 (CanLII)",
+    "decision_date": "2022-12-02",
+    "url": "https://canlii.ca/t/jtvpl",
+    "keywords_api": "income — complaint — rent — housing — tenants",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt122",
+    "title": "Jickling v. Sweet Meadows Market",
+    "citation": "2022 BCHRT 122 (CanLII)",
+    "decision_date": "2022-11-30",
+    "url": "https://canlii.ca/t/jtvpk",
+    "keywords_api": "amended response — disability — deadline — complaint — ability to prepare",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt121",
+    "title": "Vidal v. Compensation Employees Credit Union",
+    "citation": "2022 BCHRT 121 (CanLII)",
+    "decision_date": "2022-11-29",
+    "url": "https://canlii.ca/t/jtvpj",
+    "keywords_api": "late-filed complaint — nine-day delay — public interest — filing — former",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt120",
+    "title": "Miremadi v. Fairmont Hotel Vancouver",
+    "citation": "2022 BCHRT 120 (CanLII)",
+    "decision_date": "2022-11-25",
+    "url": "https://canlii.ca/t/jtb1c",
+    "keywords_api": "racist comments — application to dismiss — ethnicity — dismiss the complaint — tanned",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt119",
+    "title": "Travadi v. Great Canadian Gaming Corporation and others",
+    "citation": "2022 BCHRT 119 (CanLII)",
+    "decision_date": "2022-11-24",
+    "url": "https://canlii.ca/t/jtb1b",
+    "keywords_api": "email — criminal record — complaint — poor performance — deposes",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt118",
+    "title": "Haak v. CreditLoans Canada Financing Inc. and another",
+    "citation": "2022 BCHRT 118 (CanLII)",
+    "decision_date": "2022-11-23",
+    "url": "https://canlii.ca/t/jtb19",
+    "keywords_api": "origin — reasonable prospect — contract — work permit — complaint",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt117",
+    "title": "Startek v. Ministry of Finance and another",
+    "citation": "2022 BCHRT 117 (CanLII)",
+    "decision_date": "2022-11-23",
+    "url": "https://canlii.ca/t/jtb18",
+    "keywords_api": "customarily available to the public — service — untaxed worldwide earner — tax — legislation",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt116",
+    "title": "RR v. Vancouver Aboriginal Child and Family Services Society (No. 6)",
+    "citation": "2022 BCHRT 116 (CanLII)",
+    "decision_date": "2022-11-22",
+    "url": "https://canlii.ca/t/jtb17",
+    "keywords_api": "children — child welfare — visits — girls — social workers",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt115",
+    "title": "Bailey v. Northern Gold Foods Ltd and another",
+    "citation": "2022 BCHRT 115 (CanLII)",
+    "decision_date": "2022-11-18",
+    "url": "https://canlii.ca/t/jtb16",
+    "keywords_api": "public interest — one-year time limit — interest to accept the late-filed — accept the late-filed complaint — outside the one-year",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt114",
+    "title": "McCulloch v. Nocair and another (No. 2)",
+    "citation": "2022 BCHRT 114 (CanLII)",
+    "decision_date": "2022-11-17",
+    "url": "https://canlii.ca/t/jtb15",
+    "keywords_api": "septic tank — complaint — property — electrical — reasonable prospect",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt113",
+    "title": "Johnson v. Strata Plan NW2192",
+    "citation": "2022 BCHRT 113 (CanLII)",
+    "decision_date": "2022-11-16",
+    "url": "https://canlii.ca/t/jtb14",
+    "keywords_api": "strata — complaint — disabled parking stall — owners — fan",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt112",
+    "title": "Spencer obo others v. BC Ferry Services",
+    "citation": "2022 BCHRT 112 (CanLII)",
+    "decision_date": "2022-11-15",
+    "url": "https://canlii.ca/t/jtb13",
+    "keywords_api": "alleged — group members — particulars — women — negative remarks about period-related mood",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt111",
+    "title": "Vincent-Posener v. Ministry of Social Development and Poverty Reduction",
+    "citation": "2022 BCHRT 111 (CanLII)",
+    "decision_date": "2022-11-15",
+    "url": "https://canlii.ca/t/jtb12",
+    "keywords_api": "trainer — sexual harassment — interest to accept the late-filed — discrimination — accept the late-filed complaint",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt110",
+    "title": "Gregory v. UBC (No. 2)",
+    "citation": "2022 BCHRT 110 (CanLII)",
+    "decision_date": "2022-11-10",
+    "url": "https://canlii.ca/t/jt127",
+    "keywords_api": "score — non-academic qualifications — bias — discrimination — age",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt109",
+    "title": "Gelley v. Habitat for Humanity",
+    "citation": "2022 BCHRT 109 (CanLII)",
+    "decision_date": "2022-10-25",
+    "url": "https://canlii.ca/t/jt126",
+    "keywords_api": "interest to accept the late-filed — one-year time — accept the late-filed complaint — delay — discrimination",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt108",
+    "title": "K v. RMC Ready Mix Ltd. and another (No. 4)",
+    "citation": "2022 BCHRT 108 (CanLII)",
+    "decision_date": "2022-10-19",
+    "url": "https://canlii.ca/t/jt125",
+    "keywords_api": "return to work — drug — evidence — addiction — accommodation",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt107",
+    "title": "Naqvi v. WSP Canada Ltd.",
+    "citation": "2022 BCHRT 107 (CanLII)",
+    "decision_date": "2022-10-13",
+    "url": "https://canlii.ca/t/jt124",
+    "keywords_api": "timesheets — complaint — disclosure — documents — disability",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt106",
+    "title": "Paul v. VIHA and others",
+    "citation": "2022 BCHRT 106 (CanLII)",
+    "decision_date": "2022-10-13",
+    "url": "https://canlii.ca/t/jt123",
+    "keywords_api": "complaint — discrimination on the basis — brother — family status — settlement agreement",
+    "keywords_extracted": [],
+    "outcome": "Settled",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "high"
+    }
+  },
+  {
+    "case_id": "2022bchrt105",
+    "title": "Ramirez Pichardo v. 098111 BC Ltd. dba Audi Downtown Vancouver",
+    "citation": "2022 BCHRT 105 (CanLII)",
+    "decision_date": "2022-10-12",
+    "url": "https://canlii.ca/t/jt122",
+    "keywords_api": "physical disability — application to dismiss the complaint — technicians — allegations — costs",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt104",
+    "title": "Alfaro Moreno v. RHC Insurance Brokers and another",
+    "citation": "2022 BCHRT 104 (CanLII)",
+    "decision_date": "2022-10-12",
+    "url": "https://canlii.ca/t/jt121",
+    "keywords_api": "driving examiner — road test — complaint — reasonable prospect — protected characteristics were a factor",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt103",
+    "title": "Chohan v. Kitsun Housing Co‐operative and another (No. 2)",
+    "citation": "2022 BCHRT 103 (CanLII)",
+    "decision_date": "2022-10-07",
+    "url": "https://canlii.ca/t/jt120",
+    "keywords_api": "reconsideration — complaint — renovations upgrades — discrimination — time",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt102",
+    "title": "Hyggen v. Teck Coal Ltd (No. 2)",
+    "citation": "2022 BCHRT 102 (CanLII)",
+    "decision_date": "2022-10-06",
+    "url": "https://canlii.ca/t/jt11z",
+    "keywords_api": "shift change — sleep — disability — diary — disability-related accommodation",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt101",
+    "title": "Taagholi v. Commissionaires BC and another",
+    "citation": "2022 BCHRT 101 (CanLII)",
+    "decision_date": "2022-10-05",
+    "url": "https://canlii.ca/t/jt11x",
+    "keywords_api": "pancake — sexual — leered — complaint — perfume",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt100",
+    "title": "Durrani v. ICBC and others",
+    "citation": "2022 BCHRT 100 (CanLII)",
+    "decision_date": "2022-10-05",
+    "url": "https://canlii.ca/t/jslrp",
+    "keywords_api": "attend prayers — candidates — hiring — interview — reasonable prospect",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt99",
+    "title": "Union of BC Indian Chiefs v. Provincial Health Services Authority and others",
+    "citation": "2022 BCHRT 99 (CanLII)",
+    "decision_date": "2022-09-07",
+    "url": "https://canlii.ca/t/jsls0",
+    "keywords_api": "liver transplant — abstinence requirement — complaint — patients — alcohol",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt98",
+    "title": "Billow v. Hardy Yardcare and another",
+    "citation": "2022 BCHRT 98 (CanLII)",
+    "decision_date": "2022-09-07",
+    "url": "https://canlii.ca/t/jslrz",
+    "keywords_api": "male colleagues — sex — discrimination — employment — husband",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt97",
+    "title": "Gust v. BC Association of Community Response Networks and others",
+    "citation": "2022 BCHRT 97 (CanLII)",
+    "decision_date": "2022-08-31",
+    "url": "https://canlii.ca/t/jslrx",
+    "keywords_api": "late-filed complaint — retaliation — public interest to accept — delay — filing",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt96",
+    "title": "Kovacs v. City of Maple Ridge",
+    "citation": "2022 BCHRT 96 (CanLII)",
+    "decision_date": "2022-08-30",
+    "url": "https://canlii.ca/t/jslrw",
+    "keywords_api": "introduce — expert — roundabouts — infrastructure — complaint",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt95",
+    "title": "Han v. New Chelsea Society and another (No. 2)",
+    "citation": "2022 BCHRT 95 (CanLII)",
+    "decision_date": "2022-08-30",
+    "url": "https://canlii.ca/t/jslrv",
+    "keywords_api": "mould — apartment — leak — wall — asthma",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt94",
+    "title": "Mills v. Mills Printing & Stationery Co. and others",
+    "citation": "2022 BCHRT 94 (CanLII)",
+    "decision_date": "2022-08-30",
+    "url": "https://canlii.ca/t/jslrt",
+    "keywords_api": "fired — dismiss the complaint — individual — directing mind behind — niece",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt93",
+    "title": "Cameron v. Burrardview Housing Co-Operative (No. 4)",
+    "citation": "2022 BCHRT 93 (CanLII)",
+    "decision_date": "2022-08-19",
+    "url": "https://canlii.ca/t/jslrs",
+    "keywords_api": "reconsider — fairness — complaint — mould — reopen",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt92",
+    "title": "Britz v. First West Credit Union",
+    "citation": "2022 BCHRT 92 (CanLII)",
+    "decision_date": "2022-08-17",
+    "url": "https://canlii.ca/t/jslrr",
+    "keywords_api": "late-filed complaint — in-person training — public interest to accept — retaliation — maternity leave",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt91",
+    "title": "Mollica v. Paul Nicholson dba Nicholson Concrete Fishing",
+    "citation": "2022 BCHRT 91 (CanLII)",
+    "decision_date": "2022-08-17",
+    "url": "https://canlii.ca/t/jslrq",
+    "keywords_api": "one-year time limit — delay — interest to accept the late-filed — accept the late-filed complaint — outside the one-year",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt90",
+    "title": "Aguila v. Nature’s Fare Markets and another",
+    "citation": "2022 BCHRT 90 (CanLII)",
+    "decision_date": "2022-08-16",
+    "url": "https://canlii.ca/t/jrm6b",
+    "keywords_api": "late-filed complaint — public interest to accept — retaliation — pandemic — states",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt89",
+    "title": "MacLean v. Gerry Robert Enterprises dba Black Card Books",
+    "citation": "2022 BCHRT 89 (CanLII)",
+    "decision_date": "2022-08-11",
+    "url": "https://canlii.ca/t/jrm69",
+    "keywords_api": "interpreters — attend the workshop — people — publishing program — book",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt88",
+    "title": "LaFleche v. NLFD Auto dba Prince George Ford (No. 2)",
+    "citation": "2022 BCHRT 88 (CanLII)",
+    "decision_date": "2022-07-29",
+    "url": "https://canlii.ca/t/jrm68",
+    "keywords_api": "maternity leave — marketing manager — return to work — doula — discrimination",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt87",
+    "title": "Lin v. Starbucks Coffee Company (Canada) and others",
+    "citation": "2022 BCHRT 87 (CanLII)",
+    "decision_date": "2022-07-28",
+    "url": "https://canlii.ca/t/jrm67",
+    "keywords_api": "complaint — sexual harassment — allegations — reasonable prospect — race",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt86",
+    "title": "Kolof v. Vancouver Board of Education, Vancouver School District 39",
+    "citation": "2022 BCHRT 86 (CanLII)",
+    "decision_date": "2022-07-19",
+    "url": "https://canlii.ca/t/jrm66",
+    "keywords_api": "work full-time — students — days — home — accommodation",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt85",
+    "title": "Susoeff v. Host International of Canada Ltd.",
+    "citation": "2022 BCHRT 85 (CanLII)",
+    "decision_date": "2022-07-13",
+    "url": "https://canlii.ca/t/jrm65",
+    "keywords_api": "complaint — sexual harassment — allegations — grievance — accommodation process",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt84",
+    "title": "Starr v. Board of Education of School District No. 40 (New Westminster)",
+    "citation": "2022 BCHRT 84 (CanLII)",
+    "decision_date": "2022-07-06",
+    "url": "https://canlii.ca/t/jrm64",
+    "keywords_api": "complaint — student — school — psychologist — queer",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt83",
+    "title": "Kinyawa v. Mills and others",
+    "citation": "2022 BCHRT 83 (CanLII)",
+    "decision_date": "2022-07-05",
+    "url": "https://canlii.ca/t/jrm63",
+    "keywords_api": "complaint — race — color — proven to be true — colour",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt82",
+    "title": "Symonds v. Vancouver Coastal Health Authority",
+    "citation": "2022 BCHRT 82 (CanLII)",
+    "decision_date": "2022-06-28",
+    "url": "https://canlii.ca/t/jrm62",
+    "keywords_api": "plexiglass — complaint — reception — accommodation — work",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt81",
+    "title": "Houg v. Gallant Enterprises Ltd. and others",
+    "citation": "2022 BCHRT 81 (CanLII)",
+    "decision_date": "2022-06-24",
+    "url": "https://canlii.ca/t/jrm61",
+    "keywords_api": "complaint — hours — work — employment — reduction",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt80",
+    "title": "Wong v. Impact Recruitment Inc. and others",
+    "citation": "2022 BCHRT 80 (CanLII)",
+    "decision_date": "2022-06-17",
+    "url": "https://canlii.ca/t/jq2bm",
+    "keywords_api": "job offer — pregnancy — email — evidence — employment",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt79",
+    "title": "Sandvoss v. Prince George Transit Ltd. and another (No. 2)",
+    "citation": "2022 BCHRT 79 (CanLII)",
+    "decision_date": "2022-06-07",
+    "url": "https://canlii.ca/t/jq2bl",
+    "keywords_api": "comparator group — reconsider — continuing contravention — collective agreement — one-year time limit",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt78",
+    "title": "Chohan v. Kitsun Housing Co-operative and another",
+    "citation": "2022 BCHRT 78 (CanLII)",
+    "decision_date": "2022-06-07",
+    "url": "https://canlii.ca/t/jq2bk",
+    "keywords_api": "renovations — unit — disability-related needs — undue hardship — complaint",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt77",
+    "title": "Main v. Community Futures Development Corporation of North Fraser",
+    "citation": "2022 BCHRT 77 (CanLII)",
+    "decision_date": "2022-06-07",
+    "url": "https://canlii.ca/t/jq2bj",
+    "keywords_api": "gala dinner — post-gala gathering — employment-related adverse impacts — religious — blessing",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt76",
+    "title": "Martin v. Grapevine Optical and another (No. 2)",
+    "citation": "2022 BCHRT 76 (CanLII)",
+    "decision_date": "2022-06-01",
+    "url": "https://canlii.ca/t/jq2bh",
+    "keywords_api": "termination — work — discrimination — complaint — quit",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt75",
+    "title": "The Complainant v. Four Seasons Resort and Residences (Whistler) and another",
+    "citation": "2022 BCHRT 75 (CanLII)",
+    "decision_date": "2022-06-01",
+    "url": "https://canlii.ca/t/jq2bg",
+    "keywords_api": "intimate relationship — favouritism — sexual orientation — vacation — photographs",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt74",
+    "title": "Cameron v. Burrardview Housing Co-Operative (No. 3)",
+    "citation": "2022 BCHRT 74 (CanLII)",
+    "decision_date": "2022-06-01",
+    "url": "https://canlii.ca/t/jq2bf",
+    "keywords_api": "mould — bathroom — attic — unit — remediation",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt73",
+    "title": "Brooks v. Skyacres Turkey Ranch Ltd. and others (No. 2)",
+    "citation": "2022 BCHRT 73 (CanLII)",
+    "decision_date": "2022-05-31",
+    "url": "https://canlii.ca/t/jq2bd",
+    "keywords_api": "farm — cottage — sexual orientation — tenancy — farmhand",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt72",
+    "title": "Pike v. Ooh La La Cafe and others",
+    "citation": "2022 BCHRT 72 (CanLII)",
+    "decision_date": "2022-05-18",
+    "url": "https://canlii.ca/t/jq2bc",
+    "keywords_api": "complaint — registered mail — application to add — proven to be true — address",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt71",
+    "title": "Small Legs v. CCS Complete Car Services Ltd. and others",
+    "citation": "2022 BCHRT 71 (CanLII)",
+    "decision_date": "2022-05-18",
+    "url": "https://canlii.ca/t/jq2bb",
+    "keywords_api": "complaint — paint preppers — harassment — apprenticeship — reasonable prospect",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt70",
+    "title": "Testar v. The Owners, Strata Plan VR 1097",
+    "citation": "2022 BCHRT 70 (CanLII)",
+    "decision_date": "2022-05-18",
+    "url": "https://canlii.ca/t/jpgdt",
+    "keywords_api": "stairs — chairlift — strata — build the tram — owners",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt69",
+    "title": "Macasiab v. Cypress Railing and Gates Ltd. and another",
+    "citation": "2022 BCHRT 69 (CanLII)",
+    "decision_date": "2022-05-18",
+    "url": "https://canlii.ca/t/jpgds",
+    "keywords_api": "skills — customers — reasonable prospect — language — origin",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt68",
+    "title": "Perry v. Honu Boat Charters and another (No. 2)",
+    "citation": "2022 BCHRT 68 (CanLII)",
+    "decision_date": "2022-05-18",
+    "url": "https://canlii.ca/t/jpgdr",
+    "keywords_api": "intersecting identities — spiritual — discrimination — beliefs — stereotypes",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt67",
+    "title": "Littlejohn v. Clearview Demolition Ltd.",
+    "citation": "2022 BCHRT 67 (CanLII)",
+    "decision_date": "2022-05-12",
+    "url": "https://canlii.ca/t/jpgdq",
+    "keywords_api": "complaint — delay — substantial prejudice — public interest — filing",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt66",
+    "title": "D.L. v. BC Ministry of Children and Family Development and others (No. 5)",
+    "citation": "2022 BCHRT 66 (CanLII)",
+    "decision_date": "2022-05-10",
+    "url": "https://canlii.ca/t/jpgdp",
+    "keywords_api": "building — evidence — meeting — prosthetic leg — disability",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt65",
+    "title": "Harvey v. ROV Consulting Inc.",
+    "citation": "2022 BCHRT 65 (CanLII)",
+    "decision_date": "2022-05-06",
+    "url": "https://canlii.ca/t/jpgdn",
+    "keywords_api": "complaint — allegations — reply — email — employment",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt64",
+    "title": "Leson v. Kindred Construction",
+    "citation": "2022 BCHRT 64 (CanLII)",
+    "decision_date": "2022-05-03",
+    "url": "https://canlii.ca/t/jpgdm",
+    "keywords_api": "email — medical information — complaint — ready to return to work — persuade",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt63",
+    "title": "Kaczmarek v. Organized Crime Agency of BC",
+    "citation": "2022 BCHRT 63 (CanLII)",
+    "decision_date": "2022-05-03",
+    "url": "https://canlii.ca/t/jpgdl",
+    "keywords_api": "late-filed complaint — stand-up desk — public interest to accept — retaliation — harassment",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt62",
+    "title": "Awale v. Avalon Housing Cooperative and others",
+    "citation": "2022 BCHRT 62 (CanLII)",
+    "decision_date": "2022-04-28",
+    "url": "https://canlii.ca/t/jpgdk",
+    "keywords_api": "complaint — membership — retaliation — application — allegations",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt61",
+    "title": "Hayes v. Blue Marlin Inn",
+    "citation": "2022 BCHRT 61 (CanLII)",
+    "decision_date": "2022-04-26",
+    "url": "https://canlii.ca/t/jpgdj",
+    "keywords_api": "medical cannabis — server — discrimination — community — liquor",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt60",
+    "title": "Evasin v. I Heart Tattoos and others",
+    "citation": "2022 BCHRT 60 (CanLII)",
+    "decision_date": "2022-04-26",
+    "url": "https://canlii.ca/t/jp0zf",
+    "keywords_api": "tattoo — complaint — mental disabilities — late-filed allegations — reasonable prospect",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt59",
+    "title": "Spina v. City of Kamloops (No. 2)",
+    "citation": "2022 BCHRT 59 (CanLII)",
+    "decision_date": "2022-04-20",
+    "url": "https://canlii.ca/t/jp0zd",
+    "keywords_api": "complaint — worker — reasonable settlement offer — injury to dignity — harassment",
+    "keywords_extracted": [],
+    "outcome": "Settled",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "high"
+    }
+  },
+  {
+    "case_id": "2022bchrt58",
+    "title": "Smith v. Strata Plan EPS 1416 and another",
+    "citation": "2022 BCHRT 58 (CanLII)",
+    "decision_date": "2022-04-13",
+    "url": "https://canlii.ca/t/jp0zc",
+    "keywords_api": "complaint — employment — concierge — demotion — property management",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt57",
+    "title": "D.L. v. BC Ministry of Children and Family Development and others (No. 4)",
+    "citation": "2022 BCHRT 57 (CanLII)",
+    "decision_date": "2022-04-12",
+    "url": "https://canlii.ca/t/jp0zb",
+    "keywords_api": "bias — opening — complaint — reasonable apprehension — emails",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt56",
+    "title": "Complainant v. The Board of Education of School District No. 61 (Greater Victoria) (No. 2)",
+    "citation": "2022 BCHRT 56 (CanLII)",
+    "decision_date": "2022-04-07",
+    "url": "https://canlii.ca/t/jp0z9",
+    "keywords_api": "complaint — bias — limit publication — application for reconsideration — original submission process",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt55",
+    "title": "CFO v. The Organization (No. 4)",
+    "citation": "2022 BCHRT 55 (CanLII)",
+    "decision_date": "2022-04-06",
+    "url": "https://canlii.ca/t/jp0z8",
+    "keywords_api": "records — relevant — emails — documents — medical",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt54",
+    "title": "Smith v. Ministry of Public Safety and Solicitor General and another",
+    "citation": "2022 BCHRT 54 (CanLII)",
+    "decision_date": "2022-04-05",
+    "url": "https://canlii.ca/t/jp0z7",
+    "keywords_api": "kosher meals — menu — inmates on a kosher diet — bread — soup",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt53",
+    "title": "Kwan v. Shaw Sabey and Associates Ltd. and others",
+    "citation": "2022 BCHRT 53 (CanLII)",
+    "decision_date": "2022-04-05",
+    "url": "https://canlii.ca/t/jp0z6",
+    "keywords_api": "racial slurs — complaint — nickname — email — non-discriminatory explanation",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt52",
+    "title": "Myles v. Nima Eslami Inc. dba Rocky Point Dental and another",
+    "citation": "2022 BCHRT 52 (CanLII)",
+    "decision_date": "2022-04-05",
+    "url": "https://canlii.ca/t/jp0z5",
+    "keywords_api": "disability — panic attack — anxiety — complaint — work",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt51",
+    "title": "Vranjes v. Royal Concierge Inc. and another",
+    "citation": "2022 BCHRT 51 (CanLII)",
+    "decision_date": "2022-04-05",
+    "url": "https://canlii.ca/t/jp0z4",
+    "keywords_api": "leave — email — work — terminate her employment — concierge",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt50",
+    "title": "Harder v. Tupas-Singh and another",
+    "citation": "2022 BCHRT 50 (CanLII)",
+    "decision_date": "2022-04-05",
+    "url": "https://canlii.ca/t/jnmv0",
+    "keywords_api": "audio recordings — employment — evidence — discrimination — unwanted thoughts",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt49",
+    "title": "Lord v. Fraser Health Authority and another (No. 2)",
+    "citation": "2022 BCHRT 49 (CanLII)",
+    "decision_date": "2022-03-31",
+    "url": "https://canlii.ca/t/jnmtz",
+    "keywords_api": "complaint — evidence — harassment — mental disability — termination",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt48",
+    "title": "Lum v. British Columbia (Ministry of the Attorney General dba Liquor Distribution Branch) and another",
+    "citation": "2022 BCHRT 48 (CanLII)",
+    "decision_date": "2022-03-30",
+    "url": "https://canlii.ca/t/jnmtx",
+    "keywords_api": "competition — forklift — complaint — physical disability — reasonable prospect",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt47",
+    "title": "Dean v. Pacifica Housing and another",
+    "citation": "2022 BCHRT 47 (CanLII)",
+    "decision_date": "2022-03-30",
+    "url": "https://canlii.ca/t/jnmtw",
+    "keywords_api": "complaint — housing — no-smoking policy — medical marijuana — physical disability",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt46",
+    "title": "McNeil v. Telus Employer Solutions (TES)",
+    "citation": "2022 BCHRT 46 (CanLII)",
+    "decision_date": "2022-03-23",
+    "url": "https://canlii.ca/t/jnmtv",
+    "keywords_api": "appear to dispute — complaint — medical — work from home — reasonable prospect",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt45",
+    "title": "Lea v. College of Applied Biology",
+    "citation": "2022 BCHRT 45 (CanLII)",
+    "decision_date": "2022-03-09",
+    "url": "https://canlii.ca/t/jnmtt",
+    "keywords_api": "complaint — biologist — discipline — estoppel — political",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt44",
+    "title": "Complainant v. The Board of Education of School District No. 61 (Greater Victoria)",
+    "citation": "2022 BCHRT 44 (CanLII)",
+    "decision_date": "2022-03-03",
+    "url": "https://canlii.ca/t/jnmtk",
+    "keywords_api": "discrimination — complaint for filing — one-year time limit — public interest — accept",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt43",
+    "title": "Poirier v. Nootka Reforestation Inc. and others",
+    "citation": "2022 BCHRT 43 (CanLII)",
+    "decision_date": "2022-03-03",
+    "url": "https://canlii.ca/t/jnmts",
+    "keywords_api": "complaint — valid settlement agreement — mediator — choke hold — purposes",
+    "keywords_extracted": [],
+    "outcome": "Settled",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "high"
+    }
+  },
+  {
+    "case_id": "2022bchrt42",
+    "title": "A.B. v. Regional District and another (No. 2)",
+    "citation": "2022 BCHRT 42 (CanLII)",
+    "decision_date": "2022-03-02",
+    "url": "https://canlii.ca/t/jnmtr",
+    "keywords_api": "bipolar disorder — bylaw — complaints — barking — voicemails",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt41",
+    "title": "Kalyn v. Vancouver Island Health Authority",
+    "citation": "2022 BCHRT 41 (CanLII)",
+    "decision_date": "2022-03-01",
+    "url": "https://canlii.ca/t/jnmtq",
+    "keywords_api": "interview — hiring — human rights complaint — discrimination — panelists",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt40",
+    "title": "Stefani v. NeutriSci International Inc.",
+    "citation": "2022 BCHRT 40 (CanLII)",
+    "decision_date": "2022-02-24",
+    "url": "https://canlii.ca/t/jmn94",
+    "keywords_api": "pregnancy — employment — team — in-house — maternity leave",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt39",
+    "title": "Elderton v. Knudsen and another",
+    "citation": "2022 BCHRT 39 (CanLII)",
+    "decision_date": "2022-02-23",
+    "url": "https://canlii.ca/t/jmn93",
+    "keywords_api": "complaint — fridge — toilet — elevator — landline",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt38",
+    "title": "MacFarlane v. Lakehouse Home Store and others",
+    "citation": "2022 BCHRT 38 (CanLII)",
+    "decision_date": "2022-02-18",
+    "url": "https://canlii.ca/t/jmn92",
+    "keywords_api": "complaint — dog — allegedly — reasonable prospect — scoffed",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt37",
+    "title": "Lakhal v. Lantic Inc.",
+    "citation": "2022 BCHRT 37 (CanLII)",
+    "decision_date": "2022-02-16",
+    "url": "https://canlii.ca/t/jmn91",
+    "keywords_api": "complaint — pandemic — public interest — discrimination — delay",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt36",
+    "title": "Cyncora v. Axton Inc.",
+    "citation": "2022 BCHRT 36 (CanLII)",
+    "decision_date": "2022-02-16",
+    "url": "https://canlii.ca/t/jmn90",
+    "keywords_api": "mental health — email — work — evidence — shop",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt35",
+    "title": "Sarba v. Ruskin Construction Ltd. and others",
+    "citation": "2022 BCHRT 35 (CanLII)",
+    "decision_date": "2022-02-15",
+    "url": "https://canlii.ca/t/jmn8z",
+    "keywords_api": "racial slurs — complaint — racial harassment — employment — discrimination",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt34",
+    "title": "Adults with Intellectual Disabilities et al (by Judy Hoffman) v. Ministry of Social Development and Poverty Reduction and others (No. 2)",
+    "citation": "2022 BCHRT 34 (CanLII)",
+    "decision_date": "2022-02-15",
+    "url": "https://canlii.ca/t/jmn8x",
+    "keywords_api": "complaint — reconsider — fairness — arguments — discrimination",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt33",
+    "title": "The CFO v. The Organization (No. 3)",
+    "citation": "2022 BCHRT 33 (CanLII)",
+    "decision_date": "2022-02-15",
+    "url": "https://canlii.ca/t/jmn8w",
+    "keywords_api": "human rights complaint — amendment — allegation — retaliation — public interest to accept",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt32",
+    "title": "The Complainant v. The College and another",
+    "citation": "2022 BCHRT 32 (CanLII)",
+    "decision_date": "2022-02-11",
+    "url": "https://canlii.ca/t/jmn8v",
+    "keywords_api": "email — address for delivery — complaint — mailing address — class",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt31",
+    "title": "Dahl v. Evergreen Timers Assisted Living Facility",
+    "citation": "2022 BCHRT 31 (CanLII)",
+    "decision_date": "2022-02-11",
+    "url": "https://canlii.ca/t/jmn8t",
+    "keywords_api": "complaint — transgender — dining room — casenote — reasonable prospect",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt30",
+    "title": "Ms. X v. The Society (No. 2)",
+    "citation": "2022 BCHRT 30 (CanLII)",
+    "decision_date": "2022-02-10",
+    "url": "https://canlii.ca/t/jmd78",
+    "keywords_api": "complaint — emails — process — deadlines — will",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt29",
+    "title": "Klewchuk v. City of Burnaby (No. 6)",
+    "citation": "2022 BCHRT 29 (CanLII)",
+    "decision_date": "2022-02-08",
+    "url": "https://canlii.ca/t/jmd77",
+    "keywords_api": "latex balloons — allergy — garlic — bands — work",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt28",
+    "title": "Jackson v. Costco Wholesale Canada Ltd. and another",
+    "citation": "2022 BCHRT 28 (CanLII)",
+    "decision_date": "2022-02-08",
+    "url": "https://canlii.ca/t/jmd76",
+    "keywords_api": "disclosure — complaint — disability — wearing a mask — privacy",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt27",
+    "title": "Demsky v. Lao Feng Xiang Jewelry Canada Inc.",
+    "citation": "2022 BCHRT 27 (CanLII)",
+    "decision_date": "2022-02-04",
+    "url": "https://canlii.ca/t/jmd75",
+    "keywords_api": "customarily available to the public — relates — discrimination — contravention — response",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt26",
+    "title": "Dr. A v. Health Authority and another (No. 2)",
+    "citation": "2022 BCHRT 26 (CanLII)",
+    "decision_date": "2022-02-04",
+    "url": "https://canlii.ca/t/jmd74",
+    "keywords_api": "complaint — allegations — timely resolution — add — adding",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt25",
+    "title": "Badili v. The Owners, Strata Plan NW2089 and another",
+    "citation": "2022 BCHRT 25 (CanLII)",
+    "decision_date": "2022-02-04",
+    "url": "https://canlii.ca/t/jmd73",
+    "keywords_api": "complaint — harassment — protected characteristics — hate — family status",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt24",
+    "title": "Rodman v. Western Remediation Services Inc. and others",
+    "citation": "2022 BCHRT 24 (CanLII)",
+    "decision_date": "2022-02-02",
+    "url": "https://canlii.ca/t/jmd72",
+    "keywords_api": "improper motives — bad faith — rock hammer — finger — complaint",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt23",
+    "title": "Adams v. The Old Farm Market and another",
+    "citation": "2022 BCHRT 23 (CanLII)",
+    "decision_date": "2022-02-01",
+    "url": "https://canlii.ca/t/jmd71",
+    "keywords_api": "mask — wear a face — complaint — wearing a face shield — establish",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt22",
+    "title": "Lum v. Valley Medical Imaging",
+    "citation": "2022 BCHRT 22 (CanLII)",
+    "decision_date": "2022-02-01",
+    "url": "https://canlii.ca/t/jmd70",
+    "keywords_api": "wearing a mask — masking — masks — prevents her from wearing — complaint",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt21",
+    "title": "Nnona v. Aramark Canada Ltd. and another",
+    "citation": "2022 BCHRT 21 (CanLII)",
+    "decision_date": "2022-02-01",
+    "url": "https://canlii.ca/t/jmd6z",
+    "keywords_api": "complaint — ancestry — discrimination — protected — colour",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt20",
+    "title": "Vero v. UNIQLO",
+    "citation": "2022 BCHRT 20 (CanLII)",
+    "decision_date": "2022-02-01",
+    "url": "https://canlii.ca/t/jm8b2",
+    "keywords_api": "complaint — disability — cannot wear a mask — store — post-traumatic stress disorder",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt19",
+    "title": "Ratchford v. Best Buy Canada Ltd.",
+    "citation": "2022 BCHRT 19 (CanLII)",
+    "decision_date": "2022-01-28",
+    "url": "https://canlii.ca/t/jm8b1",
+    "keywords_api": "complaint — wear a mask — store — establish — masks",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt18",
+    "title": "Dulay v. Board of Education of School District No. 37 (Delta)",
+    "citation": "2022 BCHRT 18 (CanLII)",
+    "decision_date": "2022-01-27",
+    "url": "https://canlii.ca/t/jm8b0",
+    "keywords_api": "complaint — allegations — continuing contravention — individual — amend",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt17",
+    "title": "Matias v. The Hudson’s Bay Company and another",
+    "citation": "2022 BCHRT 17 (CanLII)",
+    "decision_date": "2022-01-26",
+    "url": "https://canlii.ca/t/jm89z",
+    "keywords_api": "complaint — sex — race — jackets — colour",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt16",
+    "title": "Lylack v. The Owners, Strata Plan Number LMS1755 and others",
+    "citation": "2022 BCHRT 16 (CanLII)",
+    "decision_date": "2022-01-25",
+    "url": "https://canlii.ca/t/jm89x",
+    "keywords_api": "strata — dog — email — information — emotional support animal",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt15",
+    "title": "May v. Loblaws Inc.",
+    "citation": "2022 BCHRT 15 (CanLII)",
+    "decision_date": "2022-01-20",
+    "url": "https://canlii.ca/t/jm89w",
+    "keywords_api": "complaint — wearing a mask — yelled — physical disability — wear",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt14",
+    "title": "Shalagin v. Mercer Celgar LLP and another",
+    "citation": "2022 BCHRT 14 (CanLII)",
+    "decision_date": "2022-01-20",
+    "url": "https://canlii.ca/t/jm89v",
+    "keywords_api": "continuing contravention — complaint — discrimination — allegations — public interest",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt13",
+    "title": "The Worker v. The Society",
+    "citation": "2022 BCHRT 13 (CanLII)",
+    "decision_date": "2022-01-20",
+    "url": "https://canlii.ca/t/jm89t",
+    "keywords_api": "late-filed complaint — public interest — one-year time limit — on-call rotation — mental",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt12",
+    "title": "Hill v. Robson Education Group T/A Global College",
+    "citation": "2022 BCHRT 12 (CanLII)",
+    "decision_date": "2022-01-20",
+    "url": "https://canlii.ca/t/jm89s",
+    "keywords_api": "complaint — improper motives — bad faith — already been remedied — appears to be a duplicate",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt11",
+    "title": "Hill v. Robson Education Group T/A Global College and others",
+    "citation": "2022 BCHRT 11 (CanLII)",
+    "decision_date": "2022-01-20",
+    "url": "https://canlii.ca/t/jm89r",
+    "keywords_api": "improper motives — bad faith — complaint — discrimination — bullying",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt9",
+    "title": "Sandvoss v. Prince George Transit Ltd. and another",
+    "citation": "2022 BCHRT 9 (CanLII)",
+    "decision_date": "2022-01-18",
+    "url": "https://canlii.ca/t/jlvhn",
+    "keywords_api": "ten-day suspension — late-filed complaint — leave — public interest to accept — discipline",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt8",
+    "title": "Tran and Aggoune v. Mansoor and another",
+    "citation": "2022 BCHRT 8 (CanLII)",
+    "decision_date": "2022-01-18",
+    "url": "https://canlii.ca/t/jlvhm",
+    "keywords_api": "eviction notice — complaint — reasonable prospect — pregnancy — adverse impact",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt7",
+    "title": "Jardine v. Interior Health Authority (No. 2)",
+    "citation": "2022 BCHRT 7 (CanLII)",
+    "decision_date": "2022-01-18",
+    "url": "https://canlii.ca/t/jlvhl",
+    "keywords_api": "workload — return to work — scheduler — doctor — disability",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt10",
+    "title": "The Tenant v. The Landlord",
+    "citation": "2022 BCHRT 10 (CanLII)",
+    "decision_date": "2022-01-18",
+    "url": "https://canlii.ca/t/jlvhc",
+    "keywords_api": "substantial prejudice — late-filed complaint — public interest — apartment — delay",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt6",
+    "title": "The Complainant v. BC Transit and others",
+    "citation": "2022 BCHRT 6 (CanLII)",
+    "decision_date": "2022-01-12",
+    "url": "https://canlii.ca/t/jlvhk",
+    "keywords_api": "complaint — bus — ride with an attendant — reasonable prospect — nexus",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt5",
+    "title": "Dyson v. Tolko Industries Ltd.",
+    "citation": "2022 BCHRT 5 (CanLII)",
+    "decision_date": "2022-01-11",
+    "url": "https://canlii.ca/t/jlvhj",
+    "keywords_api": "complaint — stacker — reasonable prospect — allegations — discrimination",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt4",
+    "title": "Ollinger v. British Columbia Housing Management Commission",
+    "citation": "2022 BCHRT 4 (CanLII)",
+    "decision_date": "2022-01-11",
+    "url": "https://canlii.ca/t/jlvhh",
+    "keywords_api": "security camera — complaint — delay — transfer — late-filed allegations",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt3",
+    "title": "BC Community Alliance v. School District No. 39 (Vancouver) and another",
+    "citation": "2022 BCHRT 3 (CanLII)",
+    "decision_date": "2022-01-07",
+    "url": "https://canlii.ca/t/jlvhg",
+    "keywords_api": "students — class complaint — screening — application for reconsideration — amended",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt2",
+    "title": "Belusic obo Canadian Federation of the Blind v. City of Victoria (No. 4)",
+    "citation": "2022 BCHRT 2 (CanLII)",
+    "decision_date": "2022-01-07",
+    "url": "https://canlii.ca/t/jlvhf",
+    "keywords_api": "floating bus stops — audible flashing lights — expert — accommodation — blind",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  },
+  {
+    "case_id": "2022bchrt1",
+    "title": "Adults with Intellectual Disabilities et al (by Judy Hoffman) v. Ministry of Social Development and Poverty Reduction and others",
+    "citation": "2022 BCHRT 1 (CanLII)",
+    "decision_date": "2022-01-07",
+    "url": "https://canlii.ca/t/jlvhd",
+    "keywords_api": "complaint — adults with intellectual developmental disabilities — services — class — care",
+    "keywords_extracted": [],
+    "outcome": "Unknown",
+    "data_quality": {
+      "has_full_text": false,
+      "has_keywords": true,
+      "extracted_keyword_count": 0,
+      "outcome_confidence": "none"
+    }
+  }
+]

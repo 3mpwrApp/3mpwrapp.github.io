@@ -797,17 +797,16 @@ You must:
 
 ---
 
-## 📊 Read the Data-Driven Analysis
+## 📊 Related Research & Analysis
 
-This post provides a **tactical defense playbook** for workers. For the **statistical research analysis** comparing BC WCAT patterns to Ontario WSIAT data (11,430 decisions), see:
+**Statistical Analysis:**
+- [BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns](https://3mpwrapp.pages.dev/research/wsib/claim-suppression/2026/04/17/claim-suppression-playbook/) - Ontario WSIAT pattern analysis (11,430 decisions), Pickering v WCB precedent breakdown, cross-provincial comparison methodology
 
-**[BC to Ontario: Cross-Provincial Analysis of Claim Suppression Patterns](/blog/2026/04/17/claim-suppression-playbook/)**
+**BC WCAT Data:**
+- [BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse](/blog/2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns/) - 7,386 BC cases reveal 100% unknown outcomes, systemic fraud patterns, and CanLII partnership request
 
-That post includes:
-- Ontario WSIAT pattern analysis (11,430 decisions, 2020-2026)
-- Pickering v WCB (2025) legal precedent breakdown
-- Cross-provincial comparison methodology
-- Statistical evidence of claim suppression indicators
+**Community Research:**
+- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.pages.dev/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - How beta tester research exposed WorkSafeBC "second-tier systems" on megaprojects
 
 ---
 

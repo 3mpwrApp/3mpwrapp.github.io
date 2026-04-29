@@ -847,6 +847,17 @@ Your story helps us document the scope of the problem. Contact us confidentially
 
 ---
 
+---
+
+## Related Articles
+
+**BC & Ontario Cross-Provincial Analysis:**
+- [BC WCAT Data Collection Complete: 100% Unknown Outcomes & The Fight to Expose Systemic Abuse](/blog/2026-04-29-bc-wcat-data-unknown-outcomes-systemic-patterns/) - 7,386 BC cases reveal 100% unknown outcomes and systemic claim suppression patterns
+- [Employer Retaliation & Claim Suppression: A Pattern Analysis](https://3mpwrapp.pages.dev/research/employer-retaliation/claim-suppression/workers-rights/2026/04/16/claim-suppression-playbook-employer-retaliation/) - Tactical defense playbook documenting BC megaproject claim suppression
+- [Beta Tester Contribution: Documenting Claim Suppression in Real Time](https://3mpwrapp.pages.dev/research/community/transparency/2026/04/17/beta-tester-contribution-claim-suppression/) - How beta tester research exposed WorkSafeBC "second-tier systems"
+
+---
+
 **Last Updated:** April 17, 2026  
 **Research Team:** 3mpwr Statistical Analysis Working Group  
 **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)  

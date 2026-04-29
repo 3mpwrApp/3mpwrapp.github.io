@@ -1,0 +1,24 @@
+{
+  "database": "bcwcat",
+  "jurisdiction": "British Columbia",
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "totalCases": 7386,
+  "scrapedAt": "2026-04-29T08:07:19.095Z",
+  "files": [
+    "bcwcat-2020-complete.json",
+    "bcwcat-2021-complete.json",
+    "bcwcat-2022-complete.json",
+    "bcwcat-2023-complete.json",
+    "bcwcat-2024-complete.json",
+    "bcwcat-2025-complete.json",
+    "bcwcat-2026-complete.json"
+  ]
+}
