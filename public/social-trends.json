@@ -1,50 +1,44 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-28T14:33:50.972Z",
+  "lastUpdated": "2026-04-29T03:51:30.543Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16299,
+      "totalPosts": 16324,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T14:33:41.220Z"
+      "lastSeen": "2026-04-29T03:51:20.346Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16286,
+      "totalPosts": 16311,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T14:33:43.476Z"
+      "lastSeen": "2026-04-29T03:51:22.563Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16171,
+      "totalPosts": 16196,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T14:33:45.427Z"
+      "lastSeen": "2026-04-29T03:51:25.031Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16362,
+      "totalPosts": 16387,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T14:33:47.705Z"
+      "lastSeen": "2026-04-29T03:51:27.390Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16323,
+      "totalPosts": 16348,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-28T14:33:49.969Z"
+      "lastSeen": "2026-04-29T03:51:29.540Z"
     }
   },
   "viralPosts": [
-    {
-      "text": "Now THIS is a cause worth supporting! Not only is Mori refusing to die quietly, but FIGHTING FOR OTHERS IN THE SAME SITUATION!\n\nAnyone interested in #DisabilityJustice #DisabilityRights or #Progress in Idaho: \n\nwww.gofundme.com/f/help-morie...",
-      "author": "hoydenspark.bsky.social",
-      "engagement": 27,
-      "hashtag": "DisabilityJustice"
-    },
     {
       "text": "Speaking of alt text & not being able to see images, here's one of my fave short guides to image description.\n\nIt's written by someone with vision impairment who uses screen readers on the daily. #accessibility #altText #a11y",
       "author": "ryanpatrickrandall.com",
@@ -338,24 +332,30 @@
       "author": "beatlenumber9.bsky.social",
       "engagement": 12,
       "hashtag": "DisabilityRights"
+    },
+    {
+      "text": "RFK: “What’s wrong with you people? Don’t you know how you’re supposed to treat loved ones? They’re like cars, you just get a new one, if the old one gets broken!” #DisabilityRights",
+      "author": "beatlenumber9.bsky.social",
+      "engagement": 12,
+      "hashtag": "DisabilityRights"
     }
   ],
   "emergingTopics": [
     {
       "keyword": "accessibility",
-      "count": 45
+      "count": 44
     },
     {
       "keyword": "disabilityrights",
-      "count": 43
+      "count": 42
     },
     {
       "keyword": "a11y",
-      "count": 28
+      "count": 30
     },
     {
       "keyword": "disabilityjustice",
-      "count": 26
+      "count": 25
     },
     {
       "keyword": "cripthevote",
@@ -390,36 +390,36 @@
       "count": 9
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 8
-    },
-    {
-      "keyword": "disabilitysky",
-      "count": 8
-    },
-    {
-      "keyword": "cripminds",
-      "count": 8
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 8
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 8
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
-      "count": 8
-    },
-    {
       "keyword": "disabilityrebellion",
       "count": 8
     },
     {
       "keyword": "disabilityrights disabilityrebellion",
       "count": 8
+    },
+    {
+      "keyword": "disabilityjustice nico",
+      "count": 7
+    },
+    {
+      "keyword": "disabilitysky",
+      "count": 7
+    },
+    {
+      "keyword": "cripminds",
+      "count": 7
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 7
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 7
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 7
     }
   ]
 }
