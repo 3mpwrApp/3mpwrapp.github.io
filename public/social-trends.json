@@ -1,41 +1,41 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-29T03:51:30.543Z",
+  "lastUpdated": "2026-04-29T14:22:52.035Z",
   "hashtags": {
     "DisabilityRights": {
       "firstSeen": "2025-10-22T00:52:35.078Z",
-      "totalPosts": 16324,
+      "totalPosts": 16349,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T03:51:20.346Z"
+      "lastSeen": "2026-04-29T14:22:34.963Z"
     },
     "DisabilityJustice": {
       "firstSeen": "2025-10-22T00:52:37.043Z",
-      "totalPosts": 16311,
+      "totalPosts": 16336,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T03:51:22.563Z"
+      "lastSeen": "2026-04-29T14:22:39.894Z"
     },
     "Accessibility": {
       "firstSeen": "2025-10-22T00:52:38.840Z",
-      "totalPosts": 16196,
+      "totalPosts": 16221,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T03:51:25.031Z"
+      "lastSeen": "2026-04-29T14:22:44.074Z"
     },
     "A11y": {
       "firstSeen": "2025-10-22T00:52:40.768Z",
-      "totalPosts": 16387,
+      "totalPosts": 16412,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T03:51:27.390Z"
+      "lastSeen": "2026-04-29T14:22:47.896Z"
     },
     "CripTheVote": {
       "firstSeen": "2025-10-22T00:52:42.818Z",
-      "totalPosts": 16348,
+      "totalPosts": 16373,
       "recentPosts": 25,
       "peakPosts": 25,
-      "lastSeen": "2026-04-29T03:51:29.540Z"
+      "lastSeen": "2026-04-29T14:22:51.033Z"
     }
   },
   "viralPosts": [
@@ -342,20 +342,20 @@
   ],
   "emergingTopics": [
     {
-      "keyword": "accessibility",
-      "count": 44
-    },
-    {
       "keyword": "disabilityrights",
       "count": 42
     },
     {
+      "keyword": "accessibility",
+      "count": 41
+    },
+    {
       "keyword": "a11y",
-      "count": 30
+      "count": 27
     },
     {
       "keyword": "disabilityjustice",
-      "count": 25
+      "count": 26
     },
     {
       "keyword": "cripthevote",
@@ -390,6 +390,26 @@
       "count": 9
     },
     {
+      "keyword": "disabilitysky",
+      "count": 8
+    },
+    {
+      "keyword": "cripminds",
+      "count": 8
+    },
+    {
+      "keyword": "accessibility disabilitysky",
+      "count": 8
+    },
+    {
+      "keyword": "disabilitysky cripminds",
+      "count": 8
+    },
+    {
+      "keyword": "cripminds disabilityjustice",
+      "count": 8
+    },
+    {
       "keyword": "disabilityrebellion",
       "count": 8
     },
@@ -398,28 +418,8 @@
       "count": 8
     },
     {
-      "keyword": "disabilityjustice nico",
-      "count": 7
-    },
-    {
-      "keyword": "disabilitysky",
-      "count": 7
-    },
-    {
-      "keyword": "cripminds",
-      "count": 7
-    },
-    {
-      "keyword": "accessibility disabilitysky",
-      "count": 7
-    },
-    {
-      "keyword": "disabilitysky cripminds",
-      "count": 7
-    },
-    {
-      "keyword": "cripminds disabilityjustice",
-      "count": 7
+      "keyword": "ada",
+      "count": 6
     }
   ]
 }
