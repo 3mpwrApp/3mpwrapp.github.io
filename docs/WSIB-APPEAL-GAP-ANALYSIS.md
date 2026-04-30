@@ -1,31 +1,33 @@
-# THE SMOKING GUN: WSIB Claim Suppression at Scale
+# WSIB Appeal Gap Analysis: Comprehensive Research Report
 
-**Document Created:** April 30, 2026
+**Document Created:** April 30, 2026  
 **Data Sources:** WSIB Open Data (Registered/Allowed claims 2020-2026), WSIAT Open Data Portal (98,992 decisions)
 
 ---
 
 ## EXECUTIVE SUMMARY
 
-We have uncovered systematic claim suppression at the Workplace Safety and Insurance Board (WSIB) of Ontario. Our analysis of official WSIB data reveals:
+This research analyzes Ontario's workers' compensation appeals system using publicly available WSIB and WSIAT data. The findings reveal a significant gap between denied WSIB claims and subsequent appeals to the Workplace Safety and Insurance Appeals Tribunal (WSIAT).
 
-### **THE NUMBERS**
+### **KEY FINDINGS**
 
 | Metric | Value |
 |--------|-------|
 | **Average Denied Claims/Year** | **141,558 workers** |
 | **WSIAT Appeals/Year** | **2,475 workers** |
 | **Appeal Rate** | **1.75%** |
-| **Suppression Gap** | **139,083 workers/year give up** |
-| **Suppression Rate** | **98.25%** of denied workers never appeal |
+| **Appeal Gap** | **139,083 workers/year do not appeal** |
+| **Non-Appeal Rate** | **98.25%** of denied workers |
 
-### **WHAT THIS MEANS**
+### **INTERPRETATION**
 
 For every 100 workers denied by WSIB:
-- **Only 1.75 workers appeal** to WSIAT
-- **98.25 workers disappear** from the system entirely
+- **1.75 workers file appeals** to WSIAT
+- **98.25 workers do not pursue appeals**
 
-Over the 2020-2026 period analyzed, **nearly 1 million workers** (973,583) gave up without appealing.
+Over the 2020-2026 period analyzed, 973,583 workers did not appeal their WSIB denials.
+
+The data shows WSIAT has a 69% success rate for appeals that are filed, indicating that the appeals process, when accessed, produces favorable outcomes for the majority of workers who pursue them.
 
 ---
 

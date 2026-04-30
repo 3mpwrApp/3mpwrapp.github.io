@@ -266,7 +266,7 @@ Claim suppression is not a conspiracy theory - it's documented, studied, and ack
 
 > "When you have a system that depends on the **weakest actor in the system coming forward to police compliance** for that system, you know **it's not going to work. We've known that for decades.**"
 
-**Implication:** The system is **designed to fail**. Complaints-based enforcement doesn't work when complainants are fired for complaining.
+**Analysis:** Complaints-based enforcement faces structural challenges when workers fear retaliation for reporting violations.
 
 ### Pattern 3: Migrant Worker Abuse
 

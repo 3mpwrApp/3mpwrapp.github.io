@@ -1456,7 +1456,7 @@ These are not blog opinions—these are evidence-based statistical findings with
 
 ---
 
-### 🚨 FINDING #1: Statistical Evidence of Systematic Manipulation (11,430 Cases Analyzed)
+### 🚨 FINDING #1: Statistical Analysis of WSIB Tribunal Patterns (11,430 Cases Analyzed)
 
 <div class="tool-card">
   <div style="margin-bottom: 1rem;">
@@ -1465,36 +1465,36 @@ These are not blog opinions—these are evidence-based statistical findings with
     <span class="tool-badge badge-purple">11,430 Cases</span>
   </div>
   
-  <h3 style="margin-top: 0;">WSIB Exposed: Eight Smoking Guns Proving Systematic Patterns</h3>
+  <h3 style="margin-top: 0;">What 11,430 Tribunal Decisions Reveal About WSIB Outcomes</h3>
   
   <p style="font-size: 1.05rem; line-height: 1.7;">
-    We analyzed <strong>every tribunal decision from 2020-2026</strong> using detective-mode statistical methods 
-    (anomaly detection, co-occurrence analysis, timing weaponization). Result: <strong>Eight measurable patterns proving 
-    dysfunction is systematic, not accidental.</strong>
+    We analyzed <strong>every tribunal decision from 2020-2026</strong> using rigorous statistical methods 
+    (anomaly detection, co-occurrence analysis, timing analysis). Result: <strong>Eight measurable patterns 
+    showing systematic process variations across the workers' compensation appeals system.</strong>
   </p>
   
   <div style="background: #fff3e0; border-left: 4px solid #f57c00; padding: 1.5rem; margin: 1.5rem 0; border-radius: 4px;">
-    <h4 style="margin: 0 0 1rem; color: #e65100;">KEY FINDINGS (PROVABLE FACTS):</h4>
+    <h4 style="margin: 0 0 1rem; color: #e65100;">KEY FINDINGS:</h4>
     <ul style="margin: 0 0 0 1.5rem; line-height: 1.8;">
       <li><strong>43.9% (95% CI: 42.3-45.6%) of 2024 decisions missing</strong> from public record (1,545 out of 3,516 expected)</li>
       <li><strong>Summer 2023 collapse:</strong> July had 39 decisions vs. 154 average (Z = -2.94, p = 0.003 = 99.7% certain NOT random)</li>
-      <li><strong>Reconsideration = weaponized delay:</strong> Adds 1.5 years (2.0 years total vs. 0.5 direct appeal)</li>
-      <li><strong>Knee injury bias:</strong> 20% (95% CI: 17.3-22.7%) denied as "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline (845 cases, χ² = 32.7, p < 0.001)</li>
-      <li><strong>"Greater severity" weaponized:</strong> Appears 177 times with "pre-existing" (legal threshold mass-applied)</li>
-      <li><strong>Mental health conflation:</strong> 107 cases dismiss chronic pain as psychological</li>
-      <li><strong>Q1 fiscal year-end spike:</strong> 28.4% of decisions (χ² = 105.7, p < 0.001 = NOT random, budget priorities override justice)</li>
-      <li><strong>Victim-blaming language:</strong> 225 cases cite "smoking" (62), "obesity" (27), "personal" (76) to shift blame</li>
+      <li><strong>Reconsideration process duration:</strong> Adds 1.5 years (2.0 years total vs. 0.5 direct appeal)</li>
+      <li><strong>Knee injury pattern:</strong> 20% (95% CI: 17.3-22.7%) denied as "pre-existing" vs. 13.3% (95% CI: 12.7-13.9%) baseline (845 cases, χ² = 32.7, p < 0.001)</li>
+      <li><strong>"Greater severity" usage:</strong> Appears 177 times with "pre-existing" in decision rationales</li>
+      <li><strong>Mental health/chronic pain overlap:</strong> 107 cases show conflation patterns</li>
+      <li><strong>Q1 fiscal year-end pattern:</strong> 28.4% of decisions (χ² = 105.7, p < 0.001 = NOT random)</li>
+      <li><strong>Contributory factors language:</strong> 225 cases cite "smoking" (62), "obesity" (27), "personal" (76) factors</li>
     </ul>
   </div>
   
   <div style="background: #e8f5e9; border-left: 4px solid #388e3c; padding: 1.5rem; margin: 1.5rem 0; border-radius: 4px;">
-    <h4 style="margin: 0 0 1rem; color: #1b5e20;">WHAT THIS MEANS FOR WORKERS:</h4>
+    <h4 style="margin: 0 0 1rem; color: #1b5e20;">IMPLICATIONS FOR WORKERS:</h4>
     <ul style="margin: 0 0 0 1.5rem; line-height: 1.8;">
-      <li><strong>Pre-existing denials:</strong> Challenge with functional baseline (you worked full-time before injury)</li>
-      <li><strong>Skip reconsideration:</strong> Go straight to tribunal (don't waste 1.5 years in internal appeal trap)</li>
-      <li><strong>Knee/back claims:</strong> Expect "arthritis" or "degeneration" excuse—get independent medical assessment</li>
-      <li><strong>Chronic pain:</strong> Use term "psychotraumatic disability" NOT "stress" (107 cases show conflation tactic)</li>
-      <li><strong>Body-part bias:</strong> Shoulder (16%, 95% CI: 14.0-17.9%), knee (20%, 95% CI: 17.3-22.7%), back (19%, 95% CI: 15.1-22.9%) face highest pre-existing rates</li>
+      <li><strong>Pre-existing condition denials:</strong> Challenge with functional baseline (demonstrate work capacity before injury)</li>
+      <li><strong>Reconsideration vs. direct appeal:</strong> Consider proceeding directly to tribunal (avoid 1.5 year additional delay)</li>
+      <li><strong>Knee/back claims:</strong> Anticipate "arthritis" or "degeneration" arguments—obtain independent medical assessment</li>
+      <li><strong>Chronic pain claims:</strong> Use precise medical terminology ("psychotraumatic disability" rather than general "stress")</li>
+      <li><strong>Body-part patterns:</strong> Shoulder (16%, 95% CI: 14.0-17.9%), knee (20%, 95% CI: 17.3-22.7%), back (19%, 95% CI: 15.1-22.9%) show higher pre-existing condition citation rates</li>
     </ul>
   </div>
   
