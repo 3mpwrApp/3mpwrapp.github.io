@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Knee Injury Appeal Template - Free WSIB Appeal Letter
-description: Fill-in-the-blank appeal template for WSIB knee injury denials. Addresses pre-existing osteoarthritis, degenerative meniscus, and Kriz framework. Professional legal arguments.
+description: Fill-in-the-blank appeal template for WSIB knee injury denials. Addresses pre-existing osteoarthritis, degenerative meniscus, and Kriz framework. Based on 3,162 knee cases from WSIAT Open Data.
 permalink: /templates/knee-injury-appeal/
 categories: [templates, wsib, appeals]
 tags: [knee, meniscus, osteoarthritis, appeal-template, wsib-denial]
@@ -11,12 +11,19 @@ tags: [knee, meniscus, osteoarthritis, appeal-template, wsib-denial]
 
 **USE THIS TEMPLATE TO APPEAL WSIB DENIAL OF KNEE INJURY CLAIM**
 
+**📊 Based on 3,162 knee injury decisions (3.19% of all WSIAT appeals) - #4 MOST COMMON BODY PART**
+
 This template addresses the most common denial patterns for knee injuries:
 - ✅ "Pre-existing osteoarthritis" → *Kriz* "greater severity" framework
 - ✅ "Degenerative meniscus tear" → Work-caused tear of degenerative meniscus
 - ✅ "Insufficient force/mechanism" → Biomechanical evidence + research
 - ✅ "Normal aging changes" → *Pasiechnyk* aggravation argument
 - ✅ Functional baseline strategy
+
+**Co-occurring issues (from 98,992 WSIAT decisions):**
+- NEL + Permanent Impairment: 11,516 cases (expect impairment rating disputes)
+- Pre-existing + SIEF: 3,281 cases (if osteoarthritis argument raised)
+- LOE + Loss of Earnings: 9,167 cases (wage loss often disputed)
 
 **📋 INSTRUCTIONS:**
 1. Fill in all [BRACKETS] with your specific information

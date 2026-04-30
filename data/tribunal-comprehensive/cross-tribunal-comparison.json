@@ -1,0 +1,39 @@
+{
+  "generatedDate": "2026-04-30T05:20:39.850Z",
+  "tribunals": {
+    "WSIAT": {
+      "totalDecisions": 98992,
+      "timespan": "1987-2026 (40 years)",
+      "avgPerYear": 2475,
+      "successRate": "65-73%",
+      "abandonmentRate": "0.5%",
+      "dataQuality": "Excellent - Full text, keywords, summaries",
+      "source": "WSIAT Open Data Portal"
+    },
+    "HRTO": {
+      "totalDecisions": 3961,
+      "abandonmentRate": "0.00%",
+      "abandonedCount": 0,
+      "dataQuality": "Good - Quarterly reports",
+      "source": "Tribunals Ontario Open Data"
+    },
+    "ONSBT": {
+      "totalAppeals": 292,
+      "timespan": "2012-2026",
+      "dataQuality": "Good - Appeal statistics",
+      "source": "Tribunals Ontario Open Data"
+    },
+    "WSIB": {
+      "avgDeniedPerYear": "Pending",
+      "avgAppealRate": "Pending",
+      "suppressionGap": "Pending",
+      "dataQuality": "Good - Open Data Portal",
+      "source": "WSIB Open Data"
+    }
+  },
+  "keyFindings": [
+    "WSIAT: 0.00% vs HRTO 0.00% abandonment (0x higher)",
+    "WSIB Suppression: ~NaN workers/year give up without appealing",
+    "Appeal Rate: Only Pending% of denied workers reach WSIAT"
+  ]
+}

@@ -13,6 +13,10 @@ featured: true
 
 # What 11,430 Tribunal Decisions Reveal About WSIB Outcomes
 
+**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New evidence: Decision complexity analysis shows 19.85% simple (1 issue), 23.01% moderate (2-3 issues), 2.81% complex (4-5 issues). Top co-occurrences: NEL+Permanent Impairment (11,516 cases), LOE+Loss of Earnings (9,167 cases), Pre-existing+SIEF (3,281 cases). Medical specialists: Surgeon mentioned only 195 times (0.20%), Psychiatrist 44 times (0.04%). See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html) | [Evidence-Based Guides](/guides/)
+
+---
+
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);">
 <h2 style="color: white; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
 

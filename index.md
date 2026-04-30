@@ -88,11 +88,11 @@ description: Free community-powered platform connecting injured workers, persons
       <span aria-hidden="true">🔬</span> NEW: Connecting the Dots — CanLII Keyword Network
     </h2>
     <p style="font-size: 1.2rem; margin-bottom: 1rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto;">
-      Explore 137,252+ tribunal decisions: Live interactive network graph revealing keyword relationships, denial patterns, and the hidden language used in Canadian tribunal decisions.
+      Explore 134,920+ tribunal decisions: Live interactive network graph revealing keyword relationships, denial patterns, and the hidden language used in Canadian tribunal decisions.
     </p>
     <div style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; display: inline-block;">
       <p style="margin: 0; font-weight: 600; font-size: 1.1rem;">
-        <span aria-hidden="true">📊</span> 137,252 cases analyzed &nbsp;|&nbsp; <span aria-hidden="true">🔍</span> 500+ keyword patterns &nbsp;|&nbsp; <span aria-hidden="true">🕸️</span> Live interactive D3.js network
+        <span aria-hidden="true">📊</span> 134,920 cases analyzed (98,992 WSIAT + 35,928 other tribunals) &nbsp;|&nbsp; <span aria-hidden="true">🔍</span> 500+ keyword patterns &nbsp;|&nbsp; <span aria-hidden="true">🕸️</span> Live interactive D3.js network
       </p>
     </div>
     <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">

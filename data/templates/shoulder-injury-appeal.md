@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Shoulder Injury Appeal Template - Free WSIB Appeal Letter
-description: Fill-in-the-blank appeal template for WSIB shoulder injury denials. Addresses gradual onset, pre-existing degeneration, and occupational disease arguments. Based on 1,391 shoulder cases.
+description: Fill-in-the-blank appeal template for WSIB shoulder injury denials. Addresses gradual onset, pre-existing degeneration, and occupational disease arguments. Based on 5,295 shoulder cases from WSIAT Open Data.
 permalink: /templates/shoulder-injury-appeal/
 categories: [templates, wsib, appeals]
 tags: [shoulder, rotator-cuff, appeal-template, wsib-denial]
@@ -11,11 +11,18 @@ tags: [shoulder, rotator-cuff, appeal-template, wsib-denial]
 
 **USE THIS TEMPLATE TO APPEAL WSIB DENIAL OF SHOULDER INJURY CLAIM**
 
+**📊 Based on 5,295 shoulder injury decisions (5.35% of all WSIAT appeals) - #2 MOST COMMON BODY PART**
+
 This template addresses the most common denial patterns for shoulder injuries:
 - ✅ "Gradual onset, not an accident" → Occupational disease framework
 - ✅ "Pre-existing degeneration/aging" → *Pasiechnyk* aggravation argument
 - ✅ "Insufficient objective evidence" → Functional baseline + medical opinion
 - ✅ "Degenerative changes on imaging" → Work-accelerated degeneration
+
+**Co-occurring issues (from 98,992 WSIAT decisions):**
+- NEL + Permanent Impairment: 11,516 cases (expect impairment rating disputes)
+- Pre-existing + SIEF: 3,281 cases (if degeneration argument raised)
+- LOE + Loss of Earnings: 9,167 cases (wage loss often disputed)
 
 **📋 INSTRUCTIONS:**
 1. Fill in all [BRACKETS] with your specific information

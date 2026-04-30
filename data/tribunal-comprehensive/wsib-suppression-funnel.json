@@ -1,0 +1,91 @@
+{
+  "methodology": "Denied = Registered - Allowed; Appeal Rate = WSIAT Appeals / Denied; Suppression Gap = Denied - Appeals",
+  "wsiatAppealRate": 2475,
+  "years": [
+    {
+      "year": 2020,
+      "registered": 200575,
+      "allowed": 62193,
+      "denied": 138382,
+      "denialRate": "68.99",
+      "wsiatAppeals": 2475,
+      "appealRate": 1.79,
+      "suppressionGap": 135907,
+      "suppressionRate": 98.21
+    },
+    {
+      "year": 2021,
+      "registered": 224999,
+      "allowed": 74582,
+      "denied": 150417,
+      "denialRate": "66.85",
+      "wsiatAppeals": 2475,
+      "appealRate": 1.65,
+      "suppressionGap": 147942,
+      "suppressionRate": 98.35
+    },
+    {
+      "year": 2022,
+      "registered": 255247,
+      "allowed": 86469,
+      "denied": 168778,
+      "denialRate": "66.12",
+      "wsiatAppeals": 2475,
+      "appealRate": 1.47,
+      "suppressionGap": 166303,
+      "suppressionRate": 98.53
+    },
+    {
+      "year": 2023,
+      "registered": 240115,
+      "allowed": 73640,
+      "denied": 166475,
+      "denialRate": "69.33",
+      "wsiatAppeals": 2475,
+      "appealRate": 1.49,
+      "suppressionGap": 164000,
+      "suppressionRate": 98.51
+    },
+    {
+      "year": 2024,
+      "registered": 236374,
+      "allowed": 72466,
+      "denied": 163908,
+      "denialRate": "69.34",
+      "wsiatAppeals": 2475,
+      "appealRate": 1.51,
+      "suppressionGap": 161433,
+      "suppressionRate": 98.49
+    },
+    {
+      "year": 2025,
+      "registered": 234757,
+      "allowed": 76157,
+      "denied": 158600,
+      "denialRate": "67.56",
+      "wsiatAppeals": 2475,
+      "appealRate": 1.56,
+      "suppressionGap": 156125,
+      "suppressionRate": 98.44
+    },
+    {
+      "year": 2026,
+      "registered": 62079,
+      "allowed": 17732,
+      "denied": 44347,
+      "denialRate": "71.44",
+      "wsiatAppeals": 2475,
+      "appealRate": 5.58,
+      "suppressionGap": 41872,
+      "suppressionRate": 94.42
+    }
+  ],
+  "summary": {
+    "avgRegistered": 207735,
+    "avgAllowed": 66177,
+    "avgDenied": 141558,
+    "avgAppealRate": 1.75,
+    "avgSuppressionGap": 139083,
+    "avgSuppressionRate": 98.25
+  }
+}

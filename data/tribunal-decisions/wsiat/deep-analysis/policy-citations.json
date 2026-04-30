@@ -1,0 +1,190 @@
+{
+  "policyCounts": [
+    {
+      "policy": "Section 31",
+      "count": 42,
+      "percentage": "0.04"
+    },
+    {
+      "policy": "Section 147",
+      "count": 31,
+      "percentage": "0.03"
+    },
+    {
+      "policy": "Section 43",
+      "count": 15,
+      "percentage": "0.02"
+    },
+    {
+      "policy": "Section 44",
+      "count": 5,
+      "percentage": "0.01"
+    },
+    {
+      "policy": "Section 45",
+      "count": 4,
+      "percentage": "0.00"
+    },
+    {
+      "policy": "Section 13",
+      "count": 3,
+      "percentage": "0.00"
+    },
+    {
+      "policy": "Policy 18-02-02",
+      "count": 0,
+      "percentage": "0.00"
+    },
+    {
+      "policy": "Policy 18-02-14",
+      "count": 0,
+      "percentage": "0.00"
+    }
+  ],
+  "policyWithIssue": {
+    "Section 13": {
+      "NEL": 0,
+      "LOE": 0,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 0,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Section 31": {
+      "NEL": 0,
+      "LOE": 0,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 2,
+      "Right to Sue": 42,
+      "Chronic Pain": 0,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Section 43": {
+      "NEL": 1,
+      "LOE": 9,
+      "FEL": 1,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 2,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 3,
+      "Vocational Rehab": 0,
+      "CPD": 1,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Section 44": {
+      "NEL": 0,
+      "LOE": 2,
+      "FEL": 2,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 2,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 2,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Section 45": {
+      "NEL": 0,
+      "LOE": 1,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 0,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Section 147": {
+      "NEL": 0,
+      "LOE": 0,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 1,
+      "Reconsideration": 1,
+      "Right to Sue": 0,
+      "Chronic Pain": 2,
+      "Pre-existing": 1,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 3,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 2
+    },
+    "Policy 18-02-02": {
+      "NEL": 0,
+      "LOE": 0,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 0,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Policy 18-02-14": {
+      "NEL": 0,
+      "LOE": 0,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 0,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    }
+  }
+}

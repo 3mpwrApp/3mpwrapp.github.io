@@ -1,0 +1,65 @@
+{
+  "headers": [
+    "Year",
+    "Number of Completed Surveillance Assignments",
+    ""
+  ],
+  "rows": [
+    {
+      "Year": "2014",
+      "Number of Completed Surveillance Assignments": "88",
+      "": null
+    },
+    {
+      "Year": "2015",
+      "Number of Completed Surveillance Assignments": "73",
+      "": null
+    },
+    {
+      "Year": "2016",
+      "Number of Completed Surveillance Assignments": "33",
+      "": null
+    },
+    {
+      "Year": "2017",
+      "Number of Completed Surveillance Assignments": "45",
+      "": null
+    },
+    {
+      "Year": "2018",
+      "Number of Completed Surveillance Assignments": "35",
+      "": null
+    },
+    {
+      "Year": "2019",
+      "Number of Completed Surveillance Assignments": "27",
+      "": null
+    },
+    {
+      "Year": "2020",
+      "Number of Completed Surveillance Assignments": "18",
+      "": "*WSIB reduced stakeholder compliance activities from March to end of December, 2020 due to COVID-19 related restrictions."
+    },
+    {
+      "Year": "2021",
+      "Number of Completed Surveillance Assignments": "20",
+      "": "*WSIB compliance activities impacted by the COVID-19 pandemic"
+    },
+    {
+      "Year": "2022",
+      "Number of Completed Surveillance Assignments": "21",
+      "": null
+    },
+    {
+      "Year": "2023",
+      "Number of Completed Surveillance Assignments": "16",
+      "": null
+    },
+    {
+      "Year": "2024",
+      "Number of Completed Surveillance Assignments": "27",
+      "": null
+    }
+  ],
+  "rowCount": 11
+}

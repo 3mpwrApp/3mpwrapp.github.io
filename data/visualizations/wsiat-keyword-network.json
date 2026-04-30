@@ -1,0 +1,402 @@
+{
+  "nodes": [
+    {
+      "id": "NEL",
+      "label": "NEL",
+      "value": 15642,
+      "percentage": "15.79"
+    },
+    {
+      "id": "Permanent Impairment",
+      "label": "Permanent Impairment",
+      "value": 11841,
+      "percentage": "11.96"
+    },
+    {
+      "id": "Chronic Pain",
+      "label": "Chronic Pain",
+      "value": 6876,
+      "percentage": "6.94"
+    },
+    {
+      "id": "SIEF",
+      "label": "SIEF",
+      "value": 4654,
+      "percentage": "4.70"
+    },
+    {
+      "id": "Loss of Earnings",
+      "label": "Loss of Earnings",
+      "value": 9217,
+      "percentage": "9.31"
+    },
+    {
+      "id": "FEL",
+      "label": "FEL",
+      "value": 4953,
+      "percentage": "5.00"
+    },
+    {
+      "id": "Pre-existing",
+      "label": "Pre-existing",
+      "value": 7421,
+      "percentage": "7.49"
+    },
+    {
+      "id": "Right to Sue",
+      "label": "Right to Sue",
+      "value": 1767,
+      "percentage": "1.78"
+    },
+    {
+      "id": "Reconsideration",
+      "label": "Reconsideration",
+      "value": 6153,
+      "percentage": "6.21"
+    },
+    {
+      "id": "Initial Entitlement",
+      "label": "Initial Entitlement",
+      "value": 1250,
+      "percentage": "1.26"
+    },
+    {
+      "id": "Vocational Rehab",
+      "label": "Vocational Rehab",
+      "value": 235,
+      "percentage": "0.24"
+    },
+    {
+      "id": "Mental Health",
+      "label": "Mental Health",
+      "value": 709,
+      "percentage": "0.72"
+    },
+    {
+      "id": "LOE",
+      "label": "LOE",
+      "value": 10837,
+      "percentage": "10.94"
+    },
+    {
+      "id": "HAVS",
+      "label": "HAVS",
+      "value": 34,
+      "percentage": "0.03"
+    },
+    {
+      "id": "CPD",
+      "label": "CPD",
+      "value": 120,
+      "percentage": "0.12"
+    },
+    {
+      "id": "PTSD",
+      "label": "PTSD",
+      "value": 159,
+      "percentage": "0.16"
+    }
+  ],
+  "links": [
+    {
+      "source": "NEL",
+      "target": "Permanent Impairment",
+      "value": 11516,
+      "percentage": "11.63"
+    },
+    {
+      "source": "LOE",
+      "target": "Loss of Earnings",
+      "value": 9167,
+      "percentage": "9.26"
+    },
+    {
+      "source": "LOE",
+      "target": "NEL",
+      "value": 3546,
+      "percentage": "3.58"
+    },
+    {
+      "source": "Pre-existing",
+      "target": "SIEF",
+      "value": 3281,
+      "percentage": "3.31"
+    },
+    {
+      "source": "Loss of Earnings",
+      "target": "NEL",
+      "value": 3034,
+      "percentage": "3.06"
+    },
+    {
+      "source": "LOE",
+      "target": "Permanent Impairment",
+      "value": 2292,
+      "percentage": "2.31"
+    },
+    {
+      "source": "Chronic Pain",
+      "target": "NEL",
+      "value": 2101,
+      "percentage": "2.12"
+    },
+    {
+      "source": "Loss of Earnings",
+      "target": "Permanent Impairment",
+      "value": 2050,
+      "percentage": "2.07"
+    },
+    {
+      "source": "FEL",
+      "target": "NEL",
+      "value": 1781,
+      "percentage": "1.80"
+    },
+    {
+      "source": "Chronic Pain",
+      "target": "Permanent Impairment",
+      "value": 1447,
+      "percentage": "1.46"
+    },
+    {
+      "source": "NEL",
+      "target": "Pre-existing",
+      "value": 1249,
+      "percentage": "1.26"
+    },
+    {
+      "source": "Chronic Pain",
+      "target": "LOE",
+      "value": 967,
+      "percentage": "0.98"
+    },
+    {
+      "source": "Permanent Impairment",
+      "target": "Pre-existing",
+      "value": 960,
+      "percentage": "0.97"
+    },
+    {
+      "source": "Chronic Pain",
+      "target": "Loss of Earnings",
+      "value": 839,
+      "percentage": "0.85"
+    },
+    {
+      "source": "FEL",
+      "target": "Permanent Impairment",
+      "value": 726,
+      "percentage": "0.73"
+    },
+    {
+      "source": "Chronic Pain",
+      "target": "FEL",
+      "value": 659,
+      "percentage": "0.67"
+    },
+    {
+      "source": "LOE",
+      "target": "Pre-existing",
+      "value": 406,
+      "percentage": "0.41"
+    },
+    {
+      "source": "LOE",
+      "target": "Reconsideration",
+      "value": 383,
+      "percentage": "0.39"
+    },
+    {
+      "source": "Loss of Earnings",
+      "target": "Pre-existing",
+      "value": 323,
+      "percentage": "0.33"
+    },
+    {
+      "source": "NEL",
+      "target": "Reconsideration",
+      "value": 312,
+      "percentage": "0.32"
+    },
+    {
+      "source": "FEL",
+      "target": "Reconsideration",
+      "value": 250,
+      "percentage": "0.25"
+    },
+    {
+      "source": "Chronic Pain",
+      "target": "Reconsideration",
+      "value": 232,
+      "percentage": "0.23"
+    },
+    {
+      "source": "Initial Entitlement",
+      "target": "LOE",
+      "value": 224,
+      "percentage": "0.23"
+    },
+    {
+      "source": "Initial Entitlement",
+      "target": "NEL",
+      "value": 221,
+      "percentage": "0.22"
+    },
+    {
+      "source": "NEL",
+      "target": "SIEF",
+      "value": 214,
+      "percentage": "0.22"
+    },
+    {
+      "source": "Initial Entitlement",
+      "target": "Permanent Impairment",
+      "value": 191,
+      "percentage": "0.19"
+    },
+    {
+      "source": "Initial Entitlement",
+      "target": "Loss of Earnings",
+      "value": 190,
+      "percentage": "0.19"
+    },
+    {
+      "source": "Chronic Pain",
+      "target": "Pre-existing",
+      "value": 188,
+      "percentage": "0.19"
+    },
+    {
+      "source": "Mental Health",
+      "target": "Pre-existing",
+      "value": 181,
+      "percentage": "0.18"
+    },
+    {
+      "source": "Permanent Impairment",
+      "target": "Reconsideration",
+      "value": 159,
+      "percentage": "0.16"
+    },
+    {
+      "source": "Mental Health",
+      "target": "SIEF",
+      "value": 159,
+      "percentage": "0.16"
+    },
+    {
+      "source": "Initial Entitlement",
+      "target": "Pre-existing",
+      "value": 147,
+      "percentage": "0.15"
+    },
+    {
+      "source": "Mental Health",
+      "target": "NEL",
+      "value": 133,
+      "percentage": "0.13"
+    },
+    {
+      "source": "Loss of Earnings",
+      "target": "Reconsideration",
+      "value": 127,
+      "percentage": "0.13"
+    },
+    {
+      "source": "FEL",
+      "target": "Pre-existing",
+      "value": 111,
+      "percentage": "0.11"
+    },
+    {
+      "source": "LOE",
+      "target": "SIEF",
+      "value": 103,
+      "percentage": "0.10"
+    },
+    {
+      "source": "Reconsideration",
+      "target": "SIEF",
+      "value": 102,
+      "percentage": "0.10"
+    },
+    {
+      "source": "Pre-existing",
+      "target": "Reconsideration",
+      "value": 97,
+      "percentage": "0.10"
+    },
+    {
+      "source": "Reconsideration",
+      "target": "Right to Sue",
+      "value": 94,
+      "percentage": "0.09"
+    },
+    {
+      "source": "Permanent Impairment",
+      "target": "SIEF",
+      "value": 91,
+      "percentage": "0.09"
+    },
+    {
+      "source": "CPD",
+      "target": "Chronic Pain",
+      "value": 88,
+      "percentage": "0.09"
+    },
+    {
+      "source": "Chronic Pain",
+      "target": "Mental Health",
+      "value": 83,
+      "percentage": "0.08"
+    },
+    {
+      "source": "Loss of Earnings",
+      "target": "SIEF",
+      "value": 78,
+      "percentage": "0.08"
+    },
+    {
+      "source": "LOE",
+      "target": "Mental Health",
+      "value": 76,
+      "percentage": "0.08"
+    },
+    {
+      "source": "Mental Health",
+      "target": "Permanent Impairment",
+      "value": 66,
+      "percentage": "0.07"
+    },
+    {
+      "source": "CPD",
+      "target": "NEL",
+      "value": 63,
+      "percentage": "0.06"
+    },
+    {
+      "source": "Chronic Pain",
+      "target": "Initial Entitlement",
+      "value": 62,
+      "percentage": "0.06"
+    },
+    {
+      "source": "CPD",
+      "target": "LOE",
+      "value": 57,
+      "percentage": "0.06"
+    },
+    {
+      "source": "Loss of Earnings",
+      "target": "Mental Health",
+      "value": 54,
+      "percentage": "0.05"
+    },
+    {
+      "source": "FEL",
+      "target": "LOE",
+      "value": 53,
+      "percentage": "0.05"
+    }
+  ]
+}

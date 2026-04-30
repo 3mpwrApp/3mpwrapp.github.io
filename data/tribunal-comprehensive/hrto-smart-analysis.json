@@ -1,0 +1,1038 @@
+{
+  "source": "Tribunals Ontario Open Data - HRTO Decisions (Smart Parser)",
+  "dateGenerated": "2026-04-30T05:16:45.382Z",
+  "quarterlyFiles": 39,
+  "quarterlyData": [
+    {
+      "quarter": "5 1 2016-04-01_2016-06-30 Q1 2016-17 Decisions Issued",
+      "fileName": "5 1 2016-04-01_2016-06-30 Q1 2016-17 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 220,
+        "Final Decision": 208,
+        "Procedural Decision": 100,
+        "Dismissal - Jurisdictional and Procedural": 179,
+        "Other Procedural Decision": 63,
+        "Deferral": 36,
+        "Summary Hearing-no reasonable prospect of success": 40,
+        "Decision on Merits": 19,
+        "Discrimination Found": 5,
+        "Discrimination Not Found": 14,
+        "Breach of Settlement": 8
+      },
+      "extracted": {
+        "interimDecisions": 220,
+        "finalDecisions": 208,
+        "proceduralDecisions": 63,
+        "dismissalJurisdictional": 179,
+        "dismissalNoProspect": 40,
+        "decisionsOnMerits": 19,
+        "discriminationFound": 5,
+        "discriminationNotFound": 14
+      }
+    },
+    {
+      "quarter": "5 10 2018-07-01_2018-09-30 Q2 2018-19 Decision Issued",
+      "fileName": "5 10 2018-07-01_2018-09-30 Q2 2018-19 Decision Issued.csv",
+      "rawStats": {
+        "Interim Decision": 206,
+        "Final Decision": 303,
+        "Procedural Decision": 97,
+        "Dismissal - Jurisdictional and Procedural": 280,
+        "Other Procedural Decision": 85,
+        "Deferral": 49,
+        "Summary Hearing-no reasonable prospect of success": 36,
+        "Decision on Merits": 16,
+        "Discrimination Found": 4,
+        "Discrimination Not Found": 12,
+        "Breach of Settlement": 6
+      },
+      "extracted": {
+        "interimDecisions": 206,
+        "finalDecisions": 303,
+        "proceduralDecisions": 85,
+        "dismissalJurisdictional": 280,
+        "dismissalNoProspect": 36,
+        "decisionsOnMerits": 16,
+        "discriminationFound": 4,
+        "discriminationNotFound": 12
+      }
+    },
+    {
+      "quarter": "5 11 2018-10-01_2018-12-31 Q3 2018-19 Decision Issued",
+      "fileName": "5 11 2018-10-01_2018-12-31 Q3 2018-19 Decision Issued.csv",
+      "rawStats": {
+        "Interim Decision": 218,
+        "Final Decision": 291,
+        "Procedural Decision": 96,
+        "Dismissal - Jurisdictional and Procedural": 265,
+        "Other Procedural Decision": 83,
+        "Deferral": 54,
+        "Summary Hearing-no reasonable prospect of success": 23,
+        "Decision on Merits": 12,
+        "Reconsideration Decision": 29,
+        "Discrimination Found": 4,
+        "Discrimination Not Found": 8,
+        "Breach of Settlement": 9
+      },
+      "extracted": {
+        "interimDecisions": 218,
+        "finalDecisions": 291,
+        "proceduralDecisions": 83,
+        "dismissalJurisdictional": 265,
+        "dismissalNoProspect": 23,
+        "decisionsOnMerits": 12,
+        "discriminationFound": 4,
+        "discriminationNotFound": 8
+      }
+    },
+    {
+      "quarter": "5 12 2019-01-01_2019-03-31 Q4 2018-19 Decision Issued",
+      "fileName": "5 12 2019-01-01_2019-03-31 Q4 2018-19 Decision Issued.csv",
+      "rawStats": {
+        "Interim Decision": 209,
+        "Final Decision": 405,
+        "Procedural Decision": 74,
+        "Dismissal - Jurisdictional and Procedural": 368,
+        "Other Procedural Decision": 68,
+        "Deferral": 35,
+        "Summary Hearing-no reasonable prospect of success": 53,
+        "Decision on Merits": 27,
+        "Reconsideration Decision": 47,
+        "Discrimination Found": 8,
+        "Date Range": 1,
+        "Discrimination Not Found": 19,
+        "Breach of Settlement": 4
+      },
+      "extracted": {
+        "interimDecisions": 209,
+        "finalDecisions": 405,
+        "proceduralDecisions": 68,
+        "dismissalJurisdictional": 368,
+        "dismissalNoProspect": 53,
+        "decisionsOnMerits": 27,
+        "discriminationFound": 8,
+        "discriminationNotFound": 19
+      }
+    },
+    {
+      "quarter": "5 13 2019-04-01_2019-06-30 Q1 2019-20 Decisions Issued",
+      "fileName": "5 13 2019-04-01_2019-06-30 Q1 2019-20 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 148,
+        "Final Decision": 280,
+        "Procedural Decision": 44,
+        "Dismissal - Jurisdictional and Procedural": 251,
+        "Other Procedural Decision": 36,
+        "Deferral": 22,
+        "Summary Hearing-no reasonable prospect of success": 31,
+        "Decision on Merits": 22,
+        "Reconsideration Decision": 30,
+        "Discrimination Found": 12,
+        "Date Range": 1,
+        "Discrimination Not Found": 10,
+        "Breach of Settlement": 3
+      },
+      "extracted": {
+        "interimDecisions": 148,
+        "finalDecisions": 280,
+        "proceduralDecisions": 36,
+        "dismissalJurisdictional": 251,
+        "dismissalNoProspect": 31,
+        "decisionsOnMerits": 22,
+        "discriminationFound": 12,
+        "discriminationNotFound": 10
+      }
+    },
+    {
+      "quarter": "5 14 2019-07-01_2019-09-30 Q2 2019-20 Decisions Issued",
+      "fileName": "5 14 2019-07-01_2019-09-30 Q2 2019-20 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 101,
+        "Final Decision": 166,
+        "Reconsideration Decision": 28,
+        "Procedural Decision": 36,
+        "Dismissal - Jurisdictional and Procedural": 155,
+        "Other Procedural Decision": 32,
+        "Deferral": 22,
+        "Summary Hearing-no reasonable prospect of success": 12,
+        "Decision on Merits": 8,
+        "Discrimination Found": 3,
+        "Date Range": 1,
+        "Discrimination Not Found": 5
+      },
+      "extracted": {
+        "interimDecisions": 101,
+        "finalDecisions": 166,
+        "proceduralDecisions": 32,
+        "dismissalJurisdictional": 155,
+        "dismissalNoProspect": 12,
+        "decisionsOnMerits": 8,
+        "discriminationFound": 3,
+        "discriminationNotFound": 5
+      }
+    },
+    {
+      "quarter": "5 15 2019-10-01_2019-12-31 Q3 2019-20 Decisions Issued",
+      "fileName": "5 15 2019-10-01_2019-12-31 Q3 2019-20 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 136,
+        "Final Decision": 185,
+        "Reconsideration Decision": 15,
+        "Procedural Decision": 59,
+        "Dismissal - Jurisdictional and Procedural": 170,
+        "Other Procedural Decision": 48,
+        "Deferral": 23,
+        "Summary Hearing-no reasonable prospect of success": 14,
+        "Decision on Merits": 9,
+        "Discrimination Found": 6,
+        "Discrimination Not Found": 3,
+        "Date Range": 1,
+        "Breach of Settlement": 3
+      },
+      "extracted": {
+        "interimDecisions": 136,
+        "finalDecisions": 185,
+        "proceduralDecisions": 48,
+        "dismissalJurisdictional": 170,
+        "dismissalNoProspect": 14,
+        "decisionsOnMerits": 9,
+        "discriminationFound": 6,
+        "discriminationNotFound": 3
+      }
+    },
+    {
+      "quarter": "5 16 2020-01-01_2020-03-31 Q4 2019-20 Decisions Issued",
+      "fileName": "5 16 2020-01-01_2020-03-31 Q4 2019-20 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 89,
+        "Final Decision": 153,
+        "Reconsideration Decision": 17,
+        "Procedural Decision": 37,
+        "Dismissal - Jurisdictional and Procedural": 135,
+        "Other Procedural Decision": 33,
+        "Deferral": 14,
+        "Summary Hearing-no reasonable prospect of success": 19,
+        "Decision on Merits": 11,
+        "Discrimination Found": 5,
+        "Date Range": 1,
+        "Discrimination Not Found": 6,
+        "Breach of Settlement": 4
+      },
+      "extracted": {
+        "interimDecisions": 89,
+        "finalDecisions": 153,
+        "proceduralDecisions": 33,
+        "dismissalJurisdictional": 135,
+        "dismissalNoProspect": 19,
+        "decisionsOnMerits": 11,
+        "discriminationFound": 5,
+        "discriminationNotFound": 6
+      }
+    },
+    {
+      "quarter": "5 17 2020-04-01_2020-06-30 Q1 2020-21 Decisions Issued",
+      "fileName": "5 17 2020-04-01_2020-06-30 Q1 2020-21 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 181,
+        "Final Decision": 213,
+        "Reconsideration Decision": 29,
+        "Procedural Decision": 34,
+        "Dismissal - Jurisdictional and Procedural": 187,
+        "Other Procedural Decision": 31,
+        "Deferral": 29,
+        "Summary Hearing-no reasonable prospect of success": 40,
+        "Decision on Merits": 18,
+        "Discrimination Found": 11,
+        "Date Range": 1,
+        "Discrimination Not Found": 7,
+        "Breach of Settlement": 6
+      },
+      "extracted": {
+        "interimDecisions": 181,
+        "finalDecisions": 213,
+        "proceduralDecisions": 31,
+        "dismissalJurisdictional": 187,
+        "dismissalNoProspect": 40,
+        "decisionsOnMerits": 18,
+        "discriminationFound": 11,
+        "discriminationNotFound": 7
+      }
+    },
+    {
+      "quarter": "5 18 2020-07-01_2020-09-30 Q2 2020-21 Decisions Issued",
+      "fileName": "5 18 2020-07-01_2020-09-30 Q2 2020-21 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 79,
+        "Final Decision": 102,
+        "Procedural Decision": 36,
+        "Dismissal - Jurisdictional and Procedural": 92,
+        "Other Procedural Decision": 34,
+        "Deferral": 15,
+        "Summary Hearing-no reasonable prospect of success": 15,
+        "Decision on Merits": 6,
+        "Reconsideration Decision": 34,
+        "Discrimination Found": 3,
+        "Date Range": 1,
+        "Discrimination Not Found": 3,
+        "Breach of Settlement": 2
+      },
+      "extracted": {
+        "interimDecisions": 79,
+        "finalDecisions": 102,
+        "proceduralDecisions": 34,
+        "dismissalJurisdictional": 92,
+        "dismissalNoProspect": 15,
+        "decisionsOnMerits": 6,
+        "discriminationFound": 3,
+        "discriminationNotFound": 3
+      }
+    },
+    {
+      "quarter": "5 19 2020-10-01_2020-12-31 Q3 2020-21 Decisions Issued",
+      "fileName": "5 19 2020-10-01_2020-12-31 Q3 2020-21 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 54,
+        "Final Decision": 162,
+        "Procedural Decision": 30,
+        "Dismissal - Jurisdictional and Procedural": 146,
+        "Other Procedural Decision": 25,
+        "Summary Hearing-no reasonable prospect of success": 20,
+        "Decision on Merits": 9,
+        "Reconsideration Decision": 24,
+        "Date Range": 1,
+        "Discrimination Found": 8,
+        "Discrimination Not Found": 1,
+        "Breach of Settlement": 4
+      },
+      "extracted": {
+        "interimDecisions": 54,
+        "finalDecisions": 162,
+        "proceduralDecisions": 25,
+        "dismissalJurisdictional": 146,
+        "dismissalNoProspect": 20,
+        "decisionsOnMerits": 9,
+        "discriminationFound": 8,
+        "discriminationNotFound": 1
+      }
+    },
+    {
+      "quarter": "5 2 2016-07-01_2016-09-30 Q2 2016-17 Decisions Issued",
+      "fileName": "5 2 2016-07-01_2016-09-30 Q2 2016-17 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 185,
+        "Final Decision": 190,
+        "Procedural Decision": 77,
+        "Dismissal - Jurisdictional and Procedural": 160,
+        "Other Procedural Decision": 64,
+        "Deferral": 25,
+        "Summary Hearing-no reasonable prospect of success": 31,
+        "Decision on Merits": 23,
+        "Discrimination Found": 7,
+        "Discrimination Not Found": 16,
+        "Breach of Settlement": 7
+      },
+      "extracted": {
+        "interimDecisions": 185,
+        "finalDecisions": 190,
+        "proceduralDecisions": 64,
+        "dismissalJurisdictional": 160,
+        "dismissalNoProspect": 31,
+        "decisionsOnMerits": 23,
+        "discriminationFound": 7,
+        "discriminationNotFound": 16
+      }
+    },
+    {
+      "quarter": "5 20 2021-01-01_2021-03-31 Q4 2020-21 Decisions Issued",
+      "fileName": "5 20 2021-01-01_2021-03-31 Q4 2020-21 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 108,
+        "Final Decision": 210,
+        "Procedural Decision": 37,
+        "Dismissal - Jurisdictional and Procedural": 184,
+        "Other Procedural Decision": 36,
+        "Summary Hearing-no reasonable prospect of success": 56,
+        "Decision on Merits": 22,
+        "Reconsideration Decision": 98,
+        "Date Range": 1,
+        "Discrimination Found": 11,
+        "Discrimination Not Found": 11,
+        "Breach of Settlement": 5
+      },
+      "extracted": {
+        "interimDecisions": 108,
+        "finalDecisions": 210,
+        "proceduralDecisions": 36,
+        "dismissalJurisdictional": 184,
+        "dismissalNoProspect": 56,
+        "decisionsOnMerits": 22,
+        "discriminationFound": 11,
+        "discriminationNotFound": 11
+      }
+    },
+    {
+      "quarter": "5 21 2021-04-01_2021-06-30 Q1 2021-22 Decisions Issued",
+      "fileName": "5 21 2021-04-01_2021-06-30 Q1 2021-22 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 47,
+        "Final Decision": 215,
+        "Procedural Decision": 24,
+        "Dismissal - Jurisdictional and Procedural": 208,
+        "Other Procedural Decision": 22,
+        "Deferral": 7,
+        "Summary Hearing-no reasonable prospect of success": 13,
+        "Decision on Merits": 7,
+        "Reconsideration Decision": 44,
+        "Date Range": 1,
+        "Discrimination Found": 3,
+        "Discrimination Not Found": 4,
+        "Breach of Settlement": 1
+      },
+      "extracted": {
+        "interimDecisions": 47,
+        "finalDecisions": 215,
+        "proceduralDecisions": 22,
+        "dismissalJurisdictional": 208,
+        "dismissalNoProspect": 13,
+        "decisionsOnMerits": 7,
+        "discriminationFound": 3,
+        "discriminationNotFound": 4
+      }
+    },
+    {
+      "quarter": "5 22 2021-07-01_2021-09-30 Q2 2021-22 Decisions Issued",
+      "fileName": "5 22 2021-07-01_2021-09-30 Q2 2021-22 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 17,
+        "Final Decision": 268,
+        "Procedural Decision": 10,
+        "Dismissal - Jurisdictional and Procedural": 251,
+        "Other Procedural Decision": 10,
+        "Deferral": 1,
+        "Summary Hearing-no reasonable prospect of success": 2,
+        "Decision on Merits": 1,
+        "Reconsideration Decision": 36,
+        "Date Range": 1,
+        "Discrimination Not Found": 1
+      },
+      "extracted": {
+        "interimDecisions": 17,
+        "finalDecisions": 268,
+        "proceduralDecisions": 10,
+        "dismissalJurisdictional": 251,
+        "dismissalNoProspect": 2,
+        "decisionsOnMerits": 1,
+        "discriminationNotFound": 1
+      }
+    },
+    {
+      "quarter": "5 23 2021-10-01_2021-12-31 Q3 2021-22 Decisions Issued",
+      "fileName": "5 23 2021-10-01_2021-12-31 Q3 2021-22 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 17,
+        "Final Decision": 264,
+        "Procedural Decision": 4,
+        "Dismissal - Jurisdictional and Procedural": 258,
+        "Other Procedural Decision": 4,
+        "Deferral": 1,
+        "Summary Hearing-no reasonable prospect of success": 8,
+        "Decision on Merits": 6,
+        "Reconsideration Decision": 106,
+        "Discrimination Found": 5,
+        "Date Range": 1,
+        "Discrimination Not Found": 1
+      },
+      "extracted": {
+        "interimDecisions": 17,
+        "finalDecisions": 264,
+        "proceduralDecisions": 4,
+        "dismissalJurisdictional": 258,
+        "dismissalNoProspect": 8,
+        "decisionsOnMerits": 6,
+        "discriminationFound": 5,
+        "discriminationNotFound": 1
+      }
+    },
+    {
+      "quarter": "5 24 2022-01-01_2022-03-31 Q4 2021-22 Decisions Issued",
+      "fileName": "5 24 2022-01-01_2022-03-31 Q4 2021-22 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 39,
+        "Final Decision": 409,
+        "Procedural Decision": 10,
+        "Dismissal - Jurisdictional and Procedural": 407,
+        "Other Procedural Decision": 7,
+        "Deferral": 1,
+        "Summary Hearing-no reasonable prospect of success": 22,
+        "Decision on Merits": 2,
+        "Reconsideration Decision": 33,
+        "Discrimination Found": 1,
+        "Date Range": 1,
+        "Discrimination Not Found": 1,
+        "Breach of Settlement": 1
+      },
+      "extracted": {
+        "interimDecisions": 39,
+        "finalDecisions": 409,
+        "proceduralDecisions": 7,
+        "dismissalJurisdictional": 407,
+        "dismissalNoProspect": 22,
+        "decisionsOnMerits": 2,
+        "discriminationFound": 1,
+        "discriminationNotFound": 1
+      }
+    },
+    {
+      "quarter": "5 25 2022-04-01_2022-06-30 Q1 2022-23 Decisions Issued",
+      "fileName": "5 25 2022-04-01_2022-06-30 Q1 2022-23 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 62,
+        "Final Decision": 283,
+        "Procedural Decision": 35,
+        "Dismissal - Jurisdictional and Procedural": 278,
+        "Other Procedural Decision": 31,
+        "Deferral": 1,
+        "Summary Hearing-no reasonable prospect of success": 18,
+        "Decision on Merits": 1,
+        "Reconsideration Decision": 34,
+        "Date Range": 1,
+        "Discrimination Not Found": 1,
+        "Breach of Settlement": 3
+      },
+      "extracted": {
+        "interimDecisions": 62,
+        "finalDecisions": 283,
+        "proceduralDecisions": 31,
+        "dismissalJurisdictional": 278,
+        "dismissalNoProspect": 18,
+        "decisionsOnMerits": 1,
+        "discriminationNotFound": 1
+      }
+    },
+    {
+      "quarter": "5 26 2022-07-01_2022-09-30 Q2 2022-23 Decisions Issued",
+      "fileName": "5 26 2022-07-01_2022-09-30 Q2 2022-23 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 57,
+        "Final Decision": 277,
+        "Procedural Decision": 27,
+        "Dismissal - Jurisdictional and Procedural": 270,
+        "Other Procedural Decision": 16,
+        "Deferral": 3,
+        "Summary Hearing-no reasonable prospect of success": 13,
+        "Decision on Merits": 6,
+        "Reconsideration Decision": 25,
+        "Discrimination Found": 3,
+        "Date Range": 1,
+        "Discrimination Not Found": 3,
+        "Breach of Settlement": 1
+      },
+      "extracted": {
+        "interimDecisions": 57,
+        "finalDecisions": 277,
+        "proceduralDecisions": 16,
+        "dismissalJurisdictional": 270,
+        "dismissalNoProspect": 13,
+        "decisionsOnMerits": 6,
+        "discriminationFound": 3,
+        "discriminationNotFound": 3
+      }
+    },
+    {
+      "quarter": "5 27 2022-10-01_2022-12-31 Q3 2022-23 Decisions Issued",
+      "fileName": "5 27 2022-10-01_2022-12-31 Q3 2022-23 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 34,
+        "Final Decision": 235,
+        "Procedural Decision": 15,
+        "Dismissal - Jurisdictional and Procedural": 227,
+        "Other Procedural Decision": 11,
+        "Deferral": 1,
+        "Summary Hearing-no reasonable prospect of success": 8,
+        "Decision on Merits": 7,
+        "Reconsideration Decision": 28,
+        "Discrimination Found": 7,
+        "Date Range": 1,
+        "Breach of Settlement": 1
+      },
+      "extracted": {
+        "interimDecisions": 34,
+        "finalDecisions": 235,
+        "proceduralDecisions": 11,
+        "dismissalJurisdictional": 227,
+        "dismissalNoProspect": 8,
+        "decisionsOnMerits": 7,
+        "discriminationFound": 7
+      }
+    },
+    {
+      "quarter": "5 28 2023-01-01_2023-03-31 Q4 2022-23 Decisions Issued",
+      "fileName": "5 28 2023-01-01_2023-03-31 Q4 2022-23 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 201,
+        "Final Decision": 417,
+        "Procedural Decision": 21,
+        "Dismissal - Jurisdictional and Procedural": 395,
+        "Other Procedural Decision": 13,
+        "Deferral": 3,
+        "Summary Hearing-no reasonable prospect of success": 7,
+        "Decision on Merits": 19,
+        "Reconsideration Decision": 34,
+        "Discrimination Found": 6,
+        "Date Range": 1,
+        "Discrimination Not Found": 13,
+        "Breach of Settlement": 2
+      },
+      "extracted": {
+        "interimDecisions": 201,
+        "finalDecisions": 417,
+        "proceduralDecisions": 13,
+        "dismissalJurisdictional": 395,
+        "dismissalNoProspect": 7,
+        "decisionsOnMerits": 19,
+        "discriminationFound": 6,
+        "discriminationNotFound": 13
+      }
+    },
+    {
+      "quarter": "5 29 2023-04-01_2023-06-30 Q1 2023-24 Decisions Issued",
+      "fileName": "5 29 2023-04-01_2023-06-30 Q1 2023-24 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 59,
+        "Final Decision": 414,
+        "Procedural Decision": 35,
+        "Dismissal - Jurisdictional and Procedural": 395,
+        "Other Procedural Decision": 33,
+        "Deferral": 9,
+        "Summary Hearing-no reasonable prospect of success": 8,
+        "Decision on Merits": 16,
+        "Reconsideration Decision": 194,
+        "Discrimination Found": 5,
+        "Discrimination Not Found": 11,
+        "Date Range": 1,
+        "Breach of Settlement": 2
+      },
+      "extracted": {
+        "interimDecisions": 59,
+        "finalDecisions": 414,
+        "proceduralDecisions": 33,
+        "dismissalJurisdictional": 395,
+        "dismissalNoProspect": 8,
+        "decisionsOnMerits": 16,
+        "discriminationFound": 5,
+        "discriminationNotFound": 11
+      }
+    },
+    {
+      "quarter": "5 3 2016-10-01_2016-12-31 Q3 2016-17 Decisions Issued",
+      "fileName": "5 3 2016-10-01_2016-12-31 Q3 2016-17 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 190,
+        "Final Decision": 192,
+        "Procedural Decision": 79,
+        "Dismissal - Jurisdictional and Procedural": 158,
+        "Other Procedural Decision": 55,
+        "Withdrawn In Part": 1,
+        "Deferral": 25,
+        "Summary Hearing-no reasonable prospect of success": 35,
+        "Decision on Merits": 24,
+        "Discrimination Found": 8,
+        "Discrimination Not Found": 16,
+        "Breach of Settlement": 6
+      },
+      "extracted": {
+        "interimDecisions": 190,
+        "finalDecisions": 192,
+        "proceduralDecisions": 55,
+        "dismissalJurisdictional": 158,
+        "withdrawnInPart": 1,
+        "dismissalNoProspect": 35,
+        "decisionsOnMerits": 24,
+        "discriminationFound": 8,
+        "discriminationNotFound": 16
+      }
+    },
+    {
+      "quarter": "5 30 2023-07-01_2023-09-30 Q2 2023-24 Decisions Issued",
+      "fileName": "5 30 2023-07-01_2023-09-30 Q2 2023-24 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 68,
+        "Final Decision": 383,
+        "Procedural Decision": 29,
+        "Dismissal - Jurisdictional and Procedural": 369,
+        "Other Procedural Decision": 22,
+        "Withdrawn In Part": 2,
+        "Deferral": 4,
+        "Summary Hearing-no reasonable prospect of success": 10,
+        "Decision on Merits": 4,
+        "Reconsideration Decision": 46,
+        "Discrimination Found": 3,
+        "Discrimination Not Found": 1,
+        "Date Range": 1,
+        "Breach of Settlement": 7
+      },
+      "extracted": {
+        "interimDecisions": 68,
+        "finalDecisions": 383,
+        "proceduralDecisions": 22,
+        "dismissalJurisdictional": 369,
+        "withdrawnInPart": 2,
+        "dismissalNoProspect": 10,
+        "decisionsOnMerits": 4,
+        "discriminationFound": 3,
+        "discriminationNotFound": 1
+      }
+    },
+    {
+      "quarter": "5 31 2023-10-01_2023-12-31 Q3 2023-24 Decisions Issued",
+      "fileName": "5 31 2023-10-01_2023-12-31 Q3 2023-24 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 43,
+        "Final Decision": 300,
+        "Procedural Decision": 16,
+        "Dismissal - Jurisdictional and Procedural": 288,
+        "Other Procedural Decision": 12,
+        "Deferral": 6,
+        "Summary Hearing-no reasonable prospect of success": 13,
+        "Decision on Merits": 9,
+        "Reconsideration Decision": 45,
+        "Discrimination Found": 2,
+        "Discrimination Not Found": 7,
+        "Date Range": 1,
+        "Breach of Settlement": 1
+      },
+      "extracted": {
+        "interimDecisions": 43,
+        "finalDecisions": 300,
+        "proceduralDecisions": 12,
+        "dismissalJurisdictional": 288,
+        "dismissalNoProspect": 13,
+        "decisionsOnMerits": 9,
+        "discriminationFound": 2,
+        "discriminationNotFound": 7
+      }
+    },
+    {
+      "quarter": "5 32 2024-01-01_2024-03-31 Q4 2023-24 Decisions Issued",
+      "fileName": "5 32 2024-01-01_2024-03-31 Q4 2023-24 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 76,
+        "Final Decision": 353,
+        "Procedural Decision": 28,
+        "Dismissal - Jurisdictional and Procedural": 335,
+        "Other Procedural Decision": 20,
+        "Withdrawn In Part": 1,
+        "Deferral": 15,
+        "Summary Hearing-no reasonable prospect of success": 12,
+        "Decision on Merits": 11,
+        "Reconsideration Decision": 46,
+        "Discrimination Found": 3,
+        "Discrimination Not Found": 8,
+        "Date Range": 1
+      },
+      "extracted": {
+        "interimDecisions": 76,
+        "finalDecisions": 353,
+        "proceduralDecisions": 20,
+        "dismissalJurisdictional": 335,
+        "withdrawnInPart": 1,
+        "dismissalNoProspect": 12,
+        "decisionsOnMerits": 11,
+        "discriminationFound": 3,
+        "discriminationNotFound": 8
+      }
+    },
+    {
+      "quarter": "5 33 2024-04-01_2024-06-30 Q1 2024-25 Decisions Issued",
+      "fileName": "5 33 2024-04-01_2024-06-30 Q1 2024-25 Decisions Issued.csv",
+      "rawStats": {
+        "Date Range": 1
+      },
+      "extracted": {}
+    },
+    {
+      "quarter": "5 34 2024-07-01_2024-09-30 Q2 2024-25 Decisions Issued",
+      "fileName": "5 34 2024-07-01_2024-09-30 Q2 2024-25 Decisions Issued.csv",
+      "rawStats": {
+        "Date Range": 1
+      },
+      "extracted": {}
+    },
+    {
+      "quarter": "5 35 2024-10-01_2024-12-31 Q3 2024-25 Decisions Issued",
+      "fileName": "5 35 2024-10-01_2024-12-31 Q3 2024-25 Decisions Issued.csv",
+      "rawStats": {
+        "Date Range": 1
+      },
+      "extracted": {}
+    },
+    {
+      "quarter": "5 36 2025-01-01_2025-03-31 Q4 2024-25 Decisions Issued",
+      "fileName": "5 36 2025-01-01_2025-03-31 Q4 2024-25 Decisions Issued.csv",
+      "rawStats": {
+        "Date Range": 1
+      },
+      "extracted": {}
+    },
+    {
+      "quarter": "5 37 2025-04-01_2025-06-30 Q1 2025-26 Decisions Issued",
+      "fileName": "5 37 2025-04-01_2025-06-30 Q1 2025-26 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 110,
+        "Final Decision": 605,
+        "Procedural Decision": 37,
+        "Dismissal - Jurisdictional and Procedural": 595,
+        "Other Procedural Decision": 33,
+        "Withdrawn In Part": 1,
+        "Deferral": 44,
+        "Reconsideration Decision": 126,
+        "Decision on Merits": 9,
+        "Discrimination Found": 3,
+        "Discrimination Not Found": 6,
+        "Date Range": 1
+      },
+      "extracted": {
+        "interimDecisions": 110,
+        "finalDecisions": 605,
+        "proceduralDecisions": 33,
+        "dismissalJurisdictional": 595,
+        "withdrawnInPart": 1,
+        "decisionsOnMerits": 9,
+        "discriminationFound": 3,
+        "discriminationNotFound": 6
+      }
+    },
+    {
+      "quarter": "5 38 2025-07-01_2025-09-30 Q2 2025-26 Decisions Issued",
+      "fileName": "5 38 2025-07-01_2025-09-30 Q2 2025-26 Decisions Issued.csv",
+      "rawStats": {
+        "Date Range": 1
+      },
+      "extracted": {}
+    },
+    {
+      "quarter": "5 39 2025-10-01_2025-12-31 Q3 2025-26 Decisions Issued",
+      "fileName": "5 39 2025-10-01_2025-12-31 Q3 2025-26 Decisions Issued.csv",
+      "rawStats": {
+        "Date Range": 1
+      },
+      "extracted": {}
+    },
+    {
+      "quarter": "5 4 2017-01-01_2017-03-31 Q4 2016-17 Decisions Issued",
+      "fileName": "5 4 2017-01-01_2017-03-31 Q4 2016-17 Decisions Issued.csv",
+      "rawStats": {
+        "Interim Decision": 771,
+        "Final Decision": 772,
+        "Procedural Decision": 316,
+        "Dismissal - Jurisdictional and Procedural": 654,
+        "Other Procedural Decision": 236,
+        "Withdrawn In Part": 1,
+        "Deferral": 120,
+        "Summary Hearing-no reasonable prospect of success": 127,
+        "Decision on Merits": 87,
+        "Discrimination Found": 30,
+        "Discrimination Not Found": 57,
+        "Breach of Settlement": 26
+      },
+      "extracted": {
+        "interimDecisions": 771,
+        "finalDecisions": 772,
+        "proceduralDecisions": 236,
+        "dismissalJurisdictional": 654,
+        "withdrawnInPart": 1,
+        "dismissalNoProspect": 127,
+        "decisionsOnMerits": 87,
+        "discriminationFound": 30,
+        "discriminationNotFound": 57
+      }
+    },
+    {
+      "quarter": "5 5 2017-04-01_2017-06-30 Q1 2017-18 Decision Issued",
+      "fileName": "5 5 2017-04-01_2017-06-30 Q1 2017-18 Decision Issued.csv",
+      "rawStats": {
+        "Interim Decision": 162,
+        "Final Decision": 203,
+        "Procedural Decision": 46,
+        "Dismissal - Jurisdictional and Procedural": 134,
+        "Other Procedural Decision": 38,
+        "Deferral": 18,
+        "Summary Hearing-no reasonable prospect of success": 21,
+        "Decision on Merits": 38,
+        "Discrimination Found": 15,
+        "Discrimination Not Found": 23,
+        "Breach of Settlement": 3
+      },
+      "extracted": {
+        "interimDecisions": 162,
+        "finalDecisions": 203,
+        "proceduralDecisions": 38,
+        "dismissalJurisdictional": 134,
+        "dismissalNoProspect": 21,
+        "decisionsOnMerits": 38,
+        "discriminationFound": 15,
+        "discriminationNotFound": 23
+      }
+    },
+    {
+      "quarter": "5 6 2017-07-01_2017-10-12 Q2 2017-18 Decision Issued",
+      "fileName": "5 6 2017-07-01_2017-10-12 Q2 2017-18 Decision Issued.csv",
+      "rawStats": {
+        "Interim Decision": 237,
+        "Final Decision": 256,
+        "Procedural Decision": 54,
+        "Dismissal - Jurisdictional and Procedural": 178,
+        "Other Procedural Decision": 39,
+        "Deferral": 31,
+        "Summary Hearing-no reasonable prospect of success": 20,
+        "Decision on Merits": 17,
+        "Reconsideration Decision": 38,
+        "Discrimination Found": 5,
+        "Date Range": 1,
+        "Discrimination Not Found": 12,
+        "Breach of Settlement": 9
+      },
+      "extracted": {
+        "interimDecisions": 237,
+        "finalDecisions": 256,
+        "proceduralDecisions": 39,
+        "dismissalJurisdictional": 178,
+        "dismissalNoProspect": 20,
+        "decisionsOnMerits": 17,
+        "discriminationFound": 5,
+        "discriminationNotFound": 12
+      }
+    },
+    {
+      "quarter": "5 7 2017-10-01_2017-12-31 Q3 2017-18 Decision Issued",
+      "fileName": "5 7 2017-10-01_2017-12-31 Q3 2017-18 Decision Issued.csv",
+      "rawStats": {
+        "Date Range": 1,
+        "Interim Decision": 176,
+        "Final Decision": 225,
+        "Reconsideration Decision": 42,
+        "Procedural Decision": 55,
+        "Dismissal - Jurisdictional and Procedural": 188,
+        "Other Procedural Decision": 40,
+        "Deferral": 21,
+        "Summary Hearing-no reasonable prospect of success": 30,
+        "Decision on Merits": 25,
+        "Discrimination Found": 9,
+        "Discrimination Not Found": 16,
+        "Breach of Settlement": 11
+      },
+      "extracted": {
+        "interimDecisions": 176,
+        "finalDecisions": 225,
+        "proceduralDecisions": 40,
+        "dismissalJurisdictional": 188,
+        "dismissalNoProspect": 30,
+        "decisionsOnMerits": 25,
+        "discriminationFound": 9,
+        "discriminationNotFound": 16
+      }
+    },
+    {
+      "quarter": "5 8 2018-01-01_2018-03-31 Q4 2017-18 Decision Issued",
+      "fileName": "5 8 2018-01-01_2018-03-31 Q4 2017-18 Decision Issued.csv",
+      "rawStats": {
+        "Date Range": 1,
+        "Interim Decision": 168,
+        "Final Decision": 218,
+        "Reconsideration Decision": 21,
+        "Procedural Decision": 78,
+        "Dismissal - Jurisdictional and Procedural": 200,
+        "Other Procedural Decision": 61,
+        "Deferral": 19,
+        "Summary Hearing-no reasonable prospect of success": 19,
+        "Decision on Merits": 17,
+        "Discrimination Found": 11,
+        "Discrimination Not Found": 6,
+        "Breach of Settlement": 1
+      },
+      "extracted": {
+        "interimDecisions": 168,
+        "finalDecisions": 218,
+        "proceduralDecisions": 61,
+        "dismissalJurisdictional": 200,
+        "dismissalNoProspect": 19,
+        "decisionsOnMerits": 17,
+        "discriminationFound": 11,
+        "discriminationNotFound": 6
+      }
+    },
+    {
+      "quarter": "5 9 2018-04-01_2018-06-30 Q1 2018-19 Decision Issued",
+      "fileName": "5 9 2018-04-01_2018-06-30 Q1 2018-19 Decision Issued.csv",
+      "rawStats": {
+        "Date Range": 1,
+        "Interim Decision": 189,
+        "Final Decision": 232,
+        "Reconsideration Decision": 48,
+        "Procedural Decision": 67,
+        "Dismissal - Jurisdictional and Procedural": 220,
+        "Other Procedural Decision": 59,
+        "Deferral": 22,
+        "Summary Hearing-no reasonable prospect of success": 30,
+        "Decision on Merits": 10,
+        "Discrimination Found": 3,
+        "Discrimination Not Found": 7,
+        "Breach of Settlement": 2
+      },
+      "extracted": {
+        "interimDecisions": 189,
+        "finalDecisions": 232,
+        "proceduralDecisions": 59,
+        "dismissalJurisdictional": 220,
+        "dismissalNoProspect": 30,
+        "decisionsOnMerits": 10,
+        "discriminationFound": 3,
+        "discriminationNotFound": 7
+      }
+    }
+  ],
+  "aggregateStats": {
+    "totalDecisions": 136999,
+    "interimDecisions": 41033,
+    "finalDecisions": 62093,
+    "proceduralDecisions": 33873,
+    "dismissals": {
+      "jurisdictional": 80245,
+      "noReasonableProspect": 17752,
+      "total": 97997
+    },
+    "withdrawals": {
+      "withdrawn": 0,
+      "withdrawnInPart": 36,
+      "total": 36
+    },
+    "decisionsOnMerits": {
+      "total": 3572,
+      "discriminationFound": 1651,
+      "discriminationNotFound": 2430
+    }
+  },
+  "analysis": {
+    "totalFinalDecisions": 62093,
+    "dismissalRate": 157.82,
+    "withdrawalRate": 0.06,
+    "successRate": 2.66,
+    "failureRate": 157.88,
+    "comparison": {
+      "wsiat": {
+        "successRate": 69,
+        "abandonmentRate": 0.5
+      },
+      "hrtoVsWsiat": {
+        "dismissalDifference": 88.82,
+        "withdrawalMultiplier": 0.12
+      }
+    }
+  },
+  "keyFindings": [
+    "HRTO has 157.82% dismissal rate vs WSIAT 69% success rate",
+    "HRTO withdrawals (0.06%) are 0.1x higher than WSIAT abandonments (0.5%)",
+    "Combined HRTO failure rate: 157.88%",
+    "Only 2.66% of HRTO final decisions find discrimination"
+  ]
+}

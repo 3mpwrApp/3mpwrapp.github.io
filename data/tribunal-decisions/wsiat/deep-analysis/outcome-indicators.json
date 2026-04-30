@@ -1,0 +1,98 @@
+{
+  "outcomeCounts": [
+    {
+      "outcome": "Allowed",
+      "count": 13356,
+      "percentage": "13.49"
+    },
+    {
+      "outcome": "Dismissed",
+      "count": 5448,
+      "percentage": "5.50"
+    },
+    {
+      "outcome": "Remitted",
+      "count": 2141,
+      "percentage": "2.16"
+    },
+    {
+      "outcome": "Varied",
+      "count": 22,
+      "percentage": "0.02"
+    }
+  ],
+  "outcomeByIssue": {
+    "Allowed": {
+      "NEL": 5306,
+      "LOE": 2047,
+      "FEL": 1528,
+      "SIEF": 1202,
+      "Initial Entitlement": 252,
+      "Reconsideration": 940,
+      "Right to Sue": 41,
+      "Chronic Pain": 1597,
+      "Pre-existing": 1004,
+      "Permanent Impairment": 2014,
+      "Loss of Earnings": 1489,
+      "Vocational Rehab": 53,
+      "CPD": 34,
+      "HAVS": 16,
+      "PTSD": 56,
+      "Mental Health": 192
+    },
+    "Dismissed": {
+      "NEL": 344,
+      "LOE": 255,
+      "FEL": 155,
+      "SIEF": 138,
+      "Initial Entitlement": 108,
+      "Reconsideration": 3250,
+      "Right to Sue": 58,
+      "Chronic Pain": 244,
+      "Pre-existing": 156,
+      "Permanent Impairment": 171,
+      "Loss of Earnings": 132,
+      "Vocational Rehab": 25,
+      "CPD": 25,
+      "HAVS": 3,
+      "PTSD": 25,
+      "Mental Health": 52
+    },
+    "Varied": {
+      "NEL": 2,
+      "LOE": 1,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 2,
+      "Right to Sue": 1,
+      "Chronic Pain": 0,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 2,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Remitted": {
+      "NEL": 327,
+      "LOE": 387,
+      "FEL": 216,
+      "SIEF": 41,
+      "Initial Entitlement": 22,
+      "Reconsideration": 56,
+      "Right to Sue": 13,
+      "Chronic Pain": 125,
+      "Pre-existing": 151,
+      "Permanent Impairment": 84,
+      "Loss of Earnings": 291,
+      "Vocational Rehab": 26,
+      "CPD": 4,
+      "HAVS": 0,
+      "PTSD": 3,
+      "Mental Health": 26
+    }
+  }
+}

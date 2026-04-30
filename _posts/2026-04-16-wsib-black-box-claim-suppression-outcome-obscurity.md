@@ -13,6 +13,10 @@ featured: true
 
 # WSIB/WSIAT Transparency Gap: What the Public Data Shows
 
+**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New findings include: Back injuries #1 (13,407 cases, 13.54%), top co-occurrences (NEL+Permanent Impairment 11,516 cases), 40 vice-chair specialists identified, temporal trends showing FEL declining and LOE rising. See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html) | [Interactive Network Visualization](/connecting-the-dots-wsiat-keyword-network.html)
+
+---
+
 <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: #1a1a1a; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(250, 112, 154, 0.3);">
 <h2 style="color: #1a1a1a; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
 

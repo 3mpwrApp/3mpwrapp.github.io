@@ -1,0 +1,75 @@
+{
+  "created": "2026-04-30T04:16:33.155Z",
+  "dataSources": {
+    "wsibOpenData": {
+      "url": "https://www.wsib.ca/en/open-data",
+      "files": [
+        "Premium Rates (2016-2020): 5 CSV files",
+        "Fatal Claims Investigations (2014-2024): 1 CSV file",
+        "Surveillances (2014-2024): 1 CSV file",
+        "NEER Rebate/Surcharge (2017-2020): 4 CSV files (~2-3MB each)",
+        "CAD-7 Rebate/Surcharge (2017-2020): 4 CSV files (~900KB-1MB each)"
+      ],
+      "totalFiles": 15
+    },
+    "wsibSafetyCheck": {
+      "url": "https://safetycheck.onlineservices.wsib.on.ca/",
+      "categories": [
+        "Benefit Payments (Schedule 1, 2, combined)",
+        "Occupational Diseases",
+        "Fatalities (COVID-19, Occupational, Traumatic)",
+        "Mental Stress Claims",
+        "Injury Profiles (Occupation, Source, Event, Body Part, Nature, Age)",
+        "Injury Rates",
+        "Allowed Claims",
+        "Registered Claims",
+        "Insurable Earnings",
+        "Premiums Paid",
+        "Workplaces (Employment, Employers)",
+        "Lost-Time Claims",
+        "Fatalities Data"
+      ],
+      "totalFiles": "40-50 XLSX files"
+    },
+    "tribunalsOntario": {
+      "url": "https://tribunalsontario.ca/en/about/open-data/",
+      "hrto": "39 quarterly decision files (2016-2026)",
+      "onsbt": "24 appeals received files (2012-2026)",
+      "totalFiles": 63
+    },
+    "wsiat": {
+      "url": "https://www.wsiat.ca/en/home/opendata_decisions.html",
+      "data": "98,992 decisions (1987-2026) - Already parsed",
+      "format": "JSON (41 year files + metadata + 8 deep-analysis files)"
+    },
+    "awcbc": {
+      "url": "https://awcbc.org/data-and-statistics/",
+      "data": "National Work Injury Statistics (cross-provincial comparison)",
+      "status": "Files downloaded, format unknown"
+    }
+  },
+  "parsingStatus": {
+    "completed": [
+      "WSIAT 98,992 decisions (CSV → JSON)",
+      "WSIB Premium Rates (5 CSV files)",
+      "WSIB Fatal Claims Investigations (1 CSV)",
+      "WSIB Surveillances (1 CSV)",
+      "NEER Summary (4 CSV files)",
+      "CAD-7 Summary (4 CSV files)"
+    ],
+    "pending": [
+      "Safety Check XLSX files (40-50 files) - requires xlsx library",
+      "Tribunals Ontario XLSX files (63 files) - requires xlsx library",
+      "AWCBC national statistics (format unknown)"
+    ]
+  },
+  "analysisGoals": {
+    "claimFunnel": "Registered → Allowed → Denied → WSIAT Appeals → Suppression Gap",
+    "crossTribunal": "WSIAT vs HRTO abandonment rates (0.5% vs 73.5%)",
+    "bodyPartValidation": "WSIB body part data vs WSIAT body part patterns",
+    "mentalStressSuppression": "Mental stress claims vs WSIAT PTSD appeals (159)",
+    "fatalClaimsSuppression": "Fatal investigations vs WSIAT fatal appeals",
+    "onsbtFunnel": "WSIB denials → ODSP appeals → ONSBT",
+    "crossProvincial": "Ontario vs BC vs other provinces (AWCBC data)"
+  }
+}

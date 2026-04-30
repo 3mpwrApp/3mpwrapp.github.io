@@ -1,0 +1,669 @@
+{
+  "source": "WSIB Open Data - Fatality Statistics",
+  "files": {
+    "Fatalities-data-2023": {
+      "totalRows": 10,
+      "data": [
+        {
+          "Fatalities in Canada - 2023": "Données sur les décès au Canada en 2023"
+        },
+        {
+          "Fatalities in Canada - 2023": "Gender and Age // Groupe d'âge et sexe"
+        },
+        {
+          "Fatalities in Canada - 2023": "Industry // Industrie"
+        },
+        {
+          "Fatalities in Canada - 2023": "Occupation // Profession"
+        },
+        {
+          "Fatalities in Canada - 2023": "Nature of Injury or Disease // Nature de la lésion ou maladie"
+        },
+        {
+          "Fatalities in Canada - 2023": "Part of Body // Siège de la lésion"
+        },
+        {
+          "Fatalities in Canada - 2023": "Source of Injury or Disease // Agent causal de la lésion ou maladie"
+        },
+        {
+          "Fatalities in Canada - 2023": "Event or Exposure // Genre d'accident ou d'exposition"
+        },
+        {
+          "Fatalities in Canada - 2023": "Source: Association of Workers' Compensation Boards of Canada – 2023"
+        },
+        {
+          "Fatalities in Canada - 2023": "Produit par l'Association des commissions des accidents du travail du Canada (ACATC) en 2023"
+        }
+      ]
+    },
+    "allowed Traumatic fatalities": {
+      "totalRows": 73,
+      "data": [
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:24 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        }
+      ]
+    },
+    "allowed Occupational disease fatalities": {
+      "totalRows": 73,
+      "data": [
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "",
+          "Workplace Safety and Insurance Board": "Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        },
+        {
+          "": "Data that is still under the legacy classification system(industry sector) will be displayed on the current tab under \"\"Legacy Classification\"\". Details by Industry sector are provided on the \"\"Legacy\"\" tab.",
+          "Workplace Safety and Insurance Board": "Data Source: Workplace Safety and Insurance Board"
+        },
+        {
+          "": "Report downloaded on 4/30/2026",
+          "Workplace Safety and Insurance Board": "12:11:27 AM EDT"
+        },
+        {
+          "": "*The rate framework classification model came into effect Jan 1",
+          "Workplace Safety and Insurance Board": "2020. Under this model all data will be displayed on the \"\"Current\"\" tab by class/subclass."
+        }
+      ]
+    },
+    "Lost-time-claims-2023": {
+      "totalRows": 10,
+      "data": [
+        {
+          "Canada Lost Time Claims Data - 2023": "Réclamations avec perte de temps au Canada en 2023"
+        },
+        {
+          "Canada Lost Time Claims Data - 2023": "Gender and Age // Groupe d'âge et sexe"
+        },
+        {
+          "Canada Lost Time Claims Data - 2023": "Industry // Industrie"
+        },
+        {
+          "Canada Lost Time Claims Data - 2023": "Occupation // Profession"
+        },
+        {
+          "Canada Lost Time Claims Data - 2023": "Nature of Injury or Disease // Nature de la lésion ou maladie"
+        },
+        {
+          "Canada Lost Time Claims Data - 2023": "Part of Body // Siège de la lésion"
+        },
+        {
+          "Canada Lost Time Claims Data - 2023": "Source of Injury or Disease // Agent causal de la lésion ou maladie"
+        },
+        {
+          "Canada Lost Time Claims Data - 2023": "Event or Exposure // Genre d'accident ou d'exposition"
+        },
+        {
+          "Canada Lost Time Claims Data - 2023": "Source: Association of Workers' Compensation Boards of Canada – 2023"
+        },
+        {
+          "Canada Lost Time Claims Data - 2023": "Produit par l'Association des commissions des accidents du travail du Canada (ACATC) en 2023"
+        }
+      ]
+    }
+  }
+}

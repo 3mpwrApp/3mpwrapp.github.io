@@ -1,0 +1,30 @@
+{
+  "2017": {
+    "totalEmployers": 27794,
+    "rebates": 1,
+    "surcharges": 1,
+    "rebatePercentage": "0.00%",
+    "surchargePercentage": "0.00%"
+  },
+  "2018": {
+    "totalEmployers": 21189,
+    "rebates": 0,
+    "surcharges": 0,
+    "rebatePercentage": "0.00%",
+    "surchargePercentage": "0.00%"
+  },
+  "2019": {
+    "totalEmployers": 21578,
+    "rebates": 0,
+    "surcharges": 0,
+    "rebatePercentage": "0.00%",
+    "surchargePercentage": "0.00%"
+  },
+  "2020": {
+    "totalEmployers": 21435,
+    "rebates": 0,
+    "surcharges": 0,
+    "rebatePercentage": "0.00%",
+    "surchargePercentage": "0.00%"
+  }
+}

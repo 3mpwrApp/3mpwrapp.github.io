@@ -1,0 +1,236 @@
+{
+  "specialistCounts": [
+    {
+      "specialist": "Surgeon",
+      "count": 195,
+      "percentage": "0.20"
+    },
+    {
+      "specialist": "Family Doctor",
+      "count": 119,
+      "percentage": "0.12"
+    },
+    {
+      "specialist": "Psychiatrist",
+      "count": 44,
+      "percentage": "0.04"
+    },
+    {
+      "specialist": "Psychologist",
+      "count": 29,
+      "percentage": "0.03"
+    },
+    {
+      "specialist": "Occupational Medicine",
+      "count": 21,
+      "percentage": "0.02"
+    },
+    {
+      "specialist": "Neurologist",
+      "count": 12,
+      "percentage": "0.01"
+    },
+    {
+      "specialist": "Pain Specialist",
+      "count": 9,
+      "percentage": "0.01"
+    },
+    {
+      "specialist": "Orthopedic",
+      "count": 4,
+      "percentage": "0.00"
+    },
+    {
+      "specialist": "Physiatrist",
+      "count": 4,
+      "percentage": "0.00"
+    },
+    {
+      "specialist": "Rheumatologist",
+      "count": 1,
+      "percentage": "0.00"
+    }
+  ],
+  "specialistWithIssue": {
+    "Orthopedic": {
+      "NEL": 1,
+      "LOE": 1,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 2,
+      "Reconsideration": 0,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 1,
+      "Permanent Impairment": 1,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Physiatrist": {
+      "NEL": 0,
+      "LOE": 0,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 1,
+      "Right to Sue": 0,
+      "Chronic Pain": 1,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Neurologist": {
+      "NEL": 0,
+      "LOE": 0,
+      "FEL": 1,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 1,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 1,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 1
+    },
+    "Psychiatrist": {
+      "NEL": 7,
+      "LOE": 1,
+      "FEL": 1,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 2,
+      "Right to Sue": 0,
+      "Chronic Pain": 7,
+      "Pre-existing": 3,
+      "Permanent Impairment": 2,
+      "Loss of Earnings": 1,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 3,
+      "Mental Health": 10
+    },
+    "Psychologist": {
+      "NEL": 3,
+      "LOE": 2,
+      "FEL": 0,
+      "SIEF": 2,
+      "Initial Entitlement": 0,
+      "Reconsideration": 1,
+      "Right to Sue": 0,
+      "Chronic Pain": 2,
+      "Pre-existing": 3,
+      "Permanent Impairment": 1,
+      "Loss of Earnings": 2,
+      "Vocational Rehab": 1,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 2,
+      "Mental Health": 6
+    },
+    "Pain Specialist": {
+      "NEL": 2,
+      "LOE": 1,
+      "FEL": 1,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 2,
+      "Right to Sue": 0,
+      "Chronic Pain": 2,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Rheumatologist": {
+      "NEL": 0,
+      "LOE": 0,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 0,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 1,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Occupational Medicine": {
+      "NEL": 1,
+      "LOE": 0,
+      "FEL": 0,
+      "SIEF": 0,
+      "Initial Entitlement": 0,
+      "Reconsideration": 1,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 0,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Family Doctor": {
+      "NEL": 8,
+      "LOE": 16,
+      "FEL": 4,
+      "SIEF": 5,
+      "Initial Entitlement": 4,
+      "Reconsideration": 10,
+      "Right to Sue": 1,
+      "Chronic Pain": 7,
+      "Pre-existing": 11,
+      "Permanent Impairment": 1,
+      "Loss of Earnings": 6,
+      "Vocational Rehab": 0,
+      "CPD": 3,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "Surgeon": {
+      "NEL": 27,
+      "LOE": 18,
+      "FEL": 3,
+      "SIEF": 11,
+      "Initial Entitlement": 11,
+      "Reconsideration": 9,
+      "Right to Sue": 2,
+      "Chronic Pain": 5,
+      "Pre-existing": 23,
+      "Permanent Impairment": 18,
+      "Loss of Earnings": 11,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 3
+    }
+  }
+}

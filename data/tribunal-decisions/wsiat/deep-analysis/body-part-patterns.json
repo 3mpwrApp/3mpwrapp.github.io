@@ -1,0 +1,282 @@
+{
+  "bodyPartCounts": [
+    {
+      "bodyPart": "Back",
+      "count": 13407,
+      "percentage": "13.54"
+    },
+    {
+      "bodyPart": "Shoulder",
+      "count": 5295,
+      "percentage": "5.35"
+    },
+    {
+      "bodyPart": "Neck",
+      "count": 3535,
+      "percentage": "3.57"
+    },
+    {
+      "bodyPart": "Knee",
+      "count": 3162,
+      "percentage": "3.19"
+    },
+    {
+      "bodyPart": "Hand",
+      "count": 2785,
+      "percentage": "2.81"
+    },
+    {
+      "bodyPart": "Foot",
+      "count": 1462,
+      "percentage": "1.48"
+    },
+    {
+      "bodyPart": "Head",
+      "count": 1198,
+      "percentage": "1.21"
+    },
+    {
+      "bodyPart": "Arm",
+      "count": 1050,
+      "percentage": "1.06"
+    },
+    {
+      "bodyPart": "Elbow",
+      "count": 1001,
+      "percentage": "1.01"
+    },
+    {
+      "bodyPart": "Leg",
+      "count": 752,
+      "percentage": "0.76"
+    },
+    {
+      "bodyPart": "Hip",
+      "count": 697,
+      "percentage": "0.70"
+    },
+    {
+      "bodyPart": "Chest",
+      "count": 573,
+      "percentage": "0.58"
+    }
+  ],
+  "bodyPartWithIssue": {
+    "Back": {
+      "NEL": 3673,
+      "LOE": 1695,
+      "FEL": 1131,
+      "SIEF": 547,
+      "Initial Entitlement": 318,
+      "Reconsideration": 333,
+      "Right to Sue": 39,
+      "Chronic Pain": 1621,
+      "Pre-existing": 1510,
+      "Permanent Impairment": 2030,
+      "Loss of Earnings": 1259,
+      "Vocational Rehab": 76,
+      "CPD": 32,
+      "HAVS": 1,
+      "PTSD": 7,
+      "Mental Health": 137
+    },
+    "Knee": {
+      "NEL": 804,
+      "LOE": 409,
+      "FEL": 151,
+      "SIEF": 166,
+      "Initial Entitlement": 111,
+      "Reconsideration": 63,
+      "Right to Sue": 6,
+      "Chronic Pain": 142,
+      "Pre-existing": 608,
+      "Permanent Impairment": 520,
+      "Loss of Earnings": 327,
+      "Vocational Rehab": 11,
+      "CPD": 6,
+      "HAVS": 1,
+      "PTSD": 0,
+      "Mental Health": 16
+    },
+    "Shoulder": {
+      "NEL": 1683,
+      "LOE": 910,
+      "FEL": 345,
+      "SIEF": 367,
+      "Initial Entitlement": 188,
+      "Reconsideration": 109,
+      "Right to Sue": 5,
+      "Chronic Pain": 635,
+      "Pre-existing": 632,
+      "Permanent Impairment": 981,
+      "Loss of Earnings": 717,
+      "Vocational Rehab": 17,
+      "CPD": 18,
+      "HAVS": 0,
+      "PTSD": 3,
+      "Mental Health": 34
+    },
+    "Neck": {
+      "NEL": 1086,
+      "LOE": 503,
+      "FEL": 238,
+      "SIEF": 128,
+      "Initial Entitlement": 112,
+      "Reconsideration": 80,
+      "Right to Sue": 3,
+      "Chronic Pain": 522,
+      "Pre-existing": 472,
+      "Permanent Impairment": 611,
+      "Loss of Earnings": 402,
+      "Vocational Rehab": 9,
+      "CPD": 17,
+      "HAVS": 1,
+      "PTSD": 4,
+      "Mental Health": 40
+    },
+    "Hand": {
+      "NEL": 866,
+      "LOE": 443,
+      "FEL": 159,
+      "SIEF": 116,
+      "Initial Entitlement": 69,
+      "Reconsideration": 50,
+      "Right to Sue": 5,
+      "Chronic Pain": 210,
+      "Pre-existing": 206,
+      "Permanent Impairment": 556,
+      "Loss of Earnings": 346,
+      "Vocational Rehab": 9,
+      "CPD": 9,
+      "HAVS": 28,
+      "PTSD": 3,
+      "Mental Health": 38
+    },
+    "Foot": {
+      "NEL": 414,
+      "LOE": 195,
+      "FEL": 80,
+      "SIEF": 60,
+      "Initial Entitlement": 57,
+      "Reconsideration": 30,
+      "Right to Sue": 1,
+      "Chronic Pain": 89,
+      "Pre-existing": 152,
+      "Permanent Impairment": 271,
+      "Loss of Earnings": 140,
+      "Vocational Rehab": 6,
+      "CPD": 2,
+      "HAVS": 0,
+      "PTSD": 1,
+      "Mental Health": 10
+    },
+    "Hip": {
+      "NEL": 180,
+      "LOE": 108,
+      "FEL": 28,
+      "SIEF": 23,
+      "Initial Entitlement": 41,
+      "Reconsideration": 24,
+      "Right to Sue": 0,
+      "Chronic Pain": 57,
+      "Pre-existing": 101,
+      "Permanent Impairment": 126,
+      "Loss of Earnings": 78,
+      "Vocational Rehab": 1,
+      "CPD": 1,
+      "HAVS": 0,
+      "PTSD": 3,
+      "Mental Health": 4
+    },
+    "Elbow": {
+      "NEL": 359,
+      "LOE": 150,
+      "FEL": 65,
+      "SIEF": 49,
+      "Initial Entitlement": 42,
+      "Reconsideration": 20,
+      "Right to Sue": 0,
+      "Chronic Pain": 113,
+      "Pre-existing": 85,
+      "Permanent Impairment": 236,
+      "Loss of Earnings": 118,
+      "Vocational Rehab": 6,
+      "CPD": 3,
+      "HAVS": 0,
+      "PTSD": 1,
+      "Mental Health": 16
+    },
+    "Head": {
+      "NEL": 329,
+      "LOE": 180,
+      "FEL": 47,
+      "SIEF": 59,
+      "Initial Entitlement": 57,
+      "Reconsideration": 35,
+      "Right to Sue": 13,
+      "Chronic Pain": 154,
+      "Pre-existing": 144,
+      "Permanent Impairment": 234,
+      "Loss of Earnings": 138,
+      "Vocational Rehab": 3,
+      "CPD": 5,
+      "HAVS": 1,
+      "PTSD": 4,
+      "Mental Health": 45
+    },
+    "Chest": {
+      "NEL": 132,
+      "LOE": 74,
+      "FEL": 24,
+      "SIEF": 13,
+      "Initial Entitlement": 20,
+      "Reconsideration": 17,
+      "Right to Sue": 1,
+      "Chronic Pain": 68,
+      "Pre-existing": 52,
+      "Permanent Impairment": 103,
+      "Loss of Earnings": 67,
+      "Vocational Rehab": 1,
+      "CPD": 5,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 5
+    },
+    "Arm": {
+      "NEL": 229,
+      "LOE": 119,
+      "FEL": 75,
+      "SIEF": 48,
+      "Initial Entitlement": 30,
+      "Reconsideration": 18,
+      "Right to Sue": 5,
+      "Chronic Pain": 113,
+      "Pre-existing": 87,
+      "Permanent Impairment": 129,
+      "Loss of Earnings": 85,
+      "Vocational Rehab": 5,
+      "CPD": 2,
+      "HAVS": 26,
+      "PTSD": 0,
+      "Mental Health": 16
+    },
+    "Leg": {
+      "NEL": 198,
+      "LOE": 87,
+      "FEL": 33,
+      "SIEF": 28,
+      "Initial Entitlement": 20,
+      "Reconsideration": 12,
+      "Right to Sue": 4,
+      "Chronic Pain": 64,
+      "Pre-existing": 85,
+      "Permanent Impairment": 119,
+      "Loss of Earnings": 62,
+      "Vocational Rehab": 5,
+      "CPD": 2,
+      "HAVS": 0,
+      "PTSD": 3,
+      "Mental Health": 13
+    }
+  }
+}

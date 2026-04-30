@@ -28,7 +28,15 @@
     "a11y:ci": "npm run a11y:test",
     "a11y:quick": "node scripts/axe-check-aaa.js && node scripts/test-contrast-aaa.js",
     "test:accessibility": "npm run a11y:test",
-    "test:a11y": "npm run a11y:test"
+    "test:a11y": "npm run a11y:test",
+    "parse:wsiat": "node scripts/parse-wsiat-decisions.mjs",
+    "wsiat:process": "node scripts/parse-wsiat-decisions.mjs",
+    "wsiat:scrape": "node scripts/scrape-wsiat-all-decisions.mjs",
+    "scrape:wsiat": "node scripts/scrape-wsiat-all-decisions.mjs",
+    "wsiat:csv": "node scripts/parse-wsiat-csv.mjs",
+    "parse:wsiat:csv": "node scripts/parse-wsiat-csv.mjs",
+    "wsiat:analyze": "node scripts/analyze-wsiat-patterns.mjs",
+    "analyze:wsiat": "node scripts/analyze-wsiat-patterns.mjs"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.10.2",
@@ -47,6 +55,7 @@
     "clean-css": "^5.3.3",
     "cssnano": "^7.1.2",
     "eslint": "^9.39.2",
+    "exceljs": "^4.4.0",
     "jsonpath-plus": "^10.3.0",
     "linkinator": "^7.3.0",
     "pa11y-ci": "^2.3.1",

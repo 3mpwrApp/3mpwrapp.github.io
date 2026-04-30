@@ -1,0 +1,78 @@
+{
+  "headers": [
+    "Year",
+    "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy",
+    ""
+  ],
+  "rows": [
+    {
+      "Year": "2014",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "8",
+      "": null
+    },
+    {
+      "Year": "2015",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "8",
+      "": null
+    },
+    {
+      "Year": "2016",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "12",
+      "": null
+    },
+    {
+      "Year": "2017",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "10",
+      "": null
+    },
+    {
+      "Year": "2018",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "17",
+      "": null
+    },
+    {
+      "Year": "2019",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "10",
+      "": null
+    },
+    {
+      "Year": "2020",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "16",
+      "": null
+    },
+    {
+      "Year": "2021",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "6",
+      "": "*The WSIB's Fatal Claim Investigation program is being phased out, and replaced by new Rate Framework."
+    },
+    {
+      "Year": "2022",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "14",
+      "": "*For fatalities occured prior to 2021."
+    },
+    {
+      "Year": "2023",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "0",
+      "": null
+    },
+    {
+      "Year": "2024",
+      "Number of completed investigations of fatalities pursuant to the WSIB's Fatal Claim Premium Adjustment Policy": "0",
+      "": "*The WSIB will no longer refresh this data beyond 2024 as the Fatal Claim Investigation Program has been closed since 2021."
+    }
+  ],
+  "rowCount": 11,
+  "byYear": {
+    "2014": 1,
+    "2015": 1,
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2020": 1,
+    "2021": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 1
+  }
+}

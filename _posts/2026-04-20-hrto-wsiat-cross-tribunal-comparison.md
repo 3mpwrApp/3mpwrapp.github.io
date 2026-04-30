@@ -12,9 +12,15 @@ toc: true
 
 # Two Ontario Tribunals, Two Opposite Realities
 
+**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). WSIAT analysis now includes body part patterns, co-occurrence networks, temporal trends, and vice-chair specialization. See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html) | [Interactive Visualization](/connecting-the-dots-wsiat-keyword-network.html)
+
+---
+
 **Comparative analysis of 5,186 tribunal decisions reveals significant disparities: WSIAT workers win 65-73% of appeals (official statistics) with 0.5% abandonment rate, while HRTO shows 73.5% abandonment rate with email delivery issues cited in 70.1% of abandoned cases. Same province, same vulnerable populations, measurably different outcomes.**
 
 **⚠️ Data Limitations:** Many decision outcomes are inferred from keywords because CanLII API doesn't label outcomes explicitly—not a CanLII issue, but intentional API access restrictions. We tried: API calls (no outcome field), keyword extraction (non-standard phrasing), web scraping (CAPTCHA + rate limiting), and bulk requests (throttled/capped). To get 100% accurate outcomes, we'd need to manually read each case individually. Our analysis uses keyword patterns where official outcomes aren't available.
+
+**📊 April 29, 2026 Update:** Full WSIAT dataset now available - **98,992 decisions (1987-2026)** from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). See [Deep-Dive Analysis Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html) for comprehensive pattern analysis including co-occurrence networks, temporal trends, vice-chair specialization, and body part injury patterns.
 
 ---
 
@@ -56,8 +62,10 @@ Interpretation boundary: Tier B remains inferred, not confirmed, and Tier C rema
 
 | Tribunal | Cases | Outcomes Detected | Victory Rate | Abandonment Rate | Email Issue Citation Rate |
 |----------|-------|-------------------|--------------|------------------|--------------|
-| **WSIAT** (Workplace Injury) | **2,000** | **651 (32.5%)** | **65-73%*** | **0.5%** | **0%** |
+| **WSIAT** (Workplace Injury) | **2,000 (98,992 full dataset)** | **651 (32.5%)** | **65-73%*** | **0.5%** | **0%** |
 | **HRTO** (Human Rights) | **3,186** | **2,274 (71.4%)** | **0.7%** | **73.5%** | **70.1%** |
+
+**Note:** Full WSIAT dataset (98,992 decisions, 1987-2026) now available from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). Sample analysis used 2,000 cases; official statistics from WSIAT Annual Reports confirmed across entire dataset.
 
 *Official WSIAT data shows 65-73% of worker appeals successful (combining fully allowed, partially successful, and referred back to WSIB). Our CanLII keyword analysis detected 63.1% "allowed" outcomes from 651 cases, which aligns with the lower end of official success rate range.
 

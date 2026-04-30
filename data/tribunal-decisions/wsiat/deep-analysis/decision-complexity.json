@@ -1,0 +1,1122 @@
+{
+  "complexityDistribution": {
+    "Simple (1 issue)": 19656,
+    "Moderate (2-3 issues)": 22787,
+    "Complex (4-5 issues)": 2787,
+    "Highly Complex (6+ issues)": 79
+  },
+  "mostComplexDecisions": [
+    {
+      "decisionNumber": "1309/20",
+      "year": "20",
+      "issueCount": 7,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "PTSD"
+      ],
+      "viceChair": "J. Dimovski"
+    },
+    {
+      "decisionNumber": "1273/21",
+      "year": "21",
+      "issueCount": 7,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Initial Entitlement",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "J. Dimovski"
+    },
+    {
+      "decisionNumber": "1792/21",
+      "year": "21",
+      "issueCount": 7,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "J. Dimovski"
+    },
+    {
+      "decisionNumber": "861/22",
+      "year": "22",
+      "issueCount": 7,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "K. Evans"
+    },
+    {
+      "decisionNumber": "106/22",
+      "year": "22",
+      "issueCount": 7,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "Mental Health"
+      ],
+      "viceChair": "R. Hoare"
+    },
+    {
+      "decisionNumber": "612/22",
+      "year": "22",
+      "issueCount": 7,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "Mental Health"
+      ],
+      "viceChair": "K. Jepson"
+    },
+    {
+      "decisionNumber": "2770/00",
+      "year": "00",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "FEL",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "R. McCutcheon"
+    },
+    {
+      "decisionNumber": "54/07",
+      "year": "07",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "T. Silipo"
+    },
+    {
+      "decisionNumber": "458/08",
+      "year": "08",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "B. Cook"
+    },
+    {
+      "decisionNumber": "56/09",
+      "year": "09",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "Mental Health"
+      ],
+      "viceChair": "J. Dimovski"
+    },
+    {
+      "decisionNumber": "1593/11",
+      "year": "11",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Reconsideration",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "T. Mitchinson"
+    },
+    {
+      "decisionNumber": "1837/11",
+      "year": "11",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Reconsideration",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "PTSD"
+      ],
+      "viceChair": "M. Keil"
+    },
+    {
+      "decisionNumber": "1999/12",
+      "year": "12",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "E. Smith"
+    },
+    {
+      "decisionNumber": "1028/13",
+      "year": "13",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "S. Ryan"
+    },
+    {
+      "decisionNumber": "1167/13",
+      "year": "13",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Reconsideration",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "J. Noble"
+    },
+    {
+      "decisionNumber": "813/13",
+      "year": "13",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Reconsideration",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "L. Gehrke"
+    },
+    {
+      "decisionNumber": "1126/14",
+      "year": "14",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "FEL",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "L. Petrykowski"
+    },
+    {
+      "decisionNumber": "870/15",
+      "year": "15",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "Mental Health"
+      ],
+      "viceChair": "S. Darvish"
+    },
+    {
+      "decisionNumber": "1214/15",
+      "year": "15",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "Mental Health"
+      ],
+      "viceChair": "R. McCutcheon"
+    },
+    {
+      "decisionNumber": "1379/15",
+      "year": "15",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Reconsideration",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "L. Petrykowski"
+    },
+    {
+      "decisionNumber": "166/16",
+      "year": "16",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "M. Keil"
+    },
+    {
+      "decisionNumber": "3152/16",
+      "year": "16",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "K. Jacques"
+    },
+    {
+      "decisionNumber": "495/17",
+      "year": "17",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "N. Perryman"
+    },
+    {
+      "decisionNumber": "2403/18",
+      "year": "18",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "J. Dimovski"
+    },
+    {
+      "decisionNumber": "3084/18",
+      "year": "18",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "M. Crystal"
+    },
+    {
+      "decisionNumber": "1739/19",
+      "year": "19",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "C. Huras"
+    },
+    {
+      "decisionNumber": "1986/19",
+      "year": "19",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "J. Smith"
+    },
+    {
+      "decisionNumber": "1773/19",
+      "year": "19",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "PTSD"
+      ],
+      "viceChair": "A. Somerville"
+    },
+    {
+      "decisionNumber": "1069/19",
+      "year": "19",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "A. Baker"
+    },
+    {
+      "decisionNumber": "2169/19",
+      "year": "19",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "PTSD",
+        "Mental Health"
+      ],
+      "viceChair": "K. Jepson"
+    },
+    {
+      "decisionNumber": "1232/20",
+      "year": "20",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "L. Petrykowski"
+    },
+    {
+      "decisionNumber": "1154/20",
+      "year": "20",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "N. Perryman"
+    },
+    {
+      "decisionNumber": "613/20",
+      "year": "20",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "M. Keil"
+    },
+    {
+      "decisionNumber": "1361/20",
+      "year": "20",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "C. Huras"
+    },
+    {
+      "decisionNumber": "697/20",
+      "year": "20",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "K. Jepson"
+    },
+    {
+      "decisionNumber": "707/20",
+      "year": "20",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "K. Jepson"
+    },
+    {
+      "decisionNumber": "1052/21",
+      "year": "21",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "C. Zehr (PT)"
+    },
+    {
+      "decisionNumber": "57/21",
+      "year": "21",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Reconsideration",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "M. Crystal"
+    },
+    {
+      "decisionNumber": "334/21",
+      "year": "21",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Initial Entitlement",
+        "Pre-existing",
+        "Permanent Impairment"
+      ],
+      "viceChair": "N. Perryman"
+    },
+    {
+      "decisionNumber": "1880/21",
+      "year": "21",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "A. Somerville"
+    },
+    {
+      "decisionNumber": "1458/21",
+      "year": "21",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Loss of Earnings",
+        "PTSD"
+      ],
+      "viceChair": "L. Petrykowski"
+    },
+    {
+      "decisionNumber": "1473/21",
+      "year": "21",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "A. Patterson"
+    },
+    {
+      "decisionNumber": "1708/21",
+      "year": "21",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "K. Iima"
+    },
+    {
+      "decisionNumber": "623/21",
+      "year": "21",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "Z. Onen"
+    },
+    {
+      "decisionNumber": "1348/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "N. Perryman"
+    },
+    {
+      "decisionNumber": "845/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Pre-existing",
+        "Loss of Earnings",
+        "Mental Health"
+      ],
+      "viceChair": "V. Patel"
+    },
+    {
+      "decisionNumber": "935/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "A. Kosny"
+    },
+    {
+      "decisionNumber": "1018/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "K. Jepson"
+    },
+    {
+      "decisionNumber": "471/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "A. Patterson"
+    },
+    {
+      "decisionNumber": "153/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "K. Iima"
+    },
+    {
+      "decisionNumber": "1740/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "L. Petrykowski"
+    },
+    {
+      "decisionNumber": "1743/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "M. Lai"
+    },
+    {
+      "decisionNumber": "1748/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "R. Hoare"
+    },
+    {
+      "decisionNumber": "596/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "C. Zehr (PT)"
+    },
+    {
+      "decisionNumber": "618/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "Mental Health"
+      ],
+      "viceChair": "S. Ryan"
+    },
+    {
+      "decisionNumber": "783/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "A. Baker"
+    },
+    {
+      "decisionNumber": "830/22",
+      "year": "22",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "A. Wong"
+    },
+    {
+      "decisionNumber": "1756/23",
+      "year": "23",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "C. Zehr (PT)"
+    },
+    {
+      "decisionNumber": "81/23",
+      "year": "23",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "C. Zehr (PT)"
+    },
+    {
+      "decisionNumber": "1705/23",
+      "year": "23",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "PTSD",
+        "Mental Health"
+      ],
+      "viceChair": "G. Dee"
+    },
+    {
+      "decisionNumber": "784/23",
+      "year": "23",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "E. Kosmidis"
+    },
+    {
+      "decisionNumber": "892/23",
+      "year": "23",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "R. Horne"
+    },
+    {
+      "decisionNumber": "1008/23",
+      "year": "23",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "A. Baker"
+    },
+    {
+      "decisionNumber": "360/23",
+      "year": "23",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "K. Jepson"
+    },
+    {
+      "decisionNumber": "240/24",
+      "year": "24",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "Mental Health"
+      ],
+      "viceChair": "A. Wong"
+    },
+    {
+      "decisionNumber": "550/24",
+      "year": "24",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "C. Zehr (PT)"
+    },
+    {
+      "decisionNumber": "690/24",
+      "year": "24",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "Mental Health"
+      ],
+      "viceChair": "P. Allen"
+    },
+    {
+      "decisionNumber": "547/24",
+      "year": "24",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "L. Petrykowski"
+    },
+    {
+      "decisionNumber": "818/24",
+      "year": "24",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "C. Zehr (PT)"
+    },
+    {
+      "decisionNumber": "1162/24",
+      "year": "24",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "A. Durette"
+    },
+    {
+      "decisionNumber": "1215/24",
+      "year": "24",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "A. Kosny"
+    },
+    {
+      "decisionNumber": "1287/24",
+      "year": "24",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "L. Petrykowski"
+    },
+    {
+      "decisionNumber": "1352/24",
+      "year": "24",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "S. Ryan"
+    },
+    {
+      "decisionNumber": "132/25",
+      "year": "25",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "SIEF",
+        "Pre-existing",
+        "Permanent Impairment",
+        "Loss of Earnings"
+      ],
+      "viceChair": "R. Andal"
+    },
+    {
+      "decisionNumber": "848/25",
+      "year": "25",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "N. Perryman"
+    },
+    {
+      "decisionNumber": "1179/25",
+      "year": "25",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Initial Entitlement",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "PTSD"
+      ],
+      "viceChair": "R. Nairn"
+    },
+    {
+      "decisionNumber": "1234/25",
+      "year": "25",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "LOE",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Loss of Earnings",
+        "CPD"
+      ],
+      "viceChair": "A. Kosny"
+    },
+    {
+      "decisionNumber": "11/25",
+      "year": "25",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "SIEF",
+        "Initial Entitlement",
+        "Pre-existing",
+        "PTSD",
+        "Mental Health"
+      ],
+      "viceChair": "N. Perryman"
+    },
+    {
+      "decisionNumber": "1602/99",
+      "year": "99",
+      "issueCount": 6,
+      "issues": [
+        "NEL",
+        "FEL",
+        "Chronic Pain",
+        "Permanent Impairment",
+        "Vocational Rehab",
+        "Mental Health"
+      ],
+      "viceChair": "M. Keil"
+    }
+  ]
+}

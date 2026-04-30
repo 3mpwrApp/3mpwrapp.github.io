@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mental Health & PTSD Appeal Template - Free WSIB Appeal Letter
-description: Fill-in-the-blank appeal template for WSIB mental health and PTSD denials. Based on 611 psychotraumatic disability cases. Addresses all 4 common denial tactics.
+description: Fill-in-the-blank appeal template for WSIB mental health and PTSD denials. Based on 471 PTSD/psychotraumatic cases from WSIAT Open Data. Addresses all 4 common denial tactics.
 permalink: /templates/mental-health-ptsd-appeal/
 categories: [templates, wsib, appeals, mental-health]
 tags: [ptsd, mental-health, psychotraumatic-disability, appeal-template, wsib-denial]
@@ -12,7 +12,9 @@ tags: [ptsd, mental-health, psychotraumatic-disability, appeal-template, wsib-de
 > **📋 FILL-IN-BLANK APPEAL TEMPLATE**
 > Use this template to appeal a WSIB denial of mental health or PTSD claim. Fill in the blanks with YOUR specific details. This template provides PRE-WRITTEN legal arguments addressing all common denials.
 
-*Updated April 15, 2026 - Based on analysis of 611 psychotraumatic disability tribunal decisions (5.3% of 11,430 ONWSIAT cases 2020-2026)*
+**📊 Based on 471 PTSD/Psychotraumatic cases (0.48% of 98,992 WSIAT decisions) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html)**
+
+**Data Note:** PTSD (159 cases) + Psychotraumatic Disability (312 cases) analyzed from full 40-year dataset (1987-2026)
 
 ---
 

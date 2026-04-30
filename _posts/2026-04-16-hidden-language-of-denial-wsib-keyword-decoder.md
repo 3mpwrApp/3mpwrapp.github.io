@@ -13,6 +13,10 @@ featured: true
 
 # The Hidden Language of Denial: Understanding WSIB Keyword Patterns
 
+**📅 UPDATED: April 29, 2026** - Enhanced with comprehensive analysis of full WSIAT dataset (98,992 decisions, 1987-2026) from [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html). New findings show body part patterns across 40 years: Back #1 (13,407 cases, 13.54%), Shoulder #2 (5,295 cases, 5.35%), Neck #3 (3,535 cases, 3.57%), Knee #4 (3,162 cases, 3.19%). Co-occurrence analysis reveals NEL+Permanent Impairment appear together in 11,516 cases (11.63%). See [Deep-Dive Report](/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html) for complete patterns.
+
+---
+
 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 40px rgba(240, 147, 251, 0.3);">
 <h2 style="color: white; margin-top: 0; font-size: 28px; border: none;">⚡ Key Findings (Read This First)</h2>
 

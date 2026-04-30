@@ -1,8 +1,56 @@
 # Knowledge Base & Templates Coverage Audit
-## Based on 11,430 ONWSIAT Tribunal Decisions (2020-2026)
+## Based on 98,992 WSIAT Decisions (1987-2026) + 35,928 Multi-Tribunal Analysis (2020-2026)
 
 **Audit Date:** April 15, 2026  
-**Data Source:** [WSIB System Analysis Complete 2020-2026](./WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
+**Last Updated:** April 29, 2026 (added full WSIAT dataset 1987-2026 + deep-dive analysis)  
+**Data Sources:** 
+- [WSIB System Analysis Complete 2020-2026](./WSIB-SYSTEM-ANALYSIS-COMPLETE-2020-2026.md)
+- [WSIAT Complete Dataset](../data/tribunal-decisions/wsiat/wsiat-metadata.json) (98,992 decisions)
+- [WSIAT Open Data Portal](https://www.wsiat.ca/en/home/opendata_decisions.html) - Official CSV export source
+- [WSIAT Deep Dive Report](./WSIAT-DEEP-DIVE-REPORT-2026-04-29.html) - Advanced pattern analysis
+
+## April 29, 2026 Major Update - WSIAT Complete Dataset + Deep-Dive Analysis
+
+**NEW:** Full WSIAT dataset now available - **98,992 decisions from 1987-2026** (40 years of data)
+
+**Coverage by Decade:**
+- 1987-1999: 19,878 decisions
+- 2000-2009: 31,980 decisions  
+- 2010-2019: 28,576 decisions
+- 2020-2026: 14,165 decisions
+- Unknown year: 4,393 decisions
+
+**Metadata Included:** Decision number, date, keywords, summary, vice-chair, employer/worker side members
+
+**Deep-Dive Analysis Completed (9 Categories):**
+1. **Keyword Co-occurrence:** Top issue pairs (NEL + Permanent Impairment: 11,516 cases)
+2. **Temporal Evolution:** How issues changed over 40 years (FEL declining, LOE rising)
+3. **Vice-Chair Specialization:** 40 specialists identified (>30% focus on specific issues)
+4. **Body Part Patterns:** Back (13,407), Shoulder (5,295), Neck (3,535), Knee (3,162)
+5. **Medical Specialists:** Surgeon (195 mentions), Family Doctor (119), Psychiatrist (44)
+6. **Policy Citations:** Section 31/Right to Sue (42 citations), Section 43 (15), Section 147 (31)
+7. **Decision Complexity:** Simple (19,656), Moderate (22,787), Complex (2,787)
+8. **Outcome Indicators:** Allowed, Denied, Varied, Confirmed patterns detected
+9. **Network Visualization:** 16 nodes, 50 links showing issue relationships
+
+**Access:** 
+- [Metadata JSON](../data/tribunal-decisions/wsiat/wsiat-metadata.json)
+- [Decisions by Year](../data/tribunal-decisions/wsiat/decisions-by-year/) (41 JSON files)
+- [Deep-Dive Analysis Files](../data/tribunal-decisions/wsiat/deep-analysis/) (8 JSON files)
+- [Keyword Network Visualization](../connecting-the-dots-wsiat-keyword-network.html) (interactive)
+- [Pattern Analysis Report](./WSIAT-PATTERN-ANALYSIS-2026-04-29.html)
+- [Deep-Dive Report](./WSIAT-DEEP-DIVE-REPORT-2026-04-29.html)
+- [WSIAT vs BC WCAT Comparison](../blog/2026-04-29-wsiat-vs-bc-wcat-transparency-divide.html)
+- [Official Data Source](https://www.wsiat.ca/en/home/opendata_decisions.html) - WSIAT Open Data Portal
+
+**Knowledge Base Updates:**
+- ✅ **4 Comprehensive Guides Created:** NEL (20,680 cases), LOE (10,838 cases), Chronic Pain (6,876 cases), Back Injury (13,407 cases)
+- ✅ **2 Multi-Issue Guides:** NEL + Chronic Pain (2,101 co-occurrences)
+- ✅ **Guides Hub Page:** [/guides/](/guides/) with top 10 issues table
+- ✅ **3 Templates Enhanced:** Shoulder (5,295 cases), Knee (3,162 cases), Mental Health/PTSD (471 cases)
+- ✅ **Visualization Created:** [Interactive keyword network](../connecting-the-dots-wsiat-keyword-network.html)
+
+This represents the **largest open-source WSIAT dataset** in Canadian history and enables longitudinal trend analysis across four decades of workers' compensation appeals.
 
 ## April 26, 2026 Addendum - Cross-Tribunal Evidence Status
 

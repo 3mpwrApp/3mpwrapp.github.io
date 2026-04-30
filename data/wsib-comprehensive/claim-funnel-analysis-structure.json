@@ -1,0 +1,21 @@
+{
+  "description": "WSIB Claim Suppression Funnel Analysis",
+  "dataSource": {
+    "wsiat": "WSIAT Open Data Portal CSV (98,992 decisions, 1987-2026)",
+    "wsib": "WSIB Open Data Portal + Safety Check (2014-2026)",
+    "hrto": "Tribunals Ontario Open Data (2016-2026)",
+    "onsbt": "Tribunals Ontario Open Data (2012-2026)"
+  },
+  "wsiatAppeals": 98992,
+  "analysisNeeded": {
+    "registeredClaims": "Parse: Registered claims.xlsx from Safety Check",
+    "allowedClaims": "Parse: Allowed claims.xlsx from Safety Check",
+    "deniedClaims": "Calculate: Registered - Allowed = Denied",
+    "appealRate": "Calculate: WSIAT appeals / Denied claims = % who appeal",
+    "suppressionGap": "Calculate: Denied claims - WSIAT appeals = Workers who gave up",
+    "onsbtFunnel": "Cross-reference: WSIB denials → ODSP applications → ONSBT appeals",
+    "mentalStressSuppression": "Compare: Mental Stress Claims.xlsx vs WSIAT PTSD (159 cases)",
+    "fatalClaimsSuppression": "Compare: Fatal claims investigations vs WSIAT fatal appeals"
+  },
+  "hypothesis": "If WSIB denies 200,000 claims/year but WSIAT only receives 5,000 appeals, then 97.5% of denied workers never appeal (195,000 suppressed claims)"
+}

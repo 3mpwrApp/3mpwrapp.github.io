@@ -1,0 +1,578 @@
+{
+  "cooccurrence": {
+    "NEL": {
+      "LOE": 3546,
+      "FEL": 1781,
+      "SIEF": 214,
+      "Initial Entitlement": 221,
+      "Reconsideration": 312,
+      "Right to Sue": 1,
+      "Chronic Pain": 2101,
+      "Pre-existing": 1249,
+      "Permanent Impairment": 11516,
+      "Loss of Earnings": 3034,
+      "Vocational Rehab": 11,
+      "CPD": 63,
+      "HAVS": 10,
+      "PTSD": 36,
+      "Mental Health": 133
+    },
+    "LOE": {
+      "NEL": 3546,
+      "FEL": 53,
+      "SIEF": 103,
+      "Initial Entitlement": 224,
+      "Reconsideration": 383,
+      "Right to Sue": 3,
+      "Chronic Pain": 967,
+      "Pre-existing": 406,
+      "Permanent Impairment": 2292,
+      "Loss of Earnings": 9167,
+      "Vocational Rehab": 0,
+      "CPD": 57,
+      "HAVS": 4,
+      "PTSD": 48,
+      "Mental Health": 76
+    },
+    "FEL": {
+      "NEL": 1781,
+      "LOE": 53,
+      "SIEF": 25,
+      "Initial Entitlement": 15,
+      "Reconsideration": 250,
+      "Right to Sue": 1,
+      "Chronic Pain": 659,
+      "Pre-existing": 111,
+      "Permanent Impairment": 726,
+      "Loss of Earnings": 39,
+      "Vocational Rehab": 50,
+      "CPD": 8,
+      "HAVS": 2,
+      "PTSD": 0,
+      "Mental Health": 21
+    },
+    "SIEF": {
+      "NEL": 214,
+      "LOE": 103,
+      "FEL": 25,
+      "Initial Entitlement": 52,
+      "Reconsideration": 102,
+      "Right to Sue": 0,
+      "Chronic Pain": 43,
+      "Pre-existing": 3281,
+      "Permanent Impairment": 91,
+      "Loss of Earnings": 78,
+      "Vocational Rehab": 14,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 29,
+      "Mental Health": 159
+    },
+    "Initial Entitlement": {
+      "NEL": 221,
+      "LOE": 224,
+      "FEL": 15,
+      "SIEF": 52,
+      "Reconsideration": 45,
+      "Right to Sue": 22,
+      "Chronic Pain": 62,
+      "Pre-existing": 147,
+      "Permanent Impairment": 191,
+      "Loss of Earnings": 190,
+      "Vocational Rehab": 0,
+      "CPD": 7,
+      "HAVS": 3,
+      "PTSD": 22,
+      "Mental Health": 18
+    },
+    "Reconsideration": {
+      "NEL": 312,
+      "LOE": 383,
+      "FEL": 250,
+      "SIEF": 102,
+      "Initial Entitlement": 45,
+      "Right to Sue": 94,
+      "Chronic Pain": 232,
+      "Pre-existing": 97,
+      "Permanent Impairment": 159,
+      "Loss of Earnings": 127,
+      "Vocational Rehab": 6,
+      "CPD": 14,
+      "HAVS": 1,
+      "PTSD": 4,
+      "Mental Health": 44
+    },
+    "Right to Sue": {
+      "NEL": 1,
+      "LOE": 3,
+      "FEL": 1,
+      "SIEF": 0,
+      "Initial Entitlement": 22,
+      "Reconsideration": 94,
+      "Chronic Pain": 0,
+      "Pre-existing": 1,
+      "Permanent Impairment": 0,
+      "Loss of Earnings": 0,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 4
+    },
+    "Chronic Pain": {
+      "NEL": 2101,
+      "LOE": 967,
+      "FEL": 659,
+      "SIEF": 43,
+      "Initial Entitlement": 62,
+      "Reconsideration": 232,
+      "Right to Sue": 0,
+      "Pre-existing": 188,
+      "Permanent Impairment": 1447,
+      "Loss of Earnings": 839,
+      "Vocational Rehab": 12,
+      "CPD": 88,
+      "HAVS": 0,
+      "PTSD": 2,
+      "Mental Health": 83
+    },
+    "Pre-existing": {
+      "NEL": 1249,
+      "LOE": 406,
+      "FEL": 111,
+      "SIEF": 3281,
+      "Initial Entitlement": 147,
+      "Reconsideration": 97,
+      "Right to Sue": 1,
+      "Chronic Pain": 188,
+      "Permanent Impairment": 960,
+      "Loss of Earnings": 323,
+      "Vocational Rehab": 3,
+      "CPD": 7,
+      "HAVS": 2,
+      "PTSD": 27,
+      "Mental Health": 181
+    },
+    "Permanent Impairment": {
+      "NEL": 11516,
+      "LOE": 2292,
+      "FEL": 726,
+      "SIEF": 91,
+      "Initial Entitlement": 191,
+      "Reconsideration": 159,
+      "Right to Sue": 0,
+      "Chronic Pain": 1447,
+      "Pre-existing": 960,
+      "Loss of Earnings": 2050,
+      "Vocational Rehab": 6,
+      "CPD": 41,
+      "HAVS": 7,
+      "PTSD": 24,
+      "Mental Health": 66
+    },
+    "Loss of Earnings": {
+      "NEL": 3034,
+      "LOE": 9167,
+      "FEL": 39,
+      "SIEF": 78,
+      "Initial Entitlement": 190,
+      "Reconsideration": 127,
+      "Right to Sue": 0,
+      "Chronic Pain": 839,
+      "Pre-existing": 323,
+      "Permanent Impairment": 2050,
+      "Vocational Rehab": 1,
+      "CPD": 49,
+      "HAVS": 4,
+      "PTSD": 37,
+      "Mental Health": 54
+    },
+    "Vocational Rehab": {
+      "NEL": 11,
+      "LOE": 0,
+      "FEL": 50,
+      "SIEF": 14,
+      "Initial Entitlement": 0,
+      "Reconsideration": 6,
+      "Right to Sue": 0,
+      "Chronic Pain": 12,
+      "Pre-existing": 3,
+      "Permanent Impairment": 6,
+      "Loss of Earnings": 1,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 0,
+      "Mental Health": 5
+    },
+    "CPD": {
+      "NEL": 63,
+      "LOE": 57,
+      "FEL": 8,
+      "SIEF": 0,
+      "Initial Entitlement": 7,
+      "Reconsideration": 14,
+      "Right to Sue": 0,
+      "Chronic Pain": 88,
+      "Pre-existing": 7,
+      "Permanent Impairment": 41,
+      "Loss of Earnings": 49,
+      "Vocational Rehab": 0,
+      "HAVS": 0,
+      "PTSD": 2,
+      "Mental Health": 0
+    },
+    "HAVS": {
+      "NEL": 10,
+      "LOE": 4,
+      "FEL": 2,
+      "SIEF": 0,
+      "Initial Entitlement": 3,
+      "Reconsideration": 1,
+      "Right to Sue": 0,
+      "Chronic Pain": 0,
+      "Pre-existing": 2,
+      "Permanent Impairment": 7,
+      "Loss of Earnings": 4,
+      "Vocational Rehab": 0,
+      "CPD": 0,
+      "PTSD": 0,
+      "Mental Health": 0
+    },
+    "PTSD": {
+      "NEL": 36,
+      "LOE": 48,
+      "FEL": 0,
+      "SIEF": 29,
+      "Initial Entitlement": 22,
+      "Reconsideration": 4,
+      "Right to Sue": 0,
+      "Chronic Pain": 2,
+      "Pre-existing": 27,
+      "Permanent Impairment": 24,
+      "Loss of Earnings": 37,
+      "Vocational Rehab": 0,
+      "CPD": 2,
+      "HAVS": 0,
+      "Mental Health": 35
+    },
+    "Mental Health": {
+      "NEL": 133,
+      "LOE": 76,
+      "FEL": 21,
+      "SIEF": 159,
+      "Initial Entitlement": 18,
+      "Reconsideration": 44,
+      "Right to Sue": 4,
+      "Chronic Pain": 83,
+      "Pre-existing": 181,
+      "Permanent Impairment": 66,
+      "Loss of Earnings": 54,
+      "Vocational Rehab": 5,
+      "CPD": 0,
+      "HAVS": 0,
+      "PTSD": 35
+    }
+  },
+  "topPairs": [
+    {
+      "keyword1": "NEL",
+      "keyword2": "Permanent Impairment",
+      "count": 11516,
+      "percentage": "11.63"
+    },
+    {
+      "keyword1": "LOE",
+      "keyword2": "Loss of Earnings",
+      "count": 9167,
+      "percentage": "9.26"
+    },
+    {
+      "keyword1": "LOE",
+      "keyword2": "NEL",
+      "count": 3546,
+      "percentage": "3.58"
+    },
+    {
+      "keyword1": "Pre-existing",
+      "keyword2": "SIEF",
+      "count": 3281,
+      "percentage": "3.31"
+    },
+    {
+      "keyword1": "Loss of Earnings",
+      "keyword2": "NEL",
+      "count": 3034,
+      "percentage": "3.06"
+    },
+    {
+      "keyword1": "LOE",
+      "keyword2": "Permanent Impairment",
+      "count": 2292,
+      "percentage": "2.31"
+    },
+    {
+      "keyword1": "Chronic Pain",
+      "keyword2": "NEL",
+      "count": 2101,
+      "percentage": "2.12"
+    },
+    {
+      "keyword1": "Loss of Earnings",
+      "keyword2": "Permanent Impairment",
+      "count": 2050,
+      "percentage": "2.07"
+    },
+    {
+      "keyword1": "FEL",
+      "keyword2": "NEL",
+      "count": 1781,
+      "percentage": "1.80"
+    },
+    {
+      "keyword1": "Chronic Pain",
+      "keyword2": "Permanent Impairment",
+      "count": 1447,
+      "percentage": "1.46"
+    },
+    {
+      "keyword1": "NEL",
+      "keyword2": "Pre-existing",
+      "count": 1249,
+      "percentage": "1.26"
+    },
+    {
+      "keyword1": "Chronic Pain",
+      "keyword2": "LOE",
+      "count": 967,
+      "percentage": "0.98"
+    },
+    {
+      "keyword1": "Permanent Impairment",
+      "keyword2": "Pre-existing",
+      "count": 960,
+      "percentage": "0.97"
+    },
+    {
+      "keyword1": "Chronic Pain",
+      "keyword2": "Loss of Earnings",
+      "count": 839,
+      "percentage": "0.85"
+    },
+    {
+      "keyword1": "FEL",
+      "keyword2": "Permanent Impairment",
+      "count": 726,
+      "percentage": "0.73"
+    },
+    {
+      "keyword1": "Chronic Pain",
+      "keyword2": "FEL",
+      "count": 659,
+      "percentage": "0.67"
+    },
+    {
+      "keyword1": "LOE",
+      "keyword2": "Pre-existing",
+      "count": 406,
+      "percentage": "0.41"
+    },
+    {
+      "keyword1": "LOE",
+      "keyword2": "Reconsideration",
+      "count": 383,
+      "percentage": "0.39"
+    },
+    {
+      "keyword1": "Loss of Earnings",
+      "keyword2": "Pre-existing",
+      "count": 323,
+      "percentage": "0.33"
+    },
+    {
+      "keyword1": "NEL",
+      "keyword2": "Reconsideration",
+      "count": 312,
+      "percentage": "0.32"
+    },
+    {
+      "keyword1": "FEL",
+      "keyword2": "Reconsideration",
+      "count": 250,
+      "percentage": "0.25"
+    },
+    {
+      "keyword1": "Chronic Pain",
+      "keyword2": "Reconsideration",
+      "count": 232,
+      "percentage": "0.23"
+    },
+    {
+      "keyword1": "Initial Entitlement",
+      "keyword2": "LOE",
+      "count": 224,
+      "percentage": "0.23"
+    },
+    {
+      "keyword1": "Initial Entitlement",
+      "keyword2": "NEL",
+      "count": 221,
+      "percentage": "0.22"
+    },
+    {
+      "keyword1": "NEL",
+      "keyword2": "SIEF",
+      "count": 214,
+      "percentage": "0.22"
+    },
+    {
+      "keyword1": "Initial Entitlement",
+      "keyword2": "Permanent Impairment",
+      "count": 191,
+      "percentage": "0.19"
+    },
+    {
+      "keyword1": "Initial Entitlement",
+      "keyword2": "Loss of Earnings",
+      "count": 190,
+      "percentage": "0.19"
+    },
+    {
+      "keyword1": "Chronic Pain",
+      "keyword2": "Pre-existing",
+      "count": 188,
+      "percentage": "0.19"
+    },
+    {
+      "keyword1": "Mental Health",
+      "keyword2": "Pre-existing",
+      "count": 181,
+      "percentage": "0.18"
+    },
+    {
+      "keyword1": "Permanent Impairment",
+      "keyword2": "Reconsideration",
+      "count": 159,
+      "percentage": "0.16"
+    },
+    {
+      "keyword1": "Mental Health",
+      "keyword2": "SIEF",
+      "count": 159,
+      "percentage": "0.16"
+    },
+    {
+      "keyword1": "Initial Entitlement",
+      "keyword2": "Pre-existing",
+      "count": 147,
+      "percentage": "0.15"
+    },
+    {
+      "keyword1": "Mental Health",
+      "keyword2": "NEL",
+      "count": 133,
+      "percentage": "0.13"
+    },
+    {
+      "keyword1": "Loss of Earnings",
+      "keyword2": "Reconsideration",
+      "count": 127,
+      "percentage": "0.13"
+    },
+    {
+      "keyword1": "FEL",
+      "keyword2": "Pre-existing",
+      "count": 111,
+      "percentage": "0.11"
+    },
+    {
+      "keyword1": "LOE",
+      "keyword2": "SIEF",
+      "count": 103,
+      "percentage": "0.10"
+    },
+    {
+      "keyword1": "Reconsideration",
+      "keyword2": "SIEF",
+      "count": 102,
+      "percentage": "0.10"
+    },
+    {
+      "keyword1": "Pre-existing",
+      "keyword2": "Reconsideration",
+      "count": 97,
+      "percentage": "0.10"
+    },
+    {
+      "keyword1": "Reconsideration",
+      "keyword2": "Right to Sue",
+      "count": 94,
+      "percentage": "0.09"
+    },
+    {
+      "keyword1": "Permanent Impairment",
+      "keyword2": "SIEF",
+      "count": 91,
+      "percentage": "0.09"
+    },
+    {
+      "keyword1": "CPD",
+      "keyword2": "Chronic Pain",
+      "count": 88,
+      "percentage": "0.09"
+    },
+    {
+      "keyword1": "Chronic Pain",
+      "keyword2": "Mental Health",
+      "count": 83,
+      "percentage": "0.08"
+    },
+    {
+      "keyword1": "Loss of Earnings",
+      "keyword2": "SIEF",
+      "count": 78,
+      "percentage": "0.08"
+    },
+    {
+      "keyword1": "LOE",
+      "keyword2": "Mental Health",
+      "count": 76,
+      "percentage": "0.08"
+    },
+    {
+      "keyword1": "Mental Health",
+      "keyword2": "Permanent Impairment",
+      "count": 66,
+      "percentage": "0.07"
+    },
+    {
+      "keyword1": "CPD",
+      "keyword2": "NEL",
+      "count": 63,
+      "percentage": "0.06"
+    },
+    {
+      "keyword1": "Chronic Pain",
+      "keyword2": "Initial Entitlement",
+      "count": 62,
+      "percentage": "0.06"
+    },
+    {
+      "keyword1": "CPD",
+      "keyword2": "LOE",
+      "count": 57,
+      "percentage": "0.06"
+    },
+    {
+      "keyword1": "Loss of Earnings",
+      "keyword2": "Mental Health",
+      "count": 54,
+      "percentage": "0.05"
+    },
+    {
+      "keyword1": "FEL",
+      "keyword2": "LOE",
+      "count": 53,
+      "percentage": "0.05"
+    }
+  ]
+}

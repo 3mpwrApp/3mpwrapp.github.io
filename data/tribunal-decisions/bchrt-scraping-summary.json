@@ -1,0 +1,77 @@
+{
+  "generated": "2026-04-30T01:02:46.480Z",
+  "tribunal": "BC Human Rights Tribunal (BCHRT)",
+  "years": [
+    {
+      "year": 2020,
+      "total": 213,
+      "outcomes": {
+        "Unknown": 204,
+        "Settled": 8,
+        "Discrimination Justified": 1
+      }
+    },
+    {
+      "year": 2021,
+      "total": 169,
+      "outcomes": {
+        "Unknown": 165,
+        "Discrimination Justified": 2,
+        "Settled": 1,
+        "No Reasonable Prospect": 1
+      }
+    },
+    {
+      "year": 2022,
+      "total": 129,
+      "outcomes": {
+        "Unknown": 125,
+        "Settled": 4
+      }
+    },
+    {
+      "year": 2023,
+      "total": 249,
+      "outcomes": {
+        "Unknown": 244,
+        "Settled": 1,
+        "No Reasonable Prospect": 2,
+        "Discrimination Justified": 1,
+        "Remedy Ordered": 1
+      }
+    },
+    {
+      "year": 2024,
+      "total": 353,
+      "outcomes": {
+        "Unknown": 341,
+        "Settled": 10,
+        "Discrimination Justified": 1,
+        "Remedy Ordered": 1
+      }
+    },
+    {
+      "year": 2025,
+      "total": 316,
+      "outcomes": {
+        "Unknown": 297,
+        "Remedy Ordered": 2,
+        "No Reasonable Prospect": 7,
+        "Settled": 10
+      }
+    },
+    {
+      "year": 2026,
+      "total": 87,
+      "outcomes": {
+        "Settled": 7,
+        "Unknown": 80
+      }
+    }
+  ],
+  "totals": {
+    "cases": 1516,
+    "years_processed": 7,
+    "avg_per_year": 217
+  }
+}

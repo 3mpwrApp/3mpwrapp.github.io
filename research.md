@@ -583,22 +583,210 @@ description: Interactive data visualizations and research tools analyzing tribun
   
   <div class="stats-grid">
     <div class="stat-box">
-      <div class="stat-number">35,928</div>
+      <div class="stat-number">134,920</div>
       <div>Total Tribunal Decisions Analyzed</div>
     </div>
     <div class="stat-box">
-      <div class="stat-number">4</div>
-      <div>Ontario Tribunals (WSIAT, HRTO, ONSBT, ONWSIB)</div>
+      <div class="stat-number">5</div>
+      <div>Tribunals (WSIAT, HRTO, ONSBT, ONWSIB, BC WCAT)</div>
     </div>
     <div class="stat-box">
-      <div class="stat-number">6 Years</div>
-      <div>Data Coverage (2020-2026)</div>
+      <div class="stat-number">40 Years</div>
+      <div>WSIAT Data Coverage (1987-2026)</div>
     </div>
     <div class="stat-box">
       <div class="stat-number">100%</div>
       <div>Open Source Data</div>
     </div>
   </div>
+</div>
+
+<!-- Statistical Terms Glossary Box -->
+<div class="tool-card">
+  <div style="margin-bottom: 1rem;">
+    <span class="tool-badge">NEW April 2026</span>
+    <span class="tool-badge badge-green">98,992 Decisions</span>
+    <span class="tool-badge badge-purple">40 Years</span>
+  </div>
+
+  <h3 style="margin-top: 0;">WSIAT Decision Explorer (1987-2026)</h3>
+  <p style="font-size: 1.05rem;">
+    <strong>98,992 Ontario workers' compensation appeal decisions</strong> now available in structured format.
+    The largest open-source WSIAT dataset in Canadian history.
+  </p>
+
+  <h4 style="margin: 1.5rem 0 1rem;">Dataset Overview</h4>
+  
+  <table class="research-table" style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+    <thead>
+      <tr>
+        <th style="padding: 0.75rem; text-align: left;">Year Range</th>
+        <th style="padding: 0.75rem; text-align: right;">Decisions</th>
+        <th style="padding: 0.75rem; text-align: left;">Metadata Included</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 0.75rem;"><strong>1987-1999</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">19,878</td>
+        <td style="padding: 0.75rem;"><small>DecNum, Date, Keywords, Summary</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;"><strong>2000-2009</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">31,980</td>
+        <td style="padding: 0.75rem;"><small>DecNum, Date, Keywords, Summary</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;"><strong>2010-2019</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">28,576</td>
+        <td style="padding: 0.75rem;"><small>DecNum, Date, Keywords, Summary</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;"><strong>2020-2026</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">14,165</td>
+        <td style="padding: 0.75rem;"><small>DecNum, Date, Keywords, Summary</small></td>
+      </tr>
+      <tr style="font-weight: bold; background: #f5f5f5;">
+        <td style="padding: 0.75rem;"><strong>TOTAL</strong></td>
+        <td style="padding: 0.75rem; text-align: right;"><strong>98,992</strong></td>
+        <td style="padding: 0.75rem;"><small>Complete metadata for all</small></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 style="margin: 1.5rem 0 1rem;">Open Data Access:</h4>
+  
+  <ul style="margin-left: 1.2rem;">
+    <li><a href="/data/tribunal-decisions/wsiat/wsiat-metadata.json">WSIAT Metadata (JSON)</a> - Complete statistics for 98,992 decisions</li>
+    <li><a href="/data/tribunal-decisions/wsiat/decisions-by-year/">Decisions by Year (41 JSON files)</a> - Organized 1987-2026</li>
+    <li><a href="/data/tribunal-decisions/wsiat/README.md">WSIAT Data Documentation</a> - Schema, numbering format, comparison table</li>
+    <li><a href="/research/tribunal-transparency/wsiat-vs-bc-wcat-transparency-divide/">WSIAT vs BC WCAT Comparison</a> - 13.4:1 decision ratio analysis</li>
+    <li><a href="/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html">Deep-Dive Analysis Report</a> - 9 advanced pattern categories</li>
+    <li><a href="/connecting-the-dots-wsiat-keyword-network.html">Keyword Network Visualization</a> - Interactive graph showing issue relationships</li>
+  </ul>
+
+  <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+    <strong>Official Data Source:</strong> <a href="https://www.wsiat.ca/en/home/opendata_decisions.html" target="_blank">WSIAT Open Data Portal</a> - CSV export parsed and organized for open research.
+  </p>
+</div>
+
+<!-- WSIAT Pattern Analysis -->
+<div class="tool-card">
+  <div style="margin-bottom: 1rem;">
+    <span class="tool-badge">NEW April 2026</span>
+    <span class="tool-badge badge-green">40 Years Analyzed</span>
+    <span class="tool-badge badge-purple">20,680 NEL Cases</span>
+  </div>
+
+  <h3 style="margin-top: 0;">WSIAT Pattern Analysis: 40 Years of Insights (1987-2026)</h3>
+  <p style="font-size: 1.05rem;">
+    Deep-dive analysis of 98,992 WSIAT decisions reveals patterns in legal issues, 
+    workload trends, and representative participation across four decades.
+  </p>
+
+  <h4 style="margin: 1.5rem 0 1rem;">Top Legal Issues (Most Common Keywords)</h4>
+  
+  <table class="research-table" style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+    <thead>
+      <tr>
+        <th style="padding: 0.75rem; text-align: left;">Rank</th>
+        <th style="padding: 0.75rem; text-align: left;">Legal Issue</th>
+        <th style="padding: 0.75rem; text-align: right;">Cases</th>
+        <th style="padding: 0.75rem; text-align: right;">% of Total</th>
+        <th style="padding: 0.75rem; text-align: left;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 0.75rem;">1</td>
+        <td style="padding: 0.75rem;"><strong>NEL</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">20,680</td>
+        <td style="padding: 0.75rem; text-align: right;">20.88%</td>
+        <td style="padding: 0.75rem;"><small>Non-Economic Loss (permanent impairment benefits)</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;">2</td>
+        <td style="padding: 0.75rem;"><strong>Permanent Impairment</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">11,841</td>
+        <td style="padding: 0.75rem; text-align: right;">11.96%</td>
+        <td style="padding: 0.75rem;"><small>Permanent disability assessments</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;">3</td>
+        <td style="padding: 0.75rem;"><strong>LOE</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">10,838</td>
+        <td style="padding: 0.75rem; text-align: right;">10.94%</td>
+        <td style="padding: 0.75rem;"><small>Loss of Earnings (wage replacement)</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;">4</td>
+        <td style="padding: 0.75rem;"><strong>FEL</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">7,120</td>
+        <td style="padding: 0.75rem; text-align: right;">7.19%</td>
+        <td style="padding: 0.75rem;"><small>Future Economic Loss</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;">5</td>
+        <td style="padding: 0.75rem;"><strong>Chronic Pain</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">6,876</td>
+        <td style="padding: 0.75rem; text-align: right;">6.94%</td>
+        <td style="padding: 0.75rem;"><small>Chronic pain syndrome claims</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;">6</td>
+        <td style="padding: 0.75rem;"><strong>Reconsideration</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">6,153</td>
+        <td style="padding: 0.75rem; text-align: right;">6.21%</td>
+        <td style="padding: 0.75rem;"><small>Requests to reconsider prior decisions</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;">7</td>
+        <td style="padding: 0.75rem;"><strong>SIEF</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">4,654</td>
+        <td style="padding: 0.75rem; text-align: right;">4.70%</td>
+        <td style="padding: 0.75rem;"><small>Second Injury Enhancement Fund</small></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;">8</td>
+        <td style="padding: 0.75rem;"><strong>Right to Sue</strong></td>
+        <td style="padding: 0.75rem; text-align: right;">1,763</td>
+        <td style="padding: 0.75rem; text-align: right;">1.78%</td>
+        <td style="padding: 0.75rem;"><small>Section 31 applications</small></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 style="margin: 1.5rem 0 1rem;">Peak Decision Years (Top 5)</h4>
+  
+  <ul style="margin-left: 1.2rem;">
+    <li><strong>Year 2000:</strong> 4,502 decisions (busiest year ever)</li>
+    <li><strong>Year 2017:</strong> 4,248 decisions</li>
+    <li><strong>Year 2018:</strong> 3,969 decisions</li>
+    <li><strong>Year 2001:</strong> 3,844 decisions</li>
+    <li><strong>Year 2016:</strong> 3,633 decisions</li>
+  </ul>
+
+  <h4 style="margin: 1.5rem 0 1rem;">Most Prolific Vice-Chairs (Top 5)</h4>
+  
+  <ul style="margin-left: 1.2rem;">
+    <li><strong>R. Nairn:</strong> 3,860 decisions</li>
+    <li><strong>M. Keil:</strong> 3,605 decisions</li>
+    <li><strong>J. Moore:</strong> 2,981 decisions</li>
+    <li><strong>V. Marafioti:</strong> 2,484 decisions</li>
+    <li><strong>S. Ryan:</strong> 2,400 decisions</li>
+  </ul>
+  
+  <p style="margin-top: 1rem; padding: 1rem; background: #f0f9ff; border-left: 4px solid #0066cc; border-radius: 4px;">
+    <strong>Key Insight:</strong> 3,260 unique vice-chairs identified across 40 years. 
+    100% of decisions include vice-chair metadata, enabling workload analysis and consistency tracking.
+  </p>
+
+  <h4 style="margin: 1.5rem 0 1rem;">Full Analysis Report:</h4>
+  
+  <ul style="margin-left: 1.2rem;">
+    <li><a href="/docs/WSIAT-PATTERN-ANALYSIS-2026-04-29.html">Complete Pattern Analysis Report</a> - All findings, charts, recommendations</li>
+    <li><a href="/data/tribunal-decisions/wsiat/wsiat-analysis-patterns.json">Analysis Data (JSON)</a> - Machine-readable results</li>
+  </ul>
 </div>
 
 <!-- Statistical Terms Glossary Box -->
@@ -632,11 +820,11 @@ description: Interactive data visualizations and research tools analyzing tribun
     <tbody>
       <tr>
         <td style="padding: 0.75rem;"><strong>WSIAT</strong><br><small>Workers' comp appeals</small></td>
-        <td style="padding: 0.75rem; text-align: right;">11,430</td>
-        <td style="padding: 0.75rem; text-align: right;">74 (0.6%)</td>
-        <td style="padding: 0.75rem; text-align: right;">575 (5.0%)</td>
-        <td style="padding: 0.75rem; text-align: right;">10,781 (94.3%)</td>
-        <td style="padding: 0.75rem;"><small>65-73% worker success rate (official)</small></td>
+        <td style="padding: 0.75rem; text-align: right;">98,992</td>
+        <td style="padding: 0.75rem; text-align: right;">74 (0.1%)</td>
+        <td style="padding: 0.75rem; text-align: right;">575 (0.6%)</td>
+        <td style="padding: 0.75rem; text-align: right;">98,343 (99.3%)</td>
+        <td style="padding: 0.75rem;"><small>65-73% worker success rate (official) - 1987-2026</small></td>
       </tr>
       <tr>
         <td style="padding: 0.75rem;"><strong>HRTO</strong><br><small>Human rights complaints</small></td>
@@ -666,7 +854,7 @@ description: Interactive data visualizations and research tools analyzing tribun
   </table>
 
   <p class="table-caption" style="margin: 1rem 0; font-size: 0.95rem;">
-    <strong>Total: 35,928 decisions analyzed.</strong> All four tribunals use the same tiered evidence framework for transparent outcome reporting.
+    <strong>Total: 134,920 decisions analyzed (98,992 WSIAT + 35,928 other tribunals).</strong> All tribunals use the same tiered evidence framework for transparent outcome reporting.
   </p>
 
   <h4 style="margin: 1.5rem 0 1rem;">Open Data Access:</h4>

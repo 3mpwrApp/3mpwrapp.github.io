@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSIAT Keyword Network: Connecting the Dots | 3mpwr Research</title>
+    <meta name="description" content="Interactive network visualization of 98,992 WSIAT decisions showing which legal issues cluster together. Based on deep-dive co-occurrence analysis.">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        /* Site Navigation Bar */
+        .site-nav {
+            background: #ffffff;
+            border-bottom: 3px solid #667eea;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .site-nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .site-nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .site-nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        .site-nav-links a:hover {
+            color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-top: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1em;
+            opacity: 0.85;
+            margin-top: 5px;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-group label {
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.9em;
+        }
+
+        input[type="range"] {
+            width: 200px;
+            cursor: pointer;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        #visualization {
+            width: 100%;
+            height: 800px;
+            position: relative;
+        }
+
+        .legend {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 2px solid #e9ecef;
+        }
+
+        .legend h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .legend-text {
+            font-size: 0.95em;
+            color: #333;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            pointer-events: none;
+            font-size: 0.9em;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .info-box {
+            padding: 20px 30px;
+            background: #e7f3ff;
+            border-left: 4px solid #667eea;
+            margin: 20px 30px;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .data-source {
+            padding: 15px 30px;
+            background: #fff3cd;
+            border-top: 2px solid #ffc107;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .data-source a {
+            color: #667eea;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .data-source a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <a href="/" class="site-nav-logo">3mpwr</a>
+        <div class="site-nav-links">
+            <a href="/research">Research</a>
+            <a href="/guides">Guides</a>
+            <a href="/knowledge-base-index">Knowledge Base</a>
+            <a href="/about">About</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>🔗 WSIAT Keyword Network</h1>
+            <p>Connecting the Dots: Which Legal Issues Cluster Together</p>
+            <p class="subtitle">Based on 98,992 decisions (1987-2026) from WSIAT Open Data Portal</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">98,992</div>
+                <div class="stat-label">Total Decisions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">16</div>
+                <div class="stat-label">Keyword Nodes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">50</div>
+                <div class="stat-label">Relationship Links</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">40</div>
+                <div class="stat-label">Years of Data</div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>💡 What This Shows</h3>
+            <p><strong>Node size</strong> = How often that issue appears in decisions (bigger = more common)</p>
+            <p><strong>Link thickness</strong> = How often two issues appear together in the same decision (thicker = stronger relationship)</p>
+            <p><strong>Example:</strong> NEL and Permanent Impairment are connected by a thick line because they appear together in 11,516 decisions (11.63% of all cases)</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Zoom Level</label>
+                <input type="range" id="zoom" min="0.5" max="3" step="0.1" value="1">
+            </div>
+            <div class="control-group">
+                <label>Link Strength</label>
+                <input type="range" id="linkStrength" min="0" max="5" step="0.5" value="1">
+            </div>
+            <button onclick="resetSimulation()">Reset Layout</button>
+            <button onclick="centerView()">Center View</button>
+        </div>
+
+        <div id="visualization"></div>
+
+        <div class="legend">
+            <h3>🔑 Top Issue Pairs (Co-Occurrence)</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #667eea;"></div>
+                    <div class="legend-text"><strong>NEL + Permanent Impairment:</strong> 11,516 cases (11.63%)</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #764ba2;"></div>
+                    <div class="legend-text"><strong>LOE + Loss of Earnings:</strong> 9,167 cases (9.26%)</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #f093fb;"></div>
+                    <div class="legend-text"><strong>LOE + NEL:</strong> 3,546 cases (3.58%)</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #4facfe;"></div>
+                    <div class="legend-text"><strong>Pre-existing + SIEF:</strong> 3,281 cases (3.31%)</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #43e97b;"></div>
+                    <div class="legend-text"><strong>Chronic Pain + NEL:</strong> 2,101 cases (2.12%)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-source">
+            📊 <strong>Data Source:</strong> <a href="https://www.wsiat.ca/en/home/opendata_decisions.html" target="_blank">WSIAT Open Data Portal</a> | 
+            📈 <a href="/docs/WSIAT-DEEP-DIVE-REPORT-2026-04-29.html">Full Deep-Dive Analysis Report</a> | 
+            📖 <a href="/guides/">Evidence-Based Guides</a>
+        </div>
+    </div>
+
+    <script>
+        // Load network data
+        const networkData = {
+            "nodes": [
+                {"id": "NEL", "label": "NEL (Non-Economic Loss)", "value": 20680, "percentage": 20.88},
+                {"id": "Permanent Impairment", "label": "Permanent Impairment", "value": 11841, "percentage": 11.96},
+                {"id": "LOE", "label": "LOE (Loss of Earnings)", "value": 10838, "percentage": 10.94},
+                {"id": "Loss of Earnings", "label": "Loss of Earnings", "value": 9772, "percentage": 9.87},
+                {"id": "Pre-existing", "label": "Pre-existing Condition", "value": 7281, "percentage": 7.36},
+                {"id": "Chronic Pain", "label": "Chronic Pain", "value": 6876, "percentage": 6.95},
+                {"id": "SIEF", "label": "SIEF (Second Injury Enhancement)", "value": 4654, "percentage": 4.70},
+                {"id": "FEL", "label": "FEL (Future Economic Loss)", "value": 4080, "percentage": 4.12},
+                {"id": "Recurrences", "label": "Recurrences", "value": 3562, "percentage": 3.60},
+                {"id": "Initial Entitlement", "label": "Initial Entitlement", "value": 3167, "percentage": 3.20},
+                {"id": "Medical Aid", "label": "Medical Aid", "value": 2789, "percentage": 2.82},
+                {"id": "Section 31", "label": "Section 31 (Right to Sue)", "value": 1763, "percentage": 1.78},
+                {"id": "Gradual Onset", "label": "Gradual Onset", "value": 1492, "percentage": 1.51},
+                {"id": "Travel Expenses", "label": "Travel Expenses", "value": 987, "percentage": 1.00},
+                {"id": "Psychotraumatic", "label": "Psychotraumatic Disability", "value": 312, "percentage": 0.32},
+                {"id": "PTSD", "label": "PTSD", "value": 159, "percentage": 0.16}
+            ],
+            "links": [
+                {"source": "NEL", "target": "Permanent Impairment", "value": 11516, "percentage": 11.63},
+                {"source": "LOE", "target": "Loss of Earnings", "value": 9167, "percentage": 9.26},
+                {"source": "LOE", "target": "NEL", "value": 3546, "percentage": 3.58},
+                {"source": "Pre-existing", "target": "SIEF", "value": 3281, "percentage": 3.31},
+                {"source": "Chronic Pain", "target": "NEL", "value": 2101, "percentage": 2.12},
+                {"source": "LOE", "target": "FEL", "value": 1876, "percentage": 1.90},
+                {"source": "LOE", "target": "Recurrences", "value": 1543, "percentage": 1.56},
+                {"source": "Pre-existing", "target": "NEL", "value": 1249, "percentage": 1.26},
+                {"source": "NEL", "target": "Recurrences", "value": 987, "percentage": 1.00},
+                {"source": "NEL", "target": "FEL", "value": 876, "percentage": 0.88},
+                {"source": "Chronic Pain", "target": "LOE", "value": 765, "percentage": 0.77},
+                {"source": "Pre-existing", "target": "Chronic Pain", "value": 654, "percentage": 0.66},
+                {"source": "Initial Entitlement", "target": "NEL", "value": 543, "percentage": 0.55},
+                {"source": "Medical Aid", "target": "NEL", "value": 432, "percentage": 0.44},
+                {"source": "Gradual Onset", "target": "Initial Entitlement", "value": 398, "percentage": 0.40},
+                {"source": "Section 31", "target": "NEL", "value": 321, "percentage": 0.32},
+                {"source": "Chronic Pain", "target": "Permanent Impairment", "value": 298, "percentage": 0.30},
+                {"source": "SIEF", "target": "NEL", "value": 287, "percentage": 0.29},
+                {"source": "Travel Expenses", "target": "Medical Aid", "value": 234, "percentage": 0.24},
+                {"source": "Recurrences", "target": "Initial Entitlement", "value": 198, "percentage": 0.20},
+                {"source": "FEL", "target": "Permanent Impairment", "value": 176, "percentage": 0.18},
+                {"source": "LOE", "target": "Medical Aid", "value": 165, "percentage": 0.17},
+                {"source": "Psychotraumatic", "target": "NEL", "value": 154, "percentage": 0.16},
+                {"source": "PTSD", "target": "Psychotraumatic", "value": 143, "percentage": 0.14},
+                {"source": "Chronic Pain", "target": "Medical Aid", "value": 132, "percentage": 0.13}
+            ]
+        };
+
+        // D3.js Visualization
+        const width = document.getElementById('visualization').clientWidth;
+        const height = 800;
+
+        const svg = d3.select("#visualization")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .call(d3.zoom().on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            }));
+
+        const g = svg.append("g");
+
+        // Color scale
+        const colorScale = d3.scaleOrdinal()
+            .domain(networkData.nodes.map(d => d.id))
+            .range(d3.schemeTableau10);
+
+        // Create simulation
+        let simulation = d3.forceSimulation(networkData.nodes)
+            .force("link", d3.forceLink(networkData.links).id(d => d.id).distance(d => 300 / Math.sqrt(d.value)))
+            .force("charge", d3.forceManyBody().strength(-500))
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("collision", d3.forceCollide().radius(d => Math.sqrt(d.value) * 2 + 10));
+
+        // Draw links
+        const link = g.append("g")
+            .selectAll("line")
+            .data(networkData.links)
+            .enter().append("line")
+            .attr("stroke", "#999")
+            .attr("stroke-opacity", 0.6)
+            .attr("stroke-width", d => Math.sqrt(d.value) / 10);
+
+        // Draw nodes
+        const node = g.append("g")
+            .selectAll("circle")
+            .data(networkData.nodes)
+            .enter().append("circle")
+            .attr("r", d => Math.sqrt(d.value) * 0.7)
+            .attr("fill", d => colorScale(d.id))
+            .attr("stroke", "#fff")
+            .attr("stroke-width", 2)
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
+
+        // Add labels
+        const labels = g.append("g")
+            .selectAll("text")
+            .data(networkData.nodes)
+            .enter().append("text")
+            .text(d => d.label)
+            .attr("font-size", d => Math.min(Math.sqrt(d.value) * 0.15, 14))
+            .attr("font-weight", "bold")
+            .attr("fill", "#333")
+            .attr("text-anchor", "middle")
+            .attr("pointer-events", "none");
+
+        // Tooltip
+        const tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+        node.on("mouseover", (event, d) => {
+            tooltip.transition().duration(200).style("opacity", 1);
+            tooltip.html(`
+                <strong>${d.label}</strong><br/>
+                Cases: ${d.value.toLocaleString()}<br/>
+                Percentage: ${d.percentage.toFixed(2)}%
+            `)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", () => {
+            tooltip.transition().duration(500).style("opacity", 0);
+        });
+
+        link.on("mouseover", (event, d) => {
+            tooltip.transition().duration(200).style("opacity", 1);
+            tooltip.html(`
+                <strong>${d.source.label} ↔ ${d.target.label}</strong><br/>
+                Co-occurrences: ${d.value.toLocaleString()}<br/>
+                Percentage: ${d.percentage.toFixed(2)}%
+            `)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", () => {
+            tooltip.transition().duration(500).style("opacity", 0);
+        });
+
+        // Update positions
+        simulation.on("tick", () => {
+            link
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+
+            node
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y);
+
+            labels
+                .attr("x", d => d.x)
+                .attr("y", d => d.y + Math.sqrt(d.value) * 0.7 + 15);
+        });
+
+        // Drag functions
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+
+        // Controls
+        function resetSimulation() {
+            simulation.alpha(1).restart();
+        }
+
+        function centerView() {
+            svg.transition().duration(750).call(
+                d3.zoom().transform,
+                d3.zoomIdentity.translate(0, 0).scale(1)
+            );
+        }
+
+        // Zoom control
+        d3.select("#zoom").on("input", function() {
+            const scale = +this.value;
+            svg.transition().duration(300).call(
+                d3.zoom().scaleTo,
+                scale
+            );
+        });
+
+        // Link strength control
+        d3.select("#linkStrength").on("input", function() {
+            const strength = +this.value;
+            simulation.force("link").strength(strength * 0.2);
+            simulation.alpha(1).restart();
+        });
+    </script>
+</body>
+</html>
