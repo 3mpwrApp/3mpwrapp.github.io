@@ -1,19 +1,19 @@
 ---
 layout: default
 title: "Chronic Pain Guide - WSIAT Appeals Strategy"
-description: "Complete guide to chronic pain claims at WSIAT. Based on analysis of 6,876 decisions (1987-2026) showing chronic pain is 6th most common appeal issue."
+description: "Complete guide to chronic pain claims at WSIAT. Based on analysis of 7,502 decisions (1987-2026) showing chronic pain is 3rd most common appeal issue at 7.6%."
 permalink: /guides/wsiat-chronic-pain-claims/
 ---
 
 # Chronic Pain Guide: WSIAT Appeals Strategy
 
-**Based on 6,876 WSIAT decisions analyzed (1987-2026) - 6.94% of all appeals**
+**Based on 7,502 WSIAT decisions analyzed (1987-2026) - 7.6% of all appeals**
 
 ---
 
 ## Why Chronic Pain is Difficult
 
-**Chronic pain** is the **6th most common issue** at WSIAT (6,876 cases, 6.94% of appeals), but it's one of the **hardest to win** because:
+**Chronic pain** is the **3rd most common injury type** at WSIAT (7,502 cases, 7.6% of appeals), but it's one of the **hardest to win** because:
 
 1. **No objective test** - No X-ray, MRI, or blood test proves chronic pain
 2. **Subjective symptoms** - Relies on self-reporting
@@ -26,10 +26,10 @@ permalink: /guides/wsiat-chronic-pain-claims/
 
 ### Chronic Pain by the Numbers
 
-- **6,876 decisions** mention chronic pain (1987-2026)
-- **6.94% of all WSIAT appeals** involve chronic pain
-- **#6 most common appeal issue** (after NEL, permanent impairment, LOE, FEL, reconsideration)
-- Often co-occurs with **pre-existing conditions** (1,075 cases, 1.09%)
+- **7,502 decisions** mention chronic pain keywords (1987-2026)
+- **7.6% of all WSIAT appeals** involve chronic pain
+- **#3 most common injury type** (after back/spine 15.3%, hearing loss 9.7%)
+- Often co-occurs with back injuries, shoulder injuries, and mental stress claims
 
 ### Common Chronic Pain Conditions
 

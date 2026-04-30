@@ -1,26 +1,26 @@
 ---
 layout: default
 title: "Back Injury Appeals Guide - WSIAT"
-description: "Complete guide to back injury appeals at WSIAT. Based on 13,407 back injury decisions (13.54% of all appeals) - the #1 most common injury type."
+description: "Complete guide to back injury appeals at WSIAT. Based on 15,177 back injury decisions (15.3% of all appeals) - the #1 most common injury type."
 permalink: /guides/wsiat-back-injury-appeals/
 ---
 
 # Back Injury Appeals Guide: WSIAT Strategy
 
-**Based on 13,407 back injury decisions (13.54% of all appeals) - #1 MOST COMMON INJURY TYPE**
+**Based on 15,177 back injury decisions (15.3% of all appeals) - #1 MOST COMMON INJURY TYPE**
 
 ---
 
 ## Why Back Injuries Dominate WSIAT
 
-**13,407 decisions mention back/lumbar/spine** - making back injuries the **single most appealed issue** by body part.
+**15,177 decisions mention back/spine/lumbar keywords** (keyword analysis of 98,992 decisions, 1987-2026) - making back injuries the **single most appealed issue** by body part.
 
 ### Why Back Injury Appeals Are So Common
 
 1. **Subjective pain** - No visible injury on X-ray/MRI often
 2. **Pre-existing conditions** - Degenerative disc disease is near-universal in adults
 3. **Causation disputes** - Was it the work accident or age-related wear-and-tear?
-4. **Chronic pain overlap** - 2,101 cases involve chronic pain + NEL (often back-related)
+4. **Chronic pain overlap** - Many cases involve chronic pain + back injury combination
 
 ---
 
