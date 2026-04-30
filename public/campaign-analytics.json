@@ -1,27 +1,27 @@
 {
   "version": "1.0.0",
   "created": "2026-04-18T21:23:16.267Z",
-  "lastUpdate": "2026-04-29T21:50:02.485Z",
+  "lastUpdate": "2026-04-30T21:44:54.603Z",
   "campaigns": {
     "age65-cutoff": {
       "id": "age65-cutoff",
       "firstTracked": "2026-04-18T21:23:16.268Z",
-      "totalPosts": 42,
+      "totalPosts": 45,
       "platforms": {
         "mastodon": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -63,11 +63,11 @@
         },
         "variant_5": {
           "index": 5,
-          "uses": 6,
+          "uses": 9,
           "platforms": {
-            "mastodon": 2,
-            "bluesky": 2,
-            "discord": 2
+            "mastodon": 3,
+            "bluesky": 3,
+            "discord": 3
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -86,22 +86,22 @@
     "bill86": {
       "id": "bill86",
       "firstTracked": "2026-04-18T21:23:16.269Z",
-      "totalPosts": 42,
+      "totalPosts": 45,
       "platforms": {
         "mastodon": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -110,11 +110,11 @@
       "postVariants": {
         "variant_4": {
           "index": 4,
-          "uses": 42,
+          "uses": 45,
           "platforms": {
-            "mastodon": 14,
-            "bluesky": 14,
-            "discord": 14
+            "mastodon": 15,
+            "bluesky": 15,
+            "discord": 15
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -133,22 +133,22 @@
     "day-of-mourning": {
       "id": "day-of-mourning",
       "firstTracked": "2026-04-18T21:23:16.270Z",
-      "totalPosts": 42,
+      "totalPosts": 45,
       "platforms": {
         "mastodon": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -201,11 +201,11 @@
         },
         "variant_3": {
           "index": 3,
-          "uses": 9,
+          "uses": 12,
           "platforms": {
-            "mastodon": 3,
-            "bluesky": 3,
-            "discord": 3
+            "mastodon": 4,
+            "bluesky": 4,
+            "discord": 4
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -224,22 +224,22 @@
     "disability-bulletin": {
       "id": "disability-bulletin",
       "firstTracked": "2026-04-18T21:23:16.270Z",
-      "totalPosts": 42,
+      "totalPosts": 45,
       "platforms": {
         "mastodon": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -281,11 +281,11 @@
         },
         "variant_5": {
           "index": 5,
-          "uses": 6,
+          "uses": 9,
           "platforms": {
-            "mastodon": 2,
-            "bluesky": 2,
-            "discord": 2
+            "mastodon": 3,
+            "bluesky": 3,
+            "discord": 3
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -304,22 +304,22 @@
     "migrant-worker": {
       "id": "migrant-worker",
       "firstTracked": "2026-04-18T21:23:16.271Z",
-      "totalPosts": 42,
+      "totalPosts": 45,
       "platforms": {
         "mastodon": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -369,6 +369,17 @@
           },
           "totalEngagement": 0,
           "avgEngagement": 0
+        },
+        "variant_1": {
+          "index": 1,
+          "uses": 3,
+          "platforms": {
+            "mastodon": 1,
+            "bluesky": 1,
+            "discord": 1
+          },
+          "totalEngagement": 0,
+          "avgEngagement": 0
         }
       },
       "dailyMetrics": [],
@@ -384,22 +395,22 @@
     "oniwg-agm": {
       "id": "oniwg-agm",
       "firstTracked": "2026-04-18T21:23:16.272Z",
-      "totalPosts": 42,
+      "totalPosts": 45,
       "platforms": {
         "mastodon": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -463,11 +474,11 @@
         },
         "variant_0": {
           "index": 0,
-          "uses": 3,
+          "uses": 6,
           "platforms": {
-            "mastodon": 1,
-            "bluesky": 1,
-            "discord": 1
+            "mastodon": 2,
+            "bluesky": 2,
+            "discord": 2
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -486,22 +497,22 @@
     "wsib-meeting": {
       "id": "wsib-meeting",
       "firstTracked": "2026-04-18T21:23:16.272Z",
-      "totalPosts": 42,
+      "totalPosts": 45,
       "platforms": {
         "mastodon": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 14,
+          "posts": 15,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -510,11 +521,11 @@
       "postVariants": {
         "variant_1": {
           "index": 1,
-          "uses": 42,
+          "uses": 45,
           "platforms": {
-            "mastodon": 14,
-            "bluesky": 14,
-            "discord": 14
+            "mastodon": 15,
+            "bluesky": 15,
+            "discord": 15
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -533,22 +544,22 @@
     "day-of-mourning-2026": {
       "id": "day-of-mourning-2026",
       "firstTracked": "2026-04-22T21:41:18.859Z",
-      "totalPosts": 27,
+      "totalPosts": 30,
       "platforms": {
         "mastodon": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -556,11 +567,11 @@
       },
       "postVariants": {
         "variant_undefined": {
-          "uses": 27,
+          "uses": 30,
           "platforms": {
-            "mastodon": 9,
-            "bluesky": 9,
-            "discord": 9
+            "mastodon": 10,
+            "bluesky": 10,
+            "discord": 10
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -579,22 +590,22 @@
     "family-matters-april25": {
       "id": "family-matters-april25",
       "firstTracked": "2026-04-22T21:41:18.862Z",
-      "totalPosts": 27,
+      "totalPosts": 30,
       "platforms": {
         "mastodon": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -602,11 +613,11 @@
       },
       "postVariants": {
         "variant_undefined": {
-          "uses": 27,
+          "uses": 30,
           "platforms": {
-            "mastodon": 9,
-            "bluesky": 9,
-            "discord": 9
+            "mastodon": 10,
+            "bluesky": 10,
+            "discord": 10
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -625,22 +636,22 @@
     "injured-workers-day-2026": {
       "id": "injured-workers-day-2026",
       "firstTracked": "2026-04-22T21:41:18.862Z",
-      "totalPosts": 27,
+      "totalPosts": 30,
       "platforms": {
         "mastodon": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -648,11 +659,11 @@
       },
       "postVariants": {
         "variant_undefined": {
-          "uses": 27,
+          "uses": 30,
           "platforms": {
-            "mastodon": 9,
-            "bluesky": 9,
-            "discord": 9
+            "mastodon": 10,
+            "bluesky": 10,
+            "discord": 10
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -671,22 +682,22 @@
     "wsib-changes-april29": {
       "id": "wsib-changes-april29",
       "firstTracked": "2026-04-22T21:41:18.865Z",
-      "totalPosts": 27,
+      "totalPosts": 30,
       "platforms": {
         "mastodon": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 9,
+          "posts": 10,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -694,11 +705,11 @@
       },
       "postVariants": {
         "variant_undefined": {
-          "uses": 27,
+          "uses": 30,
           "platforms": {
-            "mastodon": 9,
-            "bluesky": 9,
-            "discord": 9
+            "mastodon": 10,
+            "bluesky": 10,
+            "discord": 10
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -717,22 +728,22 @@
     "bill105-campaign": {
       "id": "bill105-campaign",
       "firstTracked": "2026-04-27T21:43:49.556Z",
-      "totalPosts": 9,
+      "totalPosts": 12,
       "platforms": {
         "mastodon": {
-          "posts": 3,
+          "posts": 4,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 3,
+          "posts": 4,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 3,
+          "posts": 4,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -740,11 +751,11 @@
       },
       "postVariants": {
         "variant_undefined": {
-          "uses": 9,
+          "uses": 12,
           "platforms": {
-            "mastodon": 3,
-            "bluesky": 3,
-            "discord": 3
+            "mastodon": 4,
+            "bluesky": 4,
+            "discord": 4
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -763,22 +774,22 @@
     "iavgo-day-of-mourning": {
       "id": "iavgo-day-of-mourning",
       "firstTracked": "2026-04-27T21:43:49.565Z",
-      "totalPosts": 9,
+      "totalPosts": 12,
       "platforms": {
         "mastodon": {
-          "posts": 3,
+          "posts": 4,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 3,
+          "posts": 4,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 3,
+          "posts": 4,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -786,11 +797,11 @@
       },
       "postVariants": {
         "variant_undefined": {
-          "uses": 9,
+          "uses": 12,
           "platforms": {
-            "mastodon": 3,
-            "bluesky": 3,
-            "discord": 3
+            "mastodon": 4,
+            "bluesky": 4,
+            "discord": 4
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -809,22 +820,22 @@
     "windsor-day-of-mourning": {
       "id": "windsor-day-of-mourning",
       "firstTracked": "2026-04-27T21:43:49.571Z",
-      "totalPosts": 9,
+      "totalPosts": 12,
       "platforms": {
         "mastodon": {
-          "posts": 3,
+          "posts": 4,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "bluesky": {
-          "posts": 3,
+          "posts": 4,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
         },
         "discord": {
-          "posts": 3,
+          "posts": 4,
           "totalEngagement": 0,
           "avgEngagement": 0,
           "failures": 0
@@ -832,11 +843,11 @@
       },
       "postVariants": {
         "variant_undefined": {
-          "uses": 9,
+          "uses": 12,
           "platforms": {
-            "mastodon": 3,
-            "bluesky": 3,
-            "discord": 3
+            "mastodon": 4,
+            "bluesky": 4,
+            "discord": 4
           },
           "totalEngagement": 0,
           "avgEngagement": 0
@@ -4347,6 +4358,347 @@
             },
             "discord": {
               "posts": 3,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        }
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "campaigns": {
+        "age65-cutoff": {
+          "totalPosts": 45,
+          "platforms": {
+            "mastodon": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "bill86": {
+          "totalPosts": 45,
+          "platforms": {
+            "mastodon": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "day-of-mourning": {
+          "totalPosts": 45,
+          "platforms": {
+            "mastodon": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "disability-bulletin": {
+          "totalPosts": 45,
+          "platforms": {
+            "mastodon": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "migrant-worker": {
+          "totalPosts": 45,
+          "platforms": {
+            "mastodon": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "oniwg-agm": {
+          "totalPosts": 45,
+          "platforms": {
+            "mastodon": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "wsib-meeting": {
+          "totalPosts": 45,
+          "platforms": {
+            "mastodon": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 15,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "day-of-mourning-2026": {
+          "totalPosts": 30,
+          "platforms": {
+            "mastodon": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "family-matters-april25": {
+          "totalPosts": 30,
+          "platforms": {
+            "mastodon": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "injured-workers-day-2026": {
+          "totalPosts": 30,
+          "platforms": {
+            "mastodon": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "wsib-changes-april29": {
+          "totalPosts": 30,
+          "platforms": {
+            "mastodon": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 10,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "bill105-campaign": {
+          "totalPosts": 12,
+          "platforms": {
+            "mastodon": {
+              "posts": 4,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 4,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 4,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "iavgo-day-of-mourning": {
+          "totalPosts": 12,
+          "platforms": {
+            "mastodon": {
+              "posts": 4,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 4,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 4,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            }
+          },
+          "engagementRate": 0
+        },
+        "windsor-day-of-mourning": {
+          "totalPosts": 12,
+          "platforms": {
+            "mastodon": {
+              "posts": 4,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "bluesky": {
+              "posts": 4,
+              "totalEngagement": 0,
+              "avgEngagement": 0,
+              "failures": 0
+            },
+            "discord": {
+              "posts": 4,
               "totalEngagement": 0,
               "avgEngagement": 0,
               "failures": 0
