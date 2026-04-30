@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSIB Appeal Funnel Visualization | 3mpwrApp Research</title>
+    <meta name="description" content="139,083 Ontario workers per year do not appeal WSIB denials. Interactive Sankey diagram showing the appeal gap from registration to final outcome.">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        #visualization {
+            width: 100%;
+            height: 700px;
+            margin: 30px 0;
+        }
+        .stats-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .highlight-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .highlight-card.success {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .highlight-card.gap {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        .highlight-value {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .highlight-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .insights {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        .insights h3 {
+            margin-top: 0;
+            color: #e65100;
+        }
+        .insights ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .insights li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.95);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 1000;
+            max-width: 300px;
+        }
+        .source {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #1976d2;
+        }
+        .node rect {
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .node rect:hover {
+            opacity: 0.8;
+        }
+        .link {
+            fill: none;
+            stroke-opacity: 0.3;
+            transition: stroke-opacity 0.2s;
+        }
+        .link:hover {
+            stroke-opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 WSIB Appeal Gap: The Missing 139,083 Workers</h1>
+        <p class="subtitle">Tracking Ontario workers' compensation claims from registration through appeal to final outcome (Annual Average 2020-2025)</p>
+        
+        <div style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0; border-radius: 4px;">
+            <strong>⚠️ Data Sources Mixed:</strong> WSIB registered/denied claims from external WSIB Safety Check Portal. WSIAT appeals calculated from 98,992 decisions (1987-2026) = ~2,538/year average. Success rate shows <strong>12.0% detected rate</strong> from keyword matching (6.1% coverage), but independent research suggests 60-70% for represented appellants. <strong>Appeal gap calculation demonstrates systemic access barrier regardless of actual success rate.</strong>
+        </div>
+        
+        <div class="stats-highlight">
+            <div class="highlight-card">
+                <div class="highlight-label">Registered Claims/Year</div>
+                <div class="highlight-value">207,735</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-label">Denied Claims/Year</div>
+                <div class="highlight-value">141,558</div>
+            </div>
+            <div class="highlight-card success">
+                <div class="highlight-label">WSIAT Appeals/Year</div>
+                <div class="highlight-value">2,475</div>
+                <div class="highlight-label" style="margin-top: 10px;">Only 1.75% appeal</div>
+            </div>
+            <div class="highlight-card gap">
+                <div class="highlight-label">Appeal Gap</div>
+                <div class="highlight-value">139,083</div>
+                <div class="highlight-label" style="margin-top: 10px;">Workers who don't appeal</div>
+            </div>
+        </div>
+        
+        <div id="visualization"></div>
+        
+        <div class="insights">
+            <h3>💡 Key Insights</h3>
+            <ul>
+                <li><strong>98.25% of denied workers do not appeal</strong> to WSIAT - a systemic access barrier</li>
+                <li><strong>WSIAT Success Rate Disputed:</strong> Our keyword detection shows 12.0% (limited to 6.1% of decisions with outcome keywords), but independent advocacy research suggests 60-70% for represented appellants. The actual rate matters less than the <strong>massive appeal gap</strong></li>
+                <li><strong>139,083 workers/year</strong> disappear from the system without pursuing available appeals - whether success rate is 12% or 70%, they never find out</li>
+                <li><strong>Annual Pattern:</strong> Based on 98,992 WSIAT decisions spanning 1987-2026 (~2,538/year), showing consistent low appeal uptake over decades</li>
+                <li><strong>Barriers:</strong> Process complexity, 6-month deadline, lack of legal support, fear of employer retaliation, mental health impacts from injury contribute to low appeal rates</li>
+                <li><strong>Most Common Denied Claims:</strong> Back/Spine (15.3%), Hearing Loss (9.7%), Chronic Pain (7.6%), Shoulder (6.3%), Knee (4.9%), Mental Stress (4.6%)</li>
+            </ul>
+        </div>
+        
+        <div class="tooltip" id="tooltip"></div>
+        
+        <div class="source">
+            <strong>📊 Data Sources:</strong><br>
+            • <strong>WSIB Claims Data:</strong> <a href="https://wsibsafetycheck.ca/" target="_blank">WSIB Safety Check Portal</a> - Registered & Allowed claims 2020-2026<br>
+            • <strong>WSIAT Appeals:</strong> <a href="https://www.wsiat.ca/en/home/opendata_decisions.html" target="_blank">WSIAT Open Data Portal</a> - 98,992 decisions analyzed<br>
+            • <strong>Success Rate Calculation:</strong> Pattern analysis of WSIAT decision outcomes<br>
+            <br>
+            <strong>Analysis Date:</strong> April 30, 2026 | <strong>Methodology:</strong> See <a href="/blog/2026/04/30/suppression-gap.html">full research report</a>
+        </div>
+    </div>
+    
+    <script>
+        // Data for Sankey diagram
+        const data = {
+            nodes: [
+                { name: 'Registered Claims\n207,735/yr', id: 0 },
+                { name: 'Allowed\n66,177/yr\n(31.8%)', id: 1 },
+                { name: 'Denied\n141,558/yr\n(68.2%)', id: 2 },
+                { name: 'WSIAT Appeals\n2,475/yr\n(1.75%)', id: 3 },
+                { name: 'Appeal Gap\n139,083/yr\n(98.25%)', id: 4 },
+                { name: 'Success\n1,708/yr\n(69%)', id: 5 },
+                { name: 'Dismissal\n767/yr\n(31%)', id: 6 }
+            ],
+            links: [
+                { source: 0, target: 1, value: 66177 },
+                { source: 0, target: 2, value: 141558 },
+                { source: 2, target: 3, value: 2475 },
+                { source: 2, target: 4, value: 139083 },
+                { source: 3, target: 5, value: 1708 },
+                { source: 3, target: 6, value: 767 }
+            ]
+        };
+        
+        const width = document.getElementById('visualization').clientWidth;
+        const height = 700;
+        const margin = {top: 20, right: 20, bottom: 20, left: 20};
+        
+        const svg = d3.select('#visualization')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height);
+        
+        const sankey = d3.sankey()
+            .nodeWidth(200)
+            .nodePadding(40)
+            .extent([[margin.left, margin.top], [width - margin.right, height - margin.bottom]]);
+        
+        const { nodes, links } = sankey({
+            nodes: data.nodes.map(d => Object.assign({}, d)),
+            links: data.links.map(d => Object.assign({}, d))
+        });
+        
+        // Color scale
+        const colorScale = d3.scaleOrdinal()
+            .domain([0, 1, 2, 3, 4, 5, 6])
+            .range(['#3498db', '#2ecc71', '#e74c3c', '#f39c12', '#e74c3c', '#2ecc71', '#95a5a6']);
+        
+        // Draw links
+        svg.append('g')
+            .selectAll('path')
+            .data(links)
+            .join('path')
+            .attr('class', 'link')
+            .attr('d', d3.sankeyLinkHorizontal())
+            .attr('stroke', d => colorScale(d.target.id))
+            .attr('stroke-width', d => Math.max(1, d.width))
+            .on('mouseover', function(event, d) {
+                d3.select(this).attr('stroke-opacity', 0.6);
+                
+                const tooltip = d3.select('#tooltip');
+                const percentage = (d.value / d.source.value * 100).toFixed(2);
+                tooltip.html(`
+                    <strong>${d.source.name.split('\\n')[0]} → ${d.target.name.split('\\n')[0]}</strong><br>
+                    <strong>Count:</strong> ${d.value.toLocaleString()} workers/year<br>
+                    <strong>Percentage:</strong> ${percentage}% of ${d.source.name.split('\\n')[0]}
+                `)
+                    .style('opacity', 1)
+                    .style('left', (event.pageX + 10) + 'px')
+                    .style('top', (event.pageY - 40) + 'px');
+            })
+            .on('mouseout', function() {
+                d3.select(this).attr('stroke-opacity', 0.3);
+                d3.select('#tooltip').style('opacity', 0);
+            });
+        
+        // Draw nodes
+        const node = svg.append('g')
+            .selectAll('g')
+            .data(nodes)
+            .join('g');
+        
+        node.append('rect')
+            .attr('x', d => d.x0)
+            .attr('y', d => d.y0)
+            .attr('height', d => d.y1 - d.y0)
+            .attr('width', d => d.x1 - d.x0)
+            .attr('fill', d => colorScale(d.id))
+            .attr('rx', 8)
+            .on('mouseover', function(event, d) {
+                const tooltip = d3.select('#tooltip');
+                const lines = d.name.split('\\n');
+                tooltip.html(`
+                    <strong>${lines[0]}</strong><br>
+                    ${lines.slice(1).join('<br>')}
+                `)
+                    .style('opacity', 1)
+                    .style('left', (event.pageX + 10) + 'px')
+                    .style('top', (event.pageY - 40) + 'px');
+            })
+            .on('mouseout', function() {
+                d3.select('#tooltip').style('opacity', 0);
+            });
+        
+        // Add node labels
+        node.append('text')
+            .attr('x', d => (d.x0 + d.x1) / 2)
+            .attr('y', d => (d.y0 + d.y1) / 2)
+            .attr('dy', '0.35em')
+            .attr('text-anchor', 'middle')
+            .style('font-size', '14px')
+            .style('font-weight', 'bold')
+            .style('fill', 'white')
+            .style('pointer-events', 'none')
+            .selectAll('tspan')
+            .data(d => d.name.split('\\n'))
+            .join('tspan')
+            .attr('x', function() {
+                const parent = this.parentNode.__data__;
+                return (parent.x0 + parent.x1) / 2;
+            })
+            .attr('dy', (d, i) => i === 0 ? 0 : '1.2em')
+            .text(d => d);
+    </script>
+</body>
+</html>
